@@ -2,6 +2,9 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-04-15
+next_action: Build CCA and Sterile Care landing pages to feed CRM, and decide landing page vs. FB lead form + AI-to-calendar flow
+due:
 ---
 
 # Commercial Cleaners Alliance (CCA)
