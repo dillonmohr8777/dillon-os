@@ -2,6 +2,9 @@
 tags: [client, 1099]
 status: active
 industry: marketing
+last_touched: 2026-04-15
+next_action: Build Sparrow marketing plan tonight, review Mason's updated FB landing page
+due: 2026-04-15
 ---
 
 # Buzz Bull Marketing Systems
