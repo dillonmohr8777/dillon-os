@@ -2,6 +2,8 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-04-15
+next_action: Await Mason's edited hooks and CCA FB landing page build; confirm CCA package tier and booking preference
 ---
 
 # Commercial Cleaners Alliance (CCA)
