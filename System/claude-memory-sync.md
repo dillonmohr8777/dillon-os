@@ -1,7 +1,13 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-04-16
 tags: [system, memory, sync]
 ---
+
+## Latest chat-to-vault sync, 2026-04-16
+• Bar Crawl USA: Andy forwarded a fresh "Ads disapproved (2)" notice flagging Halloween + Fall Cocktail Crawl creatives. Dillon told Andy "none of those launched" and owes a root-cause read-out. Logged in 01_Clients/Bar Crawl USA/notes.md.
+• NKCDC: Mac Frederick nudged Anthony directly on the "Quick Monday Check-In" thread and confirmed the first month invoice + remaining grant invoices have been sent. Anthony's still silent. Launch remains blocked on the Free Tax Prep landing page. Logged in 01_Clients/NKCDC/notes.md.
+• Commercial Cleaners Alliance: full creative + landing-page push from Mike Ross and Mason Ross. New FB landing page link (marketing.buzzbullmarketing.com/book-now-fb), 6 CCA hook variants from Mike, BB Paid Ads Read.ai recap captured, FB lead form vs. landing page decision still owed. Logged in 01_Clients/Commercial Cleaners Alliance/notes.md.
+• All other client routing buckets (Align HCM, KJB, Fresh Blends/Replenish, Shadow HVAC, LinkEZE, Omega, Hozias, BOK Law, Hardwood Artisan, Onsite Concrete, Ironic Ineptocracy, DBA/Liberty) returned no new client-relevant Gmail traffic in the window.
 
 # Claude Memory Sync
 
