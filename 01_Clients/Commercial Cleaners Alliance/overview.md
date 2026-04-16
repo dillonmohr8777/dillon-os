@@ -9,9 +9,9 @@ status: onboarding
 contact_name: Mike Ross
 contact_email: mross@projectcorporate.com
 cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com]
-last_touched: 2026-04-14
-next_action: Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment
-due: 2026-04-16
+last_touched: 2026-04-16
+next_action: Write CCA + Sterile Care FB lead form copy; align on targeting/offer during next ads call; Mason to deliver fixed FB landing page + CPA hooks
+due: 2026-04-18
 tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 ---
 
@@ -32,7 +32,10 @@ B2B membership organization supporting independent commercial cleaning professio
 - Google Ads + Meta Ads paid media strategy for CCA leadership (requested by Mike).
 - Creatives in production, with a parallel NexGen Solutions creative deliverable on the same timeline.
 
-## Gmail intel (through 2026-04-14)
+## Gmail intel (through 2026-04-16)
+- 2026-04-15: Mike sent sample CCA ad hooks (6 variations). Dillon reviewed in draft, flagged strongest for cold traffic.
+- 2026-04-15: Mike raised CCA + Sterile Care landing pages needed to feed CRM. Mason proposed FB lead forms with AI booking system. Mike agreed. Dillon confirmed FB lead forms are the move; offered to write form copy pending targeting/offer alignment.
+- 2026-04-15: BB Paid Ads meeting (3:45 PM): Sterile Care = proof-of-concept for cleaning lead gen. SEO focus: PolarCita, CCA, FederalCare. Mason fixing broken FB landing page calendar jump. Dillon to build Sparrow marketing plan.
 - 2026-04-14: Teams meeting "Buzz Bull CCA / Sterile Care" scheduled with Mike Ross.
 - 2026-04-08: Dillon told Mike "working on your creatives today … also have your NexGen, I will be done with today" — a commitment that should be audited for delivery.
 - 2026-04-08 (morning): Mike said targeting Cleaning company owners via Meta would generate the best results. Also asking about Buzz Bull launch timing.
