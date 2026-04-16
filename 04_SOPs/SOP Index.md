@@ -11,7 +11,7 @@ tags: [sop, moc]
 - 
 
 ## Content Production
-- 
+- [[HyperFrames Video Production SOP]] — HTML → MP4 via HeyGen HyperFrames in Claude Code
 
 ## Admin / Operations
 - 

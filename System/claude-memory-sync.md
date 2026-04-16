@@ -24,6 +24,9 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 ## Full-time
 • Align HCM — Dillon's full-time employer. Not a client. Not counted in client totals.
 
+## Skills / tooling
+• **HyperFrames** (added 2026-04-16) — HeyGen's open-source HTML → MP4 framework for Claude Code. Install: `npx skills add heygen-com/hyperframes`. Reference: `System/hyperframes-skill.md`. SOP: `04_SOPs/HyperFrames Video Production SOP.md`. Per-client targets: `03_Content/HyperFrames Playbook.md`. Agent: `11_Agents/HyperFrames Agent.md`. Default to HyperFrames MP4 over static whenever a calendar slot allows motion.
+
 ## Pending deliverables
 • Bar Crawl USA — resolve 2 disapproved ads (Halloween / Fall Cocktail Crawl language flagged 2026-04-14/15).
 • Kimberly James Bridal — publish Timeline page, verify GA4 + GSC indexing per Mac.
