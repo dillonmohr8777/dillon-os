@@ -8,9 +8,9 @@ status: active
 contact_name: Anthony Miller
 contact_email: amiller@nkcdc.org
 cc_list: [mjfrederick334@gmail.com, melissarobinn@gmail.com, twatts@nkcdc.org, mboyd@nkcdc.org]
-last_touched: 2026-04-15
-next_action: URGENT — launch is pending NKCDC finalizing the Free Tax Prep page. Mac checked in 2026-04-15, no response from Anthony. Nudge again.
-due: 2026-04-16
+last_touched: 2026-04-16
+next_action: URGENT -- 3 unanswered outreaches to Anthony. Consider escalation if no response by Apr 17. Send drafted replies.
+due: 2026-04-17
 tags: [client, momentum360, google-ads, meta-ads, nonprofit, philadelphia]
 ---
 
@@ -29,3 +29,4 @@ Philadelphia nonprofit (New Kensington Community Development Corporation). Paid 
 ## Open items
 - Launch is fully blocked on NKCDC shipping the Free Tax Prep landing page and responding to the Monday check-in.
 - First month invoice is out per Melissa.
+- 2026-04-15: Mac followed up with Anthony and noted first month invoice + remaining grant-project invoices sent. No response from Anthony. Dillon drafted two replies reiterating launch readiness.

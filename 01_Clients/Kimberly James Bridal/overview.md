@@ -9,8 +9,8 @@ status: active
 contact_name: Kimberly Iraci
 contact_email: kimberly@kimberlyjamesbridal.com
 cc_list: [mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com]
-last_touched: 2026-04-15
-next_action: Publish wedding dress timeline page (approved 2026-04-13) and verify GA4/GSC indexing per Mac
+last_touched: 2026-04-16
+next_action: Send Kim a follow-up ad performance report now that Timeline page is live and indexing
 due: none
 tags: [client, momentum360, google-ads, bridal, squarespace, seo]
 ---
@@ -35,6 +35,7 @@ Bridal boutique at 8333 Germantown Ave, Chestnut Hill, Philadelphia. Squarespace
 - 2026-04-11: Mac Frederick asked Dillon to double-check GA4 and GSC are still connected and that new pages are getting indexed.
 - 2026-04-10: Google Ads account (Customer ID 814-550-6229) was linked to Momentum Ads Manager.
 - 2026-04-10: Google Ads sent a "strategic consultation" invite to the KJB team (unread).
+- 2026-04-15: Dillon verified GA4 + GSC are connected and Timeline page is indexing. All of Kim's copy revisions are live on the site. Deliverable closed.
 
 ## CC discipline
 Every email to Kim MUST CC: mjfrederick334@gmail.com (Mac Frederick), sean@needmomentum.com (Sean Boyle), melissarobinn@gmail.com (Melissa Silber). Non-negotiable.
