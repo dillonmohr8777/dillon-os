@@ -1,11 +1,20 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-04-16
 tags: [system, memory, sync]
 ---
 
 # Claude Memory Sync
 
 Single source of truth for all Claude instances across Dillon OS. Updated by `vault-integrity-sync` nightly at 2:00 AM and `chat-to-vault-sync` every 2 hours.
+
+## Latest sync summary
+
+### 2026-04-16 (chat-to-vault-sync)
+- **Bar Crawl USA**: Andy forwarded Google Ads Policy Manager notice 2026-04-15 flagging Boos & Booze and Fall Cocktail Crawl as disapproved (Alcohol information / Destination Not Accessible). Dillon replied "None of those launched so that's weird I'll look into it." Root cause is likely orphaned ads on unpublished URLs. Action: audit both campaigns, fix destinations, remove or appeal.
+- **NKCDC**: Still BLOCKED on the Free Tax Prep landing page. Mac Frederick joined the "Quick Monday Check-In" thread 2026-04-15 12:45 PM ET and escalated by noting the first month invoice + remaining grant invoices are in. Dillon has two drafts staged (to send Thursday AM) restating launch readiness. Anthony's silence is now on day 3.
+- **Commercial Cleaners Alliance**: Scope expanded on 2026-04-15. Mike Ross asked for CCA + Sterile Care landing pages; Mason countered with FB lead form + AI booking calendar flow; Mike agreed "whatever is easiest." Dillon has staged drafts agreeing with the FB lead form approach and reviewing Mike's six sample hooks (strongest: "We help small cleaning companies win big contracts without insurance, paperwork, or capital" and "Everything you need to scale your cleaning company, done for you"). 2026-04-16 creative commitment deadline still needs an audit.
+- No new activity found for: Align HCM, KJB, Shadow HVAC, LinkEZE, Omega Landscaping, Jeff Hozias, BOK Law, Fresh Blends/Replenish, Hardwood Artisan, Onsite Concrete, Ironic Ineptocracy, DBA/Liberty.
+- No Claude.ai or Anthropic notification emails in window.
 
 ## Active clients (Momentum 360)
 • Bar Crawl USA ($950/mo) — active, campaigns live across 9+ cities.
