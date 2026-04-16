@@ -6,6 +6,8 @@ start_date: 2026-03-12
 rate: $300/mo
 google_ads_id: 721-491-4099
 google_ads_id_original: 814-550-6229
+last_touched: 2026-04-16
+next_action: Verify GA4 + GSC indexing is healthy; monitor Google Ads API resubmission
 ---
 
 # Kimberly James Bridal Boutique
@@ -42,6 +44,13 @@ google_ads_id_original: 814-550-6229
 - **Fonts:** Cormorant Garamond (body), Great Vibes (cursive accents)
 - **Logo:** "KIMBERLY" Montserrat caps + "James" Mrs Saint Delafield cursive gold + "BRIDAL" Montserrat
 - **Tagline:** "Chestnut Hill, Philadelphia" in cursive gold
+
+## Notes
+
+### 2026-04-15 (synced 2026-04-16)
+- Dillon drafted reply to Mac Frederick confirming GA4 and GSC are both connected and the new Timeline page is getting indexed properly
+- All of Kim's copy revisions are live on the site
+- Google Ads API application rejected (2026-04-15 10:23 PM): account 721-491-4099 isn't a manager account. Need to resubmit with the correct MCC/manager account ID. This is Dillon's automation API access, not an ads issue.
 
 ## Links
 - [[Client Index]]
