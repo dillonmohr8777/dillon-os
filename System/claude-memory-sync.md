@@ -1,5 +1,5 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-04-16T02:00:00Z
 tags: [system, memory, sync]
 ---
 
@@ -25,15 +25,16 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • Align HCM — Dillon's full-time employer. Not a client. Not counted in client totals.
 
 ## Pending deliverables
-• Bar Crawl USA — resolve 2 disapproved ads (Halloween / Fall Cocktail Crawl language flagged 2026-04-14/15).
-• Kimberly James Bridal — publish Timeline page, verify GA4 + GSC indexing per Mac.
-• LinkEZE — fix enhanced conversions data source diagnostics; confirm MFA enabled on 809-600-6448.
-• Fresh Blends / Replenish — confirm 2026-04-13 campaign launch went live; first-week performance snapshot.
-• NKCDC — launch Free Tax Prep campaign the moment NKCDC clears the landing page.
-• Commercial Cleaners Alliance — deliver CCA creatives + NexGen creatives (committed 2026-04-08).
-• Hardwood Artisan — CHASE billing card update before engagement pauses.
-• Omega Landscaping — drone footage from David.
-• Jeff Hozias — launch approved seller Meta campaign.
+• Bar Crawl USA -- resolve 2 disapproved ads (Halloween / Fall Cocktail Crawl language flagged 2026-04-14/15).
+• Kimberly James Bridal -- send drafted email to Mac confirming GA4/GSC verified + copy revisions live. Timeline page task nearly closed.
+• LinkEZE -- fix enhanced conversions data source diagnostics; confirm MFA enabled on 809-600-6448.
+• Fresh Blends / Replenish -- confirm 2026-04-13 campaign launch went live; first-week performance snapshot.
+• NKCDC -- launch Free Tax Prep campaign the moment NKCDC clears the landing page. Two draft follow-ups to Mac queued but not sent.
+• Commercial Cleaners Alliance -- write CCA + Sterile Care FB lead form copy; align targeting/offer on next ads call; send draft reply on Mike's CCA hooks.
+• Hardwood Artisan -- CHASE billing card update before engagement pauses.
+• Omega Landscaping -- drone footage from David.
+• Jeff Hozias -- launch approved seller Meta campaign.
+• Buzz Bull -- Mason to fix FB landing page calendar jump; Dillon to build Sparrow marketing plan.
 
 ## Upcoming deadlines (7 days)
 • 2026-04-16 — Onsite x M360 weekly call (1:00 PM ET).
@@ -43,17 +44,23 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • 2026-05-02 — Bar Crawl USA Taco & Tequila wave 2.
 
 ## Recent completions (7 days)
-• 2026-04-14 — BOK Law weekly social content delivered.
-• 2026-04-14 — Jeff Hozias seller ad copy approved.
-• 2026-04-13 — KJB Wedding Dress Timeline page approved.
-• 2026-04-13 — Bar Crawl USA PMax update sent to Andy (53 tickets, all April 25 cities live, May 2 launching).
-• 2026-04-12 — Fresh Blends / Replenish admin access granted to Mia.
-• 2026-04-09 — NKCDC revised strategy delivered and approved by Anthony.
-• 2026-04-01 — Monthly reports sent to Omega, Jeff Hozias, Hardwood Artisan.
+• 2026-04-15 -- CCA landing page decision: FB lead forms over standalone pages (team agreed).
+• 2026-04-15 -- BB Paid Ads meeting: ad performance reviewed, landing page fixes assigned to Mason, Sterile Care PoC strategy set.
+• 2026-04-15 -- KJB: Dillon verified GA4 + GSC connected and copy revisions live (draft to Mac pending send).
+• 2026-04-14 -- BOK Law weekly social content delivered.
+• 2026-04-14 -- Jeff Hozias seller ad copy approved.
+• 2026-04-13 -- KJB Wedding Dress Timeline page approved.
+• 2026-04-13 -- Bar Crawl USA PMax update sent to Andy (53 tickets, all April 25 cities live, May 2 launching).
+• 2026-04-12 -- Fresh Blends / Replenish admin access granted to Mia.
+• 2026-04-09 -- NKCDC revised strategy delivered and approved by Anthony.
 
 ## Unanswered / urgent
-• **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
-• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
-• **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
-• **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
-• **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+• **NKCDC** -- Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked. Dillon has two draft follow-ups queued but unsent.
+• **Hardwood Artisan** -- Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
+• **Bar Crawl USA** -- 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
+• **Omega Landscaping** -- David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
+• **Commercial Cleaners Alliance** -- CCA creative commitment shifted: now writing FB lead form copy instead of standalone landing pages. Mike's CCA hooks draft reply pending send.
+• **Buzz Bull** -- Mason's FB landing page has broken calendar jump (code fix needed). Dillon owes Sparrow marketing plan.
+
+## Sync log
+• 2026-04-16T02:00:00Z -- chat-to-vault-sync captured: CCA landing page decision (FB lead forms), BB Paid Ads meeting notes, KJB GA4/GSC verification draft, NKCDC draft follow-ups, Buzz Bull notes created, unsorted inbox entries for Sparrow/PolarCita/FederalCare/4C2.

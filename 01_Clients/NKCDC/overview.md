@@ -18,7 +18,7 @@ tags: [client, momentum360, google-ads, meta-ads, nonprofit, philadelphia]
 
 Philadelphia nonprofit (New Kensington Community Development Corporation). Paid media for the Free Business Tax Prep program. Strategy was pivoted 2026-04-09 after Anthony pushed back on a multi-service scope — rebuilt fully around Free Tax Prep as the single promoted offer.
 
-## Gmail intel (through 2026-04-15)
+## Gmail intel (through 2026-04-16)
 - 2026-04-15: URGENT. Mac Frederick checked in with Anthony ("Hey Anthony just checking in here") and noted Melissa sent the first month's invoice plus remaining grant-project invoices. No response from NKCDC team yet.
 - 2026-04-13: Dillon sent a Monday check-in — "everything on our end is built, approved, and ready to launch whenever you are. The only thing we're waiting on is you." Still waiting on the Free Tax Prep landing page.
 - 2026-04-12: Mac thanked team and flagged looking forward to launch next steps.
@@ -29,3 +29,4 @@ Philadelphia nonprofit (New Kensington Community Development Corporation). Paid 
 ## Open items
 - Launch is fully blocked on NKCDC shipping the Free Tax Prep landing page and responding to the Monday check-in.
 - First month invoice is out per Melissa.
+- 2026-04-15: Dillon drafted two follow-up replies to Mac (re: "Quick Follow-Up" and "Quick Monday Check-In") confirming everything's built and ready, just waiting on NKCDC's landing page. Drafts not yet sent.
