@@ -12,3 +12,10 @@ tags: [notes]
 - Andy's cadence preference: quick updates, no fluff. He flags issues directly and expects straightforward fixes.
 - Caroline handles forwards / policy intake. Keep her looped when it's a compliance thread.
 - Any ad copy improvisation is a hard no. Pre-approved library only.
+
+## 2026-04-15 Sync
+
+- Google Ads disapproved 2 ads on account 435-710-2897: one in "Boos & Booze" campaign, one in "Fall Cocktail Crawl" campaign. Policies flagged: Alcohol information + Destination Not Accessible.
+- Andy forwarded the disapproval notice to Dillon, confused because neither campaign had launched.
+- Dillon replied: "None of those launched so that's weird I'll look into it."
+- Action: Dillon investigating why dormant seasonal campaigns got flagged. Likely need to fix destination URLs or appeal.

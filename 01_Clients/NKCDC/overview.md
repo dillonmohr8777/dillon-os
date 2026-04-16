@@ -8,8 +8,8 @@ status: active
 contact_name: Anthony Miller
 contact_email: amiller@nkcdc.org
 cc_list: [mjfrederick334@gmail.com, melissarobinn@gmail.com, twatts@nkcdc.org, mboyd@nkcdc.org]
-last_touched: 2026-04-15
-next_action: URGENT — launch is pending NKCDC finalizing the Free Tax Prep page. Mac checked in 2026-04-15, no response from Anthony. Nudge again.
+last_touched: 2026-04-16
+next_action: URGENT -- Anthony hasn't responded to 3 follow-ups (Dillon 4/13, Mac 4/15, plus prior). Mac sent invoices. Send Dillon's drafted replies and escalate if no response by EOD.
 due: 2026-04-16
 tags: [client, momentum360, google-ads, meta-ads, nonprofit, philadelphia]
 ---
