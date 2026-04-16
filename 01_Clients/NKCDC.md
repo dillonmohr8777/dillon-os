@@ -3,6 +3,8 @@ tags: [client, momentum360]
 status: active
 industry: community development
 google_ads_id: 100-209-6937
+last_touched: 2026-04-16
+next_action: Still BLOCKED on NKCDC shipping Free Tax Prep landing page. Follow up with Anthony.
 ---
 
 # NKCDC (New Kensington Community Development Corporation)

@@ -6,6 +6,8 @@ start_date: 2026-03-12
 rate: $300/mo
 google_ads_id: 721-491-4099
 google_ads_id_original: 814-550-6229
+last_touched: 2026-04-16
+next_action: Resubmit Google Ads API application with correct manager account ID (721-491-4099 is NOT a manager account)
 ---
 
 # Kimberly James Bridal Boutique
