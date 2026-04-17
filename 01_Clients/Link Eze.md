@@ -5,6 +5,8 @@ industry: ecommerce/ATV
 start_date: 2026-02-26
 rate: $300/mo
 google_ads_id: 809-600-6448
+last_touched: 2026-04-16
+next_action: Upload square (1:1) and vertical (9:16) video versions to YouTube, then add to both PMax asset groups
 ---
 
 # Link Eze
