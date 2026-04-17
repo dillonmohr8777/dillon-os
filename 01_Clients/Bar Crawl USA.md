@@ -5,6 +5,8 @@ industry: events
 start_date: 2026-02-16
 rate: $950/mo
 google_ads_id: 435-710-2897
+last_touched: 2026-04-17
+next_action: Send draft reply to Andy re disapprovals; pause Boos & Booze + Fall Cocktail Crawl campaigns
 ---
 
 # Bar Crawl USA

@@ -2,6 +2,8 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-04-17
+next_action: Finish CCA + Sterile Care form copy; schedule call with Mike and Mason on targeting/offers
 ---
 
 # Commercial Cleaners Alliance (CCA)

@@ -5,6 +5,8 @@ industry: food/beverage
 start_date: 2026-03-23
 rate: $500/mo
 google_ads_id: 627-501-4654
+last_touched: 2026-04-17
+next_action: Build Pompano landing page, send to Mia for review, then launch campaign with $500 budget
 ---
 
 # Fresh Blends / Replenish
