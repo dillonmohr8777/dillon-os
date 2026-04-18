@@ -6,6 +6,8 @@ start_date: 2026-03-12
 rate: $300/mo
 google_ads_id: 721-491-4099
 google_ads_id_original: 814-550-6229
+last_touched: 2026-04-17
+next_action: apply Kim's size-inclusive page revisions (sheath, try-on section, timeline, photo) + fix desktop layout
 ---
 
 # Kimberly James Bridal Boutique

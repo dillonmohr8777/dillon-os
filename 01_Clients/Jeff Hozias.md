@@ -5,6 +5,8 @@ industry: real estate
 start_date: 2026-03-01
 rate: $200/mo
 google_ads_id: 495-602-9145
+last_touched: 2026-04-16
+next_action: pull first performance snapshot after a few days of Meta campaign runtime
 ---
 
 # Jeff Hozias / Howard Hanna Rand Realty

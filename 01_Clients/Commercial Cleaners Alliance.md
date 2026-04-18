@@ -2,6 +2,8 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-04-16
+next_action: finalize FB lead form copy for CCA, align with Mike/Mason on targeting + offers
 ---
 
 # Commercial Cleaners Alliance (CCA)
