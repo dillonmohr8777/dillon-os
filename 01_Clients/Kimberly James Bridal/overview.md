@@ -9,9 +9,9 @@ status: active
 contact_name: Kimberly Iraci
 contact_email: kimberly@kimberlyjamesbridal.com
 cc_list: [mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com]
-last_touched: 2026-04-15
-next_action: Publish wedding dress timeline page (approved 2026-04-13) and verify GA4/GSC indexing per Mac
-due: none
+last_touched: 2026-04-18
+next_action: Apply Kim's revisions to size-inclusive gowns page (remove try-on section, swap Empire for Sheath, update timeline to 12-14mo, fix desktop view, add her photos/video)
+due: 2026-04-20
 tags: [client, momentum360, google-ads, bridal, squarespace, seo]
 ---
 
