@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "mcp__claude_ai_Gmail__gmail_get_profile",
-      "mcp__claude_ai_Gmail__gmail_search_messages"
+      "mcp__claude_ai_Gmail__gmail_search_messages",
+      "Bash(cp -r /tmp/video-use ~/.claude/skills/video-use)",
+      "Bash(cp -r /tmp/video-use/skills/manim-video ~/.claude/skills/manim-video)",
+      "Bash(rm -rf ~/.claude/skills/video-use/.git ~/.claude/skills/manim-video/.git)",
+      "Read(//root/.claude/skills/**)"
     ]
   }
 }
