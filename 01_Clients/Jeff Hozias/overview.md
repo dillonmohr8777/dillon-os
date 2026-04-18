@@ -9,8 +9,8 @@ status: active
 contact_name: Jeff Hozias
 contact_email: jhoz333@gmail.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Launch Meta Ads using approved seller/buyer copy; move away from LSA per 2026-03-20 strategy call
+last_touched: 2026-04-18
+next_action: Monitor Rockland County campaign performance (live since 2026-04-16). Check if leads are coming through. Anti-Zillow is the lead test.
 due: none
 tags: [client, momentum360, real-estate, gbp, meta-ads]
 ---
@@ -26,12 +26,14 @@ Real estate agent, Rockland County, NY. Hyper-local GBP content and a paid media
 - Explored Systeme.io funnel and landing page building (troubleshooting inactive page / opt-in issues).
 - Interactive HTML monthly performance report (navy / red / gold Howard Hanna palette).
 
-## Gmail intel (through 2026-04-14)
+## Gmail intel (through 2026-04-18)
+- 2026-04-18: Dillon checked in with Jeff - campaigns have been live a couple days. Asked if any leads have come through yet. Anti-Zillow angle should start pulling early interest.
+- 2026-04-16: LAUNCHED. Rockland County Meta campaigns are built and live. Anti-Zillow variation running as the lead test, with seller and buyer copy rotating alongside it.
 - 2026-04-14: Dillon reviewed Jeff's drafted ad copy. "Not a Zestimate. Not a guess." seller opener called out as scroll-stopper. Seller Home Valuation copy cleared for launch. Anti-Zillow angle validated.
 - 2026-04-01: March marketing report delivered. Summary: Google rejected a number of GBP posts throughout the month without a clear reason, dragging organic visibility.
 - 2026-03-20: Meta Ads strategy call. Moving away from LSA due to persistent low-quality leads. Sean declined the invite.
 
 ## Open items
-- Launch Meta Ads with approved seller copy.
+- Monitor Meta Ads performance (launched 2026-04-16). First lead check-in sent 2026-04-18.
 - Investigate root cause of GBP post rejections from March.
 - Revisit whether Google Ads strategy is worth salvaging or fully replacing with Meta.

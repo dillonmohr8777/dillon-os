@@ -9,8 +9,8 @@ status: active
 contact_name: Kimberly Iraci
 contact_email: kimberly@kimberlyjamesbridal.com
 cc_list: [mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com]
-last_touched: 2026-04-15
-next_action: Publish wedding dress timeline page (approved 2026-04-13) and verify GA4/GSC indexing per Mac
+last_touched: 2026-04-18
+next_action: Apply Kim's revision requests to Size-Inclusive Gowns page (remove TRUE-TO-SIZE TRY-ON section, change Empire to Sheath silhouette description); continue plus-size page rebuild
 due: none
 tags: [client, momentum360, google-ads, bridal, squarespace, seo]
 ---
@@ -30,8 +30,10 @@ Bridal boutique at 8333 Germantown Ave, Chestnut Hill, Philadelphia. Squarespace
 - "Plus-Size Wedding Dresses in Philadelphia" — near final at last checkpoint.
 - Wedding Dress Timeline — month-by-month shopping timeline, pricing context ($1,000–$3,500), rush order language, final fitting, Concierge Service. Previously hit an Iron Man template background bug that had to be debugged out of the Squarespace template.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-13: Kim approved the Wedding Dress Timeline page ("Everything looks perfect … good to publish") and reacted positively to the Google Ads performance report (319 clicks, 12,500 impressions, 781 impressions/day over 16 days).
+## Gmail intel (through 2026-04-18)
+- 2026-04-17: Dillon delivered the new Size-Inclusive Gowns page (kimberlyjamesbridal.com/size-inclusive-gowns, password KBSIG). Kim reported it only showed half the page on desktop but worked on mobile. Dillon explained it's mobile-first optimized. Kim sent detailed revision requests: remove "TRUE-TO-SIZE TRY-ON" section, change Empire silhouette to Sheath description ("a sleek and elegant bridal silhouette that follows the natural line of the body").
+- 2026-04-16: Dillon sent Kim an update on the plus-size page - building an entirely new page merging the existing Size Inclusive Wedding Gown page (under Designers) with the new plus-size layout, pulling in Michelle Bridal / Sydney's Closet photos and brand fonts/colors per Kim's earlier feedback.
+- 2026-04-13: Kim approved the Wedding Dress Timeline page ("Everything looks perfect ... good to publish") and reacted positively to the Google Ads performance report (319 clicks, 12,500 impressions, 781 impressions/day over 16 days).
 - 2026-04-11: Mac Frederick asked Dillon to double-check GA4 and GSC are still connected and that new pages are getting indexed.
 - 2026-04-10: Google Ads account (Customer ID 814-550-6229) was linked to Momentum Ads Manager.
 - 2026-04-10: Google Ads sent a "strategic consultation" invite to the KJB team (unread).
