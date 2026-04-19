@@ -5,6 +5,9 @@ industry: food/beverage
 start_date: 2026-03-23
 rate: $500/mo
 google_ads_id: 627-501-4654
+last_touched: 2026-04-18
+next_action: Revise Pompano landing page to use 7-Eleven private label branding (not Replenish). Waiting on resent images from Mia.
+due: 2026-04-21
 ---
 
 # Fresh Blends / Replenish

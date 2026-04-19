@@ -5,6 +5,9 @@ industry: events
 start_date: 2026-02-16
 rate: $950/mo
 google_ads_id: 435-710-2897
+last_touched: 2026-04-18
+next_action: Cleanup paused seasonal campaigns (Boos & Booze + Fall Cocktail Crawl) to stop recurring Google policy flags. Fix broken destination URLs.
+due: 2026-04-21
 ---
 
 # Bar Crawl USA

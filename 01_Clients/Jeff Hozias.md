@@ -5,6 +5,8 @@ industry: real estate
 start_date: 2026-03-01
 rate: $200/mo
 google_ads_id: 495-602-9145
+last_touched: 2026-04-18
+next_action: Monitor first-week lead performance on Rockland County Meta campaigns. Follow up if Jeff hasn't responded to check-in.
 ---
 
 # Jeff Hozias / Howard Hanna Rand Realty
