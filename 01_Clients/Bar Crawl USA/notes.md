@@ -12,3 +12,12 @@ tags: [notes]
 - Andy's cadence preference: quick updates, no fluff. He flags issues directly and expects straightforward fixes.
 - Caroline handles forwards / policy intake. Keep her looped when it's a compliance thread.
 - Any ad copy improvisation is a hard no. Pre-approved library only.
+
+## Sync Log
+
+### 2026-04-16
+- Dillon explained the 2 disapproved ads to Andy: "Boos and Booze" and "Fall Cocktail Crawl" flagged for Google's alcohol information policy. Filed appeals and paused both. Won't impact Taco & Tequila campaigns.
+
+### 2026-04-18
+- NEW Google Ads policy issue: 2 assets disapproved for "Destination not working" (HTTP 404 on Android). Account 435-710-2897. Needs investigation and fix.
+- Action item: check which landing pages are returning 404 on mobile/Android and fix or appeal.

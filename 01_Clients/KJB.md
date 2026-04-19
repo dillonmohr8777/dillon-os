@@ -43,5 +43,19 @@ google_ads_id_original: 814-550-6229
 - **Logo:** "KIMBERLY" Montserrat caps + "James" Mrs Saint Delafield cursive gold + "BRIDAL" Montserrat
 - **Tagline:** "Chestnut Hill, Philadelphia" in cursive gold
 
+## Sync Log
+
+### 2026-04-16
+- Dillon emailed Kim with update on plus-size page. Building an entirely new page that merges existing Size Inclusive Wedding Gown page (under Designers) with the new plus-size layout, pulling in Michelle Bridal / Sydney's Closet photos and matching KJB brand fonts/colors.
+
+### 2026-04-17
+- Dillon delivered Size-Inclusive Gowns page for review (password: KBSIG). Kim confirmed it works on mobile but only shows half on desktop.
+- Kim requested copy changes: replace Empire silhouette description with Sheath (column dress) description. Also asked about embedding a video.
+- Kim sent additional revision requests for silhouette descriptions and layout tweaks.
+
+### 2026-04-18
+- Dillon acknowledged Kim's change requests. Said video embed may need dev team help since the page was built with HTML + CSS.
+- Action items: apply Kim's silhouette copy edits, investigate video embed option, fix desktop display issue.
+
 ## Links
 - [[Client Index]]
