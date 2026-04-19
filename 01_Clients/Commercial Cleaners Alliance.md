@@ -2,6 +2,8 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-04-18
+next_action: Schedule call with Mike Ross to align on CCA + Sterile Care targeting/offers and build FB lead forms
 ---
 
 # Commercial Cleaners Alliance (CCA)
