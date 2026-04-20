@@ -2,3 +2,7 @@
 .obsidian/workspace-mobile.json
 08_Assets/
 09_Transcripts/
+
+# Secrets - never commit
+.claude/secrets.json
+.claude/settings.local.json
