@@ -26,20 +26,21 @@ B2C Google Ads program driving in-store traffic to 5 South Florida 7-Eleven bran
 - Dedicated landing page in testing.
 - Campaigns prototyped via Claude-in-Chrome browser automation with on-site live testing.
 
-## Gmail intel (through 2026-04-13)
-- 2026-04-13: Check-in email sent to Mia confirming everything on Dillon's side is ready to launch.
-- 2026-04-12: Admin access granted to Mia. Dillon confirmed campaigns ready to launch 2026-04-13.
-- 2026-04-09: Dillon offered to hop on a phone call to finish setup.
-- 2026-04-08: Mia asked Dillon to add her as admin so she could enter CC details (billing).
-- 2026-04-02: Campaign build complete, asking Mia for a secure payment method on the Google Ads account.
-- 2026-04-01: March report sent. March work: Replenish research pass, Fresh Blends platform framing, B2C targeting refinement.
+## Gmail intel (through 2026-04-20)
+- 2026-04-20: Dillon followed up, offered to connect today (Monday). Flexible on time.
+- 2026-04-19: Follow-up on images. Asked Mia to resend 7-Eleven branded assets.
+- 2026-04-18: Landing page completed and sent to Mia. **Mia flagged critical issue: they don't sell Replenish product in market. Promoting 7-Eleven private label smoothies.** Needs 7-Eleven branded images. Dillon asked for resend (files too large / won't download).
+- 2026-04-13: Check-in confirming everything ready to launch.
+- 2026-04-12: Admin access granted to Mia for billing CC entry.
+- 2026-04-08: Mia requested admin access to enter CC details.
+- 2026-04-02: Campaign build complete.
 
 ## Access state
 - Google Analytics: Dillon has access.
-- Google Ads: Admin access granted to Mia 2026-04-12 (so she can enter billing CC).
-- Google Business Profile: Manager access needed for all 5 kiosk locations — confirm status.
+- Google Ads: Admin access granted to Mia 2026-04-12.
+- Google Business Profile: Manager access needed for all 5 kiosk locations. Status unconfirmed.
 
 ## Open items
-- Verify 2026-04-13 launch actually executed and is spending.
-- Ship first week-over-week performance snapshot.
+- BLOCKED: Revise Pompano landing page with 7-Eleven branded images (waiting on Mia's files).
+- Get on a call with Mia to resolve image file transfer issue.
 - Close the loop on GBP manager access for all 5 kiosk locations.

@@ -10,7 +10,7 @@ contact_name: Andy Zirger
 contact_email: info@barcrawlusa.com
 cc_list: []
 last_touched: 2026-04-15
-next_action: Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing
+next_action: Monitor Taco & Tequila wave 1 pacing across all 9 cities; prepare wave 2 launch for May 2
 due: 2026-04-25
 tags: [client, momentum360, google-ads, events, pmax]
 ---
@@ -26,9 +26,11 @@ Primary account for a multi-city bar crawl events business. Managed end-to-end o
 - Full paid media system: Meta Ads, Google Search RSA, PMax, email, SMS for the 9-city April 25 event series.
 - Client-facing HTML performance reports under Momentum 360 branding.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-15: URGENT. 2 Google Ads disapproved on Halloween / Fall Cocktail Crawl emails (forwarded by Andy). Reply sent saying none of those should have launched, will investigate.
-- 2026-04-14: Earlier disapproval batch of 4 assets. Caroline Zirger (events@barcrawl-usa.com) forwarded.
-- 2026-04-13: Sent PMax update "53 Tickets, All April 25 Cities Live, May 2 Launching Tomorrow." Andy flagged runaway $54 day spend on Soulard — traced to Max Conversions running without a tCPA. Patched. Andy asked to cap Soulard ~$15-20/day so the final week isn't the biggest.
+## Gmail intel (through 2026-04-20)
+- 2026-04-20: Mid-flight performance update sent to Andy. **214 tickets sold.** Numbers working, meaningful runway left before April 25 wave 1.
+- 2026-04-16: RESOLVED. Disapproved ads ("Boos and Booze" + "Fall Cocktail Crawl") flagged for alcohol information policy. Paused since they're off-season campaigns. Issue closed.
+- 2026-04-15: Andy forwarded 2 disapproval notices. Dillon replied same day, investigated.
+- 2026-04-14: Caroline forwarded earlier batch of 4 disapproved assets.
+- 2026-04-13: Sent PMax update "53 Tickets, All April 25 Cities Live, May 2 Launching Tomorrow." Soulard $54/day overspend patched. Andy requested $15-20/day cap.
 - All PMax budgets sit at $14.25/day, Maximize Conversions, no audience signals.
 - Google Ads account ID: 435-710-2897.
