@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Homepage SmartCare Banner Module | Align HCM</title>
+<meta name="description" content="Drop in homepage module. Place between services grid and client satisfaction section on alignhcm.com." />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<style>
+  body { background: #f6f4ef; }
+  /* Isolated module styles for homepage insertion */
+  .hm-banner {
+    max-width: 1280px;
+    margin: 48px auto;
+    padding: 64px;
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hm-banner .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .hm-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .hm-card .icon {
+    width: 40px;
+    height: 40px;
+    background: var(--ink);
+    color: var(--orange);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .hm-card h4 { margin: 0 0 4px; font-size: 16px; color: var(--ink); }
+  .hm-card p { margin: 0; font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+  .hm-banner h2 { font-size: clamp(30px, 3.6vw, 44px); }
+  .hm-banner h2 .accent { color: var(--orange); }
+  .hm-banner p.lede { font-size: 16px; color: var(--ink-3); margin-bottom: 24px; }
+  .hm-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hm-stat {
+    background: #fff;
+    border-radius: var(--radius-pill);
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .hm-stat strong { color: var(--orange); font-family: var(--font-display); font-size: 16px; }
+  @media (max-width: 960px) {
+    .hm-banner { grid-template-columns: 1fr; padding: 40px 24px; margin: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hm-banner">
+  <div>
+    <span class="eyebrow">Align SmartCare</span>
+    <div class="hm-stat"><strong>82%</strong> of orgs use less than half their HCM platform</div>
+    <h2>Your HCM platform is live. <span class="accent">Now what?</span></h2>
+    <p class="lede">SmartCare gives you dedicated experts who stabilize, optimize, and run your system so your team can focus on strategy. No migration. No co-employment. No vendor lock-in.</p>
+    <div class="hm-ctas">
+      <a href="/align-hcm-smartcare" class="btn btn-primary on-light">Get your free Month 1 Discovery →</a>
+      <a href="/align-hcm-smartcare#journey" class="btn btn-ghost">See the SmartCare Journey</a>
+    </div>
+    <p style="font-size:12px;color:var(--ink-3);margin-top:16px;letter-spacing:0.06em;">Valued at $8,000. No commitment required.</p>
+  </div>
+  <div class="cards">
+    <div class="hm-card">
+      <div class="icon">M</div>
+      <div>
+        <h4>Maintenance</h4>
+        <p>Ongoing optimization, configuration fixes, compliance updates. Your named expert, your platform.</p>
+      </div>
+    </div>
+    <div class="hm-card">
+      <div class="icon">R</div>
+      <div>
+        <h4>Managed Services</h4>
+        <p>We run your payroll, HRIS, or WFM operations on your existing platform. No migration required.</p>
+      </div>
+    </div>
+    <div class="hm-card">
+      <div class="icon">S</div>
+      <div>
+        <h4>Strategic Advisory</h4>
+        <p>Quarterly business reviews, roadmap planning, and executive alignment for your HCM investment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
