@@ -1,5 +1,5 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-04-20
 tags: [system, memory, sync]
 ---
 
@@ -25,35 +25,43 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • Align HCM — Dillon's full-time employer. Not a client. Not counted in client totals.
 
 ## Pending deliverables
-• Bar Crawl USA — resolve 2 disapproved ads (Halloween / Fall Cocktail Crawl language flagged 2026-04-14/15).
-• Kimberly James Bridal — publish Timeline page, verify GA4 + GSC indexing per Mac.
-• LinkEZE — fix enhanced conversions data source diagnostics; confirm MFA enabled on 809-600-6448.
-• Fresh Blends / Replenish — confirm 2026-04-13 campaign launch went live; first-week performance snapshot.
-• NKCDC — launch Free Tax Prep campaign the moment NKCDC clears the landing page.
-• Commercial Cleaners Alliance — deliver CCA creatives + NexGen creatives (committed 2026-04-08).
-• Hardwood Artisan — CHASE billing card update before engagement pauses.
-• Omega Landscaping — drone footage from David.
-• Jeff Hozias — launch approved seller Meta campaign.
+- Bar Crawl USA -- Indianapolis campaign still pending Google approval. Monitor and launch the moment it clears. Keep pressure on Macon budget/creative.
+- Bar Crawl USA -- "Boos and Booze" / "Fall Cocktail Crawl" disapprovals explained to Andy (alcohol info policy). Legacy campaigns, not active launches.
+- Kimberly James Bridal -- apply Kim's silhouette edits to Size-Inclusive Gowns page. Investigate video embed feasibility (may need dev team). Publish plus-size page (new merged layout in progress).
+- Kimberly James Bridal -- verify GA4 + GSC indexing per Mac on all new pages.
+- LinkEZE -- fix enhanced conversions data source diagnostics; confirm MFA enabled on 809-600-6448. Also: investigate new policy issue (1 asset flagged 2026-04-19).
+- Fresh Blends / Replenish -- revise Pompano landing page with 7-Eleven branded assets (NOT Replenish branding). Blocked on Mia resending images (file download issues). Call scheduled for Monday 2026-04-20.
+- NKCDC -- launch Free Tax Prep campaign the moment NKCDC clears the landing page. Dillon escalated directly to Tess/Mikey on 2026-04-18.
+- Commercial Cleaners Alliance -- finalize CCA + Sterile Care FB lead form copy and targeting. Call with Mike Ross needed to align before build.
+- Hardwood Artisan -- CHASE billing card update before engagement pauses.
+- Omega Landscaping -- drone footage from David.
+- Jeff Hozias -- monitor Rockland County Meta campaigns (launched 2026-04-16). Check in on lead flow.
 
 ## Upcoming deadlines (7 days)
-• 2026-04-16 — Onsite x M360 weekly call (1:00 PM ET).
-• 2026-04-16 — Commercial Cleaners Alliance creative commitment.
-• 2026-04-18 — Hardwood Artisan billing card deadline (implied from "next 90 days" ask 2026-04-07).
-• 2026-04-25 — Bar Crawl USA Taco & Tequila wave 1 (9 cities).
-• 2026-05-02 — Bar Crawl USA Taco & Tequila wave 2.
+- 2026-04-20 -- Fresh Blends / Replenish call with Mia (resolve image file issues for Pompano LP).
+- 2026-04-21 -- Momentum 360 Account Manager ALL HANDS monthly meeting (1:00 PM ET).
+- 2026-04-23 -- Onsite x M360 weekly call (1:00 PM ET, standing Thursday).
+- 2026-04-25 -- Bar Crawl USA Taco & Tequila wave 1 events (9 cities). Ads running, 6 days tracking remaining.
+- 2026-05-02 -- Bar Crawl USA Taco & Tequila wave 2 events (6 cities). Ads running, 13 days tracking remaining.
+- OVERDUE -- Hardwood Artisan billing card update (originally asked 2026-04-07).
 
 ## Recent completions (7 days)
-• 2026-04-14 — BOK Law weekly social content delivered.
-• 2026-04-14 — Jeff Hozias seller ad copy approved.
-• 2026-04-13 — KJB Wedding Dress Timeline page approved.
-• 2026-04-13 — Bar Crawl USA PMax update sent to Andy (53 tickets, all April 25 cities live, May 2 launching).
-• 2026-04-12 — Fresh Blends / Replenish admin access granted to Mia.
-• 2026-04-09 — NKCDC revised strategy delivered and approved by Anthony.
-• 2026-04-01 — Monthly reports sent to Omega, Jeff Hozias, Hardwood Artisan.
+- 2026-04-20 -- Bar Crawl USA mid-flight report delivered (214 tickets, $7.47/ticket, projecting 310-340 total).
+- 2026-04-20 -- KJB weekly update sent (30,328 impressions, 689 clicks, $0.58 CPC).
+- 2026-04-18 -- Replenish Pompano landing page v1 delivered (needs revision for 7-Eleven branding).
+- 2026-04-18 -- NKCDC escalation: Dillon emailed Tess/Mikey directly to bypass Anthony's non-response.
+- 2026-04-18 -- CCA/Sterile Care FB lead form copy completed. Sterile Care strategy delivered.
+- 2026-04-17 -- KJB Size-Inclusive Gowns page delivered for review.
+- 2026-04-16 -- Jeff Hozias Rockland County Meta campaigns launched (Anti-Zillow lead test).
+- 2026-04-16 -- Bar Crawl USA disapproval issue explained to Andy (alcohol info policy, legacy campaigns).
+- 2026-04-16 -- CCA hook feedback delivered to Mike Ross.
+- 2026-04-16 -- Fresh Blends / Replenish strategy aligned with Mia (Pompano-first approach).
 
 ## Unanswered / urgent
-• **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
-• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
-• **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
-• **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
-• **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+- **NKCDC** -- Anthony still hasn't responded (last attempt 2026-04-18). Dillon escalated to Tess/Mikey directly. No response from them yet either.
+- **Hardwood Artisan** -- billing card update still outstanding. OVERDUE. Engagement at risk of pause.
+- **Fresh Blends / Replenish** -- BLOCKED on 7-Eleven branded images from Mia. Files won't download. Call set for Monday 2026-04-20.
+- **Bar Crawl USA** -- Indianapolis campaign pending Google approval. All other policy battles resolved.
+- **LinkEZE** -- new policy issue (1 asset flagged 2026-04-19). Enhanced conversions diagnostics still open.
+- **Omega Landscaping** -- no email activity since 2026-04-14. Drone footage still pending from David.
+- **Commercial Cleaners Alliance** -- need to schedule call with Mike Ross to finalize targeting/offers for CCA + Sterile Care lead forms.
