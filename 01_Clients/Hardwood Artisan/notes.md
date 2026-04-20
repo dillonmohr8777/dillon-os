@@ -2,6 +2,8 @@
 client: Hardwood Artisan
 division: Momentum 360
 tags: [notes]
+last_touched: 2026-04-20
+next_action: CHASE billing card update -- engagement should pause if not resolved
 ---
 
 # Notes
