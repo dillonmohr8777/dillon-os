@@ -9,9 +9,9 @@ status: active
 contact_name: Mia Lange
 contact_email: mia@getreplenish.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-13
-next_action: Confirm campaigns launched 2026-04-13 are pacing correctly; send first-week performance snapshot
-due: none
+last_touched: 2026-04-20
+next_action: Get 7-Eleven branded images from Mia (call scheduled 2026-04-20); revise Pompano landing page with correct branding; launch Pompano-only campaign as proof-of-concept
+due: 2026-04-21
 tags: [client, momentum360, google-ads, pmax, food-beverage]
 ---
 

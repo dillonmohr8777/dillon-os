@@ -9,9 +9,9 @@ status: active
 contact_name: Biru Gupta
 contact_email: biru.gupta@unipartsgroup.com
 cc_list: [jason@momentumvirtualtours.com]
-last_touched: 2026-04-05
-next_action: Resolve enhanced conversions data source diagnostics warning; confirm MFA is enabled on Google Ads account (customer ID 809-600-6448) before April 6 cutoff
-due: 2026-04-06
+last_touched: 2026-04-20
+next_action: Investigate new Google policy issue flagged 2026-04-19 (1 asset); resolve enhanced conversions diagnostics warning (open since 2026-03-23)
+due: 2026-04-22
 tags: [client, momentum360, google-ads, ecommerce, shopify]
 ---
 
