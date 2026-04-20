@@ -9,8 +9,8 @@ status: active
 contact_name: Andy Zirger
 contact_email: info@barcrawlusa.com
 cc_list: []
-last_touched: 2026-04-15
-next_action: Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing
+last_touched: 2026-04-20
+next_action: Monitor April 25 + May 2 wave pacing; push Indianapolis through approval; adjust Macon budget/creative if needed
 due: 2026-04-25
 tags: [client, momentum360, google-ads, events, pmax]
 ---
