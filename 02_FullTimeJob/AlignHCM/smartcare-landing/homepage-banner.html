@@ -1,0 +1,97 @@
+<!-- =========================================================
+     SmartCare Homepage Banner Module (Change 1)
+     Insert between existing services grid and client
+     satisfaction section on alignhcm.com homepage.
+     Self contained — no external CSS required.
+     ========================================================= -->
+<section class="sc-banner" aria-labelledby="sc-banner-title">
+  <style>
+    .sc-banner {
+      --sc-navy:#0A1628; --sc-navy-500:#2D3748; --sc-muted:#56627a;
+      --sc-orange:#E8832A; --sc-orange-600:#F05A28; --sc-teal:#2BB5A0;
+      --sc-line:#e4e7ef; --sc-surface:#f5f7fb;
+      font-family:'Plus Jakarta Sans','DM Sans',system-ui,sans-serif;
+      padding:4rem 1.25rem;
+      background:
+        radial-gradient(700px 320px at 90% -10%, rgba(43,181,160,.12), transparent 60%),
+        radial-gradient(700px 320px at -10% 110%, rgba(232,131,42,.1), transparent 60%),
+        #fff;
+      color:var(--sc-navy);
+    }
+    .sc-banner__wrap{max-width:1180px;margin:0 auto;}
+    .sc-banner__eyebrow{
+      display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--sc-orange-600);margin-bottom:.75rem;
+    }
+    .sc-banner h2{
+      font-size:clamp(1.6rem,3vw,2.35rem);line-height:1.15;margin:0 0 .75rem;
+      font-weight:700;letter-spacing:-.01em;max-width:22ch;
+    }
+    .sc-banner__sub{color:var(--sc-muted);max-width:62ch;font-size:1.05rem;margin:0 0 2rem;}
+    .sc-banner__grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem;
+    }
+    .sc-banner__card{
+      background:#fff;border:1px solid var(--sc-line);border-radius:14px;
+      padding:1.5rem;box-shadow:0 1px 2px rgba(14,26,43,.06),0 2px 8px rgba(14,26,43,.04);
+      transition:transform .15s ease,box-shadow .15s ease;
+    }
+    .sc-banner__card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,26,43,.08);}
+    .sc-banner__card h3{
+      margin:0 0 .5rem;font-size:1.1rem;font-weight:700;color:var(--sc-navy);
+    }
+    .sc-banner__card p{margin:0;color:var(--sc-muted);font-size:.95rem;line-height:1.55;}
+    .sc-banner__card--1 h3{color:var(--sc-orange-600);}
+    .sc-banner__card--2 h3{color:var(--sc-orange);}
+    .sc-banner__card--3 h3{color:#1b7a6b;}
+    .sc-banner__cta{
+      display:flex;flex-wrap:wrap;align-items:center;gap:1rem;
+      background:var(--sc-surface);border:1px dashed var(--sc-line);
+      border-radius:14px;padding:1.25rem 1.5rem;
+    }
+    .sc-banner__btn{
+      display:inline-flex;align-items:center;padding:.85rem 1.25rem;
+      background:var(--sc-orange-600);color:#fff;font-weight:700;
+      border-radius:10px;text-decoration:none;
+      box-shadow:0 6px 18px rgba(240,90,40,.35);
+      transition:background .15s ease,transform .15s ease;
+    }
+    .sc-banner__btn:hover{background:var(--sc-orange);transform:translateY(-1px);}
+    .sc-banner__cta-note{margin:0;color:var(--sc-muted);font-size:.9rem;}
+    .sc-banner__cta-note strong{color:var(--sc-navy);}
+    @media(max-width:860px){
+      .sc-banner__grid{grid-template-columns:1fr;}
+      .sc-banner__cta{flex-direction:column;align-items:flex-start;}
+    }
+  </style>
+
+  <div class="sc-banner__wrap">
+    <span class="sc-banner__eyebrow">SmartCare by Align HCM</span>
+    <h2 id="sc-banner-title">Your HCM platform is live. Now what?</h2>
+    <p class="sc-banner__sub">
+      82% of organizations use less than half of their HCM platform's capabilities.
+      SmartCare gives you dedicated experts who stabilize, optimize, and run your
+      system so your team can focus on strategy.
+    </p>
+
+    <div class="sc-banner__grid">
+      <article class="sc-banner__card sc-banner__card--1">
+        <h3>Maintenance</h3>
+        <p>Ongoing optimization, configuration fixes, and compliance updates. Your named expert on your platform.</p>
+      </article>
+      <article class="sc-banner__card sc-banner__card--2">
+        <h3>Managed Services</h3>
+        <p>We run your payroll, HRIS, or WFM operations on your existing platform. No migration required.</p>
+      </article>
+      <article class="sc-banner__card sc-banner__card--3">
+        <h3>Strategic Advisory</h3>
+        <p>Quarterly business reviews, roadmap planning, and executive alignment for your HCM investment.</p>
+      </article>
+    </div>
+
+    <div class="sc-banner__cta">
+      <a href="/smartcare#discovery" class="sc-banner__btn">Get your free Month 1 Discovery</a>
+      <p class="sc-banner__cta-note"><strong>Valued at $8,000.</strong> No commitment required.</p>
+    </div>
+  </div>
+</section>
