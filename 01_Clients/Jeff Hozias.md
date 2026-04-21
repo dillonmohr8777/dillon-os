@@ -33,5 +33,20 @@ google_ads_id: 495-602-9145
 ## Reports
 - Navy/red/gold Howard Hanna brand palette
 
+## Sync Log
+
+### 2026-04-20
+- Dillon followed up with Jeff on campaign performance -- asked if any leads have come through yet
+- Anti-Zillow angle expected to pull early interest
+
+### 2026-04-16
+- Rockland County campaigns built and live
+- Anti-Zillow variation running as lead test
+- Seller and buyer copy rotating alongside it
+
+### 2026-04-14
+- Jeff reviewed and refined ad copy across seller, buyer, and Anti-Zillow angles
+- Dillon approved all three variations and launched them
+
 ## Links
 - [[Client Index]]
