@@ -38,7 +38,24 @@ google_ads_id: 627-501-4654
 - 56th Street location near a school — Gen Z / Gen Alpha targeting
 
 ## Status
-Awaiting Google Ads Admin and GBP Manager access. Meta campaign to follow once Google campaigns are live.
+Landing page delivered but needs revision -- must feature 7-Eleven private label branding, not Replenish product (they don't have Replenish product in market). Waiting on re-sent 7-Eleven branded image assets from Mia.
+
+## Sync Log
+
+### 2026-04-20
+- Dillon followed up with Mia again, offered to call Monday
+- Also sent separate follow-up asking for 7-Eleven branded image re-send (3-5 images needed)
+- Dillon having persistent issues loading Mia's image files (too large or won't download)
+
+### 2026-04-19
+- Dillon requested a call with Mia for Monday -- can't load any of the image files she sent
+- Asked her to resend 7-Eleven branded assets
+
+### 2026-04-18
+- Replenish landing page delivered to Mia for review
+- Mia responded: "This looks great but we don't have Replenish product in the market. We are promoting 7-Eleven private label smoothies."
+- Dillon committed to immediate revision
+- Asked Mia to resend images (most files too large or won't download)
 
 ## Links
 - [[Client Index]]
