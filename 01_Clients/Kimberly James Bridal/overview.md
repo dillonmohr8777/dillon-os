@@ -9,8 +9,8 @@ status: active
 contact_name: Kimberly Iraci
 contact_email: kimberly@kimberlyjamesbridal.com
 cc_list: [mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com]
-last_touched: 2026-04-15
-next_action: Publish wedding dress timeline page (approved 2026-04-13) and verify GA4/GSC indexing per Mac
+last_touched: 2026-04-21
+next_action: URGENT -- investigate Google Ads account cancellation (CID 721-491-4099) and reactivate if unauthorized; finish Squarespace sizing fix; verify GA4/GSC indexing
 due: none
 tags: [client, momentum360, google-ads, bridal, squarespace, seo]
 ---
