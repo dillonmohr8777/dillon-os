@@ -8,9 +8,9 @@ status: active
 contact_name: Grace Slagle
 contact_email: gracieslags@gmail.com
 cc_list: [onsiteclp@gmail.com, sean@needmomentum.com]
-last_touched: 2026-04-09
-next_action: Attend weekly Onsite x M360 call Thursday 2026-04-16 1:00 PM ET
-due: 2026-04-16
+last_touched: 2026-04-21
+next_action: Accept Google Ads invitation (Customer ID 103-371-5894). Attend Thursday call and audit the account.
+due: 2026-04-23
 tags: [client, momentum360, concrete, landscape]
 ---
 

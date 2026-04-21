@@ -9,8 +9,8 @@ status: active
 contact_name: Mike
 contact_email: shadowhvac1@gmail.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-03-02
-next_action: Confirm LSA background check is fully cleared and Shadow is live; resume GBP post cadence check
+last_touched: 2026-04-21
+next_action: Check Google Ads policy flag from 2026-04-19 (1 asset). Confirm LSA background check is fully cleared and Shadow is live.
 due: none
 tags: [client, momentum360, hvac, local-seo, lsa]
 ---
