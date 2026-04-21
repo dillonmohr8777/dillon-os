@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOK Law — Turn the Page Thursday</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    background: #0d1520;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+  }
+
+  .bg-layer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #1a2232 0%, #0d1520 50%, #14191e 100%);
+    z-index: 0;
+  }
+
+  .horizon-glow {
+    position: absolute;
+    bottom: 28%;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: radial-gradient(ellipse 80% 100% at 50% 100%, rgba(220, 170, 80, 0.15) 0%, rgba(200, 130, 60, 0.06) 40%, transparent 70%);
+    z-index: 1;
+    animation: horizonPulse 5s ease-in-out infinite;
+  }
+
+  @keyframes horizonPulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  .horizon-line {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(220, 170, 80, 0.2) 20%, rgba(220, 170, 80, 0.4) 50%, rgba(220, 170, 80, 0.2) 80%, transparent 100%);
+    z-index: 2;
+    animation: fadeIn 2s ease-out 0.5s both;
+  }
+
+  .sun {
+    position: absolute;
+    bottom: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240, 190, 80, 0.6) 0%, rgba(220, 160, 60, 0.2) 50%, transparent 70%);
+    z-index: 2;
+    animation: sunRise 3s ease-out 0.8s both, sunGlow 4s ease-in-out 3s infinite;
+  }
+
+  @keyframes sunRise {
+    from { transform: translateX(-50%) translateY(40px); opacity: 0; }
+    to { transform: translateX(-50%) translateY(0); opacity: 1; }
+  }
+
+  @keyframes sunGlow {
+    0%, 100% { box-shadow: 0 0 60px rgba(240, 190, 80, 0.15), 0 0 120px rgba(240, 190, 80, 0.05); }
+    50% { box-shadow: 0 0 80px rgba(240, 190, 80, 0.25), 0 0 160px rgba(240, 190, 80, 0.1); }
+  }
+
+  .sun-ring {
+    position: absolute;
+    bottom: 25.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 1px solid rgba(220, 170, 80, 0.08);
+    z-index: 2;
+    animation: ringExpand 4s ease-out 1.5s both;
+  }
+
+  .sun-ring-2 {
+    position: absolute;
+    bottom: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(220, 170, 80, 0.04);
+    z-index: 2;
+    animation: ringExpand 4s ease-out 2s both;
+  }
+
+  @keyframes ringExpand {
+    from { transform: translateX(-50%) scale(0.5); opacity: 0; }
+    to { transform: translateX(-50%) scale(1); opacity: 1; }
+  }
+
+  .steam {
+    position: absolute;
+    bottom: 42%;
+    left: 48%;
+    z-index: 3;
+  }
+
+  .steam-line {
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(180deg, transparent, rgba(200, 180, 160, 0.15), transparent);
+    border-radius: 2px;
+    animation: steamRise 3s ease-out infinite;
+  }
+
+  .steam-line:nth-child(1) { left: 0; animation-delay: 0s; }
+  .steam-line:nth-child(2) { left: 12px; animation-delay: 1s; height: 30px; }
+  .steam-line:nth-child(3) { left: 24px; animation-delay: 2s; height: 35px; }
+
+  @keyframes steamRise {
+    0% { transform: translateY(0) scaleX(1); opacity: 0; }
+    20% { opacity: 0.6; }
+    100% { transform: translateY(-60px) scaleX(2); opacity: 0; }
+  }
+
+  .mug {
+    position: absolute;
+    bottom: 34%;
+    left: 46%;
+    z-index: 3;
+  }
+
+  .mug-body {
+    width: 40px;
+    height: 32px;
+    background: rgba(180, 160, 140, 0.1);
+    border: 1px solid rgba(180, 160, 140, 0.15);
+    border-radius: 0 0 8px 8px;
+    animation: fadeIn 1.5s ease-out 2s both;
+  }
+
+  .mug-handle {
+    position: absolute;
+    right: -12px;
+    top: 4px;
+    width: 12px;
+    height: 18px;
+    border: 1px solid rgba(180, 160, 140, 0.12);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+    animation: fadeIn 1.5s ease-out 2.2s both;
+  }
+
+  .stars {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(200, 210, 230, 0.4);
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  .star:nth-child(1) { top: 8%; left: 12%; animation-delay: 0s; }
+  .star:nth-child(2) { top: 15%; left: 45%; animation-delay: 1s; width: 1px; height: 1px; }
+  .star:nth-child(3) { top: 5%; left: 70%; animation-delay: 2s; }
+  .star:nth-child(4) { top: 20%; left: 85%; animation-delay: 0.5s; width: 1px; height: 1px; }
+  .star:nth-child(5) { top: 12%; left: 30%; animation-delay: 1.5s; width: 1px; height: 1px; }
+  .star:nth-child(6) { top: 3%; left: 55%; animation-delay: 2.5s; }
+  .star:nth-child(7) { top: 18%; left: 20%; animation-delay: 0.8s; width: 1px; height: 1px; }
+  .star:nth-child(8) { top: 10%; left: 90%; animation-delay: 1.8s; }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.8; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 55%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px;
+    text-align: center;
+  }
+
+  .series-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid rgba(200, 180, 140, 0.2);
+    border-radius: 30px;
+    color: rgba(200, 180, 140, 0.7);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    animation: fadeSlideDown 1s ease-out 0.3s both;
+  }
+
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    font-weight: 600;
+    color: #f0e8d8;
+    line-height: 1.2;
+    margin-bottom: 36px;
+    animation: fadeSlideDown 1s ease-out 0.6s both;
+  }
+
+  .divider {
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(220, 170, 80, 0.4), transparent);
+    margin-bottom: 32px;
+    animation: fadeSlideDown 1s ease-out 0.8s both, expandLine 2s ease-out 1.5s both;
+  }
+
+  @keyframes expandLine {
+    from { width: 50px; }
+    to { width: 100px; }
+  }
+
+  .body-text {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(240, 232, 216, 0.6);
+    line-height: 1.8;
+    max-width: 680px;
+    animation: fadeSlideDown 1s ease-out 1s both;
+  }
+
+  .body-text em {
+    font-style: italic;
+    color: rgba(220, 180, 100, 0.9);
+    font-weight: 400;
+  }
+
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo-area {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    animation: fadeIn 1s ease-out 1.6s both;
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(200, 180, 140, 0.5);
+    letter-spacing: 4px;
+  }
+
+  .logo-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(200, 210, 230, 0.25);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-layer"></div>
+
+  <div class="stars">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+
+  <div class="horizon-glow"></div>
+  <div class="horizon-line"></div>
+  <div class="sun"></div>
+  <div class="sun-ring"></div>
+  <div class="sun-ring-2"></div>
+
+  <div class="mug">
+    <div class="mug-body"></div>
+    <div class="mug-handle"></div>
+  </div>
+  <div class="steam">
+    <div class="steam-line"></div>
+    <div class="steam-line"></div>
+    <div class="steam-line"></div>
+  </div>
+
+  <div class="content">
+    <div class="series-badge">Turn the Page Thursday</div>
+    <h1 class="title">The First Morning<br>That Feels Normal</h1>
+    <div class="divider"></div>
+    <p class="body-text">
+      <em>New chapters don't start with fireworks.</em><br>
+      They start with quiet mornings<br>and small choices.
+    </p>
+  </div>
+
+  <div class="logo-area">
+    <div class="logo-text">BOK LAW</div>
+    <div class="logo-sub">Family Law &amp; Mediation Services</div>
+  </div>
+</body>
+</html>

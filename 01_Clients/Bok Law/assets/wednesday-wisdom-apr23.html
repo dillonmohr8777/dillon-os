@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOK Law — Wednesday Wisdom</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    background: #1a1410;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+  }
+
+  .bg-layer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, #2c1f14 0%, #1a1410 40%, #0f1a1e 100%);
+    z-index: 0;
+  }
+
+  .grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    z-index: 1;
+  }
+
+  .warm-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(210, 160, 90, 0.12) 0%, transparent 70%);
+    top: -100px;
+    right: -100px;
+    z-index: 1;
+    animation: glowPulse 6s ease-in-out infinite;
+  }
+
+  .warm-glow-2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(180, 120, 60, 0.08) 0%, transparent 70%);
+    bottom: -50px;
+    left: -50px;
+    z-index: 1;
+    animation: glowPulse 8s ease-in-out infinite reverse;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  .light-rays {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .ray {
+    position: absolute;
+    top: -20%;
+    right: 10%;
+    width: 2px;
+    height: 140%;
+    background: linear-gradient(180deg, rgba(210, 170, 100, 0.15), transparent 80%);
+    transform: rotate(25deg);
+    animation: rayShimmer 4s ease-in-out infinite;
+  }
+
+  .ray:nth-child(2) {
+    right: 18%;
+    width: 3px;
+    animation-delay: 0.8s;
+    opacity: 0.6;
+  }
+
+  .ray:nth-child(3) {
+    right: 25%;
+    width: 1px;
+    animation-delay: 1.6s;
+    opacity: 0.4;
+  }
+
+  @keyframes rayShimmer {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  .particles {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  .particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(210, 170, 100, 0.3);
+    animation: floatUp 12s linear infinite;
+  }
+
+  .particle:nth-child(1) { left: 15%; top: 80%; animation-delay: 0s; animation-duration: 14s; }
+  .particle:nth-child(2) { left: 35%; top: 90%; animation-delay: 2s; width: 2px; height: 2px; }
+  .particle:nth-child(3) { left: 55%; top: 85%; animation-delay: 4s; animation-duration: 16s; }
+  .particle:nth-child(4) { left: 75%; top: 95%; animation-delay: 6s; width: 2px; height: 2px; }
+  .particle:nth-child(5) { left: 25%; top: 75%; animation-delay: 8s; animation-duration: 13s; }
+  .particle:nth-child(6) { left: 65%; top: 88%; animation-delay: 3s; width: 4px; height: 4px; opacity: 0.2; }
+  .particle:nth-child(7) { left: 45%; top: 92%; animation-delay: 7s; animation-duration: 15s; }
+  .particle:nth-child(8) { left: 85%; top: 78%; animation-delay: 1s; width: 2px; height: 2px; }
+
+  @keyframes floatUp {
+    0% { transform: translateY(0) translateX(0); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.2; }
+    100% { transform: translateY(-800px) translateX(30px); opacity: 0; }
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 80px;
+    text-align: center;
+  }
+
+  .series-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid rgba(210, 170, 100, 0.3);
+    border-radius: 30px;
+    color: rgba(210, 170, 100, 0.8);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    animation: fadeSlideUp 1s ease-out 0.3s both;
+  }
+
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: #f5efe6;
+    line-height: 1.25;
+    margin-bottom: 40px;
+    animation: fadeSlideUp 1s ease-out 0.6s both;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(210, 170, 100, 0.5), transparent);
+    margin-bottom: 40px;
+    animation: fadeSlideUp 1s ease-out 0.8s both, expandLine 2s ease-out 1.5s both;
+  }
+
+  @keyframes expandLine {
+    from { width: 60px; }
+    to { width: 120px; }
+  }
+
+  .body-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(245, 239, 230, 0.7);
+    line-height: 1.8;
+    max-width: 700px;
+    animation: fadeSlideUp 1s ease-out 1s both;
+  }
+
+  .body-text em {
+    font-style: italic;
+    color: rgba(210, 170, 100, 0.9);
+    font-weight: 400;
+  }
+
+  .logo-area {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    animation: fadeSlideUp 1s ease-out 1.4s both;
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(210, 170, 100, 0.6);
+    letter-spacing: 4px;
+  }
+
+  .logo-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(245, 239, 230, 0.3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <div class="grain"></div>
+  <div class="warm-glow"></div>
+  <div class="warm-glow-2"></div>
+
+  <div class="light-rays">
+    <div class="ray"></div>
+    <div class="ray"></div>
+    <div class="ray"></div>
+  </div>
+
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <div class="content">
+    <div class="series-badge">Wednesday Wisdom</div>
+    <h1 class="title">When Your Kids Ask<br>About the Divorce</h1>
+    <div class="divider"></div>
+    <p class="body-text">
+      There's no script for that moment.<br>
+      Every family is different.<br><br>
+      <em>You don't have to get it perfect.<br>
+      You just have to show up with intention.</em>
+    </p>
+  </div>
+
+  <div class="logo-area">
+    <div class="logo-text">BOK LAW</div>
+    <div class="logo-sub">Family Law &amp; Mediation Services</div>
+  </div>
+</body>
+</html>

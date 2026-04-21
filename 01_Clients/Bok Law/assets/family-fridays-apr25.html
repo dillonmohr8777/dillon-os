@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOK Law — Family Fridays</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    background: #0e1a12;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+  }
+
+  .bg-layer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(170deg, #1a2e1e 0%, #0e1a12 35%, #12201a 70%, #0a1510 100%);
+    z-index: 0;
+  }
+
+  .bridge {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .bridge-deck {
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    right: 8%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(220, 190, 80, 0.25) 15%, rgba(220, 190, 80, 0.35) 50%, rgba(220, 190, 80, 0.25) 85%, transparent);
+    animation: fadeIn 1.5s ease-out 0.8s both;
+  }
+
+  .bridge-cable {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(220, 190, 80, 0.15));
+  }
+
+  .bridge-cable:nth-child(2) { left: 20%; animation: fadeIn 1.5s ease-out 1s both; }
+  .bridge-cable:nth-child(3) { left: 30%; height: 60px; animation: fadeIn 1.5s ease-out 1.1s both; }
+  .bridge-cable:nth-child(4) { left: 40%; height: 45px; animation: fadeIn 1.5s ease-out 1.2s both; }
+  .bridge-cable:nth-child(5) { left: 50%; height: 35px; animation: fadeIn 1.5s ease-out 1.3s both; }
+  .bridge-cable:nth-child(6) { left: 60%; height: 45px; animation: fadeIn 1.5s ease-out 1.2s both; }
+  .bridge-cable:nth-child(7) { left: 70%; height: 60px; animation: fadeIn 1.5s ease-out 1.1s both; }
+  .bridge-cable:nth-child(8) { left: 80%; height: 80px; animation: fadeIn 1.5s ease-out 1s both; }
+
+  .bridge-tower {
+    position: absolute;
+    bottom: 0;
+    width: 4px;
+    height: 100px;
+    background: linear-gradient(180deg, rgba(220, 190, 80, 0.3), rgba(220, 190, 80, 0.15));
+    border-radius: 2px 2px 0 0;
+  }
+
+  .bridge-tower:nth-child(9) { left: 18%; animation: fadeIn 1.5s ease-out 0.9s both; }
+  .bridge-tower:nth-child(10) { left: 82%; animation: fadeIn 1.5s ease-out 0.9s both; }
+
+  .river {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15%;
+    background: linear-gradient(180deg, rgba(30, 60, 50, 0.3) 0%, rgba(15, 35, 30, 0.6) 100%);
+    z-index: 1;
+  }
+
+  .river-shimmer {
+    position: absolute;
+    bottom: 3%;
+    height: 1px;
+    background: rgba(160, 200, 160, 0.08);
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  .river-shimmer:nth-child(1) { left: 10%; width: 100px; animation-delay: 0s; }
+  .river-shimmer:nth-child(2) { left: 35%; width: 80px; bottom: 5%; animation-delay: 2s; }
+  .river-shimmer:nth-child(3) { left: 60%; width: 120px; bottom: 7%; animation-delay: 4s; }
+  .river-shimmer:nth-child(4) { left: 20%; width: 60px; bottom: 9%; animation-delay: 1s; }
+  .river-shimmer:nth-child(5) { left: 75%; width: 90px; bottom: 2%; animation-delay: 3s; }
+
+  @keyframes shimmer {
+    0%, 100% { opacity: 0.3; transform: scaleX(1); }
+    50% { opacity: 0.8; transform: scaleX(1.3); }
+  }
+
+  .foliage {
+    position: absolute;
+    z-index: 3;
+  }
+
+  .leaf {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 0 50% 0 50%;
+    animation: leafFall 10s linear infinite;
+  }
+
+  .leaf:nth-child(1) { left: 10%; top: -5%; background: rgba(140, 200, 120, 0.3); animation-delay: 0s; animation-duration: 12s; }
+  .leaf:nth-child(2) { left: 30%; top: -8%; background: rgba(180, 220, 140, 0.25); animation-delay: 3s; width: 6px; height: 6px; }
+  .leaf:nth-child(3) { left: 50%; top: -3%; background: rgba(120, 180, 100, 0.2); animation-delay: 6s; animation-duration: 14s; }
+  .leaf:nth-child(4) { left: 70%; top: -6%; background: rgba(160, 210, 130, 0.25); animation-delay: 2s; width: 7px; height: 7px; }
+  .leaf:nth-child(5) { left: 85%; top: -4%; background: rgba(200, 180, 120, 0.2); animation-delay: 8s; animation-duration: 11s; }
+  .leaf:nth-child(6) { left: 20%; top: -7%; background: rgba(220, 190, 130, 0.2); animation-delay: 5s; width: 5px; height: 5px; }
+
+  @keyframes leafFall {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.7; }
+    80% { opacity: 0.3; }
+    100% { transform: translateY(1100px) translateX(80px) rotate(360deg); opacity: 0; }
+  }
+
+  .cherry-blossom {
+    position: absolute;
+    z-index: 3;
+  }
+
+  .petal {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50% 0 50% 0;
+    background: rgba(240, 180, 190, 0.25);
+    animation: petalDrift 15s linear infinite;
+  }
+
+  .petal:nth-child(1) { left: 15%; top: -3%; animation-delay: 1s; }
+  .petal:nth-child(2) { left: 40%; top: -5%; animation-delay: 4s; width: 5px; height: 5px; background: rgba(240, 190, 200, 0.2); }
+  .petal:nth-child(3) { left: 65%; top: -2%; animation-delay: 7s; animation-duration: 13s; }
+  .petal:nth-child(4) { left: 80%; top: -6%; animation-delay: 10s; width: 4px; height: 4px; }
+  .petal:nth-child(5) { left: 25%; top: -4%; animation-delay: 2s; animation-duration: 16s; background: rgba(250, 200, 210, 0.2); }
+
+  @keyframes petalDrift {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.6; }
+    85% { opacity: 0.2; }
+    100% { transform: translateY(1100px) translateX(120px) rotate(540deg); opacity: 0; }
+  }
+
+  .sun-glow {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240, 200, 80, 0.1) 0%, rgba(220, 180, 60, 0.04) 40%, transparent 70%);
+    z-index: 1;
+    animation: sunPulse 5s ease-in-out infinite;
+  }
+
+  @keyframes sunPulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    padding: 60px 80px;
+    text-align: center;
+  }
+
+  .series-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid rgba(140, 200, 120, 0.25);
+    border-radius: 30px;
+    color: rgba(160, 210, 140, 0.8);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    animation: fadeSlideUp 1s ease-out 0.3s both;
+  }
+
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #eef5e8;
+    line-height: 1.25;
+    margin-bottom: 36px;
+    animation: fadeSlideUp 1s ease-out 0.6s both;
+  }
+
+  .divider {
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(160, 210, 140, 0.4), transparent);
+    margin-bottom: 32px;
+    animation: fadeSlideUp 1s ease-out 0.8s both, expandLine 2s ease-out 1.5s both;
+  }
+
+  @keyframes expandLine {
+    from { width: 50px; }
+    to { width: 100px; }
+  }
+
+  .body-text {
+    font-size: 19px;
+    font-weight: 300;
+    color: rgba(238, 245, 232, 0.6);
+    line-height: 1.8;
+    max-width: 700px;
+    animation: fadeSlideUp 1s ease-out 1s both;
+  }
+
+  .body-text em {
+    font-style: italic;
+    color: rgba(200, 230, 160, 0.9);
+    font-weight: 400;
+  }
+
+  .spots {
+    margin-top: 28px;
+    animation: fadeSlideUp 1s ease-out 1.2s both;
+  }
+
+  .spot {
+    display: inline-block;
+    padding: 6px 16px;
+    margin: 4px 6px;
+    border: 1px solid rgba(140, 200, 120, 0.12);
+    border-radius: 20px;
+    color: rgba(200, 230, 170, 0.5);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .logo-area {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    animation: fadeIn 1s ease-out 1.6s both;
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(160, 210, 140, 0.45);
+    letter-spacing: 4px;
+  }
+
+  .logo-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(200, 220, 190, 0.25);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <div class="sun-glow"></div>
+
+  <div class="foliage">
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+  </div>
+
+  <div class="cherry-blossom">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+  </div>
+
+  <div class="bridge">
+    <div class="bridge-deck"></div>
+    <div class="bridge-cable"></div>
+    <div class="bridge-cable"></div>
+    <div class="bridge-cable"></div>
+    <div class="bridge-cable"></div>
+    <div class="bridge-cable"></div>
+    <div class="bridge-cable"></div>
+    <div class="bridge-cable"></div>
+    <div class="bridge-tower"></div>
+    <div class="bridge-tower"></div>
+  </div>
+
+  <div class="river">
+    <div class="river-shimmer"></div>
+    <div class="river-shimmer"></div>
+    <div class="river-shimmer"></div>
+    <div class="river-shimmer"></div>
+    <div class="river-shimmer"></div>
+  </div>
+
+  <div class="content">
+    <div class="series-badge">Family Fridays</div>
+    <h1 class="title">Pittsburgh Spring:<br>The Season of<br>Reconnection</h1>
+    <div class="divider"></div>
+    <p class="body-text">
+      <em>Spring in Pittsburgh is a reminder<br>that things come back.</em><br>
+      Even when winter felt long.
+    </p>
+    <div class="spots">
+      <span class="spot">Eliza Furnace Trail</span>
+      <span class="spot">Bloomfield Market</span>
+      <span class="spot">Duquesne Incline</span>
+    </div>
+  </div>
+
+  <div class="logo-area">
+    <div class="logo-text">BOK LAW</div>
+    <div class="logo-sub">Family Law &amp; Mediation Services</div>
+  </div>
+</body>
+</html>
