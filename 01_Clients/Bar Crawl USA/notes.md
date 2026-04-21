@@ -12,3 +12,10 @@ tags: [notes]
 - Andy's cadence preference: quick updates, no fluff. He flags issues directly and expects straightforward fixes.
 - Caroline handles forwards / policy intake. Keep her looped when it's a compliance thread.
 - Any ad copy improvisation is a hard no. Pre-approved library only.
+
+## 2026-04-21 Sync
+
+- Dillon followed up with Andy on the mid-flight report. 214 tickets sold so far, projecting 310-340 by close.
+- Cleveland, Cincinnati, and Lawrenceville are all live now after clearing Google's approval process.
+- Indianapolis still pending Google approval.
+- Andy hasn't responded to the follow-up yet.
