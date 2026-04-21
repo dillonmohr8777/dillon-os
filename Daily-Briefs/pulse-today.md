@@ -1,68 +1,83 @@
-# Daily Pulse 2026-04-20
+# Daily Pulse 2026-04-21
 
 ## Coverage Notes
-Searched Gmail for all active client contacts: Andy Zirger (info@barcrawlusa.com), Caroline Zirger (events@barcrawl-usa.com), Kimberly Iraci (kimberly@kimberlyjamesbridal.com), Anthony Miller (amiller@nkcdc.org), Mac Frederick (mjfrederick334@gmail.com), Mia Lange (mia@getreplenish.com), Jeff Hozias (jhoz333@gmail.com), Dorothy O'Neil (doneil@boklawfirm.com), Mike Ross (mross@projectcorporate.com), Grace Slagle (gracieslags@gmail.com), John Belaska (john.belaska@gmail.com), Sean Boyle (sean@needmomentum.com). Full 7-day scan.
+Gmail scanned for all active client contacts. Full thread search across Bar Crawl USA, Kimberly James Bridal, Shadow HVAC, LinkEZE, Omega Landscaping, Jeff Hozias, Fresh Blends/Replenish, BOK Law, NKCDC, CCA/Buzz Bull, Hardwood Artisan, Onsite Concrete. Additional contact: Sally (Meadow Creek blogs).
 
-## Active Client Updates (since April 15)
+## Active Client Updates
 
 ### Bar Crawl USA
-- April 16: Dillon resolved the disapproved ads. "Boos and Booze" and "Fall Cocktail Crawl" flagged for alcohol information policy. Paused since they're off-season. Issue CLOSED.
-- April 20: Sent mid-flight performance update to Andy. **214 tickets sold.** Numbers are working, still meaningful runway before April 25 wave 1.
+- 214 tickets sold. Projecting 310-340 by close.
+- Cleveland, Cincinnati, and Lawrenceville all live now after the latest batch.
+- Follow-up sent to Andy today making sure he saw Sunday's report.
+- Taco & Tequila wave 1 launches April 25 (9 cities), wave 2 May 2.
+- Ad disapprovals resolved April 16. Off-season campaigns paused.
 
 ### Kimberly James Bridal
-- April 17: Sent new Size-Inclusive Gowns page for review. Kim reported desktop display issue (only showing half). Works fine on mobile. Kim asked to remove "A TRUE-TO-SIZE TRY-ON" section. Dillon explained mobile-first approach.
-- April 20: Sent KJB Weekly Update (Week of April 19). Stats: **30,328 impressions, 689 clicks.** Kim replied: "Wonderful! Thank you for all your hard work."
-- OPEN: Kim's edit request on the Size-Inclusive Gowns page needs confirmation. Did the changes get applied?
+- 30,328 impressions / 689 clicks. Kim is happy.
+- Size-Inclusive Gowns page: content changes pushed through last night. Sizing still being worked on (Squarespace template issue). Kim replied "Thank you" this morning.
+- Wedding Dress Timeline page still needs publishing + GA4/GSC indexing verification.
 
-### NKCDC
-- April 16: Dillon followed up again on the Monday Check-In thread, reinforcing everything is built and ready.
-- April 17: Another follow-up from Dillon pushing Anthony.
-- **STILL BLOCKED.** Anthony has not responded since the original April 13 check-in. That's 7 days of silence now.
+### Shadow HVAC
+- Back in contact with Mike.
+- Building a dedicated landing page for conversion tracking on his ads.
+- GBP cadence (4 posts/week) continuing.
+- Confirming LSA is live and serving as part of the landing page buildout.
+
+### LinkEZE
+- Optimization score 28% to 91%.
+- Enhanced conversions diagnostics and MFA verification being worked through.
+- Jason Fallon looped in from M360 side.
+
+### Omega Landscaping
+- 4 GMB posts per week consistently delivered.
+- SEO/blog optimization upsell offered to David. No response yet.
+- Drone footage still outstanding. May need to text David directly.
 
 ### Jeff Hozias
-- April 16: Campaigns confirmed live. Anti-Zillow variation running as lead test with seller and buyer copy rotating.
-- April 18: Dillon checked in asking if Jeff has seen leads come through.
-- April 20: Another follow-up. Planning to pull performance snapshot this week.
-- OPEN: No response from Jeff on lead quality yet.
+- Meta campaigns live since April 16. Anti-Zillow angle running as lead test.
+- Follow-up sent today asking specifically about calls or inquiries since launch.
+- Pulling performance snapshot this week.
 
 ### Fresh Blends / Replenish
-- April 18: Landing page completed and sent to Mia. Mia flagged a critical issue: **they don't sell Replenish product in market. They're promoting 7-Eleven private label smoothies.** Needs 7-Eleven branded images on the page.
-- April 18: Dillon asked Mia to resend images (files too large / won't download).
-- April 19-20: Multiple follow-ups. Dillon suggested a call today (Monday). Still waiting on images.
-- OPEN: Landing page revision blocked on image files from Mia.
+- Landing page done. Needs 7-Eleven branded image swap.
+- Follow-up sent today offering alternative methods for file transfer if sizes are the issue.
+- Waiting on Mia to confirm call time.
 
 ### BOK Law
-- April 14: Weekly content delivered to Dorothy, Aleksandra, Rachael.
-- April 17: Follow-up checking on content approval.
-- April 20: Third follow-up asking for approval to publish.
-- OPEN: BOK Law team hasn't confirmed approval of last week's content. Three asks with no response.
+- Content delivered April 14. 4 follow-ups now (April 14, 17, 20, 21).
+- Told Dorothy team he'll publish EOD today if no response, to stay on schedule.
+- Next week's content (April 21) already written and ready.
 
-### Onsite Concrete
-- April 16: Grace Slagle sent updated meeting invite. **Onsite x M360 Call moved to Mondays at 12:00-12:30 PM ET** (was Thursdays at 1:00 PM).
-- April 20: Today is the call day. Confirm attendance.
+### NKCDC
+- Went directly to Tess Watts and Mikey Boyd today (bypassing Anthony who's been silent since April 13).
+- Told them campaigns can be live within 48 hours of getting the green light.
+- Still blocked on the Free Tax Prep landing page.
 
 ### CCA / Buzz Bull
-- April 19: Dillon emailed Mike Ross and Mason about payment method not working. $159 owed on the account.
-- April 20: Mike Ross replied, has a message in to get card fixed. Asked about a catch-up call.
-- April 20: Dillon replied, suggested **9:30 AM call tomorrow (April 21).** Also mentioned going to the NFL Draft this week.
+- Mike Ross emailed today: "Does this work? Did you have anything you needed us to review for CCA or others to start? Also, can you check BB Facebook again?"
+- Call confirmed. Mike wants to review CCA items and Buzz Bull Facebook.
+- Dillon is building a landing page for Mike's ads for conversion tracking.
 
-## Google Ads Platform Notices
-- **Budget Pacing Update** (received today): Google is changing budget pacing for campaigns using daily budgets with ad schedules, effective **June 1, 2026.** Review all client campaigns with ad schedules before then.
-- **Onsite Concrete Google Ads access invite**: Customer ID 103-371-5894. onsiteclp@gmail.com invited Dillon. **Accept this invitation.**
+### Hardwood Artisan
+- At risk. Billing card request from Sean outstanding 14 days.
+- GBP content continuing, leaning into Edmond and Stillwater.
+- End of week deadline to flag to Sean if unresolved.
 
-## Momentum 360 Internal
-- Mac Frederick sent updated recurring invite for Account Manager ALL HANDS Momentum Meeting (monthly, 3rd Monday, 1:00-1:45 PM ET). Updated to include 4th Monday rotation as well.
+### Onsite Concrete & Landscape
+- First Monday call happened today. Great call. Aligned on strategy.
+- Google Ads account access granted (Customer ID 103-371-5894).
+- Ads and landing page can be live by tomorrow. Initial budget ~$300.
+- Client is motivated and ready to compete locally.
 
-## Pending Deliverables
-- **Fresh Blends / Replenish** — Revised landing page with 7-Eleven branded images (blocked on Mia's image files).
-- **BOK Law** — Waiting on approval to publish last week's content (3 follow-ups sent, no response).
-- **Jeff Hozias** — Performance snapshot due this week.
-- **NKCDC** — Launch still blocked on Anthony (7 days no response).
+## Other Activity
+- Sally (Meadow Creek): April blogs sent last night in a zip file. Follow-up sent today confirming receipt. Also offered help with Mailchimp this week.
+- Submitted timesheet.
 
 ## Today's Priority Stack
-1. **Onsite x M360 Call at 12:00 PM ET today.** New time, not the old Thursday slot.
-2. **Accept Onsite Concrete Google Ads account invitation** (Customer ID 103-371-5894).
-3. **Fresh Blends / Replenish call with Mia** — You offered to connect today. Get those image files resolved.
-4. **CCA / Buzz Bull** — Confirm 9:30 AM call tomorrow with Mike Ross. Chase Mason on the card issue.
-5. **BOK Law** — Third follow-up is sent. If still no response by EOD, flag to Sean.
-6. Review Google Ads Budget Pacing Update and audit which client campaigns use ad schedules before June 1.
+1. CCA / Buzz Bull call with Mike Ross. Review CCA items + check BB Facebook.
+2. Finish KJB Size-Inclusive Gowns page sizing fix (Squarespace template).
+3. Fresh Blends call with Mia if she confirms. Get images resolved.
+4. Build Onsite Concrete landing page + ads. Target: live by tomorrow.
+5. BOK Law: publish content EOD if still no response.
+6. NKCDC: monitor for response from Tess/Mikey since Anthony is MIA.
+7. Pull Jeff Hozias performance snapshot.

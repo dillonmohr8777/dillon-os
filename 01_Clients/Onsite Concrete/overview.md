@@ -8,9 +8,9 @@ status: active
 contact_name: Grace Slagle
 contact_email: gracieslags@gmail.com
 cc_list: [onsiteclp@gmail.com, sean@needmomentum.com]
-last_touched: 2026-04-09
-next_action: Attend Onsite x M360 call Monday 2026-04-20 12:00 PM ET (new recurring time); accept Google Ads account invite (Customer ID 103-371-5894)
-due: 2026-04-20
+last_touched: 2026-04-21
+next_action: Build landing page + launch ads. Target go-live April 22. Initial budget ~$300.
+due: 2026-04-22
 tags: [client, momentum360, concrete, landscape]
 ---
 
@@ -18,13 +18,13 @@ tags: [client, momentum360, concrete, landscape]
 
 Recurring weekly sync with Grace Slagle. Standing meeting: **Onsite x M360 Call, Thursdays 1:00–1:30 PM ET**.
 
-## Gmail intel (through 2026-04-20)
-- 2026-04-20: Onsite x M360 Call today at 12:00 PM ET. **Meeting moved from Thursdays to Mondays, 12:00-12:30 PM ET.**
-- 2026-04-20: Google Ads account invitation received (Customer ID 103-371-5894, from onsiteclp@gmail.com). Needs acceptance.
-- 2026-04-16: Grace Slagle sent updated recurring meeting invite.
-- Earlier weekly syncs confirmed on 2026-04-09, 2026-04-02, and 2026-03-26.
+## Gmail intel (through 2026-04-21)
+- 2026-04-21: First Monday call on new schedule. Aligned on strategy. Google Ads access accepted (Customer ID 103-371-5894). Ads + landing page target go-live April 22. Initial budget ~$300. Client is motivated and ready to compete locally.
+- 2026-04-16: Grace Slagle moved weekly call from Thursdays to Mondays, 12:00-12:30 PM ET.
+- Earlier weekly syncs on 2026-04-09, 2026-04-02, and 2026-03-26.
 
 ## Scope
-- Account management and website work for Onsite Concrete & Landscape.
-- Google Ads account now being onboarded (Customer ID 103-371-5894).
-- Primary coordination point is the standing Monday meeting.
+- Google Ads: Search campaigns for concrete and landscape services. Customer ID 103-371-5894.
+- Landing page build for conversion tracking.
+- Account management and website work.
+- Primary coordination point is the standing Monday 12:00 PM ET call.

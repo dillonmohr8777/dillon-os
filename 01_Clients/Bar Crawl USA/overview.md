@@ -9,7 +9,7 @@ status: active
 contact_name: Andy Zirger
 contact_email: info@barcrawlusa.com
 cc_list: []
-last_touched: 2026-04-15
+last_touched: 2026-04-21
 next_action: Monitor Taco & Tequila wave 1 pacing across all 9 cities; prepare wave 2 launch for May 2
 due: 2026-04-25
 tags: [client, momentum360, google-ads, events, pmax]
@@ -27,6 +27,7 @@ Primary account for a multi-city bar crawl events business. Managed end-to-end o
 - Client-facing HTML performance reports under Momentum 360 branding.
 
 ## Gmail intel (through 2026-04-20)
+- 2026-04-21: Follow-up sent to Andy. Projecting **310-340 tickets** by close. Cleveland, Cincinnati, and Lawrenceville all live now.
 - 2026-04-20: Mid-flight performance update sent to Andy. **214 tickets sold.** Numbers working, meaningful runway left before April 25 wave 1.
 - 2026-04-16: RESOLVED. Disapproved ads ("Boos and Booze" + "Fall Cocktail Crawl") flagged for alcohol information policy. Paused since they're off-season campaigns. Issue closed.
 - 2026-04-15: Andy forwarded 2 disapproval notices. Dillon replied same day, investigated.

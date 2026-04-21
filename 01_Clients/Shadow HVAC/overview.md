@@ -9,9 +9,9 @@ status: active
 contact_name: Mike
 contact_email: shadowhvac1@gmail.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-03-02
-next_action: Send Mike a catch-up report; confirm LSA is live and receiving impressions post-reset; verify 4/week GBP cadence is still delivering
-due: 2026-04-18
+last_touched: 2026-04-21
+next_action: Build dedicated landing page for conversion tracking on Mike's ads; confirm LSA is live
+due: 2026-04-25
 tags: [client, momentum360, hvac, local-seo, lsa]
 ---
 
