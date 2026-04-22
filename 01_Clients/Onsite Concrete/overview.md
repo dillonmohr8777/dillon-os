@@ -8,9 +8,9 @@ status: active
 contact_name: Grace Slagle
 contact_email: gracieslags@gmail.com
 cc_list: [onsiteclp@gmail.com, sean@needmomentum.com]
-last_touched: 2026-04-09
-next_action: Attend weekly Onsite x M360 call Thursday 2026-04-16 1:00 PM ET
-due: 2026-04-16
+last_touched: 2026-04-22
+next_action: Attend weekly Onsite x M360 call Thursday 2026-04-23 1:00 PM ET. Accept Google Ads invite (account 103-371-5894).
+due: 2026-04-23
 tags: [client, momentum360, concrete, landscape]
 ---
 
@@ -18,7 +18,8 @@ tags: [client, momentum360, concrete, landscape]
 
 Recurring weekly sync with Grace Slagle. Standing meeting: **Onsite x M360 Call, Thursdays 1:00–1:30 PM ET**.
 
-## Gmail intel (through 2026-04-15)
+## Gmail intel (through 2026-04-22)
+- 2026-04-20: Google Ads invite received from onsiteclp@gmail.com to access account 103-371-5894. Needs to be accepted.
 - 2026-04-16 (upcoming): Weekly Onsite x M360 Call at 1:00 PM ET. Attendees: Dillon, Sean Boyle, onsiteclp@gmail.com (client inbox).
 - 2026-04-09: Prior weekly call held 1:00 PM ET.
 - Earlier weekly syncs confirmed on 2026-04-02 and 2026-03-26.
