@@ -4,8 +4,10 @@ status: active
 industry: bridal
 start_date: 2026-03-12
 rate: $300/mo
-google_ads_id: 721-491-4099
-google_ads_id_original: 814-550-6229
+google_ads_id: 814-550-6229
+google_ads_id_canceled: 721-491-4099
+last_touched: 2026-04-22
+next_action: Finish desktop optimization on size-inclusive page
 ---
 
 # Kimberly James Bridal Boutique
@@ -27,8 +29,8 @@ google_ads_id_original: 814-550-6229
 - Monthly Performance Reporting
 
 ## Google Ads
-- **New Account ID:** 721-491-4099
-- **Original Account ID:** 814-550-6229
+- **Active Account ID:** 814-550-6229
+- **Canceled Account ID:** 721-491-4099 (canceled 4/21/2026, not in use)
 - **Conversion ID:** AW-18040733346 (gtag.js via Squarespace Code Injection > Header)
 - Tag verified via Google Tag Assistant Chrome extension
 

@@ -3,6 +3,8 @@ tags: [client, momentum360]
 status: active
 industry: community development
 google_ads_id: 100-209-6937
+last_touched: 2026-04-22
+next_action: Escalate to Mac -- zero response from Anthony, Tess, or Mikey since 4/13
 ---
 
 # NKCDC (New Kensington Community Development Corporation)

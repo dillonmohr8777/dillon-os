@@ -5,6 +5,8 @@ industry: food/beverage
 start_date: 2026-03-23
 rate: $500/mo
 google_ads_id: 627-501-4654
+last_touched: 2026-04-22
+next_action: Get 7-Eleven branded smoothie images from Mia; revise Pompano landing page
 ---
 
 # Fresh Blends / Replenish

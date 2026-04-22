@@ -1,7 +1,9 @@
 ---
-tags: [client, direct]
+tags: [client, direct, buzzbull]
 status: active
 industry: cleaning
+last_touched: 2026-04-22
+next_action: Get client emails from Mason; set up ad platform access
 ---
 
 # Commercial Cleaners Alliance (CCA)
