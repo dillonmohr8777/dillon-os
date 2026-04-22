@@ -5,6 +5,8 @@ industry: events
 start_date: 2026-02-16
 rate: $950/mo
 google_ads_id: 435-710-2897
+last_touched: 2026-04-22
+next_action: Monitor policy flags; track toward 310+ ticket projection; Taco & Tequila wave 1 April 25
 ---
 
 # Bar Crawl USA

@@ -2,6 +2,8 @@
 tags: [client, 1099]
 status: active
 industry: marketing
+last_touched: 2026-04-22
+next_action: Attend Monday 3pm leadership meeting; resolve $159 payment issue; get client emails from Mason for CCA/Florecita/Sterile Care
 ---
 
 # Buzz Bull Marketing Systems

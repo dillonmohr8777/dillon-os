@@ -2,6 +2,9 @@
 tags: [client, momentum360]
 status: active
 industry: concrete/landscape
+last_touched: 2026-04-22
+google_ads_id: 103-371-5894
+next_action: Confirm Google Ads access accepted; use Monday 12pm call to re-baseline scope
 ---
 
 # Onsite Concrete & Landscape

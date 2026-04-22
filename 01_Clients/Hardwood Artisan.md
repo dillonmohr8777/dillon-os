@@ -1,7 +1,9 @@
 ---
 tags: [client, momentum360]
-status: active
+status: at-risk
 industry: hardwood/flooring
+last_touched: 2026-04-22
+next_action: Escalate billing to Sean; consider pausing production
 ---
 
 # Hardwood Artisan LLC
