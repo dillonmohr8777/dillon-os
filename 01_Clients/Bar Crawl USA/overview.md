@@ -9,8 +9,8 @@ status: active
 contact_name: Andy Zirger
 contact_email: info@barcrawlusa.com
 cc_list: []
-last_touched: 2026-04-15
-next_action: Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing
+last_touched: 2026-04-22
+next_action: Final push for Taco & Tequila wave 1 (April 25). Monitor ticket velocity toward 310-340 projection.
 due: 2026-04-25
 tags: [client, momentum360, google-ads, events, pmax]
 ---
@@ -26,7 +26,11 @@ Primary account for a multi-city bar crawl events business. Managed end-to-end o
 - Full paid media system: Meta Ads, Google Search RSA, PMax, email, SMS for the 9-city April 25 event series.
 - Client-facing HTML performance reports under Momentum 360 branding.
 
-## Gmail intel (through 2026-04-15)
+## Gmail intel (through 2026-04-22)
+- 2026-04-22: Mac replied to the mid-flight report -- appreciated the detail, confirmed April focus was 15 location/event pages + Google Ads ticket sales. Noted pages are starting to index.
+- 2026-04-21: Dillon followed up with Andy to make sure he saw the performance report.
+- 2026-04-20: Dillon sent mid-flight performance update to Andy. 214 tickets sold, projecting 310-340 by close. Cleveland, Cincinnati, and Lawrenceville all live.
+- 2026-04-16: Dillon explained disapprovals to Andy. "Boos and Booze" and "Fall Cocktail Crawl" flagged for Google's alcohol information policy. Not launched campaigns, just legacy assets that got flagged. Appeals submitted.
 - 2026-04-15: URGENT. 2 Google Ads disapproved on Halloween / Fall Cocktail Crawl emails (forwarded by Andy). Reply sent saying none of those should have launched, will investigate.
 - 2026-04-14: Earlier disapproval batch of 4 assets. Caroline Zirger (events@barcrawl-usa.com) forwarded.
 - 2026-04-13: Sent PMax update "53 Tickets, All April 25 Cities Live, May 2 Launching Tomorrow." Andy flagged runaway $54 day spend on Soulard — traced to Max Conversions running without a tCPA. Patched. Andy asked to cap Soulard ~$15-20/day so the final week isn't the biggest.

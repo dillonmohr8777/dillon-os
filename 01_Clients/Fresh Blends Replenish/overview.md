@@ -9,8 +9,8 @@ status: active
 contact_name: Mia Lange
 contact_email: mia@getreplenish.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-13
-next_action: Confirm campaigns launched 2026-04-13 are pacing correctly; send first-week performance snapshot
+last_touched: 2026-04-22
+next_action: BLOCKED on Mia resending 7-Eleven branded smoothie images. Need images to finish Pompano landing page revision.
 due: none
 tags: [client, momentum360, google-ads, pmax, food-beverage]
 ---
@@ -26,7 +26,11 @@ B2C Google Ads program driving in-store traffic to 5 South Florida 7-Eleven bran
 - Dedicated landing page in testing.
 - Campaigns prototyped via Claude-in-Chrome browser automation with on-site live testing.
 
-## Gmail intel (through 2026-04-13)
+## Gmail intel (through 2026-04-22)
+- 2026-04-21: Dillon sent 4th follow-up to Mia -- landing page ready, just needs 7-Eleven branded smoothie images for Pompano revision. File size issues persist.
+- 2026-04-20: Dillon followed up again -- flexible on call time, asked Mia to send images or text.
+- 2026-04-19: Dillon followed up on images. Tried to schedule a call with Mia. Also attempted to download files but they won't load on his machine.
+- 2026-04-18: KEY CORRECTION. Dillon sent completed Replenish landing page. Mia clarified they DON'T have Replenish product in market -- they're promoting 7-Eleven private label smoothies at 5 locations. Dillon agreed to revise immediately. Asked Mia to resend 7-Eleven branded images (file size/download issues).
 - 2026-04-13: Check-in email sent to Mia confirming everything on Dillon's side is ready to launch.
 - 2026-04-12: Admin access granted to Mia. Dillon confirmed campaigns ready to launch 2026-04-13.
 - 2026-04-09: Dillon offered to hop on a phone call to finish setup.
