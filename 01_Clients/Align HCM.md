@@ -4,6 +4,7 @@ status: active
 industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
+last_touched: 2026-04-21
 ---
 
 # Align HCM
@@ -45,6 +46,9 @@ rate: Full-time
 - Interactive HTML report: SEO blog metrics + LinkedIn engagement
 - First-person presentation script for Dillon
 - Presented to: Maher, Barbara, Tammi, Rich, Joann, Allison
+
+## Activity Log
+- 2026-04-21: SmartCare Final Video uploaded to repo (two versions -- `SmartCare new vid (4).zip` and `SmartCare Final Video.zip`, both ~10 MB). Motion graphic deliverable for LinkedIn/social.
 
 ## Links
 - [[Client Index]]
