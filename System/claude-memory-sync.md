@@ -1,5 +1,6 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-04-24
+last_sync_status: partial-gmail-auth-expired
 tags: [system, memory, sync]
 ---
 
@@ -57,3 +58,9 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
 • **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
 • **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+
+## Sync log
+• **2026-04-24 10:18 UTC** -- Attempted chat-to-vault sync. Gmail MCP token expired; couldn't pull email data. 9-day gap (04/15-04/24) remains unsynced. No vault files modified since last sync. Action required: re-authorize Gmail MCP server, then re-run sync to backfill the gap.
+  - Deadlines that have PASSED since last sync: Onsite weekly call (04/16), CCA creative commitment (04/16), Hardwood Artisan billing deadline (04/18).
+  - Deadline TOMORROW: Bar Crawl USA Taco & Tequila wave 1 (04/25, 9 cities).
+  - These items need immediate status verification once Gmail access is restored.
