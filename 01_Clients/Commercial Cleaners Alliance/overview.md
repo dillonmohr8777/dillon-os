@@ -9,9 +9,9 @@ status: onboarding
 contact_name: Mike Ross
 contact_email: mross@projectcorporate.com
 cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com]
-last_touched: 2026-04-14
-next_action: Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment
-due: 2026-04-16
+last_touched: 2026-04-25
+next_action: Get Mike's approval on CCA strategy sent 2026-04-23; add company website field to lead form; get client emails from Mason for platform access outreach
+due: none
 tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 ---
 
@@ -32,10 +32,15 @@ B2B membership organization supporting independent commercial cleaning professio
 - Google Ads + Meta Ads paid media strategy for CCA leadership (requested by Mike).
 - Creatives in production, with a parallel NexGen Solutions creative deliverable on the same timeline.
 
-## Gmail intel (through 2026-04-14)
+## Gmail intel (through 2026-04-25)
+- 2026-04-25: Dillon followed up with Mike on CCA strategy sent Wednesday (2026-04-23). Offered to jump on a call to walk through it.
+- 2026-04-25: Dillon confirmed he'll add a company website field to the lead form per Mike's request. Sending screenshot once live.
+- 2026-04-21: Mike said "lets focus on buzz bull, florecita, CCA and sterile care - SEO and paid ads, we are ready to roll." Also wants paid ads to drive contacts to CRM/website database, may need landing page.
+- 2026-04-21: Dillon asked Mike for all client emails in one email so he can do outreach for platform access/payment.
+- 2026-04-21: Mike asked Mason to provide the emails. Also flagged CRM/landing page integration question.
 - 2026-04-14: Teams meeting "Buzz Bull CCA / Sterile Care" scheduled with Mike Ross.
-- 2026-04-08: Dillon told Mike "working on your creatives today … also have your NexGen, I will be done with today" — a commitment that should be audited for delivery.
+- 2026-04-08: Dillon told Mike "working on your creatives today ... also have your NexGen, I will be done with today" -- a commitment that should be audited for delivery.
 - 2026-04-08 (morning): Mike said targeting Cleaning company owners via Meta would generate the best results. Also asking about Buzz Bull launch timing.
 - 2026-04-07: Dillon sent the CCA paid media + SEO strategy link ("Commercial Cleaners Alliance | Paid Media + SEO Strategy").
 - 2026-04-05: Mike confirmed CCA can offer services nationwide (geography question resolved).
-- 2026-04-04: Initial handoff from Mike — "this is CCA and important client and friend of ours, full solution offering to cleaning companies around the country."
+- 2026-04-04: Initial handoff from Mike -- "this is CCA and important client and friend of ours, full solution offering to cleaning companies around the country."
