@@ -5,7 +5,7 @@ platform: WordPress.com
 theme: Assembler
 genre: Dark political thriller
 status: pre-launch / growth
-last_touched: 2026-04-15
+last_touched: 2026-04-25
 tags: [book, novel, seo, personal]
 ---
 
@@ -32,3 +32,8 @@ Distressed Americana, dark/gritty. Typography: Bebas Neue, Playfair Display, Spe
 
 ## Author bio
 Dillon Mohr is a digital marketer, doctoral candidate (DBA in Strategic Media at Liberty University), father, Pittsburgh PA native, MS in Integrated Marketing Communications from WVU, nearly a decade in brand strategy. Debut novel.
+
+## Sync Log (2026-04-15 through 2026-04-25)
+
+- 2026-04-16: GA4 analytics notification for ironicineptocracy.com -- new AI-powered data analyst feature available.
+- 2026-04-23: Google Search Console flagged new indexing issue: "Duplicate, Google chose different canonical" preventing some pages from being indexed on ironicineptocracy.com. Needs investigation.

@@ -7,4 +7,8 @@ tags: [dba, notes]
 
 - APA 7th edition is the writing format for every submission.
 - Canvas is the primary assignment delivery platform.
-- Liberty University doctoral program structure: coursework → comprehensive exams → dissertation.
+- Liberty University doctoral program structure: coursework > comprehensive exams > dissertation.
+
+## Sync Log (2026-04-15 through 2026-04-25)
+
+- 2026-04-22: Liberty University summer registration reminder. Deadline: Wednesday, May 6. Dillon still needs to register for summer classes.
