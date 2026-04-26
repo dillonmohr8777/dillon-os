@@ -5,13 +5,13 @@ monthly_fee: unknown
 role: Account Manager
 division: Momentum 360 (with Buzz Bull overlap)
 start_date: 2026-04-04
-status: onboarding
+status: active
 contact_name: Mike Ross
 contact_email: mross@projectcorporate.com
 cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com]
-last_touched: 2026-04-14
-next_action: Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment
-due: 2026-04-16
+last_touched: 2026-04-26
+next_action: Build CCA landing page for Facebook ads; get website access for conversion tracking; CRM integration for Sterile Care leads
+due: none
 tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 ---
 
@@ -39,3 +39,5 @@ B2B membership organization supporting independent commercial cleaning professio
 - 2026-04-07: Dillon sent the CCA paid media + SEO strategy link ("Commercial Cleaners Alliance | Paid Media + SEO Strategy").
 - 2026-04-05: Mike confirmed CCA can offer services nationwide (geography question resolved).
 - 2026-04-04: Initial handoff from Mike — "this is CCA and important client and friend of ours, full solution offering to cleaning companies around the country."
+- 2026-04-25: Dillon launched CCA Google Ads and Sterile Care Meta ads. CCA Facebook ads blocked on landing page build. Followed up with Mike Ross on CCA strategy. Sent Dave onboarding checklist for paid ads program.
+- 2026-04-26: Sterile Care ads approved, first lead at $0.92 CPL. CRM integration with Dave's system is next.
