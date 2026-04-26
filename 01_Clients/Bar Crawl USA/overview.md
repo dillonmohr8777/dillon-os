@@ -9,9 +9,9 @@ status: active
 contact_name: Andy Zirger
 contact_email: info@barcrawlusa.com
 cc_list: []
-last_touched: 2026-04-15
-next_action: Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing
-due: 2026-04-25
+last_touched: 2026-04-26
+next_action: Confirm Taco & Tequila wave 1 ticket performance across 9 cities; shift May focus to conversion tracking, local pack, blog content
+due: 2026-05-02
 tags: [client, momentum360, google-ads, events, pmax]
 ---
 
