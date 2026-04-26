@@ -5,7 +5,7 @@ platform: WordPress.com
 theme: Assembler
 genre: Dark political thriller
 status: pre-launch / growth
-last_touched: 2026-04-15
+last_touched: 2026-04-26
 tags: [book, novel, seo, personal]
 ---
 

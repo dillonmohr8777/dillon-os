@@ -8,9 +8,9 @@ status: at_risk
 contact_name: Dalton Fashik
 contact_email: daltonfashik@me.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-07
-next_action: URGENT — Sean is pushing Dalton to update the card on file for the next 90 days. Engagement is at risk of pausing if Dalton doesn't act.
-due: 2026-04-18
+last_touched: 2026-04-26
+next_action: STILL AT RISK -- Dalton hasn't responded to 4/21 follow-up. Billing card still outstanding since 4/07. Consider escalating to Sean to pause engagement.
+due: none
 tags: [client, momentum360, local-seo, gbp, at-risk]
 ---
 
