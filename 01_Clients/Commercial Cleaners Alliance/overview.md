@@ -5,13 +5,13 @@ monthly_fee: unknown
 role: Account Manager
 division: Momentum 360 (with Buzz Bull overlap)
 start_date: 2026-04-04
-status: onboarding
+status: active
 contact_name: Mike Ross
 contact_email: mross@projectcorporate.com
 cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com]
-last_touched: 2026-04-14
-next_action: Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment
-due: 2026-04-16
+last_touched: 2026-04-26
+next_action: Build CCA landing page for Facebook ads. Monitor Sterile Care campaign (launched 4/26, already producing leads at $0.92/lead).
+due: none
 tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 ---
 
