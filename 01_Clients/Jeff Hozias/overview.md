@@ -9,8 +9,8 @@ status: active
 contact_name: Jeff Hozias
 contact_email: jhoz333@gmail.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Launch Meta Ads using approved seller/buyer copy; move away from LSA per 2026-03-20 strategy call
+last_touched: 2026-04-18
+next_action: Monitor Rockland County campaigns (live since 4/16). Anti-Zillow variation running as lead test. Check lead flow with Jeff.
 due: none
 tags: [client, momentum360, real-estate, gbp, meta-ads]
 ---

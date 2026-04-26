@@ -9,9 +9,9 @@ status: active
 contact_name: David Granados
 contact_email: contact@omegalandscapingandconcrete.com
 cc_list: [john.belaska@gmail.com, sam@gadsnomads.com, rachelprimavera99@gmail.com, sean@needmomentum.com, beth@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Chase David for drone footage and confirm he will meet with John Belaska this week to review accounts
-due: none
+last_touched: 2026-04-21
+next_action: Attend Omega Landscaping/M360 meeting Monday April 27 at 2:00-2:30 PM EDT (Google Meet with John Belaska). Drone footage still outstanding.
+due: 2026-04-27
 tags: [client, momentum360, landscaping, gbp, local-seo]
 ---
 
