@@ -5,6 +5,8 @@ industry: events
 start_date: 2026-02-16
 rate: $950/mo
 google_ads_id: 435-710-2897
+last_touched: 2026-04-22
+next_action: Monitor ticket sales trajectory toward 310-340 projection
 ---
 
 # Bar Crawl USA
@@ -38,6 +40,29 @@ Chattanooga, Atlanta Beltline, Duluth GA, Fort Worth, Jacksonville, Savannah, Na
 - All 20 pages delivered as .docx + master JSON data object for WordPress publisher tool
 - WordPress publisher clones Elementor template (page ID 15281)
 - St. Patrick's Day pages stored in Google Drive (large document)
+
+## Sync Log
+
+### 2026-04-15
+- Andy forwarded Google Ads disapproval notice (2 ads). Dillon responded he'd look into it.
+
+### 2026-04-16
+- Dillon investigated disapprovals. "Boos and Booze" and "Fall Cocktail Crawl" flagged for alcohol information policy. These are old/inactive campaigns, not current Taco & Tequila push. Explained to Andy that they weren't launched -- likely auto-flagged from dormant assets.
+
+### 2026-04-17
+- 4 additional assets flagged for Google Ads policy issues.
+
+### 2026-04-18
+- 2 more assets flagged for policy issues (ongoing pattern from legacy creatives).
+
+### 2026-04-20
+- Dillon sent mid-flight report to Andy, Mac, Sean, Melissa. 214 tickets sold, projecting 310-340 by close. Cleveland, Cincinnati, and Lawrenceville all live. Interactive report link included.
+
+### 2026-04-21
+- Dillon followed up with Andy to make sure he saw the report.
+
+### 2026-04-22
+- Mac praised the report. Confirmed 15 location/event pages built + Google Ads push across 18 cities. Pages starting to index in Google. Dillon responded confirming momentum.
 
 ## Links
 - [[Client Index]]

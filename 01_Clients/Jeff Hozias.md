@@ -5,6 +5,8 @@ industry: real estate
 start_date: 2026-03-01
 rate: $200/mo
 google_ads_id: 495-602-9145
+last_touched: 2026-04-18
+next_action: Check in on Rockland County campaign lead volume
 ---
 
 # Jeff Hozias / Howard Hanna Rand Realty
@@ -32,6 +34,14 @@ google_ads_id: 495-602-9145
 
 ## Reports
 - Navy/red/gold Howard Hanna brand palette
+
+## Sync Log
+
+### 2026-04-16
+- Rockland County campaigns built and live. Anti-Zillow variation running as lead test. Seller and buyer copy rotating alongside it.
+
+### 2026-04-18
+- Dillon checked in with Jeff. Campaigns live for a couple days. Asked about incoming leads. Anti-Zillow angle expected to pull early interest. No response from Jeff captured in this sync window.
 
 ## Links
 - [[Client Index]]
