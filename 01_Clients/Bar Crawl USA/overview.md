@@ -9,9 +9,9 @@ status: active
 contact_name: Andy Zirger
 contact_email: info@barcrawlusa.com
 cc_list: []
-last_touched: 2026-04-15
-next_action: Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing
-due: 2026-04-25
+last_touched: 2026-04-27
+next_action: Monitor Taco & Tequila wave 1 performance (April 25 cities live); prep wave 2 (May 2) launch
+due: 2026-05-02
 tags: [client, momentum360, google-ads, events, pmax]
 ---
 
@@ -26,9 +26,13 @@ Primary account for a multi-city bar crawl events business. Managed end-to-end o
 - Full paid media system: Meta Ads, Google Search RSA, PMax, email, SMS for the 9-city April 25 event series.
 - Client-facing HTML performance reports under Momentum 360 branding.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-15: URGENT. 2 Google Ads disapproved on Halloween / Fall Cocktail Crawl emails (forwarded by Andy). Reply sent saying none of those should have launched, will investigate.
-- 2026-04-14: Earlier disapproval batch of 4 assets. Caroline Zirger (events@barcrawl-usa.com) forwarded.
-- 2026-04-13: Sent PMax update "53 Tickets, All April 25 Cities Live, May 2 Launching Tomorrow." Andy flagged runaway $54 day spend on Soulard — traced to Max Conversions running without a tCPA. Patched. Andy asked to cap Soulard ~$15-20/day so the final week isn't the biggest.
+## Gmail intel (through 2026-04-27)
+- 2026-04-22: Dillon confirmed to Mac that 15 location/event pages are indexing. Full Google Ads push across 18 cities.
+- 2026-04-22: Mac responded positively to mid-flight report. Noted April focus was 15 location/event pages + Google Ads.
+- 2026-04-21: Dillon followed up with Andy to make sure he saw the performance report.
+- 2026-04-20: Dillon sent mid-flight performance report to Andy. 214 tickets sold, projecting 310-340 by close. Cleveland, Cincinnati, Lawrenceville all live. 18 cities launched.
+- 2026-04-18: 2 more Google Ads policy issues flagged (twice on same day). Also 4 assets flagged 2026-04-17.
+- 2026-04-16: Dillon explained disapprovals to Andy. "Boos and Booze" and "Fall Cocktail Crawl" flagged for alcohol info policy. Campaigns weren't active/intended to run. Resolved.
+- 2026-04-15: Andy forwarded 2 disapproved ads (Halloween/Fall Cocktail Crawl). Dillon investigated.
 - All PMax budgets sit at $14.25/day, Maximize Conversions, no audience signals.
 - Google Ads account ID: 435-710-2897.
