@@ -1,7 +1,9 @@
 ---
 tags: [client, momentum360]
-status: active
+status: at-risk
 industry: hardwood/flooring
+last_touched: 2026-04-21
+next_action: Chase Dalton on billing card update and Google Ads engagement
 ---
 
 # Hardwood Artisan LLC
@@ -26,6 +28,11 @@ industry: hardwood/flooring
 - Warm walnut/honey craftsman aesthetic with wood grain texture overlay
 - Fonts: Playfair Display (headings), DM Mono (data)
 - Includes content samples, local SEO status tracker, monthly priorities
+
+## Sync Log
+
+### 2026-04-21
+- Dillon followed up with Dalton. Noted real opportunity to drive more visibility and inbound leads. Still chasing. No response from Dalton captured in this sync window. Billing card update still outstanding.
 
 ## Links
 - [[Client Index]]
