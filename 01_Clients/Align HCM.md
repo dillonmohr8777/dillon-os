@@ -46,5 +46,8 @@ rate: Full-time
 - First-person presentation script for Dillon
 - Presented to: Maher, Barbara, Tammi, Rich, Joann, Allison
 
+## 2026-04-27 sync
+- LinkedIn notification: Barbara Tonelli (CHRO) is waiting for Dillon's response. Action item: reply to Barbara on LinkedIn ASAP.
+
 ## Links
 - [[Client Index]]

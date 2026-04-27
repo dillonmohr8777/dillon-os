@@ -8,9 +8,9 @@ status: active
 contact_name: Anthony Miller
 contact_email: amiller@nkcdc.org
 cc_list: [mjfrederick334@gmail.com, melissarobinn@gmail.com, twatts@nkcdc.org, mboyd@nkcdc.org]
-last_touched: 2026-04-15
-next_action: URGENT — launch is pending NKCDC finalizing the Free Tax Prep page. Mac checked in 2026-04-15, no response from Anthony. Nudge again.
-due: 2026-04-16
+last_touched: 2026-04-27
+next_action: Waiting on Tess Watts and Mikey Boyd to respond to Dillon's 2026-04-27 follow-up. Push for a 5-min call this week.
+due: 2026-05-02
 tags: [client, momentum360, google-ads, meta-ads, nonprofit, philadelphia]
 ---
 
@@ -18,7 +18,7 @@ tags: [client, momentum360, google-ads, meta-ads, nonprofit, philadelphia]
 
 Philadelphia nonprofit (New Kensington Community Development Corporation). Paid media for the Free Business Tax Prep program. Strategy was pivoted 2026-04-09 after Anthony pushed back on a multi-service scope — rebuilt fully around Free Tax Prep as the single promoted offer.
 
-## Gmail intel (through 2026-04-15)
+## Gmail intel (through 2026-04-27)
 - 2026-04-15: URGENT. Mac Frederick checked in with Anthony ("Hey Anthony just checking in here") and noted Melissa sent the first month's invoice plus remaining grant-project invoices. No response from NKCDC team yet.
 - 2026-04-13: Dillon sent a Monday check-in — "everything on our end is built, approved, and ready to launch whenever you are. The only thing we're waiting on is you." Still waiting on the Free Tax Prep landing page.
 - 2026-04-12: Mac thanked team and flagged looking forward to launch next steps.
@@ -29,3 +29,4 @@ Philadelphia nonprofit (New Kensington Community Development Corporation). Paid 
 ## Open items
 - Launch is fully blocked on NKCDC shipping the Free Tax Prep landing page and responding to the Monday check-in.
 - First month invoice is out per Melissa.
+- 2026-04-27: Dillon emailed Tess Watts and Mikey Boyd directly (bypassing Anthony). Ad strategy ready. Requested a 5-min call this week. Third follow-up with no response from anyone at NKCDC.
