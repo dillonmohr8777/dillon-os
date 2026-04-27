@@ -8,9 +8,9 @@ status: at_risk
 contact_name: Dalton Fashik
 contact_email: daltonfashik@me.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-07
-next_action: URGENT — Sean is pushing Dalton to update the card on file for the next 90 days. Engagement is at risk of pausing if Dalton doesn't act.
-due: 2026-04-18
+last_touched: 2026-04-27
+next_action: AT RISK -- Dillon followed up 2026-04-21, still no response from Dalton. Billing card deadline passed 2026-04-18. Consider pausing production.
+due: none
 tags: [client, momentum360, local-seo, gbp, at-risk]
 ---
 
@@ -18,12 +18,12 @@ tags: [client, momentum360, local-seo, gbp, at-risk]
 
 Wood floor refinishing contractor (Oklahoma — Edmond, Stillwater, Enid visibility cited). Hyperlocal SEO and GBP content under Momentum 360. Client portal: https://momentum.17hats.com/portal/#/_ni07uZY7x/documents/all
 
-## Gmail intel (through 2026-04-07)
-- 2026-04-07: Sean Boyle sent a card-update request to Dalton ("we're approaching another exciting quarter … need this to continue work for the next 90 days"). **At risk of pausing if Dalton doesn't update billing.**
-- 2026-04-01: Dalton acknowledged Dillon's March check-in with "Give me a few days and I'll be in touch." Still no substantive response.
+## Gmail intel (through 2026-04-27)
+- 2026-04-21: Dillon followed up again with Dalton. Highlighted real opportunity to drive more visibility and inbound leads. Still no response.
+- 2026-04-18: Implied billing card deadline passed (from Sean's "next 90 days" ask on 2026-04-07).
+- 2026-04-07: Sean Boyle sent card-update request. At risk of pausing if Dalton doesn't update billing.
+- 2026-04-01: Dalton said "Give me a few days and I'll be in touch." No substantive follow-through.
 - 2026-03-31: March marketing report delivered.
-- 2026-03-23: Dillon sent a proactive update — maintaining 4 posts per week, hyperlocal SEO keyword intent, specific search terms.
-- 2026-03-05: Dalton flagged visibility gap in Edmond and Stillwater for "wood floor refinishing," and limited visibility in Enid (only showing via Facebook on Google, not as a standalone business).
 
 ## Scope
 - 4 GBP posts per week, hyperlocal keyword-intent content targeting Edmond, Stillwater, Enid and surrounding service areas.

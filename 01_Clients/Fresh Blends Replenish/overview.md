@@ -9,8 +9,8 @@ status: active
 contact_name: Mia Lange
 contact_email: mia@getreplenish.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-13
-next_action: Confirm campaigns launched 2026-04-13 are pacing correctly; send first-week performance snapshot
+last_touched: 2026-04-27
+next_action: BLOCKED on 7-Eleven branded smoothie images from Mia. Landing page ready but can't finalize Pompano revision without assets.
 due: none
 tags: [client, momentum360, google-ads, pmax, food-beverage]
 ---
@@ -26,13 +26,17 @@ B2C Google Ads program driving in-store traffic to 5 South Florida 7-Eleven bran
 - Dedicated landing page in testing.
 - Campaigns prototyped via Claude-in-Chrome browser automation with on-site live testing.
 
-## Gmail intel (through 2026-04-13)
-- 2026-04-13: Check-in email sent to Mia confirming everything on Dillon's side is ready to launch.
-- 2026-04-12: Admin access granted to Mia. Dillon confirmed campaigns ready to launch 2026-04-13.
-- 2026-04-09: Dillon offered to hop on a phone call to finish setup.
-- 2026-04-08: Mia asked Dillon to add her as admin so she could enter CC details (billing).
-- 2026-04-02: Campaign build complete, asking Mia for a secure payment method on the Google Ads account.
-- 2026-04-01: March report sent. March work: Replenish research pass, Fresh Blends platform framing, B2C targeting refinement.
+## Gmail intel (through 2026-04-27)
+- 2026-04-26: Dillon emailed Mia again. Landing page sitting ready for over a week. Only missing 7-Eleven branded smoothie images and Pompano location photo.
+- 2026-04-22: Dillon circled back on images. Page structure fully built.
+- 2026-04-21: Another follow-up to Mia asking for images.
+- 2026-04-20: Dillon offered to connect via call. Flexible on time.
+- 2026-04-19: Follow-up on images. Only needs 3-5 of the 7-Eleven branded assets. Same-day turnaround promised once received.
+- 2026-04-19: Dillon tried to schedule a call with Mia because image files won't download (too large or corrupted).
+- 2026-04-18: Dillon sent completed Replenish landing page to Mia. Mia responded: they DON'T have Replenish product in market. They're promoting 7-Eleven private label smoothies at 5 locations. Need 7-Eleven branded images instead.
+- 2026-04-18: Dillon committed to revising immediately. Asked Mia to resend images (files too large/won't download).
+- 2026-04-13: Check-in email sent to Mia.
+- 2026-04-12: Admin access granted to Mia.
 
 ## Access state
 - Google Analytics: Dillon has access.
@@ -40,6 +44,7 @@ B2C Google Ads program driving in-store traffic to 5 South Florida 7-Eleven bran
 - Google Business Profile: Manager access needed for all 5 kiosk locations — confirm status.
 
 ## Open items
-- Verify 2026-04-13 launch actually executed and is spending.
-- Ship first week-over-week performance snapshot.
+- BLOCKED: Need 7-Eleven branded smoothie images + Pompano location photo from Mia. 8+ follow-ups since 2026-04-18.
+- Landing page is built but can't be finalized without correct product imagery (Replenish branding was wrong, must be 7-Eleven private label).
+- Verify Google Ads campaigns are spending correctly.
 - Close the loop on GBP manager access for all 5 kiosk locations.
