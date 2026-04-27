@@ -46,5 +46,19 @@ rate: Full-time
 - First-person presentation script for Dillon
 - Presented to: Maher, Barbara, Tammi, Rich, Joann, Allison
 
+## Notes
+
+### 2026-04-27 (vault sync)
+- Barbara Tonelli is still waiting for Dillon's response on LinkedIn. Reminder email from LinkedIn today.
+- Action: Dillon needs to respond to Barbara on LinkedIn.
+
+### 2026-04-25 (vault sync)
+- Barbara shared thoughts on SmartCare team opportunities on LinkedIn ("Great opportunity to work on our SmartCare team, supporting clients post...").
+
+### 2026-04-22 (vault sync)
+- Barbara Tonelli (CHRL, PMP, Chief HR Officer) sent LinkedIn connection request to Dillon.
+- Jonathan (Senior Solutions Consultant at Align HCM) also sent LinkedIn connection request.
+- Action: Accept both connection requests.
+
 ## Links
 - [[Client Index]]

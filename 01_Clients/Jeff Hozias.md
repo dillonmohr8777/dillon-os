@@ -33,5 +33,19 @@ google_ads_id: 495-602-9145
 ## Reports
 - Navy/red/gold Howard Hanna brand palette
 
+## Notes
+
+### 2026-04-26 (vault sync)
+- Dillon sent another follow-up asking Jeff for performance data from his end (calls, leads since campaigns went live).
+
+### 2026-04-16 (vault sync)
+- Rockland County campaigns are LIVE. Anti-Zillow variation running as lead test, seller and buyer copy rotating alongside.
+- Multiple follow-ups sent 04-18 through 04-26 asking Jeff about leads/calls. No reply visible yet.
+
+### 2026-04-14 (vault sync)
+- Full ad copy shared with Jeff. Three sections: Seller (Home Valuation), Buyer, Anti-Zillow.
+- Jeff approved the copy same day. "Not a Zestimate. Not a guess." opener highlighted as strong.
+- Dillon confirmed all variations were strong and ready to launch.
+
 ## Links
 - [[Client Index]]

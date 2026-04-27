@@ -43,5 +43,25 @@ google_ads_id_original: 814-550-6229
 - **Logo:** "KIMBERLY" Montserrat caps + "James" Mrs Saint Delafield cursive gold + "BRIDAL" Montserrat
 - **Tagline:** "Chestnut Hill, Philadelphia" in cursive gold
 
+## Notes
+
+### 2026-04-27 (vault sync)
+- Kim flagged SHEATH description is in the wrong place on the Wedding Dress Timeline page.
+- Dillon acknowledged, committed to fixing it today and sending confirmation once live.
+- Action: fix SHEATH placement, confirm with Kim.
+
+### 2026-04-26 (vault sync)
+- Dillon sent Wedding Dress Timeline Page updates + mobile optimization to Kim for review.
+- Dillon also followed up on Size-Inclusive Page asking Kim to check desktop view.
+
+### 2026-04-25 (vault sync)
+- Dillon completed Size-Inclusive Page updates: Empire silhouette swapped to Sheath with updated description, "true to size try on" language added.
+
+### 2026-04-21 (vault sync)
+- Kim's OLD Google Ads account (721-491-4099) was auto-canceled by Google. Dillon confirmed real account is 814-550-6229 and it's healthy.
+- Kim acknowledged, no impact on live campaigns.
+- Dillon pushed content changes to KJB page. Sizing still being worked on (Squarespace limitations).
+- Asked Kim to verify size-inclusive page is desktop-friendly.
+
 ## Links
 - [[Client Index]]
