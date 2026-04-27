@@ -38,7 +38,27 @@ google_ads_id: 627-501-4654
 - 56th Street location near a school — Gen Z / Gen Alpha targeting
 
 ## Status
-Awaiting Google Ads Admin and GBP Manager access. Meta campaign to follow once Google campaigns are live.
+Landing page built but BLOCKED on 7-Eleven branded smoothie images + Pompano location photo from Mia. Multiple follow-ups sent (04-19 through 04-27). Image files Mia sent previously were too large or wouldn't download.
+
+## Notes
+
+### 2026-04-27 (vault sync)
+- Dillon sent another follow-up to Mia. Landing page has been sitting ready for over a week. Only thing holding it up is the 7-Eleven images and Pompano photo.
+
+### 2026-04-22 (vault sync)
+- Dillon followed up again on the images. Landing page structure is fully built and ready.
+
+### 2026-04-20 (vault sync)
+- Dillon asked Mia for a call and offered to take images via text or email if easier.
+
+### 2026-04-19 (vault sync)
+- Dillon followed up requesting 3-5 of the 7-Eleven branded assets. Offered same-day turnaround once received. Also requested call for the next day.
+
+### 2026-04-18 (vault sync)
+- Dillon sent completed Replenish landing page to Mia for review.
+- Mia replied: page looks great BUT they don't have Replenish product in market. They're promoting 7-Eleven private label smoothies at five locations. Need 7-Eleven branded images instead.
+- Dillon committed to revise immediately. Asked Mia to resend images (files too large or wouldn't download).
+- KEY LEARNING: The brand in market is 7-Eleven's private label, not Replenish-branded product.
 
 ## Links
 - [[Client Index]]
