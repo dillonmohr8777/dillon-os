@@ -10,7 +10,7 @@ contact_name: Jeff Hozias
 contact_email: jhoz333@gmail.com
 cc_list: [sean@needmomentum.com]
 last_touched: 2026-04-14
-next_action: Launch Meta Ads using approved seller/buyer copy; move away from LSA per 2026-03-20 strategy call
+next_action: Launch Meta Ads using approved seller/buyer copy; move away from LSA per 2026-03-20 strategy call. Investigate root cause of GBP post rejections from March.
 due: none
 tags: [client, momentum360, real-estate, gbp, meta-ads]
 ---

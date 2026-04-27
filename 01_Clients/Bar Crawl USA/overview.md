@@ -9,9 +9,9 @@ status: active
 contact_name: Andy Zirger
 contact_email: info@barcrawlusa.com
 cc_list: []
-last_touched: 2026-04-15
-next_action: Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing
-due: 2026-04-25
+last_touched: 2026-04-27
+next_action: Deliver first SEO snapshot for 15 location pages by end of week (committed 2026-04-27)
+due: 2026-05-02
 tags: [client, momentum360, google-ads, events, pmax]
 ---
 
@@ -26,7 +26,8 @@ Primary account for a multi-city bar crawl events business. Managed end-to-end o
 - Full paid media system: Meta Ads, Google Search RSA, PMax, email, SMS for the 9-city April 25 event series.
 - Client-facing HTML performance reports under Momentum 360 branding.
 
-## Gmail intel (through 2026-04-15)
+## Gmail intel (through 2026-04-27)
+- 2026-04-27: Dillon agreed to set up monthly SEO tracking for 15 location pages (indexing, impressions, click growth). First SEO snapshot due end of week. 214 tickets sold as of mid-flight update.
 - 2026-04-15: URGENT. 2 Google Ads disapproved on Halloween / Fall Cocktail Crawl emails (forwarded by Andy). Reply sent saying none of those should have launched, will investigate.
 - 2026-04-14: Earlier disapproval batch of 4 assets. Caroline Zirger (events@barcrawl-usa.com) forwarded.
 - 2026-04-13: Sent PMax update "53 Tickets, All April 25 Cities Live, May 2 Launching Tomorrow." Andy flagged runaway $54 day spend on Soulard — traced to Max Conversions running without a tCPA. Patched. Andy asked to cap Soulard ~$15-20/day so the final week isn't the biggest.
