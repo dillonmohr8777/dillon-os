@@ -2,6 +2,8 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-04-28
+next_action: Build and launch CCA Google Ads campaigns
 ---
 
 # Commercial Cleaners Alliance (CCA)
