@@ -9,9 +9,9 @@ status: onboarding
 contact_name: Mike Ross
 contact_email: mross@projectcorporate.com
 cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com]
-last_touched: 2026-04-14
-next_action: Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment
-due: 2026-04-16
+last_touched: 2026-04-28
+next_action: Install conversion tracking on CCA + Sterile Care sites (credentials received 4/27 from Mason). Build CCA landing page for Facebook ads.
+due: none
 tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 ---
 

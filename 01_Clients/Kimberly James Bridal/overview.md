@@ -9,9 +9,9 @@ status: active
 contact_name: Kimberly Iraci
 contact_email: kimberly@kimberlyjamesbridal.com
 cc_list: [mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com]
-last_touched: 2026-04-15
-next_action: Publish wedding dress timeline page (approved 2026-04-13) and verify GA4/GSC indexing per Mac
-due: none
+last_touched: 2026-04-28
+next_action: Fix SHEATH description placement on Wedding Dress Timeline page (Kim flagged 4/26, Dillon committed to fixing 4/28)
+due: 2026-04-29
 tags: [client, momentum360, google-ads, bridal, squarespace, seo]
 ---
 

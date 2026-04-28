@@ -9,8 +9,8 @@ status: active
 contact_name: Jeff Hozias
 contact_email: jhoz333@gmail.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Launch Meta Ads using approved seller/buyer copy; move away from LSA per 2026-03-20 strategy call
+last_touched: 2026-04-28
+next_action: Await Jeff's response on 5 free blogs + Google Ads landing page delivered 4/25. Mac confirmed value-add.
 due: none
 tags: [client, momentum360, real-estate, gbp, meta-ads]
 ---
