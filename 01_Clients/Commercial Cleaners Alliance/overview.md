@@ -9,9 +9,9 @@ status: onboarding
 contact_name: Mike Ross
 contact_email: mross@projectcorporate.com
 cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com]
-last_touched: 2026-04-14
-next_action: Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment
-due: 2026-04-16
+last_touched: 2026-04-28
+next_action: Get website access from Dave/Mason for CCA + Sterile Care conversion tracking; build CCA landing page before FB ads can run
+due: none
 tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 ---
 
@@ -32,10 +32,15 @@ B2B membership organization supporting independent commercial cleaning professio
 - Google Ads + Meta Ads paid media strategy for CCA leadership (requested by Mike).
 - Creatives in production, with a parallel NexGen Solutions creative deliverable on the same timeline.
 
-## Gmail intel (through 2026-04-14)
-- 2026-04-14: Teams meeting "Buzz Bull CCA / Sterile Care" scheduled with Mike Ross.
-- 2026-04-08: Dillon told Mike "working on your creatives today … also have your NexGen, I will be done with today" — a commitment that should be audited for delivery.
-- 2026-04-08 (morning): Mike said targeting Cleaning company owners via Meta would generate the best results. Also asking about Buzz Bull launch timing.
-- 2026-04-07: Dillon sent the CCA paid media + SEO strategy link ("Commercial Cleaners Alliance | Paid Media + SEO Strategy").
-- 2026-04-05: Mike confirmed CCA can offer services nationwide (geography question resolved).
-- 2026-04-04: Initial handoff from Mike — "this is CCA and important client and friend of ours, full solution offering to cleaning companies around the country."
+## Gmail intel (through 2026-04-28)
+- 2026-04-28: Sterile Care lead from Instagram confirmed by Matt Fahy + Dave Stemm. Lead was called.
+- 2026-04-26: Dillon asked Dave for website access to CCA + Sterile Care for conversion tracking. 14 total Buzz Bull leads. Sterile Care got first lead.
+- 2026-04-25: Dillon told Dave CCA needs a dedicated landing page before FB ads can run.
+- 2026-04-23: CCA strategy sent to Mike: https://cca-ads-seo-audit-plan.netlify.app/
+- 2026-04-22: Paid Ads Program thread -- Dave agreed to call with Dillon to go through onboarding. Call happened 04/23 at 12 PM EST.
+- 2026-04-21: Mike said focus on Buzz Bull, Foraceita, CCA, Sterile Care for SEO + paid ads.
+- 2026-04-18: Dillon followed up on CCA + Sterile Care FB lead forms.
+- 2026-04-14: Teams meeting "Buzz Bull CCA / Sterile Care" with Mike Ross.
+- 2026-04-08: Creative commitment for CCA + NexGen.
+- 2026-04-07: CCA paid media + SEO strategy link sent.
+- 2026-04-04: Initial handoff from Mike.

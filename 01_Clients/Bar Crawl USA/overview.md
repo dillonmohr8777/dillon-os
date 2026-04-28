@@ -9,9 +9,9 @@ status: active
 contact_name: Andy Zirger
 contact_email: info@barcrawlusa.com
 cc_list: []
-last_touched: 2026-04-15
-next_action: Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing
-due: 2026-04-25
+last_touched: 2026-04-28
+next_action: Map affiliate links per event for May 2 Google Ads campaigns per Andy's request; set up monthly SEO tracking for 15 location pages
+due: 2026-05-02
 tags: [client, momentum360, google-ads, events, pmax]
 ---
 
@@ -26,9 +26,14 @@ Primary account for a multi-city bar crawl events business. Managed end-to-end o
 - Full paid media system: Meta Ads, Google Search RSA, PMax, email, SMS for the 9-city April 25 event series.
 - Client-facing HTML performance reports under Momentum 360 branding.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-15: URGENT. 2 Google Ads disapproved on Halloween / Fall Cocktail Crawl emails (forwarded by Andy). Reply sent saying none of those should have launched, will investigate.
-- 2026-04-14: Earlier disapproval batch of 4 assets. Caroline Zirger (events@barcrawl-usa.com) forwarded.
-- 2026-04-13: Sent PMax update "53 Tickets, All April 25 Cities Live, May 2 Launching Tomorrow." Andy flagged runaway $54 day spend on Soulard — traced to Max Conversions running without a tCPA. Patched. Andy asked to cap Soulard ~$15-20/day so the final week isn't the biggest.
+## Gmail intel (through 2026-04-28)
+- 2026-04-28: Weekly report sent to Andy. 402 tickets sold, $3594.89 spent (week of 4/20-4/26). Andy wants affiliate links per event for May 2 campaigns. Dillon agreed.
+- 2026-04-27: Dillon confirmed monthly SEO tracking plan for 15 location pages to Mac.
+- 2026-04-22: Mac praised mid-flight report. Dillon committed to monthly SEO tracking alongside paid numbers.
+- 2026-04-20: Mid-flight report: 214 tickets sold across 18 cities. Interactive report link sent.
+- 2026-04-17-04/18: Google Ads policy flags -- 4 assets disapproved (04/17), then 2 more (04/18).
+- 2026-04-15: 2 Google Ads disapproved on Halloween / Fall Cocktail Crawl language.
+- 2026-04-14: Earlier disapproval batch of 4 assets. Caroline Zirger forwarded.
+- 2026-04-13: PMax update "53 Tickets." Andy flagged $54 Soulard day spend. Patched with tCPA.
 - All PMax budgets sit at $14.25/day, Maximize Conversions, no audience signals.
 - Google Ads account ID: 435-710-2897.
