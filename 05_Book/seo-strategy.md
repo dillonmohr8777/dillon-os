@@ -1,7 +1,7 @@
 ---
 project: The Ironic Ineptocracy
 tags: [seo, book, growth]
-last_touched: 2026-04-15
+last_touched: 2026-04-28
 ---
 
 # SEO & Growth Strategy
@@ -26,3 +26,6 @@ The `book-site-seo-sweep` routine reads this file every Thursday.
 - Character pages indexable with individual meta and schema.
 - Newsletter signup above the fold on every page.
 - Blog cadence tied to guest-post publishing calendar.
+
+## Sync log (2026-04-15 through 2026-04-28)
+- 2026-04-23: Google Search Console flagged a new indexing issue on ironicineptocracy.com -- "Duplicate, Google chose different canonical." Needs investigation. Pages aren't being indexed due to canonical confusion.
