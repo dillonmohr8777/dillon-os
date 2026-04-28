@@ -2,6 +2,8 @@
 tags: [client, momentum360]
 status: active
 industry: concrete/landscape
+last_touched: 2026-04-28
+next_action: Monitor PMax exit from learning mode; next weekly call Thursday 1:00 PM ET
 ---
 
 # Onsite Concrete & Landscape
@@ -13,6 +15,7 @@ industry: concrete/landscape
 - **Tier:** Momentum 360 Account Manager
 
 ## Services
+- Google Ads Management (Smart + PMax campaigns, live as of ~2026-04-21)
 - WordPress/Divi Website Management and Repair
 
 ## Website Work
