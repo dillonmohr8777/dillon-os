@@ -9,8 +9,8 @@ status: active
 contact_name: Mia Lange
 contact_email: mia@getreplenish.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-13
-next_action: Confirm campaigns launched 2026-04-13 are pacing correctly; send first-week performance snapshot
+last_touched: 2026-04-28
+next_action: Confirm ON landing page edits are completed by Adem; follow up on campaign pacing
 due: none
 tags: [client, momentum360, google-ads, pmax, food-beverage]
 ---
