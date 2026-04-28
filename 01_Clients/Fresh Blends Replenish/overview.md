@@ -9,9 +9,9 @@ status: active
 contact_name: Mia Lange
 contact_email: mia@getreplenish.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-13
-next_action: Confirm campaigns launched 2026-04-13 are pacing correctly; send first-week performance snapshot
-due: none
+last_touched: 2026-04-28
+next_action: BLOCKED -- waiting on Mia to send 7-Eleven branded smoothie images and Pompano location photo. Landing page can't launch without them. Escalate to Sean if no reply by 4/30.
+due: 2026-04-30
 tags: [client, momentum360, google-ads, pmax, food-beverage]
 ---
 
@@ -26,13 +26,13 @@ B2C Google Ads program driving in-store traffic to 5 South Florida 7-Eleven bran
 - Dedicated landing page in testing.
 - Campaigns prototyped via Claude-in-Chrome browser automation with on-site live testing.
 
-## Gmail intel (through 2026-04-13)
-- 2026-04-13: Check-in email sent to Mia confirming everything on Dillon's side is ready to launch.
-- 2026-04-12: Admin access granted to Mia. Dillon confirmed campaigns ready to launch 2026-04-13.
-- 2026-04-09: Dillon offered to hop on a phone call to finish setup.
-- 2026-04-08: Mia asked Dillon to add her as admin so she could enter CC details (billing).
-- 2026-04-02: Campaign build complete, asking Mia for a secure payment method on the Google Ads account.
-- 2026-04-01: March report sent. March work: Replenish research pass, Fresh Blends platform framing, B2C targeting refinement.
+## Gmail intel (through 2026-04-28)
+- 2026-04-26: Dillon escalated -- "landing page has been sitting ready for over a week." Still waiting on 7-Eleven branded smoothie images and Pompano location photo from Mia.
+- 2026-04-18: Landing page sent for review. Mia corrected: they're promoting 7-Eleven private label smoothies, not Replenish product. Need 7-Eleven branded images. Image files Mia sent were too large / wouldn't download. Multiple follow-ups sent 4/19 through 4/26 with no response from Mia.
+- 2026-04-13: Check-in email sent to Mia confirming everything is ready to launch.
+- 2026-04-12: Admin access granted to Mia. Campaigns ready to launch.
+- 2026-04-08: Mia asked to be added as admin for CC details.
+- 2026-04-02: Campaign build complete, requesting payment method.
 
 ## Access state
 - Google Analytics: Dillon has access.
