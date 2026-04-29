@@ -9,3 +9,8 @@ tags: [notes]
 - Dalton is a slow replier. "Give me a few days" is his standard cadence. Don't interpret silence as churn unless the billing issue from 2026-04-07 escalates.
 - Visibility is weakest in Edmond and Stillwater. GBP content for April should lean harder into those geos specifically.
 - If billing stalls beyond mid-April, flag to Sean and stop production to avoid unpaid work.
+
+## Sync log (2026-04-15 through 2026-04-29)
+
+- 2026-04-21: Dillon sent follow-up to Dalton. "Wanted to follow up ... I've been looking at your account and there's a real opportunity to drive more visibility and inbound leads."
+- STILL AT RISK: No response from Dalton. Billing card still outstanding. It's been 22 days since Sean's 4/7 billing request. Flag to Sean -- this may be dead.
