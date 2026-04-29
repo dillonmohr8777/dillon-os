@@ -3,7 +3,7 @@ program: DBA in Strategic Media
 university: Liberty University
 status: in progress
 tags: [dba, academic, liberty]
-last_touched: 2026-04-15
+last_touched: 2026-04-29
 ---
 
 # DBA Program
