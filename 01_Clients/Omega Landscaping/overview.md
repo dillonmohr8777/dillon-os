@@ -9,8 +9,8 @@ status: active
 contact_name: David Granados
 contact_email: contact@omegalandscapingandconcrete.com
 cc_list: [john.belaska@gmail.com, sam@gadsnomads.com, rachelprimavera99@gmail.com, sean@needmomentum.com, beth@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Chase David for drone footage and confirm he will meet with John Belaska this week to review accounts
+last_touched: 2026-04-29
+next_action: Chase David for drone footage (Meta creative exhausted); John to reschedule client call since David no-showed 4/27
 due: none
 tags: [client, momentum360, landscaping, gbp, local-seo]
 ---
@@ -25,9 +25,11 @@ Landscaping and concrete contractor in Colorado Springs area. Hyper-local GBP co
 - Blog post creation published through GMB updates for organic search visibility.
 - 12-post March marketing report delivered 2026-04-01.
 
-## Gmail intel (through 2026-04-14)
-- 2026-04-14: John Belaska following up with David re meeting Thursday to discuss accounts (no response from David yet on this ping).
-- 2026-04-02: John Belaska still waiting on additional drone footage from David for Facebook ads.
+## Gmail intel (through 2026-04-29)
+- 2026-04-27: M360 meeting held. David (client) did NOT join. John reported declining Meta performance -- creative is exhausted. Need new video/drone footage. Google Ads producing very few leads, though one confirmed good. Google budget is $1,000/mo (~$33/day). Action: John to reschedule client for follow-up.
+- 2026-04-21: John Belaska scheduled Omega/M360 meeting for Apr 27 at 2:00 PM ET.
+- 2026-04-14: John following up with David re meeting Thursday to discuss accounts.
+- 2026-04-02: John still waiting on drone footage from David for Facebook ads.
 - 2026-04-01: Dillon sent March marketing report (12 posts from 2026-03-09 through end of month, all real project-based content).
 - 2026-03-25: Ad copy discussion on "helped over 3000 homeowners" framing, pivoting away from "15 years of experience."
 

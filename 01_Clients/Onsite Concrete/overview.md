@@ -8,9 +8,9 @@ status: active
 contact_name: Grace Slagle
 contact_email: gracieslags@gmail.com
 cc_list: [onsiteclp@gmail.com, sean@needmomentum.com]
-last_touched: 2026-04-09
-next_action: Attend weekly Onsite x M360 call Thursday 2026-04-16 1:00 PM ET
-due: 2026-04-16
+last_touched: 2026-04-29
+next_action: Send week 2 performance snapshot; continue weekly Thursday calls
+due: none
 tags: [client, momentum360, concrete, landscape]
 ---
 
@@ -18,11 +18,9 @@ tags: [client, momentum360, concrete, landscape]
 
 Recurring weekly sync with Grace Slagle. Standing meeting: **Onsite x M360 Call, Thursdays 1:00–1:30 PM ET**.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-16 (upcoming): Weekly Onsite x M360 Call at 1:00 PM ET. Attendees: Dillon, Sean Boyle, onsiteclp@gmail.com (client inbox).
-- 2026-04-09: Prior weekly call held 1:00 PM ET.
-- Earlier weekly syncs confirmed on 2026-04-02 and 2026-03-26.
-- No substantive deliverables surfaced in Gmail — most of the engagement appears to run through the weekly call rather than async email.
+## Gmail intel (through 2026-04-29)
+- 2026-04-28: Week 1 Google Ads Recap sent to Nicki. Strong opening: $70.04 spent, 3,841 impressions, 76 clicks, $0.92 blended CPC, 2 conversions at $35.02 CPL. Smart campaign at $0.29 CPC (50 clicks). PMax still in learning mode but already pulled both conversions. Phone call + contact page visit. 77.6% below industry avg CPC, 53-56% below benchmark CPL.
+- Weekly Thursday calls continuing at 1:00 PM ET.
 
 ## Scope
 - Account management and website work for Onsite Concrete & Landscape (scope to be re-confirmed in the weekly call).
