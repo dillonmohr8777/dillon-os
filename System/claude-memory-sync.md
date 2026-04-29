@@ -1,5 +1,5 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-04-29T12:30:00-04:00
 tags: [system, memory, sync]
 ---
 
@@ -25,8 +25,8 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • Align HCM — Dillon's full-time employer. Not a client. Not counted in client totals.
 
 ## Pending deliverables
-• Bar Crawl USA — resolve 2 disapproved ads (Halloween / Fall Cocktail Crawl language flagged 2026-04-14/15).
-• Kimberly James Bridal — publish Timeline page, verify GA4 + GSC indexing per Mac.
+• Bar Crawl USA — send city-by-city breakdown to Andy (promised 4/29 morning). Implement affiliate tracking in all post-May 2 campaigns. Ad copy pivot: experience-first, value framing, tighter geo targeting on softer markets.
+• Kimberly James Bridal — Timeline page fix approved by Kim 2026-04-29. Still need to verify GA4 + GSC indexing per Mac.
 • LinkEZE — fix enhanced conversions data source diagnostics; confirm MFA enabled on 809-600-6448.
 • Fresh Blends / Replenish — confirm 2026-04-13 campaign launch went live; first-week performance snapshot.
 • NKCDC — launch Free Tax Prep campaign the moment NKCDC clears the landing page.
@@ -36,24 +36,21 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • Jeff Hozias — launch approved seller Meta campaign.
 
 ## Upcoming deadlines (7 days)
-• 2026-04-16 — Onsite x M360 weekly call (1:00 PM ET).
-• 2026-04-16 — Commercial Cleaners Alliance creative commitment.
-• 2026-04-18 — Hardwood Artisan billing card deadline (implied from "next 90 days" ask 2026-04-07).
-• 2026-04-25 — Bar Crawl USA Taco & Tequila wave 1 (9 cities).
-• 2026-05-02 — Bar Crawl USA Taco & Tequila wave 2.
+- 2026-04-29 -- Bar Crawl USA city-by-city breakdown due to Andy (promised in 4/28 email).
+- 2026-05-02 -- Bar Crawl USA Taco & Tequila wave 2 (10 markets pacing on budget).
+- 2026-05-02 -- Post-May 2 pivot: affiliate tracking, experience-first copy, tighter geo targeting.
 
 ## Recent completions (7 days)
-• 2026-04-14 — BOK Law weekly social content delivered.
-• 2026-04-14 — Jeff Hozias seller ad copy approved.
-• 2026-04-13 — KJB Wedding Dress Timeline page approved.
-• 2026-04-13 — Bar Crawl USA PMax update sent to Andy (53 tickets, all April 25 cities live, May 2 launching).
-• 2026-04-12 — Fresh Blends / Replenish admin access granted to Mia.
-• 2026-04-09 — NKCDC revised strategy delivered and approved by Anthony.
-• 2026-04-01 — Monthly reports sent to Omega, Jeff Hozias, Hardwood Artisan.
+- 2026-04-29 -- KJB Wedding Dress Timeline page fix confirmed by Kim ("Looks great, thank you!").
+- 2026-04-28 -- Bar Crawl USA weekly report discussion with Andy. April 25 soft YOY acknowledged. Affiliate tracking + copy pivot agreed for post-May 2. Andy satisfied.
+- 2026-04-28 -- AMI Cleaning (prospect): Dillon pitched Russ using CCA + Bluegrass Janitorial as case studies. Awaiting response.
 
 ## Unanswered / urgent
-• **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
-• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
-• **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
-• **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
-• **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+- **Bar Crawl USA** -- city-by-city breakdown due TODAY (4/29). Dillon promised Andy in the 4/28 email thread.
+- **NKCDC** -- Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked. (14+ days no response.)
+- **Hardwood Artisan** -- Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding. (22+ days no response.)
+- **Omega Landscaping** -- David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
+- **Commercial Cleaners Alliance** -- 2026-04-08 creative commitment needs delivery audit.
+
+## Sync history
+- **2026-04-29 ~12:30 PM ET** -- Captured 3 items: KJB Timeline fix approved, Bar Crawl USA weekly report + affiliate/copy pivot, AMI Cleaning prospect outreach. 14-day gap from last sync (2026-04-15). Items between 4/15 and 4/28 may have been missed -- recommend a backfill scan.
