@@ -8,9 +8,9 @@ status: active
 contact_name: Dorothy O'Neil
 contact_email: doneil@boklawfirm.com
 cc_list: [akocelko@boklawfirm.com, rbowe@boklawfirm.com]
-last_touched: 2026-04-14
-next_action: Continue weekly social content cadence (Wednesday Wisdom, Turn the Page Thursday, Family Fridays)
-due: 2026-04-19
+last_touched: 2026-04-29
+next_action: Continue weekly social content cadence. Follow up on video content shoots over Zoom (asked 4/29). Keep using Dorothy's podcast clips with Stephanie.
+due: 2026-05-05
 tags: [client, momentum360, family-law, social, pittsburgh]
 ---
 
@@ -26,7 +26,8 @@ Weekly social content series — 3 recurring posts per week:
 
 The `bok-law-social-content` routine generates this content every Sunday at 6:00 PM.
 
-## Gmail intel (through 2026-04-14)
+## Gmail intel (through 2026-04-29)
+- 2026-04-29: Weekly content delivered to Dorothy, Rachael, and Aleksandra. Asked if anyone can shoot video content over Zoom in the next month. Still using clips from Dorothy's podcast with Stephanie.
 - 2026-04-14: Weekly content delivered to Dorothy O'Neil, Aleksandra Kocelko, and Rachael Bowe.
 - 2026-04-07: Karen Yun-Lutz (Manageable Media) added new attorney Cecilia Slifko to the website after Dorothy confirmed bio and headshot. Cecilia practices family law since January 2021.
 - 2026-04-06/07: Website Mediation services page cleanup — Pre-Marital Mediation section had misplaced Couples and Blended Family content that Karen fixed.

@@ -9,8 +9,8 @@ status: active
 contact_name: Mia Lange
 contact_email: mia@getreplenish.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-13
-next_action: Confirm campaigns launched 2026-04-13 are pacing correctly; send first-week performance snapshot
+last_touched: 2026-04-29
+next_action: Get 7-Eleven branded smoothie images from Mia to finish Pompano landing page revision. Landing page structure is built, just needs images.
 due: none
 tags: [client, momentum360, google-ads, pmax, food-beverage]
 ---
@@ -39,7 +39,13 @@ B2C Google Ads program driving in-store traffic to 5 South Florida 7-Eleven bran
 - Google Ads: Admin access granted to Mia 2026-04-12 (so she can enter billing CC).
 - Google Business Profile: Manager access needed for all 5 kiosk locations — confirm status.
 
+## Gmail intel (2026-04-21 through 2026-04-29)
+- 2026-04-22: Dillon followed up again for images. "Landing page structure is fully built and ready to go. I just need a handful of the 7-Eleven branded smoothie images and the Pompano location photo."
+- 2026-04-21: Dillon followed up with Mia: "I want to make sure this doesn't stall out." Offered to accept smaller file sizes if needed.
+- Still blocked on images from Mia. No response to either follow-up.
+
 ## Open items
 - Verify 2026-04-13 launch actually executed and is spending.
 - Ship first week-over-week performance snapshot.
 - Close the loop on GBP manager access for all 5 kiosk locations.
+- Get 7-Eleven branded smoothie images from Mia for Pompano landing page revision.
