@@ -9,8 +9,8 @@ status: active
 contact_name: David Granados
 contact_email: contact@omegalandscapingandconcrete.com
 cc_list: [john.belaska@gmail.com, sam@gadsnomads.com, rachelprimavera99@gmail.com, sean@needmomentum.com, beth@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Chase David for drone footage and confirm he will meet with John Belaska this week to review accounts
+last_touched: 2026-04-29
+next_action: Confirm outcome of Apr 27 Omega/M360 meeting with John Belaska. Continue chasing David for drone footage.
 due: none
 tags: [client, momentum360, landscaping, gbp, local-seo]
 ---
@@ -37,7 +37,10 @@ Landscaping and concrete contractor in Colorado Springs area. Hyper-local GBP co
 - **Sam Syed** (sam@gadsnomads.com), **Rachel Primavera** (rachelprimavera99@gmail.com) — extended team.
 - **Sean Boyle, Beth Kann** — Momentum 360 leadership on CC.
 
+## Gmail intel (2026-04-21 through 2026-04-29)
+- 2026-04-21: Google Calendar invite from John Belaska for "Omega Landscaping/M360 Meeting" on Mon Apr 27, 2pm-2:30pm EDT. Invitees: Dillon, Sean, Sam, Beth, David Granados.
+
 ## Open items
-- Confirm David attended / is attending Thursday meeting with John.
+- Confirm outcome of Apr 27 Omega/M360 meeting with John Belaska.
 - Chase drone footage from David (outstanding since 2026-04-02).
 - Continue April GBP cadence.
