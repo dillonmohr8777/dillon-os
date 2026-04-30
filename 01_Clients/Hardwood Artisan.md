@@ -29,3 +29,8 @@ industry: hardwood/flooring
 
 ## Links
 - [[Client Index]]
+
+---
+last_touched: 2026-04-30
+next_action: Final follow-up sent to Dalton -- if no reply by ~May 7, mark churned
+status_note: AT RISK -> likely CHURNED if no response
