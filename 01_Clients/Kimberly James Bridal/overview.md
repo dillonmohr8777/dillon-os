@@ -9,8 +9,8 @@ status: active
 contact_name: Kimberly Iraci
 contact_email: kimberly@kimberlyjamesbridal.com
 cc_list: [mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com]
-last_touched: 2026-04-15
-next_action: Publish wedding dress timeline page (approved 2026-04-13) and verify GA4/GSC indexing per Mac
+last_touched: 2026-04-30
+next_action: Verify GA4 + GSC indexing on published Timeline page per Mac's reminder
 due: none
 tags: [client, momentum360, google-ads, bridal, squarespace, seo]
 ---
@@ -30,8 +30,13 @@ Bridal boutique at 8333 Germantown Ave, Chestnut Hill, Philadelphia. Squarespace
 - "Plus-Size Wedding Dresses in Philadelphia" — near final at last checkpoint.
 - Wedding Dress Timeline — month-by-month shopping timeline, pricing context ($1,000–$3,500), rush order language, final fitting, Concierge Service. Previously hit an Iron Man template background bug that had to be debugged out of the Squarespace template.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-13: Kim approved the Wedding Dress Timeline page ("Everything looks perfect … good to publish") and reacted positively to the Google Ads performance report (319 clicks, 12,500 impressions, 781 impressions/day over 16 days).
+## Gmail intel (through 2026-04-30)
+- 2026-04-29: Kim confirmed the Sheath description fix on the Timeline page -- "Looks great, thank you!"
+- 2026-04-28: Dillon sent Kim a follow-up confirming the misplaced Sheath description in the "12-18 Months Out" section has been fixed on the Wedding Dress Timeline page.
+- 2026-04-27: Mac Frederick reminded Kim about the AMEX billing arrangement for Google Ads and noted that SEO is increasing. Mac handles the monthly reimbursement invoice.
+- 2026-04-26: Kim flagged that the Sheath description was in the wrong place on the Timeline page. Dillon acknowledged and committed to fixing it.
+- 2026-04-26: Dillon sent Timeline page updates + mobile optimization for review. Kim responded same day with the Sheath fix request.
+- 2026-04-13: Kim approved the Wedding Dress Timeline page ("Everything looks perfect ... good to publish") and reacted positively to the Google Ads performance report (319 clicks, 12,500 impressions, 781 impressions/day over 16 days).
 - 2026-04-11: Mac Frederick asked Dillon to double-check GA4 and GSC are still connected and that new pages are getting indexed.
 - 2026-04-10: Google Ads account (Customer ID 814-550-6229) was linked to Momentum Ads Manager.
 - 2026-04-10: Google Ads sent a "strategic consultation" invite to the KJB team (unread).
