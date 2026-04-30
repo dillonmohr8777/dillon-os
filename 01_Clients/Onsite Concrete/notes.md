@@ -8,3 +8,12 @@ tags: [notes]
 
 - Unlike most accounts, very little of the Onsite engagement runs over email. The Thursday 1:00 PM ET call is the primary coordination surface.
 - Use the next weekly call to re-baseline scope, campaigns, and brand guidelines so this folder can be fleshed out.
+
+## Sync Log
+
+### 2026-04-27
+- Sean forwarded landing page edits from Nicki/Onsite.
+
+### 2026-04-28
+- Week 1 Google Ads recap sent: $70.04 spent, 3,841 impressions, 76 clicks, $0.92 blended CPC, 2 conversions in week one.
+- Strong early performance. Two conversions already in the first week.
