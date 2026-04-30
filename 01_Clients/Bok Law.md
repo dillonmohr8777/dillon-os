@@ -26,3 +26,7 @@ start_date: 2025-12-01
 
 ## Links
 - [[Client Index]]
+
+---
+last_touched: 2026-04-30
+next_action: Wait for BOK team to approve last week's content and respond to video content pitch
