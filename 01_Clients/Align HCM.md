@@ -46,5 +46,17 @@ rate: Full-time
 - First-person presentation script for Dillon
 - Presented to: Maher, Barbara, Tammi, Rich, Joann, Allison
 
+## Sync log (2026-04-16 through 2026-05-01)
+
+### 2026-04-22
+- Barbara Tonelli (CHRO) sent LinkedIn connection request to Dillon. Pending response.
+- Jonathan (Senior Solutions Consultant, Align HCM) also sent LinkedIn connection request. Pending.
+
+### 2026-04-25
+- LinkedIn notification: Barbara shared thoughts on SmartCare team opportunities.
+
+### 2026-04-27
+- LinkedIn reminder: Barbara still waiting for Dillon's response on connection request.
+
 ## Links
 - [[Client Index]]

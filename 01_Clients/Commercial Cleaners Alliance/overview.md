@@ -9,9 +9,9 @@ status: onboarding
 contact_name: Mike Ross
 contact_email: mross@projectcorporate.com
 cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com]
-last_touched: 2026-04-14
-next_action: Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment
-due: 2026-04-16
+last_touched: 2026-05-01
+next_action: Confirm Meta + Google accounts approved and live; schedule team meeting Mon/Tue next week with David, Mike, Mason
+due: 2026-05-05
 tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 ---
 
