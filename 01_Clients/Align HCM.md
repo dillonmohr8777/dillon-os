@@ -46,5 +46,12 @@ rate: Full-time
 - First-person presentation script for Dillon
 - Presented to: Maher, Barbara, Tammi, Rich, Joann, Allison
 
+## Sync log (2026-04-15 through 2026-05-01)
+
+- 2026-04-22: Barbara Tonelli (CHRL, PMP, Chief HR Officer) and Jonathan (Senior Solutions Consultant) sent LinkedIn connection invites to Dillon.
+- 2026-04-25: LinkedIn update about SmartCare team opportunities shared by Barbara.
+- 2026-04-27: LinkedIn reminder that Barbara is still waiting for Dillon's response.
+- ACTION: Accept Barbara's and Jonathan's LinkedIn connection requests if not already done.
+
 ## Links
 - [[Client Index]]
