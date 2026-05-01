@@ -9,8 +9,8 @@ status: active
 contact_name: Jeff Hozias
 contact_email: jhoz333@gmail.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Launch Meta Ads using approved seller/buyer copy; move away from LSA per 2026-03-20 strategy call
+last_touched: 2026-05-01
+next_action: Follow up on first FB lead; pull weekly performance snapshot
 due: none
 tags: [client, momentum360, real-estate, gbp, meta-ads]
 ---
@@ -26,12 +26,15 @@ Real estate agent, Rockland County, NY. Hyper-local GBP content and a paid media
 - Explored Systeme.io funnel and landing page building (troubleshooting inactive page / opt-in issues).
 - Interactive HTML monthly performance report (navy / red / gold Howard Hanna palette).
 
-## Gmail intel (through 2026-04-14)
-- 2026-04-14: Dillon reviewed Jeff's drafted ad copy. "Not a Zestimate. Not a guess." seller opener called out as scroll-stopper. Seller Home Valuation copy cleared for launch. Anti-Zillow angle validated.
-- 2026-04-01: March marketing report delivered. Summary: Google rejected a number of GBP posts throughout the month without a clear reason, dragging organic visibility.
-- 2026-03-20: Meta Ads strategy call. Moving away from LSA due to persistent low-quality leads. Sean declined the invite.
+## Gmail intel (through 2026-05-01)
+- 2026-04-30: First Facebook lead came in! Dillon notified Jeff to contact them and gauge interest.
+- 2026-04-26: Performance check-in sent. Dillon asked what's happening on Jeff's end (calls, inquiries).
+- 2026-04-21: Another check-in asking about calls/inquiries since launch.
+- 2026-04-18: Check-in sent. Anti-Zillow angle should be pulling early interest.
+- 2026-04-16: Rockland County campaigns built and live. Anti-Zillow variation running as lead test, seller and buyer copy rotating alongside.
+- 2026-04-14: Dillon reviewed Jeff's drafted ad copy. "Not a Zestimate. Not a guess." seller opener called out as scroll-stopper.
 
 ## Open items
-- Launch Meta Ads with approved seller copy.
+- Follow up with Jeff on first FB lead outcome.
+- Pull weekly performance snapshot now that leads are coming in.
 - Investigate root cause of GBP post rejections from March.
-- Revisit whether Google Ads strategy is worth salvaging or fully replacing with Meta.
