@@ -3,7 +3,7 @@ program: DBA in Strategic Media
 university: Liberty University
 status: in progress
 tags: [dba, academic, liberty]
-last_touched: 2026-04-15
+last_touched: 2026-05-01
 ---
 
 # DBA Program
@@ -19,3 +19,11 @@ Dillon is a doctoral candidate at Liberty University. Degree: **DBA in Strategic
 
 ## Writing format
 All academic writing follows **APA 7th edition**.
+
+## Sync log (2026-04-16 through 2026-05-01)
+
+### 2026-04-27
+- Liberty registrar sent Summer 2026 schedule notification. Review upcoming courses.
+
+### 2026-04-30
+- Financial Check-In (FCI) deadline reminder: **Monday, May 11, 2026**. Must complete FCI to secure summer courses.
