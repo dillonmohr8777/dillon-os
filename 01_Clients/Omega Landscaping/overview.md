@@ -9,8 +9,8 @@ status: active
 contact_name: David Granados
 contact_email: contact@omegalandscapingandconcrete.com
 cc_list: [john.belaska@gmail.com, sam@gadsnomads.com, rachelprimavera99@gmail.com, sean@needmomentum.com, beth@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Chase David for drone footage and confirm he will meet with John Belaska this week to review accounts
+last_touched: 2026-05-01
+next_action: David still not showing up for calls. Drone footage still outstanding. Consider escalation.
 due: none
 tags: [client, momentum360, landscaping, gbp, local-seo]
 ---
@@ -25,19 +25,19 @@ Landscaping and concrete contractor in Colorado Springs area. Hyper-local GBP co
 - Blog post creation published through GMB updates for organic search visibility.
 - 12-post March marketing report delivered 2026-04-01.
 
-## Gmail intel (through 2026-04-14)
-- 2026-04-14: John Belaska following up with David re meeting Thursday to discuss accounts (no response from David yet on this ping).
-- 2026-04-02: John Belaska still waiting on additional drone footage from David for Facebook ads.
-- 2026-04-01: Dillon sent March marketing report (12 posts from 2026-03-09 through end of month, all real project-based content).
-- 2026-03-25: Ad copy discussion on "helped over 3000 homeowners" framing, pivoting away from "15 years of experience."
+## Gmail intel (through 2026-05-01)
+- 2026-04-27: Read.AI meeting report for Omega Landscaping/M360 call. Client (David) did not join. John reported declining attendance/engagement.
+- 2026-04-14: John Belaska following up with David re meeting Thursday (no response).
+- 2026-04-02: John still waiting on drone footage from David.
+- 2026-04-01: March marketing report delivered (12 posts).
 
 ## Team constellation
-- **David Granados** — owner (contact@omegalandscapingandconcrete.com, 719-761-2840, 719-896-0663).
-- **John Belaska** (john.belaska@gmail.com) — runs paid/Meta side and drone creative workflow.
-- **Sam Syed** (sam@gadsnomads.com), **Rachel Primavera** (rachelprimavera99@gmail.com) — extended team.
-- **Sean Boyle, Beth Kann** — Momentum 360 leadership on CC.
+- **David Granados** -- owner (contact@omegalandscapingandconcrete.com, 719-761-2840, 719-896-0663).
+- **John Belaska** (john.belaska@gmail.com) -- runs paid/Meta side and drone creative workflow.
+- **Sam Syed** (sam@gadsnomads.com), **Rachel Primavera** (rachelprimavera99@gmail.com) -- extended team.
+- **Sean Boyle, Beth Kann** -- Momentum 360 leadership on CC.
 
 ## Open items
-- Confirm David attended / is attending Thursday meeting with John.
-- Chase drone footage from David (outstanding since 2026-04-02).
-- Continue April GBP cadence.
+- David is no-showing calls. Drone footage still outstanding since 2026-04-02.
+- Consider escalation or direct intervention. Engagement at risk of stalling.
+- Continue GBP cadence.

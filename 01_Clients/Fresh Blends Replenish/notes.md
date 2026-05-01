@@ -10,3 +10,11 @@ tags: [notes]
 - Mia was slow to respond during billing access back-and-forth in early April. Follow-ups via direct check-in emails worked well.
 - B2B Replenish partner-acquisition campaigns are explicitly out of scope at the current budget. Don't slip those in opportunistically.
 - Phone-call conversions are a hard no (don't want people calling 7-Eleven stores).
+
+## Sync Log
+
+### 2026-05-01 (vault sync)
+- KEY CORRECTION: Mia clarified 4/18 that they don't have Replenish product in market. They're promoting 7-Eleven private label smoothies at 5 locations. Landing page was revised accordingly.
+- Landing page completed 4/18 but needs 7-Eleven branded smoothie images to finalize Pompano version. Files from Mia too large/won't download.
+- Multiple follow-ups on images: 4/19, 4/20, 4/21, 4/22, 4/26. Mia hasn't responded.
+- Sean forwarded "ON Landing Page Edits" to Dillon on 4/27.

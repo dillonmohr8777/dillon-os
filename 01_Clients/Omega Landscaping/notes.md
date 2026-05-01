@@ -9,3 +9,10 @@ tags: [notes]
 - David is hard to pin down on asset handoffs (drone footage has been open for weeks). Consider a nudge cadence via text if email goes quiet.
 - John Belaska is driving Meta creative and is a key coordination point. Keep him looped on any content decisions that touch paid.
 - Domain on file is omegalandscapingandconcrete.com (not omegalandscapecorp.com as originally scoped). Verify with client on next touch.
+
+## Sync Log
+
+### 2026-05-01 (vault sync)
+- David no-showed the 4/27 Omega/M360 meeting. John reported declining attendance.
+- Drone footage still outstanding since 4/02. No progress.
+- Engagement risk is increasing. David is disengaging from calls.
