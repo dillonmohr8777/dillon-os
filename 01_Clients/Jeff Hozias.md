@@ -5,6 +5,8 @@ industry: real estate
 start_date: 2026-03-01
 rate: $200/mo
 google_ads_id: 495-602-9145
+last_touched: 2026-05-01
+next_action: Follow up with Jeff on FB lead outcome
 ---
 
 # Jeff Hozias / Howard Hanna Rand Realty
@@ -32,6 +34,12 @@ google_ads_id: 495-602-9145
 
 ## Reports
 - Navy/red/gold Howard Hanna brand palette
+
+## Notes
+
+### 2026-04-30
+- First Facebook lead came in for Jeff. Dillon emailed Jeff (jhoz333@gmail.com) with a screenshot, asked him to contact the lead and see what the interest level is.
+- **Milestone:** First FB lead generated -- Meta seller campaign is producing results.
 
 ## Links
 - [[Client Index]]
