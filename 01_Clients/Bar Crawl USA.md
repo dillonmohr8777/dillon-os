@@ -5,6 +5,8 @@ industry: events
 start_date: 2026-02-16
 rate: $950/mo
 google_ads_id: 435-710-2897
+last_touched: 2026-04-28
+next_action: implement affiliate links for May 2 event campaigns
 ---
 
 # Bar Crawl USA
