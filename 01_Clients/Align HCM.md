@@ -4,6 +4,8 @@ status: active
 industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
+last_touched: 2026-04-30
+next_action: Respond to Barbara Tonelli's LinkedIn connection request
 ---
 
 # Align HCM

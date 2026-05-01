@@ -4,6 +4,8 @@ status: active
 industry: landscaping
 start_date: 2026-03-01
 rate: $200/mo
+last_touched: 2026-04-27
+next_action: Follow up on lawn care lead from Domenique, re-engage client on meeting attendance
 ---
 
 # Omega Landscaping
