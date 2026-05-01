@@ -2,6 +2,8 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-05-01
+next_action: Confirm team meeting day with David/Mike/Mason; resolve May 4 double-booking
 ---
 
 # Commercial Cleaners Alliance (CCA)

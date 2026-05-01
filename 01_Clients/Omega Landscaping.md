@@ -4,6 +4,8 @@ status: active
 industry: landscaping
 start_date: 2026-03-01
 rate: $200/mo
+last_touched: 2026-05-01
+next_action: Chase David for drone footage and confirm next meeting
 ---
 
 # Omega Landscaping
