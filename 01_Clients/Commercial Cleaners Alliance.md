@@ -2,6 +2,9 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-05-01
+next_action: Meeting with David Stemm Mon/Tue May 5-6, monitor Google Ads approval
+google_ads_id: 996-681-9458
 ---
 
 # Commercial Cleaners Alliance (CCA)
