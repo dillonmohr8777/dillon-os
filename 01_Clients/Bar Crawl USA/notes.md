@@ -12,3 +12,11 @@ tags: [notes]
 - Andy's cadence preference: quick updates, no fluff. He flags issues directly and expects straightforward fixes.
 - Caroline handles forwards / policy intake. Keep her looped when it's a compliance thread.
 - Any ad copy improvisation is a hard no. Pre-approved library only.
+
+## Sync Log
+
+### 2026-04-28
+- Weekly Google Ads report (4/27) delivered. Andy flagged April 25 ticket numbers were lower than expected relative to another advertising platform's conversions.
+- Andy requested affiliate links be mapped to each May 2 event. Dillon agreed and will implement.
+- Andy acknowledged Dillon's thoroughness and the explanation. No hostility, just wanted clarity.
+- Action: Map affiliate links to May 2 event campaigns once Andy sends them over.
