@@ -9,8 +9,8 @@ status: active
 contact_name: Mia Lange
 contact_email: mia@getreplenish.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-13
-next_action: Confirm campaigns launched 2026-04-13 are pacing correctly; send first-week performance snapshot
+last_touched: 2026-05-01
+next_action: Still waiting on 7-Eleven branded smoothie images and Pompano location photo from Mia to finish landing page
 due: none
 tags: [client, momentum360, google-ads, pmax, food-beverage]
 ---
@@ -26,20 +26,21 @@ B2C Google Ads program driving in-store traffic to 5 South Florida 7-Eleven bran
 - Dedicated landing page in testing.
 - Campaigns prototyped via Claude-in-Chrome browser automation with on-site live testing.
 
-## Gmail intel (through 2026-04-13)
-- 2026-04-13: Check-in email sent to Mia confirming everything on Dillon's side is ready to launch.
-- 2026-04-12: Admin access granted to Mia. Dillon confirmed campaigns ready to launch 2026-04-13.
-- 2026-04-09: Dillon offered to hop on a phone call to finish setup.
-- 2026-04-08: Mia asked Dillon to add her as admin so she could enter CC details (billing).
-- 2026-04-02: Campaign build complete, asking Mia for a secure payment method on the Google Ads account.
-- 2026-04-01: March report sent. March work: Replenish research pass, Fresh Blends platform framing, B2C targeting refinement.
+## Gmail intel (through 2026-05-01)
+- 2026-04-26: Second follow-up to Mia. "The landing page has been sitting ready for over a week now." Needs 7-Eleven branded smoothie images and Pompano location photo.
+- 2026-04-22: First follow-up to Mia on images. Landing page structure fully built.
+- 2026-04-13: Check-in email sent to Mia confirming ready to launch.
+- 2026-04-12: Admin access granted to Mia for billing CC entry.
+- 2026-04-02: Campaign build complete.
+- 2026-04-01: March report sent.
 
 ## Access state
 - Google Analytics: Dillon has access.
-- Google Ads: Admin access granted to Mia 2026-04-12 (so she can enter billing CC).
-- Google Business Profile: Manager access needed for all 5 kiosk locations — confirm status.
+- Google Ads: Admin access granted to Mia 2026-04-12.
+- Google Business Profile: Manager access needed for all 5 kiosk locations -- confirm status.
 
 ## Open items
-- Verify 2026-04-13 launch actually executed and is spending.
+- BLOCKED: Landing page waiting on 7-Eleven branded smoothie images and Pompano location photo from Mia. Two follow-ups sent (4/22 and 4/26), no response.
+- Verify campaign launch status and spending.
 - Ship first week-over-week performance snapshot.
 - Close the loop on GBP manager access for all 5 kiosk locations.

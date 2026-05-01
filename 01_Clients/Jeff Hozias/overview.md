@@ -9,8 +9,8 @@ status: active
 contact_name: Jeff Hozias
 contact_email: jhoz333@gmail.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Launch Meta Ads using approved seller/buyer copy; move away from LSA per 2026-03-20 strategy call
+last_touched: 2026-05-01
+next_action: Follow up on first Facebook lead (sent 2026-04-30); send weekly performance recap
 due: none
 tags: [client, momentum360, real-estate, gbp, meta-ads]
 ---
@@ -26,12 +26,19 @@ Real estate agent, Rockland County, NY. Hyper-local GBP content and a paid media
 - Explored Systeme.io funnel and landing page building (troubleshooting inactive page / opt-in issues).
 - Interactive HTML monthly performance report (navy / red / gold Howard Hanna palette).
 
-## Gmail intel (through 2026-04-14)
-- 2026-04-14: Dillon reviewed Jeff's drafted ad copy. "Not a Zestimate. Not a guess." seller opener called out as scroll-stopper. Seller Home Valuation copy cleared for launch. Anti-Zillow angle validated.
-- 2026-04-01: March marketing report delivered. Summary: Google rejected a number of GBP posts throughout the month without a clear reason, dragging organic visibility.
-- 2026-03-20: Meta Ads strategy call. Moving away from LSA due to persistent low-quality leads. Sean declined the invite.
+## Gmail intel (through 2026-05-01)
+- 2026-04-30: Jeff got his first Facebook lead! Dillon notified him to follow up.
+- 2026-04-26: Dillon asked Jeff for performance data from running campaigns (~1 week in). Need to know what's happening on Jeff's end (calls, DMs, inquiries).
+- 2026-04-14: Seller Home Valuation copy cleared for launch. Anti-Zillow angle validated.
+- 2026-04-01: March marketing report delivered.
+- 2026-03-20: Meta Ads strategy call. Moving away from LSA.
+
+## Capsule and Tonic Records (Jeff Kauffman / KW)
+- 2026-04-23: Beth looped Dillon into Jeff Kauffman's Google Ads account (Capsule and Tonic Records). CPC and conversions improving.
+- 2026-04-23: Dillon pitched SEO + Google Ads pairing. Jeff has a $500/month hard cap on ad spend.
+- 2026-04-25 through 4/28: Trying to schedule a meeting with Jeff Kauffman (Tuesday or Wednesday). Still coordinating.
 
 ## Open items
-- Launch Meta Ads with approved seller copy.
+- Follow up on Jeff Hozias's first Facebook lead.
 - Investigate root cause of GBP post rejections from March.
-- Revisit whether Google Ads strategy is worth salvaging or fully replacing with Meta.
+- Lock in meeting with Jeff Kauffman for Capsule and Tonic blog/landing page walkthrough.
