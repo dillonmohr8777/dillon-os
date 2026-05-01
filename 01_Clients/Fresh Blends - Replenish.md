@@ -5,6 +5,8 @@ industry: food/beverage
 start_date: 2026-03-23
 rate: $500/mo
 google_ads_id: 627-501-4654
+last_touched: 2026-05-01
+next_action: Escalate 7-Eleven image request through Sean or alt file transfer
 ---
 
 # Fresh Blends / Replenish

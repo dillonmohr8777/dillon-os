@@ -1,7 +1,9 @@
 ---
 tags: [client, momentum360]
-status: active
+status: at-risk
 industry: hardwood/flooring
+last_touched: 2026-05-01
+next_action: Flag to Sean; pause production if no Dalton response by 2026-05-07
 ---
 
 # Hardwood Artisan LLC
