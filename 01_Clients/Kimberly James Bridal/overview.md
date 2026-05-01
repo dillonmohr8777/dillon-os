@@ -9,8 +9,8 @@ status: active
 contact_name: Kimberly Iraci
 contact_email: kimberly@kimberlyjamesbridal.com
 cc_list: [mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com]
-last_touched: 2026-04-15
-next_action: Publish wedding dress timeline page (approved 2026-04-13) and verify GA4/GSC indexing per Mac
+last_touched: 2026-05-01
+next_action: Continue weekly GAds reporting; verify size-inclusive page renders correctly on desktop
 due: none
 tags: [client, momentum360, google-ads, bridal, squarespace, seo]
 ---
@@ -30,11 +30,16 @@ Bridal boutique at 8333 Germantown Ave, Chestnut Hill, Philadelphia. Squarespace
 - "Plus-Size Wedding Dresses in Philadelphia" — near final at last checkpoint.
 - Wedding Dress Timeline — month-by-month shopping timeline, pricing context ($1,000–$3,500), rush order language, final fitting, Concierge Service. Previously hit an Iron Man template background bug that had to be debugged out of the Squarespace template.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-13: Kim approved the Wedding Dress Timeline page ("Everything looks perfect … good to publish") and reacted positively to the Google Ads performance report (319 clicks, 12,500 impressions, 781 impressions/day over 16 days).
-- 2026-04-11: Mac Frederick asked Dillon to double-check GA4 and GSC are still connected and that new pages are getting indexed.
-- 2026-04-10: Google Ads account (Customer ID 814-550-6229) was linked to Momentum Ads Manager.
-- 2026-04-10: Google Ads sent a "strategic consultation" invite to the KJB team (unread).
+## Gmail intel (through 2026-05-01)
+- 2026-04-29: Sheath description misplacement on Timeline page fixed. Kim confirmed "Looks great, thank you!"
+- 2026-04-28: Weekly GAds recap (week of 4/26): $160.08 spent, 10,911 impressions, 139 clicks, 1.27% CTR, $1.15 avg CPC. Mac reminded Kim about AMEX billing on the GAds account and noted SEO is increasing.
+- 2026-04-26: Wedding Dress Timeline page updates + mobile optimization sent. Kim caught Sheath description in wrong place. Dillon committed to fix.
+- 2026-04-21: Old Google Ads account (721-491-4099) was canceled. Dillon clarified the real account is 814-550-6229. Kim confirmed all good.
+- 2026-04-21: Dillon asked Kim to verify size-inclusive page renders on desktop.
+- 2026-04-20: Weekly update (week of 4/19): 30,328 impressions, 689 clicks, $0.58 CPC, 2.27% CTR. Kim responded "Wonderful! Thank you for all your hard work."
+- 2026-04-17: Size-inclusive gowns page built and sent for review. Kim had desktop display issues (mobile-first build). Requested content edits (remove "TRUE-TO-SIZE TRY-ON" section).
+- 2026-04-16: Plus-size page update sent to Kim with brand guide revisions.
+- 2026-04-13: Kim approved the Wedding Dress Timeline page and reacted positively to the GAds report.
 
 ## CC discipline
 Every email to Kim MUST CC: mjfrederick334@gmail.com (Mac Frederick), sean@needmomentum.com (Sean Boyle), melissarobinn@gmail.com (Melissa Silber). Non-negotiable.
