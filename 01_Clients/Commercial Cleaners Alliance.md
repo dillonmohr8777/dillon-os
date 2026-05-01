@@ -2,6 +2,8 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-05-01
+next_action: lock in Mon/Tue meeting with David Stemm, resolve CRM/landing page question
 ---
 
 # Commercial Cleaners Alliance (CCA)
