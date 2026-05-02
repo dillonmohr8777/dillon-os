@@ -5,6 +5,8 @@ industry: real estate
 start_date: 2026-03-01
 rate: $200/mo
 google_ads_id: 495-602-9145
+last_touched: 2026-05-02
+next_action: confirm Jeff contacted first FB lead from 4/30
 ---
 
 # Jeff Hozias / Howard Hanna Rand Realty

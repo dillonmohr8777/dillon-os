@@ -4,6 +4,8 @@ status: active
 industry: landscaping
 start_date: 2026-03-01
 rate: $200/mo
+last_touched: 2026-05-02
+next_action: follow up with David on missed 4/27 call, reschedule
 ---
 
 # Omega Landscaping

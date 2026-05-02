@@ -5,6 +5,8 @@ industry: ecommerce/ATV
 start_date: 2026-02-26
 rate: $300/mo
 google_ads_id: 809-600-6448
+last_touched: 2026-05-02
+next_action: confirm new admin user authorized with Jason
 ---
 
 # Link Eze
