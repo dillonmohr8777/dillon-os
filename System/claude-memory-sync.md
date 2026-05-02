@@ -1,5 +1,7 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-05-02T12:15:00Z
+previous_sync: 2026-04-15
+sync_gap_days: 17
 tags: [system, memory, sync]
 ---
 
@@ -36,11 +38,9 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • Jeff Hozias — launch approved seller Meta campaign.
 
 ## Upcoming deadlines (7 days)
-• 2026-04-16 — Onsite x M360 weekly call (1:00 PM ET).
-• 2026-04-16 — Commercial Cleaners Alliance creative commitment.
-• 2026-04-18 — Hardwood Artisan billing card deadline (implied from "next 90 days" ask 2026-04-07).
-• 2026-04-25 — Bar Crawl USA Taco & Tequila wave 1 (9 cities).
-• 2026-05-02 — Bar Crawl USA Taco & Tequila wave 2.
+- NOTE: 17-day sync gap (2026-04-15 to 2026-05-02). Deadlines below are stale and need manual review.
+- 2026-05-02 (TODAY) -- Bar Crawl USA Taco & Tequila wave 2. Verify this launched.
+- Hardwood Artisan billing card deadline has PASSED. Ads confirmed stopped as of 2026-05-02 (account 996-681-9458, pending client confirmation).
 
 ## Recent completions (7 days)
 • 2026-04-14 — BOK Law weekly social content delivered.
@@ -53,7 +53,18 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 
 ## Unanswered / urgent
 • **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
-• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
+- **Hardwood Artisan** -- ESCALATED. Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding. Google Ads billing alert received 2026-05-02: ads stopped for account 996-681-9458 (pending client ID confirmation). 25 days without resolution.
 • **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
 • **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
-• **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+- **Commercial Cleaners Alliance** -- 2026-04-08 creative commitment needs delivery audit.
+
+---
+
+## Sync Log
+
+### 2026-05-02T12:15:00Z
+- **Gap:** 17 days since last sync (2026-04-15). Manual review recommended for missed activity.
+- **Gmail scan (last 2 hours):** 8 threads found. 1 client-relevant.
+  - Google Ads billing alert for account 996-681-9458 -- ads stopped due to payment issue. Account ID unmapped; probable match is Hardwood Artisan (outstanding billing issue since 2026-04-07). Routed to 00_Inbox/unsorted-2026-05-02.md and flagged in Hardwood Artisan/notes.md.
+- **No emails found from:** Anthropic, Claude notifications, or any direct client contacts.
+- **Today's deadline:** Bar Crawl USA Taco & Tequila wave 2 (2026-05-02). Status unknown -- needs verification.
