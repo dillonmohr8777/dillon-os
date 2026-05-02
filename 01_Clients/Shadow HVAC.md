@@ -1,10 +1,12 @@
 ---
 tags: [client, momentum360]
-status: active
+status: urgent
 industry: HVAC
 start_date: 2026-02-13
 rate: $250/mo
 google_ads_id: 314-136-4176
+last_touched: 2026-05-02
+next_action: get Mike to update billing - ads paused
 ---
 
 # Shadow HVAC

@@ -4,8 +4,10 @@ status: active
 industry: bridal
 start_date: 2026-03-12
 rate: $300/mo
-google_ads_id: 721-491-4099
-google_ads_id_original: 814-550-6229
+google_ads_id: 814-550-6229
+google_ads_id_canceled: 721-491-4099
+last_touched: 2026-05-02
+next_action: verify GA4 + GSC indexing on Timeline page
 ---
 
 # Kimberly James Bridal Boutique

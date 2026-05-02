@@ -2,6 +2,8 @@
 tags: [client, direct]
 status: active
 industry: cleaning
+last_touched: 2026-05-02
+next_action: attend 5/4 meeting with David, install conversion tracking
 ---
 
 # Commercial Cleaners Alliance (CCA)
