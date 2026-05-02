@@ -1,5 +1,5 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-05-02T17:30:00
 tags: [system, memory, sync]
 ---
 
@@ -35,25 +35,29 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • Omega Landscaping — drone footage from David.
 • Jeff Hozias — launch approved seller Meta campaign.
 
+## Buzz Bull / Project Corporate pipeline
+- Prometheus (B2B) - strategy delivered 2026-05-01, pricing needs finalization. Google Ads recommended. $395 foundation + $1,600 ad spend. Mgmt: $495 (1 platform) or $895 (both).
+- Garber - strategy delivered 2026-05-01. No confirmation yet.
+- BB Pricing - Mike asked Dillon to review Buzz Bull's pricing page 2026-05-02. Dillon recommended single "Paid Ads Management" rate + add-ons. Waiting on Mike to share specific tiers.
+
 ## Upcoming deadlines (7 days)
-• 2026-04-16 — Onsite x M360 weekly call (1:00 PM ET).
-• 2026-04-16 — Commercial Cleaners Alliance creative commitment.
-• 2026-04-18 — Hardwood Artisan billing card deadline (implied from "next 90 days" ask 2026-04-07).
-• 2026-04-25 — Bar Crawl USA Taco & Tequila wave 1 (9 cities).
-• 2026-05-02 — Bar Crawl USA Taco & Tequila wave 2.
+- 2026-05-02 - Bar Crawl USA Taco & Tequila wave 2.
+- 2026-05-05 - Prometheus: Monday call with David (per Dillon's 2026-05-02 follow-up).
+- TBD - Buzz Bull pricing ladder (once Mike shares tiers).
 
 ## Recent completions (7 days)
-• 2026-04-14 — BOK Law weekly social content delivered.
-• 2026-04-14 — Jeff Hozias seller ad copy approved.
-• 2026-04-13 — KJB Wedding Dress Timeline page approved.
-• 2026-04-13 — Bar Crawl USA PMax update sent to Andy (53 tickets, all April 25 cities live, May 2 launching).
-• 2026-04-12 — Fresh Blends / Replenish admin access granted to Mia.
-• 2026-04-09 — NKCDC revised strategy delivered and approved by Anthony.
-• 2026-04-01 — Monthly reports sent to Omega, Jeff Hozias, Hardwood Artisan.
+- 2026-05-02 - Dillon responded to BB Pricing request with structural recommendation.
+- 2026-05-01 - Prometheus final strategy delivered (final-prometheus-strategy.netlify.app).
+- 2026-05-01 - Garber strategy delivered (garber-strategy-final.netlify.app).
+- 2026-05-01 - Dillon sent hours spreadsheet to Mike, requested Zelle payment.
 
 ## Unanswered / urgent
-• **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
-• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
-• **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
-• **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
-• **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+- **NKCDC** - Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
+- **Hardwood Artisan** - Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
+- **Bar Crawl USA** - 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
+- **Omega Landscaping** - David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
+- **Commercial Cleaners Alliance** - 2026-04-08 creative commitment needs delivery audit.
+- **Prometheus** - Mike hasn't confirmed final pricing structure. Dillon followed up 2026-05-02.
+
+## Sync log
+- 2026-05-02T17:30 - Captured 2 threads: Prometheus strategy (Buzz Bull pipeline) and BB Pricing discussion. Created Buzz Bull notes.md, inbox entry for Prometheus/Garber. Gap from 2026-04-15 to 2026-05-02 noted (17 days).
