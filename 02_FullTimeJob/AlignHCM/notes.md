@@ -1,6 +1,7 @@
 ---
 employer: Align HCM
 tags: [notes]
+last_touched: 2026-05-02
 ---
 
 # Notes
@@ -9,3 +10,13 @@ tags: [notes]
 - All writing for Align HCM content follows the "no em dashes" rule strictly.
 - Monthly interactive HTML performance report is presented to Maher, Barbara, Tammi, Rich, Joann, and Allison. First-person narration script built for Dillon to deliver in person.
 - Case studies use a shared visual system: navy/orange palette, SVG icons, white card layout. Driscoll's is the flagship template.
+
+## Sync Log
+
+### 2026-05-02 (covers 4/15 - 5/2)
+
+- 4/22: Barbara Tonelli (CHRL, PMP, Chief HR Officer) sent LinkedIn connection request.
+- 4/22: Jonathan (Senior Solutions Consultant at Align HCM) also sent LinkedIn connection request.
+- 4/25: SmartCare team post shared by Barbara on LinkedIn.
+- 4/27: LinkedIn reminder -- Barbara is still waiting for Dillon's response.
+- **Action item**: Accept Barbara and Jonathan's LinkedIn connection requests if not already done.
