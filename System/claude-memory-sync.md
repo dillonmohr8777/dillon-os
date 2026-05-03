@@ -1,5 +1,5 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-05-03T17:15Z
 tags: [system, memory, sync]
 ---
 
@@ -57,3 +57,14 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
 • **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
 • **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+
+## Sync log
+
+### 2026-05-03T17:15Z -- chat-to-vault-sync
+- **Gap:** 18 days since last sync (2026-04-15). Gmail 2-hour window scanned.
+- **Captured:**
+  - Ironic Ineptocracy: WordPress.com Premium auto-renewed ($19.26/mo, May 3 to Jun 3). Logged to 05_Book/overview.md.
+  - Indeed: All Hearts rejected Dillon's application for Senior Multimedia Marketing & Digital Systems Specialist. Logged to 00_Inbox/unsorted-2026-05-03.md.
+- **No client emails found** in the 2-hour window for: Bar Crawl USA, Align HCM, KJB, Shadow HVAC, LinkEZE, Omega Landscaping, Jeff Hozias, BOK Law, NKCDC, CCA, Hardwood Artisan, Onsite Concrete, Fresh Blends, DBA/Liberty.
+- **No Anthropic/Claude notification emails found.**
+- **NOTE:** 18-day gap means client activity between 2026-04-15 and 2026-05-03 wasn't captured by this sync. Manual review recommended.
