@@ -8,9 +8,9 @@ status: active
 contact_name: Anthony Miller
 contact_email: amiller@nkcdc.org
 cc_list: [mjfrederick334@gmail.com, melissarobinn@gmail.com, twatts@nkcdc.org, mboyd@nkcdc.org]
-last_touched: 2026-04-15
-next_action: URGENT — launch is pending NKCDC finalizing the Free Tax Prep page. Mac checked in 2026-04-15, no response from Anthony. Nudge again.
-due: 2026-04-16
+last_touched: 2026-04-30
+next_action: Still blocked on Free Tax Prep page. Dillon escalated to Tess Watts and Mikey Boyd. Campaigns ready to launch within 48 hours of green light.
+due: none
 tags: [client, momentum360, google-ads, meta-ads, nonprofit, philadelphia]
 ---
 
