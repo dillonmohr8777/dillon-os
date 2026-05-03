@@ -9,9 +9,9 @@ status: active
 contact_name: Mike
 contact_email: shadowhvac1@gmail.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-03-02
-next_action: Confirm LSA background check is fully cleared and Shadow is live; resume GBP post cadence check
-due: none
+last_touched: 2026-05-02
+next_action: URGENT -- Google Ads billing declined (insufficient funds) on acct 314-136-4176. Mike needs to update payment method or ads will stop.
+due: 2026-05-03
 tags: [client, momentum360, hvac, local-seo, lsa]
 ---
 

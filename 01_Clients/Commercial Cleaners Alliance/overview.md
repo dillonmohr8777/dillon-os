@@ -5,13 +5,13 @@ monthly_fee: unknown
 role: Account Manager
 division: Momentum 360 (with Buzz Bull overlap)
 start_date: 2026-04-04
-status: onboarding
+status: active
 contact_name: Mike Ross
 contact_email: mross@projectcorporate.com
-cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com]
-last_touched: 2026-04-14
-next_action: Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment
-due: 2026-04-16
+cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com, dave@sterijan.com]
+last_touched: 2026-04-30
+next_action: CCA + Sterile Care ads launched on Meta and Google. Monitor initial performance. Dave Stemm confirmed as Google Ads admin.
+due: none
 tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 ---
 
