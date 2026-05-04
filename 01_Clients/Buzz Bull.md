@@ -2,6 +2,8 @@
 tags: [client, 1099]
 status: active
 industry: marketing
+last_touched: 2026-05-04
+next_action: Pull lead export + attend Monday 3PM leadership call + 1:30 PM David Stemm meeting
 ---
 
 # Buzz Bull Marketing Systems

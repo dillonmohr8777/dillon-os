@@ -5,6 +5,9 @@ industry: food/beverage
 start_date: 2026-03-23
 rate: $500/mo
 google_ads_id: 627-501-4654
+last_touched: 2026-05-04
+next_action: Mia must complete Google Ads advertiser verification
+due: 2026-05-14
 ---
 
 # Fresh Blends / Replenish

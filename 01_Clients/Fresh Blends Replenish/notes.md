@@ -10,3 +10,10 @@ tags: [notes]
 - Mia was slow to respond during billing access back-and-forth in early April. Follow-ups via direct check-in emails worked well.
 - B2B Replenish partner-acquisition campaigns are explicitly out of scope at the current budget. Don't slip those in opportunistically.
 - Phone-call conversions are a hard no (don't want people calling 7-Eleven stores).
+
+## Sync Log
+
+### 2026-05-04 14:30 UTC
+- Dillon emailed Mia re: Google Ads advertiser verification required by May 14, 2026. Account 627-501-4654 will be paused if verification isn't completed by then.
+- Some verification steps require Mia's direct action (business info, identity docs).
+- **Next action:** Mia needs to complete Google Ads advertiser verification by 2026-05-14. Follow up if no response by 2026-05-07.
