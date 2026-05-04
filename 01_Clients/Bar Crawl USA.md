@@ -5,6 +5,8 @@ industry: events
 start_date: 2026-02-16
 rate: $950/mo
 google_ads_id: 435-710-2897
+last_touched: 2026-05-04
+next_action: Complete post-event spend audit (Gainesville, St. Pete, full sweep)
 ---
 
 # Bar Crawl USA
