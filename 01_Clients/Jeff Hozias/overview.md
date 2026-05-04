@@ -9,9 +9,9 @@ status: active
 contact_name: Jeff Hozias
 contact_email: jhoz333@gmail.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-14
-next_action: Launch Meta Ads using approved seller/buyer copy; move away from LSA per 2026-03-20 strategy call
-due: none
+last_touched: 2026-05-04
+next_action: Follow up with Jeff on Facebook leads -- he hasn't responded to any lead follow-up emails. Speed to contact is critical.
+due: 2026-05-05
 tags: [client, momentum360, real-estate, gbp, meta-ads]
 ---
 
@@ -26,12 +26,18 @@ Real estate agent, Rockland County, NY. Hyper-local GBP content and a paid media
 - Explored Systeme.io funnel and landing page building (troubleshooting inactive page / opt-in issues).
 - Interactive HTML monthly performance report (navy / red / gold Howard Hanna palette).
 
-## Gmail intel (through 2026-04-14)
-- 2026-04-14: Dillon reviewed Jeff's drafted ad copy. "Not a Zestimate. Not a guess." seller opener called out as scroll-stopper. Seller Home Valuation copy cleared for launch. Anti-Zillow angle validated.
-- 2026-04-01: March marketing report delivered. Summary: Google rejected a number of GBP posts throughout the month without a clear reason, dragging organic visibility.
-- 2026-03-20: Meta Ads strategy call. Moving away from LSA due to persistent low-quality leads. Sean declined the invite.
+## Gmail intel (through 2026-05-04)
+- 2026-05-04: Meta lead campaign generating form fills at ~$18/lead. Lead CSV sent to Jeff. Weekly report sent (week ending May 3). Third follow-up on the original Facebook lead -- Jeff still hasn't responded.
+- 2026-05-04: Dillon followed up again on the first FB lead: "leads contacted within the first hour convert at 5-10x the rate."
+- 2026-05-01: Dillon followed up on the first Facebook lead. Urged Jeff to contact quickly.
+- 2026-04-30: First Facebook lead generated. Dillon notified Jeff same day.
+- 2026-04-16: Rockland County Meta campaigns built and live. Anti-Zillow variation running as lead test. Seller and buyer copy rotating.
+- 2026-04-14: Jeff's ad copy approved. "Not a Zestimate. Not a guess." seller opener called a scroll-stopper.
+- 2026-04-01: March marketing report delivered.
+- 2026-03-20: Meta Ads strategy call. Shifting from LSA to Meta.
 
 ## Open items
-- Launch Meta Ads with approved seller copy.
+- Jeff is not responding to lead follow-up emails. Need to get him to contact Facebook leads ASAP.
+- Meta campaigns are live and producing at ~$18/lead. Monitor and optimize.
 - Investigate root cause of GBP post rejections from March.
 - Revisit whether Google Ads strategy is worth salvaging or fully replacing with Meta.

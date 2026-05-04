@@ -9,9 +9,9 @@ status: active
 contact_name: Andy Zirger
 contact_email: info@barcrawlusa.com
 cc_list: []
-last_touched: 2026-04-15
-next_action: Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing
-due: 2026-04-25
+last_touched: 2026-05-04
+next_action: Audit Gainesville + St. Pete for ads running past event end dates; implement affiliate links per event for May events; send reconciliation to Andy
+due: 2026-05-07
 tags: [client, momentum360, google-ads, events, pmax]
 ---
 
@@ -26,9 +26,13 @@ Primary account for a multi-city bar crawl events business. Managed end-to-end o
 - Full paid media system: Meta Ads, Google Search RSA, PMax, email, SMS for the 9-city April 25 event series.
 - Client-facing HTML performance reports under Momentum 360 branding.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-15: URGENT. 2 Google Ads disapproved on Halloween / Fall Cocktail Crawl emails (forwarded by Andy). Reply sent saying none of those should have launched, will investigate.
-- 2026-04-14: Earlier disapproval batch of 4 assets. Caroline Zirger (events@barcrawl-usa.com) forwarded.
-- 2026-04-13: Sent PMax update "53 Tickets, All April 25 Cities Live, May 2 Launching Tomorrow." Andy flagged runaway $54 day spend on Soulard — traced to Max Conversions running without a tCPA. Patched. Andy asked to cap Soulard ~$15-20/day so the final week isn't the biggest.
-- All PMax budgets sit at $14.25/day, Maximize Conversions, no audience signals.
+## Gmail intel (through 2026-05-04)
+- 2026-05-04: Weekly report sent (week ending May 3). 436 tickets in the April recap window.
+- 2026-05-03: Andy acknowledged April recap. Flagged that ads may have continued running after Gainesville and St. Pete events ended. Dillon committed to a full audit of ended-event campaign status + change history.
+- 2026-05-01: Thorough April Google Ads recap sent to Andy (CC Mac, Sean, Melissa). Interactive report link sent separately. April headline: verified ticket momentum with 436 tickets.
+- 2026-04-28: Weekly report (week of 4/20-4/26): 402 tickets, $3594.89 spend. Andy raised concern about affiliate link tracking for actual purchases. Dillon agreed to implement affiliate links per event going forward. Google Ads policy: 2 asset groups disapproved.
+- 2026-04-27: Mac praised SEO indexing progress on 15 location pages. Dillon confirmed monthly SEO tracking setup.
+- 2026-04-20: Mid-flight update: 214 tickets sold, projecting 310-340 by close. Cleveland, Cincinnati, Lawrenceville all live.
+- 2026-04-18/19: Additional Google Ads policy issues (4 assets, then 2 more, then 1 more).
+- 2026-04-15: 2 Google Ads disapproved on Halloween / Fall Cocktail Crawl language.
 - Google Ads account ID: 435-710-2897.

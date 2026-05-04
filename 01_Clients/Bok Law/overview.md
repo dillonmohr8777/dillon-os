@@ -8,9 +8,9 @@ status: active
 contact_name: Dorothy O'Neil
 contact_email: doneil@boklawfirm.com
 cc_list: [akocelko@boklawfirm.com, rbowe@boklawfirm.com]
-last_touched: 2026-04-14
+last_touched: 2026-05-04
 next_action: Continue weekly social content cadence (Wednesday Wisdom, Turn the Page Thursday, Family Fridays)
-due: 2026-04-19
+due: none
 tags: [client, momentum360, family-law, social, pittsburgh]
 ---
 
