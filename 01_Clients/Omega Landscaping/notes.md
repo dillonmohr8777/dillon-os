@@ -2,6 +2,7 @@
 client: Omega Landscaping
 division: Momentum 360
 tags: [notes]
+last_touched: 2026-05-04
 ---
 
 # Notes
@@ -9,3 +10,7 @@ tags: [notes]
 - David is hard to pin down on asset handoffs (drone footage has been open for weeks). Consider a nudge cadence via text if email goes quiet.
 - John Belaska is driving Meta creative and is a key coordination point. Keep him looped on any content decisions that touch paid.
 - Domain on file is omegalandscapingandconcrete.com (not omegalandscapecorp.com as originally scoped). Verify with client on next touch.
+
+## 2026-05-04 18:00 UTC (vault sync)
+
+- Weekly report sent (week ending May 3, 2026). Paid search reporting active with verified platform snapshots. Visibility holding steady.
