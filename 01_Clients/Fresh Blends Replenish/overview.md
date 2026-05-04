@@ -9,8 +9,8 @@ status: active
 contact_name: Mia Lange
 contact_email: mia@getreplenish.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-13
-next_action: Confirm campaigns launched 2026-04-13 are pacing correctly; send first-week performance snapshot
+last_touched: 2026-05-04
+next_action: Still waiting on 7-Eleven branded smoothie images from Mia to finish Pompano landing page revision. Multiple follow-ups sent since 2026-04-18.
 due: none
 tags: [client, momentum360, google-ads, pmax, food-beverage]
 ---
@@ -26,13 +26,18 @@ B2C Google Ads program driving in-store traffic to 5 South Florida 7-Eleven bran
 - Dedicated landing page in testing.
 - Campaigns prototyped via Claude-in-Chrome browser automation with on-site live testing.
 
-## Gmail intel (through 2026-04-13)
-- 2026-04-13: Check-in email sent to Mia confirming everything on Dillon's side is ready to launch.
-- 2026-04-12: Admin access granted to Mia. Dillon confirmed campaigns ready to launch 2026-04-13.
-- 2026-04-09: Dillon offered to hop on a phone call to finish setup.
-- 2026-04-08: Mia asked Dillon to add her as admin so she could enter CC details (billing).
-- 2026-04-02: Campaign build complete, asking Mia for a secure payment method on the Google Ads account.
-- 2026-04-01: March report sent. March work: Replenish research pass, Fresh Blends platform framing, B2C targeting refinement.
+## Gmail intel (through 2026-05-04)
+- 2026-05-04: Weekly reports sent for both Fresh Blends and Replenish (week ending May 3). Fresh Blends report: continuation interest explicit, next campaign sequence clear, main dependency is assets. Replenish report: landing page structure built and ready, just needs branded images.
+- 2026-04-26: Follow-up to Mia. Landing page has been sitting ready for over a week. Offered alternatives if getting 7-Eleven images is the bottleneck.
+- 2026-04-22: Another image follow-up to Mia.
+- 2026-04-21: Another follow-up. "I want to make sure this doesn't stall out."
+- 2026-04-20: Dillon offered to connect by phone. Flexible on time.
+- 2026-04-19: Follow-up on images. Only needs 3-5 of the 7-Eleven branded assets. Same-day turnaround promised once received. Also offered to do a call the next day.
+- 2026-04-18: Replenish landing page completed and sent. Mia said it needs 7-Eleven branded images, not Replenish product shots. Dillon committed to revise immediately. Image files too large/won't download on Dillon's computer. Asked Mia to resend.
+- 2026-04-13: Check-in sent. Ready to launch.
+- 2026-04-12: Admin access granted to Mia.
+- 2026-04-02: Campaign build complete.
+- 2026-04-01: March report sent.
 
 ## Access state
 - Google Analytics: Dillon has access.

@@ -27,7 +27,13 @@ rate: Full-time
 ## Content Calendars
 - April 2026 (1-10): Maher April Fools "Misalign HCM" video, thought leadership, CHRO AI readiness
 - April 2026 (13-30): Extended with Barbara, Joann, and company page content
-- May 2026: Full month across all 4 authors — video, carousels, motion graphics, case studies
+- May 2026: Full month across all 4 authors -- video, carousels, motion graphics, case studies
+
+## Sync log (2026-04-15 through 2026-05-04)
+- 2026-04-27: Barbara Tonelli (CHRL, PMP, CHRO) LinkedIn message still waiting for Dillon's response.
+- 2026-04-25: Barbara shared thoughts on SmartCare team opportunities on LinkedIn.
+- 2026-04-22: Barbara and Jonathan (Senior Solutions Consultant) from Align HCM sent LinkedIn connection requests to Dillon.
+- ACTION: Respond to Barbara's LinkedIn messages.
 
 ## Blog Posts
 - "6 Things I Tell Every Client Before Their Payroll Implementation Starts"

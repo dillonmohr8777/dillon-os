@@ -9,9 +9,9 @@ status: onboarding
 contact_name: Mike Ross
 contact_email: mross@projectcorporate.com
 cc_list: [dillonm@buzzbullmarketing.com, mason@buzzbullmarketing.com]
-last_touched: 2026-04-14
-next_action: Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment
-due: 2026-04-16
+last_touched: 2026-05-04
+next_action: Focus on Buzz Bull, Floracita, CCA, and Sterile Care per Mike Ross. Sterile Care Meta campaign generating leads. David Stemm meeting today at 1:30 PM EST.
+due: 2026-05-05
 tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 ---
 
@@ -32,10 +32,14 @@ B2B membership organization supporting independent commercial cleaning professio
 - Google Ads + Meta Ads paid media strategy for CCA leadership (requested by Mike).
 - Creatives in production, with a parallel NexGen Solutions creative deliverable on the same timeline.
 
-## Gmail intel (through 2026-04-14)
-- 2026-04-14: Teams meeting "Buzz Bull CCA / Sterile Care" scheduled with Mike Ross.
-- 2026-04-08: Dillon told Mike "working on your creatives today … also have your NexGen, I will be done with today" — a commitment that should be audited for delivery.
-- 2026-04-08 (morning): Mike said targeting Cleaning company owners via Meta would generate the best results. Also asking about Buzz Bull launch timing.
-- 2026-04-07: Dillon sent the CCA paid media + SEO strategy link ("Commercial Cleaners Alliance | Paid Media + SEO Strategy").
-- 2026-04-05: Mike confirmed CCA can offer services nationwide (geography question resolved).
-- 2026-04-04: Initial handoff from Mike — "this is CCA and important client and friend of ours, full solution offering to cleaning companies around the country."
+## Gmail intel (through 2026-05-04)
+- 2026-05-04: Sterile Care Meta campaign generating form-fill leads (3 leads in latest export). Dillon emailed David Stemm with lead CSV. David asked to CC Matt Fahy (mfahy@sterijan.com) on future lead updates. Dillon agreed.
+- 2026-05-04: David Stemm confirmed BB meeting at 1:30 PM EST today. Buzz Bull Monday appointments meeting set for 3:00 PM EST (new weekly leadership meeting implemented by Mike Ross to track appointments across all initiatives).
+- 2026-05-04: Mike Ross asked about Buzz Bull paid ads lead status ("haven't heard anything for a few days"). Dillon pulling 72-hour + 7-day data: new leads count, CPL trend, which campaigns generated them, whether they're converting.
+- 2026-04-30: Dillon launched both Sterile Care ad campaigns (Meta + Google). Google ad account in review.
+- 2026-04-28: BB leads came in but some not answering phones. Mason suggested adding more qualifying questions to lead forms. Dillon working on A/B test.
+- 2026-04-21: Mike said to focus on Buzz Bull, Floracita, CCA, and Sterile Care. Requested emails for client contacts. Asked Dillon to ensure paid ads drive contacts to CRM/website database -- may need landing pages.
+- 2026-04-14: Teams meeting "Buzz Bull CCA / Sterile Care" scheduled.
+- 2026-04-08: Dillon committed to CCA and NexGen creatives.
+- 2026-04-07: CCA paid media + SEO strategy sent.
+- 2026-04-04: Initial handoff from Mike.
