@@ -1,20 +1,53 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-05-25
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+## Umbrella automation (active)
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+| Automation | Schedule | Replaces |
+| --- | --- | --- |
+| **`dillon-os-operator`** | Daily 1:00 PM ET (`0 13 * * *`) | All rows below |
 
-## Notes
-- First real test of the full routine stack begins 2026-04-16.
+Prompt: `.cursor/automation/dillon-os-operator.md`  
+Spec: `System/dillon-os-operator.md`  
+Output: `Daily-Briefs/operator-today.md`
+
+### Parallel lanes inside one run
+
+| Lane | Phase | Old routine |
+| --- | --- | --- |
+| intel-gmail | 1 | gmail-to-vault-digest |
+| intel-slack | 1 | (new) |
+| intel-vault-pulse | 1 | nightly-client-pulse |
+| intel-memory-sync | 1 | vault-integrity-sync |
+| intel-codex-sessions | 1 | chat-to-vault-sync |
+| content-bok-law | 2 (Sun) | bok-law-social-content |
+| content-align-linkedin | 2 (Sun) | linkedin-growth-engine |
+| content-book-seo | 2 (Thu) | book-site-seo-sweep |
+
+## Legacy routines (retire)
+
+Disable these separate Cursor automations after **three** successful `dillon-os-operator` runs:
+
+- ~~`nightly-client-pulse`~~
+- ~~`gmail-to-vault-digest`~~
+- ~~`vault-integrity-sync`~~
+- ~~`chat-to-vault-sync`~~
+- ~~`bok-law-social-content`~~
+- ~~`linkedin-growth-engine`~~
+- ~~`book-site-seo-sweep`~~
+
+## Vault prerequisites
+
+Frontmatter fields expected on client notes: `client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`.
+
+## Status
+
+- [x] Umbrella workflow documented
+- [x] `.cursor/agents/` parallel subagents committed
+- [ ] First live run with Gmail MCP
+- [ ] First live run with Slack MCP
+- [ ] Legacy automations disabled in Cursor dashboard

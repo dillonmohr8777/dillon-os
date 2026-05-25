@@ -1,5 +1,7 @@
 # Daily Pulse 2026-04-15
 
+> **Superseded:** Use `Daily-Briefs/operator-today.md` from the `dillon-os-operator` umbrella workflow. This file is kept as a historical snapshot.
+
 ## Coverage Notes
 • Searched Gmail for Mia Lange (mia@getreplenish.com), Anthony Miller (amiller@nkcdc.org), Sean Boyle (sean@needmomentum.com) by address, plus David Stemm, Beth Frederick, Mac Frederick, Kimberly Iraci, and Andy by name. Andy (Bar Crawl USA) and Kimberly Iraci have no email on file, so those are name matches only and can miss.
 • Scanned 01_Clients/ for files modified within the last 24 hours.
