@@ -1,11 +1,12 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-05-25
 tags: [system, memory, sync]
+synced_by: competitive-task-orchestrator
 ---
 
 # Claude Memory Sync
 
-Single source of truth for all Claude instances across Dillon OS. Updated by `vault-integrity-sync` nightly at 2:00 AM and `chat-to-vault-sync` every 2 hours.
+Single source of truth for all Claude instances across Dillon OS. Updated by **competitive-task-orchestrator** daily at 1:00 PM (`memory-consolidator` subagent). Legacy `vault-integrity-sync` and `chat-to-vault-sync` are deprecated.
 
 ## Active clients (Momentum 360)
 • Bar Crawl USA ($950/mo) — active, campaigns live across 9+ cities.

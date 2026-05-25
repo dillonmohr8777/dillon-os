@@ -1,11 +1,11 @@
 ---
-last_updated: 2026-04-15
+last_updated: 2026-05-25
 tags: [system, urgent]
 ---
 
 # Urgent Replies Needed
 
-Updated by `gmail-to-vault-digest` daily at 7:00 AM.
+Updated by **competitive-task-orchestrator** (`gmail-intel` subagent) daily at 1:00 PM. Vault snapshot below — refresh when Gmail MCP runs.
 
 ## Immediate (today/tomorrow)
 • **Bar Crawl USA** — Andy Zirger forwarded 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Dillon responded 2026-04-15 saying he'd investigate. Owe him a resolution.
