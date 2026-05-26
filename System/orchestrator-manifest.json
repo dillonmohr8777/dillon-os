@@ -1,0 +1,115 @@
+{
+  "name": "dillon-os-orchestrator",
+  "version": "1.0.0",
+  "description": "Single umbrella automation replacing seven separate Dillon OS routines. Fans out parallel specialist agents, then merges into Daily-Briefs/command-center.md.",
+  "replaces": [
+    "nightly-client-pulse",
+    "gmail-to-vault-digest",
+    "vault-integrity-sync",
+    "chat-to-vault-sync",
+    "bok-law-social-content",
+    "linkedin-growth-engine",
+    "book-site-seo-sweep"
+  ],
+  "schedule": {
+    "primary_cron": "0 13 * * *",
+    "timezone": "America/New_York",
+    "note": "Daily full orchestrator at 1:00 PM ET. Optional light sync every 2 hours uses memory_curator only."
+  },
+  "modes": {
+    "full": {
+      "agents": [
+        "inbox_scout",
+        "client_pulse",
+        "memory_curator",
+        "ads_ops",
+        "seo_engine",
+        "content_scheduler",
+        "session_harvester"
+      ],
+      "merge": "command_center"
+    },
+    "light": {
+      "agents": ["memory_curator", "session_harvester"],
+      "merge": "claude-memory-sync-only"
+    }
+  },
+  "conditional_workstreams": [
+    {
+      "id": "bok_law_social",
+      "agent": "content_scheduler",
+      "when": "Sunday >= 18:00 ET",
+      "reads": ["01_Clients/Bok Law/content-calendar.md", "01_Clients/Bok Law/brand-guidelines.md"],
+      "writes": ["01_Clients/Bok Law/content-calendar.md"]
+    },
+    {
+      "id": "align_linkedin",
+      "agent": "content_scheduler",
+      "when": "Sunday >= 21:00 ET",
+      "reads": ["02_FullTimeJob/AlignHCM/linkedin-calendar.md"],
+      "writes": ["02_FullTimeJob/AlignHCM/linkedin-calendar.md"]
+    },
+    {
+      "id": "book_seo_sweep",
+      "agent": "seo_engine",
+      "when": "Thursday",
+      "reads": ["05_Book/seo-strategy.md", "05_Book/guest-post-pipeline.md"],
+      "writes": ["05_Book/seo-strategy.md", "Daily-Briefs/command-center.md"]
+    }
+  ],
+  "outputs": {
+    "always": [
+      "System/urgent-replies.md",
+      "Daily-Briefs/pulse-today.md",
+      "System/claude-memory-sync.md",
+      "Daily-Briefs/command-center.md",
+      "System/routine-health.md"
+    ],
+    "conditional": [
+      "01_Clients/Bok Law/content-calendar.md",
+      "02_FullTimeJob/AlignHCM/linkedin-calendar.md",
+      "05_Book/seo-strategy.md"
+    ]
+  },
+  "sources": {
+    "vault_root": "/",
+    "sessions": ["10_Sessions/", ".claude/"],
+    "gmail_mcp": "mcp__claude_ai_Gmail__gmail_search_messages",
+    "slack": "Use Slack MCP when configured; otherwise scan vault for slack: tagged notes",
+    "codex": "10_Sessions/, 09_Transcripts/, agent chat exports synced to vault"
+  },
+  "agents": {
+    "inbox_scout": {
+      "spec": "11_Agents/Inbox Scout.md",
+      "legacy_routine": "gmail-to-vault-digest"
+    },
+    "client_pulse": {
+      "spec": "11_Agents/Client Pulse.md",
+      "legacy_routine": "nightly-client-pulse"
+    },
+    "memory_curator": {
+      "spec": "11_Agents/Memory Curator.md",
+      "legacy_routine": "vault-integrity-sync + chat-to-vault-sync"
+    },
+    "ads_ops": {
+      "spec": "11_Agents/Google Ads Agent.md",
+      "legacy_routine": "campaign queue maintenance"
+    },
+    "seo_engine": {
+      "spec": "11_Agents/SEO Agent.md",
+      "legacy_routine": "book-site-seo-sweep + AlignHCM SEO pipeline"
+    },
+    "content_scheduler": {
+      "spec": "11_Agents/Content Scheduler.md",
+      "legacy_routine": "bok-law-social-content + linkedin-growth-engine"
+    },
+    "session_harvester": {
+      "spec": "11_Agents/Session Harvester.md",
+      "legacy_routine": "chat-to-vault-sync (session capture)"
+    },
+    "master": {
+      "spec": "11_Agents/Master Agent.md",
+      "role": "orchestrate parallel fan-out and merge"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+---
+description: Dillon OS unified orchestrator — run parallel vault agents instead of legacy single-purpose automations
+globs:
+  - "**/*"
+---
+
+# Dillon OS Orchestrator Rule
+
+When working in this repository (Dillon OS Obsidian vault) on **automation, daily ops, client pulse, Gmail digest, or memory sync**:
+
+1. Use the **single umbrella workflow** in `System/dillon-os-orchestrator.md`, not the seven deprecated routines in `System/routine-health.md`.
+2. For scheduled/cron Cloud Agent runs, follow `System/ORCHESTRATOR_PROMPT.md` exactly: parallel fan-out of all specialists in `11_Agents/`, then merge to `Daily-Briefs/command-center.md`.
+3. Launch parallel subagents (Task tool) for: Inbox Scout, Client Pulse, Memory Curator, Google Ads Agent, SEO Agent, Content Scheduler, Session Harvester.
+4. Follow `System/writing-rules.md` for all generated text.
+5. Data sources: vault first, then Gmail MCP, then Slack MCP if available, then `10_Sessions/` for Codex/Claude exports.
+6. Momentum 360 branding on client work; Align HCM is full-time employer content, not M360.
+7. Commit and push vault updates after each orchestrator run when on a git branch.
+
+Machine-readable schedule: `System/orchestrator-manifest.json`.

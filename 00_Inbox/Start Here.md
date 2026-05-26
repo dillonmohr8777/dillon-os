@@ -23,6 +23,8 @@ Drop anything here. Process later. Move to the right folder when ready.
 - **08_Assets** — Images, files, attachments
 - **09_Transcripts** — Call and meeting transcripts
 - **10_Sessions** — Client session notes
+- **11_Agents** — Specialist agent specs (orchestrated by Master Agent)
+- **Daily-Briefs** — Command center + daily pulse (automation output)
 
 ## Workflow
 1. Capture everything into **00_Inbox**
@@ -30,6 +32,7 @@ Drop anything here. Process later. Move to the right folder when ready.
 3. Use templates (Ctrl/Cmd + T) to create structured notes
 4. Link notes with `[[wikilinks]]` to build connections
 5. Review your [[Dashboard]] daily
+6. One cron automation runs [[System/dillon-os-orchestrator|Dillon OS Orchestrator]] at 1 PM ET — parallel agents update the vault; read [[Daily-Briefs/command-center|Command Center]] after
 
 ## Tips
 - Use `#tags` for cross-cutting themes
