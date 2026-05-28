@@ -16,9 +16,10 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
+- [ ] [[Daily-Briefs/competitive-task-today|Competitive Task Today]] (orchestrator daily)
+- [ ] [[System/urgent-replies|Urgent Replies]]
+- [ ] Check [[00_Inbox/Start Here|Inbox]] and process
 - [ ] Review active campaigns
-- [ ] Follow up with clients
 
 ## Active Projects
 - 

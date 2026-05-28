@@ -1,20 +1,43 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-05-28
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+## Umbrella automation (active)
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+• **`competitive-task-orchestrator`** — daily `0 13 * * *` UTC
+• Prompt: [[System/competitive-task-orchestrator-prompt]]
+• Output: [[Daily-Briefs/competitive-task-today]]
+• Subagents: `.cursor/agents/` (6 parallel + 1 consolidator)
+• Manifest: [[System/automation-manifest]]
+
+## Legacy routines (deprecated — disable in Cursor)
+
+Do **not** schedule these separately; they are absorbed by the orchestrator:
+
+• ~~`nightly-client-pulse`~~
+• ~~`gmail-to-vault-digest`~~
+• ~~`vault-integrity-sync`~~
+• ~~`chat-to-vault-sync`~~
+• ~~`bok-law-social-content`~~
+• ~~`linkedin-growth-engine`~~
+• ~~`book-site-seo-sweep`~~
+
+## Connectors required
+
+| Connector | Used by | Status |
+|-----------|---------|--------|
+| Gmail MCP | gmail-intel | Enable on orchestrator automation |
+| Slack MCP | slack-intel | Enable on orchestrator automation |
+| Git push | memory-consolidator | Cloud agent / local with credentials |
+
+## Vault frontmatter
+
+Routines expect on active client notes: `client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`.
 
 ## Notes
-- First real test of the full routine stack begins 2026-04-16.
+
+• First full umbrella run documented 2026-05-28.
+• If competitive-task-today is missing, check Automation Debug Log and connector gaps section in the brief.

@@ -30,6 +30,7 @@ Drop anything here. Process later. Move to the right folder when ready.
 3. Use templates (Ctrl/Cmd + T) to create structured notes
 4. Link notes with `[[wikilinks]]` to build connections
 5. Review your [[Dashboard]] daily
+6. One daily automation ([[System/competitive-task-definition|competitive task orchestrator]]) updates [[Daily-Briefs/competitive-task-today]] from Gmail, Slack, vault, and sessions
 
 ## Tips
 - Use `#tags` for cross-cutting themes
