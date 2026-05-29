@@ -16,9 +16,14 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Read [[Daily-Briefs/competitive-task-today|Competitive Task Brief]] (1 PM orchestrator output)
+- [ ] Clear P0 stack (launch blocked → billing → disapprovals → calendar)
+- [ ] Process inbox only if not already covered in brief
+
+## Automation
+- **One umbrella cron:** `competitive-task-orchestrator` @ 1:00 PM ET
+- SOP: [[04_SOPs/competitive-task-orchestrator]]
+- Subagents: `.cursor/agents/`
 
 ## Active Projects
 - 

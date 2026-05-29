@@ -14,7 +14,7 @@ tags: [sop, moc]
 - 
 
 ## Admin / Operations
-- 
+- [[competitive-task-orchestrator]] — One daily umbrella automation (replaces 7 legacy crons)
 
 ---
 
