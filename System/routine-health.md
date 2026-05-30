@@ -1,5 +1,5 @@
 ---
-last_checked: 2026-05-28
+last_checked: 2026-05-30
 tags: [system, routines]
 ---
 
@@ -39,5 +39,5 @@ Routines expect on active client notes: `client`, `last_touched`, `next_action`,
 
 ## Notes
 
-• First full umbrella run documented 2026-05-28.
+• First full umbrella run documented 2026-05-28; daily run 2026-05-30 (Gmail/Slack still need MCP).
 • If competitive-task-today is missing, check Automation Debug Log and connector gaps section in the brief.

@@ -1,6 +1,6 @@
 ---
 tags: [system, automation, competitive-task]
-last_updated: 2026-05-28
+last_updated: 2026-05-30
 ---
 
 # Competitive Task Definition

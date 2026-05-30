@@ -1,11 +1,11 @@
 ---
-last_sync: 2026-05-28
+last_sync: 2026-05-30
 tags: [system, memory, sync]
 ---
 
 # Claude Memory Sync
 
-Single source of truth for all Claude instances across Dillon OS. Updated by `competitive-task-orchestrator` (memory-consolidator phase). Substance below pending Gmail/Slack refresh on next orchestrator run.
+Single source of truth for all Claude instances across Dillon OS. Updated by `competitive-task-orchestrator` (memory-consolidator phase). Substance below pending Gmail/Slack MCP refresh — vault client mtimes still April 2026.
 
 ## Active clients (Momentum 360)
 • Bar Crawl USA ($950/mo) — active, campaigns live across 9+ cities.

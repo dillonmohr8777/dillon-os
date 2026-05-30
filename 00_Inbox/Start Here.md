@@ -20,6 +20,7 @@ Drop anything here. Process later. Move to the right folder when ready.
 - **05_Offers** — Products, packages, and pricing
 - **06_Personal** — Personal goals, reflections, non-work
 - **07_Daily_Notes** — Daily journal and task tracking
+- **Daily-Briefs** — [[Daily-Briefs/competitive-task-today|Competitive Task Today]] (umbrella orchestrator)
 - **08_Assets** — Images, files, attachments
 - **09_Transcripts** — Call and meeting transcripts
 - **10_Sessions** — Client session notes
