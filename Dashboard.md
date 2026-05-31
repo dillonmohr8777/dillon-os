@@ -16,9 +16,13 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
+- [ ] Read [[Daily-Briefs/competitive-task-today|Competitive Task Brief]]
+- [ ] [[System/urgent-replies|Urgent replies]] · [[System/slack-pulse|Slack pulse]]
 - [ ] Review active campaigns
-- [ ] Follow up with clients
+
+## Automation
+- [[System/competitive-task-orchestrator|Competitive Task Orchestrator]] (daily 13:00 UTC)
+- [[11_Agents/Agent Index|Agents]]
 
 ## Active Projects
 - 

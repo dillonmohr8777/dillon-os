@@ -1,0 +1,42 @@
+# Dillon OS — config-as-code reference for Cursor Automations
+# Copy settings into the Automations UI until native YAML import ships.
+# https://forum.cursor.com/t/config-as-code-for-automations/154831
+
+name: competitive-task-orchestrator
+enabled: true
+
+trigger:
+  type: cron
+  schedule: "0 13 * * *"
+
+repository:
+  url: "{{ VAULT_REPO_URL }}"
+  branch: main
+
+model: inherit
+
+tools:
+  - memories
+  - mcp_gmail_readonly
+  - mcp_slack_readonly
+  - git_commit_push
+
+prompt_file: System/competitive-task-orchestrator-prompt.md
+
+agents_parallel:
+  - gmail-intel
+  - slack-intel
+  - vault-pulse
+  - codex-session-sync
+  - content-routines
+  - domain-ads-seo
+
+agents_sequential:
+  - memory-consolidator
+
+outputs:
+  - Daily-Briefs/competitive-task-today.md
+  - Daily-Briefs/pulse-today.md
+  - System/urgent-replies.md
+  - System/slack-pulse.md
+  - System/claude-memory-sync.md

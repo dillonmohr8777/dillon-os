@@ -29,7 +29,8 @@ Drop anything here. Process later. Move to the right folder when ready.
 2. Process inbox regularly — move notes to the right folder
 3. Use templates (Ctrl/Cmd + T) to create structured notes
 4. Link notes with `[[wikilinks]]` to build connections
-5. Review your [[Dashboard]] daily
+5. Review your [[Dashboard]] daily — start with [[Daily-Briefs/competitive-task-today|Competitive Task Brief]]
+6. One automation runs the stack: [[System/competitive-task-orchestrator]]
 
 ## Tips
 - Use `#tags` for cross-cutting themes
