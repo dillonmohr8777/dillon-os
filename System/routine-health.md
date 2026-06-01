@@ -1,20 +1,35 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-06-01
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+## Active (umbrella)
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+| Automation | Schedule | Output |
+|------------|----------|--------|
+| `competitive-task-orchestrator` | `0 13 * * *` (1 PM ET) | `Daily-Briefs/competitive-task-today.md` |
+
+Spec: `System/competitive-task-workflow.md` · SOP: `04_SOPs/competitive-task-orchestrator.md` · Agents: `.cursor/agents/dillon-*.md`
+
+**Last run:** 2026-06-01 — consolidation installed; MCP fallback (vault-only). Connect Gmail + Slack on automation for live intel.
+
+## Retired (merged into umbrella — disable in Cursor)
+
+- `nightly-client-pulse` → `dillon-vault-pulse`
+- `gmail-to-vault-digest` → `dillon-gmail-intel`
+- `vault-integrity-sync` → `dillon-memory-consolidator`
+- `chat-to-vault-sync` → `dillon-codex-session-sync`
+- `bok-law-social-content` → `dillon-content-routines` (Sunday)
+- `linkedin-growth-engine` → `dillon-content-routines` (Sunday)
+- `book-site-seo-sweep` → `dillon-content-routines` (Thursday)
+
+## Vault frontmatter expected
+
+`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`
 
 ## Notes
-- First real test of the full routine stack begins 2026-04-16.
+
+- Disable seven legacy automations after **three** green umbrella runs.
+- `Daily-Briefs/pulse-today.md` kept for history; **competitive-task-today.md** is the daily read going forward.
