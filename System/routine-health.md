@@ -1,5 +1,5 @@
 ---
-last_checked: 2026-05-27
+last_checked: 2026-06-02
 tags: [system, routines]
 ---
 
@@ -9,15 +9,15 @@ Vault is seeded with frontmatter fields the operator expects (`client`, `last_to
 
 ## Active automation (umbrella)
 
-| Automation | Schedule (ET) | Spec |
-| ------------ | ------------- | ---- |
-| `dillon-os-operator` | Daily 1:00 PM (`0 13 * * *`) | `System/dillon-os-operator.md` |
+| Automation | Schedule (ET) | Prompt |
+| ------------ | ------------- | ------ |
+| `dillon-os-operator` | Daily 1:00 PM (`0 13 * * *`) | `.cursor/automation/dillon-os-operator.md` |
 
-Single cron replaces seven legacy routines. Disable legacy Cursor automations after **three consecutive green runs**.
+Spec: `System/dillon-os-operator.md`. Single cron replaces seven legacy routines. Disable legacy Cursor automations after **three consecutive green runs** (0/3 as of 2026-06-02).
 
 ## Last operator run
 
-- **2026-05-27:** Umbrella workflow consolidated and documented on branch `cursor/competitive-task-consolidation-7043`. Legacy crons marked retired below. Live Gmail/Slack intel pending MCP on first full run.
+- **2026-06-02:** Phase 1 five parallel intel lanes executed. Gmail + Slack MCP unavailable — intel STALE from April vault. Memory sync + pulse synthesis committed. Phase 2 skipped (Tuesday).
 
 ## Retired (merged into dillon-os-operator)
 
@@ -35,5 +35,6 @@ Single cron replaces seven legacy routines. Disable legacy Cursor automations af
 
 - [ ] Gmail MCP connected for `intel-gmail`
 - [ ] Slack MCP connected for `intel-slack`
-- [ ] `Daily-Briefs/pulse-today.md` dated today after each run
+- [x] `Daily-Briefs/pulse-today.md` dated 2026-06-02
 - [ ] Legacy automations disabled (after 3 green runs)
+- [ ] Codex/Cursor session exports landing in `10_Sessions/`

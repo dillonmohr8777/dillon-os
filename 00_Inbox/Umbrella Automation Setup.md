@@ -17,8 +17,8 @@ Seven separate Cursor automations are now **one**:
 
 ## Cursor setup
 
-1. Keep **one** automation pointing at `.cursor/automation/dillon-os-operator.md`.
-2. Schedule: `0 13 * * *` (America/New_York).
+1. Keep **one** automation pointing at `.cursor/automation/dillon-os-operator.md` (this is your only cron — disable the seven legacy automations after 3 green runs).
+2. Schedule: `0 13 * * *` (America/New_York). Matches automation `bc523644-815a-43a9-b434-fd2967c1be2c`.
 3. Connect **Gmail** and **Slack** MCP to the automation environment.
 4. After 3 successful runs, **disable** the seven legacy automations listed in `System/routine-health.md`.
 
