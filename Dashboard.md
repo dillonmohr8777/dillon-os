@@ -16,9 +16,14 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Open [[Daily-Briefs/competitive-task-today|Competitive Task Brief]]
+- [ ] Execute P0 stack (NKCDC → Bar Crawl → billing → CCA → Fresh Blends)
+- [ ] Check [[System/urgent-replies|Urgent Replies]]
+- [ ] Update client `last_touched` when you touch an account
+
+## Automation
+- **Umbrella:** `competitive-task-orchestrator` — daily 1:00 PM ET ([[04_SOPs/competitive-task-orchestrator|SOP]])
+- **Legacy crons:** retired — see [[System/routine-health]]
 
 ## Active Projects
 - 
