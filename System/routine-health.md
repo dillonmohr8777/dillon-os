@@ -1,20 +1,49 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-06-04
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+## Active automation (umbrella)
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+| Automation | Schedule | Status |
+|------------|----------|--------|
+| **dillon-os-orchestrator** | `0 13 * * *` UTC | **Active** — replaces all legacy routines below |
 
-## Notes
-- First real test of the full routine stack begins 2026-04-16.
+Spec: [[System/dillon-os-orchestrator]]  
+Skill: `.cursor/skills/dillon-os-orchestrator/SKILL.md`
+
+## Retired routines (do not re-enable)
+
+These seven automations are consolidated into the orchestrator. Disable them in [cursor.com/automations](https://cursor.com/automations) if still listed:
+
+- ~~`nightly-client-pulse`~~ → Pulse Agent
+- ~~`gmail-to-vault-digest`~~ → Comms Agent
+- ~~`vault-integrity-sync`~~ → Vault Agent
+- ~~`chat-to-vault-sync`~~ → Vault Agent
+- ~~`bok-law-social-content`~~ → Content Agent (Sundays)
+- ~~`linkedin-growth-engine`~~ → Content Agent (Sundays)
+- ~~`book-site-seo-sweep`~~ → Content Agent (Thursdays)
+
+## Sub-agent health (2026-06-04 first run)
+
+| Agent | Last run | Notes |
+|-------|----------|-------|
+| Comms | 2026-06-04 | Vault-only; Gmail MCP not connected |
+| Pulse | 2026-06-04 | All M360 overviews 50–94d stale |
+| Vault | 2026-06-04 | memory-sync `last_sync` updated |
+| Ops | 2026-06-04 | Queues were empty; seeded from active-campaigns |
+| Content | — | Skipped (Wednesday) |
+
+## Vault frontmatter
+
+Expected on active client notes: `client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`.
+
+**Gap:** Florecita, Buzz Bull, and most Direct clients lack `overview.md` pulse files.
+
+## Next actions for operator
+
+1. Point Cursor cron automation prompt at: `Run the dillon-os-orchestrator skill end-to-end.`
+2. Enable Gmail MCP on the automation.
+3. Disable legacy routine automations in Cursor UI.

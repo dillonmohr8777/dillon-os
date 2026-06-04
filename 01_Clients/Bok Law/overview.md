@@ -24,7 +24,7 @@ Weekly social content series — 3 recurring posts per week:
 2. **Turn the Page Thursday** — motivational post about life transitions and new chapters. Warm, hopeful. 100–200 words.
 3. **Family Fridays** — community-focused post celebrating family, local Pittsburgh events, anonymized client success themes. Lighthearted, relatable. 100–200 words.
 
-The `bok-law-social-content` routine generates this content every Sunday at 6:00 PM.
+The Dillon OS Orchestrator **Content Agent** generates this content every **Sunday** (legacy `bok-law-social-content` retired).
 
 ## Gmail intel (through 2026-04-14)
 - 2026-04-14: Weekly content delivered to Dorothy O'Neil, Aleksandra Kocelko, and Rachael Bowe.

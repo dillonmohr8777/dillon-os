@@ -7,7 +7,7 @@ tags: [linkedin, calendar, align-hcm]
 
 # LinkedIn Calendar
 
-The `linkedin-growth-engine` routine reads this file every Sunday at 9:00 PM.
+The Dillon OS Orchestrator **Content Agent** reads this file every **Sunday** (legacy `linkedin-growth-engine` retired).
 
 ## Weekly cadence
 - **Mondays** — Thought leadership (Maher or Joann, video or text post).

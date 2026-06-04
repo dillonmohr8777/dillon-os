@@ -6,7 +6,7 @@ last_touched: 2026-04-15
 
 # SEO & Growth Strategy
 
-The `book-site-seo-sweep` routine reads this file every Thursday.
+The Dillon OS Orchestrator **Content Agent** reads this file every **Thursday** (legacy `book-site-seo-sweep` retired).
 
 ## Goal
 2,000 email subscribers within 4 months of sustained execution.

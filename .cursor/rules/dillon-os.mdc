@@ -1,0 +1,16 @@
+---
+description: Dillon OS vault conventions for all agents and automations
+globs:
+  - "**/*.md"
+alwaysApply: true
+---
+
+# Dillon OS
+
+- This repo is Dillon Mohr's Obsidian vault ("Dillon OS"), not a generic app codebase.
+- **Momentum 360** branding for M360 client comms; never use M360 branding for Align HCM.
+- Follow `System/writing-rules.md` for all generated prose.
+- Prefer updating existing System/ and Daily-Briefs/ files over creating new automation types.
+- Use the `dillon-os-orchestrator` skill for scheduled runs; do not create separate cron automations per routine.
+- Parallelize independent work via Task tool (Comms, Pulse, Vault, Ops, Content agents).
+- Client truth lives in `01_Clients/` with frontmatter: `last_touched`, `next_action`, `due`, `status`.

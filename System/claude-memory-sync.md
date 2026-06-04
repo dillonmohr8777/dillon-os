@@ -1,11 +1,11 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-06-04
 tags: [system, memory, sync]
 ---
 
 # Claude Memory Sync
 
-Single source of truth for all Claude instances across Dillon OS. Updated by `vault-integrity-sync` nightly at 2:00 AM and `chat-to-vault-sync` every 2 hours.
+Single source of truth for all Claude instances across Dillon OS. Updated by the **Dillon OS Orchestrator** (Vault Agent) on each daily run. Legacy `vault-integrity-sync` and `chat-to-vault-sync` are retired.
 
 ## Active clients (Momentum 360)
 • Bar Crawl USA ($950/mo) — active, campaigns live across 9+ cities.
@@ -53,7 +53,11 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 
 ## Unanswered / urgent
 • **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
-• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
-• **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
+• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding. **At risk** as of 2026-06-04 pulse.
+• **Bar Crawl USA** — Disapproved ads from 2026-04-14 and 2026-04-15 need resolution. Soulard budget cap verification open.
 • **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
-• **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+• **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit. Mike Ross awaiting Buzz Bull timing reply.
+• **LinkEZE** — Enhanced conversions + MFA still open (vault stale since 2026-04-05).
+
+## Orchestrator note (2026-06-04)
+Vault client `last_touched` fields have not been refreshed since April 2026. Next run should use Gmail MCP to update frontmatter and lapsed `due` dates.
