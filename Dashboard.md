@@ -16,9 +16,12 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Read [[Daily-Briefs/competitive-task-today|Competitive Task Brief]]
+- [ ] Work P0 stack first (see brief)
+- [ ] Process inbox and Slack after brief
+
+## Automation
+- [[System/competitive-task-orchestrator|Competitive Task Orchestrator]] — one daily run, six parallel agents
 
 ## Active Projects
 - 
