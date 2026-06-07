@@ -1,11 +1,13 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-06-06
 tags: [system, memory, sync]
 ---
 
 # Claude Memory Sync
 
-Single source of truth for all Claude instances across Dillon OS. Updated by `vault-integrity-sync` nightly at 2:00 AM and `chat-to-vault-sync` every 2 hours.
+Single source of truth for all Claude instances across Dillon OS. Updated by `dillon-os-operator` daily at 1:00 PM ET (replaces `vault-integrity-sync` + `chat-to-vault-sync`).
+
+> **Data staleness (2026-06-06):** Vault intel last refreshed through **2026-04-15** (52 days). Gmail MCP and Slack MCP unavailable on operator run; this sync carries forward known clients, blockers, and rates without removing entries. Treat deadlines, completions, and urgent items as **unverified** until live intel reconnects.
 
 ## Active clients (Momentum 360)
 • Bar Crawl USA ($950/mo) — active, campaigns live across 9+ cities.
@@ -34,15 +36,17 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • Hardwood Artisan — CHASE billing card update before engagement pauses.
 • Omega Landscaping — drone footage from David.
 • Jeff Hozias — launch approved seller Meta campaign.
+• Shadow HVAC — confirm LSA live post-reset; verify GBP 4x/week cadence.
 
 ## Upcoming deadlines (7 days)
-• 2026-04-16 — Onsite x M360 weekly call (1:00 PM ET).
-• 2026-04-16 — Commercial Cleaners Alliance creative commitment.
-• 2026-04-18 — Hardwood Artisan billing card deadline (implied from "next 90 days" ask 2026-04-07).
-• 2026-04-25 — Bar Crawl USA Taco & Tequila wave 1 (9 cities).
-• 2026-05-02 — Bar Crawl USA Taco & Tequila wave 2.
+• 2026-06-12 — Onsite x M360 weekly call (1:00 PM ET, recurring Thursday).
+• No other confirmed deadlines in vault for 2026-06-06 through 2026-06-13. Historical deadlines below may have passed unresolved — verify on reconnect:
+  - Bar Crawl USA Taco & Tequila waves (2026-04-25 / 2026-05-02).
+  - Hardwood Artisan billing card follow-up (implied ~2026-04-18 from Sean's 2026-04-07 ask).
+  - Commercial Cleaners Alliance creative commitment (2026-04-16).
 
 ## Recent completions (7 days)
+• No completions logged in vault for 2026-05-30 through 2026-06-06. Last known completions (through 2026-04-15 intel):
 • 2026-04-14 — BOK Law weekly social content delivered.
 • 2026-04-14 — Jeff Hozias seller ad copy approved.
 • 2026-04-13 — KJB Wedding Dress Timeline page approved.
@@ -52,8 +56,10 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • 2026-04-01 — Monthly reports sent to Omega, Jeff Hozias, Hardwood Artisan.
 
 ## Unanswered / urgent
-• **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
-• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
-• **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
-• **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
+• **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked. (Status unverified since 2026-04-15.)
+• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding. Engagement at risk of pause.
+• **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution.
+• **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14); drone footage still outstanding.
 • **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+• **LinkEZE** — Enhanced conversions diagnostics + MFA on 809-600-6448 unresolved since 2026-04-05 notice.
+• **Fresh Blends / Replenish** — Launch and first-week snapshot unconfirmed since 2026-04-13 readiness email.

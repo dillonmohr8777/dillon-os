@@ -6,7 +6,7 @@ last_touched: 2026-04-15
 
 # SEO & Growth Strategy
 
-The `book-site-seo-sweep` routine reads this file every Thursday.
+The `dillon-os-operator` lane `content-book-seo` reads this file every **Thursday** (1 PM ET umbrella run).
 
 ## Goal
 2,000 email subscribers within 4 months of sustained execution.
