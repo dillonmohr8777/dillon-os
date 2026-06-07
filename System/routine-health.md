@@ -1,5 +1,5 @@
 ---
-last_checked: 2026-06-06
+last_checked: 2026-06-07
 tags: [system, routines]
 ---
 
@@ -17,7 +17,8 @@ Single cron replaces seven legacy routines. Disable legacy Cursor automations af
 
 ## Last operator run
 
-- **2026-06-06:** Full Phase 1 parallel intel (5 lanes). Gmail + Slack MCP unavailable; vault-pulse, memory-sync, codex-sessions OK. Pulse + urgent-replies + memory-sync synthesized. Phase 2 skipped (Saturday). **Green run: 1 of 3** (partial — MCP gap).
+- **2026-06-07:** Full Phase 1 parallel intel (5 lanes). Phase 2 Sunday content (`content-bok-law`, `content-align-linkedin`) completed. Gmail + Slack MCP unavailable. Pulse, urgent-replies, memory-sync synthesized. **Green run: 2 of 3** (partial — MCP gap persists).
+- **2026-06-06:** Full Phase 1 parallel intel (5 lanes). Gmail + Slack MCP unavailable. Phase 2 skipped (Saturday). Green run 1 of 3 (partial).
 - **2026-05-27:** Umbrella workflow consolidated and documented. Legacy crons marked retired.
 
 ## Retired (merged into dillon-os-operator)
@@ -37,4 +38,4 @@ Single cron replaces seven legacy routines. Disable legacy Cursor automations af
 - [ ] Gmail MCP connected for `intel-gmail`
 - [ ] Slack MCP connected for `intel-slack`
 - [x] `Daily-Briefs/pulse-today.md` dated today after each run
-- [ ] Legacy automations disabled (after 3 green runs — currently 1 partial)
+- [ ] Legacy automations disabled (after 3 green runs — currently 2 partial)

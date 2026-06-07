@@ -1,50 +1,41 @@
-# Daily Pulse 2026-06-06
+# Daily Pulse 2026-06-07
 
 ## Coverage Notes
-• **intel-gmail** — SKIPPED live scan: Gmail MCP unavailable. Used vault fallback (`System/urgent-replies.md`, client overviews). Last vault Gmail intel: 2026-04-15 (~52 days stale).
-• **intel-slack** — SKIPPED: Slack MCP unavailable. No Slack references in vault client notes. Check mobile Slack manually.
-• **intel-vault-pulse** — OK. Bulk vault sync touched 138 files today; no organic client edits. Stall detection masked by mtime refresh.
-• **intel-memory-sync** — OK. Draft memory sync produced with staleness banner.
-• **intel-codex-sessions** — OK. Session templates empty; automation memory referenced.
-• **Phase 2 content** — Skipped (Saturday; BOK Law + Align LinkedIn run Sunday; Book SEO runs Thursday).
+• Phase 1 parallel intel: all 5 lanes completed (gmail, slack, vault-pulse, memory-sync, codex-sessions).
+• Gmail MCP: UNAVAILABLE — vault fallback only (intel stale since 2026-04-15).
+• Slack MCP: UNAVAILABLE — manual mobile check required.
+• Phase 2 Sunday content: `content-bok-law` + `content-align-linkedin` completed.
+• Branch: `cursor/competitive-task-consolidation-ce14`.
 
 ## Priority Stack (max 5)
-1. **Wire Gmail + Slack MCP** to the automation environment so intel lanes stop running on April data.
-2. **Bar Crawl USA** — Resolve 2 disapproved ads (Halloween / Fall Cocktail Crawl). Andy waiting since 2026-04-15.
-3. **NKCDC** — Anthony still silent; Free Tax Prep landing page blocks launch. Mac followed up 2026-04-15.
-4. **Hardwood Artisan** — Billing card update outstanding; engagement at risk of pause.
-5. **Vault hygiene** — Add `next_action`, `due`, `last_touched` frontmatter to client notes (85/138 files sparse).
+1. **Reconnect Gmail + Slack MCP** — two consecutive runs without live intel triggers ESCALATE per Master Agent. Verify live inbox before acting on any vault-only blocker.
+2. **Hardwood Artisan billing** — AT RISK; Sean's card-update ask outstanding since 2026-04-07. Route to Sean if engagement paused.
+3. **Bar Crawl USA disapprovals** — 2 ads (Halloween / Fall Cocktail Crawl) still unresolved. Diagnose only; no improvised copy.
+4. **NKCDC launch block** — Free Tax Prep page still blocking. Mac running point; monitor only unless Anthony surfaces.
+5. **Sunday drafts for human approval** — BOK Law week of 2026-06-09 + Align LinkedIn week of 2026-06-09 ready for review before Tuesday AM / Monday publish.
 
 ## Active Clients (movement in 24h)
-• Bulk automation sync touched all client folders 2026-06-06 ~13:02 — not operator work.
-• BOK Law content-calendar and Align HCM linkedin-calendar touched for upcoming Sunday content lanes.
-• No client overview `last_touched` values updated since April 2026.
+• Bulk vault sync touched 138 files (operator run, not organic client work).
+• BOK Law `content-calendar.md` + new `Weekly Social 2026-06-08.md` drafted.
+• Align HCM `linkedin-calendar.md` + new `LinkedIn Drafts 2026-06-08.md` drafted.
 
 ## Unread / Unanswered (email + Slack)
-• **Bar Crawl USA** — 2 ad disapprovals; Dillon replied 2026-04-15, resolution still owed.
-• **NKCDC** — No reply to Dillon (2026-04-13) or Mac (2026-04-15) on Free Tax Prep launch.
-• **Omega Landscaping** — David silent on John Belaska's Thursday meeting request (Dillon CC'd).
-• **Commercial Cleaners Alliance** — Creative delivery audit vs 2026-04-08 commitment.
-• **Kimberly James Bridal** — Timeline page publish + GA4/GSC verification (CC Mac, Sean, Melissa).
-• **Fresh Blends / Replenish** — Confirm launch + first-week snapshot.
-• **Shadow HVAC** — Gmail quiet since 2026-03-02; LSA serving unverified.
-• **LinkEZE** — Enhanced conversions diagnostics + MFA on 809-600-6448.
-• **Jeff Hozias** — Launch approved seller Meta campaign.
-• **Slack** — Live scan unavailable; check DMs and M360 channels on mobile.
+• **Email (vault stale):** Bar Crawl disapprovals, NKCDC silence, Hardwood billing, CCA creatives audit, KJB Timeline publish, Fresh Blends launch verify, Shadow HVAC LSA catch-up, LinkEZE enhanced conversions, Jeff Hozias Meta launch, Omega David meeting.
+• **Slack:** Not scanned — check unread DMs and @mentions on mobile for Bar Crawl, NKCDC, M360 internal, Replenish, Hardwood, CCA, LinkEZE.
 
 ## Pending Deliverables (48h)
-• None with confirmed due dates in vault for 2026-06-04 through 2026-06-08.
-• 9 inferred pending items from memory sync (all April-dated; status unverified).
+• None with confirmed `due` frontmatter in the next 48 hours.
+• **Human action:** Approve BOK Law + Align LinkedIn drafts before send/publish.
 
 ## Stalled (7+ days)
-• Bar Crawl USA, NKCDC, CCA, Hardwood Artisan, Link Eze, KJB, Jeff Hozias, Fresh Blends, Omega Landscaping — all pending since April; mtime refresh today masks 7d rule.
-• `System/claude-memory-sync.md` last_sync was 2026-04-15 until today's operator run.
+• All M360 pending items inferred from `last_touched` April dates (53+ days): Shadow HVAC, LinkEZE, Hardwood Artisan, Fresh Blends, CCA, Omega, Jeff Hozias, Bar Crawl, KJB, NKCDC.
+• Bulk mtime refresh masks stall detection until organic edits resume.
 
 ## Content produced this run
-• None (Saturday — content lanes run Sunday/Thursday only).
+• `01_Clients/Bok Law/Weekly Social 2026-06-08.md` — Wed Wisdom (summer custody), Thu Turn the Page, Fri Family Fridays.
+• `02_FullTimeJob/AlignHCM/LinkedIn Drafts 2026-06-08.md` — Mon Maher video, Wed SmartCare motion graphic, Fri Joann carousel.
 
 ## Router recommendations
-• **M360:** Bar Crawl disapprovals → Google Ads Agent; NKCDC blocked launch → monitor + nudge Anthony; CCA creatives → M360 Router.
-• **Book:** No Thursday sweep today; next book SEO lane runs Thursday.
-• **Align HCM:** LinkedIn drafts scheduled for tomorrow (Sunday) content lane.
-• **Escalate to human:** Connect Gmail/Slack MCP; manually verify all April-era blockers still open; approve Sunday content drafts before client send.
+• **M360:** Bar Crawl disapprovals → Google Ads Agent + brand-guidelines review. Hardwood billing → escalate Sean. Jeff Hozias → launch approved Meta campaign. CCA creatives → audit delivery.
+• **Book:** No Thursday lane today; next `content-book-seo` on Thursday 2026-06-12.
+• **Escalate to human:** Wire Gmail/Slack MCP before next operator run. Approve Sunday content drafts. Live-verify all April blockers before client outreach.
