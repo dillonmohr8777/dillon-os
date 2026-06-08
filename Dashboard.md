@@ -16,9 +16,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
+- [ ] Read [[Daily-Briefs/competitive-task-today|Competitive Task Today]]
+- [ ] P0 stack from orchestrator (launch > billing > disapprovals > calendar)
 - [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
 
 ## Active Projects
 - 

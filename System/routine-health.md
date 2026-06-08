@@ -1,20 +1,55 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-06-08
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+## Umbrella automation (active)
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+**One cron replaces seven legacy routines.**
 
-## Notes
-- First real test of the full routine stack begins 2026-04-16.
+| Setting | Value |
+| --- | --- |
+| Automation | `competitive-task-orchestrator` |
+| Schedule | `0 13 * * *` (daily 1:00 PM UTC / 9:00 AM ET) |
+| Prompt | `System/competitive-task-orchestrator-prompt.md` |
+| Daily read | `Daily-Briefs/competitive-task-today.md` |
+| Run reports | `Daily-Briefs/runs/YYYY-MM-DD/` |
+
+### Phase 1 — parallel agents
+- `gmail-intel` — replaces `gmail-to-vault-digest`
+- `slack-intel` — new channel coverage
+- `vault-pulse` — replaces `nightly-client-pulse`
+- `codex-session-sync` — replaces `chat-to-vault-sync`
+- `content-routines` — replaces `bok-law-social-content` + `linkedin-growth-engine` (Sunday branch)
+- `domain-ads-seo` — replaces `book-site-seo-sweep` (Thursday branch) + daily ad blockers
+
+### Phase 2 — sequential
+- `memory-consolidator` — replaces `vault-integrity-sync`
+
+## Last run (2026-06-08)
+
+- All 6 parallel agents + consolidator executed
+- Gmail MCP: unavailable (vault fallback)
+- Slack MCP: unavailable
+- Vault drift: 54 days since last client touch
+- Output: `Daily-Briefs/competitive-task-today.md`
+
+## Legacy crons — **retired**
+
+Do not schedule these separately:
+
+- ~~`nightly-client-pulse`~~
+- ~~`gmail-to-vault-digest`~~
+- ~~`vault-integrity-sync`~~
+- ~~`chat-to-vault-sync`~~
+- ~~`bok-law-social-content`~~
+- ~~`linkedin-growth-engine`~~
+- ~~`book-site-seo-sweep`~~
+
+## Known gaps
+
+- Connect Gmail + Slack MCP to automation for live intel
+- Client `last_touched` frontmatter stale — refresh from June activity
+- `10_Sessions/` capture empty until harness writes session notes

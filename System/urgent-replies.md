@@ -1,11 +1,13 @@
 ---
-last_updated: 2026-04-15
+last_updated: 2026-06-08
 tags: [system, urgent]
 ---
 
 # Urgent Replies Needed
 
-Updated by `gmail-to-vault-digest` daily at 7:00 AM.
+Updated by `competitive-task-orchestrator` → `memory-consolidator` (daily 1:00 PM UTC).
+
+> **Staleness:** Gmail MCP was unavailable on 2026-06-08. Items below merge vault intel (last live mail ~2026-04-15). Re-verify in inbox before acting.
 
 ## Immediate (today/tomorrow)
 • **Bar Crawl USA** — Andy Zirger forwarded 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Dillon responded 2026-04-15 saying he'd investigate. Owe him a resolution.
