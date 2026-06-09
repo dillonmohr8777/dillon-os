@@ -1,20 +1,50 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-06-09
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+## Active orchestrator
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+**`competitive-task-orchestrator`** — cron `0 13 * * *` (1:00 PM ET daily)
 
-## Notes
-- First real test of the full routine stack begins 2026-04-16.
+Replaces all legacy routines below. One automation, parallel agents, one daily brief.
+
+| Subagent | Replaces | Last run |
+|----------|----------|----------|
+| gmail-intel | gmail-to-vault-digest | 2026-06-09 (vault-fallback) |
+| slack-intel | (new) | 2026-06-09 (no data) |
+| vault-pulse | nightly-client-pulse | 2026-06-09 |
+| codex-session-sync | chat-to-vault-sync | 2026-06-09 |
+| content-routines | bok-law + linkedin + book SEO | 2026-06-09 (overdue flagged) |
+| domain-ads-seo | (new) | 2026-06-09 |
+| memory-consolidator | vault-integrity-sync | 2026-06-09 |
+
+**Daily read:** `Daily-Briefs/competitive-task-today.md`
+**Prompt:** `System/competitive-task-orchestrator-prompt.md`
+**Agents:** `.cursor/agents/`
+
+## Retired routines (disable separate crons)
+
+- ~~`nightly-client-pulse`~~ → vault-pulse subagent
+- ~~`gmail-to-vault-digest`~~ → gmail-intel subagent
+- ~~`vault-integrity-sync`~~ → memory-consolidator subagent
+- ~~`chat-to-vault-sync`~~ → codex-session-sync subagent
+- ~~`bok-law-social-content`~~ → content-routines subagent (Sunday)
+- ~~`linkedin-growth-engine`~~ → content-routines subagent (Sunday)
+- ~~`book-site-seo-sweep`~~ → content-routines subagent (Thursday)
+
+## Known gaps (2026-06-09)
+
+- Gmail MCP not available on automation VM — intel frozen at 2026-04-15
+- Slack MCP not connected — no Slack intel in vault
+- Vault `last_touched` fields stale across all clients (55+ days)
+- Campaign optimization queues empty — need live ad account pull
+- Agent Memory files under `01_Clients/` are blank templates
+
+## Run log
+
+| Date | Status | Notes |
+|------|--------|-------|
+| 2026-06-09 | OK (vault-fallback) | Umbrella orchestrator built. 7 agents created. Legacy crons retired. |

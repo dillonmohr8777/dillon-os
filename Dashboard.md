@@ -16,6 +16,7 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
+- [ ] Read [[Daily-Briefs/competitive-task-today|Competitive Task Brief]] (auto-generated 1PM ET)
 - [ ] Check inbox and process
 - [ ] Review active campaigns
 - [ ] Follow up with clients

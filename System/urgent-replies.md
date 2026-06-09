@@ -5,7 +5,7 @@ tags: [system, urgent]
 
 # Urgent Replies Needed
 
-Updated by `gmail-to-vault-digest` daily at 7:00 AM.
+Updated by `gmail-intel` subagent inside `competitive-task-orchestrator` daily at 1:00 PM ET.
 
 ## Immediate (today/tomorrow)
 • **Bar Crawl USA** — Andy Zirger forwarded 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Dillon responded 2026-04-15 saying he'd investigate. Owe him a resolution.
