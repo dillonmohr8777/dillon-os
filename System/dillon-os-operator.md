@@ -3,7 +3,7 @@ name: dillon-os-operator
 schedule: "0 13 * * *"
 timezone: America/New_York
 tags: [system, automation, umbrella]
-last_updated: 2026-06-07
+last_updated: 2026-06-11
 ---
 
 # Dillon OS Operator (umbrella automation)
