@@ -8,6 +8,7 @@
 
 ## Known Issues
 
+• Enhanced conversions data source diagnostics warning open. Confirm MFA on 809-600-6448.
 
 ## Winning Angles
 
