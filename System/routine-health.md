@@ -1,20 +1,52 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-06-13
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+## Active automation (umbrella)
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+**`competitive-task-orchestrator`** — daily at 1:00 PM ET (`0 13 * * *`)
 
-## Notes
-- First real test of the full routine stack begins 2026-04-16.
+- Prompt: `System/competitive-task-orchestrator-prompt.md`
+- Definition: `System/competitive-task-definition.md`
+- Daily read: `Daily-Briefs/competitive-task-today.md`
+- Subagents: `.cursor/agents/` (6 parallel + 1 sequential consolidator)
+
+### Phase 1 — parallel intel
+| Subagent | Replaces |
+|----------|----------|
+| `gmail-intel` | `gmail-to-vault-digest` |
+| `slack-intel` | (new — no legacy cron) |
+| `vault-pulse` | `nightly-client-pulse` |
+| `codex-session-sync` | `chat-to-vault-sync` |
+| `content-routines` | `bok-law-social-content`, `linkedin-growth-engine`, `book-site-seo-sweep` |
+| `domain-ads-seo` | partial `book-site-seo-sweep` + campaign queue monitoring |
+
+### Phase 2 — sequential
+| Subagent | Replaces |
+|----------|----------|
+| `memory-consolidator` | `vault-integrity-sync` |
+
+## Legacy crons — DEPRECATED
+
+Do not schedule these separately. They are absorbed by the orchestrator:
+
+- ~~`nightly-client-pulse`~~
+- ~~`gmail-to-vault-digest`~~
+- ~~`vault-integrity-sync`~~
+- ~~`chat-to-vault-sync`~~
+- ~~`bok-law-social-content`~~
+- ~~`linkedin-growth-engine`~~
+- ~~`book-site-seo-sweep`~~
+
+## Last orchestrator run
+
+- **Date:** 2026-06-13 (infrastructure build — first consolidated workflow deployed)
+- **Status:** Subagent definitions and prompt written. Live Gmail/Slack MCP integration pending on next cron trigger.
+- **Known gap:** Vault `last_touched` fields stale without daily orchestrator runs writing back.
+
+## Vault frontmatter expected
+
+Client notes should carry: `client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`.

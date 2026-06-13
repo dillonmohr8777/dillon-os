@@ -16,9 +16,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Read [[Daily-Briefs/competitive-task-today|Competitive Task Brief]]
+- [ ] Work the ranked stack (P0 first)
+- [ ] Check [[System/urgent-replies|Urgent Replies]]
 
 ## Active Projects
 - 

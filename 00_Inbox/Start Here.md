@@ -30,6 +30,7 @@ Drop anything here. Process later. Move to the right folder when ready.
 3. Use templates (Ctrl/Cmd + T) to create structured notes
 4. Link notes with `[[wikilinks]]` to build connections
 5. Review your [[Dashboard]] daily
+6. Start each day with [[Daily-Briefs/competitive-task-today|Competitive Task Brief]] (updated 1 PM ET by orchestrator)
 
 ## Tips
 - Use `#tags` for cross-cutting themes
