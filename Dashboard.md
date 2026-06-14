@@ -16,9 +16,14 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] [[Daily-Briefs/competitive-task-today|Competitive Task Today]] — single daily brief (umbrella orchestrator)
+- [ ] [[System/urgent-replies|Urgent Replies]]
+- [ ] [[System/ads-seo-pulse|Ads & SEO Pulse]]
+
+## Automation
+- **Umbrella:** `competitive-task-orchestrator` — cron `0 13 * * *`
+- Agents: `.cursor/agents/` (6 parallel + 1 consolidator)
+- Replaces 7 legacy crons — see [[System/routine-health]]
 
 ## Active Projects
 - 
