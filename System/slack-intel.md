@@ -1,30 +1,25 @@
 ---
-last_checked: 2026-06-14
-mcp_available: false
+last_checked: 2026-06-15
 tags: [system, slack]
 ---
 
 # Slack Intel
 
-Updated by `slack-intel` agent inside `competitive-task-orchestrator`.
+Updated by `slack-intel` inside `competitive-task-orchestrator`.
 
 ## Status
 
-**Slack MCP unavailable in this run.** No live Slack scan performed.
+**mcp_unavailable** — Slack MCP not connected in this environment.
 
-Slack has no historical vault mirror. Connect Slack MCP to the orchestrator automation for live DM and mention triage.
+## Immediate replies needed
 
-## Immediate (when MCP connected)
+• Unable to scan. Connect Slack MCP to ingest DMs, @mentions, and Momentum 360 / Buzz Bull / Align HCM channel activity.
 
-- Scan unread DMs to Dillon
-- Scan `@Dillon` mentions in last 48h across Momentum 360 and Buzz Bull workspaces
+## This week follow-ups
 
-## Baseline from vault (no Slack data)
+• No vault mirror exists for Slack history. All Slack intel depends on live MCP at runtime.
 
-No Slack messages are stored in Dillon OS. Known collaboration channels referenced in vault:
-- **Microsoft Teams** — Commercial Cleaners Alliance / Buzz Bull meeting invites (see Gmail intel)
-- **Slack communities** — mentioned in Mohr Media Business Plan as a marketing channel only
+## Coverage notes
 
-## Action
-
-Enable Slack connector on the `competitive-task-orchestrator` Cursor automation so `slack-intel` can populate this file on future runs.
+• Workspaces not scanned: Momentum 360, Buzz Bull, Align HCM
+• Recommendation: add Slack connector to umbrella orchestrator environment so `slack-intel` can classify P0 direct asks alongside Gmail

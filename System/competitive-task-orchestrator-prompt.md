@@ -63,7 +63,7 @@ Launch **one** `memory-consolidator` agent (Task tool or execute directly):
 ```bash
 git add Daily-Briefs/ System/ 01_Clients/ 02_FullTimeJob/ 10_Sessions/
 git commit -m "competitive-task-orchestrator: daily run $(date +%Y-%m-%d)"
-git push -u origin cursor/competitive-task-consolidation-4b29
+git push -u origin cursor/competitive-task-consolidation-b25a
 ```
 
 ## Constraints
