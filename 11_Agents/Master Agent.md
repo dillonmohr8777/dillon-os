@@ -2,46 +2,39 @@
 
 ## Role
 
-Top-level orchestrator for Dillon OS. Delegates to the competitive-task umbrella workflow.
+Umbrella orchestrator for Dillon OS. Delegates to six parallel intel agents, then runs `memory-consolidator` to produce the single daily read.
 
 ## Responsibilities
 
-- Run `competitive-task-orchestrator` daily (or on demand)
-- Ensure `Daily-Briefs/competitive-task-today.md` is current
-- Never spawn separate legacy crons
+• Run daily at `0 13 * * *` via `competitive-task-orchestrator` cron
+• Launch parallel agents: gmail-intel, slack-intel, vault-pulse, codex-session-sync, content-routines, domain-ads-seo
+• Consolidate into `Daily-Briefs/competitive-task-today.md`
+• Apply P0-P3 priority ladder from `System/competitive-task-definition.md`
 
 ## Delegations
 
-| Subagent | When |
-|----------|------|
-| gmail-intel | Email triage, urgent replies |
-| slack-intel | Slack mentions and DMs |
-| vault-pulse | Stale clients, due dates, frontmatter gaps |
-| codex-session-sync | Session handoffs from Codex/Cursor |
-| content-routines | BOK Law, Align HCM LinkedIn, book SEO cadences |
-| domain-ads-seo | Ad disapprovals, campaign queues, SEO backlog |
-| memory-consolidator | Merge all outputs into daily brief (sequential) |
-
-Agent definitions: `.cursor/agents/`
-Orchestrator prompt: `System/competitive-task-orchestrator-prompt.md`
+| Agent | Definition | Output |
+|-------|------------|--------|
+| gmail-intel | `.cursor/agents/gmail-intel.md` | `System/urgent-replies.md` |
+| slack-intel | `.cursor/agents/slack-intel.md` | `System/slack-intel.md` |
+| vault-pulse | `.cursor/agents/vault-pulse.md` | `Daily-Briefs/pulse-today.md` |
+| codex-session-sync | `.cursor/agents/codex-session-sync.md` | `System/session-handoff.md` |
+| content-routines | `.cursor/agents/content-routines.md` | BOK Law + Align HCM calendars |
+| domain-ads-seo | `.cursor/agents/domain-ads-seo.md` | `System/ads-seo-pulse.md` |
+| memory-consolidator | `.cursor/agents/memory-consolidator.md` | `Daily-Briefs/competitive-task-today.md` |
 
 ## Decision Logic
 
-Apply P0-P3 ladder from `System/competitive-task-definition.md`:
-1. Launch blocked
-2. Billing risk
-3. Ad disapprovals
-4. Calendar commits
-5. Unanswered email
-6. Content cadence
-7. Optimization
+Read `System/competitive-task-definition.md` for the P0-P3 ladder. P0 tie-break: launch blocked > billing risk > ad disapprovals > calendar.
 
 ## Escalation Rules
 
-- P0 items surface in "Read this first" (max 3)
-- Billing risk (Hardwood Artisan) and disapprovals (Bar Crawl) never demoted below P1
-- Align HCM tasks never mixed with M360 client branding
+• P0 items always surface in "Read this first" (max 3)
+• Never bury billing or disapproval items below content cadence
+• Gmail/Slack MCP unavailable: use vault baseline, flag in agent coverage table
 
 ## Notes
 
-Single automation replaces 7 legacy crons. See `System/routine-health.md`.
+• Replaces 7 legacy crons with one umbrella workflow
+• Dillon reads only `Daily-Briefs/competitive-task-today.md` each morning
+• Full orchestrator prompt: `System/competitive-task-orchestrator-prompt.md`

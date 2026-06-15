@@ -1,51 +1,45 @@
 ---
-last_checked: 2026-06-14
-tags: [system, routines, orchestrator]
+last_checked: 2026-06-15
+tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-## Umbrella orchestrator (active)
+Updated by `memory-consolidator` inside `competitive-task-orchestrator`.
 
-| Automation | Schedule | Status |
-|------------|----------|--------|
-| `competitive-task-orchestrator` | `0 13 * * *` (daily 1PM UTC) | **ACTIVE** — replaces all legacy crons below |
+## Umbrella orchestrator
 
-Prompt: `System/competitive-task-orchestrator-prompt.md`
-Definition: `System/competitive-task-definition.md`
-Daily output: `Daily-Briefs/competitive-task-today.md`
+| Routine | Schedule | Last run | Status |
+|---------|----------|----------|--------|
+| `competitive-task-orchestrator` | `0 13 * * *` (daily 1 PM UTC) | 2026-06-15 | ok |
 
-### Parallel subagents (`.cursor/agents/`)
+## Parallel agents (last run: 2026-06-15)
 
-| Agent | Legacy routine absorbed | Last run |
-|-------|-------------------------|----------|
-| `gmail-intel` | `gmail-to-vault-digest` | 2026-06-14 (fallback) |
-| `slack-intel` | (new) | 2026-06-14 (mcp unavailable) |
-| `vault-pulse` | `nightly-client-pulse` | 2026-06-14 |
-| `codex-session-sync` | `chat-to-vault-sync` | 2026-06-14 |
-| `content-routines` | `bok-law-social-content`, `linkedin-growth-engine` | 2026-06-14 (skipped) |
-| `domain-ads-seo` | `book-site-seo-sweep` + ad queues | 2026-06-14 |
-| `memory-consolidator` | `vault-integrity-sync` | 2026-06-14 |
+| Agent | Last run | Status | Notes |
+|-------|----------|--------|-------|
+| gmail-intel | 2026-06-15 | fallback | Gmail MCP unavailable; used vault baseline |
+| slack-intel | 2026-06-15 | unavailable | Slack MCP not connected |
+| vault-pulse | 2026-06-15 | ok | 12 stalled, 10 untracked clients |
+| codex-session-sync | 2026-06-15 | ok | 23 consolidation branches flagged |
+| content-routines | 2026-06-15 | skipped | Sunday generation missed; June calendars empty |
+| domain-ads-seo | 2026-06-15 | ok | 3 P0 items; queues empty |
+| memory-consolidator | 2026-06-15 | ok | Wrote competitive-task-today.md |
 
-## Legacy crons (deprecated — do not schedule separately)
+## Legacy crons (DEPRECATED — absorbed by umbrella)
 
-These routines are **absorbed** by the umbrella orchestrator. Do not create separate automations for them.
+| Legacy routine | Absorbed by | Status |
+|----------------|-------------|--------|
+| `nightly-client-pulse` | vault-pulse | deprecated |
+| `gmail-to-vault-digest` | gmail-intel | deprecated |
+| `vault-integrity-sync` | memory-consolidator | deprecated |
+| `chat-to-vault-sync` | codex-session-sync | deprecated |
+| `bok-law-social-content` | content-routines | deprecated |
+| `linkedin-growth-engine` | content-routines | deprecated |
+| `book-site-seo-sweep` | domain-ads-seo | deprecated |
 
-- ~~`nightly-client-pulse`~~ → `vault-pulse`
-- ~~`gmail-to-vault-digest`~~ → `gmail-intel`
-- ~~`vault-integrity-sync`~~ → `memory-consolidator`
-- ~~`chat-to-vault-sync`~~ → `codex-session-sync`
-- ~~`bok-law-social-content`~~ → `content-routines`
-- ~~`linkedin-growth-engine`~~ → `content-routines`
-- ~~`book-site-seo-sweep`~~ → `domain-ads-seo`
+## Action items
 
-## Known gaps
-
-- Vault `last_touched` often stale without daily orchestrator runs writing back
-- Slack has no vault mirror; `slack-intel` depends on Slack MCP at runtime
-- Gmail intel depends on Gmail MCP at runtime; falls back to `urgent-replies.md` baseline
-- Codex sessions have no external log directory; `codex-session-sync` scans vault + git branches
-
-## Vault frontmatter expected
-
-Routines expect these fields on client notes: `client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`.
+• Connect Gmail MCP and Slack MCP for live intel on next run.
+• Roll BOK Law and Align HCM calendars to June 2026.
+• Merge consolidation PR and retire 23 stale origin branches.
+• Refresh client `last_touched` dates (vault frozen at April 2026).
