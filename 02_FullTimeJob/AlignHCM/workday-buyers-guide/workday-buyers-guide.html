@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Workday Buyer's Guide — Align HCM — 2026 Edition</title>
+<title>Workday Buyer's Guide, Align HCM, 2026 Edition</title>
 <style>
 /* ============================================================
    FONTS  (Plus Jakarta Sans = display, DM Sans = body)
@@ -93,19 +93,21 @@ li::before{
   page:cover; position:relative;
   height:279.4mm; width:215.9mm;
   background:
-    radial-gradient(140% 90% at 88% 8%, rgba(240,90,40,.30) 0%, rgba(240,90,40,0) 55%),
-    radial-gradient(120% 80% at 5% 102%, rgba(43,181,160,.22) 0%, rgba(43,181,160,0) 50%),
-    linear-gradient(160deg, var(--navy-900) 0%, var(--navy-800) 60%, #0B1A30 100%);
+    radial-gradient(115% 75% at 94% 2%, rgba(255,107,53,.50) 0%, rgba(240,90,40,.10) 34%, rgba(240,90,40,0) 56%),
+    radial-gradient(85% 65% at 4% 104%, rgba(43,181,160,.34) 0%, rgba(43,181,160,0) 52%),
+    radial-gradient(60% 55% at 78% 70%, rgba(255,107,53,.12) 0%, rgba(255,107,53,0) 60%),
+    linear-gradient(152deg, #0C1B33 0%, var(--navy-900) 42%, #0A1424 72%, #0E2039 100%);
   color:#fff; overflow:hidden;
   page-break-after:always;
 }
 .cover-pad{ padding:24mm 22mm; height:100%; display:flex; flex-direction:column; }
 .cover .topbar{ display:flex; justify-content:space-between; align-items:flex-start; }
 .cover .glow{
-  position:absolute; border-radius:50%; filter:blur(120px); opacity:.55; z-index:0;
+  position:absolute; border-radius:50%; filter:blur(115px); opacity:.6; z-index:0;
 }
-.cover .glow.a{ width:340px;height:340px; background:var(--orange); top:-90px; right:-60px;}
-.cover .glow.b{ width:300px;height:300px; background:var(--teal); bottom:-120px; left:-90px;}
+.cover .glow.a{ width:380px;height:380px; background:var(--orange); top:-110px; right:-70px;}
+.cover .glow.b{ width:320px;height:320px; background:var(--teal); bottom:-130px; left:-100px;}
+.cover .glow.c{ width:190px;height:190px; background:#FF8A4D; opacity:.28; top:46%; right:8%;}
 .cover-inner{ position:relative; z-index:2; display:flex; flex-direction:column; height:100%;}
 
 .eyebrow{
@@ -138,7 +140,8 @@ li::before{
 /* ============================================================
    LOGOS
    ============================================================ */
-.brand-logo{ height:46pt; width:auto; display:block; }
+.brand-logo{ height:74pt; width:auto; display:block; }
+.cover-foot-logo{ height:30pt; width:auto; opacity:.92; }
 .logo-align{ display:flex; align-items:center; gap:10pt; }
 .logo-align .mark{ width:34pt; height:34pt; }
 .logo-align .wm{ font-family:'Jakarta'; font-weight:800; font-size:18pt; letter-spacing:-.01em; line-height:1;}
@@ -220,14 +223,47 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 /* ============================================================
    STAT STRIP
    ============================================================ */
-.stats{ display:flex; gap:9pt; margin:12pt 0; }
+.stats{ display:flex; gap:10pt; margin:13pt 0; }
 .stat{
-  flex:1; background:var(--paper-2); border:1px solid var(--line);
-  border-radius:10pt; padding:11pt 12pt; border-top:3pt solid var(--orange);
+  flex:1; background:linear-gradient(165deg,#FFFFFF 0%,#F4F7FB 100%);
+  border:1px solid var(--line); border-radius:13pt; padding:13pt 14pt 14pt;
+  position:relative; overflow:hidden;
+  box-shadow:0 3pt 10pt rgba(20,35,59,.05);
 }
-.stat .n{ font-family:'Jakarta'; font-weight:800; font-size:18pt; color:var(--navy-900); line-height:1; letter-spacing:-.02em;}
-.stat .n .u{ font-size:10pt; color:var(--orange); }
-.stat .c{ font-size:8pt; color:var(--ink-soft); margin-top:5pt; line-height:1.35; }
+.stat::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:4pt;
+  background:linear-gradient(180deg,var(--orange) 0%,var(--orange-2) 100%);}
+.stat::after{ content:""; position:absolute; top:-26pt; right:-26pt; width:64pt; height:64pt;
+  border-radius:50%; background:radial-gradient(circle,rgba(240,90,40,.10),transparent 70%);}
+.stat .n{ font-family:'Jakarta'; font-weight:800; font-size:25pt; color:var(--navy-900);
+  line-height:.98; letter-spacing:-.025em;}
+.stat .n .u{ font-size:13pt; color:var(--orange); }
+.stat .c{ font-size:8pt; color:var(--ink-soft); margin-top:6pt; line-height:1.35; }
+.stat .bar{ height:5pt; border-radius:3pt; background:#E7ECF3; margin-top:9pt; overflow:hidden;}
+.stat .bar i{ display:block; height:100%; border-radius:3pt;
+  background:linear-gradient(90deg,var(--orange) 0%,var(--orange-2) 100%);}
+.stat .barlab{ font-family:'Jakarta'; font-weight:700; font-size:6.5pt; letter-spacing:.12em;
+  text-transform:uppercase; color:#9AA6B6; margin-top:4pt; display:block;}
+
+/* Decision meter (scorecard) */
+.meter{ display:flex; margin:12pt 0 4pt; border-radius:8pt; overflow:hidden;
+  box-shadow:0 3pt 9pt rgba(20,35,59,.10); }
+.meter .seg{ padding:9pt 10pt; color:#fff; }
+.meter .seg .sv{ font-family:'Jakarta'; font-weight:800; font-size:10.5pt; display:block; line-height:1;}
+.meter .seg .sl{ font-family:'Jakarta'; font-weight:600; font-size:7.5pt; opacity:.92; display:block; margin-top:3pt;}
+.meter .pause{ background:linear-gradient(135deg,#C0392B,#E05A45);}
+.meter .cond{ background:linear-gradient(135deg,var(--amber),#F4A04C);}
+.meter .strong{ background:linear-gradient(135deg,#1F9E8C,var(--teal));}
+.meter-scale{ display:flex; justify-content:space-between; font-family:'Jakarta'; font-weight:700;
+  font-size:7.5pt; color:#9AA6B6; margin-top:3pt;}
+
+/* Inline mini-KPI pair */
+.kpi-pair{ display:flex; gap:10pt; margin:11pt 0; }
+.kpi-pair .k{ flex:1; background:linear-gradient(165deg,#FFFFFF,#F4F7FB); border:1px solid var(--line);
+  border-radius:11pt; padding:11pt 13pt;}
+.kpi-pair .k .kn{ font-family:'Jakarta'; font-weight:800; font-size:21pt; color:var(--orange); line-height:1; letter-spacing:-.02em;}
+.kpi-pair .k .kc{ font-size:8.4pt; color:var(--ink-soft); margin-top:4pt; line-height:1.35;}
+.kpi-pair .k .bar{ height:5pt; border-radius:3pt; background:#E7ECF3; margin-top:8pt; overflow:hidden;}
+.kpi-pair .k .bar i{ display:block; height:100%; border-radius:3pt; background:linear-gradient(90deg,var(--orange),var(--orange-2));}
 
 /* ============================================================
    TOC
@@ -292,11 +328,11 @@ a{ color:var(--wd-blue); text-decoration:none; }
 
 <!-- ============================= COVER ============================= -->
 <section class="cover">
-  <div class="glow a"></div><div class="glow b"></div>
+  <div class="glow a"></div><div class="glow b"></div><div class="glow c"></div>
   <div class="cover-pad">
    <div class="cover-inner">
     <div class="topbar">
-      <img class="brand-logo" src="assets/alignhcm-logo.png" alt="Align HCM — Human Capital Management">
+      <img class="brand-logo" src="assets/alignhcm-logo.png" alt="Align HCM, Human Capital Management">
 
       <div class="platform-chip">
         <span class="lbl">Platform evaluated</span>
@@ -458,28 +494,28 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </ul>
   <p>This guide keeps the same buyer lens as Align HCM's live Workday page: Workday makes sense when complexity is the business problem, but the platform only pays off when the buyer can govern data, processes, integrations, reporting, change, and long-term ownership.</p>
 
-  <h3 class="sub">Pain Point One — HR and Finance don't trust the same numbers</h3>
+  <h3 class="sub">Pain Point One: HR and Finance don't trust the same numbers</h3>
   <p>When HR and Finance define headcount differently, every workforce conversation slows down. Finance may care about cost center and budget ownership. HR may care about supervisory organization and employee lifecycle. Operations may care about location, role, schedule, and capacity. Align's reporting guidance calls out the common pattern: teams build reports reactively, create duplicate logic, and eventually stop trusting the reports they just paid for.</p>
   <div class="buyer-q"><span class="lbl">Buyer question</span><p>Which workforce metrics need one enterprise definition before go-live?</p></div>
 
-  <h3 class="sub">Pain Point Two — the org model is more complex than the current system can handle</h3>
+  <h3 class="sub">Pain Point Two: the org model is more complex than the current system can handle</h3>
   <p>Matrix reporting, frequent reorgs, multiple entities, cost center changes, shared services, acquisitions, and hybrid work arrangements all create pressure on legacy HRIS setups. Workday's value grows when the platform can model the real organization instead of forcing teams into shadow spreadsheets.</p>
   <div class="buyer-q"><span class="lbl">Buyer question</span><p>How often do org, job, cost center, or manager changes require manual cleanup today?</p></div>
 
-  <h3 class="sub">Pain Point Three — data migration exposes years of shortcuts</h3>
+  <h3 class="sub">Pain Point Three: data migration exposes years of shortcuts</h3>
   <p>Workday implementation forces the business to move employee, job, position, compensation, payroll, benefits, organization, security, and historical data into a new model. That work often reveals inconsistent job codes, inactive positions, stale manager assignments, mismatched cost centers, missing locations, duplicate records, and policy exceptions nobody documented. Research on ERP implementation success factors has long shown that organizational fit, change readiness, process redesign, and data discipline affect implementation outcomes. Treat data work as a core project lane, not a cleanup task.</p>
   <div class="buyer-q"><span class="lbl">Buyer question</span><p>What data do we need to clean before configuration begins?</p></div>
 
-  <h3 class="sub">Pain Point Four — integrations are owned technically, not operationally</h3>
+  <h3 class="sub">Pain Point Four: integrations are owned technically, not operationally</h3>
   <p>Workday often needs to connect with payroll providers, benefits carriers, identity systems, recruiting tools, learning systems, ERP or finance tools, data warehouses, and downstream reporting environments. A technical feed can still fail the business if nobody owns the business rule behind it.</p>
   <div class="buyer-q"><span class="lbl">Buyer question</span><p>For each integration, who owns the business outcome after go-live?</p></div>
 
-  <h3 class="sub">Pain Point Five — change management is treated as communications</h3>
+  <h3 class="sub">Pain Point Five: change management is treated as communications</h3>
   <p>Workday changes how people request, approve, report, plan, and manage work. Training someone to click through a workflow is not enough. Managers need to understand what their actions do to pay, approvals, reporting, compliance, employee experience, and downstream data.</p>
   <div class="note"><strong>Prosci</strong> reports that projects with excellent change management are up to <strong>7X</strong> more likely to achieve change success. For Workday, the people side is not soft. It is a direct driver of adoption, support volume, and return on investment.</div>
   <div class="buyer-q"><span class="lbl">Buyer question</span><p>Which groups need behavior change, not just system training?</p></div>
 
-  <h3 class="sub">Pain Point Six — AI is bought faster than it is adopted</h3>
+  <h3 class="sub">Pain Point Six: AI is bought faster than it is adopted</h3>
   <p>Workday reported 1.7 billion AI actions across its platform in fiscal 2026, and Workday's customer facts page says over 75% of core Workday customers use Workday AI. The opportunity is real, but buyers still need to ask whether their own tenant, data, roles, governance, and training are ready. The problem is not only whether AI exists. The problem is whether the organization knows what it owns, where AI could reduce manual work, and how adoption will be measured.</p>
   <div class="buyer-q"><span class="lbl">Buyer question</span><p>Which manual HR, finance, recruiting, manager, or employee workflows are painful enough to justify AI activation?</p></div>
 </section>
@@ -572,25 +608,25 @@ a{ color:var(--wd-blue); text-decoration:none; }
   <p class="lede">Workday implementations succeed or struggle before configuration begins.</p>
   <p>The Align Workday implementation page names the right problem: the decisions made before a single screen is configured determine whether the rollout moves smoothly or becomes costly and drawn out. The technology matters, but leadership gaps, unclear process ownership, weak change management, and poor data quality are usually the real failure points.</p>
 
-  <h3 class="sub">Gate One — Executive sponsorship</h3>
+  <h3 class="sub">Gate One: Executive sponsorship</h3>
   <p>The sponsor needs authority across HR, Finance, IT, Payroll, and Operations. Workday decisions cross functions constantly. When executive sponsorship is vague, the project waits for decisions and scope starts to drift.</p>
 
-  <h3 class="sub">Gate Two — Internal project ownership</h3>
+  <h3 class="sub">Gate Two: Internal project ownership</h3>
   <p>An implementation partner can guide the work. The buyer still owns the business decisions. Someone inside the organization needs the authority, availability, and credibility to answer process, data, and ownership questions quickly.</p>
 
-  <h3 class="sub">Gate Three — Process redesign</h3>
+  <h3 class="sub">Gate Three: Process redesign</h3>
   <p>Workday should not be used to recreate every workaround from the old environment. Buyers need to decide which processes should stay, which should change, and which should be retired.</p>
 
-  <h3 class="sub">Gate Four — Data audit</h3>
+  <h3 class="sub">Gate Four: Data audit</h3>
   <p>Before build starts, the buyer should audit employee data, job architecture, position data, cost centers, pay groups, benefits, security roles, locations, supervisory organizations, historical data, payroll provider data, and reporting dependencies.</p>
 
-  <h3 class="sub">Gate Five — Integration inventory</h3>
+  <h3 class="sub">Gate Five: Integration inventory</h3>
   <p>Every inbound and outbound feed needs a named business owner, technical owner, testing owner, and post-go-live support owner.</p>
 
-  <h3 class="sub">Gate Six — Training and adoption plan</h3>
+  <h3 class="sub">Gate Six: Training and adoption plan</h3>
   <p>Training should be role-based. HR administrators, payroll teams, finance users, managers, employees, IT, and executives need different learning paths.</p>
 
-  <h3 class="sub">Gate Seven — Hypercare and SmartCare planning</h3>
+  <h3 class="sub">Gate Seven: Hypercare and SmartCare planning</h3>
   <p>The first 90 days after go-live should not be improvised. Buyers need issue triage, defect management, reporting review, payroll and finance validation, adoption tracking, and a path into ongoing optimization.</p>
 
   <div class="takeaway">
@@ -658,9 +694,9 @@ a{ color:var(--wd-blue); text-decoration:none; }
   <p>Workday's AI story is becoming more important to the business case. Workday says its platform supports human-AI collaboration, and its fiscal 2026 results reported 1.7 billion AI actions across the platform. Workday's customer facts page also says over 75% of core Workday customers use Workday AI.</p>
 
   <div class="stats">
-    <div class="stat"><div class="n">1.7B</div><div class="c">AI actions across the platform in fiscal 2026</div></div>
-    <div class="stat"><div class="n">75%<span class="u">+</span></div><div class="c">of core Workday customers use Workday AI</div></div>
-    <div class="stat"><div class="n">7X</div><div class="c">more likely to succeed with excellent change management (Prosci)</div></div>
+    <div class="stat"><div class="n">1.7B</div><div class="c">AI actions across the platform in fiscal 2026</div><span class="barlab">Platform-wide signal</span></div>
+    <div class="stat"><div class="n">75%<span class="u">+</span></div><div class="c">of core Workday customers use Workday AI</div><div class="bar"><i style="width:76%"></i></div><span class="barlab">Adoption</span></div>
+    <div class="stat"><div class="n">7X</div><div class="c">more likely to succeed with excellent change management (Prosci)</div><span class="barlab">Change-management effect</span></div>
   </div>
 
   <p>The risk is buying the AI story without an adoption plan.</p>
@@ -708,7 +744,11 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </div>
 
   <p class="lede">Workday cost should be evaluated over years, not months.</p>
-  <div class="note"><strong>Gartner Digital Markets'</strong> 2025 HR Software Trends Survey reported that <strong>70%</strong> of HR leaders expect HR software costs to rise and <strong>60%</strong> plan to boost investment, based on 3,256 respondents across 11 countries. The market isn't moving toward less HR technology spend. It is moving toward more disciplined spend.</div>
+  <div class="kpi-pair">
+    <div class="k"><div class="kn">70%</div><div class="kc">of HR leaders expect HR software costs to rise</div><div class="bar"><i style="width:70%"></i></div></div>
+    <div class="k"><div class="kn">60%</div><div class="kc">plan to boost HR technology investment</div><div class="bar"><i style="width:60%"></i></div></div>
+  </div>
+  <p style="font-size:9.2pt;color:var(--ink-soft);">Gartner Digital Markets 2025 HR Software Trends Survey, based on 3,256 respondents across 11 countries. The market isn't moving toward less HR technology spend. It is moving toward more disciplined spend.</p>
 
   <h3 class="sub">A practical Workday TCO model should include</h3>
   <div class="two-col">
@@ -835,10 +875,18 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </div>
 
   <div class="score-key">
-    <strong>Scoring guide</strong><br>
-    <b>55 to 80:</b> strong fit. Proceed with disciplined implementation planning.<br>
-    <b>40 to 54:</b> conditional fit. Resolve governance, data, TCO, or adoption gaps before contract signature.<br>
-    <b>Below 40:</b> pause. Revisit timing, platform scope, partner model, or internal readiness.
+    <strong>Scoring guide</strong>
+    <div class="meter">
+      <div class="seg pause" style="flex:39"><span class="sv">Below 40</span><span class="sl">Pause</span></div>
+      <div class="seg cond" style="flex:15"><span class="sv">40 to 54</span><span class="sl">Conditional fit</span></div>
+      <div class="seg strong" style="flex:26"><span class="sv">55 to 80</span><span class="sl">Strong fit</span></div>
+    </div>
+    <div class="meter-scale"><span>0</span><span>40</span><span>55</span><span>80</span></div>
+    <div style="margin-top:9pt;">
+      <b>55 to 80:</b> strong fit. Proceed with disciplined implementation planning.<br>
+      <b>40 to 54:</b> conditional fit. Resolve governance, data, TCO, or adoption gaps before contract signature.<br>
+      <b>Below 40:</b> pause. Revisit timing, platform scope, partner model, or internal readiness.
+    </div>
   </div>
 </section>
 
@@ -863,7 +911,7 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </div>
 
   <div class="takeaway" style="margin-top:14pt;">
-    <span class="lbl">Free assessment — pressure-test your Workday decision before you commit</span>
+    <span class="lbl">Free assessment. Pressure-test your Workday decision before you commit</span>
     <p style="margin-bottom:8pt;">Align HCM offers a complimentary Workday readiness or optimization assessment for organizations weighing the platform or already running it. What you receive:</p>
     <ul style="margin:0;">
       <li style="color:#E7EDF5;">Independent fit recommendation.</li>
@@ -893,10 +941,10 @@ a{ color:var(--wd-blue); text-decoration:none; }
 
   <h3 class="sub">Peer-reviewed academic research sources</h3>
   <p style="font-size:9.4pt;color:var(--ink-soft);margin-bottom:8pt;">These journal studies support the guide's implementation readiness, adoption, data quality, and ongoing governance claims.</p>
-  <div class="source"><div class="sb"></div><div><div class="st">Hong &amp; Kim — Information &amp; Management</div><div class="sd">ERP implementation success depends on organizational fit and implementation contingencies.</div></div></div>
-  <div class="source"><div class="sb"></div><div><div class="st">Umble, Haft &amp; Umble — European Journal of Operational Research</div><div class="sd">ERP implementations require disciplined procedures, project management, change management, and critical success factors.</div></div></div>
-  <div class="source"><div class="sb"></div><div><div class="st">DeLone &amp; McLean — Journal of Management Information Systems</div><div class="sd">Information quality, system quality, service quality, use, user satisfaction, and net benefits shape information system success.</div></div></div>
-  <div class="source"><div class="sb"></div><div><div class="st">Venkatesh et al. — MIS Quarterly</div><div class="sd">Technology acceptance depends on performance expectancy, effort expectancy, social influence, and facilitating conditions.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Hong and Kim, Information &amp; Management</div><div class="sd">ERP implementation success depends on organizational fit and implementation contingencies.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Umble, Haft, and Umble, European Journal of Operational Research</div><div class="sd">ERP implementations require disciplined procedures, project management, change management, and critical success factors.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">DeLone and McLean, Journal of Management Information Systems</div><div class="sd">Information quality, system quality, service quality, use, user satisfaction, and net benefits shape information system success.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Venkatesh et al., MIS Quarterly</div><div class="sd">Technology acceptance depends on performance expectancy, effort expectancy, social influence, and facilitating conditions.</div></div></div>
 </section>
 
 <!-- ============================= CH 14 ============================= -->
@@ -908,7 +956,7 @@ a{ color:var(--wd-blue); text-decoration:none; }
   <p>Print these worksheets or fill them in digitally. They turn the guide into your own decision record.</p>
 
   <div class="ws">
-    <h4>Worksheet One — Define the Pain</h4>
+    <h4>Worksheet One: Define the Pain</h4>
     <div class="field"><div class="fl">The Workday problem we are trying to solve is:</div><div class="line"></div></div>
     <div class="field"><div class="fl">The current workaround is:</div><div class="line"></div></div>
     <div class="field"><div class="fl">The business cost of keeping the workaround is:</div><div class="line"></div></div>
@@ -916,7 +964,7 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </div>
 
   <div class="ws">
-    <h4>Worksheet Two — Map Workday Fit</h4>
+    <h4>Worksheet Two: Map Workday Fit</h4>
     <div class="two-col">
       <div class="field"><div class="fl">Employee count:</div><div class="line"></div></div>
       <div class="field"><div class="fl">Countries:</div><div class="line"></div></div>
@@ -933,7 +981,7 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </div>
 
   <div class="ws">
-    <h4>Worksheet Three — Data Readiness <span style="font-weight:500;font-size:9pt;color:var(--ink-soft);">(score 1–5; anything below 3 needs cleanup before build)</span></h4>
+    <h4>Worksheet Three: Data Readiness <span style="font-weight:500;font-size:9pt;color:var(--ink-soft);">(score 1 to 5; anything below 3 needs cleanup before build)</span></h4>
     <div class="score-item"><span class="lab">Worker data</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
     <div class="score-item"><span class="lab">Job architecture</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
     <div class="score-item"><span class="lab">Position data</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
@@ -948,7 +996,7 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </div>
 
   <div class="ws">
-    <h4>Worksheet Four — Reporting Governance</h4>
+    <h4>Worksheet Four: Reporting Governance</h4>
     <p style="font-size:9.4pt;color:var(--ink-soft);margin:0 0 6pt;">Define the official owner, source logic, approved definition, report type, security model, and review cadence for each metric.</p>
     <div class="two-col">
       <div class="field"><div class="fl">Headcount</div><div class="line"></div></div>
@@ -964,7 +1012,7 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </div>
 
   <div class="ws">
-    <h4>Worksheet Five — AI Activation Readiness</h4>
+    <h4>Worksheet Five: AI Activation Readiness</h4>
     <div class="field"><div class="fl">Which Workday AI capabilities do we already own?</div><div class="line"></div></div>
     <div class="field"><div class="fl">Which manual HR or Finance workflows create the most pain?</div><div class="line"></div></div>
     <div class="field"><div class="fl">Which user groups would need training and trust-building?</div><div class="line"></div></div>
@@ -972,10 +1020,10 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </div>
 
   <div class="ws">
-    <h4>Worksheet Six — First 90 Days</h4>
-    <div class="field"><div class="fl">0–30 days:</div><div class="sd" style="font-size:9.2pt;color:var(--ink-soft);">Stabilize core workflows, payroll and finance handoffs, integrations, defects, access issues, and user support.</div><div class="line"></div></div>
-    <div class="field"><div class="fl">31–60 days:</div><div class="sd" style="font-size:9.2pt;color:var(--ink-soft);">Normalize reporting, manager self-service, employee workflows, security requests, and support ownership.</div><div class="line"></div></div>
-    <div class="field"><div class="fl">61–90 days:</div><div class="sd" style="font-size:9.2pt;color:var(--ink-soft);">Optimize configuration, clean reports, improve adoption, activate practical capabilities, and transition to SmartCare or ongoing support.</div><div class="line"></div></div>
+    <h4>Worksheet Six: First 90 Days</h4>
+    <div class="field"><div class="fl">0 to 30 days:</div><div class="sd" style="font-size:9.2pt;color:var(--ink-soft);">Stabilize core workflows, payroll and finance handoffs, integrations, defects, access issues, and user support.</div><div class="line"></div></div>
+    <div class="field"><div class="fl">31 to 60 days:</div><div class="sd" style="font-size:9.2pt;color:var(--ink-soft);">Normalize reporting, manager self-service, employee workflows, security requests, and support ownership.</div><div class="line"></div></div>
+    <div class="field"><div class="fl">61 to 90 days:</div><div class="sd" style="font-size:9.2pt;color:var(--ink-soft);">Optimize configuration, clean reports, improve adoption, activate practical capabilities, and transition to SmartCare or ongoing support.</div><div class="line"></div></div>
   </div>
 
   <div class="foot-legal">
