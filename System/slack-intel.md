@@ -1,5 +1,5 @@
 ---
-last_checked: 2026-06-15
+last_checked: 2026-06-16
 tags: [system, slack]
 ---
 
@@ -10,6 +10,8 @@ Updated by `slack-intel` inside `competitive-task-orchestrator`.
 ## Status
 
 **mcp_unavailable** — Slack MCP not connected in this environment.
+
+Slack not scanned; connect Slack MCP for live intel.
 
 ## Immediate replies needed
 
@@ -22,4 +24,6 @@ Updated by `slack-intel` inside `competitive-task-orchestrator`.
 ## Coverage notes
 
 • Workspaces not scanned: Momentum 360, Buzz Bull, Align HCM
+• DMs: not scanned
+• @Dillon / @dillon mentions (48h): not scanned
 • Recommendation: add Slack connector to umbrella orchestrator environment so `slack-intel` can classify P0 direct asks alongside Gmail
