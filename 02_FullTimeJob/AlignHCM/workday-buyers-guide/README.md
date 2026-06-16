@@ -5,16 +5,19 @@ leaders, and transformation teams evaluating Workday.
 
 ## Files
 - `workday-buyers-guide.html` — source layout (all 14 chapters extracted)
-- `Workday-Buyers-Guide-Align-HCM-2026.pdf` — rendered output (31 pages, US Letter)
-- `assets/` — embedded brand fonts (Plus Jakarta Sans, DM Sans)
+- `Workday-Buyers-Guide-Align-HCM-2026.pdf` — rendered output (22 pages, US Letter)
+- `assets/` — embedded brand fonts (Plus Jakarta Sans, DM Sans) + official Align HCM logo
 
 ## Design notes
 - On-brand palette: navy `#0A1628` / `#15233B`, orange `#F05A28` / `#FF6B35`,
   teal accent `#2BB5A0`, Workday blue `#0875E1`.
 - Orange gradient chapter header bands, navy "Buyer takeaway" panels, teal
   "Buyer question" callouts, stat strips, scorecard, and a fill-in workbook.
-- Align HCM and Workday logos are built as inline SVG wordmarks (editorial
-  reference). Swap for official brand-kit logo files in Canva for the final.
+- Uses the official Align HCM logo (`assets/alignhcm-logo.png`, transparent,
+  extracted from the SmartCare video project). The Workday logo is a clean
+  editorial wordmark; swap for the official asset before external distribution.
+- Layout flows continuously (chapters do not force page breaks) to avoid
+  near-empty pages: 22 pages instead of 31.
 
 ## Rebuild the PDF
 ```bash

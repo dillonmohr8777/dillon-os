@@ -138,6 +138,7 @@ li::before{
 /* ============================================================
    LOGOS
    ============================================================ */
+.brand-logo{ height:46pt; width:auto; display:block; }
 .logo-align{ display:flex; align-items:center; gap:10pt; }
 .logo-align .mark{ width:34pt; height:34pt; }
 .logo-align .wm{ font-family:'Jakarta'; font-weight:800; font-size:18pt; letter-spacing:-.01em; line-height:1;}
@@ -156,12 +157,13 @@ li::before{
 /* ============================================================
    SECTION DIVIDERS / HEADERS
    ============================================================ */
-.toc-page{ page:nochrome; }
+.toc-page{ page:nochrome; page-break-after:always; }
 .h-band{
   margin:0 -2mm 14pt; padding:14pt 16pt; border-radius:12pt;
   background:linear-gradient(120deg,var(--orange) 0%,var(--orange-2) 78%, #FF8A4D 100%);
   color:#fff; display:flex; align-items:center; gap:14pt;
   box-shadow:0 6pt 16pt rgba(240,90,40,.20);
+  break-inside:avoid; break-after:avoid;
 }
 .h-band .num{
   font-family:'Jakarta'; font-weight:800; font-size:23pt; line-height:1;
@@ -171,8 +173,12 @@ li::before{
 .h-band .k{ font-family:'Jakarta'; font-weight:700; font-size:7.5pt; letter-spacing:.24em;
   text-transform:uppercase; color:rgba(255,255,255,.85); display:block; margin-bottom:3pt;}
 
-.chapter{ page-break-before:always; }
-.chapter:first-of-type{ page-break-before:auto; }
+/* Flowing layout: chapters run continuously to avoid near-empty pages.
+   The orange header band acts as an in-page section divider. */
+.chapter{ margin-top:18pt; }
+.chapter:first-of-type{ margin-top:0; }
+/* Force a fresh page only for a few heavyweight sections. */
+.chapter.break{ page-break-before:always; margin-top:0; }
 
 h3.sub{
   font-family:'Jakarta'; font-weight:700; font-size:12pt; color:var(--navy-900);
@@ -290,18 +296,8 @@ a{ color:var(--wd-blue); text-decoration:none; }
   <div class="cover-pad">
    <div class="cover-inner">
     <div class="topbar">
-      <div class="logo-align dark">
-        <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="6" y="3" width="3.4" height="34" rx="1.7" fill="#FF6B35"/>
-          <rect x="13" y="7"  width="22" height="4.6" rx="2.3" fill="#FFFFFF"/>
-          <rect x="13" y="17.7" width="15" height="4.6" rx="2.3" fill="#FF6B35"/>
-          <rect x="13" y="28.4" width="26" height="4.6" rx="2.3" fill="#FFFFFF"/>
-        </svg>
-        <div>
-          <div class="wm">Align<span class="hcm">HCM</span></div>
-          <span class="tag">HCM &amp; Finance Advisory</span>
-        </div>
-      </div>
+      <img class="brand-logo" src="assets/alignhcm-logo.png" alt="Align HCM — Human Capital Management">
+
       <div class="platform-chip">
         <span class="lbl">Platform evaluated</span>
         <span class="logo-wd on-dark"><span class="dot"></span><span class="wm">workday</span></span>
