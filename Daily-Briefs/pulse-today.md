@@ -1,68 +1,69 @@
-# Daily Pulse 2026-06-15
+# Daily Pulse 2026-06-16
 
 ## Coverage Notes
 
-• Run date 2026-06-15. Scanned `01_Clients/` (138 files), `02_Campaigns/` (9 queue files), and `02_FullTimeJob/AlignHCM/` (7 files).
-• Vault client intel is frozen at April 2026. No `01_Clients/` notes carry `last_touched` or `due` dates in June. Live Gmail/Slack scans are needed to refresh P0 status.
-• `02_Campaigns/` queue files are empty templates. No non-empty pending items in Pending Review, Pending Requests, High Priority, Queued, or In Progress sections.
-• Align HCM calendars (`content-calendar.md`, `linkedin-calendar.md`) still reference April 2026. No June due dates found. `linkedin-calendar.md` last_touched 2026-04-15.
-• Previous `pulse-today.md` was dated 2026-04-15. This run advances the pulse to the orchestrator run date.
+• Run date 2026-06-16. Scanned `01_Clients/` (138 files), `02_Campaigns/` (9 queue files), and `02_FullTimeJob/AlignHCM/` (7 files).
+• **Git (last 24h):** Four commits today on branch `cursor/competitive-task-consolidation-809c` — umbrella merge, gmail-intel, slack-intel, and content-routines June calendars. **No `01_Clients/` files modified in the last 24h.**
+• Vault client intel remains frozen at **2026-04-15** in overview frontmatter. Live Gmail/Slack MCP unavailable; operational June deadlines come from `System/claude-memory-sync.md` and `System/urgent-replies.md`, not client YAML.
+• `02_Campaigns/` queue files are empty templates — no pending items in High Priority, Pending Requests, Queued, In Progress, or Pending Review sections.
+• Align HCM calendars rolled to June 16–22 by `content-routines` today. BOK Law June week generated.
+• Previous pulse was dated 2026-06-15. This run advances to orchestrator run date 2026-06-16.
 
 ## Active Clients
 
-• **NKCDC** (P0 launch blocked) • last_touched 2026-04-15 • Campaign built and approved. Waiting on Anthony Miller to ship Free Tax Prep landing page. No response since Mac's 2026-04-15 check-in.
-• **Bar Crawl USA** (P0 ad disapprovals) • last_touched 2026-04-15 • 2 disapproved ads (Halloween / Fall Cocktail Crawl). Resolution owed to Andy. Pre-approved copy only per brand rules.
-• **Hardwood Artisan** (P0 billing risk, status at_risk) • last_touched 2026-04-07 • Dalton has not updated card on file since Sean's 2026-04-07 request. Engagement pause risk.
-• **Commercial Cleaners Alliance** (onboarding) • last_touched 2026-04-14 • Creative delivery audit against 2026-04-08 commitment (CCA + NexGen).
-• **Onsite Concrete** • last_touched 2026-04-09 • Standing weekly call cadence. Vault due date 2026-04-16 is stale.
-• **LinkEZE** • last_touched 2026-04-05 • Enhanced conversions diagnostics and MFA confirmation still open. Vault due 2026-04-06 is 70 days overdue.
-• **Fresh Blends / Replenish** • last_touched 2026-04-13 • Verify campaign pacing and send Mia first-week performance snapshot.
-• **Kimberly James Bridal** • last_touched 2026-04-15 • Publish Timeline page and verify GA4/GSC indexing.
-• **Jeff Hozias** • last_touched 2026-04-14 • Launch approved Meta seller campaign.
-• **Omega Landscaping** • last_touched 2026-04-14 • Chase David for drone footage and confirm John Belaska meeting.
-• **BOK Law** • last_touched 2026-04-14 • Weekly social cadence (Wed Wisdom, Family Fridays, Sat Solutions).
-• **Shadow HVAC** • last_touched 2026-03-02 • LSA clearance and GBP cadence check. Longest stall in vault.
+• **None touched in last 24h.** No client vault files changed in git since 2026-06-15.
+• High-momentum clients from stale vault intel (for context only — not 24h activity):
+  • **NKCDC** (P0 launch blocked) — last_touched 2026-04-15 — Anthony unresponsive; Free Tax Prep landing page blocking launch.
+  • **Bar Crawl USA** (P0 ad disapprovals) — last_touched 2026-04-15 — 2 disapproved ads (Halloween / Fall Cocktail Crawl).
+  • **Hardwood Artisan** (P0 billing, at_risk) — last_touched 2026-04-07 — Dalton card update outstanding since Sean's 2026-04-07 request.
+  • **BOK Law** (P1 calendar) — weekly social drafts **due today 2026-06-16** per memory sync; June content now generated.
 
 ## Pending Deliverables
 
-• **No items due within 48h** (2026-06-15 through 2026-06-17). No client frontmatter carries June due dates.
-• **Overdue vault due dates** (all April, require status refresh):
-  • LinkEZE • due 2026-04-06 • Enhanced conversions + MFA on account 809-600-6448
-  • NKCDC • due 2026-04-16 • Launch blocked on client landing page
-  • Commercial Cleaners Alliance • due 2026-04-16 • CCA + NexGen creative delivery
-  • Onsite Concrete • due 2026-04-16 • Weekly call (date stale)
-  • Hardwood Artisan • due 2026-04-18 • Card update for next 90 days
-  • BOK Law • due 2026-04-19 • Weekly social content cadence
-  • Bar Crawl USA • due 2026-04-25 • Disapproval resolution + Taco & Tequila wave 1 pacing
-• **02_Campaigns queues** • All pending sections empty. No queued optimizations, creative requests, landing pages, or search term reviews.
-• **Align HCM** • No dated deliverables in `content-calendar.md` or `linkedin-calendar.md`. April highlights and May calendar text only. No June entries.
+• **Due within 48h (2026-06-16 through 2026-06-18)** — calendar/routine-derived:
+  • **BOK Law** — 2026-06-16 — Deliver weekly social drafts (Wed Wisdom + Thu + Fri) to Dorothy/Aleksandra/Rachael.
+  • **Align HCM** — 2026-06-17 — Wednesday SmartCare brand awareness slot (company page).
+  • **BOK Law** — 2026-06-17 — Wednesday Wisdom publish.
+  • **BOK Law** — 2026-06-18 — Turn the Page Thursday publish.
+• **Overdue (vault frontmatter — April dates, status refresh required):**
+  • LinkEZE — due 2026-04-06 — Enhanced conversions diagnostics + MFA on 809-600-6448.
+  • NKCDC — due 2026-04-16 — Launch blocked on client landing page.
+  • Commercial Cleaners Alliance — due 2026-04-16 — CCA + NexGen creative delivery (2026-04-08 commitment).
+  • Onsite Concrete — due 2026-04-16 — Weekly call date stale (standing Thu 1 PM ET cadence).
+  • Hardwood Artisan — due 2026-04-18 — Card update for next 90 days.
+  • Bar Crawl USA — due 2026-04-25 — Disapproval resolution + Taco & Tequila pacing.
+• **Align HCM overdue:** Monday thought leadership (Maher El-Abdallah) was due 2026-06-15; draft ready in `linkedin-calendar.md` for today.
+• **02_Campaigns queues:** All empty.
+• **Align HCM SEO:** 10 blogs at `ready-to-publish` in `SEO/AlignHCM/Blogs/`; zero published.
 
 ## Stalled Items
 
-• Criteria: `status: active` (or `onboarding` / `at_risk`) with `last_touched` older than 7 days (before 2026-06-08), or no tracking frontmatter at all.
-• **Shadow HVAC** • last_touched 2026-03-02 (105 days) • Confirm LSA cleared and GBP cadence resumed
-• **LinkEZE** • last_touched 2026-04-05 (71 days) • Enhanced conversions diagnostics + MFA
-• **Hardwood Artisan** • last_touched 2026-04-07 (69 days) • Billing card update (at_risk)
-• **Onsite Concrete** • last_touched 2026-04-09 (67 days) • Weekly call attendance
-• **Fresh Blends / Replenish** • last_touched 2026-04-13 (63 days) • First-week performance snapshot
-• **Commercial Cleaners Alliance** • last_touched 2026-04-14 (62 days) • Creative delivery audit
-• **BOK Law** • last_touched 2026-04-14 (62 days) • Weekly social cadence
-• **Jeff Hozias** • last_touched 2026-04-14 (62 days) • Meta seller campaign launch
-• **Omega Landscaping** • last_touched 2026-04-14 (62 days) • Drone footage + John Belaska meeting
-• **Bar Crawl USA** • last_touched 2026-04-15 (61 days) • Ad disapproval resolution
-• **NKCDC** • last_touched 2026-04-15 (61 days) • Launch blocked on client page
-• **Kimberly James Bridal** • last_touched 2026-04-15 (61 days) • Timeline page publish
-• **10 active clients with no overview/tracking frontmatter** • Buzz Bull, Florecita, Bridge of Hope OTC, Bend Plastic Surgery, Bluegrass Janitorial, Coach B, AWCI, Vanessa, PNW Pro Clean, Next Gen Solutions
+• Criteria: `status: active` (or `onboarding` / `at_risk`) with `last_touched` before 2026-06-09 (>7 days), or no tracking frontmatter.
+• **Shadow HVAC** — 2026-03-02 (106 days) — Confirm LSA live post Evident reset; GBP 4x/week cadence.
+• **LinkEZE** — 2026-04-05 (72 days) — Enhanced conversions + MFA on 809-600-6448.
+• **Hardwood Artisan** — 2026-04-07 (70 days, at_risk) — Billing card update.
+• **Onsite Concrete** — 2026-04-09 (68 days) — Standing weekly call; refresh next_action from stale 2026-04-16 date.
+• **Fresh Blends / Replenish** — 2026-04-13 (64 days) — Verify launch pacing; first-week snapshot to Mia.
+• **Commercial Cleaners Alliance** — 2026-04-14 (63 days, onboarding) — Creative delivery audit.
+• **BOK Law** — 2026-04-14 (63 days) — Vault stale; June social cadence active in memory sync.
+• **Jeff Hozias** — 2026-04-14 (63 days) — Launch approved Meta seller campaign.
+• **Omega Landscaping** — 2026-04-14 (63 days) — Drone footage + John Belaska meeting unconfirmed.
+• **Bar Crawl USA** — 2026-04-15 (62 days) — Ad disapproval resolution.
+• **NKCDC** — 2026-04-15 (62 days) — Launch blocked on client page.
+• **Kimberly James Bridal** — 2026-04-15 (62 days) — Publish Timeline page; GA4/GSC check.
+• **Align HCM** (`02_FullTimeJob/AlignHCM/overview.md`) — 2026-04-15 (62 days) — LinkedIn calendar now rolled to June 16–22.
+• **10 active clients with no overview/tracking frontmatter:** Buzz Bull, Florecita, Bridge of Hope OTC, Bend Plastic Surgery, Bluegrass Janitorial, Coach B, AWCI, Vanessa, PNW Pro Clean, Next Gen Solutions.
 
 ## Frontmatter Gaps
 
-• **12 M360 clients have `overview.md` with full tracking** • Bar Crawl USA, BOK Law, CCA, Fresh Blends, Hardwood Artisan, Jeff Hozias, KJB, LinkEZE, NKCDC, Omega, Onsite Concrete, Shadow HVAC. Root `.md` stubs still lack `last_touched` / `next_action` / `due`.
-• **10 active clients missing all three tracking fields** (no `overview.md`): Buzz Bull, Florecita, Bridge of Hope OTC, Bend Plastic Surgery, Bluegrass Janitorial, Coach B, AWCI, Vanessa, PNW Pro Clean, Next Gen Solutions
-• **Align HCM** • `01_Clients/Align HCM.md` has `status: active` only. Production calendars live in `02_FullTimeJob/AlignHCM/` but carry no `due` fields and no June 2026 entries.
-• **Recommendation** • Add `overview.md` with `last_touched`, `next_action`, `due` to every active client. Refresh all April dates before next orchestrator run.
+• **12 M360 clients have `overview.md` with tracking** — Bar Crawl USA, BOK Law, CCA, Fresh Blends, Hardwood Artisan, Jeff Hozias, KJB, LinkEZE, NKCDC, Omega, Onsite Concrete, Shadow HVAC. Root `.md` stubs still lack `last_touched` / `next_action` / `due`.
+• **5 tracked clients have `due: none`** — Shadow HVAC, KJB, Omega, Jeff Hozias, Fresh Blends — need real due dates or explicit rollover policy.
+• **10 active clients missing all three tracking fields** (no `overview.md`): Buzz Bull, Florecita, Bridge of Hope OTC, Bend Plastic Surgery, Bluegrass Janitorial, Coach B, AWCI, Vanessa, PNW Pro Clean, Next Gen Solutions.
+• **Align HCM** — `01_Clients/Align HCM.md` has `status: active` only. Production lives in `02_FullTimeJob/AlignHCM/`; `overview.md` has `last_touched` but no `next_action` or `due`.
+• **Recommendation:** Roll all April `last_touched`/`due` values forward on next touch. Add `overview.md` schema to the 10 untracked clients. Populate `02_Campaigns/` queues from client `active-campaigns.md` notes.
 
 ## Tomorrow's Priority Stack
 
-1. **NKCDC** • Nudge Anthony Miller on Free Tax Prep landing page ETA. P0 launch blocked. CC Mac and Melissa per standard rules.
-2. **Bar Crawl USA** • Resolve 2 ad disapprovals. Confirm zero alcohol language. Reply to Andy with fix timeline.
-3. **Hardwood Artisan** • Nudge Dalton on card update. CC Sean. Flag engagement pause risk.
+1. **NKCDC** — Nudge Anthony Miller on Free Tax Prep landing page ETA. P0 launch blocked. CC Mac and Melissa per standard rules.
+2. **Bar Crawl USA** — Resolve 2 ad disapprovals. Confirm zero alcohol language per brand rules. Reply to Andy with fix timeline.
+3. **BOK Law + Align HCM (2026-06-17)** — Ship BOK Law Wednesday Wisdom; draft/post Align HCM SmartCare Wednesday slot. BOK weekly bundle was due today 2026-06-16 — clear backlog first if not sent.
