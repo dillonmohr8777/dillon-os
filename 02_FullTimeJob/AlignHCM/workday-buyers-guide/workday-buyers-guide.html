@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Workday Buyer's Guide — Align HCM — 2026 Edition</title>
+<style>
+/* ============================================================
+   FONTS  (Plus Jakarta Sans = display, DM Sans = body)
+   ============================================================ */
+@font-face{
+  font-family:'Jakarta';
+  src:url('assets/PlusJakartaSans.ttf') format('truetype');
+  font-weight:200 800; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'DM Sans';
+  src:url('assets/DMSans.ttf') format('truetype');
+  font-weight:100 900; font-style:normal; font-display:swap;
+}
+
+/* ============================================================
+   BRAND TOKENS
+   ============================================================ */
+:root{
+  --navy-900:#0A1628;
+  --navy-800:#15233B;
+  --navy-700:#2D3748;
+  --orange:#F05A28;
+  --orange-2:#FF6B35;
+  --orange-soft:#FFF1EA;
+  --amber:#E8832A;
+  --teal:#2BB5A0;
+  --teal-soft:#E9F7F4;
+  --wd-blue:#0875E1;
+  --ink:#22303F;
+  --ink-soft:#56657A;
+  --line:#E4E8EF;
+  --paper:#FFFFFF;
+  --paper-2:#F6F8FB;
+}
+
+/* ============================================================
+   PAGE  (US Letter)
+   ============================================================ */
+@page{
+  size:Letter;
+  margin:20mm 18mm 18mm 18mm;
+  @bottom-left{
+    content:"Workday Buyer's Guide";
+    font-family:'DM Sans'; font-size:7.5pt; color:#9AA6B6; letter-spacing:.04em;
+  }
+  @bottom-center{
+    content:"Align HCM  ·  2026 Edition";
+    font-family:'DM Sans'; font-size:7.5pt; color:#9AA6B6; letter-spacing:.04em;
+  }
+  @bottom-right{
+    content:counter(page);
+    font-family:'Jakarta'; font-weight:700; font-size:8.5pt; color:var(--orange);
+  }
+}
+@page cover{ margin:0; @bottom-left{content:""} @bottom-center{content:""} @bottom-right{content:""} }
+@page nochrome{ @bottom-left{content:""} @bottom-center{content:""} @bottom-right{content:""} }
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*{box-sizing:border-box;}
+html{ -weasy-hyphens:none; }
+body{
+  font-family:'DM Sans', sans-serif;
+  color:var(--ink);
+  font-size:10.3pt;
+  line-height:1.6;
+  margin:0;
+}
+p{ margin:0 0 9pt; }
+h1,h2,h3,h4{ font-family:'Jakarta', sans-serif; color:var(--navy-900); margin:0; }
+strong{ color:var(--navy-800); font-weight:700; }
+em{ font-style:italic; color:var(--ink); }
+ul{ margin:0 0 10pt; padding-left:0; list-style:none; }
+li{ position:relative; padding-left:16pt; margin-bottom:5pt; }
+li::before{
+  content:"";
+  position:absolute; left:2pt; top:7pt;
+  width:5pt; height:5pt; border-radius:1.5pt;
+  background:linear-gradient(135deg,var(--orange) 0%,var(--orange-2) 100%);
+}
+
+/* ============================================================
+   COVER
+   ============================================================ */
+.cover{
+  page:cover; position:relative;
+  height:279.4mm; width:215.9mm;
+  background:
+    radial-gradient(140% 90% at 88% 8%, rgba(240,90,40,.30) 0%, rgba(240,90,40,0) 55%),
+    radial-gradient(120% 80% at 5% 102%, rgba(43,181,160,.22) 0%, rgba(43,181,160,0) 50%),
+    linear-gradient(160deg, var(--navy-900) 0%, var(--navy-800) 60%, #0B1A30 100%);
+  color:#fff; overflow:hidden;
+  page-break-after:always;
+}
+.cover-pad{ padding:24mm 22mm; height:100%; display:flex; flex-direction:column; }
+.cover .topbar{ display:flex; justify-content:space-between; align-items:flex-start; }
+.cover .glow{
+  position:absolute; border-radius:50%; filter:blur(120px); opacity:.55; z-index:0;
+}
+.cover .glow.a{ width:340px;height:340px; background:var(--orange); top:-90px; right:-60px;}
+.cover .glow.b{ width:300px;height:300px; background:var(--teal); bottom:-120px; left:-90px;}
+.cover-inner{ position:relative; z-index:2; display:flex; flex-direction:column; height:100%;}
+
+.eyebrow{
+  font-family:'Jakarta'; font-weight:700; font-size:9pt; letter-spacing:.32em;
+  text-transform:uppercase; color:var(--orange-2);
+}
+.cover h1{
+  color:#fff; font-weight:800; font-size:43pt; line-height:1.02;
+  letter-spacing:-.015em; margin:14pt 0 0;
+}
+.cover h1 .hl{ color:var(--orange-2); }
+.cover .deck{
+  font-size:12.5pt; line-height:1.55; color:#C7D2E0; max-width:150mm; margin-top:16pt;
+}
+.cover .rule{ height:3pt; width:64pt; border-radius:2pt;
+  background:linear-gradient(135deg,var(--orange) 0%,var(--orange-2) 100%); margin:20pt 0;}
+.cover .meta{ display:flex; gap:26pt; margin-top:4pt; }
+.cover .meta .k{ font-family:'Jakarta'; font-size:8pt; letter-spacing:.18em; text-transform:uppercase; color:#8A99AC;}
+.cover .meta .v{ font-family:'Jakarta'; font-weight:700; font-size:12pt; color:#fff; margin-top:2pt;}
+
+.platform-chip{
+  display:inline-flex; align-items:center; gap:10pt;
+  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+  border-radius:12pt; padding:10pt 16pt; backdrop-filter:blur(18px);
+}
+.platform-chip .lbl{ font-family:'Jakarta'; font-size:7.5pt; letter-spacing:.18em; text-transform:uppercase; color:#9DB0C6;}
+
+.cover .spacer{ flex:1; }
+
+/* ============================================================
+   LOGOS
+   ============================================================ */
+.logo-align{ display:flex; align-items:center; gap:10pt; }
+.logo-align .mark{ width:34pt; height:34pt; }
+.logo-align .wm{ font-family:'Jakarta'; font-weight:800; font-size:18pt; letter-spacing:-.01em; line-height:1;}
+.logo-align .wm .hcm{ color:var(--orange-2); margin-left:3pt; }
+.logo-align.dark .wm{ color:#fff; }
+.logo-align.light .wm{ color:var(--navy-900); }
+.logo-align .tag{ display:block; font-family:'Jakarta'; font-weight:600; font-size:6pt;
+  letter-spacing:.34em; text-transform:uppercase; color:#94A3B6; margin-top:3pt;}
+
+.logo-wd{ display:flex; align-items:center; gap:7pt; }
+.logo-wd .wm{ font-family:'Jakarta'; font-weight:800; font-size:15pt; letter-spacing:-.02em; color:var(--wd-blue); line-height:1;}
+.logo-wd.on-dark .wm{ color:#5AB0FF; }
+.logo-wd .dot{ width:9pt;height:9pt;border-radius:50%;
+  background:linear-gradient(135deg,#FDB813 0%,var(--wd-blue) 90%); }
+
+/* ============================================================
+   SECTION DIVIDERS / HEADERS
+   ============================================================ */
+.toc-page{ page:nochrome; }
+.h-band{
+  margin:0 -2mm 14pt; padding:14pt 16pt; border-radius:12pt;
+  background:linear-gradient(120deg,var(--orange) 0%,var(--orange-2) 78%, #FF8A4D 100%);
+  color:#fff; display:flex; align-items:center; gap:14pt;
+  box-shadow:0 6pt 16pt rgba(240,90,40,.20);
+}
+.h-band .num{
+  font-family:'Jakarta'; font-weight:800; font-size:23pt; line-height:1;
+  color:rgba(255,255,255,.55);
+}
+.h-band .t{ font-family:'Jakarta'; font-weight:800; font-size:17pt; line-height:1.1; letter-spacing:-.01em;}
+.h-band .k{ font-family:'Jakarta'; font-weight:700; font-size:7.5pt; letter-spacing:.24em;
+  text-transform:uppercase; color:rgba(255,255,255,.85); display:block; margin-bottom:3pt;}
+
+.chapter{ page-break-before:always; }
+.chapter:first-of-type{ page-break-before:auto; }
+
+h3.sub{
+  font-family:'Jakarta'; font-weight:700; font-size:12pt; color:var(--navy-900);
+  margin:16pt 0 6pt; padding-left:11pt; position:relative;
+}
+h3.sub::before{
+  content:""; position:absolute; left:0; top:2pt; bottom:2pt; width:4pt; border-radius:2pt;
+  background:linear-gradient(180deg,var(--orange) 0%,var(--orange-2) 100%);
+}
+h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--navy-800); margin:11pt 0 3pt; }
+
+/* ============================================================
+   CALLOUTS
+   ============================================================ */
+.buyer-q{
+  background:var(--teal-soft); border-left:4pt solid var(--teal);
+  border-radius:0 8pt 8pt 0; padding:9pt 13pt; margin:10pt 0;
+}
+.buyer-q .lbl{ font-family:'Jakarta'; font-weight:700; font-size:7.5pt; letter-spacing:.2em;
+  text-transform:uppercase; color:#1B8C7B; display:block; margin-bottom:2pt;}
+.buyer-q p{ margin:0; font-size:10pt; color:var(--navy-800); }
+
+.takeaway{
+  background:linear-gradient(135deg,var(--navy-900) 0%, var(--navy-800) 100%);
+  color:#E7EDF5; border-radius:11pt; padding:13pt 16pt; margin:13pt 0;
+  position:relative; overflow:hidden;
+}
+.takeaway::after{ content:""; position:absolute; top:-30pt; right:-30pt; width:90pt; height:90pt;
+  border-radius:50%; background:radial-gradient(circle,rgba(240,90,40,.4),transparent 70%);}
+.takeaway .lbl{ font-family:'Jakarta'; font-weight:800; font-size:8pt; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--orange-2); display:block; margin-bottom:4pt;}
+.takeaway p{ margin:0; font-size:10.2pt; line-height:1.55; }
+
+.note{
+  background:var(--orange-soft); border:1px solid #FBD9C8; border-radius:9pt;
+  padding:11pt 14pt; margin:11pt 0; font-size:9.8pt; color:var(--navy-800);
+}
+
+/* ============================================================
+   STAT STRIP
+   ============================================================ */
+.stats{ display:flex; gap:9pt; margin:12pt 0; }
+.stat{
+  flex:1; background:var(--paper-2); border:1px solid var(--line);
+  border-radius:10pt; padding:11pt 12pt; border-top:3pt solid var(--orange);
+}
+.stat .n{ font-family:'Jakarta'; font-weight:800; font-size:18pt; color:var(--navy-900); line-height:1; letter-spacing:-.02em;}
+.stat .n .u{ font-size:10pt; color:var(--orange); }
+.stat .c{ font-size:8pt; color:var(--ink-soft); margin-top:5pt; line-height:1.35; }
+
+/* ============================================================
+   TOC
+   ============================================================ */
+.toc-hero{
+  background:linear-gradient(160deg,var(--navy-900),var(--navy-800));
+  color:#fff; border-radius:14pt; padding:20pt 22pt; margin-bottom:16pt; position:relative; overflow:hidden;
+}
+.toc-hero .glow{ position:absolute; width:200px;height:200px;border-radius:50%; filter:blur(90px);
+  background:var(--orange); opacity:.4; top:-60px; right:-40px;}
+.toc-hero h2{ color:#fff; font-size:20pt; font-weight:800; position:relative;}
+.toc-hero p{ color:#B9C6D6; margin:6pt 0 0; position:relative; font-size:10pt;}
+.toc-list{ column-count:2; column-gap:20pt; }
+.toc-row{ display:flex; align-items:baseline; gap:8pt; padding:6pt 0; border-bottom:1px solid var(--line);
+  break-inside:avoid; }
+.toc-row .tn{ font-family:'Jakarta'; font-weight:800; font-size:11pt; color:var(--orange); width:20pt;}
+.toc-row .tt{ font-family:'Jakarta'; font-weight:600; font-size:9.6pt; color:var(--navy-800); }
+
+/* ============================================================
+   SCORECARD / WORKBOOK
+   ============================================================ */
+.score-group{ margin:10pt 0; }
+.score-group .gh{ font-family:'Jakarta'; font-weight:700; font-size:10pt; color:var(--orange);
+  text-transform:uppercase; letter-spacing:.08em; margin-bottom:5pt;}
+.score-item{ display:flex; align-items:center; gap:10pt; padding:5.5pt 0; border-bottom:1px solid var(--line); break-inside:avoid;}
+.score-item .lab{ flex:1; font-size:9.6pt; color:var(--navy-800);}
+.dots{ display:flex; gap:4pt; }
+.dots span{ width:11pt;height:11pt;border-radius:3pt; border:1.4pt solid var(--orange); display:inline-block;}
+.score-key{ background:var(--paper-2); border:1px solid var(--line); border-radius:10pt; padding:11pt 14pt; margin-top:10pt; font-size:9.6pt;}
+.score-key b{ color:var(--orange); }
+
+.field{ margin:7pt 0; }
+.field .fl{ font-family:'Jakarta'; font-weight:600; font-size:9.6pt; color:var(--navy-800); }
+.field .line{ border-bottom:1.4px dotted #B9C3D2; height:15pt; margin-top:2pt; }
+.ws{ background:var(--paper-2); border:1px solid var(--line); border-left:4pt solid var(--teal);
+  border-radius:0 10pt 10pt 0; padding:12pt 15pt; margin:11pt 0; break-inside:avoid;}
+.ws h4{ font-family:'Jakarta'; font-weight:700; font-size:11pt; color:var(--navy-900); margin:0 0 6pt;}
+
+/* ============================================================
+   MISC
+   ============================================================ */
+.lede{ font-size:11.5pt; line-height:1.6; color:var(--navy-800); border-left:4pt solid var(--orange);
+  padding-left:13pt; margin:0 0 14pt; font-family:'Jakarta'; font-weight:500;}
+.two-col{ column-count:2; column-gap:18pt; }
+.profile{ background:var(--paper-2); border:1px solid var(--line); border-radius:10pt; padding:11pt 14pt; margin:8pt 0; break-inside:avoid;}
+.profile .pt{ font-family:'Jakarta'; font-weight:700; font-size:10pt; color:var(--orange); margin-bottom:2pt;}
+.source{ display:flex; gap:10pt; padding:8pt 0; border-bottom:1px solid var(--line); break-inside:avoid;}
+.source .sb{ width:6pt; flex:0 0 6pt; border-radius:3pt; background:linear-gradient(180deg,var(--orange),var(--orange-2));}
+.source .st{ font-family:'Jakarta'; font-weight:700; font-size:9.6pt; color:var(--navy-900);}
+.source .sd{ font-size:9.2pt; color:var(--ink-soft); }
+.divider-card{
+  page:nochrome; page-break-before:always;
+  background:linear-gradient(160deg,var(--navy-900),var(--navy-800));
+  color:#fff; border-radius:0; padding:0;
+}
+
+a{ color:var(--wd-blue); text-decoration:none; }
+.foot-legal{ font-size:8pt; color:#9AA6B6; text-align:center; margin-top:18pt; line-height:1.5;}
+</style>
+</head>
+<body>
+
+<!-- ============================= COVER ============================= -->
+<section class="cover">
+  <div class="glow a"></div><div class="glow b"></div>
+  <div class="cover-pad">
+   <div class="cover-inner">
+    <div class="topbar">
+      <div class="logo-align dark">
+        <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="3" width="3.4" height="34" rx="1.7" fill="#FF6B35"/>
+          <rect x="13" y="7"  width="22" height="4.6" rx="2.3" fill="#FFFFFF"/>
+          <rect x="13" y="17.7" width="15" height="4.6" rx="2.3" fill="#FF6B35"/>
+          <rect x="13" y="28.4" width="26" height="4.6" rx="2.3" fill="#FFFFFF"/>
+        </svg>
+        <div>
+          <div class="wm">Align<span class="hcm">HCM</span></div>
+          <span class="tag">HCM &amp; Finance Advisory</span>
+        </div>
+      </div>
+      <div class="platform-chip">
+        <span class="lbl">Platform evaluated</span>
+        <span class="logo-wd on-dark"><span class="dot"></span><span class="wm">workday</span></span>
+      </div>
+    </div>
+
+    <div class="spacer" style="flex:.55"></div>
+
+    <div class="eyebrow">2026 Edition · Strategic Buyer's Guide</div>
+    <h1>The <span class="hl">Workday</span><br>Buyer's Guide</h1>
+    <div class="deck">
+      A practical, research-enhanced guide for deciding whether Workday is the right
+      HCM and finance platform, and whether your organization is ready to implement it
+      without creating governance, reporting, data, adoption, or cost problems.
+    </div>
+    <div class="rule"></div>
+    <div class="meta">
+      <div><div class="k">Prepared by</div><div class="v">Align HCM</div></div>
+      <div><div class="k">Edition</div><div class="v">2026</div></div>
+      <div><div class="k">Built for</div><div class="v">CHRO · CFO · HRIS</div></div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="deck" style="font-size:9.5pt;color:#9DB0C6;max-width:160mm;">
+      For CHROs, CFOs, HRIS leaders, finance leaders, and transformation teams. Use this as the
+      companion to Align HCM's live <em>Strategic Buyer's Guide to Workday</em>: the web article gives
+      the high-level fit framework, and this document turns that same position into a working
+      evaluation, readiness, governance, TCO, and post-go-live planning guide.
+    </div>
+   </div>
+  </div>
+</section>
+
+<!-- ============================= TABLE OF CONTENTS ============================= -->
+<section class="toc-page">
+  <div class="toc-hero">
+    <div class="glow"></div>
+    <h2>Contents</h2>
+    <p>Fourteen chapters from fit framework to a buyer workbook you can fill in.</p>
+  </div>
+  <div class="toc-list">
+    <div class="toc-row"><span class="tn">01</span><span class="tt">Executive Summary</span></div>
+    <div class="toc-row"><span class="tn">02</span><span class="tt">The Decision Buyers Are Really Making</span></div>
+    <div class="toc-row"><span class="tn">03</span><span class="tt">The Pain Points Workday Should Solve</span></div>
+    <div class="toc-row"><span class="tn">04</span><span class="tt">When Workday Is the Right Fit</span></div>
+    <div class="toc-row"><span class="tn">05</span><span class="tt">When Workday May Be Too Much Platform</span></div>
+    <div class="toc-row"><span class="tn">06</span><span class="tt">Implementation Readiness</span></div>
+    <div class="toc-row"><span class="tn">07</span><span class="tt">Data, Integrations &amp; Reporting Governance</span></div>
+    <div class="toc-row"><span class="tn">08</span><span class="tt">AI, Illuminate &amp; Adoption Readiness</span></div>
+    <div class="toc-row"><span class="tn">09</span><span class="tt">Total Cost of Ownership</span></div>
+    <div class="toc-row"><span class="tn">10</span><span class="tt">Questions Buyers Should Ask</span></div>
+    <div class="toc-row"><span class="tn">11</span><span class="tt">Workday Decision Scorecard</span></div>
+    <div class="toc-row"><span class="tn">12</span><span class="tt">How Align HCM Helps</span></div>
+    <div class="toc-row"><span class="tn">13</span><span class="tt">Source Notes</span></div>
+    <div class="toc-row"><span class="tn">14</span><span class="tt">Buyer Workbook</span></div>
+  </div>
+  <div class="takeaway" style="margin-top:18pt;">
+    <span class="lbl">The core idea</span>
+    <p>Workday is strongest when the buyer needs one governed operating model for people, finance,
+    planning, reporting, and change. It gets weakest when the buyer treats it like a cleaner HR database.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 01 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">01</div>
+    <div><span class="k">Chapter One</span><div class="t">Executive Summary</div></div>
+  </div>
+
+  <p class="lede">Workday should feel less like a software purchase and more like an operating model decision.</p>
+
+  <p>Workday can be a powerful platform for organizations that need more than HR administration. The real value shows up when HR, Finance, IT, Payroll, Operations, and executives need one trusted model for workforce data, organizational structure, talent movement, planning, reporting, and business change.</p>
+
+  <p>The software demo usually looks clean. The hard part comes later, when the organization has to define how jobs, positions, supervisory organizations, cost centers, security roles, payroll providers, reports, integrations, approvals, and business processes should work together.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">11,500<span class="u">+</span></div><div class="c">customers globally, per Workday</div></div>
+    <div class="stat"><div class="n">75M<span class="u">+</span></div><div class="c">users under contract</div></div>
+    <div class="stat"><div class="n">7,000<span class="u">+</span></div><div class="c">core HCM &amp; Financial Management customers</div></div>
+  </div>
+
+  <p>That scale matters, but scale doesn't remove buyer responsibility. A platform this broad rewards organizations that make decisions clearly, clean data early, fund change management properly, and keep ownership active after go-live.</p>
+
+  <h3 class="sub">The best Workday buyers don't ask, "Can Workday do this?"</h3>
+  <p>They ask:</p>
+  <ul>
+    <li>Are we complex enough for Workday to create meaningful value?</li>
+    <li>Are we prepared to redesign the processes our current systems have been hiding?</li>
+    <li>Can HR and Finance agree on workforce definitions before build starts?</li>
+    <li>Do we have the internal owners needed to make fast, cross-functional decisions?</li>
+    <li>Can we support Workday after implementation without letting the platform drift?</li>
+    <li>Are we buying AI and analytics capability we can realistically activate?</li>
+  </ul>
+
+  <p>If the operating model is ready, Workday can help simplify complexity. If the operating model is not ready, Workday can expose every decision the business has avoided.</p>
+
+  <div class="takeaway">
+    <span class="lbl">Buyer takeaway</span>
+    <p>Workday is a strong fit when the business needs enterprise-level HR and finance alignment, mature governance, clean reporting, and long-term platform ownership. The risk rises when the buyer wants transformation but lacks the internal structure to support it.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 02 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">02</div>
+    <div><span class="k">Chapter Two</span><div class="t">The Workday Decision Buyers Are Really Making</div></div>
+  </div>
+
+  <p>Workday is not just competing against ADP, Dayforce, UKG, or another HCM platform. For many buyers, Workday is competing against the current operating reality:</p>
+  <ul>
+    <li>HR has one headcount number and Finance has another.</li>
+    <li>Reorganizations take weeks of spreadsheet work.</li>
+    <li>Managers don't trust the reporting library.</li>
+    <li>Employees still open tickets for tasks the system was supposed to simplify.</li>
+    <li>IT owns integrations nobody in the business can explain.</li>
+    <li>Payroll depends on regional providers, custom feeds, and manual validation.</li>
+    <li>AI capabilities exist in the tenant but the business has no adoption plan.</li>
+    <li>The organization is still making workforce decisions from stale exports.</li>
+  </ul>
+
+  <p>Workday's official HCM positioning emphasizes one suite of HR, payroll, talent, workforce planning, analytics, workforce management, employee experience, and global capabilities designed to work together. The buyer question is whether your organization can make that promise operational.</p>
+
+  <h3 class="sub">The Workday decision usually has four layers</h3>
+
+  <h4 class="mini">1. Platform fit</h4>
+  <p>Workday makes the most sense when the organization has enough complexity to justify a unified enterprise platform: matrix structures, multi-entity operations, workforce planning needs, frequent reorgs, global or regional payroll coordination, deep reporting requirements, and strong HR-Finance dependency.</p>
+
+  <h4 class="mini">2. Transformation readiness</h4>
+  <p>Workday doesn't create clean ownership by itself. Leaders need to decide who owns job architecture, position management, security, integrations, reporting, change management, and release management before implementation exposes the gaps.</p>
+
+  <h4 class="mini">3. Data and reporting discipline</h4>
+  <p>Workday can centralize data, but it won't magically reconcile conflicting definitions. If HR, Finance, Operations, and IT don't agree on headcount, cost center, worker type, position, job, location, and supervisory organization logic, the reporting pain will move into the new platform.</p>
+
+  <h4 class="mini">4. Long-term ownership</h4>
+  <p>Workday keeps changing. New releases, AI capabilities, reporting tools, integration options, and workflow improvements create ongoing work. Buyers need a post-go-live model that keeps Workday healthy after the launch team leaves.</p>
+
+  <div class="takeaway">
+    <span class="lbl">Buyer takeaway</span>
+    <p>The right question is not whether Workday is powerful. The right question is whether your company has enough complexity, leadership alignment, and operating discipline to turn that power into value.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 03 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">03</div>
+    <div><span class="k">Chapter Three</span><div class="t">The Pain Points Workday Should Solve</div></div>
+  </div>
+
+  <p>Workday pain is not the same as Dayforce pain or ADP pain.</p>
+  <ul>
+    <li><strong>ADP buyers</strong> usually feel payroll, compliance, service, product-fit, and implementation risk.</li>
+    <li><strong>Dayforce buyers</strong> usually feel time, scheduling, payroll calculation, manager ownership, and real-time workforce complexity.</li>
+    <li><strong>Workday buyers</strong> usually feel enterprise transformation pain. The organization has outgrown disconnected HR and finance processes.</li>
+  </ul>
+  <p>This guide keeps the same buyer lens as Align HCM's live Workday page: Workday makes sense when complexity is the business problem, but the platform only pays off when the buyer can govern data, processes, integrations, reporting, change, and long-term ownership.</p>
+
+  <h3 class="sub">Pain Point One — HR and Finance don't trust the same numbers</h3>
+  <p>When HR and Finance define headcount differently, every workforce conversation slows down. Finance may care about cost center and budget ownership. HR may care about supervisory organization and employee lifecycle. Operations may care about location, role, schedule, and capacity. Align's reporting guidance calls out the common pattern: teams build reports reactively, create duplicate logic, and eventually stop trusting the reports they just paid for.</p>
+  <div class="buyer-q"><span class="lbl">Buyer question</span><p>Which workforce metrics need one enterprise definition before go-live?</p></div>
+
+  <h3 class="sub">Pain Point Two — the org model is more complex than the current system can handle</h3>
+  <p>Matrix reporting, frequent reorgs, multiple entities, cost center changes, shared services, acquisitions, and hybrid work arrangements all create pressure on legacy HRIS setups. Workday's value grows when the platform can model the real organization instead of forcing teams into shadow spreadsheets.</p>
+  <div class="buyer-q"><span class="lbl">Buyer question</span><p>How often do org, job, cost center, or manager changes require manual cleanup today?</p></div>
+
+  <h3 class="sub">Pain Point Three — data migration exposes years of shortcuts</h3>
+  <p>Workday implementation forces the business to move employee, job, position, compensation, payroll, benefits, organization, security, and historical data into a new model. That work often reveals inconsistent job codes, inactive positions, stale manager assignments, mismatched cost centers, missing locations, duplicate records, and policy exceptions nobody documented. Research on ERP implementation success factors has long shown that organizational fit, change readiness, process redesign, and data discipline affect implementation outcomes. Treat data work as a core project lane, not a cleanup task.</p>
+  <div class="buyer-q"><span class="lbl">Buyer question</span><p>What data do we need to clean before configuration begins?</p></div>
+
+  <h3 class="sub">Pain Point Four — integrations are owned technically, not operationally</h3>
+  <p>Workday often needs to connect with payroll providers, benefits carriers, identity systems, recruiting tools, learning systems, ERP or finance tools, data warehouses, and downstream reporting environments. A technical feed can still fail the business if nobody owns the business rule behind it.</p>
+  <div class="buyer-q"><span class="lbl">Buyer question</span><p>For each integration, who owns the business outcome after go-live?</p></div>
+
+  <h3 class="sub">Pain Point Five — change management is treated as communications</h3>
+  <p>Workday changes how people request, approve, report, plan, and manage work. Training someone to click through a workflow is not enough. Managers need to understand what their actions do to pay, approvals, reporting, compliance, employee experience, and downstream data.</p>
+  <div class="note"><strong>Prosci</strong> reports that projects with excellent change management are up to <strong>7X</strong> more likely to achieve change success. For Workday, the people side is not soft. It is a direct driver of adoption, support volume, and return on investment.</div>
+  <div class="buyer-q"><span class="lbl">Buyer question</span><p>Which groups need behavior change, not just system training?</p></div>
+
+  <h3 class="sub">Pain Point Six — AI is bought faster than it is adopted</h3>
+  <p>Workday reported 1.7 billion AI actions across its platform in fiscal 2026, and Workday's customer facts page says over 75% of core Workday customers use Workday AI. The opportunity is real, but buyers still need to ask whether their own tenant, data, roles, governance, and training are ready. The problem is not only whether AI exists. The problem is whether the organization knows what it owns, where AI could reduce manual work, and how adoption will be measured.</p>
+  <div class="buyer-q"><span class="lbl">Buyer question</span><p>Which manual HR, finance, recruiting, manager, or employee workflows are painful enough to justify AI activation?</p></div>
+</section>
+
+<!-- ============================= CH 04 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">04</div>
+    <div><span class="k">Chapter Four</span><div class="t">When Workday Is the Right Fit</div></div>
+  </div>
+
+  <p>Workday is usually strongest when the organization has enterprise complexity and leadership wants HR and Finance to work from one operating model.</p>
+
+  <h3 class="sub">Strong-fit signals</h3>
+  <ul>
+    <li>1,500+ employees, or structural complexity that behaves like a larger enterprise.</li>
+    <li>Matrix management, frequent reorganizations, shared services, or multi-entity operations.</li>
+    <li>HR and Finance need aligned headcount, workforce cost, and planning logic.</li>
+    <li>Talent, skills, succession, or learning needs are strategically important.</li>
+    <li>Leaders need better workforce analytics, not just cleaner employee records.</li>
+    <li>The organization wants a long-term HCM and finance platform, not a short-term payroll fix.</li>
+    <li>The buyer has executive sponsorship, internal capacity, and budget for implementation, change management, integrations, training, and post-go-live support.</li>
+  </ul>
+
+  <p>Workday can also fit organizations preparing for growth, acquisition, restructuring, or global expansion. The more the business depends on consistent workforce definitions and adaptable organization models, the stronger the Workday case becomes.</p>
+
+  <div class="note"><strong>Nucleus Research's</strong> Enterprise HCM Technology Value Matrix 2025 describes large enterprises as pursuing comprehensive, integrated HR solutions to unify data, processes, and people with fewer vendors. Buyers are not just shopping for HR transactions. They are trying to reduce fragmentation.</div>
+
+  <h3 class="sub">Common Workday fit profiles</h3>
+  <div class="two-col">
+    <div class="profile"><div class="pt">The HR &amp; Finance transformation buyer</div>Wants shared planning, cleaner workforce cost visibility, and fewer reconciliation fights between HR and Finance.</div>
+    <div class="profile"><div class="pt">The complex enterprise buyer</div>Has matrix structures, frequent org changes, multiple entities, and reporting needs the current system can't support cleanly.</div>
+    <div class="profile"><div class="pt">The talent strategy buyer</div>Needs talent, learning, succession, skills, internal mobility, and workforce planning to connect in one architecture.</div>
+    <div class="profile"><div class="pt">The post-acquisition buyer</div>Is consolidating systems after growth, acquisition, or restructuring and needs cleaner governance across job, position, organization, payroll, and finance data.</div>
+  </div>
+
+  <div class="takeaway">
+    <span class="lbl">Buyer takeaway</span>
+    <p>Workday makes sense when complexity is the business problem. It isn't the best choice only because the brand is known or the demo looks modern.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 05 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">05</div>
+    <div><span class="k">Chapter Five</span><div class="t">When Workday May Be Too Much Platform</div></div>
+  </div>
+
+  <p>A strong buyer's guide should be honest about the wrong fit. Workday may be more platform than the organization needs when:</p>
+  <ul>
+    <li>HR requirements are straightforward.</li>
+    <li>The workforce is mostly salaried, stable, and operationally simple.</li>
+    <li>The company doesn't need deep HR-Finance planning integration.</li>
+    <li>Leadership wants a fast payroll replacement, not a business transformation.</li>
+    <li>The team lacks internal project ownership across HR, Finance, IT, Payroll, and Operations.</li>
+    <li>Data cleanup would be deferred until after contract signature.</li>
+    <li>The budget covers licensing but not implementation, integrations, training, reporting strategy, change management, release management, or post-go-live support.</li>
+    <li>The organization wants advanced AI and analytics but can't define which manual workflows need improvement.</li>
+  </ul>
+
+  <p>Workday can underperform when buyers overbuy the platform and underfund the operating model. The result is familiar: go-live happens, but reporting is messy, managers avoid workflows, HR keeps workarounds, Finance still exports data, and the internal team is stuck asking why the platform did not transform the business.</p>
+
+  <div class="note">
+    <strong>Don't buy Workday yet if:</strong>
+    <ul style="margin-top:6pt;margin-bottom:0;">
+      <li>HR and Finance can't agree on core workforce definitions.</li>
+      <li>No one owns data quality.</li>
+      <li>No one owns reporting governance.</li>
+      <li>No one owns integrations after go-live.</li>
+      <li>The project sponsor can't resolve cross-functional decisions quickly.</li>
+      <li>Managers are not part of adoption planning.</li>
+      <li>The business case depends on AI capability without an activation plan.</li>
+    </ul>
+  </div>
+
+  <div class="takeaway">
+    <span class="lbl">Buyer takeaway</span>
+    <p>Workday isn't overkill because it's large. It becomes overkill when the buyer isn't ready to govern it.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 06 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">06</div>
+    <div><span class="k">Chapter Six</span><div class="t">Implementation Readiness</div></div>
+  </div>
+
+  <p class="lede">Workday implementations succeed or struggle before configuration begins.</p>
+  <p>The Align Workday implementation page names the right problem: the decisions made before a single screen is configured determine whether the rollout moves smoothly or becomes costly and drawn out. The technology matters, but leadership gaps, unclear process ownership, weak change management, and poor data quality are usually the real failure points.</p>
+
+  <h3 class="sub">Gate One — Executive sponsorship</h3>
+  <p>The sponsor needs authority across HR, Finance, IT, Payroll, and Operations. Workday decisions cross functions constantly. When executive sponsorship is vague, the project waits for decisions and scope starts to drift.</p>
+
+  <h3 class="sub">Gate Two — Internal project ownership</h3>
+  <p>An implementation partner can guide the work. The buyer still owns the business decisions. Someone inside the organization needs the authority, availability, and credibility to answer process, data, and ownership questions quickly.</p>
+
+  <h3 class="sub">Gate Three — Process redesign</h3>
+  <p>Workday should not be used to recreate every workaround from the old environment. Buyers need to decide which processes should stay, which should change, and which should be retired.</p>
+
+  <h3 class="sub">Gate Four — Data audit</h3>
+  <p>Before build starts, the buyer should audit employee data, job architecture, position data, cost centers, pay groups, benefits, security roles, locations, supervisory organizations, historical data, payroll provider data, and reporting dependencies.</p>
+
+  <h3 class="sub">Gate Five — Integration inventory</h3>
+  <p>Every inbound and outbound feed needs a named business owner, technical owner, testing owner, and post-go-live support owner.</p>
+
+  <h3 class="sub">Gate Six — Training and adoption plan</h3>
+  <p>Training should be role-based. HR administrators, payroll teams, finance users, managers, employees, IT, and executives need different learning paths.</p>
+
+  <h3 class="sub">Gate Seven — Hypercare and SmartCare planning</h3>
+  <p>The first 90 days after go-live should not be improvised. Buyers need issue triage, defect management, reporting review, payroll and finance validation, adoption tracking, and a path into ongoing optimization.</p>
+
+  <div class="takeaway">
+    <span class="lbl">Buyer takeaway</span>
+    <p>Readiness isn't paperwork. It is the difference between a Workday launch and a Workday operating model.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 07 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">07</div>
+    <div><span class="k">Chapter Seven</span><div class="t">Data, Integrations &amp; Reporting Governance</div></div>
+  </div>
+
+  <p>Most Workday pain after go-live comes from governance decisions that were missed before go-live.</p>
+
+  <h3 class="sub">Data governance</h3>
+  <p>The core question is simple: who has authority over each data domain?</p>
+  <div class="two-col">
+    <ul>
+      <li>Worker data.</li>
+      <li>Job and position data.</li>
+      <li>Supervisory organization.</li>
+      <li>Cost center and financial dimensions.</li>
+      <li>Compensation and pay group logic.</li>
+      <li>Benefits and eligibility.</li>
+      <li>Security roles.</li>
+      <li>Location and legal entity.</li>
+      <li>Reporting definitions.</li>
+      <li>Integration ownership.</li>
+    </ul>
+  </div>
+  <p>Without ownership, the platform fills with exceptions. Reports break. Managers lose trust. HRIS becomes a ticket queue. Finance returns to spreadsheets.</p>
+
+  <h3 class="sub">Integration governance</h3>
+  <p>Workday integrations are not just technical connections. Each integration represents a business dependency. Common Workday integration areas include payroll providers, benefits carriers, identity and SSO, recruiting and onboarding, learning systems, time and attendance tools where specialized requirements exist, finance or ERP systems, data warehouses and BI tools, background checks and verification services, and third-party compliance tools.</p>
+  <div class="note"><strong>Each integration should have:</strong> a business purpose, a source of truth, a field owner, an error-handling process, a testing plan, a support owner, and a change-control plan.</div>
+
+  <h3 class="sub">Reporting governance</h3>
+  <p>Align's Workday reporting article gets the pain right. Reporting usually breaks because teams build reactively. A request comes in, someone copies a report, logic changes slightly, and eventually the library becomes too messy to trust. The fix is not more reports. The fix is a reporting philosophy.</p>
+  <p>A Workday reporting strategy should define:</p>
+  <ul>
+    <li>Which executive questions need standard dashboards.</li>
+    <li>Which metrics need one approved definition.</li>
+    <li>Which reports should be delivered, custom, discovery board, or analytics layer.</li>
+    <li>Who owns report naming, documentation, access, and retirement.</li>
+    <li>How headcount, turnover, vacancy, position, cost center, and worker population logic will be governed.</li>
+    <li>How report changes will be handled after reorgs, releases, and process updates.</li>
+  </ul>
+
+  <div class="takeaway">
+    <span class="lbl">Buyer takeaway</span>
+    <p>Workday should reduce reporting friction. Without governance, it can become a better-looking way to produce the same confusion.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 08 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">08</div>
+    <div><span class="k">Chapter Eight</span><div class="t">AI, Illuminate &amp; Adoption Readiness</div></div>
+  </div>
+
+  <p>Workday's AI story is becoming more important to the business case. Workday says its platform supports human-AI collaboration, and its fiscal 2026 results reported 1.7 billion AI actions across the platform. Workday's customer facts page also says over 75% of core Workday customers use Workday AI.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">1.7B</div><div class="c">AI actions across the platform in fiscal 2026</div></div>
+    <div class="stat"><div class="n">75%<span class="u">+</span></div><div class="c">of core Workday customers use Workday AI</div></div>
+    <div class="stat"><div class="n">7X</div><div class="c">more likely to succeed with excellent change management (Prosci)</div></div>
+  </div>
+
+  <p>The risk is buying the AI story without an adoption plan.</p>
+
+  <div class="two-col">
+    <div>
+      <h4 class="mini">AI value depends on real use cases</h4>
+      <ul>
+        <li>Reducing repetitive HR questions.</li>
+        <li>Improving employee self-service.</li>
+        <li>Supporting recruiters with high-volume tasks.</li>
+        <li>Helping managers act on workforce insights.</li>
+        <li>Improving expense, finance, or planning workflows.</li>
+        <li>Surfacing skills and talent opportunities.</li>
+        <li>Reducing manual report interpretation.</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="mini">AI also depends on readiness</h4>
+      <ul>
+        <li>Clean data.</li>
+        <li>Clear security roles.</li>
+        <li>Documented business processes.</li>
+        <li>Manager and employee trust.</li>
+        <li>Human review where decisions carry risk.</li>
+        <li>Governance around how AI is used in HR and finance workflows.</li>
+        <li>Measurement beyond "we turned it on."</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Align's AI Activation Assessment angle fits the Workday buyer pain well. Many organizations already own more capability than they use. The opportunity is not to chase AI for its own sake. It is to identify the manual work slowing down HR, Finance, managers, recruiters, and employees, then match Workday capability to practical adoption plans.</p>
+
+  <div class="takeaway">
+    <span class="lbl">Buyer takeaway</span>
+    <p>Workday AI can strengthen the business case, but only when the buyer connects it to real workflows, clean data, governance, and adoption.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 09 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">09</div>
+    <div><span class="k">Chapter Nine</span><div class="t">Total Cost of Ownership</div></div>
+  </div>
+
+  <p class="lede">Workday cost should be evaluated over years, not months.</p>
+  <div class="note"><strong>Gartner Digital Markets'</strong> 2025 HR Software Trends Survey reported that <strong>70%</strong> of HR leaders expect HR software costs to rise and <strong>60%</strong> plan to boost investment, based on 3,256 respondents across 11 countries. The market isn't moving toward less HR technology spend. It is moving toward more disciplined spend.</div>
+
+  <h3 class="sub">A practical Workday TCO model should include</h3>
+  <div class="two-col">
+    <ul>
+      <li>Subscription fees by module and employee population.</li>
+      <li>Implementation partner services.</li>
+      <li>Internal project team time.</li>
+      <li>Data conversion and cleanup.</li>
+      <li>Integration design, build, testing, and maintenance.</li>
+      <li>Reporting architecture and report cleanup.</li>
+      <li>Security design and testing.</li>
+      <li>Change management and communications.</li>
+      <li>Role-based training.</li>
+      <li>Payroll or third-party provider coordination.</li>
+      <li>Hypercare after go-live.</li>
+      <li>Release testing and adoption.</li>
+      <li>Ongoing admin, optimization, and SmartCare support.</li>
+      <li>Future module expansion.</li>
+      <li>AI activation and adoption work.</li>
+    </ul>
+  </div>
+  <p>The mistake is treating implementation as the whole cost. Workday is a living platform. Releases, AI capabilities, reporting needs, reorganizations, acquisitions, process changes, and workforce shifts all create ongoing work.</p>
+
+  <h3 class="sub">Cost questions buyers should answer early</h3>
+  <ul>
+    <li>What is included in year one? What becomes a year-two add-on?</li>
+    <li>Which integrations are custom?</li>
+    <li>How much internal capacity will be needed during implementation?</li>
+    <li>Who supports Workday after go-live?</li>
+    <li>What reporting work is included? What change management work is included? What release management work is included?</li>
+    <li>What does optimization look like after the first 90 days?</li>
+  </ul>
+
+  <div class="takeaway">
+    <span class="lbl">Buyer takeaway</span>
+    <p>The cheapest Workday proposal is not always the lowest-risk Workday decision. Underfunded implementation creates expensive cleanup.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 10 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">10</div>
+    <div><span class="k">Chapter Ten</span><div class="t">Questions Buyers Should Ask</div></div>
+  </div>
+
+  <h3 class="sub">Ask Workday</h3>
+  <ul>
+    <li>Which modules are included in the proposal, and which capabilities require additional licensing?</li>
+    <li>Which parts of our use case fit standard Workday functionality, and which require configuration, partner work, or future phases?</li>
+    <li>How does pricing scale with headcount, countries, entities, modules, and AI capabilities?</li>
+    <li>Which payroll geographies are native, managed, partner-supported, or third-party?</li>
+    <li>Which integrations are prebuilt, partner-built, or custom?</li>
+    <li>What standard support is included, and what requires premium support?</li>
+    <li>How should we plan for release testing and adoption?</li>
+    <li>Which AI capabilities are available now in our proposed scope?</li>
+    <li>What customer references match our size, industry, and complexity?</li>
+  </ul>
+
+  <h3 class="sub">Ask the implementation partner</h3>
+  <ul>
+    <li>How many Workday implementations have you supported for organizations like ours?</li>
+    <li>Who will be on the delivery team, and what Workday experience do they have?</li>
+    <li>How do you handle client-side decision-making when HR, Finance, IT, and Operations disagree?</li>
+    <li>How do you document job, position, organization, security, and reporting decisions?</li>
+    <li>What is your data conversion method?</li>
+    <li>How do you test integrations with business owners, not only technical owners?</li>
+    <li>What usually breaks first after go-live?</li>
+    <li>How do you transition from implementation to SmartCare, optimization, or long-term support?</li>
+  </ul>
+
+  <h3 class="sub">Ask internally</h3>
+  <ul>
+    <li>What pain are we trying to remove?</li>
+    <li>Which current processes are worth keeping? Which are only workarounds?</li>
+    <li>Who owns each core data domain?</li>
+    <li>Which reports do executives actually need?</li>
+    <li>How will we support managers after training?</li>
+    <li>How will we measure adoption?</li>
+    <li>What happens if HR and Finance disagree on a definition?</li>
+    <li>Who owns Workday after the project team leaves?</li>
+  </ul>
+
+  <div class="takeaway">
+    <span class="lbl">Buyer takeaway</span>
+    <p>Good questions protect the buyer from buying a platform without buying the operating model needed to run it.</p>
+  </div>
+</section>
+
+<!-- ============================= CH 11 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">11</div>
+    <div><span class="k">Chapter Eleven</span><div class="t">Workday Decision Scorecard</div></div>
+  </div>
+  <p>Score each area from 1 to 5 by shading the boxes.</p>
+
+  <div class="score-group">
+    <div class="gh">Platform fit</div>
+    <div class="score-item"><span class="lab">Organization has enough complexity to justify Workday.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">HR and Finance need shared workforce planning and reporting logic.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Talent, skills, succession, or learning needs are strategically important.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Current system fragmentation creates measurable risk or waste.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Workday Financial Management or planning integration is part of the strategic case.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+  </div>
+
+  <div class="score-group">
+    <div class="gh">Implementation readiness</div>
+    <div class="score-item"><span class="lab">Executive sponsor is named and active.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Internal project owner has decision authority.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">HR, Finance, IT, Payroll, and Operations are aligned on project governance.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Process redesign is funded.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Data audit can start before configuration.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Integration inventory is complete.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Change management is budgeted beyond basic training.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+  </div>
+
+  <div class="score-group">
+    <div class="gh">Post-go-live model</div>
+    <div class="score-item"><span class="lab">SmartCare, optimization, or managed support is planned.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Reporting governance is owned.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Release management is owned.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">AI activation has use cases and measurement.</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+  </div>
+
+  <div class="score-key">
+    <strong>Scoring guide</strong><br>
+    <b>55 to 80:</b> strong fit. Proceed with disciplined implementation planning.<br>
+    <b>40 to 54:</b> conditional fit. Resolve governance, data, TCO, or adoption gaps before contract signature.<br>
+    <b>Below 40:</b> pause. Revisit timing, platform scope, partner model, or internal readiness.
+  </div>
+</section>
+
+<!-- ============================= CH 12 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">12</div>
+    <div><span class="k">Chapter Twelve</span><div class="t">How Align HCM Helps</div></div>
+  </div>
+
+  <p>Align HCM helps buyers make HCM platform decisions with the operating reality in view.</p>
+
+  <div class="two-col">
+    <div class="profile"><div class="pt">Assessment</div>We pressure-test Workday fit against company size, complexity, HR and Finance needs, implementation readiness, reporting needs, data quality, integration scope, and long-term ownership.</div>
+    <div class="profile"><div class="pt">Implementation</div>We support implementation planning, project execution, configuration decisions, testing, go-live readiness, and stabilization.</div>
+    <div class="profile"><div class="pt">Client-side services</div>We help the internal team make decisions, keep the project moving, translate business needs into platform requirements, and protect the buyer's interests throughout the implementation.</div>
+    <div class="profile"><div class="pt">Data conversion</div>We help map, clean, validate, and load the data Workday needs to operate properly.</div>
+    <div class="profile"><div class="pt">System integration</div>We help plan and support integrations across payroll, benefits, identity, recruiting, learning, finance, reporting, and other systems that shape the operating model.</div>
+    <div class="profile"><div class="pt">Training &amp; Align Academy</div>We build role-based training that helps HR, Finance, Payroll, managers, employees, and administrators use the system correctly.</div>
+    <div class="profile"><div class="pt">Optimization</div>We help clean up reports, refine processes, improve adoption, activate unused capabilities, and make Workday more valuable after go-live.</div>
+    <div class="profile"><div class="pt">SmartCare</div>We support the system after launch through stabilization, ongoing support, optimization, and transformation work.</div>
+  </div>
+
+  <div class="takeaway" style="margin-top:14pt;">
+    <span class="lbl">Free assessment — pressure-test your Workday decision before you commit</span>
+    <p style="margin-bottom:8pt;">Align HCM offers a complimentary Workday readiness or optimization assessment for organizations weighing the platform or already running it. What you receive:</p>
+    <ul style="margin:0;">
+      <li style="color:#E7EDF5;">Independent fit recommendation.</li>
+      <li style="color:#E7EDF5;">Implementation readiness scoring.</li>
+      <li style="color:#E7EDF5;">Data, integration, reporting, and governance risk review.</li>
+      <li style="color:#E7EDF5;">Recommended next-90-day plan.</li>
+    </ul>
+    <p style="margin-top:9pt;margin-bottom:0;color:#FFC9AE;"><strong style="color:#FFC9AE;">Get in touch with Align HCM and mention the Workday Buyer's Guide when scheduling.</strong></p>
+  </div>
+</section>
+
+<!-- ============================= CH 13 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">13</div>
+    <div><span class="k">Chapter Thirteen</span><div class="t">Source Notes</div></div>
+  </div>
+
+  <div class="source"><div class="sb"></div><div><div class="st">Workday HCM overview</div><div class="sd">Workday positions HCM as an integrated HR suite spanning core HCM, payroll, workforce planning, analytics, talent, workforce management, employee experience, and related capabilities.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Workday customer facts</div><div class="sd">More than 11,500 customers globally, more than 75 million users under contract, more than 90% of customer deployments completed on time in FY26, and over 75% of core Workday customers using Workday AI.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Workday fiscal 2026 results</div><div class="sd">More than 11,500 customers globally, more than 7,000 core Workday Financial Management and Workday HCM customers, and 1.7 billion AI actions across its platform in fiscal 2026.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Gartner Digital Markets 2025 HR Software Trends</div><div class="sd">70% of HR leaders expect HR software costs to rise and 60% plan to boost investment, based on 3,256 respondents across 11 countries.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Nucleus Research Enterprise HCM Technology Value Matrix 2025</div><div class="sd">Describes enterprise HCM buyers as seeking comprehensive, integrated HR solutions that unify data, processes, and people with fewer vendors.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Prosci change management success research</div><div class="sd">Projects with excellent change management are up to 7X more likely to achieve change success.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">ERP implementation research</div><div class="sd">Peer-reviewed research on ERP implementation highlights organizational fit, change management, process redesign, and readiness as central success factors.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Align HCM Workday resources</div><div class="sd">Align's Workday partner page, implementation guidance, reporting guidance, AI gap article, and service pages were used to align the pain points with Align's actual Workday positioning.</div></div></div>
+
+  <h3 class="sub">Peer-reviewed academic research sources</h3>
+  <p style="font-size:9.4pt;color:var(--ink-soft);margin-bottom:8pt;">These journal studies support the guide's implementation readiness, adoption, data quality, and ongoing governance claims.</p>
+  <div class="source"><div class="sb"></div><div><div class="st">Hong &amp; Kim — Information &amp; Management</div><div class="sd">ERP implementation success depends on organizational fit and implementation contingencies.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Umble, Haft &amp; Umble — European Journal of Operational Research</div><div class="sd">ERP implementations require disciplined procedures, project management, change management, and critical success factors.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">DeLone &amp; McLean — Journal of Management Information Systems</div><div class="sd">Information quality, system quality, service quality, use, user satisfaction, and net benefits shape information system success.</div></div></div>
+  <div class="source"><div class="sb"></div><div><div class="st">Venkatesh et al. — MIS Quarterly</div><div class="sd">Technology acceptance depends on performance expectancy, effort expectancy, social influence, and facilitating conditions.</div></div></div>
+</section>
+
+<!-- ============================= CH 14 ============================= -->
+<section class="chapter">
+  <div class="h-band">
+    <div class="num">14</div>
+    <div><span class="k">Chapter Fourteen</span><div class="t">Buyer Workbook</div></div>
+  </div>
+  <p>Print these worksheets or fill them in digitally. They turn the guide into your own decision record.</p>
+
+  <div class="ws">
+    <h4>Worksheet One — Define the Pain</h4>
+    <div class="field"><div class="fl">The Workday problem we are trying to solve is:</div><div class="line"></div></div>
+    <div class="field"><div class="fl">The current workaround is:</div><div class="line"></div></div>
+    <div class="field"><div class="fl">The business cost of keeping the workaround is:</div><div class="line"></div></div>
+    <div class="field"><div class="fl">The result we want twelve months after go-live is:</div><div class="line"></div></div>
+  </div>
+
+  <div class="ws">
+    <h4>Worksheet Two — Map Workday Fit</h4>
+    <div class="two-col">
+      <div class="field"><div class="fl">Employee count:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Countries:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">States or provinces:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Legal entities:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Cost centers:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Supervisory organizations:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Payroll providers:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Benefits carriers:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Critical integrations:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Current reporting pain:</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Likely Workday scope:</div><div class="line"></div></div>
+    </div>
+  </div>
+
+  <div class="ws">
+    <h4>Worksheet Three — Data Readiness <span style="font-weight:500;font-size:9pt;color:var(--ink-soft);">(score 1–5; anything below 3 needs cleanup before build)</span></h4>
+    <div class="score-item"><span class="lab">Worker data</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Job architecture</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Position data</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Supervisory organization</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Cost center and finance dimensions</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Location and legal entity</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Compensation and pay group logic</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Benefits eligibility</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Security roles</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Historical data</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+    <div class="score-item"><span class="lab">Reporting definitions</span><span class="dots"><span></span><span></span><span></span><span></span><span></span></span></div>
+  </div>
+
+  <div class="ws">
+    <h4>Worksheet Four — Reporting Governance</h4>
+    <p style="font-size:9.4pt;color:var(--ink-soft);margin:0 0 6pt;">Define the official owner, source logic, approved definition, report type, security model, and review cadence for each metric.</p>
+    <div class="two-col">
+      <div class="field"><div class="fl">Headcount</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Turnover</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Open positions</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Vacancy</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Labor cost</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Worker type</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Cost center</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Location</div><div class="line"></div></div>
+      <div class="field"><div class="fl">Manager hierarchy</div><div class="line"></div></div>
+    </div>
+  </div>
+
+  <div class="ws">
+    <h4>Worksheet Five — AI Activation Readiness</h4>
+    <div class="field"><div class="fl">Which Workday AI capabilities do we already own?</div><div class="line"></div></div>
+    <div class="field"><div class="fl">Which manual HR or Finance workflows create the most pain?</div><div class="line"></div></div>
+    <div class="field"><div class="fl">Which user groups would need training and trust-building?</div><div class="line"></div></div>
+    <div class="field"><div class="fl">What metric would prove AI adoption is working?</div><div class="line"></div></div>
+  </div>
+
+  <div class="ws">
+    <h4>Worksheet Six — First 90 Days</h4>
+    <div class="field"><div class="fl">0–30 days:</div><div class="sd" style="font-size:9.2pt;color:var(--ink-soft);">Stabilize core workflows, payroll and finance handoffs, integrations, defects, access issues, and user support.</div><div class="line"></div></div>
+    <div class="field"><div class="fl">31–60 days:</div><div class="sd" style="font-size:9.2pt;color:var(--ink-soft);">Normalize reporting, manager self-service, employee workflows, security requests, and support ownership.</div><div class="line"></div></div>
+    <div class="field"><div class="fl">61–90 days:</div><div class="sd" style="font-size:9.2pt;color:var(--ink-soft);">Optimize configuration, clean reports, improve adoption, activate practical capabilities, and transition to SmartCare or ongoing support.</div><div class="line"></div></div>
+  </div>
+
+  <div class="foot-legal">
+    Original Workday Buyer's Guide: <em>The Strategic Buyer's Guide to Workday</em><br>
+    Copyright 2026 Align HCM. Independent of Workday. Logos and vendor names are used for editorial reference.
+  </div>
+</section>
+
+</body>
+</html>
