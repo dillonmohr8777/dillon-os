@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-15
+last_updated: 2026-06-16
 tags: [system, urgent]
 ---
 
@@ -9,15 +9,17 @@ Updated by `gmail-intel` inside `competitive-task-orchestrator`.
 
 ## Coverage notes
 
-• Gmail MCP unavailable on 2026-06-15 run. Baseline refreshed from `System/claude-memory-sync.md` and client overview notes.
+• Gmail MCP unavailable on 2026-06-16 run. Baseline refreshed from `System/claude-memory-sync.md` and client overview notes.
 • Live inbox scan required on next run with Gmail MCP connected.
+• No new threads confirmed without live Gmail access. Items below carry forward from vault intel through 2026-04-15.
 
 ## Immediate (today/tomorrow)
 
+• **BOK Law** — Weekly social drafts due today 2026-06-16 to Dorothy/Aleksandra/Rachael. Sunday generation missed.
 • **Bar Crawl USA** — Andy Zirger forwarded 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Dillon responded 2026-04-15 saying he'd investigate. Resolution still owed.
 • **NKCDC** — Mac checked in with Anthony 2026-04-15. Still no response from NKCDC. Launch blocked on Free Tax Prep page.
 • **Hardwood Artisan** — Dalton hasn't updated card on file since Sean's 2026-04-07 request. Engagement pause risk. Overdue since 2026-04-18.
-• **Align HCM** — Monday thought leadership slot (Maher or Joann) due today 2026-06-15. LinkedIn calendar not rolled to June.
+• **Align HCM** — Monday thought leadership slot (Maher or Joann) was due 2026-06-15. LinkedIn calendar not rolled to June.
 
 ## This week
 
@@ -26,8 +28,9 @@ Updated by `gmail-intel` inside `competitive-task-orchestrator`.
 • **Fresh Blends / Replenish** — Verify launch pacing and send first-week snapshot to Mia.
 • **Shadow HVAC** — Send Mike a catch-up report and confirm LSA is serving.
 • **LinkEZE** — Resolve enhanced conversions diagnostics. Confirm MFA on 809-600-6448.
-• **BOK Law** — Weekly social drafts due to Dorothy/Aleksandra/Rachael by Tue 2026-06-16. Sunday generation missed.
 • **Omega Landscaping** — Confirm David will meet John Belaska for Google Ads account review.
+• **Jeff Hozias / Rand Realty** — Launch approved seller Meta campaign.
+• **BOK Law** — Wednesday Wisdom due 2026-06-17; Turn the Page Thursday 2026-06-18; Family Fridays 2026-06-19.
 
 ## Resolved since last run
 
