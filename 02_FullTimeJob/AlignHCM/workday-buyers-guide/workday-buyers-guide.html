@@ -81,7 +81,7 @@ body{
   line-height:1.72;
   margin:0;
 }
-p{ margin:0 0 11pt; }
+p{ margin:0 0 12pt; }
 h1,h2,h3,h4{ font-family:'Jakarta', sans-serif; color:var(--navy-900); margin:0; }
 strong{ color:var(--navy-800); font-weight:700; }
 em{ font-style:italic; color:var(--ink); }
@@ -170,7 +170,7 @@ li::before{
    ============================================================ */
 .toc-page{ page:nochrome; page-break-after:always; }
 .h-band{
-  margin:0 -2mm 18pt; padding:17pt 19pt; border-radius:13pt;
+  margin:0 -2mm 20pt; padding:18pt 20pt; border-radius:14pt;
   background:linear-gradient(120deg,var(--orange) 0%,var(--orange-2) 78%, #FF8A4D 100%);
   color:#fff; display:flex; align-items:center; gap:14pt;
   box-shadow:0 6pt 16pt rgba(240,90,40,.20);
@@ -186,27 +186,27 @@ li::before{
 
 /* Flowing layout: chapters run continuously to avoid near-empty pages.
    The orange header band acts as an in-page section divider. */
-.chapter{ margin-top:26pt; }
+.chapter{ margin-top:34pt; }
 .chapter:first-of-type{ margin-top:0; }
 /* Force a fresh page only for a few heavyweight sections. */
 .chapter.break{ page-break-before:always; margin-top:0; }
 
 h3.sub{
   font-family:'Jakarta'; font-weight:700; font-size:12.5pt; color:var(--navy-900);
-  margin:21pt 0 8pt; padding-left:12pt; position:relative;
+  margin:26pt 0 10pt; padding-left:13pt; position:relative;
 }
 h3.sub::before{
   content:""; position:absolute; left:0; top:2pt; bottom:2pt; width:4pt; border-radius:2pt;
   background:linear-gradient(180deg,var(--orange) 0%,var(--orange-2) 100%);
 }
-h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--navy-800); margin:14pt 0 4pt; }
+h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--navy-800); margin:16pt 0 5pt; }
 
 /* ============================================================
    CALLOUTS
    ============================================================ */
 .buyer-q{
   background:var(--teal-soft); border-left:4pt solid var(--teal);
-  border-radius:0 9pt 9pt 0; padding:12pt 16pt; margin:14pt 0;
+  border-radius:0 10pt 10pt 0; padding:14pt 18pt; margin:18pt 0;
 }
 .buyer-q .lbl{ font-family:'Jakarta'; font-weight:800; font-size:7.5pt; letter-spacing:.2em;
   text-transform:uppercase; color:#147566; display:block; margin-bottom:3pt;}
@@ -214,7 +214,7 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 
 .takeaway{
   background:linear-gradient(135deg,var(--navy-900) 0%, var(--navy-800) 100%);
-  color:#EEF3F9; border-radius:12pt; padding:16pt 19pt; margin:18pt 0;
+  color:#EEF3F9; border-radius:13pt; padding:18pt 22pt; margin:24pt 0;
   position:relative; overflow:hidden;
 }
 .takeaway::after{ content:""; position:absolute; top:-30pt; right:-30pt; width:90pt; height:90pt;
@@ -225,13 +225,13 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 
 .note{
   background:var(--orange-soft); border:1px solid #FBD9C8; border-radius:10pt;
-  padding:13pt 16pt; margin:14pt 0; font-size:10.2pt; color:var(--navy-800);
+  padding:14pt 18pt; margin:18pt 0; font-size:10.2pt; color:var(--navy-800);
 }
 
 /* ============================================================
    STAT STRIP
    ============================================================ */
-.stats{ display:flex; gap:11pt; margin:16pt 0; }
+.stats{ display:flex; gap:12pt; margin:20pt 0; }
 .stat{
   flex:1; background:linear-gradient(165deg,#FFFFFF 0%,#F4F7FB 100%);
   border:1px solid var(--line); border-radius:13pt; padding:13pt 14pt 14pt;
@@ -253,7 +253,7 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
   text-transform:uppercase; color:#45535F; margin-top:4pt; display:block;}
 
 /* Decision meter (scorecard) */
-.meter{ display:flex; margin:15pt 0 5pt; border-radius:8pt; overflow:hidden;
+.meter{ display:flex; margin:18pt 0 6pt; border-radius:8pt; overflow:hidden;
   box-shadow:0 3pt 9pt rgba(20,35,59,.10); }
 .meter .seg{ padding:9pt 10pt; color:#fff; }
 .meter .seg .sv{ font-family:'Jakarta'; font-weight:800; font-size:10.5pt; display:block; line-height:1;}
@@ -265,7 +265,7 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
   font-size:7.5pt; color:#45535F; margin-top:3pt;}
 
 /* Inline mini-KPI pair */
-.kpi-pair{ display:flex; gap:12pt; margin:15pt 0; }
+.kpi-pair{ display:flex; gap:12pt; margin:20pt 0; }
 .kpi-pair .k{ flex:1; background:linear-gradient(165deg,#FFFFFF,#F4F7FB); border:1px solid var(--line);
   border-radius:11pt; padding:11pt 13pt;}
 .kpi-pair .k .kn{ font-family:'Jakarta'; font-weight:800; font-size:21pt; color:var(--orange); line-height:1; letter-spacing:-.02em;}
@@ -274,7 +274,7 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 .kpi-pair .k .bar i{ display:block; height:100%; border-radius:3pt; background:linear-gradient(90deg,var(--orange),var(--orange-2));}
 
 /* Numbered layer cards */
-.layers{ display:flex; flex-wrap:wrap; gap:11pt; margin:14pt 0; }
+.layers{ display:flex; flex-wrap:wrap; gap:12pt; margin:20pt 0; }
 .layer{ flex:1 1 45%; background:#FFFFFF; border:1px solid var(--line); border-radius:12pt;
   padding:13pt 15pt 14pt 14pt; position:relative; overflow:hidden;
   box-shadow:0 3pt 10pt rgba(20,35,59,.05); break-inside:avoid; }
@@ -289,7 +289,7 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 .layer p{ margin:0; font-size:9.6pt; color:var(--ink-soft); line-height:1.5; }
 
 /* Three-way comparison cards */
-.compare{ display:flex; gap:11pt; margin:15pt 0; }
+.compare{ display:flex; gap:12pt; margin:20pt 0; }
 .compare .cc{ flex:1; background:#FFFFFF; border:1px solid var(--line); border-radius:12pt;
   overflow:hidden; box-shadow:0 3pt 10pt rgba(20,35,59,.05); break-inside:avoid; }
 .compare .cc .ch{ font-family:'Jakarta'; font-weight:800; font-size:11pt; color:#fff;
@@ -321,7 +321,7 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 /* ============================================================
    SCORECARD / WORKBOOK
    ============================================================ */
-.score-group{ margin:15pt 0; }
+.score-group{ margin:18pt 0; }
 .score-group .gh{ font-family:'Jakarta'; font-weight:800; font-size:10.5pt; color:var(--orange);
   text-transform:uppercase; letter-spacing:.08em; margin-bottom:5pt;}
 .score-item{ display:flex; align-items:center; gap:10pt; padding:7.5pt 0; border-bottom:1px solid var(--line); break-inside:avoid;}
@@ -331,20 +331,20 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 .score-key{ background:#FFFFFF; border:1px solid var(--line); border-radius:11pt; padding:14pt 16pt; margin-top:13pt; font-size:10pt; box-shadow:0 3pt 10pt rgba(20,35,59,.05);}
 .score-key b{ color:var(--orange); }
 
-.field{ margin:10pt 0; }
+.field{ margin:12pt 0; }
 .field .fl{ font-family:'Jakarta'; font-weight:600; font-size:10pt; color:var(--navy-800); }
 .field .line{ border-bottom:1.4px dotted #AEBACB; height:19pt; margin-top:3pt; }
 .ws{ background:#FFFFFF; border:1px solid var(--line); border-left:4pt solid var(--teal);
-  border-radius:0 12pt 12pt 0; padding:15pt 18pt; margin:15pt 0; break-inside:avoid; box-shadow:0 3pt 10pt rgba(20,35,59,.05);}
+  border-radius:0 12pt 12pt 0; padding:16pt 20pt; margin:18pt 0; break-inside:avoid; box-shadow:0 3pt 10pt rgba(20,35,59,.05);}
 .ws h4{ font-family:'Jakarta'; font-weight:700; font-size:11pt; color:var(--navy-900); margin:0 0 6pt;}
 
 /* ============================================================
    MISC
    ============================================================ */
 .lede{ font-size:12.5pt; line-height:1.6; color:var(--navy-800); border-left:4pt solid var(--orange);
-  padding-left:14pt; margin:4pt 0 16pt; font-family:'Jakarta'; font-weight:600;}
+  padding-left:15pt; margin:8pt 0 20pt; font-family:'Jakarta'; font-weight:600;}
 .two-col{ column-count:2; column-gap:18pt; }
-.profile{ background:#FFFFFF; border:1px solid var(--line); border-radius:12pt; padding:13pt 16pt; margin:10pt 0; break-inside:avoid; box-shadow:0 3pt 10pt rgba(20,35,59,.05);}
+.profile{ background:#FFFFFF; border:1px solid var(--line); border-radius:12pt; padding:14pt 16pt; margin:12pt 0; break-inside:avoid; box-shadow:0 3pt 10pt rgba(20,35,59,.05);}
 .profile .pt{ font-family:'Jakarta'; font-weight:800; font-size:10.5pt; color:var(--orange); margin-bottom:3pt;}
 .source{ display:flex; gap:11pt; padding:10pt 0; border-bottom:1px solid var(--line); break-inside:avoid;}
 .source .sb{ width:6pt; flex:0 0 6pt; border-radius:3pt; background:linear-gradient(180deg,var(--orange),var(--orange-2));}
@@ -358,6 +358,40 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 
 a{ color:var(--wd-blue); text-decoration:none; }
 .foot-legal{ font-size:8pt; color:#45535F; text-align:center; margin-top:18pt; line-height:1.5;}
+
+/* Cover companion bar */
+.companion{ display:flex; align-items:center; gap:14pt; margin-top:8pt;
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.18);
+  border-radius:13pt; padding:14pt 20pt; backdrop-filter:blur(16px); max-width:152mm; }
+.companion .cl{ font-family:'Jakarta'; font-weight:800; font-size:8pt; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--orange-2); white-space:nowrap; }
+.companion .ct{ font-family:'Jakarta'; font-weight:600; font-size:11.5pt; color:#F2F6FB; line-height:1.32; }
+
+/* Editorial feature pull-quote (newspaper style) */
+.fq{ position:relative; overflow:hidden; margin:26pt 0; padding:22pt 26pt 22pt 28pt;
+  background:linear-gradient(135deg,#FFF6F1 0%,#FFFFFF 70%); border:1px solid #F7D7C6;
+  border-left:5pt solid var(--orange); border-radius:15pt; box-shadow:0 5pt 16pt rgba(240,90,40,.08);
+  break-inside:avoid; }
+.fq .qm{ position:absolute; top:2pt; right:20pt; font-family:'Jakarta'; font-weight:800;
+  font-size:62pt; line-height:1; color:var(--orange); opacity:.14; }
+.fq p{ font-family:'Jakarta'; font-weight:700; font-size:16.5pt; line-height:1.36;
+  color:var(--navy-900); letter-spacing:-.012em; margin:0; max-width:90%; position:relative; }
+.fq cite{ display:block; font-style:normal; font-family:'Jakarta'; font-weight:700; font-size:8pt;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--orange); margin-top:11pt; }
+
+/* At-a-glance highlight box */
+.keybox{ background:linear-gradient(160deg,var(--navy-900) 0%,var(--navy-800) 100%); color:#EEF3F9;
+  border-radius:15pt; padding:22pt 24pt; margin:24pt 0; position:relative; overflow:hidden; break-inside:avoid; }
+.keybox::after{ content:""; position:absolute; bottom:-40pt; right:-30pt; width:130pt; height:130pt;
+  border-radius:50%; background:radial-gradient(circle,rgba(240,90,40,.32),transparent 70%); }
+.keybox .kt{ font-family:'Jakarta'; font-weight:800; font-size:13pt; color:#fff; margin-bottom:4pt; position:relative; }
+.keybox .ks{ font-size:9.5pt; color:#B9C6D6; margin-bottom:14pt; position:relative; }
+.keylist{ position:relative; display:flex; flex-wrap:wrap; gap:11pt 16pt; }
+.keylist .ki{ flex:1 1 44%; display:flex; gap:11pt; align-items:flex-start; }
+.keylist .kn{ flex:0 0 22pt; width:22pt; height:22pt; border-radius:7pt;
+  background:linear-gradient(135deg,var(--orange),var(--orange-2)); color:#fff;
+  font-family:'Jakarta'; font-weight:800; font-size:10.5pt; display:flex; align-items:center; justify-content:center; }
+.keylist .kx{ font-size:10pt; line-height:1.4; color:#E7EDF5; }
 </style>
 </head>
 <body>
@@ -394,11 +428,9 @@ a{ color:var(--wd-blue); text-decoration:none; }
 
     <div class="spacer"></div>
 
-    <div class="deck" style="font-size:9.5pt;color:#C7D5E5;max-width:160mm;">
-      For CHROs, CFOs, HRIS leaders, finance leaders, and transformation teams. Use this as the
-      companion to Align HCM's live <em>Strategic Buyer's Guide to Workday</em>: the web article gives
-      the high-level fit framework, and this document turns that same position into a working
-      evaluation, readiness, governance, TCO, and post-go-live planning guide.
+    <div class="companion">
+      <span class="cl">Companion&nbsp;to</span>
+      <span class="ct">Align HCM's live Strategic Buyer's Guide to Workday. The web article frames the fit decision; this document turns it into a working evaluation, readiness, governance, and planning guide.</span>
     </div>
    </div>
   </div>
@@ -456,17 +488,24 @@ a{ color:var(--wd-blue); text-decoration:none; }
   <p>That scale matters, but scale doesn't remove buyer responsibility. A platform this broad rewards organizations that make decisions clearly, clean data early, fund change management properly, and keep ownership active after go-live.</p>
 
   <h3 class="sub">The best Workday buyers don't ask, "Can Workday do this?"</h3>
-  <p>They ask:</p>
-  <ul>
-    <li>Are we complex enough for Workday to create meaningful value?</li>
-    <li>Are we prepared to redesign the processes our current systems have been hiding?</li>
-    <li>Can HR and Finance agree on workforce definitions before build starts?</li>
-    <li>Do we have the internal owners needed to make fast, cross-functional decisions?</li>
-    <li>Can we support Workday after implementation without letting the platform drift?</li>
-    <li>Are we buying AI and analytics capability we can realistically activate?</li>
-  </ul>
+  <div class="keybox">
+    <div class="kt">They ask six harder questions first</div>
+    <div class="ks">If you can answer these with confidence, you are ready to evaluate Workday.</div>
+    <div class="keylist">
+      <div class="ki"><span class="kn">1</span><span class="kx">Are we complex enough for Workday to create meaningful value?</span></div>
+      <div class="ki"><span class="kn">2</span><span class="kx">Are we prepared to redesign the processes our current systems have been hiding?</span></div>
+      <div class="ki"><span class="kn">3</span><span class="kx">Can HR and Finance agree on workforce definitions before build starts?</span></div>
+      <div class="ki"><span class="kn">4</span><span class="kx">Do we have the internal owners to make fast, cross-functional decisions?</span></div>
+      <div class="ki"><span class="kn">5</span><span class="kx">Can we support Workday after implementation without letting the platform drift?</span></div>
+      <div class="ki"><span class="kn">6</span><span class="kx">Are we buying AI and analytics capability we can realistically activate?</span></div>
+    </div>
+  </div>
 
-  <p>If the operating model is ready, Workday can help simplify complexity. If the operating model is not ready, Workday can expose every decision the business has avoided.</p>
+  <div class="fq">
+    <span class="qm">&rdquo;</span>
+    <p>If the operating model is ready, Workday simplifies complexity. If it is not, Workday exposes every decision the business has avoided.</p>
+    <cite>The Workday Buyer's Guide &middot; Align HCM</cite>
+  </div>
 
   <div class="takeaway">
     <span class="lbl">Buyer takeaway</span>
@@ -629,7 +668,13 @@ a{ color:var(--wd-blue); text-decoration:none; }
     <li>The organization wants advanced AI and analytics but can't define which manual workflows need improvement.</li>
   </ul>
 
-  <p>Workday can underperform when buyers overbuy the platform and underfund the operating model. The result is familiar: go-live happens, but reporting is messy, managers avoid workflows, HR keeps workarounds, Finance still exports data, and the internal team is stuck asking why the platform did not transform the business.</p>
+  <div class="fq">
+    <span class="qm">&rdquo;</span>
+    <p>Workday underperforms when buyers overbuy the platform and underfund the operating model.</p>
+    <cite>Chapter Five &middot; When Workday Is Too Much Platform</cite>
+  </div>
+
+  <p>The result is familiar: go-live happens, but reporting is messy, managers avoid workflows, HR keeps workarounds, Finance still exports data, and the internal team is stuck asking why the platform did not transform the business.</p>
 
   <div class="note">
     <strong>Don't buy Workday yet if:</strong>
@@ -719,7 +764,13 @@ a{ color:var(--wd-blue); text-decoration:none; }
   <div class="note"><strong>Each integration should have:</strong> a business purpose, a source of truth, a field owner, an error-handling process, a testing plan, a support owner, and a change-control plan.</div>
 
   <h3 class="sub">Reporting governance</h3>
-  <p>Align's Workday reporting article gets the pain right. Reporting usually breaks because teams build reactively. A request comes in, someone copies a report, logic changes slightly, and eventually the library becomes too messy to trust. The fix is not more reports. The fix is a reporting philosophy.</p>
+  <p>Align's Workday reporting article gets the pain right. Reporting usually breaks because teams build reactively. A request comes in, someone copies a report, logic changes slightly, and eventually the library becomes too messy to trust.</p>
+
+  <div class="fq">
+    <span class="qm">&rdquo;</span>
+    <p>The fix is not more reports. The fix is a reporting philosophy.</p>
+    <cite>Chapter Seven &middot; Reporting Governance</cite>
+  </div>
   <p>A Workday reporting strategy should define:</p>
   <ul>
     <li>Which executive questions need standard dashboards.</li>
