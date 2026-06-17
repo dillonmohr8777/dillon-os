@@ -315,11 +315,11 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 
 /* Three-way comparison cards */
 .compare{ display:flex; gap:12pt; margin:20pt 0; }
-.compare .cc{ flex:1; background:#FFFFFF; border:1.5pt solid var(--line); border-radius:13pt;
+.compare .cc{ flex:1; display:flex; flex-direction:column; background:#FFFFFF; border:1.5pt solid var(--line); border-radius:13pt;
   overflow:hidden; box-shadow:0 4pt 12pt rgba(20,35,59,.07); break-inside:avoid; }
 .compare .cc .ch{ font-family:'Jakarta'; font-weight:800; font-size:11.5pt; color:#fff;
   padding:11pt 14pt; letter-spacing:.01em; border-radius:11.5pt 11.5pt 0 0; }
-.compare .cc .cb{ padding:12pt 14pt 14pt; font-size:9.7pt; color:var(--ink); line-height:1.5; border-radius:0 0 11.5pt 11.5pt; }
+.compare .cc .cb{ flex:1; padding:12pt 14pt 14pt; font-size:9.7pt; color:var(--ink); line-height:1.5; border-radius:0 0 11.5pt 11.5pt; }
 .compare .cc .cb .ckr{ font-family:'Jakarta'; font-weight:800; font-size:7.5pt; letter-spacing:.14em;
   text-transform:uppercase; display:block; margin-bottom:4pt; }
 /* ADP = red */
