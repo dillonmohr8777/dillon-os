@@ -70,76 +70,72 @@ em{font-style:italic;}
    COVER
    ========================================================================= */
 .cover{
-  position:relative;width:100%;height:279.4mm;overflow:hidden;
+  position:relative;width:100%;height:279.4mm;overflow:hidden;color:#fff;
   background:
-    radial-gradient(120% 80% at 80% -10%, rgba(44,130,201,.55) 0%, rgba(10,91,168,0) 55%),
-    radial-gradient(90% 70% at -10% 110%, rgba(240,176,24,.18) 0%, rgba(240,176,24,0) 50%),
-    linear-gradient(155deg,#0B3766 0%,#062A4F 55%,#041D38 100%);
-  color:#fff;
+    radial-gradient(118% 80% at 86% 2%, rgba(66,150,222,.58) 0%, rgba(10,91,168,0) 50%),
+    radial-gradient(100% 78% at 2% 100%, rgba(240,176,24,.22) 0%, rgba(240,176,24,0) 56%),
+    linear-gradient(158deg,#0F4682 0%,#08325E 50%,#04203D 100%);
 }
-.cover .grid-deco{
-  position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
-  background-size:26px 26px;mask-image:radial-gradient(75% 60% at 70% 25%,#000,transparent);
-}
-.cover .emblem-ghost{
-  position:absolute;right:-70mm;bottom:-60mm;width:200mm;height:200mm;opacity:.06;
-}
-.cover .cap{
-  position:absolute;top:22mm;left:20mm;right:20mm;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.cover .cap img{height:15mm;}
-.cover .cap .kw{
-  font-family:'Montserrat';font-weight:600;font-size:8pt;letter-spacing:.28em;
-  color:var(--gold-lt);border:1px solid rgba(240,176,24,.45);
-  padding:5pt 11pt;border-radius:40pt;
-}
-.cover .core{position:absolute;left:20mm;right:20mm;top:92mm;}
-.cover .eyebrow{
-  font-family:'Montserrat';font-weight:700;font-size:11pt;letter-spacing:.34em;
-  color:var(--gold);margin-bottom:10mm;display:flex;align-items:center;gap:10pt;
-}
+/* large faint brand emblem, upper-right */
+.cover .wm{position:absolute;top:-52mm;right:-64mm;width:212mm;height:212mm;opacity:.10;}
+/* rising data chart anchored to the bottom */
+.cover .chart{position:absolute;left:0;right:0;bottom:0;width:100%;display:block;}
+/* soft vignette so footer text stays legible over the chart */
+.cover .veil{position:absolute;left:0;right:0;bottom:0;height:42mm;
+  background:linear-gradient(0deg,rgba(4,32,61,.88) 0%,rgba(4,32,61,0) 100%);}
+
+.cover .cap{position:absolute;top:19mm;left:20mm;right:20mm;
+  display:flex;justify-content:space-between;align-items:center;}
+.cover .cap img{height:13.5mm;}
+.cover .cap .ed{font-family:'Montserrat';font-weight:700;font-size:8pt;letter-spacing:.26em;
+  color:var(--gold-lt);border:1px solid rgba(240,176,24,.5);padding:5pt 12pt;border-radius:40pt;}
+
+.cover .chips{position:absolute;left:20mm;top:48mm;display:flex;gap:7pt;}
+.cover .chip{font-family:'Montserrat';font-weight:700;font-size:7.5pt;letter-spacing:.18em;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);
+  color:#E3EEF8;padding:5pt 12pt;border-radius:30pt;}
+
+.cover .core{position:absolute;left:20mm;right:20mm;top:60mm;}
+.cover .eyebrow{font-family:'Montserrat';font-weight:700;font-size:10pt;letter-spacing:.38em;
+  color:var(--gold);margin-bottom:7mm;display:flex;align-items:center;gap:10pt;}
 .cover .eyebrow::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent);}
-.cover h1{
-  font-size:62pt;font-weight:800;color:#fff;letter-spacing:-.015em;line-height:.98;
-  text-shadow:0 2px 30px rgba(0,0,0,.25);
-}
+.cover h1{font-size:61pt;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:.95;
+  text-shadow:0 3px 34px rgba(0,0,0,.32);}
 .cover h1 .y{color:var(--gold);}
-.cover .sub{
-  font-family:'Montserrat';font-weight:500;font-size:16pt;color:#CFE0F0;
-  margin-top:9mm;max-width:150mm;line-height:1.32;
-}
-.cover .deck{
-  font-family:'Source3';font-size:11.5pt;color:#A9C3DC;margin-top:7mm;max-width:140mm;line-height:1.5;
-}
-.cover .footer{
-  position:absolute;left:20mm;right:20mm;bottom:20mm;
+.cover .sub{font-family:'Montserrat';font-weight:500;font-size:15pt;color:#D6E5F4;
+  margin-top:8mm;max-width:148mm;line-height:1.34;}
+.cover .deck{font-family:'Source3';font-size:11pt;color:#A7C3DE;margin-top:6mm;max-width:138mm;line-height:1.5;}
+
+/* floating data callouts sitting on the chart */
+.cover .stats{position:absolute;left:20mm;right:20mm;bottom:33mm;display:flex;gap:9pt;align-items:flex-end;}
+.cover .schip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);
+  border-radius:12pt;padding:10pt 13pt;border-bottom:3px solid var(--gold);flex:1;}
+.cover .schip .sv{font-family:'Montserrat';font-weight:800;font-size:22pt;color:var(--gold);
+  line-height:1;letter-spacing:-.01em;}
+.cover .schip .sv small{font-size:13pt;color:var(--gold-lt);}
+.cover .schip .sl{font-family:'Source3';font-size:8pt;color:#CDDEEE;margin-top:5pt;line-height:1.28;}
+.cover .schip.up{margin-bottom:11mm;} .cover .schip.up2{margin-bottom:22mm;}
+
+.cover .footer{position:absolute;left:20mm;right:20mm;bottom:15mm;
   display:flex;justify-content:space-between;align-items:flex-end;
-  border-top:1px solid rgba(255,255,255,.16);padding-top:6mm;
-}
-.cover .footer .who{font-family:'Montserrat';font-weight:700;font-size:10pt;color:#fff;letter-spacing:.02em;}
-.cover .footer .who span{display:block;font-weight:400;font-family:'Source3';font-size:9pt;color:#9FB6CD;margin-top:2pt;letter-spacing:0;}
-.cover .footer .ed{text-align:right;font-family:'Source3';font-size:8.5pt;color:#8FA8C0;line-height:1.5;}
-.cover .chips{position:absolute;left:20mm;top:70mm;display:flex;gap:7pt;}
-.cover .chip{font-family:'Montserrat';font-weight:600;font-size:8pt;letter-spacing:.16em;
-  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
-  color:#DCE9F5;padding:5pt 11pt;border-radius:6pt;}
+  border-top:1px solid rgba(255,255,255,.18);padding-top:5mm;}
+.cover .footer .who{font-family:'Montserrat';font-weight:700;font-size:9.5pt;color:#fff;letter-spacing:.02em;}
+.cover .footer .who span{display:block;font-weight:400;font-family:'Source3';font-size:8.5pt;color:#9FB6CD;margin-top:2pt;letter-spacing:0;}
+.cover .footer .url{text-align:right;font-family:'Source3';font-size:8.5pt;color:#9FB6CD;line-height:1.5;}
 
 /* =========================================================================
    SECTION DIVIDERS (part openers)
    ========================================================================= */
 .divider{
   position:relative;width:100%;height:279.4mm;overflow:hidden;color:#fff;
-  background:linear-gradient(150deg,#0B3766,#062A4F 70%,#041D38);
+  background:
+    radial-gradient(80% 55% at 88% 92%, rgba(240,176,24,.13) 0%, rgba(240,176,24,0) 60%),
+    radial-gradient(90% 60% at 10% 6%, rgba(64,150,222,.30) 0%, rgba(10,91,168,0) 55%),
+    linear-gradient(150deg,#0F4682,#08325E 65%,#04203D);
 }
-.divider .grid-deco{position:absolute;inset:0;
-  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
-  background-size:26px 26px;mask-image:radial-gradient(70% 60% at 30% 40%,#000,transparent);}
-.divider .emblem-ghost{position:absolute;left:-55mm;top:-50mm;width:160mm;opacity:.07;}
+.divider .grid-deco{position:absolute;left:0;right:0;bottom:0;height:66mm;
+  background:url('assets/chart.svg') left bottom / 100% auto no-repeat;opacity:.55;}
+.divider .emblem-ghost{position:absolute;left:-55mm;top:-50mm;width:160mm;opacity:.08;}
 .divider .inner{position:absolute;left:24mm;right:24mm;top:108mm;}
 .divider .pnum{font-family:'Montserrat';font-weight:800;font-size:130pt;line-height:.8;
   color:rgba(240,176,24,.92);letter-spacing:-.02em;

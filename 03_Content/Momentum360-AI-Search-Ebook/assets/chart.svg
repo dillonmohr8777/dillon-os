@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMax meet">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0B018" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#F0B018" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="blu" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#46A0E6" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#46A0E6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- secondary series (blue) -->
+  <path d="M0,338 L150,332 L300,322 L450,312 L600,286 L750,276 L900,232 L1050,206 L1200,168 L1200,360 L0,360 Z" fill="url(#blu)"/>
+  <path d="M0,338 L150,332 L300,322 L450,312 L600,286 L750,276 L900,232 L1050,206 L1200,168" fill="none" stroke="#7CBBED" stroke-width="3" stroke-opacity="0.6"/>
+  <!-- primary series (gold) rising higher -->
+  <path d="M0,352 L150,344 L300,328 L450,300 L600,250 L750,234 L900,162 L1050,120 L1200,58 L1200,360 L0,360 Z" fill="url(#gold)"/>
+  <path d="M0,352 L150,344 L300,328 L450,300 L600,250 L750,234 L900,162 L1050,120 L1200,58" fill="none" stroke="#F0B018" stroke-width="4.5"/>
+  <!-- node markers -->
+  <g fill="#FFD45E" stroke="#08325E" stroke-width="2">
+    <circle cx="450" cy="300" r="7"/>
+    <circle cx="750" cy="234" r="7"/>
+    <circle cx="1050" cy="120" r="8"/>
+  </g>
+</svg>

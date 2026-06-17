@@ -13,7 +13,8 @@ corrected best-practice guidance, and a full Momentum 360 visual design system.
 | `ebook.html` | Editable source content + structure |
 | `style.css` | Brand design system (print stylesheet for WeasyPrint) |
 | `assets/logos/momentum360-logo.png` | Official full logo (high-res; gold wordmark + white tagline — used on the navy cover & back cover) |
-| `assets/logos/momentum360-emblem.png` | Circular "M" emblem (transparent), used as the recurring brand mark in Momentum Edge panels and section watermarks |
+| `assets/logos/momentum360-emblem.png` | Clean circular "M" emblem (transparent), the recurring brand mark in Momentum Edge panels and the cover/divider/back-cover watermarks |
+| `assets/chart.svg` | Rising dual-series data chart used as the cover hero motif and faint divider background |
 | `assets/fonts/Montserrat.ttf` | Display / headings |
 | `assets/fonts/SourceSans3.ttf` | Body text |
 
