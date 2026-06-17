@@ -23,7 +23,8 @@ leaders, and transformation teams evaluating Workday.
 - 8pt spacing grid and 1.25 modular type scale (per `apple-hig-expert` / `ui-design-system` skills).
 - Editorial newspaper-style pull-quotes and a navy at-a-glance "key questions" box.
 - All text meets readable contrast (no light-gray body type).
-- "Workday" appears in its signature blue in titles only; Align orange elsewhere.
+- "Workday" appears in its signature blue in chapter titles + cover only (not TOC/body).
+- White page background; brand-colored vendor cards (ADP red, Dayforce blue, Workday blue+orange); stronger card outlines; icons recolored white on dark boxes.
 - Lucide line icons throughout (chapter headers, callouts, TCO lanes); bold insight boxes; aligned card rows.
 - Running headers (chapter name) via CSS string-set; horizontal TCO cost lanes; 2x2 numbered layer grid; ADP/Dayforce/Workday comparison.
 
