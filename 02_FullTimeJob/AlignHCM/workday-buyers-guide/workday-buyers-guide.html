@@ -45,22 +45,30 @@
    ============================================================ */
 @page{
   size:Letter;
-  margin:22mm 20mm 19mm 20mm;
+  margin:24mm 20mm 19mm 20mm;
+  @top-left{
+    content:"The Workday Buyer's Guide";
+    font-family:'DM Sans'; font-size:8pt; color:#8C98A8; letter-spacing:.05em;
+  }
+  @top-right{
+    content:string(chap);
+    font-family:'Jakarta'; font-weight:800; font-size:8pt; color:var(--orange); letter-spacing:.12em;
+  }
   @bottom-left{
-    content:"Workday Buyer's Guide";
-    font-family:'DM Sans'; font-size:8pt; color:var(--chrome); letter-spacing:.04em;
+    content:"Align HCM";
+    font-family:'Jakarta'; font-weight:800; font-size:8pt; color:var(--chrome); letter-spacing:.1em;
   }
   @bottom-center{
-    content:"Align HCM  ·  2026 Edition";
-    font-family:'DM Sans'; font-size:8pt; color:var(--chrome); letter-spacing:.04em;
+    content:"2026 Edition";
+    font-family:'DM Sans'; font-size:8pt; color:var(--chrome); letter-spacing:.06em;
   }
   @bottom-right{
     content:counter(page);
-    font-family:'Jakarta'; font-weight:700; font-size:8.5pt; color:var(--orange);
+    font-family:'Jakarta'; font-weight:800; font-size:9pt; color:var(--orange);
   }
 }
-@page cover{ margin:0; @bottom-left{content:""} @bottom-center{content:""} @bottom-right{content:""} }
-@page nochrome{ @bottom-left{content:""} @bottom-center{content:""} @bottom-right{content:""} }
+@page cover{ margin:0; @top-left{content:""} @top-right{content:""} @bottom-left{content:""} @bottom-center{content:""} @bottom-right{content:""} }
+@page nochrome{ @top-left{content:""} @top-right{content:""} @bottom-left{content:""} @bottom-center{content:""} @bottom-right{content:""} }
 
 /* ============================================================
    BASE
@@ -182,7 +190,8 @@ li::before{
 }
 .h-band .t{ font-family:'Jakarta'; font-weight:800; font-size:17pt; line-height:1.1; letter-spacing:-.01em;}
 .h-band .k{ font-family:'Jakarta'; font-weight:700; font-size:7.5pt; letter-spacing:.24em;
-  text-transform:uppercase; color:rgba(255,255,255,.85); display:block; margin-bottom:3pt;}
+  text-transform:uppercase; color:rgba(255,255,255,.85); display:block; margin-bottom:3pt;
+  string-set:chap content(); }
 
 /* Flowing layout: chapters run continuously to avoid near-empty pages.
    The orange header band acts as an in-page section divider. */
@@ -273,9 +282,9 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 .kpi-pair .k .bar{ height:5pt; border-radius:3pt; background:#E7ECF3; margin-top:8pt; overflow:hidden;}
 .kpi-pair .k .bar i{ display:block; height:100%; border-radius:3pt; background:linear-gradient(90deg,var(--orange),var(--orange-2));}
 
-/* Numbered layer cards */
-.layers{ display:flex; flex-wrap:wrap; gap:12pt; margin:20pt 0; }
-.layer{ flex:1 1 45%; background:#FFFFFF; border:1px solid var(--line); border-radius:12pt;
+/* Numbered layer cards (true 2-column grid via multicol) */
+.layers{ column-count:2; column-gap:12pt; margin:20pt 0; }
+.layer{ display:inline-block; width:100%; margin:0 0 12pt; background:#FFFFFF; border:1px solid var(--line); border-radius:12pt;
   padding:13pt 15pt 14pt 14pt; position:relative; overflow:hidden;
   box-shadow:0 3pt 10pt rgba(20,35,59,.05); break-inside:avoid; }
 .layer::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:4pt;
@@ -287,6 +296,21 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
   box-shadow:0 3pt 8pt rgba(240,90,40,.28); }
 .layer .lt{ font-family:'Jakarta'; font-weight:800; font-size:11pt; color:var(--navy-900); line-height:1.1; }
 .layer p{ margin:0; font-size:9.6pt; color:var(--ink-soft); line-height:1.5; }
+
+/* TCO cost lanes (horizontal, fragment naturally) */
+.lanes{ margin:18pt 0; }
+.lane{ display:flex; background:#FFFFFF; border:1px solid var(--line); border-radius:12pt;
+  overflow:hidden; margin-bottom:11pt; box-shadow:0 3pt 10pt rgba(20,35,59,.05); break-inside:avoid; }
+.lane .lhd{ flex:0 0 134pt; display:flex; flex-direction:column; justify-content:center; gap:4pt;
+  padding:13pt 16pt; background:linear-gradient(135deg,var(--navy-900),var(--navy-800)); position:relative; }
+.lane .lhd::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:4pt;
+  background:linear-gradient(180deg,var(--orange),var(--orange-2)); }
+.lane .lhd .ln{ font-family:'Jakarta'; font-weight:800; font-size:7.5pt; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--orange-2); }
+.lane .lhd .lname{ font-family:'Jakarta'; font-weight:800; font-size:12.5pt; color:#fff; line-height:1.05; }
+.lane ul{ flex:1; margin:0; padding:12pt 18pt; display:flex; flex-wrap:wrap; gap:6pt 22pt; align-content:center; }
+.lane li{ font-size:9.5pt; color:var(--ink); margin:0; padding-left:15pt; line-height:1.35; }
+.lane li::before{ top:5.5pt; width:4pt; height:4pt; }
 
 /* Three-way comparison cards */
 .compare{ display:flex; gap:12pt; margin:20pt 0; }
@@ -853,25 +877,44 @@ a{ color:var(--wd-blue); text-decoration:none; }
   </div>
   <p style="font-size:9.2pt;color:var(--ink-soft);">Gartner Digital Markets 2025 HR Software Trends Survey, based on 3,256 respondents across 11 countries. The market isn't moving toward less HR technology spend. It is moving toward more disciplined spend.</p>
 
-  <h3 class="sub">A practical Workday TCO model should include</h3>
-  <div class="two-col">
-    <ul>
-      <li>Subscription fees by module and employee population.</li>
-      <li>Implementation partner services.</li>
-      <li>Internal project team time.</li>
-      <li>Data conversion and cleanup.</li>
-      <li>Integration design, build, testing, and maintenance.</li>
-      <li>Reporting architecture and report cleanup.</li>
-      <li>Security design and testing.</li>
-      <li>Change management and communications.</li>
-      <li>Role-based training.</li>
-      <li>Payroll or third-party provider coordination.</li>
-      <li>Hypercare after go-live.</li>
-      <li>Release testing and adoption.</li>
-      <li>Ongoing admin, optimization, and SmartCare support.</li>
-      <li>Future module expansion.</li>
-      <li>AI activation and adoption work.</li>
-    </ul>
+  <h3 class="sub">Where the Workday budget actually goes</h3>
+  <p>A practical TCO model spans four lanes. Most buyers price the first lane and underfund the other three.</p>
+  <div class="lanes">
+    <div class="lane">
+      <div class="lhd"><span class="ln">Lane 01</span><span class="lname">License</span></div>
+      <ul>
+        <li>Subscription fees by module and employee population.</li>
+        <li>Future module expansion.</li>
+      </ul>
+    </div>
+    <div class="lane">
+      <div class="lhd"><span class="ln">Lane 02</span><span class="lname">Implementation</span></div>
+      <ul>
+        <li>Implementation partner services.</li>
+        <li>Internal project team time.</li>
+        <li>Data conversion and cleanup.</li>
+        <li>Integration design, build, testing, and maintenance.</li>
+        <li>Security design and testing.</li>
+      </ul>
+    </div>
+    <div class="lane">
+      <div class="lhd"><span class="ln">Lane 03</span><span class="lname">People &amp; Adoption</span></div>
+      <ul>
+        <li>Change management and communications.</li>
+        <li>Role-based training.</li>
+        <li>Payroll or third-party provider coordination.</li>
+      </ul>
+    </div>
+    <div class="lane">
+      <div class="lhd"><span class="ln">Lane 04</span><span class="lname">Run the Platform</span></div>
+      <ul>
+        <li>Hypercare after go-live.</li>
+        <li>Reporting architecture and report cleanup.</li>
+        <li>Release testing and adoption.</li>
+        <li>Ongoing admin, optimization, and SmartCare support.</li>
+        <li>AI activation and adoption work.</li>
+      </ul>
+    </div>
   </div>
   <p>The mistake is treating implementation as the whole cost. Workday is a living platform. Releases, AI capabilities, reporting needs, reorganizations, acquisitions, process changes, and workforce shifts all create ongoing work.</p>
 
