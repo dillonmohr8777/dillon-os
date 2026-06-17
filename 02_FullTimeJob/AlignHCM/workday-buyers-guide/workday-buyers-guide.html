@@ -32,11 +32,12 @@
   --teal:#2BB5A0;
   --teal-soft:#E9F7F4;
   --wd-blue:#0875E1;
-  --ink:#22303F;
-  --ink-soft:#56657A;
-  --line:#E4E8EF;
+  --ink:#1B2733;
+  --ink-soft:#33414F;
+  --line:#DDE3EC;
   --paper:#FFFFFF;
-  --paper-2:#F6F8FB;
+  --paper-2:#F4F7FB;
+  --chrome:#42505F;
 }
 
 /* ============================================================
@@ -44,14 +45,14 @@
    ============================================================ */
 @page{
   size:Letter;
-  margin:20mm 18mm 18mm 18mm;
+  margin:22mm 20mm 19mm 20mm;
   @bottom-left{
     content:"Workday Buyer's Guide";
-    font-family:'DM Sans'; font-size:7.5pt; color:#9AA6B6; letter-spacing:.04em;
+    font-family:'DM Sans'; font-size:8pt; color:var(--chrome); letter-spacing:.04em;
   }
   @bottom-center{
     content:"Align HCM  ·  2026 Edition";
-    font-family:'DM Sans'; font-size:7.5pt; color:#9AA6B6; letter-spacing:.04em;
+    font-family:'DM Sans'; font-size:8pt; color:var(--chrome); letter-spacing:.04em;
   }
   @bottom-right{
     content:counter(page);
@@ -65,23 +66,30 @@
    BASE
    ============================================================ */
 *{box-sizing:border-box;}
-html{ -weasy-hyphens:none; }
+html{
+  -weasy-hyphens:none;
+  background-color:#FCFDFF;
+  background-image:
+    radial-gradient(58% 26% at 100% 0%, rgba(240,90,40,.045) 0%, rgba(240,90,40,0) 62%),
+    radial-gradient(52% 24% at 0% 100%, rgba(43,181,160,.045) 0%, rgba(43,181,160,0) 60%),
+    linear-gradient(180deg, #FCFDFF 0%, #F6F9FC 100%);
+}
 body{
   font-family:'DM Sans', sans-serif;
   color:var(--ink);
-  font-size:10.3pt;
-  line-height:1.6;
+  font-size:10.6pt;
+  line-height:1.72;
   margin:0;
 }
-p{ margin:0 0 9pt; }
+p{ margin:0 0 11pt; }
 h1,h2,h3,h4{ font-family:'Jakarta', sans-serif; color:var(--navy-900); margin:0; }
 strong{ color:var(--navy-800); font-weight:700; }
 em{ font-style:italic; color:var(--ink); }
-ul{ margin:0 0 10pt; padding-left:0; list-style:none; }
-li{ position:relative; padding-left:16pt; margin-bottom:5pt; }
+ul{ margin:0 0 12pt; padding-left:0; list-style:none; }
+li{ position:relative; padding-left:18pt; margin-bottom:7pt; }
 li::before{
   content:"";
-  position:absolute; left:2pt; top:7pt;
+  position:absolute; left:2pt; top:8pt;
   width:5pt; height:5pt; border-radius:1.5pt;
   background:linear-gradient(135deg,var(--orange) 0%,var(--orange-2) 100%);
 }
@@ -120,20 +128,20 @@ li::before{
 }
 .cover h1 .hl{ color:var(--orange-2); }
 .cover .deck{
-  font-size:12.5pt; line-height:1.55; color:#C7D2E0; max-width:150mm; margin-top:16pt;
+  font-size:12.5pt; line-height:1.6; color:#EAF0F8; max-width:150mm; margin-top:16pt;
 }
 .cover .rule{ height:3pt; width:64pt; border-radius:2pt;
-  background:linear-gradient(135deg,var(--orange) 0%,var(--orange-2) 100%); margin:20pt 0;}
+  background:linear-gradient(135deg,var(--orange) 0%,var(--orange-2) 100%); margin:22pt 0;}
 .cover .meta{ display:flex; gap:26pt; margin-top:4pt; }
-.cover .meta .k{ font-family:'Jakarta'; font-size:8pt; letter-spacing:.18em; text-transform:uppercase; color:#8A99AC;}
+.cover .meta .k{ font-family:'Jakarta'; font-size:8pt; letter-spacing:.18em; text-transform:uppercase; color:#C2CEDD;}
 .cover .meta .v{ font-family:'Jakarta'; font-weight:700; font-size:12pt; color:#fff; margin-top:2pt;}
 
 .platform-chip{
-  display:inline-flex; align-items:center; gap:10pt;
-  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
-  border-radius:12pt; padding:10pt 16pt; backdrop-filter:blur(18px);
+  display:inline-flex; flex-direction:column; align-items:flex-start; gap:7pt;
+  background:rgba(8,16,28,.55); border:1px solid rgba(255,255,255,.18);
+  border-radius:14pt; padding:13pt 18pt; backdrop-filter:blur(18px);
 }
-.platform-chip .lbl{ font-family:'Jakarta'; font-size:7.5pt; letter-spacing:.18em; text-transform:uppercase; color:#9DB0C6;}
+.platform-chip .lbl{ font-family:'Jakarta'; font-weight:700; font-size:7.5pt; letter-spacing:.2em; text-transform:uppercase; color:#D2DEEC;}
 
 .cover .spacer{ flex:1; }
 
@@ -149,20 +157,20 @@ li::before{
 .logo-align.dark .wm{ color:#fff; }
 .logo-align.light .wm{ color:var(--navy-900); }
 .logo-align .tag{ display:block; font-family:'Jakarta'; font-weight:600; font-size:6pt;
-  letter-spacing:.34em; text-transform:uppercase; color:#94A3B6; margin-top:3pt;}
+  letter-spacing:.34em; text-transform:uppercase; color:#45535F; margin-top:3pt;}
 
-.logo-wd{ display:flex; align-items:center; gap:7pt; }
-.logo-wd .wm{ font-family:'Jakarta'; font-weight:800; font-size:15pt; letter-spacing:-.02em; color:var(--wd-blue); line-height:1;}
-.logo-wd.on-dark .wm{ color:#5AB0FF; }
-.logo-wd .dot{ width:9pt;height:9pt;border-radius:50%;
-  background:linear-gradient(135deg,#FDB813 0%,var(--wd-blue) 90%); }
+.logo-wd{ display:flex; align-items:center; gap:9pt; }
+.logo-wd .wm{ font-family:'Jakarta'; font-weight:800; font-size:23pt; letter-spacing:-.02em; color:var(--wd-blue); line-height:1;}
+.logo-wd.on-dark .wm{ color:#6FBCFF; }
+.logo-wd .dot{ width:13pt;height:13pt;border-radius:50%;
+  background:linear-gradient(135deg,#FDB813 0%,#36A0FF 90%); }
 
 /* ============================================================
    SECTION DIVIDERS / HEADERS
    ============================================================ */
 .toc-page{ page:nochrome; page-break-after:always; }
 .h-band{
-  margin:0 -2mm 14pt; padding:14pt 16pt; border-radius:12pt;
+  margin:0 -2mm 18pt; padding:17pt 19pt; border-radius:13pt;
   background:linear-gradient(120deg,var(--orange) 0%,var(--orange-2) 78%, #FF8A4D 100%);
   color:#fff; display:flex; align-items:center; gap:14pt;
   box-shadow:0 6pt 16pt rgba(240,90,40,.20);
@@ -178,52 +186,52 @@ li::before{
 
 /* Flowing layout: chapters run continuously to avoid near-empty pages.
    The orange header band acts as an in-page section divider. */
-.chapter{ margin-top:18pt; }
+.chapter{ margin-top:26pt; }
 .chapter:first-of-type{ margin-top:0; }
 /* Force a fresh page only for a few heavyweight sections. */
 .chapter.break{ page-break-before:always; margin-top:0; }
 
 h3.sub{
-  font-family:'Jakarta'; font-weight:700; font-size:12pt; color:var(--navy-900);
-  margin:16pt 0 6pt; padding-left:11pt; position:relative;
+  font-family:'Jakarta'; font-weight:700; font-size:12.5pt; color:var(--navy-900);
+  margin:21pt 0 8pt; padding-left:12pt; position:relative;
 }
 h3.sub::before{
   content:""; position:absolute; left:0; top:2pt; bottom:2pt; width:4pt; border-radius:2pt;
   background:linear-gradient(180deg,var(--orange) 0%,var(--orange-2) 100%);
 }
-h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--navy-800); margin:11pt 0 3pt; }
+h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--navy-800); margin:14pt 0 4pt; }
 
 /* ============================================================
    CALLOUTS
    ============================================================ */
 .buyer-q{
   background:var(--teal-soft); border-left:4pt solid var(--teal);
-  border-radius:0 8pt 8pt 0; padding:9pt 13pt; margin:10pt 0;
+  border-radius:0 9pt 9pt 0; padding:12pt 16pt; margin:14pt 0;
 }
-.buyer-q .lbl{ font-family:'Jakarta'; font-weight:700; font-size:7.5pt; letter-spacing:.2em;
-  text-transform:uppercase; color:#1B8C7B; display:block; margin-bottom:2pt;}
-.buyer-q p{ margin:0; font-size:10pt; color:var(--navy-800); }
+.buyer-q .lbl{ font-family:'Jakarta'; font-weight:800; font-size:7.5pt; letter-spacing:.2em;
+  text-transform:uppercase; color:#147566; display:block; margin-bottom:3pt;}
+.buyer-q p{ margin:0; font-size:10.4pt; color:var(--navy-800); }
 
 .takeaway{
   background:linear-gradient(135deg,var(--navy-900) 0%, var(--navy-800) 100%);
-  color:#E7EDF5; border-radius:11pt; padding:13pt 16pt; margin:13pt 0;
+  color:#EEF3F9; border-radius:12pt; padding:16pt 19pt; margin:18pt 0;
   position:relative; overflow:hidden;
 }
 .takeaway::after{ content:""; position:absolute; top:-30pt; right:-30pt; width:90pt; height:90pt;
   border-radius:50%; background:radial-gradient(circle,rgba(240,90,40,.4),transparent 70%);}
 .takeaway .lbl{ font-family:'Jakarta'; font-weight:800; font-size:8pt; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--orange-2); display:block; margin-bottom:4pt;}
-.takeaway p{ margin:0; font-size:10.2pt; line-height:1.55; }
+  text-transform:uppercase; color:var(--orange-2); display:block; margin-bottom:5pt;}
+.takeaway p{ margin:0; font-size:10.5pt; line-height:1.6; }
 
 .note{
-  background:var(--orange-soft); border:1px solid #FBD9C8; border-radius:9pt;
-  padding:11pt 14pt; margin:11pt 0; font-size:9.8pt; color:var(--navy-800);
+  background:var(--orange-soft); border:1px solid #FBD9C8; border-radius:10pt;
+  padding:13pt 16pt; margin:14pt 0; font-size:10.2pt; color:var(--navy-800);
 }
 
 /* ============================================================
    STAT STRIP
    ============================================================ */
-.stats{ display:flex; gap:10pt; margin:13pt 0; }
+.stats{ display:flex; gap:11pt; margin:16pt 0; }
 .stat{
   flex:1; background:linear-gradient(165deg,#FFFFFF 0%,#F4F7FB 100%);
   border:1px solid var(--line); border-radius:13pt; padding:13pt 14pt 14pt;
@@ -237,15 +245,15 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 .stat .n{ font-family:'Jakarta'; font-weight:800; font-size:25pt; color:var(--navy-900);
   line-height:.98; letter-spacing:-.025em;}
 .stat .n .u{ font-size:13pt; color:var(--orange); }
-.stat .c{ font-size:8pt; color:var(--ink-soft); margin-top:6pt; line-height:1.35; }
+.stat .c{ font-size:8.8pt; color:var(--ink-soft); margin-top:6pt; line-height:1.35; }
 .stat .bar{ height:5pt; border-radius:3pt; background:#E7ECF3; margin-top:9pt; overflow:hidden;}
 .stat .bar i{ display:block; height:100%; border-radius:3pt;
   background:linear-gradient(90deg,var(--orange) 0%,var(--orange-2) 100%);}
-.stat .barlab{ font-family:'Jakarta'; font-weight:700; font-size:6.5pt; letter-spacing:.12em;
-  text-transform:uppercase; color:#9AA6B6; margin-top:4pt; display:block;}
+.stat .barlab{ font-family:'Jakarta'; font-weight:800; font-size:7pt; letter-spacing:.12em;
+  text-transform:uppercase; color:#45535F; margin-top:4pt; display:block;}
 
 /* Decision meter (scorecard) */
-.meter{ display:flex; margin:12pt 0 4pt; border-radius:8pt; overflow:hidden;
+.meter{ display:flex; margin:15pt 0 5pt; border-radius:8pt; overflow:hidden;
   box-shadow:0 3pt 9pt rgba(20,35,59,.10); }
 .meter .seg{ padding:9pt 10pt; color:#fff; }
 .meter .seg .sv{ font-family:'Jakarta'; font-weight:800; font-size:10.5pt; display:block; line-height:1;}
@@ -254,16 +262,44 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 .meter .cond{ background:linear-gradient(135deg,var(--amber),#F4A04C);}
 .meter .strong{ background:linear-gradient(135deg,#1F9E8C,var(--teal));}
 .meter-scale{ display:flex; justify-content:space-between; font-family:'Jakarta'; font-weight:700;
-  font-size:7.5pt; color:#9AA6B6; margin-top:3pt;}
+  font-size:7.5pt; color:#45535F; margin-top:3pt;}
 
 /* Inline mini-KPI pair */
-.kpi-pair{ display:flex; gap:10pt; margin:11pt 0; }
+.kpi-pair{ display:flex; gap:12pt; margin:15pt 0; }
 .kpi-pair .k{ flex:1; background:linear-gradient(165deg,#FFFFFF,#F4F7FB); border:1px solid var(--line);
   border-radius:11pt; padding:11pt 13pt;}
 .kpi-pair .k .kn{ font-family:'Jakarta'; font-weight:800; font-size:21pt; color:var(--orange); line-height:1; letter-spacing:-.02em;}
-.kpi-pair .k .kc{ font-size:8.4pt; color:var(--ink-soft); margin-top:4pt; line-height:1.35;}
+.kpi-pair .k .kc{ font-size:9pt; color:var(--ink-soft); margin-top:4pt; line-height:1.35;}
 .kpi-pair .k .bar{ height:5pt; border-radius:3pt; background:#E7ECF3; margin-top:8pt; overflow:hidden;}
 .kpi-pair .k .bar i{ display:block; height:100%; border-radius:3pt; background:linear-gradient(90deg,var(--orange),var(--orange-2));}
+
+/* Numbered layer cards */
+.layers{ display:flex; flex-wrap:wrap; gap:11pt; margin:14pt 0; }
+.layer{ flex:1 1 45%; background:#FFFFFF; border:1px solid var(--line); border-radius:12pt;
+  padding:13pt 15pt 14pt 14pt; position:relative; overflow:hidden;
+  box-shadow:0 3pt 10pt rgba(20,35,59,.05); break-inside:avoid; }
+.layer::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:4pt;
+  background:linear-gradient(180deg,var(--orange),var(--orange-2)); }
+.layer .lh{ display:flex; align-items:center; gap:10pt; margin-bottom:5pt; }
+.layer .badge{ width:24pt; height:24pt; border-radius:7pt; flex:0 0 24pt;
+  background:linear-gradient(135deg,var(--orange),var(--orange-2)); color:#fff;
+  font-family:'Jakarta'; font-weight:800; font-size:12pt; display:flex; align-items:center; justify-content:center;
+  box-shadow:0 3pt 8pt rgba(240,90,40,.28); }
+.layer .lt{ font-family:'Jakarta'; font-weight:800; font-size:11pt; color:var(--navy-900); line-height:1.1; }
+.layer p{ margin:0; font-size:9.6pt; color:var(--ink-soft); line-height:1.5; }
+
+/* Three-way comparison cards */
+.compare{ display:flex; gap:11pt; margin:15pt 0; }
+.compare .cc{ flex:1; background:#FFFFFF; border:1px solid var(--line); border-radius:12pt;
+  overflow:hidden; box-shadow:0 3pt 10pt rgba(20,35,59,.05); break-inside:avoid; }
+.compare .cc .ch{ font-family:'Jakarta'; font-weight:800; font-size:11pt; color:#fff;
+  padding:9pt 13pt; letter-spacing:.01em; }
+.compare .cc.adp .ch{ background:linear-gradient(135deg,#3A4A5E,#536175); }
+.compare .cc.day .ch{ background:linear-gradient(135deg,#1F9E8C,var(--teal)); }
+.compare .cc.wd  .ch{ background:linear-gradient(135deg,var(--orange),var(--orange-2)); }
+.compare .cc .cb{ padding:11pt 13pt 13pt; font-size:9.6pt; color:var(--ink); line-height:1.5; }
+.compare .cc .cb .ckr{ font-family:'Jakarta'; font-weight:700; font-size:7.5pt; letter-spacing:.14em;
+  text-transform:uppercase; color:#45535F; display:block; margin-bottom:4pt; }
 
 /* ============================================================
    TOC
@@ -275,45 +311,45 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 .toc-hero .glow{ position:absolute; width:200px;height:200px;border-radius:50%; filter:blur(90px);
   background:var(--orange); opacity:.4; top:-60px; right:-40px;}
 .toc-hero h2{ color:#fff; font-size:20pt; font-weight:800; position:relative;}
-.toc-hero p{ color:#B9C6D6; margin:6pt 0 0; position:relative; font-size:10pt;}
+.toc-hero p{ color:#E2EAF3; margin:7pt 0 0; position:relative; font-size:10.5pt;}
 .toc-list{ column-count:2; column-gap:20pt; }
-.toc-row{ display:flex; align-items:baseline; gap:8pt; padding:6pt 0; border-bottom:1px solid var(--line);
+.toc-row{ display:flex; align-items:baseline; gap:9pt; padding:8.5pt 0; border-bottom:1px solid var(--line);
   break-inside:avoid; }
-.toc-row .tn{ font-family:'Jakarta'; font-weight:800; font-size:11pt; color:var(--orange); width:20pt;}
-.toc-row .tt{ font-family:'Jakarta'; font-weight:600; font-size:9.6pt; color:var(--navy-800); }
+.toc-row .tn{ font-family:'Jakarta'; font-weight:800; font-size:12pt; color:var(--orange); width:20pt;}
+.toc-row .tt{ font-family:'Jakarta'; font-weight:600; font-size:10.3pt; color:var(--navy-800); }
 
 /* ============================================================
    SCORECARD / WORKBOOK
    ============================================================ */
-.score-group{ margin:10pt 0; }
-.score-group .gh{ font-family:'Jakarta'; font-weight:700; font-size:10pt; color:var(--orange);
+.score-group{ margin:15pt 0; }
+.score-group .gh{ font-family:'Jakarta'; font-weight:800; font-size:10.5pt; color:var(--orange);
   text-transform:uppercase; letter-spacing:.08em; margin-bottom:5pt;}
-.score-item{ display:flex; align-items:center; gap:10pt; padding:5.5pt 0; border-bottom:1px solid var(--line); break-inside:avoid;}
-.score-item .lab{ flex:1; font-size:9.6pt; color:var(--navy-800);}
+.score-item{ display:flex; align-items:center; gap:10pt; padding:7.5pt 0; border-bottom:1px solid var(--line); break-inside:avoid;}
+.score-item .lab{ flex:1; font-size:10pt; color:var(--navy-800);}
 .dots{ display:flex; gap:4pt; }
 .dots span{ width:11pt;height:11pt;border-radius:3pt; border:1.4pt solid var(--orange); display:inline-block;}
-.score-key{ background:var(--paper-2); border:1px solid var(--line); border-radius:10pt; padding:11pt 14pt; margin-top:10pt; font-size:9.6pt;}
+.score-key{ background:#FFFFFF; border:1px solid var(--line); border-radius:11pt; padding:14pt 16pt; margin-top:13pt; font-size:10pt; box-shadow:0 3pt 10pt rgba(20,35,59,.05);}
 .score-key b{ color:var(--orange); }
 
-.field{ margin:7pt 0; }
-.field .fl{ font-family:'Jakarta'; font-weight:600; font-size:9.6pt; color:var(--navy-800); }
-.field .line{ border-bottom:1.4px dotted #B9C3D2; height:15pt; margin-top:2pt; }
-.ws{ background:var(--paper-2); border:1px solid var(--line); border-left:4pt solid var(--teal);
-  border-radius:0 10pt 10pt 0; padding:12pt 15pt; margin:11pt 0; break-inside:avoid;}
+.field{ margin:10pt 0; }
+.field .fl{ font-family:'Jakarta'; font-weight:600; font-size:10pt; color:var(--navy-800); }
+.field .line{ border-bottom:1.4px dotted #AEBACB; height:19pt; margin-top:3pt; }
+.ws{ background:#FFFFFF; border:1px solid var(--line); border-left:4pt solid var(--teal);
+  border-radius:0 12pt 12pt 0; padding:15pt 18pt; margin:15pt 0; break-inside:avoid; box-shadow:0 3pt 10pt rgba(20,35,59,.05);}
 .ws h4{ font-family:'Jakarta'; font-weight:700; font-size:11pt; color:var(--navy-900); margin:0 0 6pt;}
 
 /* ============================================================
    MISC
    ============================================================ */
-.lede{ font-size:11.5pt; line-height:1.6; color:var(--navy-800); border-left:4pt solid var(--orange);
-  padding-left:13pt; margin:0 0 14pt; font-family:'Jakarta'; font-weight:500;}
+.lede{ font-size:12.5pt; line-height:1.6; color:var(--navy-800); border-left:4pt solid var(--orange);
+  padding-left:14pt; margin:4pt 0 16pt; font-family:'Jakarta'; font-weight:600;}
 .two-col{ column-count:2; column-gap:18pt; }
-.profile{ background:var(--paper-2); border:1px solid var(--line); border-radius:10pt; padding:11pt 14pt; margin:8pt 0; break-inside:avoid;}
-.profile .pt{ font-family:'Jakarta'; font-weight:700; font-size:10pt; color:var(--orange); margin-bottom:2pt;}
-.source{ display:flex; gap:10pt; padding:8pt 0; border-bottom:1px solid var(--line); break-inside:avoid;}
+.profile{ background:#FFFFFF; border:1px solid var(--line); border-radius:12pt; padding:13pt 16pt; margin:10pt 0; break-inside:avoid; box-shadow:0 3pt 10pt rgba(20,35,59,.05);}
+.profile .pt{ font-family:'Jakarta'; font-weight:800; font-size:10.5pt; color:var(--orange); margin-bottom:3pt;}
+.source{ display:flex; gap:11pt; padding:10pt 0; border-bottom:1px solid var(--line); break-inside:avoid;}
 .source .sb{ width:6pt; flex:0 0 6pt; border-radius:3pt; background:linear-gradient(180deg,var(--orange),var(--orange-2));}
-.source .st{ font-family:'Jakarta'; font-weight:700; font-size:9.6pt; color:var(--navy-900);}
-.source .sd{ font-size:9.2pt; color:var(--ink-soft); }
+.source .st{ font-family:'Jakarta'; font-weight:700; font-size:10.2pt; color:var(--navy-900);}
+.source .sd{ font-size:9.8pt; color:var(--ink-soft); }
 .divider-card{
   page:nochrome; page-break-before:always;
   background:linear-gradient(160deg,var(--navy-900),var(--navy-800));
@@ -321,7 +357,7 @@ h4.mini{ font-family:'Jakarta'; font-weight:700; font-size:10.5pt; color:var(--n
 }
 
 a{ color:var(--wd-blue); text-decoration:none; }
-.foot-legal{ font-size:8pt; color:#9AA6B6; text-align:center; margin-top:18pt; line-height:1.5;}
+.foot-legal{ font-size:8pt; color:#45535F; text-align:center; margin-top:18pt; line-height:1.5;}
 </style>
 </head>
 <body>
@@ -358,7 +394,7 @@ a{ color:var(--wd-blue); text-decoration:none; }
 
     <div class="spacer"></div>
 
-    <div class="deck" style="font-size:9.5pt;color:#9DB0C6;max-width:160mm;">
+    <div class="deck" style="font-size:9.5pt;color:#C7D5E5;max-width:160mm;">
       For CHROs, CFOs, HRIS leaders, finance leaders, and transformation teams. Use this as the
       companion to Align HCM's live <em>Strategic Buyer's Guide to Workday</em>: the web article gives
       the high-level fit framework, and this document turns that same position into a working
@@ -461,17 +497,24 @@ a{ color:var(--wd-blue); text-decoration:none; }
 
   <h3 class="sub">The Workday decision usually has four layers</h3>
 
-  <h4 class="mini">1. Platform fit</h4>
-  <p>Workday makes the most sense when the organization has enough complexity to justify a unified enterprise platform: matrix structures, multi-entity operations, workforce planning needs, frequent reorgs, global or regional payroll coordination, deep reporting requirements, and strong HR-Finance dependency.</p>
-
-  <h4 class="mini">2. Transformation readiness</h4>
-  <p>Workday doesn't create clean ownership by itself. Leaders need to decide who owns job architecture, position management, security, integrations, reporting, change management, and release management before implementation exposes the gaps.</p>
-
-  <h4 class="mini">3. Data and reporting discipline</h4>
-  <p>Workday can centralize data, but it won't magically reconcile conflicting definitions. If HR, Finance, Operations, and IT don't agree on headcount, cost center, worker type, position, job, location, and supervisory organization logic, the reporting pain will move into the new platform.</p>
-
-  <h4 class="mini">4. Long-term ownership</h4>
-  <p>Workday keeps changing. New releases, AI capabilities, reporting tools, integration options, and workflow improvements create ongoing work. Buyers need a post-go-live model that keeps Workday healthy after the launch team leaves.</p>
+  <div class="layers">
+    <div class="layer">
+      <div class="lh"><div class="badge">1</div><div class="lt">Platform fit</div></div>
+      <p>Workday makes the most sense when the organization has enough complexity to justify a unified enterprise platform: matrix structures, multi-entity operations, workforce planning needs, frequent reorgs, global or regional payroll coordination, deep reporting requirements, and strong HR-Finance dependency.</p>
+    </div>
+    <div class="layer">
+      <div class="lh"><div class="badge">2</div><div class="lt">Transformation readiness</div></div>
+      <p>Workday doesn't create clean ownership by itself. Leaders need to decide who owns job architecture, position management, security, integrations, reporting, change management, and release management before implementation exposes the gaps.</p>
+    </div>
+    <div class="layer">
+      <div class="lh"><div class="badge">3</div><div class="lt">Data and reporting discipline</div></div>
+      <p>Workday can centralize data, but it won't magically reconcile conflicting definitions. If HR, Finance, Operations, and IT don't agree on headcount, cost center, worker type, position, job, location, and supervisory organization logic, the reporting pain will move into the new platform.</p>
+    </div>
+    <div class="layer">
+      <div class="lh"><div class="badge">4</div><div class="lt">Long-term ownership</div></div>
+      <p>Workday keeps changing. New releases, AI capabilities, reporting tools, integration options, and workflow improvements create ongoing work. Buyers need a post-go-live model that keeps Workday healthy after the launch team leaves.</p>
+    </div>
+  </div>
 
   <div class="takeaway">
     <span class="lbl">Buyer takeaway</span>
@@ -486,12 +529,21 @@ a{ color:var(--wd-blue); text-decoration:none; }
     <div><span class="k">Chapter Three</span><div class="t">The Pain Points Workday Should Solve</div></div>
   </div>
 
-  <p>Workday pain is not the same as Dayforce pain or ADP pain.</p>
-  <ul>
-    <li><strong>ADP buyers</strong> usually feel payroll, compliance, service, product-fit, and implementation risk.</li>
-    <li><strong>Dayforce buyers</strong> usually feel time, scheduling, payroll calculation, manager ownership, and real-time workforce complexity.</li>
-    <li><strong>Workday buyers</strong> usually feel enterprise transformation pain. The organization has outgrown disconnected HR and finance processes.</li>
-  </ul>
+  <p>Workday pain is not the same as Dayforce pain or ADP pain. Each platform attracts a different kind of buyer because each one solves a different kind of problem.</p>
+  <div class="compare">
+    <div class="cc adp">
+      <div class="ch">ADP buyers</div>
+      <div class="cb"><span class="ckr">Usually feel</span>Payroll, compliance, service, product-fit, and implementation risk.</div>
+    </div>
+    <div class="cc day">
+      <div class="ch">Dayforce buyers</div>
+      <div class="cb"><span class="ckr">Usually feel</span>Time, scheduling, payroll calculation, manager ownership, and real-time workforce complexity.</div>
+    </div>
+    <div class="cc wd">
+      <div class="ch">Workday buyers</div>
+      <div class="cb"><span class="ckr">Usually feel</span>Enterprise transformation pain. The organization has outgrown disconnected HR and finance processes.</div>
+    </div>
+  </div>
   <p>This guide keeps the same buyer lens as Align HCM's live Workday page: Workday makes sense when complexity is the business problem, but the platform only pays off when the buyer can govern data, processes, integrations, reporting, change, and long-term ownership.</p>
 
   <h3 class="sub">Pain Point One: HR and Finance don't trust the same numbers</h3>
