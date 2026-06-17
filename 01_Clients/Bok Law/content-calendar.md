@@ -20,7 +20,7 @@ Generated every Sunday 6:00 PM ET by the `bok-law-social-content` routine. Deliv
 ## Week of June 16–22, 2026
 *Generated 2026-06-16 by content-routines agent. Delivery target: Tue 2026-06-17.*
 
-### Wednesday Wisdom: June 17, 2026
+### Wednesday Wisdom: June 18, 2026
 **Topic:** Summer custody schedules and co-parenting transitions
 
 When school lets out, the calendar that worked all year often doesn't. Pickup times shift. Camps fill whole weeks. One parent may have more daytime hours than they're used to.
@@ -38,7 +38,7 @@ Summer isn't a break from co-parenting. It's a different season that needs the s
 
 ---
 
-### Turn the Page Thursday: June 18, 2026
+### Turn the Page Thursday: June 19, 2026
 **Topic:** Closing one chapter without closing the door on yourself
 
 Some endings arrive quietly. A signed agreement. A move to a new apartment. A child's last day in a school they've outgrown. You wake up and realize the life you were living yesterday isn't the one you're in today.
@@ -51,7 +51,7 @@ You don't have to have the whole next chapter mapped out. One page at a time is 
 
 ---
 
-### Family Fridays: June 19, 2026
+### Family Fridays: June 20, 2026
 **Topic:** Pittsburgh summer nights with the people who matter
 
 Long daylight, open sidewalks, and that first warm evening when nobody wants to go inside yet. Pittsburgh summers have a way of pulling families back together.
