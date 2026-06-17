@@ -1,11 +1,11 @@
 ---
-last_checked: 2026-06-16
+last_checked: 2026-06-17
 tags: [system, ads, seo]
 ---
 
 # Ads & SEO Pulse
 
-Updated by `domain-ads-seo` agent inside `competitive-task-orchestrator`.
+Updated by `domain-ads-seo` agent inside `competitive-task-orchestrator` (daily run 2026-06-17).
 
 ## P0 — Disapprovals and launch blockers
 
@@ -19,7 +19,7 @@ Updated by `domain-ads-seo` agent inside `competitive-task-orchestrator`.
 
 • **Fresh Blends / Replenish** ($500/mo) — Campaigns set to launch 2026-04-13 (Smoothie Near Me Search, Gas Station/Kiosk Search, PMax Consumer foot traffic at ~$6.50/day/location). Admin access granted to Mia 2026-04-12. Still unverified: billing CC entered, active spend, first-week performance snapshot. GBP Manager access for 5 kiosk locations unconfirmed.
 
-• **LinkEZE** ($300/mo) — Enhanced conversions data source diagnostics warning open since 2026-03-23 (~85 days). MFA/2-step confirmation needed on Google Ads account 809-600-6448 (enforcement began 2026-04-06; overdue). Optimization score 91%. CRITICAL: location targeting must remain "Presence Only."
+• **LinkEZE** ($300/mo) — Enhanced conversions data source diagnostics warning open since 2026-03-23 (~86 days). MFA/2-step confirmation needed on Google Ads account 809-600-6448 (enforcement began 2026-04-06; overdue). Optimization score 91%. CRITICAL: location targeting must remain "Presence Only."
 
 • **Jeff Hozias** — Meta seller campaign approved 2026-04-14 ("Not a Zestimate. Not a guess."); launch pending. GBP post rejections (March 2026) undiagnosed.
 
@@ -37,7 +37,7 @@ Updated by `domain-ads-seo` agent inside `competitive-task-orchestrator`.
 
 • **Bar Crawl USA** (post-disapproval) — Confirm Soulard daily cap holding $15–20/day; prepare May 2 wave performance snapshot for client update.
 
-• **Align HCM** — 10 SEO blogs in `SEO/AlignHCM/Blogs/` all `ready-to-publish` (0 published). LinkedIn calendar rolled to June 16–22 by content-routines today.
+• **Align HCM** — 10 SEO blogs in `SEO/AlignHCM/Blogs/` all `ready-to-publish` (0 published). LinkedIn Monday thought leadership overdue since 2026-06-15; Wed SmartCare + Fri Joann posts due this week per June 16–22 calendar.
 
 • **02_Campaigns queues** — All six queue files are empty templates. Populate from client `active-campaigns.md` on next manual review.
 
@@ -71,4 +71,4 @@ Updated by `domain-ads-seo` agent inside `competitive-task-orchestrator`.
 
 ## Data staleness note
 
-Vault client intel last updated 2026-04-15 (62 days stale). Gmail MCP and Slack MCP not connected per `claude-memory-sync.md`. Re-scan with live ad platform and Gmail access on next orchestrator run to refresh disapproval status, billing, and launch pacing.
+Vault client intel last updated 2026-04-15 (63 days stale). `claude-memory-sync.md` last synced 2026-06-16. Gmail MCP and Slack MCP not connected per memory sync. Re-scan with live ad platform and Gmail access on next orchestrator run to refresh disapproval status, billing, and launch pacing.
