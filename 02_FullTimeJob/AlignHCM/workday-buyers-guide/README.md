@@ -5,7 +5,7 @@ leaders, and transformation teams evaluating Workday.
 
 ## Files
 - `workday-buyers-guide.html` — source layout (all 14 chapters extracted)
-- `Workday-Buyers-Guide-Align-HCM-2026.pdf` — rendered output (22 pages, US Letter)
+- `Workday-Buyers-Guide-Align-HCM-2026.pdf` — rendered output (27 pages, US Letter)
 - `assets/` — embedded brand fonts (Plus Jakarta Sans, DM Sans) + official Align HCM logo
 
 ## Design notes
@@ -17,7 +17,7 @@ leaders, and transformation teams evaluating Workday.
   extracted from the SmartCare video project). The Workday logo is a clean
   editorial wordmark; swap for the official asset before external distribution.
 - Layout flows continuously (chapters do not force page breaks) to avoid
-  near-empty pages: 22 pages instead of 31.
+  near-empty pages: 27 pages.
 
 ## Rebuild the PDF
 ```bash
