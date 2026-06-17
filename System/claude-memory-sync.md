@@ -1,5 +1,5 @@
 ---
-last_sync: 2026-06-16
+last_sync: 2026-06-17
 tags: [system, memory, sync]
 ---
 
@@ -16,7 +16,7 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `me
 • Omega Landscaping ($200/mo) — active, chasing David for drone footage.
 • Jeff Hozias / Rand Realty ($200/mo) — active, Meta seller campaign approved, launch pending.
 • Fresh Blends / Replenish ($500/mo) — active, verify launch pacing and first-week snapshot.
-• BOK Law — active, weekly social cadence. June 16–22 drafts generated 2026-06-16; delivery due today.
+• BOK Law — active, weekly social cadence. June 16–22 drafts current; Wednesday Wisdom + bundle delivery due 2026-06-17.
 • NKCDC — active, BLOCKED on NKCDC shipping Free Tax Prep landing page (P0).
 • Commercial Cleaners Alliance — onboarding, creatives in flight.
 • Hardwood Artisan ($150/mo) — AT RISK, billing card update outstanding since 2026-04-07 (P0).
@@ -24,7 +24,7 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `me
 
 ## Full-time
 
-• Align HCM — Dillon's full-time employer. Not a client. LinkedIn Monday slot overdue since 2026-06-15. June 16–22 calendar generated 2026-06-16.
+• Align HCM — Dillon's full-time employer. Not a client. Barbara process clarity post due 2026-06-17; Monday Maher slot overdue since 2026-06-15. June 16–22 calendar current.
 
 ## Pending deliverables
 
@@ -37,20 +37,20 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `me
 • Hardwood Artisan — CHASE billing card update before engagement pauses.
 • Omega Landscaping — drone footage from David.
 • Jeff Hozias — launch approved seller Meta campaign.
-• BOK Law — deliver June 16–22 social drafts to Dorothy/Aleksandra/Rachael today.
-• Align HCM — post Monday thought leadership (Maher); ship Wed SmartCare + Fri Joann posts this week.
+• BOK Law — deliver Wednesday Wisdom + weekly bundle to Dorothy/Aleksandra/Rachael today (2026-06-17).
+• Align HCM — post Barbara process clarity today; catch up Monday Maher; ship Wed SmartCare + Fri Joann posts this week.
 
 ## Upcoming deadlines (7 days)
 
-• 2026-06-16 — BOK Law weekly social delivery (due today).
-• 2026-06-17 — BOK Law Wednesday Wisdom; Align HCM Barbara process clarity post.
+• 2026-06-17 — BOK Law Wednesday Wisdom + weekly bundle delivery; Align HCM Barbara process clarity post (today).
 • 2026-06-18 — BOK Law Turn the Page Thursday; Align HCM SmartCare graphic; book-site-seo-sweep.
 • 2026-06-19 — BOK Law Family Fridays.
 • 2026-06-20 — Align HCM Friday thought leadership (Joann Scolaro carousel).
 
 ## Recent completions (7 days)
 
-• 2026-06-16 — Umbrella orchestrator daily run on `cursor/competitive-task-consolidation-809c`. BOK Law + Align HCM June calendars generated.
+• 2026-06-17 — Umbrella orchestrator daily run on `cursor/competitive-task-consolidation-e3cc`. All six parallel agents + consolidator completed.
+• 2026-06-16 — BOK Law + Align HCM June 16–22 calendars generated.
 • 2026-06-15 — Umbrella orchestrator daily run on `cursor/competitive-task-consolidation-b25a`.
 • 2026-06-14 — First orchestrator run produced competitive-task-today brief and parallel agent definitions.
 
@@ -66,5 +66,5 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `me
 
 • Legacy crons deprecated. Single umbrella at `0 13 * * *`.
 • Gmail MCP and Slack MCP not connected. Next run should connect for live intel.
-• ~22 stale `competitive-task-consolidation` branches on origin need cleanup after PR merge.
-• Current development branch: `cursor/competitive-task-consolidation-809c`.
+• ~24 stale `cursor/*` consolidation branches on origin need cleanup after PR merge.
+• Current development branch: `cursor/competitive-task-consolidation-e3cc`.
