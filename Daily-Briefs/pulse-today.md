@@ -1,23 +1,44 @@
-# Daily Pulse 2026-04-15
+# Daily Pulse 2026-06-18
 
 ## Coverage Notes
-• Searched Gmail for Mia Lange (mia@getreplenish.com), Anthony Miller (amiller@nkcdc.org), Sean Boyle (sean@needmomentum.com) by address, plus David Stemm, Beth Frederick, Mac Frederick, Kimberly Iraci, and Andy by name. Andy (Bar Crawl USA) and Kimberly Iraci have no email on file, so those are name matches only and can miss.
-• Scanned 01_Clients/ for files modified within the last 24 hours.
 
-## Active Clients
-• None. No files under 01_Clients/ changed in the last 24 hours.
+• Gmail MCP unavailable. Baseline from `System/claude-memory-sync.md` and client `overview.md` frontmatter.
+• Scanned `01_Clients/` for frontmatter gaps, overdue `due` dates, and git history. Vault last bulk update 2026-04-15; June content calendars added 2026-06-16 on consolidation branch.
 
-## Unread/Unanswered Emails
-• Omega Landscaping / Momentum thread "Re: Adding User To Google Ad Account" from John Belaska. Roughly 21 hours old. Sean Boyle and beth@needmomentum.com are cc'd alongside you. John's asking whether Thursday works for a Google Ads account discussion. You're cc'd, not a direct recipient, so monitor unless Sean pulls you in.
-• Buzz Bull / CCA thread "Buzz Bull CCA / Sterile Care" from Mike Ross at projectcorporate.com. Roughly 22 hours old. Teams meeting invite touching Commercial Cleaners Alliance (David Stemm's org). Confirm attendance.
+## Active Clients (touched in 24h)
 
-## Pending Deliverables (due in 48 hours)
-• Nothing surfaced. Your vault doesn't carry due date frontmatter on client notes, so this section can't be populated until notes include a `due` or `next_action` field.
+• None via git. June calendars (`Bok Law/content-calendar.md`, `AlignHCM/linkedin-calendar.md`) updated in orchestrator run 2026-06-18.
+
+## Pending Deliverables (due in 48h)
+
+• **BOK Law** — Turn the Page Thursday (2026-06-18). Family Fridays draft ready for 2026-06-19.
+• **Align HCM** — SmartCare graphic overdue from 2026-06-17. Joann carousel due 2026-06-19.
+• **Hardwood Artisan** — Billing card update overdue since 2026-04-18 implied deadline.
+• **NKCDC** — Launch blocked; `due: 2026-04-16` on overview frontmatter is stale but still P0.
+• **Commercial Cleaners Alliance** — Creative delivery `due: 2026-04-16` overdue.
 
 ## Stalled Items (7+ days no update)
-• Same limitation as above. Every client note under 01_Clients/ is older than 24 hours by modified time, so either everything's stalled or the vault isn't where you're tracking daily movement. Worth clarifying the source of truth before the next pulse.
 
-## Tomorrow's Priority Stack
-1. Confirm the Buzz Bull / CCA Teams meeting with Mike Ross at projectcorporate.com. Highest urgency because it's a calendar commitment with a hard time.
-2. Decide whether to sit in on the Omega Landscaping Google Ads sync John Belaska's proposing for Thursday. You're cc'd, not the owner, so a short "I'll join if helpful" reply is enough.
-3. Add frontmatter (`next_action`, `due`, `last_touched`) to 01_Clients/ notes so future pulses can populate Pending Deliverables and Stalled Items against real data.
+• **Shadow HVAC** — `last_touched: 2026-03-02` (108+ days). LSA verification needed.
+• **Link Eze** — `last_touched: 2026-04-05`. MFA/diagnostics overdue since 2026-04-06.
+• **Hardwood Artisan** — `last_touched: 2026-04-07`. Billing at risk.
+• **Onsite Concrete** — `last_touched: 2026-04-09`. Standing Thursday call cadence.
+• **Jeff Hozias** — `last_touched: 2026-04-14`. Meta launch pending.
+• **Bok Law** — `last_touched: 2026-04-14`. Content cadence now in June calendar.
+• **Commercial Cleaners Alliance** — `last_touched: 2026-04-14`. Creative commitment overdue.
+• **Bar Crawl USA** — `last_touched: 2026-04-15`. Disapprovals unresolved.
+• **NKCDC** — `last_touched: 2026-04-15`. Anthony unresponsive.
+• **Kimberly James Bridal** — `last_touched: 2026-04-15`. Timeline publish pending.
+• **Omega Landscaping** — `last_touched: 2026-04-14`. Drone footage chase.
+• **Fresh Blends Replenish** — `last_touched: 2026-04-13`. Launch verification needed.
+
+## Frontmatter Gaps
+
+• 12 clients have `overview.md` with tracking fields. 10+ client folders lack `overview.md` entirely (Coach B, Buzz Bull, Florecita, NKCDC parent note, etc.).
+• All `Agent Memory.md` files (12) are empty templates.
+
+## Tomorrow's Priority Stack (vault data only)
+
+1. **BOK Law Family Fridays** — draft ready for 2026-06-19 delivery prep.
+2. **Align HCM Joann carousel** — post-go-live 90-day window (due 2026-06-19).
+3. **NKCDC nudge** — launch blocked; highest revenue-impact blocker in vault.
