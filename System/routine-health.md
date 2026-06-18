@@ -1,20 +1,41 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-06-18
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+All routines consolidated under **one umbrella cron**: `competitive-task-orchestrator` at `0 13 * * *` (1:00 PM UTC daily).
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+Seven legacy crons are **deprecated** (see `System/competitive-task-definition.md`).
+
+## Last run — 2026-06-18
+
+| Subagent | Status | Last run | Output |
+|----------|--------|----------|--------|
+| gmail-intel | fallback | 2026-06-18 | `System/urgent-replies.md` |
+| slack-intel | unavailable | 2026-06-18 | `System/slack-intel.md` |
+| vault-pulse | ok | 2026-06-18 | `Daily-Briefs/pulse-today.md` |
+| codex-session-sync | ok | 2026-06-18 | `System/session-handoff.md` |
+| content-routines | ok | 2026-06-18 | BOK + Align calendars; book SEO swept |
+| domain-ads-seo | ok | 2026-06-18 | `System/ads-seo-pulse.md` |
+| memory-consolidator | ok | 2026-06-18 | `Daily-Briefs/competitive-task-today.md` |
+
+**Orchestrator:** `competitive-task-orchestrator` — 2026-06-18T13:02Z on branch `cursor/competitive-task-consolidation-4ead`
+
+## Legacy crons (retired)
+
+| Legacy routine | Absorbed by | Status |
+|----------------|-------------|--------|
+| `nightly-client-pulse` | `vault-pulse` | deprecated |
+| `gmail-to-vault-digest` | `gmail-intel` | deprecated |
+| `vault-integrity-sync` | `memory-consolidator` | deprecated |
+| `chat-to-vault-sync` | `codex-session-sync` | deprecated |
+| `bok-law-social-content` | `content-routines` | deprecated |
+| `linkedin-growth-engine` | `content-routines` | deprecated |
+| `book-site-seo-sweep` | `domain-ads-seo` / `content-routines` | deprecated |
 
 ## Notes
-- First real test of the full routine stack begins 2026-04-16.
+
+- Connect Gmail + Slack MCP to upgrade gmail-intel and slack-intel from fallback to live scan.
+- Dillon reads only `Daily-Briefs/competitive-task-today.md` each morning.
