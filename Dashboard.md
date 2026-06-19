@@ -16,9 +16,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [[Daily-Briefs/competitive-task-today|Competitive Task Today]] — **read this first** (umbrella orchestrator daily brief)
+- [[Daily-Briefs/pulse-today|Vault Pulse]] — stale clients, frontmatter gaps
+- [[System/urgent-replies|Urgent Replies]] — email queue
 
 ## Active Projects
 - 
