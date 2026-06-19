@@ -1,11 +1,11 @@
 ---
-last_checked: 2026-06-17
+last_checked: 2026-06-19
 tags: [system, slack]
 ---
 
 # Slack Intel
 
-Updated by `slack-intel` inside `competitive-task-orchestrator`.
+Updated by `slack-intel` inside `competitive-task-orchestrator` (daily run 2026-06-19).
 
 ## Status
 
