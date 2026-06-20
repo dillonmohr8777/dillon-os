@@ -1,20 +1,57 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-06-20
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+All routines consolidated under one umbrella orchestrator. Seven legacy crons are **deprecated** as of 2026-06-14.
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+## Umbrella orchestrator
+
+| Field | Value |
+|-------|-------|
+| Automation ID | `competitive-task-orchestrator` |
+| Cron | `0 13 * * *` (daily 1:00 PM UTC) |
+| Prompt | `System/competitive-task-orchestrator-prompt.md` |
+| Definition | `System/competitive-task-definition.md` |
+| Daily read | `Daily-Briefs/competitive-task-today.md` |
+| Last run | 2026-06-20 |
+
+## Parallel agents (last_run)
+
+| Agent | Last run | Status | Output |
+|-------|----------|--------|--------|
+| gmail-intel | 2026-06-20 | fallback | `System/urgent-replies.md` |
+| slack-intel | 2026-06-20 | unavailable | `System/slack-intel.md` |
+| vault-pulse | 2026-06-20 | ok | `Daily-Briefs/pulse-today.md` |
+| codex-session-sync | 2026-06-20 | ok | `System/session-handoff.md` |
+| content-routines | 2026-06-20 | ok | BOK + Align calendars assessed |
+| domain-ads-seo | 2026-06-20 | ok | `System/ads-seo-pulse.md` |
+| memory-consolidator | 2026-06-20 | ok | `Daily-Briefs/competitive-task-today.md` |
+
+## Legacy crons (deprecated — do not re-enable)
+
+| Legacy routine | Absorbed by | Status |
+|----------------|-------------|--------|
+| `nightly-client-pulse` | `vault-pulse` | deprecated |
+| `gmail-to-vault-digest` | `gmail-intel` | deprecated |
+| `vault-integrity-sync` | `memory-consolidator` | deprecated |
+| `chat-to-vault-sync` | `codex-session-sync` | deprecated |
+| `bok-law-social-content` | `content-routines` | deprecated |
+| `linkedin-growth-engine` | `content-routines` | deprecated |
+| `book-site-seo-sweep` | `domain-ads-seo` | deprecated |
+
+## Known gaps
+
+• Gmail MCP unavailable — vault email intel frozen at 2026-04-15
+• Slack MCP unavailable — no vault mirror for Slack history
+• `02_Campaigns/` queue files are empty templates
+• `10_Sessions/` and `Agent Memory.md` files empty
+• June 16–22 content calendars claimed in prior runs but absent from vault calendar files
+• ~27 stale `cursor/competitive-task-consolidation-*` branches on origin
 
 ## Notes
-- First real test of the full routine stack begins 2026-04-16.
+
+- Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+- Connect Gmail + Slack MCP to enable live intel on future runs.

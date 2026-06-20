@@ -1,23 +1,30 @@
-# Daily Pulse 2026-04-15
+# Daily Pulse 2026-06-20
 
 ## Coverage Notes
-• Searched Gmail for Mia Lange (mia@getreplenish.com), Anthony Miller (amiller@nkcdc.org), Sean Boyle (sean@needmomentum.com) by address, plus David Stemm, Beth Frederick, Mac Frederick, Kimberly Iraci, and Andy by name. Andy (Bar Crawl USA) and Kimberly Iraci have no email on file, so those are name matches only and can miss.
-• Scanned 01_Clients/ for files modified within the last 24 hours.
+• Scanned 12 M360 overview files, 25 client root stubs, 8 campaign queue files, and Align HCM calendars.
+• Vault intel frozen at April 2026 across all tracked clients (last_touched 2026-03-02 to 2026-04-15).
+• June 16–22 content calendars referenced in competitive-task-today.md but NOT found in Bok Law/content-calendar.md or AlignHCM/linkedin-calendar.md.
+• 02_Campaigns/ queue files are empty templates.
+• Gmail MCP unavailable; no live inbox refresh.
 
-## Active Clients
-• None. No files under 01_Clients/ changed in the last 24 hours.
+## Active Clients (touched in 24h)
+• None.
 
-## Unread/Unanswered Emails
-• Omega Landscaping / Momentum thread "Re: Adding User To Google Ad Account" from John Belaska. Roughly 21 hours old. Sean Boyle and beth@needmomentum.com are cc'd alongside you. John's asking whether Thursday works for a Google Ads account discussion. You're cc'd, not a direct recipient, so monitor unless Sean pulls you in.
-• Buzz Bull / CCA thread "Buzz Bull CCA / Sterile Care" from Mike Ross at projectcorporate.com. Roughly 22 hours old. Teams meeting invite touching Commercial Cleaners Alliance (David Stemm's org). Confirm attendance.
+## Pending Deliverables (due in 48h)
+• BOK Law — Family Fridays (2026-06-20).
+• BOK Law — Turn the Page Thursday carryover (2026-06-19) if not yet published.
+• Align HCM — Joann Scolaro carousel (2026-06-20); Mon/Tue/Wed catch-up overdue.
+• content-routines — BOK + Align Jun 23–29 calendars (2026-06-22 Sunday).
 
-## Pending Deliverables (due in 48 hours)
-• Nothing surfaced. Your vault doesn't carry due date frontmatter on client notes, so this section can't be populated until notes include a `due` or `next_action` field.
+## Stalled Items (7+ days)
+• All 12 M360 overview clients stalled 66–110 days.
+• Align HCM stalled since 2026-04-15.
+• 10 direct/1099 clients have no overview tracking file.
 
-## Stalled Items (7+ days no update)
-• Same limitation as above. Every client note under 01_Clients/ is older than 24 hours by modified time, so either everything's stalled or the vault isn't where you're tracking daily movement. Worth clarifying the source of truth before the next pulse.
+## Frontmatter Gaps
+• Florecita, Buzz Bull, Bridge of Hope OTC, Bluegrass Janitorial, Coach B, Vanessa, Next Gen Solutions, PNW Pro Clean, AWCI, Bend Plastic Surgery, Align HCM (partial).
 
 ## Tomorrow's Priority Stack
-1. Confirm the Buzz Bull / CCA Teams meeting with Mike Ross at projectcorporate.com. Highest urgency because it's a calendar commitment with a hard time.
-2. Decide whether to sit in on the Omega Landscaping Google Ads sync John Belaska's proposing for Thursday. You're cc'd, not the owner, so a short "I'll join if helpful" reply is enough.
-3. Add frontmatter (`next_action`, `due`, `last_touched`) to 01_Clients/ notes so future pulses can populate Pending Deliverables and Stalled Items against real data.
+1. NKCDC — nudge Anthony on Free Tax Prep landing page (P0 launch blocked).
+2. Bar Crawl USA — resolve 2 ad disapprovals (P0).
+3. Hardwood Artisan — nudge Dalton on card update (P0 billing risk).
