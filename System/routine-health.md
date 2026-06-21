@@ -1,5 +1,5 @@
 ---
-last_checked: 2026-06-20
+last_checked: 2026-06-21
 tags: [system, routines]
 ---
 
@@ -16,19 +16,19 @@ All routines consolidated under one umbrella orchestrator. Seven legacy crons ar
 | Prompt | `System/competitive-task-orchestrator-prompt.md` |
 | Definition | `System/competitive-task-definition.md` |
 | Daily read | `Daily-Briefs/competitive-task-today.md` |
-| Last run | 2026-06-20 |
+| Last run | 2026-06-21 |
 
 ## Parallel agents (last_run)
 
 | Agent | Last run | Status | Output |
 |-------|----------|--------|--------|
-| gmail-intel | 2026-06-20 | fallback | `System/urgent-replies.md` |
-| slack-intel | 2026-06-20 | unavailable | `System/slack-intel.md` |
-| vault-pulse | 2026-06-20 | ok | `Daily-Briefs/pulse-today.md` |
-| codex-session-sync | 2026-06-20 | ok | `System/session-handoff.md` |
-| content-routines | 2026-06-20 | ok | BOK + Align calendars assessed |
-| domain-ads-seo | 2026-06-20 | ok | `System/ads-seo-pulse.md` |
-| memory-consolidator | 2026-06-20 | ok | `Daily-Briefs/competitive-task-today.md` |
+| gmail-intel | 2026-06-21 | fallback | `System/urgent-replies.md` |
+| slack-intel | 2026-06-21 | unavailable | `System/slack-intel.md` |
+| vault-pulse | 2026-06-21 | ok | `Daily-Briefs/pulse-today.md` |
+| codex-session-sync | 2026-06-21 | ok | `System/session-handoff.md` |
+| content-routines | 2026-06-21 | ok | BOK + Align calendars assessed |
+| domain-ads-seo | 2026-06-21 | ok | `System/ads-seo-pulse.md` |
+| memory-consolidator | 2026-06-21 | ok | `Daily-Briefs/competitive-task-today.md` |
 
 ## Legacy crons (deprecated — do not re-enable)
 
@@ -49,9 +49,10 @@ All routines consolidated under one umbrella orchestrator. Seven legacy crons ar
 • `02_Campaigns/` queue files are empty templates
 • `10_Sessions/` and `Agent Memory.md` files empty
 • June 16–22 content calendars claimed in prior runs but absent from vault calendar files
-• ~27 stale `cursor/competitive-task-consolidation-*` branches on origin
+• ~25 stale `cursor/competitive-task-consolidation-*` branches on origin
 
 ## Notes
 
 - Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
 - Connect Gmail + Slack MCP to enable live intel on future runs.
+- Sunday 2026-06-22: `content-routines` will generate BOK Law + Align HCM week of June 23–29.
