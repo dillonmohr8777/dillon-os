@@ -12,4 +12,7 @@ tags: [calendar, social]
 - **Turn the Page Thursday** — motivational life-transitions post.
 - **Family Fridays** — Pittsburgh community / family celebration.
 
-Generated every Sunday 6:00 PM ET by the `bok-law-social-content` routine. Delivered to Dorothy, Aleksandra, and Rachael on Tuesday mornings for the week ahead.
+Generated every Sunday by `content-routines` (umbrella orchestrator). Delivered to Dorothy, Aleksandra, and Rachael on Tuesday mornings for the week ahead.
+
+## Current week
+- [[03_Content/Bok Law — Week of 2026-06-23]] — drafted 2026-06-22

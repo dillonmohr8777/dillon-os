@@ -7,7 +7,10 @@ tags: [linkedin, calendar, align-hcm]
 
 # LinkedIn Calendar
 
-The `linkedin-growth-engine` routine reads this file every Sunday at 9:00 PM.
+The `content-routines` agent (umbrella orchestrator) reads this file every Sunday.
+
+## Week of June 23, 2026
+See [[linkedin-week-2026-06-23]] — drafted 2026-06-22 (Mon Joann, Wed SmartCare, Fri Maher video).
 
 ## Weekly cadence
 - **Mondays** — Thought leadership (Maher or Joann, video or text post).
