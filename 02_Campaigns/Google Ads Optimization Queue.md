@@ -8,7 +8,7 @@
 
 ## Medium Priority
 
-- [ ] **LinkEZE** — Enhanced conversions data source diagnostics; MFA on customer ID 809-600-6448.
+- [ ] **LinkEZE** — Enhanced conversions data source diagnostics; MFA on customer ID 809-600-6448. _(P0, overdue since 2026-04-06)_
 - [ ] **Shadow HVAC** — LSA verification after 2026-03-02 reset.
 
 ## Low Priority
