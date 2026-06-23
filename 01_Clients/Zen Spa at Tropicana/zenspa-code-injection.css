@@ -1,0 +1,286 @@
+/* =====================================================================
+   ZEN SPA AT TROPICANA — Squarespace 7.1 Code Injection (v1)
+   ---------------------------------------------------------------------
+   WHERE THIS GOES:
+     Squarespace → Settings → Advanced → Code Injection → HEADER
+     Paste this ENTIRE block, wrapped in <style> ... </style> tags.
+     (Everything below the @import line goes inside the <style> tag.
+      The @import must be the FIRST line inside <style>.)
+
+   WHAT THIS DOES:
+     Turns the bare "dumped stack" into a calm, luxury spa layout —
+     refined type, a real header/logo treatment, card/panel content,
+     proper buttons, and a big mobile-design overhaul (the priority).
+
+   IMPORTANT — THIS IS A STARTING POINT, NOT FINAL:
+     Squarespace class names vary slightly by template/version. The
+     selectors here use stable 7.1 conventions, but a few may need to
+     be retargeted to your exact theme. Apply it, screenshot the live
+     result on desktop AND phone, and we iterate from there.
+
+     Everything you'll likely want to tweak lives in the :root TOKENS
+     block right below. Change colors/fonts THERE, not scattered around.
+   ===================================================================== */
+
+/* ---- OPTIONAL FONTS (luxury serif display + clean sans body) --------
+   If you'd rather set fonts in Squarespace's Design panel, delete this
+   line and the font-family tokens below will fall back to system fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  /* ============ BRAND TOKENS — EDIT THESE ============ */
+  /* Calm "Quiet Ritual" palette: sand, sage, ink, brass.
+     Swap in Ambika's exact brand hexes if/when we have them. */
+  --zs-bg:        #f7f3ec;   /* page background — warm sand/cream      */
+  --zs-surface:   #ffffff;   /* card / panel background                */
+  --zs-ink:       #2b2b27;   /* primary text — soft near-black         */
+  --zs-muted:     #6f6b62;   /* secondary text                         */
+  --zs-sage:      #8a9a7b;   /* primary brand green (eucalyptus)       */
+  --zs-forest:    #3f4a38;   /* deep green for headings/accents        */
+  --zs-brass:     #b9975b;   /* gold/brass luxury accent               */
+  --zs-line:      #e4ddd1;   /* hairline borders                       */
+
+  --zs-font-head: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --zs-font-body: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  --zs-radius:    14px;       /* card corner rounding                  */
+  --zs-shadow:    0 10px 30px rgba(43,43,39,.08);
+  --zs-maxw:      1180px;     /* content max width                     */
+}
+
+/* ============================ BASE ============================ */
+body,
+.sqs-block-content p,
+.sqs-html-content p {
+  font-family: var(--zs-font-body);
+  color: var(--zs-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+#siteWrapper,
+body { background: var(--zs-bg); }
+
+h1, h2, h3, h4,
+.sqs-block-content h1, .sqs-block-content h2, .sqs-block-content h3 {
+  font-family: var(--zs-font-head);
+  color: var(--zs-forest);
+  font-weight: 500;
+  letter-spacing: .005em;
+  line-height: 1.12;
+}
+
+p, li { line-height: 1.65; color: var(--zs-ink); }
+a { color: var(--zs-forest); }
+a:hover { color: var(--zs-brass); }
+
+/* A quiet section rhythm so things stop feeling "dumped" */
+.page-section,
+section[data-section-theme] {
+  padding-top: clamp(40px, 7vw, 96px);
+  padding-bottom: clamp(40px, 7vw, 96px);
+}
+.content-wrapper { max-width: var(--zs-maxw); margin: 0 auto; }
+
+/* ============================ HEADER + LOGO ============================ */
+/* Fixes the "logo fell back to text" problem: style the title as a
+   proper wordmark even when no image logo is set. */
+.header-title-text a,
+.header-title-logo a {
+  font-family: var(--zs-font-head) !important;
+  color: var(--zs-forest) !important;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: clamp(18px, 2.2vw, 24px);
+}
+.header,
+.header-announcement-bar-wrapper {
+  background: rgba(247,243,236,.92);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--zs-line);
+}
+.header-nav-item a {
+  font-family: var(--zs-font-body);
+  font-size: 14px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--zs-ink);
+}
+.header-nav-item a:hover { color: var(--zs-brass); }
+
+/* ============================ BUTTONS ============================ */
+.sqs-block-button-element,
+.sqs-button-element--primary,
+a.sqs-block-button-element--medium,
+.btn {
+  font-family: var(--zs-font-body) !important;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: 13px !important;
+  border-radius: 999px !important;
+  padding: 16px 34px !important;
+  background: var(--zs-forest) !important;
+  color: #fff !important;
+  border: 1px solid var(--zs-forest) !important;
+  transition: all .25s ease;
+  box-shadow: none;
+}
+.sqs-block-button-element:hover,
+.sqs-button-element--primary:hover {
+  background: var(--zs-brass) !important;
+  border-color: var(--zs-brass) !important;
+  transform: translateY(-1px);
+}
+/* Secondary / outline buttons */
+.sqs-button-element--secondary {
+  background: transparent !important;
+  color: var(--zs-forest) !important;
+  border: 1px solid var(--zs-forest) !important;
+  border-radius: 999px !important;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+/* ============================ HERO (first section) ============================ */
+.page-section:first-of-type h1 {
+  font-size: clamp(40px, 7vw, 84px);
+  line-height: 1.05;
+  margin-bottom: .35em;
+}
+.page-section:first-of-type .sqs-block-content p {
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: var(--zs-muted);
+  max-width: 46ch;
+}
+
+/* A small "eyebrow" treatment for lines like QUIET RITUAL.
+   Add the class "zs-eyebrow" to a Code/Markdown block, OR style any
+   short all-caps line by giving its text block this class. */
+.zs-eyebrow, .sqs-block-content .zs-eyebrow {
+  font-family: var(--zs-font-body);
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--zs-brass);
+}
+
+/* ============================ CONTENT → CARDS / PANELS ============================
+   The core "looks like a dumped stack" fix. This gives Markdown/HTML
+   blocks a soft card surface so service categories read as panels.
+   If you don't want EVERY block carded, add the class "zs-card" to the
+   specific blocks instead and change ".sqs-html-content" below to ".zs-card". */
+.sqs-block.html-block .sqs-block-content,
+.zs-card {
+  background: var(--zs-surface);
+  border: 1px solid var(--zs-line);
+  border-radius: var(--zs-radius);
+  padding: clamp(22px, 3vw, 34px);
+  box-shadow: var(--zs-shadow);
+}
+.sqs-block.html-block .sqs-block-content h2,
+.sqs-block.html-block .sqs-block-content h3 { margin-top: 0; }
+
+/* Image blocks: soften corners to match the cards */
+.sqs-block-image img,
+.sqs-image img { border-radius: var(--zs-radius); }
+
+/* Price lines (e.g. "50/80/100 min · $145/$220/$275") read as accent */
+.sqs-block-content strong { color: var(--zs-forest); }
+
+/* ============================ NAV LINK LISTS ============================
+   The footer/contents "dumped" list of SERVICES / ABOUT / CONTACT etc.
+   becomes a clean, evenly spaced inline row instead of a raw stack. */
+nav ul, .footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* ============================ FOOTER ============================ */
+.footer-section,
+#footer-sections {
+  background: var(--zs-forest);
+  color: #f3efe6;
+}
+.footer-section a { color: #e9e2d4; }
+.footer-section a:hover { color: var(--zs-brass); }
+
+/* =====================================================================
+   MOBILE OVERHAUL  (≤ 767px)  — the stated #1 problem
+   ---------------------------------------------------------------------
+   Goals: breathing room, readable type, full-width tappable buttons,
+   single clean column, comfortable tap targets, no cramped edges.
+   ===================================================================== */
+@media (max-width: 767px) {
+
+  /* Generous, consistent gutters so nothing kisses the screen edge */
+  .content-wrapper,
+  .page-section .content-wrapper { padding-left: 22px; padding-right: 22px; }
+
+  /* Tighter but still airy vertical rhythm on phones */
+  .page-section,
+  section[data-section-theme] {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  /* Hero scales down gracefully instead of overflowing */
+  .page-section:first-of-type h1 { font-size: clamp(34px, 11vw, 52px); }
+  .page-section:first-of-type .sqs-block-content p { font-size: 17px; }
+
+  /* Body copy never smaller than 16px (prevents iOS zoom + improves read) */
+  p, li, .sqs-block-content p { font-size: 16px !important; line-height: 1.7; }
+
+  /* Buttons go full-width and finger-friendly */
+  .sqs-block-button-element,
+  .sqs-button-element--primary,
+  .sqs-button-element--secondary {
+    display: block !important;
+    width: 100% !important;
+    text-align: center;
+    padding: 18px 24px !important;
+    font-size: 14px !important;
+  }
+
+  /* Cards: less inner padding, full width, comfortable spacing between */
+  .sqs-block.html-block .sqs-block-content,
+  .zs-card {
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+
+  /* Stack everything to a single clean column (kills side-by-side squish) */
+  .fe-block, .sqs-row .sqs-col, [class*="span-"] {
+    width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+  }
+
+  /* Nav list: vertical, large tap targets, divided */
+  nav ul, .footer-nav ul { flex-direction: column; gap: 0; }
+  nav ul li a, .footer-nav ul li a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--zs-line);
+    font-size: 15px;
+  }
+
+  /* Images full-bleed-ish and not cropped awkwardly */
+  .sqs-block-image img, .sqs-image img { width: 100%; height: auto; }
+
+  /* Header wordmark sized for small screens */
+  .header-title-text a, .header-title-logo a { font-size: 19px; }
+
+  /* "Back to top" and stray utility links get room to breathe */
+  a[href*="#top"], a[href="#"] { display: inline-block; padding: 12px 0; }
+}
+
+/* Small-tablet tidy-up (768–1023px): 2-up cards instead of 1 or 4 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page-section, section[data-section-theme] {
+    padding-top: 56px; padding-bottom: 56px;
+  }
+}
