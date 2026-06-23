@@ -1,4 +1,7 @@
-# Workday Buyer's Guide — Align HCM (2026 Edition)
+# Workday Buyer's Guide
+
+> Rebuilt to match the uploaded Strategic Buyer's Guide design: real Workday logo, big navy chapter titles with watermark numbers, orange-band chapters (11-14), navy stat cards, brand-color vendor cards. Display font Poppins.
+ — Align HCM (2026 Edition)
 
 A polished, print-ready PDF buyer's guide for CHROs, CFOs, HRIS leaders, finance
 leaders, and transformation teams evaluating Workday.
