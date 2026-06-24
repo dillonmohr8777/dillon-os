@@ -1,49 +1,67 @@
-# Competitive Task — 2026-06-03
+# Competitive Task — 2026-06-24
 
 ## Coverage
 
-- **Gmail:** fallback — MCP not connected on this run; using `System/urgent-replies.md` + `System/claude-memory-sync.md` (last vault intel 2026-04-15).
-- **Slack:** fallback — no Slack MCP; queue seeded from vault memory.
-- **Vault pulse:** all `01_Clients/` notes stale vs run date; frontmatter exists on key accounts but `last_touched` needs refresh as you work.
-- **Sessions:** `10_Sessions/` has automation/Facebook build logs — no dated Codex exports in repo; run `/codex-session-sync` after exporting sessions locally.
-- **Ads/SEO:** P0s inherited from memory sync (Bar Crawl disapprovals, NKCDC block, billing risk).
-- **Content routines:** **skipped** (Wednesday — Sunday = Bok Law + Align LinkedIn; Thursday = book SEO).
+- **Gmail:** fallback — MCP not connected; `System/urgent-replies.md` refreshed from vault (2026-06-24).
+- **Slack:** fallback — MCP not connected; `System/slack-action-queue.md` updated (8 actions, 3 P0).
+- **Vault pulse:** 12 tracked overviews; all `last_touched` frozen at April 2026 except Bok Law content draft (generated 2026-06-22). 11 active stubs lack pulse frontmatter.
+- **Sessions:** 5 files scanned; 0 promotions — templates empty, no dated Codex exports in repo. Top theme: Facebook Ads automation system not started.
+- **Ads/SEO:** 5 ad P0s classified; queues updated with NKCDC, Bar Crawl, LinkEZE, Jeff Hozias items.
+- **Content routines:** skipped — not a content routine day (Sunday/Thursday only).
 
 ## P0 Stack
 
-1. **NKCDC** — Launch blocked on Free Tax Prep landing page; Anthony unresponsive to Mac/Dillon follow-ups. Escalate or get ship date.
-2. **Bar Crawl USA** — Resolve 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Andy waiting since 2026-04-14/15.
-3. **Hardwood Artisan** — Billing card update outstanding; engagement at risk (Sean escalation 2026-04-07).
-4. **Commercial Cleaners Alliance** — Audit creative delivery vs 2026-04-08 commitment (CCA + NexGen).
-5. **Fresh Blends / Replenish** — Confirm campaigns launched; send first-week snapshot to Mia.
+1. **NKCDC** — Launch blocked on Free Tax Prep landing page; Anthony unresponsive since Mac's 2026-04-15 follow-up (~70 days). Escalate with Mac.
+2. **Bar Crawl USA** — Resolve 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Andy waiting since Dillon's 2026-04-15 investigate reply (~70 days).
+3. **Hardwood Artisan** — Billing card update outstanding since Sean's 2026-04-07 escalation (~78 days). Engagement at risk.
+4. **LinkEZE** — Enhanced conversions diagnostics + MFA on customer ID 809-600-6448 (MFA due 2026-04-06, overdue). Account health on live spend.
+5. **Jeff Hozias** — Launch approved Meta seller campaign (copy cleared 2026-04-14); still not live (~71 days).
 
 ## Urgent Replies
 
-See [[System/urgent-replies]] — refresh via `/gmail-intel` when Gmail MCP is connected.
+See [[System/urgent-replies]].
 
-- Bar Crawl USA — disapproval resolution message to Andy
-- NKCDC — coordinated follow-up with Mac to Anthony
-- Omega Landscaping — monitor David/John Thursday meeting thread (Dillon CC)
+- **BOK Law** — Deliver week of Jun 23 social content **today** (`03_Content/Bok Law — Week of 2026-06-23.md`) — Tuesday AM deadline
+- **Align HCM LinkedIn** — Monday Joann post **overdue** (`02_FullTimeJob/AlignHCM/linkedin-week-2026-06-23.md`)
+- **Bar Crawl USA** — Disapproval resolution message to Andy
+- **NKCDC** — Coordinated follow-up with Mac to Anthony
 
-## Stalled Clients (7+ days no vault touch)
+## Stalled Clients (7+ days)
 
-Vault `last_touched` dates are April 2026 — treat as **data stale**, not necessarily idle:
+Vault `last_touched` frozen at April 2026 on most accounts — data gap until you edit notes:
 
-- Most of `01_Clients/` — update `last_touched` when you touch an account today
-- **LinkEZE** — enhanced conversions diagnostics still open per memory sync
-- **Shadow HVAC** — LSA verification after 2026-03-02 reset
+| Client | last_touched | Open item |
+|--------|--------------|-----------|
+| Shadow HVAC | 2026-03-02 | LSA verification after reset |
+| LinkEZE | 2026-04-05 | Enhanced conversions + MFA |
+| Hardwood Artisan | 2026-04-07 | Billing card update |
+| Onsite Concrete | 2026-04-09 | Weekly call cadence |
+| Fresh Blends / Replenish | 2026-04-13 | Launch confirmation + week-1 snapshot |
+| Commercial Cleaners Alliance | 2026-04-14 | Creative delivery audit |
+| Omega Landscaping | 2026-04-14 | Drone footage + John Belaska meeting |
+| Jeff Hozias | 2026-04-14 | Launch approved Meta seller campaign |
+| Bar Crawl USA | 2026-04-15 | Ad disapprovals |
+| NKCDC | 2026-04-15 | Launch blocked |
+| Kimberly James Bridal | 2026-04-15 | Timeline page publish + GA4/GSC |
+
+**Content ready (not yet delivered):** Bok Law week of Jun 23 draft generated 2026-06-22.
+
+**Data gaps:** 11 active client stubs (Align HCM, Buzz Bull, Florecita, etc.) have no `overview.md` or pulse frontmatter.
 
 ## Content / SEO Due Today
 
-- None (day-gated). **Next:** Sunday — Bok Law weekly social + Align LinkedIn calendar; **Thursday** — book SEO sweep.
+- **BOK Law** — Tuesday AM delivery deadline for week of Jun 23 social (`03_Content/Bok Law — Week of 2026-06-23.md`)
+- **Align HCM LinkedIn** — Monday Joann post overdue; Wednesday SmartCare post due **2026-06-25**
+- **Next day-gated:** Thursday 2026-06-26 — book SEO sweep (`05_Book/seo-strategy.md`)
 
 ## Tomorrow Prep
 
-1. Connect **Gmail + Slack MCP** on `competitive-task-orchestrator` automation for live intel.
-2. Disable seven legacy crons in Cursor UI (list in [[System/competitive-task-definition]]).
-3. Export recent Codex/Cursor sessions into `10_Sessions/YYYY-MM-DD — topic.md` for sync lane.
-4. Add `last_touched: 2026-06-03` to any client you work today.
+1. Publish or reschedule Align HCM Wednesday SmartCare post (due 2026-06-25).
+2. Connect **Gmail + Slack MCP** on `competitive-task-orchestrator` for live intel (both lanes still vault-fallback).
+3. Export Codex/Cursor sessions to `10_Sessions/YYYY-MM-DD — topic.md` so `codex-session-sync` can promote unfinished work.
+4. Update `last_touched` on any client you work today.
+5. Disable seven legacy crons in Cursor UI if not already done (list in [[System/competitive-task-definition]]).
 
 ---
 
-_Generated by umbrella workflow bootstrap. Future runs: `memory-consolidator` after daily 1 PM ET orchestrator._
+_Generated by competitive-task-orchestrator — run 1, branch `cursor/competitive-task-consolidation-a4ff`._
