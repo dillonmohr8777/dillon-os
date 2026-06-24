@@ -14,7 +14,7 @@ tags: [sop, moc]
 - 
 
 ## Admin / Operations
-- 
+- [[competitive-task-orchestrator]] — daily umbrella automation (1 PM ET)
 
 ---
 
