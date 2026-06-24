@@ -17,9 +17,9 @@ tags: [dashboard, moc]
 
 ## Today
 - [ ] Open [[Daily-Briefs/competitive-task-today|Competitive Task Brief]]
-- [ ] Execute P0 stack (NKCDC → Bar Crawl → billing → CCA → Fresh Blends)
-- [ ] Check [[System/urgent-replies|Urgent Replies]]
-- [ ] Update client `last_touched` when you touch an account
+- [ ] Execute P0 stack (NKCDC → Bar Crawl → Hardwood → LinkEZE → Jeff Hozias)
+- [ ] Deliver [[03_Content/Bok Law — Week of 2026-06-23|Bok Law social]] (Tuesday AM deadline)
+- [ ] Publish overdue Align LinkedIn Monday post
 
 ## Automation
 - **Umbrella:** `competitive-task-orchestrator` — daily 1:00 PM ET ([[04_SOPs/competitive-task-orchestrator|SOP]])
