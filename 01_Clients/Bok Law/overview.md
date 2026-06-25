@@ -9,7 +9,7 @@ contact_name: Dorothy O'Neil
 contact_email: doneil@boklawfirm.com
 cc_list: [akocelko@boklawfirm.com, rbowe@boklawfirm.com]
 last_touched: 2026-06-22
-next_action: Deliver week of Jun 23 social content to Dorothy (draft in 03_Content/Bok Law — Week of 2026-06-23.md)
+next_action: Send week of Jun 23 social content to Dorothy — OVERDUE since 2026-06-24 (draft in 03_Content/Bok Law — Week of 2026-06-23.md)
 due: 2026-06-24
 tags: [client, momentum360, family-law, social, pittsburgh]
 ---
