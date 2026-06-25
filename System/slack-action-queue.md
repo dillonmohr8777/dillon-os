@@ -1,5 +1,5 @@
 ---
-last_checked: 2026-06-24
+last_checked: 2026-06-25
 tags: [system, slack]
 source: vault-fallback
 ---
@@ -16,11 +16,12 @@ Updated by `/slack-intel` during competitive-task-orchestrator. Slack MCP not co
 
 ## Open
 
+- **Align HCM** — Wednesday SmartCare LinkedIn post due **2026-06-25** (today); Monday Joann post still overdue.
+- **BOK Law** — social week of Jun 23 delivery overdue since 2026-06-24.
 - **Fresh Blends / Replenish** — confirm launch pacing; first-week snapshot to Mia.
 - **Commercial Cleaners Alliance** — creative delivery audit vs 2026-04-08 commitment.
 - **Jeff Hozias** — approved Meta seller campaign not yet live.
 - **LinkEZE** — enhanced conversions + MFA overdue on account 809-600-6448.
-- **Align HCM** — Monday LinkedIn post overdue; Wednesday SmartCare post due 2026-06-25.
 
 ## Notes
 

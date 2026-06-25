@@ -1,7 +1,7 @@
 ---
 project: The Ironic Ineptocracy
 tags: [seo, book, growth]
-last_touched: 2026-04-15
+last_touched: 2026-06-25
 ---
 
 # SEO & Growth Strategy
@@ -22,7 +22,10 @@ The `book-site-seo-sweep` routine reads this file every Thursday.
 - Target keyword universe: political thriller, CIA thriller, contemporary political fiction, Dijon Garnier (brand name), Darnell Covington (brand name).
 
 ## On-page checklist
-- Homepage (Page ID 7) meta description aligned to lead magnet.
-- Character pages indexable with individual meta and schema.
-- Newsletter signup above the fold on every page.
-- Blog cadence tied to guest-post publishing calendar.
+
+Last sweep: [[seo-sweep-2026-06-25]] (2026-06-25).
+
+- Homepage (Page ID 7) meta description aligned to lead magnet — **draft ready in sweep file**.
+- Character pages indexable with individual meta and schema — **Darnell + Dijon priority**.
+- Newsletter signup above the fold on every page — **mobile audit needed**.
+- Blog cadence tied to guest-post publishing calendar — **3 outlines drafted 2026-06-25**.
