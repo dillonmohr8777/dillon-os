@@ -1,6 +1,6 @@
 ---
-last_checked: 2026-06-25
-last_orchestrator_run: 2026-06-25
+last_checked: 2026-06-26
+last_orchestrator_run: 2026-06-26
 tags: [system, routines]
 ---
 
@@ -10,19 +10,19 @@ tags: [system, routines]
 
 | Automation | Cron | Status | Output |
 |------------|------|--------|--------|
-| `competitive-task-orchestrator` | `0 13 * * *` ET | **run 2 complete** — enable in Cursor UI if not already | `Daily-Briefs/competitive-task-today.md` |
+| `competitive-task-orchestrator` | `0 13 * * *` ET | **run 3 complete** — enable in Cursor UI if not already | `Daily-Briefs/competitive-task-today.md` |
 
 Phase 1 lanes (parallel): `gmail-intel`, `slack-intel`, `vault-pulse`, `codex-session-sync`, `domain-ads-seo`, `content-routines`  
 Phase 2 (sequential): `memory-consolidator`
 
-| Lane | 2026-06-25 |
+| Lane | 2026-06-26 |
 |------|------------|
 | gmail-intel | yellow — MCP not connected; vault fallback |
 | slack-intel | yellow — MCP not connected; vault fallback |
-| vault-pulse | yellow — client `last_touched` stale (April 2026) |
-| codex-session-sync | yellow — no dated session exports; index unchanged |
+| vault-pulse | yellow — client `last_touched` stale (April 2026); zero 24h activity |
+| codex-session-sync | yellow — no dated session exports; index refreshed |
 | domain-ads-seo | green — P0s classified; queues current |
-| content-routines | green — Thursday book SEO sweep complete |
+| content-routines | skipped — Friday (not Sun/Thu) |
 | memory-consolidator | green — brief + memory sync written |
 
 ## Retired (disable in Cursor Automations UI)
@@ -40,5 +40,5 @@ Phase 2 (sequential): `memory-consolidator`
 ## Notes
 
 - Legacy `Daily-Briefs/pulse-today.md` kept for history; **open `competitive-task-today.md` daily**.
-- After 3 green orchestrator runs with Gmail+Slack MCP, confirm legacy crons are disabled.
+- **3 green orchestrator runs complete** — disable legacy crons in Cursor UI after confirming Gmail+Slack MCP connected.
 - Next day-gated: Sunday 2026-06-29 — Bok Law social + Align LinkedIn generation.

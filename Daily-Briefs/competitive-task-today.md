@@ -1,28 +1,28 @@
-# Competitive Task — 2026-06-25
+# Competitive Task — 2026-06-26
 
 ## Coverage
 
-- **Gmail:** fallback — MCP not connected; `System/urgent-replies.md` refreshed from vault (2026-06-25).
+- **Gmail:** fallback — MCP not connected; `System/urgent-replies.md` refreshed from vault (2026-06-26).
 - **Slack:** fallback — MCP not connected; `System/slack-action-queue.md` updated (9 actions, 3 P0).
-- **Vault pulse:** 12 tracked overviews; all `last_touched` frozen at April 2026 except Bok Law (2026-06-22). 11 active stubs lack pulse frontmatter.
+- **Vault pulse:** 14 tracked overviews; zero `last_touched` in last 24h; all frozen at April 2026 except content drafts (Jun 22–25). 12 active stubs lack pulse frontmatter.
 - **Sessions:** 5 files scanned; 0 promotions — templates empty, no dated Codex exports in repo. Top theme: Facebook Ads automation system not started.
-- **Ads/SEO:** 5 ad P0s unchanged; queues current from run 1.
-- **Content routines:** **done** — Thursday book SEO sweep (`05_Book/seo-sweep-2026-06-25.md`); checklist + 3 keyword outlines.
+- **Ads/SEO:** 5 ad P0s unchanged; Bar Crawl disapprovals still in FB queue (platform mismatch — Google Ads per overview).
+- **Content routines:** **skipped** — not a content routine day (Sun/Thu only).
 
 ## P0 Stack
 
-1. **NKCDC** — Launch blocked on Free Tax Prep landing page; Anthony unresponsive since Mac's 2026-04-15 follow-up (~71 days). Escalate with Mac.
-2. **Bar Crawl USA** — Resolve 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Andy waiting since Dillon's 2026-04-15 investigate reply (~71 days).
-3. **Hardwood Artisan** — Billing card update outstanding since Sean's 2026-04-07 escalation (~79 days). Engagement at risk.
-4. **LinkEZE** — Enhanced conversions diagnostics + MFA on customer ID 809-600-6448 (MFA due 2026-04-06, overdue). Account health on live spend.
-5. **Jeff Hozias** — Launch approved Meta seller campaign (copy cleared 2026-04-14); still not live (~72 days).
+1. **NKCDC** — Launch blocked on Free Tax Prep landing page; Anthony unresponsive since Mac's 2026-04-15 follow-up (~72 days). Escalate with Mac.
+2. **Bar Crawl USA** — Resolve 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Andy waiting since Dillon's 2026-04-15 investigate reply (~72 days).
+3. **Hardwood Artisan** — Billing card update outstanding since Sean's 2026-04-07 escalation (~80 days). Engagement at risk.
+4. **LinkEZE** — Enhanced conversions diagnostics + MFA on customer ID 809-600-6448 (MFA due 2026-04-06, ~81 days overdue). Account health on live spend.
+5. **Jeff Hozias** — Launch approved Meta seller campaign (copy cleared 2026-04-14); still not live (~73 days).
 
 ## Urgent Replies
 
 See [[System/urgent-replies]].
 
-- **Align HCM LinkedIn** — Wednesday SmartCare post **due today** (`02_FullTimeJob/AlignHCM/linkedin-week-2026-06-23.md`)
-- **BOK Law** — Week of Jun 23 social **overdue** since Tuesday 2026-06-24 (`03_Content/Bok Law — Week of 2026-06-23.md`)
+- **BOK Law** — Week of Jun 23 social **2 days overdue** — ship today to Dorothy (`03_Content/Bok Law — Week of 2026-06-23.md`)
+- **Align HCM LinkedIn** — Monday Joann post **3 days overdue**; Wednesday SmartCare post **1 day overdue** (`02_FullTimeJob/AlignHCM/linkedin-week-2026-06-23.md`)
 - **Bar Crawl USA** — Disapproval resolution message to Andy
 - **NKCDC** — Coordinated follow-up with Mac to Anthony
 
@@ -32,7 +32,7 @@ Vault `last_touched` frozen at April 2026 on most accounts — data gap until yo
 
 | Client | last_touched | Open item |
 |--------|--------------|-----------|
-| Shadow HVAC | 2026-03-02 | LSA verification after reset |
+| Shadow HVAC | 2026-03-02 | LSA verification after reset (~116 days) |
 | LinkEZE | 2026-04-05 | Enhanced conversions + MFA |
 | Hardwood Artisan | 2026-04-07 | Billing card update |
 | Onsite Concrete | 2026-04-09 | Weekly call cadence |
@@ -44,25 +44,26 @@ Vault `last_touched` frozen at April 2026 on most accounts — data gap until yo
 | NKCDC | 2026-04-15 | Launch blocked |
 | Kimberly James Bridal | 2026-04-15 | Timeline page publish + GA4/GSC |
 
-**Content ready (not yet delivered):** Bok Law week of Jun 23 draft (generated 2026-06-22, overdue).
+**Content ready (not yet delivered):** Bok Law week of Jun 23 draft (generated 2026-06-22, overdue). Align HCM Mon + Wed LinkedIn drafts (generated 2026-06-22, overdue).
 
-**Data gaps:** 11 active client stubs (Align HCM, Buzz Bull, Florecita, etc.) have no `overview.md` or pulse frontmatter.
+**Data gaps:** 12 active client stubs (Align HCM, Buzz Bull, Florecita, etc.) have no `overview.md` or pulse frontmatter.
 
 ## Content / SEO Due Today
 
-- **Align HCM** — Wednesday SmartCare LinkedIn post (due 2026-06-25)
-- **BOK Law** — Social delivery overdue — send today
-- **Book SEO** — Sweep complete: [[05_Book/seo-sweep-2026-06-25]] (3 blog outlines + checklist status)
+- **BOK Law** — Social delivery **overdue** — send today
+- **Align HCM** — Monday + Wednesday LinkedIn posts **overdue** — publish or reschedule
+- **Align HCM** — Friday Maher El-Abdallah video script **due tomorrow** 2026-06-27
+- **Book SEO** — No Thursday sweep today; last sweep [[05_Book/seo-sweep-2026-06-25]] — pick one ship item when bandwidth allows
 - **Next day-gated:** Sunday 2026-06-29 — Bok Law social + Align LinkedIn generation (`content-routines`)
 
 ## Tomorrow Prep
 
-1. Ship Bok Law social email if not sent today — clears overdue content lane.
-2. Friday Align HCM Maher El-Abdallah video script due 2026-06-27 (`linkedin-week-2026-06-23.md`).
+1. Draft and record Align HCM Maher El-Abdallah video script (due 2026-06-27).
+2. Clear overdue BOK Law + Align LinkedIn posts if not shipped today.
 3. Pick one book SEO ship item from sweep file (meta update vs. blog draft vs. CrimeReads pitch).
 4. Connect **Gmail + Slack MCP** on `competitive-task-orchestrator` for live intel (both lanes still vault-fallback).
 5. Export Codex/Cursor sessions to `10_Sessions/YYYY-MM-DD — topic.md` so `codex-session-sync` can promote unfinished work.
 
 ---
 
-_Generated by competitive-task-orchestrator — run 2, branch `cursor/competitive-task-consolidation-65b1`._
+_Generated by competitive-task-orchestrator — run 3, branch `cursor/competitive-task-consolidation-bf9e`._
