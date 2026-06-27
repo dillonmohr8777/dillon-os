@@ -16,9 +16,15 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Open [[Daily-Briefs/competitive-task-today|Competitive Task Brief]]
+- [ ] Execute P0 stack (NKCDC → Bar Crawl → Hardwood → LinkEZE → Jeff Hozias)
+- [ ] Ship overdue [[03_Content/Bok Law — Week of 2026-06-23|Bok Law social]] to Dorothy
+- [ ] Publish overdue Align HCM Mon + Wed LinkedIn posts (`linkedin-week-2026-06-23.md`)
+- [ ] Prep Friday Maher video script (**due tomorrow** 2026-06-27)
+
+## Automation
+- **Umbrella:** `competitive-task-orchestrator` — daily 1:00 PM ET ([[04_SOPs/competitive-task-orchestrator|SOP]])
+- **Legacy crons:** retired — see [[System/routine-health]]
 
 ## Active Projects
 - 
