@@ -1,20 +1,26 @@
 ---
-last_updated: 2026-04-15
+last_updated: 2026-06-28
 tags: [system, urgent]
 ---
 
 # Urgent Replies Needed
 
-Updated by `gmail-to-vault-digest` daily at 7:00 AM.
+Updated by `gmail-intel` during `competitive-task-orchestrator` daily at 1:00 PM ET. Gmail MCP not connected — vault fallback.
 
-## Immediate (today/tomorrow)
-• **Bar Crawl USA** — Andy Zirger forwarded 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Dillon responded 2026-04-15 saying he'd investigate. Owe him a resolution.
-• **NKCDC** — Mac checked in with Anthony 2026-04-15. Still no response from NKCDC. Launch blocked on Free Tax Prep page.
-• **Omega Landscaping** — John Belaska asked David for a Thursday meeting. David hasn't replied. Monitor — Dillon is CC'd, not the owner.
+## Immediate (today)
+
+- **NKCDC** — Mac checked in with Anthony 2026-04-15. Still no response (~74 days). Launch blocked on Free Tax Prep page. Escalate with Mac.
+- **Bar Crawl USA** — Andy forwarded 2 Google Ads disapprovals (Halloween / Fall Cocktail Crawl). Dillon responded 2026-04-15 saying he'd investigate. Owe Andy resolution (~74 days).
+- **Hardwood Artisan** — Sean pushing Dalton on card update since 2026-04-07 (~82 days). Engagement at risk.
+- **Align HCM** — Maher El-Abdallah video script **1 day overdue** (due Fri 2026-06-27). Mon Joann + Wed SmartCare LinkedIn posts also overdue. See `linkedin-week-2026-06-23.md`.
+- **BOK Law** — Week of Jun 23 social **4 days overdue** — ship to Dorothy (`03_Content/Bok Law — Week of 2026-06-23.md`).
 
 ## This week
-• **Commercial Cleaners Alliance** — Audit delivery of creatives committed 2026-04-08 (CCA + NexGen).
-• **Hardwood Artisan** — Nudge Dalton about card update ahead of the engagement pausing.
-• **Kimberly James Bridal** — Confirm Timeline page published and GA4/GSC indexing healthy.
-• **Fresh Blends / Replenish** — Verify launch fired and send first-week snapshot.
-• **Shadow HVAC** — Send Mike a catch-up report and confirm LSA is serving.
+
+- **LinkEZE** — Enhanced conversions diagnostics + MFA on 809-600-6448 (~83 days overdue).
+- **Commercial Cleaners Alliance** — Audit delivery of creatives committed 2026-04-08.
+- **Kimberly James Bridal** — Confirm Timeline page published and GA4/GSC indexing healthy. **KJB emails MUST CC:** mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com
+- **Fresh Blends / Replenish** — Verify launch pacing and send first-week snapshot to Mia.
+- **Jeff Hozias** — Launch approved Meta seller campaign (~74 days).
+- **Shadow HVAC** — Send Mike catch-up report; confirm LSA serving.
+- **Omega Landscaping** — David hasn't confirmed John Belaska meeting (pinged 2026-04-14).

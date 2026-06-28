@@ -1,20 +1,44 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-06-28
+last_orchestrator_run: 2026-06-28
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+## Active (umbrella)
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+| Automation | Cron | Status | Output |
+|------------|------|--------|--------|
+| `competitive-task-orchestrator` | `0 13 * * *` ET | **run 5 complete** — enable in Cursor UI if not already | `Daily-Briefs/competitive-task-today.md` |
+
+Phase 1 lanes (parallel): `gmail-intel`, `slack-intel`, `vault-pulse`, `codex-session-sync`, `domain-ads-seo`, `content-routines`  
+Phase 2 (sequential): `memory-consolidator`
+
+| Lane | 2026-06-28 |
+|------|------------|
+| gmail-intel | yellow — MCP not connected; vault fallback |
+| slack-intel | yellow — MCP not connected; vault fallback |
+| vault-pulse | yellow — client `last_touched` stale (April 2026); zero 24h activity |
+| codex-session-sync | yellow — no dated session exports; index refreshed |
+| domain-ads-seo | green — P0s classified; queues current |
+| content-routines | skipped — Saturday (not Sun/Thu) |
+| memory-consolidator | green — brief + memory sync written |
+
+## Retired (disable in Cursor Automations UI)
+
+- `nightly-client-pulse` → merged into `vault-pulse` + brief
+- `gmail-to-vault-digest` → merged into `gmail-intel`
+- `vault-integrity-sync` / `chat-to-vault-sync` → merged into `memory-consolidator` + `codex-session-sync`
+- `bok-law-social-content` / `linkedin-growth-engine` → merged into `content-routines` (Sunday)
+- `book-site-seo-sweep` → merged into `content-routines` (Thursday)
+
+## Vault frontmatter expected
+
+`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`
 
 ## Notes
-- First real test of the full routine stack begins 2026-04-16.
+
+- Legacy `Daily-Briefs/pulse-today.md` kept for history; **open `competitive-task-today.md` daily**.
+- **5 orchestrator runs complete** — disable legacy crons in Cursor UI after confirming Gmail+Slack MCP connected.
+- **Tomorrow:** Sunday 2026-06-29 — Bok Law social + Align LinkedIn generation (`content-routines`).
