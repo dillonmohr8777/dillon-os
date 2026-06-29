@@ -14,7 +14,7 @@ tags: [sop, moc]
 - 
 
 ## Admin / Operations
-- 
+- [[04_SOPs/competitive-task-orchestrator|Competitive Task Orchestrator]] — umbrella daily automation
 
 ---
 
