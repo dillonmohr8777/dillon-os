@@ -1,6 +1,6 @@
 ---
 tags: [session, moc]
-last_updated: 2026-06-29
+last_updated: 2026-06-30
 ---
 
 # Session Index
@@ -15,9 +15,9 @@ last_updated: 2026-06-29
 
 ## Content drafts (orchestrator)
 
-- [[03_Content/Bok Law — Week of 2026-06-23]] — 5 days overdue delivery
+- [[03_Content/Bok Law — Week of 2026-06-23]] — 6 days overdue delivery
 - [[03_Content/Bok Law — Week of 2026-06-30]] — generated 2026-06-29
-- [[02_FullTimeJob/AlignHCM/linkedin-week-2026-06-23]] — overdue stack
+- [[02_FullTimeJob/AlignHCM/linkedin-week-2026-06-23]] — Maher 3d, Mon Joann 7d, Wed SmartCare 5d overdue
 - [[02_FullTimeJob/AlignHCM/linkedin-week-2026-06-30]] — generated 2026-06-29
 
 ## Codex export convention

@@ -1,6 +1,6 @@
 ---
-last_checked: 2026-06-29
-last_orchestrator_run: 2026-06-29
+last_checked: 2026-06-30
+last_orchestrator_run: 2026-06-30
 tags: [system, routines]
 ---
 
@@ -10,7 +10,7 @@ tags: [system, routines]
 
 Seven legacy crons are **retired** and merged into the orchestrator. Disable them in Cursor Automations UI if still active.
 
-## Orchestrator lane status (run 6 — 2026-06-29)
+## Orchestrator lane status (run 7 — 2026-06-30)
 
 | Lane | Agent | Status | Notes |
 |------|-------|--------|-------|
@@ -19,7 +19,7 @@ Seven legacy crons are **retired** and merged into the orchestrator. Disable the
 | Vault | `vault-pulse` | 🟢 ok | 14 overviews scanned; April freeze noted |
 | Sessions | `codex-session-sync` | 🟡 partial | 5 files, 0 promotions; no Codex exports |
 | Ads/SEO | `domain-ads-seo` | 🟢 ok | 5 P0s surfaced from client notes |
-| Content | `content-routines` | 🟢 done | Sunday — Bok Law + Align LinkedIn generated |
+| Content | `content-routines` | ⚪ skipped | Monday — next Sunday Jul 6; book SEO Thu Jul 3 |
 | Consolidate | `memory-consolidator` | 🟢 ok | Brief + memory sync written |
 
 ## Retired standalone crons (do not re-enable)
