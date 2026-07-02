@@ -27,7 +27,8 @@ spec and web sales page.
 - [ ] `xcodegen generate`, build in Xcode, fix anything the compiler flags
 - [ ] App icon + launch screen (swoosh mark from the prototype)
 - [ ] Deploy backend (Fly.io/Railway/Render), point Release config at it
-- [ ] Database for users + entitlements; verify App Store webhook signatures
+- [x] Durable entitlement store (JSON file, DB-swappable) + per-user rate limits
+- [ ] Verify App Store webhook JWS signatures (needs prod App Store Connect setup)
 - [x] Set `appAccountToken` on purchases so webhooks map to users
 - [x] Streaming responses (SSE) so replies render token-by-token
 

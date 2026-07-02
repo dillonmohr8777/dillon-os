@@ -3,6 +3,7 @@ import express from "express";
 import { agents, publicCatalog, type AgentConfig } from "./agents.js";
 import { accountUUID, issueSessionToken, verifyAppleIdentityToken, verifySessionToken } from "./auth.js";
 import { handleAppStoreNotification, isSubscribed } from "./entitlements.js";
+import { checkRateLimit } from "./ratelimit.js";
 
 const anthropic = new Anthropic(); // reads ANTHROPIC_API_KEY
 const app = express();
@@ -63,6 +64,13 @@ function prepareChatTurn(req: express.Request, res: express.Response): ChatTurn 
   }
   if (!isSubscribed(accountUUID(userId))) {
     res.status(402).json({ error: "subscription required" });
+    return null;
+  }
+
+  const retryAfter = checkRateLimit(userId);
+  if (retryAfter !== null) {
+    res.setHeader("Retry-After", String(retryAfter));
+    res.status(429).json({ error: `Easy there — try again in ${retryAfter}s.` });
     return null;
   }
 
