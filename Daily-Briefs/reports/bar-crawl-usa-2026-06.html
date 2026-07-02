@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bar Crawl USA — June 2026</title>
+<style>
+  /* Brand tokens: swap this block per client or agency. Defaults are a
+     neutral Momentum 360 deliverable look. */
+  :root {
+    --ink: #1a2233;
+    --ink-2: #55607a;
+    --ink-3: #8b94a8;
+    --surface: #ffffff;
+    --panel: #f5f7fa;
+    --line: #e3e8f0;
+    --accent: #2456c4;
+    --series-a: #2456c4;
+    --series-b: #0e8a72;
+    --good: #0e8a72;
+    --warn: #b54708;
+    --crit: #b42318;
+  }
+  * { margin: 0; box-sizing: border-box; }
+  body {
+    font: 15px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--panel);
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 900px; margin: 0 auto; padding: 40px 24px 64px; }
+  .sheet {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 40px 44px;
+  }
+  header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+  .agency { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+  h1 { font-size: 28px; line-height: 1.2; letter-spacing: -0.01em; margin-top: 6px; text-wrap: balance; }
+  .period { text-align: right; color: var(--ink-2); font-size: 13px; }
+  .period strong { display: block; color: var(--ink); font-size: 15px; }
+  .summary { margin-top: 18px; color: var(--ink-2); max-width: 62ch; }
+  h2 { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 40px 0 14px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 26px; }
+  .kpi { background: var(--panel); border-radius: 8px; padding: 14px 16px; }
+  .kpi .label { font-size: 12px; color: var(--ink-2); }
+  .kpi .value { font-size: 26px; font-weight: 650; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .kpi .delta { font-size: 12px; font-weight: 600; margin-top: 2px; }
+  .delta.up { color: var(--good); } .delta.down { color: var(--crit); } .delta.flat { color: var(--ink-3); }
+  .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 680px) { .charts { grid-template-columns: 1fr; } .sheet { padding: 26px 20px; } }
+  .chart-card { border: 1px solid var(--line); border-radius: 8px; padding: 16px 16px 8px; position: relative; }
+  .chart-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+  .chart-card svg { display: block; width: 100%; height: auto; }
+  .tip {
+    position: absolute; pointer-events: none; background: var(--ink); color: #fff;
+    font-size: 12px; padding: 4px 8px; border-radius: 5px; white-space: nowrap;
+    transform: translate(-50%, -130%); opacity: 0; transition: opacity 80ms;
+    font-variant-numeric: tabular-nums;
+  }
+  .tablewrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); }
+  td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 99px; white-space: nowrap; }
+  .pill.live { background: #e5f3ef; color: var(--good); }
+  .pill.watch { background: #f9ecdd; color: var(--warn); }
+  .pill.blocked { background: #f7e4e2; color: var(--crit); }
+  .pill.paused { background: var(--panel); color: var(--ink-2); }
+  ul.plain { padding-left: 0; list-style: none; display: grid; gap: 8px; }
+  ul.plain li { padding-left: 20px; position: relative; color: var(--ink-2); }
+  ul.plain li::before { content: "•"; position: absolute; left: 4px; color: var(--accent); font-weight: 700; }
+  ul.plain li strong { color: var(--ink); }
+  footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-3); }
+  .flag { margin-top: 26px; font-size: 12.5px; color: var(--warn); background: #f9ecdd; border-radius: 6px; padding: 8px 12px; display: none; }
+  @media print { body { background: #fff; } .page { padding: 0; } .sheet { border: 0; padding: 0; } }
+</style>
+</head>
+<body>
+<div class="page"><div class="sheet">
+  <header>
+    <div>
+      <div class="agency" id="agency"></div>
+      <h1 id="title"></h1>
+    </div>
+    <div class="period"><strong id="period"></strong><span id="prepared"></span></div>
+  </header>
+  <p class="summary" id="summary"></p>
+  <div class="flag" id="flag"></div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <h2>Performance</h2>
+  <div class="charts" id="charts"></div>
+
+  <h2>Campaigns</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Campaign</th><th>Status</th><th>Spend</th><th>Results</th><th>Notes</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <h2>What worked</h2>
+  <ul class="plain" id="wins"></ul>
+
+  <h2>What's next</h2>
+  <ul class="plain" id="actions"></ul>
+
+  <footer>
+    <span id="footer-left"></span>
+    <span id="footer-right"></span>
+  </footer>
+</div></div>
+
+<script id="report-data" type="application/json">{"client":"Bar Crawl USA","agency":"Momentum 360","period":"2026-06","periodLabel":"June 2026","preparedBy":"Dillon Mohr","contact":"dillon@needmomentum.com","sampleData":true,"summary":"Performance Max event waves stayed the growth engine this month. Ticket volume held across active city campaigns with tCPA guardrails in place on every campaign, and the pre-approved copy library kept the account clean of policy flags.","kpis":[{"label":"Tickets attributed","value":"53","delta":"+12%"},{"label":"Ad spend","value":"$2,140","delta":"+8%"},{"label":"Cost per ticket","value":"$40.38","delta":"-4%","deltaGoodWhenDown":true},{"label":"Active city campaigns","value":"9"}],"charts":[{"title":"Tickets by week","labels":["Jun 1","Jun 8","Jun 15","Jun 22","Jun 29"],"values":[9,11,12,10,11]},{"title":"Spend by week ($)","labels":["Jun 1","Jun 8","Jun 15","Jun 22","Jun 29"],"values":[410,445,460,400,425],"prefix":"$"}],"campaigns":[{"name":"Taco & Tequila Crawl — Wave 1 (9 cities)","status":"live","statusLabel":"Live","spend":"$1,280","results":"31 tickets","note":"tCPA guardrail active on every city."},{"name":"Taco & Tequila Crawl — Wave 2","status":"live","statusLabel":"Live","spend":"$860","results":"22 tickets","note":"May 2 launch wave, still scaling."},{"name":"Cocktail Crawl (Fall creative)","status":"blocked","statusLabel":"On hold","spend":"$0","results":"—","note":"Prior disapprovals resolved by retiring the flagged copy. Fall relaunch uses pre-approved library only."}],"wins":["\u003cstrong>Cost per ticket improved\u003c/strong> while spend grew, so the tCPA guardrails are doing their job.","\u003cstrong>Zero policy disapprovals\u003c/strong> this period after moving fully to the pre-approved copy library.","\u003cstrong>Presence-only targeting\u003c/strong> held wasted spend down across all nine cities."],"actions":["Scale Wave 2 budgets in the top three cities by ticket volume.","Stage the fall Cocktail Crawl relaunch with compliant creative for approval before September.","Add weekly ticket pacing against event dates so slow cities get creative rotation earlier."]}</script>
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById("report-data").textContent);
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { var d = document.createElement("span"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
+
+  document.title = data.client + " — " + data.periodLabel;
+  $("agency").textContent = data.agency || "Momentum 360";
+  $("title").textContent = data.client + " Performance Report";
+  $("period").textContent = data.periodLabel;
+  $("prepared").textContent = "Prepared by " + (data.preparedBy || "Dillon Mohr");
+  $("summary").textContent = data.summary || "";
+  if (data.sampleData) {
+    $("flag").style.display = "block";
+    $("flag").textContent = "Draft with sample figures. Replace the metrics in the data file with live account numbers before sending.";
+  }
+  $("footer-left").textContent = (data.agency || "Momentum 360") + " • " + data.periodLabel;
+  $("footer-right").textContent = "Questions? " + (data.contact || "dillon@needmomentum.com");
+
+  (data.kpis || []).forEach(function (k) {
+    var dir = k.delta ? (k.delta[0] === "-" ? "down" : "up") : "flat";
+    if (k.deltaGoodWhenDown) dir = dir === "down" ? "up" : dir === "up" ? "down" : "flat";
+    $("kpis").insertAdjacentHTML("beforeend",
+      '<div class="kpi"><div class="label">' + esc(k.label) + '</div>' +
+      '<div class="value">' + esc(k.value) + '</div>' +
+      (k.delta ? '<div class="delta ' + dir + '">' + esc(k.delta) + " vs prior</div>" : "") + "</div>");
+  });
+
+  var css = getComputedStyle(document.documentElement);
+  function barChart(spec, color) {
+    var W = 400, H = 220, pad = { t: 14, r: 8, b: 26, l: 40 };
+    var vals = spec.values, labels = spec.labels;
+    var max = Math.max.apply(null, vals) * 1.15 || 1;
+    var iw = W - pad.l - pad.r, ih = H - pad.t - pad.b;
+    var bw = Math.min(34, (iw / vals.length) - 8);
+    var svg = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + esc(spec.title) + '">';
+    for (var g = 0; g <= 3; g++) {
+      var y = pad.t + ih - (ih * g) / 3;
+      var v = (max * g) / 3;
+      svg += '<line x1="' + pad.l + '" y1="' + y + '" x2="' + (W - pad.r) + '" y2="' + y + '" stroke="' + css.getPropertyValue("--line").trim() + '" stroke-width="1"/>';
+      svg += '<text x="' + (pad.l - 8) + '" y="' + (y + 4) + '" text-anchor="end" font-size="10" fill="' + css.getPropertyValue("--ink-3").trim() + '">' + (spec.prefix || "") + Math.round(v) + "</text>";
+    }
+    vals.forEach(function (v, i) {
+      var x = pad.l + (iw / vals.length) * i + ((iw / vals.length) - bw) / 2;
+      var h = (v / max) * ih;
+      var y = pad.t + ih - h;
+      svg += '<rect data-i="' + i + '" x="' + x + '" y="' + y + '" width="' + bw + '" height="' + Math.max(h, 1) + '" rx="4" fill="' + color + '"/>';
+      svg += '<text x="' + (x + bw / 2) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10" fill="' + css.getPropertyValue("--ink-2").trim() + '">' + esc(labels[i]) + "</text>";
+      if (i === vals.length - 1)
+        svg += '<text x="' + (x + bw / 2) + '" y="' + (y - 6) + '" text-anchor="middle" font-size="11" font-weight="600" fill="' + css.getPropertyValue("--ink").trim() + '">' + (spec.prefix || "") + v + "</text>";
+    });
+    return svg + "</svg>";
+  }
+
+  (data.charts || []).forEach(function (spec, ci) {
+    var color = ci % 2 === 0 ? css.getPropertyValue("--series-a").trim() : css.getPropertyValue("--series-b").trim();
+    var card = document.createElement("div");
+    card.className = "chart-card";
+    card.innerHTML = "<h3>" + esc(spec.title) + "</h3>" + barChart(spec, color) + '<div class="tip"></div>';
+    $("charts").appendChild(card);
+    var tip = card.querySelector(".tip");
+    card.querySelectorAll("rect").forEach(function (r) {
+      r.addEventListener("mousemove", function (e) {
+        var i = +r.getAttribute("data-i");
+        tip.textContent = spec.labels[i] + ": " + (spec.prefix || "") + spec.values[i] + (spec.suffix || "");
+        var box = card.getBoundingClientRect();
+        tip.style.left = e.clientX - box.left + "px";
+        tip.style.top = e.clientY - box.top + "px";
+        tip.style.opacity = 1;
+      });
+      r.addEventListener("mouseleave", function () { tip.style.opacity = 0; });
+    });
+  });
+
+  (data.campaigns || []).forEach(function (c) {
+    var cls = { live: "live", watch: "watch", blocked: "blocked", paused: "paused" }[c.status] || "paused";
+    $("rows").insertAdjacentHTML("beforeend",
+      "<tr><td>" + esc(c.name) + '</td><td><span class="pill ' + cls + '">' + esc(c.statusLabel || c.status) + "</span></td>" +
+      '<td class="num">' + esc(c.spend) + '</td><td class="num">' + esc(c.results) + "</td><td>" + esc(c.note) + "</td></tr>");
+  });
+  (data.wins || []).forEach(function (w) { $("wins").insertAdjacentHTML("beforeend", "<li>" + w + "</li>"); });
+  (data.actions || []).forEach(function (a) { $("actions").insertAdjacentHTML("beforeend", "<li>" + a + "</li>"); });
+})();
+</script>
+</body>
+</html>
