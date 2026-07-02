@@ -10,6 +10,7 @@ Prompts and the Anthropic key live here — never on the device.
 | `POST` | `/v1/auth/apple` | — | Exchange a Sign in with Apple identity token for a session token |
 | `GET` | `/v1/agents` | — | Public agent catalog (id, name, tag, group) |
 | `POST` | `/v1/agents/:id/messages` | Bearer + active subscription | Run one agent turn; returns `{ reply }` |
+| `POST` | `/v1/agents/:id/messages/stream` | Bearer + active subscription | Same turn as SSE: `data: {"delta"}` chunks, then `{"done"}` |
 | `POST` | `/v1/webhooks/appstore` | — | App Store Server Notifications V2 receiver |
 | `GET` | `/healthz` | — | Liveness |
 
@@ -40,6 +41,8 @@ Set `ALLOW_UNSUBSCRIBED=true` locally to chat without a StoreKit purchase.
 
 - Verify App Store notification JWS signatures (see `src/entitlements.ts`).
 - Persist entitlements + users in a real database (currently in-memory).
-- Pass `appAccountToken` (set it to the backend user id) on StoreKit purchases
-  so notifications map to users.
 - Rate-limit `/v1/agents/:id/messages` per user.
+
+`appAccountToken` is already wired end to end: `/v1/auth/apple` returns a
+deterministic per-user UUID, the app attaches it to purchases, and the
+webhook keys entitlements on it.

@@ -28,8 +28,8 @@ spec and web sales page.
 - [ ] App icon + launch screen (swoosh mark from the prototype)
 - [ ] Deploy backend (Fly.io/Railway/Render), point Release config at it
 - [ ] Database for users + entitlements; verify App Store webhook signatures
-- [ ] Set `appAccountToken` on purchases so webhooks map to users
-- [ ] Streaming responses (SSE) so replies render token-by-token
+- [x] Set `appAccountToken` on purchases so webhooks map to users
+- [x] Streaming responses (SSE) so replies render token-by-token
 
 ## Phase 3 — Submit
 

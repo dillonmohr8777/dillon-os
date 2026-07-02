@@ -3,6 +3,7 @@ import SwiftUI
 
 struct PaywallView: View {
     @EnvironmentObject private var store: StoreManager
+    @EnvironmentObject private var auth: AuthManager
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -35,7 +36,7 @@ struct PaywallView: View {
                 ForEach(store.products, id: \.id) { product in
                     Button {
                         Task {
-                            await store.purchase(product)
+                            await store.purchase(product, appAccountToken: auth.appAccountToken)
                             if store.isSubscribed { dismiss() }
                         }
                     } label: {

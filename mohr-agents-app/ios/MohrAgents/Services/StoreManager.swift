@@ -35,9 +35,15 @@ final class StoreManager: ObservableObject {
         }
     }
 
-    func purchase(_ product: Product) async {
+    func purchase(_ product: Product, appAccountToken: UUID? = nil) async {
         do {
-            let result = try await product.purchase()
+            // appAccountToken lets App Store Server Notifications map the
+            // transaction to our backend user (see backend/src/entitlements.ts).
+            var options: Set<Product.PurchaseOption> = []
+            if let appAccountToken {
+                options.insert(.appAccountToken(appAccountToken))
+            }
+            let result = try await product.purchase(options: options)
             switch result {
             case .success(let verification):
                 if case .verified(let transaction) = verification {

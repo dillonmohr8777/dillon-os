@@ -6,14 +6,19 @@ import SwiftUI
 @MainActor
 final class AuthManager: ObservableObject {
     @Published private(set) var sessionToken: String?
+    // Backend-issued UUID attached to StoreKit purchases (appAccountToken) so
+    // App Store Server Notifications map back to this user.
+    @Published private(set) var appAccountToken: UUID?
     @Published var lastError: String?
 
     private static let tokenKey = "sessionToken"
+    private static let accountTokenKey = "appAccountToken"
 
     var isSignedIn: Bool { sessionToken != nil }
 
     init() {
         sessionToken = Keychain.get(Self.tokenKey)
+        appAccountToken = Keychain.get(Self.accountTokenKey).flatMap(UUID.init(uuidString:))
     }
 
     func configure(_ request: ASAuthorizationAppleIDRequest) {
@@ -47,10 +52,17 @@ final class AuthManager: ObservableObject {
                 lastError = "Sign-in failed on the server."
                 return
             }
-            struct TokenResponse: Decodable { let token: String }
-            let token = try JSONDecoder().decode(TokenResponse.self, from: data).token
-            Keychain.set(token, for: Self.tokenKey)
-            sessionToken = token
+            struct TokenResponse: Decodable {
+                let token: String
+                let app_account_token: String?
+            }
+            let decoded = try JSONDecoder().decode(TokenResponse.self, from: data)
+            Keychain.set(decoded.token, for: Self.tokenKey)
+            sessionToken = decoded.token
+            if let raw = decoded.app_account_token, let uuid = UUID(uuidString: raw) {
+                Keychain.set(raw, for: Self.accountTokenKey)
+                appAccountToken = uuid
+            }
         } catch {
             lastError = error.localizedDescription
         }
@@ -58,6 +70,8 @@ final class AuthManager: ObservableObject {
 
     func signOut() {
         Keychain.delete(Self.tokenKey)
+        Keychain.delete(Self.accountTokenKey)
         sessionToken = nil
+        appAccountToken = nil
     }
 }
