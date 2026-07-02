@@ -21,10 +21,15 @@ spec and web sales page.
       fallback), App Store Server Notifications receiver
 - [x] App Store submission checklist (`docs/APP_STORE_CHECKLIST.md`)
 
-## Phase 2 — Make it real (needs a Mac + accounts)
+## Phase 2 — Make it real (no Mac needed — see docs/SHIP_WITHOUT_A_MAC.md)
 
-- [ ] Enroll in Apple Developer Program ($99/yr)
-- [ ] `xcodegen generate`, build in Xcode, fix anything the compiler flags
+- [ ] Enroll in Apple Developer Program ($99/yr) — the one unavoidable cost
+- [x] No-Mac build/upload pipeline: fastlane lanes (beta/release) + GitHub
+      Actions macOS runner (`.github/workflows/mohr-agents-ios-release.yml`)
+- [x] Backend CI (typecheck + tests) on every push
+- [x] Automated tests proving the webhook rejects forged notifications
+- [ ] Set the 4 CI secrets (ASC API key ×3 + Team ID), push a tag → TestFlight
+- [ ] First CI run: fix the Xcode version / signing toggle the logs surface
 - [ ] App icon + launch screen (swoosh mark from the prototype)
 - [ ] Deploy backend (Fly.io/Railway/Render), point Release config at it
 - [x] Durable entitlement store (JSON file, DB-swappable) + per-user rate limits
