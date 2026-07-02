@@ -12,18 +12,21 @@ final class StoreManager: ObservableObject {
     @Published private(set) var isSubscribed = false
     @Published var lastError: String?
 
-    private var updatesTask: Task<Void, Never>?
+    // JWS of the newest active transaction, pushed to the backend so it can
+    // grant the entitlement without waiting on Apple's async notification.
+    private(set) var latestTransactionJWS: String?
 
+    // No deinit: StoreManager is an app-lifetime @StateObject, so the
+    // Transaction.updates listener runs for the process lifetime. (A deinit
+    // touching @MainActor state would be an isolation violation under Swift 6.)
     init() {
-        updatesTask = Task { await listenForTransactions() }
+        Task { await listenForTransactions() }
         Task {
-            await loadProducts()
-            await refreshEntitlements()
+            // Independent — load the catalog and resolve entitlements concurrently.
+            async let productsLoaded: Void = loadProducts()
+            async let entitlementsRefreshed: Void = refreshEntitlements()
+            _ = await (productsLoaded, entitlementsRefreshed)
         }
-    }
-
-    deinit {
-        updatesTask?.cancel()
     }
 
     func loadProducts() async {
@@ -47,6 +50,7 @@ final class StoreManager: ObservableObject {
             switch result {
             case .success(let verification):
                 if case .verified(let transaction) = verification {
+                    latestTransactionJWS = verification.jwsRepresentation
                     await transaction.finish()
                     await refreshEntitlements()
                 }
@@ -72,9 +76,21 @@ final class StoreManager: ObservableObject {
                transaction.productType == .autoRenewable,
                transaction.revocationDate == nil {
                 active = true
+                latestTransactionJWS = entitlement.jwsRepresentation
             }
         }
         isSubscribed = active
+    }
+
+    // Push the current transaction to the backend so its entitlement store
+    // reflects this subscriber immediately (StoreKit knows before the webhook).
+    func syncWithBackend(token: String?) async {
+        guard let jws = latestTransactionJWS else { return }
+        do {
+            _ = try await APIClient.shared.verifySubscription(signedTransaction: jws, token: token)
+        } catch {
+            lastError = error.localizedDescription
+        }
     }
 
     private func listenForTransactions() async {

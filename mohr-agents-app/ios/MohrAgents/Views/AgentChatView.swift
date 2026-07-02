@@ -64,7 +64,9 @@ struct AgentChatView: View {
                 }
                 .padding(16)
             }
-            .onChange(of: messages) {
+            // Scroll on new bubbles only — not on every streamed token, which
+            // would kick off an animated scroll per delta.
+            .onChange(of: messages.count) {
                 if let last = messages.last {
                     withAnimation { proxy.scrollTo(last.id, anchor: .bottom) }
                 }
@@ -105,11 +107,12 @@ struct AgentChatView: View {
             showPaywall = true
             return
         }
+        guard canSend else { return }
         let text = draft.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !text.isEmpty else { return }
         draft = ""
         errorText = nil
-        messages.append(ChatMessage(role: .user, text: text))
+        let userMessage = ChatMessage(role: .user, text: text)
+        messages.append(userMessage)
         isThinking = true
 
         Task {
@@ -118,26 +121,53 @@ struct AgentChatView: View {
                 let stream = try await APIClient.shared.stream(
                     messages: messages, to: agent, token: auth.sessionToken)
                 var assistantIndex: Int?
-                for try await delta in stream {
+                func ensureAssistantBubble() {
                     if assistantIndex == nil {
                         isThinking = false
                         messages.append(ChatMessage(role: .assistant, text: ""))
                         assistantIndex = messages.count - 1
                     }
-                    if let index = assistantIndex {
-                        messages[index].text += delta
+                }
+                for try await chunk in stream {
+                    switch chunk {
+                    case .delta(let delta):
+                        ensureAssistantBubble()
+                        if let index = assistantIndex { messages[index].text += delta }
+                    case .reset(let replacement):
+                        // Refusal mid-stream: discard partial content, show only the reply.
+                        ensureAssistantBubble()
+                        if let index = assistantIndex { messages[index].text = replacement }
                     }
                 }
                 if assistantIndex == nil {
                     errorText = "No response — try again."
                 }
             } catch APIClient.APIError.subscriptionRequired {
-                showPaywall = true
+                // StoreKit says we're subscribed but the backend hasn't recorded
+                // it yet (Apple's webhook lags). Sync the transaction and retry
+                // rather than bouncing a paying user back to the paywall.
+                rollBack(userMessage)
+                if store.isSubscribed {
+                    errorText = "Activating your subscription…"
+                    await store.syncWithBackend(token: auth.sessionToken)
+                } else {
+                    showPaywall = true
+                }
             } catch APIClient.APIError.unauthorized {
                 auth.signOut()
             } catch {
+                // Roll back the optimistic user bubble so a retry doesn't stack
+                // two user turns (and the failed message isn't left dangling).
+                rollBack(userMessage)
                 errorText = error.localizedDescription
             }
+        }
+    }
+
+    private func rollBack(_ message: ChatMessage) {
+        if messages.last?.id == message.id {
+            messages.removeLast()
+            draft = message.text
         }
     }
 }

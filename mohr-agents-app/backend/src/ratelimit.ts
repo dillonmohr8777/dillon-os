@@ -26,3 +26,13 @@ export function checkRateLimit(userId: string): number | null {
   }
   return Math.ceil((window.startedAt + WINDOW_MS - now) / 1000);
 }
+
+// Periodic sweep so entries for users who never return don't accumulate for
+// the process lifetime. unref() keeps the timer from holding the event loop open.
+const sweep = setInterval(() => {
+  const now = Date.now();
+  for (const [userId, window] of windows) {
+    if (now - window.startedAt >= WINDOW_MS) windows.delete(userId);
+  }
+}, WINDOW_MS);
+sweep.unref?.();

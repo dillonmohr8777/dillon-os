@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import express from "express";
 import { agents, publicCatalog, type AgentConfig } from "./agents.js";
 import { accountUUID, issueSessionToken, verifyAppleIdentityToken, verifySessionToken } from "./auth.js";
-import { handleAppStoreNotification, isSubscribed } from "./entitlements.js";
+import { grantFromTransaction, handleAppStoreNotification, isSubscribed } from "./entitlements.js";
 import { checkRateLimit } from "./ratelimit.js";
 
 const anthropic = new Anthropic(); // reads ANTHROPIC_API_KEY
@@ -50,12 +50,15 @@ interface IncomingMessage {
 
 interface ChatTurn {
   agent: AgentConfig;
-  system: string;
+  business: string | null;
   history: { role: "user" | "assistant"; content: string }[];
 }
 
 // Shared validation for both chat endpoints. Writes the error response and
-// returns null when the request is not serviceable.
+// returns null when the request is not serviceable. Order matters: cheap
+// checks that don't consume the rate-limit budget (auth, subscription, agent
+// existence, message shape) run first, so malformed or unknown-agent requests
+// can't burn a user's window before any model call would happen.
 function prepareChatTurn(req: express.Request, res: express.Response): ChatTurn | null {
   const userId = requireAuth(req);
   if (!userId) {
@@ -67,13 +70,6 @@ function prepareChatTurn(req: express.Request, res: express.Response): ChatTurn 
     return null;
   }
 
-  const retryAfter = checkRateLimit(userId);
-  if (retryAfter !== null) {
-    res.setHeader("Retry-After", String(retryAfter));
-    res.status(429).json({ error: `Easy there — try again in ${retryAfter}s.` });
-    return null;
-  }
-
   const agent = agents.get(req.params.id);
   if (!agent) {
     res.status(404).json({ error: "unknown agent" });
@@ -81,31 +77,47 @@ function prepareChatTurn(req: express.Request, res: express.Response): ChatTurn 
   }
 
   const incoming: IncomingMessage[] = Array.isArray(req.body?.messages) ? req.body.messages : [];
-  const history = incoming
+  let history = incoming
     .filter((m) => (m.role === "user" || m.role === "assistant") && typeof m.text === "string")
     .slice(-20) // cap context per request
     .map((m) => ({ role: m.role, content: m.text }));
+  // The Anthropic API requires the first message to be a user turn; slicing
+  // can leave a leading assistant message, so drop any leading assistant turns.
+  while (history.length > 0 && history[0].role !== "user") history = history.slice(1);
   if (history.length === 0 || history[history.length - 1].role !== "user") {
     res.status(400).json({ error: "messages must end with a user message" });
     return null;
   }
 
-  const business = typeof req.body?.business === "string" ? req.body.business : null;
-  const system = business
-    ? `${agent.system}\n\nBusiness context provided by the user: ${business}`
-    : agent.system;
+  // Only now, once we know we'll actually call the model, spend the budget.
+  const retryAfter = checkRateLimit(userId);
+  if (retryAfter !== null) {
+    res.setHeader("Retry-After", String(retryAfter));
+    res.status(429).json({ error: `Easy there — try again in ${retryAfter}s.` });
+    return null;
+  }
 
-  return { agent, system, history };
+  const business = typeof req.body?.business === "string" ? req.body.business : null;
+  return { agent, business, history };
 }
 
-function chatParams({ agent, system, history }: ChatTurn) {
+function chatParams({ agent, business, history }: ChatTurn) {
+  // Keep the stable agent instructions in their own cache_control block so the
+  // prefix stays warm across users; put per-request business context in a
+  // separate, uncached block so it never invalidates the cached prefix.
+  const system = [
+    { type: "text" as const, text: agent.system, cache_control: { type: "ephemeral" as const } },
+    ...(business
+      ? [{ type: "text" as const, text: `Business context provided by the user: ${business}` }]
+      : []),
+  ];
   return {
     model: "claude-fable-5",
     max_tokens: 2048,
     betas: ["server-side-fallback-2026-06-01"],
     fallbacks: [{ model: "claude-opus-4-8" }],
     output_config: { effort: agent.effort },
-    system: [{ type: "text" as const, text: system, cache_control: { type: "ephemeral" as const } }],
+    system,
     messages: history,
   };
 }
@@ -150,7 +162,9 @@ app.post("/v1/agents/:id/messages/stream", async (req, res) => {
     const stream = anthropic.beta.messages.stream(chatParams(turn));
     stream.on("text", (delta) => emit({ delta }));
     const final = await stream.finalMessage();
-    if (final.stop_reason === "refusal") emit({ delta: REFUSAL_REPLY });
+    // On a mid-stream refusal, discard any partial content the client rendered
+    // and show only the canned reply (matching the non-stream endpoint).
+    if (final.stop_reason === "refusal") emit({ reset: REFUSAL_REPLY });
     emit({ done: true });
   } catch (error) {
     console.error(`agent ${turn.agent.id} stream error:`, error);
@@ -159,15 +173,37 @@ app.post("/v1/agents/:id/messages/stream", async (req, res) => {
   res.end();
 });
 
+// ---- subscription sync ------------------------------------------------------
+
+// The app posts its freshly-made StoreKit transaction (JWS) so the backend can
+// grant the entitlement immediately, instead of waiting on Apple's async
+// notification. Prevents a just-paid user from bouncing off the 402 gate.
+app.post("/v1/subscriptions/verify", async (req, res) => {
+  const userId = requireAuth(req);
+  if (!userId) return res.status(401).json({ error: "sign in required" });
+  const jws = req.body?.signed_transaction;
+  if (typeof jws !== "string") return res.status(400).json({ error: "signed_transaction required" });
+  try {
+    const granted = await grantFromTransaction(jws);
+    res.json({ subscribed: granted });
+  } catch (error) {
+    console.error("subscription verify error:", error);
+    res.status(400).json({ error: "could not verify transaction" });
+  }
+});
+
 // ---- App Store Server Notifications V2 --------------------------------------
 
-app.post("/v1/webhooks/appstore", (req, res) => {
+app.post("/v1/webhooks/appstore", async (req, res) => {
   try {
-    handleAppStoreNotification(req.body ?? {});
+    await handleAppStoreNotification(req.body ?? {});
   } catch (error) {
-    console.error("appstore webhook error:", error);
+    // A verification failure is a real rejection (log it), but still 200 so
+    // Apple doesn't retry a payload we'll never accept. Genuine transient
+    // errors are rare here; entitlements reconcile on the next notification.
+    console.error("appstore webhook rejected:", (error as Error).message);
   }
-  res.sendStatus(200); // always ack; Apple retries on non-2xx
+  res.sendStatus(200);
 });
 
 app.get("/healthz", (_req, res) => res.json({ ok: true }));

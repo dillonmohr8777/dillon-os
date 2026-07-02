@@ -42,24 +42,10 @@ final class AuthManager: ObservableObject {
 
     private func exchange(identityToken: String) async {
         do {
-            var request = URLRequest(url: APIClient.shared.baseURL.appending(path: "/v1/auth/apple"))
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpBody = try JSONEncoder().encode(["identity_token": identityToken])
-
-            let (data, response) = try await URLSession.shared.data(for: request)
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-                lastError = "Sign-in failed on the server."
-                return
-            }
-            struct TokenResponse: Decodable {
-                let token: String
-                let app_account_token: String?
-            }
-            let decoded = try JSONDecoder().decode(TokenResponse.self, from: data)
-            Keychain.set(decoded.token, for: Self.tokenKey)
-            sessionToken = decoded.token
-            if let raw = decoded.app_account_token, let uuid = UUID(uuidString: raw) {
+            let result = try await APIClient.shared.exchangeApple(identityToken: identityToken)
+            Keychain.set(result.token, for: Self.tokenKey)
+            sessionToken = result.token
+            if let raw = result.app_account_token, let uuid = UUID(uuidString: raw) {
                 Keychain.set(raw, for: Self.accountTokenKey)
                 appAccountToken = uuid
             }

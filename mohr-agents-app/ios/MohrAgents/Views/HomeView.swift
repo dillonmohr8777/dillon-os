@@ -24,11 +24,7 @@ struct HomeView: View {
 
     private var header: some View {
         HStack {
-            HStack(spacing: 5) {
-                Text("Mohr").foregroundStyle(Theme.green)
-                Text("Agents").foregroundStyle(Theme.blue)
-            }
-            .font(.system(size: 25, weight: .heavy))
+            Wordmark()
 
             Spacer()
 

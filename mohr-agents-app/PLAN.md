@@ -28,7 +28,10 @@ spec and web sales page.
 - [ ] App icon + launch screen (swoosh mark from the prototype)
 - [ ] Deploy backend (Fly.io/Railway/Render), point Release config at it
 - [x] Durable entitlement store (JSON file, DB-swappable) + per-user rate limits
-- [ ] Verify App Store webhook JWS signatures (needs prod App Store Connect setup)
+- [x] Verify App Store webhook + transaction JWS signatures (x5c chain pinned
+      to the Apple root; fails closed in prod without APPLE_ROOT_CA_FINGERPRINT)
+- [x] Immediate subscription sync (/v1/subscriptions/verify) so new subscribers
+      aren't bounced to the paywall while Apple's webhook lags
 - [x] Set `appAccountToken` on purchases so webhooks map to users
 - [x] Streaming responses (SSE) so replies render token-by-token
 

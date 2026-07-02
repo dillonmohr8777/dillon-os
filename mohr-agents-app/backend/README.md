@@ -11,7 +11,8 @@ Prompts and the Anthropic key live here — never on the device.
 | `GET` | `/v1/agents` | — | Public agent catalog (id, name, tag, group) |
 | `POST` | `/v1/agents/:id/messages` | Bearer + active subscription | Run one agent turn; returns `{ reply }` |
 | `POST` | `/v1/agents/:id/messages/stream` | Bearer + active subscription | Same turn as SSE: `data: {"delta"}` chunks, then `{"done"}` |
-| `POST` | `/v1/webhooks/appstore` | — | App Store Server Notifications V2 receiver |
+| `POST` | `/v1/subscriptions/verify` | Bearer | Grant entitlement now from the app's signed StoreKit transaction (beats the webhook lag) |
+| `POST` | `/v1/webhooks/appstore` | JWS-signed | App Store Server Notifications V2 receiver (signature-verified) |
 | `GET` | `/healthz` | — | Liveness |
 
 ## Agents
@@ -39,11 +40,15 @@ Set `ALLOW_UNSUBSCRIBED=true` locally to chat without a StoreKit purchase.
 
 ## Before production
 
-- Verify App Store notification JWS signatures (see `src/entitlements.ts`).
+- Set `APPLE_ROOT_CA_FINGERPRINT` (see `.env.example`) — the webhook and
+  `/v1/subscriptions/verify` fail closed without it in production.
 - Swap the JSON-file entitlement store for a real database if you outgrow
   a single instance.
 
 Already wired: `appAccountToken` end to end (deterministic per-user UUID from
-`/v1/auth/apple` → StoreKit purchase → webhook), durable entitlement storage
-(`ENTITLEMENTS_FILE`), and per-user rate limiting on the chat endpoints
+`/v1/auth/apple` → StoreKit purchase → webhook), **JWS signature verification**
+of App Store notifications and transactions (x5c chain pinned to the Apple root
+fingerprint), an immediate `/v1/subscriptions/verify` sync path so new
+subscribers aren't gated while Apple's webhook lags, durable entitlement
+storage (`ENTITLEMENTS_FILE`), and per-user rate limiting on the chat endpoints
 (`RATE_WINDOW_MS` / `RATE_MAX_PER_WINDOW`, returns 429 + `Retry-After`).
