@@ -117,6 +117,29 @@
   #tip { position: fixed; z-index: 20; pointer-events: none; display: none;
     background: #101a13; border: 1px solid var(--edge-hi); border-radius: 4px;
     padding: 4px 8px; font-size: 10px; color: var(--ink); }
+
+  .li.click { cursor: pointer; }
+  .li.click:hover .tx { color: var(--ink); }
+  .li .warn { color: var(--amber); }
+  .li .good { color: var(--green); }
+  .stopbtn { font: inherit; font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
+    background: transparent; border: 1px solid var(--amber); color: var(--amber);
+    border-radius: 3px; padding: 1px 7px; cursor: pointer; }
+
+  /* note viewer overlay */
+  #viewer { position: fixed; inset: 0; z-index: 30; display: none;
+    background: rgba(4,8,5,.72); backdrop-filter: blur(2px); }
+  #viewer .sheet { position: absolute; inset: 6% 14%; display: flex; flex-direction: column;
+    background: var(--panel); border: 1px solid var(--edge-hi); border-radius: 8px;
+    padding: 14px 18px; box-shadow: 0 0 60px rgba(134,239,172,.08); }
+  #viewer h3 { font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--green); display: flex; justify-content: space-between; margin-bottom: 10px; }
+  #viewer h3 button { font: inherit; background: none; border: 0; color: var(--ink-2); cursor: pointer; }
+  #viewer pre { flex: 1; overflow-y: auto; white-space: pre-wrap; word-break: break-word;
+    color: var(--ink-2); font-size: 11.5px; line-height: 1.65;
+    scrollbar-width: thin; scrollbar-color: var(--edge) transparent; }
+  #viewer pre .h { color: var(--ink); font-weight: 700; }
+  #viewer pre .fm { color: var(--ink-3); }
 </style>
 
 <div id="app">
@@ -140,7 +163,7 @@
     <!-- left -->
     <div class="col">
       <div class="panel">
-        <h2>System Vitals <span class="tag">14d</span></h2>
+        <h2>System Vitals <span class="tag" id="vitals-tag">14d</span></h2>
         <div class="tile">
           <div class="label">Notes in vault</div>
           <div class="row"><span class="value" id="v-notes">—</span><span class="delta" id="v-week">—</span></div>
@@ -159,6 +182,10 @@
           <div class="label">Clients / Content / Agents</div>
           <div class="row"><span class="value" id="v-ccs">—</span><span class="delta" id="v-sessions">—</span></div>
         </div>
+      </div>
+      <div class="panel scroll" style="max-height:190px">
+        <h2>Client Radar <span class="tag" id="radar-tag"></span></h2>
+        <div id="radar"></div>
       </div>
       <div class="panel scroll" style="flex:1">
         <h2>Directives <span class="tag" id="dir-src"></span></h2>
@@ -192,7 +219,7 @@
         <div id="schedule"></div>
       </div>
       <div class="panel console" style="flex:1">
-        <h2>AI Wire <span class="tag" id="wire-tag">vault feed</span></h2>
+        <h2>AI Wire <span style="display:flex;gap:10px"><button id="stop" class="stopbtn" hidden>■ stop</button><span class="tag" id="wire-tag">vault feed</span></span></h2>
         <pre id="console"></pre>
       </div>
     </div>
@@ -205,6 +232,7 @@
   </footer>
 </div>
 <div id="tip"></div>
+<div id="viewer"><div class="sheet"><h3><span id="viewer-title">—</span><button id="viewer-close">esc ✕</button></h3><pre id="viewer-body"></pre></div></div>
 
 <script>
 const $ = (id) => document.getElementById(id);
@@ -254,6 +282,7 @@ function render() {
   $('v-ccs').textContent = `${v.clients} / ${v.content} / ${v.agents}`;
   $('v-sessions').textContent = `${v.sessions} sessions`;
   $('pill-vault').textContent = `${v.notes} NOTES`;
+  $('vitals-tag').textContent = v.activitySource === 'history' ? '14d trend' : '14d (mtime)';
   drawSpark(v.activity);
 
   // hero
@@ -266,17 +295,33 @@ function render() {
     ? `${pct.toFixed(1)}% of ${c.goalTarget.toLocaleString()} · ${(c.goalTarget - c.goalCurrent).toLocaleString()} to go`
     : 'set goal_target in System/OS Config.md';
 
-  // directives
+  // client radar
+  const r = state.radar || { moving: [], watch: [], stalled: [], dueSoon: [] };
+  $('radar-tag').textContent = `${r.moving.length} moving · ${r.stalled.length} stalled`;
+  $('radar').innerHTML = [
+    ...r.dueSoon.map((c) => `<div class="li"><span class="mk warn">◆</span><span class="tx warn" title="due ${esc(c.due)}">${esc(c.name)} — ${c.overdue ? 'OVERDUE' : 'due'} ${esc(c.due)}</span></div>`),
+    ...r.stalled.slice(0, 6).map((c) => `<div class="li"><span class="mk warn">●</span><span class="tx" title="${esc(c.next || 'no next_action set')}">${esc(c.name)}</span><span class="ago">${c.ago} idle</span></div>`),
+    ...r.moving.slice(0, 4).map((c) => `<div class="li"><span class="mk good">●</span><span class="tx">${esc(c.name)}</span><span class="ago">${c.ago}</span></div>`),
+  ].join('') || '<div class="li"><span class="tx">no clients detected in 01_Clients/</span></div>';
+
+  // directives (click to toggle — writes back to Dashboard.md)
   $('directives').innerHTML = directives.length
     ? directives.map((d) =>
-        `<div class="li"><span class="mk ${d.done ? 'done' : ''}">${d.done ? '■' : '□'}</span>` +
+        `<div class="li click" data-toggle="${esc(d.text)}"><span class="mk ${d.done ? 'done' : ''}">${d.done ? '■' : '□'}</span>` +
         `<span class="tx ${d.done ? 'done' : ''}" title="${esc(d.text)}">${esc(d.text)}</span></div>`).join('')
     : '<div class="li"><span class="tx">no open directives — run PLAN TODAY</span></div>';
   $('dir-src').textContent = directives[0] ? directives[0].source.toLowerCase() : '';
+  for (const el of document.querySelectorAll('[data-toggle]')) {
+    el.onclick = async () => {
+      await fetch('/api/toggle', { method: 'POST', headers: {'content-type':'application/json'}, body: JSON.stringify({ text: el.dataset.toggle }) });
+      sync();
+    };
+  }
 
-  // docs
+  // docs (click to read in the viewer)
   $('docs').innerHTML = docs.map((d) =>
-    `<div class="li"><span class="mk">▸</span><span class="tx" title="${esc(d.rel)}">${esc(d.name)}</span><span class="ago">${d.ago}</span></div>`).join('');
+    `<div class="li click" data-note="${esc(d.rel)}"><span class="mk">▸</span><span class="tx" title="${esc(d.rel)}">${esc(d.name)}</span><span class="ago">${d.ago}</span></div>`).join('');
+  for (const el of document.querySelectorAll('[data-note]')) el.onclick = () => openNote(el.dataset.note);
 
   // deck
   const running = new Set(jobs.filter((j) => j.status === 'running').map((j) => j.skill));
@@ -290,10 +335,11 @@ function render() {
     `<div class="li"><span class="mk">·</span><span class="tx">${esc(s)}</span></div>`).join('') ||
     '<div class="li"><span class="tx">add a ## Schedule to System/OS Config.md</span></div>';
 
-  // core pill
+  // core pill + stop button
   const busy = running.size > 0;
   $('pill-core').textContent = busy ? `RUNNING ${[...running][0].toUpperCase()}` : 'IDLE';
   $('dot-core').className = 'dot' + (busy ? ' amber' : '');
+  $('stop').hidden = !(activeJob && jobs.some((j) => j.id === activeJob.id && j.status === 'running'));
   orbEnergy = busy ? 1 : 0.35;
 
   // wire feed (only when no live console)
@@ -353,6 +399,36 @@ async function run(skill) {
   es.onerror = () => { es.close(); if (activeJob && activeJob.id === r.id) activeJob = null; sync(); };
   sync();
 }
+
+// ---------------- note viewer ----------------
+async function openNote(rel) {
+  try {
+    const r = await (await fetch('/api/note?rel=' + encodeURIComponent(rel))).json();
+    if (r.error) return;
+    $('viewer-title').textContent = rel;
+    // light markdown dressing: headings bold, frontmatter dimmed — content stays escaped
+    let body = esc(r.content);
+    body = body.replace(/^---\n[\s\S]*?\n---/, (m) => `<span class="fm">${m}</span>`);
+    body = body.replace(/^(#{1,4} .+)$/gm, '<span class="h">$1</span>');
+    $('viewer-body').innerHTML = body;
+    $('viewer').style.display = 'block';
+    $('viewer-body').scrollTop = 0;
+  } catch { /* server unreachable — ignore */ }
+}
+$('viewer-close').onclick = () => { $('viewer').style.display = 'none'; };
+$('viewer').onclick = (e) => { if (e.target === $('viewer')) $('viewer').style.display = 'none'; };
+
+// ---------------- stop + hotkeys ----------------
+$('stop').onclick = async () => {
+  if (activeJob) await fetch(`/api/jobs/${activeJob.id}/stop`, { method: 'POST' });
+  sync();
+};
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { $('viewer').style.display = 'none'; return; }
+  if (e.target.tagName === 'INPUT' || e.metaKey || e.ctrlKey || e.altKey) return;
+  const n = Number(e.key);
+  if (n >= 1 && n <= 8 && state && state.skills[n - 1]) run(state.skills[n - 1].name);
+});
 
 // ---------------- particle core ----------------
 let orbEnergy = 0.35;
