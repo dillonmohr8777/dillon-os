@@ -1,0 +1,35 @@
+# XcodeGen project spec — run `brew install xcodegen && xcodegen generate`
+# in this directory to produce MohrAgents.xcodeproj.
+name: MohrAgents
+options:
+  bundleIdPrefix: com.mohrmedia
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+targets:
+  MohrAgents:
+    type: application
+    platform: iOS
+    sources:
+      - MohrAgents
+    info:
+      path: MohrAgents/Info.plist
+      properties:
+        CFBundleDisplayName: Mohr Agents
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        MOHR_API_BASE_URL: $(MOHR_API_BASE_URL)
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mohrmedia.mohragents
+        CODE_SIGN_ENTITLEMENTS: MohrAgents/MohrAgents.entitlements
+        MARKETING_VERSION: 0.1.0
+        CURRENT_PROJECT_VERSION: 1
+        TARGETED_DEVICE_FAMILY: "1"
+        SWIFT_VERSION: "5.9"
+      configs:
+        debug:
+          MOHR_API_BASE_URL: http://localhost:8787
+        release:
+          MOHR_API_BASE_URL: https://api.mohrmedia.com
