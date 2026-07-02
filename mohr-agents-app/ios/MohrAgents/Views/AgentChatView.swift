@@ -115,9 +115,22 @@ struct AgentChatView: View {
         Task {
             defer { isThinking = false }
             do {
-                let reply = try await APIClient.shared.send(
+                let stream = try await APIClient.shared.stream(
                     messages: messages, to: agent, token: auth.sessionToken)
-                messages.append(ChatMessage(role: .assistant, text: reply))
+                var assistantIndex: Int?
+                for try await delta in stream {
+                    if assistantIndex == nil {
+                        isThinking = false
+                        messages.append(ChatMessage(role: .assistant, text: ""))
+                        assistantIndex = messages.count - 1
+                    }
+                    if let index = assistantIndex {
+                        messages[index].text += delta
+                    }
+                }
+                if assistantIndex == nil {
+                    errorText = "No response — try again."
+                }
             } catch APIClient.APIError.subscriptionRequired {
                 showPaywall = true
             } catch APIClient.APIError.unauthorized {

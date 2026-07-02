@@ -1,4 +1,4 @@
-import { createHmac, timingSafeEqual } from "node:crypto";
+import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import { createRemoteJWKSet, jwtVerify } from "jose";
 
 const APPLE_ISSUER = "https://appleid.apple.com";
@@ -15,6 +15,18 @@ export async function verifyAppleIdentityToken(identityToken: string): Promise<s
   });
   if (!payload.sub) throw new Error("Apple token missing sub");
   return payload.sub;
+}
+
+// Deterministic UUID for a user, used as StoreKit's appAccountToken. App Store
+// Server Notifications echo it back, letting entitlements.ts map transactions
+// to users without a database lookup by transaction id.
+export function accountUUID(userId: string): string {
+  const hex = createHash("sha256").update(`mohragents:${userId}`).digest("hex");
+  const bytes = hex.slice(0, 32).split("");
+  bytes[12] = "4"; // version 4 nibble
+  bytes[16] = ((parseInt(bytes[16], 16) & 0x3) | 0x8).toString(16); // variant
+  const raw = bytes.join("");
+  return `${raw.slice(0, 8)}-${raw.slice(8, 12)}-${raw.slice(12, 16)}-${raw.slice(16, 20)}-${raw.slice(20)}`;
 }
 
 // Signed opaque session tokens: base64url(userId).base64url(expiry).hmac

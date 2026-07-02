@@ -38,28 +38,68 @@ struct APIClient {
         }
     }
 
-    func send(messages: [ChatMessage], to agent: Agent, token: String?) async throws -> String {
-        var request = URLRequest(url: baseURL.appending(path: "/v1/agents/\(agent.id)/messages"))
+    private func makeRequest(path: String, messages: [ChatMessage], token: String?) throws -> URLRequest {
+        var request = URLRequest(url: baseURL.appending(path: path))
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         if let token {
             request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
         request.httpBody = try JSONEncoder().encode(MessageRequest(messages: messages, business: nil))
+        return request
+    }
 
-        let (data, response) = try await URLSession.shared.data(for: request)
+    private func check(_ response: URLResponse) throws {
         guard let http = response as? HTTPURLResponse else { throw APIError.server("No response") }
-
         switch http.statusCode {
-        case 200:
-            return try JSONDecoder().decode(MessageResponse.self, from: data).reply
-        case 401:
-            throw APIError.unauthorized
-        case 402:
-            throw APIError.subscriptionRequired
-        default:
-            let body = String(data: data, encoding: .utf8) ?? ""
-            throw APIError.server("Server error (\(http.statusCode)) \(body)")
+        case 200: return
+        case 401: throw APIError.unauthorized
+        case 402: throw APIError.subscriptionRequired
+        default:  throw APIError.server("Server error (\(http.statusCode))")
+        }
+    }
+
+    func send(messages: [ChatMessage], to agent: Agent, token: String?) async throws -> String {
+        let request = try makeRequest(path: "/v1/agents/\(agent.id)/messages", messages: messages, token: token)
+        let (data, response) = try await URLSession.shared.data(for: request)
+        try check(response)
+        return try JSONDecoder().decode(MessageResponse.self, from: data).reply
+    }
+
+    private struct StreamEvent: Decodable {
+        let delta: String?
+        let done: Bool?
+        let error: String?
+    }
+
+    // SSE variant — yields text deltas as the agent writes them.
+    func stream(messages: [ChatMessage], to agent: Agent, token: String?) async throws -> AsyncThrowingStream<String, Error> {
+        let request = try makeRequest(path: "/v1/agents/\(agent.id)/messages/stream", messages: messages, token: token)
+        let (bytes, response) = try await URLSession.shared.bytes(for: request)
+        try check(response)
+
+        return AsyncThrowingStream { continuation in
+            let task = Task {
+                do {
+                    for try await line in bytes.lines {
+                        guard line.hasPrefix("data: ") else { continue }
+                        let payload = Data(line.dropFirst(6).utf8)
+                        guard let event = try? JSONDecoder().decode(StreamEvent.self, from: payload) else { continue }
+                        if let message = event.error {
+                            continuation.finish(throwing: APIError.server(message))
+                            return
+                        }
+                        if let delta = event.delta {
+                            continuation.yield(delta)
+                        }
+                        if event.done == true { break }
+                    }
+                    continuation.finish()
+                } catch {
+                    continuation.finish(throwing: error)
+                }
+            }
+            continuation.onTermination = { _ in task.cancel() }
         }
     }
 }
