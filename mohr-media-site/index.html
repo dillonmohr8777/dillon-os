@@ -5,365 +5,700 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mohr Media — Founder-led AI marketing systems</title>
 <meta name="description" content="Founder-led AI marketing systems by Dillon Mohr. One operating layer for lead generation, SEO content, paid media, automation, conversion architecture, and reporting. Predictable pipeline, compounding results.">
+<meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Archivo:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #f2f4f3;
-    --panel: #e9edeb;
-    --ink: #101b17;
-    --ink-2: #4a5a54;
-    --ink-3: #7c8a84;
-    --line: #d4dbd7;
-    --grid: #dfe5e2;
-    --machine: #0c6b4f;
-    --hot: #c2491d;
-    --display: "Bricolage Grotesque", "Avenir Next Condensed", "Arial Narrow", sans-serif;
-    --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --bg: #020203;
+    --ink: #f2f2ef;
+    --dim: rgba(242, 242, 239, 0.55);
+    --faint: rgba(242, 242, 239, 0.32);
+    --line: rgba(242, 242, 239, 0.14);
+    --glass: rgba(242, 242, 239, 0.035);
+    --hot: #e8632e;
+    --hot-dim: rgba(232, 99, 46, 0.35);
+    --display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
   }
   * { margin: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    font: 16px/1.65 var(--body);
-    background:
-      linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 100% 56px,
-      linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 56px 100%,
-      var(--paper);
+    font: 15px/1.7 var(--display);
+    font-weight: 400;
+    background: var(--bg);
     color: var(--ink);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+  ::selection { background: var(--hot); color: #000; }
   a { color: inherit; }
-  .mono { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; }
+  .mono { font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; }
 
-  /* ---- top bar ---- */
+  /* ---- webgl stage ---- */
+  #stage {
+    position: fixed; inset: 0; width: 100%; height: 100%;
+    z-index: 0; pointer-events: none;
+  }
+  .stage-fallback {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse 70% 55% at 50% 38%, rgba(232, 99, 46, 0.07), transparent 65%),
+      radial-gradient(ellipse 90% 70% at 50% 60%, rgba(242, 242, 239, 0.05), transparent 70%);
+  }
+  .vignette {
+    position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+  }
+
+  /* ---- loader ---- */
+  #loader {
+    position: fixed; inset: 0; z-index: 100; background: var(--bg);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px;
+    transition: opacity 700ms ease, visibility 700ms;
+  }
+  #loader.done { opacity: 0; visibility: hidden; }
+  #loader .mono { color: var(--faint); }
+  #loader .count {
+    font-family: var(--display); font-weight: 300; font-size: clamp(56px, 10vw, 110px);
+    line-height: 1; letter-spacing: 0.04em; font-variant-numeric: tabular-nums;
+  }
+  #loader .bar { width: min(320px, 60vw); height: 1px; background: var(--line); position: relative; overflow: hidden; }
+  #loader .bar i { position: absolute; inset: 0; background: var(--hot); transform-origin: left; transform: scaleX(0); }
+
+  /* ---- custom cursor ---- */
+  #cur-dot, #cur-ring { position: fixed; top: 0; left: 0; z-index: 99; pointer-events: none; border-radius: 50%; }
+  #cur-dot { width: 6px; height: 6px; background: var(--hot); margin: -3px 0 0 -3px; }
+  #cur-ring {
+    width: 34px; height: 34px; margin: -17px 0 0 -17px;
+    border: 1px solid rgba(242, 242, 239, 0.45);
+    transition: width 220ms, height 220ms, margin 220ms, border-color 220ms;
+  }
+  #cur-ring.hot { width: 56px; height: 56px; margin: -28px 0 0 -28px; border-color: var(--hot); }
+  @media (pointer: coarse) { #cur-dot, #cur-ring { display: none; } }
+
+  /* ---- content shell ---- */
+  main, nav, footer { position: relative; z-index: 2; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(22px, 4vw, 48px); }
+
+  /* ---- nav ---- */
   nav {
-    position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
+    position: fixed; top: 0; left: 0; right: 0; z-index: 20;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px clamp(22px, 4vw, 48px);
+    transition: background 400ms, border-color 400ms;
+    border-bottom: 1px solid transparent;
   }
-  .nav-in { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-  .wordmark { font-family: var(--display); font-weight: 800; font-size: 19px; letter-spacing: 0.01em; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-  .wordmark .plate { background: var(--ink); color: var(--paper); padding: 1px 7px 2px; border-radius: 3px; }
-  .nav-links { display: flex; gap: 24px; align-items: center; }
-  .nav-links a { text-decoration: none; font-size: 14px; font-weight: 600; color: var(--ink-2); }
-  .nav-links a:hover, .nav-links a:focus-visible { color: var(--ink); }
-  .btn {
-    display: inline-block; text-decoration: none; font-weight: 600; font-size: 15px;
-    background: var(--hot); color: #fff !important; padding: 10px 20px; border-radius: 4px;
-    border: 1px solid color-mix(in srgb, var(--hot) 80%, black);
-    transition: transform 120ms, box-shadow 120ms;
+  nav.scrolled { background: rgba(2, 2, 3, 0.72); backdrop-filter: blur(12px); border-bottom-color: var(--line); }
+  .wordmark { font-family: var(--mono); font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; text-decoration: none; font-weight: 600; }
+  .wordmark em { font-style: normal; color: var(--hot); }
+  .nav-links { display: flex; gap: 30px; align-items: center; }
+  .nav-links a:not(.cta-link) {
+    text-decoration: none; font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--dim); transition: color 200ms;
   }
-  .btn:hover, .btn:focus-visible { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(194, 73, 29, 0.32); }
-  .btn.ghost { background: transparent; color: var(--ink) !important; border: 1px solid var(--ink); box-shadow: none; }
-  @media (max-width: 780px) { .nav-links a:not(.btn) { display: none; } }
+  .nav-links a:not(.cta-link):hover, .nav-links a:not(.cta-link):focus-visible { color: var(--ink); }
+  .cta-link {
+    text-decoration: none; font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    border: 1px solid var(--line); padding: 10px 20px; color: var(--ink);
+    transition: background 250ms, color 250ms, border-color 250ms;
+  }
+  .cta-link:hover, .cta-link:focus-visible { background: var(--hot); border-color: var(--hot); color: #000; }
+  @media (max-width: 860px) { .nav-links a:not(.cta-link) { display: none; } }
 
   /* ---- hero ---- */
-  .hero { padding: 84px 28px 40px; border-bottom: 1px solid var(--line); }
-  .hero .mono { color: var(--machine); }
-  h1 {
-    font-family: var(--display); font-weight: 800;
-    font-size: clamp(40px, 7vw, 74px); line-height: 1.02; letter-spacing: -0.02em;
-    margin: 18px 0 22px; max-width: 15ch; text-wrap: balance;
+  .hero {
+    min-height: 100svh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    padding: 120px clamp(22px, 4vw, 48px) 80px; position: relative;
   }
-  h1 .turn { color: var(--machine); }
-  .hero p.lede { font-size: 18px; color: var(--ink-2); max-width: 56ch; }
-  .hero-cta { display: flex; gap: 14px; margin-top: 32px; flex-wrap: wrap; align-items: center; }
-  .hero-cta .mono { color: var(--ink-3); letter-spacing: 0.08em; }
+  .hero .eyebrow { color: var(--faint); margin-bottom: 30px; }
+  h1 {
+    font-weight: 300; text-transform: uppercase;
+    font-size: clamp(30px, 5.2vw, 76px); line-height: 1.08; letter-spacing: 0.04em;
+  }
+  h1 .outline {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(242, 242, 239, 0.85);
+  }
+  h1 .hotword { color: var(--hot); }
+  .hero .lede { margin-top: 34px; max-width: 58ch; color: var(--dim); font-size: 15.5px; font-weight: 300; }
+  .hero-cta { display: flex; gap: 18px; margin-top: 44px; flex-wrap: wrap; justify-content: center; }
+  .btn {
+    display: inline-block; text-decoration: none; font-family: var(--mono); font-size: 11.5px;
+    letter-spacing: 0.22em; text-transform: uppercase; padding: 15px 30px;
+    border: 1px solid var(--ink); color: var(--ink);
+    transition: background 250ms, color 250ms, border-color 250ms, transform 250ms;
+  }
+  .btn:hover, .btn:focus-visible { background: var(--ink); color: #000; transform: translateY(-2px); }
+  .btn.hot { border-color: var(--hot); color: var(--hot); }
+  .btn.hot:hover, .btn.hot:focus-visible { background: var(--hot); color: #000; }
+  .scroll-hint {
+    position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 12px; color: var(--faint);
+  }
+  .scroll-hint .stem { width: 1px; height: 46px; background: var(--line); position: relative; overflow: hidden; }
+  .scroll-hint .stem::after {
+    content: ""; position: absolute; left: 0; top: -50%; width: 100%; height: 50%;
+    background: var(--hot); animation: drip 2.2s ease-in-out infinite;
+  }
+  @keyframes drip { 0% { top: -50%; } 70%, 100% { top: 110%; } }
 
-  /* pipeline schematic */
-  .schematic { margin: 64px 0 8px; border: 1px solid var(--line); background: var(--paper); border-radius: 6px; padding: 22px 24px 18px; overflow-x: auto; }
-  .schematic svg { display: block; min-width: 640px; width: 100%; height: auto; }
-  .flow-dash { stroke-dasharray: 6 7; animation: flow 1.4s linear infinite; }
-  @keyframes flow { to { stroke-dashoffset: -13; } }
-  @media (prefers-reduced-motion: reduce) { .flow-dash { animation: none; } html { scroll-behavior: auto; } }
+  /* ---- marquee ---- */
+  .marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; padding: 16px 0; }
+  .marquee .track { display: flex; gap: 0; width: max-content; animation: slide 36s linear infinite; }
+  .marquee span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); white-space: nowrap; padding-right: 3.2em; }
+  .marquee span b { color: var(--hot); font-weight: 400; }
+  @keyframes slide { to { transform: translateX(-50%); } }
 
   /* ---- sections ---- */
-  section.wrap { padding: 84px 28px; border-bottom: 1px solid var(--line); }
-  .eyebrow { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; }
-  .eyebrow .mono { color: var(--machine); }
-  .eyebrow .rule { flex: 1; height: 1px; background: var(--line); }
-  h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.015em; line-height: 1.08; max-width: 24ch; text-wrap: balance; }
-  .section-lede { color: var(--ink-2); max-width: 58ch; margin-top: 14px; font-size: 17px; }
+  section.block { padding: clamp(90px, 14vh, 160px) 0; }
+  .sec-head { display: flex; align-items: baseline; gap: 22px; margin-bottom: 20px; }
+  .sec-head .idx { font-family: var(--mono); font-size: 11px; letter-spacing: 0.24em; color: var(--hot); }
+  .sec-head .rule { flex: 1; height: 1px; background: var(--line); }
+  h2 {
+    font-weight: 300; text-transform: uppercase; letter-spacing: 0.04em;
+    font-size: clamp(30px, 4.6vw, 58px); line-height: 1.1; max-width: 24ch; text-wrap: balance;
+  }
+  .section-lede { color: var(--dim); max-width: 56ch; margin-top: 18px; font-weight: 300; font-size: 15px; }
 
   /* agent roster */
-  .agents { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; margin-top: 44px; }
+  .agents { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; margin-top: 56px; }
   .agent {
-    background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 20px;
-    display: flex; flex-direction: column; gap: 8px; position: relative;
-    transition: border-color 140ms, transform 140ms;
+    background: var(--glass); border: 1px solid var(--line); padding: 24px;
+    display: flex; flex-direction: column; gap: 9px; position: relative;
+    transition: border-color 250ms, background 250ms;
+    transform-style: preserve-3d; will-change: transform;
   }
-  .agent:hover { border-color: var(--machine); transform: translateY(-2px); }
+  .agent:hover { border-color: rgba(242, 242, 239, 0.4); background: rgba(242, 242, 239, 0.055); }
   .agent .id { display: flex; justify-content: space-between; align-items: center; }
-  .agent .id .mono { color: var(--ink-3); letter-spacing: 0.12em; }
-  .agent .lamp { width: 8px; height: 8px; border-radius: 50%; background: var(--machine); box-shadow: 0 0 0 3px color-mix(in srgb, var(--machine) 18%, transparent); }
-  .agent h3 { font-family: var(--display); font-weight: 800; font-size: 19px; margin-top: 4px; }
-  .agent .role { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--machine); }
-  .agent p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+  .agent .id .mono { color: var(--faint); }
+  .agent .lamp { width: 6px; height: 6px; border-radius: 50%; background: var(--hot); box-shadow: 0 0 10px 2px var(--hot-dim); }
+  .agent h3 { font-weight: 500; font-size: 19px; letter-spacing: 0.02em; margin-top: 6px; }
+  .agent .role { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--hot); }
+  .agent p { color: var(--dim); font-size: 13.5px; line-height: 1.6; font-weight: 300; }
 
-  /* systems list */
-  .systems { margin-top: 44px; display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
-  .system { background: var(--paper); display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 24px 28px; }
-  @media (max-width: 640px) { .system { grid-template-columns: 1fr; gap: 6px; } }
-  .system .num { font-family: var(--mono); color: var(--ink-3); font-size: 13px; letter-spacing: 0.14em; padding-top: 4px; }
-  .system h3 { font-family: var(--display); font-weight: 800; font-size: 20px; margin-bottom: 4px; }
-  .system p { color: var(--ink-2); max-width: 64ch; font-size: 15px; }
+  /* systems index */
+  .systems { margin-top: 56px; border-top: 1px solid var(--line); }
+  .system {
+    display: grid; grid-template-columns: 130px 1fr auto; gap: 26px; align-items: baseline;
+    padding: 30px 6px; border-bottom: 1px solid var(--line);
+    transition: padding-left 300ms, background 300ms;
+  }
+  .system:hover { padding-left: 22px; background: var(--glass); }
+  .system .num {
+    font-weight: 300; font-size: clamp(26px, 3vw, 40px); line-height: 1;
+    color: transparent; -webkit-text-stroke: 1px rgba(242, 242, 239, 0.35);
+    transition: -webkit-text-stroke-color 300ms;
+  }
+  .system:hover .num { -webkit-text-stroke-color: var(--hot); }
+  .system h3 { font-weight: 400; font-size: clamp(18px, 2.2vw, 26px); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+  .system p { color: var(--dim); max-width: 62ch; font-size: 14px; font-weight: 300; }
+  .system .tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; color: var(--faint); text-transform: uppercase; }
+  @media (max-width: 700px) { .system { grid-template-columns: 64px 1fr; } .system .tag { display: none; } }
 
-  /* method steps */
-  .steps { margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
-  .step { background: var(--paper); padding: 26px 24px; }
-  .step .letter { font-family: var(--display); font-weight: 800; font-size: 44px; line-height: 1; color: var(--machine); }
-  .step .num { font-family: var(--mono); color: var(--ink-3); font-size: 12px; letter-spacing: 0.14em; display: block; margin-bottom: 12px; }
-  .step h3 { font-family: var(--display); font-weight: 800; font-size: 20px; margin: 10px 0 6px; }
-  .step p { color: var(--ink-2); font-size: 14.5px; }
+  /* method */
+  .steps { margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .step { border: 1px solid var(--line); background: var(--glass); padding: 30px 26px; transition: border-color 250ms; }
+  .step:hover { border-color: rgba(242, 242, 239, 0.4); }
+  .step .letter {
+    font-weight: 300; font-size: 76px; line-height: 1;
+    color: transparent; -webkit-text-stroke: 1px rgba(242, 242, 239, 0.6);
+    transition: color 350ms, -webkit-text-stroke-color 350ms;
+  }
+  .step:hover .letter { color: var(--hot); -webkit-text-stroke-color: var(--hot); }
+  .step .num { font-family: var(--mono); color: var(--faint); font-size: 10px; letter-spacing: 0.24em; display: block; margin-bottom: 18px; text-transform: uppercase; }
+  .step h3 { font-weight: 500; font-size: 18px; text-transform: uppercase; letter-spacing: 0.06em; margin: 16px 0 8px; }
+  .step p { color: var(--dim); font-size: 13.5px; font-weight: 300; }
 
   /* results */
-  .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 44px; }
+  .results { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 56px; }
   .result {
-    background: var(--ink); color: var(--paper); border-radius: 6px; padding: 26px;
-    display: flex; flex-direction: column; gap: 10px; position: relative; overflow: hidden;
+    border: 1px solid var(--line); background: var(--glass); padding: 30px;
+    display: flex; flex-direction: column; gap: 12px; position: relative; overflow: hidden;
+    transform-style: preserve-3d; will-change: transform; transition: border-color 250ms;
   }
-  .result::after {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(rgba(242,244,243,0.05) 1px, transparent 1px) 0 0 / 100% 32px,
-                linear-gradient(90deg, rgba(242,244,243,0.05) 1px, transparent 1px) 0 0 / 32px 100%;
-  }
-  .result .mono { color: #6fae99; }
-  .result .big { font-family: var(--display); font-weight: 800; font-size: 44px; line-height: 1; letter-spacing: -0.02em; color: #f2f4f3; font-variant-numeric: tabular-nums; }
-  .result .big em { font-style: normal; color: var(--hot); filter: brightness(1.35); }
-  .result p { color: color-mix(in srgb, var(--paper) 70%, var(--ink)); font-size: 14.5px; }
+  .result:hover { border-color: var(--hot-dim); }
+  .result .mono { color: var(--faint); }
+  .result .big { font-weight: 300; font-size: clamp(40px, 4.4vw, 58px); line-height: 1; letter-spacing: 0.01em; font-variant-numeric: tabular-nums; }
+  .result .big em { font-style: normal; color: var(--hot); }
+  .result p { color: var(--dim); font-size: 13.5px; font-weight: 300; }
 
-  /* pricing plates */
-  .plates { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; margin-top: 44px; }
+  /* pricing */
+  .plates { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 56px; }
   .plate-card {
-    background: var(--paper); border: 1px solid var(--ink); border-radius: 6px;
-    padding: 24px; display: flex; flex-direction: column; gap: 10px;
-    box-shadow: 4px 4px 0 var(--panel), 4px 4px 0 1px var(--line);
+    border: 1px solid var(--line); background: var(--glass); padding: 30px;
+    display: flex; flex-direction: column; gap: 12px; transition: border-color 250ms, transform 250ms;
   }
-  .plate-card .mono { color: var(--ink-3); letter-spacing: 0.12em; display: flex; justify-content: space-between; }
-  .plate-card h3 { font-family: var(--display); font-weight: 800; font-size: 24px; line-height: 1.15; }
-  .plate-card .price { font-family: var(--mono); font-size: 15px; color: var(--hot); font-weight: 600; font-variant-numeric: tabular-nums; }
-  .plate-card p { color: var(--ink-2); font-size: 14.5px; flex: 1; }
-  .plate-card .foot { font-size: 13px; color: var(--ink-3); border-top: 1px dashed var(--line); padding-top: 10px; }
-  .plate-card.lead { border-color: var(--machine); box-shadow: 4px 4px 0 color-mix(in srgb, var(--machine) 14%, var(--paper)), 4px 4px 0 1px var(--machine); }
-  .plate-card.lead .badge { background: var(--machine); color: #fff; align-self: flex-start; font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; }
+  .plate-card:hover { border-color: rgba(242, 242, 239, 0.4); transform: translateY(-4px); }
+  .plate-card .mono { color: var(--faint); display: flex; justify-content: space-between; }
+  .plate-card h3 { font-weight: 400; font-size: 26px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .plate-card .price { font-family: var(--mono); font-size: 13px; color: var(--hot); letter-spacing: 0.08em; }
+  .plate-card p { color: var(--dim); font-size: 13.5px; flex: 1; font-weight: 300; }
+  .plate-card .foot { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--faint); border-top: 1px solid var(--line); padding-top: 14px; }
+  .plate-card.lead { border-color: var(--hot-dim); }
+  .plate-card.lead:hover { border-color: var(--hot); }
+  .plate-card.lead .badge {
+    background: var(--hot); color: #000; align-self: flex-start;
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; padding: 3px 10px;
+  }
 
   /* faq */
-  .faq { margin-top: 44px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
-  .faq details { background: var(--paper); border-bottom: 1px solid var(--line); }
-  .faq details:last-child { border-bottom: 0; }
+  .faq { margin-top: 56px; border-top: 1px solid var(--line); }
+  .faq details { border-bottom: 1px solid var(--line); }
   .faq summary {
-    cursor: pointer; list-style: none; padding: 20px 28px; font-weight: 600; font-size: 16px;
+    cursor: pointer; list-style: none; padding: 24px 6px; font-weight: 400; font-size: 16px;
     display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    transition: color 200ms, padding-left 250ms;
   }
+  .faq summary:hover { padding-left: 16px; color: var(--hot); }
   .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::after { content: "+"; font-family: var(--mono); color: var(--machine); font-size: 18px; }
-  .faq details[open] summary::after { content: "–"; }
-  .faq .a { padding: 0 28px 22px; color: var(--ink-2); max-width: 70ch; font-size: 15px; }
+  .faq summary::after { content: "+"; font-family: var(--mono); color: var(--hot); font-size: 18px; flex-shrink: 0; }
+  .faq details[open] summary::after { content: "−"; }
+  .faq .a { padding: 0 6px 26px; color: var(--dim); max-width: 70ch; font-size: 14px; font-weight: 300; }
 
-  /* CTA */
-  section.cta { text-align: left; padding: 96px 28px; border-bottom: 0; }
-  .cta .panel { background: var(--ink); color: var(--paper); border-radius: 8px; padding: 56px; position: relative; overflow: hidden; }
-  @media (max-width: 640px) { .cta .panel { padding: 34px 26px; } }
-  .cta .panel::after {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(rgba(242,244,243,0.05) 1px, transparent 1px) 0 0 / 100% 40px,
-                linear-gradient(90deg, rgba(242,244,243,0.05) 1px, transparent 1px) 0 0 / 40px 100%;
+  /* cta */
+  section.cta { text-align: center; padding: clamp(110px, 18vh, 200px) 0; }
+  .cta h2 { max-width: 20ch; margin: 22px auto 0; font-size: clamp(34px, 5.4vw, 72px); }
+  .cta h2 .outline { color: transparent; -webkit-text-stroke: 1px rgba(242, 242, 239, 0.85); }
+  .cta p { color: var(--dim); max-width: 52ch; margin: 22px auto 0; font-weight: 300; }
+  .cta .hero-cta { justify-content: center; }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 30px clamp(22px, 4vw, 48px) 44px;
+    display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    color: var(--faint); font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
   }
-  .cta .mono { color: color-mix(in srgb, var(--paper) 55%, var(--machine)); }
-  .cta h2 { color: var(--paper); max-width: 22ch; margin-top: 14px; }
-  .cta p { color: color-mix(in srgb, var(--paper) 72%, var(--ink)); max-width: 54ch; margin-top: 14px; }
-  .cta .hero-cta { margin-top: 30px; }
-  .cta .btn.ghost { color: var(--paper) !important; border-color: color-mix(in srgb, var(--paper) 50%, var(--ink)); }
-
-  footer { padding: 34px 0 60px; color: var(--ink-3); font-size: 13.5px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
 
   /* reveal */
-  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 500ms ease, transform 500ms ease; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
   .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
-  :focus-visible { outline: 2px solid var(--hot); outline-offset: 2px; }
+  :focus-visible { outline: 1px solid var(--hot); outline-offset: 3px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .marquee .track { animation: none; }
+    .scroll-hint .stem::after { animation: none; }
+    #cur-dot, #cur-ring { display: none; }
+  }
 </style>
 </head>
 <body>
 
-<nav><div class="wrap nav-in">
-  <a class="wordmark" href="#top"><span class="plate">MOHR</span> MEDIA</a>
+<canvas id="stage" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<div id="loader" aria-hidden="true">
+  <span class="mono">MOHR<em style="color:var(--hot);font-style:normal">·</em>MEDIA — SYSTEM BOOT</span>
+  <div class="count" id="load-count">000</div>
+  <div class="bar"><i id="load-bar"></i></div>
+</div>
+
+<div id="cur-dot" aria-hidden="true"></div>
+<div id="cur-ring" aria-hidden="true"></div>
+
+<nav id="nav">
+  <a class="wordmark" href="#top">MOHR<em>·</em>MEDIA</a>
   <div class="nav-links">
-    <a href="#agents">Agents</a>
+    <a href="#agents">Roster</a>
     <a href="#systems">Systems</a>
     <a href="#method">Method</a>
-    <a href="#results">Results</a>
-    <a href="#pricing">Pricing</a>
-    <a class="btn" href="mailto:hello@themohrmedia.com?subject=Strategy%20call">Book a strategy call</a>
+    <a href="#results">Proof</a>
+    <a href="#pricing">Modes</a>
+    <a class="cta-link" href="mailto:hello@themohrmedia.com?subject=Strategy%20call">Book a call</a>
   </div>
-</div></nav>
+</nav>
 
-<header class="hero wrap" id="top">
-  <div class="mono">Founder-led · AI-native · One operating layer</div>
-  <h1>Marketing that runs like a <span class="turn">machine</span>. Results that compound.</h1>
-  <p class="lede">Founder-led AI marketing systems by Dillon Mohr. One operating layer for lead generation, SEO content, paid media, automation, conversion architecture, and reporting. Predictable pipeline, compounding results.</p>
+<main id="top">
+
+<header class="hero">
+  <div class="eyebrow mono">Founder-led · AI-native · One operating layer</div>
+  <h1>Marketing that runs<br>like a <span class="outline">machine</span>.<br>Results that <span class="hotword">compound</span>.</h1>
+  <p class="lede">Founder-led AI marketing systems by Dillon Mohr. One operating layer for lead generation, SEO content, paid media, automation, conversion architecture, and reporting. Predictable pipeline. Compounding results.</p>
   <div class="hero-cta">
-    <a class="btn" href="#pricing">Start with the audit</a>
-    <a class="btn ghost" href="#agents">Meet the roster</a>
+    <a class="btn hot" href="#pricing">Start with the audit</a>
+    <a class="btn" href="#agents">Meet the roster</a>
   </div>
-
-  <figure class="schematic" aria-label="Schematic: fragmented channels pass through the Mohr Method operating layer and exit as pipeline">
-    <svg viewBox="0 0 960 180" role="img">
-      <g font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5">
-        <text x="18" y="24" fill="#7c8a84">INPUT: FRAGMENTED</text>
-        <text x="700" y="24" fill="#7c8a84">OUTPUT: PIPELINE</text>
-      </g>
-      <g stroke="#7c8a84" stroke-width="1.6" fill="none" opacity="0.85">
-        <path d="M20 60 C 90 40, 120 110, 200 74"/>
-        <path d="M20 90 C 100 130, 130 50, 200 92"/>
-        <path d="M20 120 C 80 90, 150 150, 200 110"/>
-      </g>
-      <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#7c8a84">
-        <text x="24" y="52">ADS</text><text x="24" y="84">SEO</text><text x="24" y="114">CONTENT</text>
-      </g>
-      <rect x="220" y="42" width="300" height="96" rx="6" fill="#101b17"/>
-      <rect x="220" y="42" width="300" height="96" rx="6" fill="none" stroke="#0c6b4f" stroke-width="1.5"/>
-      <text x="370" y="82" text-anchor="middle" font-family="Bricolage Grotesque, Arial Narrow, sans-serif" font-weight="800" font-size="21" fill="#f2f4f3">THE MOHR METHOD</text>
-      <text x="370" y="106" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2" fill="#6fae99">MAP · OPTIMIZE · HARNESS · RUN</text>
-      <path class="flow-dash" d="M520 90 H 860" stroke="#0c6b4f" stroke-width="2.5" fill="none"/>
-      <path d="M860 90 l -12 -7 v 14 z" fill="#0c6b4f"/>
-      <circle cx="880" cy="90" r="26" fill="none" stroke="#c2491d" stroke-width="2"/>
-      <text x="880" y="95" text-anchor="middle" font-family="Bricolage Grotesque, Arial Narrow, sans-serif" font-weight="800" font-size="16" fill="#c2491d">$</text>
-    </svg>
-  </figure>
+  <div class="scroll-hint"><span class="mono">Scroll</span><span class="stem"></span></div>
 </header>
 
-<section class="wrap reveal" id="agents">
-  <div class="eyebrow"><span class="mono">SYS/01 · The roster</span><span class="rule"></span></div>
-  <h2>Eight agents. One operator. Zero retainer theater.</h2>
-  <p class="section-lede">Every function in the system has a named agent with one job, and every agent reports to the operator. That's the whole org chart.</p>
-  <div class="agents">
-    <div class="agent"><div class="id"><span class="mono">AGT-01</span><span class="lamp"></span></div><h3>Leo Leadwell</h3><span class="role">Lead Scout</span><p>Sources qualified leads and maps signal across paid and organic channels.</p></div>
-    <div class="agent"><div class="id"><span class="mono">AGT-02</span><span class="lamp"></span></div><h3>Cora Copy</h3><span class="role">Content Crafter</span><p>Writes the messaging, ad copy, and content engine outputs.</p></div>
-    <div class="agent"><div class="id"><span class="mono">AGT-03</span><span class="lamp"></span></div><h3>Ari Ads</h3><span class="role">Ad Optimizer</span><p>Tunes paid search and social campaigns for cost-per-lead efficiency.</p></div>
-    <div class="agent"><div class="id"><span class="mono">AGT-04</span><span class="lamp"></span></div><h3>Piper Pipeline</h3><span class="role">Pipeline Driver</span><p>Routes leads through CRM, follow-up, and qualification logic.</p></div>
-    <div class="agent"><div class="id"><span class="mono">AGT-05</span><span class="lamp"></span></div><h3>Calvin Convert</h3><span class="role">Conversion Engineer</span><p>Sharpens landing pages, offer framing, and conversion paths.</p></div>
-    <div class="agent"><div class="id"><span class="mono">AGT-06</span><span class="lamp"></span></div><h3>Sage Signals</h3><span class="role">Analytics Sage</span><p>Reads attribution, cohort data, and revenue signals across the system.</p></div>
-    <div class="agent"><div class="id"><span class="mono">AGT-07</span><span class="lamp"></span></div><h3>Mira Motion</h3><span class="role">Design &amp; Motion</span><p>Owns design, motion, and the cinematic command-center surface.</p></div>
-    <div class="agent"><div class="id"><span class="mono">AGT-08</span><span class="lamp"></span></div><h3>Remy Reports</h3><span class="role">Reporting Agent</span><p>Produces founder-ready reporting and proof snapshots.</p></div>
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Lead generation <b>·</b> SEO engines <b>·</b> Paid media <b>·</b> Automation <b>·</b> Conversion architecture <b>·</b> Reporting <b>·</b></span>
+    <span>Lead generation <b>·</b> SEO engines <b>·</b> Paid media <b>·</b> Automation <b>·</b> Conversion architecture <b>·</b> Reporting <b>·</b></span>
   </div>
-</section>
+</div>
 
-<section class="wrap reveal" id="systems">
-  <div class="eyebrow"><span class="mono">SYS/02 · What gets built</span><span class="rule"></span></div>
-  <h2>Five systems. Each one you own outright.</h2>
-  <div class="systems">
-    <div class="system"><span class="num">UNIT 01</span><div><h3>Lead Generation Systems</h3><p>Landing pages, CRM workflows, and qualification logic wired into one pipeline you can audit.</p></div></div>
-    <div class="system"><span class="num">UNIT 02</span><div><h3>SEO Content Engines</h3><p>Keyword planning, editorial systems, and a publishing workflow that ships every week.</p></div></div>
-    <div class="system"><span class="num">UNIT 03</span><div><h3>Google Ads Management</h3><p>Account rebuilds, search intent structure, and performance reporting with numbers you can check.</p></div></div>
-    <div class="system"><span class="num">UNIT 04</span><div><h3>AI Marketing Implementation</h3><p>Workflow design, AI prompts, and reporting automation. Implementation, not buzzwords.</p></div></div>
-    <div class="system"><span class="num">UNIT 05</span><div><h3>Website Conversion Systems</h3><p>CRO, page systems, and offer framing that turn existing traffic into booked revenue.</p></div></div>
-  </div>
-</section>
-
-<section class="wrap reveal" id="method">
-  <div class="eyebrow"><span class="mono">SYS/03 · The Mohr Method</span><span class="rule"></span></div>
-  <h2>Four phases. It spells MOHR for a reason.</h2>
-  <div class="steps">
-    <div class="step"><span class="num">PHASE 01</span><div class="letter">M</div><h3>Map</h3><p>Map the funnel and data flow. You can't optimize a machine you can't see.</p></div>
-    <div class="step"><span class="num">PHASE 02</span><div class="letter">O</div><h3>Optimize</h3><p>Optimize the conversion layers so existing traffic stops leaking revenue.</p></div>
-    <div class="step"><span class="num">PHASE 03</span><div class="letter">H</div><h3>Harness</h3><p>Harness AI and automation where it creates leverage: content, reporting, enrichment, follow-up speed.</p></div>
-    <div class="step"><span class="num">PHASE 04</span><div class="letter">R</div><h3>Run</h3><p>Run the machine with clarity. The roster operates the system and results compound.</p></div>
-  </div>
-</section>
-
-<section class="wrap reveal" id="results">
-  <div class="eyebrow"><span class="mono">SYS/04 · Proof snapshots</span><span class="rule"></span></div>
-  <h2>Real accounts. Numbers you can interrogate.</h2>
-  <div class="results">
-    <div class="result"><span class="mono">Bar Crawl USA</span><div class="big"><em>3,145</em> tickets</div><p>Sold in 3 weeks across 18 cities on an $8.5k budget. 18 Google campaigns built in under an hour.</p></div>
-    <div class="result"><span class="mono">Kimberly James Bridal</span><div class="big"><em>−62%</em> cost</div><p>Per booked appointment, through improved intent handling and campaign structure.</p></div>
-    <div class="result"><span class="mono">Shadow HVAC</span><div class="big"><em>4.1×</em> leads</div><p>Qualified lead volume growth in 90 days via tighter paid search and a local visibility system.</p></div>
-  </div>
-</section>
-
-<section class="wrap reveal" id="pricing">
-  <div class="eyebrow"><span class="mono">SYS/05 · Engagement modes</span><span class="rule"></span></div>
-  <h2>Start small. Scale when the numbers say so.</h2>
-  <div class="plates">
-    <div class="plate-card lead">
-      <span class="badge">Start here</span>
-      <div class="mono"><span>MODE A</span><span>90 min + plan</span></div>
-      <h3>Audit</h3>
-      <div class="price">$497 one-time</div>
-      <p>See where the marketing system is leaking before committing to a build. One 90-minute session plus a written plan you keep either way.</p>
-      <div class="foot">Deliverable: diagnostic + written build plan</div>
-    </div>
-    <div class="plate-card">
-      <div class="mono"><span>MODE B</span><span>4–12 weeks</span></div>
-      <h3>Build</h3>
-      <div class="price">Custom scoped</div>
-      <p>Install the operating layer: lead gen, SEO, paid, automation, reporting. Fixed scope, documented handoff, wired into your accounts, not ours.</p>
-      <div class="foot">Deliverable: a working system you own</div>
-    </div>
-    <div class="plate-card">
-      <div class="mono"><span>MODE C</span><span>Monthly</span></div>
-      <h3>Operate</h3>
-      <div class="price">Monthly retainer</div>
-      <p>Run the machine. The roster operates the system and compounds results, with founder-ready reporting every month.</p>
-      <div class="foot">Deliverable: performance, reported honestly</div>
+<section class="block reveal" id="agents">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">01 / The roster</span><span class="rule"></span></div>
+    <h2>Eight agents. One operator. Zero retainer theater.</h2>
+    <p class="section-lede">Every function in the system has a named agent with one job, and every agent reports to the operator. That's the whole org chart.</p>
+    <div class="agents">
+      <div class="agent tilt"><div class="id"><span class="mono">AGT-01</span><span class="lamp"></span></div><h3>Leo Leadwell</h3><span class="role">Lead Scout</span><p>Sources qualified leads and maps signal across paid and organic channels.</p></div>
+      <div class="agent tilt"><div class="id"><span class="mono">AGT-02</span><span class="lamp"></span></div><h3>Cora Copy</h3><span class="role">Content Crafter</span><p>Writes the messaging, ad copy, and content engine outputs.</p></div>
+      <div class="agent tilt"><div class="id"><span class="mono">AGT-03</span><span class="lamp"></span></div><h3>Ari Ads</h3><span class="role">Ad Optimizer</span><p>Tunes paid search and social campaigns for cost-per-lead efficiency.</p></div>
+      <div class="agent tilt"><div class="id"><span class="mono">AGT-04</span><span class="lamp"></span></div><h3>Piper Pipeline</h3><span class="role">Pipeline Driver</span><p>Routes leads through CRM, follow-up, and qualification logic.</p></div>
+      <div class="agent tilt"><div class="id"><span class="mono">AGT-05</span><span class="lamp"></span></div><h3>Calvin Convert</h3><span class="role">Conversion Engineer</span><p>Sharpens landing pages, offer framing, and conversion paths.</p></div>
+      <div class="agent tilt"><div class="id"><span class="mono">AGT-06</span><span class="lamp"></span></div><h3>Sage Signals</h3><span class="role">Analytics Sage</span><p>Reads attribution, cohort data, and revenue signals across the system.</p></div>
+      <div class="agent tilt"><div class="id"><span class="mono">AGT-07</span><span class="lamp"></span></div><h3>Mira Motion</h3><span class="role">Design &amp; Motion</span><p>Owns design, motion, and the cinematic command-center surface.</p></div>
+      <div class="agent tilt"><div class="id"><span class="mono">AGT-08</span><span class="lamp"></span></div><h3>Remy Reports</h3><span class="role">Reporting Agent</span><p>Produces founder-ready reporting and proof snapshots.</p></div>
     </div>
   </div>
 </section>
 
-<section class="wrap reveal" id="faq">
-  <div class="eyebrow"><span class="mono">SYS/06 · Questions</span><span class="rule"></span></div>
-  <h2>Asked before every engagement.</h2>
-  <div class="faq">
-    <details>
-      <summary>How is this different from hiring an agency?</summary>
-      <div class="a">The work is scoped around infrastructure, not vague activity. You're paying for a system that compounds, not retainer hours. Everything gets documented and installed in your accounts, so you're never hostage to your marketing vendor.</div>
-    </details>
-    <details>
-      <summary>Does this work for small businesses?</summary>
-      <div class="a">Yes. The strongest fit is a business that knows marketing matters but hasn't yet built the operational layer. The audit tells you exactly where you stand before you spend anything on a build.</div>
-    </details>
-    <details>
-      <summary>What does "AI-powered" actually mean here?</summary>
-      <div class="a">It means AI is used where it creates leverage: content workflows, reporting, enrichment, analysis, and follow-up speed. It's implementation, not buzzwords, and an operator runs every agent.</div>
-    </details>
-    <details>
-      <summary>What if I only need one thing fixed?</summary>
-      <div class="a">That's why the audit and strategy call exist. Start with a defined diagnostic, get clarity fast, and decide what to build next. Plenty of engagements stop at one system.</div>
-    </details>
-    <details>
-      <summary>How long does an engagement last?</summary>
-      <div class="a">The diagnostic is one 90-minute session plus a written plan. A build runs 4 to 12 weeks. The retainer is monthly, and it earns its renewal with reported numbers.</div>
-    </details>
+<section class="block reveal" id="systems">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">02 / What gets built</span><span class="rule"></span></div>
+    <h2>Five systems. Each one you own outright.</h2>
+    <div class="systems">
+      <div class="system"><span class="num">01</span><div><h3>Lead Generation Systems</h3><p>Landing pages, CRM workflows, and qualification logic wired into one pipeline you can audit.</p></div><span class="tag">Pipeline</span></div>
+      <div class="system"><span class="num">02</span><div><h3>SEO Content Engines</h3><p>Keyword planning, editorial systems, and a publishing workflow that ships every week.</p></div><span class="tag">Organic</span></div>
+      <div class="system"><span class="num">03</span><div><h3>Google Ads Management</h3><p>Account rebuilds, search intent structure, and performance reporting with numbers you can check.</p></div><span class="tag">Paid</span></div>
+      <div class="system"><span class="num">04</span><div><h3>AI Marketing Implementation</h3><p>Workflow design, AI prompts, and reporting automation. Implementation, not buzzwords.</p></div><span class="tag">Automation</span></div>
+      <div class="system"><span class="num">05</span><div><h3>Website Conversion Systems</h3><p>CRO, page systems, and offer framing that turn existing traffic into booked revenue.</p></div><span class="tag">CRO</span></div>
+    </div>
   </div>
 </section>
 
-<section class="cta wrap reveal" id="start">
-  <div class="panel">
-    <div class="mono">SYS/07 · Intake</div>
-    <h2>Start with the audit. Judge us on the findings.</h2>
+<section class="block reveal" id="method">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">03 / The Mohr Method</span><span class="rule"></span></div>
+    <h2>Four phases. It spells MOHR for a reason.</h2>
+    <div class="steps">
+      <div class="step"><span class="num">Phase 01</span><div class="letter">M</div><h3>Map</h3><p>Map the funnel and data flow. You can't optimize a machine you can't see.</p></div>
+      <div class="step"><span class="num">Phase 02</span><div class="letter">O</div><h3>Optimize</h3><p>Optimize the conversion layers so existing traffic stops leaking revenue.</p></div>
+      <div class="step"><span class="num">Phase 03</span><div class="letter">H</div><h3>Harness</h3><p>Harness AI and automation where it creates leverage: content, reporting, enrichment, follow-up speed.</p></div>
+      <div class="step"><span class="num">Phase 04</span><div class="letter">R</div><h3>Run</h3><p>Run the machine with clarity. The roster operates the system and results compound.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block reveal" id="results">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">04 / Proof snapshots</span><span class="rule"></span></div>
+    <h2>Real accounts. Numbers you can interrogate.</h2>
+    <div class="results">
+      <div class="result tilt"><span class="mono">Bar Crawl USA</span><div class="big"><em>3,145</em> tickets</div><p>Sold in 3 weeks across 18 cities on an $8.5k budget. 18 Google campaigns built in under an hour.</p></div>
+      <div class="result tilt"><span class="mono">Kimberly James Bridal</span><div class="big"><em>−62%</em> cost</div><p>Per booked appointment, through improved intent handling and campaign structure.</p></div>
+      <div class="result tilt"><span class="mono">Shadow HVAC</span><div class="big"><em>4.1×</em> leads</div><p>Qualified lead volume growth in 90 days via tighter paid search and a local visibility system.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block reveal" id="pricing">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">05 / Engagement modes</span><span class="rule"></span></div>
+    <h2>Start small. Scale when the numbers say so.</h2>
+    <div class="plates">
+      <div class="plate-card lead">
+        <span class="badge">Start here</span>
+        <div class="mono"><span>Mode A</span><span>90 min + plan</span></div>
+        <h3>Audit</h3>
+        <div class="price">$497 one-time</div>
+        <p>See where the marketing system is leaking before committing to a build. One 90-minute session plus a written plan you keep either way.</p>
+        <div class="foot">Deliverable: diagnostic + written build plan</div>
+      </div>
+      <div class="plate-card">
+        <div class="mono"><span>Mode B</span><span>4–12 weeks</span></div>
+        <h3>Build</h3>
+        <div class="price">Custom scoped</div>
+        <p>Install the operating layer: lead gen, SEO, paid, automation, reporting. Fixed scope, documented handoff, wired into your accounts, not ours.</p>
+        <div class="foot">Deliverable: a working system you own</div>
+      </div>
+      <div class="plate-card">
+        <div class="mono"><span>Mode C</span><span>Monthly</span></div>
+        <h3>Operate</h3>
+        <div class="price">Monthly retainer</div>
+        <p>Run the machine. The roster operates the system and compounds results, with founder-ready reporting every month.</p>
+        <div class="foot">Deliverable: performance, reported honestly</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block reveal" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><span class="idx">06 / Questions</span><span class="rule"></span></div>
+    <h2>Asked before every engagement.</h2>
+    <div class="faq">
+      <details>
+        <summary>How is this different from hiring an agency?</summary>
+        <div class="a">The work is scoped around infrastructure, not vague activity. You're paying for a system that compounds, not retainer hours. Everything gets documented and installed in your accounts, so you're never hostage to your marketing vendor.</div>
+      </details>
+      <details>
+        <summary>Does this work for small businesses?</summary>
+        <div class="a">Yes. The strongest fit is a business that knows marketing matters but hasn't yet built the operational layer. The audit tells you exactly where you stand before you spend anything on a build.</div>
+      </details>
+      <details>
+        <summary>What does "AI-powered" actually mean here?</summary>
+        <div class="a">It means AI is used where it creates leverage: content workflows, reporting, enrichment, analysis, and follow-up speed. It's implementation, not buzzwords, and an operator runs every agent.</div>
+      </details>
+      <details>
+        <summary>What if I only need one thing fixed?</summary>
+        <div class="a">That's why the audit and strategy call exist. Start with a defined diagnostic, get clarity fast, and decide what to build next. Plenty of engagements stop at one system.</div>
+      </details>
+      <details>
+        <summary>How long does an engagement last?</summary>
+        <div class="a">The diagnostic is one 90-minute session plus a written plan. A build runs 4 to 12 weeks. The retainer is monthly, and it earns its renewal with reported numbers.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta reveal" id="start">
+  <div class="wrap">
+    <span class="mono" style="color:var(--hot)">07 / Intake</span>
+    <h2>Start with the audit.<br><span class="outline">Judge us on the findings.</span></h2>
     <p>$497, one 90-minute session, and a written plan you keep no matter what. If the findings aren't worth ten times that, don't hire us for the build.</p>
     <div class="hero-cta">
-      <a class="btn" href="mailto:hello@themohrmedia.com?subject=Audit%20request">Start with the audit</a>
-      <a class="btn ghost" href="mailto:hello@themohrmedia.com?subject=Strategy%20call">Book a strategy call</a>
+      <a class="btn hot" href="mailto:hello@themohrmedia.com?subject=Audit%20request">Start with the audit</a>
+      <a class="btn" href="mailto:hello@themohrmedia.com?subject=Strategy%20call">Book a strategy call</a>
     </div>
   </div>
 </section>
 
-<footer class="wrap">
-  <span><strong>MOHR MEDIA</strong> · Built as a marketing agent system</span>
+</main>
+
+<footer>
+  <span>Mohr Media · Built as a marketing agent system</span>
   <span>© 2026 Mohr Media · hello@themohrmedia.com</span>
 </footer>
 
 <script>
+(function () {
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- loader ---------- */
+  var loader = document.getElementById("loader");
+  var countEl = document.getElementById("load-count");
+  var barEl = document.getElementById("load-bar");
+  var bootMs = reduced ? 0 : 1300;
+  var t0 = performance.now();
+  function boot(now) {
+    var p = bootMs ? Math.min(1, (now - t0) / bootMs) : 1;
+    var eased = 1 - Math.pow(1 - p, 3);
+    var v = Math.round(eased * 100);
+    countEl.textContent = (v < 10 ? "00" : v < 100 ? "0" : "") + v;
+    barEl.style.transform = "scaleX(" + eased + ")";
+    if (p < 1) { requestAnimationFrame(boot); }
+    else { loader.classList.add("done"); document.body.classList.add("loaded"); }
+  }
+  requestAnimationFrame(boot);
+
+  /* ---------- nav ---------- */
+  var nav = document.getElementById("nav");
+  addEventListener("scroll", function () {
+    nav.classList.toggle("scrolled", scrollY > 40);
+  }, { passive: true });
+
+  /* ---------- reveal ---------- */
   var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
   document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+
+  /* ---------- custom cursor ---------- */
+  var fine = window.matchMedia("(pointer: fine)").matches;
+  if (fine && !reduced) {
+    var dot = document.getElementById("cur-dot");
+    var ring = document.getElementById("cur-ring");
+    var mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
+    addEventListener("mousemove", function (e) { mx = e.clientX; my = e.clientY; }, { passive: true });
+    (function curLoop() {
+      rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
+      dot.style.transform = "translate(" + mx + "px," + my + "px)";
+      ring.style.transform = "translate(" + rx + "px," + ry + "px)";
+      requestAnimationFrame(curLoop);
+    })();
+    document.querySelectorAll("a, summary, .btn").forEach(function (el) {
+      el.addEventListener("mouseenter", function () { ring.classList.add("hot"); });
+      el.addEventListener("mouseleave", function () { ring.classList.remove("hot"); });
+    });
+  }
+
+  /* ---------- card tilt ---------- */
+  if (fine && !reduced) {
+    document.querySelectorAll(".tilt").forEach(function (card) {
+      card.addEventListener("mousemove", function (e) {
+        var r = card.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = "perspective(700px) rotateY(" + (px * 7) + "deg) rotateX(" + (py * -7) + "deg)";
+      });
+      card.addEventListener("mouseleave", function () { card.style.transform = ""; });
+    });
+  }
+
+  /* ---------- webgl particle stage ---------- */
+  var canvas = document.getElementById("stage");
+  var gl = !reduced && canvas.getContext("webgl", { antialias: false, alpha: true, powerPreference: "low-power" });
+  if (!gl) {
+    canvas.remove();
+    var fb = document.createElement("div");
+    fb.className = "stage-fallback";
+    document.body.insertBefore(fb, document.body.firstChild);
+    return;
+  }
+
+  var VERT = [
+    "attribute vec3 aP0;", "attribute vec3 aP1;", "attribute vec3 aP2;", "attribute vec3 aP3;",
+    "attribute float aRand;",
+    "uniform mat4 uMVP;",
+    "uniform float uScroll;", "uniform float uTime;", "uniform float uSize;", "uniform float uAspect;",
+    "uniform vec2 uMouse;",
+    "varying float vBright;", "varying float vHot;",
+    "void main(){",
+    "  float s1 = smoothstep(0.0, 1.0, uScroll);",
+    "  float s2 = smoothstep(1.0, 2.0, uScroll);",
+    "  float s3 = smoothstep(2.0, 3.0, uScroll);",
+    "  vec3 p = mix(aP0, aP1, s1); p = mix(p, aP2, s2); p = mix(p, aP3, s3);",
+    "  float gridW = s1 * (1.0 - s2);",
+    "  p.y += sin(p.x * 2.6 + uTime * 0.9) * cos(p.z * 2.6 + uTime * 0.7) * 0.22 * gridW;",
+    "  float breathe = 1.0 + 0.03 * sin(uTime * 0.5 + aRand * 6.2831);",
+    "  p *= breathe;",
+    "  gl_Position = uMVP * vec4(p, 1.0);",
+    "  vec2 sc = gl_Position.xy / gl_Position.w;",
+    "  vec2 d = (sc - uMouse) * vec2(uAspect, 1.0);",
+    "  float f = exp(-dot(d, d) * 22.0);",
+    "  gl_Position.xy += normalize(sc - uMouse + 0.0001) * f * 0.16 * gl_Position.w;",
+    "  float tw = 0.7 + 0.3 * sin(uTime * 1.6 + aRand * 40.0);",
+    "  vBright = tw * clamp(1.9 - gl_Position.w * 0.22, 0.12, 1.0);",
+    "  vHot = step(0.955, aRand);",
+    "  gl_PointSize = uSize * (0.9 + aRand * 1.9) / max(gl_Position.w, 0.4);",
+    "}"
+  ].join("\n");
+
+  var FRAG = [
+    "precision mediump float;",
+    "varying float vBright;", "varying float vHot;",
+    "void main(){",
+    "  float d = length(gl_PointCoord - 0.5);",
+    "  float a = smoothstep(0.5, 0.08, d) * vBright;",
+    "  vec3 col = mix(vec3(0.92, 0.93, 0.95), vec3(1.0, 0.47, 0.22), vHot);",
+    "  gl_FragColor = vec4(col * a, a * 0.85);",
+    "}"
+  ].join("\n");
+
+  function shader(type, src) {
+    var s = gl.createShader(type);
+    gl.shaderSource(s, src); gl.compileShader(s);
+    return s;
+  }
+  var prog = gl.createProgram();
+  gl.attachShader(prog, shader(gl.VERTEX_SHADER, VERT));
+  gl.attachShader(prog, shader(gl.FRAGMENT_SHADER, FRAG));
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { canvas.remove(); return; }
+  gl.useProgram(prog);
+
+  var N = Math.min(innerWidth, innerHeight) < 700 ? 4200 : 8200;
+  var p0 = new Float32Array(N * 3), p1 = new Float32Array(N * 3),
+      p2 = new Float32Array(N * 3), p3 = new Float32Array(N * 3),
+      rnd = new Float32Array(N);
+  var GA = Math.PI * (3 - Math.sqrt(5));
+  for (var i = 0; i < N; i++) {
+    var r = Math.random, j = i * 3;
+    /* shape 0 — fibonacci sphere (hero) */
+    var y = 1 - (i / (N - 1)) * 2, rad = Math.sqrt(1 - y * y), th = GA * i;
+    var R0 = 1.55 + (r() - 0.5) * 0.12;
+    p0[j] = Math.cos(th) * rad * R0; p0[j + 1] = y * R0; p0[j + 2] = Math.sin(th) * rad * R0;
+    /* shape 1 — wave grid (systems) */
+    p1[j] = (r() - 0.5) * 4.6; p1[j + 1] = (r() - 0.5) * 0.1; p1[j + 2] = (r() - 0.5) * 4.6;
+    /* shape 2 — torus knot p=2 q=3 (method) */
+    var t = (i / N) * Math.PI * 2, kr = 0.95 + 0.42 * Math.cos(3 * t);
+    var kx = kr * Math.cos(2 * t), ky = kr * Math.sin(2 * t), kz = 0.42 * Math.sin(3 * t);
+    var s = 0.16 * r();
+    var a2 = r() * Math.PI * 2;
+    p2[j] = kx * 1.15 + Math.cos(a2) * s; p2[j + 1] = kz * 1.6 + Math.sin(a2) * s; p2[j + 2] = ky * 1.15 + Math.cos(a2 + 1.7) * s;
+    /* shape 3 — vortex funnel (intake) */
+    var h = r(), ang = h * 14.0 + r() * 0.5, fr = 0.25 + (1 - h) * 1.7;
+    p3[j] = Math.cos(ang) * fr; p3[j + 1] = (h - 0.5) * 3.2; p3[j + 2] = Math.sin(ang) * fr;
+    rnd[i] = r();
+  }
+  function attach(name, data, size) {
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+    var loc = gl.getAttribLocation(prog, name);
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, size, gl.FLOAT, false, 0, 0);
+  }
+  attach("aP0", p0, 3); attach("aP1", p1, 3); attach("aP2", p2, 3); attach("aP3", p3, 3);
+  attach("aRand", rnd, 1);
+
+  var uMVP = gl.getUniformLocation(prog, "uMVP");
+  var uScroll = gl.getUniformLocation(prog, "uScroll");
+  var uTime = gl.getUniformLocation(prog, "uTime");
+  var uSize = gl.getUniformLocation(prog, "uSize");
+  var uAspect = gl.getUniformLocation(prog, "uAspect");
+  var uMouse = gl.getUniformLocation(prog, "uMouse");
+
+  gl.disable(gl.DEPTH_TEST);
+  gl.enable(gl.BLEND);
+  gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+
+  var dpr = Math.min(devicePixelRatio || 1, 2);
+  function resize() {
+    canvas.width = innerWidth * dpr; canvas.height = innerHeight * dpr;
+    gl.viewport(0, 0, canvas.width, canvas.height);
+  }
+  resize();
+  addEventListener("resize", resize);
+
+  /* minimal mat4 */
+  function persp(fov, asp, near, far) {
+    var f = 1 / Math.tan(fov / 2), nf = 1 / (near - far);
+    return [f / asp, 0, 0, 0, 0, f, 0, 0, 0, 0, (far + near) * nf, -1, 0, 0, 2 * far * near * nf, 0];
+  }
+  function mul(a, b) {
+    var o = new Array(16);
+    for (var c = 0; c < 4; c++) for (var rr = 0; rr < 4; rr++) {
+      o[c * 4 + rr] = a[rr] * b[c * 4] + a[4 + rr] * b[c * 4 + 1] + a[8 + rr] * b[c * 4 + 2] + a[12 + rr] * b[c * 4 + 3];
+    }
+    return o;
+  }
+  function rotY(a) { var c = Math.cos(a), s = Math.sin(a); return [c, 0, -s, 0, 0, 1, 0, 0, s, 0, c, 0, 0, 0, 0, 1]; }
+  function rotX(a) { var c = Math.cos(a), s = Math.sin(a); return [1, 0, 0, 0, 0, c, s, 0, 0, -s, c, 0, 0, 0, 0, 1]; }
+  function trans(z) { return [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, z, 1]; }
+
+  var scrollT = 0, mouseX = 0, mouseY = 0, smX = 0, smY = 0;
+  addEventListener("mousemove", function (e) {
+    mouseX = (e.clientX / innerWidth) * 2 - 1;
+    mouseY = -((e.clientY / innerHeight) * 2 - 1);
+  }, { passive: true });
+
+  function frame(now) {
+    var t = now * 0.001;
+    var max = document.documentElement.scrollHeight - innerHeight;
+    var target = max > 0 ? (scrollY / max) * 3 : 0;
+    scrollT += (target - scrollT) * 0.06;
+    smX += (mouseX - smX) * 0.05; smY += (mouseY - smY) * 0.05;
+
+    var asp = canvas.width / canvas.height;
+    var mvp = mul(persp(1.0, asp, 0.1, 30),
+              mul(trans(-4.3),
+              mul(rotX(0.18 + smY * 0.08 + scrollT * 0.1),
+                  rotY(t * 0.07 + scrollT * 1.4 + smX * 0.12))));
+
+    gl.clearColor(0, 0, 0, 0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.uniformMatrix4fv(uMVP, false, new Float32Array(mvp));
+    gl.uniform1f(uScroll, scrollT);
+    gl.uniform1f(uTime, t);
+    gl.uniform1f(uSize, 3.1 * dpr);
+    gl.uniform1f(uAspect, asp);
+    gl.uniform2f(uMouse, smX, smY);
+    gl.drawArrays(gl.POINTS, 0, N);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
 </script>
 </body>
 </html>
