@@ -40,9 +40,10 @@ Set `ALLOW_UNSUBSCRIBED=true` locally to chat without a StoreKit purchase.
 ## Before production
 
 - Verify App Store notification JWS signatures (see `src/entitlements.ts`).
-- Persist entitlements + users in a real database (currently in-memory).
-- Rate-limit `/v1/agents/:id/messages` per user.
+- Swap the JSON-file entitlement store for a real database if you outgrow
+  a single instance.
 
-`appAccountToken` is already wired end to end: `/v1/auth/apple` returns a
-deterministic per-user UUID, the app attaches it to purchases, and the
-webhook keys entitlements on it.
+Already wired: `appAccountToken` end to end (deterministic per-user UUID from
+`/v1/auth/apple` → StoreKit purchase → webhook), durable entitlement storage
+(`ENTITLEMENTS_FILE`), and per-user rate limiting on the chat endpoints
+(`RATE_WINDOW_MS` / `RATE_MAX_PER_WINDOW`, returns 429 + `Retry-After`).
