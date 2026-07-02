@@ -603,7 +603,7 @@
     [60, "TRAJECTORY ..... PLOTTED"],
     [90, "CLEARANCE ...... <b>GO</b>"]
   ];
-  var launchPulse = 0;
+  var launchPulse = 0, pulseV = 0;
   var bootMs = reduced ? 0 : 1300;
   var t0 = performance.now();
   function boot(now) {
@@ -633,9 +633,46 @@
   }, { passive: true });
 
   /* ---------- reveal ---------- */
+  function decode(el) {
+    if (reduced) return;
+    var final = el.textContent, GLYPHS = "01/·|—×+", t0d = performance.now(), DUR = 600;
+    el.setAttribute("aria-label", final);
+    (function tick(now) {
+      var p = Math.min(1, (now - t0d) / DUR);
+      var solved = Math.floor(final.length * p), out = final.slice(0, solved);
+      for (var i = solved; i < final.length; i++) {
+        out += final[i] === " " ? " " : GLYPHS[(Math.random() * GLYPHS.length) | 0];
+      }
+      el.textContent = out;
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0d);
+  }
+  function countUp(sec) {
+    if (reduced) return;
+    var specs = [[3145, function (v) { return Math.round(v).toLocaleString("en-US"); }],
+                 [62,   function (v) { return "\u221262%"; }],
+                 [4.1,  function (v) { return v.toFixed(1) + "\u00d7"; }]];
+    sec.querySelectorAll(".result .big em").forEach(function (em, i) {
+      var target = specs[i][0], fmt = specs[i][1], final = em.textContent;
+      if (i === 1) { /* percentage animates its digits */ fmt = function (v) { return "\u2212" + Math.round(v) + "%"; }; }
+      var t0c = performance.now(), DUR = 1200;
+      (function tick(now) {
+        var p = Math.min(1, (now - t0c) / DUR), eased = 1 - Math.pow(1 - p, 3);
+        em.textContent = p < 1 ? fmt(target * eased) : final;
+        if (p < 1) requestAnimationFrame(tick);
+        else if (i === 0) { launchPulse = 1; pulseV = 4 / 6; }
+      })(t0c);
+    });
+  }
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      if (e.isIntersecting) {
+        e.target.classList.add("in");
+        var idxEl = e.target.querySelector(".sec-head .idx");
+        if (idxEl) decode(idxEl);
+        if (e.target.id === "results") countUp(e.target);
+        io.unobserve(e.target);
+      }
     });
   }, { rootMargin: "0px 0px -12% 0px", threshold: 0.05 });
   document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
@@ -805,7 +842,7 @@
   var POINT_VS = [
     "attribute vec3 aHome; attribute vec3 aScatter; attribute vec3 aMeta;",
     "uniform mat4 uProj; uniform mat4 uView;",
-    "uniform float uTime, uMaxV, uFocusV, uVel, uPulse, uActive, uActStr, uBurn, uSizeMul, uMinPx, uAspect;",
+    "uniform float uTime, uMaxV, uFocusV, uVel, uPulse, uPulseV, uActive, uActStr, uBurn, uSizeMul, uMinPx, uAspect;",
     "uniform vec2 uMouse;",
     "varying vec3 vCol; varying float vA;",
     "void main(){",
@@ -841,7 +878,7 @@
     "  float tw = 0.8 + 0.3 * sin(uTime*1.6 + rnd*40.0);",
     "  float bright = tw * fogB;",
     "  bright *= 1.0 + 1.6*lit + 1.2*act - 0.5*dimOther;",
-    "  bright *= 1.0 + uPulse * exp(-pow(v * 30.0, 2.0)) * 2.2;",
+    "  bright *= 1.0 + uPulse * exp(-pow((v - uPulseV) * 20.0, 2.0)) * 2.2;",
     "  bright *= 1.0 + isDust * uVel * 1.5 + fGate * uBurn * 0.9;",
     "  vec3 BLU = vec3(0.102, 0.373, 0.878);",
     "  vec3 TEA = vec3(0.098, 0.718, 0.612);",
@@ -1072,7 +1109,7 @@
   }
 
   var U = {};
-  ["uProj","uView","uTime","uMaxV","uFocusV","uVel","uPulse","uActive","uActStr","uBurn","uSizeMul","uMinPx","uAspect","uMouse"].forEach(function (n) {
+  ["uProj","uView","uTime","uMaxV","uFocusV","uVel","uPulse","uPulseV","uActive","uActStr","uBurn","uSizeMul","uMinPx","uAspect","uMouse"].forEach(function (n) {
     U[n] = gl.getUniformLocation(progPoints, n);
   });
   var UC = { uBloom: gl.getUniformLocation(progComp, "uBloom"), uBloomOn: gl.getUniformLocation(progComp, "uBloomOn"),
@@ -1250,6 +1287,7 @@
     gl.uniform1f(U.uFocusV, Math.min(1, vCam + 0.045));
     gl.uniform1f(U.uVel, vel);
     gl.uniform1f(U.uPulse, launchPulse);
+    gl.uniform1f(U.uPulseV, pulseV);
     gl.uniform1f(U.uActive, activeAgent);
     gl.uniform1f(U.uActStr, actStr);
     gl.uniform1f(U.uBurn, burn);
