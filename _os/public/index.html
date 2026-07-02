@@ -1,0 +1,395 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D.I.L.L.O.N. OS</title>
+<style>
+  :root {
+    --surface: #0a0f0c;
+    --panel: #0d1410;
+    --edge: #1c2a21;
+    --edge-hi: #2c4434;
+    --ink: #e8f0ea;
+    --ink-2: #93a89b;
+    --ink-3: #5c6f63;
+    --green: #86efac;
+    --green-dim: #3f8f5c;
+    --amber: #fbbf24;
+    --cyan: #67e8f9;
+    --mono: "SF Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--mono);
+    font-size: 12px;
+    overflow: hidden;
+  }
+  body::after { /* scanlines */
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 9;
+    background: repeating-linear-gradient(0deg, transparent 0 2px, rgba(0,0,0,.14) 2px 4px);
+  }
+  #app { display: flex; flex-direction: column; height: 100vh; padding: 14px 18px 10px; gap: 12px; }
+
+  /* ---------- header ---------- */
+  header { display: flex; align-items: flex-start; gap: 24px; }
+  .brand .callsign { font-size: 22px; font-weight: 700; letter-spacing: .14em; }
+  .brand .sub { color: var(--ink-3); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; margin-top: 3px; }
+  .pills { display: flex; gap: 18px; margin: 6px auto 0; }
+  .pill { color: var(--ink-2); font-size: 10px; letter-spacing: .12em; }
+  .pill b { color: var(--ink); font-weight: 600; }
+  .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; background: var(--green); box-shadow: 0 0 6px var(--green); vertical-align: 1px; }
+  .dot.amber { background: var(--amber); box-shadow: 0 0 6px var(--amber); }
+  .dot.cyan  { background: var(--cyan);  box-shadow: 0 0 6px var(--cyan); }
+  .dot.off   { background: var(--ink-3); box-shadow: none; }
+  .clock { text-align: right; }
+  .clock .time { font-size: 26px; font-weight: 700; letter-spacing: .04em; }
+  .clock .time small { font-size: 13px; color: var(--ink-2); }
+  .clock .date { color: var(--ink-3); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+
+  /* ---------- layout ---------- */
+  main { flex: 1; display: grid; grid-template-columns: 265px 1fr 320px; gap: 14px; min-height: 0; }
+  .col { display: flex; flex-direction: column; gap: 12px; min-height: 0; overflow: hidden; }
+  .panel { border: 1px solid var(--edge); background: var(--panel); border-radius: 6px; padding: 10px 12px; }
+  .panel h2 {
+    font-size: 10px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--ink-2); margin-bottom: 8px; display: flex; justify-content: space-between;
+  }
+  .panel h2 .tag { color: var(--ink-3); letter-spacing: .06em; }
+  .scroll { overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--edge) transparent; }
+
+  /* ---------- vitals ---------- */
+  .tile { padding: 7px 0; border-bottom: 1px solid var(--edge); }
+  .tile:last-child { border-bottom: 0; }
+  .tile .label { color: var(--ink-3); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+  .tile .row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .tile .value { font-size: 20px; font-weight: 700; }
+  .tile .delta { font-size: 10px; color: var(--ink-2); }
+  .spark { display: block; margin-top: 2px; }
+  .meter { height: 4px; background: var(--edge); border-radius: 2px; overflow: hidden; margin-top: 6px; }
+  .meter i { display: block; height: 100%; background: var(--green); border-radius: 2px; }
+
+  /* ---------- lists ---------- */
+  .li { display: flex; gap: 8px; padding: 4px 0; color: var(--ink-2); align-items: baseline; }
+  .li .mk { color: var(--green-dim); flex: none; }
+  .li .mk.done { color: var(--ink-3); }
+  .li .tx { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .li .tx.done { text-decoration: line-through; color: var(--ink-3); }
+  .li .ago { color: var(--ink-3); font-size: 10px; flex: none; }
+
+  /* ---------- center ---------- */
+  .core { flex: 1; position: relative; display: flex; flex-direction: column; min-height: 0; border: 1px solid var(--edge); border-radius: 6px; background: radial-gradient(ellipse at 50% 45%, #0e1a12 0%, var(--surface) 70%); overflow: hidden; }
+  #orb { flex: 1; width: 100%; min-height: 0; }
+  .hero { text-align: center; padding: 4px 16px 16px; }
+  .hero .directive { color: var(--ink-2); font-size: 10px; letter-spacing: .3em; text-transform: uppercase; }
+  .hero .big { font-size: 52px; font-weight: 700; letter-spacing: .02em; line-height: 1.1; text-shadow: 0 0 24px rgba(134,239,172,.25); }
+  .hero .big small { font-size: 14px; color: var(--ink-2); letter-spacing: .18em; margin-left: 8px; }
+  .hero .meter { max-width: 420px; margin: 10px auto 0; }
+  .hero .goalline { color: var(--ink-3); font-size: 10px; letter-spacing: .1em; margin-top: 6px; text-transform: uppercase; }
+
+  /* ---------- command deck ---------- */
+  .deck { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .deck button {
+    font: inherit; text-align: left; cursor: pointer; color: var(--ink-2);
+    background: transparent; border: 1px solid var(--edge); border-radius: 4px;
+    padding: 7px 9px; letter-spacing: .08em; text-transform: uppercase; font-size: 10px;
+    transition: border-color .15s, color .15s, background .15s;
+  }
+  .deck button::before { content: "▸ "; color: var(--green-dim); }
+  .deck button:hover { border-color: var(--edge-hi); color: var(--ink); background: #101a13; }
+  .deck button.running { border-color: var(--amber); color: var(--amber); }
+  .deck button.running::before { content: "▶ "; color: var(--amber); }
+  .deck button:disabled { cursor: wait; }
+
+  /* ---------- console ---------- */
+  .console { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+  .console pre {
+    flex: 1; overflow-y: auto; white-space: pre-wrap; word-break: break-word;
+    color: var(--ink-2); font-size: 10.5px; line-height: 1.55;
+    scrollbar-width: thin; scrollbar-color: var(--edge) transparent;
+  }
+  .console pre .in { color: var(--cyan); }
+  .console pre .err { color: var(--amber); }
+  .console pre .ok { color: var(--green); }
+
+  footer { display: flex; justify-content: space-between; color: var(--ink-3); font-size: 10px; letter-spacing: .08em; }
+
+  #tip { position: fixed; z-index: 20; pointer-events: none; display: none;
+    background: #101a13; border: 1px solid var(--edge-hi); border-radius: 4px;
+    padding: 4px 8px; font-size: 10px; color: var(--ink); }
+</style>
+
+<div id="app">
+  <header>
+    <div class="brand">
+      <div class="callsign" id="callsign">D.I.L.L.O.N.</div>
+      <div class="sub" id="subtitle">daily intelligence &amp; lifecycle layer for obsidian notes</div>
+    </div>
+    <div class="pills">
+      <span class="pill"><span class="dot" id="dot-core"></span>CORE · <b id="pill-core">IDLE</b></span>
+      <span class="pill"><span class="dot cyan" id="dot-link"></span>LINK · <b id="pill-link">ONLINE</b></span>
+      <span class="pill"><span class="dot" id="dot-vault"></span>VAULT · <b id="pill-vault">—</b></span>
+    </div>
+    <div class="clock">
+      <div class="time" id="time">--:--<small>:--</small></div>
+      <div class="date" id="date">—</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- left -->
+    <div class="col">
+      <div class="panel">
+        <h2>System Vitals <span class="tag">14d</span></h2>
+        <div class="tile">
+          <div class="label">Notes in vault</div>
+          <div class="row"><span class="value" id="v-notes">—</span><span class="delta" id="v-week">—</span></div>
+          <canvas class="spark" id="spark" width="230" height="30"></canvas>
+        </div>
+        <div class="tile">
+          <div class="label">Open tasks</div>
+          <div class="row"><span class="value" id="v-open">—</span><span class="delta" id="v-done">—</span></div>
+          <div class="meter"><i id="taskmeter" style="width:0%"></i></div>
+        </div>
+        <div class="tile">
+          <div class="label">Inbox depth</div>
+          <div class="row"><span class="value" id="v-inbox">—</span><span class="delta">00_Inbox</span></div>
+        </div>
+        <div class="tile">
+          <div class="label">Clients / Content / Agents</div>
+          <div class="row"><span class="value" id="v-ccs">—</span><span class="delta" id="v-sessions">—</span></div>
+        </div>
+      </div>
+      <div class="panel scroll" style="flex:1">
+        <h2>Directives <span class="tag" id="dir-src"></span></h2>
+        <div id="directives"></div>
+      </div>
+      <div class="panel scroll" style="max-height:170px">
+        <h2>Documents <span class="tag">recent</span></h2>
+        <div id="docs"></div>
+      </div>
+    </div>
+
+    <!-- center -->
+    <div class="core">
+      <canvas id="orb"></canvas>
+      <div class="hero">
+        <div class="directive">Primary directive · <span id="directive">—</span></div>
+        <div class="big"><span id="goal">—</span><small id="goal-label"></small></div>
+        <div class="meter"><i id="goalmeter" style="width:0%"></i></div>
+        <div class="goalline" id="goalline">—</div>
+      </div>
+    </div>
+
+    <!-- right -->
+    <div class="col">
+      <div class="panel">
+        <h2>Command Deck <span class="tag" id="deck-count"></span></h2>
+        <div class="deck" id="deck"></div>
+      </div>
+      <div class="panel scroll" style="max-height:150px">
+        <h2>Schedule <span class="tag">os config</span></h2>
+        <div id="schedule"></div>
+      </div>
+      <div class="panel console" style="flex:1">
+        <h2>AI Wire <span class="tag" id="wire-tag">vault feed</span></h2>
+        <pre id="console"></pre>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>D.I.L.L.O.N. OS · wired to Obsidian</span>
+    <span id="foot-op">—</span>
+    <span id="foot-tick">last sync —</span>
+  </footer>
+</div>
+<div id="tip"></div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let state = null;
+let activeJob = null;   // { id, skill, es }
+
+// ---------------- clock ----------------
+function tickClock() {
+  const d = new Date();
+  const p = (n) => String(n).padStart(2, '0');
+  $('time').innerHTML = `${p(d.getHours())}:${p(d.getMinutes())}<small>:${p(d.getSeconds())}</small>`;
+  $('date').textContent = d.toDateString().toUpperCase();
+}
+setInterval(tickClock, 1000); tickClock();
+
+// ---------------- state ----------------
+async function sync() {
+  try {
+    const r = await fetch('/api/state');
+    state = await r.json();
+    $('pill-link').textContent = 'ONLINE'; $('dot-link').className = 'dot cyan';
+    render();
+  } catch {
+    $('pill-link').textContent = 'LOST'; $('dot-link').className = 'dot off';
+  }
+}
+setInterval(sync, 15000); sync();
+
+function esc(s) { return s.replace(/[&<>]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+
+function render() {
+  const { config: c, vitals: v, directives, docs, skills, wire, jobs } = state;
+
+  $('callsign').textContent = c.callsign;
+  $('subtitle').textContent = c.subtitle.toLowerCase();
+  $('foot-op').textContent = `operator · ${c.operator}`;
+  $('foot-tick').textContent = `last sync ${new Date(state.now).toLocaleTimeString()}`;
+
+  // vitals
+  $('v-notes').textContent = v.notes;
+  $('v-week').textContent = `${v.weekTouches} touched / 7d`;
+  $('v-open').textContent = v.tasksOpen;
+  $('v-done').textContent = `${v.tasksDone} done`;
+  const total = v.tasksOpen + v.tasksDone;
+  $('taskmeter').style.width = total ? `${Math.round(100 * v.tasksDone / total)}%` : '0%';
+  $('v-inbox').textContent = v.inbox;
+  $('v-ccs').textContent = `${v.clients} / ${v.content} / ${v.agents}`;
+  $('v-sessions').textContent = `${v.sessions} sessions`;
+  $('pill-vault').textContent = `${v.notes} NOTES`;
+  drawSpark(v.activity);
+
+  // hero
+  $('directive').textContent = c.primaryDirective;
+  $('goal').textContent = c.goalCurrent.toLocaleString();
+  $('goal-label').textContent = c.goalLabel;
+  const pct = c.goalTarget ? Math.min(100, 100 * c.goalCurrent / c.goalTarget) : 0;
+  $('goalmeter').style.width = pct + '%';
+  $('goalline').textContent = c.goalTarget
+    ? `${pct.toFixed(1)}% of ${c.goalTarget.toLocaleString()} · ${(c.goalTarget - c.goalCurrent).toLocaleString()} to go`
+    : 'set goal_target in System/OS Config.md';
+
+  // directives
+  $('directives').innerHTML = directives.length
+    ? directives.map((d) =>
+        `<div class="li"><span class="mk ${d.done ? 'done' : ''}">${d.done ? '■' : '□'}</span>` +
+        `<span class="tx ${d.done ? 'done' : ''}" title="${esc(d.text)}">${esc(d.text)}</span></div>`).join('')
+    : '<div class="li"><span class="tx">no open directives — run PLAN TODAY</span></div>';
+  $('dir-src').textContent = directives[0] ? directives[0].source.toLowerCase() : '';
+
+  // docs
+  $('docs').innerHTML = docs.map((d) =>
+    `<div class="li"><span class="mk">▸</span><span class="tx" title="${esc(d.rel)}">${esc(d.name)}</span><span class="ago">${d.ago}</span></div>`).join('');
+
+  // deck
+  const running = new Set(jobs.filter((j) => j.status === 'running').map((j) => j.skill));
+  $('deck').innerHTML = skills.map((s) =>
+    `<button data-skill="${esc(s.name)}" title="${esc(s.description)}" class="${running.has(s.name) ? 'running' : ''}">${esc(s.name.replace(/-/g, ' '))}</button>`).join('');
+  $('deck-count').textContent = `${skills.length} skills`;
+  for (const b of document.querySelectorAll('.deck button')) b.onclick = () => run(b.dataset.skill);
+
+  // schedule
+  $('schedule').innerHTML = state.config.schedule.map((s) =>
+    `<div class="li"><span class="mk">·</span><span class="tx">${esc(s)}</span></div>`).join('') ||
+    '<div class="li"><span class="tx">add a ## Schedule to System/OS Config.md</span></div>';
+
+  // core pill
+  const busy = running.size > 0;
+  $('pill-core').textContent = busy ? `RUNNING ${[...running][0].toUpperCase()}` : 'IDLE';
+  $('dot-core').className = 'dot' + (busy ? ' amber' : '');
+  orbEnergy = busy ? 1 : 0.35;
+
+  // wire feed (only when no live console)
+  if (!activeJob) {
+    $('wire-tag').textContent = 'vault feed';
+    $('console').innerHTML = wire.map((w) =>
+      `<span class="in">[${w.ago.padStart(3)}]</span> ${esc(w.text)}`).join('\n');
+  }
+}
+
+// ---------------- sparkline (single series, hover tooltip) ----------------
+let sparkData = [];
+function drawSpark(data) {
+  sparkData = data;
+  const cv = $('spark'), ctx = cv.getContext('2d');
+  const W = cv.width, H = cv.height, max = Math.max(1, ...data);
+  ctx.clearRect(0, 0, W, H);
+  ctx.beginPath();
+  data.forEach((v, i) => {
+    const x = (i / (data.length - 1)) * (W - 4) + 2;
+    const y = H - 3 - (v / max) * (H - 8);
+    i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  });
+  ctx.strokeStyle = '#86efac'; ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.stroke();
+}
+$('spark').addEventListener('mousemove', (e) => {
+  if (!sparkData.length) return;
+  const r = e.target.getBoundingClientRect();
+  const i = Math.max(0, Math.min(sparkData.length - 1, Math.round((e.clientX - r.left) / r.width * (sparkData.length - 1))));
+  const days = sparkData.length - 1 - i;
+  const tip = $('tip');
+  tip.textContent = `${days === 0 ? 'today' : days + 'd ago'} · ${sparkData[i]} notes touched`;
+  tip.style.display = 'block';
+  tip.style.left = (e.clientX + 12) + 'px'; tip.style.top = (e.clientY - 8) + 'px';
+});
+$('spark').addEventListener('mouseleave', () => { $('tip').style.display = 'none'; });
+
+// ---------------- skill runner ----------------
+async function run(skill) {
+  if (activeJob) { activeJob.es.close(); activeJob = null; }
+  const out = $('console');
+  out.innerHTML = `<span class="in">&gt;&gt; launching ${esc(skill)} …</span>\n`;
+  $('wire-tag').textContent = `live · ${skill}`;
+  let r;
+  try { r = await (await fetch('/api/run', { method: 'POST', headers: {'content-type':'application/json'}, body: JSON.stringify({ skill }) })).json(); }
+  catch { out.innerHTML += '<span class="err">!! server unreachable</span>'; return; }
+  if (r.error) { out.innerHTML += `<span class="err">!! ${esc(r.error)}</span>`; return; }
+
+  const es = new EventSource(`/api/jobs/${r.id}/stream`);
+  activeJob = { id: r.id, skill, es };
+  es.onmessage = (ev) => {
+    const { line } = JSON.parse(ev.data);
+    const cls = line.startsWith('!!') ? 'err' : line.startsWith('>>') ? 'ok' : '';
+    out.innerHTML += cls ? `<span class="${cls}">${esc(line)}</span>\n` : esc(line) + '\n';
+    out.scrollTop = out.scrollHeight;
+  };
+  es.onerror = () => { es.close(); if (activeJob && activeJob.id === r.id) activeJob = null; sync(); };
+  sync();
+}
+
+// ---------------- particle core ----------------
+let orbEnergy = 0.35;
+(function orb() {
+  const cv = $('orb'), ctx = cv.getContext('2d');
+  const N = 900, pts = [];
+  // fibonacci sphere + jitter cloud
+  for (let i = 0; i < N; i++) {
+    const t = i / N, inc = Math.acos(1 - 2 * t), az = i * 2.39996;
+    const r = 0.55 + Math.random() * 0.45 * Math.random();
+    pts.push({ x: r * Math.sin(inc) * Math.cos(az), y: r * Math.sin(inc) * Math.sin(az), z: r * Math.cos(inc), tw: Math.random() * 6.28 });
+  }
+  let a = 0;
+  function frame(ts) {
+    const W = cv.clientWidth, H = cv.clientHeight;
+    if (cv.width !== W || cv.height !== H) { cv.width = W; cv.height = H; }
+    ctx.clearRect(0, 0, W, H);
+    const R = Math.min(W, H) * 0.36, cx = W / 2, cy = H / 2 + 6;
+    a += 0.0022 + orbEnergy * 0.004;
+    const ca = Math.cos(a), sa = Math.sin(a);
+    for (const p of pts) {
+      const x = p.x * ca - p.z * sa, z = p.x * sa + p.z * ca;
+      const s = 1 / (1.8 - z);                       // perspective
+      const px = cx + x * R * s * 1.6, py = cy + p.y * R * s * 1.3;
+      const tw = 0.55 + 0.45 * Math.sin(ts / 700 + p.tw);
+      const al = Math.max(0.15, (z + 1) / 2) * tw * (0.6 + orbEnergy * 0.4);
+      ctx.fillStyle = `rgba(134,239,172,${(0.25 + al * 0.75).toFixed(3)})`;
+      const sz = (1.1 + s * 1.6) * (0.85 + orbEnergy * 0.45);
+      ctx.fillRect(px, py, sz, sz);
+    }
+    // glow core
+    const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 0.9);
+    g.addColorStop(0, `rgba(134,239,172,${0.16 + orbEnergy * 0.12})`);
+    g.addColorStop(1, 'rgba(134,239,172,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
