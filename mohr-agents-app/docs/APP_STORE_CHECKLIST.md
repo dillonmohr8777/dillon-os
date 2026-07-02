@@ -19,7 +19,9 @@ The smallest real path from this repo to a live subscription app. References:
 ## 2. Build
 
 - [ ] `cd ios && xcodegen generate && open MohrAgents.xcodeproj`
-- [ ] App icon (1024pt master) — swoosh mark on the warm ground color
+- [x] App icon (1024px) — swoosh mark on the warm ground color, in the asset
+      catalog (`ios/MohrAgents/Assets.xcassets/AppIcon.appiconset`); regenerate
+      via `design/app-icon.html`
 - [ ] Point Release `MOHR_API_BASE_URL` at the deployed backend (HTTPS — ATS)
 - [ ] Test subscriptions with the local `.storekit` config, then sandbox
 
