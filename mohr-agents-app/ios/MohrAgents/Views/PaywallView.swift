@@ -13,13 +13,8 @@ struct PaywallView: View {
                 .frame(width: 36, height: 5)
                 .padding(.top, 10)
 
-            HStack(spacing: 5) {
-                Text("Mohr").foregroundStyle(Theme.green)
-                Text("Agents").foregroundStyle(Theme.blue)
-                Text("Pro").foregroundStyle(Theme.orange)
-            }
-            .font(.system(size: 28, weight: .heavy))
-            .padding(.top, 8)
+            Wordmark(size: 28, showsPro: true)
+                .padding(.top, 8)
 
             VStack(alignment: .leading, spacing: 10) {
                 benefit("All 11 agents, unlimited questions")
@@ -37,7 +32,12 @@ struct PaywallView: View {
                     Button {
                         Task {
                             await store.purchase(product, appAccountToken: auth.appAccountToken)
-                            if store.isSubscribed { dismiss() }
+                            if store.isSubscribed {
+                                // Tell the backend now, so the first chat send
+                                // doesn't race Apple's async notification.
+                                await store.syncWithBackend(token: auth.sessionToken)
+                                dismiss()
+                            }
                         }
                     } label: {
                         VStack(spacing: 2) {

@@ -20,6 +20,10 @@ targets:
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
         MOHR_API_BASE_URL: $(MOHR_API_BASE_URL)
+        # Allow cleartext HTTP to the local backend in Debug builds; production
+        # uses HTTPS so this exception doesn't loosen App Transport Security there.
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.mohrmedia.mohragents

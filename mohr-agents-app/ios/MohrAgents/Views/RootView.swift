@@ -20,11 +20,7 @@ struct SignInView: View {
         VStack(spacing: 24) {
             Spacer()
 
-            HStack(spacing: 6) {
-                Text("Mohr").foregroundStyle(Theme.green)
-                Text("Agents").foregroundStyle(Theme.blue)
-            }
-            .font(.system(size: 34, weight: .heavy))
+            Wordmark(size: 34)
 
             Text("The agency in your pocket.\nGoogle Ads, SEO, reviews, reports — the exact agents we run for clients.")
                 .font(.callout)
