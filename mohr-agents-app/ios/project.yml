@@ -32,6 +32,10 @@ targets:
         CURRENT_PROJECT_VERSION: 1
         TARGETED_DEVICE_FAMILY: "1"
         SWIFT_VERSION: "5.9"
+        # Your Apple Developer Team ID (App Store Connect → Membership).
+        # Supplied by CI via the DEVELOPMENT_TEAM env var so it isn't hardcoded.
+        DEVELOPMENT_TEAM: $(DEVELOPMENT_TEAM)
+        CODE_SIGN_STYLE: Automatic
       configs:
         debug:
           MOHR_API_BASE_URL: http://localhost:8787

@@ -1,0 +1,3 @@
+app_identifier("com.mohrmedia.mohragents")
+# apple_id / team_id are read from CI env (App Store Connect API key auth),
+# so no personal Apple credentials live in the repo.

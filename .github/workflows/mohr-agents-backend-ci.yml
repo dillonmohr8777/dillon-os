@@ -1,0 +1,25 @@
+name: Mohr Agents backend CI
+
+on:
+  push:
+    branches: ["**"]
+    paths: ["mohr-agents-app/backend/**", ".github/workflows/mohr-agents-backend-ci.yml"]
+  pull_request:
+    paths: ["mohr-agents-app/backend/**"]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mohr-agents-app/backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: mohr-agents-app/backend/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test

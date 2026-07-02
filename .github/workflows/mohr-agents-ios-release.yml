@@ -1,0 +1,76 @@
+name: Mohr Agents iOS release
+
+# Builds and uploads the app to App Store Connect on a hosted macOS runner —
+# no local Mac required. Trigger by pushing a tag like `mohr-ios-v0.1.0`, or
+# run manually from the Actions tab and choose the lane.
+#
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   ASC_KEY_ID        App Store Connect API key ID
+#   ASC_ISSUER_ID     API key issuer ID
+#   ASC_KEY_CONTENT   the .p8 key file, base64-encoded (`base64 -i AuthKey_XXXX.p8`)
+#   DEVELOPMENT_TEAM  your Apple Developer Team ID
+#
+# Create the API key at App Store Connect → Users and Access → Integrations →
+# App Store Connect API, with the "App Manager" role.
+
+on:
+  push:
+    tags:
+      - "mohr-ios-v*"
+  workflow_dispatch:
+    inputs:
+      lane:
+        description: "fastlane lane to run"
+        type: choice
+        options: [beta, release]
+        default: beta
+
+concurrency:
+  group: mohr-ios-release
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: macos-14
+    defaults:
+      run:
+        working-directory: mohr-agents-app/ios
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.app
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+          working-directory: mohr-agents-app/ios
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+        env:
+          DEVELOPMENT_TEAM: ${{ secrets.DEVELOPMENT_TEAM }}
+
+      - name: Build and upload
+        run: bundle exec fastlane ${{ github.event.inputs.lane || 'beta' }}
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_CONTENT: ${{ secrets.ASC_KEY_CONTENT }}
+          DEVELOPMENT_TEAM: ${{ secrets.DEVELOPMENT_TEAM }}
+          # Keychain access for -allowProvisioningUpdates on the runner
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: "120"
+
+      - name: Upload build logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: |
+            mohr-agents-app/ios/*.log
+            ~/Library/Logs/gym/
+          if-no-files-found: ignore

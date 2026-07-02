@@ -38,6 +38,16 @@ npm run dev            # http://localhost:8787
 
 Set `ALLOW_UNSUBSCRIBED=true` locally to chat without a StoreKit purchase.
 
+## Tests
+
+```sh
+npm test   # node --test; covers auth tokens, rate limiting, and JWS
+           # verification (a forged App Store notification is rejected;
+           # a properly-chained one is accepted)
+```
+
+Runs in CI on every push (`.github/workflows/mohr-agents-backend-ci.yml`).
+
 ## Before production
 
 - Set `APPLE_ROOT_CA_FINGERPRINT` (see `.env.example`) — the webhook and
