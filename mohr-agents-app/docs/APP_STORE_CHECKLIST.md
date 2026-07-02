@@ -39,7 +39,9 @@ The smallest real path from this repo to a live subscription app. References:
 - [ ] Paid Applications agreement + banking/tax forms (blocks IAP review)
 - [ ] Privacy nutrition labels: account info (email via Apple), user content
       (chat messages sent to backend/Anthropic); no tracking
-- [ ] Privacy policy URL + terms (required for auto-renewable subscriptions)
+- [ ] Privacy policy URL + terms (required for auto-renewable subscriptions) —
+      drafts in `docs/PRIVACY.md` and `docs/TERMS.md`; have counsel review,
+      host at public URLs, and link from the listing and the paywall
 
 ## 5. Review-proofing (the §4.2 / §2.1 traps)
 
