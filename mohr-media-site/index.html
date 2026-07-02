@@ -99,6 +99,7 @@
   }
   #cur-ring.hot { width: 56px; height: 56px; margin: -28px 0 0 -28px; border-color: var(--teal-txt); }
   @media (pointer: coarse) { #cur-dot, #cur-ring { display: none; } }
+  .customcur body, .customcur a, .customcur button, .customcur summary, .customcur .btn { cursor: none; }
 
   /* ---- spine rail ---- */
   #rail {
@@ -120,18 +121,18 @@
   @media (max-width: 1023px) { #rail { display: none; } }
 
   /* ---- content shell ---- */
-  main, nav, footer { position: relative; z-index: 2; }
+  main, #nav, footer { position: relative; z-index: 2; }
   .wrap { max-width: 1240px; margin: 0 auto; padding: 0 clamp(22px, 4vw, 48px); }
 
   /* ---- nav ---- */
-  nav {
+  #nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 30;
     display: flex; align-items: center; justify-content: space-between;
     padding: 18px clamp(22px, 4vw, 48px);
     transition: background 400ms, border-color 400ms;
     border-bottom: 1px solid transparent;
   }
-  nav.scrolled { background: rgba(5, 10, 22, 0.72); backdrop-filter: blur(12px); border-bottom-color: var(--line); }
+  #nav.scrolled { background: rgba(5, 10, 22, 0.72); backdrop-filter: blur(12px); border-bottom-color: var(--line); }
   .wordmark { display: flex; align-items: center; gap: 11px; text-decoration: none; }
   .wordmark svg { display: block; }
   .wordmark .wm-mohr { font-family: var(--display); font-weight: 600; font-size: 16px; letter-spacing: 0.16em; }
@@ -170,7 +171,7 @@
 
   /* ---- hero ---- */
   .hero {
-    min-height: 100svh; display: flex; flex-direction: column;
+    min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column;
     align-items: center; justify-content: center; text-align: center;
     padding: 120px clamp(22px, 4vw, 48px) 80px; position: relative;
   }
@@ -352,14 +353,13 @@
   footer .sig b { color: var(--green-txt); font-weight: 400; }
 
   /* reveal */
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
-  .reveal.in { opacity: 1; transform: none; }
-  .agents > *, .steps > *, .results > *, .plates > * { transition-delay: calc(var(--i, 0) * 60ms); }
+  .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1); }
+  .js .reveal.in { opacity: 1; transform: none; }
   :focus-visible { outline: 2px solid var(--blue-txt); outline-offset: 3px; }
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .reveal { opacity: 1; transform: none; transition: none; }
+    .js .reveal { opacity: 1; transform: none; transition: none; }
     .scroll-hint .stem::after, .hud-br .lamp-dot, .roster-chip .lamp-dot,
     #loader .m-mark, #loader .m-mark path { animation: none; }
     #loader .m-mark path { stroke-dashoffset: 0; }
@@ -392,9 +392,9 @@
 <div id="cur-dot" aria-hidden="true"></div>
 <div id="cur-ring" aria-hidden="true"></div>
 
-<div id="rail" aria-hidden="true">
-  <div class="readout" id="rail-readout"><em>WPT 00</em> · STAGE 000.0%</div>
-</div>
+<nav id="rail" aria-label="Section waypoints">
+  <div class="readout" id="rail-readout" aria-hidden="true"><em>WPT 00</em> · STAGE 000.0%</div>
+</nav>
 
 <nav id="nav">
   <a class="wordmark" href="#top" aria-label="Mohr Media — home">
@@ -581,6 +581,7 @@
 <script>
 (function () {
   "use strict";
+  document.documentElement.classList.add("js");
   var reducedMq = window.matchMedia("(prefers-reduced-motion: reduce)");
   var reduced = reducedMq.matches;
   var fine = window.matchMedia("(pointer: fine)").matches;
@@ -603,7 +604,7 @@
     [60, "TRAJECTORY ..... PLOTTED"],
     [90, "CLEARANCE ...... <b>GO</b>"]
   ];
-  var launchPulse = 0, pulseV = 0;
+  var launchPulse = 0, pulseV = 0, booted = false;
   var bootMs = reduced ? 0 : 1300;
   var t0 = performance.now();
   function boot(now) {
@@ -620,6 +621,7 @@
       setTimeout(function () {
         loader.classList.add("done");
         launchPulse = 1;
+        booted = true;
         document.body.classList.add("loaded");
       }, reduced ? 0 : 200);
     }
@@ -733,15 +735,17 @@
     var idx = 0;
     var s = (document.documentElement.scrollHeight - innerHeight) > 0 ? scrollY / (document.documentElement.scrollHeight - innerHeight) : 0;
     for (var i = 0; i < sFracs.length; i++) if (s >= sFracs[i] - 0.04) idx = i;
+    var pct = (vCam * 100).toFixed(1);
+    while (pct.length < 5) pct = "0" + pct;
+    var padded = pct + "%";
     if (idx !== activeTick) {
       activeTick = idx;
       ticks.forEach(function (t, k) { t.classList.toggle("on", k === idx); });
-      railReadout.innerHTML = "<em>WPT 0" + idx + " · " + WPT_NAMES[idx] + "</em> · STAGE <span id='rail-pct'></span>";
-    }
-    var pct = (vCam * 100).toFixed(1);
-    if (pct !== lastStagePct) {
+      railReadout.innerHTML = "<em>WPT 0" + idx + " · " + WPT_NAMES[idx] + "</em> · STAGE <span id='rail-pct'>" + padded + "</span>";
       lastStagePct = pct;
-      var padded = (pct.length < 5 ? "0" : "") + pct + "%";
+      if (hudStage) hudStage.textContent = padded;
+    } else if (pct !== lastStagePct) {
+      lastStagePct = pct;
       var rp = document.getElementById("rail-pct");
       if (rp) rp.textContent = padded;
       if (hudStage) hudStage.textContent = padded;
@@ -754,6 +758,7 @@
   var mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
   var cursorOn = fine && !reduced;
   if (cursorOn) {
+    document.documentElement.classList.add("customcur");
     addEventListener("mousemove", function (e) { mx = e.clientX; my = e.clientY; }, { passive: true });
     document.querySelectorAll("a, summary, button, .btn").forEach(function (el) {
       el.addEventListener("mouseenter", function () { ring.classList.add("hot"); });
@@ -1077,6 +1082,18 @@
     put(c0[0] + Math.cos(th2) * dr, c0[1] + (Math.random() - 0.5) * 3, c0[2] + Math.sin(th2) * dr, v, Math.random(), 3, false);
   }
   N = idx;
+  /* shuffle draw order so any drawN prefix samples all roles uniformly */
+  (function () {
+    for (var a = N - 1; a > 0; a--) {
+      var b = (Math.random() * (a + 1)) | 0;
+      for (var c = 0; c < 3; c++) {
+        var ja = a * 3 + c, jb = b * 3 + c, t2;
+        t2 = home[ja]; home[ja] = home[jb]; home[jb] = t2;
+        t2 = scat[ja]; scat[ja] = scat[jb]; scat[jb] = t2;
+        t2 = meta[ja]; meta[ja] = meta[jb]; meta[jb] = t2;
+      }
+    }
+  })();
 
   gl.useProgram(progPoints);
   function attach(name, data) {
@@ -1137,8 +1154,8 @@
     return { fb: fb, tex: tex, w: w, h: h };
   }
   function allocFBOs() {
-    if (!bloomOn) { fbos = null; return; }
-    if (fbos) fbos.forEach(function (f) { if (f) { gl.deleteFramebuffer(f.fb); gl.deleteTexture(f.tex); } });
+    if (fbos) { fbos.forEach(function (f) { if (f) { gl.deleteFramebuffer(f.fb); gl.deleteTexture(f.tex); } }); fbos = null; }
+    if (!bloomOn) return;
     var qw = Math.max(2, canvas.width >> 2), qh = Math.max(2, canvas.height >> 2);
     fbos = [
       makeFBO(qw, qh), makeFBO(qw >> 1, qh >> 1), makeFBO(qw >> 2, qh >> 2),
@@ -1159,7 +1176,7 @@
     computeRegistry();
   }
   addEventListener("resize", function () {
-    if (innerWidth === lastW && Math.abs(innerHeight - lastH) < 120) return;
+    if (coarse && innerWidth === lastW && Math.abs(innerHeight - lastH) < 120) return;
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(doResize, 200);
   });
@@ -1226,7 +1243,7 @@
     if (now - lastInput > 4000 && (frameIdx & 1)) return;
 
     /* adaptive governor: first 60 frames post-load */
-    if (govStage < 3 && launchPulse !== undefined) {
+    if (govStage < 3 && booted) {
       deltas.push(dt * 1000);
       if (deltas.length >= 60) {
         deltas.sort(function (a, b) { return a - b; });
@@ -1235,7 +1252,7 @@
         if (med > 20) {
           govStage++;
           if (govStage === 1) { dprGov = 1 / Math.min(devicePixelRatio || 1, 2); doResize(); }
-          else if (govStage === 2) { bloomOn = false; }
+          else if (govStage === 2) { bloomOn = false; allocFBOs(); }
           else { drawN = Math.floor(N / 2); }
         } else { govStage = 3; }
       }
