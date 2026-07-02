@@ -153,6 +153,78 @@ function getSkills() {
   return skills;
 }
 
+/**
+ * Client radar — classify every client under 01_Clients/ by recency and
+ * frontmatter (`due`, `next_action`). A "client" is an immediate child of
+ * 01_Clients (folder = client with many notes, file = single-note client).
+ */
+function clientRadar(notes) {
+  const clients = new Map(); // name -> { name, mtime, due, next }
+  const prefix = '01_Clients' + path.sep;
+  for (const n of notes) {
+    if (!n.rel.startsWith(prefix)) continue;
+    const rest = n.rel.slice(prefix.length);
+    const name = rest.includes(path.sep)
+      ? rest.slice(0, rest.indexOf(path.sep))
+      : path.basename(rest, '.md');
+    if (/^(client index|_)/i.test(name)) continue;
+    const c = clients.get(name) || { name, mtime: 0, due: null, next: null };
+    c.mtime = Math.max(c.mtime, n.mtime);
+    if (n.size < 256 * 1024) {
+      const fm = frontmatter(readText(n.rel) || '');
+      if (fm.due && (!c.due || fm.due < c.due)) c.due = fm.due;
+      if (fm.next_action && !c.next) c.next = fm.next_action;
+    }
+    clients.set(name, c);
+  }
+  const now = Date.now();
+  const out = { moving: [], watch: [], stalled: [], dueSoon: [] };
+  for (const c of clients.values()) {
+    const days = (now - c.mtime) / 86400000;
+    const entry = { name: c.name, ago: relTime(c.mtime), next: c.next };
+    if (days < 2) out.moving.push(entry);
+    else if (days < 7) out.watch.push(entry);
+    else out.stalled.push(entry);
+    if (c.due) {
+      const t = Date.parse(c.due);
+      if (!Number.isNaN(t) && t - now < 48 * 3600000) {
+        out.dueSoon.push({ name: c.name, due: c.due, overdue: t < now });
+      }
+    }
+  }
+  const byAge = (a, b) => a.ago.localeCompare(b.ago, undefined, { numeric: true });
+  out.moving.sort(byAge); out.watch.sort(byAge); out.stalled.sort(byAge).reverse();
+  out.dueSoon.sort((a, b) => a.due.localeCompare(b.due));
+  return out;
+}
+
+/**
+ * Daily metric snapshots (_os/history.json, gitignored) so trends survive
+ * restarts and don't depend on file mtimes. One entry per day, updated in place.
+ */
+const HISTORY = path.join(__dirname, 'history.json');
+function recordHistory(snap) {
+  let hist = {};
+  try { hist = JSON.parse(fs.readFileSync(HISTORY, 'utf8')); } catch { /* first run */ }
+  const today = new Date().toISOString().slice(0, 10);
+  const prev = hist[today];
+  if (!prev || Object.keys(snap).some((k) => prev[k] !== snap[k])) {
+    hist[today] = snap;
+    const keys = Object.keys(hist).sort();
+    for (const k of keys.slice(0, -90)) delete hist[k]; // keep 90 days
+    try { fs.writeFileSync(HISTORY, JSON.stringify(hist)); } catch { /* read-only fs */ }
+  }
+  return hist;
+}
+function historySeries(hist, field, days = 14) {
+  const out = [];
+  for (let i = days - 1; i >= 0; i--) {
+    const day = new Date(Date.now() - i * 86400000).toISOString().slice(0, 10);
+    out.push(hist[day] ? hist[day][field] : null);
+  }
+  return out;
+}
+
 function relTime(ms) {
   const s = Math.floor((Date.now() - ms) / 1000);
   if (s < 60) return `${s}s`;
@@ -173,6 +245,11 @@ function buildState() {
   const inDir = (name) => notes.filter((n) => n.rel.startsWith(name + path.sep)).length;
   const recent = [...notes].sort((a, b) => b.mtime - a.mtime);
   const weekTouches = notes.filter((n) => Date.now() - n.mtime < 7 * 86400000).length;
+  const hist = recordHistory({
+    notes: notes.length, tasksOpen: open, tasksDone: done,
+    inbox: inDir('00_Inbox'), clients: inDir('01_Clients'),
+  });
+  const histDays = Object.keys(hist).length;
 
   return {
     now: Date.now(),
@@ -187,8 +264,12 @@ function buildState() {
       tasksOpen: open,
       tasksDone: done,
       weekTouches,
-      activity: activitySeries(notes),
+      // Prefer real daily snapshots once we have a few; mtimes until then.
+      activity: histDays >= 3 ? historySeries(hist, 'notes').map((v) => v ?? 0) : activitySeries(notes),
+      activitySource: histDays >= 3 ? 'history' : 'mtime',
+      tasksTrend: historySeries(hist, 'tasksOpen'),
     },
+    radar: clientRadar(notes),
     directives: getDirectives(),
     docs: recent.slice(0, 7).map((n) => ({ rel: n.rel, name: path.basename(n.rel, '.md'), ago: relTime(n.mtime) })),
     wire: recent.slice(0, 12).map((n) => ({ text: `${path.basename(n.rel, '.md')} touched`, ago: relTime(n.mtime) })),
@@ -214,6 +295,32 @@ function pushLog(job, line) {
   for (const res of job.watchers) res.write(data);
 }
 
+/** Turn one claude stream-json line into human-readable console lines. */
+function renderEvent(raw) {
+  let ev;
+  try { ev = JSON.parse(raw); } catch { return [raw]; } // non-JSON passthrough
+  const out = [];
+  if (ev.type === 'system' && ev.subtype === 'init') {
+    out.push(`>> model ${ev.model || '?'} · session ${String(ev.session_id || '').slice(0, 8)}`);
+  } else if (ev.type === 'assistant' && ev.message && Array.isArray(ev.message.content)) {
+    for (const block of ev.message.content) {
+      if (block.type === 'text' && block.text.trim()) {
+        out.push(...block.text.trim().split('\n'));
+      } else if (block.type === 'tool_use') {
+        const inp = block.input || {};
+        const hint = inp.file_path || inp.path || inp.pattern || inp.command || inp.description || '';
+        out.push(`[${block.name}] ${String(hint).split('\n')[0].slice(0, 90)}`);
+      }
+    }
+  } else if (ev.type === 'result') {
+    if (ev.is_error) out.push(`!! ${String(ev.result || ev.subtype || 'error').slice(0, 400)}`);
+    const secs = ev.duration_ms ? (ev.duration_ms / 1000).toFixed(0) + 's' : '?';
+    const cost = ev.total_cost_usd != null ? ` · $${ev.total_cost_usd.toFixed(2)}` : '';
+    out.push(`>> finished in ${secs} · ${ev.num_turns || '?'} turns${cost}`);
+  }
+  return out; // user/tool-result events are noise — skip them
+}
+
 function startJob(skillName) {
   const known = getSkills().some((s) => s.name === skillName);
   if (!known) return { error: `unknown skill: ${skillName}` };
@@ -224,7 +331,10 @@ function startJob(skillName) {
   const job = { id, skill: skillName, status: 'running', started: Date.now(), ended: null, log: [], watchers: new Set() };
   jobs.set(id, job);
 
-  const args = ['-p', `/${skillName}`, '--permission-mode', 'acceptEdits'];
+  // stream-json gives us events as they happen (tool calls, text, result) —
+  // plain -p would sit silent until the very end.
+  const args = ['-p', `/${skillName}`, '--permission-mode', 'acceptEdits',
+    '--output-format', 'stream-json', '--verbose'];
   let child;
   try {
     child = spawn('claude', args, { cwd: VAULT, env: process.env });
@@ -233,20 +343,30 @@ function startJob(skillName) {
     pushLog(job, `!! could not launch claude CLI: ${err.message}`);
     return { id };
   }
-  pushLog(job, `>> claude ${args.join(' ')}`);
-  pushLog(job, `>> cwd ${VAULT}`);
+  job.child = child;
+  pushLog(job, `>> /${skillName} launched`);
 
-  const onChunk = (buf) => {
-    for (const line of buf.toString().split('\n')) if (line.trim()) pushLog(job, line);
-  };
-  child.stdout.on('data', onChunk);
-  child.stderr.on('data', (buf) => onChunk(Buffer.from('!! ' + buf.toString())));
+  let buf = '';
+  child.stdout.on('data', (chunk) => {
+    buf += chunk.toString();
+    let nl;
+    while ((nl = buf.indexOf('\n')) !== -1) {
+      const line = buf.slice(0, nl).trim();
+      buf = buf.slice(nl + 1);
+      if (line) for (const out of renderEvent(line)) pushLog(job, out);
+    }
+  });
+  child.stderr.on('data', (c) => {
+    for (const line of c.toString().split('\n')) if (line.trim()) pushLog(job, '!! ' + line);
+  });
   child.on('error', (err) => {
     job.status = 'failed'; job.ended = Date.now();
     pushLog(job, `!! ${err.code === 'ENOENT' ? 'claude CLI not found on PATH — install Claude Code first' : err.message}`);
   });
   child.on('close', (code) => {
-    if (job.status !== 'failed') job.status = code === 0 ? 'done' : 'failed';
+    job.child = null;
+    if (job.status === 'stopped') { /* keep */ }
+    else if (job.status !== 'failed') job.status = code === 0 ? 'done' : 'failed';
     job.ended = Date.now();
     pushLog(job, code === 0 ? `>> ${skillName} complete` : `!! exited with code ${code}`);
     for (const res of job.watchers) res.end();
@@ -295,6 +415,55 @@ const server = http.createServer((req, res) => {
         json(res, result.error ? 400 : 200, result);
       } catch { json(res, 400, { error: 'bad request' }); }
     });
+    return;
+  }
+
+  const stop = p.match(/^\/api\/jobs\/([a-f0-9]+)\/stop$/);
+  if (stop && req.method === 'POST') {
+    const job = jobs.get(stop[1]);
+    if (!job) return json(res, 404, { error: 'no such job' });
+    if (job.child) {
+      job.status = 'stopped';
+      pushLog(job, '!! stopped by operator');
+      job.child.kill('SIGTERM');
+    }
+    return json(res, 200, { ok: true });
+  }
+
+  // Toggle a `- [ ]` directive in Dashboard.md ## Today by its exact text.
+  if (p === '/api/toggle' && req.method === 'POST') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 4096) req.destroy(); });
+    req.on('end', () => {
+      try {
+        const { text } = JSON.parse(body || '{}');
+        const file = path.join(VAULT, 'Dashboard.md');
+        const src = fs.readFileSync(file, 'utf8');
+        let flipped = false;
+        const updated = src.replace(/^(\s*[-*] \[)( |[xX])(\]\s+)(.+)$/gm, (m, a, mark, b, task) => {
+          if (flipped || task.trim() !== String(text).trim()) return m;
+          flipped = true;
+          return a + (mark === ' ' ? 'x' : ' ') + b + task;
+        });
+        if (!flipped) return json(res, 404, { error: 'directive not found in Dashboard.md' });
+        fs.writeFileSync(file, updated);
+        json(res, 200, { ok: true });
+      } catch (err) { json(res, 400, { error: err.message }); }
+    });
+    return;
+  }
+
+  // Read a vault note for the in-HUD viewer. Locked to .md files inside VAULT.
+  if (p === '/api/note' && req.method === 'GET') {
+    const rel = url.searchParams.get('rel') || '';
+    const full = path.resolve(VAULT, rel);
+    const inside = full.startsWith(VAULT + path.sep);
+    const top = inside ? path.relative(VAULT, full).split(path.sep)[0] : '';
+    if (!inside || !full.endsWith('.md') || top.startsWith('.') || SKIP.has(top)) {
+      return json(res, 400, { error: 'bad path' });
+    }
+    try { json(res, 200, { rel, content: fs.readFileSync(full, 'utf8') }); }
+    catch { json(res, 404, { error: 'not found' }); }
     return;
   }
 
