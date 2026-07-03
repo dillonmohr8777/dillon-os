@@ -1,6 +1,6 @@
 ---
-last_checked: 2026-07-02
-last_orchestrator_run: 2026-07-02
+last_checked: 2026-07-03
+last_orchestrator_run: 2026-07-03
 tags: [system, routines]
 ---
 
@@ -10,16 +10,16 @@ tags: [system, routines]
 
 Seven legacy crons are **retired** and merged into the orchestrator. Disable them in Cursor Automations UI if still active.
 
-## Orchestrator lane status (run 9 — 2026-07-02)
+## Orchestrator lane status (run 10 — 2026-07-03)
 
 | Lane | Agent | Status | Notes |
 |------|-------|--------|-------|
 | Email | `gmail-intel` | 🟡 fallback | Gmail MCP not connected; vault sources used |
 | Slack | `slack-intel` | 🟡 fallback | Slack MCP not connected; vault sources used |
-| Vault | `vault-pulse` | 🟢 ok | 13 overviews scanned; April freeze noted; queues empty |
+| Vault | `vault-pulse` | 🟢 ok | 13 overviews scanned; April freeze noted |
 | Sessions | `codex-session-sync` | 🟡 partial | 5 files, 0 promotions; no Codex exports |
-| Ads/SEO | `domain-ads-seo` | 🟢 ok | 5 P0s surfaced; queues need backfill |
-| Content | `content-routines` | 🟢 done | Thursday — book SEO sweep `05_Book/seo-sweep-2026-07-02.md` |
+| Ads/SEO | `domain-ads-seo` | 🟢 ok | 5 P0s in campaign queues |
+| Content | `content-routines` | ⚪ skipped | Friday — next Sunday 2026-07-06 |
 | Consolidate | `memory-consolidator` | 🟢 ok | Brief + memory sync written |
 
 ## Retired standalone crons (do not re-enable)
