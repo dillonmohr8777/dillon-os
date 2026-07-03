@@ -1,28 +1,28 @@
-# Competitive Task — 2026-07-02
+# Competitive Task — 2026-07-03
 
 ## Coverage
 
-- **Gmail:** fallback — MCP not connected; `System/urgent-replies.md` refreshed from vault (2026-07-02).
+- **Gmail:** fallback — MCP not connected; `System/urgent-replies.md` refreshed from vault (2026-07-03).
 - **Slack:** fallback — MCP not connected; `System/slack-action-queue.md` refreshed (10 actions, 3 P0).
-- **Vault pulse:** 13 tracked overviews; zero `last_touched` in last 24h; all frozen at April 2026. 11 active stubs lack pulse frontmatter. Campaign queues empty despite 5+ ad P0s.
+- **Vault pulse:** 13 tracked overviews; zero `last_touched` in last 24h; all frozen at April 2026. 11 active stubs lack pulse frontmatter. Campaign queues populated with 5 ad P0s.
 - **Sessions:** 5 files scanned; 0 promotions — templates empty, no dated Codex exports in repo. Top theme: Facebook Ads automation system not started.
 - **Ads/SEO:** 5 ad P0s unchanged; Bar Crawl disapprovals are Google Ads (not FB queue).
-- **Content routines:** **done** — Thursday book SEO sweep written (`05_Book/seo-sweep-2026-07-02.md`). Sunday generation Jul 6.
+- **Content routines:** **skipped** — Friday; no day-gated work. Next: Sunday 2026-07-06 (Bok Law + Align LinkedIn generation).
 
 ## P0 Stack
 
-1. **Content ship backlog** — BOK Law week of Jun 23 social **8 days overdue**; week of Jun 30 to Dorothy **1 day overdue** (was due Jul 1). Align Maher script **5 days overdue**; Mon Joann **9 days overdue**; Wed SmartCare **7 days overdue**. Referenced draft files missing from repo — generate or recover before sending.
-2. **NKCDC** — Launch blocked on Free Tax Prep landing page; Anthony unresponsive since Mac's 2026-04-15 follow-up (~78 days). Escalate with Mac.
-3. **Bar Crawl USA** — Resolve 2 Google Ads disapprovals (Halloween / Fall Cocktail Crawl). Andy waiting since Dillon's 2026-04-15 investigate reply (~78 days).
-4. **Hardwood Artisan** — Billing card update outstanding since Sean's 2026-04-07 escalation (~86 days). Engagement at risk.
-5. **LinkEZE** — Enhanced conversions diagnostics + MFA on customer ID 809-600-6448 (MFA due 2026-04-06, ~87 days overdue). Account health on live spend.
+1. **Content ship backlog** — BOK Law week of Jun 23 social **9 days overdue**; week of Jun 30 to Dorothy **2 days overdue** (was due Jul 1). Align Maher script **6 days overdue**; Mon Joann **10 days overdue**; Wed SmartCare **8 days overdue**. Referenced draft files missing from repo — generate or recover before sending.
+2. **NKCDC** — Launch blocked on Free Tax Prep landing page; Anthony unresponsive since Mac's 2026-04-15 follow-up (~79 days). Escalate with Mac.
+3. **Bar Crawl USA** — Resolve 2 Google Ads disapprovals (Halloween / Fall Cocktail Crawl). Andy waiting since Dillon's 2026-04-15 investigate reply (~79 days).
+4. **Hardwood Artisan** — Billing card update outstanding since Sean's 2026-04-07 escalation (~87 days). Engagement at risk.
+5. **LinkEZE** — Enhanced conversions diagnostics + MFA on customer ID 809-600-6448 (MFA due 2026-04-06, ~88 days overdue). Account health on live spend.
 
 ## Urgent Replies
 
 See [[System/urgent-replies]].
 
 - **BOK Law** — Deliver week of Jun 30 social to Dorothy; ship overdue Jun 23 week if not sent
-- **Align HCM** — Maher video script **5 days overdue**; Mon Joann **9 days overdue**; Wed SmartCare **7 days overdue**
+- **Align HCM** — Maher video script **6 days overdue**; Mon Joann **10 days overdue**; Wed SmartCare **8 days overdue**
 - **Bar Crawl USA** — Disapproval resolution message to Andy
 - **NKCDC** — Coordinated follow-up with Mac to Anthony
 
@@ -32,7 +32,7 @@ Vault `last_touched` frozen at April 2026 on most accounts — data gap until yo
 
 | Client | last_touched | Open item |
 |--------|--------------|-----------|
-| Shadow HVAC | 2026-03-02 | LSA verification after reset (~122 days) |
+| Shadow HVAC | 2026-03-02 | LSA verification after reset (~123 days) |
 | LinkEZE | 2026-04-05 | Enhanced conversions + MFA |
 | Hardwood Artisan | 2026-04-07 | Billing card update |
 | Onsite Concrete | 2026-04-09 | Weekly call cadence |
@@ -50,18 +50,19 @@ Vault `last_touched` frozen at April 2026 on most accounts — data gap until yo
 
 ## Content / SEO Due Today
 
-- **Book SEO** — Sweep completed: [[05_Book/seo-sweep-2026-07-02]]. Priority actions: Dijon Garnier character page, homepage meta rewrite, blog outline #1 to pipeline.
-- **BOK Law** — Jun 30 delivery **1 day overdue**; Jun 23 backlog **8 days overdue**.
+- **Friday** — No day-gated content routines. **Ship day:** clear overdue BOK + Align stacks before Sunday generation.
+- **Book SEO** — Sweep completed 2026-07-02 ([[05_Book/seo-sweep-2026-07-02]]). Carry-forward: Dijon Garnier character page, homepage meta rewrite.
+- **BOK Law** — Jun 30 delivery **2 days overdue**; Jun 23 backlog **9 days overdue**.
 - **Align HCM** — Clear overdue Jun 23 stack before generating Jul 6 week on Sunday.
 
 ## Tomorrow Prep
 
-1. **Friday 2026-07-03** — No day-gated content routines; focus on shipping overdue BOK + Align deliverables.
+1. **Saturday 2026-07-04** — No day-gated routines; continue shipping overdue content + ad P0s.
 2. **Sunday 2026-07-06** — `content-routines` generates next Bok Law + Align LinkedIn weeks.
 3. Connect **Gmail + Slack MCP** on `competitive-task-orchestrator` for live intel (both lanes still vault-fallback).
 4. Export Codex/Cursor sessions to `10_Sessions/YYYY-MM-DD — topic.md` so `codex-session-sync` can promote unfinished work.
-5. Backfill `02_Campaigns/*Queue*.md` with ad P0s so domain-ads-seo has trackable checkboxes.
+5. Update `last_touched` on any client note you touch today — vault pulse cannot reflect reality until you do.
 
 ---
 
-_Generated by competitive-task-orchestrator — run 9, branch `cursor/competitive-task-consolidation-320b`._
+_Generated by competitive-task-orchestrator — run 10, branch `cursor/competitive-task-consolidation-8bec`._
