@@ -1,40 +1,40 @@
-# Mohr Media Website (WebGL redesign)
+# Mohr Media Website
 
-Single file: `index.html`. Zero build step, **fully self-contained** — fonts are
-embedded (base64), and the 3D is raw WebGL with no external libraries or CDNs.
-Drop it on any static host and it runs.
+A full multi-page static site with an immersive WebGL look modeled on Active
+Theory. No build step, no framework — plain HTML + shared assets, raw WebGL,
+no external libraries or CDNs. Drop the folder on any static host and it runs.
 
-## What's in it
-- **Immersive WebGL "spine" background** — a triple-helix the camera flies down as
-  you scroll, with a particle "station" for each section. Bloom, adaptive
-  performance governor, cursor repulsion, graceful static fallback.
-- **3D robot crew** — each of the eight agents is a procedural 3D robot rendered
-  in a second WebGL canvas (`#crew-stage`), one per card: dark-metallic body,
-  emissive accent visor/core, rim lighting, idle bob, cursor tracking, and a
-  hover emphasis wired to the card. Falls back to an inline SVG glyph if WebGL is
-  unavailable.
-- **Operator section** (`#operator`) — a HUD-framed portrait of the operator with
-  oversized display type and stats.
-- Custom cursor (dot + difference-blend trailing ring), corner HUD telemetry,
-  section waypoint rail, percentage boot loader. All motion is gated behind
-  `prefers-reduced-motion`.
+## Pages
+- `index.html` — home: hero, proof strip, 3D robot roster, services, method, results, operator, pricing, FAQ, CTA.
+- `services.html` — the five systems (lead gen, SEO content, Google Ads, AI implementation, CRO) + the Mohr Method.
+- `work.html` — four case studies (Bar Crawl USA, Kimberly James Bridal, Shadow HVAC, Onsite Concrete) in challenge → approach → result format.
+- `about.html` — the operator story (Dillon), the eight-agent model, and operating principles.
+- `pricing.html` — Audit / Build / Operate, a comparison table, guarantee, and pricing FAQ.
+- `contact.html` — book-the-audit page with a qualifying form (composes a mailto on submit).
 
-Design language deliberately mirrors Active Theory: near-black immersive stage,
-single-accent neon, oversized tracked uppercase type, instrument-panel HUD.
+## Shared assets (`assets/`)
+- `site.css` — the whole design system: embedded fonts (base64), tokens, layout, and every component. Cached once across pages.
+- `spine.js` — the WebGL "spine" background (a triple-helix the camera flies down, bloom, cursor repulsion, adaptive performance governor, static fallback). Each page sets its own waypoints via `window.__SPINE = { anchors, wpts }` before loading it.
+- `robot.js` — the 3D robot crew (home only): one procedural robot per agent card, dark-metallic body, emissive accent visor/core, rim lighting, idle bob, cursor tracking, hover emphasis. Falls back to an inline SVG glyph if WebGL is unavailable.
 
-## Add the operator photo
-The operator portrait loads `operator.jpg` (portrait / ~4:5). Drop a headshot at
-`mohr-media-site/operator.jpg` and it appears automatically; until then the frame
-shows a "DM" monogram placeholder. No code change needed.
+Design language: near-black immersive stage, single-accent neon, oversized tracked
+uppercase display type, instrument-panel corner HUD, custom cursor. All motion is
+gated behind `prefers-reduced-motion`.
+
+## Operator photo
+The About + home operator portraits load `operator.jpg` (~4:5). Replace
+`mohr-media-site/operator.jpg` to update it; if it's missing, the frame shows a
+"DM" monogram placeholder. No code change needed.
 
 ## Deploy
-- Vercel: point a project at this folder, or `vercel deploy mohr-media-site`.
-- Netlify / any static host: upload the folder. Nothing to compile.
+This project's Vercel deploys are done via the CLI (no linked git repo):
+```
+cd mohr-media-site && vercel deploy --prod
+```
+Or point any static host at the folder. Nothing to compile.
 
 ## Edit points
-- Brand/theme tokens live in the `:root` blocks in the `<style>` (near-black `--bg`,
-  blue→teal→green accent gradient, glows). The Active-Theory darkening override is
-  the last `:root` block.
-- Agent roster (names, roles, copy) is the `.agents` block; each card's robot accent
-  is set inline via `--bot-acc` and matched by the `ACC` array in the robot script.
-- CTAs use `mailto:hello@themohrmedia.com`. Swap in a form endpoint when one exists.
+- Theme tokens: the `:root` blocks in `assets/site.css` (near-black `--bg`, blue→teal→green accent gradient, glows). The Active-Theory darkening override is the last `:root` block.
+- Roster: the `.agents` block in `index.html`; each card's robot accent is set inline via `--bot-acc` and matched by the `ACC` array in `assets/robot.js`.
+- Copy/case studies/pricing live directly in each page's HTML.
+- CTAs point to `contact.html`; the contact form composes a `mailto:hello@themohrmedia.com`. Swap in a real form endpoint when one exists.
