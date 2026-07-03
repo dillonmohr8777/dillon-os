@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Oswald", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  @apply bg-shadow-950 text-slate-200 font-sans;
+  background-image:
+    radial-gradient(60rem 40rem at 80% -10%, rgba(255, 90, 31, 0.10), transparent 60%),
+    radial-gradient(50rem 40rem at 0% 10%, rgba(56, 189, 248, 0.10), transparent 55%);
+  overflow-x: hidden;
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .heading {
+    @apply font-display font-bold uppercase tracking-tight;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-300;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wider transition-all duration-300 will-change-transform;
+  }
+
+  .btn-ember {
+    @apply btn bg-gradient-to-r from-ember-dark via-ember to-ember-light text-white shadow-ember hover:scale-[1.03] hover:shadow-[0_0_50px_-6px_rgba(255,90,31,0.7)];
+  }
+
+  .btn-ice {
+    @apply btn border border-ice/40 bg-ice/10 text-ice-light hover:bg-ice/20 hover:border-ice/70;
+  }
+
+  .btn-ghost {
+    @apply btn border border-white/15 bg-white/[0.02] text-white hover:bg-white/[0.06] hover:border-white/30;
+  }
+
+  .card {
+    @apply relative overflow-hidden rounded-2xl border border-white/[0.08] bg-shadow-800/60 backdrop-blur-sm;
+  }
+
+  .glass {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+
+  .text-gradient-heat {
+    @apply bg-gradient-to-r from-ember-light via-ember to-gold bg-clip-text text-transparent;
+  }
+
+  .text-gradient-cool {
+    @apply bg-gradient-to-r from-ice-light via-ice to-ice-dark bg-clip-text text-transparent;
+  }
+}
+
+/* Football-field yard-line texture used behind certain sections */
+.field-lines {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0px,
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 1px,
+    transparent 80px
+  );
+}
+
+.noise {
+  position: relative;
+}
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: rgba(255, 90, 31, 0.35);
+  color: #fff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e16;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ff5a1f, #e23c00);
+  border-radius: 10px;
+}
