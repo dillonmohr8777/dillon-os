@@ -1,0 +1,12 @@
+{
+  "name": "shadow-heating-cooling-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shadow Heating & Cooling — single-file, self-contained marketing site (Three.js + brand imagery inlined).",
+  "scripts": {
+    "start": "npx --yes serve -l 3000 .",
+    "dev": "npx --yes serve -l 3000 .",
+    "preview": "npx --yes serve -l 3000 .",
+    "screenshot": "npx --yes playwright screenshot --viewport-size=1440,900 index.html preview.png"
+  }
+}
