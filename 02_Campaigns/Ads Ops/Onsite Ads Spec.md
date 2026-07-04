@@ -20,3 +20,8 @@ Slagle).
    tracking, budget floor) → material for the Thursday call.
 4. If/when Dillon greenlights: standard launch per
    [[04_SOPs/Landing Page Build & QA SOP|LP SOP]] — tracking before traffic.
+
+## Update (2026-07-04 sweep)
+Account 103-371-5894 is **in daily ads scope** (not dormant as previously
+thought). Treat as an active optimization lane; audit conversions first.
+Source: [[raw/2026-07-04 - account-inventory-sweep]].

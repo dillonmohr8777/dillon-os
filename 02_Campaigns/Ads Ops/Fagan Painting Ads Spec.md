@@ -23,3 +23,15 @@ English-only, higher-intent form, Zapier delivery to client.
 2. English-only language targeting; lock Advantage+ overrides
 3. Higher-intent form + qualifying questions (project type, timeline, own/rent)
 4. Zapier route: lead → instant client notification + sheet log
+
+## Intake filled by evidence (2026-07-04 sweep + screenshot)
+- **Service area: Pittsburgh** (draft ad offer: "Get a Free Pittsburgh
+  Painting Estimate").
+- Meta lane ACTIVE. ⚠️ Account conflict: **892789268275012** (older/live docs)
+  vs **23849136117580444** (later candidate) — verify which is live before
+  editing anything.
+- A "New Leads Ad" (New Leads Ad Set) is **in draft right now** with a Form
+  Extension — finish it per this spec: Pittsburgh radius geo, English-only,
+  higher-intent form questions, then the Zapier route (Dillon first → client
+  → sheet) with a test lead before publish.
+Source: [[raw/2026-07-04 - account-inventory-sweep]].
