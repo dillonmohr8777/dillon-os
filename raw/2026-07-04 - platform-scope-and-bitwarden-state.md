@@ -23,3 +23,10 @@ Source: Dillon, in session 2026-07-04. Raw — do not edit.
   - Onsite Concrete & Landscape - WordPress Admin
 - NOT shared: CCA, **Sterile Care** (⚠️ name never seen in vault before —
   who is this?), Bar Crawl USA.
+
+## Update ~7:00 PM — invite accepted
+pollotharuler@gmail.com accepted and listed as **Owner** on the Claude Client
+Access org (screenshot evidence; Dillon's admin account is DMohr31 /
+dillonmohr8777@gmail.com). Claude access to shared items is LIVE.
+Recommendation on record: drop the Claude member to Admin (same item access;
+org deletion/billing/member-removal stays with Dillon alone). Dillon's call.
