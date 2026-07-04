@@ -1,5 +1,5 @@
 ---
-last_checked: 2026-07-03
+last_checked: 2026-07-04
 tags: [system, slack]
 source: vault-fallback
 ---
@@ -10,19 +10,19 @@ Updated by `/slack-intel` during competitive-task-orchestrator. Slack MCP not co
 
 ## P0 (escalate)
 
-- **NKCDC** — internal M360: launch blocked on Free Tax Prep landing page; Mac running point with Anthony (no response since 2026-04-15, ~79 days).
-- **Hardwood Artisan** — billing escalation with Sean → Dalton card update outstanding (2026-04-07, ~87 days). Engagement at risk.
-- **Bar Crawl USA** — 2 Google Ads disapprovals (Halloween / Fall Cocktail Crawl); Andy waiting on resolution (~79 days).
+- **NKCDC** — internal M360: launch blocked on Free Tax Prep landing page; Mac running point with Anthony (no response since 2026-04-15, ~80 days).
+- **Hardwood Artisan** — billing escalation with Sean → Dalton card update outstanding (2026-04-07, ~88 days). Engagement at risk.
+- **Bar Crawl USA** — 2 Google Ads disapprovals (Halloween / Fall Cocktail Crawl); Andy waiting on resolution (~80 days).
 
 ## Open
 
-- **Align HCM** — Maher El-Abdallah video script **6 days overdue** (was due 2026-06-27).
-- **Align HCM** — Monday Joann Scolaro LinkedIn post overdue (was 2026-06-23, 10 days); Wednesday SmartCare post overdue (was 2026-06-25, 8 days).
-- **BOK Law** — week of Jun 23 social delivery **9 days overdue** since 2026-06-24; week of Jun 30 delivery **2 days overdue** (was due 2026-07-01).
+- **Align HCM** — Maher El-Abdallah video script **7 days overdue** (was due 2026-06-27).
+- **Align HCM** — Monday Joann Scolaro LinkedIn post overdue (was 2026-06-23, 11 days); Wednesday SmartCare post overdue (was 2026-06-25, 9 days).
+- **BOK Law** — week of Jun 23 social delivery **10 days overdue** since 2026-06-24; week of Jun 30 delivery **3 days overdue** (was due 2026-07-01).
 - **Fresh Blends / Replenish** — confirm launch pacing; first-week snapshot to Mia.
 - **Commercial Cleaners Alliance** — creative delivery audit vs 2026-04-08 commitment.
-- **Jeff Hozias** — approved Meta seller campaign not yet live (~79 days).
-- **LinkEZE** — enhanced conversions + MFA overdue on account 809-600-6448 (~88 days).
+- **Jeff Hozias** — approved Meta seller campaign not yet live (~80 days).
+- **LinkEZE** — enhanced conversions + MFA overdue on account 809-600-6448 (~89 days).
 
 ## Notes
 
