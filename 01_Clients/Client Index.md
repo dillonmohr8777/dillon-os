@@ -35,24 +35,9 @@ tags: [client, moc]
 | [[Fagan Painting]] | — | Active June 2026; scope TBD |
 | [[Hope Wellness]] | — | Active June 2026; scope TBD |
 | [[The Ecosystem]] (Tori) | $45k proposal | Build proposal out; commission TBD |
-| [[Neat & Tidy TN]] | — | Landing/creative projects; status unconfirmed |
 
 ## 1099
 - [[Bok Law]] (also listed under M360)
-
-## Direct — status unknown (older lanes; not in the June brief, not yet confirmed ended)
-
-| Client | Services |
-|--------|----------|
-| [[Dryer Vent John]] | — |
-| [[Biohazard Remediation]] | — |
-| [[Guaranteed Cleaning]] | — |
-| [[Bend Plastic Surgery]] | Monthly blog content |
-| [[Bend Oral Surgery]] | — |
-| [[Coach B]] | Google Ads proposal, HTML sales presentation |
-| [[Vanessa]] | Facebook Ads (lead gen, retargeting, sales) |
-| [[AWCI]] | Blog content |
-| [[MMC Land Management]] | Landscape social media content |
 
 ## Full-Time
 - [[Align HCM]] — alignhcm.com — LinkedIn calendars, CEO blogs, carousels, case studies, sales proposals, HTML reports, SEO blogs
