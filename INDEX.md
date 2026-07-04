@@ -18,6 +18,7 @@ in the same change.
 - [[entities/King Agent OS|King Agent OS]] — old daily command layer; patterns worth porting to this vault's skills.
 - [[entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]] — the previous command center; where 5+ weeks of session history still lives.
 - [[entities/Claude in Chrome|Claude in Chrome]] — extension for driving Dillon's real logged-in Chrome from local Claude Code; the Ads-optimization rig.
+- [[entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — the always-on machine (arrives 7/8) that runs the local Ads Ops half; day-one setup in the inbox.
 
 Client and employer pages live in `01_Clients/` — roster, rates and services in
 [[01_Clients/Client Index|Client Index]]. New June-2026 clients: [[Blissful Zen Spa]],
