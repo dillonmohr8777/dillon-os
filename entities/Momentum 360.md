@@ -31,10 +31,13 @@ the recurring client roster runs through M360 — see the roster table in
 
 ## Links
 
-- Clients managed through M360: [[Bar Crawl USA]], [[Shadow HVAC]], [[Link Eze]],
-  [[Omega Landscaping]], [[Jeff Hozias]], [[KJB]], [[Fresh Blends - Replenish]],
-  [[Hardwood Artisan]], [[NKCDC]], [[Onsite Concrete]], [[Blissful Events]],
-  [[Bridge of Hope OTC]], [[Bok Law]], [[Bluegrass Janitorial]]
+- Clients managed through M360: [[Bar Crawl USA]], [[Shadow HVAC]],
+  [[Omega Landscaping]], [[KJB]], [[Fresh Blends - Replenish]], [[NKCDC]],
+  [[Onsite Concrete]], [[Blissful Events]], [[Bridge of Hope OTC]], [[Bok Law]],
+  [[Bluegrass Janitorial]]
+- Former (ended, confirmed 2026-07-04): [[Link Eze]], [[Jeff Hozias]],
+  [[Hardwood Artisan]] — see [[raw/2026-07-04 - lost-clients-confirmation]].
+  Note: Jason Fallon owned the Link Eze relationship from the M360 side.
 
 ## 2026-06 update — compiled from [[raw/2026-06-26 - intel-core-7-master-operating-transfer]]
 

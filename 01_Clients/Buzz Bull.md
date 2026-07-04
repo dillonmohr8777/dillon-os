@@ -1,6 +1,6 @@
 ---
 tags: [client, 1099]
-status: active
+status: former
 industry: marketing
 ---
 
@@ -22,3 +22,9 @@ industry: marketing
 
 ## Links
 - [[Client Index]]
+
+## ⛔ Former client
+
+Confirmed ended by Dillon 2026-07-04 — [[raw/2026-07-04 - lost-clients-confirmation]].
+Page kept as history. Reason/end date not recorded; add if known (lost-client
+reasons are lessons).
