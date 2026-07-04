@@ -44,7 +44,7 @@ Client and employer pages live in `01_Clients/` — roster, rates and services i
 ## Folder indexes (working vault)
 
 - [[01_Clients/Client Index|Client Index]] — full roster: M360, 1099, direct.
-- [[04_SOPs/SOP Index|SOP Index]] — Facebook Ads SOPs (launch, testing, reporting, optimization).
+- [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs: landing page build & QA, website build, client email, Facebook Ads.
 - [[10_Sessions/Session Index|Session Index]] — build logs (FB Ads automation, API notes).
 - Campaigns / Content / Offers / Personal / Transcripts indexes — see [[Dashboard]].
 - `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).

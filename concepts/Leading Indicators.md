@@ -24,8 +24,9 @@ before it happens.
    Disney-style ads, then reported seeing them live — unresolved, that pattern
    ends retainers. Rule: creative rejections get verified-fixed within days,
    not remembered later.
-4. **Unsent invoices are self-inflicted churn.** The $785 Bok Law draft sat
-   unsent. Money not asked for is money (and eventually clients) lost.
+4. **Undelivered work that's "done locally" is invisible to the client.** AMI
+   lesson: a finished local build means nothing while the public site stays
+   legacy. Rule: a build isn't done until the live URL proves it.
 
 ## Growth signals
 

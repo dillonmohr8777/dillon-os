@@ -13,6 +13,9 @@ codebase: the wiki is the code, you are the compiler.
   `raw/2026-07-04 - business-update-voice-note.md`.)
 - Primary directive: ROAD TO 100 CLIENTS (see `System/OS Config.md`).
 - Style: direct, execution-focused. Lead with the action, skip the fluff.
+- **Focus (2026-07-04):** surface only what serves the day-to-day delivery
+  work — landing pages, website builds, client emails, ad launches. Don't
+  bring up billing/invoices unless asked. (`raw/2026-07-04 - focus-directive.md`)
 
 ## Vault map
 
