@@ -15,10 +15,17 @@ hands**. Runs on Dillon's machine, ~10–15 min per cycle.
    your daily one, keeps it private). Log it into: Meta Business Suite / Ads
    Manager, Google Ads MCC, Zapier, Google Drive, and Bitwarden **browser
    extension**.
-2. **Bitwarden scoping** — make a collection called `Claude Ops` containing
-   only ads/delivery logins (client platforms, Zapier). The extension autofills
-   inside the profile, so the agent logs in without ever seeing passwords.
-   Never bulk-export the vault; never paste passwords into chat or notes.
+2. **Bitwarden scoping — two-account org pattern (adopted 2026-07-04):**
+   - Dillon creates a Bitwarden **organization** with collection
+     `Claude Client Access`, sharing only client/ads/delivery logins into it.
+   - Second member account "Claude" invited via **dillonmohr8777+claude@gmail.com**
+     (plus-alias — invite lands in Dillon's inbox; he accepts and sets a fresh
+     generated master password).
+   - Claude member gets **read-only** ("can view") access to the collection.
+   - That account stays logged into the Bitwarden **extension in the Claude
+     Ops profile** (PIN unlock). The agent uses autofill; it never sees,
+     types, stores, or exports the master password or any credential.
+   - Revocation = remove the member from the org. Event log audits every access.
 3. **Claude in Chrome extension** installed in that profile (Chrome Web Store).
 4. **Vault local** — `git clone` (or pull) `dillon-os` to the machine.
 
