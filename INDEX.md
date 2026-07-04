@@ -19,7 +19,7 @@ in the same change.
 Client and employer pages live in `01_Clients/` — roster, rates and services in
 [[01_Clients/Client Index|Client Index]]. New June-2026 clients: [[Blissful Zen Spa]],
 [[AMI Commercial Cleaning]], [[Revive Systems]], [[Cindy May Christmas]],
-[[Fagan Painting]], [[Hope Wellness]], [[The Ecosystem]], [[Neat & Tidy TN]].
+[[Fagan Painting]], [[Hope Wellness]], [[The Ecosystem]].
 
 ## Concepts
 
