@@ -31,3 +31,8 @@ business owners in NKCDC's service area who qualify.
 PMax paused; Search learning at $15/day. July 1 keyword cleanup + BIRT/NPT
 expansion awaits Dillon's approval. Source:
 [[raw/2026-07-04 - preflight-readback]].
+
+## Dillon's call (2026-07-04, full approval)
+Search campaign launched ~6/30 has NOT SPENT. Full approval to: clean keywords,
+cut dead weight, and **rebuild a fresh campaign if this one stays dead 48h
+after fixes**. Diagnosis order lives in the Action Packet / session brief.
