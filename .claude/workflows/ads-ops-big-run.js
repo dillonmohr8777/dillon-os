@@ -65,7 +65,7 @@ const ACTIONS = {
 phase('Research')
 const cacheCheck = await agent(
   'In /home/user/dillon-os (or the repo root if elsewhere — find the dillon-os vault), grep concepts/ for pages tagged ads-research with an expires: date. Return ONLY the word FRESH if any unexpired page exists (compare to today via the date command), else STALE.',
-  { label: 'research-cache', phase: 'Research', effort: 'low' }
+  { label: 'research-cache', phase: 'Research', effort: 'low', model: 'haiku' }
 )
 
 let survivors = []
@@ -78,12 +78,12 @@ if (!String(cacheCheck).includes('FRESH')) {
   ]
   const found = await parallel(TOPICS.map(t => () => agent(
     `Research (WebSearch/WebFetch): ${t}. Practitioner layer preferred (recent threads, changelogs, credible operators) over old blog posts. Return claims as receipts: claim + source URL + date. Max 8 claims, only actionable ones.`,
-    { label: `research:${t.slice(0, 30)}`, phase: 'Research', schema: FINDINGS }
+    { label: `research:${t.slice(0, 30)}`, phase: 'Research', schema: FINDINGS, model: 'opus' }
   )))
   const allClaims = found.filter(Boolean).flatMap(f => f.claims)
   const skeptic = await agent(
     `You did NOT do this research. Attack every claim below — kill undated/unverifiable ones, label single-source ones, pass only what a marketer should act on in July 2026. Carry each claim's source and date through into your verdicts:\n${JSON.stringify(allClaims)}`,
-    { label: 'skeptic', phase: 'Research', schema: VERDICTS }
+    { label: 'skeptic', phase: 'Research', schema: VERDICTS, model: 'opus' }
   )
   survivors = skeptic ? skeptic.verdicts.filter(v => v.verdict !== 'killed') : []
   log(`research: ${allClaims.length} claims → ${survivors.length} survive`)
@@ -103,14 +103,14 @@ const audited = await pipeline(
 ${survivors.length ? `5. Verified fresh research: ${JSON.stringify(survivors.slice(0, 12))}` : ''}
 
 Produce this cycle's actions for the apply session: exact changes (publish / optimize / conversions / lead-delivery lanes), each with a verify step. Flag tracking failures and policy risks. List blocked items with what unblocks them. Respect brand rules absolutely.`,
-    { label: `audit:${s.key}`, phase: 'Audit', schema: ACTIONS }
+    { label: `audit:${s.key}`, phase: 'Audit', schema: ACTIONS, model: 'opus' }
   ),
   (audit, s) => audit && agent(
     `Adversarial check. Read ${s.file} fresh. Below are proposed actions for ${audit.client}. KILL any action that: violates a brand rule in the spec, edits an account the spec says verify-live-first without verification as step one, changes budget >20% in one step, or claims a number without a source. Return the surviving actions in the same schema (keep flags/blocked as-is, minus anything you killed with a note in flags).
 
 Proposed actions (audit JSON):
 ${JSON.stringify(audit)}`,
-    { label: `verify:${s.key}`, phase: 'Verify', schema: ACTIONS }
+    { label: `verify:${s.key}`, phase: 'Verify', schema: ACTIONS, model: 'opus' }
   ).then(v => v || audit)
 )
 
@@ -129,7 +129,7 @@ const packet = await agent(
 Data: ${JSON.stringify(audited.filter(Boolean))}
 ${survivors.length ? `Research survivors to land: ${JSON.stringify(survivors)}` : ''}
 Rules: no lead PII; numbers only with sources; Dillon-first lead routing is the standard.`,
-  { label: 'packet', phase: 'Packet' }
+  { label: 'packet', phase: 'Packet', model: 'opus' }
 )
 
 return { packet, accounts: audited.filter(Boolean).length }
