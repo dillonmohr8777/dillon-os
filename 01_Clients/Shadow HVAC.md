@@ -1,6 +1,6 @@
 ---
 tags: [client, momentum360]
-status: active
+status: former
 industry: HVAC
 start_date: 2026-02-13
 rate: $250/mo
@@ -32,3 +32,8 @@ google_ads_id: 314-136-4176
 
 ## Links
 - [[Client Index]]
+
+## ⛔ Former client
+
+Confirmed ended by Dillon 2026-07-04 — [[raw/2026-07-04 - lost-clients-confirmation-2]].
+Page kept as history. Reason/end date not recorded; add if known.

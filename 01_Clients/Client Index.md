@@ -4,30 +4,26 @@ tags: [client, moc]
 
 # Client Index
 
-> **Roster status 2026-07-04** — partially reverified against the Intel Core 7
-> transfer brief ([[raw/2026-06-26 - intel-core-7-master-operating-transfer]]).
-> June 2026 M360 commissions totaled **$5,275**. Dillon reports some clients are
-> lost (names still pending — [[raw/2026-07-04 - business-update-voice-note]]);
-> clients marked ❓ below had **no activity** in the June brief and are
-> unconfirmed. Services have expanded into web/landing page design.
+> **Roster reverified 2026-07-04** against the Intel Core 7 brief
+> ([[raw/2026-06-26 - intel-core-7-master-operating-transfer]]) and Dillon's
+> confirmations ([[raw/2026-07-04 - lost-clients-confirmation]],
+> [[raw/2026-07-04 - lost-clients-confirmation-2]]). June 2026 M360 commissions:
+> **$5,275**. Services have expanded into web/landing page design
+> ([[entities/Website Factory|Website Factory]]).
 
 ## Momentum 360 (Account Manager)
 
 | Client                       | Website                     | Rate         | Start     | Services                                                        |
 | ---------------------------- | --------------------------- | ------------ | --------- | --------------------------------------------------------------- |
 | [[Bar Crawl USA]]            | barcrawlusa.com             | $950/mo      | 2/16/2026 | Google Ads, 20-city landing pages, WordPress publisher tool     |
-| [[Shadow HVAC]]              | shadowheatingandcooling.com | $250/mo      | 2/13/2026 | GBP content (4x/week), Google Ads Search, LSA                   |
 | [[Omega Landscaping]]        | omegalandscapecorp.com      | $400/mo      | 3/1/2026  | GBP content (4x/week), blogs, local SEO, reports, Google Ads    |
-| [[KJB]]                      | kimberlyjamesbridal.com     | $300/mo      | 3/12/2026 | Google Ads, Squarespace SEO pages, brand design                 |
-| [[Fresh Blends - Replenish]] | freshblends.com             | $500/mo      | 3/23/2026 | Paid media strategy (B2C), Google Ads (awaiting access)         |
-| [[NKCDC]]                    | —                           | —            | —         | ICP research, keyword strategy, campaign architecture           |
-| [[Onsite Concrete]]          | onsiteconcretelandscape.com | —            | —         | WordPress/Divi website repair                                   |
-| [[Blissful Events]]          | —                           | $500 project | One-time  | Bollywood concert campaign (FB Events + Google Local PMax)      |
-| [[Bridge of Hope OTC]]       | —                           | —            | —         | SEO blog content (substance use / mental health)                |
-| [[Bok Law]]                  | —                           | —            | Dec 2025+ | Weekly social media (Wed Wisdom, Family Fridays, Sat Solutions) |
-| [[Bluegrass Janitorial]]     | —                           | —            | —         | SEO blogs, MailChimp emails, product content                    |
+| [[KJB]]                      | kimberlyjamesbridal.com     | $300/mo      | 3/12/2026 | Google Ads, Meta lead gen, Squarespace SEO pages, brand design  |
+| [[Fresh Blends - Replenish]] | freshblends.com             | $500/mo      | 3/23/2026 | Paid media, 7-Eleven location landing pages + tracking          |
+| [[NKCDC]]                    | —                           | —            | —         | ICP research, keyword strategy, ads audit lane                  |
+| [[Onsite Concrete]]          | onsiteconcretelandscape.com | —            | —         | WordPress/Divi website repair, ads audit lane                   |
+| [[Bok Law]]                  | —                           | —            | Dec 2025+ | Weekly social media, hourly invoicing (also 1099)               |
 
-## Active as of June 2026 (from the Intel Core 7 brief — affiliation per commission sheet where known)
+## Newer active clients (June 2026 — affiliation per commission sheet where known)
 
 | Client | Rate | Work |
 |--------|------|------|
@@ -41,27 +37,13 @@ tags: [client, moc]
 | [[The Ecosystem]] (Tori) | $45k proposal | Build proposal out; commission TBD |
 | [[Neat & Tidy TN]] | — | Landing/creative projects; status unconfirmed |
 
-❓ **No June-2026 activity on record** (status unconfirmed until Dillon confirms):
-[[Shadow HVAC]], [[Blissful Events]], [[Bridge of Hope OTC]], [[Bluegrass Janitorial]],
-[[Florecita]], [[Next Gen Solutions]], [[Commercial Cleaners Alliance]],
-[[PNW Pro Clean]], [[PureClean Carpets]], [[Ram Air]].
-
 ## 1099
 - [[Bok Law]] (also listed under M360)
 
-## Direct
+## Direct — status unknown (older lanes; not in the June brief, not yet confirmed ended)
 
 | Client | Services |
 |--------|----------|
-| [[Next Gen Solutions]] | Keyword strategy, competitor gap analysis |
-| [[Florecita]] | Full paid media strategy (Phoenix wedding florist) |
-| [[Commercial Cleaners Alliance]] | Google/Meta Ads report, keyword research, tiered pricing |
-| [[Sally Compton]] | Collaborator on Bridge of Hope service pages |
-| [[PNW Pro Clean]] | FAQ content, blog writing |
-| [[PureClean Carpets]] | — |
-| [[Ram Air]] | — |
-| [[Bluegrass Janitorial]] | (also under M360) |
-| [[Bridge of Hope OTC]] | (also under M360) |
 | [[Dryer Vent John]] | — |
 | [[Biohazard Remediation]] | — |
 | [[Guaranteed Cleaning]] | — |
@@ -77,12 +59,24 @@ tags: [client, moc]
 
 ## Past Clients
 
-Confirmed ended by Dillon 2026-07-04 ([[raw/2026-07-04 - lost-clients-confirmation]]):
+Confirmed ended by Dillon 2026-07-04 ([[raw/2026-07-04 - lost-clients-confirmation]],
+[[raw/2026-07-04 - lost-clients-confirmation-2]]):
 
 - [[Buzz Bull]] — was 1099
 - [[Link Eze]] — was M360, $300/mo, Google Ads (ecommerce/Shopify), HTML reports
 - [[Hardwood Artisan]] — was M360, GBP content (4x/week), HTML reports
 - [[Jeff Hozias]] — was M360, $200/mo, GBP content (3x/week), Meta/Google Ads
+- [[Shadow HVAC]] — was M360, $250/mo, GBP content, Google Ads Search, LSA
+- [[Blissful Events]] — was M360, $500 one-time concert campaign
+- [[Bridge of Hope OTC]] — was M360/direct, SEO blog content
+- [[Bluegrass Janitorial]] — was M360/direct, SEO blogs, MailChimp, product content
+- [[Florecita]] — was direct, paid media strategy (Phoenix wedding florist)
+- [[Next Gen Solutions]] — was direct, keyword strategy, competitor gap analysis
+- [[Commercial Cleaners Alliance]] — was direct, ads reports, keyword research, pricing
+- [[PNW Pro Clean]] — was direct, FAQ content, blog writing
+- [[Sally Compton]] — was direct collaborator (Bridge of Hope service pages)
+- PureClean Carpets — was direct (no page)
+- Ram Air — was direct (no page)
 
 ## Prospects
 - 

@@ -1,6 +1,6 @@
 ---
 tags: [client, momentum360]
-status: active
+status: former
 industry: cleaning/janitorial
 ---
 
@@ -21,3 +21,8 @@ industry: cleaning/janitorial
 
 ## Links
 - [[Client Index]]
+
+## ⛔ Former client
+
+Confirmed ended by Dillon 2026-07-04 — [[raw/2026-07-04 - lost-clients-confirmation-2]].
+Page kept as history. Reason/end date not recorded; add if known.
