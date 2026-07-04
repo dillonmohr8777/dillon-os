@@ -130,7 +130,8 @@
   var mx=innerWidth/2, my=innerHeight/2;
   addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;},{passive:true});
   var bots=slots.map(function(el,i){
-    var acc=ACC[i%ACC.length];
+    var da=el.getAttribute("data-acc");
+    var acc=da?da.split(",").map(Number):ACC[i%ACC.length];
     return {el:el, acc:acc, hover:0, hoverT:0, phase:i*1.7};
   });
   slots.forEach(function(el,i){
