@@ -261,6 +261,14 @@
   .fbadge img{display:block;max-width:100%;max-height:50px;object-fit:contain}
   .foot-bot{border-top:1px solid var(--line-d);padding-top:22px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.4)}
 
+  /* live answers */
+  .answer{color:rgba(255,255,255,.92);font-size:.95rem;line-height:1.65;max-height:420px;overflow-y:auto}
+  .answer p{margin-bottom:10px}
+  .answer ul,.answer ol{margin:0 0 10px 20px}
+  .answer li{margin-bottom:5px}
+  .answer b{color:var(--gold-soft)}
+  .asking{opacity:.65;pointer-events:none}
+
   .reveal{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
 
@@ -339,17 +347,16 @@
         <div id="consultForm">
           <div class="form-title">Free &mdash; no signup required</div>
           <h3>Ask Your First Question</h3>
-          <div class="cfield"><input id="c-name" name="name" type="text" placeholder="Name" autocomplete="name"></div>
-          <div class="cfield"><input id="c-email" name="email" type="email" placeholder="Email" autocomplete="email"></div>
-          <div class="cfield"><input id="c-biz" name="business" type="text" placeholder="Business name" autocomplete="organization"></div>
           <div class="cfield"><input id="c-q" name="question" type="text" placeholder="e.g. How do I get more customers from Google?"></div>
+          <div class="cfield"><input id="c-name" name="name" type="text" placeholder="Name (optional)" autocomplete="name"></div>
+          <div class="cfield"><input id="c-email" name="email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
           <button class="btn btn-gold" type="button" id="consultBtn">Ask The Agents</button>
-          <p class="fine">A specialist-crafted answer lands in your inbox within one business day.</p>
+          <p class="fine">Real answers in seconds &mdash; from the specialist that fits your question.</p>
         </div>
-        <div class="consult-done" id="consultDone" role="status" aria-live="polite">
-          <div class="ck">&#10003;</div>
-          <h3>Your question is in.</h3>
-          <p style="color:rgba(255,255,255,.78)">The right specialist is on it. Expect a plain-English answer &mdash; and the first thing to do about it &mdash; within one business day.</p>
+        <div class="consult-done" id="consultDone" role="status" aria-live="polite" style="text-align:left;padding:6px 2px">
+          <div class="form-title" id="consultAgent">Specialist</div>
+          <div class="answer" id="consultAnswer"></div>
+          <button class="btn btn-outline" type="button" id="consultReset" style="width:100%;margin-top:14px">Ask Another Question</button>
         </div>
       </div>
     </div>
@@ -502,7 +509,7 @@
       <div class="glow" aria-hidden="true"></div>
       <div class="audit-title">Your first question is free</div>
       <h3>What Do You Want To Grow?</h3>
-      <p class="audit-note">Ask anything about growing your business. The right specialist will review it and send back a plain-English plan within one business day.</p>
+      <p class="audit-note">Ask anything about growing your business. The right specialist answers in seconds with a plain-English plan, grounded in Momentum 360's client playbooks.</p>
       <div class="audit-fields">
         <input id="a-name" name="name" type="text" placeholder="Name" autocomplete="name">
         <input id="a-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel">
@@ -581,32 +588,69 @@ const cio=new IntersectionObserver((es)=>{es.forEach(e=>{
 });},{threshold:.5});
 document.querySelectorAll('.num[data-count]').forEach(c=>cio.observe(c));
 
-document.getElementById('consultBtn').addEventListener('click',()=>{
-  const name=document.getElementById('c-name').value.trim();
-  const email=document.getElementById('c-email').value.trim();
+// --- live agents ---
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function md(t){
+  const lines=esc(t).split('\n');let html='',list=null;
+  const flush=()=>{if(list){html+=`</${list}>`;list=null;}};
+  for(const raw of lines){
+    const l=raw.trim();
+    if(!l){flush();continue;}
+    const bold=s=>s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+    if(/^[-*] /.test(l)){if(list!=='ul'){flush();html+='<ul>';list='ul';}html+='<li>'+bold(l.slice(2))+'</li>';}
+    else if(/^\d+[.)] /.test(l)){if(list!=='ol'){flush();html+='<ol>';list='ol';}html+='<li>'+bold(l.replace(/^\d+[.)] /,''))+'</li>';}
+    else{flush();html+='<p>'+bold(l.replace(/^#{1,4} /,''))+'</p>';}
+  }
+  flush();return html;
+}
+async function askAgents(fields){
+  const res=await fetch('/api/ask',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(fields)});
+  const data=await res.json().catch(()=>({}));
+  if(!res.ok)throw new Error(data.error||'The agents hit a snag. Try again in a minute.');
+  return data;
+}
+
+const consultBtn=document.getElementById('consultBtn');
+consultBtn.addEventListener('click',async()=>{
   const q=document.getElementById('c-q').value.trim();
-  if(name.length<2||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)||q.length<5){alert('Please add your name, a valid email, and your question so the right specialist can answer.');return;}
-  const payload={name,email,business:document.getElementById('c-biz').value.trim(),question:q,source:'Momentum 360 Agents hero form'};
-  // TODO: POST `payload` to HubSpot / your CRM endpoint here.
-  console.log('Agent question:',payload);
-  document.getElementById('consultForm').style.display='none';
-  document.getElementById('consultDone').classList.add('show');
+  if(q.length<5){alert('Please add your question so the right specialist can answer.');return;}
+  const email=document.getElementById('c-email').value.trim();
+  if(email&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){alert('That email doesn\'t look right — fix it or leave it blank.');return;}
+  const form=document.getElementById('consultForm');
+  form.classList.add('asking');consultBtn.textContent='Thinking…';
+  try{
+    const data=await askAgents({question:q,name:document.getElementById('c-name').value.trim(),email,source:'hero'});
+    document.getElementById('consultAgent').textContent=data.agent.name+' • '+data.agent.squad;
+    document.getElementById('consultAnswer').innerHTML=md(data.answer);
+    form.style.display='none';
+    document.getElementById('consultDone').classList.add('show');
+  }catch(e){alert(e.message);}
+  form.classList.remove('asking');consultBtn.textContent='Ask The Agents';
+});
+document.getElementById('consultReset').addEventListener('click',()=>{
+  document.getElementById('consultDone').classList.remove('show');
+  const form=document.getElementById('consultForm');
+  form.style.display='';
+  document.getElementById('c-q').value='';
+  document.getElementById('c-q').focus();
 });
 
 const askBtn=document.getElementById('askBtn'),askOut=document.getElementById('askOut');
-askBtn.addEventListener('click',()=>{
-  const name=document.getElementById('a-name').value.trim();
-  if(name.length<2){alert('Please add your name.');return;}
-  const email=document.getElementById('a-email').value.trim();
-  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){alert('Please add a valid work email so we can send your answer.');return;}
+askBtn.addEventListener('click',async()=>{
   const q=document.getElementById('a-q').value.trim();
   if(q.length<5){alert('Please add your question so the right specialist can take it.');return;}
-  const payload={name,phone:document.getElementById('a-phone').value.trim(),email,business:document.getElementById('a-biz').value.trim(),question:q,source:'Momentum 360 Agents ask form'};
-  // TODO: POST `payload` to HubSpot / your CRM endpoint here.
-  console.log('Agent question:',payload);
+  const email=document.getElementById('a-email').value.trim();
+  if(email&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){alert('That email doesn\'t look right — fix it or leave it blank.');return;}
+  askBtn.disabled=true;askBtn.textContent='Thinking…';
   askOut.classList.add('show');
-  askOut.innerHTML='<div class="head">Your question is in</div>The right specialist is on it. Expect a plain-English answer &mdash; and the first thing to do about it &mdash; within one business day.';
-  askBtn.textContent='Question Sent';
+  askOut.innerHTML='<div class="head">Routing to a specialist…</div>';
+  try{
+    const data=await askAgents({question:q,name:document.getElementById('a-name').value.trim(),phone:document.getElementById('a-phone').value.trim(),email,business:document.getElementById('a-biz').value.trim(),source:'ask'});
+    askOut.innerHTML='<div class="head">'+esc(data.agent.name)+' • '+esc(data.agent.squad)+'</div><div class="answer" style="color:inherit">'+md(data.answer)+'</div>';
+  }catch(e){
+    askOut.innerHTML='<div class="head">Hmm.</div>'+esc(e.message);
+  }
+  askBtn.disabled=false;askBtn.textContent='Ask Another Question';
 });
 </script>
 

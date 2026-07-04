@@ -1,26 +1,58 @@
-# Momentum 360 Agents — Landing Page
+# Momentum 360 Agents — Landing Page + Live RAG Agents
 
-Redesign of https://momentum-360-agents.netlify.app in the exact design system of
-https://momentum-360-landing.netlify.app (same CSS, navy/gold palette, Montserrat + Inter,
-section patterns, reveal animations, stat counters).
+Redesign of https://momentum-360-agents.netlify.app in the design system of
+https://momentum-360-landing.netlify.app — now with a **real RAG backend**: both "Ask"
+forms answer live, grounded in Momentum 360's playbooks, routed to the best of the
+19 specialist agents.
 
-All copy is about **Momentum 360 Agents**: 19 specialist AI marketing agents in 4 squads
-(Capture & Showcase, Get Found, Win Customers, Content & Run It), trained on Momentum 360
-playbooks and powered by GPT-5.5.
+## How it works
 
-## Contents
+```
+kb/*.md ──(build: scripts/build-kb.mjs + OpenAI embeddings)──▶ kb-index.json
+                                                                    │
+browser ── POST /api/ask ──▶ netlify/functions/ask.mjs ────────────┤
+                              1. embed the question                 │
+                              2. cosine top-6 playbook chunks ◀─────┘
+                              3. route to best of 19 agent personas
+                              4. chat completion grounded in context
+                              5. return {answer, agent, sources}
+```
 
-- `index.html` — the entire site, self-contained (CSS inline, logo embedded as base64)
-- `momentum-360-logo.png` — the exact Momentum 360 logo mark (also used as favicon)
-- `assets/badges/` — partner/recognition badges (Google Partner, Inc. 5000, Philly 100, RankWatch, Best of PA)
+- `kb/` — the knowledge base: 9 playbook docs + `agents.json` (19 agent personas/routes)
+- `scripts/build-kb.mjs` — runs at deploy time on Netlify; chunks + embeds the KB
+- `netlify/functions/ask.mjs` — the RAG endpoint at `/api/ask` (rate-limited, 250-word plain-English answers)
+- `public/` — the site (self-contained index.html, logo, badges)
 
-## Deploy
+## Netlify setup (one time)
 
-Static site — no build step. On Netlify: drag-and-drop this folder, or point a site at this
-directory (publish directory: `momentum-360-agents-site`).
+1. **Connect the repo**: Netlify → Add new site → Import an existing project → GitHub →
+   `dillonmohr8777/dillon-os` (or link the existing momentum-360-agents site to the repo).
+   - **Base directory:** `momentum-360-agents-site`
+   - Build command and publish directory are read from `netlify.toml` automatically
+     (`node scripts/build-kb.mjs` → publish `public`).
+   - **Branch:** `main` after the PR merges (or `claude/agentic-netlify-redesign-7y2s40` to preview).
+2. **Environment variables** (Site configuration → Environment variables):
 
-## Wiring the forms
+   | Key | Value | Required |
+   |---|---|---|
+   | `OPENAI_API_KEY` | your OpenAI API key | **yes** — build fails without it |
+   | `OPENAI_MODEL` | chat model (default `gpt-5.5`) | no |
+   | `OPENAI_FALLBACK_MODEL` | used if the main model 404s (default `gpt-4o`) | no |
+   | `EMBED_MODEL` | embedding model (default `text-embedding-3-small`) | no |
+   | `LEAD_WEBHOOK_URL` | Zapier/Make/CRM webhook; every question with contact info is forwarded | no |
 
-Both forms (hero "Ask Your First Question" and bottom "Ask The Agents Anything") currently
-show a success state and log the payload to the console. Search `index.html` for `TODO: POST`
-to connect them to HubSpot / your CRM endpoint.
+3. **Deploy.** The build embeds the knowledge base (pennies per build), the function serves answers.
+
+## Updating the knowledge base
+
+Edit or add markdown files in `kb/` and push — the next deploy re-chunks and re-embeds
+automatically. To add/rename agents, edit `kb/agents.json` (name, squad, `route` = routing
+description, `persona` = system-prompt role).
+
+## Costs & guardrails
+
+- Embeddings: fractions of a cent per build; one embed call per question.
+- Chat: one completion per question, capped at 700 tokens out, 6 context chunks in.
+- Per-IP rate limit: 10 questions/minute (best-effort). Input capped at 1,200 chars.
+- The model is instructed to answer only marketing/business-growth questions, never to
+  invent prices or client stats, and to hand off crew jobs to (215) 607-6482.
