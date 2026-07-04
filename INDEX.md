@@ -17,6 +17,7 @@ in the same change.
 - [[entities/Hermes|Hermes]] — local worker agent orphaned on the retired Intel Core 7 machine; rebuild-or-replace decision open.
 - [[entities/King Agent OS|King Agent OS]] — old daily command layer; patterns worth porting to this vault's skills.
 - [[entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]] — the previous command center; where 5+ weeks of session history still lives.
+- [[entities/Claude in Chrome|Claude in Chrome]] — extension for driving Dillon's real logged-in Chrome from local Claude Code; the Ads-optimization rig.
 
 Client and employer pages live in `01_Clients/` — roster, rates and services in
 [[01_Clients/Client Index|Client Index]]. New June-2026 clients: [[Blissful Zen Spa]],
