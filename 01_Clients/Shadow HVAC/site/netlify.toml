@@ -1,0 +1,21 @@
+# Netlify deploy config for the self-contained Shadow HVAC site.
+# This folder IS the publish root — it's a single static index.html, no build step.
+#
+# CLI deploy (from this folder):   netlify deploy --prod --dir=.
+# Repo-connected deploy:  set Base directory = "01_Clients/Shadow HVAC/site"
+#                         (publish "." and empty build command are read from here).
+
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

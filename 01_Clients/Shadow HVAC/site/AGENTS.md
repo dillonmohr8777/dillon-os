@@ -27,6 +27,40 @@ python3 -m http.server 3000
 Deploy = copy `index.html` to any static host (Netlify drag-and-drop at
 app.netlify.com/drop, GitHub Pages, Vercel, S3, etc.). No configuration needed.
 
+## Deploy to Netlify
+
+The site is one static `index.html`, so a Netlify deploy is just uploading this folder.
+`netlify.toml` here already sets `publish = "."` with no build step.
+
+**One-time prerequisite (a secret — the human provides it, never commit it):**
+a Netlify personal access token. Get it at Netlify → **User settings → Applications →
+Personal access tokens → New access token**, then expose it to the shell:
+
+```bash
+export NETLIFY_AUTH_TOKEN=xxxxxxxx          # required
+export NETLIFY_SITE_ID=<site-api-id>        # optional: target an existing site
+```
+
+**Deploy (run from this folder, `01_Clients/Shadow HVAC/site`):**
+
+```bash
+npm run deploy:draft     # preview URL first (safe) — netlify deploy --dir=.
+npm run deploy           # publish to production — netlify deploy --prod --dir=.
+```
+
+First run on a brand-new site: `npx netlify-cli deploy --dir=.` will prompt to create/
+link a site (or use `netlify link` / `netlify init` once). With `NETLIFY_SITE_ID` set it
+deploys straight to that site, non-interactively — ideal for CI/agents.
+
+**Alternatives (no token / no CLI):**
+- **Connect the repo** at app.netlify.com → Add new site → import `dillonmohr8777/dillon-os`
+  → set **Base directory** = `01_Clients/Shadow HVAC/site`, **Publish** = `.`, build
+  command empty. Auto-deploys on every push to `main`.
+- **Drag & drop**: drop `index.html` onto **https://app.netlify.com/drop**.
+
+Custom domain: after the first deploy, Netlify → Domain management → add
+`shadowheatingandcooling.com` and follow the DNS steps.
+
 ## Verify a change visually (headless — no GUI needed)
 
 You cannot judge this site from the source alone (there's a live 3D canvas). Always
