@@ -8,6 +8,8 @@ Every wiki page and folder index, one line each. **Agents start here**, then
 walk links or grep — never sweep folders. New/removed page ⇒ update this file
 in the same change.
 
+> [!tip] Visual views: [[Brain Map.canvas|🗺 Brain Map]] · [[Clients.base|🤝 Clients table]] · [[Dashboard|🧠 Dashboard]] · color-coded graph view
+
 ## Entities
 
 - [[entities/Momentum 360|Momentum 360]] — the agency Dillon account-manages clients through; leadership contacts, escalation paths, June-2026 commissions ($5,275).
