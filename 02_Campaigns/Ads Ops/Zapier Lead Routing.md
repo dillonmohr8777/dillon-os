@@ -18,10 +18,12 @@ Trigger:  Facebook Lead Ads — New Lead
            where it usually silently breaks)
 Filter:   only real submissions (skip test leads; optionally geo/answer filter
           using the qualifying-question fields)
-Action 1: Email to client (Gmail step) — "New lead: {name} {phone} {answers}"
-Action 2: (optional) SMS to client via their preferred channel
+Action 1: Email to DILLON first — every lead, every client (his standing rule,
+          2026-07-04: he sees it before/alongside the client)
+Action 2: Email to client — "New lead: {name} {phone} {answers}"
 Action 3: Append row to "[Client] - Leads" Google Sheet (the permanent log —
           same pattern as KJB's lead sheet)
+Action 4: (optional) SMS to client via their preferred channel
 ```
 
 ## Why it breaks (the Codex failure modes — check in this order)
