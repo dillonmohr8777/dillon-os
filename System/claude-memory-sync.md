@@ -1,59 +1,54 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-07-03
 tags: [system, memory, sync]
 ---
 
 # Claude Memory Sync
 
-Single source of truth for all Claude instances across Dillon OS. Updated by `vault-integrity-sync` nightly at 2:00 AM and `chat-to-vault-sync` every 2 hours.
+Single source of truth for all AI instances across Dillon OS. Updated by `memory-consolidator` during `competitive-task-orchestrator` (daily 1:00 PM ET).
 
 ## Active clients (Momentum 360)
-• Bar Crawl USA ($950/mo) — active, campaigns live across 9+ cities.
-• Kimberly James Bridal ($300/mo) — active, Timeline page approved 2026-04-13.
-• Shadow HVAC ($250/mo) — active, LSA status needs verification after 2026-03-02 reset.
-• LinkEZE ($300/mo) — active, enhanced conversions diagnostics warning open.
+• Bar Crawl USA ($950/mo) — active, 2 Google Ads disapprovals unresolved (~79 days).
+• Kimberly James Bridal ($300/mo) — active, Timeline page publish + GA4/GSC pending.
+• Shadow HVAC ($250/mo) — active, LSA verification stale since 2026-03-02 (~123 days).
+• LinkEZE ($300/mo) — active, enhanced conversions + MFA overdue on 809-600-6448 (~88 days).
 • Omega Landscaping ($200/mo) — active, chasing David for drone footage.
-• Jeff Hozias / Rand Realty ($200/mo) — active, Meta seller campaign approved 2026-04-14.
-• Fresh Blends / Replenish ($500/mo) — active, campaigns set to launch 2026-04-13.
-• BOK Law — active, weekly social cadence running.
-• NKCDC — active, BLOCKED on NKCDC shipping Free Tax Prep landing page.
-• Commercial Cleaners Alliance — onboarding, creatives in flight.
-• Hardwood Artisan ($150/mo) — AT RISK, billing card update outstanding since 2026-04-07.
-• Onsite Concrete & Landscape — active, standing Thursday 1:00 PM ET call.
+• Jeff Hozias / Rand Realty ($200/mo) — active, approved Meta seller campaign not launched (~79 days).
+• Fresh Blends / Replenish ($500/mo) — active, launch confirmation + week-1 snapshot pending.
+• BOK Law — active, week of Jun 23 social **9 days overdue**; week of Jun 30 delivery **2 days overdue**.
+• NKCDC — active, **BLOCKED** on Free Tax Prep landing page (~79 days no Anthony response).
+• Commercial Cleaners Alliance — onboarding, creative delivery audit vs 2026-04-08 commitment.
+• Hardwood Artisan ($150/mo) — **AT RISK**, billing card update outstanding (~87 days).
+• Onsite Concrete & Landscape — active, standing Thursday call cadence.
 
 ## Full-time
-• Align HCM — Dillon's full-time employer. Not a client. Not counted in client totals.
+• Align HCM — Dillon's full-time employer. Maher script 6 days overdue; Mon Joann 10 days overdue; Wed SmartCare 8 days overdue. Not M360 revenue.
 
 ## Pending deliverables
-• Bar Crawl USA — resolve 2 disapproved ads (Halloween / Fall Cocktail Crawl language flagged 2026-04-14/15).
-• Kimberly James Bridal — publish Timeline page, verify GA4 + GSC indexing per Mac.
-• LinkEZE — fix enhanced conversions data source diagnostics; confirm MFA enabled on 809-600-6448.
-• Fresh Blends / Replenish — confirm 2026-04-13 campaign launch went live; first-week performance snapshot.
-• NKCDC — launch Free Tax Prep campaign the moment NKCDC clears the landing page.
-• Commercial Cleaners Alliance — deliver CCA creatives + NexGen creatives (committed 2026-04-08).
-• Hardwood Artisan — CHASE billing card update before engagement pauses.
-• Omega Landscaping — drone footage from David.
+• NKCDC — launch Free Tax Prep campaign when landing page ships; escalate with Mac.
+• Bar Crawl USA — resolve 2 Google Ads disapprovals (Halloween / Fall Cocktail Crawl).
+• Hardwood Artisan — chase Dalton on billing card before engagement pauses.
+• LinkEZE — fix enhanced conversions diagnostics; enable MFA on 809-600-6448.
+• Align HCM — ship Maher video script (6d overdue), Mon Joann + Wed SmartCare posts from Jun 23 week.
+• BOK Law — deliver week of Jun 30 social to Dorothy (2d overdue); ship Jun 23 week if never sent (9d overdue).
+• Kimberly James Bridal — publish Timeline page, verify GA4 + GSC indexing.
+• Fresh Blends / Replenish — confirm launch pacing; first-week snapshot to Mia.
+• Commercial Cleaners Alliance — deliver CCA + NexGen creatives audit.
 • Jeff Hozias — launch approved seller Meta campaign.
+• Omega Landscaping — drone footage from David.
+• Book — publish Dijon Garnier character page; rewrite homepage meta per [[05_Book/seo-sweep-2026-07-02]].
 
 ## Upcoming deadlines (7 days)
-• 2026-04-16 — Onsite x M360 weekly call (1:00 PM ET).
-• 2026-04-16 — Commercial Cleaners Alliance creative commitment.
-• 2026-04-18 — Hardwood Artisan billing card deadline (implied from "next 90 days" ask 2026-04-07).
-• 2026-04-25 — Bar Crawl USA Taco & Tequila wave 1 (9 cities).
-• 2026-05-02 — Bar Crawl USA Taco & Tequila wave 2.
+• **2026-07-06 (Sun)** — `content-routines`: Bok Law + Align LinkedIn weekly generation.
 
 ## Recent completions (7 days)
-• 2026-04-14 — BOK Law weekly social content delivered.
-• 2026-04-14 — Jeff Hozias seller ad copy approved.
-• 2026-04-13 — KJB Wedding Dress Timeline page approved.
-• 2026-04-13 — Bar Crawl USA PMax update sent to Andy (53 tickets, all April 25 cities live, May 2 launching).
-• 2026-04-12 — Fresh Blends / Replenish admin access granted to Mia.
-• 2026-04-09 — NKCDC revised strategy delivered and approved by Anthony.
-• 2026-04-01 — Monthly reports sent to Omega, Jeff Hozias, Hardwood Artisan.
+• 2026-07-02 — Book SEO sweep written (`05_Book/seo-sweep-2026-07-02.md`).
+• 2026-06-29 — Bok Law week of Jun 30 + Align HCM week of Jun 30 LinkedIn drafts generated (Sunday content-routines) — **files not in repo**.
+• 2026-06-25 — Book SEO sweep (`05_Book/seo-sweep-2026-06-25.md`) — **file not in repo**.
 
 ## Unanswered / urgent
-• **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
-• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
-• **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
-• **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
-• **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+• **NKCDC** — Anthony silent since Mac's 2026-04-15 follow-up. Launch blocked.
+• **Hardwood Artisan** — Sean's 2026-04-07 billing request still outstanding.
+• **Bar Crawl USA** — Andy waiting on disapproval resolution since 2026-04-15.
+• **Align HCM** — Overdue content stack (Maher 6d, Mon 10d, Wed 8d).
+• **BOK Law** — Dorothy waiting on week of Jun 23 social (9d overdue); Jun 30 delivery 2d overdue.
