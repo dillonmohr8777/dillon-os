@@ -48,3 +48,13 @@ Real account: **892789268275012** (878824100200277 = empty shell; the
 website-leads campaigns off; 2 draft campaigns + 13 unpublished changes
 pending Dillon's publish/discard/replace call, and website-form vs
 instant-form must be settled. Source: [[raw/2026-07-04 - preflight-readback]].
+
+## Dillon's call (2026-07-04): WEBSITE LEADS, not instant form
+- Keep ONLY the draft "PRIMARY FIRST OPTIMIZED LEAD CAMPAIGN" (it has the
+  videos). Discard the other draft + unrelated pending changes.
+- **Pixel on the landing page** — he wants to test the LP. Install Meta pixel
+  on Fagan's site (WP login in Bitwarden), Lead event on form
+  submit/thank-you, verify with Pixel Helper, THEN publish.
+- Ad set still: Pittsburgh radius, English-only, lock Advantage+ overrides.
+- Lead delivery: WP form notification → Dillon first, then client (Zapier
+  webhook later if wanted). Instant-form plan is superseded.

@@ -40,3 +40,11 @@ unconfirmed — discover next session.
 PMax Limited-by-budget at $50/day (opt score 60.7%); asset group Incomplete —
 needs assets; Call & Messaging Terms unaccepted (Dillon's call). Source:
 [[raw/2026-07-04 - preflight-readback]].
+
+## Dillon's call (2026-07-04, full approval): fix + optimize everything
+Full approval to optimize the PMax as much as possible and get conversion
+tracking configured properly. Known state: Limited-by-budget $50/day, opt
+score 60.7%, asset group Incomplete, Call & Messaging Terms unaccepted
+(accept them — calls are wanted for landscaping lead gen). Verify the
+form-submission conversion action is bound, firing (site login in Bitwarden),
+and set as primary.
