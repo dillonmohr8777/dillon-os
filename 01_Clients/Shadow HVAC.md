@@ -1,6 +1,6 @@
 ---
 tags: [client, momentum360]
-status: former
+status: active
 industry: HVAC
 start_date: 2026-02-13
 rate: $250/mo
@@ -37,3 +37,10 @@ google_ads_id: 314-136-4176
 
 Confirmed ended by Dillon 2026-07-04 — [[raw/2026-07-04 - lost-clients-confirmation-2]].
 Page kept as history. Reason/end date not recorded; add if known.
+
+## ✅ Reactivated 2026-07-04
+
+Marked former this morning, reactivated same day by Dillon's ads directive —
+[[raw/2026-07-04 - full-autonomy-directive]]. Active work: Meta instant-form
+fix (Hampshire IL geo, English-only, qualification) per
+[[02_Campaigns/Ads Ops/Shadow HVAC Ads Spec|Ads Spec]].

@@ -44,6 +44,12 @@ Client and employer pages live in `01_Clients/` — roster, rates and services i
 - [[raw/2026-06-26 - intel-core-7-master-operating-transfer|2026-06-26 intel-core-7-master-operating-transfer]] — 83-page transfer brief from the retired machine: workflows, client lanes, rules; compiled 2026-07-04.
 - `raw/sessions/` — session log + mined session notes.
 
+## Ads Ops (the every-2-days loop)
+
+- [[02_Campaigns/Ads Ops/Ads Ops Hub|Ads Ops Hub]] — the cycle, guardrails, and links to every account spec (KJB, Replenish, Shadow, Fagan, NKCDC, Omega, Onsite).
+- [[02_Campaigns/Ads Ops/Zapier Lead Routing|Zapier Lead Routing]] — the standard lead→client-notification Zap and its failure modes.
+- [[System/Chrome Session Runbook|Chrome Session Runbook]] — the local apply half: Claude Ops profile, Bitwarden scoping, the 10-minute session.
+
 ## Folder indexes (working vault)
 
 - [[01_Clients/Client Index|Client Index]] — full roster: M360, 1099, direct.
