@@ -32,6 +32,7 @@ Client and employer pages live in `01_Clients/` — roster, rates and services i
 - [[concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove; "Ready with caveat"; aggregate-only PII.
 - [[concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin the site on every deploy; static-fetch verification; never browser-open conversion pages.
 - [[concepts/Google Docs Sharding Pattern|Google Docs Sharding Pattern]] — sub-MB plain-text shards → native Docs → one index doc with a stable prefix.
+- [[concepts/Leading Indicators|Leading Indicators]] — validated churn/growth signals; the prediction layer `/synthesize` grades itself against weekly.
 
 ## Raw captures
 
