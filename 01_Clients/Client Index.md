@@ -4,6 +4,11 @@ tags: [client, moc]
 
 # Client Index
 
+> ⚠️ **Stale as of 2026-07-04** — Dillon reports some clients below are lost or
+> inactive (names pending) and services have expanded into web/landing page
+> design. Source: [[raw/2026-07-04 - business-update-voice-note]]. Verify
+> before building reports or briefs on this roster.
+
 ## Momentum 360 (Account Manager)
 
 | Client                       | Website                     | Rate         | Start     | Services                                                        |

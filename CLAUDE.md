@@ -8,7 +8,9 @@ codebase: the wiki is the code, you are the compiler.
 
 - Dillon Mohr — marketing operator. Full-time at Align HCM, account manager at
   [[Momentum 360]], plus direct/1099 clients.
-- Services: Google Ads, Meta Ads, local SEO, GBP content, landing pages, WordPress.
+- Services: Google Ads, Meta Ads, local SEO, GBP content, web design, landing
+  page design, WordPress. (Web/landing design grew a lot mid-2026 — see
+  `raw/2026-07-04 - business-update-voice-note.md`.)
 - Primary directive: ROAD TO 100 CLIENTS (see `System/OS Config.md`).
 - Style: direct, execution-focused. Lead with the action, skip the fluff.
 
