@@ -10,6 +10,19 @@ updated: 2026-07-04
 ([[raw/2026-07-04 - full-autonomy-directive|directive]]) — analyze, recommend,
 and institute changes across all ad accounts.
 
+## Mission (Dillon, 2026-07-04) — every cycle optimizes for these four, in order
+
+1. **Publish ads** — get campaigns live (paused-create → verify → enable).
+2. **Optimize them** — search terms, geo, budgets, creative rotation.
+3. **Optimize conversions** — the right conversion action bound as primary,
+   firing verified, fed back into bidding.
+4. **Leads configured and DELIVERED** — form fills reach the client in
+   minutes, every time: [[02_Campaigns/Ads Ops/Zapier Lead Routing|Zapier]]
+   is the mechanism (machine-time), agents only maintain and verify it.
+   Client-update emails go out via the local Chrome session's Gmail
+   (draft-first); remote sessions write drafts as text only — no Gmail send
+   access remotely.
+
 ## The cycle (every 2 days)
 
 1. **Remote analysis session** (scheduled trigger): reads these spec pages +
