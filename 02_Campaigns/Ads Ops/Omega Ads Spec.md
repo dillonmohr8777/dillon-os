@@ -35,3 +35,8 @@ Colorado Springs landscaping/concrete. $400/mo. Contact David Granados.
 Google Ads **285-398-1364** — live, **active PMax**. Source:
 [[raw/2026-07-04 - account-inventory-sweep]]. Meta account ID still
 unconfirmed — discover next session.
+
+## Preflight 2026-07-04
+PMax Limited-by-budget at $50/day (opt score 60.7%); asset group Incomplete —
+needs assets; Call & Messaging Terms unaccepted (Dillon's call). Source:
+[[raw/2026-07-04 - preflight-readback]].

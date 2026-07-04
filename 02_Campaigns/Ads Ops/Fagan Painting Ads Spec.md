@@ -41,3 +41,10 @@ Fagan's Meta runs on **his LLC's own account (Fagan Painting LLC)** — not a
 Momentum/Dillon BM. When verifying the 892789268275012 vs 23849136117580444
 conflict, the LLC-owned one is the live lane. Source:
 [[raw/2026-07-04 - platform-scope-and-bitwarden-state]].
+
+## RESOLVED + URGENT (preflight 2026-07-04)
+Real account: **892789268275012** (878824100200277 = empty shell; the
+23849…444 candidate was a misread). **Fagan is fully dark** — both
+website-leads campaigns off; 2 draft campaigns + 13 unpublished changes
+pending Dillon's publish/discard/replace call, and website-form vs
+instant-form must be settled. Source: [[raw/2026-07-04 - preflight-readback]].

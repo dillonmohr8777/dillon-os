@@ -38,3 +38,7 @@ page, plus-size page, timeline page).
 Sweep lists **814-550-6229 as seed**, 721-491-4099 also referenced —
 **verify which is live before ANY edit**. Source:
 [[raw/2026-07-04 - account-inventory-sweep]].
+
+## RESOLVED (preflight 2026-07-04): live account = 814-550-6229
+721-491-4099 shows (Cancelled) in the selector. All work happens in
+**814-550-6229**. Source: [[raw/2026-07-04 - preflight-readback]].

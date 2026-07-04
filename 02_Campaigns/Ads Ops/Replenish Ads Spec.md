@@ -32,3 +32,8 @@ South Florida smoothie kiosks. $500/mo. Contact Mia Lange (CC Sean).
 ## KPIs
 Daily drink sales (primary, modeled via directions clicks → visit → purchase →
 AOV); branded "7-Eleven smoothies" searches (secondary).
+
+## Preflight 2026-07-04
+Kwik Trip **#1161 paused** (holding); Pampano running. Pending: $500-cap
+dollar check (cost column wouldn't render) and confirm #573/#633 Ended.
+Source: [[raw/2026-07-04 - preflight-readback]].
