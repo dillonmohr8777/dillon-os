@@ -36,3 +36,8 @@ Google 314-136-4176 exists but **paused / no active spend**. Meta lane is
 ACTIVE — recent campaign "Shadow AC Leads…". Dillon's priority call: Shadow is
 last in the all-client session order. Source:
 [[raw/2026-07-04 - account-inventory-sweep]].
+
+## Scope lock (Dillon, 2026-07-04): META ONLY
+**Ignore Shadow's Google Ads entirely** — no optimization, no reactivation of
+314-136-4176. Shadow work = the Meta instant-form fix + Zapier routing, nothing
+else. Source: [[raw/2026-07-04 - platform-scope-and-bitwarden-state]].

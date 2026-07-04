@@ -35,3 +35,9 @@ English-only, higher-intent form, Zapier delivery to client.
   higher-intent form questions, then the Zapier route (Dillon first → client
   → sheet) with a test lead before publish.
 Source: [[raw/2026-07-04 - account-inventory-sweep]].
+
+## Account resolution (Dillon, 2026-07-04)
+Fagan's Meta runs on **his LLC's own account (Fagan Painting LLC)** — not a
+Momentum/Dillon BM. When verifying the 892789268275012 vs 23849136117580444
+conflict, the LLC-owned one is the live lane. Source:
+[[raw/2026-07-04 - platform-scope-and-bitwarden-state]].
