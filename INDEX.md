@@ -50,6 +50,7 @@ Client and employer pages live in `01_Clients/` — roster, rates and services i
 - [[02_Campaigns/Ads Ops/Ads Ops Hub|Ads Ops Hub]] — the cycle, guardrails, and links to every account spec (KJB, Replenish, Shadow, Fagan, NKCDC, Omega, Onsite).
 - [[02_Campaigns/Ads Ops/Zapier Lead Routing|Zapier Lead Routing]] — the standard lead→client-notification Zap and its failure modes.
 - [[System/Chrome Session Runbook|Chrome Session Runbook]] — the local apply half: Claude Ops profile, Bitwarden scoping, the 10-minute session.
+- [[concepts/NKCDC Intake LP Serving (2026-07-04)|NKCDC Intake LP Serving (2026-07-04)]] — verified ads-research: the LP that blocked NKCDC's launch since April is now serving; verify the exact `ref=` URL, then launch checklist. Expires 2026-08-03.
 
 ## Folder indexes (working vault)
 
