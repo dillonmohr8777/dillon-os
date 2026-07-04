@@ -36,6 +36,8 @@ const VERDICTS = {
   properties: {
     verdicts: { type: 'array', items: { type: 'object', properties: {
       claim: { type: 'string' },
+      source: { type: 'string' },
+      date: { type: 'string' },
       verdict: { type: 'string', enum: ['survives', 'single-source', 'killed'] },
       why: { type: 'string' },
     }, required: ['claim', 'verdict'] } },
@@ -80,7 +82,7 @@ if (!String(cacheCheck).includes('FRESH')) {
   )))
   const allClaims = found.filter(Boolean).flatMap(f => f.claims)
   const skeptic = await agent(
-    `You did NOT do this research. Attack every claim below — kill undated/unverifiable ones, label single-source ones, pass only what a marketer should act on in July 2026:\n${JSON.stringify(allClaims)}`,
+    `You did NOT do this research. Attack every claim below — kill undated/unverifiable ones, label single-source ones, pass only what a marketer should act on in July 2026. Carry each claim's source and date through into your verdicts:\n${JSON.stringify(allClaims)}`,
     { label: 'skeptic', phase: 'Research', schema: VERDICTS }
   )
   survivors = skeptic ? skeptic.verdicts.filter(v => v.verdict !== 'killed') : []
@@ -104,7 +106,10 @@ Produce this cycle's actions for the apply session: exact changes (publish / opt
     { label: `audit:${s.key}`, phase: 'Audit', schema: ACTIONS }
   ),
   (audit, s) => audit && agent(
-    `Adversarial check. Read ${s.file} fresh. Below are proposed actions for ${audit.client}. KILL any action that: violates a brand rule in the spec, edits an account the spec says verify-live-first without verification as step one, changes budget >20% in one step, or claims a number without a source. Return the surviving actions in the same schema (keep flags/blocked as-is, minus anything you killed with a note in flags).`,
+    `Adversarial check. Read ${s.file} fresh. Below are proposed actions for ${audit.client}. KILL any action that: violates a brand rule in the spec, edits an account the spec says verify-live-first without verification as step one, changes budget >20% in one step, or claims a number without a source. Return the surviving actions in the same schema (keep flags/blocked as-is, minus anything you killed with a note in flags).
+
+Proposed actions (audit JSON):
+${JSON.stringify(audit)}`,
     { label: `verify:${s.key}`, phase: 'Verify', schema: ACTIONS }
   ).then(v => v || audit)
 )
@@ -122,6 +127,7 @@ const packet = await agent(
 5. Return the packet path + a 5-line executive summary.
 
 Data: ${JSON.stringify(audited.filter(Boolean))}
+${survivors.length ? `Research survivors to land: ${JSON.stringify(survivors)}` : ''}
 Rules: no lead PII; numbers only with sources; Dillon-first lead routing is the standard.`,
   { label: 'packet', phase: 'Packet' }
 )
