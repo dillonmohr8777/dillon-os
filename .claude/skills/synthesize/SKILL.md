@@ -23,7 +23,13 @@ Write `Daily-Briefs/synthesis-YYYY-MM-DD.md`:
 3. **What deserves attention** — the 3 highest-leverage moves for next week,
    grounded in vault pages ([[link]] each one). Tie back to the primary
    directive in `System/OS Config.md` (ROAD TO 100 CLIENTS).
-4. **Wiki health** — one line: pages added/updated this week, lint status.
+4. **Predictions** — check every active client and open thread against
+   `concepts/Leading Indicators.md` and make explicit calls: who is at churn
+   risk and why, what will bite in the next two weeks if untouched, which
+   lane is compounding. State each as a falsifiable one-liner with a
+   watch-signal. Grade last week's predictions (hit / miss / pending) and
+   record confirmed hits or busts back into Leading Indicators.
+5. **Wiki health** — one line: pages added/updated this week, lint status.
 
 Update any wiki page the synthesis proves wrong or stale (with source), and
 add the synthesis note itself to no index — briefs are output, not wiki.
