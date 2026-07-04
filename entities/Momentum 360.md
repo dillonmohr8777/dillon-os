@@ -35,3 +35,12 @@ the recurring client roster runs through M360 — see the roster table in
   [[Omega Landscaping]], [[Jeff Hozias]], [[KJB]], [[Fresh Blends - Replenish]],
   [[Hardwood Artisan]], [[NKCDC]], [[Onsite Concrete]], [[Blissful Events]],
   [[Bridge of Hope OTC]], [[Bok Law]], [[Bluegrass Janitorial]]
+
+## 2026-06 update — compiled from [[raw/2026-06-26 - intel-core-7-master-operating-transfer]]
+
+- **June 2026 commissions: $5,275 total.** New rows: Omega $400, Jason Fallon $250, Mike/Revive $200; TBD rows for "Ecosystem for Tori" and "VA Claims".
+- **Christian Tippens** — Momentum teammate on Google Ads/reviews lane (Slack `#ghl-leads-apollo`). Wants short operational DM updates; team artifacts via Slack Canvas. His "Reviews Lead Form" conversion action lives in the "Mac YT Ads" account.
+- **Jason Fallon** is now also a revenue-row client: HubSpot Growth Ops reporting agent (read-only, mock-first, no HubSpot writes until approval; CLI `npm run hubspot:report`).
+- **Melissa Silber** requested an automated client dashboard (metrics + documents to review) — [[KJB]] is the pilot.
+- **Beth Kann** handoff: `momentumlocalseo@gmail.com` login in a separate browser profile, Google sign-in for Squarespace (`#capsule-and-tonic`).
+- M360 redesign + 3 review-recovery landing pages live on Netlify (Ads tag AW-17190756357).
