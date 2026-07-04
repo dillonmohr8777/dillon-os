@@ -8,14 +8,16 @@ updated: 2026-07-04
 
 Colorado Springs landscaping/concrete. $400/mo. Contact David Granados.
 
-## ⚠️ Scope reality (verify before optimizing)
-- **Meta/Facebook ads are run by John Belaska (third party), not Dillon** —
-  waiting on drone footage from David for refreshed creative. Don't touch
-  Meta without confirming lane ownership with Dillon.
+## Scope (corrected 2026-07-04)
+- **Dillon runs Omega's ads — Google AND Meta**
+  ([[raw/2026-07-04 - ads-ownership-correction|correction]]; the June brief's
+  John-Belaska claim is superseded). Creative note that survives: drone
+  footage from David is still wanted for refreshed Meta creative.
 - **No Google Ads account ID on file**, and May evidence showed the account
   wasn't visible in the signed-in Ads selector (access/Chrome-attachment
   issue). June report showed real spend ($125.42, 56 clicks, 4.61% CTR,
-  2 form submissions) — so *something* is running somewhere.
+  2 form submissions) — find the account ID in the first Chrome session and
+  record it here.
 
 ## Cycle-1 actions
 1. In the Chrome session: resolve which Google Ads account exists, get the ID
