@@ -24,6 +24,7 @@ Client and employer pages live in `01_Clients/` — roster, rates and services i
 ## Raw captures
 
 - [[raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — the blueprint this brain layer was built from.
+- [[raw/2026-07-04 - business-update-voice-note|2026-07-04 business-update-voice-note]] — roster is stale (some clients lost, names TBD); services expanded into web/landing design.
 - `raw/sessions/` — session log + mined session notes.
 
 ## Folder indexes (working vault)
