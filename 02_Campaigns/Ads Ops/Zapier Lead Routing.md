@@ -1,0 +1,50 @@
+---
+tags: [ads-ops, automation, leads]
+source: "[[raw/2026-07-04 - full-autonomy-directive]]"
+updated: 2026-07-04
+---
+
+# Zapier Lead Routing
+
+**The standing fix**: every Meta instant-form lead must reach the client
+within minutes, automatically. This is the problem Codex never solved; Dillon
+has the Zapier login and granted full autonomy to build it.
+
+## The standard Zap (one per client)
+
+```
+Trigger:  Facebook Lead Ads — New Lead
+          (connect the client's PAGE + the specific FORM — this binding is
+           where it usually silently breaks)
+Filter:   only real submissions (skip test leads; optionally geo/answer filter
+          using the qualifying-question fields)
+Action 1: Email to client (Gmail step) — "New lead: {name} {phone} {answers}"
+Action 2: (optional) SMS to client via their preferred channel
+Action 3: Append row to "[Client] - Leads" Google Sheet (the permanent log —
+          same pattern as KJB's lead sheet)
+```
+
+## Why it breaks (the Codex failure modes — check in this order)
+1. **Page permission**: the Zapier Facebook connection must be made by a user
+   with full page + leads_retrieval access on the client's page; agency-level
+   BM access often isn't enough. Reconnect per page.
+2. **Form binding**: a Zap bound to an old/duplicated form silently gets
+   nothing when the form is re-created in Ads Manager. After any form edit,
+   re-select the form in the Zap and re-test.
+3. **Stale token**: Facebook connections expire quietly — Zap history shows
+   "no new data". Reauthorize.
+4. **CRM sync assumption**: Meta's own "CRM setup" and Zapier are separate;
+   leads landing in Meta's Leads Center prove nothing about the Zap.
+5. **Test discipline**: use Meta's Lead Ads Testing Tool → confirm the test
+   lead appears in Zap history → confirm client email actually delivered
+   (check spam) → THEN mark routed. Every step separately (the
+   [[concepts/Draft-First Operating Rules|separate-actions rule]]).
+
+## Rollout order
+1. [[02_Campaigns/Ads Ops/Shadow HVAC Ads Spec|Shadow HVAC]] (with the form fix)
+2. [[02_Campaigns/Ads Ops/Fagan Painting Ads Spec|Fagan Painting]] (after intake)
+3. [[02_Campaigns/Ads Ops/KJB Ads Spec|KJB]] (currently manual sheet — automate it)
+4. Every future lead-gen client gets this at launch, by default.
+
+Per-cycle check: Zap history green for all clients; any "no new data" streak
+longer than the client's normal lead cadence gets flagged in the Action Packet.

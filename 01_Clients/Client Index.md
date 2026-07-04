@@ -16,6 +16,7 @@ tags: [client, moc]
 | Client                       | Website                     | Rate         | Start     | Services                                                        |
 | ---------------------------- | --------------------------- | ------------ | --------- | --------------------------------------------------------------- |
 | [[Bar Crawl USA]]            | barcrawlusa.com             | $950/mo      | 2/16/2026 | Google Ads, 20-city landing pages, WordPress publisher tool     |
+| [[Shadow HVAC]]              | shadowheatingandcooling.com | $250/mo      | 2/13/2026 | Meta instant-form leads, Google Ads/LSA, GBP — reactivated 7/4  |
 | [[Omega Landscaping]]        | omegalandscapecorp.com      | $400/mo      | 3/1/2026  | GBP content (4x/week), blogs, local SEO, reports, Google Ads    |
 | [[KJB]]                      | kimberlyjamesbridal.com     | $300/mo      | 3/12/2026 | Google Ads, Meta lead gen, Squarespace SEO pages, brand design  |
 | [[Fresh Blends - Replenish]] | freshblends.com             | $500/mo      | 3/23/2026 | Paid media, 7-Eleven location landing pages + tracking          |
@@ -51,7 +52,6 @@ Confirmed ended by Dillon 2026-07-04 ([[raw/2026-07-04 - lost-clients-confirmati
 - [[Link Eze]] — was M360, $300/mo, Google Ads (ecommerce/Shopify), HTML reports
 - [[Hardwood Artisan]] — was M360, GBP content (4x/week), HTML reports
 - [[Jeff Hozias]] — was M360, $200/mo, GBP content (3x/week), Meta/Google Ads
-- [[Shadow HVAC]] — was M360, $250/mo, GBP content, Google Ads Search, LSA
 - [[Blissful Events]] — was M360, $500 one-time concert campaign
 - [[Bridge of Hope OTC]] — was M360/direct, SEO blog content
 - [[Bluegrass Janitorial]] — was M360/direct, SEO blogs, MailChimp, product content
