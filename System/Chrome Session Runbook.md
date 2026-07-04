@@ -18,9 +18,10 @@ hands**. Runs on Dillon's machine, ~10–15 min per cycle.
 2. **Bitwarden scoping — two-account org pattern (adopted 2026-07-04):**
    - Dillon creates a Bitwarden **organization** with collection
      `Claude Client Access`, sharing only client/ads/delivery logins into it.
-   - Second member account "Claude" invited via **dillonmohr8777+claude@gmail.com**
-     (plus-alias — invite lands in Dillon's inbox; he accepts and sets a fresh
-     generated master password).
+   - Second member account "Claude" invited via **pollotharuler@gmail.com**
+     (Dillon's alt Gmail — set up 2026-07-04). That Gmail is the recovery
+     anchor for the credential account: it must have 2FA on, and the Bitwarden
+     account gets 2FA + a generated master password.
    - Claude member gets **read-only** ("can view") access to the collection.
    - That account stays logged into the Bitwarden **extension in the Claude
      Ops profile** (PIN unlock). The agent uses autofill; it never sees,
