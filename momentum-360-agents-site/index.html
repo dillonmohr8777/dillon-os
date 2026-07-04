@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Momentum 360 Agents | Your Marketing Team, On Tap</title>
+<meta name="description" content="Ask anything about growing your business. Nineteen specialist AI marketing agents, trained on Momentum 360's client playbooks and powered by GPT-5.5.">
+<meta property="og:title" content="Momentum 360 Agents | Your Marketing Team, On Tap">
+<meta property="og:description" content="Nineteen specialist AI marketing agents, trained on Momentum 360's client playbooks and powered by GPT-5.5.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="momentum-360-logo.png">
+<link rel="apple-touch-icon" href="momentum-360-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#14274E;
+    --navy-deep:#0C1A36;
+    --navy-mid:#1D3667;
+    --gold:#E1A93B;
+    --gold-soft:#EEC069;
+    --gold-deep:#B9842A;
+    --ink:#172a4d;
+    --slate:#56657d;
+    --paper:#F0F2F5;
+    --white:#fff;
+    --line:#E1E6EE;
+    --line-d:rgba(255,255,255,.13);
+    --maxw:1180px;
+    --display:"Montserrat",system-ui,sans-serif;
+    --body:"Inter",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);color:var(--ink);background:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--display);line-height:1.12;font-weight:700}
+  a{color:inherit;text-decoration:none}
+
+  .m-logo{background-image:url(data:image/png;base64,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);background-size:contain;background-repeat:no-repeat;background-position:center;display:inline-block}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;padding:16px 28px;border-radius:6px;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,box-shadow .2s ease,background .2s ease,color .2s ease}
+  .btn-gold{background:var(--gold);color:var(--navy-deep);box-shadow:0 10px 26px -12px rgba(225,169,59,.7)}
+  .btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px)}
+  .btn-white{background:#fff;color:var(--navy);box-shadow:0 10px 26px -14px rgba(0,0,0,.5)}
+  .btn-white:hover{background:var(--paper);transform:translateY(-2px)}
+  .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+  .btn-outline:hover{border-color:#fff;transform:translateY(-2px)}
+  .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+  /* heading with gold underline */
+  .h-center{text-align:center;margin-bottom:44px}
+  .h-center h2{font-size:clamp(1.9rem,3.8vw,2.7rem);font-weight:800;margin-bottom:18px}
+  .h-center .bar{width:74px;height:4px;background:var(--gold);border-radius:3px;margin:0 auto;transform:scaleX(0);transform-origin:center;transition:transform .6s ease}
+  .h-center.in .bar{transform:scaleX(1)}
+  .light .h-center h2{color:var(--navy)} .navy .h-center h2,.deep .h-center h2{color:#fff}
+  .h-center .eyebrow{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-bottom:12px}
+  .navy .h-center .eyebrow,.deep .h-center .eyebrow{color:var(--gold)}
+
+  /* NAV */
+  header{position:fixed;top:0;left:0;right:0;z-index:70;background:var(--navy);border-bottom:1px solid var(--line-d);transition:background .3s ease}
+  header.scrolled{background:rgba(12,26,54,.96);backdrop-filter:blur(10px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:16px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .nav-logo{width:50px;height:50px;flex:none}
+  .brand-text b{display:block;font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--gold);line-height:1}
+  .brand-text span{display:block;font-family:var(--display);font-weight:600;font-size:.62rem;letter-spacing:.02em;color:#fff;margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{color:rgba(255,255,255,.82);font-size:.92rem;font-weight:500}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{display:flex;align-items:center;gap:16px}
+  .nav-phone{color:#fff;font-family:var(--display);font-weight:700;font-size:.92rem;white-space:nowrap}
+  .nav .btn{padding:11px 18px;font-size:.78rem}
+  .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .burger span{width:26px;height:2.5px;background:#fff;border-radius:2px;transition:.25s}
+  .mobile-menu{display:none;flex-direction:column;background:var(--navy-deep);border-top:1px solid var(--line-d)}
+  .mobile-menu a{padding:15px 24px;color:#fff;border-bottom:1px solid var(--line-d);font-weight:500}
+  .mobile-menu.open{display:flex}
+  @media(max-width:1080px){.nav-links,.nav-phone{display:none}.burger{display:flex}}
+  @media(max-width:560px){.brand-text span{display:none}.brand .nav-logo{width:42px;height:42px}.brand-text b{font-size:1.15rem}}
+
+  /* HERO */
+  .hero{position:relative;padding:108px 0 34px;background:linear-gradient(135deg,var(--navy-deep) 0%,var(--navy) 46%,#203e76 100%);color:#fff;overflow:hidden;text-align:left}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(54% 70% at 84% 18%,rgba(225,169,59,.22),transparent 64%),radial-gradient(70% 60% at 12% 10%,rgba(46,86,150,.38),transparent 62%);pointer-events:none}
+  .skyline{position:absolute;bottom:-20px;left:0;right:0;height:190px;opacity:.12;pointer-events:none}
+  .hero .wrap{position:relative;z-index:2}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(390px,.82fr);gap:58px;align-items:center}
+  .hero h1{font-size:3.82rem;font-weight:800;letter-spacing:0;margin:0 0 22px;max-width:14ch}
+  .hero-lead{max-width:650px;color:rgba(255,255,255,.84);font-size:1.16rem;line-height:1.7;margin-bottom:28px}
+  .hero-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:680px;margin-bottom:28px}
+  .hero-proof span{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);border-radius:10px;padding:13px 14px;font-size:.85rem;color:rgba(255,255,255,.78)}
+  .hero-proof b{display:block;font-family:var(--display);font-size:1.12rem;color:var(--gold);line-height:1.1;margin-bottom:3px}
+  .badge-strip{display:grid;grid-template-columns:repeat(5,minmax(82px,1fr));gap:12px;max-width:720px}
+  .badge-card{height:78px;border:0;background:transparent;border-radius:0;padding:4px;display:flex;align-items:center;justify-content:center;box-shadow:none}
+  .badge-card img{display:block;max-width:100%;max-height:64px;object-fit:contain}
+  .badge-card.tall img{max-height:68px}
+  .hero-panel{position:relative;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.17);border-radius:18px;padding:22px;box-shadow:0 30px 70px -42px #000;backdrop-filter:blur(8px)}
+
+  /* CONSULT FORM CARD */
+  .consult{background:rgba(12,26,54,.7);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:24px;text-align:left}
+  .form-title{font-family:var(--display);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:9px}
+  .consult h3{color:#fff;font-size:1.34rem;font-weight:700;text-align:center;margin-bottom:20px}
+  .cfield{margin-bottom:13px}
+  .cfield input,.cfield select{width:100%;padding:13px 15px;border:1px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.95);color:var(--ink);font-family:var(--body);font-size:.96rem}
+  .cfield input:focus,.cfield select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(225,169,59,.3)}
+  .consult .btn-gold{width:100%;margin-top:6px}
+  .consult .fine{font-size:.74rem;color:rgba(255,255,255,.6);text-align:center;margin-top:12px}
+  .consult-done{display:none;text-align:center;padding:24px 6px;color:#fff}
+  .consult-done.show{display:block}
+  .consult-done .ck{width:54px;height:54px;border-radius:50%;background:var(--gold);color:var(--navy-deep);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 14px}
+
+  section.b{padding:90px 0;position:relative}
+  .b.light{background:var(--paper);color:var(--ink)}
+  .b.white{background:#fff;color:var(--ink)}
+  .b.navy{background:var(--navy);color:#fff}
+  .b.deep{background:var(--navy-deep);color:#fff}
+  .lead-p{font-size:1.08rem;text-align:center;max-width:680px;margin:0 auto}
+  .light .lead-p{color:var(--slate)} .navy .lead-p,.deep .lead-p{color:rgba(255,255,255,.8)}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .about-copy .eyebrow{font-family:var(--display);font-weight:700;font-size:1.9rem;color:var(--gold);margin-bottom:18px;display:block}
+  .about-copy p{font-size:1.06rem;color:rgba(255,255,255,.82);margin-bottom:18px;max-width:520px}
+  .about-copy .btn{margin-top:6px}
+  .google-card{position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(160deg,var(--navy-mid),var(--navy-deep));border:1px solid rgba(255,255,255,.14);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:24px}
+  .google-card .pill{position:absolute;top:22px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy-deep);font-family:var(--display);font-weight:800;font-size:1.15rem;padding:12px 22px;border-radius:999px;white-space:nowrap;box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
+  .pin{width:54px;height:54px;border-radius:50% 50% 50% 0;background:linear-gradient(135deg,var(--gold),#d2452f);transform:rotate(-45deg);box-shadow:0 16px 30px -10px rgba(0,0,0,.5);position:relative}
+  .pin::after{content:"";position:absolute;inset:16px;background:#fff;border-radius:50%}
+  .gpartner{position:absolute;bottom:18px;right:18px;background:rgba(255,255,255,.96);border-radius:10px;padding:10px 14px;text-align:center}
+  .gpartner b{display:block;color:var(--navy);font-family:var(--display);font-weight:700;font-size:.82rem}
+  .gpartner span{display:block;color:var(--slate);font-size:.66rem;letter-spacing:.1em;font-weight:600;margin-top:2px}
+
+  /* VT */
+  .vt-copy{max-width:760px;margin:0 auto;text-align:center}
+  .vt-copy p{font-size:1.06rem;color:var(--slate);margin-bottom:18px}
+  .vt-copy .btn{margin-top:10px}
+
+  /* SERVICES */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;transition:transform .2s ease,box-shadow .2s ease;position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+  .svc:hover{transform:translateY(-6px);box-shadow:0 26px 54px -32px rgba(20,39,78,.4)}
+  .svc:hover::before{transform:scaleX(1)}
+  .svc .ic{width:48px;height:48px;border-radius:12px;background:rgba(225,169,59,.16);display:flex;align-items:center;justify-content:center;color:var(--gold-deep);margin-bottom:16px}
+  .svc h3{font-size:1.12rem;color:var(--navy);margin-bottom:9px}
+  .svc p{color:var(--slate);font-size:.93rem;margin-bottom:14px}
+  .svc a.disc{font-family:var(--display);font-weight:700;font-size:.78rem;letter-spacing:.08em;color:var(--gold-deep);text-transform:uppercase}
+
+  /* ICP */
+  .icp-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:28px}
+  .icp{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:30px}
+  .icp h3{color:#fff;font-size:1.2rem;margin-bottom:16px;display:flex;align-items:center;gap:11px}
+  .icp h3 .d{width:34px;height:34px;border-radius:9px;background:rgba(225,169,59,.18);color:var(--gold);display:flex;align-items:center;justify-content:center}
+  .icp ul{list-style:none;display:flex;flex-wrap:wrap;gap:9px}
+  .icp li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:7px 14px;font-size:.86rem;color:#fff;font-weight:500}
+
+  /* PAINS */
+  .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .pain{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+  .pain .t{font-family:var(--display);font-weight:700;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px;display:block}
+  .pain h3{font-size:1.06rem;color:var(--navy);margin-bottom:8px}
+  .pain p{color:var(--slate);font-size:.93rem}
+
+  /* SYSTEM */
+  .sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .sys{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px}
+  .sys .n{font-family:var(--display);font-weight:800;color:var(--gold);font-size:.9rem}
+  .sys h3{color:#fff;font-size:1.1rem;margin:7px 0 7px}
+  .sys p{color:rgba(255,255,255,.74);font-size:.92rem}
+
+  /* STAT */
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin:40px 0 28px;text-align:center}
+  .stat .num{font-family:var(--display);font-weight:800;font-size:clamp(3rem,7vw,5rem);color:var(--gold);line-height:1}
+  .stat .cap{color:rgba(255,255,255,.8);margin-top:8px}
+  .stat-extra{text-align:center;color:rgba(255,255,255,.74);font-size:1.05rem;margin-bottom:8px}
+  .stat-extra b{color:var(--gold)}
+  .stat-price{text-align:center;font-family:var(--display);font-weight:600;color:rgba(255,255,255,.6);margin-bottom:26px}
+  .cs-metrics{grid-template-columns:1fr 1fr;max-width:720px;margin:6px auto 0}
+  .case-study-block + .case-study-block{margin-top:86px;padding-top:78px;border-top:1px solid rgba(255,255,255,.16)}
+  .case-study-block .lead-p{max-width:760px}
+  .case-study-cta{text-align:center;margin:36px auto 0}
+  .case-study-cta p{max-width:620px;margin:0 auto 18px;color:rgba(255,255,255,.78);font-size:1rem}
+  .case-study-cta .btn{min-width:270px}
+  @media(max-width:560px){.cs-metrics{grid-template-columns:1fr}}
+
+  /* SWITCH */
+  .sw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .sw{display:flex;gap:13px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+  .sw .ck{flex:none;width:26px;height:26px;border-radius:7px;background:var(--gold);display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .sw h3{font-size:1.02rem;color:var(--navy);margin-bottom:4px}
+  .sw p{color:var(--slate);font-size:.89rem;line-height:1.5}
+
+  /* AWARDS */
+  .aw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .aw{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px;text-align:center}
+  .aw .ring{width:60px;height:60px;border-radius:50%;border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--gold);font-family:var(--display);font-weight:800;font-size:.7rem;text-align:center;line-height:1.1}
+  .aw h3{color:#fff;font-size:1rem;margin-bottom:6px}
+  .aw p{color:rgba(255,255,255,.68);font-size:.86rem}
+
+  /* FAQ */
+  .faq-list{display:grid;gap:13px;max-width:840px;margin:0 auto}
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .faq summary{list-style:none;cursor:pointer;padding:21px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--display);font-weight:700;font-size:1.04rem;color:var(--navy)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq .plus{flex:none;width:25px;height:25px;border-radius:50%;border:1.5px solid var(--gold-deep);color:var(--gold-deep);display:flex;align-items:center;justify-content:center;font-size:1.25rem;transition:transform .25s}
+  .faq[open] .plus{transform:rotate(45deg)}
+  .faq .ans{padding:0 24px 22px;color:var(--slate);font-size:.99rem;line-height:1.62}
+
+  /* AUDIT */
+  .audit-card{max-width:760px;margin:0 auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:32px;position:relative;overflow:hidden}
+  .audit-card .glow{position:absolute;top:-90px;right:-70px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(225,169,59,.28),transparent 65%);pointer-events:none}
+  .audit-title{position:relative;z-index:2;font-family:var(--display);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:9px}
+  .audit-card h3{position:relative;z-index:2;color:#fff;text-align:center;font-size:1.45rem;margin-bottom:10px}
+  .audit-note{position:relative;z-index:2;text-align:center;color:rgba(255,255,255,.72);max-width:560px;margin:0 auto 22px;font-size:.96rem}
+  .audit-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px;position:relative;z-index:2}
+  .audit-fields .full{grid-column:1/-1}
+  .audit-fields input{width:100%;padding:14px 16px;border:1px solid rgba(255,255,255,.2);border-radius:9px;background:rgba(255,255,255,.06);color:#fff;font-family:var(--body);font-size:.97rem}
+  .audit-fields input::placeholder{color:rgba(255,255,255,.5)}
+  .audit-fields input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(225,169,59,.25)}
+  .audit-card .btn-gold{width:100%;margin-top:14px}
+  .audit-out{margin-top:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px;color:rgba(255,255,255,.9);font-size:.97rem;line-height:1.62;white-space:pre-wrap;display:none}
+  .audit-out.show{display:block}
+  .audit-out .head{font-family:var(--display);font-weight:700;color:var(--gold);margin-bottom:9px;display:flex;align-items:center;gap:9px}
+
+  /* DELIVERABLES */
+  .deliver{list-style:none;display:grid;gap:12px}
+  .deliver li{display:flex;align-items:center;gap:12px;color:#fff;font-size:1rem}
+  .deliver .tk{flex:none;width:24px;height:24px;border-radius:50%;background:rgba(225,169,59,.2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem}
+
+  /* INSIGHTS */
+  .ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .ins{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+  .ins:hover{transform:translateY(-5px);box-shadow:0 26px 54px -34px rgba(20,39,78,.4)}
+  .ins .th{height:130px;background:linear-gradient(135deg,var(--navy-mid),var(--gold))}
+  .ins:nth-child(2) .th{background:linear-gradient(135deg,var(--navy),var(--gold-soft))}
+  .ins:nth-child(3) .th{background:linear-gradient(135deg,var(--navy-deep),var(--gold))}
+  .ins .bd{padding:22px}
+  .ins .tg{font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep)}
+  .ins h3{color:var(--navy);font-size:1.06rem;margin:9px 0 8px;line-height:1.25}
+  .ins p{color:var(--slate);font-size:.91rem;margin-bottom:12px}
+  .ins a.rm{font-family:var(--display);font-weight:700;font-size:.78rem;color:var(--gold-deep)}
+
+  /* FOOTER */
+  footer{background:var(--navy-deep);color:#fff;padding:56px 0 34px;border-top:1px solid var(--line-d)}
+  .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:38px}
+  .foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .foot-brand .nav-logo{width:46px;height:46px;flex:none}
+  .foot-brand b{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--gold)}
+  .foot-about{color:rgba(255,255,255,.62);font-size:.92rem;margin-bottom:16px;max-width:340px}
+  .foot-phone{color:var(--gold);font-family:var(--display);font-weight:700}
+  .socials{display:flex;gap:12px;margin-top:14px}
+  .socials a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s}
+  .socials a:hover{background:var(--gold);color:var(--navy-deep)}
+  .foot-col h4{font-family:var(--display);font-weight:700;font-size:.92rem;color:#fff;margin-bottom:14px}
+  .foot-col a{display:block;color:rgba(255,255,255,.6);font-size:.9rem;margin-bottom:9px}
+  .foot-col a:hover{color:var(--gold)}
+  .foot-badges{display:flex;gap:10px;flex-wrap:wrap}
+  .fbadge{width:88px;height:58px;background:transparent;border:0;border-radius:0;padding:4px;display:flex;align-items:center;justify-content:center}
+  .fbadge img{display:block;max-width:100%;max-height:50px;object-fit:contain}
+  .foot-bot{border-top:1px solid var(--line-d);padding-top:22px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.4)}
+
+  .reveal{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero h1{font-size:4rem;max-width:13ch}
+    .about-grid{grid-template-columns:1fr}
+    .icp-grid{grid-template-columns:1fr}
+    .svc-grid,.pain-grid,.sys-grid,.sw-grid,.ins-grid{grid-template-columns:1fr 1fr}
+    .aw-grid{grid-template-columns:1fr 1fr}
+    .foot-top{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 18px}
+    section.b{padding:60px 0}
+    .hero{padding:108px 0 34px}
+    .hero h1{font-size:2.55rem}
+    .hero-lead{font-size:1rem}
+    .hero-panel{display:none}
+    .badge-strip{grid-template-columns:repeat(2,minmax(0,1fr));max-width:100%}
+    .badge-card{height:68px}
+    .badge-card img{max-height:48px}
+    .hero-proof{grid-template-columns:1fr}
+    .svc-grid,.pain-grid,.sys-grid,.sw-grid,.ins-grid,.aw-grid,.stat-row,.audit-fields,.foot-top{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.h-center .bar{transform:scaleX(1)}}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Momentum 360 Agents home">
+      <span class="m-logo nav-logo" role="img" aria-label="Momentum 360 logo"></span>
+      <span class="brand-text"><b>Momentum 360</b><span>AI Marketing Agents, On Tap</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#agents">The Agents</a>
+      <a href="#how">How It Works</a>
+      <a href="#why">Why Agents</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:2156076482">(215) 607-6482</a>
+      <a class="btn btn-gold" href="#ask">Ask An Agent</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a><a href="#agents">The Agents</a><a href="#how">How It Works</a><a href="#why">Why Agents</a><a href="#ask">Ask An Agent</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <svg class="skyline" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true"><path fill="#2E5696" d="M0 200V120l40-6v-30l30 4v-26l34 8v40l26-14v40l40-22v54l34-30v60l40-44v74l30-50v90h-40z M300 200V90l36 6v30l40-20v50l34-24v70l40-40v88l30-58v92h-30z M700 200V100l40 8v40l34-18v44l40-28v66l30-30v68l40-40v80h-30z M1080 200V110l34 6v34l40-22v54l30-26v66l40-36v74l34-44v88h-40z"/></svg>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Your Marketing Team, On Tap</h1>
+      <p class="hero-lead">Momentum 360 Agents puts nineteen specialist AI marketers to work on your business. Ask anything about growing your company, or pick a specialist and start &mdash; every answer is built on Momentum 360's real client playbooks and powered by GPT-5.5.</p>
+      <div class="hero-proof" aria-label="Momentum 360 Agents proof points">
+        <span><b>19</b>specialist agents covering the full marketing funnel</span>
+        <span><b>4</b>squads: capture, get found, win customers, content</span>
+        <span><b>24/7</b>on tap whenever the marketing needs doing</span>
+      </div>
+      <div class="badge-strip" aria-label="Partner and recognition badges">
+        <span class="badge-card"><img src="assets/badges/google-partner.webp" alt="Google Partner"></span>
+        <span class="badge-card"><img src="assets/badges/rankwatch-2024.png" alt="RankWatch Top Agency 2024"></span>
+        <span class="badge-card tall"><img src="assets/badges/inc-5000.png" alt="Inc. 5000"></span>
+        <span class="badge-card"><img src="assets/badges/philly-100.png" alt="Philly 100"></span>
+        <span class="badge-card tall"><img src="assets/badges/best-of-pennsylvania.webp" alt="Best of Pennsylvania"></span>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <div class="consult">
+        <div id="consultForm">
+          <div class="form-title">Free &mdash; no signup required</div>
+          <h3>Ask Your First Question</h3>
+          <div class="cfield"><input id="c-name" name="name" type="text" placeholder="Name" autocomplete="name"></div>
+          <div class="cfield"><input id="c-email" name="email" type="email" placeholder="Email" autocomplete="email"></div>
+          <div class="cfield"><input id="c-biz" name="business" type="text" placeholder="Business name" autocomplete="organization"></div>
+          <div class="cfield"><input id="c-q" name="question" type="text" placeholder="e.g. How do I get more customers from Google?"></div>
+          <button class="btn btn-gold" type="button" id="consultBtn">Ask The Agents</button>
+          <p class="fine">A specialist-crafted answer lands in your inbox within one business day.</p>
+        </div>
+        <div class="consult-done" id="consultDone" role="status" aria-live="polite">
+          <div class="ck">&#10003;</div>
+          <h3>Your question is in.</h3>
+          <p style="color:rgba(255,255,255,.78)">The right specialist is on it. Expect a plain-English answer &mdash; and the first thing to do about it &mdash; within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="b navy" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow">One team, nineteen specialists</span>
+      <p>Momentum 360 Agents is your always-on marketing department: nineteen AI specialists covering virtual tours, photography, video, SEO, AI search, Google Business, paid ads, reviews, content, branding, and reporting &mdash; every one of them trained on the playbooks Momentum 360 runs with real clients.</p>
+      <p>Ask a question in plain English and the right specialist answers with a plan you can act on today. No blank pages, no agency wait times, no generic chatbot advice.</p>
+    </div>
+    <div class="google-card reveal" aria-hidden="true">
+      <div class="pill">Your Marketing Team, On Tap</div>
+      <div class="pin"></div>
+      <div class="gpartner"><b>Powered By GPT-5.5</b><span>MOMENTUM 360 PLAYBOOKS</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT THE AGENTS DO -->
+<section class="b white" id="services">
+  <div class="wrap">
+    <div class="h-center reveal"><span class="eyebrow">What the agents do</span><h2>What You Can Hand Off Today</h2><div class="bar"></div></div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l2-3h4l2 3"/><circle cx="12" cy="13" r="3.5"/></svg></div><h3>Capture &amp; Showcase</h3><p>Plan 360 virtual tours, listing photos, drone shoots, property video, and podcast episodes that make your business impossible to ignore.</p></div>
+      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Get Found Everywhere</h3><p>Rank in Google and AI search, own the local Map Pack, run Local Service Ads, and fix your listings so customers actually find you.</p></div>
+      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg></div><h3>Win More Customers</h3><p>Launch Meta and Pinterest ads, write copy that converts, revive cold leads, and respond to every review on-brand.</p></div>
+      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div><h3>Create A Month Of Content</h3><p>Turn one idea into posts, reels, emails, and blogs &mdash; a full month of on-brand content from a single working session.</p></div>
+      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4.5 4.5 0 00-6 6L3 18v3h3l5.7-5.7a4.5 4.5 0 006-6L14 13l-3-3 3.7-3.7z"/></svg></div><h3>Fix What Leaks</h3><p>Audit your website for the gaps that cost you leads, then get a prioritized fix list written in plain English.</p></div>
+      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>Understand Your Results</h3><p>Get a plain-English report card on what's working, what's not, and exactly what to do next &mdash; no dashboards required.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE ROSTER -->
+<section class="b navy" id="agents">
+  <div class="wrap">
+    <div class="h-center reveal"><span class="eyebrow">Meet the roster</span><h2>Nineteen Specialists, Four Squads</h2><div class="bar"></div></div>
+    <div class="icp-grid">
+      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l2-3h4l2 3"/><circle cx="12" cy="13" r="3.5"/></svg></span>Capture &amp; showcase</h3><ul><li>360 Virtual Tour</li><li>Listing Photos</li><li>Drone &amp; Aerial</li><li>Property Video</li><li>Podcast Studio</li></ul></div>
+      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>Get found</h3><ul><li>AI SEO</li><li>Google Business</li><li>Local Service Ads</li><li>Local Listings</li></ul></div>
+      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span>Win customers</h3><ul><li>Meta Ads</li><li>Ad Writer</li><li>Pinterest Ads</li><li>Lead Reviver</li><li>Review Manager</li><li>Social Studio</li></ul></div>
+      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3l4 4L8 20l-5 1 1-5L17 3z"/></svg></span>Content &amp; run it</h3><ul><li>Content Engine</li><li>Branding</li><li>Report Card</li><li>Website Fixes</li></ul></div>
+    </div>
+    <p class="lead-p reveal">Every agent is a specialist, not a generalist. Pick the one that matches the job &mdash; plan an immersive tour, own the map pack, wake up cold leads, ship a month of posts &mdash; or just ask your question and Momentum 360 Agents puts the right expert on it.</p>
+  </div>
+</section>
+
+<!-- PAINS -->
+<section class="b light">
+  <div class="wrap">
+    <div class="h-center reveal"><span class="eyebrow">Sound familiar</span><h2>The Problems The Agents Solve Daily</h2><div class="bar"></div></div>
+    <div class="pain-grid">
+      <div class="pain reveal"><span class="t">Time</span><h3>Marketing happens at midnight</h3><p>You run the business all day, so the marketing gets whatever energy is left at midnight &mdash; usually none.</p></div>
+      <div class="pain reveal"><span class="t">Blank page</span><h3>Nothing to post, again</h3><p>The content calendar is empty, the last post was three weeks ago, and the ideas ran out a long time ago.</p></div>
+      <div class="pain reveal"><span class="t">Generic AI</span><h3>Chatbots give you mush</h3><p>Generic AI gives generic advice. You need answers built for local business growth, not five-paragraph essays.</p></div>
+      <div class="pain reveal"><span class="t">Visibility</span><h3>Invisible in search and AI</h3><p>Customers ask Google, ChatGPT, and Gemini who to hire, and your business never comes up in the answer.</p></div>
+      <div class="pain reveal"><span class="t">Agencies</span><h3>A week for one revision</h3><p>Agencies bill big retainers, move slowly, and still take a week to send back a single draft.</p></div>
+      <div class="pain reveal"><span class="t">Direction</span><h3>No idea what to do first</h3><p>SEO, ads, reviews, content &mdash; everyone says something different, and you can't tell what actually moves revenue.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="b deep" id="how">
+  <div class="wrap">
+    <div class="h-center reveal"><span class="eyebrow">How it works</span><h2>Ask Anything. Get It Done.</h2><div class="bar"></div></div>
+    <p class="lead-p reveal" style="margin-bottom:40px">Momentum 360 Agents works the way you wish a marketing team worked: you talk, it delivers.</p>
+    <div class="sys-grid">
+      <div class="sys reveal"><span class="n">01</span><h3>Ask anything</h3><p>Type a question in plain English &mdash; "How do I get more customers from Google?" &mdash; and get a real plan back.</p></div>
+      <div class="sys reveal"><span class="n">02</span><h3>Or pick a specialist</h3><p>Choose from nineteen agents, each built for one job: tours, photos, SEO, ads, reviews, content, and more.</p></div>
+      <div class="sys reveal"><span class="n">03</span><h3>Built on real playbooks</h3><p>Every answer draws on the playbooks Momentum 360 runs with paying clients &mdash; not scraped internet advice.</p></div>
+      <div class="sys reveal"><span class="n">04</span><h3>Powered by GPT-5.5</h3><p>The latest model does the heavy lifting; Momentum 360's training keeps it sharp, local, and practical.</p></div>
+      <div class="sys reveal"><span class="n">05</span><h3>Drafts in minutes</h3><p>Ad copy, post calendars, shot lists, review replies &mdash; the first draft lands in minutes, not weeks.</p></div>
+      <div class="sys reveal"><span class="n">06</span><h3>One idea becomes everything</h3><p>Hand the Content Engine a single idea and walk away with posts, reels, emails, and a blog.</p></div>
+      <div class="sys reveal"><span class="n">07</span><h3>Plain-English reporting</h3><p>The Report Card agent turns your numbers into a report you can actually read &mdash; what worked, what's next.</p></div>
+      <div class="sys reveal"><span class="n">08</span><h3>Humans on call</h3><p>When a job needs a real crew &mdash; a shoot, a campaign build &mdash; Momentum 360's human team takes the handoff.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU WALK AWAY WITH -->
+<section class="b navy" id="results">
+  <div class="wrap">
+    <div class="case-study-block">
+      <div class="h-center reveal"><span class="eyebrow">The output</span><h2>What You Walk Away With</h2><div class="bar"></div></div>
+      <p class="lead-p reveal" style="margin-bottom:6px">Every session ends with work you can publish, launch, or send &mdash; not another to-do list.</p>
+      <div class="stat-row reveal">
+        <div class="stat"><div class="num" data-count="19">19</div><div class="cap">specialist agents on your roster</div></div>
+        <div class="stat"><div class="num" data-count="4">4</div><div class="cap">squads covering the full funnel</div></div>
+        <div class="stat"><div class="num" data-count="24" data-suffix="/7">24/7</div><div class="cap">on tap &mdash; nights, weekends, right now</div></div>
+      </div>
+      <ul class="deliver cs-metrics reveal">
+        <li><span class="tk">&#10003;</span>A month of on-brand social posts from one session</li>
+        <li><span class="tk">&#10003;</span>Ad copy written to convert, ready to launch</li>
+        <li><span class="tk">&#10003;</span>A Google Business plan to own the Map Pack</li>
+        <li><span class="tk">&#10003;</span>An email sequence that wakes up cold leads</li>
+        <li><span class="tk">&#10003;</span>Review replies that sound like you on your best day</li>
+        <li><span class="tk">&#10003;</span>A shot list for your next tour, video, or drone flight</li>
+        <li><span class="tk">&#10003;</span>A website leak list, prioritized by lost revenue</li>
+        <li><span class="tk">&#10003;</span>A plain-English report card on your marketing</li>
+      </ul>
+    </div>
+    <div class="case-study-cta reveal">
+      <p>Stop staring at a blank page. Ask your first question and see what a specialist does with it.</p>
+      <a class="btn btn-gold" href="#ask" aria-label="Ask your first question">Ask Your First Question</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY AGENTS -->
+<section class="b light" id="why">
+  <div class="wrap">
+    <div class="h-center reveal"><span class="eyebrow">Why teams use it</span><h2>More Than A Chatbot</h2><div class="bar"></div></div>
+    <div class="sw-grid">
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Trained on real playbooks</h3><p>Answers come from campaigns Momentum 360 runs for paying clients.</p></div></div>
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Specialists, not generalists</h3><p>Nineteen focused experts beat one chatbot that's average at everything.</p></div></div>
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Powered by GPT-5.5</h3><p>The newest model, tuned with a working agency's judgment.</p></div></div>
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Covers the whole funnel</h3><p>From getting found to winning customers to reporting the results.</p></div></div>
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>No blank pages</h3><p>Every session ends with something you can publish, launch, or send.</p></div></div>
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>On-brand every time</h3><p>The agents learn your voice, so every draft sounds like you.</p></div></div>
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Plain English only</h3><p>No jargon, no dashboards &mdash; answers a busy owner can act on.</p></div></div>
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Backed by a real agency</h3><p>Momentum 360's human team is one handoff away when you need one.</p></div></div>
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Always on</h3><p>Ask at 6 a.m. or midnight. Your marketing team never sleeps.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="b deep" id="faq">
+  <div class="wrap">
+    <div class="h-center reveal"><span class="eyebrow">Straight answers</span><h2>Questions Owners Ask First</h2><div class="bar"></div></div>
+    <div class="faq-list">
+      <details class="faq reveal"><summary>Is this just ChatGPT with a logo?<span class="plus">+</span></summary><div class="ans">No. Every agent is trained on Momentum 360's client playbooks and tuned for one specific job. You get a specialist's plan for local business growth, not a generic essay.</div></details>
+      <details class="faq reveal"><summary>Which agent should I start with?<span class="plus">+</span></summary><div class="ans">You don't have to choose. Ask your question in plain English and Momentum 360 Agents puts the right specialist on it. If you already know the job &mdash; say, a month of social posts &mdash; pick Social Studio and dive in.</div></details>
+      <details class="faq reveal"><summary>Do I need any marketing experience?<span class="plus">+</span></summary><div class="ans">None. The agents ask the questions, explain the trade-offs in plain English, and hand you work that's ready to use.</div></details>
+      <details class="faq reveal"><summary>What happens when I need a human?<span class="plus">+</span></summary><div class="ans">Some jobs need a real crew &mdash; a 360 tour shoot, a full campaign build. The agents scope the work, then Momentum 360's human team picks it up without missing a step.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ASK THE AGENTS -->
+<section class="b navy" id="ask">
+  <div class="wrap">
+    <div class="h-center reveal"><span class="eyebrow">Free &mdash; no signup required</span><h2>Ask The Agents Anything</h2><div class="bar"></div></div>
+    <div class="audit-card reveal">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="audit-title">Your first question is free</div>
+      <h3>What Do You Want To Grow?</h3>
+      <p class="audit-note">Ask anything about growing your business. The right specialist will review it and send back a plain-English plan within one business day.</p>
+      <div class="audit-fields">
+        <input id="a-name" name="name" type="text" placeholder="Name" autocomplete="name">
+        <input id="a-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel">
+        <input id="a-email" name="email" type="email" placeholder="Work email" autocomplete="email">
+        <input id="a-biz" name="business" type="text" placeholder="Business name" autocomplete="organization">
+        <input id="a-q" name="question" class="full" type="text" placeholder="Your question &mdash; e.g. How do I get more customers from Google?">
+      </div>
+      <button class="btn btn-gold" type="button" id="askBtn">Ask The Agents</button>
+      <div class="audit-out" id="askOut"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand"><span class="m-logo nav-logo" role="img" aria-label="Momentum 360 logo"></span><b>Momentum 360 Agents</b></div>
+        <p class="foot-about">Momentum 360 Agents is your marketing team on tap: nineteen AI specialists trained on Momentum 360's client playbooks, powered by GPT-5.5, and backed by a real agency.</p>
+        <a class="foot-phone" href="tel:2156076482">(215) 607-6482</a>
+        <div class="socials" aria-label="Social links">
+          <a href="https://www.facebook.com/momentumvirtualtours" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v7h3v-7h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.youtube.com/@momentum360" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.4 5 12 5 12 5s-4.4 0-7.2.1c-.4 0-1.2.1-2 .9C2.2 6.6 2 8 2 8S1.8 9.6 1.8 11.3v1.4C1.8 14.4 2 16 2 16s.2 1.4.8 2c.8.8 1.8.8 2.3.9 1.7.2 6.9.2 6.9.2s4.4 0 7.2-.1c.4 0 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.4C22.2 9.6 22 8 22 8zM10 14.5v-5l4.5 2.5L10 14.5z"/></svg></a>
+          <a href="https://x.com/momentumvts" target="_blank" rel="noopener" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 3h3l-7 8 8 10h-6l-5-6-5 6H3l7-9L3 3h6l4 5 5-5z"/></svg></a>
+          <a href="https://www.linkedin.com/company/momentum-360/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 9H3v11h3V9zM4.5 3.5A1.8 1.8 0 104.5 7a1.8 1.8 0 000-3.5zM21 13.5c0-3-1.6-4.5-3.8-4.5-1.7 0-2.5 1-2.9 1.6V9H11v11h3v-6c0-1.5.8-2.3 1.9-2.3 1 0 1.8.6 1.8 2.2V20h3v-6.5z"/></svg></a>
+          <a href="https://vimeo.com/momentum360" target="_blank" rel="noopener" aria-label="Vimeo"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7.4c-.1 2.1-1.6 5-4.4 8.6C14.7 19.8 12.2 22 10.2 22c-1.2 0-2.3-1.2-3.1-3.5L5.5 12c-.6-2.3-1.3-3.5-2-3.5-.2 0-.7.3-1.6.9L1 8.2c1-.9 2-1.8 3-2.7 1.3-1.2 2.3-1.8 3-1.9 1.6-.2 2.6.9 3 3.3.4 2.6.7 4.3.9 4.9.5 2.2 1 3.3 1.6 3.3.5 0 1.2-.7 2.1-2.2.9-1.5 1.4-2.6 1.5-3.4.1-1.2-.4-1.8-1.5-1.8-.5 0-1 .1-1.6.3 1-3.2 2.9-4.8 5.6-4.7 2 .1 3 1.4 2.9 4.1z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>The Agents</h4>
+        <a href="#agents">Capture &amp; Showcase</a>
+        <a href="#agents">Get Found</a>
+        <a href="#agents">Win Customers</a>
+        <a href="#agents">Content &amp; Run It</a>
+        <a href="#how">How It Works</a>
+        <a href="#ask">Ask A Question</a>
+      </div>
+      <div class="foot-col">
+        <h4>Momentum 360</h4>
+        <a href="https://www.momentumvirtualtours.com/about-us/" target="_blank" rel="noopener">About</a>
+        <a href="https://www.momentumvirtualtours.com/services/" target="_blank" rel="noopener">Services</a>
+        <a href="https://www.momentumvirtualtours.com/virtual-tour-locations/" target="_blank" rel="noopener">Locations</a>
+        <a href="https://www.momentumvirtualtours.com/virtual-tour-case-studies/" target="_blank" rel="noopener">Case Studies</a>
+        <a href="https://www.momentumvirtualtours.com/contact/" target="_blank" rel="noopener">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Recognition</h4>
+        <div class="foot-badges">
+          <span class="fbadge"><img src="assets/badges/inc-5000.png" alt="Inc. 5000"></span>
+          <span class="fbadge"><img src="assets/badges/philly-100.png" alt="Philly 100"></span>
+          <span class="fbadge"><img src="assets/badges/rankwatch-2024.png" alt="RankWatch Top Agency 2024"></span>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">&copy; 2026 Momentum Digital LLC. All rights reserved. &bull; Philadelphia, PA &bull; Serving all 50 states and 10 countries</div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal,.h-center').forEach(el=>io.observe(el));
+
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>30));
+
+const burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>{const o=mm.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');burger.setAttribute('aria-expanded','false');}));
+
+const cio=new IntersectionObserver((es)=>{es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  const el=e.target,end=+el.dataset.count,suf=el.dataset.suffix||'';let t0=null;const d=1400;
+  const step=(t)=>{if(!t0)t0=t;const p=Math.min((t-t0)/d,1);el.textContent=Math.round((1-Math.pow(1-p,3))*end).toLocaleString()+suf;if(p<1)requestAnimationFrame(step);};
+  requestAnimationFrame(step);cio.unobserve(el);
+});},{threshold:.5});
+document.querySelectorAll('.num[data-count]').forEach(c=>cio.observe(c));
+
+document.getElementById('consultBtn').addEventListener('click',()=>{
+  const name=document.getElementById('c-name').value.trim();
+  const email=document.getElementById('c-email').value.trim();
+  const q=document.getElementById('c-q').value.trim();
+  if(name.length<2||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)||q.length<5){alert('Please add your name, a valid email, and your question so the right specialist can answer.');return;}
+  const payload={name,email,business:document.getElementById('c-biz').value.trim(),question:q,source:'Momentum 360 Agents hero form'};
+  // TODO: POST `payload` to HubSpot / your CRM endpoint here.
+  console.log('Agent question:',payload);
+  document.getElementById('consultForm').style.display='none';
+  document.getElementById('consultDone').classList.add('show');
+});
+
+const askBtn=document.getElementById('askBtn'),askOut=document.getElementById('askOut');
+askBtn.addEventListener('click',()=>{
+  const name=document.getElementById('a-name').value.trim();
+  if(name.length<2){alert('Please add your name.');return;}
+  const email=document.getElementById('a-email').value.trim();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){alert('Please add a valid work email so we can send your answer.');return;}
+  const q=document.getElementById('a-q').value.trim();
+  if(q.length<5){alert('Please add your question so the right specialist can take it.');return;}
+  const payload={name,phone:document.getElementById('a-phone').value.trim(),email,business:document.getElementById('a-biz').value.trim(),question:q,source:'Momentum 360 Agents ask form'};
+  // TODO: POST `payload` to HubSpot / your CRM endpoint here.
+  console.log('Agent question:',payload);
+  askOut.classList.add('show');
+  askOut.innerHTML='<div class="head">Your question is in</div>The right specialist is on it. Expect a plain-English answer &mdash; and the first thing to do about it &mdash; within one business day.';
+  askBtn.textContent='Question Sent';
+});
+</script>
+
+</body>
+</html>
