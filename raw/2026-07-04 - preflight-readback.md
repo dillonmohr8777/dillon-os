@@ -21,3 +21,19 @@ Raw — do not edit.
   cost column didn't render — $500-cap dollar check pending; confirm #573/#633
   Ended.
 - **KJB: 721-491-4099 shows (Cancelled) — 814-550-6229 is the live account.**
+
+## Remote page-side sweep (same evening, from cloud session)
+- **NKCDC LP** (businesstaxprep.fshtechnologies.org/intake/free-tax-prep):
+  HTTP 200, title "Philadelphia Business Services", **zero forms, zero Google
+  tags, zero pixels in the HTML** (caveat: form may render via JS — verify in
+  a real browser). If real: campaign has an untrackable destination — smart
+  bidding with no conversion signal is a classic no-spend cause. Check this
+  FIRST in the NKCDC diagnosis.
+- **Omega: BOTH domains are live separate sites** — omegalandscapecorp.com
+  ("Omega Landscape") and omegalandscapingandconcrete.com ("Omega Landscaping
+  & Concrete, Colorado Springs"). Both carry Google tags + 1 form. Ads
+  destination + conversion tracking must be pointed at ONE canonical site.
+- **Fagan site = faganpainting.com** ("Pittsburgh Painting Professionals").
+  Already carries a Meta pixel + Google tags + a form. Job is now VERIFY the
+  pixel ID matches account 892789268275012 and add/confirm the Lead event —
+  not a fresh install.
