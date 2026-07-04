@@ -1,0 +1,13 @@
+[build]
+  command = "node scripts/build-kb.mjs"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[functions."ask"]
+  included_files = ["netlify/functions/ask-data/kb-index.json"]

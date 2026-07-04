@@ -1,0 +1,8 @@
+{
+  "name": "momentum-360-agents-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-kb.mjs"
+  }
+}
