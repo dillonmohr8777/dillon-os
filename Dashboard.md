@@ -5,6 +5,7 @@ tags: [dashboard, moc]
 # Dashboard
 
 ## Quick Links
+- [[INDEX|Brain Index]]
 - [[00_Inbox/Start Here|Start Here]]
 - [[01_Clients/Client Index|Clients]]
 - [[02_Campaigns/Campaign Index|Campaigns]]
