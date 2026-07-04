@@ -20,9 +20,17 @@ npm start                  # http://localhost:3000
 
 ## Put it online
 
-It's one static file — drag `index.html` onto **https://app.netlify.com/drop**, or push
-it to GitHub Pages / Vercel / any static host. Rename to `index.html` (already is) and
-you're live.
+Deploy to Netlify (config is in `netlify.toml`):
+
+```bash
+export NETLIFY_AUTH_TOKEN=xxxx   # from Netlify → User settings → Personal access tokens
+npm run deploy                    # publish to production
+# npm run deploy:draft            # preview URL first
+```
+
+Or with no token: drag `index.html` onto **https://app.netlify.com/drop**, or connect the
+repo in the Netlify UI (Base directory `01_Clients/Shadow HVAC/site`, publish `.`).
+See **[AGENTS.md](./AGENTS.md)** for the full deploy guide.
 
 ## Edit it
 
