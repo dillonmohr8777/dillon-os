@@ -33,3 +33,8 @@ Meta lead gen ($8.56 CPL, 8 verified leads).
 ## Targeting
 Philadelphia, Chestnut Hill + suburbs. Landing pages on Squarespace (venues
 page, plus-size page, timeline page).
+
+## Account note (2026-07-04 sweep)
+Sweep lists **814-550-6229 as seed**, 721-491-4099 also referenced —
+**verify which is live before ANY edit**. Source:
+[[raw/2026-07-04 - account-inventory-sweep]].

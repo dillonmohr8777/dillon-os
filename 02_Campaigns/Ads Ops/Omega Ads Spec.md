@@ -30,3 +30,8 @@ Colorado Springs landscaping/concrete. $400/mo. Contact David Granados.
    living" (not "15 years experience").
 5. Domain check: omegalandscapecorp.com vs omegalandscapingandconcrete.com —
    confirm canonical before pointing ads.
+
+## Account confirmed (2026-07-04 sweep)
+Google Ads **285-398-1364** — live, **active PMax**. Source:
+[[raw/2026-07-04 - account-inventory-sweep]]. Meta account ID still
+unconfirmed — discover next session.

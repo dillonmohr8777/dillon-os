@@ -35,15 +35,17 @@ and institute changes across all ad accounts.
 3. Results feed the next cycle. See [[System/Chrome Session Runbook|Chrome
    Session Runbook]] for the local half.
 
-## Account spec pages
+## Account spec pages (in Dillon's priority order, 2026-07-04)
 
+- [[02_Campaigns/Ads Ops/Bar Crawl Ads Spec|Bar Crawl USA]] — $950/mo, biggest account; policy landmines first
 - [[02_Campaigns/Ads Ops/KJB Ads Spec|KJB]] — Search + PMax + Meta leads; attribution depth into Squarespace
 - [[02_Campaigns/Ads Ops/Replenish Ads Spec|Replenish / 7-Eleven]] — PMax per kiosk; brand rules; gclid gap
 - [[02_Campaigns/Ads Ops/Shadow HVAC Ads Spec|Shadow HVAC]] — instant form: Hampshire IL geo + English-only + qualification
 - [[02_Campaigns/Ads Ops/Fagan Painting Ads Spec|Fagan Painting]] — same instant-form treatment; intake pending
 - [[02_Campaigns/Ads Ops/NKCDC Ads Spec|NKCDC]] — built & approved; blocked on client LP since April
 - [[02_Campaigns/Ads Ops/Omega Ads Spec|Omega Landscaping]] — access verification first; Meta is John Belaska's, not ours
-- [[02_Campaigns/Ads Ops/Onsite Ads Spec|Onsite Concrete]] — ads-readiness audit lane
+- [[02_Campaigns/Ads Ops/Onsite Ads Spec|Onsite Concrete]] — 103-371-5894, in daily ads scope
+- Blissful Zen Spa — Google Ads account unknown/likely none; discover lane (no spec yet)
 - [[02_Campaigns/Ads Ops/Zapier Lead Routing|Zapier Lead Routing]] — the standing fix: lead → client notified
 
 ## Standing guardrails (autonomy ≠ recklessness — these keep it sustainable)

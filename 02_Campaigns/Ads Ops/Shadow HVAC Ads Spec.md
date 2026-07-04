@@ -30,3 +30,9 @@ English-only**:
 - Which Meta Business Manager / page holds the form (not in vault).
 - LSA state: background check was reset 2026-03-02; verify LSA ever served after.
 - Conversion tracking on Google side: undocumented — audit and bind.
+
+## Update (2026-07-04 sweep)
+Google 314-136-4176 exists but **paused / no active spend**. Meta lane is
+ACTIVE — recent campaign "Shadow AC Leads…". Dillon's priority call: Shadow is
+last in the all-client session order. Source:
+[[raw/2026-07-04 - account-inventory-sweep]].
