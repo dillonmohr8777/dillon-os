@@ -13,6 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
 <style>
   :root{
     --navy:#14274E;
@@ -261,6 +263,25 @@
   .fbadge img{display:block;max-width:100%;max-height:50px;object-fit:contain}
   .foot-bot{border-top:1px solid var(--line-d);padding-top:22px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.4)}
 
+  /* live map */
+  #liveMap{position:absolute;inset:0;z-index:1;background:var(--navy-deep)}
+  .google-card .pill{z-index:1002;pointer-events:none}
+  .gpartner{z-index:1002}
+  .google-card .map-fallback{display:none}
+  .google-card.no-map .map-fallback{display:block}
+  .leaflet-container{font-family:var(--body)}
+  .leaflet-control-attribution{background:rgba(12,26,54,.75)!important;color:rgba(255,255,255,.55)!important;font-size:.6rem}
+  .leaflet-control-attribution a{color:rgba(255,255,255,.7)!important}
+  .m-marker{position:relative;width:46px;height:46px}
+  .m-marker .dot{position:absolute;inset:6px;border-radius:50% 50% 50% 0;background:linear-gradient(135deg,var(--gold),#d2452f);transform:rotate(-45deg);box-shadow:0 10px 22px -8px rgba(0,0,0,.7);border:2px solid #fff}
+  .m-marker .dot::after{content:"";position:absolute;inset:10px;background:#fff;border-radius:50%}
+  .m-marker .pulse{position:absolute;inset:-8px;border-radius:50%;border:3px solid var(--gold);animation:mpulse 2s ease-out infinite}
+  @keyframes mpulse{0%{transform:scale(.45);opacity:.9}70%{transform:scale(1.25);opacity:0}100%{transform:scale(1.25);opacity:0}}
+  .m-pop .leaflet-popup-content-wrapper{background:var(--navy-deep);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:10px;font-family:var(--body)}
+  .m-pop .leaflet-popup-content{margin:12px 16px;font-size:.86rem;line-height:1.5}
+  .m-pop .leaflet-popup-content b{font-family:var(--display);color:var(--gold)}
+  .m-pop .leaflet-popup-tip{background:var(--navy-deep)}
+
   /* live answers */
   .answer{color:rgba(255,255,255,.92);font-size:.95rem;line-height:1.65;max-height:420px;overflow-y:auto}
   .answer p{margin-bottom:10px}
@@ -371,9 +392,10 @@
       <p>Momentum 360 Agents is your always-on marketing department: nineteen AI specialists covering virtual tours, photography, video, SEO, AI search, Google Business, paid ads, reviews, content, branding, and reporting &mdash; every one of them trained on the playbooks Momentum 360 runs with real clients.</p>
       <p>Ask a question in plain English and the right specialist answers with a plan you can act on today. No blank pages, no agency wait times, no generic chatbot advice.</p>
     </div>
-    <div class="google-card reveal" aria-hidden="true">
+    <div class="google-card reveal">
+      <div id="liveMap" aria-label="Momentum 360 on the map — Philadelphia, PA"></div>
+      <div class="pin map-fallback" aria-hidden="true"></div>
       <div class="pill">Your Marketing Team, On Tap</div>
-      <div class="pin"></div>
       <div class="gpartner"><b>Powered By GPT-5.5</b><span>MOMENTUM 360 PLAYBOOKS</span></div>
     </div>
   </div>
@@ -587,6 +609,27 @@ const cio=new IntersectionObserver((es)=>{es.forEach(e=>{
   requestAnimationFrame(step);cio.unobserve(el);
 });},{threshold:.5});
 document.querySelectorAll('.num[data-count]').forEach(c=>cio.observe(c));
+
+// --- live map (Leaflet + CARTO dark tiles, no API key) ---
+function initMap(){
+  const el=document.getElementById('liveMap');
+  if(!window.L||!el){el.closest('.google-card').classList.add('no-map');return;}
+  const philly=[39.9526,-75.1652];
+  // center north of the marker so the marker + popup sit clear of the overlay pill
+  const map=L.map(el,{center:[40.010,-75.1652],zoom:11,scrollWheelZoom:false,zoomControl:true});
+  map.attributionControl.setPrefix(false);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains:'abcd',maxZoom:19
+  }).on('tileerror',()=>{el.closest('.google-card').classList.add('no-map');el.style.display='none';}).addTo(map);
+  const icon=L.divIcon({className:'',html:'<div class="m-marker"><div class="pulse"></div><div class="dot"></div></div>',iconSize:[46,46],iconAnchor:[23,40],popupAnchor:[0,-38]});
+  L.marker(philly,{icon}).addTo(map)
+    .bindPopup('<b>Momentum 360</b><br>Philadelphia, PA<br>Serving all 50 states<br>(215) 607-6482',{className:'m-pop',autoPanPadding:[30,90]})
+    .openPopup();
+  map.on('focus click',()=>map.scrollWheelZoom.enable());
+  map.on('blur',()=>map.scrollWheelZoom.disable());
+}
+if(document.readyState==='complete')initMap();else addEventListener('load',initMap);
 
 // --- live agents ---
 const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
