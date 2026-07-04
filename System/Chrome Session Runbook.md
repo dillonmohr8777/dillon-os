@@ -22,7 +22,9 @@ hands**. Runs on Dillon's machine, ~10–15 min per cycle.
      (Dillon's alt Gmail — set up 2026-07-04). That Gmail is the recovery
      anchor for the credential account: it must have 2FA on, and the Bitwarden
      account gets 2FA + a generated master password.
-   - Claude member gets **read-only** ("can view") access to the collection.
+   - Claude member gets **can-edit** access to the collection (Dillon 2026-07-04:
+     full autonomy — agent also WRITES new/rotated logins into the collection).
+     Member role stays "User" (no org-wide export, no admin).
    - That account stays logged into the Bitwarden **extension in the Claude
      Ops profile** (PIN unlock). The agent uses autofill; it never sees,
      types, stores, or exports the master password or any credential.
@@ -33,8 +35,12 @@ hands**. Runs on Dillon's machine, ~10–15 min per cycle.
 ## Every-2-days apply session
 
 ```
-cd ~/dillon-os && git pull && claude --chrome
+cd ~/dillon-os && git pull && claude --dangerously-skip-permissions --chrome
 ```
+
+(Skip-permissions per Dillon's standing grant,
+[[raw/2026-07-04 - autonomy-escalation]] — no prompts, full speed. For the
+full swarm: say **"run the ads-ops-big-run workflow, then apply the packet."**)
 
 Then say: **"Run the ads-ops apply session."** The agent will:
 
