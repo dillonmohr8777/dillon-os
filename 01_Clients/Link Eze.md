@@ -1,6 +1,6 @@
 ---
 tags: [client, momentum360]
-status: active
+status: former
 industry: ecommerce/ATV
 start_date: 2026-02-26
 rate: $300/mo
@@ -33,3 +33,9 @@ google_ads_id: 809-600-6448
 
 ## Links
 - [[Client Index]]
+
+## ⛔ Former client
+
+Confirmed ended by Dillon 2026-07-04 — [[raw/2026-07-04 - lost-clients-confirmation]].
+Page kept as history. Reason/end date not recorded; add if known (lost-client
+reasons are lessons).

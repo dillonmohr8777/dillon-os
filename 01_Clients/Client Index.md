@@ -17,12 +17,9 @@ tags: [client, moc]
 | ---------------------------- | --------------------------- | ------------ | --------- | --------------------------------------------------------------- |
 | [[Bar Crawl USA]]            | barcrawlusa.com             | $950/mo      | 2/16/2026 | Google Ads, 20-city landing pages, WordPress publisher tool     |
 | [[Shadow HVAC]]              | shadowheatingandcooling.com | $250/mo      | 2/13/2026 | GBP content (4x/week), Google Ads Search, LSA                   |
-| [[Link Eze]]                 | linkeze.biz                 | $300/mo      | 2/26/2026 | Google Ads (ecommerce/Shopify), HTML reports                    |
 | [[Omega Landscaping]]        | omegalandscapecorp.com      | $400/mo      | 3/1/2026  | GBP content (4x/week), blogs, local SEO, reports, Google Ads    |
-| [[Jeff Hozias]]              | jeffhozias.randrealty.com   | $200/mo      | 3/1/2026  | GBP content (3x/week), Google Ads (pending), Systeme.io         |
 | [[KJB]]                      | kimberlyjamesbridal.com     | $300/mo      | 3/12/2026 | Google Ads, Squarespace SEO pages, brand design                 |
 | [[Fresh Blends - Replenish]] | freshblends.com             | $500/mo      | 3/23/2026 | Paid media strategy (B2C), Google Ads (awaiting access)         |
-| [[Hardwood Artisan]]         | hardwood-artisan.com        | —            | —         | GBP content (4x/week), HTML reports                             |
 | [[NKCDC]]                    | —                           | —            | —         | ICP research, keyword strategy, campaign architecture           |
 | [[Onsite Concrete]]          | onsiteconcretelandscape.com | —            | —         | WordPress/Divi website repair                                   |
 | [[Blissful Events]]          | —                           | $500 project | One-time  | Bollywood concert campaign (FB Events + Google Local PMax)      |
@@ -45,14 +42,12 @@ tags: [client, moc]
 | [[Neat & Tidy TN]] | — | Landing/creative projects; status unconfirmed |
 
 ❓ **No June-2026 activity on record** (status unconfirmed until Dillon confirms):
-[[Shadow HVAC]], [[Link Eze]], [[Jeff Hozias]], [[Hardwood Artisan]], [[Blissful Events]],
-[[Bridge of Hope OTC]], [[Bluegrass Janitorial]], [[Buzz Bull]], [[Florecita]],
-[[Next Gen Solutions]], [[Commercial Cleaners Alliance]], [[PNW Pro Clean]],
-[[PureClean Carpets]], [[Ram Air]].
+[[Shadow HVAC]], [[Blissful Events]], [[Bridge of Hope OTC]], [[Bluegrass Janitorial]],
+[[Florecita]], [[Next Gen Solutions]], [[Commercial Cleaners Alliance]],
+[[PNW Pro Clean]], [[PureClean Carpets]], [[Ram Air]].
 
 ## 1099
 - [[Bok Law]] (also listed under M360)
-- [[Buzz Bull]]
 
 ## Direct
 
@@ -81,7 +76,13 @@ tags: [client, moc]
 - [[Align HCM]] — alignhcm.com — LinkedIn calendars, CEO blogs, carousels, case studies, sales proposals, HTML reports, SEO blogs
 
 ## Past Clients
-- 
+
+Confirmed ended by Dillon 2026-07-04 ([[raw/2026-07-04 - lost-clients-confirmation]]):
+
+- [[Buzz Bull]] — was 1099
+- [[Link Eze]] — was M360, $300/mo, Google Ads (ecommerce/Shopify), HTML reports
+- [[Hardwood Artisan]] — was M360, GBP content (4x/week), HTML reports
+- [[Jeff Hozias]] — was M360, $200/mo, GBP content (3x/week), Meta/Google Ads
 
 ## Prospects
 - 
