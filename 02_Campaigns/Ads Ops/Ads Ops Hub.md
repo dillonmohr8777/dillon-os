@@ -35,6 +35,19 @@ and institute changes across all ad accounts.
 3. Results feed the next cycle. See [[System/Chrome Session Runbook|Chrome
    Session Runbook]] for the local half.
 
+## Platform scope matrix (Dillon, 2026-07-04 — [[raw/2026-07-04 - platform-scope-and-bitwarden-state|source]])
+
+| Client | Google Ads | Meta | Site login in Bitwarden |
+|---|---|---|---|
+| Bar Crawl USA | ✅ 435-710-2897 | — | not shared |
+| Replenish | ✅ 627-501-4654 | — | (Wix login somewhere — Dillon to find) |
+| Omega | ✅ 285-398-1364 | — | ✅ Website + Ads Access Source |
+| KJB | ✅ verify live acct first | ✅ leads | ✅ Squarespace |
+| NKCDC | ✅ 100-209-6937 | ✅ leads | WP (Dillon has, not yet shared) |
+| Onsite | ✅ 103-371-5894 | — | ✅ WordPress Admin |
+| Fagan | — | ✅ ONLY (his LLC account) | ✅ WordPress |
+| Shadow HVAC | ❌ **ignore** | ✅ ONLY | — |
+
 ## Account spec pages (in Dillon's priority order, 2026-07-04)
 
 - [[02_Campaigns/Ads Ops/Bar Crawl Ads Spec|Bar Crawl USA]] — $950/mo, biggest account; policy landmines first
