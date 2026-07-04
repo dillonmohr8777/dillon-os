@@ -31,3 +31,10 @@ rate: $200/mo
 
 ## Links
 - [[Client Index]]
+
+## 2026-06 update — compiled from [[raw/2026-06-26 - intel-core-7-master-operating-transfer]]
+
+- **Rate is now $400/mo** (June commission row) — index previously said $200.
+- June report to David: `omega-landscaping-2026-06-06.netlify.app` — 1,214 impressions, 56 clicks, 4.61% CTR, $125.42 spend, 2 form submissions, $1.39 CPC. Draft updated in place, no duplicate.
+- May: Omega was NOT visible in the signed-in Google Ads selector — usually an Ads-access/Chrome-attachment issue, not Search Console.
+- Watch-out: Netlify CLI was once silently linked to `omega-landscaping-landing-page` — see [[concepts/Netlify Deploy Safety|Netlify Deploy Safety]].

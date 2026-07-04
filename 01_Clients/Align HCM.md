@@ -48,3 +48,11 @@ rate: Full-time
 
 ## Links
 - [[Client Index]]
+
+## 2026-06 update — compiled from [[raw/2026-06-26 - intel-core-7-master-operating-transfer]]
+
+- HubSpot portal `242825734` (app-na2). GEO/authority program: primary metric is "GEO citation likelihood for generative AI engines"; non-blog GEO pass drafted 35/37 pages (never auto-publishes); blog GEO package updated 8 posts + 3 new drafts.
+- Authority engine (separate from BDR work): May Authority Score 23 (goal 24 by June/July), 193 referring domains, +443 backlinks, 393 organic keywords, 88% site health.
+- People: **Ben Harrison** (BDR, HubSpot owner 159865635 — never imply "not reached out" without checking emails/calls/meetings); **Maher El-Abdallah** (owner 159562438, scheduler meetings-na2.hubspot.com/maher, ROI blog draft, LinkedIn copy spec: 5 options, bullets, ~100 words, no hashtags, "culture of completion"); **Menatalla Maher** (owner 164938100, scheduler link unconfirmed).
+- SmartCare = website/web-pages work on the Align roadmap. Broker-partner: seven pages need indexing. AEO deferred until SEO momentum lands.
+- Writing style: consultative, no em dashes, no banned vendor mentions (UKG), employer-scoped.

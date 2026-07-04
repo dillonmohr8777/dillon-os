@@ -41,3 +41,11 @@ Chattanooga, Atlanta Beltline, Duluth GA, Fort Worth, Jacksonville, Savannah, Na
 
 ## Links
 - [[Client Index]]
+
+## 2026-06 update — compiled from [[raw/2026-06-26 - intel-core-7-master-operating-transfer]]
+
+- May SEO batch: 12 pages updated (5 SEMrush-informed, 5 AIOSEO + Open Graph, 2 priority campaign LPs); tracker rows 4–8, 11, 19, 21–23, 25–26. `barcrawlusa.com/crawl-maps/` is a distinct URL needing its own tracker row.
+- Google Ads recurring policy issues: "Alcohol information" and "Destination not working" (customer ID 435-710-2897).
+- Next SEO page selection: use the tracking sheet as exclusion source; prioritize older evergreen/seasonal pages (Halloween, holiday, Ugly Sweater, Onesie, older city pages). Cleanup signals: missing H1s, long meta descriptions, thin internal linking, missing alt coverage.
+- Standalone 3D/interactive report project exists (`bar-crawl-usa-3d-report-446`); publish state verified via deploy manifest 2026-06-08.
+- Reporting rule: never claim GSC metrics/alt text/internal-link edits without explicit proof — see [[concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]].
