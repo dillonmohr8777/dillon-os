@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && npx --yes netlify-cli deploy --prod --dir=out",
+    "deploy:draft": "npm run build && npx --yes netlify-cli deploy --dir=out"
   },
   "dependencies": {
     "next": "15.1.6",

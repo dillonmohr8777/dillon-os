@@ -8,6 +8,7 @@ import { StatCounter } from "@/components/StatCounter";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { ThermostatDial } from "@/components/ThermostatDial";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
+import { TeamBean } from "@/components/TeamBean";
 import { CTABand } from "@/components/CTABand";
 import {
   business,
@@ -142,10 +143,19 @@ export default function HomePage() {
             <Reveal key={s.slug} delay={(i % 3) * 0.08}>
               <Link
                 href={`/services#${s.slug}`}
-                className="group card block h-full p-7 transition-all hover:-translate-y-1 hover:border-white/20"
+                className="group card block h-full overflow-hidden transition-all hover:-translate-y-1 hover:border-white/20"
               >
+                {s.img && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={s.img}
+                    alt={s.name}
+                    className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                )}
+                <div className="p-7">
                 <div
-                  className={`mb-5 grid h-14 w-14 place-items-center rounded-2xl border ${
+                  className={`mb-5 ${s.img ? "hidden " : ""}grid h-14 w-14 place-items-center rounded-2xl border ${
                     s.tone === "ember"
                       ? "border-ember/30 bg-ember/10 text-ember-light"
                       : s.tone === "ice"
@@ -161,6 +171,7 @@ export default function HomePage() {
                   Learn more{" "}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </span>
+                </div>
               </Link>
             </Reveal>
           ))}
@@ -235,6 +246,8 @@ export default function HomePage() {
           <ReviewsCarousel reviews={reviews} />
         </div>
       </Section>
+
+      <TeamBean />
 
       <CTABand />
     </>

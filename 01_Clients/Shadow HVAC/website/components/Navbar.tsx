@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { business, nav } from "@/lib/site";
-import { Logo } from "./Logo";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -33,16 +32,13 @@ export function Navbar() {
       }`}
     >
       <div className="container-px flex h-20 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-3" aria-label={business.name}>
-          <Logo className="h-10 w-10" />
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-lg font-bold uppercase tracking-wide text-white">
-              Shadow
-            </span>
-            <span className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-ember-light">
-              Heating &amp; Cooling
-            </span>
-          </span>
+        <Link href="/" className="flex items-center" aria-label={business.name}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/img/logo.png"
+            alt={business.name}
+            className="h-11 w-auto rounded-lg bg-white px-2.5 py-1.5 shadow-lg"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

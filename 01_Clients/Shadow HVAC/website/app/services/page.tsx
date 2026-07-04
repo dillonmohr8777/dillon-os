@@ -32,10 +32,16 @@ export default function ServicesPage() {
         <div className="space-y-6">
           {services.map((s, i) => (
             <Reveal key={s.slug} delay={(i % 2) * 0.06}>
-              <div
-                id={s.slug}
-                className="card grid scroll-mt-28 gap-8 p-8 md:grid-cols-[auto,1fr] md:items-start"
-              >
+              <div id={s.slug} className="card scroll-mt-28 overflow-hidden">
+                {s.img && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={s.img}
+                    alt={`${s.name} — Shadow Heating & Cooling`}
+                    className="h-56 w-full object-cover sm:h-72"
+                  />
+                )}
+                <div className="grid gap-8 p-8 md:grid-cols-[auto,1fr] md:items-start">
                 <div
                   className={`grid h-16 w-16 place-items-center rounded-2xl border ${
                     s.tone === "ember"
@@ -72,6 +78,7 @@ export default function ServicesPage() {
                   >
                     Book this service <ArrowRight className="h-4 w-4" />
                   </Link>
+                </div>
                 </div>
               </div>
             </Reveal>

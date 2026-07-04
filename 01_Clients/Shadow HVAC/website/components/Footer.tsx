@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { business, nav, services } from "@/lib/site";
-import { Logo } from "./Logo";
 import { NewsletterForm } from "./NewsletterForm";
 
 export function Footer() {
@@ -10,11 +9,13 @@ export function Footer() {
       <div className="field-lines absolute inset-0 opacity-40" aria-hidden />
       <div className="container-px relative grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="/" className="flex items-center gap-3">
-            <Logo className="h-11 w-11" />
-            <span className="font-display text-xl font-bold uppercase text-white">
-              Shadow
-            </span>
+          <Link href="/" className="flex items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/img/logo.png"
+              alt={business.name}
+              className="h-12 w-auto rounded-lg bg-white px-2.5 py-1.5"
+            />
           </Link>
           <p className="mt-4 max-w-xs text-sm text-slate-400">
             {business.tagline}. Providing reliable and efficient HVAC solutions for

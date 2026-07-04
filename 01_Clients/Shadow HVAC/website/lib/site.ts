@@ -102,6 +102,7 @@ export type Service = {
   bullets: string[];
   tone: "ember" | "ice" | "gold";
   icon: "flame" | "snowflake" | "wind" | "shield" | "siren" | "gauge" | "wrench" | "leaf";
+  img?: string;
 };
 
 export const services: Service[] = [
@@ -118,6 +119,7 @@ export const services: Service[] = [
     ],
     tone: "ember",
     icon: "flame",
+    img: "/img/bear-heating.jpg",
   },
   {
     slug: "cooling",
@@ -132,6 +134,7 @@ export const services: Service[] = [
     ],
     tone: "ice",
     icon: "snowflake",
+    img: "/img/bear-cooling.jpg",
   },
   {
     slug: "indoor-air-quality",
@@ -146,6 +149,7 @@ export const services: Service[] = [
     ],
     tone: "ice",
     icon: "wind",
+    img: "/img/bear-air.jpg",
   },
   {
     slug: "maintenance-plans",
