@@ -76,11 +76,37 @@ export const story = {
   pullQuote:
     'Everybody kept telling me to come back to earth. I built a better one.',
   paragraphs: [
-    'Dance With The Delusional is what happens when confidence stops asking permission. It was made late, after the calls stopped and the city went quiet, in the one honest hour nobody schedules.',
-    'It moves like a night drive. Pressure in the low end, chrome on the surface, and something slightly off in the mix that you stop wanting to fix. Damaged romance. Exit plans. The version of you that survives by refusing to be reasonable.',
-    'This is not an apology record. It is a status report from the far side of "you good?" Still moving. Still dancing. Too far gone to come back normal, and better for it.',
+    'IMMOHRTAL is Dillon Mohr. Raised in Erie, Pennsylvania, where the lake wind teaches you to make your own heat and nobody hands you anything. When a town feels small, you build a bigger world in your head and start living in it. People called that delusional. He kept the name.',
+    'Now he lives in Pittsburgh, a city that already gave this music some of its greats. He is not here to imitate anybody. He is here to carry the thing forward the way this city expects it carried: no shortcuts, all heart, every bar earned.',
+    'Dance With The Delusional is his first real professional album. Years of writing in the margins of everything else, finally pressed into one record. It moves like a night drive. Pressure in the low end, chrome on the surface, damaged romance, exit plans. This is not an apology record. Still moving. Still dancing. Too far gone to come back normal, and better for it.',
   ],
 }
+
+/**
+ * THE THREE MARKINGS — the three marks the story stands on.
+ * These are placeholder readings of Dillon's three markings; edit the
+ * labels, coordinates, and lines to match the real ones.
+ */
+export const markings = [
+  {
+    numeral: 'I',
+    label: 'Erie, PA',
+    coord: '42.1292° N · 80.0851° W',
+    line: 'Where the signal started. Lake wind, long winters, first delusions.',
+  },
+  {
+    numeral: 'II',
+    label: 'Pittsburgh, PA',
+    coord: '40.4406° N · 79.9959° W',
+    line: 'Where it lives now. Carrying what the greats left behind, not copying it.',
+  },
+  {
+    numeral: 'III',
+    label: 'The Record',
+    coord: 'SESSION 001',
+    line: 'The first real one. Everything before this was rehearsal.',
+  },
+]
 
 export const socials = [
   { id: 'instagram', label: 'Instagram', handle: '@immohrtal', href: null as string | null },
