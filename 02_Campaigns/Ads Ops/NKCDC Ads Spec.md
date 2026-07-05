@@ -36,3 +36,33 @@ expansion awaits Dillon's approval. Source:
 Search campaign launched ~6/30 has NOT SPENT. Full approval to: clean keywords,
 cut dead weight, and **rebuild a fresh campaign if this one stays dead 48h
 after fixes**. Diagnosis order lives in the Action Packet / session brief.
+
+## APPLY READBACK — 2026-07-05 (autonomous run, live Chrome, acct 100-209-6937, ocid 8148243544)
+**NO-SPEND ROOT CAUSE FOUND: the ad's Final URL is DEAD.**
+- Campaign "NKCDC - Search - Free Business Tax Prep - Philadelphia - 2026-06"
+  (id 23990030341): **Enabled**, Type Search, **already on "Maximize clicks"**
+  (so the spec's "Max Clicks if conversion-starved" fix is ALREADY in place),
+  budget **$15/day**, status "Bid strategy learning", ~5 days old.
+- The RSA is **APPROVED** (green) — NOT disapproved. Headlines "Free Business
+  Tax Prep | Philadelphia Tax Help…".
+- **BUT the ad's Final URL `nkcdc.org/business-tax/philadelphia` is BROKEN** —
+  it redirects to `nkcdc.org/venue/philadelphia-argentine-tango-school/` and shows
+  **"There were no results found."** A dead/irrelevant destination throttles
+  Google serving (and would waste any click). This is the likely primary no-spend
+  cause — bigger than keywords.
+- The intended intake `businesstaxprep.fshtechnologies.org/intake/free-tax-prep`
+  IS live (shows 2026/2025 tax-year "Apply" selector) but has **no Google tag**
+  (form is behind Apply, on the off-domain FSH platform) → conversions can't be
+  measured there either.
+- **Did NOT change the Final URL:** the correct destination needs the `ref=`
+  attribution param preserved verbatim (spec rule), and I don't have the ref
+  value — overwriting with a ref-less URL would break NKCDC's attribution.
+
+**Fix needed (flag for Dillon/NKCDC):**
+1. Point the ad at the LIVE intake URL WITH the correct `ref=` param (or fix the
+   `nkcdc.org/business-tax/philadelphia` redirect on NKCDC's site). Provide the
+   ref value and I'll update the Final URL next session.
+2. Conversion tracking is not possible on the off-domain FSH intake without their
+   cooperation — flag.
+3. Bid strategy is already Max Clicks (correct). A rebuild alone won't help while
+   the destination is dead.
