@@ -41,3 +41,18 @@ last in the all-client session order. Source:
 **Ignore Shadow's Google Ads entirely** — no optimization, no reactivation of
 314-136-4176. Shadow work = the Meta instant-form fix + Zapier routing, nothing
 else. Source: [[raw/2026-07-04 - platform-scope-and-bitwarden-state]].
+
+## APPLY READBACK — 2026-07-05 (autonomous run, live Chrome)
+- Shadow's Meta campaigns live in **ad account 1399331594100332** (Dillon Mohr
+  portfolio; there is no ad account literally named "Shadow"). Two campaigns:
+  - **"Shadow AC Leads | Hampshire 30mi | Summer 2026" — Active + "High
+    performing"** ✅ (geo per name = Hampshire 30mi; instant-form lead campaign).
+  - **"Shadow AC Calls + Homeowner | Hampshire 30mi" — Off.**
+- Instant-form geo (Hampshire 30mi) is in place and the lead campaign is
+  performing well. English is not a hard control under Advantage+ audience
+  (same limitation as Fagan) — location + creative carry it.
+- **Zapier lead routing NOT wired/tested this run** (carry-over — see
+  apply-log-2026-07-05 + [[02_Campaigns/Ads Ops/Zapier Lead Routing]]). Use
+  Melissa's template: Facebook Lead Ads → Google Sheet → email (Dillon first,
+  then client). Connect Shadow's page + the "Shadow AC Leads" form; send a test
+  lead; verify each hop.
