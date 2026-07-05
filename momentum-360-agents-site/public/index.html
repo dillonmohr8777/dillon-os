@@ -8,13 +8,18 @@
 <meta property="og:title" content="Momentum 360 Agents | Your Marketing Team, On Tap">
 <meta property="og:description" content="Nineteen specialist AI marketing agents, trained on Momentum 360's client playbooks and powered by GPT-5.5.">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://momentum-360-agents.netlify.app/">
+<meta property="og:url" content="https://momentum-360-agents.netlify.app/">
+<meta property="og:image" content="https://momentum-360-agents.netlify.app/assets/og-image.jpg">
+<meta property="og:site_name" content="Momentum 360 Agents">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0C1A36">
 <link rel="icon" type="image/png" href="momentum-360-logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://momentum-360-agents.netlify.app/#org","name":"Momentum 360","alternateName":"Momentum 360 Agents","telephone":"+12156076482","url":"https://momentum-360-agents.netlify.app/","logo":"https://momentum-360-agents.netlify.app/momentum-360-logo.png","address":{"@type":"PostalAddress","addressLocality":"Philadelphia","addressRegion":"PA","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":39.9526,"longitude":-75.1652},"areaServed":"US","award":["Inc. 5000","Philly 100","RankWatch Top Agency 2024","Best of Pennsylvania"],"sameAs":["https://www.facebook.com/momentumvirtualtours","https://www.youtube.com/@momentum360","https://x.com/momentumvts","https://www.linkedin.com/company/momentum-360/","https://vimeo.com/momentum360"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Momentum 360 Agents","itemListElement":[{"@type":"OfferCatalog","name":"Capture and Showcase","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"360 Virtual Tour"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Listing Photos"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Drone and Aerial"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Property Video"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Podcast Studio"}}]},{"@type":"OfferCatalog","name":"Get Found","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Business Profile"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Service Ads"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Listings"}}]},{"@type":"OfferCatalog","name":"Win Customers","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Meta Ads"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ad Writing"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pinterest Ads"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Lead Revival"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Review Management"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Social Studio"}}]},{"@type":"OfferCatalog","name":"Content and Run It","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Content Engine"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Branding"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Marketing Report Card"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Website Conversion Fixes"}}]}]}},{"@type":"WebSite","@id":"https://momentum-360-agents.netlify.app/#site","url":"https://momentum-360-agents.netlify.app/","name":"Momentum 360 Agents","publisher":{"@id":"https://momentum-360-agents.netlify.app/#org"}}]}</script>
 <link rel="apple-touch-icon" href="momentum-360-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#14274E;
@@ -281,6 +286,7 @@
   .m-pop .leaflet-popup-content{margin:12px 16px;font-size:.86rem;line-height:1.5}
   .m-pop .leaflet-popup-content b{font-family:var(--display);color:var(--gold)}
   .m-pop .leaflet-popup-tip{background:var(--navy-deep)}
+  .c-dot{width:16px;height:16px;border-radius:50%;background:var(--gold);border:2px solid #fff;box-shadow:0 6px 14px -4px #000}
 
   /* live answers */
   .answer{color:rgba(255,255,255,.92);font-size:.95rem;line-height:1.65;max-height:420px;overflow-y:auto}
@@ -289,6 +295,102 @@
   .answer li{margin-bottom:5px}
   .answer b{color:var(--gold-soft)}
   .asking{opacity:.65;pointer-events:none}
+
+  /* dispatch stages */
+  .stage{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.85);font-size:.92rem;padding:8px 0;min-height:34px}
+  .stage .sdot{width:9px;height:9px;border-radius:50%;background:var(--gold);animation:sblink 1s ease-in-out infinite}
+  @keyframes sblink{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+  .agent-tag{font-family:var(--display);font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .tw .w{opacity:0;transition:opacity .18s ease}
+  .tw .w.on{opacity:1}
+
+  /* receipts: source chips + timer */
+  .meta-row{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:12px}
+  .chip{border:1px solid rgba(225,169,59,.55);color:var(--gold-soft);border-radius:999px;padding:4px 11px;font-size:.7rem;font-weight:600;letter-spacing:.02em;background:rgba(225,169,59,.08)}
+  .timer{color:rgba(255,255,255,.5);font-size:.7rem;margin-left:auto;white-space:nowrap}
+
+  /* follow-up chips */
+  .fups{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .fup{cursor:pointer;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.07);color:#fff;border-radius:999px;padding:8px 14px;font-size:.82rem;font-family:var(--body);transition:border-color .2s,background .2s,transform .15s}
+  .fup:hover{border-color:var(--gold);background:rgba(225,169,59,.14);transform:translateY(-1px)}
+
+  /* liquid glass */
+  .glass{position:relative;background:linear-gradient(155deg,rgba(255,255,255,.13),rgba(255,255,255,.04) 38%,rgba(255,255,255,.09));border:1px solid rgba(255,255,255,.22);border-top-color:rgba(255,255,255,.4);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);box-shadow:0 24px 60px -30px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.25)}
+  .hero-panel{background:linear-gradient(155deg,rgba(255,255,255,.14),rgba(255,255,255,.05) 40%,rgba(255,255,255,.1));border:1px solid rgba(255,255,255,.24);border-top-color:rgba(255,255,255,.45);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5)}
+  header.scrolled{background:rgba(12,26,54,.72);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border-bottom-color:rgba(255,255,255,.16)}
+
+  /* conversion rail */
+  .rail{margin-top:16px;border-radius:14px;padding:16px;background:linear-gradient(155deg,rgba(225,169,59,.2),rgba(225,169,59,.06) 45%,rgba(225,169,59,.14));border:1px solid rgba(225,169,59,.45);border-top-color:rgba(238,192,105,.7);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);animation:railin .5s ease}
+  @keyframes railin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .rail p{color:#fff;font-size:.9rem;margin-bottom:10px;font-weight:600}
+  .rail .rrow{display:flex;gap:8px;flex-wrap:wrap}
+  .rail input{flex:1;min-width:150px;padding:11px 13px;border:1px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(12,26,54,.55);color:#fff;font-family:var(--body);font-size:.9rem}
+  .rail input::placeholder{color:rgba(255,255,255,.5)}
+  .rail input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(225,169,59,.25)}
+  .rail .btn{padding:11px 18px;font-size:.78rem}
+  .rail .rok{color:var(--gold-soft);font-weight:700;font-size:.92rem}
+  .rail .rcall{display:inline-block;margin-top:9px;color:rgba(255,255,255,.72);font-size:.8rem}
+  .rail .rcall b{color:var(--gold)}
+
+  /* question marquee */
+  .mq{position:relative;overflow:hidden;margin-top:34px;padding:4px 0}
+  .mq-track{display:flex;gap:10px;width:max-content;animation:mqscroll 46s linear infinite}
+  .mq:hover .mq-track{animation-play-state:paused}
+  @keyframes mqscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .mq-pill{flex:none;cursor:pointer;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:rgba(255,255,255,.85);border-radius:999px;padding:9px 16px;font-size:.84rem;font-family:var(--body);transition:border-color .2s,background .2s,color .2s}
+  .mq-pill:hover{border-color:var(--gold);background:rgba(225,169,59,.15);color:#fff}
+  .mq-fade{position:absolute;top:0;bottom:0;width:70px;z-index:2;pointer-events:none}
+  .mq-fade.l{left:0;background:linear-gradient(90deg,#16294f,transparent)}
+  .mq-fade.r{right:0;background:linear-gradient(270deg,#1e3a6e,transparent)}
+
+  /* live routing hint */
+  .route-hint{min-height:20px;margin-top:9px;text-align:center;font-size:.8rem;color:var(--gold-soft);opacity:0;transition:opacity .3s}
+  .route-hint.on{opacity:1}
+
+  /* constellation */
+  .constellation{position:absolute;inset:0;z-index:1;pointer-events:none}
+  .hero .wrap{z-index:2}
+
+  /* 3D tilt + specular sheen */
+  .tilt{transform-style:preserve-3d;will-change:transform}
+  .tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.18),transparent 55%);opacity:0;transition:opacity .25s;pointer-events:none}
+  .tilt:hover::after{opacity:1}
+  .svc,.pain,.sys,.sw,.icp{position:relative}
+
+  /* roster micro-cards */
+  .rli{cursor:pointer;position:relative;transition:border-color .2s,background .2s}
+  .rli:hover{border-color:var(--gold);background:rgba(225,169,59,.13)}
+  .rli .mini{display:none;position:absolute;bottom:calc(100% + 10px);left:0;z-index:30;width:min(270px,72vw);border-radius:12px;padding:14px;text-align:left;cursor:default;background:linear-gradient(155deg,rgba(20,39,78,.97),rgba(12,26,54,.97));border:1px solid rgba(225,169,59,.4);box-shadow:0 22px 50px -20px #000}
+  .rli.open .mini{display:block;animation:railin .25s ease}
+  .rli .mini p{font-size:.8rem;color:rgba(255,255,255,.82);line-height:1.5;margin:0 0 10px;white-space:normal}
+  .rli .mini .btn{padding:8px 12px;font-size:.68rem;width:100%}
+
+  /* mobile dock + sheet */
+  .dock{display:none;position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:80;gap:10px;padding:10px;border-radius:16px;background:linear-gradient(155deg,rgba(20,39,78,.82),rgba(12,26,54,.86));border:1px solid rgba(255,255,255,.22);border-top-color:rgba(255,255,255,.4);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);box-shadow:0 18px 44px -18px #000}
+  .dock.hidden{display:none!important}
+  .dock-ask{flex:1}
+  .dock-call{flex:none;width:48px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:rgba(255,255,255,.1);color:var(--gold);border:1px solid rgba(255,255,255,.2)}
+  .sheet{display:none;position:fixed;inset:0;z-index:90;background:rgba(6,13,28,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .sheet.open{display:flex;align-items:flex-end}
+  .sheet-card{width:100%;max-height:86vh;overflow-y:auto;border-radius:22px 22px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom));background:linear-gradient(165deg,rgba(23,42,84,.96),rgba(12,26,54,.98));border-top:1px solid rgba(255,255,255,.3);animation:sheetup .3s ease}
+  @keyframes sheetup{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+  .sheet-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .sheet-x{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:34px;height:34px;border-radius:50%;font-size:1.2rem;cursor:pointer;line-height:1}
+  .sheet-out{margin-top:14px}
+  .sheet-out .answer{max-height:none}
+  @media(max-width:560px){.dock{display:flex}}
+
+  /* swipe carousels on phones */
+  @media(max-width:560px){
+    .icp-grid,.sys-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .icp-grid::-webkit-scrollbar,.sys-grid::-webkit-scrollbar{display:none}
+    .icp-grid>.icp{flex:0 0 86%;scroll-snap-align:center}
+    .sys-grid>.sys{flex:0 0 74%;scroll-snap-align:center}
+    .swipe-dots{display:flex;justify-content:center;gap:7px;margin-top:4px}
+    .swipe-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .2s,transform .2s}
+    .swipe-dots i.on{background:var(--gold);transform:scale(1.25)}
+  }
+  @media(min-width:561px){.swipe-dots{display:none}}
 
   .reveal{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
@@ -346,40 +448,43 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <svg class="skyline" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true"><path fill="#2E5696" d="M0 200V120l40-6v-30l30 4v-26l34 8v40l26-14v40l40-22v54l34-30v60l40-44v74l30-50v90h-40z M300 200V90l36 6v30l40-20v50l34-24v70l40-40v88l30-58v92h-30z M700 200V100l40 8v40l34-18v44l40-28v66l30-30v68l40-40v80h-30z M1080 200V110l34 6v34l40-22v54l30-26v66l40-36v74l34-44v88h-40z"/></svg>
+  <canvas class="constellation" id="stars" aria-hidden="true"></canvas>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <h1>Your Marketing Team, On Tap</h1>
-      <p class="hero-lead">Momentum 360 Agents puts nineteen specialist AI marketers to work on your business. Ask anything about growing your company, or pick a specialist and start &mdash; every answer is built on Momentum 360's real client playbooks and powered by GPT-5.5.</p>
+      <p class="hero-lead">Momentum 360 Agents puts nineteen specialist AI marketers to work on your business. Ask anything about growing your company, or pick a specialist and start. Every answer is built on Momentum 360's real client playbooks and powered by GPT-5.5.</p>
       <div class="hero-proof" aria-label="Momentum 360 Agents proof points">
         <span><b>19</b>specialist agents covering the full marketing funnel</span>
         <span><b>4</b>squads: capture, get found, win customers, content</span>
         <span><b>24/7</b>on tap whenever the marketing needs doing</span>
       </div>
       <div class="badge-strip" aria-label="Partner and recognition badges">
-        <span class="badge-card"><img src="assets/badges/google-partner.webp" alt="Google Partner"></span>
-        <span class="badge-card"><img src="assets/badges/rankwatch-2024.png" alt="RankWatch Top Agency 2024"></span>
-        <span class="badge-card tall"><img src="assets/badges/inc-5000.png" alt="Inc. 5000"></span>
-        <span class="badge-card"><img src="assets/badges/philly-100.png" alt="Philly 100"></span>
-        <span class="badge-card tall"><img src="assets/badges/best-of-pennsylvania.webp" alt="Best of Pennsylvania"></span>
+        <span class="badge-card"><img src="assets/badges/google-partner.webp" alt="Google Partner" width="90" height="46" loading="lazy"></span>
+        <span class="badge-card"><img src="assets/badges/rankwatch-2024.webp" alt="RankWatch Top Agency 2024" width="44" height="64" loading="lazy"></span>
+        <span class="badge-card tall"><img src="assets/badges/inc-5000.webp" alt="Inc. 5000" width="60" height="60" loading="lazy"></span>
+        <span class="badge-card"><img src="assets/badges/philly-100.webp" alt="Philly 100" width="60" height="60" loading="lazy"></span>
+        <span class="badge-card tall"><img src="assets/badges/best-of-pennsylvania.webp" alt="Best of Pennsylvania" width="64" height="68" loading="lazy"></span>
       </div>
     </div>
     <div class="hero-panel">
       <div class="consult">
         <div id="consultForm">
-          <div class="form-title">Free &mdash; no signup required</div>
+          <div class="form-title">Free, no signup required</div>
           <h3>Ask Your First Question</h3>
           <div class="cfield"><input id="c-q" name="question" type="text" placeholder="e.g. How do I get more customers from Google?"></div>
-          <div class="cfield"><input id="c-name" name="name" type="text" placeholder="Name (optional)" autocomplete="name"></div>
-          <div class="cfield"><input id="c-email" name="email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
           <button class="btn btn-gold" type="button" id="consultBtn">Ask The Agents</button>
-          <p class="fine">Real answers in seconds &mdash; from the specialist that fits your question.</p>
+          <div class="route-hint" id="routeHint" aria-live="polite"></div>
+          <p class="fine">Real answers in seconds, from the specialist that fits your question.</p>
         </div>
-        <div class="consult-done" id="consultDone" role="status" aria-live="polite" style="text-align:left;padding:6px 2px">
-          <div class="form-title" id="consultAgent">Specialist</div>
-          <div class="answer" id="consultAnswer"></div>
-          <button class="btn btn-outline" type="button" id="consultReset" style="width:100%;margin-top:14px">Ask Another Question</button>
-        </div>
+        <div class="consult-done" id="consultDone" role="status" aria-live="polite" style="text-align:left;padding:6px 2px"></div>
       </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="mq" id="mq" aria-label="Questions owners are asking">
+      <div class="mq-fade l" aria-hidden="true"></div>
+      <div class="mq-track" id="mqTrack"></div>
+      <div class="mq-fade r" aria-hidden="true"></div>
     </div>
   </div>
 </section>
@@ -389,11 +494,11 @@
   <div class="wrap about-grid">
     <div class="about-copy reveal">
       <span class="eyebrow">One team, nineteen specialists</span>
-      <p>Momentum 360 Agents is your always-on marketing department: nineteen AI specialists covering virtual tours, photography, video, SEO, AI search, Google Business, paid ads, reviews, content, branding, and reporting &mdash; every one of them trained on the playbooks Momentum 360 runs with real clients.</p>
+      <p>Momentum 360 Agents is your always-on marketing department: nineteen AI specialists covering virtual tours, photography, video, SEO, AI search, Google Business, paid ads, reviews, content, branding, and reporting, every one of them trained on the playbooks Momentum 360 runs with real clients.</p>
       <p>Ask a question in plain English and the right specialist answers with a plan you can act on today. No blank pages, no agency wait times, no generic chatbot advice.</p>
     </div>
     <div class="google-card reveal">
-      <div id="liveMap" aria-label="Momentum 360 on the map — Philadelphia, PA"></div>
+      <div id="liveMap" aria-label="Momentum 360 on the map, Philadelphia, PA"></div>
       <div class="pin map-fallback" aria-hidden="true"></div>
       <div class="pill">Your Marketing Team, On Tap</div>
       <div class="gpartner"><b>Powered By GPT-5.5</b><span>MOMENTUM 360 PLAYBOOKS</span></div>
@@ -409,9 +514,9 @@
       <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l2-3h4l2 3"/><circle cx="12" cy="13" r="3.5"/></svg></div><h3>Capture &amp; Showcase</h3><p>Plan 360 virtual tours, listing photos, drone shoots, property video, and podcast episodes that make your business impossible to ignore.</p></div>
       <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Get Found Everywhere</h3><p>Rank in Google and AI search, own the local Map Pack, run Local Service Ads, and fix your listings so customers actually find you.</p></div>
       <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg></div><h3>Win More Customers</h3><p>Launch Meta and Pinterest ads, write copy that converts, revive cold leads, and respond to every review on-brand.</p></div>
-      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div><h3>Create A Month Of Content</h3><p>Turn one idea into posts, reels, emails, and blogs &mdash; a full month of on-brand content from a single working session.</p></div>
+      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div><h3>Create A Month Of Content</h3><p>Turn one idea into posts, reels, emails, and blogs, a full month of on-brand content from a single working session.</p></div>
       <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4.5 4.5 0 00-6 6L3 18v3h3l5.7-5.7a4.5 4.5 0 006-6L14 13l-3-3 3.7-3.7z"/></svg></div><h3>Fix What Leaks</h3><p>Audit your website for the gaps that cost you leads, then get a prioritized fix list written in plain English.</p></div>
-      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>Understand Your Results</h3><p>Get a plain-English report card on what's working, what's not, and exactly what to do next &mdash; no dashboards required.</p></div>
+      <div class="svc reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>Understand Your Results</h3><p>Get a plain-English report card on what's working, what's not, and exactly what to do next, no dashboards required.</p></div>
     </div>
   </div>
 </section>
@@ -421,12 +526,12 @@
   <div class="wrap">
     <div class="h-center reveal"><span class="eyebrow">Meet the roster</span><h2>Nineteen Specialists, Four Squads</h2><div class="bar"></div></div>
     <div class="icp-grid">
-      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l2-3h4l2 3"/><circle cx="12" cy="13" r="3.5"/></svg></span>Capture &amp; showcase</h3><ul><li>360 Virtual Tour</li><li>Listing Photos</li><li>Drone &amp; Aerial</li><li>Property Video</li><li>Podcast Studio</li></ul></div>
-      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>Get found</h3><ul><li>AI SEO</li><li>Google Business</li><li>Local Service Ads</li><li>Local Listings</li></ul></div>
-      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span>Win customers</h3><ul><li>Meta Ads</li><li>Ad Writer</li><li>Pinterest Ads</li><li>Lead Reviver</li><li>Review Manager</li><li>Social Studio</li></ul></div>
-      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3l4 4L8 20l-5 1 1-5L17 3z"/></svg></span>Content &amp; run it</h3><ul><li>Content Engine</li><li>Branding</li><li>Report Card</li><li>Website Fixes</li></ul></div>
+      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l2-3h4l2 3"/><circle cx="12" cy="13" r="3.5"/></svg></span>Capture &amp; showcase</h3><ul><li class="rli" data-a="virtual-tour">360 Virtual Tour</li><li class="rli" data-a="listing-photos">Listing Photos</li><li class="rli" data-a="drone-aerial">Drone &amp; Aerial</li><li class="rli" data-a="property-video">Property Video</li><li class="rli" data-a="podcast-studio">Podcast Studio</li></ul></div>
+      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>Get found</h3><ul><li class="rli" data-a="ai-seo">AI SEO</li><li class="rli" data-a="google-business">Google Business</li><li class="rli" data-a="local-service-ads">Local Service Ads</li><li class="rli" data-a="local-listings">Local Listings</li></ul></div>
+      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span>Win customers</h3><ul><li class="rli" data-a="meta-ads">Meta Ads</li><li class="rli" data-a="ad-writer">Ad Writer</li><li class="rli" data-a="pinterest-ads">Pinterest Ads</li><li class="rli" data-a="lead-reviver">Lead Reviver</li><li class="rli" data-a="review-manager">Review Manager</li><li class="rli" data-a="social-studio">Social Studio</li></ul></div>
+      <div class="icp reveal"><h3><span class="d"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3l4 4L8 20l-5 1 1-5L17 3z"/></svg></span>Content &amp; run it</h3><ul><li class="rli" data-a="content-engine">Content Engine</li><li class="rli" data-a="branding">Branding</li><li class="rli" data-a="report-card">Report Card</li><li class="rli" data-a="website-fixes">Website Fixes</li></ul></div>
     </div>
-    <p class="lead-p reveal">Every agent is a specialist, not a generalist. Pick the one that matches the job &mdash; plan an immersive tour, own the map pack, wake up cold leads, ship a month of posts &mdash; or just ask your question and Momentum 360 Agents puts the right expert on it.</p>
+    <p class="lead-p reveal">Every agent is a specialist, not a generalist. Pick the one that matches the job, plan an immersive tour, own the map pack, wake up cold leads, ship a month of posts, or just ask your question and Momentum 360 Agents puts the right expert on it.</p>
   </div>
 </section>
 
@@ -435,12 +540,12 @@
   <div class="wrap">
     <div class="h-center reveal"><span class="eyebrow">Sound familiar</span><h2>The Problems The Agents Solve Daily</h2><div class="bar"></div></div>
     <div class="pain-grid">
-      <div class="pain reveal"><span class="t">Time</span><h3>Marketing happens at midnight</h3><p>You run the business all day, so the marketing gets whatever energy is left at midnight &mdash; usually none.</p></div>
+      <div class="pain reveal"><span class="t">Time</span><h3>Marketing happens at midnight</h3><p>You run the business all day, so the marketing gets whatever energy is left at midnight, usually none.</p></div>
       <div class="pain reveal"><span class="t">Blank page</span><h3>Nothing to post, again</h3><p>The content calendar is empty, the last post was three weeks ago, and the ideas ran out a long time ago.</p></div>
       <div class="pain reveal"><span class="t">Generic AI</span><h3>Chatbots give you mush</h3><p>Generic AI gives generic advice. You need answers built for local business growth, not five-paragraph essays.</p></div>
       <div class="pain reveal"><span class="t">Visibility</span><h3>Invisible in search and AI</h3><p>Customers ask Google, ChatGPT, and Gemini who to hire, and your business never comes up in the answer.</p></div>
       <div class="pain reveal"><span class="t">Agencies</span><h3>A week for one revision</h3><p>Agencies bill big retainers, move slowly, and still take a week to send back a single draft.</p></div>
-      <div class="pain reveal"><span class="t">Direction</span><h3>No idea what to do first</h3><p>SEO, ads, reviews, content &mdash; everyone says something different, and you can't tell what actually moves revenue.</p></div>
+      <div class="pain reveal"><span class="t">Direction</span><h3>No idea what to do first</h3><p>SEO, ads, reviews, content, everyone says something different, and you can't tell what actually moves revenue.</p></div>
     </div>
   </div>
 </section>
@@ -451,14 +556,14 @@
     <div class="h-center reveal"><span class="eyebrow">How it works</span><h2>Ask Anything. Get It Done.</h2><div class="bar"></div></div>
     <p class="lead-p reveal" style="margin-bottom:40px">Momentum 360 Agents works the way you wish a marketing team worked: you talk, it delivers.</p>
     <div class="sys-grid">
-      <div class="sys reveal"><span class="n">01</span><h3>Ask anything</h3><p>Type a question in plain English &mdash; "How do I get more customers from Google?" &mdash; and get a real plan back.</p></div>
+      <div class="sys reveal"><span class="n">01</span><h3>Ask anything</h3><p>Type a question in plain English, "How do I get more customers from Google?", and get a real plan back.</p></div>
       <div class="sys reveal"><span class="n">02</span><h3>Or pick a specialist</h3><p>Choose from nineteen agents, each built for one job: tours, photos, SEO, ads, reviews, content, and more.</p></div>
-      <div class="sys reveal"><span class="n">03</span><h3>Built on real playbooks</h3><p>Every answer draws on the playbooks Momentum 360 runs with paying clients &mdash; not scraped internet advice.</p></div>
+      <div class="sys reveal"><span class="n">03</span><h3>Built on real playbooks</h3><p>Every answer draws on the playbooks Momentum 360 runs with paying clients, not scraped internet advice.</p></div>
       <div class="sys reveal"><span class="n">04</span><h3>Powered by GPT-5.5</h3><p>The latest model does the heavy lifting; Momentum 360's training keeps it sharp, local, and practical.</p></div>
-      <div class="sys reveal"><span class="n">05</span><h3>Drafts in minutes</h3><p>Ad copy, post calendars, shot lists, review replies &mdash; the first draft lands in minutes, not weeks.</p></div>
+      <div class="sys reveal"><span class="n">05</span><h3>Drafts in minutes</h3><p>Ad copy, post calendars, shot lists, review replies, the first draft lands in minutes, not weeks.</p></div>
       <div class="sys reveal"><span class="n">06</span><h3>One idea becomes everything</h3><p>Hand the Content Engine a single idea and walk away with posts, reels, emails, and a blog.</p></div>
-      <div class="sys reveal"><span class="n">07</span><h3>Plain-English reporting</h3><p>The Report Card agent turns your numbers into a report you can actually read &mdash; what worked, what's next.</p></div>
-      <div class="sys reveal"><span class="n">08</span><h3>Humans on call</h3><p>When a job needs a real crew &mdash; a shoot, a campaign build &mdash; Momentum 360's human team takes the handoff.</p></div>
+      <div class="sys reveal"><span class="n">07</span><h3>Plain-English reporting</h3><p>The Report Card agent turns your numbers into a report you can actually read: what worked, and what comes next.</p></div>
+      <div class="sys reveal"><span class="n">08</span><h3>Humans on call</h3><p>When a job needs a real crew, a shoot, a campaign build, Momentum 360's human team takes the handoff.</p></div>
     </div>
   </div>
 </section>
@@ -468,11 +573,11 @@
   <div class="wrap">
     <div class="case-study-block">
       <div class="h-center reveal"><span class="eyebrow">The output</span><h2>What You Walk Away With</h2><div class="bar"></div></div>
-      <p class="lead-p reveal" style="margin-bottom:6px">Every session ends with work you can publish, launch, or send &mdash; not another to-do list.</p>
+      <p class="lead-p reveal" style="margin-bottom:6px">Every session ends with work you can publish, launch, or send, not another to-do list.</p>
       <div class="stat-row reveal">
         <div class="stat"><div class="num" data-count="19">19</div><div class="cap">specialist agents on your roster</div></div>
         <div class="stat"><div class="num" data-count="4">4</div><div class="cap">squads covering the full funnel</div></div>
-        <div class="stat"><div class="num" data-count="24" data-suffix="/7">24/7</div><div class="cap">on tap &mdash; nights, weekends, right now</div></div>
+        <div class="stat"><div class="num" data-count="24" data-suffix="/7">24/7</div><div class="cap">on tap, nights, weekends, right now</div></div>
       </div>
       <ul class="deliver cs-metrics reveal">
         <li><span class="tk">&#10003;</span>A month of on-brand social posts from one session</li>
@@ -503,7 +608,7 @@
       <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Covers the whole funnel</h3><p>From getting found to winning customers to reporting the results.</p></div></div>
       <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>No blank pages</h3><p>Every session ends with something you can publish, launch, or send.</p></div></div>
       <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>On-brand every time</h3><p>The agents learn your voice, so every draft sounds like you.</p></div></div>
-      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Plain English only</h3><p>No jargon, no dashboards &mdash; answers a busy owner can act on.</p></div></div>
+      <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Plain English only</h3><p>No jargon and no dashboards. Just answers a busy owner can act on.</p></div></div>
       <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Backed by a real agency</h3><p>Momentum 360's human team is one handoff away when you need one.</p></div></div>
       <div class="sw reveal"><span class="ck"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0C1A36" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></span><div><h3>Always on</h3><p>Ask at 6 a.m. or midnight. Your marketing team never sleeps.</p></div></div>
     </div>
@@ -516,9 +621,9 @@
     <div class="h-center reveal"><span class="eyebrow">Straight answers</span><h2>Questions Owners Ask First</h2><div class="bar"></div></div>
     <div class="faq-list">
       <details class="faq reveal"><summary>Is this just ChatGPT with a logo?<span class="plus">+</span></summary><div class="ans">No. Every agent is trained on Momentum 360's client playbooks and tuned for one specific job. You get a specialist's plan for local business growth, not a generic essay.</div></details>
-      <details class="faq reveal"><summary>Which agent should I start with?<span class="plus">+</span></summary><div class="ans">You don't have to choose. Ask your question in plain English and Momentum 360 Agents puts the right specialist on it. If you already know the job &mdash; say, a month of social posts &mdash; pick Social Studio and dive in.</div></details>
+      <details class="faq reveal"><summary>Which agent should I start with?<span class="plus">+</span></summary><div class="ans">You don't have to choose. Ask your question in plain English and Momentum 360 Agents puts the right specialist on it. If you already know the job, say, a month of social posts, pick Social Studio and dive in.</div></details>
       <details class="faq reveal"><summary>Do I need any marketing experience?<span class="plus">+</span></summary><div class="ans">None. The agents ask the questions, explain the trade-offs in plain English, and hand you work that's ready to use.</div></details>
-      <details class="faq reveal"><summary>What happens when I need a human?<span class="plus">+</span></summary><div class="ans">Some jobs need a real crew &mdash; a 360 tour shoot, a full campaign build. The agents scope the work, then Momentum 360's human team picks it up without missing a step.</div></details>
+      <details class="faq reveal"><summary>What happens when I need a human?<span class="plus">+</span></summary><div class="ans">Some jobs need a real crew, a 360 tour shoot, a full campaign build. The agents scope the work, then Momentum 360's human team picks it up without missing a step.</div></details>
     </div>
   </div>
 </section>
@@ -526,18 +631,14 @@
 <!-- ASK THE AGENTS -->
 <section class="b navy" id="ask">
   <div class="wrap">
-    <div class="h-center reveal"><span class="eyebrow">Free &mdash; no signup required</span><h2>Ask The Agents Anything</h2><div class="bar"></div></div>
+    <div class="h-center reveal"><span class="eyebrow">Free, no signup required</span><h2>Ask The Agents Anything</h2><div class="bar"></div></div>
     <div class="audit-card reveal">
       <div class="glow" aria-hidden="true"></div>
       <div class="audit-title">Your first question is free</div>
       <h3>What Do You Want To Grow?</h3>
       <p class="audit-note">Ask anything about growing your business. The right specialist answers in seconds with a plain-English plan, grounded in Momentum 360's client playbooks.</p>
       <div class="audit-fields">
-        <input id="a-name" name="name" type="text" placeholder="Name" autocomplete="name">
-        <input id="a-phone" name="phone" type="tel" placeholder="Phone" autocomplete="tel">
-        <input id="a-email" name="email" type="email" placeholder="Work email" autocomplete="email">
-        <input id="a-biz" name="business" type="text" placeholder="Business name" autocomplete="organization">
-        <input id="a-q" name="question" class="full" type="text" placeholder="Your question &mdash; e.g. How do I get more customers from Google?">
+        <input id="a-q" name="question" class="full" type="text" placeholder="Your question, e.g. How do I get more customers from Google?">
       </div>
       <button class="btn btn-gold" type="button" id="askBtn">Ask The Agents</button>
       <div class="audit-out" id="askOut"></div>
@@ -581,9 +682,9 @@
       <div class="foot-col">
         <h4>Recognition</h4>
         <div class="foot-badges">
-          <span class="fbadge"><img src="assets/badges/inc-5000.png" alt="Inc. 5000"></span>
-          <span class="fbadge"><img src="assets/badges/philly-100.png" alt="Philly 100"></span>
-          <span class="fbadge"><img src="assets/badges/rankwatch-2024.png" alt="RankWatch Top Agency 2024"></span>
+          <span class="fbadge"><img src="assets/badges/inc-5000.webp" alt="Inc. 5000" width="60" height="60" loading="lazy"></span>
+          <span class="fbadge"><img src="assets/badges/philly-100.webp" alt="Philly 100" width="60" height="60" loading="lazy"></span>
+          <span class="fbadge"><img src="assets/badges/rankwatch-2024.webp" alt="RankWatch Top Agency 2024" width="44" height="64" loading="lazy"></span>
         </div>
       </div>
     </div>
@@ -591,7 +692,29 @@
   </div>
 </footer>
 
+<!-- MOBILE ASK DOCK -->
+<div class="dock" id="dock" aria-hidden="true">
+  <button class="btn btn-gold dock-ask" id="dockAsk">Ask The Agents</button>
+  <a class="dock-call" href="tel:2156076482" aria-label="Call Momentum 360"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.9z"/></svg></a>
+</div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Ask the agents">
+  <div class="sheet-card">
+    <div class="sheet-head">
+      <span class="form-title" style="margin:0">Momentum 360 Agents</span>
+      <button class="sheet-x" id="sheetX" aria-label="Close">&times;</button>
+    </div>
+    <div class="cfield"><input id="s-q" type="text" placeholder="Ask anything about growing your business"></div>
+    <button class="btn btn-gold" type="button" id="sheetBtn" style="width:100%">Ask The Agents</button>
+    <div class="sheet-out" id="sheetOut"></div>
+  </div>
+</div>
+
 <script>
+const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const FINE=matchMedia('(hover: hover) and (pointer: fine)').matches;
+const MOBILE=matchMedia('(max-width: 560px)').matches;
+
+/* reveal on scroll */
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
 document.querySelectorAll('.reveal,.h-center').forEach(el=>io.observe(el));
 
@@ -602,37 +725,21 @@ const burger=document.getElementById('burger'),mm=document.getElementById('mobil
 burger.addEventListener('click',()=>{const o=mm.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
 mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');burger.setAttribute('aria-expanded','false');}));
 
+/* stat counters */
 const cio=new IntersectionObserver((es)=>{es.forEach(e=>{
   if(!e.isIntersecting) return;
   const el=e.target,end=+el.dataset.count,suf=el.dataset.suffix||'';let t0=null;const d=1400;
   const step=(t)=>{if(!t0)t0=t;const p=Math.min((t-t0)/d,1);el.textContent=Math.round((1-Math.pow(1-p,3))*end).toLocaleString()+suf;if(p<1)requestAnimationFrame(step);};
-  requestAnimationFrame(step);cio.unobserve(el);
+  if(REDUCED){el.textContent=end.toLocaleString()+suf;}else{requestAnimationFrame(step);}cio.unobserve(el);
 });},{threshold:.5});
 document.querySelectorAll('.num[data-count]').forEach(c=>cio.observe(c));
 
-// --- live map (Leaflet + CARTO dark tiles, no API key) ---
-function initMap(){
-  const el=document.getElementById('liveMap');
-  if(!window.L||!el){el.closest('.google-card').classList.add('no-map');return;}
-  const philly=[39.9526,-75.1652];
-  // center north of the marker so the marker + popup sit clear of the overlay pill
-  const map=L.map(el,{center:[40.010,-75.1652],zoom:11,scrollWheelZoom:false,zoomControl:true});
-  map.attributionControl.setPrefix(false);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
-    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains:'abcd',maxZoom:19
-  }).on('tileerror',()=>{el.closest('.google-card').classList.add('no-map');el.style.display='none';}).addTo(map);
-  const icon=L.divIcon({className:'',html:'<div class="m-marker"><div class="pulse"></div><div class="dot"></div></div>',iconSize:[46,46],iconAnchor:[23,40],popupAnchor:[0,-38]});
-  L.marker(philly,{icon}).addTo(map)
-    .bindPopup('<b>Momentum 360</b><br>Philadelphia, PA<br>Serving all 50 states<br>(215) 607-6482',{className:'m-pop',autoPanPadding:[30,90]})
-    .openPopup();
-  map.on('focus click',()=>map.scrollWheelZoom.enable());
-  map.on('blur',()=>map.scrollWheelZoom.disable());
-}
-if(document.readyState==='complete')initMap();else addEventListener('load',initMap);
+/* ------- geo personalization ------- */
+let GEO=null;
+const geoReady=fetch('/api/geo').then(r=>r.ok?r.json():null).then(g=>{GEO=(g&&g.city)?g:null;return GEO;}).catch(()=>null);
 
-// --- live agents ---
-const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+/* ------- the ask experience ------- */
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 function md(t){
   const lines=esc(t).split('\n');let html='',list=null;
   const flush=()=>{if(list){html+=`</${list}>`;list=null;}};
@@ -646,55 +753,366 @@ function md(t){
   }
   flush();return html;
 }
+
+const CHAT_HISTORY=[];
 async function askAgents(fields){
-  const res=await fetch('/api/ask',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(fields)});
+  const t0=performance.now();
+  const res=await fetch('/api/ask',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({...fields,history:CHAT_HISTORY.slice(-2)})});
   const data=await res.json().catch(()=>({}));
   if(!res.ok)throw new Error(data.error||'The agents hit a snag. Try again in a minute.');
+  data.ms=performance.now()-t0;
+  CHAT_HISTORY.push({q:fields.question,a:data.answer});
+  if(CHAT_HISTORY.length>4)CHAT_HISTORY.shift();
   return data;
 }
 
-const consultBtn=document.getElementById('consultBtn');
-consultBtn.addEventListener('click',async()=>{
-  const q=document.getElementById('c-q').value.trim();
-  if(q.length<5){alert('Please add your question so the right specialist can answer.');return;}
-  const email=document.getElementById('c-email').value.trim();
-  if(email&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){alert('That email doesn\'t look right — fix it or leave it blank.');return;}
-  const form=document.getElementById('consultForm');
-  form.classList.add('asking');consultBtn.textContent='Thinking…';
+const STAGES=['Reading your question','Searching 9 playbooks','Matching the right specialist'];
+function startStages(mount){
+  mount.innerHTML='<div class="stage"><span class="sdot"></span><span class="stxt">'+STAGES[0]+'&hellip;</span></div>';
+  const txt=mount.querySelector('.stxt');let i=0;
+  const iv=REDUCED?null:setInterval(()=>{i=Math.min(i+1,STAGES.length-1);txt.textContent=STAGES[i]+'…';},1100);
+  return ()=>{if(iv)clearInterval(iv);};
+}
+
+function typewriter(el){
+  if(REDUCED)return;
+  const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
+  const nodes=[];let n;while(n=walker.nextNode())if(n.nodeValue.trim())nodes.push(n);
+  const spans=[];
+  for(const node of nodes){
+    const frag=document.createDocumentFragment();
+    for(const part of node.nodeValue.split(/(\s+)/)){
+      if(!part)continue;
+      if(/^\s+$/.test(part)){frag.appendChild(document.createTextNode(part));continue;}
+      const s=document.createElement('span');s.className='w';s.textContent=part;frag.appendChild(s);spans.push(s);
+    }
+    node.parentNode.replaceChild(frag,node);
+  }
+  if(spans.length>260){spans.forEach(s=>s.classList.add('on'));return;}
+  el.classList.add('tw');
+  let i=0;const iv=setInterval(()=>{
+    for(let k=0;k<2&&i<spans.length;k++)spans[i++].classList.add('on');
+    if(i>=spans.length){clearInterval(iv);el.classList.remove('tw');}
+  },28);
+  el.addEventListener('click',()=>{spans.forEach(s=>s.classList.add('on'));clearInterval(iv);el.classList.remove('tw');},{once:true});
+}
+
+function renderAnswer(mount,data,q,sourceTag,after){
+  const secs=(data.ms/1000).toFixed(1);
+  const chips=(data.sources||[]).slice(0,3).map(s=>'<span class="chip">'+esc(s.replace(/ [\u2014-].*$/,''))+'</span>').join('');
+  const fups=(data.followups||[]).map(f=>'<button class="fup" type="button">'+esc(f)+'</button>').join('');
+  mount.innerHTML=
+    '<div class="agent-tag">'+esc(data.agent.name)+' &middot; '+esc(data.agent.squad)+'</div>'+
+    '<div class="answer">'+md(data.answer)+'</div>'+
+    '<div class="meta-row">'+(chips?'<span class="chip" style="border-style:dashed;opacity:.8">Grounded in:</span>'+chips:'')+'<span class="timer">answered in '+secs+'s</span></div>'+
+    (fups?'<div class="fups">'+fups+'</div>':'')+
+    '<div class="rail"><p>Want '+esc(data.agent.name)+'’s full step by step plan for your business?</p>'+
+      '<div class="rrow"><input type="email" placeholder="Email" autocomplete="email"><input type="tel" placeholder="Phone (optional)" autocomplete="tel" style="max-width:150px"><button class="btn btn-gold" type="button">Send It</button></div>'+
+      '<a class="rcall" href="tel:2156076482">Prefer to talk? <b>(215) 607-6482</b></a></div>';
+  typewriter(mount.querySelector('.answer'));
+  mount.querySelectorAll('.fup').forEach(b=>b.addEventListener('click',()=>askFlow(mount,b.textContent,sourceTag,after)));
+  const rail=mount.querySelector('.rail');
+  rail.querySelector('.btn').addEventListener('click',async()=>{
+    const email=rail.querySelector('input[type=email]').value.trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){alert('Please add a valid email so we can send it.');return;}
+    const phone=rail.querySelector('input[type=tel]').value.trim();
+    try{
+      const r=await fetch('/api/lead',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email,phone,question:q,agent:data.agent.name,source:sourceTag})});
+      if(!r.ok)throw 0;
+      rail.innerHTML='<p class="rok">You got it. '+esc(data.agent.name)+' is putting the full plan together for your inbox.</p><a class="rcall" href="tel:2156076482">Want it faster? <b>(215) 607-6482</b></a>';
+    }catch{alert('That did not go through. Try again, or call (215) 607-6482.');}
+  });
+}
+
+async function askFlow(mount,q,sourceTag,after){
+  const stop=startStages(mount);
   try{
-    const data=await askAgents({question:q,name:document.getElementById('c-name').value.trim(),email,source:'hero'});
-    document.getElementById('consultAgent').textContent=data.agent.name+' • '+data.agent.squad;
-    document.getElementById('consultAnswer').innerHTML=md(data.answer);
-    form.style.display='none';
-    document.getElementById('consultDone').classList.add('show');
-  }catch(e){alert(e.message);}
-  form.classList.remove('asking');consultBtn.textContent='Ask The Agents';
-});
-document.getElementById('consultReset').addEventListener('click',()=>{
-  document.getElementById('consultDone').classList.remove('show');
-  const form=document.getElementById('consultForm');
-  form.style.display='';
-  document.getElementById('c-q').value='';
-  document.getElementById('c-q').focus();
+    const data=await askAgents({question:q,source:sourceTag});
+    stop();
+    const st=mount.querySelector('.stxt');
+    if(st&&!REDUCED){st.textContent='Routed to '+data.agent.name+' · '+data.agent.squad;await new Promise(r=>setTimeout(r,450));}
+    renderAnswer(mount,data,q,sourceTag,after);
+    if(after)after();
+  }catch(e){stop();mount.innerHTML='<div class="answer"><p>'+esc(e.message)+'</p></div>';if(after)after();}
+}
+
+/* hero panel */
+const consultBtn=document.getElementById('consultBtn'),consultForm=document.getElementById('consultForm'),consultDone=document.getElementById('consultDone'),cq=document.getElementById('c-q');
+async function heroAsk(q){
+  if(q.length<5){alert('Please add your question so the right specialist can answer.');return;}
+  consultForm.style.display='none';consultDone.classList.add('show');
+  await askFlow(consultDone,q,'hero',()=>{
+    const back=document.createElement('button');
+    back.className='btn btn-outline';back.type='button';back.style.cssText='width:100%;margin-top:12px';back.textContent='Ask Another Question';
+    back.addEventListener('click',()=>{consultDone.classList.remove('show');consultDone.innerHTML='';consultForm.style.display='';cq.value='';cq.focus();});
+    consultDone.appendChild(back);
+  });
+}
+consultBtn.addEventListener('click',()=>heroAsk(cq.value.trim()));
+cq.addEventListener('keydown',e=>{if(e.key==='Enter')heroAsk(cq.value.trim());});
+
+/* live routing hint as you type */
+const routeHint=document.getElementById('routeHint');
+let routeTimer=null,routeCtl=null;
+cq.addEventListener('input',()=>{
+  clearTimeout(routeTimer);
+  const q=cq.value.trim();
+  if(q.length<12){routeHint.classList.remove('on');return;}
+  routeTimer=setTimeout(async()=>{
+    try{
+      if(routeCtl)routeCtl.abort();
+      routeCtl=new AbortController();
+      const r=await fetch('/api/route',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({question:q}),signal:routeCtl.signal});
+      if(!r.ok)return;
+      const d=await r.json();
+      if(d&&d.name){routeHint.innerHTML='&rarr; '+esc(d.name)+' is stepping up';routeHint.classList.add('on');}
+    }catch{}
+  },800);
 });
 
-const askBtn=document.getElementById('askBtn'),askOut=document.getElementById('askOut');
-askBtn.addEventListener('click',async()=>{
-  const q=document.getElementById('a-q').value.trim();
+/* bottom ask card */
+const askBtn=document.getElementById('askBtn'),askOut=document.getElementById('askOut'),aq=document.getElementById('a-q');
+async function bottomAsk(){
+  const q=aq.value.trim();
   if(q.length<5){alert('Please add your question so the right specialist can take it.');return;}
-  const email=document.getElementById('a-email').value.trim();
-  if(email&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){alert('That email doesn\'t look right — fix it or leave it blank.');return;}
-  askBtn.disabled=true;askBtn.textContent='Thinking…';
+  askBtn.disabled=true;askBtn.textContent='Working…';
   askOut.classList.add('show');
-  askOut.innerHTML='<div class="head">Routing to a specialist…</div>';
-  try{
-    const data=await askAgents({question:q,name:document.getElementById('a-name').value.trim(),phone:document.getElementById('a-phone').value.trim(),email,business:document.getElementById('a-biz').value.trim(),source:'ask'});
-    askOut.innerHTML='<div class="head">'+esc(data.agent.name)+' • '+esc(data.agent.squad)+'</div><div class="answer" style="color:inherit">'+md(data.answer)+'</div>';
-  }catch(e){
-    askOut.innerHTML='<div class="head">Hmm.</div>'+esc(e.message);
-  }
+  await askFlow(askOut,q,'ask');
   askBtn.disabled=false;askBtn.textContent='Ask Another Question';
+}
+askBtn.addEventListener('click',bottomAsk);
+aq.addEventListener('keydown',e=>{if(e.key==='Enter')bottomAsk();});
+
+/* mobile dock + sheet */
+const dock=document.getElementById('dock'),sheet=document.getElementById('sheet'),sheetOut=document.getElementById('sheetOut'),sq=document.getElementById('s-q'),sheetBtn=document.getElementById('sheetBtn');
+function openSheet(prefill){sheet.classList.add('open');document.body.style.overflow='hidden';if(prefill)sq.value=prefill;setTimeout(()=>sq.focus(),150);}
+function closeSheet(){sheet.classList.remove('open');document.body.style.overflow='';}
+document.getElementById('dockAsk').addEventListener('click',()=>openSheet());
+document.getElementById('sheetX').addEventListener('click',closeSheet);
+sheet.addEventListener('click',e=>{if(e.target===sheet)closeSheet();});
+async function sheetAsk(){
+  const q=sq.value.trim();
+  if(q.length<5){alert('Please add your question first.');return;}
+  sheetBtn.disabled=true;sheetBtn.textContent='Working…';
+  await askFlow(sheetOut,q,'mobile-dock');
+  sheetBtn.disabled=false;sheetBtn.textContent='Ask Another Question';
+}
+sheetBtn.addEventListener('click',sheetAsk);
+sq.addEventListener('keydown',e=>{if(e.key==='Enter')sheetAsk();});
+const askSection=document.getElementById('ask');
+new IntersectionObserver(es=>es.forEach(e=>dock.classList.toggle('hidden',e.isIntersecting)),{threshold:.15}).observe(askSection);
+
+/* question marquee */
+const MQ=['How do I get more customers from Google?','Why is my competitor above me in the map pack?','What should I post this month?','How do I get more 5 star reviews?','Are Facebook ads worth it for a local business?','How do I show up when people ask ChatGPT who to hire?','My website gets traffic but no calls. Why?','How do I wake up old leads?','What does a 360 virtual tour cost?','Write me an ad that actually converts.','Should I run Google Local Service Ads?','How do I respond to a bad review?','What is AEO and do I need it?','How do I turn one idea into a month of content?'];
+const mqTrack=document.getElementById('mqTrack');
+function buildMarquee(extra){
+  const qs=extra?[extra,...MQ]:MQ.slice();
+  const mk=q=>{const b=document.createElement('button');b.className='mq-pill';b.type='button';b.textContent=q;
+    b.addEventListener('click',()=>{if(MOBILE){openSheet(q);sheetAsk();}else{cq.value=q;heroAsk(q);document.getElementById('top').scrollIntoView({behavior:REDUCED?'auto':'smooth'});}});
+    return b;};
+  mqTrack.innerHTML='';
+  const copies=REDUCED?1:2;
+  for(let c=0;c<copies;c++)qs.forEach(q=>mqTrack.appendChild(mk(q)));
+  if(REDUCED){mqTrack.style.animation='none';mqTrack.style.flexWrap='wrap';mqTrack.style.width='auto';}
+}
+buildMarquee();
+geoReady.then(g=>{if(g)buildMarquee('How do I rank in '+g.city+'?');});
+
+/* typing placeholder on bottom input */
+(function(){
+  if(REDUCED)return;
+  const qs=['How do I get found in AI search?','Plan a month of posts for my business.','Why am I not in the map pack?','How do I get more reviews?'];
+  let qi=0,ci=0,dir=1,stopped=false,base='Your question, e.g. ';
+  aq.addEventListener('focus',()=>{stopped=true;aq.placeholder=base+'How do I get more customers from Google?';},{once:true});
+  geoReady.then(g=>{if(g)qs.push('How do I win '+g.city+' customers from Google?');});
+  (function tick(){
+    if(stopped)return;
+    const q=qs[qi%qs.length];
+    ci+=dir;
+    if(ci>=q.length+14){dir=-1;ci=q.length;}
+    if(ci<=0&&dir<0){dir=1;qi++;ci=0;}
+    aq.placeholder=base+q.slice(0,Math.max(0,Math.min(ci,q.length)));
+    setTimeout(tick,dir>0?55:16);
+  })();
+})();
+
+/* roster micro-cards */
+const AGENTS={
+ 'virtual-tour':['Plans immersive 360 tours: scenes, prep, publishing to your site and Google profile.','What would a 360 tour of my business look like?'],
+ 'listing-photos':['Shot lists, lighting, staging and honest enhancement for photos that sell.','How do I get listing photos that actually sell?'],
+ 'drone-aerial':['Knows when aerial sells, FAA basics, and the shots worth paying for.','Is drone footage worth it for my business?'],
+ 'property-video':['Walkthroughs, vertical reels and testimonials, three formats from one shoot.','What video should my business make first?'],
+ 'podcast-studio':['Launches practical owner podcasts and multiplies every episode into clips and posts.','How would a podcast bring me customers?'],
+ 'ai-seo':['Ranks you in Google and in ChatGPT, Gemini and Perplexity answers.','How do I show up in Google and ChatGPT searches?'],
+ 'google-business':['Owns the map pack: categories, photos, posts, reviews, Q&A.','How do I win the Google map pack in my city?'],
+ 'local-service-ads':['Google Guaranteed setup, lead disputes and pay per lead budgeting.','Are Google Local Service Ads worth it for me?'],
+ 'local-listings':['Finds and fixes every wrong listing so Google and AI trust your info.','How do I fix my business listings across the web?'],
+ 'meta-ads':['Offer first Facebook and Instagram campaigns with honest tracking.','What should my first Facebook ad campaign look like?'],
+ 'ad-writer':['Hooks, offers and CTAs in plain language that converts.','Write me an ad hook for my business.'],
+ 'pinterest-ads':['Reaches planners months before they buy, ideal for visual businesses.','Should my business be advertising on Pinterest?'],
+ 'lead-reviver':['The 9 word email and sequences that wake up cold leads.','How do I wake up my old leads and past customers?'],
+ 'review-manager':['Review systems, on brand replies and negative review recovery.','How do I get more 5 star Google reviews?'],
+ 'social-studio':['A month of on brand posts from one working session.','Plan a month of social posts for my business.'],
+ 'content-engine':['Turns one idea into a blog, clips, a carousel, an email and posts.','How do I turn one idea into a month of content?'],
+ 'branding':['Positioning, voice and a visual kit your whole team can follow.','How do I make my brand look and sound consistent?'],
+ 'report-card':['Plain English reports: what worked, what did not, what is next.','What should my monthly marketing report show me?'],
+ 'website-fixes':['Finds the leaks costing you leads and ranks fixes by revenue.','Why is my website not turning visitors into leads?']};
+document.querySelectorAll('.rli').forEach(li=>{
+  li.addEventListener('click',e=>{
+    if(e.target.closest('.mini'))return;
+    const open=li.classList.contains('open');
+    document.querySelectorAll('.rli.open').forEach(x=>x.classList.remove('open'));
+    if(open)return;
+    if(!li.querySelector('.mini')){
+      const a=AGENTS[li.dataset.a];if(!a)return;
+      const mini=document.createElement('div');mini.className='mini';
+      mini.innerHTML='<p>'+esc(a[0])+'</p><button class="btn btn-gold" type="button">Ask '+esc(li.textContent.trim())+'</button>';
+      mini.querySelector('.btn').addEventListener('click',()=>{
+        li.classList.remove('open');
+        if(MOBILE){openSheet(a[1]);}else{cq.value=a[1];document.getElementById('top').scrollIntoView({behavior:REDUCED?'auto':'smooth'});heroAsk(a[1]);}
+      });
+      li.appendChild(mini);
+    }
+    li.classList.add('open');
+  });
 });
+document.addEventListener('click',e=>{if(!e.target.closest('.rli'))document.querySelectorAll('.rli.open').forEach(x=>x.classList.remove('open'));});
+
+/* 3D tilt with specular sheen */
+if(FINE&&!REDUCED){
+  const SEL='.svc,.pain,.sys,.sw,.icp';
+  document.querySelectorAll(SEL).forEach(el=>el.classList.add('tilt'));
+  document.addEventListener('pointermove',e=>{
+    const el=e.target.closest(SEL);
+    document.querySelectorAll('.tilt[data-hot]').forEach(x=>{if(x!==el){x.style.transform='';x.removeAttribute('data-hot');}});
+    if(!el)return;
+    const r=el.getBoundingClientRect();
+    const px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
+    el.setAttribute('data-hot','1');
+    el.style.transform='perspective(700px) rotateX('+((py-.5)*-6).toFixed(2)+'deg) rotateY('+((px-.5)*6).toFixed(2)+'deg) translateY(-4px)';
+    el.style.setProperty('--mx',(px*100).toFixed(1)+'%');
+    el.style.setProperty('--my',(py*100).toFixed(1)+'%');
+  },{passive:true});
+}
+
+/* swipe dots for mobile carousels */
+if(MOBILE){
+  document.querySelectorAll('.icp-grid,.sys-grid').forEach(grid=>{
+    const items=grid.children.length;
+    const dots=document.createElement('div');dots.className='swipe-dots';
+    for(let i=0;i<items;i++){const d=document.createElement('i');if(!i)d.className='on';dots.appendChild(d);}
+    grid.after(dots);
+    grid.addEventListener('scroll',()=>{
+      const idx=Math.round(grid.scrollLeft/(grid.scrollWidth/items));
+      [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===Math.min(idx,items-1)));
+    },{passive:true});
+  });
+}
+
+/* agent constellation in the hero */
+(function(){
+  if(REDUCED)return;
+  const cv=document.getElementById('stars');if(!cv)return;
+  const ctx=cv.getContext('2d');
+  const N=MOBILE?10:19,CL=4;
+  let W,H,nodes=[],running=false,excite=0;
+  function size(){
+    const r=cv.parentElement.getBoundingClientRect();
+    const dpr=Math.min(devicePixelRatio||1,2);
+    W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function init(){
+    nodes=[];
+    for(let i=0;i<N;i++){
+      const c=i%CL;
+      const cx=W*(.15+.24*c),cy=H*(.28+.38*((c%2)));
+      nodes.push({x:cx+(Math.random()-.5)*W*.16,y:cy+(Math.random()-.5)*H*.3,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:2+Math.random()*2.2,cx,cy});
+    }
+  }
+  function frame(){
+    if(!running)return;
+    ctx.clearRect(0,0,W,H);
+    const sp=1+excite*2.2;
+    for(const n of nodes){
+      n.vx+=(n.cx-n.x)*.00006*sp;n.vy+=(n.cy-n.y)*.00006*sp;
+      n.x+=n.vx*sp;n.y+=n.vy*sp;
+      if(n.x<0||n.x>W)n.vx*=-1;if(n.y<0||n.y>H)n.vy*=-1;
+    }
+    for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+      const a=nodes[i],b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
+      if(d<130){ctx.strokeStyle='rgba(225,169,59,'+((1-d/130)*(.22+excite*.3)).toFixed(3)+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+    }
+    for(const n of nodes){
+      ctx.fillStyle='rgba(238,192,105,'+(.5+excite*.4)+')';
+      ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,7);ctx.fill();
+    }
+    excite=Math.max(0,excite-.008);
+    requestAnimationFrame(frame);
+  }
+  function start(){if(!running){running=true;requestAnimationFrame(frame);}}
+  function stop(){running=false;}
+  size();init();
+  addEventListener('resize',()=>{size();init();});
+  new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:.05}).observe(cv);
+  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+  cq.addEventListener('focus',()=>{excite=1;});
+})();
+
+/* ------- live map (lazy Leaflet + geo + case pins) ------- */
+function initMap(){
+  const el=document.getElementById('liveMap');
+  if(!window.L||!el){el&&el.closest('.google-card').classList.add('no-map');return;}
+  const philly=[39.9526,-75.1652];
+  const map=L.map(el,{center:[40.010,-75.1652],zoom:11,scrollWheelZoom:false,zoomControl:true});
+  map.attributionControl.setPrefix(false);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains:'abcd',maxZoom:19
+  }).on('tileerror',()=>{el.closest('.google-card').classList.add('no-map');el.style.display='none';}).addTo(map);
+  const icon=L.divIcon({className:'',html:'<div class="m-marker"><div class="pulse"></div><div class="dot"></div></div>',iconSize:[46,46],iconAnchor:[23,40],popupAnchor:[0,-38]});
+  const dot=L.divIcon({className:'',html:'<div class="c-dot"></div>',iconSize:[16,16],iconAnchor:[8,8],popupAnchor:[0,-10]});
+  const hq=L.marker(philly,{icon}).addTo(map).bindPopup('<b>Momentum 360 HQ</b><br>Philadelphia, PA<br>Serving all 50 states<br>(215) 607-6482',{className:'m-pop',autoPanPadding:[30,90]});
+  const vista=L.marker([44.0521,-123.0868],{icon:dot}).addTo(map).bindPopup('<b>Vista River Hospice</b><br>Oregon<br>100% revenue growth<br>801 AI citations earned',{className:'m-pop',autoPanPadding:[30,90]});
+  const sam=L.marker([37.6872,-97.3301],{icon:dot}).addTo(map).bindPopup('<b>Samuels Garage Doors</b><br>Wichita, KS<br>2X revenue in 5 months<br>761 AI citations earned',{className:'m-pop',autoPanPadding:[30,90]});
+  hq.openPopup();
+  map.on('focus click',()=>map.scrollWheelZoom.enable());
+  map.on('blur',()=>map.scrollWheelZoom.disable());
+  /* story tour: HQ, then your city if we know it, then the case study wins */
+  let stops=[[philly,11,hq]],touched=false;
+  map.on('mousedown touchstart zoomstart',()=>{touched=true;});
+  geoReady.then(g=>{
+    if(g&&g.lat&&g.lon&&g.country==='US'){
+      const you=L.marker([g.lat,g.lon],{icon:dot}).addTo(map).bindPopup('<b>Agents active near '+esc(g.city)+'</b><br>Ask your first question today',{className:'m-pop',autoPanPadding:[30,90]});
+      stops.push([[g.lat,g.lon],9,you]);
+    }
+    stops.push([[44.0521,-123.0868],7,vista],[[37.6872,-97.3301],7,sam],[philly,11,hq]);
+    if(REDUCED)return;
+    let i=1;
+    const step=()=>{
+      if(touched||i>=stops.length)return;
+      const [ll,z,m]=stops[i++];
+      map.flyTo(ll,z,{duration:2.2});
+      setTimeout(()=>{if(!touched)m.openPopup();},2400);
+      setTimeout(step,6500);
+    };
+    setTimeout(step,3500);
+  });
+}
+/* lazy-load Leaflet when the About section approaches */
+(function(){
+  const about=document.getElementById('about');
+  let loading=false;
+  function load(){
+    if(loading)return;loading=true;
+    const css=document.createElement('link');css.rel='stylesheet';css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    const js=document.createElement('script');js.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    js.onload=initMap;
+    js.onerror=()=>{const el=document.getElementById('liveMap');el&&el.closest('.google-card').classList.add('no-map');};
+    document.head.append(css,js);
+  }
+  new IntersectionObserver((es,ob)=>{es.forEach(e=>{if(e.isIntersecting){load();ob.disconnect();}});},{rootMargin:'600px'}).observe(about);
+})();
 </script>
 
 </body>
