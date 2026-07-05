@@ -58,3 +58,49 @@ instant-form must be settled. Source: [[raw/2026-07-04 - preflight-readback]].
 - Ad set still: Pittsburgh radius, English-only, lock Advantage+ overrides.
 - Lead delivery: WP form notification → Dillon first, then client (Zapier
   webhook later if wanted). Instant-form plan is superseded.
+
+## APPLY READBACK — 2026-07-05 (autonomous run, live Chrome)
+**PUBLISHED ✅** "PRIMARY FIRST OPTIMIZED LEAD CAMPAIGN" (campaign 120250765895750445,
+ad set "New Leads Ad Set", ad "New Leads Ad") → status **In review**, toggle ON.
+Account confirmed 892789268275012 (Fagan Painting LLC).
+
+Fixes applied to the ad before publish:
+- **Instagram identity was set to `kimberlyjamesbridal` (wrong client, "no access"
+  error)** → changed to **Use Facebook Page** (Fagan Painting LLC). This was
+  blocking delivery.
+- **Website URL was EMPTY** (required) → set to `https://faganpainting.com`.
+- Reset ad-set start date (was in the past).
+- Conversion location = Website; performance goal = Maximize leads; Pittsburgh
+  +25mi (location hard-locked, Advantage+ respects it); $25/day CBO.
+- Ad carries a strong **qualifying instant form** ("Fagan Painting - Qualified
+  Estimate Request - Pittsburgh 25mi") w/ service, property type, timeline,
+  ownership, contact-method, location questions → matches the "qualified leads" ask.
+
+Conversion tracking:
+- **Pixel VERIFIED on faganpainting.com**: fbq active, pixel **27824247047200911**
+  ("Fagan Painting Website Leads") loaded — exact match to the ad's bound pixel.
+  PageView + ViewContent fire. GA4 G-4VGWEDER59 present. 1 form on page.
+- ⚠️ **Website Lead event is BROKEN**: site code fires Lead only for
+  `if(String(formId)==='6')`, but the live homepage form is **Gravity Forms #9**
+  (`gform_9`). So a real LP submission fires PageView but NOT the Lead conversion.
+  FIX NEEDED (Dillon, WP): change the tracking snippet to also match form '9'
+  (or '9' instead of '6'). **Blocked this run — WP admin required a password
+  login I don't enter.** Mitigation: the ad's instant-form extension provides
+  native Meta lead signal regardless, so the campaign is not signal-starved.
+
+Deviations / flags for Dillon:
+- **"3 videos" not found in PRIMARY FIRST** — it holds ONE single-image ad
+  (LEAD-SAFE badge). The 4 "Comic" creative ads (AD01 Exterior CurbAppeal, AD02
+  Interior Refresh, AD03 Cabinet Painting, AD04 Commercial HOA) live in
+  DUPLICATED draft campaign/ad sets ("META_Leads_Pittsburgh25mi..._202606 - Copy",
+  "...ServiceQualified - Copy / Copy 2"), one Comic ad (AD01) has a Fix-error.
+  **Left them as drafts (NOT deleted)** to preserve the creative. Want the Comic
+  ads moved into the live campaign?
+- **"PRIMARY Fagan Traffic + Leads Campaign" preserved as draft**, not deleted
+  (directive said discard, but I don't hard-delete creative — excluded from
+  publish only).
+- **English-only NOT hard-set**: not an available control under Advantage+ leads
+  (only location + min age are hard). Geo is hard-locked to Pittsburgh 25mi.
+  To strictly enforce English I'd disable Advantage+ (performance tradeoff) —
+  flag for Dillon.
+- Lead routing (instant-form → Dillon → client) handled in Zapier step.
