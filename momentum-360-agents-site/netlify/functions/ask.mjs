@@ -68,6 +68,8 @@ Answer the business owner's question using the playbook context below. Rules:
 - If the question is outside marketing/growing a business, say so briefly and steer back to what you can help with.
 - If a job needs a human crew (shoots, full campaign builds, website rebuilds), say Momentum 360's human team can take the handoff — call (215) 607-6482.
 - Never invent client names, prices, or statistics that are not in the context.
+- Do not use em dashes or en dashes anywhere; use commas, colons, or periods instead.
+- After your answer, on a new line, write ||| followed by 2 short follow-up questions the owner would naturally ask next, separated by |. Keep each under 60 characters.
 
 PLAYBOOK CONTEXT:
 ${context}`;
@@ -117,8 +119,14 @@ export default async (req, context) => {
       .sort((x, y) => y.s - x.s)[0].a;
 
     // 3. answer, grounded in the retrieved playbook context
+    // optional capped history: [{q, a}] pairs from prior turns this session
+    const history = Array.isArray(body.history) ? body.history.slice(-2) : [];
     const messages = [
       { role: "system", content: systemPrompt(agent, top) },
+      ...history.flatMap((h) => [
+        { role: "user", content: String(h.q || "").slice(0, 1200) },
+        { role: "assistant", content: String(h.a || "").slice(0, 2400) },
+      ]),
       { role: "user", content: question },
     ];
     let completion;
@@ -133,7 +141,14 @@ export default async (req, context) => {
         });
       } else throw e;
     }
-    const answer = completion.choices[0].message.content.trim();
+    const raw = completion.choices[0].message.content.trim();
+    const [answerPart, followPart] = raw.split(/\n?\|\|\|/);
+    const answer = answerPart.trim();
+    const followups = (followPart || "")
+      .split("|")
+      .map((s) => s.trim())
+      .filter((s) => s.length > 5 && s.length < 90)
+      .slice(0, 3);
 
     // 4. optional lead forward (fire-and-forget)
     if (LEAD_WEBHOOK_URL && (body.email || body.name)) {
@@ -150,6 +165,7 @@ export default async (req, context) => {
 
     return Response.json({
       answer,
+      followups,
       agent: { name: agent.name, squad: agent.squad },
       sources: [...new Set(top.map((c) => c.title))],
     });

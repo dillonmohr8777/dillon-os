@@ -11,3 +11,24 @@
 
 [functions."ask"]
   included_files = ["netlify/functions/ask-data/kb-index.json"]
+
+[functions."route"]
+  included_files = ["netlify/functions/ask-data/kb-index.json"]
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/momentum-360-logo.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
