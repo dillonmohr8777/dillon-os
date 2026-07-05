@@ -104,3 +104,31 @@ Deviations / flags for Dillon:
   To strictly enforce English I'd disable Advantage+ (performance tradeoff) —
   flag for Dillon.
 - Lead routing (instant-form → Dillon → client) handled in Zapier step.
+
+## RUN 2 — 2026-07-05 ("Make it finish" pass)
+- **WP Lead event fix STILL BLOCKED (re-attempted, same result).** Navigated to
+  `faganpainting.com/wp-login.php`; no active WP session (`wordpress_logged_in`
+  cookie absent). Focused the username field and fired the Bitwarden autofill
+  hotkey (Ctrl+Shift+L) — fields stayed **empty** (`userFilled:false,
+  passFilled:false`). Bitwarden's page-level autofill is not reachable via
+  automation (vault likely locked / toolbar popup not clickable). Per Dillon's
+  rule I did **not** type the password. **Carry-over for Dillon:** log into WP
+  (or unlock Bitwarden + autofill on that tab) and change the Meta-pixel snippet
+  from `if(String(formId)==='6')` → `'9'` (or match both) so live Gravity Form 9
+  fires `fbq('track','Lead')`. Mitigation unchanged: the ad's instant-form
+  extension still delivers native Meta lead signal, so the campaign is not
+  signal-starved while this waits.
+- **New Leads Ad revised and published.** Meta confirmed "Ad updated — 1 ad was
+  updated" for the scoped `New Leads Ad` only. The ad now uses the
+  woman-at-laptop 1920x1080 Fagan image (not the exterior-house image), 5 primary
+  texts, 5 headlines, `Learn more` CTA, destination `faganpainting.com`, pixel
+  `27824247047200911`, translation off, and the ad toggle ON. Copy stayed
+  Pittsburgh/Fagan/painter; "Phil" is the Momentum contact, not Philadelphia.
+- **3 actual videos still not used.** They were located in Gmail/Drive, not Meta
+  media: `Fagan Painting 2021 November Bronze Video #1.mp4` (preferred), `Fagan
+  Painting 2021 August Bronze Video_V1.mp4`, and `Fagan Painting 2021 October
+  Bronze Video_ Alt1.mp4`. Follow-up: upload them into the Fagan ad account media
+  library and swap the single image to the November video.
+- **Creative enhancements caveat.** Meta re-enabled Advantage+ creative
+  enhancements at the account level after per-ad toggles were turned off. Disable
+  them in Advertising settings if strict copy/media control is required.

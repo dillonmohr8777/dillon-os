@@ -66,3 +66,18 @@ after fixes**. Diagnosis order lives in the Action Packet / session brief.
    cooperation — flag.
 3. Bid strategy is already Max Clicks (correct). A rebuild alone won't help while
    the destination is dead.
+
+## RUN 2 — 2026-07-05 ("Make it finish" pass)
+- **Final-URL fix NOT possible this run — `ref=` still unrecoverable.** The task
+  gated the fix on "only if the exact live intake URL with `ref=` can be
+  recovered." It can't: the `ref=` value has never been in the vault or the live
+  ad (the ad points at the dead `nkcdc.org/business-tax/philadelphia`, which
+  carries no `ref=`), so there is nothing to preserve or copy. It must come from
+  Dillon/NKCDC.
+- **Pause/flag fallback: attempted, not completed within budget.** Google Ads was
+  authenticated (dillonmohr8777@gmail.com), but the deep-link to acct 1002096937
+  bounced through a Google account chooser and reaching the specific ad to pause
+  it would have exhausted the run's remaining browser budget. **Left the ad
+  as-is** (it is not spending, so no active harm) and flagged rather than risk a
+  half-finished change. Recommended next session: pause the broken RSA or fix the
+  `nkcdc.org` redirect, then repoint with the `ref=` param once Dillon supplies it.
