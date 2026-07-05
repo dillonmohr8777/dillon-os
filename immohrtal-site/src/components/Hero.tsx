@@ -1,10 +1,95 @@
+import { useRef, type ReactNode } from 'react'
 import { artist } from '../content/album'
+import { prefersReducedMotion } from '../hooks/useReveal'
+
+/**
+ * Mouse-follow 3D tilt (fine pointers only, rect cached on enter,
+ * rAF-throttled). The Mac-Miller-style photo box and the logo lockup
+ * both ride on this.
+ */
+function TiltBox({ children, max = 7, className = '' }: { children: ReactNode; max?: number; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const rect = useRef<DOMRect | null>(null)
+  const queued = useRef(false)
+  const pos = useRef({ x: 0, y: 0 })
+  const enabled = () => window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion()
+
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{ transition: 'transform 0.18s ease-out' }}
+      onMouseEnter={() => {
+        if (enabled()) rect.current = ref.current?.getBoundingClientRect() ?? null
+      }}
+      onMouseMove={(e) => {
+        pos.current = { x: e.clientX, y: e.clientY }
+        if (queued.current || !rect.current) return
+        queued.current = true
+        requestAnimationFrame(() => {
+          queued.current = false
+          const r = rect.current
+          const el = ref.current
+          if (!r || !el) return
+          const px = (pos.current.x - r.left) / r.width - 0.5
+          const py = (pos.current.y - r.top) / r.height - 0.5
+          el.style.transform = `perspective(900px) rotateY(${px * max}deg) rotateX(${py * -max}deg) translateY(-6px) scale(1.015)`
+        })
+      }}
+      onMouseLeave={() => {
+        rect.current = null
+        if (ref.current) ref.current.style.transform = ''
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
+/** The big artist-shot slot, Mac Miller style: wide box, 3D tilt,
+ *  deep soft shadow with a blue/green ambient glow behind it. */
+function HeroPhoto() {
+  return (
+    <div className="reveal reveal-later relative mt-16 w-full max-w-3xl">
+      {/* ambient shadow backdrop */}
+      <div
+        aria-hidden="true"
+        className="absolute -inset-x-8 -bottom-10 top-10 -z-10"
+        style={{
+          background:
+            'radial-gradient(60% 55% at 50% 62%, rgba(20,25,34,0.22), transparent 70%), radial-gradient(45% 45% at 28% 70%, rgba(31,158,255,0.16), transparent 70%), radial-gradient(45% 45% at 74% 66%, rgba(23,168,107,0.13), transparent 70%)',
+          filter: 'blur(18px)',
+        }}
+      />
+      <TiltBox max={6}>
+        <span className="pop-box block">
+          {artist.heroImage ? (
+            <img src={artist.heroImage} alt={`${artist.name} portrait`} className="block h-auto w-full" loading="lazy" />
+          ) : (
+            <span
+              className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-3 px-6"
+              style={{
+                background:
+                  'radial-gradient(70% 90% at 50% 0%, #fdfeff, transparent 60%), radial-gradient(90% 70% at 50% 100%, #ccd6e2, transparent 65%), linear-gradient(165deg, #eef2f7, #d8e0e9)',
+              }}
+            >
+              <span className="font-display chrome-text text-2xl uppercase tracking-wide sm:text-3xl">The Shot</span>
+              <span className="mono-tag text-center">
+                artist photo lands here // drop public/artist.jpg
+              </span>
+            </span>
+          )}
+        </span>
+      </TiltBox>
+    </div>
+  )
+}
 
 export function Hero() {
   return (
     <header
       id="top"
-      className="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden px-5 py-20 text-center"
+      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 py-20 text-center"
     >
       {/* faint blue/green atmosphere over the particle world */}
       <div
@@ -34,16 +119,18 @@ export function Hero() {
         {/* the logo IS the wordmark: big, boxed, pops on hover */}
         <h1 className="reveal reveal-late m-0 mt-6 w-full max-w-[420px]">
           {artist.logo ? (
-            <span className="pop-box block p-4 sm:p-6">
-              <img
-                src={artist.logo}
-                alt={artist.name}
-                className="block h-auto w-full"
-                width={1320}
-                height={1204}
-                fetchPriority="high"
-              />
-            </span>
+            <TiltBox max={4}>
+              <span className="pop-box block p-4 sm:p-6">
+                <img
+                  src={artist.logo}
+                  alt={artist.name}
+                  className="block h-auto w-full"
+                  width={1320}
+                  height={1204}
+                  fetchPriority="high"
+                />
+              </span>
+            </TiltBox>
           ) : (
             <span className="font-display chrome-text block uppercase leading-[0.92]" style={{ fontSize: 'clamp(3.8rem, 15vw, 11.5rem)' }}>
               {artist.name}
@@ -78,20 +165,8 @@ export function Hero() {
           </a>
         </div>
 
-        {/* Mac Miller energy: the artist shot, huge, right under the lockup.
-            Set artist.heroImage in src/content/album.ts when the photo lands. */}
-        {artist.heroImage && (
-          <div className="reveal reveal-later mt-14 w-full max-w-3xl">
-            <span className="pop-box block">
-              <img
-                src={artist.heroImage}
-                alt={`${artist.name} portrait`}
-                className="block h-auto w-full"
-                loading="lazy"
-              />
-            </span>
-          </div>
-        )}
+        {/* Mac Miller energy: the artist shot, huge, right under the lockup */}
+        <HeroPhoto />
       </div>
 
       {/* scroll cue */}
