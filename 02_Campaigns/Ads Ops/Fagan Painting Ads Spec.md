@@ -132,3 +132,29 @@ Deviations / flags for Dillon:
 - **Creative enhancements caveat.** Meta re-enabled Advantage+ creative
   enhancements at the account level after per-ad toggles were turned off. Disable
   them in Advertising settings if strict copy/media control is required.
+
+## RUN 3 — 2026-07-05 (WP Lead-event fix — DONE ✅)
+**The site Meta-pixel Lead event now fires for the LIVE form.** Fixed in Fagan
+WordPress (logged-in session, Divi Theme Options → Integration → head code).
+- **What was broken:** the snippet fired `fbq('track','Lead')` only for Gravity
+  Forms **#6** (`if(String(formId)==='6')` + a `gform_confirmation_message_6`
+  fallback), but the live homepage form is **Gravity Forms #9**. Real LP
+  submissions fired PageView but NOT Lead → the LP conversion was invisible to
+  the pixel.
+- **Fix applied:** changed both branches to match 6 OR 9 —
+  `if((String(formId)==='6'||String(formId)==='9'))` and the message-element
+  fallback now checks `gform_confirmation_message_6 || gform_confirmation_message_9`.
+  Form 6 is preserved (no regression); form 9 is now covered.
+- **Why the first two attempts failed (documented so it isn't re-hit):** Divi
+  renders the Integration head/body code fields as **CodeMirror** editors — the
+  underlying `#divi_integration_head` `<textarea>` is `display:none` and Divi
+  serializes CodeMirror's content on Save, so setting `textarea.value` (even with
+  native setter + input/change events) was silently discarded and reverted on
+  reload. **Correct method: edit the CodeMirror instance
+  (`el.CodeMirror.setValue(...)` + `.save()`), THEN Save Changes.**
+- **Verified persisted:** after Save + full page reload, the head field reads
+  **1957 chars, form-9 present in both the formId check and the message fallback,
+  form-6 still present**. The DB holds the fix.
+- Follow-up (optional): confirm a live Lead fire end-to-end via Meta Pixel Helper
+  on an actual form-9 submission (not done here — would create a real test lead
+  and submitting site forms is out of scope for autonomous action).
