@@ -1,6 +1,6 @@
 ---
-last_checked: 2026-07-04
-last_orchestrator_run: 2026-07-04
+last_checked: 2026-07-05
+last_orchestrator_run: 2026-07-05
 tags: [system, routines]
 ---
 
@@ -10,7 +10,7 @@ tags: [system, routines]
 
 Seven legacy crons are **retired** and merged into the orchestrator. Disable them in Cursor Automations UI if still active.
 
-## Orchestrator lane status (run 11 — 2026-07-04)
+## Orchestrator lane status (run 12 — 2026-07-05)
 
 | Lane | Agent | Status | Notes |
 |------|-------|--------|-------|
@@ -19,7 +19,7 @@ Seven legacy crons are **retired** and merged into the orchestrator. Disable the
 | Vault | `vault-pulse` | 🟢 ok | 13 overviews scanned; April freeze noted |
 | Sessions | `codex-session-sync` | 🟡 partial | 5 files, 0 promotions; no Codex exports |
 | Ads/SEO | `domain-ads-seo` | 🟢 ok | 5 P0s in campaign queues |
-| Content | `content-routines` | ⚪ skipped | Saturday — next Sunday 2026-07-06 |
+| Content | `content-routines` | 🟢 done | Sunday — 5 draft files in `03_Content/` |
 | Consolidate | `memory-consolidator` | 🟢 ok | Brief + memory sync written |
 
 ## Retired standalone crons (do not re-enable)
@@ -41,4 +41,3 @@ Client notes seeded with `client`, `last_touched`, `next_action`, `due`, `tags`,
 - Gmail + Slack MCP not connected on orchestrator automation — both lanes use vault-fallback.
 - Vault `last_touched` frozen at April 2026 on most clients until manual edits.
 - `10_Sessions/` templates empty; export Codex sessions to `10_Sessions/YYYY-MM-DD — topic.md`.
-- Referenced content drafts (Bok Law, Align LinkedIn) missing from repo — memory-sync vs filesystem mismatch.
