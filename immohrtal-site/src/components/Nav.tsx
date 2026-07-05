@@ -29,7 +29,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#top" className="flex items-center no-underline" aria-label={`${artist.name} — back to top`}>
           {artist.logo ? (
-            <img src={artist.logo} alt="" className="h-9 w-auto" width={96} height={36} />
+            <img src={artist.logo} alt="" className="h-11 w-auto" width={1320} height={1204} />
           ) : (
             <span className="font-display chrome-text text-xl tracking-wide uppercase">{artist.name}</span>
           )}
@@ -39,7 +39,7 @@ export function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="font-mono text-[11px] uppercase tracking-[0.22em] no-underline transition-colors hover:text-white"
+              className="font-mono text-[11px] uppercase tracking-[0.22em] no-underline transition-colors hover:text-[#141922]"
               style={{ color: 'var(--dim)' }}
             >
               {l.label}

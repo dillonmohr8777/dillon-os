@@ -45,8 +45,8 @@ export const SPINE_SECTIONS: SpineSection[] = [
   { id: 'contact', label: 'BOOKINGS' },
 ]
 
-/** chrome ice → electric blue → deep night blue */
-export const SPINE_PALETTE: [string, string, string] = ['#c2d4e8', '#1f9eff', '#2e6bd9']
+/** the descent runs logo blue → teal → green, ink on paper */
+export const SPINE_PALETTE: [string, string, string] = ['#1f9eff', '#0fa48f', '#27ae60']
 
 export function hexToVec3(hex: string): [number, number, number] {
   const n = parseInt(hex.replace('#', ''), 16)

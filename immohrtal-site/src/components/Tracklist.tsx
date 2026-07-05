@@ -25,7 +25,7 @@ export function Tracklist() {
         Ten rounds, no referee
       </h2>
       <p className="reveal reveal-late mt-5 max-w-xl" style={{ color: 'var(--dim)' }}>
-        Working titles — the record is still being sequenced. Audio previews plug in here the moment the masters land.
+        Working titles while the record gets sequenced. Previews go live here the moment the masters land.
       </p>
 
       <ol className="reveal reveal-late mt-12 list-none border-t p-0 m-0" style={{ borderColor: 'var(--line)' }}>
@@ -82,7 +82,7 @@ export function Tracklist() {
 
       {!anyAudio && (
         <p className="mono-tag mt-6">
-          ▸ previews unlock when the masters are in — titles above are editable in src/content/album.ts
+          previews unlock when the masters are in. titles above are editable in src/content/album.ts
         </p>
       )}
     </section>

@@ -3,7 +3,7 @@
  *  IMMOHRTAL — SITE CONTENT CONFIG
  *  This is the ONE file to edit when the real assets land.
  *
- *  1. TRACKS  — titles below are SUGGESTIONS ONLY (nothing is
+ *  1. TRACKS — titles below are SUGGESTIONS ONLY (nothing is
  *     approved). Rename freely. When final MP3s are ready, drop
  *     them in  public/audio/  and point each track's `src` at
  *     the file (e.g. "/audio/01-signal.mp3"). A track with no
@@ -15,10 +15,13 @@
  *  4. COVER ART — when final art exists, put it in  public/
  *     (e.g. /cover.jpg) and set `coverArt` below. Until then a
  *     generated placeholder cover renders.
- *  5. LOGO — drop the IMMOHRTAL logo (transparent-background PNG
- *     works best on this dark site) into  public/logo.png  and
- *     set `logo: '/logo.png'` below. Until then the nav renders
- *     the chrome text wordmark.
+ *  5. LOGO — public/logo.jpg is the exact IMMOHRTAL logo and is
+ *     already wired into the hero, nav, and loader. Swap the file
+ *     to update it everywhere at once.
+ *  6. HERO PHOTO — when the artist shot is ready, drop it in
+ *     public/ (e.g. /artist.jpg) and set `heroImage` below. It
+ *     renders huge under the hero lockup, Mac Miller style, with
+ *     the hover pop.
  * ─────────────────────────────────────────────────────────────
  */
 
@@ -27,9 +30,10 @@ export const artist = {
   albumTitle: 'Dance With The Delusional',
   tagline: 'A signal from somewhere too far gone to come back normal.',
   sessionTag: 'SESSION 001 // THE NEW ALBUM',
-  releaseTag: 'OUT NOW ON ALL PLATFORMS', // or "PRE-SAVE — DROPS 00.00.26"
+  releaseTag: 'OUT NOW ON ALL PLATFORMS', // or "PRE-SAVE. DROPS 00.00.26"
   coverArt: null as string | null, // e.g. "/cover.jpg" when final art is ready
-  logo: null as string | null, // e.g. "/logo.png" when the logo file is added
+  logo: '/logo.jpg' as string | null,
+  heroImage: null as string | null, // e.g. "/artist.jpg" when the photo lands
 }
 
 export interface Track {
@@ -72,9 +76,9 @@ export const story = {
   pullQuote:
     'Everybody kept telling me to come back to earth. I built a better one.',
   paragraphs: [
-    'Dance With The Delusional is what happens when confidence stops asking for permission. It was made late — after the calls stopped, after the city went quiet, when the only honest hour left is the one nobody schedules.',
-    'It moves like a night drive: pressure in the low end, chrome on the surface, something slightly off in the mix that you stop wanting to fix. Damaged romance. Escape plans. The version of you that survives by refusing to be reasonable.',
-    'This is not an apology record. It is a transmission from the far side of "you good?" — still moving, still dancing, too far gone to come back normal. That is not a problem. That is the sound.',
+    'Dance With The Delusional is what happens when confidence stops asking permission. It was made late, after the calls stopped and the city went quiet, in the one honest hour nobody schedules.',
+    'It moves like a night drive. Pressure in the low end, chrome on the surface, and something slightly off in the mix that you stop wanting to fix. Damaged romance. Exit plans. The version of you that survives by refusing to be reasonable.',
+    'This is not an apology record. It is a status report from the far side of "you good?" Still moving. Still dancing. Too far gone to come back normal, and better for it.',
   ],
 }
 

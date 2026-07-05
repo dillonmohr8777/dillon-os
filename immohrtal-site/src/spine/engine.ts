@@ -14,7 +14,7 @@
 
 import { hexToVec3, type SpineConfig, type SpineEngine, type SpineHud } from './config'
 import { buildWorld, C, N_STATIONS } from './geometry'
-import { COMP_FS, KAWASE_DOWN_FS, KAWASE_UP_FS, POINT_FS, POINT_VS, QUAD_VS } from './shaders'
+import { COMP_FS, POINT_FS, POINT_VS, QUAD_VS } from './shaders'
 
 const TAU = Math.PI * 2
 
@@ -22,13 +22,6 @@ function elerp(cur: number, target: number, k: number, dt: number): number {
   const a = 1 - Math.exp(-k * dt)
   const next = cur + (target - cur) * a
   return Math.abs(target - next) < 0.0005 ? target : next
-}
-
-interface FBO {
-  fb: WebGLFramebuffer
-  tex: WebGLTexture
-  w: number
-  h: number
 }
 
 export function createSpineEngine(canvas: HTMLCanvasElement, config: SpineConfig): SpineEngine | null {
@@ -80,8 +73,6 @@ export function createSpineEngine(canvas: HTMLCanvasElement, config: SpineConfig
 
   const progPoints = program(POINT_VS, POINT_FS)
   const progComp = program(QUAD_VS, COMP_FS)
-  const progDown = program(QUAD_VS, KAWASE_DOWN_FS)
-  const progUp = program(QUAD_VS, KAWASE_UP_FS)
   if (!progPoints || !progComp) return null
 
   /* ---------- geometry ---------- */
@@ -131,76 +122,11 @@ export function createSpineEngine(canvas: HTMLCanvasElement, config: SpineConfig
   for (const n of ['uProj', 'uView', 'uTime', 'uMaxV', 'uFocusV', 'uVel', 'uPulse', 'uPulseV', 'uSizeMul', 'uMinPx', 'uAspect', 'uMouse', 'uAudio', 'uColA', 'uColB', 'uColC']) {
     U[n] = gl.getUniformLocation(progPoints, n)
   }
-  const UC = {
-    uBloom: gl.getUniformLocation(progComp, 'uBloom'),
-    uBloomOn: gl.getUniformLocation(progComp, 'uBloomOn'),
-    uStrength: gl.getUniformLocation(progComp, 'uStrength'),
-    uExposure: gl.getUniformLocation(progComp, 'uExposure'),
-  }
-  const UD = progDown && {
-    uTex: gl.getUniformLocation(progDown, 'uTex'),
-    uTexel: gl.getUniformLocation(progDown, 'uTexel'),
-    uOff: gl.getUniformLocation(progDown, 'uOff'),
-  }
-  const UU = progUp && {
-    uTex: gl.getUniformLocation(progUp, 'uTex'),
-    uTexel: gl.getUniformLocation(progUp, 'uTexel'),
-    uOff: gl.getUniformLocation(progUp, 'uOff'),
-  }
-
   const [colA, colB, colC] = config.palette.map(hexToVec3)
   gl.useProgram(progPoints)
   gl.uniform3f(U.uColA, colA[0], colA[1], colA[2])
   gl.uniform3f(U.uColB, colB[0], colB[1], colB[2])
   gl.uniform3f(U.uColC, colC[0], colC[1], colC[2])
-
-  /* ---------- FBOs (bloom, desktop only) ---------- */
-  let bloomOn = fine && !!progDown && !!progUp
-  let fbos: (FBO | null)[] | null = null
-  function makeFBO(w: number, h: number): FBO | null {
-    const tex = gl!.createTexture()
-    if (!tex) return null
-    gl!.bindTexture(gl!.TEXTURE_2D, tex)
-    gl!.texImage2D(gl!.TEXTURE_2D, 0, gl!.RGBA, w, h, 0, gl!.RGBA, gl!.UNSIGNED_BYTE, null)
-    gl!.texParameteri(gl!.TEXTURE_2D, gl!.TEXTURE_MIN_FILTER, gl!.LINEAR)
-    gl!.texParameteri(gl!.TEXTURE_2D, gl!.TEXTURE_MAG_FILTER, gl!.LINEAR)
-    gl!.texParameteri(gl!.TEXTURE_2D, gl!.TEXTURE_WRAP_S, gl!.CLAMP_TO_EDGE)
-    gl!.texParameteri(gl!.TEXTURE_2D, gl!.TEXTURE_WRAP_T, gl!.CLAMP_TO_EDGE)
-    const fb = gl!.createFramebuffer()
-    if (!fb) return null
-    gl!.bindFramebuffer(gl!.FRAMEBUFFER, fb)
-    gl!.framebufferTexture2D(gl!.FRAMEBUFFER, gl!.COLOR_ATTACHMENT0, gl!.TEXTURE_2D, tex, 0)
-    const ok = gl!.checkFramebufferStatus(gl!.FRAMEBUFFER) === gl!.FRAMEBUFFER_COMPLETE
-    gl!.bindFramebuffer(gl!.FRAMEBUFFER, null)
-    if (!ok) {
-      gl!.deleteFramebuffer(fb)
-      gl!.deleteTexture(tex)
-      return null
-    }
-    return { fb, tex, w, h }
-  }
-  function freeFBOs() {
-    if (fbos) {
-      for (const f of fbos) {
-        if (f) {
-          gl!.deleteFramebuffer(f.fb)
-          gl!.deleteTexture(f.tex)
-        }
-      }
-      fbos = null
-    }
-  }
-  function allocFBOs() {
-    freeFBOs()
-    if (!bloomOn) return
-    const qw = Math.max(2, canvas.width >> 2)
-    const qh = Math.max(2, canvas.height >> 2)
-    fbos = [makeFBO(qw, qh), makeFBO(qw >> 1, qh >> 1), makeFBO(qw >> 2, qh >> 2), makeFBO(qw >> 1, qh >> 1), makeFBO(qw, qh)]
-    if (fbos.some((f) => !f)) {
-      bloomOn = false
-      freeFBOs()
-    }
-  }
 
   /* ---------- section registry (zero rect reads in rAF) ---------- */
   const sections = config.sections
@@ -270,7 +196,6 @@ export function createSpineEngine(canvas: HTMLCanvasElement, config: SpineConfig
     canvas.height = Math.floor(window.innerHeight * dpr)
     lastW = window.innerWidth
     lastH = window.innerHeight
-    allocFBOs()
     computeRegistry()
     return dpr
   }
@@ -409,8 +334,8 @@ export function createSpineEngine(canvas: HTMLCanvasElement, config: SpineConfig
     /* idle demotion: no input 4s → alternate ticks */
     if (now - lastInput > 4000 && frameIdx & 1) return
 
-    /* adaptive governor: 60-frame median post-boot */
-    if (govStage < 3 && booted) {
+    /* adaptive governor: 60-frame median post-boot (drop DPR, then halve points) */
+    if (govStage < 2 && booted) {
       deltas.push(dt * 1000)
       if (deltas.length >= 60) {
         deltas.sort((a, b) => a - b)
@@ -421,14 +346,11 @@ export function createSpineEngine(canvas: HTMLCanvasElement, config: SpineConfig
           if (govStage === 1) {
             dprGov = 1 / Math.min(window.devicePixelRatio || 1, 2)
             dpr = doResize()
-          } else if (govStage === 2) {
-            bloomOn = false
-            allocFBOs()
           } else {
             drawN = Math.floor(N / 2)
           }
         } else {
-          govStage = 3
+          govStage = 2
         }
       }
     }
@@ -482,79 +404,22 @@ export function createSpineEngine(canvas: HTMLCanvasElement, config: SpineConfig
     gl!.uniform1f(U.uAudio, audio)
     gl!.uniform2f(U.uMouse, smX, smY)
 
+    /* paper background, then ink particles with premultiplied "over"
+       blending (additive bloom belongs to the dark theme; on paper the
+       points darken like ink instead of glowing) */
+    gl!.bindFramebuffer(gl!.FRAMEBUFFER, null)
+    gl!.viewport(0, 0, canvas.width, canvas.height)
+    gl!.disable(gl!.BLEND)
+    gl!.useProgram(progComp)
+    bindQuad(progComp!)
+    gl!.drawArrays(gl!.TRIANGLES, 0, 3)
     gl!.enable(gl!.BLEND)
-    gl!.blendFunc(gl!.ONE, gl!.ONE)
-
-    if (bloomOn && fbos) {
-      const f0 = fbos[0]!
-      /* 1. points → quarter-res */
-      gl!.bindFramebuffer(gl!.FRAMEBUFFER, f0.fb)
-      gl!.viewport(0, 0, f0.w, f0.h)
-      gl!.clearColor(0, 0, 0, 1)
-      gl!.clear(gl!.COLOR_BUFFER_BIT)
-      rebindPoints()
-      gl!.uniform1f(U.uSizeMul, 7.5 * dpr * 0.25)
-      gl!.uniform1f(U.uMinPx, 1.5)
-      gl!.drawArrays(gl!.POINTS, 0, drawN)
-      /* 2. dual-Kawase chain */
-      gl!.disable(gl!.BLEND)
-      const chain: Array<[WebGLProgram, NonNullable<typeof UD>, number, number]> = [
-        [progDown!, UD!, 0, 1],
-        [progDown!, UD!, 1, 2],
-        [progUp!, UU!, 2, 3],
-        [progUp!, UU!, 3, 4],
-      ]
-      for (const [prog, uu, si2, di] of chain) {
-        const srcF = fbos[si2]!
-        const dstF = fbos[di]!
-        gl!.useProgram(prog)
-        bindQuad(prog)
-        gl!.bindFramebuffer(gl!.FRAMEBUFFER, dstF.fb)
-        gl!.viewport(0, 0, dstF.w, dstF.h)
-        gl!.activeTexture(gl!.TEXTURE0)
-        gl!.bindTexture(gl!.TEXTURE_2D, srcF.tex)
-        gl!.uniform1i(uu.uTex, 0)
-        gl!.uniform2f(uu.uTexel, 1 / srcF.w, 1 / srcF.h)
-        gl!.uniform1f(uu.uOff, 1.4)
-        gl!.drawArrays(gl!.TRIANGLES, 0, 3)
-      }
-      /* 3. composite bg + bloom to canvas */
-      gl!.bindFramebuffer(gl!.FRAMEBUFFER, null)
-      gl!.viewport(0, 0, canvas.width, canvas.height)
-      gl!.useProgram(progComp)
-      bindQuad(progComp!)
-      gl!.activeTexture(gl!.TEXTURE0)
-      gl!.bindTexture(gl!.TEXTURE_2D, fbos[4]!.tex)
-      gl!.uniform1i(UC.uBloom, 0)
-      gl!.uniform1f(UC.uBloomOn, 1)
-      gl!.uniform1f(UC.uStrength, 1.15)
-      gl!.uniform1f(UC.uExposure, 1.5)
-      gl!.drawArrays(gl!.TRIANGLES, 0, 3)
-      /* 4. sharp points on top */
-      gl!.enable(gl!.BLEND)
-      gl!.useProgram(progPoints)
-      rebindPoints()
-      gl!.uniform1f(U.uSizeMul, 7.5 * dpr)
-      gl!.uniform1f(U.uMinPx, 0)
-      gl!.drawArrays(gl!.POINTS, 0, drawN)
-    } else {
-      /* mobile tier: bg pass + points */
-      gl!.bindFramebuffer(gl!.FRAMEBUFFER, null)
-      gl!.viewport(0, 0, canvas.width, canvas.height)
-      gl!.disable(gl!.BLEND)
-      gl!.useProgram(progComp)
-      bindQuad(progComp!)
-      gl!.uniform1f(UC.uBloomOn, 0)
-      gl!.uniform1f(UC.uStrength, 0)
-      gl!.uniform1f(UC.uExposure, 1.5)
-      gl!.drawArrays(gl!.TRIANGLES, 0, 3)
-      gl!.enable(gl!.BLEND)
-      gl!.useProgram(progPoints)
-      rebindPoints()
-      gl!.uniform1f(U.uSizeMul, 7.5 * dpr)
-      gl!.uniform1f(U.uMinPx, 0)
-      gl!.drawArrays(gl!.POINTS, 0, drawN)
-    }
+    gl!.blendFunc(gl!.ONE, gl!.ONE_MINUS_SRC_ALPHA)
+    gl!.useProgram(progPoints)
+    rebindPoints()
+    gl!.uniform1f(U.uSizeMul, 7.5 * dpr)
+    gl!.uniform1f(U.uMinPx, 0)
+    gl!.drawArrays(gl!.POINTS, 0, drawN)
   }
   raf = requestAnimationFrame(frame)
 
@@ -572,12 +437,11 @@ export function createSpineEngine(canvas: HTMLCanvasElement, config: SpineConfig
       canvas.removeEventListener('webglcontextrestored', onRestored)
       ro?.disconnect()
       hudSubs.clear()
-      freeFBOs()
       gl.deleteBuffer(bufHome)
       gl.deleteBuffer(bufScat)
       gl.deleteBuffer(bufMeta)
       gl.deleteBuffer(quadBuf)
-      for (const p of [progPoints, progComp, progDown, progUp]) if (p) gl.deleteProgram(p)
+      for (const p of [progPoints, progComp]) if (p) gl.deleteProgram(p)
       /* deliberately NOT losing the context — StrictMode remounts reuse it */
     },
     pulse(v = 0) {

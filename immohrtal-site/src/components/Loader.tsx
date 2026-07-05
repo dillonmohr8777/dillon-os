@@ -63,9 +63,13 @@ export function Loader({ engineRef }: { engineRef: { current: SpineEngine | null
 
   return (
     <div id="loader" className={done ? 'done' : ''} aria-hidden="true">
-      <span className="font-display chrome-text text-3xl uppercase tracking-wide">{artist.name}</span>
+      {artist.logo ? (
+        <img src={artist.logo} alt="" width={1320} height={1204} />
+      ) : (
+        <span className="font-display chrome-text text-3xl uppercase tracking-wide">{artist.name}</span>
+      )}
       <span className="font-mono mt-3 text-[11px] tracking-[0.24em]" style={{ color: 'var(--faint)' }}>
-        {artist.albumTitle.toUpperCase()} — CUEING UP
+        {artist.albumTitle.toUpperCase()} // CUEING UP
       </span>
       <div className="count font-mono" aria-hidden="true">
         <span ref={countRef}>000</span>

@@ -4,49 +4,58 @@ export function Hero() {
   return (
     <header
       id="top"
-      className="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden px-5 text-center"
+      className="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden px-5 py-20 text-center"
     >
-      {/* faint blue atmosphere over the GL world */}
+      {/* faint blue/green atmosphere over the particle world */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-0"
         style={{
           background:
-            'radial-gradient(65% 50% at 50% 62%, rgba(31,158,255,0.06), transparent 65%), radial-gradient(80% 65% at 50% 40%, rgba(40,58,96,0.22), transparent 70%)',
+            'radial-gradient(65% 50% at 50% 60%, rgba(31,158,255,0.06), transparent 65%), radial-gradient(70% 55% at 50% 30%, rgba(23,168,107,0.05), transparent 70%)',
         }}
       />
 
-      {/* vignette so type stays readable over the particle world */}
+      {/* light vignette so type stays readable over the motion */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-[1]"
         style={{
           background:
-            'radial-gradient(90% 70% at 50% 52%, transparent 30%, rgba(5,6,9,0.5) 78%, rgba(5,6,9,0.88) 100%)',
+            'radial-gradient(90% 70% at 50% 50%, transparent 32%, rgba(247,249,251,0.55) 78%, rgba(247,249,251,0.92) 100%)',
         }}
       />
 
-      {/* the type */}
-      <div className="relative z-10 max-w-5xl">
+      <div className="relative z-10 flex w-full max-w-4xl flex-col items-center">
         <p className="mono-tag reveal" style={{ color: 'var(--signal-txt)' }}>
           {artist.sessionTag}
         </p>
 
-        <h1
-          className="font-display chrome-text reveal reveal-late uppercase leading-[0.92] mt-6"
-          style={{
-            fontSize: 'clamp(3.8rem, 15vw, 11.5rem)',
-            letterSpacing: '0.01em',
-          }}
-        >
-          {artist.name}
+        {/* the logo IS the wordmark: big, boxed, pops on hover */}
+        <h1 className="reveal reveal-late m-0 mt-6 w-full max-w-[420px]">
+          {artist.logo ? (
+            <span className="pop-box block p-4 sm:p-6">
+              <img
+                src={artist.logo}
+                alt={artist.name}
+                className="block h-auto w-full"
+                width={1320}
+                height={1204}
+                fetchPriority="high"
+              />
+            </span>
+          ) : (
+            <span className="font-display chrome-text block uppercase leading-[0.92]" style={{ fontSize: 'clamp(3.8rem, 15vw, 11.5rem)' }}>
+              {artist.name}
+            </span>
+          )}
         </h1>
 
         <p
-          className="font-serif italic reveal reveal-late mt-5"
+          className="font-serif italic reveal reveal-late mt-7"
           style={{
-            fontSize: 'clamp(1.6rem, 4.6vw, 3.2rem)',
-            lineHeight: 1.15,
+            fontSize: 'clamp(1.7rem, 5vw, 3.2rem)',
+            lineHeight: 1.12,
             color: 'var(--ink)',
           }}
         >
@@ -54,13 +63,13 @@ export function Hero() {
         </p>
 
         <p
-          className="reveal reveal-later mx-auto mt-7 max-w-md font-mono text-[13px] leading-relaxed tracking-[0.08em]"
+          className="reveal reveal-later mx-auto mt-4 max-w-md font-mono text-[13px] leading-relaxed tracking-[0.08em]"
           style={{ color: 'var(--dim)' }}
         >
           {artist.tagline}
         </p>
 
-        <div className="reveal reveal-later mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="reveal reveal-later mt-8 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
           <a className="btn btn-chrome w-full sm:w-auto" href="#listen">
             Listen Now
           </a>
@@ -68,6 +77,21 @@ export function Hero() {
             Tracklist
           </a>
         </div>
+
+        {/* Mac Miller energy: the artist shot, huge, right under the lockup.
+            Set artist.heroImage in src/content/album.ts when the photo lands. */}
+        {artist.heroImage && (
+          <div className="reveal reveal-later mt-14 w-full max-w-3xl">
+            <span className="pop-box block">
+              <img
+                src={artist.heroImage}
+                alt={`${artist.name} portrait`}
+                className="block h-auto w-full"
+                loading="lazy"
+              />
+            </span>
+          </div>
+        )}
       </div>
 
       {/* scroll cue */}

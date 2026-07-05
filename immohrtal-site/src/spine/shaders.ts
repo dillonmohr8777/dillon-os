@@ -59,8 +59,9 @@ void main(){
   vec3 col = mix(mix(uColA, uColB, clamp(v*2.0, 0.0, 1.0)), uColC, clamp(v*2.0 - 1.0, 0.0, 1.0));
   float hero = isStn * exp(-pow(v * 30.0, 2.0));
   col = mix(col, mix(uColA, uColB, step(pos.x, 0.0)), hero * 0.7);
-  col = mix(col, vec3(0.75, 0.85, 1.0), 0.5 * lit);
-  col = mix(col, vec3(0.95, 0.97, 1.0), 0.85 * step(0.96, rnd));
+  /* light theme: focus ring and sparkles darken toward gunmetal ink */
+  col = mix(col, vec3(0.04, 0.32, 0.70), 0.5 * lit);
+  col = mix(col, vec3(0.06, 0.09, 0.15), 0.85 * step(0.96, rnd));
   vCol = col;
   vA = clamp(bright, 0.0, 2.2) * (0.35 + 0.65 * assemble);
   float roleSz = 1.0 + 0.15 * (1.0 - min(role, 1.0)) - 0.25 * isDust;
@@ -68,6 +69,8 @@ void main(){
   gl_PointSize = max(sz, uMinPx);
 }`
 
+/* premultiplied-alpha sprite: composited with "over" blending so the
+   particles read as ink on the light background */
 export const POINT_FS = `
 precision mediump float;
 varying vec3 vCol; varying float vA;
@@ -75,27 +78,25 @@ void main(){
   float d = length(gl_PointCoord - 0.5) * 2.0;
   float core = exp(-d*d*14.0);
   float halo = 0.40 * exp(-d*d*3.2);
-  float a = (core + halo) * vA;
-  vec3 col = vCol * (1.0 + 0.9 * smoothstep(0.30, 0.0, d));
+  float a = min((core + halo) * vA, 1.0) * 0.92;
+  vec3 col = vCol * (1.0 - 0.25 * smoothstep(0.30, 0.0, d));
   gl_FragColor = vec4(col * a, a);
 }`
 
 export const QUAD_VS =
   'attribute vec2 aP; varying vec2 vUv; void main(){ vUv = aP*0.5+0.5; gl_Position = vec4(aP,0.0,1.0); }'
 
-/* background: near-black night with two faint blue pools (was Mohr's
-   blue/green nebulae) */
+/* background: paper white with faint blue and green pools pulled from
+   the logo palette */
 export const COMP_FS = `
 precision mediump float; varying vec2 vUv;
 uniform sampler2D uBloom; uniform float uBloomOn, uStrength, uExposure;
 void main(){
-  vec3 top = vec3(0.016, 0.028, 0.055);
-  vec3 bot = vec3(0.005, 0.008, 0.018);
+  vec3 top = vec3(0.988, 0.992, 0.998);
+  vec3 bot = vec3(0.922, 0.942, 0.958);
   vec3 c = mix(bot, top, vUv.y);
-  vec2 p1 = vUv - vec2(0.25, 0.72); c += vec3(0.05, 0.13, 0.34) * 0.15 * exp(-dot(p1,p1)*5.0);
-  vec2 p2 = vUv - vec2(0.78, 0.28); c += vec3(0.07, 0.15, 0.30) * 0.12 * exp(-dot(p2,p2)*5.0);
-  vec3 bl = texture2D(uBloom, vUv).rgb * uStrength * uBloomOn;
-  c = mix(c + bl, 1.0 - exp(-(c + bl) * uExposure), uBloomOn);
+  vec2 p1 = vUv - vec2(0.25, 0.72); c = mix(c, vec3(0.78, 0.88, 0.99), 0.5 * exp(-dot(p1,p1)*5.0));
+  vec2 p2 = vUv - vec2(0.78, 0.28); c = mix(c, vec3(0.80, 0.94, 0.87), 0.42 * exp(-dot(p2,p2)*5.0));
   float ign = fract(52.9829189 * fract(dot(gl_FragCoord.xy, vec2(0.06711056, 0.00583715))));
   c += (ign - 0.5) * (1.5 / 255.0);
   gl_FragColor = vec4(c, 1.0);

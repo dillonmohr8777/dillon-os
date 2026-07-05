@@ -3,13 +3,13 @@ import { story } from '../content/album'
 export function Story() {
   return (
     <section id="story" aria-labelledby="story-heading" className="relative z-10 overflow-hidden py-24 md:py-36">
-      {/* deep-blue pressure glow behind the statement */}
+      {/* soft blue/green pressure glow behind the statement */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10"
         style={{
           background:
-            'radial-gradient(60% 55% at 78% 30%, rgba(31,158,255,0.08), transparent 65%), radial-gradient(55% 50% at 15% 75%, rgba(40,58,96,0.28), transparent 65%)',
+            'radial-gradient(60% 55% at 78% 30%, rgba(31,158,255,0.07), transparent 65%), radial-gradient(55% 50% at 15% 75%, rgba(23,168,107,0.06), transparent 65%)',
         }}
       />
       <div className="mx-auto max-w-4xl px-5">

@@ -40,9 +40,9 @@ export function Visualizer() {
       const bh = Math.max(2, v * h * 0.72)
       const y = (h - bh) / 2
       const grad = ctx.createLinearGradient(0, y, 0, y + bh)
-      grad.addColorStop(0, 'rgba(235,243,255,0.9)')
-      grad.addColorStop(0.55, 'rgba(147,167,196,0.75)')
-      grad.addColorStop(1, 'rgba(31,158,255,0.9)')
+      grad.addColorStop(0, 'rgba(20,25,34,0.85)')
+      grad.addColorStop(0.55, 'rgba(31,158,255,0.85)')
+      grad.addColorStop(1, 'rgba(39,174,96,0.9)')
       ctx.fillStyle = grad
       ctx.fillRect(x, y, barW, bh)
     }
@@ -105,7 +105,7 @@ export function Visualizer() {
         See the signal
       </h2>
       <p className="reveal reveal-late mt-5 max-w-xl" style={{ color: 'var(--dim)' }}>
-        The feed goes live with the music — press play on any track and the spectrum below reacts in real time.
+        Press play on any track and the feed reads the mix in real time.
       </p>
 
       <div

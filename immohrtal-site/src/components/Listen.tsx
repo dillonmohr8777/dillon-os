@@ -28,18 +28,18 @@ function CoverPlaceholder() {
         style={{ borderColor: 'rgba(190,206,232,0.18)', transform: 'translate(-50%,-50%) rotate(-24deg) scaleY(0.42)' }}
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-        <span className="font-display chrome-text uppercase leading-none" style={{ fontSize: 'clamp(2.6rem, 7vw, 4.2rem)' }}>
+        <span className="font-display chrome-text-light uppercase leading-none" style={{ fontSize: 'clamp(2.6rem, 7vw, 4.2rem)' }}>
           {artist.name}
         </span>
-        <span className="font-serif italic mt-3" style={{ fontSize: 'clamp(1.1rem, 2.6vw, 1.6rem)', color: 'var(--ink)' }}>
+        <span className="font-serif italic mt-3" style={{ fontSize: 'clamp(1.1rem, 2.6vw, 1.6rem)', color: '#eef1f7' }}>
           {artist.albumTitle}
         </span>
       </div>
       <span
         className="absolute bottom-4 left-1/2 -translate-x-1/2 font-mono text-[9px] tracking-[0.3em] uppercase"
-        style={{ color: 'var(--faint)' }}
+        style={{ color: 'rgba(226,233,245,0.7)' }}
       >
-        Placeholder — final art pending
+        Final art pending
       </span>
     </div>
   )
@@ -50,10 +50,10 @@ export function Listen() {
     <section id="listen" aria-labelledby="listen-heading" className="relative z-10 mx-auto max-w-6xl px-5 py-24 md:py-36">
       <p className="section-eyebrow reveal">01 / Listen</p>
       <h2 id="listen-heading" className="font-display chrome-text reveal mt-5 uppercase" style={{ fontSize: 'clamp(2.4rem, 6vw, 4.5rem)', lineHeight: 1 }}>
-        The album is the address
+        Play it everywhere
       </h2>
       <p className="reveal reveal-late mt-5 max-w-xl" style={{ color: 'var(--dim)' }}>
-        {artist.albumTitle} — everywhere you already live. Links go live with the release; pre-save locks it in the second it drops.
+        One album, every platform. Pre save it now and it lands in your library the second it drops.
       </p>
 
       <div className="mt-14 grid items-start gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-16">
@@ -81,7 +81,7 @@ export function Listen() {
                   <Icon />
                 </span>
                 <span className="flex-1 font-body text-[17px] font-medium">{p.label}</span>
-                <span className="font-mono text-[10px] tracking-[0.26em] uppercase" style={{ color: p.href ? 'var(--ice)' : 'var(--faint)' }}>
+                <span className="font-mono text-[10px] tracking-[0.26em] uppercase" style={{ color: p.href ? 'var(--green-txt)' : 'var(--faint)' }}>
                   {p.href ? 'Open →' : 'Soon'}
                 </span>
               </>

@@ -2,8 +2,9 @@
 
 Official artist site for **IMMOHRTAL**. One page, six sections, and a
 WebGL "spine" you ride down as you scroll — the same engine as the
-Mohr Media site, re-themed to the album world: gunmetal chrome,
-electric blue, studio-session HUD (`TRK 02 · MONITORS · LEVELS 043.1%`).
+Mohr Media site, re-themed to the album world: white paper background,
+gunmetal metal from the logo, blue-to-green particle descent, and a
+studio-session HUD (`TRK 02 · MONITORS · LEVELS 043.1%`).
 
 Built with React 19 + Vite + TypeScript + Tailwind v4. The 3D world is
 raw WebGL (ported from `mohr-media-site/assets/spine.js`) — **zero
@@ -37,7 +38,8 @@ final until you change them.
 |---|---|---|
 | **Album audio (MP3s)** | `public/audio/` (e.g. `01-signal.mp3`) | Set each track's `src` in `src/content/album.ts` (e.g. `'/audio/01-signal.mp3'`). Play buttons, sticky player, and the audio-reactive spine + visualizer light up automatically. |
 | **Cover art** | `public/cover.jpg` | Set `artist.coverArt = '/cover.jpg'`. Until then a generated placeholder cover renders. |
-| **Logo** | `public/logo.png` — transparent-background export works best on the dark site | Set `artist.logo = '/logo.png'`. Until then the nav shows the chrome text wordmark. |
+| **Logo** | Already wired: `public/logo.jpg` renders in the hero box, nav, and loader | Swap the file to update it everywhere at once. |
+| **Artist photo (hero)** | `public/artist.jpg` | Set `artist.heroImage = '/artist.jpg'`. It renders huge under the hero lockup with the hover pop (Mac Miller style). |
 | **Streaming links** | — | Fill the `href` for Spotify / Apple Music / YouTube / SoundCloud / Pre-Save (DistroKid hyperfollow) in `platforms`. A `null` href shows the platform as "SOON". |
 | **Socials + booking** | — | Swap the `@immohrtal` handles and `booking@` / `press@` emails in `socials` / `contact`. |
 
