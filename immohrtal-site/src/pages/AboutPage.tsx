@@ -44,6 +44,12 @@ export function AboutPage() {
         <p className="reveal reveal-late m-0 max-w-2xl text-[16.5px] leading-[1.8]" style={{ color: 'var(--dim)' }}>
           At 28, he's old enough to know attention is earned and young enough to still attack every verse like the first real shot. The marketing officer knows how to build the frame. The rapper knows the frame means nothing if the line doesn't hold.
         </p>
+        <p className="reveal reveal-late m-0 max-w-2xl text-[16.5px] leading-[1.8]" style={{ color: 'var(--dim)' }}>
+          Having my daughter Stella changed the reason behind all of it. She made me want to finally release and polish the older music instead of leaving it buried. She made me care about shit outside of marketing again, about building a healthy family, growing the right way, and going as hard as possible because the work means more than attention now.
+        </p>
+        <p className="reveal reveal-late m-0 max-w-2xl text-[16.5px] leading-[1.8]" style={{ color: 'var(--dim)' }}>
+          That fire brought the passion back. The bar is Nas, Hov, Big L, Isaiah Rashad, K-Dot, Lil Wayne, and Paul Wall: pens with identity, detail, feeling, and replay value. Not copying them. Just aiming at the same kind of standard.
+        </p>
       </div>
 
       <p className="mono-tag reveal mt-14">The three markings</p>
