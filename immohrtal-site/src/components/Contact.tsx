@@ -28,6 +28,20 @@ export function Contact() {
         </a>
       </div>
 
+      <form
+        className="fan-form reveal reveal-later mx-auto mt-8"
+        name="immohrtal-list"
+        method="POST"
+        action="/contact.html?joined=true"
+        data-netlify="true"
+      >
+        <input type="hidden" name="form-name" value="immohrtal-list" />
+        <label className="sr-only" htmlFor="fan-email">Email address</label>
+        <input id="fan-email" name="email" type="email" placeholder="email for drops" required />
+        <input type="hidden" name="source" value="site" />
+        <button className="btn btn-chrome" type="submit">Join list</button>
+      </form>
+
       <ul className="reveal reveal-later m-0 mt-14 flex list-none flex-wrap items-center justify-center gap-3 p-0">
         {socials.map((s) => {
           const Icon = socialIcons[s.id]
