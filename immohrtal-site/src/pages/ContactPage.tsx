@@ -14,15 +14,15 @@ export function ContactPage() {
     <SubPage>
       <p className="section-eyebrow reveal" data-decode="">Contact</p>
       <h1 className="font-display chrome-text reveal mt-5 uppercase" style={{ fontSize: 'clamp(2.6rem, 7vw, 5rem)', lineHeight: 1 }}>
-        Book the delusion
+        Book IMMOHRTAL
       </h1>
       <p className="reveal reveal-late mt-5 max-w-md" style={{ color: 'var(--dim)' }}>
-        Shows, features, press, anything real. One inbox, one phone. Answered after dark.
+        Shows, features, press, and Pittsburgh rooms that need bars with weight.
       </p>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
         <a className="platform-pill reveal reveal-late no-underline" href={`mailto:${contact.bookingEmail}`}>
-          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border" style={{ borderColor: 'var(--line-strong)' }} aria-hidden="true">
+          <span className="platform-icon grid h-11 w-11 shrink-0 place-items-center rounded-full border" style={{ borderColor: 'var(--line-strong)' }} aria-hidden="true">
             @
           </span>
           <span className="min-w-0 flex-1">
@@ -31,8 +31,8 @@ export function ContactPage() {
           </span>
         </a>
         <a className="platform-pill reveal reveal-late no-underline" href={contact.phoneHref}>
-          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border" style={{ borderColor: 'var(--line-strong)' }} aria-hidden="true">
-            ☎
+          <span className="platform-icon grid h-11 w-11 shrink-0 place-items-center rounded-full border" style={{ borderColor: 'var(--line-strong)' }} aria-hidden="true">
+            TEL
           </span>
           <span className="min-w-0 flex-1">
             <span className="mono-tag block">Phone</span>
@@ -40,6 +40,20 @@ export function ContactPage() {
           </span>
         </a>
       </div>
+
+      <form
+        className="fan-form reveal reveal-later mt-8"
+        name="immohrtal-list"
+        method="POST"
+        action="/contact.html?joined=true"
+        data-netlify="true"
+      >
+        <input type="hidden" name="form-name" defaultValue="immohrtal-list" />
+        <label className="sr-only" htmlFor="contact-fan-email">Email address</label>
+        <input id="contact-fan-email" name="email" type="email" placeholder="email for drops" required />
+        <input type="hidden" name="source" defaultValue="contact-page" />
+        <button className="btn btn-chrome" type="submit">Join list</button>
+      </form>
 
       <p className="mono-tag reveal reveal-late mt-14">Find {artist.name}</p>
       <ul className="m-0 mt-4 flex list-none flex-wrap gap-3 p-0">
@@ -58,7 +72,7 @@ export function ContactPage() {
                   {inner}
                 </a>
               ) : (
-                <span className="platform-pill is-dead !gap-3 !rounded-full !px-5 !py-3" aria-label={`${s.label} ${s.handle} — link coming soon`} style={{ color: 'var(--dim)' }}>
+                <span className="platform-pill is-dead !gap-3 !rounded-full !px-5 !py-3" aria-label={`${s.label} ${s.handle} - link coming soon`} style={{ color: 'var(--dim)' }}>
                   {inner}
                 </span>
               )}
