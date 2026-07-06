@@ -1,6 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, FONT_FAMILY} from './theme';
+import {useTrackPalette} from './TrackTheme';
 
 export type Word = {word: string; start: number; end: number};
 export type Line = {start: number; end: number; words: Word[]};
@@ -32,6 +33,7 @@ const WordSpan: React.FC<{
   audioOffset: number;
   fontSize: number;
 }> = ({w, audioOffset, fontSize}) => {
+  const pal = useTrackPalette();
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const startF = (w.start + audioOffset) * fps;
@@ -48,7 +50,7 @@ const WordSpan: React.FC<{
   const lift = sung ? -12 * Math.min(pop, 1) : 0;
 
   const gradient = active
-    ? `linear-gradient(178deg, ${C.white} 8%, ${C.greenSoft} 38%, ${C.green} 60%, ${C.blue} 100%)`
+    ? `linear-gradient(178deg, ${C.white} 8%, ${pal.softA} 38%, ${pal.accentA} 60%, ${pal.accentB} 100%)`
     : sung
       ? `linear-gradient(178deg, ${C.white} 10%, ${C.ice} 45%, ${C.steel} 100%)`
       : `linear-gradient(178deg, ${C.steel} 20%, #4a5a72 100%)`;
@@ -65,7 +67,7 @@ const WordSpan: React.FC<{
         margin: `0 ${fontSize * 0.17}px`,
         transform: `translateY(${lift}px) scale(${scale})`,
         filter: active
-          ? `drop-shadow(2px 3px 0 #020408) drop-shadow(2px 3px 0 #0b1420) drop-shadow(2px 2px 0 #0b1420) drop-shadow(0 0 ${fontSize * 0.2}px ${C.green}99)`
+          ? `drop-shadow(2px 3px 0 #020408) drop-shadow(2px 3px 0 #0b1420) drop-shadow(2px 2px 0 #0b1420) drop-shadow(0 0 ${fontSize * 0.2}px ${pal.accentA}99)`
           : `drop-shadow(2px 3px 0 #020408) drop-shadow(2px 3px 0 #0b1420) drop-shadow(1px 2px 1px rgba(0,0,0,0.65))`,
       }}
     >

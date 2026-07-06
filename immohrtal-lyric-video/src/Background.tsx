@@ -1,9 +1,11 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, random, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, FPS} from './theme';
+import {useTrackPalette} from './TrackTheme';
 
 // Drifting light particle — rises slowly, inspirational vibe.
 const Particle: React.FC<{seed: number}> = ({seed}) => {
+  const pal = useTrackPalette();
   const frame = useCurrentFrame();
   const {height, width, durationInFrames} = useVideoConfig();
   const x = random(`px-${seed}`) * width;
@@ -18,7 +20,7 @@ const Particle: React.FC<{seed: number}> = ({seed}) => {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-  const color = random(`pc-${seed}`) > 0.5 ? C.greenSoft : C.blueSoft;
+  const color = random(`pc-${seed}`) > 0.5 ? pal.softA : pal.softB;
   return (
     <div
       style={{
@@ -38,6 +40,7 @@ const Particle: React.FC<{seed: number}> = ({seed}) => {
 
 // Diagonal light streak that sweeps across periodically.
 const Streak: React.FC<{seed: number}> = ({seed}) => {
+  const pal = useTrackPalette();
   const frame = useCurrentFrame();
   const {width} = useVideoConfig();
   const period = 260 + random(`sk-${seed}`) * 200;
@@ -45,7 +48,7 @@ const Streak: React.FC<{seed: number}> = ({seed}) => {
   const t = ((frame + offset) % period) / period;
   const x = interpolate(t, [0, 1], [-width * 0.6, width * 1.3]);
   const opacity = Math.sin(t * Math.PI) * 0.14;
-  const color = random(`sc-${seed}`) > 0.5 ? C.blue : C.green;
+  const color = random(`sc-${seed}`) > 0.5 ? pal.accentB : pal.accentA;
   return (
     <div
       style={{
@@ -88,13 +91,12 @@ const FloorGrid: React.FC = () => {
 };
 
 export const Background: React.FC<{pulseTimes?: number[]}> = ({pulseTimes = []}) => {
+  const pal = useTrackPalette();
   const frame = useCurrentFrame();
   const {durationInFrames} = useVideoConfig();
 
-  // Slow hue drift between blue-leaning and green-leaning washes.
-  const mix = 0.5 + 0.5 * Math.sin(frame / (FPS * 14));
-  const glowA = `rgba(53, 167, 255, ${0.16 + 0.08 * mix})`;
-  const glowB = `rgba(53, 209, 143, ${0.20 - 0.08 * mix})`;
+  const glowA = pal.washA;
+  const glowB = pal.washB;
 
   // Beat-ish flash: brief bloom right after each lyric line lands.
   let pulse = 0;
