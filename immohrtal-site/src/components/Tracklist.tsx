@@ -22,10 +22,10 @@ export function Tracklist() {
     <section id="tracks" aria-labelledby="tracks-heading" className="relative z-10 mx-auto max-w-4xl px-5 py-24 md:py-36">
       <p className="section-eyebrow reveal" data-decode="">02 / Tracklist</p>
       <h2 id="tracks-heading" className="font-display chrome-text reveal mt-5 uppercase" style={{ fontSize: 'clamp(2.4rem, 6vw, 4.5rem)', lineHeight: 1 }}>
-        Ten rounds, no referee
+        Eleven cuts, no safety net
       </h2>
       <p className="reveal reveal-late mt-5 max-w-xl" style={{ color: 'var(--dim)' }}>
-        Working titles while the record gets sequenced. Previews go live here the moment the masters land.
+        From notebook smoke to family fire, every title gets its own lane in the delusion.
       </p>
 
       <ol className="reveal reveal-late mt-12 list-none border-t p-0 m-0" style={{ borderColor: 'var(--line)' }}>
@@ -39,13 +39,13 @@ export function Tracklist() {
                 {String(i + 1).padStart(2, '0')}
               </span>
               <span className="min-w-0">
-                <span className="block truncate font-body text-[17px] font-medium tracking-wide">
+                <span className="track-title block truncate font-body text-[17px] font-medium tracking-wide">
                   {track.title}
                 </span>
-                <span className="mono-tag block mt-0.5">
+                <span className="track-note mono-tag block mt-0.5">
                   {failed
                     ? 'audio missing — drop the MP3 in /public/audio'
-                    : track.note ?? (hasAudio ? 'preview available' : 'audio coming soon')}
+                    : track.note ?? (hasAudio ? 'preview available' : 'track locked')}
                 </span>
               </span>
               <span className="flex items-center gap-4">
@@ -82,7 +82,7 @@ export function Tracklist() {
 
       {!anyAudio && (
         <p className="mono-tag mt-6">
-          previews unlock when the masters are in. titles above are editable in src/content/album.ts
+          audio unlocks here when the final files land. titles above are editable in src/content/album.ts
         </p>
       )}
     </section>
