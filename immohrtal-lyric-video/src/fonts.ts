@@ -5,7 +5,10 @@ import {ANTON_B64} from './anton-font-data';
 // fetch, so render workers can't hang waiting on it. A safety timer clears
 // the delayRender handle regardless (continueRender is idempotent).
 if (typeof document !== 'undefined' && typeof FontFace !== 'undefined') {
-  const handle = delayRender('Loading Anton font');
+  // retries: if a render worker tab freezes hard (JS stops executing, so
+  // even the safety timer can't fire), Remotion reopens the page and
+  // retries the frame instead of cancelling the whole render.
+  const handle = delayRender('Loading Anton font', {retries: 2});
 
   const done = () => continueRender(handle);
   const safety = setTimeout(done, 8000);
