@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { PlayerProvider } from './audio/PlayerContext'
+import { useAfterHours } from './hooks/useAfterHours'
 import { useReveal } from './hooks/useReveal'
 import type { SpineEngine } from './spine/config'
 import { Nav } from './components/Nav'
@@ -16,14 +17,15 @@ import { Contact, Footer } from './components/Contact'
 export default function App() {
   useReveal()
   const engineRef = useRef<SpineEngine | null>(null)
+  const { dark } = useAfterHours()
 
   return (
     <PlayerProvider>
-      <div className="grain">
+      <div className={`grain${dark ? ' page-dark' : ''}`}>
         <a className="skip-link" href="#listen">
           Skip to content
         </a>
-        <SpineStage engineRef={engineRef} />
+        <SpineStage engineRef={engineRef} dark={dark} />
         <SpineRail engineRef={engineRef} />
         <Loader engineRef={engineRef} />
         <Nav />

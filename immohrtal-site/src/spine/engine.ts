@@ -14,7 +14,7 @@
 
 import { hexToVec3, type SpineConfig, type SpineEngine, type SpineHud } from './config'
 import { buildWorld, C, N_STATIONS } from './geometry'
-import { COMP_FS, POINT_FS, POINT_VS, QUAD_VS } from './shaders'
+import { buildCompFS, buildPointVS, POINT_FS, QUAD_VS } from './shaders'
 
 const TAU = Math.PI * 2
 
@@ -71,8 +71,8 @@ export function createSpineEngine(canvas: HTMLCanvasElement, config: SpineConfig
     return p
   }
 
-  const progPoints = program(POINT_VS, POINT_FS)
-  const progComp = program(QUAD_VS, COMP_FS)
+  const progPoints = program(buildPointVS(!!config.dark), POINT_FS)
+  const progComp = program(QUAD_VS, buildCompFS(!!config.dark))
   if (!progPoints || !progComp) return null
 
   /* ---------- geometry ---------- */

@@ -8,7 +8,7 @@ import { usePlayer } from '../audio/PlayerContext'
  * Falls back to a static gradient when reduced motion is on or
  * WebGL is unavailable. Feeds live track energy into the engine.
  */
-export function SpineStage({ engineRef }: { engineRef: { current: SpineEngine | null } }) {
+export function SpineStage({ engineRef, dark = false }: { engineRef: { current: SpineEngine | null }; dark?: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [fallback, setFallback] = useState(false)
   const { playing, getAnalyser } = usePlayer()
@@ -31,10 +31,13 @@ export function SpineStage({ engineRef }: { engineRef: { current: SpineEngine | 
     }
     const engineAnalyser = () => getAnalyser()
 
+    /* `dark` is in the dependency array: theme flips rebuild the
+       engine with the matching shader constants (cheap, StrictMode-safe) */
     const engine = createSpineEngine(canvas, {
       sections: SPINE_SECTIONS,
       palette: SPINE_PALETTE,
       sampleAudio,
+      dark,
     })
     engineRef.current = engine
     if (!engine) setFallback(true)
@@ -55,7 +58,7 @@ export function SpineStage({ engineRef }: { engineRef: { current: SpineEngine | 
       engine?.destroy()
       engineRef.current = null
     }
-  }, [engineRef, getAnalyser])
+  }, [engineRef, getAnalyser, dark])
 
   if (fallback) {
     return <div aria-hidden="true" className="stage-fallback" />

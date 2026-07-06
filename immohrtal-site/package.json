@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node --experimental-strip-types scripts/gen-blog-pages.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },
