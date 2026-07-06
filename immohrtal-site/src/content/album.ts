@@ -12,8 +12,8 @@ export const artist = {
     "see I'm such a damaged soul so I moved to the city",
     'to get out and I got no plans to be broke',
   ],
-  tagline: 'Underground rap from Pittsburgh. Erie raised him. The bars did the rest.',
-  sessionTag: 'SESSION 001 // UNDERGROUND RAP FROM PITTSBURGH',
+  tagline: 'Two sides, one record. The executive brain and the artist heart finally in the same room.',
+  sessionTag: 'SESSION 001 // DANCE WITH THE DELUSIONAL',
   releaseTag: 'OUT NOW ON ALL PLATFORMS',
   coverArt: null as string | null,
   logo: 'logo-web.jpg' as string | null,
@@ -55,13 +55,13 @@ export const platforms: Platform[] = [
 ]
 
 export const story = {
-  heading: 'Carry It Forward',
+  heading: 'Two Sides, One Record',
   pullQuote:
-    'Mac Miller made it feel possible to rap from Pittsburgh and still sound like yourself.',
+    'Mac Miller made it feel possible to rap and still sound like yourself.',
   paragraphs: [
     'IMMOHRTAL is Dillon Mohr, a 28-year-old chief marketing officer and rapper. He spent years learning how to make other people sound bigger, sharper, and harder to ignore. Rap was always the thing underneath it. The notebooks, the voice memos, the late-night lines, the part that never left.',
-    'He was raised in Erie, Pennsylvania, then moved to Pittsburgh carrying the city in his headphones before he ever carried it in his address. Pittsburgh rap already has giants. Mac Miller is the main reason Dillon wanted to rap at all. Faces hit the house in 2014 and never really left. Wiz showed the city could go worldwide. The bridges, the hills, the rivers, the steel, the weather, the work ethic, it all gets into the writing.',
-    'Dance With The Delusional is the first professional IMMOHRTAL record. It is built from two lives meeting in one room: the marketer who understands attention and the rapper who still treats every verse like a sport. The goal is simple. Make something detailed enough for lyric people, human enough for Pittsburgh, and honest enough to stand beside the records that made him start.',
+    'He was raised in Erie, Pennsylvania, and lives in Pittsburgh now. Mac Miller is the main reason Dillon wanted to rap at all. Faces hit the house in 2014 and never really left. That influence is personal, not a costume. It is the permission to be honest, detailed, strange, funny, damaged, and still competitive.',
+    'Dance With The Delusional is the first professional IMMOHRTAL record. It is built from two lives meeting in one room: the marketer who understands attention and the rapper who still treats every verse like a sport. The goal is simple. Make something detailed enough for lyric people, human enough for real fans, and honest enough to stand beside the records that made him start.',
   ],
 }
 
@@ -76,32 +76,13 @@ export const markings = [
     numeral: 'II',
     label: 'Pittsburgh, PA',
     coord: '40.4406 N / 79.9959 W',
-    line: 'Bridges, rivers, Mac, Wiz, steel, and the standard that made the dream feel local.',
+    line: 'Where Mac made the dream feel close enough to chase for real.',
   },
   {
     numeral: 'III',
-    label: 'The Sport',
+    label: 'The Split',
     coord: 'SESSION 001',
-    line: 'Rap treated like competition: breath control, detail, swing, punches, and replay value.',
-  },
-]
-
-export const pittsburghLegacy = [
-  {
-    label: 'Bridges',
-    line: 'The city is built on crossings. The music should feel like one too.',
-  },
-  {
-    label: 'The Point',
-    line: 'Three rivers meeting in one place. Erie roots, Pittsburgh pressure, IMMOHRTAL voice.',
-  },
-  {
-    label: 'Steel City',
-    line: 'No fragile bars. Work them until they hold weight.',
-  },
-  {
-    label: '412',
-    line: 'A local signal first. The rest of the world can catch up.',
+    line: 'CMO discipline on one side, artist instinct on the other. Same person, same record.',
   },
 ]
 
