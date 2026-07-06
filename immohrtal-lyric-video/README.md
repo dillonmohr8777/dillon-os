@@ -11,7 +11,7 @@ from `immohrtal-site`.
 - `scripts/prep_logo.py` — knocks the white background out of the logo JPEG → `public/logo.png`
 - `src/LyricVideo.tsx` — main composition: intro → word-synced lyric lines → logo interludes on instrumental gaps → outro
 - `src/LyricLine.tsx` — per-line entrance/exit variants + per-word chrome pop synced to the vocal
-- `src/Background.tsx` / `src/Motifs.tsx` — animated gradient wash, light streaks, rising particles, floor grid, floating icons
+- `src/Background.tsx` / `src/Motifs.tsx` — animated gradient wash, light streaks, rising particles, floor grid, floating inspirational sparkle/star/bolt motifs
 - `src/Logo3D.tsx` — logo with perspective wobble, alpha-masked light sweep, glow, floor reflection
 
 ## Commands

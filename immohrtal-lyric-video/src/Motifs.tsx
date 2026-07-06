@@ -2,13 +2,17 @@ import React from 'react';
 import {AbsoluteFill, random, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C} from './theme';
 
-// Low-opacity floating brand motifs — football, star, bolt — drifting with
-// parallax so the frame always has quiet motion behind the lyrics.
+// Low-opacity floating inspirational motifs — sparkle, star, bolt — drifting
+// upward with parallax so the frame always has quiet motion behind the lyrics.
 
-const Football: React.FC<{color: string}> = ({color}) => (
-  <svg viewBox="0 0 64 40" fill="none" style={{width: '100%', height: '100%'}}>
-    <ellipse cx="32" cy="20" rx="30" ry="18" stroke={color} strokeWidth="2.5" />
-    <path d="M22 20h20M26 15v10M32 15v10M38 15v10" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
+const Sparkle: React.FC<{color: string}> = ({color}) => (
+  <svg viewBox="0 0 40 40" fill="none" style={{width: '100%', height: '100%'}}>
+    <path
+      d="M20 2c1.5 8.5 4.5 14 16 18-11.5 4-14.5 9.5-16 18-1.5-8.5-4.5-14-16-18 11.5-4 14.5-9.5 16-18z"
+      stroke={color}
+      strokeWidth="2.5"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
@@ -29,7 +33,7 @@ const Bolt: React.FC<{color: string}> = ({color}) => (
   </svg>
 );
 
-const SHAPES = [Football, Star, Bolt];
+const SHAPES = [Sparkle, Star, Bolt];
 
 const FloatingMotif: React.FC<{seed: number}> = ({seed}) => {
   const frame = useCurrentFrame();
