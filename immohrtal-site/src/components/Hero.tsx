@@ -1,5 +1,61 @@
+import { useRef } from 'react'
 import { artist } from '../content/album'
 import { TiltBox } from './TiltBox'
+import { prefersReducedMotion } from '../hooks/useReveal'
+
+/**
+ * The headshot splits into the album cover's red/blue halves as the
+ * cursor moves across it. Tap toggles a 50/50 split on touch.
+ */
+function DualityShot() {
+  const ref = useRef<HTMLSpanElement>(null)
+  const queued = useRef(false)
+  const x = useRef(50)
+  const fine = () => window.matchMedia('(pointer: fine)').matches && !prefersReducedMotion()
+
+  const set = (split: number, on: boolean) => {
+    const el = ref.current
+    if (!el) return
+    el.style.setProperty('--split', `${split}%`)
+    el.style.setProperty('--duality', on ? '1' : '0')
+  }
+
+  return (
+    <span
+      ref={ref}
+      className="pop-box sheen duality-shot block"
+      onMouseMove={(e) => {
+        if (!fine()) return
+        const r = ref.current?.getBoundingClientRect()
+        if (!r) return
+        x.current = ((e.clientX - r.left) / r.width) * 100
+        if (queued.current) return
+        queued.current = true
+        requestAnimationFrame(() => {
+          queued.current = false
+          set(Math.max(0, Math.min(100, x.current)), true)
+        })
+      }}
+      onMouseLeave={() => set(50, false)}
+      onClick={() => {
+        if (fine() || prefersReducedMotion()) return
+        const on = ref.current?.style.getPropertyValue('--duality') === '1'
+        set(50, !on)
+      }}
+    >
+      <img
+        src={artist.heroImage ?? ''}
+        alt={`${artist.name} portrait`}
+        className="block aspect-square w-full object-cover"
+        width={1080}
+        height={1080}
+        fetchPriority="high"
+      />
+      <span aria-hidden="true" className="duality-layer duality-red" />
+      <span aria-hidden="true" className="duality-layer duality-blue" />
+    </span>
+  )
+}
 
 export function Hero() {
   return (
@@ -7,22 +63,8 @@ export function Hero() {
       id="top"
       className="home-hero relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 py-20 text-center"
     >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            'radial-gradient(65% 50% at 50% 60%, rgba(31,158,255,0.06), transparent 65%), radial-gradient(70% 55% at 50% 30%, rgba(23,168,107,0.05), transparent 70%)',
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 z-[1]"
-        style={{
-          background:
-            'radial-gradient(90% 70% at 50% 50%, transparent 32%, rgba(247,249,251,0.55) 78%, rgba(247,249,251,0.92) 100%)',
-        }}
-      />
+      <div aria-hidden="true" className="hero-aura absolute inset-0 z-0" />
+      <div aria-hidden="true" className="hero-vignette absolute inset-0 z-[1]" />
 
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center">
         <h1 className="sr-only">
@@ -37,24 +79,17 @@ export function Hero() {
         <div className="reveal reveal-late relative mt-8 w-full max-w-[440px]">
           <div aria-hidden="true" className="hero-shadow-field" />
           <TiltBox max={5}>
-            <span className="pop-box sheen block">
-              {artist.heroImage ? (
-                <img
-                  src={artist.heroImage}
-                  alt={`${artist.name} portrait`}
-                  className="block aspect-square w-full object-cover"
-                  width={1080}
-                  height={1080}
-                  fetchPriority="high"
-                />
-              ) : (
+            {artist.heroImage ? (
+              <DualityShot />
+            ) : (
+              <span className="pop-box sheen block">
                 <span className="artist-slot artist-slot-neutral flex aspect-square w-full flex-col items-center justify-center gap-4 px-6">
                   <span className="split-lines" aria-hidden="true" />
                   <span className="font-display chrome-text-light text-4xl uppercase tracking-wide sm:text-6xl">The Shot</span>
                   <span className="mono-tag text-center">artist image placeholder</span>
                 </span>
-              )}
-            </span>
+              </span>
+            )}
           </TiltBox>
         </div>
 
@@ -146,7 +181,10 @@ export function LogoOutro() {
 }
 
 export function MarqueeDivider() {
-  const phrase = `${artist.name} / ${artist.albumTitle.toUpperCase()} / ${artist.releaseTag} / `
+  const phrase =
+    artist.marqueeBars.length > 0
+      ? artist.marqueeBars.map((b) => b.toUpperCase()).join(' / ') + ' / '
+      : `${artist.name} / ${artist.albumTitle.toUpperCase()} / ${artist.releaseTag} / `
   return (
     <div className="marquee" aria-hidden="true">
       <div className="marquee-inner font-mono text-[12px] tracking-[0.3em]" style={{ color: 'var(--faint)' }}>

@@ -20,6 +20,8 @@ export interface SpineConfig {
    * is playing (drives waveform amplitude + glow), or null when idle.
    */
   sampleAudio?: () => number | null
+  /** after-hours theme: near-black paper, particles lift toward light */
+  dark?: boolean
 }
 
 export interface SpineHud {

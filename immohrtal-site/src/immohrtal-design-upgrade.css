@@ -1,6 +1,6 @@
 .grain {
   background:
-    linear-gradient(180deg, rgba(255, 188, 87, 0.08), transparent 16%),
+    linear-gradient(180deg, rgba(31, 158, 255, 0.08), transparent 16%),
     linear-gradient(90deg, rgba(31, 158, 255, 0.07), transparent 36%, rgba(23, 168, 107, 0.06)),
     var(--paper);
   min-height: 100vh;
@@ -18,7 +18,7 @@
   background:
     linear-gradient(180deg, transparent, rgba(247, 249, 251, 0.88)),
     repeating-linear-gradient(90deg, rgba(20, 25, 34, 0.1) 0 2px, transparent 2px 82px),
-    linear-gradient(90deg, rgba(31, 158, 255, 0.08), rgba(255, 188, 87, 0.12), rgba(23, 168, 107, 0.08));
+    linear-gradient(90deg, rgba(31, 158, 255, 0.08), rgba(31, 158, 255, 0.12), rgba(23, 168, 107, 0.08));
   mask-image: linear-gradient(180deg, transparent, #000 26%, #000);
 }
 
@@ -33,7 +33,7 @@
 .logo-lockup {
   border: 1px solid rgba(20, 25, 34, 0.18);
   background:
-    linear-gradient(135deg, rgba(255, 188, 87, 0.2), transparent 28%),
+    linear-gradient(135deg, rgba(31, 158, 255, 0.2), transparent 28%),
     linear-gradient(225deg, rgba(31, 158, 255, 0.14), transparent 36%),
     #ffffff;
 }
@@ -51,7 +51,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--signal), #ffbc57, var(--green));
+  background: linear-gradient(90deg, var(--signal), var(--green), var(--green));
 }
 
 .opening-bar::before { top: -1px; }
@@ -62,7 +62,7 @@
   inset: 12% -5% -8%;
   z-index: -1;
   background:
-    linear-gradient(90deg, transparent, rgba(31, 158, 255, 0.16), rgba(255, 188, 87, 0.18), rgba(23, 168, 107, 0.14), transparent),
+    linear-gradient(90deg, transparent, rgba(31, 158, 255, 0.16), rgba(31, 158, 255, 0.18), rgba(23, 168, 107, 0.14), transparent),
     linear-gradient(180deg, transparent, rgba(20, 25, 34, 0.24));
   filter: blur(22px);
 }
@@ -72,7 +72,7 @@
   overflow: hidden;
   background:
     linear-gradient(145deg, rgba(53, 167, 255, 0.24), transparent 28%),
-    linear-gradient(235deg, rgba(255, 188, 87, 0.24), transparent 36%),
+    linear-gradient(235deg, rgba(31, 158, 255, 0.24), transparent 36%),
     linear-gradient(180deg, #111721, #05070c 70%);
   color: #ffffff;
 }
@@ -108,14 +108,14 @@
   border-radius: 18px;
   background:
     linear-gradient(135deg, rgba(31, 158, 255, 0.08), transparent 38%),
-    linear-gradient(225deg, rgba(255, 188, 87, 0.11), transparent 42%),
+    linear-gradient(225deg, rgba(31, 158, 255, 0.11), transparent 42%),
     rgba(255, 255, 255, 0.26);
 }
 
 .platform-pill {
   background:
     linear-gradient(135deg, rgba(31, 158, 255, 0.08), transparent 38%),
-    linear-gradient(225deg, rgba(255, 188, 87, 0.1), transparent 42%),
+    linear-gradient(225deg, rgba(31, 158, 255, 0.1), transparent 42%),
     rgba(255, 255, 255, 0.82);
 }
 
@@ -131,7 +131,7 @@
   right: 0;
   bottom: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(31, 158, 255, 0.38), rgba(255, 188, 87, 0.42), rgba(23, 168, 107, 0.34), transparent);
+  background: linear-gradient(90deg, transparent, rgba(31, 158, 255, 0.38), rgba(31, 158, 255, 0.42), rgba(23, 168, 107, 0.34), transparent);
 }
 
 .marking-card {
@@ -146,7 +146,7 @@
   right: 0;
   top: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--signal), #ffbc57, var(--green));
+  background: linear-gradient(90deg, var(--signal), var(--green), var(--green));
 }
 
 nav.glass-panel {
@@ -188,7 +188,7 @@ nav.glass-panel {
   background:
     linear-gradient(90deg, rgba(244, 248, 255, 0.96) 0 49.8%, rgba(255, 255, 255, 0.18) 49.8% 50.2%, #070a10 50.2% 100%),
     radial-gradient(45% 55% at 34% 50%, rgba(53, 167, 255, 0.18), transparent 70%),
-    radial-gradient(45% 55% at 68% 50%, rgba(255, 188, 87, 0.12), transparent 70%);
+    radial-gradient(45% 55% at 68% 50%, rgba(31, 158, 255, 0.12), transparent 70%);
 }
 
 .artist-slot-neutral::before {
@@ -218,7 +218,7 @@ nav.glass-panel {
   bottom: 0;
   left: 50%;
   width: 1px;
-  background: linear-gradient(180deg, transparent, rgba(53, 167, 255, 0.8), rgba(255, 188, 87, 0.65), transparent);
+  background: linear-gradient(180deg, transparent, rgba(53, 167, 255, 0.8), rgba(31, 158, 255, 0.65), transparent);
 }
 
 .duality-cover-system {
@@ -244,7 +244,7 @@ nav.glass-panel {
   inset: 0;
   background:
     radial-gradient(45% 70% at 34% 50%, rgba(31, 158, 255, 0.18), transparent 70%),
-    radial-gradient(45% 70% at 66% 50%, rgba(255, 188, 87, 0.16), transparent 70%);
+    radial-gradient(45% 70% at 66% 50%, rgba(31, 158, 255, 0.16), transparent 70%);
 }
 
 .burgh-band,
@@ -270,4 +270,223 @@ nav.glass-panel {
     width: calc(100% - 24px);
     border-radius: 12px;
   }
+}
+
+/* ════════════════════════════════════════════════════════════
+   DARK 3D POP SYSTEM — every text box pops like the home frames.
+   Loaded last so it wins the cascade over the flat card styles.
+   ════════════════════════════════════════════════════════════ */
+
+/* cards pop IN: rise, un-tilt, and scale up as they enter */
+.reveal-pop {
+  opacity: 0;
+  transform: perspective(900px) translateY(48px) rotateX(9deg) scale(0.94);
+  transition: opacity 0.85s var(--ease-hover), transform 0.85s var(--ease-hover);
+}
+.reveal-pop.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* shared dark gunmetal surface with light-scoped text tokens */
+.card-dark,
+.blog-card,
+.blog-section-block,
+.faq-tile,
+.marking-card,
+.platform-pill,
+.pop-box {
+  --ink: #eef1f7;
+  --dim: rgba(226, 233, 245, 0.78);
+  --faint: rgba(226, 233, 245, 0.64);
+  --line: rgba(226, 233, 245, 0.1);
+  --line-strong: rgba(226, 233, 245, 0.24);
+  --signal-txt: #6fbcff;
+  --green-txt: #52d69f;
+  color: var(--ink);
+  background:
+    radial-gradient(130% 90% at 12% 0%, rgba(122, 152, 204, 0.16), transparent 55%),
+    linear-gradient(165deg, #242c3b 0%, #11161f 58%, #1a212c 100%);
+  border: 1px solid rgba(226, 233, 245, 0.09);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 30px 70px rgba(20, 25, 34, 0.38),
+    0 12px 26px rgba(20, 25, 34, 0.26);
+  transition: transform 0.45s var(--ease-hover), box-shadow 0.45s var(--ease-hover),
+    border-color 0.45s var(--ease-hover);
+}
+.card-dark:hover,
+.blog-card:hover,
+.blog-section-block:hover,
+.faq-tile:hover,
+.marking-card:hover,
+.pop-box:hover {
+  border-color: rgba(31, 158, 255, 0.45);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 44px 92px rgba(20, 25, 34, 0.48),
+    0 0 42px rgba(31, 158, 255, 0.22);
+}
+.blog-section-block:hover,
+.faq-tile:hover,
+.platform-pill:hover {
+  transform: translateY(-5px) scale(1.012);
+}
+.pop-box:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* headings inside dark boxes: light chrome, never gold */
+.blog-card h2,
+.blog-section-block h3 {
+  background: var(--chrome-light);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.faq-tile h3 {
+  color: var(--signal-txt);
+}
+.blog-number {
+  color: rgba(226, 233, 245, 0.08);
+}
+.marking-card::before {
+  background: linear-gradient(90deg, var(--signal), var(--green));
+}
+.platform-icon {
+  background: rgba(226, 233, 245, 0.08);
+  box-shadow: none;
+}
+
+/* light sweep across a dark card on hover */
+.sheen {
+  position: relative;
+  overflow: hidden;
+}
+.sheen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(226, 240, 255, 0.16) 48%, rgba(31, 158, 255, 0.12) 53%, transparent 70%);
+  transform: translateX(-130%) skewX(-8deg);
+  transition: transform 0.85s var(--ease-hover);
+  pointer-events: none;
+}
+.sheen:hover::after {
+  transform: translateX(130%) skewX(-8deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-pop {
+    opacity: 1;
+    transform: none;
+  }
+  .sheen::after {
+    display: none;
+  }
+}
+
+/* ── duality shot: cover-art red/blue split follows the cursor ── */
+.duality-shot {
+  --split: 50%;
+  --duality: 0;
+  position: relative;
+  cursor: crosshair;
+}
+.duality-layer {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: color;
+  opacity: var(--duality);
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.duality-red {
+  background: #c22030;
+  clip-path: inset(0 calc(100% - var(--split)) 0 0);
+}
+.duality-blue {
+  background: #1f5fd0;
+  clip-path: inset(0 0 0 var(--split));
+}
+@media (prefers-reduced-motion: reduce) {
+  .duality-layer {
+    display: none;
+  }
+}
+
+/* ── after hours: full-site dark mode (auto past midnight, footer
+   toggle to force). Reuses the page-dark token set; these rules
+   patch the pieces that only existed on the light home page. ── */
+html.after-hours {
+  background: #05070c;
+}
+
+/* hero backdrop pools + vignette (were inline styles) */
+.hero-aura {
+  background:
+    radial-gradient(65% 50% at 50% 60%, rgba(31, 158, 255, 0.06), transparent 65%),
+    radial-gradient(70% 55% at 50% 30%, rgba(23, 168, 107, 0.05), transparent 70%);
+}
+.hero-vignette {
+  background: radial-gradient(90% 70% at 50% 50%, transparent 32%, rgba(247, 249, 251, 0.55) 78%, rgba(247, 249, 251, 0.92) 100%);
+}
+.page-dark .hero-aura {
+  background:
+    radial-gradient(65% 50% at 50% 60%, rgba(53, 167, 255, 0.1), transparent 65%),
+    radial-gradient(70% 55% at 50% 30%, rgba(53, 209, 143, 0.08), transparent 70%);
+}
+.page-dark .hero-vignette {
+  background: radial-gradient(90% 70% at 50% 50%, transparent 32%, rgba(5, 7, 12, 0.5) 78%, rgba(5, 7, 12, 0.88) 100%);
+}
+
+/* the gunmetal mark reads as light chrome on the dark paper */
+.page-dark .ink-reveal img {
+  filter: blur(26px) contrast(2.4) saturate(0.3) invert(0.92) hue-rotate(190deg);
+}
+.page-dark .ink-reveal.is-visible img {
+  filter: blur(0) contrast(1.05) saturate(0.85) invert(0.92) hue-rotate(190deg);
+}
+
+/* surfaces that hardcoded white in the light pass */
+.page-dark .marquee {
+  background: rgba(255, 255, 255, 0.05);
+}
+.page-dark .btn-ghost {
+  background: rgba(255, 255, 255, 0.07);
+}
+.page-dark .track-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.page-dark #rail .tick {
+  background: rgba(244, 248, 255, 0.14);
+}
+.page-dark #loader .bar {
+  background: rgba(244, 248, 255, 0.16);
+}
+.page-dark #loader img {
+  filter: invert(0.92) hue-rotate(190deg) brightness(1.1);
+}
+.page-dark .grain::after {
+  opacity: 0.045;
+}
+
+/* footer theme toggle */
+.theme-toggle {
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--faint);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.theme-toggle:hover {
+  color: var(--signal-txt);
+  border-color: var(--signal-txt);
+  box-shadow: 0 0 14px rgba(31, 158, 255, 0.25);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--signal-txt);
+  outline-offset: 3px;
 }
