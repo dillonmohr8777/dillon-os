@@ -2,6 +2,9 @@ import { artist, markings, story } from '../content/album'
 import { TiltBox } from './TiltBox'
 
 export function Story() {
+  const captionHasCold = artist.storyImageCaption.includes('cold')
+  const [captionBeforeCold, captionAfterCold] = artist.storyImageCaption.split('cold')
+
   return (
     <section id="story" aria-labelledby="story-heading" className="story-section relative z-10 overflow-hidden py-24 md:py-36">
       <div
@@ -78,8 +81,17 @@ export function Story() {
                   loading="lazy"
                 />
                 <figcaption className="mono-tag mt-3 pb-1 text-center">
-                  “{artist.storyImageCaption}”
+                  {captionHasCold ? (
+                    <>
+                      “{captionBeforeCold}<span className="ice-word">cold</span>{captionAfterCold}”
+                    </>
+                  ) : (
+                    <>“{artist.storyImageCaption}”</>
+                  )}
                 </figcaption>
+                <p className="daughter-dedication m-0 mt-4 text-center">
+                  You're the reason I found my <span className="fire-word">fire</span> again.
+                </p>
               </figure>
             </TiltBox>
           </div>
