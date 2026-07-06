@@ -1,4 +1,4 @@
-import { artist, markings, story } from '../content/album'
+import { artist, markings, pittsburghLegacy, story } from '../content/album'
 import { SubPage } from '../components/SubPage'
 
 export function AboutPage() {
@@ -16,7 +16,7 @@ export function AboutPage() {
         className="font-serif italic reveal reveal-late mt-10 border-l-2 pl-6"
         style={{ fontSize: 'clamp(1.3rem, 3vw, 1.9rem)', lineHeight: 1.35, borderColor: 'var(--signal)', color: 'var(--ink)', margin: '2.5rem 0 0' }}
       >
-        “{story.pullQuote}”
+        "{story.pullQuote}"
       </blockquote>
 
       <div className="mt-10 flex flex-col gap-6">
@@ -26,7 +26,7 @@ export function AboutPage() {
           </p>
         ))}
         <p className="reveal reveal-late m-0 max-w-2xl text-[16.5px] leading-[1.8]" style={{ color: 'var(--dim)' }}>
-          He spent a decade telling other people’s stories and making other people’s things sound like movements. This record is the first time he gave his own story the same treatment. Written late, kept honest, and released with no permission asked.
+          At 28, he is old enough to know attention is earned and young enough to still attack every verse like the first real shot. The marketing officer knows how to build the frame. The rapper knows the frame means nothing if the line does not hold.
         </p>
       </div>
 
@@ -41,6 +41,16 @@ export function AboutPage() {
           </li>
         ))}
       </ol>
+
+      <p className="mono-tag reveal mt-14">Pittsburgh signal</p>
+      <div className="legacy-strip reveal reveal-late mt-5 grid gap-3 sm:grid-cols-2">
+        {pittsburghLegacy.map((item) => (
+          <div key={item.label} className="legacy-card">
+            <span className="legacy-label">{item.label}</span>
+            <p>{item.line}</p>
+          </div>
+        ))}
+      </div>
 
       <div className="reveal reveal-later mt-14 flex flex-col gap-4 sm:flex-row">
         <a className="btn btn-chrome" href="./index.html#listen">Hear the album</a>
