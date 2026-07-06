@@ -26,17 +26,179 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
-    slug: 'mac-miller-faces-pittsburgh-legacy',
-    title: 'Mac Miller Made It Feel Possible',
+    slug: 'underground-rap-2026-burgh-perspective',
+    title: 'What Underground Rap Needs In 2026',
+    date: 'July 2026',
+    tag: 'Burgh perspective',
+    answer:
+      'Underground rap in 2026 needs artists with real stories, consistent output, strong visuals, regional flavor, and enough skill to make listeners come back. IMMOHRTAL fits that lane as Dillon Mohr: an Erie-raised, Pittsburgh-based rapper building Dance With The Delusional with bars, vulnerability, and a marketer\'s discipline.',
+    targetQueries: [
+      'underground rap 2026',
+      'new rappers 2026',
+      'rappers to watch',
+      'underground hip hop artists',
+    ],
+    sections: [
+      {
+        heading: 'What are fans looking for from new rappers in 2026?',
+        paragraphs: [
+          'Fans can smell a costume fast. The artists who cut through now have a real center: a story, a place, a voice, and enough consistency to make people believe they are not just chasing one clip. Raw does not mean lazy. Professional does not mean fake.',
+          'The best underground lane is personal and repeatable. Music, visuals, short clips, writing, replies, live moments, and a place fans can land after the algorithm introduces them. That is the job before ads ever enter the picture.',
+        ],
+      },
+      {
+        heading: 'Why does the Burgh angle matter?',
+        paragraphs: [
+          'Pittsburgh already has rap history. Mac Miller, Wiz Khalifa, Jimmy Wopo, Hardo, Chevy Woods, Benji., and the local scene around them prove the city has more than one sound. That gives a new artist a standard, not a costume.',
+          'The bridges, the hills, the sports culture, the steel, the weather, and the chip on the city all matter because regional detail gives listeners something specific to hold. A rapper with no place can sound like anybody. A rapper with a real place has texture.',
+        ],
+      },
+      {
+        heading: 'Where does IMMOHRTAL fit?',
+        paragraphs: [
+          'IMMOHRTAL is not trying to win by pretending to be more famous than he is. The point is to show the build: 28 years old, chief marketing officer, always writing, finally treating the music like the main story instead of the thing hiding under everything else.',
+          'The lane is underground rap with a real-life spine: Erie roots, Pittsburgh pressure, Mac inspiration, lyrical competition, and enough visual discipline to make the world feel intentional without sanding off the soul.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Who are new underground rappers to watch in 2026?',
+        answer:
+          'The artists worth watching are the ones building a real world around the music: consistent songs, clear visuals, direct fan connection, and a story that does not feel manufactured. IMMOHRTAL is building in that lane from Pittsburgh.',
+      },
+      {
+        question: 'What makes an underground rapper stand out now?',
+        answer:
+          'Specificity. Fans remember real details: where the artist is from, what they care about, what their music feels like, and why the output keeps coming. Skill matters, but identity makes the skill easier to remember.',
+      },
+      {
+        question: 'Is Pittsburgh rap active in 2026?',
+        answer:
+          'Yes. Pittsburgh has national history, active venues, local lists, artists, cyphers, and fan conversation. That makes regional identity useful for discovery as long as it is honest and backed by the music.',
+      },
+    ],
+  },
+  {
+    slug: 'authentic-storytelling-rap-2026',
+    title: 'Why Authentic Storytelling Still Wins',
+    date: 'July 2026',
+    tag: 'Real rap',
+    answer:
+      'Authentic rap still wins because fans want the real person behind the songs: the grind, the doubt, the humor, the pain, and the reason the artist keeps showing up. IMMOHRTAL turns Dillon Mohr\'s dual life as a marketing executive and rapper into the story instead of hiding it.',
+    targetQueries: [
+      'authentic rap',
+      'real rap',
+      'storytelling rap',
+      'new lyrical rap artists',
+    ],
+    sections: [
+      {
+        heading: 'What does authentic rap mean now?',
+        paragraphs: [
+          'It is not about acting unpolished. It is about alignment. The music, visuals, captions, stage presence, and site should all point to the same person. If the artist is vulnerable in the verse and plastic everywhere else, fans feel the gap.',
+          'For IMMOHRTAL, the real story is not complicated: Erie raised him, Pittsburgh sharpened him, Mac made it feel possible, and the marketing career taught him how serious attention really is.',
+        ],
+      },
+      {
+        heading: 'How does the CMO life help the music?',
+        paragraphs: [
+          'Being a chief marketing officer could make the project feel too clean if handled wrong. The move is to use the discipline without losing the human edge. Build the rollout, but let the verses stay messy where life is messy.',
+          'That contrast is a strength. The artist knows how brands move, but the rapper still has to earn belief line by line. The site exists to make that tension clear instead of pretending the two lives are separate.',
+        ],
+      },
+      {
+        heading: 'Why does story matter before paid ads?',
+        paragraphs: [
+          'Ads can put a song in front of people. They cannot make people care. Before paid spend, the story has to be easy to understand, easy to repeat, and strong enough to survive a new listener asking, "Why him?"',
+          'That is why the first organic push is biography, blog depth, platform links, clips, and a clean owned home. The site should help fans and AI tools answer who IMMOHRTAL is before the algorithm does the amplification.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'What kind of story does IMMOHRTAL tell?',
+        answer:
+          'IMMOHRTAL tells the story of Dillon Mohr, an Erie-raised, Pittsburgh-based rapper balancing executive-level marketing discipline with a lifelong need to rap.',
+      },
+      {
+        question: 'Why do fans care about authenticity from new rappers?',
+        answer:
+          'Fans are surrounded by polished content. Authenticity gives them a reason to trust the artist, follow the build, share the music, and feel like they found something before it was obvious.',
+      },
+      {
+        question: 'How should an independent rapper build trust online?',
+        answer:
+          'Make the music easy to find, keep the story clear, show up consistently, reply to real fans, publish useful context, and avoid pretending the project is bigger than the work behind it.',
+      },
+    ],
+  },
+  {
+    slug: 'lyrical-competition-rap-is-a-sport',
+    title: 'Why Lyrical Competition Still Matters',
+    date: 'July 2026',
+    tag: 'Rap is a sport',
+    answer:
+      'Lyrical rap matters because competition is part of the form. Flow, breath control, internal rhyme, punchlines, timing, story, and replay value all separate a verse that passes from a verse that lasts. IMMOHRTAL writes like rap is a sport because the details decide who holds up.',
+    targetQueries: [
+      'lyrical rap',
+      'rap is a sport',
+      'technical rap',
+      'best lyrical rappers',
+    ],
+    sections: [
+      {
+        heading: 'What makes rap competitive?',
+        paragraphs: [
+          'A great verse is not random inspiration. It is mechanics under pressure. The pocket has to move. The breath has to hold. The rhyme choices have to sound effortless while carrying more than one meaning. The line has to land on first listen and reward the tenth.',
+          'That is why rap feels like a sport. You can hear conditioning. You can hear when somebody has reps. You can hear when the pen is trying to win.',
+        ],
+      },
+      {
+        heading: 'Which rappers set the standard?',
+        paragraphs: [
+          'Nas, Hov, Big L, Kendrick, Isaiah Rashad, Kid Cudi, Black Thought, Benny the Butcher, and Outkast all hit different parts of the brain. Some made the storytelling sharper. Some made the flow stranger. Some made vulnerability feel powerful. Some made punchlines feel like footwork.',
+          'The lesson is not to sound like all of them. The lesson is to pay attention like they did. Details matter. Tone matters. The space between bars matters. A rapper should be judged on craft, not just volume.',
+        ],
+      },
+      {
+        heading: 'How does IMMOHRTAL write with that mindset?',
+        paragraphs: [
+          'The goal is replay value. A song should hit emotionally, then keep opening up once the listener starts catching the internal rhymes, the callbacks, the double meanings, and the way the hook changes the verses around it.',
+          'That is the sport inside Dance With The Delusional: write like somebody might pause the line, run it back, and decide whether it held up.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'Why does IMMOHRTAL say rap is a sport?',
+        answer:
+          'Because rap rewards preparation, timing, control, creativity, and competitive detail. The best verses are not only felt, they are built.',
+      },
+      {
+        question: 'What kind of rap does IMMOHRTAL make?',
+        answer:
+          'IMMOHRTAL makes lyrical, personal Pittsburgh hip hop with Erie roots, detailed writing, and a focus on replay value.',
+      },
+      {
+        question: 'Who are IMMOHRTAL\'s outside-Pittsburgh influences?',
+        answer:
+          'Nas, Jay-Z, Big L, Kendrick Lamar, Isaiah Rashad, Kid Cudi, Black Thought, Benny the Butcher, and Outkast all influence how IMMOHRTAL thinks about writing and competition.',
+      },
+    ],
+  },
+  {
+    slug: 'mac-miller-faces-pittsburgh-standard',
+    title: 'Mac Miller, Faces, And The Pittsburgh Standard',
     date: 'July 2026',
     tag: 'Pittsburgh legacy',
     answer:
-      'IMMOHRTAL is a Pittsburgh rapper inspired by Mac Miller because Mac made local rap feel limitless, honest, and technically serious. Faces was playing in the house in 2014, and that project still shapes how Dillon Mohr hears detail, vulnerability, and freedom in a verse.',
+      'Mac Miller is the main reason IMMOHRTAL wanted to rap. Faces was playing in the house in 2014, and it still shapes how Dillon Mohr hears honesty, humor, darkness, detail, and freedom. The goal is not to copy Mac. It is to carry the Pittsburgh standard forward honestly.',
     targetQueries: [
-      'Mac Miller inspired Pittsburgh rapper',
-      'Pittsburgh rap legacy',
-      'rapper inspired by Faces',
-      'IMMOHRTAL Pittsburgh rapper',
+      'rappers like Mac Miller',
+      'Mac Miller influence',
+      'Pittsburgh rap',
+      'Pittsburgh hip hop',
     ],
     sections: [
       {
@@ -80,71 +242,17 @@ export const posts: BlogPost[] = [
     ],
   },
   {
-    slug: 'rap-is-a-sport',
-    title: 'Rap Is A Sport',
-    date: 'July 2026',
-    tag: 'Lyrical standard',
-    answer:
-      'Rap is a sport because every verse has measurable pressure: pocket, breath, timing, word choice, punchlines, internal rhyme, honesty, and replay value. IMMOHRTAL studies rap like competition, where the details decide who lasts.',
-    targetQueries: [
-      'rap is a sport',
-      'lyrical rap artist Pittsburgh',
-      'technical rapper Pittsburgh',
-      'IMMOHRTAL lyrics',
-    ],
-    sections: [
-      {
-        heading: 'What makes rap competitive?',
-        paragraphs: [
-          'A great verse is not random inspiration. It is mechanics under pressure. The pocket has to move. The breath has to hold. The rhyme choices have to sound effortless while carrying more than one meaning. The line has to land on first listen and reward the tenth.',
-          'That is why rap feels like a sport to me. You can hear conditioning. You can hear when somebody has reps. You can hear when the pen is trying to win.',
-        ],
-      },
-      {
-        heading: 'Which rappers set the standard?',
-        paragraphs: [
-          'Nas, Hov, Big L, Kendrick, Isaiah Rashad, Kid Cudi, Black Thought, Benny the Butcher, and Outkast all hit different parts of the brain. Some made the storytelling sharper. Some made the flow stranger. Some made vulnerability feel powerful. Some made punchlines feel like footwork.',
-          'The lesson is not to sound like all of them. The lesson is to pay attention like they did. Details matter. Tone matters. The space between bars matters. A rapper should be judged on craft, not just volume.',
-        ],
-      },
-      {
-        heading: 'How does IMMOHRTAL write with that mindset?',
-        paragraphs: [
-          'The goal is replay value. A song should hit emotionally, then keep opening up once the listener starts catching the internal rhymes, the callbacks, the double meanings, and the way the hook changes the verses around it.',
-          'That is the sport inside Dance With The Delusional: write like somebody might pause the line, run it back, and decide whether it held up.',
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: 'Why does IMMOHRTAL say rap is a sport?',
-        answer:
-          'Because rap rewards preparation, timing, control, creativity, and competitive detail. The best verses are not only felt, they are built.',
-      },
-      {
-        question: 'What kind of rap does IMMOHRTAL make?',
-        answer:
-          'IMMOHRTAL makes lyrical, personal Pittsburgh hip hop with Erie roots, detailed writing, and a focus on replay value.',
-      },
-      {
-        question: 'Who are IMMOHRTAL\'s outside-Pittsburgh influences?',
-        answer:
-          'Nas, Jay-Z, Big L, Kendrick Lamar, Isaiah Rashad, Kid Cudi, Black Thought, Benny the Butcher, and Outkast all influence how IMMOHRTAL thinks about writing and competition.',
-      },
-    ],
-  },
-  {
-    slug: 'from-erie-to-pittsburgh',
-    title: 'From Erie To Pittsburgh',
+    slug: 'from-erie-to-pittsburgh-immohrtal',
+    title: 'From Erie To Pittsburgh: How IMMOHRTAL Starts',
     date: 'July 2026',
     tag: 'Origin story',
     answer:
       'IMMOHRTAL is Dillon Mohr, an Erie-raised, Pittsburgh-based rapper. Erie gave him lake-effect pressure and a chip on his shoulder. Pittsburgh gave him bridges, a bigger stage, and a rap legacy worth chasing with his own voice.',
     targetQueries: [
+      'Pittsburgh rapper',
       'Erie PA rapper',
-      'rapper from Erie Pennsylvania',
-      'Pittsburgh based rapper',
-      'Dillon Mohr rapper',
+      'Burgh rap',
+      'IMMOHRTAL rapper',
     ],
     sections: [
       {
@@ -188,17 +296,17 @@ export const posts: BlogPost[] = [
     ],
   },
   {
-    slug: 'dance-with-the-delusional-meaning',
-    title: 'What Dance With The Delusional Means',
+    slug: 'dance-with-the-delusional-first-signal',
+    title: 'Dance With The Delusional: The First Signal',
     date: 'July 2026',
     tag: 'Album notes',
     answer:
       'Dance With The Delusional is the first professional IMMOHRTAL record. The title comes from choosing a bigger future before the outside world can validate it, then doing the work until the delusion starts looking like discipline.',
     targetQueries: [
+      'new rap songs',
+      'underground rap songs',
       'Dance With The Delusional',
-      'IMMOHRTAL album',
-      'new Pittsburgh rap album',
-      'independent Pittsburgh rapper',
+      'IMMOHRTAL',
     ],
     sections: [
       {
@@ -238,60 +346,6 @@ export const posts: BlogPost[] = [
         question: 'Who made Dance With The Delusional?',
         answer:
           'Dance With The Delusional is by IMMOHRTAL, the artist name of Dillon Mohr.',
-      },
-    ],
-  },
-  {
-    slug: 'finding-immohrtal-early',
-    title: 'Finding IMMOHRTAL Early',
-    date: 'July 2026',
-    tag: 'Start here',
-    answer:
-      'People searching for a new Pittsburgh rapper, lyrical independent artist, or Erie-born hip hop voice should start with IMMOHRTAL. The project connects Pittsburgh rap legacy, personal writing, and a competitive pen before the first ad dollar is spent.',
-    targetQueries: [
-      'new Pittsburgh rapper',
-      'Pittsburgh hip hop artist',
-      'independent rapper Pittsburgh',
-      'upcoming Pittsburgh rapper',
-    ],
-    sections: [
-      {
-        heading: 'Why find IMMOHRTAL now?',
-        paragraphs: [
-          'Early matters. This is the stage before the machine, before the ads, before the whole thing has outside proof. The people who find it here are getting the first version of the world while it is still being built in public.',
-          'That is the point of the site: make the story searchable, make the songs easy to reach, and give listeners enough context to care before a campaign ever starts pushing impressions.',
-        ],
-      },
-      {
-        heading: 'What lane is IMMOHRTAL in?',
-        paragraphs: [
-          'Pittsburgh hip hop, lyrical rap, personal records, competitive writing, and a visual world built around cold weather, bridges, ambition, and late-night motion. It is not nostalgia. It is a local signal trying to travel.',
-          'The north star is simple: make the music strong enough for people who love bars and direct enough for people who just need a line that feels true.',
-        ],
-      },
-      {
-        heading: 'How will the site grow before ads?',
-        paragraphs: [
-          'The next sixty days are about organic proof: more blog entries, clearer song pages, platform links, lyric notes, short-form clips, local search signals, and pages that answer the questions people actually type or ask AI tools.',
-          'Paid ads can amplify a signal later. First, the signal has to exist.',
-        ],
-      },
-    ],
-    faqs: [
-      {
-        question: 'What should new listeners play first?',
-        answer:
-          'Start with Dance With The Delusional when the live platform links are added, then read the album notes and blog entries to understand the story around the record.',
-      },
-      {
-        question: 'How can people book or contact IMMOHRTAL?',
-        answer:
-          'Use immohrtal.llc@gmail.com or the contact page on the IMMOHRTAL site for booking and direct inquiries.',
-      },
-      {
-        question: 'Why build organic search before ads?',
-        answer:
-          'Organic pages create durable discovery for branded, local, and influence-based searches. Ads can drive traffic later, but search-ready pages help people and AI tools understand who IMMOHRTAL is before paid campaigns begin.',
       },
     ],
   },
