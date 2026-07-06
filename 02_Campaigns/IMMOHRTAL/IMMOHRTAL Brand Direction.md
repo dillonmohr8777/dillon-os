@@ -75,6 +75,14 @@ Two worlds that **alternate, never blend**:
 
 Everything posted fits one pillar. If it doesn't, it's off-campaign.
 
+### Story beat: King Keev
+
+Both features on the record (TRK 03 *814 Blood*, TRK 09 *On My Way*) are
+**King Keev — Dillon's best friend**. That's not a credit, it's a campaign
+asset: no industry placements, just the guy who was there. Content lane:
+The Split / The Why — two friends from the 814 doing it anyway.
+Track studies live in `Tracks/`.
+
 ## Pipeline (next builds)
 
 - [ ] Canva brand templates for the four master formats
