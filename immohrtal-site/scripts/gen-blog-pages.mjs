@@ -6,7 +6,7 @@
  *
  * Each post in src/content/blog.ts becomes blog/<slug>.html: an MPA
  * entry with its own title, meta description, canonical URL, and
- * BlogPosting + FAQPage JSON-LD, mounting src/pages/blog-post-main.tsx.
+ * BlogPosting JSON-LD, mounting src/pages/blog-post-main.tsx.
  * The generated files are build inputs, not source: blog/ is gitignored.
  */
 import { mkdirSync, rmSync, writeFileSync } from 'node:fs'
@@ -45,14 +45,6 @@ const pageFor = (post) => {
           alternateName: 'IMMOHRTAL',
         },
         image: `${ORIGIN}/og.png`,
-      },
-      {
-        '@type': 'FAQPage',
-        mainEntity: post.faqs.map((f) => ({
-          '@type': 'Question',
-          name: f.question,
-          acceptedAnswer: { '@type': 'Answer', text: f.answer },
-        })),
       },
     ],
   }
