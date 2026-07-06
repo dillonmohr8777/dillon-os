@@ -57,6 +57,41 @@ function DualityShot() {
   )
 }
 
+function AnimatedQuoteLine({
+  line,
+  lineIndex,
+  isFirst,
+  isLast,
+}: {
+  line: string
+  lineIndex: number
+  isFirst: boolean
+  isLast: boolean
+}) {
+  return (
+    <span
+      className="opening-line block"
+      style={{
+        fontSize: 'clamp(1.35rem, 3.4vw, 2.9rem)',
+        lineHeight: 1.2,
+        textWrap: 'balance',
+      }}
+    >
+      {isFirst && <span className="opening-quote-mark">"</span>}
+      {line.split(' ').map((word, wordIndex) => {
+        const delay = lineIndex * 420 + wordIndex * 95
+        return (
+          <span key={`${lineIndex}-${wordIndex}-${word}`} className="ink-word" style={{ animationDelay: `${delay}ms, ${delay + 160}ms` }}>
+            {word}
+            {wordIndex < line.split(' ').length - 1 ? ' ' : ''}
+          </span>
+        )
+      })}
+      {isLast && <span className="opening-quote-mark">"</span>}
+    </span>
+  )
+}
+
 export function Hero() {
   return (
     <header
@@ -99,19 +134,13 @@ export function Hero() {
             style={{ borderColor: 'var(--line-strong)', color: 'var(--ink)' }}
           >
             {artist.introQuoteLines.map((line, i) => (
-              <span
-                key={i}
-                className="block"
-                style={{
-                  fontSize: 'clamp(1.35rem, 3.4vw, 2.9rem)',
-                  lineHeight: 1.2,
-                  textWrap: 'balance',
-                }}
-              >
-                {i === 0 && '"'}
-                {line}
-                {i === artist.introQuoteLines.length - 1 && '"'}
-              </span>
+              <AnimatedQuoteLine
+                key={line}
+                line={line}
+                lineIndex={i}
+                isFirst={i === 0}
+                isLast={i === artist.introQuoteLines.length - 1}
+              />
             ))}
           </blockquote>
         )}
