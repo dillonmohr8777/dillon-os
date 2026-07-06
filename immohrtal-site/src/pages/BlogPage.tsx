@@ -9,12 +9,12 @@ export function BlogPage() {
         className="font-display chrome-text reveal mt-5 uppercase"
         style={{ fontSize: 'clamp(2.6rem, 7vw, 5.4rem)', lineHeight: 0.95 }}
       >
-        Field notes from the sport
+        Underground rap from the Burgh
       </h1>
       <p className="reveal reveal-late mt-5 max-w-2xl text-[17px] leading-[1.8]" style={{ color: 'var(--dim)' }}>
-        IMMOHRTAL is Dillon Mohr: 28, chief marketing officer by day, rapper by obsession,
-        Erie raised and Pittsburgh sharpened. These notes build the world around the record:
-        Mac, Faces, bridges, bars, and the competitive detail that makes rap worth studying.
+        Field notes for fans looking for new rappers in 2026, real rap, lyrical rap,
+        storytelling, and Pittsburgh hip hop with a pulse. IMMOHRTAL is Dillon Mohr:
+        28, chief marketing officer by day, rapper by obsession, Erie raised and Pittsburgh sharpened.
       </p>
 
       <div className="mt-14 flex flex-col gap-8">
