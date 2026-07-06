@@ -1,0 +1,25 @@
+{
+  "name": "immohrtal-lyric-video",
+  "version": "1.0.0",
+  "description": "IMMOHRTAL animated lyric video (Remotion)",
+  "main": "index.js",
+  "scripts": {
+    "studio": "remotion studio",
+    "still": "remotion still LyricVideo",
+    "render": "remotion render LyricVideo out/lyric-video.mp4",
+    "transcribe": "python3 scripts/transcribe.py medium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.485",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "remotion": "^4.0.485"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "typescript": "^6.0.3"
+  }
+}
