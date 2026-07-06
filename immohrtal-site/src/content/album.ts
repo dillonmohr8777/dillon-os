@@ -17,7 +17,10 @@ export const artist = {
   releaseTag: 'OUT NOW ON ALL PLATFORMS',
   coverArt: 'cover.jpg' as string | null,
   logo: 'logo-web.jpg' as string | null,
-  heroImage: 'artist.jpg' as string | null,
+  heroImage: null as string | null, // hero shot placeholder until the artist photo is picked
+  /** small framed photo at the bottom of the story section, near the bio */
+  storyImage: 'artist.jpg' as string | null,
+  storyImageCaption: 'imma hold your hands if they cold',
 }
 
 export interface Track {
