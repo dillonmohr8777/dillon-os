@@ -17,7 +17,7 @@ export function ContactPage() {
         Book IMMOHRTAL
       </h1>
       <p className="reveal reveal-late mt-5 max-w-md" style={{ color: 'var(--dim)' }}>
-        Shows, features, press, and Pittsburgh rooms that need bars with weight.
+        Shows, features, press, and rooms that need bars with weight.
       </p>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
