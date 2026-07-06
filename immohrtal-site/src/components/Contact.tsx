@@ -1,4 +1,5 @@
 import { artist, contact, socials } from '../content/album'
+import { cycleTheme, useAfterHours } from '../hooks/useAfterHours'
 import { InstagramIcon, TikTokIcon, XIcon, YouTubeIcon } from './icons'
 
 const socialIcons: Record<string, () => React.ReactNode> = {
@@ -80,17 +81,31 @@ export function Contact() {
   )
 }
 
-export function Footer() {
+function ThemeToggle() {
+  const { mode } = useAfterHours()
+  return (
+    <button
+      type="button"
+      className="theme-toggle font-mono text-[11px] uppercase tracking-[0.2em]"
+      onClick={cycleTheme}
+      aria-label={`Theme: ${mode}. Click to change.`}
+    >
+      after hours: {mode}
+    </button>
+  )
+}
+
+export function Footer({ base = './' }: { base?: string }) {
   return (
     <footer className="relative z-10 border-t px-5 py-10" style={{ borderColor: 'var(--line)' }}>
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
         <span className="font-display chrome-text text-lg uppercase tracking-wide">{artist.name}</span>
         <nav aria-label="Footer" className="flex items-center gap-5">
           {[
-            ['./index.html', 'Home'],
-            ['./about.html', 'About'],
-            ['./blog.html', 'Blog'],
-            ['./contact.html', 'Contact'],
+            [`${base}index.html`, 'Home'],
+            [`${base}about.html`, 'About'],
+            [`${base}blog.html`, 'Blog'],
+            [`${base}contact.html`, 'Contact'],
           ].map(([href, label]) => (
             <a
               key={href}
@@ -102,9 +117,12 @@ export function Footer() {
             </a>
           ))}
         </nav>
-        <span className="font-mono text-[11px] tracking-[0.2em] uppercase" style={{ color: 'var(--faint)' }}>
-          © {new Date().getFullYear()} {artist.name} · recorded after hours
-        </span>
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          <span className="font-mono text-[11px] tracking-[0.2em] uppercase" style={{ color: 'var(--faint)' }}>
+            © {new Date().getFullYear()} {artist.name} · recorded after hours
+          </span>
+        </div>
       </div>
     </footer>
   )

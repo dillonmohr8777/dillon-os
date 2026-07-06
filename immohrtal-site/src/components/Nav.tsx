@@ -5,7 +5,7 @@ import { artist } from '../content/album'
  * Shared nav. On the home page section links smooth-scroll to
  * anchors; on subpages they navigate back to the home page sections.
  */
-export function Nav({ home = true }: { home?: boolean }) {
+export function Nav({ home = true, base = './' }: { home?: boolean; base?: string }) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -15,13 +15,13 @@ export function Nav({ home = true }: { home?: boolean }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const anchor = (hash: string) => (home ? hash : `./index.html${hash}`)
+  const anchor = (hash: string) => (home ? hash : `${base}index.html${hash}`)
   const links: Array<[string, string]> = [
     [anchor('#listen'), 'Listen'],
     [anchor('#tracks'), 'Tracks'],
-    ['./about.html', 'About'],
-    ['./blog.html', 'Blog'],
-    ['./contact.html', 'Contact'],
+    [`${base}about.html`, 'About'],
+    [`${base}blog.html`, 'Blog'],
+    [`${base}contact.html`, 'Contact'],
   ]
 
   return (
@@ -33,12 +33,12 @@ export function Nav({ home = true }: { home?: boolean }) {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a
-          href={home ? '#top' : './index.html'}
+          href={home ? '#top' : `${base}index.html`}
           className="flex items-center no-underline"
           aria-label={`${artist.name} - home`}
         >
           {artist.logo ? (
-            <img src={artist.logo} alt="" className="h-11 w-auto" width={1000} height={906} />
+            <img src={`${base === './' ? '' : base}${artist.logo}`} alt="" className="nav-logo-img h-11 w-auto" width={1000} height={906} />
           ) : (
             <span className="font-display chrome-text text-xl tracking-wide uppercase">{artist.name}</span>
           )}

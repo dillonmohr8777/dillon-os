@@ -49,11 +49,15 @@ export function AboutPage() {
       <p className="mono-tag reveal mt-14">The three markings</p>
       <ol className="m-0 mt-5 grid list-none gap-4 p-0 sm:grid-cols-3">
         {markings.map((m, i) => (
-          <li key={m.numeral} className={`glass-panel reveal ${i === 1 ? 'reveal-late' : i === 2 ? 'reveal-later' : ''} rounded-2xl p-6`}>
-            <span className="font-display chrome-text block text-4xl" aria-hidden="true">{m.numeral}</span>
+          <li key={m.numeral} className={`reveal-pop ${i === 1 ? 'reveal-late' : i === 2 ? 'reveal-later' : ''}`}>
+            <TiltBox max={8} className="h-full">
+            <span className="marking-card sheen block h-full rounded-2xl p-6">
+            <span className="font-display chrome-text-light block text-4xl" aria-hidden="true">{m.numeral}</span>
             <span className="mt-3 block font-body text-[16px] font-medium">{m.label}</span>
             <span className="mono-tag mt-1 block" style={{ color: 'var(--signal-txt)' }}>{m.coord}</span>
             <span className="mt-3 block text-[14px] leading-relaxed" style={{ color: 'var(--dim)' }}>{m.line}</span>
+            </span>
+            </TiltBox>
           </li>
         ))}
       </ol>

@@ -13,6 +13,13 @@ export const artist = {
     'to get out and I got no plans to be broke',
   ],
   tagline: 'A signal from somewhere too far gone to come back normal.',
+  /** the marquee ticker cycles these bars; add lines as you write them */
+  marqueeBars: [
+    "I'm from the land of the snow",
+    'imma hold your hands if they cold',
+    'I got no plans to be broke',
+    'too far gone to come back normal',
+  ],
   sessionTag: 'SESSION 001 // DANCE WITH THE DELUSIONAL',
   releaseTag: 'OUT NOW ON ALL PLATFORMS',
   coverArt: 'cover.jpg' as string | null,

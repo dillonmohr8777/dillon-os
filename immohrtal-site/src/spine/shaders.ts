@@ -18,7 +18,7 @@ export const stationV = (k: number) => k / (N_STATIONS - 1)
 const WAVE_V = stationV(2).toFixed(4) // waveform grid (tracks)
 const VORT_V = stationV(4).toFixed(4) // speaker-cone vortex (visuals)
 
-export const POINT_VS = `
+export const buildPointVS = (dark: boolean) => `
 attribute vec3 aHome; attribute vec3 aScatter; attribute vec3 aMeta;
 uniform mat4 uProj; uniform mat4 uView;
 uniform float uTime, uMaxV, uFocusV, uVel, uPulse, uPulseV, uSizeMul, uMinPx, uAspect, uAudio;
@@ -59,9 +59,10 @@ void main(){
   vec3 col = mix(mix(uColA, uColB, clamp(v*2.0, 0.0, 1.0)), uColC, clamp(v*2.0 - 1.0, 0.0, 1.0));
   float hero = isStn * exp(-pow(v * 30.0, 2.0));
   col = mix(col, mix(uColA, uColB, step(pos.x, 0.0)), hero * 0.7);
-  /* light theme: focus ring and sparkles darken toward gunmetal ink */
-  col = mix(col, vec3(0.04, 0.32, 0.70), 0.5 * lit);
-  col = mix(col, vec3(0.06, 0.09, 0.15), 0.85 * step(0.96, rnd));
+  /* light theme: focus ring and sparkles darken toward gunmetal ink;
+     after hours they lift toward pale signal light instead */
+  col = mix(col, ${dark ? 'vec3(0.55, 0.80, 1.00)' : 'vec3(0.04, 0.32, 0.70)'}, 0.5 * lit);
+  col = mix(col, ${dark ? 'vec3(0.85, 0.93, 1.00)' : 'vec3(0.06, 0.09, 0.15)'}, 0.85 * step(0.96, rnd));
   vCol = col;
   vA = clamp(bright, 0.0, 2.2) * (0.35 + 0.65 * assemble);
   float roleSz = 1.0 + 0.15 * (1.0 - min(role, 1.0)) - 0.25 * isDust;
@@ -87,16 +88,17 @@ export const QUAD_VS =
   'attribute vec2 aP; varying vec2 vUv; void main(){ vUv = aP*0.5+0.5; gl_Position = vec4(aP,0.0,1.0); }'
 
 /* background: paper white with faint blue and green pools pulled from
-   the logo palette */
-export const COMP_FS = `
+   the logo palette. After hours the paper goes near-black and the
+   pools sink into deep signal blue and green. */
+export const buildCompFS = (dark: boolean) => `
 precision mediump float; varying vec2 vUv;
 uniform sampler2D uBloom; uniform float uBloomOn, uStrength, uExposure;
 void main(){
-  vec3 top = vec3(0.988, 0.992, 0.998);
-  vec3 bot = vec3(0.922, 0.942, 0.958);
+  vec3 top = ${dark ? 'vec3(0.043, 0.067, 0.110)' : 'vec3(0.988, 0.992, 0.998)'};
+  vec3 bot = ${dark ? 'vec3(0.020, 0.027, 0.047)' : 'vec3(0.922, 0.942, 0.958)'};
   vec3 c = mix(bot, top, vUv.y);
-  vec2 p1 = vUv - vec2(0.25, 0.72); c = mix(c, vec3(0.78, 0.88, 0.99), 0.5 * exp(-dot(p1,p1)*5.0));
-  vec2 p2 = vUv - vec2(0.78, 0.28); c = mix(c, vec3(0.80, 0.94, 0.87), 0.42 * exp(-dot(p2,p2)*5.0));
+  vec2 p1 = vUv - vec2(0.25, 0.72); c = mix(c, ${dark ? 'vec3(0.075, 0.150, 0.290)' : 'vec3(0.78, 0.88, 0.99)'}, 0.5 * exp(-dot(p1,p1)*5.0));
+  vec2 p2 = vUv - vec2(0.78, 0.28); c = mix(c, ${dark ? 'vec3(0.055, 0.180, 0.135)' : 'vec3(0.80, 0.94, 0.87)'}, 0.42 * exp(-dot(p2,p2)*5.0));
   float ign = fract(52.9829189 * fract(dot(gl_FragCoord.xy, vec2(0.06711056, 0.00583715))));
   c += (ign - 0.5) * (1.5 / 255.0);
   gl_FragColor = vec4(c, 1.0);

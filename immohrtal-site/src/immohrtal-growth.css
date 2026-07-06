@@ -19,7 +19,7 @@
 .page-dark .stage-fallback {
   background:
     radial-gradient(55% 40% at 22% 16%, rgba(53, 167, 255, 0.22), transparent 65%),
-    radial-gradient(48% 36% at 85% 20%, rgba(255, 188, 87, 0.16), transparent 70%),
+    radial-gradient(48% 36% at 85% 20%, rgba(31, 158, 255, 0.16), transparent 70%),
     radial-gradient(56% 46% at 76% 78%, rgba(53, 209, 143, 0.16), transparent 68%),
     linear-gradient(180deg, #04070d, #0b111c 48%, #05070c);
 }
@@ -29,7 +29,7 @@
 }
 
 .page-dark .chrome-text {
-  background: linear-gradient(180deg, #ffffff 0%, #9fd8ff 30%, #35d18f 48%, #ffbc57 62%, #8aa0bd 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #9fd8ff 30%, #35d18f 48%, var(--green) 62%, #8aa0bd 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -47,7 +47,7 @@
   border-radius: 16px;
   background:
     linear-gradient(135deg, rgba(53, 167, 255, 0.11), transparent 32%),
-    linear-gradient(225deg, rgba(255, 188, 87, 0.12), transparent 38%),
+    linear-gradient(225deg, rgba(31, 158, 255, 0.12), transparent 38%),
     var(--glass);
   box-shadow: 0 26px 80px rgba(0, 0, 0, 0.34);
   padding: clamp(1.25rem, 3.5vw, 2.5rem);
@@ -58,7 +58,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(90deg, rgba(53, 167, 255, 0.22), rgba(53, 209, 143, 0.18), rgba(255, 188, 87, 0.2));
+  background: linear-gradient(90deg, rgba(53, 167, 255, 0.22), rgba(53, 209, 143, 0.18), rgba(31, 158, 255, 0.2));
   height: 3px;
 }
 
@@ -104,7 +104,7 @@
 
 .blog-section-block h3 {
   margin: 0;
-  color: #ffcf7a;
+  color: var(--signal-txt);
   font-size: 1.22rem;
   line-height: 1.08;
 }
@@ -192,7 +192,7 @@
 .legacy-footer-card:nth-child(2),
 .legacy-card:nth-child(2) {
   background:
-    linear-gradient(145deg, rgba(255, 188, 87, 0.16), rgba(31, 158, 255, 0.08)),
+    linear-gradient(145deg, rgba(31, 158, 255, 0.16), rgba(31, 158, 255, 0.08)),
     rgba(255, 255, 255, 0.72);
 }
 
@@ -206,14 +206,14 @@
 .legacy-footer-card:nth-child(4),
 .legacy-card:nth-child(4) {
   background:
-    linear-gradient(145deg, rgba(53, 167, 255, 0.13), rgba(255, 188, 87, 0.12)),
+    linear-gradient(145deg, rgba(53, 167, 255, 0.13), rgba(31, 158, 255, 0.12)),
     rgba(255, 255, 255, 0.72);
 }
 
 .page-dark .legacy-footer-card,
 .page-dark .legacy-card {
   background:
-    linear-gradient(145deg, rgba(53, 167, 255, 0.12), rgba(255, 188, 87, 0.08)),
+    linear-gradient(145deg, rgba(53, 167, 255, 0.12), rgba(31, 158, 255, 0.08)),
     rgba(255, 255, 255, 0.045);
   box-shadow: none;
 }
