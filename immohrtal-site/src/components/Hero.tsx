@@ -112,7 +112,22 @@ export function Hero() {
       />
 
       <div className="relative z-10 flex w-full max-w-4xl flex-col items-center">
-        <p className="mono-tag reveal" style={{ color: 'var(--signal-txt)' }}>
+        {/* opening bar, set like a newspaper pull quote */}
+        {artist.introQuote && (
+          <blockquote
+            className="reveal m-0 w-full max-w-2xl border-y px-2 py-5 font-serif"
+            style={{
+              borderColor: 'var(--line-strong)',
+              fontSize: 'clamp(1.1rem, 2.3vw, 1.45rem)',
+              lineHeight: 1.55,
+              color: 'var(--ink)',
+            }}
+          >
+            “{artist.introQuote}”
+          </blockquote>
+        )}
+
+        <p className="mono-tag reveal mt-8" style={{ color: 'var(--signal-txt)' }}>
           {artist.sessionTag}
         </p>
 

@@ -28,6 +28,9 @@
 export const artist = {
   name: 'IMMOHRTAL',
   albumTitle: 'Dance With The Delusional',
+  /** opening bar at the top of the intro — newspaper pull-quote style; extend freely */
+  introQuote:
+    "I'm from the land of the snow, so you know imma hold your hands if they cold, see I'm such a damaged soul so I moved to the city to get out and shit I got no plans to be broke",
   tagline: 'A signal from somewhere too far gone to come back normal.',
   sessionTag: 'SESSION 001 // THE NEW ALBUM',
   releaseTag: 'OUT NOW ON ALL PLATFORMS', // or "PRE-SAVE. DROPS 00.00.26"
