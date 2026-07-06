@@ -1,4 +1,5 @@
-import { markings, story } from '../content/album'
+import { artist, markings, story } from '../content/album'
+import { TiltBox } from './TiltBox'
 
 export function Story() {
   return (
@@ -62,6 +63,26 @@ export function Story() {
             </li>
           ))}
         </ol>
+
+        {/* the reason: small framed photo at the bottom of the bio */}
+        {artist.storyImage && (
+          <div className="reveal reveal-late mx-auto mt-16 w-full max-w-sm">
+            <TiltBox max={6}>
+              <figure className="pop-box m-0 block p-3">
+                <img
+                  src={artist.storyImage}
+                  alt="The person this is all for"
+                  className="block aspect-square w-full rounded-xl object-cover"
+                  style={{ objectPosition: '50% 25%' }}
+                  loading="lazy"
+                />
+                <figcaption className="mono-tag mt-3 pb-1 text-center">
+                  “{artist.storyImageCaption}”
+                </figcaption>
+              </figure>
+            </TiltBox>
+          </div>
+        )}
       </div>
     </section>
   )
