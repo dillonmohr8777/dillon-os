@@ -12,11 +12,11 @@ export const artist = {
     "see I'm such a damaged soul so I moved to the city",
     'to get out and I got no plans to be broke',
   ],
-  tagline: 'Two sides, one record. The executive brain and the artist heart finally in the same room.',
+  tagline: 'A signal from somewhere too far gone to come back normal.',
   sessionTag: 'SESSION 001 // DANCE WITH THE DELUSIONAL',
   releaseTag: 'OUT NOW ON ALL PLATFORMS',
   coverArt: 'cover.jpg' as string | null,
-  logo: 'logo-web.jpg' as string | null,
+  logo: 'logo-mark.png' as string | null, // transparent background mark
   heroImage: 'artist.jpg' as string | null, // the shot: 1080x1080 B&W 814 headshot
   /** small framed photo at the bottom of the story section, near the bio */
   storyImage: 'daughter.jpg' as string | null,
@@ -58,13 +58,13 @@ export const platforms: Platform[] = [
 ]
 
 export const story = {
-  heading: 'Two Sides, One Record',
+  heading: 'The Delusion',
   pullQuote:
     'Mac Miller made it feel possible to rap and still sound like yourself.',
   paragraphs: [
     'IMMOHRTAL is Dillon Mohr, a 28-year-old chief marketing officer and rapper. He spent years learning how to make other people sound bigger, sharper, and harder to ignore. Rap was always the thing underneath it. The notebooks, the voice memos, the late-night lines, the part that never left.',
-    'He was raised in Erie, Pennsylvania, and lives in Pittsburgh now. Mac Miller is the main reason Dillon wanted to rap at all. Faces hit the house in 2014 and never really left. That influence is personal, not a costume. It is the permission to be honest, detailed, strange, funny, damaged, and still competitive.',
-    'Dance With The Delusional is the first professional IMMOHRTAL record. It is built from two lives meeting in one room: the marketer who understands attention and the rapper who still treats every verse like a sport. The goal is simple. Make something detailed enough for lyric people, human enough for real fans, and honest enough to stand beside the records that made him start.',
+    'He was raised in Erie, Pennsylvania, and lives in Pittsburgh now. Mac Miller is the main reason Dillon wanted to rap at all. Faces hit the house in 2014 and never really left. That influence is personal, not a costume. It\'s the permission to be honest, detailed, strange, funny, damaged, and still competitive.',
+    'Dance With The Delusional is the first professional IMMOHRTAL record. It\'s built from two lives meeting in one room: the marketer who understands attention and the rapper who still treats every verse like a sport. The goal is simple. Make something detailed enough for lyric people, human enough for real fans, and honest enough to stand beside the records that made him start.',
   ],
 }
 

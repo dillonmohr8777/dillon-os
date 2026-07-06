@@ -3,7 +3,7 @@ import { PlayerProvider } from './audio/PlayerContext'
 import { useReveal } from './hooks/useReveal'
 import type { SpineEngine } from './spine/config'
 import { Nav } from './components/Nav'
-import { Hero, MarqueeDivider } from './components/Hero'
+import { Hero, LogoOutro, MarqueeDivider } from './components/Hero'
 import { SpineStage } from './components/SpineStage'
 import { SpineRail } from './components/SpineRail'
 import { Loader } from './components/Loader'
@@ -11,7 +11,6 @@ import { Listen } from './components/Listen'
 import { Tracklist } from './components/Tracklist'
 import { PlayerBar } from './components/PlayerBar'
 import { Story } from './components/Story'
-import { Visualizer } from './components/Visualizer'
 import { Contact, Footer } from './components/Contact'
 
 export default function App() {
@@ -34,8 +33,8 @@ export default function App() {
           <Listen />
           <Tracklist />
           <Story />
-          <Visualizer />
           <Contact />
+          <LogoOutro />
         </main>
         <Footer />
         <PlayerBar />

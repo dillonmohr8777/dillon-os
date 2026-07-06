@@ -10,11 +10,11 @@ export function BlogPage() {
         className="font-display chrome-text reveal mt-5 uppercase"
         style={{ fontSize: 'clamp(2.6rem, 7vw, 5.4rem)', lineHeight: 0.95 }}
       >
-        Real rap, duality, and the sport
+        Real rap, real stories, and the sport
       </h1>
       <p className="reveal reveal-late mt-5 max-w-2xl text-[17px] leading-[1.8]" style={{ color: 'var(--dim)' }}>
         Field notes for fans looking for new rappers in 2026, authentic rap, lyrical rap,
-        storytelling, duality, and the craft behind Dance With The Delusional. IMMOHRTAL is Dillon Mohr:
+        storytelling, and the craft behind Dance With The Delusional. IMMOHRTAL is Dillon Mohr:
         28, chief marketing officer by day, rapper by obsession.
       </p>
 

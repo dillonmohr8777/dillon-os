@@ -243,6 +243,20 @@ body {
   background: linear-gradient(180deg, transparent, rgba(31, 158, 255, 0.35) 20%, rgba(23, 168, 107, 0.3) 80%, transparent);
 }
 
+/* ── magic ink: the mark soaks into the paper on scroll ──── */
+.ink-reveal img {
+  opacity: 0;
+  transform: scale(1.06);
+  filter: blur(26px) contrast(2.4) saturate(0.3);
+  transition: opacity 1.4s ease-out, transform 2.1s var(--ease-hover), filter 2.3s ease-out;
+  will-change: filter, opacity, transform;
+}
+.ink-reveal.is-visible img {
+  opacity: 1;
+  transform: none;
+  filter: blur(0) contrast(1) saturate(1);
+}
+
 /* ── waypoint rail (desktop) ─────────────────────────────── */
 #rail {
   position: fixed;
@@ -539,6 +553,11 @@ button:focus-visible {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+  .ink-reveal img {
+    opacity: 1;
+    transform: none;
+    filter: none;
   }
   .grain::after { animation: none; opacity: 0.02; }
   .marquee-inner { animation: none; }
