@@ -63,7 +63,7 @@ const Streak: React.FC<{seed: number}> = ({seed}) => {
   );
 };
 
-// Perspective floor grid — subtle field-line motif scrolling toward the horizon.
+// Perspective floor grid — subtle stage-floor lines scrolling toward the horizon.
 const FloorGrid: React.FC = () => {
   const frame = useCurrentFrame();
   const shift = (frame * 1.2) % 90;
