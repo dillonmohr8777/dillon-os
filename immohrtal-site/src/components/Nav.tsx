@@ -35,10 +35,10 @@ export function Nav({ home = true }: { home?: boolean }) {
         <a
           href={home ? '#top' : './index.html'}
           className="flex items-center no-underline"
-          aria-label={`${artist.name} — home`}
+          aria-label={`${artist.name} - home`}
         >
           {artist.logo ? (
-            <img src={artist.logo} alt="" className="h-11 w-auto" width={1320} height={1204} />
+            <img src={artist.logo} alt="" className="nav-logo-img h-11 w-auto" width={1320} height={1204} />
           ) : (
             <span className="font-display chrome-text text-xl tracking-wide uppercase">{artist.name}</span>
           )}
