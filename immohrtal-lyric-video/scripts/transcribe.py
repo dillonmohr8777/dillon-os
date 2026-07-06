@@ -1,4 +1,8 @@
-"""Transcribe frp.mp3 with word-level timestamps -> src/lyrics.json"""
+"""Transcribe a track with word-level timestamps.
+
+Usage: python3 transcribe.py [model] [audio.mp3] [out.json]
+Defaults: medium public/track.mp3 src/lyrics.json
+"""
 import json
 import os
 import sys
@@ -6,10 +10,9 @@ import sys
 from faster_whisper import WhisperModel
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-AUDIO = os.path.join(HERE, "..", "public", "track.mp3")
-OUT = os.path.join(HERE, "..", "src", "lyrics.json")
-
-MODEL_SIZE = sys.argv[1] if len(sys.argv) > 1 else "small"
+MODEL_SIZE = sys.argv[1] if len(sys.argv) > 1 else "medium"
+AUDIO = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "..", "public", "track.mp3")
+OUT = sys.argv[3] if len(sys.argv) > 3 else os.path.join(HERE, "..", "src", "lyrics.json")
 
 model = WhisperModel(MODEL_SIZE, device="cpu", compute_type="int8", cpu_threads=4)
 

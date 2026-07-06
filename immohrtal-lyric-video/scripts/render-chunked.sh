@@ -1,24 +1,41 @@
 #!/usr/bin/env bash
-# Chunked render: splits the timeline into 4 ranges so a late worker stall
+# Chunked render: splits the timeline into ~4 ranges so a late worker stall
 # can't lose the whole run, retries each failed chunk once, then concats
 # with ffmpeg (stream copy, no re-encode).
+#
+# Usage: render-chunked.sh [CompositionId] [output.mp4]
+# Total frames are read from the composition itself via `remotion compositions`.
 set -u
 cd "$(dirname "$0")/.."
 
-TOTAL=5298
-CHUNKS=("0-1349" "1350-2699" "2700-4049" "4050-5297")
+COMP="${1:-LyricVideo}"
+OUT="${2:-out/lyric-video.mp4}"
 FFMPEG="$(node -e "process.stdout.write(require('@ffmpeg-installer/ffmpeg').path)")"
 
-mkdir -p out/chunks
-rm -f out/chunks/*.mp4 out/chunks/list.txt
+TOTAL="$(npx remotion compositions 2>/dev/null | awk -v c="$COMP" '$1 == c {print $4}')"
+if ! [[ "$TOTAL" =~ ^[0-9]+$ ]]; then
+  echo "FATAL: could not determine frame count for composition '$COMP' (got: '$TOTAL')" >&2
+  exit 1
+fi
+echo "Composition $COMP: $TOTAL frames"
 
-for i in "${!CHUNKS[@]}"; do
-  range="${CHUNKS[$i]}"
-  out="out/chunks/chunk-$i.mp4"
+CHUNK_DIR="out/chunks-$COMP"
+mkdir -p "$CHUNK_DIR" "$(dirname "$OUT")"
+rm -f "$CHUNK_DIR"/*.mp4 "$CHUNK_DIR/list.txt"
+
+N=4
+PER=$(( (TOTAL + N - 1) / N ))
+for ((i = 0; i < N; i++)); do
+  start=$((i * PER))
+  end=$(( (i + 1) * PER - 1 ))
+  ((end >= TOTAL)) && end=$((TOTAL - 1))
+  ((start > end)) && break
+  range="$start-$end"
+  chunk="$CHUNK_DIR/chunk-$i.mp4"
   ok=0
   for attempt in 1 2; do
     echo "=== chunk $i ($range) attempt $attempt ==="
-    if npx remotion render LyricVideo "$out" --frames="$range" --concurrency=3 --timeout=120000; then
+    if npx remotion render "$COMP" "$chunk" --frames="$range" --concurrency=3 --timeout=120000; then
       ok=1
       break
     fi
@@ -28,9 +45,9 @@ for i in "${!CHUNKS[@]}"; do
     echo "FATAL: chunk $i failed twice" >&2
     exit 1
   fi
-  echo "file 'chunk-$i.mp4'" >> out/chunks/list.txt
+  echo "file 'chunk-$i.mp4'" >> "$CHUNK_DIR/list.txt"
 done
 
-"$FFMPEG" -y -f concat -safe 0 -i out/chunks/list.txt -c copy out/lyric-video.mp4
+"$FFMPEG" -y -f concat -safe 0 -i "$CHUNK_DIR/list.txt" -c copy "$OUT"
 echo "CONCAT EXIT: $?"
-ls -la out/lyric-video.mp4
+ls -la "$OUT"

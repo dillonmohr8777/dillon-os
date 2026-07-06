@@ -1,6 +1,6 @@
 import React from 'react';
 import {Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
-import {C} from './theme';
+import {useTrackPalette} from './TrackTheme';
 
 // The IMMOHRTAL mark with a "super 3D" treatment: perspective tilt that
 // slowly oscillates, a light sweep masked to the logo's alpha, dual-color
@@ -11,6 +11,7 @@ export const Logo3D: React.FC<{
   reflection?: boolean;
   wobble?: number; // degrees of continuous 3D oscillation
 }> = ({width, sweep = true, reflection = true, wobble = 5}) => {
+  const pal = useTrackPalette();
   const frame = useCurrentFrame();
   const src = staticFile('logo.png');
   const height = width * (763 / 1099);
@@ -38,7 +39,7 @@ export const Logo3D: React.FC<{
           style={{
             width: '100%',
             height: '100%',
-            filter: `drop-shadow(0 0 ${width * 0.045}px ${C.blue}66) drop-shadow(0 0 ${width * 0.11}px ${C.green}40) drop-shadow(0 ${width * 0.02}px ${width * 0.03}px rgba(0,0,0,0.8))`,
+            filter: `drop-shadow(0 0 ${width * 0.045}px ${pal.accentB}66) drop-shadow(0 0 ${width * 0.11}px ${pal.accentA}40) drop-shadow(0 ${width * 0.02}px ${width * 0.03}px rgba(0,0,0,0.8))`,
           }}
         />
         {sweep ? (
