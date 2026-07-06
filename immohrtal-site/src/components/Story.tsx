@@ -1,8 +1,8 @@
-import { markings, story } from '../content/album'
+import { markings, pittsburghLegacy, story } from '../content/album'
 
 export function Story() {
   return (
-    <section id="story" aria-labelledby="story-heading" className="relative z-10 overflow-hidden py-24 md:py-36">
+    <section id="story" aria-labelledby="story-heading" className="story-section relative z-10 overflow-hidden py-24 md:py-36">
       {/* soft blue/green pressure glow behind the statement */}
       <div
         aria-hidden="true"
@@ -28,7 +28,7 @@ export function Story() {
             margin: '3rem 0 0',
           }}
         >
-          “{story.pullQuote}”
+          "{story.pullQuote}"
         </blockquote>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">
@@ -43,13 +43,23 @@ export function Story() {
           ))}
         </div>
 
+        <p className="mono-tag reveal mt-16">Pittsburgh signal</p>
+        <div className="legacy-strip reveal reveal-late mt-5 grid gap-3 sm:grid-cols-4">
+          {pittsburghLegacy.map((item) => (
+            <div key={item.label} className="legacy-card compact">
+              <span className="legacy-label">{item.label}</span>
+              <p>{item.line}</p>
+            </div>
+          ))}
+        </div>
+
         {/* the three markings */}
         <p className="mono-tag reveal mt-16">The three markings</p>
         <ol className="m-0 mt-5 grid list-none gap-4 p-0 sm:grid-cols-3">
           {markings.map((m, i) => (
             <li
               key={m.numeral}
-              className={`glass-panel reveal ${i === 1 ? 'reveal-late' : i === 2 ? 'reveal-later' : ''} rounded-2xl p-6`}
+              className={`marking-card glass-panel reveal ${i === 1 ? 'reveal-late' : i === 2 ? 'reveal-later' : ''} rounded-2xl p-6`}
             >
               <span className="font-display chrome-text block text-4xl" aria-hidden="true">
                 {m.numeral}
