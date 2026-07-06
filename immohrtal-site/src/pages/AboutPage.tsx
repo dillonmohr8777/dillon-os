@@ -1,5 +1,6 @@
 import { artist, markings, story } from '../content/album'
 import { SubPage } from '../components/SubPage'
+import { TiltBox } from '../components/TiltBox'
 
 export function AboutPage() {
   return (
@@ -18,6 +19,21 @@ export function AboutPage() {
       >
         "{story.pullQuote}"
       </blockquote>
+
+      {/* editorial portrait */}
+      <div className="reveal reveal-late mt-12 w-full max-w-md">
+        <TiltBox max={5}>
+          <figure className="pop-box m-0 block p-3">
+            <img
+              src="about-portrait.jpg"
+              alt={`Dillon Mohr, ${artist.name}`}
+              className="block h-auto w-full rounded-xl"
+              loading="lazy"
+            />
+            <figcaption className="mono-tag mt-3 pb-1 text-center">Dillon Mohr // {artist.name}</figcaption>
+          </figure>
+        </TiltBox>
+      </div>
 
       <div className="mt-10 flex flex-col gap-6">
         {story.paragraphs.map((p, i) => (

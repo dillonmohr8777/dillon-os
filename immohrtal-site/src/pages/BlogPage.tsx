@@ -1,5 +1,6 @@
 import { posts } from '../content/blog'
 import { SubPage } from '../components/SubPage'
+import { TiltBox } from '../components/TiltBox'
 
 export function BlogPage() {
   return (
@@ -16,6 +17,21 @@ export function BlogPage() {
         storytelling, duality, and the craft behind Dance With The Delusional. IMMOHRTAL is Dillon Mohr:
         28, chief marketing officer by day, rapper by obsession.
       </p>
+
+      {/* the Erie Underground zine sheet */}
+      <div className="reveal reveal-late mt-12 w-full max-w-xl">
+        <TiltBox max={4}>
+          <figure className="pop-box m-0 block p-3">
+            <img
+              src="blog-erie.jpg"
+              alt="Erie Underground zine page: from the lake, for the world"
+              className="block h-auto w-full rounded-xl"
+              loading="lazy"
+            />
+            <figcaption className="mono-tag mt-3 pb-1 text-center">Erie Underground // Vol. 814</figcaption>
+          </figure>
+        </TiltBox>
+      </div>
 
       <div className="mt-14 flex flex-col gap-8">
         {posts.map((post, i) => (

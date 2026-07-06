@@ -1,5 +1,6 @@
 import { artist, contact, socials } from '../content/album'
 import { SubPage } from '../components/SubPage'
+import { TiltBox } from '../components/TiltBox'
 import { InstagramIcon, TikTokIcon, XIcon, YouTubeIcon } from '../components/icons'
 
 const socialIcons: Record<string, () => React.ReactNode> = {
@@ -54,6 +55,36 @@ export function ContactPage() {
         <input type="hidden" name="source" defaultValue="contact-page" />
         <button className="btn btn-chrome" type="submit">Join list</button>
       </form>
+
+      {/* press sheets */}
+      <div className="mt-14 grid gap-6 sm:grid-cols-2">
+        <div className="reveal">
+          <TiltBox max={5}>
+            <figure className="pop-box m-0 block p-3">
+              <img
+                src="contact-citylines.jpg"
+                alt="City Lines press sheet: Erie to Pittsburgh, from the lake to the Burgh"
+                className="block h-auto w-full rounded-xl"
+                loading="lazy"
+              />
+              <figcaption className="mono-tag mt-3 pb-1 text-center">814 → 412 // from the lake to the Burgh</figcaption>
+            </figure>
+          </TiltBox>
+        </div>
+        <div className="reveal reveal-late">
+          <TiltBox max={5}>
+            <figure className="pop-box m-0 block p-3">
+              <img
+                src="contact-press.jpg"
+                alt="IMMOHRTAL Dance With The Delusional press artwork"
+                className="block h-auto w-full rounded-xl"
+                loading="lazy"
+              />
+              <figcaption className="mono-tag mt-3 pb-1 text-center">Session 001 // the record</figcaption>
+            </figure>
+          </TiltBox>
+        </div>
+      </div>
 
       <p className="mono-tag reveal reveal-late mt-14">Find {artist.name}</p>
       <ul className="m-0 mt-4 flex list-none flex-wrap gap-3 p-0">
