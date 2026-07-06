@@ -6,21 +6,28 @@
   "preparedBy": "Dillon Mohr",
   "contact": "dillon@needmomentum.com",
   "sampleData": true,
+  "industryTag": "Events · 20-City Bar Crawls",
+  "servicesLine": "Google Ads · Landing Pages",
+  "theme": { "accent": "#F0812C", "accent2": "#5B9BD5", "titleWord": "Bar" },
   "summary": "Performance Max event waves stayed the growth engine this month. Ticket volume held across active city campaigns with tCPA guardrails in place on every campaign, and the pre-approved copy library kept the account clean of policy flags.",
+  "coverSub": "A month-by-month look at how paid search and Performance Max turned event pages into ticket sales across the active city roster.",
+  "headline": "Ticket volume held while <strong>cost per ticket dropped 4%</strong>, and the account ran a full month with <strong>zero policy disapprovals</strong>. The tCPA guardrails and pre-approved copy library are doing exactly what they were built to do.",
+  "snapshotLead": "Performance Max event waves stayed the growth engine this month. Ticket volume held across active city campaigns, and <span class=\"hl\">cost per ticket kept improving</span> while spend grew.",
+  "takeaway": "Spend grew 8% and cost per ticket still fell, which means the campaigns are scaling efficiently rather than buying volume. <strong>Wave 2 cities are ready for more budget.</strong>",
   "kpis": [
-    { "label": "Tickets attributed", "value": "53", "delta": "+12%" },
-    { "label": "Ad spend", "value": "$2,140", "delta": "+8%" },
-    { "label": "Cost per ticket", "value": "$40.38", "delta": "-4%", "deltaGoodWhenDown": true },
-    { "label": "Active city campaigns", "value": "9" }
+    { "label": "Tickets attributed", "value": "53", "sub": "across all live city campaigns", "delta": "+12%" },
+    { "label": "Ad spend", "value": "$2,140", "sub": "Search + Performance Max", "delta": "+8%" },
+    { "label": "Cost per ticket", "value": "$40.38", "sub": "blended, all cities", "delta": "-4%", "deltaGoodWhenDown": true },
+    { "label": "Active city campaigns", "value": "9", "sub": "tCPA guardrails on every one" }
   ],
   "charts": [
     { "title": "Tickets by week", "labels": ["Jun 1", "Jun 8", "Jun 15", "Jun 22", "Jun 29"], "values": [9, 11, 12, 10, 11] },
     { "title": "Spend by week ($)", "labels": ["Jun 1", "Jun 8", "Jun 15", "Jun 22", "Jun 29"], "values": [410, 445, 460, 400, 425], "prefix": "$" }
   ],
   "campaigns": [
-    { "name": "Taco & Tequila Crawl — Wave 1 (9 cities)", "status": "live", "statusLabel": "Live", "spend": "$1,280", "results": "31 tickets", "note": "tCPA guardrail active on every city." },
-    { "name": "Taco & Tequila Crawl — Wave 2", "status": "live", "statusLabel": "Live", "spend": "$860", "results": "22 tickets", "note": "May 2 launch wave, still scaling." },
-    { "name": "Cocktail Crawl (Fall creative)", "status": "blocked", "statusLabel": "On hold", "spend": "$0", "results": "—", "note": "Prior disapprovals resolved by retiring the flagged copy. Fall relaunch uses pre-approved library only." }
+    { "name": "Taco & Tequila Crawl: Wave 1 (9 cities)", "status": "live", "statusLabel": "Live", "spend": "$1,280", "results": "31 tickets", "note": "tCPA guardrail active on every city." },
+    { "name": "Taco & Tequila Crawl: Wave 2", "status": "live", "statusLabel": "Live", "spend": "$860", "results": "22 tickets", "note": "May 2 launch wave, still scaling." },
+    { "name": "Cocktail Crawl (Fall creative)", "status": "blocked", "statusLabel": "On hold", "spend": "$0", "results": "—", "note": "Prior disapprovals resolved by retiring the flagged copy. Fall relaunch uses the pre-approved library only." }
   ],
   "wins": [
     "<strong>Cost per ticket improved</strong> while spend grew, so the tCPA guardrails are doing their job.",
@@ -31,5 +38,6 @@
     "Scale Wave 2 budgets in the top three cities by ticket volume.",
     "Stage the fall Cocktail Crawl relaunch with compliant creative for approval before September.",
     "Add weekly ticket pacing against event dates so slow cities get creative rotation earlier."
-  ]
+  ],
+  "quote": "Nine cities, one copy library, zero disapprovals. Clean compliance is now a competitive edge, not a chore."
 }

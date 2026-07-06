@@ -32,3 +32,6 @@ google_ads_id: 314-136-4176
 
 ## Links
 - [[Client Index]]
+
+## Reports
+• 2026-07-06: June 2026 performance report (buyers-guide PDF), Daily-Briefs/reports/pdf/shadow-hvac-2026-06.pdf. Draft ribbon on until June actuals are confirmed.

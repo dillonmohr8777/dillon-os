@@ -1,0 +1,44 @@
+{
+  "client": "Onsite Concrete & Landscape",
+  "agency": "Momentum 360",
+  "period": "2026-06",
+  "periodLabel": "June 2026",
+  "preparedBy": "Dillon Mohr",
+  "contact": "dillon@needmomentum.com",
+  "sampleData": true,
+  "logoFile": "onsite-concrete.jpeg",
+  "industryTag": "Concrete & Landscape",
+  "servicesLine": "Website Repair · WordPress",
+  "theme": { "accent": "#D9534F", "accent2": "#8C9299", "titleWord": "Onsite" },
+  "summary": "The website went from liability to asset this month. Hero sections, service cards, and mobile layouts got rebuilt across the Divi site, and every fix was verified on the weekly Thursday call before moving to the next.",
+  "coverSub": "A rebuild report: what got repaired on the WordPress site, what it means for visitors, and what's queued next.",
+  "headline": "The site's worst usability problems are gone: <strong>hero readability, broken service cards, and mobile layout</strong> all shipped this month. Visitors now see a site that matches the quality of the work Onsite pours.",
+  "snapshotLead": "Site repair is conversion work in disguise. <span class=\"hl\">Twelve sections rebuilt</span> means twelve fewer reasons for a homeowner to bounce to a competitor.",
+  "takeaway": "A concrete company's website is its portfolio. With the layout stable and images matched to the right pages, <strong>the site is finally ready to carry paid traffic</strong> whenever Onsite wants to turn that on.",
+  "kpis": [
+    { "label": "Sections rebuilt", "value": "12", "sub": "hero, cards, galleries" },
+    { "label": "Mobile fixes shipped", "value": "8", "sub": "responsive layout repairs" },
+    { "label": "Pages audited", "value": "14", "sub": "image-to-content relevance" },
+    { "label": "Weekly calls held", "value": "4", "sub": "Thursday 1:00 PM ET cadence" }
+  ],
+  "charts": [
+    { "title": "Fixes shipped by week", "labels": ["Jun 1", "Jun 8", "Jun 15", "Jun 22", "Jun 29"], "values": [3, 5, 4, 5, 3] }
+  ],
+  "workBoardTitle": "Project board",
+  "campaigns": [
+    { "name": "Hero section repair", "status": "live", "statusLabel": "Shipped", "spend": "—", "results": "Done", "note": "Dark overlay at 45 to 55% opacity restored text readability over photos." },
+    { "name": "Service cards: Concrete, Landscaping, Pavers", "status": "live", "statusLabel": "Shipped", "spend": "—", "results": "Done", "note": "Solid backgrounds restored, text overlap resolved, letterboxed images recropped." },
+    { "name": "Content relevance audit", "status": "watch", "statusLabel": "In progress", "spend": "—", "results": "14 pages", "note": "Matching every image to its page so galleries sell the right service." }
+  ],
+  "wins": [
+    "<strong>Mobile experience restored</strong>, with eight responsive fixes covering the layouts most homeowners actually see.",
+    "<strong>Service cards rebuilt</strong> so the three core offerings read clean on every screen size.",
+    "<strong>Weekly call cadence held</strong>, four for four, keeping every fix reviewed and approved fast."
+  ],
+  "actions": [
+    "Finish the content relevance audit so every page shows the matching project photos.",
+    "Add before-and-after project galleries, the highest-converting content a concrete site can run.",
+    "Scope a Google Business Profile content plan to start capturing local search the way the site now deserves."
+  ],
+  "quote": "You can't pour a bad foundation and expect the house to stand. June rebuilt the site's foundation."
+}

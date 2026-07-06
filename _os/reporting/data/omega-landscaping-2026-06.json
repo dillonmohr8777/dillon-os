@@ -1,0 +1,45 @@
+{
+  "client": "Omega Landscaping",
+  "agency": "Momentum 360",
+  "period": "2026-06",
+  "periodLabel": "June 2026",
+  "preparedBy": "Dillon Mohr",
+  "contact": "dillon@needmomentum.com",
+  "sampleData": true,
+  "logoFile": "omega-landscaping.jpeg",
+  "industryTag": "Concrete & Landscaping",
+  "servicesLine": "GBP · Blogs · Local SEO",
+  "theme": { "accent": "#3B5CB8", "accent2": "#6B9ED6", "titleWord": "Omega" },
+  "summary": "Peak outdoor-living season met a Google Business Profile that publishes like clockwork. The 4-posts-a-week cadence kept Omega visible for design, installation, and hardscape searches while local rankings continued to firm up.",
+  "coverSub": "How a relentless local content cadence kept Omega in front of homeowners through the busiest landscaping month of the year.",
+  "headline": "Profile activity climbed again on the strength of <strong>17 hyper-localized posts</strong> and the CMHA certification woven through the content. <strong>Calls and direction requests both grew</strong> as summer projects kicked off.",
+  "snapshotLead": "June is when homeowners commit to outdoor projects. <span class=\"hl\">Profile views and calls rose together</span>, which means the content is reaching people who are ready to buy.",
+  "takeaway": "Local SEO gains compound slowly and then all at once. Six weeks of consistent, neighborhood-level content is now showing up as <strong>real calls and direction requests</strong>, not just impressions.",
+  "kpis": [
+    { "label": "GBP profile views", "value": "1,860", "sub": "search + maps combined", "delta": "+16%" },
+    { "label": "Calls from profile", "value": "23", "sub": "tracked GBP call clicks", "delta": "+15%" },
+    { "label": "Direction requests", "value": "31", "sub": "maps navigation starts", "delta": "+19%" },
+    { "label": "Posts published", "value": "17", "sub": "4 per week, hyper-local" }
+  ],
+  "charts": [
+    { "title": "Profile views by week", "labels": ["Jun 1", "Jun 8", "Jun 15", "Jun 22", "Jun 29"], "values": [340, 365, 400, 380, 375] },
+    { "title": "Calls + directions by week", "labels": ["Jun 1", "Jun 8", "Jun 15", "Jun 22", "Jun 29"], "values": [9, 11, 12, 11, 11] }
+  ],
+  "workBoardTitle": "Content board",
+  "campaigns": [
+    { "name": "GBP content: 4 posts per week", "status": "live", "statusLabel": "Live", "spend": "—", "results": "17 posts", "note": "Design, installation, maintenance, hardscape, and outdoor-living topics with CMHA trust signals." },
+    { "name": "Blog content via GBP", "status": "live", "statusLabel": "Live", "spend": "—", "results": "4 long-form posts", "note": "Seasonal topics aligned to summer project intent." },
+    { "name": "Drone footage showcase", "status": "watch", "statusLabel": "Waiting on client", "spend": "—", "results": "—", "note": "Still waiting on drone footage from David. Video posts are the next visibility unlock." }
+  ],
+  "wins": [
+    "<strong>Calls and directions grew together</strong>, proof the profile is converting visibility into project inquiries.",
+    "<strong>Full content cadence held</strong> through the busiest month, 17 posts without a missed slot.",
+    "<strong>CMHA certification messaging</strong> keeps separating Omega from every uncertified competitor in the feed."
+  ],
+  "actions": [
+    "Chase the drone footage from David so July content gets the video upgrade.",
+    "Add a review-request rhythm to convert June's finished projects into fresh 5-star proof.",
+    "Shift July topics toward patios and outdoor kitchens, the highest-ticket summer searches."
+  ],
+  "quote": "Show up in the neighborhood feed every single week and the phone starts ringing. June proved the cadence works."
+}

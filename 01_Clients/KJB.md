@@ -45,3 +45,6 @@ google_ads_id_original: 814-550-6229
 
 ## Links
 - [[Client Index]]
+
+## Reports
+• 2026-07-06: June 2026 performance report (buyers-guide PDF), Daily-Briefs/reports/pdf/kimberly-james-bridal-2026-06.pdf. Draft ribbon on until June actuals are confirmed.

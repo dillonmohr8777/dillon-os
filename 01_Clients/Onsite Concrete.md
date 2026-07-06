@@ -25,3 +25,6 @@ industry: concrete/landscape
 
 ## Links
 - [[Client Index]]
+
+## Reports
+• 2026-07-06: June 2026 performance report (buyers-guide PDF), Daily-Briefs/reports/pdf/onsite-concrete-landscape-2026-06.pdf. Draft ribbon on until June actuals are confirmed.

@@ -1,0 +1,121 @@
+{
+  "client": "Shadow HVAC",
+  "agency": "Momentum 360",
+  "period": "2026-06",
+  "periodLabel": "June 2026",
+  "preparedBy": "Dillon Mohr",
+  "contact": "dillon@needmomentum.com",
+  "sampleData": true,
+  "industryTag": "Heating & Cooling",
+  "servicesLine": "Google Ads · GBP · LSA",
+  "theme": {
+    "accent": "#EF6C44",
+    "accent2": "#35A8E0",
+    "titleWord": "Shadow"
+  },
+  "summary": "Cooling season demand showed up right on schedule and the account was ready for it. Search campaigns leaned into AC repair intent while the 4-posts-a-week GBP cadence kept the profile active in every service-area neighborhood.",
+  "coverSub": "A cooling-season snapshot: how search campaigns and a relentless Google Business Profile cadence turned summer AC demand into booked calls.",
+  "headline": "June is when HVAC accounts earn their keep, and this one did: <strong>call volume rose with the heat</strong> while search stayed disciplined on cost. One flag remains: <strong>LSA verification still needs to clear</strong> after the March reset.",
+  "snapshotLead": "Summer intent arrived and the account caught it. <span class=\"hl\">AC repair searches</span> drove the month, with GBP posts keeping the brand visible in every neighborhood we target.",
+  "takeaway": "Seasonal demand is doing half the work right now, which is exactly when discipline matters most. Keeping cost per call flat during peak season means <strong>the account is buying real jobs, not just summer noise</strong>.",
+  "kpis": [
+    {
+      "label": "Calls from ads",
+      "value": "34",
+      "sub": "Search campaigns, call + form",
+      "delta": "+21%"
+    },
+    {
+      "label": "Ad spend",
+      "value": "$486",
+      "sub": "Google Ads Search",
+      "delta": "+9%"
+    },
+    {
+      "label": "Cost per call",
+      "value": "$14.29",
+      "sub": "blended June average",
+      "delta": "-2%",
+      "deltaGoodWhenDown": true
+    },
+    {
+      "label": "GBP posts published",
+      "value": "17",
+      "sub": "4 per week, hyper-local topics"
+    }
+  ],
+  "charts": [
+    {
+      "title": "Calls by week",
+      "labels": [
+        "Jun 1",
+        "Jun 8",
+        "Jun 15",
+        "Jun 22",
+        "Jun 29"
+      ],
+      "values": [
+        6,
+        7,
+        8,
+        7,
+        6
+      ]
+    },
+    {
+      "title": "GBP profile actions by week",
+      "labels": [
+        "Jun 1",
+        "Jun 8",
+        "Jun 15",
+        "Jun 22",
+        "Jun 29"
+      ],
+      "values": [
+        41,
+        48,
+        55,
+        52,
+        49
+      ]
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Search: AC Repair + Emergency Service",
+      "status": "live",
+      "statusLabel": "Live",
+      "spend": "$486",
+      "results": "34 calls",
+      "note": "Seasonal keyword mix shifted toward cooling intent for the summer."
+    },
+    {
+      "name": "GBP content: 4 posts per week",
+      "status": "live",
+      "statusLabel": "Live",
+      "spend": "—",
+      "results": "17 posts",
+      "note": "Neighborhood-level service posts: AC prep, emergency repair, system replacement."
+    },
+    {
+      "name": "Local Services Ads (LSA)",
+      "status": "blocked",
+      "statusLabel": "Needs verification",
+      "spend": "$0",
+      "results": "—",
+      "note": "Status still needs verification after the March 2 background-check reset. Highest-leverage fix on the account."
+    }
+  ],
+  "wins": [
+    "<strong>Call volume grew 21%</strong> as cooling-season demand hit, with the keyword mix already rotated toward AC intent.",
+    "<strong>Cost per call held under $15</strong> during the most competitive HVAC month of the year.",
+    "<strong>Full GBP cadence delivered</strong>, 17 hyper-localized posts keeping the profile active across the service area."
+  ],
+  "actions": [
+    "Clear the LSA verification so the Google-guaranteed badge can start capturing emergency calls.",
+    "Add a dedicated emergency-repair ad group with call-only ads for after-hours searches.",
+    "Rotate July GBP topics toward heat-wave prep and maintenance-plan offers."
+  ],
+  "quote": "Peak season rewards the accounts that prepared in the off-season. June's numbers are the payoff for that discipline.",
+  "logoFile": "shadow-hvac.jpeg"
+}
