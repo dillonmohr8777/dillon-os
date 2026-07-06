@@ -1,4 +1,4 @@
-import { artist, markings, pittsburghLegacy, story } from '../content/album'
+import { artist, markings, story } from '../content/album'
 import { SubPage } from '../components/SubPage'
 
 export function AboutPage() {
@@ -41,16 +41,6 @@ export function AboutPage() {
           </li>
         ))}
       </ol>
-
-      <p className="mono-tag reveal mt-14">Pittsburgh signal</p>
-      <div className="legacy-strip reveal reveal-late mt-5 grid gap-3 sm:grid-cols-2">
-        {pittsburghLegacy.map((item) => (
-          <div key={item.label} className="legacy-card">
-            <span className="legacy-label">{item.label}</span>
-            <p>{item.line}</p>
-          </div>
-        ))}
-      </div>
 
       <div className="reveal reveal-later mt-14 flex flex-col gap-4 sm:flex-row">
         <a className="btn btn-chrome" href="./index.html#listen">Hear the album</a>
