@@ -52,7 +52,13 @@ function HeroPhoto() {
       <TiltBox max={6}>
         <span className="pop-box block">
           {artist.heroImage ? (
-            <img src={artist.heroImage} alt={`${artist.name} portrait`} className="block h-auto w-full" loading="lazy" />
+            <img
+              src={artist.heroImage}
+              alt={`${artist.name} portrait`}
+              className="block aspect-[4/3] w-full object-cover"
+              style={{ objectPosition: '50% 22%' }}
+              loading="lazy"
+            />
           ) : (
             <span className="artist-slot artist-slot-neutral flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 px-6">
               <span className="split-lines" aria-hidden="true" />
