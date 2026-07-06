@@ -42,7 +42,7 @@ export function AboutPage() {
           </p>
         ))}
         <p className="reveal reveal-late m-0 max-w-2xl text-[16.5px] leading-[1.8]" style={{ color: 'var(--dim)' }}>
-          At 28, he is old enough to know attention is earned and young enough to still attack every verse like the first real shot. The marketing officer knows how to build the frame. The rapper knows the frame means nothing if the line does not hold.
+          At 28, he's old enough to know attention is earned and young enough to still attack every verse like the first real shot. The marketing officer knows how to build the frame. The rapper knows the frame means nothing if the line doesn't hold.
         </p>
       </div>
 

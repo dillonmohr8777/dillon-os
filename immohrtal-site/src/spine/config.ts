@@ -41,7 +41,6 @@ export const SPINE_SECTIONS: SpineSection[] = [
   { id: 'listen', label: 'MONITORS' },
   { id: 'tracks', label: 'THE TAPE' },
   { id: 'story', label: 'LINER NOTES' },
-  { id: 'visuals', label: 'THE FEED' },
   { id: 'contact', label: 'BOOKINGS' },
 ]
 
