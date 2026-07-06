@@ -33,31 +33,18 @@ export function BlogPostPage() {
 
       <p className="blog-answer reveal reveal-late mt-8 max-w-2xl">{post.answer}</p>
 
-      <div className="mt-12 grid gap-5 md:grid-cols-2">
+      <div className="mt-12 flex flex-col gap-6">
         {post.sections.map((section, i) => (
           <div key={section.heading} className={`reveal-pop ${i % 2 === 1 ? 'reveal-late' : ''}`}>
-            <TiltBox max={4} className="h-full">
-              <section className="blog-section-block sheen h-full">
+            <TiltBox max={3}>
+              <section className="blog-section-block sheen">
                 <h3 className="font-display uppercase">{section.heading}</h3>
-                <div className="mt-4 flex flex-col gap-4">
+                <div className="mt-4 flex max-w-2xl flex-col gap-4">
                   {section.paragraphs.map((paragraph, j) => (
                     <p key={j}>{paragraph}</p>
                   ))}
                 </div>
               </section>
-            </TiltBox>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-10 grid gap-3 md:grid-cols-3">
-        {post.faqs.map((faq, i) => (
-          <div key={faq.question} className={`reveal-pop ${i === 1 ? 'reveal-late' : i === 2 ? 'reveal-later' : ''}`}>
-            <TiltBox max={6} className="h-full">
-              <div className="faq-tile sheen h-full">
-                <h3>{faq.question}</h3>
-                <p>{faq.answer}</p>
-              </div>
             </TiltBox>
           </div>
         ))}
