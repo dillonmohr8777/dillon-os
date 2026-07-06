@@ -134,6 +134,45 @@
   text-transform: uppercase;
 }
 
+.fan-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  max-width: 640px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 20px 50px rgba(20, 25, 34, 0.1);
+  padding: 10px;
+}
+
+.page-dark .fan-form {
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: none;
+}
+
+.fan-form input[type='email'] {
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: 0;
+  padding: 0 18px;
+}
+
+.fan-form input[type='email']::placeholder {
+  color: var(--faint);
+  text-transform: lowercase;
+}
+
+.fan-form .btn {
+  min-height: 46px;
+  padding: 0 22px;
+  white-space: nowrap;
+}
+
 .legacy-strip,
 .legacy-footer {
   position: relative;
@@ -219,5 +258,19 @@ footer a:hover {
 
   .blog-number {
     display: none;
+  }
+
+  .fan-form {
+    grid-template-columns: 1fr;
+    border-radius: 14px;
+  }
+
+  .fan-form input[type='email'] {
+    min-height: 46px;
+    text-align: center;
+  }
+
+  .fan-form .btn {
+    width: 100%;
   }
 }
