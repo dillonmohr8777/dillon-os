@@ -13,7 +13,7 @@ export function Story() {
         }}
       />
       <div className="mx-auto max-w-4xl px-5">
-        <p className="section-eyebrow reveal">03 / The Story</p>
+        <p className="section-eyebrow reveal" data-decode="">03 / The Story</p>
         <h2 id="story-heading" className="font-display chrome-text reveal mt-5 uppercase" style={{ fontSize: 'clamp(2.4rem, 6vw, 4.5rem)', lineHeight: 1 }}>
           {story.heading}
         </h2>

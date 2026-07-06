@@ -111,23 +111,8 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 flex w-full max-w-4xl flex-col items-center">
-        {/* opening bar, set like a newspaper pull quote */}
-        {artist.introQuote && (
-          <blockquote
-            className="reveal m-0 w-full max-w-2xl border-y px-2 py-5 font-serif"
-            style={{
-              borderColor: 'var(--line-strong)',
-              fontSize: 'clamp(1.1rem, 2.3vw, 1.45rem)',
-              lineHeight: 1.55,
-              color: 'var(--ink)',
-            }}
-          >
-            “{artist.introQuote}”
-          </blockquote>
-        )}
-
-        <p className="mono-tag reveal mt-8" style={{ color: 'var(--signal-txt)' }}>
+      <div className="relative z-10 flex w-full max-w-5xl flex-col items-center">
+        <p className="mono-tag reveal" style={{ color: 'var(--signal-txt)' }}>
           {artist.sessionTag}
         </p>
 
@@ -153,8 +138,32 @@ export function Hero() {
           )}
         </h1>
 
+        {/* opening bar: four big stacked headline lines, newspaper deck style */}
+        {artist.introQuoteLines.length > 0 && (
+          <blockquote
+            className="reveal reveal-late m-0 mt-10 w-full border-y px-2 py-8 font-serif"
+            style={{ borderColor: 'var(--line-strong)', color: 'var(--ink)' }}
+          >
+            {artist.introQuoteLines.map((line, i) => (
+              <span
+                key={i}
+                className="block"
+                style={{
+                  fontSize: 'clamp(1.35rem, 3.4vw, 2.9rem)',
+                  lineHeight: 1.2,
+                  textWrap: 'balance',
+                }}
+              >
+                {i === 0 && '“'}
+                {line}
+                {i === artist.introQuoteLines.length - 1 && '”'}
+              </span>
+            ))}
+          </blockquote>
+        )}
+
         <p
-          className="font-serif italic reveal reveal-late mt-7"
+          className="font-serif italic reveal reveal-late mt-8"
           style={{
             fontSize: 'clamp(1.7rem, 5vw, 3.2rem)',
             lineHeight: 1.12,

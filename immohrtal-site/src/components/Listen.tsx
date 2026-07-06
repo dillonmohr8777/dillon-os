@@ -48,7 +48,7 @@ function CoverPlaceholder() {
 export function Listen() {
   return (
     <section id="listen" aria-labelledby="listen-heading" className="relative z-10 mx-auto max-w-6xl px-5 py-24 md:py-36">
-      <p className="section-eyebrow reveal">01 / Listen</p>
+      <p className="section-eyebrow reveal" data-decode="">01 / Listen</p>
       <h2 id="listen-heading" className="font-display chrome-text reveal mt-5 uppercase" style={{ fontSize: 'clamp(2.4rem, 6vw, 4.5rem)', lineHeight: 1 }}>
         Play it everywhere
       </h2>

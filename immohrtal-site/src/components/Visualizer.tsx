@@ -100,7 +100,7 @@ export function Visualizer() {
 
   return (
     <section id="visuals" aria-labelledby="visuals-heading" className="relative z-10 mx-auto max-w-6xl px-5 py-24 md:py-36">
-      <p className="section-eyebrow reveal">04 / Visual Feed</p>
+      <p className="section-eyebrow reveal" data-decode="">04 / Visual Feed</p>
       <h2 id="visuals-heading" className="font-display chrome-text reveal mt-5 uppercase" style={{ fontSize: 'clamp(2.4rem, 6vw, 4.5rem)', lineHeight: 1 }}>
         See the signal
       </h2>

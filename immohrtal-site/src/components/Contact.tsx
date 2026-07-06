@@ -11,7 +11,7 @@ const socialIcons: Record<string, () => React.ReactNode> = {
 export function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-heading" className="relative z-10 mx-auto max-w-4xl px-5 py-24 md:py-36 text-center">
-      <p className="section-eyebrow reveal justify-center">05 / Contact</p>
+      <p className="section-eyebrow reveal justify-center" data-decode="">05 / Contact</p>
       <h2 id="contact-heading" className="font-display chrome-text reveal mt-5 uppercase" style={{ fontSize: 'clamp(2.4rem, 6.5vw, 5rem)', lineHeight: 1 }}>
         Book the delusion
       </h2>

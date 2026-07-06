@@ -20,7 +20,7 @@ export function Tracklist() {
 
   return (
     <section id="tracks" aria-labelledby="tracks-heading" className="relative z-10 mx-auto max-w-4xl px-5 py-24 md:py-36">
-      <p className="section-eyebrow reveal">02 / Tracklist</p>
+      <p className="section-eyebrow reveal" data-decode="">02 / Tracklist</p>
       <h2 id="tracks-heading" className="font-display chrome-text reveal mt-5 uppercase" style={{ fontSize: 'clamp(2.4rem, 6vw, 4.5rem)', lineHeight: 1 }}>
         Ten rounds, no referee
       </h2>
