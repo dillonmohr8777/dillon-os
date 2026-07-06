@@ -15,10 +15,7 @@ export function Nav({ home = true, base = './' }: { home?: boolean; base?: strin
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const anchor = (hash: string) => (home ? hash : `${base}index.html${hash}`)
   const links: Array<[string, string]> = [
-    [anchor('#listen'), 'Listen'],
-    [anchor('#tracks'), 'Tracks'],
     [`${base}about.html`, 'About'],
     [`${base}blog.html`, 'Blog'],
     [`${base}contact.html`, 'Contact'],
@@ -55,8 +52,8 @@ export function Nav({ home = true, base = './' }: { home?: boolean; base?: strin
             </a>
           ))}
         </div>
-        <a href={anchor('#listen')} className="btn btn-chrome !min-h-[40px] !px-5 !text-[11px]">
-          Listen
+        <a href={`${base}contact.html`} className="btn btn-chrome !min-h-[40px] !px-5 !text-[11px]">
+          Contact
         </a>
       </div>
     </nav>
