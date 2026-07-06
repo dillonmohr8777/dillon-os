@@ -37,11 +37,7 @@ export function Nav({ home = true }: { home?: boolean }) {
           className="flex items-center no-underline"
           aria-label={`${artist.name} - home`}
         >
-          {artist.logo ? (
-            <img src={artist.logo} alt="" className="nav-logo-img h-11 w-auto" width={1320} height={1204} />
-          ) : (
-            <span className="font-display chrome-text text-xl tracking-wide uppercase">{artist.name}</span>
-          )}
+          <span className="font-display chrome-text text-xl tracking-wide uppercase">{artist.name}</span>
         </a>
         <div className="hidden items-center gap-7 md:flex">
           {links.map(([href, label]) => (
