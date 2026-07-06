@@ -113,12 +113,13 @@ export function Hero() {
 
         {/* the logo IS the wordmark: big, boxed, pops on hover */}
         <h1 className="reveal reveal-late m-0 mt-6 w-full max-w-[420px]">
+          <span className="sr-only">{artist.name}</span>
           {artist.logo ? (
             <TiltBox max={4}>
               <span className="pop-box logo-lockup block p-4 sm:p-6">
                 <img
                   src={artist.logo}
-                  alt={artist.name}
+                  alt=""
                   className="block h-auto w-full"
                   width={1320}
                   height={1204}
