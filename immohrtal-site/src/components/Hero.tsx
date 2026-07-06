@@ -4,8 +4,7 @@ import { prefersReducedMotion } from '../hooks/useReveal'
 
 /**
  * Mouse-follow 3D tilt (fine pointers only, rect cached on enter,
- * rAF-throttled). The Mac-Miller-style photo box and the logo lockup
- * both ride on this.
+ * rAF-throttled). The artist photo box and the logo lockup both ride on this.
  */
 function TiltBox({ children, max = 7, className = '' }: { children: ReactNode; max?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -46,19 +45,6 @@ function TiltBox({ children, max = 7, className = '' }: { children: ReactNode; m
   )
 }
 
-function BurghBand() {
-  return (
-    <div className="burgh-band reveal reveal-later" aria-label="Pittsburgh signal">
-      <span>412</span>
-      <span>Three Rivers</span>
-      <span>Bridges</span>
-      <span>Bars</span>
-    </div>
-  )
-}
-
-/** The big artist-shot slot, Mac Miller energy: wide box, 3D tilt,
- *  deep soft shadow with a blue/green/gold city pulse behind it. */
 function HeroPhoto() {
   return (
     <div className="reveal reveal-later relative mt-14 w-full max-w-3xl">
@@ -68,10 +54,10 @@ function HeroPhoto() {
           {artist.heroImage ? (
             <img src={artist.heroImage} alt={`${artist.name} portrait`} className="block h-auto w-full" loading="lazy" />
           ) : (
-            <span className="artist-slot flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 px-6">
-              <span className="bridge-lines" aria-hidden="true" />
-              <span className="font-display chrome-text-light text-4xl uppercase tracking-wide sm:text-6xl">Pittsburgh after dark</span>
-              <span className="mono-tag text-center">IMMOHRTAL / Erie roots / Burgh pressure</span>
+            <span className="artist-slot artist-slot-neutral flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 px-6">
+              <span className="split-lines" aria-hidden="true" />
+              <span className="font-display chrome-text-light text-4xl uppercase tracking-wide sm:text-6xl">The Shot</span>
+              <span className="mono-tag text-center">duality portrait / artist image placeholder</span>
             </span>
           )}
         </span>
@@ -86,7 +72,6 @@ export function Hero() {
       id="top"
       className="home-hero relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-5 py-20 text-center"
     >
-      {/* faint blue/green atmosphere over the particle world */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-0"
@@ -95,8 +80,6 @@ export function Hero() {
             'radial-gradient(65% 50% at 50% 60%, rgba(31,158,255,0.06), transparent 65%), radial-gradient(70% 55% at 50% 30%, rgba(23,168,107,0.05), transparent 70%)',
         }}
       />
-
-      {/* light vignette so type stays readable over the motion */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-[1]"
@@ -111,7 +94,6 @@ export function Hero() {
           {artist.sessionTag}
         </p>
 
-        {/* the logo IS the wordmark: big, boxed, pops on hover */}
         <h1 className="reveal reveal-late m-0 mt-6 w-full max-w-[420px]">
           <span className="sr-only">{artist.name}</span>
           {artist.logo ? (
@@ -134,7 +116,6 @@ export function Hero() {
           )}
         </h1>
 
-        {/* opening bar: four big stacked headline lines, newspaper deck style */}
         {artist.introQuoteLines.length > 0 && (
           <blockquote
             className="opening-bar reveal reveal-late m-0 mt-10 w-full border-y px-2 py-8 font-serif"
@@ -185,11 +166,9 @@ export function Hero() {
           </a>
         </div>
 
-        <BurghBand />
         <HeroPhoto />
       </div>
 
-      {/* scroll cue */}
       <a
         href="#listen"
         aria-label="Scroll to the listen section"
@@ -203,7 +182,7 @@ export function Hero() {
 }
 
 export function MarqueeDivider() {
-  const phrase = `${artist.name} / UNDERGROUND RAP FROM PITTSBURGH / ${artist.albumTitle.toUpperCase()} / `
+  const phrase = `${artist.name} / DUALITY / ${artist.albumTitle.toUpperCase()} / `
   return (
     <div className="marquee" aria-hidden="true">
       <div className="marquee-inner font-mono text-[12px] tracking-[0.3em]" style={{ color: 'var(--faint)' }}>
