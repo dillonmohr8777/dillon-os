@@ -11,8 +11,9 @@ function HeroPhoto() {
             <img
               src={artist.heroImage}
               alt={`${artist.name} portrait`}
-              className="block aspect-[4/3] w-full object-cover"
-              style={{ objectPosition: '50% 22%' }}
+              className="block aspect-square w-full object-cover"
+              width={1080}
+              height={1080}
               loading="lazy"
             />
           ) : (
