@@ -9,12 +9,10 @@ const platformIcons: Record<Platform['id'], () => React.ReactNode> = {
   presave: PresaveIcon,
 }
 
-/** Generated placeholder cover — swap by setting `artist.coverArt`. */
 function CoverPlaceholder() {
   return (
-    <div className="cover-tilt cover-art-system relative aspect-square w-full overflow-hidden rounded-2xl border">
-      <span className="cover-bridge" aria-hidden="true" />
-      <span className="cover-river" aria-hidden="true" />
+    <div className="cover-tilt duality-cover-system relative aspect-square w-full overflow-hidden rounded-2xl border">
+      <span className="cover-split" aria-hidden="true" />
       <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
         <span className="font-display chrome-text-light uppercase leading-none" style={{ fontSize: 'clamp(2.6rem, 7vw, 4.2rem)' }}>
           {artist.name}
@@ -23,7 +21,7 @@ function CoverPlaceholder() {
           {artist.albumTitle}
         </span>
         <span className="mono-tag mt-5" style={{ color: 'rgba(255,255,255,0.62)' }}>
-          Erie / Pittsburgh / Session 001
+          two sides / one record
         </span>
       </div>
     </div>
