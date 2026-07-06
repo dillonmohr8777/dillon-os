@@ -3,36 +3,74 @@ import { SubPage } from '../components/SubPage'
 
 export function BlogPage() {
   return (
-    <SubPage>
+    <SubPage tone="dark">
       <p className="section-eyebrow reveal" data-decode="">Blog</p>
-      <h1 className="font-display chrome-text reveal mt-5 uppercase" style={{ fontSize: 'clamp(2.6rem, 7vw, 5rem)', lineHeight: 1 }}>
-        Field notes
+      <h1
+        className="font-display chrome-text reveal mt-5 uppercase"
+        style={{ fontSize: 'clamp(2.6rem, 7vw, 5.4rem)', lineHeight: 0.95 }}
+      >
+        Field notes from the sport
       </h1>
-      <p className="reveal reveal-late mt-5 max-w-xl" style={{ color: 'var(--dim)' }}>
-        The life behind the record, written while it happens. New entries land as the album comes together.
+      <p className="reveal reveal-late mt-5 max-w-2xl text-[17px] leading-[1.8]" style={{ color: 'var(--dim)' }}>
+        IMMOHRTAL is Dillon Mohr: 28, chief marketing officer by day, rapper by obsession,
+        Erie raised and Pittsburgh sharpened. These notes build the world around the record:
+        Mac, Faces, bridges, bars, and the competitive detail that makes rap worth studying.
       </p>
 
-      <div className="mt-14 flex flex-col gap-10">
+      <div className="mt-14 flex flex-col gap-8">
         {posts.map((post, i) => (
-          <article key={post.slug} id={post.slug} className={`glass-panel reveal ${i % 2 === 1 ? 'reveal-late' : ''} rounded-2xl p-7 md:p-10`}>
-            <p className="mono-tag" style={{ color: 'var(--signal-txt)' }}>
-              {post.date} · {post.tag}
-            </p>
-            <h2 className="font-display chrome-text mt-3 uppercase" style={{ fontSize: 'clamp(1.9rem, 4.5vw, 3rem)', lineHeight: 1.05 }}>
-              {post.title}
-            </h2>
-            <div className="mt-6 flex flex-col gap-5">
-              {post.paragraphs.map((p, j) => (
-                <p key={j} className="m-0 max-w-2xl text-[16.5px] leading-[1.8]" style={{ color: 'var(--dim)' }}>
-                  {p}
+          <article key={post.slug} id={post.slug} className={`blog-card reveal ${i % 2 === 1 ? 'reveal-late' : ''}`}>
+            <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+              <div>
+                <p className="mono-tag" style={{ color: 'var(--signal-txt)' }}>
+                  {post.date} / {post.tag}
                 </p>
+                <h2
+                  className="font-display chrome-text mt-3 uppercase"
+                  style={{ fontSize: 'clamp(2rem, 4.8vw, 3.6rem)', lineHeight: 0.98 }}
+                >
+                  {post.title}
+                </h2>
+              </div>
+              <div className="blog-number font-display">{String(i + 1).padStart(2, '0')}</div>
+            </div>
+
+            <p className="blog-answer mt-6">{post.answer}</p>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {post.targetQueries.map((query) => (
+                <span key={query} className="query-chip">
+                  {query}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-8 grid gap-5 lg:grid-cols-3">
+              {post.sections.map((section) => (
+                <section key={section.heading} className="blog-section-block">
+                  <h3 className="font-display uppercase">{section.heading}</h3>
+                  <div className="mt-4 flex flex-col gap-4">
+                    {section.paragraphs.map((paragraph, j) => (
+                      <p key={j}>{paragraph}</p>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+
+            <div className="mt-8 grid gap-3 md:grid-cols-3">
+              {post.faqs.map((faq) => (
+                <div key={faq.question} className="faq-tile">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </div>
               ))}
             </div>
           </article>
         ))}
       </div>
 
-      <p className="mono-tag reveal mt-10">more entries coming. edit or add posts in src/content/blog.ts</p>
+      <p className="mono-tag reveal mt-10">more chapters as the record builds.</p>
     </SubPage>
   )
 }
