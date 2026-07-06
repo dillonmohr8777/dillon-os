@@ -15,9 +15,9 @@ export const artist = {
   tagline: 'Two sides, one record. The executive brain and the artist heart finally in the same room.',
   sessionTag: 'SESSION 001 // DANCE WITH THE DELUSIONAL',
   releaseTag: 'OUT NOW ON ALL PLATFORMS',
-  coverArt: null as string | null,
+  coverArt: 'cover.jpg' as string | null,
   logo: 'logo-web.jpg' as string | null,
-  heroImage: null as string | null,
+  heroImage: 'artist.jpg' as string | null,
 }
 
 export interface Track {
