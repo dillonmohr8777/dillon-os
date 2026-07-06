@@ -1,0 +1,122 @@
+{
+  "client": "Kimberly James Bridal",
+  "agency": "Momentum 360",
+  "period": "2026-06",
+  "periodLabel": "June 2026",
+  "preparedBy": "Dillon Mohr",
+  "contact": "dillon@needmomentum.com",
+  "sampleData": true,
+  "industryTag": "Bridal · Chestnut Hill, Philadelphia",
+  "servicesLine": "Google Ads · SEO Pages",
+  "theme": {
+    "accent": "#C9A96E",
+    "accent2": "#9FB4D8",
+    "titleWord": "Kimberly"
+  },
+  "summary": "Appointment requests kept climbing on the strength of the new landing pages. The Wedding Dress Timeline and venue pages are pulling organic traffic while paid search holds a steady cost per booked appointment.",
+  "coverSub": "How paid search and the new Squarespace landing pages worked together to keep bridal appointment requests growing this month.",
+  "headline": "The new landing pages are compounding: <strong>organic sessions grew again</strong> and paid search held a steady cost per appointment. Conversion tracking on the new account is verified, so <strong>every booked appointment is now measured</strong>.",
+  "snapshotLead": "Paid search stayed efficient while the <span class=\"hl\">Timeline and venue pages</span> kept adding organic appointment paths on top of it.",
+  "takeaway": "Paid and organic are now feeding the same funnel. The venue pages give brides a reason to land, and search campaigns catch the ones who are ready to book. <strong>July's job is more of both.</strong>",
+  "kpis": [
+    {
+      "label": "Appointment requests",
+      "value": "19",
+      "sub": "paid + organic, all sources",
+      "delta": "+18%"
+    },
+    {
+      "label": "Ad spend",
+      "value": "$412",
+      "sub": "Google Ads Search",
+      "delta": "+3%"
+    },
+    {
+      "label": "Cost per request",
+      "value": "$21.68",
+      "sub": "paid channel only",
+      "delta": "-9%",
+      "deltaGoodWhenDown": true
+    },
+    {
+      "label": "Organic sessions",
+      "value": "1,240",
+      "sub": "landing pages + blog",
+      "delta": "+22%"
+    }
+  ],
+  "charts": [
+    {
+      "title": "Appointment requests by week",
+      "labels": [
+        "Jun 1",
+        "Jun 8",
+        "Jun 15",
+        "Jun 22",
+        "Jun 29"
+      ],
+      "values": [
+        3,
+        4,
+        5,
+        3,
+        4
+      ]
+    },
+    {
+      "title": "Organic sessions by week",
+      "labels": [
+        "Jun 1",
+        "Jun 8",
+        "Jun 15",
+        "Jun 22",
+        "Jun 29"
+      ],
+      "values": [
+        228,
+        245,
+        262,
+        250,
+        255
+      ]
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Search: Bridal Boutique Philadelphia",
+      "status": "live",
+      "statusLabel": "Live",
+      "spend": "$412",
+      "results": "19 requests",
+      "note": "Conversion tag AW-18040733346 verified via Tag Assistant on the new account."
+    },
+    {
+      "name": "SEO: Wedding Dress Timeline page",
+      "status": "live",
+      "statusLabel": "Live",
+      "spend": "—",
+      "results": "Indexed + ranking",
+      "note": "Timeline format built in a Squarespace code block, approved in April and gaining impressions."
+    },
+    {
+      "name": "SEO: Plus-Size Wedding Dresses page",
+      "status": "watch",
+      "statusLabel": "In progress",
+      "spend": "—",
+      "results": "Nearly complete",
+      "note": "Final copy pass and internal links, then submit for indexing."
+    }
+  ],
+  "wins": [
+    "<strong>Conversion tracking verified</strong> on the new Google Ads account, so bookings are now measured end to end.",
+    "<strong>Venue pages kept ranking</strong>, with all seven Chestnut Hill venue profiles pulling bridal traffic.",
+    "<strong>Cost per appointment request fell</strong> while volume grew, a healthy sign heading into peak booking season."
+  ],
+  "actions": [
+    "Finish and index the Plus-Size Wedding Dresses page, then wire it into the venue pages.",
+    "Shift budget toward the exact-match booking keywords that produced June's cheapest requests.",
+    "Draft the next two venue profiles so the SEO flywheel doesn't stall over the summer."
+  ],
+  "quote": "Brides find the pages, the pages earn the trust, and search closes the appointment. The funnel finally works as one piece.",
+  "logoFile": "kimberly-james-bridal.jpeg"
+}

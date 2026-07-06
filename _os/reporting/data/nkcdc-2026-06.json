@@ -1,0 +1,44 @@
+{
+  "client": "NKCDC",
+  "agency": "Momentum 360",
+  "period": "2026-06",
+  "periodLabel": "June 2026",
+  "preparedBy": "Dillon Mohr",
+  "contact": "dillon@needmomentum.com",
+  "sampleData": true,
+  "logoFile": "nkcdc.jpeg",
+  "industryTag": "Community Development · Philadelphia",
+  "servicesLine": "Strategy · Google + Meta",
+  "theme": { "accent": "#7A9A3D", "accent2": "#E9C46A", "titleWord": "NKCDC" },
+  "summary": "Everything on our side of the Free Tax Prep launch stays built and ready. The approved strategy, keyword map, and campaign architecture are staged in both Google and Meta, waiting only on the landing page going live.",
+  "coverSub": "Launch-readiness report: where the Free Tax Prep campaign stands, what's staged, and the one dependency between here and live.",
+  "headline": "The campaign is <strong>fully staged and launch-ready</strong> in both Google and Meta. One dependency remains: <strong>the Free Tax Prep landing page</strong>. The day it ships, ads can be live within 24 hours.",
+  "snapshotLead": "Strategy, keywords, and campaign builds are done and QA'd. <span class=\"hl\">Launch readiness held at 95%</span> all month while we waited on the landing page.",
+  "takeaway": "Nothing decays while we wait: audiences, keywords, and creative stay staged and re-checked. The moment the landing page URL exists, <strong>we flip the switch and start learning from real traffic</strong>.",
+  "kpis": [
+    { "label": "Launch readiness", "value": "95%", "sub": "landing page is the last 5%" },
+    { "label": "Keywords mapped", "value": "240", "sub": "tax prep + community services" },
+    { "label": "Campaigns staged", "value": "2", "sub": "Google Search + Meta" },
+    { "label": "Ad variants ready", "value": "12", "sub": "copy approved in strategy review" }
+  ],
+  "charts": [
+    { "title": "Launch checklist completion (%)", "labels": ["Strategy", "Keywords", "Architecture", "Creative", "Landing page"], "values": [100, 100, 100, 100, 0] }
+  ],
+  "workBoardTitle": "Launch board",
+  "campaigns": [
+    { "name": "Free Tax Prep: Google Search", "status": "blocked", "statusLabel": "Awaiting page", "spend": "$0", "results": "Staged", "note": "Campaign built and QA'd. Goes live the day the landing page ships." },
+    { "name": "Free Tax Prep: Meta", "status": "blocked", "statusLabel": "Awaiting page", "spend": "$0", "results": "Staged", "note": "Audiences and creative staged to the approved strategy." },
+    { "name": "ICP research + keyword strategy", "status": "live", "statusLabel": "Delivered", "spend": "—", "results": "Approved", "note": "Revised strategy delivered and approved by Anthony in April." }
+  ],
+  "wins": [
+    "<strong>Campaign architecture finished</strong> across Google and Meta, matched to the approved strategy document.",
+    "<strong>240-term keyword map delivered</strong>, covering tax prep intent and the broader community-services footprint.",
+    "<strong>Zero wasted spend</strong>: nothing launches until the destination can convert."
+  ],
+  "actions": [
+    "Get a firm ship date for the Free Tax Prep landing page, the single blocker to launch.",
+    "Run a final pre-flight QA on tracking and conversion goals the day the page goes live.",
+    "Schedule a week-one performance readout so early keyword data shapes month two."
+  ],
+  "quote": "The campaign isn't waiting on strategy, budget, or creative. One landing page stands between staged and live."
+}

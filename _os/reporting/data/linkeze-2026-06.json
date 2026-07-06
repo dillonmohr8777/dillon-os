@@ -1,0 +1,43 @@
+{
+  "client": "LinkEZE",
+  "agency": "Momentum 360",
+  "period": "2026-06",
+  "periodLabel": "June 2026",
+  "preparedBy": "Dillon Mohr",
+  "contact": "dillon@needmomentum.com",
+  "sampleData": true,
+  "industryTag": "ATV/UTV Ecommerce · Shopify",
+  "servicesLine": "Google Ads · Ecommerce",
+  "theme": { "accent": "#F59E2D", "accent2": "#9AAFC4", "titleWord": "LinkEZE" },
+  "summary": "Riding season kept the store busy and the campaigns efficient. The account is still riding the gains from the location-targeting fix, with the optimization score holding at 91% and add-to-carts trending up week over week.",
+  "coverSub": "How a tuned-up Google Ads account carried the ATV/UTV store through the heart of riding season on Shopify.",
+  "headline": "The account's spring cleanup keeps paying off: <strong>optimization score held at 91%</strong> (up from 28% in March) and revenue tracked ahead of May. One open item: <strong>the enhanced conversions diagnostic still needs to clear</strong> for the cleanest possible data.",
+  "snapshotLead": "Summer riding season met a healthy account. <span class=\"hl\">Add-to-carts climbed</span> through the month and return on ad spend held above target.",
+  "takeaway": "June proved the March fixes were structural, not lucky. Presence-only targeting and the rebuilt campaign settings are holding efficiency <strong>even as seasonal traffic scales the account up</strong>.",
+  "kpis": [
+    { "label": "Store revenue from ads", "value": "$3,180", "sub": "Shopify attributed", "delta": "+14%" },
+    { "label": "ROAS", "value": "3.6x", "sub": "return on ad spend", "delta": "+6%" },
+    { "label": "Add-to-carts", "value": "142", "sub": "from paid sessions", "delta": "+11%" },
+    { "label": "Optimization score", "value": "91%", "sub": "up from 28% in March" }
+  ],
+  "charts": [
+    { "title": "Revenue by week ($)", "labels": ["Jun 1", "Jun 8", "Jun 15", "Jun 22", "Jun 29"], "values": [590, 640, 700, 610, 640], "prefix": "$" },
+    { "title": "Add-to-carts by week", "labels": ["Jun 1", "Jun 8", "Jun 15", "Jun 22", "Jun 29"], "values": [26, 28, 32, 29, 27] }
+  ],
+  "campaigns": [
+    { "name": "Shopping: ATV/UTV Accessories", "status": "live", "statusLabel": "Live", "spend": "$610", "results": "$2,240 revenue", "note": "Core catalog campaign, feeding on riding-season search volume." },
+    { "name": "Search: Brand + Category", "status": "live", "statusLabel": "Live", "spend": "$270", "results": "$940 revenue", "note": "Presence-only targeting since the March 22 fix keeps spend inside real markets." },
+    { "name": "Enhanced conversions data source", "status": "watch", "statusLabel": "Diagnostic open", "spend": "—", "results": "—", "note": "Warning still open on the data source. Clearing it sharpens conversion matching and bidding." }
+  ],
+  "wins": [
+    "<strong>Revenue and ROAS both grew</strong> in the same month, so the account scaled without buying junk traffic.",
+    "<strong>Optimization score held at 91%</strong>, the payoff from the March rebuild sticking through peak season.",
+    "<strong>Add-to-cart volume rose 11%</strong>, giving the funnel more retargeting fuel for July."
+  ],
+  "actions": [
+    "Clear the enhanced conversions diagnostic and confirm MFA is enabled on the account login.",
+    "Break the top three product lines into their own asset groups for cleaner bidding.",
+    "Stand up a July retargeting layer against June's add-to-cart audience while it's still warm."
+  ],
+  "quote": "From a 28% optimization score to 91% and holding. The account isn't recovering anymore, it's compounding."
+}

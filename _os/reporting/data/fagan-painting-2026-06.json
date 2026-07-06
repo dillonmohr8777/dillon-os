@@ -1,0 +1,45 @@
+{
+  "client": "Fagan Painting LLC",
+  "agency": "Momentum 360",
+  "period": "2026-06",
+  "periodLabel": "June 2026",
+  "preparedBy": "Dillon Mohr",
+  "contact": "dillon@needmomentum.com",
+  "sampleData": true,
+  "logoFile": "fagan-painting.jpeg",
+  "industryTag": "Residential & Commercial Painting",
+  "servicesLine": "Local Lead Generation",
+  "theme": { "accent": "#4A6B8A", "accent2": "#E9A13B", "titleWord": "Fagan" },
+  "summary": "Exterior painting season drove the month, with local search doing the heavy lifting on lead flow. Quote requests trended up week over week while cost per lead stayed inside the target range.",
+  "coverSub": "A peak-season look at how local search visibility turned exterior painting demand into quote requests.",
+  "headline": "June is the heart of exterior season and the numbers followed: <strong>quote requests climbed week over week</strong> while cost per lead held steady. July's job is converting that momentum into booked projects.",
+  "snapshotLead": "Homeowners paint in the summer and search right before they do. <span class=\"hl\">Lead flow tracked the season</span>, with exterior jobs leading the request mix.",
+  "takeaway": "Painting demand is seasonal, so every June lead matters twice: once as a project and again as a review that fuels next season. <strong>Speed to quote is the multiplier right now.</strong>",
+  "kpis": [
+    { "label": "Quote requests", "value": "21", "sub": "calls + form fills", "delta": "+17%" },
+    { "label": "Cost per lead", "value": "$23.10", "sub": "blended local channels", "delta": "-5%", "deltaGoodWhenDown": true },
+    { "label": "Local search views", "value": "1,420", "sub": "profile + site combined", "delta": "+12%" },
+    { "label": "Exterior share of leads", "value": "68%", "sub": "seasonal demand mix" }
+  ],
+  "charts": [
+    { "title": "Quote requests by week", "labels": ["Jun 1", "Jun 8", "Jun 15", "Jun 22", "Jun 29"], "values": [3, 4, 5, 5, 4] },
+    { "title": "Local search views by week", "labels": ["Jun 1", "Jun 8", "Jun 15", "Jun 22", "Jun 29"], "values": [255, 275, 305, 300, 285] }
+  ],
+  "workBoardTitle": "Lead engine board",
+  "campaigns": [
+    { "name": "Local search: Exterior Painting", "status": "live", "statusLabel": "Live", "spend": "—", "results": "14 leads", "note": "Exterior intent leads the summer mix and gets priority visibility." },
+    { "name": "Local search: Interior + Cabinets", "status": "live", "statusLabel": "Live", "spend": "—", "results": "7 leads", "note": "Steady baseline demand that carries the account after exterior season ends." },
+    { "name": "Review + reputation rhythm", "status": "watch", "statusLabel": "Building", "spend": "—", "results": "—", "note": "Turning June's completed jobs into fresh reviews before the season turns." }
+  ],
+  "wins": [
+    "<strong>Lead volume grew 17%</strong> as exterior season peaked, with the request mix skewing toward higher-ticket jobs.",
+    "<strong>Cost per lead fell 5%</strong> even while volume climbed, so visibility gains are coming from earned rankings.",
+    "<strong>Local search views rose 12%</strong>, widening the top of the funnel heading into July."
+  ],
+  "actions": [
+    "Tighten speed-to-quote on new leads, the single biggest conversion lever during peak season.",
+    "Launch a review-request sequence against June's completed projects.",
+    "Stage fall interior-and-cabinet messaging now so the pipeline doesn't dip when exterior season ends."
+  ],
+  "quote": "Exterior season doesn't wait, and neither should a quote. Fast follow-up is where June's leads become July's revenue."
+}

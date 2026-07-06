@@ -23,3 +23,6 @@ google_ads_id: 100-209-6937
 
 ## Links
 - [[Client Index]]
+
+## Reports
+• 2026-07-06: June 2026 performance report (buyers-guide PDF), Daily-Briefs/reports/pdf/nkcdc-2026-06.pdf. Draft ribbon on until June actuals are confirmed.
