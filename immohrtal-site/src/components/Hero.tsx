@@ -1,34 +1,6 @@
 import { artist } from '../content/album'
 import { TiltBox } from './TiltBox'
 
-function HeroPhoto() {
-  return (
-    <div className="reveal reveal-later relative mt-14 w-full max-w-3xl">
-      <div aria-hidden="true" className="hero-shadow-field" />
-      <TiltBox max={6}>
-        <span className="pop-box block">
-          {artist.heroImage ? (
-            <img
-              src={artist.heroImage}
-              alt={`${artist.name} portrait`}
-              className="block aspect-square w-full object-cover"
-              width={1080}
-              height={1080}
-              loading="lazy"
-            />
-          ) : (
-            <span className="artist-slot artist-slot-neutral flex aspect-[16/10] w-full flex-col items-center justify-center gap-4 px-6">
-              <span className="split-lines" aria-hidden="true" />
-              <span className="font-display chrome-text-light text-4xl uppercase tracking-wide sm:text-6xl">The Shot</span>
-              <span className="mono-tag text-center">duality portrait / artist image placeholder</span>
-            </span>
-          )}
-        </span>
-      </TiltBox>
-    </div>
-  )
-}
-
 export function Hero() {
   return (
     <header
@@ -53,31 +25,38 @@ export function Hero() {
       />
 
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center">
+        <h1 className="sr-only">
+          {artist.name} — {artist.albumTitle}
+        </h1>
+
         <p className="mono-tag hero-session reveal" style={{ color: 'var(--signal-txt)' }}>
           {artist.sessionTag}
         </p>
 
-        <h1 className="reveal reveal-late m-0 mt-6 w-full max-w-[420px]">
-          <span className="sr-only">{artist.name}</span>
-          {artist.logo ? (
-            <TiltBox max={4}>
-              <span className="pop-box logo-lockup block p-4 sm:p-6">
+        {/* the shot leads: first thing you see */}
+        <div className="reveal reveal-late relative mt-8 w-full max-w-[440px]">
+          <div aria-hidden="true" className="hero-shadow-field" />
+          <TiltBox max={5}>
+            <span className="pop-box sheen block">
+              {artist.heroImage ? (
                 <img
-                  src={artist.logo}
-                  alt=""
-                  className="block h-auto w-full"
-                  width={1320}
-                  height={1204}
+                  src={artist.heroImage}
+                  alt={`${artist.name} portrait`}
+                  className="block aspect-square w-full object-cover"
+                  width={1080}
+                  height={1080}
                   fetchPriority="high"
                 />
-              </span>
-            </TiltBox>
-          ) : (
-            <span className="font-display chrome-text block uppercase leading-[0.92]" style={{ fontSize: 'clamp(3.8rem, 15vw, 11.5rem)' }}>
-              {artist.name}
+              ) : (
+                <span className="artist-slot artist-slot-neutral flex aspect-square w-full flex-col items-center justify-center gap-4 px-6">
+                  <span className="split-lines" aria-hidden="true" />
+                  <span className="font-display chrome-text-light text-4xl uppercase tracking-wide sm:text-6xl">The Shot</span>
+                  <span className="mono-tag text-center">artist image placeholder</span>
+                </span>
+              )}
             </span>
-          )}
-        </h1>
+          </TiltBox>
+        </div>
 
         {artist.introQuoteLines.length > 0 && (
           <blockquote
@@ -128,8 +107,6 @@ export function Hero() {
             Tracklist
           </a>
         </div>
-
-        <HeroPhoto />
       </div>
 
       <a
@@ -144,8 +121,32 @@ export function Hero() {
   )
 }
 
+/** Big logo near the bottom of the page: materializes like ink
+ *  soaking into the paper as it scrolls into view. */
+export function LogoOutro() {
+  return (
+    <section aria-label={`${artist.name} logo`} className="relative z-10 overflow-hidden px-5 py-28 md:py-40">
+      <div className="mx-auto flex max-w-4xl flex-col items-center">
+        <div className="ink-reveal reveal w-full max-w-[560px]">
+          <img
+            src="logo-mark.png"
+            alt={artist.name}
+            className="block h-auto w-full"
+            width={1000}
+            height={906}
+            loading="lazy"
+          />
+        </div>
+        <p className="mono-tag reveal reveal-later mt-8" style={{ color: 'var(--signal-txt)' }}>
+          {artist.releaseTag}
+        </p>
+      </div>
+    </section>
+  )
+}
+
 export function MarqueeDivider() {
-  const phrase = `${artist.name} / DUALITY / ${artist.albumTitle.toUpperCase()} / `
+  const phrase = `${artist.name} / ${artist.albumTitle.toUpperCase()} / ${artist.releaseTag} / `
   return (
     <div className="marquee" aria-hidden="true">
       <div className="marquee-inner font-mono text-[12px] tracking-[0.3em]" style={{ color: 'var(--faint)' }}>

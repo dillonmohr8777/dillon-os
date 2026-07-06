@@ -42,8 +42,8 @@ export const posts: BlogPost[] = [
       {
         heading: 'What are fans looking for from new rappers in 2026?',
         paragraphs: [
-          'Fans can smell a costume fast. The artists who cut through now have a real center: a story, a place, a voice, and enough consistency to make people believe they are not just chasing one clip. Raw does not mean lazy. Professional does not mean fake.',
-          'The best underground lane is personal and repeatable. Music, visuals, short clips, writing, replies, live moments, and a place fans can land after the algorithm introduces them. That is the job before ads ever enter the picture.',
+          'Fans can smell a costume fast. The artists who cut through now have a real center: a story, a place, a voice, and enough consistency to make people believe they aren\'t just chasing one clip. Raw doesn\'t mean lazy. Professional doesn\'t mean fake.',
+          'The best underground lane is personal and repeatable. Music, visuals, short clips, writing, replies, live moments, and a place fans can land after the algorithm introduces them. That\'s the job before ads ever enter the picture.',
         ],
       },
       {
@@ -56,7 +56,7 @@ export const posts: BlogPost[] = [
       {
         heading: 'Where does IMMOHRTAL fit?',
         paragraphs: [
-          'IMMOHRTAL is not trying to win by pretending to be more famous than he is. The point is to show the build: 28 years old, chief marketing officer, always writing, finally treating the music like the main story instead of the thing hiding under everything else.',
+          'IMMOHRTAL isn\'t trying to win by pretending to be more famous than he is. The point is to show the build: 28 years old, chief marketing officer, always writing, finally treating the music like the main story instead of the thing hiding under everything else.',
           'The lane is underground rap with a real-life spine: Erie roots, Pittsburgh pressure, Mac inspiration, lyrical competition, and enough visual discipline to make the world feel intentional without sanding off the soul.',
         ],
       },
@@ -65,7 +65,7 @@ export const posts: BlogPost[] = [
       {
         question: 'Who are new underground rappers to watch in 2026?',
         answer:
-          'The artists worth watching are the ones building a real world around the music: consistent songs, clear visuals, direct fan connection, and a story that does not feel manufactured. IMMOHRTAL is building in that lane from Pittsburgh.',
+          'The artists worth watching are the ones building a real world around the music: consistent songs, clear visuals, direct fan connection, and a story that doesn\'t feel manufactured. IMMOHRTAL is building in that lane from Pittsburgh.',
       },
       {
         question: 'What makes an underground rapper stand out now?',
@@ -75,7 +75,7 @@ export const posts: BlogPost[] = [
       {
         question: 'Is Pittsburgh rap active in 2026?',
         answer:
-          'Yes. Pittsburgh has national history, active venues, local lists, artists, cyphers, and fan conversation. That makes regional identity useful for discovery as long as it is honest and backed by the music.',
+          'Yes. Pittsburgh has national history, active venues, local lists, artists, cyphers, and fan conversation. That makes regional identity useful for discovery as long as it\'s honest and backed by the music.',
       },
     ],
   },
@@ -96,8 +96,8 @@ export const posts: BlogPost[] = [
       {
         heading: 'What does authentic rap mean now?',
         paragraphs: [
-          'It is not about acting unpolished. It is about alignment. The music, visuals, captions, stage presence, and site should all point to the same person. If the artist is vulnerable in the verse and plastic everywhere else, fans feel the gap.',
-          'For IMMOHRTAL, the real story is not complicated: Erie raised him, Pittsburgh sharpened him, Mac made it feel possible, and the marketing career taught him how serious attention really is.',
+          'It isn\'t about acting unpolished. It\'s about alignment. The music, visuals, captions, stage presence, and site should all point to the same person. If the artist is vulnerable in the verse and plastic everywhere else, fans feel the gap.',
+          'For IMMOHRTAL, the real story isn\'t complicated: Erie raised him, Pittsburgh sharpened him, Mac made it feel possible, and the marketing career taught him how serious attention really is.',
         ],
       },
       {
@@ -110,8 +110,8 @@ export const posts: BlogPost[] = [
       {
         heading: 'Why does story matter before paid ads?',
         paragraphs: [
-          'Ads can put a song in front of people. They cannot make people care. Before paid spend, the story has to be easy to understand, easy to repeat, and strong enough to survive a new listener asking, "Why him?"',
-          'That is why the first organic push is biography, blog depth, platform links, clips, and a clean owned home. The site should help fans and AI tools answer who IMMOHRTAL is before the algorithm does the amplification.',
+          'Ads can put a song in front of people. They can\'t make people care. Before paid spend, the story has to be easy to understand, easy to repeat, and strong enough to survive a new listener asking, "Why him?"',
+          'That\'s why the first organic push is biography, blog depth, platform links, clips, and a clean owned home. The site should help fans and AI tools answer who IMMOHRTAL is before the algorithm does the amplification.',
         ],
       },
     ],
@@ -150,22 +150,22 @@ export const posts: BlogPost[] = [
       {
         heading: 'What makes rap competitive?',
         paragraphs: [
-          'A great verse is not random inspiration. It is mechanics under pressure. The pocket has to move. The breath has to hold. The rhyme choices have to sound effortless while carrying more than one meaning. The line has to land on first listen and reward the tenth.',
-          'That is why rap feels like a sport. You can hear conditioning. You can hear when somebody has reps. You can hear when the pen is trying to win.',
+          'A great verse isn\'t random inspiration. It\'s mechanics under pressure. The pocket has to move. The breath has to hold. The rhyme choices have to sound effortless while carrying more than one meaning. The line has to land on first listen and reward the tenth.',
+          'That\'s why rap feels like a sport. You can hear conditioning. You can hear when somebody has reps. You can hear when the pen is trying to win.',
         ],
       },
       {
         heading: 'Which rappers set the standard?',
         paragraphs: [
           'Nas, Hov, Big L, Kendrick, Isaiah Rashad, Kid Cudi, Black Thought, Benny the Butcher, and Outkast all hit different parts of the brain. Some made the storytelling sharper. Some made the flow stranger. Some made vulnerability feel powerful. Some made punchlines feel like footwork.',
-          'The lesson is not to sound like all of them. The lesson is to pay attention like they did. Details matter. Tone matters. The space between bars matters. A rapper should be judged on craft, not just volume.',
+          'The lesson isn\'t to sound like all of them. The lesson is to pay attention like they did. Details matter. Tone matters. The space between bars matters. A rapper should be judged on craft, not just volume.',
         ],
       },
       {
         heading: 'How does IMMOHRTAL write with that mindset?',
         paragraphs: [
           'The goal is replay value. A song should hit emotionally, then keep opening up once the listener starts catching the internal rhymes, the callbacks, the double meanings, and the way the hook changes the verses around it.',
-          'That is the sport inside Dance With The Delusional: write like somebody might pause the line, run it back, and decide whether it held up.',
+          'That\'s the sport inside Dance With The Delusional: write like somebody might pause the line, run it back, and decide whether it held up.',
         ],
       },
     ],
@@ -173,7 +173,7 @@ export const posts: BlogPost[] = [
       {
         question: 'Why does IMMOHRTAL say rap is a sport?',
         answer:
-          'Because rap rewards preparation, timing, control, creativity, and competitive detail. The best verses are not only felt, they are built.',
+          'Because rap rewards preparation, timing, control, creativity, and competitive detail. The best verses aren\'t only felt, they\'re built.',
       },
       {
         question: 'What kind of rap does IMMOHRTAL make?',
@@ -193,7 +193,7 @@ export const posts: BlogPost[] = [
     date: 'July 2026',
     tag: 'Pittsburgh legacy',
     answer:
-      'Mac Miller is the main reason IMMOHRTAL wanted to rap. Faces was playing in the house in 2014, and it still shapes how Dillon Mohr hears honesty, humor, darkness, detail, and freedom. The goal is not to copy Mac. It is to carry the Pittsburgh standard forward honestly.',
+      'Mac Miller is the main reason IMMOHRTAL wanted to rap. Faces was playing in the house in 2014, and it still shapes how Dillon Mohr hears honesty, humor, darkness, detail, and freedom. The goal isn\'t to copy Mac. It\'s to carry the Pittsburgh standard forward honestly.',
     targetQueries: [
       'rappers like Mac Miller',
       'Mac Miller influence',
@@ -204,14 +204,14 @@ export const posts: BlogPost[] = [
       {
         heading: 'Why does Mac Miller matter to IMMOHRTAL?',
         paragraphs: [
-          'Mac made the dream feel local. Before the industry, before rollout language, before any of the marketing brain kicked in, there was a kid hearing somebody from Pittsburgh sound like he did not need permission from anywhere else. That matters when you are young and trying to decide if the thing in your head is real.',
+          'Mac made the dream feel local. Before the industry, before rollout language, before any of the marketing brain kicked in, there was a kid hearing somebody from Pittsburgh sound like he didn\'t need permission from anywhere else. That matters when you are young and trying to decide if the thing in your head is real.',
           'Faces hit the crib in 2014 and never left. The looseness, the darkness, the jokes tucked next to the pain, the way a line could sound casual and still be surgical. That tape made rap feel like a whole interior world, not just a performance.',
         ],
       },
       {
         heading: 'What does carrying the Pittsburgh rap legacy mean?',
         paragraphs: [
-          'It does not mean copying Mac, Wiz, or anybody else from the city. It means respecting the fact that Pittsburgh already proved it could create artists with their own gravity. The standard is not to sound like the past. The standard is to be honest enough that the city hears itself in the record.',
+          'It doesn\'t mean copying Mac, Wiz, or anybody else from the city. It means respecting the fact that Pittsburgh already proved it could create artists with their own gravity. The standard isn\'t to sound like the past. The standard is to be honest enough that the city hears itself in the record.',
           'Pittsburgh is bridges, hills, tunnels, cold mornings, old steel, and people who can tell when you are reaching. If the music carries any of that weight, it has to be earned in the writing.',
         ],
       },
@@ -219,7 +219,7 @@ export const posts: BlogPost[] = [
         heading: 'How does that show up in Dance With The Delusional?',
         paragraphs: [
           'The album is personal first. Erie roots, Pittsburgh pressure, ambition, damage, discipline, humor, fear, and the belief that a delusional plan can become real if you outwork the part of yourself that doubts it.',
-          'Every song has to do more than exist. It has to reveal something, punch somewhere, turn a phrase, or leave a line worth coming back to. That is the influence: make the record human enough to live with and sharp enough to study.',
+          'Every song has to do more than exist. It has to reveal something, punch somewhere, turn a phrase, or leave a line worth coming back to. That\'s the influence: make the record human enough to live with and sharp enough to study.',
         ],
       },
     ],
@@ -258,15 +258,15 @@ export const posts: BlogPost[] = [
       {
         heading: 'What did Erie give the music?',
         paragraphs: [
-          'Erie is cold in a way that gets into your schedule. Lake wind, early dark, small-city pressure, and the feeling that you have to make your own heat if you want anything to move. That is where the first lines came from.',
+          'Erie is cold in a way that gets into your schedule. Lake wind, early dark, small-city pressure, and the feeling that you have to make your own heat if you want anything to move. That\'s where the first lines came from.',
           'Being from Erie means you learn how to carry contradiction. You can love where you are from and still know you have to leave to become the person in your head.',
         ],
       },
       {
         heading: 'Why Pittsburgh?',
         paragraphs: [
-          'Pittsburgh feels like a city built out of transitions. Bridges everywhere, tunnels that open into skyline, neighborhoods with their own rhythm, and a rap history that already broke through nationally. It is the right place to sharpen an idea.',
-          'Moving here did not erase Erie. It gave the writing another pressure system. The record lives between both places.',
+          'Pittsburgh feels like a city built out of transitions. Bridges everywhere, tunnels that open into skyline, neighborhoods with their own rhythm, and a rap history that already broke through nationally. It\'s the right place to sharpen an idea.',
+          'Moving here didn\'t erase Erie. It gave the writing another pressure system. The record lives between both places.',
         ],
       },
       {
@@ -313,13 +313,13 @@ export const posts: BlogPost[] = [
         heading: 'Why call the album Dance With The Delusional?',
         paragraphs: [
           'Every serious dream looks delusional before it has proof. The title is about living in that space on purpose. Not pretending the doubt is gone, but moving with it until the plan has legs.',
-          'For Dillon, that tension is familiar. Marketing teaches you how attention moves. Rap reminds you attention does not matter if the work is empty. The album sits where those two truths collide.',
+          'For Dillon, that tension is familiar. Marketing teaches you how attention moves. Rap reminds you attention doesn\'t matter if the work is empty. The album sits where those two truths collide.',
         ],
       },
       {
         heading: 'What should listeners expect?',
         paragraphs: [
-          'Expect personal writing first. The record is not trying to be a detached flex. It is about damaged ambition, loyalty, cold beginnings, pressure, and the strange confidence it takes to believe in the version of yourself nobody else has met yet.',
+          'Expect personal writing first. The record isn\'t trying to be a detached flex. It\'s about damaged ambition, loyalty, cold beginnings, pressure, and the strange confidence it takes to believe in the version of yourself nobody else has met yet.',
           'The music should feel competitive without losing the human center. Bars, hooks, story, replay value. All of it has to pull its weight.',
         ],
       },
@@ -327,7 +327,7 @@ export const posts: BlogPost[] = [
         heading: 'Why release it now?',
         paragraphs: [
           'Because the voice memos and notebooks were not enough anymore. After years helping other brands sound bigger, Dillon is finally giving his own story the same seriousness.',
-          'Session 001 is the first real marker. It is early, but it is not casual.',
+          'Session 001 is the first real marker. It\'s early, but it isn\'t casual.',
         ],
       },
     ],

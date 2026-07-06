@@ -183,7 +183,7 @@ export function buildWorld(viewportMin: number): World {
         x = (kx + nx * ox + bx * oy) * 1.15
         z = (ky + ny * ox + by * oy) * 1.15
         y = (kz + nz * ox + bz * oy) * 1.6
-      } else if (k === 4) {
+      } else if (k === 4 && k !== LAST) {
         /* speaker-cone vortex, mouth up, wide open */
         const h = Math.random()
         const ang = h * 14 + Math.random() * 2
