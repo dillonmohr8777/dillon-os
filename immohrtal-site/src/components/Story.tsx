@@ -1,9 +1,8 @@
-import { markings, pittsburghLegacy, story } from '../content/album'
+import { markings, story } from '../content/album'
 
 export function Story() {
   return (
     <section id="story" aria-labelledby="story-heading" className="story-section relative z-10 overflow-hidden py-24 md:py-36">
-      {/* soft blue/green pressure glow behind the statement */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10"
@@ -43,17 +42,6 @@ export function Story() {
           ))}
         </div>
 
-        <p className="mono-tag reveal mt-16">Pittsburgh signal</p>
-        <div className="legacy-strip reveal reveal-late mt-5 grid gap-3 sm:grid-cols-4">
-          {pittsburghLegacy.map((item) => (
-            <div key={item.label} className="legacy-card compact">
-              <span className="legacy-label">{item.label}</span>
-              <p>{item.line}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* the three markings */}
         <p className="mono-tag reveal mt-16">The three markings</p>
         <ol className="m-0 mt-5 grid list-none gap-4 p-0 sm:grid-cols-3">
           {markings.map((m, i) => (
