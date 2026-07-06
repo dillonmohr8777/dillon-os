@@ -6,7 +6,7 @@
  *  1. TRACKS — titles below are SUGGESTIONS ONLY (nothing is
  *     approved). Rename freely. When final MP3s are ready, drop
  *     them in  public/audio/  and point each track's `src` at
- *     the file (e.g. "/audio/01-signal.mp3"). A track with no
+ *     the file (e.g. "audio/01-signal.mp3"). A track with no
  *     src renders as a placeholder row (no play button error).
  *  2. STREAMING LINKS — replace the null hrefs with real URLs
  *     (Spotify artist/album link, DistroKid hyperfollow, etc.).
@@ -39,7 +39,7 @@ export const artist = {
   sessionTag: 'SESSION 001 // THE NEW ALBUM',
   releaseTag: 'OUT NOW ON ALL PLATFORMS', // or "PRE-SAVE. DROPS 00.00.26"
   coverArt: null as string | null, // e.g. "/cover.jpg" when final art is ready
-  logo: '/logo-web.jpg' as string | null, // optimized for the page; full-res original stays at /logo.jpg
+  logo: 'logo-web.jpg' as string | null, // optimized for the page; full-res original stays at /logo.jpg
   heroImage: null as string | null, // e.g. "/artist.jpg" when the photo lands
 }
 
@@ -123,6 +123,7 @@ export const socials = [
 ]
 
 export const contact = {
-  bookingEmail: 'booking@immohrtal.com', // placeholder — swap for the real inbox
-  pressEmail: 'press@immohrtal.com',
+  bookingEmail: 'immohrtal.llc@gmail.com',
+  phone: '(814) 873-5333',
+  phoneHref: 'tel:+18148735333',
 }

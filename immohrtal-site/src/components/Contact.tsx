@@ -23,8 +23,8 @@ export function Contact() {
         <a className="btn btn-chrome" href={`mailto:${contact.bookingEmail}`}>
           {contact.bookingEmail}
         </a>
-        <a className="btn btn-ghost" href={`mailto:${contact.pressEmail}`}>
-          Press inquiries
+        <a className="btn btn-ghost" href={contact.phoneHref}>
+          {contact.phone}
         </a>
       </div>
 
@@ -71,8 +71,25 @@ export function Footer() {
     <footer className="relative z-10 border-t px-5 py-10" style={{ borderColor: 'var(--line)' }}>
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
         <span className="font-display chrome-text text-lg uppercase tracking-wide">{artist.name}</span>
+        <nav aria-label="Footer" className="flex items-center gap-5">
+          {[
+            ['./index.html', 'Home'],
+            ['./about.html', 'About'],
+            ['./blog.html', 'Blog'],
+            ['./contact.html', 'Contact'],
+          ].map(([href, label]) => (
+            <a
+              key={href}
+              href={href}
+              className="font-mono text-[11px] uppercase tracking-[0.2em] no-underline transition-colors hover:text-[#141922]"
+              style={{ color: 'var(--faint)' }}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
         <span className="font-mono text-[11px] tracking-[0.2em] uppercase" style={{ color: 'var(--faint)' }}>
-          © {new Date().getFullYear()} {artist.name} — recorded after hours
+          © {new Date().getFullYear()} {artist.name} · recorded after hours
         </span>
       </div>
     </footer>
