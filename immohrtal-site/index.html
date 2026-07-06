@@ -3,41 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IMMOHRTAL — Dance With The Delusional</title>
-    <meta name="description" content="IMMOHRTAL is Dillon Mohr. Raised in Erie, made in Pittsburgh. Dance With The Delusional is his first professional album: listen, tracklist, the story, and bookings." />
+    <title>IMMOHRTAL | Dance With The Delusional</title>
+    <meta name="description" content="IMMOHRTAL is Dillon Mohr: Erie-raised, Pittsburgh-based rapper, 28-year-old chief marketing officer, and Mac Miller-inspired lyricist behind Dance With The Delusional." />
     <meta name="theme-color" content="#f7f9fb" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:type" content="music.album" />
     <meta property="og:site_name" content="IMMOHRTAL" />
-    <meta property="og:title" content="IMMOHRTAL — Dance With The Delusional" />
-    <meta property="og:description" content="A signal from somewhere too far gone to come back normal." />
+    <meta property="og:title" content="IMMOHRTAL | Dance With The Delusional" />
+    <meta property="og:description" content="Erie roots, Pittsburgh pressure, Mac Miller inspiration, and a first professional rap record built like the sport matters." />
     <meta property="og:image" content="./og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="IMMOHRTAL — Dance With The Delusional" />
-    <meta name="twitter:description" content="A signal from somewhere too far gone to come back normal." />
+    <meta name="twitter:title" content="IMMOHRTAL | Dance With The Delusional" />
+    <meta name="twitter:description" content="Erie-raised, Pittsburgh-based rapper Dillon Mohr builds his first professional record around bars, bridges, and belief." />
     <meta name="twitter:image" content="./og.png" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "MusicAlbum",
-        "name": "Dance With The Delusional",
-        "albumProductionType": "StudioAlbum",
-        "byArtist": {
-          "@type": "MusicGroup",
-          "name": "IMMOHRTAL",
-          "genre": "Hip-Hop/Rap",
-          "foundingLocation": { "@type": "Place", "name": "Erie, Pennsylvania" },
-          "location": { "@type": "Place", "name": "Pittsburgh, Pennsylvania" }
-        },
-        "numTracks": 10,
-        "image": "./og.png"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://immohrtal-site.netlify.app/#dillon-mohr",
+            "name": "Dillon Mohr",
+            "alternateName": "IMMOHRTAL",
+            "description": "Erie-raised, Pittsburgh-based rapper and 28-year-old chief marketing officer.",
+            "birthPlace": { "@type": "Place", "name": "Erie, Pennsylvania" },
+            "homeLocation": { "@type": "Place", "name": "Pittsburgh, Pennsylvania" },
+            "jobTitle": "Chief Marketing Officer",
+            "knowsAbout": ["Pittsburgh hip hop", "lyrical rap", "Mac Miller", "Faces", "independent music marketing"]
+          },
+          {
+            "@type": "MusicGroup",
+            "@id": "https://immohrtal-site.netlify.app/#artist",
+            "name": "IMMOHRTAL",
+            "member": { "@id": "https://immohrtal-site.netlify.app/#dillon-mohr" },
+            "genre": "Hip-Hop/Rap",
+            "foundingLocation": { "@type": "Place", "name": "Erie, Pennsylvania" },
+            "location": { "@type": "Place", "name": "Pittsburgh, Pennsylvania" }
+          },
+          {
+            "@type": "MusicAlbum",
+            "@id": "https://immohrtal-site.netlify.app/#dance-with-the-delusional",
+            "name": "Dance With The Delusional",
+            "albumProductionType": "StudioAlbum",
+            "byArtist": { "@id": "https://immohrtal-site.netlify.app/#artist" },
+            "numTracks": 10,
+            "image": "./og.png",
+            "keywords": ["IMMOHRTAL", "Dillon Mohr rapper", "Pittsburgh rapper", "Erie PA rapper", "Dance With The Delusional", "Mac Miller inspired Pittsburgh rapper"]
+          }
+        ]
       }
     </script>
-    
-    
-    
   </head>
   <body>
     <div id="root"></div>
