@@ -8,20 +8,20 @@ export const artist = {
   albumTitle: 'Dance With The Delusional',
   introQuoteLines: [
     "I'm from the land of the snow,",
-    'so you know imma hold your hands if they cold,',
-    "see I'm such a damaged soul so I moved to the city",
-    'to get out and I got no plans to be broke',
+    "So you know I'mma hold your hands if they cold,",
+    "See I'm such a damaged soul so I moved to the city to get out,",
+    'So you know I got no plans to be broke.',
   ],
   tagline: 'A signal from somewhere too far gone to come back normal.',
   /** the marquee ticker cycles these bars; add lines as you write them */
   marqueeBars: [
     "I'm from the land of the snow",
-    'imma hold your hands if they cold',
-    'I got no plans to be broke',
+    "I'mma hold your hands if they cold",
+    'So you know I got no plans to be broke',
     'too far gone to come back normal',
   ],
   sessionTag: 'SESSION 001 // DANCE WITH THE DELUSIONAL',
-  releaseTag: 'OUT NOW ON ALL PLATFORMS',
+  releaseTag: 'SESSION 001 // THE FIRE IS BACK',
   coverArt: 'cover.jpg' as string | null,
   logo: 'logo-mark.png' as string | null, // transparent background mark
   heroImage: 'artist.jpg' as string | null, // the shot: 1080x1080 B&W 814 headshot
@@ -38,16 +38,17 @@ export interface Track {
 }
 
 export const tracks: Track[] = [
-  { title: 'Signal', note: 'intro', src: null },
-  { title: 'Dance With The Delusional', note: 'title track', src: null },
-  { title: 'Chrome Heart', src: null },
-  { title: 'Late Night Drive', src: null },
-  { title: 'Pressure', src: null },
-  { title: 'Loop', src: null },
-  { title: 'Damaged Romance', src: null },
-  { title: 'Exit Plan', src: null },
-  { title: 'Switch Up', src: null },
-  { title: 'Too Far Gone', note: 'outro', src: null },
+  { title: 'No Way Out', src: null },
+  { title: 'Picking Up My Notepad', src: null },
+  { title: '814 Blood (ft. King Keev)', src: null },
+  { title: 'My Mothers Baby', src: null },
+  { title: 'Roll the Dice', src: null },
+  { title: 'My Own Way', src: null },
+  { title: 'Headstone (Interlude)', src: null },
+  { title: 'Grade A Love', src: null },
+  { title: 'On My Way (ft. King Keev)', src: null },
+  { title: 'Waitlist', src: null },
+  { title: 'Dance with the Delusional (ft. Ted Moon)', src: null },
 ]
 
 export interface Platform {
