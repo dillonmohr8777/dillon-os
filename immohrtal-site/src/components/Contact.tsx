@@ -35,10 +35,10 @@ export function Contact() {
         action="/contact.html?joined=true"
         data-netlify="true"
       >
-        <input type="hidden" name="form-name" value="immohrtal-list" />
+        <input type="hidden" name="form-name" defaultValue="immohrtal-list" />
         <label className="sr-only" htmlFor="fan-email">Email address</label>
         <input id="fan-email" name="email" type="email" placeholder="email for drops" required />
-        <input type="hidden" name="source" value="site" />
+        <input type="hidden" name="source" defaultValue="site" />
         <button className="btn btn-chrome" type="submit">Join list</button>
       </form>
 
