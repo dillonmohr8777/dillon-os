@@ -1,4 +1,4 @@
-import { artist, contact, pittsburghLegacy, socials } from '../content/album'
+import { artist, contact, socials } from '../content/album'
 import { InstagramIcon, TikTokIcon, XIcon, YouTubeIcon } from './icons'
 
 const socialIcons: Record<string, () => React.ReactNode> = {
@@ -16,7 +16,7 @@ export function Contact() {
         Book IMMOHRTAL
       </h2>
       <p className="reveal reveal-late mx-auto mt-5 max-w-md" style={{ color: 'var(--dim)' }}>
-        Shows, features, press, and Pittsburgh rooms that need bars with weight.
+        Shows, features, press, and rooms that need bars with weight.
       </p>
 
       <div className="reveal reveal-late mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -83,15 +83,6 @@ export function Contact() {
 export function Footer() {
   return (
     <footer className="relative z-10 border-t px-5 py-10" style={{ borderColor: 'var(--line)' }}>
-      <div className="legacy-footer mx-auto mb-8 grid max-w-6xl gap-3 sm:grid-cols-4" aria-label="Pittsburgh legacy markers">
-        {pittsburghLegacy.map((item, i) => (
-          <div key={item.label} className="legacy-footer-card">
-            <span className="legacy-icon" aria-hidden="true">{['BRG', 'PT', 'STL', '412'][i]}</span>
-            <span className="legacy-label">{item.label}</span>
-            <p>{item.line}</p>
-          </div>
-        ))}
-      </div>
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
         <span className="font-display chrome-text text-lg uppercase tracking-wide">{artist.name}</span>
         <nav aria-label="Footer" className="flex items-center gap-5">
