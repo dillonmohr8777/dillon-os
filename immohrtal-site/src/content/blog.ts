@@ -1,17 +1,11 @@
 /**
- * BLOG — one post for now.
+ * BLOG — one post: the come up, in Dillon's words.
  *
- * Dillon is writing the real content. When it's ready, paste it here:
- * replace this post or add more objects to the `posts` array. The
- * structure stays the same (answer line, sections, faqs) and the site
+ * To add or replace posts, edit the `posts` array. The structure
+ * stays the same (lede line, sections of paragraphs) and the site
  * picks everything up automatically, including the generated
- * blog/<slug>.html permalink pages.
+ * blog/<slug>.html permalink pages and the sitemap.
  */
-
-export interface BlogFaq {
-  question: string
-  answer: string
-}
 
 export interface BlogSection {
   heading: string
@@ -23,56 +17,48 @@ export interface BlogPost {
   title: string
   date: string // display only
   tag: string
+  /** the lede: shows on the index teaser and opens the post */
   answer: string
-  targetQueries: string[]
   sections: BlogSection[]
-  faqs: BlogFaq[]
 }
 
 export const posts: BlogPost[] = [
   {
-    slug: 'underground-rap-2026-burgh-perspective',
-    title: 'What Underground Rap Needs In 2026',
+    slug: 'the-come-up',
+    title: 'The Come Up: Why This Music Waited',
     date: 'July 2026',
-    tag: 'Burgh perspective',
+    tag: 'The come up',
     answer:
-      'Real stories, consistent output, and enough skill to make listeners run it back. IMMOHRTAL is building Dance With The Delusional in that lane: Erie roots, Pittsburgh pressure, and a pen that treats rap like a sport.',
-    targetQueries: [
-      'underground rap 2026',
-      'new rappers 2026',
-      'rappers to watch',
-    ],
+      'I was drawing before I was rapping. I always had a pen in my hand, and I always wanted things to come to life. The music you\'re hearing now waited years for me to be ready to stand behind it. This is the story of the wait.',
     sections: [
       {
-        heading: 'What fans want from new rappers now',
+        heading: 'It always started with a pen',
         paragraphs: [
-          'Fans can smell a costume fast. The artists who cut through have a real center: a story, a place, a voice, and enough consistency to make people believe they aren\'t just chasing one clip. Raw doesn\'t mean lazy. Professional doesn\'t mean fake.',
-          'The best underground lane is personal and repeatable. Music, visuals, writing, live moments, and a place fans can land after the algorithm introduces them. That\'s the job before ads ever enter the picture.',
+          'I was always creating. Drawing, writing, building little worlds out of whatever was in front of me. I always felt like making something brought value to everything around it, and I never grew out of that feeling. The pen just changed jobs over the years.',
+          'By sixteen I finally understood cadence and delivery for real, and that changed everything. Rap stopped being something I loved from a distance and became something I could actually do. From that point on I was always making music, even when nobody was supposed to hear it.',
         ],
       },
       {
-        heading: 'Why the Burgh angle matters',
+        heading: 'The permission problem',
         paragraphs: [
-          'Pittsburgh already has rap history. Mac Miller, Wiz Khalifa, Jimmy Wopo, Hardo, Chevy Woods, Benji., and the scene around them prove the city has more than one sound. That gives a new artist a standard, not a costume.',
-          'A rapper with no place can sound like anybody. A rapper with a real place has texture. Erie raised him, Pittsburgh sharpened him, and the record lives between both.',
+          'That passion festered for years, because let\'s be honest: nobody\'s out here asking for a white rapper. I never wanted to patronize the culture or take anything away from what rap actually is. This culture wasn\'t started by white people and it isn\'t owned by them, and I wasn\'t going to touch it carelessly. So I sat on it.',
+          'Then there was Mac. Gods like Mac Miller made me believe there was a way to do this if you did it with respect: stay true to what hip hop actually is, keep the sport of it alive, and earn your place line by line instead of assuming you\'re owed one. That\'s the lane I\'m in, and I want to leave my blueprint on this game.',
         ],
       },
-    ],
-    faqs: [
       {
-        question: 'Who are new underground rappers to watch in 2026?',
-        answer:
-          'The ones building a real world around the music: consistent songs, clear visuals, direct fan connection, and a story that doesn\'t feel manufactured. IMMOHRTAL is building in that lane from Pittsburgh.',
+        heading: 'Always evolving',
+        paragraphs: [
+          'I remember when iTunes was still a big deal and Mac dropped a preview track that sounded unlike anything he\'d ever created before. Me and my best friend just sat with it, respecting how hard he was pushing himself to level up. He kept evolving like that until the day he passed.',
+          'I carried that into my own life. You should always be evolving. You should have motivations, figures, dreams. You should feel every single emotion the human brain is supposed to feel. That\'s exactly what his music was, and that\'s exactly what it did for me. I don\'t think I\'d be here if it wasn\'t for his music.',
+        ],
       },
       {
-        question: 'What makes an underground rapper stand out now?',
-        answer:
-          'Specificity. Fans remember real details: where the artist is from, what they care about, and why the output keeps coming. Skill matters, but identity makes the skill easier to remember.',
-      },
-      {
-        question: 'Is Pittsburgh rap active in 2026?',
-        answer:
-          'Yes. Pittsburgh has national history, active venues, cyphers, and fan conversation. Regional identity helps discovery as long as it\'s honest and backed by the music.',
+        heading: 'The detour and the return',
+        paragraphs: [
+          'After my undergrad I got launched into marketing management roles, and that blossomed into becoming a CHIEF MARKETING OFFICER. That should be all caps, by the way. I worked so hard to get where I\'m at that the music never got the priority I always meant to give it.',
+          'The songs you\'re hearing now were recorded in 2023. I\'ve remastered them, remixed them, and lived with them long enough to know they hold up. I moved to Pittsburgh that same year, and this city\'s been home ever since. I feel a deep tie to it, and to the artists who put it on the map.',
+          'Now I\'m finally in the right headspace to do what I set out to do: leave a legacy, leave a stamp on Pittsburgh the way Mac has, the way the other greats from this city have. This music needed to see the light of day. So here it is.',
+        ],
       },
     ],
   },
