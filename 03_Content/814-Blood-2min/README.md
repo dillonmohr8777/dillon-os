@@ -1,8 +1,8 @@
-# No Way Out — 2:00 Music Video (814 x 412 edition)
+# 814 Blood ft. King Keev — 2:00 Music Video (814 x 412)
 
-Two-minute 1920x1080/24fps music video for **"No Way Out"** (814 Blood ft. King
-Keev), built in the same living paper-collage language as the original
-No-Way-Out render — torn newsprint, halftone dots, xerox grain, stop-motion
+Two-minute 1920x1080/24fps music video for **"814 Blood" ft. King Keev**, built in the living
+paper-collage language of the original No-Way-Out render (the stylistic
+reference) — torn newsprint, halftone dots, xerox grain, stop-motion
 jitter — upgraded with an **electric-blue / golden-yellow energy system**:
 duotone grades (blue = Erie / 814, gold = Pittsburgh / 412), corner light
 leaks, beat-driven streak slashes, spark particles, and colored torn rims.
@@ -14,10 +14,10 @@ leaks, beat-driven streak slashes, spark particles, and colored torn rims.
 | 0:00–0:15 | Intro — torn-window reveal, flickering headlines, face reveals |
 | 0:15–0:35 | Build 1 — Erie blue block into Pittsburgh gold block, 3-frame flash cuts on strong beats |
 | 0:35–0:55 | Performance — duo shots, whip-pan transitions, pulse zooms |
-| 0:55–1:15 | Chaos collage — multi-panel moving storyboard, word overlays (NO WAY OUT / ERIE / PITTSBURGH / 814 X 412 / NO HANDOUTS / BUILT NOT GIVEN) on strong beats |
+| 0:55–1:15 | Chaos collage — multi-panel moving storyboard, word overlays (814 BLOOD / ERIE / PITTSBURGH / 814 X 412 / NO HANDOUTS / BUILT NOT GIVEN) on strong beats |
 | 1:15–1:40 | Bigger world — cities collide on an animated torn seam, lightning streaks, flying paper |
 | 1:40–1:55 | Hero — blue/gold smoke portraits, split-screen face and hoodie closeups |
-| 1:55–2:00 | End poster — duo centre, 814 brick left / 412 gold right, NO WAY OUT title, IMMOHRTAL ink stamp |
+| 1:55–2:00 | End poster — duo centre, 814 brick left / 412 gold right, 814 BLOOD title, IMMOHRTAL ink stamp |
 
 ## How it works
 
