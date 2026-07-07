@@ -30,7 +30,7 @@ body {{ overflow:hidden; background:#10151d; }}
 
 # ── Canvas loop: seamless particle descent, pulse on the beat ────────
 CANVAS_HTML = FONT_CSS_TOKEN = None
-def canvas_page(trk_label, beats, beat_ms):
+def canvas_page(trk_label, beats, beat_ms, seed=814):
     T = beats * beat_ms / 1000.0
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>{FONT_CSS}
 canvas {{ position:absolute; inset:0; }}
@@ -43,7 +43,7 @@ canvas {{ position:absolute; inset:0; }}
 const T = {T};            // loop period (s) = {beats} beats @ {beat_ms}ms
 const ctx = document.getElementById('c').getContext('2d');
 function mul32(a) {{ return function() {{ a|=0; a=a+0x6D2B79F5|0; var t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }} }}
-const rnd = mul32(814); const P = [];
+const rnd = mul32({seed}); const P = [];
 for (let i=0;i<110;i++) {{
   P.push({{ x:rnd(), y:rnd(), k:(rnd()<0.75?1:2), sway:0.008+rnd()*0.02,
            m:1+Math.floor(rnd()*3), ph:rnd()*Math.PI*2,
@@ -139,13 +139,13 @@ def encode(fdir, out, audio=None, offset=None, dur=None):
     cmd += [out]
     subprocess.run(cmd, check=True, capture_output=True)
 
-def make_canvas(bid, label, beats, beat_ms):
+def make_canvas(bid, label, beats, beat_ms, seed=814):
     T = beats*beat_ms/1000.0; n = round(T*FPS)
     pw, b = launch()
     pg = b.new_page(viewport={"width":720,"height":1280})
     with tempfile.TemporaryDirectory() as fdir:
         path = os.path.join(fdir, "page.html")
-        open(path,"w").write(canvas_page(label, beats, beat_ms))
+        open(path,"w").write(canvas_page(label, beats, beat_ms, seed))
         pg.goto(f"file://{path}"); pg.wait_for_timeout(300)
         render_frames(pg, n, lambda i: i/FPS, fdir)
         encode(fdir, os.path.join(OUT, f"{bid}.mp4"))
