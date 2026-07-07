@@ -21,11 +21,11 @@ SHEET_A = UP + '54814b59-371D1967DFFF435C965580D4B9B8F3BB.png'   # 4x4 scene gri
 SHEET_B = UP + '0dc25064-4118629CC91A4B1EB782E9DCFFA37993.png'   # 10-panel storyboard
 PORTRAIT = UP + '29b19320-F9F9811FE2374E83BFBF9EAA189A0B4F.png'  # clean duo photo
 LOGO = UP + '623899d0-IMG_2395.jpeg'                              # IMMOHRTAL mark
-SONG = UP + '3958c4df-814_Blood_ft._king_Keev.mp3'
+SONG = UP + 'd70c3d23-814_Blood_ft._king_Keev.mp3'
 
 W, H, FPS = 1920, 1080, 24
-DUR = 120.0
-NFRAMES = int(DUR * FPS)                       # 2880
+DUR = 140.15                                   # full song (2:20)
+NFRAMES = int(DUR * FPS)                       # 3363
 PLATE_W = 2500
 FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 PDIR = os.path.join(BASE, 'panels')
@@ -116,6 +116,11 @@ def do_slice():
     for k, (x0, y0, x1, y1) in P_BOXES.items():
         im.crop((int(x0 * w), int(y0 * h), int(x1 * w), int(y1 * h))) \
           .save(os.path.join(PDIR, k + '.png'))
+    # collage duo centre crop for the poster (stylised, not the studio shot)
+    im5 = Image.open(os.path.join(PDIR, 'a5.png'))
+    w5, h5 = im5.size
+    im5.crop((int(.22 * w5), int(.02 * h5), int(.78 * w5), int(.98 * h5))) \
+       .save(os.path.join(PDIR, 'duo_c.png'))
     names = sorted(os.listdir(PDIR))
     cols = 6
     rows = math.ceil(len(names) / cols)
@@ -287,6 +292,23 @@ def do_prep():
     np.save(os.path.join(ADIR, 'smoke.npy'), np.stack([
         (multi_noise(W, H, 7100 + i, ((3, .5), (8, .3), (24, .2))) * 255).astype(np.uint8)
         for i in range(2)]))
+    # comic speed-line bursts (radial, centre kept clear for faces)
+    sls = []
+    for v in range(2):
+        im = Image.new('L', (W, H), 0)
+        dr = ImageDraw.Draw(im)
+        r = np.random.default_rng(800 + v)
+        cx, cy, ecc = W / 2, H / 2, W / H
+        for _ in range(150):
+            a = r.uniform(0, 2 * math.pi)
+            r0 = r.uniform(.42, .60) * H
+            r1 = r0 + r.uniform(.15, .55) * H
+            dr.line([(cx + math.cos(a) * r0 * ecc, cy + math.sin(a) * r0),
+                     (cx + math.cos(a) * r1 * ecc, cy + math.sin(a) * r1)],
+                    fill=int(r.uniform(90, 255)), width=int(r.uniform(2, 5)))
+        im = im.filter(ImageFilter.GaussianBlur(1.2))
+        sls.append(np.asarray(im, np.uint8))
+    np.save(os.path.join(ADIR, 'speed.npy'), np.stack(sls))
     # logo -> ink stamp alpha
     lg = Image.open(LOGO).convert('L')
     lg = lg.resize((520, int(520 * lg.height / lg.width)), Image.LANCZOS)
@@ -307,71 +329,71 @@ def do_prep():
 # target cut times (snapped to onsets); scenes carry energy color + fx flags
 
 SCENES = [
-    # -- INTRO 0:00-0:15 ------------------------------------------------
+    # -- INTRO 0:00-0:17 ------------------------------------------------
     dict(t=0.0,  mode='reveal', plate='a9', energy='blue'),
-    dict(t=4.2,  plate='b4', z=(1.05, 1.22), pan=((-.1, 0), (.1, 0)), energy='both',
+    dict(t=4.9,  plate='b4', z=(1.05, 1.22), pan=((-.1, 0), (.1, 0)), energy='both',
          frags=[('news1', 2)], headline=True),
-    dict(t=8.2,  plate='face814', z=(1.02, 1.2), pan=((0, -.05), (0, .05)), energy='blue',
+    dict(t=9.6,  plate='a0', z=(1.06, 1.26), pan=((-.15, -.05), (.05, .05)), energy='blue',
          breathe=True),
-    dict(t=11.6, plate='face412', z=(1.02, 1.2), pan=((0, .05), (0, -.05)), energy='gold',
+    dict(t=13.6, plate='a11', z=(1.02, 1.22), pan=((0, .05), (.1, -.05)), energy='gold',
          breathe=True, flash=True),
-    # -- BUILD 1 0:15-0:35 ----------------------------------------------
-    dict(t=15.0, plate='a4', z=(1.24, 1.05), pan=((-.2, 0), (.2, 0)), energy='blue',
+    # -- BUILD 1 0:17-0:41 ----------------------------------------------
+    dict(t=17.5, plate='a4', z=(1.24, 1.05), pan=((-.2, 0), (.2, 0)), energy='blue',
          frags=[('waves', 3)], wind=True, flash=True),
-    dict(t=17.5, plate='a8', z=(1.04, 1.2), pan=((.1, 0), (-.1, 0)), energy='blue',
-         frags=[('lighthouse', 4)], flash=True),
-    dict(t=20.0, plate='hood814', z=(1.05, 1.18), pan=((0, 0), (0, .06)), energy='blue',
+    dict(t=20.4, plate='a8', z=(1.04, 1.2), pan=((.1, 0), (-.1, 0)), energy='blue',
+         frags=[('lighthouse', 4), ('news2', 44)], wind=True, flash=True),
+    dict(t=23.4, plate='hood814', z=(1.05, 1.18), pan=((0, 0), (0, .06)), energy='blue',
          breathe=True, flash=True),
-    dict(t=22.5, plate='a1', z=(1.25, 1.06), pan=((.15, 0), (-.15, 0)), energy='blue',
+    dict(t=26.3, plate='a1', z=(1.25, 1.06), pan=((.15, 0), (-.15, 0)), energy='blue',
          frags=[('news1', 5)], wind=True, flash=True),
-    dict(t=25.0, plate='a3', z=(1.05, 1.22), pan=((-.1, 0), (.15, 0)), energy='gold',
-         frags=[('bridge', 6)], flash=True),
-    dict(t=27.5, plate='a10', z=(1.22, 1.04), pan=((.2, 0), (-.2, 0)), energy='gold',
+    dict(t=29.2, plate='a3', z=(1.05, 1.22), pan=((-.1, 0), (.15, 0)), energy='gold',
+         frags=[('bridge', 6)], wind=True, flash=True),
+    dict(t=32.1, plate='a10', z=(1.22, 1.04), pan=((.2, 0), (-.2, 0)), energy='gold',
          frags=[('skyline', 7)], wind=True, flash=True),
-    dict(t=30.0, plate='hood412', z=(1.05, 1.18), pan=((0, .04), (0, -.04)), energy='gold',
+    dict(t=35.0, plate='hood412', z=(1.05, 1.18), pan=((0, .04), (0, -.04)), energy='gold',
          breathe=True, flash=True),
-    dict(t=32.5, plate='a13', z=(1.2, 1.05), pan=((-.15, 0), (.1, 0)), energy='gold',
+    dict(t=38.0, plate='a13', z=(1.2, 1.05), pan=((-.15, 0), (.1, 0)), energy='gold',
          frags=[('news2', 8)], wind=True, flash=True),
-    # -- PERFORMANCE 0:35-0:55 -------------------------------------------
-    dict(t=35.0, plate='a5', z=(1.03, 1.24), pan=((0, 0), (0, -.04)), energy='both',
+    # -- PERFORMANCE 0:41-1:04 -------------------------------------------
+    dict(t=40.9, plate='a5', z=(1.03, 1.24), pan=((0, 0), (0, -.04)), energy='both',
          breathe=True, pulse=1.5, whip=True),
-    dict(t=38.0, plate='a12', z=(1.24, 1.04), pan=((-.18, 0), (.18, 0)), energy='both',
+    dict(t=44.4, plate='a12', z=(1.24, 1.04), pan=((-.18, 0), (.18, 0)), energy='both',
          frags=[('news1', 9)], whip=True),
-    dict(t=41.0, plate='b3', z=(1.05, 1.22), pan=((-.12, 0), (.12, 0)), energy='gold',
+    dict(t=47.9, plate='b3', z=(1.05, 1.22), pan=((-.12, 0), (.12, 0)), energy='gold',
          breathe=True, pulse=1.5, whip=True),
-    dict(t=44.0, plate='a6', z=(1.02, 1.26), pan=((0, 0), (0, 0)), energy='gold',
+    dict(t=51.4, plate='a6', z=(1.02, 1.26), pan=((0, 0), (0, 0)), energy='gold',
          pulse=1.6, whip=True),
-    dict(t=46.6, plate='b1', z=(1.2, 1.04), pan=((.15, 0), (-.15, 0)), energy='blue',
+    dict(t=54.4, plate='b1', z=(1.2, 1.04), pan=((.15, 0), (-.15, 0)), energy='blue',
          frags=[('news2', 10)], whip=True),
-    dict(t=49.2, plate='a14', z=(1.04, 1.2), pan=((0, .05), (0, -.05)), energy='both',
+    dict(t=57.5, plate='a14', z=(1.04, 1.2), pan=((0, .05), (0, -.05)), energy='both',
          frags=[('clock', 11)], breathe=True, whip=True),
-    dict(t=51.8, plate='b5', z=(1.05, 1.26), pan=((0, 0), (0, -.05)), energy='both',
+    dict(t=60.5, plate='b5', z=(1.05, 1.26), pan=((0, 0), (0, -.05)), energy='both',
          pulse=1.6, whip=True),
-    # -- CHAOS COLLAGE 0:55-1:15 ------------------------------------------
-    dict(t=55.0, mode='chaos'),
-    # -- BUILD 2 / BIGGER WORLD 1:15-1:40 ---------------------------------
-    dict(t=75.0, plate='a0', z=(1.06, 1.28), pan=((-.15, .05), (.15, -.05)), energy='blue',
+    # -- CHAOS COLLAGE 1:04-1:28 ------------------------------------------
+    dict(t=64.2, mode='chaos'),
+    # -- BUILD 2 / BIGGER WORLD 1:28-1:57 ---------------------------------
+    dict(t=87.6, plate='a0', z=(1.06, 1.28), pan=((-.15, .05), (.15, -.05)), energy='blue',
          frags=[('waves', 12)], wind=True, flash=True),
-    dict(t=78.5, plate='b6', z=(1.22, 1.04), pan=((-.2, 0), (.2, 0)), energy='both',
+    dict(t=91.7, plate='b6', z=(1.22, 1.04), pan=((-.2, 0), (.2, 0)), energy='both',
          wind=True, frags=[('news1', 13)], flash=True),
-    dict(t=82.0, plate='a2', z=(1.05, 1.26), pan=((.1, 0), (-.12, 0)), energy='gold',
+    dict(t=95.8, plate='a2', z=(1.05, 1.26), pan=((.1, 0), (-.12, 0)), energy='gold',
          frags=[('bridge', 14)], flash=True),
-    dict(t=85.5, mode='collide'),
-    dict(t=93.0, plate='b2', z=(1.02, 1.3), pan=((0, 0), (0, -.05)), energy='both',
+    dict(t=99.9, mode='collide'),
+    dict(t=108.6, plate='b2', z=(1.02, 1.3), pan=((0, 0), (0, -.05)), energy='both',
          pulse=1.7, flash=True),
-    dict(t=96.4, plate='a15', z=(1.18, 1.03), pan=((-.12, 0), (.12, 0)), energy='both',
+    dict(t=112.6, plate='a15', z=(1.18, 1.03), pan=((-.12, 0), (.12, 0)), energy='both',
          frags=[('citylights', 15)], wind=True),
-    # -- HERO 1:40-1:55 ----------------------------------------------------
-    dict(t=100.0, mode='smoke', plate='duo_mid', push=(1.00, 1.14)),
-    dict(t=104.0, mode='split', left='face814', right='face412'),
-    dict(t=107.6, mode='split', left='hood814', right='hood412'),
-    dict(t=110.6, mode='smoke', plate='duo', push=(1.06, 1.22)),
-    # -- END FRAME 1:55-2:00 ------------------------------------------------
-    dict(t=115.0, mode='poster'),
+    # -- HERO 1:57-2:14 ----------------------------------------------------
+    dict(t=116.8, mode='smoke', plate='b5', push=(0.84, 0.97)),
+    dict(t=121.5, mode='split', left='a1', right='a11'),
+    dict(t=125.7, mode='split', left='hood814', right='hood412'),
+    dict(t=129.2, mode='smoke', plate='b10', push=(0.88, 1.02)),
+    # -- END FRAME 2:14-2:20 ------------------------------------------------
+    dict(t=134.3, mode='poster'),
 ]
-CHAOS_POOL = ['a4', 'a6', 'a9', 'a10', 'a11', 'a13', 'face814', 'face412',
+CHAOS_POOL = ['a4', 'a6', 'a9', 'a10', 'a11', 'a13', 'a3', 'b3',
               'hood814', 'hood412', 'b7', 'a12', 'b4', 'b8', 'b9', 'b10', 'a15']
-FLASH_POOL = ['hood814', 'hood412', 'face814', 'face412', 'a9', 'a10']
+FLASH_POOL = ['hood814', 'hood412', 'a9', 'a10', 'a11', 'b8']
 LAYOUTS = [
     [(0, 0, 1 / 3, 1), (1 / 3, 0, 2 / 3, 1), (2 / 3, 0, 1, 1)],
     [(0, 0, .5, .5), (.5, 0, 1, .5), (0, .5, .5, 1), (.5, .5, 1, 1)],
@@ -420,6 +442,7 @@ class Engine:
         self.smoke = np.load(os.path.join(ADIR, 'smoke.npy')).astype(np.float32) / 255
         self.logo = np.load(os.path.join(ADIR, 'logo.npy')).astype(np.float32) / 255
         self.blot = np.load(os.path.join(ADIR, 'blotches.npy')).astype(np.float32) / 255
+        self.speed = np.load(os.path.join(ADIR, 'speed.npy')).astype(np.float32) / 255
         self.TRANS = 0.45
         self._cellcache = {}
         self._poster = None
@@ -541,6 +564,28 @@ class Engine:
                 x = hr.uniform(.01, .10) * W if hr.random() < .5 else hr.uniform(.78, .88) * W
                 y = hr.uniform(.0, .05) * H if hr.random() < .5 else hr.uniform(.70, .80) * H
                 self.blit(out, spr, x, y, 0.7 * fl)
+        if sc.get('whip'):
+            # comic inset panel popping in a corner on strong beats
+            ws = [o for o in self.strong if t0 <= o <= t]
+            if ws:
+                k = len(ws)
+                dt = t - ws[-1]
+                ir = rng('inset', sc['plate'], k)
+                if dt < 0.9 and ir.random() < 0.6:
+                    iw, ih = int(W * 0.30), int(H * 0.30)
+                    pl = self.plates[CHAOS_POOL[int(ir.integers(len(CHAOS_POOL)))]]
+                    view = self.plate_view(pl, ir.uniform(1.05, 1.25), ir.uniform(-.3, .3),
+                                           ir.uniform(-.2, .2), 0, 0, iw, ih)
+                    col = BLUE if k % 2 else GOLD
+                    luma = view.mean(axis=2, keepdims=True) / 255
+                    view += (col / 255) * (luma ** 1.7) * 34
+                    a, rim = self.cell_alpha(iw, ih, k)
+                    view = view * (1 - rim[..., None] * .55) + rim[..., None] * .55 * (0.6 * 225 + 0.4 * col)
+                    pop = min(1.0, dt / 0.08) * (1 - smoothstep((dt - 0.62) / 0.28))
+                    spr = np.dstack([np.clip(view, 0, 255), a * 255 * pop]).astype(np.uint8)
+                    x0 = (24, W - iw - 24, 24, W - iw - 24)[k % 4]
+                    y0 = (24, 24, H - ih - 24, H - ih - 24)[k % 4]
+                    self.blit(out, spr, x0, y0)
         return out
 
     def compose_reveal(self, sc, t, u, f, jx, jy):
@@ -711,7 +756,7 @@ class Engine:
             out[y0:y1, x0:x1] = out[y0:y1, x0:x1] * (1 - al) + sp[..., :3] * al
 
         # side city plates (no faces): Erie 814 brick left, Pittsburgh 412 right
-        sw = int(pw * 0.34); sh2 = int(ph * 0.78); sy = int(ph * 0.14)
+        sw = int(pw * 0.28); sh2 = int(ph * 0.78); sy = int(ph * 0.14)
         for px, plate, col, pan in ((int(pw * 0.01), 'a9', BLUE, -0.2),
                                     (pw - sw - int(pw * 0.01), 'a10', GOLD, 0.2)):
             view = self.plate_view(self.plates[plate], 1.02, pan, 0, 0, 0, sw, sh2)
@@ -721,9 +766,9 @@ class Engine:
             view = view * (1 - rim[..., None] * .5) + rim[..., None] * .5 * (0.5 * 228 + 0.5 * col)
             spr = np.dstack([np.clip(view, 0, 255), a * 255 * .96]).astype(np.uint8)
             blit_big(spr, px, sy)
-        # centre duo portrait, torn photo with drop shadow
-        plate = self.plates['duo']
-        dh = int(ph * 0.74); dw = int(dh * plate.shape[1] / plate.shape[0])
+        # centre duo collage panel, torn photo with drop shadow
+        plate = self.plates['duo_c']
+        dh = int(ph * 0.72); dw = int(dh * plate.shape[1] / plate.shape[0])
         im = np.asarray(Image.fromarray(plate).resize((dw, dh), Image.BILINEAR), np.float32)
         a, rim = torn_alpha(dw, dh, 9911)
         im = im * (1 - rim[..., None] * .5) + 230 * rim[..., None] * .5
@@ -815,8 +860,15 @@ class Engine:
         pp = np.roll(self.paper, roll * 13, axis=1)
         out *= (0.90 + 0.18 * pp[..., None])
         luma = out.mean(axis=2, keepdims=True) / 255
-        out *= (1 - 0.08 * self.half[..., None] * (1 - luma))
+        out *= (1 - 0.11 * self.half[..., None] * (1 - luma))
         self.energy_fx(out, sc, t, f, it)
+        # comic speed-line burst on strong beats in kinetic sections
+        if sc.get('whip') or sc.get('flash') or sc.get('mode') in ('chaos', 'collide'):
+            p = self.pulse(t)
+            if p > 0.3:
+                col = self.ecol(sc, t)
+                if col is None: col = np.array([225, 228, 232], np.float32)
+                out += self.speed[(f // 2) % 2][..., None] * col * (0.45 * p)
         # ink blotch hits
         d = t - self.strong[self.strong <= t]
         if len(d) and d[-1] < 0.4 and sc.get('mode') != 'poster':
@@ -888,8 +940,8 @@ def do_finalize():
 
 def do_preview():
     eng = Engine()
-    ts = [1.5, 6, 10, 13, 16, 21, 26, 31, 36, 42, 47, 52, 57, 62, 68, 72,
-          76, 80, 88, 94, 98, 102, 106, 109, 112, 116, 118, 119]
+    ts = [1.5, 7, 11, 15, 19, 24, 30, 36, 42, 49, 55, 61, 66, 72, 78, 84,
+          89, 93, 101, 105, 110, 114, 118, 123, 127, 131, 136, 139]
     cols = 4
     rows = math.ceil(len(ts) / cols)
     cs = Image.new('RGB', (cols * 484, rows * 276), (18, 18, 18))
