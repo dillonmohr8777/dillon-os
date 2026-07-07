@@ -1,12 +1,94 @@
+import { useState, type FormEvent, type ReactNode } from 'react'
 import { artist, contact, socials } from '../content/album'
 import { cycleTheme, useAfterHours } from '../hooks/useAfterHours'
 import { InstagramIcon, TikTokIcon, XIcon, YouTubeIcon } from './icons'
 
-const socialIcons: Record<string, () => React.ReactNode> = {
+const socialIcons: Record<string, () => ReactNode> = {
   instagram: InstagramIcon,
   tiktok: TikTokIcon,
   x: XIcon,
   youtube: YouTubeIcon,
+}
+
+interface FanSignupFormProps {
+  source: string
+  inputId: string
+  className: string
+}
+
+export function FanSignupForm({ source, inputId, className }: FanSignupFormProps) {
+  const [busy, setBusy] = useState(false)
+  const [joined, setJoined] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const form = e.currentTarget
+    const data = new FormData(form)
+    const email = String(data.get('email') ?? '').trim()
+    if (!email) return
+
+    setBusy(true)
+    setError(null)
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'immohrtal-list',
+          email,
+          source,
+          'bot-field': String(data.get('bot-field') ?? ''),
+        }).toString(),
+      })
+      const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname)
+      if (!res.ok && !isLocal) {
+        throw new Error(`form capture failed (${res.status})`)
+      }
+      form.reset()
+      setJoined(true)
+    } catch {
+      setError("Couldn't join the list right now - try again in a second.")
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <>
+      <form
+        onSubmit={submit}
+        className={className}
+        name="immohrtal-list"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" defaultValue="immohrtal-list" />
+        <p className="hidden" aria-hidden="true">
+          <label>
+            don't fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+          </label>
+        </p>
+        <label className="sr-only" htmlFor={inputId}>Email address</label>
+        <input id={inputId} name="email" type="email" placeholder="email for drops" required />
+        <input type="hidden" name="source" defaultValue={source} />
+        <button className="btn btn-chrome" type="submit" disabled={busy}>
+          {busy ? 'Joining...' : 'Join list'}
+        </button>
+      </form>
+      {joined && (
+        <p className="mono-tag reveal reveal-later mt-4" role="status" style={{ color: 'var(--dim)' }}>
+          Joined - watch for drops.
+        </p>
+      )}
+      {error && (
+        <p className="mono-tag reveal reveal-later mt-4" role="alert" style={{ color: '#b3261e' }}>
+          {error}
+        </p>
+      )}
+    </>
+  )
 }
 
 export function Contact() {
@@ -29,19 +111,7 @@ export function Contact() {
         </a>
       </div>
 
-      <form
-        className="fan-form reveal reveal-later mx-auto mt-8"
-        name="immohrtal-list"
-        method="POST"
-        action="/contact.html?joined=true"
-        data-netlify="true"
-      >
-        <input type="hidden" name="form-name" defaultValue="immohrtal-list" />
-        <label className="sr-only" htmlFor="fan-email">Email address</label>
-        <input id="fan-email" name="email" type="email" placeholder="email for drops" required />
-        <input type="hidden" name="source" defaultValue="site" />
-        <button className="btn btn-chrome" type="submit">Join list</button>
-      </form>
+      <FanSignupForm source="site" inputId="fan-email" className="fan-form reveal reveal-later mx-auto mt-8" />
 
       <ul className="reveal reveal-later m-0 mt-14 flex list-none flex-wrap items-center justify-center gap-3 p-0">
         {socials.map((s) => {
