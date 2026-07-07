@@ -24,3 +24,20 @@ JSON-LD `image` in `index.html` to the absolute URL
 The `dist/` folder after `npm run build` is fully static. Drag-and-drop
 it into Netlify Drop, Cloudflare Pages, or any static host and it just
 works.
+
+## Newsletter gate (Netlify Forms)
+
+Track previews are email-gated: first play opens a signup modal that
+POSTs to the hidden `immohrtal-list` form in `index.html`. Netlify
+detects that form at deploy time — no config needed, but check:
+
+1. Netlify dashboard → **Forms** → enable form detection (one-time).
+2. Submissions appear under Forms → `immohrtal-list`, with the track
+   that triggered the signup in the `source` field.
+3. Add a notification (Forms → notifications) to get an email per
+   signup, or wire a Zapier/Make hook to push into a real mailer
+   (Mailchimp/ConvertKit) later.
+
+Unlock state is per-device (`localStorage: immohrtal.list`). Free tier
+covers 100 submissions/month — upgrade or move to a mailer API if the
+list outgrows it.
