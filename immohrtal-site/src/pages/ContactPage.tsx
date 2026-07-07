@@ -1,6 +1,7 @@
 import { artist, contact, socials } from '../content/album'
 import { SubPage } from '../components/SubPage'
 import { TiltBox } from '../components/TiltBox'
+import { FanSignupForm } from '../components/Contact'
 import { InstagramIcon, TikTokIcon, XIcon, YouTubeIcon } from '../components/icons'
 
 const socialIcons: Record<string, () => React.ReactNode> = {
@@ -42,19 +43,7 @@ export function ContactPage() {
         </a>
       </div>
 
-      <form
-        className="fan-form reveal reveal-later mt-8"
-        name="immohrtal-list"
-        method="POST"
-        action="/contact.html?joined=true"
-        data-netlify="true"
-      >
-        <input type="hidden" name="form-name" defaultValue="immohrtal-list" />
-        <label className="sr-only" htmlFor="contact-fan-email">Email address</label>
-        <input id="contact-fan-email" name="email" type="email" placeholder="email for drops" required />
-        <input type="hidden" name="source" defaultValue="contact-page" />
-        <button className="btn btn-chrome" type="submit">Join list</button>
-      </form>
+      <FanSignupForm source="contact-page" inputId="contact-fan-email" className="fan-form reveal reveal-later mt-8" />
 
       {/* press sheets */}
       <div className="mt-14 grid gap-6 sm:grid-cols-2">
