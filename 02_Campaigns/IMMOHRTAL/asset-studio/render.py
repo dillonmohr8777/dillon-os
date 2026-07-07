@@ -241,7 +241,82 @@ def spotify_header():
   <div class="mono" style="position:absolute;right:84px;bottom:64px;font-size:20px;color:{SIGNAL_NIGHT}">DANCE WITH THE DELUSIONAL</div>
 </div>"""
 
+def _route(i, n=5, dark=False):
+    c = "rgba(233,238,246,.25)" if dark else "rgba(20,25,34,.18)"
+    dot = SIGNAL_NIGHT if dark else SIGNAL_TXT
+    return f"""
+  <div style="position:absolute;left:84px;right:84px;bottom:150px;height:2px;background:{c}">
+    <div style="position:absolute;left:0;top:0;height:2px;width:{(i/(n-1))*100}%;background:linear-gradient(90deg,{SIGNAL},{GREEN})"></div>
+    <div style="position:absolute;left:{(i/(n-1))*100}%;top:-5px;width:12px;height:12px;border-radius:50%;background:{dot};transform:translateX(-6px)"></div>
+  </div>"""
+
+def caro_slide(i, world, numeral, place, coord, line, hook=False, closer=False):
+    dark = world == "night"
+    dim = "rgba(233,238,246,.55)" if dark else "rgba(20,25,34,.5)"
+    ghost = ("background:linear-gradient(180deg,#f5f8fc,#77879f 45%,#e8f1fb 52%,#45536a 70%,#97a8c0);"
+             "-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.13") if dark \
+            else f"color:{INK};opacity:.07"
+    if hook:
+        body = f"""
+  <div style="position:absolute;left:84px;top:44%;transform:translateY(-50%)">
+    <div class="anton" style="font-size:110px;line-height:.96;max-width:9ch;color:{INK}">THE DELUSION HAS COORDINATES.</div>
+    <div class="serif-i" style="font-size:34px;color:rgba(20,25,34,.72);margin-top:30px">where Dance With The Delusional comes from</div>
+  </div>
+  <div class="mono" style="position:absolute;right:84px;bottom:196px;font-size:19px;color:{SIGNAL_TXT}">SWIPE //</div>"""
+    elif closer:
+        body = f"""
+  <div style="position:absolute;left:0;right:0;top:44%;transform:translateY(-50%);text-align:center">
+    <div class="anton chrome" style="font-size:128px;line-height:.95">IF NOT NOW,<br>WHEN.</div>
+    <div class="mono" style="font-size:20px;color:{GREEN_NIGHT};margin-top:36px">SESSION 001 &middot; @IMMOHRTAL</div>
+  </div>"""
+    else:
+        num_style = f"font-size:620px;line-height:1;position:absolute;right:30px;top:60px;{ghost}"
+        txt = "#e9eef6" if dark else INK
+        body = f"""
+  <div class="anton" style="{num_style}">{numeral}</div>
+  <div style="position:absolute;left:84px;top:40%">
+    <div class="mono" style="font-size:20px;color:{SIGNAL_NIGHT if dark else SIGNAL_TXT}">{coord}</div>
+    <div class="anton" style="font-size:130px;line-height:.95;color:{txt};margin-top:22px;{'background:'+CHROME_LIGHT+';-webkit-background-clip:text;background-clip:text;color:transparent;' if dark else ''}">{place}</div>
+    <div class="serif-i" style="font-size:40px;line-height:1.4;max-width:19ch;color:{'rgba(233,238,246,.85)' if dark else 'rgba(20,25,34,.8)'};margin-top:34px">{line}</div>
+  </div>"""
+    return f"""
+<div class="{world}" style="width:100%;height:100%;position:relative">
+  <div class="mono" style="position:absolute;left:84px;top:84px;font-size:18px;color:{dim}">MARKINGS // {i+1}/5</div>
+  <div class="mono" style="position:absolute;right:84px;top:84px;font-size:18px;color:{dim}">IMMOHRTAL</div>
+  {body}
+  {_route(i, dark=dark)}
+  <div class="mono" style="position:absolute;left:84px;bottom:84px;font-size:16px;color:{dim}">DANCE WITH THE DELUSIONAL</div>
+  <div class="mono" style="position:absolute;right:84px;bottom:84px;font-size:16px;color:{GREEN_NIGHT if dark else GREEN_TXT}">SESSION 001</div>
+</div>"""
+
+def caro_split(i):
+    return f"""
+<div style="width:100%;height:100%;position:relative;font-family:'Space Grotesk'">
+  <div class="day" style="height:50%;position:relative;padding:84px">
+    <div class="mono" style="display:flex;justify-content:space-between;font-size:18px;color:rgba(20,25,34,.5)">
+      <span>MARKINGS // {i+1}/5</span><span>IMMOHRTAL</span>
+    </div>
+    <div class="anton" style="font-size:120px;line-height:.95;color:{INK};margin-top:60px">THE SPLIT</div>
+    <div class="serif-i" style="font-size:38px;color:rgba(20,25,34,.8);margin-top:24px">CMO discipline on one side,</div>
+  </div>
+  <div style="height:6px;background:linear-gradient(90deg,{SIGNAL},{GREEN})"></div>
+  <div class="night" style="height:calc(50% - 6px);position:relative;padding:70px 84px">
+    <div class="serif-i" style="font-size:38px;color:rgba(233,238,246,.85)">artist instinct on the other.</div>
+    <div class="anton chrome" style="font-size:64px;line-height:1;margin-top:26px">SAME PERSON. SAME RECORD.</div>
+    {_route(i, dark=True)}
+    <div class="mono" style="position:absolute;left:84px;bottom:84px;font-size:16px;color:rgba(233,238,246,.55)">DANCE WITH THE DELUSIONAL</div>
+    <div class="mono" style="position:absolute;right:84px;bottom:84px;font-size:16px;color:{GREEN_NIGHT}">SESSION 001</div>
+  </div>
+</div>"""
+
 SPECS = {
+    "carousel-1": (1080,1350, lambda: caro_slide(0, "day", "", "", "", "", hook=True)),
+    "carousel-2": (1080,1350, lambda: caro_slide(1, "day", "I", "ERIE, PA", "42.1292 N / 80.0851 W",
+                   "Lake-effect winters, small-city pressure, first notebooks, first delusions.")),
+    "carousel-3": (1080,1350, lambda: caro_slide(2, "night", "II", "PITTSBURGH", "40.4406 N / 79.9959 W",
+                   "Where Mac made the dream feel close enough to chase for real.")),
+    "carousel-4": (1080,1350, lambda: caro_split(3)),
+    "carousel-5": (1080,1350, lambda: caro_slide(4, "night", "", "", "", "", closer=True)),
     "announce-presave":  (1080,1350, announce_presave),
     "announce-outnow":   (1080,1350, announce_outnow),
     "spotify-header":    (2660,1140, spotify_header),
