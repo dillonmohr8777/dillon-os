@@ -29,6 +29,20 @@ Requires `pip install playwright pillow` and a Chromium at
 | `og-image` | 1200×630 | Day | Site social-share card |
 | `tracklist` | 1080×1350 | Day | 4:5 feed post — album announcement |
 
+## Motion (`motion.py` → `out/motion/`)
+
+| Asset | Spec | Notes |
+|---|---|---|
+| `canvas-814.mp4` | 720×1280 · 7.81s | Spotify Canvas — seamless, locked to 16 beats @ 123 BPM |
+| `canvas-onmyway.mp4` | 720×1280 · 7.52s | Seamless, 12 beats @ ~96 BPM |
+| `canvas-album.mp4` | 720×1280 · 7.0s | Generic Canvas for the other 9 tracks until per-track ones exist |
+| `lyric-814.mp4` | 1080×1920 · 12s | Audio-reactive lyric clip (0:17–0:29), meter driven by the real waveform. Captions are auto-transcribed — correct before posting. |
+
+```bash
+python3 motion.py                 # all motion assets
+python3 motion.py canvas-814      # one
+```
+
 ## Editing
 
 All copy/bars live in `render.py` (`SPECS` + builder functions).
