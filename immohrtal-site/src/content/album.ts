@@ -37,16 +37,17 @@ export interface Track {
   duration?: string
 }
 
+// src files are 30s PREVIEWS (faded), not full masters — swap on release day
 export const tracks: Track[] = [
   { title: 'No Way Out', src: null },
-  { title: 'Picking Up My Notepad', src: null },
-  { title: '814 Blood (ft. King Keev)', src: null },
-  { title: 'My Mothers Baby', src: null },
-  { title: 'Roll the Dice', src: null },
-  { title: 'My Own Way', src: null },
+  { title: 'Picking Up My Notepad', src: '/audio/02-picking-up-my-notepad.mp3', note: '30s preview' },
+  { title: '814 Blood (ft. King Keev)', src: '/audio/03-814-blood.mp3', note: '30s preview' },
+  { title: 'My Mothers Baby', src: '/audio/04-my-mothers-baby.mp3', note: '30s preview' },
+  { title: 'Roll the Dice', src: '/audio/05-roll-the-dice.mp3', note: '30s preview' },
+  { title: 'My Own Way', src: '/audio/06-my-own-way.mp3', note: '30s preview' },
   { title: 'Headstone (Interlude)', src: null },
-  { title: 'Grade A Love', src: null },
-  { title: 'On My Way (ft. King Keev)', src: null },
+  { title: 'Grade A Love', src: '/audio/08-grade-a-love.mp3', note: '30s preview' },
+  { title: 'On My Way (ft. King Keev)', src: '/audio/09-on-my-way.mp3', note: '30s preview' },
   { title: 'Waitlist', src: null },
   { title: 'Dance with the Delusional (ft. Ted Moon)', src: null },
 ]

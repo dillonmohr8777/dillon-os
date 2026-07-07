@@ -1,0 +1,370 @@
+# Raw Auto-Transcripts — for Dillon to correct
+
+Whisper transcription of the uploaded masters. Rap flows garble it —
+treat every line as a draft. Correct the bars you want used in quote
+cards / lyric videos and the corrected lines become the asset source.
+
+
+## 814 Blood (ft. King Keev)
+
+- `0:17` Got it tatted on the stomach just in case you ain't know
+- `0:19` Crash whips, got book for city flamethrows
+- `0:21` Sip, drank till it fell on my face and re-load it
+- `0:23` I like to think I've changed my lane
+- `0:25` Did that shit blacked out, was the same
+- `0:27` Face all banged up, banged up, banged up
+- `0:29` got to change, got to change, slowed up
+- `0:31` got to change, the change, slowed up
+- `0:33` got to change, slowed up, slowed up
+- `0:35` got to change, slowed up, slowed up
+- `0:37` got to change, slowed up, slowed up
+- `0:39` if you and, to change, slowed up
+- `0:41` to change slowed up, slowed up, slowed
+- `0:43` but you got, how can't you have that name, love
+- `0:45` flip it from the back and my blank ain't sanked up
+- `0:47` I'm almost done a damn brain knock, another line of eyes
+- `0:49` now she lookin' like Gengar schemes, gotta
+- `0:51` manly want to stop how you made off, slat so big
+- `0:53` gotta cut it with a chain, so much work in my nose
+- `0:55` like Iggy Azalea, if you want a verse I gotta
+- `0:57` see that in pay play, get that point through your head
+- `0:59` like I'm plat the impaler, life's a bitch
+- `1:01` and I just can't replace, so she blew off a yellow pill
+- `1:03` knew I should pay, pay so, consumer protection drugs
+- `1:05` I'm not Ralph Nader, slotted
+- `1:07` I walk around these hoes, half naked, run me down
+- `1:09` like I'm on a collar with new pain, bitch run you over
+- `1:11` if you're too excited hearing that, with the faces
+- `1:13` my money come first in this motherfucking brain stitch
+- `1:15` man, I be riding through my hometown
+- `1:19` shilling with my new bitch
+- `1:21` if I stayed I would hold down
+- `1:23` pull up make a few, man
+- `1:28` ass is blessed but fucking so depressing
+
+## On My Way (ft. King Keev)
+
+- `0:00` Tell me where we on
+- `0:20` Ass so big you can see it from the front
+- `0:22` Pull up baby, I got some weed in the car
+- `0:24` She can tell how I'm living by the freeze
+- `0:26` I'm a um, know you ain't with a real man
+- `0:28` Real man, don't,t be a law, I'm freaking freaking to the sun
+- `0:30` We can see the stars when I see that thing jump
+- `0:33` I got a screen to the law, I can fucking tear different ways
+- `0:36` What you need are reason for me pulling up
+- `0:38` I'm just need a moat
+- `0:40` I'll be on my way, cold stuff like Peter with the sun on my face
+- `0:44` Bird, bitches, city chair, but nests all walk down the street
+- `0:46` Every word and penny, seven reps a talk full of feet
+- `0:49` Hey, and I be coolin' it low key
+- `0:52` Sit back in the cool, cause we smokin' on trees
+- `0:54` Sittin' pencil in your son with some California weed
+- `0:57` Tell him then we'll chase him boy
+- `0:58` And sell him cowering in my sleep, ayy
+- `1:00` I'll be on my way, callin' stuff like Peter
+- `1:03` With the son on my face, bird, bitch, a steady chair
+- `1:05` But as I walk the street, every word I'm peddying
+- `1:08` Serious rap to talk full of V, ayy
+- `1:10` And I be callin' it, low key
+- `1:12` Sit back
+- `1:12` In the cool, cause we smokin' on trees
+- `1:14` Sittin' pencil in your son with some California weed
+- `1:17` Tell him then we'll chase him boy
+- `1:18` And sell him cowering in my sleep, ayy
+- `1:20` Tell him then we'll chase him boy
+- `1:21` And sell him cowerin' in my sleep, ayy
+- `1:23` Then I'm counting in my sleep, babe
+- `1:30` We on a new wave
+- `1:33` Ah, yeah
+- `1:34` That's too fake
+- `1:36` Ah, yeah
+- `1:37` Ah, man
+- `1:38` You my bull thing
+- `1:39` When I pull up on the block
+- `1:40` You better get your ass in
+- `1:42` We only spoke as strong
+- `1:43` Playing all the classes
+- `1:44` I talk in my big games
+- `1:45` So we gon' crush you
+- `1:46` With my PS and Skiles
+- `1:48` Cause you got an accent
+- `1:49` Only chuckin'n but I swear to God
+- `1:51` You the baddest
+- `1:52` And I know we relate, going through sad shit
+- `1:54` But I'm lovin' what we got, no rules that secure
+- `1:57` Get up in my coupe, this ain't our last trip
+- `2:00` I'll be on my way, cold stuff like Peter with a son on my face
+- `2:04` Bird, bitches, city chairman as I walk down the street
+- `2:07` Every word I'm paying, seven reps a talk full of feet
+- `2:09` Ay, and I be coolin' it low-key
+- `2:12` Sit back in the coupe, cause we smokin' on trees
+- `2:14` Sit in Pennsylvania Sun with some California weed
+- `2:17` Chillin', then we'll chase some buns, and I'm counting in my sleep
+- `2:20` I'll be on my way
+- `2:22` Cold stuff like Peter with the sun on my face
+- `2:24` Burry bitches said he'd chair me as I walk down the street
+- `2:27` Every word I'm paid he said I'd rap to talk full of feet
+- `2:29` Hey, and I'd be coolin' it low-key
+- `2:32` Sit back in the cold cause we smokin' on trees
+- `2:34` Sittin' Pennsylvania Sun with some California weed
+- `2:37` Challen them with Jason Blunt and say I'm countin' in my safe
+- `2:39` Hey, everyone's sayin' like don't wait
+- `2:42` All of my friends see so fake
+- `2:44` Told myself that I won't change
+- `2:49` You
+
+## Picking Up My Notepad
+
+- `0:00` And I love you, and I love you, and I love you too
+- `0:10` Baby, when you call me, the moment you get there
+- `0:21` I'm on 10 man not 9
+- `0:35` Lately I'm picking up a notepad Feeling like I'm so bad
+- `0:41` Life roll me up but now ain't roll back Now ain't worry about the things I don't
+- `0:45` have Shots out to coach prep
+- `0:46` He met me when I was so sad Gave me energy that made my own path
+- `0:50` Cuz you'd even tell my motherfuckin' bones crap that I found a mic
+- `0:53` I've been striking ever since Like a drone attack, uh-huh
+- `0:57` I remember when I finally left my homelands Said bye to the beach sunset
+- `1:00` In a ways, old girls, true friends, and a bunch of the face
+- `1:03` Thankful I knew them, but I was done with the weight
+- `1:05` Had a mission and a vision, being up with the race
+- `1:08` Gotta love what it takes, this for anyone, feeling lately stuck in a place
+- `1:11` Believe in yourself, gotta trust in your ways
+- `1:13` Moving different than the people in the mud for some days
+- `1:16` Never run from the rain, you can learn from depression and a ton of the pain
+- `1:19` It'll make it better, at least some's got changed
+- `1:22` Like it says, you ain't gotta pass with an A
+- `1:24` I was going off tracks, now I'm back in the game
+- `1:26` And I'm ready, make a mark, you can pass me the flame
+- `1:28` I was steady, breaking harsh, and my past was a shame
+- `1:31` But I learned from mistakes, so I'm a swerve in the lanes
+- `1:33` I'm determined to can't get
+- `1:35` Opened up the book, in my rhymes, they will speak
+- `1:37` Hope you learn what I'm saying, yeah, cryin' for the weak
+- `1:40` And I'm only gettin' better in my prime as you speak
+- `1:42` But I struggle on my own, yeah, it's hard to find peace
+- `1:44` And the less you should get it, you could die in a week
+- `1:47` But you never feel good until you try and succeed
+- `1:49` So you better keep your head up, climb and achieve everything that you want
+- `1:52` Yeah, I'm dying to see you do it, it's your moment to shine in the streets
+- `1:56` Yeah, yeah, go shine, kid, go shine, kid, go shine, kid, go shine, kid, go shine, kid, go shine, kid, go shine, kid
+- `2:07` It's your time, man, it's your time, man
+- `2:11` A little bit of flight.
+- `2:18` You got this.
+- `2:27` I love you, I love you, I love you, I love you too
+
+## My Mothers Baby
+
+- `0:00` I told my old bitch, I would never change I got better things on my mind
+- `0:09` Know you feel it, let it stray, but I'm it on the sky
+- `0:11` I deliver pleasure, pain Know what God is I, and they can never demonstrate
+- `0:15` The type of shit that I do, writing this down to the back of the book
+- `0:18` Had us bitten on that rich shit, cause I'm only attracted to truth
+- `0:21` Yeah, they wanna talk to me like they know what persona is
+- `0:24` But little do they know I swim with these piranhas, bitch
+- `0:27` That mean I was raised different and paid attention to what logic is
+- `0:30` Fucking got a lot of S's for me, that's why I meant I could make it
+- `0:33` All these golly hips, assume he isn't what he says
+- `0:36` Then he shows that he probably is in the upper tier
+- `0:39` I'm like when Brady went to the fuckin' nearest life
+- `0:41` I ain't gain no fucks in here right now
+- `0:43` I finally feel like I cover the bases
+- `0:45` And I hit all of these fucking rappers under the basement
+- `0:48` Every time I spit a rhyme, it's some thunder waiting
+- `0:51` Distract it any moment, plenty focused
+- `0:53` Cause I am my mother's baby
+- `0:54` They was trying to guess who I was my whole life
+- `0:56` I've been bucket-sick in the head, but I won't cry
+- `0:59` Livin' on the edge, I'll be gone in no time
+- `1:02` But I promise for now that I'm gon' shine, gon' shine
+- `1:05` They was tryna guess who I was my whole life
+- `1:07` I've been bucket-sick in the head, but I won't cry
+- `1:10` Livin' on the edge, I'll be gone in no time
+- `1:13` But I promise for now that I'm gon' shine, gon' shine
+- `1:16` It's in my DNA, y'all was really meant for this
+- `1:18` That's evident, cause when I started out, I was trash but I never quit
+- `1:21` Now I'm for the climb to the top, like Mount Everest
+- `1:23` They don't wanna try to guck, I'll drive the petty shit
+- `1:26` And you could try me, many did But I'm in the top, or sound like a wealthy kid
+- `1:29` Hell he is, cause of me and putting guards at the game
+- `1:31` Damn, you can't try me when you play your hand
+- `1:33` Not good enough, can't escape the jail My foot is up, I'm breakin' in
+- `1:36` And make it all this air
+- `1:38` Tryna guess who I was my whole life I been buckin' sick in the head, but I won't cry
+- `1:43` Livin' on the edge, I'll be gone in no time
+- `1:45` But I promise for now that I'm gon' shine
+- `1:48` Go shine, baby, they was tryin' to guess who I was my whole life
+- `1:51` I been buckin' sick in the head, but I won't cry
+- `1:54` Living on the edge, I'll be gone in no time
+- `1:56` But I promise for now that I'm gon' shine, gon' shine
+- `2:02` Ah, shit
+- `2:05` Know what it is
+- `2:07` I ain't, I ain't even tryin'
+- `2:10` You know, you know about that
+- `2:13` I swear to God, I'm gonna try and make it
+- `2:16` I can't, but I know one thing
+- `2:19` I'm ready
+
+## Roll the Dice
+
+- `0:00` Music
+- `0:11` God, God, God
+- `0:12` They're telling me that I should roll the dice
+- `0:14` And the feeling that I'm feeling didn't happen overnight
+- `0:17` I got old homies asking what the moment's like
+- `0:20` Well you could've been here, but now you owe a price
+- `0:23` Yeah, God
+- `0:24` They're telling me that I should roll the dice
+- `0:26` And the feeling that I'm feeling didn't happen overnight
+- `0:29` I got old homies askin' what the moment's like
+- `0:32` Well, you could've been here, but now you owe a price
+- `0:35` Put my dick up in the industry, they better know
+- `0:38` I'm a sick fuck and my enemies' bread is slow
+- `0:41` You a bitch, huh? Don't even try me, you ain't even credible
+- `0:44` Yeah, you need to let it go, whom a weak is settles cause
+- `0:47` It's the devil versus the lord, I'ma win every time
+- `0:50` Benton hella high, got former friends jealous, why?
+- `0:53` I was tryin' to put you on, then you went tellin' lies
+- `0:56` Now my ex is taxing me, tellin' me man, her selfish guys
+- `0:59` But I'm not with that though, I don't play games with these hoes
+- `1:02` On some tic-tac-toe, no they hate the name on my show
+- `1:05` But I did rap though, and so I'm breaking all the chains
+- `1:08` Why I pick down those, the fast hoe
+- `1:11` God, God, God been telling me that I should roll the dice
+- `1:14` And the feeling that I'm feeling didn't happen overnight
+- `1:17` I got old homies asking what the moments like
+- `1:20` Well you could've been here, but now you owe a price
+- `1:23` Yeah, God been telling me that I should roll the dice
+- `1:26` And the feeling that I'm feelin' didn't happen overnight
+- `1:29` I got old homies askin' what the moments like
+- `1:32` Well you coulda been here, but now you owe a price
+- `1:35` Okay, I'ma roll them dice and load them twice
+- `1:37` Man, god bless me, I'm a shogun, right?
+- `1:39` Don't you like a motherfucker like me, spittin' a soul on a mic
+- `1:41` And then out the float is nice, if I ghost any bitch I want
+- `1:43` Like a poltergeist, y'all don't stand a chance
+- `1:45` You ain't even up to show the hype
+- `1:47` They bitches want me so bad, they know I'm inside
+- `1:50` I just sit back and watch while she blowin'
+- `1:52` I'm my pipe and honestly this used to be
+- `1:54` I did the fucking lonliness life
+- `1:56` Until I got my ass up and didn't go without a fight
+- `1:59` God got a god
+- `2:00` God been telling me that I should roll the dice
+- `2:02` And the feeling that I'm feelin'
+- `2:04` Didn't happen over nigh
+- `2:05` I got old homies askin' what the moments like
+- `2:08` Well, you coulda been here
+- `2:10` And now you owe a price
+- `2:11` Yeah, God been telling me that I should roll the dice
+- `2:14` And the feeling that I'm feelin'
+- `2:16` Didn't happen over nigh
+- `2:17` I got old homies askin', what the moments like
+- `2:20` Well, you coulda been here
+- `2:21` But now you owe a price, yeah
+
+## My Own Way
+
+- `0:00` Music
+- `0:24` Misstep or misdirection rhymes like this a weapon gotta give a blessing said the kids up in my section
+- `0:29` See life is just some tricks and lessons, I got homies that work their ass off
+- `0:32` It's a bitch when a rent is past the deadline, listen to the message
+- `0:35` These raps a head cry, in the dip when I test it
+- `0:38` I've been nacked a dead shot, no kidding, I'm so stressed bitch
+- `0:41` But I didn't sit on my bed in wine, I prefered pen and rhymes
+- `0:45` That's above the echelon, yeah, I relented lies
+- `0:47` Left them mesmerized, now they recognize
+- `0:50` To get what I'm sayin', you gotta listen ten times
+- `0:53` I said I'm probably higher than competitors, got a little rich
+- `0:58` My desire is to fed the verbs
+- `1:00` Now the media can look at me and measure worth
+- `1:03` I've been so high up and down, I'll sometimes pleasure hurts
+- `1:06` With these rhymes, homie, I've been defending the first
+- `1:09` But my boy told me I ain't like Kendra Gandalern
+- `1:12` My own way, dreams are getting millions baby
+- `1:15` I am so paid, but all my problems right now
+- `1:18` They won't go away, and to keep it real
+- `1:20` I've been feeling low today
+- `1:22` I won't feel better till I do it
+- `1:24` My own way, dreams are getting millions baby
+- `1:27` But all my problems right now, they won't go away
+- `1:31` And to keep it real, I've been feeling low today
+- `1:34` I won't feel better till I do it
+- `1:36` On my fucking own, like my whole life
+- `1:39` Running's what I've known
+- `1:40` 24 years in, I've got nothing to show
+- `1:43` But at least I got my homies yet, yet, yet, yeah
+- `1:46` Love is the code, I've been depressed lately
+- `1:49` And I just wanna go, I'm a mess daily
+- `1:52` Watch my tears on the floor
+- `1:54` God, I know you got me, but there's fear in my soul
+- `1:56` So can you take the wheel and start steering on the road?
+- `1:59` I'm finished with the gimmicks in my life, I gotta end it
+- `2:02` But the image that I scripted is so hype and independent
+- `2:05` But I struggle with my own expectations
+- `2:08` To be the best of all time, the throne is death for greatness
+- `2:11` So to all the colds, K-DOT drinks, I banded a waitlist
+- `2:14` Cause my soul is great, watch my game as I play it
+- `2:17` And now it's safe to say it, my fate I fucking change it
+- `2:20` But none of the shit that I do, whatever makes sense if it wasn't
+- `2:24` Dreams are gettin' millions, baby, I am so paid
+- `2:27` But all my problems right now, they won't go away
+- `2:30` And to keep it real, I've been feelin' low today
+- `2:33` I won't feel better till I do it, my own way
+- `2:36` Dreams are gettin' millions, baby, I am so paid
+- `2:39` But all my problems right now, they won't go away
+- `2:42` And to keep it real, I've been feelin' low today
+- `2:45` I won't feel better till I do it, my own way
+- `2:48` My own way, my own way
+- `2:50` My own way, my own way
+- `2:53` My own way
+- `2:59` My own way
+
+## Grade A Love
+
+- `0:00` When I think about you, when I'm tricking round to
+- `0:13` It's truly prevalent on my conscience It's evident that I've lost it
+- `0:17` I meant to shit so much, thought it was God sent you got a key to my heart
+- `0:21` No, I never locked it, I see we apart Felt like I dropped shit on the ground floor
+- `0:25` Well, they my hard drop, but I found yours
+- `0:27` It's crazy when you want a different type of wave
+- `0:29` Like you spend days on days with each other
+- `0:31` And you gain strength, keep on pushing each other to the gate break
+- `0:34` And then you make up, you had a day safe
+- `0:36` All of this shit, just to maintain
+- `0:38` Is we fucking the night, you know I'm prepping for that shit
+- `0:41` Like it's game day, wait, wait
+- `0:43` We can talk the shit out, we can save face
+- `0:45` Girl, let me ask to the date break
+- `0:48` Love like this, so great, hey
+- `0:50` You was there for me on my rainy days
+- `0:52` Summer so, you always made me late
+- `0:54` I felt like Nirvana, didn't deserve your honor
+- `0:59` I swear if you love me, my word is my bond, yeah
+- `1:03` Okay, okay, okay, really though I understand you better
+- `1:05` Hope you feel me though, I know the damn is 7th
+- `1:08` I don't wanna break through walls, mm
+- `1:10` I just wanna live honesty and make you call
+- `1:12` I left my phone number at the desk counter
+- `1:14` I don't fucking think y'all get the depth about it
+- `1:17` She ain't no ordinary, more but cherry sin
+- `1:19` On the top of the Sunday, hot
+- `1:21` That's a normal parent
+- `1:21` Maybe turn around on a one-way even when it was burnt ground in a dumb game
+- `1:25` So it's hard to make this less than complex. It's a lot in this book this section progress
+- `1:30` What's inside my guy yet message honest and the method harmless please don't leave baby because the exit hasn't come yet
+- `1:36` And even if we got together, you know, I'll protect you regardless
+- `1:39` Girl I love you as to the daybreak love like this so great
+- `1:43` Hey, you was there for me on my rainy days so much so you always made me late
+- `1:48` Felt like nirvana, didn't deserve your honor
+- `1:52` I swear if you love me, my word is my banja
+- `1:57` Girl, love your ass till the day break
+- `1:59` Love like this, so great, ayy
+- `2:01` You was there for me on my rainy days
+- `2:04` So much so, you always made me late
+- `2:06` Felt like nirvana, didn't deserve your honor
+- `2:10` I swear if you love me, my word is my banja
+- `2:18` Not like this is so great, hey
+- `2:25` Not like this is so great, hey
+- `2:32` Great day, great day, great day
