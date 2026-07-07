@@ -170,7 +170,7 @@ FRAG_DEFS = [  # name, panel, rel cx, cy, rel w, h
     ('clock',      'a14', .82, .22, .32, .42),
     ('citylights', 'b9',  .50, .30, .70, .45),
 ]
-WORDS = [('NO WAY OUT', 'white'), ('ERIE', 'blue'), ('PITTSBURGH', 'gold'),
+WORDS = [('814 BLOOD', 'white'), ('ERIE', 'blue'), ('PITTSBURGH', 'gold'),
          ('814 X 412', 'white'), ('NO HANDOUTS', 'blue'), ('BUILT NOT GIVEN', 'gold')]
 
 def make_word(text, tint, px=120, seed=1):
@@ -233,8 +233,8 @@ def do_prep():
         px = 150 if txt == 'NO WAY OUT' else 108
         for v in range(2):
             words[f'w{i}_{v}'] = make_word(txt, tint, px, seed=i * 10 + v)
-    words['title_0'] = make_word('NO WAY OUT', 'white', 150, seed=99)
-    words['title_1'] = make_word('814 X 412', 'gold', 96, seed=98)
+    words['title_0'] = make_word('814 BLOOD', 'white', 150, seed=99)
+    words['title_1'] = make_word('FT. KING KEEV', 'gold', 84, seed=98)
     np.savez_compressed(os.path.join(ADIR, 'words.npz'), **words)
     # global textures
     paper = multi_noise(W, H, 777, ((5, .45), (18, .3), (90, .25)))
@@ -302,7 +302,7 @@ def do_prep():
 SCENES = [
     # -- INTRO 0:00-0:15 ------------------------------------------------
     dict(t=0.0,  mode='reveal', plate='a9', energy='blue'),
-    dict(t=4.2,  plate='a7', z=(1.05, 1.22), pan=((-.1, 0), (.1, 0)), energy='both',
+    dict(t=4.2,  plate='b4', z=(1.05, 1.22), pan=((-.1, 0), (.1, 0)), energy='both',
          frags=[('news1', 2)], headline=True),
     dict(t=8.2,  plate='face814', z=(1.02, 1.2), pan=((0, -.05), (0, .05)), energy='blue',
          breathe=True),
@@ -363,7 +363,7 @@ SCENES = [
     dict(t=115.0, mode='poster'),
 ]
 CHAOS_POOL = ['a4', 'a6', 'a9', 'a10', 'a11', 'a13', 'face814', 'face412',
-              'hood814', 'hood412', 'a7', 'a12', 'b4', 'b8', 'b9', 'b10', 'a15']
+              'hood814', 'hood412', 'b7', 'a12', 'b4', 'b8', 'b9', 'b10', 'a15']
 FLASH_POOL = ['hood814', 'hood412', 'face814', 'face412', 'a9', 'a10']
 LAYOUTS = [
     [(0, 0, 1 / 3, 1), (1 / 3, 0, 2 / 3, 1), (2 / 3, 0, 1, 1)],
@@ -524,13 +524,15 @@ class Engine:
             x, y, op = self.frag_path(name, seed, t0, t1, t, sc.get('wind', False))
             self.blit(out, self.frags[name][(jidx + seed) % 5], x, y, op * 0.92)
         if sc.get('headline'):
-            # flickering headline scraps along the top band
+            # flickering headline scraps pinned to the frame corners (never on faces)
             for k in range(3):
                 hr = rng('head', k)
                 fl = 0.55 + 0.45 * (rng('headf', f // 2, k).random())
                 nm = ('news1', 'news2', 'clock')[k]
-                self.blit(out, self.frags[nm][(jidx + k) % 5],
-                          hr.uniform(.03, .75) * W, hr.uniform(.0, .08) * H, 0.7 * fl)
+                spr = self.frags[nm][(jidx + k) % 5][::2, ::2]
+                x = hr.uniform(.01, .10) * W if hr.random() < .5 else hr.uniform(.78, .88) * W
+                y = hr.uniform(.0, .05) * H if hr.random() < .5 else hr.uniform(.70, .80) * H
+                self.blit(out, spr, x, y, 0.7 * fl)
         return out
 
     def compose_reveal(self, sc, t, u, f, jx, jy):
@@ -866,7 +868,7 @@ def do_finalize():
     with open(lst, 'w') as fh:
         for i in range(NCHUNK):
             fh.write(f"file 'c{i:03d}.mp4'\n")
-    final = os.path.join(BASE, 'No_Way_Out_814x412_2min.mp4')
+    final = os.path.join(BASE, '814_Blood_ft_King_Keev_2min.mp4')
     subprocess.run([FF, '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lst,
                     '-i', SONG, '-map', '0:v:0', '-map', '1:a:0', '-t', str(DUR),
                     '-af', f'afade=t=out:st={DUR - 3}:d=3',
