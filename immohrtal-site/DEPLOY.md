@@ -1,16 +1,22 @@
-# Go live — 2 minutes on Vercel
+# Go live — 2 minutes on Netlify
 
-The site is fully built and host-portable (works at a domain root or
-any subpath). Same setup as themohrmedia.com, which already deploys
-from this repo.
+⚠ **Host on Netlify, not Vercel.** The newsletter gate uses Netlify
+Forms — signups are only captured when the site is served by Netlify.
 
-## Steps (one time)
+## Fastest path (no git wiring): Netlify Drop
 
-1. Merge PR #147 into `main` (Vercel deploys from main by default).
-2. Go to vercel.com → **Add New… → Project** → Import `dillonmohr8777/dillon-os`.
-3. Set **Root Directory** to `immohrtal-site`.
-4. Framework preset: **Vite** (build `npm run build`, output `dist` — auto-detected).
-5. Click **Deploy**. You get a live URL like `immohrtal-site.vercel.app` immediately.
+1. `npm run build` (or grab the dist zip Claude sends you).
+2. Go to **app.netlify.com/drop** and drag the `dist/` folder in.
+3. Live in ~30 seconds. Forms are auto-detected from the built HTML.
+
+## Proper path (auto-deploys on merge)
+
+1. Merge PR #158 into `main`.
+2. Netlify → **Add new site → Import an existing project** →
+   `dillonmohr8777/dillon-os`.
+3. Base directory `immohrtal-site`, build `npm run build`, publish
+   `immohrtal-site/dist`.
+4. Deploy. Every future merge to `main` redeploys automatically.
 
 ## Custom domain (whenever you buy one)
 
