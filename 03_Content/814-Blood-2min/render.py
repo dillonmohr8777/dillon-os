@@ -27,6 +27,8 @@ SHEET_D = UP + 'fda85726-27CA599CCE024FEDA8ED14AADCE0D8A5.png'   # real-face sto
 HERO_IMG = UP + 'e6bc65da-IMG_2530.jpeg'                          # 814 white hoodie + 412 back
 HI_CITIES = UP + '998219f9-IMG_2536.png'                          # hi-res ERIE|PITTSBURGH lightning
 HI_BACKS = UP + '7a00e3e8-IMG_2535.png'                           # hi-res FROM ERIE TO THE BURGH backs
+SHEET_E = UP + '4fc7dfd4-IMG_2547.jpeg'                           # comic 3x3 backs storyboard
+DIL_IMG = UP + '0002d2f9-IMG_2546.jpeg'                           # Dillon intro shot (b/w Erie collage)
 
 W, H, FPS = 1920, 1080, 24
 DUR = 140.15                                   # full song (2:20)
@@ -153,6 +155,18 @@ def do_slice():
         im = Image.open(path).convert('RGB')
         w, h = im.size
         im.crop((int(.091 * w), 0, int(.909 * w), h)).save(os.path.join(PDIR, name + '.png'))
+    # comic 3x3 backs sheet -> e1..e9
+    im = Image.open(SHEET_E).convert('RGB')
+    w, h = im.size
+    for r in range(3):
+        for c in range(3):
+            box = (int(c * w / 3) + 6, int(r * h / 3) + 6,
+                   int((c + 1) * w / 3) - 6, int((r + 1) * h / 3) - 6)
+            im.crop(box).save(os.path.join(PDIR, f'e{r * 3 + c + 1}.png'))
+    # Dillon intro plate
+    im = Image.open(DIL_IMG).convert('RGB')
+    w, h = im.size
+    im.crop((0, 0, w, int(h * .985))).save(os.path.join(PDIR, 'dil.png'))
     for path, boxes in ((SHEET_C, C_BOXES), (SHEET_D, D_BOXES), (HERO_IMG, H_BOXES)):
         im = Image.open(path).convert('RGB')
         w, h = im.size
@@ -383,29 +397,29 @@ def do_prep():
 # ---------------------------------------------------------------- 4. timeline
 # target cut times (snapped to onsets); scenes carry energy color + fx flags
 
-FLIP_POOL_1 = ['h3', 'a9', 'c4', 'b9', 'erie_side', 'c8', 'a15', 'a10', 'c10', 'd7']
-FLIP_POOL_2 = ['x1', 'c13', 'd6', 'erie_side', 'd7', 'a15', 'c16', 'a7', 'c5', 'c11']
+FLIP_POOL_1 = ['h3', 'a9', 'e1', 'b9', 'erie_side', 'c8', 'e4', 'a10', 'c10', 'e9']
+FLIP_POOL_2 = ['x1', 'e2', 'd6', 'erie_side', 'e6', 'a15', 'e5', 'a7', 'c5', 'c11']
 SCENES = [
     # -- INTRO 0:00-0:17: backs to the camera, facing the cities ----------
     dict(t=0.0,  mode='reveal', plate='c2', energy='blue'),
-    dict(t=4.9,  plate='x1', z=(1.02, 1.16), pan=((-.15, 0), (.15, 0)), energy='both',
+    dict(t=4.9,  plate='dil', z=(1.02, 1.14), pan=((-.08, 0), (.08, 0)), energy='blue',
          frags=[('news1', 2)], headline=True),
-    dict(t=9.6,  plate='x2', z=(1.0, 1.14), pan=((0, -.04), (0, .04)), energy='both',
+    dict(t=9.6,  plate='h1', z=(1.0, 1.12), pan=((.05, -.03), (-.05, .03)), energy='gold',
          breathe=True),
-    dict(t=13.6, plate='c8', z=(1.02, 1.16), pan=((0, .04), (.06, -.04)), energy='gold',
+    dict(t=13.6, plate='x2', z=(1.02, 1.14), pan=((0, .04), (.06, -.04)), energy='both',
          breathe=True, flash=True),
     # -- BUILD 1 0:17-0:41: 412 blue block into 814 gold block -------------
     dict(t=17.5, plate='h3', z=(1.16, 1.02), pan=((-.2, 0), (.2, 0)), energy='blue',
          frags=[('waves', 3)], wind=True, flash=True),
-    dict(t=20.4, plate='b9', z=(1.02, 1.16), pan=((.1, 0), (-.1, 0)), energy='blue',
+    dict(t=20.4, plate='e1', z=(1.02, 1.16), pan=((.1, 0), (-.1, 0)), energy='blue',
          frags=[('lighthouse', 4), ('news2', 44)], wind=True, flash=True),
-    dict(t=23.4, plate='a9', z=(1.04, 1.16), pan=((0, 0), (0, .06)), energy='blue',
+    dict(t=23.4, plate='e4', z=(1.04, 1.16), pan=((0, 0), (0, .06)), energy='blue',
          breathe=True, flash=True),
     dict(t=26.3, plate='c4', z=(1.16, 1.02), pan=((.15, 0), (-.15, 0)), energy='blue',
          frags=[('news1', 5)], wind=True, flash=True),
-    dict(t=29.2, plate='c10', z=(1.02, 1.16), pan=((-.1, 0), (.15, 0)), energy='gold',
+    dict(t=29.2, plate='e2', z=(1.02, 1.16), pan=((-.1, 0), (.15, 0)), energy='gold',
          frags=[('bridge', 6)], wind=True, flash=True),
-    dict(t=32.1, plate='d7', z=(1.16, 1.02), pan=((.2, 0), (-.2, 0)), energy='gold',
+    dict(t=32.1, plate='e3', z=(1.16, 1.02), pan=((.2, 0), (-.2, 0)), energy='gold',
          frags=[('skyline', 7)], wind=True, flash=True),
     dict(t=35.0, plate='a10', z=(1.04, 1.16), pan=((0, .04), (0, -.04)), energy='gold',
          breathe=True, flash=True),
@@ -415,7 +429,7 @@ SCENES = [
          breathe=True, pulse=1.5, whip=True),
     dict(t=44.4, plate='x2', z=(1.14, 1.0), pan=((-.2, 0), (.2, 0)), energy='both',
          frags=[('news1', 9)], whip=True),
-    dict(t=47.9, plate='c13', z=(1.02, 1.16), pan=((-.12, 0), (.12, 0)), energy='both',
+    dict(t=47.9, plate='e5', z=(1.02, 1.16), pan=((-.12, 0), (.12, 0)), energy='both',
          breathe=True, pulse=1.5, whip=True),
     dict(t=51.4, plate='d6', z=(1.0, 1.16), pan=((0, 0), (0, 0)), energy='both',
          pulse=1.6, whip=True),
@@ -431,12 +445,12 @@ SCENES = [
          frags=[('waves', 12)], wind=True, flash=True),
     dict(t=91.7, plate='x2', z=(1.18, 1.0), pan=((-.2, 0), (.2, 0)), energy='both',
          wind=True, frags=[('news1', 13)], flash=True),
-    dict(t=95.8, plate='pgh_side', z=(1.05, 1.22), pan=((.1, 0), (-.12, 0)), energy='gold',
+    dict(t=95.8, plate='e7', z=(1.05, 1.22), pan=((.1, 0), (-.12, 0)), energy='gold',
          frags=[('bridge', 14)], flash=True),
     dict(t=99.9, mode='collide'),
     dict(t=108.6, plate='x1', z=(1.26, 1.0), pan=((0, 0), (0, -.05)), energy='both',
          pulse=1.7, flash=True),
-    dict(t=112.6, plate='a7', z=(1.14, 1.02), pan=((-.1, 0), (.1, 0)), energy='both',
+    dict(t=112.6, plate='e8', z=(1.14, 1.02), pan=((-.1, 0), (.1, 0)), energy='both',
          frags=[('citylights', 15)], wind=True),
     # -- HERO 1:57-2:14 ----------------------------------------------------
     dict(t=116.8, mode='smoke', plate='d5', push=(0.84, 0.94)),
@@ -446,9 +460,9 @@ SCENES = [
     # -- END FRAME 2:14-2:20 ------------------------------------------------
     dict(t=134.3, mode='poster'),
 ]
-CHAOS_POOL = ['c2', 'c4', 'c8', 'c10', 'c13', 'c14', 'd6', 'd7', 'x2', 'd10',
-              'd12', 'c16', 'a9', 'a10', 'a7', 'b9', 'h3', 'a4', 'c5', 'c11',
-              'c1', 'c15', 'erie_side', 'pgh_side', 'hood814', 'hood412']
+CHAOS_POOL = ['c2', 'c4', 'c8', 'c10', 'e1', 'c14', 'd6', 'd7', 'x2', 'd10',
+              'd12', 'c16', 'a9', 'a10', 'e2', 'b9', 'h3', 'e5', 'e6', 'c11',
+              'e9', 'c15', 'erie_side', 'pgh_side', 'hood814', 'hood412']
 FLASH_POOL = ['hood814', 'hood412', 'a9', 'a10', 'c8', 'c10', 'h3', 'b9']
 LAYOUTS = [
     [(0, 0, 1 / 3, 1), (1 / 3, 0, 2 / 3, 1), (2 / 3, 0, 1, 1)],
@@ -478,9 +492,9 @@ class Engine:
         self.strong = np.asarray(self.audio['strong'], np.float32)
         self.plates = {n[:-4]: np.load(os.path.join(ADIR, n))
                        for n in os.listdir(ADIR)
-                       if n.endswith('.npy') and (n[0] in 'abcdhx' and n[1].isdigit()
+                       if n.endswith('.npy') and (n[0] in 'abcdehx' and n[1].isdigit()
                                                   or n.startswith(('face', 'hood', 'duo',
-                                                                   'erie_', 'pgh_')))}
+                                                                   'erie_', 'pgh_', 'dil')))}
         fz = np.load(os.path.join(ADIR, 'frags.npz'))
         self.frags = {}
         for k in fz.files:
@@ -845,7 +859,7 @@ class Engine:
 
         # side plates: 412 blue Erie back-shot left, 814 gold Pittsburgh right
         sw = int(pw * 0.26); sh2 = int(ph * 0.78); sy = int(ph * 0.14)
-        for px, plate, col, pan in ((int(pw * 0.01), 'c2', BLUE, 0.0),
+        for px, plate, col, pan in ((int(pw * 0.01), 'h3', BLUE, 0.0),
                                     (pw - sw - int(pw * 0.01), 'c8', GOLD, 0.0)):
             view = self.plate_view(self.plates[plate], 1.02, pan, 0, 0, 0, sw, sh2)
             luma = view.mean(axis=2, keepdims=True) / 255
@@ -854,9 +868,12 @@ class Engine:
             view = view * (1 - rim[..., None] * .5) + rim[..., None] * .5 * (0.5 * 228 + 0.5 * col)
             spr = np.dstack([np.clip(view, 0, 255), a * 255 * .96]).astype(np.uint8)
             blit_big(spr, px, sy)
-        # centre duo (the one allowed camera-facing shot), torn with drop shadow
-        plate = self.plates['d5']
-        dh = int(ph * 0.72); dw = int(dh * plate.shape[1] / plate.shape[0])
+        # centre: comic 814|412 graffiti backs panel — no faces in the outro;
+        # edge-pad so the torn rim never eats the numbers
+        plate = self.plates['e8']
+        pad = int(plate.shape[0] * 0.09)
+        plate = np.pad(plate, ((pad, pad), (pad, pad), (0, 0)), mode='edge')
+        dh = int(ph * 0.62); dw = int(dh * plate.shape[1] / plate.shape[0])
         im = np.asarray(Image.fromarray(plate).resize((dw, dh), Image.BILINEAR), np.float32)
         a, rim = torn_alpha(dw, dh, 9911)
         im = im * (1 - rim[..., None] * .5) + 230 * rim[..., None] * .5
