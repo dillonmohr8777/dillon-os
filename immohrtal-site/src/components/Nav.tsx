@@ -17,6 +17,7 @@ export function Nav({ home = true, base = './' }: { home?: boolean; base?: strin
 
   const links: Array<[string, string]> = [
     [`${base}about.html`, 'About'],
+    [`${base}video.html`, 'Video'],
     [`${base}blog.html`, 'Blog'],
     [`${base}contact.html`, 'Contact'],
   ]
