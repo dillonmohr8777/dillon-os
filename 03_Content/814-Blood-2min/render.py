@@ -104,6 +104,13 @@ def do_slice():
     for k, (x0, y0, x1, y1) in B_BOXES.items():
         im.crop((int(x0 * w) + 5, int(y0 * h) + 5, int(x1 * w) - 5, int(y1 * h) - 5)) \
           .save(os.path.join(PDIR, k + '.png'))
+    # face-free city side-plates for the collide sequence
+    im = Image.open(SHEET_A).convert('RGB')
+    w, h = im.size
+    im.crop((int(.57 * w / 4), 7, int(w / 4) - 7, int(h / 4) - 7)) \
+      .save(os.path.join(PDIR, 'erie_side.png'))       # a0 right: lighthouse + waves
+    im.crop((int((2 + .58) * w / 4), 7, int(3 * w / 4) - 7, int(h / 4) - 7)) \
+      .save(os.path.join(PDIR, 'pgh_side.png'))        # a2 right: PGH sign + bridge
     im = Image.open(PORTRAIT).convert('RGB')
     w, h = im.size
     for k, (x0, y0, x1, y1) in P_BOXES.items():
@@ -160,14 +167,14 @@ def do_audio():
 
 # ---------------------------------------------------------------- 3. prep
 
-FRAG_DEFS = [  # name, panel, rel cx, cy, rel w, h
-    ('lighthouse', 'a0',  .78, .42, .34, .58),
-    ('waves',      'a0',  .60, .82, .60, .34),
-    ('bridge',     'a2',  .55, .82, .62, .34),
-    ('skyline',    'a3',  .72, .30, .46, .50),
+FRAG_DEFS = [  # name, panel, rel cx, cy, rel w, h — scenery only, never faces
+    ('lighthouse', 'a0',  .84, .40, .26, .52),
+    ('waves',      'a0',  .80, .83, .38, .30),
+    ('bridge',     'a10', .32, .56, .40, .28),
+    ('skyline',    'a3',  .82, .28, .32, .46),
     ('news1',      'a10', .18, .74, .34, .44),
-    ('news2',      'a13', .84, .35, .30, .55),
-    ('clock',      'a14', .82, .22, .32, .42),
+    ('news2',      'a4',  .84, .80, .28, .34),
+    ('clock',      'a14', .87, .20, .22, .38),
     ('citylights', 'b9',  .50, .30, .70, .45),
 ]
 WORDS = [('814 BLOOD', 'white'), ('ERIE', 'blue'), ('PITTSBURGH', 'gold'),
@@ -394,7 +401,8 @@ class Engine:
         self.plates = {n[:-4]: np.load(os.path.join(ADIR, n))
                        for n in os.listdir(ADIR)
                        if n.endswith('.npy') and (n[0] in 'ab' and n[1].isdigit()
-                                                  or n.startswith(('face', 'hood', 'duo')))}
+                                                  or n.startswith(('face', 'hood', 'duo',
+                                                                   'erie_', 'pgh_')))}
         fz = np.load(os.path.join(ADIR, 'frags.npz'))
         self.frags = {}
         for k in fz.files:
@@ -607,8 +615,9 @@ class Engine:
         return out
 
     def compose_collide(self, sc, t, u, f, jx, jy):
-        left = self.plate_view(self.plates['a0'], 1.12 + 0.1 * u, -0.2 + 0.3 * u, 0, jx, jy)
-        right = self.plate_view(self.plates['a2'], 1.22 - 0.1 * u, 0.2 - 0.3 * u, 0, jx, jy)
+        # face-free full-res panels: 814 blue brick vs 412 gold sign colliding
+        left = self.plate_view(self.plates['a9'], 1.12 + 0.1 * u, -0.2 + 0.3 * u, 0, jx, jy)
+        right = self.plate_view(self.plates['a10'], 1.22 - 0.1 * u, 0.2 - 0.3 * u, 0, jx, jy)
         for pl, col in ((left, BLUE), (right, GOLD)):
             luma = pl.mean(axis=2, keepdims=True) / 255
             pl += (col / 255) * (luma ** 1.6) * 44
