@@ -17,6 +17,11 @@ TRANS = json.load(open(os.path.join(HERE, "data", "transcripts.json")))
 
 A814 = f"{UPLOADS}/d23670e1-814_Blood_ft._king_Keev.mp3"
 AOMW = f"{UPLOADS}/c84a3b09-On_My_Way_ft._King_Keev.mp3"
+ANOTE = f"{UPLOADS}/b07846c9-Picking_Up_My_Notepad.mp3"
+AMMB = f"{UPLOADS}/cd64d468-My_Mothers_Baby.wav"
+ADICE = f"{UPLOADS}/79d1f138-Roll_the_Dice.mp3"
+AMOW = f"{UPLOADS}/e7ac92cc-My_Own_Way.mp3"
+AGAL = f"{UPLOADS}/cc31a42f-Grade_A_Love.mp3"
 
 def mmss(t):
     m, s = t.split(":"); return int(m)*60 + int(s)
@@ -39,6 +44,12 @@ JOBS = {
     "814-30s":     lambda: clip("814-30s", A814, T814, "814 Blood", "TRK 03 // FT. KING KEEV", 25, 30),
     "onmyway-15s": lambda: clip("onmyway-15s", AOMW, TOMW, "On My Way", "TRK 09 // FT. KING KEEV", 40, 15),
     "onmyway-30s": lambda: clip("onmyway-30s", AOMW, TOMW, "On My Way", "TRK 09 // FT. KING KEEV", 120, 30),
+    # solo tracks — best15s windows from data/analysis.json
+    "notepad-15s":     lambda: clip("notepad-15s", ANOTE, "Picking Up My Notepad", "Picking Up My Notepad", "TRK 02", 112, 15),
+    "mothersbaby-15s": lambda: clip("mothersbaby-15s", AMMB, "My Mothers Baby", "My Mothers Baby", "TRK 04", 30, 15),
+    "rollthedice-15s": lambda: clip("rollthedice-15s", ADICE, "Roll the Dice", "Roll the Dice", "TRK 05", 55, 15),
+    "myownway-15s":    lambda: clip("myownway-15s", AMOW, "My Own Way", "My Own Way", "TRK 06", 125, 15),
+    "gradealove-15s":  lambda: clip("gradealove-15s", AGAL, "Grade A Love", "Grade A Love", "TRK 08", 45, 15),
 }
 
 if __name__ == "__main__":

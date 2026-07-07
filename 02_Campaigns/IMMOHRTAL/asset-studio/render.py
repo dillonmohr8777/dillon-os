@@ -198,6 +198,12 @@ SPECS = {
     "quote-day-broke":   (1080,1080, lambda: quote_day("So you know I got no plans to be broke.", "SESSION 001 // BAR 04")),
     "quote-day-pasun":   (1080,1080, lambda: quote_day("Sittin' Pennsylvania sun with some California weed.", "TRK 09 // ON MY WAY")),
     "quote-night-tatted":(1080,1080, lambda: quote_night("Got it tatted on the stomach just in case you ain't know.", "TRK 03 // 814 BLOOD")),
+    # solo tracks — bars auto-transcribed, correct in ../Tracks/ before posting
+    "quote-day-rain":    (1080,1080, lambda: quote_day("Never run from the rain — you can learn from depression and a ton of the pain.", "TRK 02 // PICKING UP MY NOTEPAD")),
+    "quote-night-shine": (1080,1080, lambda: quote_night("They was tryna guess who I was my whole life — I promise for now that I'm gon' shine.", "TRK 04 // MY MOTHERS BABY")),
+    "quote-night-dice":  (1080,1080, lambda: quote_night("The feeling that I'm feeling didn't happen overnight.", "TRK 05 // ROLL THE DICE")),
+    "quote-day-ownway":  (1080,1080, lambda: quote_day("I won't feel better till I do it my own way.", "TRK 06 // MY OWN WAY")),
+    "quote-day-rainydays":(1080,1080, lambda: quote_day("You was there for me on my rainy days.", "TRK 08 // GRADE A LOVE")),
     "story-814":         (1080,1920, lambda: story("814 Blood", "TRK 03", "riding through my hometown", M814)),
     "story-onmyway":     (1080,1920, lambda: story("On My Way", "TRK 09", "sun on my face", MOMW)),
     "thumb-814":         (1280,720,  lambda: thumb("814 Blood", "OFFICIAL VISUALIZER · FT. KING KEEV", "TRK 03")),
