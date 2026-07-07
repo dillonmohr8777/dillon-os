@@ -201,7 +201,50 @@ def tracklist():
   </div>
 </div>"""
 
+def announce_presave():
+    return f"""
+<div class="day" style="width:100%;height:100%;padding:84px;display:flex;flex-direction:column;align-items:center;text-align:center">
+  <div class="mono" style="display:flex;justify-content:space-between;width:100%;font-size:18px;color:rgba(20,25,34,.5)">
+    <span>SESSION 001</span><span>IMMOHRTAL</span>
+  </div>
+  <img src="file://{PUB}/cover.jpg" style="width:560px;height:560px;border:1px solid rgba(20,25,34,.25);margin-top:56px;box-shadow:0 30px 70px rgba(20,25,34,.18)">
+  <div class="anton" style="font-size:72px;line-height:.96;color:{INK};margin-top:52px">DANCE WITH THE DELUSIONAL</div>
+  <div class="serif-i" style="font-size:30px;color:rgba(20,25,34,.72);margin-top:18px">the first IMMOHRTAL record</div>
+  <div style="flex:1"></div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;width:100%;border-top:1px solid rgba(20,25,34,.18);padding-top:26px">
+    <span class="mono" style="font-size:19px;color:{SIGNAL_TXT}">PRE-SAVE // LINK IN BIO</span>
+    <span class="mono" style="font-size:19px;color:rgba(20,25,34,.5)">OUT --.--.--</span>
+  </div>
+</div>"""
+
+def announce_outnow():
+    return f"""
+<div class="night" style="width:100%;height:100%;padding:84px;display:flex;flex-direction:column;align-items:center;text-align:center">
+  <div class="mono" style="display:flex;justify-content:space-between;width:100%;font-size:18px;color:rgba(233,238,246,.55)">
+    <span>SESSION 001</span><span style="color:{SIGNAL_NIGHT}">IMMOHRTAL</span>
+  </div>
+  <div class="anton chrome" style="font-size:150px;line-height:.94;margin-top:64px">OUT NOW.</div>
+  <img src="file://{PUB}/cover.jpg" style="width:560px;height:560px;border:1px solid rgba(233,238,246,.28);margin-top:46px;box-shadow:0 34px 80px rgba(0,0,0,.55)">
+  <div class="serif-i" style="font-size:32px;color:rgba(233,238,246,.8);margin-top:44px">the first IMMOHRTAL record &mdash; 11 tracks</div>
+  <div style="flex:1"></div>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;width:100%;border-top:1px solid rgba(233,238,246,.2);padding-top:26px">
+    <span class="mono" style="font-size:18px;color:rgba(233,238,246,.6)">SPOTIFY &middot; APPLE &middot; YOUTUBE &middot; EVERYWHERE</span>
+    <span class="mono" style="font-size:18px;color:{GREEN_NIGHT}">IF NOT NOW, WHEN</span>
+  </div>
+</div>"""
+
+def spotify_header():
+    return f"""
+<div class="night" style="width:100%;height:100%;position:relative">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,158,255,0) 40%,rgba(31,158,255,.12) 72%,rgba(23,168,107,.2) 100%)"></div>
+  <div class="mono" style="position:absolute;right:84px;top:64px;font-size:20px;color:rgba(233,238,246,.55)">SESSION 001 &middot; ERIE 42.1292 N</div>
+  <div class="mono" style="position:absolute;right:84px;bottom:64px;font-size:20px;color:{SIGNAL_NIGHT}">DANCE WITH THE DELUSIONAL</div>
+</div>"""
+
 SPECS = {
+    "announce-presave":  (1080,1350, announce_presave),
+    "announce-outnow":   (1080,1350, announce_outnow),
+    "spotify-header":    (2660,1140, spotify_header),
     "quote-day-hands":   (1080,1080, lambda: quote_day("I'mma hold your hands if they cold.", "SESSION 001 // BAR 02")),
     "quote-day-broke":   (1080,1080, lambda: quote_day("So you know I got no plans to be broke.", "SESSION 001 // BAR 04")),
     "quote-day-pasun":   (1080,1080, lambda: quote_day("Sittin' Pennsylvania sun with some California weed.", "TRK 09 // ON MY WAY")),
