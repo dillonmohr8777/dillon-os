@@ -1,5 +1,6 @@
 import { tracks } from '../content/album'
 import { usePlayer } from '../audio/PlayerContext'
+import { useGate } from './EmailGate'
 
 function PlayGlyph({ playing }: { playing: boolean }) {
   return playing ? (
@@ -15,7 +16,8 @@ function PlayGlyph({ playing }: { playing: boolean }) {
 }
 
 export function Tracklist() {
-  const { currentIndex, playing, errorIndex, playTrack } = usePlayer()
+  const { currentIndex, playing, errorIndex } = usePlayer()
+  const { unlocked, requestPlay } = useGate()
   const anyAudio = tracks.some((t) => t.src)
 
   return (
@@ -45,7 +47,9 @@ export function Tracklist() {
                 <span className="track-note mono-tag block mt-0.5">
                   {failed
                     ? 'audio missing — drop the MP3 in /public/audio'
-                    : track.note ?? (hasAudio ? 'preview available' : 'track locked')}
+                    : hasAudio && !unlocked
+                      ? 'unlock — sign the list'
+                      : track.note ?? (hasAudio ? 'preview available' : 'track locked')}
                 </span>
               </span>
               <span className="flex items-center gap-4">
@@ -66,11 +70,13 @@ export function Tracklist() {
                   aria-label={
                     !hasAudio
                       ? `${track.title} — audio coming soon`
-                      : isCurrent && playing
-                        ? `Pause ${track.title}`
-                        : `Play ${track.title}`
+                      : !unlocked
+                        ? `Unlock ${track.title} preview`
+                        : isCurrent && playing
+                          ? `Pause ${track.title}`
+                          : `Play ${track.title}`
                   }
-                  onClick={() => playTrack(i)}
+                  onClick={() => requestPlay(i)}
                 >
                   <PlayGlyph playing={isCurrent && playing} />
                 </button>

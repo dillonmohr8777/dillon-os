@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { PlayerProvider } from './audio/PlayerContext'
+import { EmailGateProvider } from './components/EmailGate'
 import { useAfterHours } from './hooks/useAfterHours'
 import { useReveal } from './hooks/useReveal'
 import type { SpineEngine } from './spine/config'
@@ -21,6 +22,7 @@ export default function App() {
 
   return (
     <PlayerProvider>
+      <EmailGateProvider>
       <div className={`grain${dark ? ' page-dark' : ''}`}>
         <a className="skip-link" href="#listen">
           Skip to content
@@ -41,6 +43,7 @@ export default function App() {
         <Footer />
         <PlayerBar />
       </div>
+      </EmailGateProvider>
     </PlayerProvider>
   )
 }
