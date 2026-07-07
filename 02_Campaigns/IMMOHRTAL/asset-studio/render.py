@@ -54,6 +54,14 @@ def meter(heights, grad=f"linear-gradient(180deg,{SIGNAL},{GREEN})", gap=6, radi
 M814 = [30,55,80,45,95,60,35,75,50,88,40,65,92,58,34,72,48,84,38,62]
 MOMW = [22,40,60,38,72,52,30,64,44,78,36,58,80,50,28,66,42,74,32,56]
 
+import json as _json
+_WAVES = _json.load(open(os.path.join(HERE, "data", "waveforms.json")))
+def real_meter(track, n=20):
+    """n-bar meter sampled from the track's real waveform peaks."""
+    w = _WAVES[track]
+    step = len(w) // n
+    return [max(8, round(max(w[i*step:(i+1)*step]) * 100)) for i in range(n)]
+
 # ── asset builders ───────────────────────────────────────────────────
 def quote_day(bar, tag, footer_tag="IF NOT NOW, WHEN"):
     return f"""
@@ -204,8 +212,13 @@ SPECS = {
     "quote-night-dice":  (1080,1080, lambda: quote_night("The feeling that I'm feeling didn't happen overnight.", "TRK 05 // ROLL THE DICE")),
     "quote-day-ownway":  (1080,1080, lambda: quote_day("I won't feel better till I do it my own way.", "TRK 06 // MY OWN WAY")),
     "quote-day-rainydays":(1080,1080, lambda: quote_day("You was there for me on my rainy days.", "TRK 08 // GRADE A LOVE")),
-    "story-814":         (1080,1920, lambda: story("814 Blood", "TRK 03", "riding through my hometown", M814)),
-    "story-onmyway":     (1080,1920, lambda: story("On My Way", "TRK 09", "sun on my face", MOMW)),
+    "story-814":         (1080,1920, lambda: story("814 Blood", "TRK 03", "riding through my hometown", real_meter("814 Blood"))),
+    "story-onmyway":     (1080,1920, lambda: story("On My Way", "TRK 09", "sun on my face", real_meter("On My Way"))),
+    "story-notepad":     (1080,1920, lambda: story("Picking Up My Notepad", "TRK 02", "never run from the rain", real_meter("Picking Up My Notepad"))),
+    "story-mothersbaby": (1080,1920, lambda: story("My Mothers Baby", "TRK 04", "I promise for now that I'm gon' shine", real_meter("My Mothers Baby"))),
+    "story-rollthedice": (1080,1920, lambda: story("Roll the Dice", "TRK 05", "it didn't happen overnight", real_meter("Roll the Dice"))),
+    "story-myownway":    (1080,1920, lambda: story("My Own Way", "TRK 06", "I won't feel better till I do it my own way", real_meter("My Own Way"))),
+    "story-gradealove":  (1080,1920, lambda: story("Grade A Love", "TRK 08", "you was there for me on my rainy days", real_meter("Grade A Love"))),
     "thumb-814":         (1280,720,  lambda: thumb("814 Blood", "OFFICIAL VISUALIZER · FT. KING KEEV", "TRK 03")),
     "thumb-onmyway":     (1280,720,  lambda: thumb("On My Way", "OFFICIAL VISUALIZER · FT. KING KEEV", "TRK 09")),
     "thumb-album":       (1280,720,  lambda: thumb("Dance with the Delusional", "FULL ALBUM · SESSION 001", "11 TRKS")),
