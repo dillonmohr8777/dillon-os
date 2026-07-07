@@ -1,6 +1,6 @@
 # 814 Blood ft. King Keev — 2:00 Music Video (814 x 412)
 
-Two-minute 1920x1080/24fps music video for **"814 Blood" ft. King Keev**, built in the living
+Full-length (2:20) 1920x1080/24fps music video for **"814 Blood" ft. King Keev**, built in the living
 paper-collage language of the original No-Way-Out render (the stylistic
 reference) — torn newsprint, halftone dots, xerox grain, stop-motion
 jitter — upgraded with an **electric-blue / golden-yellow energy system**:
@@ -27,10 +27,10 @@ chunk-parallel and resumable.
 
 ```
 python3 render.py slice      # cut the two collage sheets + duo portrait into 32 panels
-python3 render.py audio      # onset/beat + intensity analysis of the first 120 s
+python3 render.py audio      # onset/beat + intensity analysis of the full song
 python3 render.py prep       # plates, torn fragments, word sprites, leaks/streaks/smoke textures
 python3 render.py preview    # 28-frame contact sheet (preview.png)
-python3 render.py render     # 2,880 frames @ 1920x1080/24fps, 16 chunks on 4 workers
+python3 render.py render     # 3,363 frames @ 1920x1080/24fps, 16 chunks on 4 workers
 python3 render.py finalize   # concat + mux song audio (AAC 256k, 3 s tail fade) -> MP4
 ```
 
