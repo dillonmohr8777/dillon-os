@@ -33,10 +33,15 @@ detects that form at deploy time — no config needed, but check:
 
 1. Netlify dashboard → **Forms** → enable form detection (one-time).
 2. Submissions appear under Forms → `immohrtal-list`, with the track
-   that triggered the signup in the `source` field.
-3. Add a notification (Forms → notifications) to get an email per
-   signup, or wire a Zapier/Make hook to push into a real mailer
-   (Mailchimp/ConvertKit) later.
+   that triggered the signup in the `source` field. **Export CSV** from
+   that screen any time — that's the master contact list.
+3. Forms → Form notifications → **Add notification → Email** →
+   `dillonmohr8777@gmail.com`. Every signup then lands in that inbox
+   in real time (email + which track hooked them).
+4. To email the list from Gmail: export the CSV, paste addresses into
+   **BCC** from dillonmohr8777@gmail.com. Fine up to a few hundred
+   contacts (Gmail caps ~500 recipients/day); past that, import the
+   CSV into Mailchimp/ConvertKit and send from there.
 
 Unlock state is per-device (`localStorage: immohrtal.list`). Free tier
 covers 100 submissions/month — upgrade or move to a mailer API if the
