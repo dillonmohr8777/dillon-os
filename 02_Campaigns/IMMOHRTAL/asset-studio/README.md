@@ -43,6 +43,25 @@ python3 motion.py                 # all motion assets
 python3 motion.py canvas-814      # one
 ```
 
+## Clip factory (`clips.py` → `out/motion/clip-*.mp4`)
+
+Batch-cuts each track's best-energy windows (per `data/analysis.json`)
+into captioned 1080×1920 verticals for TikTok/Reels/Shorts, using the
+lyric-clip treatment. Captions auto-pull from `data/transcripts.json`
+(⚠ auto-transcribed — correct in `../Tracks/` before posting).
+
+| Clip | Window | Why |
+|---|---|---|
+| `clip-814-15s` | 0:40–0:55 | Peak-energy 15s |
+| `clip-814-30s` | 0:25–0:55 | Best 30s run |
+| `clip-onmyway-15s` | 0:40–0:55 | First hook |
+| `clip-onmyway-30s` | 2:00–2:30 | Double-hook + Keev |
+
+## EPK (`epk.py` → `out/IMMOHRTAL-EPK.pdf`)
+
+One-page press kit (Letter, print-safe) — bio, angle, tracklist,
+cover + artist photo, booking contact. `epk-preview.png` for a quick look.
+
 ## Editing
 
 All copy/bars live in `render.py` (`SPECS` + builder functions).
