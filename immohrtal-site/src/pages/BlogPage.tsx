@@ -1,6 +1,7 @@
 import { posts } from '../content/blog'
 import { SubPage } from '../components/SubPage'
 import { TiltBox } from '../components/TiltBox'
+import { RichText } from '../components/RichText'
 
 export function BlogPage() {
   return (
@@ -51,7 +52,7 @@ export function BlogPage() {
               <div className="blog-number font-display">{String(i + 1).padStart(2, '0')}</div>
             </div>
 
-            <p className="blog-answer mt-6">{post.answer}</p>
+            <p className="blog-answer mt-6"><RichText>{post.answer}</RichText></p>
 
             <div className="mt-8">
               <a className="btn btn-chrome" href={`./blog/${post.slug}.html`}>
@@ -64,7 +65,7 @@ export function BlogPage() {
         ))}
       </div>
 
-      <p className="mono-tag reveal mt-10">one entry for now. the rest is being written.</p>
+      <p className="mono-tag reveal mt-10">new entries land as the story unfolds.</p>
     </SubPage>
   )
 }

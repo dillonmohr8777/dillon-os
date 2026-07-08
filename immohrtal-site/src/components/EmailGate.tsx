@@ -13,7 +13,7 @@ import { usePlayer } from '../audio/PlayerContext'
 
 /**
  * Email gate for the track previews. First play prompts for a newsletter
- * signup (captured by Netlify Forms — see the hidden `immohrtal-list` form
+ * signup (captured by Netlify Forms, see the hidden `immohrtal-list` form
  * in index.html); once on the list, previews stay unlocked on this device.
  */
 
@@ -88,7 +88,7 @@ export function EmailGateProvider({ children }: { children: ReactNode }) {
         body: new URLSearchParams({
           'form-name': 'immohrtal-list',
           email,
-          source: pending != null ? `preview gate — ${tracks[pending].title}` : 'preview gate',
+          source: pending != null ? `preview gate, ${tracks[pending].title}` : 'preview gate',
           'bot-field': String(data.get('bot-field') ?? ''),
         }).toString(),
       })
@@ -101,13 +101,13 @@ export function EmailGateProvider({ children }: { children: ReactNode }) {
       try {
         localStorage.setItem(STORAGE_KEY, '1')
       } catch {
-        /* private mode — session-only unlock */
+        /* private mode, session-only unlock */
       }
       setUnlocked(true)
       setOpen(false)
       if (pending != null) playTrack(pending)
     } catch {
-      setError("Couldn't reach the list right now — try again in a second.")
+      setError("Couldn't reach the list right now, try again in a second.")
     } finally {
       setBusy(false)
     }
@@ -151,7 +151,7 @@ export function EmailGateProvider({ children }: { children: ReactNode }) {
             <p className="mt-4 text-[15px]" style={{ color: 'rgba(20, 25, 34, 0.72)' }}>
               Seven tracks, thirty seconds each, before anyone else hears them.
               Drop your email and the previews open right here. Release updates
-              only — no spam. If not now, when?
+              only, no spam. If not now, when?
             </p>
             <form onSubmit={submit} className="mt-6">
               <p className="hidden" aria-hidden="true">

@@ -1,4 +1,4 @@
-/** Inline platform + social icons — no icon library, no bloat. */
+/** Inline platform + social icons, no icon library, no bloat. */
 
 const base = { width: 22, height: 22, fill: 'currentColor', 'aria-hidden': true as const }
 

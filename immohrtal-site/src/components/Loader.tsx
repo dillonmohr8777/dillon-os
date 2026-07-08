@@ -11,7 +11,7 @@ const CHECKS: Array<[number, string]> = [
 ]
 
 /**
- * Console-boot overlay (≤1.3s) — the studio powering on before the
+ * Console-boot overlay (≤1.3s), the studio powering on before the
  * page. Fires the engine's assembly pulse when it completes.
  * Never rendered under reduced motion.
  */

@@ -46,9 +46,9 @@ export function Tracklist() {
                 </span>
                 <span className="track-note mono-tag block mt-0.5">
                   {failed
-                    ? 'audio missing — drop the MP3 in /public/audio'
+                    ? 'audio missing, drop the MP3 in /public/audio'
                     : hasAudio && !unlocked
-                      ? 'unlock — sign the list'
+                      ? 'unlock, sign the list'
                       : track.note ?? (hasAudio ? 'preview available' : 'track locked')}
                 </span>
               </span>
@@ -69,7 +69,7 @@ export function Tracklist() {
                   disabled={!hasAudio}
                   aria-label={
                     !hasAudio
-                      ? `${track.title} — audio coming soon`
+                      ? `${track.title}, audio coming soon`
                       : !unlocked
                         ? `Unlock ${track.title} preview`
                         : isCurrent && playing

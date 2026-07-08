@@ -562,3 +562,13 @@ button:focus-visible {
   .grain::after { animation: none; opacity: 0.02; }
   .marquee-inner { animation: none; }
 }
+
+/* woven inline links inside blog copy */
+.blog-link {
+  color: var(--signal-txt);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: opacity 0.15s ease;
+}
+.blog-link:hover { opacity: 0.7; }
