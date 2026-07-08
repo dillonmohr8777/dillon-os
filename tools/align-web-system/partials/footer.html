@@ -1,0 +1,87 @@
+<!-- Align HCM continuity footer. Mirrors the live alignhcm.com footer content +
+     style. On HubSpot this is GLOBAL content and inherited automatically; use
+     this partial only for standalone prototypes. The .afr-cta heading line may
+     be customized per page (e.g. "Build a stronger manufacturer"); everything
+     else stays identical for continuity. -->
+<footer class="align-footer" role="contentinfo">
+  <div class="align-footer__inner">
+    <div class="align-footer__cta">
+      <h2 class="afr-cta">We are happy to help.</h2>
+      <p>No matter where you are in your HCM solution journey, we can help you thrive
+        with HR, payroll, and workforce management solutions. Contact us for a free,
+        no-obligation assessment. Please fill out the Contact Us form or call us at
+        <a href="tel:8889054824">888-905-4824</a>.</p>
+      <a class="align-footer__btn" href="#contact">Contact Us</a>
+    </div>
+
+    <div class="align-footer__grid">
+      <div class="align-footer__col">
+        <h4>St. Petersburg Office</h4>
+        <p>360 Central Ave Suite 800<br>St. Petersburg, FL 33701</p>
+      </div>
+      <div class="align-footer__col">
+        <h4>Toronto Office</h4>
+        <p>60 Atlantic Ave. Suite 200<br>Toronto, ON&nbsp; M6K 1X9</p>
+      </div>
+      <div class="align-footer__col">
+        <h4>Connect</h4>
+        <p><a href="tel:8889054824">888-905-4824</a><br>
+          <a href="https://www.linkedin.com/company/align-hcm/" rel="noopener">LinkedIn</a><br>
+          <a href="#privacy">Privacy Policy</a></p>
+      </div>
+    </div>
+
+    <div class="align-footer__bar">
+      <span>© 2026 Align HCM. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .align-footer {
+    background: #0f151c;
+    color: #aeb4bf;
+    padding: 56px 0 26px;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .align-footer__inner { width: min(92vw, 1120px); margin: 0 auto; }
+  .align-footer__cta { max-width: 640px; margin-bottom: 44px; }
+  .align-footer__cta::before {
+    content: ''; display: block; width: 60px; height: 2px;
+    background: rgba(240, 90, 40, .35); margin-bottom: 26px;
+  }
+  .afr-cta {
+    margin: 0 0 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 30px; font-weight: 800; line-height: 1.15; color: #fff;
+  }
+  .align-footer__cta p { font-size: 14px; line-height: 1.7; color: #9aa3af; margin: 0 0 22px; }
+  .align-footer__cta a { color: #F05A28; }
+  .align-footer__btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 12px 26px; border-radius: 999px;
+    background: linear-gradient(135deg, #F05A28 0%, #FF6B35 100%);
+    color: #fff; font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px; font-weight: 800; text-decoration: none;
+  }
+  .align-footer__grid {
+    display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 32px;
+    padding: 32px 0; border-top: 1px solid rgba(255, 255, 255, .08);
+  }
+  .align-footer__col h4 {
+    margin: 0 0 8px; font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px; font-weight: 700; color: #F05A28;
+    text-transform: uppercase; letter-spacing: .5px;
+  }
+  .align-footer__col p { margin: 0; font-size: 12.5px; line-height: 1.7; color: #9aa3af; }
+  .align-footer__col a { color: #9aa3af; text-decoration: none; }
+  .align-footer__col a:hover { color: #F05A28; }
+  .align-footer__bar {
+    padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, .08);
+    font-size: 12px; color: #6b7280;
+  }
+  @media (max-width: 720px) {
+    .align-footer__grid { grid-template-columns: 1fr; gap: 24px; }
+    .afr-cta { font-size: 25px; }
+  }
+</style>

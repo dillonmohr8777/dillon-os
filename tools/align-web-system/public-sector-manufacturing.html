@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Sector &amp; Manufacturing Workforce Solutions | Align HCM</title>
+  <meta name="description" content="Align HCM helps manufacturing and public-sector operations simplify scheduling, payroll, time, compliance, labor visibility, and workforce planning.">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Align brand tokens (canonical, ALIGN_WEB_SYSTEM.md §2) ===== */
+    :root {
+      --orange:#F05A28; --orange-hot:#FF6B35; --orange-amber:#E8832A;
+      --grad:linear-gradient(135deg,#F05A28 0%,#FF6B35 100%);
+      --ink:#111820; --navy:#17324d; --body:#22384f; --muted:#647084;
+      --warm:#f4efe7; --warm-2:#faf6f0; --line:#e6ded4; --white:#fff;
+      --wide:1280px; --nav-wide:1760px; --ease:cubic-bezier(.2,.8,.2,1);
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; overflow-x:hidden; background:var(--white); color:var(--ink);
+      font-family:'Plus Jakarta Sans','DM Sans',sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    p, .hero-copy, .lead, .service-card p, .story-card p { font-family:'DM Sans',sans-serif; }
+    svg { display:block; width:22px; height:22px; stroke:currentColor; stroke-width:2.4;
+      stroke-linecap:round; stroke-linejoin:round; fill:none; }
+
+    /* ===== Header (mirrors global Elevate header; production inherits it) ===== */
+    .nav-space { position:relative; z-index:10; padding-top:32px; }
+    .nav-shell { width:min(94vw,var(--nav-wide)); min-height:78px; margin:0 auto;
+      display:grid; grid-template-columns:190px 1fr auto; align-items:center; gap:16px;
+      padding:12px 24px 12px 28px; border-radius:48px; background:rgba(255,255,255,.98);
+      box-shadow:0 16px 38px rgba(17,24,32,.09); }
+    .brand { display:flex; align-items:center; gap:10px; min-width:0; color:var(--ink);
+      font-size:20px; font-weight:800; }
+    .brand-mark { width:38px; height:38px; display:inline-grid; place-items:center;
+      border-radius:11px; color:#fff; font-weight:800; background:var(--grad); }
+    .nav-links { display:flex; align-items:center; justify-content:flex-end; gap:14px;
+      color:var(--ink); font-size:15px; line-height:1; white-space:nowrap; }
+    .nav-link { min-height:40px; display:inline-flex; align-items:center; gap:7px; font-weight:700; }
+    .nav-link:hover, .nav-link.active { color:var(--orange); }
+    .chevron { width:8px; height:8px; border-right:2px solid currentColor;
+      border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-1px); }
+    .contact-top { min-height:52px; display:inline-flex; align-items:center; justify-content:center;
+      padding:0 28px; border-radius:34px; background:var(--grad); color:#fff; font-size:15px;
+      font-weight:800; text-transform:uppercase; white-space:nowrap;
+      box-shadow:0 10px 24px rgba(240,90,40,.28); }
+
+    /* ===== Hero ===== */
+    .hero { margin-top:-110px; padding:190px 0 84px;
+      background:linear-gradient(105deg,rgba(255,246,240,.9),rgba(255,255,255,.96) 38%,#fff); }
+    .hero-inner, .section-inner { width:min(86vw,var(--wide)); margin:0 auto; }
+    .hero-inner { display:grid; grid-template-columns:minmax(0,.98fr) minmax(400px,1.02fr);
+      align-items:center; gap:66px; }
+    .eyebrow { display:flex; align-items:center; gap:12px; margin:0 0 22px; color:var(--ink);
+      font-size:12px; font-weight:800; letter-spacing:4px; text-transform:uppercase; }
+    .eyebrow::before { content:""; width:28px; height:2px; background:var(--orange); }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { max-width:710px; margin-bottom:24px; color:var(--ink); font-size:44px; line-height:1.12; font-weight:800; }
+    h1 span, .orange { color:var(--orange); }
+    .hero-copy { max-width:620px; margin-bottom:26px; color:var(--body); font-size:20px; line-height:1.5; }
+    .hero-points { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:30px; }
+    .hero-pill { display:inline-flex; align-items:center; gap:8px; padding:9px 14px; border-radius:999px;
+      background:var(--warm); color:var(--ink); font-size:13px; font-weight:700; }
+    .hero-pill::before { content:""; width:8px; height:8px; border-radius:50%; background:var(--orange); }
+    .primary-btn { min-height:50px; display:inline-flex; align-items:center; justify-content:center;
+      padding:0 26px; border-radius:28px; background:var(--grad); color:#fff; font-size:15px;
+      font-weight:800; line-height:1; box-shadow:0 12px 26px rgba(240,90,40,.28);
+      transition:transform .25s var(--ease),box-shadow .25s var(--ease); }
+
+    /* ===== Hero visual: brand proof panel (replaces the removed dashboard) ===== */
+    .proof-panel { position:relative; padding:34px 34px 30px; border:1px solid var(--line);
+      border-radius:28px; background:linear-gradient(150deg,#fff,#faf4ec);
+      box-shadow:0 32px 70px rgba(20,20,20,.12); overflow:hidden; }
+    .proof-panel::before { content:""; position:absolute; top:0; left:0; right:0; height:5px; background:var(--grad); }
+    .proof-panel::after { content:""; position:absolute; right:-90px; bottom:-90px; width:240px; height:240px;
+      border-radius:50%; background:radial-gradient(circle,rgba(240,90,40,.22),transparent 68%); filter:blur(6px); }
+    .proof-eyebrow { display:flex; align-items:center; gap:10px; margin-bottom:16px; color:var(--orange);
+      font-size:11px; font-weight:800; letter-spacing:3px; text-transform:uppercase; }
+    .proof-panel h2 { position:relative; max-width:none; margin:0 0 22px; color:var(--navy);
+      font-size:25px; line-height:1.3; font-weight:800; }
+    .proof-list { position:relative; display:grid; gap:14px; margin:0; padding:0; list-style:none; }
+    .proof-list li { display:grid; grid-template-columns:30px 1fr; align-items:start; gap:12px;
+      color:var(--ink); font-family:'DM Sans',sans-serif; font-size:15px; line-height:1.4; font-weight:600; }
+    .proof-check { width:30px; height:30px; display:grid; place-items:center; border-radius:9px;
+      background:rgba(240,90,40,.12); color:var(--orange); }
+    .proof-check svg { width:17px; height:17px; }
+    .proof-mark { position:absolute; top:26px; right:28px; width:44px; height:44px; display:grid;
+      place-items:center; border-radius:12px; color:#fff; font-weight:800; font-size:18px; background:var(--grad); }
+
+    /* ===== Sliding logo strip (ALIGN_WEB_SYSTEM.md §4) ===== */
+    .logostrip { padding:30px 0 8px; background:#fff; }
+    .logostrip__label { width:min(86vw,var(--wide)); margin:0 auto 16px; color:var(--muted);
+      font-family:'DM Sans',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px;
+      text-transform:uppercase; text-align:center; }
+    .logostrip__mask { width:min(92vw,var(--wide)); margin:0 auto; overflow:hidden;
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+      mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
+    .logostrip__track { display:flex; align-items:center; gap:58px; width:max-content; margin:0; padding:0;
+      list-style:none; animation:logoscroll 38s linear infinite; }
+    .logostrip__track li { flex:0 0 auto; color:#8a93a3; font-size:17px; font-weight:700; white-space:nowrap;
+      filter:grayscale(1); opacity:.72; transition:opacity .3s,color .3s; }
+    .logostrip__track li:hover { opacity:1; color:var(--navy); }
+    .logostrip__mask:hover .logostrip__track { animation-play-state:paused; }
+    @keyframes logoscroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ===== Sections ===== */
+    .intro { padding:82px 0 86px; background:#fff; }
+    .intro h2, .services h2, .stories h2 { max-width:1030px; margin-bottom:38px; color:var(--ink);
+      font-size:38px; line-height:1.16; font-weight:800; }
+    .signal-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .signal-card { min-height:134px; position:relative; padding:28px 30px 28px 70px; border-radius:14px;
+      background:var(--warm); color:var(--ink); font-family:'DM Sans',sans-serif; font-size:19px;
+      line-height:1.42; font-weight:500; transition:transform .35s var(--ease),box-shadow .35s var(--ease); }
+    .signal-card::before { content:""; position:absolute; top:34px; left:32px; width:19px; height:12px;
+      border-top:2px solid var(--orange); border-right:2px solid var(--orange); transform:skewX(-22deg); }
+
+    .dark-band { padding:94px 0 106px; background:var(--ink); color:#fff; }
+    .dark-band .eyebrow { color:#fff; }
+    .dark-band h2 { max-width:900px; margin-bottom:20px; color:#fff; font-size:39px; line-height:1.16; font-weight:800; }
+    .dark-band .lead { max-width:760px; margin-bottom:52px; color:#c8d4e6; font-size:17px; line-height:1.56; }
+    .support-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; perspective:1000px; }
+    .support-card { min-height:298px; padding:29px 28px; border:1px solid #232a33; border-radius:14px;
+      background:#161d26; transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease); }
+    .support-card.featured { border-color:var(--orange); background:linear-gradient(180deg,#4a1c0c,#1b0e06); }
+    .support-icon { width:46px; height:46px; display:grid; place-items:center; margin-bottom:22px;
+      border-radius:12px; background:rgba(240,90,40,.16); color:var(--orange); }
+    .support-card.featured .support-icon { background:rgba(0,0,0,.28); }
+    .mini-label { margin-bottom:14px; color:#9fb0c8; font-size:11px; font-weight:800; letter-spacing:3px; text-transform:uppercase; }
+    .support-card.featured .mini-label { color:var(--orange); }
+    .support-card h3 { margin-bottom:10px; color:#fff; font-size:25px; line-height:1.1; font-weight:800; }
+    .support-card p { margin:0; color:#dbe4f0; font-size:15px; line-height:1.5; }
+
+    .services { padding:98px 0 94px; background:var(--warm); }
+    .services .lead { max-width:780px; margin-bottom:52px; color:var(--body); font-size:16px; line-height:1.55; }
+    .service-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; perspective:1000px; }
+    .service-card { min-height:360px; padding:30px; border-radius:14px; background:#fff;
+      transition:transform .35s var(--ease),box-shadow .35s var(--ease); }
+    .icon { width:48px; height:48px; display:grid; place-items:center; margin-bottom:18px; border-radius:12px;
+      background:rgba(240,90,40,.12); color:var(--orange); }
+    .service-card h3 { margin-bottom:8px; color:var(--ink); font-size:23px; line-height:1.16; font-weight:800; }
+    .service-card p { margin-bottom:28px; color:var(--body); font-size:14px; line-height:1.48; }
+    .service-list { display:grid; gap:13px; padding:0; margin:0; list-style:none; color:var(--ink); font-size:14px; line-height:1.36; }
+    .service-list li { position:relative; padding-left:25px; }
+    .service-list li::before { content:""; position:absolute; top:.48em; left:0; width:14px; height:8px;
+      border-top:2px solid var(--orange); border-right:2px solid var(--orange); transform:skewX(-22deg); }
+
+    .stories { padding:92px 0 96px; background:#fff; }
+    .story-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-top:44px; }
+    .story-card { min-height:230px; display:flex; flex-direction:column; padding:26px; border-radius:14px;
+      background:var(--warm); transition:transform .35s var(--ease),box-shadow .35s var(--ease); }
+    .story-meta { margin-bottom:14px; color:var(--orange); font-size:11px; font-weight:900; letter-spacing:3px; text-transform:uppercase; }
+    .story-card h3 { margin-bottom:12px; color:var(--ink); font-size:23px; line-height:1.12; font-weight:800; }
+    .story-card p { color:var(--ink); font-size:14px; line-height:1.5; }
+    .text-link { margin-top:auto; color:var(--ink); font-size:13px; font-weight:900; letter-spacing:1.8px; text-transform:uppercase; }
+    .text-link span { color:var(--orange); font-size:16px; }
+
+    /* ===== Continuity footer (ALIGN_WEB_SYSTEM.md §5) ===== */
+    .align-footer { background:#0f151c; color:#aeb4bf; padding:56px 0 26px; font-family:'DM Sans',sans-serif; }
+    .align-footer__inner { width:min(92vw,1120px); margin:0 auto; }
+    .align-footer__cta { max-width:640px; margin-bottom:44px; }
+    .align-footer__cta::before { content:""; display:block; width:60px; height:2px; background:rgba(240,90,40,.35); margin-bottom:26px; }
+    .afr-cta { margin:0 0 14px; font-family:'Plus Jakarta Sans',sans-serif; font-size:30px; font-weight:800; line-height:1.15; color:#fff; }
+    .align-footer__cta p { font-size:14px; line-height:1.7; color:#9aa3af; margin:0 0 22px; }
+    .align-footer__cta a { color:var(--orange); }
+    .align-footer__btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 26px;
+      border-radius:999px; background:var(--grad); color:#fff; font-family:'Plus Jakarta Sans',sans-serif;
+      font-size:14px; font-weight:800; }
+    .align-footer__grid { display:grid; grid-template-columns:1.3fr 1fr 1.2fr; gap:32px; padding:32px 0;
+      border-top:1px solid rgba(255,255,255,.08); }
+    .align-footer__col h4 { margin:0 0 8px; font-family:'Plus Jakarta Sans',sans-serif; font-size:12px;
+      font-weight:700; color:var(--orange); text-transform:uppercase; letter-spacing:.5px; }
+    .align-footer__col p { margin:0; font-size:12.5px; line-height:1.7; color:#9aa3af; }
+    .align-footer__col a { color:#9aa3af; }
+    .align-footer__col a:hover { color:var(--orange); }
+    .align-footer__bar { padding-top:22px; border-top:1px solid rgba(255,255,255,.08); font-size:12px; color:#6b7280; }
+
+    @media (hover:hover) and (prefers-reduced-motion:no-preference) {
+      .primary-btn:hover, .signal-card:hover, .service-card:hover, .story-card:hover {
+        transform:translateY(-8px); box-shadow:0 22px 42px rgba(20,20,20,.12); }
+      .support-card:hover { transform:translateY(-10px); border-color:rgba(240,90,40,.6); box-shadow:0 28px 55px rgba(0,0,0,.35); }
+    }
+    @media (prefers-reduced-motion:reduce) { .logostrip__track { animation:none; flex-wrap:wrap; justify-content:center; } }
+
+    @media (max-width:1180px) {
+      .nav-shell { grid-template-columns:180px 1fr auto; gap:14px; }
+      .hero-inner { grid-template-columns:1fr; gap:40px; }
+      .support-grid, .story-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width:920px) {
+      .nav-space { padding-top:18px; }
+      .nav-shell { width:min(92vw,720px); grid-template-columns:150px auto; border-radius:34px; }
+      .nav-links { display:none; }
+      .hero { margin-top:-86px; padding:168px 0 64px; }
+      .hero-inner, .section-inner { width:min(88vw,680px); }
+      h1 { font-size:38px; }
+      .intro h2, .services h2, .stories h2, .dark-band h2 { font-size:32px; }
+      .signal-grid, .service-grid, .support-grid, .story-grid { grid-template-columns:1fr; }
+      .align-footer__grid { grid-template-columns:1fr; gap:24px; }
+    }
+    @media (max-width:560px) {
+      .nav-shell { width:min(92vw,440px); grid-template-columns:118px auto; }
+      .hero { padding:148px 0 56px; } h1 { font-size:31px; }
+      .proof-panel { padding:26px; } .afr-cta { font-size:25px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER: in production this is the global Elevate header. Order matches ALIGN_WEB_SYSTEM.md §3. -->
+    <div class="nav-space">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="/"><span class="brand-mark">A</span><span>Align HCM</span></a>
+        <div class="nav-links">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/services">Services <span class="chevron" aria-hidden="true"></span></a>
+          <a class="nav-link active" href="/public-sector">Public Sector</a>
+          <a class="nav-link" href="/smartcare">SmartCare</a>
+          <a class="nav-link" href="/channel-partner">Channel Partner <span class="chevron" aria-hidden="true"></span></a>
+          <a class="nav-link" href="/partners">Partners <span class="chevron" aria-hidden="true"></span></a>
+          <a class="nav-link" href="/insights">Insights</a>
+          <a class="nav-link" href="/case-studies">Case Studies</a>
+          <a class="nav-link" href="/about">About</a>
+        </div>
+        <a class="contact-top" href="#contact">Contact us</a>
+      </nav>
+    </div>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-inner">
+          <div>
+            <h1 id="hero-title">Manufacturing and public sector are not one-size-fits-all. <span>Your workforce systems should not be either.</span></h1>
+            <p class="hero-copy">Align HCM helps manufacturing and public-sector operations simplify workforce rules, labor planning, payroll accuracy, and frontline execution without forcing a platform reset.</p>
+            <div class="hero-points">
+              <span class="hero-pill">Demand-driven scheduling</span>
+              <span class="hero-pill">Real-time labor visibility</span>
+              <span class="hero-pill">Complex payroll support</span>
+            </div>
+            <a class="primary-btn" href="#contact">Talk to an expert&nbsp; &rarr;</a>
+          </div>
+
+          <!-- Hero visual: on-brand proof panel. NO dashboard/metric mock (ALIGN_WEB_SYSTEM.md §6). -->
+          <div class="hero-visual">
+            <div class="proof-panel">
+              <span class="proof-mark">A</span>
+              <div class="proof-eyebrow">Why Align</div>
+              <h2>We make the workforce systems you already own work harder, without a platform reset.</h2>
+              <ul class="proof-list">
+                <li><span class="proof-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Cleaner payroll handoff every cycle, including premiums, job codes, and union rules.</li>
+                <li><span class="proof-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Demand-driven schedules matched to skills, certifications, and availability.</li>
+                <li><span class="proof-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>Real-time labor visibility leaders can trust, not spreadsheet reconciliation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sliding client logo strip -->
+      <section class="logostrip" aria-label="Trusted by leading operations">
+        <p class="logostrip__label">Trusted by complex manufacturing and public-sector operations</p>
+        <div class="logostrip__mask">
+          <ul class="logostrip__track">
+            <li>Arrow Electronics</li><li>Vibra Healthcare</li><li>VIEW</li><li>Alterra Mountain Co.</li>
+            <li>Kimberly-Clark Professional</li><li>First Horizon</li><li>Air Methods</li><li>Troon</li>
+            <li>Resorts World</li><li>OhioHealth</li>
+            <li aria-hidden="true">Arrow Electronics</li><li aria-hidden="true">Vibra Healthcare</li><li aria-hidden="true">VIEW</li><li aria-hidden="true">Alterra Mountain Co.</li>
+            <li aria-hidden="true">Kimberly-Clark Professional</li><li aria-hidden="true">First Horizon</li><li aria-hidden="true">Air Methods</li><li aria-hidden="true">Troon</li>
+            <li aria-hidden="true">Resorts World</li><li aria-hidden="true">OhioHealth</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="section-inner">
+          <h2 id="intro-title">Workforce pressure shows up everywhere: the line, the schedule, payroll, and the margin.</h2>
+          <div class="signal-grid">
+            <div class="signal-card">Labor shortages and skills gaps make coverage harder, especially when demand changes faster than the schedule.</div>
+            <div class="signal-card">Supply-chain disruptions and production swings create last-minute staffing pressure for managers and frontline teams.</div>
+            <div class="signal-card">Time, attendance, shift premiums, job codes, union rules, and leave policies need clean payroll handoff every cycle.</div>
+            <div class="signal-card">Leaders need labor data they can trust, not spreadsheet reconciliation after decisions have already been made.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark-band" aria-labelledby="help-title">
+        <div class="section-inner">
+          <p class="eyebrow">Workforce Priorities</p>
+          <h2 id="help-title">Run smoother when demand, people, and payroll keep moving.</h2>
+          <p class="lead">Align helps teams make the systems they already own work harder for the operation: better schedules, cleaner rules, stronger labor visibility, and fewer manual workarounds.</p>
+          <div class="support-grid">
+            <article class="support-card featured">
+              <div class="support-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-8 0v2"/><circle cx="12" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg></div>
+              <div class="mini-label">Talent pressure</div><h3>Attract and retain</h3>
+              <p>Improve the employee experience around schedules, communication, onboarding, and manager follow-through.</p>
+            </article>
+            <article class="support-card">
+              <div class="support-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg></div>
+              <div class="mini-label">Demand-driven</div><h3>Schedule smarter</h3>
+              <p>Match people, skills, certifications, availability, and production needs to each shift with less manual cleanup.</p>
+            </article>
+            <article class="support-card">
+              <div class="support-icon"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+              <div class="mini-label">Pay accuracy</div><h3>Control payroll</h3>
+              <p>Reduce risk around shift differentials, job codes, approvals, retro pay, union rules, taxes, and year-end.</p>
+            </article>
+            <article class="support-card">
+              <div class="support-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-7"/></svg></div>
+              <div class="mini-label">Labor insight</div><h3>See in real time</h3>
+              <p>Turn workforce data into usable labor cost, overtime, absence, and coverage visibility for operators.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" aria-labelledby="services-title">
+        <div class="section-inner">
+          <p class="eyebrow">Purpose-Built Support</p>
+          <h2 id="services-title">Tools for every situation, no matter how complex.</h2>
+          <p class="lead">This is broader than post-go-live HCM support. Align works across the operating pieces manufacturers and public-sector teams depend on: HR, talent, payroll, scheduling, time, compliance, analytics, and employee communication.</p>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 19.5V4a2 2 0 0 1 2-2h10l4 4v13.5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg></div>
+              <h3>HR and Talent</h3>
+              <p>Keep workforce data, hiring, onboarding, manager workflows, and employee communication moving together.</p>
+              <ul class="service-list"><li>High-volume hiring support</li><li>Onboarding and role workflows</li><li>Employee communication paths</li><li>Manager adoption and training</li></ul>
+            </article>
+            <article class="service-card">
+              <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-5"/></svg></div>
+              <h3>Scheduling and Time</h3>
+              <p>Plan shifts around demand, skills, availability, absence, certifications, and compliance constraints.</p>
+              <ul class="service-list"><li>Demand-driven scheduling</li><li>Time and attendance cleanup</li><li>Absence and leave workflows</li><li>Supervisor visibility</li></ul>
+            </article>
+            <article class="service-card">
+              <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+              <h3>Payroll and Compliance</h3>
+              <p>Make payroll a trusted engine for accuracy, compliance, and operational clarity across locations.</p>
+              <ul class="service-list"><li>Shift premiums and job codes</li><li>Union and labor rule support</li><li>Payroll reconciliation</li><li>ACA, tax, and year-end readiness</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stories" aria-labelledby="stories-title">
+        <div class="section-inner">
+          <p class="eyebrow">Industries</p>
+          <h2 id="stories-title">Built for complex workforces, from front office to front line.</h2>
+          <div class="story-grid">
+            <article class="story-card"><div class="story-meta">Construction</div><h3>Project-based labor</h3><p>Coordinate field teams, time, certifications, job costing, and payroll rules across changing sites.</p><a class="text-link" href="#contact">Talk to us <span>&rarr;</span></a></article>
+            <article class="story-card"><div class="story-meta">Energy</div><h3>Critical operations</h3><p>Support compliance-heavy teams where coverage, safety, skills, and pay accuracy cannot drift.</p><a class="text-link" href="#contact">Talk to us <span>&rarr;</span></a></article>
+            <article class="story-card"><div class="story-meta">Vehicle</div><h3>Land, sea, and air</h3><p>Improve labor visibility for complex lines, multi-skill shifts, and changing production demand.</p><a class="text-link" href="#contact">Talk to us <span>&rarr;</span></a></article>
+            <article class="story-card"><div class="story-meta">Public Sector</div><h3>Government teams</h3><p>Keep people processes cleaner where documentation, compliance, and workforce readiness matter.</p><a class="text-link" href="#contact">Talk to us <span>&rarr;</span></a></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- CONTINUITY FOOTER: mirrors global footer (ALIGN_WEB_SYSTEM.md §5). Heading line is the page variant. -->
+    <footer class="align-footer" id="contact" role="contentinfo">
+      <div class="align-footer__inner">
+        <div class="align-footer__cta">
+          <h2 class="afr-cta">Build a stronger manufacturing and public-sector workforce.</h2>
+          <p>No matter where you are in your HCM solution journey, we can help you thrive with HR, payroll, and workforce management solutions. Contact us for a free, no-obligation assessment. Please fill out the Contact Us form or call us at <a href="tel:8889054824">888-905-4824</a>.</p>
+          <a class="align-footer__btn" href="tel:8889054824">Contact Us</a>
+        </div>
+        <div class="align-footer__grid">
+          <div class="align-footer__col"><h4>St. Petersburg Office</h4><p>360 Central Ave Suite 800<br>St. Petersburg, FL 33701</p></div>
+          <div class="align-footer__col"><h4>Toronto Office</h4><p>60 Atlantic Ave. Suite 200<br>Toronto, ON&nbsp; M6K 1X9</p></div>
+          <div class="align-footer__col"><h4>Connect</h4><p><a href="tel:8889054824">888-905-4824</a><br><a href="https://www.linkedin.com/company/align-hcm/" rel="noopener">LinkedIn</a><br><a href="#privacy">Privacy Policy</a></p></div>
+        </div>
+        <div class="align-footer__bar"><span>© 2026 Align HCM. All Rights Reserved.</span></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
