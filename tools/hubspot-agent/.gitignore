@@ -1,0 +1,7 @@
+.env
+*.local.json
+content/*.json
+!content/example-post.json
+schedule.json
+__pycache__/
+*.pyc
