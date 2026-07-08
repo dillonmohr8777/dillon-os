@@ -81,7 +81,7 @@
     .hero::after{content:"";position:absolute;inset:0;background:
       repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 1px,transparent 1px 80px);pointer-events:none}
     .hero .eyebrow{color:#ffb08c}
-    .hero h1{position:relative;max-width:640px;margin:0 0 22px;font-size:50px;line-height:1.06;font-weight:800}
+    .hero h1{position:relative;max-width:640px;margin:0 0 22px;font-size:clamp(34px,4vw,48px);line-height:1.08;font-weight:800}
     .hero h1 span{color:var(--orange)}
     .hero-copy{position:relative;max-width:560px;margin:0 0 30px;color:#c7d3e2;font-size:17px;line-height:1.6}
     .hero-actions{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-bottom:0}
@@ -96,7 +96,7 @@
 
     /* ===== Complexity (light) ===== */
     .reality{padding:88px 0;background:#fbf8f3}
-    .reality h2{max-width:640px;margin:0 0 16px;font-size:36px;line-height:1.15;font-weight:800;color:var(--navy)}
+    .reality h2{max-width:640px;margin:0 0 16px;font-size:clamp(27px,3vw,37px);line-height:1.15;font-weight:800;color:var(--navy)}
     .reality .lead{max-width:620px;margin:0 0 44px;color:var(--muted);font-size:16px;line-height:1.6}
     .reality-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 60px}
     .reality-item{display:grid;grid-template-columns:24px 1fr;gap:14px;padding:0 0 24px;border-bottom:1px solid #e6ded4;
@@ -105,7 +105,7 @@
 
     /* ===== Process (cream, 4 cards) ===== */
     .process{padding:88px 0 96px;background:var(--warm)}
-    .process h2{max-width:640px;margin:0 0 14px;font-size:36px;line-height:1.15;font-weight:800;color:var(--navy)}
+    .process h2{max-width:640px;margin:0 0 14px;font-size:clamp(27px,3vw,37px);line-height:1.15;font-weight:800;color:var(--navy)}
     .process .lead{max-width:600px;margin:0 0 46px;color:var(--muted);font-size:16px;line-height:1.6}
     .card-grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;perspective:1400px}
     .pcard{background:#fff;border-radius:14px;border-top:3px solid var(--orange);padding:26px 24px 28px;
@@ -117,7 +117,7 @@
     /* ===== Operating rules (navy, 6 cards) ===== */
     .rules{padding:92px 0 100px;background:var(--navy);color:#fff}
     .rules .eyebrow{color:#ffb08c}
-    .rules h2{max-width:640px;margin:0 0 16px;font-size:36px;line-height:1.15;font-weight:800;color:#fff}
+    .rules h2{max-width:640px;margin:0 0 16px;font-size:clamp(27px,3vw,37px);line-height:1.15;font-weight:800;color:#fff}
     .rules .lead{max-width:600px;margin:0 0 46px;color:#b9c6d6;font-size:16px;line-height:1.6}
     .card-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;perspective:1400px}
     .rcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:26px 24px;
@@ -129,7 +129,7 @@
     /* ===== Vendor agnostic (white) ===== */
     .vendors{padding:90px 0;background:#fff}
     .vendors .wrap{text-align:center}
-    .vendors h3{margin:0 0 12px;color:var(--orange);font-size:36px;line-height:1.12;font-weight:800}
+    .vendors h3{margin:0 0 12px;color:var(--orange);font-size:clamp(26px,2.8vw,34px);line-height:1.14;font-weight:800}
     .vendors p{margin:0 auto 48px;color:var(--muted);font-family:'DM Sans';font-size:16px;line-height:1.6;max-width:600px}
     .vgrid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center}
     .vbadge{width:224px;height:140px;border-radius:38px;background:#fdf8f2;border:1px solid rgba(240,90,40,.26);
@@ -141,7 +141,7 @@
 
     /* ===== Outcomes (cream, 3 cards) ===== */
     .outcomes{padding:88px 0 92px;background:#fbf8f3}
-    .outcomes h2{max-width:620px;margin:0 0 14px;font-size:36px;line-height:1.15;font-weight:800;color:var(--navy)}
+    .outcomes h2{max-width:620px;margin:0 0 14px;font-size:clamp(27px,3vw,37px);line-height:1.15;font-weight:800;color:var(--navy)}
     .outcomes .lead{max-width:560px;margin:0 0 44px;color:var(--muted);font-size:16px;line-height:1.6}
     .ocard{background:#fff;border-radius:14px;border-top:3px solid var(--orange);padding:26px 24px;
       box-shadow:0 10px 26px rgba(20,20,20,.06);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
@@ -160,7 +160,7 @@
     .contact{padding:92px 0 100px;background:#06080b;color:#fff}
     .contact .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(420px,.9fr);gap:64px;align-items:start}
     .contact .eyebrow{color:var(--orange)}
-    .contact h2{max-width:440px;margin:0 0 20px;font-size:40px;line-height:1.1;font-weight:800;color:var(--orange)}
+    .contact h2{max-width:440px;margin:0 0 20px;font-size:clamp(27px,3vw,37px);line-height:1.12;font-weight:800;color:var(--orange)}
     .contact-copy{max-width:420px;color:#c7d3e2;font-family:'DM Sans';font-size:15px;line-height:1.6;margin:0 0 16px}
     .contact-note{max-width:420px;color:#8ea1b8;font-family:'DM Sans';font-size:13.5px;font-style:italic;line-height:1.6;margin:14px 0 0}
     .fcard{background:#fff;border-radius:16px;padding:30px 30px 26px;box-shadow:0 30px 70px rgba(0,0,0,.4)}
@@ -192,11 +192,9 @@
 
     @media(max-width:1024px){.card-grid-4{grid-template-columns:repeat(2,1fr)}.card-grid-3{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:860px){
-      .hero{margin-top:-92px;padding:150px 0 60px}.hero h1{font-size:36px}
+      .hero{margin-top:-92px;padding:150px 0 60px}
       .reality-grid,.vendors .wrap,.contact .wrap,.ftr__grid{grid-template-columns:1fr;gap:26px}
-      .pills{justify-content:flex-start}
       .card-grid-4,.card-grid-3,.fgrid{grid-template-columns:1fr}
-      .reality h2,.process h2,.rules h2,.outcomes h2,.contact h2{font-size:29px}
     }
   </style>
 </head>
