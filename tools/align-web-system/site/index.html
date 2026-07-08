@@ -414,34 +414,32 @@
         <div class="contact-grid">
           <div>
             <p class="eyebrow">Talk to us</p>
-            <h2 id="contact-title">Speak to a workforce expert <span>ASAP.</span></h2>
-            <p class="contact-copy">If you need help, we'll call you promptly, usually within the hour (including weekends).</p>
-            <p class="contact-copy">Simply put in your business and contact info and we will call you.</p>
+            <h2 id="contact-title">Speak to a manufacturing workforce expert <span>ASAP.</span></h2>
+            <p class="contact-copy">If your line, your schedule, or your payroll is under pressure, we'll call you promptly, usually within the hour (including weekends).</p>
+            <p class="contact-copy">Tell us about your operation and we'll call you. No platform reset required to start the conversation.</p>
             <div class="hours-pill">7 days a week, 9:00am - 9:00pm EDT</div>
             <p class="contact-note">If you're reaching out for selling or partnership opportunities, we will contact you at our discretion.</p>
           </div>
-          <form class="form-card" onsubmit="return false">
+          <form class="form-card" id="align-contact-form" novalidate>
             <h3>Get in Touch</h3>
             <p class="sub">Align moves at your speed. Which is always "right now."</p>
             <div class="form-grid">
-              <div class="field full"><label>Name <span>*</span></label><input type="text" placeholder="Your full name"></div>
-              <div class="field"><label>Work Email <span>*</span></label><input type="email" placeholder="you@company.com"></div>
-              <div class="field"><label>Phone Number <span>*</span></label><input type="tel" placeholder="(555) 123-4567"></div>
-              <div class="field full"><label>Company <span>*</span></label><input type="text" placeholder="Your company name"></div>
-              <div class="field full"><label>How can we help? <span>*</span></label>
-                <select>
-                  <option>Select an option...</option>
-                  <option>Scheduling and time</option>
-                  <option>Payroll and compliance</option>
-                  <option>HR and talent</option>
-                  <option>Labor visibility and reporting</option>
-                  <option>Ongoing support (SmartCare)</option>
-                  <option>Something else</option>
+              <div class="field full"><label for="f-name">Name <span>*</span></label><input id="f-name" name="firstname" type="text" required placeholder="Your full name"></div>
+              <div class="field"><label for="f-email">Work Email <span>*</span></label><input id="f-email" name="email" type="email" required placeholder="you@company.com"></div>
+              <div class="field"><label for="f-phone">Phone Number <span>*</span></label><input id="f-phone" name="phone" type="tel" required placeholder="(555) 123-4567"></div>
+              <div class="field full"><label for="f-company">Company <span>*</span></label><input id="f-company" name="company" type="text" required placeholder="Your company name"></div>
+              <div class="field full"><label for="f-help">How can we help? <span>*</span></label>
+                <select id="f-help" name="service_interest" required>
+                  <option value="">Select an option...</option>
+                  <option value="UKG Implementation">UKG Implementation</option>
+                  <option value="Smartcare Support">SmartCare Support</option>
+                  <option value="Partnership/Vendor Inquiry">Partnership / Vendor Inquiry</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
-              <div class="field full"><label>Brief Description</label><textarea placeholder="Tell us what you need help with..."></textarea></div>
+              <div class="field full"><label for="f-msg">Brief Description</label><textarea id="f-msg" name="message" placeholder="Tell us what you need help with..."></textarea></div>
               <button class="submit-btn" type="submit">Talk to an Expert &rarr;</button>
-              <p class="form-note">By submitting, you agree to our <a href="#privacy">Privacy Policy</a>.</p>
+              <p class="form-note" id="form-status">By submitting, you agree to our <a href="#privacy">Privacy Policy</a>.</p>
             </div>
           </form>
         </div>
@@ -460,5 +458,34 @@
       </div>
     </footer>
   </div>
+
+  <script>
+  (function(){
+    var form = document.getElementById('align-contact-form');
+    if(!form) return;
+    var status = document.getElementById('form-status');
+    var PORTAL = '242825734', FORM = 'e733d928-0f1d-4b41-853b-df1e0096f330';
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('.submit-btn');
+      var req = ['firstname','email','phone','company','service_interest'];
+      for(var i=0;i<req.length;i++){
+        if(!form.elements[req[i]].value){ status.textContent='Please fill in all required fields.'; status.style.color='#ff9b7a'; return; }
+      }
+      var fields = ['firstname','email','phone','company','service_interest','message']
+        .map(function(n){ return {name:n, value:form.elements[n] ? form.elements[n].value : ''}; })
+        .filter(function(f){ return f.value; });
+      btn.disabled = true; btn.textContent = 'Sending...';
+      fetch('https://api.hsforms.com/submissions/v3/integration/submit/'+PORTAL+'/'+FORM, {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ fields: fields, context:{ pageUri: location.href, pageName: document.title } })
+      }).then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
+        .then(function(res){
+          if(res.ok){ form.reset(); status.textContent = 'Thanks. A workforce expert will reach out shortly.'; status.style.color = '#7CFC9B'; btn.textContent = 'Sent ✓'; }
+          else { status.textContent = 'Something went wrong. Please call 888-905-4824.'; status.style.color = '#ff9b7a'; btn.disabled = false; btn.innerHTML = 'Talk to an Expert →'; }
+        }).catch(function(){ status.textContent = 'Network error. Please call 888-905-4824.'; status.style.color = '#ff9b7a'; btn.disabled = false; btn.innerHTML = 'Talk to an Expert →'; });
+    });
+  })();
+  </script>
 </body>
 </html>
