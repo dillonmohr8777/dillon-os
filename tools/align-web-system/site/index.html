@@ -83,21 +83,24 @@
       background:rgba(240,90,40,.12); color:var(--orange); }
     .proof-check svg { width:17px; height:17px; }
 
-    /* ===== Sliding logo strip (ALIGN_WEB_SYSTEM.md §4) ===== */
-    .logostrip { padding:30px 0 8px; background:#fff; }
-    .logostrip__label { width:min(86vw,var(--wide)); margin:0 auto 16px; color:var(--muted);
+    /* ===== Sliding logo carousel, SmartCare style: navy frame + white cards (ALIGN_WEB_SYSTEM.md §4) ===== */
+    .logostrip { padding:46px 0 40px; background:#fff; }
+    .logostrip__label { width:min(86vw,var(--wide)); margin:0 auto 22px; color:var(--muted);
       font-family:'DM Sans',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px;
       text-transform:uppercase; text-align:center; }
-    .logostrip__mask { width:min(92vw,var(--wide)); margin:0 auto; overflow:hidden;
-      -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
-      mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
-    .logostrip__track { display:flex; align-items:center; gap:58px; width:max-content; margin:0; padding:0;
-      list-style:none; animation:logoscroll 38s linear infinite; }
-    .logostrip__track li { flex:0 0 auto; display:flex; align-items:center; }
-    .logostrip__track img { height:38px; width:auto; max-width:154px; object-fit:contain;
-      filter:grayscale(1); opacity:.66; transition:opacity .3s,filter .3s; }
-    .logostrip__track li:hover img { opacity:1; filter:grayscale(0); }
-    .logostrip__mask:hover .logostrip__track { animation-play-state:paused; }
+    .logostrip__frame { width:min(92vw,var(--wide)); margin:0 auto; padding:22px; border-radius:28px;
+      background:linear-gradient(135deg,#17324d,#0f2033); border:1.5px solid rgba(240,90,40,.55);
+      box-shadow:0 24px 60px rgba(15,32,51,.28), 0 0 0 4px rgba(240,90,40,.06); overflow:hidden; }
+    .logostrip__mask { overflow:hidden;
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+      mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
+    .logostrip__track { display:flex; align-items:stretch; gap:18px; width:max-content; margin:0; padding:0;
+      list-style:none; animation:logoscroll 40s linear infinite; }
+    .logostrip__track li { flex:0 0 auto; width:210px; display:flex; }
+    .logostrip__card { flex:1; display:grid; place-items:center; padding:20px 26px; border-radius:16px;
+      background:#fff; box-shadow:0 8px 20px rgba(0,0,0,.18); }
+    .logostrip__card img { height:44px; width:auto; max-width:150px; object-fit:contain; }
+    .logostrip__frame:hover .logostrip__track { animation-play-state:paused; }
     @keyframes logoscroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
     /* ===== Sections ===== */
@@ -108,8 +111,8 @@
     .signal-card { min-height:134px; position:relative; padding:28px 30px 28px 70px; border-radius:14px;
       background:var(--warm); color:var(--ink); font-family:'DM Sans',sans-serif; font-size:19px;
       line-height:1.42; font-weight:500; transition:transform .35s var(--ease),box-shadow .35s var(--ease); }
-    .signal-card::before { content:""; position:absolute; top:34px; left:32px; width:19px; height:12px;
-      border-top:2px solid var(--orange); border-right:2px solid var(--orange); transform:skewX(-22deg); }
+    .signal-card::before { content:"\2192"; position:absolute; top:24px; left:30px; color:var(--orange);
+      font-family:'Plus Jakarta Sans',sans-serif; font-size:22px; font-weight:800; line-height:1; }
 
     .dark-band { padding:94px 0 106px; background:var(--ink); color:#fff; }
     .dark-band .eyebrow { color:#fff; }
@@ -119,9 +122,9 @@
     .support-card { min-height:298px; padding:29px 28px; border:1px solid #232a33; border-radius:14px;
       background:#161d26; transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease); }
     .support-card.featured { border-color:var(--orange); background:linear-gradient(180deg,#4a1c0c,#1b0e06); }
-    .support-icon { width:46px; height:46px; display:grid; place-items:center; margin-bottom:22px;
-      border-radius:12px; background:rgba(240,90,40,.16); color:var(--orange); }
-    .support-card.featured .support-icon { background:rgba(0,0,0,.28); }
+    .support-icon { width:52px; height:52px; display:grid; place-items:center; margin-bottom:22px;
+      border-radius:14px; background:#05070b; color:var(--orange); box-shadow:inset 0 0 0 1px rgba(240,90,40,.28); }
+    .support-card.featured .support-icon { background:rgba(0,0,0,.4); }
     .mini-label { margin-bottom:14px; color:#9fb0c8; font-size:11px; font-weight:800; letter-spacing:3px; text-transform:uppercase; }
     .support-card.featured .mini-label { color:var(--orange); }
     .support-card h3 { margin-bottom:10px; color:#fff; font-size:25px; line-height:1.1; font-weight:800; }
@@ -132,14 +135,14 @@
     .service-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; perspective:1000px; }
     .service-card { min-height:360px; padding:30px; border-radius:14px; background:#fff;
       transition:transform .35s var(--ease),box-shadow .35s var(--ease); }
-    .icon { width:48px; height:48px; display:grid; place-items:center; margin-bottom:18px; border-radius:12px;
-      background:rgba(240,90,40,.12); color:var(--orange); }
+    .icon { width:52px; height:52px; display:grid; place-items:center; margin-bottom:18px; border-radius:14px;
+      background:#111820; color:var(--orange); }
     .service-card h3 { margin-bottom:8px; color:var(--ink); font-size:23px; line-height:1.16; font-weight:800; }
     .service-card p { margin-bottom:28px; color:var(--body); font-size:14px; line-height:1.48; }
     .service-list { display:grid; gap:13px; padding:0; margin:0; list-style:none; color:var(--ink); font-size:14px; line-height:1.36; }
-    .service-list li { position:relative; padding-left:25px; }
-    .service-list li::before { content:""; position:absolute; top:.48em; left:0; width:14px; height:8px;
-      border-top:2px solid var(--orange); border-right:2px solid var(--orange); transform:skewX(-22deg); }
+    .service-list li { position:relative; padding-left:26px; }
+    .service-list li::before { content:"\2192"; position:absolute; top:-1px; left:0; color:var(--orange);
+      font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; font-weight:800; line-height:1.36; }
 
     .stories { padding:92px 0 96px; background:#fff; }
     .story-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-top:44px; }
@@ -172,9 +175,14 @@
     .align-footer__bar { padding-top:22px; border-top:1px solid rgba(255,255,255,.08); font-size:12px; color:#6b7280; }
 
     @media (hover:hover) and (prefers-reduced-motion:no-preference) {
-      .primary-btn:hover, .signal-card:hover, .service-card:hover, .story-card:hover {
-        transform:translateY(-8px); box-shadow:0 22px 42px rgba(20,20,20,.12); }
-      .support-card:hover { transform:translateY(-10px); border-color:rgba(240,90,40,.6); box-shadow:0 28px 55px rgba(0,0,0,.35); }
+      .primary-btn:hover { transform:translateY(-3px); box-shadow:0 18px 34px rgba(240,90,40,.4); }
+      .signal-card, .service-card, .story-card { border:1px solid transparent; }
+      .signal-card:hover, .service-card:hover, .story-card:hover {
+        transform:translateY(-8px); background:#fff; border-color:rgba(240,90,40,.35);
+        box-shadow:0 26px 50px rgba(240,90,40,.16), 0 6px 16px rgba(20,20,20,.08); }
+      .support-card:hover { transform:translateY(-10px); border-color:rgba(240,90,40,.65);
+        background:#1b232e; box-shadow:0 30px 60px rgba(0,0,0,.4), 0 0 34px rgba(240,90,40,.22); }
+      .support-card.featured:hover { box-shadow:0 30px 60px rgba(0,0,0,.45), 0 0 40px rgba(240,90,40,.35); }
     }
     @media (prefers-reduced-motion:reduce) { .logostrip__track { animation:none; flex-wrap:wrap; justify-content:center; } }
 
@@ -251,32 +259,34 @@
         </div>
       </section>
 
-      <!-- Sliding client logo strip -->
+      <!-- Sliding client logo carousel (SmartCare style: navy frame + white cards) -->
       <section class="logostrip" aria-label="Trusted by leading operations">
         <p class="logostrip__label">Trusted by complex manufacturing and public-sector operations</p>
-        <div class="logostrip__mask">
-          <ul class="logostrip__track">
-            <li><img src="assets/logos/arrow.png" alt="Arrow Electronics"></li>
-            <li><img src="assets/logos/vibra.jpg" alt="Vibra Healthcare"></li>
-            <li><img src="assets/logos/view.jpg" alt="VIEW"></li>
-            <li><img src="assets/logos/alterra.jpg" alt="Alterra Mountain Company"></li>
-            <li><img src="assets/logos/kimberly-clark.png" alt="Kimberly-Clark Professional"></li>
-            <li><img src="assets/logos/first-horizon.png" alt="First Horizon"></li>
-            <li><img src="assets/logos/air-methods.png" alt="Air Methods"></li>
-            <li><img src="assets/logos/troon.jpg" alt="Troon"></li>
-            <li><img src="assets/logos/resorts-world.png" alt="Resorts World"></li>
-            <li><img src="assets/logos/ohiohealth.png" alt="OhioHealth"></li>
-            <li aria-hidden="true"><img src="assets/logos/arrow.png" alt=""></li>
-            <li aria-hidden="true"><img src="assets/logos/vibra.jpg" alt=""></li>
-            <li aria-hidden="true"><img src="assets/logos/view.jpg" alt=""></li>
-            <li aria-hidden="true"><img src="assets/logos/alterra.jpg" alt=""></li>
-            <li aria-hidden="true"><img src="assets/logos/kimberly-clark.png" alt=""></li>
-            <li aria-hidden="true"><img src="assets/logos/first-horizon.png" alt=""></li>
-            <li aria-hidden="true"><img src="assets/logos/air-methods.png" alt=""></li>
-            <li aria-hidden="true"><img src="assets/logos/troon.jpg" alt=""></li>
-            <li aria-hidden="true"><img src="assets/logos/resorts-world.png" alt=""></li>
-            <li aria-hidden="true"><img src="assets/logos/ohiohealth.png" alt=""></li>
-          </ul>
+        <div class="logostrip__frame">
+          <div class="logostrip__mask">
+            <ul class="logostrip__track">
+              <li><span class="logostrip__card"><img src="assets/logos/arrow.png" alt="Arrow Electronics"></span></li>
+              <li><span class="logostrip__card"><img src="assets/logos/vibra.jpg" alt="Vibra Healthcare"></span></li>
+              <li><span class="logostrip__card"><img src="assets/logos/view.jpg" alt="VIEW"></span></li>
+              <li><span class="logostrip__card"><img src="assets/logos/alterra.jpg" alt="Alterra Mountain Company"></span></li>
+              <li><span class="logostrip__card"><img src="assets/logos/kimberly-clark.png" alt="Kimberly-Clark Professional"></span></li>
+              <li><span class="logostrip__card"><img src="assets/logos/first-horizon.png" alt="First Horizon"></span></li>
+              <li><span class="logostrip__card"><img src="assets/logos/air-methods.png" alt="Air Methods"></span></li>
+              <li><span class="logostrip__card"><img src="assets/logos/troon.jpg" alt="Troon"></span></li>
+              <li><span class="logostrip__card"><img src="assets/logos/resorts-world.png" alt="Resorts World"></span></li>
+              <li><span class="logostrip__card"><img src="assets/logos/ohiohealth.png" alt="OhioHealth"></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/arrow.png" alt=""></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/vibra.jpg" alt=""></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/view.jpg" alt=""></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/alterra.jpg" alt=""></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/kimberly-clark.png" alt=""></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/first-horizon.png" alt=""></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/air-methods.png" alt=""></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/troon.jpg" alt=""></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/resorts-world.png" alt=""></span></li>
+              <li aria-hidden="true"><span class="logostrip__card"><img src="assets/logos/ohiohealth.png" alt=""></span></li>
+            </ul>
+          </div>
         </div>
       </section>
 
