@@ -154,6 +154,41 @@
     .text-link { margin-top:auto; color:var(--ink); font-size:13px; font-weight:900; letter-spacing:1.8px; text-transform:uppercase; }
     .text-link span { color:var(--orange); font-size:16px; }
 
+    /* ===== Contact section (matches alignhcm.com "Speak to an expert") ===== */
+    .contact { position:relative; padding:98px 0 108px; background:#0a0d12; color:#fff; overflow:hidden; }
+    .contact::after { content:""; position:absolute; top:-140px; right:-90px; width:540px; height:540px; border-radius:50%;
+      background:radial-gradient(circle,rgba(240,90,40,.16),transparent 66%); filter:blur(20px); pointer-events:none; }
+    .contact-grid { position:relative; z-index:1; width:min(88vw,var(--wide)); margin:0 auto;
+      display:grid; grid-template-columns:minmax(0,.9fr) minmax(430px,.95fr); gap:70px; align-items:start; }
+    .contact .eyebrow { color:#fff; }
+    .contact h2 { max-width:none; margin:0 0 22px; color:#fff; font-size:46px; line-height:1.08; font-weight:800; }
+    .contact h2 span { color:var(--orange); }
+    .contact-copy { color:#c3c9d2; font-family:'DM Sans',sans-serif; font-size:16px; line-height:1.6; max-width:440px; margin:0 0 16px; }
+    .hours-pill { display:inline-flex; align-items:center; gap:10px; margin:12px 0 26px; padding:11px 20px;
+      border-radius:999px; background:rgba(240,90,40,.1); border:1px solid rgba(240,90,40,.42); color:#fff; font-size:14px; font-weight:700; }
+    .hours-pill::before { content:""; width:9px; height:9px; border-radius:50%; background:var(--orange); }
+    .contact-note { font-style:italic; color:#8a93a3; font-family:'DM Sans',sans-serif; font-size:14px; line-height:1.6; max-width:420px; margin:0; }
+    .form-card { position:relative; padding:34px 34px 30px; border-radius:20px; background:#0e1116; box-shadow:0 30px 70px rgba(0,0,0,.5); }
+    .form-card::before { content:""; position:absolute; top:0; left:0; right:0; height:3px; border-radius:20px 20px 0 0;
+      background:linear-gradient(90deg,#F05A28,#FF6B35 55%,#ffb347); }
+    .form-card h3 { margin:0 0 6px; color:#fff; font-size:26px; font-weight:800; }
+    .form-card .sub { margin:0 0 24px; color:#9aa3af; font-family:'DM Sans',sans-serif; font-size:14px; }
+    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px 14px; }
+    .field { display:grid; gap:8px; } .field.full { grid-column:1/-1; }
+    .field label { color:#fff; font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; }
+    .field label span { color:var(--orange); }
+    .field input, .field select, .field textarea { width:100%; padding:13px 14px; border-radius:10px; font:inherit; font-size:14px; }
+    .field input { background:#fff; border:1px solid #d8dfe9; color:#111; }
+    .field select, .field textarea { background:#171b22; border:1px solid #2a2f38; color:#fff; }
+    .field textarea { min-height:96px; resize:vertical; }
+    .submit-btn { grid-column:1/-1; margin-top:8px; padding:15px; border:0; border-radius:10px; background:var(--grad);
+      color:#fff; font-family:'Plus Jakarta Sans',sans-serif; font-size:15px; font-weight:800; cursor:pointer;
+      transition:transform .25s var(--ease),box-shadow .25s var(--ease); }
+    .submit-btn:hover { transform:translateY(-2px); box-shadow:0 16px 30px rgba(240,90,40,.4); }
+    .form-note { grid-column:1/-1; margin:6px 0 0; text-align:center; color:#9aa3af; font-size:12px; }
+    .form-note a { color:var(--orange); }
+    @media (max-width:920px){ .contact-grid { grid-template-columns:1fr; gap:40px; } .contact h2 { font-size:34px; } .form-grid { grid-template-columns:1fr; } }
+
     /* ===== Continuity footer (ALIGN_WEB_SYSTEM.md §5) ===== */
     .align-footer { background:#0f151c; color:#aeb4bf; padding:56px 0 26px; font-family:'DM Sans',sans-serif; }
     .align-footer__inner { width:min(92vw,1120px); margin:0 auto; }
@@ -373,16 +408,49 @@
           </div>
         </div>
       </section>
+
+      <!-- Contact form section (matches alignhcm.com "Speak to an expert / Get in Touch") -->
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-grid">
+          <div>
+            <p class="eyebrow">Talk to us</p>
+            <h2 id="contact-title">Speak to a workforce expert <span>ASAP.</span></h2>
+            <p class="contact-copy">If you need help, we'll call you promptly, usually within the hour (including weekends).</p>
+            <p class="contact-copy">Simply put in your business and contact info and we will call you.</p>
+            <div class="hours-pill">7 days a week, 9:00am - 9:00pm EDT</div>
+            <p class="contact-note">If you're reaching out for selling or partnership opportunities, we will contact you at our discretion.</p>
+          </div>
+          <form class="form-card" onsubmit="return false">
+            <h3>Get in Touch</h3>
+            <p class="sub">Align moves at your speed. Which is always "right now."</p>
+            <div class="form-grid">
+              <div class="field full"><label>Name <span>*</span></label><input type="text" placeholder="Your full name"></div>
+              <div class="field"><label>Work Email <span>*</span></label><input type="email" placeholder="you@company.com"></div>
+              <div class="field"><label>Phone Number <span>*</span></label><input type="tel" placeholder="(555) 123-4567"></div>
+              <div class="field full"><label>Company <span>*</span></label><input type="text" placeholder="Your company name"></div>
+              <div class="field full"><label>How can we help? <span>*</span></label>
+                <select>
+                  <option>Select an option...</option>
+                  <option>Scheduling and time</option>
+                  <option>Payroll and compliance</option>
+                  <option>HR and talent</option>
+                  <option>Labor visibility and reporting</option>
+                  <option>Ongoing support (SmartCare)</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="field full"><label>Brief Description</label><textarea placeholder="Tell us what you need help with..."></textarea></div>
+              <button class="submit-btn" type="submit">Talk to an Expert &rarr;</button>
+              <p class="form-note">By submitting, you agree to our <a href="#privacy">Privacy Policy</a>.</p>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
-    <!-- CONTINUITY FOOTER: mirrors global footer (ALIGN_WEB_SYSTEM.md §5). Heading line is the page variant. -->
-    <footer class="align-footer" id="contact" role="contentinfo">
+    <!-- CONTINUITY FOOTER: mirrors global footer (ALIGN_WEB_SYSTEM.md §5). -->
+    <footer class="align-footer" role="contentinfo">
       <div class="align-footer__inner">
-        <div class="align-footer__cta">
-          <h2 class="afr-cta">Build a stronger manufacturing and public-sector workforce.</h2>
-          <p>No matter where you are in your HCM solution journey, we can help you thrive with HR, payroll, and workforce management solutions. Contact us for a free, no-obligation assessment. Please fill out the Contact Us form or call us at <a href="tel:8889054824">888-905-4824</a>.</p>
-          <a class="align-footer__btn" href="tel:8889054824">Contact Us</a>
-        </div>
         <div class="align-footer__grid">
           <div class="align-footer__col"><h4>St. Petersburg Office</h4><p>360 Central Ave Suite 800<br>St. Petersburg, FL 33701</p></div>
           <div class="align-footer__col"><h4>Toronto Office</h4><p>60 Atlantic Ave. Suite 200<br>Toronto, ON&nbsp; M6K 1X9</p></div>
