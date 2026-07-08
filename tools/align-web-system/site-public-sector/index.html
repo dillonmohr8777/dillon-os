@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Sector Workforce Solutions | Align HCM</title>
+  <meta name="description" content="Align HCM helps government agencies, school boards, and public utilities implement and optimize the HCM platform they already chose. Vendor agnostic. Public sector fluent.">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --orange:#F05A28; --orange-hot:#FF6B35; --grad:linear-gradient(135deg,#F05A28,#FF6B35);
+      --ink:#111820; --navy:#13314e; --navy-deep:#0d2740; --body:#22384f; --muted:#5d6672;
+      --warm:#f4efe7; --white:#fff; --wide:1180px; --ease:cubic-bezier(.2,.8,.2,1);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;overflow-x:hidden;background:#fff;color:var(--ink);font-family:'Plus Jakarta Sans','DM Sans',sans-serif}
+    a{color:inherit;text-decoration:none}
+    p{font-family:'DM Sans',sans-serif}
+    h1,h2,h3,p{margin-top:0}
+    .wrap{width:min(88vw,var(--wide));margin:0 auto}
+    .eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 20px;font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--orange)}
+    .eyebrow::before{content:"";width:26px;height:2px;background:var(--orange)}
+    svg{display:block}
+
+    /* ===== Mega-menu header (brought in from the Netlify mega-menu) ===== */
+    .hdr{position:relative;z-index:20;padding-top:26px}
+    .hdr__bar{width:min(94vw,1320px);margin:0 auto;background:#fff;border:1px solid rgba(17,32,48,.12);
+      border-radius:28px;box-shadow:0 16px 40px rgba(17,24,32,.09);min-height:80px;padding:0 24px;
+      display:flex;align-items:center;gap:20px}
+    .brand{flex:0 0 auto;display:flex;align-items:center}
+    .brand img{height:44px;width:auto;display:block}
+    .nav{flex:1 1 auto;min-width:0}
+    .menu{display:flex;flex-wrap:nowrap;align-items:center;gap:16px;margin:0;padding:0;list-style:none;justify-content:flex-end}
+    .menu>li{position:static;flex:0 0 auto}
+    .menu>li>a{display:inline-flex;align-items:center;gap:5px;color:var(--ink);font-size:14px;font-weight:700;white-space:nowrap;padding:8px 0}
+    .menu>li>a:hover,.menu>li.active>a{color:var(--orange)}
+    .caret{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-1px)}
+    .cta-btn{flex:0 0 auto;padding:13px 24px;border-radius:999px;background:var(--grad);color:#fff;font-size:14px;
+      font-weight:800;text-transform:uppercase;white-space:nowrap;box-shadow:0 10px 24px rgba(240,90,40,.28)}
+    .submenu{position:absolute;top:calc(100% + 12px);left:0;right:0;width:100%;margin:0;padding:26px;list-style:none;display:none;
+      grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 20px;background:#fff;border:1px solid rgba(17,32,48,.12);
+      border-radius:26px;box-shadow:0 18px 44px rgba(17,32,48,.14)}
+    .menu>li.has:hover>.submenu,.menu>li.has:focus-within>.submenu{display:grid}
+    .submenu a{min-height:64px;padding:10px 12px;display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:12px;
+      border-radius:14px;color:var(--navy);font-size:14px;font-weight:700}
+    .submenu a:hover{background:rgba(240,90,40,.1)}
+    .submenu a::after{content:"\2192";color:var(--orange)}
+    .mi{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:9px;background:#fae0d3;color:var(--orange)}
+    .mi svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    @media(max-width:1180px){.menu{display:none}.hdr__bar{justify-content:space-between}}
+
+    /* ===== Hero ===== */
+    .hero{margin-top:-106px;padding:180px 0 78px;color:#fff;position:relative;overflow:hidden;
+      background:linear-gradient(120deg,#0d2740,#16385a 60%,#0d2740)}
+    .hero::after{content:"";position:absolute;inset:0;background:
+      repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 1px,transparent 1px 80px);pointer-events:none}
+    .hero .eyebrow{color:#ffb08c}
+    .hero h1{position:relative;max-width:640px;margin:0 0 22px;font-size:50px;line-height:1.06;font-weight:800}
+    .hero-copy{position:relative;max-width:560px;margin:0 0 30px;color:#c7d3e2;font-size:17px;line-height:1.6}
+    .hero-actions{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-bottom:0}
+    .btn-primary{padding:14px 26px;border-radius:10px;background:var(--grad);color:#fff;font-size:15px;font-weight:800;
+      box-shadow:0 14px 30px rgba(240,90,40,.32);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(240,90,40,.45)}
+    .btn-text{color:#fff;font-size:15px;font-weight:800}
+    .btn-text span{color:var(--orange)}
+    .statbar{margin-top:0;background:var(--navy-deep);color:#c7d3e2;border-top:1px solid rgba(255,255,255,.08)}
+    .statbar .wrap{display:flex;flex-wrap:wrap;gap:34px;padding:20px 0;font-size:13px;font-weight:600}
+    .statbar b{color:#fff;font-family:'Plus Jakarta Sans';font-weight:800}
+
+    /* ===== Complexity (light) ===== */
+    .reality{padding:88px 0;background:#fbf8f3}
+    .reality h2{max-width:640px;margin:0 0 16px;font-size:36px;line-height:1.15;font-weight:800;color:var(--navy)}
+    .reality .lead{max-width:620px;margin:0 0 44px;color:var(--muted);font-size:16px;line-height:1.6}
+    .reality-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 60px}
+    .reality-item{display:grid;grid-template-columns:24px 1fr;gap:14px;padding:0 0 24px;border-bottom:1px solid #e6ded4;
+      color:var(--ink);font-family:'DM Sans';font-size:15px;line-height:1.55}
+    .reality-item::before{content:"\2192";color:var(--orange);font-family:'Plus Jakarta Sans';font-weight:800;font-size:18px}
+
+    /* ===== Process (cream, 4 cards) ===== */
+    .process{padding:88px 0 96px;background:var(--warm)}
+    .process h2{max-width:640px;margin:0 0 14px;font-size:36px;line-height:1.15;font-weight:800;color:var(--navy)}
+    .process .lead{max-width:600px;margin:0 0 46px;color:var(--muted);font-size:16px;line-height:1.6}
+    .card-grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;perspective:1400px}
+    .pcard{background:#fff;border-radius:14px;border-top:3px solid var(--orange);padding:26px 24px 28px;
+      box-shadow:0 10px 26px rgba(20,20,20,.06);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+    .pcard .step{color:var(--orange);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+    .pcard h3{margin:0 0 12px;color:var(--navy);font-size:21px;line-height:1.14;font-weight:800}
+    .pcard p{margin:0;color:var(--body);font-family:'DM Sans';font-size:14px;line-height:1.55}
+
+    /* ===== Operating rules (navy, 6 cards) ===== */
+    .rules{padding:92px 0 100px;background:var(--navy);color:#fff}
+    .rules .eyebrow{color:#ffb08c}
+    .rules h2{max-width:640px;margin:0 0 16px;font-size:36px;line-height:1.15;font-weight:800;color:#fff}
+    .rules .lead{max-width:600px;margin:0 0 46px;color:#b9c6d6;font-size:16px;line-height:1.6}
+    .card-grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;perspective:1400px}
+    .rcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:26px 24px;
+      transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease)}
+    .rcard .num{color:var(--orange);font-size:13px;font-weight:800;margin-bottom:14px}
+    .rcard h3{margin:0 0 10px;color:#fff;font-size:18px;line-height:1.2;font-weight:800}
+    .rcard p{margin:0;color:#c2cddb;font-family:'DM Sans';font-size:13.5px;line-height:1.55}
+
+    /* ===== Vendor agnostic (white) ===== */
+    .vendors{padding:64px 0;background:#fff;border-bottom:1px solid #eee}
+    .vendors .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:50px;align-items:center}
+    .vendors h3{margin:0 0 10px;color:var(--navy);font-size:22px;font-weight:800}
+    .vendors p{margin:0;color:var(--muted);font-family:'DM Sans';font-size:14px;line-height:1.55;max-width:360px}
+    .pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+    .pill{padding:11px 22px;border-radius:10px;border:1px solid #d9d2c7;background:#fff;color:var(--navy);
+      font-size:14px;font-weight:700;transition:transform .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
+    .pill:hover{transform:translateY(-3px);border-color:var(--orange);box-shadow:0 10px 22px rgba(240,90,40,.16)}
+
+    /* ===== Outcomes (cream, 3 cards) ===== */
+    .outcomes{padding:88px 0 92px;background:#fbf8f3}
+    .outcomes h2{max-width:620px;margin:0 0 14px;font-size:36px;line-height:1.15;font-weight:800;color:var(--navy)}
+    .outcomes .lead{max-width:560px;margin:0 0 44px;color:var(--muted);font-size:16px;line-height:1.6}
+    .ocard{background:#fff;border-radius:14px;border-top:3px solid var(--orange);padding:26px 24px;
+      box-shadow:0 10px 26px rgba(20,20,20,.06);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+    .ocard .tag{color:var(--orange);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;line-height:1.4}
+    .ocard h3{margin:0 0 10px;color:var(--navy);font-size:20px;font-weight:800}
+    .ocard p{margin:0;color:var(--body);font-family:'DM Sans';font-size:14px;line-height:1.55}
+    .disclaimer{margin:30px 0 0;color:var(--muted);font-family:'DM Sans';font-size:12.5px;font-style:italic}
+
+    /* 3D hover on cards */
+    @media(hover:hover) and (prefers-reduced-motion:no-preference){
+      .pcard:hover,.ocard:hover{transform:translateY(-10px) rotateX(4deg);box-shadow:0 30px 55px rgba(240,90,40,.16),0 8px 18px rgba(20,20,20,.1)}
+      .rcard:hover{transform:translateY(-10px) rotateX(4deg);border-color:rgba(240,90,40,.6);box-shadow:0 28px 55px rgba(0,0,0,.35),0 0 30px rgba(240,90,40,.2)}
+    }
+
+    /* ===== Contact (navy, white form card) ===== */
+    .contact{padding:92px 0 100px;background:var(--navy-deep);color:#fff}
+    .contact .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(420px,.9fr);gap:64px;align-items:start}
+    .contact .eyebrow{color:#ffb08c}
+    .contact h2{max-width:420px;margin:0 0 20px;font-size:38px;line-height:1.1;font-weight:800;color:#fff}
+    .contact-copy{max-width:420px;color:#c7d3e2;font-family:'DM Sans';font-size:15px;line-height:1.6;margin:0 0 16px}
+    .contact-note{max-width:420px;color:#8ea1b8;font-family:'DM Sans';font-size:13.5px;font-style:italic;line-height:1.6;margin:14px 0 0}
+    .fcard{background:#fff;border-radius:16px;padding:30px 30px 26px;box-shadow:0 30px 70px rgba(0,0,0,.4)}
+    .fcard h3{margin:0 0 5px;color:var(--navy);font-size:22px;font-weight:800}
+    .fcard .sub{margin:0 0 22px;color:var(--muted);font-family:'DM Sans';font-size:13.5px}
+    .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px 14px}
+    .fld{display:grid;gap:7px}.fld.full{grid-column:1/-1}
+    .fld label{color:var(--navy);font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
+    .fld label span{color:var(--orange)}
+    .fld input,.fld select,.fld textarea{width:100%;padding:12px 13px;border-radius:9px;border:1px solid #d5dbe3;background:#fff;color:#111;font:inherit;font-size:14px}
+    .fld textarea{min-height:88px;resize:vertical}
+    .fsubmit{grid-column:1/-1;margin-top:6px;padding:15px;border:0;border-radius:9px;background:var(--navy);color:#fff;
+      font-family:'Plus Jakarta Sans';font-size:15px;font-weight:800;cursor:pointer;transition:background .25s,transform .25s}
+    .fsubmit:hover{background:#0d2740;transform:translateY(-2px)}
+    .fnote{grid-column:1/-1;margin:4px 0 0;text-align:center;color:var(--muted);font-size:12px}
+    .fnote a{color:var(--orange)}
+
+    /* ===== Footer (navy) ===== */
+    .ftr{background:var(--navy-deep);color:#9fb0c4;padding:20px 0 40px;font-family:'DM Sans'}
+    .ftr__grid{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:32px;padding:36px 0 30px;border-top:1px solid rgba(255,255,255,.1)}
+    .ftr__grid h4{margin:0 0 10px;font-family:'Plus Jakarta Sans';font-size:12px;font-weight:800;color:var(--orange);text-transform:uppercase;letter-spacing:.6px}
+    .ftr__grid p{margin:0;font-size:13px;line-height:1.7;color:#9fb0c4}
+    .ftr__grid a{color:#9fb0c4}.ftr__grid a:hover{color:var(--orange)}
+    .socials{display:flex;gap:10px;margin-top:14px}
+    .socials a{width:30px;height:30px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:7px;font-size:12px;font-weight:800;color:#c7d3e2}
+    .socials a:hover{border-color:var(--orange);color:var(--orange)}
+    .ftr__bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:#7d8ea3}
+    .ftr__bar a{color:#7d8ea3}
+
+    @media(max-width:1024px){.card-grid-4{grid-template-columns:repeat(2,1fr)}.card-grid-3{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:860px){
+      .hero{margin-top:-92px;padding:150px 0 60px}.hero h1{font-size:36px}
+      .reality-grid,.vendors .wrap,.contact .wrap,.ftr__grid{grid-template-columns:1fr;gap:26px}
+      .pills{justify-content:flex-start}
+      .card-grid-4,.card-grid-3,.fgrid{grid-template-columns:1fr}
+      .reality h2,.process h2,.rules h2,.outcomes h2,.contact h2{font-size:29px}
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HEADER (mega-menu with icons) ===== -->
+  <header class="hdr">
+    <div class="hdr__bar">
+      <a class="brand" href="/" aria-label="Align HCM home"><img src="assets/align-hcm-logo.png" alt="Align HCM Human Capital Management"></a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li class="has"><a href="/services">Services <span class="caret"></span></a>
+            <ul class="submenu">
+              <li><a href="#">Services Overview</a></li><li><a href="#">Assessments</a></li>
+              <li><a href="#">Implementation</a></li><li><a href="#">Training</a></li>
+              <li><a href="#">System Integration</a></li><li><a href="#">Support</a></li>
+              <li><a href="#">Optimization</a></li><li><a href="#">Data Conversion</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="/public-sector">Public Sector</a></li>
+          <li><a href="/smartcare">SmartCare</a></li>
+          <li class="has"><a href="/channel-partner">Channel Partner <span class="caret"></span></a>
+            <ul class="submenu">
+              <li><a href="#">Channel Partner Program</a></li><li><a href="#">How It Works</a></li>
+              <li><a href="#">Why Align HCM</a></li><li><a href="#">Partner FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="/partners">Partners</a></li>
+          <li><a href="/insights">Insights</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+      <a class="cta-btn" href="#contact">Contact us</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Industries · Public Sector</p>
+      <h1>Public service runs on your people. We make the platform behind them work.</h1>
+      <p class="hero-copy">Align HCM helps government agencies, school boards, and public utilities implement and optimize the HCM platform they already chose. We work inside your system, across UKG, Dayforce, Workday, Paylocity, ADP, and more. No migration. No co-employment. No vendor lock-in.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Talk to a public sector expert</a>
+        <a class="btn-text" href="#how">See how we help <span>&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+  <div class="statbar"><div class="wrap">
+    <span><b>25+ years</b> of HCM delivery leadership</span>
+    <span><b>US &amp; Canada</b> compliance fluency</span>
+    <span><b>Vendor agnostic</b> across six platforms</span>
+  </div></div>
+
+  <!-- ===== COMPLEXITY ===== -->
+  <section class="reality">
+    <div class="wrap">
+      <p class="eyebrow">The public sector reality</p>
+      <h2>The public sector carries complexity no generic rollout can handle.</h2>
+      <p class="lead">You serve the community with tight budgets and full public scrutiny. Your workforce technology has to hold up to the same standard. These are the pressures we see across government teams.</p>
+      <div class="reality-grid">
+        <div class="reality-item">Collective bargaining agreements, shift premiums, and seniority rules drive your pay calculations, and one missed rule turns into a grievance.</div>
+        <div class="reality-item">Compliance never stops. FLSA, pay equity, provincial employment standards, and public records requests all land on your HR team at once.</div>
+        <div class="reality-item">Budgets face public review. Every dollar spent on workforce technology has to show a return the community can see.</div>
+        <div class="reality-item">An aging workforce retires faster than you can hire, and institutional knowledge walks out the door with it.</div>
+        <div class="reality-item">Paper timesheets, spreadsheets, and manual approvals still run core processes while the platform you paid for sits underused.</div>
+        <div class="reality-item">Grant and project funding requires labor tracking down to the hour, and auditors expect a clean, defensible trail.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="process" id="how">
+    <div class="wrap">
+      <p class="eyebrow">How Align HCM helps</p>
+      <h2>One partner from assessment through daily operations.</h2>
+      <p class="lead">We meet you wherever you are, whether you are scoping a new build, recovering a rough go-live, or running a mature system that could do more.</p>
+      <div class="card-grid-4">
+        <article class="pcard"><div class="step">01 · Assess</div><h3>Workforce Assessment</h3><p>We map your current configuration, compliance gaps, and manual workarounds, then hand you a prioritized roadmap tied to your budget cycle.</p></article>
+        <article class="pcard"><div class="step">02 · Implement</div><h3>Implementation</h3><p>We stand up your platform for public sector realities: CBAs, complex scheduling, grant tracking, and self-service, so go-live holds up in production.</p></article>
+        <article class="pcard"><div class="step">03 · Optimize</div><h3>Optimization</h3><p>We activate the modules you already own, replace spreadsheets with real system process, and tune pay rules so payroll runs clean every cycle.</p></article>
+        <article class="pcard"><div class="step">04 · Sustain</div><h3>SmartCare</h3><p>Ongoing expert support that knows your configuration, protects compliance, and carries you through year-end, budget season, and turnover.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OPERATING RULES ===== -->
+  <section class="rules">
+    <div class="wrap">
+      <p class="eyebrow">Built for how government works</p>
+      <h2>We speak your operating rules, not just software.</h2>
+      <p class="lead">Public sector configuration lives in the details. These are the areas where our team has done the work before.</p>
+      <div class="card-grid-3">
+        <article class="rcard"><div class="num">01</div><h3>Collective bargaining and complex pay</h3><p>Seniority, premiums, rounding, and multi-union rules configured to match every agreement you administer.</p></article>
+        <article class="rcard"><div class="num">02</div><h3>Scheduling for essential services</h3><p>Coverage for 24/7 operations, public safety, and field crews, with rules that reduce grievances and overtime leakage.</p></article>
+        <article class="rcard"><div class="num">03</div><h3>Grant and project labor tracking</h3><p>Time allocated to funding sources and cost centers so reporting and audits pass on the first pass.</p></article>
+        <article class="rcard"><div class="num">04</div><h3>Compliance and audit-ready reporting</h3><p>Configurable reporting for FLSA, pay equity, provincial standards, and records requests, built to withstand review.</p></article>
+        <article class="rcard"><div class="num">05</div><h3>Employee self-service everywhere</h3><p>Mobile and kiosk access for field, frontline, and desk staff, cutting ticket volume and manual data entry.</p></article>
+        <article class="rcard"><div class="num">06</div><h3>Security and accessibility</h3><p>Configuration that supports SOC posture, WCAG, and Section 508 expectations for public facing systems.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VENDOR AGNOSTIC ===== -->
+  <section class="vendors">
+    <div class="wrap">
+      <div>
+        <h3>Vendor agnostic. Public sector fluent.</h3>
+        <p>We operate on the platform you choose and know the public sector build in each one, including UKG GovTA and UKG Pro.</p>
+      </div>
+      <div class="pills">
+        <span class="pill">UKG</span><span class="pill">Dayforce</span><span class="pill">Workday</span>
+        <span class="pill">Paylocity</span><span class="pill">ADP</span><span class="pill">HiBob</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUTCOMES ===== -->
+  <section class="outcomes">
+    <div class="wrap">
+      <p class="eyebrow">Representative outcomes</p>
+      <h2>Complex public sector HCM. Measurable results.</h2>
+      <p class="lead">Illustrative engagement profiles showing the kind of work our public sector practice delivers.</p>
+      <div class="card-grid-3">
+        <article class="ocard"><div class="tag">County Government · 4,200 employees</div><h3>Payroll consolidated</h3><p>Standardized eleven department pay rule sets into one configuration and cut payroll processing from three days to a single afternoon.</p></article>
+        <article class="ocard"><div class="tag">Public School Board · 6,500 staff</div><h3>Scheduling under control</h3><p>Automated seniority based assignment across schools and reduced grievances tied to shift and coverage decisions.</p></article>
+        <article class="ocard"><div class="tag">Municipal Utility · 900 employees</div><h3>Audit ready labor data</h3><p>Stood up grant and project labor tracking that passed the annual funding audit on the first review.</p></article>
+      </div>
+      <p class="disclaimer">Profiles above are illustrative and represent typical public sector engagement types, not specific named clients.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Talk to us</p>
+        <h2>Connect with a public sector HCM expert.</h2>
+        <p class="contact-copy">We assess your system, document your gaps, and hand you a roadmap tied to your budget cycle. If you do not see the value, walk away.</p>
+        <p class="contact-copy">You will speak with a subject matter expert, not a sales rep.</p>
+        <p class="contact-note">If you're reaching out for selling or partnership opportunities, we will follow up at our discretion.</p>
+      </div>
+      <form class="fcard" id="align-contact-form" novalidate>
+        <h3>Get in touch</h3>
+        <p class="sub">Align moves at your speed, which is always right now.</p>
+        <div class="fgrid">
+          <div class="fld full"><label for="f-name">Name <span>*</span></label><input id="f-name" name="firstname" type="text" required placeholder="Your name"></div>
+          <div class="fld"><label for="f-email">Work email <span>*</span></label><input id="f-email" name="email" type="email" required placeholder="name@agency.gov"></div>
+          <div class="fld"><label for="f-phone">Phone <span>*</span></label><input id="f-phone" name="phone" type="tel" required placeholder="(555) 000-0000"></div>
+          <div class="fld full"><label for="f-company">Organization <span>*</span></label><input id="f-company" name="company" type="text" required placeholder="Agency, board, or district"></div>
+          <div class="fld full"><label for="f-help">How can we help? <span>*</span></label>
+            <select id="f-help" name="service_interest" required>
+              <option value="">Select an option...</option>
+              <option value="UKG Implementation">UKG Implementation</option>
+              <option value="Smartcare Support">SmartCare Support</option>
+              <option value="Partnership/Vendor Inquiry">Partnership / Vendor Inquiry</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="fld full"><label for="f-msg">Brief description</label><textarea id="f-msg" name="message" placeholder="Tell us what you are working on"></textarea></div>
+          <button class="fsubmit" type="submit">Talk to an expert &rarr;</button>
+          <p class="fnote" id="form-status">By submitting, you agree to our <a href="#privacy">Privacy Policy</a>.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr__grid">
+        <div><h4>St. Petersburg Office</h4><p>360 Central Ave<br>Suite 800<br>St. Petersburg, FL 33701</p><p style="margin-top:10px">888-905-4824</p>
+          <div class="socials"><a href="https://www.linkedin.com/company/align-hcm/" rel="noopener" aria-label="LinkedIn">in</a><a href="#" aria-label="X">X</a></div>
+        </div>
+        <div><h4>Toronto Office</h4><p>60 Atlantic Ave.<br>Suite 200<br>Toronto, ON M6K 1X9</p></div>
+        <div><h4>We're here to help</h4><p>No matter where you are in your HCM journey, we help public sector teams thrive with HR, payroll, and workforce management.</p></div>
+      </div>
+      <div class="ftr__bar">
+        <span>© 2026 Align HCM. All Rights Reserved.</span>
+        <span><a href="#privacy">Disclaimers &amp; Policies</a> · <a href="#a11y">Accessibility Policy and Statement</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    // Mega-menu icon tiles
+    var icons={overview:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>',
+      check:'<svg viewBox="0 0 24 24"><path d="M7 12l3 3 7-7"/><path d="M4 7h6"/><path d="M4 17h16"/></svg>',
+      people:'<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M4 20a5 5 0 0 1 10 0"/><path d="M14 18a4 4 0 0 1 6 2"/></svg>',
+      arrow:'<svg viewBox="0 0 24 24"><path d="M4 19c4-1 8-5 10-10l3-3"/><path d="M13 7l4 4"/><path d="M14 4h6v6"/></svg>'};
+    document.querySelectorAll('.submenu a').forEach(function(a){
+      if(a.querySelector('.mi'))return;
+      var t=a.textContent.trim();var i=document.createElement('span');i.className='mi';i.setAttribute('aria-hidden','true');
+      i.innerHTML=/overview/i.test(t)?icons.overview:/partner|why|program/i.test(t)?icons.people:/implementation|training|integration|conversion/i.test(t)?icons.arrow:icons.check;
+      var l=document.createElement('span');l.textContent=t;a.textContent='';a.appendChild(i);a.appendChild(l);
+    });
+    // Contact form -> HubSpot
+    var form=document.getElementById('align-contact-form');if(!form)return;
+    var status=document.getElementById('form-status');
+    form.addEventListener('submit',function(e){
+      e.preventDefault();var btn=form.querySelector('.fsubmit');
+      var req=['firstname','email','phone','company','service_interest'];
+      for(var i=0;i<req.length;i++){if(!form.elements[req[i]].value){status.textContent='Please fill in all required fields.';status.style.color='#c0392b';return;}}
+      var fields=['firstname','email','phone','company','service_interest','message'].map(function(n){return {name:n,value:form.elements[n]?form.elements[n].value:''};}).filter(function(f){return f.value;});
+      btn.disabled=true;btn.textContent='Sending...';
+      fetch('https://api.hsforms.com/submissions/v3/integration/submit/242825734/e733d928-0f1d-4b41-853b-df1e0096f330',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields:fields,context:{pageUri:location.href,pageName:document.title}})})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(res){if(res.ok){form.reset();status.textContent='Thanks. A public sector expert will reach out shortly.';status.style.color='#1a7f37';btn.textContent='Sent ✓';}else{status.textContent='Something went wrong. Please call 888-905-4824.';status.style.color='#c0392b';btn.disabled=false;btn.innerHTML='Talk to an expert →';}})
+      .catch(function(){status.textContent='Network error. Please call 888-905-4824.';status.style.color='#c0392b';btn.disabled=false;btn.innerHTML='Talk to an expert →';});
+    });
+  })();
+  </script>
+</body>
+</html>
