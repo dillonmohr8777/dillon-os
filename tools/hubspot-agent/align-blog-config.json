@@ -1,0 +1,14 @@
+{
+  "_note": "Non-secret HubSpot IDs for the Align HCM blog. The auth token is NOT here (it lives in the HUBSPOT_PRIVATE_APP_TOKEN env var / secret).",
+  "portalId": "242825734",
+  "contentGroupId": "238216692432",
+  "blogName": "Align HCM blog",
+  "blogUrl": "https://www.alignhcm.com/blog",
+  "authors": {
+    "Align HCM": "238213180141",
+    "Leanne Joffre": "268556128967",
+    "Raubi Perilli": "268634354370",
+    "Maher El-Abdallah": "316873681616",
+    "Barbara Tonelli": "346652846811"
+  }
+}
