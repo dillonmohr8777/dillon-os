@@ -17,7 +17,7 @@ QA. Evidence beats memory.
 logo strip, and the hard-ban list. If it isn't in that file, it isn't a rule.
 The corrected reference assets live beside it:
 - `tools/align-web-system/global-header-mega-menu.html`
-- `tools/align-web-system/public-sector-manufacturing.html`
+- `tools/align-web-system/site/index.html`
 - `tools/align-web-system/partials/{logo-carousel,footer}.html`
 
 ## The theory you enforce (Dillon's, distilled)
