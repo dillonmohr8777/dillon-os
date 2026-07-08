@@ -15,6 +15,27 @@ Skills (shared repo `claude-skills-repo`, runs local + cloud):
 Vault agents (`mohr-vault/vault/11_Agents/`): Master, Google Ads, Web, Reporting, SEO, **Morning
 Orchestrator**, **Web Design Lane**. The orchestrator drives the existing agents as parallel scouts.
 
+## Orchestration Ownership (who runs what)
+
+- **GPT-5.6 / Codex = the commander (L0).** It is the persistent orchestrator on the 64GB machine: owns
+  routing, the run-state, the approval board, the swarm, the kill switch, and the one push to Dillon. It
+  runs the daily loop and spawns the parallel sub-agent swarm.
+- **Claude Code desktop = occasional local specialist.** Dillon runs it now and then. Codex may delegate
+  a bounded lane to it as an L1/L2 worker (e.g. code changes, vault reasoning, report build, QA/verify)
+  by shelling out to the `claude` CLI with a worker contract and reading back the structured return.
+  Claude is a worker in the swarm, not a second commander — one brain stays in charge.
+- **The contract is model-agnostic.** `orchestrator.config.json`, `references/agent-protocol.md`, and
+  `references/autonomy-policy.md` (in `claude-skills-repo/skills/morning-orchestrator/`) are plain
+  JSON + markdown. Codex reads them as its execution spec; Claude reads the same files when run locally.
+  No behavior is locked inside a Claude-only skill format — the SKILL.md files are a convenience wrapper
+  for when Claude is the one running, and they point at the same contract.
+
+### How Codex consumes this
+1. Read this spec + `orchestrator.config.json` for topology, tiers, budgets, concurrency.
+2. Read `agent-protocol.md` (worker contract, self-verification, ceilings) and `autonomy-policy.md` (what's unattended vs gated).
+3. Ensure `claude-skills-repo` is present locally so the reference files resolve; if not, this spec plus the config JSON are sufficient to run.
+4. Run the daily loop below as the commander. Spawn workers per the protocol. Delegate to `claude` only for lanes where it's the better tool; keep the commander single-threaded.
+
 ## Daily Loop
 1. **Wake** — scheduled, no human (Task Scheduler, `-WakeToRun`, ~06:30).
 2. **Pre-flight** per client: authorization valid? tracking tags/versions current (GTM published, GA4, conv tag, Meta pixel+CAPI)? real conversion intent behind the ads (conversion goal set, intent-bearing keywords, not vanity traffic)?
