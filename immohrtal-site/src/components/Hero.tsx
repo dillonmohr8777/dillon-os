@@ -103,7 +103,7 @@ export function Hero() {
 
       <div className="relative z-10 flex w-full max-w-5xl flex-col items-center">
         <h1 className="sr-only">
-          {artist.name} — {artist.albumTitle}
+          {artist.name}, {artist.albumTitle}
         </h1>
 
         <p className="mono-tag hero-session reveal" style={{ color: 'var(--signal-txt)' }}>

@@ -5,7 +5,7 @@ import { Nav } from './Nav'
 import { Footer } from './Contact'
 
 /**
- * Shared shell for About / Blog / Contact — lighter than the home
+ * Shared shell for About / Blog / Contact, lighter than the home
  * page: static gradient backdrop instead of the WebGL world.
  */
 export function SubPage({

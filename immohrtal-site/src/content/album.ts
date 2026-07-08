@@ -37,7 +37,7 @@ export interface Track {
   duration?: string
 }
 
-// src files are 30s PREVIEWS (faded), not full masters — swap on release day
+// src files are 30s PREVIEWS (faded), not full masters, swap on release day
 export const tracks: Track[] = [
   { title: 'No Way Out', src: null },
   { title: 'Picking Up My Notepad', src: '/audio/02-picking-up-my-notepad.mp3', note: '30s preview' },
@@ -71,7 +71,7 @@ export const story = {
   pullQuote:
     'Mac Miller made it feel possible to rap and still sound like yourself.',
   paragraphs: [
-    'IMMOHRTAL is Dillon Mohr, a 28-year-old chief marketing officer and rapper. He spent years learning how to make other people sound bigger, sharper, and harder to ignore. Rap was always the thing underneath it. The notebooks, the voice memos, the late-night lines, the part that never left.',
+    'IMMOHRTAL is Dillon Mohr, a 28 year old chief marketing officer and rapper. He spent years learning how to make other people sound bigger, sharper, and harder to ignore. Rap was always the thing underneath it. The notebooks, the voice memos, the late night lines, the part that never left.',
     'He was raised in Erie, Pennsylvania, and lives in Pittsburgh now. Mac Miller is the main reason Dillon wanted to rap at all. Faces hit the house in 2014 and never really left. That influence is personal, not a costume. It\'s the permission to be honest, detailed, strange, funny, damaged, and still competitive.',
     'Dance With The Delusional is the first professional IMMOHRTAL record. It\'s built from two lives meeting in one room: the marketer who understands attention and the rapper who still treats every verse like a sport. The goal is simple. Make something detailed enough for lyric people, human enough for real fans, and honest enough to stand beside the records that made him start.',
   ],
@@ -82,7 +82,7 @@ export const markings = [
     numeral: 'I',
     label: 'Erie, PA',
     coord: '42.1292 N / 80.0851 W',
-    line: 'Lake-effect winters, small-city pressure, first notebooks, first delusions.',
+    line: 'Lake effect winters, small city pressure, first notebooks, first delusions.',
   },
   {
     numeral: 'II',

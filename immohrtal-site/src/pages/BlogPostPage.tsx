@@ -1,6 +1,7 @@
 import { posts } from '../content/blog'
 import { SubPage } from '../components/SubPage'
 import { TiltBox } from '../components/TiltBox'
+import { RichText } from '../components/RichText'
 
 /**
  * A single blog post at its own URL (blog/<slug>.html). The slug is
@@ -31,7 +32,9 @@ export function BlogPostPage() {
         {post.date} / IMMOHRTAL
       </p>
 
-      <p className="blog-answer reveal reveal-late mt-8 max-w-2xl">{post.answer}</p>
+      <p className="blog-answer reveal reveal-late mt-8 max-w-2xl">
+        <RichText>{post.answer}</RichText>
+      </p>
 
       <div className="mt-12 flex flex-col gap-6">
         {post.sections.map((section, i) => (

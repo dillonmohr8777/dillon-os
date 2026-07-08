@@ -8,7 +8,7 @@ function fmt(t: number) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-/** Sticky glass player — appears once a track has been started. */
+/** Sticky glass player, appears once a track has been started. */
 export function PlayerBar() {
   const { currentIndex, playing, time, duration, toggle, seek } = usePlayer()
   if (currentIndex === null) return null
@@ -38,7 +38,7 @@ export function PlayerBar() {
         <div className="min-w-0 flex-1">
           <div className="flex items-baseline justify-between gap-3">
             <span className="truncate font-body text-[14px] font-medium">
-              {String(currentIndex + 1).padStart(2, '0')} — {track.title}
+              {String(currentIndex + 1).padStart(2, '0')}, {track.title}
             </span>
             <span className="font-mono text-[11px] shrink-0" style={{ color: 'var(--faint)' }}>
               {fmt(time)} / {fmt(duration)}

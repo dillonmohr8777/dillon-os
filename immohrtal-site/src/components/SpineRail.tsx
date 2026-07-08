@@ -3,7 +3,7 @@ import { SPINE_SECTIONS, type SpineEngine } from '../spine/config'
 import { prefersReducedMotion } from '../hooks/useReveal'
 
 /**
- * Desktop waypoint rail — tick per section, live studio readout:
+ * Desktop waypoint rail, tick per section, live studio readout:
  * "TRK 02 · MONITORS · LEVELS 043.1%". Waypoint changes go through
  * React state (rare); the per-frame percent is a direct textContent
  * write so we never re-render at 60fps.
@@ -14,7 +14,7 @@ export function SpineRail({ engineRef }: { engineRef: { current: SpineEngine | n
   const pctRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    /* engine is created in a sibling effect — subscribe on next tick */
+    /* engine is created in a sibling effect, subscribe on next tick */
     let unsub: (() => void) | undefined
     const id = window.setTimeout(() => {
       const engine = engineRef.current
@@ -40,7 +40,7 @@ export function SpineRail({ engineRef }: { engineRef: { current: SpineEngine | n
           <button
             type="button"
             className={`tick ${i === waypoint ? 'on' : ''}`}
-            aria-label={`Track ${i} — ${sec.label}`}
+            aria-label={`Track ${i}, ${sec.label}`}
             aria-current={i === waypoint ? 'true' : undefined}
             onClick={() =>
               document.getElementById(sec.id)?.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth' })
