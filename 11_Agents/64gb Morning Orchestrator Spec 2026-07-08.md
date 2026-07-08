@@ -47,6 +47,19 @@ Every applied change → `01_Clients/<Client>/Optimization Ledger.md` as a hypot
 review date). On review, `campaign-intel` pulls the real result and labels it win/loss. Losses become
 documented mistakes-not-to-repeat; wins become patterns. The account gets smarter every cycle.
 
+## Autonomous Swarm
+
+These run as self-driving agents, not scripts. Each morning the commander spawns a bounded parallel
+swarm — depth capped at 3: commander → lane leads (ads/web/reporting/seo/comms) → per-client workers →
+analyst facets. Full protocol in `claude-skills-repo/skills/morning-orchestrator/references/`
+(`agent-protocol.md`, `autonomy-policy.md`) and `orchestrator.config.json`.
+
+- **Fully autonomous, no human:** read, pre-flight, analyze, draft, self-verify, QA, build artifacts, append vault + ledger hypotheses, assemble board, push.
+- **Autonomous after one approval:** the Tier-1 batch across parallel Chrome tabs.
+- **Never autonomous:** Tier 2 (prepared decision-ready, executed only live).
+- **Self-verification:** nothing reaches the board or a report until a separate verifier agent tries to refute it and fails (default reject-if-uncertain; ties escalate to gated).
+- **Ceilings:** depth 3, ≤8 concurrent agents, ≤60 agents/run, per-run token cap; failures isolate to one node; idempotent by `node_id` (resume-safe); `STOP` flag halts at any phase.
+
 ## Runtime Split
 - **Local (64GB machine):** pre-flight auth pulls, Tier-1 execution across Chrome tabs, live readback. Needs the logged-in Chrome via Chrome Plugin or CDP.
 - **Cloud-safe:** scouts against vault/Drive/public pages, board synthesis, report artifacts, ledger read/write.
