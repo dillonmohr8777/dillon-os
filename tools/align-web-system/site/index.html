@@ -26,7 +26,7 @@
 
     /* ===== Header (mirrors global Elevate header; production inherits it) ===== */
     .nav-space { position:relative; z-index:10; padding-top:32px; }
-    .nav-shell { width:min(94vw,var(--nav-wide)); min-height:78px; margin:0 auto;
+    .nav-shell { position:relative; width:min(94vw,var(--nav-wide)); min-height:78px; margin:0 auto;
       display:grid; grid-template-columns:190px 1fr auto; align-items:center; gap:16px;
       padding:12px 24px 12px 28px; border-radius:48px; background:rgba(255,255,255,.98);
       box-shadow:0 16px 38px rgba(17,24,32,.09); }
@@ -42,6 +42,16 @@
       padding:0 28px; border-radius:34px; background:var(--grad); color:#fff; font-size:15px;
       font-weight:800; text-transform:uppercase; white-space:nowrap;
       box-shadow:0 10px 24px rgba(240,90,40,.28); }
+    .hamburger-m { display:none; width:46px; height:46px; border:0; background:none; cursor:pointer;
+      flex-direction:column; gap:5px; align-items:center; justify-content:center; justify-self:end; }
+    .hamburger-m span { display:block; width:24px; height:2.5px; background:var(--ink); border-radius:2px; transition:.3s var(--ease); }
+    .nav-shell.open .hamburger-m span:nth-child(1) { transform:translateY(7.5px) rotate(45deg); }
+    .nav-shell.open .hamburger-m span:nth-child(2) { opacity:0; }
+    .nav-shell.open .hamburger-m span:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); }
+    .nav-shell.open .nav-links { display:flex; flex-direction:column; align-items:stretch;
+      position:absolute; top:calc(100% + 10px); left:0; right:0; background:#fff; border-radius:24px;
+      box-shadow:0 18px 44px rgba(17,24,32,.16); padding:14px 26px; gap:2px; z-index:40; }
+    .nav-shell.open .nav-links .nav-link { padding:12px 0; font-size:16px; }
 
     /* ===== Hero ===== */
     .hero { margin-top:-110px; padding:190px 0 84px;
@@ -222,14 +232,15 @@
     @media (prefers-reduced-motion:reduce) { .logostrip__track { animation:none; flex-wrap:wrap; justify-content:center; } }
 
     @media (max-width:1180px) {
-      .nav-shell { grid-template-columns:1fr auto; gap:14px; }
+      .nav-shell { grid-template-columns:1fr auto auto; gap:12px; }
       .nav-links { display:none; }
+      .hamburger-m { display:flex; }
       .hero-inner { grid-template-columns:1fr; gap:40px; }
       .support-grid, .story-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     }
     @media (max-width:920px) {
       .nav-space { padding-top:18px; }
-      .nav-shell { width:min(92vw,720px); grid-template-columns:150px auto; border-radius:34px; }
+      .nav-shell { width:min(92vw,720px); grid-template-columns:1fr auto auto; border-radius:34px; }
       .nav-links { display:none; }
       .hero { margin-top:-86px; padding:168px 0 64px; }
       .hero-inner, .section-inner { width:min(88vw,680px); }
@@ -239,7 +250,7 @@
       .align-footer__grid { grid-template-columns:1fr; gap:24px; }
     }
     @media (max-width:560px) {
-      .nav-shell { width:min(92vw,440px); grid-template-columns:118px auto; }
+      .nav-shell { width:min(92vw,440px); grid-template-columns:1fr auto auto; }
       .hero { padding:148px 0 56px; } h1 { font-size:31px; }
       .proof-panel { padding:26px; } .afr-cta { font-size:25px; }
     }
@@ -263,6 +274,7 @@
           <a class="nav-link" href="/about">About</a>
         </div>
         <a class="contact-top" href="#contact">Contact us</a>
+        <button class="hamburger-m" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </nav>
     </div>
 
@@ -460,6 +472,20 @@
   </div>
 
   <script>
+  (function(){
+    var toggle = document.getElementById('nav-toggle');
+    var shell = document.querySelector('.nav-shell');
+    if(toggle && shell){
+      toggle.addEventListener('click', function(){
+        var open = shell.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open?'true':'false');
+        toggle.setAttribute('aria-label', open?'Close menu':'Open menu');
+      });
+      shell.querySelectorAll('.nav-links .nav-link').forEach(function(a){
+        a.addEventListener('click', function(){ shell.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+      });
+    }
+  })();
   (function(){
     var form = document.getElementById('align-contact-form');
     if(!form) return;

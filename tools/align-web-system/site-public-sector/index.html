@@ -25,7 +25,7 @@
 
     /* ===== Mega-menu header (brought in from the Netlify mega-menu) ===== */
     .hdr{position:relative;z-index:20;padding-top:26px}
-    .hdr__bar{width:min(94vw,1320px);margin:0 auto;background:#fff;border:1px solid rgba(17,32,48,.12);
+    .hdr__bar{position:relative;width:min(94vw,1320px);margin:0 auto;background:#fff;border:1px solid rgba(17,32,48,.12);
       border-radius:28px;box-shadow:0 16px 40px rgba(17,24,32,.09);min-height:80px;padding:0 24px;
       display:flex;align-items:center;gap:20px}
     .brand{flex:0 0 auto;display:flex;align-items:center}
@@ -38,6 +38,12 @@
     .caret{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-1px)}
     .cta-btn{flex:0 0 auto;padding:13px 24px;border-radius:999px;background:var(--grad);color:#fff;font-size:14px;
       font-weight:800;text-transform:uppercase;white-space:nowrap;box-shadow:0 10px 24px rgba(240,90,40,.28)}
+    .hamburger{display:none;flex:0 0 auto;width:46px;height:46px;margin-left:2px;border:0;background:none;cursor:pointer;
+      flex-direction:column;gap:5px;align-items:center;justify-content:center}
+    .hamburger span{display:block;width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.3s var(--ease)}
+    .nav.open ~ .hamburger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .nav.open ~ .hamburger span:nth-child(2){opacity:0}
+    .nav.open ~ .hamburger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
     .submenu{position:absolute;top:calc(100% + 12px);left:0;right:0;width:100%;margin:0;padding:26px;list-style:none;display:none;
       grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 20px;background:#fff;border:1px solid rgba(17,32,48,.12);
       border-radius:26px;box-shadow:0 18px 44px rgba(17,32,48,.14)}
@@ -48,7 +54,19 @@
     .submenu a::after{content:"\2192";color:var(--orange)}
     .mi{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:9px;background:#fae0d3;color:var(--orange)}
     .mi svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-    @media(max-width:1180px){.menu{display:none}.hdr__bar{justify-content:space-between}}
+    @media(max-width:1180px){
+      .menu{display:none}
+      .hamburger{display:flex}
+      .cta-btn{margin-left:auto}
+      .nav.open .menu{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;
+        position:absolute;top:calc(100% + 10px);left:0;right:0;background:#fff;border:1px solid rgba(17,32,48,.12);
+        border-radius:20px;box-shadow:0 18px 44px rgba(17,32,48,.16);padding:14px 22px;gap:2px;z-index:40}
+      .nav.open .menu>li{width:100%}
+      .nav.open .menu>li>a{padding:12px 0;font-size:16px}
+      .nav.open .submenu{position:static;display:grid;grid-template-columns:1fr;border:0;box-shadow:none;padding:2px 0 10px 14px;background:transparent}
+      .nav.open .submenu a{min-height:auto;color:var(--navy);padding:8px 10px}
+      .nav.open .caret{transform:rotate(45deg)}
+    }
 
     /* ===== Hero ===== */
     .hero{margin-top:-106px;padding:180px 0 78px;color:#fff;position:relative;overflow:hidden;
@@ -105,10 +123,14 @@
     .vendors .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:50px;align-items:center}
     .vendors h3{margin:0 0 10px;color:var(--navy);font-size:22px;font-weight:800}
     .vendors p{margin:0;color:var(--muted);font-family:'DM Sans';font-size:14px;line-height:1.55;max-width:360px}
-    .pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
-    .pill{padding:11px 22px;border-radius:10px;border:1px solid #d9d2c7;background:#fff;color:var(--navy);
-      font-size:14px;font-weight:700;transition:transform .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease)}
-    .pill:hover{transform:translateY(-3px);border-color:var(--orange);box-shadow:0 10px 22px rgba(240,90,40,.16)}
+    .vgrid{display:flex;flex-wrap:wrap;gap:18px;justify-content:flex-end}
+    .vbadge{width:112px;height:112px;border-radius:50%;background:#fff;border:2px solid var(--orange);
+      display:grid;place-items:center;padding:22px;box-shadow:0 8px 20px rgba(17,32,48,.1);
+      transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+    .vbadge:hover,.vbadge:active{transform:translateY(-6px) scale(1.06);border-color:var(--orange-hot);
+      box-shadow:0 18px 36px rgba(240,90,40,.3)}
+    .vbadge img{max-width:100%;max-height:54px;width:auto;height:auto;object-fit:contain;mix-blend-mode:multiply}
+    .vbadge--text{font-family:'Plus Jakarta Sans';font-weight:800;color:var(--navy);font-size:15px;text-align:center;line-height:1.2;padding:16px}
 
     /* ===== Outcomes (cream, 3 cards) ===== */
     .outcomes{padding:88px 0 92px;background:#fbf8f3}
@@ -202,6 +224,7 @@
         </ul>
       </nav>
       <a class="cta-btn" href="#contact">Contact us</a>
+      <button class="hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -279,9 +302,12 @@
         <h3>Vendor agnostic. Public sector fluent.</h3>
         <p>We operate on the platform you choose and know the public sector build in each one, including UKG GovTA and UKG Pro.</p>
       </div>
-      <div class="pills">
-        <span class="pill">UKG</span><span class="pill">Dayforce</span><span class="pill">Workday</span>
-        <span class="pill">Paylocity</span><span class="pill">ADP</span><span class="pill">HiBob</span>
+      <div class="vgrid">
+        <a class="vbadge" href="https://www.alignhcm.com/partners/ukg" rel="noopener" aria-label="UKG"><img src="assets/vendors/ukg.jpg" alt="UKG"></a>
+        <a class="vbadge" href="https://www.alignhcm.com/partners/dayforce" rel="noopener" aria-label="Dayforce"><img src="assets/vendors/dayforce.png" alt="Dayforce"></a>
+        <a class="vbadge" href="https://www.alignhcm.com/partners/workday" rel="noopener" aria-label="Workday"><img src="assets/vendors/workday.png" alt="Workday"></a>
+        <a class="vbadge vbadge--text" href="https://www.alignhcm.com/partners/paylocity" rel="noopener" aria-label="Paylocity"><span>Paylocity</span></a>
+        <a class="vbadge" href="https://www.alignhcm.com/partners/adp" rel="noopener" aria-label="ADP"><img src="assets/vendors/adp.png" alt="ADP"></a>
       </div>
     </div>
   </section>
@@ -355,6 +381,19 @@
 
   <script>
   (function(){
+    // Mobile hamburger toggle
+    var toggle=document.getElementById('nav-toggle');
+    var nav=document.querySelector('.nav');
+    if(toggle&&nav){
+      toggle.addEventListener('click',function(){
+        var open=nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded',open?'true':'false');
+        toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+      });
+      nav.querySelectorAll('.menu > li:not(.has) > a').forEach(function(a){
+        a.addEventListener('click',function(){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+      });
+    }
     // Mega-menu icon tiles
     var icons={overview:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>',
       check:'<svg viewBox="0 0 24 24"><path d="M7 12l3 3 7-7"/><path d="M4 7h6"/><path d="M4 17h16"/></svg>',
