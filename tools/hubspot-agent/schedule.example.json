@@ -1,0 +1,7 @@
+{
+  "_comment": "Batch schedule: each entry takes an existing DRAFT post id and a publishDate (ISO8601, UTC). Only schedule posts whose content + assets are complete.",
+  "schedule": [
+    { "id": "REPLACE_POST_ID_1", "publishDate": "2026-07-21T13:00:00Z", "note": "SmartCare — HOLD until video asset exists" },
+    { "id": "REPLACE_POST_ID_2", "publishDate": "2026-07-25T13:00:00Z", "note": "Complete — safe to schedule" }
+  ]
+}
