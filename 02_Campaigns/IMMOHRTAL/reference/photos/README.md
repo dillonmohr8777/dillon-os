@@ -11,6 +11,9 @@ placeholder image slots. More to come.
 | `collage-814-lighthouse.jpeg` | 814 sweatshirt, Erie lighthouse newsprint collage | Artist shot, 814 Blood content, feed, banners |
 | `family-daughter.png` | Smiling with his daughter, newsprint collage | The "why" / family pillar, My Mothers Baby, the heart of the record |
 | `selfie-daughter-carseat.jpeg` | Candid selfie with the baby (auto-rotated) | Real/human behind-the-scenes, story content |
+| `birthday-28-daughter.jpeg` | Holding his daughter by a "Happy Birthday 28" cake | THE almost-29 story, "if not now, when", the why |
+| `holding-daughter-sign.jpeg` | Full-length, holding his daughter, styled | Human/dad side, lifestyle, feed |
+| `daughter-steering-wheel.jpeg` | His daughter at the wheel, candid | Family/why, light relatable content |
 
 ## Notes
 - The three newsprint collages share the video/site aesthetic (Erie
