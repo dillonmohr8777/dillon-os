@@ -37,6 +37,7 @@ Orchestrator**, **Web Design Lane**. The orchestrator drives the existing agents
 4. Run the daily loop below as the commander. Spawn workers per the protocol. Delegate to `claude` only for lanes where it's the better tool; keep the commander single-threaded.
 
 ## Daily Loop
+0. **Intake** — read `mohr-vault/vault/11_Agents/Morning Directives.md`; parse Dillon's dropped tasks into lanes, classify tier, route to a skill, fold into the board. Can't-map tasks surface on the board, not guessed. One-shot unless `#recurring`.
 1. **Wake** — scheduled, no human (Task Scheduler, `-WakeToRun`, ~06:30).
 2. **Pre-flight** per client: authorization valid? tracking tags/versions current (GTM published, GA4, conv tag, Meta pixel+CAPI)? real conversion intent behind the ads (conversion goal set, intent-bearing keywords, not vanity traffic)?
 3. **Fan out scouts** — parallel, read-only, Tier 0, all clients at once (ads, web, reporting, SEO, comms).
@@ -67,6 +68,20 @@ If Dillon can undo it in 30s → Tier 1. Irreversible or outbound → Tier 2.
 Every applied change → `01_Clients/<Client>/Optimization Ledger.md` as a hypothesis (expected outcome +
 review date). On review, `campaign-intel` pulls the real result and labels it win/loss. Losses become
 documented mistakes-not-to-repeat; wins become patterns. The account gets smarter every cycle.
+
+## Toolkit Routing & Research
+
+- **Route to Dillon's own skills first.** Before building anything, workers consult
+  `claude-skills-repo/skills/morning-orchestrator/skill-map.json` (+ `references/skill-registry.md`) and
+  invoke the matching skill — design skills, `mirror`, `paid-ads`, `client-report`, `deep-research`, etc.
+  Pinned most-used skills win ties. Build-from-scratch is the fallback. Dillon sets `pinned_most_used`
+  once; `self-improving-agent` promotes recurring new jobs into new pinned skills over time.
+- **Spawn research on triggers** (`references/research-triggers.md`): weekly best-practices refresh,
+  worker uncertainty, platform surprise, repeated ledger loss, new vertical, or an unmapped directive.
+  Research is Tier 0, verified for recency/credibility (2026-dated, reputable), written to a durable
+  dated note, and injected into affected briefs. It never auto-applies.
+- **Mirror skill** is now captured at `claude-skills-repo/skills/mirror/` (was local-only); merge any
+  richer local version into it.
 
 ## Autonomous Swarm
 
