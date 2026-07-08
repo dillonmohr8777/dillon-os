@@ -30,10 +30,8 @@
       display:grid; grid-template-columns:190px 1fr auto; align-items:center; gap:16px;
       padding:12px 24px 12px 28px; border-radius:48px; background:rgba(255,255,255,.98);
       box-shadow:0 16px 38px rgba(17,24,32,.09); }
-    .brand { display:flex; align-items:center; gap:10px; min-width:0; color:var(--ink);
-      font-size:20px; font-weight:800; }
-    .brand-mark { width:38px; height:38px; display:inline-grid; place-items:center;
-      border-radius:11px; color:#fff; font-weight:800; background:var(--grad); }
+    .brand { display:flex; align-items:center; min-width:0; }
+    .brand-logo { height:46px; width:auto; display:block; }
     .nav-links { display:flex; align-items:center; justify-content:flex-end; gap:14px;
       color:var(--ink); font-size:15px; line-height:1; white-space:nowrap; }
     .nav-link { min-height:40px; display:inline-flex; align-items:center; gap:7px; font-weight:700; }
@@ -84,8 +82,6 @@
     .proof-check { width:30px; height:30px; display:grid; place-items:center; border-radius:9px;
       background:rgba(240,90,40,.12); color:var(--orange); }
     .proof-check svg { width:17px; height:17px; }
-    .proof-mark { position:absolute; top:26px; right:28px; width:44px; height:44px; display:grid;
-      place-items:center; border-radius:12px; color:#fff; font-weight:800; font-size:18px; background:var(--grad); }
 
     /* ===== Sliding logo strip (ALIGN_WEB_SYSTEM.md §4) ===== */
     .logostrip { padding:30px 0 8px; background:#fff; }
@@ -97,9 +93,10 @@
       mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent); }
     .logostrip__track { display:flex; align-items:center; gap:58px; width:max-content; margin:0; padding:0;
       list-style:none; animation:logoscroll 38s linear infinite; }
-    .logostrip__track li { flex:0 0 auto; color:#8a93a3; font-size:17px; font-weight:700; white-space:nowrap;
-      filter:grayscale(1); opacity:.72; transition:opacity .3s,color .3s; }
-    .logostrip__track li:hover { opacity:1; color:var(--navy); }
+    .logostrip__track li { flex:0 0 auto; display:flex; align-items:center; }
+    .logostrip__track img { height:38px; width:auto; max-width:154px; object-fit:contain;
+      filter:grayscale(1); opacity:.66; transition:opacity .3s,filter .3s; }
+    .logostrip__track li:hover img { opacity:1; filter:grayscale(0); }
     .logostrip__mask:hover .logostrip__track { animation-play-state:paused; }
     @keyframes logoscroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
@@ -209,7 +206,7 @@
     <!-- HEADER: in production this is the global Elevate header. Order matches ALIGN_WEB_SYSTEM.md §3. -->
     <div class="nav-space">
       <nav class="nav-shell" aria-label="Main navigation">
-        <a class="brand" href="/"><span class="brand-mark">A</span><span>Align HCM</span></a>
+        <a class="brand" href="/" aria-label="Align HCM home"><img class="brand-logo" src="assets/align-hcm-logo.png" alt="Align HCM Human Capital Management"></a>
         <div class="nav-links">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/services">Services <span class="chevron" aria-hidden="true"></span></a>
@@ -242,7 +239,6 @@
           <!-- Hero visual: on-brand proof panel. NO dashboard/metric mock (ALIGN_WEB_SYSTEM.md §6). -->
           <div class="hero-visual">
             <div class="proof-panel">
-              <span class="proof-mark">A</span>
               <div class="proof-eyebrow">Why Align</div>
               <h2>We make the workforce systems you already own work harder, without a platform reset.</h2>
               <ul class="proof-list">
@@ -260,12 +256,26 @@
         <p class="logostrip__label">Trusted by complex manufacturing and public-sector operations</p>
         <div class="logostrip__mask">
           <ul class="logostrip__track">
-            <li>Arrow Electronics</li><li>Vibra Healthcare</li><li>VIEW</li><li>Alterra Mountain Co.</li>
-            <li>Kimberly-Clark Professional</li><li>First Horizon</li><li>Air Methods</li><li>Troon</li>
-            <li>Resorts World</li><li>OhioHealth</li>
-            <li aria-hidden="true">Arrow Electronics</li><li aria-hidden="true">Vibra Healthcare</li><li aria-hidden="true">VIEW</li><li aria-hidden="true">Alterra Mountain Co.</li>
-            <li aria-hidden="true">Kimberly-Clark Professional</li><li aria-hidden="true">First Horizon</li><li aria-hidden="true">Air Methods</li><li aria-hidden="true">Troon</li>
-            <li aria-hidden="true">Resorts World</li><li aria-hidden="true">OhioHealth</li>
+            <li><img src="assets/logos/arrow.png" alt="Arrow Electronics"></li>
+            <li><img src="assets/logos/vibra.jpg" alt="Vibra Healthcare"></li>
+            <li><img src="assets/logos/view.jpg" alt="VIEW"></li>
+            <li><img src="assets/logos/alterra.jpg" alt="Alterra Mountain Company"></li>
+            <li><img src="assets/logos/kimberly-clark.png" alt="Kimberly-Clark Professional"></li>
+            <li><img src="assets/logos/first-horizon.png" alt="First Horizon"></li>
+            <li><img src="assets/logos/air-methods.png" alt="Air Methods"></li>
+            <li><img src="assets/logos/troon.jpg" alt="Troon"></li>
+            <li><img src="assets/logos/resorts-world.png" alt="Resorts World"></li>
+            <li><img src="assets/logos/ohiohealth.png" alt="OhioHealth"></li>
+            <li aria-hidden="true"><img src="assets/logos/arrow.png" alt=""></li>
+            <li aria-hidden="true"><img src="assets/logos/vibra.jpg" alt=""></li>
+            <li aria-hidden="true"><img src="assets/logos/view.jpg" alt=""></li>
+            <li aria-hidden="true"><img src="assets/logos/alterra.jpg" alt=""></li>
+            <li aria-hidden="true"><img src="assets/logos/kimberly-clark.png" alt=""></li>
+            <li aria-hidden="true"><img src="assets/logos/first-horizon.png" alt=""></li>
+            <li aria-hidden="true"><img src="assets/logos/air-methods.png" alt=""></li>
+            <li aria-hidden="true"><img src="assets/logos/troon.jpg" alt=""></li>
+            <li aria-hidden="true"><img src="assets/logos/resorts-world.png" alt=""></li>
+            <li aria-hidden="true"><img src="assets/logos/ohiohealth.png" alt=""></li>
           </ul>
         </div>
       </section>

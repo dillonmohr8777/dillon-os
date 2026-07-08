@@ -23,7 +23,7 @@ Read those before editing.
   h1, ambient orange glow blob. Don't overdo it.
 - **Kill dashboard mocks:** remove any hero "metric board" (e.g. "12 open shifts,
   4.8% overtime risk, 98% time ready" with progress bars). Replace with an on-brand
-  proof panel like `public-sector-manufacturing.html`'s `.proof-panel` — real proof
+  proof panel like `site/index.html`'s `.proof-panel`, with real proof
   points, never a fake UI.
 
 ## Rules

@@ -156,7 +156,8 @@ If any of these appear on a page, it fails QA (§7).
 
 - `ALIGN_WEB_SYSTEM.md` — this spec.
 - `global-header-mega-menu.html` — corrected global header (paste into HubSpot).
-- `public-sector-manufacturing.html` — corrected manufacturing/public-sector page.
+- `site/index.html` — corrected, deploy-ready manufacturing/public-sector page
+  (real Align logo + real client logos in `site/assets/`).
 - `partials/logo-carousel.html` — reusable sliding logo strip.
 - `partials/footer.html` — reusable continuity footer.
 
