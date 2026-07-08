@@ -58,14 +58,21 @@
       .menu{display:none}
       .hamburger{display:flex}
       .cta-btn{margin-left:auto}
-      .nav.open .menu{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;
-        position:absolute;top:calc(100% + 10px);left:0;right:0;background:#fff;border:1px solid rgba(17,32,48,.12);
-        border-radius:20px;box-shadow:0 18px 44px rgba(17,32,48,.16);padding:14px 22px;gap:2px;z-index:40}
-      .nav.open .menu>li{width:100%}
-      .nav.open .menu>li>a{padding:12px 0;font-size:16px}
-      .nav.open .submenu{position:static;display:grid;grid-template-columns:1fr;border:0;box-shadow:none;padding:2px 0 10px 14px;background:transparent}
-      .nav.open .submenu a{min-height:auto;color:var(--navy);padding:8px 10px}
-      .nav.open .caret{transform:rotate(45deg)}
+      .nav.open ~ .hamburger{border:1.6px solid var(--orange);border-radius:50%}
+      .nav.open ~ .hamburger span{background:var(--orange)}
+      .nav.open .menu{display:flex;flex-direction:column;align-items:stretch;position:absolute;top:calc(100% + 8px);
+        left:0;right:0;background:#fff;border:1px solid rgba(17,32,48,.1);border-radius:26px;
+        box-shadow:0 24px 60px rgba(17,32,48,.18);padding:8px 30px 24px;max-height:calc(100vh - 140px);overflow-y:auto;z-index:60}
+      .nav.open .menu>li{width:100%;border-bottom:1px solid #f1ece4}
+      .nav.open .menu>li:last-child{border-bottom:0}
+      .nav.open .menu>li>a{display:flex;justify-content:space-between;align-items:center;padding:18px 2px;font-size:18px;font-weight:800;color:var(--ink)}
+      .nav.open .caret{width:10px;height:10px;transition:transform .3s var(--ease)}
+      .nav.open li.has.expanded .caret{transform:rotate(-135deg)}
+      .nav.open .submenu{position:static;display:none;grid-template-columns:1fr;border:0;box-shadow:none;background:transparent;padding:0 0 14px}
+      .nav.open li.has.expanded .submenu{display:grid}
+      .nav.open .submenu a{min-height:auto;grid-template-columns:1fr;gap:0;color:#3a4658;font-size:15.5px;font-weight:600;padding:11px 0 11px 20px}
+      .nav.open .submenu a::after{content:none}
+      .nav.open .mi{display:none}
     }
 
     /* ===== Hero ===== */
@@ -75,6 +82,7 @@
       repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 1px,transparent 1px 80px);pointer-events:none}
     .hero .eyebrow{color:#ffb08c}
     .hero h1{position:relative;max-width:640px;margin:0 0 22px;font-size:50px;line-height:1.06;font-weight:800}
+    .hero h1 span{color:var(--orange)}
     .hero-copy{position:relative;max-width:560px;margin:0 0 30px;color:#c7d3e2;font-size:17px;line-height:1.6}
     .hero-actions{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-bottom:0}
     .btn-primary{padding:14px 26px;border-radius:10px;background:var(--grad);color:#fff;font-size:15px;font-weight:800;
@@ -119,17 +127,17 @@
     .rcard p{margin:0;color:#c2cddb;font-family:'DM Sans';font-size:13.5px;line-height:1.55}
 
     /* ===== Vendor agnostic (white) ===== */
-    .vendors{padding:64px 0;background:#fff;border-bottom:1px solid #eee}
-    .vendors .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:50px;align-items:center}
-    .vendors h3{margin:0 0 10px;color:var(--navy);font-size:22px;font-weight:800}
-    .vendors p{margin:0;color:var(--muted);font-family:'DM Sans';font-size:14px;line-height:1.55;max-width:360px}
-    .vgrid{display:flex;flex-wrap:wrap;gap:20px;justify-content:flex-end}
-    .vbadge{width:188px;height:110px;border-radius:34px;background:#fdf8f2;border:1px solid rgba(240,90,40,.24);
-      display:grid;place-items:center;padding:22px 28px;box-shadow:0 12px 28px rgba(200,120,60,.12);
+    .vendors{padding:90px 0;background:#fff}
+    .vendors .wrap{text-align:center}
+    .vendors h3{margin:0 0 12px;color:var(--orange);font-size:36px;line-height:1.12;font-weight:800}
+    .vendors p{margin:0 auto 48px;color:var(--muted);font-family:'DM Sans';font-size:16px;line-height:1.6;max-width:600px}
+    .vgrid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center}
+    .vbadge{width:224px;height:140px;border-radius:38px;background:#fdf8f2;border:1px solid rgba(240,90,40,.26);
+      display:grid;place-items:center;padding:26px 36px;box-shadow:0 14px 32px rgba(200,120,60,.14);
       transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
-    .vbadge:hover,.vbadge:active{transform:translateY(-7px);border-color:var(--orange);
-      box-shadow:0 22px 42px rgba(240,90,40,.24)}
-    .vbadge img{max-width:100%;max-height:50px;width:auto;height:auto;object-fit:contain;mix-blend-mode:multiply}
+    .vbadge:hover,.vbadge:active{transform:translateY(-8px);border-color:var(--orange);
+      box-shadow:0 26px 48px rgba(240,90,40,.26)}
+    .vbadge img{max-width:100%;max-height:68px;width:auto;height:auto;object-fit:contain;mix-blend-mode:multiply}
 
     /* ===== Outcomes (cream, 3 cards) ===== */
     .outcomes{padding:88px 0 92px;background:#fbf8f3}
@@ -149,10 +157,10 @@
     }
 
     /* ===== Contact (navy, white form card) ===== */
-    .contact{padding:92px 0 100px;background:var(--navy-deep);color:#fff}
+    .contact{padding:92px 0 100px;background:#06080b;color:#fff}
     .contact .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(420px,.9fr);gap:64px;align-items:start}
-    .contact .eyebrow{color:#ffb08c}
-    .contact h2{max-width:420px;margin:0 0 20px;font-size:38px;line-height:1.1;font-weight:800;color:#fff}
+    .contact .eyebrow{color:var(--orange)}
+    .contact h2{max-width:440px;margin:0 0 20px;font-size:40px;line-height:1.1;font-weight:800;color:var(--orange)}
     .contact-copy{max-width:420px;color:#c7d3e2;font-family:'DM Sans';font-size:15px;line-height:1.6;margin:0 0 16px}
     .contact-note{max-width:420px;color:#8ea1b8;font-family:'DM Sans';font-size:13.5px;font-style:italic;line-height:1.6;margin:14px 0 0}
     .fcard{background:#fff;border-radius:16px;padding:30px 30px 26px;box-shadow:0 30px 70px rgba(0,0,0,.4)}
@@ -171,7 +179,7 @@
     .fnote a{color:var(--orange)}
 
     /* ===== Footer (navy) ===== */
-    .ftr{background:var(--navy-deep);color:#9fb0c4;padding:20px 0 40px;font-family:'DM Sans'}
+    .ftr{background:#06080b;color:#9fb0c4;padding:20px 0 40px;font-family:'DM Sans'}
     .ftr__grid{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:32px;padding:36px 0 30px;border-top:1px solid rgba(255,255,255,.1)}
     .ftr__grid h4{margin:0 0 10px;font-family:'Plus Jakarta Sans';font-size:12px;font-weight:800;color:var(--orange);text-transform:uppercase;letter-spacing:.6px}
     .ftr__grid p{margin:0;font-size:13px;line-height:1.7;color:#9fb0c4}
@@ -231,7 +239,7 @@
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Industries · Public Sector</p>
-      <h1>Public service runs on your people. We make the platform behind them work.</h1>
+      <h1>Public service runs on your people. <span>We make the platform behind them work.</span></h1>
       <p class="hero-copy">Align HCM helps government agencies, school boards, and public utilities implement and optimize the HCM platform they already chose. We work inside your system, across UKG, Dayforce, Workday, Paylocity, ADP, and more. No migration. No co-employment. No vendor lock-in.</p>
       <div class="hero-actions">
         <a class="btn-primary" href="#contact">Talk to a public sector expert</a>
@@ -297,10 +305,8 @@
   <!-- ===== VENDOR AGNOSTIC ===== -->
   <section class="vendors">
     <div class="wrap">
-      <div>
-        <h3>Vendor agnostic. Public sector fluent.</h3>
-        <p>We operate on the platform you choose and know the public sector build in each one, including UKG GovTA and UKG Pro.</p>
-      </div>
+      <h3>Vendor agnostic. Public sector fluent.</h3>
+      <p>We operate on the platform you choose and know the public sector build in each one, including UKG GovTA and UKG Pro.</p>
       <div class="vgrid">
         <a class="vbadge" href="https://www.alignhcm.com/partners/ukg" rel="noopener" aria-label="UKG"><img src="assets/vendors/ukg.jpg" alt="UKG"></a>
         <a class="vbadge" href="https://www.alignhcm.com/partners/dayforce" rel="noopener" aria-label="Dayforce"><img src="assets/vendors/dayforce.png" alt="Dayforce"></a>
@@ -391,6 +397,11 @@
       });
       nav.querySelectorAll('.menu > li:not(.has) > a').forEach(function(a){
         a.addEventListener('click',function(){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+      });
+      nav.querySelectorAll('.menu > li.has > a').forEach(function(a){
+        a.addEventListener('click',function(e){
+          if(window.matchMedia('(max-width:1180px)').matches){ e.preventDefault(); a.parentElement.classList.toggle('expanded'); }
+        });
       });
     }
     // Mega-menu icon tiles
