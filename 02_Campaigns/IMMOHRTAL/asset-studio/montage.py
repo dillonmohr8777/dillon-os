@@ -41,9 +41,9 @@ def page():
 @font-face {{ font-family:'IBM Plex Mono'; font-weight:500; src:url('file://{FONTS}/IBMPlexMono-500.woff2') format('woff2'); }}
 *{{margin:0;padding:0;box-sizing:border-box}} body{{overflow:hidden;background:#05070b;width:{W}px;height:{H}px;position:relative}}
 .slide{{position:absolute;inset:0;background-size:cover;background-repeat:no-repeat;opacity:0;will-change:transform,opacity;filter:saturate(1.02) contrast(1.03)}}
-#shade{{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,11,.5) 0%,rgba(5,7,11,0) 24%,rgba(5,7,11,0) 46%,rgba(5,7,11,.74) 76%,rgba(5,7,11,.96) 100%)}}
-.hud{{position:absolute;font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:22px;color:rgba(233,238,246,.72)}}
-#stage{{position:absolute;left:64px;right:64px;bottom:250px}}
+#shade{{position:absolute;inset:0;z-index:3;background:linear-gradient(180deg,rgba(5,7,11,.55) 0%,rgba(5,7,11,0) 22%,rgba(5,7,11,0) 44%,rgba(5,7,11,.82) 74%,rgba(5,7,11,.97) 100%)}}
+.hud{{position:absolute;z-index:5;font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:22px;color:rgba(233,238,246,.72)}}
+#stage{{position:absolute;z-index:5;left:64px;right:64px;bottom:250px}}
 .line{{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;font-size:76px;line-height:.98;color:#f4f8fc;text-shadow:0 4px 34px rgba(0,0,0,.7)}}
 .big{{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:150px;line-height:.9;
   background:linear-gradient(180deg,#f5f8fc,#c3cfe0 26%,#8a9ab2 45%,#eef4fb 52%,#48566d 66%,#9db0c8 84%,#e2eaf4);
