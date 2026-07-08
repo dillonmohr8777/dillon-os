@@ -44,7 +44,7 @@ export function BlogPostPage() {
                 <h3 className="font-display uppercase">{section.heading}</h3>
                 <div className="mt-4 flex max-w-2xl flex-col gap-4">
                   {section.paragraphs.map((paragraph, j) => (
-                    <p key={j}>{paragraph}</p>
+                    <p key={j}><RichText>{paragraph}</RichText></p>
                   ))}
                 </div>
               </section>
