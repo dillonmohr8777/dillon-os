@@ -24,34 +24,38 @@
     svg { display:block; width:22px; height:22px; stroke:currentColor; stroke-width:2.4;
       stroke-linecap:round; stroke-linejoin:round; fill:none; }
 
-    /* ===== Header (mirrors global Elevate header; production inherits it) ===== */
-    .nav-space { position:relative; z-index:10; padding-top:32px; }
-    .nav-shell { position:relative; width:min(94vw,var(--nav-wide)); min-height:78px; margin:0 auto;
-      display:grid; grid-template-columns:190px 1fr auto; align-items:center; gap:16px;
-      padding:12px 24px 12px 28px; border-radius:48px; background:rgba(255,255,255,.98);
-      box-shadow:0 16px 38px rgba(17,24,32,.09); }
-    .brand { display:flex; align-items:center; min-width:0; }
-    .brand-logo { height:46px; width:auto; display:block; }
-    .nav-links { display:flex; align-items:center; justify-content:flex-end; gap:11px;
-      color:var(--ink); font-size:14px; line-height:1; white-space:nowrap; min-width:0; }
-    .nav-link { min-height:40px; display:inline-flex; align-items:center; gap:5px; font-weight:700; }
-    .nav-link:hover, .nav-link.active { color:var(--orange); }
-    .chevron { width:8px; height:8px; border-right:2px solid currentColor;
-      border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-1px); }
-    .contact-top { min-height:52px; display:inline-flex; align-items:center; justify-content:center;
-      padding:0 28px; border-radius:34px; background:var(--grad); color:#fff; font-size:15px;
-      font-weight:800; text-transform:uppercase; white-space:nowrap;
-      box-shadow:0 10px 24px rgba(240,90,40,.28); }
-    .hamburger-m { display:none; width:46px; height:46px; border:0; background:none; cursor:pointer;
-      flex-direction:column; gap:5px; align-items:center; justify-content:center; justify-self:end; }
-    .hamburger-m span { display:block; width:24px; height:2.5px; background:var(--ink); border-radius:2px; transition:.3s var(--ease); }
-    .nav-shell.open .hamburger-m span:nth-child(1) { transform:translateY(7.5px) rotate(45deg); }
-    .nav-shell.open .hamburger-m span:nth-child(2) { opacity:0; }
-    .nav-shell.open .hamburger-m span:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); }
-    .nav-shell.open .nav-links { display:flex; flex-direction:column; align-items:stretch;
-      position:absolute; top:calc(100% + 10px); left:0; right:0; background:#fff; border-radius:24px;
-      box-shadow:0 18px 44px rgba(17,24,32,.16); padding:14px 26px; gap:2px; z-index:40; }
-    .nav-shell.open .nav-links .nav-link { padding:12px 0; font-size:16px; }
+    /* ===== Header (shared mega-menu with icons) ===== */
+    .nav-space { position:relative; z-index:20; padding-top:26px; }
+    .hdr__bar { position:relative; width:min(94vw,1320px); min-height:80px; margin:0 auto;
+      display:flex; align-items:center; gap:20px; padding:0 24px; border-radius:48px;
+      background:rgba(255,255,255,.98); box-shadow:0 16px 40px rgba(17,24,32,.09); }
+    .brand { flex:0 0 auto; display:flex; align-items:center; min-width:0; }
+    .brand img { height:44px; width:auto; display:block; }
+    .nav { flex:1 1 auto; min-width:0; }
+    .menu { display:flex; flex-wrap:nowrap; align-items:center; gap:16px; margin:0; padding:0; list-style:none; justify-content:flex-end; }
+    .menu > li { position:static; flex:0 0 auto; }
+    .menu > li > a { display:inline-flex; align-items:center; gap:5px; color:var(--ink); font-size:14px; font-weight:700; white-space:nowrap; padding:8px 0; }
+    .menu > li > a:hover, .menu > li.active > a { color:var(--orange); }
+    .caret { width:8px; height:8px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-1px); }
+    .contact-top { flex:0 0 auto; min-height:50px; display:inline-flex; align-items:center; justify-content:center;
+      padding:0 26px; border-radius:34px; background:var(--grad); color:#fff; font-size:14px;
+      font-weight:800; text-transform:uppercase; white-space:nowrap; box-shadow:0 10px 24px rgba(240,90,40,.28); }
+    .hamburger { display:none; flex:0 0 auto; width:46px; height:46px; margin-left:2px; border:0; background:none; cursor:pointer;
+      flex-direction:column; gap:5px; align-items:center; justify-content:center; }
+    .hamburger span { display:block; width:24px; height:2.5px; background:var(--ink); border-radius:2px; transition:.3s var(--ease); }
+    .nav.open ~ .hamburger span:nth-child(1) { transform:translateY(7.5px) rotate(45deg); }
+    .nav.open ~ .hamburger span:nth-child(2) { opacity:0; }
+    .nav.open ~ .hamburger span:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); }
+    .submenu { position:absolute; top:calc(100% + 12px); left:0; right:0; width:100%; margin:0; padding:26px; list-style:none; display:none;
+      grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px 20px; background:#fff; border:1px solid rgba(17,32,48,.12);
+      border-radius:26px; box-shadow:0 18px 44px rgba(17,32,48,.14); }
+    .menu > li.has:hover > .submenu, .menu > li.has:focus-within > .submenu { display:grid; }
+    .submenu a { min-height:64px; padding:10px 12px; display:grid; grid-template-columns:38px 1fr auto; align-items:center; gap:12px;
+      border-radius:14px; color:var(--navy); font-size:14px; font-weight:700; }
+    .submenu a:hover { background:rgba(240,90,40,.1); }
+    .submenu a::after { content:"\2192"; color:var(--orange); }
+    .mi { width:38px; height:38px; display:inline-flex; align-items:center; justify-content:center; border-radius:9px; background:#fae0d3; color:var(--orange); }
+    .mi svg { width:21px; height:21px; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 
     /* ===== Hero ===== */
     .hero { margin-top:-110px; padding:190px 0 84px;
@@ -232,9 +236,16 @@
     @media (prefers-reduced-motion:reduce) { .logostrip__track { animation:none; flex-wrap:wrap; justify-content:center; } }
 
     @media (max-width:1180px) {
-      .nav-shell { grid-template-columns:1fr auto auto; gap:12px; }
-      .nav-links { display:none; }
-      .hamburger-m { display:flex; }
+      .menu { display:none; }
+      .hamburger { display:flex; }
+      .contact-top { margin-left:auto; }
+      .nav.open .menu { display:flex; flex-direction:column; align-items:stretch; justify-content:flex-start;
+        position:absolute; top:calc(100% + 10px); left:0; right:0; background:#fff; border:1px solid rgba(17,32,48,.12);
+        border-radius:20px; box-shadow:0 18px 44px rgba(17,32,48,.16); padding:14px 22px; gap:2px; z-index:40; }
+      .nav.open .menu > li { width:100%; }
+      .nav.open .menu > li > a { padding:12px 0; font-size:16px; }
+      .nav.open .submenu { position:static; display:grid; grid-template-columns:1fr; border:0; box-shadow:none; padding:2px 0 10px 14px; background:transparent; }
+      .nav.open .submenu a { min-height:auto; color:var(--navy); padding:8px 10px; }
       .hero-inner { grid-template-columns:1fr; gap:40px; }
       .support-grid, .story-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     }
@@ -260,22 +271,36 @@
   <div class="page">
     <!-- HEADER: in production this is the global Elevate header. Order matches ALIGN_WEB_SYSTEM.md §3. -->
     <div class="nav-space">
-      <nav class="nav-shell" aria-label="Main navigation">
-        <a class="brand" href="/" aria-label="Align HCM home"><img class="brand-logo" src="assets/align-hcm-logo.png" alt="Align HCM Human Capital Management"></a>
-        <div class="nav-links">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/services">Services <span class="chevron" aria-hidden="true"></span></a>
-          <a class="nav-link active" href="/public-sector">Public Sector</a>
-          <a class="nav-link" href="/smartcare">SmartCare</a>
-          <a class="nav-link" href="/channel-partner">Channel Partner <span class="chevron" aria-hidden="true"></span></a>
-          <a class="nav-link" href="/partners">Partners <span class="chevron" aria-hidden="true"></span></a>
-          <a class="nav-link" href="/insights">Insights</a>
-          <a class="nav-link" href="/case-studies">Case Studies</a>
-          <a class="nav-link" href="/about">About</a>
-        </div>
+      <div class="hdr__bar">
+        <a class="brand" href="/" aria-label="Align HCM home"><img src="assets/align-hcm-logo.png" alt="Align HCM Human Capital Management"></a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li class="has"><a href="/services">Services <span class="caret"></span></a>
+              <ul class="submenu">
+                <li><a href="#">Services Overview</a></li><li><a href="#">Assessments</a></li>
+                <li><a href="#">Implementation</a></li><li><a href="#">Training</a></li>
+                <li><a href="#">System Integration</a></li><li><a href="#">Support</a></li>
+                <li><a href="#">Optimization</a></li><li><a href="#">Data Conversion</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="/public-sector">Public Sector</a></li>
+            <li><a href="/smartcare">SmartCare</a></li>
+            <li class="has"><a href="/channel-partner">Channel Partner <span class="caret"></span></a>
+              <ul class="submenu">
+                <li><a href="#">Channel Partner Program</a></li><li><a href="#">How It Works</a></li>
+                <li><a href="#">Why Align HCM</a></li><li><a href="#">Partner FAQ</a></li>
+              </ul>
+            </li>
+            <li><a href="/partners">Partners</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
         <a class="contact-top" href="#contact">Contact us</a>
-        <button class="hamburger-m" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </nav>
+        <button class="hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
     </div>
 
     <main>
@@ -474,17 +499,28 @@
   <script>
   (function(){
     var toggle = document.getElementById('nav-toggle');
-    var shell = document.querySelector('.nav-shell');
-    if(toggle && shell){
+    var nav = document.querySelector('.nav');
+    if(toggle && nav){
       toggle.addEventListener('click', function(){
-        var open = shell.classList.toggle('open');
+        var open = nav.classList.toggle('open');
         toggle.setAttribute('aria-expanded', open?'true':'false');
         toggle.setAttribute('aria-label', open?'Close menu':'Open menu');
       });
-      shell.querySelectorAll('.nav-links .nav-link').forEach(function(a){
-        a.addEventListener('click', function(){ shell.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+      nav.querySelectorAll('.menu > li:not(.has) > a').forEach(function(a){
+        a.addEventListener('click', function(){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
       });
     }
+    // Mega-menu icon tiles
+    var icons={overview:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>',
+      check:'<svg viewBox="0 0 24 24"><path d="M7 12l3 3 7-7"/><path d="M4 7h6"/><path d="M4 17h16"/></svg>',
+      people:'<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M4 20a5 5 0 0 1 10 0"/><path d="M14 18a4 4 0 0 1 6 2"/></svg>',
+      arrow:'<svg viewBox="0 0 24 24"><path d="M4 19c4-1 8-5 10-10l3-3"/><path d="M13 7l4 4"/><path d="M14 4h6v6"/></svg>'};
+    document.querySelectorAll('.submenu a').forEach(function(a){
+      if(a.querySelector('.mi'))return;
+      var t=a.textContent.trim();var i=document.createElement('span');i.className='mi';i.setAttribute('aria-hidden','true');
+      i.innerHTML=/overview/i.test(t)?icons.overview:/partner|why|program/i.test(t)?icons.people:/implementation|training|integration|conversion/i.test(t)?icons.arrow:icons.check;
+      var l=document.createElement('span');l.textContent=t;a.textContent='';a.appendChild(i);a.appendChild(l);
+    });
   })();
   (function(){
     var form = document.getElementById('align-contact-form');
