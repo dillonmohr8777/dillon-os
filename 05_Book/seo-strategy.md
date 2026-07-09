@@ -1,7 +1,7 @@
 ---
 project: The Ironic Ineptocracy
 tags: [seo, book, growth]
-last_touched: 2026-04-15
+last_touched: 2026-07-09
 ---
 
 # SEO & Growth Strategy
