@@ -1,7 +1,22 @@
-# Go live — 2 minutes on Netlify
+# Hosting
 
-⚠ **Host on Netlify, not Vercel.** The newsletter gate uses Netlify
-Forms — signups are only captured when the site is served by Netlify.
+The site can now be SERVED from anywhere (Vercel, Netlify, a custom
+domain): email capture posts to the Netlify form backend by absolute
+URL from any host (`src/lib/list.ts`).
+
+⚠ **RULE: never delete the Netlify site** (immohrtal-site.netlify.app).
+Even if Vercel serves the primary site, Netlify remains the form
+backend, the contact store, and the Gmail notification source.
+
+## Deploy on Vercel (one time)
+
+1. vercel.com → **Add New → Project** → import `dillonmohr8777/dillon-os`.
+2. **Root Directory**: `immohrtal-site`. Framework preset: **Vite**
+   (build `npm run build`, output `dist`, auto-detected).
+3. Deploy. Every merge to `main` then redeploys automatically.
+4. Leave the Netlify site running (see rule above). Canonical URLs stay
+   on immohrtal-site.netlify.app until the custom domain lands, so the
+   two copies don't compete in search.
 
 ## Fastest path (no git wiring): Netlify Drop
 

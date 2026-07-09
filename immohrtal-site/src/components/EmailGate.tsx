@@ -11,6 +11,7 @@ import {
 import { tracks } from '../content/album'
 import { usePlayer } from '../audio/PlayerContext'
 import { track } from '../lib/analytics'
+import { submitToList } from '../lib/list'
 
 /**
  * Email gate for the track previews. First play prompts for a newsletter
@@ -84,22 +85,11 @@ export function EmailGateProvider({ children }: { children: ReactNode }) {
     setBusy(true)
     setError(null)
     try {
-      const res = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'immohrtal-list',
-          email,
-          source: pending != null ? `preview gate, ${tracks[pending].title}` : 'preview gate',
-          'bot-field': String(data.get('bot-field') ?? ''),
-        }).toString(),
+      await submitToList({
+        email,
+        source: pending != null ? `preview gate, ${tracks[pending].title}` : 'preview gate',
+        'bot-field': String(data.get('bot-field') ?? ''),
       })
-      // Netlify answers 200 on capture; local dev has no endpoint, so let
-      // localhost through instead of dead-ending the player.
-      const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname)
-      if (!res.ok && !isLocal) {
-        throw new Error(`form capture failed (${res.status})`)
-      }
       try {
         localStorage.setItem(STORAGE_KEY, '1')
       } catch {
