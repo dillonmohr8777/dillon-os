@@ -1,6 +1,7 @@
 import { SubPage } from '../components/SubPage'
 import { TiltBox } from '../components/TiltBox'
 import { contact } from '../content/album'
+import { track } from '../lib/analytics'
 
 const FACTS: Array<[string, string]> = [
   ['Artist', 'IMMOHRTAL'],
@@ -39,7 +40,7 @@ export function PressPage() {
       </p>
 
       <div className="reveal reveal-late mt-10 flex flex-col gap-4 sm:flex-row">
-        <a className="btn btn-chrome" href="press/IMMOHRTAL-EPK.pdf" download>
+        <a className="btn btn-chrome" href="press/IMMOHRTAL-EPK.pdf" download onClick={() => track('epk_download')}>
           Download the press kit (PDF)
         </a>
         <a className="btn btn-ghost" href={`mailto:${contact.bookingEmail}`}>

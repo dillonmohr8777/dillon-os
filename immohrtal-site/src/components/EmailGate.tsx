@@ -10,6 +10,7 @@ import {
 } from 'react'
 import { tracks } from '../content/album'
 import { usePlayer } from '../audio/PlayerContext'
+import { track } from '../lib/analytics'
 
 /**
  * Email gate for the track previews. First play prompts for a newsletter
@@ -59,6 +60,7 @@ export function EmailGateProvider({ children }: { children: ReactNode }) {
       setPending(index)
       setError(null)
       setOpen(true)
+      track('gate_open', { source: 'preview' })
     },
     [unlocked, playTrack],
   )
@@ -103,6 +105,7 @@ export function EmailGateProvider({ children }: { children: ReactNode }) {
       } catch {
         /* private mode, session-only unlock */
       }
+      track('gate_signup', { source: 'preview' })
       setUnlocked(true)
       setOpen(false)
       if (pending != null) playTrack(pending)
