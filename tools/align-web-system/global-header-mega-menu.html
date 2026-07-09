@@ -3,244 +3,238 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Align HCM — Corrected Global Header (mega menu)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Align HCM Mega Menu Snippet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* ---- preview shell only (NOT part of the injectable snippet) ---- */
-    :root { --align-ink:#111820; --align-navy:#17324d; --align-muted:#5d6672;
-            --align-orange:#F05A28; --align-hot:#FF6B35; --align-bg:#f4efe7;
-            --align-border:rgba(17,32,48,.12); }
-    * { box-sizing:border-box; }
-    body { margin:0; min-height:100vh; font-family:'Plus Jakarta Sans',sans-serif;
-           color:var(--align-ink); background:var(--align-bg); }
-    .preview-shell { min-height:100vh; padding:34px; }
-    .preview-heading { max-width:1180px; margin:0 auto 18px; }
-    .preview-heading h1 { margin:0; font-size:clamp(30px,4vw,52px); line-height:1; }
-    .preview-heading p { max-width:680px; margin:12px 0 0; color:var(--align-muted);
-                         font-family:'DM Sans',sans-serif; font-size:17px; line-height:1.5; }
+    /* ---- Netlify preview shell only (NOT part of the injectable snippet) ---- */
+    :root {
+      --align-ink: #111820;
+      --align-muted: #5d6672;
+      --align-orange: #F05A28;
+      --align-hot: #FF6B35;
+      --align-bg: #f4efe7;
+      --align-border: rgba(17, 32, 48, .12);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      color: var(--align-ink); background: var(--align-bg); }
+    .preview-shell { min-height: 100vh; padding: 34px; }
+    .preview-heading { max-width: 1180px; margin: 0 auto 18px; }
+    .preview-heading h1 { margin: 0; font-size: clamp(30px, 4vw, 52px); line-height: 1; }
+    .preview-heading p { max-width: 680px; margin: 12px 0 0; color: var(--align-muted); font-size: 17px; line-height: 1.5; }
+    .hs-elevate-header { max-width: 1180px; margin: 0 auto; }
+    .hs-elevate-site-header { background: #fff; border: 1px solid var(--align-border); border-radius: 28px; box-shadow: 0 18px 44px rgba(17, 32, 48, .1); }
+    .hs-elevate-site-header__header-container { min-height: 88px; padding: 0 26px; display: flex; align-items: center; gap: 28px; }
+    .align-preview-logo { flex: 0 0 auto; display: inline-flex; align-items: center; text-decoration: none; }
+    .align-preview-logo img { height: 44px; width: auto; display: block; }
+    .hs-elevate-site-header__main-nav { flex: 1 1 auto; }
+    .hs-elevate-menu--horizontal, .hs-elevate-menu__submenu { margin: 0; padding: 0; list-style: none; }
+    .hs-elevate-menu__menu-item-link, .hs-elevate-menu__menu-item-span { color: var(--align-ink); text-decoration: none; font-size: 15px; font-weight: 700; }
+    .align-preview-actions { flex: 0 0 auto; display: flex; align-items: center; gap: 14px; }
+    .align-preview-cta { padding: 13px 22px; display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 999px; background: linear-gradient(135deg, var(--align-orange), var(--align-hot)); color: #fff;
+      font-size: 14px; font-weight: 800; text-decoration: none; text-transform: uppercase; white-space: nowrap;
+      box-shadow: 0 10px 24px rgba(240, 90, 40, .28); }
   </style>
 
-  <!-- align-hcm-mega-menu:start  (paste everything from here to :end into the HubSpot global header custom code) -->
+  <!-- align-hcm-mega-menu:start  (paste from here to :end into the HubSpot global header custom code) -->
   <style>
-    .align-header { --align-ink:#111820; --align-navy:#17324d; --align-muted:#5d6672;
-                    --align-orange:#F05A28; --align-hot:#FF6B35;
-                    --align-border:rgba(17,32,48,.12);
-                    max-width:1320px; margin:0 auto;
-                    font-family:'Plus Jakarta Sans',sans-serif; }
-    .align-header * { box-sizing:border-box; }
-    .align-header__bar { background:#fff; border:1px solid var(--align-border);
-      border-radius:28px; box-shadow:0 18px 44px rgba(17,32,48,.10); }
-    .align-header__row { min-height:84px; padding:0 24px; display:flex;
-      align-items:center; gap:20px; }
-    .align-logo { flex:0 0 auto; display:inline-flex; align-items:center; text-decoration:none; }
-    .align-logo img { height:44px; width:auto; display:block; }
-    .align-nav { flex:1 1 auto; min-width:0; }
-    .align-menu { display:flex; flex-wrap:nowrap; align-items:center; gap:17px;
-      margin:0; padding:0; list-style:none; }
-    .align-menu > li { position:static; flex:0 0 auto; }
-    .align-menu > li > a { display:inline-flex; align-items:center; gap:5px;
-      color:var(--align-ink); font-size:15px; font-weight:700; text-decoration:none;
-      white-space:nowrap; padding:8px 0; }
-    .align-menu > li > a:hover, .align-menu > li.is-active > a { color:var(--align-orange); }
-    .align-menu .caret { width:8px; height:8px; border-right:2px solid currentColor;
-      border-bottom:2px solid currentColor; transform:rotate(45deg) translateY(-1px); }
-    .align-actions { flex:0 0 auto; display:flex; align-items:center; gap:14px; }
-    .align-cta { padding:13px 22px; border-radius:999px; color:#fff; font-size:14px;
-      font-weight:800; text-decoration:none; text-transform:uppercase; white-space:nowrap;
-      background:linear-gradient(135deg,var(--align-orange),var(--align-hot));
-      box-shadow:0 10px 24px rgba(240,90,40,.28); }
-    .align-hamburger { display:none; flex:0 0 auto; width:46px; height:46px; border:0; background:none; cursor:pointer;
-      flex-direction:column; gap:5px; align-items:center; justify-content:center; }
-    .align-hamburger span { display:block; width:24px; height:2.5px; background:var(--align-ink); border-radius:2px; transition:.3s; }
+    /* Brand font + tokens applied to the live Elevate header */
+    .hs-elevate-header, .hs-elevate-header * { font-family: 'Plus Jakarta Sans', Arial, sans-serif; }
+    .hs-elevate-header .align-menu-icon { display: none; }
+    .hs-elevate-header .align-menu-label { display: inline; }
 
-    /* mega submenu */
-    .align-submenu { position:absolute; top:calc(100% + 12px); left:0; right:0; z-index:1001;
-      width:100%; margin:0; padding:28px; list-style:none; display:none;
-      grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px 22px;
-      background:#fff; border:1px solid var(--align-border); border-radius:30px;
-      box-shadow:0 18px 44px rgba(17,32,48,.12); }
-    .align-menu > li.has-children:hover > .align-submenu,
-    .align-menu > li.has-children:focus-within > .align-submenu { display:grid; }
-    .align-submenu a { min-height:70px; padding:12px 14px; display:grid;
-      grid-template-columns:42px minmax(0,1fr) auto; align-items:center; gap:14px;
-      border-radius:16px; color:var(--align-navy); font-size:15px; font-weight:700;
-      line-height:1.25; text-decoration:none; }
-    .align-submenu a:hover { background:rgba(240,90,40,.10); }
-    .align-submenu a::after { content:"\2192"; color:var(--align-orange); }
-    .align-menu-icon { width:42px; height:42px; display:inline-flex; align-items:center;
-      justify-content:center; border-radius:10px; background:#fae0d3; color:var(--align-orange);
-      box-shadow:inset 0 0 0 1px rgba(17,32,48,.06); }
-    .align-menu-icon svg { width:24px; height:24px; stroke:currentColor; fill:none;
-      stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-    .align-menu-icon--rose { background:#fde2dc; color:#d64c35; }
-    .align-menu-icon--gold { background:#fdeecb; color:#c07e12; }
-    .align-menu-icon--slate { background:#e6edf4; color:var(--align-navy); }
-
-    @media (min-width:901px) and (max-width:1240px) {
-      .align-submenu { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    /* ============ DESKTOP mega menu (≥901px) ============ */
+    @media (min-width: 901px) {
+      .hs-elevate-header, .hs-elevate-header .hs-elevate-site-header { overflow: visible !important; }
+      .hs-elevate-header .hs-elevate-site-header { position: relative !important; }
+      .hs-elevate-header .hs-elevate-site-header__header-container { flex-wrap: nowrap !important; }
+      .hs-elevate-header .hs-elevate-site-header__main-nav { min-width: 0 !important; flex: 1 1 auto !important; }
+      .hs-elevate-header .hs-elevate-site-header__main-nav,
+      .hs-elevate-header .hs-elevate-menu--horizontal,
+      .hs-elevate-header .hs-elevate-menu--horizontal > .hs-elevate-menu--has-children { position: static !important; }
+      .hs-elevate-header .hs-elevate-menu--horizontal { display: flex !important; flex-wrap: nowrap !important; align-items: center !important; gap: 22px !important; }
+      .hs-elevate-header .hs-elevate-menu--horizontal > li { flex: 0 0 auto !important; }
+      .hs-elevate-header .hs-elevate-menu__menu-item-link, .hs-elevate-header .hs-elevate-menu__menu-item-span { white-space: nowrap !important; }
+      .hs-elevate-header .hs-elevate-menu__submenu {
+        position: absolute !important; top: calc(100% + 12px) !important; right: 0 !important; left: 0 !important; z-index: 1001 !important;
+        width: 100% !important; min-width: 0 !important; max-width: none !important; margin-top: 0 !important; padding: 28px !important;
+        display: none !important; grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 10px 22px !important; list-style: none !important;
+        background: #fff !important; border: 1px solid rgba(17, 32, 48, .12) !important; border-radius: 30px !important; box-shadow: 0 18px 44px rgba(17, 32, 48, .12) !important; }
+      .hs-elevate-header .hs-elevate-menu--has-children:hover > .hs-elevate-menu__submenu,
+      .hs-elevate-header .hs-elevate-menu--has-children:focus-within > .hs-elevate-menu__submenu { display: grid !important; }
+      .hs-elevate-header .hs-elevate-menu__submenu > li { min-width: 0 !important; }
+      .hs-elevate-header .hs-elevate-menu__submenu .hs-elevate-menu__menu-item-link-container { height: 100% !important; }
+      .hs-elevate-header .hs-elevate-menu__submenu .hs-elevate-menu__menu-item-link,
+      .hs-elevate-header .hs-elevate-menu__submenu .hs-elevate-menu__menu-item-span {
+        min-height: 70px !important; padding: 12px 14px !important; display: grid !important;
+        grid-template-columns: 42px minmax(0, 1fr) auto !important; align-items: center !important; gap: 14px !important;
+        border-radius: 16px !important; color: #17324d !important; font-size: 15px !important; font-weight: 700 !important; line-height: 1.25 !important; white-space: normal !important; text-decoration: none !important; }
+      .hs-elevate-header .align-menu-icon { width: 42px !important; height: 42px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important;
+        border-radius: 10px !important; background: #fae0d3 !important; color: #F05A28 !important; box-shadow: inset 0 0 0 1px rgba(17, 32, 48, .06) !important; }
+      .hs-elevate-header .align-menu-icon svg { width: 25px !important; height: 25px !important; display: block !important; stroke: currentColor !important; fill: none !important; stroke-width: 2 !important; stroke-linecap: round !important; stroke-linejoin: round !important; }
+      .hs-elevate-header .align-menu-icon--rose { background: #fde2dc !important; color: #d64c35 !important; }
+      .hs-elevate-header .align-menu-icon--gold { background: #fdeecb !important; color: #c07e12 !important; }
+      .hs-elevate-header .align-menu-icon--slate { background: #e6edf4 !important; color: #17324d !important; }
+      .hs-elevate-header .align-menu-label { min-width: 0 !important; }
+      .hs-elevate-header .hs-elevate-menu__submenu .hs-elevate-menu__menu-item-link::after { content: "\2192" !important; flex: 0 0 auto !important; color: #F05A28 !important; }
+      .hs-elevate-header .hs-elevate-menu__submenu .hs-elevate-menu__menu-item-link:hover,
+      .hs-elevate-header .hs-elevate-menu__submenu .hs-elevate-menu__menu-item-link:focus { background: rgba(240, 90, 40, .12) !important; }
     }
-    @media (max-width:1180px) {
-      .align-header__row { position:relative; }
-      .align-menu { display:none; }
-      .align-hamburger { display:flex; }
-      .align-nav { flex:0 0 auto; }
-      .align-actions { margin-left:auto; }
-      .align-nav.open ~ .align-actions .align-hamburger { border:1.6px solid var(--align-orange); border-radius:50%; }
-      .align-nav.open ~ .align-actions .align-hamburger span { background:var(--align-orange); }
-      .align-nav.open ~ .align-actions .align-hamburger span:nth-child(1) { transform:translateY(7.5px) rotate(45deg); }
-      .align-nav.open ~ .align-actions .align-hamburger span:nth-child(2) { opacity:0; }
-      .align-nav.open ~ .align-actions .align-hamburger span:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); }
-      .align-nav.open .align-menu { display:flex; flex-direction:column; align-items:stretch; position:absolute;
-        top:calc(100% + 8px); left:0; right:0; background:#fff; border:1px solid var(--align-border); border-radius:26px;
-        box-shadow:0 24px 60px rgba(17,32,48,.18); padding:8px 30px 24px; max-height:calc(100vh - 150px); overflow-y:auto; z-index:1002; }
-      .align-nav.open .align-menu > li { width:100%; border-bottom:1px solid #f1ece4; }
-      .align-nav.open .align-menu > li:last-child { border-bottom:0; }
-      .align-nav.open .align-menu > li > a { display:flex; justify-content:space-between; align-items:center; padding:18px 2px; font-size:18px; font-weight:800; color:var(--align-ink); }
-      .align-nav.open .caret { width:10px; height:10px; transition:transform .3s; }
-      .align-nav.open li.has-children.expanded .caret { transform:rotate(-135deg); }
-      .align-nav.open .align-submenu { position:static; display:none; grid-template-columns:1fr; padding:0 0 14px; border:0; box-shadow:none; }
-      .align-nav.open li.has-children.expanded .align-submenu { display:grid; }
-      .align-nav.open .align-submenu a { min-height:auto; grid-template-columns:1fr; gap:0; color:#3a4658; font-size:15.5px; font-weight:600; padding:11px 0 11px 20px; }
-      .align-nav.open .align-submenu a::after { content:none; }
-      .align-nav.open .align-menu-icon { display:none; }
+    @media (min-width: 901px) and (max-width: 1240px) {
+      .hs-elevate-header .hs-elevate-menu__submenu { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+    }
+
+    /* ============ MOBILE full-panel menu (≤900px) ============ */
+    /* The burger toggles .align-open on the header; the menu becomes a full white panel with tap-to-expand submenus. */
+    .align-burger { display: none; }
+    @media (max-width: 900px) {
+      .hs-elevate-header .hs-elevate-site-header__header-container { min-height: 68px !important; padding: 12px 18px !important; position: relative !important; }
+      .align-burger { display: inline-flex !important; flex-direction: column; gap: 5px; align-items: center; justify-content: center;
+        width: 46px; height: 46px; margin-left: auto; border: 0; background: none; cursor: pointer; }
+      .align-burger span { display: block; width: 24px; height: 2.5px; background: var(--align-ink, #111820); border-radius: 2px; transition: .3s; }
+      .hs-elevate-header.align-open .align-burger { border: 1.6px solid #F05A28; border-radius: 50%; }
+      .hs-elevate-header.align-open .align-burger span { background: #F05A28; }
+      .hs-elevate-header.align-open .align-burger span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+      .hs-elevate-header.align-open .align-burger span:nth-child(2) { opacity: 0; }
+      .hs-elevate-header.align-open .align-burger span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+      .hs-elevate-header .hs-elevate-site-header__main-nav { display: none; }
+      .hs-elevate-header.align-open .hs-elevate-site-header__main-nav {
+        display: block; position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 1002;
+        background: #fff; border: 1px solid rgba(17, 32, 48, .1); border-radius: 26px; box-shadow: 0 24px 60px rgba(17, 32, 48, .18);
+        padding: 8px 30px 24px; max-height: calc(100vh - 150px); overflow-y: auto; }
+      .hs-elevate-header.align-open .hs-elevate-menu--horizontal { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+      .hs-elevate-header.align-open .hs-elevate-menu--horizontal > li { width: 100%; border-bottom: 1px solid #f1ece4; }
+      .hs-elevate-header.align-open .hs-elevate-menu--horizontal > li:last-child { border-bottom: 0; }
+      .hs-elevate-header.align-open .hs-elevate-menu--horizontal > li > .hs-elevate-menu__menu-item-link,
+      .hs-elevate-header.align-open .hs-elevate-menu--horizontal > li > .hs-elevate-menu__menu-item-span {
+        display: flex; justify-content: space-between; align-items: center; padding: 18px 2px; font-size: 18px; font-weight: 800; color: #111820; }
+      /* submenu accordion: collapsed until the parent li gets .align-expanded */
+      .hs-elevate-header.align-open .hs-elevate-menu__submenu { display: none; margin: 0; padding: 0 0 14px; list-style: none; }
+      .hs-elevate-header.align-open .hs-elevate-menu--has-children.align-expanded > .hs-elevate-menu__submenu { display: block; }
+      .hs-elevate-header.align-open .hs-elevate-menu__submenu .hs-elevate-menu__menu-item-link { display: block; padding: 11px 0 11px 20px; color: #3a4658; font-size: 15.5px; font-weight: 600; }
+      .hs-elevate-header.align-open .align-menu-icon { display: none !important; }
+      /* chevron on parents */
+      .hs-elevate-header.align-open .hs-elevate-menu--has-children > .hs-elevate-menu__menu-item-link::after { content: "\203A"; color: #F05A28; font-size: 22px; transform: rotate(90deg); transition: transform .3s; }
+      .hs-elevate-header.align-open .hs-elevate-menu--has-children.align-expanded > .hs-elevate-menu__menu-item-link::after { transform: rotate(-90deg); }
     }
   </style>
 
-  <header class="align-header">
-    <div class="align-header__bar">
-      <div class="align-header__row">
-        <a class="align-logo" href="/" aria-label="Align HCM home"><img src="https://www.alignhcm.com/hs-fs/hubfs/Align%20HCM%20logo.png?width=280&name=Align%20HCM%20logo.png" alt="Align HCM Human Capital Management"></a>
-        <nav class="align-nav" aria-label="Primary">
-          <ul class="align-menu">
-            <li><a href="/">Home</a></li>
-
-            <li class="has-children">
-              <a href="/services">Services <span class="caret" aria-hidden="true"></span></a>
-              <ul class="align-submenu">
-                <li><a href="/services">Services Overview</a></li>
-                <li><a href="/services/assessments">Assessments</a></li>
-                <li><a href="/services/implementation">Implementation</a></li>
-                <li><a href="/services/training">Training</a></li>
-                <li><a href="/services/system-integration">System Integration</a></li>
-                <li><a href="/services/support">Support</a></li>
-                <li><a href="/services/optimization">Optimization</a></li>
-                <li><a href="/services/fractional-assistance">Fractional Assistance</a></li>
-                <li><a href="/services/data-conversion">Data Conversion</a></li>
-                <li><a href="/services/client-side">Client-Side</a></li>
-                <li><a href="/services/ma-assistance">M&amp;A Assistance</a></li>
-                <li><a href="/services/smartcare-partner-clients">SmartCare for Partner Clients</a></li>
+  <header class="hs-elevate-header preview-force-open">
+    <div class="hs-elevate-site-header">
+      <div class="hs-elevate-site-header__header-container">
+        <a class="align-preview-logo" href="/" aria-label="Align HCM home"><img src="https://www.alignhcm.com/hs-fs/hubfs/Align%20HCM%20logo.png?width=280&name=Align%20HCM%20logo.png" alt="Align HCM Human Capital Management"></a>
+        <nav class="hs-elevate-site-header__main-nav" aria-label="Primary menu">
+          <ul class="hs-elevate-menu--horizontal">
+            <li><a class="hs-elevate-menu__menu-item-link" href="#">Home</a></li>
+            <li class="hs-elevate-menu--has-children">
+              <a class="hs-elevate-menu__menu-item-link" href="#">Services</a>
+              <ul class="hs-elevate-menu__submenu">
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Services Overview</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Assessments</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Implementation</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Training</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">System Integration</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Support</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Optimization</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Data Conversion</a></div></li>
               </ul>
             </li>
-
-            <li><a href="/public-sector">Public Sector</a></li>
-            <li><a href="/smartcare">SmartCare</a></li>
-
-            <li class="has-children">
-              <a href="/channel-partner">Channel Partner <span class="caret" aria-hidden="true"></span></a>
-              <ul class="align-submenu">
-                <li><a href="/channel-partner">Channel Partner Program</a></li>
-                <li><a href="/channel-partner/how-it-works">How It Works</a></li>
-                <li><a href="/channel-partner/why-align-hcm">Why Align HCM</a></li>
-                <li><a href="/channel-partner/faq">Partner FAQ</a></li>
+            <li><a class="hs-elevate-menu__menu-item-link" href="#">Public Sector</a></li>
+            <li><a class="hs-elevate-menu__menu-item-link" href="#">SmartCare</a></li>
+            <li class="hs-elevate-menu--has-children">
+              <a class="hs-elevate-menu__menu-item-link" href="#">Channel Partner</a>
+              <ul class="hs-elevate-menu__submenu">
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Channel Partner Program</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">How It Works</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Why Align HCM</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Partner FAQ</a></div></li>
               </ul>
             </li>
-
-            <li class="has-children">
-              <a href="/partners">Partners <span class="caret" aria-hidden="true"></span></a>
-              <ul class="align-submenu">
-                <li><a href="/partners/resources">Partner Resources</a></li>
-                <li><a href="/partners/referred">Referred by Your Advisor</a></li>
-                <li><a href="/partners/smartcare">SmartCare for Partner Clients</a></li>
-              </ul>
-            </li>
-
-            <li><a href="/insights">Insights</a></li>
-            <li><a href="/case-studies">Case Studies</a></li>
-            <li><a href="/about">About</a></li>
+            <li><a class="hs-elevate-menu__menu-item-link" href="#">Insights</a></li>
+            <li><a class="hs-elevate-menu__menu-item-link" href="#">Case Studies</a></li>
+            <li><a class="hs-elevate-menu__menu-item-link" href="#">About</a></li>
           </ul>
         </nav>
-        <div class="align-actions">
-          <a class="align-cta" href="/contact">Contact us</a>
-          <button class="align-hamburger" id="align-nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <div class="align-preview-actions">
+          <a class="align-preview-cta" href="#">Contact us</a>
         </div>
+        <button class="align-burger" id="align-burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
 
   <script>
     (function () {
-      var toggle = document.getElementById('align-nav-toggle');
-      var nav = document.querySelector('.align-nav');
-      if (toggle && nav) {
-        toggle.addEventListener('click', function () {
-          var o = nav.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', o ? 'true' : 'false');
-          toggle.setAttribute('aria-label', o ? 'Close menu' : 'Open menu');
+      // ---- Mobile: burger toggles a full-panel menu; parents tap to expand ----
+      function initMobile() {
+        var header = document.querySelector(".hs-elevate-header");
+        var burger = document.getElementById("align-burger") || (header && header.querySelector(".align-burger"));
+        if (!header || !burger || burger.dataset.wired) return;
+        burger.dataset.wired = "1";
+        burger.addEventListener("click", function () {
+          var open = header.classList.toggle("align-open");
+          burger.setAttribute("aria-expanded", open ? "true" : "false");
+          burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
         });
-        nav.querySelectorAll('.align-menu > li.has-children > a').forEach(function (a) {
-          a.addEventListener('click', function (e) {
-            if (window.matchMedia('(max-width:1180px)').matches) { e.preventDefault(); a.parentElement.classList.toggle('expanded'); }
+        header.querySelectorAll(".hs-elevate-menu--has-children > .hs-elevate-menu__menu-item-link").forEach(function (a) {
+          a.addEventListener("click", function (e) {
+            if (window.matchMedia("(max-width: 900px)").matches) { e.preventDefault(); a.parentElement.classList.toggle("align-expanded"); }
           });
         });
-        nav.querySelectorAll('.align-menu > li:not(.has-children) > a').forEach(function (a) {
-          a.addEventListener('click', function () { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); });
-        });
       }
+
+      // ---- Desktop: inject icon tiles into submenu items ----
       var icons = {
-        overview:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>',
-        assessments:'<svg viewBox="0 0 24 24"><path d="M9 3h6v4H9z"/><path d="M6 5H5v16h14V5h-1"/><path d="M8 12h8"/><path d="M8 16h5"/></svg>',
-        implementation:'<svg viewBox="0 0 24 24"><path d="M5 19c4-1 8-5 10-10l3-3"/><path d="M13 7l4 4"/><path d="M7 17l-2 4 4-2"/><path d="M14 4h6v6"/></svg>',
-        training:'<svg viewBox="0 0 24 24"><path d="M4 6h7a3 3 0 0 1 3 3v10a3 3 0 0 0-3-3H4z"/><path d="M20 6h-6a3 3 0 0 0-3 3"/><path d="M14 16h6V6"/></svg>',
-        integration:'<svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="3"/><circle cx="18" cy="7" r="3"/><circle cx="12" cy="17" r="3"/><path d="M8.5 9.5l2 5"/><path d="M15.5 9.5l-2 5"/></svg>',
-        support:'<svg viewBox="0 0 24 24"><path d="M5 13a7 7 0 0 1 14 0"/><path d="M5 13v4h3v-5H5z"/><path d="M19 13v4h-3v-5h3z"/></svg>',
-        optimization:'<svg viewBox="0 0 24 24"><path d="M4 19h16"/><path d="M7 16V9"/><path d="M12 16V5"/><path d="M17 16v-4"/><path d="M5 8l5-4 4 4 5-5"/></svg>',
-        people:'<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M4 20a5 5 0 0 1 10 0"/><path d="M14 18a4 4 0 0 1 6 2"/></svg>',
-        data:'<svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>',
-        client:'<svg viewBox="0 0 24 24"><path d="M7 12l3 3 7-7"/><path d="M4 7h6"/><path d="M4 17h16"/></svg>',
-        merge:'<svg viewBox="0 0 24 24"><path d="M6 4v5a5 5 0 0 0 5 5h7"/><path d="M18 10l4 4-4 4"/><path d="M18 4v5a5 5 0 0 1-5 5"/></svg>',
-        fallback:'<svg viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M4 12h16"/></svg>'
+        overview: '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"></rect><rect x="14" y="4" width="6" height="6"></rect><rect x="4" y="14" width="6" height="6"></rect><rect x="14" y="14" width="6" height="6"></rect></svg>',
+        assessments: '<svg viewBox="0 0 24 24"><path d="M9 3h6v4H9z"></path><path d="M6 5H5v16h14V5h-1"></path><path d="M8 12h8"></path><path d="M8 16h5"></path></svg>',
+        implementation: '<svg viewBox="0 0 24 24"><path d="M5 19c4-1 8-5 10-10l3-3"></path><path d="M13 7l4 4"></path><path d="M7 17l-2 4 4-2"></path><path d="M14 4h6v6"></path></svg>',
+        training: '<svg viewBox="0 0 24 24"><path d="M4 6h7a3 3 0 0 1 3 3v10a3 3 0 0 0-3-3H4z"></path><path d="M20 6h-6a3 3 0 0 0-3 3"></path><path d="M14 16h6V6"></path></svg>',
+        integration: '<svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="3"></circle><circle cx="18" cy="7" r="3"></circle><circle cx="12" cy="17" r="3"></circle><path d="M8.5 9.5l2 5"></path><path d="M15.5 9.5l-2 5"></path></svg>',
+        support: '<svg viewBox="0 0 24 24"><path d="M5 13a7 7 0 0 1 14 0"></path><path d="M5 13v4h3v-5H5z"></path><path d="M19 13v4h-3v-5h3z"></path></svg>',
+        optimization: '<svg viewBox="0 0 24 24"><path d="M4 19h16"></path><path d="M7 16V9"></path><path d="M12 16V5"></path><path d="M17 16v-4"></path><path d="M5 8l5-4 4 4 5-5"></path></svg>',
+        people: '<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2"></circle><path d="M4 20a5 5 0 0 1 10 0"></path><path d="M14 18a4 4 0 0 1 6 2"></path></svg>',
+        data: '<svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"></ellipse><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"></path><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path></svg>',
+        client: '<svg viewBox="0 0 24 24"><path d="M7 12l3 3 7-7"></path><path d="M4 7h6"></path><path d="M4 17h16"></path></svg>',
+        fallback: '<svg viewBox="0 0 24 24"><path d="M12 4v16"></path><path d="M4 12h16"></path></svg>'
       };
       var labelIcons = {
-        "services overview":["overview",""], "assessments":["assessments","rose"],
-        "implementation":["implementation","gold"], "training":["training","slate"],
-        "system integration":["integration","slate"], "support":["support",""],
-        "optimization":["optimization","gold"], "fractional assistance":["people","rose"],
-        "data conversion":["data",""], "client-side":["client","slate"],
-        "m&a assistance":["merge","gold"], "smartcare for partner clients":["support",""],
-        "channel partner program":["people","rose"], "how it works":["overview","gold"],
-        "why align hcm":["client",""], "partner faq":["support","slate"],
-        "partner resources":["training","gold"], "referred by your advisor":["client","rose"]
+        "services overview": ["overview", ""], "assessments": ["assessments", "rose"], "implementation": ["implementation", "gold"],
+        "training": ["training", "slate"], "system integration": ["integration", "slate"], "support": ["support", ""],
+        "optimization": ["optimization", "gold"], "fractional assistance": ["people", "rose"], "data conversion": ["data", ""],
+        "client-side": ["client", "slate"], "channel partner program": ["people", "rose"], "how it works": ["overview", "gold"],
+        "why align hcm": ["client", ""], "partner faq": ["support", "slate"], "case studies": ["overview", "slate"], "job openings": ["people", "gold"]
       };
-      function norm(t){ return (t||"").replace(/\s+/g," ").trim().toLowerCase(); }
-      function decorate(){
-        document.querySelectorAll(".align-submenu a").forEach(function(link){
+      function norm(t) { return (t || "").replace(/\s+/g, " ").trim().toLowerCase(); }
+      function decorate() {
+        document.querySelectorAll(".hs-elevate-header .hs-elevate-menu__submenu .hs-elevate-menu__menu-item-link").forEach(function (link) {
           if (link.querySelector(".align-menu-icon")) return;
-          var text = link.textContent.replace(/\s+/g," ").trim();
-          var m = labelIcons[norm(text)] || ["fallback",""];
+          var text = link.textContent.replace(/\s+/g, " ").trim();
+          var m = labelIcons[norm(text)] || ["fallback", ""];
           var icon = document.createElement("span");
-          icon.className = "align-menu-icon" + (m[1] ? " align-menu-icon--"+m[1] : "");
-          icon.setAttribute("aria-hidden","true");
+          icon.className = "align-menu-icon" + (m[1] ? " align-menu-icon--" + m[1] : "");
+          icon.setAttribute("aria-hidden", "true");
           icon.innerHTML = icons[m[0]] || icons.fallback;
-          var label = document.createElement("span");
-          label.className = "align-menu-label"; label.textContent = text;
+          var label = document.createElement("span"); label.className = "align-menu-label"; label.textContent = text;
           link.textContent = ""; link.appendChild(icon); link.appendChild(label);
         });
       }
-      if (document.readyState === "loading")
-        document.addEventListener("DOMContentLoaded", decorate);
-      else decorate();
-      new MutationObserver(decorate).observe(document.documentElement,{childList:true,subtree:true});
+      function run() { decorate(); initMobile(); }
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
+      [250, 1000, 2500].forEach(function (t) { setTimeout(run, t); });
+      new MutationObserver(decorate).observe(document.documentElement, { childList: true, subtree: true });
     })();
   </script>
   <!-- align-hcm-mega-menu:end -->
-</head>
-<body>
+
   <main class="preview-shell">
     <section class="preview-heading">
-      <h1>Align HCM</h1>
-      <p>Corrected global header preview: brand font (Plus Jakarta Sans), brand orange
-        (#F05A28 gradient), and the canonical menu order with Public Sector at position 3.
-        Hover Services / Channel Partner / Partners to see the icon mega-menus.</p>
+      <h1>Align HCM — Global Header</h1>
+      <p>Built on HubSpot's Elevate structure (hs-elevate classes) so it drops into the global content editor.
+         Brand font (Plus Jakarta Sans), brand orange (#F05A28), real logo, icon mega-menus, and the full-panel
+         mobile menu (resize below 900px and tap the burger). Everything between the align-hcm-mega-menu markers
+         is what you paste into HubSpot's global header custom code.</p>
     </section>
   </main>
 </body>
