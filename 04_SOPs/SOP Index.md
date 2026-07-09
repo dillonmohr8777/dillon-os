@@ -14,6 +14,7 @@ tags: [sop, moc]
 - 
 
 ## Admin / Operations
+• [[competitive-task-orchestrator]] — one daily umbrella automation (parallel agents, replaces 7 legacy crons)
 • [[AM Client Review Dashboard Rollout SOP]]: repeatable recipe plus AI build prompt for AMs to spin up a client review dashboard (report with Approve / Request Edits / comments, client login)
 
 ---
