@@ -176,6 +176,7 @@ export function Footer({ base = './' }: { base?: string }) {
             [`${base}about.html`, 'About'],
             [`${base}blog.html`, 'Blog'],
             [`${base}contact.html`, 'Contact'],
+            [`${base}press.html`, 'Press'],
           ].map(([href, label]) => (
             <a
               key={href}

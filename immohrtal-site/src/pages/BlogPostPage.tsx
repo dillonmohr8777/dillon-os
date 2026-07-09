@@ -53,7 +53,31 @@ export function BlogPostPage() {
         ))}
       </div>
 
-      <div className="reveal reveal-later mt-14 flex flex-col gap-4 sm:flex-row">
+      <div className="reveal reveal-later mt-14">
+        <TiltBox max={2}>
+          <aside className="blog-card sheen" aria-label="Hear the album">
+            <p className="mono-tag" style={{ color: 'var(--signal-txt)' }}>
+              SESSION 001 // FIRST LISTENS
+            </p>
+            <p
+              className="font-display chrome-text mt-3 uppercase"
+              style={{ fontSize: 'clamp(1.5rem, 3.6vw, 2.4rem)', lineHeight: 1 }}
+            >
+              Reading about it is one thing. Hearing it is the point.
+            </p>
+            <p className="mt-3 max-w-xl text-[15px]" style={{ color: 'var(--dim)' }}>
+              Thirty second previews of the album are live on the home page.
+              Join the list and they open right up. If not now, when?
+            </p>
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+              <a className="btn btn-chrome" href="../index.html#listen">Hear the previews</a>
+              <a className="btn btn-ghost" href="../about.html">The full story</a>
+            </div>
+          </aside>
+        </TiltBox>
+      </div>
+
+      <div className="reveal reveal-later mt-10 flex flex-col gap-4 sm:flex-row">
         <a className="btn btn-chrome" href="../blog.html">
           Back to the blog
         </a>

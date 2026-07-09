@@ -90,6 +90,7 @@ const today = new Date().toISOString().slice(0, 10)
 const urls = [
   ['/', 'weekly', '1.0'],
   ['/about.html', 'monthly', '0.8'],
+  ['/press.html', 'monthly', '0.6'],
   ['/blog.html', 'weekly', '0.9'],
   ['/contact.html', 'monthly', '0.6'],
   ...posts.map((p) => [`/blog/${p.slug}.html`, 'monthly', '0.7']),
