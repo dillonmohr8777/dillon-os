@@ -61,7 +61,8 @@ def main():
                 f.write(card(title, tag, photo)); path = f.name
             pg.goto(f"file://{path}", wait_until="networkidle")
             pg.wait_for_timeout(350)
-            pg.screenshot(path=os.path.join(OUT, f"{slug}.png"))
+            png = os.path.join(OUT, f"{slug}.png"); pg.screenshot(path=png)
+            from PIL import Image; Image.open(png).convert("RGB").save(png[:-4]+".jpg", quality=85, optimize=True); os.remove(png)
             print("rendered og/" + slug + ".png")
         b.close()
 

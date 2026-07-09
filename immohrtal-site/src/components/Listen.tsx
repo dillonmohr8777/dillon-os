@@ -46,10 +46,11 @@ export function Listen() {
             <img
               src={artist.coverArt}
               alt={`${artist.name} - ${artist.albumTitle} album cover`}
+              loading="lazy"
+              decoding="async"
               className="cover-tilt aspect-square w-full rounded-2xl object-cover"
               width={640}
               height={640}
-              loading="lazy"
             />
           ) : (
             <CoverPlaceholder />
