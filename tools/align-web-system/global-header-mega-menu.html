@@ -49,6 +49,9 @@
       font-weight:800; text-decoration:none; text-transform:uppercase; white-space:nowrap;
       background:linear-gradient(135deg,var(--align-orange),var(--align-hot));
       box-shadow:0 10px 24px rgba(240,90,40,.28); }
+    .align-hamburger { display:none; flex:0 0 auto; width:46px; height:46px; border:0; background:none; cursor:pointer;
+      flex-direction:column; gap:5px; align-items:center; justify-content:center; }
+    .align-hamburger span { display:block; width:24px; height:2.5px; background:var(--align-ink); border-radius:2px; transition:.3s; }
 
     /* mega submenu */
     .align-submenu { position:absolute; top:calc(100% + 12px); left:0; right:0; z-index:1001;
@@ -76,12 +79,30 @@
     @media (min-width:901px) and (max-width:1240px) {
       .align-submenu { grid-template-columns:repeat(3,minmax(0,1fr)); }
     }
-    @media (max-width:900px) {
-      .align-header__row { flex-direction:column; align-items:stretch; padding:18px; gap:14px; }
-      .align-menu { flex-wrap:wrap; gap:12px 18px; }
-      .align-submenu { position:static; display:grid; grid-template-columns:1fr;
-        padding:12px 0 0; border:0; box-shadow:none; }
-      .align-actions { justify-content:space-between; }
+    @media (max-width:1180px) {
+      .align-header__row { position:relative; }
+      .align-menu { display:none; }
+      .align-hamburger { display:flex; }
+      .align-nav { flex:0 0 auto; }
+      .align-actions { margin-left:auto; }
+      .align-nav.open ~ .align-actions .align-hamburger { border:1.6px solid var(--align-orange); border-radius:50%; }
+      .align-nav.open ~ .align-actions .align-hamburger span { background:var(--align-orange); }
+      .align-nav.open ~ .align-actions .align-hamburger span:nth-child(1) { transform:translateY(7.5px) rotate(45deg); }
+      .align-nav.open ~ .align-actions .align-hamburger span:nth-child(2) { opacity:0; }
+      .align-nav.open ~ .align-actions .align-hamburger span:nth-child(3) { transform:translateY(-7.5px) rotate(-45deg); }
+      .align-nav.open .align-menu { display:flex; flex-direction:column; align-items:stretch; position:absolute;
+        top:calc(100% + 8px); left:0; right:0; background:#fff; border:1px solid var(--align-border); border-radius:26px;
+        box-shadow:0 24px 60px rgba(17,32,48,.18); padding:8px 30px 24px; max-height:calc(100vh - 150px); overflow-y:auto; z-index:1002; }
+      .align-nav.open .align-menu > li { width:100%; border-bottom:1px solid #f1ece4; }
+      .align-nav.open .align-menu > li:last-child { border-bottom:0; }
+      .align-nav.open .align-menu > li > a { display:flex; justify-content:space-between; align-items:center; padding:18px 2px; font-size:18px; font-weight:800; color:var(--align-ink); }
+      .align-nav.open .caret { width:10px; height:10px; transition:transform .3s; }
+      .align-nav.open li.has-children.expanded .caret { transform:rotate(-135deg); }
+      .align-nav.open .align-submenu { position:static; display:none; grid-template-columns:1fr; padding:0 0 14px; border:0; box-shadow:none; }
+      .align-nav.open li.has-children.expanded .align-submenu { display:grid; }
+      .align-nav.open .align-submenu a { min-height:auto; grid-template-columns:1fr; gap:0; color:#3a4658; font-size:15.5px; font-weight:600; padding:11px 0 11px 20px; }
+      .align-nav.open .align-submenu a::after { content:none; }
+      .align-nav.open .align-menu-icon { display:none; }
     }
   </style>
 
@@ -140,6 +161,7 @@
         </nav>
         <div class="align-actions">
           <a class="align-cta" href="/contact">Contact us</a>
+          <button class="align-hamburger" id="align-nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
       </div>
     </div>
@@ -147,6 +169,23 @@
 
   <script>
     (function () {
+      var toggle = document.getElementById('align-nav-toggle');
+      var nav = document.querySelector('.align-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var o = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', o ? 'true' : 'false');
+          toggle.setAttribute('aria-label', o ? 'Close menu' : 'Open menu');
+        });
+        nav.querySelectorAll('.align-menu > li.has-children > a').forEach(function (a) {
+          a.addEventListener('click', function (e) {
+            if (window.matchMedia('(max-width:1180px)').matches) { e.preventDefault(); a.parentElement.classList.toggle('expanded'); }
+          });
+        });
+        nav.querySelectorAll('.align-menu > li:not(.has-children) > a').forEach(function (a) {
+          a.addEventListener('click', function () { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); });
+        });
+      }
       var icons = {
         overview:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>',
         assessments:'<svg viewBox="0 0 24 24"><path d="M9 3h6v4H9z"/><path d="M6 5H5v16h14V5h-1"/><path d="M8 12h8"/><path d="M8 16h5"/></svg>',
