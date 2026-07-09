@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { artist } from '../content/album'
 import { track } from '../lib/analytics'
+import { submitToList } from '../lib/list'
 import { SubPage } from '../components/SubPage'
 import { TiltBox } from '../components/TiltBox'
 
@@ -54,18 +55,11 @@ export function VideoPage() {
     setBusy(true)
     setError(null)
     try {
-      const res = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'immohrtal-list',
-          email,
-          source: 'video gate, Picking Up My Notepad',
-          'bot-field': String(data.get('bot-field') ?? ''),
-        }).toString(),
+      await submitToList({
+        email,
+        source: 'video gate, Picking Up My Notepad',
+        'bot-field': String(data.get('bot-field') ?? ''),
       })
-      const local = ['localhost', '127.0.0.1'].includes(window.location.hostname)
-      if (!res.ok && !local) throw new Error(String(res.status))
       try {
         localStorage.setItem(STORAGE_KEY, '1')
       } catch {
