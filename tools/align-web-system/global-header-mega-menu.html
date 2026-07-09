@@ -152,9 +152,17 @@
                 <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Partner FAQ</a></div></li>
               </ul>
             </li>
-            <li><a class="hs-elevate-menu__menu-item-link" href="#">Insights</a></li>
-            <li><a class="hs-elevate-menu__menu-item-link" href="#">Case Studies</a></li>
-            <li><a class="hs-elevate-menu__menu-item-link" href="#">About</a></li>
+            <li class="hs-elevate-menu--has-children"><a class="hs-elevate-menu__menu-item-link" href="#">Insights</a>
+              <ul class="hs-elevate-menu__submenu">
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Case Studies</a></div></li>
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Blog</a></div></li>
+              </ul>
+            </li>
+            <li class="hs-elevate-menu--has-children"><a class="hs-elevate-menu__menu-item-link" href="#">About</a>
+              <ul class="hs-elevate-menu__submenu">
+                <li><div class="hs-elevate-menu__menu-item-link-container"><a class="hs-elevate-menu__menu-item-link" href="#">Job Openings</a></div></li>
+              </ul>
+            </li>
           </ul>
         </nav>
         <div class="align-preview-actions">
@@ -187,6 +195,8 @@
 
       // ---- Desktop: inject icon tiles into submenu items ----
       var icons = {
+      blog:'<svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 3z"/><path d="M8 9h8"/><path d="M8 12h5"/></svg>',
+      briefcase:'<svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg>',
         overview: '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"></rect><rect x="14" y="4" width="6" height="6"></rect><rect x="4" y="14" width="6" height="6"></rect><rect x="14" y="14" width="6" height="6"></rect></svg>',
         assessments: '<svg viewBox="0 0 24 24"><path d="M9 3h6v4H9z"></path><path d="M6 5H5v16h14V5h-1"></path><path d="M8 12h8"></path><path d="M8 16h5"></path></svg>',
         implementation: '<svg viewBox="0 0 24 24"><path d="M5 19c4-1 8-5 10-10l3-3"></path><path d="M13 7l4 4"></path><path d="M7 17l-2 4 4-2"></path><path d="M14 4h6v6"></path></svg>',
@@ -205,7 +215,7 @@
         "optimization": ["optimization", "gold"], "fractional assistance": ["people", "rose"], "data conversion": ["data", ""],
         "client-side": ["client", "slate"], "channel partner program": ["people", "rose"], "how it works": ["overview", "gold"],
         "why align hcm": ["client", ""], "partner faq": ["support", "slate"], "case studies": ["overview", "slate"], "job openings": ["people", "gold"]
-      };
+      ,"case studies":["overview","slate"],"blog":["blog","gold"],"job openings":["briefcase","rose"]};
       function norm(t) { return (t || "").replace(/\s+/g, " ").trim().toLowerCase(); }
       function decorate() {
         document.querySelectorAll(".hs-elevate-header .hs-elevate-menu__submenu .hs-elevate-menu__menu-item-link").forEach(function (link) {
