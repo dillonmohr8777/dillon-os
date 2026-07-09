@@ -26,6 +26,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'about.html'),
         video: resolve(__dirname, 'video.html'),
+        press: resolve(__dirname, 'press.html'),
         blog: resolve(__dirname, 'blog.html'),
         contact: resolve(__dirname, 'contact.html'),
         ...blogPages,
