@@ -27,7 +27,7 @@ const esc = (s) =>
 
 const pageFor = (post) => {
   const url = `${ORIGIN}/blog/${post.slug}.html`
-  const ogImg = existsSync(resolve(ROOT, `public/og/${post.slug}.png`)) ? `${ORIGIN}/og/${post.slug}.png` : `${ORIGIN}/og.png`
+  const ogImg = existsSync(resolve(ROOT, `public/og/${post.slug}.jpg`)) ? `${ORIGIN}/og/${post.slug}.jpg` : `${ORIGIN}/og.png`
   const title = `${post.title} | IMMOHRTAL Blog`
   const desc = post.answer.length > 158 ? `${post.answer.slice(0, 155).trimEnd()}...` : post.answer
   const ld = {

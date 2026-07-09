@@ -46,10 +46,11 @@ function DualityShot() {
       <img
         src={artist.heroImage ?? ''}
         alt={`${artist.name} portrait`}
+        fetchPriority="high"
+        decoding="async"
         className="block aspect-square w-full object-cover"
         width={1080}
         height={1080}
-        fetchPriority="high"
       />
       <span aria-hidden="true" className="duality-layer duality-red" />
       <span aria-hidden="true" className="duality-layer duality-blue" />
