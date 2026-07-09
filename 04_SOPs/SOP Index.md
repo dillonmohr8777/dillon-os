@@ -14,7 +14,7 @@ tags: [sop, moc]
 - 
 
 ## Admin / Operations
-• [[AM Client Review Dashboard Rollout SOP]]: repeatable recipe plus AI build prompt for AMs to spin up a client review dashboard (report with Approve / Request Edits / comments, client login)
+• [[AM Client Review Dashboard Rollout SOP]]: how to run the M360 reporting dashboard (edit data, build, deploy to Netlify) plus the client review workflow (Approve / Request Edits / comments / reviewer invite)
 
 ---
 

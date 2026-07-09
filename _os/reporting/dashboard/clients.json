@@ -1,0 +1,691 @@
+{
+  "shadow-heating-and-cooling": {
+    "clientName": "Shadow Heating & Cooling",
+    "reportMonth": "June 29-July 5, 2026",
+    "reportView": "Week",
+    "reportingMonth": "2026-07",
+    "logoUrl": "./assets/shadow-heating-cooling-B1dG5a81.png",
+    "logoAlt": "Shadow Heating & Cooling logo",
+    "logoPanel": "light",
+    "industry": "HVAC / Meta Ads",
+    "status": "Scaling",
+    "executiveSummary": "Shadow Heating & Cooling had a strong current-week Meta lead run with 15 tracked AC lead results, $66.16 in spend, and a $4.41 cost per result. The active Hampshire-radius lead campaign reached 2,158 local prospects and improved lead volume against the prior posted dashboard baseline.",
+    "primaryGoal": "Capture qualified summer AC service inquiries from homeowners in the Hampshire-area radius while keeping CPL, reach, and lead volume visible week to week.",
+    "kpis": [
+      {
+        "label": "Meta Leads",
+        "value": "15",
+        "change": "$4.41 CPL",
+        "trend": "up",
+        "context": "Shadow AC Leads"
+      },
+      {
+        "label": "Spend",
+        "value": "$66.16",
+        "change": "Jun 29-Jul 5",
+        "trend": "neutral",
+        "context": "Active Meta delivery"
+      },
+      {
+        "label": "Impressions",
+        "value": "4,250",
+        "change": "2,158 reach",
+        "trend": "up",
+        "context": "Local service-area visibility"
+      },
+      {
+        "label": "Lead Lift",
+        "value": "+66.7%",
+        "change": "15 vs 9 prior leads",
+        "trend": "up",
+        "context": "Week-over-week volume"
+      }
+    ],
+    "channels": [
+      {
+        "name": "Meta | Shadow AC Leads | Hampshire 30mi | Summer 2026",
+        "spend": 66.16,
+        "leads": 15,
+        "cpl": 4.41,
+        "resultLabel": "15 Meta leads",
+        "costLabel": "$4.41 / lead",
+        "status": "High Performing",
+        "notes": "Jun 29-Jul 5 export: 4,250 impressions, 2,158 reach, 15 tracked lead results, $66.16 spend, and $4.41 cost per result."
+      },
+      {
+        "name": "Meta | Shadow AC Calls + Homeowner | Hampshire 30mi",
+        "spend": 0,
+        "leads": 0,
+        "cpl": 0,
+        "resultLabel": "Inactive",
+        "costLabel": "$0.00",
+        "status": "Paused",
+        "notes": "The calls campaign was inactive in the current export. Lead volume came through the active AC lead form campaign."
+      }
+    ],
+    "chartData": [
+      {
+        "week": "AC Leads",
+        "impressions": 4250,
+        "clicks": 0,
+        "leads": 15,
+        "conversions": 15
+      }
+    ],
+    "wins": [
+      "Shadow AC Leads generated 15 tracked Meta lead results at a $4.41 cost per result.",
+      "The active campaign reached 2,158 local prospects with 4,250 impressions in the current week.",
+      "Lead volume improved from the prior posted baseline of nine leads to 15 leads this week."
+    ],
+    "watchouts": [
+      "The Shadow CSV export did not include click or CPC columns for this current-week pull, so the dashboard avoids inventing those values.",
+      "Keep lead quality tied to the same Shadow AC campaign row so CPL movement stays easy to explain."
+    ],
+    "changesMade": [
+      "Updated Shadow to the Jun 29-Jul 5 Meta Ads export.",
+      "Kept the Momentum 360 branded report shell with the Shadow client logo.",
+      "Separated the active AC lead campaign from the inactive calls campaign."
+    ],
+    "nextMoves": [
+      "Review the 15 Meta lead forms for appointment quality and service intent.",
+      "Use the strongest lead-answer patterns to guide the next creative refresh before increasing budget."
+    ],
+    "leadBreakdown": {
+      "forms": 15,
+      "calls": 0,
+      "other": 0,
+      "source": "Meta lead forms / Shadow AC Leads",
+      "notes": "Current-week Meta lead forms are treated as the tracked lead result for this report."
+    },
+    "reviewContactName": "Dr. Kelly",
+    "reviewContactEmail": "",
+    "reviewDocuments": [
+      {
+        "title": "Shadow HVAC June 29-July 5 lead report review",
+        "status": "Ready for review"
+      }
+    ],
+    "logoFile": "shadow-heating-and-cooling.png"
+  },
+  "fagan-painting": {
+    "clientName": "Fagan Painting",
+    "reportMonth": "June 29-July 5, 2026",
+    "reportView": "Week",
+    "reportingMonth": "2026-07",
+    "logoUrl": "./assets/fagan-painting-BJL1TljD.png",
+    "logoAlt": "Fagan Painting logo",
+    "logoPanel": "light",
+    "industry": "Painting / Meta Ads",
+    "status": "Optimizing",
+    "executiveSummary": "Fagan Painting is in Meta website-lead launch and tracking cleanup. The latest verified export showed $111.23 in June spend across 4,062 impressions and 2,847 reach, with the newer website-lead campaign active at $20/day. The immediate priority is not more creative churn; it is making the painting-services form path easier to complete and confirming the Lead event only fires after a real successful submission.",
+    "primaryGoal": "Turn Pittsburgh-area Meta traffic into qualified painting estimate requests by stabilizing the website form, phone CTA, and Meta Lead event before scaling budget.",
+    "kpis": [
+      {
+        "label": "Meta Spend",
+        "value": "$111.23",
+        "change": "June export",
+        "trend": "neutral",
+        "context": "Two Fagan campaigns"
+      },
+      {
+        "label": "Impressions",
+        "value": "4,062",
+        "change": "2,847 reach",
+        "trend": "up",
+        "context": "Pittsburgh 25mi"
+      },
+      {
+        "label": "Active Campaign",
+        "value": "1",
+        "change": "$20/day",
+        "trend": "neutral",
+        "context": "Website Lead"
+      },
+      {
+        "label": "Lead Path",
+        "value": "Fixing",
+        "change": "Form + pixel QA",
+        "trend": "neutral",
+        "context": "Tracking review"
+      }
+    ],
+    "channels": [
+      {
+        "name": "Meta | WebsiteOnly_NoInstantForm_20260629",
+        "spend": 21.67,
+        "leads": 0,
+        "cpl": 0,
+        "resultLabel": "tracking review",
+        "costLabel": "Lead path pending",
+        "status": "Testing",
+        "notes": "June export: active Website Lead campaign, $21.67 spend, 2,328 impressions, 1,870 reach, and 0 reported results. The live landing page and tracking path need QA before scaling."
+      },
+      {
+        "name": "Meta | 202606 Instant Form Copy",
+        "spend": 89.56,
+        "leads": 0,
+        "cpl": 0,
+        "resultLabel": "0 reported results",
+        "costLabel": "Inactive",
+        "status": "Paused",
+        "notes": "June export: inactive campaign copy, $89.56 spend, 1,734 impressions, 977 reach, and no reported results."
+      }
+    ],
+    "chartData": [
+      {
+        "week": "Website Lead",
+        "impressions": 2328,
+        "clicks": 0,
+        "leads": 0,
+        "conversions": 0
+      },
+      {
+        "week": "Instant Form",
+        "impressions": 1734,
+        "clicks": 0,
+        "leads": 0,
+        "conversions": 0
+      }
+    ],
+    "wins": [
+      "The newer website-lead campaign is active with a $20/day budget and Pittsburgh-area targeting.",
+      "The account has a clear landing page path at faganpainting.com/painting-services/ with Meta Pixel, GTM, and GA4 present.",
+      "A rebuilt July campaign plan and five ad concepts are ready around exterior, interior, cabinet, commercial, and estimate-request intent."
+    ],
+    "watchouts": [
+      "The current website form path has friction; a controlled submit hit a reCAPTCHA failure in the live diagnosis.",
+      "Do not scale spend until the form submit, intake notification, and Meta Lead event are verified end to end.",
+      "Phone-number consistency should be checked before call-focused copy or phone-click tracking is treated as clean."
+    ],
+    "changesMade": [
+      "Created the first Fagan blue Momentum dashboard in the ads review report lane.",
+      "Added the extracted Fagan logo to the branded dashboard asset set.",
+      "Centered the dashboard on verified spend, delivery, launch status, and the tracking cleanup path."
+    ],
+    "nextMoves": [
+      "Duplicate or simplify the paid-traffic Gravity Form so name and phone are the primary required fields.",
+      "Confirm one successful test from form submit to intake notification and Meta Events Manager Lead event.",
+      "Keep the $20/day website-lead campaign stable until the first clean lead path is verified."
+    ],
+    "leadBreakdown": {
+      "forms": 0,
+      "calls": 0,
+      "other": 0,
+      "source": "Meta Ads export + website lead-path diagnosis",
+      "notes": "Verified campaign delivery exists, but reported lead volume is intentionally held as a tracking/funnel review item until the form and Lead event pass."
+    },
+    "reviewContactName": "Dr. Kelly",
+    "reviewContactEmail": "",
+    "reviewDocuments": [
+      {
+        "title": "Fagan Painting launch and tracking review",
+        "status": "Ready for review"
+      }
+    ],
+    "logoFile": "fagan-painting.png"
+  },
+  "kimberly-james-bridal": {
+    "clientName": "Kimberly James Bridal",
+    "reportMonth": "June 29-July 5, 2026",
+    "reportView": "Week",
+    "reportingMonth": "2026-07",
+    "logoUrl": "./assets/kimberly-james-bridal-ByyG7hwS.png",
+    "logoAlt": "Kimberly James Bridal logo",
+    "logoPanel": "light",
+    "industry": "Bridal / Google Ads + Meta Ads",
+    "status": "Optimizing",
+    "executiveSummary": "Kimberly James Bridal is in launch-and-tracking mode for the current week. The latest verified Google baseline produced 18,128 impressions and 333 clicks at a $0.49 average CPC, while the Meta last-7-days mobile view shows two lead forms on $69.81 spend at a $34.91 cost per lead. Current Google Ads extraction still needs a clean live pull, so this dashboard keeps Google as baseline context while updating Meta from the newest visible Ads data.",
+    "primaryGoal": "Keep Performance Max pointed at the dedicated bridal appointment request page while conversion tracking is tightened around the Squarespace and Poppy Bridal booking path.",
+    "kpis": [
+      {
+        "label": "Google Clicks",
+        "value": "333",
+        "change": "$0.49 CPC",
+        "trend": "up",
+        "context": "Latest posted baseline"
+      },
+      {
+        "label": "Meta Leads",
+        "value": "2",
+        "change": "$34.91 CPL",
+        "trend": "up",
+        "context": "Last 7 days Meta"
+      },
+      {
+        "label": "Google Impr.",
+        "value": "18,128",
+        "change": "1.84% CTR",
+        "trend": "up",
+        "context": "Bridal demand reach"
+      },
+      {
+        "label": "Meta Spend",
+        "value": "$69.81",
+        "change": "Last 7 days",
+        "trend": "neutral",
+        "context": "Lead campaign"
+      }
+    ],
+    "channels": [
+      {
+        "name": "Google | Performance Max Bridal Appointment Landing Page",
+        "spend": 162.7,
+        "leads": 0,
+        "cpl": 0,
+        "resultLabel": "333 baseline clicks",
+        "costLabel": "$0.49 CPC",
+        "status": "Launch Update",
+        "notes": "Latest posted dashboard baseline: 18,128 impressions, 333 clicks, 1.84% CTR, $0.49 average CPC, and $162.70 spend. Current-week pull is still pending because the Google Ads tab froze during extraction."
+      },
+      {
+        "name": "Meta | Kimberly James Bridal | Lead Forms",
+        "spend": 69.81,
+        "leads": 2,
+        "cpl": 34.91,
+        "resultLabel": "2 lead forms",
+        "costLabel": "$34.91 / lead",
+        "status": "Lead Capture Active",
+        "notes": "Last-7-days Meta mobile view: 2 lead forms, $69.81 spend, and $34.91 cost per lead for the active Kimberly James Bridal Philadelphia leads campaign."
+      }
+    ],
+    "chartData": [
+      {
+        "week": "Google Baseline",
+        "impressions": 18128,
+        "clicks": 333,
+        "leads": 0,
+        "conversions": 0
+      },
+      {
+        "week": "Meta Last 7 Days",
+        "impressions": 0,
+        "clicks": 0,
+        "leads": 2,
+        "conversions": 2
+      }
+    ],
+    "wins": [
+      "The dedicated bridal appointment request page is the correct near-term landing-page focus for Performance Max.",
+      "The last posted Google baseline showed efficient bridal traffic at a $0.49 CPC.",
+      "The latest Meta last-7-days view shows active lead capture with two form leads at a $34.91 CPL."
+    ],
+    "watchouts": [
+      "Current-week KJB Google numbers still need a fresh platform pull once the Ads/browser freeze clears.",
+      "The booking path uses a cross-origin Poppy Bridal embed, so native Squarespace page tags may not see the final appointment submit without Poppy-side tracking or a confirmed thank-you path."
+    ],
+    "changesMade": [
+      "Refreshed the KJB report into a current-week launch/tracking status dashboard.",
+      "Kept the branded Momentum 360 report layout with the Kimberly James Bridal logo.",
+      "Updated the Meta lead numbers from the last-7-days mobile Ads screenshot."
+    ],
+    "nextMoves": [
+      "Verify Performance Max is using the bridal appointment request page in the active campaign settings.",
+      "Confirm the conversion path with a test appointment flow or Poppy-side tracking support before making conversion-volume claims.",
+      "Pull current-week Google metrics after the browser surface is stable."
+    ],
+    "leadBreakdown": {
+      "forms": 2,
+      "calls": 0,
+      "other": 0,
+      "source": "Meta mobile Ads last-7-days screenshot + latest posted Google baseline",
+      "notes": "Meta lead forms are current from the screenshot; Google clicks remain baseline traffic signal until the live Google pull is refreshed."
+    },
+    "reviewContactName": "Dr. Kelly",
+    "reviewContactEmail": "",
+    "reviewDocuments": [
+      {
+        "title": "Kimberly James Bridal June 29-July 5 launch and tracking review",
+        "status": "Ready for review"
+      }
+    ],
+    "logoFile": "kimberly-james-bridal.png"
+  },
+  "new-kensington-nkcdc": {
+    "clientName": "New Kensington CDC",
+    "reportMonth": "June 29-July 5, 2026",
+    "reportView": "Week",
+    "reportingMonth": "2026-07",
+    "logoUrl": "",
+    "logoAlt": "New Kensington CDC logo",
+    "logoPanel": "light",
+    "industry": "Community Development / Google Ads + Meta Ads",
+    "status": "Scaling",
+    "executiveSummary": "New Kensington CDC has a verified current-week Google Ads snapshot, a clean landing-page tracking check, and a current Meta last-7-days lead read. Google produced 41 clicks, two tracked conversions, and a $20.02 account-level CPA on $40.04 spend. Meta's active Kensington Business Help campaign added four lead forms on $89.07 spend at a $22.27 CPL, with 2,470 impressions and 1,704 reach.",
+    "primaryGoal": "Use the verified tax-prep landing page and tracked Google conversion actions to build lower-funnel demand while Meta lead exports are paired with spend in the next pull.",
+    "kpis": [
+      {
+        "label": "Google Conv.",
+        "value": "2",
+        "change": "$20.02 CPA",
+        "trend": "up",
+        "context": "Jun 29-Jul 5"
+      },
+      {
+        "label": "Google Clicks",
+        "value": "41",
+        "change": "$0.98 CPC",
+        "trend": "up",
+        "context": "20.92% CTR"
+      },
+      {
+        "label": "Spend",
+        "value": "$40.04",
+        "change": "196 impressions",
+        "trend": "neutral",
+        "context": "Google Ads total"
+      },
+      {
+        "label": "Meta Leads",
+        "value": "4",
+        "change": "$22.27 CPL",
+        "trend": "neutral",
+        "context": "Last 7 days Meta"
+      }
+    ],
+    "channels": [
+      {
+        "name": "Google | Performance Max Campaign #1",
+        "spend": 13.57,
+        "leads": 2,
+        "cpl": 6.78,
+        "resultLabel": "2 conversions",
+        "costLabel": "$6.78 / conversion",
+        "status": "Efficient Converter",
+        "notes": "Jun 29-Jul 5: 128 impressions, 38 clicks, $13.57 spend, 2 conversions, and $6.78 cost per conversion. Campaign is currently paused."
+      },
+      {
+        "name": "Google | Search - Free Business Tax Prep",
+        "spend": 26.47,
+        "leads": 0,
+        "cpl": 0,
+        "resultLabel": "3 clicks",
+        "costLabel": "$8.82 CPC",
+        "status": "Testing",
+        "notes": "Jun 29-Jul 5: 68 impressions, 3 clicks, $26.47 spend, and 0 conversions. Final URL is verified live; this is low volume/off-season performance, not a dead-page issue."
+      },
+      {
+        "name": "Meta | NKCDC Kensington Business Help | Leads | 2026-06",
+        "spend": 89.07,
+        "leads": 4,
+        "cpl": 22.27,
+        "resultLabel": "4 lead forms",
+        "costLabel": "$22.27 / lead",
+        "status": "Lead Capture Active",
+        "notes": "Last-7-days Meta mobile view: 4 lead forms, $89.07 spend, $22.27 cost per lead, 1,704 reach, and 2,470 impressions."
+      }
+    ],
+    "chartData": [
+      {
+        "week": "Google PMax",
+        "impressions": 128,
+        "clicks": 38,
+        "leads": 2,
+        "conversions": 2
+      },
+      {
+        "week": "Google Search",
+        "impressions": 68,
+        "clicks": 3,
+        "leads": 0,
+        "conversions": 0
+      },
+      {
+        "week": "Meta Export",
+        "impressions": 2470,
+        "clicks": 0,
+        "leads": 4,
+        "conversions": 4
+      }
+    ],
+    "wins": [
+      "Google Ads produced two tracked conversions at a $20.02 account-level cost per conversion.",
+      "The landing page final URL is verified live, and phone CTA tracking fired through GTM.",
+      "Meta added four last-7-days lead forms at a $22.27 CPL through the active Kensington Business Help campaign."
+    ],
+    "watchouts": [
+      "PMax drove both conversions but is currently paused, while the enabled Search campaign produced only three clicks and no conversions this week.",
+      "Meta lead quality still needs follow-up feedback so the next optimization can separate useful business-assistance inquiries from weak fits."
+    ],
+    "changesMade": [
+      "Updated NKCDC with verified Jun 29-Jul 5 Google Ads KPIs.",
+      "Kept the Momentum 360 branded report shell with the New Kensington CDC logo.",
+      "Updated the Meta lead, spend, reach, impression, and CPL numbers from the last-7-days mobile Ads screenshot."
+    ],
+    "nextMoves": [
+      "Decide whether to keep tax-prep Search spending during low seasonal volume or shift more emphasis back to the converting PMax structure.",
+      "Use the Meta lead form answers and follow-up feedback to tighten the next Business Help audience and creative pass.",
+      "Keep the call-click tracking proof attached to the next NKCDC delivery note."
+    ],
+    "leadBreakdown": {
+      "forms": 6,
+      "calls": 0,
+      "other": 0,
+      "source": "Google Ads conversions + Meta mobile Ads last-7-days screenshot",
+      "notes": "Two Google conversions plus four Meta lead forms are counted as tracked lead signals for this internal dashboard refresh."
+    },
+    "reviewContactName": "Dr. Kelly",
+    "reviewContactEmail": "",
+    "reviewDocuments": [
+      {
+        "title": "New Kensington CDC June 29-July 5 report review",
+        "status": "Ready for review"
+      }
+    ],
+    "logoFile": "momentum-mark.png"
+  },
+  "onsite-concrete-and-landscape": {
+    "clientName": "Onsite Concrete & Landscape",
+    "reportMonth": "June 29-July 5, 2026",
+    "reportView": "Week",
+    "reportingMonth": "2026-07",
+    "logoUrl": "./assets/onsite-concrete-construction-CQ2DBB7W.png",
+    "logoAlt": "Onsite Concrete & Landscape logo",
+    "logoPanel": "light",
+    "industry": "Concrete & Landscape / Google Ads",
+    "status": "Aggressive Growth",
+    "executiveSummary": "Onsite Concrete & Landscape had another healthy Google Ads week with 6,904 impressions, 220 clicks, 8.99 tracked conversions, and a $5.83 account-level CPA on $52.39 spend. Performance Max was the efficient driver, producing 7.99 conversions at a $2.95 CPA, including phone-call volume.",
+    "primaryGoal": "Use the Performance Max lead engine to capture concrete and landscape demand while keeping Smart campaign traffic accountable against tracked forms and calls.",
+    "kpis": [
+      {
+        "label": "Conversions",
+        "value": "8.99",
+        "change": "$5.83 CPA",
+        "trend": "up",
+        "context": "Google Ads total"
+      },
+      {
+        "label": "Google Clicks",
+        "value": "220",
+        "change": "$0.24 CPC",
+        "trend": "up",
+        "context": "Paid traffic"
+      },
+      {
+        "label": "PMax CPA",
+        "value": "$2.95",
+        "change": "7.99 conversions",
+        "trend": "up",
+        "context": "Lead campaign"
+      },
+      {
+        "label": "Spend",
+        "value": "$52.39",
+        "change": "3.19% CTR",
+        "trend": "neutral",
+        "context": "PMax + Smart"
+      }
+    ],
+    "channels": [
+      {
+        "name": "Google | Leads-Performance Max-1",
+        "spend": 23.58,
+        "leads": 7.99,
+        "cpl": 2.95,
+        "resultLabel": "7.99 conversions",
+        "costLabel": "$2.95 CPA",
+        "status": "Efficient Converter",
+        "notes": "Jun 29-Jul 5: 292 impressions, 50 clicks, $23.58 spend, 7.99 conversions, and a $2.95 cost per conversion. Mix: about two web contact forms and six web phone calls."
+      },
+      {
+        "name": "Google | Onsite Concrete & Landscape Smart Campaign",
+        "spend": 28.81,
+        "leads": 1,
+        "cpl": 28.81,
+        "resultLabel": "1 conversion",
+        "costLabel": "$28.81 CPA",
+        "status": "Eligible",
+        "notes": "Jun 29-Jul 5: 6,612 impressions, 170 clicks, $28.81 spend, one Web Contact Form conversion, and $0.17 cost per click."
+      }
+    ],
+    "chartData": [
+      {
+        "week": "PMax Leads",
+        "impressions": 292,
+        "clicks": 50,
+        "leads": 7.99,
+        "conversions": 7.99
+      },
+      {
+        "week": "Smart Campaign",
+        "impressions": 6612,
+        "clicks": 170,
+        "leads": 1,
+        "conversions": 1
+      }
+    ],
+    "wins": [
+      "Onsite generated 8.99 tracked conversions at a $5.83 account-level cost per conversion.",
+      "Leads-Performance Max-1 produced 7.99 conversions at a $2.95 CPA.",
+      "The tracked action mix includes about three form conversions and six phone calls, which keeps lead quality visible."
+    ],
+    "watchouts": [
+      "Smart campaign traffic produced one conversion on 170 clicks, so its role should stay under review.",
+      "The account still has old duplicate conversion actions; cleanup is optional but would make future primary conversion reporting cleaner."
+    ],
+    "changesMade": [
+      "Updated Onsite with verified Jun 29-Jul 5 Google Ads KPIs.",
+      "Kept the branded Momentum 360 report shell with the Onsite client logo.",
+      "Separated Performance Max conversion volume from Smart campaign traffic."
+    ],
+    "nextMoves": [
+      "Keep budget emphasis on the Performance Max line while it holds the lower CPA.",
+      "Audit old duplicate primary conversion actions when there is a stable account-maintenance window.",
+      "Use phone-call quality to decide whether to scale PMax or refine the Smart campaign."
+    ],
+    "leadBreakdown": {
+      "forms": 3,
+      "calls": 6,
+      "other": 0,
+      "source": "Google Ads conversion actions",
+      "notes": "Current-week visible conversion mix is about three forms and six phone calls."
+    },
+    "reviewContactName": "Dr. Kelly",
+    "reviewContactEmail": "",
+    "reviewDocuments": [
+      {
+        "title": "Onsite June 29-July 5 traffic and tracking review",
+        "status": "Ready for review"
+      }
+    ],
+    "logoFile": "onsite-concrete-and-landscape.png"
+  },
+  "omega-landscaping": {
+    "clientName": "Omega Landscaping",
+    "reportMonth": "June 29-July 5, 2026",
+    "reportView": "Week",
+    "reportingMonth": "2026-07",
+    "logoUrl": "./assets/omega-landscaping-BJncnL3J.png",
+    "logoAlt": "Omega Landscaping logo",
+    "logoPanel": "light",
+    "industry": "Landscaping / Google Ads",
+    "status": "Optimizing",
+    "executiveSummary": "Omega Landscaping had meaningful paid search and Performance Max traffic this week with $338.25 spend, 5,689 impressions, 162 clicks, 187 interactions, and a $1.81 average cost. The weekly conversion column showed no counted conversions, but the account's call and form conversion actions were previously verified active in the 30-day view, so this dashboard treats the week as a tracking re-audit item rather than a client-facing zero-lead story.",
+    "primaryGoal": "Keep Colorado Springs demand moving while rechecking call-conversion attribution, minimum-duration thresholds, and form coverage before making any lead-volume claim.",
+    "kpis": [
+      {
+        "label": "Spend",
+        "value": "$338.25",
+        "change": "Jun 29-Jul 5",
+        "trend": "neutral",
+        "context": "Google Ads total"
+      },
+      {
+        "label": "Clicks",
+        "value": "162",
+        "change": "$1.81 avg cost",
+        "trend": "up",
+        "context": "187 interactions"
+      },
+      {
+        "label": "Impressions",
+        "value": "5,689",
+        "change": "2.85% CTR",
+        "trend": "up",
+        "context": "Colorado Springs reach"
+      },
+      {
+        "label": "Tracking",
+        "value": "Re-audit",
+        "change": "Call actions active",
+        "trend": "neutral",
+        "context": "Do not report as 0 leads"
+      }
+    ],
+    "channels": [
+      {
+        "name": "Google | Omega Account Total",
+        "spend": 338.25,
+        "leads": 0,
+        "cpl": 0,
+        "resultLabel": "re-audit pending",
+        "costLabel": "call tracking active",
+        "status": "Tracking Review",
+        "notes": "Jun 29-Jul 5: 5,689 impressions, 162 clicks, 187 interactions, $338.25 spend, and $1.81 average cost. Weekly counted conversions need re-audit before client delivery."
+      }
+    ],
+    "chartData": [
+      {
+        "week": "Google Traffic",
+        "impressions": 5689,
+        "clicks": 162,
+        "leads": 0,
+        "conversions": 0
+      }
+    ],
+    "wins": [
+      "Omega maintained active Colorado Springs visibility with 5,689 impressions and 187 interactions.",
+      "Traffic cost stayed materially lower than the prior posted dashboard baseline, with a $1.81 average cost.",
+      "Existing account evidence shows call reporting, auto-tagging, and primary phone/form conversion actions are configured."
+    ],
+    "watchouts": [
+      "Do not tell the client this was a zero-lead week until call conversion attribution and minimum-duration thresholds are rechecked.",
+      "The current-week conversion-action breakdown froze during the live audit, so this dashboard keeps the tracking re-audit explicit."
+    ],
+    "changesMade": [
+      "Updated Omega with verified Jun 29-Jul 5 Google traffic and spend KPIs.",
+      "Kept the branded Momentum 360 report layout with the Omega Landscaping logo.",
+      "Flagged the counted-conversion gap as a tracking review instead of a lead-volume conclusion."
+    ],
+    "nextMoves": [
+      "Re-open Omega conversion actions when Google Ads is stable and confirm the phone-call lead action is still recording across call-only campaigns.",
+      "Check call-duration thresholds before changing bids or budgets.",
+      "Use Search and call-only campaign segmentation to isolate where the current traffic is strongest."
+    ],
+    "leadBreakdown": {
+      "forms": 0,
+      "calls": 0,
+      "other": 0,
+      "source": "Google Ads traffic and conversion-action audit",
+      "notes": "Weekly counted conversions require re-audit; this dashboard intentionally avoids calling the account a zero-lead week."
+    },
+    "reviewContactName": "Dr. Kelly",
+    "reviewContactEmail": "",
+    "reviewDocuments": [
+      {
+        "title": "Omega Landscaping June 29-July 5 traffic and tracking review",
+        "status": "Ready for review"
+      }
+    ],
+    "logoFile": "omega-landscaping.png"
+  }
+}
