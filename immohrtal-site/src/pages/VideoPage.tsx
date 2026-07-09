@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { artist } from '../content/album'
+import { track } from '../lib/analytics'
 import { SubPage } from '../components/SubPage'
 import { TiltBox } from '../components/TiltBox'
 
@@ -30,6 +31,7 @@ export function VideoPage() {
         v.pause()
         v.currentTime = PREVIEW_SECONDS
         setGateOpen(true)
+        track('gate_open', { source: 'video' })
       }
     }
     const onSeeking = () => {
@@ -69,6 +71,7 @@ export function VideoPage() {
       } catch {
         /* private mode, session only */
       }
+      track('gate_signup', { source: 'video' })
       setUnlocked(true)
       setGateOpen(false)
       const v = videoRef.current

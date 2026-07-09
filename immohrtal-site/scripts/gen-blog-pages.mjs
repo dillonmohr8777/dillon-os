@@ -9,7 +9,7 @@
  * BlogPosting JSON-LD, mounting src/pages/blog-post-main.tsx.
  * The generated files are build inputs, not source: blog/ is gitignored.
  */
-import { mkdirSync, rmSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -27,6 +27,7 @@ const esc = (s) =>
 
 const pageFor = (post) => {
   const url = `${ORIGIN}/blog/${post.slug}.html`
+  const ogImg = existsSync(resolve(ROOT, `public/og/${post.slug}.png`)) ? `${ORIGIN}/og/${post.slug}.png` : `${ORIGIN}/og.png`
   const title = `${post.title} | IMMOHRTAL Blog`
   const desc = post.answer.length > 158 ? `${post.answer.slice(0, 155).trimEnd()}...` : post.answer
   const ld = {
@@ -44,7 +45,7 @@ const pageFor = (post) => {
           name: 'Dillon Mohr',
           alternateName: 'IMMOHRTAL',
         },
-        image: `${ORIGIN}/og.png`,
+        image: ogImg,
       },
     ],
   }
@@ -63,9 +64,9 @@ const pageFor = (post) => {
     <meta property="og:title" content="${esc(title)}" />
     <meta property="og:description" content="${esc(desc)}" />
     <meta property="og:url" content="${url}" />
-    <meta property="og:image" content="${ORIGIN}/og.png" />
+    <meta property="og:image" content="${ogImg}" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="${ORIGIN}/og.png" />
+    <meta name="twitter:image" content="${ogImg}" />
     <script type="application/ld+json">
 ${JSON.stringify(ld, null, 2)}
     </script>

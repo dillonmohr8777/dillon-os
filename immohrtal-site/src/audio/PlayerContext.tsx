@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from 'react'
 import { tracks } from '../content/album'
+import { initAnalytics, track as trackEvent } from '../lib/analytics'
 
 interface PlayerState {
   currentIndex: number | null
@@ -44,6 +45,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
 
   // one hidden <audio> element for the whole site
   useEffect(() => {
+    initAnalytics()
     const audio = new Audio()
     audio.preload = 'metadata'
     audioRef.current = audio
@@ -92,6 +94,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
 
   const playTrack = useCallback(
     (index: number) => {
+      trackEvent('preview_play', { track: tracks[index]?.title ?? String(index) })
       const audio = audioRef.current
       const track = tracks[index]
       if (!audio || !track?.src) return
