@@ -13,12 +13,17 @@ OPERATOR MODE — AlignHCM ops agent. Boot with full remote powers, then do the 
    `call COMPOSIO_MULTI_EXECUTE_TOOL '{"tools":[{"tool_slug":"GMAIL_FETCH_EMAILS","arguments":{"max_results":5}}]}'`.
    Meta-tool flow: SEARCH_TOOLS (find) -> MULTI_EXECUTE_TOOL (run, up to 50 parallel).
 
-2) REMOTE BROWSER (Dillon's box Chrome, logged into Squarespace/Meta/Google) — ONLY if a bridge URL is available.
-   Driver: `tools/box.mjs` (needs `npm i ws https-proxy-agent`). Set env `BRIDGE_HOST` to the tunnel host.
-   NOTE: reachable only when the box exposes a tunnel. If the box is local-only (public tunnels disabled),
-   the browser work must run on the box itself — ask Dillon which mode is active.
-   Method if a tunnel is up: raw WebSocket, rewrite ws://localhost -> wss://<BRIDGE_HOST>, route through
-   $HTTPS_PROXY, send NO Origin header. Many tabs via Target.createTarget. NEVER browser.close().
+2) REMOTE BROWSER (Dillon's box) — ONLY if a bridge URL is available.
+   TWO bridges live on the box: Codex owns 9222/zen-chrome (Zen Spa — DO NOT TOUCH);
+   Claude owns 9223/claude-chrome (general-purpose: ads, landing pages, everything else).
+   CURRENT MODE: LOCAL-ONLY. Company box (@alignhcm.com), policy on record:
+   public_cdp_tunnel_allowed: false. Do NOT stand up a public tunnel unless Dillon confirms
+   the policy is lifted. If local-only, browser work runs on the box's own Claude session.
+   Driver when a tunnel IS up: `tools/box.mjs` (needs `npm i ws https-proxy-agent`), set env
+   `BRIDGE_HOST`. Method: raw WebSocket, rewrite ws://localhost -> wss://<BRIDGE_HOST>, route
+   through $HTTPS_PROXY, send NO Origin header. Many tabs via Target.createTarget.
+   NEVER browser.close(). Squarespace editing: never press Delete in a block editor
+   (ctrl+a + type to replace); one accordion item per call, verify editor open first.
 
 3) CONTEXT: this repo (dillon-os) + mohr-vault (clients + skills: /am-report, /client-pulse, /content-scan, /client-report).
 
