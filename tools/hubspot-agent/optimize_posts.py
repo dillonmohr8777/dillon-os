@@ -25,6 +25,7 @@ ORG = {"@type": "Organization", "name": "Align HCM", "url": "https://www.alignhc
 S_SCHEMA, E_SCHEMA = "<!-- align-aeo-schema:start -->", "<!-- align-aeo-schema:end -->"
 S_INTRO, E_INTRO = "<!-- align-aeo-intro:start -->", "<!-- align-aeo-intro:end -->"
 S_FAQ, E_FAQ = "<!-- align-aeo-faq:start -->", "<!-- align-aeo-faq:end -->"
+S_CTA, E_CTA = "<!-- align-aeo-cta:start -->", "<!-- align-aeo-cta:end -->"
 
 NAVY = "#13314e"
 ORANGE = "#F05A28"
@@ -53,6 +54,11 @@ def api(method, path, body=None, params=None):
 def clean(s):
     s = re.sub(r"<[^>]+>", "", s or "")
     return html.unescape(re.sub(r"\s+", " ", s)).strip()
+
+
+def strip_internal(s):
+    """Unwrap internal (alignhcm.com) links to plain text, keep external links."""
+    return re.sub(r'<a href="https://www\.alignhcm\.com[^"]*">(.*?)</a>', r'\1', s)
 
 
 # ---- internal + external link shorthands ----
@@ -231,60 +237,62 @@ CONTACT = "https://www.alignhcm.com/contact"
 
 # Contextual links woven into the EXISTING body prose (first sensible phrase,
 # distributed top-to-bottom, one per paragraph). Mix of internal + external.
+# Trimmed to ~3 internal + 1 external woven per post (Google-friendly, concentrates
+# link equity). Internal targets first so they distribute through the body.
 WEAVE = {
   "273813902025": [
     (B + "the-strategic-buyers-guide-to-ukg", ["Rapid Hire", "UKG Pro", "UKG"]),
-    ("https://www.bls.gov/jlt/", ["time-to-hire", "time to hire", "high-volume", "high volume"]),
     (B + "the-ukg-ecosystem-advantage-why-open-apis-and-partner-networks-matter-for-long-term-success", ["onboarding", "integration", "integrations", "payroll"]),
     (B + "ukgs-approach-to-ai-why-human-centered-automation-matters-more-than-you-think", ["automation", "artificial intelligence"]),
+    ("https://www.bls.gov/jlt/", ["time-to-hire", "time to hire", "high-volume", "high volume"]),
   ],
   "277255570131": [
     (B + "the-data-imperative-why-pre-conversion-data-cleaning-determines-hcm-success", ["data migration", "data cleanup", "data quality", "data conversion"]),
-    ("https://www.shrm.org", ["change management", "best practices", "project management"]),
     (B + "the-most-common-challenges-with-hcm-implementations", ["go-live", "go live", "implementation"]),
     (B + "the-hidden-price-tag-why-diy-hcm-implementation-costs-more-than-you-think", ["internal team", "project lead", "resources", "DIY"]),
+    ("https://www.shrm.org", ["change management", "best practices", "project management"]),
   ],
   "268085670586": [
     (B + "workforce-visibility-gap", ["real-time", "visibility", "shop floor", "the floor"]),
-    ("https://www.dol.gov/agencies/whd/flsa", ["overtime", "compliance", "wage", "labor law"]),
     (B + "the-strategic-buyers-guide-to-ukg", ["scheduling", "timekeeping", "time and attendance"]),
     (B + "contingent-workforce-management-close-the-blind-spot", ["seasonal", "temporary", "contingent"]),
+    ("https://www.dol.gov/agencies/whd/flsa", ["overtime", "compliance", "wage", "labor law"]),
   ],
   "277414866667": [
     (B + "the-strategic-buyers-guide-to-ukg", ["UKG"]),
-    ("https://www.gartner.com/en/human-resources", ["adoption", "managers", "recommendations"]),
     (B + "most-chros-are-buying-ai-tools-theyll-never-use", ["AI tools", "AI features", "artificial intelligence"]),
     (B + "ai-integration-with-hcm-systems", ["integration", "workflows", "clean data"]),
+    ("https://www.gartner.com/en/human-resources", ["adoption", "managers", "recommendations"]),
   ],
   "268058974957": [
     (B + "the-retention-equation-how-retail-turnover-costs-more-than-your-pl-reveals", ["turnover", "retention", "retain"]),
-    ("https://learning.linkedin.com/resources/workplace-learning-report", ["reskilling", "upskilling", "learning and development", "development"]),
     (B + "rethinking-strategic-workforce-planning", ["workforce planning", "skills", "roles"]),
     (B + "high-performance-culture", ["culture", "engagement"]),
+    ("https://learning.linkedin.com/resources/workplace-learning-report", ["reskilling", "upskilling", "learning and development", "development"]),
   ],
   "277394134770": [
     (B + "the-strategic-buyers-guide-to-ukg", ["UKG"]),
-    ("https://www.ukg.com", ["marketplace", "partner network", "partners"]),
     (B + "api-vs.-flat-file-integrations-choosing-your-hcm-ecosystem", ["open APIs", "APIs", "API", "integration"]),
     (B + "integrating-workday-with-ukg-why-teams-struggle-and-how-align-hcm-helps", ["data mapping", "connections", "integrations"]),
+    ("https://www.ukg.com", ["marketplace", "partner network", "partners"]),
   ],
   "277394135777": [
     (B + "the-strategic-buyers-guide-to-workday", ["Workday"]),
-    ("https://www.gartner.com/en/human-resources", ["analytics", "dashboards", "metrics"]),
     (B + "the-workday-ai-gap-most-organizations-dont-know-they-have", ["predictive", "machine learning", "artificial intelligence"]),
     (B + "hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence", ["C-suite", "CFO", "leadership", "financial"]),
+    ("https://www.gartner.com/en/human-resources", ["analytics", "dashboards", "metrics"]),
   ],
   "277394451165": [
     (B + "the-strategic-buyers-guide-to-paylocity", ["Paylocity"]),
-    ("https://www.dol.gov/agencies/whd/flsa", ["overtime", "compliance", "wage", "FLSA"]),
     (B + "workforce-visibility-gap", ["labor cost", "labor costing", "visibility", "scheduling"]),
     (B + "paylocity-training-implementation-methods", ["adoption", "training", "managers"]),
+    ("https://www.dol.gov/agencies/whd/flsa", ["overtime", "compliance", "wage", "FLSA"]),
   ],
   "277376447190": [
-    (B + "beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy", ["internal mobility", "career path", "promotion", "promote"]),
-    ("https://www.bls.gov/jlt/", ["separation", "turnover rate", "quit"]),
-    (B + "high-performance-culture", ["culture", "engagement"]),
-    (B + "hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence", ["P&L", "CFO", "financial", "the business"]),
+    (B + "beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy", ["internal mobility", "career path", "career", "promotion", "promote", "advancement"]),
+    (B + "high-performance-culture", ["culture", "engaged", "engagement", "employees stay", "retain"]),
+    (B + "hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence", ["P&L", "CFO", "bottom line", "finance", "financial"]),
+    ("https://www.bls.gov/jlt/", ["separation", "turnover rate", "quit", "replace"]),
   ],
 }
 
@@ -343,12 +351,27 @@ def weave_links(body, targets, contact_url, cta_html):
                 break
     body = "".join(toks)
     if cta_html and contact_url not in body:
+        cta = f"{S_CTA}{cta_html}{E_CTA}"
         idx = body.rfind("</p>")
         if idx != -1:
-            body = body[:idx] + cta_html + body[idx:]
+            body = body[:idx] + cta + body[idx:]
         else:
-            body = body + f"<p>{cta_html.strip()}</p>"
+            body = body + f"<p>{cta}</p>"
     return body
+
+
+def reset_body(body):
+    """Return clean original prose: strip injected blocks, remove any prior Contact
+    CTA (marked or legacy), and unwrap all previously-woven anchors. Safe because the
+    source posts had zero links, so every anchor present was inserted by this tool."""
+    body = strip_block(body, S_INTRO, E_INTRO)
+    body = strip_block(body, S_FAQ, E_FAQ)
+    body = strip_block(body, S_CTA, E_CTA)
+    # legacy (unmarked) Contact CTA sentence
+    body = re.sub(r'\s*(<strong>[^<]*</strong>\s*)?<a href="[^"]*/contact[^"]*"[^>]*>[^<]*</a>[^<]*?\.', '', body)
+    # unwrap remaining woven anchors (internal + external)
+    body = re.sub(r'<a\b[^>]*>(.*?)</a>', r'\1', body, flags=re.S | re.I)
+    return body.strip()
 
 
 def intro_block(answer):
@@ -362,20 +385,17 @@ def intro_block(answer):
     )
 
 
-def faq_block(faqs, related):
+def faq_block(faqs, related=None):
+    # Internal links removed from FAQ answers (external citations kept); the "Related"
+    # list is dropped — internal linking now lives in the woven body (2-3 per post).
     parts = [S_FAQ]
     parts.append(f'<h2 style="color:{NAVY};margin-top:44px;">Frequently asked questions</h2>')
     for q, a in faqs:
         parts.append(
             f'<div class="abg-faq" style="margin:0 0 22px;">'
             f'<h3 style="color:{NAVY};margin-bottom:8px;">{q}</h3>'
-            f'<p style="line-height:1.65;">{a}</p></div>'
+            f'<p style="line-height:1.65;">{strip_internal(a)}</p></div>'
         )
-    parts.append(f'<h3 style="color:{NAVY};margin-top:36px;">Related from Align HCM</h3>')
-    parts.append('<ul style="line-height:1.9;">')
-    for slug, label in related:
-        parts.append(f'<li>{IL(slug, label)}</li>')
-    parts.append('</ul>')
     parts.append(E_FAQ)
     return "\n".join(parts)
 
@@ -433,8 +453,7 @@ def main():
             "property": "id,name,slug,url,metaDescription,publishDate,updated,featuredImage,postBody,headHtml"})
         name = p.get("name", "")
         body = p.get("postBody", "") or ""
-        body = strip_block(body, S_INTRO, E_INTRO)
-        body = strip_block(body, S_FAQ, E_FAQ)
+        body = reset_body(body)
         woven = weave_links(body, WEAVE.get(pid, []), CONTACT, CTA.get(pid))
         body_links = len(re.findall(r'<a href="', woven)) - len(re.findall(r'<a href="', body))
         new_body = intro_block(cfg["answer"]) + "\n" + woven + "\n" + faq_block(cfg["faqs"], cfg["related"])
@@ -444,9 +463,10 @@ def main():
         ext = len(re.findall(r'href="https?://(?!www\.alignhcm)', new_body))
         contact_ok = CONTACT in new_body
         print(f"\n=== {name[:60]}")
-        print(f"    +intro, +{len(cfg['faqs'])} FAQ, +{len(cfg['related'])} related, "
-              f"+{body_links} woven in-body | total internal~{internal}, external~{ext} | "
-              f"contact CTA: {'yes' if contact_ok else 'NO'} | +schema")
+        blog_internal = len(re.findall(r'href="https://www\.alignhcm\.com/blog', new_body))
+        print(f"    +intro, +{len(cfg['faqs'])} FAQ, +{body_links} woven in-body | "
+              f"content internal~{blog_internal} (+contact CTA: {'yes' if contact_ok else 'NO'}), "
+              f"external~{ext} | +schema")
         if confirm:
             api("PATCH", f"/cms/v3/blogs/posts/{pid}", body={"postBody": new_body, "headHtml": new_head})
             print("    ✓ postBody + headHtml updated LIVE")
