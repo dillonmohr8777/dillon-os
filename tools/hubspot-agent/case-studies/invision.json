@@ -1,0 +1,86 @@
+{
+ "client": "InVision Human Services",
+ "client_logo": "tools/align-web-system/brand/client-logos/invision_clean.png",
+ "headline": "Connected Systems. <span>Real-Time Data.</span> Better Outcomes.",
+ "subtitle": "How Align HCM connected a nonprofit's disconnected enterprise systems with API-driven integration, so the mission gets the data, not the manual work.",
+ "tags": [
+  {
+   "k": "Industry",
+   "v": "Nonprofit & Human Services"
+  },
+  {
+   "k": "Footprint",
+   "v": "Pennsylvania"
+  },
+  {
+   "k": "Engagement",
+   "v": "Systems integration"
+  }
+ ],
+ "challenge_title": "Disconnected Systems, Duplicated Work",
+ "challenge_cols": [
+  {
+   "title": "Siloed Platforms",
+   "bullets": [
+    "HR and care systems ran independently",
+    "No real-time data sharing",
+    "Each system its own island"
+   ]
+  },
+  {
+   "title": "Manual Burden",
+   "bullets": [
+    "Redundant duplicate data entry",
+    "Delayed employee onboarding",
+    "Errors from rekeyed records"
+   ]
+  },
+  {
+   "title": "Blind Spots",
+   "bullets": [
+    "No unified view for leadership",
+    "Decisions made on stale data",
+    "Service delivery insights locked away"
+   ]
+  }
+ ],
+ "solution_title": "API-Driven Integration, Owned In-House",
+ "steps": [
+  {
+   "name": "Connect",
+   "desc": "Built API-driven, real-time integration between the HR and care platforms."
+  },
+  {
+   "name": "Automate",
+   "desc": "Employee records and medication administration now update automatically."
+  },
+  {
+   "name": "Enable",
+   "desc": "Documentation that lets InVision's IT team manage and expand integrations independently."
+  }
+ ],
+ "solution_caption": "Real-time connectivity  .  Zero rekeying  .  In-house ownership",
+ "results_title": "Immediate & Lasting Impact",
+ "results": [
+  {
+   "icon": "link",
+   "title": "Real-Time Sync",
+   "desc": "Records update across systems the moment they change."
+  },
+  {
+   "icon": "check",
+   "title": "Manual Entry Eliminated",
+   "desc": "Duplicate data entry and its errors are gone."
+  },
+  {
+   "icon": "chart",
+   "title": "Actionable Insight",
+   "desc": "Leadership sees unified data; more integrations underway."
+  }
+ ],
+ "quote": {
+  "text": "Working with Align was a great experience. In fact, I was so impressed with Align that I went to my other teams to see how they could help.",
+  "who": "Gary Boughamer, Director of Property & Technology Services, InVision Human Services"
+ },
+ "blurb": "InVision Human Services is a Pittsburgh-based nonprofit serving individuals with special needs across Pennsylvania through personalized support plans, in-home assistance, community programs, and behavioral health services."
+}

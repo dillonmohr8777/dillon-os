@@ -30,62 +30,86 @@ CSS = """
  *{box-sizing:border-box;}
  body{margin:0;font-family:'DM Sans',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#26313d;line-height:1.34;}
  h1,h2,h3,h4{font-family:'Plus Jakarta Sans','DM Sans',sans-serif;margin:0;}
- .page{width:8.5in;height:11in;display:flex;flex-direction:column;overflow:hidden;}
+ .page{width:8.5in;height:11in;display:flex;flex-direction:column;overflow:hidden;background:
+   radial-gradient(rgba(23,50,77,.05) 1px, transparent 1.4px);background-size:22px 22px;background-color:#fff;}
  /* hero */
- .hero{background:linear-gradient(135deg,#0d2740 0%,#17324d 68%,#22384f 100%);color:#fff;padding:15px 44px 22px;position:relative;overflow:hidden;}
- .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(240,90,40,.45),transparent 70%);}
+ .hero{flex-shrink:0;background:linear-gradient(135deg,#081c30 0%,#0d2740 45%,#17324d 78%,#22384f 100%);color:#fff;padding:13px 44px 16px;position:relative;overflow:hidden;}
+ .hero::before{content:"";position:absolute;inset:0;background:
+   linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+   linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+   background-size:34px 34px;}
+ .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(240,90,40,.5),transparent 68%);}
+ .glow2{position:absolute;left:-90px;bottom:-140px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.22),transparent 70%);}
  .toprow{display:flex;justify-content:space-between;align-items:center;gap:16px;position:relative;z-index:1;}
- .logobox{background:#fff;border:2.5px solid var(--orange);border-radius:11px;padding:7px 12px;display:flex;align-items:center;}
+ .logobox{background:#fff;border:2px solid transparent;border-radius:11px;padding:7px 12px;display:flex;align-items:center;position:relative;
+   background:linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,var(--orange),var(--hot) 55%,#ffd0bd) border-box;
+   box-shadow:0 0 14px rgba(240,90,40,.45), 0 4px 12px rgba(0,0,0,.28);}
  .logobox.align img{height:26px;display:block;}
  .logobox.client img{height:30px;max-width:210px;object-fit:contain;display:block;}
- .kicker{display:inline-block;background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:10px;letter-spacing:.14em;padding:4px 11px;border-radius:999px;margin:11px 0 8px;position:relative;z-index:1;}
- .hero h1{font-size:28px;line-height:1.06;font-weight:800;letter-spacing:-.01em;position:relative;z-index:1;}
- .hero h1 span{color:var(--orange);}
- .hero .sub{color:#c9d6e4;font-size:13px;max-width:640px;margin-top:8px;position:relative;z-index:1;}
- .tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:11px;position:relative;z-index:1;}
- .tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:5px 11px;font-size:11.5px;}
- .tag b{color:var(--hot);font-family:'Plus Jakarta Sans';font-weight:700;letter-spacing:.05em;font-size:9px;display:block;text-transform:uppercase;margin-bottom:1px;}
- .accent{height:5px;background:linear-gradient(90deg,var(--orange),var(--hot));}
+ .kicker{display:inline-block;background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:10px;letter-spacing:.22em;padding:5px 16px;margin:9px 0 7px;position:relative;z-index:1;
+   clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%);box-shadow:0 0 12px rgba(240,90,40,.5);}
+ .hero h1{font-size:27px;line-height:1.06;font-weight:800;letter-spacing:-.01em;position:relative;z-index:1;text-shadow:0 2px 18px rgba(0,0,0,.35);}
+ .hero h1 span{color:var(--hot);text-shadow:0 0 22px rgba(255,107,53,.55);}
+ .hero .sub{color:#c9d6e4;font-size:12.5px;max-width:640px;margin-top:8px;position:relative;z-index:1;}
+ .tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:10px;position:relative;z-index:1;}
+ .tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,107,53,.55);padding:5px 13px;font-size:11.5px;
+   clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%);}
+ .tag b{color:var(--hot);font-family:'Plus Jakarta Sans';font-weight:700;letter-spacing:.09em;font-size:9px;display:block;text-transform:uppercase;margin-bottom:1px;}
+ .accent{flex-shrink:0;height:5px;background:repeating-linear-gradient(115deg,var(--orange) 0 14px,var(--hot) 14px 28px);}
  /* body */
- .body{padding:14px 44px 0;flex:1;}
- .seclabel{color:var(--orange);font-family:'Plus Jakarta Sans';font-weight:800;font-size:11px;letter-spacing:.14em;display:flex;align-items:center;gap:10px;margin-bottom:2px;}
- .seclabel::after{content:"";flex:1;height:1px;background:var(--line);}
- .sech{color:var(--navy);font-size:16px;font-weight:800;margin-bottom:8px;}
- .block{margin-bottom:9px;}
+ .body{padding:9px 44px 0;flex:1;}
+ .seclabel{color:var(--orange);font-family:'Plus Jakarta Sans';font-weight:800;font-size:11px;letter-spacing:.18em;display:flex;align-items:center;gap:10px;margin-bottom:2px;}
+ .seclabel::before{content:"//";color:var(--hot);font-weight:800;letter-spacing:0;}
+ .seclabel::after{content:"";flex:1;height:1.5px;background:linear-gradient(90deg,rgba(240,90,40,.55),rgba(23,50,77,.14) 60%,transparent);}
+ .sech{color:var(--navy);font-size:15.5px;font-weight:800;margin-bottom:6px;}
+ .block{margin-bottom:7px;}
  .cols{display:flex;gap:12px;}
- .col{flex:1;background:#fbfaf7;border:1px solid var(--line);border-radius:10px;padding:10px 12px;}
- .col h4{color:var(--navy);font-size:11.5px;letter-spacing:.02em;text-transform:uppercase;margin-bottom:6px;}
+ .card{position:relative;border:1.5px solid transparent;border-radius:11px;
+   background:linear-gradient(180deg,#ffffff,#fdfaf6) padding-box, linear-gradient(135deg,rgba(240,90,40,.85),rgba(255,107,53,.4) 45%,rgba(23,50,77,.5)) border-box;
+   box-shadow:0 5px 16px rgba(240,90,40,.10), 0 2px 6px rgba(13,39,64,.06);}
+ .card::before{content:"";position:absolute;top:5px;left:5px;width:11px;height:11px;border-top:2px solid var(--orange);border-left:2px solid var(--orange);opacity:.85;}
+ .card::after{content:"";position:absolute;bottom:5px;right:5px;width:11px;height:11px;border-bottom:2px solid var(--orange);border-right:2px solid var(--orange);opacity:.85;}
+ .col{flex:1;padding:9px 13px;}
+ .col h4{color:var(--navy);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px;}
+ .col h4 span{color:var(--hot);}
  .col ul{margin:0;padding-left:14px;}
  .col li{font-size:11px;color:#4b5563;margin-bottom:2.5px;}
  /* steps */
  .steps{display:flex;align-items:stretch;gap:0;}
- .step{flex:1;text-align:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 11px;}
- .step .num{width:27px;height:27px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:13px;line-height:27px;margin:0 auto 6px;}
+ .step{flex:1;text-align:center;padding:9px 11px;}
+ .step .num{width:29px;height:29px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:13px;line-height:29px;margin:0 auto 6px;
+   box-shadow:0 0 0 3px rgba(240,90,40,.15), 0 0 14px rgba(240,90,40,.5);}
  .step h4{color:var(--navy);font-size:13px;margin-bottom:3px;}
  .step p{font-size:11px;color:#5b6673;line-height:1.3;}
- .arrow{display:flex;align-items:center;color:var(--orange);font-size:18px;font-weight:800;padding:0 7px;}
- .cap{text-align:center;color:#8a94a0;font-size:11px;font-style:italic;margin-top:6px;}
+ .arrow{display:flex;align-items:center;color:var(--hot);font-size:19px;font-weight:800;padding:0 7px;text-shadow:0 0 10px rgba(255,107,53,.8);}
+ .cap{text-align:center;color:#8a94a0;font-size:10.5px;font-style:italic;margin-top:4px;}
  /* results */
  .results{display:flex;gap:12px;}
- .res{flex:1;background:linear-gradient(180deg,#fff,#fbfaf7);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:10px;padding:10px 12px;}
- .res .ic{width:27px;height:27px;border-radius:7px;background:linear-gradient(135deg,var(--orange),var(--hot));margin-bottom:7px;display:flex;align-items:center;justify-content:center;}
+ .res{flex:1;padding:9px 13px;}
+ .res .ic{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--orange),var(--hot));margin-bottom:7px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 12px rgba(240,90,40,.45);}
  .res .ic svg{width:16px;height:16px;fill:#fff;}
  .res h4{color:var(--navy);font-size:12.5px;margin-bottom:3px;}
  .res p{font-size:11px;color:#4b5563;line-height:1.3;}
  /* quote */
- .quote{background:var(--warm);border-left:4px solid var(--orange);border-radius:0 10px 10px 0;padding:10px 16px;margin-bottom:9px;}
- .quote p{font-size:13px;color:#2b3644;font-style:italic;font-family:'Plus Jakarta Sans';font-weight:500;line-height:1.4;}
- .quote .who{font-style:normal;font-size:11.5px;color:var(--orange);font-weight:700;margin-top:5px;}
+ .quote{position:relative;background:linear-gradient(135deg,#0d2740,#17324d) padding-box, linear-gradient(135deg,var(--orange),rgba(255,107,53,.45) 50%,rgba(240,90,40,.9)) border-box;
+   border:1.5px solid transparent;border-radius:11px;padding:9px 18px;margin-bottom:6px;box-shadow:0 6px 18px rgba(13,39,64,.25);}
+ .quote::before{content:"\\201C";position:absolute;top:-6px;left:12px;font-family:'Plus Jakarta Sans';font-size:44px;color:var(--hot);opacity:.9;line-height:1;text-shadow:0 0 14px rgba(255,107,53,.6);}
+ .quote p{font-size:13px;color:#eaf1f8;font-style:italic;font-family:'Plus Jakarta Sans';font-weight:500;line-height:1.4;padding-left:18px;}
+ .quote .who{font-style:normal;font-size:11.5px;color:var(--hot);font-weight:700;margin-top:5px;padding-left:18px;}
  /* about */
-  .about{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:10px;padding:8px 14px;margin-bottom:8px;background:#fff;}
+ .about{display:flex;align-items:center;gap:14px;padding:7px 13px;margin-bottom:6px;}
  .about .lb{background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 9px;display:flex;align-items:center;flex:0 0 auto;}
  .about .lb img{height:26px;max-width:140px;object-fit:contain;display:block;}
  .about p{font-size:11px;color:#5b6673;}
  /* footer */
- .foot{background:var(--deep);color:#cdd9e6;padding:13px 44px;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:auto;}
+ .foot{flex-shrink:0;background:linear-gradient(135deg,#081c30,#0d2740 60%,#17324d);color:#cdd9e6;padding:11px 44px;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:auto;position:relative;overflow:hidden;}
+ .foot::before{content:"";position:absolute;inset:0;background:
+   linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+   linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);background-size:34px 34px;}
+ .foot>div{position:relative;z-index:1;}
  .foot .tl{font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:13.5px;}
- .foot .tl span{color:var(--orange);}
- .foot .cta{background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;font-family:'Plus Jakarta Sans';font-weight:700;font-size:12.5px;padding:9px 16px;border-radius:999px;white-space:nowrap;}
+ .foot .tl span{color:var(--hot);text-shadow:0 0 14px rgba(255,107,53,.5);}
+ .foot .cta{background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;font-family:'Plus Jakarta Sans';font-weight:700;font-size:12.5px;padding:9px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 0 16px rgba(240,90,40,.55);}
  .foot .sm{font-size:10px;color:#8ea1b5;margin-top:3px;}
 """
 
@@ -101,18 +125,19 @@ ICONS = {
 
 def render(d):
     client_logo = datauri(d["client_logo"])
+    lh = int(d.get("logo_h", 30))
     tags = "".join(f'<div class="tag"><b>{html.escape(t["k"])}</b>{html.escape(t["v"])}</div>' for t in d["tags"])
     cols = "".join(
-        f'<div class="col"><h4>{html.escape(c["title"])}</h4><ul>'
+        f'<div class="col card"><h4>{html.escape(c["title"])}</h4><ul>'
         + "".join(f"<li>{html.escape(b)}</li>" for b in c["bullets"]) + "</ul></div>"
         for c in d["challenge_cols"])
     steps_html = []
     for i, s in enumerate(d["steps"]):
         if i:
             steps_html.append('<div class="arrow">&rsaquo;</div>')
-        steps_html.append(f'<div class="step"><div class="num">{i+1}</div><h4>{html.escape(s["name"])}</h4><p>{html.escape(s["desc"])}</p></div>')
+        steps_html.append(f'<div class="step card"><div class="num">{i+1}</div><h4>{html.escape(s["name"])}</h4><p>{html.escape(s["desc"])}</p></div>')
     results = "".join(
-        f'<div class="res"><div class="ic">{ICONS.get(r.get("icon","check"),ICONS["check"])}</div>'
+        f'<div class="res card"><div class="ic">{ICONS.get(r.get("icon","check"),ICONS["check"])}</div>'
         f'<h4>{html.escape(r["title"])}</h4><p>{html.escape(r["desc"])}</p></div>'
         for r in d["results"])
     quote = ""
@@ -121,9 +146,10 @@ def render(d):
     return f"""<!doctype html><html><head><meta charset="utf-8">
 <style>{FONTCSS}</style><style>{CSS}</style></head><body><div class="page">
   <div class="hero">
+    <div class="glow2"></div>
     <div class="toprow">
       <div class="logobox align"><img src="{ALIGN_LOGO}" alt="Align HCM"></div>
-      <div class="logobox client"><img src="{client_logo}" alt="{html.escape(d['client'])}"></div>
+      <div class="logobox client"><img style="height:{lh}px" src="{client_logo}" alt="{html.escape(d['client'])}"></div>
     </div>
     <span class="kicker">CASE STUDY</span>
     <h1>{d['headline']}</h1>
@@ -136,7 +162,7 @@ def render(d):
     <div class="block"><div class="seclabel">HOW ALIGN HCM HELPED</div><div class="sech">{html.escape(d['solution_title'])}</div><div class="steps">{''.join(steps_html)}</div><div class="cap">{html.escape(d['solution_caption'])}</div></div>
     <div class="block"><div class="seclabel">THE RESULTS</div><div class="sech">{html.escape(d['results_title'])}</div><div class="results">{results}</div></div>
     {quote}
-    <div class="about"><div class="lb"><img src="{client_logo}" alt="{html.escape(d['client'])}"></div><p>{html.escape(d['blurb'])}</p></div>
+    <div class="about card"><div class="lb"><img style="height:{int(lh*0.85)}px" src="{client_logo}" alt="{html.escape(d['client'])}"></div><p>{html.escape(d['blurb'])}</p></div>
   </div>
   <div class="foot">
     <div><div class="tl">Your HCM platform should work for you. <span>Not the other way around.</span></div><div class="sm">Free, no-obligation assessment &nbsp;&middot;&nbsp; alignhcm.com &nbsp;&middot;&nbsp; salesteam@alignhcm.com</div></div>
