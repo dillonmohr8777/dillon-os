@@ -111,8 +111,8 @@
       <div class="serif h" style="margin-top:26px;">You guide your clients<br>through <span class="o">benefits.</span></div>
     </div>
     <div class="hook" id="hook2">
-      <div class="serif h" style="font-size:56px;">But every new HCM platform<br>has a moment of truth:</div>
-      <div class="serif" style="font-size:96px;margin-top:34px;color:var(--orange);">Implementation.</div>
+      <div class="serif h" id="hook2a" style="font-size:56px;">But every new HCM platform<br>has a moment of truth:</div>
+      <div class="serif" id="hook2b" style="font-size:96px;margin-top:34px;color:var(--orange);transform-origin:left center;">Implementation.</div>
     </div>
     <div class="hook" id="hook3">
       <div class="t-rule"></div>
@@ -192,8 +192,19 @@ const Easing = {
   outQuart:t=>1-(--t)*t*t*t,
   outQuint:t=>1+(--t)*t*t*t*t,
   outExpo:t=>t===1?1:1-Math.pow(2,-10*t),
+  inOutQuint:t=>t<.5?16*t*t*t*t*t:1-Math.pow(-2*t+2,5)/2,
   inOutSine:t=>-(Math.cos(Math.PI*t)-1)/2,
 };
+/* continuous background drift: diamonds slowly rotate + float per scene */
+const bgCache={};
+function driftBg(sceneId,t){
+  if(!bgCache[sceneId]) bgCache[sceneId]=[...document.querySelectorAll('#'+sceneId+' .dia')];
+  bgCache[sceneId].forEach((d,k)=>{
+    const ph=k*2.1+sceneId.length;
+    d.style.transform=`rotate(${45+Math.sin(t*.13+ph)*4}deg) translate(${Math.sin(t*.11+ph)*22}px,${Math.cos(t*.09+ph)*16}px)`;
+  });
+}
+const BEAT_HZ=122/60; // music tempo, for subtle pulse accents
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const seg=(t,a,b,ease=Easing.linear)=>ease(clamp((t-a)/(b-a),0,1));
 
@@ -456,15 +467,28 @@ function renderS1(t){
    ============================================================ */
 function renderS2(t){
   const l=t-T.s2[0];
+  driftBg('s2',t);
   const set=(id,inA,inB,outA,outB)=>{
     const el=document.getElementById(id);
     const i=seg(l,inA,inB,Easing.outExpo), o=seg(l,outA,outB,Easing.inCubic);
     el.style.opacity=String(i*(1-o));
-    el.style.transform=`translateX(${(1-i)*60 - o*40}px)`;
+    // slide in, drift while holding, blur-slide out (edited cut feel)
+    const hold=clamp((l-inB)/(outA-inB),0,1);
+    el.style.transform=`translateX(${(1-i)*70 - o*60 + hold*10}px) scale(${1+.02*hold})`;
+    el.style.filter=(o>0&&o<1)||(i>0&&i<1)?`blur(${Math.sin(Math.PI*Math.max(o,1-i))*6}px)`:'';
+    return {i,o};
   };
-  set('hook1',.2,1.1,3.6,4.2);
-  set('hook2',4.0,4.9,8.8,9.4);
-  set('hook3',9.2,10.1,13.2,14.0);
+  set('hook1',.2,.95,3.7,4.25);
+  const h2=set('hook2',4.1,4.85,8.9,9.45);
+  set('hook3',9.3,10.05,13.2,14.0);
+  // "Implementation." punches in on its own beat
+  const b=document.getElementById('hook2b');
+  const bi=seg(l,5.3,6.0,Easing.outExpo);
+  b.style.opacity=String(bi*(1-h2.o));
+  b.style.transform=`scale(${1.45-.45*bi}) translateY(${(1-bi)*10}px)`;
+  b.style.filter=bi<1?`blur(${(1-bi)*8}px)`:'';
+  const a=document.getElementById('hook2a');
+  a.style.opacity=String(1); // container handles fade
 }
 
 /* ============================================================
@@ -484,10 +508,16 @@ function renderCases(t){
     const pl=lt-start;
     const trans=TRANS[i]; // outgoing transition for page i
     const inTrans=i>0?TRANS[i-1]:null;
-    let tf='', shade=0;
+    const CUT=.65; // fast, edited-feeling cuts
+    let tf='', shade=0, blur=0;
+    // continuous camera drift while the page holds (SaaS motion: never static)
+    const camP=clamp(pl/CASE_LEN,0,1);
+    const dir=i%2?1:-1;
+    const cam=`scale(${1+.032*camP}) translate(${dir*12*camP}px,${-7*camP}px)`;
     if(i<CASES.length-1){
-      const p=seg(pl,CASE_LEN-1.0,CASE_LEN,Easing.inOutCubic);
+      const p=seg(pl,CASE_LEN-CUT,CASE_LEN,Easing.inOutQuint);
       if(p>0){
+        blur=Math.sin(Math.PI*p)*10;
         if(trans==='turn'){tf=`rotateY(${-105*p}deg)`;shade=p;pg.style.zIndex=2;}
         else if(trans==='pushL'){tf=`translateX(${-1920*p}px)`;pg.style.zIndex=2;}
         else if(trans==='pushU'){tf=`translateY(${-1080*p}px)`;pg.style.zIndex=2;}
@@ -500,14 +530,17 @@ function renderCases(t){
       pg.style.zIndex=2;
     }
     if(i>0&&pl<0){
-      const settle=seg(pl,-1.0,0,Easing.outCubic);
+      const settle=seg(pl,-CUT,0,Easing.inOutQuint);
+      blur=Math.max(blur,Math.sin(Math.PI*(1-settle))*8);
       if(inTrans==='turn') tf=`scale(${.955+.045*settle})`;
       else if(inTrans==='pushL') tf=`translateX(${1920*(1-settle)}px)`;
       else if(inTrans==='pushU') tf=`translateY(${1080*(1-settle)}px)`;
       pg.style.zIndex=1;
     }
-    pg.style.transform=tf;
+    pg.style.transform=tf+' '+cam;
+    pg.style.filter=blur>.3?`blur(${blur.toFixed(1)}px)`:'';
     document.getElementById(`pg${i}shade`).style.opacity=String(shade*.7);
+    driftBg('pg'+i,t);
 
     if(isCur||(isNext&&pl>-1.2)){
       // pages entering via push slide in already composed (deck-like);
@@ -517,25 +550,42 @@ function renderCases(t){
       const line=document.getElementById(`pg${i}line`);
       line.style.transform=`scaleX(${seg(p,.15,.7,Easing.outQuart)})`;
       line.style.transformOrigin='left center';
+      // headline: kinetic clip reveal rising into view
       const hl=document.getElementById(`pg${i}hl`);
-      const hi=seg(p,.3,1.1,Easing.outExpo);
-      hl.style.opacity=String(hi); hl.style.transform=`translateY(${(1-hi)*30}px)`;
+      const hi=seg(p,.3,1.05,Easing.outExpo);
+      hl.style.opacity=String(Math.min(1,hi*1.4));
+      hl.style.clipPath=`inset(-12% 0 ${(1-hi)*104}% 0)`;
+      hl.style.transform=`translateY(${(1-hi)*44}px)`;
+      // logo card: pop + perpetual gentle float
       const L=document.getElementById(`pg${i}left`);
-      const li=seg(p,.7,1.5,Easing.outExpo);
-      L.style.opacity=String(li); L.style.transform=`translateY(${(1-li)*40}px)`;
-      [1,2,3].forEach(b=>{
-        const el=document.getElementById(`pg${i}b${b}`);
-        const bi=seg(p,.9+b*.5,1.7+b*.5,Easing.outExpo);
-        el.style.opacity=String(bi);
-        el.style.transform=`translateY(${(1-bi)*34}px)`;
-      });
+      const li=seg(p,.6,1.35,Easing.outExpo);
+      const float=Math.sin(t*1.15+i*2)*5*li;
+      L.style.opacity=String(li);
+      L.style.transform=`translateY(${(1-li)*46+float}px) scale(${.94+.06*li})`;
+      // boxes: slide in from opposite sides with a settle, then float offset-phase
+      const b1=document.getElementById(`pg${i}b1`);
+      const i1=seg(p,1.15,1.95,Easing.outExpo);
+      b1.style.opacity=String(i1);
+      b1.style.transform=`translateX(${(1-i1)*-70}px) translateY(${Math.sin(t*1.05+i)*4*i1}px) rotate(${(1-i1)*-1.4}deg)`;
+      const b2=document.getElementById(`pg${i}b2`);
+      const i2=seg(p,1.4,2.2,Easing.outExpo);
+      b2.style.opacity=String(i2);
+      b2.style.transform=`translateX(${(1-i2)*70}px) translateY(${Math.cos(t*1.0+i)*4*i2}px) rotate(${(1-i2)*1.4}deg)`;
+      const b3=document.getElementById(`pg${i}b3`);
+      const i3=seg(p,1.9,2.7,Easing.outExpo);
+      b3.style.opacity=String(i3);
+      b3.style.transform=`translateY(${(1-i3)*40}px) scale(${.96+.04*i3})`;
       const c=CASES[i];
       if(c.result.type==='stat'){
         const el=document.getElementById(`pg${i}num`);
-        const cp=seg(p,2.6,3.7,Easing.outExpo);
+        const cp=seg(p,2.3,3.3,Easing.outExpo);
         const target=parseInt(c.result.num);
         if(c.result.num.includes('%')) el.textContent=Math.round(target*cp)+'%';
         else el.textContent=String(Math.max(1,Math.round(target*cp)));
+        // scale pop as the number lands
+        el.style.display='inline-block';
+        el.style.transform=`scale(${1.3-.3*cp})`;
+        el.style.transformOrigin='left bottom';
       }
     }
   }
@@ -555,11 +605,12 @@ function renderS8(t){
   const box=document.getElementById('s8box');
   const bi=seg(l,.8,1.7,Easing.outExpo);
   box.style.opacity=String(bi); box.style.transform=`translateY(${(1-bi)*30}px)`;
+  driftBg('s8',t);
   STEPS.forEach((s,i)=>{
     const el=document.getElementById('mitem'+i);
-    const ci=seg(l,1.3+i*.5,2.2+i*.5,Easing.outExpo);
+    const ci=seg(l,1.3+i*.5,2.1+i*.5,Easing.outExpo);
     el.style.opacity=String(ci);
-    el.style.transform=`translateY(${(1-ci)*28}px)`;
+    el.style.transform=`translateY(${(1-ci)*30+Math.sin(t*1.1+i*1.6)*4*ci}px) scale(${.9+.1*ci})`;
   });
   const bIn=seg(l,8.4,9.3,Easing.outExpo), bOut=seg(l,15.2,16,Easing.inCubic);
   b.style.opacity=String(bIn*(1-bOut));
@@ -567,7 +618,9 @@ function renderS8(t){
   const sc=document.getElementById('scLogo');
   const scIn=seg(l,9.6,10.8,Easing.outExpo);
   sc.style.opacity=String(scIn);
-  sc.style.transform=`scale(${.86+.14*scIn}) translateY(${(1-scIn)*18}px)`;
+  // breathe with the music once landed
+  const breathe=1+.012*Math.sin(2*Math.PI*t*BEAT_HZ/2)*scIn;
+  sc.style.transform=`scale(${(.86+.14*scIn)*breathe}) translateY(${(1-scIn)*18+Math.sin(t*.9)*4*scIn}px)`;
   const b2=document.getElementById('s8b2');
   const b2In=seg(l,11.0,11.9,Easing.outExpo);
   b2.style.opacity=String(b2In);
@@ -579,10 +632,16 @@ function renderS8(t){
    ============================================================ */
 function renderS9(t){
   const l=t-T.s9[0];
+  driftBg('s9',t);
   const a=document.getElementById('s9a'), b=document.getElementById('s9b');
-  const aIn=seg(l,.2,1.1,Easing.outExpo), aOut=seg(l,6.6,7.4,Easing.inCubic);
+  const aIn=seg(l,.2,1.05,Easing.outExpo), aOut=seg(l,6.6,7.3,Easing.inCubic);
   a.style.opacity=String(aIn*(1-aOut));
-  a.style.transform=`translateX(${(1-aIn)*60-aOut*40}px)`;
+  const aHold=clamp((l-1.05)/(6.6-1.05),0,1);
+  a.style.transform=`translateX(${(1-aIn)*70-aOut*60+aHold*10}px) scale(${1+.02*aHold})`;
+  a.style.filter=(aIn>0&&aIn<1)||(aOut>0&&aOut<1)?`blur(${Math.sin(Math.PI*Math.max(aOut,1-aIn))*6}px)`:'';
+  // URL chip pulses gently on the beat
+  const chip=document.querySelector('#s9b .chip');
+  chip.style.transform=`scale(${1+.018*Math.max(0,Math.sin(2*Math.PI*t*BEAT_HZ/2))})`;
   const bIn=seg(l,7.4,8.4,Easing.outExpo);
   const fadeOut=seg(l,16.6,17.8,Easing.inOutSine);
   b.style.opacity=String(bIn*(1-fadeOut));
