@@ -25,7 +25,7 @@ BRAND = os.path.join(HERE, "..", "align-web-system", "brand")
 ALIGN_LOGO = open(os.path.join(BRAND, "logo.datauri")).read().strip()
 FONTCSS = open(os.path.join(BRAND, "gf-embed.css")).read()
 
-PULL_LINE = "Your HCM platform should work for you. Not the other way around."
+PULL_LINE = "We make the platform behind your people work."
 
 # author-side character budgets (continuity guarantee)
 BUDGETS = {"headline": 80, "subtitle": 170, "bullet": 42, "step": 95,
@@ -44,14 +44,14 @@ CSS = """
  html,body{margin:0;padding:0;}
  body{font-family:'DM Sans',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#26313d;}
  h1,h2,h3,h4{font-family:'Plus Jakarta Sans','DM Sans',sans-serif;margin:0;}
- .page{width:816px;height:1056px;display:flex;flex-direction:column;overflow:hidden;background:#fff;}
+ .page{width:816px;height:1056px;display:flex;flex-direction:column;overflow:hidden;background:#fdfbf7;}
 
  /* ============ HERO (288) ============ */
  .hero{flex-shrink:0;height:288px;overflow:hidden;position:relative;
    background:linear-gradient(160deg,#081c30 0%,#0d2740 55%,#17324d 100%);
    color:#fff;padding:24px 56px 16px;}
  .hero::before{content:"";position:absolute;inset:0;
-   background:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.3px);
+   background:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.3px);
    background-size:20px 20px;
    -webkit-mask-image:radial-gradient(120% 100% at 100% 0%,#000 20%,transparent 62%);}
  .hero::after{content:"";position:absolute;right:-110px;top:-110px;width:380px;height:380px;
@@ -89,10 +89,11 @@ CSS = """
  .band .rule{flex:1;height:1px;background:rgba(255,255,255,.16);}
 
  /* ============ BODY (672) ============ */
- .body{flex-shrink:0;height:672px;overflow:hidden;padding:8px 56px;background:#fff;}
+ .body{flex-shrink:0;height:672px;overflow:hidden;padding:8px 56px;}
  .sec-ch{height:160px;overflow:hidden;}
  .sec-ap{height:168px;overflow:hidden;margin-top:16px;}
- .sec-rs{height:140px;overflow:hidden;margin-top:16px;}
+ .sec-rs{height:140px;margin-top:16px;margin-left:-56px;margin-right:-56px;padding:0 56px;
+   background:var(--cream);box-shadow:0 8px 0 var(--cream),0 -8px 0 var(--cream);}
  .sec-qt{height:80px;overflow:hidden;margin-top:16px;}
  .sec-ab{height:44px;overflow:hidden;margin-top:16px;}
  .shead{height:52px;}
@@ -105,11 +106,11 @@ CSS = """
  .row3{display:flex;gap:16px;}
  .row3>*{width:224px;flex:0 0 auto;}
  .card{background:#fff;border:1px solid var(--hair);border-radius:12px;
-   box-shadow:0 2px 10px rgba(13,39,64,.06),0 1px 3px rgba(13,39,64,.04);}
+   box-shadow:0 2px 10px rgba(93,72,40,.08),0 1px 3px rgba(93,72,40,.05);}
  /* challenge */
  .col{height:100px;padding:10px 14px;position:relative;overflow:hidden;}
  .col::before{content:"";position:absolute;top:0;left:14px;right:14px;height:3px;
-   border-radius:0 0 3px 3px;background:linear-gradient(90deg,var(--orange),var(--hot));}
+   border-radius:0 0 3px 3px;background:var(--orange);}
  .col h4{color:var(--navy);font-size:11px;line-height:14px;letter-spacing:.04em;
    text-transform:uppercase;margin:2px 0 6px;}
  .col ul{margin:0;padding-left:14px;}
@@ -119,10 +120,11 @@ CSS = """
  .steps::before{content:"";position:absolute;top:20px;left:16%;right:16%;height:2px;background:var(--hair);}
  .steps .row3{margin-top:0;}
  .step{height:96px;text-align:center;padding:8px 12px;position:relative;overflow:hidden;}
+ .steps .step{background:transparent;border-color:transparent;box-shadow:none;}
  .step .num{width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;
    font-family:'Plus Jakarta Sans';font-weight:800;font-size:12px;line-height:26px;
    margin:0 auto 5px;position:relative;z-index:1;
-   box-shadow:0 0 0 4px #fff,0 0 0 5px rgba(240,90,40,.25);}
+   box-shadow:0 0 0 4px #fdfbf7,0 0 0 5px rgba(240,90,40,.25);}
  .step h4{color:var(--navy);font-size:12.5px;line-height:15px;margin-bottom:2px;}
  .step p{font-size:10px;line-height:13px;color:#5b6673;margin:0;}
  .cap{height:16px;text-align:center;color:#8a94a0;font-size:10px;line-height:16px;
@@ -137,8 +139,8 @@ CSS = """
  .res h4{color:var(--navy);font-size:12px;line-height:15px;}
  .res p{font-size:10.5px;line-height:14px;color:#4b5563;margin:6px 0 0;}
  /* quote slot */
- .quote{height:80px;overflow:hidden;background:linear-gradient(135deg,var(--deep),var(--navy));
-   border-radius:12px;border-left:3px solid var(--orange);padding:11px 20px 11px 24px;
+ .quote{height:80px;overflow:hidden;background:var(--deep);
+   border-radius:12px;border-left:4px solid var(--orange);padding:11px 20px 11px 24px;
    position:relative;box-shadow:0 4px 14px rgba(13,39,64,.18);}
  .quote::before{content:"\\201C";position:absolute;top:2px;left:9px;
    font-family:'Plus Jakarta Sans';font-size:38px;font-weight:800;
