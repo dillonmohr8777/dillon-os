@@ -64,7 +64,7 @@ ALIGN_LOGO = _flatten_datauri(ALIGN_LOGO)
 
 CSS = """
  @page { size: Letter; margin: 0; }
- :root{--orange:#F05A28;--hot:#FF6B35;--navy:#17324d;--deep:#0d2740;--cream:#f4efe7;--hair:#e9e2d6;}
+ :root{--orange:#F05A28;--hot:#FF6B35;--navy:#17324d;--deep:#0d2740;--cream:#f4efe7;--hair:#e3dac9;}
  *{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
  html,body{margin:0;padding:0;}
  body{font-family:'DM Sans',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#26313d;}
@@ -75,11 +75,9 @@ CSS = """
  .hero{flex-shrink:0;height:288px;overflow:hidden;position:relative;
    background:linear-gradient(160deg,#081c30 0%,#0d2740 55%,#17324d 100%);
    color:#fff;padding:24px 56px 16px;}
- .hero::after{content:"";position:absolute;right:-110px;top:-110px;width:380px;height:380px;
-   border-radius:50%;background:radial-gradient(circle,rgba(240,90,40,.30),transparent 65%);}
  .toprow{height:64px;display:flex;justify-content:space-between;align-items:center;gap:16px;position:relative;z-index:1;}
- .logobox{height:64px;background:#fff;border:1.5px solid var(--orange);border-radius:10px;
-   padding:0 18px;display:flex;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,.25);}
+ .logobox{height:64px;background:#fff;border:2px solid var(--orange);border-radius:10px;
+   padding:0 18px;display:flex;align-items:center;}
  .logobox.align img{height:44px;display:block;}
  .logobox.client img{max-width:300px;object-fit:contain;display:block;}
  .hslot{height:72px;margin-top:16px;display:flex;align-items:flex-end;position:relative;z-index:1;}
@@ -126,8 +124,7 @@ CSS = """
  .sech{color:var(--navy);font-size:17px;line-height:26px;font-weight:800;margin-top:4px;}
  .row3{display:flex;gap:16px;}
  .row3>*{width:224px;flex:0 0 auto;}
- .card{background:#fff;border:1px solid var(--hair);border-radius:12px;
-   box-shadow:0 2px 10px rgba(93,72,40,.08),0 1px 3px rgba(93,72,40,.05);}
+ .card{background:#fff;border:1px solid var(--hair);border-radius:12px;}
  /* challenge */
  .col{height:100px;padding:10px 14px;position:relative;overflow:hidden;}
  .col::before{content:"";position:absolute;top:0;left:14px;right:14px;height:3px;
@@ -142,7 +139,7 @@ CSS = """
  .steps::after{content:"";position:absolute;top:20px;left:369px;width:206px;height:2px;background:var(--hair);}
  .steps .row3{margin-top:0;}
  .step{height:96px;text-align:center;padding:8px 12px;position:relative;overflow:hidden;}
- .steps .step{background:transparent;border-color:transparent;box-shadow:none;}
+ .steps .step{background:transparent;border-color:transparent;}
  .step .num{width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;
    font-family:'Plus Jakarta Sans';font-weight:800;font-size:12px;line-height:26px;
    margin:0 auto 5px;position:relative;z-index:1;}
@@ -162,7 +159,7 @@ CSS = """
  /* quote slot */
  .quote{height:80px;overflow:hidden;background:var(--deep);
    border-radius:12px;border-left:4px solid var(--orange);padding:11px 20px 11px 24px;
-   position:relative;box-shadow:0 4px 14px rgba(13,39,64,.18);}
+   position:relative;}
  .quote::before{content:"\\201C";position:absolute;top:2px;left:9px;
    font-family:'Plus Jakarta Sans';font-size:38px;font-weight:800;
    color:rgba(255,107,53,.35);line-height:1;}
@@ -183,7 +180,7 @@ CSS = """
  .about{height:44px;overflow:hidden;display:flex;align-items:center;gap:14px;
    background:var(--cream);border:1px solid var(--hair);border-radius:12px;padding:0 14px;}
  .about .lb{background:#fff;border:1px solid var(--hair);border-radius:9px;padding:4px 11px;
-   display:flex;align-items:center;flex:0 0 auto;box-shadow:0 1px 4px rgba(13,39,64,.06);}
+   display:flex;align-items:center;flex:0 0 auto;}
  .about .lb img{height:24px;max-width:130px;object-fit:contain;display:block;}
  .about .tx{min-width:0;}
  .about .k{font-family:'Plus Jakarta Sans';font-weight:800;font-size:8.5px;letter-spacing:.18em;
@@ -201,7 +198,7 @@ CSS = """
  .foot .sm{font-size:9.5px;line-height:13px;color:#8ea1b5;margin-top:2px;}
  .foot .cta{background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;
    font-family:'Plus Jakarta Sans';font-weight:700;font-size:12px;padding:9px 18px;
-   border-radius:999px;white-space:nowrap;box-shadow:0 3px 10px rgba(240,90,40,.30);}
+   border-radius:999px;white-space:nowrap;}
 """
 
 # Lucide/Feather-style stroke icons (ISC/MIT). 24-grid, stroke 2, round caps.
