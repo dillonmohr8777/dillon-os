@@ -227,6 +227,130 @@ POSTS = {
 }
 
 
+CONTACT = "https://www.alignhcm.com/contact"
+
+# Contextual links woven into the EXISTING body prose (first sensible phrase,
+# distributed top-to-bottom, one per paragraph). Mix of internal + external.
+WEAVE = {
+  "273813902025": [
+    (B + "the-strategic-buyers-guide-to-ukg", ["Rapid Hire", "UKG Pro", "UKG"]),
+    ("https://www.bls.gov/jlt/", ["time-to-hire", "time to hire", "high-volume", "high volume"]),
+    (B + "the-ukg-ecosystem-advantage-why-open-apis-and-partner-networks-matter-for-long-term-success", ["onboarding", "integration", "integrations", "payroll"]),
+    (B + "ukgs-approach-to-ai-why-human-centered-automation-matters-more-than-you-think", ["automation", "artificial intelligence"]),
+  ],
+  "277255570131": [
+    (B + "the-data-imperative-why-pre-conversion-data-cleaning-determines-hcm-success", ["data migration", "data cleanup", "data quality", "data conversion"]),
+    ("https://www.shrm.org", ["change management", "best practices", "project management"]),
+    (B + "the-most-common-challenges-with-hcm-implementations", ["go-live", "go live", "implementation"]),
+    (B + "the-hidden-price-tag-why-diy-hcm-implementation-costs-more-than-you-think", ["internal team", "project lead", "resources", "DIY"]),
+  ],
+  "268085670586": [
+    (B + "workforce-visibility-gap", ["real-time", "visibility", "shop floor", "the floor"]),
+    ("https://www.dol.gov/agencies/whd/flsa", ["overtime", "compliance", "wage", "labor law"]),
+    (B + "the-strategic-buyers-guide-to-ukg", ["scheduling", "timekeeping", "time and attendance"]),
+    (B + "contingent-workforce-management-close-the-blind-spot", ["seasonal", "temporary", "contingent"]),
+  ],
+  "277414866667": [
+    (B + "the-strategic-buyers-guide-to-ukg", ["UKG"]),
+    ("https://www.gartner.com/en/human-resources", ["adoption", "managers", "recommendations"]),
+    (B + "most-chros-are-buying-ai-tools-theyll-never-use", ["AI tools", "AI features", "artificial intelligence"]),
+    (B + "ai-integration-with-hcm-systems", ["integration", "workflows", "clean data"]),
+  ],
+  "268058974957": [
+    (B + "the-retention-equation-how-retail-turnover-costs-more-than-your-pl-reveals", ["turnover", "retention", "retain"]),
+    ("https://learning.linkedin.com/resources/workplace-learning-report", ["reskilling", "upskilling", "learning and development", "development"]),
+    (B + "rethinking-strategic-workforce-planning", ["workforce planning", "skills", "roles"]),
+    (B + "high-performance-culture", ["culture", "engagement"]),
+  ],
+  "277394134770": [
+    (B + "the-strategic-buyers-guide-to-ukg", ["UKG"]),
+    ("https://www.ukg.com", ["marketplace", "partner network", "partners"]),
+    (B + "api-vs.-flat-file-integrations-choosing-your-hcm-ecosystem", ["open APIs", "APIs", "API", "integration"]),
+    (B + "integrating-workday-with-ukg-why-teams-struggle-and-how-align-hcm-helps", ["data mapping", "connections", "integrations"]),
+  ],
+  "277394135777": [
+    (B + "the-strategic-buyers-guide-to-workday", ["Workday"]),
+    ("https://www.gartner.com/en/human-resources", ["analytics", "dashboards", "metrics"]),
+    (B + "the-workday-ai-gap-most-organizations-dont-know-they-have", ["predictive", "machine learning", "artificial intelligence"]),
+    (B + "hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence", ["C-suite", "CFO", "leadership", "financial"]),
+  ],
+  "277394451165": [
+    (B + "the-strategic-buyers-guide-to-paylocity", ["Paylocity"]),
+    ("https://www.dol.gov/agencies/whd/flsa", ["overtime", "compliance", "wage", "FLSA"]),
+    (B + "workforce-visibility-gap", ["labor cost", "labor costing", "visibility", "scheduling"]),
+    (B + "paylocity-training-implementation-methods", ["adoption", "training", "managers"]),
+  ],
+  "277376447190": [
+    (B + "beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy", ["internal mobility", "career path", "promotion", "promote"]),
+    ("https://www.bls.gov/jlt/", ["separation", "turnover rate", "quit"]),
+    (B + "high-performance-culture", ["culture", "engagement"]),
+    (B + "hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence", ["P&L", "CFO", "financial", "the business"]),
+  ],
+}
+
+CTA = {
+  "273813902025": ' <strong>Ready to hire faster?</strong> <a href="' + CONTACT + '">Talk to an Align HCM expert</a> about configuring UKG Rapid Hire around your real hiring volume.',
+  "277255570131": ' <strong>Planning an HCM implementation?</strong> <a href="' + CONTACT + '">Talk to an Align HCM expert</a> to avoid these mistakes before they cost you.',
+  "268085670586": ' <strong>Want your timekeeping to do more?</strong> <a href="' + CONTACT + '">Talk to an Align HCM expert</a> about turning floor data into workforce intelligence.',
+  "277414866667": ' <strong>Getting real value from HCM AI?</strong> <a href="' + CONTACT + '">Talk to an Align HCM expert</a> about configuring UKG&rsquo;s AI around your workflows.',
+  "268058974957": ' <strong>Losing good people?</strong> <a href="' + CONTACT + '">Talk to an Align HCM expert</a> about building an internal mobility program that keeps them.',
+  "277394134770": ' <strong>Need UKG connected to your stack?</strong> <a href="' + CONTACT + '">Talk to an Align HCM expert</a> about your integrations and ecosystem.',
+  "277394135777": ' <strong>Reporting a mess?</strong> <a href="' + CONTACT + '">Talk to an Align HCM expert</a> about rebuilding your Workday reporting foundation.',
+  "277394451165": ' <strong>Leaving money on the table?</strong> <a href="' + CONTACT + '">Talk to an Align HCM expert</a> about tuning Paylocity Time &amp; Attendance to your pay rules.',
+  "277376447190": ' <strong>Turnover hurting your P&amp;L?</strong> <a href="' + CONTACT + '">Talk to an Align HCM expert</a> about a retention strategy that pays for itself.',
+}
+
+
+def weave_links(body, targets, contact_url, cta_html):
+    """Weave contextual links into existing prose (one per text segment, top-to-bottom)
+    and append a Contact CTA to the last paragraph. Idempotent: skips a target whose
+    URL is already linked, and skips the CTA if the contact URL is already present."""
+    toks = re.split(r'(<[^>]+>)', body)
+    def is_text(i):
+        return i % 2 == 0
+    inside = [False] * len(toks)
+    depth = 0
+    for i, t in enumerate(toks):
+        if is_text(i):
+            inside[i] = depth > 0
+        elif re.match(r'<a\b', t, re.I):
+            inside[i] = depth > 0
+            depth += 1
+        elif re.match(r'</a\s*>', t, re.I):
+            depth = max(0, depth - 1)
+            inside[i] = depth > 0
+        else:
+            inside[i] = depth > 0
+    cursor = 0
+    for url, phrases in targets:
+        if f'href="{url}"' in "".join(toks):
+            continue
+        order = list(range(cursor, len(toks))) + list(range(0, cursor))
+        placed = False
+        for i in order:
+            if not is_text(i) or inside[i] or not toks[i].strip():
+                continue
+            for ph in phrases:
+                m = re.search(r'(?<![\w-])' + re.escape(ph) + r'(?![\w-])', toks[i], re.I)
+                if m:
+                    s, e = m.span()
+                    toks[i] = toks[i][:s] + f'<a href="{url}">' + toks[i][s:e] + '</a>' + toks[i][e:]
+                    inside[i] = True  # one woven link per segment -> natural spread
+                    cursor = i + 1
+                    placed = True
+                    break
+            if placed:
+                break
+    body = "".join(toks)
+    if cta_html and contact_url not in body:
+        idx = body.rfind("</p>")
+        if idx != -1:
+            body = body[:idx] + cta_html + body[idx:]
+        else:
+            body = body + f"<p>{cta_html.strip()}</p>"
+    return body
+
+
 def intro_block(answer):
     return (
         f'{S_INTRO}\n'
@@ -311,16 +435,18 @@ def main():
         body = p.get("postBody", "") or ""
         body = strip_block(body, S_INTRO, E_INTRO)
         body = strip_block(body, S_FAQ, E_FAQ)
-        new_body = intro_block(cfg["answer"]) + "\n" + body + "\n" + faq_block(cfg["faqs"], cfg["related"])
+        woven = weave_links(body, WEAVE.get(pid, []), CONTACT, CTA.get(pid))
+        body_links = len(re.findall(r'<a href="', woven)) - len(re.findall(r'<a href="', body))
+        new_body = intro_block(cfg["answer"]) + "\n" + woven + "\n" + faq_block(cfg["faqs"], cfg["related"])
         graph = build_graph(p, cfg["faqs"])
         new_head = merge_head(p.get("headHtml"), wrap_schema(graph))
-        block_txt = faq_block(cfg["faqs"], cfg["related"]) + intro_block(cfg["answer"])
-        internal = len(re.findall(r'href="https://www\.alignhcm\.com', block_txt))
-        ext = len(re.findall(r'href="https?://(?!www\.alignhcm)', faq_block(cfg["faqs"], cfg["related"])))
-        words = len(re.sub(r'<[^>]+>', ' ', block_txt).split())
+        internal = len(re.findall(r'href="https://www\.alignhcm\.com', new_body))
+        ext = len(re.findall(r'href="https?://(?!www\.alignhcm)', new_body))
+        contact_ok = CONTACT in new_body
         print(f"\n=== {name[:60]}")
-        print(f"    +intro, +{len(cfg['faqs'])} FAQ, +{len(cfg['related'])} related | "
-              f"added words~{words} | internal~{internal}, external~{ext} | +schema")
+        print(f"    +intro, +{len(cfg['faqs'])} FAQ, +{len(cfg['related'])} related, "
+              f"+{body_links} woven in-body | total internal~{internal}, external~{ext} | "
+              f"contact CTA: {'yes' if contact_ok else 'NO'} | +schema")
         if confirm:
             api("PATCH", f"/cms/v3/blogs/posts/{pid}", body={"postBody": new_body, "headHtml": new_head})
             print("    ✓ postBody + headHtml updated LIVE")
