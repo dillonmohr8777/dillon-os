@@ -25,6 +25,30 @@ const esc = (s) =>
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
 
+const rssFor = (allPosts) => {
+  const items = allPosts
+    .map(
+      (p) => `    <item>
+      <title>${esc(p.title)}</title>
+      <link>${ORIGIN}/blog/${p.slug}.html</link>
+      <guid isPermaLink="true">${ORIGIN}/blog/${p.slug}.html</guid>
+      <description>${esc(p.answer)}</description>
+    </item>`,
+    )
+    .join('\n')
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>IMMOHRTAL Blog</title>
+    <link>${ORIGIN}/blog.html</link>
+    <description>Field notes from Dance With The Delusional: lyrical rap, Erie to Pittsburgh, the delusion is the point.</description>
+    <language>en-us</language>
+${items}
+  </channel>
+</rss>
+`
+}
+
 const pageFor = (post) => {
   const url = `${ORIGIN}/blog/${post.slug}.html`
   const ogImg = existsSync(resolve(ROOT, `public/og/${post.slug}.jpg`)) ? `${ORIGIN}/og/${post.slug}.jpg` : `${ORIGIN}/og.png`
@@ -33,6 +57,15 @@ const pageFor = (post) => {
   const ld = {
     '@context': 'https://schema.org',
     '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${url}#crumbs`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: `${ORIGIN}/blog.html` },
+          { '@type': 'ListItem', position: 3, name: post.title, item: url },
+        ],
+      },
       {
         '@type': 'BlogPosting',
         '@id': `${url}#post`,
@@ -58,7 +91,7 @@ const pageFor = (post) => {
     <meta name="description" content="${esc(desc)}" />
     <link rel="canonical" href="${url}" />
     <meta name="theme-color" content="#05070c" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />\n    <link rel="alternate" type="application/rss+xml" title="IMMOHRTAL Blog" href="${ORIGIN}/feed.xml" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="IMMOHRTAL" />
     <meta property="og:title" content="${esc(title)}" />
@@ -111,5 +144,6 @@ ${urls
 </urlset>
 `
 writeFileSync(resolve(ROOT, 'public/sitemap.xml'), sitemap)
+writeFileSync(resolve(ROOT, 'public/feed.xml'), rssFor(posts))
 
 console.log(`generated ${posts.length} blog page(s) + sitemap.xml`)
