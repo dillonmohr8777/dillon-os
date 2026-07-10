@@ -21,20 +21,34 @@ def body_html(pid):
     raw = re.sub(r"^<h1>.*?</h1>\s*", "", raw, flags=re.S)
     return raw
 
+def counts(pid):
+    h = open(os.path.join(OPT, f"{pid}.html")).read()
+    internal = len(re.findall(r'href="https://www\.alignhcm\.com/blog', h))
+    external = len(re.findall(r'href="https?://(?!www\.alignhcm)', h))
+    contact = "alignhcm.com/contact" in h
+    return internal, external, contact
+
 cards = []
-for i, (pid, tag, title, wc, il, xl) in enumerate(ORDER, 1):
+stats = []
+for i, (pid, tag, title, wc, _il, _xl) in enumerate(ORDER, 1):
     body = body_html(pid)
+    ci, ce, cc = counts(pid)
+    stats.append((tag, wc, ci, ce, cc))
+    cta = " + Contact CTA" if cc else ""
     cards.append(f"""
     <section class="post">
       <div class="post-head">
         <span class="tag">{tag}</span>
         <h2>{i}. {html.escape(title)}</h2>
-        <div class="meta">{wc} words &nbsp;·&nbsp; +{il} internal links &nbsp;·&nbsp; +{xl} external link(s) &nbsp;·&nbsp; +3 FAQ (question headings) &nbsp;·&nbsp; +BlogPosting &amp; FAQPage schema</div>
+        <div class="meta">{wc} words &nbsp;·&nbsp; {ci} internal links{cta} &nbsp;·&nbsp; {ce} external &nbsp;·&nbsp; 3 FAQ (question headings) &nbsp;·&nbsp; BlogPosting &amp; FAQPage schema</div>
       </div>
       <div class="added-label">What was added &amp; embedded</div>
       {body}
     </section>
     """)
+TOT_I = sum(s[2] for s in stats)
+TOT_E = sum(s[3] for s in stats)
+TOT_C = sum(1 for s in stats if s[4])
 
 FONTCSS = open(os.path.join(SCR, "gf-embed.css")).read()
 
@@ -47,7 +61,8 @@ doc = f"""<!doctype html><html><head><meta charset="utf-8">
   h1,h2,h3{{font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}}
   .cover{{height:1030px;background:linear-gradient(160deg,#0d2740 0%,#17324d 60%,#22384f 100%);color:#fff;padding:90px 70px;position:relative;overflow:hidden;}}
   .cover::after{{content:"";position:absolute;right:-160px;bottom:-160px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(240,90,40,.55),transparent 70%);}}
-  .cover img{{height:52px;margin-bottom:70px;}}
+  .cover .logobox{{display:inline-block;background:#fff;border:3px solid var(--orange);border-radius:16px;padding:14px 22px;margin-bottom:64px;box-shadow:0 8px 30px rgba(0,0,0,.18);}}
+  .cover .logobox img{{height:46px;display:block;}}
   .cover .kicker{{color:var(--hot);font-family:'Plus Jakarta Sans';font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:14px;}}
   .cover h1{{font-size:62px;line-height:1.05;font-weight:800;margin:18px 0 26px;max-width:820px;}}
   .cover h1 span{{color:var(--orange);}}
@@ -78,14 +93,15 @@ doc = f"""<!doctype html><html><head><meta charset="utf-8">
   footer.pg strong{{color:var(--navy);}}
 </style></head><body>
   <div class="cover">
-    <img src="{LOGO}" alt="Align HCM">
+    <div class="logobox"><img src="{LOGO}" alt="Align HCM"></div>
     <div class="kicker">AEO / GEO Optimization · Blog Batch 1</div>
     <h1>Five posts, <span>optimized to rank</span> and get cited.</h1>
-    <p class="sub">Direct answers, question-based FAQs, internal link clusters, authoritative external citations, and structured schema — embedded live in HubSpot.</p>
+    <p class="sub">Direct answers, question-based FAQs, contextual links woven through each post, a Contact CTA, and structured schema, embedded live in HubSpot.</p>
     <div class="chips">
-      <span class="chip">+32 internal links</span>
-      <span class="chip">+6 external citations</span>
-      <span class="chip">15 new FAQ Q&amp;A</span>
+      <span class="chip">{TOT_I} internal links</span>
+      <span class="chip">{TOT_C} Contact CTAs</span>
+      <span class="chip">{TOT_E} external citations</span>
+      <span class="chip">15 FAQ Q&amp;A</span>
       <span class="chip">10 schema blocks (Article + FAQPage)</span>
       <span class="chip">5 direct-answer openers</span>
     </div>
@@ -94,10 +110,10 @@ doc = f"""<!doctype html><html><head><meta charset="utf-8">
 
   <div class="summary">
     <h2>What changed on each post</h2>
-    <p class="lead">Every post received the same optimization spine. Existing copy was untouched — these are additive, reversible blocks plus head schema.</p>
+    <p class="lead">Every post got the same spine: a direct-answer opener, keyword-forward FAQ, 2-3 internal links woven through the body, a Contact CTA, external citations, and schema.</p>
     <table class="sum">
-      <tr><th>Post</th><th>Words</th><th>Internal</th><th>External</th><th>FAQ</th><th>Schema</th></tr>
-      {''.join(f'<tr><td>{t}</td><td>{wc}</td><td>+{il}</td><td>+{xl}</td><td>+3</td><td>Article + FAQPage</td></tr>' for _,t,_,wc,il,xl in ORDER)}
+      <tr><th>Post</th><th>Words</th><th>Internal</th><th>Contact</th><th>External</th><th>FAQ</th><th>Schema</th></tr>
+      {''.join(f'<tr><td>{t}</td><td>{wc}</td><td>{ci}</td><td>{"yes" if cc else "-"}</td><td>{ce}</td><td>3</td><td>Article + FAQPage</td></tr>' for t,wc,ci,ce,cc in stats)}
     </table>
   </div>
 
@@ -105,7 +121,7 @@ doc = f"""<!doctype html><html><head><meta charset="utf-8">
 
   <footer class="pg">
     <p><strong>How this helps you rank &amp; get cited.</strong> The direct-answer callout gives AI answer engines (ChatGPT, Perplexity, Google AI Overviews) a clean, extractable snippet. Question headings + FAQ match how people and LLMs phrase queries. Internal links build topical authority across the HCM cluster; external citations add credibility signals. FAQPage + BlogPosting schema tells search and AI systems exactly what each page answers.</p>
-    <p><strong>Reversible.</strong> All body additions are wrapped in <code>align-aeo-intro</code> / <code>align-aeo-faq</code> markers and schema in <code>align-aeo-schema</code> markers — removable or re-runnable anytime via the token agent.</p>
+    <p><strong>Reversible.</strong> All body additions are wrapped in <code>align-aeo-intro</code> / <code>align-aeo-faq</code> markers and schema in <code>align-aeo-schema</code> markers, removable or re-runnable anytime via the token agent.</p>
     <p>Align HCM · alignhcm.com</p>
   </footer>
 </body></html>"""

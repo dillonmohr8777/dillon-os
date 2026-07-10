@@ -4,7 +4,7 @@ AEO/GEO optimization for Tier-1 Align HCM blog posts.
 
 For each target post this injects (idempotent, marker-wrapped, reversible):
   1. A short "Quick answer" direct-answer callout prepended to the body.
-  2. A "Frequently asked questions" section appended — keyword-forward question
+  2. A "Frequently asked questions" section appended, keyword-forward question
      headings with tight, answer-first responses carrying INTERNAL + EXTERNAL links.
   3. A "Related from Align HCM" internal-link cluster.
   4. BlogPosting + FAQPage JSON-LD schema in headHtml (built from the visible FAQ).
@@ -72,21 +72,21 @@ def XL(url, text):
 
 
 # ---------------------------------------------------------------------------
-# Per-post optimization content — TIGHTENED: answer-first, keyword-forward,
+# Per-post optimization content, TIGHTENED: answer-first, keyword-forward,
 # ~half the previous length. Every answer leads with the direct answer and the
 # target keyword, then one supporting sentence carrying links.
 # ---------------------------------------------------------------------------
 POSTS = {
   # UKG Rapid Hire
   "273813902025": {
-    "answer": "UKG Rapid Hire automates screening, scheduling, and offers so high-volume teams hire in days instead of weeks &mdash; but the speed only holds up when the UKG configuration is set up correctly.",
+    "answer": "UKG Rapid Hire automates screening, scheduling, and offers so high-volume teams hire in days instead of weeks, but the speed only holds up when the UKG configuration is set up correctly.",
     "faqs": [
       ("What is UKG Rapid Hire?",
        f"UKG Rapid Hire is UKG&rsquo;s high-volume hiring tool for sectors like retail, manufacturing, healthcare, and the public sector, where a slow process loses candidates to faster competitors. If you&rsquo;re weighing UKG for that scale, start with our {IL('the-strategic-buyers-guide-to-ukg','Strategic Buyer&rsquo;s Guide to UKG')}."),
       ("How does high-volume hiring automation cut time-to-hire?",
        f"It removes manual handoffs: knockout questions filter applicants instantly, self-scheduling ends recruiter phone tag, and offers fire the moment a candidate clears screening. With separations running in the millions monthly per {XL('https://www.bls.gov/jlt/','BLS JOLTS data')}, days saved per requisition add up fast across the {IL('the-ukg-ecosystem-advantage-why-open-apis-and-partner-networks-matter-for-long-term-success','UKG ecosystem')}."),
       ("What has to be configured for Rapid Hire to work?",
-       f"Screening logic, requisition templates, approvals, and the integrations into onboarding and payroll &mdash; all tuned to your hiring volume. Rushed setups are where the speed breaks; see {IL('the-hidden-price-tag-why-diy-hcm-implementation-costs-more-than-you-think','why DIY HCM implementation costs more')}."),
+       f"Screening logic, requisition templates, approvals, and the integrations into onboarding and payroll, all tuned to your hiring volume. Rushed setups are where the speed breaks; see {IL('the-hidden-price-tag-why-diy-hcm-implementation-costs-more-than-you-think','why DIY HCM implementation costs more')}."),
     ],
     "related": [
       ("the-strategic-buyers-guide-to-ukg", "The Strategic Buyer&rsquo;s Guide to UKG"),
@@ -96,14 +96,14 @@ POSTS = {
   },
   # 5 Critical HCM Implementation Mistakes
   "277255570131": {
-    "answer": "The five mistakes that derail HCM implementations: dirty data, skipped process alignment, weak internal project leadership, afterthought training, and rushing go-live &mdash; all preventable.",
+    "answer": "The five mistakes that derail HCM implementations: dirty data, skipped process alignment, weak internal project leadership, afterthought training, and rushing go-live, all preventable.",
     "faqs": [
       ("Why do HCM implementations fail?",
-       f"Most often because of dirty data &mdash; migrating inconsistent employee, payroll, and org records without cleaning them first. See our {IL('the-data-imperative-why-pre-conversion-data-cleaning-determines-hcm-success','Data Imperative')} and the {IL('data-conversion-checklist-what-to-prepare-before-migration','data conversion checklist')}; {XL('https://www.shrm.org','SHRM')} has broader HR-tech guidance."),
+       f"Most often because of dirty data, migrating inconsistent employee, payroll, and org records without cleaning them first. See our {IL('the-data-imperative-why-pre-conversion-data-cleaning-determines-hcm-success','Data Imperative')} and the {IL('data-conversion-checklist-what-to-prepare-before-migration','data conversion checklist')}; {XL('https://www.shrm.org','SHRM')} has broader HR-tech guidance."),
       ("How do I avoid these HCM implementation mistakes?",
        f"Sequence the work: clean data before mapping, align processes before configuring, and staff a real internal lead. Most {IL('the-most-common-challenges-with-hcm-implementations','common implementation challenges')} trace back to skipping those steps."),
       ("Is a faster implementation riskier?",
-       f"No &mdash; a disciplined short project is often safer than a drawn-out one because scope stays tight. See {IL('why-fast-growing-companies-choose-6-week-implementations-over-18-month-enterprise-projects','why fast-growing companies choose 6-week implementations')}. The risk is skipping fundamentals to hit a date, not speed itself."),
+       f"No, a disciplined short project is often safer than a drawn-out one because scope stays tight. See {IL('why-fast-growing-companies-choose-6-week-implementations-over-18-month-enterprise-projects','why fast-growing companies choose 6-week implementations')}. The risk is skipping fundamentals to hit a date, not speed itself."),
     ],
     "related": [
       ("the-data-imperative-why-pre-conversion-data-cleaning-determines-hcm-success", "The Data Imperative"),
@@ -116,9 +116,9 @@ POSTS = {
     "answer": "Manufacturing timekeeping now spans three things: accurate labor capture for compliance, real-time floor visibility, and workforce intelligence that ties hours to productivity and cost.",
     "faqs": [
       ("What is manufacturing workforce intelligence?",
-       f"It&rsquo;s turning time-and-attendance data into decisions &mdash; overtime control, shift coverage, and labor costing &mdash; not just clocking hours. Getting it wrong creates {XL('https://www.dol.gov/agencies/whd/flsa','FLSA')} exposure; the same visibility gap hits all frontline teams (see {IL('workforce-visibility-gap','The Workforce Visibility Gap')})."),
+       f"It&rsquo;s turning time-and-attendance data into decisions, overtime control, shift coverage, and labor costing, not just clocking hours. Getting it wrong creates {XL('https://www.dol.gov/agencies/whd/flsa','FLSA')} exposure; the same visibility gap hits all frontline teams (see {IL('workforce-visibility-gap','The Workforce Visibility Gap')})."),
       ("How does it reduce manufacturing labor costs?",
-       f"By exposing where overtime concentrates, which shifts run short, and how absenteeism moves output. With labor tight per {XL('https://www.bls.gov/iag/tgs/iag31-33.htm','BLS manufacturing data')}, every scheduled hour counts &mdash; best paired with a platform built for complex time rules like UKG (our {IL('the-strategic-buyers-guide-to-ukg','UKG buyer&rsquo;s guide')})."),
+       f"By exposing where overtime concentrates, which shifts run short, and how absenteeism moves output. With labor tight per {XL('https://www.bls.gov/iag/tgs/iag31-33.htm','BLS manufacturing data')}, every scheduled hour counts, best paired with a platform built for complex time rules like UKG (our {IL('the-strategic-buyers-guide-to-ukg','UKG buyer&rsquo;s guide')})."),
       ("What about contingent and seasonal workers?",
        f"That&rsquo;s where timekeeping breaks down most, since those workers often sit outside the core system. We cover closing it in {IL('contingent-workforce-management-close-the-blind-spot','Contingent Workforce Management')}."),
     ],
@@ -130,14 +130,14 @@ POSTS = {
   },
   # UKG Human-Centered AI
   "277414866667": {
-    "answer": "UKG&rsquo;s &lsquo;human-centered automation&rsquo; means its AI supports managers rather than replacing judgment &mdash; automating scheduling, timekeeping, and insights while people keep the decisions.",
+    "answer": "UKG&rsquo;s &lsquo;human-centered automation&rsquo; means its AI supports managers rather than replacing judgment, automating scheduling, timekeeping, and insights while people keep the decisions.",
     "faqs": [
       ("What is human-centered AI in an HCM platform?",
-       f"It&rsquo;s AI that surfaces recommendations and handles routine work while a human makes the call on hiring, pay, and exceptions. It matters because HR AI usually fails on adoption, not capability &mdash; see {IL('most-chros-are-buying-ai-tools-theyll-never-use','Why CHROs Buy AI Tools They Never Use')}; {XL('https://www.gartner.com/en/human-resources','Gartner')} makes the same point."),
+       f"It&rsquo;s AI that surfaces recommendations and handles routine work while a human makes the call on hiring, pay, and exceptions. It matters because HR AI usually fails on adoption, not capability, see {IL('most-chros-are-buying-ai-tools-theyll-never-use','Why CHROs Buy AI Tools They Never Use')}; {XL('https://www.gartner.com/en/human-resources','Gartner')} makes the same point."),
       ("How is UKG&rsquo;s AI different from other platforms?",
        f"UKG embeds AI into the flows managers already use instead of bolting on a separate tool, which lowers the adoption barrier. Compare it with {IL('most-hcm-platforms-add-ai-features.-dayforce-built-its-platform-around-ai','how Dayforce built its platform around AI')}."),
       ("How do we get value from HCM AI features?",
-       f"Through integration and clean data, not datasheet features &mdash; AI on disconnected data just makes noise. See {IL('ai-integration-with-hcm-systems','AI Integration With HCM Systems')}."),
+       f"Through integration and clean data, not datasheet features, AI on disconnected data just makes noise. See {IL('ai-integration-with-hcm-systems','AI Integration With HCM Systems')}."),
     ],
     "related": [
       ("the-strategic-buyers-guide-to-ukg", "The Strategic Buyer&rsquo;s Guide to UKG"),
@@ -147,14 +147,14 @@ POSTS = {
   },
   # Internal Talent Mobility (Beyond Hiring)
   "268058974957": {
-    "answer": "Internal talent mobility &mdash; moving current employees into new roles and skills instead of always hiring outside &mdash; is one of the highest-return retention plays: faster fills, lower cost, and knowledge kept in-house.",
+    "answer": "Internal talent mobility, moving current employees into new roles and skills instead of always hiring outside, is one of the highest-return retention plays: faster fills, lower cost, and knowledge kept in-house.",
     "faqs": [
       ("What is internal talent mobility?",
-       f"It&rsquo;s deliberately promoting, transferring, and reskilling current employees to fill needs. External hiring is slow and costly, and people who see an internal path stay longer &mdash; the {XL('https://learning.linkedin.com/resources/workplace-learning-report','LinkedIn Workplace Learning Report')} ranks growth opportunity a top retention driver. It ties straight to {IL('rethinking-strategic-workforce-planning','Strategic Workforce Planning')}."),
+       f"It&rsquo;s deliberately promoting, transferring, and reskilling current employees to fill needs. External hiring is slow and costly, and people who see an internal path stay longer, the {XL('https://learning.linkedin.com/resources/workplace-learning-report','LinkedIn Workplace Learning Report')} ranks growth opportunity a top retention driver. It ties straight to {IL('rethinking-strategic-workforce-planning','Strategic Workforce Planning')}."),
       ("How does internal mobility improve retention?",
-       f"Turnover costs far more than the recruiting fee &mdash; lost productivity, ramp time, and knowledge. We quantify it in {IL('the-retention-equation-how-retail-turnover-costs-more-than-your-pl-reveals','The Retention Equation')}. A visible internal path is one of the cheapest fixes and reinforces a {IL('high-performance-culture','high-performance culture')}."),
+       f"Turnover costs far more than the recruiting fee, lost productivity, ramp time, and knowledge. We quantify it in {IL('the-retention-equation-how-retail-turnover-costs-more-than-your-pl-reveals','The Retention Equation')}. A visible internal path is one of the cheapest fixes and reinforces a {IL('high-performance-culture','high-performance culture')}."),
       ("What does HR need to make it work?",
-       f"Clean skills and role data, leadership buy-in, and the dollar case. When HR ties people data to financials &mdash; see {IL('hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence','HR as a Financial Driver')} &mdash; mobility becomes a budget line the CFO defends."),
+       f"Clean skills and role data, leadership buy-in, and the dollar case. When HR ties people data to financials, see {IL('hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence','HR as a Financial Driver')}, mobility becomes a budget line the CFO defends."),
     ],
     "related": [
       ("rethinking-strategic-workforce-planning", "Strategic Workforce Planning"),
@@ -164,14 +164,14 @@ POSTS = {
   },
   # UKG Ecosystem Advantage
   "277394134770": {
-    "answer": "The UKG ecosystem advantage is that open APIs and a large partner network let UKG connect to your payroll, ERP, benefits, and analytics stack instead of locking you in &mdash; which protects the platform&rsquo;s value long term.",
+    "answer": "The UKG ecosystem advantage is that open APIs and a large partner network let UKG connect to your payroll, ERP, benefits, and analytics stack instead of locking you in, which protects the platform&rsquo;s value long term.",
     "faqs": [
       ("What is the UKG ecosystem advantage?",
        f"It&rsquo;s open APIs plus a mature partner marketplace, so UKG exchanges data cleanly with your other tools and offers pre-built connectors and certified help. See our {IL('the-strategic-buyers-guide-to-ukg','Strategic Buyer&rsquo;s Guide to UKG')}; {XL('https://www.ukg.com','UKG')} runs the marketplace and partner program."),
       ("Why do open APIs matter in an HCM platform?",
-       f"They keep switching costs down &mdash; your HCM talks to the tools you already run instead of forcing rip-and-replace. See how integration choices play out in {IL('api-vs.-flat-file-integrations-choosing-your-hcm-ecosystem','API vs. flat-file integration')}."),
+       f"They keep switching costs down, your HCM talks to the tools you already run instead of forcing rip-and-replace. See how integration choices play out in {IL('api-vs.-flat-file-integrations-choosing-your-hcm-ecosystem','API vs. flat-file integration')}."),
       ("How do I keep a UKG integration from breaking over time?",
-       f"Governance: owned data mappings, monitored connections, and an update plan. This is where cross-platform projects struggle &mdash; see {IL('integrating-workday-with-ukg-why-teams-struggle-and-how-align-hcm-helps','why Workday and UKG integrations become a trust problem')}."),
+       f"Governance: owned data mappings, monitored connections, and an update plan. This is where cross-platform projects struggle, see {IL('integrating-workday-with-ukg-why-teams-struggle-and-how-align-hcm-helps','why Workday and UKG integrations become a trust problem')}."),
     ],
     "related": [
       ("the-strategic-buyers-guide-to-ukg", "The Strategic Buyer&rsquo;s Guide to UKG"),
@@ -184,11 +184,11 @@ POSTS = {
     "answer": "Most Workday reporting strategies are backwards: teams build hundreds of custom reports to answer questions after the fact instead of designing a few governed metrics around the decisions leadership actually makes.",
     "faqs": [
       ("Why is my Workday reporting so slow and cluttered?",
-       f"Report sprawl &mdash; every one-off request becomes a permanent report nobody maintains, and calculated fields pile up. The fix starts with how the platform is structured; see our {IL('the-strategic-buyers-guide-to-workday','Strategic Buyer&rsquo;s Guide to Workday')}."),
+       f"Report sprawl, every one-off request becomes a permanent report nobody maintains, and calculated fields pile up. The fix starts with how the platform is structured; see our {IL('the-strategic-buyers-guide-to-workday','Strategic Buyer&rsquo;s Guide to Workday')}."),
       ("How do I build a Workday reporting strategy that scales?",
        f"Start from the questions the C-suite asks monthly, define governed metrics, build dashboards on clean data, then retire redundant reports. When HR reporting maps to financial outcomes ({IL('hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence','HR as a Financial Driver')}) it earns budget; {XL('https://www.gartner.com/en/human-resources','Gartner')} ties analytics maturity to decisions, not report volume."),
       ("Are we missing value from Workday&rsquo;s AI features?",
-       f"Likely &mdash; teams don&rsquo;t trust predictive features when the reporting foundation is shaky. See {IL('the-workday-ai-gap-most-organizations-dont-know-they-have','the Workday AI gap')}; {XL('https://www.workday.com','Workday')} analytics assume a governed data model underneath."),
+       f"Likely, teams don&rsquo;t trust predictive features when the reporting foundation is shaky. See {IL('the-workday-ai-gap-most-organizations-dont-know-they-have','the Workday AI gap')}; {XL('https://www.workday.com','Workday')} analytics assume a governed data model underneath."),
     ],
     "related": [
       ("the-strategic-buyers-guide-to-workday", "The Strategic Buyer&rsquo;s Guide to Workday"),
@@ -198,12 +198,12 @@ POSTS = {
   },
   # Paylocity Time & Attendance ROI
   "277394451165": {
-    "answer": "The hidden ROI in Paylocity&rsquo;s Time &amp; Attendance isn&rsquo;t tracking hours &mdash; it&rsquo;s the money recovered from less overtime leakage, fewer compliance penalties, and accurate labor costing, which often dwarfs the software cost.",
+    "answer": "The hidden ROI in Paylocity&rsquo;s Time &amp; Attendance isn&rsquo;t tracking hours, it&rsquo;s the money recovered from less overtime leakage, fewer compliance penalties, and accurate labor costing, which often dwarfs the software cost.",
     "faqs": [
       ("What is the ROI of Paylocity Time &amp; Attendance?",
        f"It shows up in three places: catching unapproved overtime before it&rsquo;s paid, staying {XL('https://www.dol.gov/agencies/whd/flsa','FLSA')}-compliant, and costing labor accurately so scheduling improves. Most buyers never quantify those dollars. See the {IL('the-strategic-buyers-guide-to-paylocity','Strategic Buyer&rsquo;s Guide to Paylocity')}."),
       ("Why isn&rsquo;t our time and attendance delivering ROI?",
-       f"Usually because pay rules, rounding, and approvals were left on defaults instead of your policies, so managers stop trusting the data. Same problem across frontline ops &mdash; see {IL('workforce-visibility-gap','The Workforce Visibility Gap')} and {IL('beyond-timekeeping-three-dimensions-of-manufacturing-workforce-intelligence','manufacturing workforce intelligence')}."),
+       f"Usually because pay rules, rounding, and approvals were left on defaults instead of your policies, so managers stop trusting the data. Same problem across frontline ops, see {IL('workforce-visibility-gap','The Workforce Visibility Gap')} and {IL('beyond-timekeeping-three-dimensions-of-manufacturing-workforce-intelligence','manufacturing workforce intelligence')}."),
       ("How do we get more from our Paylocity investment?",
        f"Tie time data to decisions, train managers on the workflows they use, and revisit config as policies change. Our {IL('paylocity-training-implementation-methods','Paylocity training methods')} covers adoption; {IL('paylocity-vs-paycheck-best-platform','Paylocity vs. Paychex')} helps if you&rsquo;re still comparing."),
     ],
@@ -218,11 +218,11 @@ POSTS = {
     "answer": "Retail turnover costs more than your P&amp;L shows: recruiting is the visible part, but lost productivity, manager time, coverage gaps, and weaker customer experience make each exit cost a big share of that role&rsquo;s pay.",
     "faqs": [
       ("How much does employee turnover cost?",
-       f"Far more than the recruiting fee &mdash; add lost productivity, ramp time, coverage overtime, and knowledge walking out, and it runs to a meaningful share of annual salary. {XL('https://www.bls.gov/jlt/','BLS JOLTS data')} shows how high separation rates run in retail."),
+       f"Far more than the recruiting fee, add lost productivity, ramp time, coverage overtime, and knowledge walking out, and it runs to a meaningful share of annual salary. {XL('https://www.bls.gov/jlt/','BLS JOLTS data')} shows how high separation rates run in retail."),
       ("Why doesn&rsquo;t turnover cost show up on the P&amp;L?",
-       f"It&rsquo;s scattered across overtime, temp labor, lower sales per shift, and manager hours instead of one line &mdash; so leadership underinvests. Connecting people data to financials ({IL('hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence','HR as a Financial Driver')}) turns it into a number the CFO acts on; {XL('https://www.shrm.org','SHRM')} has cost-per-hire benchmarks."),
+       f"It&rsquo;s scattered across overtime, temp labor, lower sales per shift, and manager hours instead of one line, so leadership underinvests. Connecting people data to financials ({IL('hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence','HR as a Financial Driver')}) turns it into a number the CFO acts on; {XL('https://www.shrm.org','SHRM')} has cost-per-hire benchmarks."),
       ("What actually reduces retail turnover?",
-       f"Visible career paths, better scheduling, and a culture people stay in. Internal movement is a top lever &mdash; see {IL('beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy','the case for internal talent mobility')} &mdash; reinforced by a {IL('high-performance-culture','high-performance culture')} and the {IL('workforce-visibility-gap','visibility')} to spot flight risk early."),
+       f"Visible career paths, better scheduling, and a culture people stay in. Internal movement is a top lever, see {IL('beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy','the case for internal talent mobility')}, reinforced by a {IL('high-performance-culture','high-performance culture')} and the {IL('workforce-visibility-gap','visibility')} to spot flight risk early."),
     ],
     "related": [
       ("beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy", "The Case for Internal Talent Mobility"),
@@ -329,14 +329,18 @@ def weave_links(body, targets, contact_url, cta_html):
             inside[i] = depth > 0
         else:
             inside[i] = depth > 0
-    cursor = 0
-    for url, phrases in targets:
+    # eligible (visible, not-already-linked) text segments
+    elig = [i for i in range(len(toks)) if is_text(i) and not inside[i] and toks[i].strip()]
+    n = max(1, len(targets))
+    for ti, (url, phrases) in enumerate(targets):
         if f'href="{url}"' in "".join(toks):
             continue
-        order = list(range(cursor, len(toks))) + list(range(0, cursor))
+        # start each target in a different region so links spread THROUGHOUT the body
+        start = int(ti * len(elig) / n) if elig else 0
+        seq = elig[start:] + elig[:start]
         placed = False
-        for i in order:
-            if not is_text(i) or inside[i] or not toks[i].strip():
+        for i in seq:
+            if inside[i] or not toks[i].strip():
                 continue
             for ph in phrases:
                 m = re.search(r'(?<![\w-])' + re.escape(ph) + r'(?![\w-])', toks[i], re.I)
@@ -344,7 +348,6 @@ def weave_links(body, targets, contact_url, cta_html):
                     s, e = m.span()
                     toks[i] = toks[i][:s] + f'<a href="{url}">' + toks[i][s:e] + '</a>' + toks[i][e:]
                     inside[i] = True  # one woven link per segment -> natural spread
-                    cursor = i + 1
                     placed = True
                     break
             if placed:
@@ -387,7 +390,7 @@ def intro_block(answer):
 
 def faq_block(faqs, related=None):
     # Internal links removed from FAQ answers (external citations kept); the "Related"
-    # list is dropped — internal linking now lives in the woven body (2-3 per post).
+    # list is dropped, internal linking now lives in the woven body (2-3 per post).
     parts = [S_FAQ]
     parts.append(f'<h2 style="color:{NAVY};margin-top:44px;">Frequently asked questions</h2>')
     for q, a in faqs:
@@ -477,7 +480,7 @@ def main():
                 f.write(f"<h1>{name}</h1>\n" + new_body)
             with open(os.path.join(outdir, f"{pid}.head.html"), "w") as f:
                 f.write(new_head)
-    print(f"\n{'APPLIED LIVE' if confirm else 'DRY RUN'} — {len(ids)} post(s).")
+    print(f"\n{'APPLIED LIVE' if confirm else 'DRY RUN'}, {len(ids)} post(s).")
     if not confirm:
         print("Local renders written to content/optimized/. Re-run with --confirm to write live.")
 

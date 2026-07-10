@@ -23,6 +23,13 @@ def body_html(pid):
     raw = open(os.path.join(OPT, f"{pid}.html")).read()
     return re.sub(r"^<h1>.*?</h1>\s*", "", raw, flags=re.S)
 
+def counts(pid):
+    h = open(os.path.join(OPT, f"{pid}.html")).read()
+    internal = len(re.findall(r'href="https://www\.alignhcm\.com/blog', h))
+    external = len(re.findall(r'href="https?://(?!www\.alignhcm)', h))
+    contact = "alignhcm.com/contact" in h
+    return internal, external, contact
+
 CSS = """
   :root{--orange:#F05A28;--hot:#FF6B35;--navy:#17324d;--ink:#111820;--warm:#f4efe7;}
   *{box-sizing:border-box;}
@@ -30,7 +37,8 @@ CSS = """
   h1,h2,h3{font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
   .cover{height:1030px;background:linear-gradient(160deg,#0d2740 0%,#17324d 60%,#22384f 100%);color:#fff;padding:90px 70px;position:relative;overflow:hidden;}
   .cover::after{content:"";position:absolute;right:-160px;bottom:-160px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(240,90,40,.55),transparent 70%);}
-  .cover img{height:50px;margin-bottom:64px;}
+  .cover .logobox{display:inline-block;background:#fff;border:3px solid var(--orange);border-radius:16px;padding:14px 22px;margin-bottom:56px;box-shadow:0 8px 30px rgba(0,0,0,.18);}
+  .cover .logobox img{height:44px;display:block;}
   .cover .kicker{color:var(--hot);font-family:'Plus Jakarta Sans';font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:13px;}
   .cover h1{font-size:56px;line-height:1.06;font-weight:800;margin:16px 0 20px;max-width:830px;}
   .cover h1 span{color:var(--orange);}
@@ -56,18 +64,22 @@ CSS = """
 
 def build(pid, tag, title, sub, wc, il, xl, slug):
     body = body_html(pid)
+    il, xl, cc = counts(pid)
+    cta_chip = '<span class="chip">Contact CTA in closing</span>' if cc else ''
+    cta_meta = ' + Contact CTA' if cc else ''
     doc = f"""<!doctype html><html><head><meta charset="utf-8">
 <style>{FONTCSS}</style><style>{CSS}</style></head><body>
   <div class="cover">
-    <img src="{LOGO}" alt="Align HCM">
+    <div class="logobox"><img src="{LOGO}" alt="Align HCM"></div>
     <div class="kicker">AEO / GEO Optimization · Blog</div>
     <h1>{title}</h1>
     <p class="sub">{sub}</p>
     <div class="chips">
       <span class="chip">{wc} words</span>
-      <span class="chip">+{il} internal links</span>
-      <span class="chip">+{xl} external citation(s)</span>
-      <span class="chip">+3 FAQ Q&amp;A</span>
+      <span class="chip">{il} internal links</span>
+      {cta_chip}
+      <span class="chip">{xl} external citation(s)</span>
+      <span class="chip">3 FAQ Q&amp;A</span>
       <span class="chip">Article + FAQPage schema</span>
       <span class="chip">Direct-answer opener</span>
     </div>
@@ -77,7 +89,7 @@ def build(pid, tag, title, sub, wc, il, xl, slug):
     <div class="post-head">
       <span class="tag">{tag}</span>
       <h2>{title}</h2>
-      <div class="meta">{wc} words &nbsp;·&nbsp; +{il} internal &nbsp;·&nbsp; +{xl} external &nbsp;·&nbsp; +3 FAQ &nbsp;·&nbsp; BlogPosting + FAQPage schema</div>
+      <div class="meta">{wc} words &nbsp;·&nbsp; {il} internal{cta_meta} &nbsp;·&nbsp; {xl} external &nbsp;·&nbsp; 3 FAQ &nbsp;·&nbsp; BlogPosting + FAQPage schema</div>
     </div>
     <div class="added-label">What was added &amp; embedded</div>
     {body}
