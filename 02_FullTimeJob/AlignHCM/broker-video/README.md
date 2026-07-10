@@ -10,9 +10,18 @@ A 2-minute animated video for the channel team to show benefits brokers why Alig
 |---|---|
 | 0-10s | Ink-reveal intro: ink blots bloom on paper, the Align HCM logo emerges through an ink dissolve with 3D tilt |
 | 10-24s | Broker hook: "You guide your clients through benefits... there's a moment of truth: implementation." |
-| 24-86s | Five case-study pages with page-turn transitions: AWP Safety, Driscoll's, BEUMER, Arrow, Resorts World Las Vegas |
-| 86-102s | The method: turnkey implementation chips (Planning through Go-Live), then SmartCare: "Your HCM platform should work for you. Not the other way around." |
+| 24-86s | Five case-study pages, varied transitions (page-turn, horizontal push, vertical push): AWP Safety, Driscoll's, BEUMER, Arrow, Resorts World Las Vegas |
+| 86-102s | The method: numbered 4-phase approach (deck style), then SmartCare: "Your HCM platform should work for you. Not the other way around." |
 | 102-120s | Broker CTA: Channel Partner Program, alignhcm.com/partners/brokers |
+
+## Design system (v2, matched to the Align sales deck)
+
+- PT Serif headlines, white with orange emphasis words; Inter body; orange rule + caps kicker title system on every scene
+- Governance-slide background: deep navy gradient, soft rotated diamonds, warm orange glow bottom-left; no grid
+- White boxes with navy text (The Challenge) paired with navy boxes with orange border (What Align Did)
+- Footer continuity strip on every dark scene; 01/05 page counters
+- Light EDM soundtrack, 122 BPM: soft four-on-the-floor kick, offbeat hats, sidechained pads, pluck arp; breakdown under SmartCare, lift for the CTA
+- Refined with the "impeccable" design skill (github.com/pbakaus/impeccable): solid-color stat numbers (no gradient text), 10-16px card radii, exponential ease-outs only, display type at or under 96px
 
 ## Compliance guardrails
 

@@ -6,9 +6,9 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <style>
   :root{
-    --navy:#0A1628; --navy2:#101f36; --slate:#2D3748;
-    --orange:#FF6B2B; --orange2:#F05A28; --teal:#2BB5A0;
-    --paper:#F7F4EE; --ink-gray:#555;
+    --navy:#0d1b2e; --navy-2:#132441; --navy-deep:#0a1626; --slate:#1d3252;
+    --orange:#F58220; --orange-deep:#F05A28;
+    --ink:#16283f; --paper:#F7F4EE; --muted:rgba(255,255,255,.72);
   }
   html,body{margin:0;padding:0;background:#000;}
   #stage{
@@ -19,62 +19,79 @@
   .scene{position:absolute;inset:0;display:none;}
   .abs{position:absolute;}
 
-  /* ---------- shared decorative ---------- */
-  .glow{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none;}
-  .grid-lines{position:absolute;inset:0;opacity:.05;
-    background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);
-    background-size:96px 96px;}
-  .kicker{font-size:26px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--orange);}
-  .display{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-0.02em;color:#fff;}
-  .body-copy{font-weight:500;letter-spacing:-0.01em;color:rgba(255,255,255,.82);}
-  .accent-line{height:6px;background:linear-gradient(135deg,#F05A28 0%,#FF6B35 100%);
-    border-radius:3px;transform-origin:left center;}
-  .glass{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);
-    border-radius:28px;backdrop-filter:blur(20px);}
+  /* ---------- deck background (governance-slide style) ---------- */
+  .deckbg{position:absolute;inset:0;overflow:hidden;
+    background:
+      radial-gradient(1300px 900px at 82% 18%, #1a2f50 0%, rgba(26,47,80,0) 62%),
+      radial-gradient(1100px 800px at 8% 108%, rgba(214,106,42,.20) 0%, rgba(214,106,42,0) 55%),
+      linear-gradient(150deg, #0e1d33 0%, #0b1930 46%, #091524 100%);}
+  .dia{position:absolute;background:rgba(255,255,255,.028);transform:rotate(45deg);border-radius:24px;}
+  .dia.o{background:rgba(245,130,32,.05);}
+
+  /* ---------- deck title system (continuity) ---------- */
+  .t-rule{width:64px;height:3px;background:var(--orange);}
+  .kicker{font-size:22px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--orange);}
+  .serif{font-family:'PT Serif',Georgia,serif;font-weight:700;color:#fff;letter-spacing:0;}
+  .serif .o{color:var(--orange);}
+  .sub-it{font-family:'PT Serif',Georgia,serif;font-style:italic;font-weight:400;color:var(--muted);}
+  .body-copy{font-weight:400;letter-spacing:0;color:var(--muted);line-height:1.55;}
+
+  /* ---------- boxes: white + navy (deck language) ---------- */
+  .box-w{background:#F4F6FA;border-radius:10px;color:var(--ink);}
+  .box-n{background:rgba(19,36,65,.92);border:1px solid rgba(245,130,32,.55);border-radius:10px;color:#fff;}
+  .box-lbl{font-size:19px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);}
+  .box-p{font-size:25px;line-height:1.5;font-weight:400;}
+  .box-w .box-p{color:#243a58;}
+  .box-n .box-p{color:rgba(255,255,255,.88);}
+
+  .chip{display:inline-block;padding:9px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.3);
+    color:rgba(255,255,255,.85);font-size:20px;font-weight:600;letter-spacing:.04em;margin-right:12px;}
+  .chip.orange{border-color:transparent;background:var(--orange-deep);color:#fff;}
+  .logo-card{background:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 24px 60px rgba(0,0,0,.4);}
+
+  .stat-num{font-family:'PT Serif',Georgia,serif;font-weight:700;font-size:96px;color:var(--orange);letter-spacing:-0.01em;}
+  .quote-mark{font-family:'PT Serif',Georgia,serif;font-size:150px;line-height:.55;color:var(--orange);}
+
+  /* ---------- footer continuity strip ---------- */
+  .foot{position:absolute;left:0;right:0;bottom:0;height:52px;background:rgba(9,19,33,.85);
+    display:flex;align-items:center;justify-content:space-between;padding:0 60px;box-sizing:border-box;}
+  .foot .l{font-size:17px;font-weight:600;letter-spacing:.12em;color:rgba(255,255,255,.55);text-transform:uppercase;}
+  .foot .l b{color:var(--orange);font-weight:700;}
+  .foot .dot{color:var(--orange);margin-right:10px;}
 
   /* ---------- scene 1 : ink intro ---------- */
   #s1{background:var(--paper);}
   #inkCanvas{position:absolute;inset:0;}
   #logo3dWrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;perspective:2200px;}
   #logo3d{position:relative;transform-style:preserve-3d;}
-  #logoMaskCanvas{display:block;}
   #s1Tag{position:absolute;left:0;right:0;top:71%;text-align:center;
-    font-weight:600;font-size:34px;letter-spacing:.42em;text-transform:uppercase;color:var(--slate);}
+    font-weight:600;font-size:30px;letter-spacing:.4em;text-transform:uppercase;color:#2D3748;}
 
-  /* ---------- scene 2 : hook ---------- */
-  .hookline{position:absolute;left:160px;right:160px;text-align:center;}
+  /* ---------- scene 2 : hook (deck title slides) ---------- */
+  .hook{position:absolute;left:150px;right:220px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;}
+  .hook .h{font-size:66px;line-height:1.18;max-width:1320px;}
+  .hook .s{font-size:30px;margin-top:30px;max-width:1100px;}
 
   /* ---------- case pages ---------- */
   .page{position:absolute;inset:0;background:var(--navy);transform-origin:0% 50%;overflow:hidden;}
-  .page .inner{position:absolute;inset:0;}
-  .case-top{position:absolute;top:64px;left:110px;right:110px;display:flex;align-items:center;justify-content:space-between;}
-  .case-count{font-weight:700;font-size:28px;letter-spacing:.18em;color:rgba(255,255,255,.5);}
-  .logo-card{background:#fff;border-radius:26px;display:flex;align-items:center;justify-content:center;
-    box-shadow:0 30px 80px rgba(0,0,0,.45);}
-  .chip{display:inline-block;padding:12px 26px;border-radius:999px;border:1.5px solid rgba(255,255,255,.25);
-    color:rgba(255,255,255,.85);font-size:24px;font-weight:600;letter-spacing:.06em;margin-right:14px;}
-  .chip.orange{border-color:transparent;background:linear-gradient(135deg,#F05A28,#FF6B35);color:#fff;}
-  .lbl{font-size:24px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;}
-  .lbl.teal{color:var(--teal);}
-  .case-h{font-family:'Syne',sans-serif;font-weight:700;color:#fff;letter-spacing:-0.015em;}
-  .case-p{font-size:33px;line-height:1.42;font-weight:500;color:rgba(255,255,255,.78);letter-spacing:-0.01em;}
-  .stat-num{font-family:'Syne',sans-serif;font-weight:800;font-size:130px;letter-spacing:-0.03em;
-    background:linear-gradient(135deg,#FF8A50,#F05A28);-webkit-background-clip:text;background-clip:text;color:transparent;}
-  .quote-mark{font-family:'Syne',sans-serif;font-size:200px;line-height:.6;color:var(--orange);opacity:.9;}
-  .pageShade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 40%);opacity:0;pointer-events:none;}
+  .case-head{position:absolute;top:72px;left:120px;right:120px;}
+  .case-count{position:absolute;top:76px;right:120px;font-weight:700;font-size:24px;letter-spacing:.18em;color:rgba(255,255,255,.45);}
 
   /* ---------- method / smartcare ---------- */
-  .m-chip{position:absolute;padding:16px 34px;border-radius:999px;font-size:28px;font-weight:700;letter-spacing:.02em;
-    background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.18);color:#fff;white-space:nowrap;}
+  .m-item{position:absolute;width:470px;}
+  .m-ic{width:58px;height:58px;border-radius:50%;background:var(--orange-deep);color:#fff;display:flex;
+    align-items:center;justify-content:center;font-family:'PT Serif',serif;font-weight:700;font-size:27px;}
+  .m-t{font-size:27px;font-weight:700;color:#fff;margin-top:16px;}
+  .m-s{font-size:21px;color:var(--muted);margin-top:6px;line-height:1.45;}
 
-  /* ---------- misc ---------- */
   #timecode{position:fixed;left:8px;top:8px;color:#0f0;font:14px monospace;z-index:99;display:none;}
 </style>
 </head>
 <body>
 <div id="stage">
 
-  <!-- S1 · ink reveal + 3d logo -->
+  <!-- S1 · ink reveal + 3d logo (paper world) -->
   <div class="scene" id="s1">
     <canvas id="inkCanvas" width="1920" height="1080"></canvas>
     <div id="logo3dWrap"><div id="logo3d"><canvas id="logoMaskCanvas" width="1000" height="444"></canvas></div></div>
@@ -83,103 +100,103 @@
 
   <!-- S2 · broker hook -->
   <div class="scene" id="s2">
-    <div class="grid-lines"></div>
-    <div class="glow" id="s2glowA" style="width:900px;height:900px;background:#F05A28;opacity:.16;left:-260px;top:-300px;"></div>
-    <div class="glow" id="s2glowB" style="width:800px;height:800px;background:#2BB5A0;opacity:.10;right:-240px;bottom:-280px;"></div>
-    <div class="hookline" id="hook1" style="top:400px;">
-      <div class="display" style="font-size:82px;">You guide your clients through benefits.</div>
+    <div class="deckbg">
+      <div class="dia" style="width:420px;height:420px;right:-120px;top:-140px;"></div>
+      <div class="dia o" style="width:190px;height:190px;right:420px;top:180px;"></div>
+      <div class="dia" style="width:300px;height:300px;left:-100px;bottom:60px;"></div>
     </div>
-    <div class="hookline" id="hook2" style="top:280px;">
-      <div class="display" style="font-size:62px;color:rgba(255,255,255,.85);">But when they buy a new HCM platform,</div>
-      <div class="display" style="font-size:76px;margin-top:30px;">there's a <span id="hook2u" style="position:relative;display:inline-block;">moment of truth<span class="accent-line abs" style="left:0;right:0;bottom:-14px;"></span></span>:</div>
-      <div class="display" style="font-size:108px;margin-top:40px;background:linear-gradient(135deg,#FF8A50,#F05A28);-webkit-background-clip:text;background-clip:text;color:transparent;">implementation.</div>
+    <div class="hook" id="hook1">
+      <div class="t-rule"></div>
+      <div class="kicker" style="margin-top:22px;">For benefits brokers</div>
+      <div class="serif h" style="margin-top:26px;">You guide your clients<br>through <span class="o">benefits.</span></div>
     </div>
-    <div class="hookline" id="hook3" style="top:380px;">
-      <div class="display" style="font-size:94px;">That's where Align comes in.</div>
-      <div class="body-copy" style="font-size:34px;margin-top:44px;letter-spacing:.08em;color:rgba(255,255,255,.6);">CHANNEL PARTNER PROGRAM FOR BENEFITS BROKERS AND REFERRAL PARTNERS</div>
+    <div class="hook" id="hook2">
+      <div class="serif h" style="font-size:56px;">But every new HCM platform<br>has a moment of truth:</div>
+      <div class="serif" style="font-size:96px;margin-top:34px;color:var(--orange);">Implementation.</div>
     </div>
+    <div class="hook" id="hook3">
+      <div class="t-rule"></div>
+      <div class="kicker" style="margin-top:22px;">Channel Partner Program</div>
+      <div class="serif h" style="margin-top:26px;">That's where <span class="o">Align</span> comes in.</div>
+      <div class="sub-it s">For benefits brokers and referral partners, and the clients who trust them.</div>
+    </div>
+    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; alignhcm.com</div><div class="l">Broker Partner Program</div></div>
   </div>
 
-  <!-- case pages get built by JS into #caseHost -->
+  <!-- case pages built by JS -->
   <div class="scene" id="caseHost" style="perspective:2400px;"></div>
 
   <!-- S8 · method + smartcare -->
   <div class="scene" id="s8">
-    <div class="grid-lines"></div>
-    <div class="glow" style="width:1000px;height:1000px;background:#F05A28;opacity:.13;left:50%;top:-420px;transform:translateX(-50%);"></div>
+    <div class="deckbg">
+      <div class="dia" style="width:380px;height:380px;right:-110px;top:-130px;"></div>
+      <div class="dia o" style="width:170px;height:170px;left:220px;bottom:140px;"></div>
+    </div>
     <div id="s8a" class="abs" style="inset:0;">
-      <div class="abs" style="left:0;right:0;top:190px;text-align:center;">
-        <div class="kicker" id="s8kick">How we do it</div>
-        <div class="display" id="s8h" style="font-size:66px;margin-top:34px;">A turnkey implementation approach.</div>
-        <div class="body-copy" id="s8p" style="font-size:36px;margin-top:28px;">Certified HCM experts managing every phase, from planning through go-live.</div>
+      <div class="abs" style="top:96px;left:120px;">
+        <div class="t-rule"></div>
+        <div class="kicker" style="margin-top:20px;">How we do it</div>
+        <div class="serif" id="s8h" style="font-size:56px;margin-top:22px;">A <span class="o">turnkey implementation</span> approach.</div>
       </div>
-      <div id="s8chips" class="abs" style="left:0;right:0;top:640px;height:220px;"></div>
+      <div id="s8box" class="box-n abs" style="left:120px;top:360px;width:520px;padding:44px 46px;box-sizing:border-box;">
+        <div class="box-lbl">Our approach</div>
+        <div class="box-p" style="margin-top:18px;">Certified HCM experts manage every phase of your client's project, from planning through go-live and beyond.</div>
+      </div>
+      <div id="s8grid" class="abs" style="left:760px;top:340px;right:120px;height:520px;"></div>
     </div>
-    <div id="s8b" class="abs" style="inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 140px;">
-      <div class="display" id="s8b1" style="font-size:72px;">And go-live isn't the finish line.</div>
-      <img id="scLogo" src="assets/logos/smartcare-light.png" style="height:280px;margin-top:52px;filter:drop-shadow(0 24px 60px rgba(240,90,40,.35));">
-      <div class="body-copy" id="s8b2" style="font-size:40px;margin-top:44px;color:rgba(255,255,255,.9);">Your HCM platform should work for you. <span style="color:var(--orange);font-weight:700;">Not the other way around.</span></div>
+    <div id="s8b" class="abs" style="inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 160px;">
+      <div class="serif" id="s8b1" style="font-size:58px;">And go-live isn't the <span class="o">finish line.</span></div>
+      <img id="scLogo" src="assets/logos/smartcare-light.png" style="height:250px;margin-top:48px;filter:drop-shadow(0 20px 50px rgba(240,90,40,.3));">
+      <div class="sub-it" id="s8b2" style="font-size:34px;margin-top:40px;">Your HCM platform should work for you. <span style="color:var(--orange);">Not the other way around.</span></div>
     </div>
+    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; alignhcm.com</div><div class="l">Implementation · SmartCare</div></div>
   </div>
 
   <!-- S9 · CTA -->
   <div class="scene" id="s9">
-    <div class="grid-lines"></div>
-    <div class="glow" id="s9glow" style="width:1100px;height:1100px;background:#F05A28;opacity:.15;left:50%;top:50%;transform:translate(-50%,-50%);"></div>
-    <div id="s9a" class="abs" style="left:150px;right:150px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;text-align:center;">
-      <div class="display" style="font-size:92px;">Bring HCM expertise into every client conversation.</div>
-      <div class="display" id="s9a2" style="font-size:64px;margin-top:36px;color:rgba(255,255,255,.75);">Without building a delivery bench.</div>
+    <div class="deckbg">
+      <div class="dia" style="width:440px;height:440px;right:-140px;top:-150px;"></div>
+      <div class="dia o" style="width:200px;height:200px;right:360px;bottom:120px;"></div>
     </div>
-    <div id="s9b" class="abs" style="inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-      <img src="assets/logos/align-white.png" style="height:170px;">
-      <div class="display" style="font-size:56px;margin-top:54px;">Channel Partner Program</div>
-      <div class="body-copy" style="font-size:32px;margin-top:16px;color:rgba(255,255,255,.65);">for Benefits Brokers and Referral Partners</div>
-      <div class="chip orange" style="margin-top:46px;font-size:32px;padding:18px 44px;">alignhcm.com/partners/brokers</div>
-      <div class="body-copy" id="s9tag" style="font-size:30px;margin-top:70px;color:rgba(255,255,255,.55);font-style:italic;">Align moves at your speed. Which is always "right now."</div>
+    <div id="s9a" class="hook">
+      <div class="t-rule"></div>
+      <div class="kicker" style="margin-top:22px;">Partner with Align</div>
+      <div class="serif h" style="margin-top:26px;">Bring HCM expertise into<br>every <span class="o">client conversation.</span></div>
+      <div class="sub-it s">Without building a delivery bench.</div>
     </div>
+    <div id="s9b" class="abs" style="inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <img src="assets/logos/align-white.png" style="height:150px;">
+      <div class="serif" style="font-size:48px;margin-top:48px;">Channel Partner <span class="o">Program</span></div>
+      <div class="sub-it" style="font-size:27px;margin-top:14px;">for benefits brokers and referral partners</div>
+      <div class="chip orange" style="margin-top:42px;font-size:27px;padding:15px 40px;">alignhcm.com/partners/brokers</div>
+      <div class="sub-it" id="s9tag" style="font-size:25px;margin-top:60px;color:rgba(255,255,255,.5);">Align moves at your speed. Which is always "right now."</div>
+    </div>
+    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; alignhcm.com</div><div class="l">Broker Partner Program</div></div>
   </div>
 
   <!-- global wipe -->
-  <div class="abs" id="wipe" style="inset:0;background:linear-gradient(135deg,#0A1628 60%,#101f36);display:none;z-index:50;"></div>
-  <div class="abs" id="wipeBar" style="top:0;bottom:0;width:220px;background:linear-gradient(135deg,#F05A28,#FF6B35);display:none;z-index:51;"></div>
+  <div class="abs" id="wipe" style="inset:0;background:linear-gradient(150deg,#0e1d33,#091524);display:none;z-index:50;"></div>
+  <div class="abs" id="wipeBar" style="top:0;bottom:0;width:220px;background:linear-gradient(160deg,#F58220,#F05A28);display:none;z-index:51;"></div>
 </div>
 <div id="timecode"></div>
 
 <script>
 /* ============================================================
-   Deterministic timeline engine (ported from animations.jsx)
+   Deterministic timeline engine
    ============================================================ */
 const Easing = {
   linear:t=>t,
-  inQuad:t=>t*t, outQuad:t=>t*(2-t), inOutQuad:t=>t<.5?2*t*t:-1+(4-2*t)*t,
+  inQuad:t=>t*t, outQuad:t=>t*(2-t),
   inCubic:t=>t*t*t, outCubic:t=>(--t)*t*t+1,
   inOutCubic:t=>t<.5?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1,
   outQuart:t=>1-(--t)*t*t*t,
+  outQuint:t=>1+(--t)*t*t*t*t,
   outExpo:t=>t===1?1:1-Math.pow(2,-10*t),
-  inOutExpo:t=>{if(t===0)return 0;if(t===1)return 1;return t<.5?.5*Math.pow(2,20*t-10):1-.5*Math.pow(2,-20*t+10);},
-  outSine:t=>Math.sin(t*Math.PI/2), inOutSine:t=>-(Math.cos(Math.PI*t)-1)/2,
-  outBack:t=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2);},
+  inOutSine:t=>-(Math.cos(Math.PI*t)-1)/2,
 };
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-function interp(input,output,ease=Easing.linear){
-  return t=>{
-    if(t<=input[0])return output[0];
-    if(t>=input[input.length-1])return output[output.length-1];
-    for(let i=0;i<input.length-1;i++){
-      if(t>=input[i]&&t<=input[i+1]){
-        const span=input[i+1]-input[i];
-        const local=span===0?0:(t-input[i])/span;
-        const fn=Array.isArray(ease)?(ease[i]||Easing.linear):ease;
-        return output[i]+(output[i+1]-output[i])*fn(local);
-      }
-    }
-    return output[output.length-1];
-  };
-}
-// window helper: progress of t within [a,b]
 const seg=(t,a,b,ease=Easing.linear)=>ease(clamp((t-a)/(b-a),0,1));
 
-// seeded PRNG + value noise (deterministic across runs)
 function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
 const rand=mulberry32(20260710);
 const P=new Uint8Array(512);{const p=[...Array(256).keys()];const r=mulberry32(777);for(let i=255;i>0;i--){const j=Math.floor(r()*(i+1));[p[i],p[j]]=[p[j],p[i]];}for(let i=0;i<512;i++)P[i]=p[i&255];}
@@ -197,58 +214,57 @@ function fbm(x,y){return .5*vnoise(x,y)+.25*vnoise(x*2.03,y*2.11)+.125*vnoise(x*
    Timeline
    ============================================================ */
 const DUR=120;
-const T={
-  s1:[0,10],
-  s2:[10,24],
-  cases:[24,86],       // five pages, 12.4s each
-  s8:[86,102],
-  s9:[102,120],
-};
+const T={ s1:[0,10], s2:[10,24], cases:[24,86], s8:[86,102], s9:[102,120] };
 const CASE_LEN=12.4;
 
 /* ============================================================
-   Case study content (vendor-agnostic, no headcounts)
+   Case content (vendor-agnostic, no headcounts)
    ============================================================ */
 const CASES=[
   {
-    id:"awp", logo:"assets/logos/awp.png", logoH:150,
+    id:"awp", logo:"assets/logos/awp.png", logoH:140,
+    headline:'Six months to <span class="o">one source of truth.</span>',
     industry:"Traffic Safety", tags:["Implementation","System Consolidation"],
     challenge:"Multiple acquisitions left behind disparate time and payroll systems, manual data entry, and compliance gaps.",
-    did:"Align consolidated every legacy system onto a single cloud platform, with standardized pay rules and automated workflows.",
-    result:{type:"stat", num:"6", unit:"months", sub:"From kickoff to a successful January 1st go-live. Payroll errors down. One source of truth."},
+    did:"Consolidated every legacy system onto a single cloud platform, with standardized pay rules and automated workflows.",
+    result:{type:"stat", num:"6", unit:"months to go-live", sub:"Live on January 1st. Payroll errors down across the board."},
   },
   {
-    id:"driscolls", logo:"assets/logos/driscolls.png", logoH:150,
+    id:"driscolls", logo:"assets/logos/driscolls.png", logoH:140,
+    headline:'The world’s most complex labor rules, <span class="o">automated.</span>',
     industry:"Global Agriculture", tags:["Implementation","Compliance","Training"],
     challenge:"Mexico's labor regulations are among the world's most complex. Overtime, benefits, and mandatory time off were managed by hand.",
-    did:"Align implemented and customized the platform to those exact legal requirements, and built branded training so the team runs it themselves.",
+    did:"Implemented and customized the platform to those exact legal requirements, with branded training so the team runs it themselves.",
     result:{type:"quote", quote:"Our business has so many complex rules, but they made it happen.", who:"Pete Meza · Payroll Manager, Driscoll's"},
   },
   {
-    id:"beumer", logo:"assets/logos/beumer.png", logoH:120,
-    industry:"Manufacturing & Logistics Systems", tags:["Data Migration","Legacy Decommissioning"],
+    id:"beumer", logo:"assets/logos/beumer.png", logoH:110,
+    headline:'Seven years of history, <span class="o">zero left behind.</span>',
+    industry:"Manufacturing & Logistics", tags:["Data Migration","Legacy Decommissioning"],
     challenge:"An expiring legacy payroll contract put seven years of employee history at risk, with zero room for downtime.",
-    did:"Align extracted, cleansed, validated, and migrated every record, then decommissioned the legacy system for good.",
-    result:{type:"stat", num:"7", unit:"years of data", sub:"Full history retained and accessible. Legacy maintenance costs eliminated."},
+    did:"Extracted, cleansed, validated, and migrated every record, then decommissioned the legacy system for good.",
+    result:{type:"stat", num:"7", unit:"years of data retained", sub:"Full history accessible. Legacy maintenance costs eliminated."},
   },
   {
-    id:"arrow", logo:"assets/logos/arrow.png", logoH:130,
+    id:"arrow", logo:"assets/logos/arrow.png", logoH:120,
+    headline:'When the expert walked out, <span class="o">Align walked in.</span>',
     industry:"Global Technology", tags:["Implementation","Staff Augmentation"],
     challenge:"Their payroll expert left, and the institutional knowledge walked out the door with them.",
-    did:"Align stabilized payroll fast, delivered a full implementation, and rebuilt documentation and training from the ground up.",
+    did:"Stabilized payroll fast, delivered a full implementation, and rebuilt documentation and training from the ground up.",
     result:{type:"quote", quote:"On a scale of one to ten? They were a ten.", who:"Director, Global Payroll Transformation, Arrow"},
   },
   {
-    id:"rwlv", logo:"assets/logos/rwlv.png", logoH:130,
+    id:"rwlv", logo:"assets/logos/rwlv.png", logoH:120,
+    headline:'The platform they paid for, <span class="o">finally delivering.</span>',
     industry:"Hospitality & Gaming", tags:["Optimization","Integration"],
     challenge:"A premium platform, purchased but never fully activated. Key HR functions sat idle while data moved by hand.",
-    did:"Align configured performance and succession modules and automated 401(k) data integration, end to end.",
-    result:{type:"stat", num:"100%", unit:"automated data feeds", sub:"Manual work out. Accuracy up. The platform finally earning its keep."},
+    did:"Configured performance and succession modules and automated 401(k) data integration, end to end.",
+    result:{type:"stat", num:"100%", unit:"automated data feeds", sub:"Manual work out. Accuracy up. Talent management, live."},
   },
 ];
 
 /* ============================================================
-   Build case pages
+   Build case pages (deck language: white + navy boxes)
    ============================================================ */
 const host=document.getElementById('caseHost');
 CASES.forEach((c,i)=>{
@@ -257,74 +273,79 @@ CASES.forEach((c,i)=>{
   let resultHtml='';
   if(c.result.type==='stat'){
     resultHtml=`
-      <div class="lbl teal" style="margin-top:56px;">The result</div>
-      <div style="display:flex;align-items:baseline;gap:26px;">
+      <div style="display:flex;align-items:baseline;gap:22px;">
         <div class="stat-num" id="pg${i}num">${c.result.num}</div>
-        <div class="case-h" style="font-size:56px;">${c.result.unit}</div>
+        <div style="font-size:33px;font-weight:700;color:#fff;">${c.result.unit}</div>
       </div>
-      <div class="case-p" id="pg${i}sub" style="font-size:30px;margin-top:6px;">${c.result.sub}</div>`;
+      <div class="body-copy" style="font-size:24px;margin-top:4px;max-width:900px;">${c.result.sub}</div>`;
   }else{
     resultHtml=`
-      <div class="lbl teal" style="margin-top:48px;">In their words</div>
-      <div style="display:flex;gap:26px;align-items:flex-start;">
+      <div style="display:flex;gap:24px;align-items:flex-start;">
         <div class="quote-mark">“</div>
         <div>
-          <div class="case-h" id="pg${i}q" style="font-size:52px;line-height:1.25;">${c.result.quote}</div>
-          <div class="case-p" style="font-size:28px;margin-top:22px;color:var(--orange);font-weight:700;">${c.result.who}</div>
+          <div class="serif" id="pg${i}q" style="font-size:38px;line-height:1.3;font-style:italic;font-weight:400;max-width:960px;">${c.result.quote}</div>
+          <div style="font-size:22px;margin-top:16px;color:var(--orange);font-weight:700;">${c.result.who}</div>
         </div>
       </div>`;
   }
   pg.innerHTML=`
-    <div class="inner">
-      <div class="grid-lines"></div>
-      <div class="glow" style="width:820px;height:820px;background:#F05A28;opacity:.12;left:-240px;top:-260px;"></div>
-      <div class="glow" style="width:700px;height:700px;background:#2BB5A0;opacity:.09;right:-200px;bottom:-240px;"></div>
-      <div class="case-top">
-        <div class="kicker">Real client implementations</div>
-        <div class="case-count">0${i+1} / 05</div>
+    <div class="inner abs" style="inset:0;">
+      <div class="deckbg">
+        <div class="dia" style="width:${340+i*30}px;height:${340+i*30}px;right:${-100-i*15}px;top:-120px;"></div>
+        <div class="dia o" style="width:${150+i*12}px;height:${150+i*12}px;left:${180+i*60}px;bottom:${110+i*20}px;"></div>
       </div>
-      <div class="abs" style="top:118px;left:110px;right:110px;"><div class="accent-line" id="pg${i}line" style="width:100%;"></div></div>
-      <div class="abs" id="pg${i}left" style="left:110px;top:230px;width:640px;">
-        <div class="logo-card" id="pg${i}card" style="width:640px;height:340px;">
-          <img src="${c.logo}" style="max-width:520px;max-height:${c.logoH}px;">
+      <div class="case-head">
+        <div class="t-rule" id="pg${i}line"></div>
+        <div class="kicker" style="margin-top:18px;">Real client implementations</div>
+        <div class="serif" id="pg${i}hl" style="font-size:50px;margin-top:18px;max-width:1400px;">${c.headline}</div>
+      </div>
+      <div class="case-count">0${i+1} / 05</div>
+      <div class="abs" id="pg${i}left" style="left:120px;top:330px;width:560px;">
+        <div class="logo-card" id="pg${i}card" style="width:560px;height:290px;">
+          <img src="${c.logo}" style="max-width:450px;max-height:${c.logoH}px;">
         </div>
-        <div style="margin-top:36px;">
-          <span class="chip orange">${c.industry}</span>
-        </div>
-        <div style="margin-top:20px;" id="pg${i}tags">
+        <div style="margin-top:28px;"><span class="chip orange">${c.industry}</span></div>
+        <div style="margin-top:16px;" id="pg${i}tags">
           ${c.tags.map(t=>`<span class="chip">${t}</span>`).join('')}
         </div>
       </div>
-      <div class="abs" id="pg${i}right" style="left:880px;top:212px;right:110px;">
-        <div id="pg${i}b1">
-          <div class="lbl">The challenge</div>
-          <div class="case-p">${c.challenge}</div>
+      <div class="abs" id="pg${i}b1" style="left:760px;top:330px;width:500px;">
+        <div class="box-w" style="padding:36px 38px;min-height:218px;box-sizing:border-box;">
+          <div class="box-lbl">The challenge</div>
+          <div class="box-p" style="margin-top:14px;">${c.challenge}</div>
         </div>
-        <div id="pg${i}b2" style="margin-top:48px;">
-          <div class="lbl" style="color:#fff;">What Align did</div>
-          <div class="case-p">${c.did}</div>
-        </div>
-        <div id="pg${i}b3">${resultHtml}</div>
       </div>
-      <div class="pageShade" id="pg${i}shade"></div>
+      <div class="abs" id="pg${i}b2" style="left:1300px;top:330px;width:500px;">
+        <div class="box-n" style="padding:36px 38px;min-height:218px;box-sizing:border-box;">
+          <div class="box-lbl">What Align did</div>
+          <div class="box-p" style="margin-top:14px;">${c.did}</div>
+        </div>
+      </div>
+      <div class="abs" id="pg${i}b3" style="left:760px;top:700px;right:120px;">${resultHtml}</div>
+      <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; alignhcm.com</div><div class="l">Broker Partner Program</div></div>
+      <div class="pageShade abs" id="pg${i}shade" style="inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 40%);opacity:0;"></div>
     </div>`;
   host.appendChild(pg);
 });
 
-/* method chips */
-const STEPS=["Planning","Configuration","Data Migration","Integrations","Testing","Training","Go-Live"];
-const chipHost=document.getElementById('s8chips');
-STEPS.forEach((s,i)=>{
+/* method grid (deck slide-7 style: numbered orange circles + title + sub) */
+const STEPS=[
+  {t:"Planning & Configuration", s:"Discovery, requirements, and a build mapped to how your client actually works."},
+  {t:"Data Migration & Integrations", s:"Clean data in, every connected system talking, nothing left behind."},
+  {t:"Testing & Training", s:"Parallel runs, UAT, and training the client's team to own the platform."},
+  {t:"Go-Live & Beyond", s:"A calm launch day, then SmartCare keeps it optimized and compliant."},
+];
+const gridHost=document.getElementById('s8grid');
+STEPS.forEach((st,i)=>{
   const el=document.createElement('div');
-  el.className='m-chip'; el.id='mchip'+i; el.textContent=s;
-  const x=170+i*230, y=40+(i%2)*98;
-  el.style.left=x+'px'; el.style.top=y+'px';
-  if(i===STEPS.length-1){el.style.background='linear-gradient(135deg,#F05A28,#FF6B35)';el.style.border='none';}
-  chipHost.appendChild(el);
+  el.className='m-item'; el.id='mitem'+i;
+  el.style.left=(i%2)*540+'px'; el.style.top=Math.floor(i/2)*270+'px';
+  el.innerHTML=`<div class="m-ic">${i+1}</div><div class="m-t">${st.t}</div><div class="m-s">${st.s}</div>`;
+  gridHost.appendChild(el);
 });
 
 /* ============================================================
-   Scene 1 canvases — ink + logo dissolve
+   Scene 1 canvases — ink + logo dissolve (unchanged mechanics)
    ============================================================ */
 const ink=document.getElementById('inkCanvas').getContext('2d');
 const lm=document.getElementById('logoMaskCanvas');
@@ -332,7 +353,6 @@ const lmx=lm.getContext('2d');
 const logoImg=new Image(); logoImg.src='assets/logos/align-color.png';
 let logoReady=false; logoImg.onload=()=>{logoReady=true;};
 
-// precomputed dissolve noise field for the logo (1000x444 at 1/4 res)
 const NW=250,NH=111;
 const noiseField=new Float32Array(NW*NH);
 for(let y=0;y<NH;y++)for(let x=0;x<NW;x++){
@@ -341,20 +361,15 @@ for(let y=0;y<NH;y++)for(let x=0;x<NW;x++){
   const radial=Math.sqrt(cx*cx*4+cy*cy*4)*.55;
   noiseField[y*NW+x]=n*.72+radial*.28;
 }
-// ink blot definitions (seeded)
 const BLOTS=[];
 for(let i=0;i<9;i++){
-  BLOTS.push({
-    x:280+rand()*1360, y:220+rand()*640,
-    r:120+rand()*260, born:.15+i*.28+rand()*.2,
-    hue:i%3, seed:rand()*100, wob:.22+rand()*.2,
-  });
+  BLOTS.push({x:280+rand()*1360, y:220+rand()*640, r:120+rand()*260, born:.15+i*.28+rand()*.2, hue:i%3, seed:rand()*100, wob:.22+rand()*.2});
 }
 const DROPS=[];
 for(let i=0;i<14;i++){
   DROPS.push({x:200+rand()*1520, delay:rand()*1.6, size:5+rand()*9, targetY:200+rand()*680, seed:rand()*40});
 }
-const INK_COLS=["#0A1628","#F05A28","#2D3748"];
+const INK_COLS=["#0d1b2e","#F05A28","#2D3748"];
 
 function blotPath(ctx,b,grow,melt,t){
   ctx.beginPath();
@@ -371,9 +386,7 @@ function blotPath(ctx,b,grow,melt,t){
 
 function renderS1(t){
   const c=ink; c.clearRect(0,0,1920,1080);
-  // paper
   c.fillStyle='#F7F4EE'; c.fillRect(0,0,1920,1080);
-  // subtle paper grain
   c.globalAlpha=.05;
   for(let i=0;i<7;i++){
     c.fillStyle=i%2?'#d8d2c6':'#efe9dd';
@@ -381,17 +394,13 @@ function renderS1(t){
     c.beginPath();c.arc(gx,gy,420,0,7);c.fill();
   }
   c.globalAlpha=1;
-
-  // droplets fall (0 - 2.2s)
   DROPS.forEach(d=>{
     const p=seg(t,d.delay,d.delay+.55,Easing.inQuad);
     if(p<=0||p>=1)return;
     const y=-40+(d.targetY+40)*p;
-    c.fillStyle='rgba(10,22,40,.85)';
+    c.fillStyle='rgba(13,27,46,.85)';
     c.beginPath();c.ellipse(d.x,y,d.size*.62,d.size*(1+p*.9),0,0,7);c.fill();
   });
-
-  // blots bloom then melt away as logo reveals
   BLOTS.forEach(b=>{
     const grow=seg(t,b.born,b.born+1.7,Easing.outCubic);
     const melt=seg(t,4.6,6.4,Easing.inOutSine);
@@ -399,7 +408,6 @@ function renderS1(t){
     c.globalAlpha=.9*(1-melt);
     c.fillStyle=INK_COLS[b.hue];
     blotPath(c,b,grow,melt,t); c.fill();
-    // satellite splatter
     c.globalAlpha=.5*(1-melt)*grow;
     for(let k=0;k<5;k++){
       const a=b.seed+k*1.7, dist=b.r*(1.15+k*.16)*grow;
@@ -408,13 +416,11 @@ function renderS1(t){
   });
   c.globalAlpha=1;
 
-  // logo dissolve reveal (3.6s - 6.6s) on its own canvas
   const reveal=seg(t,3.6,6.6,Easing.inOutSine);
   lmx.clearRect(0,0,1000,444);
   if(reveal>0&&logoReady){
     lmx.drawImage(logoImg,0,20,1000,444*0.92);
     if(reveal<1){
-      // per-block dissolve: erase blocks whose noise value > threshold
       const thr=reveal*1.15;
       const bw=1000/NW, bh=444/NH;
       lmx.globalCompositeOperation='destination-out';
@@ -429,99 +435,105 @@ function renderS1(t){
       lmx.globalCompositeOperation='source-over';
     }
   }
-  // 3D presentation of logo
   const wrap=document.getElementById('logo3d');
   const pop=seg(t,3.6,6.8,Easing.outCubic);
   const idleRy=Math.sin(t*.9)*3.5*seg(t,6.2,7.4);
   const ry=-26+30*pop+idleRy, rx=10-11*pop+Math.cos(t*.7)*1.6*seg(t,6.2,7.4);
   const sc=.94+.1*pop;
-  const out=seg(t,8.9,9.9,Easing.inOutCubic); // exit
+  const out=seg(t,8.9,9.9,Easing.inOutCubic);
   wrap.style.transform=`rotateY(${ry}deg) rotateX(${rx}deg) scale(${sc*(1-.06*out)})`;
   wrap.style.opacity=String((reveal>0?1:0)*(1-out));
-  wrap.style.filter=`drop-shadow(0 ${40-30*pop}px ${70-40*pop}px rgba(10,22,40,.35))`;
-  // tagline under logo
+  wrap.style.filter=`drop-shadow(0 ${40-30*pop}px ${70-40*pop}px rgba(13,27,46,.35))`;
   const tagEl=document.getElementById('s1Tag');
   const tagIn=seg(t,6.4,7.4,Easing.outCubic);
   tagEl.style.opacity=String(tagIn*(1-out));
   tagEl.style.transform=`translateY(${24-24*tagIn}px)`;
-  tagEl.style.letterSpacing=(.55-.13*tagIn)+'em';
-  // navy wash-in at exit handled by global wipe
+  tagEl.style.letterSpacing=(.52-.12*tagIn)+'em';
 }
 
 /* ============================================================
-   Scene 2 — hook
+   Scene 2 — hook (three deck-title beats)
    ============================================================ */
 function renderS2(t){
-  const l=t-T.s2[0]; // 0..14
-  const set=(id,inA,inB,outA,outB,ty=36)=>{
+  const l=t-T.s2[0];
+  const set=(id,inA,inB,outA,outB)=>{
     const el=document.getElementById(id);
-    const i=seg(l,inA,inB,Easing.outCubic), o=seg(l,outA,outB,Easing.inCubic);
+    const i=seg(l,inA,inB,Easing.outExpo), o=seg(l,outA,outB,Easing.inCubic);
     el.style.opacity=String(i*(1-o));
-    el.style.transform=`translateY(${(1-i)*ty - o*26}px)`;
+    el.style.transform=`translateX(${(1-i)*60 - o*40}px)`;
   };
-  set('hook1',.2,1.0,3.4,4.0);
-  set('hook2',3.8,4.6,8.8,9.4);
-  set('hook3',9.3,10.1,13.2,14.0);
-  const u=document.querySelector('#hook2u .accent-line');
-  u.style.transform=`scaleX(${seg(l,5.2,5.9,Easing.outCubic)})`;
-  // drifting glows
-  document.getElementById('s2glowA').style.transform=`translate(${Math.sin(l*.4)*40}px,${Math.cos(l*.3)*30}px)`;
-  document.getElementById('s2glowB').style.transform=`translate(${Math.cos(l*.35)*-36}px,${Math.sin(l*.28)*-24}px)`;
+  set('hook1',.2,1.1,3.6,4.2);
+  set('hook2',4.0,4.9,8.8,9.4);
+  set('hook3',9.2,10.1,13.2,14.0);
 }
 
 /* ============================================================
-   Case pages — page-turn choreography
+   Case pages — varied transitions
+   turn / push-left / push-up / turn
    ============================================================ */
+const TRANS=['turn','pushL','pushU','turn'];
 function renderCases(t){
   const lt=t-T.cases[0];
   const idx=clamp(Math.floor(lt/CASE_LEN),0,CASES.length-1);
   for(let i=0;i<CASES.length;i++){
     const pg=document.getElementById('pg'+i);
-    const start=i*CASE_LEN, end=start+CASE_LEN;
+    const start=i*CASE_LEN;
     const isCur=i===idx, isNext=i===idx+1;
     if(!isCur&&!isNext){pg.style.display='none';continue;}
     pg.style.display='block';
-    pg.style.zIndex=isCur?2:1;
-
-    const pl=lt-start; // local time (can be negative for the "next" page)
-    // entrance: page sits beneath and scales up as previous turns away
-    // exit: rotateY around left spine
-    let rot=0, shade=0, scale=1;
+    const pl=lt-start;
+    const trans=TRANS[i]; // outgoing transition for page i
+    const inTrans=i>0?TRANS[i-1]:null;
+    let tf='', shade=0;
     if(i<CASES.length-1){
-      const turn=seg(pl,CASE_LEN-1.0,CASE_LEN,Easing.inOutCubic);
-      rot=-105*turn; shade=turn;
+      const p=seg(pl,CASE_LEN-1.0,CASE_LEN,Easing.inOutCubic);
+      if(p>0){
+        if(trans==='turn'){tf=`rotateY(${-105*p}deg)`;shade=p;pg.style.zIndex=2;}
+        else if(trans==='pushL'){tf=`translateX(${-1920*p}px)`;pg.style.zIndex=2;}
+        else if(trans==='pushU'){tf=`translateY(${-1080*p}px)`;pg.style.zIndex=2;}
+      }else pg.style.zIndex=2;
+    }else{
+      // last page: crossfade+zoom out into s8
+      const p=seg(pl,CASE_LEN-1.1,CASE_LEN,Easing.inOutCubic);
+      pg.style.opacity=String(1-p);
+      tf=`scale(${1+.05*p})`;
+      pg.style.zIndex=2;
     }
-    if(i>0){
+    if(i>0&&pl<0){
       const settle=seg(pl,-1.0,0,Easing.outCubic);
-      scale=.955+.045*settle;
+      if(inTrans==='turn') tf=`scale(${.955+.045*settle})`;
+      else if(inTrans==='pushL') tf=`translateX(${1920*(1-settle)}px)`;
+      else if(inTrans==='pushU') tf=`translateY(${1080*(1-settle)}px)`;
+      pg.style.zIndex=1;
     }
-    pg.style.transform=`rotateY(${rot}deg) scale(${scale})`;
+    pg.style.transform=tf;
     document.getElementById(`pg${i}shade`).style.opacity=String(shade*.7);
 
     if(isCur||(isNext&&pl>-1.2)){
-      const p=Math.max(pl,0);
-      // header line draw
-      document.getElementById(`pg${i}line`).style.transform=`scaleX(${seg(p,.15,.8,Easing.outQuart)})`;
-      // left column
+      // pages entering via push slide in already composed (deck-like);
+      // turn-entered pages stagger their content in after landing
+      const pShift=(i>0&&(TRANS[i-1]==='pushL'||TRANS[i-1]==='pushU'))?1.6:0;
+      const p=Math.max(pl+pShift,0);
+      const line=document.getElementById(`pg${i}line`);
+      line.style.transform=`scaleX(${seg(p,.15,.7,Easing.outQuart)})`;
+      line.style.transformOrigin='left center';
+      const hl=document.getElementById(`pg${i}hl`);
+      const hi=seg(p,.3,1.1,Easing.outExpo);
+      hl.style.opacity=String(hi); hl.style.transform=`translateY(${(1-hi)*30}px)`;
       const L=document.getElementById(`pg${i}left`);
-      const li=seg(p,.25,1.0,Easing.outCubic);
-      L.style.opacity=String(li); L.style.transform=`translateY(${(1-li)*44}px)`;
-      const card=document.getElementById(`pg${i}card`);
-      const ci=seg(p,.25,1.15,Easing.outBack);
-      card.style.transform=`scale(${.85+.15*ci}) rotate(${(1-ci)*-2}deg)`;
-      // right blocks stagger
+      const li=seg(p,.7,1.5,Easing.outExpo);
+      L.style.opacity=String(li); L.style.transform=`translateY(${(1-li)*40}px)`;
       [1,2,3].forEach(b=>{
         const el=document.getElementById(`pg${i}b${b}`);
-        const bi=seg(p,.7+b*.55,1.5+b*.55,Easing.outCubic);
+        const bi=seg(p,.9+b*.5,1.7+b*.5,Easing.outExpo);
         el.style.opacity=String(bi);
-        el.style.transform=`translateY(${(1-bi)*36}px)`;
+        el.style.transform=`translateY(${(1-bi)*34}px)`;
       });
-      // stat count-up
       const c=CASES[i];
       if(c.result.type==='stat'){
         const el=document.getElementById(`pg${i}num`);
-        const cp=seg(p,2.4,3.6,Easing.outExpo);
-        const target=parseInt(c.result.num); // "6","7","100%"
+        const cp=seg(p,2.6,3.7,Easing.outExpo);
+        const target=parseInt(c.result.num);
         if(c.result.num.includes('%')) el.textContent=Math.round(target*cp)+'%';
         else el.textContent=String(Math.max(1,Math.round(target*cp)));
       }
@@ -533,58 +545,60 @@ function renderCases(t){
    Scene 8 — method + smartcare
    ============================================================ */
 function renderS8(t){
-  const l=t-T.s8[0]; // 0..16
+  const l=t-T.s8[0];
+  // whole-scene crossfade in over the zooming last case page
+  document.getElementById('s8').style.opacity=String(seg(l,-1.1,-.05,Easing.inOutCubic));
   const a=document.getElementById('s8a'), b=document.getElementById('s8b');
-  const aIn=seg(l,.1,.9,Easing.outCubic), aOut=seg(l,7.6,8.4,Easing.inCubic);
+  const aIn=seg(l,.1,1.0,Easing.outExpo), aOut=seg(l,7.6,8.4,Easing.inCubic);
   a.style.opacity=String(aIn*(1-aOut));
-  a.style.transform=`translateY(${(1-aIn)*30-aOut*30}px)`;
-  const kick=document.getElementById('s8kick');
-  kick.style.opacity=String(seg(l,.1,.7));
+  a.style.transform=`translateY(${(1-aIn)*26-aOut*26}px)`;
+  const box=document.getElementById('s8box');
+  const bi=seg(l,.8,1.7,Easing.outExpo);
+  box.style.opacity=String(bi); box.style.transform=`translateY(${(1-bi)*30}px)`;
   STEPS.forEach((s,i)=>{
-    const el=document.getElementById('mchip'+i);
-    const ci=seg(l,1.2+i*.42,1.9+i*.42,Easing.outBack);
+    const el=document.getElementById('mitem'+i);
+    const ci=seg(l,1.3+i*.5,2.2+i*.5,Easing.outExpo);
     el.style.opacity=String(ci);
-    el.style.transform=`translateY(${(1-ci)*30}px) scale(${.7+.3*ci})`;
+    el.style.transform=`translateY(${(1-ci)*28}px)`;
   });
-  const bIn=seg(l,8.4,9.3,Easing.outCubic), bOut=seg(l,15.2,16,Easing.inCubic);
+  const bIn=seg(l,8.4,9.3,Easing.outExpo), bOut=seg(l,15.2,16,Easing.inCubic);
   b.style.opacity=String(bIn*(1-bOut));
-  document.getElementById('s8b1').style.transform=`translateY(${(1-bIn)*34}px)`;
+  document.getElementById('s8b1').style.transform=`translateY(${(1-bIn)*30}px)`;
   const sc=document.getElementById('scLogo');
-  const scIn=seg(l,9.6,10.8,Easing.outBack);
+  const scIn=seg(l,9.6,10.8,Easing.outExpo);
   sc.style.opacity=String(scIn);
-  sc.style.transform=`scale(${.8+.2*scIn}) translateY(${(1-scIn)*20}px)`;
+  sc.style.transform=`scale(${.86+.14*scIn}) translateY(${(1-scIn)*18}px)`;
   const b2=document.getElementById('s8b2');
-  const b2In=seg(l,11.0,11.9,Easing.outCubic);
+  const b2In=seg(l,11.0,11.9,Easing.outExpo);
   b2.style.opacity=String(b2In);
-  b2.style.transform=`translateY(${(1-b2In)*26}px)`;
+  b2.style.transform=`translateY(${(1-b2In)*22}px)`;
 }
 
 /* ============================================================
    Scene 9 — CTA
    ============================================================ */
 function renderS9(t){
-  const l=t-T.s9[0]; // 0..18
+  const l=t-T.s9[0];
   const a=document.getElementById('s9a'), b=document.getElementById('s9b');
-  const aIn=seg(l,.2,1.1,Easing.outCubic), aOut=seg(l,6.6,7.4,Easing.inCubic);
+  const aIn=seg(l,.2,1.1,Easing.outExpo), aOut=seg(l,6.6,7.4,Easing.inCubic);
   a.style.opacity=String(aIn*(1-aOut));
-  a.style.transform=`translateY(${(1-aIn)*36-aOut*30}px)`;
-  document.getElementById('s9a2').style.opacity=String(seg(l,1.6,2.5,Easing.outCubic));
-  const bIn=seg(l,7.4,8.4,Easing.outCubic);
-  const fade=seg(l,16.6,17.8,Easing.inOutSine); // final fade to black handled via opacity of stage content
-  b.style.opacity=String(bIn*(1-fade));
-  b.style.transform=`translateY(${(1-bIn)*34}px) scale(${.97+.03*bIn})`;
-  document.getElementById('s9tag').style.opacity=String(seg(l,10.4,11.4)*(1-fade));
-  document.getElementById('s9glow').style.opacity=String(.15*(1-fade));
-  a.parentElement.style.background=fade>0?`rgba(0,0,0,${fade})`:'';
+  a.style.transform=`translateX(${(1-aIn)*60-aOut*40}px)`;
+  const bIn=seg(l,7.4,8.4,Easing.outExpo);
+  const fadeOut=seg(l,16.6,17.8,Easing.inOutSine);
+  b.style.opacity=String(bIn*(1-fadeOut));
+  b.style.transform=`translateY(${(1-bIn)*30}px) scale(${.98+.02*bIn})`;
+  document.getElementById('s9tag').style.opacity=String(seg(l,10.4,11.4)*(1-fadeOut));
+  const s9=document.getElementById('s9');
+  s9.style.filter=fadeOut>0?`brightness(${1-fadeOut})`:'';
 }
 
 /* ============================================================
-   Global transitions (wipe bar between major scenes)
+   Global transitions: orange bar wipes (s1->s2, s2->cases, s8->s9)
+   cases->s8 is a crossfade handled in the scenes.
    ============================================================ */
 function renderWipe(t){
   const w=document.getElementById('wipe'), bar=document.getElementById('wipeBar');
-  // wipes at: s1->s2 (9.4-10.4), cases->s8 handled by page turn? last page has no turn: wipe at 85.4-86.5, s8->s9 (101.4-102.5), s2->cases (23.4-24.4)
-  const wipes=[[9.5,10.5],[23.4,24.4],[85.3,86.4],[101.4,102.4]];
+  const wipes=[[9.5,10.5],[23.4,24.4],[101.4,102.4]];
   let on=false;
   for(const [a,bnd] of wipes){
     if(t>=a&&t<=bnd){
@@ -593,7 +607,6 @@ function renderWipe(t){
       const x=-260+p*(1920+560);
       bar.style.display='block';
       bar.style.transform=`translateX(${x}px) skewX(-12deg)`;
-      // navy fills behind the bar once it passes (only for s1->s2, which changes background world)
       if(a===9.5){
         w.style.display='block';
         w.style.clipPath=`polygon(0 0, ${x+130}px 0, ${x-100}px 100%, 0 100%)`;
@@ -609,8 +622,8 @@ function renderWipe(t){
 const SCENES=[
   {el:'s1', range:T.s1, fn:renderS1},
   {el:'s2', range:[T.s2[0]-.7,T.s2[1]+.6], fn:renderS2},
-  {el:'caseHost', range:[T.cases[0]-.7,T.cases[1]+.6], fn:renderCases},
-  {el:'s8', range:[T.s8[0]-.7,T.s8[1]+.6], fn:renderS8},
+  {el:'caseHost', range:[T.cases[0]-.7,T.cases[1]+.2], fn:renderCases},
+  {el:'s8', range:[T.s8[0]-1.2,T.s8[1]+.6], fn:renderS8},
   {el:'s9', range:[T.s9[0]-.7,DUR], fn:renderS9},
 ];
 function seekTo(t){
@@ -626,7 +639,6 @@ function seekTo(t){
 window.seek=seekTo;
 window.VIDEO_DURATION=DUR;
 
-/* manual preview: space to play, arrows to scrub */
 let previewT=0, playing=false, lastTs=0;
 function tick(ts){
   if(playing){previewT=Math.min(DUR,previewT+(ts-lastTs)/1000);seekTo(previewT);}
@@ -636,7 +648,7 @@ if(location.hash!=='#render'){
   document.getElementById('timecode').style.display='block';
   addEventListener('keydown',e=>{
     if(e.key===' '){playing=!playing;}
-    if(e.key==='ArrowRight'){previewT=Math.min(DUR,previewT+ (e.shiftKey?5:1));seekTo(previewT);}
+    if(e.key==='ArrowRight'){previewT=Math.min(DUR,previewT+(e.shiftKey?5:1));seekTo(previewT);}
     if(e.key==='ArrowLeft'){previewT=Math.max(0,previewT-(e.shiftKey?5:1));seekTo(previewT);}
   });
   requestAnimationFrame(tick);
