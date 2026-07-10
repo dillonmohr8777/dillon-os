@@ -32,9 +32,34 @@ BUDGETS = {"headline": 80, "subtitle": 170, "bullet": 42, "step": 95,
            "result": 90, "quote": 200, "blurb": 220}
 
 
+def _flatten_png_bytes(b):
+    """Composite any transparency onto white so the PDF embeds a plain opaque
+    image (mobile viewers often mishandle PDF alpha masks)."""
+    try:
+        import io
+        from PIL import Image
+        im = Image.open(io.BytesIO(b)).convert("RGBA")
+        bg = Image.new("RGB", im.size, (255, 255, 255))
+        bg.paste(im, mask=im.split()[3])
+        out = io.BytesIO()
+        bg.save(out, "PNG")
+        return out.getvalue()
+    except Exception:
+        return b
+
+
 def datauri(path):
-    b = open(path, "rb").read()
+    b = _flatten_png_bytes(open(path, "rb").read())
     return "data:image/png;base64," + base64.b64encode(b).decode()
+
+
+def _flatten_datauri(du):
+    head, b64 = du.split(",", 1)
+    b = _flatten_png_bytes(base64.b64decode(b64))
+    return "data:image/png;base64," + base64.b64encode(b).decode()
+
+
+ALIGN_LOGO = _flatten_datauri(ALIGN_LOGO)
 
 
 CSS = """
@@ -50,10 +75,6 @@ CSS = """
  .hero{flex-shrink:0;height:288px;overflow:hidden;position:relative;
    background:linear-gradient(160deg,#081c30 0%,#0d2740 55%,#17324d 100%);
    color:#fff;padding:24px 56px 16px;}
- .hero::before{content:"";position:absolute;inset:0;
-   background:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.3px);
-   background-size:20px 20px;
-   -webkit-mask-image:radial-gradient(120% 100% at 100% 0%,#000 20%,transparent 62%);}
  .hero::after{content:"";position:absolute;right:-110px;top:-110px;width:380px;height:380px;
    border-radius:50%;background:radial-gradient(circle,rgba(240,90,40,.30),transparent 65%);}
  .toprow{height:64px;display:flex;justify-content:space-between;align-items:center;gap:16px;position:relative;z-index:1;}
@@ -92,9 +113,9 @@ CSS = """
  .body{flex-shrink:0;height:672px;overflow:hidden;padding:8px 56px;}
  .sec-ch{height:160px;overflow:hidden;}
  .sec-ap{height:168px;overflow:hidden;margin-top:16px;}
- .sec-rs{height:140px;margin-top:16px;margin-left:-56px;margin-right:-56px;padding:0 56px;
-   background:var(--cream);box-shadow:0 8px 0 var(--cream),0 -8px 0 var(--cream);}
- .sec-qt{height:80px;overflow:hidden;margin-top:16px;}
+ .sec-rs{height:156px;margin-top:8px;margin-left:-56px;margin-right:-56px;padding:8px 56px;
+   background:var(--cream);}
+ .sec-qt{height:80px;overflow:hidden;margin-top:8px;}
  .sec-ab{height:44px;overflow:hidden;margin-top:16px;}
  .shead{height:52px;}
  .seclabel{display:flex;align-items:center;gap:10px;color:var(--orange);
@@ -117,14 +138,14 @@ CSS = """
  .col li{font-size:10.5px;line-height:15px;color:#4b5563;margin-bottom:2px;}
  /* approach timeline */
  .steps{position:relative;margin-top:4px;height:96px;}
- .steps::before{content:"";position:absolute;top:20px;left:16%;right:16%;height:2px;background:var(--hair);}
+ .steps::before{content:"";position:absolute;top:20px;left:129px;width:206px;height:2px;background:var(--hair);}
+ .steps::after{content:"";position:absolute;top:20px;left:369px;width:206px;height:2px;background:var(--hair);}
  .steps .row3{margin-top:0;}
  .step{height:96px;text-align:center;padding:8px 12px;position:relative;overflow:hidden;}
  .steps .step{background:transparent;border-color:transparent;box-shadow:none;}
  .step .num{width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;
    font-family:'Plus Jakarta Sans';font-weight:800;font-size:12px;line-height:26px;
-   margin:0 auto 5px;position:relative;z-index:1;
-   box-shadow:0 0 0 4px #fdfbf7,0 0 0 5px rgba(240,90,40,.25);}
+   margin:0 auto 5px;position:relative;z-index:1;}
  .step h4{color:var(--navy);font-size:12.5px;line-height:15px;margin-bottom:2px;}
  .step p{font-size:10px;line-height:13px;color:#5b6673;margin:0;}
  .cap{height:16px;text-align:center;color:#8a94a0;font-size:10px;line-height:16px;
