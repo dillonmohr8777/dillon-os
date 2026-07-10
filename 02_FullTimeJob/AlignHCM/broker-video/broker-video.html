@@ -50,7 +50,7 @@
   .logo-card{background:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;
     box-shadow:0 24px 60px rgba(0,0,0,.4);}
 
-  .stat-num{font-family:'PT Serif',Georgia,serif;font-weight:700;font-size:96px;color:var(--orange);letter-spacing:-0.01em;}
+  .stat-num{font-family:'PT Serif',Georgia,serif;font-weight:700;font-size:190px;line-height:.95;color:var(--orange);letter-spacing:-0.01em;}
   .quote-mark{font-family:'PT Serif',Georgia,serif;font-size:150px;line-height:.55;color:var(--orange);}
 
   /* ---------- footer continuity strip ---------- */
@@ -65,8 +65,6 @@
   #inkCanvas{position:absolute;inset:0;}
   #logo3dWrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;perspective:2200px;}
   #logo3d{position:relative;transform-style:preserve-3d;}
-  #s1Tag{position:absolute;left:0;right:0;top:71%;text-align:center;
-    font-weight:600;font-size:30px;letter-spacing:.4em;text-transform:uppercase;color:#2D3748;}
 
   /* ---------- scene 2 : hook (deck title slides) ---------- */
   .hook{position:absolute;left:150px;right:220px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;}
@@ -95,7 +93,6 @@
   <div class="scene" id="s1">
     <canvas id="inkCanvas" width="1920" height="1080"></canvas>
     <div id="logo3dWrap"><div id="logo3d"><canvas id="logoMaskCanvas" width="1000" height="444"></canvas></div></div>
-    <div id="s1Tag">Human Capital Management</div>
   </div>
 
   <!-- S2 · broker hook -->
@@ -238,11 +235,11 @@ const CASES=[
     industry:"Traffic Safety", tags:["Implementation","System Consolidation"],
     challenge:"Multiple acquisitions left behind disparate time and payroll systems, manual data entry, and compliance gaps.",
     did:"Consolidated every legacy system onto a single cloud platform, with standardized pay rules and automated workflows.",
-    result:{type:"stat", num:"6", unit:"months to go-live", sub:"Live on January 1st. Payroll errors down across the board."},
+    result:{type:"stat", num:"6", unit:"months to go-live", sub:"Live on January 1st. Payroll errors down, data accuracy up."},
   },
   {
     id:"driscolls", logo:"assets/logos/driscolls.png", logoH:140,
-    headline:'The world’s most complex labor rules, <span class="o">automated.</span>',
+    headline:'Mexico’s complex labor rules, <span class="o">automated.</span>',
     industry:"Global Agriculture", tags:["Implementation","Compliance","Training"],
     challenge:"Mexico's labor regulations are among the world's most complex. Overtime, benefits, and mandatory time off were managed by hand.",
     did:"Implemented and customized the platform to those exact legal requirements, with branded training so the team runs it themselves.",
@@ -252,8 +249,8 @@ const CASES=[
     id:"beumer", logo:"assets/logos/beumer.png", logoH:110,
     headline:'Seven years of history, <span class="o">zero left behind.</span>',
     industry:"Manufacturing & Logistics", tags:["Data Migration","Legacy Decommissioning"],
-    challenge:"An expiring legacy payroll contract put seven years of employee history at risk, with zero room for downtime.",
-    did:"Extracted, cleansed, validated, and migrated every record, then decommissioned the legacy system for good.",
+    challenge:"An expiring legacy payroll contract put seven years of employee history at risk.",
+    did:"Extracted, cleansed, validated, and migrated every critical record, then decommissioned the legacy system for good.",
     result:{type:"stat", num:"7", unit:"years of data retained", sub:"Full history accessible. Legacy maintenance costs eliminated."},
   },
   {
@@ -262,15 +259,15 @@ const CASES=[
     industry:"Global Technology", tags:["Implementation","Staff Augmentation"],
     challenge:"Their payroll expert left, and the institutional knowledge walked out the door with them.",
     did:"Stabilized payroll fast, delivered a full implementation, and rebuilt documentation and training from the ground up.",
-    result:{type:"quote", quote:"On a scale of one to ten? They were a ten.", who:"Director, Global Payroll Transformation, Arrow"},
+    result:{type:"quote", quote:"On a scale of one to ten. They were a ten.", who:"Director, Global Payroll Transformation, Arrow"},
   },
   {
     id:"rwlv", logo:"assets/logos/rwlv.png", logoH:120,
-    headline:'The platform they paid for, <span class="o">finally delivering.</span>',
+    headline:'The platform they paid for, <span class="o">fully unlocked.</span>',
     industry:"Hospitality & Gaming", tags:["Optimization","Integration"],
-    challenge:"A premium platform, purchased but never fully activated. Key HR functions sat idle while data moved by hand.",
-    did:"Configured performance and succession modules and automated 401(k) data integration, end to end.",
-    result:{type:"stat", num:"100%", unit:"automated data feeds", sub:"Manual work out. Accuracy up. Talent management, live."},
+    challenge:"A powerful platform was in place, but performance and succession modules sat unimplemented while HR data moved by hand.",
+    did:"Configured the performance and succession modules and automated 401(k) data feeds between systems.",
+    result:{type:"stat", num:"2", unit:"talent modules configured", sub:"Ready to launch on the business cycle. Automated 401(k) feeds cut the manual work."},
   },
 ];
 
@@ -284,11 +281,11 @@ CASES.forEach((c,i)=>{
   let resultHtml='';
   if(c.result.type==='stat'){
     resultHtml=`
-      <div style="display:flex;align-items:baseline;gap:22px;">
+      <div style="display:flex;align-items:baseline;gap:30px;">
         <div class="stat-num" id="pg${i}num">${c.result.num}</div>
-        <div style="font-size:33px;font-weight:700;color:#fff;">${c.result.unit}</div>
+        <div style="font-size:46px;font-weight:700;color:#fff;letter-spacing:-.01em;">${c.result.unit}</div>
       </div>
-      <div class="body-copy" style="font-size:24px;margin-top:4px;max-width:900px;">${c.result.sub}</div>`;
+      <div class="body-copy" style="font-size:28px;margin-top:14px;max-width:1000px;">${c.result.sub}</div>`;
   }else{
     resultHtml=`
       <div style="display:flex;gap:24px;align-items:flex-start;">
@@ -332,7 +329,7 @@ CASES.forEach((c,i)=>{
           <div class="box-p" style="margin-top:14px;">${c.did}</div>
         </div>
       </div>
-      <div class="abs" id="pg${i}b3" style="left:760px;top:700px;right:120px;">${resultHtml}</div>
+      <div class="abs" id="pg${i}b3" style="left:760px;top:640px;right:120px;">${resultHtml}</div>
       <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; alignhcm.com</div><div class="l">Broker Partner Program</div></div>
       <div class="pageShade abs" id="pg${i}shade" style="inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),transparent 40%);opacity:0;"></div>
     </div>`;
@@ -455,11 +452,6 @@ function renderS1(t){
   wrap.style.transform=`rotateY(${ry}deg) rotateX(${rx}deg) scale(${sc*(1-.06*out)})`;
   wrap.style.opacity=String((reveal>0?1:0)*(1-out));
   wrap.style.filter=`drop-shadow(0 ${40-30*pop}px ${70-40*pop}px rgba(13,27,46,.35))`;
-  const tagEl=document.getElementById('s1Tag');
-  const tagIn=seg(t,6.4,7.4,Easing.outCubic);
-  tagEl.style.opacity=String(tagIn*(1-out));
-  tagEl.style.transform=`translateY(${24-24*tagIn}px)`;
-  tagEl.style.letterSpacing=(.52-.12*tagIn)+'em';
 }
 
 /* ============================================================
