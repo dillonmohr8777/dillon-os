@@ -1,22 +1,35 @@
 #!/usr/bin/env python3
 """
-Align HCM - one-page, vendor-agnostic case study generator.
+Align HCM - one-page, vendor-agnostic case study generator (template v3).
 
 Premium single-page PDF driven by a JSON data file. Self-contained: brand assets
 (Align logo + fonts) from the repo, client logo embedded from a local PNG, Chromium
 renders the PDF.
 
-Rules baked into usage: no vendor names, no employee counts, customer-story framing,
-SmartCare/vendor-agnostic voice, no em dashes.
+Design system (v3):
+  - Fixed vertical budget: HERO 288 / SIGNAL BAND 32 / BODY 672 / FOOTER 64 = 1056px.
+    Every zone is fixed-height + flex-shrink:0 + overflow:hidden, so all case
+    studies are pixel-identical regardless of content.
+  - Big logos: both in 64px-tall white boxes with a solid orange outline.
+  - "CASE STUDY" lives in the Signal Band between hero and body, never under a logo.
+  - Lucide-style stroke icons in quiet tinted tiles. No glows, no HUD brackets.
+  - Quote slot always renders at 80px: client quote, or the brand pull-line.
+  - Rules: no vendor names, no employee counts, no em dashes (separators are middots).
 
     python3 case_study.py --data client.json --out /path/CaseStudy.pdf
 """
-import argparse, base64, glob, html, json, os, subprocess, sys
+import argparse, base64, glob, html, json, os, re, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BRAND = os.path.join(HERE, "..", "align-web-system", "brand")
 ALIGN_LOGO = open(os.path.join(BRAND, "logo.datauri")).read().strip()
 FONTCSS = open(os.path.join(BRAND, "gf-embed.css")).read()
+
+PULL_LINE = "Your HCM platform should work for you. Not the other way around."
+
+# author-side character budgets (continuity guarantee)
+BUDGETS = {"headline": 80, "subtitle": 170, "bullet": 42, "step": 95,
+           "result": 90, "quote": 200, "blurb": 220}
 
 
 def datauri(path):
@@ -26,148 +39,283 @@ def datauri(path):
 
 CSS = """
  @page { size: Letter; margin: 0; }
- :root{--orange:#F05A28;--hot:#FF6B35;--navy:#17324d;--deep:#0d2740;--ink:#111820;--warm:#f6f2ea;--line:#ecebe6;}
- *{box-sizing:border-box;}
- body{margin:0;font-family:'DM Sans',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#26313d;line-height:1.34;}
+ :root{--orange:#F05A28;--hot:#FF6B35;--navy:#17324d;--deep:#0d2740;--cream:#f4efe7;--hair:#e9e2d6;}
+ *{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+ html,body{margin:0;padding:0;}
+ body{font-family:'DM Sans',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#26313d;}
  h1,h2,h3,h4{font-family:'Plus Jakarta Sans','DM Sans',sans-serif;margin:0;}
- .page{width:8.5in;height:11in;display:flex;flex-direction:column;overflow:hidden;background:
-   radial-gradient(rgba(23,50,77,.05) 1px, transparent 1.4px);background-size:22px 22px;background-color:#fff;}
- /* hero */
- .hero{flex-shrink:0;background:linear-gradient(135deg,#081c30 0%,#0d2740 45%,#17324d 78%,#22384f 100%);color:#fff;padding:13px 44px 16px;position:relative;overflow:hidden;}
- .hero::before{content:"";position:absolute;inset:0;background:
-   linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
-   linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
-   background-size:34px 34px;}
- .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(240,90,40,.5),transparent 68%);}
- .glow2{position:absolute;left:-90px;bottom:-140px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.22),transparent 70%);}
- .toprow{display:flex;justify-content:space-between;align-items:center;gap:16px;position:relative;z-index:1;}
- .logobox{background:#fff;border:2px solid transparent;border-radius:11px;padding:7px 12px;display:flex;align-items:center;position:relative;
-   background:linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg,var(--orange),var(--hot) 55%,#ffd0bd) border-box;
-   box-shadow:0 0 14px rgba(240,90,40,.45), 0 4px 12px rgba(0,0,0,.28);}
- .logobox.align img{height:26px;display:block;}
- .logobox.client img{height:30px;max-width:210px;object-fit:contain;display:block;}
- .kicker{display:inline-block;background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:10px;letter-spacing:.22em;padding:5px 16px;margin:9px 0 7px;position:relative;z-index:1;
-   clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%);box-shadow:0 0 12px rgba(240,90,40,.5);}
- .hero h1{font-size:27px;line-height:1.06;font-weight:800;letter-spacing:-.01em;position:relative;z-index:1;text-shadow:0 2px 18px rgba(0,0,0,.35);}
- .hero h1 span{color:var(--hot);text-shadow:0 0 22px rgba(255,107,53,.55);}
- .hero .sub{color:#c9d6e4;font-size:12.5px;max-width:640px;margin-top:8px;position:relative;z-index:1;}
- .tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:10px;position:relative;z-index:1;}
- .tag{background:rgba(255,255,255,.06);border:1px solid rgba(255,107,53,.55);padding:5px 13px;font-size:11.5px;
-   clip-path:polygon(7px 0,100% 0,calc(100% - 7px) 100%,0 100%);}
- .tag b{color:var(--hot);font-family:'Plus Jakarta Sans';font-weight:700;letter-spacing:.09em;font-size:9px;display:block;text-transform:uppercase;margin-bottom:1px;}
- .accent{flex-shrink:0;height:5px;background:repeating-linear-gradient(115deg,var(--orange) 0 14px,var(--hot) 14px 28px);}
- /* body */
- .body{padding:9px 44px 0;flex:1;}
- .seclabel{color:var(--orange);font-family:'Plus Jakarta Sans';font-weight:800;font-size:11px;letter-spacing:.18em;display:flex;align-items:center;gap:10px;margin-bottom:2px;}
- .seclabel::before{content:"//";color:var(--hot);font-weight:800;letter-spacing:0;}
- .seclabel::after{content:"";flex:1;height:1.5px;background:linear-gradient(90deg,rgba(240,90,40,.55),rgba(23,50,77,.14) 60%,transparent);}
- .sech{color:var(--navy);font-size:15.5px;font-weight:800;margin-bottom:6px;}
- .block{margin-bottom:7px;}
- .cols{display:flex;gap:12px;}
- .card{position:relative;border:1.5px solid transparent;border-radius:11px;
-   background:linear-gradient(180deg,#ffffff,#fdfaf6) padding-box, linear-gradient(135deg,rgba(240,90,40,.85),rgba(255,107,53,.4) 45%,rgba(23,50,77,.5)) border-box;
-   box-shadow:0 5px 16px rgba(240,90,40,.10), 0 2px 6px rgba(13,39,64,.06);}
- .card::before{content:"";position:absolute;top:5px;left:5px;width:11px;height:11px;border-top:2px solid var(--orange);border-left:2px solid var(--orange);opacity:.85;}
- .card::after{content:"";position:absolute;bottom:5px;right:5px;width:11px;height:11px;border-bottom:2px solid var(--orange);border-right:2px solid var(--orange);opacity:.85;}
- .col{flex:1;padding:9px 13px;}
- .col h4{color:var(--navy);font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px;}
- .col h4 span{color:var(--hot);}
+ .page{width:816px;height:1056px;display:flex;flex-direction:column;overflow:hidden;background:#fff;}
+
+ /* ============ HERO (288) ============ */
+ .hero{flex-shrink:0;height:288px;overflow:hidden;position:relative;
+   background:linear-gradient(160deg,#081c30 0%,#0d2740 55%,#17324d 100%);
+   color:#fff;padding:24px 56px 16px;}
+ .hero::before{content:"";position:absolute;inset:0;
+   background:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.3px);
+   background-size:20px 20px;
+   -webkit-mask-image:radial-gradient(120% 100% at 100% 0%,#000 20%,transparent 62%);}
+ .hero::after{content:"";position:absolute;right:-110px;top:-110px;width:380px;height:380px;
+   border-radius:50%;background:radial-gradient(circle,rgba(240,90,40,.30),transparent 65%);}
+ .toprow{height:64px;display:flex;justify-content:space-between;align-items:center;gap:16px;position:relative;z-index:1;}
+ .logobox{height:64px;background:#fff;border:1.5px solid var(--orange);border-radius:10px;
+   padding:0 18px;display:flex;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,.25);}
+ .logobox.align img{height:44px;display:block;}
+ .logobox.client img{max-width:300px;object-fit:contain;display:block;}
+ .hslot{height:72px;margin-top:16px;display:flex;align-items:flex-end;position:relative;z-index:1;}
+ .hero h1{font-size:27px;line-height:34px;font-weight:800;letter-spacing:-.01em;
+   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+ .hero h1 span{color:var(--hot);}
+ .sslot{height:36px;margin-top:8px;position:relative;z-index:1;}
+ .hero .sub{color:#c9d6e4;font-size:13px;line-height:18px;max-width:660px;
+   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+ .tags{height:40px;display:flex;gap:10px;align-items:center;margin-top:12px;position:relative;z-index:1;}
+ .tag{border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);
+   padding:5px 14px;}
+ .tag b{color:var(--hot);font-family:'Plus Jakarta Sans';font-weight:700;letter-spacing:.14em;
+   font-size:8.5px;display:block;text-transform:uppercase;margin-bottom:1px;}
+ .tag i{font-style:normal;color:#e8eef5;font-size:11px;}
+
+ /* ============ SIGNAL BAND (32) ============ */
+ .band{flex-shrink:0;height:32px;overflow:hidden;background:var(--deep);
+   display:flex;align-items:center;gap:10px;padding:0 56px;position:relative;}
+ .band::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+   background:linear-gradient(90deg,var(--orange),var(--hot));}
+ .band .tick{width:18px;height:2px;background:var(--hot);border-radius:1px;flex:0 0 auto;}
+ .band .cs{color:var(--hot);font-family:'Plus Jakarta Sans';font-weight:800;font-size:10px;
+   letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;}
+ .band .dot{color:rgba(255,255,255,.4);font-size:10px;}
+ .band .cl{color:#e8eef5;font-family:'Plus Jakarta Sans';font-weight:700;font-size:10px;
+   letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;}
+ .band .rule{flex:1;height:1px;background:rgba(255,255,255,.16);}
+
+ /* ============ BODY (672) ============ */
+ .body{flex-shrink:0;height:672px;overflow:hidden;padding:8px 56px;background:#fff;}
+ .sec-ch{height:160px;overflow:hidden;}
+ .sec-ap{height:168px;overflow:hidden;margin-top:16px;}
+ .sec-rs{height:140px;overflow:hidden;margin-top:16px;}
+ .sec-qt{height:80px;overflow:hidden;margin-top:16px;}
+ .sec-ab{height:44px;overflow:hidden;margin-top:16px;}
+ .shead{height:52px;}
+ .seclabel{display:flex;align-items:center;gap:10px;color:var(--orange);
+   font-family:'Plus Jakarta Sans';font-weight:800;font-size:10px;line-height:14px;
+   letter-spacing:.2em;text-transform:uppercase;}
+ .seclabel::before{content:"";width:18px;height:2px;background:var(--orange);border-radius:1px;}
+ .seclabel::after{content:"";flex:1;height:1px;background:var(--hair);}
+ .sech{color:var(--navy);font-size:17px;line-height:26px;font-weight:800;margin-top:4px;}
+ .row3{display:flex;gap:16px;}
+ .row3>*{width:224px;flex:0 0 auto;}
+ .card{background:#fff;border:1px solid var(--hair);border-radius:12px;
+   box-shadow:0 2px 10px rgba(13,39,64,.06),0 1px 3px rgba(13,39,64,.04);}
+ /* challenge */
+ .col{height:100px;padding:10px 14px;position:relative;overflow:hidden;}
+ .col::before{content:"";position:absolute;top:0;left:14px;right:14px;height:3px;
+   border-radius:0 0 3px 3px;background:linear-gradient(90deg,var(--orange),var(--hot));}
+ .col h4{color:var(--navy);font-size:11px;line-height:14px;letter-spacing:.04em;
+   text-transform:uppercase;margin:2px 0 6px;}
  .col ul{margin:0;padding-left:14px;}
- .col li{font-size:11px;color:#4b5563;margin-bottom:2.5px;}
- /* steps */
- .steps{display:flex;align-items:stretch;gap:0;}
- .step{flex:1;text-align:center;padding:9px 11px;}
- .step .num{width:29px;height:29px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;font-family:'Plus Jakarta Sans';font-weight:800;font-size:13px;line-height:29px;margin:0 auto 6px;
-   box-shadow:0 0 0 3px rgba(240,90,40,.15), 0 0 14px rgba(240,90,40,.5);}
- .step h4{color:var(--navy);font-size:13px;margin-bottom:3px;}
- .step p{font-size:11px;color:#5b6673;line-height:1.3;}
- .arrow{display:flex;align-items:center;color:var(--hot);font-size:19px;font-weight:800;padding:0 7px;text-shadow:0 0 10px rgba(255,107,53,.8);}
- .cap{text-align:center;color:#8a94a0;font-size:10.5px;font-style:italic;margin-top:4px;}
+ .col li{font-size:10.5px;line-height:15px;color:#4b5563;margin-bottom:2px;}
+ /* approach timeline */
+ .steps{position:relative;margin-top:4px;height:96px;}
+ .steps::before{content:"";position:absolute;top:20px;left:16%;right:16%;height:2px;background:var(--hair);}
+ .steps .row3{margin-top:0;}
+ .step{height:96px;text-align:center;padding:8px 12px;position:relative;overflow:hidden;}
+ .step .num{width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;
+   font-family:'Plus Jakarta Sans';font-weight:800;font-size:12px;line-height:26px;
+   margin:0 auto 5px;position:relative;z-index:1;
+   box-shadow:0 0 0 4px #fff,0 0 0 5px rgba(240,90,40,.25);}
+ .step h4{color:var(--navy);font-size:12.5px;line-height:15px;margin-bottom:2px;}
+ .step p{font-size:10px;line-height:13px;color:#5b6673;margin:0;}
+ .cap{height:16px;text-align:center;color:#8a94a0;font-size:10px;line-height:16px;
+   font-style:italic;margin-top:0;}
  /* results */
- .results{display:flex;gap:12px;}
- .res{flex:1;padding:9px 13px;}
- .res .ic{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--orange),var(--hot));margin-bottom:7px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 12px rgba(240,90,40,.45);}
- .res .ic svg{width:16px;height:16px;fill:#fff;}
- .res h4{color:var(--navy);font-size:12.5px;margin-bottom:3px;}
- .res p{font-size:11px;color:#4b5563;line-height:1.3;}
- /* quote */
- .quote{position:relative;background:linear-gradient(135deg,#0d2740,#17324d) padding-box, linear-gradient(135deg,var(--orange),rgba(255,107,53,.45) 50%,rgba(240,90,40,.9)) border-box;
-   border:1.5px solid transparent;border-radius:11px;padding:9px 18px;margin-bottom:6px;box-shadow:0 6px 18px rgba(13,39,64,.25);}
- .quote::before{content:"\\201C";position:absolute;top:-6px;left:12px;font-family:'Plus Jakarta Sans';font-size:44px;color:var(--hot);opacity:.9;line-height:1;text-shadow:0 0 14px rgba(255,107,53,.6);}
- .quote p{font-size:13px;color:#eaf1f8;font-style:italic;font-family:'Plus Jakarta Sans';font-weight:500;line-height:1.4;padding-left:18px;}
- .quote .who{font-style:normal;font-size:11.5px;color:var(--hot);font-weight:700;margin-top:5px;padding-left:18px;}
- /* about */
- .about{display:flex;align-items:center;gap:14px;padding:7px 13px;margin-bottom:6px;}
- .about .lb{background:#fff;border:1px solid var(--line);border-radius:7px;padding:5px 9px;display:flex;align-items:center;flex:0 0 auto;}
- .about .lb img{height:26px;max-width:140px;object-fit:contain;display:block;}
- .about p{font-size:11px;color:#5b6673;}
- /* footer */
- .foot{flex-shrink:0;background:linear-gradient(135deg,#081c30,#0d2740 60%,#17324d);color:#cdd9e6;padding:11px 44px;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:auto;position:relative;overflow:hidden;}
- .foot::before{content:"";position:absolute;inset:0;background:
-   linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-   linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);background-size:34px 34px;}
- .foot>div{position:relative;z-index:1;}
- .foot .tl{font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:13.5px;}
- .foot .tl span{color:var(--hot);text-shadow:0 0 14px rgba(255,107,53,.5);}
- .foot .cta{background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;font-family:'Plus Jakarta Sans';font-weight:700;font-size:12.5px;padding:9px 18px;border-radius:999px;white-space:nowrap;box-shadow:0 0 16px rgba(240,90,40,.55);}
- .foot .sm{font-size:10px;color:#8ea1b5;margin-top:3px;}
+ .res{height:88px;padding:10px 14px;overflow:hidden;}
+ .res .head{display:flex;align-items:center;gap:9px;height:28px;}
+ .res .ic{width:28px;height:28px;border-radius:8px;flex:0 0 auto;
+   display:flex;align-items:center;justify-content:center;
+   background:rgba(240,90,40,.08);border:1px solid rgba(240,90,40,.22);color:var(--orange);}
+ .res .ic svg{width:16px;height:16px;}
+ .res h4{color:var(--navy);font-size:12px;line-height:15px;}
+ .res p{font-size:10.5px;line-height:14px;color:#4b5563;margin:6px 0 0;}
+ /* quote slot */
+ .quote{height:80px;overflow:hidden;background:linear-gradient(135deg,var(--deep),var(--navy));
+   border-radius:12px;border-left:3px solid var(--orange);padding:11px 20px 11px 24px;
+   position:relative;box-shadow:0 4px 14px rgba(13,39,64,.18);}
+ .quote::before{content:"\\201C";position:absolute;top:2px;left:9px;
+   font-family:'Plus Jakarta Sans';font-size:38px;font-weight:800;
+   color:rgba(255,107,53,.35);line-height:1;}
+ .quote p{font-family:'Plus Jakarta Sans';font-weight:500;font-style:italic;
+   font-size:12.5px;line-height:17px;color:#eef3f8;margin:0;padding-left:12px;
+   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+ .quote .who{padding-left:12px;margin-top:5px;font-size:11px;line-height:14px;font-style:normal;}
+ .quote .who b{color:var(--hot);font-weight:700;}
+ .quote .who span{color:#9fb2c5;}
+ .pull{height:80px;overflow:hidden;background:var(--cream);border:1px solid var(--hair);
+   border-left:3px solid var(--orange);border-radius:12px;padding:14px 22px;
+   display:flex;flex-direction:column;justify-content:center;}
+ .pull p{font-family:'Plus Jakarta Sans';font-weight:600;font-style:italic;font-size:15px;
+   line-height:21px;color:var(--navy);margin:0;}
+ .pull .k{font-family:'Plus Jakarta Sans';font-weight:800;font-size:8.5px;letter-spacing:.22em;
+   color:var(--orange);text-transform:uppercase;margin-top:5px;}
+ /* about strip */
+ .about{height:44px;overflow:hidden;display:flex;align-items:center;gap:14px;
+   background:var(--cream);border:1px solid var(--hair);border-radius:12px;padding:0 14px;}
+ .about .lb{background:#fff;border:1px solid var(--hair);border-radius:9px;padding:4px 11px;
+   display:flex;align-items:center;flex:0 0 auto;box-shadow:0 1px 4px rgba(13,39,64,.06);}
+ .about .lb img{height:24px;max-width:130px;object-fit:contain;display:block;}
+ .about .tx{min-width:0;}
+ .about .k{font-family:'Plus Jakarta Sans';font-weight:800;font-size:8.5px;letter-spacing:.18em;
+   color:var(--orange);text-transform:uppercase;line-height:10px;margin-bottom:2px;}
+ .about p{font-size:10px;line-height:13px;color:#4b5563;margin:0;
+   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+
+ /* ============ FOOTER (64) ============ */
+ .foot{flex-shrink:0;height:64px;overflow:hidden;
+   background:linear-gradient(160deg,#081c30 0%,#0d2740 55%,#17324d 100%);
+   border-top:1px solid rgba(255,107,53,.35);color:#cdd9e6;
+   padding:0 56px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+ .foot .tl{font-family:'Plus Jakarta Sans';font-weight:700;color:#fff;font-size:13px;line-height:17px;}
+ .foot .tl span{color:var(--hot);}
+ .foot .sm{font-size:9.5px;line-height:13px;color:#8ea1b5;margin-top:2px;}
+ .foot .cta{background:linear-gradient(135deg,var(--orange),var(--hot));color:#fff;
+   font-family:'Plus Jakarta Sans';font-weight:700;font-size:12px;padding:9px 18px;
+   border-radius:999px;white-space:nowrap;box-shadow:0 3px 10px rgba(240,90,40,.30);}
 """
 
+# Lucide/Feather-style stroke icons (ISC/MIT). 24-grid, stroke 2, round caps.
+_SVG = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+        'stroke-linecap="round" stroke-linejoin="round">{}</svg>')
 ICONS = {
-  "check": '<svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2 9 19l11-11-1.4-1.4z"/></svg>',
-  "gear": '<svg viewBox="0 0 24 24"><path d="M19.4 13a7.8 7.8 0 000-2l2-1.6-2-3.4-2.4 1a7.6 7.6 0 00-1.7-1l-.4-2.5H10l-.4 2.5a7.6 7.6 0 00-1.7 1l-2.4-1-2 3.4L3.6 11a7.8 7.8 0 000 2l-2 1.6 2 3.4 2.4-1c.5.4 1.1.7 1.7 1l.4 2.5h4l.4-2.5c.6-.3 1.2-.6 1.7-1l2.4 1 2-3.4zM12 15.5A3.5 3.5 0 1112 8.5a3.5 3.5 0 010 7z"/></svg>',
-  "chart": '<svg viewBox="0 0 24 24"><path d="M4 20V10h4v10zm6 0V4h4v16zm6 0v-7h4v7z"/></svg>',
-  "shield": '<svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"/></svg>',
-  "bolt": '<svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>',
-  "link": '<svg viewBox="0 0 24 24"><path d="M10.6 13.4a1 1 0 001.4 0l4-4a3 3 0 10-4.2-4.2l-1 1 1.4 1.4 1-1a1 1 0 011.4 1.4l-4 4a1 1 0 000 1.4zM13.4 10.6a1 1 0 00-1.4 0l-4 4a3 3 0 104.2 4.2l1-1-1.4-1.4-1 1a1 1 0 01-1.4-1.4l4-4a1 1 0 000-1.4z"/></svg>',
+  "calendar-check": _SVG.format('<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>'),
+  "shield-check": _SVG.format('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>'),
+  "users": _SVG.format('<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>'),
+  "trending-up": _SVG.format('<path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/>'),
+  "chart-bar": _SVG.format('<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>'),
+  "workflow": _SVG.format('<rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/>'),
+  "graduation-cap": _SVG.format('<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>'),
+  "target": _SVG.format('<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>'),
+  "zap": _SVG.format('<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'),
+  "link": _SVG.format('<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>'),
+  "settings": _SVG.format('<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>'),
+  "clipboard-check": _SVG.format('<rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/>'),
+  "rocket": _SVG.format('<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>'),
+  "circle-check": _SVG.format('<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>'),
 }
+ALIASES = {"check": "circle-check", "gear": "settings", "chart": "chart-bar",
+           "shield": "shield-check", "bolt": "zap"}
+
+
+def icon(key):
+    key = ALIASES.get(key, key)
+    return ICONS.get(key, ICONS["circle-check"])
+
+
+def warn_budget(name, text, limit, client):
+    t = re.sub(r"<[^>]+>", "", text or "")
+    if len(t) > limit:
+        print(f"  WARN [{client}] {name} over budget: {len(t)}/{limit}: {t[:50]}...")
 
 
 def render(d):
+    client = d["client"]
     client_logo = datauri(d["client_logo"])
-    lh = int(d.get("logo_h", 30))
-    tags = "".join(f'<div class="tag"><b>{html.escape(t["k"])}</b>{html.escape(t["v"])}</div>' for t in d["tags"])
+    lh = int(d.get("logo_h", 44))
+    lh = max(36, min(56, lh))
+
+    # budget checks
+    warn_budget("headline", d["headline"], BUDGETS["headline"], client)
+    warn_budget("subtitle", d["subtitle"], BUDGETS["subtitle"], client)
+    for c in d["challenge_cols"]:
+        for b in c["bullets"]:
+            warn_budget("bullet", b, BUDGETS["bullet"], client)
+    for s in d["steps"]:
+        warn_budget("step", s["desc"], BUDGETS["step"], client)
+    for r in d["results"]:
+        warn_budget("result", r["desc"], BUDGETS["result"], client)
+    if d.get("quote"):
+        warn_budget("quote", d["quote"]["text"], BUDGETS["quote"], client)
+    warn_budget("blurb", d["blurb"], BUDGETS["blurb"], client)
+
+    tags = "".join(
+        f'<div class="tag"><b>{html.escape(t["k"])}</b><i>{html.escape(t["v"])}</i></div>'
+        for t in d["tags"][:3])
+
     cols = "".join(
         f'<div class="col card"><h4>{html.escape(c["title"])}</h4><ul>'
-        + "".join(f"<li>{html.escape(b)}</li>" for b in c["bullets"]) + "</ul></div>"
-        for c in d["challenge_cols"])
-    steps_html = []
-    for i, s in enumerate(d["steps"]):
-        if i:
-            steps_html.append('<div class="arrow">&rsaquo;</div>')
-        steps_html.append(f'<div class="step card"><div class="num">{i+1}</div><h4>{html.escape(s["name"])}</h4><p>{html.escape(s["desc"])}</p></div>')
+        + "".join(f"<li>{html.escape(b)}</li>" for b in c["bullets"][:3]) + "</ul></div>"
+        for c in d["challenge_cols"][:3])
+
+    steps = "".join(
+        f'<div class="step card"><div class="num">{i+1}</div>'
+        f'<h4>{html.escape(s["name"])}</h4><p>{html.escape(s["desc"])}</p></div>'
+        for i, s in enumerate(d["steps"][:3]))
+
     results = "".join(
-        f'<div class="res card"><div class="ic">{ICONS.get(r.get("icon","check"),ICONS["check"])}</div>'
-        f'<h4>{html.escape(r["title"])}</h4><p>{html.escape(r["desc"])}</p></div>'
-        for r in d["results"])
-    quote = ""
+        f'<div class="res card"><div class="head"><div class="ic">{icon(r.get("icon","check"))}</div>'
+        f'<h4>{html.escape(r["title"])}</h4></div><p>{html.escape(r["desc"])}</p></div>'
+        for r in d["results"][:3])
+
+    cap = html.escape(d.get("solution_caption", "")).replace(" . ", " &middot; ")
+
     if d.get("quote"):
-        quote = f'<div class="quote"><p>&ldquo;{html.escape(d["quote"]["text"])}&rdquo;</p><div class="who">{html.escape(d["quote"]["who"])}</div></div>'
+        who = d["quote"]["who"]
+        if "," in who:
+            name, rest = who.split(",", 1)
+            who_html = f'<b>{html.escape(name.strip())}</b><span> &middot; {html.escape(rest.strip())}</span>'
+        else:
+            who_html = f"<b>{html.escape(who)}</b>"
+        qslot = (f'<div class="quote"><p>&ldquo;{html.escape(d["quote"]["text"])}&rdquo;</p>'
+                 f'<div class="who">{who_html}</div></div>')
+    else:
+        qslot = (f'<div class="pull"><p>&ldquo;{PULL_LINE}&rdquo;</p>'
+                 f'<div class="k">The Align HCM promise</div></div>')
+
     return f"""<!doctype html><html><head><meta charset="utf-8">
 <style>{FONTCSS}</style><style>{CSS}</style></head><body><div class="page">
+
   <div class="hero">
-    <div class="glow2"></div>
     <div class="toprow">
       <div class="logobox align"><img src="{ALIGN_LOGO}" alt="Align HCM"></div>
-      <div class="logobox client"><img style="height:{lh}px" src="{client_logo}" alt="{html.escape(d['client'])}"></div>
+      <div class="logobox client"><img style="height:{lh}px" src="{client_logo}" alt="{html.escape(client)}"></div>
     </div>
-    <span class="kicker">CASE STUDY</span>
-    <h1>{d['headline']}</h1>
-    <div class="sub">{html.escape(d['subtitle'])}</div>
+    <div class="hslot"><h1>{d['headline']}</h1></div>
+    <div class="sslot"><div class="sub">{html.escape(d['subtitle'])}</div></div>
     <div class="tags">{tags}</div>
   </div>
-  <div class="accent"></div>
-  <div class="body">
-    <div class="block"><div class="seclabel">THE CHALLENGE</div><div class="sech">{html.escape(d['challenge_title'])}</div><div class="cols">{cols}</div></div>
-    <div class="block"><div class="seclabel">HOW ALIGN HCM HELPED</div><div class="sech">{html.escape(d['solution_title'])}</div><div class="steps">{''.join(steps_html)}</div><div class="cap">{html.escape(d['solution_caption'])}</div></div>
-    <div class="block"><div class="seclabel">THE RESULTS</div><div class="sech">{html.escape(d['results_title'])}</div><div class="results">{results}</div></div>
-    {quote}
-    <div class="about card"><div class="lb"><img style="height:{int(lh*0.85)}px" src="{client_logo}" alt="{html.escape(d['client'])}"></div><p>{html.escape(d['blurb'])}</p></div>
+
+  <div class="band">
+    <div class="tick"></div><div class="cs">Case Study</div>
+    <div class="dot">&middot;</div><div class="cl">{html.escape(client)}</div>
+    <div class="rule"></div>
   </div>
+
+  <div class="body">
+    <div class="sec-ch"><div class="shead"><div class="seclabel">The Challenge</div>
+      <div class="sech">{html.escape(d['challenge_title'])}</div></div>
+      <div class="row3">{cols}</div></div>
+
+    <div class="sec-ap"><div class="shead"><div class="seclabel">How Align HCM Helped</div>
+      <div class="sech">{html.escape(d['solution_title'])}</div></div>
+      <div class="steps"><div class="row3">{steps}</div></div>
+      <div class="cap">{cap}</div></div>
+
+    <div class="sec-rs"><div class="shead"><div class="seclabel">The Results</div>
+      <div class="sech">{html.escape(d['results_title'])}</div></div>
+      <div class="row3">{results}</div></div>
+
+    <div class="sec-qt">{qslot}</div>
+
+    <div class="sec-ab"><div class="about">
+      <div class="lb"><img src="{client_logo}" alt="{html.escape(client)}"></div>
+      <div class="tx"><div class="k">About the client</div><p>{html.escape(d['blurb'])}</p></div>
+    </div></div>
+  </div>
+
   <div class="foot">
-    <div><div class="tl">Your HCM platform should work for you. <span>Not the other way around.</span></div><div class="sm">Free, no-obligation assessment &nbsp;&middot;&nbsp; alignhcm.com &nbsp;&middot;&nbsp; salesteam@alignhcm.com</div></div>
+    <div><div class="tl">Your HCM platform should work for you. <span>Not the other way around.</span></div>
+    <div class="sm">Free, no-obligation assessment &nbsp;&middot;&nbsp; alignhcm.com &nbsp;&middot;&nbsp; salesteam@alignhcm.com</div></div>
     <div class="cta">Talk to Align HCM &rsaquo;</div>
   </div>
+
 </div></body></html>"""
 
 
@@ -184,11 +332,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--html-only", action="store_true")
     a = ap.parse_args()
     d = json.load(open(a.data))
     doc = render(d)
     hp = a.out.rsplit(".", 1)[0] + ".html"
     open(hp, "w").write(doc)
+    if a.html_only:
+        print("wrote", hp)
+        return
     subprocess.run([find_chrome(), "--headless", "--no-sandbox", "--disable-gpu",
                     "--no-pdf-header-footer", f"--print-to-pdf={a.out}", f"file://{hp}"],
                    check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
