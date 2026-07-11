@@ -40,13 +40,16 @@
   .box-w{background:#F4F6FA;border-radius:10px;color:var(--ink);}
   .box-n{background:rgba(19,36,65,.92);border:1px solid rgba(245,130,32,.55);border-radius:10px;color:#fff;}
   .box-lbl{font-size:19px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);}
+  /* WCAG AA: darker brand orange on light surfaces (4.8:1 vs 2.4:1) */
+  .box-w .box-lbl{color:#B84A0C;}
   .box-p{font-size:25px;line-height:1.5;font-weight:400;}
   .box-w .box-p{color:#243a58;}
   .box-n .box-p{color:rgba(255,255,255,.88);}
 
   .chip{display:inline-block;padding:9px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.3);
     color:rgba(255,255,255,.85);font-size:20px;font-weight:600;letter-spacing:.04em;margin-right:12px;}
-  .chip.orange{border-color:transparent;background:var(--orange-deep);color:#fff;}
+  /* WCAG AA: deep brand orange so white label text hits 5.2:1 */
+  .chip.orange{border-color:transparent;background:#B84A0C;color:#fff;}
   .logo-card{background:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;
     box-shadow:0 24px 60px rgba(0,0,0,.4);}
 
@@ -164,6 +167,7 @@
     <div id="s9b" class="abs" style="inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <img src="assets/logos/align-white.png" style="height:150px;">
       <div class="serif" style="font-size:48px;margin-top:48px;">Channel Partner <span class="o">Program</span></div>
+      <div class="t-rule" id="s9rule" style="margin-top:22px;transform-origin:center;"></div>
       <div class="sub-it" style="font-size:27px;margin-top:14px;">for benefits brokers and referral partners</div>
       <div class="chip orange" style="margin-top:42px;font-size:27px;padding:15px 40px;">alignhcm.com/partners/brokers</div>
       <div class="sub-it" id="s9tag" style="font-size:25px;margin-top:60px;color:rgba(255,255,255,.5);">Align moves at your speed. Which is always "right now."</div>
@@ -638,6 +642,7 @@ function renderS9(t){
   const fadeOut=seg(l,16.6,17.8,Easing.inOutSine);
   b.style.opacity=String(bIn*(1-fadeOut));
   b.style.transform=`translateY(${(1-bIn)*30}px) scale(${.98+.02*bIn})`;
+  document.getElementById('s9rule').style.transform=`scaleX(${seg(l,8.6,9.3,Easing.outExpo)})`;
   document.getElementById('s9tag').style.opacity=String(seg(l,10.4,11.4)*(1-fadeOut));
   const s9=document.getElementById('s9');
   s9.style.filter=fadeOut>0?`brightness(${1-fadeOut})`:'';
