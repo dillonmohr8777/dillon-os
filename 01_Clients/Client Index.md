@@ -23,6 +23,10 @@ tags: [client, moc]
 | [[Bok Law]]                  | —                           | —            | Dec 2025+ | Weekly social media (Wed Wisdom, Family Fridays, Sat Solutions) |
 | [[Bluegrass Janitorial]]     | —                           | —            | —         | SEO blogs, MailChimp emails, product content                    |
 
+## Software Development
+
+- [[Bridge Software Development/overview|Bridge Software Development]] — Tori's cannabis-industry professional network; product discovery, UX/UI, Next.js front end, Supabase planning
+
 ## 1099
 - [[Bok Law]] (also listed under M360)
 - [[Buzz Bull]]
