@@ -4,18 +4,18 @@ A 2:50 looping booth video for Dayforce Discover 2026 (Oct 27–29, Wynn Las Veg
 
 **Deliverable:** `Align-Dayforce-Booth-Video.mp4` (1920x1080, 30fps, 2:50, H.264 + 124bpm EDM bed)
 
-## Chapters (240s loop)
+## Chapters (170s loop)
 
 | Time | Chapter |
 |---|---|
-| 0:00–0:20 | Cold open: Align × Dayforce lockup slides into alignment, "Get more from Dayforce." |
-| 0:20–0:50 | 01 · Why Dayforce: unified architecture, real-time data, "catching errors before they happen. Not after." |
-| 0:50–1:38 | 02 · What we do: 6 numbered services in white/navy boxes (planning, full-suite implementation, integration, data conversion, training & reporting, optimization & fractional) |
-| 1:38–2:08 | 03 · Method: turnkey, 4 numbered phases through go-live |
-| 2:08–2:44 | SmartCare™ for Dayforce: "Go-live isn't the finish line." |
-| 2:44–3:14 | 04 · Why Align: Five Star Consulting Partner, client satisfaction, "right now." |
-| 3:14–3:42 | Outcomes: Reduce friction. Improve adoption. Keep Dayforce aligned. |
-| 3:42–4:00 | CTA: "Let's talk Dayforce." + partner lockup + URL, fade out to loop |
+| 0:00–0:14 | Cold open: Align × Dayforce lockup slides into alignment, "Get more from Dayforce." |
+| 0:14–0:36 | 01 · Why Dayforce: unified architecture, real-time data, "catching errors before they happen. Not after." |
+| 0:36–1:12 | 02 · What we do: 6 numbered services in white/navy boxes (planning, full-suite implementation, integration, data conversion, training & reporting, optimization & fractional) |
+| 1:12–1:34 | 03 · Method: turnkey, 4 numbered phases through go-live |
+| 1:34–1:58 | SmartCare™ for Dayforce: "Go-live isn't the finish line." |
+| 1:58–2:20 | 04 · Why Align: Five Star Consulting Partner, client satisfaction, "right now." |
+| 2:20–2:38 | Outcomes: Reduce friction. Improve adoption. Keep Dayforce aligned. |
+| 2:38–2:50 | CTA: "Let's talk Dayforce." + partner lockup + URL, fade out to loop |
 
 ## Design system
 
