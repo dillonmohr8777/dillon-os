@@ -4,7 +4,7 @@
 // Output: assets/ambient.wav (44.1kHz stereo 16-bit)
 import { writeFileSync } from 'fs';
 
-const SR = 44100, DUR = 240, N = SR * DUR;
+const SR = 44100, DUR = 170, N = SR * DUR;
 const L = new Float64Array(N), R = new Float64Array(N);
 const TWO_PI = Math.PI * 2;
 const BPM = 124, BEAT = 60 / BPM, BAR = BEAT * 4;
@@ -19,16 +19,16 @@ const CHD = {
 };
 const PROG_MAIN = [CHD.Am, CHD.F, CHD.C, CHD.G];
 const PROG_LIFT = [CHD.Am9, CHD.Fma7, CHD.C, CHD.G];
-const chordAt = t => (t >= 164 ? PROG_LIFT : PROG_MAIN)[Math.floor(t / BAR) % 4];
+const chordAt = t => (t >= 118 ? PROG_LIFT : PROG_MAIN)[Math.floor(t / BAR) % 4];
 
 const inSec = (t, a, b, rise = 1.5, fall = 1.5) =>
   Math.min(1, Math.max(0, (t - a) / rise)) * Math.min(1, Math.max(0, (b - t) / fall));
-const kickFullOn = t => inSec(t, 20.2, 127.9, .01, .8) + inSec(t, 163.9, 226, .01, 3);
-const kickIntroOn = t => inSec(t, 4, 20.2, 1.2, .01) + inSec(t, 156, 163.9, 3, .01);
-const hatOn   = t => inSec(t, 24, 127.9, 1.5, .8) + inSec(t, 165.5, 224, .8, 3);
-const hat16On = t => inSec(t, 50, 127.9, 2, .8) + inSec(t, 167.5, 222, .8, 3);
-const arpOn   = t => inSec(t, 35, 127.9, 3, 1) + inSec(t, 130, 226, 4, 3);
-const bassOn  = t => inSec(t, 20.2, 128.3, 1, 1.5) + inSec(t, 163.9, 226, .4, 3);
+const kickFullOn = t => inSec(t, 14.2, 93.9, .01, .8) + inSec(t, 117.9, 162, .01, 2.5);
+const kickIntroOn = t => inSec(t, 2, 14.2, 1, .01) + inSec(t, 112, 117.9, 2.5, .01);
+const hatOn   = t => inSec(t, 16.5, 93.9, 1.2, .8) + inSec(t, 119, 160, .8, 2.5);
+const hat16On = t => inSec(t, 36, 93.9, 1.5, .8) + inSec(t, 121, 158, .8, 2.5);
+const arpOn   = t => inSec(t, 25, 93.9, 2.5, 1) + inSec(t, 96, 162, 3, 2.5);
+const bassOn  = t => inSec(t, 14.2, 94.3, 1, 1.5) + inSec(t, 117.9, 162, .4, 2.5);
 const master  = t => Math.min(1, t / 1.2) * Math.min(1, Math.max(0, (DUR - t - 1) / 6));
 
 let seed = 424242;
@@ -38,7 +38,7 @@ for (let i = 0; i < N; i++) noiseBuf[i] = rnd();
 
 const ARP_STEP = BEAT / 4;
 const ARP_ORDER = [1, 2, 3, 2, 1, 3, 2, 3];
-const risers = [19.9, 49.9, 97.9, 127.9, 163.9, 193.9, 221.9];
+const risers = [13.9, 35.9, 71.9, 93.9, 117.9, 139.9, 157.9];
 
 const phases = new Float64Array(8);
 let bassPhase = 0, bassPhase2 = 0, lpHat = 0, lpNoise = 0, lpIntro = 0;
@@ -135,4 +135,4 @@ hdr.write('fmt ', 12); hdr.writeUInt32LE(16, 16); hdr.writeUInt16LE(1, 20); hdr.
 hdr.writeUInt32LE(SR, 24); hdr.writeUInt32LE(SR * 4, 28); hdr.writeUInt16LE(4, 32); hdr.writeUInt16LE(16, 34);
 hdr.write('data', 36); hdr.writeUInt32LE(pcm.length, 40);
 writeFileSync('assets/ambient.wav', Buffer.concat([hdr, pcm]));
-console.log('wrote assets/ambient.wav (booth EDM, 124bpm, 240s)', ((44 + pcm.length) / 1e6).toFixed(1), 'MB');
+console.log('wrote assets/ambient.wav (booth EDM, 124bpm, 170s)', ((44 + pcm.length) / 1e6).toFixed(1), 'MB');

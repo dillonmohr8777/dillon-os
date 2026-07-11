@@ -8,7 +8,7 @@
   :root{
     --navy:#0d1b2e; --navy-2:#132441; --navy-deep:#091524; --ink:#16283f;
     --orange:#F58220; --orange-deep:#F05A28; --ember:#B84A0C;
-    --df:#3067db; --df-deep:#2450b0;
+    --df:#3067db; --df-deep:#2450b0; --df-light:#6d97ee;
     --muted:rgba(255,255,255,.74);
   }
   html,body{margin:0;padding:0;background:#000;}
@@ -17,47 +17,60 @@
   .scene{position:absolute;inset:0;display:none;}
   .abs{position:absolute;}
 
+  /* richer co-brand backgrounds */
   .deckbg{position:absolute;inset:0;overflow:hidden;
     background:
-      radial-gradient(1300px 900px at 82% 18%, #1a2f50 0%, rgba(26,47,80,0) 62%),
-      radial-gradient(1100px 800px at 8% 108%, rgba(214,106,42,.20) 0%, rgba(214,106,42,0) 55%),
+      radial-gradient(1300px 900px at 84% 14%, rgba(48,103,219,.30) 0%, rgba(48,103,219,0) 60%),
+      radial-gradient(1150px 850px at 6% 110%, rgba(240,90,40,.30) 0%, rgba(240,90,40,0) 55%),
+      radial-gradient(900px 700px at 50% -20%, #1a2f50 0%, rgba(26,47,80,0) 70%),
       linear-gradient(150deg, #0e1d33 0%, #0b1930 46%, #091524 100%);}
   .deckbg.blue{background:
-      radial-gradient(1300px 900px at 82% 18%, #16295c 0%, rgba(22,41,92,0) 62%),
-      radial-gradient(1100px 800px at 8% 108%, rgba(48,103,219,.22) 0%, rgba(48,103,219,0) 55%),
-      linear-gradient(150deg, #0e1d33 0%, #0b1930 46%, #091524 100%);}
-  .dia{position:absolute;background:rgba(255,255,255,.028);transform:rotate(45deg);border-radius:24px;}
-  .dia.o{background:rgba(245,130,32,.05);}
-  .dia.b{background:rgba(48,103,219,.07);}
+      radial-gradient(1400px 950px at 82% 16%, rgba(48,103,219,.42) 0%, rgba(48,103,219,0) 62%),
+      radial-gradient(1000px 800px at 8% 108%, rgba(240,90,40,.22) 0%, rgba(240,90,40,0) 55%),
+      linear-gradient(150deg, #0f2040 0%, #0b1a36 46%, #091524 100%);}
+  .dia{position:absolute;background:rgba(255,255,255,.03);transform:rotate(45deg);border-radius:24px;}
+  .dia.o{background:rgba(245,130,32,.07);}
+  .dia.b{background:rgba(48,103,219,.10);}
 
-  .t-rule{width:64px;height:3px;background:var(--orange);}
-  .t-rule.b{background:var(--df);}
+  /* drifting two-tone glow panel behind content */
+  .gp{position:absolute;width:1400px;height:820px;pointer-events:none;filter:blur(70px);opacity:.85;
+    background:
+      radial-gradient(560px 460px at 26% 42%, rgba(240,90,40,.34), transparent 70%),
+      radial-gradient(640px 520px at 74% 58%, rgba(48,103,219,.4), transparent 70%);}
+
+  .t-rule{width:88px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--orange),var(--df));}
   .kicker{font-size:23px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--orange);}
   .kicker .n{color:rgba(255,255,255,.45);}
-  .kicker.b{color:#6d97ee;}
+  .kicker.b{color:var(--df-light);}
   .serif{font-family:'PT Serif',Georgia,serif;font-weight:700;color:#fff;letter-spacing:0;}
   .serif .o{color:var(--orange);}
-  .serif .bl{color:#6d97ee;}
+  .serif .bl{color:var(--df-light);}
   .sub-it{font-family:'PT Serif',Georgia,serif;font-style:italic;font-weight:400;color:var(--muted);}
   .body-copy{font-weight:400;color:var(--muted);line-height:1.55;}
 
-  .box-w{background:#F4F6FA;border-radius:10px;color:var(--ink);}
-  .box-n{background:rgba(19,36,65,.92);border:1px solid rgba(245,130,32,.55);border-radius:10px;color:#fff;}
-  .box-n.blue{border-color:rgba(109,151,238,.6);}
+  /* gradient boxes */
+  .box-w{background:linear-gradient(160deg,#ffffff 0%,#eef2fa 55%,#dfe9fb 100%);border-radius:12px;color:var(--ink);
+    box-shadow:0 30px 80px rgba(48,103,219,.30);}
+  .box-n{background:linear-gradient(135deg, rgba(48,103,219,.30) 0%, rgba(19,36,65,.95) 52%, rgba(240,90,40,.16) 100%);
+    border:1px solid rgba(109,151,238,.45);border-radius:12px;color:#fff;
+    box-shadow:0 30px 80px rgba(9,19,33,.55);}
   .box-lbl{font-size:20px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);}
   .box-w .box-lbl{color:var(--ember);}
   .box-p{font-size:27px;line-height:1.5;}
   .box-w .box-p{color:#243a58;}
-  .box-n .box-p{color:rgba(255,255,255,.88);}
+  .box-n .box-p{color:rgba(255,255,255,.9);}
   .chip{display:inline-block;padding:11px 26px;border-radius:999px;border:1px solid rgba(255,255,255,.3);
     color:rgba(255,255,255,.85);font-size:22px;font-weight:600;letter-spacing:.04em;}
-  .chip.orange{border-color:transparent;background:var(--ember);color:#fff;}
+  .chip.orange{border-color:transparent;background:linear-gradient(135deg,#C2540F,#A3450F);color:#fff;
+    box-shadow:0 14px 40px rgba(240,90,40,.35);}
 
-  .num-ic{width:64px;height:64px;border-radius:50%;background:var(--orange-deep);color:#fff;display:flex;
-    align-items:center;justify-content:center;font-family:'PT Serif',serif;font-weight:700;font-size:30px;}
-  .num-ic.b{background:var(--df);}
+  .num-ic{width:64px;height:64px;border-radius:50%;color:#fff;display:flex;flex:none;
+    align-items:center;justify-content:center;font-family:'PT Serif',serif;font-weight:700;font-size:30px;
+    background:linear-gradient(145deg,#FF8A50,#F05A28);box-shadow:0 10px 30px rgba(240,90,40,.4);}
+  .num-ic.b{background:linear-gradient(145deg,#5b8cf0,#2450b0);box-shadow:0 10px 30px rgba(48,103,219,.45);}
 
   .foot{position:absolute;left:0;right:0;bottom:0;height:54px;background:rgba(9,19,33,.85);
+    border-top:1px solid rgba(109,151,238,.22);
     display:flex;align-items:center;justify-content:space-between;padding:0 60px;box-sizing:border-box;z-index:5;}
   .foot .l{font-size:17px;font-weight:600;letter-spacing:.12em;color:rgba(255,255,255,.55);text-transform:uppercase;}
   .foot .l b{color:var(--orange);font-weight:700;}
@@ -66,7 +79,6 @@
   .center-col{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 150px;}
   .left-col{position:absolute;left:150px;right:200px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;}
 
-  /* signature: dual slash bars */
   .slash{position:absolute;top:-200px;bottom:-200px;width:240px;z-index:60;display:none;}
   #slashO{background:linear-gradient(160deg,#F58220,#F05A28);}
   #slashB{background:linear-gradient(160deg,#4a7ce4,#2450b0);}
@@ -77,18 +89,19 @@
 <body>
 <div id="stage">
 
-  <!-- C1 · cold open: alignment lockup -->
+  <!-- C1 · cold open -->
   <div class="scene" id="c1">
     <div class="deckbg"><div class="dia" style="width:420px;height:420px;right:-120px;top:-140px;"></div>
       <div class="dia b" style="width:200px;height:200px;right:430px;top:190px;"></div>
       <div class="dia o" style="width:170px;height:170px;left:210px;bottom:150px;"></div></div>
+    <div class="gp" id="c1gp" style="left:260px;top:130px;"></div>
     <div class="center-col" id="c1lockup">
       <div style="display:flex;align-items:center;gap:56px;">
         <img id="c1align" src="assets/logos/align-white.png" style="height:150px;">
         <div id="c1x" class="serif" style="font-size:110px;color:var(--orange);">×</div>
         <img id="c1df" src="assets/logos/dayforce-white.png" style="height:96px;">
       </div>
-      <div class="kicker" id="c1kick" style="margin-top:52px;">Implementation &amp; Optimization Partner</div>
+      <div class="kicker" id="c1kick" style="margin-top:48px;">Implementation &amp; Optimization Partner</div>
     </div>
     <div class="center-col" id="c1title">
       <div class="t-rule" style="transform-origin:center;" id="c1rule"></div>
@@ -98,46 +111,49 @@
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">alignhcm.com/partners/dayforce</div></div>
   </div>
 
-  <!-- C2 · why dayforce (blue world) -->
+  <!-- C2 · why dayforce -->
   <div class="scene" id="c2">
     <div class="deckbg blue"><div class="dia b" style="width:440px;height:440px;right:-130px;top:-150px;"></div>
       <div class="dia" style="width:300px;height:300px;left:-90px;bottom:70px;"></div></div>
+    <div class="gp" id="c2gp" style="left:60px;top:110px;"></div>
     <div class="left-col" id="c2a">
-      <div class="t-rule b"></div>
+      <div class="t-rule"></div>
       <div class="kicker b" style="margin-top:22px;"><span class="n">01 —</span> Why Dayforce</div>
       <div class="serif" style="font-size:96px;margin-top:28px;">One platform.<br>One <span class="bl">unified architecture.</span></div>
       <div class="sub-it" style="font-size:34px;margin-top:30px;">Workforce data, processed in real time.</div>
     </div>
     <div class="left-col" id="c2b">
-      <div class="serif" style="font-size:76px;">Payroll, time, scheduling, and HR<br>flow together, catching errors</div>
-      <div class="serif" style="font-size:96px;margin-top:30px;"><span class="o">before</span> they happen. Not after.</div>
+      <div class="serif" style="font-size:74px;">Payroll, time, scheduling, and HR<br>flow together, catching errors</div>
+      <div class="serif" style="font-size:96px;margin-top:30px;"><span class="o">before</span> they happen. <span class="bl">Not after.</span></div>
     </div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">The continuous calculation engine</div></div>
   </div>
 
-  <!-- C3 · services (built by JS) -->
+  <!-- C3 · services -->
   <div class="scene" id="c3">
     <div class="deckbg"><div class="dia" style="width:400px;height:400px;right:-120px;top:-140px;"></div>
       <div class="dia o" style="width:180px;height:180px;left:230px;bottom:160px;"></div></div>
-    <div class="abs" style="top:96px;left:120px;">
+    <div class="gp" id="c3gp" style="left:260px;top:230px;"></div>
+    <div class="abs" style="top:88px;left:120px;">
       <div class="t-rule"></div>
       <div class="kicker" style="margin-top:20px;"><span class="n">02 —</span> What we do for Dayforce clients</div>
       <div class="serif" id="c3h" style="font-size:64px;margin-top:22px;">Every phase. <span class="o">Every module.</span></div>
     </div>
     <div id="c3host" class="abs" style="left:120px;right:120px;top:360px;height:560px;"></div>
-    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l" id="c3count">1 / 6</div></div>
+    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l" id="c3count">1–2 / 6</div></div>
   </div>
 
   <!-- C4 · method -->
   <div class="scene" id="c4">
     <div class="deckbg"><div class="dia" style="width:380px;height:380px;right:-110px;top:-130px;"></div>
       <div class="dia b" style="width:170px;height:170px;left:220px;bottom:140px;"></div></div>
-    <div class="abs" style="top:96px;left:120px;">
+    <div class="gp" id="c4gp" style="left:260px;top:220px;"></div>
+    <div class="abs" style="top:88px;left:120px;">
       <div class="t-rule"></div>
       <div class="kicker" style="margin-top:20px;"><span class="n">03 —</span> How we do it</div>
-      <div class="serif" style="font-size:64px;margin-top:22px;">A <span class="o">turnkey</span> approach, planning through go-live.</div>
+      <div class="serif" style="font-size:64px;margin-top:22px;">A <span class="o">turnkey</span> approach, planning through <span class="bl">go-live.</span></div>
     </div>
-    <div id="c4grid" class="abs" style="left:120px;right:120px;top:380px;height:520px;"></div>
+    <div id="c4grid" class="abs" style="left:120px;right:120px;top:400px;height:520px;"></div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">Certified Dayforce experts</div></div>
   </div>
 
@@ -145,21 +161,23 @@
   <div class="scene" id="c5">
     <div class="deckbg"><div class="dia" style="width:380px;height:380px;right:-110px;top:-130px;"></div>
       <div class="dia o" style="width:170px;height:170px;left:220px;bottom:140px;"></div></div>
+    <div class="gp" id="c5gp" style="left:260px;top:130px;"></div>
     <div class="center-col" id="c5a">
-      <div class="serif" style="font-size:88px;">And go-live isn't the <span class="o">finish line.</span></div>
+      <div class="serif" style="font-size:92px;">And go-live isn't the <span class="o">finish line.</span></div>
     </div>
     <div class="center-col" id="c5b">
-      <img id="c5logo" src="assets/logos/smartcare-light.png" style="height:280px;">
-      <div class="body-copy" id="c5p" style="font-size:36px;margin-top:44px;max-width:1250px;">SmartCare™ keeps Dayforce optimized, compliant, and aligned with your business, with dedicated experts who know your configuration.</div>
-      <div class="sub-it" id="c5t" style="font-size:34px;margin-top:34px;">Your HCM platform should work for you. <span style="color:var(--orange);">Not the other way around.</span></div>
+      <img id="c5logo" src="assets/logos/smartcare-light.png" style="height:270px;">
+      <div class="body-copy" id="c5p" style="font-size:35px;margin-top:40px;max-width:1250px;">SmartCare™ keeps Dayforce optimized, compliant, and aligned with your business, with dedicated experts who know your configuration.</div>
+      <div class="sub-it" id="c5t" style="font-size:34px;margin-top:30px;">Your HCM platform should work for you. <span style="color:var(--orange);">Not the other way around.</span></div>
     </div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">SmartCare™ for Dayforce</div></div>
   </div>
 
-  <!-- C6 · why align: big statements -->
+  <!-- C6 · why align -->
   <div class="scene" id="c6">
     <div class="deckbg"><div class="dia" style="width:440px;height:440px;right:-140px;top:-150px;"></div>
       <div class="dia b" style="width:190px;height:190px;right:380px;bottom:130px;"></div></div>
+    <div class="gp" id="c6gp" style="left:60px;top:110px;"></div>
     <div class="left-col" id="c6a">
       <div class="t-rule"></div>
       <div class="kicker" style="margin-top:22px;"><span class="n">04 —</span> Why Align</div>
@@ -175,35 +193,36 @@
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">alignhcm.com</div></div>
   </div>
 
-  <!-- C7 · outcomes trio -->
+  <!-- C7 · outcomes -->
   <div class="scene" id="c7">
     <div class="deckbg blue"><div class="dia b" style="width:420px;height:420px;right:-130px;top:-140px;"></div>
       <div class="dia o" style="width:180px;height:180px;left:200px;bottom:150px;"></div></div>
+    <div class="gp" id="c7gp" style="left:260px;top:130px;"></div>
     <div class="center-col" id="c7a"><div class="serif" style="font-size:150px;">Reduce <span class="o">friction.</span></div></div>
     <div class="center-col" id="c7b"><div class="serif" style="font-size:150px;">Improve <span class="bl">adoption.</span></div></div>
     <div class="center-col" id="c7c"><div class="serif" style="font-size:110px;">Keep Dayforce <span class="o">aligned</span><br>with your business.</div></div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">Practical, by design</div></div>
   </div>
 
-  <!-- C8 · CTA / loop close -->
+  <!-- C8 · CTA -->
   <div class="scene" id="c8">
     <div class="deckbg"><div class="dia" style="width:440px;height:440px;right:-140px;top:-150px;"></div>
       <div class="dia o" style="width:200px;height:200px;right:360px;bottom:120px;"></div></div>
+    <div class="gp" id="c8gp" style="left:260px;top:130px;"></div>
     <div class="center-col" id="c8a">
       <div style="display:flex;align-items:center;gap:48px;">
         <img src="assets/logos/align-white.png" style="height:120px;">
         <div class="serif" style="font-size:88px;color:var(--orange);">×</div>
         <img src="assets/logos/dayforce-white.png" style="height:78px;">
       </div>
-      <div class="serif" id="c8h" style="font-size:96px;margin-top:56px;">Let's talk <span class="bl">Dayforce.</span></div>
-      <div class="t-rule" id="c8rule" style="margin-top:26px;transform-origin:center;"></div>
-      <div class="chip orange" id="c8chip" style="margin-top:40px;font-size:29px;padding:17px 44px;">alignhcm.com/partners/dayforce</div>
-      <div class="sub-it" id="c8sub" style="font-size:30px;margin-top:44px;color:rgba(255,255,255,.6);">Stop by. Bring your toughest Dayforce question.</div>
+      <div class="serif" id="c8h" style="font-size:96px;margin-top:52px;">Let's talk <span class="bl">Dayforce.</span></div>
+      <div class="t-rule" id="c8rule" style="margin-top:24px;transform-origin:center;"></div>
+      <div class="chip orange" id="c8chip" style="margin-top:38px;font-size:29px;padding:17px 44px;">alignhcm.com/partners/dayforce</div>
+      <div class="sub-it" id="c8sub" style="font-size:30px;margin-top:40px;color:rgba(255,255,255,.6);">Stop by. Bring your toughest Dayforce question.</div>
     </div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">Dayforce Discover 2026</div></div>
   </div>
 
-  <!-- signature transition: dual slashes -->
   <div class="slash" id="slashO"></div>
   <div class="slash" id="slashB"></div>
 </div>
@@ -225,21 +244,24 @@ const BEAT_HZ=124/60;
 
 const bgCache={};
 function driftBg(id,t){
-  if(!bgCache[id]) bgCache[id]=[...document.querySelectorAll('#'+id+' .dia')];
-  bgCache[id].forEach((d,k)=>{
+  if(!bgCache[id]){
+    bgCache[id]={dia:[...document.querySelectorAll('#'+id+' .dia')],gp:document.querySelector('#'+id+' .gp')};
+  }
+  bgCache[id].dia.forEach((d,k)=>{
     const ph=k*2.1+id.length;
-    d.style.transform=`rotate(${45+Math.sin(t*.13+ph)*4}deg) translate(${Math.sin(t*.11+ph)*22}px,${Math.cos(t*.09+ph)*16}px)`;
+    d.style.transform=`rotate(${45+Math.sin(t*.16+ph)*5}deg) translate(${Math.sin(t*.14+ph)*28}px,${Math.cos(t*.11+ph)*20}px)`;
   });
+  const gp=bgCache[id].gp;
+  if(gp) gp.style.transform=`translate(${Math.sin(t*.21+id.length)*70}px,${Math.cos(t*.17+id.length)*44}px) rotate(${Math.sin(t*.09)*8}deg) scale(${1+.06*Math.sin(t*.13+id.length)})`;
 }
 
-/* ============ timeline: 240s, 8 chapters ============ */
-const DUR=240;
+/* ============ timeline: 170s, 8 chapters ============ */
+const DUR=170;
 const CH={
-  c1:[0,20], c2:[20,50], c3:[50,98], c4:[98,128],
-  c5:[128,164], c6:[164,194], c7:[194,222], c8:[222,240],
+  c1:[0,14], c2:[14,36], c3:[36,72], c4:[72,94],
+  c5:[94,118], c6:[118,140], c7:[140,158], c8:[158,170],
 };
 
-/* ============ C3 services content ============ */
 const SERVICES=[
   {n:1,t:"Implementation Planning",p:"Scope, timeline, and readiness mapped before the first configuration screen.",w:1},
   {n:2,t:"Full-Suite Implementation",p:"Every Dayforce module, implemented by certified experts who've done it before.",w:0},
@@ -252,15 +274,14 @@ const c3host=document.getElementById('c3host');
 SERVICES.forEach((s,i)=>{
   const el=document.createElement('div');
   el.className=(s.w?'box-w':'box-n')+' abs'; el.id='svc'+i;
-  el.style.cssText+=';width:840px;padding:46px 50px;box-sizing:border-box;top:110px;min-height:320px;'+(i%2? 'left:900px;':'left:0px;');
+  el.style.cssText+=';width:840px;padding:46px 50px;box-sizing:border-box;top:90px;min-height:330px;'+(i%2?'left:900px;':'left:0px;');
   el.innerHTML=`<div style="display:flex;gap:26px;align-items:center;">
-      <div class="num-ic ${i%2?'':'b'}" style="${s.w?'':''}">${s.n}</div>
+      <div class="num-ic ${i%2?'':'b'}">${s.n}</div>
       <div class="box-lbl" style="font-size:24px;">${s.t}</div></div>
     <div class="box-p" style="margin-top:22px;font-size:30px;">${s.p}</div>`;
   c3host.appendChild(el);
 });
 
-/* C4 method grid */
 const STEPS=[
   {t:"Planning & Configuration",s:"Discovery, requirements, and a build mapped to how the business actually works."},
   {t:"Data Migration & Integrations",s:"Clean data in, every connected system talking, nothing left behind."},
@@ -273,148 +294,145 @@ STEPS.forEach((st,i)=>{
   el.className='abs'; el.id='mit'+i;
   el.style.cssText=`width:800px;left:${(i%2)*880}px;top:${Math.floor(i/2)*250}px;`;
   el.innerHTML=`<div style="display:flex;gap:26px;align-items:flex-start;">
-    <div class="num-ic">${i+1}</div>
+    <div class="num-ic ${i%2?'b':''}">${i+1}</div>
     <div><div style="font-size:31px;font-weight:700;color:#fff;">${st.t}</div>
     <div class="body-copy" style="font-size:24px;margin-top:8px;max-width:660px;">${st.s}</div></div></div>`;
   c4grid.appendChild(el);
 });
 
-/* ============ chapter renderers ============ */
-function inOut(el,l,inA,inB,outA,outB,slide=60){
+/* ============ shared entrance/exit helpers ============ */
+function inOut(el,l,inA,inB,outA,outB,slide=70){
   const i=seg(l,inA,inB,Easing.outExpo), o=seg(l,outA,outB,Easing.inCubic);
   el.style.opacity=String(i*(1-o));
   const hold=clamp((l-inB)/(outA-inB||1),0,1);
-  el.style.transform=`translateX(${(1-i)*slide-o*slide*.7+hold*10}px) scale(${1+.02*hold})`;
-  el.style.filter=(i>0&&i<1)||(o>0&&o<1)?`blur(${Math.sin(Math.PI*Math.max(o,1-i))*6}px)`:'';
+  el.style.transform=`translateX(${(1-i)*slide-o*slide*.7+hold*12}px) scale(${1+.025*hold})`;
+  el.style.filter=(i>0&&i<1)||(o>0&&o<1)?`blur(${Math.sin(Math.PI*Math.max(o,1-i))*7}px)`:'';
   return {i,o};
 }
 function centerInOut(el,l,inA,inB,outA,outB){
   const i=seg(l,inA,inB,Easing.outExpo), o=seg(l,outA,outB,Easing.inCubic);
   el.style.opacity=String(i*(1-o));
   const hold=clamp((l-inB)/(outA-inB||1),0,1);
-  el.style.transform=`translateY(${(1-i)*46-o*30}px) scale(${.97+.03*i+.02*hold})`;
-  el.style.filter=(i>0&&i<1)||(o>0&&o<1)?`blur(${Math.sin(Math.PI*Math.max(o,1-i))*7}px)`:'';
+  el.style.transform=`translateY(${(1-i)*50-o*34}px) scale(${.96+.04*i+.025*hold})`;
+  el.style.filter=(i>0&&i<1)||(o>0&&o<1)?`blur(${Math.sin(Math.PI*Math.max(o,1-i))*8}px)`:'';
   return {i,o};
 }
 
+/* ============ chapters ============ */
 function renderC1(t){
   const l=t-CH.c1[0]; driftBg('c1',t);
-  // fade whole scene in from black for seamless loop
-  document.getElementById('c1').style.filter=`brightness(${seg(l,0,1.2,Easing.outCubic)})`;
+  document.getElementById('c1').style.filter=`brightness(${seg(l,0,.9,Easing.outCubic)})`;
   const lock=document.getElementById('c1lockup');
-  const li=seg(l,.4,1.5,Easing.outExpo), lo=seg(l,8.6,9.4,Easing.inCubic);
+  const li=seg(l,.3,1.1,Easing.outExpo), lo=seg(l,5.9,6.6,Easing.inCubic);
   lock.style.opacity=String(li*(1-lo));
   lock.style.transform=`translateY(${(1-li)*40-lo*30}px) scale(${.96+.04*li})`;
-  // logos slide together from opposite sides (the alignment)
-  document.getElementById('c1align').style.transform=`translateX(${(1-li)*-160}px)`;
-  document.getElementById('c1df').style.transform=`translateX(${(1-li)*160}px)`;
+  document.getElementById('c1align').style.transform=`translateX(${(1-li)*-180}px)`;
+  document.getElementById('c1df').style.transform=`translateX(${(1-li)*180}px)`;
   const x=document.getElementById('c1x');
-  const xi=seg(l,1.5,2.2,Easing.outExpo);
+  const xi=seg(l,1.1,1.7,Easing.outExpo);
   x.style.opacity=String(xi);
   x.style.transform=`scale(${1.6-.6*xi}) rotate(${(1-xi)*90}deg)`;
-  document.getElementById('c1kick').style.opacity=String(seg(l,2.2,3,Easing.outExpo));
+  document.getElementById('c1kick').style.opacity=String(seg(l,1.7,2.4,Easing.outExpo));
   const title=document.getElementById('c1title');
-  const ti=seg(l,9.6,10.5,Easing.outExpo), to=seg(l,18.6,19.5,Easing.inCubic);
+  const ti=seg(l,6.6,7.5,Easing.outExpo), to=seg(l,13.0,13.8,Easing.inCubic);
   title.style.opacity=String(ti*(1-to));
-  title.style.transform=`translateY(${(1-ti)*46}px) scale(${1+.02*clamp((l-10.5)/8,0,1)})`;
-  document.getElementById('c1rule').style.transform=`scaleX(${seg(l,10.2,10.9,Easing.outExpo)})`;
+  title.style.transform=`translateY(${(1-ti)*46}px) scale(${1+.025*clamp((l-7.5)/5.5,0,1)})`;
+  document.getElementById('c1rule').style.transform=`scaleX(${seg(l,7.1,7.7,Easing.outExpo)})`;
 }
 
 function renderC2(t){
   const l=t-CH.c2[0]; driftBg('c2',t);
-  inOut(document.getElementById('c2a'),l,.3,1.2,13.6,14.4);
-  inOut(document.getElementById('c2b'),l,14.4,15.3,28.6,29.5);
+  inOut(document.getElementById('c2a'),l,.2,1.0,10.3,11.0);
+  inOut(document.getElementById('c2b'),l,11.0,11.8,21.2,21.9);
 }
 
 function renderC3(t){
   const l=t-CH.c3[0]; driftBg('c3',t);
   const head=document.getElementById('c3h').parentElement;
-  head.style.opacity=String(seg(l,.2,1,Easing.outExpo));
-  head.style.transform=`translateY(${(1-seg(l,.2,1,Easing.outExpo))*30}px)`;
-  // service pairs: 3 waves of 2, each ~15.3s
-  const WAVE=15.3;
+  head.style.opacity=String(seg(l,.2,.9,Easing.outExpo));
+  head.style.transform=`translateY(${(1-seg(l,.2,.9,Easing.outExpo))*30}px)`;
+  const WAVE=11.3;
   for(let i=0;i<6;i++){
     const el=document.getElementById('svc'+i);
     const wave=Math.floor(i/2);
-    const wStart=1.2+wave*WAVE;
-    const inA=wStart+(i%2)*.5, inB=inA+.9;
-    const outA=wStart+WAVE-1.1, outB=wStart+WAVE-.2;
-    const ii=seg(l,inA,inB,Easing.outExpo), oo=wave<2?seg(l,outA,outB,Easing.inCubic):seg(l,46.6,47.6,Easing.inCubic);
+    const wStart=1.0+wave*WAVE;
+    const inA=wStart+(i%2)*.35, inB=inA+.8;
+    const outA=wStart+WAVE-1.0, outB=wStart+WAVE-.2;
+    const ii=seg(l,inA,inB,Easing.outExpo), oo=wave<2?seg(l,outA,outB,Easing.inCubic):seg(l,34.9,35.7,Easing.inCubic);
     el.style.opacity=String(ii*(1-oo));
-    const dir=i%2?70:-70;
-    el.style.transform=`translateX(${(1-ii)*dir-oo*dir*.6}px) translateY(${Math.sin(t*1.05+i)*4*ii}px) rotate(${(1-ii)*(i%2?1.2:-1.2)}deg)`;
-    el.style.filter=(ii>0&&ii<1)||(oo>0&&oo<1)?`blur(${Math.sin(Math.PI*Math.max(oo,1-ii))*6}px)`:'';
+    const dir=i%2?80:-80;
+    el.style.transform=`translateX(${(1-ii)*dir-oo*dir*.6}px) translateY(${Math.sin(t*1.15+i)*5*ii}px) rotate(${(1-ii)*(i%2?1.4:-1.4)}deg)`;
+    el.style.filter=(ii>0&&ii<1)||(oo>0&&oo<1)?`blur(${Math.sin(Math.PI*Math.max(oo,1-ii))*7}px)`:'';
   }
-  const wave=clamp(Math.floor((l-1.2)/WAVE),0,2);
+  const wave=clamp(Math.floor((l-1.0)/WAVE),0,2);
   document.getElementById('c3count').textContent=`${wave*2+1}–${wave*2+2} / 6`;
 }
 
 function renderC4(t){
   const l=t-CH.c4[0]; driftBg('c4',t);
-  const head=document.querySelector('#c4 > .abs');
-  head.style.opacity=String(seg(l,.2,1,Easing.outExpo));
-  head.style.transform=`translateY(${(1-seg(l,.2,1,Easing.outExpo))*30}px)`;
+  const head=document.querySelector('#c4 > .abs:not(.gp)');
+  const hi=seg(l,.2,.9,Easing.outExpo);
+  head.style.opacity=String(hi);
+  head.style.transform=`translateY(${(1-hi)*30}px)`;
   STEPS.forEach((s,i)=>{
     const el=document.getElementById('mit'+i);
-    const ci=seg(l,1.4+i*.9,2.3+i*.9,Easing.outExpo);
+    const ci=seg(l,1.1+i*.6,1.9+i*.6,Easing.outExpo);
     el.style.opacity=String(ci);
-    el.style.transform=`translateY(${(1-ci)*34+Math.sin(t*1.1+i*1.6)*4*ci}px) scale(${.92+.08*ci})`;
+    el.style.transform=`translateY(${(1-ci)*34+Math.sin(t*1.2+i*1.6)*5*ci}px) scale(${.92+.08*ci})`;
   });
 }
 
 function renderC5(t){
   const l=t-CH.c5[0]; driftBg('c5',t);
-  centerInOut(document.getElementById('c5a'),l,.3,1.2,7.6,8.4);
+  centerInOut(document.getElementById('c5a'),l,.3,1.1,5.6,6.3);
   const b=document.getElementById('c5b');
-  const bi=seg(l,8.4,9.3,Easing.outExpo), bo=seg(l,34.6,35.6,Easing.inCubic);
+  const bi=seg(l,6.3,7.1,Easing.outExpo), bo=seg(l,23.1,23.9,Easing.inCubic);
   b.style.opacity=String(bi*(1-bo));
   const logo=document.getElementById('c5logo');
-  const breathe=1+.012*Math.sin(2*Math.PI*t*BEAT_HZ/2)*bi;
-  logo.style.transform=`scale(${(.88+.12*bi)*breathe}) translateY(${Math.sin(t*.9)*4*bi}px)`;
-  document.getElementById('c5p').style.opacity=String(seg(l,10.2,11.1,Easing.outExpo));
-  document.getElementById('c5t').style.opacity=String(seg(l,12.2,13.1,Easing.outExpo));
+  const breathe=1+.014*Math.sin(2*Math.PI*t*BEAT_HZ/2)*bi;
+  logo.style.transform=`scale(${(.88+.12*bi)*breathe}) translateY(${Math.sin(t*.9)*5*bi}px)`;
+  document.getElementById('c5p').style.opacity=String(seg(l,8.0,8.8,Easing.outExpo));
+  document.getElementById('c5t').style.opacity=String(seg(l,9.9,10.7,Easing.outExpo));
 }
 
 function renderC6(t){
   const l=t-CH.c6[0]; driftBg('c6',t);
-  inOut(document.getElementById('c6a'),l,.3,1.2,9.2,10.0);
-  inOut(document.getElementById('c6b'),l,10.0,10.9,18.8,19.6);
-  inOut(document.getElementById('c6c'),l,19.6,20.5,28.6,29.5);
+  inOut(document.getElementById('c6a'),l,.2,1.0,6.8,7.5);
+  inOut(document.getElementById('c6b'),l,7.5,8.3,14.1,14.8);
+  inOut(document.getElementById('c6c'),l,14.8,15.6,21.2,21.9);
 }
 
 function renderC7(t){
   const l=t-CH.c7[0]; driftBg('c7',t);
-  centerInOut(document.getElementById('c7a'),l,.3,1.1,8.2,9.0);
-  centerInOut(document.getElementById('c7b'),l,9.0,9.8,17.4,18.2);
-  centerInOut(document.getElementById('c7c'),l,18.2,19.0,26.8,27.6);
+  centerInOut(document.getElementById('c7a'),l,.2,1.0,5.5,6.2);
+  centerInOut(document.getElementById('c7b'),l,6.2,7.0,11.5,12.2);
+  centerInOut(document.getElementById('c7c'),l,12.2,13.0,17.3,18.0);
 }
 
 function renderC8(t){
   const l=t-CH.c8[0]; driftBg('c8',t);
   const a=document.getElementById('c8a');
-  const ai=seg(l,.4,1.4,Easing.outExpo);
+  const ai=seg(l,.3,1.2,Easing.outExpo);
   a.style.opacity=String(ai);
   a.style.transform=`translateY(${(1-ai)*40}px)`;
-  document.getElementById('c8rule').style.transform=`scaleX(${seg(l,1.6,2.3,Easing.outExpo)})`;
+  document.getElementById('c8rule').style.transform=`scaleX(${seg(l,1.3,1.9,Easing.outExpo)})`;
   const chip=document.getElementById('c8chip');
-  chip.style.transform=`scale(${1+.018*Math.max(0,Math.sin(2*Math.PI*t*BEAT_HZ/2))})`;
-  chip.style.opacity=String(seg(l,2.2,3,Easing.outExpo));
-  document.getElementById('c8sub').style.opacity=String(seg(l,3.4,4.2,Easing.outExpo));
-  // loop close: fade to black over the final 2.5s (matches C1's fade-in)
-  const out=seg(l,15.5,18,Easing.inOutSine);
+  chip.style.transform=`scale(${1+.02*Math.max(0,Math.sin(2*Math.PI*t*BEAT_HZ/2))})`;
+  chip.style.opacity=String(seg(l,1.8,2.5,Easing.outExpo));
+  document.getElementById('c8sub').style.opacity=String(seg(l,2.8,3.5,Easing.outExpo));
+  const out=seg(l,9.5,12,Easing.inOutSine);
   document.getElementById('c8').style.filter=`brightness(${1-out})`;
 }
 
-/* ============ signature dual-slash transition ============ */
-const CUTS=[20,50,98,128,164,194,222]; // chapter boundaries
+/* ============ dual-slash transitions ============ */
+const CUTS=[14,36,72,94,118,140,158];
 function renderSlash(t){
   const o=document.getElementById('slashO'), b=document.getElementById('slashB');
   let on=false;
   for(const c of CUTS){
-    if(t>=c-.55&&t<=c+.55){
+    if(t>=c-.5&&t<=c+.5){
       on=true;
-      const p=seg(t,c-.55,c+.55,Easing.inOutQuint);
-      // orange sweeps L->R, blue sweeps R->L, crossing at center on the cut
+      const p=seg(t,c-.5,c+.5,Easing.inOutQuint);
       o.style.display='block'; b.style.display='block';
       o.style.transform=`translateX(${-400+p*(1920+800)}px) skewX(-14deg)`;
       b.style.transform=`translateX(${1920+200-p*(1920+800)}px) skewX(-14deg)`;
@@ -430,7 +448,6 @@ function seekTo(t){
   t=clamp(t,0,DUR);
   for(const s of SCENES){
     const el=document.getElementById(s.id);
-    // scenes hard-cut behind the slash sweep; small overlap for safety
     if(t>=s.range[0]-.05&&t<=s.range[1]+.05){el.style.display='block';FNS[s.id](t);}
     else el.style.display='none';
   }
