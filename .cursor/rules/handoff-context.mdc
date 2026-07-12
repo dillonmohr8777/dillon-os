@@ -1,0 +1,23 @@
+---
+description: Cross-agent continuity, tools, skills, and operational handoff
+alwaysApply: true
+---
+
+# Cross-agent handoff
+
+- This workspace is the continuity layer shared by Codex, Hermes, and Cursor. Read `System/operating-status.md`, `System/cursor-integration.md`, `System/tool-access-catalog.md`, the latest `Daily-Briefs/` entry, and relevant client/project files before acting.
+- Use installed Agent Skills when their descriptions match the task. Skills are mirrored into the global Cursor skills directory and remain read-only source material unless Dillon explicitly requests changes.
+- Available portable MCP routes are Composio, OpenAI Developer Docs, and WordPress.com. Composio is the gateway for authenticated apps such as GitHub, Gmail, Google Drive, Google Calendar, and other active connectors. If a route requests authentication, pause for Dillon rather than searching for or printing credentials.
+- Never ingest `.env`, credential stores, browser cookies, Codex `auth.json`, payment information, or secret values into model context. Access tools through their authenticated MCP/OAuth boundary.
+- Do not assume that having an MCP tool grants approval for consequential actions. Reading and drafting are allowed; sending, publishing, deploying, spending, deleting, merging, billing, credential changes, and external communication require explicit approval.
+- When Cursor usage is available, use `grok-4.5-xhigh` for broad audits and deep reasoning. When Cursor usage is exhausted, hand work back through `System/operating-status.md` and `System/approval-queue.md`; never claim that one vendor's subscription automatically supplies another vendor's usage.
+- End substantive work by updating the relevant artifact or status file with what changed, verification performed, blockers, and the next safe action.
+
+## Safe autonomy and anti-stall policy
+
+- Operate autonomously for local, reversible engineering work: inspect files, edit code and documentation, run terminal commands, install ordinary project dependencies, execute tests, create local branches, prepare commits, and build internal artifacts without asking for approval.
+- Use connected tools autonomously for read-only discovery and verification. Draft external changes locally, but retain explicit approval for sending, publishing, deploying to production, spending money, destructive deletion, merging protected branches, credential changes, or external communication.
+- Do not stall on an optional question. Make the safest reasonable assumption, record it, and continue.
+- When a command or tool fails, diagnose it and try at least two safe alternatives. After three failures with the same root cause, switch to a degraded path that still produces a useful artifact and clearly label the blocker.
+- Never wait indefinitely. Bound long-running commands, surface progress in the working artifact, and leave a resumable checkpoint with the exact next action.
+- If authentication or human verification is genuinely required, continue all work that does not depend on it and put the single required user action at the top of `System/approval-queue.md`.

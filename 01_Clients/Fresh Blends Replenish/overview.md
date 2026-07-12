@@ -1,4 +1,4 @@
----
+﻿---
 client: Fresh Blends / Replenish
 website: getreplenish.com
 monthly_fee: 500
@@ -9,7 +9,7 @@ status: active
 contact_name: Mia Lange
 contact_email: mia@getreplenish.com
 cc_list: [sean@needmomentum.com]
-last_touched: 2026-04-13
+last_touched: 2026-07-12
 next_action: Confirm campaigns launched 2026-04-13 are pacing correctly; send first-week performance snapshot
 due: none
 tags: [client, momentum360, google-ads, pmax, food-beverage]
@@ -37,7 +37,7 @@ B2C Google Ads program driving in-store traffic to 5 South Florida 7-Eleven bran
 ## Access state
 - Google Analytics: Dillon has access.
 - Google Ads: Admin access granted to Mia 2026-04-12 (so she can enter billing CC).
-- Google Business Profile: Manager access needed for all 5 kiosk locations — confirm status.
+- Google Business Profile: Manager access needed for all 5 kiosk locations â€” confirm status.
 
 ## Open items
 - Verify 2026-04-13 launch actually executed and is spending.

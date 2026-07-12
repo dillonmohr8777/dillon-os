@@ -1,4 +1,4 @@
----
+﻿---
 client: Onsite Concrete & Landscape
 website: onsiteconcretelandscape.com
 monthly_fee: unknown
@@ -8,7 +8,7 @@ status: active
 contact_name: Grace Slagle
 contact_email: gracieslags@gmail.com
 cc_list: [onsiteclp@gmail.com, sean@needmomentum.com]
-last_touched: 2026-04-09
+last_touched: 2026-07-12
 next_action: Attend weekly Onsite x M360 call Thursday 2026-04-16 1:00 PM ET
 due: 2026-04-16
 tags: [client, momentum360, concrete, landscape]
@@ -16,13 +16,13 @@ tags: [client, momentum360, concrete, landscape]
 
 # Onsite Concrete & Landscape
 
-Recurring weekly sync with Grace Slagle. Standing meeting: **Onsite x M360 Call, Thursdays 1:00–1:30 PM ET**.
+Recurring weekly sync with Grace Slagle. Standing meeting: **Onsite x M360 Call, Thursdays 1:00â€“1:30 PM ET**.
 
 ## Gmail intel (through 2026-04-15)
 - 2026-04-16 (upcoming): Weekly Onsite x M360 Call at 1:00 PM ET. Attendees: Dillon, Sean Boyle, onsiteclp@gmail.com (client inbox).
 - 2026-04-09: Prior weekly call held 1:00 PM ET.
 - Earlier weekly syncs confirmed on 2026-04-02 and 2026-03-26.
-- No substantive deliverables surfaced in Gmail — most of the engagement appears to run through the weekly call rather than async email.
+- No substantive deliverables surfaced in Gmail â€” most of the engagement appears to run through the weekly call rather than async email.
 
 ## Scope
 - Account management and website work for Onsite Concrete & Landscape (scope to be re-confirmed in the weekly call).

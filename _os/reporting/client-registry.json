@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "description": "Maps M360 reporting clients to vault paths and JSON data file conventions. Used by build-report.js workflow.",
+  "clients": [
+    {
+      "slug": "bar-crawl-usa",
+      "name": "Bar Crawl USA",
+      "tier": "m360",
+      "overview": "01_Clients/Bar Crawl USA/overview.md",
+      "googleAdsCustomerId": "435-710-2897",
+      "dataPattern": "_os/reporting/data/bar-crawl-usa-{period}.json",
+      "sampleData": "_os/reporting/data/bar-crawl-usa-2026-06.json",
+      "guardrails": "11_Agents/Google Ads Agent.md"
+    },
+    {
+      "slug": "link-eze",
+      "name": "LinkEZE",
+      "tier": "m360",
+      "overview": "01_Clients/Link Eze/overview.md",
+      "googleAdsCustomerId": "809-600-6448",
+      "dataPattern": "_os/reporting/data/link-eze-{period}.json"
+    },
+    {
+      "slug": "kimberly-james-bridal",
+      "name": "Kimberly James Bridal",
+      "tier": "m360",
+      "overview": "01_Clients/Kimberly James Bridal/overview.md",
+      "googleAdsCustomerId": "814-550-6229",
+      "dataPattern": "_os/reporting/data/kjb-{period}.json"
+    },
+    {
+      "slug": "shadow-hvac",
+      "name": "Shadow HVAC",
+      "tier": "m360",
+      "overview": "01_Clients/Shadow HVAC/overview.md",
+      "dataPattern": "_os/reporting/data/shadow-hvac-{period}.json"
+    },
+    {
+      "slug": "omega-landscaping",
+      "name": "Omega Landscaping",
+      "tier": "m360",
+      "overview": "01_Clients/Omega Landscaping/overview.md",
+      "dataPattern": "_os/reporting/data/omega-landscaping-{period}.json"
+    },
+    {
+      "slug": "fresh-blends-replenish",
+      "name": "Fresh Blends / Replenish",
+      "tier": "m360",
+      "overview": "01_Clients/Fresh Blends Replenish/overview.md",
+      "dataPattern": "_os/reporting/data/replenish-{period}.json"
+    }
+  ]
+}

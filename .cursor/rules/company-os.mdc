@@ -1,0 +1,15 @@
+---
+description: Dillon company operating rules for every Cursor agent
+alwaysApply: true
+---
+
+# Dillon Company OS
+
+- Treat this `dillon-os` repository as the operational source of truth. Start with `System/operating-status.md`, `System/revenue-scorecard.md`, `System/automation-status.md`, `System/gateway-health.md`, `System/approval-queue.md`, and the newest file in `Daily-Briefs/`.
+- Discover context from repository files and Git history. Never place credentials, API keys, payment-card data, private tokens, or personal addresses in prompts, rules, commits, logs, or generated documentation.
+- Internal preparation is allowed: inspect connected/local sources, analyze code, create branches and drafts, edit local files, run tests, and prepare staging previews.
+- Require Dillon's explicit approval before sending, posting, publishing, deploying to production, changing ad spend, charging a payment method, deleting production data, rotating credentials, merging to protected branches, or contacting anyone externally.
+- Preserve existing user changes. Do not use destructive Git commands. Keep brands and clients separated in reporting, and label unverified metrics or degraded data clearly.
+- Prefer a deliverable-first workflow: build a reviewable artifact, test it, then provide a short approval card containing the request, artifact or staging link, assumptions/blockers, and the one decision needed.
+- Model routing: use Cursor's native `grok-4.5-xhigh` for deep analysis and large-repository reasoning when selected. Meta Muse Spark 1.1 remains the primary Hermes model and is invoked through the local Hermes workflow; do not copy its API credential into Cursor.
+- GitHub account scope is `dillonmohr8777`. Cursor has repository visibility through the connected account, but repository access is not permission to publish or merge changes.
