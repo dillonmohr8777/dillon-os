@@ -68,6 +68,14 @@
     align-items:center;justify-content:center;font-family:'PT Serif',serif;font-weight:700;font-size:30px;
     background:linear-gradient(145deg,#FF8A50,#F05A28);box-shadow:0 10px 30px rgba(240,90,40,.4);}
   .num-ic.b{background:linear-gradient(145deg,#5b8cf0,#2450b0);box-shadow:0 10px 30px rgba(48,103,219,.45);}
+  .num-xl{width:150px;height:150px;border-radius:50%;color:#fff;display:flex;flex:none;
+    align-items:center;justify-content:center;font-family:'PT Serif',serif;font-weight:700;font-size:72px;
+    background:linear-gradient(145deg,#FF8A50,#F05A28);
+    box-shadow:0 0 0 10px rgba(240,90,40,.15),0 24px 70px rgba(240,90,40,.55);}
+  .num-xl.b{background:linear-gradient(145deg,#5b8cf0,#2450b0);
+    box-shadow:0 0 0 10px rgba(48,103,219,.18),0 24px 70px rgba(48,103,219,.6);}
+  .svc-t{font-family:'PT Serif',Georgia,serif;font-weight:700;font-size:44px;color:#fff;letter-spacing:0;}
+  .svc-p{font-weight:400;font-size:27px;line-height:1.5;color:var(--muted);margin-top:10px;max-width:620px;}
 
   .foot{position:absolute;left:0;right:0;bottom:0;height:54px;background:rgba(9,19,33,.85);
     border-top:1px solid rgba(109,151,238,.22);
@@ -276,12 +284,12 @@ const SERVICES=[
 const c3host=document.getElementById('c3host');
 SERVICES.forEach((s,i)=>{
   const el=document.createElement('div');
-  el.className=(s.w?'box-w':'box-n')+' abs'; el.id='svc'+i;
-  el.style.cssText+=';width:840px;padding:46px 50px;box-sizing:border-box;top:90px;min-height:330px;'+(i%2?'left:900px;':'left:0px;');
-  el.innerHTML=`<div style="display:flex;gap:26px;align-items:center;">
-      <div class="num-ic ${i%2?'':'b'}">${s.n}</div>
-      <div class="box-lbl" style="font-size:24px;">${s.t}</div></div>
-    <div class="box-p" style="margin-top:22px;font-size:30px;">${s.p}</div>`;
+  el.className='abs'; el.id='svc'+i;
+  el.style.cssText+=';width:840px;top:120px;'+(i%2?'left:940px;':'left:0px;');
+  el.innerHTML=`<div style="display:flex;gap:38px;align-items:flex-start;">
+      <div class="num-xl ${i%2?'':'b'}" id="svcn${i}">${s.n}</div>
+      <div style="padding-top:6px;"><div class="svc-t">${s.t}</div>
+      <div class="svc-p">${s.p}</div></div></div>`;
   c3host.appendChild(el);
 });
 
@@ -383,8 +391,11 @@ function renderC3(t){
     const ii=seg(l,inA,inB,Easing.outExpo), oo=wave<2?seg(l,outA,outB,Easing.inCubic):seg(l,25.9,26.7,Easing.inCubic);
     el.style.opacity=String(ii*(1-oo));
     const dir=i%2?80:-80;
-    el.style.transform=`translateX(${(1-ii)*dir-oo*dir*.6}px) rotate(${(1-ii)*(i%2?1.4:-1.4)}deg)`;
+    el.style.transform=`translateX(${(1-ii)*dir-oo*dir*.6}px)`;
     el.style.filter=(ii>0&&ii<1)||(oo>0&&oo<1)?`blur(${Math.sin(Math.PI*Math.max(oo,1-ii))*7}px)`:'';
+    // number circle pops harder, slightly ahead of the text
+    const ni=seg(l,inA-.15,inB-.15,Easing.outExpo);
+    document.getElementById('svcn'+i).style.transform=`scale(${.55+.45*ni})`;
   }
   const wave=clamp(Math.floor((l-1.0)/WAVE),0,2);
   document.getElementById('c3count').textContent=`${wave*2+1}–${wave*2+2} / 6`;
