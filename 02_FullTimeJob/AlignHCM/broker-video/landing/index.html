@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Moment of Truth | Align HCM Channel Partner Program</title>
+<meta name="description" content="Why benefits brokers bring Align HCM into client conversations. Real implementations, real outcomes. Watch the 2-minute film.">
+<meta property="og:title" content="The Moment of Truth | Align HCM">
+<meta property="og:description" content="Every HCM sale has a moment of truth: implementation. Watch how Align HCM delivers for broker-referred clients.">
+<meta property="og:image" content="assets/poster.jpg">
+<meta property="og:type" content="video.other">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --orange:#f05a28; --orange-hot:#ff6b35;
+    --grad:linear-gradient(135deg,#f05a28 0%,#ff6b35 100%);
+    --ink:#111820; --navy:#17324d; --navy-deep:#0b1d2d;
+    --warm:#f4efe7; --line:#e6ded4; --muted:#647084;
+    --wide:1180px; --ease:cubic-bezier(.2,.8,.2,1);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--warm);-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.pjs{font-family:'Plus Jakarta Sans',sans-serif;}
+  a{color:inherit;}
+  .wrap{width:min(92vw,var(--wide));margin:auto;}
+
+  /* header */
+  header{padding:26px 0;}
+  .head-row{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+  .head-row img{height:72px;width:auto;}
+  .cta{display:inline-block;padding:14px 28px;border-radius:999px;background:var(--grad);color:#fff;
+    font-weight:700;font-size:15px;letter-spacing:.02em;text-decoration:none;
+    box-shadow:0 12px 26px rgba(240,90,40,.26);transition:transform .25s var(--ease),box-shadow .25s var(--ease);}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 20px 40px rgba(240,90,40,.44);}
+
+  /* hero */
+  .hero{padding:34px 0 10px;text-align:center;}
+  .kicker{display:inline-block;font-size:12px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;
+    color:var(--orange);background:rgba(240,90,40,.10);border:1px solid rgba(240,90,40,.28);
+    padding:9px 18px;border-radius:999px;}
+  .hero h1{font-size:clamp(34px,4.6vw,58px);font-weight:800;letter-spacing:-.02em;line-height:1.08;
+    margin:26px auto 0;max-width:900px;}
+  .hero h1 .o{color:var(--orange);}
+  .hero p{font-size:19px;line-height:1.6;color:var(--muted);max-width:720px;margin:18px auto 0;}
+
+  /* video frame */
+  .video-wrap{padding:38px 0 8px;}
+  .video-frame{width:min(92vw,1020px);margin:auto;padding:16px;border-radius:28px;
+    border:1.5px solid rgba(240,90,40,.55);
+    background:linear-gradient(135deg,#17324d,#0f2033);
+    box-shadow:0 28px 70px rgba(240,90,40,.30),0 24px 60px rgba(15,32,51,.28);}
+  .video-frame video{display:block;width:100%;border-radius:16px;background:#0b1d2d;}
+  .video-cap{margin:16px auto 0;text-align:center;font-size:13px;font-weight:700;letter-spacing:1.8px;
+    text-transform:uppercase;color:var(--muted);}
+
+  /* logo marquee (industry page system) */
+  .logo-strip{padding:52px 0 40px;}
+  .logo-strip-label{margin:0 auto 20px;color:var(--muted);font-size:11px;font-weight:800;
+    letter-spacing:2px;text-align:center;text-transform:uppercase;}
+  .logo-frame{width:min(92vw,var(--wide));margin:auto;padding:20px;border:1.5px solid rgba(240,90,40,.55);
+    border-radius:28px;background:linear-gradient(135deg,#17324d,#0f2033);
+    box-shadow:0 24px 60px rgba(15,32,51,.28);overflow:hidden;}
+  .logo-mask{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
+  .logo-track{display:flex;gap:0;width:max-content;margin:0;padding:0;list-style:none;
+    animation:logoScroll 24s linear infinite;}
+  .logo-track li{width:206px;flex:0 0 auto;display:flex;padding-right:16px;}
+  .logo-card{display:grid;place-items:center;width:100%;min-height:76px;padding:18px;border-radius:14px;
+    background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.18);}
+  .logo-card img{max-width:140px;max-height:38px;width:auto;height:auto;object-fit:contain;}
+  .logo-frame:hover .logo-track{animation-play-state:paused;}
+  @keyframes logoScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion:reduce){.logo-track{animation:none;}}
+
+  /* contact card */
+  .contact{padding:30px 0 70px;}
+  .contact-card{width:min(92vw,860px);margin:auto;background:#fff;border-radius:28px;
+    padding:52px 56px;display:flex;align-items:center;gap:48px;
+    box-shadow:0 28px 70px rgba(240,90,40,.22),0 16px 40px rgba(17,24,32,.11);
+    border:1px solid var(--line);}
+  .avatar{flex:none;width:216px;height:216px;border-radius:50%;padding:6px;background:var(--grad);
+    box-shadow:0 20px 44px rgba(240,90,40,.44);}
+  .avatar img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid #fff;}
+  .contact-info .lbl{font-size:12px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:var(--orange);}
+  .contact-info h2{font-size:38px;font-weight:800;letter-spacing:-.02em;margin:8px 0 2px;}
+  .contact-info .title{font-size:18px;font-weight:700;color:var(--orange);margin:0 0 16px;}
+  .contact-info p.blurb{font-size:16px;line-height:1.6;color:var(--muted);margin:0 0 20px;max-width:440px;}
+  .c-row{display:flex;align-items:center;gap:12px;margin:10px 0;font-size:17px;font-weight:600;}
+  .c-row a{text-decoration:none;color:var(--navy);}
+  .c-row a:hover{color:var(--orange);}
+  .c-ic{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+    background:rgba(240,90,40,.12);color:var(--orange);font-size:16px;}
+  .contact-cta{margin-top:22px;}
+
+  footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:22px 0;}
+  .foot-row{display:flex;align-items:center;justify-content:space-between;gap:16px;
+    font-size:13px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;}
+  .foot-row b{color:var(--orange-hot);}
+  .foot-row a{color:rgba(255,255,255,.75);text-decoration:none;}
+
+  @media (max-width:760px){
+    .contact-card{flex-direction:column;text-align:center;padding:40px 26px;}
+    .contact-info .c-row{justify-content:center;}
+    .head-row img{height:56px;}
+    .foot-row{flex-direction:column;text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="head-row">
+    <img src="assets/logos/align-color.png" alt="Align HCM — Human Capital Management">
+    <a class="cta" href="https://www.alignhcm.com/partners/brokers">Channel Partner Program</a>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <span class="kicker">For Benefits Brokers &amp; Referral Partners</span>
+  <h1>Every HCM sale has a moment of truth: <span class="o">implementation.</span></h1>
+  <p>You guide your clients through benefits. When they buy a new HCM platform, Align HCM makes sure it delivers &mdash; so you never have to build a delivery bench. Watch the two-minute film.</p>
+</section>
+
+<section class="video-wrap">
+  <div class="video-frame">
+    <video controls preload="metadata" poster="assets/poster.jpg" playsinline>
+      <source src="assets/broker-video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="video-cap">Real client implementations &middot; Vendor-agnostic &middot; 2:00</div>
+</section>
+
+<section class="logo-strip">
+  <p class="logo-strip-label">Real outcomes for teams at</p>
+  <div class="logo-frame">
+    <div class="logo-mask">
+      <ul class="logo-track" id="logoTrack">
+        <li><div class="logo-card"><img src="assets/logos/awp.png" alt="AWP Safety"></div></li>
+        <li><div class="logo-card"><img src="assets/logos/driscolls.png" alt="Driscoll's"></div></li>
+        <li><div class="logo-card"><img src="assets/logos/beumer.png" alt="BEUMER Group"></div></li>
+        <li><div class="logo-card"><img src="assets/logos/arrow.png" alt="Arrow"></div></li>
+        <li><div class="logo-card"><img src="assets/logos/rwlv.png" alt="Resorts World Las Vegas"></div></li>
+        <li><div class="logo-card"><img src="assets/logos/kimclark.png" alt="Kimberly-Clark"></div></li>
+        <li><div class="logo-card"><img src="assets/logos/delmonte.png" alt="Del Monte"></div></li>
+        <li><div class="logo-card"><img src="assets/logos/ashley.png" alt="Ashley"></div></li>
+        <li><div class="logo-card"><img src="assets/logos/ohiohealth.png" alt="OhioHealth"></div></li>
+        <li><div class="logo-card"><img src="assets/logos/usta.png" alt="USTA"></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="contact-card">
+    <div class="avatar"><img src="assets/mena.jpg" alt="Menatalla Maher, Channel Sales Lead at Align HCM"></div>
+    <div class="contact-info">
+      <div class="lbl">Your partner contact</div>
+      <h2>Menatalla Maher</h2>
+      <p class="title">Channel Sales Lead</p>
+      <p class="blurb">Mena runs the Channel Partner Program for benefits brokers and referral partners. One conversation and your client gets an experienced HCM delivery team behind them.</p>
+      <div class="c-row"><span class="c-ic">&#9993;</span><a href="mailto:menatalla.maher@alignhcm.com">menatalla.maher@alignhcm.com</a></div>
+      <div class="c-row"><span class="c-ic">&#9743;</span><a href="tel:+17276183482">+1&nbsp;727&nbsp;618&nbsp;3482</a></div>
+      <div class="contact-cta"><a class="cta" href="mailto:menatalla.maher@alignhcm.com?subject=Channel%20Partner%20Program">Talk to Mena</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div><b>&#9679;</b>&nbsp; Align HCM &nbsp;&middot;&nbsp; Channel Partner Program</div>
+    <a href="https://www.alignhcm.com/partners/brokers">alignhcm.com/partners/brokers</a>
+  </div>
+</footer>
+
+<script>
+  // duplicate the logo set so the -50% marquee loops seamlessly (industry page behavior)
+  const track = document.getElementById('logoTrack');
+  track.innerHTML += track.innerHTML;
+</script>
+</body>
+</html>
