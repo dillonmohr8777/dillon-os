@@ -1,6 +1,6 @@
 ---
-last_checked: 2026-07-12
-last_orchestrator_run: 2026-07-12
+last_checked: 2026-07-13
+last_orchestrator_run: 2026-07-13
 tags: [system, routines]
 ---
 
@@ -12,13 +12,13 @@ All legacy standalone crons are **retired** and merged into `competitive-task-or
 
 | Lane | Status | Last run | Notes |
 |------|--------|----------|-------|
-| gmail-intel | 🟡 fallback | 2026-07-12 | MCP not connected; using `System/urgent-replies.md` |
-| slack-intel | 🟡 fallback | 2026-07-12 | MCP not connected; using `System/slack-action-queue.md` |
-| vault-pulse | 🟢 ok | 2026-07-12 | 12 overviews scanned; frontmatter frozen April 2026 |
-| codex-session-sync | 🟢 ok | 2026-07-12 | Bridge 2026-07-11 indexed; FB Ads stubs still empty |
-| domain-ads-seo | 🟢 ok | 2026-07-12 | 3 High / 2 Medium / 2 Low in Google Ads queue |
-| content-routines | 🟢 ran | 2026-07-12 | Sunday: BOK + Align Jul 14 drafts generated |
-| memory-consolidator | 🟢 ok | 2026-07-12 | Brief + claude-memory-sync updated |
+| gmail-intel | 🟡 fallback | 2026-07-13 | MCP not connected; using `System/urgent-replies.md` |
+| slack-intel | 🟡 fallback | 2026-07-13 | MCP not connected; using `System/slack-action-queue.md` |
+| vault-pulse | 🟢 ok | 2026-07-13 | 13 overviews scanned; frontmatter frozen April 2026 |
+| codex-session-sync | 🟢 ok | 2026-07-13 | No new exports; runs 12–20 indexed |
+| domain-ads-seo | 🟢 ok | 2026-07-13 | 3 High / 2 Medium / 2 Low in Google Ads queue |
+| content-routines | ⚪ skipped | 2026-07-13 | Monday — not Sun/Thu; Jul 14 drafts from run 19 |
+| memory-consolidator | 🟢 ok | 2026-07-13 | Brief + claude-memory-sync updated |
 
 ## Retired crons (disable in Cursor UI if still active)
 

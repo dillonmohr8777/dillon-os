@@ -17,11 +17,12 @@ tags: [dashboard, moc]
 
 ## Today
 - [ ] Open [[Daily-Briefs/competitive-task-today]] — execute P0 stack
-- [ ] Ship overdue BOK + Align content drafts
+- [ ] Ship overdue BOK + Align content (4 days overdue)
+- [ ] Bridge decision package with Tori (Monday)
 - [ ] Review Jul 15 Maher script before scheduling
 
 ## Active Projects
-- Bridge Software Development — Monday decision package with Tori
+- Bridge Software Development — decision package with Tori **today**
 - Align HCM Jul 14 content week — drafts ready in `03_Content/`
 
 ## Notes
