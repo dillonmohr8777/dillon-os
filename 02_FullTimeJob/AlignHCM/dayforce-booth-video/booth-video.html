@@ -259,10 +259,10 @@ function driftBg(id,t){
 }
 
 /* ============ timeline: 170s, 8 chapters ============ */
-const DUR=170;
+const DUR=135;
 const CH={
-  c1:[0,14], c2:[14,36], c3:[36,72], c4:[72,94],
-  c5:[94,118], c6:[118,140], c7:[140,158], c8:[158,170],
+  c1:[0,11], c2:[11,28], c3:[28,55], c4:[55,73],
+  c5:[73,93], c6:[93,110], c7:[110,125], c8:[125,135],
 };
 
 const SERVICES=[
@@ -345,7 +345,7 @@ function renderC1(t){
   const l=t-CH.c1[0]; driftBg('c1',t);
   document.getElementById('c1').style.filter=`brightness(${seg(l,0,.9,Easing.outCubic)})`;
   const lock=document.getElementById('c1lockup');
-  const li=seg(l,.3,1.1,Easing.outExpo), lo=seg(l,5.9,6.6,Easing.inCubic);
+  const li=seg(l,.3,1.1,Easing.outExpo), lo=seg(l,4.4,5.1,Easing.inCubic);
   lock.style.opacity=String(li*(1-lo));
   lock.style.transform=`translateY(${(1-li)*40-lo*30}px) scale(${.96+.04*li})`;
   document.getElementById('c1align').style.transform=`translateX(${(1-li)*-180}px)`;
@@ -356,16 +356,16 @@ function renderC1(t){
   x.style.transform=`scale(${1.6-.6*xi}) rotate(${(1-xi)*90}deg)`;
   document.getElementById('c1kick').style.opacity=String(seg(l,1.7,2.4,Easing.outExpo));
   const title=document.getElementById('c1title');
-  const ti=seg(l,6.6,7.5,Easing.outExpo), to=seg(l,13.0,13.8,Easing.inCubic);
+  const ti=seg(l,5.1,6.0,Easing.outExpo), to=seg(l,10.1,10.9,Easing.inCubic);
   title.style.opacity=String(ti*(1-to));
-  title.style.transform=`translateY(${(1-ti)*46}px) scale(${1+.025*clamp((l-7.5)/5.5,0,1)})`;
-  document.getElementById('c1rule').style.transform=`scaleX(${seg(l,7.1,7.7,Easing.outExpo)})`;
+  title.style.transform=`translateY(${(1-ti)*46}px) scale(${1+.025*clamp((l-6)/4,0,1)})`;
+  document.getElementById('c1rule').style.transform=`scaleX(${seg(l,5.6,6.2,Easing.outExpo)})`;
 }
 
 function renderC2(t){
   const l=t-CH.c2[0]; driftBg('c2',t);
-  inOut(document.getElementById('c2a'),l,.2,1.0,10.3,11.0);
-  inOut(document.getElementById('c2b'),l,11.0,11.8,21.2,21.9);
+  inOut(document.getElementById('c2a'),l,.2,1.0,7.8,8.5);
+  inOut(document.getElementById('c2b'),l,8.5,9.3,16.2,16.9);
 }
 
 function renderC3(t){
@@ -373,14 +373,14 @@ function renderC3(t){
   const head=document.getElementById('c3h').parentElement;
   head.style.opacity=String(seg(l,.2,.9,Easing.outExpo));
   head.style.transform=`translateY(${(1-seg(l,.2,.9,Easing.outExpo))*30}px)`;
-  const WAVE=11.3;
+  const WAVE=8.6;
   for(let i=0;i<6;i++){
     const el=document.getElementById('svc'+i);
     const wave=Math.floor(i/2);
     const wStart=1.0+wave*WAVE;
     const inA=wStart+(i%2)*.35, inB=inA+.8;
     const outA=wStart+WAVE-1.0, outB=wStart+WAVE-.2;
-    const ii=seg(l,inA,inB,Easing.outExpo), oo=wave<2?seg(l,outA,outB,Easing.inCubic):seg(l,34.9,35.7,Easing.inCubic);
+    const ii=seg(l,inA,inB,Easing.outExpo), oo=wave<2?seg(l,outA,outB,Easing.inCubic):seg(l,25.9,26.7,Easing.inCubic);
     el.style.opacity=String(ii*(1-oo));
     const dir=i%2?80:-80;
     el.style.transform=`translateX(${(1-ii)*dir-oo*dir*.6}px) rotate(${(1-ii)*(i%2?1.4:-1.4)}deg)`;
@@ -398,7 +398,7 @@ function renderC4(t){
   head.style.transform=`translateY(${(1-hi)*30}px)`;
   STEPS.forEach((s,i)=>{
     const el=document.getElementById('mit'+i);
-    const ci=seg(l,1.1+i*.6,1.9+i*.6,Easing.outExpo);
+    const ci=seg(l,1.0+i*.5,1.8+i*.5,Easing.outExpo);
     el.style.opacity=String(ci);
     el.style.transform=`translateY(${(1-ci)*34}px) scale(${.92+.08*ci})`;
   });
@@ -406,16 +406,16 @@ function renderC4(t){
 
 function renderC5(t){
   const l=t-CH.c5[0]; driftBg('c5',t);
-  centerInOut(document.getElementById('c5a'),l,.3,1.1,5.6,6.3);
+  centerInOut(document.getElementById('c5a'),l,.3,1.1,4.6,5.3);
   const b=document.getElementById('c5b');
-  const bi=seg(l,6.3,7.1,Easing.outExpo), bo=seg(l,23.1,23.9,Easing.inCubic);
+  const bi=seg(l,5.3,6.1,Easing.outExpo), bo=seg(l,19.1,19.9,Easing.inCubic);
   b.style.opacity=String(bi*(1-bo));
   const logo=document.getElementById('c5logo');
   logo.style.transform=`scale(${.9+.1*bi})`;
-  document.getElementById('c5t').style.opacity=String(seg(l,8.2,9.0,Easing.outExpo));
+  document.getElementById('c5t').style.opacity=String(seg(l,7.0,7.8,Easing.outExpo));
   SC.forEach((s,i)=>{
     const el=document.getElementById('scit'+i);
-    const ci=seg(l,7.4+i*.6,8.2+i*.6,Easing.outExpo);
+    const ci=seg(l,6.2+i*.5,7.0+i*.5,Easing.outExpo);
     el.style.opacity=String(ci);
     el.style.transform=`translateY(${(1-ci)*30}px)`;
   });
@@ -423,16 +423,16 @@ function renderC5(t){
 
 function renderC6(t){
   const l=t-CH.c6[0]; driftBg('c6',t);
-  inOut(document.getElementById('c6a'),l,.2,1.0,6.8,7.5);
-  inOut(document.getElementById('c6b'),l,7.5,8.3,14.1,14.8);
-  inOut(document.getElementById('c6c'),l,14.8,15.6,21.2,21.9);
+  inOut(document.getElementById('c6a'),l,.2,1.0,5.2,5.9);
+  inOut(document.getElementById('c6b'),l,5.9,6.7,10.9,11.6);
+  inOut(document.getElementById('c6c'),l,11.6,12.4,16.2,16.9);
 }
 
 function renderC7(t){
   const l=t-CH.c7[0]; driftBg('c7',t);
-  centerInOut(document.getElementById('c7a'),l,.2,1.0,5.5,6.2);
-  centerInOut(document.getElementById('c7b'),l,6.2,7.0,11.5,12.2);
-  centerInOut(document.getElementById('c7c'),l,12.2,13.0,17.3,18.0);
+  centerInOut(document.getElementById('c7a'),l,.2,1.0,4.4,5.1);
+  centerInOut(document.getElementById('c7b'),l,5.1,5.9,9.4,10.1);
+  centerInOut(document.getElementById('c7c'),l,10.1,10.9,14.3,15.0);
 }
 
 function renderC8(t){
@@ -445,12 +445,12 @@ function renderC8(t){
   const chip=document.getElementById('c8chip');
   chip.style.opacity=String(seg(l,1.8,2.5,Easing.outExpo));
   document.getElementById('c8sub').style.opacity=String(seg(l,2.8,3.5,Easing.outExpo));
-  const out=seg(l,9.5,12,Easing.inOutSine);
+  const out=seg(l,7.5,10,Easing.inOutSine);
   document.getElementById('c8').style.filter=`brightness(${1-out})`;
 }
 
 /* ============ dual-slash transitions ============ */
-const CUTS=[14,36,72,94,118,140,158];
+const CUTS=[11,28,55,73,93,110,125];
 function renderSlash(t){
   const o=document.getElementById('slashO'), b=document.getElementById('slashB');
   let on=false;

@@ -1,21 +1,21 @@
 # Align HCM × Dayforce · Booth Video (Dayforce Discover 2026)
 
-A 2:50 looping booth video for Dayforce Discover 2026 (Oct 27–29, Wynn Las Vegas). Built for the 32"/42" 1080p countertop booth screens in the exhibitor catalog: works fully muted, huge type, seamless loop (fades to black at both ends).
+A 2:15 looping booth video for Dayforce Discover 2026 (Oct 27–29, Wynn Las Vegas). Built for the 32"/42" 1080p countertop booth screens in the exhibitor catalog: works fully muted, huge type, seamless loop (fades to black at both ends).
 
-**Deliverable:** `Align-Dayforce-Booth-Video.mp4` (1920x1080, 30fps, 2:50, H.264 + 124bpm EDM bed)
+**Deliverable:** `Align-Dayforce-Booth-Video.mp4` (1920x1080, 30fps, 2:15, H.264 + 124bpm EDM bed)
 
-## Chapters (170s loop)
+## Chapters (135s loop)
 
 | Time | Chapter |
 |---|---|
-| 0:00–0:14 | Cold open: Align × Dayforce lockup slides into alignment, "Get more from Dayforce." |
-| 0:14–0:36 | 01 · Why Dayforce: unified architecture, real-time data, "catching errors before they happen. Not after." |
-| 0:36–1:12 | 02 · What we do: 6 numbered services in white/navy boxes (planning, full-suite implementation, integration, data conversion, training & reporting, optimization & fractional) |
-| 1:12–1:34 | 03 · Method: turnkey, 4 numbered phases through go-live |
-| 1:34–1:58 | SmartCare™ for Dayforce: "Go-live isn't the finish line." |
-| 1:58–2:20 | 04 · Why Align: Five Star Consulting Partner, client satisfaction, "right now." |
-| 2:20–2:38 | Outcomes: Reduce friction. Improve adoption. Keep Dayforce aligned. |
-| 2:38–2:50 | CTA: "Let's talk Dayforce." + partner lockup + URL, fade out to loop |
+| 0:00–0:11 | Cold open: Align × Dayforce lockup slides into alignment, "Get more from Dayforce." |
+| 0:11–0:28 | 01 · Why Dayforce: unified architecture, real-time data, "catching errors before they happen. Not after." |
+| 0:28–0:55 | 02 · What we do: 6 numbered services in white/navy boxes (planning, full-suite implementation, integration, data conversion, training & reporting, optimization & fractional) |
+| 0:55–1:13 | 03 · Method: turnkey, 4 numbered phases through go-live |
+| 1:13–1:33 | SmartCare™ for Dayforce: "Go-live isn't the finish line." |
+| 1:33–1:50 | 04 · Why Align: Five Star Consulting Partner, client satisfaction, "right now." |
+| 1:50–2:05 | Outcomes: Reduce friction. Improve adoption. Keep Dayforce aligned. |
+| 2:05–2:15 | CTA: "Let's talk Dayforce." + partner lockup + URL, fade out to loop |
 
 ## Design system
 
