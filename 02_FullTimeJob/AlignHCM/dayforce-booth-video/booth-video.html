@@ -106,7 +106,7 @@
     <div class="center-col" id="c1title">
       <div class="t-rule" style="transform-origin:center;" id="c1rule"></div>
       <div class="serif" style="font-size:120px;margin-top:36px;">Get more from <span class="bl">Dayforce.</span></div>
-      <div class="sub-it" style="font-size:36px;margin-top:28px;">with Align HCM, your certified consulting partner</div>
+      <div class="sub-it" style="font-size:54px;margin-top:30px;color:rgba(255,255,255,.92);">with <span style="color:var(--orange);">Align HCM</span>, your certified consulting partner</div>
     </div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">alignhcm.com/partners/dayforce</div></div>
   </div>
@@ -119,7 +119,7 @@
     <div class="left-col" id="c2a">
       <div class="t-rule"></div>
       <div class="kicker b" style="margin-top:22px;"><span class="n">01 —</span> Why Dayforce</div>
-      <div class="serif" style="font-size:96px;margin-top:28px;">One platform.<br>One <span class="bl">unified architecture.</span></div>
+      <div class="serif" style="font-size:96px;margin-top:28px;">One platform.<br>One <span class="bl">single-stack architecture.</span></div>
       <div class="sub-it" style="font-size:34px;margin-top:30px;">Workforce data, processed in real time.</div>
     </div>
     <div class="left-col" id="c2b">
@@ -165,10 +165,12 @@
     <div class="center-col" id="c5a">
       <div class="serif" style="font-size:92px;">And go-live isn't the <span class="o">finish line.</span></div>
     </div>
-    <div class="center-col" id="c5b">
-      <img id="c5logo" src="assets/logos/smartcare-light.png" style="height:270px;">
-      <div class="body-copy" id="c5p" style="font-size:35px;margin-top:40px;max-width:1250px;">SmartCare™ keeps Dayforce optimized, compliant, and aligned with your business, with dedicated experts who know your configuration.</div>
-      <div class="sub-it" id="c5t" style="font-size:34px;margin-top:30px;">Your HCM platform should work for you. <span style="color:var(--orange);">Not the other way around.</span></div>
+    <div class="abs" id="c5b" style="inset:0;">
+      <div class="abs" style="left:120px;top:0;bottom:54px;width:560px;display:flex;flex-direction:column;justify-content:center;">
+        <img id="c5logo" src="assets/logos/smartcare-light.png" style="width:480px;">
+        <div class="sub-it" id="c5t" style="font-size:29px;margin-top:36px;max-width:520px;">Your HCM platform should work for you. <span style="color:var(--orange);">Not the other way around.</span></div>
+      </div>
+      <div id="c5grid" class="abs" style="left:780px;right:110px;top:0;bottom:54px;"></div>
     </div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">SmartCare™ for Dayforce</div></div>
   </div>
@@ -181,7 +183,8 @@
     <div class="left-col" id="c6a">
       <div class="t-rule"></div>
       <div class="kicker" style="margin-top:22px;"><span class="n">04 —</span> Why Align</div>
-      <div class="serif" style="font-size:104px;margin-top:28px;">Five Star<br><span class="o">Consulting Partner.</span></div>
+      <div class="serif" style="font-size:92px;margin-top:28px;">Implementation. Integration.<br><span class="o">Optimization. Support.</span></div>
+      <div class="sub-it" style="font-size:32px;margin-top:26px;">One partner across the whole Dayforce lifecycle.</div>
     </div>
     <div class="left-col" id="c6b">
       <div class="serif" style="font-size:88px;">Client satisfaction is our<br><span class="o">number one metric.</span></div>
@@ -288,6 +291,25 @@ const STEPS=[
   {t:"Testing & Training",s:"Parallel runs, UAT, and training the client's team to own Dayforce."},
   {t:"Go-Live & Beyond",s:"A calm launch day, then SmartCare™ keeps it optimized and compliant."},
 ];
+/* C5 SmartCare post-go-live services (1-4 numbered, per site copy) */
+const SC=[
+  {t:"Post-Go-Live Support",s:"Dedicated experts who know your configuration, on call after launch."},
+  {t:"Optimization",s:"Tune Dayforce as the business changes. Reduce friction, improve adoption."},
+  {t:"Compliance, Kept Current",s:"Stay compliant and up to date with every release and rule change."},
+  {t:"Reporting & Training",s:"Reports that answer real questions, and training that sticks."},
+];
+const c5grid=document.getElementById('c5grid');
+SC.forEach((st,i)=>{
+  const el=document.createElement('div');
+  el.className='abs'; el.id='scit'+i;
+  el.style.cssText=`left:0;right:0;top:${170+i*190}px;`;
+  el.innerHTML=`<div style="display:flex;gap:26px;align-items:flex-start;">
+    <div class="num-ic ${i%2?'b':''}">${i+1}</div>
+    <div><div style="font-size:30px;font-weight:700;color:#fff;">${st.t}</div>
+    <div class="body-copy" style="font-size:23px;margin-top:7px;max-width:820px;">${st.s}</div></div></div>`;
+  c5grid.appendChild(el);
+});
+
 const c4grid=document.getElementById('c4grid');
 STEPS.forEach((st,i)=>{
   const el=document.createElement('div');
@@ -361,7 +383,7 @@ function renderC3(t){
     const ii=seg(l,inA,inB,Easing.outExpo), oo=wave<2?seg(l,outA,outB,Easing.inCubic):seg(l,34.9,35.7,Easing.inCubic);
     el.style.opacity=String(ii*(1-oo));
     const dir=i%2?80:-80;
-    el.style.transform=`translateX(${(1-ii)*dir-oo*dir*.6}px) translateY(${Math.sin(t*1.15+i)*5*ii}px) rotate(${(1-ii)*(i%2?1.4:-1.4)}deg)`;
+    el.style.transform=`translateX(${(1-ii)*dir-oo*dir*.6}px) rotate(${(1-ii)*(i%2?1.4:-1.4)}deg)`;
     el.style.filter=(ii>0&&ii<1)||(oo>0&&oo<1)?`blur(${Math.sin(Math.PI*Math.max(oo,1-ii))*7}px)`:'';
   }
   const wave=clamp(Math.floor((l-1.0)/WAVE),0,2);
@@ -378,7 +400,7 @@ function renderC4(t){
     const el=document.getElementById('mit'+i);
     const ci=seg(l,1.1+i*.6,1.9+i*.6,Easing.outExpo);
     el.style.opacity=String(ci);
-    el.style.transform=`translateY(${(1-ci)*34+Math.sin(t*1.2+i*1.6)*5*ci}px) scale(${.92+.08*ci})`;
+    el.style.transform=`translateY(${(1-ci)*34}px) scale(${.92+.08*ci})`;
   });
 }
 
@@ -389,10 +411,14 @@ function renderC5(t){
   const bi=seg(l,6.3,7.1,Easing.outExpo), bo=seg(l,23.1,23.9,Easing.inCubic);
   b.style.opacity=String(bi*(1-bo));
   const logo=document.getElementById('c5logo');
-  const breathe=1+.014*Math.sin(2*Math.PI*t*BEAT_HZ/2)*bi;
-  logo.style.transform=`scale(${(.88+.12*bi)*breathe}) translateY(${Math.sin(t*.9)*5*bi}px)`;
-  document.getElementById('c5p').style.opacity=String(seg(l,8.0,8.8,Easing.outExpo));
-  document.getElementById('c5t').style.opacity=String(seg(l,9.9,10.7,Easing.outExpo));
+  logo.style.transform=`scale(${.9+.1*bi})`;
+  document.getElementById('c5t').style.opacity=String(seg(l,8.2,9.0,Easing.outExpo));
+  SC.forEach((s,i)=>{
+    const el=document.getElementById('scit'+i);
+    const ci=seg(l,7.4+i*.6,8.2+i*.6,Easing.outExpo);
+    el.style.opacity=String(ci);
+    el.style.transform=`translateY(${(1-ci)*30}px)`;
+  });
 }
 
 function renderC6(t){
@@ -417,7 +443,6 @@ function renderC8(t){
   a.style.transform=`translateY(${(1-ai)*40}px)`;
   document.getElementById('c8rule').style.transform=`scaleX(${seg(l,1.3,1.9,Easing.outExpo)})`;
   const chip=document.getElementById('c8chip');
-  chip.style.transform=`scale(${1+.02*Math.max(0,Math.sin(2*Math.PI*t*BEAT_HZ/2))})`;
   chip.style.opacity=String(seg(l,1.8,2.5,Easing.outExpo));
   document.getElementById('c8sub').style.opacity=String(seg(l,2.8,3.5,Easing.outExpo));
   const out=seg(l,9.5,12,Easing.inOutSine);
