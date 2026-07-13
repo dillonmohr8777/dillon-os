@@ -2,7 +2,7 @@
 
 A 2:15 looping booth video for Dayforce Discover 2026 (Oct 27–29, Wynn Las Vegas). Built for the 32"/42" 1080p countertop booth screens in the exhibitor catalog: works fully muted, huge type, seamless loop (fades to black at both ends).
 
-**Deliverable:** `Align-Dayforce-Booth-Video.mp4` (1920x1080, 30fps, 2:15, H.264 + 124bpm EDM bed)
+**Deliverable:** `Align-Dayforce-Booth-Video.mp4` (1920x1080, 30fps, 2:15, H.264, silent — no audio track)
 
 ## Chapters (135s loop)
 
