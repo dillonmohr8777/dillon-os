@@ -5,23 +5,25 @@ tags: [dashboard, moc]
 # Dashboard
 
 ## Quick Links
+- [[Daily-Briefs/competitive-task-today|Today's Competitive Task Brief]]
+- [[System/competitive-task-definition|Competitive Task Definition]]
+- [[04_SOPs/competitive-task-orchestrator|Orchestrator SOP]]
 - [[00_Inbox/Start Here|Start Here]]
 - [[01_Clients/Client Index|Clients]]
 - [[02_Campaigns/Campaign Index|Campaigns]]
 - [[03_Content/Content Index|Content]]
 - [[04_SOPs/SOP Index|SOPs]]
-- [[05_Offers/Offer Index|Offers]]
-- [[06_Personal/Personal Index|Personal]]
-- [[09_Transcripts/Transcript Index|Transcripts]]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Open [[Daily-Briefs/competitive-task-today]] — execute P0 stack
+- [ ] Ship overdue BOK + Align content drafts
+- [ ] Review Jul 15 Maher script before scheduling
 
 ## Active Projects
-- 
+- Bridge Software Development — Monday decision package with Tori
+- Align HCM Jul 14 content week — drafts ready in `03_Content/`
 
 ## Notes
-- 
+- One umbrella automation (`competitive-task-orchestrator`) replaces 7 legacy crons
+- Gmail + Slack MCP not connected — vault fallback until OAuth enabled
