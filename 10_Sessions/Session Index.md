@@ -5,6 +5,7 @@ tags: [session, moc]
 # Session Index
 
 ## Recent Sessions
+- [[2026-07-14 — competitive-task-orchestrator run 21]]
 - [[2026-07-13 — competitive-task-orchestrator run 20]]
 - [[2026-07-12 — competitive-task-orchestrator run 19]]
 - [[2026-07-11 — competitive-task-orchestrator run 18]]
@@ -15,6 +16,14 @@ tags: [session, moc]
 - [[2026-07-07 — competitive-task-orchestrator run 14]]
 - [[2026-07-06 — competitive-task-orchestrator run 13]]
 - [[2026-07-05 — competitive-task-orchestrator run 12]]
+
+## Facebook Ads (stubs — awaiting Codex export)
+- [[Facebook Ads Automation Ideas]]
+- [[Facebook Ads API Notes]]
+- [[Facebook Ads System Build Log]]
+
+## System
+- [[Automation Debug Log]]
 
 ---
 
