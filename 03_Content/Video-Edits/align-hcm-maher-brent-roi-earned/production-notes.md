@@ -48,3 +48,18 @@ Exact Align logo pulled from alignhcm.com (`align white logo.png` / reversed var
 - Dual speaker labels under the box, one per speaker half; the active speaker's name renders orange with a glowing dot.
 - Background diamonds rebuilt as liquid-glass 3D elements (backdrop blur, specular highlight, rotateX/rotateY float on a 4s seamless loop) with orange radial-gradient shadows beneath; plates are now animated 4s loop videos rather than stills.
 - No dashes anywhere in on-screen text; whisper's stray hyphen tokens stripped from captions.
+
+## V3: three standalone clips (15 to 27s), three designs
+
+| Clip | Source | Length | Design |
+|------|--------|--------|--------|
+| 1 · The Record Trap | 16.30 to 29.55 | 15.9s | Kinetic banner: giant serif keywords swap via orange wipe panel, synced to speech beats |
+| 2 · Foundation to Skyscraper | 79.56 to 95.95 | 19.1s | Left rail with animated L1/L2/L3 floor stack that builds and lights up as each layer is mentioned, spire rises on "skyscraper" |
+| 3 · Leverage the System | 103.86 to 127.90 | 26.7s | Three liquid-glass metric cards swipe in from the right with 3D rotation as each point lands |
+
+Shared V3 system (`gfx3.html` + `render_gfx3.py` + `assemble3.sh`):
+- Data-field background: live-drawing sparkline with traveling dot, pulsing bar chart, floating data chips (HCM ROI +38%, L1 L2 L3), ghost outline ROI and HCM typography, rising particle dots, orbiting satellite ring, liquid-glass squares with orange gradient shadows. Every element floats on its own sine rhythm; full-length per-clip frame sequences (not loops).
+- Captions inside the video box, Gelasio SemiBold 54 to 58px, orange active word, drop shadow for legibility.
+- Both speakers in frame (two-up crop) with dual name labels, active speaker in orange.
+- Each clip exits with a smoothleft swipe into a branded end card (logo, serif kicker, ALIGNHCM.COM) over the data field.
+- No dashes in any on-screen text.
