@@ -7,15 +7,17 @@ tags: [social, graphics, deliverable]
 
 # BOK Law Social Graphics — 2026-07-14
 
-Built to match their existing animated social style: soft illustrated hero, exact logo (top-left), teal wavy series banner, serif headline, three tip icons, cream body, teal `BOKLAWFIRM.COM` footer.
+Built to match their existing animated social style: soft illustrated hero, exact logo (top left), teal wavy series banner, serif headline, three tip icons, cream body, teal `BOKLAWFIRM.COM` footer.
+
+Copy is Pittsburgh specific. No em dashes.
 
 ## Topics
 
 | Day | Series | Headline |
 |---|---|---|
-| Tuesday | Truth Tuesday | Kids Hear More Than the Words You Choose |
-| Wednesday | Wednesday Wisdom | A Parenting Plan Is a Peace Plan |
-| Friday | Family Friday | Pittsburgh Weekends Are for Showing Up |
+| Tuesday | Truth Tuesday | Pittsburgh Kids Hear More Than the Schedule |
+| Wednesday | Wednesday Wisdom | Allegheny County Plans Should Bring Peace |
+| Friday | Family Friday | Point State Park Saturdays Still Count |
 
 ## Files
 
@@ -27,10 +29,10 @@ Built to match their existing animated social style: soft illustrated hero, exac
 ## Caption starters
 
 **Truth Tuesday**
-Kids are always listening — even when the conversation isn’t for them. Honesty between co-parents doesn’t have to be loud to be clear.
+Between school dropoffs, North Side practices, and two homes, Pittsburgh kids are always listening. Calm honesty is what helps them feel steady.
 
 **Wednesday Wisdom**
-A parenting plan isn’t about control. It’s about giving kids a rhythm they can trust when everything else feels uncertain.
+A clear Allegheny County parenting plan is not about control. It is about giving kids a rhythm for school nights, weekends, and holidays.
 
 **Family Friday**
-This weekend, show up in the small ways — a walk, a meal, an hour without phones. Pittsburgh families are built in those ordinary moments.
+This weekend, show up in the Pittsburgh way. A walk by the three rivers, Primanti's together, or a slow afternoon in Schenley. Presence is what kids remember.
