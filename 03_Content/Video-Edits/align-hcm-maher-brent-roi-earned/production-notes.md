@@ -13,7 +13,7 @@
 | Beat | Source (s) | Final start | Framing | Sidebar |
 |------|-----------|-------------|---------|---------|
 | Intro — ink-reveal logo | — | 0.0 | — | — |
-| A1 · Maher | 7.50–14.92 | 4.30 | Maher solo | 01 · The Gap — "Managed. Not leveraged." |
+| A1 · Maher | 7.50–14.92 | 4.25 | Two-up | 01 · The Gap, "Managed. Not leveraged." |
 | A2 · Maher | 16.30–29.55 | 11.37 | Maher solo | (same plate, dissolve seam) |
 | B · Brent | 68.10–74.60 | 24.12 | Brent solo | 02 · The Question — "What about layers two & three?" |
 | C1 · Maher | 79.45–95.95 | 30.12 | Two-up | 03 · The Answer — "Foundation to skyscraper." |
@@ -39,3 +39,12 @@ Transitions: fade 0.5 (intro→A1), dissolve 0.35 (A1→A2 source seam), smoothl
 4. `assemble.sh` — ffmpeg: crop/scale each beat, rounded-corner alphamerge, plate + ring overlays, xfade/acrossfade chains, ASS burn-in, loudnorm, H.264 export.
 
 Exact Align logo pulled from alignhcm.com (`align white logo.png` / reversed variant generated from `Align HCM logo.png`).
+
+## V2 revisions (client feedback)
+
+- Both speakers stay in frame for every beat (two-up crop `2340:1316:264:2`; takeaway beat is a 1.06x punch-in of the same two-up).
+- Type scale increased across the board: sidebar serif headlines 60px Gelasio Bold (Georgia-family match to the PowerPoint template), captions 58px Gelasio SemiBold, series title 26px, labels 24px.
+- All transitions are directional swipes (smoothright/smoothleft/smoothup xfades) with matching audio crossfades.
+- Dual speaker labels under the box, one per speaker half; the active speaker's name renders orange with a glowing dot.
+- Background diamonds rebuilt as liquid-glass 3D elements (backdrop blur, specular highlight, rotateX/rotateY float on a 4s seamless loop) with orange radial-gradient shadows beneath; plates are now animated 4s loop videos rather than stills.
+- No dashes anywhere in on-screen text; whisper's stray hyphen tokens stripped from captions.

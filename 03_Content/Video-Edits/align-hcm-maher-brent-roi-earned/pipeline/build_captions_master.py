@@ -13,11 +13,11 @@ TRANSP = r"{\alpha&HFF&}"
 
 # (label, src_start, src_end, final_start)
 SEGS = [
-    ("A1", 7.50, 14.92, 4.30),
-    ("A2", 16.30, 29.55, 11.37),
-    ("B",  68.10, 74.60, 24.12),
-    ("C1", 79.45, 95.95, 30.12),
-    ("C2", 116.30, 128.10, 46.60),
+    ("A1", 7.50, 14.92, 4.25),
+    ("A2", 16.30, 29.55, 11.22),
+    ("B",  68.10, 74.60, 23.92),
+    ("C1", 79.45, 95.95, 29.87),
+    ("C2", 116.30, 128.10, 45.87),
 ]
 ACCENT_WORDS = set()  # active-word highlight carries the accent; no static accents
 
@@ -32,7 +32,7 @@ events = []
 prev_t1 = 0.0
 for label, a, b, fstart in SEGS:
     delta = fstart - a
-    seg_words = [w for w in words if a <= w["t0"] < b]
+    seg_words = [dict(w, w=w["w"].lstrip("-")) for w in words if a <= w["t0"] < b and w["w"].lstrip("-")]
     # group into lines
     lines, buf = [], []
     for w in seg_words:
@@ -78,7 +78,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,Inter Tight SemiBold,46,{CREAM},{CREAM},&H00000000,&H78000000,0,0,0,0,100,100,0,0,1,0,1.5,2,593,90,66,1
+Style: Cap,Gelasio SemiBold,58,{CREAM},{CREAM},&H00000000,&H78000000,0,0,0,0,100,100,0,0,1,0,2,2,593,90,64,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
