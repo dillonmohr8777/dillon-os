@@ -10,13 +10,13 @@ import { ProjectProof } from "@/components/ProjectProof";
 export const metadata: Metadata = {
   title: "Maintenance Packages",
   description:
-    "Choose the best HVAC maintenance plan for you — Basic, Standard, Advanced, or Premium. Seasonal tune-ups, priority scheduling, and member savings.",
+    "Choose the best HVAC maintenance plan for you. Basic, Standard, Advanced, and Premium plans include seasonal tune ups, priority scheduling, and member savings.",
 };
 
 const perks = [
-  "Priority scheduling — skip the seasonal wait list",
+  "Priority scheduling that lets you skip the seasonal wait list",
   "Discounted parts and labor on repairs",
-  "Twice-yearly tune-ups that prevent breakdowns",
+  "Two tune ups each year that help prevent breakdowns",
   "Longer equipment life and lower energy bills",
 ];
 
@@ -52,7 +52,7 @@ export default function PackagesPage() {
           </ul>
           <p className="mt-6 text-sm text-slate-400">
             Not sure which plan fits? Call us at any time and we'll help you pick the right
-            coverage for your home and budget — no pressure, ever.
+            coverage for your home and budget. No pressure, ever.
           </p>
         </Reveal>
       </Section>

@@ -38,7 +38,7 @@ export default function ServicesPage() {
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={s.img}
-                    alt={`${s.name} — Shadow Heating & Cooling`}
+                        alt={`${s.name} by Shadow Heating and Cooling`}
                     className="h-56 w-full object-cover sm:h-72"
                   />
                 )}

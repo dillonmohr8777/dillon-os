@@ -23,7 +23,7 @@ export default function FaqPage() {
             Questions? <span className="text-gradient-cool">We've got answers</span>
           </>
         }
-        sub="Everything you need to know about working with Shadow Heating & Cooling. Still stuck? Give us a call — we're happy to help."
+        sub="Everything you need to know about working with Shadow Heating & Cooling. Still stuck? Give us a call. We are happy to help."
       />
 
       <Section className="!pt-16">

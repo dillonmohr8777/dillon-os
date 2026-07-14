@@ -24,7 +24,7 @@ export default function BookPage() {
             Choose the best HVAC <span className="text-gradient-heat">plan for you</span>
           </>
         }
-        sub="Providing reliable and efficient HVAC solutions for year-round comfort and peace of mind. Request service in three quick steps."
+        sub="Providing reliable and efficient HVAC solutions for year round comfort and peace of mind. Request service in three quick steps."
       />
 
       <Section className="!pt-16">

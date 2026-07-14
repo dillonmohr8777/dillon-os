@@ -9,7 +9,7 @@ import { aboutValues, team, stats } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Shadow Heating & Cooling is a locally owned residential HVAC provider in Hampshire, IL, dedicated to reliable, honest, year-round comfort.",
+    "Shadow Heating & Cooling is a locally owned residential HVAC provider in Hampshire, IL, dedicated to reliable, honest, year round comfort.",
 };
 
 export default function AboutPage() {
@@ -24,7 +24,7 @@ export default function AboutPage() {
             <span className="text-gradient-cool">Hampshire</span>
           </>
         }
-        sub="Shadow Heating & Cooling delivers quality HVAC service with real expertise — experienced technicians focused on reliability, honesty, and your satisfaction."
+        sub="Shadow Heating & Cooling delivers quality HVAC service with real expertise. Our technicians focus on reliability, honesty, and your satisfaction."
       />
 
       <Section className="!pt-16">
@@ -42,14 +42,14 @@ export default function AboutPage() {
                 surrounding Kane County communities.
               </p>
               <p>
-                We position ourselves as your first line of defense — fast to respond, honest
+                We position ourselves as your first line of defense. We are fast to respond, honest
                 about pricing, and relentless about getting the job done right the first time.
                 From emergency furnace calls in the dead of winter to full system upgrades, we
                 treat every home like it's on our own block.
               </p>
               <p>
                 Our promise is straightforward: reliable and efficient HVAC solutions for
-                year-round comfort and peace of mind, backed by transparency, professionalism,
+                year round comfort and peace of mind, backed by transparency, professionalism,
                 and a 100% satisfaction guarantee.
               </p>
             </div>

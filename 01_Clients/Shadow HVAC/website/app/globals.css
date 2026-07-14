@@ -5,6 +5,8 @@
 :root {
   --font-display: "Oswald", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
+  --ember-glow: rgba(255, 90, 31, 0.42);
+  --glass-edge: rgba(255, 255, 255, 0.16);
 }
 
 * {
@@ -22,6 +24,7 @@ body {
     radial-gradient(60rem 40rem at 80% -10%, rgba(255, 90, 31, 0.10), transparent 60%),
     radial-gradient(50rem 40rem at 0% 10%, rgba(56, 189, 248, 0.10), transparent 55%);
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 @layer components {
@@ -34,7 +37,8 @@ body {
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-300;
+    @apply inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-slate-200 backdrop-blur-xl;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 12px 36px rgba(0,0,0,.22), 0 0 32px rgba(255,90,31,.08);
   }
 
   .btn {
@@ -43,6 +47,8 @@ body {
 
   .btn-ember {
     @apply btn bg-gradient-to-r from-ember-dark via-ember to-ember-light text-white shadow-ember hover:scale-[1.03] hover:shadow-[0_0_50px_-6px_rgba(255,90,31,0.7)];
+    background-size: 180% 180%;
+    animation: gradient-drift 6s ease infinite;
   }
 
   .btn-ice {
@@ -54,11 +60,80 @@ body {
   }
 
   .card {
-    @apply relative overflow-hidden rounded-2xl border border-white/[0.08] bg-shadow-800/60 backdrop-blur-sm;
+    @apply relative overflow-hidden rounded-2xl border border-white/[0.12] bg-shadow-800/55 backdrop-blur-xl;
+    isolation: isolate;
+    transform-style: preserve-3d;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.12), inset 0 -1px 0 rgba(255,90,31,.09), 0 24px 70px rgba(0,0,0,.32), 0 0 0 1px rgba(255,90,31,.04);
+    transition: transform .55s cubic-bezier(.22,1,.36,1), border-color .4s ease, box-shadow .55s ease;
+  }
+
+  .card::before,
+  .liquid-frame::before,
+  .glass-copy::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(125deg, rgba(255,255,255,.22), transparent 24%, transparent 72%, rgba(255,90,31,.22));
+    opacity: .7;
+  }
+
+  .card::after,
+  .liquid-frame::after,
+  .glass-copy::after {
+    content: "";
+    position: absolute;
+    inset: -70% -45%;
+    z-index: 3;
+    pointer-events: none;
+    background: linear-gradient(100deg, transparent 38%, rgba(255,255,255,.14) 48%, rgba(255,106,53,.12) 52%, transparent 62%);
+    transform: translateX(-34%) rotate(8deg);
+    transition: transform .9s cubic-bezier(.22,1,.36,1);
+  }
+
+  .card:hover {
+    transform: perspective(1100px) translateY(-8px) rotateX(2deg) rotateY(-1deg);
+    border-color: rgba(255,106,53,.32);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 32px 90px rgba(0,0,0,.42), 0 0 52px rgba(255,90,31,.16);
+  }
+
+  .card:hover::after,
+  .liquid-frame:hover::after,
+  .glass-copy:hover::after {
+    transform: translateX(34%) rotate(8deg);
   }
 
   .glass {
     @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+
+  .liquid-frame,
+  .glass-copy {
+    @apply relative rounded-3xl border border-white/[0.14] bg-shadow-800/55 backdrop-blur-2xl;
+    isolation: isolate;
+    transform-style: preserve-3d;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.17), inset 0 -1px 0 rgba(255,90,31,.12), 0 28px 80px rgba(0,0,0,.36), 0 0 48px rgba(255,90,31,.08);
+    transition: transform .6s cubic-bezier(.22,1,.36,1), box-shadow .6s ease, border-color .5s ease;
+  }
+
+  .liquid-frame:hover,
+  .glass-copy:hover {
+    transform: perspective(1200px) translateY(-10px) rotateX(2deg) rotateY(1.2deg);
+    border-color: rgba(255,106,53,.34);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 36px 100px rgba(0,0,0,.45), 0 0 65px rgba(255,90,31,.18);
+  }
+
+  .liquid-frame img,
+  .card img {
+    transition: transform 1s cubic-bezier(.22,1,.36,1), filter .7s ease;
+  }
+
+  .liquid-frame:hover img,
+  .card:hover img {
+    transform: scale(1.045);
+    filter: saturate(1.08) contrast(1.03);
   }
 
   .text-gradient-heat {
@@ -68,6 +143,74 @@ body {
   .text-gradient-cool {
     @apply bg-gradient-to-r from-ice-light via-ice to-ice-dark bg-clip-text text-transparent;
   }
+}
+
+.work-rail {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-inline: contain;
+  padding: 1rem .25rem 2.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,90,31,.75) rgba(255,255,255,.05);
+}
+
+.ambient-orb {
+  position: absolute;
+  width: 26rem;
+  height: 26rem;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(110px);
+  opacity: .28;
+}
+
+.ambient-orb-ember { background: #ff5a1f; }
+
+.map-stage {
+  position: relative;
+  perspective: 1500px;
+  filter: drop-shadow(0 42px 60px rgba(0,0,0,.45));
+}
+
+.map-glass {
+  transform: rotateX(7deg) rotateY(-5deg);
+  transform-origin: center center;
+  transition: transform .8s cubic-bezier(.22,1,.36,1), box-shadow .8s ease;
+}
+
+.map-glass:hover,
+.map-glass:focus-within {
+  transform: rotateX(1deg) rotateY(0deg) translateY(-8px);
+}
+
+@keyframes gradient-drift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+  .card:hover,
+  .liquid-frame:hover,
+  .glass-copy:hover,
+  .map-glass,
+  .map-glass:hover { transform: none; }
+}
+
+@media (max-width: 640px) {
+  .card:hover,
+  .liquid-frame:hover,
+  .glass-copy:hover { transform: translateY(-3px); }
+  .map-glass { transform: rotateX(3deg) rotateY(-2deg); }
 }
 
 /* Football-field yard-line texture used behind certain sections */

@@ -10,7 +10,7 @@ import { business } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Shadow Heating & Cooling in Hampshire, IL. Call (847) 757-9450, email us, or send a message. 24/7 emergency service available.",
+    "Get in touch with Shadow Heating & Cooling in Hampshire, IL. Call (847) 757 9450, email us, or send a message. 24/7 emergency service available.",
 };
 
 const cards = [
@@ -54,7 +54,7 @@ export default function ContactPage() {
             Let's defend your <span className="text-gradient-heat">comfort zone</span>
           </>
         }
-        sub="Questions, quotes, or emergencies — reach out any way you like. We answer 24/7 for heating and cooling emergencies."
+        sub="Questions, quotes, or emergencies? Reach out any way you like. We answer 24/7 for heating and cooling emergencies."
       />
 
       <Section className="!pt-16">

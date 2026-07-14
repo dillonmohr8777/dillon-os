@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
+import { AmbientWorkRail } from "@/components/AmbientWorkRail";
+import { NetlifyForms } from "@/components/NetlifyForms";
 import { business } from "@/lib/site";
 
 const inter = Inter({
@@ -22,7 +24,7 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${business.domain}`),
   title: {
-    default: `${business.name} — ${business.tagline}`,
+    default: `${business.name}: ${business.tagline}`,
     template: `%s | ${business.name}`,
   },
   description:
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     "Shadow Heating & Cooling",
   ],
   openGraph: {
-    title: `${business.name} — ${business.tagline}`,
+    title: `${business.name}: ${business.tagline}`,
     description:
       "24/7 residential HVAC in Hampshire, IL and Kane County. Heating, cooling, air quality, and emergency service.",
     url: `https://${business.domain}`,
@@ -55,8 +57,10 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
       <body className="min-h-screen antialiased">
         <StructuredData />
+        <NetlifyForms />
         <Navbar />
         <main>{children}</main>
+        <AmbientWorkRail />
         <Footer />
       </body>
     </html>

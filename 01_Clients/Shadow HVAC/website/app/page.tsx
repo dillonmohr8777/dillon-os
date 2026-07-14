@@ -65,7 +65,7 @@ export default function HomePage() {
                 <ShieldCheck className="h-4 w-4 text-ice" /> 100% Guarantee
               </span>
               <span className="flex items-center gap-2">
-                <Star className="h-4 w-4 text-gold" /> 5-Star Local Reviews
+            <Star className="h-4 w-4 text-gold" /> Five Star Local Reviews
               </span>
               <span className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-ember-light" /> Hampshire, IL
@@ -104,7 +104,7 @@ export default function HomePage() {
               Comfort you can <span className="text-gradient-cool">count on</span>
             </>
           }
-          sub="Trusted residential heating & cooling experts in the Hampshire area — experienced, local, and honest about pricing."
+          sub="Trusted residential heating and cooling experts in the Hampshire area. Experienced, local, and honest about pricing."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {valueProps.map((v, i) => (
@@ -136,7 +136,7 @@ export default function HomePage() {
               Expert solutions for <span className="text-gradient-heat">you</span>
             </>
           }
-          sub="From emergency repairs to full system installs, we do it all — and we do it right the first time."
+          sub="From emergency repairs to full system installs, we do it all and we do it right the first time."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
@@ -186,7 +186,7 @@ export default function HomePage() {
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
             A closer look at a recent residential heating and cooling system,
-            from the outdoor condenser to the indoor furnace and whole-home humidifier.
+            from the outdoor condenser to the indoor furnace and whole home humidifier.
           </p>
         </div>
 
@@ -217,7 +217,7 @@ export default function HomePage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/img/recent-installation-furnace.jpg"
-                alt="American Standard furnace with Aprilaire whole-home humidifier"
+              alt="American Standard furnace with Aprilaire whole home humidifier"
                 width="1200"
                 height="1600"
                 loading="lazy"
@@ -227,7 +227,7 @@ export default function HomePage() {
               <figcaption className="p-6">
                 <h3 className="heading text-xl text-white">Heating and air quality</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">
-                  American Standard furnace paired with Aprilaire whole-home humidification.
+                American Standard furnace paired with Aprilaire whole home humidification.
                 </p>
               </figcaption>
             </figure>
@@ -289,7 +289,7 @@ export default function HomePage() {
                   Our game plan for <span className="text-gradient-heat">total comfort</span>
                 </>
               }
-              sub="Four downs, every job. This is how Shadow defends your comfort zone from the first call to the final tune-up."
+            sub="Four downs, every job. This is how Shadow defends your comfort zone from the first call to the final tune up."
             />
             <div className="mt-10 space-y-4">
               {playbook.map((p, i) => (
@@ -334,7 +334,7 @@ export default function HomePage() {
       {/* ===== REVIEWS ===== */}
       <Section id="reviews" className="field-lines">
         <SectionHeading
-          eyebrow="5-Star Local Reviews"
+          eyebrow="Five Star Local Reviews"
           title={
             <>
               What Hampshire <span className="text-gradient-cool">neighbors say</span>

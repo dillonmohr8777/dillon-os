@@ -1,4 +1,4 @@
-// Shadow HVAC shield mark — a defensive shield split into heat (ember) and
+// Shadow HVAC shield mark with a defensive shield split into heat and
 // cool (ice) halves, echoing "Defend Your Comfort Zone".
 export function Logo({ className = "h-10 w-10" }: { className?: string }) {
   return (

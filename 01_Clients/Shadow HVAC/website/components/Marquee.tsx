@@ -4,10 +4,10 @@ const items = [
   "Furnace Repair",
   "AC Installation",
   "Indoor Air Quality",
-  "Same-Day Service",
+  "Same Day Service",
   "Honest Pricing",
   "100% Satisfaction Guarantee",
-  "Hampshire · Kane County",
+  "Hampshire And Kane County",
   "Defend Your Comfort Zone",
 ];
 

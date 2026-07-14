@@ -65,7 +65,7 @@ const proofContent: Record<
       },
       {
         src: "/img/recent-installation-furnace.jpg",
-        alt: "American Standard furnace with whole-home Aprilaire humidifier",
+        alt: "American Standard furnace with whole home Aprilaire humidifier",
         label: "Complete indoor solution",
       },
     ],
@@ -145,7 +145,7 @@ export function ProjectProof({ variant }: { variant: ProofVariant }) {
 
   return (
     <Section className="!pt-0">
-      <div className="grid gap-8 rounded-3xl border border-white/10 bg-shadow-800/40 p-6 sm:p-8 lg:grid-cols-[0.8fr,1.2fr] lg:items-center lg:p-10">
+      <div className="glass-copy grid gap-8 p-6 sm:p-8 lg:grid-cols-[0.8fr,1.2fr] lg:items-center lg:p-10">
         <Reveal>
           <span className="eyebrow mb-5">{proof.eyebrow}</span>
           <h2 className="heading text-3xl leading-tight text-white sm:text-4xl">{proof.title}</h2>
@@ -155,7 +155,7 @@ export function ProjectProof({ variant }: { variant: ProofVariant }) {
         <div className="grid gap-4 sm:grid-cols-2">
           {proof.images.map((image, index) => (
             <Reveal key={image.src} delay={index * 0.08}>
-              <figure className="overflow-hidden rounded-2xl border border-white/10 bg-shadow-900">
+              <figure className="liquid-frame overflow-hidden rounded-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={image.src}

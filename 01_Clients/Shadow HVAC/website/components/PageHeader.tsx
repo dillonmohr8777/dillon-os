@@ -15,7 +15,7 @@ export function PageHeader({
   crumb: string;
 }) {
   return (
-    <header className="relative overflow-hidden border-b border-white/10 pt-32 pb-16 sm:pt-40 sm:pb-20">
+    <header className="relative overflow-hidden border-b border-white/10 pt-36 pb-16 sm:pt-44 sm:pb-20">
       <div className="field-lines absolute inset-0 opacity-40" aria-hidden />
       <div
         className="absolute -top-40 right-0 h-96 w-96 rounded-full bg-ember/20 blur-[120px]"

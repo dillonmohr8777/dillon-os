@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { MapPin, Navigation, Sparkles } from "lucide-react";
 import { serviceAreas } from "@/lib/site";
 
 // Decorative radar-style coverage map centered on the Hampshire HQ.
@@ -18,81 +18,52 @@ const dots = [
 
 export function ServiceAreaMap() {
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-xl overflow-hidden rounded-3xl border border-white/10 bg-shadow-900/70">
-      <div className="field-lines absolute inset-0 opacity-50" aria-hidden />
-      <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full">
-        {[18, 30, 42].map((r) => (
-          <circle
-            key={r}
-            cx="50"
-            cy="50"
-            r={r}
-            fill="none"
-            stroke="rgba(56,189,248,0.16)"
-            strokeWidth="0.3"
+    <div className="map-stage mx-auto w-full max-w-2xl py-7">
+      <motion.div
+        initial={{ opacity: 0, y: 60, rotateX: 14 }}
+        whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        className="map-glass liquid-frame overflow-hidden p-2 sm:p-3"
+      >
+        <div className="relative min-h-[31rem] overflow-hidden rounded-[1.25rem] bg-shadow-900 sm:min-h-[36rem]">
+          <iframe
+            title="Google Maps service area around Hampshire Illinois"
+            src="https://www.google.com/maps?q=Shadow+Heating+and+Cooling+334+E+Grove+Hampshire+IL+60140&z=10&output=embed"
+            className="absolute inset-0 h-full w-full border-0 saturate-[.8] contrast-[1.08]"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           />
-        ))}
-        {dots
-          .filter((d) => !d.hq)
-          .map((d) => (
-            <line
-              key={d.name}
-              x1="50"
-              y1="50"
-              x2={d.x}
-              y2={d.y}
-              stroke="rgba(255,90,31,0.18)"
-              strokeWidth="0.25"
-              strokeDasharray="1 1.5"
-            />
-          ))}
-      </svg>
-
-      {dots.map((d, i) => (
-        <motion.div
-          key={d.name}
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 + i * 0.08, type: "spring", stiffness: 300 }}
-          className="absolute -translate-x-1/2 -translate-y-1/2"
-          style={{ left: `${d.x}%`, top: `${d.y}%` }}
-        >
-          <div className="group relative flex flex-col items-center">
-            {d.hq && (
-              <span className="absolute h-8 w-8 animate-ping rounded-full bg-ember/40" />
-            )}
-            <span
-              className={`relative grid place-items-center rounded-full ${
-                d.hq
-                  ? "h-6 w-6 bg-gradient-to-br from-ember to-ember-dark shadow-ember"
-                  : "h-3 w-3 bg-ice"
-              }`}
-            >
-              {d.hq && <MapPin className="h-3.5 w-3.5 text-white" />}
-            </span>
-            <span
-              className={`mt-1.5 whitespace-nowrap rounded-full px-1.5 text-[0.6rem] font-semibold ${
-                d.hq ? "text-ember-light" : "text-slate-300"
-              }`}
-            >
-              {d.name}
-            </span>
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-shadow-950/80 via-transparent to-ember/10" />
+          <div className="pointer-events-none absolute left-4 top-4 rounded-2xl border border-white/20 bg-shadow-950/70 px-4 py-3 backdrop-blur-2xl sm:left-6 sm:top-6">
+            <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-ember-light"><Sparkles className="h-3.5 w-3.5" /> Live Service Map</p>
+            <p className="mt-1 text-sm font-semibold text-white">Hampshire and nearby communities</p>
           </div>
-        </motion.div>
-      ))}
-
-      <div className="absolute bottom-4 left-4 flex flex-wrap gap-x-4 gap-y-1 text-[0.65rem] text-slate-400">
-        <span className="flex items-center gap-1.5">
-          <span className="h-2.5 w-2.5 rounded-full bg-ember" /> HQ
-        </span>
-        <span className="flex items-center gap-1.5">
-          <span className="h-2 w-2 rounded-full bg-ice" /> Service area
-        </span>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Shadow+Heating+and+Cooling+334+E+Grove+Hampshire+IL+60140"
+            target="_blank"
+            rel="noreferrer"
+            className="absolute bottom-5 right-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-shadow-950/80 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-xl transition hover:border-ember/50 hover:bg-ember/20"
+          >
+            <Navigation className="h-4 w-4 text-ember-light" /> Open Google Maps
+          </a>
+        </div>
+      </motion.div>
+      <div className="mx-auto mt-2 flex max-w-xl flex-wrap justify-center gap-2">
+        {dots.map((dot, index) => (
+          <motion.span
+            key={dot.name}
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ delay: index * 0.05 }}
+            className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-slate-300 backdrop-blur-xl"
+          >
+            {dot.hq && <MapPin className="mr-1 inline h-3 w-3 text-ember" />}{dot.name}
+          </motion.span>
+        ))}
       </div>
-      <span className="sr-only">
-        Service areas: {serviceAreas.map((s) => s.name).join(", ")}
-      </span>
+      <span className="sr-only">Service areas: {serviceAreas.map((s) => s.name).join(", ")}</span>
     </div>
   );
 }

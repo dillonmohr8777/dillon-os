@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
 import { business, nav, services } from "@/lib/site";
 import { NewsletterForm } from "./NewsletterForm";
 
@@ -14,19 +14,16 @@ export function Footer() {
             <img
               src="/img/logo.png"
               alt={business.name}
-              className="h-12 w-auto rounded-lg bg-white px-2.5 py-1.5"
+            className="h-20 w-auto rounded-xl bg-white px-3 py-2 shadow-[0_12px_45px_rgba(255,90,31,0.2)]"
             />
           </Link>
           <p className="mt-4 max-w-xs text-sm text-slate-400">
             {business.tagline}. Providing reliable and efficient HVAC solutions for
-            year-round comfort and peace of mind in Hampshire, IL.
+            year round comfort and peace of mind in Hampshire, IL.
           </p>
           <div className="mt-5 flex gap-3">
             {[
               { Icon: Facebook, href: business.social.facebook, label: "Facebook" },
-              { Icon: Instagram, href: business.social.instagram, label: "Instagram" },
-              { Icon: Twitter, href: business.social.twitter, label: "Twitter" },
-              { Icon: Youtube, href: business.social.youtube, label: "YouTube" },
             ].map(({ Icon, href, label }) => (
               <a
                 key={label}

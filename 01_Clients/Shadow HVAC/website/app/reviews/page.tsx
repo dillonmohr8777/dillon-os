@@ -11,7 +11,7 @@ import { reviews } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Reviews",
   description:
-    "Read 5-star reviews from Hampshire, IL homeowners who trust Shadow Heating & Cooling for fast, honest, professional HVAC service.",
+    "Read five star reviews from Hampshire, IL homeowners who trust Shadow Heating & Cooling for fast, honest, professional HVAC service.",
 };
 
 export default function ReviewsPage() {
@@ -19,13 +19,13 @@ export default function ReviewsPage() {
     <>
       <PageHeader
         crumb="Reviews"
-        eyebrow="5-Star Local Reviews"
+        eyebrow="Five Star Local Reviews"
         title={
           <>
             Trusted by <span className="text-gradient-heat">Hampshire neighbors</span>
           </>
         }
-        sub="Fast response, honest pricing, and work that lasts — here's what our customers have to say."
+        sub="Fast response, honest pricing, and work that lasts. Here is what our customers have to say."
       />
 
       <Section className="!pt-16">

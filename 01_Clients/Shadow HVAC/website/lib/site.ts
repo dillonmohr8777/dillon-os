@@ -6,7 +6,7 @@ export const business = {
   shortName: "Shadow HVAC",
   tagline: "Defend Your Comfort Zone",
   subTagline: "Fast Response. No Fumbles.",
-  phone: "(847) 757-9450",
+  phone: "(847) 757 9450",
   phoneHref: "tel:+18477579450",
   email: "Shadowhvac1@gmail.com",
   emailHref: "mailto:Shadowhvac1@gmail.com",
@@ -21,8 +21,8 @@ export const business = {
   bookingUrl: "https://book.housecallpro.com/book/Shadow-Heating--Cooling/",
   domain: "shadowheatingandcooling.com",
   social: {
-    facebook: "https://facebook.com/",
-    instagram: "https://instagram.com/",
+    facebook: "https://www.facebook.com/shadowHVAC/",
+    instagram: "https://www.instagram.com/shadowhvac/",
     twitter: "https://twitter.com/",
     youtube: "https://youtube.com/",
   },
@@ -35,6 +35,7 @@ export const nav = [
   { label: "Service Area", href: "/service-area" },
   { label: "Reviews", href: "/reviews" },
   { label: "Financing", href: "/financing" },
+  { label: "Advice", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
@@ -50,7 +51,7 @@ export const stats = [
 export const valueProps = [
   {
     title: "24/7 Emergency Response",
-    body: "Furnace out at 2 a.m.? We answer. No answering machine, no runaround — a real technician on the way.",
+    body: "Furnace out at 2 a.m.? We answer. No answering machine and no runaround. A real technician is on the way.",
     tone: "ember" as const,
   },
   {
@@ -59,38 +60,38 @@ export const valueProps = [
     tone: "ice" as const,
   },
   {
-    title: "5-Star Local Reviews",
+    title: "Five Star Local Reviews",
     body: "Hampshire neighbors trust us for honest pricing and work that lasts. Read the reviews.",
     tone: "gold" as const,
   },
   {
     title: "Locally Owned & Operated",
-    body: "Based in Hampshire, serving Kane County. We treat your home like it's on our block — because it is.",
+    body: "Based in Hampshire, serving Kane County. We treat your home like it is on our block, because it is.",
     tone: "ember" as const,
   },
 ];
 
-// The "Championship Playbook" — Shadow's service philosophy (football motif).
+// The Championship Playbook is Shadow's service philosophy with a football motif.
 export const playbook = [
   {
     num: "01",
-    title: "First-Down Diagnosis",
+    title: "First Down Diagnosis",
     body: "We read the field before we make a call. A precise diagnosis means no wasted downs and no surprise charges.",
   },
   {
     num: "02",
-    title: "No-Huddle Response",
-    body: "Same-day and emergency service that moves fast. When your heat or AC is down, every minute counts.",
+    title: "No Huddle Response",
+    body: "Same day and emergency service that moves fast. When your heat or AC is down, every minute counts.",
   },
   {
     num: "03",
-    title: "Clean-Pocket Install",
-    body: "Protected, precise, code-perfect installations. We give your new system a clean pocket to perform for years.",
+    title: "Clean Pocket Install",
+    body: "Protected, precise, code compliant installations. We give your new system a clean pocket to perform for years.",
   },
   {
     num: "04",
-    title: "Fourth-Quarter Tune-Up",
-    body: "Seasonal maintenance that keeps you strong in the fourth quarter — the coldest and hottest days of the year.",
+    title: "Fourth Quarter Tune Up",
+    body: "Seasonal maintenance that keeps you strong in the fourth quarter, through the coldest and hottest days of the year.",
   },
 ];
 
@@ -109,13 +110,13 @@ export const services: Service[] = [
   {
     slug: "heating",
     name: "Heating",
-    short: "Furnace repair, installation & maintenance",
+    short: "Furnace repair, installation and maintenance",
     body: "When the Illinois cold rolls in, your furnace is your first line of defense. We repair, replace, and tune every make and model so your home stays warm all winter.",
     bullets: [
       "Furnace repair & replacement",
-      "High-efficiency system installation",
+      "High efficiency system installation",
       "Heat pump service & seasonal swing",
-      "Emergency no-heat calls, 24/7",
+      "Emergency heating calls, 24/7",
     ],
     tone: "ember",
     icon: "flame",
@@ -124,13 +125,13 @@ export const services: Service[] = [
   {
     slug: "cooling",
     name: "Cooling / AC",
-    short: "AC repair, installation & tune-ups",
-    body: "Beat the Midwest humidity with a cooling system that actually keeps up. From quick repairs to full high-SEER installs, we keep your comfort zone cool.",
+    short: "AC repair, installation and tune ups",
+    body: "Beat the Midwest humidity with a cooling system that actually keeps up. From quick repairs to efficient new installations, we keep your comfort zone cool.",
     bullets: [
-      "AC repair & diagnostics",
-      "New AC & condenser installation",
-      "Pre-season cooling tune-ups",
-      "Refrigerant checks & recharge",
+      "AC repair and diagnostics",
+      "New AC and condenser installation",
+      "Cooling season tune ups",
+      "Refrigerant checks and recharge",
     ],
     tone: "ice",
     icon: "snowflake",
@@ -139,12 +140,12 @@ export const services: Service[] = [
   {
     slug: "indoor-air-quality",
     name: "Indoor Air Quality",
-    short: "Filtration & whole-home comfort",
+    short: "Filtration and whole home comfort",
     body: "The air you breathe matters. We install and service filtration, humidification, and purification to make your home healthier and more comfortable.",
     bullets: [
-      "Whole-home air filtration",
-      "Humidifiers & dehumidifiers",
-      "Duct inspection & sealing",
+      "Whole home air filtration",
+      "Humidifiers and dehumidifiers",
+      "Duct inspection and sealing",
       "Air purification systems",
     ],
     tone: "ice",
@@ -155,11 +156,11 @@ export const services: Service[] = [
     slug: "maintenance-plans",
     name: "Maintenance Plans",
     short: "Priority service, reduced costs",
-    body: "Members get priority scheduling, discounted repairs, and twice-a-year tune-ups that stop breakdowns before they start. Defense wins championships.",
+    body: "Members get priority scheduling, discounted repairs, and two tune ups each year that stop breakdowns before they start. Defense wins championships.",
     bullets: [
-      "Two seasonal tune-ups per year",
+      "Two seasonal tune ups per year",
       "Priority emergency scheduling",
-      "Discounted parts & labor",
+      "Discounted parts and labor",
       "Extended equipment life",
     ],
     tone: "gold",
@@ -168,12 +169,12 @@ export const services: Service[] = [
   {
     slug: "emergency-hvac",
     name: "Emergency HVAC",
-    short: "24/7 same-day response",
+    short: "24/7 same day response",
     body: "Systems don't fail on a schedule. Our technicians are on call around the clock, including nights, weekends, and holidays.",
     bullets: [
       "24/7 live dispatch",
-      "Same-day emergency repair",
-      "Nights, weekends & holidays",
+      "Same day emergency repair",
+      "Nights, weekends and holidays",
       "Upfront emergency pricing",
     ],
     tone: "ember",
@@ -181,14 +182,14 @@ export const services: Service[] = [
   },
   {
     slug: "thermostat-setup",
-    name: "Thermostat & Smart Home",
-    short: "Smart thermostat install & setup",
+    name: "Thermostat And Smart Home",
+    short: "Smart thermostat installation and setup",
     body: "Take control of your comfort and your energy bill. We install and configure smart thermostats and integrate them with your home.",
     bullets: [
       "Smart thermostat installation",
-      "Programming & app setup",
-      "Zoning & smart-home integration",
-      "Energy-savings configuration",
+      "Programming and app setup",
+      "Zoning and smart home integration",
+      "Energy savings configuration",
     ],
     tone: "gold",
     icon: "gauge",
@@ -211,7 +212,7 @@ export const packages: Pkg[] = [
     cadence: "/mo",
     blurb: "Affordable maintenance for essential HVAC care.",
     features: [
-      "Seasonal tune-ups",
+      "Seasonal tune ups",
       "Filter replacement",
       "Basic inspections",
       "Energy efficiency check",
@@ -301,7 +302,7 @@ export const reviews: Review[] = [
     location: "Burlington, IL",
     stars: 5,
     quote:
-      "Fast response, no fumbles — exactly like they say. They defended our comfort zone when a heat wave took out our old unit. Couldn't recommend them more.",
+      "Fast response, no fumbles. Exactly like they say. They defended our comfort zone when a heat wave took out our old unit. I could not recommend them more.",
   },
 ];
 
@@ -325,7 +326,7 @@ export const process = [
   {
     step: "02",
     title: "Thorough Inspection",
-    body: "Our technician diagnoses the real problem — not just the symptom — and walks you through every option.",
+    body: "Our technician diagnoses the real problem, not just the symptom, and walks you through every option.",
   },
   {
     step: "03",
@@ -356,7 +357,7 @@ export const faqs: FAQItem[] = [
   },
   {
     q: "How often should I replace my air filters?",
-    a: "Air filters should be changed every 1–3 months, depending on usage, the filter type, and the air quality in your home.",
+    a: "Air filters should be changed every one to three months, depending on usage, the filter type, and the air quality in your home.",
   },
   {
     q: "What should I consider when choosing a new air conditioning system?",
@@ -372,11 +373,11 @@ export const faqs: FAQItem[] = [
   },
   {
     q: "How long does an air conditioning installation take?",
-    a: "Most installations can be completed within 1–2 days, though timing depends on the unit type, size, and the complexity of the job.",
+    a: "Most installations can be completed within one or two days, though timing depends on the unit type, size, and the complexity of the job.",
   },
   {
     q: "Can I get a quote for my HVAC project?",
-    a: "Yes — we offer free, no-obligation quotes for all HVAC projects, with transparent and detailed proposals.",
+    a: "Yes. We offer free quotes for all HVAC projects, with transparent and detailed proposals.",
   },
   {
     q: "What financing options are available for new installations?",
@@ -388,7 +389,7 @@ export const faqs: FAQItem[] = [
   },
   {
     q: "How often should I have my HVAC system serviced?",
-    a: "We recommend servicing your system twice per year — ideally before the start of the heating and cooling seasons — for optimal performance and efficiency.",
+    a: "We recommend servicing your system twice per year, ideally before the start of the heating and cooling seasons, for optimal performance and efficiency.",
   },
 ];
 
@@ -400,10 +401,10 @@ export const team = [
 ];
 
 export const aboutValues = [
-  { title: "Experienced Team", body: "Skilled HVAC professionals delivering top-notch service on every call." },
+  { title: "Experienced Team", body: "Skilled HVAC professionals delivering excellent service on every call." },
   { title: "Reliable Service", body: "Quick, efficient heating and cooling solutions you can count on." },
   { title: "Energy Efficiency", body: "Performance optimization that helps reduce your energy costs." },
-  { title: "Quality Assurance", body: "Work built to last, backed by long-lasting HVAC performance." },
+  { title: "Quality Assurance", body: "Work built to last, backed by reliable HVAC performance." },
   { title: "Customer First", body: "Your comfort, happiness, and satisfaction are our top priorities." },
   { title: "Advanced Technology", body: "The latest tools and techniques for superior, lasting results." },
 ];
@@ -417,7 +418,7 @@ export const financing = {
     },
     {
       title: "Fast, Simple Approval",
-      body: "Quick online applications through our financing partners — often approved in minutes.",
+      body: "Quick online applications through our financing partners are often approved in minutes.",
     },
     {
       title: "Competitive Rates",

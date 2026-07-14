@@ -26,7 +26,7 @@ export function TeamBean() {
             <div className="p-7 sm:p-8">
               <h3 className="heading text-2xl text-white">The Shadow Bear</h3>
               <p className="mt-2 text-slate-400">
-                Our mascot stands guard over every comfort zone in Hampshire — suited up,
+                Our mascot stands guard over every comfort zone in Hampshire. Suited up,
                 locked in, and ready to blitz back the moment your heat or AC fumbles. Fast
                 response. No fumbles.
               </p>
@@ -49,7 +49,7 @@ export function TeamBean() {
             <p className="mt-3 max-w-xs text-sm text-slate-400">
               The real boss around the shop. Bean personally inspects every warm blanket and
               cool breeze, and won&apos;t sign off on a comfort zone until it&apos;s
-              nap-approved. Gold chain non-negotiable.
+              nap approved. Gold chain is required.
             </p>
           </div>
         </Reveal>

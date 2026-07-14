@@ -31,17 +31,17 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="container-px flex h-20 items-center justify-between gap-4">
+      <div className="container-px flex h-24 items-center justify-between gap-3">
         <Link href="/" className="flex items-center" aria-label={business.name}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/img/logo.png"
             alt={business.name}
-            className="h-11 w-auto rounded-lg bg-white px-2.5 py-1.5 shadow-lg"
+            className="h-16 w-auto rounded-xl bg-white px-3 py-2 shadow-[0_12px_45px_rgba(255,90,31,0.28)] sm:h-[4.75rem]"
           />
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 xl:flex">
           {nav.map((item) => {
             const active =
               item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
@@ -49,7 +49,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative rounded-full px-3.5 py-2 text-sm font-semibold transition-colors ${
+                className={`relative rounded-full px-2.5 py-2 text-xs font-semibold transition-colors ${
                   active ? "text-white" : "text-slate-300 hover:text-white"
                 }`}
               >
@@ -69,7 +69,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={business.phoneHref}
-            className="hidden items-center gap-2 text-sm font-bold text-white transition-colors hover:text-ember-light sm:flex"
+            className="hidden items-center gap-2 text-sm font-bold text-white transition-colors hover:text-ember-light 2xl:flex"
           >
             <Phone className="h-4 w-4 text-ember" />
             {business.phone}
@@ -79,7 +79,7 @@ export function Navbar() {
           </Link>
           <button
             onClick={() => setOpen((v) => !v)}
-            className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-white lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-white xl:hidden"
             aria-label="Toggle menu"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -93,7 +93,7 @@ export function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-t border-white/10 bg-shadow-950/95 backdrop-blur-xl lg:hidden"
+            className="overflow-hidden border-t border-white/10 bg-shadow-950/95 backdrop-blur-xl xl:hidden"
           >
             <div className="container-px flex flex-col gap-1 py-4">
               {nav.map((item) => (

@@ -67,7 +67,7 @@ export default function ServiceAreaPage() {
               <Clock className="h-6 w-6 shrink-0 text-ember" />
               <p className="text-sm text-slate-300">
                 <span className="font-semibold text-white">24/7 Emergency Dispatch.</span> Don't
-                see your town? Call {business.phone} — if you're near Hampshire, we can likely
+                see your town? Call {business.phone}. If you are near Hampshire, we can likely
                 help.
               </p>
             </div>
