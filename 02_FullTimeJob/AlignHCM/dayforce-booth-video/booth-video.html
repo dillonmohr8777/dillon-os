@@ -17,7 +17,6 @@
   .scene{position:absolute;inset:0;display:none;}
   .abs{position:absolute;}
 
-  /* richer co-brand backgrounds */
   .deckbg{position:absolute;inset:0;overflow:hidden;
     background:
       radial-gradient(1300px 900px at 84% 14%, rgba(48,103,219,.30) 0%, rgba(48,103,219,0) 60%),
@@ -31,8 +30,6 @@
   .dia{position:absolute;background:rgba(255,255,255,.03);transform:rotate(45deg);border-radius:24px;}
   .dia.o{background:rgba(245,130,32,.07);}
   .dia.b{background:rgba(48,103,219,.10);}
-
-  /* drifting two-tone glow panel behind content */
   .gp{position:absolute;width:1400px;height:820px;pointer-events:none;filter:blur(70px);opacity:.85;
     background:
       radial-gradient(560px 460px at 26% 42%, rgba(240,90,40,.34), transparent 70%),
@@ -41,24 +38,17 @@
   .t-rule{width:88px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--orange),var(--df));}
   .kicker{font-size:23px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--orange);}
   .kicker .n{color:rgba(255,255,255,.45);}
-  .kicker.b{color:var(--df-light);}
   .serif{font-family:'PT Serif',Georgia,serif;font-weight:700;color:#fff;letter-spacing:0;}
   .serif .o{color:var(--orange);}
   .serif .bl{color:var(--df-light);}
   .sub-it{font-family:'PT Serif',Georgia,serif;font-style:italic;font-weight:400;color:var(--muted);}
   .body-copy{font-weight:400;color:var(--muted);line-height:1.55;}
 
-  /* gradient boxes */
-  .box-w{background:linear-gradient(160deg,#ffffff 0%,#eef2fa 55%,#dfe9fb 100%);border-radius:12px;color:var(--ink);
-    box-shadow:0 30px 80px rgba(48,103,219,.30);}
-  .box-n{background:linear-gradient(135deg, rgba(48,103,219,.30) 0%, rgba(19,36,65,.95) 52%, rgba(240,90,40,.16) 100%);
-    border:1px solid rgba(109,151,238,.45);border-radius:12px;color:#fff;
-    box-shadow:0 30px 80px rgba(9,19,33,.55);}
-  .box-lbl{font-size:20px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);}
-  .box-w .box-lbl{color:var(--ember);}
-  .box-p{font-size:27px;line-height:1.5;}
-  .box-w .box-p{color:#243a58;}
-  .box-n .box-p{color:rgba(255,255,255,.9);}
+  /* unified chapter header (continuity across 01-04) */
+  .chap-head{position:absolute;top:88px;left:120px;right:120px;}
+  .chap-head .serif{font-size:64px;margin-top:22px;}
+  .chap-head .kicker{margin-top:20px;}
+
   .chip{display:inline-block;padding:11px 26px;border-radius:999px;border:1px solid rgba(255,255,255,.3);
     color:rgba(255,255,255,.85);font-size:22px;font-weight:600;letter-spacing:.04em;}
   .chip.orange{border-color:transparent;background:linear-gradient(135deg,#C2540F,#A3450F);color:#fff;
@@ -68,14 +58,14 @@
     align-items:center;justify-content:center;font-family:'PT Serif',serif;font-weight:700;font-size:30px;
     background:linear-gradient(145deg,#FF8A50,#F05A28);box-shadow:0 10px 30px rgba(240,90,40,.4);}
   .num-ic.b{background:linear-gradient(145deg,#5b8cf0,#2450b0);box-shadow:0 10px 30px rgba(48,103,219,.45);}
-  .num-xl{width:150px;height:150px;border-radius:50%;color:#fff;display:flex;flex:none;
-    align-items:center;justify-content:center;font-family:'PT Serif',serif;font-weight:700;font-size:72px;
+  .num-md{width:104px;height:104px;border-radius:50%;color:#fff;display:flex;flex:none;
+    align-items:center;justify-content:center;
     background:linear-gradient(145deg,#FF8A50,#F05A28);
-    box-shadow:0 0 0 10px rgba(240,90,40,.15),0 24px 70px rgba(240,90,40,.55);}
-  .num-xl.b{background:linear-gradient(145deg,#5b8cf0,#2450b0);
-    box-shadow:0 0 0 10px rgba(48,103,219,.18),0 24px 70px rgba(48,103,219,.6);}
-  .svc-t{font-family:'PT Serif',Georgia,serif;font-weight:700;font-size:44px;color:#fff;letter-spacing:0;}
-  .svc-p{font-weight:400;font-size:27px;line-height:1.5;color:var(--muted);margin-top:10px;max-width:620px;}
+    box-shadow:0 0 0 8px rgba(240,90,40,.14),0 18px 50px rgba(240,90,40,.5);}
+  .num-md.b{background:linear-gradient(145deg,#5b8cf0,#2450b0);
+    box-shadow:0 0 0 8px rgba(48,103,219,.16),0 18px 50px rgba(48,103,219,.55);}
+  .svc-t{font-family:'PT Serif',Georgia,serif;font-weight:700;font-size:33px;color:#fff;}
+  .svc-p{font-weight:400;font-size:22px;line-height:1.45;color:var(--muted);margin-top:6px;max-width:420px;}
 
   .foot{position:absolute;left:0;right:0;bottom:0;height:54px;background:rgba(9,19,33,.85);
     border-top:1px solid rgba(109,151,238,.22);
@@ -85,151 +75,137 @@
   .foot .dot{color:var(--orange);margin-right:10px;}
 
   .center-col{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 150px;}
-  .left-col{position:absolute;left:150px;right:200px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;}
 
   .slash{position:absolute;top:-200px;bottom:-200px;width:240px;z-index:60;display:none;}
   #slashO{background:linear-gradient(160deg,#F58220,#F05A28);}
   #slashB{background:linear-gradient(160deg,#4a7ce4,#2450b0);}
-
   #timecode{position:fixed;left:8px;top:8px;color:#0f0;font:14px monospace;z-index:99;display:none;}
 </style>
 </head>
 <body>
 <div id="stage">
 
-  <!-- C1 · cold open -->
+  <!-- C1 · cold open: bigger lockup + positioning title -->
   <div class="scene" id="c1">
     <div class="deckbg"><div class="dia" style="width:420px;height:420px;right:-120px;top:-140px;"></div>
       <div class="dia b" style="width:200px;height:200px;right:430px;top:190px;"></div>
       <div class="dia o" style="width:170px;height:170px;left:210px;bottom:150px;"></div></div>
     <div class="gp" id="c1gp" style="left:260px;top:130px;"></div>
     <div class="center-col" id="c1lockup">
-      <div style="display:flex;align-items:center;gap:56px;">
-        <img id="c1align" src="assets/logos/align-white.png" style="height:150px;">
-        <div id="c1x" class="serif" style="font-size:110px;color:var(--orange);">×</div>
-        <img id="c1df" src="assets/logos/dayforce-white.png" style="height:96px;">
+      <div style="display:flex;align-items:center;gap:72px;">
+        <img id="c1align" src="assets/logos/align-white.png" style="height:210px;">
+        <div id="c1x" class="serif" style="font-size:140px;color:var(--orange);">×</div>
+        <img id="c1df" src="assets/logos/dayforce-white.png" style="height:132px;">
       </div>
-      <div class="kicker" id="c1kick" style="margin-top:48px;">Implementation &amp; Optimization Partner</div>
+      <div class="kicker" id="c1kick" style="margin-top:56px;font-size:27px;">Implementation &amp; Post-Implementation Partner</div>
     </div>
     <div class="center-col" id="c1title">
       <div class="t-rule" style="transform-origin:center;" id="c1rule"></div>
-      <div class="serif" style="font-size:120px;margin-top:36px;">Get more from <span class="bl">Dayforce.</span></div>
-      <div class="sub-it" style="font-size:54px;margin-top:30px;color:rgba(255,255,255,.92);">with <span style="color:var(--orange);">Align HCM</span>, your certified consulting partner</div>
+      <div class="serif" style="font-size:112px;margin-top:36px;">Get more from <span class="bl">Dayforce.</span></div>
+      <div class="sub-it" style="font-size:44px;margin-top:32px;color:rgba(255,255,255,.92);max-width:1500px;">Implementation, optimization, and <span style="color:var(--orange);">managed services</span> from certified Dayforce experts.</div>
     </div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">alignhcm.com/partners/dayforce</div></div>
   </div>
 
-  <!-- C2 · why dayforce -->
+  <!-- C2 · 01 why dayforce (single beat, unified header) -->
   <div class="scene" id="c2">
     <div class="deckbg blue"><div class="dia b" style="width:440px;height:440px;right:-130px;top:-150px;"></div>
       <div class="dia" style="width:300px;height:300px;left:-90px;bottom:70px;"></div></div>
     <div class="gp" id="c2gp" style="left:60px;top:110px;"></div>
-    <div class="left-col" id="c2a">
+    <div class="chap-head" id="c2a">
       <div class="t-rule"></div>
-      <div class="kicker b" style="margin-top:22px;"><span class="n">01 —</span> Why Dayforce</div>
-      <div class="serif" style="font-size:96px;margin-top:28px;">One platform.<br>One <span class="bl">single-stack architecture.</span></div>
-      <div class="sub-it" style="font-size:34px;margin-top:30px;">Workforce data, processed in real time.</div>
+      <div class="kicker"><span class="n">01 —</span> Why Dayforce</div>
+      <div class="serif">One platform. One <span class="bl">single-stack architecture.</span></div>
     </div>
-    <div class="left-col" id="c2b">
-      <div class="serif" style="font-size:74px;">Payroll, time, scheduling, and HR<br>flow together, catching errors</div>
-      <div class="serif" style="font-size:96px;margin-top:30px;"><span class="o">before</span> they happen. <span class="bl">Not after.</span></div>
+    <div class="abs" id="c2body" style="left:120px;top:400px;right:200px;">
+      <div class="serif" style="font-size:78px;line-height:1.2;">Workforce data in <span class="o">real time,</span><br>across payroll, time, and HR.</div>
+      <div class="sub-it" style="font-size:34px;margin-top:34px;">And with the right partner, every module earns its keep.</div>
     </div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">The continuous calculation engine</div></div>
   </div>
 
-  <!-- C3 · services -->
+  <!-- C3 · 02 what we give you: all six icons, one grid -->
   <div class="scene" id="c3">
     <div class="deckbg"><div class="dia" style="width:400px;height:400px;right:-120px;top:-140px;"></div>
       <div class="dia o" style="width:180px;height:180px;left:230px;bottom:160px;"></div></div>
     <div class="gp" id="c3gp" style="left:260px;top:230px;"></div>
-    <div class="abs" style="top:88px;left:120px;">
+    <div class="chap-head" id="c3head">
       <div class="t-rule"></div>
-      <div class="kicker" style="margin-top:20px;"><span class="n">02 —</span> What we do for Dayforce clients</div>
-      <div class="serif" id="c3h" style="font-size:64px;margin-top:22px;">Every phase. <span class="o">Every module.</span></div>
+      <div class="kicker"><span class="n">02 —</span> What we do for Dayforce clients</div>
+      <div class="serif">From implementation to <span class="o">managed services.</span></div>
     </div>
-    <div id="c3host" class="abs" style="left:120px;right:120px;top:360px;height:560px;"></div>
-    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l" id="c3count">1–2 / 6</div></div>
+    <div id="c3host" class="abs" style="left:120px;right:100px;top:330px;height:600px;"></div>
+    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">One partner, full lifecycle</div></div>
   </div>
 
-  <!-- C4 · method -->
+  <!-- C4 · 03 method -->
   <div class="scene" id="c4">
     <div class="deckbg"><div class="dia" style="width:380px;height:380px;right:-110px;top:-130px;"></div>
       <div class="dia b" style="width:170px;height:170px;left:220px;bottom:140px;"></div></div>
     <div class="gp" id="c4gp" style="left:260px;top:220px;"></div>
-    <div class="abs" style="top:88px;left:120px;">
+    <div class="chap-head" id="c4head">
       <div class="t-rule"></div>
-      <div class="kicker" style="margin-top:20px;"><span class="n">03 —</span> How we do it</div>
-      <div class="serif" style="font-size:64px;margin-top:22px;">A <span class="o">turnkey</span> approach, planning through <span class="bl">go-live.</span></div>
+      <div class="kicker"><span class="n">03 —</span> How we deliver</div>
+      <div class="serif">A <span class="o">turnkey</span> approach, planning through <span class="bl">go-live.</span></div>
     </div>
     <div id="c4grid" class="abs" style="left:120px;right:120px;top:400px;height:520px;"></div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">Certified Dayforce experts</div></div>
   </div>
 
-  <!-- C5 · smartcare -->
+  <!-- C5 · smartcare managed services -->
   <div class="scene" id="c5">
     <div class="deckbg"><div class="dia" style="width:380px;height:380px;right:-110px;top:-130px;"></div>
       <div class="dia o" style="width:170px;height:170px;left:220px;bottom:140px;"></div></div>
     <div class="gp" id="c5gp" style="left:260px;top:130px;"></div>
-    <div class="center-col" id="c5a">
-      <div class="serif" style="font-size:92px;">And go-live isn't the <span class="o">finish line.</span></div>
-    </div>
     <div class="abs" id="c5b" style="inset:0;">
       <div class="abs" style="left:120px;top:0;bottom:54px;width:560px;display:flex;flex-direction:column;justify-content:center;">
         <img id="c5logo" src="assets/logos/smartcare-light.png" style="width:480px;">
         <div class="sub-it" id="c5t" style="font-size:29px;margin-top:36px;max-width:520px;">Your HCM platform should work for you. <span style="color:var(--orange);">Not the other way around.</span></div>
       </div>
-      <div id="c5grid" class="abs" style="left:780px;right:110px;top:0;bottom:54px;"></div>
+      <div class="abs" id="c5right" style="left:780px;right:110px;top:0;bottom:54px;">
+        <div class="abs" style="top:150px;">
+          <div class="kicker">Post-Implementation, <span style="color:var(--df-light);">Managed</span></div>
+          <div class="serif" style="font-size:56px;margin-top:18px;">Go-live isn't the finish line.</div>
+        </div>
+        <div id="c5grid" class="abs" style="left:0;right:0;top:330px;"></div>
+      </div>
     </div>
-    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">SmartCare™ for Dayforce</div></div>
+    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">SmartCare™ Managed Services</div></div>
   </div>
 
-  <!-- C6 · why align -->
+  <!-- C6 · 04 capabilities & experience -->
   <div class="scene" id="c6">
     <div class="deckbg"><div class="dia" style="width:440px;height:440px;right:-140px;top:-150px;"></div>
       <div class="dia b" style="width:190px;height:190px;right:380px;bottom:130px;"></div></div>
     <div class="gp" id="c6gp" style="left:60px;top:110px;"></div>
-    <div class="left-col" id="c6a">
+    <div class="chap-head" id="c6head">
       <div class="t-rule"></div>
-      <div class="kicker" style="margin-top:22px;"><span class="n">04 —</span> Why Align</div>
-      <div class="serif" style="font-size:92px;margin-top:28px;">Implementation. Integration.<br><span class="o">Optimization. Support.</span></div>
-      <div class="sub-it" style="font-size:32px;margin-top:26px;">One partner across the whole Dayforce lifecycle.</div>
+      <div class="kicker"><span class="n">04 —</span> Our Dayforce experience</div>
+      <div class="serif">Certified across the <span class="bl">Dayforce suite.</span></div>
     </div>
-    <div class="left-col" id="c6b">
-      <div class="serif" style="font-size:88px;">Client satisfaction is our<br><span class="o">number one metric.</span></div>
-    </div>
-    <div class="left-col" id="c6c">
-      <div class="serif" style="font-size:84px;">Align moves at your speed.</div>
-      <div class="serif" style="font-size:92px;margin-top:26px;">Which is always <span class="o">"right now."</span></div>
+    <div class="abs" id="c6body" style="left:120px;top:400px;right:120px;">
+      <div class="serif" id="c6l1" style="font-size:66px;">Payroll. Workforce management.<br>HR, talent, and <span class="o">integrations.</span></div>
+      <div class="serif" id="c6l2" style="font-size:52px;margin-top:44px;color:rgba(255,255,255,.92);">Implementations delivered, systems connected,<br>and <span class="o">managed services</span> that keep it all running.</div>
+      <div class="sub-it" id="c6l3" style="font-size:32px;margin-top:40px;">Client satisfaction is our number one metric.</div>
     </div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">alignhcm.com</div></div>
   </div>
 
-  <!-- C7 · outcomes -->
+  <!-- C7 · CTA -->
   <div class="scene" id="c7">
-    <div class="deckbg blue"><div class="dia b" style="width:420px;height:420px;right:-130px;top:-140px;"></div>
-      <div class="dia o" style="width:180px;height:180px;left:200px;bottom:150px;"></div></div>
-    <div class="gp" id="c7gp" style="left:260px;top:130px;"></div>
-    <div class="center-col" id="c7a"><div class="serif" style="font-size:150px;">Reduce <span class="o">friction.</span></div></div>
-    <div class="center-col" id="c7b"><div class="serif" style="font-size:150px;">Improve <span class="bl">adoption.</span></div></div>
-    <div class="center-col" id="c7c"><div class="serif" style="font-size:110px;">Keep <span class="bl">Dayforce</span> <span class="o">aligned</span><br>with your business.</div></div>
-    <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">Practical, by design</div></div>
-  </div>
-
-  <!-- C8 · CTA -->
-  <div class="scene" id="c8">
     <div class="deckbg"><div class="dia" style="width:440px;height:440px;right:-140px;top:-150px;"></div>
       <div class="dia o" style="width:200px;height:200px;right:360px;bottom:120px;"></div></div>
-    <div class="gp" id="c8gp" style="left:260px;top:130px;"></div>
-    <div class="center-col" id="c8a">
-      <div style="display:flex;align-items:center;gap:48px;">
-        <img src="assets/logos/align-white.png" style="height:120px;">
-        <div class="serif" style="font-size:88px;color:var(--orange);">×</div>
-        <img src="assets/logos/dayforce-white.png" style="height:78px;">
+    <div class="gp" id="c7gp" style="left:260px;top:130px;"></div>
+    <div class="center-col" id="c7a">
+      <div style="display:flex;align-items:center;gap:56px;">
+        <img src="assets/logos/align-white.png" style="height:150px;">
+        <div class="serif" style="font-size:104px;color:var(--orange);">×</div>
+        <img src="assets/logos/dayforce-white.png" style="height:96px;">
       </div>
-      <div class="serif" id="c8h" style="font-size:96px;margin-top:52px;">Let's talk <span class="bl">Dayforce.</span></div>
-      <div class="t-rule" id="c8rule" style="margin-top:24px;transform-origin:center;"></div>
-      <div class="chip orange" id="c8chip" style="margin-top:38px;font-size:29px;padding:17px 44px;">alignhcm.com/partners/dayforce</div>
-      <div class="sub-it" id="c8sub" style="font-size:30px;margin-top:40px;color:rgba(255,255,255,.6);">Stop by. Bring your toughest Dayforce question.</div>
+      <div class="serif" id="c7h" style="font-size:96px;margin-top:52px;">Let's talk <span class="bl">Dayforce.</span></div>
+      <div class="t-rule" id="c7rule" style="margin-top:24px;transform-origin:center;"></div>
+      <div class="chip orange" id="c7chip" style="margin-top:38px;font-size:29px;padding:17px 44px;">alignhcm.com/partners/dayforce</div>
+      <div class="sub-it" id="c7sub" style="font-size:30px;margin-top:40px;color:rgba(255,255,255,.6);">Stop by. Bring your toughest Dayforce question.</div>
     </div>
     <div class="foot"><div class="l"><span class="dot">●</span><b>Align HCM</b> &nbsp;·&nbsp; Dayforce Partner</div><div class="l">Dayforce Discover 2026</div></div>
   </div>
@@ -251,7 +227,6 @@ const Easing={
 };
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const seg=(t,a,b,e=Easing.linear)=>e(clamp((t-a)/(b-a),0,1));
-const BEAT_HZ=124/60;
 
 const bgCache={};
 function driftBg(id,t){
@@ -266,13 +241,14 @@ function driftBg(id,t){
   if(gp) gp.style.transform=`translate(${Math.sin(t*.21+id.length)*70}px,${Math.cos(t*.17+id.length)*44}px) rotate(${Math.sin(t*.09)*8}deg) scale(${1+.06*Math.sin(t*.13+id.length)})`;
 }
 
-/* ============ timeline: 170s, 8 chapters ============ */
-const DUR=135;
+/* ============ timeline: 90s ============ */
+const DUR=90;
 const CH={
-  c1:[0,11], c2:[11,28], c3:[28,55], c4:[55,73],
-  c5:[73,93], c6:[93,110], c7:[110,125], c8:[125,135],
+  c1:[0,12], c2:[12,22], c3:[22,36], c4:[36,48],
+  c5:[48,60], c6:[60,78], c7:[78,90],
 };
 
+/* ============ icons ============ */
 function icon(paths,size){return `<svg viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${paths}</svg>`;}
 const IC={
   plan:'<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><path d="M9 13l2 2 4-4"/>',
@@ -286,53 +262,36 @@ const IC={
   shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>',
   book:'<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>',
 };
-const SVC_ICONS=[IC.plan,IC.layers,IC.link,IC.db,IC.chart,IC.sliders];
-const SC_ICONS=[IC.headset,IC.trend,IC.shield,IC.book];
+
+/* ============ C3: all six services, one grid (3x2) ============ */
 const SERVICES=[
-  {n:1,t:"Implementation Planning",p:"Scope, timeline, and readiness mapped before the first configuration screen.",w:1},
-  {n:2,t:"Full-Suite Implementation",p:"Every Dayforce module, implemented by certified experts who've done it before.",w:0},
-  {n:3,t:"System Integration",p:"Every connected system talking to Dayforce. Cleanly, and on schedule.",w:1},
-  {n:4,t:"Data Conversion",p:"Clean data in. Full history preserved. Nothing critical left behind.",w:0},
-  {n:5,t:"Training & Reporting",p:"Your team owns the platform, with reporting that answers real questions.",w:1},
-  {n:6,t:"Optimization & Fractional Help",p:"Tune what's live, and add expert hands exactly when you need them.",w:0},
+  {t:"Implementation Planning",p:"Scope, timeline, and readiness mapped up front.",ic:IC.plan},
+  {t:"Full-Suite Implementation",p:"Every Dayforce module, by certified experts.",ic:IC.layers},
+  {t:"System Integration",p:"Every connected system talking to Dayforce.",ic:IC.link},
+  {t:"Data Conversion",p:"Clean data in. Full history preserved.",ic:IC.db},
+  {t:"Training & Reporting",p:"Your team owns the platform, with real answers.",ic:IC.chart},
+  {t:"Managed Services",p:"Post-implementation support that never clocks out.",ic:IC.sliders},
 ];
 const c3host=document.getElementById('c3host');
 SERVICES.forEach((s,i)=>{
   const el=document.createElement('div');
   el.className='abs'; el.id='svc'+i;
-  el.style.cssText+=';width:840px;top:120px;'+(i%2?'left:940px;':'left:0px;');
-  el.innerHTML=`<div style="display:flex;gap:38px;align-items:flex-start;">
-      <div class="num-xl ${i%2?'':'b'}" id="svcn${i}">${icon(SVC_ICONS[i],66)}</div>
-      <div style="padding-top:6px;"><div class="svc-t">${s.t}</div>
+  const col=i%3, row=Math.floor(i/3);
+  el.style.cssText=`width:540px;left:${col*580}px;top:${row*280}px;`;
+  el.innerHTML=`<div style="display:flex;gap:24px;align-items:flex-start;">
+      <div class="num-md ${i%2?'':'b'}" id="svcn${i}">${icon(s.ic,48)}</div>
+      <div style="padding-top:4px;"><div class="svc-t">${s.t}</div>
       <div class="svc-p">${s.p}</div></div></div>`;
   c3host.appendChild(el);
 });
 
+/* C4 method: keep numbers (real sequence) */
 const STEPS=[
-  {t:"Planning & Configuration",s:"Discovery, requirements, and a build mapped to how the business actually works."},
-  {t:"Data Migration & Integrations",s:"Clean data in, every connected system talking, nothing left behind."},
-  {t:"Testing & Training",s:"Parallel runs, UAT, and training the client's team to own Dayforce."},
-  {t:"Go-Live & Beyond",s:"A calm launch day, then SmartCare™ keeps it optimized and compliant."},
+  {t:"Planning & Configuration",s:"Discovery, requirements, and a build mapped to the business."},
+  {t:"Data Migration & Integrations",s:"Clean data in, every connected system talking."},
+  {t:"Testing & Training",s:"Parallel runs, UAT, and a team that owns Dayforce."},
+  {t:"Go-Live & Beyond",s:"A calm launch, then SmartCare™ managed services take over."},
 ];
-/* C5 SmartCare post-go-live services (1-4 numbered, per site copy) */
-const SC=[
-  {t:"Post-Go-Live Support",s:"Dedicated experts who know your configuration, on call after launch."},
-  {t:"Optimization",s:"Tune Dayforce as the business changes. Reduce friction, improve adoption."},
-  {t:"Compliance, Kept Current",s:"Stay compliant and up to date with every release and rule change."},
-  {t:"Reporting & Training",s:"Reports that answer real questions, and training that sticks."},
-];
-const c5grid=document.getElementById('c5grid');
-SC.forEach((st,i)=>{
-  const el=document.createElement('div');
-  el.className='abs'; el.id='scit'+i;
-  el.style.cssText=`left:0;right:0;top:${170+i*190}px;`;
-  el.innerHTML=`<div style="display:flex;gap:26px;align-items:flex-start;">
-    <div class="num-ic ${i%2?'b':''}">${icon(SC_ICONS[i],32)}</div>
-    <div><div style="font-size:30px;font-weight:700;color:#fff;">${st.t}</div>
-    <div class="body-copy" style="font-size:23px;margin-top:7px;max-width:820px;">${st.s}</div></div></div>`;
-  c5grid.appendChild(el);
-});
-
 const c4grid=document.getElementById('c4grid');
 STEPS.forEach((st,i)=>{
   const el=document.createElement('div');
@@ -345,22 +304,30 @@ STEPS.forEach((st,i)=>{
   c4grid.appendChild(el);
 });
 
-/* ============ shared entrance/exit helpers ============ */
-function inOut(el,l,inA,inB,outA,outB,slide=70){
-  const i=seg(l,inA,inB,Easing.outExpo), o=seg(l,outA,outB,Easing.inCubic);
-  el.style.opacity=String(i*(1-o));
-  const hold=clamp((l-inB)/(outA-inB||1),0,1);
-  el.style.transform=`translateX(${(1-i)*slide-o*slide*.7+hold*12}px) scale(${1+.025*hold})`;
-  el.style.filter=(i>0&&i<1)||(o>0&&o<1)?`blur(${Math.sin(Math.PI*Math.max(o,1-i))*7}px)`:'';
-  return {i,o};
-}
-function centerInOut(el,l,inA,inB,outA,outB){
-  const i=seg(l,inA,inB,Easing.outExpo), o=seg(l,outA,outB,Easing.inCubic);
-  el.style.opacity=String(i*(1-o));
-  const hold=clamp((l-inB)/(outA-inB||1),0,1);
-  el.style.transform=`translateY(${(1-i)*50-o*34}px) scale(${.96+.04*i+.025*hold})`;
-  el.style.filter=(i>0&&i<1)||(o>0&&o<1)?`blur(${Math.sin(Math.PI*Math.max(o,1-i))*8}px)`:'';
-  return {i,o};
+/* C5 smartcare: managed services items */
+const SC=[
+  {t:"Post-Implementation Support",s:"Dedicated experts who know your configuration.",ic:IC.headset},
+  {t:"Ongoing Optimization",s:"Tune Dayforce as the business changes.",ic:IC.trend},
+  {t:"Compliance, Kept Current",s:"Up to date with every release and rule change.",ic:IC.shield},
+];
+const c5grid=document.getElementById('c5grid');
+SC.forEach((st,i)=>{
+  const el=document.createElement('div');
+  el.className='abs'; el.id='scit'+i;
+  el.style.cssText=`left:0;right:0;top:${i*150}px;`;
+  el.innerHTML=`<div style="display:flex;gap:26px;align-items:flex-start;">
+    <div class="num-ic ${i%2?'b':''}">${icon(st.ic,32)}</div>
+    <div><div style="font-size:30px;font-weight:700;color:#fff;">${st.t}</div>
+    <div class="body-copy" style="font-size:23px;margin-top:6px;max-width:820px;">${st.s}</div></div></div>`;
+  c5grid.appendChild(el);
+});
+
+/* ============ helpers ============ */
+function headIn(el,l,inA=.2,inB=.9){
+  const hi=seg(l,inA,inB,Easing.outExpo);
+  el.style.opacity=String(hi);
+  el.style.transform=`translateY(${(1-hi)*30}px)`;
+  return hi;
 }
 
 /* ============ chapters ============ */
@@ -368,63 +335,53 @@ function renderC1(t){
   const l=t-CH.c1[0]; driftBg('c1',t);
   document.getElementById('c1').style.filter=`brightness(${seg(l,0,.9,Easing.outCubic)})`;
   const lock=document.getElementById('c1lockup');
-  const li=seg(l,.3,1.1,Easing.outExpo), lo=seg(l,4.4,5.1,Easing.inCubic);
+  const li=seg(l,.3,1.1,Easing.outExpo), lo=seg(l,5.2,5.9,Easing.inCubic);
   lock.style.opacity=String(li*(1-lo));
   lock.style.transform=`translateY(${(1-li)*40-lo*30}px) scale(${.96+.04*li})`;
-  document.getElementById('c1align').style.transform=`translateX(${(1-li)*-180}px)`;
-  document.getElementById('c1df').style.transform=`translateX(${(1-li)*180}px)`;
+  document.getElementById('c1align').style.transform=`translateX(${(1-li)*-200}px)`;
+  document.getElementById('c1df').style.transform=`translateX(${(1-li)*200}px)`;
   const x=document.getElementById('c1x');
   const xi=seg(l,1.1,1.7,Easing.outExpo);
   x.style.opacity=String(xi);
   x.style.transform=`scale(${1.6-.6*xi}) rotate(${(1-xi)*90}deg)`;
   document.getElementById('c1kick').style.opacity=String(seg(l,1.7,2.4,Easing.outExpo));
   const title=document.getElementById('c1title');
-  const ti=seg(l,5.1,6.0,Easing.outExpo), to=seg(l,10.1,10.9,Easing.inCubic);
+  const ti=seg(l,5.9,6.8,Easing.outExpo), to=seg(l,11.1,11.9,Easing.inCubic);
   title.style.opacity=String(ti*(1-to));
-  title.style.transform=`translateY(${(1-ti)*46}px) scale(${1+.025*clamp((l-6)/4,0,1)})`;
-  document.getElementById('c1rule').style.transform=`scaleX(${seg(l,5.6,6.2,Easing.outExpo)})`;
+  title.style.transform=`translateY(${(1-ti)*46}px) scale(${1+.025*clamp((l-6.8)/4.5,0,1)})`;
+  document.getElementById('c1rule').style.transform=`scaleX(${seg(l,6.4,7.0,Easing.outExpo)})`;
 }
 
 function renderC2(t){
   const l=t-CH.c2[0]; driftBg('c2',t);
-  inOut(document.getElementById('c2a'),l,.2,1.0,7.8,8.5);
-  inOut(document.getElementById('c2b'),l,8.5,9.3,16.2,16.9);
+  headIn(document.getElementById('c2a'),l);
+  const b=document.getElementById('c2body');
+  const bi=seg(l,.9,1.8,Easing.outExpo);
+  b.style.opacity=String(bi);
+  b.style.transform=`translateY(${(1-bi)*40}px) scale(${1+.02*clamp((l-1.8)/8,0,1)})`;
+  b.style.filter=bi<1?`blur(${(1-bi)*6}px)`:'';
 }
 
 function renderC3(t){
   const l=t-CH.c3[0]; driftBg('c3',t);
-  const head=document.getElementById('c3h').parentElement;
-  head.style.opacity=String(seg(l,.2,.9,Easing.outExpo));
-  head.style.transform=`translateY(${(1-seg(l,.2,.9,Easing.outExpo))*30}px)`;
-  const WAVE=8.6;
-  for(let i=0;i<6;i++){
+  headIn(document.getElementById('c3head'),l);
+  SERVICES.forEach((s,i)=>{
     const el=document.getElementById('svc'+i);
-    const wave=Math.floor(i/2);
-    const wStart=1.0+wave*WAVE;
-    const inA=wStart+(i%2)*.35, inB=inA+.8;
-    const outA=wStart+WAVE-1.0, outB=wStart+WAVE-.2;
-    const ii=seg(l,inA,inB,Easing.outExpo), oo=wave<2?seg(l,outA,outB,Easing.inCubic):seg(l,25.9,26.7,Easing.inCubic);
-    el.style.opacity=String(ii*(1-oo));
-    const dir=i%2?80:-80;
-    el.style.transform=`translateX(${(1-ii)*dir-oo*dir*.6}px)`;
-    el.style.filter=(ii>0&&ii<1)||(oo>0&&oo<1)?`blur(${Math.sin(Math.PI*Math.max(oo,1-ii))*7}px)`:'';
-    // number circle pops harder, slightly ahead of the text
-    const ni=seg(l,inA-.15,inB-.15,Easing.outExpo);
+    const ci=seg(l,.9+i*.35,1.7+i*.35,Easing.outExpo);
+    el.style.opacity=String(ci);
+    el.style.transform=`translateY(${(1-ci)*34}px)`;
+    el.style.filter=ci<1?`blur(${(1-ci)*6}px)`:'';
+    const ni=seg(l,.75+i*.35,1.55+i*.35,Easing.outExpo);
     document.getElementById('svcn'+i).style.transform=`scale(${.55+.45*ni})`;
-  }
-  const wave=clamp(Math.floor((l-1.0)/WAVE),0,2);
-  document.getElementById('c3count').textContent=`${wave*2+1}–${wave*2+2} / 6`;
+  });
 }
 
 function renderC4(t){
   const l=t-CH.c4[0]; driftBg('c4',t);
-  const head=document.querySelector('#c4 > .abs:not(.gp)');
-  const hi=seg(l,.2,.9,Easing.outExpo);
-  head.style.opacity=String(hi);
-  head.style.transform=`translateY(${(1-hi)*30}px)`;
+  headIn(document.getElementById('c4head'),l);
   STEPS.forEach((s,i)=>{
     const el=document.getElementById('mit'+i);
-    const ci=seg(l,1.0+i*.5,1.8+i*.5,Easing.outExpo);
+    const ci=seg(l,.9+i*.45,1.7+i*.45,Easing.outExpo);
     el.style.opacity=String(ci);
     el.style.transform=`translateY(${(1-ci)*34}px) scale(${.92+.08*ci})`;
   });
@@ -432,51 +389,52 @@ function renderC4(t){
 
 function renderC5(t){
   const l=t-CH.c5[0]; driftBg('c5',t);
-  centerInOut(document.getElementById('c5a'),l,.3,1.1,4.6,5.3);
   const b=document.getElementById('c5b');
-  const bi=seg(l,5.3,6.1,Easing.outExpo), bo=seg(l,19.1,19.9,Easing.inCubic);
-  b.style.opacity=String(bi*(1-bo));
+  const bi=seg(l,.2,1.0,Easing.outExpo);
+  b.style.opacity=String(bi);
   const logo=document.getElementById('c5logo');
   logo.style.transform=`scale(${.9+.1*bi})`;
-  document.getElementById('c5t').style.opacity=String(seg(l,7.0,7.8,Easing.outExpo));
+  document.getElementById('c5t').style.opacity=String(seg(l,1.6,2.4,Easing.outExpo));
+  const r=document.getElementById('c5right');
+  const ri=seg(l,.8,1.7,Easing.outExpo);
+  r.style.opacity=String(ri);
+  r.style.transform=`translateX(${(1-ri)*50}px)`;
   SC.forEach((s,i)=>{
     const el=document.getElementById('scit'+i);
-    const ci=seg(l,6.2+i*.5,7.0+i*.5,Easing.outExpo);
+    const ci=seg(l,1.8+i*.45,2.6+i*.45,Easing.outExpo);
     el.style.opacity=String(ci);
-    el.style.transform=`translateY(${(1-ci)*30}px)`;
+    el.style.transform=`translateY(${(1-ci)*28}px)`;
   });
 }
 
 function renderC6(t){
   const l=t-CH.c6[0]; driftBg('c6',t);
-  inOut(document.getElementById('c6a'),l,.2,1.0,5.2,5.9);
-  inOut(document.getElementById('c6b'),l,5.9,6.7,10.9,11.6);
-  inOut(document.getElementById('c6c'),l,11.6,12.4,16.2,16.9);
+  headIn(document.getElementById('c6head'),l);
+  const rows=[['c6l1',1.0],['c6l2',5.5],['c6l3',10.0]];
+  rows.forEach(([id,at])=>{
+    const el=document.getElementById(id);
+    const ci=seg(l,at,at+.9,Easing.outExpo);
+    el.style.opacity=String(ci);
+    el.style.transform=`translateY(${(1-ci)*34}px)`;
+    el.style.filter=ci>0&&ci<1?`blur(${(1-ci)*6}px)`:'';
+  });
 }
 
 function renderC7(t){
   const l=t-CH.c7[0]; driftBg('c7',t);
-  centerInOut(document.getElementById('c7a'),l,.2,1.0,4.4,5.1);
-  centerInOut(document.getElementById('c7b'),l,5.1,5.9,9.4,10.1);
-  centerInOut(document.getElementById('c7c'),l,10.1,10.9,14.3,15.0);
-}
-
-function renderC8(t){
-  const l=t-CH.c8[0]; driftBg('c8',t);
-  const a=document.getElementById('c8a');
+  const a=document.getElementById('c7a');
   const ai=seg(l,.3,1.2,Easing.outExpo);
   a.style.opacity=String(ai);
   a.style.transform=`translateY(${(1-ai)*40}px)`;
-  document.getElementById('c8rule').style.transform=`scaleX(${seg(l,1.3,1.9,Easing.outExpo)})`;
-  const chip=document.getElementById('c8chip');
-  chip.style.opacity=String(seg(l,1.8,2.5,Easing.outExpo));
-  document.getElementById('c8sub').style.opacity=String(seg(l,2.8,3.5,Easing.outExpo));
-  const out=seg(l,7.5,10,Easing.inOutSine);
-  document.getElementById('c8').style.filter=`brightness(${1-out})`;
+  document.getElementById('c7rule').style.transform=`scaleX(${seg(l,1.3,1.9,Easing.outExpo)})`;
+  document.getElementById('c7chip').style.opacity=String(seg(l,1.8,2.5,Easing.outExpo));
+  document.getElementById('c7sub').style.opacity=String(seg(l,2.8,3.5,Easing.outExpo));
+  const out=seg(l,9.5,12,Easing.inOutSine);
+  document.getElementById('c7').style.filter=`brightness(${1-out})`;
 }
 
 /* ============ dual-slash transitions ============ */
-const CUTS=[11,28,55,73,93,110,125];
+const CUTS=[12,22,36,48,60,78];
 function renderSlash(t){
   const o=document.getElementById('slashO'), b=document.getElementById('slashB');
   let on=false;
@@ -494,7 +452,7 @@ function renderSlash(t){
 
 /* ============ master seek ============ */
 const SCENES=Object.entries(CH).map(([id,range])=>({id,range}));
-const FNS={c1:renderC1,c2:renderC2,c3:renderC3,c4:renderC4,c5:renderC5,c6:renderC6,c7:renderC7,c8:renderC8};
+const FNS={c1:renderC1,c2:renderC2,c3:renderC3,c4:renderC4,c5:renderC5,c6:renderC6,c7:renderC7};
 function seekTo(t){
   t=clamp(t,0,DUR);
   for(const s of SCENES){
