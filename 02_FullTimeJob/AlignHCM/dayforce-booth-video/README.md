@@ -9,7 +9,7 @@ A 90-second looping booth video for Dayforce Discover 2026 (Oct 27–29, Wynn La
 | Time | Chapter |
 |---|---|
 | 0:00–0:12 | Cold open: large Align × Dayforce lockup, "Implementation & Post-Implementation Partner," "Get more from Dayforce" + managed-services positioning |
-| 0:12–0:22 | 01 · Why Dayforce: single-stack architecture, real-time workforce data |
+| 0:12–0:22 | 01 · Why Dayforce: one code stack, one rules engine for all of HCM (the differentiator) |
 | 0:22–0:36 | 02 · What we do: all six icon services on one grid, "From implementation to managed services." |
 | 0:36–0:48 | 03 · How we deliver: turnkey, 4 numbered phases through go-live |
 | 0:48–1:00 | SmartCare™ Managed Services: "Go-live isn't the finish line" + 3 post-implementation items |
