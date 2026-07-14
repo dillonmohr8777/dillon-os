@@ -1,18 +1,20 @@
 # Align HCM Broker Video: "The Moment of Truth"
 
-A 2-minute animated video for the channel team to show benefits brokers why Align HCM is the implementation partner to bring into client conversations.
+An 80-second animated video for the channel team to show benefits brokers why Align HCM is the implementation partner to bring into client conversations.
 
-**Final deliverable:** `Align-Broker-Implementation-Video.mp4` (1920x1080, 30fps, ~120s, H.264 + AAC ambient bed)
+**Final deliverable:** `Align-Broker-Implementation-Video.mp4` (1920x1080, 30fps, 1:20, H.264 + AAC ambient bed)
 
 ## Structure
 
 | Time | Scene |
 |---|---|
-| 0-10s | Ink-reveal intro: ink blots bloom on paper, the Align HCM logo emerges through an ink dissolve with 3D tilt |
-| 10-24s | Broker hook: "You guide your clients through benefits... there's a moment of truth: implementation." |
-| 24-86s | Five case-study pages, varied transitions (page-turn, horizontal push, vertical push): AWP Safety, Driscoll's, BEUMER, Arrow, Resorts World Las Vegas |
-| 86-102s | The method: numbered 4-phase approach (deck style), then SmartCare: "Your HCM platform should work for you. Not the other way around." |
-| 102-120s | Broker CTA: Channel Partner Program, alignhcm.com/partners/brokers |
+| 0-7s | Ink-reveal intro: ink blots bloom on paper, the Align HCM logo emerges through an ink dissolve with 3D tilt |
+| 7-16.5s | Broker hook: "You guide your clients through benefits... there's a moment of truth: implementation." |
+| 16.5-58.5s | Five case-study pages (8.4s each), varied transitions (page-turn, horizontal push, vertical push): AWP Safety, Driscoll's, BEUMER, Arrow, Resorts World Las Vegas |
+| 58.5-70s | The method: numbered 4-phase approach (deck style), then SmartCare: "Your HCM platform should work for you. Not the other way around." |
+| 70-80s | Broker CTA: Channel Partner Program, alignhcm.com/partners/brokers |
+
+The scene choreography is authored on the original 120s internal clock; per-scene time-scale factors (`SC` in `broker-video.html`) map real time onto it, so retiming the video means touching only `DUR`, `T`, `CASE_LEN`, and `SC`.
 
 ## Design system (v2, matched to the Align sales deck)
 

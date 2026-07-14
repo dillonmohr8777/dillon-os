@@ -225,9 +225,12 @@ function fbm(x,y){return .5*vnoise(x,y)+.25*vnoise(x*2.03,y*2.11)+.125*vnoise(x*
 /* ============================================================
    Timeline
    ============================================================ */
-const DUR=120;
-const T={ s1:[0,10], s2:[10,24], cases:[24,86], s8:[86,102], s9:[102,120] };
-const CASE_LEN=12.4;
+const DUR=80;
+const T={ s1:[0,7], s2:[7,16.5], cases:[16.5,58.5], s8:[58.5,70], s9:[70,80] };
+const CASE_LEN=8.4;
+// scene choreography was authored at the 120s pace; each scene maps real
+// time onto its original internal clock so every beat survives the recut
+const SC={ s1:10/7, s2:14/9.5, s8:16/11.5, s9:18/10 };
 
 /* ============================================================
    Case content (vendor-agnostic, no headcounts)
@@ -397,6 +400,7 @@ function blotPath(ctx,b,grow,melt,t){
 }
 
 function renderS1(t){
+  t*=SC.s1;
   const c=ink; c.clearRect(0,0,1920,1080);
   c.fillStyle='#F7F4EE'; c.fillRect(0,0,1920,1080);
   c.globalAlpha=.05;
@@ -462,7 +466,7 @@ function renderS1(t){
    Scene 2 — hook (three deck-title beats)
    ============================================================ */
 function renderS2(t){
-  const l=t-T.s2[0];
+  const l=(t-T.s2[0])*SC.s2;
   driftBg('s2',t);
   const set=(id,inA,inB,outA,outB)=>{
     const el=document.getElementById(id);
@@ -591,7 +595,7 @@ function renderCases(t){
    Scene 8 — method + smartcare
    ============================================================ */
 function renderS8(t){
-  const l=t-T.s8[0];
+  const l=(t-T.s8[0])*SC.s8;
   // whole-scene crossfade in over the zooming last case page
   document.getElementById('s8').style.opacity=String(seg(l,-1.1,-.05,Easing.inOutCubic));
   const a=document.getElementById('s8a'), b=document.getElementById('s8b');
@@ -625,7 +629,7 @@ function renderS8(t){
    Scene 9 — CTA
    ============================================================ */
 function renderS9(t){
-  const l=t-T.s9[0];
+  const l=(t-T.s9[0])*SC.s9;
   driftBg('s9',t);
   const a=document.getElementById('s9a'), b=document.getElementById('s9b');
   const aIn=seg(l,.2,1.05,Easing.outExpo), aOut=seg(l,6.6,7.3,Easing.inCubic);
@@ -651,7 +655,7 @@ function renderS9(t){
    ============================================================ */
 function renderWipe(t){
   const w=document.getElementById('wipe'), bar=document.getElementById('wipeBar');
-  const wipes=[[9.5,10.5],[23.4,24.4],[101.4,102.4]];
+  const wipes=[[6.5,7.5],[15.9,16.9],[69.4,70.4]];
   let on=false;
   for(const [a,bnd] of wipes){
     if(t>=a&&t<=bnd){
@@ -660,7 +664,7 @@ function renderWipe(t){
       const x=-260+p*(1920+560);
       bar.style.display='block';
       bar.style.transform=`translateX(${x}px) skewX(-12deg)`;
-      if(a===9.5){
+      if(a===6.5){
         w.style.display='block';
         w.style.clipPath=`polygon(0 0, ${x+130}px 0, ${x-100}px 100%, 0 100%)`;
       }

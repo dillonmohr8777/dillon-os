@@ -1,11 +1,11 @@
-// Light EDM bed v3 — actually sounds like EDM: present kick, bright hats,
+// Light EDM bed v4 — the 80s recut of v3: present kick, bright hats,
 // pumping sidechain, saw-layer bass, louder master with soft limiting.
-// 122 BPM. Sections: filtered intro (0-10) -> groove (10-24) -> full (24-86)
-//           breakdown pads (86-102) -> lift (102-116) -> outro fade.
+// 122 BPM. Sections: filtered intro (0-7) -> groove (7-16.5) -> full (16.5-58.5)
+//           breakdown pads (58.5-70) -> lift (70-76) -> outro fade.
 // Output: assets/ambient.wav (44.1kHz stereo 16-bit)
 import { writeFileSync } from 'fs';
 
-const SR = 44100, DUR = 120, N = SR * DUR;
+const SR = 44100, DUR = 80, N = SR * DUR;
 const L = new Float64Array(N), R = new Float64Array(N);
 const TWO_PI = Math.PI * 2;
 
@@ -21,17 +21,17 @@ const CH = {
 };
 const PROG_MAIN = [CH.Am, CH.F, CH.C, CH.G];
 const PROG_LIFT = [CH.Am9, CH.Fma7, CH.C, CH.G];
-const chordAt = t => (t >= 102 ? PROG_LIFT : PROG_MAIN)[Math.floor(t / BAR) % 4];
+const chordAt = t => (t >= 70 ? PROG_LIFT : PROG_MAIN)[Math.floor(t / BAR) % 4];
 
 const inSec = (t, a, b, rise = 1.5, fall = 1.5) =>
   Math.min(1, Math.max(0, (t - a) / rise)) * Math.min(1, Math.max(0, (b - t) / fall));
 // intro has a filtered kick so it reads as EDM from second one
-const kickFullOn = t => inSec(t, 10.2, 85.9, .01, .8) + inSec(t, 101.9, 116, .01, 2.2);
-const kickIntroOn = t => inSec(t, 1.8, 10.2, .8, .01);
-const hatOn   = t => inSec(t, 12.2, 85.9, 1.5, .8) + inSec(t, 103.5, 115, .8, 2.2);
-const hat16On = t => inSec(t, 24, 85.9, 2, .8) + inSec(t, 105.4, 114, .8, 2.2);
-const arpOn   = t => inSec(t, 17, 85.9, 3, 1) + inSec(t, 88, 114, 4, 2.2);
-const bassOn  = t => inSec(t, 10.2, 86.3, 1, 1.5) + inSec(t, 101.9, 115.5, .4, 2.2);
+const kickFullOn = t => inSec(t, 7.2, 58.4, .01, .8) + inSec(t, 69.9, 76, .01, 2.2);
+const kickIntroOn = t => inSec(t, 1.4, 7.2, .8, .01);
+const hatOn   = t => inSec(t, 9.2, 58.4, 1.5, .8) + inSec(t, 71.4, 75.2, .8, 2.2);
+const hat16On = t => inSec(t, 16.5, 58.4, 2, .8) + inSec(t, 72.4, 74.8, .8, 2.2);
+const arpOn   = t => inSec(t, 11.5, 58.4, 3, 1) + inSec(t, 60, 74.8, 4, 2.2);
+const bassOn  = t => inSec(t, 7.2, 58.9, 1, 1.5) + inSec(t, 69.9, 75.5, .4, 2.2);
 const master  = t => Math.min(1, t / 1.2) * Math.min(1, Math.max(0, (DUR - t) / 3.5));
 
 let seed = 424242;
@@ -41,7 +41,7 @@ for (let i = 0; i < N; i++) noiseBuf[i] = rnd();
 
 const ARP_STEP = BEAT / 4;
 const ARP_ORDER = [1, 2, 3, 2, 1, 3, 2, 3];
-const risers = [9.9, 23.9, 85.9, 101.9];
+const risers = [6.9, 16.4, 58.4, 69.9];
 
 const phases = new Float64Array(8);
 let bassPhase = 0, bassPhase2 = 0, lpHat = 0, lpNoise = 0, lpIntro = 0;
@@ -149,4 +149,4 @@ hdr.write('fmt ', 12); hdr.writeUInt32LE(16, 16); hdr.writeUInt16LE(1, 20); hdr.
 hdr.writeUInt32LE(SR, 24); hdr.writeUInt32LE(SR * 4, 28); hdr.writeUInt16LE(4, 32); hdr.writeUInt16LE(16, 34);
 hdr.write('data', 36); hdr.writeUInt32LE(pcm.length, 40);
 writeFileSync('assets/ambient.wav', Buffer.concat([hdr, pcm]));
-console.log('wrote assets/ambient.wav (EDM v3)', ((44 + pcm.length) / 1e6).toFixed(1), 'MB');
+console.log('wrote assets/ambient.wav (EDM v4, 80s)', ((44 + pcm.length) / 1e6).toFixed(1), 'MB');
