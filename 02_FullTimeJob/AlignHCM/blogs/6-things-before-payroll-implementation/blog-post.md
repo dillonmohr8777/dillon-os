@@ -6,7 +6,7 @@ status: ready-to-publish
 slug: 6-things-before-payroll-implementation
 meta_title: "6 Things to Do Before Payroll Implementation | Align HCM"
 meta_description: "Align HCM CEO Maher El-Abdallah shares the 6 things he tells every business before payroll implementation starts, from Phase 0 discovery to post-go-live support."
-featured_image: featured-image.png
+featured_image: featured-image.jpg
 featured_image_alt: "6 Things I Tell Businesses Before Payroll Implementation, written by Maher El-Abdallah, CEO of Align HCM"
 tags: [payroll-implementation]
 source_draft: https://docs.google.com/document/d/1Ez4xsM1zDI4vpeAhDmIskNPQRMxAnilfVLimkYeQTqE
@@ -93,23 +93,23 @@ This is exactly why we built [SmartCare](https://www.alignhcm.com/align-hcm-smar
 
 ### How long does a payroll implementation take?
 
-It depends on your organization's size and complexity, but most mid-market payroll implementations run 3 to 9 months from kickoff to go-live. The biggest factor isn't the platform. It's how prepared you are: clean data, documented pay rules, and engaged stakeholders shorten timelines more than any vendor feature. See our breakdown of the [most common challenges with HCM implementations](https://www.alignhcm.com/blog/the-most-common-challenges-with-hcm-implementations).
+Most mid-market payroll implementations take 3 to 9 months from kickoff to go-live, although workforce complexity, data quality, integrations, pay rules, and stakeholder availability can extend that timeline. Clean data, documented processes, protected testing cycles, and engaged decision-makers usually shorten implementation more than any individual platform feature.
 
 ### What is Phase 0 in a payroll implementation?
 
-Phase 0 is the discovery stage that happens before any system configuration. At Align HCM it covers current-state process mapping, risk identification, data migration requirements, and stakeholder alignment. It's included in our standard pricing because skipping it reliably costs more later in rework and delays.
+Phase 0 is the discovery stage before system configuration begins. At Align HCM, it covers current-state process mapping, risk identification, data migration requirements, stakeholder alignment, and decision ownership. Completing this work early gives the implementation team a reliable blueprint and prevents expensive rework, delays, and scope disputes later.
 
 ### What is the biggest risk in a payroll implementation?
 
-Data migration. Legacy payroll data is almost always dirtier than teams expect, and payroll has zero tolerance for error because bad data produces bad paychecks. The second biggest risk is skipping parallel testing when timelines slip.
+Data migration is usually the biggest payroll implementation risk because legacy records often contain inconsistent codes, missing fields, outdated classifications, and duplicate data. Payroll has almost no tolerance for error. Dirty data creates incorrect paychecks, compliance exposure, and employee distrust. Compressed parallel testing is the next major risk.
 
 ### Who should be involved in a payroll implementation?
 
-Payroll, HR, finance, IT, and operations. Payroll connects to time and attendance, benefits, talent, and compliance, so every department that touches employee data needs representation and a clear decision owner from day one.
+Payroll, HR, finance, IT, and operations should all participate in a payroll implementation. Payroll connects to time and attendance, benefits, talent, workforce management, compliance, and financial reporting. Each department that creates, changes, approves, or relies on employee data needs representation and a clearly assigned decision owner from day one.
 
 ### What happens after payroll go-live?
 
-The first quarter is the hardest: first quarter close, first off-cycle runs, first open enrollment, first year-end. Plan for a stabilization period with dedicated support, then move into optimization. That's the maturity path our [SmartCare support model](https://www.alignhcm.com/align-hcm-smartcare) is built around.
+After payroll go-live, the organization enters a stabilization period that typically includes the first quarter close, off-cycle runs, open enrollment, release changes, and eventually year-end. Teams need dedicated support for issue triage, data validation, user questions, and workflow improvements before moving from stabilization into continuous optimization through a model such as [SmartCare](https://www.alignhcm.com/align-hcm-smartcare).
 
 ---
 

@@ -19,10 +19,10 @@ blog: 6 Things I Tell Businesses Before Payroll Implementation
 
 ## Featured image
 
-* **File:** `featured-image.png` (1200x627, recreated from the calendar's Maher blog-card template: navy #1E202E, orange #E8832A, headshot right, Written By block)
-* **Filename on upload:** `6-things-before-payroll-implementation-maher-el-abdallah.png`
+* **File:** `featured-image.jpg` (1280x668, user-approved final artwork)
+* **Filename on upload:** `6-things-before-payroll-implementation-maher-el-abdallah.jpg`
 * **Alt text:** 6 Things I Tell Businesses Before Payroll Implementation, written by Maher El-Abdallah, CEO of Align HCM
-* **Note:** the headshot in this render is upscaled from a Canva thumbnail, so it's slightly soft. For the final asset, duplicate the "5 Common Challenges" card in the Primary Content deck in Canva, swap the title text to this post's title, and export at 1200x627. `featured-image-card.html` is the editable recreation if you'd rather regenerate outside Canva.
+* **Note:** Use this supplied image exactly as approved. Do not recreate, restyle, crop, recolor, or substitute the logo or headshot.
 
 ## AEO / GEO optimizations baked into the post
 
