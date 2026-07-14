@@ -18,7 +18,7 @@ export function StructuredData() {
           width: 512,
           height: 278,
         },
-        image: `${base}/img/mascot.jpg`,
+        image: `${base}/img/logo.png`,
         telephone: business.phone,
         email: business.email,
         slogan: business.tagline,

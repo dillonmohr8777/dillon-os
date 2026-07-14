@@ -3,10 +3,10 @@ import { business } from "@/lib/site";
 
 const siteUrl = `https://${business.domain}`;
 const defaultSocialImage = {
-  url: "/img/mascot.jpg",
-  width: 1400,
-  height: 788,
-  alt: `${business.name} mascot and brand mark`,
+  url: "/img/logo.png",
+  width: 512,
+  height: 278,
+  alt: `${business.name} official logo`,
 };
 
 function canonicalPath(path: string) {
@@ -22,15 +22,12 @@ export function createPageMetadata({
   title,
   description,
   path,
-  image = defaultSocialImage.url,
 }: {
   title: string;
   description: string;
   path: string;
-  image?: string;
 }): Metadata {
   const canonical = canonicalPath(path);
-  const socialImage = { ...defaultSocialImage, url: image };
 
   return {
     title,
@@ -43,14 +40,13 @@ export function createPageMetadata({
       siteName: business.name,
       locale: "en_US",
       type: "website",
-      images: [socialImage],
+      images: [defaultSocialImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [image],
+      images: [defaultSocialImage.url],
     },
   };
 }
-
