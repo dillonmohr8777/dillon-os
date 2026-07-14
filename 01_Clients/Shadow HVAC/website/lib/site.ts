@@ -1,5 +1,5 @@
 // Central content + business data for Shadow Heating & Cooling.
-// Sourced from shadowheatingandcooling.com + the "bear concept" build.
+// Sourced from the live Shadow Heating and Cooling site and the "bear concept" build.
 
 export const business = {
   name: "Shadow Heating & Cooling",
@@ -19,7 +19,7 @@ export const business = {
   },
   hours: "24/7 Emergency Service",
   bookingUrl: "https://book.housecallpro.com/book/Shadow-Heating--Cooling/",
-  domain: "shadowheatingandcooling.com",
+  domain: "shadow-heating.com",
   social: {
     facebook: "https://www.facebook.com/shadowHVAC/",
     instagram: "https://www.instagram.com/shadowhvac/",
