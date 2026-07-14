@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { Section } from "@/components/Section";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { CTABand } from "@/components/CTABand";
+import { ProjectProof } from "@/components/ProjectProof";
 import { faqs } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -28,6 +29,8 @@ export default function FaqPage() {
       <Section className="!pt-16">
         <FaqAccordion items={faqs} />
       </Section>
+
+      <ProjectProof variant="answers" />
 
       <CTABand />
     </>

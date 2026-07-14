@@ -190,7 +190,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.08fr,0.92fr] lg:items-start">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 md:items-start">
           <Reveal>
             <figure className="card overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -213,7 +213,7 @@ export default function HomePage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <figure className="card overflow-hidden lg:mt-16">
+            <figure className="card overflow-hidden md:mt-12">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/img/recent-installation-furnace.jpg"
@@ -228,6 +228,48 @@ export default function HomePage() {
                 <h3 className="heading text-xl text-white">Heating and air quality</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">
                   American Standard furnace paired with Aprilaire whole-home humidification.
+                </p>
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal>
+            <figure className="card overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/img/installation-brazing-in-progress.jpg"
+                alt="Shadow technician brazing copper refrigerant lines during a residential HVAC installation"
+                width="1200"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <figcaption className="p-6">
+                <h3 className="heading text-xl text-white">Installation in progress</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  Copper refrigerant connections made carefully on site by a Shadow technician.
+                </p>
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <figure className="card overflow-hidden md:mt-12">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/img/furnace-coil-service-open.jpg"
+                alt="Open furnace cabinet showing the evaporator coil, controls, and service tools"
+                width="1200"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <figcaption className="p-6">
+                <h3 className="heading text-xl text-white">Inside the system</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  Coil, controls, and airflow components checked before the final panels go on.
                 </p>
               </figcaption>
             </figure>

@@ -5,6 +5,7 @@ import { Section } from "@/components/Section";
 import { Reveal } from "@/components/Reveal";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import { CTABand } from "@/components/CTABand";
+import { ProjectProof } from "@/components/ProjectProof";
 import { reviews } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -64,6 +65,8 @@ export default function ReviewsPage() {
           ))}
         </div>
       </Section>
+
+      <ProjectProof variant="trust" />
 
       <CTABand />
     </>

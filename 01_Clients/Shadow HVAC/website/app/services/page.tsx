@@ -6,6 +6,7 @@ import { Section } from "@/components/Section";
 import { Reveal } from "@/components/Reveal";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { CTABand } from "@/components/CTABand";
+import { ProjectProof } from "@/components/ProjectProof";
 import { services } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -85,6 +86,8 @@ export default function ServicesPage() {
           ))}
         </div>
       </Section>
+
+      <ProjectProof variant="craft" />
 
       <CTABand />
     </>

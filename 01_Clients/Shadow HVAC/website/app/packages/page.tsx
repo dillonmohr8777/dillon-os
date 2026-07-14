@@ -5,6 +5,7 @@ import { Section } from "@/components/Section";
 import { Reveal } from "@/components/Reveal";
 import { PackageCards } from "@/components/PackageCards";
 import { CTABand } from "@/components/CTABand";
+import { ProjectProof } from "@/components/ProjectProof";
 
 export const metadata: Metadata = {
   title: "Maintenance Packages",
@@ -55,6 +56,8 @@ export default function PackagesPage() {
           </p>
         </Reveal>
       </Section>
+
+      <ProjectProof variant="maintenance" />
 
       <CTABand />
     </>

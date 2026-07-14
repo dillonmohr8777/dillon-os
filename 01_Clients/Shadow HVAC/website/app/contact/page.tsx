@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { Section } from "@/components/Section";
 import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
+import { ProjectProof } from "@/components/ProjectProof";
 import { business } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -129,6 +130,8 @@ export default function ContactPage() {
           </Reveal>
         </div>
       </Section>
+
+      <ProjectProof variant="local" />
     </>
   );
 }

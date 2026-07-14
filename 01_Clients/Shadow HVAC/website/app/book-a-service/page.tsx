@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { Section } from "@/components/Section";
 import { Reveal } from "@/components/Reveal";
 import { BookingForm } from "@/components/BookingForm";
+import { ProjectProof } from "@/components/ProjectProof";
 import { business } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -85,6 +86,8 @@ export default function BookPage() {
           </Reveal>
         </div>
       </Section>
+
+      <ProjectProof variant="ready" />
     </>
   );
 }

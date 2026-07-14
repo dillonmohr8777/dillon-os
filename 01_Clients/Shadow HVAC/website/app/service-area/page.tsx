@@ -5,6 +5,7 @@ import { Section } from "@/components/Section";
 import { Reveal } from "@/components/Reveal";
 import { ServiceAreaMap } from "@/components/ServiceAreaMap";
 import { CTABand } from "@/components/CTABand";
+import { ProjectProof } from "@/components/ProjectProof";
 import { serviceAreas, business } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -73,6 +74,8 @@ export default function ServiceAreaPage() {
           </Reveal>
         </div>
       </Section>
+
+      <ProjectProof variant="local" />
 
       <CTABand />
     </>
