@@ -178,6 +178,63 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* ===== RECENT INSTALLATION ===== */}
+      <Section id="recent-installation" className="field-lines">
+        <div className="max-w-3xl">
+          <h2 className="heading text-4xl leading-tight text-white sm:text-5xl">
+            Real equipment. <span className="text-gradient-cool">Clean installation.</span>
+          </h2>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            A closer look at a recent residential heating and cooling system,
+            from the outdoor condenser to the indoor furnace and whole-home humidifier.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1.08fr,0.92fr] lg:items-start">
+          <Reveal>
+            <figure className="card overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/img/recent-installation-condenser.jpg"
+                alt="Ameristar outdoor air conditioning condenser installed beside a home"
+                width="1200"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <figcaption className="p-6">
+                <h3 className="heading text-xl text-white">Outdoor cooling system</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  Ameristar condenser set level on a dedicated equipment pad.
+                </p>
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <figure className="card overflow-hidden lg:mt-16">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/img/recent-installation-furnace.jpg"
+                alt="American Standard furnace with Aprilaire whole-home humidifier"
+                width="1200"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+                className="aspect-[4/5] w-full object-cover"
+              />
+              <figcaption className="p-6">
+                <h3 className="heading text-xl text-white">Heating and air quality</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  American Standard furnace paired with Aprilaire whole-home humidification.
+                </p>
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
+      </Section>
+
       {/* ===== CHAMPIONSHIP PLAYBOOK + THERMOSTAT ===== */}
       <Section id="playbook" className="field-lines">
         <div className="grid items-center gap-14 lg:grid-cols-2">
