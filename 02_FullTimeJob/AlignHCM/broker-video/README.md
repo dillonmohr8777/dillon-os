@@ -2,7 +2,7 @@
 
 An 80-second animated video for the channel team to show benefits brokers why Align HCM is the implementation partner to bring into client conversations.
 
-**Final deliverable:** `Align-Broker-Implementation-Video.mp4` (1920x1080, 30fps, 1:20, H.264 + AAC ambient bed)
+**Final deliverable:** `Align-Broker-Implementation-Video.mp4` (1920x1080, 30fps, 1:20, H.264, silent — no audio track; the render muxes `assets/ambient.wav`, then the audio is stripped with `-c:v copy -an`)
 
 ## Structure
 
