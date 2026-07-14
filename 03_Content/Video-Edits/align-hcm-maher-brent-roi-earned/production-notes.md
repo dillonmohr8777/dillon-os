@@ -63,3 +63,15 @@ Shared V3 system (`gfx3.html` + `render_gfx3.py` + `assemble3.sh`):
 - Both speakers in frame (two-up crop) with dual name labels, active speaker in orange.
 - Each clip exits with a smoothleft swipe into a branded end card (logo, serif kicker, ALIGNHCM.COM) over the data field.
 - No dashes in any on-screen text.
+
+## Batch 2: clips from the full 23:43 episode (native 1080p source)
+
+Source: `align-hcm-maher-brent-chatcut` repo, `source/full-episode.mp4` (pushed by Codex, 1920x1080/24). YouTube json3 transcript aligns 1:1 with the file (whisper-verified within 60ms), so all cuts and captions use it directly.
+
+| Clip | Source (s) | Length | Archetype |
+|------|-----------|--------|-----------|
+| 4 · Personal ROI | 139.60 to 159.55 | 22.6s | Kinetic banner |
+| 5 · Product Not Utility | 711.40 to 734.90 | 26.2s | Swipe-in glass cards |
+| 6 · Speak CFO | 1230.40 to 1258.95 | 31.2s | Translation stack (metric floors light up as translated) |
+
+Background V4 ("premium SaaS field"): removed all fabricated data elements (fake sparkline, +38% chip, bar chart). Replaced with aurora light beams, rotating conic halos, radially masked dot matrix, film grain, periodic light streaks, and editorial glass pills carrying real episode language (System of Intelligence / Earned, Not Installed). Glass diamonds with orange gradient shadows retained. Full continuity with earlier deliverables (Gelasio system, orange ring box, dual name labels, word-tracked captions, end cards).

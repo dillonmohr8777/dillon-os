@@ -36,30 +36,33 @@
   .glass::after { content:''; position:absolute; left:8%; top:6%; width:52%; height:30%; border-radius:50%;
                   background:linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,0)); }
 
-  /* data elements */
-  .dchip { position:absolute; display:flex; align-items:center; gap:12px; padding:12px 20px; border-radius:12px;
-           background:rgba(10,18,32,.55); border:1px solid rgba(150,180,225,.22);
-           backdrop-filter: blur(10px); font-family:Inter; font-weight:700; letter-spacing:.16em;
-           color:#B9CBE4; font-size:16px; box-shadow:0 14px 34px rgba(3,8,16,.5); }
-  .dchip .up { color:#5CDB95; font-size:15px; }
-  .dchip .ov { color:#F47A25; }
-  .sparkbox { position:absolute; padding:14px 18px 10px; border-radius:14px; background:rgba(10,18,32,.5);
-              border:1px solid rgba(150,180,225,.2); backdrop-filter:blur(10px); box-shadow:0 16px 40px rgba(3,8,16,.5); }
-  .sparkbox .lbl { font-family:Inter; font-weight:700; font-size:13px; letter-spacing:.22em; color:#7E93AE; margin-bottom:6px; }
-  .barsbox { position:absolute; display:flex; align-items:flex-end; gap:9px; padding:16px 18px 12px; border-radius:14px;
-             background:rgba(10,18,32,.5); border:1px solid rgba(150,180,225,.2); backdrop-filter:blur(10px);
-             box-shadow:0 16px 40px rgba(3,8,16,.5); height:110px; }
-  .barsbox i { display:block; width:16px; border-radius:4px 4px 2px 2px;
-               background:linear-gradient(180deg,#7FA9F0, #3D6DB5); }
-  .barsbox i.o { background:linear-gradient(180deg,#FF9A4D,#F47A25); }
+  /* premium SaaS field: beams, halo, dots, pills, streaks, grain */
+  .dots { position:absolute; inset:0; opacity:.15;
+          background-image:radial-gradient(rgba(150,185,235,.55) 1.4px, transparent 1.6px);
+          background-size:46px 46px;
+          -webkit-mask:radial-gradient(95% 80% at 58% 38%, black 25%, transparent 78%); }
+  .beam { position:absolute; filter:blur(64px); }
+  .beam.b1 { width:1700px; height:300px; left:-220px; top:170px; transform:rotate(-16deg);
+             background:linear-gradient(90deg, transparent, rgba(78,130,210,.16) 28%, rgba(127,169,240,.26) 50%, rgba(78,130,210,.14) 72%, transparent); }
+  .beam.b2 { width:1500px; height:250px; left:380px; bottom:-60px; transform:rotate(13deg);
+             background:linear-gradient(90deg, transparent, rgba(244,122,37,.13) 32%, rgba(255,154,77,.20) 50%, rgba(244,122,37,.10) 68%, transparent); }
+  .halo { position:absolute; border-radius:50%;
+          background:conic-gradient(from 0deg, transparent 0%, rgba(244,122,37,.55) 12%, rgba(127,169,240,.48) 30%, transparent 50%);
+          -webkit-mask:radial-gradient(circle, transparent 61%, black 64%, black 68%, transparent 71%);
+          filter:blur(1.5px); }
+  .halo.h1 { width:720px; height:720px; right:-160px; top:-180px; opacity:.55; }
+  .halo.h2 { width:400px; height:400px; left:-110px; bottom:30px; opacity:.32; }
   .ghost { position:absolute; font-family:'Gelasio'; font-weight:700; color:transparent;
-           -webkit-text-stroke:2px rgba(160,190,235,.10); letter-spacing:-4px; }
-  .dot { position:absolute; border-radius:50%; background:rgba(127,169,240,.5); }
-  .dot.o { background:rgba(244,122,37,.55); }
-  .ringоб { position:absolute; border-radius:50%; border:2px solid rgba(127,169,240,.18); }
-  .orb { position:absolute; border-radius:50%; border:2px solid rgba(127,169,240,.16); }
-  .orb::after { content:''; position:absolute; width:10px; height:10px; border-radius:50%; background:#F47A25;
-                left:50%; top:-6px; margin-left:-5px; box-shadow:0 0 12px rgba(244,122,37,.9); }
+           -webkit-text-stroke:2px rgba(160,190,235,.085); letter-spacing:-4px; }
+  .pill { position:absolute; display:flex; align-items:center; gap:11px; padding:11px 20px; border-radius:100px;
+          font-family:Inter; font-weight:600; font-size:14.5px; letter-spacing:.22em; text-transform:uppercase;
+          color:#B9CBE4; background:rgba(10,18,32,.42); border:1px solid rgba(150,180,225,.20);
+          backdrop-filter:blur(10px); box-shadow:0 14px 36px rgba(3,8,16,.45); }
+  .pill .od { width:7px; height:7px; border-radius:50%; background:#F47A25; box-shadow:0 0 10px rgba(244,122,37,.8); }
+  .streak { position:absolute; height:2px; width:440px; border-radius:2px; opacity:0;
+            background:linear-gradient(90deg, transparent, rgba(214,230,255,.6), transparent); }
+  .grain { position:absolute; inset:0; opacity:.05; mix-blend-mode:overlay; pointer-events:none;
+           background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.9'/%3E%3C/svg%3E"); }
 
   /* ================= SHARED CHROME ================= */
   .topbar { position:absolute; left:0; right:0; top:0; height:6px; z-index:45;
@@ -150,32 +153,22 @@
 </style>
 
 <div class="stage" id="bg">
-  <div class="grid"></div>
-  <div class="ghost" id="ghost1" style="font-size:340px; right:-40px; top:410px;">ROI</div>
-  <div class="ghost" id="ghost2" style="font-size:250px; left:-30px; top:60px;">HCM</div>
-  <div class="gwrap" id="g1" style="width:230px;height:230px;right:250px;top:70px;"><div class="gshadow"></div><div class="glass"></div></div>
-  <div class="gwrap" id="g2" style="width:140px;height:140px;right:70px;top:420px;"><div class="gshadow"></div><div class="glass"></div></div>
-  <div class="gwrap" id="g3" style="width:190px;height:190px;left:120px;bottom:150px;"><div class="gshadow"></div><div class="glass"></div></div>
-  <div class="gwrap" id="g4" style="width:110px;height:110px;left:420px;top:150px;"><div class="gshadow"></div><div class="glass"></div></div>
-  <div class="orb" id="orb1" style="width:180px;height:180px;right:150px;bottom:190px;"></div>
-  <div class="sparkbox" id="spark1" style="left:60px;top:560px;">
-    <div class="lbl">WORKFORCE DATA</div>
-    <svg width="220" height="64" viewBox="0 0 220 64">
-      <path id="sparkpath" d="M2,52 C30,48 40,30 66,34 C92,38 100,18 128,22 C152,25 164,10 218,6"
-            fill="none" stroke="#7FA9F0" stroke-width="3.5" stroke-linecap="round"/>
-      <circle id="sparkdot" r="5" fill="#F47A25"/>
-    </svg>
-  </div>
-  <div class="barsbox" id="bars1" style="right:430px;bottom:170px;">
-    <i style="height:34px"></i><i style="height:52px"></i><i class="o" style="height:68px"></i>
-    <i style="height:44px"></i><i class="o" style="height:84px"></i><i style="height:58px"></i>
-  </div>
-  <div class="dchip" id="chip1" style="left:96px;top:430px;">HCM ROI <span class="up">+38%</span></div>
-  <div class="dchip" id="chip2" style="right:120px;top:640px;"><span class="ov">L1</span> L2 L3</div>
-  <div class="dot" id="dt1" style="width:10px;height:10px;left:520px;top:820px;"></div>
-  <div class="dot o" id="dt2" style="width:8px;height:8px;left:1500px;top:180px;"></div>
-  <div class="dot" id="dt3" style="width:7px;height:7px;left:1740px;top:760px;"></div>
-  <div class="dot o" id="dt4" style="width:12px;height:12px;left:250px;top:260px;"></div>
+  <div class="dots"></div>
+  <div class="beam b1" id="beam1"></div>
+  <div class="beam b2" id="beam2"></div>
+  <div class="halo h1" id="halo1"></div>
+  <div class="halo h2" id="halo2"></div>
+  <div class="ghost" id="ghost1" style="font-size:360px; right:-50px; top:400px;">ROI</div>
+  <div class="ghost" id="ghost2" style="font-size:260px; left:-40px; top:40px;">HCM</div>
+  <div class="gwrap" id="g1" style="width:240px;height:240px;right:240px;top:70px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g2" style="width:140px;height:140px;right:70px;top:430px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g3" style="width:195px;height:195px;left:110px;bottom:140px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g4" style="width:105px;height:105px;left:420px;top:150px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="pill" id="pill1" style="left:38px;top:500px;font-size:13px;"><span class="od"></span>System of Intelligence</div>
+  <div class="pill" id="pill2" style="right:76px;bottom:200px;"><span class="od"></span>Earned, Not Installed</div>
+  <div class="streak" id="streak1" style="top:132px;"></div>
+  <div class="streak" id="streak2" style="bottom:120px;"></div>
+  <div class="grain"></div>
   <div class="vignette"></div>
 </div>
 <div class="topbar" id="topbar" style="display:none"></div>
@@ -276,12 +269,12 @@ function setEndcard(html){ $('#ekick').innerHTML = html; }
 
 /* ---------- pervasive background motion ---------- */
 function bgSeek(t){
-  const F = (p, sp, a) => Math.sin(TAU*(t/ sp) + p) * a;
+  const F = (p, sp, a) => Math.sin(TAU*(t/sp) + p) * a;
   const els = [
-    ['#g1', F(0,7,20),  F(1,9,12),  F(0,7,7),  F(2,11,5)],
-    ['#g2', F(1,6,14),  F(2,8,10),  F(1,6,9),  F(0,9,6)],
-    ['#g3', F(2,8,18),  F(0,7,11),  F(2,8,6),  F(1,7,7)],
-    ['#g4', F(3,5.5,10),F(1,7,8),   F(3,6,10), F(2,8,5)],
+    ['#g1', F(0,7,18),  F(1,9,11),  F(0,7,6),  F(2,11,5)],
+    ['#g2', F(1,6,13),  F(2,8,9),   F(1,6,8),  F(0,9,6)],
+    ['#g3', F(2,8,16),  F(0,7,10),  F(2,8,5),  F(1,7,6)],
+    ['#g4', F(3,5.5,9), F(1,7,7),   F(3,6,9),  F(2,8,5)],
   ];
   for(const [id, dy, dx, rx, ry] of els){
     const g = $(id); if(!g) continue;
@@ -291,32 +284,23 @@ function bgSeek(t){
     sh.style.opacity = String(.5 + lift*.5);
     sh.style.transform = `translateY(${lift*10+4}px) scale(${1.05+lift*.14})`;
   }
-  $('#ghost1').style.transform = `translate(${F(0,16,26)}px, ${F(1,13,18)}px)`;
-  $('#ghost2').style.transform = `translate(${F(2,15,22)}px, ${F(0,17,16)}px)`;
-  $('#spark1').style.transform = `translate(${F(1,9,8)}px, ${F(0,8,12)}px) rotate(${F(0,12,1.2)}deg)`;
-  $('#bars1').style.transform  = `translate(${F(2,8,9)}px, ${F(1,9,11)}px)`;
-  $('#chip1').style.transform  = `translate(${F(0,7,7)}px, ${F(2,8,10)}px)`;
-  $('#chip2').style.transform  = `translate(${F(1,8,8)}px, ${F(0,7,9)}px)`;
-  $('#orb1').style.transform   = `rotate(${(t*22)%360}deg)`;
-  // spark line draw + traveling dot
-  const path = $('#sparkpath'), dot = $('#sparkdot');
-  const L = path.getTotalLength();
-  const prog = (t*0.14)%1;
-  path.style.strokeDasharray = L;
-  path.style.strokeDashoffset = L*(1-clamp(prog*1.6,0,1));
-  const pt = path.getPointAtLength(L*prog);
-  dot.setAttribute('cx', pt.x); dot.setAttribute('cy', pt.y);
-  // bars pulse
-  document.querySelectorAll('#bars1 i').forEach((b,i)=>{
-    b.style.transform = `scaleY(${1 + Math.sin(TAU*t/3 + i)*0.14})`;
-    b.style.transformOrigin = 'bottom';
-  });
-  // floating dots
-  [['#dt1',5,26],['#dt2',7,34],['#dt3',6,22],['#dt4',8,40]].forEach(([id,sp,amp],i)=>{
-    const d = $(id);
-    d.style.transform = `translateY(${-((t*amp/sp)%110)}px) translateX(${Math.sin(TAU*t/sp+i)*10}px)`;
-    d.style.opacity = String(.25 + ((Math.sin(TAU*t/sp+i)+1)/2)*.5);
-  });
+  $('#ghost1').style.transform = `translate(${F(0,17,24)}px, ${F(1,14,16)}px)`;
+  $('#ghost2').style.transform = `translate(${F(2,16,20)}px, ${F(0,18,14)}px)`;
+  $('#beam1').style.transform  = `rotate(-16deg) translateX(${F(0,15,60)}px)`;
+  $('#beam2').style.transform  = `rotate(13deg) translateX(${F(2,13,50)}px)`;
+  $('#halo1').style.transform  = `rotate(${(t*9)%360}deg)`;
+  $('#halo2').style.transform  = `rotate(${-(t*13)%360}deg)`;
+  $('#pill1').style.transform  = `translate(${F(1,8,7)}px, ${F(0,7,10)}px)`;
+  $('#pill2').style.transform  = `translate(${F(0,9,8)}px, ${F(2,8,9)}px)`;
+  /* light streaks: periodic sweeps */
+  const sweep = (el, period, ph, x0, x1, y=0) => {
+    const p = ((t/period + ph) % 1);
+    const vis = p < 0.32 ? Math.sin(Math.PI * p/0.32) : 0;
+    el.style.opacity = String(vis * 0.75);
+    el.style.transform = `translateX(${x0 + (x1-x0)*p}px)`;
+  };
+  sweep($('#streak1'), 9,  0.0, 180, 1450);
+  sweep($('#streak2'), 11, 0.5, 1500, 200);
 }
 
 /* entrance for shared chrome elements of a clip container */
