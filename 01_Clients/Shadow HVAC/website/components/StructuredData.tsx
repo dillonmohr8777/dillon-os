@@ -56,7 +56,7 @@ export function StructuredData() {
           areaServed: "US",
           availableLanguage: "English",
         },
-        sameAs: [business.social.facebook, business.social.instagram],
+        sameAs: Object.values(business.social),
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Residential HVAC services",

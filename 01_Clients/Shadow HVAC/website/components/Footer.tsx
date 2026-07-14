@@ -1,9 +1,22 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 import { business, nav, services } from "@/lib/site";
 import { NewsletterForm } from "./NewsletterForm";
 
 export function Footer() {
+  const socialLinks = [
+    {
+      href: business.social.facebook,
+      label: "Facebook",
+      icon: "/icons/facebook.svg",
+    },
+    {
+      href: business.social.nextdoor,
+      label: "Nextdoor",
+      icon: "/icons/nextdoor.svg",
+    },
+  ];
+
   return (
     <footer className="relative mt-24 border-t border-white/10 bg-shadow-950">
       <div className="field-lines absolute inset-0 opacity-40" aria-hidden />
@@ -21,21 +34,30 @@ export function Footer() {
             {business.tagline}. Providing reliable and efficient HVAC solutions for
             year round comfort and peace of mind in Hampshire, IL.
           </p>
-          <div className="mt-5 flex gap-3">
-            {[
-              { Icon: Facebook, href: business.social.facebook, label: "Facebook" },
-            ].map(({ Icon, href, label }) => (
+          <div className="mt-6">
+            <p className="heading text-xs tracking-[0.14em] text-slate-300">Follow Shadow</p>
+            <div className="mt-3 grid max-w-xs grid-cols-2 gap-2">
+            {socialLinks.map(({ icon, href, label }) => (
               <a
                 key={label}
                 href={href}
-                aria-label={label}
+                aria-label={`Follow ${business.name} on ${label}`}
                 target="_blank"
-                rel="noreferrer"
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/10 text-slate-400 transition-colors hover:border-ember/50 hover:text-ember-light"
+                rel="noopener noreferrer"
+                className="group relative isolate flex min-h-20 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.055] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-ember/60 hover:bg-ember/10 hover:shadow-[0_16px_42px_rgba(255,90,31,0.24),inset_0_1px_0_rgba(255,255,255,0.18)] active:translate-y-0 active:scale-[0.98] motion-reduce:transform-none motion-reduce:transition-none"
               >
-                <Icon className="h-4 w-4" />
+                <span className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_0%,rgba(255,126,65,0.28),transparent_58%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100 motion-reduce:transition-none" aria-hidden />
+                <span className="flex w-full flex-col justify-between gap-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={icon} alt="" className="h-5 w-5 transition-transform duration-300 group-hover:scale-110 motion-reduce:transform-none motion-reduce:transition-none" />
+                  <span className="flex items-end justify-between gap-1">
+                    <span className="heading text-xs text-white">{label}</span>
+                    <ArrowUpRight className="h-3.5 w-3.5 text-ember-light opacity-60 transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100 motion-reduce:transform-none motion-reduce:transition-none" aria-hidden />
+                  </span>
+                </span>
               </a>
             ))}
+            </div>
           </div>
         </div>
 

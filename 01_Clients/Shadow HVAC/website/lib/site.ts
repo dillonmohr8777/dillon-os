@@ -22,9 +22,7 @@ export const business = {
   domain: "shadow-heating.com",
   social: {
     facebook: "https://www.facebook.com/shadowHVAC/",
-    instagram: "https://www.instagram.com/shadowhvac/",
-    twitter: "https://twitter.com/",
-    youtube: "https://youtube.com/",
+    nextdoor: "https://nextdoor.com/pages/shadow-heating-and-cooling-hampshire-il/",
   },
 } as const;
 
