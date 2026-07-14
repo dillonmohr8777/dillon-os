@@ -6,12 +6,14 @@ import { Reveal } from "@/components/Reveal";
 import { PackageCards } from "@/components/PackageCards";
 import { CTABand } from "@/components/CTABand";
 import { ProjectProof } from "@/components/ProjectProof";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Maintenance Packages",
   description:
     "Choose the best HVAC maintenance plan for you. Basic, Standard, Advanced, and Premium plans include seasonal tune ups, priority scheduling, and member savings.",
-};
+  path: "/packages",
+});
 
 const perks = [
   "Priority scheduling that lets you skip the seasonal wait list",

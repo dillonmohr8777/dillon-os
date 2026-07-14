@@ -5,16 +5,35 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { CTABand } from "@/components/CTABand";
 import { ProjectProof } from "@/components/ProjectProof";
 import { faqs } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "FAQ",
   description:
     "Answers to the most common questions about Shadow Heating & Cooling's HVAC services, scheduling, maintenance, financing, and warranties.",
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <PageHeader
         crumb="FAQ"
         eyebrow="Most Popular Questions"

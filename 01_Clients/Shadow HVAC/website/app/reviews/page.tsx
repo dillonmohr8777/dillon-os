@@ -7,12 +7,14 @@ import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 import { CTABand } from "@/components/CTABand";
 import { ProjectProof } from "@/components/ProjectProof";
 import { reviews } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Reviews",
   description:
     "Read five star reviews from Hampshire, IL homeowners who trust Shadow Heating & Cooling for fast, honest, professional HVAC service.",
-};
+  path: "/reviews",
+});
 
 export default function ReviewsPage() {
   return (

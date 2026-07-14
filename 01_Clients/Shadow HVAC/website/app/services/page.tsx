@@ -8,12 +8,14 @@ import { ServiceIcon } from "@/components/ServiceIcon";
 import { CTABand } from "@/components/CTABand";
 import { ProjectProof } from "@/components/ProjectProof";
 import { services } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "HVAC Services",
   description:
     "Heating, cooling, indoor air quality, maintenance plans, emergency HVAC, and smart thermostat installation in Hampshire, IL and Kane County.",
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

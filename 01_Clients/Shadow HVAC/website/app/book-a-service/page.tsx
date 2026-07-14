@@ -6,12 +6,14 @@ import { Reveal } from "@/components/Reveal";
 import { BookingForm } from "@/components/BookingForm";
 import { ProjectProof } from "@/components/ProjectProof";
 import { business } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Book A Service",
   description:
     "Book your HVAC service with Shadow Heating & Cooling. Choose the best plan for you and schedule online, or call 24/7 for emergency service in Hampshire, IL.",
-};
+  path: "/book-a-service",
+});
 
 export default function BookPage() {
   return (

@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { CTABand } from "@/components/CTABand";
 import { Reveal } from "@/components/Reveal";
 import { blogPosts, getBlogPost } from "@/lib/blog";
+import { business } from "@/lib/site";
+import { absoluteUrl, createPageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -14,7 +16,21 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return {};
-  return { title: post.title, description: post.excerpt };
+  const metadata = createPageMetadata({
+    title: post.title,
+    description: post.excerpt,
+    path: `/blog/${post.slug}`,
+    image: post.image,
+  });
+  return {
+    ...metadata,
+    openGraph: {
+      ...metadata.openGraph,
+      type: "article",
+      publishedTime: post.publishedAt,
+      modifiedTime: post.modifiedAt,
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -22,8 +38,67 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = getBlogPost(slug);
   if (!post) notFound();
 
+  const postUrl = absoluteUrl(`/blog/${post.slug}/`);
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${postUrl}#article`,
+        headline: post.title,
+        description: post.excerpt,
+        image: absoluteUrl(post.image),
+        datePublished: post.publishedAt,
+        dateModified: post.modifiedAt,
+        mainEntityOfPage: postUrl,
+        author: {
+          "@type": "Organization",
+          name: business.name,
+          url: absoluteUrl("/"),
+        },
+        publisher: {
+          "@type": "Organization",
+          name: business.name,
+          logo: {
+            "@type": "ImageObject",
+            url: absoluteUrl("/img/logo.png"),
+          },
+        },
+        articleSection: post.category,
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: absoluteUrl("/"),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "HVAC Advice",
+            item: absoluteUrl("/blog/"),
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: post.title,
+            item: postUrl,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <article className="container-px pb-16 pt-36 sm:pt-44">
         <Reveal>
           <Link href="/blog" className="mb-8 inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-white">

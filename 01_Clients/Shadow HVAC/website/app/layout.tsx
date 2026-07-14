@@ -7,6 +7,7 @@ import { StructuredData } from "@/components/StructuredData";
 import { AmbientWorkRail } from "@/components/AmbientWorkRail";
 import { NetlifyForms } from "@/components/NetlifyForms";
 import { business } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,14 +22,20 @@ const oswald = Oswald({
   display: "swap",
 });
 
+const homeMetadata = createPageMetadata({
+  title: `${business.name}: ${business.tagline}`,
+  description:
+    "Residential HVAC service for Hampshire, IL and surrounding areas. Heating, cooling, indoor air quality, and 24/7 emergency repair. Fast Response. No Fumbles.",
+  path: "/",
+});
+
 export const metadata: Metadata = {
+  ...homeMetadata,
   metadataBase: new URL(`https://${business.domain}`),
   title: {
     default: `${business.name}: ${business.tagline}`,
     template: `%s | ${business.name}`,
   },
-  description:
-    "Residential HVAC service for Hampshire, IL and surrounding areas. Heating, cooling, indoor air quality, and 24/7 emergency repair. Fast Response. No Fumbles.",
   keywords: [
     "HVAC Hampshire IL",
     "furnace repair Hampshire",
@@ -37,15 +44,17 @@ export const metadata: Metadata = {
     "heating and cooling Hampshire IL",
     "Shadow Heating & Cooling",
   ],
-  openGraph: {
-    title: `${business.name}: ${business.tagline}`,
-    description:
-      "24/7 residential HVAC in Hampshire, IL and Kane County. Heating, cooling, air quality, and emergency service.",
-    url: `https://${business.domain}`,
-    siteName: business.name,
-    type: "website",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
-  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

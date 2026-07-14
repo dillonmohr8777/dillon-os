@@ -6,12 +6,14 @@ import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
 import { ProjectProof } from "@/components/ProjectProof";
 import { business } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Contact Us",
   description:
     "Get in touch with Shadow Heating & Cooling in Hampshire, IL. Call (847) 757 9450, email us, or send a message. 24/7 emergency service available.",
-};
+  path: "/contact",
+});
 
 const cards = [
   {

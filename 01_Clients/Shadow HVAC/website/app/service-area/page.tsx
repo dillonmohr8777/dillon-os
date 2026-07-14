@@ -7,12 +7,14 @@ import { ServiceAreaMap } from "@/components/ServiceAreaMap";
 import { CTABand } from "@/components/CTABand";
 import { ProjectProof } from "@/components/ProjectProof";
 import { serviceAreas, business } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Service Area",
   description:
     "Shadow Heating & Cooling proudly serves Hampshire, IL and surrounding Kane County communities including Huntley, Pingree Grove, Gilberts, Burlington, and Elgin.",
-};
+  path: "/service-area",
+});
 
 export default function ServiceAreaPage() {
   return (

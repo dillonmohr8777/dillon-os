@@ -6,6 +6,8 @@ export type BlogPost = {
   readTime: string;
   image: string;
   imageAlt: string;
+  publishedAt: string;
+  modifiedAt: string;
   intro: string;
   sections: Array<{ heading: string; paragraphs: string[] }>;
 };
@@ -19,6 +21,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "Five minute read",
     image: "/img/recent-installation-condenser.jpg",
     imageAlt: "Recently installed outdoor air conditioning condenser",
+    publishedAt: "2026-07-14",
+    modifiedAt: "2026-07-14",
     intro: "A failed air conditioner does not always mean you need a new system. The right answer depends on what failed, how the rest of the equipment is performing, and what you want from the home over the next several years.",
     sections: [
       {
@@ -51,6 +55,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "Four minute read",
     image: "/img/furnace-coil-service-open.jpg",
     imageAlt: "Open furnace cabinet during a detailed inspection",
+    publishedAt: "2026-07-14",
+    modifiedAt: "2026-07-14",
     intro: "A furnace tune up is more than a quick filter check. It is a chance to verify safe operation, find developing problems, and help the system deliver steady heat before the hardest weather arrives.",
     sections: [
       {
@@ -83,6 +89,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "Five minute read",
     image: "/img/recent-installation-furnace.jpg",
     imageAlt: "Furnace paired with a whole home humidifier",
+    publishedAt: "2026-07-14",
+    modifiedAt: "2026-07-14",
     intro: "Temperature gets most of the attention, but humidity has a major effect on how your home feels. The right balance can improve comfort, protect materials, and help your heating and cooling equipment do its job.",
     sections: [
       {

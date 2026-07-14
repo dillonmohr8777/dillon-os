@@ -6,11 +6,13 @@ import { Section } from "@/components/Section";
 import { Reveal } from "@/components/Reveal";
 import { CTABand } from "@/components/CTABand";
 import { blogPosts } from "@/lib/blog";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "HVAC Advice",
   description: "Practical heating, cooling, and indoor air quality advice from Shadow Heating and Cooling in Hampshire, Illinois.",
-};
+  path: "/blog",
+});
 
 export default function BlogPage() {
   return (

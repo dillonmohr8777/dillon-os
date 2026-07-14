@@ -7,12 +7,14 @@ import { Reveal } from "@/components/Reveal";
 import { CTABand } from "@/components/CTABand";
 import { ProjectProof } from "@/components/ProjectProof";
 import { financing } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Financing",
   description:
     "Flexible HVAC financing through GoodLeap and warranty protection through JB Warranties. Affordable monthly payments on new installations in Hampshire, IL.",
-};
+  path: "/financing",
+});
 
 const icons = [CreditCard, Zap, Percent, ShieldCheck];
 

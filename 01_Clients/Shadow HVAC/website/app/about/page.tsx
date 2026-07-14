@@ -5,12 +5,14 @@ import { Reveal } from "@/components/Reveal";
 import { StatCounter } from "@/components/StatCounter";
 import { CTABand } from "@/components/CTABand";
 import { aboutValues, team, stats } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "About Us",
   description:
     "Shadow Heating & Cooling is a locally owned residential HVAC provider in Hampshire, IL, dedicated to reliable, honest, year round comfort.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
