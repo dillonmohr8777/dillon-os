@@ -5,6 +5,7 @@ tags: [session, moc]
 # Session Index
 
 ## Recent Sessions
+- [[2026-07-15 — competitive-task-orchestrator run 22]]
 - [[2026-07-14 — competitive-task-orchestrator run 21]]
 - [[2026-07-13 — competitive-task-orchestrator run 20]]
 - [[2026-07-12 — competitive-task-orchestrator run 19]]

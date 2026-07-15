@@ -1,6 +1,6 @@
 ---
-last_checked: 2026-07-14
-last_orchestrator_run: 2026-07-14
+last_checked: 2026-07-15
+last_orchestrator_run: 2026-07-15
 tags: [system, routines]
 ---
 
@@ -12,13 +12,13 @@ All legacy standalone crons are **retired** and merged into `competitive-task-or
 
 | Lane | Status | Last run | Notes |
 |------|--------|----------|-------|
-| gmail-intel | 🟡 fallback | 2026-07-14 | MCP not connected; using `System/urgent-replies.md` |
-| slack-intel | 🟡 fallback | 2026-07-14 | MCP not connected; using `System/slack-action-queue.md` |
-| vault-pulse | 🟢 ok | 2026-07-14 | 13 overviews scanned; frontmatter frozen April 2026 |
-| codex-session-sync | 🟢 ok | 2026-07-14 | 15 sessions; no new exports since run 20 |
-| domain-ads-seo | 🟢 ok | 2026-07-14 | 3 High / 2 Medium / 2 Low in Google Ads queue |
-| content-routines | ⚪ skipped | 2026-07-14 | Tuesday — not Sun/Thu; 7 draft-ready files await ship |
-| memory-consolidator | 🟢 ok | 2026-07-14 | Brief + claude-memory-sync updated (run 21) |
+| gmail-intel | 🟡 fallback | 2026-07-15 | MCP not connected; using `System/urgent-replies.md` |
+| slack-intel | 🟡 fallback | 2026-07-15 | MCP not connected; using `System/slack-action-queue.md` |
+| vault-pulse | 🟢 ok | 2026-07-15 | 13 overviews scanned; frontmatter frozen April 2026 |
+| codex-session-sync | 🟢 ok | 2026-07-15 | 16 sessions; run 21 merged to ec43 branch |
+| domain-ads-seo | 🟢 ok | 2026-07-15 | 3 High / 2 Medium / 2 Low in Google Ads queue |
+| content-routines | ⚪ skipped | 2026-07-15 | Wednesday — not Sun/Thu; Maher post due TODAY |
+| memory-consolidator | 🟢 ok | 2026-07-15 | Brief + claude-memory-sync updated (run 22) |
 
 ## Retired crons (disable in Cursor UI if still active)
 
@@ -40,4 +40,4 @@ Open `Daily-Briefs/competitive-task-today.md` after 1 PM ET. Execute P0 stack to
 - Vault `last_touched` frozen at April 2026 on most M360 clients; update when you touch a note
 - Codex session export path absent on cloud runner; handoff refs Windows paths on 64GB machine
 - Facebook Ads session stubs empty — populate from Codex export on 64GB machine
-- Bridge Tori meeting outcome not captured post-2026-07-13
+- Bridge Tori meeting outcome not captured post-2026-07-13 (2 days overdue)

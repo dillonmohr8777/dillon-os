@@ -17,13 +17,13 @@ tags: [dashboard, moc]
 
 ## Today
 - [ ] Open [[Daily-Briefs/competitive-task-today]] — execute P0 stack
-- [ ] Ship overdue BOK + Align content (5 days overdue)
-- [ ] Capture Bridge Tori meeting outcome + follow-up
-- [ ] Review/record Jul 15 Maher script (**due tomorrow**)
+- [ ] Record or ship Align Maher post — **DUE TODAY Jul 15**
+- [ ] Ship overdue BOK + Align content (6 days overdue)
+- [ ] Capture Bridge Tori meeting outcome + follow-up (2 days overdue)
 
 ## Active Projects
-- Bridge Software Development — post-Tori capture overdue; prototype at `d1e554c`
-- Align HCM Jul 14 content week — Maher post due Jul 15
+- Bridge Software Development — post-Tori capture 2 days overdue; prototype at `d1e554c`
+- Align HCM Jul 14 content week — Maher post **due today**
 
 ## Notes
 - One umbrella automation (`competitive-task-orchestrator`) replaces 7 legacy crons
