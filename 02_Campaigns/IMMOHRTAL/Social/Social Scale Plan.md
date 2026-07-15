@@ -1,7 +1,7 @@
 # IMMOHRTAL Social Launch and Scale Plan v1
 
-**Prepared for:** Dillon Mohr / IMMOHRTAL  
-**Date:** 2026-07-15  
+**Prepared for:** Dillon Mohr / IMMOHRTAL
+**Date:** 2026-07-15
 **Status:** Execution-ready draft. No accounts have been posted to and no ads have been launched.
 
 ## 1. Executive decision

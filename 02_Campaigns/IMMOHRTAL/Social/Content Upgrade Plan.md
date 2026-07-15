@@ -1,7 +1,7 @@
 # IMMOHRTAL Content Upgrade Plan v2
 
-**Prepared:** July 15, 2026  
-**Decision:** Keep the visual identity. Rebuild the distribution mix around Dillon's face, voice, music, and real listener proof.  
+**Prepared:** July 15, 2026
+**Decision:** Keep the visual identity. Rebuild the distribution mix around Dillon's face, voice, music, and real listener proof.
 **Publishing status:** Planning and production only. Nothing has been posted or scheduled externally.
 
 ## Executive verdict

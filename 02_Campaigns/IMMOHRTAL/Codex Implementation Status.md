@@ -1,7 +1,7 @@
 # IMMOHRTAL Implementation Status
 
-**Implemented:** 2026-07-15  
-**Source:** verified `dillon-os` remote `main` export  
+**Implemented:** 2026-07-15
+**Source:** verified `dillon-os` remote `main` export
 **Production publication:** not performed
 
 ## Complete
