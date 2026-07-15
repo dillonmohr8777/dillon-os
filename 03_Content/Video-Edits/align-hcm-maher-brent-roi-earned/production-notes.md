@@ -75,3 +75,7 @@ Source: `align-hcm-maher-brent-chatcut` repo, `source/full-episode.mp4` (pushed 
 | 6 · Speak CFO | 1230.40 to 1258.95 | 31.2s | Translation stack (metric floors light up as translated) |
 
 Background V4 ("premium SaaS field"): removed all fabricated data elements (fake sparkline, +38% chip, bar chart). Replaced with aurora light beams, rotating conic halos, radially masked dot matrix, film grain, periodic light streaks, and editorial glass pills carrying real episode language (System of Intelligence / Earned, Not Installed). Glass diamonds with orange gradient shadows retained. Full continuity with earlier deliverables (Gelasio system, orange ring box, dual name labels, word-tracked captions, end cards).
+
+## V5: social caption band, all six clips unified
+
+Per client markup on the Speak CFO frame: captions moved out of the video box into the open bottom band. Gelasio SemiBold 58 to 62px, cream, single line always (no wrap), active word rendered orange with a vertical jump-pop (fscy 128 to 100 over 150ms plus a brief orange glow outline). Video box reduced to 1220x686 for banner and cards archetypes to clear the band; keyword banner and card rows slimmed into a middle strip. Clips 1 to 3 rebuilt from the native 1080p episode source (located in the episode timeline by transcript matching) on the V4 SaaS field. All six deliverables share one system and carry the -v2 suffix.
