@@ -79,3 +79,9 @@ Background V4 ("premium SaaS field"): removed all fabricated data elements (fake
 ## V5: social caption band, all six clips unified
 
 Per client markup on the Speak CFO frame: captions moved out of the video box into the open bottom band. Gelasio SemiBold 58 to 62px, cream, single line always (no wrap), active word rendered orange with a vertical jump-pop (fscy 128 to 100 over 150ms plus a brief orange glow outline). Video box reduced to 1220x686 for banner and cards archetypes to clear the band; keyword banner and card rows slimmed into a middle strip. Clips 1 to 3 rebuilt from the native 1080p episode source (located in the episode timeline by transcript matching) on the V4 SaaS field. All six deliverables share one system and carry the -v2 suffix.
+
+## The Full Cut (3:23, longform supercut)
+
+Eleven chapters spanning the episode's complete argument, hard-cut and hidden under 3D page-flip transitions (a branded navy sheet with Align watermark and orange spine sweeps in from the right, covers the frame at the cut, folds away left; soft pink-noise whoosh under each of the 12 flips). Each chapter opens with a cinematic frosted-glass title card over the footage (78px Gelasio, CHAPTER NN eyebrow) that dissolves out after ~3s. Captions at 66px in the bottom band with the orange word-jump. Ink-reveal intro, Get More From Your HCM outro. Rendered efficiently: one shared 8s seamless background loop plus per-chapter static chrome stills and 4s title-animation sequences composited in ffmpeg, so the 3:23 program needed only ~1,900 rendered frames.
+
+Chapters: 01 ROI Myth (Brent) / 02 First Layer / 03 The Gap / 04 The Question (Brent) / 05 Blueprint / 06 The Unlock / 07 Job Number One / 08 Own It / 09 The Warning / 10 The Translation / 11 The Seat.
