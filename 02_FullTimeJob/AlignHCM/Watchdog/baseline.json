@@ -74,13 +74,21 @@
   "known_issues_open": [
     "case-studies-on-default-hubspot-domain",
     "duplicate-ukg-buyers-guide",
-    "CRITICAL-DIRECTIVE: waf-blocks-ai-crawlers (AI crawlers must have FULL access; alert critical on every run until fixed; AEO scoreboard at 2 contacts YTD)",
     "legacy-apex-urls-indexed (/welcome/, /news/)",
     "untitled-content-238611079877 (485 views YTD)",
     "slug-typo-paylocity-vs-paycheck",
     "sandbox-and-netlify-analytics-pollution",
     "blog-has-no-conversion-path (2 submissions from ~50 posts YTD)",
     "404-page-views-historical-213"
+  ],
+  "known_issues_resolved": [
+    {
+      "id": "waf-blocks-ai-crawlers",
+      "resolvedAt": "2026-07-16",
+      "evidence": "HTTP 200 for GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, and Applebot-Extended on the site, robots.txt, and llms.txt",
+      "llmsUrl": "https://www.alignhcm.com/llms.txt",
+      "followUp": "Track AEO referrals; reopen as critical if any crawler probe returns 403 or llms.txt stops returning text/plain."
+    }
   ],
   "alert_thresholds": {
     "views_wow_drop_pct": 40,

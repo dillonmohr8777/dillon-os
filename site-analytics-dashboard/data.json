@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-16T18:05:00-04:00",
+  "generated": "2026-07-16T14:29:51-04:00",
   "window": { "start": "2026-01-26", "end": "2026-07-16" },
   "source": "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
   "directives": [
@@ -123,7 +123,7 @@
     { "title": "404 page", "url": "www.alignhcm.com/404", "views": 119, "submissions": 0, "bounce": 0.913, "timeSec": 116, "flags": ["404 traffic"] }
   ],
   "alerts": [
-    { "severity": "crit", "text": "AI crawlers are being blocked by the WAF (403 on all non-browser fetches). Standing directive: AI crawlers must have full access so Align ranks in AI answers. Fix in HubSpot bot protection / WAF settings." },
+    { "severity": "good", "text": "AI crawler access restored and terminal-verified: GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, and Applebot-Extended receive HTTP 200. /llms.txt is live as text/plain; keep probing for regressions." },
     { "severity": "crit", "text": "Blog earned roughly 3,900 views since Jan 26 with zero form submissions. No conversion path on posts." },
     { "severity": "warn", "text": "404 page viewed 119 times since Jan 26. Broken links likely." },
     { "severity": "warn", "text": "Untitled tracked page (id 238611079877) has 309 views and no title or URL metadata." },

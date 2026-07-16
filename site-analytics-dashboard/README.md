@@ -7,6 +7,7 @@ Static dashboard for alignhcm.com marketing analytics and attribution. No build 
 - `index.html` renders everything from `data.json`.
 - `data.json` is refreshed by the Align HCM Site Health Watchdog (see `02_FullTimeJob/AlignHCM/Watchdog/PLAYBOOK.md`) on every scheduled run. Each run pulls fresh HubSpot data, rewrites this file, commits, and pushes.
 - When the repo is connected to Netlify, every push triggers a redeploy, so the published dashboard updates automatically each time the watchdog fires.
+- HubSpot crawler assets are maintained without the HubSpot website by `02_FullTimeJob/AlignHCM/Watchdog/ai-crawler-unblock/Publish-FromTerminal.ps1`.
 
 ## Publishing to Netlify
 

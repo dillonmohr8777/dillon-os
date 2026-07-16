@@ -3,12 +3,21 @@ type: runbook
 task: Unblock AI crawlers on alignhcm.com
 priority: CRITICAL (standing directive: AI crawlers must have full access)
 created: 2026-07-16
-status: WAITING ON HUBSPOT ADMIN TOGGLE
+status: RESOLVED
+resolved: 2026-07-16
 ---
 
 # Unblock AI Crawlers on alignhcm.com
 
-## Diagnosis (verified 2026-07-16)
+## Resolution (verified 2026-07-16)
+
+- The portal-level block is no longer active. `www.alignhcm.com`, `robots.txt`, and the default HubSpot domain return HTTP 200 to GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, and Applebot-Extended.
+- The current HubSpot-generated robots.txt allows the public site and restricts only internal HubSpot paths. No crawler-specific deny rules remain.
+- `llms.txt` was published through the HubSpot Files API and mapped from `https://www.alignhcm.com/llms.txt` with a permanent redirect. Every tested AI crawler receives HTTP 200 and `text/plain`.
+- The published file's SHA-256 matches the repository copy: `19147fa3b701096e1f09fbc4e489437a332a06a5bc3e4c3bf34681b4b23eca5f`.
+- Re-run `Publish-FromTerminal.ps1` from this folder to inspect or repair the file and redirect without using the HubSpot website.
+
+## Original diagnosis (earlier on 2026-07-16)
 
 - `www.alignhcm.com`, `alignhcm.com`, AND the default domain `242825734.hs-sites-na2.com` all return **HTTP 403** to any non-browser user agent, including robots.txt and sitemap.xml.
 - DNS: www.alignhcm.com and alignhcm.com resolve to HubSpot's CDN (199.60.103.x); the hs-sites domain resolves to HubSpot's Cloudflare edge.
@@ -19,7 +28,7 @@ status: WAITING ON HUBSPOT ADMIN TOGGLE
 
 AI assistants (ChatGPT, Perplexity, Claude, Copilot, Gemini) cannot read the site, so Align HCM cannot be cited or recommended in AI answers, where HCM buyers increasingly research. The AEO scoreboard proves it: 2 AI referrals YTD, all from ChatGPT, everything else zero.
 
-## The fix (HubSpot admin, ~2 minutes)
+## Browser fallback (only if terminal verification regresses)
 
 Portal: 242825734 (app-na2.hubspot.com)
 
@@ -36,9 +45,9 @@ Portal: 242825734 (app-na2.hubspot.com)
 
 ## Verification (automatic)
 
-The watchdog attempts a fetch of https://www.alignhcm.com/robots.txt on every run:
+The watchdog attempts a fetch of https://www.alignhcm.com/robots.txt and https://www.alignhcm.com/llms.txt on every run:
 - **403** = still blocked, CRITICAL alert stays in every report.
-- **200** = fixed. The watchdog will mark the issue resolved in baseline.json and start tracking the AEO referral trend as the success metric.
+- **200 on both** = fixed. The watchdog keeps the issue resolved in baseline.json and tracks the AEO referral trend as the success metric.
 
 Manual spot-check from any terminal:
 
