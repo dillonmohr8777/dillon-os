@@ -11,11 +11,17 @@ Static dashboard for alignhcm.com marketing analytics and attribution. No build 
 
 ## Publishing to Netlify
 
-1. In Netlify: Add new site > Import from Git > pick this repo and branch.
-2. Build command: none. Publish directory: `site-analytics-dashboard`.
-3. Deploy. Done. Subsequent watchdog pushes redeploy automatically.
+Protected production dashboard: <https://align-hcm-site-health-dashboard.netlify.app>
 
-Heads up: a public Netlify URL makes this data readable by anyone with the link. The RevOps section mirrors an internal, confidential briefing. Use Netlify's password protection or a private/obscured URL if that matters.
+- Netlify site: `align-hcm-site-health-dashboard`
+- Deploy branch: `claude/site-health-watchdog-ubfzcb`
+- Build command: none
+- Publish directory: `site-analytics-dashboard`
+- Visitor password: Windows Credential Manager reference `windows-credential://Codex.Netlify.AlignHCM.SiteHealthDashboard.v1`
+
+Subsequent pushes to the deploy branch redeploy automatically. Keep Netlify password protection enabled because the RevOps section mirrors an internal, confidential briefing.
+
+Do not put the visitor password, HubSpot private access token, or any other secret in this repository.
 
 ## Data layers
 
