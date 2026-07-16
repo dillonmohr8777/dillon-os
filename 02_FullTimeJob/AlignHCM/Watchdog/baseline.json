@@ -1,0 +1,56 @@
+{
+  "generated": "2026-07-16",
+  "window": { "start": "2026-06-16", "end": "2026-07-16" },
+  "source": "HubSpot content analytics API (portal 242825734, no Google dependency)",
+  "aggregates_30d": {
+    "rawViews": 1973,
+    "submissions": 33,
+    "contacts": 19,
+    "leads": 19,
+    "bounceRate": 0.846,
+    "avgTimePerPageviewSec": 103.5
+  },
+  "weekly_series": [
+    { "week": "2026-W17", "views": 104, "submissions": 2, "contacts": 1, "bounce": 0.950 },
+    { "week": "2026-W18", "views": 573, "submissions": 11, "contacts": 3, "bounce": 0.896 },
+    { "week": "2026-W19", "views": 482, "submissions": 6, "contacts": 4, "bounce": 0.884 },
+    { "week": "2026-W20", "views": 613, "submissions": 8, "contacts": 5, "bounce": 0.900 },
+    { "week": "2026-W21", "views": 436, "submissions": 16, "contacts": 11, "bounce": 0.858 },
+    { "week": "2026-W22", "views": 374, "submissions": 7, "contacts": 4, "bounce": 0.895 },
+    { "week": "2026-W23", "views": 362, "submissions": 12, "contacts": 3, "bounce": 0.876 },
+    { "week": "2026-W24", "views": 559, "submissions": 12, "contacts": 10, "bounce": 0.863 },
+    { "week": "2026-W25", "views": 306, "submissions": 6, "contacts": 3, "bounce": 0.868 },
+    { "week": "2026-W26", "views": 383, "submissions": 9, "contacts": 4, "bounce": 0.860 },
+    { "week": "2026-W27", "views": 551, "submissions": 5, "contacts": 2, "bounce": 0.794 },
+    { "week": "2026-W28", "views": 288, "submissions": 3, "contacts": 1, "bounce": 0.877, "partial": true }
+  ],
+  "top_pages_30d": [
+    { "id": "236766756571", "url": "https://www.alignhcm.com", "title": "Home", "views": 637, "submissions": 2, "bounce": 0.806 },
+    { "id": "245792943865", "url": "https://www.alignhcm.com/careers", "title": "Careers", "views": 182, "bounce": 0.934 },
+    { "id": "277308102345", "url": "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-workday", "title": "The Strategic Buyer's Guide to Workday", "views": 84, "bounce": 1.0, "timeSec": 672 },
+    { "id": "241429341931", "url": "https://www.alignhcm.com/about", "title": "About", "views": 77, "bounce": 0.909 },
+    { "id": "277308100320", "url": "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg", "title": "The Strategic Buyer's Guide to UKG", "views": 61, "bounce": 0.949 },
+    { "id": "238611079877", "url": null, "title": "UNTITLED - investigate in HubSpot", "views": 53 },
+    { "id": "355634282211", "url": "https://www.alignhcm.com/partners/brokers", "title": "Partners > Brokers", "views": 48, "submissions": 1, "bounce": 0.5 },
+    { "id": "245753398970", "url": "https://www.alignhcm.com/contact", "title": "Contact", "views": 36, "submissions": 9, "bounce": 0.625 },
+    { "id": "274054999779", "url": "https://www.alignhcm.com/partners/ukg", "title": "Partners > UKG", "views": 34, "bounce": 0.9 },
+    { "id": "365966893778", "url": "https://www.alignhcm.com/blog/ukg-buyers-guide", "title": "The Strategic Buyer's Guide to UKG (DUPLICATE)", "views": 31 }
+  ],
+  "known_issues_open": [
+    "case-studies-on-default-hubspot-domain",
+    "duplicate-ukg-buyers-guide",
+    "waf-blocks-non-browser-crawlers",
+    "legacy-apex-urls-indexed (/welcome/, /news/)",
+    "untitled-content-238611079877",
+    "slug-typo-paylocity-vs-paycheck",
+    "sandbox-and-netlify-analytics-pollution",
+    "404-page-views-historical-213"
+  ],
+  "alert_thresholds": {
+    "views_wow_drop_pct": 40,
+    "submissions_zero_days": 3,
+    "daily_404_views": 5,
+    "top10_bounce_max": 0.97,
+    "new_untracked_domains": true
+  }
+}
