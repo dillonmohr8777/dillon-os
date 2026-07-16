@@ -63,7 +63,10 @@ Compare against `baseline.json`:
 | Duplicate titles across live posts | always flag |
 | Total daily views | 0 (tracking outage or site down) |
 
-Site reachability: direct fetches of alignhcm.com return 403 by design (WAF blocks non-browser agents, open issue #3). A 403 means the server is alive. Only a timeout, connection failure, or 5xx is a downtime signal. Zero views all day in HubSpot is the stronger down/broken-tracking signal.
+Site reachability: attempt a fetch of https://www.alignhcm.com/robots.txt every run.
+- **403**: server alive but AI crawlers still blocked. Keep the CRITICAL ai-crawler alert in the report (standing directive 1). The fix runbook is `ai-crawler-unblock/RUNBOOK.md`; remind Dillon it is waiting on the HubSpot admin toggle.
+- **200**: crawlers unblocked. Mark `CRITICAL-DIRECTIVE: waf-blocks-ai-crawlers` resolved in baseline.json, lead the report with the good news, and from then on track the AEO referral trend as the success metric (alert if it stays 0 for 45+ days after unblock).
+- Timeout, connection failure, or 5xx: possible downtime, investigate. Zero views all day in HubSpot is the stronger down/broken-tracking signal.
 
 ## Step 3: SEO sweep (Mondays, or when flagged)
 
