@@ -22,6 +22,18 @@
     { "month": "2026-06", "views": 1779, "submissions": 40, "contacts": 21 },
     { "month": "2026-07", "views": 1031, "submissions": 14, "contacts": 6, "partial": true }
   ],
+  "revops_verified": {
+    "asOf": "2026-07-15",
+    "source": "RevOps YTD Won Deal Attribution reconciliation export (canonical, verified). Never overwrite with naive DEAL sums.",
+    "closedWonYtd": 162000,
+    "engagements": 8,
+    "openPipeline": 2187000,
+    "opportunityHistory": 3220000,
+    "winRateResolved": 0.157,
+    "wonBySource": { "partner_referral": 83000, "inbound_web": 37000, "outbound_sdr": 34000, "expansion": 8000 },
+    "wonByPlatform": { "UKG": 54000, "Dayforce": 38000, "Paylocity": 28000, "Workday": 22000, "ADP": 12000, "HiBob": 8000 },
+    "marketing_originated_won": 37000
+  },
   "attribution_snapshot": {
     "asOf": "2026-07-16",
     "model": "LINEAR",
@@ -62,7 +74,7 @@
   "known_issues_open": [
     "case-studies-on-default-hubspot-domain",
     "duplicate-ukg-buyers-guide",
-    "waf-blocks-non-browser-crawlers (blocks AI answer engines; AEO scoreboard at 2 contacts YTD)",
+    "CRITICAL-DIRECTIVE: waf-blocks-ai-crawlers (AI crawlers must have FULL access; alert critical on every run until fixed; AEO scoreboard at 2 contacts YTD)",
     "legacy-apex-urls-indexed (/welcome/, /news/)",
     "untitled-content-238611079877 (485 views YTD)",
     "slug-typo-paylocity-vs-paycheck",
