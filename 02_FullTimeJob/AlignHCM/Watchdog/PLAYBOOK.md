@@ -35,13 +35,14 @@ Always pass explicit start/end dates. The API default window is NOT 30 days; res
 
 ## Step 1b: Attribution and AEO pulls
 
-1. **Mandatory terminal refresh**: run `./Refresh-Dashboard.ps1` after the other dashboard fields are refreshed and before the run is committed. This script validates portal `242825734`, recalculates the strict selected-channel revenue from live deals, refreshes contact source and AEO counts, probes AI crawler access, rewrites `data.json` and `baseline.json`, and fails closed on a portal mismatch. Use `-Publish` in Step 5 so the run commits, pushes, and triggers Netlify.
+1. **Mandatory terminal refresh**: run `./Refresh-Dashboard.ps1` after the other dashboard fields are refreshed and before the run is committed. This script validates portal `242825734`, recalculates the strict selected-channel revenue from live deals, refreshes contact source and AEO counts, counts live submissions for all five conversion forms, verifies the 27-field attribution layer, checks the production blog CTA/canonical/redirect/IndexNow deployment, probes AI crawler access, rewrites `data.json` and `baseline.json`, and fails closed on a portal mismatch. Use `-Publish` in Step 5 so the run commits, pushes, and triggers Netlify.
 2. **Assisted revenue attribution** (mcp__HubSpot__get_campaign_attribution_reports): metrics [REVENUE, DEAL_COUNT], dimensions [ASSET_TYPE], startDate 2026-01-26, endDate today, attributionModel LINEAR (the standing model; note in the report if a different model was requested). Label it marketing influence, never deal origination. Read tool_guidance first on a fresh session.
 3. **Contact source mix** (mcp__HubSpot__query_crm_data, call tool_guidance first):
    `SELECT hs_analytics_source, COUNT(*) FROM CONTACT WHERE createdate BETWEEN '2026-01-26' AND '<today>' GROUP BY hs_analytics_source`
 4. **AEO referrals** (same tool):
    `SELECT hs_analytics_first_referrer, COUNT(*) FROM CONTACT WHERE createdate BETWEEN '2026-01-26' AND '<today>' GROUP BY hs_analytics_first_referrer`
    Count referrers matching chatgpt.com, chat.openai.com, perplexity.ai, claude.ai, gemini.google.com, copilot.microsoft.com. HubSpot also buckets these natively as AI_REFERRALS in hs_analytics_source; report both numbers.
+5. **Conversion attribution**: treat HubSpot form submissions as known conversions and GA4 events as anonymous behavior. Never copy submitted values into the dashboard. Never report `meeting_booking_started` as a completed meeting. Keep the HubSpot custom event scope warning informational while the GA4 event layer and HubSpot form conversions remain healthy.
 
 ### Exclusions (analytics pollution, never count in KPIs)
 - Any `*.sandbox.hs-sites-na2.com` URL
@@ -63,6 +64,8 @@ Compare against `baseline.json`:
 | Untitled content (no title/url metadata) | always flag |
 | Duplicate titles across live posts | always flag |
 | Total daily views | 0 (tracking outage or site down) |
+| Attribution production checks | any required check fails |
+| Hidden attribution fields | fewer than 27 on any tracked form |
 
 Site reachability: attempt a fetch of https://www.alignhcm.com/robots.txt every run.
 - **403**: crawler access regressed. Reopen the CRITICAL ai-crawler alert in the report (standing directive 1) and run `ai-crawler-unblock/Publish-FromTerminal.ps1` plus the verification commands in `RUNBOOK.md`.
@@ -90,7 +93,7 @@ Create `reports/YYYY-MM-DD.md` with frontmatter (`type: watchdog-report`). Secti
 ## Step 5: Update baseline, dashboard data, and commit
 
 1. Update `baseline.json`: refresh aggregates, append the completed week to `weekly_series` when a week closes, keep `top_pages_30d` current, sync `known_issues_open`.
-2. Update `site-analytics-dashboard/data.json` at the repo root ON EVERY RUN: refresh `generated`, `window.end`, `kpis`, `monthly`, `touchAttribution`, `blogs`, `topPages`, and non-revenue alerts from this run's pulls.
+2. Update `site-analytics-dashboard/data.json` at the repo root ON EVERY RUN: refresh `generated`, `window.end`, `kpis`, `monthly`, `touchAttribution`, `blogs`, `topPages`, `attribution`, and non-revenue alerts from this run's pulls.
 3. Run `./Refresh-Dashboard.ps1 -Publish`. It authoritatively refreshes `channelRevenue`, `sources`, `aeo`, the crawler alert, and the selected-channel KPIs; validates both JSON files; stages only the dashboard, baseline, and today's report; commits with `watchdog: daily report YYYY-MM-DD`; and pushes the designated branch. That push is the Netlify redeploy trigger. A run is not complete until this command succeeds.
 
 ## Step 6: Escalation
@@ -103,4 +106,5 @@ If any alert fired, say so clearly at the top of the session summary so it reach
 - Conversion pages that matter: /contact, /partners/brokers, meeting scheduler pages.
 - Traffic engine: blog buyer's guide series.
 - Protected production dashboard: https://align-hcm-site-health-dashboard.netlify.app. It renders the committed `site-analytics-dashboard/data.json`; `Refresh-Dashboard.ps1 -Publish` updates and redeploys it on every completed watchdog run.
+- Production attribution installer and verifier: `attribution/Install-Attribution.ps1` and `attribution/Verify-Attribution.ps1`. These use HubSpot APIs only and never require the HubSpot website.
 - Initial audit with full issue detail: `reports/2026-07-16.md`.

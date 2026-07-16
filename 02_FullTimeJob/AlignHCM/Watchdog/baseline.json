@@ -177,5 +177,14 @@
                                  "Claude":  0,
                                  "Gemini":  0,
                                  "Microsoft Copilot":  0
-                             }
+                             },
+    "attribution_health_live":  {
+                                    "asOf":  "2026-07-16T16:07:21.3327339-04:00",
+                                    "totalKnownConversions":  86,
+                                    "trackedForms":  5,
+                                    "completeForms":  5,
+                                    "requiredChecksPassing":  6,
+                                    "requiredChecksFailing":  0,
+                                    "hubspotCustomEventScope":  "not_granted_ga4_fallback_active"
+                                }
 }

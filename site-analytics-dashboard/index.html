@@ -131,6 +131,25 @@
     </div>
   </div>
 
+  <div class="card" id="attributionCard" style="display:none">
+    <h2>Conversion and attribution health<span class="vbadge">LIVE · HUBSPOT</span></h2>
+    <p class="desc" id="attributionDesc"></p>
+    <div class="kpis" id="attributionKpis"></div>
+    <div class="grid2">
+      <div>
+        <h2>Known form submissions</h2>
+        <p class="desc">Counts are read live from HubSpot. No email address or submitted value is copied into this dashboard.</p>
+        <div class="tbl-scroll" id="attributionForms"></div>
+      </div>
+      <div>
+        <h2>Production checks</h2>
+        <p class="desc">Terminal checks rerun with every watchdog refresh.</p>
+        <div class="tbl-scroll" id="attributionChecks"></div>
+      </div>
+    </div>
+    <p class="sharenote" id="attributionEvents" style="margin-top:12px"></p>
+  </div>
+
   <div class="card">
     <h2>Blog posts: reach vs conversion</h2>
     <p class="desc">Top posts by views in the window. A post with traffic and zero submissions is missing a conversion path.</p>
@@ -258,6 +277,34 @@
     (d.aeo||[]).forEach(function(r){ a2.push("<tr><td><span class='t'>"+esc(r.platform)+'</span></td><td class="r num">'+fmt(r.contacts)+"</td></tr>"); });
     a2.push('<tr><td><span class="t">Total</span></td><td class="r num">'+fmt(aeoTotal)+"</td></tr></tbody></table>");
     $("aeoTable").innerHTML=a2.join("");
+
+    var at=d.attribution;
+    if(at){
+      $("attributionCard").style.display="";
+      $("attributionDesc").textContent=at.source+" · "+at.period+". First-touch, last-touch, content, offer, CTA placement, and conversion fields are checked on every tracked form.";
+      $("attributionKpis").innerHTML=
+        kpi("Known form submissions",fmt(at.totalKnownConversions),"fixed reporting window",true)+
+        kpi("Forms instrumented",fmt(at.completeForms)+" / "+fmt(at.trackedForms),fmt(at.propertyCount)+" attribution fields each")+
+        kpi("GA4 events installed",fmt((at.events||[]).length),esc(at.ga4MeasurementId||""))+
+        kpi("IndexNow URLs",fmt((at.indexNow||{}).canonicalUrlsSubmitted),"last response HTTP "+fmt((at.indexNow||{}).lastSubmissionStatus));
+
+      var af=['<table><thead><tr><th>Form</th><th class="r">Submissions</th><th class="r">Pages</th><th>Fields</th></tr></thead><tbody>'];
+      (at.forms||[]).forEach(function(r){
+        af.push("<tr><td><span class='t'>"+esc(r.name)+"</span></td><td class='r num'>"+fmt(r.submissions)+"</td><td class='r num'>"+fmt(r.uniqueConversionPages)+"</td><td>"+
+          '<span class="badge '+(r.attributionComplete?'good':'crit')+'">'+fmt(r.attributionFields)+" / "+fmt(at.propertyCount)+"</span></td></tr>");
+      });
+      af.push("</tbody></table>");
+      $("attributionForms").innerHTML=af.join("");
+
+      var ac=['<table><thead><tr><th>Check</th><th>Status</th></tr></thead><tbody>'];
+      (at.checks||[]).forEach(function(r){
+        var cls=r.status==="pass"?"good":(r.status==="warn"?"warn":"crit");
+        ac.push("<tr><td><span class='t'>"+esc(r.check)+"</span><div class='u'>"+esc(r.detail)+"</div></td><td><span class='badge "+cls+"'>"+esc(r.status)+"</span></td></tr>");
+      });
+      ac.push("</tbody></table>");
+      $("attributionChecks").innerHTML=ac.join("");
+      $("attributionEvents").textContent="Anonymous events in GA4: "+(at.events||[]).join(", ")+". Known form conversions and their attribution fields remain in HubSpot.";
+    }
 
     var b2=['<table><thead><tr><th>Post</th><th class="r">Views</th><th class="r">Submissions</th><th class="r">Time/view</th></tr></thead><tbody>'];
     (d.blogs||[]).forEach(function(r){

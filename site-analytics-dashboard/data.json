@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-07-16T15:01:55.2581280-04:00",
+    "generated":  "2026-07-16T16:07:21.3327339-04:00",
     "window":  {
                    "start":  "2026-01-26",
                    "end":  "2026-07-16"
@@ -7,7 +7,8 @@
     "source":  "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
     "directives":  [
                        "AI crawlers must have full access to alignhcm.com at all times. Never block GPTBot, ClaudeBot, PerplexityBot, Google-Extended, or similar. Verify on every run; blocking is a critical alert.",
-                       "Owned-channel won revenue is calculated live from closed-won HubSpot deals whose deal-level Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Keep assisted attribution separate."
+                       "Owned-channel won revenue is calculated live from closed-won HubSpot deals whose deal-level Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Keep assisted attribution separate.",
+                       "Every known form conversion must carry first-touch, last-touch, content, offer, and CTA placement fields. Anonymous behavior stays in GA4; never report a click as a completed meeting."
                    ],
     "kpis":  {
                  "viewsClean":  11159,
@@ -377,6 +378,120 @@
                    {
                        "severity":  "good",
                        "text":  "AI crawler access terminal-verified: 21 endpoint checks passed."
+                   },
+                   {
+                       "severity":  "good",
+                       "text":  "Attribution instrumentation terminal-verified: 5/5 forms complete and all required production checks passed."
                    }
-               ]
+               ],
+    "attribution":  {
+                        "verified":  true,
+                        "asOf":  "2026-07-16T16:07:21.3327339-04:00",
+                        "source":  "Live HubSpot form submissions plus terminal production checks",
+                        "period":  "2026-01-26 to 2026-07-16",
+                        "totalKnownConversions":  86,
+                        "trackedForms":  5,
+                        "completeForms":  5,
+                        "propertyCount":  27,
+                        "forms":  [
+                                      {
+                                          "id":  "a1106f8b-32fe-481b-a1ee-2f4f173c257d",
+                                          "name":  "Align Buyer Guide Download",
+                                          "submissions":  0,
+                                          "uniqueConversionPages":  0,
+                                          "latestSubmissionAt":  null,
+                                          "attributionFields":  27,
+                                          "attributionComplete":  true
+                                      },
+                                      {
+                                          "id":  "2a7dbc2e-600a-4d2b-9222-bda4cfd8d5bb",
+                                          "name":  "Blog Subscribe",
+                                          "submissions":  0,
+                                          "uniqueConversionPages":  0,
+                                          "latestSubmissionAt":  null,
+                                          "attributionFields":  27,
+                                          "attributionComplete":  true
+                                      },
+                                      {
+                                          "id":  "99353f9f-a047-4b21-b0ca-ee452f8cf6f6",
+                                          "name":  "Contact",
+                                          "submissions":  64,
+                                          "uniqueConversionPages":  7,
+                                          "latestSubmissionAt":  "2026-07-16T13:43:27.4660000+00:00",
+                                          "attributionFields":  27,
+                                          "attributionComplete":  true
+                                      },
+                                      {
+                                          "id":  "a2f5cad0-6a8b-485d-b57a-0c0b65e86936",
+                                          "name":  "Footer",
+                                          "submissions":  15,
+                                          "uniqueConversionPages":  4,
+                                          "latestSubmissionAt":  "2026-05-29T10:39:03.5970000+00:00",
+                                          "attributionFields":  27,
+                                          "attributionComplete":  true
+                                      },
+                                      {
+                                          "id":  "e733d928-0f1d-4b41-853b-df1e0096f330",
+                                          "name":  "Footer CTA - Get in Touch",
+                                          "submissions":  7,
+                                          "uniqueConversionPages":  2,
+                                          "latestSubmissionAt":  "2026-06-16T12:22:41.3940000+00:00",
+                                          "attributionFields":  27,
+                                          "attributionComplete":  true
+                                      }
+                                  ],
+                        "events":  [
+                                       "cta_clicked",
+                                       "guide_gate_opened",
+                                       "resource_downloaded",
+                                       "form_submitted",
+                                       "form_error",
+                                       "generate_lead",
+                                       "meeting_booking_started",
+                                       "page_not_found"
+                                   ],
+                        "ga4MeasurementId":  "G-320235048",
+                        "checks":  [
+                                       {
+                                           "check":  "Form reliability and GA4 event layer",
+                                           "status":  "pass",
+                                           "detail":  "Published code requires HTTP success and tracks CTA, guide, form, meeting intent, and 404 events."
+                                       },
+                                       {
+                                           "check":  "Production attribution asset",
+                                           "status":  "pass",
+                                           "detail":  "Loaded on the production domain."
+                                       },
+                                       {
+                                           "check":  "Blog listing canonical",
+                                           "status":  "pass",
+                                           "detail":  "1 canonical tag(s) on /blog."
+                                       },
+                                       {
+                                           "check":  "Blog conversion path",
+                                           "status":  "pass",
+                                           "detail":  "Summary, contextual CTA, and end form render on posts."
+                                       },
+                                       {
+                                           "check":  "Duplicate UKG guide",
+                                           "status":  "pass",
+                                           "detail":  "HTTP 301 to https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg."
+                                       },
+                                       {
+                                           "check":  "IndexNow ownership key",
+                                           "status":  "pass",
+                                           "detail":  "Root key is reachable and authorizes site-wide URL submission."
+                                       },
+                                       {
+                                           "check":  "HubSpot anonymous custom events",
+                                           "status":  "warn",
+                                           "detail":  "Private app event scope is not granted. GA4 anonymous events and HubSpot known form conversions remain active."
+                                       }
+                                   ],
+                        "indexNow":  {
+                                         "keyLocation":  "https://www.alignhcm.com/d9686532d24369a2f1c85405f971a2e8.txt",
+                                         "lastSubmissionStatus":  202,
+                                         "canonicalUrlsSubmitted":  117
+                                     }
+                    }
 }

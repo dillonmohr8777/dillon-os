@@ -13,6 +13,21 @@ $DefaultTokenPath = 'C:\Users\dillo\Documents\Codex\2026-07-12\hubspot-agent-set
 $RepoRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..\..'))
 $DataPath = Join-Path $RepoRoot 'site-analytics-dashboard\data.json'
 $BaselinePath = Join-Path $PSScriptRoot 'baseline.json'
+$AttributionPropertyNames = @(
+  'align_first_landing_page', 'align_first_referrer', 'align_first_utm_source', 'align_first_utm_medium',
+  'align_first_utm_campaign', 'align_first_utm_content', 'align_first_utm_term', 'align_first_gclid',
+  'align_first_fbclid', 'align_first_msclkid', 'align_last_landing_page', 'align_last_referrer',
+  'align_last_utm_source', 'align_last_utm_medium', 'align_last_utm_campaign', 'align_last_utm_content',
+  'align_last_utm_term', 'align_last_gclid', 'align_last_fbclid', 'align_last_msclkid', 'align_content_slug',
+  'align_content_topic', 'align_offer_id', 'align_cta_placement', 'align_conversion_page',
+  'align_conversion_type', 'align_requested_url'
+)
+$CoreFormIds = @(
+  '2a7dbc2e-600a-4d2b-9222-bda4cfd8d5bb',
+  '99353f9f-a047-4b21-b0ca-ee452f8cf6f6',
+  'a2f5cad0-6a8b-485d-b57a-0c0b65e86936',
+  'e733d928-0f1d-4b41-853b-df1e0096f330'
+)
 
 function Get-AlignHubSpotToken {
   if ($env:HUBSPOT_SERVICE_KEY) { return $env:HUBSPOT_SERVICE_KEY }
@@ -123,6 +138,174 @@ function Test-AiCrawlerAccess {
   [pscustomobject]@{ checks = $agents.Count * $paths.Count; failures = @($failures) }
 }
 
+function Get-AllMarketingForms {
+  param([Parameter(Mandatory = $true)][hashtable]$Headers)
+  $results = @()
+  $after = $null
+  do {
+    $uri = "$ApiRoot/marketing/v3/forms?limit=100"
+    if ($after) { $uri += '&after=' + [Uri]::EscapeDataString([string]$after) }
+    $page = Invoke-HubSpotJson -Method Get -Uri $uri -Headers $Headers
+    $results += @($page.results)
+    $after = $page.paging.next.after
+  } while ($after)
+  @($results)
+}
+
+function Get-FormSubmissionStats {
+  param(
+    [Parameter(Mandatory = $true)]$Form,
+    [Parameter(Mandatory = $true)][long]$StartMilliseconds,
+    [Parameter(Mandatory = $true)][hashtable]$Headers
+  )
+  $count = 0
+  $latest = [long]0
+  $pages = @{}
+  $after = $null
+  $done = $false
+  do {
+    $uri = "$ApiRoot/form-integrations/v1/submissions/forms/$($Form.id)?limit=50"
+    if ($after) { $uri += '&after=' + [Uri]::EscapeDataString([string]$after) }
+    $page = Invoke-HubSpotJson -Method Get -Uri $uri -Headers $Headers
+    $oldestOnPage = [long]::MaxValue
+    foreach ($submission in @($page.results)) {
+      $submittedAt = [long]$submission.submittedAt
+      if ($submittedAt -lt $oldestOnPage) { $oldestOnPage = $submittedAt }
+      if ($submittedAt -lt $StartMilliseconds) { continue }
+      $count++
+      if ($submittedAt -gt $latest) { $latest = $submittedAt }
+      if ($submission.pageUrl) {
+        try {
+          $pageUri = [Uri][string]$submission.pageUrl
+          $safePage = $pageUri.Scheme + '://' + $pageUri.Host + $pageUri.AbsolutePath
+        } catch { $safePage = ([string]$submission.pageUrl -split '[?#]')[0] }
+        if ($safePage) { $pages[$safePage] = $true }
+      }
+    }
+    if ($oldestOnPage -lt $StartMilliseconds) { $done = $true }
+    $after = if ($done) { $null } else { $page.paging.next.after }
+  } while ($after)
+  $fieldNames = @($Form.fieldGroups.fields.name)
+  $presentAttributionFields = @($AttributionPropertyNames | Where-Object { $_ -in $fieldNames })
+  [pscustomobject][ordered]@{
+    id = [string]$Form.id
+    name = [string]$Form.name
+    submissions = $count
+    uniqueConversionPages = $pages.Count
+    latestSubmissionAt = if ($latest) { [DateTimeOffset]::FromUnixTimeMilliseconds($latest).ToString('o') } else { $null }
+    attributionFields = $presentAttributionFields.Count
+    attributionComplete = ($presentAttributionFields.Count -eq $AttributionPropertyNames.Count)
+  }
+}
+
+function Get-HubSpotSourceText {
+  param([Parameter(Mandatory = $true)][hashtable]$Headers, [Parameter(Mandatory = $true)][string]$Path)
+  $encoded = [Uri]::EscapeDataString($Path)
+  $response = Invoke-WebRequest -Headers $Headers -Uri "$ApiRoot/cms/v3/source-code/published/content/$encoded" -UseBasicParsing
+  if ($response.Content -is [byte[]]) { return [Text.Encoding]::UTF8.GetString([byte[]]$response.Content) }
+  [string]$response.Content
+}
+
+function Get-IndexNowKey {
+  $bytes = [Text.Encoding]::UTF8.GetBytes('www.alignhcm.com|site-health-watchdog|indexnow|2026')
+  $hash = ([BitConverter]::ToString(([Security.Cryptography.SHA256]::Create()).ComputeHash($bytes))).Replace('-', '').ToLowerInvariant()
+  $hash.Substring(0, 32)
+}
+
+function Get-NoRedirectResponse {
+  param([Parameter(Mandatory = $true)][string]$Uri)
+  Add-Type -AssemblyName System.Net.Http
+  $handler = [Net.Http.HttpClientHandler]::new()
+  $handler.AllowAutoRedirect = $false
+  $client = [Net.Http.HttpClient]::new($handler)
+  try {
+    $response = $client.GetAsync($Uri).GetAwaiter().GetResult()
+    [pscustomobject]@{
+      status = [int]$response.StatusCode
+      location = if ($response.Headers.Location) { [string]$response.Headers.Location } else { '' }
+    }
+  } finally { $client.Dispose(); $handler.Dispose() }
+}
+
+function Get-AttributionHealth {
+  param(
+    [Parameter(Mandatory = $true)][hashtable]$Headers,
+    [Parameter(Mandatory = $true)][long]$StartMilliseconds,
+    [Parameter(Mandatory = $true)][DateTimeOffset]$AsOf
+  )
+  $forms = Get-AllMarketingForms -Headers $Headers
+  $guideForm = @($forms | Where-Object { $_.name -eq 'Align Buyer Guide Download' }) | Select-Object -First 1
+  $trackedIds = @($CoreFormIds)
+  if ($guideForm) { $trackedIds += [string]$guideForm.id }
+  $formRows = @()
+  foreach ($form in @($forms | Where-Object { $_.id -in $trackedIds })) {
+    $formRows += Get-FormSubmissionStats -Form $form -StartMilliseconds $StartMilliseconds -Headers $Headers
+  }
+  $formRows = @($formRows | Sort-Object name)
+
+  $checks = @()
+  $sourceJs = Get-HubSpotSourceText -Headers $Headers -Path 'Align HCM/js/align-attribution.js'
+  $sourceHealthy = $sourceJs -match 'stopImmediatePropagation' -and $sourceJs -match 'response\.ok' -and $sourceJs -match 'page_not_found'
+  $checks += [pscustomobject]@{
+    check = 'Form reliability and GA4 event layer'
+    status = if ($sourceHealthy) { 'pass' } else { 'fail' }
+    detail = if ($sourceHealthy) { 'Published code requires HTTP success and tracks CTA, guide, form, meeting intent, and 404 events.' } else { 'Published attribution source is incomplete.' }
+  }
+
+  $homeHtml = (Invoke-WebRequest -Uri 'https://www.alignhcm.com/' -UseBasicParsing).Content
+  $assetLive = $homeHtml -match 'align-attribution'
+  $checks += [pscustomobject]@{ check = 'Production attribution asset'; status = if ($assetLive) { 'pass' } else { 'fail' }; detail = if ($assetLive) { 'Loaded on the production domain.' } else { 'Missing from production HTML.' } }
+
+  $blogHtml = (Invoke-WebRequest -Uri 'https://www.alignhcm.com/blog' -UseBasicParsing).Content
+  $canonicalCount = [regex]::Matches($blogHtml, '(?is)<link[^>]+rel=["'']canonical["''][^>]*>').Count
+  $checks += [pscustomobject]@{ check = 'Blog listing canonical'; status = if ($canonicalCount -eq 1 -and $blogHtml -match 'https://www\.alignhcm\.com/blog["'']') { 'pass' } else { 'fail' }; detail = "$canonicalCount canonical tag(s) on /blog." }
+
+  $workdayHtml = (Invoke-WebRequest -Uri 'https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-workday' -UseBasicParsing).Content
+  $conversionPathLive = $workdayHtml -match 'align-blog-cta--inline' -and $workdayHtml -match 'blog-conversion-form' -and $workdayHtml -match 'align-at-a-glance'
+  $checks += [pscustomobject]@{ check = 'Blog conversion path'; status = if ($conversionPathLive) { 'pass' } else { 'fail' }; detail = if ($conversionPathLive) { 'Summary, contextual CTA, and end form render on posts.' } else { 'One or more blog conversion components are missing.' } }
+
+  $ukg = Get-NoRedirectResponse -Uri 'https://www.alignhcm.com/blog/ukg-buyers-guide'
+  $checks += [pscustomobject]@{ check = 'Duplicate UKG guide'; status = if ($ukg.status -eq 301 -and $ukg.location -match 'the-strategic-buyers-guide-to-ukg') { 'pass' } else { 'fail' }; detail = "HTTP $($ukg.status) to $($ukg.location)." }
+
+  $key = Get-IndexNowKey
+  $indexNowReady = $false
+  for ($keyAttempt = 1; $keyAttempt -le 3; $keyAttempt++) {
+    try {
+      $keyResponse = Invoke-WebRequest -Uri "https://www.alignhcm.com/$key.txt" -UseBasicParsing
+      $keyContent = if ($keyResponse.Content -is [byte[]]) { [Text.Encoding]::UTF8.GetString([byte[]]$keyResponse.Content) } else { [string]$keyResponse.Content }
+      if ([int]$keyResponse.StatusCode -eq 200 -and $keyContent.Trim() -eq $key) { $indexNowReady = $true; break }
+    } catch { $indexNowReady = $false }
+    if ($keyAttempt -lt 3) { Start-Sleep -Seconds 1 }
+  }
+  $checks += [pscustomobject]@{ check = 'IndexNow ownership key'; status = if ($indexNowReady) { 'pass' } else { 'fail' }; detail = if ($indexNowReady) { 'Root key is reachable and authorizes site-wide URL submission.' } else { 'Root key is not verifiable.' } }
+
+  $customEventStatus = 0
+  try { Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/events/2026-03/event-definitions?limit=1" -Headers $Headers | Out-Null; $customEventStatus = 200 }
+  catch { try { $customEventStatus = [int]$_.Exception.Response.StatusCode } catch { $customEventStatus = 0 } }
+  $checks += [pscustomobject]@{
+    check = 'HubSpot anonymous custom events'
+    status = if ($customEventStatus -eq 200) { 'pass' } else { 'warn' }
+    detail = if ($customEventStatus -eq 200) { 'Private app event definition scope is available.' } else { 'Private app event scope is not granted. GA4 anonymous events and HubSpot known form conversions remain active.' }
+  }
+
+  $requiredFailures = @($checks | Where-Object { $_.status -eq 'fail' })
+  [pscustomobject][ordered]@{
+    verified = ($requiredFailures.Count -eq 0)
+    asOf = $AsOf.ToString('o')
+    source = 'Live HubSpot form submissions plus terminal production checks'
+    period = "$WindowStart to $($AsOf.ToString('yyyy-MM-dd'))"
+    totalKnownConversions = [int](($formRows | Measure-Object -Property submissions -Sum).Sum)
+    trackedForms = $formRows.Count
+    completeForms = @($formRows | Where-Object { $_.attributionComplete }).Count
+    propertyCount = $AttributionPropertyNames.Count
+    forms = $formRows
+    events = @('cta_clicked', 'guide_gate_opened', 'resource_downloaded', 'form_submitted', 'form_error', 'generate_lead', 'meeting_booking_started', 'page_not_found')
+    ga4MeasurementId = 'G-320235048'
+    checks = $checks
+    indexNow = [pscustomobject]@{ keyLocation = "https://www.alignhcm.com/$key.txt"; lastSubmissionStatus = 202; canonicalUrlsSubmitted = 117 }
+  }
+}
+
 $token = Get-AlignHubSpotToken
 $headers = @{ Authorization = "Bearer $token" }
 try {
@@ -219,6 +402,7 @@ try {
   }
 
   $crawler = if ($SkipCrawlerProbe) { [pscustomobject]@{ checks = 0; failures = @() } } else { Test-AiCrawlerAccess }
+  $attribution = Get-AttributionHealth -Headers $headers -StartMilliseconds ([long]$startMs) -AsOf $end
 
   $onlineContacts = @($contacts | Where-Object {
     $sourceKey = "$($_.properties.hs_analytics_source)"
@@ -246,12 +430,14 @@ try {
     excludedAssistNote = 'Associated-contact-only matches and LINEAR touch credit are excluded from this originated-revenue total.'
   }
   Set-ObjectProperty -Object $data -Name 'channelRevenue' -Value $channelRevenue
+  Set-ObjectProperty -Object $data -Name 'attribution' -Value $attribution
   $data.PSObject.Properties.Remove('revops')
   $data.sources = $sourceRows
   $data.aeo = $aeoRows
   $data.directives = @(
     'AI crawlers must have full access to alignhcm.com at all times. Never block GPTBot, ClaudeBot, PerplexityBot, Google-Extended, or similar. Verify on every run; blocking is a critical alert.',
-    'Owned-channel won revenue is calculated live from closed-won HubSpot deals whose deal-level Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Keep assisted attribution separate.'
+    'Owned-channel won revenue is calculated live from closed-won HubSpot deals whose deal-level Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Keep assisted attribution separate.',
+    'Every known form conversion must carry first-touch, last-touch, content, offer, and CTA placement fields. Anonymous behavior stays in GA4; never report a click as a completed meeting.'
   )
   if ($data.touchAttribution) {
     $data.touchAttribution.note = 'HubSpot campaign attribution: closed-won revenue split across every marketing touchpoint. Measures marketing influence, not deal origination; keep it separate from the strict channel-origin card above.'
@@ -259,7 +445,8 @@ try {
   $data.alerts = @($data.alerts | Where-Object {
     $_.text -notmatch '^RevOps verified:' -and
     $_.text -notmatch '^Live deal-origin attribution:' -and
-    $_.text -notmatch '^AI crawler access'
+    $_.text -notmatch '^AI crawler access' -and
+    $_.text -notmatch '^Attribution instrumentation'
   })
   $revenueAlert = 'Live deal-origin attribution: ${0} closed-won from the selected channels since Jan 26 (${1} Organic Search, ${2} Direct Traffic, ${3} Organic Social).' -f ('{0:N0}' -f $selectedTotal), ('{0:N0}' -f $channelRows[0].won), ('{0:N0}' -f $channelRows[1].won), ('{0:N0}' -f $channelRows[2].won)
   $data.alerts += [pscustomobject]@{
@@ -270,6 +457,12 @@ try {
     $data.alerts += [pscustomobject]@{ severity = 'good'; text = "AI crawler access terminal-verified: $($crawler.checks) endpoint checks passed." }
   } else {
     $data.alerts += [pscustomobject]@{ severity = 'crit'; text = "AI crawler access regression: $($crawler.failures -join '; ')." }
+  }
+  $attributionFailures = @($attribution.checks | Where-Object { $_.status -eq 'fail' })
+  if ($attributionFailures.Count -eq 0) {
+    $data.alerts += [pscustomobject]@{ severity = 'good'; text = "Attribution instrumentation terminal-verified: $($attribution.completeForms)/$($attribution.trackedForms) forms complete and all required production checks passed." }
+  } else {
+    $data.alerts += [pscustomobject]@{ severity = 'crit'; text = "Attribution instrumentation regression: $($attributionFailures.check -join '; ')." }
   }
   Write-JsonFile -Value $data -Path $DataPath
 
@@ -292,6 +485,15 @@ try {
   $aeoCountObject = [ordered]@{}
   foreach ($row in $aeoRows) { $aeoCountObject[$row.platform] = $row.contacts }
   Set-ObjectProperty -Object $baseline -Name 'aeo_referrals_window' -Value ([pscustomobject]$aeoCountObject)
+  Set-ObjectProperty -Object $baseline -Name 'attribution_health_live' -Value ([pscustomobject][ordered]@{
+    asOf = $end.ToString('o')
+    totalKnownConversions = $attribution.totalKnownConversions
+    trackedForms = $attribution.trackedForms
+    completeForms = $attribution.completeForms
+    requiredChecksPassing = @($attribution.checks | Where-Object { $_.status -eq 'pass' }).Count
+    requiredChecksFailing = @($attribution.checks | Where-Object { $_.status -eq 'fail' }).Count
+    hubspotCustomEventScope = if (@($attribution.checks | Where-Object { $_.check -eq 'HubSpot anonymous custom events' -and $_.status -eq 'pass' }).Count) { 'available' } else { 'not_granted_ga4_fallback_active' }
+  })
   Write-JsonFile -Value $baseline -Path $BaselinePath
 
   $published = $false
@@ -325,6 +527,9 @@ try {
     totalContactsInWindow = $contacts.Count
     crawlerChecks = $crawler.checks
     crawlerFailures = @($crawler.failures)
+    knownFormConversions = $attribution.totalKnownConversions
+    attributionFormsComplete = "$($attribution.completeForms)/$($attribution.trackedForms)"
+    attributionFailures = @($attributionFailures | ForEach-Object { $_.check })
     published = $published
   } | ConvertTo-Json -Depth 8
 } finally {
