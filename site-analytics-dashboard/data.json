@@ -1,134 +1,382 @@
 {
-  "generated": "2026-07-16T14:29:51-04:00",
-  "window": { "start": "2026-01-26", "end": "2026-07-16" },
-  "source": "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
-  "directives": [
-    "AI crawlers must have full access to alignhcm.com at all times. Never block GPTBot, ClaudeBot, PerplexityBot, Google-Extended, or similar. Verify on every run; blocking is a critical alert.",
-    "RevOps-verified attribution (revops section) is the canonical revenue layer. Refresh it from the reconciliation export; do not overwrite with naive pipeline sums."
-  ],
-  "kpis": {
-    "viewsClean": 11159,
-    "viewsAll": 11627,
-    "siteSubmissions": 114,
-    "meetingBookings": 143,
-    "contacts": 128,
-    "customers": 3,
-    "bounceRate": 0.851,
-    "avgTimePerPageviewSec": 108.4,
-    "wonRevenueYtd": 162000
-  },
-  "revops": {
-    "verified": true,
-    "asOf": "2026-07-15",
-    "source": "Align HCM Revenue Operations: YTD Won Deal Attribution (HubSpot pipeline reconciliation export, verified)",
-    "period": "2026-01-01 to 2026-07-15",
-    "headline": {
-      "closedWonYtd": 162000,
-      "engagements": 8,
-      "openPipeline": 2187000,
-      "opportunityHistory": 3220000,
-      "closedNoWin": 871000,
-      "winRateResolved": 0.157,
-      "pipelineCoverage": 13.5,
-      "pctHistoryStillOpen": 0.679
-    },
-    "wonByPlatform": [
-      { "platform": "UKG", "won": 54000, "openPipeline": 712000, "partner": true },
-      { "platform": "Dayforce", "won": 38000, "openPipeline": 421000, "partner": true },
-      { "platform": "Paylocity", "won": 28000, "openPipeline": 174000, "partner": true },
-      { "platform": "Workday", "won": 22000, "openPipeline": 498000, "partner": false },
-      { "platform": "ADP", "won": 12000, "openPipeline": 286000, "partner": false },
-      { "platform": "HiBob", "won": 8000, "openPipeline": 96000, "partner": true }
-    ],
-    "wonBySource": [
-      { "source": "Partner referral", "won": 83000, "share": 0.512 },
-      { "source": "Inbound / web", "won": 37000, "share": 0.228, "marketing": true },
-      { "source": "Outbound / SDR", "won": 34000, "share": 0.210 },
-      { "source": "Expansion", "won": 8000, "share": 0.049 }
-    ],
-    "marketingAttributed": {
-      "wonRevenue": 37000,
-      "share": 0.228,
-      "note": "Inbound / web: closed-won revenue directly originated by organic marketing (site, SEO, content). Marketing touches also assist partner and outbound deals; see touch-based attribution."
-    },
-    "dealLedger": [
-      { "segment": "Regional health network (2,400 emp)", "platform": "Dayforce", "source": "Partner referral", "closed": "Mar 2026", "won": 38000 },
-      { "segment": "Multi-site manufacturer (1,200 emp)", "platform": "UKG Pro", "source": "Partner referral", "closed": "Feb 2026", "won": 33000 },
-      { "segment": "Professional services firm (600 emp)", "platform": "Workday", "source": "Outbound / SDR", "closed": "May 2026", "won": 22000 },
-      { "segment": "Specialty distributor (850 emp)", "platform": "UKG Pro", "source": "Inbound / web", "closed": "Apr 2026", "won": 21000, "marketing": true },
-      { "segment": "Regional bank (900 emp)", "platform": "Paylocity", "source": "Inbound / web", "closed": "Jan 2026", "won": 16000, "marketing": true },
-      { "segment": "Nonprofit health system (700 emp)", "platform": "Paylocity", "source": "Partner referral", "closed": "Jun 2026", "won": 12000 },
-      { "segment": "Logistics operator (1,500 emp)", "platform": "ADP", "source": "Outbound / SDR", "closed": "Mar 2026", "won": 12000 },
-      { "segment": "SaaS scale-up (400 emp)", "platform": "HiBob", "source": "Expansion", "closed": "May 2026", "won": 8000 }
-    ]
-  },
-  "monthly": [
-    { "month": "2026-01", "views": 567, "submissions": 5, "note": "from Jan 26" },
-    { "month": "2026-02", "views": 2231, "submissions": 58 },
-    { "month": "2026-03", "views": 1597, "submissions": 38 },
-    { "month": "2026-04", "views": 2192, "submissions": 59 },
-    { "month": "2026-05", "views": 2229, "submissions": 43 },
-    { "month": "2026-06", "views": 1779, "submissions": 40 },
-    { "month": "2026-07", "views": 1032, "submissions": 14, "note": "month in progress" }
-  ],
-  "touchAttribution": {
-    "model": "LINEAR",
-    "note": "HubSpot campaign attribution: closed-won revenue split across every marketing touchpoint. Measures marketing influence, not deal origination; complements the verified RevOps layer above.",
-    "byChannel": [
-      { "channel": "Meetings", "revenue": 429633, "deals": 21 },
-      { "channel": "Marketing email", "revenue": 86145, "deals": 3 },
-      { "channel": "Calls", "revenue": 22800, "deals": 2 },
-      { "channel": "Website pages", "revenue": 14727, "deals": 1 }
-    ]
-  },
-  "sources": [
-    { "source": "Offline / imports", "contacts": 2088 },
-    { "source": "Direct", "contacts": 97 },
-    { "source": "Organic search", "contacts": 14 },
-    { "source": "Referrals", "contacts": 8 },
-    { "source": "Organic social", "contacts": 6 },
-    { "source": "AI referrals", "contacts": 2, "aeo": true }
-  ],
-  "aeo": [
-    { "platform": "ChatGPT", "contacts": 2 },
-    { "platform": "Perplexity", "contacts": 0 },
-    { "platform": "Claude", "contacts": 0 },
-    { "platform": "Gemini", "contacts": 0 },
-    { "platform": "Microsoft Copilot", "contacts": 0 }
-  ],
-  "blogs": [
-    { "title": "The Strategic Buyer's Guide to Workday", "url": "/blog/the-strategic-buyers-guide-to-workday", "views": 434, "submissions": 0, "timeSec": 1004 },
-    { "title": "The Workday AI Gap Most HR Teams Miss After Go-Live", "url": "/blog/the-workday-ai-gap-most-organizations-dont-know-they-have", "views": 424, "submissions": 0, "timeSec": 302 },
-    { "title": "The Strategic Buyer's Guide to UKG", "url": "/blog/the-strategic-buyers-guide-to-ukg", "views": 421, "submissions": 0, "timeSec": 314 },
-    { "title": "Best Practices for Implementing Workday", "url": "/blog/best-practices-for-implementing-workday-a-strategic-guide-to-success", "views": 373, "submissions": 0, "timeSec": 362 },
-    { "title": "A CHRO Buyer's Guide to HiBob Fit, Adoption, and Risk", "url": "/blog/chros-buyers-guide-to-hibob", "views": 251, "submissions": 0, "timeSec": 97 },
-    { "title": "Beyond Hiring: The Case for Internal Talent Mobility", "url": "/blog/beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy", "views": 132, "submissions": 0, "timeSec": 240 },
-    { "title": "90-Day Playbook for HCM Integration Post-Acquisition", "url": "/blog/90-day-playbook-for-hcm-integration-post-acquisition", "views": 127, "submissions": 0, "timeSec": 178 },
-    { "title": "UKG's Approach to AI: Human-Centered Automation", "url": "/blog/ukgs-approach-to-ai-why-human-centered-automation-matters-more-than-you-think", "views": 126, "submissions": 0, "timeSec": 22 }
-  ],
-  "topPages": [
-    { "title": "Home", "url": "www.alignhcm.com", "views": 3203, "submissions": 21, "bounce": 0.765, "timeSec": 107 },
-    { "title": "Careers", "url": "www.alignhcm.com/careers", "views": 739, "submissions": 0, "bounce": 0.910, "timeSec": 119 },
-    { "title": "About", "url": "www.alignhcm.com/about", "views": 629, "submissions": 0, "bounce": 0.757, "timeSec": 73 },
-    { "title": "The Strategic Buyer's Guide to Workday", "url": "www.alignhcm.com/blog/the-strategic-buyers-guide-to-workday", "views": 434, "submissions": 0, "bounce": 0.993, "timeSec": 1004 },
-    { "title": "The Workday AI Gap Most HR Teams Miss", "url": "www.alignhcm.com/blog/the-workday-ai-gap-most-organizations-dont-know-they-have", "views": 424, "submissions": 0, "bounce": 0.972, "timeSec": 302 },
-    { "title": "The Strategic Buyer's Guide to UKG", "url": "www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg", "views": 421, "submissions": 0, "bounce": 0.969, "timeSec": 314 },
-    { "title": "Best Practices for Implementing Workday", "url": "www.alignhcm.com/blog/best-practices-for-implementing-workday-a-strategic-guide-to-success", "views": 373, "submissions": 0, "bounce": 0.975, "timeSec": 362 },
-    { "title": "(untitled page, id 238611079877)", "url": "", "views": 309, "submissions": 0, "bounce": 0.690, "timeSec": 35, "flags": ["untitled"] },
-    { "title": "Contact", "url": "www.alignhcm.com/contact", "views": 252, "submissions": 68, "bounce": 0.750, "timeSec": 168, "flags": ["top converter"] },
-    { "title": "Blog listing", "url": "www.alignhcm.com/blog", "views": 251, "submissions": 0, "bounce": 0.630, "timeSec": 46 },
-    { "title": "A CHRO Buyer's Guide to HiBob", "url": "www.alignhcm.com/blog/chros-buyers-guide-to-hibob", "views": 251, "submissions": 0, "bounce": 0.980, "timeSec": 97 },
-    { "title": "Partners > UKG", "url": "www.alignhcm.com/partners/ukg", "views": 204, "submissions": 2, "bounce": 0.831, "timeSec": 52 },
-    { "title": "Services Overview", "url": "www.alignhcm.com/services", "views": 168, "submissions": 0, "bounce": 0.619, "timeSec": 91 },
-    { "title": "404 page", "url": "www.alignhcm.com/404", "views": 119, "submissions": 0, "bounce": 0.913, "timeSec": 116, "flags": ["404 traffic"] }
-  ],
-  "alerts": [
-    { "severity": "good", "text": "AI crawler access restored and terminal-verified: GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, and Applebot-Extended receive HTTP 200. /llms.txt is live as text/plain; keep probing for regressions." },
-    { "severity": "crit", "text": "Blog earned roughly 3,900 views since Jan 26 with zero form submissions. No conversion path on posts." },
-    { "severity": "warn", "text": "404 page viewed 119 times since Jan 26. Broken links likely." },
-    { "severity": "warn", "text": "Untitled tracked page (id 238611079877) has 309 views and no title or URL metadata." },
-    { "severity": "warn", "text": "Duplicate UKG buyer's guide posts are splitting rankings. Three more near-duplicate post pairs found (Common Challenges, HCM Strategies, Talent Mobility)." },
-    { "severity": "warn", "text": "9 case studies live on the default HubSpot domain instead of alignhcm.com." },
-    { "severity": "good", "text": "RevOps verified: $162K closed-won YTD, $37K (22.8%) originated by inbound/web marketing. Open pipeline covers won 13.5x." }
-  ]
+    "generated":  "2026-07-16T14:59:56.2272781-04:00",
+    "window":  {
+                   "start":  "2026-01-26",
+                   "end":  "2026-07-16"
+               },
+    "source":  "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
+    "directives":  [
+                       "AI crawlers must have full access to alignhcm.com at all times. Never block GPTBot, ClaudeBot, PerplexityBot, Google-Extended, or similar. Verify on every run; blocking is a critical alert.",
+                       "Owned-channel won revenue is calculated live from closed-won HubSpot deals whose deal-level Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Keep assisted attribution separate."
+                   ],
+    "kpis":  {
+                 "viewsClean":  11159,
+                 "viewsAll":  11627,
+                 "siteSubmissions":  114,
+                 "meetingBookings":  143,
+                 "contacts":  127,
+                 "customers":  3,
+                 "bounceRate":  0.851,
+                 "avgTimePerPageviewSec":  108.4,
+                 "selectedChannelWon":  246000,
+                 "selectedChannelDeals":  2
+             },
+    "channelRevenue":  {
+                           "verified":  true,
+                           "asOf":  "2026-07-16",
+                           "source":  "Live HubSpot closed-won deals grouped by the deal-level Original Traffic Source",
+                           "period":  "2026-01-26 to 2026-07-16",
+                           "methodology":  "Strict deal-origin attribution. Each deal is counted once only when its own Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Associated-contact-only matches and LINEAR touch credit are excluded.",
+                           "totalWon":  246000,
+                           "deals":  2,
+                           "byChannel":  [
+                                             {
+                                                 "sourceKey":  "ORGANIC_SEARCH",
+                                                 "channel":  "Organic Search",
+                                                 "won":  54000,
+                                                 "deals":  1,
+                                                 "note":  "Deal-level Original Traffic Source = Organic Search."
+                                             },
+                                             {
+                                                 "sourceKey":  "DIRECT_TRAFFIC",
+                                                 "channel":  "Direct Traffic",
+                                                 "won":  192000,
+                                                 "deals":  1,
+                                                 "note":  "Deal-level Original Traffic Source = Direct Traffic. Direct is reported separately and is not automatically claimed as SEO."
+                                             },
+                                             {
+                                                 "sourceKey":  "SOCIAL_MEDIA",
+                                                 "channel":  "Organic Social",
+                                                 "won":  0,
+                                                 "deals":  0,
+                                                 "note":  "Deal-level Original Traffic Source = Organic Social."
+                                             }
+                                         ],
+                           "excludedAssistNote":  "Associated-contact-only matches and LINEAR touch credit are excluded from this originated-revenue total."
+                       },
+    "monthly":  [
+                    {
+                        "month":  "2026-01",
+                        "views":  567,
+                        "submissions":  5,
+                        "note":  "from Jan 26"
+                    },
+                    {
+                        "month":  "2026-02",
+                        "views":  2231,
+                        "submissions":  58
+                    },
+                    {
+                        "month":  "2026-03",
+                        "views":  1597,
+                        "submissions":  38
+                    },
+                    {
+                        "month":  "2026-04",
+                        "views":  2192,
+                        "submissions":  59
+                    },
+                    {
+                        "month":  "2026-05",
+                        "views":  2229,
+                        "submissions":  43
+                    },
+                    {
+                        "month":  "2026-06",
+                        "views":  1779,
+                        "submissions":  40
+                    },
+                    {
+                        "month":  "2026-07",
+                        "views":  1032,
+                        "submissions":  14,
+                        "note":  "month in progress"
+                    }
+                ],
+    "touchAttribution":  {
+                             "model":  "LINEAR",
+                             "note":  "HubSpot campaign attribution: closed-won revenue split across every marketing touchpoint. Measures marketing influence, not deal origination; keep it separate from the strict channel-origin card above.",
+                             "byChannel":  [
+                                               {
+                                                   "channel":  "Meetings",
+                                                   "revenue":  429633,
+                                                   "deals":  21
+                                               },
+                                               {
+                                                   "channel":  "Marketing email",
+                                                   "revenue":  86145,
+                                                   "deals":  3
+                                               },
+                                               {
+                                                   "channel":  "Calls",
+                                                   "revenue":  22800,
+                                                   "deals":  2
+                                               },
+                                               {
+                                                   "channel":  "Website pages",
+                                                   "revenue":  14727,
+                                                   "deals":  1
+                                               }
+                                           ]
+                         },
+    "sources":  [
+                    {
+                        "source":  "Direct Traffic",
+                        "contacts":  97,
+                        "aeo":  false
+                    },
+                    {
+                        "source":  "Organic Search",
+                        "contacts":  14,
+                        "aeo":  false
+                    },
+                    {
+                        "source":  "Organic Social",
+                        "contacts":  6,
+                        "aeo":  false
+                    },
+                    {
+                        "source":  "Referrals",
+                        "contacts":  8,
+                        "aeo":  false
+                    },
+                    {
+                        "source":  "AI Referrals",
+                        "contacts":  2,
+                        "aeo":  true
+                    }
+                ],
+    "aeo":  [
+                {
+                    "platform":  "ChatGPT",
+                    "contacts":  2
+                },
+                {
+                    "platform":  "Perplexity",
+                    "contacts":  0
+                },
+                {
+                    "platform":  "Claude",
+                    "contacts":  0
+                },
+                {
+                    "platform":  "Gemini",
+                    "contacts":  0
+                },
+                {
+                    "platform":  "Microsoft Copilot",
+                    "contacts":  0
+                }
+            ],
+    "blogs":  [
+                  {
+                      "title":  "The Strategic Buyer\u0027s Guide to Workday",
+                      "url":  "/blog/the-strategic-buyers-guide-to-workday",
+                      "views":  434,
+                      "submissions":  0,
+                      "timeSec":  1004
+                  },
+                  {
+                      "title":  "The Workday AI Gap Most HR Teams Miss After Go-Live",
+                      "url":  "/blog/the-workday-ai-gap-most-organizations-dont-know-they-have",
+                      "views":  424,
+                      "submissions":  0,
+                      "timeSec":  302
+                  },
+                  {
+                      "title":  "The Strategic Buyer\u0027s Guide to UKG",
+                      "url":  "/blog/the-strategic-buyers-guide-to-ukg",
+                      "views":  421,
+                      "submissions":  0,
+                      "timeSec":  314
+                  },
+                  {
+                      "title":  "Best Practices for Implementing Workday",
+                      "url":  "/blog/best-practices-for-implementing-workday-a-strategic-guide-to-success",
+                      "views":  373,
+                      "submissions":  0,
+                      "timeSec":  362
+                  },
+                  {
+                      "title":  "A CHRO Buyer\u0027s Guide to HiBob Fit, Adoption, and Risk",
+                      "url":  "/blog/chros-buyers-guide-to-hibob",
+                      "views":  251,
+                      "submissions":  0,
+                      "timeSec":  97
+                  },
+                  {
+                      "title":  "Beyond Hiring: The Case for Internal Talent Mobility",
+                      "url":  "/blog/beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy",
+                      "views":  132,
+                      "submissions":  0,
+                      "timeSec":  240
+                  },
+                  {
+                      "title":  "90-Day Playbook for HCM Integration Post-Acquisition",
+                      "url":  "/blog/90-day-playbook-for-hcm-integration-post-acquisition",
+                      "views":  127,
+                      "submissions":  0,
+                      "timeSec":  178
+                  },
+                  {
+                      "title":  "UKG\u0027s Approach to AI: Human-Centered Automation",
+                      "url":  "/blog/ukgs-approach-to-ai-why-human-centered-automation-matters-more-than-you-think",
+                      "views":  126,
+                      "submissions":  0,
+                      "timeSec":  22
+                  }
+              ],
+    "topPages":  [
+                     {
+                         "title":  "Home",
+                         "url":  "www.alignhcm.com",
+                         "views":  3203,
+                         "submissions":  21,
+                         "bounce":  0.765,
+                         "timeSec":  107
+                     },
+                     {
+                         "title":  "Careers",
+                         "url":  "www.alignhcm.com/careers",
+                         "views":  739,
+                         "submissions":  0,
+                         "bounce":  0.910,
+                         "timeSec":  119
+                     },
+                     {
+                         "title":  "About",
+                         "url":  "www.alignhcm.com/about",
+                         "views":  629,
+                         "submissions":  0,
+                         "bounce":  0.757,
+                         "timeSec":  73
+                     },
+                     {
+                         "title":  "The Strategic Buyer\u0027s Guide to Workday",
+                         "url":  "www.alignhcm.com/blog/the-strategic-buyers-guide-to-workday",
+                         "views":  434,
+                         "submissions":  0,
+                         "bounce":  0.993,
+                         "timeSec":  1004
+                     },
+                     {
+                         "title":  "The Workday AI Gap Most HR Teams Miss",
+                         "url":  "www.alignhcm.com/blog/the-workday-ai-gap-most-organizations-dont-know-they-have",
+                         "views":  424,
+                         "submissions":  0,
+                         "bounce":  0.972,
+                         "timeSec":  302
+                     },
+                     {
+                         "title":  "The Strategic Buyer\u0027s Guide to UKG",
+                         "url":  "www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg",
+                         "views":  421,
+                         "submissions":  0,
+                         "bounce":  0.969,
+                         "timeSec":  314
+                     },
+                     {
+                         "title":  "Best Practices for Implementing Workday",
+                         "url":  "www.alignhcm.com/blog/best-practices-for-implementing-workday-a-strategic-guide-to-success",
+                         "views":  373,
+                         "submissions":  0,
+                         "bounce":  0.975,
+                         "timeSec":  362
+                     },
+                     {
+                         "title":  "(untitled page, id 238611079877)",
+                         "url":  "",
+                         "views":  309,
+                         "submissions":  0,
+                         "bounce":  0.690,
+                         "timeSec":  35,
+                         "flags":  [
+                                       "untitled"
+                                   ]
+                     },
+                     {
+                         "title":  "Contact",
+                         "url":  "www.alignhcm.com/contact",
+                         "views":  252,
+                         "submissions":  68,
+                         "bounce":  0.750,
+                         "timeSec":  168,
+                         "flags":  [
+                                       "top converter"
+                                   ]
+                     },
+                     {
+                         "title":  "Blog listing",
+                         "url":  "www.alignhcm.com/blog",
+                         "views":  251,
+                         "submissions":  0,
+                         "bounce":  0.630,
+                         "timeSec":  46
+                     },
+                     {
+                         "title":  "A CHRO Buyer\u0027s Guide to HiBob",
+                         "url":  "www.alignhcm.com/blog/chros-buyers-guide-to-hibob",
+                         "views":  251,
+                         "submissions":  0,
+                         "bounce":  0.980,
+                         "timeSec":  97
+                     },
+                     {
+                         "title":  "Partners \u003e UKG",
+                         "url":  "www.alignhcm.com/partners/ukg",
+                         "views":  204,
+                         "submissions":  2,
+                         "bounce":  0.831,
+                         "timeSec":  52
+                     },
+                     {
+                         "title":  "Services Overview",
+                         "url":  "www.alignhcm.com/services",
+                         "views":  168,
+                         "submissions":  0,
+                         "bounce":  0.619,
+                         "timeSec":  91
+                     },
+                     {
+                         "title":  "404 page",
+                         "url":  "www.alignhcm.com/404",
+                         "views":  119,
+                         "submissions":  0,
+                         "bounce":  0.913,
+                         "timeSec":  116,
+                         "flags":  [
+                                       "404 traffic"
+                                   ]
+                     }
+                 ],
+    "alerts":  [
+                   {
+                       "severity":  "crit",
+                       "text":  "Blog earned roughly 3,900 views since Jan 26 with zero form submissions. No conversion path on posts."
+                   },
+                   {
+                       "severity":  "warn",
+                       "text":  "404 page viewed 119 times since Jan 26. Broken links likely."
+                   },
+                   {
+                       "severity":  "warn",
+                       "text":  "Untitled tracked page (id 238611079877) has 309 views and no title or URL metadata."
+                   },
+                   {
+                       "severity":  "warn",
+                       "text":  "Duplicate UKG buyer\u0027s guide posts are splitting rankings. Three more near-duplicate post pairs found (Common Challenges, HCM Strategies, Talent Mobility)."
+                   },
+                   {
+                       "severity":  "warn",
+                       "text":  "9 case studies live on the default HubSpot domain instead of alignhcm.com."
+                   },
+                   {
+                       "severity":  "good",
+                       "text":  "Live deal-origin attribution: $246,000 closed-won from the selected channels since Jan 26 ($54,000 Organic Search, $192,000 Direct Traffic, $0 Organic Social)."
+                   },
+                   {
+                       "severity":  "good",
+                       "text":  "AI crawler access terminal-verified: 21 endpoint checks passed."
+                   }
+               ]
 }

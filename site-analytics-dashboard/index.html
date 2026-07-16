@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Align HCM · Site Analytics &amp; Attribution</title>
+<title>Align HCM · Organic Marketing Dashboard</title>
 <style>
   :root{
     --bg:#f2f5fa; --card:#ffffff; --ink:#16283f; --muted:#5a6b80; --faint:#8595a9;
@@ -84,33 +84,20 @@
   <header>
     <div>
       <p class="eyebrow">Align HCM · Site Watchdog</p>
-      <h1>Site Analytics &amp; Attribution</h1>
-      <p class="sub" id="windowLabel">Jan 26, 2026 to today · first-party HubSpot data · no Google</p>
+      <h1>Organic Marketing Dashboard</h1>
+      <p class="sub" id="windowLabel">Jan 26, 2026 to today · first-party HubSpot data · no Google dependency</p>
     </div>
     <div class="stamp" id="stamp">Loading…</div>
   </header>
   <ul class="alerts" id="alerts"></ul>
   <div class="kpis" id="kpis"></div>
 
-  <div class="card" id="revopsCard" style="display:none">
-    <h2>Won deal attribution<span class="vbadge">VERIFIED · RevOps</span></h2>
-    <p class="desc" id="revopsDesc"></p>
-    <div class="kpis" id="revopsKpis"></div>
-    <div class="grid2">
-      <div>
-        <h2 style="font-size:13.5px">Won by platform</h2>
-        <div class="tbl-scroll" id="revopsPlatform"></div>
-      </div>
-      <div>
-        <h2 style="font-size:13.5px">Won by source</h2>
-        <div class="tbl-scroll" id="revopsSource"></div>
-        <p class="sharenote" id="marketingNote" style="margin-top:10px"></p>
-      </div>
-    </div>
-    <details style="margin-top:12px">
-      <summary style="font-size:13px;color:var(--muted);cursor:pointer">Won-deal ledger (8 engagements)</summary>
-      <div class="tbl-scroll" id="revopsLedger"></div>
-    </details>
+  <div class="card" id="channelCard" style="display:none">
+    <h2>Won revenue by selected channel<span class="vbadge">LIVE · HUBSPOT</span></h2>
+    <p class="desc" id="channelDesc"></p>
+    <div class="kpis" id="channelKpis"></div>
+    <div class="tbl-scroll" id="channelTable"></div>
+    <p class="sharenote" id="channelNote" style="margin-top:10px"></p>
   </div>
 
   <div class="card">
@@ -134,7 +121,7 @@
   <div class="grid2">
     <div class="card">
       <h2>Where contacts come from</h2>
-      <p class="desc">Original traffic source of contacts created in the window. AI Referrals is HubSpot's native bucket for ChatGPT, Perplexity, Copilot and similar.</p>
+      <p class="desc">Online original traffic sources for contacts created in the window. Offline/imported records are excluded. AI Referrals is HubSpot's native bucket for ChatGPT, Perplexity, Copilot and similar.</p>
       <div class="tbl-scroll" id="srcTable"></div>
     </div>
     <div class="card">
@@ -213,43 +200,37 @@
 
   function render(d){
     $("stamp").innerHTML="Data refreshed<br><b>"+esc(new Date(d.generated).toLocaleString([], {dateStyle:"medium", timeStyle:"short"}))+"</b>";
-    $("windowLabel").textContent=(d.window.start.replace("2026-01-26","Jan 26, 2026"))+" to "+d.window.end+" · first-party HubSpot data · no Google";
+    $("windowLabel").textContent=(d.window.start.replace("2026-01-26","Jan 26, 2026"))+" to "+d.window.end+" · first-party HubSpot data · no Google dependency";
 
     $("alerts").innerHTML=(d.alerts||[]).map(function(a){
       return '<li class="chip '+esc(a.severity)+'">'+esc(a.text)+"</li>"; }).join("");
 
     var k=d.kpis||{};
     $("kpis").innerHTML=
-      kpi("Won revenue YTD",usdK(k.wonRevenueYtd),"RevOps verified",true)+
+      kpi("Organic + direct + social won",usdK(k.selectedChannelWon),fmt(k.selectedChannelDeals)+" closed-won deals",true)+
       kpi("Page views",fmt(k.viewsClean),"window, cleaned")+
       kpi("Form submissions",fmt(k.siteSubmissions),"site forms")+
       kpi("Meeting bookings",fmt(k.meetingBookings),"scheduler links")+
       kpi("New contacts",fmt(k.contacts),"from site")+
       kpi("Bounce rate",pct(k.bounceRate),"site-wide");
 
-    var rv=d.revops;
-    if(rv){
-      $("revopsCard").style.display="";
-      $("revopsDesc").textContent=rv.source+" · "+rv.period+" · updated with each reconciliation export";
-      var h=rv.headline||{};
-      $("revopsKpis").innerHTML=
-        kpi("Closed-won YTD",usdK(h.closedWonYtd),h.engagements+" engagements",true)+
-        kpi("Open pipeline",usdK(h.openPipeline),(h.pipelineCoverage||"")+"x coverage of won")+
-        kpi("Opportunity history",usdK(h.opportunityHistory),Math.round((h.pctHistoryStillOpen||0)*100)+"% still open")+
-        kpi("Win rate (resolved)",pct(h.winRateResolved),"decided deals");
-      $("revopsPlatform").innerHTML=barTable(rv.wonByPlatform||[],"won","platform",usdK,
-        function(r){return r.partner?'<span class="badge good">partner</span>':'<span class="badge info">supported</span>'}," blue");
-      $("revopsSource").innerHTML=barTable(rv.wonBySource||[],"won","source",usdK,
-        function(r){return r.marketing?'<span class="badge good">marketing</span>':""});
-      var mk=rv.marketingAttributed;
-      if(mk) $("marketingNote").textContent="Marketing-originated: "+usdK(mk.wonRevenue)+" ("+pct(mk.share)+" of won). "+mk.note;
-      var lg=['<table><thead><tr><th>Segment</th><th>Platform</th><th>Source</th><th>Closed</th><th class="r">Won</th></tr></thead><tbody>'];
-      (rv.dealLedger||[]).forEach(function(x){
-        lg.push("<tr><td><span class='t'>"+esc(x.segment)+"</span></td><td>"+esc(x.platform)+"</td><td>"+esc(x.source)+
-          (x.marketing?'<span class="badge good">marketing</span>':"")+"</td><td>"+esc(x.closed)+'</td><td class="r num">'+usdK(x.won)+"</td></tr>");
+    var cr=d.channelRevenue;
+    if(cr){
+      $("channelCard").style.display="";
+      $("channelDesc").textContent=cr.source+" · "+cr.period+". "+cr.methodology;
+      function channel(key){ return (cr.byChannel||[]).find(function(x){return x.sourceKey===key})||{}; }
+      $("channelKpis").innerHTML=
+        kpi("Selected-channel won",usd(cr.totalWon),fmt(cr.deals)+" strict-origin deals",true)+
+        kpi("Organic Search",usd(channel("ORGANIC_SEARCH").won),"deal-level source")+
+        kpi("Direct Traffic",usd(channel("DIRECT_TRAFFIC").won),"reported separately from SEO")+
+        kpi("Organic Social",usd(channel("SOCIAL_MEDIA").won),"deal-level source");
+      var ct=['<table><thead><tr><th>Channel</th><th class="r">Closed-won</th><th class="r">Deals</th><th>Interpretation</th></tr></thead><tbody>'];
+      (cr.byChannel||[]).forEach(function(x){
+        ct.push("<tr><td><span class='t'>"+esc(x.channel)+"</span></td><td class='r num'>"+usd(x.won)+"</td><td class='r num'>"+fmt(x.deals)+"</td><td>"+esc(x.note)+"</td></tr>");
       });
-      lg.push("</tbody></table>");
-      $("revopsLedger").innerHTML=lg.join("");
+      ct.push("</tbody></table>");
+      $("channelTable").innerHTML=ct.join("");
+      $("channelNote").textContent=cr.excludedAssistNote||"Associated-contact-only and touch-attributed deals are excluded from this originated-revenue total.";
     }
 
     lineChart($("viewsChart"), d.monthly||[], "views", "var(--s-views-fill)", "var(--s-views)", "Monthly page views");

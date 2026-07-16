@@ -1,101 +1,181 @@
 {
-  "generated": "2026-07-16",
-  "window": { "start": "2026-01-26", "end": "rolling (today)" },
-  "source": "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
-  "note": "All watchdog and dashboard reporting uses the fixed window start 2026-01-26. The window extends daily on its own.",
-  "aggregates_ytd_jan1_snapshot": {
-    "asOf": "2026-07-16",
-    "rawViews": 14182,
-    "submissions": 280,
-    "contacts": 140,
-    "leads": 128,
-    "customers": 3,
-    "bounceRate": 0.835,
-    "avgTimePerPageviewSec": 98.9
-  },
-  "monthly_series": [
-    { "month": "2026-01", "views": 3123, "submissions": 28, "contacts": 16 },
-    { "month": "2026-02", "views": 2231, "submissions": 58, "contacts": 26, "customers": 3 },
-    { "month": "2026-03", "views": 1597, "submissions": 38, "contacts": 16 },
-    { "month": "2026-04", "views": 2192, "submissions": 59, "contacts": 31 },
-    { "month": "2026-05", "views": 2229, "submissions": 43, "contacts": 24 },
-    { "month": "2026-06", "views": 1779, "submissions": 40, "contacts": 21 },
-    { "month": "2026-07", "views": 1031, "submissions": 14, "contacts": 6, "partial": true }
-  ],
-  "revops_verified": {
-    "asOf": "2026-07-15",
-    "source": "RevOps YTD Won Deal Attribution reconciliation export (canonical, verified). Never overwrite with naive DEAL sums.",
-    "closedWonYtd": 162000,
-    "engagements": 8,
-    "openPipeline": 2187000,
-    "opportunityHistory": 3220000,
-    "winRateResolved": 0.157,
-    "wonBySource": { "partner_referral": 83000, "inbound_web": 37000, "outbound_sdr": 34000, "expansion": 8000 },
-    "wonByPlatform": { "UKG": 54000, "Dayforce": 38000, "Paylocity": 28000, "Workday": 22000, "ADP": 12000, "HiBob": 8000 },
-    "marketing_originated_won": 37000
-  },
-  "attribution_snapshot": {
-    "asOf": "2026-07-16",
-    "model": "LINEAR",
-    "window": "2026-01-01 to 2026-07-16, closed-won deals",
-    "byChannel": [
-      { "channel": "MEETING", "revenue": 447052, "deals": 23 },
-      { "channel": "EMAIL", "revenue": 253905, "deals": 4 },
-      { "channel": "CALL", "revenue": 22800, "deals": 2 },
-      { "channel": "WEBSITE_PAGE", "revenue": 14727, "deals": 1 }
-    ],
-    "totalAttributedRevenue": 738484
-  },
-  "contact_sources_ytd": {
-    "asOf": "2026-07-16",
-    "OFFLINE": 2149,
-    "DIRECT_TRAFFIC": 107,
-    "ORGANIC_SEARCH": 16,
-    "REFERRALS": 8,
-    "SOCIAL_MEDIA": 6,
-    "AI_REFERRALS": 2
-  },
-  "aeo_referrals_ytd": {
-    "asOf": "2026-07-16",
-    "chatgpt.com": 2,
-    "perplexity.ai": 0,
-    "claude.ai": 0,
-    "gemini.google.com": 0,
-    "copilot.microsoft.com": 0
-  },
-  "blog_conversions_ytd": {
-    "asOf": "2026-07-16",
-    "totalBlogSubmissions": 2,
-    "converting": [
-      "best-practices-for-implementing-workday-a-strategic-guide-to-success (1)",
-      "why-fast-growing-companies-choose-6-week-implementations-over-18-month-enterprise-projects (1)"
-    ]
-  },
-  "known_issues_open": [
-    "case-studies-on-default-hubspot-domain",
-    "duplicate-ukg-buyers-guide",
-    "legacy-apex-urls-indexed (/welcome/, /news/)",
-    "untitled-content-238611079877 (485 views YTD)",
-    "slug-typo-paylocity-vs-paycheck",
-    "sandbox-and-netlify-analytics-pollution",
-    "blog-has-no-conversion-path (2 submissions from ~50 posts YTD)",
-    "404-page-views-historical-213"
-  ],
-  "known_issues_resolved": [
-    {
-      "id": "waf-blocks-ai-crawlers",
-      "resolvedAt": "2026-07-16",
-      "evidence": "HTTP 200 for GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, and Applebot-Extended on the site, robots.txt, and llms.txt",
-      "llmsUrl": "https://www.alignhcm.com/llms.txt",
-      "followUp": "Track AEO referrals; reopen as critical if any crawler probe returns 403 or llms.txt stops returning text/plain."
-    }
-  ],
-  "alert_thresholds": {
-    "views_wow_drop_pct": 40,
-    "submissions_zero_days": 3,
-    "daily_404_views": 5,
-    "top10_bounce_max": 0.97,
-    "new_untracked_domains": true,
-    "aeo_referrals_monthly_min": 1
-  }
+    "generated":  "2026-07-16",
+    "window":  {
+                   "start":  "2026-01-26",
+                   "end":  "2026-07-16"
+               },
+    "source":  "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
+    "note":  "All watchdog and dashboard reporting uses the fixed window start 2026-01-26. The window extends daily on its own.",
+    "aggregates_ytd_jan1_snapshot":  {
+                                         "asOf":  "2026-07-16",
+                                         "rawViews":  14182,
+                                         "submissions":  280,
+                                         "contacts":  140,
+                                         "leads":  128,
+                                         "customers":  3,
+                                         "bounceRate":  0.835,
+                                         "avgTimePerPageviewSec":  98.9
+                                     },
+    "monthly_series":  [
+                           {
+                               "month":  "2026-01",
+                               "views":  3123,
+                               "submissions":  28,
+                               "contacts":  16
+                           },
+                           {
+                               "month":  "2026-02",
+                               "views":  2231,
+                               "submissions":  58,
+                               "contacts":  26,
+                               "customers":  3
+                           },
+                           {
+                               "month":  "2026-03",
+                               "views":  1597,
+                               "submissions":  38,
+                               "contacts":  16
+                           },
+                           {
+                               "month":  "2026-04",
+                               "views":  2192,
+                               "submissions":  59,
+                               "contacts":  31
+                           },
+                           {
+                               "month":  "2026-05",
+                               "views":  2229,
+                               "submissions":  43,
+                               "contacts":  24
+                           },
+                           {
+                               "month":  "2026-06",
+                               "views":  1779,
+                               "submissions":  40,
+                               "contacts":  21
+                           },
+                           {
+                               "month":  "2026-07",
+                               "views":  1031,
+                               "submissions":  14,
+                               "contacts":  6,
+                               "partial":  true
+                           }
+                       ],
+    "attribution_snapshot":  {
+                                 "asOf":  "2026-07-16",
+                                 "model":  "LINEAR",
+                                 "window":  "2026-01-01 to 2026-07-16, closed-won deals",
+                                 "byChannel":  [
+                                                   {
+                                                       "channel":  "MEETING",
+                                                       "revenue":  447052,
+                                                       "deals":  23
+                                                   },
+                                                   {
+                                                       "channel":  "EMAIL",
+                                                       "revenue":  253905,
+                                                       "deals":  4
+                                                   },
+                                                   {
+                                                       "channel":  "CALL",
+                                                       "revenue":  22800,
+                                                       "deals":  2
+                                                   },
+                                                   {
+                                                       "channel":  "WEBSITE_PAGE",
+                                                       "revenue":  14727,
+                                                       "deals":  1
+                                                   }
+                                               ],
+                                 "totalAttributedRevenue":  738484
+                             },
+    "aeo_referrals_ytd":  {
+                              "asOf":  "2026-07-16",
+                              "chatgpt.com":  2,
+                              "perplexity.ai":  0,
+                              "claude.ai":  0,
+                              "gemini.google.com":  0,
+                              "copilot.microsoft.com":  0
+                          },
+    "blog_conversions_ytd":  {
+                                 "asOf":  "2026-07-16",
+                                 "totalBlogSubmissions":  2,
+                                 "converting":  [
+                                                    "best-practices-for-implementing-workday-a-strategic-guide-to-success (1)",
+                                                    "why-fast-growing-companies-choose-6-week-implementations-over-18-month-enterprise-projects (1)"
+                                                ]
+                             },
+    "known_issues_open":  [
+                              "case-studies-on-default-hubspot-domain",
+                              "duplicate-ukg-buyers-guide",
+                              "legacy-apex-urls-indexed (/welcome/, /news/)",
+                              "untitled-content-238611079877 (485 views YTD)",
+                              "slug-typo-paylocity-vs-paycheck",
+                              "sandbox-and-netlify-analytics-pollution",
+                              "blog-has-no-conversion-path (2 submissions from ~50 posts YTD)",
+                              "404-page-views-historical-213"
+                          ],
+    "known_issues_resolved":  [
+                                  {
+                                      "id":  "waf-blocks-ai-crawlers",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "HTTP 200 for GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, and Applebot-Extended on the site, robots.txt, and llms.txt",
+                                      "llmsUrl":  "https://www.alignhcm.com/llms.txt",
+                                      "followUp":  "Track AEO referrals; reopen as critical if any crawler probe returns 403 or llms.txt stops returning text/plain."
+                                  }
+                              ],
+    "alert_thresholds":  {
+                             "views_wow_drop_pct":  40,
+                             "submissions_zero_days":  3,
+                             "daily_404_views":  5,
+                             "top10_bounce_max":  0.97,
+                             "new_untracked_domains":  true,
+                             "aeo_referrals_monthly_min":  1
+                         },
+    "channel_revenue_live":  {
+                                 "asOf":  "2026-07-16",
+                                 "window":  "2026-01-26 to 2026-07-16",
+                                 "methodology":  "Strict deal-level Original Traffic Source; associated-contact-only and LINEAR touch attribution excluded.",
+                                 "totalWon":  246000,
+                                 "deals":  2,
+                                 "byChannel":  [
+                                                   {
+                                                       "sourceKey":  "ORGANIC_SEARCH",
+                                                       "channel":  "Organic Search",
+                                                       "won":  54000,
+                                                       "deals":  1,
+                                                       "note":  "Deal-level Original Traffic Source = Organic Search."
+                                                   },
+                                                   {
+                                                       "sourceKey":  "DIRECT_TRAFFIC",
+                                                       "channel":  "Direct Traffic",
+                                                       "won":  192000,
+                                                       "deals":  1,
+                                                       "note":  "Deal-level Original Traffic Source = Direct Traffic. Direct is reported separately and is not automatically claimed as SEO."
+                                                   },
+                                                   {
+                                                       "sourceKey":  "SOCIAL_MEDIA",
+                                                       "channel":  "Organic Social",
+                                                       "won":  0,
+                                                       "deals":  0,
+                                                       "note":  "Deal-level Original Traffic Source = Organic Social."
+                                                   }
+                                               ]
+                             },
+    "contact_sources_window":  {
+                                   "AI_REFERRALS":  2,
+                                   "DIRECT_TRAFFIC":  97,
+                                   "OFFLINE":  2089,
+                                   "ORGANIC_SEARCH":  14,
+                                   "REFERRALS":  8,
+                                   "SOCIAL_MEDIA":  6
+                               },
+    "aeo_referrals_window":  {
+                                 "ChatGPT":  2,
+                                 "Perplexity":  0,
+                                 "Claude":  0,
+                                 "Gemini":  0,
+                                 "Microsoft Copilot":  0
+                             }
 }

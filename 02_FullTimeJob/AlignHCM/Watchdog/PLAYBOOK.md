@@ -15,8 +15,8 @@ You are the daily site health watchdog for alignhcm.com (Align HCM, Dillon's ful
 ## Standing directives (never violate)
 
 1. **AI crawlers must have full access to alignhcm.com.** GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot, and similar must never be blocked; AI answer engines are a ranking channel. Verify access every run (a 403 to non-browser fetchers means still blocked); while blocked, raise a CRITICAL alert in every report. Never recommend or implement anything that blocks AI crawlers.
-2. **RevOps-verified attribution is the canonical revenue layer.** The verified numbers come from the Revenue Operations reconciliation export (see `revops` in `site-analytics-dashboard/data.json`; currently as of 2026-07-15: $162K closed-won YTD across 8 engagements, $2.187M open pipeline, $3.22M opportunity history, 15.7% resolved win rate, inbound/web $37K = 22.8% of won). Raw `SELECT ... FROM DEAL` sums include renewals, imports, and both pipelines and will NOT match; do not overwrite the verified layer with naive sums. Update the verified layer only from a new reconciliation export or PDF dropped in the vault (check 00_Inbox and this folder for newer exports each run).
-3. **Marketing attribution is reported every run**: inbound/web won revenue (verified layer), touch-based channel attribution (LINEAR), organic contact sources, and AI referrals. These are Dillon's marketing initiative numbers; keep them front and center.
+2. **Deal-origin revenue comes from live deal-level source fields.** On every run, calculate closed-won `amount` only for deals in the fixed window whose own `hs_analytics_source` is `ORGANIC_SEARCH`, `DIRECT_TRAFFIC`, or `SOCIAL_MEDIA`. Count each deal once. Do not treat an associated contact's source or LINEAR touch credit as deal origination. Direct Traffic is a separate channel and is never automatically claimed as SEO.
+3. **Marketing attribution is reported every run**: strict deal-origin revenue for Organic Search, Direct Traffic, and Organic Social; touch-based channel attribution (LINEAR) in a clearly separate assisted section; contact source mix; and AI referrals. Never reuse the representative `$37K inbound/web` split from the Jul 15 design PDFs as verified organic revenue.
 
 ## Step 0: Setup
 
@@ -35,10 +35,11 @@ Always pass explicit start/end dates. The API default window is NOT 30 days; res
 
 ## Step 1b: Attribution and AEO pulls
 
-1. **Revenue attribution** (mcp__HubSpot__get_campaign_attribution_reports): metrics [REVENUE, DEAL_COUNT], dimensions [ASSET_TYPE], startDate 2026-01-26, endDate today, attributionModel LINEAR (the standing model; note in the report if a different model was requested). Read tool_guidance first on a fresh session.
-2. **Contact source mix** (mcp__HubSpot__query_crm_data, call tool_guidance first):
+1. **Mandatory terminal refresh**: run `./Refresh-Dashboard.ps1` after the other dashboard fields are refreshed and before the run is committed. This script validates portal `242825734`, recalculates the strict selected-channel revenue from live deals, refreshes contact source and AEO counts, probes AI crawler access, rewrites `data.json` and `baseline.json`, and fails closed on a portal mismatch. Use `-Publish` in Step 5 so the run commits, pushes, and triggers Netlify.
+2. **Assisted revenue attribution** (mcp__HubSpot__get_campaign_attribution_reports): metrics [REVENUE, DEAL_COUNT], dimensions [ASSET_TYPE], startDate 2026-01-26, endDate today, attributionModel LINEAR (the standing model; note in the report if a different model was requested). Label it marketing influence, never deal origination. Read tool_guidance first on a fresh session.
+3. **Contact source mix** (mcp__HubSpot__query_crm_data, call tool_guidance first):
    `SELECT hs_analytics_source, COUNT(*) FROM CONTACT WHERE createdate BETWEEN '2026-01-26' AND '<today>' GROUP BY hs_analytics_source`
-3. **AEO referrals** (same tool):
+4. **AEO referrals** (same tool):
    `SELECT hs_analytics_first_referrer, COUNT(*) FROM CONTACT WHERE createdate BETWEEN '2026-01-26' AND '<today>' GROUP BY hs_analytics_first_referrer`
    Count referrers matching chatgpt.com, chat.openai.com, perplexity.ai, claude.ai, gemini.google.com, copilot.microsoft.com. HubSpot also buckets these natively as AI_REFERRALS in hs_analytics_source; report both numbers.
 
@@ -81,7 +82,7 @@ The watchdog may run multiple times per day. First run of the day creates `repor
 Create `reports/YYYY-MM-DD.md` with frontmatter (`type: watchdog-report`). Sections:
 1. **Verdict**: one paragraph, plain language. Lead with anything alarming, otherwise "steady".
 2. **Daily numbers**: yesterday's views, submissions, contacts vs 7-day average.
-3. **All-year numbers**: window totals since 2026-01-26 (views, submissions, contacts, attributed revenue by channel under the LINEAR model, AI referral count). Same window every day, so the numbers are always comparable.
+3. **All-year numbers**: window totals since 2026-01-26 (views, submissions, contacts, strict deal-origin won revenue for Organic Search / Direct Traffic / Organic Social, assisted revenue under the LINEAR model, and AI referral count). Same window every day, so the numbers are always comparable.
 4. **Alerts fired** (or "none").
 5. **Open issues**: status of each item in `known_issues_open`, note any fixed (remove from baseline) or new (add).
 6. **One suggestion**: a single highest-leverage ranking action for today, concrete and small.
@@ -89,8 +90,8 @@ Create `reports/YYYY-MM-DD.md` with frontmatter (`type: watchdog-report`). Secti
 ## Step 5: Update baseline, dashboard data, and commit
 
 1. Update `baseline.json`: refresh aggregates, append the completed week to `weekly_series` when a week closes, keep `top_pages_30d` current, sync `known_issues_open`.
-2. Update `site-analytics-dashboard/data.json` at the repo root ON EVERY RUN: refresh `generated`, `window.end`, `kpis`, `monthly`, `touchAttribution`, `sources`, `aeo`, `blogs`, `topPages`, and `alerts` from this run's pulls. Leave the `revops` verified section untouched unless a new reconciliation export was provided (directive 2). This file feeds the Netlify dashboard; the push triggers its redeploy.
-3. Commit all changed files to the branch this session designates and push. Keep the commit message `watchdog: daily report YYYY-MM-DD`.
+2. Update `site-analytics-dashboard/data.json` at the repo root ON EVERY RUN: refresh `generated`, `window.end`, `kpis`, `monthly`, `touchAttribution`, `blogs`, `topPages`, and non-revenue alerts from this run's pulls.
+3. Run `./Refresh-Dashboard.ps1 -Publish`. It authoritatively refreshes `channelRevenue`, `sources`, `aeo`, the crawler alert, and the selected-channel KPIs; validates both JSON files; stages only the dashboard, baseline, and today's report; commits with `watchdog: daily report YYYY-MM-DD`; and pushes the designated branch. That push is the Netlify redeploy trigger. A run is not complete until this command succeeds.
 
 ## Step 6: Escalation
 
@@ -101,5 +102,5 @@ If any alert fired, say so clearly at the top of the session summary so it reach
 - Company: Align HCM, HCM implementation and post-go-live support (SmartCare). Key platforms: Workday, UKG, Dayforce, Paylocity, HiBob, ADP.
 - Conversion pages that matter: /contact, /partners/brokers, meeting scheduler pages.
 - Traffic engine: blog buyer's guide series.
-- Live dashboard artifact: "Align HCM Live Site Analytics" at https://claude.ai/code/artifact/d915fe04-6e26-483d-a932-df4fe4562f3a (pulls HubSpot data in real time via connector; no daily update needed).
+- Protected production dashboard: https://align-hcm-site-health-dashboard.netlify.app. It renders the committed `site-analytics-dashboard/data.json`; `Refresh-Dashboard.ps1 -Publish` updates and redeploys it on every completed watchdog run.
 - Initial audit with full issue detail: `reports/2026-07-16.md`.
