@@ -624,7 +624,7 @@ function Get-AttributionHealth {
 
   $checks = @()
   $sourceJs = Get-HubSpotSourceText -Headers $Headers -Path 'Align HCM/js/align-attribution.js'
-  $sourceHealthy = $sourceJs -match 'stopImmediatePropagation' -and $sourceJs -match 'response\.ok' -and $sourceJs -match 'page_not_found'
+  $sourceHealthy = $sourceJs -match 'stopImmediatePropagation' -and $sourceJs -match 'response\.ok' -and $sourceJs -match 'page_not_found' -and $sourceJs -match 'content_engaged' -and $sourceJs -match 'align-next-step-path'
   $checks += [pscustomobject]@{
     check = 'Form reliability and GA4 event layer'
     status = if ($sourceHealthy) { 'pass' } else { 'fail' }
@@ -732,7 +732,7 @@ function Get-AttributionHealth {
     completeForms = @($formRows | Where-Object { $_.attributionComplete }).Count
     propertyCount = $AttributionPropertyNames.Count
     forms = $formRows
-    events = @('cta_clicked', 'guide_gate_opened', 'resource_downloaded', 'form_submitted', 'form_error', 'generate_lead', 'meeting_booking_started', 'page_not_found')
+    events = @('cta_clicked', 'guide_gate_opened', 'resource_downloaded', 'form_submitted', 'form_error', 'generate_lead', 'meeting_booking_started', 'content_engaged', 'scroll_depth_50', 'scroll_depth_90', 'page_not_found')
     ga4MeasurementId = 'G-320235048'
     checks = $checks
     indexNow = [pscustomobject]@{ keyLocation = "https://www.alignhcm.com/$key.txt"; lastSubmissionStatus = 202; canonicalUrlsSubmitted = 117 }

@@ -122,7 +122,8 @@ try {
 
   $sourceJs = Get-SourceText -Headers $headers -Path 'Align HCM/js/align-attribution.js'
   Add-Check -List $checks -Name 'Footer form reliability code' -Passed ($sourceJs -match 'stopImmediatePropagation' -and $sourceJs -match 'response\.ok' -and $sourceJs -notmatch '__ALIGN_GUIDE_FORM_ID__') -Detail 'Capture handler requires a successful HTTP response'
-  Add-Check -List $checks -Name 'GA4 event instrumentation' -Passed ($sourceJs -match "page_not_found" -and $sourceJs -match "resource_downloaded" -and $sourceJs -match "generate_lead") -Detail '404, guide, CTA, form, and meeting intent events are installed'
+  Add-Check -List $checks -Name 'GA4 event instrumentation' -Passed ($sourceJs -match "page_not_found" -and $sourceJs -match "resource_downloaded" -and $sourceJs -match "generate_lead" -and $sourceJs -match "content_engaged" -and $sourceJs -match "scroll_depth_90") -Detail '404, guide, CTA, form, meeting intent, reading-time, and scroll-depth events are installed'
+  Add-Check -List $checks -Name 'Second-step engagement paths' -Passed ($sourceJs -match 'align-next-step-path' -and $sourceJs -match 'Keep exploring') -Detail 'Contextual internal next steps are installed on high-exit page types'
 
   $homeResponse = $null; $blogResponse = $null; $representativeResponse = $null
   for ($attempt = 1; $attempt -le $Retries; $attempt++) {
