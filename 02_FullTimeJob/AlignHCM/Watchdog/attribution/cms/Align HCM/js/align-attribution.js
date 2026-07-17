@@ -68,6 +68,7 @@
   var guideTarget = '';
   var lastSuccessByForm = {};
   var observerScheduled = false;
+  var engagementSignals = {};
 
   function clean(value, maxLength) {
     var result = String(value == null ? '' : value).replace(/^\s+|\s+$/g, '');
@@ -280,6 +281,55 @@
     if (typeof window.gtag === 'function') {
       window.gtag('event', name, params);
     }
+  }
+
+  function markEngagement(name, parameters) {
+    if (engagementSignals[name]) return;
+    engagementSignals[name] = true;
+    track(name, parameters || {});
+  }
+
+  function installEngagementSignals() {
+    window.setTimeout(function () {
+      if (!document.hidden) markEngagement('content_engaged', { engagement_seconds: 15 });
+    }, 15000);
+    window.addEventListener('scroll', function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max <= 0) return;
+      var depth = Math.round((window.pageYOffset / max) * 100);
+      if (depth >= 50) markEngagement('scroll_depth_50', { scroll_percent: 50 });
+      if (depth >= 90) markEngagement('scroll_depth_90', { scroll_percent: 90 });
+    }, { passive: true });
+  }
+
+  function addNextStepPath() {
+    if (document.getElementById('align-next-step-path')) return;
+    var path = window.location.pathname.replace(/\/+$/, '') || '/';
+    var links = null;
+    if (/^\/blog\/.+/.test(path)) {
+      links = [
+        ['/services/optimization', 'Optimize your HCM platform'],
+        ['/align-hcm-smartcare', 'Explore SmartCare support'],
+        ['/contact', 'Talk to an HCM expert']
+      ];
+    } else if (path === '/careers') {
+      links = [['/about', 'How Align HCM works'], ['/blog', 'Read our HCM insights'], ['/contact', 'Contact Align HCM']];
+    } else if (path === '/about') {
+      links = [['/services', 'Explore our services'], ['/blog', 'Read our HCM insights'], ['/contact', 'Talk to our team']];
+    } else if (path === '/partners/ukg') {
+      links = [['/services/optimization', 'UKG optimization'], ['/align-hcm-smartcare', 'SmartCare support'], ['/contact', 'Discuss your UKG needs']];
+    }
+    if (!links) return;
+    var section = document.createElement('section');
+    section.id = 'align-next-step-path';
+    section.className = 'align-next-step-path';
+    section.setAttribute('aria-label', 'Recommended next steps');
+    section.innerHTML = '<div class="align-next-step-path__inner"><p class="align-next-step-path__eyebrow">Keep exploring</p><h2>Choose your next step</h2><div class="align-next-step-path__links">' + links.map(function (link, index) {
+      return '<a href="' + link[0] + '" data-align-cta data-align-offer-id="site_exploration" data-align-cta-placement="next_step_path_' + (index + 1) + '" data-align-conversion-type="internal_navigation">' + link[1] + '</a>';
+    }).join('') + '</div></div>';
+    var footer = document.querySelector('footer');
+    if (footer && footer.parentNode) footer.parentNode.insertBefore(section, footer);
+    else document.body.appendChild(section);
   }
 
   window.AlignAttribution = {
@@ -719,6 +769,7 @@
     populateAllFormInstances();
     decorateMeetingLinks();
     repairSandboxPolicyLinks();
+    addNextStepPath();
     var privacyLink = document.querySelector('#acta-form .aprv a');
     if (privacyLink) privacyLink.setAttribute('href', '/disclaimers-policies/');
     var managedForm = document.getElementById('acta-form');
@@ -748,6 +799,7 @@
     new window.MutationObserver(scheduleDomEnhancements).observe(document.documentElement, { childList: true, subtree: true });
   }
   runDomEnhancements();
+  installEngagementSignals();
   window.setTimeout(runDomEnhancements, 1000);
   window.setTimeout(runDomEnhancements, 3000);
 

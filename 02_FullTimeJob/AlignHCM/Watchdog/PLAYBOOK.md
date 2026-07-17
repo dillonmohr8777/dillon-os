@@ -59,7 +59,6 @@ Compare against `baseline.json`:
 | `/404` page views | > 5 in a single day |
 | Weekly views (WoW, completed weeks) | drop > 40% |
 | Form submissions | 0 for 3 consecutive days |
-| Bounce rate on any top-10 page | > 97% |
 | New domain appears in tracked URLs | always flag |
 | Untitled content (no title/url metadata) | always flag |
 | Duplicate titles across live posts | always flag |
@@ -98,8 +97,8 @@ Create `reports/YYYY-MM-DD.md` with frontmatter (`type: watchdog-report`). Secti
 
 ## Step 5: Update baseline, dashboard data, and commit
 
-1. Update `baseline.json`: refresh aggregates, append the completed week to `weekly_series` when a week closes, keep `top_pages_30d` current, sync `known_issues_open`.
-2. Update `site-analytics-dashboard/data.json` at the repo root ON EVERY RUN: refresh `generated`, `window.end`, `kpis`, `monthly`, `touchAttribution`, `blogs`, `topPages`, `attribution`, `siteCoverage`, and non-revenue alerts from this run's pulls.
+1. Update `baseline.json`: refresh aggregates, append the completed week to `weekly_series` when a week closes, and sync `known_issues_open`. Page-level exit diagnostics stay internal and are not published on the overall dashboard.
+2. Update `site-analytics-dashboard/data.json` at the repo root ON EVERY RUN: refresh `generated`, `window.end`, `kpis`, `monthly`, `touchAttribution`, `blogs`, `attribution`, `siteCoverage`, and non-revenue alerts from this run's pulls. Remove `topPages`, page-level exit metrics, and overall bounce-rate fields from the public artifact.
 3. Run `./Refresh-Dashboard.ps1 -Publish`. It authoritatively refreshes `ownedMarketing`, `channelRevenue`, `qualifiedLeads`, `sources`, `aeo`, `siteCoverage`, crawler and attribution alerts, and verified-channel KPIs; validates both JSON files; stages only the dashboard data, baseline, and today's report; commits with `watchdog: daily report YYYY-MM-DD`; pushes the designated branch; and deploys `site-analytics-dashboard` to Netlify site `2c966b0b-ce94-4b2a-8872-8c1e22092b3f`. A run is not complete until the production Netlify deploy returns the expected site identity.
 
 ## Step 6: Escalation

@@ -11,6 +11,7 @@ This folder manages the production attribution fixes without using the HubSpot w
 - A dedicated email-only buyer guide form and soft gate for Align's buyer guide PDFs.
 - Accurate success and error behavior for the custom global footer form.
 - GA4 events for CTA clicks, guide access, downloads, form success, form failure, meeting booking starts, lead generation, and 404 paths.
+- Non-PII 15-second and 50%/90% scroll engagement signals, plus contextual second-step links on high-exit page types.
 - A visible summary and contextual conversion path on every current and future blog post.
 - One H1 per affected buyer guide and a permanent redirect from the duplicate UKG guide.
 - An IndexNow key and sitemap submission.

@@ -889,6 +889,8 @@ try {
   })
 
   $data = Get-Content -Raw -LiteralPath $DataPath -Encoding UTF8 | ConvertFrom-Json
+  $data.PSObject.Properties.Remove('topPages')
+  if ($data.kpis) { $data.kpis.PSObject.Properties.Remove('bounceRate') }
   $data.generated = $end.ToString('o')
   $data.window.start = $WindowStart
   $data.window.end = $end.ToString('yyyy-MM-dd')
@@ -955,6 +957,7 @@ try {
     $_.text -notmatch '^Blog earned roughly' -and
     $_.text -notmatch '^404 page viewed 119' -and
     $_.text -notmatch '^Untitled tracked page' -and
+    $_.text -notmatch '(?i)bounce rate' -and
     $_.text -notmatch '^Duplicate UKG buyer' -and
     $_.text -notmatch '^9 case studies live'
   })

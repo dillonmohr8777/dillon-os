@@ -178,12 +178,6 @@
     <div class="tbl-scroll" id="blogTable"></div>
   </div>
 
-  <div class="card">
-    <h2>Top pages</h2>
-    <p class="desc">Ranked by views in the window. Flags mark watchdog findings.</p>
-    <div class="tbl-scroll" id="pagesTable"></div>
-  </div>
-
   <footer id="foot"></footer>
 </div>
 
@@ -252,8 +246,7 @@
       kpi("Page views",fmt(k.viewsClean),"window, cleaned")+
       kpi("Form submissions",fmt(k.siteSubmissions),"site forms")+
       kpi("Meeting bookings",fmt(k.meetingBookings),"scheduler links")+
-      kpi("New contacts",fmt(k.contacts),"from site")+
-      kpi("Bounce rate",pct(k.bounceRate),"site-wide");
+      kpi("New contacts",fmt(k.contacts),"from site");
 
     var om=d.ownedMarketing;
     if(om&&om.verified){
@@ -390,17 +383,6 @@
     });
     b2.push("</tbody></table>");
     $("blogTable").innerHTML=b2.join("");
-
-    var p2=['<table><thead><tr><th>Page</th><th class="r">Views</th><th class="r">Submissions</th><th class="r">Bounce</th><th class="r">Time/view</th></tr></thead><tbody>'];
-    (d.topPages||[]).forEach(function(r){
-      var badges=(r.flags||[]).map(function(f){
-        var cls=f==="top converter"?"good":(f==="untitled"||f==="404 traffic")?"crit":"warn";
-        return '<span class="badge '+cls+'">'+esc(f)+"</span>"; }).join("");
-      p2.push("<tr><td><span class='t'>"+esc(r.title)+"</span>"+badges+(r.url?"<div class='u'>"+esc(r.url)+"</div>":"")+"</td>"+
-        '<td class="r num">'+fmt(r.views)+'</td><td class="r num">'+fmt(r.submissions)+'</td><td class="r num">'+pct(r.bounce)+'</td><td class="r num">'+secs(r.timeSec)+"</td></tr>");
-    });
-    p2.push("</tbody></table>");
-    $("pagesTable").innerHTML=p2.join("");
 
     $("foot").innerHTML="Source: <b>"+esc(d.source)+"</b> Window always starts <b>Jan 1, 2026</b> and extends to the latest watchdog run. "+
       "Directives: "+(d.directives||[]).map(esc).join(" · ");
