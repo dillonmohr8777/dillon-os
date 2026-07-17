@@ -24,6 +24,9 @@ $AttributionProperties = @(
   [pscustomobject]@{ name = 'align_first_gclid'; label = 'Align first Google click ID'; description = 'First captured Google Ads click ID.' },
   [pscustomobject]@{ name = 'align_first_fbclid'; label = 'Align first Meta click ID'; description = 'First captured Meta click ID.' },
   [pscustomobject]@{ name = 'align_first_msclkid'; label = 'Align first Microsoft click ID'; description = 'First captured Microsoft Ads click ID.' },
+  [pscustomobject]@{ name = 'align_first_li_fat_id'; label = 'Align first LinkedIn click ID'; description = 'First captured LinkedIn first-party click ID.' },
+  [pscustomobject]@{ name = 'align_first_touch_channel'; label = 'Align first touch channel'; description = 'Deterministic first-touch channel classification.' },
+  [pscustomobject]@{ name = 'align_first_social_platform'; label = 'Align first social platform'; description = 'First-touch social platform when identifiable.' },
   [pscustomobject]@{ name = 'align_last_landing_page'; label = 'Align last landing page'; description = 'Most recent session landing page, excluding query parameters.' },
   [pscustomobject]@{ name = 'align_last_referrer'; label = 'Align last referrer'; description = 'Most recent session referrer, excluding query parameters.' },
   [pscustomobject]@{ name = 'align_last_utm_source'; label = 'Align last UTM source'; description = 'Most recent captured UTM source.' },
@@ -34,6 +37,9 @@ $AttributionProperties = @(
   [pscustomobject]@{ name = 'align_last_gclid'; label = 'Align last Google click ID'; description = 'Most recent captured Google Ads click ID.' },
   [pscustomobject]@{ name = 'align_last_fbclid'; label = 'Align last Meta click ID'; description = 'Most recent captured Meta click ID.' },
   [pscustomobject]@{ name = 'align_last_msclkid'; label = 'Align last Microsoft click ID'; description = 'Most recent captured Microsoft Ads click ID.' },
+  [pscustomobject]@{ name = 'align_last_li_fat_id'; label = 'Align last LinkedIn click ID'; description = 'Most recent LinkedIn first-party click ID.' },
+  [pscustomobject]@{ name = 'align_last_touch_channel'; label = 'Align last touch channel'; description = 'Deterministic most recent touch channel classification.' },
+  [pscustomobject]@{ name = 'align_last_social_platform'; label = 'Align last social platform'; description = 'Most recent social platform when identifiable.' },
   [pscustomobject]@{ name = 'align_content_slug'; label = 'Align conversion content slug'; description = 'Content path associated with the conversion.' },
   [pscustomobject]@{ name = 'align_content_topic'; label = 'Align conversion content topic'; description = 'Content title associated with the conversion.' },
   [pscustomobject]@{ name = 'align_offer_id'; label = 'Align conversion offer'; description = 'Offer associated with the conversion.' },
@@ -42,6 +48,22 @@ $AttributionProperties = @(
   [pscustomobject]@{ name = 'align_conversion_type'; label = 'Align conversion type'; description = 'Known conversion type such as contact form or guide download.' },
   [pscustomobject]@{ name = 'align_requested_url'; label = 'Align requested URL'; description = 'Requested path when a conversion follows a 404 visit.' }
 )
+
+$SelfReportedSourceProperty = [pscustomobject]@{
+  name = 'align_self_reported_source'
+  label = 'How did you hear about Align HCM?'
+  description = 'Buyer-reported discovery source. Kept separate from observed first- and last-touch data.'
+  options = @(
+    [pscustomobject]@{ label = 'Google or another search engine'; value = 'Search engine' },
+    [pscustomobject]@{ label = 'LinkedIn'; value = 'LinkedIn' },
+    [pscustomobject]@{ label = 'Another social platform'; value = 'Other social' },
+    [pscustomobject]@{ label = 'Colleague or word of mouth'; value = 'Word of mouth' },
+    [pscustomobject]@{ label = 'Partner or referral'; value = 'Partner or referral' },
+    [pscustomobject]@{ label = 'Event or webinar'; value = 'Event or webinar' },
+    [pscustomobject]@{ label = 'Existing relationship'; value = 'Existing relationship' },
+    [pscustomobject]@{ label = 'Other'; value = 'Other' }
+  )
+}
 
 $CoreFormIds = @(
   '2a7dbc2e-600a-4d2b-9222-bda4cfd8d5bb',
@@ -181,9 +203,13 @@ function Backup-LiveState {
   Write-JsonBackup -Name 'properties\service_interest.json' -Value $service
   Write-JsonBackup -Name 'redirects.json' -Value $Redirects
   foreach ($postId in $BlogPostIds) {
-    $post = Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/cms/v3/blogs/posts/$postId" -Headers $Headers
+    $post = Get-HubSpotJsonOrNull -Uri "$ApiRoot/cms/v3/blogs/posts/$postId" -Headers $Headers
+    if (!$post) {
+      $manifest.blogPosts += [pscustomobject]@{ id = $postId; existed = $false }
+      continue
+    }
     Write-JsonBackup -Name "blog-posts\$postId.json" -Value $post
-    $manifest.blogPosts += [pscustomobject]@{ id = $post.id; slug = $post.slug; state = $post.state }
+    $manifest.blogPosts += [pscustomobject]@{ id = $post.id; slug = $post.slug; state = $post.state; existed = $true }
   }
   Write-JsonBackup -Name 'manifest.json' -Value $manifest
   $service
@@ -266,6 +292,19 @@ function Ensure-AttributionProperties {
     } | Out-Null
     $created += $property.name
   }
+  $currentSelfReported = Get-HubSpotJsonOrNull -Uri "$ApiRoot/crm/v3/properties/contacts/$($SelfReportedSourceProperty.name)" -Headers $Headers
+  if ($currentSelfReported) { $existing += $SelfReportedSourceProperty.name }
+  else {
+    $options = @($SelfReportedSourceProperty.options | ForEach-Object {
+      [pscustomobject]@{ label = $_.label; value = $_.value; displayOrder = -1; hidden = $false }
+    })
+    Invoke-HubSpotJson -Method Post -Uri "$ApiRoot/crm/v3/properties/contacts" -Headers $Headers -Body @{
+      groupName = 'align_attribution'; name = $SelfReportedSourceProperty.name; label = $SelfReportedSourceProperty.label
+      type = 'enumeration'; fieldType = 'select'; description = $SelfReportedSourceProperty.description
+      formField = $true; hidden = $false; options = $options
+    } | Out-Null
+    $created += $SelfReportedSourceProperty.name
+  }
   [pscustomobject]@{ created = $created; existing = $existing }
 }
 
@@ -299,6 +338,16 @@ function New-HiddenFieldGroup {
       required = $false
       hidden = $true
       fieldType = 'single_line_text'
+    })
+  }
+}
+
+function New-SelfReportedSourceFieldGroup {
+  [pscustomobject]@{
+    fields = @([pscustomobject]@{
+      objectTypeId = '0-1'; name = $SelfReportedSourceProperty.name; label = $SelfReportedSourceProperty.label
+      required = $false; hidden = $false; fieldType = 'dropdown'
+      options = @($SelfReportedSourceProperty.options | ForEach-Object { [pscustomobject]@{ label = $_.label; value = $_.value; displayOrder = -1 } })
     })
   }
 }
@@ -373,6 +422,10 @@ function Add-AttributionFieldsToForm {
   foreach ($property in $AttributionProperties) {
     if (!$existingNames.ContainsKey($property.name)) { $groups += New-HiddenFieldGroup -Property $property }
   }
+  $highIntentFormIds = @('99353f9f-a047-4b21-b0ca-ee452f8cf6f6', 'a2f5cad0-6a8b-485d-b57a-0c0b65e86936', 'e733d928-0f1d-4b41-853b-df1e0096f330')
+  if ($Form.id -in $highIntentFormIds -and !$existingNames.ContainsKey($SelfReportedSourceProperty.name)) {
+    $groups += New-SelfReportedSourceFieldGroup
+  }
   Invoke-HubSpotJson -Method Patch -Uri "$ApiRoot/marketing/v3/forms/$($Form.id)" -Headers $Headers -Body @{
     archived = $false
     name = $Form.name
@@ -385,7 +438,11 @@ function Repair-BlogH1s {
   param([hashtable]$Headers)
   $all = @()
   foreach ($postId in $H1RepairPostIds) {
-    $post = Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/cms/v3/blogs/posts/$postId" -Headers $Headers
+    $post = Get-HubSpotJsonOrNull -Uri "$ApiRoot/cms/v3/blogs/posts/$postId" -Headers $Headers
+    if (!$post) {
+      $all += [pscustomobject]@{ id = $postId; slug = ''; bodyH1Before = 0; changed = $false; skipped = 'not_found' }
+      continue
+    }
     $before = [regex]::Matches([string]$post.postBody, '(?i)<h1(?:\s|>)').Count
     $newBody = [regex]::Replace([string]$post.postBody, '(?i)<h1(?=\s|>)', '<h2')
     $newBody = [regex]::Replace($newBody, '(?i)</h1\s*>', '</h2>')
@@ -506,7 +563,7 @@ try {
     [pscustomobject]@{
       mode = 'dry-run'
       portalId = $ExpectedPortalId
-      propertiesPlanned = $AttributionProperties.Count
+      propertiesPlanned = $AttributionProperties.Count + 1
       formsPlanned = $CoreFormIds.Count + 1
       sourceFilesPlanned = $CmsPaths.Count
       blogH1RepairsPlanned = $H1RepairPostIds.Count

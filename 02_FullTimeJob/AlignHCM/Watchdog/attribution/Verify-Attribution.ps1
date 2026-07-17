@@ -13,11 +13,14 @@ $PropertyNames = @(
   'align_first_landing_page', 'align_first_referrer', 'align_first_utm_source', 'align_first_utm_medium',
   'align_first_utm_campaign', 'align_first_utm_content', 'align_first_utm_term', 'align_first_gclid',
   'align_first_fbclid', 'align_first_msclkid', 'align_last_landing_page', 'align_last_referrer',
+  'align_first_li_fat_id', 'align_first_touch_channel', 'align_first_social_platform',
   'align_last_utm_source', 'align_last_utm_medium', 'align_last_utm_campaign', 'align_last_utm_content',
-  'align_last_utm_term', 'align_last_gclid', 'align_last_fbclid', 'align_last_msclkid', 'align_content_slug',
+  'align_last_utm_term', 'align_last_gclid', 'align_last_fbclid', 'align_last_msclkid',
+  'align_last_li_fat_id', 'align_last_touch_channel', 'align_last_social_platform', 'align_content_slug',
   'align_content_topic', 'align_offer_id', 'align_cta_placement', 'align_conversion_page',
   'align_conversion_type', 'align_requested_url'
 )
+$SelfReportedSourceName = 'align_self_reported_source'
 $RequiredFormIds = @(
   '2a7dbc2e-600a-4d2b-9222-bda4cfd8d5bb',
   '99353f9f-a047-4b21-b0ca-ee452f8cf6f6',
@@ -95,8 +98,9 @@ try {
 
   $allProperties = Invoke-RestMethod -Headers $headers -Uri "$ApiRoot/crm/v3/properties/contacts?archived=false"
   $livePropertyNames = @($allProperties.results.name)
-  $missingProperties = @($PropertyNames | Where-Object { $_ -notin $livePropertyNames })
-  Add-Check -List $checks -Name 'Attribution contact properties' -Passed ($missingProperties.Count -eq 0) -Detail $(if ($missingProperties.Count) { 'Missing: ' + ($missingProperties -join ', ') } else { "$($PropertyNames.Count) present" })
+  $allRequiredProperties = @($PropertyNames) + $SelfReportedSourceName
+  $missingProperties = @($allRequiredProperties | Where-Object { $_ -notin $livePropertyNames })
+  Add-Check -List $checks -Name 'Attribution contact properties' -Passed ($missingProperties.Count -eq 0) -Detail $(if ($missingProperties.Count) { 'Missing: ' + ($missingProperties -join ', ') } else { "$($allRequiredProperties.Count) present" })
 
   $forms = Get-AllForms -Headers $headers
   $guideForm = @($forms | Where-Object { $_.name -eq 'Align Buyer Guide Download' }) | Select-Object -First 1
@@ -106,6 +110,11 @@ try {
     $fieldNames = @($form.fieldGroups.fields.name)
     $missing = @($PropertyNames | Where-Object { $_ -notin $fieldNames })
     Add-Check -List $checks -Name "Hidden attribution fields: $($form.name)" -Passed ($missing.Count -eq 0) -Detail $(if ($missing.Count) { "$($missing.Count) missing" } else { "$($PropertyNames.Count) present" })
+  }
+  $highIntentIds = @('99353f9f-a047-4b21-b0ca-ee452f8cf6f6', 'a2f5cad0-6a8b-485d-b57a-0c0b65e86936', 'e733d928-0f1d-4b41-853b-df1e0096f330')
+  foreach ($form in @($formsToCheck | Where-Object { $_.id -in $highIntentIds })) {
+    $sourceField = @($form.fieldGroups.fields | Where-Object { $_.name -eq $SelfReportedSourceName }) | Select-Object -First 1
+    Add-Check -List $checks -Name "Self-reported source: $($form.name)" -Passed ([bool]$sourceField -and !$sourceField.hidden -and !$sourceField.required) -Detail 'Visible and optional on high-intent form'
   }
 
   $service = Invoke-RestMethod -Headers $headers -Uri "$ApiRoot/crm/v3/properties/contacts/service_interest"

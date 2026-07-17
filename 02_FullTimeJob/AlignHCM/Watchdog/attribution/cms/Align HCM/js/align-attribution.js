@@ -27,6 +27,9 @@
     'align_first_gclid',
     'align_first_fbclid',
     'align_first_msclkid',
+    'align_first_li_fat_id',
+    'align_first_touch_channel',
+    'align_first_social_platform',
     'align_last_landing_page',
     'align_last_referrer',
     'align_last_utm_source',
@@ -37,6 +40,9 @@
     'align_last_gclid',
     'align_last_fbclid',
     'align_last_msclkid',
+    'align_last_li_fat_id',
+    'align_last_touch_channel',
+    'align_last_social_platform',
     'align_content_slug',
     'align_content_topic',
     'align_offer_id',
@@ -110,7 +116,7 @@
   }
 
   function captureTouch() {
-    return {
+    var touch = {
       landing_page: pageUrl(),
       referrer: safeReferrer(document.referrer),
       utm_source: queryValue('utm_source'),
@@ -120,14 +126,40 @@
       utm_term: queryValue('utm_term'),
       gclid: queryValue('gclid'),
       fbclid: queryValue('fbclid'),
-      msclkid: queryValue('msclkid')
+      msclkid: queryValue('msclkid'),
+      li_fat_id: queryValue('li_fat_id')
     };
+    touch.social_platform = socialPlatform(touch);
+    touch.channel = classifyChannel(touch);
+    return touch;
+  }
+
+  function socialPlatform(touch) {
+    var signal = [touch.utm_source, touch.referrer].join(' ').toLowerCase();
+    if (/linkedin|lnkd\.in/.test(signal)) return 'LinkedIn';
+    if (/facebook|instagram|fb\.com/.test(signal)) return 'Meta';
+    if (/youtube|youtu\.be/.test(signal)) return 'YouTube';
+    if (/twitter|x\.com/.test(signal)) return 'X';
+    return '';
+  }
+
+  function classifyChannel(touch) {
+    var source = (touch.utm_source || '').toLowerCase();
+    var medium = (touch.utm_medium || '').toLowerCase();
+    var referrer = (touch.referrer || '').toLowerCase();
+    if (touch.gclid || /cpc|ppc|paid_search/.test(medium)) return 'Paid Search';
+    if (touch.fbclid || touch.li_fat_id || ((/paid_social|social_paid|cpc/.test(medium)) && /linkedin|facebook|instagram/.test(source))) return 'Paid Social';
+    if (/organic_social|social|social_media/.test(medium) || socialPlatform(touch)) return socialPlatform(touch) === 'LinkedIn' ? 'Organic Social / LinkedIn' : 'Organic Social';
+    if (/google|bing|yahoo|duckduckgo|msn\./.test(referrer) || /organic_search|organic/.test(medium)) return 'Organic Search';
+    if (/email/.test(medium)) return 'Email';
+    if (/referral/.test(medium) || (referrer && referrer.indexOf(window.location.hostname) === -1)) return 'Referral';
+    return 'Direct / Brand Demand';
   }
 
   function hasCampaignSignal(touch) {
     return !!(
       touch.utm_source || touch.utm_medium || touch.utm_campaign || touch.utm_content ||
-      touch.utm_term || touch.gclid || touch.fbclid || touch.msclkid
+      touch.utm_term || touch.gclid || touch.fbclid || touch.msclkid || touch.li_fat_id
     );
   }
 
@@ -193,6 +225,9 @@
       align_first_gclid: clean(firstTouch && firstTouch.gclid, 255),
       align_first_fbclid: clean(firstTouch && firstTouch.fbclid, 255),
       align_first_msclkid: clean(firstTouch && firstTouch.msclkid, 255),
+      align_first_li_fat_id: clean(firstTouch && firstTouch.li_fat_id, 255),
+      align_first_touch_channel: clean(firstTouch && firstTouch.channel, 255),
+      align_first_social_platform: clean(firstTouch && firstTouch.social_platform, 255),
       align_last_landing_page: clean(lastTouch && lastTouch.landing_page, 500),
       align_last_referrer: clean(lastTouch && lastTouch.referrer, 500),
       align_last_utm_source: clean(lastTouch && lastTouch.utm_source, 255),
@@ -203,6 +238,9 @@
       align_last_gclid: clean(lastTouch && lastTouch.gclid, 255),
       align_last_fbclid: clean(lastTouch && lastTouch.fbclid, 255),
       align_last_msclkid: clean(lastTouch && lastTouch.msclkid, 255),
+      align_last_li_fat_id: clean(lastTouch && lastTouch.li_fat_id, 255),
+      align_last_touch_channel: clean(lastTouch && lastTouch.channel, 255),
+      align_last_social_platform: clean(lastTouch && lastTouch.social_platform, 255),
       align_content_slug: contentSlug(),
       align_content_topic: contentTopic(),
       align_offer_id: currentConversion.offer_id || defaults.offer_id,
@@ -247,7 +285,7 @@
   window.AlignAttribution = {
     getContext: getContext,
     track: track,
-    version: '2026-07-16'
+    version: '2026-07-17'
   };
 
   function formName(formId) {
@@ -265,7 +303,9 @@
       form_source: source,
       offer_id: currentConversion.offer_id || defaults.offer_id,
       cta_placement: currentConversion.cta_placement || defaults.cta_placement,
-      conversion_type: currentConversion.conversion_type || defaults.conversion_type
+      conversion_type: currentConversion.conversion_type || defaults.conversion_type,
+      first_touch_channel: clean(firstTouch && firstTouch.channel, 255),
+      last_touch_channel: clean(lastTouch && lastTouch.channel, 255)
     });
     track('generate_lead', {
       form_id: formId,
@@ -591,6 +631,7 @@
       align_cta_placement: ctaPlacement,
       align_conversion_type: 'contact_form'
     }));
+    if (values.align_self_reported_source) fields.push({ objectTypeId: '0-1', name: 'align_self_reported_source', value: values.align_self_reported_source });
     var payload = {
       fields: fields,
       context: { hutk: hubspotCookie(), pageUri: pageUrl(), pageName: document.title },
@@ -680,6 +721,21 @@
     repairSandboxPolicyLinks();
     var privacyLink = document.querySelector('#acta-form .aprv a');
     if (privacyLink) privacyLink.setAttribute('href', '/disclaimers-policies/');
+    var managedForm = document.getElementById('acta-form');
+    if (managedForm && !managedForm.querySelector('[name="align_self_reported_source"]')) {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'aff';
+      wrapper.innerHTML = '<label for="align-self-reported-source">How did you hear about Align HCM? <span>(optional)</span></label>' +
+        '<select id="align-self-reported-source" name="align_self_reported_source"><option value="">Select one</option><option value="Search engine">Google or another search engine</option><option value="LinkedIn">LinkedIn</option><option value="Other social">Another social platform</option><option value="Word of mouth">Colleague or word of mouth</option><option value="Partner or referral">Partner or referral</option><option value="Event or webinar">Event or webinar</option><option value="Existing relationship">Existing relationship</option><option value="Other">Other</option></select>';
+      var messageField = managedForm.querySelector('[name="message"]');
+      var messageWrapper = closestElement(messageField, '.aff');
+      if (messageWrapper && messageWrapper.parentNode) messageWrapper.parentNode.insertBefore(wrapper, messageWrapper);
+      else {
+        var submitButton = managedForm.querySelector('.asbtn, button[type="submit"]');
+        if (submitButton && submitButton.parentNode) submitButton.parentNode.insertBefore(wrapper, submitButton);
+        else managedForm.appendChild(wrapper);
+      }
+    }
   }
 
   function scheduleDomEnhancements() {

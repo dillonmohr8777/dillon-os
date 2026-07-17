@@ -5,6 +5,8 @@ This folder manages the production attribution fixes without using the HubSpot w
 ## What it installs
 
 - First-touch and last-touch UTM, referrer, click ID, content, offer, CTA placement, and conversion properties on HubSpot contacts.
+- Deterministic first/last channel and social-platform fields, including LinkedIn `li_fat_id` capture.
+- An optional buyer-reported discovery source on high-intent forms so dark social is not forced into Direct.
 - Hidden attribution fields on the Contact, Footer, Footer CTA, Blog Subscribe, and buyer guide forms.
 - A dedicated email-only buyer guide form and soft gate for Align's buyer guide PDFs.
 - Accurate success and error behavior for the custom global footer form.
@@ -38,3 +40,15 @@ Verify the live deployment:
 Every applied run writes a rollback snapshot outside the repository under `%LOCALAPPDATA%\Codex\AlignHCMBackups`. The installer is idempotent and validates every CMS source file before publishing it.
 
 HubSpot custom event definitions require private app scopes that are not currently granted. Known conversions still populate HubSpot through forms and contact properties. Anonymous behavioral events go to the existing GA4 property.
+
+## LinkedIn organic publishing rule
+
+Every Align HCM URL placed in an organic LinkedIn post must use `utm_source=linkedin`, `utm_medium=organic_social`, a stable initiative name in `utm_campaign`, and a unique post or asset ID in `utm_content`.
+
+Generate the URL instead of typing it by hand:
+
+```powershell
+.\New-LinkedInOrganicUrl.ps1 -Destination 'https://www.alignhcm.com/blog/example' -Campaign '2026 HCM Buyers Guides' -Content 'post-2026-07-17-carousel-01'
+```
+
+Never relabel LinkedIn as Direct, Organic Search, or Referral. The CRM preserves observed first touch, observed last touch, and buyer-reported source as separate evidence.

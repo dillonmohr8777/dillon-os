@@ -98,6 +98,14 @@
   <ul class="alerts" id="alerts"></ul>
   <div class="kpis" id="kpis"></div>
 
+  <div class="card" id="ownedCard" style="display:none">
+    <h2>Organic, direct, and social opportunity path<span class="vbadge">LIVE · HUBSPOT</span></h2>
+    <p class="desc" id="ownedDesc"></p>
+    <div class="kpis" id="ownedKpis"></div>
+    <div class="tbl-scroll" id="ownedTable"></div>
+    <p class="sharenote" id="ownedPrivacy" style="margin-top:10px"></p>
+  </div>
+
   <div class="card" id="qualifiedCard" style="display:none">
     <h2>Qualified inbound leads and pipeline<span class="vbadge">LIVE / HUBSPOT</span></h2>
     <p class="desc" id="qualifiedDesc"></p>
@@ -246,6 +254,26 @@
       kpi("Meeting bookings",fmt(k.meetingBookings),"scheduler links")+
       kpi("New contacts",fmt(k.contacts),"from site")+
       kpi("Bounce rate",pct(k.bounceRate),"site-wide");
+
+    var om=d.ownedMarketing;
+    if(om&&om.verified){
+      $("ownedCard").style.display="";
+      $("ownedDesc").textContent=om.source+" · "+om.period+". "+om.methodology;
+      $("ownedKpis").innerHTML=
+        kpi("Total opportunity",usd(om.totalValue),fmt(om.opportunities)+" associated deal(s)",true)+
+        kpi("Open pipeline",usd(om.openPipeline),fmt(om.open)+" open")+
+        kpi("Won revenue",usd(om.wonRevenue),fmt(om.won)+" won")+
+        kpi("Closed lost",usd(om.lostValue),fmt(om.lost)+" lost");
+      var ot=["<table><thead><tr><th>Company / deal</th><th>Channel</th><th>Path evidence</th><th>Outcome</th><th class='r'>Value</th></tr></thead><tbody>"];
+      (om.rows||[]).forEach(function(r){
+        var name=esc(r.company||r.dealName||"Unnamed");
+        if(r.dealUrl) name='<a href="'+esc(r.dealUrl)+'" target="_blank" rel="noopener">'+name+'</a>';
+        var evidence=[r.firstTouchChannel,r.lastTouchChannel,r.selfReportedSource,r.attributionEvidence].filter(Boolean).join(" · ");
+        if(r.sourceConflict) evidence+=" · Conflict/assist: "+r.sourceConflict;
+        ot.push("<tr><td><span class='t'>"+name+"</span><br><span class='muted'>"+esc(r.dealName||"")+"</span></td><td>"+esc(r.ownedChannel)+"<br><span class='muted'>"+esc(r.attributionConfidence+" confidence")+"</span></td><td>"+esc(evidence||r.source)+"</td><td>"+esc(r.outcome)+"<br><span class='muted'>"+esc(r.stage||"")+"</span></td><td class='r num'>"+usd(r.amount)+"</td></tr>");
+      });
+      ot.push("</tbody></table>"); $("ownedTable").innerHTML=ot.join(""); $("ownedPrivacy").textContent=om.privacy||"";
+    }
 
     var q=d.qualifiedLeads;
     if(q){

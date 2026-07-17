@@ -19,8 +19,10 @@ $AttributionPropertyNames = @(
   'align_first_landing_page', 'align_first_referrer', 'align_first_utm_source', 'align_first_utm_medium',
   'align_first_utm_campaign', 'align_first_utm_content', 'align_first_utm_term', 'align_first_gclid',
   'align_first_fbclid', 'align_first_msclkid', 'align_last_landing_page', 'align_last_referrer',
+  'align_first_li_fat_id', 'align_first_touch_channel', 'align_first_social_platform',
   'align_last_utm_source', 'align_last_utm_medium', 'align_last_utm_campaign', 'align_last_utm_content',
-  'align_last_utm_term', 'align_last_gclid', 'align_last_fbclid', 'align_last_msclkid', 'align_content_slug',
+  'align_last_utm_term', 'align_last_gclid', 'align_last_fbclid', 'align_last_msclkid',
+  'align_last_li_fat_id', 'align_last_touch_channel', 'align_last_social_platform', 'align_content_slug',
   'align_content_topic', 'align_offer_id', 'align_cta_placement', 'align_conversion_page',
   'align_conversion_type', 'align_requested_url'
 )
@@ -124,12 +126,50 @@ function Convert-LeadText {
   if ([string]::IsNullOrWhiteSpace($Value)) { return '' }
   $mojibakeMarkers = @([char]0x00C2, [char]0x00C3, [char]0x00E2)
   if ($mojibakeMarkers | Where-Object { $Value.IndexOf($_) -ge 0 }) {
-    try { $Value = [Text.Encoding]::UTF8.GetString([Text.Encoding]::GetEncoding(1252).GetBytes($Value)) }
+    try {
+      for ($attempt = 0; $attempt -lt 3; $attempt++) {
+        $decoded = [Text.Encoding]::UTF8.GetString([Text.Encoding]::GetEncoding(1252).GetBytes($Value))
+        if ($decoded -eq $Value) { break }
+        $Value = $decoded
+        if (!($mojibakeMarkers | Where-Object { $Value.IndexOf($_) -ge 0 })) { break }
+      }
+    }
     catch { }
   }
+  $badApostrophe = [string]([char]0x00E2) + [char]0x20AC + [char]0x2122
+  $Value = $Value.Replace($badApostrophe, [string][char]0x2019)
   if ($Value -notmatch 'â|Ã') { return $Value }
   try { [Text.Encoding]::UTF8.GetString([Text.Encoding]::GetEncoding(1252).GetBytes($Value)) }
   catch { $Value }
+}
+
+function Resolve-OwnedMarketingChannel {
+  param($Properties, [object[]]$Deals)
+  $first = "$($Properties.align_first_touch_channel)"
+  $last = "$($Properties.align_last_touch_channel)"
+  $self = "$($Properties.align_self_reported_source)"
+  $native = "$($Properties.hs_analytics_source)"
+  $referrer = "$($Properties.hs_analytics_first_referrer) $($Properties.align_first_referrer)"
+  $channel = ''
+  $confidence = 'medium'
+  $evidence = @()
+  if ($first -match '(?i)Organic Social.*LinkedIn' -or $self -eq 'LinkedIn' -or $referrer -match '(?i)linkedin|lnkd\.in') {
+    $channel = 'Organic Social / LinkedIn'; $evidence += 'LinkedIn observed or buyer-reported'
+    if ($first -match '(?i)LinkedIn' -or $referrer -match '(?i)linkedin|lnkd\.in') { $confidence = 'high' }
+  } elseif ($first -eq 'Organic Search' -or $native -eq 'ORGANIC_SEARCH' -or $referrer -match '(?i)google\.|bing\.|yahoo\.|duckduckgo|msn\.') {
+    $channel = 'Organic Search'; $evidence += 'Search referrer or HubSpot Organic Search'
+    if ($first -eq 'Organic Search' -or $referrer -match '(?i)google\.|bing\.|yahoo\.|duckduckgo|msn\.') { $confidence = 'high' }
+  } elseif ($first -eq 'Direct / Brand Demand' -or $native -eq 'DIRECT_TRAFFIC') {
+    $channel = 'Direct / Brand Demand'; $evidence += 'Direct first touch or HubSpot Direct Traffic'
+  } elseif ($native -eq 'SOCIAL_MEDIA' -or $first -match '(?i)Organic Social') {
+    $channel = 'Organic Social'; $evidence += 'HubSpot Organic Social or observed social touch'
+  }
+  if (!$channel) { return $null }
+  $conflicts = @($Deals | Where-Object { $_.leadSource -match '(?i)Sales Rep|Partner|ERM|Trade Show|Existing Client|Change Request' } | ForEach-Object { $_.leadSource } | Select-Object -Unique)
+  [pscustomobject]@{
+    channel = $channel; confidence = $confidence; firstTouch = $first; lastTouch = $last; selfReported = $self
+    evidence = ($evidence -join '; '); conflict = ($conflicts -join ', ')
+  }
 }
 
 function Get-QualifiedLeadPipeline {
@@ -180,7 +220,7 @@ function Get-QualifiedLeadPipeline {
   foreach ($buyer in $buyers) {
     $contactSearch = Invoke-HubSpotJson -Method Post -Uri "$ApiRoot/crm/v3/objects/contacts/search" -Headers $Headers -Body ([ordered]@{
       filterGroups = @(@{ filters = @(@{ propertyName = 'email'; operator = 'EQ'; value = "$($buyer.email)" }) })
-      properties = @('jobtitle', 'city', 'state', 'country', 'hs_analytics_source')
+      properties = @('jobtitle', 'city', 'state', 'country', 'hs_analytics_source', 'hs_analytics_first_referrer', 'align_first_referrer', 'align_first_touch_channel', 'align_last_touch_channel', 'align_self_reported_source')
       limit = 10
     })
     $contact = @($contactSearch.results) | Select-Object -First 1
@@ -188,7 +228,7 @@ function Get-QualifiedLeadPipeline {
     $dealRows = @()
 
     if ($contact) {
-      $contactDetail = Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/crm/v3/objects/contacts/$($contact.id)?properties=jobtitle,city,state,country,hs_analytics_source&associations=deals" -Headers $Headers
+      $contactDetail = Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/crm/v3/objects/contacts/$($contact.id)?properties=jobtitle,city,state,country,hs_analytics_source,hs_analytics_first_referrer,align_first_referrer,align_first_touch_channel,align_last_touch_channel,align_self_reported_source&associations=deals" -Headers $Headers
       $dealIds = @($contactDetail.associations.deals.results | Where-Object { $_.id } | ForEach-Object { "$($_.id)" } | Select-Object -Unique)
       foreach ($dealId in $dealIds) {
         $deal = Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/crm/v3/objects/deals/${dealId}?properties=dealname,amount,createdate,closedate,dealstage,pipeline,dealtype,lead_source,hs_is_closed_count,hs_is_closed_won,hs_is_closed_lost,hubspot_owner_id" -Headers $Headers
@@ -242,6 +282,7 @@ function Get-QualifiedLeadPipeline {
       }
     }
 
+    $owned = if ($contactDetail) { Resolve-OwnedMarketingChannel -Properties $contactDetail.properties -Deals $dealRows } else { $null }
     $rows += [pscustomobject][ordered]@{
       company = Convert-LeadText "$($buyer.company)"
       score = [int]$buyer.score
@@ -252,6 +293,13 @@ function Get-QualifiedLeadPipeline {
       role = if ($contactDetail) { Convert-LeadText "$($contactDetail.properties.jobtitle)" } else { '' }
       location = $location
       source = if ($contactDetail) { "$($contactDetail.properties.hs_analytics_source)" } else { '' }
+      ownedChannel = if ($owned) { $owned.channel } else { '' }
+      attributionConfidence = if ($owned) { $owned.confidence } else { '' }
+      firstTouchChannel = if ($owned) { $owned.firstTouch } else { '' }
+      lastTouchChannel = if ($owned) { $owned.lastTouch } else { '' }
+      selfReportedSource = if ($owned) { $owned.selfReported } else { '' }
+      attributionEvidence = if ($owned) { $owned.evidence } else { '' }
+      sourceConflict = if ($owned) { $owned.conflict } else { '' }
       platform = (@($platforms | Select-Object -Unique) -join ' / ')
       wanted = Convert-LeadText "$($buyer.signal)"
       outcome = $outcome
@@ -816,6 +864,22 @@ try {
   $siteCoverage = Get-SiteCoverage
   $attribution = Get-AttributionHealth -Headers $headers -StartMilliseconds ([long]$startMs) -AsOf $end -SiteCoverage $siteCoverage
   $qualifiedLeads = Get-QualifiedLeadPipeline -Headers $headers -Start $start -AsOf $end
+  $ownedRows = @($qualifiedLeads.rows | Where-Object { $_.ownedChannel -and $_.outcome -ne 'No deal' })
+  $ownedOpen = @($ownedRows | Where-Object { $_.outcome -eq 'Open' })
+  $ownedWon = @($ownedRows | Where-Object { $_.outcome -eq 'Won' })
+  $ownedLost = @($ownedRows | Where-Object { $_.outcome -eq 'Lost' })
+  $ownedMarketing = [pscustomobject][ordered]@{
+    verified = $true; asOf = $end.ToString('o'); period = "$WindowStart to $($end.ToString('yyyy-MM-dd'))"
+    source = 'Live HubSpot contact journey plus associated deal audit'
+    methodology = 'Observed first-touch, HubSpot original source, referrer, and buyer-reported source are preserved separately. Organic Search, Organic Social, LinkedIn, and Direct/Brand Demand are included; contradictory partner or rep evidence is flagged, never silently erased.'
+    opportunities = $ownedRows.Count
+    totalValue = [long](($ownedRows | Measure-Object -Property amount -Sum).Sum)
+    open = $ownedOpen.Count; openPipeline = [long](($ownedOpen | Measure-Object -Property amount -Sum).Sum)
+    won = $ownedWon.Count; wonRevenue = [long](($ownedWon | Measure-Object -Property amount -Sum).Sum)
+    lost = $ownedLost.Count; lostValue = [long](($ownedLost | Measure-Object -Property amount -Sum).Sum)
+    rows = $ownedRows
+    privacy = $qualifiedLeads.privacy
+  }
 
   $onlineContacts = @($contacts | Where-Object {
     $sourceKey = "$($_.properties.hs_analytics_source)"
@@ -862,6 +926,7 @@ try {
   }
   Set-ObjectProperty -Object $data -Name 'channelRevenue' -Value $channelRevenue
   Set-ObjectProperty -Object $data -Name 'qualifiedLeads' -Value $qualifiedLeads
+  Set-ObjectProperty -Object $data -Name 'ownedMarketing' -Value $ownedMarketing
   Set-ObjectProperty -Object $data -Name 'attribution' -Value $attribution
   Set-ObjectProperty -Object $data -Name 'siteCoverage' -Value $siteCoverage
   $data.PSObject.Properties.Remove('revops')
