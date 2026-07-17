@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-07-17T09:12:31.7570114-04:00",
+    "generated":  "2026-07-17T09:17:08.9944703-04:00",
     "window":  {
                    "start":  "2026-01-01",
                    "end":  "2026-07-17"
@@ -399,7 +399,7 @@
                ],
     "attribution":  {
                         "verified":  true,
-                        "asOf":  "2026-07-17T09:12:31.7570114-04:00",
+                        "asOf":  "2026-07-17T09:17:08.9944703-04:00",
                         "source":  "Live HubSpot form submissions plus terminal production checks",
                         "period":  "2026-01-01 to 2026-07-17",
                         "totalKnownConversions":  104,
@@ -558,7 +558,7 @@
                                      }
                     },
     "siteCoverage":  {
-                         "asOf":  "2026-07-17T09:13:59.0896297-04:00",
+                         "asOf":  "2026-07-17T09:18:24.3649496-04:00",
                          "sitemapUrls":  109,
                          "finalOk":  109,
                          "brokenSitemapUrls":  [
@@ -611,7 +611,7 @@
                      },
     "qualifiedLeads":  {
                            "verified":  true,
-                           "asOf":  "2026-07-17T09:12:31.7570114-04:00",
+                           "asOf":  "2026-07-17T09:17:08.9944703-04:00",
                            "source":  "Qualified inbound buyer audit enriched from live HubSpot contacts and associated deals",
                            "period":  "2026-01-01 to 2026-07-17",
                            "privacy":  "Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard.",

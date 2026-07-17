@@ -108,7 +108,7 @@
                                                 ]
                              },
     "known_issues_open":  [
-                               "hubspot-sitemap-cache-stale-redirects (2 healthy 301s remain in the HubSpot sitemap cache; no private-token sitemap write endpoint)"
+                              "hubspot-sitemap-cache-stale-redirects (2 healthy 301s remain in the HubSpot sitemap cache; no private-token sitemap write endpoint)"
                           ],
     "known_issues_resolved":  [
                                   {
@@ -228,7 +228,7 @@
                                  "Microsoft Copilot":  0
                              },
     "attribution_health_live":  {
-                                    "asOf":  "2026-07-17T09:12:31.7570114-04:00",
+                                    "asOf":  "2026-07-17T09:17:08.9944703-04:00",
                                     "totalKnownConversions":  104,
                                     "trackedForms":  5,
                                     "completeForms":  5,
@@ -237,7 +237,7 @@
                                     "hubspotCustomEventScope":  "not_granted_ga4_fallback_active"
                                 },
     "site_coverage_live":  {
-                               "asOf":  "2026-07-17T09:13:59.0896297-04:00",
+                               "asOf":  "2026-07-17T09:18:24.3649496-04:00",
                                "sitemapUrls":  109,
                                "finalOk":  109,
                                "internalTargets":  159,
@@ -251,7 +251,7 @@
                                "legacyCaseStudyPages":  0
                            },
     "qualified_leads_live":  {
-                                 "asOf":  "2026-07-17T09:12:31.7570114-04:00",
+                                 "asOf":  "2026-07-17T09:17:08.9944703-04:00",
                                  "window":  "2026-01-01 to 2026-07-17",
                                  "total":  22,
                                  "followedUp":  13,
