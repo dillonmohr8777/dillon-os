@@ -174,6 +174,103 @@ function Resolve-OwnedMarketingChannel {
   }
 }
 
+function Get-LinkedInOrganicLeadAttribution {
+  param(
+    [Parameter(Mandatory = $true)][object[]]$Contacts,
+    [Parameter(Mandatory = $true)][DateTimeOffset]$Start,
+    [Parameter(Mandatory = $true)][DateTimeOffset]$AsOf
+  )
+
+  $contentRows = @{}
+  $publisherContacts = @{
+    align_page = @{}
+    maher_profile = @{}
+    unassigned = @{}
+  }
+  $linkedInContactIds = @{}
+
+  foreach ($contact in $Contacts) {
+    $properties = $contact.properties
+    $touches = @{}
+    $firstIsLinkedIn = "$($properties.align_first_utm_source)" -match '(?i)^linkedin$' -and "$($properties.align_first_utm_medium)" -match '(?i)^organic_social$'
+    $lastIsLinkedIn = "$($properties.align_last_utm_source)" -match '(?i)^linkedin$' -and "$($properties.align_last_utm_medium)" -match '(?i)^organic_social$'
+
+    if ($firstIsLinkedIn) {
+      $content = "$($properties.align_first_utm_content)".Trim().ToLowerInvariant()
+      if (!$content) { $content = 'unassigned' }
+      $touches[$content] = [pscustomobject]@{ first = $true; last = $false; campaign = "$($properties.align_first_utm_campaign)" }
+    }
+    if ($lastIsLinkedIn) {
+      $content = "$($properties.align_last_utm_content)".Trim().ToLowerInvariant()
+      if (!$content) { $content = 'unassigned' }
+      if ($touches.ContainsKey($content)) { $touches[$content].last = $true }
+      else { $touches[$content] = [pscustomobject]@{ first = $false; last = $true; campaign = "$($properties.align_last_utm_campaign)" } }
+    }
+    $confirmedMeetingContent = ''
+    $confirmedMeetingIsLinkedIn = "$($properties.engagements_last_meeting_booked_source)" -match '(?i)^linkedin$' -and "$($properties.engagements_last_meeting_booked_medium)" -match '(?i)^organic_social$'
+    if ($confirmedMeetingIsLinkedIn -and "$($properties.engagements_last_meeting_booked_campaign)" -match '(?i)^linkedin_(.+)$') {
+      $confirmedMeetingContent = $Matches[1].ToLowerInvariant()
+      if (!$touches.ContainsKey($confirmedMeetingContent)) {
+        $touches[$confirmedMeetingContent] = [pscustomobject]@{ first = $false; last = $true; campaign = 'confirmed_meeting' }
+      }
+    }
+    if (!$touches.Count) { continue }
+
+    $contactId = "$($contact.id)"
+    $linkedInContactIds[$contactId] = $true
+    $conversionType = "$($properties.align_conversion_type)"
+    foreach ($entry in $touches.GetEnumerator()) {
+      $content = $entry.Key
+      $publisherKey = if ($content -match '^align_page_') { 'align_page' } elseif ($content -match '^maher_profile_') { 'maher_profile' } else { 'unassigned' }
+      $publisherContacts[$publisherKey][$contactId] = $true
+      if (!$contentRows.ContainsKey($content)) {
+        $contentRows[$content] = [pscustomobject][ordered]@{
+          utmContent = $content
+          publisher = if ($publisherKey -eq 'align_page') { 'Align HCM Page' } elseif ($publisherKey -eq 'maher_profile') { 'Maher profile' } else { 'Unassigned LinkedIn source' }
+          campaign = $entry.Value.campaign
+          potentialLeads = 0
+          firstTouchLeads = 0
+          lastTouchLeads = 0
+          contactForms = 0
+          guideDownloads = 0
+          meetingStarts = 0
+          confirmedMeetings = 0
+        }
+      }
+      $row = $contentRows[$content]
+      $row.potentialLeads++
+      if ($entry.Value.first) { $row.firstTouchLeads++ }
+      if ($entry.Value.last) { $row.lastTouchLeads++ }
+      if ($conversionType -eq 'contact_form') { $row.contactForms++ }
+      elseif ($conversionType -eq 'guide_download') { $row.guideDownloads++ }
+      elseif ($conversionType -eq 'meeting_booking') { $row.meetingStarts++ }
+      if ($confirmedMeetingContent -and $content -eq $confirmedMeetingContent -and $properties.engagements_last_meeting_booked) { $row.confirmedMeetings++ }
+    }
+  }
+
+  $rows = @($contentRows.Values | Sort-Object @{ Expression = 'potentialLeads'; Descending = $true }, utmContent)
+  $publishers = @(
+    [pscustomobject][ordered]@{ key = 'align_page'; publisher = 'Align HCM Page'; potentialLeads = $publisherContacts.align_page.Count },
+    [pscustomobject][ordered]@{ key = 'maher_profile'; publisher = 'Maher profile'; potentialLeads = $publisherContacts.maher_profile.Count },
+    [pscustomobject][ordered]@{ key = 'unassigned'; publisher = 'Unassigned LinkedIn source'; potentialLeads = $publisherContacts.unassigned.Count }
+  )
+  [pscustomobject][ordered]@{
+    verified = $true
+    asOf = $AsOf.ToString('o')
+    period = "$($Start.ToString('yyyy-MM-dd')) to $($AsOf.ToString('yyyy-MM-dd'))"
+    source = 'Live HubSpot first-touch and last-touch contact attribution'
+    methodology = 'Unique organic LinkedIn utm_content values separate the Align HCM Page from Maher profile posts. Potential leads are unique HubSpot contacts with a captured LinkedIn organic first or last touch; conversion intent is grouped without publishing personal data.'
+    potentialLeads = $linkedInContactIds.Count
+    contactForms = [int](($rows | Measure-Object -Property contactForms -Sum).Sum)
+    guideDownloads = [int](($rows | Measure-Object -Property guideDownloads -Sum).Sum)
+    meetingStarts = [int](($rows | Measure-Object -Property meetingStarts -Sum).Sum)
+    confirmedMeetings = [int](($rows | Measure-Object -Property confirmedMeetings -Sum).Sum)
+    byPublisher = $publishers
+    byContent = $rows
+    privacy = 'Aggregate counts only. Names, emails, phone numbers, contact IDs, and submitted values are excluded.'
+  }
+}
+
 function Get-QualifiedLeadPipeline {
   param(
     [Parameter(Mandatory = $true)][hashtable]$Headers,
@@ -764,7 +861,12 @@ try {
 
   $contacts = Invoke-HubSpotSearch -ObjectType 'contacts' -Headers $headers -Properties @(
     'createdate', 'hs_analytics_source', 'hs_analytics_source_data_1',
-    'hs_analytics_source_data_2', 'hs_analytics_first_referrer', 'lifecyclestage'
+    'hs_analytics_source_data_2', 'hs_analytics_first_referrer', 'lifecyclestage',
+    'align_first_utm_source', 'align_first_utm_medium', 'align_first_utm_campaign', 'align_first_utm_content',
+    'align_last_utm_source', 'align_last_utm_medium', 'align_last_utm_campaign', 'align_last_utm_content',
+    'align_conversion_type', 'align_conversion_page', 'align_offer_id', 'align_cta_placement',
+    'engagements_last_meeting_booked', 'engagements_last_meeting_booked_source',
+    'engagements_last_meeting_booked_medium', 'engagements_last_meeting_booked_campaign'
   ) -Filters @(
     @{ propertyName = 'createdate'; operator = 'GTE'; value = $startMs },
     @{ propertyName = 'createdate'; operator = 'LTE'; value = $endMs }
@@ -866,6 +968,7 @@ try {
   $siteCoverage = Get-SiteCoverage
   $attribution = Get-AttributionHealth -Headers $headers -StartMilliseconds ([long]$startMs) -AsOf $end -SiteCoverage $siteCoverage
   $qualifiedLeads = Get-QualifiedLeadPipeline -Headers $headers -Start $start -AsOf $end
+  $linkedinOrganic = Get-LinkedInOrganicLeadAttribution -Contacts $contacts -Start $start -AsOf $end
   $ownedRows = @($qualifiedLeads.rows | Where-Object { $_.ownedChannel -and $_.outcome -ne 'No deal' })
   $ownedOpen = @($ownedRows | Where-Object { $_.outcome -eq 'Open' })
   $ownedWon = @($ownedRows | Where-Object { $_.outcome -eq 'Won' })
@@ -931,6 +1034,7 @@ try {
   Set-ObjectProperty -Object $data -Name 'channelRevenue' -Value $channelRevenue
   Set-ObjectProperty -Object $data -Name 'qualifiedLeads' -Value $qualifiedLeads
   Set-ObjectProperty -Object $data -Name 'ownedMarketing' -Value $ownedMarketing
+  Set-ObjectProperty -Object $data -Name 'linkedinOrganic' -Value $linkedinOrganic
   Set-ObjectProperty -Object $data -Name 'attribution' -Value $attribution
   Set-ObjectProperty -Object $data -Name 'siteCoverage' -Value $siteCoverage
   $data.PSObject.Properties.Remove('revops')

@@ -106,6 +106,14 @@
     <p class="sharenote" id="ownedPrivacy" style="margin-top:10px"></p>
   </div>
 
+  <div class="card" id="linkedinCard" style="display:none">
+    <h2>LinkedIn organic lead attribution<span class="vbadge">LIVE / HUBSPOT</span></h2>
+    <p class="desc" id="linkedinDesc"></p>
+    <div class="kpis" id="linkedinKpis"></div>
+    <div class="tbl-scroll" id="linkedinTable"></div>
+    <p class="sharenote" id="linkedinPrivacy" style="margin-top:10px"></p>
+  </div>
+
   <div class="card" id="qualifiedCard" style="display:none">
     <h2>Qualified inbound leads and pipeline<span class="vbadge">LIVE / HUBSPOT</span></h2>
     <p class="desc" id="qualifiedDesc"></p>
@@ -266,6 +274,30 @@
         ot.push("<tr><td><span class='t'>"+name+"</span><br><span class='muted'>"+esc(r.dealName||"")+"</span></td><td>"+esc(r.ownedChannel)+"<br><span class='muted'>"+esc(r.attributionConfidence+" confidence")+"</span></td><td>"+esc(evidence||r.source)+"</td><td>"+esc(r.outcome)+"<br><span class='muted'>"+esc(r.stage||"")+"</span></td><td class='r num'>"+usd(r.amount)+"</td></tr>");
       });
       ot.push("</tbody></table>"); $("ownedTable").innerHTML=ot.join(""); $("ownedPrivacy").textContent=om.privacy||"";
+    }
+
+    var li=d.linkedinOrganic;
+    if(li&&li.verified){
+      $("linkedinCard").style.display="";
+      $("linkedinDesc").textContent=li.source+" / "+li.period+". "+li.methodology;
+      function liPublisher(key){ return (li.byPublisher||[]).find(function(x){return x.key===key})||{}; }
+      $("linkedinKpis").innerHTML=
+        kpi("Potential leads",fmt(li.potentialLeads),"unique LinkedIn-attributed contacts",true)+
+        kpi("Align HCM Page",fmt(liPublisher("align_page").potentialLeads||0),"unique contacts")+
+        kpi("Maher profile",fmt(liPublisher("maher_profile").potentialLeads||0),"unique contacts")+
+        kpi("Contact forms",fmt(li.contactForms||0),"attributed intent")+
+        kpi("Guide downloads",fmt(li.guideDownloads||0),"attributed intent")+
+        kpi("Meeting starts",fmt(li.meetingStarts||0),"scheduler clicks")+
+        kpi("Confirmed meetings",fmt(li.confirmedMeetings||0),"HubSpot meetings tool");
+      var lt=['<table><thead><tr><th>Unique post ID</th><th>Publisher</th><th>Campaign</th><th class="r">Potential leads</th><th class="r">First touch</th><th class="r">Last touch</th><th>Conversion intent</th></tr></thead><tbody>'];
+      (li.byContent||[]).forEach(function(r){
+        var intent="Forms "+fmt(r.contactForms)+" / Guides "+fmt(r.guideDownloads)+" / Meeting starts "+fmt(r.meetingStarts)+" / Confirmed "+fmt(r.confirmedMeetings);
+        lt.push('<tr><td><span class="t">'+esc(r.utmContent)+'</span></td><td>'+esc(r.publisher)+'</td><td>'+esc(r.campaign||"")+'</td><td class="r num">'+fmt(r.potentialLeads)+'</td><td class="r num">'+fmt(r.firstTouchLeads)+'</td><td class="r num">'+fmt(r.lastTouchLeads)+'</td><td>'+esc(intent)+'</td></tr>');
+      });
+      if(!(li.byContent||[]).length) lt.push('<tr><td colspan="7"><div class="empty">No tagged LinkedIn leads recorded yet. Use the URL generator on every Align Page and Maher profile link.</div></td></tr>');
+      lt.push('</tbody></table>');
+      $("linkedinTable").innerHTML=lt.join("");
+      $("linkedinPrivacy").textContent=li.privacy||"";
     }
 
     var q=d.qualifiedLeads;

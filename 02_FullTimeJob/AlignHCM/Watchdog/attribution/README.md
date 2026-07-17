@@ -44,12 +44,14 @@ HubSpot custom event definitions require private app scopes that are not current
 
 ## LinkedIn organic publishing rule
 
-Every Align HCM URL placed in an organic LinkedIn post must use `utm_source=linkedin`, `utm_medium=organic_social`, a stable initiative name in `utm_campaign`, and a unique post or asset ID in `utm_content`.
+Every Align HCM URL placed in an organic LinkedIn post must use `utm_source=linkedin`, `utm_medium=organic_social`, a stable initiative name in `utm_campaign`, and a unique post or asset ID in `utm_content`. The URL generator prefixes `utm_content` with `align_page_` or `maher_profile_` so Page-generated leads and Maher-generated leads remain separate all the way through HubSpot.
 
 Generate the URL instead of typing it by hand:
 
 ```powershell
-.\New-LinkedInOrganicUrl.ps1 -Destination 'https://www.alignhcm.com/blog/example' -Campaign '2026 HCM Buyers Guides' -Content 'post-2026-07-17-carousel-01'
+.\New-LinkedInOrganicUrl.ps1 -Destination 'https://www.alignhcm.com/blog/example' -Campaign '2026 HCM Buyers Guides' -Publisher AlignPage -Content 'post-2026-07-17-carousel-01'
+
+.\New-LinkedInOrganicUrl.ps1 -Destination 'https://www.alignhcm.com/blog/example' -Campaign '2026 HCM Buyers Guides' -Publisher MaherProfile -Content 'post-2026-07-17-video-01'
 ```
 
-Never relabel LinkedIn as Direct, Organic Search, or Referral. The CRM preserves observed first touch, observed last touch, and buyer-reported source as separate evidence.
+Never relabel LinkedIn as Direct, Organic Search, or Referral. The CRM preserves observed first touch, observed last touch, and buyer-reported source as separate evidence. Meeting links inherit the active LinkedIn touch and encode the unique post ID into HubSpot's native meeting campaign field so a confirmed booking can still be assigned to the originating Align Page or Maher post. The dashboard groups potential leads, contact forms, buyer-guide downloads, meeting starts, and confirmed meetings by the unique `utm_content`; no personal contact data is published.

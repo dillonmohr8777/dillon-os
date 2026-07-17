@@ -2,6 +2,7 @@
 param(
   [Parameter(Mandatory = $true)][uri]$Destination,
   [Parameter(Mandatory = $true)][string]$Campaign,
+  [Parameter(Mandatory = $true)][ValidateSet('AlignPage', 'MaherProfile')][string]$Publisher,
   [Parameter(Mandatory = $true)][string]$Content,
   [string]$Term
 )
@@ -15,7 +16,13 @@ function ConvertTo-Slug([string]$Value) {
 }
 
 $campaignSlug = ConvertTo-Slug $Campaign
-$contentSlug = ConvertTo-Slug $Content
+$publisherSlug = if ($Publisher -eq 'AlignPage') { 'align_page' } else { 'maher_profile' }
+$rawContentSlug = ConvertTo-Slug $Content
+$contentSlug = if ($rawContentSlug -match "^$([regex]::Escape($publisherSlug))_") {
+  $rawContentSlug
+} else {
+  "${publisherSlug}_${rawContentSlug}"
+}
 if (!$campaignSlug -or !$contentSlug) { throw 'Campaign and Content must contain letters or numbers.' }
 
 $builder = [UriBuilder]$Destination

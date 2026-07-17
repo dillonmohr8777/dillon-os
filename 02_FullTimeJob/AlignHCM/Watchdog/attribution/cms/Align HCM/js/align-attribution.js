@@ -463,11 +463,19 @@
     if (!isMeetingLink(anchor)) return;
     try {
       var url = new window.URL(anchor.href, window.location.href);
-      if (!url.searchParams.get('utm_source')) url.searchParams.set('utm_source', 'alignhcm.com');
-      if (!url.searchParams.get('utm_medium')) url.searchParams.set('utm_medium', 'website');
-      if (!url.searchParams.get('utm_campaign')) url.searchParams.set('utm_campaign', 'meeting_booking');
+      var meetingTouch = lastTouch && hasCampaignSignal(lastTouch) ? lastTouch : firstTouch;
+      var meetingSource = meetingTouch && meetingTouch.utm_source ? meetingTouch.utm_source : 'alignhcm.com';
+      var meetingMedium = meetingTouch && meetingTouch.utm_medium ? meetingTouch.utm_medium : 'website';
+      var meetingCampaign = meetingTouch && meetingTouch.utm_campaign ? meetingTouch.utm_campaign : 'meeting_booking';
+      var meetingContent = meetingTouch && meetingTouch.utm_content ? meetingTouch.utm_content : '';
+      if (/^linkedin$/i.test(meetingSource) && /^organic_social$/i.test(meetingMedium) && meetingContent) {
+        meetingCampaign = 'linkedin_' + meetingContent;
+      }
+      if (!url.searchParams.get('utm_source')) url.searchParams.set('utm_source', meetingSource);
+      if (!url.searchParams.get('utm_medium')) url.searchParams.set('utm_medium', meetingMedium);
+      if (!url.searchParams.get('utm_campaign')) url.searchParams.set('utm_campaign', meetingCampaign);
       if (!url.searchParams.get('utm_content')) {
-        url.searchParams.set('utm_content', contentSlug() + '_' + (anchor.getAttribute('data-align-cta-placement') || 'site_link'));
+        url.searchParams.set('utm_content', meetingContent || (contentSlug() + '_' + (anchor.getAttribute('data-align-cta-placement') || 'site_link')));
       }
       anchor.href = url.toString();
       anchor.setAttribute('data-align-meeting-link', 'true');
