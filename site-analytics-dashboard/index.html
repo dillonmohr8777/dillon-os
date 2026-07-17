@@ -74,6 +74,12 @@
   .sharenote{font-size:11.5px; color:var(--faint)}
   .chart-box svg{display:block; width:100%; height:auto}
   .tbl-scroll{overflow-x:auto}
+  .lead-table{min-width:980px}
+  .lead-table td{padding-top:11px; padding-bottom:11px}
+  .lead-table .wanted{min-width:300px; max-width:390px}
+  .lead-table a{color:var(--s-views); text-decoration:none; font-weight:600}
+  .lead-table a:hover{text-decoration:underline}
+  .lead-meta{display:flex; flex-wrap:wrap; gap:5px; margin-top:5px}
   .empty{color:var(--faint); font-size:13.5px; padding:22px 0; text-align:center}
   footer{color:var(--faint); font-size:12px; margin-top:8px}
   footer b{color:var(--muted); font-weight:600}
@@ -85,12 +91,20 @@
     <div>
       <p class="eyebrow">Align HCM · Site Watchdog</p>
       <h1>Organic Marketing Dashboard</h1>
-      <p class="sub" id="windowLabel">Jan 26, 2026 to today · first-party HubSpot data · no Google dependency</p>
+      <p class="sub" id="windowLabel">Jan 1, 2026 to today · first-party HubSpot data · no Google dependency</p>
     </div>
     <div class="stamp" id="stamp">Loading…</div>
   </header>
   <ul class="alerts" id="alerts"></ul>
   <div class="kpis" id="kpis"></div>
+
+  <div class="card" id="qualifiedCard" style="display:none">
+    <h2>Qualified inbound leads and pipeline<span class="vbadge">LIVE / HUBSPOT</span></h2>
+    <p class="desc" id="qualifiedDesc"></p>
+    <div class="kpis" id="qualifiedKpis"></div>
+    <div class="tbl-scroll" id="qualifiedTable"></div>
+    <p class="sharenote" id="qualifiedPrivacy" style="margin-top:10px"></p>
+  </div>
 
   <div class="card" id="channelCard" style="display:none">
     <h2>Verified owned-channel won revenue<span class="vbadge">LIVE · HUBSPOT</span></h2>
@@ -102,7 +116,7 @@
 
   <div class="card">
     <h2>Monthly page views</h2>
-    <p class="desc">All tracked site pages since Jan 26, 2026.</p>
+    <p class="desc">All tracked site pages since Jan 1, 2026.</p>
     <div class="chart-box" id="viewsChart"><div class="empty">Loading…</div></div>
   </div>
 
@@ -219,7 +233,7 @@
 
   function render(d){
     $("stamp").innerHTML="Data refreshed<br><b>"+esc(new Date(d.generated).toLocaleString([], {dateStyle:"medium", timeStyle:"short"}))+"</b>";
-    $("windowLabel").textContent=(d.window.start.replace("2026-01-26","Jan 26, 2026"))+" to "+d.window.end+" · first-party HubSpot data · no Google dependency";
+    $("windowLabel").textContent=(d.window.start.replace("2026-01-01","Jan 1, 2026"))+" to "+d.window.end+" · first-party HubSpot data · no Google dependency";
 
     $("alerts").innerHTML=(d.alerts||[]).map(function(a){
       return '<li class="chip '+esc(a.severity)+'">'+esc(a.text)+"</li>"; }).join("");
@@ -232,6 +246,36 @@
       kpi("Meeting bookings",fmt(k.meetingBookings),"scheduler links")+
       kpi("New contacts",fmt(k.contacts),"from site")+
       kpi("Bounce rate",pct(k.bounceRate),"site-wide");
+
+    var q=d.qualifiedLeads;
+    if(q){
+      $("qualifiedCard").style.display="";
+      $("qualifiedDesc").textContent=q.source+" / "+q.period+". Every known qualified buyer is matched against live associated deals.";
+      $("qualifiedKpis").innerHTML=
+        kpi("Qualified buyers",fmt(q.total),fmt(q.followedUp)+" followed up / "+fmt(q.missingFollowUp)+" missing follow-up",true)+
+        kpi("Open pipeline",usd(q.openPipeline),fmt(q.open)+" active deal(s)")+
+        kpi("Closed won",usd(q.wonRevenue),fmt(q.won)+" won deal(s)")+
+        kpi("Closed lost",usd(q.lostValue),fmt(q.lost)+" lost deal(s)")+
+        kpi("No associated deal",fmt(q.noDeal),"qualified buyers absent from pipeline");
+      var sourceNames={ORGANIC_SEARCH:"Organic Search",DIRECT_TRAFFIC:"Direct Traffic",SOCIAL_MEDIA:"Organic Social",AI_REFERRALS:"AI Referral",REFERRALS:"Referral",OFFLINE:"Offline / CRM"};
+      var qt=['<table class="lead-table"><thead><tr><th>Qualified lead</th><th>What they wanted</th><th>Platform / location</th><th>CRM outcome</th><th>Owner / follow-up</th><th class="r">Value</th></tr></thead><tbody>'];
+      (q.rows||[]).forEach(function(r){
+        var outcomeClass=r.outcome==="Won"?"good":r.outcome==="Open"?"warn":"crit";
+        var status='<span class="badge '+outcomeClass+'">'+esc(r.outcome)+'</span>';
+        if(r.stage) status+='<div class="u">'+esc(r.pipeline)+" / "+esc(r.stage)+(r.closeDate?" / "+esc(r.closeDate):"")+"</div>";
+        if(r.dealUrl) status+='<div><a href="'+esc(r.dealUrl)+'" target="_blank" rel="noopener">Open HubSpot deal</a></div>';
+        var meta='<div class="lead-meta"><span class="badge info">'+esc(r.fit)+" "+fmt(r.score)+'</span><span class="badge info">'+esc(sourceNames[r.source]||r.source||"Source unknown")+'</span><span class="badge info">Submitted '+esc(r.submitted)+'</span></div>';
+        qt.push('<tr><td><span class="t">'+esc(r.company)+'</span>'+meta+(r.role?'<div class="u">Buyer role: '+esc(r.role)+'</div>':"")+'</td>'+
+          '<td class="wanted">'+esc(r.wanted)+'</td>'+
+          '<td><span class="t">'+esc(r.platform||"Not confirmed")+'</span><div class="u">'+esc(r.location)+'</div></td>'+
+          '<td>'+status+(r.dealName?'<div class="u">'+esc(r.dealName)+'</div>':"")+'</td>'+
+          '<td><span class="t">'+esc(r.owner||"Unassigned")+'</span><div><span class="badge '+(r.followedUp?"good":"crit")+'">'+(r.followedUp?"FOLLOWED UP":"NO LOGGED FOLLOW-UP")+'</span></div></td>'+
+          '<td class="r num">'+(r.amount?usd(r.amount):"-")+'</td></tr>');
+      });
+      qt.push("</tbody></table>");
+      $("qualifiedTable").innerHTML=qt.join("");
+      $("qualifiedPrivacy").textContent=q.privacy;
+    }
 
     var cr=d.channelRevenue;
     if(cr){
@@ -330,7 +374,7 @@
     p2.push("</tbody></table>");
     $("pagesTable").innerHTML=p2.join("");
 
-    $("foot").innerHTML="Source: <b>"+esc(d.source)+"</b> Window always starts <b>Jan 26, 2026</b> and extends to the latest watchdog run. "+
+    $("foot").innerHTML="Source: <b>"+esc(d.source)+"</b> Window always starts <b>Jan 1, 2026</b> and extends to the latest watchdog run. "+
       "Directives: "+(d.directives||[]).map(esc).join(" · ");
   }
 

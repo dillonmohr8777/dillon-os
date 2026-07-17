@@ -1,8 +1,8 @@
 {
-    "generated":  "2026-07-16",
+    "generated":  "2026-07-17",
     "window":  {
-                   "start":  "2026-01-26",
-                   "end":  "2026-07-16"
+                   "start":  "2026-01-01",
+                   "end":  "2026-07-17"
                },
     "source":  "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
     "note":  "All watchdog and dashboard reporting uses the fixed window start 2026-01-26. The window extends daily on its own.",
@@ -63,9 +63,9 @@
                            }
                        ],
     "attribution_snapshot":  {
-                                 "asOf":  "2026-07-16",
+                                 "asOf":  "2026-07-17",
                                  "model":  "LINEAR",
-                                 "window":  "2026-01-26 to 2026-07-16, closed-won influenced revenue",
+                                 "window":  "2026-01-01 to 2026-07-17, closed-won influenced revenue",
                                  "note":  "HubSpot campaign attribution: closed-won revenue split across marketing touchpoints. It measures influence, not deal origination, and is not added to verified or CRM-reported Website revenue.",
                                  "byChannel":  [
                                                    {
@@ -174,8 +174,8 @@
                              "aeo_referrals_monthly_min":  1
                          },
     "channel_revenue_live":  {
-                                 "asOf":  "2026-07-16",
-                                 "window":  "2026-01-26 to 2026-07-16",
+                                 "asOf":  "2026-07-17",
+                                 "window":  "2026-01-01 to 2026-07-17",
                                  "methodology":  "New-business deals created and closed in-window; verified owned-channel source only when partner, vendor, rep, meeting-link, renewal, existing-client, and change-request evidence does not conflict.",
                                  "totalWon":  54000,
                                  "deals":  1,
@@ -209,9 +209,9 @@
                              },
     "contact_sources_window":  {
                                    "AI_REFERRALS":  2,
-                                   "DIRECT_TRAFFIC":  97,
-                                   "OFFLINE":  2090,
-                                   "ORGANIC_SEARCH":  14,
+                                   "DIRECT_TRAFFIC":  107,
+                                   "OFFLINE":  2151,
+                                   "ORGANIC_SEARCH":  16,
                                    "REFERRALS":  8,
                                    "SOCIAL_MEDIA":  6
                                },
@@ -223,8 +223,8 @@
                                  "Microsoft Copilot":  0
                              },
     "attribution_health_live":  {
-                                    "asOf":  "2026-07-16T21:44:16.4484282-04:00",
-                                    "totalKnownConversions":  86,
+                                    "asOf":  "2026-07-17T00:24:09.4354113-04:00",
+                                    "totalKnownConversions":  104,
                                     "trackedForms":  5,
                                     "completeForms":  5,
                                     "requiredChecksPassing":  14,
@@ -232,7 +232,7 @@
                                     "hubspotCustomEventScope":  "not_granted_ga4_fallback_active"
                                 },
     "site_coverage_live":  {
-                               "asOf":  "2026-07-16T21:45:27.2111744-04:00",
+                               "asOf":  "2026-07-17T00:25:04.4844893-04:00",
                                "sitemapUrls":  118,
                                "finalOk":  118,
                                "internalTargets":  159,
@@ -244,5 +244,19 @@
                                "missingHubSpot":  0,
                                "redirectingSitemapUrls":  10,
                                "legacyCaseStudyPages":  8
-                           }
+                           },
+    "qualified_leads_live":  {
+                                 "asOf":  "2026-07-17T00:24:09.4354113-04:00",
+                                 "window":  "2026-01-01 to 2026-07-17",
+                                 "total":  22,
+                                 "followedUp":  13,
+                                 "missingFollowUp":  9,
+                                 "open":  2,
+                                 "won":  1,
+                                 "lost":  4,
+                                 "noDeal":  15,
+                                 "openPipeline":  415000,
+                                 "wonRevenue":  54000,
+                                 "lostValue":  361000
+                             }
 }

@@ -1,6 +1,7 @@
 [CmdletBinding()]
 param(
-  [string]$WindowStart = '2026-01-26',
+  [string]$WindowStart = '2026-01-01',
+  [string]$QualifiedLeadReportPath = 'C:\Users\dillo\Documents\Codex\2026-07-15\what-s-my-hubspot-token-again\outputs\align-hcm-lead-intelligence\2026-07-15-ytd-lead-intelligence-report.json',
   [string]$TokenDpapiPath = $env:ALIGN_HUBSPOT_TOKEN_DPAPI_PATH,
   [switch]$Publish,
   [switch]$SkipCrawlerProbe
@@ -115,6 +116,170 @@ function Get-SourceLabel {
     if ($_.Length -gt 1) { $_.Substring(0, 1).ToUpperInvariant() + $_.Substring(1).ToLowerInvariant() }
     else { $_.ToUpperInvariant() }
   }) -join ' '
+}
+
+function Convert-LeadText {
+  param([string]$Value)
+  if ([string]::IsNullOrWhiteSpace($Value)) { return '' }
+  $mojibakeMarkers = @([char]0x00C2, [char]0x00C3, [char]0x00E2)
+  if ($mojibakeMarkers | Where-Object { $Value.IndexOf($_) -ge 0 }) {
+    try { $Value = [Text.Encoding]::UTF8.GetString([Text.Encoding]::GetEncoding(1252).GetBytes($Value)) }
+    catch { }
+  }
+  if ($Value -notmatch 'â|Ã') { return $Value }
+  try { [Text.Encoding]::UTF8.GetString([Text.Encoding]::GetEncoding(1252).GetBytes($Value)) }
+  catch { $Value }
+}
+
+function Get-QualifiedLeadPipeline {
+  param(
+    [Parameter(Mandatory = $true)][hashtable]$Headers,
+    [Parameter(Mandatory = $true)][DateTimeOffset]$Start,
+    [Parameter(Mandatory = $true)][DateTimeOffset]$AsOf
+  )
+
+  if (!(Test-Path -LiteralPath $QualifiedLeadReportPath)) {
+    return [pscustomobject][ordered]@{
+      verified = $false
+      asOf = $AsOf.ToString('o')
+      source = 'Qualified-lead source report unavailable'
+      total = 0; followedUp = 0; missingFollowUp = 0; open = 0; won = 0; lost = 0; noDeal = 0
+      openPipeline = 0; wonRevenue = 0; lostValue = 0; rows = @()
+    }
+  }
+
+  $leadReport = Get-Content -Raw -LiteralPath $QualifiedLeadReportPath -Encoding UTF8 | ConvertFrom-Json
+  $buyers = @($leadReport.rows | Where-Object {
+    $_.classification -eq 'Buyer lead' -and $_.firstSubmittedAt -and ([DateTimeOffset]$_.firstSubmittedAt) -ge $Start
+  })
+
+  $ownerNames = @{}
+  $ownerPage = Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/crm/v3/owners/?limit=500" -Headers $Headers
+  foreach ($owner in @($ownerPage.results)) {
+    $ownerNames["$($owner.id)"] = ("$($owner.firstName) $($owner.lastName)").Trim()
+  }
+
+  $pipelineMap = @{}
+  $pipelinePage = Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/crm/v3/pipelines/deals" -Headers $Headers
+  foreach ($pipeline in @($pipelinePage.results)) {
+    $stageMap = @{}
+    foreach ($stage in @($pipeline.stages)) {
+      $stageMap["$($stage.id)"] = [pscustomobject]@{ label = "$($stage.label)"; isClosed = "$($stage.metadata.isClosed)" }
+    }
+    $pipelineMap["$($pipeline.id)"] = [pscustomobject]@{ label = "$($pipeline.label)"; stages = $stageMap }
+  }
+
+  $rows = @()
+  foreach ($buyer in $buyers) {
+    $contactSearch = Invoke-HubSpotJson -Method Post -Uri "$ApiRoot/crm/v3/objects/contacts/search" -Headers $Headers -Body ([ordered]@{
+      filterGroups = @(@{ filters = @(@{ propertyName = 'email'; operator = 'EQ'; value = "$($buyer.email)" }) })
+      properties = @('jobtitle', 'city', 'state', 'country', 'hs_analytics_source')
+      limit = 10
+    })
+    $contact = @($contactSearch.results) | Select-Object -First 1
+    $contactDetail = $null
+    $dealRows = @()
+
+    if ($contact) {
+      $contactDetail = Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/crm/v3/objects/contacts/$($contact.id)?properties=jobtitle,city,state,country,hs_analytics_source&associations=deals" -Headers $Headers
+      $dealIds = @($contactDetail.associations.deals.results | Where-Object { $_.id } | ForEach-Object { "$($_.id)" } | Select-Object -Unique)
+      foreach ($dealId in $dealIds) {
+        $deal = Invoke-HubSpotJson -Method Get -Uri "$ApiRoot/crm/v3/objects/deals/${dealId}?properties=dealname,amount,createdate,closedate,dealstage,pipeline,dealtype,lead_source,hs_is_closed_count,hs_is_closed_won,hs_is_closed_lost,hubspot_owner_id" -Headers $Headers
+        $created = if ($deal.properties.createdate) { [DateTimeOffset]$deal.properties.createdate } else { $null }
+        $closed = if ($deal.properties.closedate) { [DateTimeOffset]$deal.properties.closedate } else { $null }
+        if (($created -and $created -lt $Start) -and (!$closed -or $closed -lt $Start)) { continue }
+
+        $pipeline = $pipelineMap["$($deal.properties.pipeline)"]
+        $stage = if ($pipeline) { $pipeline.stages["$($deal.properties.dealstage)"] } else { $null }
+        $dealRows += [pscustomobject][ordered]@{
+          id = "$($deal.id)"
+          name = Convert-LeadText "$($deal.properties.dealname)"
+          amount = if ($deal.properties.amount) { [long][Math]::Round([decimal]$deal.properties.amount, 0) } else { 0 }
+          pipeline = if ($pipeline) { "$($pipeline.label)" } else { "$($deal.properties.pipeline)" }
+          stage = if ($stage) { "$($stage.label)" } else { "$($deal.properties.dealstage)" }
+          open = "$($deal.properties.hs_is_closed_count)" -ne '1'
+          won = "$($deal.properties.hs_is_closed_won)" -eq 'true'
+          lost = "$($deal.properties.hs_is_closed_lost)" -eq 'true'
+          closeDate = if ($closed) { $closed.ToString('yyyy-MM-dd') } else { '' }
+          leadSource = "$($deal.properties.lead_source)"
+          owner = $ownerNames["$($deal.properties.hubspot_owner_id)"]
+          url = "https://app.hubspot.com/contacts/$ExpectedPortalId/record/0-3/$($deal.id)?utm_source=app_12360546_mcp&utm_medium=ai_agent&utm_campaign=qualified_leads"
+        }
+      }
+    }
+
+    $openDeals = @($dealRows | Where-Object { $_.open })
+    $wonDeals = @($dealRows | Where-Object { $_.won })
+    $lostDeals = @($dealRows | Where-Object { $_.lost })
+    $outcome = if ($openDeals.Count) { 'Open' } elseif ($wonDeals.Count) { 'Won' } elseif ($lostDeals.Count) { 'Lost' } else { 'No deal' }
+    $primary = if ($openDeals.Count) { $openDeals | Select-Object -First 1 } elseif ($wonDeals.Count) { $wonDeals | Select-Object -First 1 } elseif ($lostDeals.Count) { $lostDeals | Select-Object -First 1 } else { $null }
+
+    $locationParts = @()
+    if ($contactDetail) {
+      $locationParts = @($contactDetail.properties.city, $contactDetail.properties.state, $contactDetail.properties.country) | Where-Object { $_ }
+    }
+    $location = $locationParts -join ', '
+    if (!$location -and "$($buyer.signal)" -match '(?i)Vancouver') { $location = 'Vancouver, Canada' }
+    elseif (!$location -and "$($buyer.signal)" -match '(?i)Australia.*US.*Canada') { $location = 'Australia / US / Canada' }
+    elseif (!$location) { $location = 'Not recorded' }
+
+    $platforms = @()
+    foreach ($dealRow in $dealRows) {
+      if ($dealRow.pipeline -match '(?i)Dayforce') { $platforms += 'Dayforce' }
+      elseif ($dealRow.pipeline -match '(?i)Paylocity') { $platforms += 'Paylocity' }
+      elseif ($dealRow.pipeline -match '(?i)UKG') { $platforms += 'UKG' }
+    }
+    if (!$platforms.Count) {
+      foreach ($platform in @('Dayforce', 'UKG', 'Paylocity', 'Workday', 'ADP')) {
+        if ("$($buyer.signal)" -match [regex]::Escape($platform)) { $platforms += $platform }
+      }
+    }
+
+    $rows += [pscustomobject][ordered]@{
+      company = Convert-LeadText "$($buyer.company)"
+      score = [int]$buyer.score
+      fit = "$($buyer.fit)"
+      submitted = ([DateTimeOffset]$buyer.firstSubmittedAt).ToString('yyyy-MM-dd')
+      followedUp = [bool]$buyer.followedUp
+      owner = if ($primary -and $primary.owner) { $primary.owner } elseif ("$($buyer.owner)" -match '^\d+$') { $ownerNames["$($buyer.owner)"] } else { "$($buyer.owner)" }
+      role = if ($contactDetail) { Convert-LeadText "$($contactDetail.properties.jobtitle)" } else { '' }
+      location = $location
+      source = if ($contactDetail) { "$($contactDetail.properties.hs_analytics_source)" } else { '' }
+      platform = (@($platforms | Select-Object -Unique) -join ' / ')
+      wanted = Convert-LeadText "$($buyer.signal)"
+      outcome = $outcome
+      dealName = if ($primary) { $primary.name } else { '' }
+      amount = if ($primary) { $primary.amount } else { 0 }
+      pipeline = if ($primary) { $primary.pipeline } else { '' }
+      stage = if ($primary) { $primary.stage } else { '' }
+      closeDate = if ($primary) { $primary.closeDate } else { '' }
+      dealUrl = if ($primary) { $primary.url } else { '' }
+      linkedDeals = $dealRows.Count
+    }
+  }
+
+  $openRows = @($rows | Where-Object { $_.outcome -eq 'Open' })
+  $wonRows = @($rows | Where-Object { $_.outcome -eq 'Won' })
+  $lostRows = @($rows | Where-Object { $_.outcome -eq 'Lost' })
+  $noDealRows = @($rows | Where-Object { $_.outcome -eq 'No deal' })
+  [pscustomobject][ordered]@{
+    verified = $true
+    asOf = $AsOf.ToString('o')
+    source = 'Qualified inbound buyer audit enriched from live HubSpot contacts and associated deals'
+    period = "$($Start.ToString('yyyy-MM-dd')) to $($AsOf.ToString('yyyy-MM-dd'))"
+    privacy = 'Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard.'
+    total = $rows.Count
+    followedUp = @($rows | Where-Object { $_.followedUp }).Count
+    missingFollowUp = @($rows | Where-Object { !$_.followedUp }).Count
+    open = $openRows.Count
+    won = $wonRows.Count
+    lost = $lostRows.Count
+    noDeal = $noDealRows.Count
+    openPipeline = [long](($openRows | Measure-Object -Property amount -Sum).Sum)
+    wonRevenue = [long](($wonRows | Measure-Object -Property amount -Sum).Sum)
+    lostValue = [long](($lostRows | Measure-Object -Property amount -Sum).Sum)
+    rows = @($rows | Sort-Object @{ Expression = { switch ($_.outcome) { 'Open' { 0 } 'No deal' { 1 } 'Won' { 2 } default { 3 } } } }, @{ Expression = 'score'; Descending = $true })
+  }
 }
 
 function Test-AiCrawlerAccess {
@@ -643,6 +808,7 @@ try {
   $crawler = if ($SkipCrawlerProbe) { [pscustomobject]@{ checks = 0; failures = @() } } else { Test-AiCrawlerAccess }
   $siteCoverage = Get-SiteCoverage
   $attribution = Get-AttributionHealth -Headers $headers -StartMilliseconds ([long]$startMs) -AsOf $end -SiteCoverage $siteCoverage
+  $qualifiedLeads = Get-QualifiedLeadPipeline -Headers $headers -Start $start -AsOf $end
 
   $onlineContacts = @($contacts | Where-Object {
     $sourceKey = "$($_.properties.hs_analytics_source)"
@@ -651,6 +817,7 @@ try {
 
   $data = Get-Content -Raw -LiteralPath $DataPath -Encoding UTF8 | ConvertFrom-Json
   $data.generated = $end.ToString('o')
+  $data.window.start = $WindowStart
   $data.window.end = $end.ToString('yyyy-MM-dd')
   Set-ObjectProperty -Object $data.kpis -Name 'selectedChannelWon' -Value $selectedTotal
   Set-ObjectProperty -Object $data.kpis -Name 'selectedChannelDeals' -Value $selectedDeals.Count
@@ -687,6 +854,7 @@ try {
     excludedAssistNote = 'CRM-reported Website, associated-contact-only matches, contradictory-source deals, renewals, existing-client work, change requests, and LINEAR touch credit are excluded from verified owned-channel origin.'
   }
   Set-ObjectProperty -Object $data -Name 'channelRevenue' -Value $channelRevenue
+  Set-ObjectProperty -Object $data -Name 'qualifiedLeads' -Value $qualifiedLeads
   Set-ObjectProperty -Object $data -Name 'attribution' -Value $attribution
   Set-ObjectProperty -Object $data -Name 'siteCoverage' -Value $siteCoverage
   $data.PSObject.Properties.Remove('revops')
@@ -705,6 +873,7 @@ try {
     $_.text -notmatch '^Live deal-origin attribution:' -and
     $_.text -notmatch '^Verified owned-channel origin:' -and
     $_.text -notmatch '^CRM-reported Website:' -and
+    $_.text -notmatch '^Qualified inbound buyers:' -and
     $_.text -notmatch '^Conflicting owned-channel evidence:' -and
     $_.text -notmatch '^Full-site crawl:' -and
     $_.text -notmatch '^AI crawler access' -and
@@ -723,6 +892,10 @@ try {
   $data.alerts += [pscustomobject]@{
     severity = 'warn'
     text = ('CRM-reported Website: ${0} across {1} closed-won acquisition deal(s), shown separately because the manual CRM source is not independently verified traffic origin.' -f ('{0:N0}' -f $crmReportedWebsiteTotal), $crmReportedWebsiteDeals.Count)
+  }
+  $data.alerts += [pscustomobject]@{
+    severity = if ($qualifiedLeads.noDeal -or $qualifiedLeads.missingFollowUp) { 'crit' } else { 'good' }
+    text = "Qualified inbound buyers: $($qualifiedLeads.total) total, $($qualifiedLeads.open) open, $($qualifiedLeads.won) won, $($qualifiedLeads.lost) lost, $($qualifiedLeads.noDeal) with no associated deal, and $($qualifiedLeads.missingFollowUp) without logged follow-up."
   }
   if ($conflictingOwnedDeals.Count) {
     $data.alerts += [pscustomobject]@{
@@ -749,6 +922,7 @@ try {
 
   $baseline = Get-Content -Raw -LiteralPath $BaselinePath -Encoding UTF8 | ConvertFrom-Json
   $baseline.generated = $end.ToString('yyyy-MM-dd')
+  $baseline.window.start = $WindowStart
   $baseline.window.end = $end.ToString('yyyy-MM-dd')
   $baseline.PSObject.Properties.Remove('revops_verified')
   $baseline.PSObject.Properties.Remove('contact_sources_ytd')
@@ -763,6 +937,20 @@ try {
     crmReportedWebsiteDeals = $crmReportedWebsiteDeals.Count
     conflictingOwnedSourceWon = $conflictingOwnedTotal
     conflictingOwnedSourceDeals = $conflictingOwnedDeals.Count
+  })
+  Set-ObjectProperty -Object $baseline -Name 'qualified_leads_live' -Value ([pscustomobject][ordered]@{
+    asOf = $qualifiedLeads.asOf
+    window = $qualifiedLeads.period
+    total = $qualifiedLeads.total
+    followedUp = $qualifiedLeads.followedUp
+    missingFollowUp = $qualifiedLeads.missingFollowUp
+    open = $qualifiedLeads.open
+    won = $qualifiedLeads.won
+    lost = $qualifiedLeads.lost
+    noDeal = $qualifiedLeads.noDeal
+    openPipeline = $qualifiedLeads.openPipeline
+    wonRevenue = $qualifiedLeads.wonRevenue
+    lostValue = $qualifiedLeads.lostValue
   })
   if ($data.touchAttribution) {
     $touchRows = @($data.touchAttribution.byChannel)
@@ -836,6 +1024,15 @@ try {
     crmReportedWebsiteDeals = $crmReportedWebsiteDeals.Count
     conflictingOwnedSourceWon = $conflictingOwnedTotal
     conflictingOwnedSourceDeals = $conflictingOwnedDeals.Count
+    qualifiedLeads = [pscustomobject]@{
+      total = $qualifiedLeads.total
+      open = $qualifiedLeads.open
+      won = $qualifiedLeads.won
+      lost = $qualifiedLeads.lost
+      noDeal = $qualifiedLeads.noDeal
+      missingFollowUp = $qualifiedLeads.missingFollowUp
+      openPipeline = $qualifiedLeads.openPipeline
+    }
     byChannel = $channelRows
     onlineContactsInWindow = $onlineContacts.Count
     totalContactsInWindow = $contacts.Count

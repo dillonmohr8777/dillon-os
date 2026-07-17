@@ -111,6 +111,6 @@ If any alert fired, say so clearly at the top of the session summary so it reach
 - Company: Align HCM, HCM implementation and post-go-live support (SmartCare). Key platforms: Workday, UKG, Dayforce, Paylocity, HiBob, ADP.
 - Conversion pages that matter: /contact, /partners/brokers, meeting scheduler pages.
 - Traffic engine: blog buyer's guide series.
-- Protected production dashboard: https://align-hcm-site-health-dashboard.netlify.app. It renders the committed `site-analytics-dashboard/data.json`; `Refresh-Dashboard.ps1 -Publish` updates and redeploys it on every completed watchdog run.
+- Production dashboard: https://align-hcm-site-health-dashboard.netlify.app. Visitor access is public with no Netlify password prompt. It renders the committed `site-analytics-dashboard/data.json`; `Refresh-Dashboard.ps1 -Publish` updates and redeploys it on every completed watchdog run.
 - Production attribution installer and verifier: `attribution/Install-Attribution.ps1` and `attribution/Verify-Attribution.ps1`. These use HubSpot APIs only and never require the HubSpot website.
 - Initial audit with full issue detail: `reports/2026-07-16.md`.
