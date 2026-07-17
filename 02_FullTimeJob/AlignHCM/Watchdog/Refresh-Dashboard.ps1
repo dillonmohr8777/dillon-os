@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
   [string]$WindowStart = '2026-01-01',
-  [string]$QualifiedLeadReportPath = 'C:\Users\dillo\Documents\Codex\2026-07-15\what-s-my-hubspot-token-again\outputs\align-hcm-lead-intelligence\2026-07-15-ytd-lead-intelligence-report.json',
+  [string]$QualifiedLeadReportPath,
   [string]$TokenDpapiPath = $env:ALIGN_HUBSPOT_TOKEN_DPAPI_PATH,
   [switch]$Publish,
   [switch]$SkipCrawlerProbe
@@ -11,6 +11,7 @@ $ErrorActionPreference = 'Stop'
 $ExpectedPortalId = '242825734'
 $ApiRoot = 'https://api.hubapi.com'
 $DefaultTokenPath = 'C:\Users\dillo\Documents\Codex\2026-07-12\hubspot-agent-set-jasonhubspottoken-ps1-hubspot\hubspot-agent\.secrets\align-hubspot-token.dpapi'
+$QualifiedLeadReportDirectory = 'C:\Users\dillo\Documents\Codex\2026-07-15\what-s-my-hubspot-token-again\outputs\align-hcm-lead-intelligence'
 $RepoRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..\..'))
 $DataPath = Join-Path $RepoRoot 'site-analytics-dashboard\data.json'
 $BaselinePath = Join-Path $PSScriptRoot 'baseline.json'
@@ -138,7 +139,13 @@ function Get-QualifiedLeadPipeline {
     [Parameter(Mandatory = $true)][DateTimeOffset]$AsOf
   )
 
-  if (!(Test-Path -LiteralPath $QualifiedLeadReportPath)) {
+  if ([string]::IsNullOrWhiteSpace($QualifiedLeadReportPath) -and (Test-Path -LiteralPath $QualifiedLeadReportDirectory)) {
+    $QualifiedLeadReportPath = Get-ChildItem -LiteralPath $QualifiedLeadReportDirectory -Filter '*-ytd-lead-intelligence-report.json' -File |
+      Sort-Object LastWriteTimeUtc -Descending |
+      Select-Object -First 1 -ExpandProperty FullName
+  }
+
+  if ([string]::IsNullOrWhiteSpace($QualifiedLeadReportPath) -or !(Test-Path -LiteralPath $QualifiedLeadReportPath)) {
     return [pscustomobject][ordered]@{
       verified = $false
       asOf = $AsOf.ToString('o')
