@@ -1,6 +1,6 @@
 ---
-last_checked: 2026-07-16
-last_orchestrator_run: 2026-07-16
+last_checked: 2026-07-17
+last_orchestrator_run: 2026-07-17
 tags: [system, routines]
 ---
 
@@ -12,13 +12,13 @@ All legacy standalone crons are **retired** and merged into `competitive-task-or
 
 | Lane | Status | Last run | Notes |
 |------|--------|----------|-------|
-| gmail-intel | 🟡 fallback | 2026-07-16 | MCP not connected; using `System/urgent-replies.md` |
-| slack-intel | 🟡 fallback | 2026-07-16 | MCP not connected; using `System/slack-action-queue.md` |
-| vault-pulse | 🟢 ok | 2026-07-16 | 13 overviews scanned; frontmatter frozen April 2026 |
-| codex-session-sync | 🟢 ok | 2026-07-16 | 17 sessions; run 23 on dd31 branch |
-| domain-ads-seo | 🟢 ok | 2026-07-16 | 3 High / 2 Medium / 2 Low in Google Ads queue |
-| content-routines | 🟢 done | 2026-07-16 | Thursday — book SEO sweep → `05_Book/seo-sweep-2026-07-16.md` |
-| memory-consolidator | 🟢 ok | 2026-07-16 | Brief + claude-memory-sync updated (run 23) |
+| gmail-intel | 🟡 fallback | 2026-07-17 | MCP not connected; using `System/urgent-replies.md` |
+| slack-intel | 🟡 fallback | 2026-07-17 | MCP not connected; using `System/slack-action-queue.md` |
+| vault-pulse | 🟢 ok | 2026-07-17 | 13 overviews scanned; frontmatter frozen April 2026 |
+| codex-session-sync | 🟢 ok | 2026-07-17 | 18 sessions; run 24 on 3afb branch |
+| domain-ads-seo | 🟢 ok | 2026-07-17 | 3 High / 2 Medium / 2 Low in Google Ads queue |
+| content-routines | ⚪ skipped | 2026-07-17 | Friday — not Sun/Thu; BOK Jul 17 draft ready |
+| memory-consolidator | 🟢 ok | 2026-07-17 | Brief + claude-memory-sync updated (run 24) |
 
 ## Retired crons (disable in Cursor UI if still active)
 
@@ -40,5 +40,5 @@ Open `Daily-Briefs/competitive-task-today.md` after 1 PM ET. Execute P0 stack to
 - Vault `last_touched` frozen at April 2026 on most M360 clients; update when you touch a note
 - Codex session export path absent on cloud runner; handoff refs Windows paths on 64GB machine
 - Facebook Ads session stubs empty — populate from Codex export on 64GB machine
-- Bridge Tori meeting outcome not captured post-2026-07-13 (3 days overdue)
+- Bridge Tori meeting outcome not captured post-2026-07-13 (4 days overdue)
 - Book site email capture endpoint dead — blocks subscriber growth
