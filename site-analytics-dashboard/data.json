@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-07-17T00:24:09.4354113-04:00",
+    "generated":  "2026-07-17T09:12:31.7570114-04:00",
     "window":  {
                    "start":  "2026-01-01",
                    "end":  "2026-07-17"
@@ -386,11 +386,11 @@
                    },
                    {
                        "severity":  "good",
-                       "text":  "Full-site crawl: 118/118 sitemap URLs healthy, 159 internal targets checked, 0 broken, 0 conversion-path gaps, and 0 attribution-coverage gaps."
+                       "text":  "Full-site crawl: 109/109 sitemap URLs healthy, 159 internal targets checked, 0 broken, 0 conversion-path gaps, and 0 attribution-coverage gaps."
                    },
                    {
                        "severity":  "good",
-                       "text":  "AI crawler access terminal-verified: 0 endpoint checks passed."
+                       "text":  "AI crawler access terminal-verified: 21 endpoint checks passed."
                    },
                    {
                        "severity":  "good",
@@ -399,7 +399,7 @@
                ],
     "attribution":  {
                         "verified":  true,
-                        "asOf":  "2026-07-17T00:24:09.4354113-04:00",
+                        "asOf":  "2026-07-17T09:12:31.7570114-04:00",
                         "source":  "Live HubSpot form submissions plus terminal production checks",
                         "period":  "2026-01-01 to 2026-07-17",
                         "totalKnownConversions":  104,
@@ -478,7 +478,7 @@
                                        {
                                            "check":  "Full sitemap crawl",
                                            "status":  "pass",
-                                           "detail":  "118/118 sitemap URLs reached a healthy final response."
+                                           "detail":  "109/109 sitemap URLs reached a healthy final response."
                                        },
                                        {
                                            "check":  "Internal link integrity",
@@ -498,12 +498,12 @@
                                        {
                                            "check":  "Site-wide attribution coverage",
                                            "status":  "pass",
-                                           "detail":  "98 custom-attribution page(s) plus 20 HubSpot-native case-study page(s); 0 measurement gap(s)."
+                                           "detail":  "97 custom-attribution page(s) plus 12 HubSpot-native case-study page(s); 0 measurement gap(s)."
                                        },
                                        {
                                            "check":  "Site-wide conversion paths",
                                            "status":  "pass",
-                                           "detail":  "118/118 sitemap page(s) expose a form, tracked CTA, contact link, or meeting path; 0 gap(s)."
+                                           "detail":  "109/109 sitemap page(s) expose a form, tracked CTA, contact link, or meeting path; 0 gap(s)."
                                        },
                                        {
                                            "check":  "SmartCare form and tracking",
@@ -517,13 +517,13 @@
                                        },
                                        {
                                            "check":  "Legacy case-study duplicates",
-                                           "status":  "warn",
-                                           "detail":  "8 legacy case-study URL(s) remain in the sitemap."
+                                           "status":  "pass",
+                                           "detail":  "0 legacy case-study URL(s) remain in the sitemap."
                                        },
                                        {
                                            "check":  "Redirecting sitemap URLs",
                                            "status":  "warn",
-                                           "detail":  "10 sitemap URL(s) redirect before reaching the canonical page."
+                                           "detail":  "2 sitemap URL(s) redirect before reaching the canonical page."
                                        },
                                        {
                                            "check":  "Blog listing canonical",
@@ -558,62 +558,22 @@
                                      }
                     },
     "siteCoverage":  {
-                         "asOf":  "2026-07-17T00:25:04.4844893-04:00",
-                         "sitemapUrls":  118,
-                         "finalOk":  118,
+                         "asOf":  "2026-07-17T09:13:59.0896297-04:00",
+                         "sitemapUrls":  109,
+                         "finalOk":  109,
                          "brokenSitemapUrls":  [
 
                                                ],
                          "redirectingSitemapUrls":  [
                                                         {
-                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-vibra",
+                                                            "url":  "https://www.alignhcm.com/blog/paylocity-vs-paycheck-best-platform",
                                                             "status":  301,
-                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation"
-                                                        },
-                                                        {
-                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-driscolls",
-                                                            "status":  301,
-                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division"
-                                                        },
-                                                        {
-                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-invision",
-                                                            "status":  301,
-                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes"
+                                                            "finalUrl":  "https://www.alignhcm.com/blog/paylocity-vs-paychex-best-platform"
                                                         },
                                                         {
                                                             "url":  "https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178",
                                                             "status":  301,
                                                             "finalUrl":  "https://www.alignhcm.com/"
-                                                        },
-                                                        {
-                                                            "url":  "https://www.alignhcm.com/blog/ukg-buyers-guide",
-                                                            "status":  301,
-                                                            "finalUrl":  "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg"
-                                                        },
-                                                        {
-                                                            "url":  "https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
-                                                            "status":  301,
-                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite"
-                                                        },
-                                                        {
-                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-farming-organization",
-                                                            "status":  301,
-                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division"
-                                                        },
-                                                        {
-                                                            "url":  "https://www.alignhcm.com/success-stories",
-                                                            "status":  301,
-                                                            "finalUrl":  "https://www.alignhcm.com/case-studies"
-                                                        },
-                                                        {
-                                                            "url":  "https://www.alignhcm.com/case-studies-old",
-                                                            "status":  301,
-                                                            "finalUrl":  "https://www.alignhcm.com/case-studies"
-                                                        },
-                                                        {
-                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
-                                                            "status":  301,
-                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division"
                                                         }
                                                     ],
                          "internalTargets":  159,
@@ -626,12 +586,12 @@
                          "missingHubSpot":  [
 
                                             ],
-                         "customAttributionPages":  98,
-                         "nativeCaseStudyPages":  20,
+                         "customAttributionPages":  97,
+                         "nativeCaseStudyPages":  12,
                          "attributionCoverageGaps":  [
 
                                                      ],
-                         "conversionCoveredPages":  118,
+                         "conversionCoveredPages":  109,
                          "conversionCoverageGaps":  [
 
                                                     ],
@@ -639,14 +599,7 @@
 
                                               ],
                          "legacyCaseStudyPages":  [
-                                                      "https://www.alignhcm.com/case-studies-old/results-vibra",
-                                                      "https://www.alignhcm.com/case-studies-old/results-driscolls",
-                                                      "https://www.alignhcm.com/case-studies-old/results-invision",
-                                                      "https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
-                                                      "https://www.alignhcm.com/case-studies-old/results-farming-organization",
-                                                      "https://www.alignhcm.com/success-stories",
-                                                      "https://www.alignhcm.com/case-studies-old",
-                                                      "https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm"
+
                                                   ],
                          "smartCare":  {
                                            "ga4":  true,
@@ -658,7 +611,7 @@
                      },
     "qualifiedLeads":  {
                            "verified":  true,
-                           "asOf":  "2026-07-17T00:24:09.4354113-04:00",
+                           "asOf":  "2026-07-17T09:12:31.7570114-04:00",
                            "source":  "Qualified inbound buyer audit enriched from live HubSpot contacts and associated deals",
                            "period":  "2026-01-01 to 2026-07-17",
                            "privacy":  "Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard.",

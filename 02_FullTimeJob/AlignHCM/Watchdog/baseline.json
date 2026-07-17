@@ -5,7 +5,7 @@
                    "end":  "2026-07-17"
                },
     "source":  "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
-    "note":  "All watchdog and dashboard reporting uses the fixed window start 2026-01-26. The window extends daily on its own.",
+    "note":  "All watchdog and dashboard reporting uses the fixed window start 2026-01-01. The window extends daily on its own.",
     "aggregates_ytd_jan1_snapshot":  {
                                          "asOf":  "2026-07-16",
                                          "rawViews":  14182,
@@ -108,10 +108,15 @@
                                                 ]
                              },
     "known_issues_open":  [
-                              "slug-typo-paylocity-vs-paycheck (live; review rankings and backlinks before a slug migration)",
-                              "hubspot-sitemap-cache-stale-redirects (10 healthy 301s; no private-token sitemap write endpoint)"
+                               "hubspot-sitemap-cache-stale-redirects (2 healthy 301s remain in the HubSpot sitemap cache; no private-token sitemap write endpoint)"
                           ],
     "known_issues_resolved":  [
+                                  {
+                                      "id":  "slug-typo-paylocity-vs-paycheck",
+                                      "resolvedAt":  "2026-07-17",
+                                      "evidence":  "The published post now uses /blog/paylocity-vs-paychex-best-platform. The former URL returns HTTP 301 to the new URL, the new page returns HTTP 200 with the correct canonical, and the internal link crawl has no broken targets.",
+                                      "followUp":  "The HubSpot sitemap cache still lists the former URL and omits the new URL. Recheck after cache refresh."
+                                  },
                                   {
                                       "id":  "waf-blocks-ai-crawlers",
                                       "resolvedAt":  "2026-07-16",
@@ -223,30 +228,30 @@
                                  "Microsoft Copilot":  0
                              },
     "attribution_health_live":  {
-                                    "asOf":  "2026-07-17T00:24:09.4354113-04:00",
+                                    "asOf":  "2026-07-17T09:12:31.7570114-04:00",
                                     "totalKnownConversions":  104,
                                     "trackedForms":  5,
                                     "completeForms":  5,
-                                    "requiredChecksPassing":  14,
+                                    "requiredChecksPassing":  15,
                                     "requiredChecksFailing":  0,
                                     "hubspotCustomEventScope":  "not_granted_ga4_fallback_active"
                                 },
     "site_coverage_live":  {
-                               "asOf":  "2026-07-17T00:25:04.4844893-04:00",
-                               "sitemapUrls":  118,
-                               "finalOk":  118,
+                               "asOf":  "2026-07-17T09:13:59.0896297-04:00",
+                               "sitemapUrls":  109,
+                               "finalOk":  109,
                                "internalTargets":  159,
                                "brokenInternalTargets":  0,
                                "attributionCoverageGaps":  0,
-                               "conversionCoveredPages":  118,
+                               "conversionCoveredPages":  109,
                                "conversionCoverageGaps":  0,
                                "missingGa4":  0,
                                "missingHubSpot":  0,
-                               "redirectingSitemapUrls":  10,
-                               "legacyCaseStudyPages":  8
+                               "redirectingSitemapUrls":  2,
+                               "legacyCaseStudyPages":  0
                            },
     "qualified_leads_live":  {
-                                 "asOf":  "2026-07-17T00:24:09.4354113-04:00",
+                                 "asOf":  "2026-07-17T09:12:31.7570114-04:00",
                                  "window":  "2026-01-01 to 2026-07-17",
                                  "total":  22,
                                  "followedUp":  13,
