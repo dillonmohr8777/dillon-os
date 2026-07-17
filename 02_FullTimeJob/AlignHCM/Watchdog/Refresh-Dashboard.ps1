@@ -15,6 +15,8 @@ $QualifiedLeadReportDirectory = 'C:\Users\dillo\Documents\Codex\2026-07-15\what-
 $RepoRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..\..'))
 $DataPath = Join-Path $RepoRoot 'site-analytics-dashboard\data.json'
 $BaselinePath = Join-Path $PSScriptRoot 'baseline.json'
+$NetlifySiteId = '2c966b0b-ce94-4b2a-8872-8c1e22092b3f'
+$DashboardDirectory = Join-Path $RepoRoot 'site-analytics-dashboard'
 $AttributionPropertyNames = @(
   'align_first_landing_page', 'align_first_referrer', 'align_first_utm_source', 'align_first_utm_medium',
   'align_first_utm_campaign', 'align_first_utm_content', 'align_first_utm_term', 'align_first_gclid',
@@ -1085,6 +1087,13 @@ try {
       if ($LASTEXITCODE -ne 0) { throw 'Git push failed.' }
       $published = $true
     }
+    $netlify = Get-Command netlify -ErrorAction SilentlyContinue
+    if (!$netlify) { throw 'Netlify CLI is required to publish the production dashboard.' }
+    $deployJson = & netlify deploy --prod --dir $DashboardDirectory --site $NetlifySiteId --message "Automated Align attribution refresh $($end.ToString('o'))" --json
+    if ($LASTEXITCODE -ne 0) { throw 'Netlify production deploy failed.' }
+    $deploy = $deployJson | ConvertFrom-Json
+    if ("$($deploy.site_id)" -ne $NetlifySiteId -or !"$($deploy.url)") { throw 'Netlify deploy returned an unexpected site identity.' }
+    $published = $true
   }
 
   [pscustomobject]@{
