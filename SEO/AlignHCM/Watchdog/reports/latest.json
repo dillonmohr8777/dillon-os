@@ -1,0 +1,4016 @@
+{
+ "date": "2026-07-17",
+ "site": "https://www.alignhcm.com",
+ "score": 49,
+ "categories": {
+  "availability": 100,
+  "indexability": 59,
+  "onpage": 0,
+  "content": 0,
+  "performance": 91,
+  "security": 98
+ },
+ "counts": {
+  "critical": 0,
+  "high": 23,
+  "medium": 19,
+  "low": 133
+ },
+ "pagesCrawled": 118,
+ "sitemapUrls": 118,
+ "sslDaysLeft": 30,
+ "prevScore": null,
+ "newIssues": [
+  "ROBOTS_NO_SITEMAP|site",
+  "VARIANT_CHAIN|http://alignhcm.com/",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies/alsco-modernizes-workforce-management-with-align-hcm-and-ukg-dimensions",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/alsco-modernizes-workforce-management-with-align-hcm-and-ukg-dimensions",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/alsco-modernizes-workforce-management-with-align-hcm-and-ukg-dimensions",
+  "OG_INCOMPLETE|https://www.alignhcm.com/blog/common-challenges-with-hcm-implementations",
+  "TITLE_SHORT|https://www.alignhcm.com/blog",
+  "OG_INCOMPLETE|https://www.alignhcm.com/blog",
+  "OG_INCOMPLETE|https://www.alignhcm.com/services/data-conversion",
+  "IMG_ALT_LOW|https://www.alignhcm.com/services/data-conversion",
+  "IMG_ALT_LOW|https://www.alignhcm.com/services/training",
+  "TITLE_LONG|https://www.alignhcm.com/blog/most-hcm-platforms-add-ai-features.-dayforce-built-its-platform-around-ai",
+  "IMG_ALT_LOW|https://www.alignhcm.com/partners/dayforce",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/case-studies-old/results-vibra",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies-old/results-vibra",
+  "DESC_LONG|https://www.alignhcm.com/case-studies-old/results-vibra",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies-old/results-vibra",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-role-based-training-approach-why-one-size-fits-all-never-works",
+  "TITLE_LONG|https://www.alignhcm.com/blog/ukgs-approach-to-ai-why-human-centered-automation-matters-more-than-you-think",
+  "DESC_LONG|https://www.alignhcm.com/blog/ukgs-approach-to-ai-why-human-centered-automation-matters-more-than-you-think",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies/awp-successfully-migrates-from-utm-to-ukg-dimensions-with-align-hcm",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/awp-successfully-migrates-from-utm-to-ukg-dimensions-with-align-hcm",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/awp-successfully-migrates-from-utm-to-ukg-dimensions-with-align-hcm",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/redberry-serves-up-an-improved-wfm-solution-with-ukg-and-align-hcm",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/redberry-serves-up-an-improved-wfm-solution-with-ukg-and-align-hcm",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-integration-blind-spot-how-planning-gaps-create-post-launch-failures",
+  "H1_MULTI|https://www.alignhcm.com/partners/brokers/how-it-works",
+  "OG_INCOMPLETE|https://www.alignhcm.com/partners/brokers/how-it-works",
+  "HTML_HEAVY|https://www.alignhcm.com/partners/brokers/how-it-works",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/case-studies-old/results-driscolls",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies-old/results-driscolls",
+  "DESC_LONG|https://www.alignhcm.com/case-studies-old/results-driscolls",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies-old/results-driscolls",
+  "TITLE_LONG|https://www.alignhcm.com/blog/beyond-timekeeping-three-dimensions-of-manufacturing-workforce-intelligence",
+  "DESC_LONG|https://www.alignhcm.com/blog/beyond-timekeeping-three-dimensions-of-manufacturing-workforce-intelligence",
+  "OG_INCOMPLETE|https://www.alignhcm.com/accessibility-policy-and-statement",
+  "H1_MULTI|https://www.alignhcm.com/partners/brokers/faq",
+  "OG_INCOMPLETE|https://www.alignhcm.com/partners/brokers/faq",
+  "HTML_HEAVY|https://www.alignhcm.com/partners/brokers/faq",
+  "IMG_ALT_LOW|https://www.alignhcm.com/services/ma-assistance-services",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division",
+  "IMG_ALT_LOW|https://www.alignhcm.com/partners/paylocity",
+  "H1_MULTI|https://www.alignhcm.com/partners/brokers/resources",
+  "OG_INCOMPLETE|https://www.alignhcm.com/partners/brokers/resources",
+  "HTML_HEAVY|https://www.alignhcm.com/partners/brokers/resources",
+  "H1_MULTI|https://www.alignhcm.com/partners/brokers/why-align",
+  "OG_INCOMPLETE|https://www.alignhcm.com/partners/brokers/why-align",
+  "HTML_HEAVY|https://www.alignhcm.com/partners/brokers/why-align",
+  "TITLE_SHORT|https://www.alignhcm.com/align-hcm-smartcare",
+  "OG_INCOMPLETE|https://www.alignhcm.com/align-hcm-smartcare",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-ukg-ecosystem-advantage-why-open-apis-and-partner-networks-matter-for-long-term-success",
+  "DESC_LONG|https://www.alignhcm.com/blog/the-ukg-ecosystem-advantage-why-open-apis-and-partner-networks-matter-for-long-term-success",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/case-studies-old/results-invision",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies-old/results-invision",
+  "DESC_LONG|https://www.alignhcm.com/case-studies-old/results-invision",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies-old/results-invision",
+  "DESC_LONG|https://www.alignhcm.com/blog/5-critical-mistakes-to-avoid-during-hcm-implementation",
+  "TITLE_LONG|https://www.alignhcm.com/blog/why-your-workday-reporting-strategy-is-backwards-and-how-to-fix-it",
+  "DESC_LONG|https://www.alignhcm.com/blog/why-your-workday-reporting-strategy-is-backwards-and-how-to-fix-it",
+  "H1_MULTI|https://www.alignhcm.com/partners/referred",
+  "OG_INCOMPLETE|https://www.alignhcm.com/partners/referred",
+  "HTML_HEAVY|https://www.alignhcm.com/partners/referred",
+  "TITLE_LONG|https://www.alignhcm.com/blog/workforce-visibility-gap",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-configuration-decisions-that-determine-whether-dayforce-feels-intuitive-or-overwhelming",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies/resorts-world-las-vegas-bets-on-ukg-talent-management",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/resorts-world-las-vegas-bets-on-ukg-talent-management",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/resorts-world-las-vegas-bets-on-ukg-talent-management",
+  "H1_MULTI|https://www.alignhcm.com/partners/brokers",
+  "OG_INCOMPLETE|https://www.alignhcm.com/partners/brokers",
+  "HTML_HEAVY|https://www.alignhcm.com/partners/brokers",
+  "TITLE_LONG|https://www.alignhcm.com/blog/post-go-live-reality-check-why-hibob-adoption-succeeds-where-intuitive-systems-fail",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+  "TITLE_LONG|https://www.alignhcm.com/blog/beyond-the-basics-advanced-hcm-training-strategies-that-drive-roi",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178",
+  "DESC_LONG|https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-data-imperative-why-pre-conversion-data-cleaning-determines-hcm-success",
+  "DESC_LONG|https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-workday",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-hidden-roi-in-paylocitys-time-attendance-its-not-just-about-tracking-hours",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/blog/ukg-buyers-guide",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-ultimate-year-end-payroll-checklist-is-here-stop-guessing-and-secure-a-flawless-tax-season-clone",
+  "TITLE_LONG|https://www.alignhcm.com/blog/5-ways-hcm-technology-connects-workforce-data-to-sales-performance",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite",
+  "DESC_LONG|https://www.alignhcm.com/",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+  "TITLE_LONG|https://www.alignhcm.com/blog/why-fast-growing-companies-choose-6-week-implementations-over-18-month-enterprise-projects",
+  "TITLE_LONG|https://www.alignhcm.com/blog/when-speed-meets-strategy-ukg-rapid-hire-and-the-intelligence-behind-high-volume-hiring",
+  "DESC_LONG|https://www.alignhcm.com/blog/when-speed-meets-strategy-ukg-rapid-hire-and-the-intelligence-behind-high-volume-hiring",
+  "TITLE_SHORT|https://www.alignhcm.com/case-studies",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies",
+  "IMG_ALT_LOW|https://www.alignhcm.com/case-studies",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+  "DESC_LONG|https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/beumer-partners-with-align-to-overcome-legacy-data-challenges",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/beumer-partners-with-align-to-overcome-legacy-data-challenges",
+  "DESC_LONG|https://www.alignhcm.com/partners/brokers/smartcare",
+  "H1_MULTI|https://www.alignhcm.com/partners/brokers/smartcare",
+  "OG_INCOMPLETE|https://www.alignhcm.com/partners/brokers/smartcare",
+  "HTML_HEAVY|https://www.alignhcm.com/partners/brokers/smartcare",
+  "TITLE_LONG|https://www.alignhcm.com/blog/best-practices-for-implementing-hibob-a-strategic-guide-to-success",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-client-side-advantage-why-internal-project-leadership-determines-hcm-implementation-success",
+  "TITLE_LONG|https://www.alignhcm.com/blog/beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-process-alignment-imperative-why-customization-alone-wont-deliver-hcm-value",
+  "IMG_ALT_LOW|https://www.alignhcm.com/services/implementation",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/case-studies-old/results-farming-organization",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies-old/results-farming-organization",
+  "DESC_LONG|https://www.alignhcm.com/case-studies-old/results-farming-organization",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies-old/results-farming-organization",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/kimberly-clark-cleans-up-complex-rules-with-ukg-and-align-hcm",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/kimberly-clark-cleans-up-complex-rules-with-ukg-and-align-hcm",
+  "DESC_LONG|https://www.alignhcm.com/blog/adp-implementation-specialists",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division",
+  "DESC_LONG|https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/success-stories",
+  "TITLE_SHORT|https://www.alignhcm.com/success-stories",
+  "OG_INCOMPLETE|https://www.alignhcm.com/success-stories",
+  "IMG_ALT_LOW|https://www.alignhcm.com/success-stories",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/case-studies-old",
+  "TITLE_SHORT|https://www.alignhcm.com/case-studies-old",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies-old",
+  "IMG_ALT_LOW|https://www.alignhcm.com/case-studies-old",
+  "OG_INCOMPLETE|https://www.alignhcm.com/disclaimers-policies/",
+  "TITLE_LONG|https://www.alignhcm.com/blog/ai-integration-with-hcm-systems",
+  "TITLE_LONG|https://www.alignhcm.com/blog/the-retention-equation-how-retail-turnover-costs-more-than-your-pl-reveals",
+  "DESC_LONG|https://www.alignhcm.com/blog/the-retention-equation-how-retail-turnover-costs-more-than-your-pl-reveals",
+  "SITEMAP_REDIRECT|https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+  "TITLE_LONG|https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+  "DESC_LONG|https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+  "OG_INCOMPLETE|https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+  "IMG_ALT_LOW|https://www.alignhcm.com/partners/hibob",
+  "TITLE_DUP|https://www.alignhcm.com/case-studies-old/results-vibra , https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+  "TITLE_DUP|https://www.alignhcm.com/case-studies-old/results-driscolls , https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division , https://www.alignhcm.com/case-studies-old/results-farming-organization",
+  "TITLE_DUP|https://www.alignhcm.com/accessibility-policy-and-statement , https://www.alignhcm.com/disclaimers-policies/",
+  "TITLE_DUP|https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg , https://www.alignhcm.com/blog/ukg-buyers-guide",
+  "TITLE_DUP|https://www.alignhcm.com/case-studies-old/results-invision , https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+  "TITLE_DUP|https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178 , https://www.alignhcm.com/",
+  "TITLE_DUP|https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite , https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+  "TITLE_DUP|https://www.alignhcm.com/case-studies , https://www.alignhcm.com/success-stories , https://www.alignhcm.com/case-studies-old",
+  "TITLE_DUP|https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division , https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+  "DESC_DUP|https://www.alignhcm.com/case-studies-old/results-vibra , https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+  "DESC_DUP|https://www.alignhcm.com/case-studies-old/results-driscolls , https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division , https://www.alignhcm.com/case-studies-old/results-farming-organization",
+  "DESC_DUP|https://www.alignhcm.com/accessibility-policy-and-statement , https://www.alignhcm.com/disclaimers-policies/",
+  "DESC_DUP|https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg , https://www.alignhcm.com/blog/ukg-buyers-guide",
+  "DESC_DUP|https://www.alignhcm.com/case-studies-old/results-invision , https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+  "DESC_DUP|https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178 , https://www.alignhcm.com/",
+  "DESC_DUP|https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite , https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+  "DESC_DUP|https://www.alignhcm.com/case-studies , https://www.alignhcm.com/success-stories , https://www.alignhcm.com/case-studies-old",
+  "DESC_DUP|https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division , https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+  "NO_HSTS|site",
+  "NO_XCTO|site",
+  "APEX_INTERNAL_LINKS|site",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLIC2O2MpuN3lRZJloIUB5biiZGnmyRYV8i4AiXVFltdkZgSXM1YVCjp0IJZrYqiIHBeuwUncIIm2uXAp9ciS9lLySVdbl3CHjigfhVbkI2%2F03%2B2kpGBlyYVYihPt9vDE7O1BDdSi%2F9Z%2FXRuePGfPkrVhNTUyo%2FJaREEMWas6xQMdXVR&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/%22https:////twitter.com//hiltoncapital/%22",
+  "LINK_BROKEN|https://www.alignhcm.com/%22https:////www.linkedin.com//company//hilton-capital-management-llc///%22",
+  "LINK_BROKEN|https://www.alignhcm.com/%22https:////plus.google.com//b//103255320687329919905//103255320687329919905/%22",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLIi2xdC142auPe3nlRTgGnLk6z9LBq1Zuc9wAZpCPEQXVdwAAHNo9%2FA8kbuB9U2pn5oFTMa%2Ba%2BeX6vuv3r6bjBkvFzs2Z8%2ByD77k0bfbQuUdyLU3mAbOqklOmLLc0jH1TTNCA4LpWXmZr4WifFAeSksEulOvjBrxzT5EPSfI%2BytTy0P&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLI4OaYvJyfwayQtHOYHrjYJFV0oVAYB3xuJf%2F6u04beX2VTl37SFOheEdny2KcMnu2FLQQ1VbtDIPCNPyioVQux9e7hqnQFyC23EyMVYmp66vh9dJcvYEBg10W2e25j0KC484cQ0uHG48tfCvV1iFST2RXnYF4CJfU%2BCSJ9uKgIMD%2Bg&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLIx%2BZUrTq5iJLL5sO2%2FXR2NIwtuTRhLlU8aRPjT96nDD0RfRCXC7suhzzKDdKmCj9f7gl73e0tnhj0TnbtlxjnAcUtIoDKaRccaxulaQ0umRX2dn9qkMf1QD6jKSzuNLx%2FzKM7DBbibuClMH6%2BhLsmpHFbpP5zA6z%2FKJ%2FGBej3kmUo5&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLKcrBfdcm6NmYh9nu5bIybGC38XrNfMlhr5VwJYUrSf4gnbt%2BGifTVcxEmn6vp1hodQc33aIA9fVCu%2B4HQEUWpItuXIAKB37eV2LnSpRsMISX5eqkG4khpwFZ9uaakpRUVMX3o4mfqXScH2xX7NEY0KlpCUn6zm%2BHdsRrXIv1quulG6&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLJ6z%2BiRq4TLnEXB3IfOgb9IUqzfxcdrgC7WNCG4%2BeHoQMvMJ0nJiLxvvw23SllxqaDTAigFv2Q33jRYc0V5UccZBXePUbDVZG3a0teIEKCCewW45JSwXq4dDWete3eveoCCKFqF3DadAgzhdGdUcfZW0nU1X%2FtD0%2BFIdQ%2Ff7gUjfXxH&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLIltldeZLzLRr6B9SwiVlprfYbFyhaZEHyCu44Pdql%2FrmzG4cxVLAq2GtA6fqnyaa%2FKUMco6bmXFyXwxa6Mv%2BGJGOlPEH03gAl8D1Wt0l9YnIwI3rM%2FPaCrSr3xS2GOvQK9%2B7iiNVDxPwnOga86h6wQN3iu6CvtXofnraWwETDxXkBx&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLI2zw1tJ5Yt8yBzNPVBx0h03v%2BM5U%2BfFIqzXNtrzxEyFlUzR3Vei1dQjKHKiDwIzIxL3xnBdkQ25lKGtsUkMM7HeN9liJekPyq3w6NRI8OFvI7ghvHMfHVMh%2Bm%2B1Qss%2FjIKlk1MCnUKIGJx2SuTnJt5QITEoqfVwiT9yBEMJiHPyp2O&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLI%2F6Rem4hvNLx9DTYfapcfxN18V6ZNURYBQX1D7YFviYFYOhzxek1pDyRDPYyxA1C8SZllXMiY%2FTv%2Bm1laNtu%2B10oQ7E%2BpzKdyIepLeuVSh37SNvmgRYhJ7%2B8R2F642hztK%2FI6O%2FLdE9HSLTCgaYWXfw1fr2sAKyvKkW1Q%2BtbotARvW&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLJffxGoTok3r1sSrDl%2BnLhCLEP%2F5Ied5jfJYvGP0P8cKOYP3sSZcqDzf4yuGxVYrO%2Fs%2BgfbYOorcxbvgzqtcvcG2r1LwumRGNEwGmFC%2FQDTBOmwsWUgXont0G0hfFAXEmeqWgVjpIjKYf690D3bxRbKrKwdD3%2FfafcwgWjIqWoNsg%2B1&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+  "LINK_BROKEN|https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLJit8n%2FrrynZZfxSOnS1cIeEQfbfJ4ts74varLkVAUf59z7%2FO0zTCaWoxrtf5bdfE63r2yjKZR0cqja3qHdpMB7UymTpCBsRNx7mUchAIwsmG%2F9irhqYc2HjRUj%2FGziCVASVx3Rtt1AWOcvDgruh2C6a25XhQqS68Oq4Re9x5r5McPo&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en"
+ ],
+ "resolvedIssues": [],
+ "issues": [
+  {
+   "id": "TITLE_DUP",
+   "severity": "high",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-vibra , https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+   "detail": "2 pages share the title \"How Payroll Processing Automation Transforms Workforce Effic\"",
+   "fix": "Give every page a unique title."
+  },
+  {
+   "id": "TITLE_DUP",
+   "severity": "high",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-driscolls , https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division , https://www.alignhcm.com/case-studies-old/results-farming-organization",
+   "detail": "3 pages share the title \"How Driscoll's Automated Overtime Calculations for Hourly St\"",
+   "fix": "Give every page a unique title."
+  },
+  {
+   "id": "TITLE_DUP",
+   "severity": "high",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/accessibility-policy-and-statement , https://www.alignhcm.com/disclaimers-policies/",
+   "detail": "2 pages share the title \"Align HCM Policies and Accessibility Information\"",
+   "fix": "Give every page a unique title."
+  },
+  {
+   "id": "TITLE_DUP",
+   "severity": "high",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg , https://www.alignhcm.com/blog/ukg-buyers-guide",
+   "detail": "2 pages share the title \"The Strategic Buyer's Guide to UKG\"",
+   "fix": "Give every page a unique title."
+  },
+  {
+   "id": "TITLE_DUP",
+   "severity": "high",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-invision , https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+   "detail": "2 pages share the title \"How HR Data Integration Services Transform Workforce Managem\"",
+   "fix": "Give every page a unique title."
+  },
+  {
+   "id": "TITLE_DUP",
+   "severity": "high",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178 , https://www.alignhcm.com/",
+   "detail": "2 pages share the title \"Align HCM | HCM implementation and SmartCare support\"",
+   "fix": "Give every page a unique title."
+  },
+  {
+   "id": "TITLE_DUP",
+   "severity": "high",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite , https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+   "detail": "2 pages share the title \"How GTAA Overcame Workforce Management Challenges With UKG P\"",
+   "fix": "Give every page a unique title."
+  },
+  {
+   "id": "TITLE_DUP",
+   "severity": "high",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies , https://www.alignhcm.com/success-stories , https://www.alignhcm.com/case-studies-old",
+   "detail": "3 pages share the title \"Case Studies\"",
+   "fix": "Give every page a unique title."
+  },
+  {
+   "id": "TITLE_DUP",
+   "severity": "high",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division , https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+   "detail": "2 pages share the title \"How HR Management Software Transforms Workforce Efficiency a\"",
+   "fix": "Give every page a unique title."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLIC2O2MpuN3lRZJloIUB5biiZGnmyRYV8i4AiXVFltdkZgSXM1YVCjp0IJZrYqiIHBeuwUncIIm2uXAp9ciS9lLySVdbl3CHjigfhVbkI2%2F03%2B2kpGBlyYVYihPt9vDE7O1BDdSi%2F9Z%2FXRuePGfPkrVhNTUyo%2FJaREEMWas6xQMdXVR&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies/alsco-modernizes-workforce-management-with-align-hcm-and-ukg-dimensions)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/%22https:////twitter.com//hiltoncapital/%22",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/blog)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/%22https:////www.linkedin.com//company//hilton-capital-management-llc///%22",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/blog)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/%22https:////plus.google.com//b//103255320687329919905//103255320687329919905/%22",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/blog)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLIi2xdC142auPe3nlRTgGnLk6z9LBq1Zuc9wAZpCPEQXVdwAAHNo9%2FA8kbuB9U2pn5oFTMa%2Ba%2BeX6vuv3r6bjBkvFzs2Z8%2ByD77k0bfbQuUdyLU3mAbOqklOmLLc0jH1TTNCA4LpWXmZr4WifFAeSksEulOvjBrxzT5EPSfI%2BytTy0P&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies-old/results-vibra, https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLI4OaYvJyfwayQtHOYHrjYJFV0oVAYB3xuJf%2F6u04beX2VTl37SFOheEdny2KcMnu2FLQQ1VbtDIPCNPyioVQux9e7hqnQFyC23EyMVYmp66vh9dJcvYEBg10W2e25j0KC484cQ0uHG48tfCvV1iFST2RXnYF4CJfU%2BCSJ9uKgIMD%2Bg&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies/awp-successfully-migrates-from-utm-to-ukg-dimensions-with-align-hcm)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLIx%2BZUrTq5iJLL5sO2%2FXR2NIwtuTRhLlU8aRPjT96nDD0RfRCXC7suhzzKDdKmCj9f7gl73e0tnhj0TnbtlxjnAcUtIoDKaRccaxulaQ0umRX2dn9qkMf1QD6jKSzuNLx%2FzKM7DBbibuClMH6%2BhLsmpHFbpP5zA6z%2FKJ%2FGBej3kmUo5&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies/redberry-serves-up-an-improved-wfm-solution-with-ukg-and-align-hcm)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLKcrBfdcm6NmYh9nu5bIybGC38XrNfMlhr5VwJYUrSf4gnbt%2BGifTVcxEmn6vp1hodQc33aIA9fVCu%2B4HQEUWpItuXIAKB37eV2LnSpRsMISX5eqkG4khpwFZ9uaakpRUVMX3o4mfqXScH2xX7NEY0KlpCUn6zm%2BHdsRrXIv1quulG6&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies-old/results-driscolls, https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division, https://www.alignhcm.com/case-studies-old/results-farming-organization)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLJ6z%2BiRq4TLnEXB3IfOgb9IUqzfxcdrgC7WNCG4%2BeHoQMvMJ0nJiLxvvw23SllxqaDTAigFv2Q33jRYc0V5UccZBXePUbDVZG3a0teIEKCCewW45JSwXq4dDWete3eveoCCKFqF3DadAgzhdGdUcfZW0nU1X%2FtD0%2BFIdQ%2Ff7gUjfXxH&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies-old/results-invision, https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLIltldeZLzLRr6B9SwiVlprfYbFyhaZEHyCu44Pdql%2FrmzG4cxVLAq2GtA6fqnyaa%2FKUMco6bmXFyXwxa6Mv%2BGJGOlPEH03gAl8D1Wt0l9YnIwI3rM%2FPaCrSr3xS2GOvQK9%2B7iiNVDxPwnOga86h6wQN3iu6CvtXofnraWwETDxXkBx&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies/resorts-world-las-vegas-bets-on-ukg-talent-management)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLI2zw1tJ5Yt8yBzNPVBx0h03v%2BM5U%2BfFIqzXNtrzxEyFlUzR3Vei1dQjKHKiDwIzIxL3xnBdkQ25lKGtsUkMM7HeN9liJekPyq3w6NRI8OFvI7ghvHMfHVMh%2Bm%2B1Qss%2FjIKlk1MCnUKIGJx2SuTnJt5QITEoqfVwiT9yBEMJiHPyp2O&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite, https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLI%2F6Rem4hvNLx9DTYfapcfxN18V6ZNURYBQX1D7YFviYFYOhzxek1pDyRDPYyxA1C8SZllXMiY%2FTv%2Bm1laNtu%2B10oQ7E%2BpzKdyIepLeuVSh37SNvmgRYhJ7%2B8R2F642hztK%2FI6O%2FLdE9HSLTCgaYWXfw1fr2sAKyvKkW1Q%2BtbotARvW&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies/beumer-partners-with-align-to-overcome-legacy-data-challenges)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLJffxGoTok3r1sSrDl%2BnLhCLEP%2F5Ied5jfJYvGP0P8cKOYP3sSZcqDzf4yuGxVYrO%2Fs%2BgfbYOorcxbvgzqtcvcG2r1LwumRGNEwGmFC%2FQDTBOmwsWUgXont0G0hfFAXEmeqWgVjpIjKYf690D3bxRbKrKwdD3%2FfafcwgWjIqWoNsg%2B1&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies/kimberly-clark-cleans-up-complex-rules-with-ukg-and-align-hcm)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "LINK_BROKEN",
+   "severity": "high",
+   "category": "content",
+   "page": "https://www.alignhcm.com/hs/cta/wi/redirect?encryptedPayload=AVxigLJit8n%2FrrynZZfxSOnS1cIeEQfbfJ4ts74varLkVAUf59z7%2FO0zTCaWoxrtf5bdfE63r2yjKZR0cqja3qHdpMB7UymTpCBsRNx7mUchAIwsmG%2F9irhqYc2HjRUj%2FGziCVASVx3Rtt1AWOcvDgruh2C6a25XhQqS68Oq4Re9x5r5McPo&amp;webInteractiveContentId=290181637821&amp;portalId=242825734&amp;hsLang=en",
+   "detail": "Internal link returns 400 (linked from https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division, https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm)",
+   "fix": "Fix or remove the link."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/case-studies-old/results-vibra",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/case-studies-old/results-driscolls",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/case-studies-old/results-invision",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/blog/ukg-buyers-guide",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/case-studies-old/results-farming-organization",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/success-stories",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/case-studies)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/case-studies-old",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/case-studies)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "SITEMAP_REDIRECT",
+   "severity": "medium",
+   "category": "indexability",
+   "page": "https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+   "detail": "Sitemap URL redirects (301→https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division)",
+   "fix": "Sitemaps should list final canonical URLs only."
+  },
+  {
+   "id": "DESC_DUP",
+   "severity": "medium",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-vibra , https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+   "detail": "2 pages share one meta description",
+   "fix": "Unique descriptions per page."
+  },
+  {
+   "id": "DESC_DUP",
+   "severity": "medium",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-driscolls , https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division , https://www.alignhcm.com/case-studies-old/results-farming-organization",
+   "detail": "3 pages share one meta description",
+   "fix": "Unique descriptions per page."
+  },
+  {
+   "id": "DESC_DUP",
+   "severity": "medium",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/accessibility-policy-and-statement , https://www.alignhcm.com/disclaimers-policies/",
+   "detail": "2 pages share one meta description",
+   "fix": "Unique descriptions per page."
+  },
+  {
+   "id": "DESC_DUP",
+   "severity": "medium",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg , https://www.alignhcm.com/blog/ukg-buyers-guide",
+   "detail": "2 pages share one meta description",
+   "fix": "Unique descriptions per page."
+  },
+  {
+   "id": "DESC_DUP",
+   "severity": "medium",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-invision , https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+   "detail": "2 pages share one meta description",
+   "fix": "Unique descriptions per page."
+  },
+  {
+   "id": "DESC_DUP",
+   "severity": "medium",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178 , https://www.alignhcm.com/",
+   "detail": "2 pages share one meta description",
+   "fix": "Unique descriptions per page."
+  },
+  {
+   "id": "DESC_DUP",
+   "severity": "medium",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite , https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+   "detail": "2 pages share one meta description",
+   "fix": "Unique descriptions per page."
+  },
+  {
+   "id": "DESC_DUP",
+   "severity": "medium",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies , https://www.alignhcm.com/success-stories , https://www.alignhcm.com/case-studies-old",
+   "detail": "3 pages share one meta description",
+   "fix": "Unique descriptions per page."
+  },
+  {
+   "id": "DESC_DUP",
+   "severity": "medium",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division , https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+   "detail": "2 pages share one meta description",
+   "fix": "Unique descriptions per page."
+  },
+  {
+   "id": "ROBOTS_NO_SITEMAP",
+   "severity": "low",
+   "category": "indexability",
+   "page": null,
+   "detail": "robots.txt has no Sitemap: directive",
+   "fix": "Add \"Sitemap: https://www.alignhcm.com/sitemap.xml\"."
+  },
+  {
+   "id": "VARIANT_CHAIN",
+   "severity": "low",
+   "category": "performance",
+   "page": "http://alignhcm.com/",
+   "detail": "http://alignhcm.com/ takes 2 hops to reach canonical",
+   "fix": "Collapse to a single 301 hop."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/alsco-modernizes-workforce-management-with-align-hcm-and-ukg-dimensions",
+   "detail": "Title is 69 chars: \"How Alsco Unlocked Efficiency: UKG Dimensions Optimization Strategies…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/alsco-modernizes-workforce-management-with-align-hcm-and-ukg-dimensions",
+   "detail": "Description 410 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/alsco-modernizes-workforce-management-with-align-hcm-and-ukg-dimensions",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/common-challenges-with-hcm-implementations",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "TITLE_SHORT",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog",
+   "detail": "Title is only 20 chars: \"Insights | Align HCM\"",
+   "fix": "Expand with the page's primary keyword."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/services/data-conversion",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/services/data-conversion",
+   "detail": "2/4 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/services/training",
+   "detail": "2/4 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/most-hcm-platforms-add-ai-features.-dayforce-built-its-platform-around-ai",
+   "detail": "Title is 73 chars: \"Most HCM Platforms Add AI Features. Dayforce Built Its Platform Around…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/partners/dayforce",
+   "detail": "4/9 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-vibra",
+   "detail": "Title is 74 chars: \"How Payroll Processing Automation Transforms Workforce Efficiency at V…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-vibra",
+   "detail": "Description 467 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-vibra",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-role-based-training-approach-why-one-size-fits-all-never-works",
+   "detail": "Title is 67 chars: \"The Role-Based Training Approach: Why One-Size-Fits-All Never Works…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/ukgs-approach-to-ai-why-human-centered-automation-matters-more-than-you-think",
+   "detail": "Title is 81 chars: \"UKG's Approach to AI: Why 'Human-Centered Automation' Matters More Tha…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/ukgs-approach-to-ai-why-human-centered-automation-matters-more-than-you-think",
+   "detail": "Description 189 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/awp-successfully-migrates-from-utm-to-ukg-dimensions-with-align-hcm",
+   "detail": "Title is 79 chars: \"How Automated Workforce Management Transforms Traffic Safety Companies…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/awp-successfully-migrates-from-utm-to-ukg-dimensions-with-align-hcm",
+   "detail": "Description 476 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/awp-successfully-migrates-from-utm-to-ukg-dimensions-with-align-hcm",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/redberry-serves-up-an-improved-wfm-solution-with-ukg-and-align-hcm",
+   "detail": "Description 369 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/redberry-serves-up-an-improved-wfm-solution-with-ukg-and-align-hcm",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-integration-blind-spot-how-planning-gaps-create-post-launch-failures",
+   "detail": "Title is 73 chars: \"The Integration Blind Spot: How Planning Gaps Create Post-Launch Failu…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "H1_MULTI",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/how-it-works",
+   "detail": "4 <h1> tags",
+   "fix": "Keep one H1; demote the rest."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/how-it-works",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "HTML_HEAVY",
+   "severity": "low",
+   "category": "performance",
+   "page": "https://www.alignhcm.com/partners/brokers/how-it-works",
+   "detail": "HTML is 1250KB",
+   "fix": "Reduce inline payload."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-driscolls",
+   "detail": "Title is 75 chars: \"How Driscoll's Automated Overtime Calculations for Hourly Staff Effici…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-driscolls",
+   "detail": "Description 475 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-driscolls",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/beyond-timekeeping-three-dimensions-of-manufacturing-workforce-intelligence",
+   "detail": "Title is 76 chars: \"Beyond Timekeeping: Three Dimensions of Manufacturing Workforce Intell…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/beyond-timekeeping-three-dimensions-of-manufacturing-workforce-intelligence",
+   "detail": "Description 182 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/accessibility-policy-and-statement",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "H1_MULTI",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/faq",
+   "detail": "4 <h1> tags",
+   "fix": "Keep one H1; demote the rest."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/faq",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "HTML_HEAVY",
+   "severity": "low",
+   "category": "performance",
+   "page": "https://www.alignhcm.com/partners/brokers/faq",
+   "detail": "HTML is 1250KB",
+   "fix": "Reduce inline payload."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/services/ma-assistance-services",
+   "detail": "2/4 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division",
+   "detail": "Title is 75 chars: \"How Driscoll's Automated Overtime Calculations for Hourly Staff Effici…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division",
+   "detail": "Description 475 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/partners/paylocity",
+   "detail": "5/9 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "H1_MULTI",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/resources",
+   "detail": "4 <h1> tags",
+   "fix": "Keep one H1; demote the rest."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/resources",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "HTML_HEAVY",
+   "severity": "low",
+   "category": "performance",
+   "page": "https://www.alignhcm.com/partners/brokers/resources",
+   "detail": "HTML is 1250KB",
+   "fix": "Reduce inline payload."
+  },
+  {
+   "id": "H1_MULTI",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/why-align",
+   "detail": "4 <h1> tags",
+   "fix": "Keep one H1; demote the rest."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/why-align",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "HTML_HEAVY",
+   "severity": "low",
+   "category": "performance",
+   "page": "https://www.alignhcm.com/partners/brokers/why-align",
+   "detail": "HTML is 1250KB",
+   "fix": "Reduce inline payload."
+  },
+  {
+   "id": "TITLE_SHORT",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/align-hcm-smartcare",
+   "detail": "Title is only 21 chars: \"SmartCare | Align HCM\"",
+   "fix": "Expand with the page's primary keyword."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/align-hcm-smartcare",
+   "detail": "Open Graph incomplete (title:false image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-ukg-ecosystem-advantage-why-open-apis-and-partner-networks-matter-for-long-term-success",
+   "detail": "Title is 92 chars: \"The UKG Ecosystem Advantage: Why Open APIs and Partner Networks Matter…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-ukg-ecosystem-advantage-why-open-apis-and-partner-networks-matter-for-long-term-success",
+   "detail": "Description 196 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-invision",
+   "detail": "Title is 75 chars: \"How HR Data Integration Services Transform Workforce Management at InV…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-invision",
+   "detail": "Description 546 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-invision",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/5-critical-mistakes-to-avoid-during-hcm-implementation",
+   "detail": "Description 169 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/why-your-workday-reporting-strategy-is-backwards-and-how-to-fix-it",
+   "detail": "Title is 68 chars: \"Why Your Workday Reporting Strategy Is Backwards (And How to Fix It)…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/why-your-workday-reporting-strategy-is-backwards-and-how-to-fix-it",
+   "detail": "Description 183 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "H1_MULTI",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/referred",
+   "detail": "4 <h1> tags",
+   "fix": "Keep one H1; demote the rest."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/referred",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "HTML_HEAVY",
+   "severity": "low",
+   "category": "performance",
+   "page": "https://www.alignhcm.com/partners/referred",
+   "detail": "HTML is 1250KB",
+   "fix": "Reduce inline payload."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/workforce-visibility-gap",
+   "detail": "Title is 94 chars: \"The Workforce Visibility Gap: Why Frontline Teams Need HCM Systems Tha…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-configuration-decisions-that-determine-whether-dayforce-feels-intuitive-or-overwhelming",
+   "detail": "Title is 91 chars: \"The Configuration Decisions That Determine Whether Dayforce Feels Intu…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/resorts-world-las-vegas-bets-on-ukg-talent-management",
+   "detail": "Title is 77 chars: \"Resorts World Las Vegas Partners With Align To Optimize UKG Talent Man…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/resorts-world-las-vegas-bets-on-ukg-talent-management",
+   "detail": "Description 450 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/resorts-world-las-vegas-bets-on-ukg-talent-management",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "H1_MULTI",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers",
+   "detail": "4 <h1> tags",
+   "fix": "Keep one H1; demote the rest."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "HTML_HEAVY",
+   "severity": "low",
+   "category": "performance",
+   "page": "https://www.alignhcm.com/partners/brokers",
+   "detail": "HTML is 1250KB",
+   "fix": "Reduce inline payload."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/post-go-live-reality-check-why-hibob-adoption-succeeds-where-intuitive-systems-fail",
+   "detail": "Title is 86 chars: \"Post-Go-Live Reality Check: Why HiBob Adoption Succeeds Where \"Intuiti…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+   "detail": "Title is 75 chars: \"How HR Data Integration Services Transform Workforce Management at InV…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+   "detail": "Description 546 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/beyond-the-basics-advanced-hcm-training-strategies-that-drive-roi",
+   "detail": "Title is 66 chars: \"Beyond the Basics: Advanced HCM Training Strategies That Drive ROI…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178",
+   "detail": "Description 167 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-data-imperative-why-pre-conversion-data-cleaning-determines-hcm-success",
+   "detail": "Title is 76 chars: \"The Data Imperative: Why Pre-Conversion Data Cleaning Determines HCM S…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-workday",
+   "detail": "Description 169 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-hidden-roi-in-paylocitys-time-attendance-its-not-just-about-tracking-hours",
+   "detail": "Title is 83 chars: \"The Hidden ROI in Paylocity's Time & Attendance: It's Not Just About T…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-ultimate-year-end-payroll-checklist-is-here-stop-guessing-and-secure-a-flawless-tax-season-clone",
+   "detail": "Title is 95 chars: \"The Ultimate Year-End Payroll Checklist is Here! Stop Guessing and Sec…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/5-ways-hcm-technology-connects-workforce-data-to-sales-performance",
+   "detail": "Title is 66 chars: \"5 Ways HCM Technology Connects Workforce Data to Sales Performance…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite",
+   "detail": "Title is 76 chars: \"How GTAA Overcame Workforce Management Challenges With UKG Pro And Ali…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite",
+   "detail": "Description 439 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/",
+   "detail": "Description 167 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+   "detail": "Title is 74 chars: \"How Payroll Processing Automation Transforms Workforce Efficiency at V…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+   "detail": "Description 467 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/why-fast-growing-companies-choose-6-week-implementations-over-18-month-enterprise-projects",
+   "detail": "Title is 92 chars: \"Why Fast-Growing Companies Choose 6-Week Implementations Over 18-Month…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/when-speed-meets-strategy-ukg-rapid-hire-and-the-intelligence-behind-high-volume-hiring",
+   "detail": "Title is 88 chars: \"When Speed Meets Strategy: UKG Rapid Hire and the Intelligence Behind …\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/when-speed-meets-strategy-ukg-rapid-hire-and-the-intelligence-behind-high-volume-hiring",
+   "detail": "Description 168 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "TITLE_SHORT",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies",
+   "detail": "Title is only 12 chars: \"Case Studies\"",
+   "fix": "Expand with the page's primary keyword."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/case-studies",
+   "detail": "10/11 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+   "detail": "Title is 76 chars: \"How GTAA Overcame Workforce Management Challenges With UKG Pro And Ali…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+   "detail": "Description 439 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/beumer-partners-with-align-to-overcome-legacy-data-challenges",
+   "detail": "Description 409 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/beumer-partners-with-align-to-overcome-legacy-data-challenges",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/smartcare",
+   "detail": "Description 167 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "H1_MULTI",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/smartcare",
+   "detail": "4 <h1> tags",
+   "fix": "Keep one H1; demote the rest."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/partners/brokers/smartcare",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "HTML_HEAVY",
+   "severity": "low",
+   "category": "performance",
+   "page": "https://www.alignhcm.com/partners/brokers/smartcare",
+   "detail": "HTML is 1250KB",
+   "fix": "Reduce inline payload."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/best-practices-for-implementing-hibob-a-strategic-guide-to-success",
+   "detail": "Title is 67 chars: \"Best Practices for Implementing HiBob: A Strategic Guide to Success…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-client-side-advantage-why-internal-project-leadership-determines-hcm-implementation-success",
+   "detail": "Title is 96 chars: \"The Client-Side Advantage: Why Internal Project Leadership Determines …\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy",
+   "detail": "Title is 73 chars: \"Beyond Hiring: The Case for Internal Talent Mobility as a Growth Strat…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-process-alignment-imperative-why-customization-alone-wont-deliver-hcm-value",
+   "detail": "Title is 81 chars: \"The Process Alignment Imperative: Why Customization Alone Won't Delive…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/services/implementation",
+   "detail": "2/4 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-farming-organization",
+   "detail": "Title is 75 chars: \"How Driscoll's Automated Overtime Calculations for Hourly Staff Effici…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-farming-organization",
+   "detail": "Description 475 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-farming-organization",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/kimberly-clark-cleans-up-complex-rules-with-ukg-and-align-hcm",
+   "detail": "Description 580 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/kimberly-clark-cleans-up-complex-rules-with-ukg-and-align-hcm",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/adp-implementation-specialists",
+   "detail": "Description 176 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division",
+   "detail": "Title is 67 chars: \"How HR Management Software Transforms Workforce Efficiency at Arrow…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division",
+   "detail": "Description 325 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "TITLE_SHORT",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/success-stories",
+   "detail": "Title is only 12 chars: \"Case Studies\"",
+   "fix": "Expand with the page's primary keyword."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/success-stories",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/success-stories",
+   "detail": "10/11 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "TITLE_SHORT",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old",
+   "detail": "Title is only 12 chars: \"Case Studies\"",
+   "fix": "Expand with the page's primary keyword."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/case-studies-old",
+   "detail": "10/11 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/disclaimers-policies/",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/ai-integration-with-hcm-systems",
+   "detail": "Title is 68 chars: \"AI Integration With HCM Systems: Are You Leaving Money on the Table?…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-retention-equation-how-retail-turnover-costs-more-than-your-pl-reveals",
+   "detail": "Title is 76 chars: \"The Retention Equation: How Retail Turnover Costs More Than Your P&L R…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/blog/the-retention-equation-how-retail-turnover-costs-more-than-your-pl-reveals",
+   "detail": "Description 192 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "TITLE_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+   "detail": "Title is 67 chars: \"How HR Management Software Transforms Workforce Efficiency at Arrow…\"",
+   "fix": "Trim to ≤60 chars so it does not truncate in SERPs."
+  },
+  {
+   "id": "DESC_LONG",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+   "detail": "Description 325 chars",
+   "fix": "Trim to ≤155 chars."
+  },
+  {
+   "id": "OG_INCOMPLETE",
+   "severity": "low",
+   "category": "onpage",
+   "page": "https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+   "detail": "Open Graph incomplete (title:true image:false)",
+   "fix": "Fill og:title/og:description/og:image for share cards."
+  },
+  {
+   "id": "IMG_ALT_LOW",
+   "severity": "low",
+   "category": "content",
+   "page": "https://www.alignhcm.com/partners/hibob",
+   "detail": "5/8 images missing alt text",
+   "fix": "Add descriptive alt text."
+  },
+  {
+   "id": "NO_HSTS",
+   "severity": "low",
+   "category": "security",
+   "page": null,
+   "detail": "Missing Strict-Transport-Security header",
+   "fix": "Enable HSTS in HubSpot settings."
+  },
+  {
+   "id": "NO_XCTO",
+   "severity": "low",
+   "category": "security",
+   "page": null,
+   "detail": "Missing X-Content-Type-Options header",
+   "fix": "Set nosniff."
+  },
+  {
+   "id": "APEX_INTERNAL_LINKS",
+   "severity": "low",
+   "category": "performance",
+   "page": null,
+   "detail": "3 internal link target(s) use alignhcm.com instead of www.alignhcm.com, forcing a redirect hop",
+   "fix": "Update internal links to the canonical www host."
+  }
+ ],
+ "pages": [
+  {
+   "url": "https://www.alignhcm.com/blog/hiring-freeze-workforce-planning-analytics-can-help",
+   "status": 200,
+   "ttfb": 171,
+   "bytes": 110926,
+   "words": 2253,
+   "title": "Hiring Freeze? Workforce Planning Analytics Can Help",
+   "titleLen": 52,
+   "descLen": 144,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/alsco-modernizes-workforce-management-with-align-hcm-and-ukg-dimensions",
+   "status": 200,
+   "ttfb": 134,
+   "bytes": 265613,
+   "words": 667,
+   "title": "How Alsco Unlocked Efficiency: UKG Dimensions Optimization Strategies",
+   "titleLen": 69,
+   "descLen": 410,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/rethinking-strategic-workforce-planning",
+   "status": 200,
+   "ttfb": 377,
+   "bytes": 111966,
+   "words": 2378,
+   "title": "Beyond Job Descriptions: What is Strategic Workforce Planning?",
+   "titleLen": 62,
+   "descLen": 148,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 12,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/common-challenges-with-hcm-implementations",
+   "status": 200,
+   "ttfb": 294,
+   "bytes": 110079,
+   "words": 2051,
+   "title": "Common Challenges With HCM Implementations",
+   "titleLen": 42,
+   "descLen": 155,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog",
+   "status": 200,
+   "ttfb": 59,
+   "bytes": 138208,
+   "words": 1161,
+   "title": "Insights | Align HCM",
+   "titleLen": 20,
+   "descLen": 124,
+   "h1s": 1,
+   "schema": [
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 9,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/fractional-assistance",
+   "status": 200,
+   "ttfb": 504,
+   "bytes": 94936,
+   "words": 815,
+   "title": "Fractional HR and Payroll Support | Align HCM",
+   "titleLen": 45,
+   "descLen": 139,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 5,
+   "imgNoAlt": 1,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/most-hcm-platforms-add-ai-features",
+   "status": 200,
+   "ttfb": 115,
+   "bytes": 110085,
+   "words": 1719,
+   "title": "HCM AI Features Will Not Fix Payroll Pain by Themselves",
+   "titleLen": 55,
+   "descLen": 155,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/data-conversion",
+   "status": 200,
+   "ttfb": 86,
+   "bytes": 93235,
+   "words": 800,
+   "title": "HCM Data Conversion Services | Align HCM",
+   "titleLen": 40,
+   "descLen": 124,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 2,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/training",
+   "status": 200,
+   "ttfb": 85,
+   "bytes": 93744,
+   "words": 790,
+   "title": "HCM Training Services | Align Academy by Align HCM",
+   "titleLen": 50,
+   "descLen": 140,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 2,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/most-hcm-platforms-add-ai-features.-dayforce-built-its-platform-around-ai",
+   "status": 200,
+   "ttfb": 88,
+   "bytes": 113989,
+   "words": 3126,
+   "title": "Most HCM Platforms Add AI Features. Dayforce Built Its Platform Around AI",
+   "titleLen": 73,
+   "descLen": 154,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/dayforce",
+   "status": 200,
+   "ttfb": 88,
+   "bytes": 100800,
+   "words": 778,
+   "title": "Dayforce Support and Optimization | Align HCM",
+   "titleLen": 45,
+   "descLen": 144,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 9,
+   "imgNoAlt": 4,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/post-implementation-review-5-things-to-look-for",
+   "status": 200,
+   "ttfb": 78,
+   "bytes": 107764,
+   "words": 2443,
+   "title": "Post Implementation Review: 5 Things to Look For | Align HCM",
+   "titleLen": 60,
+   "descLen": 153,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies-old/results-vibra",
+   "status": 200,
+   "ttfb": 107,
+   "bytes": 270300,
+   "words": 826,
+   "title": "How Payroll Processing Automation Transforms Workforce Efficiency at Vibra",
+   "titleLen": 74,
+   "descLen": 467,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-role-based-training-approach-why-one-size-fits-all-never-works",
+   "status": 200,
+   "ttfb": 78,
+   "bytes": 109415,
+   "words": 2283,
+   "title": "The Role-Based Training Approach: Why One-Size-Fits-All Never Works",
+   "titleLen": 67,
+   "descLen": 152,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/ukgs-approach-to-ai-why-human-centered-automation-matters-more-than-you-think",
+   "status": 200,
+   "ttfb": 79,
+   "bytes": 116024,
+   "words": 2805,
+   "title": "UKG's Approach to AI: Why 'Human-Centered Automation' Matters More Than You Think",
+   "titleLen": 81,
+   "descLen": 189,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/paylocity-vs-paycheck-best-platform",
+   "status": 200,
+   "ttfb": 78,
+   "bytes": 112394,
+   "words": 2975,
+   "title": "Paylocity vs Paychex: Which Platform to Pick?",
+   "titleLen": 45,
+   "descLen": 115,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/awp-successfully-migrates-from-utm-to-ukg-dimensions-with-align-hcm",
+   "status": 200,
+   "ttfb": 186,
+   "bytes": 266185,
+   "words": 772,
+   "title": "How Automated Workforce Management Transforms Traffic Safety Companies Like AWP",
+   "titleLen": 79,
+   "descLen": 476,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/redberry-serves-up-an-improved-wfm-solution-with-ukg-and-align-hcm",
+   "status": 200,
+   "ttfb": 93,
+   "bytes": 265669,
+   "words": 731,
+   "title": "Workforce Management Optimization At Redberry Restaurants",
+   "titleLen": 57,
+   "descLen": 369,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/client-side-services",
+   "status": 200,
+   "ttfb": 86,
+   "bytes": 95091,
+   "words": 812,
+   "title": "Client-Side HCM Project Support | Align HCM",
+   "titleLen": 43,
+   "descLen": 151,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 5,
+   "imgNoAlt": 1,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-integration-blind-spot-how-planning-gaps-create-post-launch-failures",
+   "status": 200,
+   "ttfb": 90,
+   "bytes": 112896,
+   "words": 2772,
+   "title": "The Integration Blind Spot: How Planning Gaps Create Post-Launch Failures",
+   "titleLen": 73,
+   "descLen": 137,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/fractional-support-during-employee-transitions-maintaining-continuity-without-the-cost-of-full-time-headcount",
+   "status": 200,
+   "ttfb": 92,
+   "bytes": 105131,
+   "words": 1753,
+   "title": "Fractional HCM Support During Employee Transitions",
+   "titleLen": 50,
+   "descLen": 157,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/brokers/how-it-works",
+   "status": 200,
+   "ttfb": 170,
+   "bytes": 1280367,
+   "words": 311,
+   "title": "How the Channel Partner Program Works | Align HCM",
+   "titleLen": 49,
+   "descLen": 157,
+   "h1s": 4,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/contact",
+   "status": 200,
+   "ttfb": 92,
+   "bytes": 85495,
+   "words": 527,
+   "title": "Contact Align HCM | HCM implementation and support help",
+   "titleLen": 55,
+   "descLen": 132,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 2,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/chros-buyers-guide-to-hibob",
+   "status": 200,
+   "ttfb": 61,
+   "bytes": 105668,
+   "words": 1891,
+   "title": "A CHRO Buyer's Guide to HiBob Fit, Adoption, and Risk",
+   "titleLen": 53,
+   "descLen": 160,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies-old/results-driscolls",
+   "status": 200,
+   "ttfb": 112,
+   "bytes": 270608,
+   "words": 830,
+   "title": "How Driscoll's Automated Overtime Calculations for Hourly Staff Efficiently",
+   "titleLen": 75,
+   "descLen": 475,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/beyond-timekeeping-three-dimensions-of-manufacturing-workforce-intelligence",
+   "status": 200,
+   "ttfb": 157,
+   "bytes": 118251,
+   "words": 2908,
+   "title": "Beyond Timekeeping: Three Dimensions of Manufacturing Workforce Intelligence",
+   "titleLen": 76,
+   "descLen": 182,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/accessibility-policy-and-statement",
+   "status": 200,
+   "ttfb": 60,
+   "bytes": 90682,
+   "words": 1603,
+   "title": "Align HCM Policies and Accessibility Information",
+   "titleLen": 48,
+   "descLen": 132,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 2,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/brokers/faq",
+   "status": 200,
+   "ttfb": 118,
+   "bytes": 1280269,
+   "words": 308,
+   "title": "Channel Partner FAQ | Align HCM",
+   "titleLen": 31,
+   "descLen": 155,
+   "h1s": 4,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/ma-assistance-services",
+   "status": 200,
+   "ttfb": 105,
+   "bytes": 94007,
+   "words": 796,
+   "title": "HCM Support for M&A Transitions | Align HCM",
+   "titleLen": 43,
+   "descLen": 142,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 2,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division",
+   "status": 200,
+   "ttfb": 136,
+   "bytes": 270608,
+   "words": 830,
+   "title": "How Driscoll's Automated Overtime Calculations for Hourly Staff Efficiently",
+   "titleLen": 75,
+   "descLen": 475,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/careers",
+   "status": 200,
+   "ttfb": 73,
+   "bytes": 102928,
+   "words": 882,
+   "title": "Careers at Align HCM | HCM consulting roles",
+   "titleLen": 43,
+   "descLen": 142,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 7,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/paylocity",
+   "status": 200,
+   "ttfb": 126,
+   "bytes": 101589,
+   "words": 873,
+   "title": "Paylocity Implementation and Support | Align HCM",
+   "titleLen": 48,
+   "descLen": 142,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 9,
+   "imgNoAlt": 5,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/dayforce-implementation",
+   "status": 200,
+   "ttfb": 85,
+   "bytes": 136409,
+   "words": 1715,
+   "title": "Dayforce Implementation Partner | Align HCM",
+   "titleLen": 43,
+   "descLen": 130,
+   "h1s": 1,
+   "schema": [
+    "Organization",
+    "FAQPage",
+    "Service"
+   ],
+   "imgs": 21,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/how-leading-organizations-unlock-dayforces-full-potential-the-implementation-approach-that-delivers",
+   "status": 200,
+   "ttfb": 75,
+   "bytes": 117586,
+   "words": 2254,
+   "title": "The Dayforce Implementation Approach That Unlocks Value",
+   "titleLen": 55,
+   "descLen": 148,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg",
+   "status": 200,
+   "ttfb": 106,
+   "bytes": 121571,
+   "words": 3571,
+   "title": "The Strategic Buyer's Guide to UKG",
+   "titleLen": 34,
+   "descLen": 131,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/brokers/resources",
+   "status": 200,
+   "ttfb": 135,
+   "bytes": 1280299,
+   "words": 308,
+   "title": "Channel Partner Resources | Align HCM",
+   "titleLen": 37,
+   "descLen": 152,
+   "h1s": 4,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/data-conversion-checklist-what-to-prepare-before-migration",
+   "status": 200,
+   "ttfb": 61,
+   "bytes": 108970,
+   "words": 1883,
+   "title": "Data Conversion Checklist: What to Prepare Before Migration",
+   "titleLen": 59,
+   "descLen": 138,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/human-capital-management-strategies-for-hcm-support",
+   "status": 200,
+   "ttfb": 69,
+   "bytes": 107881,
+   "words": 2168,
+   "title": "Human Capital Management Strategies for HCM Support",
+   "titleLen": 51,
+   "descLen": 154,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/brokers/why-align",
+   "status": 200,
+   "ttfb": 85,
+   "bytes": 1280347,
+   "words": 311,
+   "title": "Why Refer Clients to Align HCM | Channel Partners",
+   "titleLen": 49,
+   "descLen": 155,
+   "h1s": 4,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/align-hcm-smartcare",
+   "status": 200,
+   "ttfb": 80,
+   "bytes": 233571,
+   "words": 817,
+   "title": "SmartCare | Align HCM",
+   "titleLen": 21,
+   "descLen": 143,
+   "h1s": 1,
+   "schema": [
+    "Service"
+   ],
+   "imgs": 2,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-ukg-ecosystem-advantage-why-open-apis-and-partner-networks-matter-for-long-term-success",
+   "status": 200,
+   "ttfb": 68,
+   "bytes": 119208,
+   "words": 3131,
+   "title": "The UKG Ecosystem Advantage: Why Open APIs and Partner Networks Matter for Long-Term Success",
+   "titleLen": 92,
+   "descLen": 196,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies-old/results-invision",
+   "status": 200,
+   "ttfb": 97,
+   "bytes": 270887,
+   "words": 826,
+   "title": "How HR Data Integration Services Transform Workforce Management at InVision",
+   "titleLen": 75,
+   "descLen": 546,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/quarterly-system-health-checks-an-optimization-framework",
+   "status": 200,
+   "ttfb": 68,
+   "bytes": 106387,
+   "words": 1998,
+   "title": "Quarterly System Health Checks: An Optimization Framework",
+   "titleLen": 57,
+   "descLen": 149,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/5-critical-mistakes-to-avoid-during-hcm-implementation",
+   "status": 200,
+   "ttfb": 70,
+   "bytes": 117661,
+   "words": 2938,
+   "title": "5 Critical Mistakes to Avoid During HCM Implementation",
+   "titleLen": 54,
+   "descLen": 169,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/why-your-workday-reporting-strategy-is-backwards-and-how-to-fix-it",
+   "status": 200,
+   "ttfb": 77,
+   "bytes": 112839,
+   "words": 2340,
+   "title": "Why Your Workday Reporting Strategy Is Backwards (And How to Fix It)",
+   "titleLen": 68,
+   "descLen": 183,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/about",
+   "status": 200,
+   "ttfb": 86,
+   "bytes": 105642,
+   "words": 1666,
+   "title": "About Align HCM | HCM implementation and support experts",
+   "titleLen": 56,
+   "descLen": 154,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 18,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/referred",
+   "status": 200,
+   "ttfb": 113,
+   "bytes": 1280298,
+   "words": 309,
+   "title": "Referred by Your Advisor? | Align HCM",
+   "titleLen": 37,
+   "descLen": 161,
+   "h1s": 4,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/workforce-visibility-gap",
+   "status": 200,
+   "ttfb": 66,
+   "bytes": 103873,
+   "words": 1729,
+   "title": "The Workforce Visibility Gap: Why Frontline Teams Need HCM Systems That Support Real Decisions",
+   "titleLen": 94,
+   "descLen": 141,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/api-vs.-flat-file-integrations-choosing-your-hcm-ecosystem",
+   "status": 200,
+   "ttfb": 75,
+   "bytes": 107251,
+   "words": 2170,
+   "title": "API vs. Flat File Integration: Choosing Your HCM's Ecosystem",
+   "titleLen": 60,
+   "descLen": 139,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-configuration-decisions-that-determine-whether-dayforce-feels-intuitive-or-overwhelming",
+   "status": 200,
+   "ttfb": 77,
+   "bytes": 107026,
+   "words": 2040,
+   "title": "The Configuration Decisions That Determine Whether Dayforce Feels Intuitive or Overwhelming",
+   "titleLen": 91,
+   "descLen": 161,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/resorts-world-las-vegas-bets-on-ukg-talent-management",
+   "status": 200,
+   "ttfb": 99,
+   "bytes": 265629,
+   "words": 755,
+   "title": "Resorts World Las Vegas Partners With Align To Optimize UKG Talent Management",
+   "titleLen": 77,
+   "descLen": 450,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/brokers",
+   "status": 200,
+   "ttfb": 135,
+   "bytes": 1280252,
+   "words": 308,
+   "title": "Channel Partner Program | Align HCM",
+   "titleLen": 35,
+   "descLen": 152,
+   "h1s": 4,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-case-for-internal-talent-mobility",
+   "status": 200,
+   "ttfb": 60,
+   "bytes": 107733,
+   "words": 2242,
+   "title": "The Case for Internal Talent Mobility as a Growth Strategy",
+   "titleLen": 58,
+   "descLen": 137,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/post-go-live-reality-check-why-hibob-adoption-succeeds-where-intuitive-systems-fail",
+   "status": 200,
+   "ttfb": 78,
+   "bytes": 107954,
+   "words": 2245,
+   "title": "Post-Go-Live Reality Check: Why HiBob Adoption Succeeds Where \"Intuitive\" Systems Fail",
+   "titleLen": 86,
+   "descLen": 125,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "(unparseable)"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/90-day-playbook-for-hcm-integration-post-acquisition",
+   "status": 200,
+   "ttfb": 47,
+   "bytes": 111529,
+   "words": 2410,
+   "title": "90-Day Playbook for HCM Integration Post-Acquisition",
+   "titleLen": 52,
+   "descLen": 154,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/employee-communication-strategies-for-ma-hcm-transitions",
+   "status": 200,
+   "ttfb": 99,
+   "bytes": 110520,
+   "words": 2532,
+   "title": "M&A Integration Best Practices: Comm Strategy",
+   "titleLen": 45,
+   "descLen": 142,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/high-performance-culture",
+   "status": 200,
+   "ttfb": 85,
+   "bytes": 111033,
+   "words": 2762,
+   "title": "High-Performance Culture: How to Attract & Retain Top Talent",
+   "titleLen": 60,
+   "descLen": 134,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes",
+   "status": 200,
+   "ttfb": 75,
+   "bytes": 270887,
+   "words": 826,
+   "title": "How HR Data Integration Services Transform Workforce Management at InVision",
+   "titleLen": 75,
+   "descLen": 546,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/summer-pto-planning-hcm-data-workforce-coverage-gaps",
+   "status": 200,
+   "ttfb": 71,
+   "bytes": 111094,
+   "words": 2009,
+   "title": "Summer PTO Planning: How HCM Data Reveals Workforce Coverage Gaps",
+   "titleLen": 65,
+   "descLen": 124,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/workday",
+   "status": 200,
+   "ttfb": 73,
+   "bytes": 99812,
+   "words": 823,
+   "title": "Workday Support and Optimization | Align HCM",
+   "titleLen": 44,
+   "descLen": 126,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 8,
+   "imgNoAlt": 3,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/beyond-the-basics-advanced-hcm-training-strategies-that-drive-roi",
+   "status": 200,
+   "ttfb": 63,
+   "bytes": 107672,
+   "words": 2209,
+   "title": "Beyond the Basics: Advanced HCM Training Strategies That Drive ROI",
+   "titleLen": 66,
+   "descLen": 145,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/dayforce-optimization-after-go-live",
+   "status": 200,
+   "ttfb": 69,
+   "bytes": 110907,
+   "words": 1674,
+   "title": "Dayforce Optimization After Go-Live: Where to Look First",
+   "titleLen": 56,
+   "descLen": 153,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178",
+   "status": 200,
+   "ttfb": 41,
+   "bytes": 116629,
+   "words": 1113,
+   "title": "Align HCM | HCM implementation and SmartCare support",
+   "titleLen": 52,
+   "descLen": 167,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 49,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-data-imperative-why-pre-conversion-data-cleaning-determines-hcm-success",
+   "status": 200,
+   "ttfb": 82,
+   "bytes": 108784,
+   "words": 2231,
+   "title": "The Data Imperative: Why Pre-Conversion Data Cleaning Determines HCM Success",
+   "titleLen": 76,
+   "descLen": 123,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/signs-your-hcm-system-needs-optimization",
+   "status": 200,
+   "ttfb": 60,
+   "bytes": 107005,
+   "words": 2072,
+   "title": "Signs Your HCM System Needs Optimization",
+   "titleLen": 40,
+   "descLen": 124,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/integration",
+   "status": 200,
+   "ttfb": 69,
+   "bytes": 94914,
+   "words": 833,
+   "title": "HCM Integration Services | Align HCM",
+   "titleLen": 36,
+   "descLen": 148,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 5,
+   "imgNoAlt": 2,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-workday",
+   "status": 200,
+   "ttfb": 68,
+   "bytes": 117305,
+   "words": 1627,
+   "title": "The Strategic Buyer's Guide to Workday | Align HCM",
+   "titleLen": 50,
+   "descLen": 169,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 12,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-hidden-roi-in-paylocitys-time-attendance-its-not-just-about-tracking-hours",
+   "status": 200,
+   "ttfb": 71,
+   "bytes": 112962,
+   "words": 2314,
+   "title": "The Hidden ROI in Paylocity's Time & Attendance: It's Not Just About Tracking Hours",
+   "titleLen": 83,
+   "descLen": 162,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/ukg-buyers-guide",
+   "status": 200,
+   "ttfb": 42,
+   "bytes": 121571,
+   "words": 3571,
+   "title": "The Strategic Buyer's Guide to UKG",
+   "titleLen": 34,
+   "descLen": 131,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-ultimate-year-end-payroll-checklist-is-here-stop-guessing-and-secure-a-flawless-tax-season-clone",
+   "status": 200,
+   "ttfb": 64,
+   "bytes": 108718,
+   "words": 1804,
+   "title": "The Ultimate Year-End Payroll Checklist is Here! Stop Guessing and Secure a Flawless Tax Season",
+   "titleLen": 95,
+   "descLen": 149,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/5-ways-hcm-technology-connects-workforce-data-to-sales-performance",
+   "status": 200,
+   "ttfb": 70,
+   "bytes": 105767,
+   "words": 1657,
+   "title": "5 Ways HCM Technology Connects Workforce Data to Sales Performance",
+   "titleLen": 66,
+   "descLen": 141,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite",
+   "status": 200,
+   "ttfb": 95,
+   "bytes": 270266,
+   "words": 766,
+   "title": "How GTAA Overcame Workforce Management Challenges With UKG Pro And Align HCM",
+   "titleLen": 76,
+   "descLen": 439,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 5,
+   "imgNoAlt": 1,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/adp",
+   "status": 200,
+   "ttfb": 74,
+   "bytes": 95138,
+   "words": 670,
+   "title": "ADP Implementation and Support | Align HCM",
+   "titleLen": 42,
+   "descLen": 133,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/",
+   "status": 200,
+   "ttfb": 42,
+   "bytes": 116629,
+   "words": 1113,
+   "title": "Align HCM | HCM implementation and SmartCare support",
+   "titleLen": 52,
+   "descLen": 167,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 49,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/paylocity-training-implementation-methods",
+   "status": 200,
+   "ttfb": 80,
+   "bytes": 109157,
+   "words": 2365,
+   "title": "Paylocity Training: Best Implementation Methods",
+   "titleLen": 47,
+   "descLen": 139,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation",
+   "status": 200,
+   "ttfb": 52,
+   "bytes": 270300,
+   "words": 826,
+   "title": "How Payroll Processing Automation Transforms Workforce Efficiency at Vibra",
+   "titleLen": 74,
+   "descLen": 467,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/dayforce-the-ai-features-your-organization-probably-isnt-using-yet-and-why-thats-actually-okay",
+   "status": 200,
+   "ttfb": 68,
+   "bytes": 104195,
+   "words": 1708,
+   "title": "Dayforce AI Features You May Not Be Ready to Use Yet",
+   "titleLen": 52,
+   "descLen": 150,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/why-fast-growing-companies-choose-6-week-implementations-over-18-month-enterprise-projects",
+   "status": 200,
+   "ttfb": 81,
+   "bytes": 110409,
+   "words": 2253,
+   "title": "Why Fast-Growing Companies Choose 6-Week Implementations Over 18-Month \"Enterprise\" Projects",
+   "titleLen": 92,
+   "descLen": 129,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "(unparseable)",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/6-things-before-payroll-implementation",
+   "status": 200,
+   "ttfb": 71,
+   "bytes": 114754,
+   "words": 2614,
+   "title": "6 Things to Do Before Payroll Implementation | Align HCM",
+   "titleLen": 56,
+   "descLen": 161,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/when-speed-meets-strategy-ukg-rapid-hire-and-the-intelligence-behind-high-volume-hiring",
+   "status": 200,
+   "ttfb": 62,
+   "bytes": 119045,
+   "words": 3069,
+   "title": "When Speed Meets Strategy: UKG Rapid Hire and the Intelligence Behind High-Volume Hiring",
+   "titleLen": 88,
+   "descLen": 168,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies",
+   "status": 200,
+   "ttfb": 64,
+   "bytes": 271246,
+   "words": 420,
+   "title": "Case Studies",
+   "titleLen": 12,
+   "descLen": 78,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 10,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+   "status": 200,
+   "ttfb": 47,
+   "bytes": 270266,
+   "words": 766,
+   "title": "How GTAA Overcame Workforce Management Challenges With UKG Pro And Align HCM",
+   "titleLen": 76,
+   "descLen": 439,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 5,
+   "imgNoAlt": 1,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/beumer-partners-with-align-to-overcome-legacy-data-challenges",
+   "status": 200,
+   "ttfb": 75,
+   "bytes": 268291,
+   "words": 757,
+   "title": "Legacy System Decommissioning at Beumer: Ensuring Data Integrity",
+   "titleLen": 64,
+   "descLen": 409,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 6,
+   "imgNoAlt": 2,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/brokers/smartcare",
+   "status": 200,
+   "ttfb": 116,
+   "bytes": 1280395,
+   "words": 310,
+   "title": "SmartCare for Channel Partner Clients | Align HCM",
+   "titleLen": 49,
+   "descLen": 167,
+   "h1s": 4,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/best-practices-for-implementing-hibob-a-strategic-guide-to-success",
+   "status": 200,
+   "ttfb": 62,
+   "bytes": 107216,
+   "words": 1933,
+   "title": "Best Practices for Implementing HiBob: A Strategic Guide to Success",
+   "titleLen": 67,
+   "descLen": 126,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/support",
+   "status": 200,
+   "ttfb": 67,
+   "bytes": 95025,
+   "words": 826,
+   "title": "HCM Support Services | SmartCare by Align HCM",
+   "titleLen": 45,
+   "descLen": 143,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 5,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-client-side-advantage-why-internal-project-leadership-determines-hcm-implementation-success",
+   "status": 200,
+   "ttfb": 75,
+   "bytes": 107746,
+   "words": 1993,
+   "title": "The Client-Side Advantage: Why Internal Project Leadership Determines HCM Implementation Success",
+   "titleLen": 96,
+   "descLen": 124,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/beyond-hiring-the-case-for-internal-talent-mobility-as-a-growth-strategy",
+   "status": 200,
+   "ttfb": 92,
+   "bytes": 116789,
+   "words": 2807,
+   "title": "Beyond Hiring: The Case for Internal Talent Mobility as a Growth Strategy",
+   "titleLen": 73,
+   "descLen": 159,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/dayforce-guide-for-strategic-buyers",
+   "status": 200,
+   "ttfb": 86,
+   "bytes": 116185,
+   "words": 1574,
+   "title": "The Strategic Buyer's Guide to Dayforce | Align HCM",
+   "titleLen": 51,
+   "descLen": 132,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 12,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-workday-ai-gap-most-organizations-dont-know-they-have",
+   "status": 200,
+   "ttfb": 81,
+   "bytes": 105010,
+   "words": 1905,
+   "title": "The Workday AI Gap Most HR Teams Miss After Go-Live",
+   "titleLen": 51,
+   "descLen": 150,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-process-alignment-imperative-why-customization-alone-wont-deliver-hcm-value",
+   "status": 200,
+   "ttfb": 117,
+   "bytes": 108143,
+   "words": 2157,
+   "title": "The Process Alignment Imperative: Why Customization Alone Won't Deliver HCM Value",
+   "titleLen": 81,
+   "descLen": 150,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/fractional-vs.-full-time-making-the-right-staffing-decision",
+   "status": 200,
+   "ttfb": 61,
+   "bytes": 110711,
+   "words": 2454,
+   "title": "Fractional vs. Full-Time: Making the Right Staffing Decision",
+   "titleLen": 60,
+   "descLen": 130,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/integrating-workday-with-ukg-why-teams-struggle-and-how-align-hcm-helps",
+   "status": 200,
+   "ttfb": 51,
+   "bytes": 112610,
+   "words": 1862,
+   "title": "Why Workday and UKG Integration Becomes a Trust Problem",
+   "titleLen": 55,
+   "descLen": 159,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-paylocity",
+   "status": 200,
+   "ttfb": 75,
+   "bytes": 120127,
+   "words": 3552,
+   "title": "The Strategic Buyer's Guide to Paylocity",
+   "titleLen": 40,
+   "descLen": 137,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/optimization",
+   "status": 200,
+   "ttfb": 72,
+   "bytes": 95156,
+   "words": 826,
+   "title": "HCM Optimization Services | Align HCM",
+   "titleLen": 37,
+   "descLen": 143,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 5,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/most-chros-are-buying-ai-tools-theyll-never-use",
+   "status": 200,
+   "ttfb": 76,
+   "bytes": 103773,
+   "words": 1744,
+   "title": "Why CHROs Buy AI Tools Their Teams Never Actually Use",
+   "titleLen": 53,
+   "descLen": 154,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/ukg",
+   "status": 200,
+   "ttfb": 81,
+   "bytes": 97565,
+   "words": 750,
+   "title": "UKG Implementation and Support Partner | Align HCM",
+   "titleLen": 50,
+   "descLen": 120,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 6,
+   "imgNoAlt": 1,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/implementation",
+   "status": 200,
+   "ttfb": 67,
+   "bytes": 93770,
+   "words": 801,
+   "title": "HCM Implementation Services | Align HCM",
+   "titleLen": 39,
+   "descLen": 148,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 2,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies-old/results-farming-organization",
+   "status": 200,
+   "ttfb": 46,
+   "bytes": 270608,
+   "words": 830,
+   "title": "How Driscoll's Automated Overtime Calculations for Hourly Staff Efficiently",
+   "titleLen": 75,
+   "descLen": 475,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 4,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/kimberly-clark-cleans-up-complex-rules-with-ukg-and-align-hcm",
+   "status": 200,
+   "ttfb": 69,
+   "bytes": 269131,
+   "words": 758,
+   "title": "Kimberly-Clark Reduces Union Grievances with Align HCM",
+   "titleLen": 54,
+   "descLen": 580,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 6,
+   "imgNoAlt": 2,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/adp-implementation-specialists",
+   "status": 200,
+   "ttfb": 65,
+   "bytes": 117162,
+   "words": 1641,
+   "title": "The Strategic Buyer's Guide to ADP | Align HCM",
+   "titleLen": 46,
+   "descLen": 176,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 12,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division",
+   "status": 200,
+   "ttfb": 73,
+   "bytes": 271985,
+   "words": 812,
+   "title": "How HR Management Software Transforms Workforce Efficiency at Arrow",
+   "titleLen": 67,
+   "descLen": 325,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 6,
+   "imgNoAlt": 2,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/success-stories",
+   "status": 200,
+   "ttfb": 70,
+   "bytes": 271246,
+   "words": 420,
+   "title": "Case Studies",
+   "titleLen": 12,
+   "descLen": 78,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 10,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/best-practices-for-implementing-workday-a-strategic-guide-to-success",
+   "status": 200,
+   "ttfb": 63,
+   "bytes": 108564,
+   "words": 2264,
+   "title": "Best Practices for Implementing Workday",
+   "titleLen": 39,
+   "descLen": 148,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies-old",
+   "status": 200,
+   "ttfb": 47,
+   "bytes": 271246,
+   "words": 420,
+   "title": "Case Studies",
+   "titleLen": 12,
+   "descLen": 78,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 10,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/disclaimers-policies/",
+   "status": 200,
+   "ttfb": 76,
+   "bytes": 92844,
+   "words": 1898,
+   "title": "Align HCM Policies and Accessibility Information",
+   "titleLen": 48,
+   "descLen": 132,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 2,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/hr-as-a-financial-driver-turning-people-data-into-c-suite-business-intelligence",
+   "status": 200,
+   "ttfb": 68,
+   "bytes": 105204,
+   "words": 1664,
+   "title": "HR as a Financial Driver: People Data CFOs Can Trust",
+   "titleLen": 52,
+   "descLen": 154,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/ai-integration-with-hcm-systems",
+   "status": 200,
+   "ttfb": 68,
+   "bytes": 105369,
+   "words": 1881,
+   "title": "AI Integration With HCM Systems: Are You Leaving Money on the Table?",
+   "titleLen": 68,
+   "descLen": 155,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-retention-equation-how-retail-turnover-costs-more-than-your-pl-reveals",
+   "status": 200,
+   "ttfb": 80,
+   "bytes": 113853,
+   "words": 2369,
+   "title": "The Retention Equation: How Retail Turnover Costs More Than Your P&L Reveals",
+   "titleLen": 76,
+   "descLen": 192,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting",
+    "BlogPosting",
+    "FAQPage"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-hidden-price-tag-why-diy-hcm-implementation-costs-more-than-you-think",
+   "status": 200,
+   "ttfb": 69,
+   "bytes": 113372,
+   "words": 2324,
+   "title": "Why DIY HCM Implementation Costs More Than You Think",
+   "titleLen": 52,
+   "descLen": 138,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/contingent-workforce-management-close-the-blind-spot",
+   "status": 200,
+   "ttfb": 66,
+   "bytes": 114045,
+   "words": 2230,
+   "title": "Contingent Workforce Management: Close the Blind Spot",
+   "titleLen": 53,
+   "descLen": 154,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 12,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/post-go-live-hcm-support-roi",
+   "status": 200,
+   "ttfb": 99,
+   "bytes": 112368,
+   "words": 2536,
+   "title": "Earning HCM ROI After Go-Live | Align HCM",
+   "titleLen": 41,
+   "descLen": 141,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services/assessments-strategic-engagements",
+   "status": 200,
+   "ttfb": 95,
+   "bytes": 104495,
+   "words": 999,
+   "title": "HCM Assessment and Strategic Engagements | Align HCM",
+   "titleLen": 52,
+   "descLen": 140,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 2,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/services",
+   "status": 200,
+   "ttfb": 108,
+   "bytes": 101770,
+   "words": 1085,
+   "title": "HCM Services | Implementation, support, and optimization",
+   "titleLen": 56,
+   "descLen": 163,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 2,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+   "status": 200,
+   "ttfb": 42,
+   "bytes": 271985,
+   "words": 812,
+   "title": "How HR Management Software Transforms Workforce Efficiency at Arrow",
+   "titleLen": 67,
+   "descLen": 325,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 6,
+   "imgNoAlt": 2,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 1
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/hibob-customers-cut-hr-support-requests-by-80-heres-what-changed",
+   "status": 200,
+   "ttfb": 73,
+   "bytes": 104247,
+   "words": 1700,
+   "title": "What 80% Fewer HiBob Support Requests Really Requires",
+   "titleLen": 53,
+   "descLen": 153,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/partners/hibob",
+   "status": 200,
+   "ttfb": 64,
+   "bytes": 99913,
+   "words": 820,
+   "title": "HiBob Implementation and Support | Align HCM",
+   "titleLen": 44,
+   "descLen": 135,
+   "h1s": 1,
+   "schema": [
+    "Organization"
+   ],
+   "imgs": 8,
+   "imgNoAlt": 5,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  },
+  {
+   "url": "https://www.alignhcm.com/blog/the-most-common-challenges-with-hcm-implementations",
+   "status": 200,
+   "ttfb": 80,
+   "bytes": 110202,
+   "words": 2055,
+   "title": "Common Challenges with HCM Implementations",
+   "titleLen": 42,
+   "descLen": 141,
+   "h1s": 1,
+   "schema": [
+    "BlogPosting",
+    "Organization",
+    "BlogPosting"
+   ],
+   "imgs": 11,
+   "imgNoAlt": 0,
+   "canonicalOk": true,
+   "published": null,
+   "redirects": 0
+  }
+ ]
+}
