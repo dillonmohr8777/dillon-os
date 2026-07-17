@@ -227,11 +227,168 @@ function Get-NoRedirectResponse {
   } finally { $client.Dispose(); $handler.Dispose() }
 }
 
+function Get-SiteCoverage {
+  [xml]$sitemap = (Invoke-WebRequest -Uri 'https://www.alignhcm.com/sitemap.xml' -UseBasicParsing -TimeoutSec 60).Content
+  $urls = @($sitemap.SelectNodes("//*[local-name()='url']/*[local-name()='loc']") |
+    ForEach-Object { $_.InnerText.Trim() } |
+    Where-Object { $_ } |
+    Select-Object -Unique)
+
+  Add-Type -AssemblyName System.Net.Http
+  $noRedirectHandler = [Net.Http.HttpClientHandler]::new()
+  $noRedirectHandler.AllowAutoRedirect = $false
+  $noRedirectHandler.MaxConnectionsPerServer = 8
+  $noRedirectClient = [Net.Http.HttpClient]::new($noRedirectHandler)
+  $redirectHandler = [Net.Http.HttpClientHandler]::new()
+  $redirectHandler.AllowAutoRedirect = $true
+  $redirectHandler.MaxConnectionsPerServer = 8
+  $redirectClient = [Net.Http.HttpClient]::new($redirectHandler)
+  $noRedirectClient.Timeout = [TimeSpan]::FromSeconds(45)
+  $redirectClient.Timeout = [TimeSpan]::FromSeconds(45)
+  $noRedirectClient.DefaultRequestHeaders.UserAgent.ParseAdd('Align-Site-Watchdog/1.0')
+  $redirectClient.DefaultRequestHeaders.UserAgent.ParseAdd('Align-Site-Watchdog/1.0')
+
+  $redirects = @()
+  $brokenSitemap = @()
+  $missingGa4 = @()
+  $missingHubSpot = @()
+  $attributionGaps = @()
+  $coverageGaps = @()
+  $sandboxPages = @()
+  $legacyPages = @()
+  $internalTargets = @{}
+  $customAttributionCount = 0
+  $nativeCaseStudyCount = 0
+  $conversionCoveredCount = 0
+  $finalOk = 0
+  $smartCare = $null
+
+  try {
+    foreach ($url in $urls) {
+      $initialStatus = 0
+      $finalStatus = 0
+      $finalUrl = $url
+      $html = ''
+      try {
+        $initialResponse = $noRedirectClient.GetAsync($url, [Net.Http.HttpCompletionOption]::ResponseHeadersRead).GetAwaiter().GetResult()
+        try { $initialStatus = [int]$initialResponse.StatusCode } finally { $initialResponse.Dispose() }
+
+        for ($attempt = 1; $attempt -le 2; $attempt++) {
+          try {
+            $response = $redirectClient.GetAsync($url).GetAwaiter().GetResult()
+            try {
+              $finalStatus = [int]$response.StatusCode
+              $finalUrl = [string]$response.RequestMessage.RequestUri.AbsoluteUri
+              $html = $response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
+            } finally { $response.Dispose() }
+            break
+          } catch {
+            if ($attempt -eq 2) { throw }
+          }
+        }
+      } catch {
+        $brokenSitemap += [pscustomobject]@{ url = $url; status = 0; error = $_.Exception.Message }
+        continue
+      }
+
+      if ($initialStatus -ge 300 -and $initialStatus -lt 400) {
+        $redirects += [pscustomobject]@{ url = $url; status = $initialStatus; finalUrl = $finalUrl }
+      }
+      if ($finalStatus -ge 200 -and $finalStatus -lt 400) { $finalOk++ }
+      else { $brokenSitemap += [pscustomobject]@{ url = $url; status = $finalStatus; error = '' } }
+
+      $path = ([Uri]$finalUrl).AbsolutePath
+      $hasGa4 = $html -match 'G-320235048'
+      $hasHubSpot = $html -match '(?:hs/scriptloader/242825734\.js|js\.hs-scripts\.com/242825734\.js)'
+      $hasCustomAttribution = $html -match 'align-attribution(?:\.min)?\.js'
+      $isCaseStudy = $path -match '^/case-studies(?:/|$)' -and $html -match 'scp_content_type:\s*["'']case-study["'']'
+      $hasNativeCaseStudyCoverage = $isCaseStudy -and $hasGa4 -and $hasHubSpot -and
+        ($path -match '^/case-studies/?$' -or $html -match 'data-hubspot-wrapper-cta-id=' -or $html -match '(?is)<form\b')
+
+      if (!$hasGa4) { $missingGa4 += $url }
+      if (!$hasHubSpot) { $missingHubSpot += $url }
+      if ($hasCustomAttribution) { $customAttributionCount++ }
+      elseif ($hasNativeCaseStudyCoverage) { $nativeCaseStudyCount++ }
+      if (!$hasCustomAttribution -and !$hasNativeCaseStudyCoverage) { $attributionGaps += $url }
+
+      $hasForm = $html -match '(?is)<form\b|data-hs-forms-root|hbspt\.forms\.create'
+      $hasTrackedCta = $html -match 'data-hubspot-wrapper-cta-id=|data-align-cta(?:\s|=)|align-blog-cta--inline'
+      $hasMeetingOrContactLink = $html -match '(?is)href\s*=\s*["''][^"'']*(?:/contact(?:[/?#]|["''])|meetings(?:-na2)?\.hubspot\.com|/meetings/|/schedule)'
+      if ($hasForm -or $hasTrackedCta -or $hasMeetingOrContactLink) { $conversionCoveredCount++ }
+      else { $coverageGaps += $url }
+      if ($html -match 'sandbox\.hs-sites\.com') { $sandboxPages += $url }
+      if ($url -match '/case-studies-old(?:/|$)|/success-stories/?$') { $legacyPages += $url }
+
+      if ($url -match '/align-hcm-smartcare/?$') {
+        $smartCare = [pscustomobject]@{
+          ga4 = $hasGa4
+          hubspot = $hasHubSpot
+          attribution = $hasCustomAttribution
+          managedForm = ($html -match 'data-align-managed-form="true"')
+          fakeSuccessRemoved = ($html -notmatch 'Thanks\. We will call you within the hour')
+        }
+      }
+
+      foreach ($linkMatch in [regex]::Matches($html, '(?is)\bhref\s*=\s*["'']([^"'']+)["'']')) {
+        $href = [Net.WebUtility]::HtmlDecode($linkMatch.Groups[1].Value.Trim())
+        if (!$href -or $href -match '^(?:#|mailto:|tel:|javascript:|data:)') { continue }
+        try { $targetUri = [Uri]::new([Uri]$finalUrl, $href) } catch { continue }
+        if ($targetUri.Host -notin @('alignhcm.com', 'www.alignhcm.com')) { continue }
+        if ($targetUri.AbsolutePath -match '^/(?:hs|_hcms)/') { continue }
+        if ($targetUri.AbsolutePath -match '\.(?:css|js|mjs|png|jpe?g|gif|svg|webp|ico|woff2?|ttf|eot|mp4|webm)(?:$|/)') { continue }
+        $builder = [UriBuilder]::new($targetUri)
+        $builder.Scheme = 'https'
+        $builder.Host = 'www.alignhcm.com'
+        $builder.Port = -1
+        $builder.Query = ''
+        $builder.Fragment = ''
+        $target = $builder.Uri.AbsoluteUri
+        $internalTargets[$target] = $true
+      }
+    }
+
+    $brokenInternal = @()
+    foreach ($target in @($internalTargets.Keys | Sort-Object)) {
+      try {
+        $response = $redirectClient.GetAsync($target, [Net.Http.HttpCompletionOption]::ResponseHeadersRead).GetAwaiter().GetResult()
+        try { $status = [int]$response.StatusCode } finally { $response.Dispose() }
+        if ($status -lt 200 -or $status -ge 400) { $brokenInternal += [pscustomobject]@{ url = $target; status = $status } }
+      } catch { $brokenInternal += [pscustomobject]@{ url = $target; status = 0 } }
+    }
+  } finally {
+    $noRedirectClient.Dispose()
+    $noRedirectHandler.Dispose()
+    $redirectClient.Dispose()
+    $redirectHandler.Dispose()
+  }
+
+  [pscustomobject][ordered]@{
+    asOf = [DateTimeOffset]::Now.ToString('o')
+    sitemapUrls = $urls.Count
+    finalOk = $finalOk
+    brokenSitemapUrls = @($brokenSitemap)
+    redirectingSitemapUrls = @($redirects)
+    internalTargets = $internalTargets.Count
+    brokenInternalTargets = @($brokenInternal)
+    missingGa4 = @($missingGa4)
+    missingHubSpot = @($missingHubSpot)
+    customAttributionPages = $customAttributionCount
+    nativeCaseStudyPages = $nativeCaseStudyCount
+    attributionCoverageGaps = @($attributionGaps)
+    conversionCoveredPages = $conversionCoveredCount
+    conversionCoverageGaps = @($coverageGaps)
+    sandboxLinkPages = @($sandboxPages)
+    legacyCaseStudyPages = @($legacyPages)
+    smartCare = $smartCare
+  }
+}
+
 function Get-AttributionHealth {
   param(
     [Parameter(Mandatory = $true)][hashtable]$Headers,
     [Parameter(Mandatory = $true)][long]$StartMilliseconds,
-    [Parameter(Mandatory = $true)][DateTimeOffset]$AsOf
+    [Parameter(Mandatory = $true)][DateTimeOffset]$AsOf,
+    [Parameter(Mandatory = $true)]$SiteCoverage
   )
   $forms = Get-AllMarketingForms -Headers $Headers
   $guideForm = @($forms | Where-Object { $_.name -eq 'Align Buyer Guide Download' }) | Select-Object -First 1
@@ -255,6 +412,60 @@ function Get-AttributionHealth {
   $homeHtml = (Invoke-WebRequest -Uri 'https://www.alignhcm.com/' -UseBasicParsing).Content
   $assetLive = $homeHtml -match 'align-attribution'
   $checks += [pscustomobject]@{ check = 'Production attribution asset'; status = if ($assetLive) { 'pass' } else { 'fail' }; detail = if ($assetLive) { 'Loaded on the production domain.' } else { 'Missing from production HTML.' } }
+
+  $sitemapHealthy = $SiteCoverage.finalOk -eq $SiteCoverage.sitemapUrls -and @($SiteCoverage.brokenSitemapUrls).Count -eq 0
+  $checks += [pscustomobject]@{
+    check = 'Full sitemap crawl'
+    status = if ($sitemapHealthy) { 'pass' } else { 'fail' }
+    detail = "$($SiteCoverage.finalOk)/$($SiteCoverage.sitemapUrls) sitemap URLs reached a healthy final response."
+  }
+  $checks += [pscustomobject]@{
+    check = 'Internal link integrity'
+    status = if (@($SiteCoverage.brokenInternalTargets).Count -eq 0) { 'pass' } else { 'fail' }
+    detail = "$($SiteCoverage.internalTargets) unique internal targets checked; $(@($SiteCoverage.brokenInternalTargets).Count) broken."
+  }
+  $checks += [pscustomobject]@{
+    check = 'GA4 site coverage'
+    status = if (@($SiteCoverage.missingGa4).Count -eq 0) { 'pass' } else { 'fail' }
+    detail = "$(@($SiteCoverage.missingGa4).Count) sitemap page(s) missing G-320235048."
+  }
+  $checks += [pscustomobject]@{
+    check = 'HubSpot site coverage'
+    status = if (@($SiteCoverage.missingHubSpot).Count -eq 0) { 'pass' } else { 'fail' }
+    detail = "$(@($SiteCoverage.missingHubSpot).Count) sitemap page(s) missing portal 242825734 tracking."
+  }
+  $checks += [pscustomobject]@{
+    check = 'Site-wide attribution coverage'
+    status = if (@($SiteCoverage.attributionCoverageGaps).Count -eq 0) { 'pass' } else { 'fail' }
+    detail = "$($SiteCoverage.customAttributionPages) custom-attribution page(s) plus $($SiteCoverage.nativeCaseStudyPages) HubSpot-native case-study page(s); $(@($SiteCoverage.attributionCoverageGaps).Count) measurement gap(s)."
+  }
+  $checks += [pscustomobject]@{
+    check = 'Site-wide conversion paths'
+    status = if (@($SiteCoverage.conversionCoverageGaps).Count -eq 0) { 'pass' } else { 'fail' }
+    detail = "$($SiteCoverage.conversionCoveredPages)/$($SiteCoverage.sitemapUrls) sitemap page(s) expose a form, tracked CTA, contact link, or meeting path; $(@($SiteCoverage.conversionCoverageGaps).Count) gap(s)."
+  }
+  $smartCareHealthy = $SiteCoverage.smartCare -and $SiteCoverage.smartCare.ga4 -and $SiteCoverage.smartCare.hubspot -and
+    $SiteCoverage.smartCare.attribution -and $SiteCoverage.smartCare.managedForm -and $SiteCoverage.smartCare.fakeSuccessRemoved
+  $checks += [pscustomobject]@{
+    check = 'SmartCare form and tracking'
+    status = if ($smartCareHealthy) { 'pass' } else { 'fail' }
+    detail = if ($smartCareHealthy) { 'GA4, HubSpot, managed submission, attribution, and honest success handling are live.' } else { 'One or more SmartCare conversion requirements failed.' }
+  }
+  $checks += [pscustomobject]@{
+    check = 'Sandbox footer links'
+    status = if (@($SiteCoverage.sandboxLinkPages).Count -eq 0) { 'pass' } else { 'fail' }
+    detail = "$(@($SiteCoverage.sandboxLinkPages).Count) sitemap page(s) contain sandbox-domain policy links."
+  }
+  $checks += [pscustomobject]@{
+    check = 'Legacy case-study duplicates'
+    status = if (@($SiteCoverage.legacyCaseStudyPages).Count -eq 0) { 'pass' } else { 'warn' }
+    detail = "$(@($SiteCoverage.legacyCaseStudyPages).Count) legacy case-study URL(s) remain in the sitemap."
+  }
+  $checks += [pscustomobject]@{
+    check = 'Redirecting sitemap URLs'
+    status = if (@($SiteCoverage.redirectingSitemapUrls).Count -eq 0) { 'pass' } else { 'warn' }
+    detail = "$(@($SiteCoverage.redirectingSitemapUrls).Count) sitemap URL(s) redirect before reaching the canonical page."
+  }
 
   $blogHtml = (Invoke-WebRequest -Uri 'https://www.alignhcm.com/blog' -UseBasicParsing).Content
   $canonicalCount = [regex]::Matches($blogHtml, '(?is)<link[^>]+rel=["'']canonical["''][^>]*>').Count
@@ -320,8 +531,9 @@ try {
   $endMs = $end.ToUnixTimeMilliseconds().ToString()
 
   $deals = Invoke-HubSpotSearch -ObjectType 'deals' -Headers $headers -Properties @(
-    'amount', 'closedate', 'hs_analytics_source', 'hs_analytics_source_data_1',
-    'hs_analytics_source_data_2', 'lead_source', 'hs_is_closed_won'
+    'amount', 'createdate', 'closedate', 'dealtype', 'pipeline', 'dealstage',
+    'hs_analytics_source', 'hs_analytics_source_data_1', 'hs_analytics_source_data_2',
+    'lead_source', 'hs_is_closed_won'
   ) -Filters @(
     @{ propertyName = 'closedate'; operator = 'GTE'; value = $startMs },
     @{ propertyName = 'closedate'; operator = 'LTE'; value = $endMs },
@@ -341,15 +553,32 @@ try {
   foreach ($option in @($sourceProperty.options)) { $sourceLabels["$($option.value)"] = "$($option.label)" }
 
   $selectedSources = @(
-    [pscustomobject]@{ key = 'ORGANIC_SEARCH'; label = 'Organic Search'; note = 'Deal-level Original Traffic Source = Organic Search.' },
-    [pscustomobject]@{ key = 'DIRECT_TRAFFIC'; label = 'Direct Traffic'; note = 'Deal-level Original Traffic Source = Direct Traffic. Direct is reported separately and is not automatically claimed as SEO.' },
-    [pscustomobject]@{ key = 'SOCIAL_MEDIA'; label = 'Organic Social'; note = 'Deal-level Original Traffic Source = Organic Social.' }
+    [pscustomobject]@{ key = 'ORGANIC_SEARCH'; label = 'Organic Search'; note = 'Verified deal source is Organic Search, the deal entered the cohort during the window, and no partner or sales-source field contradicts it.' },
+    [pscustomobject]@{ key = 'DIRECT_TRAFFIC'; label = 'Direct Traffic'; note = 'Verified direct origin only. Meeting links and partner/vendor-sourced deals are excluded from Direct.' },
+    [pscustomobject]@{ key = 'SOCIAL_MEDIA'; label = 'Organic Social'; note = 'Verified deal source is Organic Social, the deal entered the cohort during the window, and no partner or sales-source field contradicts it.' }
   )
 
+  $acquisitionDeals = @($deals | Where-Object {
+    $_.properties.createdate -and
+    ([DateTimeOffset]$_.properties.createdate) -ge $start -and
+    "$($_.properties.dealtype)" -eq 'newbusiness' -and
+    "$($_.properties.lead_source)" -notin @('Change Request', 'Existing Client')
+  })
+  $contradictoryLeadSources = @(
+    'UKG Sales Rep', 'UKG ERM', 'UKG Partner Channel', 'Channel Partner',
+    'Dayforce Sales Rep', 'UKG Referral', 'Trade Show', 'Paylocity Sales Rep',
+    'Change Request', 'Existing Client'
+  )
   $channelRows = @()
   $selectedDealIds = @{}
   foreach ($source in $selectedSources) {
-    $matches = @($deals | Where-Object { "$($_.properties.hs_analytics_source)" -eq $source.key })
+    $matches = @($acquisitionDeals | Where-Object {
+      $leadSource = "$($_.properties.lead_source)"
+      $drilldown = "$($_.properties.hs_analytics_source_data_1)"
+      "$($_.properties.hs_analytics_source)" -eq $source.key -and
+      $leadSource -notin $contradictoryLeadSources -and
+      !($source.key -eq 'DIRECT_TRAFFIC' -and $drilldown -match '(?i)(?:meetings|scheduler|calendar)')
+    })
     foreach ($deal in $matches) { $selectedDealIds["$($deal.id)"] = $true }
     $channelRows += [pscustomobject][ordered]@{
       sourceKey = $source.key
@@ -359,8 +588,18 @@ try {
       note = $source.note
     }
   }
-  $selectedDeals = @($deals | Where-Object { $selectedDealIds.ContainsKey("$($_.id)") })
+  $selectedDeals = @($acquisitionDeals | Where-Object { $selectedDealIds.ContainsKey("$($_.id)") })
   $selectedTotal = Get-AmountTotal -Deals $selectedDeals
+  $crmReportedWebsiteDeals = @($acquisitionDeals | Where-Object {
+    "$($_.properties.lead_source)" -eq 'Website' -and
+    !$selectedDealIds.ContainsKey("$($_.id)")
+  })
+  $crmReportedWebsiteTotal = Get-AmountTotal -Deals $crmReportedWebsiteDeals
+  $conflictingOwnedDeals = @($acquisitionDeals | Where-Object {
+    "$($_.properties.hs_analytics_source)" -in @('ORGANIC_SEARCH', 'DIRECT_TRAFFIC', 'SOCIAL_MEDIA') -and
+    !$selectedDealIds.ContainsKey("$($_.id)")
+  })
+  $conflictingOwnedTotal = Get-AmountTotal -Deals $conflictingOwnedDeals
 
   $sourceCounts = @{}
   foreach ($contact in $contacts) {
@@ -402,7 +641,8 @@ try {
   }
 
   $crawler = if ($SkipCrawlerProbe) { [pscustomobject]@{ checks = 0; failures = @() } } else { Test-AiCrawlerAccess }
-  $attribution = Get-AttributionHealth -Headers $headers -StartMilliseconds ([long]$startMs) -AsOf $end
+  $siteCoverage = Get-SiteCoverage
+  $attribution = Get-AttributionHealth -Headers $headers -StartMilliseconds ([long]$startMs) -AsOf $end -SiteCoverage $siteCoverage
 
   $onlineContacts = @($contacts | Where-Object {
     $sourceKey = "$($_.properties.hs_analytics_source)"
@@ -414,6 +654,8 @@ try {
   $data.window.end = $end.ToString('yyyy-MM-dd')
   Set-ObjectProperty -Object $data.kpis -Name 'selectedChannelWon' -Value $selectedTotal
   Set-ObjectProperty -Object $data.kpis -Name 'selectedChannelDeals' -Value $selectedDeals.Count
+  Set-ObjectProperty -Object $data.kpis -Name 'crmReportedWebsiteWon' -Value $crmReportedWebsiteTotal
+  Set-ObjectProperty -Object $data.kpis -Name 'crmReportedWebsiteDeals' -Value $crmReportedWebsiteDeals.Count
   Set-ObjectProperty -Object $data.kpis -Name 'contacts' -Value $onlineContacts.Count
   Set-ObjectProperty -Object $data.kpis -Name 'customers' -Value @($onlineContacts | Where-Object { $_.properties.lifecyclestage -eq 'customer' }).Count
   $data.kpis.PSObject.Properties.Remove('wonRevenueYtd')
@@ -421,37 +663,76 @@ try {
   $channelRevenue = [pscustomobject][ordered]@{
     verified = $true
     asOf = $end.ToString('yyyy-MM-dd')
-    source = 'Live HubSpot closed-won deals grouped by the deal-level Original Traffic Source'
+    source = 'Live HubSpot closed-won acquisition cohort with conflict checks'
     period = "$WindowStart to $($end.ToString('yyyy-MM-dd'))"
-    methodology = 'Strict deal-origin attribution. Each deal is counted once only when its own Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Associated-contact-only matches and LINEAR touch credit are excluded.'
+    methodology = 'Verified owned-channel origin requires a new-business deal created and closed in the window, an Organic Search, Direct Traffic, or Organic Social deal source, and no contradictory partner, vendor, rep, meeting-link, renewal, existing-client, or change-request evidence.'
     totalWon = $selectedTotal
     deals = $selectedDeals.Count
     byChannel = $channelRows
-    excludedAssistNote = 'Associated-contact-only matches and LINEAR touch credit are excluded from this originated-revenue total.'
+    crmReportedWebsite = [pscustomobject][ordered]@{
+      won = $crmReportedWebsiteTotal
+      deals = $crmReportedWebsiteDeals.Count
+      confidence = 'medium'
+      note = 'The CRM Lead source says Website, but first-party traffic evidence does not independently verify Organic, Direct, or Social. This is reported separately and is never added to verified origin.'
+    }
+    excludedConflicts = [pscustomobject][ordered]@{
+      won = $conflictingOwnedTotal
+      deals = $conflictingOwnedDeals.Count
+      note = 'Deals with an owned-looking traffic source but contradictory partner, vendor, rep, or meeting evidence are excluded from verified origin.'
+    }
+    cohort = [pscustomobject][ordered]@{
+      eligibleNewBusinessDeals = $acquisitionDeals.Count
+      eligibleNewBusinessWon = Get-AmountTotal -Deals $acquisitionDeals
+    }
+    excludedAssistNote = 'CRM-reported Website, associated-contact-only matches, contradictory-source deals, renewals, existing-client work, change requests, and LINEAR touch credit are excluded from verified owned-channel origin.'
   }
   Set-ObjectProperty -Object $data -Name 'channelRevenue' -Value $channelRevenue
   Set-ObjectProperty -Object $data -Name 'attribution' -Value $attribution
+  Set-ObjectProperty -Object $data -Name 'siteCoverage' -Value $siteCoverage
   $data.PSObject.Properties.Remove('revops')
   $data.sources = $sourceRows
   $data.aeo = $aeoRows
   $data.directives = @(
     'AI crawlers must have full access to alignhcm.com at all times. Never block GPTBot, ClaudeBot, PerplexityBot, Google-Extended, or similar. Verify on every run; blocking is a critical alert.',
-    'Owned-channel won revenue is calculated live from closed-won HubSpot deals whose deal-level Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Keep assisted attribution separate.',
+    'Verified owned-channel won revenue requires new-business cohort timing plus non-conflicting first-party source evidence. Keep CRM-reported Website and assisted attribution separate.',
     'Every known form conversion must carry first-touch, last-touch, content, offer, and CTA placement fields. Anonymous behavior stays in GA4; never report a click as a completed meeting.'
   )
   if ($data.touchAttribution) {
-    $data.touchAttribution.note = 'HubSpot campaign attribution: closed-won revenue split across every marketing touchpoint. Measures marketing influence, not deal origination; keep it separate from the strict channel-origin card above.'
+    $data.touchAttribution.note = 'HubSpot campaign attribution: closed-won revenue split across marketing touchpoints. It measures influence, not deal origination, and is not added to verified or CRM-reported Website revenue.'
   }
   $data.alerts = @($data.alerts | Where-Object {
     $_.text -notmatch '^RevOps verified:' -and
     $_.text -notmatch '^Live deal-origin attribution:' -and
+    $_.text -notmatch '^Verified owned-channel origin:' -and
+    $_.text -notmatch '^CRM-reported Website:' -and
+    $_.text -notmatch '^Conflicting owned-channel evidence:' -and
+    $_.text -notmatch '^Full-site crawl:' -and
     $_.text -notmatch '^AI crawler access' -and
-    $_.text -notmatch '^Attribution instrumentation'
+    $_.text -notmatch '^Attribution instrumentation' -and
+    $_.text -notmatch '^Blog earned roughly' -and
+    $_.text -notmatch '^404 page viewed 119' -and
+    $_.text -notmatch '^Untitled tracked page' -and
+    $_.text -notmatch '^Duplicate UKG buyer' -and
+    $_.text -notmatch '^9 case studies live'
   })
-  $revenueAlert = 'Live deal-origin attribution: ${0} closed-won from the selected channels since Jan 26 (${1} Organic Search, ${2} Direct Traffic, ${3} Organic Social).' -f ('{0:N0}' -f $selectedTotal), ('{0:N0}' -f $channelRows[0].won), ('{0:N0}' -f $channelRows[1].won), ('{0:N0}' -f $channelRows[2].won)
+  $revenueAlert = 'Verified owned-channel origin: ${0} closed-won (${1} Organic Search, ${2} Direct Traffic, ${3} Organic Social).' -f ('{0:N0}' -f $selectedTotal), ('{0:N0}' -f $channelRows[0].won), ('{0:N0}' -f $channelRows[1].won), ('{0:N0}' -f $channelRows[2].won)
   $data.alerts += [pscustomobject]@{
     severity = 'good'
     text = $revenueAlert
+  }
+  $data.alerts += [pscustomobject]@{
+    severity = 'warn'
+    text = ('CRM-reported Website: ${0} across {1} closed-won acquisition deal(s), shown separately because the manual CRM source is not independently verified traffic origin.' -f ('{0:N0}' -f $crmReportedWebsiteTotal), $crmReportedWebsiteDeals.Count)
+  }
+  if ($conflictingOwnedDeals.Count) {
+    $data.alerts += [pscustomobject]@{
+      severity = 'warn'
+      text = ('Conflicting owned-channel evidence: ${0} across {1} deal(s) excluded from verified origin because partner, rep, vendor, or meeting evidence contradicts the traffic-source label.' -f ('{0:N0}' -f $conflictingOwnedTotal), $conflictingOwnedDeals.Count)
+    }
+  }
+  $data.alerts += [pscustomobject]@{
+    severity = if (@($siteCoverage.brokenInternalTargets).Count -eq 0 -and @($siteCoverage.conversionCoverageGaps).Count -eq 0 -and @($siteCoverage.attributionCoverageGaps).Count -eq 0) { 'good' } else { 'crit' }
+    text = "Full-site crawl: $($siteCoverage.finalOk)/$($siteCoverage.sitemapUrls) sitemap URLs healthy, $($siteCoverage.internalTargets) internal targets checked, $(@($siteCoverage.brokenInternalTargets).Count) broken, $(@($siteCoverage.conversionCoverageGaps).Count) conversion-path gaps, and $(@($siteCoverage.attributionCoverageGaps).Count) attribution-coverage gaps."
   }
   if ($crawler.failures.Count -eq 0) {
     $data.alerts += [pscustomobject]@{ severity = 'good'; text = "AI crawler access terminal-verified: $($crawler.checks) endpoint checks passed." }
@@ -474,11 +755,26 @@ try {
   Set-ObjectProperty -Object $baseline -Name 'channel_revenue_live' -Value ([pscustomobject][ordered]@{
     asOf = $end.ToString('yyyy-MM-dd')
     window = "$WindowStart to $($end.ToString('yyyy-MM-dd'))"
-    methodology = 'Strict deal-level Original Traffic Source; associated-contact-only and LINEAR touch attribution excluded.'
+    methodology = 'New-business deals created and closed in-window; verified owned-channel source only when partner, vendor, rep, meeting-link, renewal, existing-client, and change-request evidence does not conflict.'
     totalWon = $selectedTotal
     deals = $selectedDeals.Count
     byChannel = $channelRows
+    crmReportedWebsiteWon = $crmReportedWebsiteTotal
+    crmReportedWebsiteDeals = $crmReportedWebsiteDeals.Count
+    conflictingOwnedSourceWon = $conflictingOwnedTotal
+    conflictingOwnedSourceDeals = $conflictingOwnedDeals.Count
   })
+  if ($data.touchAttribution) {
+    $touchRows = @($data.touchAttribution.byChannel)
+    Set-ObjectProperty -Object $baseline -Name 'attribution_snapshot' -Value ([pscustomobject][ordered]@{
+      asOf = $end.ToString('yyyy-MM-dd')
+      model = "$($data.touchAttribution.model)"
+      window = "$WindowStart to $($end.ToString('yyyy-MM-dd')), closed-won influenced revenue"
+      note = "$($data.touchAttribution.note)"
+      byChannel = $touchRows
+      totalAttributedRevenue = [long](($touchRows | Measure-Object -Property revenue -Sum).Sum)
+    })
+  }
   $sourceCountObject = [ordered]@{}
   foreach ($key in @($sourceCounts.Keys | Sort-Object)) { $sourceCountObject[$key] = $sourceCounts[$key] }
   Set-ObjectProperty -Object $baseline -Name 'contact_sources_window' -Value ([pscustomobject]$sourceCountObject)
@@ -493,6 +789,20 @@ try {
     requiredChecksPassing = @($attribution.checks | Where-Object { $_.status -eq 'pass' }).Count
     requiredChecksFailing = @($attribution.checks | Where-Object { $_.status -eq 'fail' }).Count
     hubspotCustomEventScope = if (@($attribution.checks | Where-Object { $_.check -eq 'HubSpot anonymous custom events' -and $_.status -eq 'pass' }).Count) { 'available' } else { 'not_granted_ga4_fallback_active' }
+  })
+  Set-ObjectProperty -Object $baseline -Name 'site_coverage_live' -Value ([pscustomobject][ordered]@{
+    asOf = $siteCoverage.asOf
+    sitemapUrls = $siteCoverage.sitemapUrls
+    finalOk = $siteCoverage.finalOk
+    internalTargets = $siteCoverage.internalTargets
+    brokenInternalTargets = @($siteCoverage.brokenInternalTargets).Count
+    attributionCoverageGaps = @($siteCoverage.attributionCoverageGaps).Count
+    conversionCoveredPages = $siteCoverage.conversionCoveredPages
+    conversionCoverageGaps = @($siteCoverage.conversionCoverageGaps).Count
+    missingGa4 = @($siteCoverage.missingGa4).Count
+    missingHubSpot = @($siteCoverage.missingHubSpot).Count
+    redirectingSitemapUrls = @($siteCoverage.redirectingSitemapUrls).Count
+    legacyCaseStudyPages = @($siteCoverage.legacyCaseStudyPages).Count
   })
   Write-JsonFile -Value $baseline -Path $BaselinePath
 
@@ -522,6 +832,10 @@ try {
     window = "$WindowStart to $($end.ToString('yyyy-MM-dd'))"
     selectedChannelWon = $selectedTotal
     selectedChannelDeals = $selectedDeals.Count
+    crmReportedWebsiteWon = $crmReportedWebsiteTotal
+    crmReportedWebsiteDeals = $crmReportedWebsiteDeals.Count
+    conflictingOwnedSourceWon = $conflictingOwnedTotal
+    conflictingOwnedSourceDeals = $conflictingOwnedDeals.Count
     byChannel = $channelRows
     onlineContactsInWindow = $onlineContacts.Count
     totalContactsInWindow = $contacts.Count
@@ -530,6 +844,16 @@ try {
     knownFormConversions = $attribution.totalKnownConversions
     attributionFormsComplete = "$($attribution.completeForms)/$($attribution.trackedForms)"
     attributionFailures = @($attributionFailures | ForEach-Object { $_.check })
+    siteCoverage = [pscustomobject]@{
+      sitemapUrls = $siteCoverage.sitemapUrls
+      finalOk = $siteCoverage.finalOk
+      internalTargets = $siteCoverage.internalTargets
+      brokenInternalTargets = @($siteCoverage.brokenInternalTargets).Count
+      attributionCoverageGaps = @($siteCoverage.attributionCoverageGaps).Count
+      conversionCoverageGaps = @($siteCoverage.conversionCoverageGaps).Count
+      missingGa4 = @($siteCoverage.missingGa4).Count
+      missingHubSpot = @($siteCoverage.missingHubSpot).Count
+    }
     published = $published
   } | ConvertTo-Json -Depth 8
 } finally {

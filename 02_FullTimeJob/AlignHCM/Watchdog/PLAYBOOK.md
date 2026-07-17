@@ -15,8 +15,8 @@ You are the daily site health watchdog for alignhcm.com (Align HCM, Dillon's ful
 ## Standing directives (never violate)
 
 1. **AI crawlers must have full access to alignhcm.com.** GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot, and similar must never be blocked; AI answer engines are a ranking channel. Verify access every run (a 403 to non-browser fetchers means still blocked); while blocked, raise a CRITICAL alert in every report. Never recommend or implement anything that blocks AI crawlers.
-2. **Deal-origin revenue comes from live deal-level source fields.** On every run, calculate closed-won `amount` only for deals in the fixed window whose own `hs_analytics_source` is `ORGANIC_SEARCH`, `DIRECT_TRAFFIC`, or `SOCIAL_MEDIA`. Count each deal once. Do not treat an associated contact's source or LINEAR touch credit as deal origination. Direct Traffic is a separate channel and is never automatically claimed as SEO.
-3. **Marketing attribution is reported every run**: strict deal-origin revenue for Organic Search, Direct Traffic, and Organic Social; touch-based channel attribution (LINEAR) in a clearly separate assisted section; contact source mix; and AI referrals. Never reuse the representative `$37K inbound/web` split from the Jul 15 design PDFs as verified organic revenue.
+2. **Verified owned-channel revenue uses an acquisition cohort plus conflict checks.** On every run, start with closed-won new-business deals that were both created and closed in the fixed window. Count Organic Search, Direct Traffic, or Organic Social only when the deal-level traffic source matches and the CRM contains no contradictory partner, vendor, sales-rep, meeting-link, renewal, existing-client, or change-request evidence. Count each deal once. Direct Traffic is separate from SEO.
+3. **Marketing attribution is reported every run in separate evidence layers**: verified owned-channel origin; CRM-reported Website revenue at medium confidence; conflicting owned-looking source labels excluded from verified origin; touch-based channel attribution (LINEAR) as influence only; contact source mix; and AI referrals. Never infer revenue from a platform page, partner relationship, associated-contact-only source, or the representative `$37K inbound/web` split from the Jul 15 design PDFs.
 
 ## Step 0: Setup
 
@@ -35,7 +35,7 @@ Always pass explicit start/end dates. The API default window is NOT 30 days; res
 
 ## Step 1b: Attribution and AEO pulls
 
-1. **Mandatory terminal refresh**: run `./Refresh-Dashboard.ps1` after the other dashboard fields are refreshed and before the run is committed. This script validates portal `242825734`, recalculates the strict selected-channel revenue from live deals, refreshes contact source and AEO counts, counts live submissions for all five conversion forms, verifies the 27-field attribution layer, checks the production blog CTA/canonical/redirect/IndexNow deployment, probes AI crawler access, rewrites `data.json` and `baseline.json`, and fails closed on a portal mismatch. Use `-Publish` in Step 5 so the run commits, pushes, and triggers Netlify.
+1. **Mandatory terminal refresh**: run `./Refresh-Dashboard.ps1` after the other dashboard fields are refreshed and before the run is committed. This script validates portal `242825734`, recalculates verified owned-channel revenue from live deals with acquisition-cohort and conflict checks, reports CRM Website and conflicting source evidence separately, refreshes contact source and AEO counts, counts live submissions for all five conversion forms, verifies the 27-field attribution layer, checks the production blog CTA/canonical/redirect/IndexNow deployment, probes AI crawler access, crawls every sitemap URL and discovered internal target, verifies GA4/HubSpot/conversion coverage, rewrites `data.json` and `baseline.json`, and fails closed on a portal mismatch. Use `-Publish` in Step 5 so the run commits, pushes, and triggers Netlify.
 2. **Assisted revenue attribution** (mcp__HubSpot__get_campaign_attribution_reports): metrics [REVENUE, DEAL_COUNT], dimensions [ASSET_TYPE], startDate 2026-01-26, endDate today, attributionModel LINEAR (the standing model; note in the report if a different model was requested). Label it marketing influence, never deal origination. Read tool_guidance first on a fresh session.
 3. **Contact source mix** (mcp__HubSpot__query_crm_data, call tool_guidance first):
    `SELECT hs_analytics_source, COUNT(*) FROM CONTACT WHERE createdate BETWEEN '2026-01-26' AND '<today>' GROUP BY hs_analytics_source`
@@ -66,17 +66,23 @@ Compare against `baseline.json`:
 | Total daily views | 0 (tracking outage or site down) |
 | Attribution production checks | any required check fails |
 | Hidden attribution fields | fewer than 27 on any tracked form |
+| Sitemap URLs | any final response is not healthy |
+| Internal links | any visitor-facing internal target is broken |
+| GA4 or HubSpot coverage | any sitemap page is missing required tracking |
+| Conversion coverage | any commercial/content page lacks a tracked CTA or form path |
+| Sandbox links | any production page links to a sandbox host |
 
 Site reachability: attempt a fetch of https://www.alignhcm.com/robots.txt every run.
 - **403**: crawler access regressed. Reopen the CRITICAL ai-crawler alert in the report (standing directive 1) and run `ai-crawler-unblock/Publish-FromTerminal.ps1` plus the verification commands in `RUNBOOK.md`.
 - **200**: crawlers are unblocked. Keep `waf-blocks-ai-crawlers` resolved in baseline.json and track the AEO referral trend as the success metric (alert if it stays 0 for 45+ days after unblock). Also require `/llms.txt` to return 200 with `text/plain`.
 - Timeout, connection failure, or 5xx: possible downtime, investigate. Zero views all day in HubSpot is the stronger down/broken-tracking signal.
 
-## Step 3: SEO sweep (Mondays, or when flagged)
+## Step 3: Full-site and SEO sweep
 
-1. WebSearch `site:alignhcm.com` and compare indexed titles/URLs against the HubSpot page inventory. Flag: legacy URLs (`/welcome/`, `/news/`), missing key pages, title mismatches.
-2. Duplicate-content scan of blog titles from the TOTALS pull.
-3. Check open issues list in `baseline.json` (`known_issues_open`) and report status movement.
+1. Every run, use the full-site results produced by `Refresh-Dashboard.ps1`: sitemap final status, redirects still present in the sitemap, discovered internal targets, broken visitor-facing targets, GA4 coverage, HubSpot tracking coverage, conversion coverage, sandbox links, and SmartCare form behavior.
+2. On Mondays, or when flagged, WebSearch `site:alignhcm.com` and compare indexed titles/URLs against the HubSpot page inventory. Flag legacy URLs (`/welcome/`, `/news/`), missing key pages, and title mismatches.
+3. Run a duplicate-content scan of blog titles from the TOTALS pull and verify archived duplicates still resolve to their canonical destination.
+4. Check `known_issues_open` in `baseline.json` and report status movement. A cached sitemap entry can remain a warning after a page is archived, but it must not be described as a live broken page when its final destination is healthy.
 
 ## Step 4: Write the report
 
@@ -85,7 +91,7 @@ The watchdog may run multiple times per day. First run of the day creates `repor
 Create `reports/YYYY-MM-DD.md` with frontmatter (`type: watchdog-report`). Sections:
 1. **Verdict**: one paragraph, plain language. Lead with anything alarming, otherwise "steady".
 2. **Daily numbers**: yesterday's views, submissions, contacts vs 7-day average.
-3. **All-year numbers**: window totals since 2026-01-26 (views, submissions, contacts, strict deal-origin won revenue for Organic Search / Direct Traffic / Organic Social, assisted revenue under the LINEAR model, and AI referral count). Same window every day, so the numbers are always comparable.
+3. **All-year numbers**: window totals since 2026-01-26 (views, submissions, contacts, verified owned-channel won revenue for Organic Search / Direct Traffic / Organic Social, CRM-reported Website revenue shown separately, excluded conflicting-source revenue, assisted influence under the LINEAR model, and AI referral count). Same window every day, so the numbers are always comparable.
 4. **Alerts fired** (or "none").
 5. **Open issues**: status of each item in `known_issues_open`, note any fixed (remove from baseline) or new (add).
 6. **One suggestion**: a single highest-leverage ranking action for today, concrete and small.
@@ -93,8 +99,8 @@ Create `reports/YYYY-MM-DD.md` with frontmatter (`type: watchdog-report`). Secti
 ## Step 5: Update baseline, dashboard data, and commit
 
 1. Update `baseline.json`: refresh aggregates, append the completed week to `weekly_series` when a week closes, keep `top_pages_30d` current, sync `known_issues_open`.
-2. Update `site-analytics-dashboard/data.json` at the repo root ON EVERY RUN: refresh `generated`, `window.end`, `kpis`, `monthly`, `touchAttribution`, `blogs`, `topPages`, `attribution`, and non-revenue alerts from this run's pulls.
-3. Run `./Refresh-Dashboard.ps1 -Publish`. It authoritatively refreshes `channelRevenue`, `sources`, `aeo`, the crawler alert, and the selected-channel KPIs; validates both JSON files; stages only the dashboard, baseline, and today's report; commits with `watchdog: daily report YYYY-MM-DD`; and pushes the designated branch. That push is the Netlify redeploy trigger. A run is not complete until this command succeeds.
+2. Update `site-analytics-dashboard/data.json` at the repo root ON EVERY RUN: refresh `generated`, `window.end`, `kpis`, `monthly`, `touchAttribution`, `blogs`, `topPages`, `attribution`, `siteCoverage`, and non-revenue alerts from this run's pulls.
+3. Run `./Refresh-Dashboard.ps1 -Publish`. It authoritatively refreshes `channelRevenue`, `sources`, `aeo`, `siteCoverage`, crawler and attribution alerts, and verified-channel KPIs; validates both JSON files; stages only the dashboard data, baseline, and today's report; commits with `watchdog: daily report YYYY-MM-DD`; and pushes the designated branch. That push is the Netlify redeploy trigger. A run is not complete until this command succeeds and the Netlify deploy is ready.
 
 ## Step 6: Escalation
 

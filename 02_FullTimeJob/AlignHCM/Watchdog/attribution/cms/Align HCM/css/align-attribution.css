@@ -213,12 +213,32 @@
   color: #c53030;
 }
 
-#acta-form .align-form-status[data-status="error"] {
+#acta-form .align-form-status[data-status="error"],
+[data-align-managed-form="true"] .align-form-status[data-status="error"] {
   background: rgba(252, 129, 129, 0.1);
   border: 1px solid rgba(252, 129, 129, 0.35);
   border-radius: 7px;
   color: #ffb3b3;
   padding: 9px 11px;
+}
+
+.align-managed-form-success {
+  background: rgba(240, 90, 40, 0.08);
+  border: 1px solid rgba(240, 90, 40, 0.28);
+  border-radius: 12px;
+  color: inherit;
+  padding: 24px;
+  text-align: center;
+}
+
+.align-managed-form-success h4 {
+  color: inherit;
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.align-managed-form-success p {
+  margin: 0;
 }
 
 body.align-modal-open {

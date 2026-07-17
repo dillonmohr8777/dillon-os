@@ -5,9 +5,9 @@ Static dashboard for alignhcm.com marketing analytics and attribution. No build 
 ## How it works
 
 - `index.html` renders everything from `data.json`.
-- `data.json` is refreshed by the Align HCM Site Health Watchdog (see `02_FullTimeJob/AlignHCM/Watchdog/PLAYBOOK.md`) on every scheduled run. `Refresh-Dashboard.ps1 -Publish` validates portal `242825734`, recalculates the selected-channel wins, refreshes contact/AEO counts, verifies crawler access, commits, and pushes.
+- `data.json` is refreshed by the Align HCM Site Health Watchdog (see `02_FullTimeJob/AlignHCM/Watchdog/PLAYBOOK.md`) on every scheduled run. `Refresh-Dashboard.ps1 -Publish` validates portal `242825734`, recalculates verified owned-channel wins with conflict checks, refreshes contact/AEO counts, performs the full-site crawl, verifies crawler access, commits, and pushes.
 - When the repo is connected to Netlify, every push triggers a redeploy, so the published dashboard updates automatically each time the watchdog fires.
-- `Refresh-Dashboard.ps1` also refreshes live per-form conversion counts and reruns the production attribution, blog CTA, canonical, redirect, IndexNow, and crawler checks on every run.
+- `Refresh-Dashboard.ps1` also refreshes live per-form conversion counts and reruns the production attribution, blog CTA, canonical, redirect, IndexNow, AI crawler, sitemap, internal-link, GA4, HubSpot tracking, and conversion-coverage checks on every run.
 - HubSpot crawler assets are maintained without the HubSpot website by `02_FullTimeJob/AlignHCM/Watchdog/ai-crawler-unblock/Publish-FromTerminal.ps1`.
 
 ## Publishing to Netlify
@@ -27,10 +27,13 @@ Do not put the visitor password, HubSpot private access token, or any other secr
 
 ## Data layers
 
-- **Strict channel origin** (`channelRevenue`): live closed-won deal amount where the deal-level Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Associated-contact-only matches and assisted touch credit are excluded.
+- **Verified owned-channel origin** (`channelRevenue`): live closed-won amount for new-business deals created and closed in the reporting window where the deal-level source is Organic Search, Direct Traffic, or Organic Social and no partner, vendor, rep, meeting-link, renewal, existing-client, or change-request evidence contradicts it.
+- **CRM-reported Website** (`channelRevenue.crmReportedWebsite`): manual Website lead-source revenue shown separately at medium confidence. It is never added to verified origin.
+- **Excluded conflicts** (`channelRevenue.excludedConflicts`): owned-looking traffic-source labels contradicted by stronger CRM evidence. These are disclosed, not credited.
 - **Touch attribution** (`touchAttribution`): HubSpot campaign attribution (LINEAR), measures marketing influence across touchpoints. Complementary, not the same measure.
 - **Content analytics** (`kpis`, `monthly`, `blogs`, `topPages`): HubSpot first-party tracking, window fixed at 2026-01-26 to today.
 - **AEO** (`aeo`, `sources`): AI-platform referrals from CRM contact data.
+- **Site coverage** (`siteCoverage`): every sitemap URL plus discovered internal targets, with final status, redirects, GA4/HubSpot tracking, conversion paths, sandbox-link checks, and SmartCare form checks.
 
 ## Standing directives
 

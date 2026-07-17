@@ -6,6 +6,9 @@
 (function (window, document) {
   'use strict';
 
+  if (window.__alignAttributionLoaded) return;
+  window.__alignAttributionLoaded = true;
+
   var PORTAL_ID = '242825734';
   var GUIDE_FORM_ID = '__ALIGN_GUIDE_FORM_ID__';
   var FOOTER_FORM_ID = 'e733d928-0f1d-4b41-853b-df1e0096f330';
@@ -545,12 +548,23 @@
     var success = document.getElementById('acta-ok');
     if (title) title.style.display = 'none';
     if (subtitle) subtitle.style.display = 'none';
-    if (success) success.classList.add('show');
+    if (success) {
+      success.classList.add('show');
+      return;
+    }
+    success = document.createElement('div');
+    success.className = 'align-managed-form-success';
+    success.setAttribute('role', 'status');
+    success.setAttribute('aria-live', 'polite');
+    success.innerHTML = '<h4>We\'re on it.</h4><p>An Align HCM expert will reach out shortly to discuss your needs.</p>';
+    if (form.parentNode) form.parentNode.insertBefore(success, form.nextSibling);
   }
 
   function submitActaForm(form) {
-    var button = form.querySelector('.asbtn');
+    var button = form.querySelector('.asbtn, button[type="submit"]');
     var status = actaStatus(form);
+    var offerId = clean(form.getAttribute('data-align-offer-id') || 'expert_consultation', 100);
+    var ctaPlacement = clean(form.getAttribute('data-align-cta-placement') || 'global_footer_form', 100);
     status.textContent = '';
     status.removeAttribute('data-status');
     if (!validateActaForm(form)) {
@@ -561,7 +575,7 @@
       button.classList.add('ld');
       button.disabled = true;
     }
-    setConversion({ offer_id: 'expert_consultation', cta_placement: 'global_footer_form', conversion_type: 'contact_form' });
+    setConversion({ offer_id: offerId, cta_placement: ctaPlacement, conversion_type: 'contact_form' });
     var values = {};
     new window.FormData(form).forEach(function (value, key) { values[key] = clean(value, 2000); });
     if (values.service_interest === 'SmartCare Support') values.service_interest = 'Smartcare Support';
@@ -573,8 +587,8 @@
       { objectTypeId: '0-1', name: 'service_interest', value: values.service_interest || '' },
       { objectTypeId: '0-1', name: 'message', value: values.message || '' }
     ].concat(contextFields({
-      align_offer_id: 'expert_consultation',
-      align_cta_placement: 'global_footer_form',
+      align_offer_id: offerId,
+      align_cta_placement: ctaPlacement,
       align_conversion_type: 'contact_form'
     }));
     var payload = {
@@ -603,7 +617,7 @@
 
   document.addEventListener('submit', function (event) {
     var form = event.target;
-    if (!form || form.id !== 'acta-form') return;
+    if (!form || (form.id !== 'acta-form' && form.getAttribute('data-align-managed-form') !== 'true')) return;
     event.preventDefault();
     event.stopImmediatePropagation();
     submitActaForm(form);
@@ -646,11 +660,24 @@
     }
   });
 
+  function repairSandboxPolicyLinks() {
+    Array.prototype.forEach.call(document.querySelectorAll('a[href*="242825734-hs-sites-na2-com.sandbox.hs-sites-na2.com"]'), function (anchor) {
+      var url;
+      try { url = new window.URL(anchor.href, window.location.href); } catch (error) { return; }
+      if (url.pathname.indexOf('/disclaimers-policies') === 0) {
+        anchor.href = 'https://www.alignhcm.com/disclaimers-policies/';
+      } else if (url.pathname.indexOf('/accessibility-policy-and-statement') === 0) {
+        anchor.href = 'https://www.alignhcm.com/accessibility-policy-and-statement';
+      }
+    });
+  }
+
   function runDomEnhancements() {
     observerScheduled = false;
     fillDomFields();
     populateAllFormInstances();
     decorateMeetingLinks();
+    repairSandboxPolicyLinks();
     var privacyLink = document.querySelector('#acta-form .aprv a');
     if (privacyLink) privacyLink.setAttribute('href', '/disclaimers-policies/');
   }

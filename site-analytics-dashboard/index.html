@@ -93,7 +93,7 @@
   <div class="kpis" id="kpis"></div>
 
   <div class="card" id="channelCard" style="display:none">
-    <h2>Won revenue by selected channel<span class="vbadge">LIVE · HUBSPOT</span></h2>
+    <h2>Verified owned-channel won revenue<span class="vbadge">LIVE · HUBSPOT</span></h2>
     <p class="desc" id="channelDesc"></p>
     <div class="kpis" id="channelKpis"></div>
     <div class="tbl-scroll" id="channelTable"></div>
@@ -226,7 +226,7 @@
 
     var k=d.kpis||{};
     $("kpis").innerHTML=
-      kpi("Organic + direct + social won",usdK(k.selectedChannelWon),fmt(k.selectedChannelDeals)+" closed-won deals",true)+
+      kpi("Verified organic + direct + social won",usdK(k.selectedChannelWon),fmt(k.selectedChannelDeals)+" verified origin deal(s); "+usdK(k.crmReportedWebsiteWon||0)+" CRM-reported Website shown separately",true)+
       kpi("Page views",fmt(k.viewsClean),"window, cleaned")+
       kpi("Form submissions",fmt(k.siteSubmissions),"site forms")+
       kpi("Meeting bookings",fmt(k.meetingBookings),"scheduler links")+
@@ -239,17 +239,21 @@
       $("channelDesc").textContent=cr.source+" · "+cr.period+". "+cr.methodology;
       function channel(key){ return (cr.byChannel||[]).find(function(x){return x.sourceKey===key})||{}; }
       $("channelKpis").innerHTML=
-        kpi("Selected-channel won",usd(cr.totalWon),fmt(cr.deals)+" strict-origin deals",true)+
+        kpi("Verified owned-channel won",usd(cr.totalWon),fmt(cr.deals)+" verified origin deal(s)",true)+
+        kpi("CRM-reported Website",usd((cr.crmReportedWebsite||{}).won||0),fmt((cr.crmReportedWebsite||{}).deals||0)+" medium-confidence deal(s), not added to verified")+
         kpi("Organic Search",usd(channel("ORGANIC_SEARCH").won),"deal-level source")+
         kpi("Direct Traffic",usd(channel("DIRECT_TRAFFIC").won),"reported separately from SEO")+
         kpi("Organic Social",usd(channel("SOCIAL_MEDIA").won),"deal-level source");
-      var ct=['<table><thead><tr><th>Channel</th><th class="r">Closed-won</th><th class="r">Deals</th><th>Interpretation</th></tr></thead><tbody>'];
+      var ct=['<table><thead><tr><th>Evidence tier</th><th class="r">Closed-won</th><th class="r">Deals</th><th>Interpretation</th></tr></thead><tbody>'];
       (cr.byChannel||[]).forEach(function(x){
         ct.push("<tr><td><span class='t'>"+esc(x.channel)+"</span></td><td class='r num'>"+usd(x.won)+"</td><td class='r num'>"+fmt(x.deals)+"</td><td>"+esc(x.note)+"</td></tr>");
       });
+      if(cr.crmReportedWebsite){
+        ct.push("<tr><td><span class='t'>CRM-reported Website</span><br><span class='badge warn'>MEDIUM CONFIDENCE</span></td><td class='r num'>"+usd(cr.crmReportedWebsite.won)+"</td><td class='r num'>"+fmt(cr.crmReportedWebsite.deals)+"</td><td>"+esc(cr.crmReportedWebsite.note)+"</td></tr>");
+      }
       ct.push("</tbody></table>");
       $("channelTable").innerHTML=ct.join("");
-      $("channelNote").textContent=cr.excludedAssistNote||"Associated-contact-only and touch-attributed deals are excluded from this originated-revenue total.";
+      $("channelNote").textContent=(cr.excludedAssistNote||"")+((cr.excludedConflicts&&cr.excludedConflicts.deals)?" Excluded for conflicting source evidence: "+usd(cr.excludedConflicts.won)+" across "+fmt(cr.excludedConflicts.deals)+" deal(s).":"");
     }
 
     lineChart($("viewsChart"), d.monthly||[], "views", "var(--s-views-fill)", "var(--s-views)", "Monthly page views");

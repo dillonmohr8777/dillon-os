@@ -65,30 +65,31 @@
     "attribution_snapshot":  {
                                  "asOf":  "2026-07-16",
                                  "model":  "LINEAR",
-                                 "window":  "2026-01-01 to 2026-07-16, closed-won deals",
+                                 "window":  "2026-01-26 to 2026-07-16, closed-won influenced revenue",
+                                 "note":  "HubSpot campaign attribution: closed-won revenue split across marketing touchpoints. It measures influence, not deal origination, and is not added to verified or CRM-reported Website revenue.",
                                  "byChannel":  [
                                                    {
-                                                       "channel":  "MEETING",
-                                                       "revenue":  447052,
-                                                       "deals":  23
+                                                       "channel":  "Meetings",
+                                                       "revenue":  429633,
+                                                       "deals":  21
                                                    },
                                                    {
-                                                       "channel":  "EMAIL",
-                                                       "revenue":  253905,
-                                                       "deals":  4
+                                                       "channel":  "Marketing email",
+                                                       "revenue":  86145,
+                                                       "deals":  3
                                                    },
                                                    {
-                                                       "channel":  "CALL",
+                                                       "channel":  "Calls",
                                                        "revenue":  22800,
                                                        "deals":  2
                                                    },
                                                    {
-                                                       "channel":  "WEBSITE_PAGE",
+                                                       "channel":  "Website pages",
                                                        "revenue":  14727,
                                                        "deals":  1
                                                    }
                                                ],
-                                 "totalAttributedRevenue":  738484
+                                 "totalAttributedRevenue":  553305
                              },
     "aeo_referrals_ytd":  {
                               "asOf":  "2026-07-16",
@@ -107,14 +108,8 @@
                                                 ]
                              },
     "known_issues_open":  [
-                              "case-studies-on-default-hubspot-domain",
-                              "duplicate-ukg-buyers-guide",
-                              "legacy-apex-urls-indexed (/welcome/, /news/)",
-                              "untitled-content-238611079877 (485 views YTD)",
-                              "slug-typo-paylocity-vs-paycheck",
-                              "sandbox-and-netlify-analytics-pollution",
-                              "blog-has-no-conversion-path (2 submissions from ~50 posts YTD)",
-                              "404-page-views-historical-213"
+                              "slug-typo-paylocity-vs-paycheck (live; review rankings and backlinks before a slug migration)",
+                              "hubspot-sitemap-cache-stale-redirects (10 healthy 301s; no private-token sitemap write endpoint)"
                           ],
     "known_issues_resolved":  [
                                   {
@@ -123,6 +118,51 @@
                                       "evidence":  "HTTP 200 for GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, and Applebot-Extended on the site, robots.txt, and llms.txt",
                                       "llmsUrl":  "https://www.alignhcm.com/llms.txt",
                                       "followUp":  "Track AEO referrals; reopen as critical if any crawler probe returns 403 or llms.txt stops returning text/plain."
+                                  },
+                                  {
+                                      "id":  "case-studies-native-main-domain-coverage",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "Twenty built-in case-study URLs on alignhcm.com have GA4, HubSpot tracking, native tracked CTAs, forms, and no sandbox links."
+                                  },
+                                  {
+                                      "id":  "duplicate-ukg-buyers-guide",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "The duplicate post was archived and /blog/ukg-buyers-guide redirects to the canonical strategic buyer\u0027s guide."
+                                  },
+                                  {
+                                      "id":  "legacy-case-study-pages",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "Legacy success-stories and case-studies-old pages were archived and their visitor paths redirect to current canonical case studies."
+                                  },
+                                  {
+                                      "id":  "legacy-apex-urls",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "/welcome/ resolves to the home page and /news/ resolves to /blog on the canonical www host."
+                                  },
+                                  {
+                                      "id":  "untitled-content-238611079877",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "The content ID is absent from current and archived site-page, landing-page, and blog APIs and is not a live sitemap URL."
+                                  },
+                                  {
+                                      "id":  "production-sandbox-links-and-reporting-pollution",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "The full production crawl found zero sandbox links and watchdog KPIs exclude sandbox, Netlify, app, and meeting hosts."
+                                  },
+                                  {
+                                      "id":  "blog-conversion-path",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "The production blog template now includes the tracked buyer\u0027s-guide CTA and form; the full crawl reports zero conversion-coverage gaps."
+                                  },
+                                  {
+                                      "id":  "smartcare-tracking-and-form-integrity",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "/align-hcm-smartcare has GA4, HubSpot tracking, attribution capture, a real managed-form submission path, and no false-success handler."
+                                  },
+                                  {
+                                      "id":  "historical-404-views",
+                                      "resolvedAt":  "2026-07-16",
+                                      "evidence":  "The full internal-link crawl found zero broken visitor-facing targets. The daily /404 view threshold remains active for regression monitoring."
                                   }
                               ],
     "alert_thresholds":  {
@@ -136,37 +176,41 @@
     "channel_revenue_live":  {
                                  "asOf":  "2026-07-16",
                                  "window":  "2026-01-26 to 2026-07-16",
-                                 "methodology":  "Strict deal-level Original Traffic Source; associated-contact-only and LINEAR touch attribution excluded.",
-                                 "totalWon":  246000,
-                                 "deals":  2,
+                                 "methodology":  "New-business deals created and closed in-window; verified owned-channel source only when partner, vendor, rep, meeting-link, renewal, existing-client, and change-request evidence does not conflict.",
+                                 "totalWon":  54000,
+                                 "deals":  1,
                                  "byChannel":  [
                                                    {
                                                        "sourceKey":  "ORGANIC_SEARCH",
                                                        "channel":  "Organic Search",
                                                        "won":  54000,
                                                        "deals":  1,
-                                                       "note":  "Deal-level Original Traffic Source = Organic Search."
+                                                       "note":  "Verified deal source is Organic Search, the deal entered the cohort during the window, and no partner or sales-source field contradicts it."
                                                    },
                                                    {
                                                        "sourceKey":  "DIRECT_TRAFFIC",
                                                        "channel":  "Direct Traffic",
-                                                       "won":  192000,
-                                                       "deals":  1,
-                                                       "note":  "Deal-level Original Traffic Source = Direct Traffic. Direct is reported separately and is not automatically claimed as SEO."
+                                                       "won":  0,
+                                                       "deals":  0,
+                                                       "note":  "Verified direct origin only. Meeting links and partner/vendor-sourced deals are excluded from Direct."
                                                    },
                                                    {
                                                        "sourceKey":  "SOCIAL_MEDIA",
                                                        "channel":  "Organic Social",
                                                        "won":  0,
                                                        "deals":  0,
-                                                       "note":  "Deal-level Original Traffic Source = Organic Social."
+                                                       "note":  "Verified deal source is Organic Social, the deal entered the cohort during the window, and no partner or sales-source field contradicts it."
                                                    }
-                                               ]
+                                               ],
+                                 "crmReportedWebsiteWon":  108000,
+                                 "crmReportedWebsiteDeals":  1,
+                                 "conflictingOwnedSourceWon":  192000,
+                                 "conflictingOwnedSourceDeals":  1
                              },
     "contact_sources_window":  {
                                    "AI_REFERRALS":  2,
                                    "DIRECT_TRAFFIC":  97,
-                                   "OFFLINE":  2089,
+                                   "OFFLINE":  2090,
                                    "ORGANIC_SEARCH":  14,
                                    "REFERRALS":  8,
                                    "SOCIAL_MEDIA":  6
@@ -179,12 +223,26 @@
                                  "Microsoft Copilot":  0
                              },
     "attribution_health_live":  {
-                                    "asOf":  "2026-07-16T16:07:21.3327339-04:00",
+                                    "asOf":  "2026-07-16T21:44:16.4484282-04:00",
                                     "totalKnownConversions":  86,
                                     "trackedForms":  5,
                                     "completeForms":  5,
-                                    "requiredChecksPassing":  6,
+                                    "requiredChecksPassing":  14,
                                     "requiredChecksFailing":  0,
                                     "hubspotCustomEventScope":  "not_granted_ga4_fallback_active"
-                                }
+                                },
+    "site_coverage_live":  {
+                               "asOf":  "2026-07-16T21:45:27.2111744-04:00",
+                               "sitemapUrls":  118,
+                               "finalOk":  118,
+                               "internalTargets":  159,
+                               "brokenInternalTargets":  0,
+                               "attributionCoverageGaps":  0,
+                               "conversionCoveredPages":  118,
+                               "conversionCoverageGaps":  0,
+                               "missingGa4":  0,
+                               "missingHubSpot":  0,
+                               "redirectingSitemapUrls":  10,
+                               "legacyCaseStudyPages":  8
+                           }
 }

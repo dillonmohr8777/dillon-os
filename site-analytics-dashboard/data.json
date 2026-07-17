@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-07-16T16:07:21.3327339-04:00",
+    "generated":  "2026-07-16T21:44:16.4484282-04:00",
     "window":  {
                    "start":  "2026-01-26",
                    "end":  "2026-07-16"
@@ -7,7 +7,7 @@
     "source":  "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
     "directives":  [
                        "AI crawlers must have full access to alignhcm.com at all times. Never block GPTBot, ClaudeBot, PerplexityBot, Google-Extended, or similar. Verify on every run; blocking is a critical alert.",
-                       "Owned-channel won revenue is calculated live from closed-won HubSpot deals whose deal-level Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Keep assisted attribution separate.",
+                       "Verified owned-channel won revenue requires new-business cohort timing plus non-conflicting first-party source evidence. Keep CRM-reported Website and assisted attribution separate.",
                        "Every known form conversion must carry first-touch, last-touch, content, offer, and CTA placement fields. Anonymous behavior stays in GA4; never report a click as a completed meeting."
                    ],
     "kpis":  {
@@ -19,41 +19,58 @@
                  "customers":  3,
                  "bounceRate":  0.851,
                  "avgTimePerPageviewSec":  108.4,
-                 "selectedChannelWon":  246000,
-                 "selectedChannelDeals":  2
+                 "selectedChannelWon":  54000,
+                 "selectedChannelDeals":  1,
+                 "crmReportedWebsiteWon":  108000,
+                 "crmReportedWebsiteDeals":  1
              },
     "channelRevenue":  {
                            "verified":  true,
                            "asOf":  "2026-07-16",
-                           "source":  "Live HubSpot closed-won deals grouped by the deal-level Original Traffic Source",
+                           "source":  "Live HubSpot closed-won acquisition cohort with conflict checks",
                            "period":  "2026-01-26 to 2026-07-16",
-                           "methodology":  "Strict deal-origin attribution. Each deal is counted once only when its own Original Traffic Source is Organic Search, Direct Traffic, or Organic Social. Associated-contact-only matches and LINEAR touch credit are excluded.",
-                           "totalWon":  246000,
-                           "deals":  2,
+                           "methodology":  "Verified owned-channel origin requires a new-business deal created and closed in the window, an Organic Search, Direct Traffic, or Organic Social deal source, and no contradictory partner, vendor, rep, meeting-link, renewal, existing-client, or change-request evidence.",
+                           "totalWon":  54000,
+                           "deals":  1,
                            "byChannel":  [
                                              {
                                                  "sourceKey":  "ORGANIC_SEARCH",
                                                  "channel":  "Organic Search",
                                                  "won":  54000,
                                                  "deals":  1,
-                                                 "note":  "Deal-level Original Traffic Source = Organic Search."
+                                                 "note":  "Verified deal source is Organic Search, the deal entered the cohort during the window, and no partner or sales-source field contradicts it."
                                              },
                                              {
                                                  "sourceKey":  "DIRECT_TRAFFIC",
                                                  "channel":  "Direct Traffic",
-                                                 "won":  192000,
-                                                 "deals":  1,
-                                                 "note":  "Deal-level Original Traffic Source = Direct Traffic. Direct is reported separately and is not automatically claimed as SEO."
+                                                 "won":  0,
+                                                 "deals":  0,
+                                                 "note":  "Verified direct origin only. Meeting links and partner/vendor-sourced deals are excluded from Direct."
                                              },
                                              {
                                                  "sourceKey":  "SOCIAL_MEDIA",
                                                  "channel":  "Organic Social",
                                                  "won":  0,
                                                  "deals":  0,
-                                                 "note":  "Deal-level Original Traffic Source = Organic Social."
+                                                 "note":  "Verified deal source is Organic Social, the deal entered the cohort during the window, and no partner or sales-source field contradicts it."
                                              }
                                          ],
-                           "excludedAssistNote":  "Associated-contact-only matches and LINEAR touch credit are excluded from this originated-revenue total."
+                           "crmReportedWebsite":  {
+                                                      "won":  108000,
+                                                      "deals":  1,
+                                                      "confidence":  "medium",
+                                                      "note":  "The CRM Lead source says Website, but first-party traffic evidence does not independently verify Organic, Direct, or Social. This is reported separately and is never added to verified origin."
+                                                  },
+                           "excludedConflicts":  {
+                                                     "won":  192000,
+                                                     "deals":  1,
+                                                     "note":  "Deals with an owned-looking traffic source but contradictory partner, vendor, rep, or meeting evidence are excluded from verified origin."
+                                                 },
+                           "cohort":  {
+                                          "eligibleNewBusinessDeals":  17,
+                                          "eligibleNewBusinessWon":  1477430
+                                      },
+                           "excludedAssistNote":  "CRM-reported Website, associated-contact-only matches, contradictory-source deals, renewals, existing-client work, change requests, and LINEAR touch credit are excluded from verified owned-channel origin."
                        },
     "monthly":  [
                     {
@@ -96,7 +113,7 @@
                 ],
     "touchAttribution":  {
                              "model":  "LINEAR",
-                             "note":  "HubSpot campaign attribution: closed-won revenue split across every marketing touchpoint. Measures marketing influence, not deal origination; keep it separate from the strict channel-origin card above.",
+                             "note":  "HubSpot campaign attribution: closed-won revenue split across marketing touchpoints. It measures influence, not deal origination, and is not added to verified or CRM-reported Website revenue.",
                              "byChannel":  [
                                                {
                                                    "channel":  "Meetings",
@@ -352,28 +369,20 @@
                  ],
     "alerts":  [
                    {
-                       "severity":  "crit",
-                       "text":  "Blog earned roughly 3,900 views since Jan 26 with zero form submissions. No conversion path on posts."
+                       "severity":  "good",
+                       "text":  "Verified owned-channel origin: $54,000 closed-won ($54,000 Organic Search, $0 Direct Traffic, $0 Organic Social)."
                    },
                    {
                        "severity":  "warn",
-                       "text":  "404 page viewed 119 times since Jan 26. Broken links likely."
+                       "text":  "CRM-reported Website: $108,000 across 1 closed-won acquisition deal(s), shown separately because the manual CRM source is not independently verified traffic origin."
                    },
                    {
                        "severity":  "warn",
-                       "text":  "Untitled tracked page (id 238611079877) has 309 views and no title or URL metadata."
-                   },
-                   {
-                       "severity":  "warn",
-                       "text":  "Duplicate UKG buyer\u0027s guide posts are splitting rankings. Three more near-duplicate post pairs found (Common Challenges, HCM Strategies, Talent Mobility)."
-                   },
-                   {
-                       "severity":  "warn",
-                       "text":  "9 case studies live on the default HubSpot domain instead of alignhcm.com."
+                       "text":  "Conflicting owned-channel evidence: $192,000 across 1 deal(s) excluded from verified origin because partner, rep, vendor, or meeting evidence contradicts the traffic-source label."
                    },
                    {
                        "severity":  "good",
-                       "text":  "Live deal-origin attribution: $246,000 closed-won from the selected channels since Jan 26 ($54,000 Organic Search, $192,000 Direct Traffic, $0 Organic Social)."
+                       "text":  "Full-site crawl: 118/118 sitemap URLs healthy, 159 internal targets checked, 0 broken, 0 conversion-path gaps, and 0 attribution-coverage gaps."
                    },
                    {
                        "severity":  "good",
@@ -386,7 +395,7 @@
                ],
     "attribution":  {
                         "verified":  true,
-                        "asOf":  "2026-07-16T16:07:21.3327339-04:00",
+                        "asOf":  "2026-07-16T21:44:16.4484282-04:00",
                         "source":  "Live HubSpot form submissions plus terminal production checks",
                         "period":  "2026-01-26 to 2026-07-16",
                         "totalKnownConversions":  86,
@@ -463,6 +472,56 @@
                                            "detail":  "Loaded on the production domain."
                                        },
                                        {
+                                           "check":  "Full sitemap crawl",
+                                           "status":  "pass",
+                                           "detail":  "118/118 sitemap URLs reached a healthy final response."
+                                       },
+                                       {
+                                           "check":  "Internal link integrity",
+                                           "status":  "pass",
+                                           "detail":  "159 unique internal targets checked; 0 broken."
+                                       },
+                                       {
+                                           "check":  "GA4 site coverage",
+                                           "status":  "pass",
+                                           "detail":  "0 sitemap page(s) missing G-320235048."
+                                       },
+                                       {
+                                           "check":  "HubSpot site coverage",
+                                           "status":  "pass",
+                                           "detail":  "0 sitemap page(s) missing portal 242825734 tracking."
+                                       },
+                                       {
+                                           "check":  "Site-wide attribution coverage",
+                                           "status":  "pass",
+                                           "detail":  "98 custom-attribution page(s) plus 20 HubSpot-native case-study page(s); 0 measurement gap(s)."
+                                       },
+                                       {
+                                           "check":  "Site-wide conversion paths",
+                                           "status":  "pass",
+                                           "detail":  "118/118 sitemap page(s) expose a form, tracked CTA, contact link, or meeting path; 0 gap(s)."
+                                       },
+                                       {
+                                           "check":  "SmartCare form and tracking",
+                                           "status":  "pass",
+                                           "detail":  "GA4, HubSpot, managed submission, attribution, and honest success handling are live."
+                                       },
+                                       {
+                                           "check":  "Sandbox footer links",
+                                           "status":  "pass",
+                                           "detail":  "0 sitemap page(s) contain sandbox-domain policy links."
+                                       },
+                                       {
+                                           "check":  "Legacy case-study duplicates",
+                                           "status":  "warn",
+                                           "detail":  "8 legacy case-study URL(s) remain in the sitemap."
+                                       },
+                                       {
+                                           "check":  "Redirecting sitemap URLs",
+                                           "status":  "warn",
+                                           "detail":  "10 sitemap URL(s) redirect before reaching the canonical page."
+                                       },
+                                       {
                                            "check":  "Blog listing canonical",
                                            "status":  "pass",
                                            "detail":  "1 canonical tag(s) on /blog."
@@ -493,5 +552,104 @@
                                          "lastSubmissionStatus":  202,
                                          "canonicalUrlsSubmitted":  117
                                      }
-                    }
+                    },
+    "siteCoverage":  {
+                         "asOf":  "2026-07-16T21:45:27.2111744-04:00",
+                         "sitemapUrls":  118,
+                         "finalOk":  118,
+                         "brokenSitemapUrls":  [
+
+                                               ],
+                         "redirectingSitemapUrls":  [
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-vibra",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/vibra-healthcare-payroll-process-transformation"
+                                                        },
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-driscolls",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division"
+                                                        },
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-invision",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/invision-integrates-enterprise-applications-for-better-outcomes"
+                                                        },
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/37c2a034-bf1e-4bb8-85ff-4eba33111178",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/"
+                                                        },
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/blog/ukg-buyers-guide",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/blog/the-strategic-buyers-guide-to-ukg"
+                                                        },
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/gtaa-optimizes-workforce-management-with-align-hcm-and-ukg-pro-suite"
+                                                        },
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-farming-organization",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/automating-complex-labor-compliance-for-driscolls-mexico-division"
+                                                        },
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/success-stories",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/case-studies"
+                                                        },
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/case-studies-old",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/case-studies"
+                                                        },
+                                                        {
+                                                            "url":  "https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm",
+                                                            "status":  301,
+                                                            "finalUrl":  "https://www.alignhcm.com/case-studies/seamless-hcm-overhaul-for-north-american-division"
+                                                        }
+                                                    ],
+                         "internalTargets":  159,
+                         "brokenInternalTargets":  [
+
+                                                   ],
+                         "missingGa4":  [
+
+                                        ],
+                         "missingHubSpot":  [
+
+                                            ],
+                         "customAttributionPages":  98,
+                         "nativeCaseStudyPages":  20,
+                         "attributionCoverageGaps":  [
+
+                                                     ],
+                         "conversionCoveredPages":  118,
+                         "conversionCoverageGaps":  [
+
+                                                    ],
+                         "sandboxLinkPages":  [
+
+                                              ],
+                         "legacyCaseStudyPages":  [
+                                                      "https://www.alignhcm.com/case-studies-old/results-vibra",
+                                                      "https://www.alignhcm.com/case-studies-old/results-driscolls",
+                                                      "https://www.alignhcm.com/case-studies-old/results-invision",
+                                                      "https://www.alignhcm.com/case-studies-old/case-study-greater-toronto-airports",
+                                                      "https://www.alignhcm.com/case-studies-old/results-farming-organization",
+                                                      "https://www.alignhcm.com/success-stories",
+                                                      "https://www.alignhcm.com/case-studies-old",
+                                                      "https://www.alignhcm.com/case-studies-old/results-electronics-manufacturing-firm"
+                                                  ],
+                         "smartCare":  {
+                                           "ga4":  true,
+                                           "hubspot":  true,
+                                           "attribution":  true,
+                                           "managedForm":  true,
+                                           "fakeSuccessRemoved":  true
+                                       }
+                     }
 }
