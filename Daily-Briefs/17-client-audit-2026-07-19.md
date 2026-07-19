@@ -12,20 +12,29 @@ align_evidence_branch: origin/claude/site-health-watchdog-ubfzcb
 
 ## Verdict
 
-- **16 unique clients are supported by durable evidence.**
-- **VA Claims is the provisional 17th:** it appears only as an unresolved June commission-sheet label. No client record, scope, contact, or delivery lane exists in the repository.
+- **17 clients are confirmed by Dillon.**
+- **VA Claims is client #17:** Dillon confirmed it as a major priority on 2026-07-19. Its scope, contact, and delivery lane are still missing from the repository and require external recovery.
 - **Align HCM is Dillon's full-time employer, not a client, and is excluded from every client count.**
 - The checked-out `main` roster is stale. It still labels former clients as active and omits June clients whose records remain on an unmerged branch.
 - Gmail and Slack were not available. Communication status is unverified unless supported by a dated Git artifact.
 
 ## Evidence hierarchy
 
-1. Dillon's July 4 raw roster confirmations.
-2. July 5 Ads Ops readbacks.
-3. June 26 Intel Core 7 transfer and commission evidence.
-4. July 11 Bridge handoff.
-5. July 19 competitive-task run 26 for delivery signals only.
-6. April vault notes only as historical context.
+1. Dillon's direct July 19 priority and VA Claims confirmation.
+2. Dillon's July 4 raw roster confirmations.
+3. July 5 Ads Ops readbacks.
+4. June 26 Intel Core 7 transfer and commission evidence.
+5. July 11 Bridge handoff.
+6. July 19 competitive-task run 26 for delivery signals only.
+7. April vault notes only as historical context.
+
+## Master priority order
+
+1. **Bridge Software Development**
+2. **VA Claims**
+3. **Align HCM** — full-time employer lane, excluded from client totals
+4. **Fresh Blends / Replenish**
+5. **Remaining Momentum 360 projects**
 
 ## Canonical roster
 
@@ -46,16 +55,17 @@ align_evidence_branch: origin/claude/site-health-watchdog-ubfzcb
 | 13 | Cindy May Christmas | Pilot | P2 | Confirm meeting outcome, domain choice, and Pinterest verification blockers. |
 | 14 | Fagan Painting | Active | P0 | Re-verify the live Meta campaign, lead routing, three-video swap, and creative-enhancement settings. |
 | 15 | Hope Wellness | Unresolved active record | P2 | Recover meeting outcome, contact, scope, rate, and actual deliverables. |
-| 16 | Bridge Software Development / The Ecosystem | Active discovery | P0 | Capture Tori's decisions and align brand, role model, verification rules, and backend contracts. |
-| 17 | VA Claims | **Provisional / unverified** | Hold | Determine whether this is a client, prospect, or commission memo before creating work. |
+| 16 | Bridge Software Development / The Ecosystem | Active discovery; top priority | P0 | Capture Tori's decisions and align brand, role model, verification rules, and backend contracts. |
+| 17 | VA Claims | Confirmed client; scope unresolved; top priority | P0 | Recover the contact, engagement scope, commission context, deliverables, and latest communication before execution. |
 
 ## P0 recovery board
 
-1. **Fresh Blends / Replenish:** paid traffic was last verified without a usable conversion signal.
-2. **NKCDC:** the live ad destination was last verified as broken; exact intake `ref=` is missing.
-3. **BOK Law:** consolidate the unshipped content backlog and verify invoice state.
-4. **Fagan Painting:** re-verify the published Meta lead campaign and lead routing.
-5. **Bridge:** capture the missing Tori decision package before production work continues.
+1. **Bridge:** capture the missing Tori decision package before production work continues.
+2. **VA Claims:** recover the missing client record and determine the current workstream.
+3. **Fresh Blends / Replenish:** paid traffic was last verified without a usable conversion signal.
+4. **NKCDC:** the live ad destination was last verified as broken; exact intake `ref=` is missing.
+5. **BOK Law:** consolidate the unshipped content backlog and verify invoice state.
+6. **Fagan Painting:** re-verify the published Meta lead campaign and lead routing.
 
 ## P1 recovery board
 
@@ -73,7 +83,6 @@ align_evidence_branch: origin/claude/site-health-watchdog-ubfzcb
 1. Shadow Meta lead-routing verification.
 2. Cindy May Pinterest pilot status.
 3. Hope Wellness scope recovery.
-4. VA Claims identity determination.
 
 ## Align HCM employer lane
 
@@ -114,7 +123,7 @@ Shadow HVAC is a special case: the M360 retainer ended, but Dillon reactivated a
 - Remove former clients from daily memory, urgent-reply, and automation queues.
 - Canonicalize duplicate names: KJB, Replenish, and Bridge/The Ecosystem.
 - Keep Align HCM in a separate employer lane.
-- Do not promote VA Claims until external evidence identifies it.
+- Create a canonical VA Claims record after its scope and communication history are recovered.
 - Re-run Gmail and Slack intel after those connectors become available.
 
 ## Access boundary
