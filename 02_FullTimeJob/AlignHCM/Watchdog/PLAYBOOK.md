@@ -44,6 +44,24 @@ Always pass explicit start/end dates. The API default window is NOT 30 days; res
    Count referrers matching chatgpt.com, chat.openai.com, perplexity.ai, claude.ai, gemini.google.com, copilot.microsoft.com. HubSpot also buckets these natively as AI_REFERRALS in hs_analytics_source; report both numbers.
 5. **Conversion attribution**: treat HubSpot form submissions as known conversions and GA4 events as anonymous behavior. Never copy submitted values into the dashboard. Never report `meeting_booking_started` as a completed meeting. Keep the HubSpot custom event scope warning informational while the GA4 event layer and HubSpot form conversions remain healthy.
 
+## Step 1c: Leading indicators (compute every run)
+
+Full spec and current values live in `leading-indicators.md`. Compute all three and write them to `data.json` under `leadingIndicators`.
+
+1. **Visit-to-lead conversion rate**: from the MONTHLY content-analytics SUMMARY, `submissions / rawViews` per month and YTD. Report the trend, not just the latest point.
+2. **Marketing-influenced open pipeline**: sum of OPEN deal amounts sourced Organic Search / Direct / Social:
+   `SELECT hs_analytics_source, dealstage, COUNT(*), SUM(amount_in_home_currency) FROM DEAL WHERE createdate BETWEEN '2026-01-01' AND '<today>' AND dealstage NOT IN ('closedwon','closedlost','2405262033','2405262034') AND hs_analytics_source IN ('ORGANIC_SEARCH','DIRECT_TRAFFIC','SOCIAL_MEDIA') GROUP BY hs_analytics_source, dealstage`
+3. **Lead follow-up gap**: converted contacts with zero logged outreach.
+   `SELECT num_contacted_notes, COUNT(*) FROM CONTACT WHERE createdate BETWEEN '2026-01-01' AND '<today>' AND num_conversion_events > 0 GROUP BY num_contacted_notes`
+   No-outreach = null bucket + `0` bucket, over the total. Report count and percent.
+
+## Step 1d: Data-integrity checks (compute every run)
+
+1. **Closed-lost without a reason**: deals closed lost in the window with an empty reason field.
+   `SELECT dealstage, COUNT(*), SUM(amount_in_home_currency) FROM DEAL WHERE dealstage IN ('closedlost','2405262034') AND closedate BETWEEN '2026-01-01' AND '<today>' AND closed_lost_reason IS NULL GROUP BY dealstage`
+   As of 2026-07-19 this was 72 of 72 lost deals ($11.3M) with no reason. Track the count down as the field starts getting used.
+2. **Premature closes**: any deal marked closed lost with a close date in the future, or with no amount. Flag by name for review.
+
 ### Exclusions (analytics pollution, never count in KPIs)
 - Any `*.sandbox.hs-sites-na2.com` URL
 - Any `*.netlify.app` URL
@@ -70,6 +88,13 @@ Compare against `baseline.json`:
 | GA4 or HubSpot coverage | any sitemap page is missing required tracking |
 | Conversion coverage | any commercial/content page lacks a tracked CTA or form path |
 | Sandbox links | any production page links to a sandbox host |
+| Visit-to-lead conversion | completed month below 1.2%, or drop > 40% vs trailing 3-mo avg |
+| Influenced open pipeline | falls to $0, or drops > 50% month over month |
+| Lead follow-up gap | no-outreach share of converters > 35%, or any Hot (90+) lead untouched > 3 business days |
+| Closed-lost without reason | count rising, or share of lost deals with no reason > 50% (data-integrity, not site-health) |
+| Premature close | any deal closed lost with a future close date or no amount |
+
+Steps 1c and 1d feed these. The conversion, pipeline, and follow-up rows are marketing-performance signals; the last two are CRM-hygiene signals. Report them in a dedicated "Leading indicators and data integrity" section of the report, separate from site health.
 
 Site reachability: attempt a fetch of https://www.alignhcm.com/robots.txt every run.
 - **403**: crawler access regressed. Reopen the CRITICAL ai-crawler alert in the report (standing directive 1) and run `ai-crawler-unblock/Publish-FromTerminal.ps1` plus the verification commands in `RUNBOOK.md`.

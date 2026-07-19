@@ -1311,5 +1311,77 @@
       }
     ],
     "privacy": "Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard."
+  },
+  "leadingIndicators": {
+    "asOf": "2026-07-19",
+    "note": "First-party leading indicators computed each watchdog run. See 02_FullTimeJob/AlignHCM/Watchdog/leading-indicators.md.",
+    "conversionRate": {
+      "ytd": 0.0198,
+      "monthly": [
+        {
+          "month": "2026-01",
+          "rate": 0.009
+        },
+        {
+          "month": "2026-02",
+          "rate": 0.026
+        },
+        {
+          "month": "2026-03",
+          "rate": 0.0238
+        },
+        {
+          "month": "2026-04",
+          "rate": 0.0269
+        },
+        {
+          "month": "2026-05",
+          "rate": 0.0193
+        },
+        {
+          "month": "2026-06",
+          "rate": 0.0225
+        },
+        {
+          "month": "2026-07",
+          "rate": 0.0138,
+          "partial": true
+        }
+      ]
+    },
+    "influencedOpenPipeline": {
+      "total": 140000,
+      "deals": 2,
+      "detail": [
+        {
+          "company": "Kaiser Permanente",
+          "amount": 125000,
+          "stage": "Expressing Interest",
+          "source": "Organic Search"
+        },
+        {
+          "company": "RPM / Bedrock",
+          "amount": 15000,
+          "stage": "Proposal/Quote",
+          "source": "Organic Search"
+        }
+      ]
+    },
+    "followUpGap": {
+      "convertedContacts": 177,
+      "noOutreach": 70,
+      "noOutreachPct": 0.4,
+      "qualifiedTotal": 22,
+      "qualifiedNoFollowUp": 9
+    }
+  },
+  "dataIntegrity": {
+    "asOf": "2026-07-19",
+    "closedLostWithoutReason": {
+      "deals": 72,
+      "pctOfLost": 1.0,
+      "note": "Nearly every lost deal has no reason logged. This is CRM hygiene, not site health."
+    },
+    "prematureCloses": 2
   }
 }
