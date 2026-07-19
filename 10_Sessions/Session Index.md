@@ -7,11 +7,11 @@ tags: [session, moc]
 ## Recent Sessions
 
 ### Competitive Task Orchestrator runs
+- [[10_Sessions/2026-07-19 — competitive-task-orchestrator run 26]]
 - [[10_Sessions/2026-07-18 — competitive-task-orchestrator run 25]]
 - [[10_Sessions/2026-07-17 — competitive-task-orchestrator run 24]]
 - [[10_Sessions/2026-07-16 — competitive-task-orchestrator run 23]]
 - [[10_Sessions/2026-07-15 — competitive-task-orchestrator run 22]]
-- [[10_Sessions/2026-07-14 — competitive-task-orchestrator run 21]]
 
 ### Project sessions
 - [[10_Sessions/Bridge Software Development - 2026-07-11]]

@@ -1,5 +1,5 @@
 ---
-last_checked: 2026-07-18
+last_checked: 2026-07-19
 tags: [system, slack]
 source: vault-fallback
 ---
@@ -10,15 +10,15 @@ Updated by `/slack-intel` during competitive-task-orchestrator. Slack MCP not co
 
 ## P0 (escalate)
 
-- **BOK Law Jul 18 Family Fridays** — **DUE TODAY**. Draft ready in Jul 14 week file; ship to Dorothy with CC list. Jul 17 Turn the Page **1 day overdue**; Jul 16 Wisdom **2 days overdue**.
-- **Align Maher post** — Jul 15 deadline missed (**3 days overdue**). Text-only fallback or record today.
-- **Content ship OVERDUE** — BOK + Align drafts in `03_Content/`; Jul 9 posts missed (now **9 days**). Ship Jun/Jul overdue files.
-- **Hardwood Artisan** — billing escalation with Sean → Dalton card update outstanding (2026-04-07, ~102 days). Engagement at risk.
+- **BOK Law ship backlog** — Jun 23, Jun 30, Jul 7, Jul 14 week files all overdue. Jul 9 Wisdom **10 days overdue**. Jul 18 Family Fridays **1 day overdue**. Ship consolidated email to Dorothy with CC list.
+- **Align Maher post** — Jul 15 deadline missed (**4 days overdue**). Text-only fallback or record today. Joann Monday **6 days late**.
+- **Content ship OVERDUE** — BOK + Align drafts in `03_Content/`; prior weeks unshipped. New Jul 21 drafts generated today — ship backlog first.
+- **Hardwood Artisan** — billing escalation with Sean → Dalton card update outstanding (2026-04-07, ~103 days). Engagement at risk.
 - **NKCDC** — internal M360: launch blocked on Free Tax Prep landing page; Mac running point with Anthony (no response since 2026-04-15, ~94 days).
 
 ## Open
 
-- **Bridge Software Development** — Tori decision package was Monday 2026-07-13; capture meeting outcome + follow-up (**5 days overdue**).
+- **Bridge Software Development** — Tori decision package was Monday 2026-07-13; capture meeting outcome + follow-up (**6 days overdue**).
 - **Bar Crawl USA** — 2 Google Ads disapprovals (Halloween / Fall Cocktail Crawl); Andy waiting on resolution (~94 days).
 - **Jeff Hozias** — approved Meta seller campaign not yet live (~95 days).
 - **Fresh Blends / Replenish** — confirm launch pacing; first-week snapshot to Mia.
