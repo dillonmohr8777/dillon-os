@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-19",
+  "generated": "2026-07-20",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-07-19"
+    "end": "2026-07-20"
   },
   "source": "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
   "note": "All watchdog and dashboard reporting uses the fixed window start 2026-01-01. The window extends daily on its own.",
@@ -56,7 +56,7 @@
     },
     {
       "month": "2026-07",
-      "views": 1161,
+      "views": 1210,
       "submissions": 16,
       "contacts": 7,
       "partial": true
@@ -270,7 +270,7 @@
     "wonRevenue": 54000,
     "lostValue": 361000
   },
-  "last_run": "2026-07-19 (Sunday; MCP pulls, no terminal refresh in sandbox)",
+  "last_run": "2026-07-20 (Monday; MCP pulls + SEO sweep, no terminal refresh in sandbox)",
   "leading_indicators": {
     "asOf": "2026-07-19",
     "conversion_rate": {
