@@ -7,6 +7,7 @@ tags: [session, moc]
 ## Recent Sessions
 
 ### Competitive Task Orchestrator runs
+- [[10_Sessions/2026-07-20 — competitive-task-orchestrator run 27]]
 - [[10_Sessions/2026-07-19 — competitive-task-orchestrator run 26]]
 - [[10_Sessions/2026-07-18 — competitive-task-orchestrator run 25]]
 - [[10_Sessions/2026-07-17 — competitive-task-orchestrator run 24]]

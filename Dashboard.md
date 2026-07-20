@@ -17,15 +17,15 @@ tags: [dashboard, moc]
 - [[09_Transcripts/Transcript Index|Transcripts]]
 - [[10_Sessions/Session Index|Sessions]]
 
-## Today (2026-07-19)
+## Today (2026-07-20)
 
 From [[Daily-Briefs/competitive-task-today]]:
 
-- [ ] **BOK Law** — Ship entire Jun/Jul backlog (10 days overdue) to Dorothy
-- [ ] **Align HCM** — Ship overdue Maher post (text-only OK) + Joann Monday
-- [ ] **Bridge** — Capture Tori meeting outcome + follow-up (6 days overdue)
-- [ ] **Hardwood Artisan** — Billing nudge via Sean loop
-- [ ] **NKCDC** — Escalate with Mac to Anthony
+- [ ] **BOK Law** — Ship entire Jun/Jul backlog (11 days overdue) to Dorothy
+- [ ] **Align HCM** — Ship overdue Maher post (text-only OK) + Joann Monday (7 days late)
+- [ ] **Bridge** — Capture Tori meeting outcome + follow-up (7 days overdue)
+- [ ] **Hardwood Artisan** — Billing nudge via Sean loop (~104 days)
+- [ ] **NKCDC** — Escalate with Mac to Anthony (~95 days)
 
 ## Active Projects
 - Competitive Task Orchestrator (umbrella automation — replaces 7 legacy crons)
@@ -33,4 +33,4 @@ From [[Daily-Briefs/competitive-task-today]]:
 
 ## Notes
 - Gmail + Slack MCP not connected — intel lanes use vault fallback until connected
-- Jul 21 BOK + Align content drafts generated today (Sunday content-routine)
+- Jul 21 BOK + Align content drafts ready — ship backlog first, then Tue delivery

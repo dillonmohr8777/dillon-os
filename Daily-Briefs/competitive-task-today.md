@@ -1,23 +1,23 @@
-# Competitive Task — 2026-07-19
+# Competitive Task — 2026-07-20
 
 ## Coverage
 
-- **Gmail:** fallback — MCP not connected; `System/urgent-replies.md` refreshed from vault (2026-07-19).
+- **Gmail:** fallback — MCP not connected; `System/urgent-replies.md` refreshed from vault (2026-07-20).
 - **Slack:** fallback — MCP not connected; `System/slack-action-queue.md` refreshed (10 actions, 5 P0).
-- **Vault pulse:** 14 tracked overviews; zero `last_touched` in last 48h; all frozen at March–April 2026 except Bridge (`updated: 2026-07-11`). 11+ active client stubs missing operational frontmatter.
-- **Sessions:** 20 files scanned (runs 12–25 indexed; run 26 today). Facebook Ads session stubs still empty — export Codex sessions on 64GB machine.
+- **Vault pulse:** 143 client files scanned; 12 overviews with tracking frontmatter; zero `last_touched` in last 48h; all frozen at March–April 2026 except Bridge (`updated: 2026-07-11`). 13 active client stubs missing operational frontmatter.
+- **Sessions:** 21 files scanned (runs 12–26 indexed; run 27 today). Facebook Ads session stubs still empty — export Codex sessions on 64GB machine.
 - **Ads/SEO:** 7 open in Google Ads queue (3 High / 2 Medium / 2 Low). No new disapprovals since Run 20. Bar Crawl disapprovals are Google Ads (not FB queue).
-- **Content routines:** **ran** — Sunday. Drafted BOK + Align week of Jul 21 in `03_Content/`. Prior week ship backlog still P0.
+- **Content routines:** **ran** — Sunday. Jul 21 BOK + Align week files already drafted run 26; verified on disk. Prior week ship backlog still P0.
 
 ## P0 Stack
 
-1. **BOK Law ship backlog — 10 DAYS OVERDUE** — Ship ALL overdue week files to Dorothy (CC: akocelko, rbowe): Jun 23, Jun 30, Jul 7 (**Jul 9 Wisdom 10 days overdue**), Jul 14 (**Jul 16 Wisdom 3 days**, **Jul 17 Turn the Page 2 days**, **Jul 18 Family Fridays 1 day overdue**). One email, all weeks attached.
-2. **Align HCM Maher post — 4 DAYS OVERDUE** — Was due Jul 15. Script in `03_Content/Align HCM — week of 2026-07-14.md`. Ship text-only fallback today or record talking-head. Joann Monday post (Jul 13) is **6 days late**.
-3. **Bridge Software Development** — Tori decision package was Monday **2026-07-13**; post-meeting capture still missing (**6 days overdue**). Capture feedback on prototype + brand direction; update `01_Clients/Bridge Software Development/overview.md` and send follow-up.
-4. **Hardwood Artisan** — Billing card update outstanding since Sean's 2026-04-07 escalation (~**103 days**). Only client marked `at_risk`. Engagement pause risk.
-5. **NKCDC** — Launch blocked on Free Tax Prep landing page; Anthony unresponsive since Mac's 2026-04-15 follow-up (~**94 days**). Escalate with Mac today.
+1. **BOK Law ship backlog — 11 DAYS OVERDUE** — Ship ALL overdue week files to Dorothy (CC: akocelko, rbowe): Jun 23, Jun 30, Jul 7 (**Jul 9 Wisdom 11 days overdue**), Jul 14 (**Jul 16 Wisdom 4 days**, **Jul 17 Turn the Page 3 days**, **Jul 18 Family Fridays 2 days overdue**). One email, all weeks attached.
+2. **Align HCM Maher post — 5 DAYS OVERDUE** — Was due Jul 15. Script in `03_Content/Align HCM — week of 2026-07-14.md`. Ship text-only fallback today or record talking-head. Joann Monday post (Jul 13) is **7 days late**.
+3. **Bridge Software Development** — Tori decision package was Monday **2026-07-13**; post-meeting capture still missing (**7 days overdue**). Capture feedback on prototype + brand direction; update `01_Clients/Bridge Software Development/overview.md` and send follow-up.
+4. **Hardwood Artisan** — Billing card update outstanding since Sean's 2026-04-07 escalation (~**104 days**). Only client marked `at_risk`. Engagement pause risk.
+5. **NKCDC** — Launch blocked on Free Tax Prep landing page; Anthony unresponsive since Mac's 2026-04-15 follow-up (~**95 days**). Escalate with Mac today.
 
-**Next tier:** **Bar Crawl USA** — 2 Google Ads disapprovals (~94 days). **Jeff Hozias** — Meta seller campaign approved 2026-04-14, ~95 days not live.
+**Next tier:** **Bar Crawl USA** — 2 Google Ads disapprovals (~95 days). **Jeff Hozias** — Meta seller campaign approved 2026-04-14, ~96 days not live.
 
 ## Urgent Replies
 
@@ -36,8 +36,8 @@ Vault `last_touched` frozen at April 2026 on all M360 accounts — update when y
 
 | Client | last_touched | Open item |
 |--------|--------------|-----------|
-| Shadow HVAC | 2026-03-02 | LSA verification after reset (~138 days) |
-| LinkEZE | 2026-04-05 | Enhanced conversions + MFA (~104 days) |
+| Shadow HVAC | 2026-03-02 | LSA verification after reset (~139 days) |
+| LinkEZE | 2026-04-05 | Enhanced conversions + MFA (~105 days) |
 | Hardwood Artisan | 2026-04-07 | Billing card update |
 | Onsite Concrete | 2026-04-09 | Weekly call cadence |
 | Fresh Blends / Replenish | 2026-04-13 | Launch confirmation + week-1 snapshot |
@@ -48,19 +48,19 @@ Vault `last_touched` frozen at April 2026 on all M360 accounts — update when y
 | NKCDC | 2026-04-15 | Launch blocked |
 | Kimberly James Bridal | 2026-04-15 | Timeline page publish + GA4/GSC |
 
-**Watch (2–7 days):** Bridge Software Development — discovery complete 2026-07-11; post-Tori meeting capture **6 days overdue**.
+**Watch (2–7 days):** Bridge Software Development — discovery complete 2026-07-11; post-Tori meeting capture **7 days overdue**.
 
-**Data gaps:** 11+ active client stubs (Buzz Bull, Florecita, Bluegrass Janitorial, etc.) have no `overview.md` or pulse frontmatter.
+**Data gaps:** 13 active client stubs (Buzz Bull, Florecita, Bluegrass Janitorial, etc.) have no `overview.md` or pulse frontmatter.
 
 ## Content / SEO Due Today
 
-- **OVERDUE SHIP** — BOK Jun 23, Jun 30, Jul 7, Jul 14 week files (**10 days** on Jul 9 posts)
+- **OVERDUE SHIP** — BOK Jun 23, Jun 30, Jul 7, Jul 14 week files (**11 days** on Jul 9 posts)
 - **OVERDUE SHIP** — Align Jul 14 week file (Maher Jul 15, Joann Jul 13)
-- **DRAFTED TODAY** — BOK week of Jul 21 (`03_Content/Bok Law — week of 2026-07-21.md`) — ship Tue to Dorothy
-- **DRAFTED TODAY** — Align week of Jul 21 (`03_Content/Align HCM — week of 2026-07-21.md`) — review + schedule
+- **DRAFTED** — BOK week of Jul 21 (`03_Content/Bok Law — week of 2026-07-21.md`) — ship Tue to Dorothy
+- **DRAFTED** — Align week of Jul 21 (`03_Content/Align HCM — week of 2026-07-21.md`) — review + schedule
 - **Jul 21** — Align SmartCare video still needs asset (leave unscheduled)
 - **Thursday Jul 24** — Next book-site SEO sweep day
-- **Book site** — email capture endpoint still dead (P0 blocker for 2,000-subscriber goal); last SEO sweep 2026-07-16
+- **Book site** — email capture endpoint still dead (P0 blocker for 2,000-subscriber goal); `seo-sweep-2026-07-16.md` referenced but missing from vault
 
 ## Tomorrow Prep
 
