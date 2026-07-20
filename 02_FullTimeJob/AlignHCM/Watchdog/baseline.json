@@ -334,5 +334,66 @@
         "amount": null
       }
     ]
+  },
+  "closed_won_reconciliation": {
+    "asOf": "2026-07-20",
+    "source": "Live HubSpot DEAL record, reconciled. Supersedes the Jul 15 design one-pager ($162K) which was representative placeholder data.",
+    "window": "2026-01-01 to 2026-07-20, by close date",
+    "total_closed_won": {
+      "deals": 104,
+      "amount": 4950655
+    },
+    "by_deal_type": {
+      "new_business": {
+        "deals": 27,
+        "amount": 2284654
+      },
+      "existing_business": {
+        "deals": 20,
+        "amount": 1337473
+      },
+      "change_order": {
+        "deals": 47,
+        "amount": 897796
+      },
+      "renewal": {
+        "deals": 9,
+        "amount": 422732
+      },
+      "untyped": {
+        "deals": 1,
+        "amount": 8000
+      }
+    },
+    "new_business_by_origin": {
+      "offline_partner_sales_outbound": {
+        "deals": 23,
+        "amount": 2062984,
+        "pct": 0.903
+      },
+      "direct_web": {
+        "deals": 1,
+        "amount": 141145,
+        "pct": 0.062,
+        "note": "BioScript; origin disputed in CRM"
+      },
+      "organic_search_web": {
+        "deals": 1,
+        "amount": 54000,
+        "pct": 0.024,
+        "note": "Weissman; verified"
+      },
+      "untagged": {
+        "deals": 2,
+        "amount": 26525
+      }
+    },
+    "marketing_headline": {
+      "new_business_won": 2284654,
+      "web_sourced_won": 195145,
+      "verified_originated": 54000,
+      "web_sourced_pct": 0.085
+    },
+    "guard": "Standing directive 4: no revenue figure is reported unless a live DEAL query reproduces it."
   }
 }
