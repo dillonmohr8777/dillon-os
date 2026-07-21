@@ -16,9 +16,10 @@ A full HubSpot CMS edit pack was written to disk for paste-ready use. It covers:
 
 ## What is blocked
 
-• **HubSpot API token missing in this cloud environment.** No live portal reads, HubDB exports, or CMS publishes were attempted.  
-• **HubDB field audit** cannot start until IT/web grants read access or sends a CSV export (email template is in the pack).  
-• **AI referral reports** cannot be built until Dillon confirms exact property API names in HubSpot (placeholders listed in Section 4 of the pack).
+• **Cloud agent still cannot call HubSpot.** Desktop Codex/Hermes now has the Align credential (portal `242825734`, na2) via Windows env + Hermes `.env` + DPAPI. Cloud does not inherit that.  
+• **HubDB field audit** needs HubDB read access or a CSV export (email template is in the pack). Run that on **desktop Codex**, not this cloud session, unless the cloud secret is added.  
+• **AI referral reports** cannot be built until Dillon confirms exact property API names in HubSpot (placeholders listed in Section 4 of the pack).  
+• **Live CMS apply** (slider JS, titles, CTAs) stays gated. Paste from packs on desktop, or approve Tier-2 writes. Never push in front of the live Edge window.
 
 ## Homepage blog slider fix (separate pack)
 
