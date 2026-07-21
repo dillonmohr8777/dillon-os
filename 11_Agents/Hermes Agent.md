@@ -32,5 +32,6 @@ Operator shell bridge for Dillon OS. Routes work to Cursor models and vault skil
 • Ambiguous live site change → ask Dillon
 
 ## Notes
-• 2026-07-21 desktop: Align portal `242825734` (na2) verified; no publish.
-• 2026-07-21 cloud: token still missing; packs under `02_FullTimeJob/AlignHCM/optimization-packs/`.
+• 2026-07-21 desktop: Align portal `242825734` (na2) verified; env aliases + Hermes/legacy/.dpapi mapped; Cursor rule `hubspot-access.mdc` active. No publish.
+• 2026-07-21 cloud: token still missing until cloud secret `HUBSPOT_PRIVATE_APP_TOKEN` is set. Packs under `02_FullTimeJob/AlignHCM/optimization-packs/`.
+• Restart local Cursor once so Windows user env is inherited; Hermes already has live access.
