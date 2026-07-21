@@ -39,5 +39,8 @@ Chattanooga, Atlanta Beltline, Duluth GA, Fort Worth, Jacksonville, Savannah, Na
 - WordPress publisher clones Elementor template (page ID 15281)
 - St. Patrick's Day pages stored in Google Drive (large document)
 
+## Reports
+- 2026-07-21 — period 2026-06 — `Daily-Briefs/reports/bar-crawl-usa-2026-06.html` (sampleData: true; draft banner on)
+
 ## Links
 - [[Client Index]]

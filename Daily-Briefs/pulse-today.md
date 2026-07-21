@@ -1,23 +1,27 @@
-# Daily Pulse 2026-04-15
+# Daily Pulse 2026-07-21
 
-## Coverage Notes
-• Searched Gmail for Mia Lange (mia@getreplenish.com), Anthony Miller (amiller@nkcdc.org), Sean Boyle (sean@needmomentum.com) by address, plus David Stemm, Beth Frederick, Mac Frederick, Kimberly Iraci, and Andy by name. Andy (Bar Crawl USA) and Kimberly Iraci have no email on file, so those are name matches only and can miss.
-• Scanned 01_Clients/ for files modified within the last 24 hours.
+## Coverage notes
+• Scanned every top-level client note under `01_Clients/` plus folder git history.
+• Modified-time on disk is unreliable (workspace clone stamped everything today). Classification uses **last git commit touching the client note/folder**.
+• No client notes carry `due` / `next_action` / `last_touched` frontmatter. Pending-deliverables still can't auto-populate.
+• Blind spot: Gmail / Slack not wired in this cloud run (Slack MCP needs auth). Email-state sections from the 2026-04-15 pulse are stale and omitted.
 
-## Active Clients
-• None. No files under 01_Clients/ changed in the last 24 hours.
+## Moving (touched < 48h)
+• None. No client note or folder has a git touch inside 48 hours.
 
-## Unread/Unanswered Emails
-• Omega Landscaping / Momentum thread "Re: Adding User To Google Ad Account" from John Belaska. Roughly 21 hours old. Sean Boyle and beth@needmomentum.com are cc'd alongside you. John's asking whether Thursday works for a Google Ads account discussion. You're cc'd, not a direct recipient, so monitor unless Sean pulls you in.
-• Buzz Bull / CCA thread "Buzz Bull CCA / Sterile Care" from Mike Ross at projectcorporate.com. Roughly 22 hours old. Teams meeting invite touching Commercial Cleaners Alliance (David Stemm's org). Confirm attendance.
+## Watch (2–7 days)
+• None in the last 7 days either. Closest recent work:
+  • **Bridge Software Development** — last git touch 2026-07-11 (product memory / handoff). Next: confirm Tori follow-up from session notes.
+  • **Shadow HVAC** — last git touch 2026-07-03 (Next.js site build). Next: confirm deploy + LSA / GBP cadence still running.
 
-## Pending Deliverables (due in 48 hours)
-• Nothing surfaced. Your vault doesn't carry due date frontmatter on client notes, so this section can't be populated until notes include a `due` or `next_action` field.
+## Stalled (7+ days untouched)
+• **Every M360 retainer note** last committed **2026-04-15** except Shadow HVAC (Jul 3) and Bridge (Jul 11). That includes Bar Crawl USA, Link Eze, Omega, Jeff Hozias, KJB, Fresh Blends / Replenish, Hardwood Artisan, NKCDC, Onsite Concrete, Bok Law, Blissful Events, Buzz Bull, Florecita, CCA.
+• Highest-risk stalls called out in the Jul 2 opportunities brief: **NKCDC** (tax-prep LP silent), **Hardwood Artisan** (billing card / 90-day risk), **Omega** (drone footage chase), **Shadow HVAC** (comms gap despite site work).
 
-## Stalled Items (7+ days no update)
-• Same limitation as above. Every client note under 01_Clients/ is older than 24 hours by modified time, so either everything's stalled or the vault isn't where you're tracking daily movement. Worth clarifying the source of truth before the next pulse.
+## Due in 48h
+• Nothing dated. Vault still has no `due` fields. Treat as a data gap, not a clean slate.
 
-## Tomorrow's Priority Stack
-1. Confirm the Buzz Bull / CCA Teams meeting with Mike Ross at projectcorporate.com. Highest urgency because it's a calendar commitment with a hard time.
-2. Decide whether to sit in on the Omega Landscaping Google Ads sync John Belaska's proposing for Thursday. You're cc'd, not the owner, so a short "I'll join if helpful" reply is enough.
-3. Add frontmatter (`next_action`, `due`, `last_touched`) to 01_Clients/ notes so future pulses can populate Pending Deliverables and Stalled Items against real data.
+## Tomorrow's priority stack
+1. **Chase list emails** for NKCDC, Hardwood Artisan, Omega — drafted, Momentum-branded, ready to send. Highest revenue / relationship risk.
+2. **Bar Crawl USA July report** — June HTML exists with `sampleData: true`. Replace sample KPIs with live Ads numbers or keep the draft banner honest.
+3. **Frontmatter pass on active retainers** — `status`, `last_touched`, `next_action` on the 8 paid M360 rows so the next pulse isn't this hollow.

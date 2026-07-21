@@ -16,12 +16,16 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Draft chase emails for NKCDC, Hardwood Artisan, Omega
+- [ ] Replace Bar Crawl June sample KPIs or keep draft banner
+- [ ] Writing-rules pass + ship one Align HCM SEO blog
+- [ ] Add next_action / last_touched frontmatter on paid M360 retainers
+- [ ] Process Top 15 Opportunities inbox note (file or action)
 
 ## Active Projects
-- 
+- IMMOHRTAL campaign / site growth
+- Bridge Software Development (Tori)
+- M360 retainer ops (vault thaw)
 
 ## Notes
-- 
+- Cloud agent workflow test ran 2026-07-21 — see `Daily-Briefs/*-2026-07-21.md`
