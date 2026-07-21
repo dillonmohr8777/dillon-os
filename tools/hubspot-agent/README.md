@@ -2,49 +2,42 @@
 
 Source of truth for Lane G (Align / AEO-GEO / HubSpot).
 
-## Verified account (2026-07-21, desktop Codex)
+## Verified account (2026-07-21, desktop)
 
 • Account: Align HCM  
 • Portal ID: `242825734`  
 • Region: `na2`  
 • Account type: Standard  
-• Check: real HubSpot account API call succeeded on local desktop. No CMS/CRM/edge publish.
+• Live HubSpot account check: succeeded on desktop. No CMS/CRM/edge publish.
 
 ## Auth topology
 
-**Never commit. Never print. Never paste into chat.**
+**Never commit. Never print. Never ask Dillon to paste the key into chat.**
 
-### Local Windows desktop (ready)
-
-Aliases on the Windows user environment (inherited by new Cursor / Codex terminals):
+Supported env aliases (same underlying Align service key):
 
 • `HUBSPOT_PRIVATE_APP_TOKEN`  
 • `HUBSPOT_ACCESS_TOKEN`  
 • `HUBSPOT_SERVICE_KEY`
 
-Also loaded into Hermes:
+### Desktop credential locations (ready)
 
-• `C:\Users\DillonMohr\AppData\Local\hermes\.env`
+1. Windows user environment — inherited by Cursor after a full Cursor restart  
+2. Hermes: `C:\Users\DillonMohr\AppData\Local\hermes\.env`  
+3. Legacy HubSpot agent: `C:\Users\DillonMohr\hubspot-agent\.env`  
+4. Encrypted DPAPI fallback: `Codex\tools\hubspot-agent\.secrets\align-hubspot-token.dpapi` (under the Align OneDrive Desktop Codex tree)
 
-Encrypted DPAPI fallback (desktop Codex only):
+Cursor rule (desktop Codex workspace):
 
-• `Codex\tools\hubspot-agent\.secrets\align-hubspot-token.dpapi`
+• `.cursor/rules/hubspot-access.mdc` — always-on: which env to use, where to find it, verify safely, read-only/draft without approval
 
-Desktop Codex `AGENTS.md` documents safe access: read-only / draft unless Dillon approves writes or publishing.
+### Cursor Cloud agents
 
-### Cursor Cloud agents (this environment)
-
-Cloud does **not** inherit Windows user env. Until the same secret is added as a Cursor Cloud environment secret named `HUBSPOT_PRIVATE_APP_TOKEN`, cloud runs stay pack-only.
+Cloud does **not** inherit Windows user env, Hermes `.env`, or DPAPI. Add a Cursor Cloud environment secret named `HUBSPOT_PRIVATE_APP_TOKEN` for API access from cloud runs.
 
 ```bash
-# Cloud / Linux check (prints PRESENT/MISSING only)
-./tools/hubspot-agent/status.sh
+./tools/hubspot-agent/status.sh   # PRESENT/MISSING only; never prints the value
 ```
-
-## Scripts
-
-• `status.sh` — token present? (no value printed)  
-• Future: `cms-read.sh` — read-only CMS helpers once token is present on this runtime
 
 ## Publish policy
 
@@ -52,8 +45,8 @@ Cloud does **not** inherit Windows user env. Until the same secret is added as a
 • Writes or publishing: Dillon Tier-2 approval only  
 • Never push live HubSpot / edge changes in front of Dillon's current Edge or Agents window
 
-## Related packs
+## Related
 
-• `02_FullTimeJob/AlignHCM/optimization-packs/` — dated paste-ready work  
-• `GEO_OPERATING_SYSTEM.md` — AEO/GEO operating rules  
-• `tools/hermes-bridge/` — Grok 4.5 + Composer 2.5 routing
+• `GEO_OPERATING_SYSTEM.md`  
+• `tools/hermes-bridge/` — Grok 4.5 + Composer 2.5  
+• `02_FullTimeJob/AlignHCM/optimization-packs/`
