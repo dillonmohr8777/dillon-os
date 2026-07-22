@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-21T07:14:00-04:00",
+  "generated": "2026-07-22T07:14:00-04:00",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-07-21"
+    "end": "2026-07-22"
   },
   "source": "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
   "directives": [
@@ -104,8 +104,8 @@
     },
     {
       "month": "2026-07",
-      "views": 1279,
-      "submissions": 17,
+      "views": 1394,
+      "submissions": 21,
       "note": "month in progress"
     }
   ],
@@ -1344,7 +1344,7 @@
         },
         {
           "month": "2026-07",
-          "rate": 0.0138,
+          "rate": 0.0151,
           "partial": true
         }
       ]
