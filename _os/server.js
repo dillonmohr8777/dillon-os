@@ -144,7 +144,7 @@ function getSkills() {
     skills.push({ name: fm.name || e.name, description: fm.description || '' });
   }
   // Deck order: daily cadence first, then the rest alphabetically.
-  const order = ['am-report', 'inbox-brief', 'plan-today', 'client-pulse',
+  const order = ['competitive-task-orchestrator', 'am-report', 'inbox-brief', 'plan-today', 'client-pulse',
     'metrics-pull', 'content-scan', 'week-review', 'vault-clean'];
   skills.sort((a, b) => {
     const ai = order.indexOf(a.name), bi = order.indexOf(b.name);

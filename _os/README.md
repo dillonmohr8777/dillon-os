@@ -28,7 +28,7 @@ Deck buttons; the dashboard itself works without it).
 Defined in `.claude/skills/`, all vault-native (they read the vault and write
 results back into `Daily-Briefs/`):
 
-`am-report` · `inbox-brief` · `plan-today` · `client-pulse` · `metrics-pull`
+`competitive-task-orchestrator` · `am-report` · `inbox-brief` · `plan-today` · `client-pulse` · `metrics-pull`
 · `content-scan` · `week-review` · `vault-clean`
 
 They also work straight from a terminal: `claude "/am-report"`.
