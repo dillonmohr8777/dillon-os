@@ -2,13 +2,13 @@
 
 ## High Priority
 
-- [ ] **NKCDC** — Launch blocked: Free Tax Prep landing page not shipped by client (~96 days). Escalate with Mac → Anthony.
-- [ ] **Bar Crawl USA** — 2 ad disapprovals (Halloween / Fall Cocktail Crawl language). Resolution reply owed to Andy (~96 days).
-- [ ] **LinkEZE** — Enhanced conversions data-source diagnostics + MFA on customer ID 809-600-6448 (~106 days overdue).
+- [ ] **NKCDC** — Launch blocked: Free Tax Prep landing page not shipped by client (~97 days). Escalate with Mac → Anthony.
+- [ ] **Bar Crawl USA** — 2 ad disapprovals (Halloween / Fall Cocktail Crawl language). Resolution reply owed to Andy (~97 days).
+- [ ] **LinkEZE** — Enhanced conversions data-source diagnostics + MFA on customer ID 809-600-6448 (~107 days overdue).
 
 ## Medium Priority
 
-- [ ] **Jeff Hozias** — Meta seller campaign approved 2026-04-14, not launched (~97 days). Log account ID, verify pixel, launch.
+- [ ] **Jeff Hozias** — Meta seller campaign approved 2026-04-14, not launched (~98 days). Log account ID, verify pixel, launch.
 - [ ] **Kimberly James Bridal** — Timeline page publish + GA4/GSC verification per Mac.
 
 ## Low Priority

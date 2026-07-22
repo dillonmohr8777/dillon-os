@@ -17,15 +17,15 @@ tags: [dashboard, moc]
 - [[09_Transcripts/Transcript Index|Transcripts]]
 - [[10_Sessions/Session Index|Sessions]]
 
-## Today (2026-07-21)
+## Today (2026-07-22)
 
 From [[Daily-Briefs/competitive-task-today]]:
 
-- [ ] **BOK Law** — Ship entire Jun/Jul backlog (12 days overdue) to Dorothy
-- [ ] **Align HCM** — Ship overdue Maher + Joann posts; publish today's Joann payroll post
-- [ ] **Bridge** — Capture Tori meeting outcome + follow-up (8 days overdue)
-- [ ] **Hardwood Artisan** — Billing nudge via Sean loop (~105 days)
-- [ ] **NKCDC** — Escalate with Mac to Anthony (~96 days)
+- [ ] **BOK Law** — Ship entire Jun/Jul backlog + week of Jul 21 (13 days overdue on Jul 9 posts)
+- [ ] **Align HCM** — Ship overdue Maher + Joann posts; publish Jul 21 Joann payroll post (1 day overdue)
+- [ ] **Bridge** — Capture Tori meeting outcome + follow-up (9 days overdue)
+- [ ] **Hardwood Artisan** — Billing nudge via Sean loop (~106 days)
+- [ ] **NKCDC** — Escalate with Mac to Anthony (~97 days)
 
 ## Active Projects
 - Competitive Task Orchestrator (umbrella automation — replaces 7 legacy crons)
