@@ -1,20 +1,36 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-07-23
+last_orchestrator_run: 2026-07-23
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+**Umbrella automation:** `competitive-task-orchestrator` — cron `0 13 * * *` (1:00 PM ET daily).  
+Replaces 7 legacy crons (see [[System/competitive-task-definition#Retired standalone crons]]).
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+## Lane status (run 30 — 2026-07-23)
 
-## Notes
-- First real test of the full routine stack begins 2026-04-16.
+| Lane | Status | Notes |
+|------|--------|-------|
+| gmail-intel | 🟡 fallback | Gmail MCP not connected; vault + urgent-replies |
+| slack-intel | 🟡 fallback | Slack MCP not connected; handoffs merged |
+| vault-pulse | 🟡 stale | 145 files; all `last_touched` frozen April 2026 |
+| codex-session-sync | 🟡 partial | 24 sessions; Facebook Ads stubs empty |
+| domain-ads-seo | 🟢 ok | 7 items in Google Ads queue (3H/2M/2L) |
+| content-routines | 🟢 done | Thursday book SEO sweep → `05_Book/seo-sweep-2026-07-23.md` |
+| memory-consolidator | 🟢 ok | Brief + sync + routine-health updated |
+
+## Legacy crons (disable in Cursor UI)
+
+- [ ] `nightly-client-pulse`
+- [ ] `gmail-to-vault-digest`
+- [ ] `vault-integrity-sync`
+- [ ] `chat-to-vault-sync`
+- [ ] `bok-law-social-content`
+- [ ] `linkedin-growth-engine`
+- [ ] `book-site-seo-sweep`
+
+## Operator action
+
+Connect Gmail + Slack MCP on the orchestrator automation to turn yellow lanes green.

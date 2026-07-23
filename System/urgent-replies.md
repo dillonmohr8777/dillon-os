@@ -1,20 +1,28 @@
 ---
-last_updated: 2026-04-15
+last_updated: 2026-07-23
 tags: [system, urgent]
+source: vault-fallback
 ---
 
 # Urgent Replies Needed
 
-Updated by `gmail-to-vault-digest` daily at 7:00 AM.
+Updated by `gmail-intel` lane during `competitive-task-orchestrator` (1:00 PM ET daily). Gmail MCP not connected — vault fallback.
 
 ## Immediate (today/tomorrow)
-• **Bar Crawl USA** — Andy Zirger forwarded 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Dillon responded 2026-04-15 saying he'd investigate. Owe him a resolution.
-• **NKCDC** — Mac checked in with Anthony 2026-04-15. Still no response from NKCDC. Launch blocked on Free Tax Prep page.
-• **Omega Landscaping** — John Belaska asked David for a Thursday meeting. David hasn't replied. Monitor — Dillon is CC'd, not the owner.
+
+- **BOK Law** — Ship entire Jun/Jul backlog to Dorothy O'Neil (CC: akocelko, rbowe). Jun 23, Jun 30, Jul 7, Jul 14 week files all unshipped. Jul 9 Wisdom **14 days overdue**. **Today:** publish Wednesday Wisdom (Jul 23) from `week of 2026-07-21` file. One consolidated email with all attachments.
+- **Align HCM** — Ship overdue Maher post (Jul 15, **8 days late**; text-only OK). Ship overdue Joann Monday post (Jul 13, **10 days late**). Publish Jul 21 Joann payroll post (**2 days overdue**) from week file after backlog clears.
+- **Bridge Software Development** — Capture Tori meeting outcome from 2026-07-13 decision package (**10 days overdue**). Send follow-up with prototype feedback + brand direction decisions.
+- **Bar Crawl USA** — Andy Zirger forwarded 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Resolution reply owed (~98 days).
+- **NKCDC** — Mac checked in with Anthony 2026-04-15. Still no response. Launch blocked on Free Tax Prep page (~98 days). Escalate with Mac today.
+- **Hardwood Artisan** — Nudge Dalton about card update via Sean loop. Engagement at risk (~107 days since 2026-04-07 escalation).
 
 ## This week
-• **Commercial Cleaners Alliance** — Audit delivery of creatives committed 2026-04-08 (CCA + NexGen).
-• **Hardwood Artisan** — Nudge Dalton about card update ahead of the engagement pausing.
-• **Kimberly James Bridal** — Confirm Timeline page published and GA4/GSC indexing healthy.
-• **Fresh Blends / Replenish** — Verify launch fired and send first-week snapshot.
-• **Shadow HVAC** — Send Mike a catch-up report and confirm LSA is serving.
+
+- **Commercial Cleaners Alliance** — Audit delivery of creatives committed 2026-04-08 (CCA + NexGen).
+- **Kimberly James Bridal** — Confirm Timeline page published and GA4/GSC indexing healthy.
+- **Fresh Blends / Replenish** — Verify launch pacing and send first-week snapshot to Mia.
+- **Shadow HVAC** — Send Mike a catch-up report and confirm LSA is serving.
+- **Jeff Hozias** — Launch approved Meta seller campaign (~99 days since approval).
+- **LinkEZE** — Fix enhanced conversions diagnostics; confirm MFA on 809-600-6448.
+- **Book site** — Fix email capture endpoint (blocks 2,000-subscriber goal).
