@@ -108,7 +108,8 @@
     ]
   },
   "known_issues_open": [
-    "hubspot-sitemap-cache-stale-redirects (2 healthy 301s remain in the HubSpot sitemap cache; no private-token sitemap write endpoint)"
+    "hubspot-sitemap-cache-stale-redirects (2 healthy 301s remain in the HubSpot sitemap cache; no private-token sitemap write endpoint)",
+    "duplicate-case-study-path (/success-stories and /case-studies both live and indexed for the same content; pick one canonical path and 301 the other, or set a canonical tag; found in daily SEO sweep 2026-07-23)"
   ],
   "known_issues_resolved": [
     {

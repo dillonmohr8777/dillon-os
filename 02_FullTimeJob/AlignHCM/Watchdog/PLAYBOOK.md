@@ -81,6 +81,8 @@ Full spec and current values live in `leading-indicators.md`. Compute all three 
 - Any `*.netlify.app` URL
 - `meetings-na2.hubspot.com/*` and `app-na2.hubspot.com/*` (report meeting bookings separately, they are a conversion signal, not page traffic)
 - `242825734.hs-sites-na2.com/*` case studies count separately until migrated to the main domain (open issue #1)
+- **QA/test form fills**: any contact whose email contains `+` alias tags like `dillonmohr8777+...` or whose name/company is an obvious test (e.g. "Codex Form QA Test"). These are internal test submissions, never real conversions.
+- **Spam bot submissions**: contacts with gibberish/random-string names or company values (e.g. `mEVfpwScJAciqjsXaZ`). Exclude from conversion counts and note the spam volume separately as a form-hygiene signal.
 
 ## Step 2: Health checks and alert thresholds
 
@@ -118,7 +120,7 @@ Site reachability: attempt a fetch of https://www.alignhcm.com/robots.txt every 
 ## Step 3: Full-site and SEO sweep
 
 1. Every run, use the full-site results produced by `Refresh-Dashboard.ps1`: sitemap final status, redirects still present in the sitemap, discovered internal targets, broken visitor-facing targets, GA4 coverage, HubSpot tracking coverage, conversion coverage, sandbox links, and SmartCare form behavior.
-2. On Mondays, or when flagged, WebSearch `site:alignhcm.com` and compare indexed titles/URLs against the HubSpot page inventory. Flag legacy URLs (`/welcome/`, `/news/`), missing key pages, and title mismatches.
+2. **Every run (SEO sweep is daily, not Monday-only)**, WebSearch `site:alignhcm.com` and compare indexed titles/URLs against the HubSpot page inventory. Flag legacy URLs (`/welcome/`, `/news/`), duplicate paths for the same content (e.g. `/success-stories` vs `/case-studies`), missing key pages, and title mismatches. Report the sweep in a dedicated "SEO sweep" section of the report every day, even when it is clean.
 3. Run a duplicate-content scan of blog titles from the TOTALS pull and verify archived duplicates still resolve to their canonical destination.
 4. Check `known_issues_open` in `baseline.json` and report status movement. A cached sitemap entry can remain a warning after a page is archived, but it must not be described as a live broken page when its final destination is healthy.
 
@@ -128,7 +130,7 @@ The watchdog may run multiple times per day. First run of the day creates `repor
 
 Create `reports/YYYY-MM-DD.md` with frontmatter (`type: watchdog-report`). Sections:
 1. **Verdict**: one paragraph, plain language. Lead with anything alarming, otherwise "steady".
-2. **Daily numbers**: yesterday's views, submissions, contacts vs 7-day average.
+2. **Daily numbers**: yesterday's views, submissions, and contacts vs the 7-day average. Then ITEMIZE every submission from yesterday in a table: the page or meeting link, the person or company where a contact was created (internal report only, never on the public dashboard), the source, and whether it is a genuine conversion. Separate real inbound web conversions from pollution and report a clean count alongside the raw count. NEVER call a day a "best conversion day" on the raw submission number before removing pollution.
 3. **All-year numbers**: window totals since 2026-01-01 (views, submissions, contacts, verified owned-channel won revenue for Organic Search / Direct Traffic / Organic Social, CRM-reported Website revenue shown separately, excluded conflicting-source revenue, assisted influence under the LINEAR model, and AI referral count). Same window every day, so the numbers are always comparable.
 4. **Alerts fired** (or "none").
 5. **Open issues**: status of each item in `known_issues_open`, note any fixed (remove from baseline) or new (add).
