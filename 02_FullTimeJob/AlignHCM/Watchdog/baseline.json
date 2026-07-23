@@ -62,6 +62,25 @@
       "partial": true
     }
   ],
+  "daily_series": {
+    "note": "Rolling per-day series (~last 45 days) for the weekly PDF views chart. Appended each run from the HubSpot DAILY SUMMARY pull. submissionsClean strips QA-test and spam-bot fills per the PLAYBOOK exclusions.",
+    "days": [
+      { "date": "2026-07-10", "views": 79, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
+      { "date": "2026-07-11", "views": 30, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-12", "views": 16, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-13", "views": 38, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-14", "views": 139, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-15", "views": 58, "submissions": 1, "submissionsClean": 1, "contacts": 0 },
+      { "date": "2026-07-16", "views": 82, "submissions": 2, "submissionsClean": 2, "contacts": 1 },
+      { "date": "2026-07-17", "views": 54, "submissions": 2, "submissionsClean": 2, "contacts": 1 },
+      { "date": "2026-07-18", "views": 28, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-19", "views": 47, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-20", "views": 73, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
+      { "date": "2026-07-21", "views": 112, "submissions": 2, "submissionsClean": 2, "contacts": 2 },
+      { "date": "2026-07-22", "views": 87, "submissions": 5, "submissionsClean": 2, "contacts": 4 },
+      { "date": "2026-07-23", "views": 12, "submissions": 1, "submissionsClean": 0, "contacts": 1, "partial": true }
+    ]
+  },
   "attribution_snapshot": {
     "asOf": "2026-07-18",
     "model": "LINEAR",

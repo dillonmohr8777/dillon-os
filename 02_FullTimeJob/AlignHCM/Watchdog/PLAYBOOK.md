@@ -138,9 +138,23 @@ Create `reports/YYYY-MM-DD.md` with frontmatter (`type: watchdog-report`). Secti
 
 ## Step 5: Update baseline, dashboard data, and commit
 
-1. Update `baseline.json`: refresh aggregates, append the completed week to `weekly_series` when a week closes, and sync `known_issues_open`. Page-level exit diagnostics stay internal and are not published on the overall dashboard.
+1. Update `baseline.json`: refresh aggregates and sync `known_issues_open`. Also append yesterday's completed day to `daily_series.days` (`{date, views, submissions, submissionsClean, contacts}`, `submissionsClean` = raw minus QA-test and spam-bot fills per the exclusions) and trim entries older than ~45 days. This series feeds the weekly PDF views chart. Page-level exit diagnostics stay internal and are not published on the overall dashboard.
 2. Update `site-analytics-dashboard/data.json` at the repo root ON EVERY RUN: refresh `generated`, `window.end`, `kpis`, `monthly`, `touchAttribution`, `blogs`, `attribution`, `siteCoverage`, and non-revenue alerts from this run's pulls. Remove `topPages`, page-level exit metrics, and overall bounce-rate fields from the public artifact.
 3. Run `./Refresh-Dashboard.ps1 -Publish`. It authoritatively refreshes `ownedMarketing`, `channelRevenue`, `qualifiedLeads`, `sources`, `aeo`, `siteCoverage`, crawler and attribution alerts, and verified-channel KPIs; validates both JSON files; stages only the dashboard data, baseline, and today's report; commits with `watchdog: daily report YYYY-MM-DD`; pushes the designated branch; and deploys `site-analytics-dashboard` to Netlify site `2c966b0b-ce94-4b2a-8872-8c1e22092b3f`. A run is not complete until the production Netlify deploy returns the expected site identity.
+
+## Step 5b: Render the branded PDFs (every run)
+
+After the `.md` report is written and `baseline.json` / `data.json` are updated, render the PDFs from
+the just-updated data (Linux-native, headless Chromium, no PowerShell):
+
+1. **Daily, every run**: `python3 reporting/generate_report.py --kind daily` -> `reports/pdf/daily/YYYY-MM-DD.pdf`.
+2. **Weekly, on Mondays** (covers the 7 days ending yesterday): also run
+   `python3 reporting/generate_report.py --kind weekly` -> `reports/pdf/weekly/YYYY-Www.pdf`.
+3. Commit the generated PDF(s) alongside the report and JSON. On non-Monday days only the daily PDF changes.
+4. Do NOT commit the optional `--png` preview images; they are for design verification only.
+
+The generator reads only `baseline.json` + `data.json` + the day's `reports/*.md`, so it never calls
+HubSpot. See `reporting/README.md`. If Chromium is missing, report the failure; do not skip the PDF silently.
 
 ## Step 6: Escalation
 
