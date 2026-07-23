@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-22T07:14:00-04:00",
+  "generated": "2026-07-23T07:14:00-04:00",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-07-22"
+    "end": "2026-07-23"
   },
   "source": "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
   "directives": [
@@ -104,8 +104,8 @@
     },
     {
       "month": "2026-07",
-      "views": 1394,
-      "submissions": 21,
+      "views": 1481,
+      "submissions": 25,
       "note": "month in progress"
     }
   ],
@@ -1313,10 +1313,10 @@
     "privacy": "Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard."
   },
   "leadingIndicators": {
-    "asOf": "2026-07-19",
+    "asOf": "2026-07-23",
     "note": "First-party leading indicators computed each watchdog run. See 02_FullTimeJob/AlignHCM/Watchdog/leading-indicators.md.",
     "conversionRate": {
-      "ytd": 0.0198,
+      "ytd": 0.0197,
       "monthly": [
         {
           "month": "2026-01",
@@ -1344,44 +1344,40 @@
         },
         {
           "month": "2026-07",
-          "rate": 0.0151,
+          "rate": 0.0169,
           "partial": true
         }
       ]
     },
     "influencedOpenPipeline": {
-      "total": 140000,
-      "deals": 2,
+      "total": 15000,
+      "deals": 1,
+      "prior": 140000,
+      "alert": "Down 89% (>50% MoM threshold): Kaiser Permanente ($125K Organic Search) moved from open to closed-lost.",
       "detail": [
         {
-          "company": "Kaiser Permanente",
-          "amount": 125000,
-          "stage": "Expressing Interest",
-          "source": "Organic Search"
-        },
-        {
-          "company": "RPM / Bedrock",
+          "company": "RPM xConstruction",
           "amount": 15000,
-          "stage": "Proposal/Quote",
+          "stage": "Presentation Scheduled",
           "source": "Organic Search"
         }
       ]
     },
     "followUpGap": {
-      "convertedContacts": 177,
-      "noOutreach": 70,
-      "noOutreachPct": 0.4,
+      "convertedContacts": 185,
+      "noOutreach": 78,
+      "noOutreachPct": 0.42,
       "qualifiedTotal": 22,
       "qualifiedNoFollowUp": 9
     }
   },
   "dataIntegrity": {
-    "asOf": "2026-07-19",
+    "asOf": "2026-07-23",
     "closedLostWithoutReason": {
-      "deals": 72,
+      "deals": 75,
       "pctOfLost": 1.0,
-      "note": "Nearly every lost deal has no reason logged. This is CRM hygiene, not site health."
+      "note": "Every lost deal has no reason logged; count rose from 72. This is CRM hygiene, not site health."
     },
-    "prematureCloses": 2
+    "prematureCloses": 3
   }
 }

@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-22",
+  "generated": "2026-07-23",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-07-22"
+    "end": "2026-07-23"
   },
   "source": "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
   "note": "All watchdog and dashboard reporting uses the fixed window start 2026-01-01. The window extends daily on its own.",
@@ -56,9 +56,9 @@
     },
     {
       "month": "2026-07",
-      "views": 1394,
-      "submissions": 21,
-      "contacts": 11,
+      "views": 1481,
+      "submissions": 25,
+      "contacts": 15,
       "partial": true
     }
   ],
@@ -220,9 +220,9 @@
   },
   "contact_sources_window": {
     "AI_REFERRALS": 2,
-    "DIRECT_TRAFFIC": 107,
-    "OFFLINE": 2151,
-    "ORGANIC_SEARCH": 16,
+    "DIRECT_TRAFFIC": 114,
+    "OFFLINE": 2161,
+    "ORGANIC_SEARCH": 17,
     "REFERRALS": 8,
     "SOCIAL_MEDIA": 6
   },
@@ -270,11 +270,11 @@
     "wonRevenue": 54000,
     "lostValue": 361000
   },
-  "last_run": "2026-07-22 (Wednesday; preflight passed, MCP pulls)",
+  "last_run": "2026-07-23 (Thursday; preflight passed, MCP pulls; ALERT: influenced open pipeline dropped $140K to $15K, Kaiser Permanente closed-lost)",
   "leading_indicators": {
-    "asOf": "2026-07-19",
+    "asOf": "2026-07-23",
     "conversion_rate": {
-      "ytd": 0.0198,
+      "ytd": 0.0197,
       "monthly": {
         "2026-01": 0.009,
         "2026-02": 0.026,
@@ -282,32 +282,28 @@
         "2026-04": 0.0269,
         "2026-05": 0.0193,
         "2026-06": 0.0225,
-        "2026-07": 0.0151
+        "2026-07": 0.0169
       },
       "alert_floor": 0.012
     },
     "influenced_open_pipeline": {
-      "total": 140000,
-      "deals": 2,
+      "total": 15000,
+      "deals": 1,
+      "prior": 140000,
+      "alert": "Dropped 89% (>50% MoM threshold). Kaiser Permanente ($125K, ORGANIC_SEARCH) moved from open to closed-lost since 2026-07-19.",
       "detail": [
         {
-          "company": "Kaiser Permanente",
-          "amount": 125000,
-          "stage": "Expressing Interest",
-          "source": "ORGANIC_SEARCH"
-        },
-        {
-          "company": "RPM / Bedrock",
+          "company": "RPM xConstruction",
           "amount": 15000,
-          "stage": "Proposal/Quote",
+          "stage": "presentationscheduled",
           "source": "ORGANIC_SEARCH"
         }
       ]
     },
     "lead_follow_up_gap": {
-      "convertedContacts": 177,
-      "noOutreach": 70,
-      "noOutreachPct": 0.4,
+      "convertedContacts": 185,
+      "noOutreach": 78,
+      "noOutreachPct": 0.42,
       "qualifiedSubset": {
         "total": 22,
         "noFollowUp": 9
@@ -315,17 +311,22 @@
     }
   },
   "data_integrity": {
-    "asOf": "2026-07-19",
+    "asOf": "2026-07-23",
     "closed_lost_without_reason": {
-      "deals": 72,
-      "value": 11304118,
+      "deals": 75,
+      "value": 12734443,
       "pctOfLost": 1.0,
-      "note": "Essentially every lost deal in the window has no reason logged. Track the count down as the required-field fix takes hold."
+      "note": "Every lost deal in the window still has no reason logged; count rose from 72 (Americold $800K Direct, Eat'n Park, Kaiser among recent losses). Track down as the required-field fix takes hold."
     },
     "premature_closes": [
       {
+        "deal": "Kaiser Permanente - PRO Optimization",
+        "issue": "newly closed-lost with future close date (Sep 30) and amount zeroed to $0; was $125K open Organic Search deal",
+        "amount": 0
+      },
+      {
         "deal": "Superior Propane - Dayforce SmartCare",
-        "issue": "close date future-dated (Jul 31)",
+        "issue": "closed-lost with future close date (Jul 31)",
         "amount": 200000
       },
       {
@@ -336,24 +337,24 @@
     ]
   },
   "closed_won_reconciliation": {
-    "asOf": "2026-07-20",
+    "asOf": "2026-07-23",
     "source": "Live HubSpot DEAL record, reconciled. Supersedes the Jul 15 design one-pager ($162K) which was representative placeholder data.",
-    "window": "2026-01-01 to 2026-07-20, by close date",
+    "window": "2026-01-01 to 2026-07-23, by close date",
     "total_closed_won": {
-      "deals": 104,
-      "amount": 4950655
+      "deals": 106,
+      "amount": 5375030
     },
     "by_deal_type": {
       "new_business": {
-        "deals": 27,
-        "amount": 2284654
+        "deals": 28,
+        "amount": 2709029
       },
       "existing_business": {
         "deals": 20,
         "amount": 1337473
       },
       "change_order": {
-        "deals": 47,
+        "deals": 48,
         "amount": 897796
       },
       "renewal": {
@@ -367,20 +368,20 @@
     },
     "new_business_by_origin": {
       "offline_partner_sales_outbound": {
-        "deals": 23,
-        "amount": 2062984,
-        "pct": 0.903
+        "deals": 24,
+        "amount": 2487359,
+        "pct": 0.918
       },
       "direct_web": {
         "deals": 1,
         "amount": 141145,
-        "pct": 0.062,
+        "pct": 0.052,
         "note": "BioScript; origin disputed in CRM"
       },
       "organic_search_web": {
         "deals": 1,
         "amount": 54000,
-        "pct": 0.024,
+        "pct": 0.02,
         "note": "Weissman; verified"
       },
       "untagged": {
@@ -389,10 +390,10 @@
       }
     },
     "marketing_headline": {
-      "new_business_won": 2284654,
+      "new_business_won": 2709029,
       "web_sourced_won": 195145,
       "verified_originated": 54000,
-      "web_sourced_pct": 0.085
+      "web_sourced_pct": 0.072
     },
     "guard": "Standing directive 4: no revenue figure is reported unless a live DEAL query reproduces it."
   }
