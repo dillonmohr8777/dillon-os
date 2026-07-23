@@ -21,6 +21,7 @@ Access is ready only after the revised rules in [customer-agent-guardrails.md](c
 - [Knowledge-core preview](knowledge-core-preview.png)
 - [Agent-image comparison](agent-image-preview.png)
 - [Final guardrail and Ben-access gate](customer-agent-guardrails.md)
+- [HubSpot-ready final guidelines](customer-agent-final-guidelines.txt)
 
 ## Verified state
 
@@ -29,9 +30,9 @@ Access is ready only after the revised rules in [customer-agent-guardrails.md](c
 - Customer-facing channel: not activated
 - General competitor prompt: passed without naming or criticizing another company
 - Named-provider prompt: failed the stricter no-classification requirement
+- Corrected HubSpot guideline payload: built and validated at 2,306 characters
 - Ben access: not granted
 
 ## Source note
 
 The report is a design and evidence artifact, not an activation certificate. The editable HTML is included so Claude can revise the report in the same visual system without rebuilding it.
-
