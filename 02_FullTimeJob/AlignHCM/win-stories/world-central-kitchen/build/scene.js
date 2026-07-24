@@ -75,17 +75,18 @@ function buildScene() {
   el.push({ type: "text", x: LX + wckW + 0.30, y: CARD_Y, w: 6.0, h: HDR_H, align: "left", valign: "middle",
     runs: [{ text: "Dayforce Full-Suite Implementation   |   Nonprofit   |   Global Humanitarian", size: 10.5, italic: true, color: "C7D2E0" }] });
 
-  // WIN STORY pill (top-right) with vendor logos below
-  const pillW = 1.02, pillH = 0.24;
-  el.push({ type: "roundRect", x: RIGHT - pillW, y: 0.40, w: pillW, h: pillH, r: 0.05, fill: "E0652F" });
-  el.push({ type: "text", x: RIGHT - pillW, y: 0.40, w: pillW, h: pillH, align: "center", valign: "middle",
-    runs: [{ text: "WIN STORY", size: 8.5, bold: true, color: "FFFFFF", cs: 1 }] });
-  const dfW = 1.02, dfH = 0.429, alW = 1.00, alH = 0.50;
-  const rowTop = 0.72;
+  // vendor logos (right), transparent, with WIN STORY pill centered above
+  const dfW = 1.227, dfH = dfW / 4.091, alH = 0.46, alW = alH * 2.346, vgap = 0.32;
+  const rowCenter = 1.00;
   const dfX = RIGHT - dfW;
-  el.push({ type: "image", path: path.join(ASSETS, "dayforce_logo.png"), x: dfX, y: rowTop + (alH - dfH) / 2, w: dfW, h: dfH });
-  const alX = dfX - 0.20 - alW;
-  el.push({ type: "image", path: path.join(ASSETS, "align_logo.png"), x: alX, y: rowTop, w: alW, h: alH });
+  const alX = dfX - vgap - alW;
+  el.push({ type: "image", path: path.join(ASSETS, "align_logo.png"), x: alX, y: rowCenter - alH / 2, w: alW, h: alH });
+  el.push({ type: "image", path: path.join(ASSETS, "dayforce_logo.png"), x: dfX, y: rowCenter - dfH / 2, w: dfW, h: dfH });
+  const pillW = 1.02, pillH = 0.24;
+  const pillX = (alX + dfX + dfW) / 2 - pillW / 2;
+  el.push({ type: "roundRect", x: pillX, y: 0.42, w: pillW, h: pillH, r: 0.05, fill: "E0652F" });
+  el.push({ type: "text", x: pillX, y: 0.42, w: pillW, h: pillH, align: "center", valign: "middle",
+    runs: [{ text: "WIN STORY", size: 8.5, bold: true, color: "FFFFFF", cs: 1 }] });
 
   // metric bar
   const MB_Y = CARD_Y + HDR_H;
