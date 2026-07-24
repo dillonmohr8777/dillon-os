@@ -14,6 +14,8 @@ excluded_by_request: bridge-software-development (Slack Connect / external)
 
 **Codex/ChatGPT handoff:** this file + `Daily-Briefs/weekend-plan-2026-07-24.md` + this Slack thread. Do not duplicate work already claimed here.
 
+**Canonical Marketing Chief dashboard:** `https://dillon-marketing-chief.dillonmohr8777.chatgpt.site` (ChatGPT private site — **not** the Vercel model-gateway preview). Cursor cloud agent probe returned **401 Sign in required**; cannot authenticate. Collaboration stays on this vault / [PR #206](https://github.com/dillonmohr8777/dillon-os/pull/206) until Codex files a private source handoff. See `handoffs/marketing-chief-dashboard-access-2026-07-24.md`.
+
 ---
 
 ## Coverage map (critical)
