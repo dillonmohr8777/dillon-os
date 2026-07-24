@@ -1,5 +1,6 @@
 // Single source of truth: geometry + content -> renderer-agnostic scene graph.
 // Consumed by render-pptx.js (PowerPoint) and render-html.js (visual QA preview).
+// Copy is transcribed verbatim from the original WCK_Win_Story deck.
 const path = require("path");
 const ASSETS = path.join(__dirname, "..", "assets");
 
@@ -22,11 +23,11 @@ const columns = [
     hbg: "1E3A5F", fill: "EDF3FB", border: "2E4C7E", tcolor: "1E3A6B",
     cards: [
       { t: "Fragmented Systems, No Single Source of Truth",
-        b: "WCK operated across BambooHR, Airtable, Gmail-based approvals, and A3innuva with no unified HR platform, creating data gaps, manual errors, and compliance exposure across 24 countries and multiple entity structures." },
+        b: "WCK operated across BambooHR, Airtable, Gmail-based approvals, and A3innuva with no unified HR platform -- creating data gaps, manual errors, and compliance exposure across 24 countries and multiple entity structures." },
       { t: "Surge Workforce Complexity at Global Scale",
         b: "800-2,000 relief contractors mobilized on short notice across 18+ nations. Field offices in Jordan, Ukraine, Egypt, and Israel each operated independently with no scalable onboarding infrastructure or centralized visibility." },
       { t: "Aggressive Jan 1 Go-Live with Day 1 Finance Integration",
-        b: "A hard January 1 go-live date required simultaneous Sage Intacct integration from day one, leaving zero runway for a phased finance cutover. Bilingual (EN/ES) delivery was also required from the start." },
+        b: "A hard January 1 go-live date required simultaneous Sage Intacct integration from day one -- leaving zero runway for a phased finance cutover. Bilingual (EN/ES) delivery was also required from the start." },
     ],
   },
   {
@@ -34,12 +35,11 @@ const columns = [
     hbg: "E0652F", fill: "FDF2EA", border: "E2682F", tcolor: "C85A28",
     cards: [
       { t: "Purpose-Built RC Surge Onboarding Model",
-        b: "Align designed a scalable Relief Contractor onboarding workflow built for humanitarian surge operations: bilingual, field-deployable, and configured for multi-country compliance from day one. No other bidder offered this." },
+        b: "Align designed a scalable Relief Contractor onboarding workflow built for humanitarian surge operations -- bilingual, field-deployable, and configured for multi-country compliance from day one. No other bidder offered this." },
       { t: "Mission Alignment + Give-Back Commitment",
-        b: "“Align HCM has clearly done its homework on WCK’s complexity... The RC surge onboarding model, bilingual delivery, Sage Intacct Day 1 integration, and the mission give-back commitment all stood out.”",
-        attr: "Adam Reusing, WCK" },
+        b: "\"Align HCM has clearly done its homework on WCK's complexity... The RC surge onboarding model, bilingual delivery, Sage Intacct Day 1 integration, and the mission give-back commitment all stood out.\" -- Adam Reusing, WCK" },
       { t: "Sage Intacct Day 1 Integration Expertise",
-        b: "Align’s proven Sage Intacct integration capability directly resolved WCK’s highest-risk requirement. Paired with bilingual delivery, Align was the only vendor that could credibly commit to the full scope on the Jan 1 timeline." },
+        b: "Align's proven Sage Intacct integration capability directly resolved WCK's highest-risk requirement. Paired with bilingual delivery, Align was the only vendor that could credibly commit to the full scope on the Jan 1 timeline." },
     ],
   },
   {
@@ -49,9 +49,9 @@ const columns = [
       { t: "Beat PwC (Big 4) and Lavasource",
         b: "Align competed head-to-head against a Big 4 consulting firm and a specialized HCM implementation partner. WCK selected Align HCM based on operational depth, mission alignment, and superior proposal specificity." },
       { t: "8+ Co-Authoring Sessions Built Unmatched Trust",
-        b: "Align and WCK co-developed a detailed Implementation Solutions Design and Statement of Work across 8+ working sessions. WCK had line-by-line ownership of scope, timeline, and deliverables. A depth of collaboration no competitor came close to replicating." },
+        b: "Align and WCK co-developed a detailed Implementation Solutions Design and Statement of Work across 8+ working sessions. WCK had line-by-line ownership of scope, timeline, and deliverables -- a depth of collaboration no competitor came close to replicating." },
       { t: "Contracting & Pricing Flexibility Closed the Deal",
-        b: "Align demonstrated flexibility on both commercial terms and rate structure. Willingness to adapt without compromising delivery quality sealed the partnership." },
+        b: "Align demonstrated flexibility on both commercial terms and rate structure Willingness to adapt without compromising delivery quality sealed the partnership." },
     ],
   },
 ];
@@ -69,21 +69,25 @@ function buildScene() {
   el.push({ type: "roundRect", x: CARD_X, y: CARD_Y, w: CARD_W, h: HDR_H, r: CARD_R, fill: NAVY });
   el.push({ type: "rect", x: CARD_X, y: CARD_Y + CARD_R, w: CARD_W, h: HDR_H - CARD_R, fill: NAVY });
 
-  el.push({ type: "roundRect", x: LX, y: 0.44, w: 1.02, h: 0.24, r: 0.05, fill: "E0652F" });
-  el.push({ type: "text", x: LX, y: 0.44, w: 1.02, h: 0.24, align: "center", valign: "middle",
-    runs: [{ text: "WIN STORY", size: 8.5, bold: true, color: "FFFFFF", cs: 1 }] });
-  el.push({ type: "text", x: LX, y: 0.70, w: 8.6, h: 0.46, align: "left", valign: "middle",
-    runs: [{ text: "WORLD CENTRAL KITCHEN", size: 24, bold: true, color: "FFFFFF", cs: 0.5 }] });
-  el.push({ type: "text", x: LX, y: 1.15, w: 8.6, h: 0.24, align: "left", valign: "middle",
+  // Client logo (World Central Kitchen), left; subtitle to its right, both vertically centered
+  const wckH = 0.72, wckW = wckH * 1.76;
+  el.push({ type: "image", path: path.join(ASSETS, "wck_logo.png"), x: LX, y: CARD_Y + (HDR_H - wckH) / 2, w: wckW, h: wckH });
+  el.push({ type: "text", x: LX + wckW + 0.30, y: CARD_Y, w: 6.0, h: HDR_H, align: "left", valign: "middle",
     runs: [{ text: "Dayforce Full-Suite Implementation   |   Nonprofit   |   Global Humanitarian", size: 10.5, italic: true, color: "C7D2E0" }] });
 
+  // WIN STORY pill (top-right) with vendor logos below
+  const pillW = 1.02, pillH = 0.24;
+  el.push({ type: "roundRect", x: RIGHT - pillW, y: 0.40, w: pillW, h: pillH, r: 0.05, fill: "E0652F" });
+  el.push({ type: "text", x: RIGHT - pillW, y: 0.40, w: pillW, h: pillH, align: "center", valign: "middle",
+    runs: [{ text: "WIN STORY", size: 8.5, bold: true, color: "FFFFFF", cs: 1 }] });
   const dfW = 1.02, dfH = 0.429, alW = 1.00, alH = 0.50;
-  const midY = CARD_Y + HDR_H / 2;
+  const rowTop = 0.72;
   const dfX = RIGHT - dfW;
-  el.push({ type: "image", path: path.join(ASSETS, "dayforce_logo.png"), x: dfX, y: midY - dfH / 2, w: dfW, h: dfH });
+  el.push({ type: "image", path: path.join(ASSETS, "dayforce_logo.png"), x: dfX, y: rowTop + (alH - dfH) / 2, w: dfW, h: dfH });
   const alX = dfX - 0.20 - alW;
-  el.push({ type: "image", path: path.join(ASSETS, "align_logo.png"), x: alX, y: midY - alH / 2, w: alW, h: alH });
+  el.push({ type: "image", path: path.join(ASSETS, "align_logo.png"), x: alX, y: rowTop, w: alW, h: alH });
 
+  // metric bar
   const MB_Y = CARD_Y + HDR_H;
   el.push({ type: "rect", x: CARD_X, y: MB_Y, w: CARD_W, h: MB_H, fill: "EAEFF5" });
   const mW = CARD_W / metrics.length;
@@ -96,6 +100,7 @@ function buildScene() {
       runs: [{ text: m[1], size: 11.5, bold: true, color: NAVY }] });
   });
 
+  // columns
   const COLS_Y = MB_Y + MB_H + 0.16;
   const CH_H = 0.56, GAP = 0.24;
   const COL_W = (CARD_W - 2 * PAD - 2 * GAP) / 3;
@@ -115,9 +120,10 @@ function buildScene() {
     col.cards.forEach((c, ri) => {
       const cy = CARDS_Y + ri * (cardH + CARD_GAP);
       el.push({ type: "roundRect", x, y: cy, w: COL_W, h: cardH, r: 0.055, fill: col.fill, line: { color: col.border, width: 1 } });
-      const runs = [{ text: c.t, size: 10.5, bold: true, color: col.tcolor, br: true, spAfter: 4 }];
-      runs.push({ text: c.b, size: 9, color: INK, br: !!c.attr });
-      if (c.attr) runs.push({ text: c.attr, size: 8.5, italic: true, bold: true, color: col.tcolor });
+      const runs = [
+        { text: c.t, size: 10.5, bold: true, color: col.tcolor, br: true, spAfter: 4 },
+        { text: c.b, size: 9, color: INK },
+      ];
       el.push({ type: "text", x: x + IP, y: cy + 0.10, w: COL_W - 2 * IP, h: cardH - 0.19, align: "left", valign: "top", lh: 0.98, runs });
     });
   });
