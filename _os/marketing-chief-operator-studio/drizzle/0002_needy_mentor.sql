@@ -1,0 +1,1 @@
+ALTER TABLE `operator_requests` ADD `resolved_by` text;
