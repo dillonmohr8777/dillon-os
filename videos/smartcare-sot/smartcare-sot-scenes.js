@@ -1,0 +1,444 @@
+// smartcare-sot-scenes.js — dark SmartCare "Stabilize · Optimize · Thrive"
+// Six GSAP scenes matching the five SmartCare slides + an Align sign-off.
+// Motion parameters: swipe transitions (in player), disappearing-ink exits,
+// 3D pop-ins on cards / checklists / icons.
+(function () {
+  const $  = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+  function splitChars(el, klass = 'char') {
+    const nodes = Array.from(el.childNodes);
+    el.innerHTML = '';
+    nodes.forEach((node) => {
+      if (node.nodeType === 3) {
+        // Skip whitespace-only text between block lines / words — otherwise it
+        // forms an empty inline line-box and throws off vertical rhythm.
+        if (!/\S/.test(node.textContent)) return;
+        for (const ch of node.textContent) {
+          const s = document.createElement('span');
+          if (ch === ' ') { s.className = klass + ' space'; s.innerHTML = '&nbsp;'; }
+          else { s.className = klass; s.textContent = ch; }
+          el.appendChild(s);
+        }
+      } else if (node.nodeType === 1) {
+        const inner = Array.from(node.childNodes);
+        node.innerHTML = '';
+        inner.forEach(n2 => {
+          if (n2.nodeType === 3) {
+            for (const ch of n2.textContent) {
+              const s = document.createElement('span');
+              if (ch === ' ') { s.className = klass + ' space'; s.innerHTML = '&nbsp;'; }
+              else { s.className = klass; s.textContent = ch; }
+              node.appendChild(s);
+            }
+          } else node.appendChild(n2);
+        });
+        el.appendChild(node);
+      }
+    });
+    return el.querySelectorAll('.' + klass);
+  }
+
+  const ease = { expo:'expo.out', power4:'power4.out', power3:'power3.out', back:'back.out(1.5)' };
+
+  // ── Icon library (viewBox 0 0 48 48) ──
+  const ICON = {
+    person:`<circle cx="24" cy="17" r="8.5"/><path d="M9 41c0-8.5 6.7-14 15-14s15 5.5 15 14"/>`,
+    bars:`<path d="M13 40V27"/><path d="M24 40V14"/><path d="M35 40V31"/><circle cx="13" cy="24.5" r="2"/><circle cx="24" cy="11.5" r="2"/><circle cx="35" cy="28.5" r="2"/>`,
+    shield:`<path d="M24 5l16 6v10c0 11-8 18.5-16 22-8-3.5-16-11-16-22V11z"/><path d="M16.5 24l5 5 11-12"/>`,
+    gear:`<circle cx="24" cy="24" r="7.5"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11.5 11.5l4.2 4.2M32.3 32.3l4.2 4.2M36.5 11.5l-4.2 4.2M15.7 32.3l-4.2 4.2"/>`,
+    kase:`<rect x="9" y="9" width="30" height="30" rx="4"/><path d="M9 19h30"/><path d="M15 27h9M15 33h13"/>`,
+    adoption:`<path d="M9 37l11-10 7 6 13-16"/><path d="M32 17h8v8"/>`,
+    workflow:`<circle cx="12" cy="24" r="5.5"/><circle cx="37" cy="13" r="5.5"/><circle cx="37" cy="35" r="5.5"/><path d="M17 22l15-7M17 26l15 7"/>`,
+    cleanup:`<path d="M30 9l9 9"/><path d="M26 13L12 27l9 9 14-14z"/><path d="M12 27l-4 13 13-4"/>`,
+    insights:`<circle cx="21" cy="21" r="12"/><path d="M30 30l9 9"/><path d="M16 24v-3M21 24v-8M26 24v-5"/>`,
+    knight:`<g fill="#F5821F" stroke="none"><path d="M16 41h17c0-2.5-1.3-3.6-2.6-4.5H18.6C17.3 37.4 16 38.5 16 41zM19 34.5h11c1.3-9.2-1-13.5-6.2-17.4 1.2-2 2-4.2 1-6.4l-4 3-1.8-4.2-2.2 4-3-2 1 5.2c-3.2 2-5.4 5-5.4 9.2l5 1-2 3.2 4 1c-1.4 1.3-2.4 2.6-2.4 3.4z"/></g>`,
+    trendup:`<path d="M8 34l10-10 6 6 16-18"/><path d="M40 12h-8M40 12v8"/>`,
+    resolution:`<path d="M24 5l16 6v10c0 11-8 18.5-16 22-8-3.5-16-11-16-22V11z"/><path d="M16.5 24l5 5 11-12"/>`,
+  };
+  const CHECK = `<svg viewBox="0 0 24 24"><path d="M5 13l5 5L19 7"/></svg>`;
+
+  function iconRow(items){
+    return `<div class="sc-icons">` + items.map((it,i)=>
+      (i>0?`<div class="ic-div"></div>`:``) +
+      `<div class="ic"><div class="ic-ring"><svg viewBox="0 0 48 48">${it.s}</svg></div><div class="ic-lbl">${it.l}</div></div>`
+    ).join('') + `</div>`;
+  }
+  function checks(items){
+    return `<div class="checks">` + items.map(t=>
+      `<div class="check"><span class="cbox">${CHECK}</span><span class="ctxt">${t}</span></div>`
+    ).join('') + `</div>`;
+  }
+
+  // shared entrance for a headline: char-pop from below with blur
+  function popHead(tl, chars, at=0.2){
+    gsap.set(chars, { yPercent: 115, opacity: 0, filter:'blur(8px)' });
+    tl.to(chars, { yPercent:0, opacity:1, filter:'blur(0px)', duration:0.8, stagger:0.02, ease:ease.expo }, at);
+  }
+  function popCard(tl, card, at=0.35){
+    gsap.set(card, { opacity:0, y:60, z:-320, rotationY:-16, transformPerspective:1200, transformOrigin:'50% 50%' });
+    tl.to(card, { opacity:1, y:0, z:0, rotationY:0, duration:1.1, ease:'back.out(1.4)' }, at);
+  }
+  function popChecks(tl, chks, at){
+    gsap.set(chks, { opacity:0, x:40, z:-120, rotationY:14, transformPerspective:900, transformOrigin:'0% 50%' });
+    tl.to(chks, { opacity:1, x:0, z:0, rotationY:0, duration:0.6, stagger:0.14, ease:ease.back }, at);
+  }
+  function popIcons(tl, ics, at){
+    gsap.set(ics, { opacity:0, y:40, z:-140, rotationX:-30, transformPerspective:800, transformOrigin:'50% 100%' });
+    tl.to(ics, { opacity:1, y:0, z:0, rotationX:0, duration:0.6, stagger:0.1, ease:ease.back }, at);
+  }
+
+  // ═══════════════ SCENE 1 — Support ═══════════════
+  function scene1(root){
+    root.innerHTML = `
+      <div class="s1 scene-inner">
+        <h1 class="sc-head" style="top:262px;font-size:110px">
+          <span class="ln">Stay supported</span>
+          <span class="ln accent">after go live.</span>
+        </h1>
+        <div class="sc-rule" style="top:502px"></div>
+        <p class="sc-sub" style="top:550px;max-width:690px">Extend HCM capacity with responsive admin, reporting, and optimization support.</p>
+        ${iconRow([
+          {s:ICON.person,l:'Admin support'},{s:ICON.bars,l:'Reporting'},
+          {s:ICON.shield,l:'Issue resolution'},{s:ICON.gear,l:'Optimization'}
+        ]).replace('class="sc-icons"','class="sc-icons" style="left:92px;top:772px"')}
+        <div class="sc-card" style="right:110px;top:150px;width:640px;height:800px">
+          <div class="card-pad">
+            <div class="sc-badge"><img src="assets/smartcare-logo-light.png" alt=""/></div>
+            <div class="card-title" style="font-size:76px;margin-top:44px"><span class="brand">SmartCare</span><span class="mode">Support</span></div>
+            <div class="card-underline" style="margin-top:22px"></div>
+            <div style="margin-top:60px">${checks(['Resolve issues faster','Keep systems moving','Support ongoing optimization'])}</div>
+          </div>
+        </div>
+      </div>`;
+    const tl = gsap.timeline();
+    const chars = splitChars($('.sc-head', root));
+    const card = $('.sc-card', root);
+    gsap.set($('.sc-rule', root), { width:0 });
+    gsap.set($('.sc-sub', root), { opacity:0, y:16 });
+    popHead(tl, chars, 0.2);
+    tl.to($('.sc-rule', root), { width:300, duration:0.8, ease:ease.expo }, 1.1)
+      .to($('.sc-sub', root), { opacity:1, y:0, duration:0.7, ease:ease.power3 }, 1.3);
+    popCard(tl, card, 0.5);
+    gsap.set($('.sc-badge', root), { scale:0, transformOrigin:'50% 50%' });
+    tl.to($('.sc-badge', root), { scale:1, duration:0.7, ease:'back.out(1.7)' }, 1.2);
+    popChecks(tl, $$('.check', root), 1.7);
+    popIcons(tl, $$('.sc-icons .ic', root), 2.2);
+    return tl;
+  }
+
+  // ═══════════════ SCENE 2 — Stabilize ═══════════════
+  function scene2(root){
+    root.innerHTML = `
+      <div class="s2 scene-inner">
+        <h1 class="sc-head" style="top:178px;font-size:92px">
+          <span class="ln">Stabilize</span>
+          <span class="ln accent">what just launched.</span>
+        </h1>
+        <div class="sc-rule" style="top:378px"></div>
+        <p class="sc-sub" style="top:416px;max-width:770px">Quick issue resolution, admin coverage, and steady support after go live.</p>
+        <div class="widget" style="left:88px;top:526px;width:770px;height:440px">
+          <div class="w-pad">
+            <div class="w-label">Post Go-Live Health</div>
+            <div style="display:flex;gap:60px;margin-top:20px">
+              <div class="donut-wrap">
+                <div class="donut">
+                  <svg viewBox="0 0 150 150"><circle class="track" cx="75" cy="75" r="63"/><circle class="val" cx="75" cy="75" r="63"/></svg>
+                  <div class="center"><div class="pct">98%</div></div>
+                </div>
+                <div style="align-self:center"><div class="stat-big" style="font-size:40px">Stable</div><div class="w-label" style="margin-top:8px">System Stability</div></div>
+              </div>
+              <div style="flex:1">
+                <div class="w-label">Open Cases</div>
+                <div style="display:flex;align-items:flex-end;gap:16px;margin-top:6px">
+                  <div class="stat-big">12</div>
+                  <svg class="spark" width="150" height="70" viewBox="0 0 150 70" style="margin-bottom:8px"><path d="M2 20 L26 26 L50 18 L74 34 L98 30 L122 50 L148 58"/></svg>
+                </div>
+                <div class="stat-sub down">↓ 28% vs yesterday</div>
+              </div>
+            </div>
+            <div class="activity" style="margin-top:12px">
+              <div class="act-row"><span class="adot"></span><span class="atxt">Payroll run completed successfully</span><span class="atime">9:15 AM</span></div>
+              <div class="act-row"><span class="adot"></span><span class="atxt">New hire workflow issue resolved</span><span class="atime">8:42 AM</span></div>
+              <div class="act-row"><span class="adot"></span><span class="atxt">User access request completed</span><span class="atime">8:05 AM</span></div>
+            </div>
+          </div>
+        </div>
+        ${iconRow([
+          {s:ICON.person,l:'Admin support'},{s:ICON.kase,l:'Case management'},
+          {s:ICON.shield,l:'Issue resolution'},{s:ICON.adoption,l:'Adoption'}
+        ]).replace('class="sc-icons"','class="sc-icons" style="left:905px;top:854px;gap:16px"')}
+        <div class="sc-card" style="right:96px;top:150px;width:620px;height:600px">
+          <div class="card-pad" style="padding:56px 56px">
+            <div class="sc-badge tr"><img src="assets/smartcare-logo-light.png" alt=""/></div>
+            <div class="card-title mode" style="font-size:72px;color:#fff">Stabilize</div>
+            <div class="card-underline" style="margin-top:22px"></div>
+            <div style="margin-top:54px">${checks(['Triage issues quickly','Support daily admin','Restore confidence fast'])}</div>
+          </div>
+        </div>
+      </div>`;
+    const tl = gsap.timeline();
+    const chars = splitChars($('.sc-head', root));
+    gsap.set($('.sc-rule', root), { width:0 });
+    gsap.set($('.sc-sub', root), { opacity:0, y:16 });
+    popHead(tl, chars, 0.15);
+    tl.to($('.sc-rule', root), { width:280, duration:0.8, ease:ease.expo }, 0.9)
+      .to($('.sc-sub', root), { opacity:1, y:0, duration:0.7, ease:ease.power3 }, 1.1);
+    // right card
+    popCard(tl, $('.sc-card', root), 0.5);
+    gsap.set($('.sc-badge', root), { scale:0, transformOrigin:'50% 50%' });
+    tl.to($('.sc-badge', root), { scale:1, duration:0.7, ease:'back.out(1.7)' }, 1.2);
+    popChecks(tl, $$('.sc-card .check', root), 1.6);
+    // left widget + donut
+    const w = $('.widget', root);
+    gsap.set(w, { opacity:0, y:50, z:-200, rotationX:-14, transformPerspective:1100, transformOrigin:'50% 100%' });
+    tl.to(w, { opacity:1, y:0, z:0, rotationX:0, duration:0.9, ease:'back.out(1.3)' }, 1.4);
+    const val = $('.donut .val', root);
+    if (val){ const C = 2*Math.PI*63; gsap.set(val,{ strokeDasharray:C, strokeDashoffset:C });
+      tl.to(val, { strokeDashoffset: C*(1-0.98), duration:1.2, ease:'power2.out' }, 2.0); }
+    gsap.set($('.spark path', root), { drawSVG:'0%' }); // no-op if plugin absent
+    gsap.set($$('.act-row', root), { opacity:0, x:-20 });
+    tl.to($$('.act-row', root), { opacity:1, x:0, duration:0.5, stagger:0.12, ease:ease.power3 }, 2.2);
+    popIcons(tl, $$('.sc-icons .ic', root), 2.4);
+    return tl;
+  }
+
+  // ═══════════════ SCENE 3 — Optimize ═══════════════
+  function scene3(root){
+    root.innerHTML = `
+      <div class="s3 scene-inner">
+        <h1 class="sc-head" style="top:206px;font-size:100px">
+          <span class="ln">Optimize the</span>
+          <span class="ln accent">system you</span>
+          <span class="ln accent">already own.</span>
+        </h1>
+        <div class="sc-rule" style="top:552px"></div>
+        <p class="sc-sub" style="top:598px;max-width:560px">Fine tune workflows, reporting, and configuration to get more from HCM.</p>
+        ${iconRow([
+          {s:ICON.gear,l:'Configuration'},{s:ICON.bars,l:'Reporting'},
+          {s:ICON.workflow,l:'Workflows'},{s:ICON.cleanup,l:'Cleanup'}
+        ]).replace('class="sc-icons"','class="sc-icons" style="left:92px;top:790px"')}
+        <div class="widget" style="left:720px;top:150px;width:360px;height:300px">
+          <div class="w-pad">
+            <div class="w-label">System Health</div>
+            <div class="donut" style="margin:18px auto 0;width:170px;height:170px">
+              <svg viewBox="0 0 150 150"><circle class="track" cx="75" cy="75" r="63"/><circle class="val" cx="75" cy="75" r="63"/></svg>
+              <div class="center"><div class="pct">87%</div><div class="pct-l">Optimal</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="linechart" style="left:700px;top:500px;width:420px;height:220px">
+          <svg viewBox="0 0 420 220" preserveAspectRatio="none">
+            <defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5821F" stop-opacity="0.28"/><stop offset="1" stop-color="#F5821F" stop-opacity="0"/></linearGradient></defs>
+            <path class="grid-l" d="M0 60 H420 M0 120 H420 M0 180 H420"/>
+            <path class="pl-area area" d="M0 170 L70 150 L140 158 L210 120 L280 96 L350 70 L420 40 L420 220 L0 220 Z"/>
+            <path class="pl-line line" d="M0 170 L70 150 L140 158 L210 120 L280 96 L350 70 L420 40"/>
+          </svg>
+          <div class="w-label" style="position:absolute;left:4px;top:-30px">Performance</div>
+        </div>
+        <div class="sc-card" style="right:104px;top:150px;width:600px;height:780px">
+          <div class="card-pad">
+            <div class="sc-badge"><img src="assets/smartcare-logo-light.png" alt=""/></div>
+            <div class="card-title" style="font-size:72px;margin-top:42px"><span class="brand">SmartCare</span><span class="mode">Optimize</span></div>
+            <div class="card-underline" style="margin-top:22px"></div>
+            <div style="margin-top:56px">${checks(['Refine configuration','Improve reporting','Reduce workflow friction'])}</div>
+          </div>
+        </div>
+      </div>`;
+    const tl = gsap.timeline();
+    const chars = splitChars($('.sc-head', root));
+    gsap.set($('.sc-rule', root), { width:0 });
+    gsap.set($('.sc-sub', root), { opacity:0, y:16 });
+    popHead(tl, chars, 0.2);
+    tl.to($('.sc-rule', root), { width:300, duration:0.8, ease:ease.expo }, 1.0)
+      .to($('.sc-sub', root), { opacity:1, y:0, duration:0.7, ease:ease.power3 }, 1.2);
+    popCard(tl, $('.sc-card', root), 0.5);
+    gsap.set($('.sc-badge', root), { scale:0, transformOrigin:'50% 50%' });
+    tl.to($('.sc-badge', root), { scale:1, duration:0.7, ease:'back.out(1.7)' }, 1.2);
+    popChecks(tl, $$('.sc-card .check', root), 1.7);
+    // widgets
+    const w = $('.widget', root);
+    gsap.set(w, { opacity:0, scale:0.8, transformOrigin:'50% 50%' });
+    tl.to(w, { opacity:1, scale:1, duration:0.8, ease:'back.out(1.4)' }, 1.4);
+    const val = $('.donut .val', root);
+    if (val){ const C = 2*Math.PI*63; gsap.set(val,{ strokeDasharray:C, strokeDashoffset:C });
+      tl.to(val, { strokeDashoffset: C*(1-0.87), duration:1.2, ease:'power2.out' }, 1.9); }
+    const lc = $('.linechart', root);
+    gsap.set(lc, { opacity:0, y:30 });
+    const line = $('.pl-line', root), area = $('.pl-area', root);
+    if (line){ const L = line.getTotalLength(); gsap.set(line,{ strokeDasharray:L, strokeDashoffset:L }); gsap.set(area,{opacity:0}); }
+    tl.to(lc, { opacity:1, y:0, duration:0.6, ease:ease.power3 }, 2.0);
+    if (line){ tl.to(line, { strokeDashoffset:0, duration:1.4, ease:'power2.out' }, 2.1)
+                 .to(area, { opacity:1, duration:0.8 }, 2.6); }
+    popIcons(tl, $$('.sc-icons .ic', root), 2.4);
+    return tl;
+  }
+
+  // ═══════════════ SCENE 4 — Thrive ═══════════════
+  function scene4(root){
+    root.innerHTML = `
+      <div class="s4 scene-inner">
+        <h1 class="sc-head" style="top:256px;font-size:116px">
+          <span class="ln">Thrive</span>
+          <span class="ln accent">beyond support.</span>
+        </h1>
+        <div class="sc-rule" style="top:512px"></div>
+        <p class="sc-sub" style="top:558px;max-width:600px">Turn ongoing support into continuous improvement, better visibility, and stronger HCM performance.</p>
+        ${iconRow([
+          {s:ICON.insights,l:'Insights'},{s:ICON.gear,l:'Process improvement'},
+          {s:ICON.knight,l:'Strategy'},{s:ICON.trendup,l:'Growth'}
+        ]).replace('class="sc-icons"','class="sc-icons" style="left:92px;top:790px"')}
+        <div class="linechart" style="left:640px;top:470px;width:520px;height:340px">
+          <svg viewBox="0 0 520 340" preserveAspectRatio="none">
+            <defs><linearGradient id="areaFill4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5821F" stop-opacity="0.3"/><stop offset="1" stop-color="#F5821F" stop-opacity="0"/></linearGradient></defs>
+            <g class="gbars"></g>
+            <path class="pl-area" d="M0 280 L90 250 L180 258 L270 200 L360 150 L450 92 L520 44 L520 340 L0 340 Z" fill="url(#areaFill4)"/>
+            <path class="pl-line line" d="M0 280 L90 250 L180 258 L270 200 L360 150 L450 92 L520 44"/>
+            <circle class="node pl-end" cx="520" cy="44" r="8"/>
+          </svg>
+        </div>
+        <div class="sc-card" style="right:104px;top:150px;width:600px;height:760px">
+          <div class="card-pad">
+            <div class="sc-badge"><img src="assets/smartcare-logo-light.png" alt=""/></div>
+            <div class="card-title mode" style="font-size:76px;margin-top:42px;color:#fff">Thrive</div>
+            <div class="card-underline" style="margin-top:22px"></div>
+            <div style="margin-top:58px">${checks(['Drive continuous improvement','Strengthen decision making','Expand platform value'])}</div>
+          </div>
+        </div>
+      </div>`;
+    // build rising bars behind the line
+    const gb = $('.gbars', root);
+    const heights = [70,96,120,150,190,230,270];
+    let bhtml = '';
+    heights.forEach((h,i)=>{ const x = 20 + i*72; bhtml += `<rect class="gb" x="${x}" y="${340-h}" width="34" height="${h}" rx="6" fill="rgba(245,130,31,0.16)" stroke="rgba(245,130,31,0.4)"/>`; });
+    gb.innerHTML = bhtml;
+
+    const tl = gsap.timeline();
+    const chars = splitChars($('.sc-head', root));
+    gsap.set($('.sc-rule', root), { width:0 });
+    gsap.set($('.sc-sub', root), { opacity:0, y:16 });
+    popHead(tl, chars, 0.2);
+    tl.to($('.sc-rule', root), { width:300, duration:0.8, ease:ease.expo }, 1.05)
+      .to($('.sc-sub', root), { opacity:1, y:0, duration:0.7, ease:ease.power3 }, 1.25);
+    popCard(tl, $('.sc-card', root), 0.5);
+    gsap.set($('.sc-badge', root), { scale:0, transformOrigin:'50% 50%' });
+    tl.to($('.sc-badge', root), { scale:1, duration:0.7, ease:'back.out(1.7)' }, 1.2);
+    popChecks(tl, $$('.sc-card .check', root), 1.7);
+    // chart
+    const lc = $('.linechart', root);
+    gsap.set(lc, { opacity:0, y:30 });
+    tl.to(lc, { opacity:1, y:0, duration:0.6, ease:ease.power3 }, 1.5);
+    const bars = $$('.gb', root);
+    gsap.set(bars, { scaleY:0, transformOrigin:'50% 100%', svgOrigin:'0 340' });
+    tl.to(bars, { scaleY:1, duration:0.6, stagger:0.07, ease:'power2.out' }, 1.7);
+    const line = $('.pl-line', root), end = $('.pl-end', root), area = $('.pl-area', root);
+    if (line){ const L = line.getTotalLength(); gsap.set(line,{ strokeDasharray:L, strokeDashoffset:L }); gsap.set([area,end],{opacity:0});
+      tl.to(line, { strokeDashoffset:0, duration:1.5, ease:'power2.out' }, 2.0)
+        .to(area, { opacity:1, duration:0.8 }, 2.6)
+        .to(end, { opacity:1, scale:1, duration:0.5, ease:'back.out(2)', transformOrigin:'50% 50%' }, 3.2); }
+    popIcons(tl, $$('.sc-icons .ic', root), 2.4);
+    return tl;
+  }
+
+  // ═══════════════ SCENE 5 — Summary ═══════════════
+  function scene5(root){
+    root.innerHTML = `
+      <div class="s5 scene-inner">
+        <h1 class="sc-head">
+          <span class="word">Stabilize.</span> <span class="word accent">Optimize.</span> <span class="word">Thrive.</span>
+        </h1>
+        <p class="sc-sub">One SmartCare support model for the work that keeps HCM moving after go live.</p>
+        <div class="sc-badge tr" style="position:absolute;top:70px;right:96px;width:150px;height:150px"><img src="assets/smartcare-logo-light.png" alt=""/></div>
+        <div class="flow">
+          <div class="fcard">
+            <div class="fnum">01</div>
+            <div class="fhead"><div class="ficon"><svg viewBox="0 0 48 48">${ICON.shield}</svg></div><div class="ftitle">Stabilize</div></div>
+            <div class="fstit">Secure a strong start</div>
+            <div class="fbody">Resolve issues, answer questions, and keep systems running smoothly so your team stays focused after go live.</div>
+          </div>
+          <span class="farrow" style="left:326px;top:150px">→</span>
+          <div class="fcard">
+            <div class="fnum">02</div>
+            <div class="fhead"><div class="ficon"><svg viewBox="0 0 48 48">${ICON.bars}</svg></div><div class="ftitle">Optimize</div></div>
+            <div class="fstit">Work smarter, every day</div>
+            <div class="fbody">Refine processes, improve reporting, and streamline workflows to drive efficiency and maximize your HCM investment.</div>
+          </div>
+          <span class="farrow" style="left:692px;top:150px">→</span>
+          <div class="fcard">
+            <div class="fnum">03</div>
+            <div class="fhead"><div class="ficon"><svg viewBox="0 0 48 48">${ICON.trendup}</svg></div><div class="ftitle">Thrive</div></div>
+            <div class="fstit">Evolve and grow</div>
+            <div class="fbody">Leverage insights, adopt best practices, and scale with confidence as your organization grows and your needs evolve.</div>
+          </div>
+        </div>
+        <div class="covers">
+          <h3>What SmartCare covers</h3>
+          <div class="card-underline"></div>
+          ${checks(['HRIS admin support','Reporting and issue resolution','Optimization guidance'])}
+        </div>
+      </div>`;
+    const tl = gsap.timeline();
+    const words = $$('.sc-head .word', root);
+    gsap.set(words, { yPercent:120, opacity:0, z:-260, rotationX:-45, transformPerspective:1000, transformOrigin:'50% 120%' });
+    gsap.set($('.sc-sub', root), { opacity:0, y:16 });
+    gsap.set($('.sc-badge', root), { scale:0, opacity:0, transformOrigin:'50% 50%' });
+    tl.to($('.sc-badge', root), { scale:1, opacity:1, duration:0.8, ease:'back.out(1.6)' }, 0.1)
+      .to(words, { yPercent:0, opacity:1, z:0, rotationX:0, duration:0.85, stagger:0.16, ease:'back.out(1.5)' }, 0.25)
+      .to($('.sc-sub', root), { opacity:1, y:0, duration:0.7, ease:ease.power3 }, 1.0);
+    const fcards = $$('.fcard', root);
+    gsap.set(fcards, { opacity:0, y:70, z:-320, rotationX:-40, transformPerspective:1100, transformOrigin:'50% 100%' });
+    tl.to(fcards, { opacity:1, y:0, z:0, rotationX:0, duration:0.9, stagger:0.22, ease:'back.out(1.4)' }, 1.2);
+    gsap.set($$('.farrow', root), { opacity:0, scale:0.4, transformOrigin:'50% 50%' });
+    tl.to($$('.farrow', root), { opacity:1, scale:1, duration:0.5, stagger:0.22, ease:'back.out(2)' }, 1.7);
+    const cov = $('.covers', root);
+    gsap.set(cov, { opacity:0, x:60, z:-200, rotationY:-18, transformPerspective:1100, transformOrigin:'100% 50%' });
+    tl.to(cov, { opacity:1, x:0, z:0, rotationY:0, duration:0.9, ease:'back.out(1.3)' }, 1.5);
+    gsap.set($('.covers .card-underline', root), { width:0 });
+    tl.to($('.covers .card-underline', root), { width:120, duration:0.6, ease:ease.expo }, 2.1);
+    popChecks(tl, $$('.covers .check', root), 2.2);
+    return tl;
+  }
+
+  // ═══════════════ SCENE 6 — Beautiful Align ending ═══════════════
+  function scene6(root){
+    root.innerHTML = `
+      <div class="s6 scene-inner">
+        <div class="end-stage">
+          <div class="end-ring r2"></div>
+          <div class="end-ring"></div>
+          <div class="end-halo"></div>
+          <img class="end-heart" src="assets/smartcare-logo-light.png" alt="SmartCare"/>
+          <div class="end-kicker">Go-live was just the beginning</div>
+          <h1 class="end-tagline"><span class="stab">Stabilize.</span> <span class="opt">Optimize.</span> <span class="thr">Thrive.</span></h1>
+          <p class="end-sub">One SmartCare support model that keeps your HCM moving — long after go live.</p>
+          <div class="end-lockup">
+            <img class="end-align" src="assets/alignhcm-logo-transparent.png" alt="Align HCM"/>
+            <div class="end-web">ALIGNHCM<span class="dot">.</span>COM</div>
+          </div>
+        </div>
+      </div>`;
+    const tl = gsap.timeline();
+    const halo = $('.end-halo', root), rings = $$('.end-ring', root), heart = $('.end-heart', root);
+    const kicker = $('.end-kicker', root), words = [$('.stab',root),$('.opt',root),$('.thr',root)];
+    const sub = $('.end-sub', root), lockup = $('.end-lockup', root);
+    gsap.set(halo, { opacity:0, scale:0.7, transformOrigin:'50% 50%' });
+    gsap.set(rings, { opacity:0, scale:0.72, transformOrigin:'50% 50%' });
+    gsap.set(heart, { opacity:0, scale:0.5, z:-340, rotationX:-40, transformPerspective:1100, transformOrigin:'50% 60%' });
+    gsap.set(kicker, { opacity:0, y:16, letterSpacing:'0.66em' });
+    gsap.set(words, { opacity:0, y:70, z:-300, rotationX:-55, transformPerspective:1000, transformOrigin:'50% 120%' });
+    gsap.set(sub, { opacity:0, y:20 });
+    gsap.set(lockup, { opacity:0, y:28 });
+    tl.to(halo, { opacity:1, scale:1, duration:1.8, ease:'power2.out' }, 0.1)
+      .to(rings, { opacity:1, scale:1, duration:1.4, stagger:0.12, ease:'power3.out' }, 0.2)
+      .to(heart, { opacity:1, scale:1, z:0, rotationX:0, duration:1.0, ease:'back.out(1.5)' }, 0.35)
+      .to(kicker, { opacity:1, y:0, letterSpacing:'0.46em', duration:0.9, ease:'power3.out' }, 0.9)
+      .to(words, { opacity:1, y:0, z:0, rotationX:0, duration:0.85, stagger:0.16, ease:'back.out(1.6)' }, 1.25)
+      .to(sub, { opacity:1, y:0, duration:0.9, ease:'power3.out' }, 2.2)
+      .to(lockup, { opacity:1, y:0, duration:0.9, ease:'power3.out' }, 2.7);
+    tl.to(rings, { scale:'+=0.03', repeat:-1, yoyo:true, duration:3, ease:'sine.inOut', stagger:0.2 }, 4.2)
+      .to(heart, { y:'-=8', repeat:-1, yoyo:true, duration:2.6, ease:'sine.inOut' }, 4.2);
+    return tl;
+  }
+
+  window.SOTScenes = { scene1, scene2, scene3, scene4, scene5, scene6 };
+})();
