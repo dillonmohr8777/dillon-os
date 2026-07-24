@@ -1,79 +1,60 @@
-# Momentum 360 — Jason's HubSpot agent: EOM status
+# Momentum 360 — Jason's HubSpot agent: status
 
 Prepared: 2026-07-23 · Source ask: **Jason Fallon DM, 2026-07-22 12:56 PM** (`handoffs/marketing-chief-intake-2026-07-22.md`, Intake 2)
-Portal in question: **Momentum 360 HubSpot `50612503`** (`app.hubspot.com`) — Jason Fallon (VP Sales, jason@momentumvirtualtours.com), Sean Boyle (Managing Partner, sean@needmomentum.com).
+Portal: **Momentum 360 HubSpot `50612503`** — Jason Fallon (VP Sales, jason@momentumvirtualtours.com), Sean Boyle (Managing Partner, sean@needmomentum.com).
 
-Jason asked, by EOM: **classify each of his three agenda items as _built / tested / blocked / approval-required_, with current evidence.** This file is that classification.
+Jason asked, by EOM: **classify each of his three agenda items as _built / tested / blocked / approval-required_, with current evidence.** This file is that classification, current as of the 2026-07-23 "fixed and live" milestone.
 
-> ## ⚠️ Evidence scope — read first
-> This report is assembled from what is captured in **GitHub (`dillon-os`)**. The Momentum agent's build state lives in **HubSpot portal `50612503`**, which **this workspace cannot reach** (the connected HubSpot is Align HCM `242825734`, a different portal). So "current evidence" below is what exists in the vault; anything requiring the live portal is marked **`VERIFY IN 50612503`** rather than asserted. No item is claimed "tested" without evidence.
-
----
-
-## Summary
-
-| # | Item | Classification | Evidence in GitHub | Needs |
-|---|------|:---:|:---:|---|
-| 1 | Chatbot | **Approval-required** (ready to build; proven template exists) | Agenda only | Confirm target + approve build in portal |
-| 2 | CallRail after-hours + SMS | **Blocked → Approval-required** | Agenda only | Explicit approval to activate SMS / touch routing / spend |
-| 3 | Internal agent workflows & setups | **Approval-required** (needs scoping) | Reusable agent assets in vault | Jason/Sean to name the target workflows |
-
-**Headline for Jason:** none of the three has build/test evidence committed to the shared repo yet. All three are scoped and safe to advance, but each crosses a boundary Jason himself set (spend, SMS activation, phone routing, automated email, external sends) — so each needs an explicit go-ahead before anything goes live. Item 1 can move fastest because a working pattern already exists.
+> ## ✅ Update 2026-07-23 — read/reporting layer fixed and live (reported by Dillon)
+> A dedicated private repo now holds the agent: **`dillonmohr8777/jason-fallon-hubspot-agent`** (latest commit `8a32d70`). That repo is **outside this session's scope**, so the facts below are recorded **as reported by Dillon**, not independently verified from here.
+> - **Portal `50612503` verified.** Read/reporting readiness gate **passed, zero required failures**. **Tests 6/6.**
+> - **Included:** Slack research, both reporting PDFs, reporting DOCX, Customer Agent requirements, CallRail rules, attribution model.
+> - Global **`jason_hubspot`** agent now routes to the repaired launcher. Native HubSpot connector **quarantined** (it's still bound to Align portal `242825734`, not Momentum's).
+> - **Live inventory (`50612503`):** 14,262 contacts · 6,730 companies · 1,574 deals · 2,948 calls · 212 meetings · 2,680 tasks · 9 owners · 14 forms · 5 pipelines.
+> - **Account-level blockers remaining:** missing HubSpot **Conversations scope** and **`automation-access`**. Until those are granted, the **Customer Agent (chatbot) and any workflow mutations stay blocked**. **CRM reporting and aggregate attribution are ready now.**
 
 ---
 
-## Item 1 — Chatbot · **Approval-required**
+## Summary (revised with the 2026-07-23 evidence)
 
-**What it is:** a customer-facing HubSpot chatbot for Momentum 360 (portal `50612503`), analogous to the one built for Align HCM.
+| # | Item | Classification | Evidence | Gate to next state |
+|---|------|:---:|---|---|
+| 1 | Chatbot (Customer Agent) | **Blocked** | Requirements captured in the agent repo; read side verified | Grant HubSpot **Conversations scope** + `automation-access`, then build to tester |
+| 2 | CallRail after-hours + SMS | **Blocked → approval-required** | CallRail rules + attribution model captured | `automation-access` **and** explicit approval to activate SMS / touch routing / spend |
+| 3 | Internal agent workflows | **Split: reporting Built/Tested; mutations Blocked** | Read/reporting layer passed 6/6, live-verified | `automation-access` for any write/automation; name the target workflows |
 
-**Current evidence:** none in the repo — no Momentum chatbot spec, guidelines, or test log is committed. `VERIFY IN 50612503` whether a draft chatbot/chatflow already exists in the portal.
-
-**Why this can move fastest:** a proven, reusable pattern already exists in `claude-skills-repo/skills/alignhcm-customer-agent/` — identity + guardrails + a paste-ready guidelines payload + a 22-prompt acceptance suite + a launch-readiness gate. Adapting it to Momentum is a known path, not a from-scratch build.
-
-**Path to done (design-only until approved):**
-1. Confirm the chatbot's job and the **approved public Momentum pages** it may answer from (services, about, contact). *(Needs Jason/Sean input.)*
-2. Draft Momentum identity + opening + the same brand/safety guardrails (no invented pricing/timelines/guarantees; no private data; vendor-agnostic; human-handoff path).
-3. Configure in portal `50612503`, publish to the **internal tester only** (no live channel).
-4. Run the acceptance suite; fix knowledge retrieval + greeting; capture evidence.
-5. **Separate approval** to attach a live website channel.
-
-**Boundary:** do not attach a live channel or send anything to real visitors without Jason's explicit approval.
-
-## Item 2 — CallRail after-hours + SMS · **Blocked → Approval-required**
-
-**What it is:** after-hours call handling in CallRail plus an SMS setup for Momentum.
-
-**Current evidence:** none in the repo. `VERIFY IN 50612503` / CallRail account: current phone routing, business-hours schedule, existing SMS enablement, and opt-out (STOP/HELP) handling.
-
-**Why it's blocked:** Jason's own boundaries gate every activating action here — *"Do not activate SMS, change phone routing, incur spend, or send messages without explicit approval,"* and *"preserve exact account ownership, opt-out behavior, rollback, and test evidence."* SMS also carries compliance weight (consent + opt-out). So this is correctly **held** until approved, and cannot be truthfully marked built/tested.
-
-**Path to done (nothing activated until approved):**
-1. Document current CallRail routing + hours + number ownership as the rollback baseline (evidence). *(Needs CallRail access.)*
-2. Draft the after-hours flow + SMS auto-reply copy with explicit opt-out language — as a **proposal**, unsent.
-3. Confirm carrier/A2P registration and any spend implications.
-4. **Approval gate:** Jason signs off → activate in a reversible way → capture test evidence (test number, timestamps) → keep a rollback note.
-
-**Boundary:** no SMS activation, no routing change, no spend, no test sends without Jason's explicit approval.
-
-## Item 3 — Internal agent workflows & setups · **Approval-required (needs scoping)**
-
-**What it is:** internal (non-customer-facing) agent/automation workflows for Momentum.
-
-**Current evidence:** the *ask* is broad and not yet scoped to named workflows. Reusable internal-agent assets already exist in this vault (`11_Agents/`, the Marketing Chief orchestrator/queue pattern referenced in the intake, and the reporting/pulse/brief skills) — these are candidates to adapt, but there is no committed Momentum-specific workflow build.
-
-**Path to done:**
-1. Get Jason/Sean to name the 2–3 concrete workflows they mean (e.g., lead routing, review request, reporting digest). *(Needs input — this is the real blocker.)*
-2. For each: map trigger → steps → owner → approval gates; reuse the existing routing/dedup/approval-gate pattern from the Marketing Chief intake.
-3. Build in a reversible/testable way; capture evidence; hold any external send/publish/spend for approval.
-
-**Boundary:** do not alter automated emails without explicit approval.
+**Headline for Jason:** the read-and-report half is done and verified against the live portal (6/6). The write-and-activate half — the chatbot, SMS/CallRail activation, and any workflow that mutates data — is blocked on two HubSpot permission scopes (**Conversations** + **automation-access**) that must be added at the account level. Nothing there can be truthfully called "built" until those scopes exist. CRM reporting and aggregate attribution can be delivered now.
 
 ---
 
-## What I need to close this out
+## Item 1 — Chatbot (Customer Agent) · **Blocked**
 
-- **Read access to Momentum portal `50612503`** (and CallRail) — or screenshots/exports — to replace every `VERIFY IN 50612503` with real evidence.
-- **Jason/Sean to name the Item-3 workflows.**
-- **Explicit approvals** on the gated actions (chatbot live channel; SMS/routing/spend).
+- **Status:** requirements are captured in `jason-fallon-hubspot-agent`. The agent can **read** Momentum's CRM (verified), but the customer-facing chatbot needs the **HubSpot Conversations scope** to exist and `automation-access` to act. Both are missing → build/activation blocked.
+- **Path to done:** add the two scopes → build identity + guardrails + acceptance suite (the Align customer-agent pattern is the template) → publish to the **internal tester only** → run the suite → **separate approval** before any live channel.
+- **Boundary:** no live channel, no visitor-facing sends without explicit approval.
+
+## Item 2 — CallRail after-hours + SMS · **Blocked → approval-required**
+
+- **Status:** CallRail rules and the attribution model are captured. Activation is gated twice over — by the missing `automation-access` scope **and** by Jason's own boundaries (no SMS activation, no phone-routing change, no spend, no sends without approval).
+- **Path to done:** document current routing/hours as the rollback baseline → draft the after-hours flow + SMS copy **with opt-out** (unsent) → confirm A2P/carrier + spend → **Jason approves** → activate reversibly → capture test evidence + rollback note.
+- **Boundary:** nothing activated, routed, spent, or sent without explicit approval.
+
+## Item 3 — Internal agent workflows · **reporting Built/Tested; mutations Blocked**
+
+- **Status:** the **reporting/attribution** layer is built and passed 6/6 against the live portal — **ready to deliver now**. Anything that **writes** or **automates** (enrolls records, changes properties, triggers sends) is blocked on `automation-access`.
+- **Path to done:** deliver the reporting/attribution outputs now (the PDFs/DOCX already produced) → for mutations, add `automation-access`, have Jason/Sean name the 2–3 target workflows, then build with approval gates on any send/spend.
+- **Boundary:** do not alter automated emails without explicit approval.
+
+---
+
+## What's needed to unblock the rest
+
+1. **HubSpot Conversations scope** (portal `50612503`) → unblocks the Customer Agent / chatbot.
+2. **HubSpot `automation-access`** (portal `50612503`) → unblocks CallRail/SMS activation and workflow mutations.
+3. **Jason/Sean** to name the Item-3 workflows and approve the gated actions (SMS/routing/spend, chatbot live channel).
+
+**Ready to deliver now (no new scopes):** CRM reporting + aggregate attribution.
 
 Draft reply to Jason (not sent): [`draft-reply-to-jason.md`](draft-reply-to-jason.md).
+
+> Note: this doc lives in `dillon-os` as the vault-side handoff record. The working agent is in the private `jason-fallon-hubspot-agent` repo (commit `8a32d70`), which this session isn't scoped to — figures above are per Dillon's report, not re-verified here.
