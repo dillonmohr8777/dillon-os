@@ -88,6 +88,40 @@
     tl.to(ics, { opacity:1, y:0, z:0, rotationX:0, duration:0.6, stagger:0.1, ease:ease.back }, at);
   }
 
+  // ═══════════════ SCENE 0 - Align HCM intro ═══════════════
+  function scene0(root){
+    root.innerHTML = `
+      <div class="s0 scene-inner">
+        <div class="intro-stage">
+          <div class="intro-halo"></div>
+          <div class="intro-ring r3"></div>
+          <div class="intro-ring r2"></div>
+          <div class="intro-ring"></div>
+          <img class="intro-logo" src="assets/alignhcm-logo-transparent.png" alt="Align HCM"/>
+          <div class="intro-sweep"></div>
+        </div>
+      </div>`;
+    const tl = gsap.timeline();
+    const halo = $('.intro-halo', root), rings = $$('.intro-ring', root);
+    const logo = $('.intro-logo', root), sweep = $('.intro-sweep', root);
+    gsap.set(halo, { opacity:0, scale:0.55, transformOrigin:'50% 50%' });
+    gsap.set(rings, { opacity:0, scale:0.35, transformOrigin:'50% 50%' });
+    gsap.set(logo, { opacity:0, scale:0.72, filter:'blur(16px)', y:14, rotationX:14, transformPerspective:1300, transformOrigin:'50% 60%' });
+    gsap.set(sweep, { xPercent:-170, opacity:0 });
+    tl.to(halo, { opacity:1, scale:1, duration:1.7, ease:'power2.out' }, 0.1)
+      .to(rings, { opacity:1, scale:1, duration:1.5, stagger:0.14, ease:'power3.out' }, 0.2)
+      .to(logo, { opacity:1, scale:1, filter:'blur(0px)', y:0, rotationX:0, duration:1.5, ease:'power3.out' }, 0.55)
+      // light sweep glides across the logo
+      .fromTo(sweep, { xPercent:-170, opacity:0.9 }, { xPercent:170, opacity:0.9, duration:1.3, ease:'power2.inOut' }, 2.0)
+      .set(sweep, { opacity:0 })
+      // gentle breathing
+      .to(logo, { scale:1.02, duration:2.4, ease:'sine.inOut', yoyo:true, repeat:1 }, 3.2)
+      // decorations disappear just before the wipe into slide 1
+      .to(rings, { opacity:0, scale:1.16, duration:1.5, stagger:0.08, ease:'power2.inOut' }, 6.2)
+      .to(halo, { opacity:0.4, duration:1.3, ease:'power2.inOut' }, 6.2);
+    return tl;
+  }
+
   // ═══════════════ SCENE 1 - Support ═══════════════
   function scene1(root){
     root.innerHTML = `
@@ -342,5 +376,5 @@
     return tl;
   }
 
-  window.SOTScenes = { scene1, scene2, scene3, scene4, scene5, scene6 };
+  window.SOTScenes = { scene0, scene1, scene2, scene3, scene4, scene5, scene6 };
 })();

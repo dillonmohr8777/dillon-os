@@ -1,12 +1,13 @@
 # SmartCare - Stabilize · Optimize · Thrive (animated video)
 
-An animated, self-playing video built from the five SmartCare slides
-(Support → Stabilize → Optimize → Thrive → the "Stabilize. Optimize. Thrive."
-summary) plus an Align HCM sign-off. Dark brand theme, 1920×1080, loops.
+An animated, self-playing video: it opens on a big centered Align HCM logo
+intro, then runs the five SmartCare slides (Support → Stabilize → Optimize →
+Thrive → the "Stabilize. Optimize. Thrive." summary) and closes on an Align
+HCM sign-off. Dark brand theme, 1920×1080, loops.
 
 ## View it
 
-- **`SmartCare-SOT.mp4`** - the rendered video (H.264, 1920×1080, 30fps, ~53s).
+- **`SmartCare-SOT.mp4`** - the rendered video (H.264, 1920×1080, 30fps, ~62s).
   This is the shareable deliverable: post it to LinkedIn, drop it in email, etc.
   Rendered frame-by-frame from the animation below, with the real fonts baked in.
 - **`SmartCare-SOT-Standalone.html`** - double-click to open in any browser.

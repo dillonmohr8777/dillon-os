@@ -61,10 +61,9 @@
       </div>
 
       <div class="chrome">
-        <img class="logo-align" src="assets/alignhcm-logo-transparent.png" alt="Align HCM"/>
         <div class="foot"><span class="foot-glyph">🌐</span><span class="foot-txt">ALIGNHCM.COM</span></div>
         <div class="progress" id="progress">
-          <span class="pip"></span><span class="pip"></span><span class="pip"></span>
+          <span class="pip"></span><span class="pip"></span><span class="pip"></span><span class="pip"></span>
           <span class="pip"></span><span class="pip"></span><span class="pip"></span>
         </div>
       </div>
@@ -111,6 +110,7 @@
 
   // ── Scenes ──
   const SCENE_FNS = [
+    SOTScenes.scene0,
     SOTScenes.scene1, SOTScenes.scene2, SOTScenes.scene3,
     SOTScenes.scene4, SOTScenes.scene5, SOTScenes.scene6,
   ];
@@ -148,6 +148,7 @@
   function updatePips(i){
     pips().forEach((p, idx) => { p.classList.toggle('active', idx === i); p.classList.toggle('done', idx < i); });
     const st = document.getElementById('stage');
+    st.classList.toggle('intro', i === 0);
     st.classList.toggle('ending', i === SCENE_FNS.length - 1);
     st.setAttribute('data-screen-label', `scene ${i+1}/${SCENE_FNS.length}`);
   }
