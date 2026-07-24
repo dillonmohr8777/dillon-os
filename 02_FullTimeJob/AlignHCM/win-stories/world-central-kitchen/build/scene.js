@@ -78,8 +78,8 @@ function buildScene() {
   // WIN STORY pill pinned to the top-right corner
   const pillW = 1.02, pillH = 0.24;
   const pillX = RIGHT - pillW;
-  el.push({ type: "roundRect", x: pillX, y: 0.33, w: pillW, h: pillH, r: 0.05, fill: "E0652F" });
-  el.push({ type: "text", x: pillX, y: 0.33, w: pillW, h: pillH, align: "center", valign: "middle",
+  el.push({ type: "roundRect", x: pillX, y: 0.44, w: pillW, h: pillH, r: 0.05, fill: "E0652F" });
+  el.push({ type: "text", x: pillX, y: 0.44, w: pillW, h: pillH, align: "center", valign: "middle",
     runs: [{ text: "WIN STORY", size: 8.5, bold: true, color: "FFFFFF", cs: 1 }] });
   // vendor logos (right), transparent, in the lower band of the header
   const dfW = 1.227, dfH = dfW / 4.091, alH = 0.46, alW = alH * 2.346, vgap = 0.32;
