@@ -1,9 +1,9 @@
 # Dillon OS AI Model Gateway
 
-A private, OpenAI-compatible façade for Vercel AI Gateway. It discovers the
+A private, OpenAI-compatible facade for Vercel AI Gateway. It discovers the
 live Vercel model catalog instead of committing a stale allowlist, uses Vercel
-OIDC for upstream authentication, and requires a separate bearer token from
-every client.
+OIDC or an AI Gateway API key for upstream authentication, and requires a
+separate bearer token from every client.
 
 ## What this provides
 
@@ -23,6 +23,12 @@ eligibility.
 
 ## Vercel project
 
+Production:
+
+```text
+https://dillon-ai-model-gateway.vercel.app
+```
+
 Import `dillonmohr8777/dillon-os` and set the project Root Directory to:
 
 ```text
@@ -32,9 +38,9 @@ _os/ai-model-gateway
 Set `MODEL_GATEWAY_ACCESS_TOKEN` as a sensitive environment variable in
 Production, Preview, and Development. Do not commit its value.
 
-Vercel deployments receive `VERCEL_OIDC_TOKEN` automatically after AI Gateway
-is enabled. `AI_GATEWAY_API_KEY` is an optional local-development fallback and
-must also remain outside Git.
+Use `VERCEL_OIDC_TOKEN` when Vercel injects it. Otherwise set
+`AI_GATEWAY_API_KEY` as a sensitive Production and Preview variable. Both
+credentials must remain outside Git.
 
 ## Client base URLs
 
