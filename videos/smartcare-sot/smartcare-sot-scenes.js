@@ -1,4 +1,4 @@
-// smartcare-sot-scenes.js — dark SmartCare "Stabilize · Optimize · Thrive"
+// smartcare-sot-scenes.js - dark SmartCare "Stabilize · Optimize · Thrive"
 // Six GSAP scenes matching the five SmartCare slides + an Align sign-off.
 // Motion parameters: swipe transitions (in player), disappearing-ink exits,
 // 3D pop-ins on cards / checklists / icons.
@@ -11,7 +11,7 @@
     el.innerHTML = '';
     nodes.forEach((node) => {
       if (node.nodeType === 3) {
-        // Skip whitespace-only text between block lines / words — otherwise it
+        // Skip whitespace-only text between block lines / words - otherwise it
         // forms an empty inline line-box and throws off vertical rhythm.
         if (!/\S/.test(node.textContent)) return;
         for (const ch of node.textContent) {
@@ -88,7 +88,7 @@
     tl.to(ics, { opacity:1, y:0, z:0, rotationX:0, duration:0.6, stagger:0.1, ease:ease.back }, at);
   }
 
-  // ═══════════════ SCENE 1 — Support ═══════════════
+  // ═══════════════ SCENE 1 - Support ═══════════════
   function scene1(root){
     root.innerHTML = `
       <div class="s1 scene-inner">
@@ -127,7 +127,7 @@
     return tl;
   }
 
-  // ═══════════════ SCENE 2 — Stabilize ═══════════════
+  // ═══════════════ SCENE 2 - Stabilize ═══════════════
   function scene2(root){
     root.innerHTML = `
       <div class="s2 scene-inner">
@@ -135,45 +135,18 @@
           <span class="ln">Stabilize</span>
           <span class="ln accent">what just launched.</span>
         </h1>
-        <div class="sc-rule" style="top:378px"></div>
-        <p class="sc-sub" style="top:416px;max-width:770px">Quick issue resolution, admin coverage, and steady support after go live.</p>
-        <div class="widget" style="left:88px;top:526px;width:770px;height:440px">
-          <div class="w-pad">
-            <div class="w-label">Post Go-Live Health</div>
-            <div style="display:flex;gap:60px;margin-top:20px">
-              <div class="donut-wrap">
-                <div class="donut">
-                  <svg viewBox="0 0 150 150"><circle class="track" cx="75" cy="75" r="63"/><circle class="val" cx="75" cy="75" r="63"/></svg>
-                  <div class="center"><div class="pct">98%</div></div>
-                </div>
-                <div style="align-self:center"><div class="stat-big" style="font-size:40px">Stable</div><div class="w-label" style="margin-top:8px">System Stability</div></div>
-              </div>
-              <div style="flex:1">
-                <div class="w-label">Open Cases</div>
-                <div style="display:flex;align-items:flex-end;gap:16px;margin-top:6px">
-                  <div class="stat-big">12</div>
-                  <svg class="spark" width="150" height="70" viewBox="0 0 150 70" style="margin-bottom:8px"><path d="M2 20 L26 26 L50 18 L74 34 L98 30 L122 50 L148 58"/></svg>
-                </div>
-                <div class="stat-sub down">↓ 28% vs yesterday</div>
-              </div>
-            </div>
-            <div class="activity" style="margin-top:12px">
-              <div class="act-row"><span class="adot"></span><span class="atxt">Payroll run completed successfully</span><span class="atime">9:15 AM</span></div>
-              <div class="act-row"><span class="adot"></span><span class="atxt">New hire workflow issue resolved</span><span class="atime">8:42 AM</span></div>
-              <div class="act-row"><span class="adot"></span><span class="atxt">User access request completed</span><span class="atime">8:05 AM</span></div>
-            </div>
-          </div>
-        </div>
+        <div class="sc-rule" style="top:524px"></div>
+        <p class="sc-sub" style="top:572px;max-width:680px">Quick issue resolution, admin coverage, and steady support after go live.</p>
         ${iconRow([
           {s:ICON.person,l:'Admin support'},{s:ICON.kase,l:'Case management'},
           {s:ICON.shield,l:'Issue resolution'},{s:ICON.adoption,l:'Adoption'}
-        ]).replace('class="sc-icons"','class="sc-icons" style="left:905px;top:854px;gap:16px"')}
-        <div class="sc-card" style="right:96px;top:150px;width:620px;height:600px">
-          <div class="card-pad" style="padding:56px 56px">
-            <div class="sc-badge tr"><img src="assets/smartcare-logo-light.png" alt=""/></div>
-            <div class="card-title mode" style="font-size:72px;color:#fff">Stabilize</div>
+        ]).replace('class="sc-icons"','class="sc-icons" style="left:92px;top:772px"')}
+        <div class="sc-card" style="right:104px;top:150px;width:620px;height:800px">
+          <div class="card-pad">
+            <div class="sc-badge"><img src="assets/smartcare-logo-light.png" alt=""/></div>
+            <div class="card-title mode" style="font-size:78px;margin-top:44px;color:#fff">Stabilize</div>
             <div class="card-underline" style="margin-top:22px"></div>
-            <div style="margin-top:54px">${checks(['Triage issues quickly','Support daily admin','Restore confidence fast'])}</div>
+            <div style="margin-top:60px">${checks(['Triage issues quickly','Support daily admin','Restore confidence fast'])}</div>
           </div>
         </div>
       </div>`;
@@ -181,29 +154,18 @@
     const chars = splitChars($('.sc-head', root));
     gsap.set($('.sc-rule', root), { width:0 });
     gsap.set($('.sc-sub', root), { opacity:0, y:16 });
-    popHead(tl, chars, 0.15);
-    tl.to($('.sc-rule', root), { width:280, duration:0.8, ease:ease.expo }, 0.9)
-      .to($('.sc-sub', root), { opacity:1, y:0, duration:0.7, ease:ease.power3 }, 1.1);
-    // right card
+    popHead(tl, chars, 0.2);
+    tl.to($('.sc-rule', root), { width:300, duration:0.8, ease:ease.expo }, 1.1)
+      .to($('.sc-sub', root), { opacity:1, y:0, duration:0.7, ease:ease.power3 }, 1.3);
     popCard(tl, $('.sc-card', root), 0.5);
     gsap.set($('.sc-badge', root), { scale:0, transformOrigin:'50% 50%' });
     tl.to($('.sc-badge', root), { scale:1, duration:0.7, ease:'back.out(1.7)' }, 1.2);
-    popChecks(tl, $$('.sc-card .check', root), 1.6);
-    // left widget + donut
-    const w = $('.widget', root);
-    gsap.set(w, { opacity:0, y:50, z:-200, rotationX:-14, transformPerspective:1100, transformOrigin:'50% 100%' });
-    tl.to(w, { opacity:1, y:0, z:0, rotationX:0, duration:0.9, ease:'back.out(1.3)' }, 1.4);
-    const val = $('.donut .val', root);
-    if (val){ const C = 2*Math.PI*63; gsap.set(val,{ strokeDasharray:C, strokeDashoffset:C });
-      tl.to(val, { strokeDashoffset: C*(1-0.98), duration:1.2, ease:'power2.out' }, 2.0); }
-    gsap.set($('.spark path', root), { drawSVG:'0%' }); // no-op if plugin absent
-    gsap.set($$('.act-row', root), { opacity:0, x:-20 });
-    tl.to($$('.act-row', root), { opacity:1, x:0, duration:0.5, stagger:0.12, ease:ease.power3 }, 2.2);
-    popIcons(tl, $$('.sc-icons .ic', root), 2.4);
+    popChecks(tl, $$('.sc-card .check', root), 1.7);
+    popIcons(tl, $$('.sc-icons .ic', root), 2.2);
     return tl;
   }
 
-  // ═══════════════ SCENE 3 — Optimize ═══════════════
+  // ═══════════════ SCENE 3 - Optimize ═══════════════
   function scene3(root){
     root.innerHTML = `
       <div class="s3 scene-inner">
@@ -218,23 +180,15 @@
           {s:ICON.gear,l:'Configuration'},{s:ICON.bars,l:'Reporting'},
           {s:ICON.workflow,l:'Workflows'},{s:ICON.cleanup,l:'Cleanup'}
         ]).replace('class="sc-icons"','class="sc-icons" style="left:92px;top:790px"')}
-        <div class="widget" style="left:720px;top:150px;width:360px;height:300px">
-          <div class="w-pad">
-            <div class="w-label">System Health</div>
-            <div class="donut" style="margin:18px auto 0;width:170px;height:170px">
-              <svg viewBox="0 0 150 150"><circle class="track" cx="75" cy="75" r="63"/><circle class="val" cx="75" cy="75" r="63"/></svg>
-              <div class="center"><div class="pct">87%</div><div class="pct-l">Optimal</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="linechart" style="left:700px;top:500px;width:420px;height:220px">
-          <svg viewBox="0 0 420 220" preserveAspectRatio="none">
+        <div class="linechart" style="left:690px;top:326px;width:460px;height:320px">
+          <svg viewBox="0 0 460 320" preserveAspectRatio="none">
             <defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5821F" stop-opacity="0.28"/><stop offset="1" stop-color="#F5821F" stop-opacity="0"/></linearGradient></defs>
-            <path class="grid-l" d="M0 60 H420 M0 120 H420 M0 180 H420"/>
-            <path class="pl-area area" d="M0 170 L70 150 L140 158 L210 120 L280 96 L350 70 L420 40 L420 220 L0 220 Z"/>
-            <path class="pl-line line" d="M0 170 L70 150 L140 158 L210 120 L280 96 L350 70 L420 40"/>
+            <path class="grid-l" d="M0 90 H460 M0 170 H460 M0 250 H460"/>
+            <path class="pl-area area" d="M0 250 L77 216 L154 226 L230 168 L306 122 L383 78 L460 44 L460 320 L0 320 Z"/>
+            <path class="pl-line line" d="M0 250 L77 216 L154 226 L230 168 L306 122 L383 78 L460 44"/>
+            <circle class="node pl-end" cx="460" cy="44" r="7"/>
           </svg>
-          <div class="w-label" style="position:absolute;left:4px;top:-30px">Performance</div>
+          <div class="w-label" style="position:absolute;left:4px;top:-34px">Performance</div>
         </div>
         <div class="sc-card" style="right:104px;top:150px;width:600px;height:780px">
           <div class="card-pad">
@@ -256,25 +210,20 @@
     gsap.set($('.sc-badge', root), { scale:0, transformOrigin:'50% 50%' });
     tl.to($('.sc-badge', root), { scale:1, duration:0.7, ease:'back.out(1.7)' }, 1.2);
     popChecks(tl, $$('.sc-card .check', root), 1.7);
-    // widgets
-    const w = $('.widget', root);
-    gsap.set(w, { opacity:0, scale:0.8, transformOrigin:'50% 50%' });
-    tl.to(w, { opacity:1, scale:1, duration:0.8, ease:'back.out(1.4)' }, 1.4);
-    const val = $('.donut .val', root);
-    if (val){ const C = 2*Math.PI*63; gsap.set(val,{ strokeDasharray:C, strokeDashoffset:C });
-      tl.to(val, { strokeDashoffset: C*(1-0.87), duration:1.2, ease:'power2.out' }, 1.9); }
+    // performance chart (system-health donut removed)
     const lc = $('.linechart', root);
     gsap.set(lc, { opacity:0, y:30 });
-    const line = $('.pl-line', root), area = $('.pl-area', root);
-    if (line){ const L = line.getTotalLength(); gsap.set(line,{ strokeDasharray:L, strokeDashoffset:L }); gsap.set(area,{opacity:0}); }
-    tl.to(lc, { opacity:1, y:0, duration:0.6, ease:ease.power3 }, 2.0);
-    if (line){ tl.to(line, { strokeDashoffset:0, duration:1.4, ease:'power2.out' }, 2.1)
-                 .to(area, { opacity:1, duration:0.8 }, 2.6); }
+    const line = $('.pl-line', root), area = $('.pl-area', root), end = $('.pl-end', root);
+    if (line){ const L = line.getTotalLength(); gsap.set(line,{ strokeDasharray:L, strokeDashoffset:L }); gsap.set([area,end],{opacity:0}); }
+    tl.to(lc, { opacity:1, y:0, duration:0.6, ease:ease.power3 }, 1.5);
+    if (line){ tl.to(line, { strokeDashoffset:0, duration:1.5, ease:'power2.out' }, 1.7)
+                 .to(area, { opacity:1, duration:0.8 }, 2.3)
+                 .to(end, { opacity:1, scale:1, duration:0.4, ease:'back.out(2)', transformOrigin:'50% 50%' }, 2.9); }
     popIcons(tl, $$('.sc-icons .ic', root), 2.4);
     return tl;
   }
 
-  // ═══════════════ SCENE 4 — Thrive ═══════════════
+  // ═══════════════ SCENE 4 - Thrive ═══════════════
   function scene4(root){
     root.innerHTML = `
       <div class="s4 scene-inner">
@@ -340,7 +289,7 @@
     return tl;
   }
 
-  // ═══════════════ SCENE 5 — Summary ═══════════════
+  // ═══════════════ SCENE 5 - Summary ═══════════════
   function scene5(root){
     root.innerHTML = `
       <div class="s5 scene-inner">
@@ -399,7 +348,7 @@
     return tl;
   }
 
-  // ═══════════════ SCENE 6 — Beautiful Align ending ═══════════════
+  // ═══════════════ SCENE 6 - Beautiful Align ending ═══════════════
   function scene6(root){
     root.innerHTML = `
       <div class="s6 scene-inner">
@@ -410,7 +359,7 @@
           <img class="end-heart" src="assets/smartcare-logo-light.png" alt="SmartCare"/>
           <div class="end-kicker">Go-live was just the beginning</div>
           <h1 class="end-tagline"><span class="stab">Stabilize.</span> <span class="opt">Optimize.</span> <span class="thr">Thrive.</span></h1>
-          <p class="end-sub">One SmartCare support model that keeps your HCM moving — long after go live.</p>
+          <p class="end-sub">One SmartCare support model that keeps your HCM moving, long after go live.</p>
           <div class="end-lockup">
             <img class="end-align" src="assets/alignhcm-logo-transparent.png" alt="Align HCM"/>
             <div class="end-web">ALIGNHCM<span class="dot">.</span>COM</div>

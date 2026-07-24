@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>SmartCare — Stabilize · Optimize · Thrive</title>
+<title>SmartCare - Stabilize · Optimize · Thrive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,600&family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -276,6 +276,28 @@
   window.__M = master;
   window.__scrub = (i, localT) => { master.pause(); transitioning=false; gsap.set(seam,{display:'none'}); currentScene=-1; setScene(i); const tl = getTL(i); tl.pause(); tl.time(Math.min(tl.duration()||localT, localT)); };
   window.__mid = (prev, i, p) => { master.pause(); currentScene=prev; playing=true; dragging=false; transitioning=false; revealScene(prev); const tt = transitionTo(prev, i); tt.pause(); tt.progress(p); };
+  // Deterministic transition frame for MP4 capture: outgoing held at final state,
+  // incoming at t=0, all transition visuals derived purely from progress p.
+  window.__capTrans = (prev, next, p) => {
+    master.pause(); transitioning = false;
+    const eInOut = gsap.parseEase('power2.inOut'), eIn = gsap.parseEase('power2.in');
+    const e = eInOut(p);
+    sceneEls.forEach((el, idx) => {
+      if (idx === prev || idx === next) { el.classList.add('active'); gsap.set(el, { opacity: 1 }); }
+      else { el.classList.remove('active'); gsap.set(el, { opacity: 0, clipPath: 'none', filter: 'none' }); if (built[idx]) built[idx].pause(0); }
+    });
+    const pt = getTL(prev); pt.pause(); pt.time(isFinite(pt.duration()) ? pt.duration() : SCENE_DUR);
+    const nt = getTL(next); nt.pause(); nt.time(0);
+    gsap.set(motionOf(sceneEls[next]), { opacity: 1, clearProps: 'transform' });
+    const fl = Math.max(0, Math.min(1, (p - 0.25) / 0.7));
+    gsap.set(motionOf(sceneEls[prev]), { opacity: 1 - eIn(fl) });
+    gsap.set(sceneEls[next], { opacity: 1, filter: 'none', clipPath: `inset(-2% ${(1 - e) * 100}% -2% 0)` });
+    gsap.set(sceneEls[prev], { filter: 'url(#inkDissolve)', clipPath: `inset(-2% 0 -2% ${e * 100}%)` });
+    gsap.set(inkDisp, { attr: { scale: 70 * eIn(p) } });
+    gsap.set(inkBlur, { attr: { stdDeviation: 3 * eIn(p) } });
+    gsap.set(seam, { display: 'block', opacity: 1, left: (-4 + 108 * e) + '%' });
+    updatePips(next);
+  };
 </script>
 </body>
 </html>
