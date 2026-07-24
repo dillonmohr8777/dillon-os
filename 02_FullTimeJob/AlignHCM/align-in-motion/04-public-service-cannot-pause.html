@@ -5,65 +5,82 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Public service cannot pause — Align in Motion</title>
 <link rel="stylesheet" href="align-motion.css">
+<link rel="preload" as="image" href="assets/panel-utility.jpg">
 </head>
 <body>
 <div id="stage-wrap">
   <div id="stage">
+    <!-- background stack: painted layers + GPU-only drifting light -->
     <div class="bg bg-base"></div>
     <div class="bg bg-grid"></div>
+    <div class="bg bg-gridfade"></div>
+    <div class="bg"><i class="aura aura-a"></i><i class="aura aura-b"></i><i class="aura aura-c"></i><i class="aura aura-d"></i></div>
+    <div class="bg motes"></div>
+    <div class="bg"><i class="sweep"></i></div>
+    <div class="bg bg-bloom"></div>
     <div class="bg bg-vignette"></div>
-    <div class="topbar"></div>
+    <div class="bg bg-grain"></div>
+    <div class="topbar"><i></i></div>
 
     <!-- 1 · intro -->
     <section class="scene" data-dur="8">
       <div class="ghost">SERVICE</div>
       <div class="content">
-        <div class="eyebrow anim d1">Public Sector</div>
-        <h1 class="headline h-xl anim d2">Public service <em>cannot pause.</em></h1>
-        <p class="body anim d3">The work behind safe communities, open schools, and running utilities depends on a workforce operation that never stops.</p>
+        <div class="eyebrow"><i></i><span>Public Sector</span></div>
+        <h1 class="headline h-xl">Public service <em>cannot pause.</em></h1>
+        <p class="body">The work behind safe communities, open schools, and running utilities depends on a workforce operation that never stops.</p>
       </div>
     </section>
 
     <!-- 2 · utilities -->
     <section class="scene split" data-dur="8" data-page="1">
-      <div class="panel"><img src="assets/panel-utility.jpg" alt="Utility crews maintaining infrastructure at dusk"></div>
+      <div class="panel">
+        <img src="assets/panel-utility.jpg" alt="Utility crews maintaining infrastructure at dusk">
+        <span class="feather"></span><span class="warm"></span>
+      </div>
       <div class="content">
-        <div class="eyebrow anim d1">Utilities</div>
-        <h2 class="headline h-lg anim d2">Keep essential crews <em>ready.</em></h2>
-        <p class="body anim d3">Field schedules, labor rules, time, and pay for the people maintaining essential infrastructure.</p>
+        <div class="eyebrow"><i></i><span>Utilities</span></div>
+        <h2 class="headline h-lg">Keep essential crews <em>ready.</em></h2>
+        <p class="body">Field schedules, labor rules, time, and pay for the people maintaining essential infrastructure.</p>
       </div>
     </section>
 
     <!-- 3 · fire and EMS -->
     <section class="scene split" data-dur="8" data-page="2">
-      <div class="panel"><img src="assets/panel-fire.jpg" alt="Fire and EMS crew in front of an engine"></div>
+      <div class="panel">
+        <img src="assets/panel-fire.jpg" alt="Fire and EMS crew in front of an engine">
+        <span class="feather"></span><span class="warm"></span>
+      </div>
       <div class="content">
-        <div class="eyebrow anim d1">Fire and EMS</div>
-        <h2 class="headline h-lg anim d2">Every shift, <em>covered.</em></h2>
-        <p class="body anim d3">Coverage with qualifications attached, and labor rules built into the roster.</p>
+        <div class="eyebrow"><i></i><span>Fire and EMS</span></div>
+        <h2 class="headline h-lg">Every shift, <em>covered.</em></h2>
+        <p class="body">Coverage with qualifications attached, and labor rules built into the roster.</p>
       </div>
     </section>
 
     <!-- 4 · the operating challenge -->
     <section class="scene" data-dur="10" data-page="3">
       <div class="content">
-        <div class="eyebrow anim d1">The Operating Challenge</div>
-        <h2 class="headline h-md anim d2">The pressure is <em>constant.</em></h2>
+        <div class="eyebrow"><i></i><span>The Operating Challenge</span></div>
+        <h2 class="headline h-md">The pressure is <em>constant.</em></h2>
         <div class="list">
-          <div class="li anim d3"><div class="num">01</div><div><div class="lt">Round-the-clock coverage</div><div class="ld">Every shift filled, every day of the year.</div></div></div>
-          <div class="li anim d4"><div class="num">02</div><div><div class="lt">Certifications and role-based assignments</div><div class="ld">The right person, qualified, in every role.</div></div></div>
-          <div class="li anim d5"><div class="num">03</div><div><div class="lt">Overtime and labor rules</div><div class="ld">Complex rules that have to be right on every check.</div></div></div>
+          <div class="li"><div class="num">01</div><div><div class="lt">Round-the-clock coverage</div><div class="ld">Every shift filled, every day of the year.</div></div></div>
+          <div class="li"><div class="num">02</div><div><div class="lt">Certifications and role-based assignments</div><div class="ld">The right person, qualified, in every role.</div></div></div>
+          <div class="li"><div class="num">03</div><div><div class="lt">Overtime and labor rules</div><div class="ld">Complex rules that have to be right on every check.</div></div></div>
         </div>
       </div>
     </section>
 
     <!-- 5 · K-12 education -->
     <section class="scene split" data-dur="8" data-page="4">
-      <div class="panel"><img src="assets/panel-edu.jpg" alt="School staff and educators"></div>
+      <div class="panel">
+        <img src="assets/panel-edu.jpg" alt="School staff and educators">
+        <span class="feather"></span><span class="warm"></span>
+      </div>
       <div class="content">
-        <div class="eyebrow anim d1">K-12 Education</div>
-        <h2 class="headline h-lg anim d2">Behind every school day, <em>a person.</em></h2>
-        <p class="body anim d3">Substitutes, hourly workforces, credentialed roles, and pay built around the school year.</p>
+        <div class="eyebrow"><i></i><span>K-12 Education</span></div>
+        <h2 class="headline h-lg">Behind every school day, <em>a person.</em></h2>
+        <p class="body">Substitutes, hourly workforces, credentialed roles, and pay built around the school year.</p>
       </div>
     </section>
 
@@ -71,19 +88,20 @@
     <section class="scene" data-dur="8" data-page="5">
       <div class="ghost right">TRUST</div>
       <div class="content">
-        <div class="eyebrow anim d1">One Foundation</div>
-        <h2 class="headline h-lg anim d2">One workforce operation <em>people can trust.</em></h2>
-        <p class="body anim d3">Scheduling, time, pay, and compliance on one platform, built for the realities of public service.</p>
+        <div class="eyebrow"><i></i><span>One Foundation</span></div>
+        <h2 class="headline h-lg">One workforce operation <em>people can trust.</em></h2>
+        <p class="body">Scheduling, time, pay, and compliance on one platform, built for the realities of public service.</p>
       </div>
     </section>
 
     <!-- 7 · outro -->
-    <section class="scene outro" data-dur="10">
-      <div class="outro">
-        <div class="lg anim d1"><img src="assets/alignhcm-logo.png" alt="Align HCM"></div>
-        <div class="divider anim d2"></div>
-        <div class="tag anim d3">Built for the work <em>inside public service.</em></div>
-        <div class="u anim d4">alignhcm.com</div>
+    <section class="scene" data-dur="10">
+      <div class="outro-wrap">
+        <span class="halo"></span>
+        <div class="lg"><img src="assets/alignhcm-logo.png" alt="Align HCM"></div>
+        <div class="divider"></div>
+        <div class="tag">Built for the work <em>inside public service.</em></div>
+        <div class="u">alignhcm.com</div>
       </div>
     </section>
 
@@ -105,6 +123,7 @@
 </div>
 <div class="hint">space play/pause · ← → seek · H hide UI</div>
 
+<script src="vendor/gsap.min.js"></script>
 <script src="align-motion.js"></script>
 </body>
 </html>
