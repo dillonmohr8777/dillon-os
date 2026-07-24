@@ -180,16 +180,6 @@
           {s:ICON.gear,l:'Configuration'},{s:ICON.bars,l:'Reporting'},
           {s:ICON.workflow,l:'Workflows'},{s:ICON.cleanup,l:'Cleanup'}
         ]).replace('class="sc-icons"','class="sc-icons" style="left:92px;top:790px"')}
-        <div class="linechart" style="left:690px;top:326px;width:460px;height:320px">
-          <svg viewBox="0 0 460 320" preserveAspectRatio="none">
-            <defs><linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5821F" stop-opacity="0.28"/><stop offset="1" stop-color="#F5821F" stop-opacity="0"/></linearGradient></defs>
-            <path class="grid-l" d="M0 90 H460 M0 170 H460 M0 250 H460"/>
-            <path class="pl-area area" d="M0 250 L77 216 L154 226 L230 168 L306 122 L383 78 L460 44 L460 320 L0 320 Z"/>
-            <path class="pl-line line" d="M0 250 L77 216 L154 226 L230 168 L306 122 L383 78 L460 44"/>
-            <circle class="node pl-end" cx="460" cy="44" r="7"/>
-          </svg>
-          <div class="w-label" style="position:absolute;left:4px;top:-34px">Performance</div>
-        </div>
         <div class="sc-card" style="right:104px;top:150px;width:600px;height:780px">
           <div class="card-pad">
             <div class="sc-badge"><img src="assets/smartcare-logo-light.png" alt=""/></div>
@@ -210,16 +200,7 @@
     gsap.set($('.sc-badge', root), { scale:0, transformOrigin:'50% 50%' });
     tl.to($('.sc-badge', root), { scale:1, duration:0.7, ease:'back.out(1.7)' }, 1.2);
     popChecks(tl, $$('.sc-card .check', root), 1.7);
-    // performance chart (system-health donut removed)
-    const lc = $('.linechart', root);
-    gsap.set(lc, { opacity:0, y:30 });
-    const line = $('.pl-line', root), area = $('.pl-area', root), end = $('.pl-end', root);
-    if (line){ const L = line.getTotalLength(); gsap.set(line,{ strokeDasharray:L, strokeDashoffset:L }); gsap.set([area,end],{opacity:0}); }
-    tl.to(lc, { opacity:1, y:0, duration:0.6, ease:ease.power3 }, 1.5);
-    if (line){ tl.to(line, { strokeDashoffset:0, duration:1.5, ease:'power2.out' }, 1.7)
-                 .to(area, { opacity:1, duration:0.8 }, 2.3)
-                 .to(end, { opacity:1, scale:1, duration:0.4, ease:'back.out(2)', transformOrigin:'50% 50%' }, 2.9); }
-    popIcons(tl, $$('.sc-icons .ic', root), 2.4);
+    popIcons(tl, $$('.sc-icons .ic', root), 2.0);
     return tl;
   }
 
@@ -237,15 +218,6 @@
           {s:ICON.insights,l:'Insights'},{s:ICON.gear,l:'Process improvement'},
           {s:ICON.knight,l:'Strategy'},{s:ICON.trendup,l:'Growth'}
         ]).replace('class="sc-icons"','class="sc-icons" style="left:92px;top:790px"')}
-        <div class="linechart" style="left:640px;top:470px;width:520px;height:340px">
-          <svg viewBox="0 0 520 340" preserveAspectRatio="none">
-            <defs><linearGradient id="areaFill4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5821F" stop-opacity="0.3"/><stop offset="1" stop-color="#F5821F" stop-opacity="0"/></linearGradient></defs>
-            <g class="gbars"></g>
-            <path class="pl-area" d="M0 280 L90 250 L180 258 L270 200 L360 150 L450 92 L520 44 L520 340 L0 340 Z" fill="url(#areaFill4)"/>
-            <path class="pl-line line" d="M0 280 L90 250 L180 258 L270 200 L360 150 L450 92 L520 44"/>
-            <circle class="node pl-end" cx="520" cy="44" r="8"/>
-          </svg>
-        </div>
         <div class="sc-card" style="right:104px;top:150px;width:600px;height:760px">
           <div class="card-pad">
             <div class="sc-badge"><img src="assets/smartcare-logo-light.png" alt=""/></div>
@@ -255,13 +227,6 @@
           </div>
         </div>
       </div>`;
-    // build rising bars behind the line
-    const gb = $('.gbars', root);
-    const heights = [70,96,120,150,190,230,270];
-    let bhtml = '';
-    heights.forEach((h,i)=>{ const x = 20 + i*72; bhtml += `<rect class="gb" x="${x}" y="${340-h}" width="34" height="${h}" rx="6" fill="rgba(245,130,31,0.16)" stroke="rgba(245,130,31,0.4)"/>`; });
-    gb.innerHTML = bhtml;
-
     const tl = gsap.timeline();
     const chars = splitChars($('.sc-head', root));
     gsap.set($('.sc-rule', root), { width:0 });
@@ -273,19 +238,7 @@
     gsap.set($('.sc-badge', root), { scale:0, transformOrigin:'50% 50%' });
     tl.to($('.sc-badge', root), { scale:1, duration:0.7, ease:'back.out(1.7)' }, 1.2);
     popChecks(tl, $$('.sc-card .check', root), 1.7);
-    // chart
-    const lc = $('.linechart', root);
-    gsap.set(lc, { opacity:0, y:30 });
-    tl.to(lc, { opacity:1, y:0, duration:0.6, ease:ease.power3 }, 1.5);
-    const bars = $$('.gb', root);
-    gsap.set(bars, { scaleY:0, transformOrigin:'50% 100%', svgOrigin:'0 340' });
-    tl.to(bars, { scaleY:1, duration:0.6, stagger:0.07, ease:'power2.out' }, 1.7);
-    const line = $('.pl-line', root), end = $('.pl-end', root), area = $('.pl-area', root);
-    if (line){ const L = line.getTotalLength(); gsap.set(line,{ strokeDasharray:L, strokeDashoffset:L }); gsap.set([area,end],{opacity:0});
-      tl.to(line, { strokeDashoffset:0, duration:1.5, ease:'power2.out' }, 2.0)
-        .to(area, { opacity:1, duration:0.8 }, 2.6)
-        .to(end, { opacity:1, scale:1, duration:0.5, ease:'back.out(2)', transformOrigin:'50% 50%' }, 3.2); }
-    popIcons(tl, $$('.sc-icons .ic', root), 2.4);
+    popIcons(tl, $$('.sc-icons .ic', root), 2.0);
     return tl;
   }
 
