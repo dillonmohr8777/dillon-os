@@ -163,24 +163,62 @@
 
   // ═══════════════ SCENE 2 - Stabilize ═══════════════
   function scene2(root){
+    const di = {
+      warn:'<svg viewBox="0 0 24 24"><path d="M12 4 L21 19 H3 Z"/><path d="M12 10v4"/><path d="M12 16.3v.2"/></svg>',
+      clock:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+      checkc:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8 12l3 3 5-6"/></svg>',
+      person:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5.5 20c0-3.6 3-5.6 6.5-5.6s6.5 2 6.5 5.6"/></svg>',
+      doc:'<svg viewBox="0 0 24 24"><rect x="5.5" y="3.5" width="13" height="17" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>',
+      refresh:'<svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 3.5V9h-5.5"/></svg>'
+    };
     root.innerHTML = `
       <div class="s2 scene-inner">
-        <h1 class="sc-head" style="top:178px;font-size:92px">
+        <h1 class="sc-head" style="top:120px;font-size:90px">
           <span class="ln">Stabilize</span>
           <span class="ln accent">what just launched.</span>
         </h1>
-        <div class="sc-rule" style="top:524px"></div>
-        <p class="sc-sub" style="top:572px;max-width:680px">Quick issue resolution, admin coverage, and steady support after go live.</p>
+        <div class="sc-rule" style="top:306px"></div>
+        <p class="sc-sub" style="top:342px;max-width:740px;font-size:28px">Post go live support that brings fast issue triage, reliable admin coverage, and steady momentum across HCM operations.</p>
+        <div class="widget s2dash" style="left:88px;top:486px;width:800px;height:322px">
+          <div class="w-pad">
+            <div class="dash-grid">
+              <div class="dash-cell">
+                <div class="dc-h">Open cases</div>
+                <div class="dc-row"><span class="dc-ic">${di.warn}</span><span class="dc-l">High priority</span><span class="dc-v">3</span><span class="dc-x">›</span></div>
+                <div class="dc-row"><span class="dc-ic">${di.clock}</span><span class="dc-l">In progress</span><span class="dc-v">5</span><span class="dc-x">›</span></div>
+                <div class="dc-row"><span class="dc-ic">${di.checkc}</span><span class="dc-l">Waiting on customer</span><span class="dc-v">2</span><span class="dc-x">›</span></div>
+              </div>
+              <div class="dash-cell">
+                <div class="dc-h">Priority queue</div>
+                <div class="dc-row"><span class="pdot"></span><span class="dc-l">Payroll calculation issue</span><span class="ptag">High</span></div>
+                <div class="dc-row"><span class="pdot"></span><span class="dc-l">User access request</span><span class="ptag">High</span></div>
+                <div class="dc-row"><span class="pdot med"></span><span class="dc-l">Benefits enrollment error</span><span class="ptag med">Medium</span></div>
+              </div>
+              <div class="dash-cell">
+                <div class="dc-h">Recent activity</div>
+                <div class="dc-row"><span class="dc-ic">${di.refresh}</span><span class="dc-l">Payroll run completed successfully</span></div>
+                <div class="dc-row"><span class="dc-ic">${di.person}</span><span class="dc-l">Workflow issue resolved</span></div>
+                <div class="dc-row"><span class="dc-ic">${di.person}</span><span class="dc-l">User access request completed</span></div>
+              </div>
+              <div class="dash-cell">
+                <div class="dc-h">Admin requests</div>
+                <div class="dc-row"><span class="dc-ic">${di.person}</span><span class="dc-l">User access</span></div>
+                <div class="dc-row"><span class="dc-ic">${di.doc}</span><span class="dc-l">Report request</span></div>
+                <div class="dc-row"><span class="dc-ic">${di.doc}</span><span class="dc-l">Configuration update</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
         ${iconRow([
           {s:ICON.person,l:'Admin support'},{s:ICON.kase,l:'Case management'},
-          {s:ICON.shield,l:'Issue resolution'},{s:ICON.adoption,l:'Adoption'}
-        ]).replace('class="sc-icons"','class="sc-icons" style="left:92px;top:772px"')}
-        <div class="sc-card" style="right:104px;top:150px;width:620px;height:800px">
-          <div class="card-pad">
-            <div class="sc-badge"><img src="assets/smartcare-logo-light.png" alt=""/></div>
-            <div class="card-title mode" style="font-size:78px;margin-top:44px;color:#fff">Stabilize</div>
-            <div class="card-underline" style="margin-top:22px"></div>
-            <div style="margin-top:60px">${checks(['Triage issues quickly','Support daily admin','Restore confidence fast'])}</div>
+          {s:ICON.shield,l:'Issue resolution'},{s:'<path d="M24 44 V24"/><path d="M24 28 C 15 28 9 22 9 13 C 18 13 24 19 24 28 Z"/><path d="M24 24 C 33 24 39 18 39 9 C 30 9 24 15 24 24 Z"/>',l:'Adoption support'}
+        ]).replace('class="sc-icons"','class="sc-icons" style="left:88px;top:824px;gap:14px"')}
+        <div class="sc-card s2card" style="right:96px;top:150px;width:648px;height:800px">
+          <div class="card-pad" style="padding:60px 56px">
+            <div class="sc-badge white"><img src="assets/smartcare-logo-transparent.png" alt=""/></div>
+            <div class="card-title mode" style="font-size:88px;color:#fff">Stabilize</div>
+            <div class="card-underline" style="margin-top:24px"></div>
+            <div>${checks(['Triage issues quickly','Support daily admin','Resolve cases with urgency','Restore confidence fast'])}</div>
           </div>
         </div>
       </div>`;
@@ -188,14 +226,21 @@
     const chars = splitChars($('.sc-head', root));
     gsap.set($('.sc-rule', root), { width:0 });
     gsap.set($('.sc-sub', root), { opacity:0, y:16 });
-    popHead(tl, chars, 0.2);
-    tl.to($('.sc-rule', root), { width:300, duration:0.8, ease:ease.expo }, 1.1)
-      .to($('.sc-sub', root), { opacity:1, y:0, duration:0.7, ease:ease.power3 }, 1.3);
+    popHead(tl, chars, 0.15);
+    tl.to($('.sc-rule', root), { width:280, duration:0.8, ease:ease.expo }, 0.9)
+      .to($('.sc-sub', root), { opacity:1, y:0, duration:0.7, ease:ease.power3 }, 1.1);
     popCard(tl, $('.sc-card', root), 0.5);
-    gsap.set($('.sc-badge', root), { scale:0, transformOrigin:'50% 50%' });
-    tl.to($('.sc-badge', root), { scale:1, duration:0.7, ease:'back.out(1.7)' }, 1.2);
-    popChecks(tl, $$('.sc-card .check', root), 1.7);
-    popIcons(tl, $$('.sc-icons .ic', root), 2.2);
+    gsap.set($('.sc-badge', root), { scale:0, rotate:-8, transformOrigin:'50% 50%' });
+    tl.to($('.sc-badge', root), { scale:1, rotate:0, duration:0.7, ease:'back.out(1.7)' }, 1.2);
+    popChecks(tl, $$('.s2card .check', root), 1.6);
+    const w = $('.widget', root);
+    gsap.set(w, { opacity:0, y:44, z:-180, rotationX:-12, transformPerspective:1200, transformOrigin:'50% 100%' });
+    tl.to(w, { opacity:1, y:0, z:0, rotationX:0, duration:0.9, ease:'back.out(1.3)' }, 1.3);
+    gsap.set($$('.dc-h', root), { opacity:0 });
+    gsap.set($$('.dc-row', root), { opacity:0, x:-14 });
+    tl.to($$('.dc-h', root), { opacity:1, duration:0.4, stagger:0.05, ease:ease.power3 }, 1.6)
+      .to($$('.dc-row', root), { opacity:1, x:0, duration:0.4, stagger:0.03, ease:ease.power3 }, 1.7);
+    popIcons(tl, $$('.sc-icons .ic', root), 2.3);
     return tl;
   }
 
@@ -255,9 +300,9 @@
         <div class="sc-card" style="right:104px;top:150px;width:600px;height:760px">
           <div class="card-pad">
             <div class="sc-badge"><img src="assets/smartcare-logo-light.png" alt=""/></div>
-            <div class="card-title mode" style="font-size:76px;margin-top:42px;color:#fff">Thrive</div>
+            <div class="card-title" style="font-size:76px;margin-top:42px"><span class="brand">SmartCare</span><span class="mode">Thrive</span></div>
             <div class="card-underline" style="margin-top:22px"></div>
-            <div style="margin-top:58px">${checks(['Drive continuous improvement','Strengthen decision making','Expand platform value'])}</div>
+            <div style="margin-top:56px">${checks(['Drive continuous improvement','Strengthen decision making','Expand platform value'])}</div>
           </div>
         </div>
       </div>`;

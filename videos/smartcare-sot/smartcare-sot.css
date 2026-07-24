@@ -191,6 +191,36 @@ button{font-family:inherit}
 .s0 .intro-logo{position:relative;width:860px;height:auto;filter:drop-shadow(0 22px 66px rgba(245,130,31,0.42));z-index:2}
 .s0 .intro-sweep{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:1000px;height:360px;background:linear-gradient(102deg,transparent 34%,rgba(255,255,255,0.55) 50%,transparent 66%);mix-blend-mode:screen;pointer-events:none;z-index:3}
 
+/* ══ SCENE 2 - Stabilize (rich case dashboard + white badge) ══ */
+/* white circular badge (color heart on white), top-right of card */
+.sc-badge.white{position:absolute;top:52px;right:52px;width:158px;height:158px;background:radial-gradient(circle at 50% 40%,#FFFFFF,#F1F1F3);border:2px solid rgba(255,255,255,0.9);box-shadow:0 0 34px rgba(245,130,31,0.4),0 10px 30px rgba(0,0,0,0.4)}
+.sc-badge.white img{width:118px}
+.s2 .s2card .card-title{margin-top:150px}
+.s2 .s2card .checks{gap:16px;margin-top:44px}
+.s2 .s2card .check .cbox{width:50px;height:50px}
+.s2 .s2card .check .cbox svg{width:26px;height:26px}
+.s2 .s2card .check .ctxt{font-size:31px}
+/* dashboard panel */
+.s2 .s2dash .w-pad{padding:26px 30px}
+.s2 .dash-grid{display:grid;grid-template-columns:1fr 1fr;height:100%}
+.s2 .dash-cell{padding:10px 24px;min-width:0}
+.s2 .dash-cell:nth-child(1){border-right:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}
+.s2 .dash-cell:nth-child(2){border-bottom:1px solid rgba(255,255,255,0.08)}
+.s2 .dash-cell:nth-child(3){border-right:1px solid rgba(255,255,255,0.08)}
+.s2 .dc-h{font-family:var(--font-sans);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.s2 .dc-row{display:flex;align-items:center;gap:11px;height:31px;font-family:var(--font-sans);font-size:17px;color:var(--ink-2)}
+.s2 .dc-row .dc-l{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s2 .dc-ic{width:22px;height:22px;flex:0 0 auto;display:flex;align-items:center;justify-content:center}
+.s2 .dc-ic svg{width:20px;height:20px;stroke:var(--orange);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.s2 .dc-v{font-weight:800;color:var(--orange);font-size:19px;flex:0 0 auto}
+.s2 .dc-x{color:var(--ink-faint);font-size:19px;flex:0 0 auto;margin-left:2px}
+.s2 .pdot{width:10px;height:10px;border-radius:50%;background:var(--orange);flex:0 0 auto;box-shadow:0 0 8px rgba(245,130,31,0.6)}
+.s2 .pdot.med{background:#C7912F;box-shadow:none}
+.s2 .ptag{font-size:16px;font-weight:700;color:var(--orange-bright);flex:0 0 auto}
+.s2 .ptag.med{color:var(--ink-dim)}
+.s2 .sc-icons .ic{width:198px}
+.s2 .sc-icons .ic-lbl{font-size:21px}
+
 /* ── Playback controls ─────────────────────────────────── */
 .controls{width:100%;max-width:820px;margin:10px auto;padding:8px 16px;display:flex;gap:12px;align-items:center;background:rgba(16,16,20,0.92);border:1px solid rgba(255,255,255,0.08);border-radius:8px;color:#fff}
 .controls button{width:30px;height:30px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:#fff;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center}
