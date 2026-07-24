@@ -6,6 +6,9 @@ summary) plus an Align HCM sign-off. Dark brand theme, 1920×1080, loops.
 
 ## View it
 
+- **`SmartCare-SOT.mp4`** — the rendered video (H.264, 1920×1080, 30fps, ~53s).
+  This is the shareable deliverable: post it to LinkedIn, drop it in email, etc.
+  Rendered frame-by-frame from the animation below, with the real fonts baked in.
 - **`SmartCare-SOT-Standalone.html`** — double-click to open in any browser.
   Everything (styles, animation code, logos) is embedded in this one file, so
   it works on its own with no other files needed. Best for sharing / screen
@@ -33,6 +36,7 @@ Playback controls: click ▶/❚❚, drag the scrubber, Space = play/pause,
 
 | File | Purpose |
 | --- | --- |
+| `SmartCare-SOT.mp4` | Rendered H.264 video — the shareable deliverable |
 | `SmartCare-SOT.html` | Player (references the files below) |
 | `SmartCare-SOT-Standalone.html` | Single-file, fully self-contained build |
 | `smartcare-sot.css` | Dark theme + all scene styling |
