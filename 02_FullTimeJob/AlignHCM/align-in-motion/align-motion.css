@@ -64,18 +64,10 @@ body{font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
     radial-gradient(48% 55% at -2% 102%, rgba(255,138,43,.10) 0%, rgba(255,138,43,0) 62%),
     linear-gradient(156deg,#0e2450 0%,#0a1730 52%,#050c1c 100%);
 }
-/* fixed grid — painted once, never animated */
-.bg-grid{
-  background-image:
-    linear-gradient(rgba(150,190,255,.075) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(150,190,255,.075) 1px,transparent 1px);
-  background-size:104px 104px;background-position:center;
-  opacity:.85;
-}
-/* soft falloff so the grid fades at the edges (static, so a
-   gradient overlay is cheaper than masking the grid itself) */
-.bg-gridfade{
-  background:radial-gradient(115% 95% at 42% 44%,rgba(10,23,48,0) 40%,rgba(9,19,40,.85) 100%);
+/* depth falloff: pushes the corners down so the centre reads brighter.
+   (the ruled grid layer was removed; this replaces bg-gridfade) */
+.bg-depth{
+  background:radial-gradient(115% 95% at 42% 44%,rgba(10,23,48,0) 42%,rgba(9,19,40,.88) 100%);
 }
 
 /* drifting aurora blobs — transform + opacity only */
@@ -167,16 +159,22 @@ body{font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
 /* ---- headline ---- */
 .headline{font-family:var(--font-display);font-weight:800;color:var(--cream);
   line-height:1.04;letter-spacing:-1px;margin:28px 0 0;
-  text-shadow:0 4px 40px rgba(4,10,22,.6)}
+  text-shadow:0 4px 40px rgba(4,10,22,.6);
+  /* balance the lines so a headline never orphans a single word */
+  text-wrap:balance}
 .headline em{color:var(--orange);font-style:normal;
   text-shadow:0 0 44px rgba(255,138,43,.55),0 0 14px rgba(255,138,43,.35)}
 .h-xl{font-size:118px}
 .h-lg{font-size:94px}
 .h-md{font-size:80px}
+/* split scenes have a narrower column, so ease the display size
+   down to keep those headlines on two lines */
+.scene.split .headline.h-lg{font-size:84px}
 /* per-word spans injected by the driver */
 .headline .w{display:inline-block;will-change:transform,opacity}
 
-.body{font-size:47px;line-height:1.42;color:var(--body);font-weight:400;margin-top:36px;max-width:1120px}
+.body{font-size:47px;line-height:1.42;color:var(--body);font-weight:400;margin-top:36px;max-width:1120px;
+  text-wrap:pretty}
 .scene.split .body{font-size:43px;max-width:760px}
 
 /* ---- numbered list ---- */
@@ -198,7 +196,9 @@ body{font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
 
 /* ---- testimonial ---- */
 .quote-mark{font-family:var(--font-display);font-weight:900;font-size:210px;color:var(--orange);
-  line-height:.62;height:118px;overflow:hidden;text-shadow:0 0 50px rgba(255,138,43,.5)}
+  line-height:.62;height:118px;overflow:hidden;text-shadow:0 0 50px rgba(255,138,43,.5);
+  /* clears the eyebrow above instead of crowding it */
+  margin-top:52px}
 .quote{font-family:var(--font-display);font-style:italic;font-weight:700;font-size:82px;
   line-height:1.16;color:var(--cream);max-width:1560px;margin-top:14px}
 .attr{margin-top:54px;font-size:37px;color:var(--body-dim);font-weight:400}
@@ -237,6 +237,7 @@ body{font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
 .outro-wrap{position:absolute;inset:0;z-index:12;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:46px;text-align:center;padding:0 200px}
 .outro-wrap .lg{height:150px;will-change:transform,opacity}
+.outro-wrap .lg.xl{height:450px}          /* 3x lockup */
 .outro-wrap .lg img{height:100%}
 .outro-wrap .tag{font-family:var(--font-display);font-style:italic;font-weight:700;font-size:66px;
   color:var(--cream);line-height:1.2}
@@ -248,6 +249,7 @@ body{font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
   background:linear-gradient(90deg,transparent,var(--orange),transparent);
   box-shadow:0 0 16px rgba(255,138,43,.7)}
 /* halo behind the closing logo */
+.outro-wrap:has(.lg.xl) .halo{width:1680px;height:1680px}
 .outro-wrap .halo{position:absolute;width:1200px;height:1200px;border-radius:50%;z-index:-1;
   background:radial-gradient(circle,rgba(255,138,43,.20),rgba(255,138,43,0) 62%);
   will-change:transform,opacity}
