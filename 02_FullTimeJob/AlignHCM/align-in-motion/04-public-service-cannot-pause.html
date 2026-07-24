@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Public service cannot pause — Align in Motion</title>
+<link rel="stylesheet" href="align-motion.css">
+</head>
+<body>
+<div id="stage-wrap">
+  <div id="stage">
+    <div class="bg bg-base"></div>
+    <div class="bg bg-grid"></div>
+    <div class="bg bg-vignette"></div>
+    <div class="topbar"></div>
+
+    <!-- 1 · intro -->
+    <section class="scene" data-dur="8">
+      <div class="ghost">SERVICE</div>
+      <div class="content">
+        <div class="eyebrow anim d1">Public Sector</div>
+        <h1 class="headline h-xl anim d2">Public service <em>cannot pause.</em></h1>
+        <p class="body anim d3">The work behind safe communities, open schools, and running utilities depends on a workforce operation that never stops.</p>
+      </div>
+    </section>
+
+    <!-- 2 · utilities -->
+    <section class="scene split" data-dur="8" data-page="1">
+      <div class="panel"><img src="assets/panel-utility.jpg" alt="Utility crews maintaining infrastructure at dusk"></div>
+      <div class="content">
+        <div class="eyebrow anim d1">Utilities</div>
+        <h2 class="headline h-lg anim d2">Keep essential crews <em>ready.</em></h2>
+        <p class="body anim d3">Field schedules, labor rules, time, and pay for the people maintaining essential infrastructure.</p>
+      </div>
+    </section>
+
+    <!-- 3 · fire and EMS -->
+    <section class="scene split" data-dur="8" data-page="2">
+      <div class="panel"><img src="assets/panel-fire.jpg" alt="Fire and EMS crew in front of an engine"></div>
+      <div class="content">
+        <div class="eyebrow anim d1">Fire and EMS</div>
+        <h2 class="headline h-lg anim d2">Every shift, <em>covered.</em></h2>
+        <p class="body anim d3">Coverage with qualifications attached, and labor rules built into the roster.</p>
+      </div>
+    </section>
+
+    <!-- 4 · the operating challenge -->
+    <section class="scene" data-dur="10" data-page="3">
+      <div class="content">
+        <div class="eyebrow anim d1">The Operating Challenge</div>
+        <h2 class="headline h-md anim d2">The pressure is <em>constant.</em></h2>
+        <div class="list">
+          <div class="li anim d3"><div class="num">01</div><div><div class="lt">Round-the-clock coverage</div><div class="ld">Every shift filled, every day of the year.</div></div></div>
+          <div class="li anim d4"><div class="num">02</div><div><div class="lt">Certifications and role-based assignments</div><div class="ld">The right person, qualified, in every role.</div></div></div>
+          <div class="li anim d5"><div class="num">03</div><div><div class="lt">Overtime and labor rules</div><div class="ld">Complex rules that have to be right on every check.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · K-12 education -->
+    <section class="scene split" data-dur="8" data-page="4">
+      <div class="panel"><img src="assets/panel-edu.jpg" alt="School staff and educators"></div>
+      <div class="content">
+        <div class="eyebrow anim d1">K-12 Education</div>
+        <h2 class="headline h-lg anim d2">Behind every school day, <em>a person.</em></h2>
+        <p class="body anim d3">Substitutes, hourly workforces, credentialed roles, and pay built around the school year.</p>
+      </div>
+    </section>
+
+    <!-- 6 · one foundation -->
+    <section class="scene" data-dur="8" data-page="5">
+      <div class="ghost right">TRUST</div>
+      <div class="content">
+        <div class="eyebrow anim d1">One Foundation</div>
+        <h2 class="headline h-lg anim d2">One workforce operation <em>people can trust.</em></h2>
+        <p class="body anim d3">Scheduling, time, pay, and compliance on one platform, built for the realities of public service.</p>
+      </div>
+    </section>
+
+    <!-- 7 · outro -->
+    <section class="scene outro" data-dur="10">
+      <div class="outro">
+        <div class="lg anim d1"><img src="assets/alignhcm-logo.png" alt="Align HCM"></div>
+        <div class="divider anim d2"></div>
+        <div class="tag anim d3">Built for the work <em>inside public service.</em></div>
+        <div class="u anim d4">alignhcm.com</div>
+      </div>
+    </section>
+
+    <!-- chrome -->
+    <div class="logo"><img src="assets/alignhcm-logo.png" alt="Align HCM"></div>
+    <div class="footer">
+      <div class="brand"><span class="dot"></span><b>Align HCM</b><span>· Public Sector · Align in Motion</span></div>
+      <div class="url">alignhcm.com</div>
+    </div>
+    <div class="pager"></div>
+  </div>
+</div>
+
+<div class="controls">
+  <button id="btn-reset" class="ghostbtn" title="Restart">⏮</button>
+  <button id="btn-play" title="Play / pause">▶</button>
+  <div class="time" id="t-cur">00:00 / 01:00</div>
+  <div class="track" id="track"><div class="fill" id="t-fill"></div></div>
+</div>
+<div class="hint">space play/pause · ← → seek · H hide UI</div>
+
+<script src="align-motion.js"></script>
+</body>
+</html>
