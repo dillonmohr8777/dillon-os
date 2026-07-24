@@ -212,6 +212,10 @@
         { opacity: 1, scale: 1, duration: 1.6, ease: "power2.out" }, at + .2);
       tl.fromTo(sc.querySelector(".divider"), { scaleX: 0 },
         { scaleX: 1, duration: .9, ease: "power3.inOut" }, at + .7);
+      // gleam travels across the lockup once it has settled
+      var gl = sc.querySelector(".gleam i");
+      if (gl) tl.fromTo(gl, { xPercent: -260 },
+        { xPercent: 460, duration: 1.9, ease: "power2.inOut" }, at + 1.5);
       tl.fromTo(sc.querySelectorAll(".tag, .u"), { opacity: 0, y: 26 },
         { opacity: 1, y: 0, duration: .9, ease: E, stagger: .14 }, at + .85);
     }

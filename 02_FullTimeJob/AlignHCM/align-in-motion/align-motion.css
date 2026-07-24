@@ -200,7 +200,9 @@ body{font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
   /* clears the eyebrow above instead of crowding it */
   margin-top:52px}
 .quote{font-family:var(--font-display);font-style:italic;font-weight:700;font-size:82px;
-  line-height:1.16;color:var(--cream);max-width:1560px;margin-top:14px}
+  line-height:1.16;color:var(--cream);max-width:1560px;margin-top:14px;text-wrap:pretty}
+.quote em{color:var(--orange);font-style:italic;
+  text-shadow:0 0 42px rgba(255,138,43,.5),0 0 13px rgba(255,138,43,.32)}
 .attr{margin-top:54px;font-size:37px;color:var(--body-dim);font-weight:400}
 .attr b{color:var(--orange);font-weight:700}
 
@@ -228,6 +230,8 @@ body{font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
   /* the duotone grade (saturate/contrast/brightness) is baked into the
      JPGs by design, so no per-frame CSS filter is needed here */
 /* feather the panel's left edge into the navy */
+.panel .edge{position:absolute;left:0;top:0;bottom:0;width:2px;z-index:3;pointer-events:none;
+  background:linear-gradient(180deg,transparent 4%,rgba(255,150,70,.38) 32%,rgba(150,195,255,.28) 72%,transparent 96%)}
 .panel .feather{position:absolute;inset:0;z-index:2;pointer-events:none;
   background:linear-gradient(90deg,var(--navy-1) 0%,rgba(10,23,48,.55) 12%,rgba(10,23,48,0) 33%)}
 .panel .warm{position:absolute;inset:0;z-index:2;pointer-events:none;
@@ -236,8 +240,16 @@ body{font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
 /* ---- outro lockup ---- */
 .outro-wrap{position:absolute;inset:0;z-index:12;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:46px;text-align:center;padding:0 200px}
-.outro-wrap .lg{height:150px;will-change:transform,opacity}
-.outro-wrap .lg.xl{height:450px}          /* 3x lockup */
+.outro-wrap .lg{height:150px;will-change:transform,opacity;position:relative}
+/* light gleam confined to the logo glyphs by masking with the logo itself */
+.outro-wrap .lg .gleam{position:absolute;inset:0;overflow:hidden;pointer-events:none;
+  -webkit-mask:url("assets/alignhcm-logo.svg") center/contain no-repeat;
+          mask:url("assets/alignhcm-logo.svg") center/contain no-repeat}
+.outro-wrap .lg .gleam i{position:absolute;top:-20%;bottom:-20%;width:26%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:translateX(-260%) skewX(-14deg);will-change:transform}
+.outro-wrap .lg.xl{height:430px}          /* 3x lockup, vector so it stays crisp */
+.outro-wrap .lg img{width:auto;image-rendering:auto}
 .outro-wrap .lg img{height:100%}
 .outro-wrap .tag{font-family:var(--font-display);font-style:italic;font-weight:700;font-size:66px;
   color:var(--cream);line-height:1.2}

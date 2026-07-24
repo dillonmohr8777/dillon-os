@@ -102,8 +102,19 @@ align-motion.js      GSAP master timeline, playback, export API (window.AIM)
 render-frames.js     deterministic frame-accurate MP4 renderer
 fonts.css            Playfair Display + Inter, embedded (works offline)
 vendor/gsap.min.js   GSAP 3.12.5, vendored so nothing loads from a CDN
-assets/              logo + the four illustration panels
+assets/              logo (SVG) + the four illustration panels
 ```
 
 Fonts and GSAP are local, so the deck renders identically with no network
 connection.
+
+## The logo
+
+`assets/alignhcm-logo.svg` is a true vector lockup, so the 3x closing mark is
+razor sharp at any size. It was built from the highest-resolution official
+source available (the 700x311 transparent PNG on alignhcm.com), recoloured for
+dark backgrounds (the site version ships a dark grey wordmark meant for light
+backgrounds) and traced to vector per colour. The earlier raster was 258x116,
+which is why it looked blurry once it was scaled past about 150px.
+
+`assets/alignhcm-logo.png` is the same recoloured raster, kept as a fallback.
