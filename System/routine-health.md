@@ -1,20 +1,47 @@
 ---
-last_checked: 2026-04-15
+last_checked: 2026-07-24
+last_orchestrator_run: 2026-07-24
+orchestrator_run: 31
 tags: [system, routines]
 ---
 
 # Routine Health Monitor
 
-All routines: initialized, first runs scheduled. Vault is seeded with frontmatter fields the routines expect (`client`, `last_touched`, `next_action`, `due`, `tags`, `status`, `division`, `cc_list`, `contact_email`).
+**Umbrella automation:** `competitive-task-orchestrator` — cron `0 13 * * *` (1:00 PM ET daily).
 
-## Routines expected to run
-- `nightly-client-pulse` — generates Daily-Briefs/pulse-today.md.
-- `gmail-to-vault-digest` — updates System/urgent-replies.md every 7:00 AM.
-- `vault-integrity-sync` — rewrites System/claude-memory-sync.md nightly at 2:00 AM.
-- `chat-to-vault-sync` — syncs conversation state every 2 hours.
-- `bok-law-social-content` — generates BOK Law weekly social content every Sunday 6:00 PM.
-- `linkedin-growth-engine` — reads 02_FullTimeJob/AlignHCM/linkedin-calendar.md every Sunday 9:00 PM.
-- `book-site-seo-sweep` — reads 05_Book/seo-strategy.md every Thursday.
+Seven legacy crons are **retired** and merged into the umbrella. Disable them in Cursor UI if still active (see [[System/competitive-task-definition#Retired standalone crons]]).
 
-## Notes
-- First real test of the full routine stack begins 2026-04-16.
+## Lane status (run 31 — 2026-07-24)
+
+| Lane | Status | Notes |
+|------|--------|-------|
+| gmail-intel | 🟡 fallback | MCP not connected; urgent-replies refreshed from vault |
+| slack-intel | 🟡 fallback | MCP not connected; slack-action-queue refreshed from vault + handoffs |
+| vault-pulse | 🟡 stale data | 145 files scanned; `last_touched` frozen April 2026 on M360 accounts |
+| codex-session-sync | 🟡 partial | 6 session files; Facebook Ads stubs empty; runs 12–30 on prior branch |
+| domain-ads-seo | 🟢 ok | 7 items in Google Ads queue tracked |
+| content-routines | ⚪ skipped | Friday — not Sun/Thu; next book SEO sweep 2026-07-30 |
+| memory-consolidator | 🟢 ok | Brief + memory sync written |
+
+## Retired standalone crons (disable in Cursor UI)
+
+- `nightly-client-pulse`
+- `gmail-to-vault-digest`
+- `vault-integrity-sync`
+- `chat-to-vault-sync`
+- `bok-law-social-content`
+- `linkedin-growth-engine`
+- `book-site-seo-sweep`
+
+## Daily operator checklist
+
+1. Open `Daily-Briefs/competitive-task-today.md` after 1 PM ET.
+2. Execute P0 stack top to bottom.
+3. Check `System/urgent-replies.md` for email-specific wording.
+4. Update client note frontmatter when you touch an account (`last_touched`, `next_action`).
+
+## Unblock actions
+
+- Connect **Gmail MCP** + **Slack MCP** on the orchestrator automation for live intel.
+- Reauth Codex Slack connector per `handoffs/windows-6gb-slack-codex-reauth-2026-07-22.md`.
+- Export Codex session logs to `10_Sessions/` on 64GB machine.
