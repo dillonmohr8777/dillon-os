@@ -21,15 +21,15 @@ tags: [dashboard, moc]
 - **Definition:** [[System/competitive-task-definition]]
 - **Runbook:** [[04_SOPs/competitive-task-orchestrator]]
 
-## Today (2026-07-24)
-- [ ] **BOK Law** — Ship entire Jun/Jul backlog + publish Turn the Page Thursday (Jul 24)
-- [ ] **Align HCM** — Ship overdue Maher + Joann posts; publish Jul 21 Joann payroll post
-- [ ] **Bridge** — Capture Tori meeting outcome (11 days overdue); send follow-up
+## Today (2026-07-25)
+- [ ] **BOK Law** — Ship entire Jun/Jul backlog + publish Family Fridays (Jul 25); Jul 24 Turn the Page 1 day overdue
+- [ ] **Align HCM** — Ship overdue Maher + Joann posts; publish Jul 21 Joann payroll post (4 days overdue)
+- [ ] **Bridge** — Capture Tori meeting outcome (12 days overdue); send follow-up
 - [ ] **Hardwood Artisan** — Billing nudge to Dalton via Sean loop
 - [ ] **NKCDC** — Escalate with Mac to Anthony on Free Tax Prep landing page
 
 ## Active Projects
-- Competitive task orchestrator (umbrella) — run 31
+- Competitive task orchestrator (umbrella) — run 32
 - Bridge Software Development discovery prototype
 - Book site email capture fix (blocks subscriber goal)
 
