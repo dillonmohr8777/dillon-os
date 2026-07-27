@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Momentum 360 | 3D Virtual Tours, Matterport &amp; Google Street View</title>
 <meta name="description" content="Momentum 360 produces Matterport 3D virtual tours, Google Street View publishing, and HD photography for businesses. 500+ projects since 2017 across all 50 states.">
-<link rel="icon" href="assets/momentum-logo-white.png">
+<link rel="icon" href="assets/momentum-360-logo.png">
 <link rel="preload" href="assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* ─────────────────────────────────────────────────────────────
-   Momentum 360 — landing page
+   Momentum 360 landing page
    Design reference: "REALHOME" concept (Ahmed / @ranakabiria)
    Palette sampled directly from the reference recording.
    Fully self-contained: local font + local imagery, no CDN calls.
@@ -129,7 +129,7 @@ button{font:inherit;color:inherit}
   position:absolute;inset:0;z-index:-1;
   background:linear-gradient(to top,#000000b8 0%,#00000059 34%,#0000000f 62%,#00000038 100%);
 }
-/* NB: no width here — .stage-body is always paired with .shell, and a
+/* NB: no width here. .stage-body is always paired with .shell, and a
    width:100% would override the shell's gutter and push copy to the edge. */
 .stage-body{padding:0 0 88px}
 .stage-body h1,.stage-body h2{color:#fff}
@@ -193,6 +193,41 @@ button{font:inherit;color:inherit}
 }
 .tour-meta span+span{border-left:1px solid var(--line-strong)}
 .tour-meta svg{width:11px;height:11px;flex:none;opacity:.65}
+
+/* "captured work" chip. Distinguishes real shoots from concept imagery */
+.tour-real{
+  position:absolute;top:9px;right:9px;
+  background:#f6f4f1e6;backdrop-filter:blur(8px);color:#2e2e2c;
+  font-size:9.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  padding:4px 8px 5px;border-radius:999px;
+}
+
+/* ── award badges (on the dark proof band) ───────────────────── */
+.awards{
+  display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;
+  margin-top:52px;padding-top:40px;border-top:1px solid #ffffff1f;
+}
+.awards .lbl{
+  color:#ffffff70;font-size:11px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;margin-right:6px;
+}
+.awards figure{
+  margin:0;background:#fff;border-radius:12px;padding:12px 16px;
+  display:flex;align-items:center;justify-content:center;
+}
+.awards img{height:66px;width:auto}
+
+/* ── founders ────────────────────────────────────────────────── */
+.founders{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:760px;margin:0 auto}
+.founder{
+  background:var(--card);border-radius:var(--radius);overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.founder-img{aspect-ratio:4/3.4;overflow:hidden;background:var(--card-2)}
+.founder-img img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.founder-txt{padding:16px 18px 18px}
+.founder-txt b{display:block;font-size:15px;font-weight:600;letter-spacing:-.02em}
+.founder-txt span{color:var(--muted);font-size:12px;line-height:1.45;display:block;margin-top:3px}
 
 /* ── services accordion ─────────────────────────────────────── */
 .svc-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:46px;align-items:start}
@@ -300,6 +335,7 @@ button{font:inherit;color:inherit}
   .sect{padding:74px 0 80px}
   .sect-head{flex-direction:column;align-items:flex-start;gap:20px}
   .tours,.quotes{grid-template-columns:1fr}
+  .founders{grid-template-columns:1fr;max-width:420px}
   .foot-top{grid-template-columns:1fr;gap:30px}
 }
 @media(max-width:420px){
@@ -338,14 +374,14 @@ button{font:inherit;color:inherit}
 <header class="stage" id="top">
   <div class="stage-media" id="heroMedia">
     <div class="fallback"></div>
-    <div class="layer on"><img src="assets/img/hero-1.jpg" alt="Modern property captured for a Momentum 360 virtual tour" fetchpriority="high"></div>
-    <div class="layer"><img src="assets/img/hero-2.jpg" alt="Interior living space in a 3D virtual tour" loading="lazy"></div>
-    <div class="layer"><img src="assets/img/hero-3.jpg" alt="Staged interior captured in 360 degrees" loading="lazy"></div>
+    <div class="layer on"><img src="assets/img/society-hill.webp" alt="Society Hill townhome captured at dusk" fetchpriority="high"></div>
+    <div class="layer"><img src="assets/img/main-line-modern.webp" alt="Main Line modern residence at dusk" loading="lazy"></div>
+    <div class="layer"><img src="assets/img/rittenhouse-penthouse.webp" alt="Rittenhouse penthouse interior" loading="lazy"></div>
   </div>
   <div class="scrim"></div>
   <div class="shell stage-body">
     <h1 class="display h-hero">See inside before<br>they ever walk in</h1>
-    <p class="hero-sub">Matterport 3D tours, Google Street View, and HD photography for businesses and properties &mdash; shot, stitched, and published by Momentum 360.</p>
+    <p class="hero-sub">Matterport 3D tours, Google Street View, and HD photography for businesses and properties. Shot, stitched, and published by Momentum 360.</p>
     <a class="btn btn-light" href="#tours">
       View tours
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
@@ -362,13 +398,13 @@ button{font:inherit;color:inherit}
 <section class="stage" id="about" style="min-height:88svh">
   <div class="stage-media">
     <div class="fallback"></div>
-    <div class="layer on"><img src="assets/img/about.jpg" alt="Architectural exterior at dusk" loading="lazy"></div>
+    <div class="layer on"><img src="assets/img/old-city-loft.webp" alt="Old City loft interior with skyline view" loading="lazy"></div>
   </div>
   <div class="scrim"></div>
   <div class="shell stage-body">
     <div class="about-grid">
       <h2 class="display h-sect rv">What is Momentum&nbsp;360?</h2>
-      <p class="rv">Momentum 360 is the property marketing division of Momentum Digital &mdash; a Google Street View Trusted Agency and a Matterport Virtual Tour Service Provider. Since 2017 we&rsquo;ve produced more than 500 projects around the country, turning real rooms into immersive 3D walkthroughs that let customers explore your space long before they arrive.</p>
+      <p class="rv">Momentum 360 is the property marketing division of Momentum Digital: a Google Street View Trusted Agency and a Matterport Virtual Tour Service Provider. Since 2017 we&rsquo;ve produced more than 500 projects around the country, turning real rooms into immersive 3D walkthroughs that let customers explore your space long before they arrive.</p>
     </div>
   </div>
 </section>
@@ -414,6 +450,11 @@ button{font:inherit;color:inherit}
       <div class="stat rv"><div class="n">1,200+</div><div class="l">Photographers in our network</div></div>
       <div class="stat rv"><div class="n">#1</div><div class="l">Ranked virtual tours in Philadelphia</div></div>
     </div>
+    <div class="awards rv">
+      <span class="lbl">Recognized by</span>
+      <figure><img src="assets/img/award-inc-5000.png" alt="Inc. 5000, America's Fastest-Growing Private Companies"></figure>
+      <figure><img src="assets/img/award-philly-100.png" alt="Philadelphia 100 Forum, 2023 Winner"></figure>
+    </div>
   </div>
 </section>
 
@@ -428,11 +469,32 @@ button{font:inherit;color:inherit}
   </div>
 </section>
 
+<!-- ══ FOUNDERS ═════════════════════════════════════════════ -->
+<section class="sect sect-flat">
+  <div class="shell">
+    <div class="sect-head-c">
+      <span class="pill rv">Team</span>
+      <h2 class="display h-band rv">Who you&rsquo;ll actually work with</h2>
+      <p class="sect-sub rv">Momentum is founder-led. You deal with the people who built it, not an account queue.</p>
+    </div>
+    <div class="founders">
+      <figure class="founder rv">
+        <div class="founder-img"><img src="assets/img/sean-boyle.webp" alt="Sean Boyle" loading="lazy"></div>
+        <figcaption class="founder-txt"><b>Sean Boyle</b><span>Founder, Momentum 360</span></figcaption>
+      </figure>
+      <figure class="founder rv">
+        <div class="founder-img"><img src="assets/img/mac-frederick.webp" alt="Mac Frederick" loading="lazy"></div>
+        <figcaption class="founder-txt"><b>Mac Frederick</b><span>Founder, Momentum Digital</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ══ CTA ══════════════════════════════════════════════════ -->
 <section class="cta" id="contact">
   <div class="stage-media">
     <div class="fallback"></div>
-    <div class="layer on"><img src="assets/img/cta.jpg" alt="Property interior ready to be captured" loading="lazy"></div>
+    <div class="layer on"><img src="assets/img/main-line-modern.webp" alt="Main Line modern residence at dusk" loading="lazy"></div>
   </div>
   <div class="scrim"></div>
   <div class="shell">
@@ -503,16 +565,15 @@ button{font:inherit;color:inherit}
   const $  = (s,r=document) => r.querySelector(s);
   const $$ = (s,r=document) => [...r.querySelectorAll(s)];
   const IMG = 'assets/img/';
-  const q   = '.jpg';
 
   /* ── data ──────────────────────────────────────────────── */
   const TOURS = [
-    {cat:'Restaurant · Fishtown',      name:'Suraya',                type:'Matterport',   sqft:'4,200 sq ft', panos:'38 panos', floors:'2 floors', img:'tour-suraya'},
-    {cat:'Retail · Rittenhouse',       name:'Sorella Boutique',      type:'Street View',  sqft:'1,850 sq ft', panos:'16 panos', floors:'1 floor',  img:'tour-boutique'},
-    {cat:'Brewery · Northern Liberties',name:'Frankford Hall',       type:'Matterport',   sqft:'6,500 sq ft', panos:'54 panos', floors:'2 floors', img:'tour-brewery'},
-    {cat:'Fitness · Center City',      name:'Momentum Athletic Club',type:'Matterport',   sqft:'9,100 sq ft', panos:'61 panos', floors:'3 floors', img:'tour-gym'},
-    {cat:'Healthcare · Bala Cynwyd',   name:'Main Line Dental',      type:'Street View',  sqft:'2,400 sq ft', panos:'21 panos', floors:'1 floor',  img:'tour-dental'},
-    {cat:'Hospitality · Old City',     name:'The Wharton Hotel',     type:'Matterport',   sqft:'12,000 sq ft',panos:'88 panos', floors:'4 floors', img:'tour-hotel'},
+    {cat:'Commercial \u00b7 Granite Park',  name:'Granite Park',          type:'Matterport', sqft:'18,400 sq ft', panos:'96 panos', floors:'3 floors', img:'granite-park.jpg', real:true},
+    {cat:'Restaurant \u00b7 Philadelphia',  name:'Chef\u2019s Table',         type:'Matterport', sqft:'3,600 sq ft',  panos:'32 panos', floors:'1 floor',  img:'restaurant.jpg',   real:true},
+    {cat:'Residential \u00b7 Society Hill', name:'Society Hill Townhome', type:'Matterport', sqft:'4,100 sq ft',  panos:'44 panos', floors:'3 floors', img:'society-hill.webp'},
+    {cat:'Residential \u00b7 Old City',     name:'Old City Loft',         type:'Matterport', sqft:'2,150 sq ft',  panos:'24 panos', floors:'1 floor',  img:'old-city-loft.webp'},
+    {cat:'Residential \u00b7 Rittenhouse',  name:'Rittenhouse Penthouse', type:'Matterport', sqft:'3,800 sq ft',  panos:'41 panos', floors:'2 floors', img:'rittenhouse-penthouse.webp'},
+    {cat:'Residential \u00b7 Main Line',    name:'Main Line Modern',      type:'Matterport', sqft:'6,900 sq ft',  panos:'58 panos', floors:'2 floors', img:'main-line-modern.webp'},
   ];
 
   const ICONS = {
@@ -530,22 +591,22 @@ button{font:inherit;color:inherit}
   };
 
   const SERVICES = [
-    {i:'grid',   t:'Virtual Tour',              img:'svc-tour',
+    {i:'grid',   t:'Virtual Tour',              img:'granite-park.jpg',
      d:'A full 3D walkthrough of your space, captured with Matterport. Visitors move room to room and floor to floor at their own pace, with a dollhouse view of the whole property and tags that jump straight to the spaces that matter.'},
-    {i:'map',    t:'Google Street View',        img:'svc-streetview',
+    {i:'map',    t:'Google Street View',        img:'commercial-property.jpg',
      d:'As a Google Street View Trusted Agency we publish your tour directly to Google Maps and Search, so people find the inside of your business in the same place they already look for your hours and directions.'},
-    {i:'layers', t:'Photo Stitching & Editing', img:'svc-stitching',
-     d:'Every panorama is stitched, levelled, and colour-corrected by hand. Vertical lines stay true, floor transitions line up, and the light reads the way it actually looks when you walk in.'},
-    {i:'sofa',   t:'3D Staging',                img:'svc-staging',
+    {i:'layers', t:'Photo Stitching & Editing', img:'rittenhouse-penthouse.webp',
+     d:'Every panorama is stitched, leveled, and color-corrected by hand. Vertical lines stay true, floor transitions line up, and the light reads the way it actually looks when you walk in.'},
+    {i:'sofa',   t:'3D Staging',                img:'old-city-loft.webp',
      d:'Empty rooms get furnished digitally so buyers and tenants can picture the space in use, without moving a single piece of real furniture into the building.'},
-    {i:'play',   t:'Virtual Video Tour',        img:'svc-video',
+    {i:'play',   t:'Virtual Video Tour',        img:'main-line-modern.webp',
      d:'A guided, cinematic walk-through cut for social and paid ads, produced from the same capture session as your tour so the two always match.'},
-    {i:'cam',    t:'HD Photography',            img:'svc-photo',
+    {i:'cam',    t:'HD Photography',            img:'restaurant.jpg',
      d:'Stills for your website, listings, and Google profile: property photography, team headshots, detail shots, and drone work from above.'},
-    {i:'pin',    t:'Google Local Buildout',     img:'svc-local',
-     d:'We build out and optimise your Google Business Profile so the tour, photos, hours, and categories all reinforce each other and your listing works harder.'},
-    {i:'code',   t:'Website Embedding',         img:'svc-embed',
-     d:'Your finished tour is embedded on your site with a single snippet. It is automatically optimised for desktop, tablet, and mobile, and needs zero maintenance once it is live.'},
+    {i:'pin',    t:'Google Local Buildout',     img:'society-hill.webp',
+     d:'We build out and optimize your Google Business Profile so the tour, photos, hours, and categories all reinforce each other and your listing works harder.'},
+    {i:'code',   t:'Website Embedding',         img:'granite-park.jpg',
+     d:'Your finished tour is embedded on your site with a single snippet, automatically optimized for desktop, tablet, and mobile. Once it\u2019s live, it needs zero maintenance.'},
   ];
 
   const QUOTES = [
@@ -558,15 +619,16 @@ button{font:inherit;color:inherit}
     `<svg class="${cls}" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"
       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`;
 
-  /* graceful image fallback — keeps the layout intact if a photo 404s */
+  /* graceful image fallback. Keeps the layout intact if a photo 404s */
   const guard = (img) => { img.addEventListener('error', () => { img.style.display = 'none'; }, {once:true}); };
 
   /* ── tour cards ────────────────────────────────────────── */
   $('#tourGrid').innerHTML = TOURS.map(t => `
     <article class="tour rv">
       <div class="tour-img">
-        <img src="${IMG}${t.img}${q}" alt="${t.name} virtual tour" loading="lazy">
+        <img src="${IMG}${t.img}" alt="${t.name} virtual tour" loading="lazy">
         <span class="tour-tag">${t.type}</span>
+        ${t.real ? '<span class="tour-real" title="Captured by Momentum 360">Captured work</span>' : ''}
       </div>
       <div class="tour-txt">
         <div class="tour-cat">${t.cat}</div>
@@ -591,7 +653,7 @@ button{font:inherit;color:inherit}
   /* ── services accordion + synced media ─────────────────── */
   $('#svcMedia').innerHTML = SERVICES.map((s,i) => `
     <div class="layer${i===0?' on':''}">
-      <img src="${IMG}${s.img}${q}" alt="${s.t}" loading="${i===0?'eager':'lazy'}">
+      <img src="${IMG}${s.img}" alt="${s.t}" loading="${i===0?'eager':'lazy'}">
     </div>`).join('');
 
   $('#acc').innerHTML = SERVICES.map((s,i) => `
