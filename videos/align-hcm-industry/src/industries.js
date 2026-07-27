@@ -455,7 +455,11 @@ const SCENES = [
         <div data-lock>${lockupSVG('lend', 940)}</div>
         <div class="lockup-cap" data-cap>Human Capital Management</div>
         <div class="hairline" data-hair></div>
-        <div class="tag" data-tag>Align moves at your speed.<br><span class="accent">Which is always right now.</span></div>
+        <!-- The film ends on the configuration, not on Align. Every competitor can
+             switch the same platform on; the argument is that what happens next is
+             not the same, and the last thing on screen should be that and nothing
+             softer. -->
+        <div class="tag" data-tag>Anyone can turn the platform on.<br><span class="accent">Configuring it is the work.</span></div>
         <div class="url" data-url>ALIGNHCM.COM</div>
       </div>`,
     draw(root, lt) {

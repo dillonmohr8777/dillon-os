@@ -22,7 +22,12 @@ claim, in order:
 | s5 | How Align works, four cards. |
 | s6 | Platforms and clients together. "We speak the platform. We speak your business." |
 | s7 | The same industry team, long after go-live. |
-| s8 | End card. |
+| s8 | End card. "Anyone can turn the platform on. Configuring it is the work." |
+
+The end card lands on the configuration rather than on Align. Every competitor
+can switch the same platform on, and the whole argument is that what happens next
+is not the same, so the last thing on screen says that and nothing softer. The
+brand film keeps its own sign off; this tagline belongs to the industry cut.
 
 s2 exists to set up s3. Once "every industry runs on its own vocabulary" is on
 screen, the filmstrip needs no label: five industries, five sets of terms, and the
@@ -62,6 +67,24 @@ blue   #16326e    ink-4  #6b788f    orange-3 #f9a45c
 The blue is the display colour, taken from the deep navy the dark brand film
 uses and lightened until it reads as blue rather than black. Headlines are
 Playfair Display in blue with orange accent phrases; body is Inter.
+
+**The logo is not on that palette.** Align's mark is grey and orange and carries
+no blue at all, so it renders in its own two values, sampled off
+`assets/logos/align-hcm-logo.png` as the site ships it:
+
+```
+logo grey  #555555     logo orange  #f8931d
+```
+
+Those drive `.lockup`, `.inklockup` and both lockup captions, everywhere the mark
+appears: the ink reveal, the orbit hub, and the end card. The logo orange is
+warmer than the film's `--orange`, and that is correct rather than a mistake to
+reconcile: a viewer will forgive a second orange long before they forgive a logo
+in the wrong colour. On the end card the hairline separates the two, so above the
+rule is the mark in its real colours and below it is the film's.
+
+The dark brand film keeps a **white** knockout for the same mark, which is the
+right reverse treatment on navy. Grey at #555555 would disappear there.
 
 Because the stage is white, **SmartCare needs no card and no processing**. The
 mark is the 715x445 transparent PNG off `/align-hcm-smartcare`, inlined exactly

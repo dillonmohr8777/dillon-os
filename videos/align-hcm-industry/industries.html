@@ -76,6 +76,12 @@
   --blue: #16326e;
   --blue-2: #2c5aa8;
   --orange: #ee6b2f;
+  /* The logo's own two colours, sampled off assets/align-hcm-logo.png on the
+     site. The mark is grey and orange and carries no blue at all, so it gets its
+     real values rather than the film's display palette: a wrong logo colour is
+     the one thing a viewer always notices. */
+  --logo-grey: #555555;
+  --logo-orange: #f8931d;
   --orange-2: #f28a4c;
   --orange-3: #f9a45c;
   --line: rgba(12,30,70,.10);
@@ -317,14 +323,14 @@ p.body .hi { color: var(--blue); font-weight: 700; }
 .inkstage { gap: 0; }
 .inkwrap { position: relative; }
 .inklockup { display: block; width: 1180px; height: auto; }
-.inklockup .slashO { fill: var(--orange); }
-.inklockup .slashW { fill: var(--blue); }
-.inklockup .dot    { fill: var(--orange); }
-.inklockup .word   { fill: var(--blue); }
+.inklockup .slashO { fill: var(--logo-orange); }
+.inklockup .slashW { fill: var(--logo-grey); }
+.inklockup .dot    { fill: var(--logo-orange); }
+.inklockup .word   { fill: var(--logo-grey); }
 .inkcap {
   margin-top: 26px; text-align: center;
   font-size: 40px; font-weight: 700; letter-spacing: .215em; text-transform: uppercase;
-  color: var(--orange);
+  color: var(--logo-orange);
 }
 /* a warm bloom rides just behind the leading edge of the ink */
 .inkbloom {
@@ -404,13 +410,13 @@ p.body .hi { color: var(--blue); font-weight: 700; }
 
 .endcard { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .lockup { display: block; }
-.lockup .slashO { fill: var(--orange); }
-.lockup .slashW { fill: var(--blue); }
-.lockup .dot { fill: var(--orange); }
-.lockup .word { fill: var(--blue); }
+.lockup .slashO { fill: var(--logo-orange); }
+.lockup .slashW { fill: var(--logo-grey); }
+.lockup .dot { fill: var(--logo-orange); }
+.lockup .word { fill: var(--logo-grey); }
 .lockup-cap {
   margin-top: 34px; font-size: 46px; font-weight: 700; letter-spacing: .215em;
-  color: var(--orange); text-transform: uppercase; text-align: center;
+  color: var(--logo-orange); text-transform: uppercase; text-align: center;
 }
 .endcard .hairline { width: 150px; height: 2px; margin: 54px 0 42px;
   background: linear-gradient(90deg, rgba(238,107,47,0), var(--orange), rgba(238,107,47,0)); transform-origin: center; }
@@ -1149,7 +1155,11 @@ const SCENES = [
         <div data-lock>${lockupSVG('lend', 940)}</div>
         <div class="lockup-cap" data-cap>Human Capital Management</div>
         <div class="hairline" data-hair></div>
-        <div class="tag" data-tag>Align moves at your speed.<br><span class="accent">Which is always right now.</span></div>
+        <!-- The film ends on the configuration, not on Align. Every competitor can
+             switch the same platform on; the argument is that what happens next is
+             not the same, and the last thing on screen should be that and nothing
+             softer. -->
+        <div class="tag" data-tag>Anyone can turn the platform on.<br><span class="accent">Configuring it is the work.</span></div>
         <div class="url" data-url>ALIGNHCM.COM</div>
       </div>`,
     draw(root, lt) {
