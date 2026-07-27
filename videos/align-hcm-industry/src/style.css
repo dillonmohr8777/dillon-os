@@ -1,0 +1,285 @@
+/* Align HCM · Industry Solutions. Light stage.
+ *
+ * Tokens are Align's own light theme, lifted from the :root block on
+ * alignhcm.com/align-hcm-smartcare: paper, cream, ink, ink-3, orange, orange-2.
+ * The blue is the display colour the headlines are set in, taken from the deep
+ * navy the brand films use and lightened until it reads as blue, not black.
+ */
+
+:root {
+  --paper: #ffffff;
+  --cream: #f7f3ec;
+  --ink: #0b0f14;
+  --ink-3: #3c4658;
+  --ink-4: #6b788f;
+  --blue: #16326e;
+  --blue-2: #2c5aa8;
+  --orange: #ee6b2f;
+  --orange-2: #f28a4c;
+  --orange-3: #f9a45c;
+  --line: rgba(12,30,70,.10);
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 100%; height: 100%;
+  background: #e8eaef;
+  overflow: hidden;
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#fit { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+
+#stage {
+  position: relative;
+  width: 1920px; height: 1080px;
+  transform-origin: center center;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* ---------------------------------------------------------------- stage bg */
+
+/* Warm light, no grid. Two soft blooms drift under everything so a white frame
+   never reads as flat paper. */
+.bg-base {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 90% at 12% 4%,  rgba(255,238,224,.95) 0%, rgba(255,238,224,0) 55%),
+    radial-gradient(100% 85% at 92% 96%, rgba(255,228,206,.85) 0%, rgba(255,228,206,0) 55%),
+    linear-gradient(168deg, #ffffff 0%, #fdfaf6 46%, #f7f3ec 100%);
+}
+.bg-orb { position: absolute; will-change: transform, opacity; }
+.bg-orb.blue  { width: 1700px; height: 1400px; left: -560px; top: -620px;
+  background: radial-gradient(closest-side, rgba(44,90,168,.14) 0%, rgba(44,90,168,.05) 46%, rgba(44,90,168,0) 100%); }
+.bg-orb.ember { width: 1800px; height: 1440px; right: -600px; bottom: -680px;
+  background: radial-gradient(closest-side, rgba(238,107,47,.24) 0%, rgba(238,107,47,.08) 46%, rgba(238,107,47,0) 100%); }
+
+.bg-vignette { position: absolute; inset: 0;
+  background: radial-gradient(88% 88% at 50% 46%, rgba(255,255,255,0) 52%, rgba(214,206,196,.30) 100%); }
+.bg-grain {
+  position: absolute; inset: -50%; width: 200%; height: 200%;
+  background-image: var(--grain); background-size: 180px 180px;
+  opacity: .05; mix-blend-mode: multiply; pointer-events: none;
+}
+.wash {
+  position: absolute; inset: 0; opacity: 0; pointer-events: none;
+  background: radial-gradient(70% 70% at 50% 50%, rgba(255,236,214,.95) 0%, rgba(255,190,140,.5) 45%, rgba(255,190,140,0) 78%);
+  mix-blend-mode: multiply;
+}
+
+/* ------------------------------------------------------------------ chrome */
+
+.rule-top {
+  position: absolute; top: 0; left: 0; height: 6px; width: 100%; z-index: 6;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--orange-3) 16%, #4a7bd0 54%, var(--blue) 82%, #0e2350 100%);
+  transform-origin: left center;
+}
+.footer {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 66px; z-index: 6;
+  display: flex; align-items: center; justify-content: space-between; padding: 0 46px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.94) 46%);
+  font-size: 17px; letter-spacing: .16em; font-weight: 600;
+}
+.footer .left { display: flex; align-items: center; gap: 14px; color: var(--ink-4); text-transform: uppercase; }
+.footer .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 12px rgba(238,107,47,.6); }
+.footer .brand { color: var(--blue); }
+.footer .right { color: var(--ink-4); text-transform: uppercase; }
+
+/* ------------------------------------------------------------------ scenes */
+
+.scene { position: absolute; inset: 0; display: none; will-change: transform, opacity; }
+.scene.on { display: block; }
+
+/* ------------------------------------------------------------- split panel */
+
+/* Artwork holds one half of the frame, type the other. An orange gradient
+   bleeds out of the artwork's inner edge into the white so the two halves are
+   joined by light rather than butted against each other. */
+.split { position: absolute; inset: 0; display: flex; }
+.split.art-left  { flex-direction: row; }
+.split.art-right { flex-direction: row-reverse; }
+
+.panel { position: relative; flex: 0 0 920px; height: 1080px; will-change: clip-path; }
+.panel-art { position: absolute; inset: 0; overflow: hidden; }
+.split.art-left  .panel-art { border-radius: 0 56px 56px 0; }
+.split.art-right .panel-art { border-radius: 56px 0 0 56px; }
+.panel-img {
+  position: absolute; inset: -40px;
+  background-size: cover; background-position: center top;
+  will-change: transform;
+}
+.panel-glow { position: absolute; top: -6%; bottom: -6%; width: 560px; pointer-events: none; }
+.split.art-left  .panel-glow { right: -320px;
+  background: radial-gradient(closest-side, rgba(238,107,47,.40) 0%, rgba(242,138,76,.15) 48%, rgba(255,255,255,0) 100%); }
+.split.art-right .panel-glow { left: -320px;
+  background: radial-gradient(closest-side, rgba(238,107,47,.40) 0%, rgba(242,138,76,.15) 48%, rgba(255,255,255,0) 100%); }
+
+.copy {
+  position: relative; z-index: 2;
+  flex: 1 1 auto; min-width: 0;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 0 82px;
+}
+
+.pad {
+  position: absolute; left: 118px; right: 118px; top: 0; bottom: 0;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+/* ------------------------------------------------------------------- type */
+
+.eyebrow {
+  display: flex; align-items: center; gap: 20px; margin-bottom: 32px;
+  font-size: 20px; font-weight: 700; letter-spacing: .3em;
+  color: var(--orange); text-transform: uppercase;
+  will-change: opacity, transform;
+}
+.eyebrow i { display: block; width: 56px; height: 3px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-3)); transform-origin: left center; }
+
+h1.serif {
+  font-family: var(--serif); font-weight: 700;
+  font-size: 96px; line-height: 1.05; letter-spacing: -.014em;
+  color: var(--blue);
+}
+.pad h1.serif { font-size: 118px; }
+.pad h1.serif.sm { font-size: 92px; }
+.copy h1.serif    { font-size: 64px; }
+.copy h1.serif.lg { font-size: 72px; }
+.copy h1.serif.sm { font-size: 55px; }
+
+.w  { display: inline-block; white-space: nowrap; }
+.ch { display: inline-block; white-space: pre; will-change: transform, opacity, filter; }
+.accent { color: var(--orange); }
+
+p.body {
+  margin-top: 28px;
+  font-size: 29px; line-height: 1.5; font-weight: 400; color: var(--ink-3);
+  will-change: opacity, transform;
+}
+.pad p.body { font-size: 34px; margin-top: 36px; max-width: 1280px; }
+.copy p.body { font-size: 27px; }
+p.body .hi { color: var(--blue); font-weight: 700; }
+
+.ghost {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  font-family: var(--sans); font-weight: 800; font-size: 250px; letter-spacing: -.02em;
+  white-space: nowrap; color: var(--blue); opacity: .05; pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* --------------------------------------------------------------- fact card */
+
+.facts { display: flex; gap: 26px; width: 100%; }
+.card {
+  flex: 1 1 0; min-width: 0;
+  padding: 38px 34px 40px;
+  border-radius: 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 22px 54px rgba(16,38,86,.10), 0 2px 6px rgba(16,38,86,.05);
+  will-change: transform, opacity;
+}
+.card .tile { width: 84px; height: 84px; display: block; margin-bottom: 24px; }
+.card h3 { font-size: 33px; font-weight: 700; letter-spacing: -.01em; color: var(--blue); line-height: 1.18; }
+.card p { margin-top: 12px; font-size: 24px; line-height: 1.46; color: var(--ink-3); }
+.facts.four .card { padding: 32px 26px 34px; }
+.facts.four .card .tile { width: 72px; height: 72px; margin-bottom: 20px; }
+.facts.four .card h3 { font-size: 29px; }
+.facts.four .card p { font-size: 21px; }
+
+/* -------------------------------------------------------------- filmstrip */
+
+/* Four industries, one image each from their own page, scrolling through
+   centre. No grid: each gets the frame to itself for a beat. */
+.strip { position: absolute; left: 0; right: 0; top: 70px; height: 760px; }
+.strip .halo {
+  position: absolute; left: 960px; top: 380px; width: 1060px; height: 980px;
+  margin: -490px 0 0 -530px; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(238,107,47,.36) 0%, rgba(238,107,47,.10) 52%, rgba(255,255,255,0) 100%);
+  will-change: opacity;
+}
+.strip .track { position: absolute; left: 0; top: 0; display: flex; gap: 44px; will-change: transform; }
+.strip .cel {
+  position: relative; width: 620px; height: 760px; flex: none;
+  border-radius: 36px; overflow: hidden;
+  box-shadow: 0 34px 80px rgba(16,38,86,.22);
+  will-change: transform, opacity, filter;
+}
+.strip .cel .img { position: absolute; inset: 0; background-size: cover; background-position: center 26%; }
+
+.striplabel { position: absolute; left: 0; right: 0; top: 848px; text-align: center; }
+.striplabel .slot { position: relative; height: 150px; }
+.striplabel .lab { position: absolute; left: 0; right: 0; top: 0; will-change: opacity, transform; }
+.striplabel h2 { font-family: var(--serif); font-weight: 700; font-size: 66px; color: var(--blue); line-height: 1.05; }
+.striplabel p { margin-top: 10px; font-size: 29px; color: var(--ink-3); }
+.stripdots { position: absolute; left: 0; right: 0; top: 986px; display: flex; justify-content: center; gap: 12px; }
+.stripdots i { display: block; width: 44px; height: 5px; border-radius: 3px; background: rgba(12,30,70,.13); will-change: background; }
+
+/* ------------------------------------------------------------------ orbit */
+
+/* Client marks ride a ring around the Align mark, joined to it by spokes with a
+   pulse running outward. Align sits at the centre of the operation. */
+.orbit { position: absolute; left: 1408px; top: 528px; width: 0; height: 0; }
+.orbit svg.wires { position: absolute; left: -500px; top: -500px; width: 1000px; height: 1000px; overflow: visible; }
+.orbit .hub {
+  position: absolute; left: 0; top: 0; width: 262px; height: 262px; margin: -131px 0 0 -131px;
+  border-radius: 50%; background: #fff;
+  box-shadow: 0 26px 60px rgba(16,38,86,.20), 0 0 0 13px rgba(238,107,47,.07);
+  display: flex; align-items: center; justify-content: center;
+  will-change: transform, opacity;
+}
+.orbit .hub svg { width: 132px; height: 132px; display: block; }
+.chip {
+  position: absolute; left: 0; top: 0;
+  width: 156px; height: 156px; margin: -78px 0 0 -78px;
+  border-radius: 50%; background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 38px rgba(16,38,86,.16);
+  display: flex; align-items: center; justify-content: center;
+  will-change: transform, opacity;
+}
+.chip img { display: block; max-width: 108px; max-height: 62px; object-fit: contain; }
+
+/* -------------------------------------------------------------- smartcare */
+
+/* No card. On a white stage the artwork sits exactly as drawn. */
+.scmark { display: block; width: 760px; height: auto; will-change: transform, opacity, filter; }
+
+/* --------------------------------------------------------------- end card */
+
+.endcard { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.lockup { display: block; }
+.lockup .slashO { fill: var(--orange); }
+.lockup .slashW { fill: var(--blue); }
+.lockup .dot { fill: var(--orange); }
+.lockup .word { fill: var(--blue); }
+.lockup-cap {
+  margin-top: 34px; font-size: 46px; font-weight: 700; letter-spacing: .215em;
+  color: var(--orange); text-transform: uppercase; text-align: center;
+}
+.endcard .hairline { width: 150px; height: 2px; margin: 54px 0 42px;
+  background: linear-gradient(90deg, rgba(238,107,47,0), var(--orange), rgba(238,107,47,0)); transform-origin: center; }
+.endcard .tag { font-family: var(--serif); font-style: italic; font-weight: 700; font-size: 70px; color: var(--blue); text-align: center; }
+.endcard .tag .accent { color: var(--orange); }
+.endcard .url { margin-top: 40px; font-size: 28px; font-weight: 700; letter-spacing: .38em; color: var(--orange); }
+
+/* ------------------------------------------------------------ live scrubber */
+
+#ui {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  display: flex; align-items: center; gap: 16px; padding: 14px 22px;
+  background: rgba(255,255,255,.94); color: #46526b; font-size: 13px; font-family: var(--sans);
+  border-top: 1px solid rgba(12,30,70,.1);
+}
+#ui button { background: #16326e; color: #fff; border: 0; border-radius: 7px; padding: 8px 17px; cursor: pointer; font: inherit; }
+#ui input[type=range] { flex: 1; accent-color: #ee6b2f; }
+#ui .t { font-variant-numeric: tabular-nums; min-width: 120px; }
+body.export #ui { display: none; }
