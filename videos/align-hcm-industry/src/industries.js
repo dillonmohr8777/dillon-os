@@ -24,7 +24,64 @@ const INDUSTRIES = [
 ];
 
 const CEL_W = 620, CEL_GAP = 44, CEL_STEP = CEL_W + CEL_GAP;   /* must match .cel in style.css */
-const ORBIT_R = 322;
+const ORBIT_R = 352;
+
+/* ---------------------------------------------------------------- lightning */
+
+/* The orbit spokes are discharges, not wires. Every offset below comes out of
+   this hash rather than Math.random, because the exporter seeks to arbitrary
+   frames and has to get the identical bolt back every time it lands on one. */
+const BOLT_KNOTS = 10;
+/* A bolt drawn from the centre spends most of its travel behind the hub disc,
+   so it starts at the rim instead. The whole ring is sized around leaving this
+   corridor open: hub r 152 to chip edge r 277 is 125px of clear paper for the
+   discharge to be seen in, which is why the hub shrank and the radius grew. */
+const BOLT_R0 = 158;
+
+function jit(n) {
+  const s = Math.sin(n * 127.1 + 311.7) * 43758.5453;
+  return s - Math.floor(s);
+}
+
+/* Shape is quantised to BOLT_HZ redraws a second. A bolt that eases between
+   shapes reads as a wiggling rope; one that snaps to a new shape every couple
+   of frames reads as electricity. */
+const BOLT_HZ = 15;
+
+function boltGeom(cx, cy, i, step) {
+  const len = Math.hypot(cx, cy);
+  const ux = cx / len, uy = cy / len;     /* along the spoke */
+  const px = -uy, py = ux;                /* across it */
+  const span = len - BOLT_R0;
+  /* f runs 0 at the hub rim to 1 at the mark */
+  const at = (f, j) => [ux * (BOLT_R0 + span * f) + px * j, uy * (BOLT_R0 + span * f) + py * j];
+  const amp = span * 0.14;
+
+  const knots = [];
+  let d = `M${(ux * BOLT_R0).toFixed(1)} ${(uy * BOLT_R0).toFixed(1)}`;
+  for (let k = 1; k < BOLT_KNOTS; k++) {
+    const f = k / BOLT_KNOTS;
+    /* the bell pins both ends, so the bolt always leaves the hub and lands on
+       the mark dead centre however hard the middle is thrown around */
+    const j = (jit(i * 7.3 + k * 13.7 + step * 3.1) - 0.5) * 2 * amp * Math.sin(f * Math.PI);
+    const p = at(f + (jit(i * 5.1 + k * 2.3 + step * 1.7) - 0.5) * 0.05, j);
+    knots.push(p);
+    d += ` L${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
+  }
+  d += ` L${cx.toFixed(1)} ${cy.toFixed(1)}`;
+
+  /* one dead end branch. It is the single cheapest thing that separates a
+     lightning bolt from a jagged line. */
+  const bk = 3 + Math.floor(jit(i * 3.7 + step * 5.9) * 4);
+  const [ax, ay] = knots[Math.min(bk, knots.length - 1)];
+  const side = jit(i * 11.3 + step * 2.7) < 0.5 ? -1 : 1;
+  const fl = 30 + jit(i * 9.1 + step * 4.3) * 30;
+  const fork = `M${ax.toFixed(1)} ${ay.toFixed(1)}`
+    + ` L${(ax + (ux * 0.34 + px * side * 0.62) * fl).toFixed(1)} ${(ay + (uy * 0.34 + py * side * 0.62) * fl).toFixed(1)}`
+    + ` L${(ax + (ux * 0.72 + px * side * 0.98) * fl).toFixed(1)} ${(ay + (uy * 0.72 + py * side * 0.98) * fl).toFixed(1)}`;
+
+  return { d, fork, forkAt: (bk + 1) / BOLT_KNOTS };
+}
 
 const SCENES = [
 
@@ -228,24 +285,55 @@ const SCENES = [
       </div>
       <div class="orbit">
         <svg class="wires" viewBox="-500 -500 1000 1000">
-          <circle data-ring0 cx="0" cy="0" r="${ORBIT_R}" fill="none" stroke="rgba(22,50,110,.13)" stroke-width="1.5" stroke-dasharray="7 11"/>
-          <circle data-ring1 cx="0" cy="0" r="238" fill="none" stroke="rgba(238,107,47,.20)" stroke-width="1.5" stroke-dasharray="3 9"/>
+          <defs>
+            <filter id="orbwide" x="-70%" y="-70%" width="240%" height="240%">
+              <feGaussianBlur stdDeviation="9"/>
+            </filter>
+            <filter id="orbtight" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="4"/>
+            </filter>
+          </defs>
+          <circle data-ring0 cx="0" cy="0" r="${ORBIT_R}" fill="none" stroke="rgba(22,50,110,.16)" stroke-width="1.5" stroke-dasharray="7 11"/>
+          <circle data-ring1 cx="0" cy="0" r="198" fill="none" stroke="rgba(238,107,47,.30)" stroke-width="1.6" stroke-dasharray="2 11"/>
           <g data-spokes></g>
-          <g data-pulses></g>
         </svg>
-        <div class="hub" data-hub>${lockupSVG('lhub', 300)}</div>
-        ${CLIENTS.map(c => `<div class="chip"><img src="${c.src}" alt="${c.name}"></div>`).join('')}
+        <div class="hub" data-hub><div class="hubcore">${lockupSVG('lhub', 300)}</div></div>
+        ${CLIENTS.map(c => `<div class="chip">
+          <div class="flare" data-flare></div>
+          <div class="disc"><img src="${c.src}" alt="${c.name}"></div>
+        </div>`).join('')}
       </div>`,
     draw(root, lt, dur) {
       const n = CLIENTS.length;
 
-      /* spokes and pulses are geometry, written once rather than every frame */
+      /* Each connection is five stacked paths, written once rather than every
+         frame. The rest wire is always there so the ring reads as joined between
+         strikes; the four bolt layers only light when a discharge runs.
+         pathLength="1" lets the front be a plain dash fraction, so revealing the
+         bolt hub outward is two attributes instead of a length measurement. */
       if (!root.__built) {
-        const spokes = q(root, '[data-spokes]'), pulses = q(root, '[data-pulses]');
+        const spokes = q(root, '[data-spokes]');
         for (let i = 0; i < n; i++) {
           spokes.insertAdjacentHTML('beforeend',
-            '<line x1="0" y1="0" x2="0" y2="0" stroke="rgba(22,50,110,.18)" stroke-width="1.6" data-spoke/>');
-          pulses.insertAdjacentHTML('beforeend', '<circle r="5" fill="#ee6b2f" data-pulse/>');
+            '<g data-bolt>'
+            + '<path data-rest fill="none" stroke="rgba(22,50,110,.16)" stroke-width="1.5"/>'
+            /* On a white stage a bolt reads by being saturated, not bright: a
+               pale glow just hazes the paper. So the atmosphere is warm and
+               wide, the halo is mid orange, and the bolt itself is the deepest
+               orange in the palette so it holds against cream. */
+            + '<path data-wide fill="none" stroke="#f2a05c" stroke-width="16" stroke-linecap="round"'
+            + ' stroke-linejoin="round" pathLength="1" filter="url(#orbwide)"/>'
+            + '<path data-glow fill="none" stroke="#f2762f" stroke-width="8" stroke-linecap="round"'
+            + ' stroke-linejoin="round" pathLength="1" filter="url(#orbtight)"/>'
+            + '<path data-core fill="none" stroke="#d94a12" stroke-width="3.8" stroke-linecap="round"'
+            + ' stroke-linejoin="round" pathLength="1"/>'
+            + '<path data-fila fill="none" stroke="#ffcf8a" stroke-width="1.3" stroke-linecap="round"'
+            + ' stroke-linejoin="round" pathLength="1"/>'
+            + '<path data-fork fill="none" stroke="#d94a12" stroke-width="2.2" stroke-linecap="round"'
+            + ' stroke-linejoin="round"/>'
+            + '<path data-hot fill="none" stroke="#ff8a3c" stroke-width="6" stroke-linecap="round"'
+            + ' stroke-linejoin="round" pathLength="1" filter="url(#orbtight)"/>'
+            + '</g>');
         }
         root.__built = true;
       }
@@ -266,30 +354,73 @@ const SCENES = [
       q(root, '[data-ring0]').style.transform = `rotate(${(seg(lt, 0, dur) * 26).toFixed(2)}deg)`;
       q(root, '[data-ring1]').style.transform = `rotate(${(seg(lt, 0, dur) * -38).toFixed(2)}deg)`;
 
-      const spokeEls = qa(root, '[data-spoke]');
-      const pulseEls = qa(root, '[data-pulse]');
+      const bolts = qa(root, '[data-bolt]');
+      /* the last chip lands at 2.22s, so nothing discharges before then */
+      const live = E.easeOutCubic(seg(lt, 2.2, 3.0));
+      const step = Math.floor(lt * BOLT_HZ);
+      const STRIKE = 2.6;              /* seconds between strikes on one spoke */
+      const TRAVEL = 0.30;             /* fraction of the cycle spent crossing */
+      let charge = 0;                  /* how hard the hub is firing this frame */
 
       qa(root, '.chip').forEach((chip, i) => {
         const a = (i / n) * Math.PI * 2 - Math.PI / 2 + spin;
         const s = 0.75 + i * 0.11;
         const grow = Math.max(0, E.easeOutBack(seg(lt, s, s + 0.7)));
         const cx = Math.cos(a) * ORBIT_R, cy = Math.sin(a) * ORBIT_R;
+
+        /* staggered by i/n, so the discharge chases around the ring rather than
+           all eight firing at once */
+        const raw = (lt - 2.2) / STRIKE - i / n;
+        const ph = raw - Math.floor(raw);
+        const front = Math.min(1, ph / TRAVEL);
+        const frontE = E.easeOutQuart(front);
+        const decay = ph <= TRAVEL ? 1 : Math.max(0, 1 - (ph - TRAVEL) / 0.34);
+        /* a little brightness jitter per shape, so the bolt crackles */
+        const amp = live * decay * decay * (0.72 + 0.28 * jit(i * 4.1 + step * 6.7));
+        /* the mark takes the hit once the front lands on it */
+        const hit = ph <= TRAVEL ? 0 : Math.max(0, 1 - (ph - TRAVEL) / 0.42);
+        charge = Math.max(charge, live * Math.max(0, 1 - ph / 0.13));
+
         chip.style.opacity = clamp01(E.easeOutCubic(seg(lt, s, s + 0.4)) * 1.2).toFixed(3);
-        chip.style.transform =
-          `translate3d(${(cx * grow).toFixed(1)}px,${(cy * grow).toFixed(1)}px,0) scale(${(0.6 + 0.4 * grow).toFixed(3)})`;
+        chip.style.transform = `translate3d(${(cx * grow).toFixed(1)}px,${(cy * grow).toFixed(1)}px,0)`
+          + ` scale(${(0.6 + 0.4 * grow + 0.05 * hit * hit).toFixed(3)})`;
+        const flare = q(chip, '[data-flare]');
+        flare.style.opacity = (hit * hit * live).toFixed(3);
+        flare.style.transform = `scale(${(0.82 + 0.3 * hit).toFixed(3)})`;
 
-        spokeEls[i].setAttribute('x2', cx.toFixed(1));
-        spokeEls[i].setAttribute('y2', cy.toFixed(1));
-        spokeEls[i].setAttribute('opacity', (E.easeOutCubic(seg(lt, s + 0.1, s + 0.6)) * 0.9).toFixed(3));
+        const g = bolts[i];
+        const dash = `${frontE.toFixed(3)} 1`;
+        const geo = boltGeom(cx, cy, i, step);
 
-        /* a signal runs out from the hub to each mark, offset per spoke */
-        const t = (seg(lt, 1.4, dur) * 2.2 + i / n) % 1;
-        const trav = Math.min(0.12 + t * 0.9, 1);
-        pulseEls[i].setAttribute('cx', (cx * trav).toFixed(1));
-        pulseEls[i].setAttribute('cy', (cy * trav).toFixed(1));
-        pulseEls[i].setAttribute('opacity',
-          (Math.sin(t * Math.PI) * 0.85 * E.easeOutCubic(seg(lt, 1.4, 2.1))).toFixed(3));
+        const rest = q(g, '[data-rest]');
+        rest.setAttribute('d', `M0 0 L${cx.toFixed(1)} ${cy.toFixed(1)}`);
+        rest.setAttribute('opacity', (E.easeOutCubic(seg(lt, s + 0.1, s + 0.6)) * 0.9).toFixed(3));
+
+        [['[data-wide]', 0.30], ['[data-glow]', 0.52], ['[data-core]', 1], ['[data-fila]', 0.8]].forEach(([sel, k]) => {
+          const p = q(g, sel);
+          p.setAttribute('d', geo.d);
+          p.setAttribute('stroke-dasharray', dash);
+          p.setAttribute('opacity', (amp * k).toFixed(3));
+        });
+
+        /* the charge itself, a short fat dash chasing the front out to the mark */
+        const hot = q(g, '[data-hot]');
+        hot.setAttribute('d', geo.d);
+        hot.setAttribute('stroke-dasharray', '0.13 1');
+        hot.setAttribute('stroke-dashoffset', (0.13 - frontE).toFixed(3));
+        hot.setAttribute('opacity', (amp * (front < 1 ? 0.85 : 0.3)).toFixed(3));
+
+        const fork = q(g, '[data-fork]');
+        fork.setAttribute('d', geo.fork);
+        fork.setAttribute('opacity', (frontE > geo.forkAt ? amp * 0.8 : 0).toFixed(3));
       });
+
+      /* the hub brightens as it launches, so the energy reads as coming from us */
+      const core = q(root, '.hubcore');
+      core.style.transform = `scale(${(1 + 0.022 * charge).toFixed(4)})`;
+      hub.style.boxShadow = `0 30px 70px rgba(16,38,86,.22),`
+        + ` 0 0 0 ${(15 + 9 * charge).toFixed(1)}px rgba(238,107,47,${(0.07 + 0.11 * charge).toFixed(3)}),`
+        + ` 0 0 ${(40 + 70 * charge).toFixed(0)}px rgba(238,107,47,${(0.10 + 0.24 * charge).toFixed(3)})`;
     },
   },
 
@@ -298,7 +429,7 @@ const SCENES = [
     id: 's7', in: 56.0, out: 61.2,
     html: `
       <div class="center">
-        <div class="scmark" data-mark role="img" aria-label="SmartCare by Align HCM">${SMARTCARE_SVG}</div>
+        <img class="scmark" data-mark src="${SMARTCARE}" alt="SmartCare by Align HCM">
         <p class="body" style="text-align:center;margin-top:40px;font-size:34px">
           Expert support from launch through <span class="hi">continuous improvement.</span></p>
       </div>`,

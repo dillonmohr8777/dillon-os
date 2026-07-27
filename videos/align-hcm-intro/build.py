@@ -43,6 +43,9 @@ LOGOS = {
     "dayforce": ("logos/dayforce.png", 680),
     "workday": ("logos/workday.png", 510),
     "adp": ("logos/adp.png", 450),
+    # Site artwork as shipped. No reverse pass: s8 gives it a cream card so it
+    # keeps the light ground it was drawn for.
+    "smartcare": ("logos/smartcare.png", 900),
 }
 logo_js = "const LOGOS = {\n" + "".join(
     f'  {k}: "{data_uri(ROOT / "assets" / rel, w)}",\n' for k, (rel, w) in LOGOS.items()
@@ -50,12 +53,7 @@ logo_js = "const LOGOS = {\n" + "".join(
 
 style = style.replace("var(--grain)", f"url(data:image/png;base64,{noise})")
 scenes = scenes.replace("__WORDMARK_PATH__", wordmark)
-# The SmartCare mark goes in as markup rather than a data URI, so the page's own
-# CSS can reach its .sc-neutral layer and repaint the grey for a dark stage.
-smartcare_js = ('const SMARTCARE_SVG = '
-                + json.dumps(read(ROOT / "assets" / "logos" / "smartcare.svg").strip())
-                + ';\n')
-scenes = icons + logo_js + smartcare_js + scenes
+scenes = icons + logo_js + scenes
 
 out = (shell
        .replace("/*__FONTS__*/", fonts)

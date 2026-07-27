@@ -379,7 +379,9 @@ const SCENES = [
       <div class="center">
         <div class="bracket">
           <span class="br" data-l>{</span>
-          <div class="sclogo" data-w role="img" aria-label="SmartCare by Align HCM">${SMARTCARE_SVG}</div>
+          <div class="sccard" data-w>
+            <img class="sclogo" src="${LOGOS.smartcare}" alt="SmartCare by Align HCM">
+          </div>
           <span class="br" data-r>}</span>
         </div>
         <p class="body" style="text-align:center;margin-top:30px;max-width:none">Ongoing support, platform optimization, and <span class="hi">expert help after go-live</span>.</p>

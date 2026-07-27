@@ -272,33 +272,67 @@ p.body .hi { color: var(--blue); font-weight: 700; }
 
 /* Client marks ride a ring around the Align mark, joined to it by spokes with a
    pulse running outward. Align sits at the centre of the operation. */
-.orbit { position: absolute; left: 1400px; top: 528px; width: 0; height: 0; }
+.orbit { position: absolute; left: 1410px; top: 528px; width: 0; height: 0; }
 .orbit svg.wires { position: absolute; left: -500px; top: -500px; width: 1000px; height: 1000px; overflow: visible; }
 .orbit .hub {
-  position: absolute; left: 0; top: 0; width: 380px; height: 380px; margin: -190px 0 0 -190px;
+  position: absolute; left: 0; top: 0; width: 304px; height: 304px; margin: -152px 0 0 -152px;
   border-radius: 50%; background: #fff;
   box-shadow: 0 30px 70px rgba(16,38,86,.22), 0 0 0 15px rgba(238,107,47,.07);
   display: flex; align-items: center; justify-content: center;
   will-change: transform, opacity;
 }
 /* the real lockup, wordmark and mark, not just the icon */
-.orbit .hub .lockup { width: 268px; height: auto; display: block; }
+.orbit .hub .hubcore { display: flex; align-items: center; justify-content: center; will-change: transform; }
+.orbit .hub .lockup { width: 214px; height: auto; display: block; }
+
+/* A chip is three stacked layers: a warm flare behind it that blooms when the
+   bolt lands, the disc itself, and a specular band across the top of the disc.
+   The depth is cheap tricks stacked rather than a fake perspective, same as the
+   icon tiles, so it costs one repaint and no filters. */
 .chip {
   position: absolute; left: 0; top: 0;
-  width: 156px; height: 156px; margin: -78px 0 0 -78px;
-  border-radius: 50%; background: #fff;
-  border: 1px solid var(--line);
-  box-shadow: 0 16px 38px rgba(16,38,86,.16);
+  width: 150px; height: 150px; margin: -75px 0 0 -75px;
   display: flex; align-items: center; justify-content: center;
   will-change: transform, opacity;
 }
-.chip img { display: block; max-width: 108px; max-height: 62px; object-fit: contain; }
+/* The disc paints over the middle of the flare, so the flare has to reach well
+   past the chip or all that shows is a 30px rim and the strike reads as nothing.
+   Its inner stop is transparent for the same reason: only the halo is ever seen. */
+.chip .flare {
+  position: absolute; inset: -56px; border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255,190,130,0) 32%, rgba(255,176,104,.72) 46%,
+    rgba(238,107,47,.36) 62%, rgba(238,107,47,0) 82%);
+  opacity: 0;
+  will-change: opacity, transform;
+}
+.chip .disc {
+  position: absolute; inset: 0; border-radius: 50%; overflow: hidden;
+  background: radial-gradient(118% 118% at 50% 4%, #fff 0%, #fff 56%, #f6f1e8 100%);
+  display: flex; align-items: center; justify-content: center;
+  /* A white gap between the two orange rings is what keeps the rim crisp. Ring
+     on ring straight away just muddies into a brown halo on warm paper. */
+  box-shadow:
+    0 26px 54px rgba(16,38,86,.28),
+    0 5px 14px rgba(16,38,86,.12),
+    0 0 0 2.5px rgba(217,74,18,.62),
+    0 0 0 8px rgba(255,255,255,.95),
+    0 0 0 10px rgba(238,107,47,.34);
+}
+.chip .disc::before {
+  content: ''; position: absolute; left: 7%; right: 7%; top: 3%; height: 42%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,0));
+}
+.chip img { position: relative; display: block; max-width: 100px; max-height: 56px; object-fit: contain; }
 
 /* -------------------------------------------------------------- smartcare */
 
-/* No card. On a white stage the artwork sits exactly as drawn. */
-.scmark { display: block; width: 780px; will-change: transform, opacity, filter; }
-.scmark svg { display: block; width: 100%; height: auto; }
+/* No card and no processing. This is the transparent PNG off alignhcm.com,
+   which is drawn for a light ground, and the whole reason this film went white
+   is so that artwork can sit exactly as shipped: navy wordmark, grey heart,
+   orange tagline, nothing recoloured and nothing traced. */
+.scmark { display: block; width: 700px; height: auto; will-change: transform, opacity, filter; }
 
 /* --------------------------------------------------------------- end card */
 

@@ -288,13 +288,22 @@ p.body .hi { color: #fff; font-weight: 600; }
   text-shadow: 0 0 46px rgba(240,153,76,.5);
   will-change: transform, opacity;
 }
-/* The SmartCare mark is a vector trace of the real artwork (see smartcare.py).
-   Its neutral layer carries a class, so on this dark stage the grey heart and
-   wordmark repaint to white while the orange half stays as drawn. */
-.bracket .sclogo { display: block; width: 600px; will-change: transform, opacity, filter; }
-.bracket .sclogo svg { display: block; width: 100%; height: auto;
-  filter: drop-shadow(0 0 44px rgba(240,153,76,.24)); }
-.bracket .sclogo .sc-neutral { fill: #ffffff; }
+/* SmartCare is the artwork straight off alignhcm.com with nothing done to it.
+   That artwork is drawn for a light ground: navy wordmark, grey heart, orange
+   tagline. Recolouring it for navy is what put speckle in the heart, and
+   tracing it is what put wedges beside the type, so instead it gets the ground
+   it was drawn for. Same cream card as the platform strip in s6, which is
+   already how this film handles a mark it must not touch. */
+.bracket .sccard {
+  display: flex; align-items: center; justify-content: center;
+  padding: 44px 64px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, #fffdfa 0%, #f3efe7 100%);
+  box-shadow: 0 30px 76px rgba(3,7,16,.58), 0 0 34px rgba(240,153,76,.14);
+  will-change: transform, opacity, filter;
+}
+/* 560px from a 715px source, so it is downscaling and stays sharp. */
+.bracket .sclogo { display: block; width: 560px; height: auto; }
 
 /* -------------------------------------------------------------- s9 counter */
 

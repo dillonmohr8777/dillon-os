@@ -36,10 +36,11 @@ The blue is the display colour, taken from the deep navy the dark brand film
 uses and lightened until it reads as blue rather than black. Headlines are
 Playfair Display in blue with orange accent phrases; body is Inter.
 
-Because the stage is white, **SmartCare needs no card**. The mark is the
-vectorised trace from `../align-hcm-intro/smartcare.py`, so it renders sharp at
-any size rather than as the soft 715x445 raster the site ships, and on white it
-sits exactly as drawn, grey heart and all. That is the whole reason to go light.
+Because the stage is white, **SmartCare needs no card and no processing**. The
+mark is the 715x445 transparent PNG off `/align-hcm-smartcare`, inlined exactly
+as it ships: navy wordmark, grey heart, orange tagline, nothing recoloured and
+nothing traced. Getting to use the real artwork untouched is the whole reason to
+go light.
 
 ## The two set pieces
 
@@ -65,18 +66,51 @@ on the **mask**, never on the artwork, so the logo itself stays perfectly sharp
 while its reveal edge goes organic. A warm bloom rides just behind the front.
 
 **The orbit** (`s6`). Client marks ride a ring around the **full Align lockup**,
-wordmark and mark, not the standalone icon. Spokes join each mark to the centre
-with a signal pulsing outward along them. The ring turns slowly and each chip
-counter turns so the marks stay level. Two of the biggest names per industry,
+wordmark and mark, not the standalone icon. Two of the biggest names per industry,
 eight in total, **in their own colours** on white chips, so nothing is knocked out
-or recoloured.
+or recoloured. The ring turns slowly and each chip counter turns so the marks
+stay level.
+
+Each chip is three stacked layers: a warm flare behind it, the disc, and a
+specular band across the top of the disc. The disc paints over the middle of the
+flare, so the flare reaches 56px past the chip or all that shows on a strike is a
+thin rim. The rim is two orange rings with a **white gap between them**; ring on
+ring immediately just muddies into a brown halo on warm paper.
 
 The hub is clip-masked by `drawLockup` like every other lockup in the set, so it
 needs that call in `draw` or it renders as an empty circle with three loose dots.
 
-The ring geometry is load bearing: centre at x 1400 with radius 322 and 156px
-chips means the artwork reaches to x 1000, the copy column stops at 944, and the
-380px hub clears the inner dashed ring at r 238. Change one and check the rest.
+The ring geometry is load bearing and is sized around the lightning corridor:
+centre at x 1410 with radius 352 and 150px chips puts the hub rim at r 152 and
+the chip edge at r 277, leaving 125px of clear paper for a discharge to be seen
+in. The artwork reaches to x 983 and the copy column stops at 944. The hub shrank
+from 380px and the radius grew from 322 to open that corridor; before, the gap
+was 52px and every bolt read as a small squiggle. Change one and check the rest.
+
+## Lightning
+
+The spokes are discharges, not wires. Each connection is a rest wire plus five
+stacked paths sharing one jagged geometry: a wide warm bloom, a mid orange halo,
+the bolt itself in the deepest orange in the palette, a pale filament inside it,
+and a short fat dash chasing the front out to the mark. On a white stage a bolt
+reads by being **saturated, not bright**; a pale glow only hazes the paper, which
+is the opposite of the dark film's instinct.
+
+Every offset comes out of a `sin`-based hash rather than `Math.random`, because
+the exporter seeks to arbitrary frames and has to get the identical bolt back
+each time it lands on one. Shape is quantised to 15 redraws a second: a bolt that
+eases between shapes reads as a wiggling rope, one that snaps every couple of
+frames reads as electricity. A bell curve pins both endpoints, so however hard
+the middle is thrown around the bolt always leaves the hub and lands on the mark
+dead centre. One dead end branch per bolt is the single cheapest thing that
+separates lightning from a jagged line.
+
+Strikes run on a 2.6s cycle staggered by `i/n`, so the discharge chases around
+the ring rather than all eight firing at once. `pathLength="1"` makes the
+travelling front a plain dash fraction, so revealing the bolt hub outward is two
+attributes instead of a length measurement. The bolt starts at the hub **rim**,
+not the centre, or most of its travel happens behind the logo. The hub brightens
+as it launches and each mark blooms when the front lands on it.
 
 ## Icons
 
@@ -101,7 +135,8 @@ contained: fonts, artwork, icons and logos are all inlined, so it runs from
 `file://` with no network.
 
 `build/copycheck.mjs industries` dumps every on screen string and fails on a
-dash.
+dash. `build/shot.mjs industries.html <dir> <t>...` grabs stills at given
+timestamps, which is how the orbit geometry above was dialled in.
 
 ## Script order matters
 

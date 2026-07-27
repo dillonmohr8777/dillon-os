@@ -77,12 +77,13 @@ def assets_js():
         name = p.stem.replace('-', ' ').title()
         clients.append('{name: "%s", src: "%s"}' % (name, png_uri(p, 700)))
 
-    # The SmartCare mark goes in as markup rather than a data URI so the page's
-    # own CSS can reach its .sc-neutral layer.
-    svg = (ASSETS / 'logos' / 'smartcare.svg').read_text().strip()
+    # The SmartCare mark is the transparent PNG off alignhcm.com, inlined as it
+    # ships. Nothing recolours or traces it; the white stage is what lets that
+    # work.
+    sc = png_uri(ASSETS / 'logos' / 'smartcare.png')
     return (js_literal('HEROES', heroes)
             + 'const CLIENTS = [\n' + ',\n'.join('  ' + c for c in clients) + '\n];\n'
-            + 'const SMARTCARE_SVG = ' + json.dumps(svg) + ';\n')
+            + 'const SMARTCARE = ' + json.dumps(sc) + ';\n')
 
 
 def main():

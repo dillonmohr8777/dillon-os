@@ -38,28 +38,18 @@ woff2, latin subset only, so the page runs with no network.
 
 ## SmartCare
 
-`smartcare.py` vectorises the SmartCare mark. The only SmartCare artwork on
-alignhcm.com is a 715x445 raster inlined in the hero of `/align-hcm-smartcare`;
-shown at 600px in a 1080p frame that is essentially 1:1 and it looks it, with
-soft arcs and mushy letter edges. There is no vector to fetch, so the script
-traces one in three layers:
+The only SmartCare artwork on alignhcm.com is a 715x445 transparent PNG inlined
+in the hero of `/align-hcm-smartcare`, and the film uses it **exactly as it
+ships**. No recolour, no vector trace.
 
-| Layer | What it is | Fill |
-| --- | --- | --- |
-| neutral | left heart arc, wordmark, TM | class `.sc-neutral`, repainted white on this dark stage |
-| heart | right heart arc and lower swoosh | solid `#f07818` |
-| tagline | Stabilize · Optimize · Thrive | a sampled yellow to orange gradient |
-
-Neutral versus chromatic is a saturation test; splitting the two orange layers is
-a horizontal band test, since the tagline is the only chromatic content between
-y 268 and 354. Tracing both oranges as one layer would either flatten the
-tagline gradient or wash out the solid arc. Two median passes clean the raster's
-anti-aliasing crumbs before tracing, without which the trace comes back as
-hundreds of specks with notches chewed out of the arcs.
-
-The mark is inlined as **markup**, not a data URI, so the page's own CSS can
-reach `.sc-neutral` and repaint it. It carries a `fill` attribute rather than an
-embedded `<style>` block, so two inlined copies never fight each other.
+Both were tried and both were wrong. Lifting its neutral grey to survive on navy
+left the heart and wordmark visibly speckled. Tracing it left wedges beside the
+tagline and ate the swoosh tip, because that tip is two pixels wide and any
+median pass big enough to clean the raster's anti-aliasing crumbs is bigger than
+the feature. The artwork was drawn for a light ground, so s8 gives it one: the
+same cream card (`#f3efe7`) the platform strip in s6 already uses for marks that
+must not be touched. It displays at 560px from a 715px source, so it is
+downscaling and stays sharp.
 
 ## Wordmark and mark
 
@@ -84,14 +74,13 @@ writes three variants of each into `assets/logos/`:
 | --- | --- |
 | `<name>.png` | Full colour, transparent. For light backgrounds. |
 | `<name>-white.png` | Flat white knockout, for dark grounds where colour is not wanted. |
-| `<name>-reverse.png` | Neutrals lifted to white, brand chroma kept. What the video uses for SmartCare. |
+| `<name>-reverse.png` | Neutrals lifted to white, brand chroma kept. Generated, currently unused. |
 
 The video shows the platform marks in **their own brand colours**, which needs a
 light ground: UKG and Workday are near black teal and simply vanish on navy. So
 they sit in cream cards (`#f3efe7`, the `--cream` token off alignhcm.com) that
 read as a partner strip and give each mark its correct clear space. SmartCare
-keeps the reverse treatment instead, because it is the hero of its own slide
-rather than a card, and its orange half is already correct on navy.
+gets the same treatment on its own slide, for the same reason.
 
 Background removal is a **border flood fill** over near white pixels, never a
 global threshold. That distinction matters: HiBob's "Hi" is white ink sitting
@@ -130,7 +119,7 @@ ship standalone in `assets/icons/` for decks, the site, and one pagers.
 | 5 | 16.6 | 20.6 | 4.0 | "We are the team that **finishes the work**." Ghost `SPECIALISTS`. |
 | 6 | 20.6 | 25.6 | 5.0 | Platform logos: UKG, Dayforce, Workday, ADP. |
 | 7 | 25.6 | 29.6 | 4.0 | Service ticker, ten services and icons snapping through focus. |
-| 8 | 29.6 | 33.6 | 4.0 | The SmartCare mark, vectorised. "Most callbacks inside the hour." |
+| 8 | 29.6 | 33.6 | 4.0 | The SmartCare mark on a cream card, in brackets. Support after go-live. |
 | 9 | 33.6 | 38.0 | 4.4 | Counter rolls to `100+` five star reviews. |
 | 10 | 38.0 | 42.6 | 4.6 | "From system problems to **measurable outcomes**." Ghost `OUTCOMES`. |
 | 11 | 42.6 | 46.8 | 4.2 | "Kill complexity." with a light sweep. |
@@ -240,7 +229,7 @@ python3 wm.py        # retrace the Align wordmark off the still -> wordmark.path
 - A full ffmpeg with `libx264` and `aac`. The Playwright bundled ffmpeg will not
   work: it only ships png and vp8. `pip install imageio-ffmpeg` gives a usable
   build, which is the default path in `render.mjs`.
-- `pip install numpy pillow potracer` for the audio and the asset scripts
+- `pip install numpy pillow` for the audio and the asset scripts
 
 ## Notes
 
