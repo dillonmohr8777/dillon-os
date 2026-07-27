@@ -13,14 +13,24 @@ const TITLE = 'Align HCM · Industry Solutions';
 const FOOTER = '· Industry Solutions ·';
 
 /* One image per industry, from the nine hero illustrations on the hub. Public
- * sector has no page of its own, so it borrows the managed payroll hero and a
- * line written to match what that illustration actually shows. See media.py. */
+ * sector has no page of its own, so it borrows the managed payroll hero, which is
+ * a calendar, an approval loop and a stack of records. See media.py.
+ *
+ * The line under each name is that industry's own vocabulary rather than a
+ * sentence about it. That is the whole argument of the film made literal: these
+ * are the words an operator uses, and a partner either knows them on arrival or
+ * learns them on the client's time. Every term here is one Align configures for. */
 const INDUSTRIES = [
-  ['healthcare', 'Healthcare', 'Coverage protects care.'],
-  ['public', 'Public Sector', 'Public money means every hour is on the record.'],
-  ['retail', 'Retail &amp; Hospitality', 'Staffing shapes the customer experience.'],
-  ['services', 'Services &amp; Distribution', 'Every handoff affects delivery and trust.'],
-  ['manufacturing', 'Manufacturing', 'Every assignment affects output, safety, and margin.'],
+  ['healthcare', 'Healthcare',
+   'Census, float pool, credentials, differentials, ratios.'],
+  ['public', 'Public Sector',
+   'Bargaining units, steps and grades, accruals, prevailing wage.'],
+  ['retail', 'Retail &amp; Hospitality',
+   'Split shifts, tip credit, predictive scheduling, seasonal ramp.'],
+  ['services', 'Services &amp; Distribution',
+   'Billable utilization, per diem, multi state, hours of service.'],
+  ['manufacturing', 'Manufacturing',
+   'Crew rotations, shift differentials, downtime, certifications.'],
 ];
 
 const CEL_W = 620, CEL_GAP = 44, CEL_STEP = CEL_W + CEL_GAP;   /* must match .cel in style.css */
@@ -139,8 +149,8 @@ const SCENES = [
   {
     id: 's1', in: 4.8, out: 10.4,
     html: split('art-left', 'hub', `
-      ${eyebrow('Industry solutions')}
-      <h1 class="serif lg" data-h1>${typeset('Workforce technology|for the work *every|industry depends on*.')}</h1>`),
+      ${eyebrow('Industry expertise')}
+      <h1 class="serif lg" data-h1>${typeset('We configure HCM|platforms around|*how your industry|actually runs*.')}</h1>`),
     draw(root, lt, dur) {
       drawPanel(root, lt, dur);
       showEyebrow(root, lt, 0.5);
@@ -152,10 +162,10 @@ const SCENES = [
   {
     id: 's2', in: 10.4, out: 15.0,
     html: `
-      <div class="ghost">ESSENTIAL WORK</div>
+      <div class="ghost">FLUENCY</div>
       <div class="pad">
-        ${eyebrow('Industry context')}
-        <h1 class="serif" data-h1>${typeset('Different work.|One standard for|*operational trust*.')}</h1>
+        ${eyebrow('Why it matters')}
+        <h1 class="serif" data-h1>${typeset('Every industry runs on|its own vocabulary.|*We already speak it*.')}</h1>
       </div>`,
     draw(root, lt, dur) {
       const g = q(root, '.ghost');
@@ -221,15 +231,15 @@ const SCENES = [
     id: 's4', in: 31.4, out: 37.6,
     html: `
       <div class="pad">
-        ${eyebrow('Operational realities')}
-        <h1 class="serif sm" data-h1 style="margin-bottom:52px">${typeset('The environment changes.|The workforce operation *has to respond*.')}</h1>
+        ${eyebrow('Configured to your environment')}
+        <h1 class="serif sm" data-h1 style="margin-bottom:52px">${typeset('Configuration is where|a platform *becomes your operation*.')}</h1>
         <div class="facts">
-          ${[['coverage', 'Coverage has a different consequence',
-              'Every open shift can reach patient care, customer service, order fulfillment, or production output.'],
-             ['rules', 'Rules multiply across the workforce',
-              'Credentials, agreements, jurisdictions, premiums, and site requirements shape who can work and how they are paid.'],
-             ['handoff', 'Every handoff reaches time and pay',
-              'Schedules, transfers, approvals, and exceptions need one dependable path from the frontline to payroll.']]
+          ${[['rules', 'Your agreements, in the rules',
+              'Union contracts, bargaining steps, licensure, premiums, and jurisdiction requirements built into the configuration rather than worked around after go-live.'],
+             ['coverage', 'Your coverage, in the schedule',
+              'Ratios, crew rotations, float pools, split shifts, and seasonal ramp modeled the way your operation actually staffs.'],
+             ['handoff', 'Your reality, in the pay',
+              'Differentials, premiums, per diem, tip credit, and multi state treatment calculated correctly the first time.']]
             .map(([ic, h, p]) => `<div class="card">${tile(ic)}<h3>${h}</h3><p>${p}</p></div>`).join('')}
         </div>
       </div>`,
@@ -245,17 +255,17 @@ const SCENES = [
     id: 's5', in: 37.6, out: 44.4,
     html: `
       <div class="pad">
-        ${eyebrow('How Align helps')}
-        <h1 class="serif sm" data-h1 style="margin-bottom:48px">${typeset('Build one workforce foundation|without *flattening industry complexity*.')}</h1>
+        ${eyebrow('How we work')}
+        <h1 class="serif sm" data-h1 style="margin-bottom:48px">${typeset('A configuration your teams|*recognize on day one*.')}</h1>
         <div class="facts four">
-          ${[['design', 'Design for the work itself',
-              'Configure roles, rules, workflows, and access around the people, locations, and commitments each industry carries.'],
-             ['connect', 'Connect coverage, time, and pay',
-              'Carry frontline decisions through timekeeping, approval, and payroll without losing the reason behind the work.'],
-             ['visible', 'Make workforce risk visible',
-              'Give leaders timely insight into coverage, qualifications, exceptions, labor cost, and service readiness.'],
-             ['relevant', 'Keep the platform relevant',
-              'Use expert support and a practical roadmap as regulations, workforce expectations, and operating needs change.']]
+          ${[['design', 'We arrive knowing the work',
+              'Consultants who have configured for your industry before, rather than a generalist learning your operation as they go.'],
+             ['connect', 'We build to your environment',
+              'Roles, rules, workflows, and access shaped around your locations, your agreements, and the commitments you carry.'],
+             ['visible', 'We carry coverage into pay',
+              'Frontline decisions travel through timekeeping, approval, and payroll without losing the reason behind them.'],
+             ['relevant', 'We stay past go-live',
+              'Expert support and a practical roadmap as regulations, agreements, and operating needs change.']]
             .map(([ic, h, p]) => `<div class="card">${tile(ic)}<h3>${h}</h3><p>${p}</p></div>`).join('')}
         </div>
       </div>`,
@@ -271,10 +281,10 @@ const SCENES = [
     id: 's6', in: 44.4, out: 54.6,
     html: `
       <div class="pad" style="right:944px">
-        ${eyebrow('Trusted across industries')}
-        <h1 class="serif sm" data-h1 style="font-size:70px">${typeset('Different industries.|Different platforms.|*The same team*.')}</h1>
-        <p class="body" style="font-size:27px;max-width:660px">Healthcare, public sector, manufacturing,
-          retail and hospitality, services and distribution.</p>
+        ${eyebrow('Every platform, every industry')}
+        <h1 class="serif sm" data-h1 style="font-size:70px">${typeset('We speak the platform.|We speak *your business*.')}</h1>
+        <p class="body" style="font-size:27px;max-width:660px">UKG, Dayforce, Workday and ADP across
+          healthcare, public sector, manufacturing, retail and hospitality, services and distribution.</p>
       </div>
       <div class="orbit">
         <svg class="wires" viewBox="-500 -500 1000 1000">
@@ -424,7 +434,7 @@ const SCENES = [
       <div class="center">
         <img class="scmark" data-mark src="${SMARTCARE}" alt="SmartCare by Align HCM">
         <p class="body" style="text-align:center;margin-top:40px;font-size:34px">
-          Expert support from launch through <span class="hi">continuous improvement.</span></p>
+          The same industry team, <span class="hi">long after go-live.</span></p>
       </div>`,
     draw(root, lt) {
       const m = q(root, '[data-mark]');

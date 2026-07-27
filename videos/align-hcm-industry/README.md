@@ -6,20 +6,47 @@ industry's own page.
 
 `align-hcm-industries.mp4` — 65.8s, 1920x1080, 30fps, H.264, silent.
 
-## Where the copy comes from
+## What the film argues
 
-The script follows the voice on the industry hub and its four industry pages,
-not a generic brand script. That voice has a shape worth keeping:
+Align works with the HCM platforms and applies them with **industry expertise**:
+the configuration is shaped to a client's actual operating environment by people
+who already speak that industry's business language. Every scene serves that one
+claim, in order:
 
-1. **A concrete operational claim.** "Workforce technology for the work every
-   industry depends on."
-2. **The consequence when the pieces are disconnected**, as a real chain of
-   events rather than an abstraction.
-3. **Operational realities**, three of them, each a bold claim over one line.
-4. **How Align helps**, four of them, in the same shape.
+| Scene | Beat |
+| --- | --- |
+| s1 | What Align does. "We configure HCM platforms around how your industry actually runs." |
+| s2 | The differentiator. "Every industry runs on its own vocabulary. We already speak it." Ghost word `FLUENCY`. |
+| s3 | **The proof.** Each industry's own terms, not a sentence about it. |
+| s4 | What fluency changes. Configuration is where a platform becomes your operation. |
+| s5 | How Align works, four cards. |
+| s6 | Platforms and clients together. "We speak the platform. We speak your business." |
+| s7 | The same industry team, long after go-live. |
+| s8 | End card. |
 
-Section eyebrows are the pages' own: `Industry context`, `Operational
-realities`, `How Align helps`. Every claim on screen traces to a page.
+s2 exists to set up s3. Once "every industry runs on its own vocabulary" is on
+screen, the filmstrip needs no label: five industries, five sets of terms, and the
+argument makes itself. That is why the strip carries `Census, float pool,
+credentials, differentials, ratios` rather than a sentence about healthcare. Every
+term on screen is one Align configures for, and the s4 cards deliberately repeat
+them so the claim in s2 pays off in the same words twice.
+
+Section eyebrows track the argument rather than the site's own headings:
+`Industry expertise`, `Why it matters`, `Configured to your environment`,
+`How we work`, `Every platform, every industry`.
+
+## Copy has to fit its column
+
+`build/fitcheck.mjs` reports, per headline, how many lines it **declared** with
+`|` against how many it **rendered**. A mismatch means the browser had to break a
+line again and the layout is quietly wrong, which is exactly what happened to s1
+on the first pass: three declared lines rendered as four, because the split
+layout's copy column is only 836px and "We configure HCM platforms" needs 1261px
+at 72px Playfair. Measure before rewriting; the limit is narrower than it looks.
+
+Card headings reserve two lines whether they need them or not, so the bodies
+across a row start at the same baseline. Without that, one heading wrapping drags
+its own paragraph down and the row reads as misaligned.
 
 ## Light theme
 
