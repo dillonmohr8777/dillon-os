@@ -16,6 +16,7 @@ tags: [client, moc]
 | [[KJB]]                      | kimberlyjamesbridal.com     | $300/mo      | 3/12/2026 | Google Ads, Squarespace SEO pages, brand design                 |
 | [[Fresh Blends - Replenish]] | freshblends.com             | $500/mo      | 3/23/2026 | Paid media strategy (B2C), Google Ads (awaiting access)         |
 | [[Hardwood Artisan]]         | hardwood-artisan.com        | —            | —         | GBP content (4x/week), HTML reports                             |
+| [[Fagan Painting]]           | faganpainting.com           | —            | —         | Meta handoff; SEO / AEO / GEO (POC: James, never Jim)           |
 | [[NKCDC]]                    | —                           | —            | —         | ICP research, keyword strategy, campaign architecture           |
 | [[Onsite Concrete]]          | onsiteconcretelandscape.com | —            | —         | WordPress/Divi website repair                                   |
 | [[Blissful Events]]          | —                           | $500 project | One-time  | Bollywood concert campaign (FB Events + Google Local PMax)      |
