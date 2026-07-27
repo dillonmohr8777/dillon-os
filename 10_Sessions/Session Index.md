@@ -9,6 +9,7 @@ updated: 2026-07-27
 
 | Session | Date | Theme | Status |
 |---|---|---|---|
+| [[2026-07-27 — competitive-task-orchestrator run 34]] | 2026-07-27 | Umbrella orchestrator Run 34; infra restored; BOK+Align drafts | Complete |
 | [[Bridge Software Development - 2026-07-11]] | 2026-07-11 | Bridge discovery build, prototype, Monday/Tori decision package | Completed pre-meeting; **post-Tori capture missing** |
 | [[Facebook Ads System Build Log]] | — | Meta ads system build log | **Empty stub** |
 | [[Facebook Ads Automation Ideas]] | — | Meta ads automation backlog | **Empty stub** |
