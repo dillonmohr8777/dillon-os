@@ -5,7 +5,7 @@ Everything is inlined so the page runs from file:// with no network: the two
 Google Fonts as base64 woff2, the traced Align wordmark path, and the grain
 tile. Run this after editing anything under src/.
 """
-import base64, io, pathlib, sys
+import base64, io, json, pathlib, sys
 
 from PIL import Image
 
@@ -43,7 +43,6 @@ LOGOS = {
     "dayforce": ("logos/dayforce.png", 680),
     "workday": ("logos/workday.png", 510),
     "adp": ("logos/adp.png", 450),
-    "smartcare": ("logos/smartcare-reverse.png", 1100),
 }
 logo_js = "const LOGOS = {\n" + "".join(
     f'  {k}: "{data_uri(ROOT / "assets" / rel, w)}",\n' for k, (rel, w) in LOGOS.items()
@@ -51,7 +50,12 @@ logo_js = "const LOGOS = {\n" + "".join(
 
 style = style.replace("var(--grain)", f"url(data:image/png;base64,{noise})")
 scenes = scenes.replace("__WORDMARK_PATH__", wordmark)
-scenes = icons + logo_js + scenes
+# The SmartCare mark goes in as markup rather than a data URI, so the page's own
+# CSS can reach its .sc-neutral layer and repaint the grey for a dark stage.
+smartcare_js = ('const SMARTCARE_SVG = '
+                + json.dumps(read(ROOT / "assets" / "logos" / "smartcare.svg").strip())
+                + ';\n')
+scenes = icons + logo_js + smartcare_js + scenes
 
 out = (shell
        .replace("/*__FONTS__*/", fonts)

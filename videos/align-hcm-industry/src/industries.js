@@ -12,9 +12,21 @@
 const TITLE = 'Align HCM · Industry Solutions';
 const FOOTER = '· Industry Solutions ·';
 
-/* one image per industry, taken from that industry's own page */
+/* One image per industry, taken from that industry's own page.
+ *
+ * Public sector is the exception and carries a type cel instead. There is no
+ * public sector page or hero on the industry hub, so rather than borrow another
+ * industry's illustration this quotes Align's own public sector line from the
+ * Align in Motion frames. Drop a hero at assets/heroes/public.jpg and delete the
+ * `cel` entry to switch it to artwork like the rest. */
 const INDUSTRIES = [
   ['healthcare', 'Healthcare', 'Coverage protects care.'],
+  ['public', 'Public Sector', 'Essential services never stop.',
+    `<div class="typecel">
+       <span class="mark">Public Sector</span>
+       <h3>At 3 a.m.,<br>someone&rsquo;s<br><em>still on shift</em>.</h3>
+       <p>Water keeps running, roads stay clear,<br>and calls get answered.</p>
+     </div>`],
   ['retail', 'Retail &amp; Hospitality', 'Staffing shapes the customer experience.'],
   ['services', 'Services &amp; Distribution', 'Every handoff affects delivery and trust.'],
   ['manufacturing', 'Manufacturing', 'Every assignment affects output, safety, and margin.'],
@@ -68,13 +80,13 @@ const SCENES = [
 
   /* 3. the filmstrip ------------------------------------------------------ */
   {
-    id: 's3', in: 10.2, out: 23.4,
+    id: 's3', in: 10.2, out: 26.6,
     html: `
       <div class="strip">
         <div class="halo" data-halo></div>
         <div class="track" data-track>
-          ${INDUSTRIES.map(([key]) => `
-            <div class="cel"><div class="img" style="background-image:url(${HEROES[key]})"></div></div>`).join('')}
+          ${INDUSTRIES.map(([key, , , cel]) => `
+            <div class="cel">${cel || `<div class="img" style="background-image:url(${HEROES[key]})"></div>`}</div>`).join('')}
         </div>
       </div>
       <div class="striplabel"><div class="slot">
@@ -118,7 +130,7 @@ const SCENES = [
 
   /* 4. operational realities ---------------------------------------------- */
   {
-    id: 's4', in: 23.4, out: 29.6,
+    id: 's4', in: 26.6, out: 32.8,
     html: `
       <div class="pad">
         ${eyebrow('Operational realities')}
@@ -142,7 +154,7 @@ const SCENES = [
 
   /* 5. how Align helps ------------------------------------------------------ */
   {
-    id: 's5', in: 29.6, out: 36.4,
+    id: 's5', in: 32.8, out: 39.6,
     html: `
       <div class="pad">
         ${eyebrow('How Align helps')}
@@ -168,7 +180,7 @@ const SCENES = [
 
   /* 6. the orbit ------------------------------------------------------------ */
   {
-    id: 's6', in: 36.4, out: 46.6,
+    id: 's6', in: 39.6, out: 49.8,
     html: `
       <div class="pad" style="right:944px">
         ${eyebrow('Trusted across industries')}
@@ -243,10 +255,10 @@ const SCENES = [
 
   /* 7. SmartCare ------------------------------------------------------------ */
   {
-    id: 's7', in: 46.6, out: 51.8,
+    id: 's7', in: 49.8, out: 55.0,
     html: `
       <div class="center">
-        <img class="scmark" data-mark src="${SMARTCARE}" alt="SmartCare by Align HCM">
+        <div class="scmark" data-mark role="img" aria-label="SmartCare by Align HCM">${SMARTCARE_SVG}</div>
         <p class="body" style="text-align:center;margin-top:40px;font-size:34px">
           Expert support from launch through <span class="hi">continuous improvement.</span></p>
       </div>`,
@@ -263,7 +275,7 @@ const SCENES = [
 
   /* 8. end card -------------------------------------------------------------- */
   {
-    id: 's8', in: 51.8, out: 57.8,
+    id: 's8', in: 55.0, out: 61.0,
     html: `
       <div class="endcard">
         <div data-lock>${lockupSVG('lend', 940)}</div>

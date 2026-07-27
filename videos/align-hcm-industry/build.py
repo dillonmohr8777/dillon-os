@@ -15,6 +15,7 @@ from media.py in this directory.
 """
 import base64
 import io
+import json
 import pathlib
 import sys
 
@@ -73,9 +74,12 @@ def assets_js():
         name = p.stem.replace('-', ' ').title()
         clients.append('{name: "%s", src: "%s"}' % (name, png_uri(p, 700)))
 
+    # The SmartCare mark goes in as markup rather than a data URI so the page's
+    # own CSS can reach its .sc-neutral layer.
+    svg = (ASSETS / 'logos' / 'smartcare.svg').read_text().strip()
     return (js_literal('HEROES', heroes)
             + 'const CLIENTS = [\n' + ',\n'.join('  ' + c for c in clients) + '\n];\n'
-            + f'const SMARTCARE = "{png_uri(ASSETS / "logos" / "smartcare.png", 900)}";\n')
+            + 'const SMARTCARE_SVG = ' + json.dumps(svg) + ';\n')
 
 
 def main():

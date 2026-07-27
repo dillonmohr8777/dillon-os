@@ -13,7 +13,7 @@ const lines = await p.evaluate(() => {
 });
 await b.close();
 // The one hyphen we mean to ship. Everything else is still a failure.
-const ALLOWED = ['Go-live'];
+const ALLOWED = ['Go-live', 'go-live'];
 
 let bad = 0;
 for (const [id, txt] of lines) {

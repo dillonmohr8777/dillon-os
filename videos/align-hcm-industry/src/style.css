@@ -215,6 +215,28 @@ p.body .hi { color: var(--blue); font-weight: 700; }
 }
 .strip .cel .img { position: absolute; inset: 0; background-size: cover; background-position: center 26%; }
 
+/* Public sector has no illustration on the hub, so its cel is typographic:
+   Align's own public sector frame, quoted, on the brand navy. A dark cel among
+   four light ones reads as a deliberate change of register rather than a gap. */
+.typecel {
+  position: absolute; inset: 0; padding: 62px 54px;
+  display: flex; flex-direction: column; justify-content: center;
+  background:
+    radial-gradient(120% 80% at 18% 8%, rgba(36,64,122,.95) 0%, rgba(36,64,122,0) 58%),
+    radial-gradient(100% 80% at 88% 96%, rgba(190,86,32,.55) 0%, rgba(190,86,32,0) 55%),
+    linear-gradient(158deg, #16224a 0%, #0b1326 46%, #090f1d 100%);
+}
+.typecel .mark {
+  font-size: 17px; font-weight: 700; letter-spacing: .3em; text-transform: uppercase;
+  color: var(--orange-3); margin-bottom: 30px;
+}
+.typecel h3 {
+  font-family: var(--serif); font-weight: 700; font-size: 66px; line-height: 1.06;
+  color: #fff; letter-spacing: -.012em;
+}
+.typecel h3 em { font-style: normal; color: var(--orange-3); }
+.typecel p { margin-top: 26px; font-size: 23px; line-height: 1.5; color: #c9d4e8; }
+
 .striplabel { position: absolute; left: 0; right: 0; top: 848px; text-align: center; }
 .striplabel .slot { position: relative; height: 150px; }
 .striplabel .lab { position: absolute; left: 0; right: 0; top: 0; will-change: opacity, transform; }
@@ -251,7 +273,8 @@ p.body .hi { color: var(--blue); font-weight: 700; }
 /* -------------------------------------------------------------- smartcare */
 
 /* No card. On a white stage the artwork sits exactly as drawn. */
-.scmark { display: block; width: 760px; height: auto; will-change: transform, opacity, filter; }
+.scmark { display: block; width: 780px; will-change: transform, opacity, filter; }
+.scmark svg { display: block; width: 100%; height: auto; }
 
 /* --------------------------------------------------------------- end card */
 

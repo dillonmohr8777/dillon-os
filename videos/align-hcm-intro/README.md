@@ -36,6 +36,33 @@ Display serif is **Playfair Display** (700, 900, 700 italic). Everything else is
 **Inter** (400 to 800). Both are OFL and embedded in `index.html` as base64
 woff2, latin subset only, so the page runs with no network.
 
+## SmartCare
+
+`smartcare.py` vectorises the SmartCare mark. The only SmartCare artwork on
+alignhcm.com is a 715x445 raster inlined in the hero of `/align-hcm-smartcare`;
+shown at 600px in a 1080p frame that is essentially 1:1 and it looks it, with
+soft arcs and mushy letter edges. There is no vector to fetch, so the script
+traces one in three layers:
+
+| Layer | What it is | Fill |
+| --- | --- | --- |
+| neutral | left heart arc, wordmark, TM | class `.sc-neutral`, repainted white on this dark stage |
+| heart | right heart arc and lower swoosh | solid `#f07818` |
+| tagline | Stabilize · Optimize · Thrive | a sampled yellow to orange gradient |
+
+Neutral versus chromatic is a saturation test; splitting the two orange layers is
+a horizontal band test, since the tagline is the only chromatic content between
+y 268 and 354. Tracing both oranges as one layer would either flatten the
+tagline gradient or wash out the solid arc. Two median passes clean the raster's
+anti-aliasing crumbs before tracing, without which the trace comes back as
+hundreds of specks with notches chewed out of the arcs.
+
+The mark is inlined as **markup**, not a data URI, so the page's own CSS can
+reach `.sc-neutral` and repaint it. It carries a `fill` attribute rather than an
+embedded `<style>` block, so two inlined copies never fight each other.
+
+## Wordmark and mark
+
 The `Align` wordmark is a vector trace of the real logo taken off the supplied
 end card still (`build/wm.py`). The mark beside it (two leaning bars, three
 dots) is hand measured from the same still and drawn as SVG so the bars can wipe
@@ -96,14 +123,14 @@ ship standalone in `assets/icons/` for decks, the site, and one pagers.
 
 | # | In | Out | Len | Beat |
 | --- | --- | --- | --- | --- |
-| 1 | 0.0 | 4.2 | 4.2 | "You picked the platform." Ghost word `HCM`. |
-| 2 | 4.2 | 8.3 | 4.1 | "Now the **hard part** starts." Ghost `NOW WHAT`. |
+| 1 | 0.0 | 4.2 | 4.2 | "Go-live is not the finish line." Ghost word `HCM`. |
+| 2 | 4.2 | 8.3 | 4.1 | "The platform is live. The **operation** has to run." Ghost `NOW WHAT`. |
 | 3 | 8.3 | 13.0 | 4.7 | "Every rollout hits the same five walls." Friction pills stagger in. |
 | 4 | 13.0 | 16.6 | 3.6 | Light burst, logo assembles. |
-| 5 | 16.6 | 20.6 | 4.0 | "We are the team that **finishes it**." Ghost `SPECIALISTS`. |
+| 5 | 16.6 | 20.6 | 4.0 | "We are the team that **finishes the work**." Ghost `SPECIALISTS`. |
 | 6 | 20.6 | 25.6 | 5.0 | Platform logos: UKG, Dayforce, Workday, ADP. |
 | 7 | 25.6 | 29.6 | 4.0 | Service ticker, ten services and icons snapping through focus. |
-| 8 | 29.6 | 33.6 | 4.0 | The SmartCare mark. "Most callbacks inside the hour." |
+| 8 | 29.6 | 33.6 | 4.0 | The SmartCare mark, vectorised. "Most callbacks inside the hour." |
 | 9 | 33.6 | 38.0 | 4.4 | Counter rolls to `100+` five star reviews. |
 | 10 | 38.0 | 42.6 | 4.6 | "From system problems to **measurable outcomes**." Ghost `OUTCOMES`. |
 | 11 | 42.6 | 46.8 | 4.2 | "Kill complexity." with a light sweep. |
@@ -122,6 +149,16 @@ the end. Two things do read `dur` and will change if you retime: the ghost
 watermark drift, and the ticker scroll in scene 7.
 
 Every claim on screen traces to alignhcm.com. No invented numbers.
+
+### Voice
+
+The script is written in the voice Align uses on its industry pages, which is the
+house voice for all brand films: a concrete operational claim, then the
+consequence when the pieces are disconnected stated as a real chain of events
+rather than an abstraction, then the outcome. Scene 2's body line is the shape to
+copy: *one absence can move a schedule, trigger overtime, reassign a credentialed
+employee, and create a payroll exception before the shift is over.* Section
+eyebrows are the pages' own: `Operational realities`, `Operational impact`.
 
 House rule for this piece: **no dashes in any on screen copy**, with exactly
 one deliberate exception, `Go-live`, which is the industry term and how Align

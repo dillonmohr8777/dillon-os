@@ -1,10 +1,10 @@
 # Align HCM · Industry Solutions
 
-One film covering all four industries, on a light stage: white paper, blue and
+One film covering all five industries, on a light stage: white paper, blue and
 orange type, dimensional icon tiles, and one image per industry taken from that
 industry's own page.
 
-`align-hcm-industries.mp4` — 57.8s, 1920x1080, 30fps, H.264, silent.
+`align-hcm-industries.mp4` — 61.0s, 1920x1080, 30fps, H.264, silent.
 
 ## Where the copy comes from
 
@@ -36,17 +36,29 @@ The blue is the display colour, taken from the deep navy the dark brand film
 uses and lightened until it reads as blue rather than black. Headlines are
 Playfair Display in blue with orange accent phrases; body is Inter.
 
-Because the stage is white, **SmartCare needs no card**. The exact artwork off
-`/align-hcm-smartcare` sits as drawn, grey heart and all, which is the whole
-reason to go light.
+Because the stage is white, **SmartCare needs no card**. The mark is the
+vectorised trace from `../align-hcm-intro/smartcare.py`, so it renders sharp at
+any size rather than as the soft 715x445 raster the site ships, and on white it
+sits exactly as drawn, grey heart and all. That is the whole reason to go light.
 
 ## The two set pieces
 
-**The filmstrip** (`s3`). Four industries, one image each, scrolling through
-centre. It replaces a four box grid: each industry gets the frame to itself for
+**The filmstrip** (`s3`). Five industries, one image each, scrolling through
+centre. It replaces a box grid: each industry gets the frame to itself for
 a beat, the neighbours sit blurred and desaturated at the edges to imply the
 strip continues, and progress bars track position. The scroll is a staircase
 eased at the risers, so it holds to be read and then glides.
+
+**Public sector is the exception.** There is no public sector page or hero
+anywhere on the industry hub or on alignhcm.com, so rather than borrow another
+industry's illustration its cel is typographic: Align's own public sector line
+from the Align in Motion frames, set on the brand navy. A dark cel among four
+light ones reads as a deliberate change of register rather than a gap. To switch
+it to artwork, drop a hero at `assets/heroes/public.jpg` and delete the `cel`
+entry in `INDUSTRIES`.
+
+The orbit still carries eight marks, two per industry, because no public sector
+client roster exists on the hub to draw from.
 
 **The orbit** (`s6`). Client marks ride a ring around the Align mark, joined by
 spokes with a signal pulsing outward along each one. Align sits at the centre of

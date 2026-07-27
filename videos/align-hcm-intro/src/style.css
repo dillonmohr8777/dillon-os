@@ -288,12 +288,13 @@ p.body .hi { color: #fff; font-weight: 600; }
   text-shadow: 0 0 46px rgba(240,153,76,.5);
   will-change: transform, opacity;
 }
-.bracket .sclogo {
-  display: block;
-  width: 560px; height: auto;
-  filter: drop-shadow(0 0 44px rgba(240,153,76,.24));
-  will-change: transform, opacity, filter;
-}
+/* The SmartCare mark is a vector trace of the real artwork (see smartcare.py).
+   Its neutral layer carries a class, so on this dark stage the grey heart and
+   wordmark repaint to white while the orange half stays as drawn. */
+.bracket .sclogo { display: block; width: 600px; will-change: transform, opacity, filter; }
+.bracket .sclogo svg { display: block; width: 100%; height: auto;
+  filter: drop-shadow(0 0 44px rgba(240,153,76,.24)); }
+.bracket .sclogo .sc-neutral { fill: #ffffff; }
 
 /* -------------------------------------------------------------- s9 counter */
 

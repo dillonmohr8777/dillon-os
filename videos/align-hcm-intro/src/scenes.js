@@ -216,7 +216,7 @@ const SCENES = [
       <div class="ghost wide">HCM</div>
       <div class="pad">
         ${eyebrow('Human Capital Management')}
-        <h1 class="serif" data-h1>${typeset('You picked the platform.')}</h1>
+        <h1 class="serif" data-h1>${typeset('Go-live is not|*the finish line*.')}</h1>
       </div>`,
     draw(root, lt, dur) {
       showGhost(root, lt, dur);
@@ -231,8 +231,9 @@ const SCENES = [
     html: `
       <div class="ghost">NOW WHAT</div>
       <div class="pad">
-        <h1 class="serif" data-h1>${typeset('Now the *hard part* starts.')}</h1>
-        <p class="body">Selection is the easy decision. Everything after it is where the value is won or lost.</p>
+        <h1 class="serif sm" data-h1>${typeset('The platform is live.|The *operation* has to run.')}</h1>
+        <p class="body">One absence can move a schedule, trigger overtime, reassign a credentialed
+          employee, and create a payroll exception <span class="hi">before the shift is over</span>.</p>
       </div>`,
     draw(root, lt, dur) {
       showGhost(root, lt, dur);
@@ -250,7 +251,7 @@ const SCENES = [
     id: 's3', in: 8.3, out: 13.0,
     html: `
       <div class="pad" style="right:840px">
-        ${eyebrow('The pattern')}
+        ${eyebrow('Operational realities')}
         <h1 class="serif s3" data-h1>${typeset('Every rollout hits|the same five walls.')}</h1>
       </div>
       <div class="chips">
@@ -306,7 +307,7 @@ const SCENES = [
       <div class="ghost">SPECIALISTS</div>
       <div class="pad">
         ${eyebrow('Who we are')}
-        <h1 class="serif" data-h1>${typeset('We are the team|that *finishes it*.')}</h1>
+        <h1 class="serif" data-h1>${typeset('We are the team that|*finishes the work*.')}</h1>
         <p class="body">An implementation, support, and optimization firm built entirely around HCM.</p>
       </div>`,
     draw(root, lt, dur) {
@@ -378,10 +379,10 @@ const SCENES = [
       <div class="center">
         <div class="bracket">
           <span class="br" data-l>{</span>
-          <img class="sclogo" data-w src="${LOGOS.smartcare}" alt="SmartCare by Align HCM">
+          <div class="sclogo" data-w role="img" aria-label="SmartCare by Align HCM">${SMARTCARE_SVG}</div>
           <span class="br" data-r>}</span>
         </div>
-        <p class="body" style="text-align:center;margin-top:30px;max-width:none">Ongoing HCM support after go live. <span class="hi">Most callbacks inside the hour.</span></p>
+        <p class="body" style="text-align:center;margin-top:30px;max-width:none">Ongoing HCM support after go-live. <span class="hi">Most callbacks inside the hour.</span></p>
       </div>`,
     draw(root, lt, dur) {
       const lp = E.easeOutBack(seg(lt, 0.06, 0.68));
@@ -433,7 +434,7 @@ const SCENES = [
     html: `
       <div class="ghost">OUTCOMES</div>
       <div class="pad">
-        ${eyebrow('The point of all of it')}
+        ${eyebrow('Operational impact')}
         <h1 class="serif sm" data-h1>${typeset('From system problems|to *measurable outcomes*.')}</h1>
       </div>`,
     draw(root, lt, dur) {
