@@ -382,7 +382,7 @@ const SCENES = [
           <div class="sclogo" data-w role="img" aria-label="SmartCare by Align HCM">${SMARTCARE_SVG}</div>
           <span class="br" data-r>}</span>
         </div>
-        <p class="body" style="text-align:center;margin-top:30px;max-width:none">Ongoing HCM support after go-live. <span class="hi">Most callbacks inside the hour.</span></p>
+        <p class="body" style="text-align:center;margin-top:30px;max-width:none">Ongoing support, platform optimization, and <span class="hi">expert help after go-live</span>.</p>
       </div>`,
     draw(root, lt, dur) {
       const lp = E.easeOutBack(seg(lt, 0.06, 0.68));
@@ -476,7 +476,7 @@ const SCENES = [
         <div data-lock>${lockupSVG('l12', 940)}</div>
         <div class="lockup-cap" data-cap>Human Capital Management</div>
         <div class="hairline" data-hair></div>
-        <div class="tag" data-tag>Built for the people <span class="accent">who keep it running.</span></div>
+        <div class="tag" data-tag>Align moves at your speed.<br><span class="accent">Which is always right now.</span></div>
         <div class="url" data-url>ALIGNHCM.COM</div>
       </div>`,
     draw(root, lt, dur) {

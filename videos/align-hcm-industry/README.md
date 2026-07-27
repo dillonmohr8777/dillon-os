@@ -4,7 +4,7 @@ One film covering all five industries, on a light stage: white paper, blue and
 orange type, dimensional icon tiles, and one image per industry taken from that
 industry's own page.
 
-`align-hcm-industries.mp4` — 61.0s, 1920x1080, 30fps, H.264, silent.
+`align-hcm-industries.mp4` — 67.2s, 1920x1080, 30fps, H.264, silent.
 
 ## Where the copy comes from
 
@@ -49,27 +49,34 @@ a beat, the neighbours sit blurred and desaturated at the edges to imply the
 strip continues, and progress bars track position. The scroll is a staircase
 eased at the risers, so it holds to be read and then glides.
 
-**Public sector is the exception.** There is no public sector page or hero
-anywhere on the industry hub or on alignhcm.com, so rather than borrow another
-industry's illustration its cel is typographic: Align's own public sector line
-from the Align in Motion frames, set on the brand navy. A dark cel among four
-light ones reads as a deliberate change of register rather than a gap. To switch
-it to artwork, drop a hero at `assets/heroes/public.jpg` and delete the `cel`
-entry in `INDUSTRIES`.
+**Public sector has no page of its own**, so it borrows the `support` hero: a
+dispatch desk and a headset, which is the closest thing among the hub's nine
+illustrations to the work those teams actually do. `media.py` prepares all nine;
+`build.py` inlines only the six on screen, or the page carries three megabytes of
+artwork it never draws.
 
-The orbit still carries eight marks, two per industry, because no public sector
-client roster exists on the hub to draw from.
+The orbit carries eight marks, two per industry, because no public sector client
+roster exists on the hub to draw from.
 
-**The orbit** (`s6`). Client marks ride a ring around the Align mark, joined by
-spokes with a signal pulsing outward along each one. Align sits at the centre of
-the operation, which is the idea the scene exists to state. The ring turns
-slowly and each chip counter turns so the marks stay level. Two of the biggest
-names per industry, eight in total, **in their own colours** on white chips, so
-nothing is knocked out or recoloured.
+**The ink reveal** (`s0`). The full lockup is masked by a rectangle sweeping left
+to right. That rectangle is displaced by fractal noise and blurred, so its leading
+edge behaves like ink spreading into paper rather than a hard wipe. The filter sits
+on the **mask**, never on the artwork, so the logo itself stays perfectly sharp
+while its reveal edge goes organic. A warm bloom rides just behind the front.
 
-The ring geometry is load bearing: centre at x 1408 with radius 306 and 156px
-chips means the artwork reaches to x 1024, and the copy column stops at 944.
-Change one and check the other.
+**The orbit** (`s6`). Client marks ride a ring around the **full Align lockup**,
+wordmark and mark, not the standalone icon. Spokes join each mark to the centre
+with a signal pulsing outward along them. The ring turns slowly and each chip
+counter turns so the marks stay level. Two of the biggest names per industry,
+eight in total, **in their own colours** on white chips, so nothing is knocked out
+or recoloured.
+
+The hub is clip-masked by `drawLockup` like every other lockup in the set, so it
+needs that call in `draw` or it renders as an empty circle with three loose dots.
+
+The ring geometry is load bearing: centre at x 1400 with radius 322 and 156px
+chips means the artwork reaches to x 1000, the copy column stops at 944, and the
+380px hub clears the inner dashed ring at r 238. Change one and check the rest.
 
 ## Icons
 

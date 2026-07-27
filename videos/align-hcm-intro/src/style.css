@@ -331,7 +331,7 @@ p.body .hi { color: #fff; font-weight: 600; }
 .endcard .hairline { width: 150px; height: 1.5px; margin: 56px 0 44px; background: linear-gradient(90deg, rgba(240,153,76,0), rgba(240,153,76,.9), rgba(240,153,76,0)); transform-origin: center; }
 .endcard .tag {
   font-family: var(--serif); font-style: italic; font-weight: 700;
-  font-size: 70px; color: #fff; text-align: center;
+  font-size: 64px; line-height: 1.22; color: #fff; text-align: center;
 }
 .endcard .tag .accent { color: var(--orange); text-shadow: 0 0 36px rgba(240,153,76,.4); }
 .endcard .url { margin-top: 42px; font-size: 28px; font-weight: 600; letter-spacing: .38em; color: var(--orange); }

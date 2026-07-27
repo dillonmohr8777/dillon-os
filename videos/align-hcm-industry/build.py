@@ -66,8 +66,11 @@ def js_literal(name, obj):
 
 
 def assets_js():
+    # media.py prepares all nine hub heroes; only inline the ones on screen, or
+    # the page carries three megabytes of artwork it never draws.
+    used = ('hub', 'healthcare', 'public', 'retail', 'services', 'manufacturing')
     heroes = {p.stem: f'"{jpeg_uri(p, HERO_W, HERO_Q)}"'
-              for p in sorted((ASSETS / 'heroes').glob('*.jpg'))}
+              for p in sorted((ASSETS / 'heroes').glob('*.jpg')) if p.stem in used}
 
     clients = []
     for p in sorted((ASSETS / 'clients').glob('*.png')):

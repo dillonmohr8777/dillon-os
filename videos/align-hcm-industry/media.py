@@ -31,12 +31,19 @@ REFETCH = '--refetch' in sys.argv
 PANEL = (960, 1080)          # the half frame the video shows
 CROP_ANCHOR = 0.34           # 0 is top, 1 is bottom; faces sit high in these
 
+# All nine hero illustrations on the hub, one per page. Public sector has no page
+# of its own, so it borrows the support hero: a dispatch desk and a headset, which
+# is the closest thing on the site to the work public sector teams actually do.
 HEROES = {
     'hub': '/assets/heroes/industry-hub-v2.webp',
     'manufacturing': '/assets/heroes/manufacturing-v3.webp',
     'healthcare': '/assets/heroes/healthcare-v2.webp',
     'retail': '/assets/heroes/retail-hospitality-v4.webp',
     'services': '/assets/heroes/services-distribution-v5.webp',
+    'public': '/assets/heroes/support.webp',
+    'implementation': '/assets/heroes/implementation.webp',
+    'payroll': '/assets/heroes/managed-payroll.webp',
+    'signature': '/assets/heroes/signature-services.webp',
 }
 
 # A readable cross section of the manufacturing roster on the industry page.

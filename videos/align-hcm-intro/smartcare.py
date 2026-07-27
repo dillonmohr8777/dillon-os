@@ -39,7 +39,7 @@ SS = 5                 # supersample before tracing
 SAT_NEUTRAL = 0.18     # below this a pixel is grey, not brand colour
 TAGLINE_BAND = (268, 354)   # the only chromatic content in this y range
 ALPHA = 60             # keep the anti-aliased rim; erosion shows as chewed arcs
-TURD = SS * SS * 24    # despeckle: under about 24 source pixels is boundary crumb
+TURD = SS * SS * 12    # despeckle: under about 12 source pixels is boundary crumb
 
 NEUTRAL_FILL = '#3f3f3f'   # the wordmark grey, sampled from the artwork
 HEART_FILL = '#f07818'
@@ -58,22 +58,42 @@ def layers(im):
 
     neutral = opaque & (sat < SAT_NEUTRAL)
     chroma = opaque & (sat >= SAT_NEUTRAL)
-    return neutral, chroma & ~band, chroma & band
+    tagline = chroma & band
+
+    # The tagline is set with a thin dark outline. It is neutral by the
+    # saturation test, so it lands in the neutral layer and traces as grey
+    # crumbs sitting on top of the orange letters. Drop any neutral pixel in the
+    # band that touches the tagline: the two separator dots are isolated from the
+    # letterforms and survive, and the heart swoosh runs well clear to the left.
+    def as_img(m):
+        return Image.fromarray((m * 255).astype(np.uint8), 'L')
+
+    near_tag = np.asarray(as_img(tagline).filter(ImageFilter.MaxFilter(7))) > 127
+    # The heart swoosh also crosses the band and passes behind the letters, so
+    # protect anything thick: erode hard enough that only the swoosh core
+    # survives, then dilate it back to full width.
+    thick = as_img(np.asarray(as_img(neutral).filter(ImageFilter.MinFilter(9))) > 127)
+    swoosh = np.asarray(thick.filter(ImageFilter.MaxFilter(15))) > 127
+    neutral = neutral & ~(band & near_tag & ~swoosh)
+
+    return neutral, chroma & ~band, tagline
 
 
 def trace(mask):
     """mask -> svg path data.
 
-    Two median passes first: the source is a web raster and its layer boundaries
-    are full of single pixel anti-aliasing crumbs that otherwise trace as
-    hundreds of specks and chew notches out of the arcs. Then supersample and
-    blur so potrace sees smooth edges rather than a staircase.
+    Order matters. Cleaning the mask at source resolution destroys thin features:
+    a median pass eats the tapering tip of the heart swoosh and leaves a fat
+    angular wedge beside the word Stabilize. So upscale first with NEAREST, which
+    preserves the geometry exactly as blocks, then blur and re-threshold at the
+    supersampled scale. That rounds the staircase without touching anything
+    narrower than the blur radius, and turdsize alone handles the anti-aliasing
+    crumbs along the layer boundaries.
     """
     img = Image.fromarray((mask * 255).astype(np.uint8), 'L')
-    img = img.filter(ImageFilter.MedianFilter(3)).filter(ImageFilter.MedianFilter(3))
-    img = img.resize((img.width * SS, img.height * SS), Image.LANCZOS)
-    img = img.filter(ImageFilter.GaussianBlur(SS * 0.7))
-    big = np.asarray(img) > 118
+    img = img.resize((img.width * SS, img.height * SS), Image.NEAREST)
+    img = img.filter(ImageFilter.GaussianBlur(SS * 0.75))
+    big = np.asarray(img) > 128
 
     # potrace traces the zero regions, so hand it the inverse
     curves = list(potrace.Bitmap(~big).trace(turdsize=TURD, alphamax=1.0,

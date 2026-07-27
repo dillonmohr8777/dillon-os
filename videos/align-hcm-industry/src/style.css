@@ -245,20 +245,44 @@ p.body .hi { color: var(--blue); font-weight: 700; }
 .stripdots { position: absolute; left: 0; right: 0; top: 986px; display: flex; justify-content: center; gap: 12px; }
 .stripdots i { display: block; width: 44px; height: 5px; border-radius: 3px; background: rgba(12,30,70,.13); will-change: background; }
 
+/* -------------------------------------------------------------- ink reveal */
+
+.inkstage { gap: 0; }
+.inkwrap { position: relative; }
+.inklockup { display: block; width: 1180px; height: auto; }
+.inklockup .slashO { fill: var(--orange); }
+.inklockup .slashW { fill: var(--blue); }
+.inklockup .dot    { fill: var(--orange); }
+.inklockup .word   { fill: var(--blue); }
+.inkcap {
+  margin-top: 26px; text-align: center;
+  font-size: 40px; font-weight: 700; letter-spacing: .215em; text-transform: uppercase;
+  color: var(--orange);
+}
+/* a warm bloom rides just behind the leading edge of the ink */
+.inkbloom {
+  position: absolute; left: 50%; top: 46%;
+  width: 620px; height: 620px; margin: -310px 0 0 -310px;
+  pointer-events: none; opacity: 0;
+  background: radial-gradient(closest-side, rgba(238,107,47,.34) 0%, rgba(249,164,92,.12) 46%, rgba(255,255,255,0) 100%);
+}
+.inkline { margin-top: 54px; text-align: center; font-size: 46px; }
+
 /* ------------------------------------------------------------------ orbit */
 
 /* Client marks ride a ring around the Align mark, joined to it by spokes with a
    pulse running outward. Align sits at the centre of the operation. */
-.orbit { position: absolute; left: 1408px; top: 528px; width: 0; height: 0; }
+.orbit { position: absolute; left: 1400px; top: 528px; width: 0; height: 0; }
 .orbit svg.wires { position: absolute; left: -500px; top: -500px; width: 1000px; height: 1000px; overflow: visible; }
 .orbit .hub {
-  position: absolute; left: 0; top: 0; width: 262px; height: 262px; margin: -131px 0 0 -131px;
+  position: absolute; left: 0; top: 0; width: 380px; height: 380px; margin: -190px 0 0 -190px;
   border-radius: 50%; background: #fff;
-  box-shadow: 0 26px 60px rgba(16,38,86,.20), 0 0 0 13px rgba(238,107,47,.07);
+  box-shadow: 0 30px 70px rgba(16,38,86,.22), 0 0 0 15px rgba(238,107,47,.07);
   display: flex; align-items: center; justify-content: center;
   will-change: transform, opacity;
 }
-.orbit .hub svg { width: 132px; height: 132px; display: block; }
+/* the real lockup, wordmark and mark, not just the icon */
+.orbit .hub .lockup { width: 268px; height: auto; display: block; }
 .chip {
   position: absolute; left: 0; top: 0;
   width: 156px; height: 156px; margin: -78px 0 0 -78px;

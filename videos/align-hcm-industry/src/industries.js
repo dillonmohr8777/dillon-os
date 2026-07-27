@@ -12,44 +12,82 @@
 const TITLE = 'Align HCM · Industry Solutions';
 const FOOTER = '· Industry Solutions ·';
 
-/* One image per industry, taken from that industry's own page.
- *
- * Public sector is the exception and carries a type cel instead. There is no
- * public sector page or hero on the industry hub, so rather than borrow another
- * industry's illustration this quotes Align's own public sector line from the
- * Align in Motion frames. Drop a hero at assets/heroes/public.jpg and delete the
- * `cel` entry to switch it to artwork like the rest. */
+/* One image per industry, from the nine hero illustrations on the hub. Public
+ * sector has no page of its own, so it borrows the support hero: a dispatch desk
+ * and a headset, the closest thing on the site to the work those teams do. */
 const INDUSTRIES = [
   ['healthcare', 'Healthcare', 'Coverage protects care.'],
-  ['public', 'Public Sector', 'Essential services never stop.',
-    `<div class="typecel">
-       <span class="mark">Public Sector</span>
-       <h3>At 3 a.m.,<br>someone&rsquo;s<br><em>still on shift</em>.</h3>
-       <p>Water keeps running, roads stay clear,<br>and calls get answered.</p>
-     </div>`],
+  ['public', 'Public Sector', 'Water runs, roads stay clear, and calls get answered.'],
   ['retail', 'Retail &amp; Hospitality', 'Staffing shapes the customer experience.'],
   ['services', 'Services &amp; Distribution', 'Every handoff affects delivery and trust.'],
   ['manufacturing', 'Manufacturing', 'Every assignment affects output, safety, and margin.'],
 ];
 
 const CEL_W = 620, CEL_GAP = 44, CEL_STEP = CEL_W + CEL_GAP;   /* must match .cel in style.css */
-const ORBIT_R = 306;
-
-/* the official Align mark, from /hubfs/Site Images/Align Favicon.svg */
-const ALIGN_MARK = `
-<svg viewBox="0 0 720 720">
-  <polygon fill="#ee6b2f" points="480 600.5 363.4 600.5 0 102 116.6 102"/>
-  <polygon fill="#16326e" points="637.4 600.5 520.8 600.5 157.4 102 274 102"/>
-  <circle fill="#ee6b2f" cx="400.9" cy="145.2" r="64.4"/>
-  <circle fill="#ee6b2f" cx="535.9" cy="315.3" r="64.4"/>
-  <circle fill="#ee6b2f" cx="655.6" cy="482.8" r="64.4"/>
-</svg>`;
+const ORBIT_R = 322;
 
 const SCENES = [
 
+  /* 0. the ink reveal ---------------------------------------------------- */
+  /* The lockup is masked by a rectangle sweeping left to right. That rectangle
+     is displaced by fractal noise and blurred, so its leading edge behaves like
+     ink spreading into paper rather than a hard wipe. The filter is on the mask,
+     never on the artwork, so the logo itself stays perfectly sharp. */
+  {
+    id: 's0', in: 0.0, out: 6.2,
+    html: `
+      <div class="center inkstage">
+        <div class="inkwrap">
+          <svg class="inklockup" viewBox="-30 -30 750 310">
+            <defs>
+              <filter id="inkbleed" x="-35%" y="-55%" width="170%" height="210%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.008 0.015"
+                  numOctaves="4" seed="9" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="58"
+                  xChannelSelector="R" yChannelSelector="G" result="d"/>
+                <feGaussianBlur in="d" stdDeviation="5"/>
+              </filter>
+              <mask id="inkmask" maskUnits="userSpaceOnUse" x="-90" y="-90" width="900" height="440">
+                <rect data-front x="-90" y="-90" width="0" height="440" fill="#fff" filter="url(#inkbleed)"/>
+              </mask>
+            </defs>
+            <g mask="url(#inkmask)">${lockupSVG('link', 690).replace(/^\s*<svg[^>]*>|<\/svg>\s*$/g, '')}</g>
+          </svg>
+          <div class="inkcap" data-cap>Human Capital Management</div>
+          <div class="inkbloom" data-bloom></div>
+        </div>
+        <p class="body inkline" data-line>None of this <span class="hi">happens by accident</span>.</p>
+      </div>`,
+    draw(root, lt, dur) {
+      /* the lockup's own wipe animations are not wanted here; the ink front is
+         the reveal, so the clip rects are opened all the way up front */
+      drawLockup(root, 'link', 1);
+
+      const front = q(root, '[data-front]');
+      const p = E.easeInOutQuart(seg(lt, 0.25, 2.5));
+      front.setAttribute('width', (p * 900).toFixed(1));
+
+      /* a warm bloom rides just behind the leading edge */
+      const bloom = q(root, '[data-bloom]');
+      bloom.style.opacity = (pulse(lt, 0.3, 0.8, 2.1, 2.9) * 0.9).toFixed(3);
+      bloom.style.transform = `translate3d(${(-420 + p * 900).toFixed(0)}px,0,0)`;
+
+      const cap = q(root, '[data-cap]');
+      const cp = E.easeOutCubic(seg(lt, 2.15, 2.95));
+      cap.style.opacity = cp.toFixed(3);
+      cap.style.letterSpacing = `${lerp(0.42, 0.215, cp).toFixed(4)}em`;
+
+      const line = q(root, '[data-line]');
+      const lp = E.easeOutQuart(seg(lt, 2.9, 3.8));
+      line.style.opacity = lp.toFixed(3);
+      line.style.transform = `translate3d(0,${((1 - lp) * 26).toFixed(1)}px,0)`;
+      line.style.filter = lp >= 1 ? 'none' : `blur(${((1 - lp) * 10).toFixed(1)}px)`;
+    },
+  },
+
   /* 1. hero -------------------------------------------------------------- */
   {
-    id: 's1', in: 0.0, out: 5.6,
+    id: 's1', in: 6.2, out: 11.8,
     html: split('art-left', 'hub', `
       ${eyebrow('Industry solutions')}
       <h1 class="serif lg" data-h1>${typeset('Workforce technology|for the work *every|industry depends on*.')}</h1>`),
@@ -62,7 +100,7 @@ const SCENES = [
 
   /* 2. the turn ----------------------------------------------------------- */
   {
-    id: 's2', in: 5.6, out: 10.2,
+    id: 's2', in: 11.8, out: 16.4,
     html: `
       <div class="ghost">ESSENTIAL WORK</div>
       <div class="pad">
@@ -80,13 +118,13 @@ const SCENES = [
 
   /* 3. the filmstrip ------------------------------------------------------ */
   {
-    id: 's3', in: 10.2, out: 26.6,
+    id: 's3', in: 16.4, out: 32.8,
     html: `
       <div class="strip">
         <div class="halo" data-halo></div>
         <div class="track" data-track>
-          ${INDUSTRIES.map(([key, , , cel]) => `
-            <div class="cel">${cel || `<div class="img" style="background-image:url(${HEROES[key]})"></div>`}</div>`).join('')}
+          ${INDUSTRIES.map(([key]) => `
+            <div class="cel"><div class="img" style="background-image:url(${HEROES[key]})"></div></div>`).join('')}
         </div>
       </div>
       <div class="striplabel"><div class="slot">
@@ -130,7 +168,7 @@ const SCENES = [
 
   /* 4. operational realities ---------------------------------------------- */
   {
-    id: 's4', in: 26.6, out: 32.8,
+    id: 's4', in: 32.8, out: 39.0,
     html: `
       <div class="pad">
         ${eyebrow('Operational realities')}
@@ -154,7 +192,7 @@ const SCENES = [
 
   /* 5. how Align helps ------------------------------------------------------ */
   {
-    id: 's5', in: 32.8, out: 39.6,
+    id: 's5', in: 39.0, out: 45.8,
     html: `
       <div class="pad">
         ${eyebrow('How Align helps')}
@@ -180,22 +218,22 @@ const SCENES = [
 
   /* 6. the orbit ------------------------------------------------------------ */
   {
-    id: 's6', in: 39.6, out: 49.8,
+    id: 's6', in: 45.8, out: 56.0,
     html: `
       <div class="pad" style="right:944px">
         ${eyebrow('Trusted across industries')}
-        <h1 class="serif sm" data-h1 style="font-size:66px">${typeset('One partner at the center|of the *workforce operation*.')}</h1>
-        <p class="body" style="font-size:27px;max-width:700px">Healthcare, manufacturing, retail and hospitality,
-          services and distribution. <span class="hi">One connected operation.</span></p>
+        <h1 class="serif sm" data-h1 style="font-size:70px">${typeset('Different industries.|Different platforms.|*The same team*.')}</h1>
+        <p class="body" style="font-size:27px;max-width:660px">Healthcare, public sector, manufacturing,
+          retail and hospitality, services and distribution.</p>
       </div>
       <div class="orbit">
         <svg class="wires" viewBox="-500 -500 1000 1000">
           <circle data-ring0 cx="0" cy="0" r="${ORBIT_R}" fill="none" stroke="rgba(22,50,110,.13)" stroke-width="1.5" stroke-dasharray="7 11"/>
-          <circle data-ring1 cx="0" cy="0" r="188" fill="none" stroke="rgba(238,107,47,.20)" stroke-width="1.5" stroke-dasharray="3 9"/>
+          <circle data-ring1 cx="0" cy="0" r="238" fill="none" stroke="rgba(238,107,47,.20)" stroke-width="1.5" stroke-dasharray="3 9"/>
           <g data-spokes></g>
           <g data-pulses></g>
         </svg>
-        <div class="hub" data-hub>${ALIGN_MARK}</div>
+        <div class="hub" data-hub>${lockupSVG('lhub', 300)}</div>
         ${CLIENTS.map(c => `<div class="chip"><img src="${c.src}" alt="${c.name}"></div>`).join('')}
       </div>`,
     draw(root, lt, dur) {
@@ -220,6 +258,8 @@ const SCENES = [
       const hub = q(root, '[data-hub]');
       hub.style.opacity = clamp01(hubP * 1.4).toFixed(3);
       hub.style.transform = `scale(${Math.max(0, hubP).toFixed(3)})`;
+      /* the lockup inside the hub assembles as the circle lands */
+      drawLockup(root, 'lhub', seg(lt, 0.45, 1.7));
 
       /* the ring turns slowly; each chip counter turns, so marks stay level */
       const spin = lerp(-9, 9, seg(lt, 0, dur)) * Math.PI / 180;
@@ -255,7 +295,7 @@ const SCENES = [
 
   /* 7. SmartCare ------------------------------------------------------------ */
   {
-    id: 's7', in: 49.8, out: 55.0,
+    id: 's7', in: 56.0, out: 61.2,
     html: `
       <div class="center">
         <div class="scmark" data-mark role="img" aria-label="SmartCare by Align HCM">${SMARTCARE_SVG}</div>
@@ -275,13 +315,13 @@ const SCENES = [
 
   /* 8. end card -------------------------------------------------------------- */
   {
-    id: 's8', in: 55.0, out: 61.0,
+    id: 's8', in: 61.2, out: 67.2,
     html: `
       <div class="endcard">
         <div data-lock>${lockupSVG('lend', 940)}</div>
         <div class="lockup-cap" data-cap>Human Capital Management</div>
         <div class="hairline" data-hair></div>
-        <div class="tag" data-tag>Built for the people <span class="accent">who keep it running.</span></div>
+        <div class="tag" data-tag>Align moves at your speed.<br><span class="accent">Which is always right now.</span></div>
         <div class="url" data-url>ALIGNHCM.COM</div>
       </div>`,
     draw(root, lt) {
