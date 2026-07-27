@@ -2,8 +2,8 @@
 """Synthesise the 45 second underscore for the Align HCM brand intro.
 
 Deliberately restrained: a low D minor pad, a slow heartbeat pulse, noise
-risers landing on the two hero moments (the logo burst at 10.0s and the end
-card at 40.2s), a tighter pulse under the service ticker, and a lift into a
+risers landing on the two hero moments (the logo burst at 13.0s and the end
+card at 46.8s), a tighter pulse under the service ticker, and a lift into a
 suspended resolve for the tagline. Writes build/underscore.wav.
 
     pip install numpy && python3 audio.py
@@ -15,13 +15,13 @@ import wave
 import numpy as np
 
 SR = 48000
-DUR = 45.0
+DUR = 52.6
 N = int(SR * DUR)
 T = np.arange(N) / SR
 
-BURST = 10.0     # logo assembles
-TICKER = 19.6    # service ticker starts
-ENDCARD = 40.2   # end card
+BURST = 13.0     # logo assembles
+TICKER = 25.6    # service ticker starts
+ENDCARD = 46.8   # end card
 
 rng = np.random.default_rng(11)
 

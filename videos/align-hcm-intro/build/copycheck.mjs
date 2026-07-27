@@ -12,9 +12,14 @@ const lines = await p.evaluate(() => {
   return out;
 });
 await b.close();
+// The one hyphen we mean to ship. Everything else is still a failure.
+const ALLOWED = ['Go-live'];
+
 let bad = 0;
 for (const [id, txt] of lines) {
-  const hits = txt.match(/[-‐-―−]/g);
+  let scan = txt;
+  for (const ok of ALLOWED) scan = scan.split(ok).join('');
+  const hits = scan.match(/[-‐-―−]/g);
   console.log((hits ? 'DASH ' : '  ok ') + id.padEnd(6) + ' ' + txt);
   if (hits) bad++;
 }

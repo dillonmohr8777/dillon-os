@@ -1,6 +1,6 @@
-# Align HCM · Brand Intro (45s)
+# Align HCM · Brand Intro (52.6s)
 
-A 45 second animated brand introduction for Align HCM. Deep navy stage, orange
+A 53 second animated brand introduction for Align HCM. Deep navy stage, orange
 accent, high contrast serif headlines, per letter kinetic reveals, and the logo
 lockup assembling out of a light burst. The look is taken from the supplied
 Align stills; the motion language is taken from the supplied reference video.
@@ -94,25 +94,39 @@ ship standalone in `assets/icons/` for decks, the site, and one pagers.
 
 ## Scene map
 
-| # | In | Out | Beat |
-| --- | --- | --- | --- |
-| 1 | 0.0 | 3.2 | "You picked the platform." Ghost word `HCM`. |
-| 2 | 3.2 | 6.3 | "Now the **hard part** starts." Ghost `NOW WHAT`. |
-| 3 | 6.3 | 10.0 | "Every rollout hits the same five walls." Friction chips stagger in. |
-| 4 | 10.0 | 12.6 | Light burst, logo assembles. |
-| 5 | 12.6 | 15.6 | "We are the team that **finishes it**." Ghost `SPECIALISTS`. |
-| 6 | 15.6 | 19.6 | Platform logos: UKG, Dayforce, Workday, ADP. |
-| 7 | 19.6 | 23.6 | Service ticker, ten services and icons snapping through focus. |
-| 8 | 23.6 | 26.6 | The SmartCare mark. "Most callbacks inside the hour." |
-| 9 | 26.6 | 30.0 | Counter rolls to `100+` five star reviews. |
-| 10 | 30.0 | 33.4 | St. Petersburg / Toronto. Nine to nine, seven days. |
-| 11 | 33.4 | 37.0 | "From system problems to **measurable outcomes**." Ghost `OUTCOMES`. |
-| 12 | 37.0 | 40.2 | "Kill complexity." with a light sweep. |
-| 13 | 40.2 | 45.0 | End card: lockup, tagline, alignhcm.com. |
+| # | In | Out | Len | Beat |
+| --- | --- | --- | --- | --- |
+| 1 | 0.0 | 4.2 | 4.2 | "You picked the platform." Ghost word `HCM`. |
+| 2 | 4.2 | 8.3 | 4.1 | "Now the **hard part** starts." Ghost `NOW WHAT`. |
+| 3 | 8.3 | 13.0 | 4.7 | "Every rollout hits the same five walls." Friction pills stagger in. |
+| 4 | 13.0 | 16.6 | 3.6 | Light burst, logo assembles. |
+| 5 | 16.6 | 20.6 | 4.0 | "We are the team that **finishes it**." Ghost `SPECIALISTS`. |
+| 6 | 20.6 | 25.6 | 5.0 | Platform logos: UKG, Dayforce, Workday, ADP. |
+| 7 | 25.6 | 29.6 | 4.0 | Service ticker, ten services and icons snapping through focus. |
+| 8 | 29.6 | 33.6 | 4.0 | The SmartCare mark. "Most callbacks inside the hour." |
+| 9 | 33.6 | 38.0 | 4.4 | Counter rolls to `100+` five star reviews. |
+| 10 | 38.0 | 42.6 | 4.6 | "From system problems to **measurable outcomes**." Ghost `OUTCOMES`. |
+| 11 | 42.6 | 46.8 | 4.2 | "Kill complexity." with a light sweep. |
+| 12 | 46.8 | 52.6 | 5.8 | End card: lockup, tagline, alignhcm.com. |
+
+### Retiming
+
+Every scene carries **one extra second of hold** over the first cut, so each
+line has room to land. Scene 7 is the exception and stays at exactly 4.0s: the
+ticker scroll is derived from its own duration, so lengthening the scene would
+slow the list down, and the list already reads at the right pace.
+
+Content animations are keyed to absolute times local to their scene, not to
+fractions of the duration, so changing an `out` value only extends the hold at
+the end. Two things do read `dur` and will change if you retime: the ghost
+watermark drift, and the ticker scroll in scene 7.
 
 Every claim on screen traces to alignhcm.com. No invented numbers.
 
-House rule for this piece: **no dashes in any on screen copy.**
+House rule for this piece: **no dashes in any on screen copy**, with exactly
+one deliberate exception, `Go-live`, which is the industry term and how Align
+writes it. `build/copycheck.mjs` allowlists that single string and still fails
+on anything else, so the rule keeps catching accidents.
 
 ## How it works
 
@@ -144,7 +158,7 @@ python3 build.py                 # regenerate index.html
 # 2. preview: open index.html in a browser and use the scrubber
 
 # 3. render
-node render.mjs --jobs 3         # about 8 minutes for the full 45s
+node render.mjs --jobs 3         # about 10 minutes for the full 52.6s
 ```
 
 Regenerate assets only when they change:

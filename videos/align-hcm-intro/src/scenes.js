@@ -8,7 +8,7 @@
  */
 
 const FPS = 30;
-const DURATION = 45.0;
+const DURATION = 52.6;
 
 /* ------------------------------------------------------------------ easing */
 
@@ -203,13 +203,15 @@ function icon(name, cls = '') {
   return `<svg class="ico ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor"
     stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]}</svg>`;
 }
-const FRICTION = ['Data conversion', 'Integrations', 'Parallel payroll', 'Go live', 'Adoption'];
+// "Go-live" is the one deliberate hyphen on screen: it is the industry term,
+// and Align writes it that way. build/copycheck.mjs allowlists it.
+const FRICTION = ['Data conversion', 'Integrations', 'Parallel payroll', 'Go-live', 'Adoption'];
 
 const SCENES = [
 
   /* 1. cold open ------------------------------------------------------- */
   {
-    id: 's1', in: 0.0, out: 3.2,
+    id: 's1', in: 0.0, out: 4.2,
     html: `
       <div class="ghost wide">HCM</div>
       <div class="pad">
@@ -225,7 +227,7 @@ const SCENES = [
 
   /* 2. the turn -------------------------------------------------------- */
   {
-    id: 's2', in: 3.2, out: 6.3,
+    id: 's2', in: 4.2, out: 8.3,
     html: `
       <div class="ghost">NOW WHAT</div>
       <div class="pad">
@@ -245,7 +247,7 @@ const SCENES = [
 
   /* 3. the same five walls, chips stagger in --------------------------- */
   {
-    id: 's3', in: 6.3, out: 10.0,
+    id: 's3', in: 8.3, out: 13.0,
     html: `
       <div class="pad" style="right:840px">
         ${eyebrow('The pattern')}
@@ -258,17 +260,21 @@ const SCENES = [
       showEyebrow(root, lt, 0.08);
       revealChars(q(root, '[data-h1]'), lt, 0.24, { per: 0.019, dur: 0.6 });
       qa(root, '.chip').forEach((c, i) => {
-        const s = 0.9 + i * 0.19;
-        const p = E.easeOutBack(seg(lt, s, s + 0.52));
+        const s = 0.9 + i * 0.2;
+        const p = E.easeOutBack(seg(lt, s, s + 0.56));
+        const flare = pulse(lt, s, s + 0.26, s + 0.5, s + 1.3);
         c.style.opacity = E.easeOutCubic(seg(lt, s, s + 0.3)).toFixed(3);
-        c.style.transform = `translate3d(${((1 - p) * 70).toFixed(2)}px,0,0) scale(${lerp(0.9, 1, clamp01(p)).toFixed(3)})`;
+        c.style.transform = `translate3d(${((1 - p) * 86).toFixed(2)}px,0,0) scale(${lerp(0.86, 1, clamp01(p)).toFixed(3)})`;
+        c.style.boxShadow = `0 20px 54px rgba(4,8,18,.55), `
+          + `0 0 ${(26 + flare * 54).toFixed(0)}px rgba(240,120,50,${(0.18 + flare * 0.42).toFixed(3)}), `
+          + `inset 0 1px 0 rgba(255,214,170,${(0.14 + flare * 0.22).toFixed(3)})`;
       });
     },
   },
 
   /* 4. burst into the logo --------------------------------------------- */
   {
-    id: 's4', in: 10.0, out: 12.6,
+    id: 's4', in: 13.0, out: 16.6,
     html: `
       <div class="burst"></div>
       <div class="ring"></div>
@@ -295,7 +301,7 @@ const SCENES = [
 
   /* 5. who we are ------------------------------------------------------ */
   {
-    id: 's5', in: 12.6, out: 15.6,
+    id: 's5', in: 16.6, out: 20.6,
     html: `
       <div class="ghost">SPECIALISTS</div>
       <div class="pad">
@@ -313,7 +319,7 @@ const SCENES = [
 
   /* 6. platform grid --------------------------------------------------- */
   {
-    id: 's6', in: 15.6, out: 19.6,
+    id: 's6', in: 20.6, out: 25.6,
     html: `
       <div class="pad" style="left:130px;right:130px">
         ${eyebrow('One partner, every platform')}
@@ -338,7 +344,7 @@ const SCENES = [
 
   /* 7. what we do, ticker ---------------------------------------------- */
   {
-    id: 's7', in: 19.6, out: 23.6,
+    id: 's7', in: 25.6, out: 29.6,
     html: `
       <div class="pad" style="justify-content:flex-start;padding-top:150px">${eyebrow('What we do')}</div>
       <div class="ticker">
@@ -367,7 +373,7 @@ const SCENES = [
 
   /* 8. SmartCare bracket ------------------------------------------------ */
   {
-    id: 's8', in: 23.6, out: 26.6,
+    id: 's8', in: 29.6, out: 33.6,
     html: `
       <div class="center">
         <div class="bracket">
@@ -395,7 +401,7 @@ const SCENES = [
 
   /* 9. the review count rolls up ---------------------------------------- */
   {
-    id: 's9', in: 26.6, out: 30.0,
+    id: 's9', in: 33.6, out: 38.0,
     html: `
       <div class="center">
         <div class="countline"><span class="num" data-num>0</span><span class="lab" data-lab>five star reviews</span></div>
@@ -421,36 +427,9 @@ const SCENES = [
     wash(lt) { return pulse(lt, 1.7, 1.82, 1.86, 2.3) * 0.2; },
   },
 
-  /* 10. two cities ------------------------------------------------------ */
+  /* 10. the outcome ----------------------------------------------------- */
   {
-    id: 's10', in: 30.0, out: 33.4,
-    html: `
-      <div class="pad">
-        <div class="split">
-          <div class="col" data-c0><div class="city">St. Petersburg</div><div class="reg">Florida</div></div>
-          <div class="divider" data-div></div>
-          <div class="col" data-c1><div class="city">Toronto</div><div class="reg">Ontario</div></div>
-        </div>
-        <p class="body" style="text-align:center;max-width:none;margin-top:66px">Nine a.m. to nine p.m. <span class="hi">Seven days a week.</span></p>
-      </div>`,
-    draw(root, lt, dur) {
-      [0, 1].forEach(i => {
-        const p = E.easeOutQuart(seg(lt, 0.1 + i * 0.14, 0.1 + i * 0.14 + 0.8));
-        const el = q(root, `[data-c${i}]`);
-        el.style.opacity = p.toFixed(3);
-        el.style.transform = `translate3d(${((1 - p) * (i ? 70 : -70)).toFixed(2)}px,0,0)`;
-        el.style.filter = p >= 1 ? 'none' : `blur(${((1 - p) * 10).toFixed(2)}px)`;
-      });
-      const dp = E.easeOutQuart(seg(lt, 0.3, 1.1));
-      const dv = q(root, '[data-div]');
-      dv.style.transform = `scaleY(${dp.toFixed(3)})`;
-      showBody(root, lt, 1.0);
-    },
-  },
-
-  /* 11. the outcome ----------------------------------------------------- */
-  {
-    id: 's11', in: 33.4, out: 37.0,
+    id: 's10', in: 38.0, out: 42.6,
     html: `
       <div class="ghost">OUTCOMES</div>
       <div class="pad">
@@ -464,9 +443,9 @@ const SCENES = [
     },
   },
 
-  /* 12. kill complexity, light sweep ------------------------------------ */
+  /* 11. kill complexity, light sweep ------------------------------------ */
   {
-    id: 's12', in: 37.0, out: 40.2,
+    id: 's11', in: 42.6, out: 46.8,
     html: `
       <div class="center">
         <div class="sweepwrap" style="font-family:var(--serif);font-weight:700;font-size:168px;letter-spacing:-.01em">
@@ -488,19 +467,19 @@ const SCENES = [
     },
   },
 
-  /* 13. end card, rebuilt from the supplied still ------------------------ */
+  /* 12. end card, rebuilt from the supplied still ------------------------ */
   {
-    id: 's13', in: 40.2, out: 45.0,
+    id: 's12', in: 46.8, out: 52.6,
     html: `
       <div class="endcard">
-        <div data-lock>${lockupSVG('l13', 940)}</div>
+        <div data-lock>${lockupSVG('l12', 940)}</div>
         <div class="lockup-cap" data-cap>Human Capital Management</div>
         <div class="hairline" data-hair></div>
         <div class="tag" data-tag>Built for the people <span class="accent">who keep it running.</span></div>
         <div class="url" data-url>ALIGNHCM.COM</div>
       </div>`,
     draw(root, lt, dur) {
-      drawLockup(root, 'l13', seg(lt, 0.1, 1.5));
+      drawLockup(root, 'l12', seg(lt, 0.1, 1.5));
       const lock = q(root, '[data-lock]');
       const lp = E.easeOutQuart(seg(lt, 0.05, 1.2));
       lock.style.transform = `scale(${lerp(0.94, 1, lp).toFixed(4)})`;

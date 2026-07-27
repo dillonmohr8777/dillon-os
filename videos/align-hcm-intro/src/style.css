@@ -179,17 +179,25 @@ p.body .hi { color: #fff; font-weight: 600; }
 
 /* --------------------------------------------------------------- s3 chips */
 
-.chips { position: absolute; right: 118px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: flex-end; gap: 22px; }
+.chips { position: absolute; right: 118px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: flex-end; gap: 26px; }
+
+/* Warm glass pills. These are the friction points, so they should read hot
+   against the cool stage rather than blend into it. */
 .chip {
-  padding: 20px 38px;
+  padding: 24px 48px;
   border-radius: 999px;
-  border: 1.5px solid rgba(240,153,76,.42);
-  background: rgba(18,28,52,.62);
-  font-size: 32px; font-weight: 600; letter-spacing: .01em;
-  color: #eaf0fb;
+  border: 2px solid rgba(244,150,80,.62);
+  background:
+    linear-gradient(135deg, rgba(240,90,40,.26) 0%, rgba(240,120,50,.10) 42%, rgba(16,26,50,.80) 100%);
+  font-size: 46px; font-weight: 700; letter-spacing: -.005em;
+  color: #f9b877;
+  text-shadow: 0 0 26px rgba(240,120,50,.55);
   white-space: nowrap;
-  will-change: transform, opacity;
-  box-shadow: 0 18px 50px rgba(4,8,18,.5);
+  will-change: transform, opacity, box-shadow;
+  box-shadow:
+    0 20px 54px rgba(4,8,18,.55),
+    0 0 26px rgba(240,120,50,.18),
+    inset 0 1px 0 rgba(255,214,170,.14);
 }
 
 /* ----------------------------------------------------------- s4 logo burst */
@@ -302,15 +310,7 @@ p.body .hi { color: #fff; font-weight: 600; }
 .stars { display: flex; justify-content: center; gap: 18px; margin-top: 34px; }
 .stars span { font-size: 52px; color: var(--orange); will-change: transform, opacity; }
 
-/* --------------------------------------------------------------- s10 split */
-
-.split { display: flex; align-items: center; justify-content: center; gap: 0; width: 100%; }
-.split .col { flex: 1; text-align: center; will-change: transform, opacity; }
-.split .city { font-family: var(--serif); font-weight: 700; font-size: 104px; color: #fff; }
-.split .reg  { margin-top: 16px; font-size: 26px; font-weight: 600; letter-spacing: .26em; color: var(--orange); text-transform: uppercase; }
-.split .divider { width: 2px; height: 190px; background: linear-gradient(180deg, rgba(240,153,76,0), rgba(240,153,76,.85), rgba(240,153,76,0)); transform-origin: center; }
-
-/* --------------------------------------------------------------- s12 sweep */
+/* --------------------------------------------------------------- s11 sweep */
 
 .sweepwrap { position: relative; display: inline-block; }
 .sweepwrap .base { color: #fff; }
@@ -324,7 +324,7 @@ p.body .hi { color: #fff; font-weight: 600; }
   pointer-events: none;
 }
 
-/* ------------------------------------------------------------- s13 endcard */
+/* ------------------------------------------------------------- s12 endcard */
 
 .endcard { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .endcard .hairline { width: 150px; height: 1.5px; margin: 56px 0 44px; background: linear-gradient(90deg, rgba(240,153,76,0), rgba(240,153,76,.9), rgba(240,153,76,0)); transform-origin: center; }
