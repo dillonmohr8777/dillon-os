@@ -77,7 +77,7 @@ prefix, and that distinction is preserved here:
 | File | Origin | Used for |
 |------|--------|----------|
 | `granite-park.jpg` | real capture | Granite Park card, Virtual Tour service |
-| `restaurant.jpg` | real capture | Chef's Table card, HD Photography service |
+| `restaurant.jpg` | real capture | The Larder card, HD Photography service |
 | `commercial-property.jpg` | real capture | Google Street View service |
 | `society-hill.webp` | concept | hero slide 1, Society Hill card, Local Buildout service |
 | `main-line-modern.webp` | concept | hero slide 2, Main Line card, Video Tour service, closing CTA |
@@ -114,16 +114,23 @@ Real, taken from Momentum's own site:
 * All three testimonials are reviews published on Momentum's own site
   (Charlene Mullholland of Sorella Boutique, Matt Borowsky, Aaron Weber)
 
-Still to confirm before launch:
+Written as demo content, not sourced:
 
-* **Tour card venue names and metrics.** Granite Park comes from the source
-  filename. Chef's Table, Society Hill Townhome, Old City Loft, Rittenhouse
-  Penthouse, and Main Line Modern are descriptive placeholders, and every square
-  footage, panorama count, and floor count is illustrative. Swap in real projects
-  and link each card to its live Matterport or Street View URL.
-* **Founder titles.** Both source files were named `founder-bio`, so Sean Boyle
-  reads as Founder of Momentum 360 and Mac Frederick as Founder of Momentum
-  Digital. Confirm both.
+* **Tour card entries.** Granite Park is the one name carried over from a source
+  filename. The Larder, Society Hill Row, Bank Street Loft, Locust Penthouse, and
+  Ardmore Modern are invented listing names, and every square footage, panorama
+  count, and floor count is invented to be internally plausible. Swap in real
+  projects when they're available and link each card to its live Matterport or
+  Street View URL.
+* **Founder titles.** Both source files were named `founder-bio`. Sean Boyle
+  reads as Co-Founder and Managing Partner, Mac Frederick as Founder of Momentum
+  Digital. Neither title is confirmed.
+
+Venue names are deliberately generic listing-style labels rather than real
+Philadelphia businesses. A "Captured work" chip next to an actual named business
+would assert a client relationship that hasn't been verified, so the chip appears
+only on the two cards whose photography is genuinely Momentum's own capture work,
+Granite Park and The Larder.
 
 ## Swapping content
 
