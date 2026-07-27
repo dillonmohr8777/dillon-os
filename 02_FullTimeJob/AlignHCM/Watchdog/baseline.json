@@ -56,7 +56,7 @@
     },
     {
       "month": "2026-07",
-      "views": 1650,
+      "views": 1663,
       "submissions": 29,
       "contacts": 18,
       "partial": true
@@ -81,8 +81,8 @@
       { "date": "2026-07-23", "views": 73, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
       { "date": "2026-07-24", "views": 66, "submissions": 4, "submissionsClean": 4, "contacts": 3 },
       { "date": "2026-07-25", "views": 24, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
-      { "date": "2026-07-26", "views": 18, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
-      { "date": "2026-07-27", "views": 0, "submissions": 0, "submissionsClean": 0, "contacts": 0, "partial": true }
+      { "date": "2026-07-26", "views": 20, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-27", "views": 11, "submissions": 0, "submissionsClean": 0, "contacts": 0, "partial": true }
     ]
   },
   "attribution_snapshot": {
@@ -294,7 +294,7 @@
     "wonRevenue": 54000,
     "lostValue": 361000
   },
-  "last_run": "2026-07-27 (Monday; preflight passed, MCP pulls, Monday SEO sweep; no new alert. Weekend 42 views/0 leads. Kaiser still closed-lost, not reopened. AEO up to 3 ChatGPT.)",
+  "last_run": "2026-07-27 (Monday, 2nd same-day refresh; no new alert, nothing material changed. Weekend 44 views/0 leads. Kaiser still closed-lost, not reopened. Revenue flat $2.74M/30. AEO 3 ChatGPT.)",
   "leading_indicators": {
     "asOf": "2026-07-27",
     "conversion_rate": {
@@ -306,7 +306,7 @@
         "2026-04": 0.0269,
         "2026-05": 0.0193,
         "2026-06": 0.0225,
-        "2026-07": 0.0176
+        "2026-07": 0.0174
       },
       "alert_floor": 0.012
     },
