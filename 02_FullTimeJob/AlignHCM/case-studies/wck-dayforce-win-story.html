@@ -1,0 +1,530 @@
+<title>World Central Kitchen Client Story | Align HCM</title>
+<style>
+  :root{
+    --navy:#0A1628;
+    --navy-band:#142A46;
+    --navy-card:#122540;
+    --orange:#F05A28;
+    --orange-soft:#E8832A;
+    --cream-a:#FDF7F0;
+    --cream-b:#F8EADC;
+    --card:#FDFAF6;
+    --rule:#E7D9C7;
+    --ink:#2D3748;
+    --ink-soft:#55637A;
+    --label:#8A93A4;
+    --sans:"Plus Jakarta Sans","DM Sans",Poppins,Barlow,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --pad:58px;
+  }
+
+  html{background:#EFE4D6;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  .sheet{
+    width:100%;
+    max-width:1320px;
+    margin:0 auto;
+    background:linear-gradient(180deg,var(--cream-a) 0%,var(--cream-b) 100%);
+    overflow:hidden;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--navy);
+    padding:64px var(--pad) 74px;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .hero-rings,.hero-art{position:absolute;inset:0;z-index:-1;pointer-events:none;}
+  .hero-rings{
+    background:
+      repeating-radial-gradient(circle at -60px -40px,
+        transparent 0 74px,
+        rgba(240,90,40,.16) 74px 76px,
+        transparent 76px 150px);
+    opacity:.85;
+  }
+  .hero-art{
+    left:52%;
+    background:
+      repeating-radial-gradient(circle at 116% 18%,
+        transparent 0 96px,
+        rgba(255,255,255,.10) 96px 98px,
+        transparent 98px 200px),
+      radial-gradient(circle at 74% 20%, rgba(255,255,255,.13) 0 26%, transparent 60%),
+      repeating-linear-gradient(118deg,
+        rgba(255,255,255,.075) 0 2px,
+        transparent 2px 14px),
+      repeating-linear-gradient(0deg,
+        rgba(255,255,255,.05) 0 1px,
+        transparent 1px 36px),
+      linear-gradient(160deg,#23384F 0%,#0D1E33 72%);
+    -webkit-mask-image:linear-gradient(100deg,transparent 0,rgba(0,0,0,.5) 22%,#000 58%);
+    mask-image:linear-gradient(100deg,transparent 0,rgba(0,0,0,.5) 22%,#000 58%);
+  }
+
+  .eyebrow{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin:0 0 22px;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.19em;
+    text-transform:uppercase;
+    color:var(--orange);
+  }
+  .eyebrow::before{
+    content:"";
+    width:44px;
+    height:3px;
+    background:var(--orange);
+    flex:none;
+  }
+
+  .hero h1{
+    margin:0 0 26px;
+    max-width:600px;
+    font-size:62px;
+    line-height:1.05;
+    font-weight:800;
+    letter-spacing:-.031em;
+    color:#fff;
+    text-wrap:balance;
+  }
+  .hero h1 em{font-style:normal;color:var(--orange);}
+
+  .lede{
+    margin:0;
+    max-width:53ch;
+    font-size:19.5px;
+    line-height:1.68;
+    color:rgba(255,255,255,.84);
+  }
+
+  /* ---------- stat band ---------- */
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:var(--navy-band);
+    padding-top:16px;
+  }
+  .stat{
+    padding:34px var(--pad) 36px;
+    background:var(--navy-band);
+  }
+  .stat:not(:first-child){padding-left:34px;padding-right:44px;}
+  .stat.up{
+    margin-top:-16px;
+    padding-top:50px;
+    background:var(--orange);
+  }
+  .stat b{
+    display:block;
+    font-size:52px;
+    line-height:1;
+    font-weight:800;
+    letter-spacing:-.028em;
+    color:#fff;
+    font-variant-numeric:tabular-nums;
+  }
+  .stat span{
+    display:block;
+    margin-top:12px;
+    font-size:12.5px;
+    font-weight:800;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    line-height:1.5;
+    color:rgba(255,255,255,.82);
+  }
+  .stat.up span{color:rgba(255,255,255,.92);}
+
+  /* ---------- three column cards ---------- */
+  .cols{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+    align-items:start;
+    padding:56px var(--pad) 0;
+  }
+  .col{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-top:7px solid var(--navy);
+    padding:30px 28px 34px;
+  }
+  .col h2{
+    margin:0 0 16px;
+    font-size:15px;
+    font-weight:800;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--orange);
+  }
+  .col p{
+    margin:0;
+    font-size:17px;
+    line-height:1.72;
+    color:var(--ink);
+  }
+
+  /* ---------- operating reality ---------- */
+  .reality{
+    margin:34px var(--pad) 0;
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--orange);
+    padding:32px 34px 26px;
+  }
+  .reality h2{
+    margin:0 0 22px;
+    font-size:15px;
+    font-weight:800;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--navy);
+  }
+  .reality ul{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px 44px;
+    margin:0 0 26px;
+    padding:0;
+    list-style:none;
+  }
+  .reality li{
+    display:flex;
+    gap:14px;
+    font-size:17px;
+    line-height:1.55;
+    color:var(--ink);
+  }
+  .reality li::before{
+    content:"";
+    flex:none;
+    width:10px;
+    height:10px;
+    margin-top:7px;
+    background:var(--orange);
+  }
+  .meta{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:14px 30px;
+    padding-top:20px;
+    border-top:1px solid var(--rule);
+    font-size:12.5px;
+    font-weight:800;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+  }
+  .meta i{font-style:normal;color:var(--label);margin-right:9px;}
+  .meta div{color:var(--navy);}
+
+  /* ---------- numbered cards ---------- */
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+    padding:40px var(--pad) 52px;
+  }
+  .step{
+    background:var(--navy-card);
+    border-top:4px solid var(--orange);
+    padding:26px 24px 30px;
+    display:flex;
+    flex-direction:column;
+  }
+  .step-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:10px;
+    margin-bottom:34px;
+  }
+  .step-top svg{flex:none;}
+  .step-num{
+    font-size:34px;
+    font-weight:800;
+    letter-spacing:-.02em;
+    line-height:1;
+    color:rgba(255,255,255,.17);
+    font-variant-numeric:tabular-nums;
+  }
+  .step h3{
+    margin:0 0 14px;
+    font-size:19.5px;
+    line-height:1.22;
+    font-weight:800;
+    letter-spacing:-.012em;
+    color:#fff;
+    text-wrap:balance;
+  }
+  .step p{
+    margin:0;
+    font-size:14.5px;
+    line-height:1.62;
+    color:rgba(255,255,255,.72);
+  }
+
+  /* ---------- kicker ---------- */
+  .kicker{
+    background:var(--navy);
+    border-top:5px solid var(--orange);
+    padding:44px var(--pad) 46px;
+  }
+  .kicker p{
+    margin:0;
+    max-width:56ch;
+    font-size:27.5px;
+    line-height:1.38;
+    font-weight:800;
+    letter-spacing:-.021em;
+    color:#fff;
+    text-wrap:balance;
+  }
+  .kicker p em{font-style:normal;color:var(--orange);}
+  .kicker cite{
+    display:block;
+    margin-top:22px;
+    font-style:normal;
+    font-size:12.5px;
+    font-weight:800;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--orange-soft);
+  }
+
+  /* ---------- footer ---------- */
+  .foot{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    padding:26px var(--pad);
+    background:#fff;
+  }
+  .foot-left{display:flex;align-items:center;gap:20px;}
+  .clientmark{
+    display:grid;
+    place-items:center;
+    padding:9px 14px;
+    border:1px solid var(--rule);
+    line-height:1.1;
+    text-align:center;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--orange);
+  }
+  .foot-label,.foot-url{
+    font-size:12.5px;
+    font-weight:800;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--navy);
+  }
+  .foot-url{color:var(--ink-soft);}
+  .foot-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    font-size:19px;
+    font-weight:800;
+    letter-spacing:-.02em;
+    color:var(--navy);
+  }
+  .foot-right .df{color:var(--ink-soft);font-weight:700;}
+  .foot-right .bar{width:1px;height:20px;background:var(--rule);}
+  .alignmark{display:block;text-align:right;line-height:1;}
+  .alignmark i{font-style:normal;color:var(--orange);}
+  .alignmark small{
+    display:block;
+    margin-top:5px;
+    font-size:6.5px;
+    font-weight:800;
+    letter-spacing:.17em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- narrow screens: same layout, reflowed ---------- */
+  @media (max-width:1000px){
+    :root{--pad:34px;}
+    .hero h1{font-size:52px;}
+    .hero-art{left:38%;opacity:.8;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .cols,.steps{grid-template-columns:1fr;}
+    .reality ul{grid-template-columns:1fr;}
+    .kicker p{font-size:24px;}
+    .foot{flex-wrap:wrap;}
+  }
+  @media (max-width:620px){
+    :root{--pad:22px;}
+    .hero h1{font-size:38px;}
+    .lede{font-size:17px;}
+    .stat b{font-size:36px;}
+    .stats{grid-template-columns:1fr;}
+    .stat.up{margin-top:0;padding-top:34px;}
+  }
+</style>
+
+<div class="sheet">
+
+  <header class="hero">
+    <div class="hero-rings"></div>
+    <div class="hero-art"></div>
+    <p class="eyebrow">Client Story &middot; Nonprofit and Humanitarian</p>
+    <h1>From 24 nations of workarounds to <em>one platform, live Jan 1.</em></h1>
+    <p class="lede">World Central Kitchen feeds people in crisis, standing up field kitchens and mobilizing
+      thousands of relief contractors on short notice. Align HCM won the Dayforce full suite implementation
+      against a Big 4 firm and a specialist implementation partner, then built the surge onboarding model
+      the mission actually runs on.</p>
+  </header>
+
+  <section class="stats">
+    <div class="stat">
+      <b>350</b>
+      <span>FTE plus 2,000 surge workforce</span>
+    </div>
+    <div class="stat up">
+      <b>24</b>
+      <span>Nations</span>
+    </div>
+    <div class="stat">
+      <b>$425K</b>
+      <span>Services, $158K ACV</span>
+    </div>
+    <div class="stat up">
+      <b>JAN 1</b>
+      <span>Go live with day one finance</span>
+    </div>
+  </section>
+
+  <section class="cols">
+    <article class="col">
+      <h2>The Situation</h2>
+      <p>WCK ran BambooHR, Airtable, Gmail based approvals, and a3innuva with no unified HR platform.
+        That left data gaps, manual errors, and compliance exposure stretched across 24 countries and
+        multiple entity structures, with no single source of truth for the workforce.</p>
+    </article>
+    <article class="col">
+      <h2>Why Align HCM</h2>
+      <p>Align designed a purpose built Relief Contractor surge onboarding model: bilingual, field
+        deployable, and configured for multi country compliance from day one. It was paired with proven
+        Sage Intacct integration expertise. No other bidder offered either one.</p>
+    </article>
+    <article class="col">
+      <h2>The Outcome</h2>
+      <p>WCK selected Align over a Big 4 consulting firm and a specialized HCM implementation partner,
+        citing operational depth, mission alignment, and superior proposal specificity. Flexibility on
+        commercial terms and rate structure sealed the partnership.</p>
+    </article>
+  </section>
+
+  <section class="reality">
+    <h2>The Operating Reality</h2>
+    <ul>
+      <li>Relief contractor surges of 800 to 2,000 people on short notice</li>
+      <li>Field offices in Jordan, Ukraine, Egypt, and Israel running independently</li>
+      <li>Compliance across 24 countries and multiple entity structures</li>
+      <li>A hard Jan 1 go live with Sage Intacct integrated on day one</li>
+    </ul>
+    <div class="meta">
+      <div><i>Sector</i>Nonprofit &middot; Humanitarian</div>
+      <div><i>Replacing</i>BambooHR + Homegrown</div>
+      <div><i>Delivery</i>Bilingual EN &middot; ES</div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <article class="step">
+      <div class="step-top">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F05A28" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 20v-1.6a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/>
+          <circle cx="8.5" cy="7" r="3.4"/>
+          <path d="M18 6.5v6M15 9.5h6"/>
+        </svg>
+        <span class="step-num">01</span>
+      </div>
+      <h3>Built the surge model</h3>
+      <p>A scalable relief contractor onboarding workflow for humanitarian surge operations, deployable
+        in the field in two languages.</p>
+    </article>
+
+    <article class="step">
+      <div class="step-top">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F05A28" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9.4 14.6 6.6 17.4a3.9 3.9 0 0 1-5.5-5.5l2.8-2.8"/>
+          <path d="M14.6 9.4l2.8-2.8a3.9 3.9 0 0 1 5.5 5.5l-2.8 2.8"/>
+          <path d="M9 15l6-6"/>
+        </svg>
+        <span class="step-num">02</span>
+      </div>
+      <h3>Solved the finance risk</h3>
+      <p>Proven Sage Intacct capability cleared WCK's highest risk requirement with the integration live
+        on the Jan 1 cutover.</p>
+    </article>
+
+    <article class="step">
+      <div class="step-top">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F05A28" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/>
+          <path d="M14 3v5h5"/>
+          <path d="M8.6 16.4 15 10l1.9 1.9-6.4 6.4-2.5.6z"/>
+        </svg>
+        <span class="step-num">03</span>
+      </div>
+      <h3>Co authored the scope</h3>
+      <p>Eight plus working sessions on the solution design and SOW gave WCK line by line ownership of
+        scope, timeline, and deliverables.</p>
+    </article>
+
+    <article class="step">
+      <div class="step-top">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F05A28" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20.2s-7.6-4.4-7.6-9.6a4.2 4.2 0 0 1 7.6-2.5 4.2 4.2 0 0 1 7.6 2.5c0 5.2-7.6 9.6-7.6 9.6z"/>
+        </svg>
+        <span class="step-num">04</span>
+      </div>
+      <h3>Matched the mission</h3>
+      <p>A give back commitment and mission alignment no competitor put on the table alongside the
+        delivery plan.</p>
+    </article>
+  </section>
+
+  <section class="kicker">
+    <p>"Align HCM has clearly done its homework on WCK's complexity. The RC surge onboarding model,
+      bilingual delivery, Sage Intacct Day 1 integration, and <em>the mission give back commitment all
+      stood out."</em></p>
+    <cite>Adam Reusing &middot; World Central Kitchen</cite>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-left">
+      <span class="clientmark">World<br>Central<br>Kitchen</span>
+      <span class="foot-label">Client Story</span>
+    </div>
+    <span class="foot-url">alignhcm.com/case-studies</span>
+    <div class="foot-right">
+      <span class="df">dayforce</span>
+      <span class="bar"></span>
+      <span class="alignmark">Align<i>&#10022;</i><small>Human Capital Management</small></span>
+    </div>
+  </footer>
+
+</div>
