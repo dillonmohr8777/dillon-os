@@ -1,23 +1,17 @@
-# regenerable intermediates
-build/underscore.wav
-build/seg_*.mp4
-build/video_only.mp4
-build/segments.txt
-build/render.log
-build/probe*.mp4
-build/t_*.png
-build/sheet*.png
-build/fonts/*.woff2
-build/fonts/gf.css
-build/qa/
-build/fonts/fonts.css
-build/logos/
-build/icons_prev.html
-build/icons_prev.png
-build/newlook.png
-build/cuts.png
-build/ticker_zoom.png
-build/grid_zoom.png
-build/s11.png
+# Everything under build/ is scratch: render segments, logs, contact sheets,
+# preview PNGs, the fetched font and logo caches. Rather than chase each new
+# throwaway filename, ignore the directory and list the few files that are real
+# inputs to build.py or genuinely useful helpers.
+build/*
+!build/fonts.py
+!build/wm.py
+!build/shot.mjs
+!build/copycheck.mjs
+!build/fonts.css
+!build/wordmark.path
+!build/wordmark.vb
+!build/wordmark.svg
+!build/noise.b64
+!build/icons.js
+
 __pycache__/
-build/ishot.mjs
