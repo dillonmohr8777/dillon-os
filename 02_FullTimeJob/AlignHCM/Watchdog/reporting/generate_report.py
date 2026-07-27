@@ -209,26 +209,30 @@ def build_daily(date_str, base, data):
     suggestion = first_paragraph(md_section(md, r"One suggestion")) or ""
     seo = md_section(md, r"SEO sweep")
 
-    # itemized submissions
-    sub_block = md_section(md, r"Daily numbers", level="## ")
-    sub_rows = parse_pipe_table(md_section(md, r"Every submission", level="### ") or sub_block)
-    sub_html = ""
-    if sub_rows and len(sub_rows) > 1:
-        body = []
-        for cells in sub_rows[1:]:
-            if len(cells) < 4:
-                continue
-            verdict_cell = cells[3]
-            tag = "yes" if verdict_cell.lower().startswith("yes") else \
-                  "no" if verdict_cell.lower().startswith("no") else "low"
-            body.append(
-                f"<tr><td>{md_inline(cells[0])}</td><td>{md_inline(cells[1])}</td>"
-                f"<td>{md_inline(cells[2])}</td>"
-                f'<td><span class="tag {tag}">{escape(verdict_cell.split(",")[0])}</span></td></tr>')
+    # itemized submissions (only when the day's report has an "### Every submission" table)
+    sub_rows = parse_pipe_table(md_section(md, r"Every submission", level="### "))
+    body = []
+    for cells in (sub_rows[1:] if len(sub_rows) > 1 else []):
+        if len(cells) < 4:
+            continue
+        verdict_cell = cells[3]
+        tag = "yes" if verdict_cell.lower().startswith("yes") else \
+              "no" if verdict_cell.lower().startswith("no") else "low"
+        body.append(
+            f"<tr><td>{md_inline(cells[0])}</td><td>{md_inline(cells[1])}</td>"
+            f"<td>{md_inline(cells[2])}</td>"
+            f'<td><span class="tag {tag}">{escape(verdict_cell.split(",")[0])}</span></td></tr>')
+    if body:
         sub_html = (
             '<section class="card"><div class="eyebrow">Every submission, itemized</div>'
             '<table><tr><th>Page / meeting</th><th>Who</th><th>Source</th><th>Genuine?</th></tr>'
             + "".join(body) + "</table></section>")
+    else:
+        yviews = yrow.get("views", "-")
+        sub_html = (
+            '<section class="card"><div class="eyebrow">Submissions</div>'
+            f'<p class="muted small">No form submissions yesterday ({yviews} views). '
+            'Weekend and low-traffic days commonly convert nobody; not an alert on its own.</p></section>')
 
     seo_html = ""
     if seo:

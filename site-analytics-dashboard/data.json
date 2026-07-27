@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-23T07:14:00-04:00",
+  "generated": "2026-07-27T07:14:00-04:00",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-07-23"
+    "end": "2026-07-27"
   },
   "source": "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
   "directives": [
@@ -104,8 +104,8 @@
     },
     {
       "month": "2026-07",
-      "views": 1481,
-      "submissions": 25,
+      "views": 1650,
+      "submissions": 29,
       "note": "month in progress"
     }
   ],
@@ -138,12 +138,12 @@
   "sources": [
     {
       "source": "Direct Traffic",
-      "contacts": 107,
+      "contacts": 116,
       "aeo": false
     },
     {
       "source": "Organic Search",
-      "contacts": 16,
+      "contacts": 17,
       "aeo": false
     },
     {
@@ -158,14 +158,14 @@
     },
     {
       "source": "AI Referrals",
-      "contacts": 2,
+      "contacts": 3,
       "aeo": true
     }
   ],
   "aeo": [
     {
       "platform": "ChatGPT",
-      "contacts": 2
+      "contacts": 3
     },
     {
       "platform": "Perplexity",
@@ -1313,7 +1313,7 @@
     "privacy": "Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard."
   },
   "leadingIndicators": {
-    "asOf": "2026-07-23",
+    "asOf": "2026-07-27",
     "note": "First-party leading indicators computed each watchdog run. See 02_FullTimeJob/AlignHCM/Watchdog/leading-indicators.md.",
     "conversionRate": {
       "ytd": 0.0197,
@@ -1344,7 +1344,7 @@
         },
         {
           "month": "2026-07",
-          "rate": 0.0169,
+          "rate": 0.0176,
           "partial": true
         }
       ]
@@ -1353,7 +1353,7 @@
       "total": 15000,
       "deals": 1,
       "prior": 140000,
-      "alert": "Down 89% (>50% MoM threshold): Kaiser Permanente ($125K Organic Search) moved from open to closed-lost.",
+      "alert": "Still $15K. Kaiser Permanente ($125K Organic Search) remains closed-lost and unreopened since 2026-07-23.",
       "detail": [
         {
           "company": "RPM xConstruction",
@@ -1364,19 +1364,19 @@
       ]
     },
     "followUpGap": {
-      "convertedContacts": 185,
-      "noOutreach": 78,
+      "convertedContacts": 188,
+      "noOutreach": 79,
       "noOutreachPct": 0.42,
       "qualifiedTotal": 22,
       "qualifiedNoFollowUp": 9
     }
   },
   "dataIntegrity": {
-    "asOf": "2026-07-23",
+    "asOf": "2026-07-27",
     "closedLostWithoutReason": {
-      "deals": 75,
+      "deals": 77,
       "pctOfLost": 1.0,
-      "note": "Every lost deal has no reason logged; count rose from 72. This is CRM hygiene, not site health."
+      "note": "Every lost deal has no reason logged; count rose to 77. This is CRM hygiene, not site health."
     },
     "prematureCloses": 3
   }

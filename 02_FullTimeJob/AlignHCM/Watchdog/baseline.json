@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-23",
+  "generated": "2026-07-27",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-07-23"
+    "end": "2026-07-27"
   },
   "source": "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
   "note": "All watchdog and dashboard reporting uses the fixed window start 2026-01-01. The window extends daily on its own.",
@@ -56,9 +56,9 @@
     },
     {
       "month": "2026-07",
-      "views": 1481,
-      "submissions": 25,
-      "contacts": 15,
+      "views": 1650,
+      "submissions": 29,
+      "contacts": 18,
       "partial": true
     }
   ],
@@ -78,7 +78,11 @@
       { "date": "2026-07-20", "views": 73, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
       { "date": "2026-07-21", "views": 112, "submissions": 2, "submissionsClean": 2, "contacts": 2 },
       { "date": "2026-07-22", "views": 87, "submissions": 5, "submissionsClean": 2, "contacts": 4 },
-      { "date": "2026-07-23", "views": 12, "submissions": 1, "submissionsClean": 0, "contacts": 1, "partial": true }
+      { "date": "2026-07-23", "views": 73, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
+      { "date": "2026-07-24", "views": 66, "submissions": 4, "submissionsClean": 4, "contacts": 3 },
+      { "date": "2026-07-25", "views": 24, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-26", "views": 18, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-27", "views": 0, "submissions": 0, "submissionsClean": 0, "contacts": 0, "partial": true }
     ]
   },
   "attribution_snapshot": {
@@ -111,8 +115,8 @@
     "totalAttributedRevenue": 738484
   },
   "aeo_referrals_ytd": {
-    "asOf": "2026-07-18",
-    "chatgpt.com": 2,
+    "asOf": "2026-07-27",
+    "chatgpt.com": 3,
     "perplexity.ai": 0,
     "claude.ai": 0,
     "gemini.google.com": 0,
@@ -239,15 +243,15 @@
     "conflictingOwnedSourceDeals": 1
   },
   "contact_sources_window": {
-    "AI_REFERRALS": 2,
-    "DIRECT_TRAFFIC": 114,
-    "OFFLINE": 2161,
+    "AI_REFERRALS": 3,
+    "DIRECT_TRAFFIC": 116,
+    "OFFLINE": 2163,
     "ORGANIC_SEARCH": 17,
     "REFERRALS": 8,
     "SOCIAL_MEDIA": 6
   },
   "aeo_referrals_window": {
-    "ChatGPT": 2,
+    "ChatGPT": 3,
     "Perplexity": 0,
     "Claude": 0,
     "Gemini": 0,
@@ -290,9 +294,9 @@
     "wonRevenue": 54000,
     "lostValue": 361000
   },
-  "last_run": "2026-07-23 (Thursday; preflight passed, MCP pulls; ALERT: influenced open pipeline dropped $140K to $15K, Kaiser Permanente closed-lost)",
+  "last_run": "2026-07-27 (Monday; preflight passed, MCP pulls, Monday SEO sweep; no new alert. Weekend 42 views/0 leads. Kaiser still closed-lost, not reopened. AEO up to 3 ChatGPT.)",
   "leading_indicators": {
-    "asOf": "2026-07-23",
+    "asOf": "2026-07-27",
     "conversion_rate": {
       "ytd": 0.0197,
       "monthly": {
@@ -302,7 +306,7 @@
         "2026-04": 0.0269,
         "2026-05": 0.0193,
         "2026-06": 0.0225,
-        "2026-07": 0.0169
+        "2026-07": 0.0176
       },
       "alert_floor": 0.012
     },
@@ -310,7 +314,7 @@
       "total": 15000,
       "deals": 1,
       "prior": 140000,
-      "alert": "Dropped 89% (>50% MoM threshold). Kaiser Permanente ($125K, ORGANIC_SEARCH) moved from open to closed-lost since 2026-07-19.",
+      "alert": "Still $15K. The 89% drop fired 2026-07-23 when Kaiser Permanente ($125K, ORGANIC_SEARCH) went to closed-lost; it remains closed-lost and unreopened. Not re-fired.",
       "detail": [
         {
           "company": "RPM xConstruction",
@@ -321,8 +325,8 @@
       ]
     },
     "lead_follow_up_gap": {
-      "convertedContacts": 185,
-      "noOutreach": 78,
+      "convertedContacts": 188,
+      "noOutreach": 79,
       "noOutreachPct": 0.42,
       "qualifiedSubset": {
         "total": 22,
@@ -331,12 +335,12 @@
     }
   },
   "data_integrity": {
-    "asOf": "2026-07-23",
+    "asOf": "2026-07-27",
     "closed_lost_without_reason": {
-      "deals": 75,
-      "value": 12734443,
+      "deals": 77,
+      "value": 13024043,
       "pctOfLost": 1.0,
-      "note": "Every lost deal in the window still has no reason logged; count rose from 72 (Americold $800K Direct, Eat'n Park, Kaiser among recent losses). Track down as the required-field fix takes hold."
+      "note": "Every lost deal in the window still has no reason logged; count rose to 77 (two more losses last week). Track down as the required-field fix takes hold."
     },
     "premature_closes": [
       {
@@ -357,25 +361,25 @@
     ]
   },
   "closed_won_reconciliation": {
-    "asOf": "2026-07-23",
+    "asOf": "2026-07-27",
     "source": "Live HubSpot DEAL record, reconciled. Supersedes the Jul 15 design one-pager ($162K) which was representative placeholder data.",
-    "window": "2026-01-01 to 2026-07-23, by close date",
+    "window": "2026-01-01 to 2026-07-27, by close date",
     "total_closed_won": {
-      "deals": 106,
-      "amount": 5375030
+      "deals": 109,
+      "amount": 5410846
     },
     "by_deal_type": {
       "new_business": {
-        "deals": 28,
-        "amount": 2709029
+        "deals": 30,
+        "amount": 2740213
       },
       "existing_business": {
         "deals": 20,
         "amount": 1337473
       },
       "change_order": {
-        "deals": 48,
-        "amount": 897796
+        "deals": 49,
+        "amount": 902428
       },
       "renewal": {
         "deals": 9,
@@ -388,9 +392,9 @@
     },
     "new_business_by_origin": {
       "offline_partner_sales_outbound": {
-        "deals": 24,
-        "amount": 2487359,
-        "pct": 0.918
+        "deals": 26,
+        "amount": 2518543,
+        "pct": 0.919
       },
       "direct_web": {
         "deals": 1,
@@ -410,10 +414,10 @@
       }
     },
     "marketing_headline": {
-      "new_business_won": 2709029,
+      "new_business_won": 2740213,
       "web_sourced_won": 195145,
       "verified_originated": 54000,
-      "web_sourced_pct": 0.072
+      "web_sourced_pct": 0.071
     },
     "guard": "Standing directive 4: no revenue figure is reported unless a live DEAL query reproduces it."
   }
