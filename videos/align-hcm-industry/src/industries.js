@@ -455,11 +455,11 @@ const SCENES = [
         <div data-lock>${lockupSVG('lend', 940)}</div>
         <div class="lockup-cap" data-cap>Human Capital Management</div>
         <div class="hairline" data-hair></div>
-        <!-- The film ends on the configuration, not on Align. Every competitor can
-             switch the same platform on; the argument is that what happens next is
-             not the same, and the last thing on screen should be that and nothing
-             softer. -->
-        <div class="tag" data-tag>Anyone can turn the platform on.<br><span class="accent">Configuring it is the work.</span></div>
+        <!-- Expertise leads, the configuration is the proof. An earlier pass ended
+             on the configuration itself, which put the mechanism ahead of the thing
+             that actually differentiates Align: knowing the industry. The config is
+             where that knowledge becomes visible, so it goes second. -->
+        <div class="tag" data-tag>We know your industry.<br><span class="accent">The configuration proves it.</span></div>
         <div class="url" data-url>ALIGNHCM.COM</div>
       </div>`,
     draw(root, lt) {

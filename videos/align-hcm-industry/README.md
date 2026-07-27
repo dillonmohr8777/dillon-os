@@ -22,12 +22,15 @@ claim, in order:
 | s5 | How Align works, four cards. |
 | s6 | Platforms and clients together. "We speak the platform. We speak your business." |
 | s7 | The same industry team, long after go-live. |
-| s8 | End card. "Anyone can turn the platform on. Configuring it is the work." |
+| s8 | End card. "We know your industry. The configuration proves it." |
 
-The end card lands on the configuration rather than on Align. Every competitor
-can switch the same platform on, and the whole argument is that what happens next
-is not the same, so the last thing on screen says that and nothing softer. The
-brand film keeps its own sign off; this tagline belongs to the industry cut.
+The end card leads with the expertise and makes the configuration the proof of
+it, in that order. An earlier pass ended on the configuration itself ("Anyone can
+turn the platform on. Configuring it is the work."), which put the mechanism ahead
+of the thing that actually differentiates Align. Knowing the industry is the
+claim; the configuration is where that knowledge becomes visible, so it goes
+second. The brand film keeps its own sign off; this tagline belongs to the
+industry cut.
 
 s2 exists to set up s3. Once "every industry runs on its own vocabulary" is on
 screen, the filmstrip needs no label: five industries, five sets of terms, and the
