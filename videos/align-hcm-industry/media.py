@@ -29,21 +29,28 @@ UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
 REFETCH = '--refetch' in sys.argv
 
 PANEL = (960, 1080)          # the half frame the video shows
-CROP_ANCHOR = 0.34           # 0 is top, 1 is bottom; faces sit high in these
 
-# All nine hero illustrations on the hub, one per page. Public sector has no page
-# of its own, so it borrows the support hero: a dispatch desk and a headset, which
-# is the closest thing on the site to the work public sector teams actually do.
+# All nine hero illustrations on the hub, one per page, each with its own crop
+# anchor: 0 is top, 1 is bottom. One global anchor cannot serve all nine, because
+# these are composed illustrations rather than photographs. Some put the subject's
+# face high and the rest is background; others carry the meaning at the bottom of
+# the frame, in the papers on the desk.
+#
+# Public sector has no page of its own. It borrows the managed payroll hero: a
+# calendar, an approval loop, timesheets and a stack of records. That is what
+# public sector HR work looks like from the inside, and it beats the support
+# illustration that was here before, which was two people at a laptop and said
+# nothing specific. Anchored low, because the paperwork is the point.
 HEROES = {
-    'hub': '/assets/heroes/industry-hub-v2.webp',
-    'manufacturing': '/assets/heroes/manufacturing-v3.webp',
-    'healthcare': '/assets/heroes/healthcare-v2.webp',
-    'retail': '/assets/heroes/retail-hospitality-v4.webp',
-    'services': '/assets/heroes/services-distribution-v5.webp',
-    'public': '/assets/heroes/support.webp',
-    'implementation': '/assets/heroes/implementation.webp',
-    'payroll': '/assets/heroes/managed-payroll.webp',
-    'signature': '/assets/heroes/signature-services.webp',
+    'hub':            ('/assets/heroes/industry-hub-v2.webp', 0.34),
+    'manufacturing':  ('/assets/heroes/manufacturing-v3.webp', 0.34),
+    'healthcare':     ('/assets/heroes/healthcare-v2.webp', 0.34),
+    'retail':         ('/assets/heroes/retail-hospitality-v4.webp', 0.34),
+    'services':       ('/assets/heroes/services-distribution-v5.webp', 0.34),
+    'public':         ('/assets/heroes/managed-payroll.webp', 0.62),
+    'support':        ('/assets/heroes/support.webp', 0.34),
+    'implementation': ('/assets/heroes/implementation.webp', 0.34),
+    'signature':      ('/assets/heroes/signature-services.webp', 0.34),
 }
 
 # A readable cross section of the manufacturing roster on the industry page.
@@ -93,9 +100,9 @@ def main():
     (OUT / 'clients').mkdir(parents=True, exist_ok=True)
 
     print('heroes')
-    for name, path in HEROES.items():
+    for name, (path, anchor) in HEROES.items():
         im = Image.open(io.BytesIO(get(BASE + path, path.rsplit('/', 1)[-1]))).convert('RGB')
-        panel = fill_crop(im, PANEL, CROP_ANCHOR)
+        panel = fill_crop(im, PANEL, anchor)
         panel.save(OUT / 'heroes' / f'{name}.jpg', quality=88, optimize=True, progressive=True)
         print(f'  {name:<14} {im.width}x{im.height} -> {PANEL[0]}x{PANEL[1]}')
 

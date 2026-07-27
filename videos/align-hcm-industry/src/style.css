@@ -266,7 +266,6 @@ p.body .hi { color: var(--blue); font-weight: 700; }
   pointer-events: none; opacity: 0;
   background: radial-gradient(closest-side, rgba(238,107,47,.34) 0%, rgba(249,164,92,.12) 46%, rgba(255,255,255,0) 100%);
 }
-.inkline { margin-top: 54px; text-align: center; font-size: 46px; }
 
 /* ------------------------------------------------------------------ orbit */
 

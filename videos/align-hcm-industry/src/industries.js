@@ -13,11 +13,11 @@ const TITLE = 'Align HCM · Industry Solutions';
 const FOOTER = '· Industry Solutions ·';
 
 /* One image per industry, from the nine hero illustrations on the hub. Public
- * sector has no page of its own, so it borrows the support hero: a dispatch desk
- * and a headset, the closest thing on the site to the work those teams do. */
+ * sector has no page of its own, so it borrows the managed payroll hero and a
+ * line written to match what that illustration actually shows. See media.py. */
 const INDUSTRIES = [
   ['healthcare', 'Healthcare', 'Coverage protects care.'],
-  ['public', 'Public Sector', 'Water runs, roads stay clear, and calls get answered.'],
+  ['public', 'Public Sector', 'Public money means every hour is on the record.'],
   ['retail', 'Retail &amp; Hospitality', 'Staffing shapes the customer experience.'],
   ['services', 'Services &amp; Distribution', 'Every handoff affects delivery and trust.'],
   ['manufacturing', 'Manufacturing', 'Every assignment affects output, safety, and margin.'],
@@ -91,7 +91,7 @@ const SCENES = [
      ink spreading into paper rather than a hard wipe. The filter is on the mask,
      never on the artwork, so the logo itself stays perfectly sharp. */
   {
-    id: 's0', in: 0.0, out: 6.2,
+    id: 's0', in: 0.0, out: 4.8,
     html: `
       <div class="center inkstage">
         <div class="inkwrap">
@@ -113,7 +113,6 @@ const SCENES = [
           <div class="inkcap" data-cap>Human Capital Management</div>
           <div class="inkbloom" data-bloom></div>
         </div>
-        <p class="body inkline" data-line>None of this <span class="hi">happens by accident</span>.</p>
       </div>`,
     draw(root, lt, dur) {
       /* the lockup's own wipe animations are not wanted here; the ink front is
@@ -133,18 +132,12 @@ const SCENES = [
       const cp = E.easeOutCubic(seg(lt, 2.15, 2.95));
       cap.style.opacity = cp.toFixed(3);
       cap.style.letterSpacing = `${lerp(0.42, 0.215, cp).toFixed(4)}em`;
-
-      const line = q(root, '[data-line]');
-      const lp = E.easeOutQuart(seg(lt, 2.9, 3.8));
-      line.style.opacity = lp.toFixed(3);
-      line.style.transform = `translate3d(0,${((1 - lp) * 26).toFixed(1)}px,0)`;
-      line.style.filter = lp >= 1 ? 'none' : `blur(${((1 - lp) * 10).toFixed(1)}px)`;
     },
   },
 
   /* 1. hero -------------------------------------------------------------- */
   {
-    id: 's1', in: 6.2, out: 11.8,
+    id: 's1', in: 4.8, out: 10.4,
     html: split('art-left', 'hub', `
       ${eyebrow('Industry solutions')}
       <h1 class="serif lg" data-h1>${typeset('Workforce technology|for the work *every|industry depends on*.')}</h1>`),
@@ -157,7 +150,7 @@ const SCENES = [
 
   /* 2. the turn ----------------------------------------------------------- */
   {
-    id: 's2', in: 11.8, out: 16.4,
+    id: 's2', in: 10.4, out: 15.0,
     html: `
       <div class="ghost">ESSENTIAL WORK</div>
       <div class="pad">
@@ -175,7 +168,7 @@ const SCENES = [
 
   /* 3. the filmstrip ------------------------------------------------------ */
   {
-    id: 's3', in: 16.4, out: 32.8,
+    id: 's3', in: 15.0, out: 31.4,
     html: `
       <div class="strip">
         <div class="halo" data-halo></div>
@@ -225,7 +218,7 @@ const SCENES = [
 
   /* 4. operational realities ---------------------------------------------- */
   {
-    id: 's4', in: 32.8, out: 39.0,
+    id: 's4', in: 31.4, out: 37.6,
     html: `
       <div class="pad">
         ${eyebrow('Operational realities')}
@@ -249,7 +242,7 @@ const SCENES = [
 
   /* 5. how Align helps ------------------------------------------------------ */
   {
-    id: 's5', in: 39.0, out: 45.8,
+    id: 's5', in: 37.6, out: 44.4,
     html: `
       <div class="pad">
         ${eyebrow('How Align helps')}
@@ -275,7 +268,7 @@ const SCENES = [
 
   /* 6. the orbit ------------------------------------------------------------ */
   {
-    id: 's6', in: 45.8, out: 56.0,
+    id: 's6', in: 44.4, out: 54.6,
     html: `
       <div class="pad" style="right:944px">
         ${eyebrow('Trusted across industries')}
@@ -426,7 +419,7 @@ const SCENES = [
 
   /* 7. SmartCare ------------------------------------------------------------ */
   {
-    id: 's7', in: 56.0, out: 61.2,
+    id: 's7', in: 54.6, out: 59.8,
     html: `
       <div class="center">
         <img class="scmark" data-mark src="${SMARTCARE}" alt="SmartCare by Align HCM">
@@ -446,7 +439,7 @@ const SCENES = [
 
   /* 8. end card -------------------------------------------------------------- */
   {
-    id: 's8', in: 61.2, out: 67.2,
+    id: 's8', in: 59.8, out: 65.8,
     html: `
       <div class="endcard">
         <div data-lock>${lockupSVG('lend', 940)}</div>

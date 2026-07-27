@@ -4,7 +4,7 @@ One film covering all five industries, on a light stage: white paper, blue and
 orange type, dimensional icon tiles, and one image per industry taken from that
 industry's own page.
 
-`align-hcm-industries.mp4` — 67.2s, 1920x1080, 30fps, H.264, silent.
+`align-hcm-industries.mp4` — 65.8s, 1920x1080, 30fps, H.264, silent.
 
 ## Where the copy comes from
 
@@ -50,11 +50,21 @@ a beat, the neighbours sit blurred and desaturated at the edges to imply the
 strip continues, and progress bars track position. The scroll is a staircase
 eased at the risers, so it holds to be read and then glides.
 
-**Public sector has no page of its own**, so it borrows the `support` hero: a
-dispatch desk and a headset, which is the closest thing among the hub's nine
-illustrations to the work those teams actually do. `media.py` prepares all nine;
-`build.py` inlines only the six on screen, or the page carries three megabytes of
-artwork it never draws.
+**Public sector has no page of its own**, so it borrows the `managed-payroll`
+hero: a calendar, an approval loop, a timesheet in hand and a stack of records.
+That is what public sector HR work looks like from the inside. The `support`
+illustration was here first and was wrong for it, being two people at a laptop
+that said nothing specific, and its caption has been rewritten to match what the
+new artwork actually shows.
+
+Each hero carries **its own crop anchor** in `HEROES`. One global anchor cannot
+serve all nine: these are composed illustrations, not photographs, and some put
+the subject's face high with background below while others carry the meaning at
+the bottom of the frame, in the papers on the desk. Public sector is anchored low
+at 0.62 for exactly that reason.
+
+`media.py` prepares all nine; `build.py` inlines only the six on screen, or the
+page carries three megabytes of artwork it never draws.
 
 The orbit carries eight marks, two per industry, because no public sector client
 roster exists on the hub to draw from.
@@ -64,6 +74,11 @@ to right. That rectangle is displaced by fractal noise and blurred, so its leadi
 edge behaves like ink spreading into paper rather than a hard wipe. The filter sits
 on the **mask**, never on the artwork, so the logo itself stays perfectly sharp
 while its reveal edge goes organic. A warm bloom rides just behind the front.
+
+The slide is the lockup and its caption, nothing else. It used to carry a line of
+copy underneath and held 6.2s to fit it; with the line gone the caption is the
+last thing to land, at 2.95s, so the scene is 4.8s and every later scene moved
+back 1.4s rather than leaving a dead beat on a static logo.
 
 **The orbit** (`s6`). Client marks ride a ring around the **full Align lockup**,
 wordmark and mark, not the standalone icon. Two of the biggest names per industry,
