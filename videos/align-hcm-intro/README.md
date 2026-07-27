@@ -56,8 +56,15 @@ writes three variants of each into `assets/logos/`:
 | Suffix | Use |
 | --- | --- |
 | `<name>.png` | Full colour, transparent. For light backgrounds. |
-| `<name>-white.png` | Flat white knockout. What the video uses for platforms. |
+| `<name>-white.png` | Flat white knockout, for dark grounds where colour is not wanted. |
 | `<name>-reverse.png` | Neutrals lifted to white, brand chroma kept. What the video uses for SmartCare. |
+
+The video shows the platform marks in **their own brand colours**, which needs a
+light ground: UKG and Workday are near black teal and simply vanish on navy. So
+they sit in cream cards (`#f3efe7`, the `--cream` token off alignhcm.com) that
+read as a partner strip and give each mark its correct clear space. SmartCare
+keeps the reverse treatment instead, because it is the hero of its own slide
+rather than a card, and its orange half is already correct on navy.
 
 Background removal is a **border flood fill** over near white pixels, never a
 global threshold. That distinction matters: HiBob's "Hi" is white ink sitting
@@ -74,6 +81,9 @@ Paylocity and HiBob are parked; two commented lines in `logos.py` bring them
 back. Platform logos are scaled to equal **optical area**, not equal width or
 height, with a per mark weight for ink density. Sizing four logos of wildly
 different proportion to a common width makes some shout and others whisper.
+Tune the overall size with `LOGO_AREA` in `src/scenes.js`; the card's padding
+sets the clear space and `max-width`/`max-height` on the image is the hard
+guarantee that nothing can overrun its box whatever the area is set to.
 
 ## Icons
 

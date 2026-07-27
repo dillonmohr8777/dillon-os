@@ -163,11 +163,16 @@ function drawLockup(root, id, p) {
 
 /* ------------------------------------------------------------------ scenes */
 
-/* Logos differ wildly in proportion, so sizing them to a common width or a
+/* Platform marks sit in light cards so each one can wear its own colours: UKG
+   and Workday are near black teal and simply disappear on navy.
+
+   Logos differ wildly in proportion, so sizing them to a common width or a
    common height makes some shout and others whisper. Each is scaled to the
    same optical area instead, with a per mark weight for ink density: ADP is a
-   heavy outlined slab, Dayforce is airy lowercase. */
-const LOGO_AREA = 34000;
+   heavy outlined slab, Dayforce is airy lowercase. The card's own padding sets
+   the clear space, and max-width/max-height on the image is the hard guarantee
+   that nothing can ever crowd or overrun its box. */
+const LOGO_AREA = 23500;
 const PLATFORMS = [
   { key: 'ukg',      name: 'UKG',      aspect: 483 / 186,  weight: 1.00 },
   { key: 'dayforce', name: 'Dayforce', aspect: 900 / 214,  weight: 1.07 },
@@ -323,7 +328,9 @@ const SCENES = [
         c.style.opacity = p.toFixed(3);
         c.style.transform = `translate3d(0,${((1 - p) * 46).toFixed(2)}px,0) scale(${lerp(0.9, 1, p).toFixed(3)})`;
         c.style.filter = p >= 1 ? 'none' : `blur(${((1 - p) * 12).toFixed(2)}px)`;
-        c.style.borderColor = `rgba(240,153,76,${(0.06 + 0.34 * pulse(lt, s, s + 0.3, s + 0.5, s + 1.1)).toFixed(3)})`;
+        const flare = pulse(lt, s, s + 0.3, s + 0.5, s + 1.15);
+        c.style.boxShadow = `0 26px 62px rgba(3,7,16,.55), `
+          + `0 0 ${(28 + flare * 46).toFixed(0)}px rgba(240,153,76,${(0.10 + flare * 0.40).toFixed(3)})`;
       });
       showBody(root, lt, 1.5);
     },

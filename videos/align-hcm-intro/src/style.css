@@ -232,19 +232,22 @@ p.body .hi { color: #fff; font-weight: 600; }
 /* --------------------------------------------------------- s6 platform grid */
 
 .pgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; width: 100%; margin: 0 auto; }
+/* Light cards. The platform marks keep their own brand colours, which needs a
+   light ground: UKG and Workday are near black teal on navy otherwise. Cream
+   rather than pure white, matching the --cream token on alignhcm.com. */
 .pcell {
   height: 214px;
   display: flex; align-items: center; justify-content: center;
-  border: 1.5px solid rgba(140,168,220,.20);
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(24,38,70,.70) 0%, rgba(14,24,46,.55) 100%);
-  will-change: transform, opacity, filter;
-  box-shadow: 0 22px 60px rgba(4,8,18,.42);
+  padding: 24px 30px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fffdfa 0%, #f3efe7 100%);
+  will-change: transform, opacity, filter, box-shadow;
+  box-shadow: 0 26px 62px rgba(3,7,16,.55), 0 0 28px rgba(240,153,76,.10);
 }
 .pcell img {
   display: block;
+  max-width: 100%; max-height: 100%;   /* the card can never be overrun */
   object-fit: contain;
-  filter: drop-shadow(0 0 26px rgba(150,190,255,.16));
 }
 
 /* ------------------------------------------------------------- s7 services */

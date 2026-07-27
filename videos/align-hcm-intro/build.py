@@ -39,10 +39,10 @@ icons = read(BUILD / "icons.js")
 # Logos are inlined at roughly twice their on screen size, which is plenty for
 # a 1080p stage and keeps index.html from ballooning.
 LOGOS = {
-    "ukg": ("logos/ukg-white.png", 620),
-    "dayforce": ("logos/dayforce-white.png", 700),
-    "workday": ("logos/workday-white.png", 620),
-    "adp": ("logos/adp-white.png", 560),
+    "ukg": ("logos/ukg.png", 520),
+    "dayforce": ("logos/dayforce.png", 680),
+    "workday": ("logos/workday.png", 510),
+    "adp": ("logos/adp.png", 450),
     "smartcare": ("logos/smartcare-reverse.png", 1100),
 }
 logo_js = "const LOGOS = {\n" + "".join(
