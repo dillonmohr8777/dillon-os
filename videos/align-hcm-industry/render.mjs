@@ -40,8 +40,13 @@ const FILMS = ['industries'];
 const named = argv.filter(a => FILMS.includes(a));
 const films = named.length ? named : FILMS;
 
+/* CRF 22 rather than the 19 the dark films use. The light stage carries film
+   grain over large flat white areas, which is the most expensive thing you can
+   ask x264 to encode; at 19 the file lands near 5 Mbps and most of those bits
+   are noise. 22 is visually identical on this content (40.7 dB against a 19
+   encode, no visible artefact on the marks) and roughly halves the file. */
 const VCODEC = [
-  '-c:v', 'libx264', '-preset', 'slow', '-crf', '19',
+  '-c:v', 'libx264', '-preset', 'slow', '-crf', '22',
   '-pix_fmt', 'yuv420p', '-profile:v', 'high', '-level', '4.1',
 ];
 
