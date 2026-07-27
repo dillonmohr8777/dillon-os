@@ -231,17 +231,20 @@ p.body .hi { color: #fff; font-weight: 600; }
 
 /* --------------------------------------------------------- s6 platform grid */
 
-.pgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; width: 100%; max-width: 1500px; margin: 0 auto; }
+.pgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; width: 100%; margin: 0 auto; }
 .pcell {
-  height: 168px;
+  height: 214px;
   display: flex; align-items: center; justify-content: center;
   border: 1.5px solid rgba(140,168,220,.20);
   border-radius: 18px;
   background: linear-gradient(180deg, rgba(24,38,70,.70) 0%, rgba(14,24,46,.55) 100%);
-  font-size: 52px; font-weight: 700; letter-spacing: -.005em;
-  color: #eef3fc;
   will-change: transform, opacity, filter;
   box-shadow: 0 22px 60px rgba(4,8,18,.42);
+}
+.pcell img {
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 26px rgba(150,190,255,.16));
 }
 
 /* ------------------------------------------------------------- s7 services */
@@ -262,10 +265,11 @@ p.body .hi { color: #fff; font-weight: 600; }
   will-change: opacity, transform, filter;
 }
 .ticker .row .num { font-family: var(--sans); font-size: 26px; font-weight: 700; letter-spacing: .2em; color: var(--orange); }
+.ticker .row .ico { width: 88px; height: 88px; color: var(--orange); flex: none; }
 
 /* -------------------------------------------------------------- s8 bracket */
 
-.bracket { display: flex; align-items: center; justify-content: center; gap: 46px; }
+.bracket { display: flex; align-items: center; justify-content: center; gap: 64px; }
 .bracket .br {
   font-family: var(--sans); font-weight: 300;
   font-size: 300px; line-height: .8;
@@ -273,10 +277,10 @@ p.body .hi { color: #fff; font-weight: 600; }
   text-shadow: 0 0 46px rgba(240,153,76,.5);
   will-change: transform, opacity;
 }
-.bracket .word {
-  font-family: var(--serif); font-weight: 700;
-  font-size: 132px;
-  color: #fff;
+.bracket .sclogo {
+  display: block;
+  width: 560px; height: auto;
+  filter: drop-shadow(0 0 44px rgba(240,153,76,.24));
   will-change: transform, opacity, filter;
 }
 

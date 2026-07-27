@@ -5,17 +5,20 @@ accent, high contrast serif headlines, per letter kinetic reveals, and the logo
 lockup assembling out of a light burst. The look is taken from the supplied
 Align stills; the motion language is taken from the supplied reference video.
 
-Output is 1920x1080, 30fps, H.264 + AAC.
+Output is 1920x1080, 30fps, H.264. **Ships silent.**
 
 | File | What it is |
 | --- | --- |
-| `align-hcm-intro.mp4` | The finished cut with the underscore |
-| `align-hcm-intro-silent.mp4` | Same picture, no audio |
+| `align-hcm-intro.mp4` | The finished cut, no audio |
 | `index.html` | Self contained, playable, scrubbable source. Open it in a browser. |
 | `src/` | The editable source: styles, scene graph, page shell |
+| `assets/logos/` | Cut out platform logos, the SmartCare mark, the Align mark |
+| `assets/icons/` | The ten service icons as standalone SVGs |
 | `build.py` | Assembles `src/` into `index.html` |
+| `logos.py` | Fetches and background cuts the logos |
+| `icons.py` | Draws the icon set |
 | `render.mjs` | Frame exporter, Playwright to ffmpeg |
-| `audio.py` | Synthesises the underscore |
+| `audio.py` | Synthesises an optional underscore (off by default) |
 
 ## Brand tokens
 
@@ -38,6 +41,47 @@ end card still (`build/wm.py`). The mark beside it (two leaning bars, three
 dots) is hand measured from the same still and drawn as SVG so the bars can wipe
 and the dots can pop on cue.
 
+Note the mark is deliberately **not** the favicon geometry from
+`/hubfs/Site Images/Align Favicon.svg`. That file is the standalone icon, whose
+bars lean about 44 degrees; the bars in the wordmark lockup are much more
+upright. Swapping one for the other is visibly wrong next to the word "Align".
+The favicon still ships verbatim as `assets/logos/align-mark.svg`, and it is the
+authority on the brand orange: **`#fc9121`**.
+
+## Logos
+
+`logos.py` pulls the real assets off alignhcm.com, cuts their backgrounds, and
+writes three variants of each into `assets/logos/`:
+
+| Suffix | Use |
+| --- | --- |
+| `<name>.png` | Full colour, transparent. For light backgrounds. |
+| `<name>-white.png` | Flat white knockout. What the video uses for platforms. |
+| `<name>-reverse.png` | Neutrals lifted to white, brand chroma kept. What the video uses for SmartCare. |
+
+Background removal is a **border flood fill** over near white pixels, never a
+global threshold. That distinction matters: HiBob's "Hi" is white ink sitting
+inside a red speech bubble, and a global key punches it straight out. Edge
+pixels are then un-matted from white, so nothing carries a pale fringe onto
+navy. `emit()` asserts that at least 5 percent of every output frame is
+transparent and exits if a cut silently failed.
+
+The SmartCare artwork ships with a white outer glow baked in for light pages.
+`strip_white_glow()` keys that off on neutrality, so the halo goes while the
+pale yellow at the head of the "Stabilize · Optimize · Thrive" gradient stays.
+
+Paylocity and HiBob are parked; two commented lines in `logos.py` bring them
+back. Platform logos are scaled to equal **optical area**, not equal width or
+height, with a per mark weight for ink density. Sizing four logos of wildly
+different proportion to a common width makes some shout and others whisper.
+
+## Icons
+
+`icons.py` draws ten service icons: one monoline family on a 24 unit grid, 1.7
+stroke, round caps and joins, stroked in `currentColor` so one file works orange
+on navy, white on navy, or ink on cream. They appear in the service ticker and
+ship standalone in `assets/icons/` for decks, the site, and one pagers.
+
 ## Scene map
 
 | # | In | Out | Beat |
@@ -47,9 +91,9 @@ and the dots can pop on cue.
 | 3 | 6.3 | 10.0 | "Every rollout hits the same five walls." Friction chips stagger in. |
 | 4 | 10.0 | 12.6 | Light burst, logo assembles. |
 | 5 | 12.6 | 15.6 | "We are the team that **finishes it**." Ghost `SPECIALISTS`. |
-| 6 | 15.6 | 19.6 | Platform grid: UKG, Dayforce, Workday, ADP, Paylocity, HiBob. |
-| 7 | 19.6 | 23.6 | Service ticker, ten services snapping through focus. |
-| 8 | 23.6 | 26.6 | `{ SmartCare }`. "Most callbacks inside the hour." |
+| 6 | 15.6 | 19.6 | Platform logos: UKG, Dayforce, Workday, ADP. |
+| 7 | 19.6 | 23.6 | Service ticker, ten services and icons snapping through focus. |
+| 8 | 23.6 | 26.6 | The SmartCare mark. "Most callbacks inside the hour." |
 | 9 | 26.6 | 30.0 | Counter rolls to `100+` five star reviews. |
 | 10 | 30.0 | 33.4 | St. Petersburg / Toronto. Nine to nine, seven days. |
 | 11 | 33.4 | 37.0 | "From system problems to **measurable outcomes**." Ghost `OUTCOMES`. |
@@ -90,16 +134,24 @@ python3 build.py                 # regenerate index.html
 # 2. preview: open index.html in a browser and use the scrubber
 
 # 3. render
-python3 audio.py                 # only if you changed the underscore
-node render.mjs --jobs 3         # about 10 minutes for the full 45s
+node render.mjs --jobs 3         # about 8 minutes for the full 45s
 ```
 
-Useful flags:
+Regenerate assets only when they change:
 
 ```bash
-node render.mjs --silent                          # picture only
-node render.mjs --from 10 --to 13 --out build/probe.mp4 --silent   # one scene
-node render.mjs --jobs 1                          # single browser, easier to debug
+python3 logos.py                 # refetch and re cut the logos
+python3 logos.py --refetch       # ignore the cache
+python3 icons.py                 # redraw the icon set
+python3 build.py                 # then always rebuild index.html
+```
+
+Useful render flags:
+
+```bash
+node render.mjs --music                            # mux the underscore in
+node render.mjs --from 10 --to 13 --out build/probe.mp4   # one scene
+node render.mjs --jobs 1                           # single browser, easier to debug
 ```
 
 The exporter cuts the timeline into contiguous segments, renders them in
@@ -133,5 +185,9 @@ python3 wm.py        # retrace the Align wordmark off the still -> wordmark.path
 
 - 16:9 only. A 9:16 vertical cut for LinkedIn and Reels is a small change: adjust
   the stage dimensions in `src/style.css` and the per scene layout.
-- The underscore is deliberately quiet, about 15 dBFS RMS. It sits under a voice
-  over without ducking if one is ever added.
+- The cut ships silent by design. `python3 audio.py && node render.mjs --music`
+  produces `align-hcm-intro-music.mp4` with a quiet synthesised underscore at
+  about 15 dBFS RMS, low enough to sit under a voice over without ducking.
+- Platform logos are the property of their respective owners and are used here
+  to state a support relationship. The white knockout is the reverse treatment
+  every one of these vendors publishes in their own brand kit.

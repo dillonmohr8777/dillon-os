@@ -67,8 +67,11 @@ function eyebrow(label) {
 }
 
 /* The mark is drawn in a 138 x 100 unit box: two leaning bars and three dots,
-   measured off the supplied end card still. WORDMARK_PATH is traced from the
-   same still and lives in its own 494 x 190 box. */
+   measured off the end card still. Note this is deliberately not the favicon
+   geometry at /hubfs/Site Images/Align Favicon.svg: that is the standalone
+   icon, whose bars lean about 44 degrees, where the bars in the wordmark
+   lockup are much more upright. The favicon ships as assets/logos/align-mark.svg.
+   WORDMARK_PATH is traced from the same still, in its own 494 x 190 box. */
 function lockupSVG(id, w = 690) {
   return `
 <svg class="lockup" id="${id}" viewBox="0 0 690 250" width="${w}">
@@ -160,11 +163,41 @@ function drawLockup(root, id, p) {
 
 /* ------------------------------------------------------------------ scenes */
 
-const PLATFORMS = ['UKG', 'Dayforce', 'Workday', 'ADP', 'Paylocity', 'HiBob'];
-const SERVICES = [
-  'Assessments', 'Implementation', 'Training', 'Integrations', 'Data conversion',
-  'SmartCare support', 'Optimization', 'Fractional teams', 'Client side leads', 'M&A support',
+/* Logos differ wildly in proportion, so sizing them to a common width or a
+   common height makes some shout and others whisper. Each is scaled to the
+   same optical area instead, with a per mark weight for ink density: ADP is a
+   heavy outlined slab, Dayforce is airy lowercase. */
+const LOGO_AREA = 34000;
+const PLATFORMS = [
+  { key: 'ukg',      name: 'UKG',      aspect: 483 / 186,  weight: 1.00 },
+  { key: 'dayforce', name: 'Dayforce', aspect: 900 / 214,  weight: 1.07 },
+  { key: 'workday',  name: 'Workday',  aspect: 838 / 337,  weight: 1.00 },
+  { key: 'adp',      name: 'ADP',      aspect: 1200 / 545, weight: 0.86 },
 ];
+
+function platformCell(p) {
+  const h = Math.sqrt((LOGO_AREA * p.weight) / p.aspect);
+  const w = h * p.aspect;
+  return `<div class="pcell"><img src="${LOGOS[p.key]}" alt="${p.name}"
+            style="width:${w.toFixed(0)}px;height:${h.toFixed(0)}px"></div>`;
+}
+const SERVICES = [
+  ['Assessments', 'assessments'],
+  ['Implementation', 'implementation'],
+  ['Training', 'training'],
+  ['Integrations', 'integration'],
+  ['Data conversion', 'data-conversion'],
+  ['SmartCare support', 'support'],
+  ['Optimization', 'optimization'],
+  ['Fractional teams', 'fractional'],
+  ['Client side leads', 'client-side'],
+  ['M&A support', 'ma'],
+];
+
+function icon(name, cls = '') {
+  return `<svg class="ico ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]}</svg>`;
+}
 const FRICTION = ['Data conversion', 'Integrations', 'Parallel payroll', 'Go live', 'Adoption'];
 
 const SCENES = [
@@ -277,10 +310,10 @@ const SCENES = [
   {
     id: 's6', in: 15.6, out: 19.6,
     html: `
-      <div class="pad" style="left:210px;right:210px">
+      <div class="pad" style="left:130px;right:130px">
         ${eyebrow('One partner, every platform')}
-        <div class="pgrid">${PLATFORMS.map(p => `<div class="pcell">${p}</div>`).join('')}</div>
-        <p class="body" style="max-width:none;text-align:center;font-size:34px">Deep vendor partnerships across all six.</p>
+        <div class="pgrid">${PLATFORMS.map(platformCell).join('')}</div>
+        <p class="body" style="max-width:none;text-align:center;font-size:34px">Certified consultants on every platform we support.</p>
       </div>`,
     draw(root, lt, dur) {
       showEyebrow(root, lt, 0.06);
@@ -303,7 +336,7 @@ const SCENES = [
       <div class="pad" style="justify-content:flex-start;padding-top:150px">${eyebrow('What we do')}</div>
       <div class="ticker">
         <div class="track">
-          ${SERVICES.map((s, i) => `<div class="row" data-i="${i}"><span class="num">${String(i + 1).padStart(2, '0')}</span>${s}</div>`).join('')}
+          ${SERVICES.map(([label, ic], i) => `<div class="row" data-i="${i}">${icon(ic)}<span class="num">${String(i + 1).padStart(2, '0')}</span>${label}</div>`).join('')}
         </div>
       </div>`,
     draw(root, lt, dur) {
@@ -332,10 +365,10 @@ const SCENES = [
       <div class="center">
         <div class="bracket">
           <span class="br" data-l>{</span>
-          <span class="word" data-w>SmartCare</span>
+          <img class="sclogo" data-w src="${LOGOS.smartcare}" alt="SmartCare by Align HCM">
           <span class="br" data-r>}</span>
         </div>
-        <p class="body" style="text-align:center;margin-top:44px">Support that answers. <span class="hi">Most callbacks inside the hour.</span></p>
+        <p class="body" style="text-align:center;margin-top:30px;max-width:none">Ongoing HCM support after go live. <span class="hi">Most callbacks inside the hour.</span></p>
       </div>`,
     draw(root, lt, dur) {
       const lp = E.easeOutBack(seg(lt, 0.06, 0.68));

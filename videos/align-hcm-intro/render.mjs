@@ -8,8 +8,8 @@
  * rendering), so the timeline is cut into contiguous segments rendered by
  * parallel browsers and concatenated at the end.
  *
- *   node render.mjs                    full render with the audio bed
- *   node render.mjs --silent           no audio mux
+ *   node render.mjs                    full render, no audio
+ *   node render.mjs --music            mux the synthesised underscore
  *   node render.mjs --jobs 1           single browser, easier to debug
  *   node render.mjs --from 10 --to 13 --out build/probe.mp4
  *
@@ -35,9 +35,9 @@ const CHROME = process.env.CHROME || '/opt/pw-browsers/chromium-1194/chrome-linu
 
 const FPS = Number(opt('--fps', 30));
 const FROM = Number(opt('--from', 0));
-const SILENT = flag('--silent');
+const MUSIC = flag('--music');   // silent unless asked; the cut ships mute
 const JOBS = Math.max(1, Number(opt('--jobs', Math.min(3, Math.max(1, os.cpus().length - 1)))));
-const OUT = path.resolve(HERE, opt('--out', SILENT ? 'align-hcm-intro-silent.mp4' : 'align-hcm-intro.mp4'));
+const OUT = path.resolve(HERE, opt('--out', MUSIC ? 'align-hcm-intro-music.mp4' : 'align-hcm-intro.mp4'));
 const AUDIO = path.join(BUILD, 'underscore.wav');
 const PAGE = 'file://' + path.join(HERE, 'index.html');
 
@@ -135,8 +135,8 @@ if (jobs > 1) {
   await run(['-y', '-hide_banner', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', videoOnly]);
 }
 
-const useAudio = !SILENT && existsSync(AUDIO);
-if (!SILENT && !useAudio) console.log('no build/underscore.wav found, writing a silent cut');
+const useAudio = MUSIC && existsSync(AUDIO);
+if (MUSIC && !useAudio) console.log('no build/underscore.wav found, run audio.py first; writing a silent cut');
 
 await run([
   '-y', '-hide_banner', '-loglevel', 'error',
