@@ -286,7 +286,7 @@ scene(11,root=>{
 /* --- 04 · trust bar ------------------------------------------------------ */
 scene(9.5,root=>{
   root.style.background='linear-gradient(150deg,#24376a,#111c40)';
-  const bg=photo('life139',root,{inset:0,opacity:.20});
+  const bg=photo('cdeck3',root,{inset:0,opacity:.20});
   const row=el('div','',{position:'absolute',left:0,right:0,top:'50%',transform:'translateY(-50%)',
     display:'flex',justifyContent:'space-around',alignItems:'center',padding:'0 120px'},root);
   const data=[['1998','ESTABLISHED'],['2','COUNTIES SERVED'],['100%','LICENSED & INSURED'],['FREE','ESTIMATES']];
@@ -559,15 +559,15 @@ function statement(imgKey,kicker,head,sub,dur=12){
    TIMELINE
    ============================================================ */
 
-chapter('01','DECKS','deck136');
-filmstrip(['deck41','deck27','deck12','deck24','deck86','deck73','deck20','life89'],
+chapter('01','DECKS','cdeck');
+filmstrip(['cdeck','cdeck2','deck41','cdeck3','deck136','cdeck4','deck27','deck12'],
   'PVC & COMPOSITE',
   'AZEK · TimberTech · Trex · Wolf · Fiberon. Installed in one to two weeks.');
 splitScene('work65','left','LOW MAINTENANCE','Never sand it. Never stain it. Never seal it again.',
   ['50 YEAR WARRANTY','CUSTOM DESIGN','CURVED & MULTI LEVEL','INTEGRATED LIGHTING'],10);
 
-chapter('02','FENCES','work90');
-gridScene(['fence34','fence119','fence102','fence121','fence37','fence103','fence38','fence62','fence98','work123','work124','fence34'],
+chapter('02','FENCES','cpicket');
+gridScene(['fence34','ccedar','fence102','fence121','fence37','fence103','fence38','cbefore','fence98','work90','work123','fence62'],
   'EVERY LINE, EVERY STYLE',
   'Residential, commercial and agricultural. Most yards finished in two to five days.',6,14);
 splitScene('work129','right','MATERIALS','Vinyl, aluminium, chain link, wood and privacy.',
@@ -590,7 +590,7 @@ statement('pool5','CODE COMPLIANT','FOUR FEET IS THE LAW.',
   'Removable mesh fencing and ASTM certified safety nets, built in house and backed by a limited lifetime warranty. We install at 52 inches.',12);
 
 chapter('06','BACKYARD STRUCTURES','struct146');
-gridScene(['struct43','struct51','struct47','struct149','struct53','struct120','struct55','struct148','struct45','struct48','struct151','struct43'],
+gridScene(['struct43','struct51','cpavilion','struct149','struct53','struct120','struct55','struct148','struct45','struct48','struct151','struct47'],
   'AMISH BUILT, DELIVERED',
   'Sheds, garages, gazebos, cabanas and kennels, crafted in Lancaster County, Pennsylvania.',6,13);
 
@@ -644,7 +644,7 @@ scene(11,root=>{
   /* a thin strip of recent work anchors the lower third */
   const strip=el('div','',{position:'absolute',left:'126px',top:'716px',width:'1668px',height:'246px',
     display:'flex',gap:'16px',overflow:'hidden'},root);
-  const SK=['deck1','fence34','rail75','gate28','pool5','struct47','life89'];
+  const SK=['cdeck2','ccedar','rail75','gate28','pool5','cpavilion','cdeck3'];
   const cells=SK.map(k=>photo(k,strip,{position:'relative',flex:'1 1 0',height:'246px',borderRadius:'4px'}));
   const rule=el('div','rule',{position:'absolute',left:'126px',top:'672px',width:'1668px',height:'3px',
     background:'rgba(255,255,255,.16)'},root);

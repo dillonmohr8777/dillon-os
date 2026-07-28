@@ -104,6 +104,19 @@ SEL = {
     151: ('card', 'struct', 'Outdoor dog kennel'),
 }
 
+# Client-supplied photos, dropped in as files rather than indexed off the site set.
+# 'cfence4011' has a competitor's yard sign cloned out of the fence post.
+CLIENT = {
+    'cdeck':    ('hero', 'client_deck_composite.jpg',  'Composite deck, black aluminium rail and glass panel'),
+    'cpicket':  ('hero', 'client_picket_detail.jpg',   'White picket fence detail'),
+    'ccedar':   ('card', 'client_fence_cedar.jpg',     'New cedar privacy fence'),
+    'cbefore':  ('card', 'client_yard_before.jpg',     'Yard with a weathered fence, before'),
+    'cpavilion':('card', 'client_pavilion_kitchen.jpg','Pavilion with outdoor kitchen'),
+    'cdeck2':   ('hero', 'client_deck_aerial.jpg',     'Multi-level cedar deck from above'),
+    'cdeck3':   ('hero', 'client_deck_pvc_living.jpg', 'PVC deck with dining and lounge'),
+    'cdeck4':   ('card', 'client_deck_dining.jpg',     'Deck dining under the trees'),
+}
+
 PROFILES = {
     # name       hero_w  hero_q  card_w  card_q
     'full':     (1920,   82,     1100,   80),
@@ -129,6 +142,16 @@ def build(profile):
         total += os.path.getsize(path)
         manifest[key] = {'cat': cat, 'kind': kind, 'caption': caption,
                          'w': im.width, 'h': im.height, 'file': key + '.jpg'}
+    for key, (kind, fname, caption) in CLIENT.items():
+        im = Image.open(B + 'client_raw/' + fname).convert('RGB')
+        w, q = (hw, hq) if kind == 'hero' else (cw, cq)
+        if im.width > w:
+            im = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
+        im.save(out + key + '.jpg', 'JPEG', quality=q, optimize=True, progressive=True)
+        total += os.path.getsize(out + key + '.jpg')
+        manifest[key] = {'cat': 'client', 'kind': kind, 'caption': caption,
+                         'w': im.width, 'h': im.height, 'file': key + '.jpg'}
+
     json.dump(manifest, open(out + 'manifest.json', 'w'), indent=1)
     print(f'{profile}: {len(manifest)} images, {total/1e6:.2f} MB')
     return manifest
