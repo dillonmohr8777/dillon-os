@@ -11,7 +11,7 @@ tags: [fulltime, align-hcm, smartcare, linkedin, content]
 
 # Align HCM (Full-Time Employer)
 
-Dillon's full-time W2 employer. **Not a freelance client. Not under Buzz Bull or Momentum 360.** All routines and memory files that reference "clients" should exclude Align HCM from client lists unless explicitly called out.
+Dillon's full-time W2 employer. **Not a freelance client, and not part of any agency book of business.** All routines and memory files that reference "clients" should exclude Align HCM from client lists unless explicitly called out.
 
 ## Role
 Digital Marketing Manager. Owns LinkedIn content production across five profiles, SmartCare brand marketing, case studies, sales enablement, SEO blogs, and monthly performance reporting for the broader leadership team.
