@@ -1,14 +1,20 @@
 ---
 tags: [client, video, in-progress]
 client: Pro Fence Deck
-status: awaiting-assets
+status: v1-delivered
 created: 2026-07-27
 ---
 
 # Pro Fence Deck — Video Brief
 
 **Deliverable:** ~3–4 minute video. Client-supplied project photos + licensed stock footage.
-**Status:** Research complete. Awaiting photos + creative direction from Dillon.
+**Status:** **v1 cut delivered 7/28** — 3:40, 1080p30 MP4, built from 77 photos pulled off
+profencedeck.com. Silent. See [[video/README|video/README]] for how it's built and how to re-cut it.
+
+The 30 client photos in `pro-fence-deck-claude-handoff` were never reachable from the
+cloud session — `add_repo` stayed permission-gated there even after approval was granted
+on the desktop. Swapping them in is a small edit (`SEL` in `build_assets.py` plus the key
+lists at the bottom of `template.html`) and a re-render.
 
 ## Working Assumptions (confirm or override)
 - **Length:** 3:00–4:00
