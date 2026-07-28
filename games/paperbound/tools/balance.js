@@ -31,10 +31,14 @@ global.document = {
 global.requestAnimationFrame = () => 0;
 global.AudioContext = function () { return {}; };
 global.performance = { now: () => 0 };
-global.PB = {};
-for (const f of fs.readdirSync(JS).filter(f => /^\d+_.*\.js$/.test(f)).sort()) {
-  try { (new Function(fs.readFileSync(path.join(JS, f), 'utf8')))(); } catch (e) { /* draw-only files */ }
-}
+/* The browser puts every file in one shared global scope. 00_util.js opens with
+   `var PB = window.PB || (window.PB = {})`, so running each file in its own
+   Function scope leaves PB.U undefined for every later file and silently drops
+   most of the content. Concatenate and evaluate once. */
+const SRC = fs.readdirSync(JS).filter(f => /^\d+_.*\.js$/.test(f)).sort()
+  .map(f => fs.readFileSync(path.join(JS, f), 'utf8')).join('\n;\n');
+const PB = (new Function(SRC + '\n;return PB;'))();
+global.PB = PB;
 
 const E = PB.Enemies.all();
 const Mv = PB.Moves;
@@ -89,9 +93,9 @@ function buildPlayer(level, style) {
      (biggest single damage lever), then the partner one, then Multibounce. */
   const mods = { atk: 0, atkP: 0, def: 0, defP: 0 };
   let spent = 0;
-  if (bp - spent >= 6) { mods.atk += 1; spent += 6; }
-  if (bp - spent >= 6) { mods.atkP += 1; spent += 6; }
-  if (bp - spent >= 6) { mods.atk += 1; spent += 6; }   // a second copy stacks
+  if (bp - spent >= 6) { mods.atk += 1; spent += 6; }    // Power Plus, +1 (only one exists)
+  if (bp - spent >= 6) { mods.atkP += 1; spent += 6; }   // Power Plus P
+  if (bp - spent >= 6) { mods.def += 1; spent += 6; }    // Defend Plus
 
   /* Ranks come from bosses cleared, which tracks chapter, which tracks level.
      Two upgrades land by ch3 and the rest by ch7 in the shipped scripts. */
@@ -124,7 +128,11 @@ function heroHit(move, rank, mods, tier, stylish, foe, bossDef) {
   return total;
 }
 
-/* ---- enemy damage on the hero ------------------------------------------ */
+/* ---- enemy damage on a player-side target -------------------------------
+   NOTE: the game does NOT feed phase atk mods into this. 14_battle.js:1323
+   increments f.atk on a phase change, but the damage path at :1398-1404 reads
+   only mv.power plus the 'atkUp' buff — f.atk is never consulted. So phase
+   attack buffs are a no-op on real boss attacks, and this models that. */
 function foeHit(mv, atkBuff, guard, playerDef) {
   let power = (mv.power || 0) + atkBuff;
   const hits = mv.hits || 1;
@@ -147,14 +155,16 @@ function foeHit(mv, atkBuff, guard, playerDef) {
 function simulate(bossId, level, skill, style) {
   const B = E[bossId];
   const p = buildPlayer(level, style);
+  /* The partner is a separate target with its own HP pool. Charging every
+     boss hit to the hero roughly doubled incoming damage in the first draft. */
+  const partnerHp = { hp: 10 + Math.floor(level * 1.6), max: 10 + Math.floor(level * 1.6) };
   const boss = {
-    hp: B.hp, maxHp: B.hp, def: B.def || 0, atkBuff: 0,
-    moves: (B.moves || []).slice(), phasesFired: []
+    hp: B.hp, maxHp: B.hp, def: B.def || 0,
+    atkUp: 0, atkUpTurns: 0,          // 'atkUp' takes MAX and expires (14_battle.js:156)
+    guardAmt: 0, guardTurns: 0,       // guard moves raise Defence (:1337, :320)
+    moves: (B.moves || []).slice(), phaseIdx: 0
   };
 
-  /* Hero move pool. An optimising player spends BP on the cheap badge moves
-     first — Power Mallet (2 BP) for raw damage, Pierce Mallet (3 BP) to skip
-     boss Defence entirely, which matters enormously against def 5-7 bosses. */
   const pool = [Mv.get('stomp'), Mv.get('mallet')];
   if (skill.optimal) {
     let bpLeft = p.bp - p.bpSpent;
@@ -162,81 +172,104 @@ function simulate(bossId, level, skill, style) {
     if (bpLeft >= 2) { pool.push(Mv.get('mallet_power')); bpLeft -= 2; }
     if (bpLeft >= 3) { pool.push(Mv.get('stomp_pierce')); bpLeft -= 3; }
   }
-  const partnerM = Mv.get('tw_bonk');   // the rank-1 free partner attack
-  const duet = Mv.get('duet_twigby');   // unlocked by a full Encore gauge
-  let encore = 0;
+  const partnerM = Mv.get(skill.partnerMove || 'tw_bonk');
+  const duet = Mv.get(skill.duet || 'duet_twigby');
+  let encore = 0, charge = 0;
 
-  let heals = skill.items;   // number of ~10 HP heals carried
+  let heals = skill.items;
   let round = 0;
-  const MAXR = 60;
+  /* There is NO turn limit in 14_battle.js. This cap is a runaway guard only,
+     and hitting it is reported separately — never scored as a loss. */
+  const RUNAWAY = 400;
 
-  while (boss.hp > 0 && p.hp > 0 && round < MAXR) {
+  while (boss.hp > 0 && p.hp > 0 && round < RUNAWAY) {
     round++;
+    if (boss.atkUpTurns > 0 && --boss.atkUpTurns === 0) boss.atkUp = 0;
+    if (boss.guardTurns > 0) boss.guardTurns--;
+    const effDef = boss.def + (boss.guardTurns > 0 ? boss.guardAmt : 0);
 
     /* --- hero --- */
     const tier = chance(skill.perfect) ? 2 : (chance(skill.land / (1 - skill.perfect + 1e-9)) ? 1 : 0);
     const stylish = tier === 2 && chance(skill.stylish);
 
     if (p.hp <= Math.max(4, p.maxHp * 0.3) && heals > 0) {
-      p.hp = Math.min(p.maxHp, p.hp + 10); heals--;      // a turn spent healing
+      p.hp = Math.min(p.maxHp, p.hp + 10); heals--;
     } else if (encore >= 100) {
-      /* Encore duet: the biggest hit in the game, but it takes many rounds of
-         stylish play to charge, so it lands once or twice per fight at most. */
-      boss.hp -= heroHit(duet, 3, p.mods, 2, false, B, boss.def);
+      boss.hp -= heroHit(duet, 3, p.mods, 2, false, B, effDef);
       encore = 0;
     } else {
       let best = 0, chosen = null;
       for (const mv of pool) {
-        const cost = mv.fp || 0;
-        if (cost > p.fp) continue;
+        if ((mv.fp || 0) > p.fp) continue;
         const rank = mv.cat === 'mallet' ? p.malletRank : p.stompRank;
-        const d = heroHit(mv, rank, p.mods, tier, stylish, B, boss.def);
-        /* prefer raw damage, but never spend FP for no gain */
+        const d = heroHit(mv, rank, { atk: (p.mods.atk || 0) + charge }, tier, stylish, B, effDef);
         if (d > best) { best = d; chosen = mv; }
       }
-      if (chosen) { p.fp -= (chosen.fp || 0); boss.hp -= best; }
+      if (chosen) { p.fp -= (chosen.fp || 0); boss.hp -= best; charge = 0; }
       encore += tier === 2 ? (stylish ? 14 : 7) : (tier === 1 ? 3 : 0);
     }
     if (boss.hp <= 0) break;
 
-    /* --- partner --- */
-    const tierP = chance(skill.perfect) ? 2 : (chance(skill.land / (1 - skill.perfect + 1e-9)) ? 1 : 0);
-    boss.hp -= heroHit(partnerM, p.partnerRank, { atk: p.mods.atkP }, tierP, false, B, boss.def);
-    if (boss.hp <= 0) break;
+    /* --- partner (only if standing) --- */
+    if (partnerHp.hp > 0) {
+      const tierP = chance(skill.perfect) ? 2 : (chance(skill.land / (1 - skill.perfect + 1e-9)) ? 1 : 0);
+      boss.hp -= heroHit(partnerM, p.partnerRank, { atk: p.mods.atkP }, tierP, false, B, effDef);
+      encore += tierP === 2 ? 7 : (tierP === 1 ? 3 : 0);
+      if (boss.hp <= 0) break;
+    }
 
-    /* --- phase triggers --- */
-    for (const ph of (B.phases || [])) {
-      if (boss.phasesFired.includes(ph) || boss.hp / boss.maxHp > ph.at) continue;
-      boss.phasesFired.push(ph);
-      if (ph.mods && ph.mods.atk) boss.atkBuff += ph.mods.atk;
+    /* --- phases: ordered cursor, matching 14_battle.js:1320 --- */
+    while (boss.phaseIdx < (B.phases || []).length &&
+           boss.hp / boss.maxHp <= B.phases[boss.phaseIdx].at) {
+      const ph = B.phases[boss.phaseIdx++];
+      /* ph.mods.atk is deliberately NOT applied: the game increments f.atk,
+         which its own damage path never reads. ph.mods.def IS real. */
       if (ph.mods && ph.mods.def) boss.def = Math.max(0, boss.def + ph.mods.def);
       if (ph.add) boss.moves = boss.moves.concat(ph.add);
-      if (ph.heal) boss.hp = Math.min(boss.maxHp, boss.hp + ph.heal);
     }
 
     /* --- boss --- */
     const mv = pickWeighted(boss.moves);
-    if (mv.target === 'self') { if (mv.atkBuff) boss.atkBuff += mv.atkBuff; continue; }
-    const g = chance(skill.superguard) ? 'superguard' : (chance(skill.guard) ? 'guard' : 'none');
-    /* target 'both' hits the hero as well as the partner */
-    p.hp -= foeHit(mv, boss.atkBuff, g, p.mods.def || 0);
+    if (mv.target === 'self' || mv.guard || mv.heal) {
+      if (mv.atkBuff) { boss.atkUp = Math.max(boss.atkUp, mv.atkBuff); boss.atkUpTurns = mv.turns || 3; }
+      if (mv.guard) { boss.guardAmt = mv.guard; boss.guardTurns = mv.turns || 2; }
+      if (mv.heal) boss.hp = Math.min(boss.maxHp, boss.hp + mv.heal);
+      continue;
+    }
+    const g = () => chance(skill.superguard) ? 'superguard' : (chance(skill.guard) ? 'guard' : 'none');
+    if (mv.target === 'both') {
+      p.hp -= foeHit(mv, boss.atkUp, g(), p.mods.def || 0);
+      if (partnerHp.hp > 0) partnerHp.hp -= foeHit(mv, boss.atkUp, g(), p.mods.defP || 0);
+    } else if (mv.target === 'partner') {
+      if (partnerHp.hp > 0) partnerHp.hp -= foeHit(mv, boss.atkUp, g(), p.mods.defP || 0);
+      else p.hp -= foeHit(mv, boss.atkUp, g(), p.mods.def || 0);
+    } else {
+      /* 'random' (the m() factory default) picks uniformly among standing
+         players — 14_battle.js:1396 `victims = [U.pick(players)]` */
+      if (partnerHp.hp > 0 && chance(0.5)) partnerHp.hp -= foeHit(mv, boss.atkUp, g(), p.mods.defP || 0);
+      else p.hp -= foeHit(mv, boss.atkUp, g(), p.mods.def || 0);
+    }
   }
 
-  return { win: boss.hp <= 0 && p.hp > 0, rounds: round, hpLeft: Math.max(0, p.hp), maxHp: p.maxHp, timeout: round >= MAXR };
+  return {
+    win: boss.hp <= 0, dead: p.hp <= 0, rounds: round,
+    hpLeft: Math.max(0, p.hp), maxHp: p.maxHp, runaway: round >= RUNAWAY && boss.hp > 0
+  };
 }
 
 function trial(bossId, level, skill, style, n) {
-  let wins = 0, rounds = 0, hpLeft = 0, timeouts = 0;
+  let wins = 0, rounds = 0, hpLeft = 0, runaways = 0, deaths = 0;
   for (let i = 0; i < n; i++) {
     const r = simulate(bossId, level, skill, style);
     if (r.win) { wins++; rounds += r.rounds; hpLeft += r.hpLeft; }
-    if (r.timeout) timeouts++;
+    if (r.dead) deaths++;
+    if (r.runaway) runaways++;
   }
   return {
-    winRate: wins / n,
+    winRate: wins / n, deathRate: deaths / n,
     avgRounds: wins ? rounds / wins : Infinity,
     avgHpLeft: wins ? hpLeft / wins : 0,
-    timeoutRate: timeouts / n
+    runawayRate: runaways / n
   };
 }
 
@@ -264,7 +297,9 @@ const CH = {
 };
 /* Rough level a player reaches by each chapter: bosses give 60-200 SP, rank
    and file 3-12, 100 SP per level, with income taxed as you out-level. */
-const EXPECTED_LEVEL = { 1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19, 7: 22, 8: 25, 9: 27 };
+/* Derived by replaying every placed encounter through the real SP formula
+   (see the level-curve walk in the commit message), not assumed. */
+const EXPECTED_LEVEL = { 1: 2, 2: 5, 3: 8, 4: 12, 5: 17, 6: 22, 7: 27, 8: 32, 9: 35 };
 
 const bossIds = Object.keys(E).filter(k => (E[k].flags || []).includes('boss'));
 const list = ONLY ? [ONLY] : bossIds;
