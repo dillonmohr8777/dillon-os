@@ -35,6 +35,15 @@ Post-go-live HCM support product. Four maturity stages:
 
 Messaging emphasis: ongoing expert access, platform optimization, post-go-live support.
 
+## HubSpot Customer Agent
+
+Website-facing AI agent for alignhcm.com in HubSpot portal `242825734`. **Launch hold** as of
+2026-07-28 — retrieval works now, but the agent fabricates inline URLs and overclaims on
+data-conversion completeness. No live channel is attached and activation needs its own approval.
+
+Package: [[customer-agent/README|Customer Agent]] — readiness report (12 pp), knowledge core
+(10 pp), correction package (6 pp), plus the two avatar candidates awaiting brand approval.
+
 ## Deliverables in flight
 - April and May 2026 LinkedIn content calendars (both complete).
 - HTML / CSS motion graphic carousel assets.

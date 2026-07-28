@@ -46,5 +46,14 @@ rate: Full-time
 - First-person presentation script for Dillon
 - Presented to: Maher, Barbara, Tammi, Rich, Joann, Allison
 
+## HubSpot Customer Agent
+- Website-facing AI agent for alignhcm.com, HubSpot portal `242825734`.
+- **Status: launch hold** as of 2026-07-28. No live channel attached.
+- Retrieval fixed since the July 23 baseline; the agent now fabricates inline URLs and overclaims on
+  data-conversion completeness. Two guardrail publishes and one source cleanup to the next gate review.
+- Full package (readiness report, knowledge core, correction package):
+  [[02_FullTimeJob/AlignHCM/customer-agent/README|Customer Agent]]
+
 ## Links
 - [[Client Index]]
+- [[02_FullTimeJob/AlignHCM/customer-agent/README|HubSpot Customer Agent package]]
