@@ -1,0 +1,94 @@
+/* ==========================================================================
+   PAPERBOUND — css/game.css
+   The page is only a frame: everything visible is drawn into the canvas.
+   ========================================================================== */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #17101f;
+  background-image:
+    radial-gradient(circle at 50% 0%, #2c1f3c 0%, #17101f 60%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.014) 0 2px, transparent 2px 4px);
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Trebuchet MS", "Lucida Grande", "Segoe UI", Verdana, sans-serif;
+}
+
+#frame {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game {
+  display: block;
+  image-rendering: auto;
+  border-radius: 6px;
+  box-shadow:
+    0 0 0 3px #0c0812,
+    0 18px 48px rgba(0, 0, 0, .6),
+    0 2px 0 rgba(255, 255, 255, .05) inset;
+  touch-action: none;
+  background: #0f0a18;
+}
+
+/* ---- on-screen controls: hidden unless the device is touch-primary ------ */
+#touchpad { display: none; }
+
+@media (hover: none) and (pointer: coarse) {
+  #touchpad {
+    display: block;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+  }
+  #touchpad .dpad,
+  #touchpad .face,
+  #touchpad .sys { position: absolute; pointer-events: auto; }
+
+  #touchpad .dpad { left: 14px;  bottom: 16px; width: 148px; height: 148px; }
+  #touchpad .face { right: 14px; bottom: 16px; width: 168px; height: 148px; }
+  #touchpad .sys  { right: 14px; top: 12px; display: flex; gap: 8px; }
+
+  .tb {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; height: 50px;
+    border: 2px solid rgba(255, 248, 224, .55);
+    border-radius: 12px;
+    background: rgba(42, 28, 60, .5);
+    color: #fff8e0;
+    font: bold 17px/1 "Trebuchet MS", sans-serif;
+    backdrop-filter: blur(2px);
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .tb.on { background: rgba(224, 72, 60, .7); transform: scale(.94); }
+  .tb.big   { width: 64px; height: 64px; font-size: 20px; }
+  .tb.small { width: 42px; height: 42px; font-size: 14px; }
+  .tb.tiny  { position: static; width: 40px; height: 32px; font-size: 13px; border-radius: 8px; }
+
+  .dpad .up    { left: 49px; top: 0; }
+  .dpad .left  { left: 0;    top: 49px; }
+  .dpad .right { left: 98px; top: 49px; }
+  .dpad .down  { left: 49px; top: 98px; }
+
+  .face .big   { right: 0;   bottom: 8px; }
+  .face .tb:not(.big):not(.small) { right: 70px; bottom: 20px; }
+  .face .small:nth-of-type(1) { right: 8px;  bottom: 82px; }
+  .face .small:nth-of-type(2) { right: 58px; bottom: 92px; }
+}
+
+/* Landscape phones get a shorter frame; keep the canvas from being squeezed. */
+@media (max-height: 460px) {
+  #game { border-radius: 0; box-shadow: 0 0 0 2px #0c0812; }
+}

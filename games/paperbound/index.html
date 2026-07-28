@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>PAPERBOUND — The Seven Seals of Foldheim</title>
+<meta name="description" content="A papercraft turn-based RPG: eight chapters, six partners, and seven torn seals to put back.">
+<link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+  <div id="frame">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div id="touchpad" aria-hidden="true">
+      <div class="dpad">
+        <button data-btn="up"    class="tb up">▲</button>
+        <button data-btn="left"  class="tb left">◀</button>
+        <button data-btn="right" class="tb right">▶</button>
+        <button data-btn="down"  class="tb down">▼</button>
+      </div>
+      <div class="face">
+        <button data-btn="x" class="tb small">C</button>
+        <button data-btn="y" class="tb small">V</button>
+        <button data-btn="b" class="tb">X</button>
+        <button data-btn="a" class="tb big">Z</button>
+      </div>
+      <div class="sys">
+        <button data-btn="l" class="tb tiny">Q</button>
+        <button data-btn="start" class="tb tiny">☰</button>
+        <button data-btn="select" class="tb tiny">▤</button>
+        <button data-btn="r" class="tb tiny">E</button>
+      </div>
+    </div>
+  </div>
+
+  <noscript><p style="color:#fff;font:16px sans-serif;padding:2rem">PAPERBOUND needs JavaScript.</p></noscript>
+
+  <!-- Load order matters: numeric prefixes are the dependency order. -->
+  <script src="js/00_util.js"></script>
+  <script src="js/01_input.js"></script>
+  <script src="js/02_audio.js"></script>
+  <script src="js/03_paper.js"></script>
+  <script src="js/04_sprites.js"></script>
+  <script src="js/05_cast.js"></script>
+  <script src="js/06_items.js"></script>
+  <script src="js/07_badges.js"></script>
+  <script src="js/08_moves.js"></script>
+  <script src="js/09_enemies.js"></script>
+  <script src="js/10_partners.js"></script>
+  <script src="js/11_state.js"></script>
+  <script src="js/12_actioncmd.js"></script>
+  <script src="js/13_ui.js"></script>
+  <script src="js/14_battle.js"></script>
+  <script src="js/15_script.js"></script>
+  <script src="js/16_world.js"></script>
+  <script src="js/17_themes.js"></script>
+  <script src="js/18_menus.js"></script>
+  <script src="js/19_songs.js"></script>
+  <script src="js/20_quests.js"></script>
+  <script src="js/21_maps_ch0.js"></script>
+  <script src="js/22_mapkit.js"></script>
+  <script src="js/23_maps_ch23.js"></script>
+  <script src="js/24_maps_ch45.js"></script>
+  <script src="js/25_maps_ch678.js"></script>
+  <script src="js/26_maps_extra.js"></script>
+  <script src="js/30_game.js"></script>
+</body>
+</html>
