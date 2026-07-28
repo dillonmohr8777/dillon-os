@@ -48,7 +48,7 @@
     eyePupil: '#2f4a8a',
     mouth: 'smile', mouthY: 13, mouthW: 8,
     noseX: .1, noseY: .36,
-    features: ['hair', 'heroCap', 'nose', 'moustache']
+    features: ['heroCap', 'nose', 'moustache']
   });
   /* Capless variant used in a couple of cutscenes. */
   def('pip_plain', U.extend(U.clone(S.get('pip')), { features: ['hair', 'nose', 'moustache'] }));
@@ -647,7 +647,7 @@
     buttonColor: '#a8a294', torsoR: 7,
     eyeStyle: 'void', eyeGlow: '#ffffff', eyeGap: 5.6, eyeW: 3.6, eyeH: 4.4, eyeY: 1.5,
     mouth: 'flat', mouthY: 13, mouthW: 8, noseX: .1, noseY: .36,
-    features: ['hair', 'heroCap', 'nose', 'moustache'], held: 'mallet'
+    features: ['heroCap', 'nose', 'moustache'], held: 'mallet'
   });
   def('vermillion', {
     arch: 'serpent', seed: 122, segments: 10, r: 27, gap: 32, hover: 76, wave: 18,
