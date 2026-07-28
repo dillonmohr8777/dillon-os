@@ -1,0 +1,773 @@
+<title>Pro Fence Deck — Built To Last</title>
+<style>
+__FONTS__
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#080d18;overflow:hidden;height:100%;font-family:Poppins,system-ui,sans-serif}
+body.embed{overflow:auto;background:#0b1120}
+
+:root{
+  --navy:#25386C;
+  --navy-d:#16224a;
+  --navy-x:#0d1533;
+  --ink:#0a0f1e;
+  --amber:#F2A93B;
+  --paper:#F4F6FA;
+}
+
+#wrap{position:fixed;inset:0;overflow:hidden}
+
+#stage{
+  position:absolute;left:50%;top:50%;width:1920px;height:1080px;
+  background:var(--ink);overflow:hidden;
+  transform-origin:center center;
+  box-shadow:0 40px 120px rgba(0,0,0,.6);
+}
+.scene{position:absolute;inset:0;overflow:hidden;will-change:transform,opacity;backface-visibility:hidden}
+.hide{display:none!important}
+
+.fill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform}
+.imgbox{position:absolute;overflow:hidden;will-change:transform,opacity}
+.imgbox>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;will-change:transform}
+
+.scrim{position:absolute;inset:0}
+.scrim.b{background:linear-gradient(to top,rgba(8,13,26,.94) 0%,rgba(8,13,26,.55) 34%,rgba(8,13,26,0) 68%)}
+.scrim.l{background:linear-gradient(to right,rgba(13,21,51,.95) 0%,rgba(13,21,51,.62) 42%,rgba(13,21,51,.05) 78%)}
+.scrim.full{background:rgba(10,16,36,.48)}
+.scrim.veil{background:linear-gradient(to bottom,rgba(11,16,32,.30),rgba(11,16,32,.62))}
+.grain{position:absolute;inset:0;opacity:.055;mix-blend-mode:overlay;pointer-events:none;
+  background-image:var(--grain);background-size:220px 220px}
+
+/* ---------- type ---------- */
+.kicker{font:800 26px/1 Poppins;letter-spacing:.42em;text-transform:uppercase;color:var(--amber)}
+.kicker.w{color:rgba(255,255,255,.72)}
+.h1{font:900 150px/.92 Poppins;letter-spacing:-.035em;color:#fff;text-transform:uppercase}
+.h2{font:900 104px/.95 Poppins;letter-spacing:-.03em;color:#fff;text-transform:uppercase}
+.h3{font:800 66px/1.02 Poppins;letter-spacing:-.02em;color:#fff}
+.body{font:400 34px/1.5 Lato;color:rgba(255,255,255,.82)}
+.body.dark{color:rgba(16,24,50,.78)}
+.mono{font:700 24px/1 Poppins;letter-spacing:.3em;text-transform:uppercase}
+.word{display:inline-block;will-change:transform,opacity}
+.rule{height:8px;background:var(--amber);will-change:transform;transform-origin:left center}
+
+/* ---------- chapter card ---------- */
+.chapNum{font:900 300px/.8 Poppins;letter-spacing:-.05em;color:rgba(255,255,255,.09)}
+
+/* ---------- cards / chips ---------- */
+.chip{display:inline-block;padding:14px 30px;border:3px solid rgba(255,255,255,.28);border-radius:999px;
+  font:700 28px/1 Poppins;letter-spacing:.06em;color:#fff;white-space:nowrap;will-change:transform,opacity}
+.chip.solid{background:var(--amber);border-color:var(--amber);color:#16224a}
+
+.stat{text-align:center;will-change:transform,opacity}
+.stat .big{font:900 118px/1 Poppins;letter-spacing:-.03em;color:#fff}
+.stat .big em{font-style:normal;color:var(--amber)}
+.stat .lab{font:700 23px/1.35 Poppins;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:16px}
+
+.quote{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;
+  padding:0 190px;will-change:transform,opacity}
+.quote .stars{font:400 52px/1 Lato;color:var(--amber);letter-spacing:.14em;margin-bottom:44px}
+.quote .txt{font:700 62px/1.28 Lato;color:#fff;letter-spacing:-.01em}
+.quote .who{font:800 27px/1 Poppins;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);margin-top:52px}
+
+.town{font:800 54px/1 Poppins;letter-spacing:-.01em;color:rgba(255,255,255,.9);will-change:transform,opacity}
+.town.dim{color:rgba(255,255,255,.34)}
+
+/* ---------- logo ---------- */
+.logoMask{background-repeat:no-repeat;background-position:center;background-size:contain;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+  -webkit-mask-size:contain;mask-size:contain;will-change:transform,opacity}
+
+.vig{position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 90% at 50% 45%,rgba(0,0,0,0) 42%,rgba(0,0,0,.5) 100%)}
+
+/* ---------- controls (preview only) ---------- */
+#hud{position:fixed;left:0;right:0;bottom:0;padding:14px 22px;display:flex;gap:18px;align-items:center;
+  background:linear-gradient(to top,rgba(4,8,18,.95),rgba(4,8,18,0));
+  font:600 14px/1 Poppins;color:#cfd8ee;z-index:50;opacity:.5;transition:opacity .25s}
+#wrap:hover~#hud,#hud:hover,#hud:focus-within{opacity:1}
+#hud button:focus-visible,#scrub:focus-visible{outline:3px solid #fff;outline-offset:3px}
+#hud button{background:var(--amber);color:#16224a;border:0;border-radius:8px;padding:10px 20px;
+  font:800 14px/1 Poppins;letter-spacing:.06em;cursor:pointer}
+#scrub{flex:1;accent-color:var(--amber);cursor:pointer}
+#tc{font-variant-numeric:tabular-nums;min-width:112px;text-align:right;letter-spacing:.06em}
+.render #hud{display:none}
+</style>
+
+<div id="wrap"><div id="stage"><div class="grain"></div><div class="vig"></div></div></div>
+
+<div id="hud">
+  <button id="pp">PAUSE</button>
+  <input id="scrub" type="range" min="0" max="1000" value="0">
+  <span id="tc">0:00 / 0:00</span>
+</div>
+
+<script>
+__ASSETS__
+</script>
+
+<script>
+/* ============================================================
+   Pro Fence Deck — deterministic motion engine
+   Every frame is a pure function of time, so the same timeline
+   drives live playback and headless frame capture.
+   ============================================================ */
+const stage = document.getElementById('stage');
+const A = window.__A;            // { key: dataURI-or-path }
+const M = window.__M;            // manifest metadata
+
+/* ---------- easing ---------- */
+const cl=(v,a=0,b=1)=>v<a?a:v>b?b:v;
+const lerp=(a,b,t)=>a+(b-a)*t;
+const E={
+  lin:t=>t,
+  out:t=>1-Math.pow(1-t,3),
+  outQ:t=>1-Math.pow(1-t,5),
+  expo:t=>t>=1?1:1-Math.pow(2,-10*t),
+  inOut:t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,
+  back:t=>{const c=1.70158,s=c+1;return 1+s*Math.pow(t-1,3)+c*Math.pow(t-1,2)},
+  soft:t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2,
+};
+/* progress of a sub-range, eased */
+const rng=(p,a,b,e='out')=>E[e](cl((p-a)/(b-a)));
+
+/* ---------- dom helpers ---------- */
+function el(tag,cls,css,parent){
+  const n=document.createElement(tag);
+  if(cls)n.className=cls;
+  if(css)Object.assign(n.style,css);
+  (parent||stage).appendChild(n);
+  return n;
+}
+function img(key,parent,css){
+  const n=document.createElement('img');
+  if(!A[key]) console.error('missing asset key:',key);
+  n.src=A[key]; n.draggable=false;
+  if(css)Object.assign(n.style,css);
+  (parent||stage).appendChild(n);
+  return n;
+}
+/* image inside an overflow box, so we can scale the photo without moving the frame */
+function photo(key,parent,boxCss){
+  const b=el('div','imgbox',boxCss,parent);
+  const i=img(key,b);
+  b._i=i; return b;
+}
+/* split a string into per-word spans for staggered reveals */
+function words(node,text,cls){
+  node.innerHTML='';
+  const out=[];
+  text.split(' ').forEach((w,i)=>{
+    const s=document.createElement('span');
+    s.className='word'+(cls?' '+cls:''); s.textContent=w;
+    node.appendChild(s); out.push(s);
+    if(i<text.split(' ').length-1) node.appendChild(document.createTextNode(' '));
+  });
+  return out;
+}
+const byCat=c=>Object.keys(M).filter(k=>M[k].cat===c);
+const pick=(c,n)=>byCat(c).slice(0,n);
+
+/* ---------- scene registry ---------- */
+const SCENES=[]; let CUR=0; const OVERLAP=0.34;
+function scene(dur,build){
+  const root=el('div','scene hide');
+  const upd=build(root)||(()=>{});
+  SCENES.push({t0:CUR,t1:CUR+dur,dur,root,upd});
+  CUR+=dur-OVERLAP;
+  return root;
+}
+/* standard in/out envelope every scene gets for free */
+function env(p,inD=.10,outD=.10){
+  return {i:E.out(cl(p/inD)), o:E.soft(cl((p-(1-outD))/outD))};
+}
+
+/* ============================================================
+   SCENES
+   ============================================================ */
+
+/* --- 01 · logo ignition -------------------------------------------------- */
+scene(8.5,root=>{
+  Object.assign(root.style,{background:'radial-gradient(120% 110% at 50% 40%,#2c4382 0%,#1a2751 45%,#0d1533 100%)'});
+  /* light rake sweeping behind the mark */
+  const rake=el('div','',{position:'absolute',inset:'-20% -60%',
+    background:'linear-gradient(105deg,transparent 38%,rgba(255,255,255,.16) 48%,rgba(242,169,59,.28) 52%,transparent 62%)'},root);
+  /* wordmark, revealed by a clip wipe, filled by a moving gradient */
+  const holder=el('div','',{position:'absolute',left:'50%',top:'50%',width:'1180px',height:'210px',
+    transform:'translate(-50%,-50%)'},root);
+  const mark=el('div','logoMask',{position:'absolute',inset:0,
+    '-webkit-maskImage':`url(${A.wordmask})`,maskImage:`url(${A.wordmask})`,
+    background:'linear-gradient(100deg,#ffffff 0%,#ffffff 40%,#F2A93B 50%,#ffffff 60%,#ffffff 100%)',
+    backgroundSize:'300% 100%'},holder);
+  const tag=el('div','kicker',{position:'absolute',left:'50%',top:'calc(50% + 168px)',
+    transform:'translateX(-50%)',whiteSpace:'nowrap'},root);
+  tag.textContent='SINCE 1998';
+  const line=el('div','rule',{position:'absolute',left:'50%',top:'calc(50% + 128px)',width:'320px',
+    height:'5px',marginLeft:'-160px'},root);
+
+  return p=>{
+    const rev=rng(p,.06,.46,'expo');           // wipe the mark in
+    const sweep=rng(p,.18,.68,'inOut');        // gradient shine travels through it
+    const out=rng(p,.86,1,'soft');
+    holder.style.clipPath=`inset(0 ${(1-rev)*100}% 0 0)`;
+    holder.style.transform=`translate(-50%,-50%) scale(${lerp(1.06,1,rev)+out*.14})`;
+    holder.style.opacity=1-out;
+    mark.style.backgroundPosition=`${lerp(100,-100,sweep)}% 0`;
+    rake.style.transform=`translateX(${lerp(-30,30,E.inOut(cl(p/.9)))}%)`;
+    rake.style.opacity=(1-out)*.9;
+    line.style.transform=`scaleX(${rng(p,.44,.62,'expo')})`;
+    line.style.opacity=1-out;
+    tag.style.opacity=rng(p,.5,.72)*(1-out);
+    tag.style.transform=`translateX(-50%) translateY(${lerp(26,0,rng(p,.5,.75,'expo'))}px)`;
+  };
+});
+
+/* --- 02 · hero open ------------------------------------------------------ */
+scene(10.5,root=>{
+  const b=photo('deck1',root,{inset:0});
+  el('div','scrim b',null,root);
+  const kick=el('div','kicker',{position:'absolute',left:'130px',top:'642px'},root);
+  kick.textContent='BUCKS COUNTY · PENNSYLVANIA';
+  const h=el('div','h1',{position:'absolute',left:'126px',top:'690px',width:'1400px'},root);
+  const ws=words(h,'BUILT TO LAST');
+  const rule=el('div','rule',{position:'absolute',left:'130px',top:'930px',width:'560px'},root);
+  const sub=el('div','body',{position:'absolute',left:'130px',top:'966px',width:'1100px'},root);
+  sub.textContent='Decks, fences, railings and gates — since 1998.';
+
+  return p=>{
+    const {i,o}=env(p,.07,.10);
+    b._i.style.transform=`scale(${lerp(1.16,1.03,E.lin(p))})`;
+    root.style.opacity=i*(1-o);
+    kick.style.opacity=rng(p,.10,.22); kick.style.transform=`translateY(${lerp(20,0,rng(p,.10,.26,'expo'))}px)`;
+    ws.forEach((w,k)=>{
+      const q=rng(p,.14+k*.055,.44+k*.055,'expo');
+      w.style.transform=`translateY(${lerp(120,0,q)}px) rotate(${lerp(4,0,q)}deg)`;
+      w.style.opacity=q;
+    });
+    rule.style.transform=`scaleX(${rng(p,.40,.58,'expo')})`;
+    sub.style.opacity=rng(p,.50,.68);
+    sub.style.transform=`translateY(${lerp(24,0,rng(p,.50,.72,'expo'))}px)`;
+    root.style.transform=`scale(${1+o*.05})`;
+  };
+});
+
+/* --- 03 · split promise -------------------------------------------------- */
+scene(11,root=>{
+  root.style.background='var(--navy-x)';
+  const left=photo('deck41',root,{left:0,top:0,width:'860px',height:'1080px'});
+  const pane=el('div','',{position:'absolute',left:'860px',top:0,width:'1060px',height:'1080px',
+    background:'linear-gradient(160deg,#2b4079,#18244d)'},root);
+  const kick=el('div','kicker',{position:'absolute',left:'110px',top:'214px'},pane);
+  kick.textContent='WHAT WE BUILD';
+  const h=el('div','h2',{position:'absolute',left:'106px',top:'270px',width:'880px'},pane);
+  const ws=words(h,'DECKS. FENCES. RAILINGS. GATES.');
+  const rule=el('div','rule',{position:'absolute',left:'110px',top:'662px',width:'420px'},pane);
+  const body=el('div','body',{position:'absolute',left:'110px',top:'706px',width:'840px'},pane);
+  body.textContent='Designed, built and stood behind by the same person who quotes the job.';
+
+  return p=>{
+    const {i,o}=env(p,.09,.10);
+    left.style.transform=`translateX(${lerp(-880,0,rng(p,0,.34,'expo'))}px)`;
+    left._i.style.transform=`scale(${lerp(1.18,1.05,E.lin(p))})`;
+    pane.style.transform=`translateX(${lerp(1080,0,rng(p,.05,.40,'expo'))}px)`;
+    kick.style.opacity=rng(p,.30,.42);
+    ws.forEach((w,k)=>{
+      const q=rng(p,.30+k*.05,.56+k*.05,'expo');
+      w.style.transform=`translateY(${lerp(70,0,q)}px)`; w.style.opacity=q;
+    });
+    rule.style.transform=`scaleX(${rng(p,.58,.72,'expo')})`;
+    body.style.opacity=rng(p,.62,.78);
+    body.style.transform=`translateY(${lerp(22,0,rng(p,.62,.82,'expo'))}px)`;
+    root.style.opacity=i*(1-o);
+    root.style.transform=`translateX(${-o*140}px)`;
+  };
+});
+
+/* --- 04 · trust bar ------------------------------------------------------ */
+scene(9.5,root=>{
+  root.style.background='linear-gradient(150deg,#24376a,#111c40)';
+  const bg=photo('life139',root,{inset:0,opacity:.20});
+  const row=el('div','',{position:'absolute',left:0,right:0,top:'50%',transform:'translateY(-50%)',
+    display:'flex',justifyContent:'space-around',alignItems:'center',padding:'0 120px'},root);
+  const data=[['1998','ESTABLISHED'],['2','COUNTIES SERVED'],['100%','LICENSED & INSURED'],['FREE','ESTIMATES']];
+  const cells=data.map(([b,l])=>{
+    const c=el('div','stat',null,row);
+    el('div','big',null,c).textContent=b;
+    el('div','lab',null,c).textContent=l;
+    return c;
+  });
+  const bar=el('div','rule',{position:'absolute',left:'120px',top:'50%',width:'1680px',height:'4px',
+    background:'rgba(255,255,255,.14)',marginTop:'-2px'},root);
+
+  return p=>{
+    const {i,o}=env(p,.08,.12);
+    bg._i.style.transform=`scale(${lerp(1.2,1.08,p)})`;
+    bar.style.transform=`scaleX(${rng(p,.04,.30,'expo')})`;
+    cells.forEach((c,k)=>{
+      const q=rng(p,.16+k*.09,.46+k*.09,'back');
+      c.style.transform=`translateY(${lerp(60,0,q)}px) scale(${lerp(.7,1,q)})`;
+      c.style.opacity=cl(q*1.2);
+    });
+    root.style.opacity=i*(1-o);
+    root.style.transform=`scale(${lerp(1,1.06,o)})`;
+  };
+});
+
+/* ---------- reusable: chapter card ---------- */
+function chapter(num,title,imgKey,dur=5.4){
+  scene(dur,root=>{
+    root.style.background='var(--navy-x)';
+    const b=photo(imgKey,root,{inset:0,opacity:.62});
+    el('div','scrim full',null,root);
+    const n=el('div','chapNum',{position:'absolute',left:'104px',top:'250px'},root);
+    n.textContent=num;
+    const t=el('div','h1',{position:'absolute',left:'126px',top:'560px',width:'1600px'},root);
+    const ws=words(t,title);
+    const rule=el('div','rule',{position:'absolute',left:'130px',top:'506px',width:'240px'},root);
+    /* two navy bars that swipe the frame clear on exit */
+    const barA=el('div','',{position:'absolute',left:0,top:0,width:'100%',height:'50%',background:'var(--navy)'},root);
+    const barB=el('div','',{position:'absolute',left:0,top:'50%',width:'100%',height:'50%',background:'var(--navy)'},root);
+    return p=>{
+      const inS=rng(p,0,.22,'expo'), out=rng(p,.80,1,'expo');
+      barA.style.transform=`translateX(${lerp(0,-100,inS)+out*100}%)`;
+      barB.style.transform=`translateX(${lerp(0,100,inS)-out*100}%)`;
+      b._i.style.transform=`scale(${lerp(1.18,1.06,p)})`;
+      rule.style.transform=`scaleX(${rng(p,.18,.32,'expo')})`;
+      n.style.opacity=rng(p,.14,.34);
+      n.style.transform=`translateY(${lerp(50,0,rng(p,.14,.40,'expo'))}px)`;
+      ws.forEach((w,k)=>{
+        const q=rng(p,.20+k*.05,.44+k*.05,'expo');
+        w.style.transform=`translateY(${lerp(100,0,q)}px)`; w.style.opacity=q;
+      });
+    };
+  });
+}
+
+/* ---------- reusable: filmstrip ("playing on film") ---------- */
+function filmstrip(keys,head,sub,dur=16){
+  scene(dur,root=>{
+    root.style.background='#0c1226';
+    const track=el('div','',{position:'absolute',left:0,top:'150px',height:'560px',display:'flex',
+      gap:'34px',alignItems:'center',willChange:'transform'},root);
+    const cards=keys.map((k,idx)=>{
+      const b=photo(k,track,{position:'relative',flex:'0 0 auto',width:'740px',height:'480px',
+        borderRadius:'6px',boxShadow:'0 30px 70px rgba(0,0,0,.55)'});
+      const cap=el('div','mono',{position:'absolute',left:'26px',bottom:'22px',color:'rgba(255,255,255,.92)',
+        fontSize:'19px',letterSpacing:'.2em',textShadow:'0 2px 14px rgba(0,0,0,.9)'},b);
+      cap.textContent=String(idx+1).padStart(2,'0');
+      return b;
+    });
+    /* sprocket rails, so it reads as film */
+    const rail=(top)=>{
+      const r=el('div','',{position:'absolute',left:0,top:top+'px',width:'100%',height:'34px',
+        background:'repeating-linear-gradient(to right,rgba(255,255,255,.16) 0 26px,transparent 26px 62px)'},root);
+      return r;
+    };
+    const r1=rail(104), r2=rail(722);
+    el('div','',{position:'absolute',left:0,top:'760px',width:'100%',height:'320px',
+      background:'linear-gradient(to top,#0c1226 62%,rgba(12,18,38,0))'},root);
+    const h=el('div','h2',{position:'absolute',left:'126px',top:'816px',width:'1200px',fontSize:'86px'},root);
+    const ws=words(h,head);
+    const s=el('div','body',{position:'absolute',left:'130px',top:'962px',width:'1400px'},root);
+    s.textContent=sub;
+    const total=keys.length*774;
+
+    return p=>{
+      const {i,o}=env(p,.06,.09);
+      const travel=E.soft(p)*(total-1560);
+      track.style.transform=`translateX(${120-travel}px)`;
+      r1.style.backgroundPosition=`${-travel*0.6}px 0`;
+      r2.style.backgroundPosition=`${-travel*0.6}px 0`;
+      cards.forEach((c,k)=>{
+        const centre=120-travel+k*774+370;         // card centre in stage space
+        const d=(centre-960)/960;                   // -1..1 from screen centre
+        c.style.transform=`translateY(${Math.abs(d)*26}px) scale(${1-Math.abs(d)*.07})`;
+        c.style.opacity=cl(1.25-Math.abs(d)*.75);
+        c._i.style.transform=`scale(1.14) translateX(${d*-38}px)`;
+      });
+      ws.forEach((w,k)=>{
+        const q=rng(p,.06+k*.04,.26+k*.04,'expo');
+        w.style.transform=`translateY(${lerp(70,0,q)}px)`; w.style.opacity=q;
+      });
+      s.style.opacity=rng(p,.22,.34);
+      root.style.opacity=i*(1-o);
+    };
+  });
+}
+
+/* ---------- reusable: split editorial ---------- */
+function splitScene(imgKey,side,kicker,head,lines,dur=10){
+  scene(dur,root=>{
+    root.style.background='var(--navy-x)';
+    const IW=940, right=(side==='right');
+    const b=photo(imgKey,root,{left:right?(1920-IW)+'px':'0px',top:0,width:IW+'px',height:'1080px'});
+    const pane=el('div','',{position:'absolute',left:right?'0px':IW+'px',top:0,width:(1920-IW)+'px',
+      height:'1080px',background:'linear-gradient(165deg,#2a3f76,#141f45)'},root);
+    const kick=el('div','kicker',{position:'absolute',left:'96px',top:'250px'},pane);
+    kick.textContent=kicker;
+    const h=el('div','h3',{position:'absolute',left:'92px',top:'306px',width:'800px'},pane);
+    const ws=words(h,head);
+    const rule=el('div','rule',{position:'absolute',left:'96px',top:'510px',width:'300px'},pane);
+    const list=el('div','',{position:'absolute',left:'96px',top:'566px',width:'800px',
+      display:'flex',flexWrap:'wrap',gap:'16px'},pane);
+    const chips=lines.map((t,k)=>{
+      const c=el('div','chip'+(k===0?' solid':''),null,list); c.textContent=t; return c;
+    });
+    return p=>{
+      const {i,o}=env(p,.09,.10);
+      b.style.transform=`translateX(${lerp(right?980:-980,0,rng(p,0,.32,'expo'))}px)`;
+      b._i.style.transform=`scale(${lerp(1.16,1.04,p)})`;
+      pane.style.transform=`translateX(${lerp(right?-1000:1000,0,rng(p,.04,.38,'expo'))}px)`;
+      kick.style.opacity=rng(p,.14,.24);
+      ws.forEach((w,k)=>{
+        const q=rng(p,.16+k*.028,.36+k*.028,'expo');
+        w.style.transform=`translateY(${lerp(56,0,q)}px)`; w.style.opacity=q;
+      });
+      rule.style.transform=`scaleX(${rng(p,.34,.46,'expo')})`;
+      chips.forEach((c,k)=>{
+        const q=rng(p,.38+k*.04,.58+k*.04,'back');
+        c.style.transform=`translateY(${lerp(34,0,q)}px) scale(${lerp(.82,1,q)})`;
+        c.style.opacity=cl(q*1.3);
+      });
+      root.style.opacity=i*(1-o);
+      root.style.transform=`translateY(${o*-90}px)`;
+    };
+  });
+}
+
+/* ---------- reusable: grid build ---------- */
+function gridScene(keys,head,sub,cols,dur=14){
+  scene(dur,root=>{
+    root.style.background='#0c1226';
+    const rows=Math.ceil(keys.length/cols);
+    const GAP=18, PAD=60;
+    const cw=(1920-PAD*2-GAP*(cols-1))/cols;
+    const ch=(760-GAP*(rows-1))/rows;
+    const grid=el('div','',{position:'absolute',left:PAD+'px',top:'56px',width:(1920-PAD*2)+'px',
+      height:'760px',willChange:'transform'},root);
+    const tiles=keys.map((k,idx)=>{
+      const r=Math.floor(idx/cols), c=idx%cols;
+      return photo(k,grid,{left:(c*(cw+GAP))+'px',top:(r*(ch+GAP))+'px',width:cw+'px',height:ch+'px',
+        borderRadius:'4px'});
+    });
+    el('div','',{position:'absolute',left:0,top:'700px',width:'100%',height:'380px',
+      background:'linear-gradient(to top,#0c1226 58%,rgba(12,18,38,0))'},root);
+    const h=el('div','h2',{position:'absolute',left:'126px',top:'838px',width:'1300px',fontSize:'82px'},root);
+    const ws=words(h,head);
+    const s=el('div','body',{position:'absolute',left:'130px',top:'970px',width:'1500px'},root);
+    s.textContent=sub;
+    /* stagger from the centre outward, so it blooms instead of sweeping */
+    const order=tiles.map((_,idx)=>{
+      const r=Math.floor(idx/cols),c=idx%cols;
+      return Math.hypot(c-(cols-1)/2,(r-(rows-1)/2)*1.4);
+    });
+    const maxO=Math.max(...order);
+
+    return p=>{
+      const {i,o}=env(p,.05,.09);
+      tiles.forEach((t,k)=>{
+        const d=(order[k]/maxO)*.30;
+        const q=rng(p,.02+d,.30+d,'back');
+        t.style.transform=`scale(${lerp(.62,1,q)}) rotate(${lerp(k%2?5:-5,0,q)}deg)`;
+        t.style.opacity=cl(q*1.4);
+        t._i.style.transform=`scale(${lerp(1.3,1.05,q)})`;
+      });
+      grid.style.transform=`translateY(${lerp(0,-46,E.soft(p))}px) scale(${lerp(1,1.03,E.soft(p))})`;
+      ws.forEach((w,k)=>{
+        const q=rng(p,.16+k*.042,.38+k*.042,'expo');
+        w.style.transform=`translateY(${lerp(80,0,q)}px)`; w.style.opacity=q;
+      });
+      s.style.opacity=rng(p,.34,.46);
+      root.style.opacity=i*(1-o);
+    };
+  });
+}
+
+/* ---------- reusable: parallax scroll columns ---------- */
+function scrollScene(keys,head,sub,dur=14){
+  scene(dur,root=>{
+    root.style.background='#0b1020';
+    const COLS=3, CW=470, GAP=26, X0=(1920-(COLS*CW+(COLS-1)*GAP))/2;
+    const cols=[];
+    for(let c=0;c<COLS;c++){
+      const col=el('div','',{position:'absolute',left:(X0+c*(CW+GAP))+'px',top:0,width:CW+'px',
+        willChange:'transform'},root);
+      const seq=[];
+      for(let n=0;n<4;n++){
+        const k=keys[(c*3+n)%keys.length];
+        seq.push(photo(k,col,{position:'relative',width:CW+'px',height:'400px',marginBottom:'26px',
+          borderRadius:'4px'}));
+      }
+      cols.push({col,seq,speed:[1,1.42,.78][c]});
+    }
+    el('div','scrim veil',null,root);
+    const band=el('div','',{position:'absolute',left:0,top:'392px',width:'100%',height:'300px',
+      background:'linear-gradient(to right,rgba(37,56,108,.97),rgba(20,31,69,.92))',
+      boxShadow:'0 30px 90px rgba(0,0,0,.5)',willChange:'transform'},root);
+    const h=el('div','h2',{position:'absolute',left:'126px',top:'440px',width:'1400px',fontSize:'88px'},root);
+    const ws=words(h,head);
+    const s=el('div','body',{position:'absolute',left:'130px',top:'582px',width:'1500px'},root);
+    s.textContent=sub;
+
+    return p=>{
+      const {i,o}=env(p,.06,.09);
+      cols.forEach(({col,speed},c)=>{
+        const y=-(E.lin(p))*760*speed + (c%2?-120:0);
+        col.style.transform=`translateY(${y}px)`;
+      });
+      const bandIn=rng(p,.05,.24,'expo');
+      band.style.transform=`translateX(${lerp(-1920,0,bandIn)}px)`;
+      ws.forEach((w,k)=>{
+        const q=rng(p,.12+k*.042,.34+k*.042,'expo');
+        w.style.transform=`translateY(${lerp(70,0,q)}px)`; w.style.opacity=q;
+      });
+      s.style.opacity=rng(p,.30,.42);
+      root.style.opacity=i*(1-o);
+    };
+  });
+}
+
+/* ---------- reusable: full-bleed statement ---------- */
+function statement(imgKey,kicker,head,sub,dur=12){
+  scene(dur,root=>{
+    const b=photo(imgKey,root,{inset:0});
+    el('div','scrim l',null,root);
+    const kick=el('div','kicker',{position:'absolute',left:'130px',top:'336px'},root);
+    kick.textContent=kicker;
+    const h=el('div','h1',{position:'absolute',left:'126px',top:'392px',width:'1120px',fontSize:'126px'},root);
+    const ws=words(h,head);
+    const rule=el('div','rule',{position:'absolute',left:'130px',top:'700px',width:'420px'},root);
+    const s=el('div','body',{position:'absolute',left:'130px',top:'744px',width:'900px'},root);
+    s.textContent=sub;
+    return p=>{
+      const {i,o}=env(p,.08,.10);
+      b._i.style.transform=`scale(${lerp(1.04,1.17,E.lin(p))}) translateX(${lerp(0,-30,p)}px)`;
+      kick.style.opacity=rng(p,.08,.18);
+      ws.forEach((w,k)=>{
+        const q=rng(p,.10+k*.05,.34+k*.05,'expo');
+        w.style.transform=`translateY(${lerp(110,0,q)}px) rotate(${lerp(3,0,q)}deg)`; w.style.opacity=q;
+      });
+      rule.style.transform=`scaleX(${rng(p,.32,.44,'expo')})`;
+      s.style.opacity=rng(p,.36,.50);
+      s.style.transform=`translateY(${lerp(24,0,rng(p,.36,.56,'expo'))}px)`;
+      root.style.opacity=i*(1-o);
+    };
+  });
+}
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+chapter('01','DECKS','deck136');
+filmstrip(['deck41','deck27','deck12','deck24','deck86','deck73','deck20','life89'],
+  'PVC & COMPOSITE',
+  'AZEK · TimberTech · Trex · Wolf · Fiberon — installed in one to two weeks.');
+splitScene('work65','left','LOW MAINTENANCE','Never sand it. Never stain it. Never seal it again.',
+  ['50-YEAR WARRANTY','CUSTOM DESIGN','CURVED & MULTI-LEVEL','INTEGRATED LIGHTING'],10);
+
+chapter('02','FENCES','work90');
+gridScene(['fence34','fence119','fence102','fence121','fence37','fence103','fence38','fence62','fence98','work123','work124','fence34'],
+  'EVERY LINE, EVERY STYLE',
+  'Residential, commercial and agricultural — most yards finished in two to five days.',6,14);
+splitScene('work129','right','MATERIALS','Vinyl, aluminium, chain-link, wood and privacy.',
+  ['HOA-COMPLIANT','REPAIRS TOO','JERITH · KEY-LINK','FREE ESTIMATE'],9.5);
+
+chapter('03','RAILINGS','rail118');
+splitScene('rail16','left','FABRICATED IN HOUSE','Cut, welded and powder coated by the same crew that installs it.',
+  ['ALUMINIUM & STEEL','CABLE & GLASS','VINYL & PVC','CODE COMPLIANT'],11);
+gridScene(['rail75','rail109','rail78','rail99','rail18','rail76','rail80','rail63','rail42','work132','work82','work135'],
+  'SAFETY THAT LOOKS GOOD',
+  'Every railing meets code for height, spacing and load — on decks, porches, stairs and pool surrounds.',6,12);
+
+chapter('04','GATES & OPENERS','gate115');
+scrollScene(['gate28','gate22','gate95','gate96','gate93','gate91','gate69','gate104','work141'],
+  'SWING. SLIDE. AUTOMATIC.',
+  'Custom driveway gates, solar operators and retrofit openers — LiftMaster and Chamberlain.',14);
+
+chapter('05','POOL SAFETY','pool4');
+statement('pool5','CODE COMPLIANT','FOUR FEET IS THE LAW.',
+  'Removable mesh fencing and ASTM-certified safety nets, built in house and backed by a limited lifetime warranty. We install at 52 inches.',12);
+
+chapter('06','BACKYARD STRUCTURES','struct146');
+gridScene(['struct43','struct51','struct47','struct149','struct53','struct120','struct55','struct148','struct45','struct48','struct151','struct43'],
+  'AMISH-BUILT, DELIVERED',
+  'Sheds, garages, gazebos, cabanas and kennels — crafted in Lancaster County, Pennsylvania.',6,13);
+
+/* --- reviews ------------------------------------------------------------- */
+scene(19,root=>{
+  root.style.background='linear-gradient(155deg,#26386d,#101a3d)';
+  const bg=photo('life139',root,{inset:0,opacity:.16});
+  const QS=[
+    ['They gave me the best price out of several contractors, and were extremely competent and high quality.','JOE M.'],
+    ['After companies finish their jobs you never hear from them. Not this company.','TED G.'],
+    ['Quality of craftsmanship was on point. Each section aligned and perfectly pitched. Five stars.','MATT F.'],
+  ];
+  const cards=QS.map(([t,w])=>{
+    const c=el('div','quote',null,root);
+    el('div','stars',null,c).textContent='★ ★ ★ ★ ★';
+    el('div','txt',null,c).textContent='“'+t+'”';
+    el('div','who',null,c).textContent=w+'  ·  GOOGLE REVIEW';
+    return c;
+  });
+  const seg=1/QS.length;
+  return p=>{
+    const {i,o}=env(p,.05,.08);
+    bg._i.style.transform=`scale(${lerp(1.16,1.05,p)})`;
+    cards.forEach((c,k)=>{
+      const lp=(p-k*seg)/seg;                    // -inf..+inf, 0..1 while on screen
+      if(lp<-.35||lp>1.35){c.style.opacity=0;return;}
+      const inn=E.expo(cl(lp/.22)), out=E.soft(cl((lp-.78)/.22));
+      c.style.opacity=inn*(1-out);
+      c.style.transform=`translateX(${lerp(240,0,inn)-out*240}px)`;
+    });
+    root.style.opacity=i*(1-o);
+  };
+});
+
+/* --- service area -------------------------------------------------------- */
+scene(11,root=>{
+  root.style.background='#0c1226';
+  const bg=photo('deck116',root,{inset:0,opacity:.14});
+  const kick=el('div','kicker',{position:'absolute',left:'126px',top:'150px'},root);
+  kick.textContent='SERVICE AREA';
+  const head=el('div','h2',{position:'absolute',left:'122px',top:'202px',fontSize:'78px'},root);
+  const hw=words(head,'BUCKS & MONTGOMERY COUNTY');
+  const box=el('div','',{position:'absolute',left:'126px',top:'352px',width:'1680px',
+    display:'flex',flexWrap:'wrap',gap:'22px 44px',alignItems:'baseline'},root);
+  const TOWNS=['Newtown','Doylestown','Yardley','Richboro','Southampton','New Hope','Buckingham',
+    'Warrington','Ivyland','Langhorne','Holland','Levittown','Washington Crossing','Upper Makefield',
+    'Northampton','Churchville','Huntingdon Valley'];
+  const ts=TOWNS.map((t,k)=>{
+    const n=el('div','town'+(k%3===1?' dim':''),null,box); n.textContent=t; return n;
+  });
+  /* a thin strip of recent work anchors the lower third */
+  const strip=el('div','',{position:'absolute',left:'126px',top:'716px',width:'1668px',height:'246px',
+    display:'flex',gap:'16px',overflow:'hidden'},root);
+  const SK=['deck1','fence34','rail75','gate28','pool5','struct47','life89'];
+  const cells=SK.map(k=>photo(k,strip,{position:'relative',flex:'1 1 0',height:'246px',borderRadius:'4px'}));
+  const rule=el('div','rule',{position:'absolute',left:'126px',top:'672px',width:'1668px',height:'3px',
+    background:'rgba(255,255,255,.16)'},root);
+  const foot=el('div','mono',{position:'absolute',left:'126px',top:'1002px',
+    color:'rgba(255,255,255,.55)',fontSize:'21px',letterSpacing:'.26em'},root);
+  foot.textContent='FREE ESTIMATES  ·  LICENSED & INSURED  ·  (215) 789-6252';
+
+  return p=>{
+    const {i,o}=env(p,.07,.10);
+    bg._i.style.transform=`scale(${lerp(1.14,1.04,p)})`;
+    kick.style.opacity=rng(p,.06,.18);
+    hw.forEach((w,k)=>{
+      const q=rng(p,.08+k*.05,.32+k*.05,'expo');
+      w.style.transform=`translateY(${lerp(60,0,q)}px)`; w.style.opacity=q;
+    });
+    ts.forEach((n,k)=>{
+      const q=rng(p,.18+k*.022,.38+k*.022,'expo');
+      n.style.transform=`translateY(${lerp(46,0,q)}px)`; n.style.opacity=q;
+    });
+    box.style.transform=`translateY(${lerp(0,-22,E.soft(p))}px)`;
+    rule.style.transform=`scaleX(${rng(p,.40,.56,'expo')})`;
+    cells.forEach((c,k)=>{
+      const q=rng(p,.44+k*.038,.66+k*.038,'back');
+      c.style.transform=`translateY(${lerp(70,0,q)}px) scale(${lerp(.86,1,q)})`;
+      c.style.opacity=cl(q*1.3);
+      c._i.style.transform=`scale(${lerp(1.25,1.06,q)})`;
+    });
+    foot.style.opacity=rng(p,.70,.84);
+    root.style.opacity=i*(1-o);
+  };
+});
+
+/* --- end card ------------------------------------------------------------ */
+scene(14,root=>{
+  Object.assign(root.style,{background:'radial-gradient(120% 110% at 50% 42%,#2c4382 0%,#1a2751 46%,#0b1129 100%)'});
+  const holder=el('div','',{position:'absolute',left:'50%',top:'368px',width:'1120px',height:'200px',
+    marginLeft:'-560px'},root);
+  const mark=el('div','logoMask',{position:'absolute',inset:0,
+    '-webkit-maskImage':`url(${A.wordmask})`,maskImage:`url(${A.wordmask})`,
+    background:'linear-gradient(100deg,#fff 0%,#fff 42%,#F2A93B 50%,#fff 58%,#fff 100%)',
+    backgroundSize:'300% 100%'},holder);
+  const rule=el('div','rule',{position:'absolute',left:'50%',top:'596px',width:'360px',marginLeft:'-180px'},root);
+  const tag=el('div','h3',{position:'absolute',left:0,right:0,top:'642px',textAlign:'center',
+    fontSize:'54px',letterSpacing:'-.01em'},root);
+  tag.textContent='Trusted Pros for Your Home Project';
+  const since=el('div','kicker',{position:'absolute',left:0,right:0,top:'318px',textAlign:'center'},root);
+  since.textContent='SINCE 1998';
+  const cta=el('div','',{position:'absolute',left:0,right:0,top:'770px',textAlign:'center',
+    font:'800 62px/1 Poppins',color:'#fff',letterSpacing:'-.01em'},root);
+  cta.textContent='(215) 789-6252';
+  const site=el('div','mono',{position:'absolute',left:0,right:0,top:'862px',textAlign:'center',
+    color:'var(--amber)',fontSize:'30px'},root);
+  site.textContent='PROFENCEDECK.COM';
+  const foot=el('div','mono',{position:'absolute',left:0,right:0,top:'946px',textAlign:'center',
+    color:'rgba(255,255,255,.5)',fontSize:'20px',letterSpacing:'.24em'},root);
+  foot.textContent='FREE ESTIMATES  ·  LICENSED & INSURED  ·  BUCKS COUNTY, PA';
+
+  return p=>{
+    const rev=rng(p,.04,.40,'expo');
+    const sweep=rng(p,.16,.66,'inOut');
+    holder.style.clipPath=`inset(0 ${(1-rev)*100}% 0 0)`;
+    holder.style.transform=`scale(${lerp(1.05,1,rev)})`;
+    mark.style.backgroundPosition=`${lerp(100,-100,sweep)}% 0`;
+    since.style.opacity=rng(p,.30,.44);
+    rule.style.transform=`scaleX(${rng(p,.36,.50,'expo')})`;
+    tag.style.opacity=rng(p,.40,.56);
+    tag.style.transform=`translateY(${lerp(24,0,rng(p,.40,.60,'expo'))}px)`;
+    cta.style.opacity=rng(p,.52,.66);
+    cta.style.transform=`scale(${lerp(.9,1,rng(p,.52,.70,'back'))})`;
+    site.style.opacity=rng(p,.60,.74);
+    foot.style.opacity=rng(p,.68,.82);
+    root.style.opacity=1-rng(p,.94,1,'soft');
+  };
+});
+
+/* ============================================================
+   PLAYBACK / SEEK
+   ============================================================ */
+const DURATION=CUR;
+window.__DURATION=DURATION;
+
+function seek(t){
+  t=cl(t,0,DURATION-0.001);
+  for(const s of SCENES){
+    const on=(t>=s.t0&&t<s.t1);
+    if(on){
+      if(s.root.classList.contains('hide')) s.root.classList.remove('hide');
+      s.upd((t-s.t0)/s.dur);
+    } else if(!s.root.classList.contains('hide')){
+      s.root.classList.add('hide');
+    }
+  }
+}
+window.__seek=seek;
+
+/* fit the 1920x1080 stage into whatever viewport we have.
+   Absolute centring, not grid: grid refuses to centre a child that overflows. */
+function fit(){
+  const pad = window.__RENDER ? 0 : 46;   // leave room for the scrubber, but never in a render
+  const s=Math.min(window.innerWidth/1920,(window.innerHeight-pad)/1080);
+  stage.style.transform=`translate(-50%,-50%) scale(${s})`;
+}
+window.addEventListener('resize',fit); fit();
+
+/* headless renderer drives seek() itself and never starts the clock */
+if(!window.__RENDER){
+  const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let playing=!calm, t=0, last=performance.now();
+  const fmt=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
+  const pp=document.getElementById('pp'), scrub=document.getElementById('scrub'), tc=document.getElementById('tc');
+  pp.textContent=playing?'PAUSE':'PLAY';
+  pp.onclick=()=>{playing=!playing;pp.textContent=playing?'PAUSE':'PLAY'};
+  if(calm){seek(0);tc.textContent='0:00 / '+fmt(DURATION);}
+  scrub.oninput=()=>{t=scrub.value/1000*DURATION;seek(t)};
+  stage.onclick=()=>pp.click();
+  (function loop(now){
+    const dt=(now-last)/1000; last=now;
+    if(playing){ t+=dt; if(t>=DURATION) t=0; seek(t);
+      scrub.value=t/DURATION*1000; tc.textContent=fmt(t)+' / '+fmt(DURATION); }
+    requestAnimationFrame(loop);
+  })(performance.now());
+} else {
+  const h=document.getElementById('hud'); if(h) h.remove();
+  seek(0);
+}
+</script>

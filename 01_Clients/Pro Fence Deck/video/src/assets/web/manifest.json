@@ -1,0 +1,618 @@
+{
+ "deck1": {
+  "cat": "deck",
+  "kind": "hero",
+  "caption": "Custom deck with integrated stair lighting",
+  "w": 1120,
+  "h": 840,
+  "file": "deck1.jpg"
+ },
+ "pool4": {
+  "cat": "pool",
+  "kind": "hero",
+  "caption": "Removable mesh pool safety fence",
+  "w": 1120,
+  "h": 840,
+  "file": "pool4.jpg"
+ },
+ "pool5": {
+  "cat": "pool",
+  "kind": "hero",
+  "caption": "Mesh pool fence around a free-form pool",
+  "w": 1120,
+  "h": 840,
+  "file": "pool5.jpg"
+ },
+ "pool6": {
+  "cat": "pool",
+  "kind": "card",
+  "caption": "Mesh fence around a spa",
+  "w": 520,
+  "h": 390,
+  "file": "pool6.jpg"
+ },
+ "pool7": {
+  "cat": "pool",
+  "kind": "card",
+  "caption": "Pool fence post detail",
+  "w": 520,
+  "h": 693,
+  "file": "pool7.jpg"
+ },
+ "deck12": {
+  "cat": "deck",
+  "kind": "card",
+  "caption": "Composite deck with black aluminium railing",
+  "w": 520,
+  "h": 253,
+  "file": "deck12.jpg"
+ },
+ "rail16": {
+  "cat": "rail",
+  "kind": "hero",
+  "caption": "Railing sections fabricated in the shop",
+  "w": 1120,
+  "h": 544,
+  "file": "rail16.jpg"
+ },
+ "rail18": {
+  "cat": "rail",
+  "kind": "card",
+  "caption": "Deck with white and black railing",
+  "w": 520,
+  "h": 253,
+  "file": "rail18.jpg"
+ },
+ "deck20": {
+  "cat": "deck",
+  "kind": "card",
+  "caption": "Deck, stairs and railing",
+  "w": 520,
+  "h": 253,
+  "file": "deck20.jpg"
+ },
+ "gate22": {
+  "cat": "gate",
+  "kind": "card",
+  "caption": "Arched aluminium driveway gate",
+  "w": 520,
+  "h": 253,
+  "file": "gate22.jpg"
+ },
+ "deck24": {
+  "cat": "deck",
+  "kind": "card",
+  "caption": "Poolside deck with black railing",
+  "w": 520,
+  "h": 390,
+  "file": "deck24.jpg"
+ },
+ "deck27": {
+  "cat": "deck",
+  "kind": "card",
+  "caption": "Wide composite deck",
+  "w": 520,
+  "h": 390,
+  "file": "deck27.jpg"
+ },
+ "gate28": {
+  "cat": "gate",
+  "kind": "hero",
+  "caption": "Ornamental driveway gate with stone piers",
+  "w": 1120,
+  "h": 840,
+  "file": "gate28.jpg"
+ },
+ "pool32": {
+  "cat": "pool",
+  "kind": "card",
+  "caption": "Pool and handrail",
+  "w": 520,
+  "h": 390,
+  "file": "pool32.jpg"
+ },
+ "fence34": {
+  "cat": "fence",
+  "kind": "card",
+  "caption": "Ornamental aluminium fence",
+  "w": 520,
+  "h": 390,
+  "file": "fence34.jpg"
+ },
+ "fence37": {
+  "cat": "fence",
+  "kind": "card",
+  "caption": "Aluminium fence on a stone retaining wall",
+  "w": 520,
+  "h": 390,
+  "file": "fence37.jpg"
+ },
+ "fence38": {
+  "cat": "fence",
+  "kind": "card",
+  "caption": "Tan vinyl privacy fence",
+  "w": 520,
+  "h": 390,
+  "file": "fence38.jpg"
+ },
+ "deck41": {
+  "cat": "deck",
+  "kind": "hero",
+  "caption": "Composite deck, white and black railing",
+  "w": 1120,
+  "h": 1120,
+  "file": "deck41.jpg"
+ },
+ "rail42": {
+  "cat": "rail",
+  "kind": "card",
+  "caption": "White stair railing",
+  "w": 520,
+  "h": 520,
+  "file": "rail42.jpg"
+ },
+ "struct43": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "Double-wide garage",
+  "w": 520,
+  "h": 265,
+  "file": "struct43.jpg"
+ },
+ "struct45": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "Mini barn",
+  "w": 520,
+  "h": 265,
+  "file": "struct45.jpg"
+ },
+ "struct47": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "New England shed",
+  "w": 520,
+  "h": 265,
+  "file": "struct47.jpg"
+ },
+ "struct48": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "Victorian cottage shed",
+  "w": 520,
+  "h": 265,
+  "file": "struct48.jpg"
+ },
+ "struct51": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "Dutch barn",
+  "w": 520,
+  "h": 265,
+  "file": "struct51.jpg"
+ },
+ "struct53": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "Quaker shed",
+  "w": 520,
+  "h": 265,
+  "file": "struct53.jpg"
+ },
+ "struct55": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "Single garage",
+  "w": 520,
+  "h": 265,
+  "file": "struct55.jpg"
+ },
+ "life60": {
+  "cat": "life",
+  "kind": "card",
+  "caption": "Custom PVC deck with built-in bench",
+  "w": 520,
+  "h": 520,
+  "file": "life60.jpg"
+ },
+ "fence62": {
+  "cat": "fence",
+  "kind": "card",
+  "caption": "Board-on-board wood fence",
+  "w": 520,
+  "h": 390,
+  "file": "fence62.jpg"
+ },
+ "rail63": {
+  "cat": "rail",
+  "kind": "card",
+  "caption": "Deck railing with gate",
+  "w": 520,
+  "h": 390,
+  "file": "rail63.jpg"
+ },
+ "work65": {
+  "cat": "work",
+  "kind": "hero",
+  "caption": "Cutting deck boards on site",
+  "w": 1024,
+  "h": 1024,
+  "file": "work65.jpg"
+ },
+ "gate69": {
+  "cat": "gate",
+  "kind": "card",
+  "caption": "Sliding gate installation",
+  "w": 520,
+  "h": 520,
+  "file": "gate69.jpg"
+ },
+ "work70": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Deck framing in progress",
+  "w": 520,
+  "h": 390,
+  "file": "work70.jpg"
+ },
+ "work72": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Track-sawing a composite board",
+  "w": 520,
+  "h": 390,
+  "file": "work72.jpg"
+ },
+ "deck73": {
+  "cat": "deck",
+  "kind": "card",
+  "caption": "Composite deck surface",
+  "w": 520,
+  "h": 390,
+  "file": "deck73.jpg"
+ },
+ "rail75": {
+  "cat": "rail",
+  "kind": "card",
+  "caption": "Composite stairs with ornamental railing",
+  "w": 520,
+  "h": 693,
+  "file": "rail75.jpg"
+ },
+ "rail76": {
+  "cat": "rail",
+  "kind": "card",
+  "caption": "Deck and black aluminium railing",
+  "w": 520,
+  "h": 253,
+  "file": "rail76.jpg"
+ },
+ "rail78": {
+  "cat": "rail",
+  "kind": "card",
+  "caption": "Cable railing deck",
+  "w": 520,
+  "h": 1070,
+  "file": "rail78.jpg"
+ },
+ "rail80": {
+  "cat": "rail",
+  "kind": "card",
+  "caption": "Balcony railings",
+  "w": 520,
+  "h": 390,
+  "file": "rail80.jpg"
+ },
+ "work82": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Setting a vinyl railing",
+  "w": 520,
+  "h": 520,
+  "file": "work82.jpg"
+ },
+ "work84": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Board layout",
+  "w": 520,
+  "h": 520,
+  "file": "work84.jpg"
+ },
+ "deck86": {
+  "cat": "deck",
+  "kind": "card",
+  "caption": "PVC deck, Langhorne",
+  "w": 520,
+  "h": 520,
+  "file": "deck86.jpg"
+ },
+ "life89": {
+  "cat": "life",
+  "kind": "card",
+  "caption": "Deck dining and lounge",
+  "w": 520,
+  "h": 520,
+  "file": "life89.jpg"
+ },
+ "work90": {
+  "cat": "work",
+  "kind": "hero",
+  "caption": "Fence panel going up at golden hour",
+  "w": 1024,
+  "h": 1024,
+  "file": "work90.jpg"
+ },
+ "gate91": {
+  "cat": "gate",
+  "kind": "card",
+  "caption": "Solar-powered gate operator",
+  "w": 520,
+  "h": 390,
+  "file": "gate91.jpg"
+ },
+ "gate93": {
+  "cat": "gate",
+  "kind": "card",
+  "caption": "Aluminium fence and gate",
+  "w": 520,
+  "h": 253,
+  "file": "gate93.jpg"
+ },
+ "gate95": {
+  "cat": "gate",
+  "kind": "card",
+  "caption": "Automatic driveway gate",
+  "w": 520,
+  "h": 253,
+  "file": "gate95.jpg"
+ },
+ "gate96": {
+  "cat": "gate",
+  "kind": "card",
+  "caption": "Black driveway gate",
+  "w": 520,
+  "h": 253,
+  "file": "gate96.jpg"
+ },
+ "fence98": {
+  "cat": "fence",
+  "kind": "card",
+  "caption": "Vinyl fence line",
+  "w": 520,
+  "h": 293,
+  "file": "fence98.jpg"
+ },
+ "rail99": {
+  "cat": "rail",
+  "kind": "card",
+  "caption": "Stone piers and ornamental railing",
+  "w": 520,
+  "h": 390,
+  "file": "rail99.jpg"
+ },
+ "fence102": {
+  "cat": "fence",
+  "kind": "card",
+  "caption": "Aluminium fence and gate",
+  "w": 520,
+  "h": 390,
+  "file": "fence102.jpg"
+ },
+ "fence103": {
+  "cat": "fence",
+  "kind": "card",
+  "caption": "Curved white vinyl privacy fence",
+  "w": 520,
+  "h": 390,
+  "file": "fence103.jpg"
+ },
+ "gate104": {
+  "cat": "gate",
+  "kind": "card",
+  "caption": "Commercial gate operator",
+  "w": 520,
+  "h": 520,
+  "file": "gate104.jpg"
+ },
+ "pool106": {
+  "cat": "pool",
+  "kind": "card",
+  "caption": "Pool handrail and brick surround",
+  "w": 520,
+  "h": 347,
+  "file": "pool106.jpg"
+ },
+ "rail109": {
+  "cat": "rail",
+  "kind": "card",
+  "caption": "Cable railing on composite deck",
+  "w": 520,
+  "h": 347,
+  "file": "rail109.jpg"
+ },
+ "gate115": {
+  "cat": "gate",
+  "kind": "hero",
+  "caption": "Estate gate entry",
+  "w": 1120,
+  "h": 747,
+  "file": "gate115.jpg"
+ },
+ "deck116": {
+  "cat": "deck",
+  "kind": "hero",
+  "caption": "Covered porch and deck",
+  "w": 1120,
+  "h": 747,
+  "file": "deck116.jpg"
+ },
+ "rail118": {
+  "cat": "rail",
+  "kind": "hero",
+  "caption": "Cable railing detail",
+  "w": 1024,
+  "h": 1024,
+  "file": "rail118.jpg"
+ },
+ "fence119": {
+  "cat": "fence",
+  "kind": "card",
+  "caption": "Vinyl privacy fence installation",
+  "w": 520,
+  "h": 520,
+  "file": "fence119.jpg"
+ },
+ "struct120": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "A-frame garage with upstairs",
+  "w": 520,
+  "h": 265,
+  "file": "struct120.jpg"
+ },
+ "fence121": {
+  "cat": "fence",
+  "kind": "card",
+  "caption": "White post-and-rail fence",
+  "w": 520,
+  "h": 780,
+  "file": "fence121.jpg"
+ },
+ "work123": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Commercial aluminium fence crew",
+  "w": 520,
+  "h": 520,
+  "file": "work123.jpg"
+ },
+ "work124": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Chain-link crew",
+  "w": 520,
+  "h": 520,
+  "file": "work124.jpg"
+ },
+ "life125": {
+  "cat": "life",
+  "kind": "card",
+  "caption": "Low-profile deck with planters",
+  "w": 520,
+  "h": 520,
+  "file": "life125.jpg"
+ },
+ "work126": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Deck framing",
+  "w": 520,
+  "h": 520,
+  "file": "work126.jpg"
+ },
+ "work128": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Framing and post set",
+  "w": 520,
+  "h": 520,
+  "file": "work128.jpg"
+ },
+ "work129": {
+  "cat": "work",
+  "kind": "hero",
+  "caption": "Setting a fence panel",
+  "w": 1024,
+  "h": 1024,
+  "file": "work129.jpg"
+ },
+ "work132": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Vinyl railing install",
+  "w": 520,
+  "h": 520,
+  "file": "work132.jpg"
+ },
+ "work134": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Laying composite boards",
+  "w": 520,
+  "h": 520,
+  "file": "work134.jpg"
+ },
+ "work135": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Railing install",
+  "w": 520,
+  "h": 520,
+  "file": "work135.jpg"
+ },
+ "deck136": {
+  "cat": "deck",
+  "kind": "hero",
+  "caption": "Waterfront deck with cable railing",
+  "w": 1024,
+  "h": 1024,
+  "file": "deck136.jpg"
+ },
+ "deck137": {
+  "cat": "deck",
+  "kind": "card",
+  "caption": "Finished deck with seating",
+  "w": 520,
+  "h": 520,
+  "file": "deck137.jpg"
+ },
+ "life139": {
+  "cat": "life",
+  "kind": "hero",
+  "caption": "Deck living at dusk",
+  "w": 1024,
+  "h": 1024,
+  "file": "life139.jpg"
+ },
+ "work141": {
+  "cat": "work",
+  "kind": "card",
+  "caption": "Gate operator install",
+  "w": 520,
+  "h": 520,
+  "file": "work141.jpg"
+ },
+ "struct146": {
+  "cat": "struct",
+  "kind": "hero",
+  "caption": "Custom cabana",
+  "w": 1120,
+  "h": 572,
+  "file": "struct146.jpg"
+ },
+ "struct148": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "Chicken coop",
+  "w": 520,
+  "h": 265,
+  "file": "struct148.jpg"
+ },
+ "struct149": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "Gazebos",
+  "w": 520,
+  "h": 265,
+  "file": "struct149.jpg"
+ },
+ "struct151": {
+  "cat": "struct",
+  "kind": "card",
+  "caption": "Outdoor dog kennel",
+  "w": 520,
+  "h": 265,
+  "file": "struct151.jpg"
+ }
+}
