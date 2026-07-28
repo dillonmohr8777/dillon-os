@@ -1,6 +1,6 @@
 ---
 tags: [session, moc]
-updated: 2026-07-27
+updated: 2026-07-28
 ---
 
 # Session Index
@@ -9,6 +9,7 @@ updated: 2026-07-27
 
 | Session | Date | Theme | Status |
 |---|---|---|---|
+| [[2026-07-28 — competitive-task-orchestrator run 35]] | 2026-07-28 | Umbrella orchestrator Run 35; Align Maher due today | Complete |
 | [[2026-07-27 — competitive-task-orchestrator run 34]] | 2026-07-27 | Umbrella orchestrator Run 34; infra restored; BOK+Align drafts | Complete |
 | [[Bridge Software Development - 2026-07-11]] | 2026-07-11 | Bridge discovery build, prototype, Monday/Tori decision package | Completed pre-meeting; **post-Tori capture missing** |
 | [[Facebook Ads System Build Log]] | — | Meta ads system build log | **Empty stub** |
@@ -30,7 +31,7 @@ Template shell only — no active issues, resolved issues, or error patterns log
 ## Known gaps
 
 - **Facebook Ads session stubs empty** — `Facebook Ads System Build Log.md`, `Facebook Ads Automation Ideas.md`, and `Facebook Ads API Notes.md` contain headings only. Export Codex Meta ads sessions into dated files or populate these stubs.
-- **Bridge post-Tori meeting capture** — `Bridge Software Development - 2026-07-11.md` documents pre-meeting discovery/build only. No session file records Tori meeting outcomes, decisions, or revised MVP boundary (~14 days overdue as of 2026-07-27).
+- **Bridge post-Tori meeting capture** — `Bridge Software Development - 2026-07-11.md` documents pre-meeting discovery/build only. No session file records Tori meeting outcomes, decisions, or revised MVP boundary (~15 days overdue as of 2026-07-28).
 - **Automation Debug Log empty** — no automation failures or patterns captured for competitive-task debugging.
 
 ## Git activity (last 7 days)

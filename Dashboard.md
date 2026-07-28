@@ -23,10 +23,11 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 - [[11_Agents/Master Agent|Master Agent]]
 
-## Today
-- [ ] Open competitive-task-today brief
-- [ ] Execute P0 stack (top item first)
-- [ ] Ship BOK + Align content backlog if still overdue
+## Today (2026-07-28)
+- [ ] Open [[Daily-Briefs/competitive-task-today|competitive-task-today]] brief
+- [ ] **Align HCM** — publish Maher post (due today) after shipping Jun/Jul backlog
+- [ ] **BOK Law** — ship 7-week social backlog (Wed Wisdom due Jul 30)
+- [ ] **NKCDC** — escalate with Mac to Anthony (launch blocked ~104d)
 - [ ] Update `last_touched` on any client you touch
 
 ## Active Projects
