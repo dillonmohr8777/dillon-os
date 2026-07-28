@@ -8,59 +8,54 @@ Target: Dillon's Windows desktop (photo showed Codex v0.144.5 in `C:\windows\Sys
 - Codex CLI is already unlocked for permissions (`permissions: YOLO mode`).
 - The real breakage is: outdated CLI + likely stuck model load + bad working directory (`System32`).
 
+## Confirmed failure (2026-07-28)
+
+1. `ENOSPC: no space left on device` during `npm install -g @openai/codex`
+2. Broken portable Node path won:
+   `C:\Users\DillonMohr\Downloads\node-v24.14.1-win-x64\node_modules\@openai\codex\`
+3. Runtime error: `Missing optional dependency @openai/codex-win32-x64`
+
+Disk-full caused the Windows binary optional package to fail extraction. npm then left a meta package that cannot start.
+
 ## Fix — paste this in PowerShell (not System32)
 
 ```powershell
-# 1) Leave System32
 cd $HOME
-
-# 2) Prefer your real workspace if it exists
-$ws = @(
-  "$HOME\OneDrive - Align HCM\Desktop\Codex",
-  "$HOME\Desktop\Codex",
-  "$HOME\dillon-os"
-) | Where-Object { Test-Path $_ } | Select-Object -First 1
-if ($ws) { Set-Location $ws; Write-Host "cwd=$ws" } else { Write-Host "cwd=$PWD" }
-
-# 3) Update Codex CLI
-npm install -g @openai/codex@latest
-# fallback if npm global is weird:
-# irm https://chatgpt.com/codex/install.ps1 | iex
-
-# 4) Confirm version
-codex --version
-# expect 0.145.0 or newer
-
-# 5) Health check
-codex doctor
-codex login status
-
-# 6) Relaunch from a real project folder (NOT System32)
-codex
+irm https://raw.githubusercontent.com/dillonmohr8777/dillon-os/main/handoffs/Fix-Windows-Codex.ps1 | iex
 ```
 
-## If model stays on "loading"
+That script now:
+- frees npm/temp cache space
+- deletes the broken Downloads portable `@openai` install
+- downloads the standalone `codex.exe` from GitHub releases into `%LOCALAPPDATA%\Programs\codex\`
+- prepends that folder on User PATH
+- writes YOLO / full-sandbox `config.toml`
+
+Then:
 
 ```powershell
-# Re-auth (device code in browser)
-codex logout
-codex login
-
-# Or force config unlock (YOLO + full sandbox) in %USERPROFILE%\.codex\config.toml
-@"
-approval_policy = "never"
-sandbox_mode = "danger-full-access"
-web_search = "live"
-"@ | Set-Content -Encoding utf8 "$HOME\.codex\config.toml"
-
-codex
+& "$env:LOCALAPPDATA\Programs\codex\codex.exe" --version
+& "$env:LOCALAPPDATA\Programs\codex\codex.exe" doctor
+& "$env:LOCALAPPDATA\Programs\codex\codex.exe" login
+& "$env:LOCALAPPDATA\Programs\codex\codex.exe"
 ```
+
+Open a **new** PowerShell window after so PATH persists.
+
+## If still ENOSPC before download
+
+Free at least ~2–3 GB on `C:`:
+- Empty Recycle Bin
+- Settings → System → Storage → Temporary files
+- Delete big installers under `Downloads` (keep the node zip only if you still need it)
+- `npm cache clean --force`
 
 ## Do not
 
 - Do not keep launching Codex from `C:\windows\System32`.
+- Do not keep using `Downloads\node-v24*\node_modules\@openai\codex` as your Codex install.
 - Do not copy `auth.json` between computers.
-- Do not downgrade below 0.145.0 while chasing the stuck model spinner.
+- Do not retry bare `npm install -g @openai/codex` until disk has free space; prefer the standalone exe path above.
 
 ## Related
 
