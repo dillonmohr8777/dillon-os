@@ -459,7 +459,13 @@ PB.Game = (function () {
   return { init: init, toTitle: toTitle, gameOver: gameOver, rollCredits: rollCredits, _debug: _debug, API: API, W: W, H: H };
 })();
 
-window.addEventListener('load', function () {
-  var cv = document.getElementById('game');
-  if (cv) PB.Game.init(cv);
-});
+/* Boot as soon as the canvas exists. When the bundle is injected into an
+   already-loaded document the 'load' event has been and gone, so check first. */
+(function () {
+  function boot() {
+    var cv = document.getElementById('game');
+    if (cv) PB.Game.init(cv);
+  }
+  if (document.readyState === 'complete' || document.readyState === 'interactive') setTimeout(boot, 0);
+  else window.addEventListener('DOMContentLoaded', boot);
+})();

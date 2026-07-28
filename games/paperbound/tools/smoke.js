@@ -44,7 +44,9 @@ let shotN = 0;
   page.on('pageerror', e => errors.push('pageerror: ' + e.message));
   page.on('requestfailed', r => errors.push('requestfailed: ' + r.url()));
 
-  await page.goto('file://' + path.join(ROOT, 'index.html'), { waitUntil: 'load' });
+  const fi = process.argv.indexOf('--file');
+  const entry = fi > 0 ? path.resolve(process.argv[fi + 1]) : path.join(ROOT, 'index.html');
+  await page.goto('file://' + entry, { waitUntil: 'load' });
 
   const shot = async (name) => {
     if (!SHOTS) return;
