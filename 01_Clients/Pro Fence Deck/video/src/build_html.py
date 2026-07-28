@@ -35,11 +35,14 @@ def build(profile, out_name, inline):
     assets['wordmask'] = b64(B + 'assets/opt/logo-wordmark-mask.png', 'image/png')
     assets['icon'] = b64(B + 'assets/opt/logo-icon.png', 'image/png')
 
-    html = open(B + 'template.html').read()
+    html = open(B + 'template.html', encoding='utf-8').read()
+    # file:// has no Content-Type header, so without this the browser decodes the
+    # page as windows-1252 and every ·, ★ and curly quote turns into mojibake.
+    html = '<meta charset="utf-8">\n' + html
     html = html.replace('__FONTS__', fonts() + '\n:root{--grain:%s}' % GRAIN)
     html = html.replace('__ASSETS__',
                         'window.__A=' + json.dumps(assets) + ';\nwindow.__M=' + json.dumps(man) + ';')
-    open(B + out_name, 'w').write(html)
+    open(B + out_name, 'w', encoding='utf-8').write(html)
     print(f'{out_name}: {os.path.getsize(B + out_name)/1e6:.2f} MB  ({len(man)} images, inline={inline})')
 
 
