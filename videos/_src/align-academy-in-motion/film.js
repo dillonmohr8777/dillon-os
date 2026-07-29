@@ -386,7 +386,10 @@ function post(ctx, f) {
   ctx.restore();
 }
 
-/* ============================== SCENE CONTENT ============================== */
+/* ============================== SCENE CONTENT ==============================
+   The `s` support lines on AUDIENCE and INSIDE are retained for reference but
+   are deliberately NOT rendered: those two scenes are heading-only. Only the
+   DELIVERY cards still show their `s` copy. */
 const AUDIENCE = [
   { icon: 'shieldCheck', t: 'Administrators', s: 'Configuration, troubleshooting, reporting, security, governance' },
   { icon: 'users',       t: 'Managers',       s: 'Decisions, approvals, scheduling, time, talent, workforce actions' },
@@ -674,17 +677,8 @@ function shuffleList(ctx, f, a, b, items, label, ghostWord) {
     if (i === active) {
       const ap = eOutCubic(clamp((raw - i + .48) * 1.9));
       if (ap < 1) assembleText(ctx, items[i].t, tx, y, size, FS.serif, 700, 0, ap, i * 911, 'left', 260);
-      // supporting line
-      const sp = clamp((raw - i + .40) * 2.4) * (1 - clamp((raw - i - .62) * 3));
-      if (sp > .02) {
-        ctx.save();
-        ctx.globalAlpha = clamp(sp);
-        setFont(ctx, 24, FS.body, 400, .6);
-        ctx.textAlign = 'center'; ctx.fillStyle = 'rgba(176,196,222,0.92)';
-        ctx.fillText(items[i].s, W * .5, y + 54);
-        ctx.textAlign = 'left';
-        ctx.restore();
-      }
+      // No support copy under these headings: the stack is icon + label only,
+      // matching how the original Align in Motion film handles its list.
     }
   }
   ctx.restore();

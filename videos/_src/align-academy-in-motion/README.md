@@ -10,7 +10,7 @@ alongside the existing *Align in Motion* and *Align Industry Solutions* films.
 | Requirement | How it's met |
 | --- | --- |
 | Particles, like the first film | Logo assembles from ~5,200 vertices sampled off the real logo art. Every headline word also settles out of drifting vertices |
-| Vertex shuffling for the Academy benefits/services | Two shuffle-stack scenes (`WHO WE TRAIN`, `WHAT'S INSIDE`) where the centre row is sharp and lit, neighbours fade back and blur, and the list glides between rows |
+| Vertex shuffling for the Academy benefits/services | Two shuffle-stack scenes (`WHO WE TRAIN`, `WHAT'S INSIDE`) where the centre row is sharp and lit, neighbours fade back and blur, and the list glides between rows. Heading only, no support copy, matching the original film's list treatment |
 | Placement from the second film | Centre-focus card carousel (`HOW WE DELIVER`) and the orbiting node constellation (`WHY IT MATTERS`) |
 | Cool swipe transitions | Diagonal shear wipes with a hot leading edge, spark spray blown off the edge, parallax push on the outgoing frame and a chromatic fringe on the incoming one |
 | Icons only | Every marker is a stroked icon that draws itself on. Position indicators are ticks and dots |
