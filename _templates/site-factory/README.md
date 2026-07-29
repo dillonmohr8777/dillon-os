@@ -31,11 +31,31 @@ See `example-brief.json` for the full shape. The important parts:
 - `noindex` — defaults to true (prospect demo). Set `false` only when a paying client's site goes live.
 - `skinCss` — optional per-site decoration layer, scoped under `.slug-<name>`. Base classes never change.
 
+## Weekly batch of 25
+
+The outreach engine runs one batch of 25 sites per week. Full runbook: `02_Campaigns/AI Site Builder Outreach Engine/Batch Runbook.md`. Skill: `.claude/skills/site-batch/SKILL.md`.
+
+```bash
+# 1. Harvest every target's site and socials (screenshots, imagery, copy, palette)
+node _templates/site-factory/harvest.js --from targets.json
+
+# 2. Author one brief per prospect (see the mirror-and-improve skill)
+
+# 3. Build + QA the whole batch, emit the hub and the sheets
+node _templates/site-factory/build-batch.js <batch-dir>
+```
+
+A batch directory holds `batch.json` plus `briefs/*.json`, and the runner emits `sites/`, `index.html` (the review hub, one link for the bosses), `manifest.csv` (QR sheet), `prospects.csv` (mail merge with a `mail_ready` gate), and `batch-report.md`.
+
 ## Files
 
 | File | Role |
 |---|---|
 | `base.css` | The shared template CSS, extracted from the Philly-25 profile template |
-| `build-site.js` | Brief JSON in, finished `index.html` out |
+| `build-site.js` | Brief JSON in, finished `index.html` out. Also requireable as `buildSite(brief, outRoot)`. |
+| `build-batch.js` | Whole-batch runner: builds, QAs, checks spec compliance, detects duplicate imagery, emits the hub and CSVs |
+| `harvest.js` | Playwright harvester: screenshots a target's site and socials, downloads their imagery, extracts their copy, brand palette, fonts, facts, and decay signals |
 | `qa.js` | Ship checklist from the design system: JSON-LD, meta, alt text, assets, CTAs, surface rhythm, plus Playwright screenshots and overflow checks at 390/850/1440px |
 | `example-brief.json` | A complete worked example (fictional Philly service business) |
+
+`harvest/` and `qa-shots/` are gitignored; they hold third-party reference material and generated screenshots.

@@ -52,19 +52,23 @@ flowchart TD
 - **Vertical fit:** does Momentum have an industry page and case studies here (see [[Market Roster]])
 - **Ad presence:** already spending means already sold on marketing
 
-**Status: not automated.** This is the highest-leverage thing to build next, because it decides where every downstream dollar goes.
+**Status: partly automated.** Decay signals are now harvested automatically by `harvest.js` (`decaySignals.missingViewport`, `staleCopyrightYear`, empty phone/hours, thin homepage copy). Full 0–100 ranking across a prospect sheet is still manual.
 
-**To automate:** a scoring script that takes prospect rows, fetches each site, and emits a 0-100 score with reasons. Headless Chromium is already available in this environment via Playwright, which the factory QA already uses.
+**To automate next:** a scoring script that takes prospect rows, runs harvest, and emits a 0–100 score with reasons. Playwright is already installed for harvest and QA.
 
 ## Stage 3: Brief
 
-**Goal:** a complete `brief.json` per prospect.
+**Goal:** a complete `brief.json` per prospect, written from a real harvest.
 
-**Status: automated (agent-driven), documented.** The `/site-factory` skill covers research, brand derivation, and brief authoring. Contract and field reference: `_templates/site-factory/README.md`. Design rules: `philly-sites/DESIGN-SYSTEM.md`.
+**Status: automated (agent-driven), documented.**
 
-Brand derivation rules that keep 25 sites from looking like 25 clones: palette from the business's real signage/product/interior photos, `--border` and `--radius` chosen to match their attitude (1px and rounded for upscale, thick and square for loud), one display font plus one quiet text font.
+1. `node _templates/site-factory/harvest.js <slug> <site-url> [social-url ...]` (or `--from targets.json`) captures screenshots of the site and socials, downloads their imagery, and extracts copy, palette, fonts, contact facts, and decay signals into `harvest/<slug>/harvest.json`.
+2. `/mirror-and-improve` mines their voice from that harvest, diagnoses what to beat via `/ux-audit`, then designs the upgrade via `/ui-design`, `/motion-design`, and `/frontend-build`.
+3. Output is one `briefs/<slug>.json` hitting the canonical spec in `philly-sites/DESIGN-SYSTEM.md`: **10 sections, 350 to 500 words, 12 to 13 images**.
 
-**Guardrail:** every factual field needs a source. Unverifiable fields stay empty rather than invented.
+Contract and field reference: `_templates/site-factory/README.md`. Brand derivation starts from `brand.palette` and `brand.fonts` in the harvest, not from taste. Their nouns and taglines carry over verbatim; writing tightens under `System/writing-rules.md`.
+
+**Guardrail:** every factual field needs a source. Unverifiable fields stay empty rather than invented. Drop any target whose harvest failed.
 
 ## Stage 4: Build
 

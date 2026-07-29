@@ -38,14 +38,15 @@ Direct mail vendor floated: StackAdapt programmatic direct mail. QR automation f
 - QA discipline: 1,032 responsive assertions across seven screen sizes, 288 live images verified, zero contrast failures, zero deploy failures. All previews live as private noindex drafts.
 - M360 Orbit deep pipeline live with 19 specialists, evidence rules, quality gates, cross-agent handoffs, and a hard stop before outreach or CRM writes.
 - The template system is now extracted and codified in this vault: `philly-sites/DESIGN-SYSTEM.md` plus the generator at `_templates/site-factory/`.
+- **Weekly 25-site batch pipeline (2026-07-29):** reference harvester (`harvest.js`) pulls screenshots + copy + brand palette from target sites and socials; designated design skills (`ui-design`, `ux-audit`, `frontend-build`, `motion-design`) plus `mirror-and-improve` keep their lingo and upgrade everything else; `build-batch.js` builds the batch, QAs every site, enforces the measured canonical spec (10 sections, 350–500 words, 12–13 images), detects duplicate imagery, and emits the review hub + `manifest.csv` (QR) + `prospects.csv` (mail merge with `mail_ready` gate). Runbook: [[Batch Runbook]]. Skill: `/site-batch`.
 
-**Mac's open question, still the critical path:**
+**Mac's open question, answered in [[Pipeline Spec]]:**
 
 > whats the steps taken we can use to automate everything
 
-He asked that on 2026-07-12 and asked for a Dillon + Jesse collab that week. Answering it concretely is what turns a demo batch into an engine.
+Build through quality gate is automated. Approval stays human. Activate (QR via Zapier/QRTiger, mail via PostGrid or StackAdapt) still needs the mail vendor decision and a deploy token.
 
-**Known gaps as of 2026-07-22 (Dillon's own words in channel):** "Still ironing out the mail side the qr side is basically figured out."
+**Known gaps as of 2026-07-29:** mail vendor still undecided; discovery/qualify scoring still manual; Netlify deploy token not in Cloud Agent secrets yet. QR path is ready once the sheet zap is wired to `manifest.csv`.
 
 ## Strategy: three waves
 
@@ -65,9 +66,10 @@ Batch verticals should mirror that list exactly. Every prospect site we build th
 
 Dillon's stated plan on 2026-07-21: build deep homepage structures weekly, continuously, then push hard on outreach. That means:
 
-- One batch per week, 10 to 25 sites, single market and vertical per batch where possible
+- One batch per week, **25 sites**, single market and one or two verticals per batch
+- Every target is harvested (site + socials screenshots, their copy, their palette) before brief writing
 - Batch ships as one review hub link (Mac reviews one URL, not 25)
-- Approved sites feed the QR and mail merge
+- Approved sites feed the QR and mail merge from the batch CSVs
 - Nothing goes out until Mac or Melissa approves the specific prospect list and the mail piece
 
 ## Deliverable format that works for Mac
