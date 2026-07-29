@@ -1,0 +1,13 @@
+---
+description: Dillon OS vault conventions — 12_Brain is canonical
+alwaysApply: true
+---
+
+# Vault conventions
+
+- Canonical second-brain layer: `12_Brain/`. Never create `1Z_Brain/`.
+- Agents start at `12_Brain/INDEX.md`, then walk links — do not sweep folders.
+- `12_Brain/raw/` is read-only history. Compile into `entities/` / `concepts/`.
+- Update `12_Brain/INDEX.md` in the same change when adding/removing wiki pages.
+- Working folders (`00_Inbox` … `11_Agents`) stay outside `12_Brain/`; link, don't duplicate clients.
+- Git is source of truth for agent writes. Do not race Obsidian Sync.
