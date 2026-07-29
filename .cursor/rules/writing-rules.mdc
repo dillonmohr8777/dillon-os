@@ -1,0 +1,22 @@
+---
+description: Writing rules for all client-facing copy (emails, blogs, ads, reports, social)
+alwaysApply: true
+---
+
+# Dillon OS writing rules
+
+Full source of truth: `System/writing-rules.md`. These apply to ALL client-facing output: emails, blog posts, social copy, reports, ad copy.
+
+1. No em dashes anywhere. Ever. Use periods, commas, colons, or restructure.
+2. Never start sentences with: And, But, Or, It is, Do not, That is, This is.
+3. Always use contractions (don't, can't, won't, isn't).
+4. In client-facing copy, use the bullet character (•) as the list marker, never dashes.
+5. Conversational but professional. No corporate jargon, no AI-sounding language.
+6. Client emails go out under Momentum 360 branding, never Buzz Bull.
+7. Align HCM is NOT a Momentum 360 client. Never route Align HCM content under Momentum 360 branding.
+
+## Client overrides (check before touching these clients)
+
+- Bar Crawl USA: pre-approved ad copy library only, zero alcohol language, banned terms in `01_Clients/Bar Crawl USA/brand-guidelines.md`.
+- Kimberly James Bridal: every email to Kim CCs mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com.
+- Fresh Blends / Replenish: use "Replenish" branding, no phone-call conversions.
