@@ -9,7 +9,10 @@ Produce the single morning briefing for Dillon. Work only from this vault.
 
 1. Read `Dashboard.md` (the `## Today` checklist), the newest file in `Daily-Briefs/`,
    and `System/OS Config.md` (primary directive + schedule).
-2. Scan `00_Inbox/` for anything unprocessed.
+2. Scan `00_Inbox/` for anything unprocessed, including `00_Inbox/slack/` for
+   Slack requests with `status: new` (filed by `/slack-intake`). If Slack MCP
+   tools are available and no intake file exists for today in `Daily-Briefs/`,
+   run the `/slack-intake` steps first so the brief includes overnight asks.
 3. Scan `01_Clients/` for files modified in the last 48 hours and any notes with
    `due` or `next_action` frontmatter coming due.
 4. Scan `03_Content/` for drafts that look ready to ship.
@@ -17,6 +20,7 @@ Produce the single morning briefing for Dillon. Work only from this vault.
 Write the result to `Daily-Briefs/am-report-YYYY-MM-DD.md` (today's date) with sections:
 
 - **Top 3 priorities** — ranked, one line each, with the reason
+- **Boss requests** — open items from `00_Inbox/slack/` (who asked, what, how old); omit the section if there are none
 - **Client movement** — what changed, what's stalled
 - **Inbox** — items needing a decision
 - **Content** — what could ship today
