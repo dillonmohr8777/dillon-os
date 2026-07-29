@@ -1,8 +1,6 @@
-# Session log
+# Session log (public stub)
 
-Appended automatically by the SessionEnd hook in `.claude/settings.json`.
-Each line is a session that ended; run `/session-mine` to compile any session
-that made decisions into a dated note in this folder.
+Cadence lines only. Do not append secrets, emails, phones, or access notes.
+Sensitive session mines go to `12_Brain/private/sessions/` (gitignored).
 
-- 2026-07-04 — vault second-brain layer built (raw/, entities/, concepts/, INDEX.md, loops)
-- 2026-07-05 03:30 — session ended (run /session-mine if decisions were made)
+- 2026-07-29 — 12_Brain public-safety cleanup (mined)

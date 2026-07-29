@@ -24,13 +24,13 @@ tags: [dashboard, moc]
 - [ ] Follow up with clients
 
 ## Active Projects
-- 
+-
 
 ## Notes
 -
 
 ## Brain
 - Canonical layer: [[12_Brain/README|12_Brain]] (do not create `1Z_Brain/`)
+- Private / Sync-only notes: [[12_Brain/private/README|12_Brain/private/]] (not in Git — repo is public)
 - Projects · Decisions · Research · Memory · Protocols under `12_Brain/`
 - HUD: run `node _os/server.js` → http://127.0.0.1:4242
-

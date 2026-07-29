@@ -3,3 +3,7 @@
 .obsidian/plugins/obsidian-local-rest-api/data.json
 08_Assets/
 09_Transcripts/
+
+# 12_Brain private layer — GitHub repo is PUBLIC; keep PII/access/secrets out of Git
+12_Brain/private/**
+!12_Brain/private/README.md

@@ -70,6 +70,9 @@ Plus:
 
 ## Sync warning
 
+- **This GitHub repository is PUBLIC.** PII, access inventories, credentials,
+  Bitwarden locators, and private absolute paths go in `12_Brain/private/`
+  (gitignored) — never in tracked files.
 - **Git is the source of truth** for this repository and for agent writes.
 - Obsidian Sync may be used by the human operator on a signed-in desktop for
   reading/light edits, but do not race Sync + an agent rewriting the same files.

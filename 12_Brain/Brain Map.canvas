@@ -1,589 +1,141 @@
 {
- "nodes": [
-  {
-   "id": "n001",
-   "type": "text",
-   "text": "# \ud83e\udde0 D.I.L.L.O.N. OS\n**ROAD TO 100 CLIENTS**\n\nThe wiki is the code.\nThe agent is the compiler.",
-   "x": -200,
-   "y": -140,
-   "width": 400,
-   "height": 220,
-   "color": "6"
-  },
-  {
-   "id": "n002",
-   "type": "file",
-   "file": "12_Brain/INDEX.md",
-   "x": -180,
-   "y": 140,
-   "width": 360,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "n003",
-   "type": "file",
-   "file": "Dashboard.md",
-   "x": -180,
-   "y": 260,
-   "width": 360,
-   "height": 70,
-   "color": "6"
-  },
-  {
-   "id": "n010",
-   "type": "group",
-   "label": "\ud83d\udce5 RAW \u2014 ground truth (read-only)",
-   "x": -1450,
-   "y": -350,
-   "width": 560,
-   "height": 760,
-   "color": "3"
-  },
-  {
-   "id": "n011",
-   "type": "file",
-   "file": "12_Brain/raw/2026-06-26 - intel-core-7-master-operating-transfer.md",
-   "x": -1410,
-   "y": -280,
-   "width": 480,
-   "height": 80
-  },
-  {
-   "id": "n012",
-   "type": "file",
-   "file": "12_Brain/raw/2026-07-04 - obsidian-second-brain-article.md",
-   "x": -1410,
-   "y": -170,
-   "width": 480,
-   "height": 70
-  },
-  {
-   "id": "n013",
-   "type": "file",
-   "file": "12_Brain/raw/2026-07-04 - business-update-voice-note.md",
-   "x": -1410,
-   "y": -70,
-   "width": 480,
-   "height": 70
-  },
-  {
-   "id": "n014",
-   "type": "file",
-   "file": "12_Brain/raw/2026-07-04 - focus-directive.md",
-   "x": -1410,
-   "y": 30,
-   "width": 480,
-   "height": 70
-  },
-  {
-   "id": "n015",
-   "type": "file",
-   "file": "12_Brain/raw/sessions/session-log.md",
-   "x": -1410,
-   "y": 130,
-   "width": 480,
-   "height": 70
-  },
-  {
-   "id": "n016",
-   "type": "text",
-   "text": "Captures land here **untouched**:\ntranscripts, voice notes, PDFs, session mining.",
-   "x": -1410,
-   "y": 230,
-   "width": 480,
-   "height": 120
-  },
-  {
-   "id": "n020",
-   "type": "text",
-   "text": "## \u2699\ufe0f compile\n`/vault-compile` nightly\nsource: links \u2022 diffs not claims",
-   "x": -780,
-   "y": -90,
-   "width": 300,
-   "height": 150,
-   "color": "3"
-  },
-  {
-   "id": "n030",
-   "type": "group",
-   "label": "\ud83c\udfdb ENTITIES \u2014 one page per thing",
-   "x": -820,
-   "y": -820,
-   "width": 700,
-   "height": 600,
-   "color": "5"
-  },
-  {
-   "id": "n031",
-   "type": "file",
-   "file": "12_Brain/entities/Momentum 360.md",
-   "x": -780,
-   "y": -750,
-   "width": 300,
-   "height": 70
-  },
-  {
-   "id": "n032",
-   "type": "file",
-   "file": "12_Brain/entities/Website Factory.md",
-   "x": -780,
-   "y": -660,
-   "width": 300,
-   "height": 70
-  },
-  {
-   "id": "n033",
-   "type": "file",
-   "file": "12_Brain/entities/Hermes.md",
-   "x": -780,
-   "y": -570,
-   "width": 300,
-   "height": 70
-  },
-  {
-   "id": "n034",
-   "type": "file",
-   "file": "12_Brain/entities/King Agent OS.md",
-   "x": -460,
-   "y": -750,
-   "width": 300,
-   "height": 70
-  },
-  {
-   "id": "n035",
-   "type": "file",
-   "file": "12_Brain/entities/Codex Workspace (Legacy).md",
-   "x": -460,
-   "y": -660,
-   "width": 300,
-   "height": 70
-  },
-  {
-   "id": "n040",
-   "type": "group",
-   "label": "\ud83d\udca1 CONCEPTS \u2014 one lesson per file",
-   "x": 20,
-   "y": -820,
-   "width": 760,
-   "height": 600,
-   "color": "4"
-  },
-  {
-   "id": "n041",
-   "type": "file",
-   "file": "12_Brain/concepts/Leading Indicators.md",
-   "x": 60,
-   "y": -750,
-   "width": 320,
-   "height": 70
-  },
-  {
-   "id": "n042",
-   "type": "file",
-   "file": "12_Brain/concepts/Draft-First Operating Rules.md",
-   "x": 60,
-   "y": -660,
-   "width": 320,
-   "height": 70
-  },
-  {
-   "id": "n043",
-   "type": "file",
-   "file": "12_Brain/concepts/Access Verification Discipline.md",
-   "x": 60,
-   "y": -570,
-   "width": 320,
-   "height": 70
-  },
-  {
-   "id": "n044",
-   "type": "file",
-   "file": "12_Brain/concepts/Truth Hierarchy.md",
-   "x": 420,
-   "y": -750,
-   "width": 320,
-   "height": 70
-  },
-  {
-   "id": "n045",
-   "type": "file",
-   "file": "12_Brain/concepts/Evidence Boundaries in Reporting.md",
-   "x": 420,
-   "y": -660,
-   "width": 320,
-   "height": 70
-  },
-  {
-   "id": "n046",
-   "type": "file",
-   "file": "12_Brain/concepts/Netlify Deploy Safety.md",
-   "x": 420,
-   "y": -570,
-   "width": 320,
-   "height": 70
-  },
-  {
-   "id": "n047",
-   "type": "file",
-   "file": "12_Brain/concepts/Context Economy.md",
-   "x": 60,
-   "y": -480,
-   "width": 320,
-   "height": 70
-  },
-  {
-   "id": "n048",
-   "type": "file",
-   "file": "12_Brain/concepts/Second Brain Architecture.md",
-   "x": 420,
-   "y": -480,
-   "width": 320,
-   "height": 70
-  },
-  {
-   "id": "n050",
-   "type": "group",
-   "label": "\ud83e\udd1d CLIENTS \u2014 the roster",
-   "x": 420,
-   "y": -140,
-   "width": 720,
-   "height": 620,
-   "color": "1"
-  },
-  {
-   "id": "n051",
-   "type": "file",
-   "file": "01_Clients/Client Index.md",
-   "x": 460,
-   "y": -70,
-   "width": 300,
-   "height": 70,
-   "color": "1"
-  },
-  {
-   "id": "n052",
-   "type": "file",
-   "file": "12_Brain/bases/Clients.base",
-   "x": 460,
-   "y": 20,
-   "width": 300,
-   "height": 70,
-   "color": "1"
-  },
-  {
-   "id": "n053",
-   "type": "file",
-   "file": "01_Clients/Bar Crawl USA.md",
-   "x": 460,
-   "y": 110,
-   "width": 300,
-   "height": 60
-  },
-  {
-   "id": "n054",
-   "type": "file",
-   "file": "01_Clients/Fresh Blends - Replenish.md",
-   "x": 460,
-   "y": 190,
-   "width": 300,
-   "height": 60
-  },
-  {
-   "id": "n055",
-   "type": "file",
-   "file": "01_Clients/AMI Commercial Cleaning.md",
-   "x": 790,
-   "y": -70,
-   "width": 310,
-   "height": 60
-  },
-  {
-   "id": "n056",
-   "type": "file",
-   "file": "01_Clients/Blissful Zen Spa.md",
-   "x": 790,
-   "y": 10,
-   "width": 310,
-   "height": 60
-  },
-  {
-   "id": "n057",
-   "type": "file",
-   "file": "01_Clients/Revive Systems.md",
-   "x": 790,
-   "y": 90,
-   "width": 310,
-   "height": 60
-  },
-  {
-   "id": "n058",
-   "type": "file",
-   "file": "01_Clients/KJB.md",
-   "x": 790,
-   "y": 170,
-   "width": 310,
-   "height": 60
-  },
-  {
-   "id": "n059",
-   "type": "file",
-   "file": "01_Clients/Omega Landscaping.md",
-   "x": 460,
-   "y": 270,
-   "width": 300,
-   "height": 60
-  },
-  {
-   "id": "n060",
-   "type": "text",
-   "text": "\u2026plus Bok Law, NKCDC, Onsite,\nCindy May, Fagan, Hope Wellness,\nEcosystem ($45k) \u2014 15 in Past.",
-   "x": 790,
-   "y": 250,
-   "width": 310,
-   "height": 120
-  },
-  {
-   "id": "n070",
-   "type": "group",
-   "label": "\ud83d\udd27 DAILY LANES \u2014 SOPs",
-   "x": -820,
-   "y": 480,
-   "width": 900,
-   "height": 380,
-   "color": "2"
-  },
-  {
-   "id": "n071",
-   "type": "file",
-   "file": "04_SOPs/Landing Page Build & QA SOP.md",
-   "x": -780,
-   "y": 560,
-   "width": 400,
-   "height": 70
-  },
-  {
-   "id": "n072",
-   "type": "file",
-   "file": "04_SOPs/Website Build SOP.md",
-   "x": -780,
-   "y": 660,
-   "width": 400,
-   "height": 70
-  },
-  {
-   "id": "n073",
-   "type": "file",
-   "file": "04_SOPs/Client Email SOP.md",
-   "x": -340,
-   "y": 560,
-   "width": 400,
-   "height": 70
-  },
-  {
-   "id": "n074",
-   "type": "file",
-   "file": "04_SOPs/SOP Index.md",
-   "x": -340,
-   "y": 660,
-   "width": 400,
-   "height": 70
-  },
-  {
-   "id": "n080",
-   "type": "group",
-   "label": "\ud83d\udd01 LOOPS \u2014 the brain feeds itself",
-   "x": 180,
-   "y": 480,
-   "width": 820,
-   "height": 380,
-   "color": "6"
-  },
-  {
-   "id": "n081",
-   "type": "text",
-   "text": "**nightly** `/vault-compile`\n**weekly** `/wiki-lint` + `/synthesize`\n**weekly** `/research-sweep`\n**per session** `/session-mine`",
-   "x": 220,
-   "y": 560,
-   "width": 360,
-   "height": 220,
-   "color": "6"
-  },
-  {
-   "id": "n082",
-   "type": "file",
-   "file": "12_Brain/System/Second Brain Ops.md",
-   "x": 620,
-   "y": 560,
-   "width": 340,
-   "height": 70
-  },
-  {
-   "id": "n083",
-   "type": "file",
-   "file": "00_Inbox/Open Threads from Intel Core 7 Brief.md",
-   "x": 620,
-   "y": 660,
-   "width": 340,
-   "height": 80
-  },
-  {
-   "id": "n12p",
-   "type": "file",
-   "file": "12_Brain/projects/README.md",
-   "x": 900,
-   "y": -200,
-   "width": 300,
-   "height": 70,
-   "color": "4"
-  },
-  {
-   "id": "n12d",
-   "type": "file",
-   "file": "12_Brain/decisions/README.md",
-   "x": 900,
-   "y": -100,
-   "width": 300,
-   "height": 70,
-   "color": "4"
-  },
-  {
-   "id": "n12m",
-   "type": "file",
-   "file": "12_Brain/memory/README.md",
-   "x": 900,
-   "y": 0,
-   "width": 300,
-   "height": 70,
-   "color": "5"
-  },
-  {
-   "id": "n12r",
-   "type": "file",
-   "file": "12_Brain/protocols/README.md",
-   "x": 900,
-   "y": 100,
-   "width": 300,
-   "height": 70,
-   "color": "2"
-  },
-  {
-   "id": "n12b",
-   "type": "text",
-   "text": "# 12_Brain\ncanonical layer\n(no 1Z_Brain)",
-   "x": 900,
-   "y": -340,
-   "width": 300,
-   "height": 120,
-   "color": "6"
-  }
- ],
- "edges": [
-  {
-   "id": "e001",
-   "fromNode": "n010",
-   "toNode": "n020",
-   "fromSide": "right",
-   "toSide": "left",
-   "label": "capture"
-  },
-  {
-   "id": "e002",
-   "fromNode": "n020",
-   "toNode": "n030",
-   "fromSide": "right",
-   "toSide": "left",
-   "label": "compile"
-  },
-  {
-   "id": "e003",
-   "fromNode": "n020",
-   "toNode": "n040",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e004",
-   "fromNode": "n002",
-   "toNode": "n001",
-   "fromSide": "top",
-   "toSide": "bottom"
-  },
-  {
-   "id": "e005",
-   "fromNode": "n003",
-   "toNode": "n002",
-   "fromSide": "top",
-   "toSide": "bottom"
-  },
-  {
-   "id": "e006",
-   "fromNode": "n002",
-   "toNode": "n051",
-   "fromSide": "right",
-   "toSide": "left",
-   "label": "walk the links"
-  },
-  {
-   "id": "e007",
-   "fromNode": "n002",
-   "toNode": "n030",
-   "fromSide": "top",
-   "toSide": "bottom"
-  },
-  {
-   "id": "e008",
-   "fromNode": "n002",
-   "toNode": "n040",
-   "fromSide": "top",
-   "toSide": "bottom"
-  },
-  {
-   "id": "e009",
-   "fromNode": "n002",
-   "toNode": "n070",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "daily work"
-  },
-  {
-   "id": "e010",
-   "fromNode": "n080",
-   "toNode": "n010",
-   "fromSide": "left",
-   "toSide": "right",
-   "label": "new raw",
-   "color": "3"
-  },
-  {
-   "id": "e011",
-   "fromNode": "n051",
-   "toNode": "n052",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e012",
-   "fromNode": "n041",
-   "toNode": "n051",
-   "fromSide": "bottom",
-   "toSide": "left",
-   "label": "predicts churn"
-  },
-  {
-   "id": "e013",
-   "fromNode": "n070",
-   "toNode": "n050",
-   "fromSide": "right",
-   "toSide": "left",
-   "label": "delivery"
-  },
-  {
-   "id": "e014",
-   "fromNode": "n082",
-   "toNode": "n081",
-   "fromSide": "left",
-   "toSide": "right"
-  }
- ]
+  "nodes": [
+    {
+      "id": "n001",
+      "type": "text",
+      "text": "# D.I.L.L.O.N. OS\n**12_Brain** canonical layer\n(public Git — no PII here)",
+      "x": -200,
+      "y": -160,
+      "width": 400,
+      "height": 160,
+      "color": "6"
+    },
+    {
+      "id": "n002",
+      "type": "file",
+      "file": "12_Brain/INDEX.md",
+      "x": -180,
+      "y": 40,
+      "width": 360,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "n003",
+      "type": "file",
+      "file": "Dashboard.md",
+      "x": -180,
+      "y": 140,
+      "width": 360,
+      "height": 70,
+      "color": "6"
+    },
+    {
+      "id": "n010",
+      "type": "file",
+      "file": "12_Brain/raw/README.md",
+      "x": -900,
+      "y": -100,
+      "width": 320,
+      "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "n011",
+      "type": "file",
+      "file": "12_Brain/raw/2026-07-04 - obsidian-second-brain-article.md",
+      "x": -900,
+      "y": 0,
+      "width": 320,
+      "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "n020",
+      "type": "file",
+      "file": "12_Brain/entities/README.md",
+      "x": -500,
+      "y": -100,
+      "width": 280,
+      "height": 70,
+      "color": "4"
+    },
+    {
+      "id": "n021",
+      "type": "file",
+      "file": "12_Brain/concepts/Second Brain Architecture.md",
+      "x": -500,
+      "y": 0,
+      "width": 280,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "n030",
+      "type": "file",
+      "file": "12_Brain/projects/README.md",
+      "x": 280,
+      "y": -120,
+      "width": 280,
+      "height": 70,
+      "color": "4"
+    },
+    {
+      "id": "n031",
+      "type": "file",
+      "file": "12_Brain/decisions/README.md",
+      "x": 280,
+      "y": -30,
+      "width": 280,
+      "height": 70,
+      "color": "4"
+    },
+    {
+      "id": "n032",
+      "type": "file",
+      "file": "12_Brain/memory/README.md",
+      "x": 280,
+      "y": 60,
+      "width": 280,
+      "height": 70,
+      "color": "5"
+    },
+    {
+      "id": "n033",
+      "type": "file",
+      "file": "12_Brain/protocols/README.md",
+      "x": 280,
+      "y": 150,
+      "width": 280,
+      "height": 70,
+      "color": "2"
+    },
+    {
+      "id": "n040",
+      "type": "file",
+      "file": "12_Brain/private/README.md",
+      "x": 280,
+      "y": 260,
+      "width": 280,
+      "height": 80,
+      "color": "1"
+    },
+    {
+      "id": "n050",
+      "type": "file",
+      "file": "12_Brain/System/Second Brain Ops.md",
+      "x": -180,
+      "y": 260,
+      "width": 360,
+      "height": 80,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "n001", "toNode": "n002", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e2", "fromNode": "n002", "toNode": "n010", "fromSide": "left", "toSide": "right" },
+    { "id": "e3", "fromNode": "n002", "toNode": "n020", "fromSide": "left", "toSide": "right" },
+    { "id": "e4", "fromNode": "n002", "toNode": "n030", "fromSide": "right", "toSide": "left" },
+    { "id": "e5", "fromNode": "n002", "toNode": "n040", "fromSide": "right", "toSide": "left" }
+  ]
 }

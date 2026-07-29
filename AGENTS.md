@@ -6,6 +6,7 @@ This repo is **Dillon OS** — Dillon Mohr's Obsidian vault + agentic OS.
 
 - **Canonical second-brain layer:** `12_Brain/` (front door: `12_Brain/INDEX.md`)
 - **Do not create `1Z_Brain/`** or any competing brain tree.
+- **GitHub is PUBLIC.** Sensitive notes → `12_Brain/private/` (gitignored). See `12_Brain/private/README.md`.
 - Working folders (`00_Inbox` … `11_Agents`) stay outside `12_Brain/`; link, don't duplicate clients.
 - Root `CLAUDE.md` has writing/reading rules. Ops loops: `12_Brain/System/Second Brain Ops.md`.
 - Health automation status: `System/routine-health.md` (linked from `12_Brain/System/Health Automation.md`).
@@ -30,10 +31,10 @@ for the two npm-based sites below.
 ### Tests / lint
 
 ```
-node --test _os/test/brain-hud.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
 ```
 
-- Deterministic tests cover `12_Brain` structure, HUD brain vitals, and skill path wiring.
+- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, and public-safety scanning.
 - `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has no ESLint config — interactive only; do not run non-interactively.
 - `immohrtal-site` has no lint script.
 

@@ -179,6 +179,7 @@ function requiredBrainPaths() {
     '12_Brain/Brain Map.canvas',
     '12_Brain/raw/README.md',
     '12_Brain/raw/sessions/session-log.md',
+    '12_Brain/private/README.md',
     '12_Brain/entities/README.md',
     '12_Brain/concepts/README.md',
     '12_Brain/concepts/Second Brain Architecture.md',
@@ -209,6 +210,7 @@ function requiredBrainPaths() {
     '.cursor/rules/vault-conventions.mdc',
     '.cursor/rules/writing-rules.mdc',
     'System/routine-health.md',
+    '.gitignore',
   ];
 }
 

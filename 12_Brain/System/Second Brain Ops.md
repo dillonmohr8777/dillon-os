@@ -45,12 +45,14 @@ can verify from the conversation alone:
 - A page without a `source:` link back to `12_Brain/raw/` (or a vault note) gets flagged, not trusted.
 - Research pages carry `updated:` and `expires:` dates.
 
-## Sync
+## Sync & public boundary
 
-- **Git is the source of truth** for this `dillon-os` repository and for agent writes.
-- Obsidian Sync may be used by the human operator for reading/light edits on a
-  signed-in desktop, but agents must not race Sync writers — commit checkpoints
-  deliberately, and never let Sync + an agent rewrite the same files at once.
+- **This GitHub repository is PUBLIC.** Never commit emails, phones, credentials,
+  Bitwarden locators, account inventories, or machine-specific absolute paths.
+- Sensitive notes belong in `12_Brain/private/` (gitignored) or stay only on the
+  operator machine / Obsidian Sync.
+- **Git is the source of truth** for agent writes to tracked files.
+- Do not race Obsidian Sync + an agent rewriting the same tracked files.
 - Live Sync verification (desktop vault matching this Git tree) remains an
   operator gate after merge.
 

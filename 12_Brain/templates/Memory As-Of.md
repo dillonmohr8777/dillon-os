@@ -11,4 +11,3 @@ source:
 ## Prior state
 
 ## Why snapshot was taken
-

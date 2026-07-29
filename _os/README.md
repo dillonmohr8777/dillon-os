@@ -42,11 +42,12 @@ They also work straight from a terminal: `claude "/am-report"`.
 ## Tests
 
 ```
-node --test _os/test/brain-hud.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
 ```
 
 Deterministic checks for `12_Brain` structure, no `1Z_Brain` rival, skill path
-rewrites, and HUD `buildState()` brain vitals.
+rewrites, HUD `buildState()` brain vitals, and public-safety scanning (no emails,
+phones, credential shapes, locators, or private absolute paths in tracked brain files).
 
 ## Customizing
 
