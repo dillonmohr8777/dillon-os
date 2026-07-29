@@ -1,4 +1,4 @@
-// Lucide-style 24x24 stroke icon paths used across the film. Icons only — no numerals anywhere.
+// Lucide-style 24x24 stroke icon paths used across the film. Icons only, no numerals anywhere.
 window.ICONS = {
   cap: [
     'M22 10v6',

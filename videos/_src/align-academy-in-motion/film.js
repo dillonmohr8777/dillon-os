@@ -1,5 +1,5 @@
 /* ============================================================================
-   ALIGN ACADEMY — "Align in Motion" film
+   ALIGN ACADEMY "Align in Motion" film
    Deterministic, frame-indexed canvas renderer. renderFrame(n) is pure:
    every particle position is derived from n + a seeded RNG, never accumulated.
    ========================================================================== */
@@ -242,7 +242,7 @@ function background(ctx, f, drift = 0, warm = 1) {
     ctx.fillStyle = wg; ctx.fillRect(0, 0, W, H); ctx.restore();
   }
 
-  // drifting node mesh — faint connected "vertices" living behind everything
+  // drifting node mesh: faint connected "vertices" living behind everything
   const NM = 46;
   const nx = [], ny = [];
   for (let i = 0; i < NM; i++) {
@@ -399,7 +399,7 @@ const DELIVERY = [
   { icon: 'repeat',       t: 'Ongoing reinforcement', s: 'Because training is never a one-time event.' }
 ];
 const INSIDE = [
-  { icon: 'target',   t: 'Role-based design',          s: 'Not generic modules — the work each role actually does' },
+  { icon: 'target',   t: 'Role-based design',          s: 'Not generic modules, but the work each role actually does' },
   { icon: 'route',    t: 'Custom learning paths',      s: 'Built for HR, payroll, IT, finance and project teams' },
   { icon: 'beaker',   t: 'Safe practice environments', s: 'Make the mistakes before they reach production' },
   { icon: 'lifeBuoy', t: 'Post-launch reinforcement',  s: 'Support that keeps going long after go-live' }
@@ -430,7 +430,7 @@ function logoParticles(ctx, p, burst, cx, cy, boxW, f) {
     const sh = f === undefined ? 0 : 1;
     const wob = sh ? Math.sin(f * .07 + r1 * 9) * .9 : 0;
     const tx = x0 + q[0] * bw + jx + wob, ty = y0 + q[1] * bh + jy + Math.cos(f * .06 + r3 * 9) * .9 * sh;
-    // arrival stagger — radial from centre outward
+    // arrival stagger, radial from centre outward
     const lead = r3 * .40;
     const tt = clamp((p - lead) / (1 - lead));
     const e = eOutQuint(tt);
@@ -460,7 +460,7 @@ function shockwave(ctx, cx, cy, p) {
   ctx.save();
   ctx.globalCompositeOperation = 'lighter';
 
-  // expanding soft pressure wave — a gradient shell, never a drawn outline
+  // expanding soft pressure wave: a gradient shell, never a drawn outline
   const r0 = 90 + e * 640;
   const sh = ctx.createRadialGradient(cx, cy, Math.max(1, r0 * .62), cx, cy, r0 * 1.32);
   sh.addColorStop(0, 'rgba(0,0,0,0)');
@@ -549,8 +549,8 @@ function sceneHeadline(ctx, f, a, b) {
   ghost(ctx, 'ACADEMY', W * .68, H * .855, 126, .015 * inv(n, 10, 60));
   kicker(ctx, 'ALIGN ACADEMY™', 132, 176, inv(n, -12, 12));
 
-  const L1 = [{ t: 'A system either ', c: C.white }, { t: 'transforms', c: C.orangeHi }, { t: ' your operations —', c: C.white }];
-  const L2 = [{ t: 'or it ', c: C.white }, { t: 'gathers dust', c: C.orangeHi }, { t: '.', c: C.white }];
+  const L1 = [{ t: 'A system either ', c: C.white }, { t: 'transforms', c: C.orangeHi }, { t: ' your operations.', c: C.white }];
+  const L2 = [{ t: 'Or it ', c: C.white }, { t: 'gathers dust', c: C.orangeHi }, { t: '.', c: C.white }];
   const size = 84, x = 132;
 
   // per-line mask reveal: slide up out of a clip band + blur→sharp
@@ -783,7 +783,7 @@ function sceneDelivery(ctx, f, a, b) {
       ctx.restore();
     }
 
-    // icon plate — this is the slot a supplied still would drop into later
+    // icon plate: this is the slot a supplied still would drop into later
     const ipy = y - h * .16;
     const plate = w * .40;
     ctx.save();
@@ -812,7 +812,7 @@ function sceneDelivery(ctx, f, a, b) {
     ctx.restore();
   }
 
-  // horizontal position rail under the deck — ticks only, never numerals
+  // horizontal position rail under the deck: ticks only, never numerals
   ctx.save();
   const ry2 = cyC + ch / 2 + 74, aRail = inv(n, 14, 42);
   ctx.globalAlpha = aRail * .5;
