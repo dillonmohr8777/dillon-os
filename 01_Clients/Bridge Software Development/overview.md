@@ -109,9 +109,9 @@ Leave with decisions on:
 
 ## Session sync
 
-_Updated by codex-session-sync, Run 34 — 2026-07-27._
+_Updated by codex-session-sync, Run 36 — 2026-07-29._
 
-- **Post-Tori meeting capture missing (~14d overdue):** No vault session documents meeting outcomes, decision register updates, or revised MVP boundary after the Tori discovery meeting. Create `10_Sessions/Bridge Software Development — YYYY-MM-DD.md` or update [[../../10_Sessions/Bridge Software Development - 2026-07-11|2026-07-11 session]] with decisions.
+- **Post-Tori meeting capture missing (~16d overdue):** No vault session documents meeting outcomes, decision register updates, or revised MVP boundary after the Tori discovery meeting. Create `10_Sessions/Bridge Software Development — YYYY-MM-DD.md` or update [[../../10_Sessions/Bridge Software Development - 2026-07-11|2026-07-11 session]] with decisions.
 - **Tori prototype walkthrough still pending** — original Claude mockups not delivered in accessible Gmail/Drive/Slack; NDA-safe live walkthrough required.
 - **Brand assets unapproved** — no official logo, palette, or fonts; provisional **Trusted Current** direction awaits Tori sign-off.
 - **Open product decisions:** exact role model (retailer vs dispensary), verification evidence/legal meaning, profile/contact visibility rules, priority directory filters, first launch audience/market, final MVP boundary.

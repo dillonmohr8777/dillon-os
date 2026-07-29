@@ -1,6 +1,6 @@
 ---
-last_checked: 2026-07-28
-last_orchestrator_run: 2026-07-28
+last_checked: 2026-07-29
+last_orchestrator_run: 2026-07-29
 tags: [system, routines]
 ---
 
@@ -10,17 +10,17 @@ tags: [system, routines]
 
 Legacy standalone crons are **retired** — merged into umbrella. Disable in Cursor UI if still active.
 
-## Lane status (Run 35 — 2026-07-28)
+## Lane status (Run 36 — 2026-07-29)
 
 | Lane | Agent | Status | Notes |
 |------|-------|--------|-------|
 | Gmail | gmail-intel | 🟡 fallback | MCP not connected; urgent-replies refreshed from vault |
-| Slack | slack-intel | 🟡 fallback | MCP not connected; 7 actions from handoffs; connector reauth P0 |
+| Slack | slack-intel | 🟡 fallback | MCP not connected; 7 actions from handoffs; connector reauth P0 (7d open) |
 | Vault | vault-pulse | 🟡 stale data | 13 overviews; all `last_touched` frozen since April 2026 |
-| Sessions | codex-session-sync | 🟡 partial | 6 files; FB Ads stubs empty; Bridge post-Tori capture 15d overdue |
+| Sessions | codex-session-sync | 🟡 partial | 7 files; FB Ads stubs empty; Bridge post-Tori capture 16d overdue |
 | Ads/SEO | domain-ads-seo | 🟡 drift | Google queue populated; Meta/testing/creative queues empty |
-| Content | content-routines | ⚪ skipped | Tuesday — not Sunday/Thursday; Jul 28 drafts exist from Run 34 |
-| Consolidation | memory-consolidator | 🟢 done | Brief + memory sync updated 2026-07-28 |
+| Content | content-routines | ⚪ skipped | Wednesday — not Sunday/Thursday; Jul 30 BOK Wisdom due tomorrow |
+| Consolidation | memory-consolidator | 🟢 done | Brief + memory sync updated 2026-07-29 |
 
 ## Retired crons (disable in Cursor UI)
 
@@ -34,7 +34,7 @@ Legacy standalone crons are **retired** — merged into umbrella. Disable in Cur
 
 ## Notes
 
-- Run 35 on branch `cursor/competitive-task-consolidation-f2e5`.
+- Run 36 on branch `cursor/competitive-task-consolidation-6b7c`.
 - Gmail + Slack MCP reconnection is the highest-leverage infra fix.
 - Vault frontmatter refresh needed when touching any client account.
-- Next content-routines fire: Thursday 2026-07-31 (book SEO sweep + Jason/Sean EOM deadline).
+- Next content-routines fire: **Thursday 2026-07-31** (book SEO sweep + Jason/Sean EOM deadline).
