@@ -1,0 +1,19 @@
+{
+  "slug": "old-town-plumbing",
+  "siteUrl": "http://oldtownplumbing.example",
+  "decaySignals": {
+    "missingViewport": true,
+    "staleCopyrightYear": "2018",
+    "tableLayout": true,
+    "slowLoadMs": 6200
+  },
+  "facts": {
+    "phone": "",
+    "hours": "",
+    "jsonLd": []
+  },
+  "voice": {
+    "paragraphs": ["We fix pipes."],
+    "headings": ["Old Town Plumbing"]
+  }
+}

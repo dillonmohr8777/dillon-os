@@ -1,0 +1,12 @@
+filters:
+  and:
+    - file.inFolder("12_Brain/queue")
+views:
+  - type: table
+    name: Queue
+    order:
+      - file.name
+---
+# Automations Base stub
+
+Desktop Sync will replace or enrich this stub with the full Bases definition from DESKTOP-4AHKEC4. Until then, use `12_Brain/registry/automations.json` + `node _os/automation/bin/queue-status.js`.

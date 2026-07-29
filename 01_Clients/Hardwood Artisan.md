@@ -2,6 +2,9 @@
 tags: [client, momentum360]
 status: active
 industry: hardwood/flooring
+last_touched: 2026-07-29
+next_action: TBD — needs human next action
+due: none
 ---
 
 # Hardwood Artisan LLC

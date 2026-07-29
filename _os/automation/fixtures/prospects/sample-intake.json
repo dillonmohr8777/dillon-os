@@ -1,0 +1,34 @@
+{
+  "adapter": "maps",
+  "prospects": [
+    {
+      "prospect_id": "maps:place-standard-tap",
+      "business_name": "Standard Tap",
+      "website": "https://standardtap.com",
+      "market": "Philadelphia",
+      "vertical": "restaurant",
+      "place_id": "place-standard-tap",
+      "rating": 4.6,
+      "review_count": 1200,
+      "ad_presence": false,
+      "harvest_path": "_os/automation/fixtures/harvest/standard-tap.json"
+    },
+    {
+      "prospect_id": "maps:place-weak-site",
+      "business_name": "Old Town Plumbing",
+      "website": "http://oldtownplumbing.example",
+      "market": "Philadelphia",
+      "vertical": "plumbing",
+      "rating": 4.8,
+      "review_count": 85,
+      "ad_presence": true,
+      "harvest_path": "_os/automation/fixtures/harvest/old-town-plumbing.json"
+    },
+    {
+      "business_name": "Bar Crawl USA",
+      "website": "https://barcrawlusa.com",
+      "vertical": "events",
+      "review_count": 50
+    }
+  ]
+}

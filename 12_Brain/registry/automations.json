@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "updated": "2026-07-29",
+  "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
+  "dependency": "12_Brain/DEPENDENCY_PR226.md",
+  "automations": [
+    {
+      "id": "frontmatter-validate",
+      "name": "Client frontmatter validation",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "on-demand + pre-pulse",
+      "command": "node _os/automation/bin/frontmatter-validate.js",
+      "inputs": ["01_Clients/**/*.md"],
+      "outputs": ["12_Brain/state/frontmatter-validate.json", "Daily-Briefs/frontmatter-report.md"],
+      "external_actions": false,
+      "status": "implemented"
+    },
+    {
+      "id": "frontmatter-repair",
+      "name": "Client frontmatter repair",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "on-demand",
+      "command": "node _os/automation/bin/frontmatter-repair.js --dry-run",
+      "inputs": ["01_Clients/**/*.md"],
+      "outputs": ["12_Brain/state/frontmatter-repair.json"],
+      "external_actions": false,
+      "notes": "Omit --dry-run to write missing required keys with safe defaults. Never invent due dates.",
+      "status": "implemented"
+    },
+    {
+      "id": "site-health-sentinel",
+      "name": "Site health sentinel",
+      "lane": "websites",
+      "tier": 0,
+      "cadence": "daily",
+      "command": "node _os/automation/bin/site-health.js --dry-run",
+      "inputs": ["12_Brain/registry/properties.json"],
+      "outputs": ["12_Brain/state/site-health.json", "Daily-Briefs/site-health-report.md"],
+      "external_actions": false,
+      "notes": "Dry-run uses fixtures. Live HTTP checks are opt-in via --live and still never POST real user data except a marked canary when --canary is set.",
+      "status": "implemented"
+    },
+    {
+      "id": "discover-qualify",
+      "name": "Shared discover/qualify intake + 0-100 scorer",
+      "lane": "outreach",
+      "tier": 0,
+      "cadence": "on-demand / weekly batch prep",
+      "command": "node _os/automation/bin/qualify.js --from <intake.json>",
+      "inputs": ["prospect intake JSON (maps or indeed adapter)", "optional harvest.json", "01_Clients suppress list"],
+      "outputs": ["12_Brain/queue/qualify-*.jsonl", "08_Prospects/*.md", "12_Brain/state/qualify-last.json"],
+      "external_actions": false,
+      "notes": "Drafts only. Feeds Mac's site-factory pipeline (#226). Indeed is an adapter, not a parallel stack.",
+      "status": "implemented"
+    },
+    {
+      "id": "site-factory-batch",
+      "name": "Weekly 25-site batch (PR #226)",
+      "lane": "websites",
+      "tier": 0,
+      "cadence": "weekly",
+      "command": "node _templates/site-factory/build-batch.js <batch-dir>",
+      "depends_on": ["discover-qualify", "pr-226"],
+      "external_actions": false,
+      "status": "external-dependency"
+    },
+    {
+      "id": "outreach-activate",
+      "name": "QR + direct mail activate",
+      "lane": "outreach",
+      "tier": 2,
+      "cadence": "per approved batch",
+      "depends_on": ["site-factory-batch", "human-approval", "mail-vendor", "netlify-token"],
+      "external_actions": true,
+      "status": "gated"
+    },
+    {
+      "id": "indeed-hiring-adapter",
+      "name": "Indeed hiring-signal adapter",
+      "lane": "outreach",
+      "tier": 0,
+      "cadence": "daily/3x week",
+      "command": "node _os/automation/bin/qualify.js --adapter indeed --from <signals.json>",
+      "external_actions": false,
+      "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only — live scrape is a credential/ToS gate).",
+      "status": "implemented"
+    }
+  ],
+  "gates": {
+    "obsidian_sync_cli": "pending-human",
+    "netlify_deploy_token": "pending-secret",
+    "mail_vendor": "pending-decision",
+    "outreach_send": "hard-blocked"
+  }
+}

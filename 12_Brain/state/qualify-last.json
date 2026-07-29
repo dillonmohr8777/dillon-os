@@ -1,0 +1,48 @@
+{
+  "automation_id": "discover-qualify",
+  "started_at": "2026-07-29T21:12:51.390Z",
+  "adapter": "indeed",
+  "status": "ok",
+  "dry_run": false,
+  "counts": {
+    "total": 2,
+    "queued_build": 1,
+    "scored": 1,
+    "suppressed": 0
+  },
+  "prospects": [
+    {
+      "prospect_id": "indeed:ind-1001",
+      "business_name": "Harbor HVAC Co",
+      "source": "indeed",
+      "score": 77,
+      "status": "queued_build",
+      "reasons": [
+        "+10 decay: missing viewport",
+        "+8 decay: stale copyright 2017",
+        "+4 decay: no schema",
+        "+4 decay: thin homepage copy",
+        "+3 decay: empty phone on site",
+        "+9 ability: 40+ reviews",
+        "+4 gap: strong reviews, weak site",
+        "+15 vertical fit: hvac",
+        "+5 has website URL",
+        "+10 hiring signal present",
+        "+5 marketing-shaped role"
+      ]
+    },
+    {
+      "prospect_id": "indeed:ind-1002",
+      "business_name": "Quiet Leaf Spa",
+      "source": "indeed",
+      "score": 33,
+      "status": "scored",
+      "reasons": [
+        "+3 ability: 5+ reviews",
+        "+15 vertical fit: spa",
+        "+5 has website URL",
+        "+10 hiring signal present"
+      ]
+    }
+  ]
+}

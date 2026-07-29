@@ -4,6 +4,9 @@ status: active
 industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
+last_touched: 2026-07-29
+next_action: TBD — needs human next action
+due: none
 ---
 
 # Align HCM

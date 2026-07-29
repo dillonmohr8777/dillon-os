@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/client-frontmatter",
+  "title": "ClientFrontmatter",
+  "type": "object",
+  "description": "Required keys for pulse/scheduling (Opp #11).",
+  "required": ["status", "last_touched", "next_action", "due"],
+  "properties": {
+    "status": { "type": "string" },
+    "last_touched": { "type": "string", "description": "ISO date YYYY-MM-DD or ISO datetime" },
+    "next_action": { "type": "string" },
+    "due": { "type": "string", "description": "ISO date or the literal none" },
+    "client": { "type": "string" },
+    "website": { "type": "string" },
+    "monthly_fee": {},
+    "division": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } }
+  }
+}

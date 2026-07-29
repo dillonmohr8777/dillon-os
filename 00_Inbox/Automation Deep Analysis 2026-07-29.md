@@ -3,20 +3,22 @@ tags: [inbox, strategy, automation, websites, design, outreach]
 created: 2026-07-29
 updated: 2026-07-29
 source: Deep cross-reference of the vault + sibling agent PR #226 (site factory / outreach engine) + DESKTOP-4AHKEC4 12_Brain build report
-status: live-working-doc
+status: wave-1-2-implemented
 related:
   - "[[00_Inbox/Top 15 Opportunities 2026-07-02]]"
-  - "[[02_Campaigns/AI Site Builder Outreach Engine/AI Site Builder Outreach Engine]]"
-  - "[[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec]]"
+  - "[[12_Brain/README]]"
+  - "[[12_Brain/DEPENDENCY_PR226]]"
+  - "[[_os/automation/docs/OPERATOR]]"
+  - "[[_os/automation/evidence/VERIFICATION]]"
 ---
 
 # Automation Deep Analysis: Websites, Design, Outreach
 
-**Working doc.** Updated after today's sibling builds. Ranked against the three written targets: **$40K Mohr Media in 5 months**, **ROAD TO 100 CLIENTS (12/100)**, and **2,000 book subscribers**.
+**Working doc + implementation contract.** Wave 1–2 are implemented on this branch under `12_Brain/` + `_os/automation/` (see verification evidence). Ranked against the three written targets: **$40K Mohr Media in 5 months**, **ROAD TO 100 CLIENTS (12/100)**, and **2,000 book subscribers**.
 
 ## The one-paragraph verdict (updated)
 
-The connective tissue I called for this morning is largely **already shipping on PR #226** — harvest → brief → 25-site batch build → QA → review hub → QR/mail CSVs, plus the design skill stack (`ui-design`, `ux-audit`, `frontend-build`, `motion-design`, `mirror-and-improve`). Separately, a computer-use agent on **DESKTOP-4AHKEC4** just built the full **`12_Brain`** Obsidian layer (Bases, projects, decisions, research, bi-temporal memory, templates, agent protocols, Cursor rules, Claude skills, health automation) with **0 structural errors** — but that layer is **local to the desktop vault and not yet in this cloud git checkout**. One human gate remains there: visible Obsidian sign-in, remote-vault selection, and enabling the CLI so Sync can bridge the machines. What's left to *actually run* the business is no longer "build the factory" — it's close the activate gap (deploy token, mail vendor, shared prospect sheet), wire discover/qualify scoring, and decide whether Mohr Media's Indeed hiring-signal lane is a second discover source alongside Mac's Maps→QR→mail engine.
+PR #226 still owns the site factory and Mac’s campaign pack — this branch **depends on it, does not duplicate it**. This PR implements the missing connective tissue: canonical automation registry/queue/state, frontmatter validate+repair (37/37 client notes complete after safe repair), deterministic site-health sentinel (fixture dry-run), and one shared discover/qualify 0–100 scorer with a Maps intake path plus an Indeed hiring-signal **adapter** (import-only). Desktop `12_Brain` from DESKTOP-4AHKEC4 remains Sync-gated; the cloud scaffold here is the automation source of truth until Sync lands. Activate (deploy token, mail vendor, outreach send) stays gated.
 
 ---
 
@@ -156,16 +158,16 @@ This fills the Mohr Media plan's 20–30 cold emails + 10–15 LinkedIn DMs/week
 
 ## Revised build order
 
-**Wave 0 — human gates (blocks everything):**
-1. Desktop Obsidian Sync sign-in + remote vault + CLI (unlocks `12_Brain` for every other agent).
-2. Merge PR #226 when ready (factory + campaign pack into `main`).
+**Wave 0 — human gates (still open):**
+1. Desktop Obsidian Sync sign-in + remote vault + CLI (unlocks desktop `12_Brain`).
+2. Merge/rebase with PR #226 when ready (no path collision with this PR’s new files; see `12_Brain/DEPENDENCY_PR226.md`).
 3. Netlify deploy token into Cloud secrets; pick PostGrid or StackAdapt.
 
-**Wave 1 — make the engine run weekly:**
-shared prospect sheet → qualify scorer → first live 25-site batch through Mac/Melissa approval → QR zap from `manifest.csv` → mail with `ready` flag.
+**Wave 1 — implemented on this branch:**
+`12_Brain` registry/queue/state + frontmatter validate/repair + shared qualify scorer (Maps intake). Operator: `_os/automation/docs/OPERATOR.md`.
 
-**Wave 2 — stop silent losses + delivery load:**
-W3 site sentinel (book form first) → W5 report data pulls → D4 creative guardrails.
+**Wave 2 — partially implemented (no-credential slice):**
+W3 site-health sentinel (fixture dry-run + optional `--live` GET) **done**. Indeed adapter into the same scorer **done**. W5 report data pulls and D4 creative guardrails still open (need API access / richer agent rules).
 
 **Wave 3 — Mohr Media + design scale:**
 I1–I4 hiring-signal discover feeding the same factory → D1 multi-client asset studio → D2 GBP factory → D3 social-series.
