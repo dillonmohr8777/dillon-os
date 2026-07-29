@@ -7,8 +7,10 @@
  */
 function inferAttitude(brief) {
   if (brief.attitude) return brief.attitude;
-  const border = parseFloat(brief.tokens?.border) || 2;
-  const radius = parseFloat(brief.tokens?.radius) || 12;
+  const borderRaw = parseFloat(brief.tokens?.border);
+  const radiusRaw = parseFloat(brief.tokens?.radius);
+  const border = Number.isFinite(borderRaw) ? borderRaw : 2;
+  const radius = Number.isFinite(radiusRaw) ? radiusRaw : 12;
   if (border >= 4 && radius <= 8) return 'brutal';
   if (border <= 1.5 && radius >= 20) return 'glass';
   if (radius >= 24) return 'editorial';
