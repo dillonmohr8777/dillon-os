@@ -1,6 +1,6 @@
 const { describe, it } = require('node:test');
 const assert = require('node:assert/strict');
-const { inferAttitude, buildSkinCss } = require('../lib/skins.js');
+const { inferAttitude, inferVertical, buildSkinCss } = require('../lib/skins.js');
 const { buildSite } = require('../build-site.js');
 const { passingBrief } = require('./helpers.js');
 
@@ -27,13 +27,27 @@ describe('attitude skins', () => {
     assert.notEqual(brutal, neon);
   });
 
-  it('buildSite injects attitude meta and liquid-glass float', () => {
+  it('infers business verticals from the brief', () => {
+    assert.equal(inferVertical({ category: 'HVAC repair' }), 'home-services');
+    assert.equal(inferVertical({ category: 'Coffee shop' }), 'hospitality');
+    assert.equal(inferVertical({ category: 'Accounting firm' }), 'professional');
+  });
+
+  it('buildSite injects attitude, vertical structure, and stable readable motion', () => {
     const brief = passingBrief({ slug: 'glass-shop', name: 'Glass Shop', attitude: 'glass' });
+    brief.catalog.items[0].href = '#contact';
     const built = buildSite(brief, '/tmp/skin-test');
     assert.match(built.html, /name="attitude" content="glass"/);
+    assert.match(built.html, /name="vertical" content="home-services"/);
+    assert.match(built.html, /vertical-home-services/);
     assert.match(built.html, /glass-float/);
-    assert.match(built.html, /marquee-strip/);
+    assert.match(built.html, /signal-strip/);
     assert.match(built.html, /mobile-action/);
-    assert.match(built.html, /vanish-out/);
+    assert.doesNotMatch(built.html, /marquee-strip|vanish-out/);
+    assert.match(built.html, /<a href="#contact">Explore<\/a>/);
+    assert.doesNotMatch(built.html, /Plan a visit|Open map/);
+    assert.equal(built.sections.length, 10);
+    assert.equal(built.images, 12);
+    assert.deepEqual(built.duplicateImageReferences, []);
   });
 });

@@ -126,7 +126,11 @@ async function runBatch(batchDir, options = {}) {
       row.sections = built.sections.length;
       row.words = built.words;
       row.images = built.images;
+      row.imagePlacements = built.imagePlacements;
+      row.duplicateImageReferences = built.duplicateImageReferences;
       row.kb = +(built.htmlBytes / 1024).toFixed(1);
+      row.assetKb = +(built.assetBytes / 1024).toFixed(1);
+      row.largestAssetKb = +(built.largestAssetBytes / 1024).toFixed(1);
       row.outDir = built.outDir;
       row.missingAssets = built.missingAssets;
 
@@ -134,6 +138,10 @@ async function runBatch(batchDir, options = {}) {
         sections: row.sections,
         words: row.words,
         images: row.images,
+        kb: row.kb,
+        assetBytes: built.assetBytes,
+        largestAssetBytes: built.largestAssetBytes,
+        duplicateImageReferences: built.duplicateImageReferences,
       });
       row.specFailures = specFails;
       if (specFails.length) row.failures.push(...specFails);
@@ -154,7 +162,7 @@ async function runBatch(batchDir, options = {}) {
         }
       }
       log(
-        `[${i + 1}/${briefFiles.length}] ${brief.slug}: ${row.sections} sections, ${row.words} words, ${row.images} images, ${row.kb} KB`
+        `[${i + 1}/${briefFiles.length}] ${brief.slug}: ${row.sections} sections, ${row.words} words, ${row.images} unique images, ${row.kb} KB HTML, ${row.assetKb} KB assets`
       );
     } catch (err) {
       row.failures.push(`build failed: ${err.message}`);
@@ -237,6 +245,9 @@ async function runBatch(batchDir, options = {}) {
     'spec_sections',
     'spec_words',
     'spec_images',
+    'html_kb',
+    'asset_kb',
+    'largest_asset_kb',
   ];
   const manifestRows = results.map((r) =>
     [
@@ -255,6 +266,9 @@ async function runBatch(batchDir, options = {}) {
       r.sections ?? '',
       r.words ?? '',
       r.images ?? '',
+      r.kb ?? '',
+      r.assetKb ?? '',
+      r.largestAssetKb ?? '',
     ]
       .map(csvCell)
       .join(',')
@@ -320,7 +334,7 @@ async function runBatch(batchDir, options = {}) {
       if (r.qaReady === 'ready') status = '<span class="good">QA ready</span>';
       else if (r.failures.length) status = '<span class="bad">Held</span>';
       else status = '<span class="warn">Held</span>';
-      return `<a class="card" data-kind="${esc(r.vertical)}" href="${esc(href)}"><span class="meta"><span>${esc(r.prospectId)}</span><span>${esc(r.vertical)}</span></span><h2>${esc(r.name || r.slug)}</h2><p>${esc(r.address || 'Address not verified')}</p><span class="row">${status}<span class="spec">${r.sections ?? '-'} sec / ${r.words ?? '-'} words · mail hold</span></span><span class="open">Open homepage</span></a>`;
+      return `<a class="card" data-kind="${esc(r.vertical)}" href="${esc(href)}"><span class="meta"><span>${esc(r.prospectId)}</span><span>${esc(r.vertical)}</span></span><h2>${esc(r.name || r.slug)}</h2><p>${esc(r.address || 'Address not verified')}</p><span class="row">${status}<span class="spec">${r.sections ?? '-'} sec / ${r.images ?? '-'} img / ${r.kb ?? '-'} KB · mail hold</span></span><span class="open">Open homepage</span></a>`;
     })
     .join('\n');
 
@@ -395,16 +409,16 @@ ${qaReadyCount} of ${results.length} sites qa_ready. Weekly target is ${TARGET_C
 ${batchFailures.length ? `## Batch gate failures\n\n${batchFailures.map((f) => `- ${f}`).join('\n')}\n` : ''}
 ## Spec compliance
 
-Canonical targets: ${SPEC.sections[0]}-${SPEC.sections[1]} sections, ${SPEC.words[0]}-${SPEC.words[1]} words, ${SPEC.images[0]}-${SPEC.images[1]} images. Spec misses block \`qa_ready\`.
+Canonical targets: ${SPEC.sections[0]}-${SPEC.sections[1]} sections, ${SPEC.words[0]}-${SPEC.words[1]} words, ${SPEC.images[0]}-${SPEC.images[1]} unique images, ${SPEC.kb[0]}-${SPEC.kb[1]} KB HTML, no duplicate image references, no more than ${SPEC.maxAssetKb} KB of local assets, and no single asset over ${SPEC.maxSingleAssetKb} KB. Spec misses block \`qa_ready\`.
 
-Batch averages: **${avg('sections')} sections, ${avg('words')} words, ${avg('images')} images, ${avg('kb')} KB**.
+Batch averages: **${avg('sections')} sections, ${avg('words')} words, ${avg('images')} unique images, ${avg('kb')} KB HTML, ${avg('assetKb')} KB assets**.
 
-| Prospect | Business | Sections | Words | Images | QA | Visual | qa_ready | mail_ready | Notes |
-|---|---|---|---|---|---|---|---|---|---|
+| Prospect | Business | Sections | Words | Images | HTML KB | Assets KB | QA | Visual | qa_ready | mail_ready | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|
 ${results
   .map(
     (r) =>
-      `| ${r.prospectId} | ${r.name || r.slug} | ${r.sections ?? '-'} | ${r.words ?? '-'} | ${r.images ?? '-'} | ${r.qa} | ${r.visualQa} | ${r.qaReady} | hold | ${[...r.warnings, ...r.failures].join('; ') || 'clean'} |`
+      `| ${r.prospectId} | ${r.name || r.slug} | ${r.sections ?? '-'} | ${r.words ?? '-'} | ${r.images ?? '-'} | ${r.kb ?? '-'} | ${r.assetKb ?? '-'} | ${r.qa} | ${r.visualQa} | ${r.qaReady} | hold | ${[...r.warnings, ...r.failures].join('; ') || 'clean'} |`
   )
   .join('\n')}
 
@@ -451,6 +465,11 @@ ${duplicates.length ? duplicates.map((list) => `- ${list.join(' = ')}`).join('\n
       sections: r.sections,
       words: r.words,
       images: r.images,
+      imagePlacements: r.imagePlacements,
+      duplicateImageReferences: r.duplicateImageReferences,
+      kb: r.kb,
+      assetKb: r.assetKb,
+      largestAssetKb: r.largestAssetKb,
       failures: r.failures,
       warnings: r.warnings,
     })),

@@ -61,7 +61,18 @@ describe('validate.images', () => {
 
 describe('spec.checkSpec', () => {
   it('passes in-range metrics', () => {
-    assert.deepEqual(checkSpec({ sections: 10, words: 400, images: 12 }), []);
+    assert.deepEqual(
+      checkSpec({
+        sections: 10,
+        words: 400,
+        images: 12,
+        kb: 32,
+        assetBytes: 1024 * 1024,
+        largestAssetBytes: 300 * 1024,
+        duplicateImageReferences: [],
+      }),
+      []
+    );
   });
 
   it('fails outside canonical ranges', () => {
@@ -76,5 +87,25 @@ describe('spec.checkSpec', () => {
     assert.deepEqual(SPEC.sections, [9, 11]);
     assert.deepEqual(SPEC.words, [350, 500]);
     assert.deepEqual(SPEC.images, [12, 13]);
+    assert.deepEqual(SPEC.kb, [27, 37]);
+    assert.equal(SPEC.maxAssetKb, 2048);
+    assert.equal(SPEC.maxSingleAssetKb, 450);
+  });
+
+  it('fails HTML, asset, single-image, and duplicate-reference budgets', () => {
+    const fails = checkSpec({
+      sections: 10,
+      words: 400,
+      images: 12,
+      kb: 42,
+      assetBytes: 3 * 1024 * 1024,
+      largestAssetBytes: 700 * 1024,
+      duplicateImageReferences: ['assets/image-1.webp'],
+    });
+    assert.equal(fails.length, 4);
+    assert.ok(fails.some((f) => f.includes('html')));
+    assert.ok(fails.some((f) => f.includes('payload')));
+    assert.ok(fails.some((f) => f.includes('largest asset')));
+    assert.ok(fails.some((f) => f.includes('duplicate image')));
   });
 });
