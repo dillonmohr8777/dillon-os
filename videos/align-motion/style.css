@@ -164,51 +164,42 @@ html, body {
 .headline {
   position: relative;
   font-family: var(--serif);
-  font-weight: 700; font-size: 82px; line-height: 1.09;
-  letter-spacing: -.022em; color: var(--ink);
-  max-width: 1220px;
+  font-weight: 700; font-size: 112px; line-height: 1.04;
+  letter-spacing: -.028em; color: var(--ink);
+  max-width: 1500px;
 }
-.split .headline { max-width: 780px; font-size: 76px; }
+.split .headline { max-width: 830px; font-size: 92px; line-height: 1.06; }
+.headline .wg { white-space: nowrap; }
 .headline .wd { display: inline-block; will-change: transform, opacity, filter; }
 .headline .ac { color: var(--orange); font-style: normal; }
 
-/* accent underline sweeps in under the accent phrase */
-.headline.has-ul .ac { position: relative; }
-.headline.has-ul .ac::after {
-  content: ''; position: absolute; left: 0; bottom: -.07em;
-  height: 4px; width: var(--ul, 0%);
-  background: linear-gradient(90deg, var(--orange-deep), var(--orange-lo));
-  border-radius: 3px;
-  box-shadow: 0 0 14px rgba(254, 146, 53, .5);
-}
-
 .sub {
-  margin-top: 30px;
-  font-size: 22px; font-weight: 400; line-height: 1.56;
+  margin-top: 34px;
+  font-size: 25px; font-weight: 400; line-height: 1.55;
   letter-spacing: -.004em; color: var(--sub);
-  max-width: 640px;
+  max-width: 780px;
 }
-.split .sub { max-width: 600px; font-size: 21px; }
+.split .sub { max-width: 700px; font-size: 24px; }
 .sub .ac, .caption .ac { color: rgba(255, 255, 255, .95); font-style: normal; font-weight: 600; }
 
 .caption {
-  margin-top: 34px;
-  font-size: 21px; line-height: 1.5; color: var(--sub);
+  margin-top: 36px;
+  font-size: 24px; line-height: 1.5; color: var(--sub);
   text-align: center; width: 100%;
 }
 
 /* ------------------------------------------------------------------- chips */
 /* headline is capped short so it never runs under the pill column */
-.s-chips .headline { max-width: 1000px; }
+.s-chips .headline { max-width: 1060px; font-size: 100px; }
 .chips {
   position: absolute; right: 0; top: 50%;
   transform: translateY(-50%);
   display: flex; flex-direction: column; align-items: flex-end; gap: 18px;
 }
 .chip {
-  display: inline-flex; align-items: center; gap: 13px;
-  padding: 17px 32px;
-  font-size: 25px; font-weight: 600; letter-spacing: -.008em;
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 18px 34px;
+  font-size: 27px; font-weight: 600; letter-spacing: -.008em;
   color: #FFE0C4;
   background: linear-gradient(180deg, rgba(254, 146, 53, .16), rgba(254, 146, 53, .07));
   border: 1px solid rgba(254, 146, 53, .40);
@@ -242,29 +233,56 @@ html, body {
 .list { margin-top: 48px; display: flex; flex-direction: column; gap: 34px; }
 .li { display: flex; align-items: baseline; gap: 30px; }
 .li .num {
-  font-family: var(--serif); font-weight: 700; font-size: 36px;
-  color: var(--orange); letter-spacing: .01em; min-width: 60px;
+  font-family: var(--serif); font-weight: 700; font-size: 40px;
+  color: var(--orange); letter-spacing: .01em; min-width: 66px;
 }
-.li .lt { font-size: 33px; font-weight: 650; color: #F2F7FF; letter-spacing: -.014em; }
-.li .ld { margin-top: 9px; font-size: 20px; color: var(--sub); line-height: 1.5; }
+.li .lt { font-size: 38px; font-weight: 650; color: #F2F7FF; letter-spacing: -.016em; }
+.li .ld { margin-top: 10px; font-size: 22px; color: var(--sub); line-height: 1.5; }
 
-/* -------------------------------------------------------------------- grid */
-.grid {
-  margin-top: 52px;
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 40px 56px; max-width: 1500px;
+/* ------------------------------------------------------- service reel wheel
+   Rows are stacked on one centre point and pushed apart by engine.js. The
+   --foc custom property (1 at focus, 0 away) drives colour and glow, so the
+   focused service reads solid white with a warm halo and the rest recede. */
+.s-reel { padding: 0 var(--pad); }
+.s-reel .eyebrow { position: absolute; left: var(--pad); top: 152px; margin: 0; }
+
+.reel {
+  position: absolute; left: 0; right: 0; top: 0; bottom: 0;
+  z-index: 3; pointer-events: none;
 }
-.gi {
-  display: flex; align-items: baseline; gap: 18px;
-  padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, .09);
+/* warm pool of light the focused service sits in */
+.rglow {
+  position: absolute; left: 50%; top: 50%;
+  width: 1560px; height: 440px; margin: -220px 0 0 -780px;
+  background: radial-gradient(closest-side, rgba(254, 146, 53, .16), transparent 74%);
 }
-.gi .gn {
-  font-size: 16px; font-weight: 800; letter-spacing: .14em;
-  color: var(--orange); padding-top: 10px;
+.reel .row {
+  position: absolute; left: 50%; top: 50%;
+  display: flex; align-items: center; gap: 30px;
+  white-space: nowrap;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity, filter;
 }
-.gi .gt {
-  font-family: var(--serif); font-weight: 600; font-size: 39px;
-  color: #F2F7FF; letter-spacing: -.018em;
+.reel .ricon {
+  width: 62px; height: 62px; flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(254, 146, 53, calc(.42 + .58 * var(--foc, 0)));
+  filter: drop-shadow(0 0 calc(18px * var(--foc, 0)) rgba(254, 146, 53, .75));
+}
+.reel .ricon svg { width: 100%; height: 100%; display: block; }
+.reel .rnum {
+  font-size: 22px; font-weight: 800; letter-spacing: .17em;
+  color: rgba(254, 146, 53, calc(.40 + .60 * var(--foc, 0)));
+  align-self: flex-start; padding-top: 16px;
+}
+.reel .rname {
+  font-family: var(--serif); font-weight: 700; font-size: 84px;
+  letter-spacing: -.026em; line-height: 1;
+  color: rgb(
+    calc(176 + 79 * var(--foc, 0))
+    calc(196 + 59 * var(--foc, 0))
+    calc(232 + 23 * var(--foc, 0)));
+  text-shadow: 0 0 calc(46px * var(--foc, 0)) rgba(160, 200, 255, .30);
 }
 
 /* ------------------------------------------------------------------ lockup */
@@ -277,7 +295,7 @@ html, body {
   filter: drop-shadow(0 18px 46px rgba(0, 0, 0, .55));
 }
 .s-lockup .headline {
-  max-width: 1320px; margin: 34px auto 0; text-align: center; font-size: 62px;
+  max-width: 1420px; margin: 38px auto 0; text-align: center; font-size: 86px;
 }
 .s-lockup .caption { max-width: 1180px; margin-left: auto; margin-right: auto; }
 
@@ -286,10 +304,10 @@ html, body {
 .s-statement .body { text-align: center; }
 .s-statement .headline {
   max-width: 1560px; margin: 0 auto;
-  font-size: 128px; letter-spacing: -.042em; line-height: 1.02;
+  font-size: 158px; letter-spacing: -.045em; line-height: 1.0;
 }
 .s-statement .sub {
-  margin: 38px auto 0; text-align: center; max-width: 900px; font-size: 24px;
+  margin: 42px auto 0; text-align: center; max-width: 960px; font-size: 27px;
 }
 
 /* ------------------------------------------------------------------ bignum */
@@ -300,13 +318,13 @@ html, body {
   font-family: var(--serif);
 }
 .bignum .nv, .bignum .nsuf {
-  font-size: 210px; font-weight: 800; line-height: 1;
+  font-size: 240px; font-weight: 800; line-height: 1;
   letter-spacing: -.045em; color: var(--orange);
   text-shadow: 0 0 62px rgba(254, 146, 53, .38);
 }
-.bignum .nsuf { font-size: 130px; letter-spacing: -.02em; }
+.bignum .nsuf { font-size: 150px; letter-spacing: -.02em; }
 .bignum .nlab {
-  font-size: 78px; font-weight: 500; color: var(--ink);
+  font-size: 92px; font-weight: 500; color: var(--ink);
   letter-spacing: -.03em; margin-left: 30px;
 }
 .stars {
@@ -356,19 +374,8 @@ html, body {
 .s-logo .ehcm { top: 676px; }
 .s-endcard .ehcm { top: 566px; }
 
-.erule {
-  position: absolute; left: 50%; top: 668px;
-  width: 132px; height: 2px; margin-left: -66px;
-  background: linear-gradient(90deg, transparent, var(--orange-lo), transparent);
-}
-.etag {
-  position: absolute; left: 0; right: 0; top: 722px;
-  font-family: var(--serif); font-style: italic; font-weight: 700;
-  font-size: 62px; letter-spacing: -.02em; color: var(--ink);
-}
-.etag .ac { color: var(--orange); font-style: italic; }
 .eurl {
-  position: absolute; left: 0; right: 0; top: 848px;
+  position: absolute; left: 0; right: 0; top: 668px;
   font-size: 22px; font-weight: 700; letter-spacing: .30em;
   color: var(--orange-lo);
 }

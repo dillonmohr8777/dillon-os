@@ -8,7 +8,7 @@
 
    Layers, back to front:
      1. CSS background gradient          (static, painted by the stylesheet)
-     2. #lattice canvas                  atom field: drifting nodes + bonds
+     2. #lattice canvas                  atom field: drifting dots
      3. .stage DOM                       slides, type, photo panels, cards
      4. #fx canvas                       logo particle system
      5. .grain / .vignette               static texture overlays
@@ -38,10 +38,9 @@
   }
 
   /* ============================================================== LATTICE ==
-     The "atoms" motif that runs underneath every slide. Nodes drift on
-     closed sinusoidal paths (so motion loops smoothly and is seekable) and
-     bond to neighbours inside a radius. Deliberately low-contrast: it should
-     register as texture, never compete with the headline.
+     The "atoms" motif that runs underneath every slide. Dots drift on closed
+     sinusoidal paths, so motion loops smoothly and stays seekable.
+     Deliberately low-contrast: texture, never competing with the headline.
      ====================================================================== */
   function Lattice(canvas, count) {
     this.ctx = canvas.getContext('2d');
@@ -61,35 +60,16 @@
       });
     }
   }
+  /* Dots only. Bonds between nodes were removed on art direction: no lines
+     anywhere in the frame. */
   Lattice.prototype.draw = function (t, intensity) {
-    var ctx = this.ctx, n = this.nodes, i, j, a, b, d, dx, dy;
+    var ctx = this.ctx, n = this.nodes, i, a;
     ctx.clearRect(0, 0, W, H);
     if (intensity <= 0.001) return;
     for (i = 0; i < n.length; i++) {
       a = n[i];
       a.x = a.bx + Math.sin(t * a.fx * 6.283 + a.px) * a.ax;
       a.y = a.by + Math.cos(t * a.fy * 6.283 + a.py) * a.ay;
-    }
-    /* bonds first so nodes sit on top of their own lines */
-    ctx.lineWidth = 1;
-    for (i = 0; i < n.length; i++) {
-      a = n[i];
-      for (j = i + 1; j < n.length; j++) {
-        b = n[j];
-        dx = a.x - b.x; dy = a.y - b.y;
-        d = dx * dx + dy * dy;
-        if (d > 46000) continue;
-        d = Math.sqrt(d);
-        var al = (1 - d / 214) * 0.16 * intensity;
-        if (al <= 0.004) continue;
-        var warm = a.warm && b.warm;
-        ctx.strokeStyle = warm
-          ? 'rgba(254,146,53,' + al.toFixed(4) + ')'
-          : 'rgba(150,190,255,' + al.toFixed(4) + ')';
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
-        ctx.stroke();
-      }
     }
     for (i = 0; i < n.length; i++) {
       a = n[i];
@@ -111,8 +91,7 @@
        hold      -> full logo, breathing scale, specular sheen sweep
        disperse  -> crossfade back to particles, which accelerate outward and
                     fade, handing the frame to the slide underneath
-     A subset of particles act as lattice "nodes" and draw bonds while in
-     motion, which is what sells the molecular read.
+     Rendered additively so the swarm glows while in motion.
      ====================================================================== */
   function LogoAtoms(img, targetCount) {
     this.img = img;
@@ -141,8 +120,7 @@
           warm: (r - b) > 55,                       // orange chevron vs white wordmark
           sz: 1.5 + rnd(k, 21) * 1.5,
           a1: rnd(k, 22), a2: rnd(k, 23),
-          a3: rnd(k, 24), a4: rnd(k, 25),
-          node: (k % 27 === 0)
+          a3: rnd(k, 24), a4: rnd(k, 25)
         });
         k++;
       }
@@ -208,7 +186,6 @@
     if (pAlpha <= 0.004) return;
 
     var diag = Math.sqrt(W * W + H * H) * 0.62;
-    var nodes = [];
     ctx.save();
     ctx.globalCompositeOperation = 'lighter';
 
@@ -256,26 +233,6 @@
         var s = p.sz * sc * 4.2;
         ctx.globalAlpha = a;
         ctx.drawImage(sp, x - s / 2, y - s / 2, s, s);
-        if (p.node && (conv < 1 || disp > 0)) nodes.push(x, y, a);
-      }
-    }
-
-    /* bonds between node-particles: the molecular read, only while in motion */
-    if (nodes.length) {
-      ctx.lineWidth = 1;
-      for (var n = 0; n < nodes.length; n += 3) {
-        for (var m2 = n + 3; m2 < nodes.length; m2 += 3) {
-          var ddx = nodes[n] - nodes[m2], ddy = nodes[n + 1] - nodes[m2 + 1];
-          var dd = ddx * ddx + ddy * ddy;
-          if (dd > 15000) continue;
-          var la = (1 - Math.sqrt(dd) / 122) * 0.30 * Math.min(nodes[n + 2], nodes[m2 + 2]);
-          if (la <= 0.004) continue;
-          ctx.strokeStyle = 'rgba(255,178,110,' + la.toFixed(4) + ')';
-          ctx.beginPath();
-          ctx.moveTo(nodes[n], nodes[n + 1]);
-          ctx.lineTo(nodes[m2], nodes[m2 + 1]);
-          ctx.stroke();
-        }
       }
     }
 
@@ -294,6 +251,49 @@
       }
     }
     ctx.restore();
+  };
+
+  /* ================================================================= ICONS ==
+     Thin stroked line icons for the service reel, matching the reference cut's
+     icon style. currentColor lets the row's own colour drive them.
+     ====================================================================== */
+  function svg(d) {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+      'stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + d + '</svg>';
+  }
+  var ICONS = {
+    /* clipboard under a magnifier */
+    assess: svg('<path d="M14.5 3H6a1.8 1.8 0 0 0-1.8 1.8v14.4A1.8 1.8 0 0 0 6 21h5"/>' +
+      '<path d="M9 3v2.2h4V3"/><circle cx="16.6" cy="14.4" r="3.4"/><path d="M19.2 17l2.3 2.4"/>'),
+    /* stacked layers */
+    layers: svg('<path d="M12 2.8 21 7.4 12 12 3 7.4z"/><path d="M3 12.2 12 16.8 21 12.2"/>' +
+      '<path d="M3 16.6 12 21.2 21 16.6"/>'),
+    /* graduation cap */
+    cap: svg('<path d="M2.4 8.6 12 4l9.6 4.6L12 13.2z"/>' +
+      '<path d="M6.4 10.7v5.1c0 1.6 2.5 2.9 5.6 2.9s5.6-1.3 5.6-2.9v-5.1"/>'),
+    /* linked nodes */
+    nodes: svg('<circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/>' +
+      '<circle cx="18" cy="12" r="2.6"/><path d="M8.2 7.4 15.6 11"/><path d="M8.2 16.6 15.6 13"/>'),
+    /* database cylinder with a transfer arrow */
+    db: svg('<ellipse cx="8" cy="5.6" rx="4.6" ry="2.2"/>' +
+      '<path d="M3.4 5.6v7.2c0 1.2 2.1 2.2 4.6 2.2s4.6-1 4.6-2.2V5.6"/>' +
+      '<path d="M15.4 18.4h5.2"/><path d="M18.4 15.8l2.4 2.6-2.4 2.6"/>'),
+    /* support headset */
+    headset: svg('<path d="M4.4 13.6v-1.4a7.6 7.6 0 0 1 15.2 0v1.4"/>' +
+      '<rect x="2.4" y="13.2" width="3.6" height="6" rx="1.6"/>' +
+      '<rect x="18" y="13.2" width="3.6" height="6" rx="1.6"/>' +
+      '<path d="M19.8 19.2v.9a2.2 2.2 0 0 1-2.2 2.2h-3.1"/>'),
+    /* rising trend */
+    trend: svg('<path d="M3 17.4l5.8-5.8 3.6 3.6L21 6.6"/><path d="M15.8 6.6H21v5.2"/>'),
+    /* pie segment */
+    pie: svg('<circle cx="12" cy="12" r="8.8"/><path d="M12 12V3.2A8.8 8.8 0 0 1 20.4 15z"/>'),
+    /* two people */
+    people: svg('<circle cx="9.2" cy="8" r="3.2"/>' +
+      '<path d="M3.4 20.2a5.8 5.8 0 0 1 11.6 0"/>' +
+      '<circle cx="17.6" cy="9.6" r="2.4"/><path d="M17 14.6a4.6 4.6 0 0 1 3.9 4.4"/>'),
+    /* two paths merging into one */
+    merge: svg('<path d="M3.4 5.2c6.4 0 6.4 6.8 12.4 6.8"/>' +
+      '<path d="M3.4 18.8c6.4 0 6.4-6.8 12.4-6.8"/><path d="M16.4 9l3.4 3-3.4 3"/>')
   };
 
   /* ================================================================ SCENES ==
@@ -330,13 +330,22 @@
         }
       }
     })(tmp, '');
-    var h = '';
+
+    /* Each .wd is an inline-block so it can be transformed independently, and
+       CSS allows a line break between two adjacent atomic inlines. That let a
+       trailing "." after an accent phrase drop to its own line. Consecutive
+       non-space tokens are therefore grouped in a nowrap cluster, which keeps
+       "walls" and "." together while leaving each word separately animatable. */
+    var h = '', open = false;
+    function closeGroup() { if (open) { h += '</span>'; open = false; } }
     for (var k = 0; k < out.length; k++) {
-      if (out[k].br) { h += '<br>'; continue; }
-      if (out[k].sp) { h += ' '; continue; }
+      if (out[k].br) { closeGroup(); h += '<br>'; continue; }
+      if (out[k].sp) { closeGroup(); h += ' '; continue; }
+      if (!open) { h += '<span class="wg">'; open = true; }
       h += '<span class="wd' + (out[k].cls ? ' ' + out[k].cls : '') +
         '" data-s="' + out[k].i + '">' + out[k].w + '</span>';
     }
+    closeGroup();
     return h;
   }
 
@@ -358,7 +367,6 @@
     }
     if (sc.headline) {
       var h = el('h1', 'headline', words(sc.headline));
-      if (sc.underline) h.classList.add('has-ul');
       body.appendChild(h);
     }
     if (sc.sub) body.appendChild(el('p', 'sub anim', accentize(sc.sub)));
@@ -398,15 +406,24 @@
       body.appendChild(lw);
     }
 
-    if (sc.kind === 'grid') {
-      var gw = el('div', 'grid');
+    /* The vertical service reel from the reference cut: a picker wheel that
+       scrolls through every service, the focused row solid white and its
+       neighbours falling away in scale, opacity and blur. */
+    if (sc.kind === 'reel') {
+      /* the eyebrow leaves .body so it anchors to the scene box, not to the
+         zero-height body the reel would otherwise leave behind */
+      var eb = body.querySelector('.eyebrow');
+      if (eb) root.appendChild(eb);
+      var rw = el('div', 'reel');
+      rw.appendChild(el('i', 'rglow'));
       sc.items.forEach(function (it, i) {
-        var g = el('div', 'gi anim');
-        g.appendChild(el('span', 'gn', String(i + 1).padStart(2, '0')));
-        g.appendChild(el('span', 'gt', it));
-        gw.appendChild(g);
+        var row = el('div', 'row');
+        row.appendChild(el('span', 'ricon', ICONS[it.icon] || ''));
+        row.appendChild(el('span', 'rnum', String(i + 1).padStart(2, '0')));
+        row.appendChild(el('span', 'rname', it.t));
+        rw.appendChild(row);
       });
-      body.appendChild(gw);
+      root.appendChild(rw);
     }
 
     if (sc.kind === 'lockup') {
@@ -446,8 +463,6 @@
       root.classList.add('s-endcard');
       var ec = el('div', 'endwrap');
       ec.appendChild(el('div', 'ehcm anim', sc.lockupText || 'HUMAN CAPITAL MANAGEMENT'));
-      ec.appendChild(el('i', 'erule anim'));
-      ec.appendChild(el('div', 'etag anim', accentize(sc.tagline)));
       ec.appendChild(el('div', 'eurl anim', sc.url));
       root.appendChild(ec);
     }
@@ -499,8 +514,9 @@
       s._wds = s._node.querySelectorAll('.wd');
       s._ghost = s._node.querySelector('.ghost');
       s._panel = s._node.querySelector('.pimg');
-      s._ul = s._node.querySelector('.headline.has-ul');
       s._nv = s._node.querySelector('.nv');
+      s._rows = s._node.querySelectorAll('.reel .row');
+      s._reel = s._node.querySelector('.reel');
       if (s.chapter) { chIdx++; s._ch = chIdx; }
       stage.appendChild(s._node);
     });
@@ -602,12 +618,6 @@
           ? 'blur(' + ((1 - pp) * 9 + ex * 6).toFixed(2) + 'px)' : 'none';
       }
 
-      /* accent underline draws itself in */
-      if (sc._ul) {
-        var up = smooth(c01((lt - 0.85) / 0.75)) * (1 - ex);
-        sc._ul.style.setProperty('--ul', (up * 100).toFixed(2) + '%');
-      }
-
       /* ghost word: slow parallax drift */
       if (sc._ghost) {
         var gp = smooth(c01(lt / 1.5)) * (1 - ex);
@@ -628,6 +638,41 @@
       if (sc._nv) {
         var np = inOut(c01((lt - 0.35) / 1.5));
         sc._nv.textContent = String(Math.round(mix(0, sc.value, np)));
+      }
+
+      /* ---- vertical service reel ----------------------------------------
+         `pos` is a continuous index into the item list. Between items it
+         eases with a dwell at each end, so the wheel snaps and rests rather
+         than gliding at constant speed. Rows fall away from focus in scale,
+         opacity, blur and X-rotation, which is what gives it the wheel read. */
+      if (sc._rows.length) {
+        var N = sc._rows.length;
+        var lead = 0.85, trail = 1.30;
+        var span = dur - lead - trail;
+        var s01 = c01((lt - lead) / span) * (N - 1);
+        var seg = Math.floor(s01), fr = s01 - seg;
+        if (seg > N - 2) { seg = N - 2; fr = 1; }
+        var pos = seg + smooth(c01((fr - 0.22) / 0.56));
+        sc._reel.style.opacity = (smooth(c01(lt / 0.7)) * (1 - ex)).toFixed(3);
+
+        for (var r = 0; r < N; r++) {
+          var row = sc._rows[r];
+          var d = r - pos, ad = Math.abs(d);
+          /* compress distant rows so more of the list stays in frame */
+          var y = Math.sign(d) * 96 * Math.pow(ad, 0.82);
+          var foc = Math.max(0, 1 - ad * 1.4);
+          var scl = Math.max(0.60, 1 - ad * 0.155) * (1 + 0.05 * foc);
+          var op = Math.max(0, 1 - ad * 0.40);
+          var bl = Math.min(7, ad * 2.5);
+          row.style.opacity = op.toFixed(3);
+          row.style.transform = 'translate(-50%,-50%) translateY(' + y.toFixed(1) + 'px)' +
+            ' perspective(1400px) rotateX(' + clamp(d * -7, -34, 34).toFixed(2) + 'deg)' +
+            ' scale(' + scl.toFixed(4) + ')';
+          row.style.filter = bl > 0.05 ? 'blur(' + bl.toFixed(2) + 'px)' : 'none';
+          /* focused row goes solid white with a warm halo; the rest cool down */
+          row.style.setProperty('--foc', foc.toFixed(3));
+          row.style.zIndex = String(40 - Math.round(ad * 4));
+        }
       }
 
       /* logo beats own the fx canvas */
