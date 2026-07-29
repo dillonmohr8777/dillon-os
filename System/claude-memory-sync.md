@@ -1,59 +1,59 @@
 ---
-last_sync: 2026-04-15
+last_sync: 2026-07-29
 tags: [system, memory, sync]
 ---
 
 # Claude Memory Sync
 
-Single source of truth for all Claude instances across Dillon OS. Updated by `vault-integrity-sync` nightly at 2:00 AM and `chat-to-vault-sync` every 2 hours.
+Single source of truth for all Claude instances across Dillon OS. Updated by `memory-consolidator` via **competitive-task-orchestrator** daily at 1:00 PM ET.
+
+## Umbrella workflow
+
+One automation replaces seven legacy crons. Prompt: `System/competitive-task-orchestrator-prompt.md`. Daily brief: `Daily-Briefs/competitive-task-today.md`.
 
 ## Active clients (Momentum 360)
-• Bar Crawl USA ($950/mo) — active, campaigns live across 9+ cities.
-• Kimberly James Bridal ($300/mo) — active, Timeline page approved 2026-04-13.
-• Shadow HVAC ($250/mo) — active, LSA status needs verification after 2026-03-02 reset.
-• LinkEZE ($300/mo) — active, enhanced conversions diagnostics warning open.
-• Omega Landscaping ($200/mo) — active, chasing David for drone footage.
-• Jeff Hozias / Rand Realty ($200/mo) — active, Meta seller campaign approved 2026-04-14.
-• Fresh Blends / Replenish ($500/mo) — active, campaigns set to launch 2026-04-13.
-• BOK Law — active, weekly social cadence running.
-• NKCDC — active, BLOCKED on NKCDC shipping Free Tax Prep landing page.
-• Commercial Cleaners Alliance — onboarding, creatives in flight.
-• Hardwood Artisan ($150/mo) — AT RISK, billing card update outstanding since 2026-04-07.
-• Onsite Concrete & Landscape — active, standing Thursday 1:00 PM ET call.
+• Bar Crawl USA ($950/mo) — active; 2 ad disapprovals unresolved (~105 days).
+• Kimberly James Bridal ($300/mo) — active; Timeline page publish + GA4/GSC still open (~105 days).
+• Shadow HVAC ($250/mo) — active; LSA status needs verification (~149 days stale).
+• LinkEZE ($300/mo) — active; enhanced conversions + MFA (~115 days overdue).
+• Omega Landscaping ($200/mo) — active; David/John Belaska meeting unconfirmed (~106 days).
+• Jeff Hozias / Rand Realty ($200/mo) — active; Meta seller campaign not launched (~106 days).
+• Fresh Blends / Replenish ($500/mo) — active; launch confirmation + week-1 snapshot (~107 days).
+• BOK Law — active; **7 weeks social backlog**; Wed Wisdom due Jul 30.
+• NKCDC — active, **BLOCKED** on Free Tax Prep landing page (~105 days).
+• Commercial Cleaners Alliance — onboarding; creative delivery audit (~106 days).
+• Hardwood Artisan ($150/mo) — **AT RISK**, billing card update (~113 days).
+• Onsite Concrete & Landscape — active; call cadence (~111 days stale).
+• Bridge Software Development — discovery complete; post-Tori capture **16 days overdue**.
 
 ## Full-time
-• Align HCM — Dillon's full-time employer. Not a client. Not counted in client totals.
+• Align HCM — Dillon's full-time employer. **Maher post missed Jul 28**; Jun/Jul backlog unshipped. Not M360 client revenue.
 
-## Pending deliverables
-• Bar Crawl USA — resolve 2 disapproved ads (Halloween / Fall Cocktail Crawl language flagged 2026-04-14/15).
-• Kimberly James Bridal — publish Timeline page, verify GA4 + GSC indexing per Mac.
-• LinkEZE — fix enhanced conversions data source diagnostics; confirm MFA enabled on 809-600-6448.
-• Fresh Blends / Replenish — confirm 2026-04-13 campaign launch went live; first-week performance snapshot.
-• NKCDC — launch Free Tax Prep campaign the moment NKCDC clears the landing page.
-• Commercial Cleaners Alliance — deliver CCA creatives + NexGen creatives (committed 2026-04-08).
-• Hardwood Artisan — CHASE billing card update before engagement pauses.
-• Omega Landscaping — drone footage from David.
-• Jeff Hozias — launch approved seller Meta campaign.
+## Pending deliverables (P0)
+• Align HCM — ship Jun/Jul backlog; publish Maher thought leadership (missed Jul 28).
+• BOK Law — ship 7 weeks backlog; Wed Wisdom due Jul 30.
+• NKCDC — launch blocked; nudge Anthony with Mac.
+• Hardwood Artisan — billing card chase before pause.
+• Bridge — capture Tori meeting outcomes + follow-up.
+• Bar Crawl USA — resolve 2 disapproved ads.
+• Jason/Sean EOM — classify Chatbot, CallRail SMS, Internal Agent workflows by Jul 31.
 
-## Upcoming deadlines (7 days)
-• 2026-04-16 — Onsite x M360 weekly call (1:00 PM ET).
-• 2026-04-16 — Commercial Cleaners Alliance creative commitment.
-• 2026-04-18 — Hardwood Artisan billing card deadline (implied from "next 90 days" ask 2026-04-07).
-• 2026-04-25 — Bar Crawl USA Taco & Tequila wave 1 (9 cities).
-• 2026-05-02 — Bar Crawl USA Taco & Tequila wave 2.
+## Upcoming deadlines (3 days)
+• **2026-07-30** — BOK Wed Wisdom + Align SmartCare post (drafts ready).
+• **2026-07-31** — Jason/Sean EOM classifications; book SEO sweep (content-routines).
 
-## Recent completions (7 days)
-• 2026-04-14 — BOK Law weekly social content delivered.
-• 2026-04-14 — Jeff Hozias seller ad copy approved.
-• 2026-04-13 — KJB Wedding Dress Timeline page approved.
-• 2026-04-13 — Bar Crawl USA PMax update sent to Andy (53 tickets, all April 25 cities live, May 2 launching).
-• 2026-04-12 — Fresh Blends / Replenish admin access granted to Mia.
-• 2026-04-09 — NKCDC revised strategy delivered and approved by Anthony.
-• 2026-04-01 — Monthly reports sent to Omega, Jeff Hozias, Hardwood Artisan.
+## Infrastructure blockers
+• Gmail MCP — not connected; gmail-intel uses vault-fallback.
+• Slack MCP — not connected; Codex connector `oauth_refresh_token_rejected` (**7 days open**).
+• Book site — email capture endpoint dead; blocks subscriber growth goal.
+• Facebook Ads Codex sessions — not exported to `10_Sessions/` stubs.
 
-## Unanswered / urgent
-• **NKCDC** — Anthony did not respond to Dillon's 2026-04-13 Monday check-in OR Mac's 2026-04-15 follow-up. Launch is blocked.
-• **Hardwood Artisan** — Dalton said "give me a few days" on 2026-04-01. Sean's 2026-04-07 billing request still outstanding.
-• **Bar Crawl USA** — 2 disapproved ads from 2026-04-14 and 2026-04-15 need resolution this week.
-• **Omega Landscaping** — David hasn't confirmed Thursday meeting with John Belaska (pinged 2026-04-14).
-• **Commercial Cleaners Alliance** — 2026-04-08 creative commitment needs delivery audit.
+## Operator rules
+• KJB emails CC: mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com
+• Align HCM is full-time — not client revenue
+• P0 tie-break: launch blocked → billing risk → ad disapprovals → calendar
+
+## Recent orchestrator runs
+• **Run 36** — 2026-07-29 — Maher missed Jul 28; EOM 2 days out; Bridge 16d overdue
+• **Run 35** — 2026-07-28 — Maher due that day; infra on f2e5 branch
+• **Run 34** — 2026-07-27 — BOK + Align week drafts generated
