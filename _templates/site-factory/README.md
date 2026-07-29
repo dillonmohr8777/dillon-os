@@ -31,6 +31,19 @@ See `example-brief.json` for the full shape. The important parts:
 - `noindex` — defaults to true (prospect demo). Set `false` only when a paying client's site goes live.
 - `skinCss` — optional per-site decoration layer, scoped under `.slug-<name>`. Base classes never change.
 
+## Attitude skins (unique look per site)
+
+Every brief should set `attitude` to one of: `glass`, `editorial`, `brutal`, `warm`, `industrial`, `neon`. If omitted, the factory infers it from border/radius tokens and category. Liquid-glass panels, marquees, scroll vanish, and sticky mobile CTAs ship in the base CSS; the attitude skin changes how hard those lean in.
+
+## Harvest imagery
+
+```bash
+node _templates/site-factory/harvest.js <slug> <site-url> [social-url ...]
+node _templates/site-factory/apply-harvest-images.js <slug> <site-dir>
+```
+
+`apply-harvest-images.js` copies social/site photos into `assets/image-N.webp` and writes `PROVENANCE.json`. If fewer than 6 images come back, it prints `GENERATE_SIMILAR` so an agent can create lookalike atmosphere shots (labeled generated, never claimed as theirs).
+
 ## Weekly batch of 25
 
 The outreach engine runs one batch of 25 sites per week. Full runbook: `02_Campaigns/AI Site Builder Outreach Engine/Batch Runbook.md`. Skill: `.claude/skills/site-batch/SKILL.md`.

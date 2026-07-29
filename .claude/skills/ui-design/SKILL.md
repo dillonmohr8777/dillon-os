@@ -11,6 +11,10 @@ The visual layer. Applied to every batch site after harvest and before build. De
 
 `harvest/<slug>/harvest.json` (`brand.palette`, `brand.fonts`) and the screenshots in `harvest/<slug>/shots/`. Work from what the business actually uses, not from taste in a vacuum.
 
+## Attitude (required for batches)
+
+Every brief sets `attitude` to one of `glass | editorial | brutal | warm | industrial | neon`. The factory injects a per-slug skin from `_templates/site-factory/lib/skins.js` so the batch never looks like 25 recolors. Liquid-glass panels, marquees, scroll-vanish, and sticky mobile CTAs live in `base.css`; the attitude controls how hard they lean in.
+
 ## Palette
 
 1. Read `brand.palette` from the harvest. Colors are ranked by painted area, so the top entries are their real brand surfaces.

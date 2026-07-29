@@ -25,7 +25,7 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
    `node _templates/site-factory/harvest.js --from targets.json`
    Drop any target whose harvest failed. Never build on invented facts.
 
-4. **Mirror each prospect.** Follow `.claude/skills/mirror-and-improve/SKILL.md` per target, which applies `ui-design`, `ux-audit`, `motion-design`, and `frontend-build`. Produce one `briefs/<slug>.json` per prospect hitting the canonical spec: **10 sections, 350 to 500 words, 12 to 13 images**. Keep their exact lingo; improve the writing and everything else. Copy harvested imagery into `sites/<slug>/assets/` as `image-1.webp` onward, hero first.
+4. **Mirror each prospect.** Follow `.claude/skills/mirror-and-improve/SKILL.md` per target, which applies `ui-design`, `ux-audit`, `motion-design`, and `frontend-build`. Produce one `briefs/<slug>.json` per prospect hitting the canonical spec: **10 sections, 350 to 500 words, 12 to 13 images**. Keep their exact lingo; improve the writing and everything else. Set a distinct `attitude` (`glass` | `editorial` | `brutal` | `warm` | `industrial` | `neon`) so the batch does not look like 25 recolors. Copy harvested imagery with `node _templates/site-factory/apply-harvest-images.js <slug> <site-dir>`; if harvest is thin, generate lookalike atmosphere images and label them generated.
 
 5. **Build and QA the batch.**
    `node _templates/site-factory/build-batch.js <batch-dir>`

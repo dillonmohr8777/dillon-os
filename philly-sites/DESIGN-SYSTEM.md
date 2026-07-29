@@ -90,7 +90,12 @@ So the floor is 6 required sections; hitting the target of 10 means adding `proo
 - `site-header`: fixed/absolute pill bar with `brand-logo` (or `wordmark` fallback), 3 anchor links, one `nav-cta`. Collapses to logo + CTA under 850px.
 - `mobile-action`: fixed bottom CTA bar, mobile only.
 - `site-footer`: name + address + `footer-links`.
-- Reveal-on-scroll: elements carry `.reveal`; an inline IntersectionObserver adds `.visible` (threshold ~0.12). Guarded by a `js` class on `<html>` so content shows without JS, plus a full `prefers-reduced-motion` opt-out.
+- Reveal-on-scroll with direction/delay variants; sections can `.vanish-out` as they leave upward
+- Marquee strip after the hero (their lingo, not filler)
+- Liquid-glass header, contact cards, and hero float
+- Sticky mobile action bar
+- Per-site `attitude` skin (`glass` | `editorial` | `brutal` | `warm` | `industrial` | `neon`) so every homepage has its own feel
+- Social rail fed by harvested site/social imagery via `apply-harvest-images.js`
 - Buttons: pill (`border-radius:999px`) with hover lift (`translateY(-2px)` + shadow) and active scale `.97`. `:focus-visible` outline in `--accent`.
 - Images: local `assets/image-N.webp`, `loading="lazy"` on everything below the hero, descriptive `alt` text always.
 - Breakpoints: 850px (stack splits, hide nav links, show mobile-action) and 520px (single-column everything, tighter type scale).

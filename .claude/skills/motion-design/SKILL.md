@@ -9,22 +9,11 @@ Motion is what separated the upgraded Philly batch from the first pass. It has t
 
 ## The three layers
 
-**1. Scroll reveal (structural).** Elements carrying `.reveal` fade up as they enter view: opacity 0 to 1, `translateY(34px)` to none, `blur(7px)` to none, over `.75s` to `.85s` with `cubic-bezier(.2,.75,.2,1)`. Driven by one IntersectionObserver at threshold `.08` with `rootMargin: '0px 0px -6% 0px'`.
+**1. Scroll reveal (structural).** Elements carrying `.reveal` fade up as they enter view. Direction variants: `.reveal-left`, `.reveal-right`. Stagger with `.delay-1` … `.delay-3`. Driven by one IntersectionObserver.
 
-Rules:
-- Reveal containers (a grid, a section head), not every individual child. Twenty-five separate reveals in one viewport reads as jitter.
-- Stagger sibling groups by no more than `.1s`.
-- Unobserve after revealing; never re-animate on scroll back.
-- Elements above the fold reveal on load, not on scroll.
+**2. Vanish on leave.** Sections with `.vanish-out` fade/blur as they scroll out upward — the "disappearing" motion for long homepages. Progressive enhancement only.
 
-**2. Hover and focus (tactile).**
-- Buttons: `translateY(-2px)` to `-4px` with a shadow bloom on hover, `scale(.97)` on active. Transitions `.16s` to `.28s` ease.
-- Cards: `translateY(-8px)` with a slight rotation (`rotate(-.4deg)`) and a hard offset shadow. Restrained, not springy.
-- Images in figures: `scale(1.04)` over `.6s` to `1.1s`, with `overflow:hidden` on the parent.
-- Apply to `:focus-within` alongside `:hover` so keyboard users get the same feedback.
-- Wrap image zoom in `@media(hover:none)` resets so touch devices don't get stuck hover states.
-
-**3. Micro-interaction (accent).** One signature move per site, drawn from the business: a tilted marquee strip, a layered depth flourish behind the hero, a texture that shifts on scroll. Lives in the `.slug-<name>` skin layer. One per site, never three.
+**3. Hover, marquee, glass float.** Buttons lift; images scale; the hero marquee scrolls their lingo; a liquid-glass float sits on the hero media. Attitude skins tune the intensity.
 
 ## Hard limits
 
