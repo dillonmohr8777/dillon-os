@@ -19,6 +19,14 @@
  */
 const fs = require('fs');
 const path = require('path');
+const {
+  assertSafeSlug,
+  assertPublicHttpUrl,
+  assertSafeImageContentType,
+  assertSafeImageExt,
+  assertImageByteLimit,
+  MAX_IMAGE_BYTES,
+} = require('./lib/validate.js');
 
 let chromium;
 try {
@@ -28,17 +36,25 @@ try {
   process.exit(1);
 }
 
+function normalizeTarget(raw) {
+  const slug = assertSafeSlug(raw.slug);
+  const siteUrl = assertPublicHttpUrl(raw.siteUrl || raw.url, 'siteUrl');
+  const socials = (raw.socials || []).map((u, i) => assertPublicHttpUrl(u, `socials[${i}]`));
+  return { slug, siteUrl, socials };
+}
+
 const argv = process.argv.slice(2);
 let targets = [];
 if (argv[0] === '--from') {
-  targets = JSON.parse(fs.readFileSync(argv[1], 'utf8'));
+  const parsed = JSON.parse(fs.readFileSync(argv[1], 'utf8'));
+  targets = parsed.map(normalizeTarget);
 } else {
   const [slug, siteUrl, ...socials] = argv;
   if (!slug || !siteUrl) {
     console.error('Usage: node harvest.js <slug> <site-url> [social-url ...]   |   node harvest.js --from targets.json');
     process.exit(1);
   }
-  targets = [{ slug, siteUrl, socials }];
+  targets = [normalizeTarget({ slug, siteUrl, socials })];
 }
 
 const OUT_ROOT = path.join(__dirname, 'harvest');
@@ -191,16 +207,31 @@ async function downloadImages(context, images, dir, limit = 14) {
   const saved = [];
   for (const [i, img] of sorted.entries()) {
     try {
-      const resp = await context.request.get(img.src, { timeout: 30000 });
+      const src = assertPublicHttpUrl(img.src, 'image.src');
+      const resp = await context.request.get(src, { timeout: 30000, maxRedirects: 3 });
       if (!resp.ok()) continue;
+      const contentType = resp.headers()['content-type'] || '';
+      try {
+        assertSafeImageContentType(contentType, 'image');
+      } catch {
+        // Allow missing content-type when extension is known-safe; otherwise skip.
+        const extGuess = (src.match(/\.(webp|jpg|jpeg|png|avif|gif)(?:\?|$)/i) || [])[1];
+        if (!extGuess) continue;
+        assertSafeImageExt(extGuess);
+      }
       const buf = await resp.body();
-      if (buf.length < 8000) continue;
-      const ext = (img.src.match(/\.(webp|jpg|jpeg|png|avif)/i) || [, 'jpg'])[1].toLowerCase();
+      try {
+        assertImageByteLimit(buf.length, MAX_IMAGE_BYTES);
+      } catch {
+        continue;
+      }
+      const extRaw = (src.match(/\.(webp|jpg|jpeg|png|avif|gif)(?:\?|$)/i) || [, 'jpg'])[1];
+      const ext = assertSafeImageExt(extRaw);
       const file = path.join(dir, `source-${String(i + 1).padStart(2, '0')}.${ext}`);
       fs.writeFileSync(file, buf);
-      saved.push({ file: path.basename(file), src: img.src, alt: img.alt, w: img.w, h: img.h, bytes: buf.length });
+      saved.push({ file: path.basename(file), src, alt: img.alt, w: img.w, h: img.h, bytes: buf.length });
     } catch {
-      /* skip unreachable asset */
+      /* skip unreachable or unsafe asset */
     }
   }
   return saved;
@@ -216,7 +247,11 @@ async function downloadImages(context, images, dir, limit = 14) {
 
   for (const target of targets) {
     const slug = target.slug;
-    const dir = path.join(OUT_ROOT, slug);
+    // Slug already validated; join only under OUT_ROOT and re-check containment.
+    const dir = path.resolve(OUT_ROOT, slug);
+    if (!dir.startsWith(path.resolve(OUT_ROOT) + path.sep) && dir !== path.resolve(OUT_ROOT)) {
+      throw new Error(`harvest path escaped OUT_ROOT for slug ${slug}`);
+    }
     const shotsDir = path.join(dir, 'shots');
     fs.mkdirSync(shotsDir, { recursive: true });
     console.log(`\n=== ${slug} ===`);
@@ -225,7 +260,15 @@ async function downloadImages(context, images, dir, limit = 14) {
     console.log(`site: ${site.error ? 'ERROR ' + site.error : site.shots.length + ' shots'}`);
 
     const extracted = site.extracted || {};
-    const socialUrls = [...new Set([...(target.socials || []), ...(extracted.socialLinks || [])])].slice(0, 6);
+    const discovered = [];
+    for (const u of extracted.socialLinks || []) {
+      try {
+        discovered.push(assertPublicHttpUrl(u, 'discovered-social'));
+      } catch {
+        /* drop non-public discovered links */
+      }
+    }
+    const socialUrls = [...new Set([...(target.socials || []), ...discovered])].slice(0, 6);
     const socials = [];
     for (const [i, url] of socialUrls.entries()) {
       const platform = (url.match(/(instagram|facebook|tiktok|x|twitter|linkedin|youtube|yelp)/i) || [, 'social'])[1].toLowerCase();

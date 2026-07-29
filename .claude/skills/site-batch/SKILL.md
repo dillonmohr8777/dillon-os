@@ -29,11 +29,11 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
 
 5. **Build and QA the batch.**
    `node _templates/site-factory/build-batch.js <batch-dir>`
-   This builds every site, runs the QA gate on each, checks spec compliance, and fails any site sharing a duplicate image with another in the batch. Non-zero exit means something is blocked. Fix and rerun.
+   This builds every site, runs the QA gate on each (static + visual), checks spec compliance, and fails any site sharing a duplicate image with another in the batch. Brief count must equal `targetCount` unless `--allow-partial` (test/preview only). Non-zero exit means something is held. Fix and rerun.
 
 6. **Taste pass.** Open the generated `index.html` hub and judge every site by eye: does it look expensive, does it look like that specific business, is the palette dull. Check `_templates/site-factory/qa-shots/<slug>/phone.png` for cramped mobile headlines. Send failures back to step 4.
 
-7. **Package for approval.** One hub URL, a five-minute Loom on the strongest three or four, `prospects.csv`, and the mail piece proof. Mac wants one link and a short Loom, not a long document.
+7. **Package for approval.** One hub URL, a five-minute Loom on the strongest three or four, `prospects.csv`, and the mail piece proof. Mac wants one link and a short Loom, not a long document. Generated `mail_ready` is always `hold`.
 
 8. **Log.** Commit the batch, then update the Results section of the generated `batch-report.md` once the drop happens.
 
@@ -41,6 +41,7 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
 
 - Every prospect demo stays `noindex`. No exceptions.
 - Deploying, mailing, and sending are Tier 2. Stage everything, hand Dillon the command, let a human approve the list and the mail piece.
-- `mail_ready` in `prospects.csv` only reads `ready` for a clean site with a verified address. Never override it by hand.
+- `mail_ready` in generated `prospects.csv` is always `hold`. Only an explicit human approval may flip it. `qa_ready` is the automation signal for review eligibility.
 - Facts come from the harvest or verified research. Unverifiable fields stay empty.
 - Never reuse a photo within a site or across the batch; the runner enforces this by content hash.
+- Slugs must match `^[a-z0-9]+(?:-[a-z0-9]+)*$`. Harvest URLs must be public http(s).

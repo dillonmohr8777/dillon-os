@@ -85,9 +85,13 @@ Copy their harvested imagery into `batches/$BATCH/sites/<slug>/assets/` as `imag
 
 ```bash
 node _templates/site-factory/build-batch.js "02_Campaigns/AI Site Builder Outreach Engine/batches/$BATCH"
+# Preview / fixture runs only:
+# node _templates/site-factory/build-batch.js <batch-dir> --allow-partial
 ```
 
-One command builds every site, runs the full QA gate on each, checks the canonical spec, and detects duplicate imagery across the entire batch by content hash.
+Production requires `briefs/*.json` count to equal `batch.targetCount` (default 25). A mismatch exits nonzero and holds every row unless `--allow-partial` is set for test/preview.
+
+Static-only QA (Playwright missing or `--skip-qa`) is reported as `visual_qa=skipped` / `STATIC_ONLY` and does **not** set `qa_ready=ready`. Spec range misses block `qa_ready` too.
 
 It writes:
 
@@ -96,7 +100,7 @@ It writes:
 | `sites/<slug>/` | The built sites |
 | `index.html` | Review hub. **This is the one link Mac gets.** |
 | `manifest.csv` | Sheet-ready rows with per-prospect UTM-tagged `qr_target_url` for the Zapier to QRTiger hop |
-| `prospects.csv` | Mail merge with a `mail_ready` flag that only reads `ready` on a clean site |
+| `prospects.csv` | Mail merge. `qa_ready` reflects full QA + spec gates. **`mail_ready` is always `hold` in generated output**; only explicit human approval may flip it. |
 | `batch-report.md` | Spec compliance table, blocked list, duplicates, next steps |
 
 Exit code is non-zero if anything is blocked. Fix and rerun until the blocked list is empty or the blocked prospects are deliberately dropped.

@@ -14,6 +14,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { assertSafeSlug } = require('./lib/validate.js');
 
 /**
  * Render a brief into a finished site directory.
@@ -36,6 +37,7 @@ for (const key of required) {
     throw new Error(`Brief is missing required field: ${key}`);
   }
 }
+assertSafeSlug(brief.slug);
 
 const t = brief.tokens;
 const tokenDefaults = {
