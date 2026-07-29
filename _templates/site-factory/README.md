@@ -45,7 +45,9 @@ node _templates/site-factory/harvest.js --from targets.json
 node _templates/site-factory/build-batch.js <batch-dir>
 ```
 
-A batch directory holds `batch.json` plus `briefs/*.json`, and the runner emits `sites/`, `index.html` (the review hub, one link for the bosses), `manifest.csv` (QR sheet), `prospects.csv` (mail merge with a `mail_ready` gate), and `batch-report.md`.
+A batch directory holds `batch.json` plus `briefs/*.json`, and the runner emits `sites/`, `index.html` (the review hub, one link for the bosses), `manifest.csv` (QR sheet), `prospects.csv` (`qa_ready` + always-held `mail_ready`), `batch-report.md`, and `batch-summary.json`.
+
+Production runs require brief count == `targetCount`. Use `--allow-partial` only for test/preview. Full QA requires Playwright visual checks; static-only is not a pass.
 
 ## Files
 
