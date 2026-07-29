@@ -6,6 +6,8 @@
  *
  *   node _templates/site-factory/build-site.js path/to/brief.json [output-dir]
  *
+ * Also requireable for batch runs: require('./build-site.js').buildSite(brief, outRoot)
+ *
  * Output: <output-dir>/<slug>/index.html plus an assets/ folder you fill with
  * image-1.webp ... image-N.webp and logo.png (see README.md).
  * Design contract: philly-sites/DESIGN-SYSTEM.md
@@ -13,13 +15,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const briefPath = process.argv[2];
-if (!briefPath) {
-  console.error('Usage: node build-site.js path/to/brief.json [output-dir]');
-  process.exit(1);
-}
-const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
-const outRoot = process.argv[3] || path.dirname(briefPath);
+/**
+ * Render a brief into a finished site directory.
+ * Returns { outDir, htmlBytes, sections, words, images, missingAssets }.
+ */
+function buildSite(brief, outRoot) {
 const baseCss = fs.readFileSync(path.join(__dirname, 'base.css'), 'utf8');
 
 const esc = (s) =>
@@ -33,8 +33,7 @@ const esc = (s) =>
 const required = ['slug', 'name', 'city', 'tokens', 'fonts', 'hero'];
 for (const key of required) {
   if (!brief[key]) {
-    console.error(`Brief is missing required field: ${key}`);
-    process.exit(1);
+    throw new Error(`Brief is missing required field: ${key}`);
   }
 }
 
@@ -210,10 +209,44 @@ const wanted = new Set(brief.logo === false ? [] : ['logo.png']);
 const usedImages = html.match(/assets\/[a-z0-9-]+\.(webp|png|jpg)/g) || [];
 usedImages.forEach((u) => wanted.add(u.replace('assets/', '')));
 const have = new Set(fs.readdirSync(path.join(outDir, 'assets')));
-const missing = [...wanted].filter((f) => !have.has(f));
+const missingAssets = [...wanted].filter((f) => !have.has(f));
 
-console.log(`Built ${path.join(outDir, 'index.html')} (${(html.length / 1024).toFixed(1)} KB)`);
-if (missing.length) {
-  console.log(`Assets still needed in ${path.join(outDir, 'assets')}:`);
-  missing.forEach((f) => console.log(`  - ${f}`));
+// Measured against the canonical batch spec in philly-sites/DESIGN-SYSTEM.md
+const sectionNames = [...html.matchAll(/<section class="([a-z-]+)/g)].map((m) => m[1]);
+const words = (html.match(/>[^<>]{3,}</g) || []).join(' ').split(/\s+/).filter(Boolean).length;
+
+  return {
+    slug: brief.slug,
+    outDir,
+    html,
+    htmlBytes: html.length,
+    sections: sectionNames,
+    words,
+    images: usedImages.length,
+    missingAssets,
+  };
+}
+
+module.exports = { buildSite };
+
+if (require.main === module) {
+  const briefPath = process.argv[2];
+  if (!briefPath) {
+    console.error('Usage: node build-site.js path/to/brief.json [output-dir]');
+    process.exit(1);
+  }
+  const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
+  const outRoot = process.argv[3] || path.dirname(briefPath);
+  try {
+    const r = buildSite(brief, outRoot);
+    console.log(`Built ${path.join(r.outDir, 'index.html')} (${(r.htmlBytes / 1024).toFixed(1)} KB)`);
+    console.log(`Spec: ${r.sections.length} sections, ${r.words} words, ${r.images} images`);
+    if (r.missingAssets.length) {
+      console.log(`Assets still needed in ${path.join(r.outDir, 'assets')}:`);
+      r.missingAssets.forEach((f) => console.log(`  - ${f}`));
+    }
+  } catch (err) {
+    console.error(err.message);
+    process.exit(1);
+  }
 }
