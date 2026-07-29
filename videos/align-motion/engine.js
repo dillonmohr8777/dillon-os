@@ -695,6 +695,9 @@
     }
 
     /* ------------------------------------------------- capture / playback */
+    global.__SCENES = scenes.map(function (s) {
+      return { kind: s.kind, in: s._in, out: s._out, dur: s.dur };
+    });
     global.__DUR = DUR;
     global.__FPS = cfg.fps || 30;
     global.__seek = function (t) { render(t); };

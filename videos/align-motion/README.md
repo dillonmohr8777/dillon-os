@@ -49,9 +49,24 @@ and X-rotation, and the wheel dwells on each item instead of gliding past.
 **No lines anywhere.** No connecting lines in the atom field, no accent
 underline, no divider on the end card. Dots only.
 
-**Type is set much larger** against the body copy: headlines at 112px (92px
-beside a photo panel), statements at 158px, service names at 84px, with copy
-held at 24 to 25px so the size gap does the work.
+**Type is sized for in-feed viewing on a phone.** Body copy is the thing people
+actually have to read, so it carries real weight: 62px for a standard sub, 58px
+beside a photo panel, 66px under a big statement, 50px for list descriptions.
+Headlines sit above it at 112px (92px beside a photo, 86px on the list slide),
+statements at 158px, service names at 92px. Labels scale with the copy rather
+than staying fine print: eyebrows 26px, the slide counter 28px, the rail 20px.
+
+At these sizes a long line can quietly slide under the bottom rail, so
+`checkfit.mjs` measures every scene and fails if anything leaves the safe area.
+Run it after any copy or size change:
+
+```bash
+node checkfit.mjs align-in-motion.html
+node checkfit.mjs align-public-sector.html
+```
+
+It measures text *ink* via a Range rather than element boxes, because a centred
+full-width paragraph has a 1920px box but short lines.
 
 **New motion.** Word-by-word headline reveals with blur and rise, pills that
 snap in like atoms, a real count-up on the reviews number, ken-burns on the

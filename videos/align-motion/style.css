@@ -105,7 +105,7 @@ html, body {
   padding: 0 44px;
   background: linear-gradient(180deg, rgba(5, 9, 18, 0), rgba(5, 9, 18, .92) 42%);
   border-top: 1px solid rgba(255, 255, 255, .07);
-  font-size: 13px; font-weight: 500; letter-spacing: .19em;
+  font-size: 20px; font-weight: 500; letter-spacing: .17em;
   text-transform: uppercase; color: rgba(198, 216, 248, .58);
 }
 .rail b { font-weight: 800; color: rgba(240, 246, 255, .92); }
@@ -118,7 +118,7 @@ html, body {
 
 .counter {
   position: absolute; right: var(--pad); bottom: 66px;
-  font-size: 17px; font-weight: 700; letter-spacing: .12em;
+  font-size: 28px; font-weight: 700; letter-spacing: .12em;
   color: rgba(255, 255, 255, .34);
 }
 .counter b { color: var(--ink); font-weight: 800; }
@@ -152,7 +152,7 @@ html, body {
 
 .eyebrow {
   display: flex; align-items: center; gap: 18px;
-  font-size: 15px; font-weight: 700; letter-spacing: .30em;
+  font-size: 26px; font-weight: 700; letter-spacing: .26em;
   text-transform: uppercase; color: var(--orange);
   margin-bottom: 28px;
 }
@@ -175,16 +175,16 @@ html, body {
 
 .sub {
   margin-top: 34px;
-  font-size: 25px; font-weight: 400; line-height: 1.55;
-  letter-spacing: -.004em; color: var(--sub);
-  max-width: 780px;
+  font-size: 62px; font-weight: 400; line-height: 1.34;
+  letter-spacing: -.012em; color: var(--sub);
+  max-width: 1480px;
 }
-.split .sub { max-width: 700px; font-size: 24px; }
+.split .sub { max-width: 850px; font-size: 58px; line-height: 1.3; }
 .sub .ac, .caption .ac { color: rgba(255, 255, 255, .95); font-style: normal; font-weight: 600; }
 
 .caption {
-  margin-top: 36px;
-  font-size: 24px; line-height: 1.5; color: var(--sub);
+  margin-top: 40px;
+  font-size: 58px; line-height: 1.32; letter-spacing: -.012em; color: var(--sub);
   text-align: center; width: 100%;
 }
 
@@ -199,7 +199,7 @@ html, body {
 .chip {
   display: inline-flex; align-items: center; gap: 14px;
   padding: 18px 34px;
-  font-size: 27px; font-weight: 600; letter-spacing: -.008em;
+  font-size: 40px; font-weight: 600; letter-spacing: -.012em;
   color: #FFE0C4;
   background: linear-gradient(180deg, rgba(254, 146, 53, .16), rgba(254, 146, 53, .07));
   border: 1px solid rgba(254, 146, 53, .40);
@@ -230,14 +230,17 @@ html, body {
 .s-cards .caption { text-align: left; margin-top: 38px; }
 
 /* -------------------------------------------------------------------- list */
-.list { margin-top: 48px; display: flex; flex-direction: column; gap: 34px; }
+/* the list slide carries the most type of any scene, so it runs a smaller
+   headline and its own rhythm to stay inside the safe area */
+.s-list .headline { font-size: 86px; }
+.list { margin-top: 40px; display: flex; flex-direction: column; gap: 30px; }
 .li { display: flex; align-items: baseline; gap: 30px; }
 .li .num {
-  font-family: var(--serif); font-weight: 700; font-size: 40px;
-  color: var(--orange); letter-spacing: .01em; min-width: 66px;
+  font-family: var(--serif); font-weight: 700; font-size: 58px;
+  color: var(--orange); letter-spacing: .01em; min-width: 92px;
 }
-.li .lt { font-size: 38px; font-weight: 650; color: #F2F7FF; letter-spacing: -.016em; }
-.li .ld { margin-top: 10px; font-size: 22px; color: var(--sub); line-height: 1.5; }
+.li .lt { font-size: 58px; font-weight: 650; color: #F2F7FF; letter-spacing: -.020em; }
+.li .ld { margin-top: 12px; font-size: 50px; color: var(--sub); line-height: 1.28; letter-spacing: -.012em; }
 
 /* ------------------------------------------------------- service reel wheel
    Rows are stacked on one centre point and pushed apart by engine.js. The
@@ -271,12 +274,12 @@ html, body {
 }
 .reel .ricon svg { width: 100%; height: 100%; display: block; }
 .reel .rnum {
-  font-size: 22px; font-weight: 800; letter-spacing: .17em;
+  font-size: 30px; font-weight: 800; letter-spacing: .15em;
   color: rgba(254, 146, 53, calc(.40 + .60 * var(--foc, 0)));
   align-self: flex-start; padding-top: 16px;
 }
 .reel .rname {
-  font-family: var(--serif); font-weight: 700; font-size: 84px;
+  font-family: var(--serif); font-weight: 700; font-size: 92px;
   letter-spacing: -.026em; line-height: 1;
   color: rgb(
     calc(176 + 79 * var(--foc, 0))
@@ -295,9 +298,9 @@ html, body {
   filter: drop-shadow(0 18px 46px rgba(0, 0, 0, .55));
 }
 .s-lockup .headline {
-  max-width: 1420px; margin: 38px auto 0; text-align: center; font-size: 86px;
+  max-width: 1500px; margin: 40px auto 0; text-align: center; font-size: 86px;
 }
-.s-lockup .caption { max-width: 1180px; margin-left: auto; margin-right: auto; }
+.s-lockup .caption { max-width: 1620px; margin-left: auto; margin-right: auto; }
 
 /* --------------------------------------------------------- big statements */
 .s-statement { justify-content: center; }
@@ -307,7 +310,7 @@ html, body {
   font-size: 158px; letter-spacing: -.045em; line-height: 1.0;
 }
 .s-statement .sub {
-  margin: 42px auto 0; text-align: center; max-width: 960px; font-size: 27px;
+  margin: 44px auto 0; text-align: center; max-width: 1400px; font-size: 66px;
 }
 
 /* ------------------------------------------------------------------ bignum */
@@ -331,7 +334,7 @@ html, body {
   display: flex; justify-content: center; gap: 16px; margin-top: 26px;
 }
 .stars .star {
-  font-style: normal; font-size: 34px; color: var(--orange-lo);
+  font-style: normal; font-size: 48px; color: var(--orange-lo);
   text-shadow: 0 0 20px rgba(254, 146, 53, .6);
 }
 
@@ -376,6 +379,6 @@ html, body {
 
 .eurl {
   position: absolute; left: 0; right: 0; top: 668px;
-  font-size: 22px; font-weight: 700; letter-spacing: .30em;
+  font-size: 34px; font-weight: 700; letter-spacing: .28em;
   color: var(--orange-lo);
 }
