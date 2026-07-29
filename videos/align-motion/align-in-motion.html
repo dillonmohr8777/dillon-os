@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Align HCM · Align in Motion (Who We Are)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app"></div>
+<script src="assets/mark-data.js"></script>
+<script src="engine.js"></script>
+<script>
+/* =============================================================================
+   ALIGN IN MOTION · "Who We Are"  ·  1920x1080  ·  ~58s
+   Brand voice rules honoured: no em dashes anywhere, contractions on, one
+   accent phrase per headline marked with {braces}.
+   ========================================================================== */
+AlignMotion.boot({
+  rail: 'WHO WE ARE · ALIGN IN MOTION',
+  url: 'ALIGNHCM.COM',
+  fps: 30,
+  scenes: [
+
+    /* ---- open: atoms swarm in, logo locks up full, then blows into slide 1 */
+    { kind: 'logo', dur: 4.2, logoY: 470, logoW: 900,
+      phases: { t0: 0.20, t1: 1.60, t2: 2.25, t3: 3.50, t4: 4.85 } },
+
+    { kind: 'text', dur: 4.4,
+      eyebrow: 'HUMAN CAPITAL MANAGEMENT',
+      ghost: 'HCM',
+      headline: 'You bought the {platform}.',
+      sub: 'Nobody gets paid by a signature. The value shows up after, or it never shows up at all.' },
+
+    { kind: 'text', dur: 4.6,
+      eyebrow: 'THE REAL WORK',
+      ghost: 'NOW WHAT',
+      headline: 'Go-live is the {starting line}.',
+      underline: true,
+      sub: 'Selection takes a quarter. Everything that makes the investment worth it happens on the other side.' },
+
+    { kind: 'chips', dur: 5.0,
+      eyebrow: 'THE PATTERN',
+      headline: 'Every rollout hits the // {same five walls}.',
+      chips: ['Data conversion', 'Integrations', 'Parallel payroll', 'Go-live', 'Adoption'] },
+
+    /* ---- mid-roll: the mark reassembles, holds, scatters into the next beat */
+    { kind: 'logo', dur: 3.4, logoY: 470, logoW: 860,
+      phases: { t0: 0.05, t1: 1.15, t2: 1.70, t3: 2.70, t4: 4.05 } },
+
+    { kind: 'text', dur: 4.6,
+      eyebrow: 'WHO WE ARE',
+      ghost: 'SPECIALISTS',
+      headline: 'We are the team that {finishes it}.',
+      underline: true,
+      sub: 'An implementation, support, and optimization firm built entirely around HCM.' },
+
+    { kind: 'cards', dur: 4.4,
+      eyebrow: 'ONE PARTNER, EVERY PLATFORM',
+      cards: ['ukg', 'dayforce', 'workday', 'adp'],
+      caption: 'Certified consultants on every platform we support.' },
+
+    { kind: 'grid', dur: 5.0,
+      eyebrow: 'WHAT WE DO',
+      headline: 'Six ways we {carry the load}.',
+      items: ['Client-side leads', 'Integrations', 'Data conversion',
+              'Training', 'Fractional teams', 'M&A support'] },
+
+    { kind: 'lockup', dur: 4.8, image: 'smartcare.png',
+      headline: 'The part nobody sells you.',
+      caption: 'SmartCare is ongoing HCM support after go-live. {Most callbacks inside the hour.}' },
+
+    { kind: 'bignum', dur: 4.2, value: 100, suffix: '+', label: 'five-star reviews',
+      caption: 'Public, verified, and earned one go-live at a time.' },
+
+    { kind: 'text', dur: 4.4,
+      eyebrow: 'THE POINT OF ALL OF IT',
+      ghost: 'OUTCOMES',
+      headline: 'From system problems // to {measurable outcomes}.',
+      underline: true },
+
+    { kind: 'statement', dur: 3.6,
+      headline: 'Kill complexity.',
+      sub: 'Then let the platform do what you paid it to do.' },
+
+    /* ---- close: atoms gather back into the mark and stay ---------------- */
+    { kind: 'endcard', dur: 6.2, logoY: 373, logoW: 943,
+      phases: { t0: 0.05, t1: 1.55, t2: 2.15, t3: 99, t4: 100 },
+      lockupText: 'HUMAN CAPITAL MANAGEMENT',
+      tagline: 'Make the platform {earn it}.',
+      url: 'ALIGNHCM.COM' }
+  ]
+});
+</script>
+</body>
+</html>
