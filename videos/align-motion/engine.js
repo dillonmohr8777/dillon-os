@@ -19,7 +19,6 @@
 
   var W = 1920, H = 1080;
   var ORANGE = [254, 146, 53];          // #FE9235  sampled from the logo mark
-  var ACCENT = '#FF8A22';               // eyebrow / accent type
   var COOL = [214, 230, 255];           // cool white for lattice + particles
 
   /* ---------------------------------------------------------------- easing */
@@ -27,7 +26,6 @@
   function c01(v) { return clamp(v, 0, 1); }
   function outCubic(t) { t = c01(t); return 1 - Math.pow(1 - t, 3); }
   function outQuint(t) { t = c01(t); return 1 - Math.pow(1 - t, 5); }
-  function inCubic(t) { t = c01(t); return t * t * t; }
   function inOut(t) { t = c01(t); return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
   function smooth(t) { t = c01(t); return t * t * (3 - 2 * t); }
   function mix(a, b, t) { return a + (b - a) * t; }
@@ -531,7 +529,6 @@
     });
 
     /* ------------------------------------------------------------- render */
-    var shown = [];
     function render(t) {
       t = clamp(t, 0, DUR - 0.0001);
 
@@ -551,7 +548,6 @@
       fx.clearRect(0, 0, W, H);
 
       var activeCh = 0;
-      var next = [];
       for (var i = 0; i < scenes.length; i++) {
         var sc = scenes[i];
         var pad = 0.7;                       // scenes stay live briefly for crossfade
@@ -560,12 +556,10 @@
           continue;
         }
         sc._node.style.display = '';
-        next.push(sc);
         var lt = t - sc._in;
         drawScene(sc, lt, t);
         if (sc._ch && t < sc._out) activeCh = sc._ch;
       }
-      shown = next;
 
       if (activeCh) { counter.style.opacity = '1'; cNum.textContent = String(activeCh).padStart(2, '0'); }
       else counter.style.opacity = '0';
@@ -643,8 +637,6 @@
         var box = { cx: W / 2, cy: sc.logoY || H * 0.44, w: sc.logoW || 900 };
         atoms.draw(fx, lt, ph, box);
         /* HCM subline + endcard type keyed to the solid phase */
-        var solid = smooth(c01((lt - ph.t1) / (ph.t2 - ph.t1))) *
-          (1 - smooth(c01((lt - ph.t3) / (ph.t4 - ph.t3)) * 1.6));
         var tags = sc._node.querySelectorAll('.anim');
         for (var k = 0; k < tags.length; k++) {
           var kk = tags[k];
@@ -654,7 +646,6 @@
           kk.style.transform = 'translate3d(0,' + ((1 - sd) * 16).toFixed(2) + 'px,0)';
           kk.style.filter = sd < 0.99 ? 'blur(' + ((1 - sd) * 7).toFixed(2) + 'px)' : 'none';
         }
-        void solid;
       }
     }
 
