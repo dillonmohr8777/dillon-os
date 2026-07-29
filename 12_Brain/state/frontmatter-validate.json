@@ -1,0 +1,346 @@
+{
+  "automation_id": "frontmatter-validate",
+  "started_at": "2026-07-29T21:13:09.932Z",
+  "status": "ok",
+  "counts": {
+    "files": 37,
+    "incomplete": 0,
+    "complete": 37
+  },
+  "rows": [
+    {
+      "file": "01_Clients/AWCI.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Align HCM.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Bar Crawl USA/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-04-15",
+      "due": "2026-04-25"
+    },
+    {
+      "file": "01_Clients/Bar Crawl USA.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Bend Plastic Surgery.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Blissful Events.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "completed",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Bluegrass Janitorial.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Bok Law/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-04-14",
+      "due": "2026-04-19"
+    },
+    {
+      "file": "01_Clients/Bok Law.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Bridge Software Development/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active-discovery",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Bridge of Hope OTC.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Buzz Bull.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Coach B.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Commercial Cleaners Alliance/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "onboarding",
+      "last_touched": "2026-04-14",
+      "due": "2026-04-16"
+    },
+    {
+      "file": "01_Clients/Commercial Cleaners Alliance.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Florecita.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Fresh Blends - Replenish.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Fresh Blends Replenish/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-04-13",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Hardwood Artisan/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "at_risk",
+      "last_touched": "2026-04-07",
+      "due": "2026-04-18"
+    },
+    {
+      "file": "01_Clients/Hardwood Artisan.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Jeff Hozias/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-04-14",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Jeff Hozias.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/KJB.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Kimberly James Bridal/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-04-15",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Link Eze/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-04-05",
+      "due": "2026-04-06"
+    },
+    {
+      "file": "01_Clients/Link Eze.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/NKCDC/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-04-15",
+      "due": "2026-04-16"
+    },
+    {
+      "file": "01_Clients/NKCDC.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Next Gen Solutions.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Omega Landscaping/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-04-14",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Omega Landscaping.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Onsite Concrete/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-04-09",
+      "due": "2026-04-16"
+    },
+    {
+      "file": "01_Clients/Onsite Concrete.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/PNW Pro Clean.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Shadow HVAC/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-03-02",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Shadow HVAC.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    },
+    {
+      "file": "01_Clients/Vanessa.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-29",
+      "due": "none"
+    }
+  ],
+  "written_at": "2026-07-29T21:13:09.932Z"
+}

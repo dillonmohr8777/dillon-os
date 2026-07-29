@@ -3,9 +3,12 @@ client: Tori
 project: Bridge Software Development
 status: active-discovery
 confidentiality: private-nda
-github: https://github.com/dillonmohr8777/bridge-discovery-prototype
+github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
 updated: 2026-07-11
+last_touched: 2026-07-29
+next_action: TBD — needs human next action
+due: none
 ---
 
 # Bridge Software Development

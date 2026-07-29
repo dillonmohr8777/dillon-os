@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "updated": "2026-07-29",
+  "notes": "Managed properties for the site-health sentinel. Live checks are opt-in. Canary POSTs only when --canary is passed and only to URLs marked canary_allowed.",
+  "properties": [
+    {
+      "id": "book-ironicineptocracy",
+      "name": "Ironic Ineptocracy book site",
+      "url": "https://ironicineptocracy.com",
+      "checks": ["http_ok", "form_endpoint", "tracking_hints"],
+      "form_endpoint": "/api/dossier-leads",
+      "canary_allowed": false,
+      "priority": "critical",
+      "notes": "Historical dead form. Fixture mode simulates failure until live confirm."
+    },
+    {
+      "id": "mohr-media",
+      "name": "Mohr Media",
+      "url": "https://themohrmedia.com",
+      "checks": ["http_ok", "tracking_hints"],
+      "priority": "high"
+    },
+    {
+      "id": "immohrtal",
+      "name": "IMMOHRTAL",
+      "url": "https://immohrtal-site.netlify.app",
+      "checks": ["http_ok", "form_endpoint"],
+      "form_endpoint": "/",
+      "form_name": "immohrtal-list",
+      "canary_allowed": false,
+      "priority": "medium"
+    },
+    {
+      "id": "fixture-healthy",
+      "name": "Fixture healthy site",
+      "url": "fixture://healthy",
+      "fixture": "_os/automation/fixtures/sites/healthy/index.html",
+      "checks": ["fixture_static"],
+      "priority": "test"
+    },
+    {
+      "id": "fixture-broken-form",
+      "name": "Fixture broken form",
+      "url": "fixture://broken-form",
+      "fixture": "_os/automation/fixtures/sites/broken-form/index.html",
+      "checks": ["fixture_static"],
+      "form_endpoint": "/api/dossier-leads",
+      "priority": "test"
+    }
+  ]
+}

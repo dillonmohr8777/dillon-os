@@ -2,6 +2,9 @@
 tags: [client, 1099]
 status: active
 industry: marketing
+last_touched: 2026-07-29
+next_action: TBD — needs human next action
+due: none
 ---
 
 # Buzz Bull Marketing Systems
