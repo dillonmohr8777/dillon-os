@@ -56,6 +56,35 @@ Pages compose from this fixed set, each `<section class="<name> surface-<paper|a
 
 Surface rhythm: alternate surfaces so no two adjacent sections share one (typical flow: paper → accent → panel → deep → paper...).
 
+## Canonical batch spec (measured, not guessed)
+
+Every new batch site must resemble the majority of the 25. These are the actual measured numbers across the folder, and they are the acceptance targets for the batch runner:
+
+| Dimension | Range across the 25 | Target for new builds |
+|---|---|---|
+| Sections total | 8 to 11 | **10** (hero + 8 middle + closing) |
+| Words of real copy | 293 to 543 | **350 to 500** |
+| Images | 7 to 13 (mode 13) | **12 to 13** |
+| Final page weight | 22 to 36 KB | **27 to 37 KB** |
+
+Section frequency across the 24 profile-template sites, which defines what's mandatory versus optional:
+
+| Section | Appears in | Rule for new builds |
+|---|---|---|
+| `hero` | 24/24 | Required, always first |
+| `offerings` | 24/24 | Required |
+| `story` | 24/24 | Required |
+| `gallery` | 24/24 | Required |
+| `contact-system` | 24/24 | Required, always second to last |
+| `closing` | 24/24 | Required, always last |
+| `proof` | 21/24 | Include unless there are fewer than 3 verifiable facts |
+| `feature` | 21/24 | Include when there's one signature thing to spotlight |
+| `experience` | 16/24 | Include when the visit or process is a selling point |
+| `catalog` | 16/24 | Include when they have 3+ real deep links (menu, booking, shop) |
+| `spotlight` | 7/24 | Only for a genuine secondary business line (merch, wholesale, events) |
+
+So the floor is 6 required sections; hitting the target of 10 means adding `proof`, `feature`, and two of `experience`/`catalog`/`spotlight`. A build that lands at 8 sections and 300 words is thin compared to the batch and should be sent back for more research, not shipped.
+
 ## Shared chrome and behavior
 
 - `site-header`: fixed/absolute pill bar with `brand-logo` (or `wordmark` fallback), 3 anchor links, one `nav-cta`. Collapses to logo + CTA under 850px.
