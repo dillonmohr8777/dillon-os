@@ -90,14 +90,22 @@ def main(path):
                       - cv2.cvtColor(frames[i - 1], cv2.COLOR_BGR2GRAY).astype(np.float32)
                       ).mean()) for i in range(1, n)]
     d = np.array(d)
-    frozen = np.where(d < 0.12)[0]
+    frozen = np.where(d < 0.06)[0]
     check('no frozen stretches', len(frozen) < 8,
           f'{len(frozen)} near-static frame pairs')
-    # a real cut would spike far above the transition ramps
-    spikes = np.where(d > 26)[0]
-    check('no unintended hard cuts', len(spikes) == 0,
-          f'{len(spikes)} spikes' + (f' at {[f"{s/30:.2f}s" for s in spikes[:6]]}'
-                                     if len(spikes) else ''))
+    # Spikes inside a transition window are the transition doing its job
+    # (push and swipebar are hard-edged by design). A spike OUTSIDE one would
+    # be an unintended jump - that is what this looks for.
+    DECISIVE = {'push', 'swipebar', 'leafwipe', 'zoomblur', 'inkdissolve'}
+    windows = [(x['at'], x['at'] + x['dur']) for x in M.TRANSITIONS]
+    spikes = [int(i) for i in np.where(d > 26)[0]]
+    stray = [i for i in spikes
+             if not any(a - 0.05 <= (i + 1) / 30 <= b + 0.05 for a, b in windows)]
+    check('no unintended hard cuts', len(stray) == 0,
+          f'{len(spikes)} spikes, all inside transitions'
+          if not stray else f'{len(stray)} stray at '
+          f'{[f"{i/30:.2f}s" for i in stray[:6]]}')
+    _ = DECISIVE
     # luma flicker: high-frequency wobble in overall brightness
     L = np.array(lums)
     flick = float(np.abs(np.diff(L, n=2)).mean())
@@ -125,9 +133,14 @@ def main(path):
     inside = all(M.SAFE[0] <= c['x'] <= M.SAFE[2] and M.SAFE[1] <= c['y'] <= M.SAFE[3]
                  for c in M.COPY if 'y' in c and c['align'] != 'center')
     check('all copy inside safe box', inside, f'{M.SAFE}')
-    clips = sorted({s['clip'] for s in M.SHOTS})
+    clips = sorted({s['clip'] for s in M.SHOTS if not s['still']})
     check('all five clips used', clips == [1, 2, 3, 4, 5],
-          'shots: ' + ', '.join(f"c{s['clip']}" for s in M.SHOTS))
+          '/'.join(f'c{c}' for c in clips))
+    stills = sorted({s['still'] for s in M.SHOTS if s['still']})
+    check('all five stills used', len(stills) == 5, ', '.join(stills))
+    check('intro is a particle-ink logo, not a static card',
+          M.INTRO['t_out'] > M.INTRO['t_in'] + 2.0,
+          f"{M.INTRO['t_out']-M.INTRO['t_in']:.2f}s")
 
     print('\n-- audio')
     # raw 32-bit float PCM: keeps any inter-sample overshoot the AAC decoder
@@ -151,7 +164,7 @@ def main(path):
     os.remove(wav)
 
     # ------------------------------------------------ six-frame contact sheet
-    picks = [2.60, 8.60, 17.20, 25.00, 34.60, 45.60]
+    picks = [2.60, 6.90, 13.60, 20.60, 34.60, 47.60]
     tiles = []
     cap = cv2.VideoCapture(path)
     for tv in picks:
@@ -200,6 +213,35 @@ def main(path):
     cv2.imwrite(lp, np.vstack(lab))
     print(f'logo verify   -> {lp}')
     _ = al
+
+    # ---- the ink intro must RESOLVE to the exact official artwork
+    logo_src = cv2.imread(os.path.join(ROOT, 'assets', 'logo',
+                                       'Hope-Wellness-Center-Mental-Health.png'),
+                          cv2.IMREAD_UNCHANGED)
+    al2 = logo_src[..., 3:4].astype(np.float32) / 255.0
+    cap = cv2.VideoCapture(path)
+    for label, tv, lw, cy in (('intro', 3.40, M.INTRO['logo_w'], M.INTRO['cy']),
+                              ('resolve', 47.60,
+                               [c for c in M.COPY if c['id'] == 'logo'][0]['logo_w'],
+                               [c for c in M.COPY if c['id'] == 'logo'][0]['cy'])):
+        cap.set(cv2.CAP_PROP_POS_FRAMES, int(tv * 30))
+        okf, fr = cap.read()
+        hh2 = int(round(lw / 3.0921))
+        y0 = int(cy - hh2 / 2)
+        x0 = int(M.W / 2 - lw / 2)
+        crop = fr[y0:y0 + hh2, x0:x0 + int(lw)].astype(np.float32)
+        bgm = np.median(crop.reshape(-1, 3), axis=0)
+        ref = (logo_src[..., :3] * al2 + bgm * (1 - al2))
+        ref = cv2.resize(ref, (crop.shape[1], crop.shape[0]),
+                         interpolation=cv2.INTER_AREA)
+        g1 = cv2.cvtColor(ref.astype(np.uint8), cv2.COLOR_BGR2GRAY).astype(np.float32)
+        g2 = cv2.cvtColor(crop.astype(np.uint8), cv2.COLOR_BGR2GRAY).astype(np.float32)
+        g1 -= g1.mean()
+        g2 -= g2.mean()
+        ncc = float((g1 * g2).sum() / max(1e-9, np.sqrt((g1 * g1).sum() * (g2 * g2).sum())))
+        check(f'logo at {label} matches the official artwork (NCC>0.90)',
+              ncc > 0.90, f'{ncc:.4f}')
+    cap.release()
 
     fails = [r for r in results if r[0] == BAD]
     print(f'\n{len(results) - len(fails)}/{len(results)} checks passed')

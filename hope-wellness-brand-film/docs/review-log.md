@@ -1,7 +1,8 @@
 # Mandatory quality review — record
 
 Run against `render/hope-wellness-five-video-brand-film-final.mp4`.
-Automated portion: `python3 project/qc.py` — **39/39 checks pass**.
+Automated portion: `python3 project/qc.py` — **43/43 checks pass**.
+(Revision 2 findings are appended at the end of this file.)
 
 | # | Check | Result |
 |---|---|---|
@@ -124,3 +125,115 @@ on-screen travel. Peak −0.71 dBFS, no clipping.
 | `docs/review/score-spectrogram.jpg` | harmonic content, chord changes, transition swells |
 | `docs/review/clip3-word-cloud-degradation.jpg` | why clip 3 is cut at 5.80 s of source |
 | `docs/review/botanical-cutouts.jpg` | the 19 botanicals keyed out of the artwork |
+| `docs/review/final-review.jpg` | 20 sampled moments from the delivered file |
+| `docs/review/ink-intro.jpg` | the ink logo assembling, frame by frame |
+| `docs/review/ink-logo-vs-official-2x.jpg` | settled intro logo vs the official PNG at 2× nearest |
+| `docs/review/swipes-and-pushes.jpg` | type swipes, swipe bars and the push cut |
+| `docs/review/green-gradient-type.jpg` | the brand-green gradient behind copy |
+| `docs/review/yoga-reframe.jpg` | the reframe that cleared the right-hand copy |
+
+
+---
+
+# Revision 2 — intro, stills and motion pass
+
+Requested: a magic-ink particle logo intro, the five new stills added, more
+green gradient behind the type, better type placement, font swipes, a 3D pop,
+and more motion / better cuts overall. Runtime 47.70 → **49.80 s**, sections
+10 → **14**, transitions 9 → **13**.
+
+`project/qc.py` — **43/43 pass**, including two new logo-integrity checks and
+coverage checks for all five clips *and* all five stills.
+
+## Findings from review, and what was changed
+
+**I. The intro's held logo was not the pure official asset.**
+The particle layer was still being drawn *underneath* the resolved bitmap, so
+its 3×3 splats and bleed halo thickened the mark's strokes. Measured NCC against
+the source PNG: **0.879**. The particle layer now fades out completely as the
+bitmap cross-resolves, and the settled lockup is the downloaded asset alone —
+**0.953** (the residual is the gradient background, not distortion; a 2×
+nearest-neighbour comparison confirms the strokes, letterforms and colours are
+identical). The end card measures **0.998**.
+
+**J. Drifting botanicals could pass in front of the intro logo.**
+They were composited after it. Reordered to draw behind the lockup, so nothing
+obstructs it at any point.
+
+**K. A uniform "breath" scale on the held intro logo was removed.**
+It was legitimate (the whole asset scaled), but it made the lockup differ from
+the end card and defeated exact verification. The intro logo now holds dead
+still at native scale, exactly like the resolve.
+
+**L. The zoom-punch transition read as a double exposure.**
+Two legible images were crossfading while both were still readable. Restructured
+so the outgoing frame is driven to abstract radial streaks *before* the incoming
+arrives (crossfade starts at 40 % instead of 22 %, blur ramps 1.55× faster).
+Only one image is ever legible.
+
+**M. The yoga shot's reframe put the figure where the right-hand copy sits.**
+Widening that shot moved her to screen x 479–1007, straight through "A place /
+to feel / heard." at x 812. Re-framed to vw 900 / sx 0 so she lands at 157–684,
+leaving the right third clear.
+
+**N. One still's extension mirrored a dark navy plant pot into the type area.**
+Flipped the pottery still's plate to the right so the reconstructed side falls
+over the pale vase region instead, and moved its copy to the left.
+
+**O. The green gradient was too subtle to read as requested.**
+Strengthened the scrim (tint 0.22 → 0.36, lift 0.30 → 0.34, pad 190×120 →
+250×156) and made it directional — arriving from low and from the type's outer
+edge — so it reads as lighting rather than a box. Contrast for the blue type
+stays ≈5.6:1. A faint green lean (6 %) was also added to the reconstructed frame
+edges so the gradient language runs through the whole film, not only behind copy.
+
+**P. The first frame of the film was empty.**
+The ink cloud had not built yet and the single opening bloom had faded. Added a
+second staggered bloom (0.34 s, 1.05 s) and pulled particle arrival earlier
+(t0 max 0.94 → 0.80), so frame 1 already carries a visible event.
+
+**Q. Four transitions' sound design was masked by the pad bed.**
+Bright noise alone could not cut through. Added a dedicated **low-mid whoosh**
+generator for the mechanical cuts (zoom punch, push, both swipes) and raised
+their levels. 12 of 13 transitions now read at 1.25–2.54× the local bed; the
+thirteenth (leaf pass, 1.13×) carries a distinct leaf-rustle timbre plus the
+largest visual event in the film.
+
+**R. Programme level dropped when the duck count went 9 → 13.**
+Ducking 3 dB at thirteen cuts cost overall loudness (RMS had fallen to
+−16.1 dBFS). Reduced the duck to 2 dB with a higher floor and eased the glue
+threshold: RMS back to **−14.11 dBFS**, peak −0.80, correlation +0.675, mono-fold
+penalty −0.77 dB.
+
+**S. Hard-cut detection had to learn the new transition vocabulary.**
+`push` and `swipebar` are decisive by design and legitimately spike the
+frame-delta metric. The check now distinguishes spikes *inside* a transition
+window (the transition working) from stray spikes *outside* one (an unintended
+jump). Result: 6 spikes, all inside transitions, 0 stray.
+
+## New motion vocabulary
+
+- **Ink logo assembly** — particles sampled from the official artwork's own
+  pixels, flown in on curl-noise paths in staggered waves, landing exactly.
+- **Ink dissolve** — the same motif as a transition: the frame breaks into motes
+  that lift and smear while the next bleeds through.
+- **3D pop** — a perspective tilt resolving flat over an extruded edge, with the
+  extrusion depth collapsing as it settles.
+- **Type swipe** — a hard brand-green bar sweeps across, dragging the letters in
+  behind it, with a glow at the leading edge.
+- **Swipe bar transition** — a full-frame green bar swipe that drags the incoming
+  shot with it, in both directions.
+- **Zoom punch** and **push** — added for cutting variety.
+
+## Remaining defects that could not be repaired
+
+Unchanged from revision 1 (clip 3's word cloud garbling after ≈6.2 s, clip 5's
+mat edges in the band shots, and the 24 → 30 fps cadence), plus:
+
+4. **Two of the five supplied stills** (pottery, tree pose) depict scenes that
+   already exist as animated clips. They are used as held punctuation beats at
+   different framings rather than as substitutes, but they are inherently less
+   novel than the bench, painting and dancing stills.
+5. **The ink-dissolve out of the intro** briefly shows the logo breaking up over
+   the opening water shot. It is the intended motif, but for ~0.7 s the mark and
+   the footage co-exist. Shortening it further would lose the ink read.

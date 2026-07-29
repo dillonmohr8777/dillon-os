@@ -259,6 +259,26 @@ def airy_sweep(dur=1.0, vel=1.0, up=True):
     return out * (0.28 * vel)
 
 
+def whoosh(dur=0.85, vel=1.0):
+    """Low-mid air movement for the mechanical cuts (punch-in, push, swipe).
+    Reads through a pad-heavy bed where bright noise alone would be masked."""
+    n = int(dur * SR)
+    t = np.arange(n, dtype=np.float32) / SR
+    u = t / dur
+    w = pink(n)
+    out = np.zeros(n, np.float32)
+    seg = int(0.035 * SR)
+    for i in range(0, n, seg):
+        j = min(n, i + seg)
+        f0 = 90.0 + 900.0 * float(u[i]) ** 1.4
+        out[i:j] = bp(w[i:j], f0, f0 * 3.4, 2)
+    body = np.sin(2 * np.pi * (150.0 - 70.0 * u) * t) * 0.35
+    out = out + body * np.exp(-np.clip(u - 0.55, 0, 1) * 7.0)
+    e = np.where(u < 0.72, np.clip(u / 0.72, 0, 1) ** 1.5,
+                 np.exp(-(u - 0.72) / 0.10))
+    return out * e * (0.30 * vel)
+
+
 def leaf_rustle(dur=0.55, vel=1.0):
     n = int(dur * SR)
     out = np.zeros(n, np.float32)
@@ -351,51 +371,66 @@ def convolve_stereo(x, ir, ir_side=None, side=0.28):
 
 # ------------------------------------------------------------- arrangement
 CH = [  # (bar_start, bar_count, chord notes, sub root, brightness, vel)
-    (0,  2, ['F#3', 'A3', 'C#4', 'E4'],        'F#1', 0.20, 0.55),
-    (2,  2, ['D3', 'F#3', 'A3', 'C#4'],        'D1',  0.30, 0.70),
-    (4,  2, ['A3', 'C#4', 'E4', 'A4'],         'A1',  0.40, 0.80),
-    (6,  2, ['E3', 'G#3', 'B3', 'E4'],         'E1',  0.45, 0.80),
-    (8,  2, ['D3', 'F#3', 'A3', 'C#4'],        'D1',  0.55, 0.90),
+    (0,  2, ['F#3', 'A3', 'C#4', 'E4'],        'F#1', 0.16, 0.42),   # intro, sparse
+    (2,  2, ['D3', 'F#3', 'A3', 'C#4'],        'D1',  0.30, 0.64),
+    (4,  2, ['A3', 'C#4', 'E4', 'A4'],         'A1',  0.42, 0.78),
+    (6,  2, ['E3', 'G#3', 'B3', 'E4'],         'E1',  0.48, 0.82),
+    (8,  2, ['D3', 'F#3', 'A3', 'C#4'],        'D1',  0.56, 0.90),
     (10, 1, ['B2', 'D3', 'F#3', 'A3'],         'B1',  0.58, 0.92),
     (11, 1, ['E3', 'A3', 'B3', 'E4'],          'E1',  0.62, 0.95),
     (12, 1, ['D3', 'F#3', 'A3', 'C#4'],        'D1',  0.78, 1.00),
-    (13, 1, ['E3', 'G#3', 'B3', 'E4'],         'E1',  0.82, 1.00),
-    (14, 2, ['A2', 'E3', 'A3', 'B3', 'C#4'],   'A1',  0.66, 0.86),
+    (13, 1, ['E3', 'G#3', 'B3', 'E4'],         'E1',  0.84, 1.00),
+    (14, 3, ['A2', 'E3', 'A3', 'B3', 'C#4'],   'A1',  0.66, 0.86),   # resolve
 ]
 
 # piano phrases: (time in bars, note, duration s, velocity)
 MEL = [
-    (0.0, 'A4', 3.6, 0.50), (1.5, 'C#5', 3.0, 0.42),
-    (2.0, 'F#4', 3.4, 0.52), (3.0, 'A4', 2.6, 0.46), (3.5, 'D5', 3.0, 0.44),
-    (4.0, 'C#5', 3.2, 0.56), (5.0, 'E5', 2.6, 0.48), (5.5, 'A4', 2.4, 0.42),
-    (6.0, 'B4', 3.0, 0.54), (7.0, 'G#4', 2.6, 0.46), (7.5, 'E5', 2.8, 0.44),
-    (8.0, 'F#5', 3.2, 0.60), (9.0, 'D5', 2.6, 0.50), (9.5, 'A4', 2.6, 0.44),
-    (10.0, 'F#5', 2.8, 0.58), (10.5, 'D5', 2.2, 0.46),
-    (11.0, 'E5', 2.8, 0.60), (11.5, 'B4', 2.4, 0.48),
-    (12.0, 'A5', 3.4, 0.72), (12.5, 'F#5', 2.8, 0.56), (13.0, 'E5', 3.0, 0.66),
-    (13.5, 'C#5', 2.6, 0.52),
-    (14.0, 'A4', 4.4, 0.62), (14.5, 'C#5', 4.0, 0.50),
-    (15.0, 'E5', 4.6, 0.56), (15.6, 'A5', 4.2, 0.44),
+    # nothing before bar 1.4 (4.2 s): the ink intro stays on pad and bell alone
+    (1.45, 'A4', 3.4, 0.44), (1.95, 'C#5', 3.0, 0.38),
+    (2.05, 'F#4', 3.4, 0.50), (3.00, 'A4', 2.6, 0.44), (3.55, 'D5', 3.0, 0.42),
+    (4.00, 'C#5', 3.2, 0.54), (5.00, 'E5', 2.6, 0.46), (5.55, 'A4', 2.4, 0.40),
+    (6.00, 'B4', 3.0, 0.52), (7.00, 'G#4', 2.6, 0.44), (7.55, 'E5', 2.8, 0.42),
+    (8.00, 'F#5', 3.2, 0.58), (9.00, 'D5', 2.6, 0.48), (9.55, 'A4', 2.6, 0.42),
+    (10.00, 'F#5', 2.8, 0.56), (10.55, 'D5', 2.2, 0.44),
+    (11.00, 'E5', 2.8, 0.58), (11.55, 'B4', 2.4, 0.46),
+    (12.00, 'A5', 3.4, 0.72), (12.55, 'F#5', 2.8, 0.54),
+    (13.00, 'E5', 3.0, 0.66), (13.55, 'C#5', 2.6, 0.50),
+    (14.00, 'A4', 4.4, 0.62), (14.55, 'C#5', 4.0, 0.48),
+    (15.10, 'E5', 4.6, 0.54), (15.70, 'A5', 4.2, 0.42),
+    (16.20, 'C#5', 3.6, 0.30),
 ]
 
 SFX = [
-    (0.00, 'water',   1.00), (0.60, 'foot',    0.35),
-    (4.60, 'sweep',   1.25), (4.60, 'water',   0.95),
-    (5.20, 'breath',  0.90), (8.40, 'leaf',    0.55),
-    (10.20, 'sweep',  1.15), (10.20, 'bellhi', 0.60),
-    (11.60, 'breath', 0.70),
-    (14.10, 'leaf',   1.45), (14.10, 'sweep',  0.95),
-    (16.20, 'clay',   0.55),
-    (19.40, 'clay',   1.00), (19.40, 'sweep',  0.70),
-    (23.00, 'sweep',  1.05), (23.00, 'bellhi', 0.62),
-    (24.60, 'band',   0.60),
-    (27.90, 'band',   0.95), (27.85, 'sweep',  0.65),
-    (30.60, 'band',   0.50),
-    (32.20, 'sweep',  0.95), (32.40, 'water',  0.85),
-    (35.00, 'water',  0.50),
-    (37.10, 'water',  1.15), (37.10, 'sweep',  0.95),
-    (39.20, 'leaf',   0.50),
-    (42.10, 'bellhi', 0.95), (42.05, 'sweep',  0.55), (42.10, 'breath', 0.55),
+    # --- ink intro
+    (0.06, 'sweep',   1.05), (0.06, 'breath',  0.55),
+    (0.60, 'sweep',   0.60),
+    (2.08, 'bellhi',  1.00), (2.08, 'sweep',   0.55),
+    (2.90, 'leaf',    0.45),
+    # --- transitions, one accent per cut (times are when it is HEARD)
+    (4.20,  'sweep',  1.20), (4.20,  'water',  0.95),
+    (5.40,  'water',  0.55), (6.20,  'foot',   0.30),
+    (8.40,  'sweep',  1.10), (8.40,  'water',  0.70),
+    (9.30,  'breath', 0.85), (10.40, 'leaf',   0.50),
+    (11.20, 'whoosh', 0.70), (11.20, 'sweep',  1.05), (11.20, 'band',   0.55),
+    (12.60, 'breath', 0.65),
+    (15.00, 'sweep',  1.00), (15.00, 'bellhi', 0.55),
+    (16.30, 'leaf',   0.45),
+    (17.80, 'whoosh', 1.05), (17.80, 'sweep',  1.05), (17.80, 'clay',   0.55),
+    (19.20, 'clay',   0.50),
+    (21.60, 'clay',   0.95), (21.60, 'sweep',  0.65),
+    (23.80, 'leaf',   1.40), (23.80, 'sweep',  0.85),
+    (25.20, 'band',   0.55),
+    (27.60, 'band',   1.00), (27.60, 'sweep',  0.70),
+    (29.40, 'band',   0.45),
+    (31.00, 'whoosh', 1.05), (31.00, 'sweep',  1.05), (31.00, 'foot',   0.40),
+    (32.40, 'clay',   0.45),
+    (33.40, 'whoosh', 1.40), (33.40, 'sweep',  1.20), (33.40, 'band',   0.50),
+    (35.00, 'leaf',   0.50),
+    (36.40, 'sweep',  1.05), (36.60, 'water',  0.85),
+    (38.20, 'water',  0.50),
+    (39.60, 'water',  0.95), (39.60, 'sweep',  0.75),
+    (41.60, 'leaf',   0.45),
+    (44.40, 'bellhi', 1.00), (44.40, 'sweep',  0.60), (44.40, 'breath', 0.55),
 ]
 
 
@@ -423,7 +458,7 @@ def build():
 
     # ---- gentle arpeggio from bar 5, panned alternately
     for (b0, nb, notes, root, bright, vel) in CH:
-        if b0 < 5:
+        if b0 < 4:
             continue
         fr = [note(x) for x in notes]
         steps = int(nb * 8)
@@ -440,9 +475,9 @@ def build():
             add(music, pluck(f, 0.5, v), t0, -0.4 + 0.8 * (i % 2), 1.0)
 
     # ---- percussion: enters bar 5, drops out for the brand card
-    for bar in range(5, 15):
+    for bar in range(4, 15):
         base = bar * BAR
-        ramp = min(1.0, 0.45 + 0.09 * (bar - 5))
+        ramp = min(1.0, 0.42 + 0.095 * (bar - 4))
         if bar >= 14:
             break
         for beat in range(4):
@@ -463,9 +498,11 @@ def build():
     # ---- sound design. LEAD[kind] is where that sound's crest sits inside
     #      itself, so the table's times are when it is HEARD, not when it starts.
     LEAD = {'water': 0.45, 'sweep': 0.78, 'leaf': 0.30, 'breath': 0.50,
-            'clay': 0.04, 'band': 0.50, 'bellhi': 0.02, 'foot': 0.10}
+            'clay': 0.04, 'band': 0.50, 'bellhi': 0.02, 'foot': 0.10,
+            'whoosh': 0.72}
     DURS = {'water': 1.7, 'sweep': 1.05, 'leaf': 0.6, 'breath': 2.3,
-            'clay': 1.6, 'band': 0.75, 'bellhi': 3.0, 'foot': 1.1}
+            'clay': 1.6, 'band': 0.75, 'bellhi': 3.0, 'foot': 1.1,
+            'whoosh': 0.85}
     for (t0, kind, v) in SFX:
         t0 = max(0.0, t0 - LEAD[kind] * DURS[kind])
         if kind == 'water':
@@ -484,9 +521,11 @@ def build():
             add(fx, bell(note('A5'), 3.0, v), t0, 0.12, 1.0)
         elif kind == 'foot':
             add(fx, footsteps(1.1, v), t0, -0.3, 1.0)
+        elif kind == 'whoosh':
+            add(fx, whoosh(0.85, v), t0, 0.0, 1.0)
     # the band wipe physically travels left to right: pan the stroke with it
     sw = airy_sweep(0.8, 0.6)
-    i0 = int(max(0.0, 27.9 - 0.78 * 0.8) * SR)
+    i0 = int(max(0.0, 27.6 - 0.78 * 0.8) * SR)
     n = min(len(sw), N - i0)
     p = np.linspace(-0.85, 0.85, n, dtype=np.float32)
     fx[i0:i0 + n, 0] += sw[:n] * np.cos((p + 1) * np.pi / 4)
@@ -495,7 +534,7 @@ def build():
     # ---- ambience bed: quiet outdoor air, a touch more open over the water
     t = np.arange(N, dtype=np.float32) / SR
     bedm = lp(pink(N), 900, 2)
-    water_zones = ((0.0, 5.4), (32.0, 37.9))
+    water_zones = ((4.1, 9.0), (36.2, 39.9))
     wz = np.zeros(N, np.float32)
     for (a, b) in water_zones:
         i, j = int(a * SR), min(N, int(b * SR))
@@ -520,8 +559,8 @@ def build():
         a0 = tr['at']
         pre = np.clip((tt - (a0 - 0.14)) / 0.14, 0, 1)
         rel = 1.0 - np.clip((tt - a0) / 0.55, 0, 1)
-        duck -= 0.30 * np.minimum(pre, rel) ** 0.8
-    duck = np.clip(duck, 0.55, 1.0)[:, None]
+        duck -= 0.22 * np.minimum(pre, rel) ** 0.8
+    duck = np.clip(duck, 0.62, 1.0)[:, None]
     music = music * duck
     wet_music = wet_music * duck
     perc = perc * (0.55 + 0.45 * duck)
@@ -547,7 +586,7 @@ def build():
     # ---- gentle bus glue, then a soft limiter. Nothing should ever clip.
     env = np.maximum.reduce([np.abs(mix[:, 0]), np.abs(mix[:, 1])])
     env = lp(env, 8.0, 1)
-    thr = 0.50
+    thr = 0.44
     gr = np.ones(N, np.float32)
     over = env > thr
     gr[over] = (thr + (env[over] - thr) * 0.55) / env[over]
@@ -565,7 +604,7 @@ def build():
 
     peak = float(np.max(np.abs(mix)))
     mix = np.tanh(mix / max(peak, 1e-6) * 0.94) * 0.95
-    mix = mix / max(float(np.max(np.abs(mix))), 1e-6) * 0.891   # -1.0 dBFS
+    mix = mix / max(float(np.max(np.abs(mix))), 1e-6) * 0.912   # -0.8 dBFS
     return mix
 
 

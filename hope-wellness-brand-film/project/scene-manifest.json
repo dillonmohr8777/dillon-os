@@ -4,8 +4,8 @@
     "width": 1200,
     "height": 628,
     "fps": 30,
-    "total_seconds": 47.7,
-    "frames": 1431,
+    "total_seconds": 49.8,
+    "frames": 1494,
     "aspect": "1.911:1",
     "video": "H.264 High yuv420p",
     "audio": "AAC 192 kb/s 48 kHz stereo"
@@ -32,24 +32,40 @@
     "y1": 582
   },
   "emotional_arc": [
+    "brand ink signature",
     "pressure",
     "pause",
     "reflection",
+    "expression",
     "support",
-    "movement",
+    "everyday",
+    "services",
+    "access",
+    "telehealth",
     "confidence",
+    "forward",
     "hope",
     "brand resolve"
   ],
-  "shots": [
+  "sections": [
+    {
+      "id": "s0_ink_logo",
+      "kind": "intro",
+      "screen_in": 0.0,
+      "screen_out": 4.2,
+      "source": "official logo (particle ink)",
+      "intent": "ink particles sampled from the official logo coalesce into it, then the exact bitmap cross-resolves; nothing is redrawn",
+      "transition_out": "inkdissolve"
+    },
     {
       "id": "s1_swim",
-      "clip": "upload1.mp4",
-      "screen_in": 0.0,
-      "screen_out": 4.6,
-      "screen_dur": 4.6,
+      "kind": "clip",
+      "source": "upload1.mp4",
+      "screen_in": 4.2,
+      "screen_out": 8.4,
+      "screen_dur": 4.2,
       "src_in": 0.35,
-      "src_out": 4.95,
+      "src_out": 4.55,
       "speed": 1.0,
       "view_start": [
         552,
@@ -73,73 +89,107 @@
       "transition_note": "water ripple off the swimmer becomes a circular mask"
     },
     {
-      "id": "s2_tree",
-      "clip": "upload2.mp4",
-      "screen_in": 4.6,
-      "screen_out": 10.2,
-      "screen_dur": 5.6,
-      "src_in": 0.25,
-      "src_out": 5.85,
-      "speed": 1.0,
+      "id": "s2_bench",
+      "kind": "still",
+      "source": "still1_bench",
+      "screen_in": 8.4,
+      "screen_out": 11.2,
+      "screen_dur": 2.8,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
       "view_start": [
-        552,
-        424,
-        1100,
-        782,
-        308
+        548,
+        430,
+        780,
+        700,
+        500
       ],
       "view_end": [
-        552,
-        438,
-        1064,
-        752,
-        300
+        544,
+        424,
+        720,
+        664,
+        476
       ],
-      "plate_w_px": 883.4,
-      "side_extension_px": 316.6,
+      "plate_w_px": 699.8,
+      "side_extension_px": 500.2,
       "text_side": "left",
-      "intent": "tree pose, breath ring, slow push",
-      "transition_out": "ring",
-      "transition_note": "breath ring expands past the frame edge and carries the reframe"
+      "intent": "stillness given real motion by a slow push and drifting leaves",
+      "transition_out": "swipebar",
+      "transition_note": "a brand-green bar swipes across and drags the next shot in"
     },
     {
-      "id": "s3_tree_close",
-      "clip": "upload2.mp4",
-      "screen_in": 10.2,
-      "screen_out": 14.1,
-      "screen_dur": 3.9,
-      "src_in": 6.3,
-      "src_out": 9.35,
-      "speed": 0.7821,
+      "id": "s3_tree",
+      "kind": "clip",
+      "source": "upload2.mp4",
+      "screen_in": 11.2,
+      "screen_out": 15.0,
+      "screen_dur": 3.8,
+      "src_in": 0.25,
+      "src_out": 4.05,
+      "speed": 1.0,
       "view_start": [
-        504,
-        400,
-        1000,
-        760,
+        470,
+        424,
+        900,
+        782,
         0
       ],
       "view_end": [
-        500,
-        404,
-        972,
+        466,
+        434,
+        872,
+        756,
+        0
+      ],
+      "plate_w_px": 722.8,
+      "side_extension_px": 477.2,
+      "text_side": "right",
+      "intent": "tree pose, breath ring, slow push",
+      "transition_out": "ring",
+      "transition_note": "breath ring expands past the frame edge"
+    },
+    {
+      "id": "s4_paint",
+      "kind": "still",
+      "source": "still4_paint",
+      "screen_in": 15.0,
+      "screen_out": 17.8,
+      "screen_dur": 2.8,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
+      "view_start": [
+        540,
+        426,
+        880,
         744,
         0
       ],
-      "plate_w_px": 826.3,
-      "side_extension_px": 373.7,
+      "view_end": [
+        546,
+        430,
+        836,
+        716,
+        0
+      ],
+      "plate_w_px": 742.8,
+      "side_extension_px": 457.2,
       "text_side": "right",
-      "intent": "cut-in on the settled camera; she fills the height, type sits right",
-      "transition_out": "leafwipe",
-      "transition_note": "a foreground leaf passes the lens; the cut hides behind it"
+      "intent": "creative expression; camera drifts across the canvas",
+      "transition_out": "zoomblur",
+      "transition_note": "punch in through the canvas into the wheel"
     },
     {
-      "id": "s4_wheel",
-      "clip": "upload4.mp4",
-      "screen_in": 14.1,
-      "screen_out": 19.4,
-      "screen_dur": 5.3,
+      "id": "s5_wheel",
+      "kind": "clip",
+      "source": "upload4.mp4",
+      "screen_in": 17.8,
+      "screen_out": 21.6,
+      "screen_dur": 3.8,
       "src_in": 0.5,
-      "src_out": 5.8,
+      "src_out": 4.3,
       "speed": 1.0,
       "view_start": [
         552,
@@ -163,43 +213,45 @@
       "transition_note": "the glowing wheel disc expands into a circular mask"
     },
     {
-      "id": "s5_wheel_close",
-      "clip": "upload4.mp4",
-      "screen_in": 19.4,
-      "screen_out": 23.0,
-      "screen_dur": 3.6,
-      "src_in": 5.8,
-      "src_out": 8.4,
-      "speed": 0.7222,
+      "id": "s6_tree_still",
+      "kind": "still",
+      "source": "still5_tree",
+      "screen_in": 21.6,
+      "screen_out": 23.8,
+      "screen_dur": 2.2,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
       "view_start": [
-        552,
-        384,
-        952,
-        604,
-        206
+        560,
+        420,
+        880,
+        736,
+        0
       ],
       "view_end": [
         556,
-        380,
-        916,
-        584,
-        210
+        424,
+        844,
+        712,
+        0
       ],
-      "plate_w_px": 989.8,
-      "side_extension_px": 210.2,
-      "text_side": "left",
-      "intent": "closer on the wheel where the ring glow peaks",
-      "transition_out": "horizon",
-      "transition_note": "the wheel disc flattens into a horizon line and rises"
+      "plate_w_px": 750.9,
+      "side_extension_px": 449.1,
+      "text_side": "right",
+      "intent": "held beat between the two service blocks",
+      "transition_out": "leafwipe",
+      "transition_note": "a defocused leaf crosses the lens; the cut hides behind it"
     },
     {
-      "id": "s6_band",
-      "clip": "upload5.mp4",
-      "screen_in": 23.0,
-      "screen_out": 27.9,
-      "screen_dur": 4.9,
+      "id": "s7_band",
+      "kind": "clip",
+      "source": "upload5.mp4",
+      "screen_in": 23.8,
+      "screen_out": 27.6,
+      "screen_dur": 3.8,
       "src_in": 0.4,
-      "src_out": 5.3,
+      "src_out": 4.2,
       "speed": 1.0,
       "view_start": [
         552,
@@ -213,24 +265,25 @@
         442,
         1076,
         700,
-        204
+        200
       ],
       "plate_w_px": 982.0,
       "side_extension_px": 218.0,
       "text_side": "left",
-      "intent": "band reads as a horizontal rule; nothing cropped, type space left",
+      "intent": "band reads as a horizontal rule; type space left",
       "transition_out": "bandwipe",
       "transition_note": "the resistance band becomes a travelling stroke"
     },
     {
-      "id": "s7_band_close",
-      "clip": "upload5.mp4",
-      "screen_in": 27.9,
-      "screen_out": 32.2,
-      "screen_dur": 4.3,
-      "src_in": 5.3,
-      "src_out": 9.0,
-      "speed": 0.8605,
+      "id": "s8_band_close",
+      "kind": "clip",
+      "source": "upload5.mp4",
+      "screen_in": 27.6,
+      "screen_out": 31.0,
+      "screen_dur": 3.4,
+      "src_in": 4.6,
+      "src_out": 7.6,
+      "speed": 0.8824,
       "view_start": [
         552,
         444,
@@ -248,19 +301,82 @@
       "plate_w_px": 918.4,
       "side_extension_px": 281.6,
       "text_side": "left",
-      "intent": "contiguous cut-in; telehealth + states land here",
-      "transition_out": "trailwipe",
-      "transition_note": "motion trail off the band release sweeps into water"
+      "intent": "contiguous cut-in on continuing action",
+      "transition_out": "push",
+      "transition_note": "the frame pushes sideways, carrying the reframe"
     },
     {
-      "id": "s8_swim_fwd",
-      "clip": "upload1.mp4",
-      "screen_in": 32.2,
-      "screen_out": 37.1,
-      "screen_dur": 4.9,
-      "src_in": 5.9,
-      "src_out": 9.3,
-      "speed": 0.6939,
+      "id": "s9_pottery_still",
+      "kind": "still",
+      "source": "still2_pottery",
+      "screen_in": 31.0,
+      "screen_out": 33.4,
+      "screen_dur": 2.4,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
+      "view_start": [
+        560,
+        410,
+        820,
+        700,
+        464
+      ],
+      "view_end": [
+        556,
+        414,
+        788,
+        676,
+        468
+      ],
+      "plate_w_px": 735.7,
+      "side_extension_px": 464.3,
+      "text_side": "left",
+      "intent": "calm still under the telehealth + states line",
+      "transition_out": "swipebar",
+      "transition_note": "a green bar swipes back the other way into the turn"
+    },
+    {
+      "id": "s10_dance",
+      "kind": "still",
+      "source": "still3_dance",
+      "screen_in": 33.4,
+      "screen_out": 36.4,
+      "screen_dur": 3.0,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
+      "view_start": [
+        552,
+        440,
+        1000,
+        700,
+        303
+      ],
+      "view_end": [
+        552,
+        446,
+        960,
+        676,
+        288
+      ],
+      "plate_w_px": 897.1,
+      "side_extension_px": 302.9,
+      "text_side": "left",
+      "intent": "the most uplifting image in the set carries the turn",
+      "transition_out": "trailwipe",
+      "transition_note": "motion trail sweeps into water"
+    },
+    {
+      "id": "s11_swim_fwd",
+      "kind": "clip",
+      "source": "upload1.mp4",
+      "screen_in": 36.4,
+      "screen_out": 39.6,
+      "screen_dur": 3.2,
+      "src_in": 5.6,
+      "src_out": 8.2,
+      "speed": 0.8125,
       "view_start": [
         552,
         456,
@@ -278,19 +394,20 @@
       "plate_w_px": 980.1,
       "side_extension_px": 219.9,
       "text_side": "left",
-      "intent": "second, non-overlapping window of clip 1 - a bookend, not a repeat",
+      "intent": "pure motion beat, deliberately free of typography",
       "transition_out": "ripple",
       "transition_note": "bow-wave ripple reveals the chair - mirrors the opening"
     },
     {
-      "id": "s9_read_hope",
-      "clip": "upload3.mp4",
-      "screen_in": 37.1,
-      "screen_out": 42.1,
-      "screen_dur": 5.0,
+      "id": "s12_read_hope",
+      "kind": "clip",
+      "source": "upload3.mp4",
+      "screen_in": 39.6,
+      "screen_out": 44.4,
+      "screen_dur": 4.8,
       "src_in": 2.32,
       "src_out": 5.8,
-      "speed": 0.696,
+      "speed": 0.725,
       "view_start": [
         584,
         398,
@@ -310,13 +427,26 @@
       "text_side": "left",
       "intent": "'hope' rises from the book in brand blue + green",
       "transition_out": "gather",
-      "transition_note": "hope-words and botanicals gather to centre, dissolving into the card"
+      "transition_note": "hope-words and botanicals gather to centre, into the card"
+    },
+    {
+      "id": "s13_resolve",
+      "kind": "card",
+      "screen_in": 44.4,
+      "screen_out": 49.8,
+      "source": "official logo + CTA"
     }
   ],
   "transitions": [
     {
-      "at": 4.6,
-      "dur": 0.9,
+      "at": 4.2,
+      "dur": 0.72,
+      "kind": "inkdissolve",
+      "note": "the logo breaks back into ink motes and reveals the water"
+    },
+    {
+      "at": 8.4,
+      "dur": 0.8,
       "kind": "ripple",
       "origin": [
         0.62,
@@ -325,24 +455,31 @@
       "note": "water ripple off the swimmer becomes a circular mask"
     },
     {
-      "at": 10.2,
-      "dur": 0.8,
+      "at": 11.2,
+      "dur": 0.58,
+      "kind": "swipebar",
+      "d": 1,
+      "note": "a brand-green bar swipes across and drags the next shot in"
+    },
+    {
+      "at": 15.0,
+      "dur": 0.72,
       "kind": "ring",
       "origin": [
-        0.6,
+        0.58,
         0.46
       ],
-      "note": "breath ring expands past the frame edge and carries the reframe"
+      "note": "breath ring expands past the frame edge"
     },
     {
-      "at": 14.1,
-      "dur": 0.72,
-      "kind": "leafwipe",
-      "note": "a foreground leaf passes the lens; the cut hides behind it"
+      "at": 17.8,
+      "dur": 0.62,
+      "kind": "zoomblur",
+      "note": "punch in through the canvas into the wheel"
     },
     {
-      "at": 19.4,
-      "dur": 0.66,
+      "at": 21.6,
+      "dur": 0.62,
       "kind": "ripple",
       "origin": [
         0.56,
@@ -351,26 +488,40 @@
       "note": "the glowing wheel disc expands into a circular mask"
     },
     {
-      "at": 23.0,
-      "dur": 0.8,
-      "kind": "horizon",
-      "note": "the wheel disc flattens into a horizon line and rises"
+      "at": 23.8,
+      "dur": 0.68,
+      "kind": "leafwipe",
+      "note": "a defocused leaf crosses the lens; the cut hides behind it"
     },
     {
-      "at": 27.9,
-      "dur": 0.72,
+      "at": 27.6,
+      "dur": 0.62,
       "kind": "bandwipe",
       "note": "the resistance band becomes a travelling stroke"
     },
     {
-      "at": 32.2,
-      "dur": 0.8,
-      "kind": "trailwipe",
-      "note": "motion trail off the band release sweeps into water"
+      "at": 31.0,
+      "dur": 0.6,
+      "kind": "push",
+      "d": -1,
+      "note": "the frame pushes sideways, carrying the reframe"
     },
     {
-      "at": 37.1,
-      "dur": 0.86,
+      "at": 33.4,
+      "dur": 0.58,
+      "kind": "swipebar",
+      "d": -1,
+      "note": "a green bar swipes back the other way into the turn"
+    },
+    {
+      "at": 36.4,
+      "dur": 0.72,
+      "kind": "trailwipe",
+      "note": "motion trail sweeps into water"
+    },
+    {
+      "at": 39.6,
+      "dur": 0.8,
       "kind": "ripple",
       "origin": [
         0.58,
@@ -379,17 +530,17 @@
       "note": "bow-wave ripple reveals the chair - mirrors the opening"
     },
     {
-      "at": 42.1,
-      "dur": 1.0,
+      "at": 44.4,
+      "dur": 0.92,
       "kind": "gather",
-      "note": "hope-words and botanicals gather to centre, dissolving into the card"
+      "note": "hope-words and botanicals gather to centre, into the card"
     }
   ],
   "copy": [
     {
       "id": "c1",
-      "t_in": 0.62,
-      "t_out": 4.36,
+      "t_in": 4.86,
+      "t_out": 8.16,
       "anim": "ripplemask",
       "lines": [
         "When life",
@@ -400,29 +551,31 @@
       "weight": "Bold",
       "x": 76,
       "y": 300,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
       "id": "c2",
-      "t_in": 5.4,
-      "t_out": 9.9,
-      "anim": "ringmask",
+      "t_in": 8.94,
+      "t_out": 11.0,
+      "anim": "pop3d",
       "lines": [
         "Find space",
         "to breathe."
       ],
       "states": null,
-      "size": 70,
+      "size": 72,
       "weight": "Bold",
       "x": 76,
-      "y": 228,
+      "y": 222,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
       "id": "c3",
-      "t_in": 10.8,
-      "t_out": 13.82,
-      "anim": "riselock",
+      "t_in": 11.86,
+      "t_out": 14.8,
+      "anim": "swipe",
       "lines": [
         "A place",
         "to feel",
@@ -431,14 +584,15 @@
       "states": null,
       "size": 72,
       "weight": "Bold",
-      "x": 812,
+      "x": 790,
       "y": 170,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
       "id": "c4",
-      "t_in": 14.78,
-      "t_out": 19.1,
+      "t_in": 15.62,
+      "t_out": 17.62,
       "anim": "wordblur",
       "lines": [
         "Care that makes",
@@ -448,46 +602,66 @@
       "states": null,
       "size": 46,
       "weight": "SemiBold",
-      "x": 76,
-      "y": 232,
+      "x": 764,
+      "y": 224,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
       "id": "c5a",
-      "t_in": 19.9,
-      "t_out": 21.34,
-      "anim": "swap",
+      "t_in": 18.32,
+      "t_out": 19.86,
+      "anim": "pop3d",
       "lines": [
         "Personalized",
         "support."
       ],
       "states": null,
-      "size": 56,
+      "size": 58,
       "weight": "Bold",
       "x": 76,
-      "y": 232,
+      "y": 228,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
       "id": "c5b",
-      "t_in": 21.42,
-      "t_out": 22.84,
+      "t_in": 19.96,
+      "t_out": 21.42,
       "anim": "swap",
+      "lines": [
+        "Care built",
+        "around you."
+      ],
+      "states": null,
+      "size": 58,
+      "weight": "Bold",
+      "x": 76,
+      "y": 228,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c6",
+      "t_in": 21.98,
+      "t_out": 23.62,
+      "anim": "swipe",
       "lines": [
         "Wherever",
         "life happens."
       ],
       "states": null,
-      "size": 56,
+      "size": 58,
       "weight": "Bold",
-      "x": 76,
+      "x": 772,
       "y": 232,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
-      "id": "c6a",
-      "t_in": 23.66,
-      "t_out": 25.32,
+      "id": "c7a",
+      "t_in": 24.36,
+      "t_out": 25.86,
       "anim": "linewipe",
       "lines": [
         "Therapy"
@@ -497,12 +671,13 @@
       "weight": "Bold",
       "x": 76,
       "y": 262,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
-      "id": "c6b",
-      "t_in": 25.52,
-      "t_out": 27.66,
+      "id": "c7b",
+      "t_in": 26.02,
+      "t_out": 27.44,
       "anim": "linewipe",
       "lines": [
         "Medication",
@@ -513,28 +688,30 @@
       "weight": "Bold",
       "x": 76,
       "y": 234,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
-      "id": "c7a",
-      "t_in": 28.42,
-      "t_out": 30.14,
-      "anim": "linewipe",
+      "id": "c8",
+      "t_in": 28.1,
+      "t_out": 30.84,
+      "anim": "swipe",
       "lines": [
         "Psychiatric",
         "care"
       ],
       "states": null,
-      "size": 54,
+      "size": 56,
       "weight": "Bold",
       "x": 76,
       "y": 222,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
-      "id": "c7b",
-      "t_in": 30.42,
-      "t_out": 32.06,
+      "id": "c9",
+      "t_in": 31.46,
+      "t_out": 33.26,
       "anim": "riselock",
       "lines": [
         "Secure telehealth",
@@ -547,33 +724,35 @@
         "CO",
         "AZ"
       ],
-      "size": 36,
+      "size": 38,
       "weight": "SemiBold",
       "x": 76,
-      "y": 222,
+      "y": 214,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
-      "id": "c8",
-      "t_in": 32.86,
-      "t_out": 36.74,
-      "anim": "wordblur",
+      "id": "c10",
+      "t_in": 33.98,
+      "t_out": 36.24,
+      "anim": "pop3d",
       "lines": [
         "One small step",
         "can begin",
         "a new direction."
       ],
       "states": null,
-      "size": 46,
+      "size": 48,
       "weight": "SemiBold",
       "x": 76,
-      "y": 224,
+      "y": 214,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
-      "id": "c9a",
-      "t_in": 37.52,
-      "t_out": 38.98,
+      "id": "c12a",
+      "t_in": 40.02,
+      "t_out": 41.42,
       "anim": "disperse",
       "lines": [
         "Comfort."
@@ -583,12 +762,13 @@
       "weight": "Bold",
       "x": 76,
       "y": 294,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
-      "id": "c9b",
-      "t_in": 39.08,
-      "t_out": 40.56,
+      "id": "c12b",
+      "t_in": 41.52,
+      "t_out": 42.94,
       "anim": "disperse",
       "lines": [
         "Peace of",
@@ -599,12 +779,13 @@
       "weight": "Bold",
       "x": 76,
       "y": 252,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
-      "id": "c9c",
-      "t_in": 40.66,
-      "t_out": 42.06,
+      "id": "c12c",
+      "t_in": 43.04,
+      "t_out": 44.36,
       "anim": "disperse",
       "lines": [
         "Hope."
@@ -614,12 +795,13 @@
       "weight": "ExtraBold",
       "x": 76,
       "y": 282,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
       "id": "logo",
-      "t_in": 42.95,
-      "t_out": 47.7,
+      "t_in": 45.2,
+      "t_out": 49.8,
       "anim": "logo_in",
       "lines": null,
       "states": null,
@@ -627,12 +809,13 @@
       "weight": "Bold",
       "x": null,
       "y": null,
+      "scrim": "green",
       "color": "#104C98"
     },
     {
       "id": "cta",
-      "t_in": 44.2,
-      "t_out": 47.7,
+      "t_in": 46.4,
+      "t_out": 49.8,
       "anim": "riselock",
       "lines": [
         "Schedule Your Appointment"
@@ -642,12 +825,13 @@
       "weight": "SemiBold",
       "x": 600,
       "y": 376,
+      "scrim": "none",
       "color": "#104C98"
     },
     {
       "id": "url",
-      "t_in": 44.8,
-      "t_out": 47.7,
+      "t_in": 46.96,
+      "t_out": 49.8,
       "anim": "riselock",
       "lines": [
         "thehopewellnesscenter.com"
@@ -657,21 +841,22 @@
       "weight": "Medium",
       "x": 600,
       "y": 444,
+      "scrim": "none",
       "color": "#104C98"
     }
   ],
   "resolve": {
-    "id": "s10_resolve",
-    "t_in": 42.1,
-    "t_out": 47.7,
-    "logo_hold_seconds": 4.29
+    "id": "s13_resolve",
+    "t_in": 44.4,
+    "t_out": 49.8,
+    "logo_hold_seconds": 4.14
   },
   "score": {
     "bpm": 80,
     "key": "A major / modal",
     "instruments": [
       "airy piano (struck-string model)",
-      "warm detuned pads",
+      "warm mid/side pads",
       "sub",
       "soft kick",
       "shaker",
@@ -679,8 +864,10 @@
       "bell"
     ],
     "sound_design": [
+      "ink bloom",
+      "airy riser",
+      "low-mid whoosh",
       "water swell",
-      "airy sweep",
       "leaf rustle",
       "breath",
       "clay ring",
@@ -689,13 +876,13 @@
     ],
     "voiceover": false,
     "loudness": {
-      "peak_dbfs": -0.71,
-      "lr_correlation": 0.651,
-      "mono_fold_penalty_db": -0.84
+      "peak_dbfs": -0.8,
+      "rms_dbfs": -14.11,
+      "lr_correlation": 0.675,
+      "mono_fold_penalty_db": -0.77
     }
   },
   "review": {
-    "automated_checks": "39/39 pass",
     "script": "project/qc.py",
     "log": "docs/review-log.md"
   }
