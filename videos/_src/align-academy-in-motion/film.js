@@ -418,7 +418,7 @@ const OUTCOMES = [
 
 /* ---- shared: particle logo (open + close) -------------------------------- */
 const LOGO_N = 5200;
-function logoParticles(ctx, p, burst, cx, cy, boxW, f) {
+function logoParticles(ctx, p, burst, cx, cy, boxW, f, fade = 1) {
   // p: 0 scattered → 1 formed.  burst: 0 → 1 explode outward.
   const L = window.LOGO, ar = L.aspect;
   const bw = boxW, bh = boxW / ar;
@@ -439,7 +439,7 @@ function logoParticles(ctx, p, burst, cx, cy, boxW, f) {
     const e = eOutQuint(tt);
     const ang = r1 * 6.283, rad = (140 + r2 * 980) * (1 - e);
     let px = tx + Math.cos(ang) * rad, py = ty + Math.sin(ang) * rad * .62;
-    let a = clamp(tt * 2.2);
+    let a = clamp(tt * 2.2) * fade;
     if (burst > 0) {                                    // outward dissolve
       const be = eInCubic(burst);
       const ba = r4 * 6.283, br = (60 + r2 * 1500) * be;
@@ -495,25 +495,20 @@ function logoLockup(ctx, cx, cy, boxW, a, withUrl) {
   const bw = boxW, bh = bw / ar;
   ctx.save();
   ctx.globalAlpha = a;
-  ctx.shadowColor = hexA('#7FB0FF', .5); ctx.shadowBlur = 46;
+  ctx.shadowColor = hexA('#9CC4FF', .34); ctx.shadowBlur = 26;
+  // The exact brand lockup, tagline included. Nothing here is re-typeset.
   ctx.drawImage(img, cx - bw / 2, cy - bh / 2, bw, bh);
   ctx.restore();
-  // tagline
-  ctx.save();
-  ctx.globalAlpha = a;
-  setFont(ctx, 22, FS.sans, 700, 8.4);
-  ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
-  ctx.fillStyle = C.orange;
-  ctx.shadowColor = hexA(C.orange, .5); ctx.shadowBlur = 16;
-  ctx.fillText('HUMAN CAPITAL MANAGEMENT', cx, cy + bh / 2 + 62);
   if (withUrl) {
-    ctx.shadowBlur = 0;
+    ctx.save();
+    ctx.globalAlpha = a;
     setFont(ctx, 16, FS.sans, 500, 6.2);
+    ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
     ctx.fillStyle = 'rgba(157,178,206,0.88)';
-    ctx.fillText('ALIGNHCM.COM', cx, cy + bh / 2 + 108);
+    ctx.fillText('ALIGNHCM.COM', cx, cy + bh / 2 + 56);
+    ctx.textAlign = 'left';
+    ctx.restore();
   }
-  ctx.textAlign = 'left';
-  ctx.restore();
 }
 
 function sceneLogoIn(ctx, f, a, b) {
@@ -523,9 +518,9 @@ function sceneLogoIn(ctx, f, a, b) {
   const burst = inv(n, 104, len + 26);
   const cx = W * .5, cy = H * .47;
   shockwave(ctx, cx, cy, inv(n, 74, 112));
-  logoParticles(ctx, form, burst, cx, cy, 720, n);
   const lock = inv(n, 76, 96) * (1 - clamp(burst * 1.6));
-  logoLockup(ctx, cx, cy, 720, lock * .92, false);
+  logoParticles(ctx, form, burst, cx, cy, 800, n, 1 - lock * .96);
+  logoLockup(ctx, cx, cy, 800, lock, false);
   // bright flash at the moment of formation
   const fl = 1 - inv(n, 74, 96);
   if (n > 70 && fl > 0) { ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.fillStyle = hexA(C.orangeHi, fl * .055); ctx.fillRect(0, 0, W, H); ctx.restore(); }
@@ -537,8 +532,9 @@ function sceneLogoOut(ctx, f, a, b) {
   const form = eOutCubic(inv(n, 2, 62));
   const cx = W * .5, cy = H * .45;
   shockwave(ctx, cx, cy, inv(n, 56, 96));
-  logoParticles(ctx, form, 0, cx, cy, 720, n);
-  logoLockup(ctx, cx, cy, 720, inv(n, 58, 80), true);
+  const lockOut = inv(n, 58, 80);
+  logoParticles(ctx, form, 0, cx, cy, 800, n, 1 - lockOut * .96);
+  logoLockup(ctx, cx, cy, 800, lockOut, true);
   // gentle settle glow at the very end
   const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, 1000);
   g.addColorStop(0, hexA(C.blueLit, .10 * inv(n, 60, len))); g.addColorStop(1, 'rgba(0,0,0,0)');
@@ -1129,7 +1125,7 @@ window.FILM_READY = false;
   const lp = await fetch('assets/logo_points.json').then(r => r.json());
   window.LOGO = { aspect: lp.aspect, pts: lp.pts };
   const img = new Image();
-  await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = 'assets/logo_dark.png'; });
+  await new Promise((res, rej) => { img.onload = res; img.onerror = rej; img.src = 'assets/logo_full.png'; });
   window.LOGOIMG = img;
   await document.fonts.ready;
   // warm the glyph caches so the first captured frames match later ones

@@ -9,7 +9,7 @@ alongside the existing *Align in Motion* and *Align Industry Solutions* films.
 
 | Requirement | How it's met |
 | --- | --- |
-| Particles, like the first film | Logo assembles from ~5,200 vertices sampled off the real logo art. Every headline word also settles out of drifting vertices |
+| Particles, like the first film | Logo assembles from ~5,200 vertices sampled off the exact brand artwork. Every headline word also settles out of drifting vertices |
 | Vertex shuffling for the Academy benefits/services | Two shuffle-stack scenes (`WHO WE TRAIN`, `WHAT'S INSIDE`) where the centre row is sharp and lit, neighbours fade back and blur, and the list glides between rows. Heading only, no support copy, matching the original film's list treatment |
 | Placement from the second film | Centre-focus card carousel (`HOW WE DELIVER`) and the orbiting node constellation (`WHY IT MATTERS`) |
 | Cool swipe transitions | Diagonal shear wipes with a hot leading edge, spark spray blown off the edge, parallax push on the outgoing frame and a chromatic fringe on the incoming one |
@@ -59,8 +59,8 @@ Roughly 1.3s per frame single-threaded. Run 2 to 4 workers over disjoint `FROM`/
 - `icons.js`: stroke icon paths (24-unit box, drawn on via `setLineDash`)
 - `film.html`: canvas shell and `@font-face` declarations
 - `render.js`: Playwright frame driver
-- `assets/logo_dark.png`: brand logo recoloured for dark ground, tagline stripped (it's drawn as live text)
-- `assets/logo_points.json`: particle targets sampled from that exact bitmap, so vertices land precisely on the lockup
+- `assets/logo_full.png`: the complete brand lockup, recoloured for dark ground. Only the dark-grey ink is mapped to white. The brand orange is preserved verbatim and the tagline is the real artwork, never re-typeset
+- `assets/logo_points.json`: particle targets sampled from that exact bitmap and normalised against the full lockup box, so vertices land dead on the art when the crisp logo crossfades in
 
 ## Dropping in supplied stills
 
@@ -71,4 +71,8 @@ surrounding card, focus scaling, blur and rail all continue to work unchanged.
 
 ## House style
 
-No em dashes in copy, comments, or docs. Use a colon, a comma, or a full stop instead.
+* No em dashes in copy, comments, or docs. Use a colon, a comma, or a full stop instead.
+* The logo is always the real artwork. Never redraw it, never re-typeset the
+  `HUMAN CAPITAL MANAGEMENT` tagline, and never substitute a lookalike font. The
+  tagline is justified to the full logo width and has its own letterforms, so any
+  re-typesetting is visibly wrong.
