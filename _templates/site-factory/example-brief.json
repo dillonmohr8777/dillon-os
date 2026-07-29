@@ -3,6 +3,8 @@
   "name": "Dryer Vent John",
   "city": "Philadelphia",
   "category": "Dryer Vent Cleaning",
+  "vertical": "Home Services",
+  "attitude": "brutal",
   "url": "https://example.com",
   "phone": "215-555-0142",
   "address": "1234 Frankford Ave, Philadelphia, PA 19125",
@@ -10,6 +12,7 @@
   "description": "Philadelphia's dryer vent cleaning specialist. Faster drying, lower bills, and one less fire risk in your house.",
   "noindex": true,
   "schemaType": "LocalBusiness",
+  "marquee": ["Eat lint", "Drink airflow", "Sleep safer", "Philly vents only"],
   "tokens": {
     "paper": "#F4EFE4",
     "ink": "#1B2430",
@@ -21,8 +24,8 @@
     "onAccent2": "#090909",
     "onPanel": "#090909",
     "onDeep": "#FFFFFF",
-    "border": "3px",
-    "radius": "8px"
+    "border": "4px",
+    "radius": "4px"
   },
   "fonts": {
     "display": "Archivo Black",
@@ -35,7 +38,9 @@
     "headline": "Dryer Vent John",
     "sub": "Clogged vents make dryers slow, expensive, and dangerous. One visit fixes all three.",
     "ctaPrimary": { "label": "Book a cleaning", "href": "https://example.com/book" },
-    "ctaSecondary": { "label": "Plan a visit", "href": "#visit" }
+    "ctaSecondary": { "label": "Plan a visit", "href": "#visit" },
+    "glassFloat": { "title": "Same-week windows", "sub": "Northern Liberties to South Philly" },
+    "marquee": ["Clear the duct", "Drop the risk", "Cut dry time", "Book today"]
   },
   "offerings": {
     "items": [
@@ -52,7 +57,7 @@
       "Fully insured, flat pricing quoted before work starts"
     ]
   },
-  "gallery": { "imageIndexes": [3, 4, 5, 6, 7] },
+  "gallery": { "imageIndexes": [3, 4, 5, 6, 7, 12] },
   "story": {
     "heading": "About",
     "paragraphs": [
@@ -63,7 +68,8 @@
   "experience": {
     "items": [
       "Book online, get a two-hour window and a text when John's on the way.",
-      "No upsells. If the vent's clean, you'll hear that instead of a bill."
+      "No upsells. If the vent's clean, you'll hear that instead of a bill.",
+      "Photos and airflow numbers after every job, so you know what changed."
     ]
   },
   "feature": {
@@ -71,6 +77,18 @@
     "text": "A clean vent cuts drying time, lowers the energy bill, and removes the top cause of dryer fires.",
     "cta": { "label": "See the service", "href": "https://example.com/services" },
     "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Multi-unit buildings, one crew",
+    "text": "Stacked laundry rooms and long duct runs are the jobs most handymen skip. This is the specialty.",
+    "imageIndex": 10,
+    "cta": { "label": "Building plans", "href": "https://example.com/multi-unit" }
+  },
+  "social": {
+    "heading": "From the truck and the feed",
+    "kicker": "Harvested reference imagery",
+    "imageIndexes": [3, 4, 5, 6, 7, 8],
+    "captions": ["Lint pull", "Cap swap", "Airflow meter", "Rowhome run", "Van kit", "After shot"]
   },
   "catalog": {
     "items": [
@@ -98,6 +116,7 @@
     { "file": "image-8.webp", "alt": "A dryer running with a freshly cleaned vent" },
     { "file": "image-9.webp", "alt": "Residential dryer vent service" },
     { "file": "image-10.webp", "alt": "Apartment building laundry room" },
-    { "file": "image-11.webp", "alt": "Maintenance plan calendar" }
+    { "file": "image-11.webp", "alt": "Maintenance plan calendar" },
+    { "file": "image-12.webp", "alt": "Close-up of cleaned exterior vent" }
   ]
 }

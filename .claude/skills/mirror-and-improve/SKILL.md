@@ -66,10 +66,15 @@ A build that lands at 8 sections and 300 words is thin next to the batch. Go bac
 
 ```bash
 node _templates/site-factory/build-site.js <brief.json> <out-dir>
+node _templates/site-factory/apply-harvest-images.js <slug> <out-dir>/<slug>
 node _templates/site-factory/qa.js <out-dir>/<slug>
 ```
 
-Copy their harvested images into `<slug>/assets/` as `image-1.webp` onward, hero first. Fix every QA FAIL. Then look at the screenshots in `qa-shots/<slug>/` and judge it by eye: does it look expensive, does it look like them, is the palette dull.
+Set `attitude` on the brief so the auto skin layer gives this business its own look (liquid glass, editorial, brutal, warm, industrial, or neon). Include `marquee` phrases from their lingo and a `social` strip fed by harvested image indexes when social photography exists.
+
+Copy their harvested images into `<slug>/assets/` as `image-1.webp` onward, hero first. If harvest returns fewer than 6 images, generate lookalike atmosphere shots that match their palette and screenshot vibe, and record them as generated in the prospect note — never claim generated images are their official photography.
+
+Fix every QA FAIL. Then look at the screenshots in `qa-shots/<slug>/` and judge it by eye: does it look expensive, does it look like them, is the palette dull, does motion feel intentional.
 
 For a full batch, use `build-batch.js` instead; see `.claude/skills/site-batch/SKILL.md`.
 

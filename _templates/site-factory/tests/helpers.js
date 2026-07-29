@@ -53,6 +53,10 @@ function loadBaseBrief() {
 /** Brief that meets canonical section/word/image ranges (12 images). */
 function passingBrief(overrides = {}) {
   const b = loadBaseBrief();
+  // Keep within 9-11 counted <section> nodes: drop social/spotlight for gate tests
+  // unless the caller opts in. Still exercises attitude skins + marquee chrome.
+  delete b.social;
+  delete b.spotlight;
   b.images = Array.from({ length: 12 }, (_, i) => ({
     file: `image-${i + 1}.webp`,
     alt: `Alt ${i + 1}`,
@@ -60,12 +64,20 @@ function passingBrief(overrides = {}) {
   b.gallery = { imageIndexes: [3, 4, 5, 6, 7, 12] };
   Object.assign(b, overrides);
   if (overrides.tokens) b.tokens = { ...b.tokens, ...overrides.tokens };
+  if (overrides.social === undefined && 'social' in overrides) delete b.social;
   return b;
 }
 
 /** Brief that intentionally undershoots image count (spec failure). */
 function thinImageBrief(overrides = {}) {
   const b = loadBaseBrief();
+  delete b.social;
+  delete b.spotlight;
+  b.images = Array.from({ length: 11 }, (_, i) => ({
+    file: `image-${i + 1}.webp`,
+    alt: `Alt ${i + 1}`,
+  }));
+  b.gallery = { imageIndexes: [3, 4, 5, 6, 7] };
   Object.assign(b, overrides);
   return b;
 }
