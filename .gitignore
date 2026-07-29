@@ -14,3 +14,6 @@ dist/
 
 # Playwright QA output
 _templates/site-factory/qa-shots/
+
+# Harvested third-party reference material (screenshots, source imagery)
+_templates/site-factory/harvest/
