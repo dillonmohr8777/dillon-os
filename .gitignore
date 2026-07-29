@@ -3,3 +3,14 @@
 .obsidian/plugins/obsidian-local-rest-api/data.json
 08_Assets/
 09_Transcripts/
+
+# Large binaries never belong in git
+*.zip
+
+# Node
+node_modules/
+.next/
+dist/
+
+# Playwright QA output
+_templates/site-factory/qa-shots/
