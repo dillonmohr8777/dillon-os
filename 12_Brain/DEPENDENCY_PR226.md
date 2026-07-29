@@ -1,7 +1,8 @@
 # Dependency: PR #226 (do not duplicate)
 
-**Branch:** `cursor/dillon-os-agentic-build-out-6254`  
-**PR:** https://github.com/dillonmohr8777/dillon-os/pull/226  
+**Branch:** `cursor/dillon-os-agentic-build-out-6254`
+**PR:** https://github.com/dillonmohr8777/dillon-os/pull/226
+
 **Merge-base with this branch:** shared ancestor on `main` (no path collision with this PR's new files as of 2026-07-29).
 
 ## What #226 owns (consume, do not copy)

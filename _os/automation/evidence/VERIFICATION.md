@@ -1,7 +1,8 @@
 # Verification evidence — 2026-07-29
 
-Branch: `cursor/automation-deep-analysis-316c`  
-Contract: `00_Inbox/Automation Deep Analysis 2026-07-29.md`  
+Branch: `cursor/automation-deep-analysis-316c`
+Contract: `00_Inbox/Automation Deep Analysis 2026-07-29.md`
+
 Dependency: PR #226 / `12_Brain/DEPENDENCY_PR226.md` (inspect only; not merged)
 
 ## Tests

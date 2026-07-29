@@ -6,15 +6,15 @@ tags: [templates, prospect]
 
 ```yaml
 ---
-prospect_id: 
-business_name: 
+prospect_id:
+business_name:
 source: maps
-website: 
-vertical: 
+website:
+vertical:
 status: new
-score: 
-last_touched: 
-next_action: 
+score:
+last_touched:
+next_action:
 tags: [prospect]
 ---
 ```
