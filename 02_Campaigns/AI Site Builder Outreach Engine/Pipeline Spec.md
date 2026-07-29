@@ -89,7 +89,9 @@ The batch runner builds every brief in a batch directory, then emits the review 
 
 **Status: automated, with a required human taste pass.**
 
-`node _templates/site-factory/qa.js <site-dir>` enforces the ship checklist: JSON-LD parses, viewport and meta description present, every image has alt text and exists on disk, no empty CTA hrefs, required sections present, surface rhythm, and with Playwright, screenshots plus horizontal-overflow checks at 390/850/1440px. The batch runner runs this across every site and fails the batch on any FAIL.
+`node _templates/site-factory/qa.js <site-dir> [--json]` enforces the ship checklist: JSON-LD parses, viewport and meta description present, every image has alt text and exists on disk, no empty CTA hrefs, required sections present, surface rhythm, and with Playwright, screenshots plus horizontal-overflow checks at 390/850/1440px.
+
+Machine-readable result distinguishes `PASS` (static + visual), `STATIC_ONLY` (visual skipped), and `FAIL`. Static-only is **not** a full pass: `qa_ready` stays `hold`. Spec range misses (sections/words/images) are gate failures, not soft warnings. The batch runner fails closed on any of these.
 
 Batch-level gates the runner also handles: duplicate-image detection across the batch (the "keep every photo unique" rule from the 2026-07-12 delivery) and a `noindex` audit.
 
@@ -116,7 +118,7 @@ Per the tier rules in `AGENTS.md` and the orchestrator spec, everything up to he
 | Deploy previews | Manual, scripted | Netlify per-batch, private noindex drafts. Needs a deploy token in Cursor Cloud Agent secrets to automate. |
 | Tracked URL per prospect | **Automated** | Batch runner emits `qr_target_url` with UTM parameters per prospect. |
 | QR code generation | Partly automated | Zapier + QRTiger from the sheet, per Mac's 2026-07-22 links. Our CSV is the input; we deliberately use his chosen tooling rather than a parallel QR system. |
-| Mail merge | Not automated | PostGrid or StackAdapt via Zapier from the sheet's address column with a `ready` flag. Vendor not yet chosen. **This is the known gap.** |
+| Mail merge | Not automated | PostGrid or StackAdapt via Zapier from the sheet. Generated `prospects.csv` always sets `mail_ready=hold`; `qa_ready` is the automation signal. Only explicit human approval may flip `mail_ready`. Vendor not yet chosen. **This is the known gap.** |
 | Gatekeep the call | Not built | QR should land on the site with a clear "this was built for you, book a call" path, and the booking link should carry the prospect ID so scans attribute to calls. |
 
 **To automate next, in order:** Netlify deploy token, then the mail vendor decision, then the QR-to-booking attribution.
