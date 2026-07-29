@@ -51,6 +51,12 @@ All skills are vault-native: they read the vault and write results back, mostly 
 | `content-scan` | Ranks ship-ready content vs gaps vs kill list. |
 | `metrics-pull` | Vault vitals snapshot with 7-day deltas. |
 | `site-factory` | Generates a complete client/prospect website from a brief, using the Philly-25 template system. |
+| `site-batch` | Runs the weekly 25-site outreach batch end to end. |
+| `mirror-and-improve` | Harvests a target's site and socials, adopts their lingo, rebuilds it better. |
+| `ui-design` | Visual pass: palette from their real brand, type, hierarchy, contrast. |
+| `ux-audit` | Audits their current site's friction, designs the conversion flow, accessibility. |
+| `motion-design` | Scroll reveals, hover states, signature micro-interaction. |
+| `frontend-build` | Implementation standards: semantic markup, page-weight budget, no-JS resilience. |
 | `vault-clean` | Vault hygiene. Moves only unambiguous strays, never deletes. |
 | `week-review` | Friday/Sunday retrospective. |
 
@@ -61,7 +67,8 @@ All skills are vault-native: they read the vault and write results back, mostly 
 3. Vault edits: preserve frontmatter, use `[[wikilinks]]` between notes, keep the numbered-folder structure. New notes should use the matching template from `_templates/`.
 4. Never delete vault notes. Move to `00_Inbox/` if unsure where something belongs.
 5. Approval tiers (from `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`): read/analyze/draft/build is autonomous (Tier 0). Reversible tweaks batch under one approval (Tier 1). Anything outbound or irreversible (sending email, posting to Slack channels, deploying, spending money) needs explicit human approval (Tier 2).
-6. Websites: the shared design system is documented in `philly-sites/DESIGN-SYSTEM.md`. New builds go through `_templates/site-factory/`, not from scratch.
+6. Websites: the shared design system is documented in `philly-sites/DESIGN-SYSTEM.md`, including the canonical batch spec (10 sections, 350 to 500 words, 12 to 13 images) measured across the existing 25 sites. New builds go through `_templates/site-factory/`, not from scratch.
+7. The outreach engine (weekly 25-site batches, QR, direct mail) is specified in `02_Campaigns/AI Site Builder Outreach Engine/`. Read `Pipeline Spec.md` for what's automated and who owns each stage before changing that workflow.
 
 ## Environment notes
 
