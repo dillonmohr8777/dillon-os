@@ -134,8 +134,15 @@ Fonts (Inter, Playfair Display) are vendored in `fonts/` and loaded by
 
 ## Assets
 
-`assets/` holds the brand art recovered from the original reels: the Align mark
-keyed to transparency, the SmartCare lockup, the four platform cards (UKG,
-Dayforce, Workday, ADP), and the three public-sector illustration panels
-(utilities, fire and EMS, K-12). Regenerate `mark-data.js` after replacing
+`assets/` holds the brand art. The Align mark, the four platform cards (UKG,
+Dayforce, Workday, ADP) and the three public-sector illustration panels
+(utilities, fire and EMS, K-12) were recovered from the original recordings and
+keyed to transparency. Regenerate `mark-data.js` after replacing
 `align-mark.png`; the command is in the header of that file.
+
+`smartcare.png` is built from the supplied master artwork rather than recovered
+from video. That master is charcoal and orange on white, which would vanish on
+this deck's navy field, so it is keyed to transparency and knocked out: orange
+holds its exact brand value (#F08B2F) and the charcoal becomes near-white. That
+matches how the earlier cut of this reel treated the lockup. If you ever need it
+on a light background, use the master directly instead of this file.
