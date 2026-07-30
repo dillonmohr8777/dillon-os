@@ -15,8 +15,8 @@ brand, and it is not a line Align uses. Nothing going forward should carry it.
 
 | File | Reel | Output | Length |
 | --- | --- | --- | --- |
-| `align-in-motion.html` | Who We Are | `out/align-in-motion.mp4` | 56.2s |
-| `align-public-sector.html` | Public Sector / Shift | `out/align-public-sector.mp4` | 49.2s |
+| `align-in-motion.html` | Who We Are | `out/2026-08-03 - The Team That Finishes It (Reel Cut).mp4` | 56.2s |
+| `align-public-sector.html` | Public Sector / Shift | `out/2026-08-14 - Public Service Cannot Pause.mp4` | 49.2s |
 
 Both render at **1920x1080, 30fps**. The originals were a 960x540 screen
 recording and a 1080p recording, so the Who We Are reel is a 4x pixel upgrade.
@@ -129,7 +129,7 @@ specifically so the particle sampler can read its pixels over `file://`.
 
 ```bash
 npm install playwright          # or symlink a global install into node_modules
-node render.mjs align-in-motion.html out/align-in-motion.mp4 --fps 30
+node render.mjs align-in-motion.html "out/2026-08-03 - The Team That Finishes It (Reel Cut).mp4" --fps 30
 ```
 
 QC a few frames without rendering the whole thing:

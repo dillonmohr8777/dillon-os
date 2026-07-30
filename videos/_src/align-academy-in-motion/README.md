@@ -7,7 +7,7 @@ The on-screen "Align in Motion" footer tag was removed at Ben's request: it came
 the prompt asking for motion effects rather than from anything in the brand, and it is
 not a line Align uses. Nothing going forward should carry it.
 
-**Output:** `videos/align-academy-in-motion.mp4` at 1920×1080, 30fps, 1350 frames, exactly 45.000s, silent (both reference films are silent too).
+**Output:** `videos/2026-08-28 - Transform, or Gather Dust.mp4` at 1920×1080, 30fps, 1350 frames, exactly 45.000s, silent (both reference films are silent too).
 
 ## Brief it answers
 
@@ -52,7 +52,7 @@ CHROME_PATH=/path/to/chrome OUT_DIR=./frames node render.js   # add FROM/TO or O
 ffmpeg -framerate 30 -i frames/f%05d.png \
   -c:v libx264 -preset slow -crf 17 -pix_fmt yuv420p \
   -profile:v high -level 4.2 -movflags +faststart \
-  align-academy-in-motion.mp4
+  "../../2026-08-28 - Transform, or Gather Dust.mp4"
 ```
 
 Roughly 1.3s per frame single-threaded. Run 2 to 4 workers over disjoint `FROM`/`TO` ranges.

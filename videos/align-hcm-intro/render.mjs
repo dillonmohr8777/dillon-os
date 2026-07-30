@@ -37,7 +37,11 @@ const FPS = Number(opt('--fps', 30));
 const FROM = Number(opt('--from', 0));
 const MUSIC = flag('--music');   // silent unless asked; the cut ships mute
 const JOBS = Math.max(1, Number(opt('--jobs', Math.min(3, Math.max(1, os.cpus().length - 1)))));
-const OUT = path.resolve(HERE, opt('--out', MUSIC ? 'align-hcm-intro-music.mp4' : 'align-hcm-intro.mp4'));
+/* Output is named for the calendar slot the film ships into, Mon Aug 3, rather
+   than for this directory. Two cuts of that post exist, this one and the reel in
+   ../align-motion, so each carries which cut it is. */
+const SLOT = '2026-08-03 - The Team That Finishes It (Brand Intro Cut)';
+const OUT = path.resolve(HERE, opt('--out', MUSIC ? `${SLOT} (Music).mp4` : `${SLOT}.mp4`));
 const AUDIO = path.join(BUILD, 'underscore.wav');
 const PAGE = 'file://' + path.join(HERE, 'index.html');
 

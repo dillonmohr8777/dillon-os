@@ -105,7 +105,10 @@ async function renderFilm(film) {
   const pageFile = path.join(HERE, `${film}.html`);
   if (!existsSync(pageFile)) throw new Error(`${film}.html not built; run python3 build.py`);
   const pageUrl = 'file://' + pageFile;
-  const out = path.resolve(HERE, opt('--out', `align-hcm-${film}.mp4`));
+  /* Named for the calendar slot the film ships into rather than for this
+     directory, so the file arrives ready to schedule. */
+  const SLOTS = { industries: '2026-08-19 - Every Industry Depends On It' };
+  const out = path.resolve(HERE, opt('--out', `${SLOTS[film] || 'align-hcm-' + film}.mp4`));
 
   const probe = await openStage(pageUrl);
   const duration = Number(opt('--to', await probe.page.evaluate(() => window.DURATION)));
