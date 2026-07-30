@@ -5,7 +5,7 @@ industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
 last_touched: 2026-07-30
-next_action: Paste handoffs/align-hubspot-autonomous-go-prompt-2026-07-30.md BEGIN_AUTONOMOUS…END_AUTONOMOUS to desktop Claude — run B→C→E→F without stopping; Dillon still owns Step D token
+next_action: Paste handoffs/align-customer-agent-autonomous-prompt-2026-07-30.md BEGIN_CUSTOMER_AGENT…END_CUSTOMER_AGENT to desktop Claude — run Ben capability+guardrail suites, fix G0 troubleshooting fail, keep LAUNCH HOLD / no public chat
 due: none
 ---
 
