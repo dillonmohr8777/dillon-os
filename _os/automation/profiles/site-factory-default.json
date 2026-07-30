@@ -9,6 +9,8 @@
   "require_json_ld": true,
   "require_contact_signal": true,
   "require_real_image": true,
+  "require_demo_recording": true,
+  "require_independent_visual_review": true,
   "min_internal_links": 1,
   "block_on_warnings": false
 }

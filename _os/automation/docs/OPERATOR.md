@@ -62,6 +62,26 @@ node _os/automation/bin/workflow-gate.js approve --run <run-id> --approver "Dill
 The maker and checker must be different identities. Human approval is required by
 default. Never manufacture an approval record from a general build request.
 
+For every `workflow_type=website_factory` manifest:
+
+- `demo_recording_path` is required and must be one of the hashed artifact paths
+- the maker must provide a complete screen-recorded desktop and mobile walkthrough
+- the independent checker must confirm `demo_reviewed=true`
+- `visual_review.verdict`, `visual_review.summary`, and at least two reviewed viewports
+  are required
+- an overall pass is impossible when the visual review fails
+
+## Dillon development environment prototype
+
+```powershell
+& _os/dev/bin/dillon-dev.ps1 doctor
+& _os/dev/bin/dillon-dev.ps1 verify
+```
+
+The prototype uses an isolated fixture workspace, an explicit command allowlist, three
+repo-local skills, and a fail-closed doctor. `verify` runs only declared commands without
+shell expansion. It never installs, deploys, opens a browser, or reads a secret.
+
 ## MCP acceptance
 
 ```powershell
