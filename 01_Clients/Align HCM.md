@@ -5,7 +5,7 @@ industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
 last_touched: 2026-07-30
-next_action: Desktop Claude — (1) add #align-guide-form to Workday/UKG/Paylocity guides, (2) reauth LEAD + marketing-email, (3) Codex private app on 242825734; fold-in for PR #11 in handoffs/align-attribution-content-analytics-fold-in-2026-07-30.md
+next_action: Paste handoffs/align-hubspot-massive-claude-prompt-2026-07-30.md BEGIN_PROMPT…END_PROMPT into desktop Claude (portal 242825734: guide forms → reauth → Codex private app → fold-in PR #11 → never-contacted notes)
 due: none
 ---
 
