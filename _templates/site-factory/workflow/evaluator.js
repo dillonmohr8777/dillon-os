@@ -2,6 +2,8 @@
  * Evaluator for orchestrator stage handoffs.
  * Fail-closed on approval and on any attempt to set mail_ready=ready from automation.
  */
+const { validateWebsiteQualityEvidence } = require('./contract.js');
+
 function evaluateStep({ step_id, handoff, artifact, error, approval }) {
   if (error) {
     return {
@@ -63,6 +65,21 @@ function evaluateStep({ step_id, handoff, artifact, error, approval }) {
           qa: artifact.qa,
           visual_qa: artifact.visual_qa,
           qa_ready: artifact.qa_ready || 'hold',
+        },
+      };
+    }
+    const evidence = validateWebsiteQualityEvidence(artifact);
+    if (!evidence.ok) {
+      return {
+        status: 'fail',
+        retryable: false,
+        reason: `website evidence incomplete: ${evidence.errors.join('; ')}`,
+        machine: {
+          step_id,
+          qa: artifact.qa,
+          visual_qa: artifact.visual_qa,
+          qa_ready: 'hold',
+          evidence_errors: evidence.errors,
         },
       };
     }

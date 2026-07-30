@@ -22,6 +22,7 @@ const REQUIRED_HANDOFF_FIELDS = [
 ];
 
 const DEFAULT_MAX_RETRIES = 2;
+const REQUIRED_REVIEW_VIEWPORTS = ['desktop', 'mobile'];
 
 function assertHandoff(handoff) {
   if (!handoff || typeof handoff !== 'object') {
@@ -107,6 +108,64 @@ function nextAttemptHandoff(handoff, evaluation) {
   });
 }
 
+/**
+ * A website quality gate is complete only when the maker supplies a hashed
+ * walkthrough recording and a different checker reviews that recording at
+ * desktop and mobile sizes. This is intentionally stricter than Playwright
+ * screenshots: deterministic QA and an independent taste pass are both
+ * required before qa_ready can become ready.
+ */
+function validateWebsiteQualityEvidence(artifact) {
+  const errors = [];
+  const recording = artifact && artifact.demo_recording;
+  const review = artifact && artifact.independent_review;
+  const visual = review && review.visual_review;
+
+  if (!recording || typeof recording !== 'object') {
+    errors.push('demo_recording is required');
+  } else {
+    if (!String(recording.path || '').trim()) {
+      errors.push('demo_recording.path is required');
+    }
+    if (!/^[a-f0-9]{64}$/i.test(String(recording.sha256 || ''))) {
+      errors.push('demo_recording.sha256 must be a SHA-256 digest');
+    }
+    if (!Number.isFinite(recording.bytes) || recording.bytes <= 0) {
+      errors.push('demo_recording.bytes must be a positive number');
+    }
+  }
+
+  if (!review || typeof review !== 'object') {
+    errors.push('independent_review is required');
+  } else {
+    if (!String(review.maker_id || '').trim()) errors.push('independent_review.maker_id is required');
+    if (!String(review.checker_id || '').trim()) errors.push('independent_review.checker_id is required');
+    if (review.maker_id && review.checker_id && review.maker_id === review.checker_id) {
+      errors.push('maker and checker must be different identities');
+    }
+    if (review.demo_reviewed !== true) errors.push('independent checker must review the demo recording');
+    if (review.verdict !== 'pass') errors.push('independent checker verdict must pass');
+    if (!String(review.summary || '').trim()) errors.push('independent checker summary is required');
+    if (!visual || typeof visual !== 'object') {
+      errors.push('independent visual_review is required');
+    } else {
+      if (visual.verdict !== 'pass') errors.push('independent visual review must pass');
+      if (!String(visual.summary || '').trim()) errors.push('independent visual review summary is required');
+      if (!Array.isArray(visual.viewports)) {
+        errors.push('independent visual review viewports are required');
+      } else {
+        for (const viewport of REQUIRED_REVIEW_VIEWPORTS) {
+          if (!visual.viewports.includes(viewport)) {
+            errors.push(`independent visual review must include ${viewport}`);
+          }
+        }
+      }
+    }
+  }
+
+  return { ok: errors.length === 0, errors };
+}
+
 const STAGE_SEQUENCE = [
   'discover',
   'qualify',
@@ -128,4 +187,6 @@ module.exports = {
   approvalState,
   canRetry,
   nextAttemptHandoff,
+  REQUIRED_REVIEW_VIEWPORTS,
+  validateWebsiteQualityEvidence,
 };

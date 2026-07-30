@@ -27,6 +27,8 @@ async function runWorkflow(opts) {
     no_outreach: true,
     no_deploy: true,
     mail_ready_default: 'hold',
+    require_demo_recording: true,
+    require_independent_visual_review: true,
     ...(opts.constraints || {}),
   };
 

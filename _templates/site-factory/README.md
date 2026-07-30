@@ -62,6 +62,16 @@ A batch directory holds `batch.json` plus `briefs/*.json`, and the runner emits 
 
 Production runs require brief count == `targetCount`. Use `--allow-partial` only for test/preview. Full QA requires Playwright visual checks; static-only is not a pass.
 
+The workflow quality gate also requires maker/checker evidence before
+`qa_ready` can become ready:
+
+- a screen-recorded walkthrough artifact with its SHA-256 hash and byte size;
+- a checker identity different from the maker;
+- confirmation that the checker watched the recording;
+- a passing independent visual review covering desktop and mobile.
+
+Missing or failed evidence holds the batch. Automation cannot waive this gate.
+
 ## Files
 
 | File | Role |

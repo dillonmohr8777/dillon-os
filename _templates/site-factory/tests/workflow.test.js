@@ -11,6 +11,32 @@ const {
 const { evaluateStep } = require('../workflow/evaluator.js');
 const { runWorkflow } = require('../workflow/orchestrator.js');
 
+function completeQualityGate(overrides = {}) {
+  return {
+    qa: 'PASS',
+    visual_qa: 'ran',
+    qa_ready: 'ready',
+    demo_recording: {
+      path: '_templates/site-factory/evidence/demo.webm',
+      sha256: 'a'.repeat(64),
+      bytes: 1024,
+    },
+    independent_review: {
+      maker_id: 'site-factory-maker',
+      checker_id: 'independent-web-checker',
+      demo_reviewed: true,
+      verdict: 'pass',
+      summary: 'Build, interactions, and failure states match the contract.',
+      visual_review: {
+        verdict: 'pass',
+        summary: 'Desktop and mobile layouts are specific, coherent, and usable.',
+        viewports: ['desktop', 'mobile'],
+      },
+    },
+    ...overrides,
+  };
+}
+
 describe('workflow contract', () => {
   it('requires full handoff fields', () => {
     for (const key of REQUIRED_HANDOFF_FIELDS) {
@@ -114,6 +140,72 @@ describe('workflow evaluator', () => {
     assert.equal(r.status, 'fail');
     assert.equal(r.machine.visual_qa, 'skipped');
   });
+
+  it('rejects a full QA result without a walkthrough recording', () => {
+    const handoff = createHandoff({
+      workflow_id: 'wf',
+      step_id: 'quality_gate',
+      task: 'qa',
+      constraints: {},
+      upstream_artifacts: [],
+      budget_tokens: 1,
+      timeout_seconds: 1,
+    });
+    const artifact = completeQualityGate();
+    delete artifact.demo_recording;
+    const r = evaluateStep({
+      step_id: 'quality_gate',
+      handoff,
+      artifact,
+      approval: approvalState(),
+    });
+    assert.equal(r.status, 'fail');
+    assert.equal(r.retryable, false);
+    assert.match(r.reason, /demo_recording is required/);
+  });
+
+  it('rejects self-review and incomplete viewport evidence', () => {
+    const handoff = createHandoff({
+      workflow_id: 'wf',
+      step_id: 'quality_gate',
+      task: 'qa',
+      constraints: {},
+      upstream_artifacts: [],
+      budget_tokens: 1,
+      timeout_seconds: 1,
+    });
+    const artifact = completeQualityGate();
+    artifact.independent_review.checker_id = artifact.independent_review.maker_id;
+    artifact.independent_review.visual_review.viewports = ['desktop'];
+    const r = evaluateStep({
+      step_id: 'quality_gate',
+      handoff,
+      artifact,
+      approval: approvalState(),
+    });
+    assert.equal(r.status, 'fail');
+    assert.match(r.reason, /different identities/);
+    assert.match(r.reason, /include mobile/);
+  });
+
+  it('accepts complete maker and independent checker evidence', () => {
+    const handoff = createHandoff({
+      workflow_id: 'wf',
+      step_id: 'quality_gate',
+      task: 'qa',
+      constraints: {},
+      upstream_artifacts: [],
+      budget_tokens: 1,
+      timeout_seconds: 1,
+    });
+    const r = evaluateStep({
+      step_id: 'quality_gate',
+      handoff,
+      artifact: completeQualityGate(),
+      approval: approvalState(),
+    });
+    assert.equal(r.status, 'pass');
+  });
 });
 
 describe('workflow orchestrator', () => {
@@ -121,7 +213,7 @@ describe('workflow orchestrator', () => {
     const result = await runWorkflow({
       workflow_id: 'wf-test-1',
       handlers: {
-        quality_gate: async () => ({ qa: 'PASS', visual_qa: 'ran', qa_ready: 'ready' }),
+        quality_gate: async () => completeQualityGate(),
         human_approval: async () => ({ approved: false }),
       },
     });
@@ -134,7 +226,7 @@ describe('workflow orchestrator', () => {
     const result = await runWorkflow({
       workflow_id: 'wf-test-2',
       handlers: {
-        quality_gate: async () => ({ qa: 'PASS', visual_qa: 'ran', qa_ready: 'ready' }),
+        quality_gate: async () => completeQualityGate(),
         human_approval: async () => ({
           approved: true,
           approved_by: 'Melissa Silber',

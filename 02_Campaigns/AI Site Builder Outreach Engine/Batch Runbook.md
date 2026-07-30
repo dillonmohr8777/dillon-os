@@ -116,6 +116,16 @@ Automation can't judge taste. Open the hub and look at every site:
 
 Anything that fails goes back to step 3 for a design revision. Also spot-check `qa-shots/<slug>/phone.png` for cramped headlines.
 
+Record a walkthrough of the complete batch before approval. Cover the hub,
+desktop and mobile layouts, interactions, CTAs, forms, and any known failure
+state. Store the recording outside Git, then record its path, SHA-256 hash, and
+byte size in the quality-gate artifact.
+
+The checker must be a different identity from the maker. The checker watches
+the full recording, verifies the hashes, and records a desktop and mobile visual
+verdict. A missing recording, self-review, incomplete viewport review, or failed
+visual verdict keeps `qa_ready=hold`.
+
 ## Step 6: Deploy
 
 Netlify drop of the batch directory. Every preview stays `noindex`.

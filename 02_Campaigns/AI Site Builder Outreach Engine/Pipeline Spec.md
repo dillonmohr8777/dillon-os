@@ -97,6 +97,11 @@ Batch-level gates the runner also handles: duplicate-image detection across the 
 
 **Human pass that can't be automated:** does this look expensive, does it look like the business, is the palette dull. Review the batch hub, not individual files.
 
+The gate is evidence-backed: the maker supplies a hashed screen recording of
+the batch walkthrough, and a different checker reviews it at desktop and mobile
+before `qa_ready` can become ready. The evaluator rejects missing recordings,
+self-review, incomplete viewport coverage, and any failed visual verdict.
+
 ## Stage 6: Human approval
 
 **Goal:** Mac or Melissa signs off on the exact list and the exact mail piece.
