@@ -1,0 +1,17 @@
+# Everything under build/ is scratch: render segments, logs, contact sheets,
+# preview PNGs, the fetched font and logo caches. Rather than chase each new
+# throwaway filename, ignore the directory and list the few files that are real
+# inputs to build.py or genuinely useful helpers.
+build/*
+!build/fonts.py
+!build/wm.py
+!build/shot.mjs
+!build/copycheck.mjs
+!build/fonts.css
+!build/wordmark.path
+!build/wordmark.vb
+!build/wordmark.svg
+!build/noise.b64
+!build/icons.js
+
+__pycache__/
