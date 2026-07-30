@@ -27,6 +27,8 @@ tags:
 
 - Grok JSON ingestion with immutable captures, daily research synthesis, and replay
   protection
+- direct xAI Responses API collection with X Search, web verification, citations,
+  usage evidence, and a DPAPI-protected credential route
 - Obsidian experiment queue with deterministic experiment IDs
 - maker/checker handoff contracts, artifact hashes, independent verdicts, and a
   default human adoption gate
@@ -49,3 +51,7 @@ tags:
 PR #226 is still the canonical weekly 25-site factory dependency. Once that exact
 branch is merged or reconciled, call `aeo-trust-gate.js` on every built preview
 before its existing deploy command. Do not duplicate the factory into this vault.
+
+The xAI research key is intentionally chat-only, limited to 10 requests per
+minute and 250,000 tokens per minute, and expires on 2026-10-28. Its non-secret
+Access Broker locator is `dpapi-bootstrap://xai/dillon-os/daily-x-search`.

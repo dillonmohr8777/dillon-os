@@ -101,6 +101,20 @@
       "status": "implemented"
     },
     {
+      "id": "xai-daily-search",
+      "name": "Direct xAI X and web search collector",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "daily before grok-intelligence-ingest",
+      "command": "& _os/automation/bin/xai-research.ps1 -Profile _os/automation/profiles/daily-x-research.json -Out _os/automation/incoming/grok/daily-x-research.json -Ingest",
+      "depends_on": ["xai-api-credit", "dpapi-secret", "grok-intelligence-ingest"],
+      "inputs": ["_os/automation/profiles/daily-x-research.json", "dpapi-bootstrap://xai/dillon-os/daily-x-search"],
+      "outputs": ["source-linked Grok run envelope", "12_Brain/01_Captures/Grok/*.md", "12_Brain/06_Research/* - Grok daily intelligence.md"],
+      "external_actions": false,
+      "notes": "Read-only X and web research through xAI Responses API. Chat-only key, 10 RPM, 250k TPM, expires 2026-10-28. Never logs the key.",
+      "status": "implemented"
+    },
+    {
       "id": "experiment-queue",
       "name": "Evidence-backed experiment queue",
       "lane": "intelligence",

@@ -26,6 +26,29 @@ The run envelope must match `12_Brain/schemas/grok-run.json`. Ingestion writes:
 The CLI does not log in to Grok or scrape X. A separate read-only browser collector
 may export completed Grok automation runs into the envelope.
 
+### Direct xAI X Search collector
+
+The production collector uses xAI's Responses API with `x_search` and optional
+`web_search`, then feeds the same immutable ingestion path:
+
+```powershell
+& _os/automation/bin/xai-research.ps1 `
+  -Profile _os/automation/profiles/daily-x-research.json `
+  -Out _os/automation/incoming/grok/daily-x-research.json `
+  -Ingest
+```
+
+The wrapper decrypts the current-user DPAPI secret only into the child process
+environment and removes `XAI_API_KEY` afterward. The repository stores only the
+non-secret Access Broker locator
+`dpapi-bootstrap://xai/dillon-os/daily-x-search`. The key is chat-only, rate
+limited, and rotated on its expiry date.
+
+Use `-DryRun` to inspect the request without using credits or requiring a key.
+The collector records citations, tool-call types, response ID, token usage, and
+exact USD cost without logging the credential. The default profile asks the
+model to stay within 12 X searches, 4 web searches, and 4,500 output tokens.
+
 ## Maker/checker gate
 
 ```powershell
