@@ -5,7 +5,7 @@ industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
 last_touched: 2026-07-30
-next_action: (1) Dillon — reconnect Claude HubSpot connector OAuth for app 16228553; (2) paste handoffs/align-attribution-ef-finish-go-prompt-2026-07-30.md BEGIN_EF…END_EF for fold-in PR #11 + never-contacted CRM; (3) manually click CTA on Workday/Dayforce/ADP
+next_action: Dillon — (1) reconnect Claude HubSpot OAuth for connector 16228553, (2) create Codex private app + token, (3) decide PR #11 draft vs ready; optional Customer Agent suite continue; 4-week guide-form measurement window open
 due: none
 ---
 
