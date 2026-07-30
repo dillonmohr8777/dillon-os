@@ -5,7 +5,7 @@ industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
 last_touched: 2026-07-30
-next_action: Desktop Claude — CRM-only in portal 242825734: Codex read private app + never-contacted contact notes/tasks; see handoffs/align-hubspot-codex-what-to-say-2026-07-30.md
+next_action: Desktop Claude — (1) add #align-guide-form to Workday/UKG/Paylocity guides, (2) reauth LEAD + marketing-email, (3) Codex private app on 242825734; fold-in for PR #11 in handoffs/align-attribution-content-analytics-fold-in-2026-07-30.md
 due: none
 ---
 
