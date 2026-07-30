@@ -137,6 +137,19 @@ test('xAI candidate extraction is bounded and fails closed', () => {
   assert.deepEqual(extractCandidates('```candidates_json\nnot json\n```'), []);
 });
 
+test('xAI candidate extraction accepts a labeled JSON fence', () => {
+  const text = `Report
+\`\`\`json
+candidates_json
+[{"name":"Frontend audit skill","decision":"sandbox-test","source_urls":["https://example.com"]}]
+\`\`\``;
+  assert.deepEqual(extractCandidates(text), [{
+    name: 'Frontend audit skill',
+    decision: 'sandbox-test',
+    source_urls: ['https://example.com'],
+  }]);
+});
+
 test('xAI research runner produces an ingestible source-linked envelope', async () => {
   const now = new Date('2026-07-30T14:00:00.000Z');
   const fetchImpl = async (_url, options) => {
