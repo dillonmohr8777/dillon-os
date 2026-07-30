@@ -12,8 +12,8 @@ updated: 2026-07-30
 # Account Manager AI Workflow Guide
 
 The deliverable is **[Account Manager AI Workflow Guide.pdf](Account%20Manager%20AI%20Workflow%20Guide.pdf)** — a
-four-page, Momentum 360-branded guide that turns the workflow walkthrough into a repeatable
-process account managers can run every day.
+four-page, Momentum Digital-branded guide that turns the workflow walkthrough into a
+repeatable process account managers can run every day.
 
 This note is the source of truth for the content. Edit here first, then regenerate the PDF
 (see [Regenerating the PDF](#regenerating-the-pdf)).
@@ -220,12 +220,22 @@ python3 build.py ../../"Account Manager AI Workflow Guide.pdf"
   them (both are SIL Open Font License, fetched rather than vendored to keep the vault lean).
 - **Chromium** — the script shells out to Chromium's `--print-to-pdf`. Update the binary
   path at the bottom of `build.py` if yours differs.
-- **Assets** — `assets/` holds the official Momentum 360 lockup plus the derived logo mark
-  and cover watermark. `icons/paths.json` holds the plugin icon paths and each vendor's
-  official brand color, so every plugin renders in its own real logo.
+- **Assets** — `assets/` holds the official **Momentum Digital** lockup plus the marks and
+  cover watermark derived from it. `icons/paths.json` holds the plugin icon paths and each
+  vendor's official brand color, so every plugin renders in its own real logo.
 
-**Brand tokens** (sampled directly from the Momentum 360 AI Search eBook so the two
-documents sit side by side):
+**Logo variants** — all derived from the official lockup at `needmomentum.com`:
+
+| File | Where it's used |
+|---|---|
+| `md-logo.png` | Full blue lockup, for light backgrounds |
+| `md-logo-white.png` | White lockup — the cover |
+| `md-mark.png` | Blue circular mark — the cream callouts |
+| `md-mark-white.png` | White circular mark — the navy closing band |
+| `md-wm.png` | Soft white mark — the cover watermark |
+
+**Brand tokens** — Momentum Digital blue is `#2A80C2`. The rest of the palette was sampled
+out of the Momentum 360 AI Search eBook, since that was the requested visual reference:
 
 | Token | Hex |
 |---|---|
@@ -235,6 +245,11 @@ documents sit side by side):
 | Blue | `#0D69AE` |
 | Gold | `#F0B018` |
 | Cream | `#FEF4DB` |
+
+> The gold accent comes from the eBook reference, not from Momentum Digital's own identity,
+> which is blue-only. If you want the guide to sit tighter inside Momentum Digital brand,
+> shift `BLUE` to `#2A80C2` and swap the gold accents for that blue — both are single-line
+> changes at the top of `build.py`.
 
 ---
 

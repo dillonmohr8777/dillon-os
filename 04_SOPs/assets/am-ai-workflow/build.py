@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Momentum 360 Account Manager AI Workflow guide (4-page PDF).
+"""Build the Momentum Digital Account Manager AI Workflow guide (4-page PDF).
 
 Regenerate with:  python3 build.py [output.pdf]
 
@@ -11,10 +11,10 @@ import base64, json, os, subprocess, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ICONS = json.load(open(f"{HERE}/icons/paths.json"))
 B64 = {k: base64.b64encode(open(f"{HERE}/assets/{f}", "rb").read()).decode()
-       for k, f in (("logo", "m360-logo.png"), ("mark", "m360-mark-lg.png"),
-                    ("wm", "m360-wm.png"))}
+       for k, f in (("logo", "md-logo-white.png"), ("mark", "md-mark.png"),
+                    ("mark_white", "md-mark-white.png"), ("wm", "md-wm.png"))}
 
-# ---- Momentum 360 brand tokens (sampled from the AI Search eBook) ----
+# ---- Brand tokens (palette sampled from the M360 AI Search eBook) ----
 NAVY      = "#062A4F"
 NAVY_DEEP = "#04203E"
 NAVY_MID  = "#0D3A6B"
@@ -40,8 +40,9 @@ def tile(slug, size=17, box=32, color=None, bg="#fff"):
             f'{icon(slug, size, color)}</span>')
 
 
-LOGO = f'<img class="logo" src="data:image/png;base64,{B64["logo"]}" alt="Momentum 360">'
-MARK = f'data:image/png;base64,{B64["mark"]}'
+LOGO = f'<img class="logo" src="data:image/png;base64,{B64["logo"]}" alt="Momentum Digital">'
+MARK = f'data:image/png;base64,{B64["mark"]}'          # blue mark, for light panels
+MARK_W = f'data:image/png;base64,{B64["mark_white"]}'  # white mark, for navy panels
 WM = f'data:image/png;base64,{B64["wm"]}'
 
 # neutral (non-brand) glyphs for the setup steps
@@ -78,7 +79,7 @@ h1,h2,h3,h4,.mont {{ font-family:'Montserrat',sans-serif; }}
 .wm {{ position:absolute; right:-210px; top:-120px; width:800px; opacity:.05; }}
 .cov-top {{ display:flex; justify-content:space-between; align-items:center;
             position:relative; z-index:2; }}
-.logo {{ height:46px; }}
+.logo {{ height:42px; }}
 .badge {{ border:1.4px solid rgba(240,176,24,.62); border-radius:22px; padding:7px 17px;
           font-family:'Montserrat',sans-serif; font-size:7.6pt; font-weight:700;
           letter-spacing:.19em; color:{GOLD}; }}
@@ -358,7 +359,7 @@ def build():
                      "googlechrome", "canva", "figma", "googleads", "semrush"])
 
     return f"""<!doctype html><html><head><meta charset="utf-8">
-<title>Momentum 360 — The Account Manager AI Workflow</title>
+<title>Momentum Digital — The Account Manager AI Workflow</title>
 <style>{CSS}</style></head><body>
 
 <!-- ============ PAGE 1 · COVER ============ -->
@@ -397,15 +398,15 @@ def build():
       <p>to set up the workspace that then works for you every day</p></div>
   </div>
   <div class="cov-foot">
-    <div class="l"><b>Momentum 360</b>
-      <p>Photo, Video &amp; Digital Marketing Services &middot; Philadelphia &amp; nationwide</p></div>
-    <div class="r">Account Manager enablement &middot; 2026<br>momentumvirtualtours.com</div>
+    <div class="l"><b>Momentum Digital</b>
+      <p>Philadelphia digital marketing agency &middot; needmomentum.com</p></div>
+    <div class="r">Account Manager enablement &middot; 2026<br>needmomentum.com</div>
   </div>
 </section>
 
 <!-- ============ PAGE 2 · THE LOOP ============ -->
 <section class="page"><div class="inner">
-  <div class="rhead"><span>MOMENTUM 360</span><span>THE ACCOUNT MANAGER AI WORKFLOW</span></div>
+  <div class="rhead"><span>MOMENTUM DIGITAL</span><span>THE ACCOUNT MANAGER AI WORKFLOW</span></div>
   <div class="eyebrow"><i></i><span>THE OPERATING MODEL &middot; 01</span></div>
   <h2>One loop. Every account.</h2><div class="rule"></div>
   <p class="lede">The point of this isn't novelty &mdash; it's that every Account Manager
@@ -455,12 +456,12 @@ def build():
        week or two, open a new chat and you'll find <b>the recommendations are already
        waiting for you</b> &mdash; click one, hit enter, done.</p></div>
 
-  <div class="foot"><span class="fl">momentumvirtualtours.com</span><span class="fr">02</span></div>
+  <div class="foot"><span class="fl">needmomentum.com</span><span class="fr">02</span></div>
 </div></section>
 
 <!-- ============ PAGE 3 · THE STACK ============ -->
 <section class="page"><div class="inner">
-  <div class="rhead"><span>MOMENTUM 360</span><span>THE ACCOUNT MANAGER AI WORKFLOW</span></div>
+  <div class="rhead"><span>MOMENTUM DIGITAL</span><span>THE ACCOUNT MANAGER AI WORKFLOW</span></div>
   <div class="eyebrow"><i></i><span>YOUR PLUGIN STACK &middot; 02</span></div>
   <h2>Connect these. In this order.</h2><div class="rule"></div>
   <p class="lede">The goal is not to install everything. <b>Connect the core six first</b>,
@@ -476,12 +477,12 @@ def build():
      &mdash; confirm anything new is approved before you rely on it. Personal integrations are
      fine, but <b>keep them separate from client work and client data</b>.</p>
 
-  <div class="foot"><span class="fl">momentumvirtualtours.com</span><span class="fr">03</span></div>
+  <div class="foot"><span class="fl">needmomentum.com</span><span class="fr">03</span></div>
 </div></section>
 
 <!-- ============ PAGE 4 · PROMPTS + GUARDRAILS ============ -->
 <section class="page"><div class="inner">
-  <div class="rhead"><span>MOMENTUM 360</span><span>THE ACCOUNT MANAGER AI WORKFLOW</span></div>
+  <div class="rhead"><span>MOMENTUM DIGITAL</span><span>THE ACCOUNT MANAGER AI WORKFLOW</span></div>
   <div class="eyebrow"><i></i><span>REPEATABLE PROCESS &middot; 03</span></div>
   <h2>Three prompts. Paste and go.</h2><div class="rule"></div>
   <p class="lede">Copy these as written, swap the brackets for your clients, and save them.
@@ -499,12 +500,12 @@ def build():
        and you'll see the point in about two minutes.</p></div>
 
   <div class="band">
-    <img src="{MARK}" alt="">
+    <img src="{MARK_W}" alt="">
     <div><b>You don't have to watch the video. You do have to connect the plugins.</b>
       <p>Start with page 02. Twenty minutes today, then it works for you every day after.</p></div>
   </div>
 
-  <div class="foot"><span class="fl">Momentum 360 &middot; Account Manager enablement &middot; 2026</span><span class="fr">04</span></div>
+  <div class="foot"><span class="fl">Momentum Digital &middot; Account Manager enablement &middot; 2026</span><span class="fr">04</span></div>
 </div></section>
 
 </body></html>"""
