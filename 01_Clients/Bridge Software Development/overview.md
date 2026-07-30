@@ -5,9 +5,9 @@ status: active-discovery
 confidentiality: private-nda
 github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
-updated: 2026-07-11
-last_touched: 2026-07-29
-next_action: TBD — needs human next action
+updated: 2026-07-30
+last_touched: 2026-07-30
+next_action: Capture Tori meeting outcomes in dated session note; send follow-up with decisions
 due: none
 ---
 
@@ -110,6 +110,17 @@ Leave with decisions on:
 - [[Source Audit]]
 - [[../../10_Sessions/Bridge Software Development - 2026-07-11|2026-07-11 build session]]
 
+## Session sync
+
+_Updated by codex-session-sync, Run 37 — 2026-07-30._
+
+- **Post-Tori meeting capture missing (~17d overdue):** No vault session documents meeting outcomes, decision register updates, or revised MVP boundary after the Tori discovery meeting. Create `10_Sessions/Bridge Software Development — YYYY-MM-DD.md` or update [[../../10_Sessions/Bridge Software Development - 2026-07-11|2026-07-11 session]] with decisions.
+- **Tori prototype walkthrough still pending** — original Claude mockups not delivered in accessible Gmail/Drive/Slack; NDA-safe live walkthrough required.
+- **Brand assets unapproved** — no official logo, palette, or fonts; provisional **Trusted Current** direction awaits Tori sign-off.
+- **Open product decisions:** exact role model (retailer vs dispensary), verification evidence/legal meaning, profile/contact visibility rules, priority directory filters, first launch audience/market, final MVP boundary.
+- **Backend handoff pending** — API/RLS contracts and review cadence with Miraj not yet captured post-meeting.
+- **Next technical session:** new Claude session with `dillonmohr8777/bridge-discovery-prototype` attached; paste `CLAUDE_SESSION_PROMPT.md`; prove repo access before planning.
+
 ## Immediate next action
 
-Start a new Claude session with the GitHub repository explicitly attached. Paste `CLAUDE_SESSION_PROMPT.md`. Claude must prove it can read the repository before planning or editing.
+Capture Tori meeting outcomes in a dated session note, then start a new Claude session with the GitHub repository explicitly attached. Paste `CLAUDE_SESSION_PROMPT.md`. Claude must prove it can read the repository before planning or editing.
