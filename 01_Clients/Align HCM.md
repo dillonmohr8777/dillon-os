@@ -4,8 +4,8 @@ status: active
 industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
-last_touched: 2026-07-29
-next_action: TBD — needs human next action
+last_touched: 2026-07-30
+next_action: Desktop Claude — create Align Codex read-only HubSpot private app (portal 242825734) + never-contacted latency notes; see handoffs/align-hubspot-codex-what-to-say-2026-07-30.md
 due: none
 ---
 
