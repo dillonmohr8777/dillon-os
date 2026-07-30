@@ -6,7 +6,7 @@ updated: 2026-07-30
 owner: Dillon Mohr
 area: knowledge-management
 source_refs:
-  - "gmail:account:dillonmohr8777@gmail.com"
+  - "gmail:account:primary-authorized-mailbox"
   - "slack:workspace:T066HGS7N"
 tags: [brain, sop, gmail, slack, ingestion, knowledge-graph]
 ---
@@ -48,7 +48,7 @@ Turn Gmail and Slack activity into source-linked operational memory without copy
 
 ## Current connector state
 
-1. Gmail read access is active for `dillonmohr8777@gmail.com`.
+1. Gmail read access is active for the primary authorized mailbox.
 2. Slack is connected to Momentum Digital Agency.
 3. Direct Slack execution through Composio is blocked by Enhanced Controls in this client. Do not disable the security control. Use the native Slack connector, an approved background browser lane, or source-linked Gmail digests until the read path is available.
 

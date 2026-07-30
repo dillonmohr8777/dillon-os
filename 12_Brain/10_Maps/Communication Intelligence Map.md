@@ -6,7 +6,7 @@ updated: 2026-07-30
 owner: Dillon Mohr
 area: communication-intelligence
 source_refs:
-  - "gmail:account:dillonmohr8777@gmail.com"
+  - "gmail:account:primary-authorized-mailbox"
   - "slack:workspace:T066HGS7N"
 tags: [brain, map, gmail, slack, clients, operations]
 ---

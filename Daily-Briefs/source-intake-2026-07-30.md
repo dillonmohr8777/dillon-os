@@ -5,7 +5,7 @@ created: 2026-07-30
 updated: 2026-07-30
 owner: Dillon Mohr
 source_refs:
-  - "gmail:account:dillonmohr8777@gmail.com"
+  - "gmail:account:primary-authorized-mailbox"
   - "slack:workspace:T066HGS7N"
 tags: [brain, brief, gmail, slack, intake]
 ---
