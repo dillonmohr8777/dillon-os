@@ -5,7 +5,7 @@ industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
 last_touched: 2026-07-30
-next_action: Paste handoffs/align-customer-agent-autonomous-prompt-2026-07-30.md BEGIN_CUSTOMER_AGENT…END_CUSTOMER_AGENT to desktop Claude — run Ben capability+guardrail suites, fix G0 troubleshooting fail, keep LAUNCH HOLD / no public chat
+next_action: Paste handoffs/align-workday-css-recovery-go-prompt-2026-07-30.md BEGIN_RECOVERY…END_RECOVERY — restore Workday abg CSS via Head HTML (ADP donor), Head-HTML-only unhide Dayforce/ADP, then C→E→F continuous; never open post body source again
 due: none
 ---
 
