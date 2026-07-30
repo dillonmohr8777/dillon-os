@@ -5,6 +5,9 @@ industry: events
 start_date: 2026-02-16
 rate: $950/mo
 google_ads_id: 435-710-2897
+last_touched: 2026-07-29
+next_action: TBD — needs human next action
+due: none
 ---
 
 # Bar Crawl USA

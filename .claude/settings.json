@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"- $(date '+%Y-%m-%d %H:%M') \u2014 session ended (run /session-mine if decisions were made)\" >> \"$CLAUDE_PROJECT_DIR/12_Brain/raw/sessions/session-log.md\""
+          }
+        ]
+      }
+    ]
+  }
+}

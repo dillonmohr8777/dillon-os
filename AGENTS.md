@@ -1,78 +1,46 @@
 # AGENTS.md
 
-Read this first. It tells any agent (Cursor, Claude Code, Codex) what this repo is and how to work inside it without re-exploring from scratch.
+## Vault map (start here)
 
-## What this repo is
+This repo is **Dillon OS** — Dillon Mohr's Obsidian vault + agentic OS.
 
-This is **Dillon OS**: Dillon Mohr's Obsidian vault plus an agentic operating layer for his agency work (Momentum 360 / Mohr Media) and full-time job (Align HCM). It is a working second brain, not an app monorepo. Primary directive: **Road to 100 clients** (current progress lives in `System/OS Config.md` frontmatter).
+- **Canonical second-brain layer:** `12_Brain/` (front door: `12_Brain/INDEX.md`)
+- **Do not create `1Z_Brain/`** or any competing brain tree.
+- **GitHub is PUBLIC.** Sensitive notes → `12_Brain/private/` (gitignored). See `12_Brain/private/README.md`.
+- Working folders (`00_Inbox` … `11_Agents`) stay outside `12_Brain/`; link, don't duplicate clients.
+- Root `CLAUDE.md` has writing/reading rules. Ops loops: `12_Brain/System/Second Brain Ops.md`.
+- Health automation status: `System/routine-health.md` (linked from `12_Brain/System/Health Automation.md`).
 
-Three kinds of things live here:
+## Cursor Cloud specific instructions
 
-1. **The vault**: markdown notes organized by numbered folders (see map below)
-2. **Skills**: runnable agent workflows in `.claude/skills/` (one folder per skill, each with a `SKILL.md`)
-3. **Website projects**: real shippable code in `philly-sites/`, `mohr-media-site/`, `immohrtal-site/`, `_templates/site-factory/`, and inside some client folders (e.g. `01_Clients/Shadow HVAC/website/`)
+There is **no root `package.json` for the vault itself**, no Docker. Node (v18+),
+npm, and Python 3 are available; the startup update script runs `npm install`
+for the two npm-based sites below.
 
-## Vault map
+### Services / products and how to run them (dev mode)
 
-| Folder | Purpose |
-|---|---|
-| `00_Inbox/` | Quick capture, unsorted. Slack intake tasks land here too. |
-| `01_Clients/` | One note per client (`Client Name.md`), plus a folder per client with deeper work. `Client Index.md` is the roster. |
-| `02_Campaigns/` | Ad campaign plans and queues |
-| `02_FullTimeJob/` | Align HCM work. NOT Momentum 360. Never mix branding. |
-| `03_Content/` | Content drafts, ad copy, SEO writing |
-| `04_SOPs/` | Repeatable playbooks |
-| `05_Offers/`, `05_Book/` | Mohr Media offers and book project |
-| `06_Personal/`, `07_DBA/` | Personal, non-client |
-| `10_Sessions/` | Client session notes |
-| `11_Agents/` | Agent role definitions and orchestrator specs. Read `11_Agents/Master Agent.md` for the delegation model. |
-| `Daily-Briefs/` | Output folder for skills (am-report, pulse, metrics, etc.) |
-| `System/` | OS config, writing rules, memory sync. Read `System/writing-rules.md` before writing any client-facing copy. |
-| `_os/` | Local Node HUD (`node _os/server.js` on port 4242). One button per skill. Zero npm dependencies. |
-| `_templates/` | Obsidian note templates plus `site-factory/` (the website generator) |
-| `.claude/skills/` | All runnable skills. Drop a new folder with `SKILL.md` and the HUD picks it up automatically. |
-| `philly-sites/` | 25 finished single-page prospect sites built on one shared template system. The reference library for the site factory. |
-| `mohr-media-site/` | Mohr Media agency marketing site (static, Vercel) |
-| `immohrtal-site/` | IMMOHRTAL artist site (React 19 + Vite + Tailwind) |
-| `handoffs/` | Machine-to-machine handoff docs |
+| Product | Location | Dev command | URL | Notes |
+|---|---|---|---|---|
+| D.I.L.L.O.N. OS (HUD) — flagship | `_os/` | `node _os/server.js` | http://127.0.0.1:4242 | Reads the vault + `12_Brain` live. `GET /api/state` includes `brain` vitals. |
+| IMMOHRTAL site | `immohrtal-site/` | `npm run dev` | http://localhost:5173 | Vite 6 + React 19. Append `?forcegl` in headless/VM browsers. |
+| Shadow HVAC site | `01_Clients/Shadow HVAC/website/` | `npm run dev` | http://localhost:3000 | Next.js 15. First route compile is slow. |
+| Mohr Media site | `mohr-media-site/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML/JS/WebGL. |
+| Philly 25 gallery | `philly-sites/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML. |
+| Client report builder (CLI) | `_os/reporting/` | `node _os/reporting/build-report.js <data.json>` | — | Writes HTML into `Daily-Briefs/reports/`. |
 
-## Skills (the runnable workflows)
+### Tests / lint
 
-All skills are vault-native: they read the vault and write results back, mostly to `Daily-Briefs/`. Invoke as `/skill-name` in Claude Code, via the `_os` HUD, or by following the `SKILL.md` steps in any agent.
+```
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
+```
 
-| Skill | What it does |
-|---|---|
-| `am-report` | Morning briefing: priorities, client movement, inbox, content, schedule. Updates `Dashboard.md`. |
-| `slack-intake` | Reads boss/client requests from Slack, classifies them, writes task notes into `00_Inbox/slack/`. |
-| `inbox-brief` | Triage of `00_Inbox/` (do/delegate/file/delete). Read-only. |
-| `plan-today` | Time-blocked day plan synced to `Dashboard.md` (max 5 tasks). |
-| `client-pulse` | Classifies clients moving/watch/stalled with due-soon list. |
-| `client-report` | Branded HTML performance report via `node _os/reporting/build-report.js`. |
-| `content-scan` | Ranks ship-ready content vs gaps vs kill list. |
-| `metrics-pull` | Vault vitals snapshot with 7-day deltas. |
-| `site-factory` | Generates a complete client/prospect website from a brief, using the Philly-25 template system. |
-| `site-batch` | Runs the weekly 25-site outreach batch end to end. |
-| `mirror-and-improve` | Harvests a target's site and socials, adopts their lingo, rebuilds it better. |
-| `ui-design` | Visual pass: palette from their real brand, type, hierarchy, contrast. |
-| `ux-audit` | Audits their current site's friction, designs the conversion flow, accessibility. |
-| `motion-design` | Scroll reveals, hover states, signature micro-interaction. |
-| `frontend-build` | Implementation standards: semantic markup, page-weight budget, no-JS resilience. |
-| `vault-clean` | Vault hygiene. Moves only unambiguous strays, never deletes. |
-| `week-review` | Friday/Sunday retrospective. |
+- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, and public-safety scanning.
+- `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has no ESLint config — interactive only; do not run non-interactively.
+- `immohrtal-site` has no lint script.
 
-## Rules every agent must follow
+### Non-obvious caveats
 
-1. Read `System/writing-rules.md` before producing ANY client-facing copy (emails, blogs, ads, reports). Key ones: no em dashes ever, always contractions, Momentum 360 branding on client email (never Buzz Bull), Align HCM is never under Momentum 360.
-2. Client-specific overrides live at the bottom of `System/writing-rules.md` (Bar Crawl USA copy restrictions, Kimberly James Bridal CC list, Fresh Blends uses "Replenish" branding). Check them before touching a client.
-3. Vault edits: preserve frontmatter, use `[[wikilinks]]` between notes, keep the numbered-folder structure. New notes should use the matching template from `_templates/`.
-4. Never delete vault notes. Move to `00_Inbox/` if unsure where something belongs.
-5. Approval tiers (from `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`): read/analyze/draft/build is autonomous (Tier 0). Reversible tweaks batch under one approval (Tier 1). Anything outbound or irreversible (sending email, posting to Slack channels, deploying, spending money) needs explicit human approval (Tier 2).
-6. Websites: the shared design system is documented in `philly-sites/DESIGN-SYSTEM.md`, including the canonical batch spec (10 sections, 350 to 500 words, 12 to 13 images) measured across the existing 25 sites. New builds go through `_templates/site-factory/`, not from scratch.
-7. The outreach engine (weekly 25-site batches, QR, direct mail) is specified in `02_Campaigns/AI Site Builder Outreach Engine/`. Read `Pipeline Spec.md` for what's automated and who owns each stage before changing that workflow.
-
-## Environment notes
-
-- The `_os` HUD and site-factory generator run on plain Node 18+, no npm install needed.
-- `immohrtal-site/` and `01_Clients/Shadow HVAC/website/` need `npm install` before building.
-- Cloud agent MCPs currently connected: Slack (read/search/draft) and Exa (web search/fetch). Gmail tools are allowlisted in `.claude/settings.local.json` for Claude desktop only.
-- Large media (zips, videos) is gitignored. Don't commit binaries.
+- **D.I.L.L.O.N. OS Command Deck needs the `claude` CLI on PATH** for skill buttons. The dashboard (vitals/directives/brain counts) works without it.
+- **HUD polls `/api/state` every 15s.** Vault edits (including under `12_Brain/`) show up without a server restart.
+- **Git is source of truth for agent writes.** Obsidian Sync may be used by the human operator on a signed-in desktop; do not race Sync + an agent rewriting the same files. Live Sync verification (desktop vault matching this Git tree) remains an **operator gate after merge**.
+- IMMOHRTAL list signup posts to a hosted Netlify form backend; locally the UI renders but submission won't persist.

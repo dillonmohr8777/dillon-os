@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/automation-run",
+  "title": "AutomationRun",
+  "type": "object",
+  "required": ["automation_id", "started_at", "status"],
+  "properties": {
+    "automation_id": { "type": "string" },
+    "run_id": { "type": "string" },
+    "started_at": { "type": "string" },
+    "finished_at": { "type": ["string", "null"] },
+    "status": { "type": "string", "enum": ["ok", "warn", "error", "dry-run"] },
+    "dry_run": { "type": "boolean" },
+    "summary": { "type": "string" },
+    "artifact_paths": { "type": "array", "items": { "type": "string" } },
+    "counts": { "type": "object" }
+  }
+}

@@ -17,3 +17,7 @@ _templates/site-factory/qa-shots/
 
 # Harvested third-party reference material (screenshots, source imagery)
 _templates/site-factory/harvest/
+
+# 12_Brain private layer — GitHub repo is PUBLIC; keep PII/access/secrets out of Git
+12_Brain/private/**
+!12_Brain/private/README.md

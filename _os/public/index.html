@@ -159,6 +159,10 @@
           <div class="label">Clients / Content / Agents</div>
           <div class="row"><span class="value" id="v-ccs">—</span><span class="delta" id="v-sessions">—</span></div>
         </div>
+        <div class="tile">
+          <div class="label">12_Brain layer</div>
+          <div class="row"><span class="value" id="v-brain">—</span><span class="delta" id="v-brain-detail">canonical</span></div>
+        </div>
       </div>
       <div class="panel scroll" style="flex:1">
         <h2>Directives <span class="tag" id="dir-src"></span></h2>
@@ -253,6 +257,11 @@ function render() {
   $('v-inbox').textContent = v.inbox;
   $('v-ccs').textContent = `${v.clients} / ${v.content} / ${v.agents}`;
   $('v-sessions').textContent = `${v.sessions} sessions`;
+  const b = state.brain || {};
+  $('v-brain').textContent = v.brain != null ? v.brain : '—';
+  $('v-brain-detail').textContent = b.present
+    ? `E${b.entities||0} C${b.concepts||0} D${b.decisions||0}`
+    : 'missing 12_Brain';
   $('pill-vault').textContent = `${v.notes} NOTES`;
   drawSpark(v.activity);
 

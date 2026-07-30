@@ -1,0 +1,29 @@
+filters:
+  and:
+    - file.inFolder("12_Brain/projects")
+    - file.ext == "md"
+    - file.name != "README"
+views:
+  - type: table
+    name: Active
+    filters:
+      and:
+        - status != "done"
+    order:
+      - file.name
+      - status
+      - due
+      - updated
+  - type: table
+    name: Done
+    filters:
+      and:
+        - status == "done"
+    order:
+      - file.name
+      - updated
+  - type: cards
+    name: All Projects
+    order:
+      - file.name
+      - status

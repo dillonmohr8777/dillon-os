@@ -1,16 +1,13 @@
 ---
-description: Dillon OS vault conventions for notes, folders, and skills
+description: Dillon OS vault conventions — 12_Brain is canonical
 alwaysApply: true
 ---
 
 # Vault conventions
 
-This repo is an Obsidian vault plus agent workflows. Read `AGENTS.md` at the repo root for the full map before doing multi-file work.
-
-- Keep the numbered-folder structure (`00_Inbox` through `11_Agents`). New unsorted notes go to `00_Inbox/`.
-- Preserve YAML frontmatter on every note you edit. New notes get frontmatter matching the templates in `_templates/`.
-- Link related notes with `[[wikilinks]]`, not bare paths.
-- Never delete vault notes. Move strays to `00_Inbox/` if their home is unclear.
-- Skills live in `.claude/skills/<name>/SKILL.md` with `name` and `description` frontmatter. Skill outputs go to `Daily-Briefs/` unless the skill says otherwise.
-- Never commit zips, videos, or other large binaries. They are gitignored on purpose.
-- Approval tiers: reading, analyzing, drafting, and building files is autonomous. Anything outbound (sending email, posting to Slack, deploying a site, spending money) requires explicit approval from Dillon first.
+- Canonical second-brain layer: `12_Brain/`. Never create `1Z_Brain/`.
+- Agents start at `12_Brain/INDEX.md`, then walk links — do not sweep folders.
+- `12_Brain/raw/` is read-only history. Compile into `entities/` / `concepts/`.
+- Update `12_Brain/INDEX.md` in the same change when adding/removing wiki pages.
+- Working folders (`00_Inbox` … `11_Agents`) stay outside `12_Brain/`; link, don't duplicate clients.
+- Git is source of truth for agent writes. Do not race Obsidian Sync.

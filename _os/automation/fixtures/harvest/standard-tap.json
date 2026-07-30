@@ -1,0 +1,19 @@
+{
+  "slug": "standard-tap",
+  "siteUrl": "https://standardtap.com",
+  "decaySignals": {
+    "missingViewport": false,
+    "staleCopyrightYear": "2025"
+  },
+  "facts": {
+    "phone": "215-555-0100",
+    "hours": "Mon-Sun 12-2am",
+    "jsonLd": [{ "@type": "Restaurant" }]
+  },
+  "voice": {
+    "paragraphs": [
+      "Standard Tap is a Northern Liberties gastropub with rotating craft beer and seasonal plates that keep regulars coming back every week of the year."
+    ],
+    "headings": ["Standard Tap"]
+  }
+}

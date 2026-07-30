@@ -1,0 +1,22 @@
+{
+  "automation": "Daily Marketing and Web-Build Frontier to Dillon OS",
+  "run_title": "Daily marketing, agent workflow, MCP, plugin, and web-build frontier",
+  "model": "grok-4.5",
+  "lookback_hours": 30,
+  "max_output_tokens": 4500,
+  "max_x_search_calls": 12,
+  "max_web_search_calls": 4,
+  "include_web_search": true,
+  "enable_image_understanding": true,
+  "enable_video_understanding": true,
+  "focus": [
+    "Daily frontier scan for newly released or materially updated MCP servers, agent skills, Codex or Claude Code plugins, Cursor workflows, GitHub Copilot capabilities, reusable repositories, evaluation harnesses, orchestration patterns, and context-engineering techniques. Prefer official release notes, maintainer posts, source repositories, and reproducible benchmarks over tool directories and viral claims.",
+    "Coding-efficiency opportunities for frontend and full-stack web work: planning and handoff skills, parallel or supervisory agent loops, repository navigation, component generation, refactoring, debugging, code review, browser automation, Playwright or visual regression testing, accessibility testing, performance testing, CI/CD, preview deployment, and deterministic acceptance gates.",
+    "Forward-looking web design, UI, UX, and frontend craft: design systems, tokens, responsive behavior, typography, layout, interaction, animation, micro-interactions, forms, onboarding, mobile conversion, accessibility, performance, real-image art direction, image generation or processing, Figma-to-code workflows, Storybook, component libraries, and techniques that avoid generic AI aesthetics.",
+    "All material marketing developments: AEO, GEO, SEO, AI Overviews and AI Mode, local SEO and Google Business Profile, social and creator discovery, content strategy, digital PR, email and lifecycle, CRM and revenue operations, paid-media measurement, analytics and attribution, CRO, landing pages, offers, lead quality, retention, and third-visit behavior.",
+    "Consumer taste, demographic, cultural, creator, local-service-buyer, and buying-language signals that should influence positioning, creative direction, website structure, content, offers, and channel selection for Dillon's client work.",
+    "Operational improvements for prospect discovery and the 25-site factory: research, real imagery, vertical-specific templates, maker-checker review, independent visual critique, responsive and functional QA, Maps-to-site parity, source-ready FAQs, AEO trust gates, approval gates, and safe preview or Netlify deployment.",
+    "For every candidate, assess source quality, freshness, maintenance, compatibility with the existing Dillon OS stack, permissions, prompt-injection exposure, secret handling, overlap with installed tools, context cost, monetary cost, rollback, and a deterministic acceptance test. Classify it as install or integrate, sandbox-test, save-to-library, watch, or reject; never install or connect it during the research run.",
+    "End with a short executive section named What Dillon OS should change today containing no more than five evidence-backed changes, plus a separate No action section for hype, duplicated capabilities, insecure tools, and low-signal releases."
+  ]
+}

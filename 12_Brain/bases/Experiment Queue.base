@@ -1,0 +1,69 @@
+properties:
+  file.name:
+    displayName: Experiment
+  experiment_id:
+    displayName: ID
+  experiment_stage:
+    displayName: Stage
+  status:
+    displayName: Project status
+  priority:
+    displayName: Priority
+  risk:
+    displayName: Risk
+  owner:
+    displayName: Owner
+  outcome:
+    displayName: Acceptance outcome
+  next_action:
+    displayName: Next test
+  review_on:
+    displayName: Review
+  verification_status:
+    displayName: Verification
+  updated:
+    displayName: Updated
+views:
+  - type: table
+    name: Active Experiments
+    filters:
+      and:
+        - file.inFolder("12_Brain/05_Projects/Experiments")
+        - 'status != "done"'
+        - 'status != "cancelled"'
+    order:
+      - experiment_id
+      - file.name
+      - experiment_stage
+      - priority
+      - risk
+      - owner
+      - next_action
+      - review_on
+  - type: table
+    name: Awaiting Independent Check
+    filters:
+      and:
+        - file.inFolder("12_Brain/05_Projects/Experiments")
+        - 'experiment_stage == "checking"'
+    order:
+      - experiment_id
+      - file.name
+      - owner
+      - verification_status
+      - updated
+  - type: table
+    name: Adoption Decisions
+    filters:
+      and:
+        - file.inFolder("12_Brain/05_Projects/Experiments")
+        - or:
+            - 'experiment_stage == "passed"'
+            - 'experiment_stage == "rejected"'
+            - 'experiment_stage == "adopted"'
+    order:
+      - experiment_id
+      - file.name
+      - experiment_stage
+      - verification_status
+      - updated
