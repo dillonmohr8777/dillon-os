@@ -4,6 +4,20 @@
 08_Assets/
 09_Transcripts/
 
+# Large binaries never belong in git
+*.zip
+
+# Node
+node_modules/
+.next/
+dist/
+
+# Playwright QA output
+_templates/site-factory/qa-shots/
+
+# Harvested third-party reference material (screenshots, source imagery)
+_templates/site-factory/harvest/
+
 # 12_Brain private layer — GitHub repo is PUBLIC; keep PII/access/secrets out of Git
 12_Brain/private/**
 !12_Brain/private/README.md
