@@ -108,7 +108,7 @@
       "cadence": "on ingest",
       "depends_on": ["grok-intelligence-ingest"],
       "inputs": ["candidates with decision=sandbox-test"],
-      "outputs": ["12_Brain/05_Projects/Experiments/*.md", "12_Brain/Bases/Experiment Queue.base"],
+      "outputs": ["12_Brain/05_Projects/Experiments/*.md", "12_Brain/bases/Experiment Queue.base"],
       "external_actions": false,
       "notes": "Creates proposed experiments only. Adoption still requires the maker/checker and human gates.",
       "status": "implemented"
