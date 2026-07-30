@@ -1,0 +1,28 @@
+{
+  "adapter": "indeed",
+  "signals": [
+    {
+      "job_id": "ind-1001",
+      "company": "Harbor HVAC Co",
+      "website": "https://harborhvac.example",
+      "role": "Digital Marketing Manager",
+      "salary_band": "$60k-$75k",
+      "location": "Philadelphia, PA",
+      "vertical": "hvac",
+      "review_count": 42,
+      "rating": 4.4,
+      "posted_at": "2026-07-20",
+      "job_url": "https://example.com/jobs/ind-1001",
+      "harvest_path": "_os/automation/fixtures/harvest/harbor-hvac.json"
+    },
+    {
+      "job_id": "ind-1002",
+      "company": "Quiet Leaf Spa",
+      "website": "https://quietleafspa.example",
+      "role": "Front Desk Associate",
+      "location": "Erie, PA",
+      "vertical": "spa",
+      "review_count": 12
+    }
+  ]
+}
