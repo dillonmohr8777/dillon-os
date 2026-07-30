@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/workflow-evaluation",
+  "title": "MakerCheckerWorkflow",
+  "type": "object",
+  "required": [
+    "workflow_id",
+    "task",
+    "maker_id",
+    "checker_id",
+    "artifact_paths",
+    "acceptance_tests",
+    "rollback"
+  ],
+  "properties": {
+    "workflow_id": { "type": "string", "minLength": 1 },
+    "task": { "type": "string", "minLength": 1 },
+    "maker_id": { "type": "string", "minLength": 1 },
+    "checker_id": { "type": "string", "minLength": 1 },
+    "artifact_paths": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "acceptance_tests": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "rollback": { "type": "string", "minLength": 1 },
+    "human_gate": { "type": "boolean" },
+    "budget_tokens": { "type": "number", "exclusiveMinimum": 0 },
+    "timeout_seconds": { "type": "number", "exclusiveMinimum": 0 }
+  }
+}

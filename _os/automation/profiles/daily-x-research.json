@@ -1,0 +1,20 @@
+{
+  "automation": "Daily xAI X Search to Dillon OS",
+  "run_title": "Daily AI, workflow, design, and consumer pulse",
+  "model": "grok-4.5",
+  "lookback_hours": 30,
+  "max_output_tokens": 4500,
+  "max_x_search_calls": 12,
+  "max_web_search_calls": 4,
+  "include_web_search": true,
+  "enable_image_understanding": true,
+  "enable_video_understanding": true,
+  "focus": [
+    "Agentic coding workflows, MCPs, reusable skills, GitHub templates, evaluation harnesses, and orchestration patterns that could improve Dillon OS",
+    "AI product and website design patterns, real-image art direction, conversion UX, mobile behavior, and signs of low-trust generic AI aesthetics",
+    "Consumer taste, demographic, local-service-buyer, and creator behavior signals relevant to Dillon's client work",
+    "AEO, GEO, local SEO, trust signals, Maps and website parity, source citation, and third-visit retention",
+    "Prospect discovery, the 25-site factory, maker-checker review, QA, approval gates, and safe deployment automation",
+    "Security, permission minimization, prompt-injection resistance, cost control, and duplicated-tool risk"
+  ]
+}
