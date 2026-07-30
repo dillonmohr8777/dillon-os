@@ -128,6 +128,19 @@
       "status": "implemented"
     },
     {
+      "id": "dillon-dev-sandbox",
+      "name": "Unified Dillon development environment prototype",
+      "lane": "development",
+      "tier": 0,
+      "cadence": "on demand before agent environment changes",
+      "command": "& _os/dev/bin/dillon-dev.ps1 <doctor|verify>",
+      "inputs": ["_os/dev/profiles/site-factory-sandbox.json", ".github/skills/dillon-*/SKILL.md"],
+      "outputs": ["structured doctor result", "allowlisted verification result"],
+      "external_actions": false,
+      "notes": "Fixture-only prototype. No install, browser, secret, deployment, or external write.",
+      "status": "implemented"
+    },
+    {
       "id": "maker-checker",
       "name": "Independent maker/checker workflow gate",
       "lane": "infrastructure",
@@ -137,7 +150,7 @@
       "inputs": ["12_Brain/schemas/workflow-evaluation.json", "artifact paths", "maker and checker evidence"],
       "outputs": ["12_Brain/state/workflow-runs/*.json", "12_Brain/07_Reviews/Automation Runs/*.md"],
       "external_actions": false,
-      "notes": "Maker and checker identities must differ. Human approval is required by default.",
+      "notes": "Maker and checker identities must differ. Human approval is required by default. Website-factory workflows also require a hashed screen recording and independent visual review across at least two viewports.",
       "status": "implemented"
     },
     {

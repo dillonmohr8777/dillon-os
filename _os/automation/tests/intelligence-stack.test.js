@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const { repoPath } = require('../lib/fsutil');
 const { validateGrokEnvelope, normalizeCandidate, extractUrls } = require('../lib/intelligence');
-const { validateManifest, hashArtifacts } = require('../lib/evaluator');
+const { validateManifest, validateCheckerEvidence, hashArtifacts } = require('../lib/evaluator');
 const { evaluateCandidate } = require('../lib/mcp-gate');
 const { analyzeSite, robotsPolicy } = require('../lib/aeo-trust');
 const {
@@ -31,6 +31,36 @@ test('maker and checker must be distinct', () => {
   const invalid = { ...fixture, checker_id: fixture.maker_id };
   assert.equal(validateManifest(invalid).ok, false);
   assert.ok(validateManifest(invalid).errors.includes('maker_id and checker_id must be different'));
+});
+
+test('website factory requires recorded demo and independent visual evidence', () => {
+  const fixture = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/workflows/website-factory-workflow.json'), 'utf8'));
+  assert.equal(validateManifest(fixture).ok, true);
+  const missingDemo = { ...fixture, demo_recording_path: '' };
+  assert.ok(validateManifest(missingDemo).errors.includes('website_factory requires demo_recording_path'));
+  const run = {
+    ...fixture,
+    workflow_type: 'website_factory',
+  };
+  const valid = validateCheckerEvidence(run, {
+    checker_id: fixture.checker_id,
+    verdict: 'pass',
+    summary: 'Independent functional and visual review passed.',
+    demo_reviewed: true,
+    visual_review: {
+      verdict: 'pass',
+      summary: 'Desktop and mobile layouts are coherent and complete.',
+      viewports: ['1440x900', '390x844'],
+    },
+  });
+  assert.equal(valid.ok, true);
+  const invalid = validateCheckerEvidence(run, {
+    checker_id: fixture.checker_id,
+    verdict: 'pass',
+    summary: 'Skipped visual review.',
+  });
+  assert.equal(invalid.ok, false);
+  assert.ok(invalid.errors.includes('website_factory checker must review the screen recording'));
 });
 
 test('artifact hashing rejects paths outside the repository', () => {
