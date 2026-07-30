@@ -5,7 +5,7 @@ industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
 last_touched: 2026-07-30
-next_action: Paste handoffs/align-hubspot-corrected-go-prompt-2026-07-30.md BEGIN_GO…END_GO to desktop Claude — unhide #blog-conversion-form on Workday/Dayforce/ADP, reauth 17-scope bundle, corrected PR #11 fold-in, then never-contacted notes. Dillon still owns Codex private-app token.
+next_action: Paste handoffs/align-hubspot-autonomous-go-prompt-2026-07-30.md BEGIN_AUTONOMOUS…END_AUTONOMOUS to desktop Claude — run B→C→E→F without stopping; Dillon still owns Step D token
 due: none
 ---
 
