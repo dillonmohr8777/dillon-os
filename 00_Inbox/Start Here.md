@@ -23,6 +23,8 @@ Drop anything here. Process later. Move to the right folder when ready.
 - **08_Assets** — Images, files, attachments
 - **09_Transcripts** — Call and meeting transcripts
 - **10_Sessions** — Client session notes
+- **11_Agents** — Agent definitions
+- **12_Brain** — Canonical second-brain layer (raw → wiki, projects, decisions, research, memory, protocols)
 
 ## Workflow
 1. Capture everything into **00_Inbox**
@@ -30,6 +32,7 @@ Drop anything here. Process later. Move to the right folder when ready.
 3. Use templates (Ctrl/Cmd + T) to create structured notes
 4. Link notes with `[[wikilinks]]` to build connections
 5. Review your [[Dashboard]] daily
+6. Agents start at [[12_Brain/INDEX|12_Brain/INDEX]] — never create `1Z_Brain/`
 
 ## Tips
 - Use `#tags` for cross-cutting themes

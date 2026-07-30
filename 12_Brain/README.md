@@ -1,43 +1,44 @@
 ---
 tags: [system, brain, automation]
+canonical: 12_Brain
 created: 2026-07-29
-status: cloud-scaffold
-sync_gate: pending
+updated: 2026-07-30
+status: active
+sync_gate: desktop-vault-open-api-token-pending
 desktop_source: DESKTOP-4AHKEC4 Monitor Cursor and build vault run
 ---
 
-# 12_Brain
+# 12_Brain canonical second-brain layer
 
-Canonical automation and second-brain operating layer for Dillon OS.
+This is the only second-brain tree in Dillon OS. Do not create `1Z_Brain/` or another parallel architecture.
 
-## Sync reconciliation
+The layer combines the structured Obsidian brain, its agent protocols, and the fail-closed automation registry. The desktop vault is open locally. The Obsidian Local REST API token remains a separate connector gate and isn't required for filesystem-backed operation.
 
-A computer-use agent on **DESKTOP-4AHKEC4** built a full local `12_Brain` (native Bases, projects, decisions, research, bi-temporal memory, templates, agent protocols, Cursor rules, Claude skills, health automation) with 0 structural errors. That layer is **not yet visible in this cloud checkout**.
-
-**Human gate (not automatable here):** on the desktop, complete visible Obsidian sign-in → select the remote vault → enable the Obsidian CLI so encrypted Sync bridges both machines.
-
-Until Sync lands:
-
-- This cloud scaffold is the **source of truth for automation registry, queue, state schemas, and operator tooling**.
-- Desktop-only Bases / bi-temporal notes win for local Obsidian UX once they appear; do not fork a third architecture.
-- Earlier sketch at `claude/fable-obsidian-second-brain-tya2zz` (`concepts/`, `entities/`, `raw/`, `Clients.base`) is absorbed here — do not recreate those trees in parallel.
-
-## Layout
+## Knowledge layout
 
 | Path | Role |
 |---|---|
-| `registry/automations.json` | Canonical list of automations, tiers, owners, dependencies |
-| `queue/` | Pending work items (JSONL). Agents append; humans approve Tier 2 |
-| `state/` | Last-run state per automation id |
-| `schemas/` | JSON shapes for prospects, runs, client frontmatter |
-| `bases/` | Obsidian Base stubs that match the desktop design once Sync arrives |
-| `templates/` | Note templates for prospects / automation runs |
-| `protocols/` | Agent protocol pointers (approval tiers, no-send rules) |
-| `DEPENDENCY_PR226.md` | Exact dependency on the site-factory PR — inspect, do not duplicate |
+| `INDEX.md` | Agent and operator front door |
+| `raw/` | Private ground truth and read-only history |
+| `entities/` and `concepts/` | Compiled wiki |
+| `projects/`, `decisions/`, and `research/` | Delivery, decision, and research records |
+| `memory/current/` and `memory/as-of/` | Bi-temporal memory |
+| `protocols/` | Agent and approval protocols |
+| `bases/` | Native Obsidian Bases |
+| `templates/` | Brain note templates |
+| `System/Second Brain Ops.md` | Loops, honesty rules, health, and sync operations |
 
-## Tooling
+## Automation layout
 
-Runnable code lives in `_os/automation/` (zero npm dependencies, Node 18+). Operator docs: `_os/automation/docs/OPERATOR.md`.
+| Path | Role |
+|---|---|
+| `registry/automations.json` | Canonical automations, tiers, owners, and dependencies |
+| `queue/` | Pending JSONL work. Agents append; humans approve Tier 2 |
+| `state/` | Last-run state per automation |
+| `schemas/` | Prospects, runs, client frontmatter, trust, and workflow contracts |
+| `DEPENDENCY_PR226.md` | Site-factory dependency and ownership boundary |
+
+Runnable code lives in `_os/automation/`. Operator docs live at `_os/automation/docs/OPERATOR.md`.
 
 ```bash
 node _os/automation/bin/frontmatter-validate.js
@@ -48,8 +49,9 @@ node _os/automation/bin/queue-status.js
 node --test _os/automation/tests/*.test.js
 ```
 
-## Hard gates (never cross from automation)
+## Safety boundary
 
-- No outreach sends (email, Slack post, LinkedIn DM, direct mail)
-- No public deploys, no spend, no client-account mutations
-- No credentials in vault files; Bitwarden stays human-owned
+1. No credentials, one-time codes, private access history, or raw contact corpora in the public tree.
+2. No outreach sends, Slack posts, public deploys, spend, or client-account mutations from an ingestion or verification run.
+3. Private sources compile into redacted, source-linked operational notes.
+4. The HUD at `node _os/server.js` surfaces brain and automation health from this canonical tree.
