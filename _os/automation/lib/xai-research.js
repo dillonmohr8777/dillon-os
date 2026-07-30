@@ -105,14 +105,22 @@ function buildRequest(profile, now = new Date()) {
 }
 
 function extractCandidates(text) {
-  const match = String(text || '').match(/```candidates_json\s*([\s\S]*?)```/i);
-  if (!match) return [];
-  try {
-    const parsed = JSON.parse(match[1].trim());
-    return Array.isArray(parsed) ? parsed.slice(0, 6) : [];
-  } catch {
-    return [];
+  const value = String(text || '');
+  const patterns = [
+    /```candidates_json\s*([\s\S]*?)```/i,
+    /```json\s*candidates_json\s*([\s\S]*?)```/i,
+  ];
+  for (const pattern of patterns) {
+    const match = value.match(pattern);
+    if (!match) continue;
+    try {
+      const parsed = JSON.parse(match[1].trim());
+      return Array.isArray(parsed) ? parsed.slice(0, 6) : [];
+    } catch {
+      return [];
+    }
   }
+  return [];
 }
 
 function extractResponse(response) {
