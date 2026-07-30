@@ -11,6 +11,7 @@ const { analyzeSite, robotsPolicy } = require('../lib/aeo-trust');
 const {
   buildTools,
   buildRequest,
+  normalizeCitationMarkdown,
   extractCandidates,
   extractResponse,
   buildEnvelope,
@@ -108,12 +109,19 @@ test('xAI response extraction preserves unique citations and usage', () => {
       },
     ],
   });
-  assert.equal(extracted.text, 'Finding [[1]](https://x.com/example/status/1)');
+  assert.equal(extracted.text, 'Finding [1](https://x.com/example/status/1)');
   assert.deepEqual(extracted.citations, ['https://x.com/example/status/1']);
   assert.deepEqual(extracted.tool_calls, ['x_search_call']);
   assert.deepEqual(extracted.tool_call_counts, { x_search: 1, web_search: 0 });
   assert.equal(extracted.usage.total_tokens, 123);
   assert.equal(extracted.cost_usd, 0.0000000456);
+});
+
+test('xAI citation markdown does not create Obsidian wikilinks', () => {
+  assert.equal(
+    normalizeCitationMarkdown('Source [[12]](https://x.com/example/status/12).'),
+    'Source [12](https://x.com/example/status/12).',
+  );
 });
 
 test('xAI candidate extraction is bounded and fails closed', () => {

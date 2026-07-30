@@ -11,6 +11,10 @@ function unique(values) {
   return [...new Set(values.filter(Boolean).map((value) => String(value).trim()))];
 }
 
+function normalizeCitationMarkdown(value) {
+  return String(value || '').replace(/\[\[([^\]]+)\]\]\((https?:\/\/[^)]+)\)/g, '[$1]($2)');
+}
+
 function resolveWindow(profile, now = new Date()) {
   const to = profile.to_date ? new Date(profile.to_date) : new Date(now);
   const from = profile.from_date
@@ -120,7 +124,7 @@ function extractResponse(response) {
     if (item.type !== 'message') continue;
     for (const content of item.content || []) {
       if (content.type !== 'output_text') continue;
-      if (content.text) texts.push(content.text);
+      if (content.text) texts.push(normalizeCitationMarkdown(content.text));
       for (const annotation of content.annotations || []) {
         if (annotation.type === 'url_citation' && annotation.url) {
           annotations.push({
@@ -219,6 +223,7 @@ async function runXaiResearch(profile, options = {}) {
 module.exports = {
   XAI_RESPONSES_URL,
   DEFAULT_MODEL,
+  normalizeCitationMarkdown,
   resolveWindow,
   buildTools,
   buildPrompt,
