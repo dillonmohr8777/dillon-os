@@ -4,10 +4,9 @@ status: active
 created: 2026-07-30
 updated: 2026-07-30
 owner: Dillon Mohr
-verification_status: partial
+verification_status: verified
 source_refs:
-  - "_os/dev/profiles/site-factory-sandbox.json"
-  - "12_Brain/schemas/workflow-evaluation.json"
+  - "https://github.com/dillonmohr8777/dillon-os/pull/234"
 tags:
   - brain
   - project
@@ -17,6 +16,14 @@ tags:
 
 # Frontier actions 1-4
 
+Connected initiative: [[12_Brain/05_Projects/2026-07-30 - Integrate daily intelligence stack]]
+
+Supporting records:
+
+- [[12_Brain/05_Projects/Experiments/EXP-SKI-VOICE-SANDBOX]]
+- [[12_Brain/06_Research/References/2026-07-30 - agentlogparser audit pattern]]
+- [[12_Brain/06_Research/References/2026-07-30 - Casepoint permission-aware MCP pattern]]
+
 ## Implemented
 
 1. Unified local `dillon-dev` doctor and verification command in an isolated fixture.
@@ -25,6 +32,13 @@ tags:
 4. agentlogparser and Casepoint permission-aware MCP patterns saved as references.
 5. Website-factory evaluator requires a hashed screen recording and independent visual
    review before a checker can pass.
+
+## Verification
+
+- 26 automated tests passed.
+- The `dillon-dev` doctor and verifier passed.
+- The healthy AEO fixture passed with zero critical failures and zero warnings.
+- PR #234 passed hosted checks and merged to `main`.
 
 ## Remaining human gates
 
