@@ -17,8 +17,9 @@ tags: [brain, brief, gmail, slack, intake]
 1. Reviewed 100 recent Gmail metadata records.
 2. Hydrated 15 selected Gmail threads.
 3. Reviewed seven Slack watchdog digest emails and deduplicated repeated items.
-4. Created linked client, project, meeting, ops, Slack inbox, SOP, and map notes.
-5. Sent no emails and posted no Slack messages.
+4. Ran an authenticated, read-only live Slack search across 348 recent results and focused channel views.
+5. Created linked client, project, meeting, ops, Slack inbox, SOP, and map notes.
+6. Sent no emails and posted no Slack messages.
 
 ## Highest-priority findings
 
@@ -27,6 +28,7 @@ tags: [brain, brief, gmail, slack, intake]
 3. [[2026-07-30-jason-sean-bot-case-status-alert|Bot and case-status alerts]] is an urgent unanswered Slack request.
 4. [[01_Clients/BigOrange Marketing/Custom Home Builder Pillar Project|BigOrange Custom Home Builder Pillar Project]] has an August 10 review target.
 5. [[2026-07-30-melissa-guidelines-training-prompt|Guidelines prompt and Loom]] needs a verified status and meeting slot.
+6. [[2026-07-30 Live Slack Scan]] adds the current website pipeline, AI workflow, CallRail, and client-browser signals.
 
 ## Reusable knowledge captured
 
@@ -36,4 +38,4 @@ tags: [brain, brief, gmail, slack, intake]
 
 ## Connector note
 
-Gmail read access is active. Slack is connected, but direct execution through Composio is blocked by Enhanced Controls. The seven Gmail Slack digests provided exact links and timestamps for this pass. The next expansion should use the native Slack connector or an approved background browser lane without weakening the security control.
+Gmail read access is active. Slack is connected. Direct execution through Composio remains blocked by Enhanced Controls, but the approved background browser lane now provides verified read-only search without weakening that security control.

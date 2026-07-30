@@ -50,9 +50,11 @@ Turn Gmail and Slack activity into source-linked operational memory without copy
 
 1. Gmail read access is active for the primary authorized mailbox.
 2. Slack is connected to Momentum Digital Agency.
-3. Direct Slack execution through Composio is blocked by Enhanced Controls in this client. Do not disable the security control. Use the native Slack connector, an approved background browser lane, or source-linked Gmail digests until the read path is available.
+3. Direct Slack execution through Composio is blocked by Enhanced Controls in this client. Do not disable the security control.
+4. The approved background browser lane is verified for read-only Slack search. It must not post, react, mark, edit, or delete during ingestion.
 
 ## Maps
 
 1. [[Communication Intelligence Map]]
 2. [[2026-07-30 Slack Open Loops]]
+3. [[2026-07-30 Live Slack Scan]]

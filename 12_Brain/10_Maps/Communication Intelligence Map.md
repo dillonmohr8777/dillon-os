@@ -23,10 +23,11 @@ tags: [brain, map, gmail, slack, clients, operations]
 ## Slack open loops
 
 1. [[2026-07-30 Slack Open Loops]]
-2. [[2026-07-30-jason-sean-bot-case-status-alert|Bot and case-status alerts]]
-3. [[2026-07-30-melissa-guidelines-training-prompt|Guidelines prompt and Loom]]
-4. [[2026-07-30-sean-callrail-status|CallRail status]]
-5. [[2026-07-30-jenny-brand-direction|NeedMomentum brand direction]]
+2. [[2026-07-30 Live Slack Scan]]
+3. [[2026-07-30-jason-sean-bot-case-status-alert|Bot and case-status alerts]]
+4. [[2026-07-30-melissa-guidelines-training-prompt|Guidelines prompt and Loom]]
+5. [[2026-07-30-sean-callrail-status|CallRail status]]
+6. [[2026-07-30-jenny-brand-direction|NeedMomentum brand direction]]
 
 ## Operations and reusable workflows
 
