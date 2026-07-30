@@ -19,6 +19,10 @@ One month of original social content built from the live character plates for **
 | [generated/](generated/) | 20 original JPG social stills |
 | [references/](references/) | Site portraits + key plates |
 
+## Continuity (critical)
+
+**Canonical Darnell/Javon likeness** is `references/darnell-javon-approved.jpg` (glasses on Darnell). Do **not** use legacy site suit/camo Capitol plates — see [CONTINUITY-LOCK.md](CONTINUITY-LOCK.md).
+
 ## Brand tokens
 
 - Ink `#030303` / paper `#f7f4ec` / signal `#f05a28`

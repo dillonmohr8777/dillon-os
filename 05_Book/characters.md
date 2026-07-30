@@ -8,13 +8,17 @@ tags: [characters, book]
 ## Darnell Covington
 Math prodigy. East Atlanta upbringing, Harvard trajectory. File BI-01. Seventeen, disciplined, observant, private — and suddenly legible to people who confuse promise with property. His excellence does not protect him; it makes him easier to locate. Carries the moral voltage of the novel.
 
-**Portrait:** `social/references/darnell.png`  
+**Portrait (canonical):** `social/references/darnell-approved.jpg` (glasses — see continuity lock)
+
+**Legacy site plate (stale):** `social/references/legacy-site-portraits/darnell.png`  
 **Social set:** Harvard surveillance, inventory desk, campus dusk, cast triptych.
 
 ## Javon Whitfield
 Harvard-adjacent quarterback gravity from Rosedale, MS. Six-five, 242, state title weight — and a mind nobody gets to reduce to muscle. Darnell's counterweight and witness. Humor as reconnaissance; when the joke dies, consequence has arrived.
 
-**Portrait:** `social/references/javon.png`  
+**Portrait (canonical):** `social/references/javon-approved.jpg`
+
+**Legacy site plate (stale):** `social/references/legacy-site-portraits/javon.png`  
 **Social set:** night field after rain, diner booth, lobby TV, campus dusk.
 
 ## Dijon Garnier

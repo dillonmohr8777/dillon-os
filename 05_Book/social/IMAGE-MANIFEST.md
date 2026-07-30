@@ -32,20 +32,20 @@ All assets are original generations for August 2026 posting (JPG, max edge 1600p
 | 19 | `19-cast-files-triptych.jpg` | Three-file dossier triptych | Trio | 22 |
 | 20 | `20-trio-control-room.jpg` | Ops control room amber glow | Trio | 24 |
 
-## Reference portraits (from ironicineptocracy.com)
+## Reference portraits
+
+**Canonical (use these):**
 
 | File | Subject |
 |------|---------|
-| `references/darnell.png` | Darnell Covington |
-| `references/javon.png` | Javon Whitfield |
+| `references/darnell-javon-approved.jpg` | Approved continuity plate (Boston protest) |
+| `references/darnell-approved.jpg` | Darnell crop — **glasses required** |
+| `references/javon-approved.jpg` | Javon crop — tall/protective |
 | `references/alec.png` | Alec Daheim |
-| `references/capitol-trio.jpg` | Trio poster |
-| `references/og.jpg` | OG / hero trio |
-| `references/control-room.jpg` | Control room plate |
-| `references/map.png` | Investigation map |
-| `references/supporting-cast.jpg` | Supporting cast dossier |
 | `references/garnier.png` | Dijon Garnier |
 | `references/mcnulty.png` | Ronald McNulty |
+
+**Legacy / stale (do not use for new social):** `references/legacy-site-portraits/` (suit/camo Capitol cover art still live on the public site — needs fixing).
 
 ## Usage notes
 
