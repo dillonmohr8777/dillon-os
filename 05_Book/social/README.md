@@ -17,7 +17,8 @@ One month of original social content built from the live character plates for **
 | [posting-schedule.csv](posting-schedule.csv) | Scheduler-ready CSV |
 | [IMAGE-MANIFEST.md](IMAGE-MANIFEST.md) | All 20 new assets mapped to days |
 | [generated/](generated/) | 20 original JPG social stills |
-| [references/](references/) | Site portraits + key plates |
+| [motion/](motion/) | **30 animated clips** (720×1280 MP4) + build script |
+| [references/](references/) | Approved continuity + legacy plates |
 
 ## Continuity (critical)
 
@@ -32,3 +33,13 @@ One month of original social content built from the live character plates for **
 ## Posting start
 
 Default schedule dates: **2026-08-01 → 2026-08-30**. Shift the CSV dates if you launch on a different Monday.
+
+## Motion pack
+
+30 muted story/reel clips in `motion/out/` (720×1280, ~5s). Rebuild with:
+
+```bash
+python3 05_Book/social/motion/build_motion.py
+```
+
+See `motion/ANIMATION-MANIFEST.md` for styles and calendar mapping. Continuity: glasses Darnell lock.

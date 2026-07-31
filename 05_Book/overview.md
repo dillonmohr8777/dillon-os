@@ -34,4 +34,4 @@ Distressed Americana, dark/gritty. Typography: Bebas Neue, Playfair Display, Spe
 Dillon Mohr is a digital marketer, doctoral candidate (DBA in Strategic Media at Liberty University), father, Pittsburgh PA native, MS in Integrated Marketing Communications from WVU, nearly a decade in brand strategy. Debut novel.
 
 ## Social pack (Aug 2026)
-30-day calendar, ready-to-post captions, and 20 original images live in `05_Book/social/`.
+30-day calendar, ready-to-post captions, 20 original stills, and 30 animated clips live in `05_Book/social/`.
