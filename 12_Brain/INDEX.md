@@ -63,22 +63,20 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Projects · Decisions · Research · Memory · Protocols
 
-- [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
-- [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
-- [[12_Brain/research/README|Research]] — compiled research landing.
+- [[12_Brain/projects/README|Projects]] — active delivery threads, plus `Experiments/` proposals.
+- [[12_Brain/decisions/README|Decisions]] — the whole bi-temporal decision log.
+- [[12_Brain/research/README|Research]] — dated findings and durable `References/` (every page carries `expires:`).
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols, incl. [[12_Brain/protocols/approval-tiers|approval tiers]].
 - Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]] · [[12_Brain/bases/Prospects.base|Prospects]] · [[12_Brain/bases/Automations.base|Automations]] · [[12_Brain/bases/Experiment Queue.base|Experiment Queue]]
 
-## Automation lanes (dated records)
+## Numbered lanes (kinds the wiki above does not own)
 
-Written by `_os/automation` runs. One line per lane — dated records accrue daily,
-so each lane keeps its own index. Model: [[12_Brain/decisions/2026-07-31 - Two-lane brain layout|Two-lane brain layout]].
+One line per lane — dated records accrue daily, so each lane keeps its own index.
+Decisions, projects and research have **no** lane; they live in the wiki folders
+above. Rule: [[12_Brain/decisions/2026-07-31 - One home per record type|One home per record type]].
 
 - [[12_Brain/01_Captures/README|01_Captures]] — immutable Grok and Slack captures; read-only like `raw/`.
-- [[12_Brain/04_Decisions/README|04_Decisions]] — decision records emitted with automation runs.
-- [[12_Brain/05_Projects/README|05_Projects]] — automation-lane delivery threads and the experiment queue.
-- [[12_Brain/06_Research/README|06_Research]] — compiled daily intelligence and durable references (every page carries `expires:`).
 - [[12_Brain/07_Reviews/README|07_Reviews]] — MCP and automation-run acceptance reports.
 - [[12_Brain/09_Ops/README|09_Ops]] — live operational blockers.
 - [[12_Brain/10_Maps/README|10_Maps]] — cross-cutting maps of content.

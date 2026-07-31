@@ -23,6 +23,7 @@ const {
   reachableFromIndex,
   inboundCounts,
   isPastDate,
+  daysUntil,
   lint,
   loadPolicy,
 } = require('../automation/lib/wikilint');
@@ -47,6 +48,7 @@ const POLICY = {
     { id: 'frontmatter-present', severity: 'error', scope: ['12_Brain/'], exclude: ['12_Brain/raw/'] },
     { id: 'source-present', severity: 'error', any_of: ['source', 'source_refs'], scope: ['12_Brain/concepts/'], exclude: ['README.md'] },
     { id: 'expires-present', severity: 'error', requires: ['expires'], scope: ['12_Brain/research/'], exclude: ['README.md'] },
+    { id: 'expires-soon', severity: 'warn', horizon_days: 14, scope: ['12_Brain/'] },
     { id: 'expires-fresh', severity: 'warn', scope: ['12_Brain/'] },
     { id: 'link-resolves', severity: 'error', scope: ['12_Brain/'], exclude: ['12_Brain/raw/'] },
     { id: 'index-reachable', severity: 'error', scope: ['12_Brain/'], exclude: ['12_Brain/raw/'] },
@@ -108,6 +110,17 @@ test('link resolution', async (t) => {
     assert.equal(resolveLink('Hermes', index, POLICY).to, '12_Brain/entities/Hermes.md');
   });
 
+  await t.test('resolves a partial path by suffix', () => {
+    assert.equal(resolveLink('entities/Hermes', index, POLICY).to, '12_Brain/entities/Hermes.md');
+  });
+
+  await t.test('does not fall back to the basename for a stale path', () => {
+    // The bug this pins: `[[12_Brain/04_Decisions/README]]` pointing at a deleted
+    // folder resolved to an unrelated README.md and hid the breakage.
+    const resolved = resolveLink('12_Brain/no-such-folder/INDEX', index, POLICY);
+    assert.equal(resolved.status, 'broken', 'a path target must not match a bare basename elsewhere');
+  });
+
   await t.test('resolves non-markdown link targets such as Bases', () => {
     assert.equal(resolveLink('12_Brain/bases/Clients.base', index, POLICY).status, 'ok');
   });
@@ -159,6 +172,13 @@ test('isPastDate compares ISO dates without timezone drift', () => {
   assert.equal(isPastDate('not-a-date', '2026-07-31'), false);
 });
 
+test('daysUntil counts whole days across month boundaries', () => {
+  assert.equal(daysUntil('2026-08-14', '2026-07-31'), 14);
+  assert.equal(daysUntil('2026-07-31', '2026-07-31'), 0);
+  assert.equal(daysUntil('2026-07-30', '2026-07-31'), -1);
+  assert.equal(daysUntil('nope', '2026-07-31'), null);
+});
+
 test('rule engine', async (t) => {
   const root = tempVault({
     '1Z_Brain/README.md': 'rival tree\n',
@@ -169,6 +189,8 @@ test('rule engine', async (t) => {
     '12_Brain/concepts/Bare.md': '# no frontmatter\n',
     '12_Brain/research/Stale.md': '---\nsource: x\nexpires: 2026-01-01\n---\n\nbody\n',
     '12_Brain/research/NoExpiry.md': '---\nsource: x\n---\n\nbody\n',
+    '12_Brain/research/DueSoon.md': '---\nsource: x\nexpires: 2026-08-10\n---\n\nbody\n',
+    '12_Brain/research/DueLater.md': '---\nsource: x\nexpires: 2026-12-01\n---\n\nbody\n',
     '12_Brain/raw/verbatim.md': 'raw capture with [[Broken On Purpose]] and no frontmatter\n',
   });
   const result = lint({ root, policy: POLICY, today: '2026-07-31' });
@@ -200,6 +222,18 @@ test('rule engine', async (t) => {
     assert.deepEqual(byRule('expires-fresh'), ['12_Brain/research/Stale.md']);
     const stale = result.findings.find((f) => f.rule === 'expires-fresh');
     assert.equal(stale.severity, 'warn', 'stale knowledge warns; missing provenance errors');
+  });
+
+  await t.test('warns inside the re-verification horizon but not beyond it', () => {
+    const soon = byRule('expires-soon');
+    assert.deepEqual(soon, ['12_Brain/research/DueSoon.md'], 'only the page inside 14 days');
+    const finding = result.findings.find((f) => f.rule === 'expires-soon');
+    assert.equal(finding.daysUntil, 10);
+    assert.match(finding.detail, /expires in 10 days/);
+  });
+
+  await t.test('an already-expired page is not double-reported as due soon', () => {
+    assert.ok(!byRule('expires-soon').includes('12_Brain/research/Stale.md'));
   });
 
   await t.test('flags a broken link in INDEX itself', () => {

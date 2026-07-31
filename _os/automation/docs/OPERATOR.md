@@ -19,7 +19,7 @@ node _os/automation/bin/grok-ingest.js --from <grok-run.json>
 The run envelope must match `12_Brain/schemas/grok-run.json`. Ingestion writes:
 
 - an immutable source capture under `12_Brain/01_Captures/Grok/`
-- a daily synthesis under `12_Brain/06_Research/`
+- a daily synthesis under `12_Brain/research/`
 - proposed experiment notes for `sandbox-test` candidates
 - an idempotency record under `12_Brain/state/`
 

@@ -16,13 +16,13 @@ tags:
 
 # Frontier actions 1-4
 
-Connected initiative: [[12_Brain/05_Projects/2026-07-30 - Integrate daily intelligence stack]]
+Connected initiative: [[12_Brain/projects/2026-07-30 - Integrate daily intelligence stack]]
 
 Supporting records:
 
-- [[12_Brain/05_Projects/Experiments/EXP-SKI-VOICE-SANDBOX]]
-- [[12_Brain/06_Research/References/2026-07-30 - agentlogparser audit pattern]]
-- [[12_Brain/06_Research/References/2026-07-30 - Casepoint permission-aware MCP pattern]]
+- [[12_Brain/projects/Experiments/EXP-SKI-VOICE-SANDBOX]]
+- [[12_Brain/research/References/2026-07-30 - agentlogparser audit pattern]]
+- [[12_Brain/research/References/2026-07-30 - Casepoint permission-aware MCP pattern]]
 
 ## Implemented
 

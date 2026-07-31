@@ -28,7 +28,7 @@ views:
     name: Active Experiments
     filters:
       and:
-        - file.inFolder("12_Brain/05_Projects/Experiments")
+        - file.inFolder("12_Brain/projects/Experiments")
         - 'status != "done"'
         - 'status != "cancelled"'
     order:
@@ -44,7 +44,7 @@ views:
     name: Awaiting Independent Check
     filters:
       and:
-        - file.inFolder("12_Brain/05_Projects/Experiments")
+        - file.inFolder("12_Brain/projects/Experiments")
         - 'experiment_stage == "checking"'
     order:
       - experiment_id
@@ -56,7 +56,7 @@ views:
     name: Adoption Decisions
     filters:
       and:
-        - file.inFolder("12_Brain/05_Projects/Experiments")
+        - file.inFolder("12_Brain/projects/Experiments")
         - or:
             - 'experiment_stage == "passed"'
             - 'experiment_stage == "rejected"'

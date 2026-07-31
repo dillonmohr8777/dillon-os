@@ -146,8 +146,18 @@ function resolveLink(target, index, policy = loadPolicy(index.root)) {
   const exact = index.byPath.get(withoutExt);
   if (exact) return { status: 'ok', to: exact };
 
-  const base = index.byBasename.get(path.basename(withoutExt));
-  if (base) return { status: 'ok', to: base };
+  if (withoutExt.includes('/')) {
+    // A target containing a slash is a path, so match it as one — by suffix, the
+    // way Obsidian accepts a shortest-unique partial path. Falling back to the
+    // bare basename here would resolve a stale `folder/README` link to some
+    // unrelated README and hide the breakage.
+    for (const [indexed, rel] of index.byPath) {
+      if (indexed.endsWith(`/${withoutExt}`)) return { status: 'ok', to: rel };
+    }
+  } else {
+    const base = index.byBasename.get(withoutExt);
+    if (base) return { status: 'ok', to: base };
+  }
 
   for (const prefix of policy.untracked_by_design?.prefixes || []) {
     if (cleaned.toLowerCase().startsWith(prefix.toLowerCase())) {
@@ -209,10 +219,22 @@ function inboundCounts(index, policy = loadPolicy(index.root)) {
   return counts;
 }
 
-function isPastDate(value, today) {
+function asISODate(value) {
   const text = String(value || '').trim().slice(0, 10);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(text)) return false;
-  return text < today;
+  return /^\d{4}-\d{2}-\d{2}$/.test(text) ? text : null;
+}
+
+function isPastDate(value, today) {
+  const date = asISODate(value);
+  return date ? date < today : false;
+}
+
+/** Whole days from `today` until `value`; negative once past, null if unparseable. */
+function daysUntil(value, today) {
+  const date = asISODate(value);
+  if (!date) return null;
+  const ms = Date.parse(`${date}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`);
+  return Math.round(ms / 86400000);
 }
 
 /**
@@ -286,6 +308,23 @@ function lint({ root = REPO_ROOT, policy = null, today = new Date().toISOString(
     }
   }
 
+  // Warn before the date passes, so a weekly sweep can re-verify on schedule
+  // instead of discovering staleness only after a page has gone stale.
+  const soonRule = rules.get('expires-soon');
+  if (soonRule) {
+    const horizon = Number(soonRule.horizon_days ?? 14);
+    for (const note of mdNotes) {
+      if (!inScope(note.rel, soonRule.scope, soonRule.exclude)) continue;
+      if (!hasValue(note.data.expires)) continue;
+      const days = daysUntil(note.data.expires, today);
+      if (days === null || days < 0 || days > horizon) continue;
+      add(soonRule, note.rel, `expires in ${days} day${days === 1 ? '' : 's'} on ${note.data.expires}`, {
+        expires: String(note.data.expires),
+        daysUntil: days,
+      });
+    }
+  }
+
   const linkRule = rules.get('link-resolves');
   if (linkRule) {
     for (const note of mdNotes) {
@@ -352,6 +391,7 @@ module.exports = {
   reachableFromIndex,
   inboundCounts,
   isPastDate,
+  daysUntil,
   lint,
   groupByRule,
 };

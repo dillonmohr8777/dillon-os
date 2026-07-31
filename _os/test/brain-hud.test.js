@@ -46,18 +46,45 @@ describe('12_Brain canonical structure', () => {
     assert.match(paths, /registry\/wiki-lint\.json/);
   });
 
-  it('every dated automation lane keeps an index INDEX.md can link', () => {
+  it('every numbered lane keeps an index INDEX.md can link', () => {
     const paths = requiredBrainPaths();
     for (const lane of BRAIN_LANES) {
       assert.ok(paths.includes(`12_Brain/${lane}/README.md`), `${lane} missing from required paths`);
     }
   });
 
-  it('INDEX.md links every automation lane index', () => {
+  it('INDEX.md links every numbered lane index', () => {
     const index = fs.readFileSync(path.join(VAULT, '12_Brain/INDEX.md'), 'utf8');
     for (const lane of BRAIN_LANES) {
       assert.ok(index.includes(`12_Brain/${lane}/README`), `INDEX.md does not link ${lane}`);
     }
+  });
+
+  it('no numbered lane duplicates a record type the wiki already owns', () => {
+    // The 04_Decisions / 05_Projects / 06_Research lanes were retired because two
+    // homes for one record type meant no single place to read the truth.
+    // See 12_Brain/decisions/2026-07-31 - One home per record type.md.
+    for (const retired of ['04_Decisions', '05_Projects', '06_Research']) {
+      assert.equal(
+        fs.existsSync(path.join(VAULT, '12_Brain', retired)),
+        false,
+        `${retired} duplicates a wiki folder and must not come back`,
+      );
+      assert.ok(!BRAIN_LANES.includes(retired));
+    }
+    for (const canonical of ['decisions', 'projects', 'research']) {
+      assert.ok(fs.existsSync(path.join(VAULT, '12_Brain', canonical)));
+    }
+  });
+
+  it('Experiment Queue and Projects Bases point at the migrated folders', () => {
+    const experiments = fs.readFileSync(path.join(VAULT, '12_Brain/bases/Experiment Queue.base'), 'utf8');
+    assert.match(experiments, /12_Brain\/projects\/Experiments/);
+    assert.doesNotMatch(experiments, /05_Projects/);
+
+    const projects = fs.readFileSync(path.join(VAULT, '12_Brain/bases/Projects.base'), 'utf8');
+    assert.match(projects, /file\.inFolder\("12_Brain\/projects"\)/);
+    assert.match(projects, /not:/, 'Projects.base must exclude Experiments/');
   });
 
   it('skills and SessionEnd hook point at 12_Brain, not root raw/', () => {

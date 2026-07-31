@@ -151,19 +151,13 @@ function countMdIn(vault, relDir) {
 }
 
 /**
- * Dated automation lanes. Separate from the compiled-wiki counts because the two
- * lanes mean different things — see
- * 12_Brain/decisions/2026-07-31 - Two-lane brain layout.md.
+ * Numbered lanes, counted separately from the compiled wiki because they hold a
+ * different kind of note: immutable captures, acceptance reports, live incidents
+ * and maps. Record types that the wiki already owns — decisions, projects,
+ * research — deliberately have no lane; see
+ * 12_Brain/decisions/2026-07-31 - One home per record type.md.
  */
-const BRAIN_LANES = [
-  '01_Captures',
-  '04_Decisions',
-  '05_Projects',
-  '06_Research',
-  '07_Reviews',
-  '09_Ops',
-  '10_Maps',
-];
+const BRAIN_LANES = ['01_Captures', '07_Reviews', '09_Ops', '10_Maps'];
 
 /**
  * Last wiki-lint result, so brain-layer drift is visible on the HUD instead of

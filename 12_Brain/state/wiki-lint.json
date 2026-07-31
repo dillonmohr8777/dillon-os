@@ -1,22 +1,43 @@
 {
   "automation_id": "wiki-lint",
-  "started_at": "2026-07-31T02:54:41.041Z",
+  "started_at": "2026-07-31T03:09:12.557Z",
   "status": "warn",
   "counts": {
-    "scanned": 386,
-    "linkable": 396,
+    "scanned": 384,
+    "linkable": 394,
     "errors": 0,
-    "warnings": 1,
-    "reachable": 149
+    "warnings": 4,
+    "reachable": 152
   },
   "findings": [
     {
       "rule": "expires-fresh",
       "severity": "warn",
-      "file": "12_Brain/06_Research/2026-07-30 - Grok daily intelligence.md",
+      "file": "12_Brain/research/2026-07-30 - Grok daily intelligence.md",
       "detail": "expired 2026-07-30 — needs re-verification",
       "expires": "2026-07-30"
+    },
+    {
+      "rule": "expires-soon",
+      "severity": "warn",
+      "file": "12_Brain/concepts/Conversion Tracking Setup 2026.md",
+      "detail": "expires in 4 days on 2026-08-04",
+      "expires": "2026-08-04"
+    },
+    {
+      "rule": "expires-soon",
+      "severity": "warn",
+      "file": "12_Brain/concepts/Google Ads Conversion Optimization 2026.md",
+      "detail": "expires in 4 days on 2026-08-04",
+      "expires": "2026-08-04"
+    },
+    {
+      "rule": "expires-soon",
+      "severity": "warn",
+      "file": "12_Brain/concepts/Meta Lead Ads Optimization 2026.md",
+      "detail": "expires in 4 days on 2026-08-04",
+      "expires": "2026-08-04"
     }
   ],
-  "written_at": "2026-07-31T02:54:41.041Z"
+  "written_at": "2026-07-31T03:09:12.557Z"
 }

@@ -1,13 +1,20 @@
 ---
 tags: [decision, brain, automation]
 decided: 2026-07-31
-status: active
+status: superseded
+superseded_by: "[[12_Brain/decisions/2026-07-31 - One home per record type]]"
 supersedes:
 source: "12_Brain/registry/wiki-lint.json"
 updated: 2026-07-31
 ---
 
 # Two-lane brain layout
+
+> [!warning] Superseded the same day by
+> [[12_Brain/decisions/2026-07-31 - One home per record type|One home per record type]].
+> This decision split the layer by who wrote a note, which left three record types
+> with two folders each — the overlap flagged as open below. Kept as the prior
+> state of belief; do not follow it.
 
 **Decision:** `12_Brain/` runs two lanes on purpose, and both are registered in
 [[12_Brain/INDEX|INDEX]].

@@ -48,9 +48,6 @@
         "12_Brain/research/",
         "12_Brain/memory/",
         "12_Brain/01_Captures/",
-        "12_Brain/04_Decisions/",
-        "12_Brain/05_Projects/",
-        "12_Brain/06_Research/",
         "12_Brain/07_Reviews/",
         "12_Brain/09_Ops/",
         "12_Brain/10_Maps/"
@@ -62,12 +59,16 @@
       "severity": "error",
       "description": "CLAUDE.md: research findings carry a date and an expires: date so stale knowledge announces itself.",
       "requires": ["expires"],
-      "scope": [
-        "12_Brain/06_Research/",
-        "12_Brain/07_Reviews/",
-        "12_Brain/research/"
-      ],
+      "scope": ["12_Brain/research/", "12_Brain/07_Reviews/"],
       "exclude": ["README.md"]
+    },
+    {
+      "id": "expires-soon",
+      "severity": "warn",
+      "description": "Pages inside the re-verification horizon. Surfaces work for the next /research-sweep before the date passes, so staleness is scheduled rather than discovered.",
+      "horizon_days": 14,
+      "scope": ["12_Brain/"],
+      "exclude": ["12_Brain/raw/", "12_Brain/private/"]
     },
     {
       "id": "expires-fresh",

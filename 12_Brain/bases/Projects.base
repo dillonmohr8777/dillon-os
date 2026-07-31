@@ -3,6 +3,8 @@ filters:
     - file.inFolder("12_Brain/projects")
     - file.ext == "md"
     - file.name != "README"
+    - not:
+        - file.inFolder("12_Brain/projects/Experiments")
 views:
   - type: table
     name: Active
