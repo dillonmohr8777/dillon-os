@@ -150,11 +150,53 @@ function countMdIn(vault, relDir) {
   return walkNotes(vault, full).length;
 }
 
+/**
+ * Dated automation lanes. Separate from the compiled-wiki counts because the two
+ * lanes mean different things — see
+ * 12_Brain/decisions/2026-07-31 - Two-lane brain layout.md.
+ */
+const BRAIN_LANES = [
+  '01_Captures',
+  '04_Decisions',
+  '05_Projects',
+  '06_Research',
+  '07_Reviews',
+  '09_Ops',
+  '10_Maps',
+];
+
+/**
+ * Last wiki-lint result, so brain-layer drift is visible on the HUD instead of
+ * only in CI. Null when the lint has never run in this checkout.
+ */
+function getLintHealth(vault) {
+  const file = path.join(vault, BRAIN, 'state', 'wiki-lint.json');
+  if (!fs.existsSync(file)) return null;
+  try {
+    const state = JSON.parse(fs.readFileSync(file, 'utf8'));
+    return {
+      status: state.status || 'unknown',
+      errors: state.counts?.errors ?? null,
+      warnings: state.counts?.warnings ?? null,
+      reachable: state.counts?.reachable ?? null,
+      ranAt: state.written_at || state.started_at || null,
+    };
+  } catch {
+    return { status: 'unreadable', errors: null, warnings: null, reachable: null, ranAt: null };
+  }
+}
+
 /** Brain-layer vitals derived from the canonical 12_Brain tree. */
 function getBrainVitals(vault) {
   const root = path.join(vault, BRAIN);
   const present = fs.existsSync(root) && fs.statSync(root).isDirectory();
   const forbidden = fs.existsSync(path.join(vault, FORBIDDEN_BRAIN));
+  const lanes = {};
+  let laneTotal = 0;
+  for (const lane of BRAIN_LANES) {
+    lanes[lane] = countMdIn(vault, path.join(BRAIN, lane));
+    laneTotal += lanes[lane];
+  }
   return {
     present,
     forbiddenRival: forbidden,
@@ -167,6 +209,9 @@ function getBrainVitals(vault) {
     memory: countMdIn(vault, path.join(BRAIN, 'memory')),
     protocols: countMdIn(vault, path.join(BRAIN, 'protocols')),
     raw: countMdIn(vault, path.join(BRAIN, 'raw')),
+    lanes,
+    laneTotal,
+    lint: getLintHealth(vault),
     indexPresent: fs.existsSync(path.join(root, 'INDEX.md')),
   };
 }
@@ -191,6 +236,11 @@ function requiredBrainPaths() {
     '12_Brain/protocols/README.md',
     '12_Brain/protocols/Compiler Protocol.md',
     '12_Brain/protocols/HUD Protocol.md',
+    // Each dated automation lane keeps an index so INDEX.md can link one line per
+    // lane and every record stays reachable.
+    ...BRAIN_LANES.map((lane) => `12_Brain/${lane}/README.md`),
+    '12_Brain/registry/wiki-lint.json',
+    '12_Brain/decisions/2026-07-31 - Two-lane brain layout.md',
     '12_Brain/bases/Clients.base',
     '12_Brain/bases/Projects.base',
     '12_Brain/bases/Decisions.base',
@@ -246,7 +296,14 @@ function buildState(vault) {
       content: inDir('03_Content'),
       sessions: inDir('10_Sessions'),
       agents: inDir('11_Agents'),
-      brain: brain.entities + brain.concepts + brain.projects + brain.decisions + brain.memory + brain.protocols,
+      brain:
+        brain.entities +
+        brain.concepts +
+        brain.projects +
+        brain.decisions +
+        brain.memory +
+        brain.protocols +
+        brain.laneTotal,
       tasksOpen: open,
       tasksDone: done,
       weekTouches,
@@ -274,6 +331,8 @@ module.exports = {
   getDirectives,
   getSkills,
   getBrainVitals,
+  getLintHealth,
+  BRAIN_LANES,
   requiredBrainPaths,
   assertBrainStructure,
   buildState,

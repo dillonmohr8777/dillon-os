@@ -215,6 +215,14 @@ const $ = (id) => document.getElementById(id);
 let state = null;
 let activeJob = null;   // { id, skill, es }
 
+// Last wiki-lint result, so brain-layer drift shows on the dashboard.
+function lintLabel(lint) {
+  if (!lint) return 'lint never run';
+  if (lint.errors > 0) return `lint ${lint.errors} err`;
+  if (lint.warnings > 0) return `lint ${lint.warnings} warn`;
+  return 'lint clean';
+}
+
 // ---------------- clock ----------------
 function tickClock() {
   const d = new Date();
@@ -260,7 +268,7 @@ function render() {
   const b = state.brain || {};
   $('v-brain').textContent = v.brain != null ? v.brain : '—';
   $('v-brain-detail').textContent = b.present
-    ? `E${b.entities||0} C${b.concepts||0} D${b.decisions||0}`
+    ? `E${b.entities||0} C${b.concepts||0} D${b.decisions||0} L${b.laneTotal||0} · ${lintLabel(b.lint)}`
     : 'missing 12_Brain';
   $('pill-vault').textContent = `${v.notes} NOTES`;
   drawSpark(v.activity);

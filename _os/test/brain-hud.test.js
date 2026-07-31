@@ -8,10 +8,12 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {
   BRAIN,
+  BRAIN_LANES,
   FORBIDDEN_BRAIN,
   assertBrainStructure,
   buildState,
   getBrainVitals,
+  getLintHealth,
   getSkills,
   requiredBrainPaths,
 } = require('../vault-state');
@@ -41,6 +43,21 @@ describe('12_Brain canonical structure', () => {
     assert.match(paths, /vault-compile/);
     assert.match(paths, /vault-conventions\.mdc/);
     assert.match(paths, /routine-health\.md/);
+    assert.match(paths, /registry\/wiki-lint\.json/);
+  });
+
+  it('every dated automation lane keeps an index INDEX.md can link', () => {
+    const paths = requiredBrainPaths();
+    for (const lane of BRAIN_LANES) {
+      assert.ok(paths.includes(`12_Brain/${lane}/README.md`), `${lane} missing from required paths`);
+    }
+  });
+
+  it('INDEX.md links every automation lane index', () => {
+    const index = fs.readFileSync(path.join(VAULT, '12_Brain/INDEX.md'), 'utf8');
+    for (const lane of BRAIN_LANES) {
+      assert.ok(index.includes(`12_Brain/${lane}/README`), `INDEX.md does not link ${lane}`);
+    }
   });
 
   it('skills and SessionEnd hook point at 12_Brain, not root raw/', () => {
@@ -84,6 +101,24 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
     const entitiesDir = path.join(VAULT, '12_Brain/entities');
     const md = fs.readdirSync(entitiesDir).filter((f) => f.endsWith('.md')).length;
     assert.equal(b.entities, md);
+  });
+
+  it('counts the dated automation lanes, not just the compiled wiki', () => {
+    const b = getBrainVitals(VAULT);
+    for (const lane of BRAIN_LANES) {
+      assert.ok(b.lanes[lane] >= 1, `lane ${lane} should hold at least its index`);
+    }
+    const summed = BRAIN_LANES.reduce((n, lane) => n + b.lanes[lane], 0);
+    assert.equal(b.laneTotal, summed);
+    assert.ok(buildState(VAULT).vitals.brain >= b.laneTotal);
+  });
+
+  it('surfaces the last wiki-lint result so drift is visible on the HUD', () => {
+    const lint = getLintHealth(VAULT);
+    assert.ok(lint, 'expected 12_Brain/state/wiki-lint.json from a lint run');
+    assert.ok(['ok', 'warn', 'fail'].includes(lint.status), `unexpected status ${lint.status}`);
+    assert.equal(lint.errors, 0, 'committed state should record a brain layer with no lint errors');
+    assert.ok(lint.reachable > 0);
   });
 
   it('Command Deck includes brain loop skills', () => {
