@@ -31,10 +31,22 @@ Private key/units note (gitignored): `12_Brain/private/access/semrush-api.md`.
 
 No extra ChatGPT fee; calls burn Semrush API units.
 
-## Cursor (operator clicks)
+## Cursor (recommended — stdio bridge)
 
-1. Settings → Cursor Settings → Tools & MCP
-2. Add server:
+Remote `url: https://mcp.semrush.com/v2/mcp` triggers Semrush OAuth discovery;
+Cursor often ignores static API-key headers when that happens. Dillon OS ships a
+stdio bridge that injects the key instead:
+
+1. Key in `12_Brain/private/access/semrush-api.md` (gitignored) **or** `SEMRUSH_API_KEY` env.
+2. Project config already at `.cursor/mcp.json` → runs `node _os/mcp/semrush-bridge.js`.
+3. Reload Cursor MCP / restart the agent window.
+4. Confirm tools (e.g. `keyword_research`, `domain_overview`) and smoke-test a tight query.
+
+Details: `_os/mcp/README.md`.
+
+### Cursor OAuth path (optional)
+
+If you want pure remote OAuth instead of the bridge:
 
 ```json
 {
@@ -46,10 +58,7 @@ No extra ChatGPT fee; calls burn Semrush API units.
 }
 ```
 
-3. Complete OAuth redirect → Semrush login → Approve
-4. Confirm tools appear; smoke-test a tight query (e.g. top 10 US keywords for one domain)
-
-Prefer OAuth. API-key header only if the client lacks OAuth. **Do not put API keys in Git or tracked vault notes.**
+Then Settings → Tools & MCP → Connect → Approve on Semrush. **Do not put API keys in Git.**
 
 ## Unit hygiene
 

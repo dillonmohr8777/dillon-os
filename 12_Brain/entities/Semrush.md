@@ -21,7 +21,8 @@ updated: 2026-07-31
 
 ## MCP
 
-- Remote: `https://mcp.semrush.com/v2/mcp` (streamable HTTP)
+- Remote: `https://mcp.semrush.com/v2/mcp` (streamable HTTP; OAuth)
+- Cursor working path: stdio bridge `_os/mcp/semrush-bridge.js` via `.cursor/mcp.json`
 - Review: [[12_Brain/07_Reviews/MCP/2026-07-31 - semrush|MCP acceptance - Semrush]]
 
 ## Links

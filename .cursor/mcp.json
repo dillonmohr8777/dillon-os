@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "semrush": {
+      "command": "node",
+      "args": ["_os/mcp/semrush-bridge.js"],
+      "env": {
+        "DILLON_OS_ROOT": "${workspaceFolder}"
+      }
+    }
+  }
+}

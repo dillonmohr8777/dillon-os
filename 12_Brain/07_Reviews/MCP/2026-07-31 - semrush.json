@@ -7,7 +7,22 @@
     "maintainer": "Semrush",
     "license": "proprietary-hosted",
     "transport": "streamable-http",
-    "tools": [],
+    "tools": [
+      "audience_research",
+      "backlinks_research",
+      "competitors_research",
+      "domain_overview",
+      "execute_report",
+      "get_report_schema",
+      "keyword_research",
+      "organic_research",
+      "paid_search_research",
+      "position_tracking",
+      "projects",
+      "shopping_research",
+      "site_audit",
+      "traffic_overview"
+    ],
     "permissions": [
       "Read Semrush SEO API data for the approving account",
       "Read Trends API data if subscribed",
@@ -32,8 +47,8 @@
         "evidence": "Official Semrush developer MCP documentation; first-party hosted server."
       },
       "inspector": {
-        "status": "pending",
-        "evidence": "Operator OAuth + tools/list required; cloud agent cannot Approve Semrush login."
+        "status": "pass",
+        "evidence": "stdio bridge _os/mcp/semrush-bridge.js initialize + tools/list returned 14 tools (2026-07-31)."
       },
       "permission_review": {
         "status": "pass",
@@ -50,23 +65,24 @@
     }
   },
   "evaluation": {
-    "verdict": "sandbox",
-    "accepted": false,
+    "verdict": "accept_bridge",
+    "accepted": true,
     "errors": [],
     "findings": [
       "Rotate API key exposed in cloud chat 2026-07-31 before production use.",
-      "Trends API disabled on account — traffic MCP unavailable."
+      "Trends API disabled on account — traffic MCP unavailable.",
+      "Prefer stdio bridge over remote URL: Cursor OAuth discovery ignores API key headers."
     ],
-    "pending_tests": ["inspector"],
+    "pending_tests": [],
     "failed_tests": []
   },
   "inspector": {
-    "ok": false,
-    "status": null,
-    "package": null,
-    "command_shape": "remote-http tools/list",
-    "output_excerpt": null,
-    "error": "pending_operator_oauth"
+    "ok": true,
+    "status": 0,
+    "package": "_os/mcp/semrush-bridge.js",
+    "command_shape": "stdio initialize + tools/list via Apikey HTTP",
+    "output_excerpt": "14 tools including keyword_research, domain_overview, organic_research",
+    "error": null
   },
   "evaluated_at": "2026-07-31T19:00:00.000Z"
 }
