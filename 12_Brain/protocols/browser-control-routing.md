@@ -21,23 +21,22 @@ expires: 2026-10-31
 
 ## Default routing
 
-1. **Cloud Cursor agent** → Composio Browser Tool (if `COMPOSIO_API_KEY` set and Enhanced Controls allow).
-2. **Local Hermes on Mac** → `/browser connect` to attach Chrome on port 9222 for hands-on-glass work Dillon watches on the TV.
+1. **`hermes-local-control`** (Mac) → CDP attach for TV-visible logged-in Chrome. Skill: `.claude/skills/hermes-local-control/`.
+2. **Cloud Cursor agent** → Composio Browser Tool (if Enhanced Controls allow `BROWSER_TOOL_*`).
 3. **Google Ads / GBP apply** → Claude in Chrome or Hermes CDP; cloud agents draft only.
 4. **Slack read when API write blocked** → Slack MCP search first; Composio browser read-only lane second.
 
-## Hermes local CDP (Mac)
-
-Start Chrome with remote debugging, then attach Hermes:
+## Hermes local CDP (Mac) — `hermes-local-control`
 
 ```bash
-# macOS — launch Chrome with CDP (use your normal profile path)
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
-  --remote-debugging-port=9222
-
-# In Hermes terminal (not Web UI / Telegram)
+bash _os/tools/hermes-local-control.sh
+# then in Hermes terminal:
+hermes chat
 /browser connect
+/browser status
 ```
+
+Uses dedicated profile `~/.hermes/chrome-debug` so port 9222 actually opens when Chrome is already running.
 
 Optional persistent config in `~/.hermes/config.yaml`:
 
@@ -45,6 +44,8 @@ Optional persistent config in `~/.hermes/config.yaml`:
 browser:
   cdp_url: http://127.0.0.1:9222
 ```
+
+Handoff: `handoffs/hermes-local-control.md`
 
 ## Composio (cloud agents)
 

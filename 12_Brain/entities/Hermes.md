@@ -30,15 +30,27 @@ CDP attach (Mac):
 
 12 active cron jobs, 3 local webhook routes (localhost:8644), dashboard port 9119/9120. Slack auth broken; email/SMS/Discord never configured. Google Docs ingest prefix: `Dillon OS Hermes Orgo Vault -`.
 
+## Local control lane — `hermes-local-control`
+
+Take over the Mac Hermes desktop agent (TV-visible Chrome):
+
+```bash
+bash _os/tools/hermes-local-control.sh
+hermes chat
+/browser connect
+```
+
+Skill: `.claude/skills/hermes-local-control/` · Handoff: `handoffs/hermes-local-control.md`
+
 ## Cloud agent bridge
 
 Cursor cloud agents cannot reach Mac localhost CDP. For shared control:
 
-1. Dillon runs Hermes locally for logged-in apply work.
-2. Cloud agents use Composio `BROWSER_TOOL` MCP (`~/.cursor/plugins/local/composio-browser/`).
-3. Share Composio **liveUrl** from GetSession so Dillon watches the cloud browser on the TV.
+1. Dillon runs **hermes-local-control** for logged-in apply work on the TV.
+2. Cloud agents use Composio `BROWSER_TOOL` when Enhanced Controls allow it.
+3. Share Composio **liveUrl** from GetSession for a separate cloud browser stream.
 
-Requires `COMPOSIO_API_KEY` in Cursor MCP secrets.
+If Composio returns `Tool execution denied by user`, set Browser Tool to Always allow in Enhanced Controls — or stay on hermes-local-control.
 
 ## Links
 

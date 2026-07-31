@@ -60,7 +60,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
-- [[12_Brain/protocols/browser-control-routing|browser-control-routing]] — Hermes CDP vs Composio vs Claude in Chrome.
+- [[12_Brain/protocols/browser-control-routing|browser-control-routing]] — hermes-local-control (CDP) vs Composio vs Claude in Chrome.
 - Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
 
 ## Folder indexes (working vault)
