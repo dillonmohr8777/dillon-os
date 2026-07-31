@@ -7,23 +7,28 @@ updated: 2026-07-31
 source: handoffs/align-customer-agent-autonomous-prompt-2026-07-30.md
 tags: [align-hcm, customer-agent, hubspot, knowledge-core]
 pdf:
-  kicker: HubSpot Customer Agent · Portal 242825734
-  title: Customer Agent Knowledge Core
-  subtitle: Source-backed answers, safe-answer boundaries, and the complete Preview test-question inventory
-  running_head: Customer Agent Knowledge Core
+  kicker: Canonical knowledge core · Customer Agent
+  title: Knowledge
+  title_alt: Core
+  tag: Verified public
+  subtitle: The retrieval-friendly source of truth for Align HCM's Customer Agent: services, SmartCare, supported platforms, grounded answers, safe-answer boundaries, and the complete Preview question inventory.
+  running_head: Align HCM Customer Agent
+  running_foot: Knowledge Core · Verified public content
   docid: AHCM-CA-KC-2026.07.31
-  confidentiality: Verified public sources only. No CRM data, no unpublished pricing.
-  status_label: LAUNCH HOLD
-  status_tone: hold
-  status_note: No website channel attached. Conversations handled: 0.
-  summary: What the Align HCM Customer Agent is allowed to say, what it must refuse, and every question it has been or will be asked. Sections 01 to 08 are the retrieval layer. Part II carries the full Claude-in-Edge question inventory: 59 capability cases, 58 guardrail cases, 10 operator prompts, and the 8 July 23 probes, each with its execution state.
+  status_label: Launch hold · Preview only
+  status_note: No website channel is attached and no conversation has been handled. **Everything here is public, source-backed content and safe-answer boundaries.**
+  hero:
+    - 10
+    - Service lines
+    - Across the full HCM lifecycle
+  stats:
+    - 4 · SmartCare levels
+    - 6 · Core HCM platforms · teal
+    - 59 · Questions asked · orange
   meta:
-    - Portal | 242825734
-    - Agent | Align HCM Customer Agent
-    - Prompt version | v2026-07-30.5
-    - Connected sources | 96
-    - Questions inventoried | 126+
-    - Scope | Verified public only
+    - Portal · 242825734
+    - Sources · 96 connected
+    - Scope · Verified public only
 ---
 
 # Align HCM Customer Agent · Knowledge Core

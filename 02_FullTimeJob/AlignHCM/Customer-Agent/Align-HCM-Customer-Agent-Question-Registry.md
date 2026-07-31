@@ -7,23 +7,28 @@ updated: 2026-07-31
 source: handoffs/align-customer-agent-autonomous-prompt-2026-07-30.md
 tags: [align-hcm, customer-agent, hubspot, testing]
 pdf:
-  kicker: HubSpot Customer Agent · Portal 242825734
-  title: Claude-in-Edge Master Question Registry
-  subtitle: Every question and prompt string written into the Align Claude-in-Edge sessions, with execution status
-  running_head: Master Question Registry
+  kicker: Claude-in-Edge master registry · Customer Agent
+  title: Question
+  title_alt: Registry
+  tag: Operator record
+  subtitle: Every question and prompt string written into the Align Claude-in-Edge sessions: HubSpot GO and attribution operator prompts, and the Customer Agent Preview test suite.
+  running_head: Align HCM Customer Agent
+  running_foot: Master Question Registry · Internal
   docid: AHCM-CA-REG-2026.07.31
-  confidentiality: Internal working document. No CRM data, no unpublished pricing.
-  status_label: 126+ PROMPTS ASKED
-  status_tone: info
-  status_note: 39 executed in HubSpot Preview
-  summary: Single source of truth for what has been asked of the Align HCM Customer Agent and of Claude in the HubSpot attribution work. Part I covers operator prompts for CMS conversion work. Parts II to VI cover every agent-facing test case with verdicts. Part VII is the flat copy-paste list for the next Preview session.
+  status_label: 126+ prompts asked
+  status_note: Parts I to VI carry every question with its execution state. **Part VII is the flat copy-paste list for the next Preview session.**
+  hero:
+    - 126+
+    - Prompts asked
+    - Across every Claude-in-Edge session
+  stats:
+    - 59 · Capability cases
+    - 58 · Guardrail cases · teal
+    - 39 · Messages sent in Preview · orange
   meta:
-    - Portal | 242825734
-    - Updated | 2026-07-31
-    - Prompt version | v2026-07-30.5
-    - Agent-facing defined | 126+
-    - Executed in Preview | 39 user messages
-    - Capability suite | 59 asked
+    - Portal · 242825734
+    - Updated · 2026-07-31
+    - Prompt · v2026-07-30.5
 ---
 
 # Align HCM · Claude-in-Edge Master Question Registry

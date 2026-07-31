@@ -1,30 +1,27 @@
 # Vendored brand fonts
 
-These are the Align HCM brand typefaces from `02_FullTimeJob/AlignHCM/brand-guidelines.md`,
-vendored so `generate-pdfs.py` produces identical output on any machine with no
-network access.
+Poppins, the display and text face used across the approved Align HCM Customer
+Agent documents, vendored so `generate-pdfs.py` produces identical output on any
+machine with no network access.
 
-| File | Family | Use |
+| File | Weight | Use |
 |------|--------|-----|
-| `PlusJakartaSans-Regular.ttf` | Plus Jakarta Sans 400 | Body copy, table cells |
-| `PlusJakartaSans-SemiBold.ttf` | Plus Jakarta Sans 600 | Labels, sub-heads |
-| `PlusJakartaSans-Bold.ttf` | Plus Jakarta Sans 700 | Headings, table headers |
-| `PlusJakartaSans-ExtraBold.ttf` | Plus Jakarta Sans 800 | Cover title, KPI numerals |
-| `JetBrainsMono-Regular.ttf` | JetBrains Mono 400 | Code spans, flat prompt lists |
-| `JetBrainsMono-Bold.ttf` | JetBrains Mono 700 | Emphasis inside code |
+| `Poppins-Regular.ttf` | 400 | Body copy, table cells |
+| `Poppins-Medium.ttf` | 500 | Nested list copy |
+| `Poppins-SemiBold.ttf` | 600 | Tracked labels, field values, footer left |
+| `Poppins-Bold.ttf` | 700 | Card titles, subheads, page numbers |
+| `Poppins-ExtraBold.ttf` | 800 | Cover title, phase numbers, section headings |
 
-Both families are licensed under the SIL Open Font License 1.1, which permits
-redistribution. Plus Jakarta Sans is by Tokotype; JetBrains Mono is by JetBrains.
+Poppins is by Indian Type Foundry and Jonny Pinhorn, licensed under the SIL Open
+Font License 1.1, which permits redistribution.
 
 ## Subset warning
 
 These are the **Latin subsets** (converted from the Fontsource web builds), so
-they cover Latin-1 plus common punctuation and nothing else. Anything outside
-that range would render as a blank box, so `align_pdf/brand.py` rewrites the
-marks these documents actually use (`>=`, arrows, check marks) before layout.
-If a document needs a new symbol, add it to `GLYPH_SUBSTITUTIONS` rather than
-assuming the glyph exists.
+they cover Latin-1 plus common punctuation. Anything outside that range renders
+as a blank box. The documents stick to Latin text, the middot, and en/em dashes.
+If a new symbol is needed, check it exists here before using it.
 
-If the directory is empty or a file is missing, the build falls back to
-Helvetica and Courier and prints a warning. It still succeeds; it just stops
-looking like Align.
+The fonts are inlined into the HTML as data URIs at build time, so Chromium
+never needs them installed system-wide. They are also used directly by the
+post-pass that stamps the page header and footer.

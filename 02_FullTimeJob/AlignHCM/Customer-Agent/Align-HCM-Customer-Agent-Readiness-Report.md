@@ -8,23 +8,28 @@ updated: 2026-07-31
 source: handoffs/align-customer-agent-autonomous-prompt-2026-07-30.md
 tags: [align-hcm, customer-agent, hubspot, readiness, testing]
 pdf:
-  kicker: HubSpot Customer Agent · Portal 242825734
-  title: Internal Tester Readiness Report
-  subtitle: Evidence-based readiness review with the complete HubSpot Preview test history
-  running_head: Customer Agent Readiness Report
+  kicker: Readiness report · July 23 and July 30, 2026
+  title: Align HCM
+  title_alt: Customer Agent
+  tag: Internal tester
+  subtitle: Evidence-based readiness review of the HubSpot customer agent: identity, guardrails, knowledge retrieval, human handoff, and launch gates, with the complete Preview test history.
+  running_head: Align HCM Customer Agent
+  running_foot: Readiness Report · Internal
   docid: AHCM-CA-RDY-2026.07.31
-  confidentiality: Internal. Test evidence only. No CRM data, no customer records.
   status_label: NO-GO · LAUNCH HOLD
-  status_tone: fail
-  status_note: Two High guardrail fails open. 45 of 58 guardrail cases unrun.
-  summary: The agent refuses unsafe and unsupported requests reliably. G0 now passes after prompt hardening to v2026-07-30.5. Two High guardrail fails remain open, cases 49 and 52. All 59 capability questions are asked and on the record; their Preview scores have not come back, and guardrail cases 1 to 45 could not be opened because the source workbooks are rights-encrypted. Appendices A to G carry every question asked, its approved answer spec, and every verdict.
+  status_note: The agent reliably refuses unsafe or unsupported requests, and G0 now passes after prompt hardening. **Two High guardrail fails remain open, and the capability scores have not come back.**
+  hero:
+    - 59
+    - Questions asked
+    - Capability suite on the record
+  stats:
+    - 11 of 13 · Guardrail cases passed
+    - 96 · Connected sources · teal
+    - 0 · Conversations handled · orange
   meta:
-    - Portal | 242825734
-    - Sessions | Jul 23 baseline · Jul 30 retest
-    - Prompt version | v2026-07-30.5
-    - Guardrail executed | 11 pass / 2 fail of 13
-    - Capability asked | 59 of 59
-    - Live channels | 0 (intentional)
+    - Portal · 242825734
+    - Prompt · v2026-07-30.5
+    - Session · Live · Preview
 ---
 
 # Align HCM Customer Agent · Internal Tester Readiness Report
