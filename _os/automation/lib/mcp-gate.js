@@ -11,6 +11,7 @@ const {
   slugify,
 } = require('./fsutil');
 const { enqueue } = require('./registry');
+const { redactText } = require('../../public-safety');
 
 const REQUIRED_TESTS = [
   'source_review',
@@ -122,14 +123,16 @@ function runInspector(candidate, options = {}) {
     },
   });
   const combined = `${result.stdout || ''}\n${result.stderr || ''}`.trim();
+  // The excerpt lands in a tracked 12_Brain note, and npx relays package warnings
+  // and local paths that would fail the public-safety gate on a public repository.
   return {
     ok: result.status === 0,
     status: result.status,
     signal: result.signal,
     package: command.package,
     command_shape: options.config ? 'config tools/list' : 'remote-http tools/list',
-    output_excerpt: combined.slice(0, 12000),
-    error: result.error ? result.error.message : null,
+    output_excerpt: redactText(combined.slice(0, 12000)),
+    error: result.error ? redactText(result.error.message) : null,
   };
 }
 

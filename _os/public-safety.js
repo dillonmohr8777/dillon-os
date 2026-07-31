@@ -93,6 +93,21 @@ function scanText(text, { ignoreRules = [] } = {}) {
   return hits;
 }
 
+/**
+ * Replace every rule match with a rule-named marker.
+ *
+ * For tool output that gets embedded into tracked 12_Brain notes: an MCP Inspector
+ * probe relays npm warnings and local paths that would otherwise fail the scan.
+ */
+function redactText(text) {
+  let out = String(text ?? '');
+  for (const rule of RULES) {
+    const re = new RegExp(rule.re.source, rule.re.flags);
+    out = out.replace(re, `[redacted:${rule.id}]`);
+  }
+  return out;
+}
+
 function scanVault(vaultRoot) {
   const findings = [];
   for (const full of listBrainFiles(vaultRoot)) {
@@ -121,6 +136,7 @@ module.exports = {
   RULES,
   listBrainFiles,
   scanText,
+  redactText,
   scanVault,
   assertPublicSafe,
 };

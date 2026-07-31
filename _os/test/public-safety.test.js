@@ -11,6 +11,7 @@ const path = require('node:path');
 const {
   assertPublicSafe,
   scanText,
+  redactText,
   SAFE_FIXTURE_ALLOWLIST,
 } = require('../public-safety');
 
@@ -75,6 +76,21 @@ describe('12_Brain public-safety scanner', () => {
     }
     assert.ok(result.scannedFiles >= 10);
     assert.equal(result.ok, true);
+  });
+
+  it('redacts tool output so it is safe to embed in a tracked note', () => {
+    // Shape of real npx output during an MCP Inspector probe: package warnings
+    // carry a maintainer email, and the config path exposes a home directory.
+    const output = 'npm warn deprecated inflight@1.0.6: contact i@izs.me\n'
+      + 'reading /home/operator/tmp/inspector-config.json\n'
+      + '{"tools":[{"name":"search_components"}]}';
+    const redacted = redactText(output);
+    assert.deepEqual(scanText(redacted), []);
+    assert.match(redacted, /\[redacted:email\]/);
+    assert.match(redacted, /\[redacted:private_abs_unix\]/);
+    // The payload the reviewer actually needs survives.
+    assert.match(redacted, /"name":"search_components"/);
+    assert.equal(redactText('clean tools/list output'), 'clean tools/list output');
   });
 
   it('private layer gitignore keeps sensitive notes out of Git', () => {
