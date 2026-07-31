@@ -48,14 +48,16 @@ browser:
 
 ## Composio (cloud agents)
 
-Bootstrap MCP in Cursor:
+**Official path:** add the Composio Cursor plugin (`/add-plugin composio`), run `composio login`, wire MCP URL `https://connect.composio.dev/mcp`.
+
+After CreateTask, always call GetSession and share the **liveUrl** so Dillon can watch on the TV.
+
+Fallback bootstrap if MCP is not auto-registered:
 
 ```bash
 export COMPOSIO_API_KEY=...
-python3 ~/.cursor/plugins/local/composio-browser/mcp/bootstrap-composio-browser.py
+python3 _os/tools/bootstrap-composio-browser.py
 ```
-
-After CreateTask, always call GetSession and share the **liveUrl** so Dillon can watch on the TV.
 
 ## Gates
 

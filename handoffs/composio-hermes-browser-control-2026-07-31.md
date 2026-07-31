@@ -4,36 +4,44 @@ Updated: 2026-07-31
 
 ## Goal
 
-Let Cursor cloud agents control a browser Dillon can watch (TV monitor), using Composio Browser Tool instead of unreachable Mac localhost CDP.
+Let Cursor agents control a browser Dillon can watch (TV monitor), using Composio instead of unreachable Mac localhost CDP.
 
-## Blocker right now
+## Official path (from Composio dashboard + Cursor plugin)
 
-This cloud run has **no `COMPOSIO_API_KEY`**. Playwright MCP also failed (Playwright MCP Bridge extension not connected).
+### 1. Add Composio in Cursor
 
-## Finish setup (5 minutes)
+In Cursor chat or command palette:
 
-### 1. Composio API key
-
-1. Open https://app.composio.dev → Settings → API Keys
-2. In **Cursor Desktop** → Settings → MCP → Secrets, add:
-   - `COMPOSIO_API_KEY` = your key
-   - `COMPOSIO_USER_ID` = `dillon-os` (optional)
-
-### 2. Bootstrap MCP server
-
-On Mac terminal:
-
-```bash
-pip install composio-core
-export COMPOSIO_API_KEY=your_key_here
-python3 ~/.cursor/plugins/local/composio-browser/mcp/bootstrap-composio-browser.py
+```
+/add-plugin composio
 ```
 
-Paste the printed JSON into Cursor Settings → MCP.
+Or install from https://cursor.com — plugin includes `composio-mcp` skill and MCP wiring.
 
-### 3. Hermes local (optional — for logged-in Chrome)
+### 2. Install Composio CLI (Mac terminal)
 
-If you want Hermes driving your Mac Chrome (what's on the TV now):
+```bash
+curl -fsSL https://composio.dev/install | bash
+exec $SHELL
+composio login
+```
+
+Complete OAuth in the browser when prompted. This links your Composio account to the Hermes agent profile on dashboard.composio.dev.
+
+### 3. Wire MCP in Cursor
+
+Add the Composio Connect MCP server:
+
+| Field | Value |
+|-------|-------|
+| **URL** | `https://connect.composio.dev/mcp` |
+| **Auth** | Uses your `composio login` session / API key |
+
+In Cursor → Settings → MCP → Add server → paste URL above. If the plugin auto-registers it, confirm it appears under MCP servers.
+
+### 4. Hermes local Chrome (optional — logged-in sessions)
+
+For Ads/GBP work with your existing cookies on the TV:
 
 ```bash
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
@@ -41,17 +49,31 @@ If you want Hermes driving your Mac Chrome (what's on the TV now):
 
 In Hermes terminal: `/browser connect`
 
-### 4. Restart cloud agent
+### 5. Restart agent and test
 
-Re-run this agent after MCP is wired. First command to agent:
+Tell the agent:
 
-> "Open example.com with Composio browser and give me the live watch URL."
+> "Use Composio browser to open example.com and give me the live watch URL."
 
-## What the agent will do once wired
+Expected tool flow:
+1. `BROWSER_TOOL_CREATE_TASK`
+2. `BROWSER_TOOL_GET_SESSION` → **liveUrl** for TV
+3. `BROWSER_TOOL_WATCH_TASK` → results
 
-1. `BROWSER_TOOL_CREATE_TASK` with your instructions
-2. `BROWSER_TOOL_GET_SESSION` → share liveUrl for TV
-3. `BROWSER_TOOL_WATCH_TASK` → return results/screenshots
+## Fallback bootstrap (if plugin MCP URL differs)
+
+If the plugin does not auto-configure MCP, generate a session-specific config:
+
+```bash
+export COMPOSIO_API_KEY=your_key_here
+python3 _os/tools/bootstrap-composio-browser.py
+```
+
+Paste output into Cursor Settings → MCP.
+
+## Blocker on cloud agents until step 2–3 complete
+
+Cloud runs cannot reach Mac `127.0.0.1:9222`. Composio MCP + login is required for remote browser control.
 
 ## Routing reference
 
