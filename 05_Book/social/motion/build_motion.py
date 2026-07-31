@@ -100,15 +100,15 @@ def scanlines(im: Image.Image, strength: int = 28) -> Image.Image:
     return Image.alpha_composite(im.convert("RGBA"), overlay).convert("RGB")
 
 
-def vignette(im: Image.Image, amount: float = 0.45) -> Image.Image:
-    # soft edge darkening without invalid ellipses
-    mask = Image.new("L", (512, 512), 0)
+def vignette(im: Image.Image, amount: float = 0.28) -> Image.Image:
+    # soft rectangular edge falloff (not a peephole oval)
+    mask = Image.new("L", (W, H), 255)
     md = ImageDraw.Draw(mask)
-    for i in range(64):
-        a = int(255 * (1 - (i / 63) ** 1.35) * amount)
-        inset = int(8 + i * 3.5)
-        md.ellipse([inset, inset, 511 - inset, 511 - inset], fill=max(0, 255 - a))
-    mask = mask.resize((W, H), Image.Resampling.BILINEAR)
+    max_b = int(min(W, H) * 0.18)
+    for i in range(max_b):
+        a = int(255 * (1 - i / max_b) * amount)
+        md.rectangle([i, i, W - 1 - i, H - 1 - i], outline=255 - a)
+    mask = mask.filter(ImageFilter.GaussianBlur(radius=10))
     dark = Image.new("RGB", (W, H), INK)
     return Image.composite(im, dark, mask)
 
