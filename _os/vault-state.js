@@ -168,15 +168,28 @@ function getLintHealth(vault) {
   if (!fs.existsSync(file)) return null;
   try {
     const state = JSON.parse(fs.readFileSync(file, 'utf8'));
+    const findings = Array.isArray(state.findings) ? state.findings : [];
+    const countRule = (rule) => findings.filter((f) => f.rule === rule).length;
     return {
       status: state.status || 'unknown',
       errors: state.counts?.errors ?? null,
       warnings: state.counts?.warnings ?? null,
       reachable: state.counts?.reachable ?? null,
+      // The re-verification queue for the next /research-sweep: pages inside the
+      // expiry horizon plus any already past it. Surfaced so the sweep has a
+      // visible backlog instead of only a line in CI output.
+      reverify: { soon: countRule('expires-soon'), stale: countRule('expires-fresh') },
       ranAt: state.written_at || state.started_at || null,
     };
   } catch {
-    return { status: 'unreadable', errors: null, warnings: null, reachable: null, ranAt: null };
+    return {
+      status: 'unreadable',
+      errors: null,
+      warnings: null,
+      reachable: null,
+      reverify: null,
+      ranAt: null,
+    };
   }
 }
 
@@ -234,7 +247,7 @@ function requiredBrainPaths() {
     // lane and every record stays reachable.
     ...BRAIN_LANES.map((lane) => `12_Brain/${lane}/README.md`),
     '12_Brain/registry/wiki-lint.json',
-    '12_Brain/decisions/2026-07-31 - Two-lane brain layout.md',
+    '12_Brain/decisions/2026-07-31 - One home per record type.md',
     '12_Brain/bases/Clients.base',
     '12_Brain/bases/Projects.base',
     '12_Brain/bases/Decisions.base',

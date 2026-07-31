@@ -148,6 +148,14 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
     assert.ok(lint.reachable > 0);
   });
 
+  it('surfaces the re-verification queue so the sweep has a visible backlog', () => {
+    const { reverify } = getLintHealth(VAULT);
+    assert.ok(reverify, 'lint health should carry a re-verification queue');
+    assert.equal(typeof reverify.soon, 'number');
+    assert.equal(typeof reverify.stale, 'number');
+    assert.equal(reverify.stale, 0, 'no page should be sitting past its expires: date');
+  });
+
   it('Command Deck includes brain loop skills', () => {
     const names = getSkills(VAULT).map((s) => s.name);
     for (const need of ['vault-compile', 'wiki-lint', 'synthesize', 'session-mine', 'research-sweep']) {

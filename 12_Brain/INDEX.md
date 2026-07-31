@@ -19,9 +19,9 @@ in the same change.
 > [!tip] Visual views: [[12_Brain/Brain Map.canvas|Brain Map]] ·
 > [[12_Brain/bases/Clients.base|Clients table]] · [[Dashboard|Dashboard]]
 
-This layer runs two lanes — a compiled wiki and dated automation lanes. Which one
-a new page belongs in is settled in
-[[12_Brain/decisions/2026-07-31 - Two-lane brain layout|Two-lane brain layout]].
+Every record type has exactly one folder; a numbered lane exists only for a *kind*
+of note the wiki does not already own. Where a new page goes is settled in
+[[12_Brain/decisions/2026-07-31 - One home per record type|One home per record type]].
 `node _os/automation/bin/wiki-lint.js` checks that every page below is reachable,
 sourced, and link-clean.
 
@@ -49,6 +49,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Access Verification Discipline|Access Verification Discipline]] — confirmed access needs direct proof (no inventories here).
 - [[12_Brain/concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove.
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.
+- [[12_Brain/concepts/Stateless MCP Server Design|Stateless MCP Server Design]] — MCP `2026-07-28` is stateless; session affinity fails the gate.
 - [[12_Brain/concepts/Google Docs Sharding Pattern|Google Docs Sharding Pattern]] — sub-MB shards → Docs → index.
 - [[12_Brain/concepts/Leading Indicators|Leading Indicators]] — churn/growth signals for `/synthesize`.
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).

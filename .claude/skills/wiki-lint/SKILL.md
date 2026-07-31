@@ -52,9 +52,13 @@ These need meaning compared, not paths resolved:
    statements with links.
 3. **Thin pages** — a page whose summary line is its only content, and which
    nothing links to, is a stub pretending to be knowledge. Propose absorbing it.
-4. **Lane drift** — a dated automation record edited into an evergreen lesson, or
-   a compiled page accruing daily log entries. See
-   `12_Brain/decisions/2026-07-31 - Two-lane brain layout.md`.
+4. **Lane drift** — a capture or acceptance report edited into an evergreen lesson,
+   or a compiled page accruing daily log entries. Also flag a *second home* opening
+   up for a record type that already has one; that is the failure
+   `12_Brain/decisions/2026-07-31 - One home per record type.md` exists to prevent.
+5. **Re-verification backlog** — `expires-soon` findings are the queue for the next
+   `/research-sweep`. Check each claim against a **primary** source, not the post
+   that reported it, then extend `expires:` or delete the page.
 
 Report these; merging meaning is a call for Dillon or the `/synthesize` pass.
 

@@ -219,8 +219,19 @@ let activeJob = null;   // { id, skill, es }
 function lintLabel(lint) {
   if (!lint) return 'lint never run';
   if (lint.errors > 0) return `lint ${lint.errors} err`;
+  const q = reverifyLabel(lint.reverify);
+  if (q) return `lint clean · ${q}`;
   if (lint.warnings > 0) return `lint ${lint.warnings} warn`;
   return 'lint clean';
+}
+
+// Pages the next /research-sweep owes a re-verification, so the backlog is on the
+// dashboard rather than buried in CI output.
+function reverifyLabel(reverify) {
+  if (!reverify) return '';
+  const due = (reverify.soon || 0) + (reverify.stale || 0);
+  if (!due) return '';
+  return reverify.stale ? `${due} to re-verify (${reverify.stale} stale)` : `${due} to re-verify`;
 }
 
 // ---------------- clock ----------------

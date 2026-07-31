@@ -25,4 +25,4 @@ permission to act.
 
 ## Links
 - Written by `grok-intelligence-ingest` and `slack-intake` · see [[12_Brain/queue/README|queue/]] and [[12_Brain/state/README|state/]]
-- Lane model: [[12_Brain/decisions/2026-07-31 - Two-lane brain layout|Two-lane brain layout]]
+- Lane model: [[12_Brain/decisions/2026-07-31 - One home per record type|One home per record type]]
