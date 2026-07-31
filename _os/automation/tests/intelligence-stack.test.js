@@ -64,7 +64,9 @@ test('website factory requires recorded demo and independent visual evidence', (
 });
 
 test('artifact hashing rejects paths outside the repository', () => {
-  assert.throws(() => hashArtifacts(['..\\outside.txt']), /escapes repository/);
+  for (const escape of ['../outside.txt', '..\\outside.txt', '/etc/passwd']) {
+    assert.throws(() => hashArtifacts([escape]), /escapes repository/, `should reject ${escape}`);
+  }
 });
 
 test('MCP acceptance gate stays sandbox-only while Inspector is pending', () => {

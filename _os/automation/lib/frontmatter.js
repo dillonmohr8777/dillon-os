@@ -2,9 +2,20 @@
 
 /**
  * Minimal YAML-ish frontmatter parser/serializer for vault notes.
- * Supports flat scalars, simple arrays ([a, b]), and quoted strings.
+ * Supports flat scalars, inline arrays ([a, b]), block sequences
+ * (`key:` followed by indented `- item` lines), and quoted strings.
  * Intentionally small — no dependency on js-yaml.
  */
+
+function unquote(val) {
+  if (
+    (val.startsWith('"') && val.endsWith('"') && val.length > 1) ||
+    (val.startsWith("'") && val.endsWith("'") && val.length > 1)
+  ) {
+    return val.slice(1, -1);
+  }
+  return val;
+}
 
 function parseFrontmatter(text) {
   if (!text.startsWith('---\n') && !text.startsWith('---\r\n')) {
@@ -15,14 +26,29 @@ function parseFrontmatter(text) {
   const raw = text.slice(4, end).replace(/\r/g, '');
   const body = text.slice(end + 4).replace(/^\r?\n/, '');
   const data = {};
-  for (const line of raw.split('\n')) {
+  const lines = raw.split('\n');
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i];
     if (!line.trim() || line.trim().startsWith('#')) continue;
-    const m = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
+    const m = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
     if (!m) continue;
     const key = m[1];
     let val = m[2].trim();
     if (val === '') {
-      data[key] = '';
+      // A bare `key:` may introduce an indented block sequence.
+      const items = [];
+      let j = i + 1;
+      for (; j < lines.length; j += 1) {
+        const seq = lines[j].match(/^\s+-\s+(.*)$/);
+        if (!seq) break;
+        items.push(unquote(seq[1].trim()));
+      }
+      if (items.length) {
+        data[key] = items;
+        i = j - 1;
+      } else {
+        data[key] = '';
+      }
       continue;
     }
     if (val.startsWith('[') && val.endsWith(']')) {
@@ -32,12 +58,7 @@ function parseFrontmatter(text) {
         : [];
       continue;
     }
-    if (
-      (val.startsWith('"') && val.endsWith('"')) ||
-      (val.startsWith("'") && val.endsWith("'"))
-    ) {
-      val = val.slice(1, -1);
-    }
+    val = unquote(val);
     if (val === 'true') data[key] = true;
     else if (val === 'false') data[key] = false;
     else if (/^-?\d+(\.\d+)?$/.test(val)) data[key] = Number(val);

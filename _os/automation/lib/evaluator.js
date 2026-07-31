@@ -11,6 +11,7 @@ const {
   writeJson,
   nowISO,
   slugify,
+  resolveInsideRepo,
 } = require('./fsutil');
 const { enqueue } = require('./registry');
 
@@ -87,12 +88,7 @@ function reviewFile(run) {
 }
 
 function assertInsideRepo(candidate) {
-  const absolute = path.resolve(REPO_ROOT, candidate);
-  const rootWithSep = `${path.resolve(REPO_ROOT)}${path.sep}`;
-  if (absolute !== path.resolve(REPO_ROOT) && !absolute.startsWith(rootWithSep)) {
-    throw new Error(`Artifact path escapes repository: ${candidate}`);
-  }
-  return absolute;
+  return resolveInsideRepo(candidate, 'Artifact path');
 }
 
 function hashArtifacts(artifactPaths) {

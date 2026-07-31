@@ -3,15 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
-const { REPO_ROOT } = require('../../automation/lib/fsutil');
+const { REPO_ROOT, resolveInsideRepo } = require('../../automation/lib/fsutil');
 
 function insideRepo(candidate) {
-  const absolute = path.resolve(REPO_ROOT, candidate || '.');
-  const root = path.resolve(REPO_ROOT);
-  if (absolute !== root && !absolute.startsWith(`${root}${path.sep}`)) {
-    throw new Error(`Path escapes repository: ${candidate}`);
-  }
-  return absolute;
+  return resolveInsideRepo(candidate, 'Path');
 }
 
 function readProfile(profileFile) {
