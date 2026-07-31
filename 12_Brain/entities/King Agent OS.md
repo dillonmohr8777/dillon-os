@@ -1,6 +1,6 @@
 ---
 tags: [entity, tool]
-source: "[[12_Brain/raw/2026-06-26 - intel-core-7-master-operating-transfer]]"
+source: "[[12_Brain/private/raw/2026-06-26 - intel-core-7-master-operating-transfer]]"
 updated: 2026-07-04
 ---
 

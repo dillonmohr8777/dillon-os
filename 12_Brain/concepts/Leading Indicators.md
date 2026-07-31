@@ -1,6 +1,6 @@
 ---
 tags: [concept, prediction]
-source: "[[12_Brain/raw/2026-07-04 - lost-clients-confirmation-2]]"
+source: "[[12_Brain/private/raw/2026-07-04 - lost-clients-confirmation-2]]"
 updated: 2026-07-04
 ---
 

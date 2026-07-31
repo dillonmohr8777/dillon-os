@@ -7,7 +7,7 @@ updated: 2026-07-04
 # Second Brain Architecture
 
 **Summary:** the vault is a codebase — the canonical brain lives under `12_Brain/` (never `1Z_Brain/`). raw/ is ground truth, entities/ and
-concepts/ are compiled pages, INDEX.md is the front door, and every [[link]]
+concepts/ are compiled pages, INDEX.md is the front door, and every `[[link]]`
 is an edge in a graph that gets stronger as it grows.
 
 The agent's job is compiling: read new material in `12_Brain/raw/`, update the entity
