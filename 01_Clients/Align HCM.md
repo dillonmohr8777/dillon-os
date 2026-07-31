@@ -4,8 +4,8 @@ status: active
 industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
-last_touched: 2026-07-30
-next_action: Decide HubSpot GA4 field (uncheck vs G-0Y6LQTTBRJ); Google sign-in for GA4/GSC; approve site form + duplicate gtag fixes
+last_touched: 2026-07-31
+next_action: Live-remeasure #blog-conversion-form on Workday/Dayforce/ADP pages (#2); then Dillon decides HubSpot GA4 field + Google sign-in
 due: none
 ---
 
@@ -69,6 +69,15 @@ Full table + buckets: [[handoffs/align-reporting-stack-edge-audit-2026-07-30|ali
 
 **Also pending consent:** HubSpot GSC app install, X (@AlignHcm) reconnect, LinkedIn native XLSX export, GA4 `g/collect` 503 re-check after Google sign-in.
 
+## Dayforce guide form claim check (2026-07-31)
+
+Handoff: [[handoffs/align-dayforce-guide-form-audit-2026-07-31|align-dayforce-guide-form-audit-2026-07-31]].
+
+**#1 done (record-level):** The two July Dayforce-guide subs are **2 rows / 1 contact (523416315599) / 1 timestamp** on `#align-guide-form` (guid `99df538c-…`), not two people. All 34 Align attribution fields blank on that record — form captures Email only (schema gap). Dayforce credit is native First/Recent conversion + First page seen only. `align_cta_placement` cannot prove/refute "in-post form hidden"; evidence is consistent with a different surface (`#align-guide-form` vs `#blog-conversion-form`) but not proof at n=1.
+
+**#2 next:** Live remeasure `section#blog-conversion-form.contact-form-blog` inside `#hs_cos_wrapper_module_17649746174243` on Workday / Dayforce / ADP pages (read-only).
+
 ## Links
 - [[Client Index]]
 - [[handoffs/align-reporting-stack-edge-audit-2026-07-30|Edge audit handoff 2026-07-30]]
+- [[handoffs/align-dayforce-guide-form-audit-2026-07-31|Dayforce guide form audit 2026-07-31]]

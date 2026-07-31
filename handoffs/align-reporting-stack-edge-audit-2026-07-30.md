@@ -124,6 +124,10 @@ Re-auth grants 17 new scopes including write: create/modify CPQ quotes, quote te
 - Every `google-analytics.com/g/collect` request returned **HTTP 503** during capture for both measurement IDs, while HubSpot endpoints returned 200. May be transient; re-check realtime hits once GA4 UI is reachable.
 - Offline contacts (~2,170 YTD) left untouched — no deterministic evidence yet.
 
+## Follow-on
+
+- [[handoffs/align-dayforce-guide-form-audit-2026-07-31|Dayforce guide form / in-post CTA audit]] — step #1 record pull done; #2 live `#blog-conversion-form` remeasure next.
+
 ## Client page
 
 - [[01_Clients/Align HCM|Align HCM]]
