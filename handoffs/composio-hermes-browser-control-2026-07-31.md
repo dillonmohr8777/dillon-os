@@ -75,6 +75,26 @@ Paste output into Cursor Settings → MCP.
 
 Cloud runs cannot reach Mac `127.0.0.1:9222`. Composio MCP + login is required for remote browser control.
 
+### Enhanced Controls (current blocker)
+
+If browser tasks return **`Tool execution denied by user: BROWSER_TOOL_CREATE_TASK`**, Composio Enhanced Controls is set to **Ask every call** for Browser Tool. Cloud agents cannot receive the approval popup.
+
+**Fix (30 seconds):**
+
+1. Open https://dashboard.composio.dev → **Settings** → **Enhanced Controls** (or tool permissions)
+2. Find **Browser Tool** toolkit
+3. Set **Write** tools (includes `BROWSER_TOOL_CREATE_TASK`) to **Always allow**
+4. Optionally set **Read** tools (`GET_SESSION`, `WATCH_TASK`) to **Always allow** too
+5. Tell the agent to retry
+
+Alternatively, run this on your Mac (approval popup appears locally):
+
+```bash
+composio execute BROWSER_TOOL_CREATE_TASK -d '{"task":"Open dashboard.composio.dev Hermes agent page","startUrl":"https://dashboard.composio.dev"}'
+```
+
+Approve in the browser when prompted, then cloud agents can continue the session via `sessionId`.
+
 ## Routing reference
 
 See `12_Brain/protocols/browser-control-routing.md`.
