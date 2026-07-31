@@ -13,6 +13,7 @@ operating protocols the brain layer expects every agent to follow.
 
 - [[12_Brain/protocols/Compiler Protocol|Compiler Protocol]] — raw → wiki compile rules
 - [[12_Brain/protocols/HUD Protocol|HUD Protocol]] — how D.I.L.L.O.N. OS reads the vault
+- [[12_Brain/protocols/browser-control-routing|browser-control-routing]] — Hermes CDP vs Composio vs Claude in Chrome
 
 ## Agent definitions (working vault)
 
