@@ -53,9 +53,17 @@ Default HubSpot robot remains. Proposed Align monogram is report-only, not uploa
 
 The agent is **disciplined at refusal and weak at positive retrieval** (Jul 23). Jul 30 work shifted focus to **guardrail hardening** — G0 and greeting leak fixed; PII/source-hygiene improved; two High fails remain.
 
-### Complete test-question log · every HubSpot Preview prompt
+### Complete question inventory
 
-**Master registry:** `Align-HCM-Customer-Agent-Question-Registry.md` (same folder) — canonical list of all 39 user messages sent, 27 unique primary prompts, plus 104 pending workbook cases.
+**Master registry:** `Align-HCM-Customer-Agent-Question-Registry.md` — **all Claude-in-Edge prompts**:
+
+- **HubSpot GO / attribution** (10 operator Qs — not agent chat)
+- **Customer Agent capability suite** (59 cases + G0 — full verbatim from autonomous prompt)
+- **Guardrail workbook** (58 cases; 46–58 executed Jul 30)
+- **Jul 23 readiness** (8 probes)
+- **Completion checklist** (3 operator gates)
+
+**Source handoffs:** `handoffs/align-customer-agent-autonomous-prompt-2026-07-30.md`, `handoffs/align-hubspot-corrected-go-prompt-2026-07-30.md`
 
 ---
 
