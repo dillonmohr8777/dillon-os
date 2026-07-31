@@ -46,6 +46,8 @@ VERDICT_COLORS = {
     "NOT RUN": (INK_FAINT, PANEL),
     "DEF": (INK_FAINT, PANEL),
     "EXEC": (NAVY, colors.HexColor("#E9EFF7")),
+    "ASKED": (NAVY, colors.HexColor("#E9EFF7")),
+    "OUTSTANDING": (AMBER, PANEL_WARM),
     "SCENARIO": (INK_SOFT, PANEL),
     "N/A": (INK_FAINT, PANEL),
     "NO-GO": (RED, colors.HexColor("#FDECEA")),

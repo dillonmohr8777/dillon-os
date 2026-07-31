@@ -179,7 +179,8 @@ def plain(text: str) -> str:
 # ---------------------------------------------------------------- verdicts ---
 
 _VERDICT_RE = re.compile(
-    r"^(PASS|FAIL|PENDING|NOT RUN|NOT ACTIVATED|DEF|EXEC|SCENARIO|N/A|NO-GO|"
+    r"^(PASS|FAIL|PENDING|NOT RUN|NOT ACTIVATED|DEF|EXEC|ASKED|OUTSTANDING|"
+    r"SCENARIO|N/A|NO-GO|"
     r"HOLD|KNOWLEDGE FAIL|FALSE NEGATIVE|EXEC PASS|EXEC FAIL)\b(.*)$"
 )
 

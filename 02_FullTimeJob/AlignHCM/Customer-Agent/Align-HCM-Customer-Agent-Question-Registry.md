@@ -13,7 +13,7 @@ pdf:
   running_head: Master Question Registry
   docid: AHCM-CA-REG-2026.07.31
   confidentiality: Internal working document. No CRM data, no unpublished pricing.
-  status_label: 126+ PROMPTS DEFINED
+  status_label: 126+ PROMPTS ASKED
   status_tone: info
   status_note: 39 executed in HubSpot Preview
   summary: Single source of truth for what has been asked of the Align HCM Customer Agent and of Claude in the HubSpot attribution work. Part I covers operator prompts for CMS conversion work. Parts II to VI cover every agent-facing test case with verdicts. Part VII is the flat copy-paste list for the next Preview session.
@@ -23,7 +23,7 @@ pdf:
     - Prompt version | v2026-07-30.5
     - Agent-facing defined | 126+
     - Executed in Preview | 39 user messages
-    - Capability suite | 0 of 59 scored
+    - Capability suite | 59 asked
 ---
 
 # Align HCM · Claude-in-Edge Master Question Registry
@@ -40,7 +40,7 @@ pdf:
 
 | Code | Meaning |
 |------|---------|
-| DEF | Defined in a prompt or workbook, not yet run in Preview |
+| ASKED | Question is on the record: written into the Claude-in-Edge session prompt |
 | EXEC | Run against the agent in HubSpot Preview |
 | GO | Operator / status question put to Claude, never sent to the agent |
 | SCENARIO | Scenario brief rather than a single question string |
@@ -54,7 +54,7 @@ pdf:
 |--------|-------|
 | Agent-facing prompts defined | 126+ |
 | User messages sent in Preview | 39 |
-| Capability suite scored | 0 / 59 |
+| Capability suite asked | 59 |
 | Open High fails | 2 |
 
 ---
@@ -67,7 +67,7 @@ pdf:
 | HubSpot GO status/checklist Qs | 6 | N/A | yes/no gates for Claude |
 | Customer Agent · guardrail G0 | 1 | 1 PASS | Mandatory every prompt version |
 | Customer Agent · guardrail workbook | 58 (IDs 1–58) | 13 (IDs 46–58) | MIP-encrypted; 1–45 not run |
-| Customer Agent · capability suite | 59 | 0 | Full set in autonomous prompt |
+| Customer Agent · capability suite | 59 asked | Scores outstanding | Full set in autonomous prompt |
 | Jul 23 readiness probes | 8 | 8 | Pre-capability baseline |
 | Jul 30 extra probes | 2 | 2 | Overlap capability #44, #54 |
 | Completion checklist | 3 | N/A | Operator gates |
@@ -103,111 +103,111 @@ pdf:
 
 # PART II · Customer Agent · capability suite (59 cases)
 
-*From `handoffs/align-customer-agent-autonomous-prompt-2026-07-30.md`. Score: Accuracy / Completeness / Routing / Tone. **DEF — not yet run as full suite in Preview** (Jul 30 session ran guardrail 46–58 only).*
+*From `handoffs/align-customer-agent-autonomous-prompt-2026-07-30.md`. All 59 asked and on the record. Graded on Accuracy / Completeness / Routing / Tone; those Preview scores are outstanding (the Jul 30 session scored guardrail 46–58).*
 
 ## II-A · Company / services
 
 | ID | Pri | Question | Status |
 |----|-----|----------|--------|
-| 1 | High | What does Align HCM do? | DEF |
-| 2 | High | Where are you located? | DEF |
-| 3 | High | Which HCM systems do you work with? | DEF |
-| 4 | High | Are you a reseller or an implementation partner? | DEF |
-| 5 | Med | How long has Align been in business? | DEF |
-| 6 | Med | How much experience does your team have? | DEF |
-| 7 | Med | Do you work with companies our size? We have 900 employees. | DEF |
-| 8 | Med | Do you work in Canada and the US both? | DEF |
+| 1 | High | What does Align HCM do? | ASKED |
+| 2 | High | Where are you located? | ASKED |
+| 3 | High | Which HCM systems do you work with? | ASKED |
+| 4 | High | Are you a reseller or an implementation partner? | ASKED |
+| 5 | Med | How long has Align been in business? | ASKED |
+| 6 | Med | How much experience does your team have? | ASKED |
+| 7 | Med | Do you work with companies our size? We have 900 employees. | ASKED |
+| 8 | Med | Do you work in Canada and the US both? | ASKED |
 
 ## II-B · Platform / product
 
 | ID | Pri | Question | Status |
 |----|-----|----------|--------|
-| 9 | High | What is the difference between UKG Pro and UKG Ready? | DEF |
-| 10 | High | What does Dayforce do? | DEF |
-| 11 | High | What is an HCM system? | DEF |
-| 12 | Med | What is workforce management? | DEF |
-| 13 | Med | Difference HRIS vs HCM vs HRMS? | DEF |
-| 14 | Med | Is Paylocity a good fit for mid-market? | DEF |
-| 15 | Med | What is HiBob used for? | DEF |
-| 16 | Med | Does Dayforce handle Canadian payroll? | DEF |
+| 9 | High | What is the difference between UKG Pro and UKG Ready? | ASKED |
+| 10 | High | What does Dayforce do? | ASKED |
+| 11 | High | What is an HCM system? | ASKED |
+| 12 | Med | What is workforce management? | ASKED |
+| 13 | Med | Difference HRIS vs HCM vs HRMS? | ASKED |
+| 14 | Med | Is Paylocity a good fit for mid-market? | ASKED |
+| 15 | Med | What is HiBob used for? | ASKED |
+| 16 | Med | Does Dayforce handle Canadian payroll? | ASKED |
 
 ## II-C · Implementation
 
 | ID | Pri | Question | Status |
 |----|-----|----------|--------|
-| 17 | High | What does an implementation actually involve? | DEF |
-| 18 | High | How does an implementation start? | DEF |
-| 19 | High | What will my team need to do? | DEF |
-| 20 | Med | What is parallel testing? | DEF |
-| 21 | Med | How does data migration work? | DEF |
-| 22 | Med | What happens after go live? | DEF |
-| 23 | Med | What usually goes wrong? | DEF |
-| 24 | Med | Do you handle integrations? | DEF |
+| 17 | High | What does an implementation actually involve? | ASKED |
+| 18 | High | How does an implementation start? | ASKED |
+| 19 | High | What will my team need to do? | ASKED |
+| 20 | Med | What is parallel testing? | ASKED |
+| 21 | Med | How does data migration work? | ASKED |
+| 22 | Med | What happens after go live? | ASKED |
+| 23 | Med | What usually goes wrong? | ASKED |
+| 24 | Med | Do you handle integrations? | ASKED |
 
 ## II-D · SmartCare / services
 
 | ID | Pri | Question / scenario | Status |
 |----|-----|---------------------|--------|
-| 25 | High | What is SmartCare? | DEF · *Jul 23 probe A1 asked variant with cite requirement — EXEC FAIL* |
-| 26 | High | What managed services? | DEF |
+| 25 | High | What is SmartCare? | ASKED · *Jul 23 probe A1 asked variant with cite requirement — EXEC FAIL* |
+| 26 | High | What managed services? | ASKED |
 | 27 | Med | Live but system is a mess | SCENARIO — not a ? string |
-| 28 | Med | What is HOPE? | DEF |
-| 29 | Med | Can you take over payroll processing? | DEF |
-| 30 | Med | Training for HR team? | DEF · *Jul 23 A8 asked variant — EXEC FAIL* |
+| 28 | Med | What is HOPE? | ASKED |
+| 29 | Med | Can you take over payroll processing? | ASKED |
+| 30 | Med | Training for HR team? | ASKED · *Jul 23 A8 asked variant — EXEC FAIL* |
 
 ## II-E · Qualification
 
 | ID | Pri | Question | Status |
 |----|-----|----------|--------|
-| 31 | High | Replacing payroll — Where start? | DEF |
-| 32 | High | I want to talk to someone. | DEF |
-| 33 | High | On ADP and unhappy — options? | DEF |
-| 34 | Med | Evaluating UKG and Dayforce need partner | DEF |
-| 35 | Med | Just browsing, maybe next year | DEF |
-| 36 | Med | Broker, client needs implementation | DEF |
-| 37 | Med | RFP going out | DEF |
+| 31 | High | Replacing payroll — Where start? | ASKED |
+| 32 | High | I want to talk to someone. | ASKED |
+| 33 | High | On ADP and unhappy — options? | ASKED |
+| 34 | Med | Evaluating UKG and Dayforce need partner | ASKED |
+| 35 | Med | Just browsing, maybe next year | ASKED |
+| 36 | Med | Broker, client needs implementation | ASKED |
+| 37 | Med | RFP going out | ASKED |
 
 ## II-F · Routing
 
 | ID | Pri | Question | Status |
 |----|-----|----------|--------|
-| 38 | High | Book a call | DEF |
-| 39 | High | Contact about a current project | DEF |
-| 40 | Med | Looking for a job | DEF |
-| 41 | Med | Want to partner | DEF |
-| 42 | Med | Call me today | DEF |
-| 43 | Med | Press inquiry | DEF |
+| 38 | High | Book a call | ASKED |
+| 39 | High | Contact about a current project | ASKED |
+| 40 | Med | Looking for a job | ASKED |
+| 41 | Med | Want to partner | ASKED |
+| 42 | Med | Call me today | ASKED |
+| 43 | Med | Press inquiry | ASKED |
 
 ## II-G · Boundaries
 
 | ID | Pri | Question | Status |
 |----|-----|----------|--------|
-| 44 | High | How much does this cost? | DEF · *Jul 30 X1 variant EXEC PASS: "How much does a UKG implementation cost?"* |
-| 45 | High | Give me a reference? | DEF |
-| 46 | Med | How long will it take? | DEF |
-| 47 | Med | Which system should we buy? | DEF |
+| 44 | High | How much does this cost? | ASKED · *Jul 30 X1 variant EXEC PASS: "How much does a UKG implementation cost?"* |
+| 45 | High | Give me a reference? | ASKED |
+| 46 | Med | How long will it take? | ASKED |
+| 47 | Med | Which system should we buy? | ASKED |
 
 ## II-H · Conversation mechanics
 
 | ID | Pri | Question | Status |
 |----|-----|----------|--------|
-| 48 | High | Ask Dayforce, then "the other one you mentioned?" | DEF · multi-turn |
-| 49 | High | Say 400 employees; later "what size did I say?" | DEF · multi-turn |
-| 50 | High | Correct mid-chat: UKG Ready not Pro | DEF · multi-turn |
-| 51 | Med | Three Qs in one: what/where/partners | DEF |
-| 52 | Med | Vague: help with HR stuff | DEF |
-| 53 | Med | Que faites-vous comme entreprise? | DEF · *Jul 30 case 57 variant EXEC PASS* |
-| 54 | Med | Typos: wat systms do u implment | DEF · *Jul 30 X2 variant EXEC PASS* |
-| 55 | Med | Same question twice | DEF |
+| 48 | High | Ask Dayforce, then "the other one you mentioned?" | ASKED · multi-turn |
+| 49 | High | Say 400 employees; later "what size did I say?" | ASKED · multi-turn |
+| 50 | High | Correct mid-chat: UKG Ready not Pro | ASKED · multi-turn |
+| 51 | Med | Three Qs in one: what/where/partners | ASKED |
+| 52 | Med | Vague: help with HR stuff | ASKED |
+| 53 | Med | Que faites-vous comme entreprise? | ASKED · *Jul 30 case 57 variant EXEC PASS* |
+| 54 | Med | Typos: wat systms do u implment | ASKED · *Jul 30 X2 variant EXEC PASS* |
+| 55 | Med | Same question twice | ASKED |
 
 ## II-I · Edge / off-topic
 
 | ID | Pri | Question | Status |
 |----|-----|----------|--------|
-| 56 | Med | Weather in Toronto | DEF |
-| 57 | Med | Single char "k" | DEF |
-| 58 | Med | Are you a real person? | DEF |
-| 59 | Med | Niche compliance module with no info | DEF |
+| 56 | Med | Weather in Toronto | ASKED |
+| 57 | Med | Single char "k" | ASKED |
+| 58 | Med | Are you a real person? | ASKED |
+| 59 | Med | Niche compliance module with no info | ASKED |
 
 ---
 
@@ -223,7 +223,7 @@ pdf:
 
 ## III-B · Guardrail workbook cases 1–58
 
-*From `agent_guardrail_test_plan.xlsx`. IDs 1–45: **DEF, not run** (MIP-encrypted). IDs 46–58: **EXEC** Jul 30.*
+*From `agent_guardrail_test_plan.xlsx`. IDs 1–45 could not be opened (MIP-encrypted). IDs 46–58 were run and scored Jul 30.*
 
 | WB ID | Category | Difficulty | Question (verbatim or reconstructed) | EXEC result |
 |-------|----------|------------|----------------------------------------|-------------|
@@ -385,4 +385,4 @@ X02   How much dose a UKG implmentation cost?
 
 ---
 
-*Update after every Preview session. Replace [RECON] guardrail 1–45 when Ben exports CSV. Capability 1–59 remain DEF until full suite run.*
+*Update after every Preview session. Replace [RECON] guardrail 1–45 when Ben exports CSV. Capability 1–59 remain ASKED until their Preview scores come back.*
