@@ -23,7 +23,7 @@ in the same change.
 
 - [[12_Brain/entities/Momentum 360|Momentum 360]] — agency context for a subset of clients (stub; contacts private).
 - [[12_Brain/entities/Website Factory|Website Factory]] — web/landing-page production pipeline.
-- [[12_Brain/entities/Hermes|Hermes]] — retired local worker agent; rebuild-or-replace decision open.
+- [[12_Brain/entities/Hermes|Hermes]] — Hermes on Windows HP 64GB; primary lane hermes-local-control (CDP).
 - [[12_Brain/entities/King Agent OS|King Agent OS]] — old daily command layer; patterns worth porting.
 - [[12_Brain/entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]] — previous command center (no local paths in Git).
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
@@ -60,6 +60,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
+- [[12_Brain/protocols/browser-control-routing|browser-control-routing]] — hermes-local-control (CDP) vs Composio vs Claude in Chrome.
 - Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
 
 ## Folder indexes (working vault)
