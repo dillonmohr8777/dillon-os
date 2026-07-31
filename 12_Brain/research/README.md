@@ -1,6 +1,6 @@
 ---
 tags: [research, index]
-updated: 2026-07-29
+updated: 2026-07-31
 ---
 
 # Research
@@ -12,7 +12,9 @@ Survivors compile into `12_Brain/concepts/` with `expires:` dates via
 
 ## Active research pages
 
-See Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
+- [[12_Brain/concepts/Semrush MCP Integration|Semrush MCP Integration]] — Cursor + ChatGPT connect path; expires 2026-10-29.
+
+See also Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
 
 ## Links
 
