@@ -1,13 +1,13 @@
 {
   "automation_id": "wiki-lint",
-  "started_at": "2026-07-31T02:47:26.930Z",
+  "started_at": "2026-07-31T02:51:06.923Z",
   "status": "warn",
   "counts": {
-    "scanned": 385,
-    "linkable": 395,
+    "scanned": 386,
+    "linkable": 396,
     "errors": 0,
     "warnings": 1,
-    "reachable": 143
+    "reachable": 149
   },
   "findings": [
     {
@@ -18,5 +18,5 @@
       "expires": "2026-07-30"
     }
   ],
-  "written_at": "2026-07-31T02:47:26.930Z"
+  "written_at": "2026-07-31T02:51:06.923Z"
 }

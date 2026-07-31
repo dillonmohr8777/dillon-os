@@ -71,7 +71,9 @@ function extractLinks(text) {
   const re = /!?\[\[([^\][\n]+?)\]\]/g;
   let m;
   while ((m = re.exec(scrubbed)) !== null) {
-    const inner = m[1];
+    // Inside a markdown table the alias pipe must be written `\|`, so unescape
+    // before splitting or the target keeps a trailing backslash and never resolves.
+    const inner = m[1].replace(/\\\|/g, '|');
     const [rawTarget, ...aliasParts] = inner.split('|');
     const target = rawTarget.split('#')[0].split('^')[0].trim();
     if (!target) continue;

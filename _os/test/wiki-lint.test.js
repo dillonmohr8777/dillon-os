@@ -84,6 +84,12 @@ test('link extraction', async (t) => {
     assert.deepEqual(links.map((l) => l.target), ['Page', 'Embed']);
     assert.equal(links[0].alias, 'Alias');
   });
+
+  await t.test('handles the escaped alias pipe a markdown table requires', () => {
+    const link = extractLinks('| cell | [[12_Brain/entities/Hermes\\|Hermes]] |')[0];
+    assert.equal(link.target, '12_Brain/entities/Hermes', 'trailing backslash must not survive');
+    assert.equal(link.alias, 'Hermes');
+  });
 });
 
 test('link resolution', async (t) => {

@@ -1,0 +1,46 @@
+name: Vault checks
+
+# The brain layer drifted because nothing executed the writing rules on a PR.
+# These are the deterministic gates: public-safety scanning, brain structure,
+# wiki lint, and the automation unit tests.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Deterministic tests
+        run: node --test _os/test/*.test.js _os/automation/tests/*.test.js
+
+      - name: Site factory tests
+        run: node --test _templates/site-factory/tests/*.test.js
+
+      # --strict exits 1 on any error finding. The report is uploaded below so a
+      # failure is readable without re-running anything locally.
+      - name: Wiki lint
+        if: always()
+        run: node _os/automation/bin/wiki-lint.js --strict
+
+      - name: Upload wiki lint report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wiki-lint-report
+          path: |
+            Daily-Briefs/wiki-lint-*.md
+            12_Brain/state/wiki-lint.json
+          if-no-files-found: warn

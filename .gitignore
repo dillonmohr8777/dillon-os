@@ -21,3 +21,8 @@ _templates/site-factory/harvest/
 # 12_Brain private layer — GitHub repo is PUBLIC; keep PII/access/secrets out of Git
 12_Brain/private/**
 !12_Brain/private/README.md
+
+# Public-safety scanner fixture: deliberately PII-shaped strings used to prove the
+# scanner fires. Tests only assert its allowlist membership, never read it, so it
+# stays local rather than shipping sample PII in a public repo.
+_os/test/fixtures/public-safety-allowlisted.md

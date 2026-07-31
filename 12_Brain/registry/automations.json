@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-07-31",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -37,7 +37,7 @@
       "cadence": "daily",
       "command": "node _os/automation/bin/site-health.js --dry-run",
       "inputs": ["12_Brain/registry/properties.json"],
-      "outputs": ["12_Brain/state/site-health.json", "Daily-Briefs/site-health-report.md"],
+      "outputs": ["12_Brain/state/site-health-sentinel.json", "Daily-Briefs/site-health-report.md"],
       "external_actions": false,
       "notes": "Dry-run uses fixtures. Live HTTP checks are opt-in via --live and still never POST real user data except a marked canary when --canary is set.",
       "status": "implemented"
@@ -191,6 +191,19 @@
       "outputs": ["12_Brain/state/aeo-trust-gate.json", "Daily-Briefs/aeo-trust-report.md"],
       "external_actions": false,
       "notes": "A fail blocks deployment. A pass does not replace visual review, functional QA, or exact Netlify target verification.",
+      "status": "implemented"
+    },
+    {
+      "id": "wiki-lint",
+      "name": "Brain-layer wiki lint (provenance, links, INDEX reachability)",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "pre-commit + weekly",
+      "command": "node _os/automation/bin/wiki-lint.js --strict",
+      "inputs": ["12_Brain/registry/wiki-lint.json", "12_Brain/**/*.md", "vault link graph"],
+      "outputs": ["12_Brain/state/wiki-lint.json", "Daily-Briefs/wiki-lint-*.md"],
+      "external_actions": false,
+      "notes": "Enforces the CLAUDE.md writing rules deterministically: source:/expires: provenance, resolvable wikilinks, and reachability from INDEX.md. --strict exits 1 on any error finding and is what CI runs. Read-only; it reports and never edits notes. Duplicate pages and contradictions stay with the /wiki-lint skill because merging meaning is a judgment call.",
       "status": "implemented"
     }
   ],
