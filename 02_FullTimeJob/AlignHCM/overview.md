@@ -37,7 +37,7 @@ Messaging emphasis: ongoing expert access, platform optimization, post-go-live s
 
 ## Customer Agent (HubSpot)
 - Portal **242825734** · agent **Align HCM Customer Agent** · **LAUNCH HOLD** (Preview only, no website chat).
-- Docs: [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Knowledge-Core|Knowledge Core]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Readiness-Report|Readiness Report]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Test-Results-2026-07-30|Test Results 2026-07-30]].
+- Docs: [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Knowledge-Core|Knowledge Core]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Readiness-Report|Readiness Report]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Test-Results-2026-07-30|Test Results 2026-07-30]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Question-Registry|Question Registry (all 39 messages)]].
 - Prompt version: **v2026-07-30.5** · G0 (UKG timeclock) **PASS** · 2 High guardrail fails open (cases 49, 52).
 
 ## Deliverables in flight
