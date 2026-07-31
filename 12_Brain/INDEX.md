@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-29
+updated: 2026-07-31
 ---
 
 # INDEX — the front door
@@ -28,6 +28,7 @@ in the same change.
 - [[12_Brain/entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]] — previous command center (no local paths in Git).
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
+- [[12_Brain/entities/Semrush|Semrush]] — SEO platform + official MCP; secrets stay private.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -46,12 +47,14 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/concepts/Semrush MCP Integration|Semrush MCP Integration]] — Cursor + ChatGPT → Semrush MCP (`v2`); SEO ready, Trends blocked.
 
 ## Raw captures (Git-safe)
 
 - [[12_Brain/raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
+- [[12_Brain/raw/research/2026-07-31 - research - semrush-mcp-cursor-chatgpt|2026-07-31 Semrush MCP research]] — Cursor/ChatGPT MCP eligibility receipts.
 
 ## Projects · Decisions · Research · Memory · Protocols
 

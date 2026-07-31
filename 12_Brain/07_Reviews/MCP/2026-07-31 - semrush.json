@@ -1,0 +1,72 @@
+{
+  "candidate": {
+    "id": "semrush",
+    "name": "Semrush MCP",
+    "source_url": "https://developer.semrush.com/api/v4/introduction/semrush-mcp/",
+    "remote_url": "https://mcp.semrush.com/v2/mcp",
+    "maintainer": "Semrush",
+    "license": "proprietary-hosted",
+    "transport": "streamable-http",
+    "tools": [],
+    "permissions": [
+      "Read Semrush SEO API data for the approving account",
+      "Read Trends API data if subscribed",
+      "Read-only Projects API v3 methods"
+    ],
+    "network_destinations": [
+      "https://mcp.semrush.com/v2/mcp",
+      "https://oauth.semrush.com"
+    ],
+    "secret_requirements": [
+      "OAuth (preferred) or Semrush API key — private storage only"
+    ],
+    "overlap": "Unique live Semrush SEO/Trends path; does not replace Context7 or OpenAI Developer Docs.",
+    "rollback": "Remove semrush from Cursor MCP settings; disconnect Semrush app in ChatGPT Apps.",
+    "maintenance": {
+      "review_cadence": "quarterly",
+      "notes": "KB still documents v1 endpoint; prefer developer v2 until Semrush reconciles."
+    },
+    "tests": {
+      "source_review": {
+        "status": "pass",
+        "evidence": "Official Semrush developer MCP documentation; first-party hosted server."
+      },
+      "inspector": {
+        "status": "pending",
+        "evidence": "Operator OAuth + tools/list required; cloud agent cannot Approve Semrush login."
+      },
+      "permission_review": {
+        "status": "pass",
+        "evidence": "Documented read/API surface; Projects methods read-only; no deploy/messaging/payment."
+      },
+      "prompt_injection": {
+        "status": "pass",
+        "evidence": "Semrush data treated as untrusted evidence under Dillon OS intelligence stack."
+      },
+      "overlap_review": {
+        "status": "pass",
+        "evidence": "No overlap with Context7 or OpenAI docs MCP roles."
+      }
+    }
+  },
+  "evaluation": {
+    "verdict": "sandbox",
+    "accepted": false,
+    "errors": [],
+    "findings": [
+      "Rotate API key exposed in cloud chat 2026-07-31 before production use.",
+      "Trends API disabled on account — traffic MCP unavailable."
+    ],
+    "pending_tests": ["inspector"],
+    "failed_tests": []
+  },
+  "inspector": {
+    "ok": false,
+    "status": null,
+    "package": null,
+    "command_shape": "remote-http tools/list",
+    "output_excerpt": null,
+    "error": "pending_operator_oauth"
+  },
+  "evaluated_at": "2026-07-31T19:00:00.000Z"
+}
