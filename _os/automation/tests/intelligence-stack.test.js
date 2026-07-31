@@ -74,6 +74,19 @@ test('MCP acceptance gate stays sandbox-only while Inspector is pending', () => 
   assert.deepEqual(result.pending_tests, ['inspector']);
 });
 
+test('LandingFolio stays sandbox-only until an operator completes the Inspector probe', () => {
+  const candidate = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/landingfolio-candidate.json'), 'utf8'));
+  const result = evaluateCandidate(candidate);
+  assert.equal(result.verdict, 'sandbox-only');
+  assert.deepEqual(result.pending_tests, ['inspector']);
+  // The endpoint refuses anonymous calls, so declaring tool names would be a guess.
+  assert.deepEqual(candidate.tools, []);
+  // The candidate declares the token requirement without carrying its value.
+  assert.equal(candidate.secret_requirements.length, 1);
+  assert.doesNotMatch(JSON.stringify(candidate), /\blf_[A-Za-z0-9]/);
+  assert.ok(result.findings.some((finding) => finding.code === 'secret-scope'));
+});
+
 test('MCP acceptance gate rejects critical broad permissions', () => {
   const candidate = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/context7-candidate.json'), 'utf8'));
   candidate.permissions = ['full access'];

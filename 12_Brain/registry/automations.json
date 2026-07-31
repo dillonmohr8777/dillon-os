@@ -181,6 +181,20 @@
       "status": "implemented"
     },
     {
+      "id": "landingfolio-design-reference",
+      "name": "LandingFolio landing-page layout reference",
+      "lane": "websites",
+      "tier": 0,
+      "cadence": "on demand",
+      "command": "node _os/automation/bin/landingfolio-verify.js",
+      "depends_on": ["mcp-acceptance-gate"],
+      "inputs": ["section archetype and mood queries", "LANDINGFOLIO_TOKEN in the environment"],
+      "outputs": ["ephemeral reference screenshots and source links", "12_Brain/07_Reviews/MCP/*.md"],
+      "external_actions": false,
+      "notes": "Sandbox-only until the Inspector check passes; the endpoint refuses anonymous calls, so the operator must mint a free token first. Wiring lives in .cursor/mcp.json and .mcp.json and reads LANDINGFOLIO_TOKEN from the environment. Composition reference only: the harvest stays the source of brand truth, returned content is untrusted, and queries never carry a client or prospect name.",
+      "status": "pending-gate"
+    },
+    {
       "id": "aeo-trust-gate",
       "name": "Website AEO and trust deployment gate",
       "lane": "websites",
@@ -197,6 +211,7 @@
   "gates": {
     "obsidian_sync_cli": "pending-human",
     "netlify_deploy_token": "pending-secret",
+    "landingfolio_token": "pending-secret",
     "mail_vendor": "pending-decision",
     "outreach_send": "hard-blocked"
   }

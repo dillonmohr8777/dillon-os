@@ -28,6 +28,17 @@ for the two npm-based sites below.
 | Philly 25 gallery | `philly-sites/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML. |
 | Client report builder (CLI) | `_os/reporting/` | `node _os/reporting/build-report.js <data.json>` | — | Writes HTML into `Daily-Briefs/reports/`. |
 
+### MCP servers
+
+`.cursor/mcp.json` and `.mcp.json` register one project server, `landingfolio`, a
+layout-reference library for site builds. It reads `LANDINGFOLIO_TOKEN` from the
+environment and **is inert until that variable is set** — no token lives in this
+repo. Its tools are optional everywhere they are used, so an unset variable degrades
+to harvest-only design instead of failing a build. Status, rules, and rollback:
+`12_Brain/entities/LandingFolio MCP.md`. It is still **sandbox-only** until an
+operator runs `node _os/automation/bin/landingfolio-verify.js` to finish the
+Inspector check. Any new MCP goes through `_os/automation/bin/mcp-gate.js` first.
+
 ### Tests / lint
 
 ```

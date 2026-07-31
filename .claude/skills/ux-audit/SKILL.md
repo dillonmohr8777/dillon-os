@@ -37,6 +37,8 @@ Write findings to the prospect's note as specific observations, never generic sl
 
 Follow the measured section order in `philly-sites/DESIGN-SYSTEM.md`. The narrative arc that works across the 25: who you are (hero), what you sell (offerings), why you're credible (proof), what it looks like (gallery), where you came from (story), what visiting is like (experience), one signature thing (feature), where to go deeper (catalog), how to reach you (contact), one last ask (closing).
 
+When a section resists that arc and you need to see how real converting pages solve it, the `landingfolio` MCP tools return reference screenshots for a given section type. Reference only, and never queried with a client or prospect name: `12_Brain/entities/LandingFolio MCP.md`. The measured order in the design system still wins any disagreement.
+
 ## Accessibility (non-negotiable, the QA gate enforces some of it)
 
 - Skip link first in the body

@@ -11,6 +11,7 @@ const path = require('node:path');
 const {
   assertPublicSafe,
   scanText,
+  redactText,
   SAFE_FIXTURE_ALLOWLIST,
 } = require('../public-safety');
 
@@ -75,6 +76,40 @@ describe('12_Brain public-safety scanner', () => {
     }
     assert.ok(result.scannedFiles >= 10);
     assert.equal(result.ok, true);
+  });
+
+  it('redacts tool output so it is safe to embed in a tracked note', () => {
+    // Shape of real npx output during an MCP Inspector probe: package warnings
+    // carry a maintainer email, and the config path exposes a home directory.
+    const output = 'npm warn deprecated inflight@1.0.6: contact i@izs.me\n'
+      + 'reading /home/operator/tmp/inspector-config.json\n'
+      + '{"tools":[{"name":"search_components"}]}';
+    const redacted = redactText(output);
+    assert.deepEqual(scanText(redacted), []);
+    assert.match(redacted, /\[redacted:email\]/);
+    assert.match(redacted, /\[redacted:private_abs_unix\]/);
+    // The payload the reviewer actually needs survives.
+    assert.match(redacted, /"name":"search_components"/);
+    assert.equal(redactText('clean tools/list output'), 'clean tools/list output');
+  });
+
+  it('committed MCP configs carry no literal token', () => {
+    // Every credential must arrive from the environment; a bare token in these
+    // files would be published the moment the repo syncs.
+    for (const rel of ['.cursor/mcp.json', '.mcp.json']) {
+      const raw = fs.readFileSync(path.join(VAULT, rel), 'utf8');
+      const landingfolio = JSON.parse(raw).mcpServers.landingfolio;
+      assert.equal(landingfolio.url, 'https://mcp.landingfolio.com/mcp');
+      assert.match(landingfolio.headers.Authorization, /\$\{(env:)?LANDINGFOLIO_TOKEN\}/);
+      assert.doesNotMatch(raw, /\blf_[A-Za-z0-9]/, `${rel} looks like it holds a real token`);
+      assert.deepEqual(scanText(raw), [], `${rel} trips the public-safety scanner`);
+    }
+  });
+
+  it('environment files stay out of Git', () => {
+    const gi = fs.readFileSync(path.join(VAULT, '.gitignore'), 'utf8');
+    assert.match(gi, /^\.env$/m);
+    assert.match(gi, /^\.env\.\*$/m);
   });
 
   it('private layer gitignore keeps sensitive notes out of Git', () => {

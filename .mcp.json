@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "landingfolio": {
+      "type": "http",
+      "url": "https://mcp.landingfolio.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${LANDINGFOLIO_TOKEN}"
+      }
+    }
+  }
+}

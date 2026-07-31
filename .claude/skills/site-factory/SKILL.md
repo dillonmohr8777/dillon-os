@@ -17,7 +17,7 @@ Accept any of:
 ## Steps
 
 1. **Research the business.** Use web search/fetch when available: real address, phone, hours, what they actually sell, their existing site's links (menu, booking, shop). Facts only; never invent an address or phone number. If a fact can't be verified, leave the field empty rather than guessing.
-2. **Derive the brand.** Pick tokens per the design system: palette from their real signage/product/interior colors, `border` and `radius` matching their attitude (1px/round for upscale, thick/square for loud), one display + one text Google Font. Never generic blue.
+2. **Derive the brand.** Pick tokens per the design system: palette from their real signage/product/interior colors, `border` and `radius` matching their attitude (1px/round for upscale, thick/square for loud), one display + one text Google Font. Never generic blue. If the `landingfolio` MCP tools are connected they can show how comparable sections are composed, but they never supply brand: `12_Brain/entities/LandingFolio MCP.md`.
 3. **Write the brief.** Copy `_templates/site-factory/example-brief.json` and fill every section with real, specific copy. Voice rules from `System/writing-rules.md`: short declarative hero claim, proof strip states facts not adjectives, offerings name real items, no em dashes, contractions.
 4. **Build.**
    `node _templates/site-factory/build-site.js <brief.json> <output-dir>`
