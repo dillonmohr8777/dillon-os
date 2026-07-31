@@ -1,5 +1,6 @@
 ---
 tags: [memory, current]
+source: "[[12_Brain/decisions/2026-07-29 - 12_Brain is the canonical brain layer]]"
 updated: 2026-07-29
 as_of: 2026-07-29
 ---

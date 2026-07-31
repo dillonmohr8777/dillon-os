@@ -8,10 +8,12 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {
   BRAIN,
+  BRAIN_LANES,
   FORBIDDEN_BRAIN,
   assertBrainStructure,
   buildState,
   getBrainVitals,
+  getLintHealth,
   getSkills,
   requiredBrainPaths,
 } = require('../vault-state');
@@ -41,6 +43,48 @@ describe('12_Brain canonical structure', () => {
     assert.match(paths, /vault-compile/);
     assert.match(paths, /vault-conventions\.mdc/);
     assert.match(paths, /routine-health\.md/);
+    assert.match(paths, /registry\/wiki-lint\.json/);
+  });
+
+  it('every numbered lane keeps an index INDEX.md can link', () => {
+    const paths = requiredBrainPaths();
+    for (const lane of BRAIN_LANES) {
+      assert.ok(paths.includes(`12_Brain/${lane}/README.md`), `${lane} missing from required paths`);
+    }
+  });
+
+  it('INDEX.md links every numbered lane index', () => {
+    const index = fs.readFileSync(path.join(VAULT, '12_Brain/INDEX.md'), 'utf8');
+    for (const lane of BRAIN_LANES) {
+      assert.ok(index.includes(`12_Brain/${lane}/README`), `INDEX.md does not link ${lane}`);
+    }
+  });
+
+  it('no numbered lane duplicates a record type the wiki already owns', () => {
+    // The 04_Decisions / 05_Projects / 06_Research lanes were retired because two
+    // homes for one record type meant no single place to read the truth.
+    // See 12_Brain/decisions/2026-07-31 - One home per record type.md.
+    for (const retired of ['04_Decisions', '05_Projects', '06_Research']) {
+      assert.equal(
+        fs.existsSync(path.join(VAULT, '12_Brain', retired)),
+        false,
+        `${retired} duplicates a wiki folder and must not come back`,
+      );
+      assert.ok(!BRAIN_LANES.includes(retired));
+    }
+    for (const canonical of ['decisions', 'projects', 'research']) {
+      assert.ok(fs.existsSync(path.join(VAULT, '12_Brain', canonical)));
+    }
+  });
+
+  it('Experiment Queue and Projects Bases point at the migrated folders', () => {
+    const experiments = fs.readFileSync(path.join(VAULT, '12_Brain/bases/Experiment Queue.base'), 'utf8');
+    assert.match(experiments, /12_Brain\/projects\/Experiments/);
+    assert.doesNotMatch(experiments, /05_Projects/);
+
+    const projects = fs.readFileSync(path.join(VAULT, '12_Brain/bases/Projects.base'), 'utf8');
+    assert.match(projects, /file\.inFolder\("12_Brain\/projects"\)/);
+    assert.match(projects, /not:/, 'Projects.base must exclude Experiments/');
   });
 
   it('skills and SessionEnd hook point at 12_Brain, not root raw/', () => {
@@ -84,6 +128,32 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
     const entitiesDir = path.join(VAULT, '12_Brain/entities');
     const md = fs.readdirSync(entitiesDir).filter((f) => f.endsWith('.md')).length;
     assert.equal(b.entities, md);
+  });
+
+  it('counts the dated automation lanes, not just the compiled wiki', () => {
+    const b = getBrainVitals(VAULT);
+    for (const lane of BRAIN_LANES) {
+      assert.ok(b.lanes[lane] >= 1, `lane ${lane} should hold at least its index`);
+    }
+    const summed = BRAIN_LANES.reduce((n, lane) => n + b.lanes[lane], 0);
+    assert.equal(b.laneTotal, summed);
+    assert.ok(buildState(VAULT).vitals.brain >= b.laneTotal);
+  });
+
+  it('surfaces the last wiki-lint result so drift is visible on the HUD', () => {
+    const lint = getLintHealth(VAULT);
+    assert.ok(lint, 'expected 12_Brain/state/wiki-lint.json from a lint run');
+    assert.ok(['ok', 'warn', 'fail'].includes(lint.status), `unexpected status ${lint.status}`);
+    assert.equal(lint.errors, 0, 'committed state should record a brain layer with no lint errors');
+    assert.ok(lint.reachable > 0);
+  });
+
+  it('surfaces the re-verification queue so the sweep has a visible backlog', () => {
+    const { reverify } = getLintHealth(VAULT);
+    assert.ok(reverify, 'lint health should carry a re-verification queue');
+    assert.equal(typeof reverify.soon, 'number');
+    assert.equal(typeof reverify.stale, 'number');
+    assert.equal(reverify.stale, 0, 'no page should be sitting past its expires: date');
   });
 
   it('Command Deck includes brain loop skills', () => {

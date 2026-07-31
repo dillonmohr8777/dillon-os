@@ -1,3 +1,8 @@
+---
+tags: [concepts, index]
+updated: 2026-07-31
+---
+
 # concepts/ — one page per idea
 
 A concept is an idea worth keeping: a strategy, a pattern, a lesson learned.

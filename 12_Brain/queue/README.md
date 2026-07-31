@@ -1,3 +1,8 @@
+---
+tags: [automation, index]
+updated: 2026-07-31
+---
+
 # Queue
 
 Append-only JSONL work items written by `_os/automation`.

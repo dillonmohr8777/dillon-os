@@ -1,0 +1,36 @@
+{
+  "automation_id": "wiki-lint",
+  "started_at": "2026-07-31T03:14:53.877Z",
+  "status": "warn",
+  "counts": {
+    "scanned": 385,
+    "linkable": 395,
+    "errors": 0,
+    "warnings": 3,
+    "reachable": 153
+  },
+  "findings": [
+    {
+      "rule": "expires-soon",
+      "severity": "warn",
+      "file": "12_Brain/concepts/Conversion Tracking Setup 2026.md",
+      "detail": "expires in 4 days on 2026-08-04",
+      "expires": "2026-08-04"
+    },
+    {
+      "rule": "expires-soon",
+      "severity": "warn",
+      "file": "12_Brain/concepts/Google Ads Conversion Optimization 2026.md",
+      "detail": "expires in 4 days on 2026-08-04",
+      "expires": "2026-08-04"
+    },
+    {
+      "rule": "expires-soon",
+      "severity": "warn",
+      "file": "12_Brain/concepts/Meta Lead Ads Optimization 2026.md",
+      "detail": "expires in 4 days on 2026-08-04",
+      "expires": "2026-08-04"
+    }
+  ],
+  "written_at": "2026-07-31T03:14:53.877Z"
+}

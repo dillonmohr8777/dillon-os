@@ -14,9 +14,12 @@ const {
 const { enqueue } = require('./registry');
 
 const INGEST_STATE = repoPath('12_Brain/state/grok-intelligence-ingest.json');
+// Captures stay in their own immutable lane; compiled output lands in the single
+// canonical home for each record type. See
+// 12_Brain/decisions/2026-07-31 - One home per record type.md.
 const CAPTURE_DIR = repoPath('12_Brain/01_Captures/Grok');
-const RESEARCH_DIR = repoPath('12_Brain/06_Research');
-const EXPERIMENT_DIR = repoPath('12_Brain/05_Projects/Experiments');
+const RESEARCH_DIR = repoPath('12_Brain/research');
+const EXPERIMENT_DIR = repoPath('12_Brain/projects/Experiments');
 
 function sha256(value) {
   return crypto.createHash('sha256').update(String(value), 'utf8').digest('hex');

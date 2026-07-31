@@ -5,6 +5,7 @@ created: 2026-07-30
 updated: 2026-07-30
 owner: Dillon Mohr
 verification_status: partial
+expires: 2026-10-28
 source_refs:
   - "https://www.prnewswire.com/news-releases/casepoint-launches-mcp-server-to-enable-customer-choice-ai-across-legal-and-government-workflows-302838623.html"
 tags:

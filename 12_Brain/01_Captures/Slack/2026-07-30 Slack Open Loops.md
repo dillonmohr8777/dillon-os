@@ -6,6 +6,9 @@ updated: 2026-07-30
 captured_at: 2026-07-30T10:17:27-04:00
 source_type: slack-via-gmail-digest
 source_author: Dillon OS Slack watchdog
+source_refs:
+  - "[[12_Brain/01_Captures/Slack/2026-07-30 Live Slack Scan]]"
+  - "gmail:slack-digest:2026-07-30"
 related_entities:
   - Momentum 360
   - Melissa Silber

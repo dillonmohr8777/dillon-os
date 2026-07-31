@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-07-31",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -37,7 +37,7 @@
       "cadence": "daily",
       "command": "node _os/automation/bin/site-health.js --dry-run",
       "inputs": ["12_Brain/registry/properties.json"],
-      "outputs": ["12_Brain/state/site-health.json", "Daily-Briefs/site-health-report.md"],
+      "outputs": ["12_Brain/state/site-health-sentinel.json", "Daily-Briefs/site-health-report.md"],
       "external_actions": false,
       "notes": "Dry-run uses fixtures. Live HTTP checks are opt-in via --live and still never POST real user data except a marked canary when --canary is set.",
       "status": "implemented"
@@ -95,7 +95,7 @@
       "cadence": "daily after Grok runs",
       "command": "node _os/automation/bin/grok-ingest.js --from <run-envelope.json>",
       "inputs": ["12_Brain/schemas/grok-run.json", "exported Grok automation run JSON"],
-      "outputs": ["12_Brain/01_Captures/Grok/*.md", "12_Brain/06_Research/* - Grok daily intelligence.md", "12_Brain/state/grok-intelligence-ingest.json"],
+      "outputs": ["12_Brain/01_Captures/Grok/*.md", "12_Brain/research/* - Grok daily intelligence.md", "12_Brain/state/grok-intelligence-ingest.json"],
       "external_actions": false,
       "notes": "Idempotent, immutable capture. The browser collector is separate and may only read completed Grok runs.",
       "status": "implemented"
@@ -109,7 +109,7 @@
       "command": "& _os/automation/bin/xai-research.ps1 -Profile _os/automation/profiles/daily-x-research.json -Out _os/automation/incoming/grok/daily-x-research.json -Ingest",
       "depends_on": ["xai-api-credit", "dpapi-secret", "grok-intelligence-ingest"],
       "inputs": ["_os/automation/profiles/daily-x-research.json", "dpapi-bootstrap://xai/dillon-os/daily-x-search"],
-      "outputs": ["source-linked Grok run envelope", "12_Brain/01_Captures/Grok/*.md", "12_Brain/06_Research/* - Grok daily intelligence.md"],
+      "outputs": ["source-linked Grok run envelope", "12_Brain/01_Captures/Grok/*.md", "12_Brain/research/* - Grok daily intelligence.md"],
       "external_actions": false,
       "notes": "Read-only X and web research through xAI Responses API. Chat-only key, 10 RPM, 250k TPM, expires 2026-10-28. Never logs the key.",
       "status": "implemented"
@@ -122,7 +122,7 @@
       "cadence": "on ingest",
       "depends_on": ["grok-intelligence-ingest"],
       "inputs": ["candidates with decision=sandbox-test"],
-      "outputs": ["12_Brain/05_Projects/Experiments/*.md", "12_Brain/bases/Experiment Queue.base"],
+      "outputs": ["12_Brain/projects/Experiments/*.md", "12_Brain/bases/Experiment Queue.base"],
       "external_actions": false,
       "notes": "Creates proposed experiments only. Adoption still requires the maker/checker and human gates.",
       "status": "implemented"
@@ -191,6 +191,19 @@
       "outputs": ["12_Brain/state/aeo-trust-gate.json", "Daily-Briefs/aeo-trust-report.md"],
       "external_actions": false,
       "notes": "A fail blocks deployment. A pass does not replace visual review, functional QA, or exact Netlify target verification.",
+      "status": "implemented"
+    },
+    {
+      "id": "wiki-lint",
+      "name": "Brain-layer wiki lint (provenance, links, INDEX reachability)",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "pre-commit + weekly",
+      "command": "node _os/automation/bin/wiki-lint.js --strict",
+      "inputs": ["12_Brain/registry/wiki-lint.json", "12_Brain/**/*.md", "vault link graph"],
+      "outputs": ["12_Brain/state/wiki-lint.json", "Daily-Briefs/wiki-lint-*.md"],
+      "external_actions": false,
+      "notes": "Enforces the CLAUDE.md writing rules deterministically: source:/expires: provenance, resolvable wikilinks, and reachability from INDEX.md. --strict exits 1 on any error finding and is what CI runs. Read-only; it reports and never edits notes. Duplicate pages and contradictions stay with the /wiki-lint skill because merging meaning is a judgment call.",
       "status": "implemented"
     }
   ],

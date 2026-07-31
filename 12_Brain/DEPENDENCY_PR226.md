@@ -1,4 +1,16 @@
+---
+tags: [automation, boundary, historical]
+source: "[[00_Inbox/Automation Deep Analysis 2026-07-29]]"
+status: historical
+updated: 2026-07-31
+---
+
 # Dependency: PR #226 (do not duplicate)
+
+**Summary:** ownership boundary between the site-factory pipeline (#226) and the
+automation registry (#228). Both PRs have merged, so the collision policy below
+is spent history — the ownership table and harvest contract are still the live
+reference for which tree owns what.
 
 **Branch:** `cursor/dillon-os-agentic-build-out-6254`
 **PR:** https://github.com/dillonmohr8777/dillon-os/pull/226

@@ -31,10 +31,15 @@ for the two npm-based sites below.
 ### Tests / lint
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
+node --test _os/test/*.test.js _os/automation/tests/*.test.js
+node _os/automation/bin/wiki-lint.js --strict
 ```
 
-- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, and public-safety scanning.
+- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, public-safety scanning, the wiki lint rule engine, and the automation stack. CI runs both commands plus `_templates/site-factory/tests/` — see `.github/workflows/vault-checks.yml`.
+- `wiki-lint` enforces the writing rules in `CLAUDE.md`: `source:`/`expires:` provenance, resolvable `[[wikilinks]]`, and reachability from `12_Brain/INDEX.md`. Policy lives in `12_Brain/registry/wiki-lint.json`. It is read-only and never edits notes; `--strict` exits 1 on any error.
+- **Adding or moving a page under `12_Brain/` requires updating `12_Brain/INDEX.md` (or a folder index INDEX links) in the same change**, or `index-reachable` fails.
+- **Every record type has one folder.** `decisions/`, `projects/` and `research/` are the only homes for those records; the numbered lanes that remain (`01_Captures/`, `07_Reviews/`, `09_Ops/`, `10_Maps/`) hold kinds the wiki does not own. Don't add a lane that duplicates a wiki folder — see `12_Brain/decisions/2026-07-31 - One home per record type.md`.
+- `expires-soon` warns 14 days before an `expires:` date (`horizon_days` in the policy). Those findings are the queue for the next `/research-sweep`; the HUD shows the count as "N to re-verify".
 - `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has no ESLint config — interactive only; do not run non-interactively.
 - `immohrtal-site` has no lint script.
 

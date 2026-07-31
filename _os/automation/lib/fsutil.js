@@ -13,6 +13,22 @@ function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
 
+/**
+ * Resolve a repo-relative path, refusing anything that escapes the repository.
+ * Vault paths are authored on Windows desktops and consumed by Linux agents, so
+ * `\` counts as a separator on every platform — otherwise `..\outside` reads as
+ * one harmless filename on Linux and slips past the boundary.
+ */
+function resolveInsideRepo(candidate, label = 'Path') {
+  const normalized = String(candidate == null || candidate === '' ? '.' : candidate).replace(/\\/g, '/');
+  const root = path.resolve(REPO_ROOT);
+  const absolute = path.resolve(root, normalized);
+  if (absolute !== root && !absolute.startsWith(`${root}${path.sep}`)) {
+    throw new Error(`${label} escapes repository: ${candidate}`);
+  }
+  return absolute;
+}
+
 function readJson(file, fallback = null) {
   if (!fs.existsSync(file)) return fallback;
   return JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -58,6 +74,7 @@ module.exports = {
   REPO_ROOT,
   repoPath,
   ensureDir,
+  resolveInsideRepo,
   readJson,
   writeJson,
   appendJsonl,

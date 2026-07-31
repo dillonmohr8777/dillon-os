@@ -19,8 +19,15 @@ in the same change.
 > [!tip] Visual views: [[12_Brain/Brain Map.canvas|Brain Map]] ·
 > [[12_Brain/bases/Clients.base|Clients table]] · [[Dashboard|Dashboard]]
 
+Every record type has exactly one folder; a numbered lane exists only for a *kind*
+of note the wiki does not already own. Where a new page goes is settled in
+[[12_Brain/decisions/2026-07-31 - One home per record type|One home per record type]].
+`node _os/automation/bin/wiki-lint.js` checks that every page below is reachable,
+sourced, and link-clean.
+
 ## Entities
 
+- [[12_Brain/entities/README|entities/ index]] — what counts as an entity, and the page format.
 - [[12_Brain/entities/Momentum 360|Momentum 360]] — agency context for a subset of clients (stub; contacts private).
 - [[12_Brain/entities/Website Factory|Website Factory]] — web/landing-page production pipeline.
 - [[12_Brain/entities/Hermes|Hermes]] — retired local worker agent; rebuild-or-replace decision open.
@@ -33,6 +40,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Concepts
 
+- [[12_Brain/concepts/README|concepts/ index]] — what belongs on a concept page.
 - [[12_Brain/concepts/Second Brain Architecture|Second Brain Architecture]] — vault-as-codebase: raw → compiled pages → linked graph.
 - [[12_Brain/concepts/Context Economy|Context Economy]] — read by trail not sweep; tier model use.
 - [[12_Brain/concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
@@ -41,6 +49,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Access Verification Discipline|Access Verification Discipline]] — confirmed access needs direct proof (no inventories here).
 - [[12_Brain/concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove.
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.
+- [[12_Brain/concepts/Stateless MCP Server Design|Stateless MCP Server Design]] — MCP `2026-07-28` is stateless; session affinity fails the gate.
 - [[12_Brain/concepts/Google Docs Sharding Pattern|Google Docs Sharding Pattern]] — sub-MB shards → Docs → index.
 - [[12_Brain/concepts/Leading Indicators|Leading Indicators]] — churn/growth signals for `/synthesize`.
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
@@ -55,12 +64,32 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Projects · Decisions · Research · Memory · Protocols
 
-- [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
-- [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
-- [[12_Brain/research/README|Research]] — compiled research landing.
+- [[12_Brain/projects/README|Projects]] — active delivery threads, plus `Experiments/` proposals.
+- [[12_Brain/decisions/README|Decisions]] — the whole bi-temporal decision log.
+- [[12_Brain/research/README|Research]] — dated findings and durable `References/` (every page carries `expires:`).
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
-- [[12_Brain/protocols/README|Protocols]] — agent protocols.
-- Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
+- [[12_Brain/protocols/README|Protocols]] — agent protocols, incl. [[12_Brain/protocols/approval-tiers|approval tiers]].
+- Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]] · [[12_Brain/bases/Prospects.base|Prospects]] · [[12_Brain/bases/Automations.base|Automations]] · [[12_Brain/bases/Experiment Queue.base|Experiment Queue]]
+
+## Numbered lanes (kinds the wiki above does not own)
+
+One line per lane — dated records accrue daily, so each lane keeps its own index.
+Decisions, projects and research have **no** lane; they live in the wiki folders
+above. Rule: [[12_Brain/decisions/2026-07-31 - One home per record type|One home per record type]].
+
+- [[12_Brain/01_Captures/README|01_Captures]] — immutable Grok and Slack captures; read-only like `raw/`.
+- [[12_Brain/07_Reviews/README|07_Reviews]] — MCP and automation-run acceptance reports.
+- [[12_Brain/09_Ops/README|09_Ops]] — live operational blockers.
+- [[12_Brain/10_Maps/README|10_Maps]] — cross-cutting maps of content.
+
+## Automation plumbing
+
+- [[12_Brain/README|12_Brain README]] — knowledge + automation layout, safety boundary, runnable commands.
+- [[12_Brain/queue/README|queue/]] — append-only JSONL work items awaiting a human.
+- [[12_Brain/state/README|state/]] — last-run JSON per automation id.
+- `registry/automations.json` · `registry/properties.json` · `registry/wiki-lint.json` — automation, property, and lint policy.
+- `schemas/` — JSON Schema contracts for prospects, runs, workflows, MCP candidates, and client frontmatter.
+- [[12_Brain/DEPENDENCY_PR226|DEPENDENCY_PR226]] — historical ownership boundary between the site-factory and automation trees.
 
 ## Folder indexes (working vault)
 
