@@ -94,6 +94,27 @@ The second command invokes a pinned MCP Inspector package for a read-only
 headers. The five required checks are source review, Inspector, permission review,
 prompt-injection handling, and overlap review.
 
+### LandingFolio design reference
+
+`https://mcp.landingfolio.com/mcp` refuses every anonymous call, so the generic
+`--inspect` flag cannot probe it and the candidate sits at **sandbox-only** with the
+Inspector check pending. To finish the gate, mint a free token at
+`https://www.landingfolio.com/mcp`, put it in the environment, and run:
+
+```powershell
+$env:LANDINGFOLIO_TOKEN = '<token>'
+node _os/automation/bin/landingfolio-verify.js
+```
+
+The wrapper resolves the token into a short-lived Inspector config outside the
+repository, deletes it in a `finally`, and refuses to leave the review in place if
+the artifacts contain the token or trip the public-safety scanner. Minting and
+supplying the token is a Tier 2 operator action; no agent may do it.
+
+The same variable drives the committed wiring in `.cursor/mcp.json` and `.mcp.json`.
+Both are inert until the variable is set, and the design skills treat the tools as
+optional, so an unset variable degrades to harvest-only design rather than failing.
+
 ## Website deployment checks
 
 ```powershell

@@ -93,6 +93,25 @@ describe('12_Brain public-safety scanner', () => {
     assert.equal(redactText('clean tools/list output'), 'clean tools/list output');
   });
 
+  it('committed MCP configs carry no literal token', () => {
+    // Every credential must arrive from the environment; a bare token in these
+    // files would be published the moment the repo syncs.
+    for (const rel of ['.cursor/mcp.json', '.mcp.json']) {
+      const raw = fs.readFileSync(path.join(VAULT, rel), 'utf8');
+      const landingfolio = JSON.parse(raw).mcpServers.landingfolio;
+      assert.equal(landingfolio.url, 'https://mcp.landingfolio.com/mcp');
+      assert.match(landingfolio.headers.Authorization, /\$\{(env:)?LANDINGFOLIO_TOKEN\}/);
+      assert.doesNotMatch(raw, /\blf_[A-Za-z0-9]/, `${rel} looks like it holds a real token`);
+      assert.deepEqual(scanText(raw), [], `${rel} trips the public-safety scanner`);
+    }
+  });
+
+  it('environment files stay out of Git', () => {
+    const gi = fs.readFileSync(path.join(VAULT, '.gitignore'), 'utf8');
+    assert.match(gi, /^\.env$/m);
+    assert.match(gi, /^\.env\.\*$/m);
+  });
+
   it('private layer gitignore keeps sensitive notes out of Git', () => {
     const gi = fs.readFileSync(path.join(VAULT, '.gitignore'), 'utf8');
     assert.match(gi, /12_Brain\/private\/\*\*/);
