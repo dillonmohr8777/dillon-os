@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "updated": "2026-07-31",
+  "notes": "Deterministic lint policy for the brain layer. Encodes the four writing rules from CLAUDE.md plus the source:/expires: provenance convention so they are enforced by `node _os/automation/bin/wiki-lint.js` instead of relying on an agent to remember them. Severity `error` fails the run; `warn` reports only.",
+  "index": "12_Brain/INDEX.md",
+  "vault_scan": {
+    "notes": "Folders excluded from the link graph entirely. Site builds and dependencies are code, not vault pages.",
+    "exclude_dirs": [
+      ".git",
+      ".obsidian",
+      "node_modules",
+      ".next",
+      "dist",
+      "_templates/site-factory/harvest",
+      "_os/test/fixtures",
+      "immohrtal-site",
+      "mohr-media-site",
+      "philly-sites",
+      "videos"
+    ]
+  },
+  "untracked_by_design": {
+    "notes": "Prefixes that are gitignored on purpose. A wikilink into these resolves on the operator's Obsidian desktop but can never resolve in Git, so it is reported as `private` rather than broken. Keep this list in sync with .gitignore.",
+    "prefixes": [
+      "12_Brain/private/",
+      "08_Assets/",
+      "09_Transcripts/"
+    ]
+  },
+  "rules": [
+    {
+      "id": "frontmatter-present",
+      "severity": "error",
+      "description": "Every compiled brain page opens with a YAML frontmatter fence.",
+      "scope": ["12_Brain/"],
+      "exclude": ["12_Brain/raw/", "12_Brain/private/", "12_Brain/templates/"]
+    },
+    {
+      "id": "source-present",
+      "severity": "error",
+      "description": "CLAUDE.md: every compiled page carries a source: link back to the raw capture or vault note it came from. A page without a source gets flagged, not trusted.",
+      "any_of": ["source", "source_refs"],
+      "scope": [
+        "12_Brain/entities/",
+        "12_Brain/concepts/",
+        "12_Brain/decisions/",
+        "12_Brain/projects/",
+        "12_Brain/research/",
+        "12_Brain/memory/",
+        "12_Brain/01_Captures/",
+        "12_Brain/04_Decisions/",
+        "12_Brain/05_Projects/",
+        "12_Brain/06_Research/",
+        "12_Brain/07_Reviews/",
+        "12_Brain/09_Ops/",
+        "12_Brain/10_Maps/"
+      ],
+      "exclude": ["README.md"]
+    },
+    {
+      "id": "expires-present",
+      "severity": "error",
+      "description": "CLAUDE.md: research findings carry a date and an expires: date so stale knowledge announces itself.",
+      "requires": ["expires"],
+      "scope": [
+        "12_Brain/06_Research/",
+        "12_Brain/07_Reviews/",
+        "12_Brain/research/"
+      ],
+      "exclude": ["README.md"]
+    },
+    {
+      "id": "expires-fresh",
+      "severity": "warn",
+      "description": "Pages whose expires: date has passed are stale and need a re-verification pass.",
+      "scope": ["12_Brain/"],
+      "exclude": ["12_Brain/raw/", "12_Brain/private/"]
+    },
+    {
+      "id": "link-resolves",
+      "severity": "error",
+      "description": "Every [[wikilink]] resolves to a real note or to a path that is gitignored by design. Prose that mentions link syntax belongs in backticks so Obsidian stops rendering it as a red broken link.",
+      "scope": ["12_Brain/", "INDEX.md", "Dashboard.md"],
+      "exclude": ["12_Brain/raw/", "12_Brain/private/"],
+      "exclude_reason": "raw/ is verbatim read-only history (writing rule 4) — its links are whatever the capture said and are never edited to satisfy a linter."
+    },
+    {
+      "id": "index-reachable",
+      "severity": "error",
+      "description": "CLAUDE.md reading rule 1: agents start at INDEX.md and walk the links. A brain page no trail reaches is invisible, so new/removed pages must update INDEX.md in the same change.",
+      "scope": ["12_Brain/"],
+      "exclude": ["12_Brain/raw/", "12_Brain/private/", "12_Brain/templates/"]
+    },
+    {
+      "id": "no-rival-brain",
+      "severity": "error",
+      "description": "12_Brain/ is the only second-brain tree. A competing 1Z_Brain/ splits the graph.",
+      "forbidden_paths": ["1Z_Brain"]
+    }
+  ]
+}
