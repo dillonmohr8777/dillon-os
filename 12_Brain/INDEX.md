@@ -23,7 +23,7 @@ in the same change.
 
 - [[12_Brain/entities/Momentum 360|Momentum 360]] — agency context for a subset of clients (stub; contacts private).
 - [[12_Brain/entities/Website Factory|Website Factory]] — web/landing-page production pipeline.
-- [[12_Brain/entities/Hermes|Hermes]] — Mac Hermes Agent; primary lane is hermes-local-control (CDP).
+- [[12_Brain/entities/Hermes|Hermes]] — Hermes on Windows HP 64GB; primary lane hermes-local-control (CDP).
 - [[12_Brain/entities/King Agent OS|King Agent OS]] — old daily command layer; patterns worth porting.
 - [[12_Brain/entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]] — previous command center (no local paths in Git).
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.

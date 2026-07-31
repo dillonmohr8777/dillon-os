@@ -7,13 +7,13 @@ expires: 2026-10-31
 
 # Browser control routing
 
-**Summary:** pick the browser surface by auth needs and where the agent runs — Hermes CDP for logged-in local Chrome, Composio for cloud agents with live watch URLs, Claude in Chrome for local apply sessions.
+**Summary:** pick the browser surface by auth needs and where the agent runs — Hermes CDP on the Windows HP 64GB for logged-in Chrome, Composio for cloud agents with live watch URLs, Claude in Chrome for local apply sessions.
 
 ## Surfaces
 
 | Surface | Where it runs | Auth / cookies | Agent can reach from cloud? |
 |---------|---------------|----------------|----------------------------|
-| Hermes `/browser connect` (CDP) | Dillon's Mac Chrome/Brave/Edge | Full logged-in state | No — localhost only |
+| Hermes `/browser connect` (CDP) | Windows HP 64GB Chrome/Brave/Edge | Full logged-in state | No — localhost only |
 | Composio `BROWSER_TOOL` | Composio cloud browser | Per-session; optional `secrets` map | Yes — via MCP + API key |
 | Claude in Chrome | Dillon's Chrome via extension | Full logged-in state | No — local CLI only |
 | Playwright MCP bridge | Cursor-attached browser | Depends on extension | Desktop only (extension required) |
@@ -21,31 +21,31 @@ expires: 2026-10-31
 
 ## Default routing
 
-1. **`hermes-local-control`** (Mac) → CDP attach for TV-visible logged-in Chrome. Skill: `.claude/skills/hermes-local-control/`.
+1. **`hermes-local-control`** (Windows 64GB) → CDP attach for monitor/TV-visible logged-in Chrome. Skill: `.claude/skills/hermes-local-control/`.
 2. **Cloud Cursor agent** → Composio Browser Tool (if Enhanced Controls allow `BROWSER_TOOL_*`).
 3. **Google Ads / GBP apply** → Claude in Chrome or Hermes CDP; cloud agents draft only.
 4. **Slack read when API write blocked** → Slack MCP search first; Composio browser read-only lane second.
 
-## Hermes local CDP (Mac) — `hermes-local-control`
+## Hermes local CDP (Windows 64GB) — `hermes-local-control`
 
-```bash
-bash _os/tools/hermes-local-control.sh
+```powershell
+powershell -ExecutionPolicy Bypass -File .\_os\tools\hermes-local-control.ps1
 # then in Hermes terminal:
 hermes chat
 /browser connect
 /browser status
 ```
 
-Uses dedicated profile `~/.hermes/chrome-debug` so port 9222 actually opens when Chrome is already running.
+Uses dedicated profile `%USERPROFILE%\.hermes\chrome-debug` so port 9222 actually opens when Chrome is already running.
 
-Optional persistent config in `~/.hermes/config.yaml`:
+Optional persistent config in `%USERPROFILE%\.hermes\config.yaml`:
 
 ```yaml
 browser:
   cdp_url: http://127.0.0.1:9222
 ```
 
-Handoff: `handoffs/hermes-local-control.md`
+Handoff: `handoffs/hermes-local-control.md` · Bash fallback: `_os/tools/hermes-local-control.sh` (Linux)
 
 ## Composio (cloud agents)
 

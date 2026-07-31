@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# hermes-local-control — start Chrome with CDP and print Hermes attach commands.
-# Run on Dillon's Mac (not in Cursor cloud). Cloud agents cannot reach localhost:9222.
+# hermes-local-control — Linux/macOS CDP launcher (fallback).
+# Primary host is Windows HP 64GB — use hermes-local-control.ps1 there.
+# Cloud agents cannot reach localhost:9222.
 set -euo pipefail
 
 CDP_PORT="${HERMES_CDP_PORT:-9222}"

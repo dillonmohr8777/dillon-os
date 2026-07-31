@@ -73,7 +73,7 @@ Paste output into Cursor Settings → MCP.
 
 ## Blocker on cloud agents until step 2–3 complete
 
-Cloud runs cannot reach Mac `127.0.0.1:9222`. Composio MCP + login is required for remote browser control.
+Cloud runs cannot reach Windows `127.0.0.1:9222`. Composio MCP + login is required for remote browser control; local control uses hermes-local-control on the 64GB box.
 
 ### Enhanced Controls (current blocker)
 

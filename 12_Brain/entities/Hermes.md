@@ -8,21 +8,22 @@ updated: 2026-07-31
 
 Local worker agent — originally on the retired Intel Core 7 machine inside **Orgo** ("Hermes Agent Desktop"). That machine was Hermes' authoritative home for auth/provider state, so **legacy Orgo Hermes state is orphaned**.
 
-**Current path (2026-07):** [NousResearch Hermes Agent](https://hermes-agent.nousresearch.com/docs/user-guide/features/browser) on Dillon's Mac with browser automation. Cloud Cursor agents reach browser work through **Composio Browser Tool** (see [[12_Brain/protocols/browser-control-routing|browser-control-routing]]).
+**Current path (2026-07):** [NousResearch Hermes Agent](https://hermes-agent.nousresearch.com/docs/user-guide/features/browser) on Dillon's **Windows HP 64GB** with browser automation. Cloud Cursor agents reach browser work through **Composio Browser Tool** when Enhanced Controls allow (see [[12_Brain/protocols/browser-control-routing|browser-control-routing]]).
 
 ## Browser backends (Hermes)
 
 | Mode | Use |
 |------|-----|
-| `/browser connect` (CDP) | Attach to running Chrome/Brave/Edge — logged-in sessions, watch on TV |
+| `/browser connect` (CDP) | Attach to Windows Chrome/Brave/Edge — logged-in sessions, watch on TV/monitor |
 | Browser Use / Browserbase / Firecrawl | Cloud execution inside Hermes |
 | Local `agent-browser` | Headless Chromium when no cloud keys |
 
-CDP attach (Mac):
+CDP attach (Windows 64GB):
 
-```bash
-/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+```powershell
+powershell -ExecutionPolicy Bypass -File .\_os\tools\hermes-local-control.ps1
 # Hermes terminal only:
+hermes chat
 /browser connect
 ```
 
@@ -32,10 +33,10 @@ CDP attach (Mac):
 
 ## Local control lane — `hermes-local-control`
 
-Take over the Mac Hermes desktop agent (TV-visible Chrome):
+Take over Hermes on the Windows HP 64GB (monitor/TV-visible Chrome):
 
-```bash
-bash _os/tools/hermes-local-control.sh
+```powershell
+powershell -ExecutionPolicy Bypass -File .\_os\tools\hermes-local-control.ps1
 hermes chat
 /browser connect
 ```
@@ -44,9 +45,9 @@ Skill: `.claude/skills/hermes-local-control/` · Handoff: `handoffs/hermes-local
 
 ## Cloud agent bridge
 
-Cursor cloud agents cannot reach Mac localhost CDP. For shared control:
+Cursor cloud agents cannot reach Windows localhost CDP. For shared control:
 
-1. Dillon runs **hermes-local-control** for logged-in apply work on the TV.
+1. Dillon runs **hermes-local-control** for logged-in apply work on the 64GB monitor/TV.
 2. Cloud agents use Composio `BROWSER_TOOL` when Enhanced Controls allow it.
 3. Share Composio **liveUrl** from GetSession for a separate cloud browser stream.
 
