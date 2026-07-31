@@ -19,8 +19,15 @@ in the same change.
 > [!tip] Visual views: [[12_Brain/Brain Map.canvas|Brain Map]] ·
 > [[12_Brain/bases/Clients.base|Clients table]] · [[Dashboard|Dashboard]]
 
+This layer runs two lanes — a compiled wiki and dated automation lanes. Which one
+a new page belongs in is settled in
+[[12_Brain/decisions/2026-07-31 - Two-lane brain layout|Two-lane brain layout]].
+`node _os/automation/bin/wiki-lint.js` checks that every page below is reachable,
+sourced, and link-clean.
+
 ## Entities
 
+- [[12_Brain/entities/README|entities/ index]] — what counts as an entity, and the page format.
 - [[12_Brain/entities/Momentum 360|Momentum 360]] — agency context for a subset of clients (stub; contacts private).
 - [[12_Brain/entities/Website Factory|Website Factory]] — web/landing-page production pipeline.
 - [[12_Brain/entities/Hermes|Hermes]] — retired local worker agent; rebuild-or-replace decision open.
@@ -33,6 +40,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Concepts
 
+- [[12_Brain/concepts/README|concepts/ index]] — what belongs on a concept page.
 - [[12_Brain/concepts/Second Brain Architecture|Second Brain Architecture]] — vault-as-codebase: raw → compiled pages → linked graph.
 - [[12_Brain/concepts/Context Economy|Context Economy]] — read by trail not sweep; tier model use.
 - [[12_Brain/concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
@@ -59,8 +67,30 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
-- [[12_Brain/protocols/README|Protocols]] — agent protocols.
-- Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
+- [[12_Brain/protocols/README|Protocols]] — agent protocols, incl. [[12_Brain/protocols/approval-tiers|approval tiers]].
+- Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]] · [[12_Brain/bases/Prospects.base|Prospects]] · [[12_Brain/bases/Automations.base|Automations]] · [[12_Brain/bases/Experiment Queue.base|Experiment Queue]]
+
+## Automation lanes (dated records)
+
+Written by `_os/automation` runs. One line per lane — dated records accrue daily,
+so each lane keeps its own index. Model: [[12_Brain/decisions/2026-07-31 - Two-lane brain layout|Two-lane brain layout]].
+
+- [[12_Brain/01_Captures/README|01_Captures]] — immutable Grok and Slack captures; read-only like `raw/`.
+- [[12_Brain/04_Decisions/README|04_Decisions]] — decision records emitted with automation runs.
+- [[12_Brain/05_Projects/README|05_Projects]] — automation-lane delivery threads and the experiment queue.
+- [[12_Brain/06_Research/README|06_Research]] — compiled daily intelligence and durable references (every page carries `expires:`).
+- [[12_Brain/07_Reviews/README|07_Reviews]] — MCP and automation-run acceptance reports.
+- [[12_Brain/09_Ops/README|09_Ops]] — live operational blockers.
+- [[12_Brain/10_Maps/README|10_Maps]] — cross-cutting maps of content.
+
+## Automation plumbing
+
+- [[12_Brain/README|12_Brain README]] — knowledge + automation layout, safety boundary, runnable commands.
+- [[12_Brain/queue/README|queue/]] — append-only JSONL work items awaiting a human.
+- [[12_Brain/state/README|state/]] — last-run JSON per automation id.
+- `registry/automations.json` · `registry/properties.json` · `registry/wiki-lint.json` — automation, property, and lint policy.
+- `schemas/` — JSON Schema contracts for prospects, runs, workflows, MCP candidates, and client frontmatter.
+- [[12_Brain/DEPENDENCY_PR226|DEPENDENCY_PR226]] — historical ownership boundary between the site-factory and automation trees.
 
 ## Folder indexes (working vault)
 

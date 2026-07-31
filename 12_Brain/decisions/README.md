@@ -14,6 +14,10 @@ Use [[12_Brain/templates/Decision|Decision template]]. View in
 
 `/session-mine` writes stubs here when a session makes a material decision.
 
-## Seed decision
+The automation lane keeps its own dated decision records in
+[[12_Brain/04_Decisions/README|04_Decisions]].
 
-- [[12_Brain/decisions/2026-07-29 - 12_Brain is the canonical brain layer|2026-07-29 — 12_Brain is the canonical brain layer]]
+## Active
+
+- [[12_Brain/decisions/2026-07-29 - 12_Brain is the canonical brain layer|2026-07-29 — 12_Brain is the canonical brain layer]] — seed decision.
+- [[12_Brain/decisions/2026-07-31 - Two-lane brain layout|2026-07-31 — Two-lane brain layout]] — refines the above: compiled wiki vs. dated automation lanes, and which lane a new page goes in.
