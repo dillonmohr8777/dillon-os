@@ -7,7 +7,7 @@ Source: Codex attribution handoff (draft PR #11 on `align-hcm-august-2026-conten
 
 This is **CRM / CMS / private-app** work inside HubSpot. Not Customer Agent.
 
-Do **not** use portal `50612503` (Jason / Momentum).
+Do **not** use any other client portal.
 Do **not** print, commit, Slack, or paste the private-app token into any chat.
 Do **not** send mass email from this handoff.
 

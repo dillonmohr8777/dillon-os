@@ -14,7 +14,7 @@ You are completing the Align HCM **Customer Agent** readiness work end-to-end. R
 0. CONTEXT YOU ALREADY KNOW
 ============================================================
 
-Portal: **242825734** Align HCM only. Never Momentum 50612503.
+Portal: **242825734** Align HCM only. Never any other client portal.
 
 Agent under test:
 - HubSpot → Customer Agent → **Align HCM Customer Agent**

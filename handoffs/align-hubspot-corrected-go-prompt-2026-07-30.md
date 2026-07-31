@@ -62,7 +62,7 @@ If removing only `.contact-form-blog` still leaves the form hidden because anoth
 STEP C — REAUTH (APPROVED WITH EYES OPEN)
 ============================================================
 
-YES — click the single "Re-authenticate to enable" on Align "HubSpot connector for Claude" (app id 16228553).
+YES — click the single "Re-authenticate to enable" on the Align HubSpot connector for Claude.
 
 I accept this is all-or-nothing and will grant the 17 including leads read, marketing-email view/edit (no send/schedule), campaign write, marketing events write, **and** the wider bundle (CPQ quotes/templates, conversations inbox, commerce payments/links, price books, contracts, Partner Client).
 

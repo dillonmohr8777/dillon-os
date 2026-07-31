@@ -82,7 +82,7 @@ Latency = open question #2.
    - Body Edit source strips `<style>` — never use it for guide CSS
    - Head HTML is the safe path
    - Dual selector requirement documented
-   - Claude connector 16228553 reauth is OAuth from the AI tool side (“Reconnect the app from the AI tool…”) — not a HubSpot button
+   - Claude connector reauth is OAuth from the AI tool side (“Reconnect the app from the AI tool…”) — not a HubSpot button
    - Codex needs its own legacy private app; scope strings: `crm.objects.contacts.read`, `crm.objects.companies.read`, `crm.objects.deals.read`, `crm.objects.owners.read`, `crm.objects.leads.read`, `business-intelligence`, optionally `marketing.campaigns.read`, `cms.performance.read`; `content` / `marketing-email` are combined legacy scopes; do not reuse Claude Optimizer
    - Campaigns without spend → defer ROAS / closed-won-only attribution chasing
 
@@ -188,7 +188,7 @@ END_EF
 ## Operator notes (Dillon — not for Claude)
 
 ### Step C — you must do this
-HubSpot label on connector **16228553** is not clickable. Reconnect from **Claude → connector / HubSpot settings** (OAuth grant). That unlocks leads read, marketing-email, campaign write, marketing events, etc. (all-or-nothing ~17 scopes).
+The HubSpot label on the Claude connector is not clickable. Reconnect from **Claude → connector / HubSpot settings** (OAuth grant). That unlocks leads read, marketing-email, campaign write, marketing events, etc. (all-or-nothing ~17 scopes).
 
 ### Manual QA (2 minutes)
 On Workday, Dayforce, ADP: click “Talk to an HCM expert” once each. Optional: one controlled test submission per page if you want CRM proof (Claude correctly avoided polluting the July cohort).
