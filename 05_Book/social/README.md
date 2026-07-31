@@ -6,7 +6,7 @@ tags: [book, social]
 
 # Social pack — The Ironic Ineptocracy
 
-One month of original social content built from the live character plates for **Darnell**, **Javon**, and **Alec**, plus 20 new unique images beyond the burning-Capitol poster.
+One month of original social content for **Darnell**, **Javon**, and **Alec** — locked to the approved glasses continuity plate — plus 20 unique stills and **30 animated story/reel clips**.
 
 ## Contents
 
