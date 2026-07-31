@@ -1,3 +1,8 @@
+---
+tags: [entities, index]
+updated: 2026-07-31
+---
+
 # entities/ — one page per concrete thing
 
 An entity is a concrete noun the business touches: an organization, a person,

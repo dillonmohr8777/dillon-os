@@ -1,0 +1,136 @@
+{
+  "automation_id": "wiki-lint",
+  "started_at": "2026-07-31T02:44:37.787Z",
+  "status": "fail",
+  "counts": {
+    "scanned": 377,
+    "linkable": 387,
+    "errors": 19,
+    "warnings": 1,
+    "reachable": 92
+  },
+  "findings": [
+    {
+      "rule": "expires-fresh",
+      "severity": "warn",
+      "file": "12_Brain/06_Research/2026-07-30 - Grok daily intelligence.md",
+      "detail": "expired 2026-07-30 — needs re-verification",
+      "expires": "2026-07-30"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/01_Captures/Grok/2026-07-30 - daily-ai-workflow-design-and-consumer-pulse.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/01_Captures/Slack/2026-07-30 Live Slack Scan.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/01_Captures/Slack/2026-07-30 Slack Open Loops.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/04_Decisions/2026-07-30 - Adopt gated intelligence stack.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/05_Projects/2026-07-30 - Frontier actions 1-4.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/05_Projects/2026-07-30 - Integrate daily intelligence stack.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/05_Projects/Experiments/EXP-SKI-VOICE-SANDBOX.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/06_Research/2026-07-30 - Grok daily intelligence.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/06_Research/References/2026-07-30 - Casepoint permission-aware MCP pattern.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/06_Research/References/2026-07-30 - agentlogparser audit pattern.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/07_Reviews/MCP/2026-07-30 - context7.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/09_Ops/Netlify Credits Suspension 2026-07-30.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/10_Maps/Communication Intelligence Map.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/DEPENDENCY_PR226.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/concepts/README.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/entities/README.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/protocols/approval-tiers.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/queue/README.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    },
+    {
+      "rule": "index-reachable",
+      "severity": "error",
+      "file": "12_Brain/state/README.md",
+      "detail": "no link trail from 12_Brain/INDEX.md reaches this page"
+    }
+  ],
+  "written_at": "2026-07-31T02:44:37.788Z"
+}

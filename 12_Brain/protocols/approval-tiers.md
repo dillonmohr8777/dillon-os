@@ -1,6 +1,13 @@
+---
+tags: [protocol, safety]
+source: "[[11_Agents/64gb Morning Orchestrator Spec 2026-07-08]]"
+updated: 2026-07-30
+---
+
 # Approval & safety protocol
 
-Mirrors `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`.
+Mirrors [[11_Agents/64gb Morning Orchestrator Spec 2026-07-08|the 64gb Morning
+Orchestrator spec]].
 
 | Tier | Allowed | Examples in this layer |
 |---|---|---|
