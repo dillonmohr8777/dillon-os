@@ -278,7 +278,9 @@ test('CLI exposes all local-only subcommands', () => {
 
 test('new JSON fixtures and schemas are valid JSON', () => {
   const files = [
-    ...fs.readdirSync(FIXTURES).map((name) => path.join(FIXTURES, name)),
+    ...fs.readdirSync(FIXTURES)
+      .filter((name) => name.endsWith('.json'))
+      .map((name) => path.join(FIXTURES, name)),
     ...fs.readdirSync(path.join(REPO_ROOT, '12_Brain/schemas'))
       .filter((name) => name.startsWith('marketing-'))
       .map((name) => path.join(REPO_ROOT, '12_Brain/schemas', name)),
