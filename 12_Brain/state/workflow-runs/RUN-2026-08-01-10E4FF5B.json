@@ -39,9 +39,9 @@
   "human_gate": true,
   "budget_tokens": null,
   "timeout_seconds": 2400,
-  "status": "checker_passed",
+  "status": "adoption_ready",
   "started_at": "2026-08-01T03:04:40.129Z",
-  "updated_at": "2026-08-01T03:04:40.175Z",
+  "updated_at": "2026-08-01T04:15:55.657Z",
   "maker_evidence": {
     "maker_id": "bc-d0ff7111-f67e-5003-b732-4401addf5485",
     "recorded_at": "2026-08-01T03:04:40.155Z",
@@ -175,5 +175,9 @@
     "demo_reviewed": false,
     "visual_review": null
   },
-  "approval": null
+  "approval": {
+    "approver": "Dillon Mohr",
+    "note": "Explicit follow-up instruction on 2026-08-01: 'Do it', referring to review and adoption of the implementation.",
+    "approved_at": "2026-08-01T04:15:55.656Z"
+  }
 }
