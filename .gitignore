@@ -22,6 +22,9 @@ _templates/site-factory/harvest/
 12_Brain/private/**
 !12_Brain/private/README.md
 
+# Runtime webhook payloads are untrusted and may contain private data
+12_Brain/state/webhook-log.json
+
 # Local environment files — MCP tokens (LANDINGFOLIO_TOKEN) belong here, never in Git
 .env
 .env.*

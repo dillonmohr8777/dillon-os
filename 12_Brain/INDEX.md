@@ -29,6 +29,7 @@ in the same change.
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/entities/Webhook Gateway|Webhook Gateway]] — authenticated local receiver exposed through a temporary Cloudflare tunnel.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
