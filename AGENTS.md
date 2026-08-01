@@ -42,10 +42,10 @@ Inspector check. Any new MCP goes through `_os/automation/bin/mcp-gate.js` first
 ### Tests / lint
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/webhook-gateway.test.js
 ```
 
-- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, and public-safety scanning.
+- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, webhook authentication, and public-safety scanning.
 - `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has no ESLint config — interactive only; do not run non-interactively.
 - `immohrtal-site` has no lint script.
 

@@ -13,7 +13,7 @@ const {
 describe('webhook gateway', () => {
   const secret = 'a'.repeat(64);
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'webhook-gateway-'));
-  const logFile = path.join(tempDir, 'webhook-log.json');
+  const logFile = path.join(tempDir, 'logs', 'webhook-log.ndjson');
   let server;
   let baseUrl;
 
@@ -70,7 +70,7 @@ describe('webhook gateway', () => {
 
     assert.equal(response.status, 200);
     const log = fs.readFileSync(logFile, 'utf8');
-    assert.match(log, /"event": "test"/);
+    assert.match(log, /"event":"test"/);
     assert.doesNotMatch(log, /must-not-be-logged|x-webhook-signature/i);
   });
 
@@ -80,6 +80,13 @@ describe('webhook gateway', () => {
     assert.match(generated, /^[a-f0-9]{64}$/);
     assert.equal(fs.statSync(secretFile).mode & 0o777, 0o600);
     assert.equal(loadOrCreateSecret(secretFile), generated);
+  });
+
+  it('tightens permissions on an existing secret', () => {
+    const secretFile = path.join(tempDir, 'private', 'existing-secret.txt');
+    fs.writeFileSync(secretFile, `${secret}\n`, { mode: 0o644 });
+    assert.equal(loadOrCreateSecret(secretFile), secret);
+    assert.equal(fs.statSync(secretFile).mode & 0o777, 0o600);
   });
 
   it('compares signatures without throwing on invalid lengths', () => {

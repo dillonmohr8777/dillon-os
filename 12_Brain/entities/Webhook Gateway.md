@@ -1,7 +1,7 @@
 ---
 tags: [entity, infrastructure, webhook]
 created: 2026-08-01
-status: active
+status: blocked
 source: [[12_Brain/entities/Hermes]]
 ---
 
@@ -11,7 +11,10 @@ An authenticated local webhook receiver runs on port 8644 behind a temporary Clo
 
 ## Status
 
-**Active** — gateway running, tunnel established, signed webhooks enabled.
+**Development only as of 2026-08-01** — the gateway works, but the current
+Cursor Cloud host and Quick Tunnel do not survive termination. Durable deployment
+is blocked until the intended 64 GB host and an authenticated Cloudflare domain
+are available.
 
 ## Configuration
 
@@ -58,9 +61,9 @@ HMAC is computed over the exact raw request body:
 
 ## Logging
 
-- **File:** `12_Brain/state/webhook-log.json`
-- **Format:** JSON array of events
-- **Retention:** Last 100 webhooks
+- **File:** `12_Brain/state/webhook-log.ndjson`
+- **Format:** One JSON event per line
+- **Retention:** Truncated when the file reaches 5 MB
 - **Data stored:** Timestamp, event type, body
 - **Excluded:** Request and signature headers
 - **Git:** Runtime log is ignored because payloads may contain private data
@@ -73,7 +76,7 @@ HMAC is computed over the exact raw request body:
 curl "$PUBLIC_BASE_URL/health"
 
 # View logs
-jq . 12_Brain/state/webhook-log.json
+jq . 12_Brain/state/webhook-log.ndjson
 ```
 
 ### Restart gateway
@@ -101,7 +104,8 @@ tmux -f /exec-daemon/tmux.portal.conf attach -t cloudflare-tunnel
 
 ## Migration to Production
 
-When ready for production:
+The current named-tunnel steps stabilize routing but do not authenticate inbound
+clients; HMAC verification remains required. For durable deployment:
 
 1. Create a Cloudflare account
 2. Install cloudflared with authentication: `cloudflared tunnel login`

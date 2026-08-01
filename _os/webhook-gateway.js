@@ -10,9 +10,9 @@ const path = require('node:path');
 
 const PORT = 8644;
 const HOST = '127.0.0.1';
-const MAX_BODY_BYTES = 1024 * 1024;
-const MAX_LOG_ENTRIES = 100;
-const DEFAULT_LOG_FILE = path.join(__dirname, '../12_Brain/state/webhook-log.json');
+const MAX_BODY_BYTES = 256 * 1024;
+const MAX_LOG_BYTES = 5 * 1024 * 1024;
+const DEFAULT_LOG_FILE = path.join(__dirname, '../12_Brain/state/webhook-log.ndjson');
 const DEFAULT_SECRET_FILE = path.join(__dirname, '../12_Brain/private/webhook-secret.txt');
 
 function sendJson(res, status, payload) {
@@ -25,6 +25,14 @@ function sendJson(res, status, payload) {
 
 function loadOrCreateSecret(secretFile = DEFAULT_SECRET_FILE) {
   try {
+    const stat = fs.lstatSync(secretFile);
+    if (!stat.isFile() || stat.isSymbolicLink()) {
+      throw new Error('Webhook secret path must be a regular file');
+    }
+    if (typeof process.getuid === 'function' && stat.uid !== process.getuid()) {
+      throw new Error('Webhook secret must be owned by the gateway user');
+    }
+    fs.chmodSync(secretFile, 0o600);
     const secret = fs.readFileSync(secretFile, 'utf8').trim();
     if (!/^[a-f0-9]{64}$/i.test(secret)) {
       throw new Error('Webhook secret must be a 64-character hexadecimal value');
@@ -51,31 +59,33 @@ function verifySignature(payload, signature, secret) {
 }
 
 function logWebhook(logFile, type, body) {
-  let logs = [];
   try {
-    logs = JSON.parse(fs.readFileSync(logFile, 'utf8'));
-    if (!Array.isArray(logs)) logs = [];
-  } catch (error) {
-    if (error.code !== 'ENOENT') {
-      console.error('Could not read webhook log; starting a new log');
+    fs.mkdirSync(path.dirname(logFile), { recursive: true });
+    if (fs.existsSync(logFile) && fs.statSync(logFile).size >= MAX_LOG_BYTES) {
+      fs.truncateSync(logFile, 0);
     }
+    fs.appendFileSync(logFile, `${JSON.stringify({
+      timestamp: new Date().toISOString(),
+      type,
+      body,
+    })}\n`, { mode: 0o600 });
+    return true;
+  } catch (error) {
+    console.error('Could not persist authenticated webhook');
+    return false;
   }
-
-  logs.push({
-    timestamp: new Date().toISOString(),
-    type,
-    body,
-  });
-  fs.writeFileSync(logFile, `${JSON.stringify(logs.slice(-MAX_LOG_ENTRIES), null, 2)}\n`, {
-    mode: 0o600,
-  });
 }
 
 function createWebhookServer({ secret, logFile = DEFAULT_LOG_FILE } = {}) {
   if (!secret) throw new Error('A webhook secret is required');
 
-  return http.createServer((req, res) => {
-    const url = new URL(req.url, 'http://localhost');
+  const server = http.createServer((req, res) => {
+    let url;
+    try {
+      url = new URL(req.url, 'http://localhost');
+    } catch {
+      return sendJson(res, 400, { error: 'Invalid request target' });
+    }
 
     if (url.pathname === '/health' && req.method === 'GET') {
       return sendJson(res, 200, { status: 'healthy', timestamp: new Date().toISOString() });
@@ -87,6 +97,15 @@ function createWebhookServer({ secret, logFile = DEFAULT_LOG_FILE } = {}) {
     }
     if (!String(req.headers['content-type'] || '').toLowerCase().startsWith('application/json')) {
       return sendJson(res, 415, { error: 'Content-Type must be application/json' });
+    }
+    const signature = req.headers['x-webhook-signature']
+      || req.headers['x-hub-signature-256'];
+    if (typeof signature !== 'string') {
+      return sendJson(res, 401, { error: 'Valid signature required' });
+    }
+    const declaredLength = Number(req.headers['content-length']);
+    if (Number.isFinite(declaredLength) && declaredLength > MAX_BODY_BYTES) {
+      return sendJson(res, 413, { error: 'Payload too large' });
     }
 
     const chunks = [];
@@ -106,8 +125,6 @@ function createWebhookServer({ secret, logFile = DEFAULT_LOG_FILE } = {}) {
     req.on('end', () => {
       if (tooLarge || res.writableEnded) return;
       const payload = Buffer.concat(chunks);
-      const signature = req.headers['x-webhook-signature']
-        || req.headers['x-hub-signature-256'];
       if (!verifySignature(payload, signature, secret)) {
         return sendJson(res, 401, { error: 'Valid signature required' });
       }
@@ -120,7 +137,9 @@ function createWebhookServer({ secret, logFile = DEFAULT_LOG_FILE } = {}) {
       }
 
       const eventType = routeMatch[1];
-      logWebhook(logFile, eventType, body);
+      if (!logWebhook(logFile, eventType, body)) {
+        return sendJson(res, 500, { error: 'Webhook could not be persisted' });
+      }
       console.log(`[${new Date().toISOString()}] Authenticated webhook received: ${eventType}`);
       return sendJson(res, 200, {
         success: true,
@@ -129,6 +148,11 @@ function createWebhookServer({ secret, logFile = DEFAULT_LOG_FILE } = {}) {
       });
     });
   });
+  server.headersTimeout = 10_000;
+  server.requestTimeout = 15_000;
+  server.keepAliveTimeout = 5_000;
+  server.maxRequestsPerSocket = 100;
+  return server;
 }
 
 if (require.main === module) {
