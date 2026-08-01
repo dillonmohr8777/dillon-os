@@ -537,6 +537,7 @@ function createCreativeManifest(input) {
   if (errors.length) throw new Error(`Invalid creative assets: ${[...new Set(errors)].join('; ')}`);
   return {
     client_id: input.client_id,
+    client_ref: input.client_ref,
     canonical_logo: logo,
     approved_references: references,
     style_runs: input.style_runs,

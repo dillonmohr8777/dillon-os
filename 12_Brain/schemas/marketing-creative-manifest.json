@@ -5,6 +5,7 @@
   "type": "object",
   "required": [
     "client_id",
+    "client_ref",
     "canonical_logo",
     "approved_references",
     "style_runs",
@@ -15,6 +16,7 @@
   ],
   "properties": {
     "client_id": { "type": "string", "minLength": 8 },
+    "client_ref": { "type": "string", "pattern": "^01_Clients/.+\\.md$" },
     "canonical_logo": { "$ref": "#/$defs/lockedAsset" },
     "approved_references": {
       "type": "array",
