@@ -3,8 +3,10 @@
   "$id": "dillon-os/marketing-evidence-packet",
   "title": "ClientMarketingEvidencePacket",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "client_id",
+    "client_ref",
     "generated_at",
     "research_window",
     "claims",
@@ -19,9 +21,11 @@
   ],
   "properties": {
     "client_id": { "type": "string", "minLength": 8 },
+    "client_ref": { "type": "string", "pattern": "^01_Clients/.+\\.md$" },
     "generated_at": { "type": "string", "format": "date" },
     "research_window": {
       "type": "object",
+      "additionalProperties": false,
       "required": ["from", "to"],
       "properties": {
         "from": { "type": "string", "format": "date" },
@@ -33,6 +37,7 @@
       "minItems": 1,
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "required": ["rank", "freshness_date", "id", "claim", "verification_status", "metrics", "sources", "authoritative_check"],
         "properties": {
           "rank": { "type": "integer", "minimum": 1 },
@@ -51,6 +56,7 @@
             "minItems": 1,
             "items": {
               "type": "object",
+              "additionalProperties": false,
               "required": ["url", "date", "title", "source_type"],
               "properties": {
                 "url": { "type": "string", "format": "uri", "pattern": "^https://" },
@@ -62,6 +68,7 @@
           },
           "authoritative_check": {
             "type": "object",
+            "additionalProperties": false,
             "required": ["status", "note", "urls"],
             "properties": {
               "status": { "enum": ["confirmed", "not-found", "conflicted"] },
@@ -84,6 +91,7 @@
       "minItems": 1,
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "required": ["question", "answer", "claim_ids"],
         "properties": {
           "question": { "type": "string", "minLength": 1 },

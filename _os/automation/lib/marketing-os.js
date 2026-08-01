@@ -4,10 +4,11 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 const { parseFrontmatter } = require('./frontmatter');
+const { walkMarkdown } = require('./fsutil');
 
 const REPO_ROOT = path.resolve(__dirname, '../../..');
 const VERIFICATION_LABELS = new Set(['verified', 'partial', 'unverified', 'disputed']);
-const FORBIDDEN_ACTION_KEY = /(^|_)(actions?|publish|send|deploy|crm|hubspot|spend|authenticate|email|sync)(_|$)/i;
+const FORBIDDEN_ACTION_KEY = /(^|_)(actions?|publish|send|deploy|crm|hubspot|spend|authenticate|email|sync|delivery|handoff|recipient|operation|instruction|execute)(_|$)/i;
 const EXTERNAL_ACTION_VERB = '(?:publish|post|send|email|message|deploy|spend|purchase|buy|authenticate|authorize|log\\s+in|connect|upload|sync|write)';
 const DIRECTIVE_CONTEXT = '(?:^|[.!?]\\s+|\\b(?:recommend(?:ed|ation)?|should|must|need\\s+to|immediately|please)\\b[^.!?\\n]{0,40}|\\bhave\\s+\\w+\\s+)';
 const FORBIDDEN_ACTION_INTENT = new RegExp(
@@ -38,6 +39,37 @@ function validUrl(value) {
   } catch {
     return false;
   }
+}
+
+function urlHost(value) {
+  try {
+    return new URL(value).hostname.toLowerCase().replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+}
+
+function isXUrl(value) {
+  return ['x.com', 'twitter.com'].includes(urlHost(value));
+}
+
+function automationClientScopes() {
+  return walkMarkdown(path.join(REPO_ROOT, '01_Clients')).flatMap((file) => {
+    const { data } = parseFrontmatter(fs.readFileSync(file, 'utf8'));
+    if (!data.automation_client_id) return [];
+    return [{
+      client_id: String(data.automation_client_id),
+      client_ref: path.relative(REPO_ROOT, file).replaceAll(path.sep, '/'),
+      name: path.basename(file, '.md'),
+    }];
+  });
+}
+
+function rejectUnknownKeys(value, allowed, field, errors) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return;
+  Object.keys(value).forEach((key) => {
+    if (!allowed.has(key)) errors.push(`${field}.${key} is not allowed`);
+  });
 }
 
 function assertOpaqueClientId(value, errors, field = 'client_id') {
@@ -130,7 +162,8 @@ authoritative-web verification check. Label every claim exactly one of:
 verified, partial, unverified, disputed. Separate observation from inference and
 preserve conflicts.
 
-Return one JSON evidence packet for client_id "${value.client_id}" containing:
+Return one JSON evidence packet for client_id "${value.client_id}" and client_ref
+"${value.client_ref}" containing:
 - generated_at and research_window;
 - claims with rank, freshness_date, id, claim, verification_status, metrics,
   sources, and authoritative_check;
@@ -159,6 +192,7 @@ function buildXaiProfile(watchlist) {
     run_title: `Client marketing pulse — ${value.client_id}`,
     model: 'grok-4.5',
     lookback_hours: 168,
+    timeout_seconds: 240,
     max_output_tokens: 6000,
     max_x_search_calls: value.search_budgets.max_x_search_calls,
     max_web_search_calls: value.search_budgets.max_web_search_calls,
@@ -180,14 +214,33 @@ function walk(value, visit, trail = []) {
 }
 
 function validateClientScope(packet, expectedClientId, errors) {
+  const scopes = automationClientScopes();
+  const expected = scopes.find((scope) => scope.client_id === expectedClientId);
+  if (!expected) {
+    errors.push('expected client_id is not registered on a canonical client note');
+    return;
+  }
+  if (packet.client_ref !== expected.client_ref) {
+    errors.push('packet client_ref does not match the canonical client scope');
+  }
   walk(packet, (value, trail) => {
-    const inClientIdField = trail.some((part) => /client_?ids?/i.test(String(part)));
-    if (inClientIdField && typeof value === 'string' && value !== expectedClientId) {
+    const inClientIdField = trail.some((part) => /(?:client|brand|account)_?ids?/i.test(String(part)));
+    if (inClientIdField && typeof value === 'string' &&
+        value !== expectedClientId && value !== expected.client_ref) {
       errors.push(`cross-client ID at ${trail.join('.')}`);
     }
     if (typeof value === 'string') {
       const ids = value.match(/\bcl_[A-Za-z0-9_-]{8,64}\b/g) || [];
       if (ids.some((id) => id !== expectedClientId)) errors.push(`cross-client ID in ${trail.join('.') || 'packet'}`);
+      const refs = value.match(/01_Clients\/[^"'\n]+?\.md/g) || [];
+      if (refs.some((ref) => ref !== expected.client_ref)) {
+        errors.push(`cross-client reference in ${trail.join('.') || 'packet'}`);
+      }
+      const lower = value.toLowerCase();
+      if (scopes.some((scope) => scope.client_id !== expectedClientId &&
+          lower.includes(scope.name.toLowerCase()))) {
+        errors.push(`cross-client name in ${trail.join('.') || 'packet'}`);
+      }
     }
   });
 }
@@ -195,7 +248,9 @@ function validateClientScope(packet, expectedClientId, errors) {
 function validateNoExternalActions(packet, errors) {
   walk(packet, (value, trail) => {
     const key = String(trail.at(-1) || '');
-    if (FORBIDDEN_ACTION_KEY.test(key) && key !== 'external_actions') {
+    if (key === 'external_actions' && (trail.length !== 1 || value !== false)) {
+      errors.push(`external_actions is only allowed as top-level false: ${trail.join('.')}`);
+    } else if (FORBIDDEN_ACTION_KEY.test(key) && key !== 'external_actions') {
       errors.push(`external action field is prohibited: ${trail.join('.')}`);
     }
     if (typeof value === 'string' && FORBIDDEN_ACTION_INTENT.test(value)) {
@@ -216,11 +271,17 @@ function validateEvidencePacket(packet, expectedClientId) {
   if (!packet || typeof packet !== 'object' || Array.isArray(packet)) {
     return result(['evidence packet must be an object'], null);
   }
+  rejectUnknownKeys(packet, new Set([
+    'client_id', 'client_ref', 'generated_at', 'research_window', 'claims',
+    'content_brief', 'faqs', 'comparison_skeleton', 'extractability',
+    'schema_suggestions', 'sales_bullets', 'client_alert', 'external_actions',
+  ]), 'packet', errors);
   assertOpaqueClientId(expectedClientId, errors, 'expected client_id');
   if (packet.client_id !== expectedClientId) errors.push('packet client_id does not match expected client_id');
   validateClientScope(packet, expectedClientId, errors);
   validateNoExternalActions(packet, errors);
   if (!validDate(packet.generated_at)) errors.push('generated_at must be YYYY-MM-DD');
+  rejectUnknownKeys(packet.research_window, new Set(['from', 'to']), 'research_window', errors);
   if (!packet.research_window || !validDate(packet.research_window.from) || !validDate(packet.research_window.to)) {
     errors.push('research_window.from and research_window.to must be valid dates');
   } else if (packet.research_window.from > packet.research_window.to) {
@@ -235,6 +296,10 @@ function validateEvidencePacket(packet, expectedClientId) {
   } else {
     claims.forEach((claim, index) => {
       const field = `claims[${index}]`;
+      rejectUnknownKeys(claim, new Set([
+        'rank', 'freshness_date', 'id', 'claim', 'verification_status',
+        'metrics', 'sources', 'authoritative_check',
+      ]), field, errors);
       if (!Number.isInteger(claim?.rank) || claim.rank < 1 || claimRanks.has(claim.rank)) {
         errors.push(`${field}.rank must be a unique positive integer`);
       } else claimRanks.add(claim.rank);
@@ -251,13 +316,21 @@ function validateEvidencePacket(packet, expectedClientId) {
       } else {
         claim.sources.forEach((source, sourceIndex) => {
           const sourceField = `${field}.sources[${sourceIndex}]`;
+          rejectUnknownKeys(source, new Set(['url', 'date', 'title', 'source_type']), sourceField, errors);
           if (!validUrl(source?.url)) errors.push(`${sourceField}.url must be HTTPS`);
           if (!validDate(source?.date)) errors.push(`${sourceField}.date must be YYYY-MM-DD`);
           if (!isText(source?.title, 500)) errors.push(`${sourceField}.title is required`);
           if (!['x', 'authoritative'].includes(source?.source_type)) errors.push(`${sourceField}.source_type is invalid`);
+          if (source?.source_type === 'x' && !isXUrl(source.url)) {
+            errors.push(`${sourceField} marked x must use x.com or twitter.com`);
+          }
+          if (source?.source_type === 'authoritative' && isXUrl(source.url)) {
+            errors.push(`${sourceField} cannot mark an X URL authoritative`);
+          }
         });
       }
       const check = claim?.authoritative_check;
+      rejectUnknownKeys(check, new Set(['status', 'note', 'urls']), `${field}.authoritative_check`, errors);
       if (!check || !['confirmed', 'not-found', 'conflicted'].includes(check.status)) {
         errors.push(`${field}.authoritative_check.status is invalid`);
       } else {
@@ -276,16 +349,28 @@ function validateEvidencePacket(packet, expectedClientId) {
       if (claim?.verification_status === 'verified' && check?.status !== 'confirmed') {
         errors.push(`${field} cannot be verified unless authoritative_check.status is confirmed`);
       }
+      if (claim?.verification_status === 'verified') {
+        const authoritativeUrls = new Set(
+          (claim.sources || [])
+            .filter((source) => source.source_type === 'authoritative' && !isXUrl(source.url))
+            .map((source) => source.url),
+        );
+        if (!(check?.urls || []).some((url) => authoritativeUrls.has(url))) {
+          errors.push(`${field} authoritative check must cite a declared non-X authoritative source`);
+        }
+      }
     });
   }
 
   const brief = packet.content_brief;
+  rejectUnknownKeys(brief, new Set(['title', 'audience', 'angle', 'key_points']), 'content_brief', errors);
   ['title', 'audience', 'angle'].forEach((key) => {
     if (!isText(brief?.[key], 1000)) errors.push(`content_brief.${key} is required`);
   });
   validateStringArray(brief?.key_points, 'content_brief.key_points', errors);
   if (!Array.isArray(packet.faqs) || packet.faqs.length < 1) errors.push('faqs must contain at least one item');
   else packet.faqs.forEach((faq, index) => {
+    rejectUnknownKeys(faq, new Set(['question', 'answer', 'claim_ids']), `faqs[${index}]`, errors);
     if (!isText(faq?.question) || !isText(faq?.answer, 2000)) errors.push(`faqs[${index}] needs question and answer`);
     const answerWords = String(faq?.answer || '').trim().split(/\s+/).filter(Boolean).length;
     if (answerWords < 40 || answerWords > 60) {
@@ -296,6 +381,12 @@ function validateEvidencePacket(packet, expectedClientId) {
   if (!packet.comparison_skeleton || !isText(packet.comparison_skeleton.title)) {
     errors.push('comparison_skeleton.title is required');
   }
+  rejectUnknownKeys(
+    packet.comparison_skeleton,
+    new Set(['title', 'dimensions', 'rows']),
+    'comparison_skeleton',
+    errors,
+  );
   validateStringArray(packet.comparison_skeleton?.dimensions, 'comparison_skeleton.dimensions', errors);
   if (!Array.isArray(packet.comparison_skeleton?.rows) || packet.comparison_skeleton.rows.length < 1) {
     errors.push('comparison_skeleton.rows must contain at least one row');
@@ -303,6 +394,7 @@ function validateEvidencePacket(packet, expectedClientId) {
   if (!packet.extractability || typeof packet.extractability.exists !== 'boolean' || !isText(packet.extractability.rationale)) {
     errors.push('extractability needs exists and rationale');
   }
+  rejectUnknownKeys(packet.extractability, new Set(['exists', 'rationale']), 'extractability', errors);
   if (!Array.isArray(packet.schema_suggestions)) errors.push('schema_suggestions must be an array');
   else if (!packet.extractability?.exists && packet.schema_suggestions.length) {
     errors.push('schema_suggestions require extractability.exists=true');
@@ -311,6 +403,7 @@ function validateEvidencePacket(packet, expectedClientId) {
   if (!['none', 'low', 'medium', 'high'].includes(packet.client_alert?.level) || !isText(packet.client_alert?.summary, 2000)) {
     errors.push('client_alert needs a valid level and summary');
   }
+  rejectUnknownKeys(packet.client_alert, new Set(['level', 'summary', 'claim_ids']), 'client_alert', errors);
   validateClaimReferences(packet.client_alert?.claim_ids, 'client_alert.claim_ids', claimIds, errors);
   return result([...new Set(errors)], errors.length ? null : packet);
 }
@@ -330,6 +423,7 @@ function renderEvidenceMarkdown(packet, expectedClientId) {
     `# Marketing intelligence packet — ${packet.client_id}`,
     '',
     `Generated: ${packet.generated_at}`,
+    `Client scope: ${packet.client_ref}`,
     `Research window: ${packet.research_window.from} → ${packet.research_window.to}`,
     'Status: Draft evidence only; no publish, send, deploy, or CRM action is authorized.',
     '',
@@ -503,15 +597,12 @@ function validateCreativeManifest(manifest, expectedClientId) {
     errors.push('fidelity_claim must explicitly disclaim pixel fidelity');
   }
   const approval = manifest.human_approval;
-  if (approval?.required !== true || !['pending', 'approved', 'rejected'].includes(approval?.status)) {
-    errors.push('human_approval must be required with pending, approved, or rejected status');
-  }
-  if (approval?.status === 'approved' && (!isText(approval.approved_by) || !validDate(approval.approved_at))) {
-    errors.push('approved creative requires approved_by and approved_at');
+  if (approval?.required !== true || approval?.status !== 'pending') {
+    errors.push('creative manifest human_approval must remain pending; approval is recorded only in the separate workflow gate');
   }
   return result([...new Set(errors)], errors.length ? null : {
     ...manifest,
-    launch_ready: approval?.status === 'approved',
+    launch_ready: false,
   });
 }
 

@@ -247,3 +247,37 @@ test('xAI research runner produces an ingestible source-linked envelope', async 
   assert.match(envelope.content, /https:\/\/x\.com\/example\/status\/2/);
   assert.equal(result.envelope.verification_status, 'partial');
 });
+
+test('xAI research runner rejects responses that exceed configured search budgets', async () => {
+  const fetchImpl = async () => ({
+    ok: true,
+    json: async () => ({
+      id: 'response-over-budget',
+      model: 'grok-4.5',
+      usage: {
+        server_side_tool_usage_details: {
+          x_search_calls: 2,
+          web_search_calls: 0,
+        },
+      },
+      output: [{
+        type: 'message',
+        content: [{ type: 'output_text', text: 'Over budget result.', annotations: [] }],
+      }],
+    }),
+  });
+  await assert.rejects(
+    () => runXaiResearch({
+      lookback_hours: 24,
+      include_web_search: false,
+      max_x_search_calls: 1,
+      max_web_search_calls: 0,
+      focus: ['Test'],
+    }, {
+      apiKey: 'test-key-not-real',
+      fetchImpl,
+      now: new Date('2026-08-01T00:00:00.000Z'),
+    }),
+    /exceeded X Search budget: 2\/1/,
+  );
+});

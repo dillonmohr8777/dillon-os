@@ -73,6 +73,7 @@ test('watchlist compiles to a bounded xAI client packet profile', () => {
   assert.deepEqual(profile.allowed_x_handles, ['hvacinsider', 'energystar']);
   assert.equal(profile.max_x_search_calls, 8);
   assert.equal(profile.max_web_search_calls, 3);
+  assert.equal(profile.timeout_seconds, 240);
 });
 
 test('evidence packet validates and renders deterministic draft Markdown', () => {
@@ -102,6 +103,16 @@ test('evidence validation rejects expected-client mismatch and nested cross-clie
   const checked = validateEvidencePacket(packet, packet.client_id);
   assert.equal(checked.ok, false);
   assert.ok(checked.errors.some((error) => error.includes('cross-client ID')));
+});
+
+test('evidence validation rejects foreign canonical client references and names', () => {
+  const packet = fixture('evidence-packet.json');
+  packet.client_ref = '01_Clients/Bok Law.md';
+  packet.content_brief.key_points.push('Reuse the Bok Law positioning.');
+  const checked = validateEvidencePacket(packet, packet.client_id);
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.some((error) => error.includes('canonical client scope')));
+  assert.ok(checked.errors.some((error) => error.includes('cross-client name')));
 });
 
 test('evidence validation rejects external-action fields and schema overreach', () => {
@@ -135,12 +146,34 @@ test('evidence validation rejects imperative spend, auth, email, and HubSpot act
   }
 });
 
+test('evidence validation rejects unknown and nested structured action fields', () => {
+  const packet = fixture('evidence-packet.json');
+  packet.delivery_instruction = { operation: 'handoff', recipient: 'client' };
+  packet.comparison_skeleton.rows[0].external_actions = { sync: true };
+  const checked = validateEvidencePacket(packet, packet.client_id);
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.some((error) => error.includes('packet.delivery_instruction is not allowed')));
+  assert.ok(checked.errors.some((error) => error.includes('external_actions is only allowed as top-level false')));
+});
+
 test('verified claims require authoritative sources', () => {
   const packet = fixture('evidence-packet.json');
   packet.claims[0].verification_status = 'verified';
   packet.claims[0].sources = packet.claims[0].sources.filter((source) => source.source_type === 'x');
   const checked = validateEvidencePacket(packet, packet.client_id);
   assert.ok(checked.errors.includes('claims[0] cannot be verified without an authoritative source'));
+});
+
+test('verified claims reject X URLs mislabeled as authoritative', () => {
+  const packet = fixture('evidence-packet.json');
+  const claim = packet.claims[0];
+  claim.verification_status = 'verified';
+  claim.sources[1].url = claim.sources[0].url;
+  claim.authoritative_check.urls = [claim.sources[0].url];
+  const checked = validateEvidencePacket(packet, packet.client_id);
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.some((error) => error.includes('cannot mark an X URL authoritative')));
+  assert.ok(checked.errors.some((error) => error.includes('declared non-X authoritative source')));
 });
 
 test('claim ranking and freshness are mandatory', () => {
@@ -219,6 +252,20 @@ test('creative manifest rejects fidelity claims and foreign client scope', () =>
   const checked = validateCreativeManifest(manifest, input.client_id);
   assert.ok(checked.errors.some((error) => error.includes('disclaim pixel fidelity')));
   assert.ok(checked.errors.some((error) => error.includes('cross-client ID')));
+});
+
+test('creative manifest cannot self-assert human approval', () => {
+  const input = fixture('creative-input.json');
+  const manifest = createCreativeManifest(input);
+  manifest.human_approval = {
+    required: true,
+    status: 'approved',
+    approved_by: 'self-asserted',
+    approved_at: '2026-08-01',
+  };
+  const checked = validateCreativeManifest(manifest, input.client_id);
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.some((error) => error.includes('must remain pending')));
 });
 
 test('creative writer emits only a repo-local JSON manifest', () => {

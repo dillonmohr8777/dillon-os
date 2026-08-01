@@ -65,9 +65,7 @@
       "required": ["required", "status"],
       "properties": {
         "required": { "const": true },
-        "status": { "enum": ["pending", "approved", "rejected"] },
-        "approved_by": { "type": "string" },
-        "approved_at": { "type": "string", "format": "date" }
+        "status": { "const": "pending" }
       }
     },
     "external_actions": { "const": false }

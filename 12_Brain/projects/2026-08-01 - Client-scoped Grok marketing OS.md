@@ -23,10 +23,10 @@ The OS now turns bounded X research into verified client drafts and hash-locked 
 1. Exact client notes carry opaque `automation_client_id` values.
 2. Three watchlists cover HCM, local HVAC, and family law/mediation.
 3. `marketing-os.js watchlist` validates the client-note match and compiles a bounded xAI profile.
-4. `xai-research.js` uses native X Search plus bounded web verification and rejects malformed client packets.
-5. `marketing-os.js packet` rejects missing evidence, cross-client IDs, unsupported verified labels, structured action fields, and common direct-action language. Natural-language detection is defense-in-depth, not an authorization boundary: every string remains untrusted, `external_actions` must be false, and no executor exists for sends, CRM writes, spend, authentication, or deployment.
+4. `xai-research.js` uses native X Search plus bounded web verification, rejects returned tool-call counts over the profile budget, and rejects malformed client packets. The post-run check prevents ingestion, not provider-side credit consumption.
+5. `marketing-os.js packet` requires the exact canonical client reference, rejects known foreign client scopes, missing evidence, unsupported verified labels, structured action fields, and common direct-action language. Natural-language and entity detection are defense-in-depth, not authorization boundaries: every string remains untrusted, `external_actions` must be false, and no executor exists for sends, CRM writes, spend, authentication, or deployment.
 6. The rendered draft includes ranked claims, brief, FAQ set, comparison skeleton, conditional schema suggestions, sales bullets, and a client-alert draft.
-7. `marketing-os.js creative` hash-locks the canonical logo, approved references, and first frame; separates style runs; and leaves approval pending.
+7. `marketing-os.js creative` hash-locks the canonical logo, approved references, and first frame; separates style runs; and permanently leaves manifest approval pending. Approval is recorded only by the separate workflow gate.
 8. The existing [[12_Brain/04_Decisions/2026-07-30 - Adopt gated intelligence stack|maker/checker]], AEO, and human gates remain authoritative.
 
 ## Ranked automation map

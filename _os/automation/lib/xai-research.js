@@ -238,6 +238,7 @@ async function runXaiResearch(profile, options = {}) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(request),
+    signal: options.signal || AbortSignal.timeout(Number(profile.timeout_seconds || 240) * 1000),
   });
   const payload = await response.json();
   if (!response.ok) {
@@ -246,6 +247,14 @@ async function runXaiResearch(profile, options = {}) {
   }
   const extracted = extractResponse(payload);
   if (!extracted.text) throw new Error('xAI returned no output text.');
+  const xBudget = Number(profile.max_x_search_calls);
+  const webBudget = Number(profile.max_web_search_calls);
+  if (Number.isFinite(xBudget) && extracted.tool_call_counts.x_search > xBudget) {
+    throw new Error(`xAI exceeded X Search budget: ${extracted.tool_call_counts.x_search}/${xBudget}`);
+  }
+  if (Number.isFinite(webBudget) && extracted.tool_call_counts.web_search > webBudget) {
+    throw new Error(`xAI exceeded web search budget: ${extracted.tool_call_counts.web_search}/${webBudget}`);
+  }
   if (profile.prompt_contract === 'client-marketing-packet-v1') {
     const validation = validateEvidencePacket(
       extracted.marketing_packet,

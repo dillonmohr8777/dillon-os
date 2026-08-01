@@ -1,8 +1,9 @@
 # Automation ops operator guide
 
-This is the executable control surface for Dillon OS automation. All commands are
-local and fail closed. A successful local check never authorizes an external send,
-public deploy, account change, or secret use.
+This is the executable control surface for Dillon OS automation. Commands are local
+and fail closed except the explicitly invoked xAI collector, which performs read-only
+X/web API calls after credential and credit approval. A successful check never
+authorizes an external send, public deploy, account change, or secret use.
 
 ## Requirements
 
@@ -48,6 +49,9 @@ Use `-DryRun` to inspect the request without using credits or requiring a key.
 The collector records citations, tool-call types, response ID, token usage, and
 exact USD cost without logging the credential. The default profile asks the
 model to stay within 12 X searches, 4 web searches, and 4,500 output tokens.
+Returned tool-call counts above the configured budget are rejected from ingestion;
+the prompt and post-run rejection cannot prevent the provider from consuming those
+calls, so cost limits remain an operator credential/profile gate.
 
 ## Client-scoped marketing intelligence
 
