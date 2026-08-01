@@ -32,7 +32,8 @@ function usage() {
 function readInput() {
   const file = argValue('--from');
   if (!file) throw new Error(usage());
-  return JSON.parse(fs.readFileSync(file, 'utf8'));
+  const input = resolveRepoPath(file, { mustExist: true, file: true });
+  return JSON.parse(fs.readFileSync(input, 'utf8'));
 }
 
 function requireValid(validation, label) {

@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { runXaiResearch, buildRequest } = require('../lib/xai-research');
 const { ingestGrokRun } = require('../lib/intelligence');
+const { resolveRepoPath } = require('../lib/marketing-os');
 
 function argValue(name) {
   const index = process.argv.indexOf(name);
@@ -18,8 +19,7 @@ function usage() {
 async function main() {
   const profileArg = argValue('--profile');
   if (!profileArg) throw new Error(usage());
-  const profileFile = path.resolve(profileArg);
-  if (!fs.existsSync(profileFile)) throw new Error(`Profile does not exist: ${profileFile}`);
+  const profileFile = resolveRepoPath(profileArg, { mustExist: true, file: true });
   const profile = JSON.parse(fs.readFileSync(profileFile, 'utf8'));
 
   if (process.argv.includes('--dry-run')) {
@@ -31,7 +31,7 @@ async function main() {
   const outArg = argValue('--out');
   let outputFile = null;
   if (outArg) {
-    outputFile = path.resolve(outArg);
+    outputFile = resolveRepoPath(outArg);
     fs.mkdirSync(path.dirname(outputFile), { recursive: true });
     fs.writeFileSync(outputFile, `${JSON.stringify(result.envelope, null, 2)}\n`, 'utf8');
   }
@@ -41,7 +41,7 @@ async function main() {
     if (!result.extracted.marketing_packet) {
       throw new Error('--packet-out requires a client-marketing-packet-v1 profile and valid packet response');
     }
-    packetOutputFile = path.resolve(packetOutArg);
+    packetOutputFile = resolveRepoPath(packetOutArg);
     fs.mkdirSync(path.dirname(packetOutputFile), { recursive: true });
     fs.writeFileSync(packetOutputFile, `${JSON.stringify(result.extracted.marketing_packet, null, 2)}\n`, 'utf8');
   }

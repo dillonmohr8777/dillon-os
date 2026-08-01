@@ -116,6 +116,21 @@ test('evidence validation rejects external-action fields and schema overreach', 
   assert.ok(checked.errors.includes('schema_suggestions require extractability.exists=true'));
 });
 
+test('evidence validation rejects imperative spend, auth, email, and HubSpot actions', () => {
+  for (const instruction of [
+    'Spend $500 on this campaign.',
+    'Authenticate to HubSpot.',
+    'Email the client now.',
+    'Sync this lead to HubSpot.',
+  ]) {
+    const packet = fixture('evidence-packet.json');
+    packet.sales_bullets = [instruction];
+    const checked = validateEvidencePacket(packet, packet.client_id);
+    assert.equal(checked.ok, false, instruction);
+    assert.ok(checked.errors.some((error) => error.includes('external action intent')), instruction);
+  }
+});
+
 test('verified claims require authoritative sources', () => {
   const packet = fixture('evidence-packet.json');
   packet.claims[0].verification_status = 'verified';
@@ -274,6 +289,22 @@ test('CLI exposes all local-only subcommands', () => {
   const creativeResult = JSON.parse(creative.stdout);
   assert.equal(creativeResult.status, 'dry-run');
   assert.equal(creativeResult.manifest.launch_ready, false);
+});
+
+test('CLI entry points reject input paths outside the repository', () => {
+  const marketingCli = path.join(REPO_ROOT, '_os/automation/bin/marketing-os.js');
+  const marketing = spawnSync(process.execPath, [
+    marketingCli, 'watchlist', '--from', '/etc/hosts',
+  ], { cwd: REPO_ROOT, encoding: 'utf8' });
+  assert.equal(marketing.status, 2);
+  assert.match(marketing.stderr, /escapes repository/);
+
+  const xaiCli = path.join(REPO_ROOT, '_os/automation/bin/xai-research.js');
+  const xai = spawnSync(process.execPath, [
+    xaiCli, '--profile', '/etc/hosts', '--dry-run',
+  ], { cwd: REPO_ROOT, encoding: 'utf8' });
+  assert.equal(xai.status, 1);
+  assert.match(xai.stderr, /escapes repository/);
 });
 
 test('new JSON fixtures and schemas are valid JSON', () => {
