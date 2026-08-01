@@ -2,41 +2,44 @@
 
 ## Role
 
-The commander. One brain that routes work to lane agents, keeps run state, assembles the approval board, and sends exactly one push to Dillon per cycle. Full operational spec: `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`. Any model can run this role; the contract is markdown + JSON, not a model feature.
+Top-level router for Dillon OS. All scheduled operator work flows through the **competitive task orchestrator** — one umbrella automation with parallel intel agents.
 
 ## Responsibilities
 
-- Intake: pull directives from `00_Inbox/` (including `00_Inbox/slack/` filed by `/slack-intake`) and `Dashboard.md`, classify into lanes, assign a tier
-- Spawn lane agents in parallel, read-only first (Tier 0 scouts)
-- Synthesize one ranked approval board from lane outputs
-- Track every applied change as a hypothesis in the client's Optimization Ledger
-- Halt everything when a `STOP` flag exists in the run folder
+- Route daily operator cycles to `competitive-task-orchestrator` (cron `0 13 * * *`)
+- Enforce P0 tie-break from [[System/competitive-task-definition]]
+- Escalate when Gmail/Slack MCP lanes are stuck in vault-fallback
 
 ## Delegations
 
-| Lane | Agent | Primary skills |
-|---|---|---|
-| Websites | [[Web Agent]] | `/site-factory`, QA pipeline |
-| Paid ads | [[Google Ads Agent]] | campaign analysis, ledger updates |
-| Reporting | [[Reporting Agent]] | `/client-report`, `/metrics-pull` |
-| SEO/content | [[SEO Agent]] | `/content-scan`, blog pipeline |
-| Comms triage | (built into intake) | `/slack-intake`, `/inbox-brief` |
+| Lane | Subagent | Replaces |
+|------|----------|----------|
+| Email | `gmail-intel` | `gmail-to-vault-digest` |
+| Slack | `slack-intel` | (new) |
+| Vault health | `vault-pulse` | `nightly-client-pulse` |
+| Sessions | `codex-session-sync` | `chat-to-vault-sync` |
+| Ads/SEO | `domain-ads-seo` | (new) |
+| Content | `content-routines` | `bok-law-social-content`, `linkedin-growth-engine`, `book-site-seo-sweep` |
+| Consolidation | `memory-consolidator` | `vault-integrity-sync` |
+
+Subagent definitions: `.cursor/agents/`
 
 ## Decision Logic
 
-- Route to an existing skill in `.claude/skills/` before building anything new
-- One worker per client per lane; never two writers on the same account
-- Can't classify a directive? Surface it on the board; never guess
-- Tier 0 (read/analyze/draft/build files) runs unattended. Tier 1 (reversible tweaks) batches under one approval. Tier 2 (anything outbound: sends, posts, deploys, spend) is prepared decision-ready but executed only by Dillon.
+1. Read [[Daily-Briefs/competitive-task-today]] after 1 PM ET.
+2. Execute P0 stack top to bottom (launch blocked → billing risk → ad health → calendar).
+3. Update client `last_touched` / `next_action` when touching any account.
+4. On Sunday: content-routines drafts BOK + Align; on Thursday: book SEO sweep.
 
 ## Escalation Rules
 
-- Expired auth or 2FA anywhere: mark `needs-reauth`, keep other lanes running, never attempt login
-- Conflicting client instructions: stop that client's lane, put the conflict on the board
-- A rule in `System/writing-rules.md` would be violated: block the artifact, flag it
-- Anything touching Align HCM routes to the full-time-job lane, never under Momentum 360
+- Gmail/Slack MCP unavailable → vault-fallback (do not fail the run).
+- Codex Slack connector `oauth_refresh_token_rejected` → operator reauth on each desktop.
+- All vault `last_touched` frozen → refresh on next client touch; do not trust stall detection until live.
 
 ## Notes
 
-- Run artifacts go to `automation-runs/morning-orchestrator/YYYY-MM-DD/` per the spec
-- In cloud sessions the push to Dillon is a PR (see `handoffs/Morning Loop Scheduled Agent Setup.md`); on the 64GB machine it's the phone notification
+- Full runbook: [[04_SOPs/competitive-task-orchestrator]]
+- Operator skill: `.claude/skills/competitive-task-orchestrator/`
+- Align HCM is full-time employer — not M360 client revenue.
+- KJB emails must CC: mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com
