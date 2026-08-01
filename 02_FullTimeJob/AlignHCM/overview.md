@@ -11,7 +11,7 @@ tags: [fulltime, align-hcm, smartcare, linkedin, content]
 
 # Align HCM (Full-Time Employer)
 
-Dillon's full-time W2 employer. **Not a freelance client. Not under Buzz Bull or Momentum 360.** All routines and memory files that reference "clients" should exclude Align HCM from client lists unless explicitly called out.
+Dillon's full-time W2 employer. **Not a freelance client, and not part of any agency book of business.** All routines and memory files that reference "clients" should exclude Align HCM from client lists unless explicitly called out.
 
 ## Role
 Digital Marketing Manager. Owns LinkedIn content production across five profiles, SmartCare brand marketing, case studies, sales enablement, SEO blogs, and monthly performance reporting for the broader leadership team.
@@ -34,6 +34,15 @@ Post-go-live HCM support product. Four maturity stages:
 4. **Transform**
 
 Messaging emphasis: ongoing expert access, platform optimization, post-go-live support.
+
+## HubSpot Customer Agent
+
+Website-facing AI agent for alignhcm.com in HubSpot portal `242825734`. **Launch hold** as of
+2026-07-28 — retrieval works now, but the agent fabricates inline URLs and overclaims on
+data-conversion completeness. No live channel is attached and activation needs its own approval.
+
+Package: [[customer-agent/README|Customer Agent]] — readiness report (12 pp), knowledge core
+(10 pp), correction package (6 pp), plus the two avatar candidates awaiting brand approval.
 
 ## Deliverables in flight
 - April and May 2026 LinkedIn content calendars (both complete).
