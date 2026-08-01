@@ -59,7 +59,8 @@ test('research prompt contains evidence, ranking, packet, and safety requirement
   assert.match(prompt, /authoritative-web verification/i);
   assert.match(prompt, /verified, partial, unverified, disputed/);
   assert.match(prompt, /content_brief/);
-  assert.match(prompt, /schema_suggestions only when extractability\.exists is true/);
+  assert.match(prompt, /schema_suggestions shaped as \{type, basis, claim_ids\}/);
+  assert.match(prompt, /only when extractability\.exists is true/);
   assert.match(prompt, /sales_bullets/);
   assert.match(prompt, /client_alert/);
   assert.match(prompt, /Do not publish, send, deploy, update a CRM/);
