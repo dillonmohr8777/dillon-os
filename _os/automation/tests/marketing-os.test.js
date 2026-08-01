@@ -215,6 +215,18 @@ test('claim ranking and freshness are mandatory', () => {
   assert.ok(checked.errors.includes('claims[0].freshness_date must be YYYY-MM-DD'));
 });
 
+test('claim metrics reject nested structured action objects', () => {
+  const packet = fixture('evidence-packet.json');
+  packet.claims[0].metrics.workflow = {
+    verb: 'handoff',
+    target: 'customer',
+    channel: 'portal',
+  };
+  const checked = validateEvidencePacket(packet, packet.client_id);
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.some((error) => error.includes('metrics may contain only observed scalar values')));
+});
+
 test('packet writer allows repo-local Markdown and blocks path escape', () => {
   const packet = fixture('evidence-packet.json');
   const temp = fs.mkdtempSync(path.join(REPO_ROOT, '.marketing-os-test-'));

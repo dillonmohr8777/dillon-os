@@ -312,7 +312,10 @@ function validateEvidencePacket(packet, expectedClientId) {
       if (!isText(claim?.claim, 2000)) errors.push(`${field}.claim is required`);
       if (!VERIFICATION_LABELS.has(claim?.verification_status)) errors.push(`${field}.verification_status is invalid`);
       if (!claim?.metrics || typeof claim.metrics !== 'object' || Array.isArray(claim.metrics) || !Object.keys(claim.metrics).length) {
-        errors.push(`${field}.metrics must be a non-empty object`);
+        errors.push(`${field}.metrics must be a non-empty scalar map`);
+      } else if (Object.values(claim.metrics).some((value) =>
+        value !== null && !['string', 'number', 'boolean'].includes(typeof value))) {
+        errors.push(`${field}.metrics may contain only observed scalar values`);
       }
       if (!Array.isArray(claim?.sources) || claim.sources.length < 1) {
         errors.push(`${field}.sources must contain at least one source`);

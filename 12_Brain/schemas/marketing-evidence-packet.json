@@ -49,7 +49,10 @@
           },
           "metrics": {
             "type": "object",
-            "minProperties": 1
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": ["string", "number", "boolean", "null"]
+            }
           },
           "sources": {
             "type": "array",
