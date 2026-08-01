@@ -35,6 +35,18 @@ human gates for Tier-2 actions.
   `vaclaims-dev/vace-platform`. Local Phase 2 UI package was reported ready
   (45 assertions). No Vercel team available from prior desktop connector.
 
+## Hermes / SuperGrok control-plane ask (do not confuse with HUD tunnel)
+
+SuperGrok wants the 64 GB machine to expose Hermes `:8644` and hand over
+`WEBHOOK_SECRET`. Vault status: Hermes was orphaned off the retired Core 7;
+this cloud agent cannot reach Hermes. Live tunnel here is HUD `:4242` only.
+Evidence: [[12_Brain/research/2026-08-01 - SuperGrok Hermes bridge claims|SuperGrok Hermes bridge claims]].
+
+Gate before any Hermes tunnel:
+1. On the 64 GB host only: `curl http://localhost:8644/health` returns ok.
+2. Dillon explicitly approves connecting an external control plane (Tier 2).
+3. Secret stays out of SuperGrok chat history and out of public Git.
+
 ## Other open loops this week
 
 1. [[12_Brain/09_Ops/Netlify Credits Suspension 2026-07-30|Netlify Credits Suspension]] — wait for 2026-08-06 reset or approve top-up.
