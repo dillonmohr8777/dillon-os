@@ -8,7 +8,12 @@ const { parseFrontmatter } = require('./frontmatter');
 const REPO_ROOT = path.resolve(__dirname, '../../..');
 const VERIFICATION_LABELS = new Set(['verified', 'partial', 'unverified', 'disputed']);
 const FORBIDDEN_ACTION_KEY = /(^|_)(actions?|publish|send|deploy|crm|hubspot|spend|authenticate|email|sync)(_|$)/i;
-const FORBIDDEN_ACTION_INTENT = /(?:^|[.!?]\s+)(?:please\s+)?(?:publish|post|send|email|message|deploy|spend|purchase|buy|authenticate|authorize|log\s+in|connect|upload|sync)\b|\b(?:create|update|add|write|sync)\s+(?:a\s+|the\s+|this\s+)?(?:CRM|HubSpot)\b/i;
+const EXTERNAL_ACTION_VERB = '(?:publish|post|send|email|message|deploy|spend|purchase|buy|authenticate|authorize|log\\s+in|connect|upload|sync|write)';
+const DIRECTIVE_CONTEXT = '(?:^|[.!?]\\s+|\\b(?:recommend(?:ed|ation)?|should|must|need\\s+to|immediately|please)\\b[^.!?\\n]{0,40}|\\bhave\\s+\\w+\\s+)';
+const FORBIDDEN_ACTION_INTENT = new RegExp(
+  `${DIRECTIVE_CONTEXT}${EXTERNAL_ACTION_VERB}\\b|\\b(?:create|update|add|write|sync)\\s+(?:a\\s+|the\\s+|this\\s+)?(?:CRM|HubSpot)\\b`,
+  'i',
+);
 const OPAQUE_ID = /^[A-Za-z0-9][A-Za-z0-9_-]{7,63}$/;
 const HANDLE = /^@?[A-Za-z0-9_]{1,15}$/;
 const DATE = /^\d{4}-\d{2}-\d{2}$/;

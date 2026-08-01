@@ -122,6 +122,10 @@ test('evidence validation rejects imperative spend, auth, email, and HubSpot act
     'Authenticate to HubSpot.',
     'Email the client now.',
     'Sync this lead to HubSpot.',
+    'Recommendation: Spend $500 on this campaign.',
+    'Immediately authenticate to HubSpot.',
+    'You should email the client.',
+    'Have HubSpot sync this lead.',
   ]) {
     const packet = fixture('evidence-packet.json');
     packet.sales_bullets = [instruction];
