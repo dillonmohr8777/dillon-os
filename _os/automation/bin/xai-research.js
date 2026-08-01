@@ -12,7 +12,7 @@ function argValue(name) {
 }
 
 function usage() {
-  return 'Usage: node _os/automation/bin/xai-research.js --profile <profile.json> [--out <envelope.json>] [--ingest] [--dry-run]';
+  return 'Usage: node _os/automation/bin/xai-research.js --profile <profile.json> [--out <envelope.json>] [--packet-out <packet.json>] [--ingest] [--dry-run]';
 }
 
 async function main() {
@@ -35,6 +35,16 @@ async function main() {
     fs.mkdirSync(path.dirname(outputFile), { recursive: true });
     fs.writeFileSync(outputFile, `${JSON.stringify(result.envelope, null, 2)}\n`, 'utf8');
   }
+  const packetOutArg = argValue('--packet-out');
+  let packetOutputFile = null;
+  if (packetOutArg) {
+    if (!result.extracted.marketing_packet) {
+      throw new Error('--packet-out requires a client-marketing-packet-v1 profile and valid packet response');
+    }
+    packetOutputFile = path.resolve(packetOutArg);
+    fs.mkdirSync(path.dirname(packetOutputFile), { recursive: true });
+    fs.writeFileSync(packetOutputFile, `${JSON.stringify(result.extracted.marketing_packet, null, 2)}\n`, 'utf8');
+  }
 
   const ingest = process.argv.includes('--ingest') ? ingestGrokRun(result.envelope) : null;
   console.log(JSON.stringify({
@@ -46,6 +56,7 @@ async function main() {
     usage: result.extracted.usage,
     cost_usd: result.extracted.cost_usd,
     output_file: outputFile,
+    packet_output_file: packetOutputFile,
     ingest,
   }, null, 2));
 }

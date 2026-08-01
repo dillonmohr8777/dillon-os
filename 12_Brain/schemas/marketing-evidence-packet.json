@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/marketing-evidence-packet",
+  "title": "ClientMarketingEvidencePacket",
+  "type": "object",
+  "required": [
+    "client_id",
+    "generated_at",
+    "research_window",
+    "claims",
+    "content_brief",
+    "faqs",
+    "comparison_skeleton",
+    "extractability",
+    "schema_suggestions",
+    "sales_bullets",
+    "client_alert",
+    "external_actions"
+  ],
+  "properties": {
+    "client_id": { "type": "string", "minLength": 8 },
+    "generated_at": { "type": "string", "format": "date" },
+    "research_window": {
+      "type": "object",
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "type": "string", "format": "date" },
+        "to": { "type": "string", "format": "date" }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["rank", "freshness_date", "id", "claim", "verification_status", "metrics", "sources", "authoritative_check"],
+        "properties": {
+          "rank": { "type": "integer", "minimum": 1 },
+          "freshness_date": { "type": "string", "format": "date" },
+          "id": { "type": "string", "minLength": 1 },
+          "claim": { "type": "string", "minLength": 1 },
+          "verification_status": {
+            "enum": ["verified", "partial", "unverified", "disputed"]
+          },
+          "metrics": {
+            "type": "object",
+            "minProperties": 1
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["url", "date", "title", "source_type"],
+              "properties": {
+                "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+                "date": { "type": "string", "format": "date" },
+                "title": { "type": "string", "minLength": 1 },
+                "source_type": { "enum": ["x", "authoritative"] }
+              }
+            }
+          },
+          "authoritative_check": {
+            "type": "object",
+            "required": ["status", "note", "urls"],
+            "properties": {
+              "status": { "enum": ["confirmed", "not-found", "conflicted"] },
+              "note": { "type": "string", "minLength": 1 },
+              "urls": {
+                "type": "array",
+                "items": { "type": "string", "format": "uri", "pattern": "^https://" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content_brief": {
+      "type": "object",
+      "required": ["title", "audience", "angle", "key_points"]
+    },
+    "faqs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["question", "answer", "claim_ids"],
+        "properties": {
+          "question": { "type": "string", "minLength": 1 },
+          "answer": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Configured 40-60 word answer experiment; not a proven citation factor."
+          },
+          "claim_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "comparison_skeleton": {
+      "type": "object",
+      "required": ["title", "dimensions", "rows"]
+    },
+    "extractability": {
+      "type": "object",
+      "required": ["exists", "rationale"],
+      "properties": {
+        "exists": { "type": "boolean" },
+        "rationale": { "type": "string", "minLength": 1 }
+      }
+    },
+    "schema_suggestions": { "type": "array" },
+    "sales_bullets": { "type": "array", "minItems": 1 },
+    "client_alert": {
+      "type": "object",
+      "required": ["level", "summary", "claim_ids"],
+      "properties": {
+        "level": { "enum": ["none", "low", "medium", "high"] }
+      }
+    },
+    "external_actions": { "const": false }
+  }
+}

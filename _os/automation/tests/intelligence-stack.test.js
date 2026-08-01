@@ -13,6 +13,7 @@ const {
   buildRequest,
   normalizeCitationMarkdown,
   extractCandidates,
+  extractMarketingPacket,
   extractResponse,
   buildEnvelope,
   runXaiResearch,
@@ -191,6 +192,23 @@ candidates_json
     decision: 'sandbox-test',
     source_urls: ['https://example.com'],
   }]);
+});
+
+test('xAI client marketing contract uses the scoped packet prompt and parses JSON only', () => {
+  const watchlist = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/marketing-os/watchlist.json'), 'utf8'));
+  const request = buildRequest({
+    prompt_contract: 'client-marketing-packet-v1',
+    client_watchlist: watchlist,
+    allowed_x_handles: watchlist.x_handles,
+    max_x_search_calls: 8,
+    max_web_search_calls: 3,
+  }, new Date('2026-08-01T00:00:00.000Z'));
+  assert.match(request.input[0].content, /CLIENT SCOPE: cl_87a6c6799c6cefd6/);
+  assert.match(request.input[0].content, /Output JSON only/);
+  assert.deepEqual(request.tools[0].allowed_x_handles, ['hvacinsider', '@energystar']);
+  assert.deepEqual(extractMarketingPacket('{"client_id":"cl_87a6c6799c6cefd6"}'), { client_id: 'cl_87a6c6799c6cefd6' });
+  assert.deepEqual(extractMarketingPacket('```json\n{"client_id":"cl_87a6c6799c6cefd6"}\n```'), { client_id: 'cl_87a6c6799c6cefd6' });
+  assert.equal(extractMarketingPacket('prefix {"client_id":"cl_87a6c6799c6cefd6"}'), null);
 });
 
 test('xAI research runner produces an ingestible source-linked envelope', async () => {

@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-31
+updated: 2026-08-01
 ---
 
 # INDEX — the front door
@@ -23,7 +23,7 @@ in the same change.
 
 - [[12_Brain/entities/Momentum 360|Momentum 360]] — agency context for a subset of clients (stub; contacts private).
 - [[12_Brain/entities/Website Factory|Website Factory]] — web/landing-page production pipeline.
-- [[12_Brain/entities/Hermes|Hermes]] — retired local worker agent; rebuild-or-replace decision open.
+- [[12_Brain/entities/Hermes|Hermes]] — retired local worker; direct xAI collector is the approved X-research path.
 - [[12_Brain/entities/King Agent OS|King Agent OS]] — old daily command layer; patterns worth porting.
 - [[12_Brain/entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]] — previous command center (no local paths in Git).
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
@@ -58,8 +58,10 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Projects · Decisions · Research · Memory · Protocols
 
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
+- [[12_Brain/projects/2026-08-01 - Client-scoped Grok marketing OS|Client-scoped Grok marketing OS]] — verified X evidence to client-separated drafts and creative manifests.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
+- [[12_Brain/research/2026-08-01 - Grok marketing OS verification|Grok marketing OS verification]] — verified capabilities and rejected overclaims; expires 2026-10-30.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).

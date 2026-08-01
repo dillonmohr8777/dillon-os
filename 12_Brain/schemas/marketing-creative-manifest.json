@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/marketing-creative-manifest",
+  "title": "LockedComicCreativeManifest",
+  "type": "object",
+  "required": [
+    "client_id",
+    "canonical_logo",
+    "approved_references",
+    "style_runs",
+    "video",
+    "fidelity_claim",
+    "human_approval",
+    "external_actions"
+  ],
+  "properties": {
+    "client_id": { "type": "string", "minLength": 8 },
+    "canonical_logo": { "$ref": "#/$defs/lockedAsset" },
+    "approved_references": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "allOf": [
+          { "$ref": "#/$defs/lockedAsset" },
+          {
+            "type": "object",
+            "required": ["approved", "approved_by", "approved_at"],
+            "properties": {
+              "approved": { "const": true },
+              "approved_by": { "type": "string", "minLength": 1 },
+              "approved_at": { "type": "string", "format": "date" }
+            }
+          }
+        ]
+      }
+    },
+    "style_runs": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["run_id", "style", "prompt"],
+        "properties": {
+          "run_id": { "type": "string", "minLength": 1 },
+          "style": { "type": "string", "minLength": 1 },
+          "prompt": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "video": {
+      "type": "object",
+      "required": ["mode", "source_style_run_id", "first_frame", "first_frame_lock_required"],
+      "properties": {
+        "mode": { "const": "image-to-video" },
+        "source_style_run_id": { "type": "string", "minLength": 1 },
+        "first_frame": { "$ref": "#/$defs/lockedAsset" },
+        "first_frame_lock_required": { "const": true }
+      }
+    },
+    "fidelity_claim": {
+      "const": "Reference-locked; pixel fidelity is not claimed."
+    },
+    "human_approval": {
+      "type": "object",
+      "required": ["required", "status"],
+      "properties": {
+        "required": { "const": true },
+        "status": { "enum": ["pending", "approved", "rejected"] },
+        "approved_by": { "type": "string" },
+        "approved_at": { "type": "string", "format": "date" }
+      }
+    },
+    "external_actions": { "const": false }
+  },
+  "$defs": {
+    "lockedAsset": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  }
+}

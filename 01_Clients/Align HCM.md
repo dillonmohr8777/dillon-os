@@ -2,6 +2,7 @@
 tags: [client, fulltime]
 status: active
 industry: HCM/HR tech
+automation_client_id: cl_03a7165a637012e8
 start_date: 2026-01-25
 rate: Full-time
 last_touched: 2026-07-29

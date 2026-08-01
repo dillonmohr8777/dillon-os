@@ -1,10 +1,12 @@
 ---
 tags: [entity, tool]
 source: "[[12_Brain/raw/2026-06-26 - intel-core-7-master-operating-transfer]]"
-updated: 2026-07-04
+updated: 2026-08-01
 ---
 
 # Hermes
+
+Hermes remains retired; client X research runs through the gated direct xAI collector unless a separately reviewed rebuild is approved.
 
 Local worker agent that ran on the (now retired) Intel Core 7 machine — that machine was Hermes' authoritative home for auth/provider state, so **Hermes state is effectively orphaned** until rebuilt.
 
@@ -12,7 +14,9 @@ Last verified state (2026-06): 12 active cron jobs, 3 local webhook routes (loca
 
 Runs inside **Orgo** ("Hermes Agent Desktop") — the environment that also hosted the vault→Google Docs ingest (66 native Docs, index prefix `Dillon OS Hermes Orgo Vault -`).
 
-Decision needed: rebuild Hermes elsewhere or let this vault's loops replace it.
+Current decision: use [[12_Brain/projects/2026-08-01 - Client-scoped Grok marketing OS|the client-scoped direct xAI pipeline]]. Hermes subscription OAuth and read-only X search are documented capabilities, but the local worker remains orphaned and OAuth can fail on provider allowlisting. A rebuild must pass the existing connector and approval gates rather than inheriting old state.
+
+Official references: [xAI Hermes connection](https://x.ai/news/grok-hermes) · [Hermes X Search](https://hermes-agent.nousresearch.com/docs/user-guide/features/x-search)
 
 ## Links
 - [[12_Brain/entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]] · [[12_Brain/concepts/Google Docs Sharding Pattern|Google Docs Sharding Pattern]]
