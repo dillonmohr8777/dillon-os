@@ -65,6 +65,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
+- [[12_Brain/07_Reviews/Automation Runs/RUN-2026-08-01-10E4FF5B - implement-and-independently-verify-the-client-scoped-grok-marketing-operating-la|Grok marketing OS workflow review]] — independent checker passed; human approval remains required.
 - Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
 
 ## Folder indexes (working vault)

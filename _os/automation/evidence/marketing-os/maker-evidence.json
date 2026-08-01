@@ -1,0 +1,16 @@
+{
+  "maker_id": "bc-d0ff7111-f67e-5003-b732-4401addf5485",
+  "summary": "Implemented the client-scoped marketing layer, then incorporated repeated adversarial findings until every acceptance probe was deterministic and fail-closed.",
+  "command_results": [
+    {
+      "command": "node --test _os/automation/tests/*.test.js _os/test/brain-hud.test.js _os/test/public-safety.test.js",
+      "status": "pass",
+      "result": "74 tests passed; 0 failed"
+    },
+    {
+      "command": "Three client watchlist dry runs",
+      "status": "pass",
+      "result": "3 valid; 0 external calls"
+    }
+  ]
+}

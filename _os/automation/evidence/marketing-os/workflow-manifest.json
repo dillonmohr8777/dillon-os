@@ -1,0 +1,38 @@
+{
+  "workflow_id": "client-scoped-grok-marketing-os",
+  "workflow_type": "general",
+  "task": "Implement and independently verify the client-scoped Grok marketing operating layer",
+  "constraints": [
+    "No publish, send, CRM write, spend, authentication, deployment, or client delivery",
+    "Every packet remains draft-only and client-scoped",
+    "Human factual and creative approval remains required"
+  ],
+  "upstream_artifacts": [
+    "12_Brain/research/2026-08-01 - Grok marketing OS verification.md"
+  ],
+  "maker_id": "bc-d0ff7111-f67e-5003-b732-4401addf5485",
+  "checker_id": "bc-58197ecd-76d3-5690-a37e-cd22df6f3209",
+  "artifact_paths": [
+    "_os/automation/lib/marketing-os.js",
+    "_os/automation/lib/xai-research.js",
+    "_os/automation/bin/marketing-os.js",
+    "_os/automation/bin/xai-research.js",
+    "_os/automation/tests/marketing-os.test.js",
+    "_os/automation/tests/intelligence-stack.test.js",
+    "12_Brain/schemas/marketing-watchlist.json",
+    "12_Brain/schemas/marketing-evidence-packet.json",
+    "12_Brain/schemas/marketing-creative-manifest.json",
+    "12_Brain/schemas/marketing-freshness-config.json",
+    "12_Brain/projects/2026-08-01 - Client-scoped Grok marketing OS.md",
+    "12_Brain/research/2026-08-01 - Grok marketing OS verification.md"
+  ],
+  "acceptance_tests": [
+    "All deterministic automation, brain, and public-safety tests pass",
+    "Independent adversarial checker reports no reproducible contract violations",
+    "Cross-client, structured-action, path, authority-spoof, budget, and creative self-approval probes fail closed",
+    "Human approval is not manufactured"
+  ],
+  "rollback": "Revert the feature commits and remove the three opaque automation_client_id fields; retain review evidence for audit.",
+  "human_gate": true,
+  "timeout_seconds": 2400
+}
