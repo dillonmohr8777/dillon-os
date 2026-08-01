@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-27",
+  "generated": "2026-08-01",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-07-27"
+    "end": "2026-08-01"
   },
   "source": "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
   "note": "All watchdog and dashboard reporting uses the fixed window start 2026-01-01. The window extends daily on its own.",
@@ -56,9 +56,15 @@
     },
     {
       "month": "2026-07",
-      "views": 1663,
-      "submissions": 29,
-      "contacts": 18,
+      "views": 2262,
+      "submissions": 45,
+      "contacts": 29
+    },
+    {
+      "month": "2026-08",
+      "views": 1,
+      "submissions": 0,
+      "contacts": 0,
       "partial": true
     }
   ],
@@ -82,7 +88,12 @@
       { "date": "2026-07-24", "views": 66, "submissions": 4, "submissionsClean": 4, "contacts": 3 },
       { "date": "2026-07-25", "views": 24, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
       { "date": "2026-07-26", "views": 20, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
-      { "date": "2026-07-27", "views": 11, "submissions": 0, "submissionsClean": 0, "contacts": 0, "partial": true }
+      { "date": "2026-07-27", "views": 87, "submissions": 2, "submissionsClean": 2, "contacts": 1 },
+      { "date": "2026-07-28", "views": 163, "submissions": 2, "submissionsClean": 2, "contacts": 2 },
+      { "date": "2026-07-29", "views": 100, "submissions": 5, "submissionsClean": 5, "contacts": 3 },
+      { "date": "2026-07-30", "views": 180, "submissions": 5, "submissionsClean": 5, "contacts": 3 },
+      { "date": "2026-07-31", "views": 80, "submissions": 2, "submissionsClean": 2, "contacts": 2 },
+      { "date": "2026-08-01", "views": 1, "submissions": 0, "submissionsClean": 0, "contacts": 0, "partial": true }
     ]
   },
   "attribution_snapshot": {
@@ -132,7 +143,10 @@
   },
   "known_issues_open": [
     "hubspot-sitemap-cache-stale-redirects (2 healthy 301s remain in the HubSpot sitemap cache; no private-token sitemap write endpoint)",
-    "duplicate-case-study-path (/success-stories and /case-studies both live and indexed for the same content; pick one canonical path and 301 the other, or set a canonical tag; found in daily SEO sweep 2026-07-23)"
+    "duplicate-case-study-path (/success-stories and /case-studies both live and indexed for the same content; pick one canonical path and 301 the other, or set a canonical tag; found in daily SEO sweep 2026-07-23)",
+    "ga4-invalid-id-in-hubspot (HubSpot GA4 integration field holds G-320235048, an invalid measurement ID firing into a non-existent property; the real live stream is G-0Y6LQTTBRJ; Edge audit 2026-07-30; awaiting Dillon: repoint or uncheck)",
+    "duplicate-ga4-firing (theme includes align-attribution.min.js twice around the global footer, so G-0Y6LQTTBRJ fires twice per pageview; needs a dev to remove one include; Edge audit 2026-07-30)",
+    "cta-form-missing-attribution-fields (footer CTA form e733d928 posts only name/email/phone/company/service_interest/message, so the 33 Align attribution properties sit at ~0% fill; add align_* fields to the payload; Edge audit 2026-07-30)"
   ],
   "known_issues_resolved": [
     {
@@ -244,9 +258,9 @@
   },
   "contact_sources_window": {
     "AI_REFERRALS": 3,
-    "DIRECT_TRAFFIC": 116,
-    "OFFLINE": 2163,
-    "ORGANIC_SEARCH": 17,
+    "DIRECT_TRAFFIC": 123,
+    "OFFLINE": 2177,
+    "ORGANIC_SEARCH": 20,
     "REFERRALS": 8,
     "SOCIAL_MEDIA": 6
   },
@@ -294,9 +308,9 @@
     "wonRevenue": 54000,
     "lostValue": 361000
   },
-  "last_run": "2026-07-27 (Monday, 2nd same-day refresh; no new alert, nothing material changed. Weekend 44 views/0 leads. Kaiser still closed-lost, not reopened. Revenue flat $2.74M/30. AEO 3 ChatGPT.)",
+  "last_run": "2026-08-01 (Saturday; no new alert. Jul 23 influenced-pipeline alert RESOLVED: recovered $15K to ~$416K on a new $400K Direct deal. July closed strong at 2,262 views/45 subs. New business $2.88M/33. Kaiser still individually closed-lost. Edge audit folded in: invalid GA4 ID G-320235048, duplicate GA4 firing, CTA form missing align_* fields.)",
   "leading_indicators": {
-    "asOf": "2026-07-27",
+    "asOf": "2026-08-01",
     "conversion_rate": {
       "ytd": 0.0197,
       "monthly": {
@@ -306,27 +320,51 @@
         "2026-04": 0.0269,
         "2026-05": 0.0193,
         "2026-06": 0.0225,
-        "2026-07": 0.0174
+        "2026-07": 0.0199
       },
       "alert_floor": 0.012
     },
     "influenced_open_pipeline": {
-      "total": 15000,
-      "deals": 1,
-      "prior": 140000,
-      "alert": "Still $15K. The 89% drop fired 2026-07-23 when Kaiser Permanente ($125K, ORGANIC_SEARCH) went to closed-lost; it remains closed-lost and unreopened. Not re-fired.",
+      "total": 416056,
+      "deals": 5,
+      "prior": 15000,
+      "alert": "RESOLVED. Recovered from $15K to ~$416K, above the pre-drop $140K, driven by a new $400K Direct-sourced deal (Diversified Energy - Paycor to Dayforce). Kaiser Permanente ($125K Organic) is still individually closed-lost and needs a manual reopen; the Edge pass fixed the Expressing Interest stage config but not Kaiser's own record.",
       "detail": [
+        {
+          "company": "Diversified Energy - Paycor to Dayforce Migration",
+          "amount": 400000,
+          "stage": "2405262028",
+          "source": "DIRECT_TRAFFIC"
+        },
         {
           "company": "RPM xConstruction",
           "amount": 15000,
           "stage": "presentationscheduled",
           "source": "ORGANIC_SEARCH"
+        },
+        {
+          "company": "goway - Banking change request",
+          "amount": 1056,
+          "stage": "appointmentscheduled",
+          "source": "DIRECT_TRAFFIC"
+        },
+        {
+          "company": "Parrys Pizza - Managed Payroll",
+          "amount": 0,
+          "stage": "appointmentscheduled",
+          "source": "DIRECT_TRAFFIC"
+        },
+        {
+          "company": "TRA - Managed Payroll",
+          "amount": 0,
+          "stage": "appointmentscheduled",
+          "source": "DIRECT_TRAFFIC"
         }
       ]
     },
     "lead_follow_up_gap": {
-      "convertedContacts": 188,
-      "noOutreach": 79,
+      "convertedContacts": 200,
+      "noOutreach": 84,
       "noOutreachPct": 0.42,
       "qualifiedSubset": {
         "total": 22,
@@ -335,12 +373,12 @@
     }
   },
   "data_integrity": {
-    "asOf": "2026-07-27",
+    "asOf": "2026-08-01",
     "closed_lost_without_reason": {
-      "deals": 77,
-      "value": 13024043,
+      "deals": 85,
+      "value": 13755343,
       "pctOfLost": 1.0,
-      "note": "Every lost deal in the window still has no reason logged; count rose to 77 (two more losses last week). Track down as the required-field fix takes hold."
+      "note": "Every lost deal in the window still has no reason logged; count rose to 85. Track down as the required-field fix takes hold."
     },
     "premature_closes": [
       {
@@ -361,29 +399,29 @@
     ]
   },
   "closed_won_reconciliation": {
-    "asOf": "2026-07-27",
+    "asOf": "2026-08-01",
     "source": "Live HubSpot DEAL record, reconciled. Supersedes the Jul 15 design one-pager ($162K) which was representative placeholder data.",
-    "window": "2026-01-01 to 2026-07-27, by close date",
+    "window": "2026-01-01 to 2026-08-01, by close date",
     "total_closed_won": {
-      "deals": 109,
-      "amount": 5410846
+      "deals": 115,
+      "amount": 5604196
     },
     "by_deal_type": {
       "new_business": {
-        "deals": 30,
-        "amount": 2740213
+        "deals": 33,
+        "amount": 2882563
       },
       "existing_business": {
         "deals": 20,
         "amount": 1337473
       },
       "change_order": {
-        "deals": 49,
-        "amount": 902428
+        "deals": 51,
+        "amount": 923428
       },
       "renewal": {
-        "deals": 9,
-        "amount": 422732
+        "deals": 10,
+        "amount": 452732
       },
       "untyped": {
         "deals": 1,
@@ -392,32 +430,32 @@
     },
     "new_business_by_origin": {
       "offline_partner_sales_outbound": {
-        "deals": 26,
-        "amount": 2518543,
-        "pct": 0.919
+        "deals": 27,
+        "amount": 2532343,
+        "pct": 0.878
       },
       "direct_web": {
         "deals": 1,
         "amount": 141145,
-        "pct": 0.052,
+        "pct": 0.049,
         "note": "BioScript; origin disputed in CRM"
       },
       "organic_search_web": {
         "deals": 1,
         "amount": 54000,
-        "pct": 0.02,
+        "pct": 0.019,
         "note": "Weissman; verified"
       },
       "untagged": {
-        "deals": 2,
-        "amount": 26525
+        "deals": 4,
+        "amount": 155075
       }
     },
     "marketing_headline": {
-      "new_business_won": 2740213,
+      "new_business_won": 2882563,
       "web_sourced_won": 195145,
       "verified_originated": 54000,
-      "web_sourced_pct": 0.071
+      "web_sourced_pct": 0.068
     },
     "guard": "Standing directive 4: no revenue figure is reported unless a live DEAL query reproduces it."
   }

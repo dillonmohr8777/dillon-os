@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-27T13:30:00-04:00",
+  "generated": "2026-08-01T09:00:00-04:00",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-07-27"
+    "end": "2026-08-01"
   },
   "source": "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
   "directives": [
@@ -104,8 +104,13 @@
     },
     {
       "month": "2026-07",
-      "views": 1663,
-      "submissions": 29,
+      "views": 2262,
+      "submissions": 45
+    },
+    {
+      "month": "2026-08",
+      "views": 1,
+      "submissions": 0,
       "note": "month in progress"
     }
   ],
@@ -138,12 +143,12 @@
   "sources": [
     {
       "source": "Direct Traffic",
-      "contacts": 116,
+      "contacts": 123,
       "aeo": false
     },
     {
       "source": "Organic Search",
-      "contacts": 17,
+      "contacts": 20,
       "aeo": false
     },
     {
@@ -338,7 +343,8 @@
       "meeting_booking_started",
       "page_not_found"
     ],
-    "ga4MeasurementId": "G-320235048",
+    "ga4MeasurementId": "G-0Y6LQTTBRJ",
+    "ga4Note": "Verified live stream on production (Edge audit 2026-07-30). HubSpot's GA4 integration separately holds an invalid ID G-320235048 firing into a non-existent property; awaiting Dillon to repoint or uncheck. Theme also fires G-0Y6LQTTBRJ twice per pageview (duplicate include).",
     "checks": [
       {
         "check": "Form reliability and GA4 event layer",
@@ -1313,7 +1319,7 @@
     "privacy": "Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard."
   },
   "leadingIndicators": {
-    "asOf": "2026-07-27",
+    "asOf": "2026-08-01",
     "note": "First-party leading indicators computed each watchdog run. See 02_FullTimeJob/AlignHCM/Watchdog/leading-indicators.md.",
     "conversionRate": {
       "ytd": 0.0197,
@@ -1344,39 +1350,50 @@
         },
         {
           "month": "2026-07",
-          "rate": 0.0174,
-          "partial": true
+          "rate": 0.0199
         }
       ]
     },
     "influencedOpenPipeline": {
-      "total": 15000,
-      "deals": 1,
-      "prior": 140000,
-      "alert": "Still $15K. Kaiser Permanente ($125K Organic Search) remains closed-lost and unreopened since 2026-07-23.",
+      "total": 416056,
+      "deals": 5,
+      "prior": 15000,
+      "alert": "Recovered from $15K to ~$416K (above the pre-drop $140K) on a new $400K Direct-sourced deal, Diversified Energy. Kaiser Permanente ($125K Organic) is still individually closed-lost and needs a manual reopen.",
       "detail": [
+        {
+          "company": "Diversified Energy - Paycor to Dayforce Migration",
+          "amount": 400000,
+          "stage": "Proposal",
+          "source": "Direct Traffic"
+        },
         {
           "company": "RPM xConstruction",
           "amount": 15000,
           "stage": "Presentation Scheduled",
           "source": "Organic Search"
+        },
+        {
+          "company": "goway - Banking change request",
+          "amount": 1056,
+          "stage": "Appointment Scheduled",
+          "source": "Direct Traffic"
         }
       ]
     },
     "followUpGap": {
-      "convertedContacts": 188,
-      "noOutreach": 79,
+      "convertedContacts": 200,
+      "noOutreach": 84,
       "noOutreachPct": 0.42,
       "qualifiedTotal": 22,
       "qualifiedNoFollowUp": 9
     }
   },
   "dataIntegrity": {
-    "asOf": "2026-07-27",
+    "asOf": "2026-08-01",
     "closedLostWithoutReason": {
-      "deals": 77,
+      "deals": 85,
       "pctOfLost": 1.0,
-      "note": "Every lost deal has no reason logged; count rose to 77. This is CRM hygiene, not site health."
+      "note": "Every lost deal has no reason logged; count rose to 85. This is CRM hygiene, not site health."
     },
     "prematureCloses": 3
   }

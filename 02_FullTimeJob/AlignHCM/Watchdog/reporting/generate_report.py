@@ -25,6 +25,10 @@ from html import escape
 
 import charts
 
+MONTHS = {"01": "January", "02": "February", "03": "March", "04": "April", "05": "May",
+          "06": "June", "07": "July", "08": "August", "09": "September", "10": "October",
+          "11": "November", "12": "December"}
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 WATCHDOG = os.path.dirname(HERE)                      # .../AlignHCM/Watchdog
 REPO = os.path.abspath(os.path.join(WATCHDOG, "..", "..", ".."))  # repo root
@@ -193,7 +197,12 @@ def build_daily(date_str, base, data):
     avg_views = round(sum(x["views"] for x in window) / len(window)) if window else 0
     avg_subs = round(sum(x["submissions"] for x in window) / len(window), 1) if window else 0
 
-    mrow = base["monthly_series"][-1]
+    # Use the most recent month with real data for the all-year KPI tile. A brand-new
+    # partial month (e.g. Aug 1 with 1 view) would otherwise show 0% "below floor".
+    series = base["monthly_series"]
+    complete = [m for m in series if not m.get("partial") and m.get("views", 0) > 0]
+    mrow = complete[-1] if complete else series[-1]
+    mlabel = MONTHS.get(mrow["month"][-2:], mrow["month"])
     li = base["leading_indicators"]
     conv_july = li["conversion_rate"]["monthly"].get(mrow["month"], 0)
     rec = base["closed_won_reconciliation"]
@@ -243,7 +252,7 @@ def build_daily(date_str, base, data):
                         + "".join(f"<li>{it}</li>" for it in items) + "</ul></section>")
 
     kpis_year = "".join([
-        kpi("July views", f'{mrow["views"]:,}', f'{mrow["submissions"]} submissions'),
+        kpi(f"{mlabel} views", f'{mrow["views"]:,}', f'{mrow["submissions"]} submissions'),
         kpi("Conversion", pct(conv_july), "vs 1.20% floor"),
         kpi("New-business won", money(mh["new_business_won"]), f'{rec["by_deal_type"]["new_business"]["deals"]} deals', accent=True),
         kpi("Verified web origin", money(mh["verified_originated"]), "Organic Search"),
@@ -256,15 +265,21 @@ def build_daily(date_str, base, data):
         kpi("AEO referrals", str(sum(aeo.values()) if aeo else 0), "ChatGPT " + str(aeo.get("ChatGPT", 0))),
     ])
 
+    prior = ip.get("prior")
+    if not prior or prior == ip["total"]:
+        ip_tag, ip_txt = "yes", "steady"
+    elif ip["total"] > prior:
+        ip_tag, ip_txt = "yes", "up from " + money(prior)
+    else:
+        ip_tag, ip_txt = "no", "down from " + money(prior)
     li_html = (
         '<section class="card"><div class="eyebrow">Leading indicators &amp; data integrity</div>'
         '<table>'
-        f'<tr><td>Visit-to-lead conversion (July)</td><td class="r num">{pct(conv_july)}</td>'
+        f'<tr><td>Visit-to-lead conversion ({mlabel})</td><td class="r num">{pct(conv_july)}</td>'
         f'<td><span class="tag {"yes" if conv_july>=0.012 else "no"}">'
         f'{"above floor" if conv_july>=0.012 else "below floor"}</span></td></tr>'
         f'<tr><td>Marketing-influenced open pipeline</td><td class="r num">{money(ip["total"])}</td>'
-        f'<td><span class="tag {"no" if ip.get("prior",0)>ip["total"] else "yes"}">'
-        f'{"down from "+money(ip["prior"]) if ip.get("prior") else "steady"}</span></td></tr>'
+        f'<td><span class="tag {ip_tag}">{ip_txt}</span></td></tr>'
         f'<tr><td>Lead follow-up gap (no outreach)</td>'
         f'<td class="r num">{fg["noOutreach"]}/{fg["convertedContacts"]} = {pct(fg["noOutreachPct"],0)}</td>'
         f'<td><span class="tag {"no" if fg["noOutreachPct"]>0.35 else "yes"}">'
