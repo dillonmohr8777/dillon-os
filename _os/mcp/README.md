@@ -1,33 +1,27 @@
-# Semrush MCP bridge
+# Semrush MCP bridge + agent CLI
 
 Cursor’s remote MCP client discovers Semrush OAuth and often ignores
 `Authorization` headers. This stdio bridge forwards MCP to
 `https://mcp.semrush.com/v2/mcp` with `Authorization: Apikey …`.
 
-## Setup
-
-1. Keep the API key in `12_Brain/private/access/semrush-api.md` (gitignored)
-   **or** export `SEMRUSH_API_KEY`.
-2. Project MCP config: `.cursor/mcp.json` (committed — no secrets).
-3. Reload Cursor MCP / restart agent window.
-4. Confirm Semrush tools appear (keyword_research, domain_overview, etc.).
-
-## Smoke test
+## Agent access (preferred)
 
 ```bash
-SEMRUSH_API_KEY=your_key node <<'NODE'
-// or rely on private note when cwd is vault root
-const { spawn } = require('child_process');
-const child = spawn('node', ['_os/mcp/semrush-bridge.js'], { stdio: ['pipe','pipe','inherit'] });
-const body = Buffer.from(JSON.stringify({
-  jsonrpc: '2.0', id: 1, method: 'initialize',
-  params: { protocolVersion: '2024-11-05', capabilities: {}, clientInfo: { name: 't', version: '0' } }
-}));
-child.stdin.write(`Content-Length: ${body.length}\r\n\r\n`);
-child.stdin.write(body);
-child.stdout.on('data', d => process.stdout.write(d));
-setTimeout(() => child.kill(), 3000);
-NODE
+node _os/mcp/semrush-call.js units
+node _os/mcp/semrush-call.js tools
+node _os/mcp/semrush-call.js report phrase_this '{"database":"us","phrase":"ukg implementation partner"}'
+node _os/mcp/semrush-call.js call keyword_research '{}'
 ```
 
-Prefer rotating any key that was pasted into chat before long-term use.
+Auth: `SEMRUSH_API_KEY` or `12_Brain/private/access/semrush-api.md`.
+
+If units are `0`, Semrush blocks report data until top-up:
+https://www.semrush.com/mcp-access
+
+## Cursor desktop setup
+
+1. Key in private note (gitignored) or `SEMRUSH_API_KEY`
+2. `.cursor/mcp.json` runs `node _os/mcp/semrush-bridge.js`
+3. Reload MCP / restart agent window
+
+Cloud agents should use `semrush-call.js` even when Semrush does not appear in the MCP tool picker.
