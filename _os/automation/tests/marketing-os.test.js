@@ -150,10 +150,22 @@ test('evidence validation rejects unknown and nested structured action fields', 
   const packet = fixture('evidence-packet.json');
   packet.delivery_instruction = { operation: 'handoff', recipient: 'client' };
   packet.comparison_skeleton.rows[0].external_actions = { sync: true };
+  packet.comparison_skeleton.rows.push({
+    label: 'Unsafe workflow',
+    values: { workflow: { verb: 'handoff', target: 'customer', channel: 'portal' } },
+    claim_ids: ['claim-heat-pump-interest'],
+  });
+  packet.schema_suggestions.push({
+    task: 'handoff',
+    target: 'customer',
+    channel: 'portal',
+  });
   const checked = validateEvidencePacket(packet, packet.client_id);
   assert.equal(checked.ok, false);
   assert.ok(checked.errors.some((error) => error.includes('packet.delivery_instruction is not allowed')));
   assert.ok(checked.errors.some((error) => error.includes('external_actions is only allowed as top-level false')));
+  assert.ok(checked.errors.some((error) => error.includes('values may contain only scalar display data')));
+  assert.ok(checked.errors.some((error) => error.includes('schema_suggestions[1].task is not allowed')));
 });
 
 test('verified claims require authoritative sources', () => {
@@ -174,6 +186,23 @@ test('verified claims reject X URLs mislabeled as authoritative', () => {
   assert.equal(checked.ok, false);
   assert.ok(checked.errors.some((error) => error.includes('cannot mark an X URL authoritative')));
   assert.ok(checked.errors.some((error) => error.includes('declared non-X authoritative source')));
+});
+
+test('verified claims reject X subdomains and trailing-dot hosts mislabeled authoritative', () => {
+  for (const url of [
+    'https://mobile.twitter.com/example/status/1',
+    'https://twitter.com./example/status/1',
+    'https://media.x.com/example/status/1',
+  ]) {
+    const packet = fixture('evidence-packet.json');
+    const claim = packet.claims[0];
+    claim.verification_status = 'verified';
+    claim.sources[1].url = url;
+    claim.authoritative_check.urls = [url];
+    const checked = validateEvidencePacket(packet, packet.client_id);
+    assert.equal(checked.ok, false, url);
+    assert.ok(checked.errors.some((error) => error.includes('cannot mark an X URL authoritative')), url);
+  }
 });
 
 test('claim ranking and freshness are mandatory', () => {

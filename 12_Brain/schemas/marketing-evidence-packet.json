@@ -84,7 +84,18 @@
     },
     "content_brief": {
       "type": "object",
-      "required": ["title", "audience", "angle", "key_points"]
+      "additionalProperties": false,
+      "required": ["title", "audience", "angle", "key_points"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "audience": { "type": "string", "minLength": 1 },
+        "angle": { "type": "string", "minLength": 1 },
+        "key_points": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
     },
     "faqs": {
       "type": "array",
@@ -110,23 +121,84 @@
     },
     "comparison_skeleton": {
       "type": "object",
-      "required": ["title", "dimensions", "rows"]
+      "additionalProperties": false,
+      "required": ["title", "dimensions", "rows"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "dimensions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "values", "claim_ids"],
+            "properties": {
+              "label": { "type": "string", "minLength": 1 },
+              "values": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {
+                  "type": ["string", "number", "boolean", "null"]
+                }
+              },
+              "claim_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
     },
     "extractability": {
       "type": "object",
+      "additionalProperties": false,
       "required": ["exists", "rationale"],
       "properties": {
         "exists": { "type": "boolean" },
         "rationale": { "type": "string", "minLength": 1 }
       }
     },
-    "schema_suggestions": { "type": "array" },
-    "sales_bullets": { "type": "array", "minItems": 1 },
+    "schema_suggestions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "basis", "claim_ids"],
+        "properties": {
+          "type": { "enum": ["FAQPage", "HowTo"] },
+          "basis": { "type": "string", "minLength": 1 },
+          "claim_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "sales_bullets": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
     "client_alert": {
       "type": "object",
+      "additionalProperties": false,
       "required": ["level", "summary", "claim_ids"],
       "properties": {
-        "level": { "enum": ["none", "low", "medium", "high"] }
+        "level": { "enum": ["none", "low", "medium", "high"] },
+        "summary": { "type": "string", "minLength": 1 },
+        "claim_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        }
       }
     },
     "external_actions": { "const": false }

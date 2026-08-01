@@ -43,14 +43,15 @@ function validUrl(value) {
 
 function urlHost(value) {
   try {
-    return new URL(value).hostname.toLowerCase().replace(/^www\./, '');
+    return new URL(value).hostname.toLowerCase().replace(/\.+$/, '').replace(/^www\./, '');
   } catch {
     return '';
   }
 }
 
 function isXUrl(value) {
-  return ['x.com', 'twitter.com'].includes(urlHost(value));
+  const host = urlHost(value);
+  return ['x.com', 'twitter.com'].some((domain) => host === domain || host.endsWith(`.${domain}`));
 }
 
 function automationClientScopes() {
@@ -170,9 +171,11 @@ Return one JSON evidence packet for client_id "${value.client_id}" and client_re
 - content_brief with title, audience, angle, and key_points;
 - faqs with question, a 40-60 word answer, and claim_ids; treat the answer length
   as a configured experiment rather than a proven citation factor;
-- comparison_skeleton with dimensions and rows;
+- comparison_skeleton with dimensions and evidence-linked rows shaped as
+  {label, values, claim_ids}; values must contain scalar display data only;
 - extractability with exists and rationale;
-- schema_suggestions only when extractability.exists is true;
+- schema_suggestions shaped as {type, basis, claim_ids}, limited to FAQPage or
+  HowTo and only when extractability.exists is true;
 - sales_bullets;
 - client_alert with level, summary, and claim_ids;
 - external_actions set to false.
@@ -390,7 +393,19 @@ function validateEvidencePacket(packet, expectedClientId) {
   validateStringArray(packet.comparison_skeleton?.dimensions, 'comparison_skeleton.dimensions', errors);
   if (!Array.isArray(packet.comparison_skeleton?.rows) || packet.comparison_skeleton.rows.length < 1) {
     errors.push('comparison_skeleton.rows must contain at least one row');
-  }
+  } else packet.comparison_skeleton.rows.forEach((row, index) => {
+    const field = `comparison_skeleton.rows[${index}]`;
+    rejectUnknownKeys(row, new Set(['label', 'values', 'claim_ids']), field, errors);
+    if (!isText(row?.label)) errors.push(`${field}.label is required`);
+    if (!row?.values || typeof row.values !== 'object' || Array.isArray(row.values) ||
+        !Object.keys(row.values).length) {
+      errors.push(`${field}.values must be a non-empty scalar map`);
+    } else if (Object.values(row.values).some((value) =>
+      value !== null && !['string', 'number', 'boolean'].includes(typeof value))) {
+      errors.push(`${field}.values may contain only scalar display data`);
+    }
+    validateClaimReferences(row?.claim_ids, `${field}.claim_ids`, claimIds, errors);
+  });
   if (!packet.extractability || typeof packet.extractability.exists !== 'boolean' || !isText(packet.extractability.rationale)) {
     errors.push('extractability needs exists and rationale');
   }
@@ -398,7 +413,13 @@ function validateEvidencePacket(packet, expectedClientId) {
   if (!Array.isArray(packet.schema_suggestions)) errors.push('schema_suggestions must be an array');
   else if (!packet.extractability?.exists && packet.schema_suggestions.length) {
     errors.push('schema_suggestions require extractability.exists=true');
-  }
+  } else packet.schema_suggestions.forEach((suggestion, index) => {
+    const field = `schema_suggestions[${index}]`;
+    rejectUnknownKeys(suggestion, new Set(['type', 'basis', 'claim_ids']), field, errors);
+    if (!['FAQPage', 'HowTo'].includes(suggestion?.type)) errors.push(`${field}.type must be FAQPage or HowTo`);
+    if (!isText(suggestion?.basis, 1000)) errors.push(`${field}.basis is required`);
+    validateClaimReferences(suggestion?.claim_ids, `${field}.claim_ids`, claimIds, errors);
+  });
   validateStringArray(packet.sales_bullets, 'sales_bullets', errors);
   if (!['none', 'low', 'medium', 'high'].includes(packet.client_alert?.level) || !isText(packet.client_alert?.summary, 2000)) {
     errors.push('client_alert needs a valid level and summary');

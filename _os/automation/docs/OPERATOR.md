@@ -93,7 +93,9 @@ The xAI run fails closed unless its JSON packet has the expected client ID,
 sourced and ranked claims, dates, observed metrics, authoritative checks,
 40–60-word FAQ experiment answers, comparison scaffolding, and explicit
 verification labels. `verified` requires an authoritative source and a confirmed
-check. The local packet is always a draft and cannot authorize publication,
+check that cites the same declared non-X source. This validates source structure
+and corroboration linkage, not factual truth; a human must inspect every source
+before downstream approval. The local packet is always a draft and cannot authorize publication,
 HubSpot writes, email, Slack, spending, deployment, or client delivery.
 
 The equivalent Hermes subscription route is not enabled in this repository.

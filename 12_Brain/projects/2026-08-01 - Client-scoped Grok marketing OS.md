@@ -99,6 +99,7 @@ Handles are proposed research scope, not an endorsed or complete competitor set.
 - No publish, email, Slack, HubSpot write, spend, deploy, or client delivery without exact approval.
 - No creative run without a canonical logo and approved references.
 - No `verified` claim without an authoritative source and confirmed authoritative check.
+- Structural validation does not prove a claim true; a human must inspect every source before downstream approval.
 - No packet with a missing or mismatched client ID.
 - No adoption without distinct maker and checker identities.
 

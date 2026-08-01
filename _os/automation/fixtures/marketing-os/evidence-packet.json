@@ -61,8 +61,11 @@
     "dimensions": ["equipment qualification", "program source", "eligibility check"],
     "rows": [
       {
-        "option": "Federal tax credit",
-        "verification_step": "Check current authoritative program guidance."
+        "label": "Federal tax credit",
+        "values": {
+          "verification_step": "Check current authoritative program guidance."
+        },
+        "claim_ids": ["claim-heat-pump-interest"]
       }
     ]
   },
@@ -73,7 +76,8 @@
   "schema_suggestions": [
     {
       "type": "FAQPage",
-      "basis": "The reviewed FAQ is directly supported by the cited program guidance."
+      "basis": "The reviewed FAQ is directly supported by the cited program guidance.",
+      "claim_ids": ["claim-heat-pump-interest"]
     }
   ],
   "sales_bullets": [
