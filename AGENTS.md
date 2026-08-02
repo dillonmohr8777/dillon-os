@@ -10,6 +10,7 @@ This repo is **Dillon OS** — Dillon Mohr's Obsidian vault + agentic OS.
 - Working folders (`00_Inbox` … `11_Agents`) stay outside `12_Brain/`; link, don't duplicate clients.
 - Root `CLAUDE.md` has writing/reading rules. Ops loops: `12_Brain/System/Second Brain Ops.md`.
 - Health automation status: `System/routine-health.md` (linked from `12_Brain/System/Health Automation.md`).
+- **Daily operator cycle:** `competitive-task-orchestrator` (cron `0 13 * * *`) — one umbrella automation with 7 parallel subagents in `.cursor/agents/`. Brief: `Daily-Briefs/competitive-task-today.md`. Runbook: `04_SOPs/competitive-task-orchestrator.md`.
 
 ## Cursor Cloud specific instructions
 
