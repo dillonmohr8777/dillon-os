@@ -1,0 +1,889 @@
+{
+  "title": "The Hope Wellness Center - brand film",
+  "delivery": {
+    "width": 1200,
+    "height": 628,
+    "fps": 30,
+    "total_seconds": 49.8,
+    "frames": 1494,
+    "aspect": "1.911:1",
+    "video": "H.264 High yuv420p",
+    "audio": "AAC 192 kb/s 48 kHz stereo"
+  },
+  "brand": {
+    "name": "The Hope Wellness Center",
+    "url": "thehopewellnesscenter.com",
+    "blue": "#104C98",
+    "green": "#4EC441",
+    "states": [
+      "MA",
+      "RI",
+      "NY",
+      "CO",
+      "AZ"
+    ],
+    "model": "telehealth only",
+    "logo_source": "https://thehopewellnesscenter.com/wp-content/uploads/2024/12/Hope-Wellness-Center-Mental-Health.png"
+  },
+  "safe_box": {
+    "x0": 72,
+    "y0": 46,
+    "x1": 1128,
+    "y1": 582
+  },
+  "emotional_arc": [
+    "brand ink signature",
+    "pressure",
+    "pause",
+    "reflection",
+    "expression",
+    "support",
+    "everyday",
+    "services",
+    "access",
+    "telehealth",
+    "confidence",
+    "forward",
+    "hope",
+    "brand resolve"
+  ],
+  "sections": [
+    {
+      "id": "s0_ink_logo",
+      "kind": "intro",
+      "screen_in": 0.0,
+      "screen_out": 4.2,
+      "source": "official logo (particle ink)",
+      "intent": "ink particles sampled from the official logo coalesce into it, then the exact bitmap cross-resolves; nothing is redrawn",
+      "transition_out": "inkdissolve"
+    },
+    {
+      "id": "s1_swim",
+      "kind": "clip",
+      "source": "upload1.mp4",
+      "screen_in": 4.2,
+      "screen_out": 8.4,
+      "screen_dur": 4.2,
+      "src_in": 0.35,
+      "src_out": 4.55,
+      "speed": 1.0,
+      "view_start": [
+        552,
+        452,
+        1104,
+        700,
+        208
+      ],
+      "view_end": [
+        552,
+        458,
+        1072,
+        680,
+        196
+      ],
+      "plate_w_px": 990.4,
+      "side_extension_px": 209.6,
+      "text_side": "left",
+      "intent": "swimmer moving through water - the weight being moved through",
+      "transition_out": "ripple",
+      "transition_note": "water ripple off the swimmer becomes a circular mask"
+    },
+    {
+      "id": "s2_bench",
+      "kind": "still",
+      "source": "still1_bench",
+      "screen_in": 8.4,
+      "screen_out": 11.2,
+      "screen_dur": 2.8,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
+      "view_start": [
+        548,
+        430,
+        780,
+        700,
+        500
+      ],
+      "view_end": [
+        544,
+        424,
+        720,
+        664,
+        476
+      ],
+      "plate_w_px": 699.8,
+      "side_extension_px": 500.2,
+      "text_side": "left",
+      "intent": "stillness given real motion by a slow push and drifting leaves",
+      "transition_out": "swipebar",
+      "transition_note": "a brand-green bar swipes across and drags the next shot in"
+    },
+    {
+      "id": "s3_tree",
+      "kind": "clip",
+      "source": "upload2.mp4",
+      "screen_in": 11.2,
+      "screen_out": 15.0,
+      "screen_dur": 3.8,
+      "src_in": 0.25,
+      "src_out": 4.05,
+      "speed": 1.0,
+      "view_start": [
+        470,
+        424,
+        900,
+        782,
+        0
+      ],
+      "view_end": [
+        466,
+        434,
+        872,
+        756,
+        0
+      ],
+      "plate_w_px": 722.8,
+      "side_extension_px": 477.2,
+      "text_side": "right",
+      "intent": "tree pose, breath ring, slow push",
+      "transition_out": "ring",
+      "transition_note": "breath ring expands past the frame edge"
+    },
+    {
+      "id": "s4_paint",
+      "kind": "still",
+      "source": "still4_paint",
+      "screen_in": 15.0,
+      "screen_out": 17.8,
+      "screen_dur": 2.8,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
+      "view_start": [
+        540,
+        426,
+        880,
+        744,
+        0
+      ],
+      "view_end": [
+        546,
+        430,
+        836,
+        716,
+        0
+      ],
+      "plate_w_px": 742.8,
+      "side_extension_px": 457.2,
+      "text_side": "right",
+      "intent": "creative expression; camera drifts across the canvas",
+      "transition_out": "zoomblur",
+      "transition_note": "punch in through the canvas into the wheel"
+    },
+    {
+      "id": "s5_wheel",
+      "kind": "clip",
+      "source": "upload4.mp4",
+      "screen_in": 17.8,
+      "screen_out": 21.6,
+      "screen_dur": 3.8,
+      "src_in": 0.5,
+      "src_out": 4.3,
+      "speed": 1.0,
+      "view_start": [
+        552,
+        436,
+        1064,
+        656,
+        180
+      ],
+      "view_end": [
+        552,
+        432,
+        1064,
+        644,
+        160
+      ],
+      "plate_w_px": 1018.6,
+      "side_extension_px": 181.4,
+      "text_side": "left",
+      "intent": "pottery wheel, glow rings around the hands",
+      "transition_out": "ripple",
+      "transition_note": "the glowing wheel disc expands into a circular mask"
+    },
+    {
+      "id": "s6_tree_still",
+      "kind": "still",
+      "source": "still5_tree",
+      "screen_in": 21.6,
+      "screen_out": 23.8,
+      "screen_dur": 2.2,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
+      "view_start": [
+        560,
+        420,
+        880,
+        736,
+        0
+      ],
+      "view_end": [
+        556,
+        424,
+        844,
+        712,
+        0
+      ],
+      "plate_w_px": 750.9,
+      "side_extension_px": 449.1,
+      "text_side": "right",
+      "intent": "held beat between the two service blocks",
+      "transition_out": "leafwipe",
+      "transition_note": "a defocused leaf crosses the lens; the cut hides behind it"
+    },
+    {
+      "id": "s7_band",
+      "kind": "clip",
+      "source": "upload5.mp4",
+      "screen_in": 23.8,
+      "screen_out": 27.6,
+      "screen_dur": 3.8,
+      "src_in": 0.4,
+      "src_out": 4.2,
+      "speed": 1.0,
+      "view_start": [
+        552,
+        444,
+        1104,
+        706,
+        206
+      ],
+      "view_end": [
+        552,
+        442,
+        1076,
+        700,
+        200
+      ],
+      "plate_w_px": 982.0,
+      "side_extension_px": 218.0,
+      "text_side": "left",
+      "intent": "band reads as a horizontal rule; type space left",
+      "transition_out": "bandwipe",
+      "transition_note": "the resistance band becomes a travelling stroke"
+    },
+    {
+      "id": "s8_band_close",
+      "kind": "clip",
+      "source": "upload5.mp4",
+      "screen_in": 27.6,
+      "screen_out": 31.0,
+      "screen_dur": 3.4,
+      "src_in": 4.6,
+      "src_out": 7.6,
+      "speed": 0.8824,
+      "view_start": [
+        552,
+        444,
+        1088,
+        744,
+        262
+      ],
+      "view_end": [
+        548,
+        444,
+        1052,
+        736,
+        252
+      ],
+      "plate_w_px": 918.4,
+      "side_extension_px": 281.6,
+      "text_side": "left",
+      "intent": "contiguous cut-in on continuing action",
+      "transition_out": "push",
+      "transition_note": "the frame pushes sideways, carrying the reframe"
+    },
+    {
+      "id": "s9_pottery_still",
+      "kind": "still",
+      "source": "still2_pottery",
+      "screen_in": 31.0,
+      "screen_out": 33.4,
+      "screen_dur": 2.4,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
+      "view_start": [
+        560,
+        410,
+        820,
+        700,
+        464
+      ],
+      "view_end": [
+        556,
+        414,
+        788,
+        676,
+        468
+      ],
+      "plate_w_px": 735.7,
+      "side_extension_px": 464.3,
+      "text_side": "left",
+      "intent": "calm still under the telehealth + states line",
+      "transition_out": "swipebar",
+      "transition_note": "a green bar swipes back the other way into the turn"
+    },
+    {
+      "id": "s10_dance",
+      "kind": "still",
+      "source": "still3_dance",
+      "screen_in": 33.4,
+      "screen_out": 36.4,
+      "screen_dur": 3.0,
+      "src_in": null,
+      "src_out": null,
+      "speed": null,
+      "view_start": [
+        552,
+        440,
+        1000,
+        700,
+        303
+      ],
+      "view_end": [
+        552,
+        446,
+        960,
+        676,
+        288
+      ],
+      "plate_w_px": 897.1,
+      "side_extension_px": 302.9,
+      "text_side": "left",
+      "intent": "the most uplifting image in the set carries the turn",
+      "transition_out": "trailwipe",
+      "transition_note": "motion trail sweeps into water"
+    },
+    {
+      "id": "s11_swim_fwd",
+      "kind": "clip",
+      "source": "upload1.mp4",
+      "screen_in": 36.4,
+      "screen_out": 39.6,
+      "screen_dur": 3.2,
+      "src_in": 5.6,
+      "src_out": 8.2,
+      "speed": 0.8125,
+      "view_start": [
+        552,
+        456,
+        1080,
+        692,
+        218
+      ],
+      "view_end": [
+        552,
+        462,
+        1040,
+        664,
+        210
+      ],
+      "plate_w_px": 980.1,
+      "side_extension_px": 219.9,
+      "text_side": "left",
+      "intent": "pure motion beat, deliberately free of typography",
+      "transition_out": "ripple",
+      "transition_note": "bow-wave ripple reveals the chair - mirrors the opening"
+    },
+    {
+      "id": "s12_read_hope",
+      "kind": "clip",
+      "source": "upload3.mp4",
+      "screen_in": 39.6,
+      "screen_out": 44.4,
+      "screen_dur": 4.8,
+      "src_in": 2.32,
+      "src_out": 5.8,
+      "speed": 0.725,
+      "view_start": [
+        584,
+        398,
+        884,
+        762,
+        468
+      ],
+      "view_end": [
+        588,
+        402,
+        856,
+        744,
+        456
+      ],
+      "plate_w_px": 728.5,
+      "side_extension_px": 471.5,
+      "text_side": "left",
+      "intent": "'hope' rises from the book in brand blue + green",
+      "transition_out": "gather",
+      "transition_note": "hope-words and botanicals gather to centre, into the card"
+    },
+    {
+      "id": "s13_resolve",
+      "kind": "card",
+      "screen_in": 44.4,
+      "screen_out": 49.8,
+      "source": "official logo + CTA"
+    }
+  ],
+  "transitions": [
+    {
+      "at": 4.2,
+      "dur": 0.72,
+      "kind": "inkdissolve",
+      "note": "the logo breaks back into ink motes and reveals the water"
+    },
+    {
+      "at": 8.4,
+      "dur": 0.8,
+      "kind": "ripple",
+      "origin": [
+        0.62,
+        0.56
+      ],
+      "note": "water ripple off the swimmer becomes a circular mask"
+    },
+    {
+      "at": 11.2,
+      "dur": 0.58,
+      "kind": "swipebar",
+      "d": 1,
+      "note": "a brand-green bar swipes across and drags the next shot in"
+    },
+    {
+      "at": 15.0,
+      "dur": 0.72,
+      "kind": "ring",
+      "origin": [
+        0.58,
+        0.46
+      ],
+      "note": "breath ring expands past the frame edge"
+    },
+    {
+      "at": 17.8,
+      "dur": 0.62,
+      "kind": "zoomblur",
+      "note": "punch in through the canvas into the wheel"
+    },
+    {
+      "at": 21.6,
+      "dur": 0.62,
+      "kind": "ripple",
+      "origin": [
+        0.56,
+        0.62
+      ],
+      "note": "the glowing wheel disc expands into a circular mask"
+    },
+    {
+      "at": 23.8,
+      "dur": 0.68,
+      "kind": "leafwipe",
+      "note": "a defocused leaf crosses the lens; the cut hides behind it"
+    },
+    {
+      "at": 27.6,
+      "dur": 0.62,
+      "kind": "bandwipe",
+      "note": "the resistance band becomes a travelling stroke"
+    },
+    {
+      "at": 31.0,
+      "dur": 0.6,
+      "kind": "push",
+      "d": -1,
+      "note": "the frame pushes sideways, carrying the reframe"
+    },
+    {
+      "at": 33.4,
+      "dur": 0.58,
+      "kind": "swipebar",
+      "d": -1,
+      "note": "a green bar swipes back the other way into the turn"
+    },
+    {
+      "at": 36.4,
+      "dur": 0.72,
+      "kind": "trailwipe",
+      "note": "motion trail sweeps into water"
+    },
+    {
+      "at": 39.6,
+      "dur": 0.8,
+      "kind": "ripple",
+      "origin": [
+        0.58,
+        0.52
+      ],
+      "note": "bow-wave ripple reveals the chair - mirrors the opening"
+    },
+    {
+      "at": 44.4,
+      "dur": 0.92,
+      "kind": "gather",
+      "note": "hope-words and botanicals gather to centre, into the card"
+    }
+  ],
+  "copy": [
+    {
+      "id": "c1",
+      "t_in": 4.86,
+      "t_out": 8.16,
+      "anim": "ripplemask",
+      "lines": [
+        "When life",
+        "feels heavy\u2026"
+      ],
+      "states": null,
+      "size": 68,
+      "weight": "Bold",
+      "x": 76,
+      "y": 300,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c2",
+      "t_in": 8.94,
+      "t_out": 11.0,
+      "anim": "pop3d",
+      "lines": [
+        "Find space",
+        "to breathe."
+      ],
+      "states": null,
+      "size": 72,
+      "weight": "Bold",
+      "x": 76,
+      "y": 222,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c3",
+      "t_in": 11.86,
+      "t_out": 14.8,
+      "anim": "swipe",
+      "lines": [
+        "A place",
+        "to feel",
+        "heard."
+      ],
+      "states": null,
+      "size": 72,
+      "weight": "Bold",
+      "x": 790,
+      "y": 170,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c4",
+      "t_in": 15.62,
+      "t_out": 17.62,
+      "anim": "wordblur",
+      "lines": [
+        "Care that makes",
+        "room for the",
+        "whole person."
+      ],
+      "states": null,
+      "size": 46,
+      "weight": "SemiBold",
+      "x": 764,
+      "y": 224,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c5a",
+      "t_in": 18.32,
+      "t_out": 19.86,
+      "anim": "pop3d",
+      "lines": [
+        "Personalized",
+        "support."
+      ],
+      "states": null,
+      "size": 58,
+      "weight": "Bold",
+      "x": 76,
+      "y": 228,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c5b",
+      "t_in": 19.96,
+      "t_out": 21.42,
+      "anim": "swap",
+      "lines": [
+        "Care built",
+        "around you."
+      ],
+      "states": null,
+      "size": 58,
+      "weight": "Bold",
+      "x": 76,
+      "y": 228,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c6",
+      "t_in": 21.98,
+      "t_out": 23.62,
+      "anim": "swipe",
+      "lines": [
+        "Wherever",
+        "life happens."
+      ],
+      "states": null,
+      "size": 58,
+      "weight": "Bold",
+      "x": 772,
+      "y": 232,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c7a",
+      "t_in": 24.36,
+      "t_out": 25.86,
+      "anim": "linewipe",
+      "lines": [
+        "Therapy"
+      ],
+      "states": null,
+      "size": 76,
+      "weight": "Bold",
+      "x": 76,
+      "y": 262,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c7b",
+      "t_in": 26.02,
+      "t_out": 27.44,
+      "anim": "linewipe",
+      "lines": [
+        "Medication",
+        "management"
+      ],
+      "states": null,
+      "size": 54,
+      "weight": "Bold",
+      "x": 76,
+      "y": 234,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c8",
+      "t_in": 28.1,
+      "t_out": 30.84,
+      "anim": "swipe",
+      "lines": [
+        "Psychiatric",
+        "care"
+      ],
+      "states": null,
+      "size": 56,
+      "weight": "Bold",
+      "x": 76,
+      "y": 222,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c9",
+      "t_in": 31.46,
+      "t_out": 33.26,
+      "anim": "riselock",
+      "lines": [
+        "Secure telehealth",
+        "across"
+      ],
+      "states": [
+        "MA",
+        "RI",
+        "NY",
+        "CO",
+        "AZ"
+      ],
+      "size": 38,
+      "weight": "SemiBold",
+      "x": 76,
+      "y": 214,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c10",
+      "t_in": 33.98,
+      "t_out": 36.24,
+      "anim": "pop3d",
+      "lines": [
+        "One small step",
+        "can begin",
+        "a new direction."
+      ],
+      "states": null,
+      "size": 48,
+      "weight": "SemiBold",
+      "x": 76,
+      "y": 214,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c12a",
+      "t_in": 40.02,
+      "t_out": 41.42,
+      "anim": "disperse",
+      "lines": [
+        "Comfort."
+      ],
+      "states": null,
+      "size": 66,
+      "weight": "Bold",
+      "x": 76,
+      "y": 294,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c12b",
+      "t_in": 41.52,
+      "t_out": 42.94,
+      "anim": "disperse",
+      "lines": [
+        "Peace of",
+        "mind."
+      ],
+      "states": null,
+      "size": 66,
+      "weight": "Bold",
+      "x": 76,
+      "y": 252,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "c12c",
+      "t_in": 43.04,
+      "t_out": 44.36,
+      "anim": "disperse",
+      "lines": [
+        "Hope."
+      ],
+      "states": null,
+      "size": 88,
+      "weight": "ExtraBold",
+      "x": 76,
+      "y": 282,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "logo",
+      "t_in": 45.2,
+      "t_out": 49.8,
+      "anim": "logo_in",
+      "lines": null,
+      "states": null,
+      "size": null,
+      "weight": "Bold",
+      "x": null,
+      "y": null,
+      "scrim": "green",
+      "color": "#104C98"
+    },
+    {
+      "id": "cta",
+      "t_in": 46.4,
+      "t_out": 49.8,
+      "anim": "riselock",
+      "lines": [
+        "Schedule Your Appointment"
+      ],
+      "states": null,
+      "size": 38,
+      "weight": "SemiBold",
+      "x": 600,
+      "y": 376,
+      "scrim": "none",
+      "color": "#104C98"
+    },
+    {
+      "id": "url",
+      "t_in": 46.96,
+      "t_out": 49.8,
+      "anim": "riselock",
+      "lines": [
+        "thehopewellnesscenter.com"
+      ],
+      "states": null,
+      "size": 31,
+      "weight": "Medium",
+      "x": 600,
+      "y": 444,
+      "scrim": "none",
+      "color": "#104C98"
+    }
+  ],
+  "resolve": {
+    "id": "s13_resolve",
+    "t_in": 44.4,
+    "t_out": 49.8,
+    "logo_hold_seconds": 4.14
+  },
+  "score": {
+    "bpm": 80,
+    "key": "A major / modal",
+    "instruments": [
+      "airy piano (struck-string model)",
+      "warm mid/side pads",
+      "sub",
+      "soft kick",
+      "shaker",
+      "tick",
+      "bell"
+    ],
+    "sound_design": [
+      "ink bloom",
+      "airy riser",
+      "low-mid whoosh",
+      "water swell",
+      "leaf rustle",
+      "breath",
+      "clay ring",
+      "band tension",
+      "footsteps"
+    ],
+    "voiceover": false,
+    "loudness": {
+      "peak_dbfs": -0.8,
+      "rms_dbfs": -14.11,
+      "lr_correlation": 0.675,
+      "mono_fold_penalty_db": -0.77
+    }
+  },
+  "review": {
+    "script": "project/qc.py",
+    "log": "docs/review-log.md"
+  }
+}
