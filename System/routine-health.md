@@ -1,6 +1,6 @@
 ---
-last_checked: 2026-08-01
-last_orchestrator_run: 2026-08-01
+last_checked: 2026-08-02
+last_orchestrator_run: 2026-08-02
 tags: [system, routines]
 ---
 
@@ -10,17 +10,17 @@ tags: [system, routines]
 
 Legacy standalone crons are **retired** — merged into umbrella. Disable in Cursor UI if still active.
 
-## Lane status (Run 39 — 2026-08-01)
+## Lane status (Run 40 — 2026-08-02)
 
 | Lane | Agent | Status | Notes |
 |------|-------|--------|-------|
-| Gmail | gmail-intel | 🟡 fallback | MCP not connected; urgent-replies refreshed from vault + source-intake-2026-07-30 |
-| Slack | slack-intel | 🟡 fallback | MCP not connected; 7 actions from handoffs; connector reauth P0 (10d open) |
+| Gmail | gmail-intel | 🟡 fallback | MCP not connected; urgent-replies refreshed from vault |
+| Slack | slack-intel | 🟡 fallback | MCP not connected; 7 actions from handoffs; connector reauth P0 (11d open) |
 | Vault | vault-pulse | 🟡 stale data | 14 overviews; most `last_touched` frozen since April 2026 |
-| Sessions | codex-session-sync | 🟡 partial | 12 files; FB Ads stubs empty; Bridge post-Tori capture 19d overdue |
+| Sessions | codex-session-sync | 🟡 partial | 13 files; FB Ads stubs empty; Bridge post-Tori capture 20d overdue |
 | Ads/SEO | domain-ads-seo | 🟡 drift | Google queue empty; Replenish billing block from Jul 30 intake |
-| Content | content-routines | ⚪ skipped | Saturday — not Sunday/Thursday; **book SEO sweep overdue since Jul 31** |
-| Consolidation | memory-consolidator | 🟢 done | Brief + memory sync updated 2026-08-01 |
+| Content | content-routines | 🟢 done | Sunday — BOK + Align week of Aug 3 drafted in `03_Content/` |
+| Consolidation | memory-consolidator | 🟢 done | Brief + memory sync updated 2026-08-02 |
 
 ## Retired crons (disable in Cursor UI)
 
@@ -34,7 +34,7 @@ Legacy standalone crons are **retired** — merged into umbrella. Disable in Cur
 
 ## Notes
 
-- Run 39 on branch `cursor/competitive-task-consolidation-2913`.
+- Run 40 on branch `cursor/competitive-task-consolidation-fe7a`.
 - Gmail + Slack MCP reconnection is the highest-leverage infra fix.
 - Vault frontmatter refresh needed when touching any client account.
-- **Next content-routines fire: Sunday 2026-08-02** (BOK social + Align LinkedIn).
+- **Next content-routines fire: Thursday 2026-08-07** (book SEO sweep — overdue since Jul 31).

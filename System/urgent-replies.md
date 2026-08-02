@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-08-01
+last_updated: 2026-08-02
 tags: [system, urgent]
 ---
 
@@ -11,8 +11,8 @@ Updated by `competitive-task-orchestrator` (gmail-intel lane). Vault-fallback wh
 
 • **Jason Fallon / Sean Boyle** — EOM classifications **OVERDUE** (due Jul 31): Chatbot, CallRail after-hours/SMS, Internal Agent workflows. Classify each as built / tested / blocked / approval-required with evidence. No SMS activation without explicit approval.
 • **Replenish (Mia Lange)** — Confirm Google Ads billing screen completed and campaigns serving (billing block 2026-07-30).
-• **BOK Law** — Ship Wed Wisdom (Jul 30) + Turn the Page (Jul 31) + Family Fri (Aug 1) + entire Jun/Jul backlog to Dorothy (CC: akocelko, rbowe). Drafts in `03_Content/Bok Law — week of 2026-07-28.md`.
-• **Align HCM** — Ship SmartCare post (Jul 30) + overdue Maher/Joann/Jul 21 posts. Drafts in `03_Content/Align HCM — week of 2026-07-28.md`.
+• **BOK Law** — Ship entire Jun/Jul backlog **today** plus Aug 6–8 drafts to Dorothy (CC: akocelko, rbowe). Jul drafts in `03_Content/Bok Law — week of 2026-07-28.md`; Aug in `03_Content/Bok Law — week of 2026-08-03.md`.
+• **Align HCM** — Ship SmartCare (Jul 30) + Maher/Joann/Jul 21 backlog **today**. Jul drafts in `03_Content/Align HCM — week of 2026-07-28.md`; Aug in `03_Content/Align HCM — week of 2026-08-03.md`.
 
 ## This week
 

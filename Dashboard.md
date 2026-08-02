@@ -21,23 +21,24 @@ tags: [dashboard, moc]
 
 ## Today
 
-From [[Daily-Briefs/competitive-task-today]] (2026-08-01):
+From [[Daily-Briefs/competitive-task-today]] (2026-08-02):
 
 - [ ] **Jason/Sean EOM** — classify Chatbot, CallRail SMS, Internal Agent workflows (**OVERDUE** since Jul 31)
 - [ ] **Replenish** — confirm Mia completed Google Ads billing update
-- [ ] **NKCDC** — escalate with Mac; launch blocked ~108 days
+- [ ] **NKCDC** — escalate with Mac; launch blocked ~109 days
 - [ ] **Hardwood Artisan** — billing nudge via Sean
-- [ ] **Netlify** — inventory suspended sites; decide top-up vs Aug 6 reset
+- [ ] **Netlify** — inventory suspended sites; decide top-up vs Aug 6 reset (**4 days**)
+- [ ] **Ship BOK + Align backlog** — Jun/Jul unshipped; Aug drafts ready in `03_Content/`
 
 ## Active Projects
 - [[02_Campaigns/AI Site Builder Outreach Engine|AI Site Builder Outreach Engine]] — Mac's acquisition pipeline
-- [[01_Clients/Bridge Software Development/overview|Bridge Software Development]] — Tori capture overdue
+- [[01_Clients/Bridge Software Development/overview|Bridge Software Development]] — Tori capture 20 days overdue
 - [[12_Brain/09_Ops/Netlify Credits Suspension 2026-07-30|Netlify Credits Suspension]]
 
 ## Notes
 - Umbrella automation: `competitive-task-orchestrator` (cron `0 13 * * *`)
 - Disable 7 legacy crons — see [[System/competitive-task-definition]]
-- **Tomorrow (Sun Aug 2):** content-routines fires — BOK social + Align LinkedIn drafts
+- Run 40 executed: BOK + Align week of Aug 3 drafts landed in `03_Content/`
 
 ## Brain
 - Canonical layer: [[12_Brain/README|12_Brain]] (do not create `1Z_Brain/`)

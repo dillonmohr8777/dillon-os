@@ -1,5 +1,5 @@
 ---
-last_checked: 2026-08-01
+last_checked: 2026-08-02
 source_mode: vault-fallback
 tags: [system, slack, competitive-task]
 ---
@@ -12,7 +12,7 @@ Ingested from vault handoffs (Slack MCP unavailable). Sources: `handoffs/marketi
 
 | Severity | Channel / source | Summary | Owner | Due |
 |----------|------------------|---------|-------|-----|
-| **P0** | Codex Slack connector | `oauth_refresh_token_rejected` / `reauthentication_required` — Codex Slack plugin session expired. Blocks all Slack MCP reads and Slack AI reintegration until interactive reconnect on each desktop. **10 days open** since 2026-07-22. | Dillon (operator) | ASAP |
+| **P0** | Codex Slack connector | `oauth_refresh_token_rejected` / `reauthentication_required` — Codex Slack plugin session expired. Blocks all Slack MCP reads and Slack AI reintegration until interactive reconnect on each desktop. **11 days open** since 2026-07-22. | Dillon (operator) | ASAP |
 
 ## Actions
 
@@ -35,5 +35,5 @@ Ingested from vault handoffs (Slack MCP unavailable). Sources: `handoffs/marketi
 
 ## Notes
 
-- No new Slack-derived actions since Run 38; connector reauth remains the highest-leverage unblock.
+- No new Slack-derived actions since Run 39; connector reauth remains the highest-leverage unblock.
 - Jul 30 source intake confirmed Slack connected but Composio Enhanced Controls block direct execution in some clients.

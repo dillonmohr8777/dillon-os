@@ -1,5 +1,5 @@
 ---
-last_sync: 2026-08-01
+last_sync: 2026-08-02
 tags: [system, memory, sync]
 ---
 
@@ -15,16 +15,16 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `me
 • Omega Landscaping ($200/mo) — active, chasing David for drone footage.
 • Jeff Hozias / Rand Realty ($200/mo) — active, Meta seller campaign approved 2026-04-14, not launched.
 • Fresh Blends / Replenish ($500/mo) — active; **Replenish Google Ads billing block** (2026-07-30).
-• BOK Law — active, **7+ week social backlog unshipped**.
-• NKCDC — active, BLOCKED on NKCDC shipping Free Tax Prep landing page (~108 days).
+• BOK Law — active, **7+ week social backlog unshipped**; Aug 6–8 drafts ready (Run 40).
+• NKCDC — active, BLOCKED on NKCDC shipping Free Tax Prep landing page (~109 days).
 • Commercial Cleaners Alliance — onboarding, creatives in flight.
 • Hardwood Artisan ($150/mo) — AT RISK, billing card update outstanding since 2026-04-07.
 • Onsite Concrete & Landscape — active, standing Thursday 1:00 PM ET call.
 • BigOrange Marketing — active, Custom Home Builder pillar audit due 2026-08-10.
-• Bridge Software Development — active discovery; post-Tori meeting capture 19 days overdue.
+• Bridge Software Development — active discovery; post-Tori meeting capture 20 days overdue.
 
 ## Full-time
-• Align HCM — Dillon's full-time employer. Not a client. **SmartCare + Maher/Joann backlog unshipped.**
+• Align HCM — Dillon's full-time employer. Not a client. **SmartCare + Maher/Joann backlog unshipped**; Aug 4–8 drafts ready (Run 40).
 
 ## Pending deliverables
 • **Jason/Sean EOM** — classify Chatbot, CallRail SMS, Internal Agent workflows (**OVERDUE since 2026-07-31**).
@@ -37,19 +37,19 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `me
 • Hardwood Artisan — CHASE billing card update before engagement pauses.
 • Omega Landscaping — drone footage from David.
 • Jeff Hozias — launch approved seller Meta campaign.
-• BOK Law — ship Jun/Jul social backlog (drafts in `03_Content/`).
-• Align HCM — ship overdue LinkedIn posts (drafts in `03_Content/`).
+• BOK Law — ship Jun/Jul social backlog; Aug 6–8 drafts in `03_Content/Bok Law — week of 2026-08-03.md`.
+• Align HCM — ship overdue LinkedIn posts; Aug 4–8 drafts in `03_Content/Align HCM — week of 2026-08-03.md`.
 • Bridge — capture Tori meeting outcome; update overview `next_action`.
-• Book site — fix dead email capture endpoint; run overdue Thursday SEO sweep.
+• Book site — fix dead email capture endpoint; run overdue Thursday SEO sweep (Aug 7).
 
 ## Upcoming deadlines (7 days)
-• **2026-08-02** — content-routines: BOK social + Align LinkedIn (Sunday).
 • **2026-08-06** — Netlify billing cycle reset (or approve top-up before then).
+• **2026-08-07** — book-site-seo-sweep (Thursday content-routines branch).
 • **2026-08-10** — BigOrange Custom Home Builder pillar audit + Janice interview.
 
 ## Infrastructure blockers
-• **Netlify credits suspension** — projects offline until top-up or Aug 6 reset.
-• **Codex Slack connector** — `oauth_refresh_token_rejected` (10 days open); blocks Slack MCP + Mac's AI reintegration ask.
+• **Netlify credits suspension** — projects offline until top-up or Aug 6 reset (**4 days**).
+• **Codex Slack connector** — `oauth_refresh_token_rejected` (11 days open); blocks Slack MCP + Mac's AI reintegration ask.
 • **Gmail/Slack MCP** — not connected on cloud orchestrator; vault-fallback only.
 
 ## Unanswered / urgent
