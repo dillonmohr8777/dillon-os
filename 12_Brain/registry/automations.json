@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-03",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -205,6 +205,40 @@
       "outputs": ["12_Brain/state/aeo-trust-gate.json", "Daily-Briefs/aeo-trust-report.md"],
       "external_actions": false,
       "notes": "A fail blocks deployment. A pass does not replace visual review, functional QA, or exact Netlify target verification.",
+      "status": "implemented"
+    },
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Competitive task umbrella orchestrator",
+      "lane": "operations",
+      "tier": 0,
+      "cadence": "daily 0 13 * * *",
+      "command": "follow .claude/skills/competitive-task-orchestrator/SKILL.md",
+      "inputs": [
+        "Gmail MCP or 12_Brain/01_Captures/Gmail/",
+        "Slack MCP or 00_Inbox/slack/",
+        "01_Clients/ frontmatter",
+        "10_Sessions/ and handoffs/",
+        "12_Brain/state/site-health-sentinel.json",
+        "03_Content/ and content calendars"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "Daily-Briefs/lanes/YYYY-MM-DD-*.md",
+        "12_Brain/state/competitive-task-orchestrator.json",
+        "Dashboard.md ## Today"
+      ],
+      "external_actions": false,
+      "notes": "Umbrella automation replacing 7 legacy crons (morning loop, slack-intake, client-pulse, am-report, plan-today, comm-intel ingest, content-routines). Spawns 6 parallel subagents then memory-consolidator. Prompt: System/competitive-task-orchestrator-prompt.md. Definition: System/competitive-task-definition.md.",
+      "replaces": [
+        "morning-loop",
+        "slack-intake-cron",
+        "client-pulse-cron",
+        "am-report-cron",
+        "plan-today-cron",
+        "comm-intel-ingest",
+        "content-routines-cron"
+      ],
       "status": "implemented"
     }
   ],
