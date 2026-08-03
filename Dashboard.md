@@ -5,6 +5,7 @@ tags: [dashboard, moc]
 # Dashboard
 
 ## Quick Links
+- [[Daily-Briefs/competitive-task-today|Competitive Task Today]] — **start here** (umbrella daily board)
 - [[12_Brain/INDEX|12_Brain INDEX]] — canonical second brain
 - [[12_Brain/Brain Map.canvas|Brain Map]] · [[12_Brain/bases/Clients.base|Clients base]]
 - [[12_Brain/System/Second Brain Ops|Second Brain Ops]]
@@ -19,9 +20,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Jason/Sean bot + case-status alerts — draft bounded ETA (OVERDUE since Jul 30)
+- [ ] Replenish Google Ads billing — confirm Mia completed payment screen
+- [ ] NKCDC tax-prep LP — draft follow-up to Anthony (silent since April)
 
 ## Active Projects
 -

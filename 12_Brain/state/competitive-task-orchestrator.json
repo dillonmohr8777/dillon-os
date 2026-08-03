@@ -1,0 +1,18 @@
+{
+  "automation_id": "competitive-task-orchestrator",
+  "run_date": "2026-08-03",
+  "started_at": "2026-08-03T13:03:00.000Z",
+  "completed_at": "2026-08-03T13:45:00.000Z",
+  "lanes": {
+    "gmail-intel": "fallback",
+    "slack-intel": "fallback",
+    "vault-pulse": "ok",
+    "codex-session-sync": "ok",
+    "domain-ads-seo": "ok",
+    "content-routines": "ok",
+    "memory-consolidator": "ok"
+  },
+  "p0_count": 5,
+  "legacy_crons_replaced": 7,
+  "blind_spots": ["gmail-mcp", "slack-mcp", "live-site-health"]
+}
