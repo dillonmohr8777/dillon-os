@@ -14,7 +14,7 @@ source: "[[01_Clients/Bok Law/overview|BOK Law brief]]; recovered draft c945f58;
 Three polished, design-ready posts move from practical co-parenting clarity to hopeful transitions and grounded family connection.
 
 **Delivery:** Tuesday morning email to Dorothy O'Neil, Aleksandra Kocelko, and Rachael Bowe.  
-**Subject line:** BOK Content 8/5–8/7 — Wednesday Wisdom, Turn the Page Thursday, Family Fridays  
+**Subject line:** BOK Content 8/5–8/7 — Wednesday Wisdom, Turn the Page Thursday, Family Friday
 **Designed PDF:** [[BOK Law — Social Content 2026-08-05 to 2026-08-07.pdf]]
 **Social graphics:** `assets/bok-law/social-wednesday-wisdom.png` · `assets/bok-law/social-turn-the-page-thursday.png` · `assets/bok-law/social-family-friday.png`
 
@@ -66,7 +66,7 @@ Turning the page does not mean rewriting the past. Sometimes it simply means cho
 
 **Optional hashtags:** #TurnThePageThursday #Mediation #FamilyTransitions #Pittsburgh
 
-## Family Fridays — August 7, 2026
+## Family Friday — August 7, 2026
 
 **Topic:** Letting ordinary summer moments count  
 **Graphic headline:** Ordinary summer moments are still the good stuff.
