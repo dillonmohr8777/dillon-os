@@ -5,530 +5,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BOK Law Social Content — August 5–7, 2026</title>
   <style>
-    @page { size: Letter; margin: 0; }
+    @page { size: Letter landscape; margin: 0; }
     * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: #dce5e6; color: #172326; }
+    html, body { margin: 0; padding: 0; background: #ccd7d7; color: #173f47; }
     body { font-family: Arial, Helvetica, sans-serif; }
     .page {
       position: relative;
-      width: 8.5in;
-      height: 11in;
+      width: 11in;
+      height: 8.5in;
+      display: grid;
+      grid-template-columns: 5.65in 1fr;
+      gap: .35in;
+      padding: .42in .45in;
       overflow: hidden;
       page-break-after: always;
       break-after: page;
+      background: #fbf6ec;
     }
     .page:last-child { page-break-after: auto; break-after: auto; }
-    .eyebrow {
-      margin: 0 0 10px;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .2em;
-      text-transform: uppercase;
+    .page.turn { background: #f8f1e7; }
+    .page.family { background: #fff8eb; }
+    .graphic {
+      width: 5.65in;
+      height: 7.06in;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid rgba(27, 74, 80, .12);
+      box-shadow: 0 12px 28px rgba(25, 59, 64, .14);
+    }
+    .copy {
+      min-width: 0;
+      padding: .06in 0 .3in;
+      align-self: start;
     }
     .series {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-bottom: 14px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .12em;
+      display: inline-block;
+      margin-bottom: 9px;
+      padding: 6px 11px 5px;
+      border: 1px solid #78aeb0;
+      border-radius: 999px;
+      color: #1a5b62;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: .14em;
       text-transform: uppercase;
     }
-    .series::before { content: ""; width: 27px; height: 2px; background: currentColor; }
-    h1, h2, p { margin-top: 0; }
     h1 {
-      margin-bottom: 11px;
+      margin: 0 0 6px;
+      color: #153f47;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 38px;
-      line-height: 1.02;
-      letter-spacing: -.035em;
+      font-size: 25px;
+      line-height: 1.04;
+      letter-spacing: -.025em;
+      text-wrap: balance;
     }
-    .deck {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 16px;
-      line-height: 1.42;
+    .date {
+      margin: 0 0 13px;
+      color: #587175;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
     }
-    .logo-card {
-      position: absolute;
-      z-index: 5;
-      display: grid;
-      place-items: center;
-      width: 1.32in;
-      height: 1.32in;
-      padding: 8px;
-      background: #fff;
-      border: 1px solid rgba(23, 35, 38, .14);
-      border-radius: 50%;
-      box-shadow: 0 10px 26px rgba(24, 54, 58, .15);
-    }
-    .logo-card img { display: block; width: 100%; height: 100%; object-fit: contain; }
     .caption-label {
       display: flex;
       align-items: center;
-      gap: 9px;
-      margin-bottom: 8px;
-      font-size: 10.5px;
+      gap: 8px;
+      margin-bottom: 7px;
+      color: #1b6269;
+      font-size: 8px;
       font-weight: 900;
-      letter-spacing: .18em;
+      letter-spacing: .16em;
       text-transform: uppercase;
     }
-    .caption-label::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: .22; }
+    .caption-label::after { content: ""; flex: 1; height: 1px; background: #9fc3c3; }
     .caption {
-      font-size: 13.2px;
-      line-height: 1.4;
+      color: #2d4d52;
+      font-size: 10.4px;
+      line-height: 1.34;
     }
-    .caption p { margin-bottom: 8px; }
-    .caption strong { font-weight: 800; }
+    .caption p { margin: 0 0 7px; }
+    .caption strong { color: #194e55; }
     .disclaimer {
-      margin-top: 7px;
-      font-size: 11px;
-      line-height: 1.35;
+      font-size: 8.5px;
       font-style: italic;
-      color: #4f5d60;
+      color: #637579;
     }
     .tags {
-      margin-top: 8px;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .025em;
-      color: #526266;
-    }
-    .footer {
-      position: absolute;
-      left: .52in;
-      right: .52in;
-      bottom: .25in;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 9.5px;
+      font-size: 8px;
       font-weight: 800;
+      color: #3f6b70;
+    }
+    .page-number {
+      position: absolute;
+      right: .45in;
+      bottom: .2in;
+      color: #4b7377;
+      font-size: 7px;
+      font-weight: 900;
       letter-spacing: .13em;
       text-transform: uppercase;
     }
-
-    /* Page 1: structured editorial checklist */
-    .wisdom {
-      padding: .48in .52in .44in .72in;
-      background: #f4f5ed;
-      border-left: .2in solid #8ed4dc;
-    }
-    .wisdom::before {
-      content: "05";
-      position: absolute;
-      right: -.04in;
-      top: 1.3in;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 150px;
-      font-weight: 700;
-      line-height: 1;
-      color: rgba(43, 98, 104, .055);
-    }
-    .wisdom .logo-card { top: .42in; right: .49in; }
-    .wisdom .top { width: 5.72in; }
-    .wisdom .eyebrow, .wisdom .series { color: #2a6970; }
-    .wisdom .date {
-      display: inline-block;
-      margin-bottom: 18px;
-      padding: 6px 10px;
-      background: #d8f0f1;
-      border-radius: 999px;
-      color: #245c62;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-    .wisdom .lead {
-      margin: 15px 0 12px;
-      padding: 17px 18px;
-      background: #fff;
-      border: 1px solid #d5e2de;
-      border-radius: 5px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 16px;
-      line-height: 1.38;
-      box-shadow: 0 7px 18px rgba(29, 74, 79, .07);
-    }
-    .wisdom .checks {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-    .wisdom .check {
-      min-height: 76px;
-      padding: 12px 12px 10px 38px;
-      background: #e7f3f1;
-      border-radius: 5px;
-      font-size: 11.6px;
-      line-height: 1.32;
-    }
-    .wisdom .check::before {
-      content: "✓";
-      position: absolute;
-      margin-left: -25px;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      background: #2a6970;
-      color: white;
-      font-size: 10px;
-      line-height: 17px;
-      text-align: center;
-    }
-    .wisdom .check b { display: block; margin-bottom: 2px; color: #245c62; }
-    .wisdom .caption {
-      padding: 15px 17px 12px;
-      background: rgba(255, 255, 255, .68);
-      border-top: 2px solid #8ed4dc;
-    }
-    .wisdom .caption-label { color: #2a6970; }
-    .wisdom .caption-label, .wisdom .disclaimer, .wisdom .tags { column-span: all; }
-    .wisdom .footer { color: #2a6970; }
-
-    /* Page 2: warm folded-page motif */
-    .turn {
-      padding: .46in .53in .42in;
-      background: #fbf3e8;
-    }
-    .turn::before {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      width: 5.1in;
-      height: 6.6in;
-      right: -.95in;
-      top: 1.32in;
-      background: #efd8cf;
-      transform: rotate(8deg);
-      border-radius: 4px;
-    }
-    .turn::after {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      width: 4.8in;
-      height: 5.5in;
-      right: -.75in;
-      top: 1.75in;
-      border: 1px solid rgba(116, 71, 61, .2);
-      transform: rotate(8deg);
-    }
-    .turn > * { position: relative; z-index: 1; }
-    .turn .logo-card { position: absolute; top: .39in; right: .49in; }
-    .turn .eyebrow, .turn .series { color: #9a5649; }
-    .turn .top { width: 5.65in; }
-    .turn h1 { max-width: 5.45in; font-size: 40px; }
-    .turn .quote {
-      position: relative;
-      margin: 22px 0 17px;
-      width: 6.75in;
-      padding: 24px 28px 22px 64px;
-      background: #fffdf9;
-      border: 1px solid #e2c9be;
-      box-shadow: 0 11px 24px rgba(88, 51, 44, .09);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 20px;
-      line-height: 1.28;
-      color: #713d34;
-    }
-    .turn .quote::before {
-      content: "“";
-      position: absolute;
-      left: 18px;
-      top: 3px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 67px;
-      line-height: 1;
-      color: #d18f7d;
-    }
-    .turn .prep-title {
-      margin: 0 0 9px;
-      color: #713d34;
-      font-size: 10.5px;
-      font-weight: 900;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-    .turn .prep {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px 11px;
-      width: 6.55in;
-      margin-bottom: 17px;
-      counter-reset: prep;
-    }
-    .turn .prep div {
-      position: relative;
-      min-height: 75px;
-      padding: 12px 12px 10px 39px;
-      background: rgba(255, 253, 249, .86);
-      border-bottom: 2px solid #d9a393;
-      font-size: 11.4px;
-      line-height: 1.34;
-      counter-increment: prep;
-    }
-    .turn .prep div::before {
-      content: "0" counter(prep);
-      position: absolute;
-      left: 10px;
-      top: 11px;
-      color: #8e4d40;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 12px;
-      font-weight: 700;
-    }
-    .turn .prep b { display: block; margin-bottom: 2px; color: #713d34; }
-    .turn .copy-card {
-      width: 6.75in;
-      padding: 15px 17px 12px;
-      background: rgba(255, 255, 255, .72);
-      border-left: 3px solid #b86f5f;
-    }
-    .turn .caption-label, .turn .disclaimer, .turn .tags { column-span: all; }
-    .turn .caption-label { color: #9a5649; }
-    .turn .footer { color: #8a4d41; }
-
-    /* Page 3: playful Pittsburgh family collage */
-    .family {
-      padding: .47in .52in .43in;
-      background: #f7f7e8;
-    }
-    .family .logo-card { top: .4in; right: .48in; }
-    .family .eyebrow, .family .series { color: #2d766b; }
-    .family .top { width: 5.68in; }
-    .family h1 { font-size: 39px; }
-    .family .sun {
-      position: absolute;
-      top: 1.6in;
-      right: .72in;
-      width: 1.22in;
-      height: 1.22in;
-      border-radius: 50%;
-      background: #f4c857;
-      box-shadow: 0 0 0 14px rgba(244, 200, 87, .18);
-    }
-    .family .scene {
-      position: relative;
-      height: 2.18in;
-      margin: 17px 0 14px;
-      overflow: hidden;
-      background: #cfecea;
-      border: 1px solid #abd7d2;
-      border-radius: 14px 14px 3px 3px;
-    }
-    .family .scene::before {
-      content: "";
-      position: absolute;
-      left: -5%;
-      right: -5%;
-      bottom: -35px;
-      height: 91px;
-      border-radius: 50% 50% 0 0;
-      background: #8fc2a6;
-    }
-    .family .skyline {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 45px;
-      width: 100%;
-      height: 95px;
-    }
-    .family .scene-note {
-      position: absolute;
-      left: 20px;
-      top: 18px;
-      max-width: 3.5in;
-      color: #255e58;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 20px;
-      font-style: italic;
-      line-height: 1.25;
-    }
-    .family .moments {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 7px;
-      margin-bottom: 15px;
-    }
-    .family .moment {
-      min-height: 82px;
-      padding: 12px 9px 9px;
-      background: #fff;
-      border: 1px solid #d5dfcb;
-      border-radius: 3px 11px 3px 11px;
-      text-align: center;
-      color: #315c50;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 11.8px;
-      line-height: 1.25;
-      box-shadow: 0 5px 13px rgba(50, 92, 79, .07);
-    }
-    .family .moment span {
-      display: block;
-      margin-bottom: 6px;
-      color: #8d6118;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      line-height: 1;
-    }
-    .family .copy-card {
-      display: grid;
-      grid-template-columns: 1.52fr .9fr;
-      gap: 19px;
-      padding: 14px 16px 12px;
-      background: rgba(255, 255, 255, .78);
-      border-top: 3px solid #80bfae;
-    }
-    .family .caption-label { color: #2d766b; }
-    .family .signoff {
-      display: flex;
-      align-items: center;
-      padding: 12px 13px;
-      background: #f4d27d;
-      border-radius: 4px;
-      color: #315c50;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 15px;
-      font-style: italic;
-      line-height: 1.33;
-    }
-    .family .footer { color: #2d766b; }
+    .turn .series { background: #6f9fa0; border-color: #6f9fa0; color: #fff; }
+    .turn .caption-label { color: #557f80; }
+    .family .series { background: #397d82; border-color: #397d82; color: #fff; }
+    .family .caption-label { color: #397d82; }
   </style>
 </head>
 <body>
-  <section class="page wisdom" aria-label="Wednesday Wisdom post">
-    <div class="logo-card"><img src="assets/bok-law/logo.png" alt="BOK Law and Mediation Services logo"></div>
-    <header class="top">
-      <p class="eyebrow">BOK Law &amp; Mediation Services · Social Content</p>
+  <section class="page wisdom" aria-label="Wednesday Wisdom social post and caption">
+    <img class="graphic" src="assets/bok-law/social-wednesday-wisdom.png" alt="Designed Wednesday Wisdom graphic about coordinating back-to-school plans across two homes">
+    <article class="copy">
       <div class="series">Wednesday Wisdom</div>
-      <h1>Back-to-school plans work better before the first bell.</h1>
-      <div class="date">Wednesday · August 5, 2026</div>
-    </header>
-
-    <div class="lead">A short planning conversation now can make the first weeks of school feel much more predictable across two homes.</div>
-
-    <div class="checks" aria-label="Back-to-school planning checklist">
-      <div class="check"><b>Handoffs</b>Where and when will school-day exchanges happen?</div>
-      <div class="check"><b>School communication</b>Who receives messages, forms, and calendar updates?</div>
-      <div class="check"><b>Activities &amp; expenses</b>How will new commitments and costs be discussed?</div>
-      <div class="check"><b>Schedule changes</b>How will updates be shared directly and in writing?</div>
-    </div>
-
-    <div class="caption-label">Post copy</div>
-    <div class="caption">
-      <p>Back-to-school routines can expose small gaps in a co-parenting plan very quickly.</p>
-      <p>When children move between two homes, a missed school email, an unclear pickup plan, or a last-minute activity can create stress for everyone. A short planning conversation now can make the first weeks of school feel much more predictable.</p>
-      <p>Before the first bell, it may help to confirm:</p>
-      <p><strong>Handoffs:</strong> Where and when will school-day exchanges happen?<br>
-      <strong>School communication:</strong> Who receives teacher messages, forms, and calendar updates?<br>
-      <strong>Activities and expenses:</strong> How will new commitments and costs be discussed?<br>
-      <strong>Schedule changes:</strong> How will updates be shared directly and in writing?</p>
-      <p>The goal is not a perfect schedule. It is a clear, child-focused routine that keeps children out of the middle and gives both households the same information.</p>
-      <p>Every family and parenting plan is different. If the written plan no longer matches daily life, consider getting advice specific to your situation before making lasting changes.</p>
-      <p class="disclaimer">This post is for general educational purposes only and is not legal advice.</p>
-      <p class="tags">#WednesdayWisdom &nbsp; #CoParenting &nbsp; #BackToSchool &nbsp; #PittsburghFamilies</p>
-    </div>
-
-    <footer class="footer"><span>Relationships may change. Family remains.</span><span>boklawfirm.com · 1/3</span></footer>
+      <h1>A Calmer Back-to-School Plan Across Two Homes</h1>
+      <p class="date">Wednesday · August 5, 2026</p>
+      <div class="caption-label">Post copy</div>
+      <div class="caption">
+        <p>Back-to-school routines can expose small gaps in a co-parenting plan very quickly.</p>
+        <p>When children move between two homes, a missed school email, an unclear pickup plan, or a last-minute activity can create stress for everyone. A short planning conversation now can make the first weeks of school feel much more predictable.</p>
+        <p>Before the first bell, it may help to confirm:</p>
+        <p><strong>Handoffs:</strong> Where and when will school-day exchanges happen?<br>
+        <strong>School communication:</strong> Who receives teacher messages, forms, and calendar updates?<br>
+        <strong>Activities and expenses:</strong> How will new commitments and costs be discussed?<br>
+        <strong>Schedule changes:</strong> How will updates be shared directly and in writing?</p>
+        <p>The goal is not a perfect schedule. It is a clear, child-focused routine that keeps children out of the middle and gives both households the same information.</p>
+        <p>Every family and parenting plan is different. If the written plan no longer matches daily life, consider getting advice specific to your situation before making lasting changes.</p>
+        <p class="disclaimer">This post is for general educational purposes only and is not legal advice.</p>
+        <p class="tags">#WednesdayWisdom · #CoParenting · #BackToSchool · #PittsburghFamilies</p>
+      </div>
+    </article>
+    <div class="page-number">BOK Law · 1 / 3</div>
   </section>
 
-  <section class="page turn" aria-label="Turn the Page Thursday post">
-    <div class="logo-card"><img src="assets/bok-law/logo.png" alt="BOK Law and Mediation Services logo"></div>
-    <header class="top">
-      <p class="eyebrow">BOK Law &amp; Mediation Services · Social Content</p>
+  <section class="page turn" aria-label="Turn the Page Thursday social post and caption">
+    <img class="graphic" src="assets/bok-law/social-turn-the-page-thursday.png" alt="Designed Turn the Page Thursday graphic about preparing for mediation">
+    <article class="copy">
       <div class="series">Turn the Page Thursday</div>
-      <h1>Clarity can be progress, even before agreement.</h1>
-      <p class="deck">A structured conversation can help separate what matters most from what has kept people stuck.</p>
-    </header>
-
-    <div class="quote">Turning the page does not mean rewriting the past. Sometimes it means choosing a clearer way to decide what comes next.</div>
-
-    <p class="prep-title">Four ways to prepare for a useful mediation conversation</p>
-    <div class="prep" aria-label="Mediation preparation points">
-      <div><b>Priorities before preferences</b>Know what is essential and where there may be room to move.</div>
-      <div><b>Bring the facts</b>Calendars and relevant documents can keep discussion grounded.</div>
-      <div><b>Look beyond positions</b>Needs can reveal options that fixed demands may hide.</div>
-      <div><b>Leave room to pause</b>Important decisions do not have to be made under pressure.</div>
-    </div>
-
-    <div class="copy-card">
-      <div class="caption-label">Post copy · Thursday, August 6, 2026</div>
+      <h1>Preparing for a Clearer Mediation Conversation</h1>
+      <p class="date">Thursday · August 6, 2026</p>
+      <div class="caption-label">Post copy</div>
       <div class="caption">
         <p>Mediation does not require two people to agree on every detail before they begin. It creates a structured place to identify what matters, understand where the differences are, and explore workable next steps.</p>
         <p>A little preparation can make that conversation more useful:</p>
-        <p><strong>Separate priorities from preferences.</strong> Know what is essential and where you may have room to move.<br>
-        <strong>Bring the facts.</strong> Calendars, account information, and other relevant documents can keep the discussion grounded.<br>
-        <strong>Think beyond positions.</strong> “I need stability” can open more options than “It has to happen my way.”<br>
-        <strong>Give important decisions room.</strong> A thoughtful pause can be more productive than an answer made under pressure.</p>
+        <p><strong>Separate priorities from preferences.</strong> Know what is essential and where you may have room to move.</p>
+        <p><strong>Bring the facts.</strong> Calendars, account information, and other relevant documents can keep the discussion grounded.</p>
+        <p><strong>Think beyond positions.</strong> “I need stability” can open more options than “It has to happen my way.”</p>
+        <p><strong>Give important decisions room.</strong> A thoughtful pause can be more productive than an answer made under pressure.</p>
         <p>Turning the page does not mean rewriting the past. Sometimes it simply means choosing a clearer way to decide what comes next.</p>
         <p class="disclaimer">This post is for general educational purposes only and is not legal advice.</p>
-        <p class="tags">#TurnThePageThursday &nbsp; #Mediation &nbsp; #FamilyTransitions &nbsp; #Pittsburgh</p>
+        <p class="tags">#TurnThePageThursday · #Mediation · #FamilyTransitions · #Pittsburgh</p>
       </div>
-    </div>
-
-    <footer class="footer"><span>You will be OK, with BOK.</span><span>boklawfirm.com · 2/3</span></footer>
+    </article>
+    <div class="page-number">BOK Law · 2 / 3</div>
   </section>
 
-  <section class="page family" aria-label="Family Fridays post">
-    <div class="logo-card"><img src="assets/bok-law/logo.png" alt="BOK Law and Mediation Services logo"></div>
-    <div class="sun" aria-hidden="true"></div>
-    <header class="top">
-      <p class="eyebrow">BOK Law &amp; Mediation Services · Social Content</p>
-      <div class="series">Family Fridays</div>
-      <h1>Ordinary summer moments are still the good stuff.</h1>
-      <p class="deck">There is no need to manufacture a perfect memory. Steady, simple time together is worth celebrating.</p>
-    </header>
-
-    <div class="scene" aria-label="Stylized Pittsburgh skyline">
-      <div class="scene-note">A few ordinary moments<br>can make a week feel grounded.</div>
-      <svg class="skyline" viewBox="0 0 700 100" role="img" aria-label="Pittsburgh bridge and skyline illustration">
-        <g fill="#3b716b">
-          <rect x="32" y="50" width="48" height="50"/><rect x="85" y="34" width="32" height="66"/>
-          <rect x="122" y="58" width="55" height="42"/><rect x="183" y="42" width="35" height="58"/>
-          <rect x="224" y="24" width="46" height="76"/><rect x="276" y="54" width="31" height="46"/>
-          <rect x="312" y="38" width="54" height="62"/><rect x="372" y="61" width="40" height="39"/>
-          <rect x="418" y="31" width="29" height="69"/><rect x="453" y="48" width="53" height="52"/>
-          <rect x="512" y="22" width="39" height="78"/><rect x="557" y="54" width="31" height="46"/>
-          <rect x="594" y="39" width="61" height="61"/>
-        </g>
-        <g fill="none" stroke="#e4a63f" stroke-width="6">
-          <path d="M20 75 C145 12 270 12 395 75"/><path d="M20 75 H395"/>
-          <path d="M50 63 V95 M365 63 V95"/>
-        </g>
-      </svg>
-    </div>
-
-    <div class="moments" aria-label="Simple family moment ideas">
-      <div class="moment"><span>→</span>A walk after dinner</div>
-      <div class="moment"><span>⌂</span>A favorite meal together</div>
-      <div class="moment"><span>□</span>A library stop</div>
-      <div class="moment"><span>○</span>Ten phone-free minutes</div>
-    </div>
-
-    <div class="copy-card">
-      <div>
-        <div class="caption-label">Post copy · Friday, August 7, 2026</div>
-        <div class="caption">
-          <p>August in Pittsburgh has its own rhythm: one more evening outside, one more trip for ice cream, and the first hints that school routines are almost back.</p>
-          <p>For families moving through change, simple traditions can feel especially grounding. They do not need to be elaborate:</p>
-          <p>• A walk after dinner<br>
-          • A favorite meal at the kitchen table<br>
-          • A library stop before the weekend<br>
-          • Ten phone-free minutes to hear about everyone’s day</p>
-          <p>There is no need to manufacture a perfect summer memory. A calm Friday, a familiar routine, and a little time together are worth celebrating.</p>
-          <p>However your family looks and wherever this season has taken you, we hope the weekend brings a few ordinary moments that feel good.</p>
-          <p>Happy Family Friday, Pittsburgh.</p>
-          <p class="tags">#FamilyFridays &nbsp; #PittsburghFamilies &nbsp; #SummerInPittsburgh &nbsp; #FamilyTime</p>
-        </div>
+  <section class="page family" aria-label="Family Friday social post and caption">
+    <img class="graphic" src="assets/bok-law/social-family-friday.png" alt="Designed Family Friday graphic showing a Pittsburgh family sharing a simple summer picnic">
+    <article class="copy">
+      <div class="series">Family Friday</div>
+      <h1>Letting Ordinary Summer Moments Count</h1>
+      <p class="date">Friday · August 7, 2026</p>
+      <div class="caption-label">Post copy</div>
+      <div class="caption">
+        <p>August in Pittsburgh has its own rhythm: one more evening outside, one more trip for ice cream, and the first hints that school routines are almost back.</p>
+        <p>For families moving through change, simple traditions can feel especially grounding. They do not need to be elaborate:</p>
+        <p>• A walk after dinner<br>
+        • A favorite meal at the kitchen table<br>
+        • A library stop before the weekend<br>
+        • Ten phone-free minutes to hear about everyone’s day</p>
+        <p>There is no need to manufacture a perfect summer memory. A calm Friday, a familiar routine, and a little time together are worth celebrating.</p>
+        <p>However your family looks and wherever this season has taken you, we hope the weekend brings a few ordinary moments that feel good.</p>
+        <p>Happy Family Friday, Pittsburgh.</p>
+        <p class="tags">#FamilyFridays · #PittsburghFamilies · #SummerInPittsburgh · #FamilyTime</p>
       </div>
-      <div class="signoff">“Relationships may change, but we start and end with family.”</div>
-    </div>
-
-    <footer class="footer"><span>Family Friday · August 7, 2026</span><span>boklawfirm.com · 3/3</span></footer>
+    </article>
+    <div class="page-number">BOK Law · 3 / 3</div>
   </section>
 </body>
 </html>

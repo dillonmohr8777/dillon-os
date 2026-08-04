@@ -16,6 +16,7 @@ Three polished, design-ready posts move from practical co-parenting clarity to h
 **Delivery:** Tuesday morning email to Dorothy O'Neil, Aleksandra Kocelko, and Rachael Bowe.  
 **Subject line:** BOK Content 8/5–8/7 — Wednesday Wisdom, Turn the Page Thursday, Family Fridays  
 **Designed PDF:** [[BOK Law — Social Content 2026-08-05 to 2026-08-07.pdf]]
+**Social graphics:** `assets/bok-law/social-wednesday-wisdom.png` · `assets/bok-law/social-turn-the-page-thursday.png` · `assets/bok-law/social-family-friday.png`
 
 ## Wednesday Wisdom — August 5, 2026
 
@@ -91,7 +92,8 @@ Happy Family Friday, Pittsburgh.
 
 ## Production notes
 
-- One three-page PDF; each post has its own visual system while sharing the BOK palette and official logo.
-- Keep every page on a light surface so the black-and-teal transparent logo remains legible.
+- Three standalone 1080 × 1350 illustrated social graphics plus one three-page landscape PDF containing each graphic and its full caption.
+- The visual direction follows the illustrated family scenes, cream paper, teal/navy typography, action cards, and strong branded footer used in the July 14 BOK creative set.
+- Keep every logo on a light surface so the black-and-teal transparent mark remains legible.
 - The visible logo asset was retrieved from the official BOK Law website on 2026-08-04.
 - Tone check: educational, empathetic, community-oriented, and non-solicitous.
