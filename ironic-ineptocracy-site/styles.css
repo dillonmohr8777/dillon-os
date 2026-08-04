@@ -1,0 +1,1103 @@
+/* ==========================================================================
+   The Ironic Ineptocracy — built in the IMMOHRTAL design language.
+
+   Every token below is lifted from the IMMOHRTAL site's own compiled system,
+   not approximated: the paper/ink/signal/green ramp, the chrome and chrome-light
+   metal gradients, the glass fills, the two glow recipes, --ease-hover, and the
+   Anton / Instrument Serif / Space Grotesk / IBM Plex Mono stack. The book site
+   already used Anton + IBM Plex Mono, so the typographic bridge existed before
+   this port did.
+
+   IMMOHRTAL's defining structural trick is a DUALITY: one site, two fully
+   finished palettes, switched by the visitor. Its default is the light side.
+   This is a dossier thriller, so the default here is the dark side and the light
+   side is one keystroke away — same mechanic, opposite resting state.
+
+   Fonts are self-hosted woff2. No CDN, no external origin.
+   ========================================================================== */
+
+@import url("fonts/faces.css");
+
+:root {
+  /* ---- dark side (default for a case file) ---- */
+  --paper: #06080e;
+  --paper-2: #0b111c;
+  --card: #0d1623;
+  --ink: #e2e9f5;
+  --dim: rgb(226 233 245 / 0.78);
+  --faint: rgb(226 233 245 / 0.64);
+  --signal: #1f9eff;
+  --signal-txt: #7cc4ff;
+  --green: #17a86b;
+  --green-txt: #7cf3bd;
+  --alert: #ff3f1f; /* the dossier accent: past due, sealed, redacted */
+  --alert-txt: #ff8a72;
+  --line: rgb(226 233 245 / 0.14);
+  --line-strong: rgb(226 233 245 / 0.28);
+  --glass: linear-gradient(145deg, rgb(16 27 43 / 0.92), rgb(7 12 20 / 0.86));
+  --glow-signal: 0 10px 30px rgb(31 158 255 / 0.22), 0 2px 8px rgb(31 158 255 / 0.12);
+  --glow-soft: 0 24px 60px rgb(0 0 0 / 0.5), 0 6px 18px rgb(0 0 0 / 0.35);
+
+  /* the metal ramp, verbatim from IMMOHRTAL */
+  --chrome: linear-gradient(
+    180deg,
+    #4a5464 0%,
+    #1a212c 30%,
+    #5d6a7e 48%,
+    #10151d 55%,
+    #434e5f 72%,
+    #171d27 100%
+  );
+  --chrome-light: linear-gradient(
+    180deg,
+    #f5f8fc 0%,
+    #c3cfe0 28%,
+    #77879f 46%,
+    #e8f1fb 52%,
+    #45536a 64%,
+    #9aa8bd 100%
+  );
+
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-body: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --ease-hover: cubic-bezier(0.17, 0.4, 0.02, 0.99);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --d-ui: 320ms;
+  --d-slow: 900ms;
+
+  --shell: min(1120px, calc(100% - 2 * var(--gutter)));
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --rail: clamp(2.25rem, 5vw, 4.5rem); /* space reserved for the HUD rail */
+  --r-md: 0.75rem;
+  --r-lg: 1.5rem;
+  --r-xl: 1.75rem;
+  --sec-y: clamp(4.5rem, 10vw, 9rem);
+}
+
+/* ---- light side of the duality ---- */
+:root[data-duality="light"] {
+  --paper: #f7f9fb;
+  --paper-2: #eef2f6;
+  --card: #ffffff;
+  --ink: #141922;
+  --dim: rgb(20 25 34 / 0.72);
+  --faint: rgb(20 25 34 / 0.62);
+  --signal-txt: #0d6bcc;
+  --green-txt: #0d7a4b;
+  --alert-txt: #c2290f;
+  --line: rgb(20 25 34 / 0.12);
+  --line-strong: rgb(20 25 34 / 0.24);
+  --glass: linear-gradient(165deg, rgb(255 255 255 / 0.82), rgb(244 248 252 / 0.6));
+  --glow-soft: 0 24px 60px rgb(20 25 34 / 0.12), 0 6px 18px rgb(20 25 34 / 0.08);
+  --chrome: var(--chrome-light);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: clamp(1.0625rem, 0.35vw + 0.95rem, 1.1875rem);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: background var(--d-ui) var(--ease-out), color var(--d-ui) var(--ease-out);
+}
+
+/* IMMOHRTAL washes the ground with two vast, very low-opacity radial fields —
+   one signal-blue, one green. It is what stops a flat page reading as flat. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 40rem at 78% 8%, rgb(31 158 255 / 0.1), transparent 68%),
+    radial-gradient(52rem 38rem at 12% 92%, rgb(23 168 107 / 0.08), transparent 66%);
+}
+
+img,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+img {
+  height: auto;
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  translate: -50% -130%;
+  z-index: 2000;
+  padding: 0.85rem 1.3rem;
+  background: var(--signal);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  text-decoration: none;
+  border-radius: 0 0 var(--r-md) var(--r-md);
+  transition: translate var(--d-ui) var(--ease-out);
+}
+.skip:focus {
+  translate: -50% 0;
+}
+
+/* --------------------------------------------------------------------------
+   The ambient particle field. IMMOHRTAL runs one fixed full-viewport canvas
+   behind the content and above the ground wash. Inert in every sense.
+   -------------------------------------------------------------------------- */
+.field {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.field:not([style]) {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Loader. IMMOHRTAL opens on a mark plus a mono readout that counts in, then
+   dissolves. Here it reads as a case file being opened.
+   -------------------------------------------------------------------------- */
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: grid;
+  place-items: center;
+  gap: 0.9rem;
+  background: var(--paper);
+  transition: opacity var(--d-slow) var(--ease-out), visibility var(--d-slow);
+}
+#loader.done {
+  opacity: 0;
+  visibility: hidden;
+}
+#loader .l-in {
+  display: grid;
+  justify-items: center;
+  gap: 0.9rem;
+}
+#loader .l-mark {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-transform: uppercase;
+}
+#loader .l-read {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--signal-txt);
+}
+#loader .l-bar {
+  width: min(260px, 60vw);
+  height: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+#loader .l-bar span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--signal), var(--green));
+  transform-origin: left;
+  scale: 0 1;
+  animation: l-fill 1.5s var(--ease-out) forwards;
+}
+@keyframes l-fill {
+  to {
+    scale: 1 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #loader {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   The vertical HUD rail on the right edge — IMMOHRTAL's signature chrome.
+   Section dots joined by a hairline, plus a rotated mono readout.
+   -------------------------------------------------------------------------- */
+.rail {
+  position: fixed;
+  z-index: 60;
+  right: clamp(0.5rem, 1.4vw, 1.25rem);
+  top: 50%;
+  translate: 0 -50%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+@media (min-width: 60rem) {
+  .rail {
+    display: flex;
+  }
+}
+.rail__dots {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  pointer-events: auto;
+}
+.rail__dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background var(--d-ui) var(--ease-hover), border-color var(--d-ui),
+    scale var(--d-ui) var(--ease-hover);
+}
+.rail__dot[aria-current="true"] {
+  background: var(--signal);
+  border-color: var(--signal);
+  scale: 1.35;
+}
+.rail__tick {
+  width: 1px;
+  height: 18px;
+  background: var(--line);
+}
+.rail__read {
+  margin-top: 0.85rem;
+  writing-mode: vertical-rl;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--signal-txt);
+  white-space: nowrap;
+}
+
+/* --- nav ---------------------------------------------------------------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.85rem var(--gutter);
+  padding-right: calc(var(--gutter) + var(--rail));
+  background: color-mix(in oklab, var(--paper) 84%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.25);
+  backdrop-filter: blur(16px) saturate(1.25);
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1;
+}
+.brand span {
+  color: var(--signal-txt);
+}
+.topbar nav {
+  display: none;
+  gap: 1.4rem;
+  margin-inline: auto;
+}
+@media (min-width: 62rem) {
+  .topbar nav {
+    display: flex;
+  }
+}
+.topbar nav a {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-decoration: none;
+  padding-block: 0.35rem;
+  border-bottom: 1px solid transparent;
+  transition: color var(--d-ui), border-color var(--d-ui);
+}
+.topbar nav a:hover,
+.topbar nav a:focus-visible {
+  color: var(--ink);
+  border-color: var(--signal);
+}
+.topbar__act {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: auto;
+  min-width: 0;
+}
+/* At 320px the bar cannot hold brand + duality + CTA + menu. The duality label
+   collapses to its dot and the CTA moves into the drawer, where it already is. */
+@media (max-width: 30rem) {
+  .topbar__act .btn {
+    display: none;
+  }
+  .dual {
+    padding: 0 0.6rem;
+  }
+  .dual span:not(.dual__dot) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+/* the duality switch — IMMOHRTAL's own mechanic */
+.dual {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0 0.85rem;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color var(--d-ui), background var(--d-ui);
+}
+.dual:hover {
+  border-color: var(--signal);
+}
+.dual__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--chrome);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.8rem 1.5rem;
+  border: 0;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: translate 200ms var(--ease-hover), box-shadow var(--d-ui), background var(--d-ui);
+}
+.btn--solid {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn--solid:hover {
+  translate: 0 -2px;
+  box-shadow: var(--glow-soft);
+}
+.btn--signal {
+  background: var(--signal);
+  color: #fff;
+}
+.btn--signal:hover {
+  translate: 0 -2px;
+  box-shadow: var(--glow-signal);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+.btn--ghost:hover {
+  border-color: var(--signal);
+}
+.menub {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  font: inherit;
+}
+.menub span {
+  width: 18px;
+  height: 9px;
+  border-top: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+}
+@media (min-width: 62rem) {
+  .menub {
+    display: none;
+  }
+}
+.mnav {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.9rem var(--gutter) 1.4rem;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 90;
+}
+.mnav[hidden] {
+  display: none;
+}
+.mnav a:not(.btn) {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.mnav .btn {
+  margin-top: 0.9rem;
+  justify-self: start;
+}
+
+/* --------------------------------------------------------------------------
+   Section scaffold. IMMOHRTAL composes on a centred single-column spine with
+   very generous whitespace, not a grid of panels.
+   -------------------------------------------------------------------------- */
+main {
+  position: relative;
+  z-index: 2;
+}
+.sec {
+  position: relative;
+  padding-block: var(--sec-y);
+  padding-inline: var(--gutter) calc(var(--gutter) + var(--rail));
+  scroll-margin-top: 5rem;
+}
+.sec--alt {
+  background: var(--paper-2);
+  border-block: 1px solid var(--line);
+}
+.wrap {
+  width: min(1120px, 100%);
+  margin-inline: auto;
+}
+.wrap--narrow {
+  width: min(760px, 100%);
+  margin-inline: auto;
+}
+.center {
+  text-align: center;
+}
+.center p {
+  margin-inline: auto;
+}
+
+/* the mono pill chip — IMMOHRTAL's section stamp */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 1.05rem;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--signal-txt);
+  box-shadow: var(--glow-soft);
+}
+.chip::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 3px rgb(31 158 255 / 0.18);
+}
+.chip--alert {
+  color: var(--alert-txt);
+}
+.chip--alert::before {
+  background: var(--alert);
+  box-shadow: 0 0 0 3px rgb(255 63 31 / 0.18);
+}
+
+.h-display {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 9vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.h-sec {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 0.96;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.lede {
+  margin-top: 1.2rem;
+  max-width: 60ch;
+  color: var(--dim);
+  font-size: clamp(1.125rem, 0.6vw + 1rem, 1.3125rem);
+}
+.meta {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* gradient hairline — the rule IMMOHRTAL puts above its quote panels */
+.hair {
+  height: 1px;
+  border: 0;
+  margin: 0;
+  background: linear-gradient(90deg, transparent, var(--signal), var(--green), transparent);
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   The serif quote with per-word tinting. IMMOHRTAL's most distinctive text
+   treatment: Instrument Serif at display size, each word individually tinted
+   along a blue-to-green ramp with some words dropped back, so the line reads
+   like a signal fading in and out.
+   -------------------------------------------------------------------------- */
+.quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4.6vw, 3.25rem);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-wrap: balance;
+}
+.quote w {
+  display: inline-block;
+  /* --i / --n are stamped per word by script.js; with no JS every word simply
+     inherits the ink colour and the line reads normally. */
+  color: color-mix(
+    in oklab,
+    var(--signal-txt) calc((1 - var(--i, 0.5)) * 100%),
+    var(--green-txt) calc(var(--i, 0.5) * 100%)
+  );
+  opacity: var(--o, 1);
+}
+.quote cite {
+  display: block;
+  margin-top: 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-style: normal;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* --------------------------------------------------------------------------
+   Chrome card — the big rounded metal-edged plate IMMOHRTAL centres its hero
+   art in.
+   -------------------------------------------------------------------------- */
+.plate {
+  position: relative;
+  margin: 0;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: var(--glow-soft);
+  isolation: isolate;
+}
+.plate::before {
+  /* the metal edge, drawn as a masked gradient ring */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: var(--chrome);
+  -webkit-mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  -webkit-mask-clip: content-box, border-box;
+  -webkit-mask-composite: xor;
+  mask-image: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
+  mask-clip: content-box, border-box;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.85;
+}
+.plate img {
+  width: 100%;
+  height: auto;
+}
+.plate figcaption {
+  padding: 1rem 1.25rem 1.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+  border-top: 1px solid var(--line);
+}
+
+/* 3D tilt, IMMOHRTAL's TiltBox behaviour */
+[data-tilt] {
+  transform: perspective(1000px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg));
+  transition: transform 420ms var(--ease-hover);
+}
+
+/* --- hero --------------------------------------------------------------- */
+.hero {
+  padding-top: clamp(2.5rem, 6vw, 4.5rem);
+  text-align: center;
+}
+.hero .chip {
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+.hero__plate {
+  width: min(560px, 100%);
+  margin: 0 auto clamp(2rem, 5vw, 3.25rem);
+}
+.hero .h-display {
+  margin-inline: auto;
+  max-width: 18ch;
+}
+.hero .lede {
+  margin-inline: auto;
+}
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 2.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Slogan marquee — IMMOHRTAL runs its hook as one continuous horizontal band.
+   Here it carries the regime's slogans.
+   -------------------------------------------------------------------------- */
+.marq {
+  position: relative;
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
+  border-block: 1px solid var(--line);
+  background: var(--paper-2);
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marq__track {
+  display: flex;
+  gap: 2.5rem;
+  width: max-content;
+  animation: marq 42s linear infinite;
+}
+.marq__track span {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--faint);
+  white-space: nowrap;
+}
+.marq__track span b {
+  color: var(--alert-txt);
+  font-weight: inherit;
+}
+@keyframes marq {
+  to {
+    translate: -50% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marq__track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --- file cards (power map) -------------------------------------------- */
+.files {
+  display: grid;
+  gap: 1.15rem;
+  list-style: none;
+  padding: 0;
+  margin: clamp(2rem, 5vw, 3rem) 0 0;
+}
+@media (min-width: 52rem) {
+  .files {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.file {
+  position: relative;
+  padding: 1.6rem 1.5rem 1.75rem;
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--glow-soft);
+  min-width: 0;
+}
+.file__no {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--signal-txt);
+}
+.file h3 {
+  margin: 0.65rem 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.file p {
+  color: var(--dim);
+  font-size: 1.0625rem;
+}
+.file blockquote {
+  margin: 0.9rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--alert);
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  color: var(--ink);
+}
+
+/* --- character dossiers ------------------------------------------------- */
+.cast {
+  display: grid;
+  gap: 1.15rem;
+  list-style: none;
+  padding: 0;
+  margin: clamp(2rem, 5vw, 3rem) 0 0;
+}
+@media (min-width: 44rem) {
+  .cast {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 68rem) {
+  .cast {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.subj {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--glow-soft);
+  min-width: 0;
+}
+.subj img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  /* cold at rest, true colour when attended to */
+  filter: grayscale(0.72) contrast(1.12) brightness(0.9);
+  transition: filter var(--d-slow) var(--ease-out), scale var(--d-slow) var(--ease-out);
+}
+.subj:hover img,
+.subj:focus-within img,
+.subj.seen img {
+  filter: none;
+}
+.subj__body {
+  padding: 1.1rem 1.2rem 1.35rem;
+}
+.subj__tag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.subj h3 {
+  margin: 0.5rem 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.3125rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.subj p {
+  color: var(--dim);
+  font-size: 1rem;
+}
+
+/* --- split (world / book) ---------------------------------------------- */
+.split {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+@media (min-width: 62rem) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+  .split--flip > *:first-child {
+    order: 2;
+  }
+}
+.split > * {
+  min-width: 0;
+}
+
+/* --- stat row ----------------------------------------------------------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 1rem;
+  list-style: none;
+  padding: 0;
+  margin: clamp(2rem, 4vw, 2.75rem) 0 0;
+}
+@media (min-width: 48rem) {
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.stats li {
+  min-width: 0;
+}
+.stats strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--signal-txt);
+}
+.stats span {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* --- dossier form ------------------------------------------------------- */
+.dossier {
+  padding: clamp(1.75rem, 4vw, 3rem);
+  background: var(--glass);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xl);
+  box-shadow: var(--glow-soft);
+}
+.form {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.75rem;
+}
+.form label {
+  display: grid;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.form input {
+  min-height: 50px;
+  padding: 0.75rem 1rem;
+  background: color-mix(in oklab, var(--paper) 70%, transparent);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.0625rem;
+}
+.form input:focus-visible {
+  border-color: var(--signal);
+}
+.form button {
+  justify-self: start;
+}
+.form__note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.form__status:empty {
+  display: none;
+}
+.form__status {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green-txt);
+}
+.hp {
+  position: absolute;
+  left: -9999px;
+}
+
+/* --- footer ------------------------------------------------------------- */
+.foot {
+  position: relative;
+  z-index: 2;
+  padding: var(--sec-y) var(--gutter) 2.5rem;
+  padding-right: calc(var(--gutter) + var(--rail));
+  border-top: 1px solid var(--line);
+  background: var(--paper-2);
+}
+.foot__grid {
+  display: grid;
+  gap: 2.25rem;
+  width: min(1120px, 100%);
+  margin-inline: auto;
+}
+@media (min-width: 48rem) {
+  .foot__grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+.foot h2 {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--signal-txt);
+  margin-bottom: 0.9rem;
+}
+.foot nav {
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+}
+.foot nav a {
+  font-size: 1rem;
+  color: var(--dim);
+  text-decoration: none;
+}
+.foot nav a:hover {
+  color: var(--ink);
+}
+.foot__legal {
+  width: min(1120px, 100%);
+  margin: 2.75rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* --- reveal (progressive enhancement) ---------------------------------- */
+[data-js] .rise {
+  opacity: 0;
+  translate: 0 20px;
+  transition: opacity 760ms var(--ease-out), translate 760ms var(--ease-out);
+}
+[data-js] .rise.in {
+  opacity: 1;
+  translate: 0 0;
+}
+.rise.d1 {
+  transition-delay: 90ms;
+}
+.rise.d2 {
+  transition-delay: 180ms;
+}
+.rise.d3 {
+  transition-delay: 270ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-js] .rise {
+    opacity: 1;
+    translate: none;
+  }
+}

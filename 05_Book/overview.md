@@ -1,20 +1,26 @@
 ---
 project: The Ironic Ineptocracy
 website: ironicineptocracy.com
-platform: WordPress.com
-theme: Assembler
+platform: Vercel
 genre: Dark political thriller
 status: pre-launch / growth
-last_touched: 2026-04-15
+last_touched: 2026-08-04
 tags: [book, novel, seo, personal]
 ---
 
 # The Ironic Ineptocracy
 
-Dillon Mohr's debut novel. Dark political thriller. Author platform lives at ironicineptocracy.com (WordPress.com, Assembler theme, Page ID 7).
+Dillon Mohr's debut novel. Dark political thriller. Author platform lives at ironicineptocracy.com.
+
+**Platform corrected 2026-08-04:** the live site is served from Vercel, not
+WordPress.com/Assembler — verified by `/_vercel/insights/script.js` in the
+response. It has a dossier lead form at `/api/dossier-leads` and a case-file
+structure (`Case 017`) that post-dates this note. The JS-free constraint below
+no longer applies.
 
 ## Design
-Cinematic scroll-driven, pure CSS animations only — WordPress.com strips JavaScript, so no JS-dependent effects.
+Cinematic scroll-driven, case-file framing. A concept rebuild in the IMMOHRTAL
+design language lives at `ironic-ineptocracy-site/`.
 
 ## Characters
 - **Darnell Covington** — math prodigy, East Atlanta / Harvard.
