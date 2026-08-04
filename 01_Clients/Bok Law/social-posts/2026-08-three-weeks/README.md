@@ -6,7 +6,7 @@ weeks: [2026-08-04, 2026-08-11, 2026-08-18]
 tags: [social, graphics, deliverable]
 ---
 
-# BOK Law Social Graphics — Next 3 Weeks (9 images)
+# BOK Law Social Graphics: Next 3 Weeks (9 images)
 
 Same animated structure as prior posts: soft illustrated hero, exact logo top left, teal wavy series banner, serif headline, three tip icons, cream body, teal `BOKLAWFIRM.COM` footer.
 
