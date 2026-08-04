@@ -28,14 +28,6 @@ const VIEWPORTS = [
   { name: "desktop", opts: { viewport: { width: 1440, height: 900 } } },
 ];
 
-const NEAR_BLACK = (rgb) => {
-  const m = /rgba?\((\d+),\s*(\d+),\s*(\d+)/.exec(rgb || "");
-  if (!m) return false;
-  const [r, g, b] = [+m[1], +m[2], +m[3]];
-  // #020711 and darker. The navy ground (#071632) must NOT trip this.
-  return r + g + b < 40;
-};
-
 const audit = () => {
   const bad = [];
   const push = (k, v) => bad.push(k + ": " + v);

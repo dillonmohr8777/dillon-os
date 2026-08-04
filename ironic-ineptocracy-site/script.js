@@ -24,13 +24,16 @@
   const KEY = "ii-duality";
 
   /* -- 1. duality ---------------------------------------------------------
-     IMMOHRTAL ships two finished palettes and lets the visitor choose. Default
-     here is the dark side, because it is a case file. */
+     IMMOHRTAL ships two finished palettes and lets the visitor choose. This book
+     rests on the white/red side; the sealed oxblood side is the alternate. Note
+     the default test is inverted from the obvious one — it asks whether "dark"
+     was stored, so an empty localStorage lands on white rather than needing the
+     key to be pre-seeded. */
   const dualBtn = document.getElementById("dualBtn");
   const dualLabel = document.getElementById("dualLabel");
-  let light = false;
+  let light = true;
   try {
-    light = localStorage.getItem(KEY) === "light";
+    light = localStorage.getItem(KEY) !== "dark";
   } catch {}
 
   function applyDuality() {
@@ -83,7 +86,7 @@
 
   /* -- 3. ambient field ---------------------------------------------------
      One fixed Canvas2D canvas. The tint is read from the live --signal /
-     --green tokens, so flipping the duality re-tints the field for free rather
+     --ember tokens, so flipping the duality re-tints the field for free rather
      than needing a second palette here. */
   function initField() {
     const cv = document.getElementById("field");
@@ -124,10 +127,13 @@
       // On a light ground a dot needs more area and less alpha to read as the
       // same weight it has on a dark one.
       const tints = [
-        cs.getPropertyValue("--signal").trim() || "#1f9eff",
-        cs.getPropertyValue("--green").trim() || "#17a86b",
+        cs.getPropertyValue("--signal").trim() || "#d21f28",
+        cs.getPropertyValue("--ember").trim() || "#c25214",
       ];
-      const alpha = isLight ? 0.2 : 0.34;
+      // The white side is now the default, so this is the common path, not the
+      // exception. Crimson is a darker dot than the blue this replaced, so the
+      // light-side alpha comes down again — at 0.2 it read as grain on the page.
+      const alpha = isLight ? 0.15 : 0.34;
       const rad = isLight ? 1.7 : 1.25;
       sprites = tints.map((c) => {
         const r = rad * 3.4;
