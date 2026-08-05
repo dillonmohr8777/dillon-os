@@ -5,6 +5,7 @@ tags: [dashboard, moc]
 # Dashboard
 
 ## Quick Links
+- [[Daily-Briefs/competitive-task-today|Competitive Task Today]] — single ranked daily board
 - [[12_Brain/INDEX|12_Brain INDEX]] — canonical second brain
 - [[12_Brain/Brain Map.canvas|Brain Map]] · [[12_Brain/bases/Clients.base|Clients base]]
 - [[12_Brain/System/Second Brain Ops|Second Brain Ops]]
@@ -19,9 +20,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Netlify credits reset tomorrow — inventory affected sites and verify live after Aug 6 reset
+- [ ] Jason/Sean bot + case-status alerts — 6 days unanswered; draft bounded ETA
+- [ ] Replenish Google Ads billing — chase Mia payment confirmation and verify delivery
 
 ## Active Projects
 -
