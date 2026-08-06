@@ -1,0 +1,263 @@
+{
+ "_readme": "The 15 warmest BUILDABLE rebuild targets: live sites with provable faults, so there is something to redesign against. Dead-domain prospects are excluded here despite ranking higher overall - a redesign demo needs a before. Input for the arch-factory batch. Not outbound-ready.",
+ "generated": "2026-08-06",
+ "selected": 15,
+ "excluded": "dead domains (no before to show), polish/ads_seo/nurture verdicts",
+ "prospects": [
+  {
+   "domain": "andorradental.com",
+   "business_name": "Andorra Family Dentistry",
+   "website": "https://www.andorradental.com/",
+   "vertical": "dentist",
+   "vertical_group": "medical",
+   "city": "Philadelphia",
+   "area": "Philadelphia",
+   "has_phone": true,
+   "site_quality": 26,
+   "priority": 78,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "duttonroadvetclinic.com",
+   "business_name": "Dutton Road Veterinary Clinic",
+   "website": "http://duttonroadvetclinic.com/",
+   "vertical": "veterinary",
+   "vertical_group": "medical",
+   "city": "Philadelphia",
+   "area": "Philadelphia",
+   "has_phone": true,
+   "site_quality": 25,
+   "priority": 78,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "no HTTPS — browsers mark it \"Not secure\"",
+    "table-based page layout"
+   ]
+  },
+  {
+   "domain": "bgelectricservicellc.com",
+   "business_name": "BG Electric Service LLC",
+   "website": "https://www.bgelectricservicellc.com/",
+   "vertical": "electrician",
+   "vertical_group": "home-services",
+   "city": "Philadelphia",
+   "area": "Philadelphia",
+   "has_phone": true,
+   "site_quality": 33,
+   "priority": 74,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "padentalgroup.com",
+   "business_name": "Pennsylvania Dental Group",
+   "website": "https://www.padentalgroup.com/",
+   "vertical": "dentist",
+   "vertical_group": "medical",
+   "city": "Philadelphia",
+   "area": "Philadelphia",
+   "has_phone": true,
+   "site_quality": 33,
+   "priority": 74,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "alwaysdentalcare.com",
+   "business_name": "Always Dental Care",
+   "website": "https://www.alwaysdentalcare.com/",
+   "vertical": "dentist",
+   "vertical_group": "medical",
+   "city": "Phoenixville",
+   "area": "Montgomery County",
+   "has_phone": true,
+   "site_quality": 26,
+   "priority": 72,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "colmarkids.com",
+   "business_name": "Colmar Dentistry For Kids",
+   "website": "https://www.colmarkids.com/",
+   "vertical": "dentist",
+   "vertical_group": "medical",
+   "city": "Colmar",
+   "area": "Montgomery County",
+   "has_phone": true,
+   "site_quality": 24,
+   "priority": 72,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "slow first response: 3239ms"
+   ]
+  },
+  {
+   "domain": "chestnuthillvet.com",
+   "business_name": "Chestnut Hill Animal Hospital",
+   "website": "http://chestnuthillvet.com/",
+   "vertical": "veterinary",
+   "vertical_group": "medical",
+   "city": "Erdenheim",
+   "area": "Montgomery County",
+   "has_phone": true,
+   "site_quality": 32,
+   "priority": 68,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "no HTTPS — browsers mark it \"Not secure\"",
+    "table-based page layout"
+   ]
+  },
+  {
+   "domain": "warminsterhorshamvet.com",
+   "business_name": "County Line Veterinary Hospital",
+   "website": "https://www.warminsterhorshamvet.com/",
+   "vertical": "veterinary",
+   "vertical_group": "medical",
+   "city": "Hatboro",
+   "area": "Montgomery County",
+   "has_phone": true,
+   "site_quality": 33,
+   "priority": 68,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "gleneaglepediatricdentistry.com",
+   "business_name": "Glen Eagle Pediatric Dentistry",
+   "website": "https://gleneaglepediatricdentistry.com/",
+   "vertical": "dentist",
+   "vertical_group": "medical",
+   "city": "",
+   "area": "Delaware County",
+   "has_phone": true,
+   "site_quality": 33,
+   "priority": 68,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "davidsonfab.com",
+   "business_name": "Davidson Fabricating, Inc.",
+   "website": "https://davidsonfab.com/",
+   "vertical": "metal-construction",
+   "vertical_group": "home-services",
+   "city": "",
+   "area": "Chester County",
+   "has_phone": true,
+   "site_quality": 33,
+   "priority": 65,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "dreamteampa.com",
+   "business_name": "Dream Team",
+   "website": "https://dreamteampa.com/",
+   "vertical": "hvac",
+   "vertical_group": "home-services",
+   "city": "Paoli",
+   "area": "Chester County",
+   "has_phone": true,
+   "site_quality": 33,
+   "priority": 65,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "bpmfitnessphl.com",
+   "business_name": "BPM Fitness",
+   "website": "https://bpmfitnessphl.com/",
+   "vertical": "fitness-centre",
+   "vertical_group": "spa-wellness",
+   "city": "",
+   "area": "Philadelphia",
+   "has_phone": true,
+   "site_quality": 33,
+   "priority": 65,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "only 0 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "easyautotag.com",
+   "business_name": "Easy Auto Tag & Insurance",
+   "website": "http://www.easyautotag.com/",
+   "vertical": "insurance",
+   "vertical_group": "legal",
+   "city": "",
+   "area": "Philadelphia",
+   "has_phone": true,
+   "site_quality": 36,
+   "priority": 63,
+   "faults": [
+    "no HTTPS — browsers mark it \"Not secure\"",
+    "only 11 words on the homepage",
+    "no phone number on the homepage"
+   ]
+  },
+  {
+   "domain": "electric-direct.net",
+   "business_name": "Electric Direct",
+   "website": "https://www.electric-direct.net/",
+   "vertical": "electrician",
+   "vertical_group": "home-services",
+   "city": "Havertown",
+   "area": "Delaware County",
+   "has_phone": true,
+   "site_quality": 40,
+   "priority": 63,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "thin homepage copy (126 words)",
+    "legacy site builder detected (godaddy)"
+   ]
+  },
+  {
+   "domain": "augermfgspec.com",
+   "business_name": "Auger Manufacturing Specialists",
+   "website": "http://augermfgspec.com/",
+   "vertical": "metal-construction",
+   "vertical_group": "home-services",
+   "city": "Frazer",
+   "area": "Chester County",
+   "has_phone": true,
+   "site_quality": 36,
+   "priority": 63,
+   "faults": [
+    "no viewport meta — page renders desktop-width on phones",
+    "no HTTPS — browsers mark it \"Not secure\"",
+    "no schema.org structured data"
+   ]
+  }
+ ]
+}
