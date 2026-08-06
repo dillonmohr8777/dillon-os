@@ -47,11 +47,13 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/concepts/Website SIGNAL Score|Website SIGNAL Score]] — 0–100 grade of a prospect's existing site; high score means do not pitch them a website.
 
 ## Raw captures (Git-safe)
 
 - [[12_Brain/raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
+- [[12_Brain/raw/sessions/2026-08-06-pa-website-grader|2026-08-06 pa-website-grader]] — Mac's "we need the List > Grader" thread, the source PDF, and the first live grade of the 100.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
@@ -62,6 +64,9 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
+- [[12_Brain/protocols/prospect-grading-gate|prospect-grading-gate]] — grade before build; only three of nine lanes reach outreach.
+- [[12_Brain/decisions/2026-08-06 - Grade before build, and never pitch a business whose site is already good|2026-08-06 Grade before build]] — the gate decision and what it supersedes.
+- `12_Brain/registry/grader-calibration.json` — grader anchors, including Mac's Suraya verdict as a regression test.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
 - Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
 

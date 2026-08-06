@@ -5,6 +5,12 @@
  *
  * Higher score = better candidate for a Tier-A site-factory build.
  * Decay is intentional signal (outdated sites convert better for outreach).
+ *
+ * SCOPE NOTE (2026-08-06): this scorer judges *prospect fit* from intake rows and
+ * an optional harvest. It is not the authority on how good a prospect's existing
+ * website is — `lib/grader/` is, and it is the gate that decides whether anyone is
+ * contacted at all. Run `bin/grade-list.js` first; this scorer ranks what survives.
+ * See `12_Brain/protocols/prospect-grading-gate.md`.
  */
 
 const VERTICAL_FIT = new Set([
@@ -218,14 +224,20 @@ function scoreProspect(prospect, { harvest = null, suppressIds = new Set(), supp
     components.ads = 0;
   }
 
-  // Has website usable for harvest — up to 5
+  // Has website usable for harvest — up to 5.
+  // A missing website used to read as a penalty here ("hard to harvest"), which
+  // inverted the strongest signal in the funnel: a business with no site at all is
+  // the best target, because the demo is the entire pitch. It now scores the same
+  // as having one and is flagged for the no-site build path instead.
   if (website) {
     components.website = 5;
     score += 5;
-    reasons.push('+5 has website URL');
+    reasons.push('+5 has website URL to harvest');
   } else {
-    components.website = 0;
-    reasons.push('no website URL — hard to harvest');
+    components.website = 5;
+    score += 5;
+    components.no_site = true;
+    reasons.push('+5 no website at all — strongest build target, demo is the whole pitch');
   }
 
   // Indeed / hiring signal — up to 15 (second discover source)
@@ -246,8 +258,10 @@ function scoreProspect(prospect, { harvest = null, suppressIds = new Set(), supp
 
   score = Math.max(0, Math.min(100, Math.round(score)));
 
+  // A no-website prospect is eligible too; requiring a website here is what kept
+  // the best targets out of the build queue.
   let status = 'scored';
-  if (score >= 60 && website) status = 'queued_build';
+  if (score >= 60) status = 'queued_build';
   if (score < 35) status = 'scored';
 
   return { score, reasons, components, status, suppress: false, decay };

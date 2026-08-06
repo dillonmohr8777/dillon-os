@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "updated": "2026-08-06",
+  "note": "Human verdicts that outrank the grader. Applied on every run and replayed as calibration anchors, so a correction made once becomes a permanent regression test. signal_adjustment is capped at +/-10 points: a human can nudge the grader, not overrule the evidence.",
+  "overrides": {
+    "PHL-B1-suraya": {
+      "url": "https://www.surayaphilly.com/",
+      "business_name": "Suraya",
+      "lane": "hands_off",
+      "expect_band": "excellent",
+      "reason": "Mac checked it 2026-08-05 and named it as the example of a prospect that already has a good website",
+      "recorded_by": "mac",
+      "recorded_at": "2026-08-05"
+    }
+  }
+}

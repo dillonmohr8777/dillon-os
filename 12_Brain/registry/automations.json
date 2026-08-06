@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-06",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -11,8 +11,13 @@
       "tier": 0,
       "cadence": "on-demand + pre-pulse",
       "command": "node _os/automation/bin/frontmatter-validate.js",
-      "inputs": ["01_Clients/**/*.md"],
-      "outputs": ["12_Brain/state/frontmatter-validate.json", "Daily-Briefs/frontmatter-report.md"],
+      "inputs": [
+        "01_Clients/**/*.md"
+      ],
+      "outputs": [
+        "12_Brain/state/frontmatter-validate.json",
+        "Daily-Briefs/frontmatter-report.md"
+      ],
       "external_actions": false,
       "status": "implemented"
     },
@@ -23,8 +28,12 @@
       "tier": 0,
       "cadence": "on-demand",
       "command": "node _os/automation/bin/frontmatter-repair.js --dry-run",
-      "inputs": ["01_Clients/**/*.md"],
-      "outputs": ["12_Brain/state/frontmatter-repair.json"],
+      "inputs": [
+        "01_Clients/**/*.md"
+      ],
+      "outputs": [
+        "12_Brain/state/frontmatter-repair.json"
+      ],
       "external_actions": false,
       "notes": "Omit --dry-run to write missing required keys with safe defaults. Never invent due dates.",
       "status": "implemented"
@@ -36,8 +45,13 @@
       "tier": 0,
       "cadence": "daily",
       "command": "node _os/automation/bin/site-health.js --dry-run",
-      "inputs": ["12_Brain/registry/properties.json"],
-      "outputs": ["12_Brain/state/site-health.json", "Daily-Briefs/site-health-report.md"],
+      "inputs": [
+        "12_Brain/registry/properties.json"
+      ],
+      "outputs": [
+        "12_Brain/state/site-health.json",
+        "Daily-Briefs/site-health-report.md"
+      ],
       "external_actions": false,
       "notes": "Dry-run uses fixtures. Live HTTP checks are opt-in via --live and still never POST real user data except a marked canary when --canary is set.",
       "status": "implemented"
@@ -49,10 +63,60 @@
       "tier": 0,
       "cadence": "on-demand / weekly batch prep",
       "command": "node _os/automation/bin/qualify.js --from <intake.json>",
-      "inputs": ["prospect intake JSON (maps or indeed adapter)", "optional harvest.json", "01_Clients suppress list"],
-      "outputs": ["12_Brain/queue/qualify-*.jsonl", "08_Prospects/*.md", "12_Brain/state/qualify-last.json"],
+      "inputs": [
+        "prospect intake JSON (maps or indeed adapter)",
+        "optional harvest.json",
+        "01_Clients suppress list"
+      ],
+      "outputs": [
+        "12_Brain/queue/qualify-*.jsonl",
+        "08_Prospects/*.md",
+        "12_Brain/state/qualify-last.json"
+      ],
       "external_actions": false,
       "notes": "Drafts only. Feeds Mac's site-factory pipeline (#226). Indeed is an adapter, not a parallel stack.",
+      "status": "implemented"
+    },
+    {
+      "id": "site-grader",
+      "name": "Prospect website grader (List > Grader gate)",
+      "lane": "outreach",
+      "tier": 0,
+      "cadence": "on-demand / before every weekly batch",
+      "command": "node _os/automation/bin/grade-list.js --from <roster.json> --take 25",
+      "inputs": [
+        "prospect roster JSON or CSV",
+        "12_Brain/state/grader-overrides.json",
+        "01_Clients suppress list"
+      ],
+      "outputs": [
+        "<roster>-graded.json",
+        "<roster>-graded.csv",
+        "12_Brain/state/site-grader.json",
+        "12_Brain/queue/site-grader-*.jsonl"
+      ],
+      "external_actions": false,
+      "notes": "Read-only GETs of public homepages. Gates stage 2 of the outreach pipeline: only build/rebuild/refresh lanes may proceed to a brief. SIGNAL 80+ is hands-off. Blocked or unreadable pages route to manual review, never to outreach. Docs: _os/automation/docs/GRADER.md.",
+      "status": "implemented"
+    },
+    {
+      "id": "grader-calibration",
+      "name": "Grader calibration against human anchors",
+      "lane": "outreach",
+      "tier": 0,
+      "cadence": "after any weights change; weekly",
+      "command": "node _os/automation/bin/grade-calibrate.js",
+      "inputs": [
+        "12_Brain/registry/grader-calibration.json",
+        "_os/automation/fixtures/grader/*.html",
+        "12_Brain/state/grader-overrides.json"
+      ],
+      "outputs": [
+        "12_Brain/state/grader-calibration.json",
+        "12_Brain/state/grader-calibration-last.json"
+      ],
+      "external_actions": false,
+      "notes": "Fails closed (exit 4) when the anchors disagree with the grader. Offline fixture anchors must hit their exact band. Add --live to hit real anchor URLs. Unreadable live anchors are reported as coverage gaps, not failures.",
       "status": "implemented"
     },
     {
@@ -62,7 +126,10 @@
       "tier": 0,
       "cadence": "weekly",
       "command": "node _templates/site-factory/build-batch.js <batch-dir>",
-      "depends_on": ["discover-qualify", "pr-226"],
+      "depends_on": [
+        "discover-qualify",
+        "pr-226"
+      ],
       "external_actions": false,
       "status": "external-dependency"
     },
@@ -72,7 +139,12 @@
       "lane": "outreach",
       "tier": 2,
       "cadence": "per approved batch",
-      "depends_on": ["site-factory-batch", "human-approval", "mail-vendor", "netlify-token"],
+      "depends_on": [
+        "site-factory-batch",
+        "human-approval",
+        "mail-vendor",
+        "netlify-token"
+      ],
       "external_actions": true,
       "status": "gated"
     },
@@ -94,8 +166,15 @@
       "tier": 0,
       "cadence": "daily after Grok runs",
       "command": "node _os/automation/bin/grok-ingest.js --from <run-envelope.json>",
-      "inputs": ["12_Brain/schemas/grok-run.json", "exported Grok automation run JSON"],
-      "outputs": ["12_Brain/01_Captures/Grok/*.md", "12_Brain/06_Research/* - Grok daily intelligence.md", "12_Brain/state/grok-intelligence-ingest.json"],
+      "inputs": [
+        "12_Brain/schemas/grok-run.json",
+        "exported Grok automation run JSON"
+      ],
+      "outputs": [
+        "12_Brain/01_Captures/Grok/*.md",
+        "12_Brain/06_Research/* - Grok daily intelligence.md",
+        "12_Brain/state/grok-intelligence-ingest.json"
+      ],
       "external_actions": false,
       "notes": "Idempotent, immutable capture. The browser collector is separate and may only read completed Grok runs.",
       "status": "implemented"
@@ -107,9 +186,20 @@
       "tier": 0,
       "cadence": "daily before grok-intelligence-ingest",
       "command": "& _os/automation/bin/xai-research.ps1 -Profile _os/automation/profiles/daily-x-research.json -Out _os/automation/incoming/grok/daily-x-research.json -Ingest",
-      "depends_on": ["xai-api-credit", "dpapi-secret", "grok-intelligence-ingest"],
-      "inputs": ["_os/automation/profiles/daily-x-research.json", "dpapi-bootstrap://xai/dillon-os/daily-x-search"],
-      "outputs": ["source-linked Grok run envelope", "12_Brain/01_Captures/Grok/*.md", "12_Brain/06_Research/* - Grok daily intelligence.md"],
+      "depends_on": [
+        "xai-api-credit",
+        "dpapi-secret",
+        "grok-intelligence-ingest"
+      ],
+      "inputs": [
+        "_os/automation/profiles/daily-x-research.json",
+        "dpapi-bootstrap://xai/dillon-os/daily-x-search"
+      ],
+      "outputs": [
+        "source-linked Grok run envelope",
+        "12_Brain/01_Captures/Grok/*.md",
+        "12_Brain/06_Research/* - Grok daily intelligence.md"
+      ],
       "external_actions": false,
       "notes": "Read-only X and web research through xAI Responses API. Chat-only key, 10 RPM, 250k TPM, expires 2026-10-28. Never logs the key.",
       "status": "implemented"
@@ -120,9 +210,16 @@
       "lane": "intelligence",
       "tier": 0,
       "cadence": "on ingest",
-      "depends_on": ["grok-intelligence-ingest"],
-      "inputs": ["candidates with decision=sandbox-test"],
-      "outputs": ["12_Brain/05_Projects/Experiments/*.md", "12_Brain/bases/Experiment Queue.base"],
+      "depends_on": [
+        "grok-intelligence-ingest"
+      ],
+      "inputs": [
+        "candidates with decision=sandbox-test"
+      ],
+      "outputs": [
+        "12_Brain/05_Projects/Experiments/*.md",
+        "12_Brain/bases/Experiment Queue.base"
+      ],
       "external_actions": false,
       "notes": "Creates proposed experiments only. Adoption still requires the maker/checker and human gates.",
       "status": "implemented"
@@ -134,8 +231,14 @@
       "tier": 0,
       "cadence": "on demand before agent environment changes",
       "command": "& _os/dev/bin/dillon-dev.ps1 <doctor|verify>",
-      "inputs": ["_os/dev/profiles/site-factory-sandbox.json", ".github/skills/dillon-*/SKILL.md"],
-      "outputs": ["structured doctor result", "allowlisted verification result"],
+      "inputs": [
+        "_os/dev/profiles/site-factory-sandbox.json",
+        ".github/skills/dillon-*/SKILL.md"
+      ],
+      "outputs": [
+        "structured doctor result",
+        "allowlisted verification result"
+      ],
       "external_actions": false,
       "notes": "Fixture-only prototype. No install, browser, secret, deployment, or external write.",
       "status": "implemented"
@@ -147,8 +250,15 @@
       "tier": 0,
       "cadence": "per material build",
       "command": "node _os/automation/bin/workflow-gate.js <start|maker|check|approve|gate> [options]",
-      "inputs": ["12_Brain/schemas/workflow-evaluation.json", "artifact paths", "maker and checker evidence"],
-      "outputs": ["12_Brain/state/workflow-runs/*.json", "12_Brain/07_Reviews/Automation Runs/*.md"],
+      "inputs": [
+        "12_Brain/schemas/workflow-evaluation.json",
+        "artifact paths",
+        "maker and checker evidence"
+      ],
+      "outputs": [
+        "12_Brain/state/workflow-runs/*.json",
+        "12_Brain/07_Reviews/Automation Runs/*.md"
+      ],
       "external_actions": false,
       "notes": "Maker and checker identities must differ. Human approval is required by default. Website-factory workflows also require a hashed screen recording and independent visual review across at least two viewports.",
       "status": "implemented"
@@ -160,8 +270,14 @@
       "tier": 0,
       "cadence": "before MCP registration and quarterly",
       "command": "node _os/automation/bin/mcp-gate.js --from <candidate.json> --inspect",
-      "inputs": ["12_Brain/schemas/mcp-candidate.json", "candidate declaration"],
-      "outputs": ["12_Brain/07_Reviews/MCP/*.md", "12_Brain/07_Reviews/MCP/*.json"],
+      "inputs": [
+        "12_Brain/schemas/mcp-candidate.json",
+        "candidate declaration"
+      ],
+      "outputs": [
+        "12_Brain/07_Reviews/MCP/*.md",
+        "12_Brain/07_Reviews/MCP/*.json"
+      ],
       "external_actions": false,
       "notes": "Fail closed: pending tests are sandbox-only; failed tests or critical permissions reject.",
       "status": "implemented"
@@ -173,9 +289,15 @@
       "tier": 0,
       "cadence": "on demand",
       "command": "codex mcp add context7 --url https://mcp.context7.com/mcp",
-      "depends_on": ["mcp-acceptance-gate"],
-      "inputs": ["public third-party library documentation queries"],
-      "outputs": ["ephemeral cited documentation context"],
+      "depends_on": [
+        "mcp-acceptance-gate"
+      ],
+      "inputs": [
+        "public third-party library documentation queries"
+      ],
+      "outputs": [
+        "ephemeral cited documentation context"
+      ],
       "external_actions": false,
       "notes": "Official OpenAI questions continue to use OpenAI Developer Docs. Retrieved content is untrusted reference material.",
       "status": "implemented"
@@ -187,9 +309,17 @@
       "tier": 0,
       "cadence": "on demand",
       "command": "node _os/automation/bin/landingfolio-verify.js",
-      "depends_on": ["mcp-acceptance-gate"],
-      "inputs": ["section archetype and mood queries", "LANDINGFOLIO_TOKEN in the environment"],
-      "outputs": ["ephemeral reference screenshots and source links", "12_Brain/07_Reviews/MCP/*.md"],
+      "depends_on": [
+        "mcp-acceptance-gate"
+      ],
+      "inputs": [
+        "section archetype and mood queries",
+        "LANDINGFOLIO_TOKEN in the environment"
+      ],
+      "outputs": [
+        "ephemeral reference screenshots and source links",
+        "12_Brain/07_Reviews/MCP/*.md"
+      ],
       "external_actions": false,
       "notes": "Sandbox-only until the Inspector check passes; the endpoint refuses anonymous calls, so the operator must mint a free token first. Wiring lives in .cursor/mcp.json and .mcp.json and reads LANDINGFOLIO_TOKEN from the environment. Composition reference only: the harvest stays the source of brand truth, returned content is untrusted, and queries never carry a client or prospect name.",
       "status": "pending-gate"
@@ -201,8 +331,14 @@
       "tier": 0,
       "cadence": "per preview before deploy",
       "command": "node _os/automation/bin/aeo-trust-gate.js --path <site-dir> --profile _os/automation/profiles/site-factory-default.json",
-      "inputs": ["built static site", "AEO trust profile"],
-      "outputs": ["12_Brain/state/aeo-trust-gate.json", "Daily-Briefs/aeo-trust-report.md"],
+      "inputs": [
+        "built static site",
+        "AEO trust profile"
+      ],
+      "outputs": [
+        "12_Brain/state/aeo-trust-gate.json",
+        "Daily-Briefs/aeo-trust-report.md"
+      ],
       "external_actions": false,
       "notes": "A fail blocks deployment. A pass does not replace visual review, functional QA, or exact Netlify target verification.",
       "status": "implemented"

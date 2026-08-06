@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "updated": "2026-08-06",
+  "source": "12_Brain/raw/sessions/2026-08-06-pa-website-grader.md",
+  "note": "Anchors are the grader's regression suite. An anchor is a site plus the band a human says it belongs in. Offline anchors are HTML fixtures and run in CI; live anchors are real URLs and only run with --live because they change under us. Change a weight, run grade-calibrate.js, and these tell you whether you improved the grader or just moved it.",
+  "gates": {
+    "offline_exact_band_required": 1.0,
+    "live_lane_agreement_min": 0.8,
+    "note": "Offline anchors must land in the exact expected band, every time; they are fixtures and there is no excuse for drift. Live anchors are allowed to miss one in five because real sites change."
+  },
+  "anchors": [
+    {
+      "id": "fixture-excellent",
+      "fixture": "excellent.html",
+      "expect_band": "excellent",
+      "expect_score_range": [85, 100],
+      "why": "Everything a small-business site should be: schema, tap-to-call, hours, form, responsive imagery, real copy. If this ever drops out of the excellent band, the weights are broken."
+    },
+    {
+      "id": "fixture-middling",
+      "fixture": "middling.html",
+      "expect_band": "dated",
+      "expect_score_range": [45, 64],
+      "why": "A 2019 Bootstrap site: works, responsive, but fixed-width container, no schema, no tel: link, thin copy. This is the refresh lane and it must not read as either excellent or broken."
+    },
+    {
+      "id": "fixture-dated",
+      "fixture": "dated.html",
+      "expect_band": "broken",
+      "expect_score_range": [0, 24],
+      "why": "Table layout, font tags, marquee, jQuery 1.7, no viewport, copyright 2011. The obsolescence ceiling has to bite here, because the page loads fast for exactly the reason it is worthless."
+    },
+    {
+      "id": "live-suraya",
+      "url": "https://www.surayaphilly.com/",
+      "business_name": "Suraya",
+      "vertical": "restaurant",
+      "review_count": 2400,
+      "rating": 4.6,
+      "expect_band": "excellent",
+      "expect_lane": "hands_off",
+      "allow_render": true,
+      "source": "Mac, Slack DM 2026-08-05: named Suraya as the example of a prospect that already has a good website",
+      "why": "The anchor that started the project. Mac's judgment, encoded. If the grader ever routes Suraya into a website pitch, the grader is wrong."
+    },
+    {
+      "id": "live-zahav",
+      "url": "https://www.zahavrestaurant.com/",
+      "business_name": "Zahav",
+      "vertical": "restaurant",
+      "review_count": 1800,
+      "rating": 4.7,
+      "expect_band": "excellent",
+      "expect_lane": "hands_off",
+      "allow_render": true,
+      "source": "Same batch as Suraya; James Beard award restaurant on a professionally built Squarespace site",
+      "why": "Client-rendered. Catches the failure mode where static HTML looks empty and a good site scores like a broken one."
+    },
+    {
+      "id": "live-bill-frusco",
+      "url": "https://www.billfrusco.com/",
+      "business_name": "Bill Frusco Plumbing, Heating, Cooling",
+      "vertical": "plumbing",
+      "expect_band": "excellent",
+      "expect_lane": "hands_off",
+      "why": "Proof the problem is not only restaurants. An agency-built home-services site with 12k words and Plumber schema does not need us, and B3/B4 are full of these."
+    },
+    {
+      "id": "live-no-site-gracies",
+      "business_name": "Gracies Painting",
+      "vertical": "painting",
+      "evidence_urls": ["https://www.dc21.org/contractors/"],
+      "expect_lane": "enrich",
+      "why": "No website at all, only a trade-union contractor listing. Must never be graded as a bad site; must route on the no-site path. With review data on the row this becomes the build lane."
+    }
+  ]
+}
