@@ -19,9 +19,10 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] NKCDC — draft launch nudge to Anthony (Free Tax Prep page blocking ads)
+- [ ] Jason/Sean bot — draft status + case-reinstated alert ETA
+- [ ] Hardwood — confirm billing chase with Sean / Dalton card update
+- [[Daily-Briefs/competitive-task-today|Competitive task today]] — full P0 stack + boss asks
 
 ## Active Projects
 -

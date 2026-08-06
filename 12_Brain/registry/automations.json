@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-06",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -193,6 +193,19 @@
       "external_actions": false,
       "notes": "Sandbox-only until the Inspector check passes; the endpoint refuses anonymous calls, so the operator must mint a free token first. Wiring lives in .cursor/mcp.json and .mcp.json and reads LANDINGFOLIO_TOKEN from the environment. Composition reference only: the harvest stays the source of brand truth, returned content is untrusted, and queries never carry a client or prospect name.",
       "status": "pending-gate"
+    },
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Competitive task umbrella orchestrator",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "daily 0 13 * * * UTC",
+      "command": "/competitive-task-orchestrator",
+      "inputs": ["Gmail MCP", "Slack MCP", "01_Clients/", "00_Inbox/slack/", "10_Sessions/", "02_Campaigns/", "03_Content/"],
+      "outputs": ["Daily-Briefs/competitive-task-today.md", "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/"],
+      "external_actions": false,
+      "notes": "Replaces am-report, inbox-brief, client-pulse, slack-intake, plan-today-morning, and Thursday content-scan. Six parallel scouts in .cursor/agents/ plus memory-consolidator. Prompt: System/competitive-task-orchestrator-prompt.md. Vault mirrors when MCP unavailable.",
+      "status": "implemented"
     },
     {
       "id": "aeo-trust-gate",
