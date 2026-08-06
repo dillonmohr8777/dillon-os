@@ -149,6 +149,10 @@ function renderDashboard(summary, opts = {}) {
   const bandTotal = bandOrder.reduce((t, b) => t + (s.by_band?.[b] || 0), 0);
 
   return `<title>Prospect Radar — Momentum 360</title>
+<meta name="robots" content="noindex,nofollow">
+<!-- This page names hundreds of real businesses next to a judgement about their
+     website. It is an internal worksheet and must never be indexed, whatever
+     host it ends up on. lib/netlify.js refuses to publish it without this. -->
 <style>
   :root {
     /* The score scale is the palette: a row's colour is its grade. */

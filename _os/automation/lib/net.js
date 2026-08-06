@@ -202,6 +202,10 @@ function httpGet(rawUrl, opts = {}) {
     body = null,
     userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) ' +
       'Chrome/124.0 Safari/537.36 MomentumSiteGrader/1.0 (+prospect site audit)',
+    // 'utf8' returns a string; null returns the raw Buffer. Images must use the
+    // latter — decoding a PNG as utf8 silently corrupts every byte above 0x7F,
+    // and the file still "downloads fine", just broken.
+    encoding = 'utf8',
   } = opts;
   // Buffer bodies pass through untouched. Coercing one via String() would
   // mangle any non-UTF8 byte, which matters the moment this is used to upload a
@@ -285,19 +289,20 @@ function httpGet(rawUrl, opts = {}) {
             res.destroy();
           }
         });
-        res.on('end', () =>
+        res.on('end', () => {
+          const raw = Buffer.concat(chunks);
           resolve({
             ok: true,
             finalUrl: u.href,
             status,
             headers: res.headers,
-            body: Buffer.concat(chunks).toString('utf8'),
+            body: encoding === null ? raw : raw.toString(encoding),
             bytes,
             responseMs,
             totalMs: Date.now() - started,
             hops,
-          })
-        );
+          });
+        });
         res.on('close', () => {
           // destroyed by the byte cap: still a usable partial body
           if (bytes > maxBytes) {

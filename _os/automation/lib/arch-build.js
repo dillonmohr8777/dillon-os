@@ -329,6 +329,25 @@ function buildArchSite(prospect, opts = {}) {
   // Alt text describes the reference's photographs. Left alone it tells a
   // screen reader — and Google — that a dental page shows commercial wall
   // coatings. Regenerate from the trade instead.
+  // Point every <img> at the prospect's own downloaded assets. The reference's
+  // asset paths are meaningless in a new site, and leaving them produces a page
+  // of broken-image icons — which is what the first draft deploy shipped.
+  const assets = Array.isArray(opts.images) ? opts.images : [];
+  if (assets.length) {
+    let imgIdx = 0;
+    html = html.replace(/(<img\b[^>]*?\bsrc=")[^"]*(")/g, (m, pre, post) => {
+      const a = assets[imgIdx % assets.length];
+      imgIdx += 1;
+      return `${pre}assets/${a.name}${post}`;
+    });
+    // Intrinsic width/height from the reference belong to its photographs, and a
+    // wrong aspect ratio makes the layout jump. Drop them and let CSS size it.
+    html = html.replace(/(<img\b[^>]*?)\s+width="\d+"\s+height="\d+"/g, '$1');
+  }
+  if (opts.logo && /<img[^>]+class="[^"]*logo/i.test(html)) {
+    html = html.replace(/(<img[^>]+class="[^"]*logo[^"]*"[^>]*\bsrc=")[^"]*(")/gi, `$1assets/${opts.logo.name}$2`);
+  }
+
   let altIndex = 0;
   const altFor = () => {
     const opts = [
@@ -416,7 +435,11 @@ function buildArchSite(prospect, opts = {}) {
     images: imgs,
     // The reference points at local assets; without copying real imagery in, the
     // page renders with broken images. Never report a build as done on this.
-    imagesReady: imgs.length > 0 && imgs.every((s) => !/^assets\//.test(s)),
+    // Ready means every <img> resolves to an asset we actually downloaded from
+    // this prospect. Pointing at assets/ is only correct when those files ship.
+    imagesReady: assets.length > 0 && imgs.length > 0,
+    imageCount: assets.length,
+    hasLogo: !!opts.logo,
     noindex: /noindex/.test(html),
     warnings,
     /**
@@ -427,12 +450,14 @@ function buildArchSite(prospect, opts = {}) {
     shippable:
       leaked.length === 0 &&
       leakedProse.length === 0 &&
-      imgs.length > 0 &&
+      assets.length > 0 &&
       derived.warnings.length === 0,
     blockers: [
       ...(leaked.length ? [`reference facts present: ${leaked.join(', ')}`] : []),
       ...(leakedProse.length ? [`reference prose present: ${leakedProse.join(', ')}`] : []),
-      ...(imgs.length === 0 ? ['no images'] : []),
+      ...(assets.length === 0
+        ? ['no imagery harvested from this prospect — the page would render broken images']
+        : []),
       ...derived.warnings,
     ],
   };
