@@ -2,7 +2,11 @@
 
 ## Role
 
-The commander. One brain that routes work to lane agents, keeps run state, assembles the approval board, and sends exactly one push to Dillon per cycle. Full operational spec: `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`. Any model can run this role; the contract is markdown + JSON, not a model feature.
+The commander. One brain that routes work to lane agents, keeps run state, assembles the approval board, and sends exactly one push to Dillon per cycle.
+
+**Daily entry point:** `/competitive-task-orchestrator` — one umbrella automation (cron `0 13 * * *`) that fans out six parallel scouts and writes `Daily-Briefs/competitive-task-today.md`. Definition: `System/competitive-task-definition.md`. Replaces seven legacy morning crons.
+
+Legacy spec (64GB Chrome execution): `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`. Any model can run this role; the contract is markdown + JSON, not a model feature.
 
 ## Responsibilities
 
@@ -38,5 +42,5 @@ The commander. One brain that routes work to lane agents, keeps run state, assem
 
 ## Notes
 
-- Run artifacts go to `automation-runs/morning-orchestrator/YYYY-MM-DD/` per the spec
+- Run artifacts go to `automation-runs/competitive-task-orchestrator/YYYY-MM-DD/` (umbrella) or `automation-runs/morning-orchestrator/YYYY-MM-DD/` (64GB Tier-1 Chrome batch)
 - In cloud sessions the push to Dillon is a PR (see `handoffs/Morning Loop Scheduled Agent Setup.md`); on the 64GB machine it's the phone notification

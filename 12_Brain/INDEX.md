@@ -29,6 +29,7 @@ in the same change.
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/concepts/Competitive Task|Competitive Task]] — daily umbrella workflow advancing all three North Star targets.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -71,4 +72,4 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs.
 - [[10_Sessions/Session Index|Session Index]] — build logs.
 - `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).
-- `System/` — [[System/OS Config|OS Config]]; brain ops in [[12_Brain/System/Second Brain Ops|Second Brain Ops]].
+- `System/` — [[System/OS Config|OS Config]]; [[System/competitive-task-definition|competitive task definition]]; brain ops in [[12_Brain/System/Second Brain Ops|Second Brain Ops]].
