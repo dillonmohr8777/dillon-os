@@ -235,11 +235,25 @@ function buildArchSite(prospect, opts = {}) {
     `<script type="application/ld+json">${JSON.stringify(ld)}</script>`
   );
 
-  // 5. Every tel: link and its visible label.
+  // 5. Phone. This must run whether or not the prospect has one.
+  //
+  // Guarding the whole block on `if (c.tel)` left the reference's number in
+  // place for any prospect without a phone on file — which is every prospect
+  // loaded from the sanitized build queue, since `phone` is deliberately
+  // stripped from tracked files. Three deployed drafts carried a Folcroft
+  // painting company's number as their call-to-action before this was caught.
+  // A wrong phone number is the single worst thing a demo can ship: it sends the
+  // prospect's customers to a stranger.
   if (c.tel) {
     html = html.replace(/href="tel:[^"]*"/g, `href="tel:${c.tel}"`);
-    html = html.replace(/Call \(\d{3}\) \d{3}-\d{4}/g, esc(c.hero.ctaPrimary));
-    html = html.replace(/\(\d{3}\) \d{3}-\d{4}/g, esc(c.phone));
+    html = html.replace(/Call \(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}/g, esc(c.hero.ctaPrimary));
+    html = html.replace(/\(?\b\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b/g, esc(c.phone));
+  } else {
+    // No verified number: neutralise the CTA rather than inherit one. The build
+    // is blocked below, but it must not be dangerous even if someone opens it.
+    html = html.replace(/href="tel:[^"]*"/g, 'href="#visit"');
+    html = html.replace(/Call \(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}/g, 'Contact');
+    html = html.replace(/\(?\b\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b/g, '');
   }
 
   // 6. Hero.
@@ -352,6 +366,18 @@ function buildArchSite(prospect, opts = {}) {
 
   const refNames = ['Advanced Commercial Interior', 'Folcroft', '1050 E Ashland Ave'];
   const leaked = refNames.filter((n) => html.includes(n));
+
+  // Any phone number on the page that is not the prospect's own is a leak,
+  // however it got there. Checked against the raw digits so formatting cannot
+  // hide it, and against tel: hrefs separately since those are what actually dial.
+  const REFERENCE_TEL = '6102379900';
+  const strayTel = [...html.matchAll(/href="tel:([^"]+)"/g)]
+    .map((m) => m[1].replace(/[^\d]/g, ''))
+    .filter((d) => d && d !== c.tel.replace(/[^\d]/g, ''));
+  if (html.includes(REFERENCE_TEL) || html.includes('(610) 237-9900')) {
+    if (!c.tel.includes('6102379900')) leaked.push(`reference phone ${REFERENCE_TEL}`);
+  }
+  for (const d of new Set(strayTel)) leaked.push(`tel: link to ${d}, which is not this prospect's number`);
 
   // Prospect demos are always noindex.
   if (!/noindex/.test(html)) {

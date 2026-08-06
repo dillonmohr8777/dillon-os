@@ -418,3 +418,80 @@ test('enrichment feeds the opportunity model and lifts its confidence', () => {
   );
   assert.ok(!enriched.components.missing_signals.includes('ability_to_pay'));
 });
+
+/* ------------------------------------------------------------------ *
+ * Arch builder — the reference must never bleed into a prospect's page
+ * ------------------------------------------------------------------ */
+
+const { buildArchSite } = require('../lib/arch-build');
+const archTokens = require('../lib/arch-tokens');
+
+const prospect = (over = {}) => ({
+  business_name: 'Andorra Family Dentistry',
+  vertical: 'dentist',
+  vertical_group: 'medical',
+  city: 'Philadelphia',
+  phone: '(215) 483-1420',
+  address: '8945 Ridge Ave, Philadelphia, PA 19128',
+  ...over,
+});
+
+test('a prospect with no phone never inherits the reference number', () => {
+  // The build queue is sanitized for a public repo, so `phone` is routinely
+  // absent. An earlier version guarded the whole phone block on `if (tel)`, and
+  // three drafts deployed carrying a Folcroft painting company's number as their
+  // call-to-action. A wrong number sends the prospect's customers to a stranger.
+  const r = buildArchSite(prospect({ phone: '' }));
+  assert.doesNotMatch(r.html, /6102379900/, 'reference phone digits must not survive');
+  assert.doesNotMatch(r.html, /\(610\) 237-9900/, 'reference phone must not survive formatted');
+  const tels = [...r.html.matchAll(/href="tel:([^"]*)"/g)].map((m) => m[1]).filter(Boolean);
+  assert.deepEqual(tels, [], 'with no verified number there must be no tel: link at all');
+});
+
+test('a prospect with a phone gets theirs, and only theirs', () => {
+  const r = buildArchSite(prospect());
+  const tels = [...new Set([...r.html.matchAll(/href="tel:([^"]*)"/g)].map((m) => m[1]))];
+  assert.deepEqual(tels, ['2154831420']);
+  assert.doesNotMatch(r.html, /6102379900/);
+});
+
+test('the reference identity never survives a build', () => {
+  const r = buildArchSite(prospect());
+  for (const s of ['Advanced Commercial Interior', 'Folcroft', '1050 E Ashland Ave', 'Ashland%20Ave']) {
+    assert.ok(!r.html.includes(s), `reference string "${s}" leaked into the output`);
+  }
+  // Maps links carry the address URL-encoded, which a plain-text swap misses.
+  const maps = [...r.html.matchAll(/maps\.google\.com\/\?q=([^"]*)/g)].map((m) => decodeURIComponent(m[1]));
+  for (const q of maps) assert.doesNotMatch(q, /Folcroft|Ashland/);
+});
+
+test('alt text describes the prospect, not the reference photographs', () => {
+  const r = buildArchSite(prospect());
+  const alts = [...r.html.matchAll(/<img[^>]+alt="([^"]*)"/g)].map((m) => m[1]);
+  assert.ok(alts.length > 0);
+  for (const a of alts) assert.doesNotMatch(a, /commercial wall|neutral coating|painter rolling/i);
+});
+
+test('every build is noindex and none claims to be shippable while leaking', () => {
+  const r = buildArchSite(prospect());
+  assert.equal(r.noindex, true);
+  // Five sections still carry reference prose, so nothing may report shippable.
+  assert.equal(r.shippable, false);
+  assert.ok(r.blockers.length > 0, 'an unshippable build must say why');
+});
+
+test('arch skins are unique across a batch and suit the vertical', () => {
+  const used = new Set();
+  const a = buildArchSite(prospect({ business_name: 'A Dental' }), { usedSkins: used });
+  const b = buildArchSite(prospect({ business_name: 'B Dental' }), { usedSkins: used });
+  assert.notEqual(a.arch, b.arch, 'two sites in one batch must not share a skin');
+  assert.ok(archTokens.ARCH_SKINS.medical.includes(a.arch), `${a.arch} is not a medical skin`);
+});
+
+test('token contrast maths matches WCAG at known anchors', () => {
+  assert.equal(Math.round(archTokens.contrast('#FFFFFF', '#FFFFFF')), 1);
+  assert.equal(Math.round(archTokens.contrast('#000000', '#FFFFFF')), 21);
+  // A light gold accent cannot carry white text, so on-accent must flip.
+  assert.equal(archTokens.onColor('#D7A243').color, '#090909');
+  assert.equal(archTokens.onColor('#176B5E').color, '#FFFFFF');
+});

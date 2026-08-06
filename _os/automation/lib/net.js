@@ -203,7 +203,10 @@ function httpGet(rawUrl, opts = {}) {
     userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) ' +
       'Chrome/124.0 Safari/537.36 MomentumSiteGrader/1.0 (+prospect site audit)',
   } = opts;
-  const payload = body == null ? null : Buffer.from(String(body), 'utf8');
+  // Buffer bodies pass through untouched. Coercing one via String() would
+  // mangle any non-UTF8 byte, which matters the moment this is used to upload a
+  // file rather than post JSON.
+  const payload = body == null ? null : Buffer.isBuffer(body) ? body : Buffer.from(String(body), 'utf8');
 
   return new Promise((resolve) => {
     const started = Date.now();

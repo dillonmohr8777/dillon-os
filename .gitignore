@@ -31,3 +31,6 @@ _templates/site-factory/harvest/
 # (bin/discover-prospects.js). The selected candidate list and the grade reports
 # are tracked; the full pool is not.
 12_Brain/state/candidates/*-pool-*.json
+
+# Arch factory build output — regenerable from the queue in one command
+_templates/arch-factory/out/
