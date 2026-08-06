@@ -285,3 +285,136 @@ test('addDays and daysBetween agree', () => {
   assert.equal(radar.daysBetween('2026-08-06', '2026-09-20'), 45);
   assert.equal(radar.addDays('2026-12-30', 5), '2027-01-04', 'must roll over the year');
 });
+
+/* ------------------------------------------------------------------ *
+ * Google Places enrichment
+ * ------------------------------------------------------------------ */
+
+const places = require('../lib/places');
+
+/** Fake httpGet returning a canned Places response. */
+const fakePlaces = (placesArray, over = {}) => async () => ({
+  ok: true,
+  status: 200,
+  body: JSON.stringify({ places: placesArray }),
+  ...over,
+});
+
+test('enrichment only accepts a result whose website matches our domain', async () => {
+  const row = { business_name: 'Jarman Sales', domain: 'jarmanairconditioning.com', city: 'Philadelphia' };
+  // A national chain outranks the local business in the text search.
+  const r = await places.enrichProspect(row, {
+    apiKey: 'test',
+    fetchImpl: fakePlaces([
+      { id: 'chain', displayName: { text: 'Jarman HVAC Nationwide' }, websiteUri: 'https://bigchain.com', rating: 4.8, userRatingCount: 40000 },
+    ]),
+  });
+  assert.equal(r.status, 'no_match', 'a chain must never lend its reviews to a local business');
+  assert.equal(r.review_count, undefined);
+});
+
+test('enrichment accepts the row whose domain does match, not the first result', async () => {
+  const row = { business_name: 'Jarman Sales', domain: 'jarmanairconditioning.com', city: 'Philadelphia' };
+  const r = await places.enrichProspect(row, {
+    apiKey: 'test',
+    fetchImpl: fakePlaces([
+      { id: 'chain', displayName: { text: 'Big Chain' }, websiteUri: 'https://bigchain.com', rating: 4.9, userRatingCount: 40000 },
+      { id: 'real', displayName: { text: 'Jarman Sales & Service' }, websiteUri: 'https://www.jarmanairconditioning.com/', rating: 4.6, userRatingCount: 52 },
+    ]),
+  });
+  assert.equal(r.status, 'ok');
+  assert.equal(r.review_count, 52);
+  assert.equal(r.rating, 4.6);
+  assert.equal(r.place_id, 'real');
+});
+
+test('domainsMatch is strict about identity but tolerates www and subdomains', () => {
+  assert.equal(places.domainsMatch('https://www.acme.com/x', 'acme.com'), true);
+  assert.equal(places.domainsMatch('https://shop.acme.com', 'acme.com'), true);
+  assert.equal(places.domainsMatch('https://acme-plumbing.com', 'acme.com'), false);
+  assert.equal(places.domainsMatch('https://notacme.com', 'acme.com'), false);
+  assert.equal(places.domainsMatch('', 'acme.com'), false);
+});
+
+test('enrichment is a no-op without an API key', async () => {
+  const saved = process.env.GOOGLE_PLACES_API_KEY;
+  delete process.env.GOOGLE_PLACES_API_KEY;
+  try {
+    const r = await places.enrichProspect({ business_name: 'A', domain: 'a.example' }, {});
+    assert.equal(r.status, 'skipped');
+    assert.match(r.reason, /GOOGLE_PLACES_API_KEY/);
+  } finally {
+    if (saved) process.env.GOOGLE_PLACES_API_KEY = saved;
+  }
+});
+
+test('a rejected key and an exhausted quota report distinguishable errors', async () => {
+  const row = { business_name: 'A', domain: 'a.example' };
+  const forbidden = await places.enrichProspect(row, {
+    apiKey: 'bad', fetchImpl: async () => ({ ok: true, status: 403, body: '{}' }),
+  });
+  assert.equal(forbidden.status, 'error');
+  assert.match(forbidden.reason, /403/);
+
+  const throttled = await places.enrichProspect(row, {
+    apiKey: 'x', fetchImpl: async () => ({ ok: true, status: 429, body: '{}' }),
+  });
+  assert.match(throttled.reason, /429|quota/);
+});
+
+test('applyEnrichment adds signal and records the attempt without breaking ranking', () => {
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [candidate()], { today: TODAY });
+  radar.recordGrade(reg, 'acme.example', gradeResult(), { today: TODAY });
+  const before = reg.prospects['acme.example'].priority_score;
+
+  // A no-match still stamps the date so we do not pay to rediscover the absence.
+  places.applyEnrichment(reg.prospects['acme.example'], { status: 'no_match', reason: 'none' }, { today: TODAY });
+  assert.equal(reg.prospects['acme.example'].places_checked, TODAY);
+  assert.equal(reg.prospects['acme.example'].review_count, undefined);
+  assert.equal(reg.prospects['acme.example'].priority_score, before, 'a failed lookup must not move the ranking');
+
+  places.applyEnrichment(reg.prospects['acme.example'], { status: 'ok', review_count: 120, rating: 4.7, place_id: 'p1' }, { today: LATER });
+  const p = reg.prospects['acme.example'];
+  assert.equal(p.review_count, 120);
+  assert.equal(p.rating, 4.7);
+  assert.equal(p.places_status, 'ok');
+});
+
+test('a permanently closed business is excluded outright', () => {
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [candidate()], { today: TODAY });
+  radar.recordGrade(reg, 'acme.example', gradeResult(), { today: TODAY });
+  places.applyEnrichment(
+    reg.prospects['acme.example'],
+    { status: 'ok', business_status: 'CLOSED_PERMANENTLY', review_count: 12 },
+    { today: TODAY }
+  );
+  const p = reg.prospects['acme.example'];
+  assert.equal(p.lifecycle, 'excluded', 'there is nobody left to pitch');
+  assert.equal(radar.priorityScore(p), 0);
+});
+
+test('needsEnrichment backs off further on a known no-match', () => {
+  const base = { lifecycle: 'graded', places_checked: '2026-01-01' };
+  // 150-day window for a previous hit, double that for a previous miss.
+  assert.equal(places.needsEnrichment({ ...base, places_status: 'ok' }, { today: '2026-06-30' }), true);
+  assert.equal(places.needsEnrichment({ ...base, places_status: 'no_match' }, { today: '2026-06-30' }), false);
+  assert.equal(places.needsEnrichment({ lifecycle: 'graded' }, { today: TODAY }), true, 'never checked = needs a check');
+  assert.equal(places.needsEnrichment({ lifecycle: 'client' }, { today: TODAY }), false);
+});
+
+test('enrichment feeds the opportunity model and lifts its confidence', () => {
+  const { routeOpportunity } = require('../lib/opportunity');
+  const grade = { score: 32, band: 'decayed', confidence: 0.9, capped: false, provisional: false, tier: 1 };
+  const bare = routeOpportunity({ business_name: 'A', website: 'https://a.example', vertical: 'hvac', has_phone: true }, { grade });
+  const enriched = routeOpportunity(
+    { business_name: 'A', website: 'https://a.example', vertical: 'hvac', has_phone: true, review_count: 180, rating: 4.8 },
+    { grade }
+  );
+  assert.ok(
+    enriched.opportunity_confidence > bare.opportunity_confidence,
+    `review data should raise confidence: ${bare.opportunity_confidence} -> ${enriched.opportunity_confidence}`
+  );
+  assert.ok(!enriched.components.missing_signals.includes('ability_to_pay'));
+});

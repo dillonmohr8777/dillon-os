@@ -119,6 +119,18 @@ Each of these could have mailed a redesign to a business with a working website,
 - **No outcome feedback yet.** Thresholds are calibrated against site quality, not against what closed. Record scans, calls and closes in each batch's `results.md`, then re-tune.
 - **31 of the completed 100** cite only a trade-association or municipal directory, not a site of their own, so they cannot be graded at all. Those are flagged `own_site_found: false`.
 
+## The standing loop
+
+`/site-grade` is the on-demand path. The daily one is `bin/radar-refresh.js`, wrapped by `bin/radar-morning.ps1` as a Windows Scheduled Task on Dillon's desktop — chosen over a cloud runner because Tier 1 needs a Chromium that can actually reach the internet, and a CONNECT-only proxy cannot render.
+
+`lib/radar.js` holds a persistent registry: every business ever seen, full grade history, a per-verdict recheck cadence (`verify` 7 days, `rebuild` 45, `polish` 90, `ads_seo` 120), and lifecycle state so nothing is pitched twice. That is what a one-shot graded CSV cannot do — a decayed site that quietly hires an agency stops being a target, and a good site that rots becomes one.
+
+Geography weighting is explicit: Philadelphia ×1.0, collar counties ×0.88–0.92, rest of Pennsylvania ×0.62, and five of the seven rotation slots are Philadelphia-area. Momentum 360 is a Philadelphia agency, so a Pittsburgh prospect with an identical site is genuinely worth less to this pipeline and the ranking says so.
+
+`lib/places.js` adds the ability-to-pay signals OSM lacks — review count, rating, business status — behind `GOOGLE_PLACES_API_KEY`. A result is accepted only when the website domain Google returns matches the domain we hold, so a national chain can never lend its 40,000 reviews to a small contractor. Budgeted per day, cached 150 days, halts on the first fatal error.
+
+Setup and troubleshooting: `_os/automation/docs/RADAR-SETUP.md`.
+
 ## Related
 
 - [[Pipeline Spec]] — the eight-stage model this fills in at stage 2

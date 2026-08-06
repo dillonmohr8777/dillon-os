@@ -66,6 +66,12 @@ Keeping these separate is the whole design. A single blended score cannot expres
 - **Grade before you harvest.** If a `harvest.json` already exists, the grader reuses it as free Tier 1 evidence rather than re-fetching.
 - Nothing here is outbound-ready. `rebuild` means eligible for a brief, and a human still approves every send.
 
+## The daily version
+
+`/site-grade` grades one market on demand. The standing loop is `_os/automation/bin/radar-refresh.js`, run every morning on Dillon's desktop via `radar-morning.ps1` — it discovers ~200 new Pennsylvania businesses (Philadelphia-weighted), enriches the top rows with Google review data, re-audits whatever went stale, and rewrites `Daily-Briefs/prospect-radar.html`.
+
+Setup: `_os/automation/docs/RADAR-SETUP.md`. The radar keeps a persistent registry with grade history, so a site that gets redesigned drops out of the queue and one that rots drops in.
+
 ## Feeding the batch
 
 The `rebuild` queue, best-first, is the input to `/site-batch`. Take the top 25 and hand the `ads_seo` list to outreach as a separate offer — it is not a discard pile.

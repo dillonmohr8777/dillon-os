@@ -1,14 +1,19 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-08-06T19:35:33.300Z",
-  "status": "ok",
+  "started_at": "2026-08-06T19:48:13.508Z",
+  "status": "error",
   "date": "2026-08-06",
   "rotation_slot": "PHL: Montgomery County",
   "run": {
     "discovered_raw": 0,
     "discovered_new": 0,
     "regraded": 0,
-    "errors": []
+    "enriched": 0,
+    "enrich_no_match": 0,
+    "enrich_skipped": 0,
+    "errors": [
+      "places jarmanairconditioning.com: HTTP 400 — malformed request or invalid API key"
+    ]
   },
   "tracked": 700,
   "build_queue_size": 118,
@@ -21,6 +26,8 @@
     "enrich": 43,
     "nurture": 62
   },
-  "errors": [],
-  "written_at": "2026-08-06T19:35:33.300Z"
+  "errors": [
+    "places jarmanairconditioning.com: HTTP 400 — malformed request or invalid API key"
+  ],
+  "written_at": "2026-08-06T19:48:13.509Z"
 }

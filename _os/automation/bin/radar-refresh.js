@@ -27,6 +27,9 @@
  *   --market <CODE>    force a market instead of using the rotation
  *   --concurrency <n>  parallel fetches (default 12)
  *   --max-tier <0|1>   deepest audit tier (default 0; 1 needs a working browser)
+ *   --enrich <n>       Google Places lookups to spend today (default 60, 0 to skip).
+ *                      Needs GOOGLE_PLACES_API_KEY; silently skipped without one.
+ *                      Every call is billed, so this is a hard daily budget.
  *   --dry-run          do everything except write
  */
 
@@ -39,6 +42,7 @@ const { gradeSite, mergeAudits } = require('../lib/site-grader');
 const { auditTier0, auditTier1 } = require('../lib/site-audit');
 const { routeOpportunity, shouldEscalate } = require('../lib/opportunity');
 const { buildQuery, runOverpass, toCandidates, VERTICAL_GROUPS, normalizeDomain } = require('../lib/discovery');
+const places = require('../lib/places');
 const { buildSuppressSets } = require('../lib/clients');
 const { writeRunState } = require('../lib/registry');
 
@@ -76,7 +80,7 @@ const ROTATION = [
 const GROUP_ORDER = ['home-services', 'medical', 'legal', 'industrial', 'spa-wellness', 'auto', 'retail', 'food'];
 
 function parseArgs(argv) {
-  const o = { discover: 200, recheck: 120, market: null, concurrency: 12, maxTier: 0, dryRun: false };
+  const o = { discover: 200, recheck: 120, market: null, concurrency: 12, maxTier: 0, enrich: 60, dryRun: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--discover') o.discover = Math.max(0, parseInt(argv[++i], 10) || 0);
@@ -84,6 +88,7 @@ function parseArgs(argv) {
     else if (a === '--market') o.market = String(argv[++i] || '').toUpperCase();
     else if (a === '--concurrency') o.concurrency = Math.max(1, parseInt(argv[++i], 10) || 12);
     else if (a === '--max-tier') o.maxTier = parseInt(argv[++i], 10) || 0;
+    else if (a === '--enrich') o.enrich = Math.max(0, parseInt(argv[++i], 10) || 0);
     else if (a === '--dry-run') o.dryRun = true;
     else if (a === '--help' || a === '-h') o.help = true;
   }
@@ -267,7 +272,7 @@ async function main() {
     if (p.lifecycle === 'client' || p.lifecycle === 'excluded') excludeDomains.add(domain);
   }
 
-  const run = { discovered_raw: 0, discovered_new: 0, regraded: 0, errors: [] };
+  const run = { discovered_raw: 0, discovered_new: 0, regraded: 0, enriched: 0, enrich_no_match: 0, enrich_skipped: 0, errors: [] };
   const slot = args.market
     ? ROTATION.find((r) => r.market === args.market) || ROTATION[0]
     : ROTATION[dayOfYear(today) % ROTATION.length];
@@ -302,6 +307,52 @@ async function main() {
     const upserted = radar.upsertDiscovered(registry, [...fresh.values()], { today });
     run.discovered_new = upserted.added;
     process.stderr.write(`  added ${upserted.added} to the registry\n`);
+  }
+
+  // --- 1b. Enrich with ability-to-pay signals ------------------------------
+  // Runs before grading so review volume is already on the row when
+  // routeOpportunity() scores it — otherwise today's ranking would be a day
+  // behind today's data. Budgeted, because every lookup is billed.
+  if (args.enrich > 0) {
+    if (!process.env.GOOGLE_PLACES_API_KEY) {
+      process.stderr.write('  enrichment: skipped — GOOGLE_PLACES_API_KEY not set\n');
+    } else {
+      // Spend the budget where it changes a decision: the current build queue and
+      // the rows about to be graded, highest priority first.
+      const pending = Object.values(registry.prospects)
+        .filter((p) => places.needsEnrichment(p, { today }))
+        .sort((a, b) => (b.priority_score || 0) - (a.priority_score || 0))
+        .slice(0, args.enrich);
+
+      process.stderr.write(`  enriching ${pending.length} prospect(s) via Google Places\n`);
+      let consecutiveFailures = 0;
+      for (const p of pending) {
+        const result = await places.enrichProspect(p, {});
+        places.applyEnrichment(p, result, { today });
+        if (result.status === 'ok') run.enriched += 1;
+        else if (result.status === 'no_match') run.enrich_no_match += 1;
+        else if (result.status === 'skipped') run.enrich_skipped += 1;
+        else {
+          run.errors.push(`places ${p.domain}: ${result.reason}`);
+          consecutiveFailures += 1;
+          // A rejected key or exhausted quota fails identically for every
+          // remaining row. Stop on an explicitly fatal status, and also after a
+          // short run of any failures — pattern-matching the message alone is
+          // fragile, since Google answers a bad key with 400 rather than 403.
+          if (result.fatal || consecutiveFailures >= 3) {
+            process.stderr.write(
+              `  enrichment halted after ${consecutiveFailures} failure(s): ${result.reason}\n`
+            );
+            break;
+          }
+          continue;
+        }
+        consecutiveFailures = 0;
+      }
+      process.stderr.write(
+        `  enriched ${run.enriched}, no match ${run.enrich_no_match}, errors ${run.errors.length}\n`
+      );
+    }
   }
 
   // --- 2 & 3. Grade new arrivals and re-audit what went stale --------------
@@ -382,6 +433,7 @@ async function main() {
         rotation: state.rotation_slot,
         discovered_new: run.discovered_new,
         regraded: run.regraded,
+        enriched: run.enriched,
         tracked: summary.total,
         build_queue: summary.build_queue_size,
         needs_render: state.needs_render,
