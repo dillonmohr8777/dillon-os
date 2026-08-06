@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1784760148642,
+      "tag": "0000_rare_betty_ross",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1784773770670,
+      "tag": "0001_futuristic_the_hunter",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1784776083184,
+      "tag": "0002_needy_mentor",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1784785353378,
+      "tag": "0003_empty_silver_centurion",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1784870972384,
+      "tag": "0004_lean_greymalkin",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1784904694478,
+      "tag": "0005_cute_alex_power",
+      "breakpoints": true
+    }
+  ]
+}
