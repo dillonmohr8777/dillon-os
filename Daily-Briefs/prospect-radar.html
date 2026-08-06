@@ -1,0 +1,791 @@
+<title>Prospect Radar — Momentum 360</title>
+<style>
+  :root {
+    /* The score scale is the palette: a row's colour is its grade. */
+    --s-broken: #A63D2F;
+    --s-decayed: #C4622D;
+    --s-dated: #B08A2E;
+    --s-unconfirmed: #4C6B8A;
+    --s-strong: #2F7368;
+
+    --bg: #E6E9EC;
+    --bg-panel: #EFF1F3;
+    --bg-sunk: #DCE0E4;
+    --fg: #131A20;
+    --fg-mid: #47525C;
+    --fg-faint: #7C8892;
+    --rule: #C6CCD2;
+    --rule-strong: #A9B2BA;
+    --accent: #3A5570;
+
+    --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, "Cascadia Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131A20;
+      --bg-panel: #1A232B;
+      --bg-sunk: #0D1317;
+      --fg: #E4E8EB;
+      --fg-mid: #A0ACB6;
+      --fg-faint: #6C7A85;
+      --rule: #2A353F;
+      --rule-strong: #3C4954;
+      --accent: #7FA3C4;
+      --s-broken: #D4614F;
+      --s-decayed: #E08145;
+      --s-dated: #CFA945;
+      --s-unconfirmed: #6E93B8;
+      --s-strong: #4A9E90;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #131A20; --bg-panel: #1A232B; --bg-sunk: #0D1317;
+    --fg: #E4E8EB; --fg-mid: #A0ACB6; --fg-faint: #6C7A85;
+    --rule: #2A353F; --rule-strong: #3C4954; --accent: #7FA3C4;
+    --s-broken: #D4614F; --s-decayed: #E08145; --s-dated: #CFA945;
+    --s-unconfirmed: #6E93B8; --s-strong: #4A9E90;
+  }
+  :root[data-theme="light"] {
+    --bg: #E6E9EC; --bg-panel: #EFF1F3; --bg-sunk: #DCE0E4;
+    --fg: #131A20; --fg-mid: #47525C; --fg-faint: #7C8892;
+    --rule: #C6CCD2; --rule-strong: #A9B2BA; --accent: #3A5570;
+    --s-broken: #A63D2F; --s-decayed: #C4622D; --s-dated: #B08A2E;
+    --s-unconfirmed: #4C6B8A; --s-strong: #2F7368;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 24px 80px; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* Masthead — a ledger heading, not a hero. */
+  .mast { border-bottom: 2px solid var(--fg); padding-bottom: 14px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; }
+  .mast h1 { font-family: var(--serif); font-size: clamp(26px, 4vw, 38px); font-weight: 600; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
+  .mast .meta { font-family: var(--mono); font-size: 12px; color: var(--fg-mid); margin-left: auto; text-align: right; }
+  .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 0.11em; text-transform: uppercase; color: var(--fg-faint); }
+
+  /* The four numbers that decide the morning. */
+  .decide { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 24px 0 8px; }
+  .stat { background: var(--bg-panel); padding: 14px 16px; }
+  .stat__n { font-family: var(--mono); font-size: 30px; font-variant-numeric: tabular-nums; line-height: 1.05; letter-spacing: -0.02em; }
+  .stat__l { font-size: 12px; color: var(--fg-mid); margin-top: 3px; }
+  .stat--act .stat__n { color: var(--s-decayed); }
+  .stat--hold .stat__n { color: var(--s-unconfirmed); }
+
+  h2 { font-family: var(--serif); font-size: 19px; font-weight: 600; margin: 40px 0 4px; letter-spacing: -0.01em; }
+  h2 + .note { color: var(--fg-mid); font-size: 13.5px; margin: 0 0 14px; max-width: 66ch; }
+
+  /* Distribution strip: the whole graded set as one bar. */
+  .dist { display: flex; height: 30px; border: 1px solid var(--rule-strong); overflow: hidden; }
+  .dist__seg { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 11px; color: #fff; min-width: 0; }
+  .dist__legend { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 8px; font-family: var(--mono); font-size: 11.5px; color: var(--fg-mid); }
+  .dist__legend i { display: inline-block; width: 9px; height: 9px; margin-right: 5px; }
+
+  .scroll { overflow-x: auto; border: 1px solid var(--rule); background: var(--bg-panel); }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  thead th { position: sticky; top: 0; background: var(--bg-sunk); text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-mid); padding: 9px 10px; border-bottom: 1px solid var(--rule-strong); white-space: nowrap; }
+  tbody td { padding: 9px 10px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  tbody tr:last-child td { border-bottom: 0; }
+  .c-rank { font-family: var(--mono); color: var(--fg-faint); font-size: 12px; width: 34px; font-variant-numeric: tabular-nums; }
+  .c-biz a { font-weight: 550; text-decoration: none; }
+  .c-biz a:hover { text-decoration: underline; }
+  .c-biz .sub { display: block; font-size: 11.5px; color: var(--fg-faint); font-family: var(--mono); }
+  .c-prio { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; width: 62px; }
+  .c-why { color: var(--fg-mid); font-size: 12.5px; max-width: 34ch; }
+  .c-spark { width: 60px; } .c-trend { width: 62px; } .c-score { width: 132px; }
+
+  .meter { display: flex; align-items: center; gap: 8px; }
+  .meter__track { flex: 1; height: 7px; background: var(--bg-sunk); border: 1px solid var(--rule); min-width: 56px; }
+  .meter__fill { display: block; height: 100%; }
+  .meter__num { font-family: var(--mono); font-size: 12.5px; font-variant-numeric: tabular-nums; width: 22px; text-align: right; }
+  .meter--empty { font-family: var(--mono); font-size: 11.5px; color: var(--fg-faint); }
+  .spark { display: block; } .spark--none { color: var(--fg-faint); font-family: var(--mono); }
+
+  .chip { font-family: var(--mono); font-size: 11px; padding: 2px 6px; border: 1px solid currentColor; white-space: nowrap; }
+  .chip--down { color: var(--s-decayed); } .chip--up { color: var(--s-strong); }
+  .chip--flat, .chip--new { color: var(--fg-faint); }
+
+  .rails { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 34px; }
+  .cov { margin-bottom: 12px; }
+  .cov__head { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; gap: 10px; }
+  .cov__n { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 12.5px; }
+  .cov__sub { color: var(--fg-faint); }
+  .cov__track { position: relative; height: 8px; background: var(--bg-sunk); border: 1px solid var(--rule); margin-top: 5px; }
+  .cov__fill { position: absolute; inset: 0 auto 0 0; background: var(--fg-faint); opacity: 0.45; }
+  .cov__mark { position: absolute; inset: 0 auto 0 0; background: var(--s-decayed); }
+
+  .list { list-style: none; padding: 0; margin: 0; }
+  .list li { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--rule); font-size: 13.5px; }
+  .list li:last-child { border-bottom: 0; }
+  .list .n { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--fg-mid); font-size: 12.5px; white-space: nowrap; }
+  .list a { text-decoration: none; } .list a:hover { text-decoration: underline; }
+
+  .callout { border-left: 3px solid var(--s-unconfirmed); background: var(--bg-panel); padding: 12px 16px; margin: 14px 0; font-size: 13.5px; color: var(--fg-mid); }
+  .callout strong { color: var(--fg); }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--rule); font-family: var(--mono); font-size: 11.5px; color: var(--fg-faint); }
+  @media (max-width: 640px) { .c-spark, .c-why { display: none; } .wrap { padding: 20px 14px 60px; } }
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div>
+      <div class="eyebrow">Momentum 360 · prospect radar</div>
+      <h1>Who to build for</h1>
+    </div>
+    <div class="meta">
+      2026-08-06<br>
+      700 businesses tracked<br>
+      700 found today · 700 re-graded
+    </div>
+  </header>
+
+  <div class="decide">
+    <div class="stat stat--act">
+      <div class="stat__n">118</div>
+      <div class="stat__l">Rebuild targets ready to brief</div>
+    </div>
+    <div class="stat stat--hold">
+      <div class="stat__n">144</div>
+      <div class="stat__l">Blocked on a render pass</div>
+    </div>
+    <div class="stat">
+      <div class="stat__n">57</div>
+      <div class="stat__l">Mean site quality, graded set</div>
+    </div>
+    <div class="stat">
+      <div class="stat__n">0</div>
+      <div class="stat__l">Due for a re-audit</div>
+    </div>
+  </div>
+
+  <h2>Grade distribution</h2>
+  <p class="note">Every graded prospect, worst on the left. <strong>Unconfirmed</strong> means the markup passed but nobody rendered the page — those are not decisions yet.</p>
+  <div class="dist">
+    <div class="dist__seg" style="width:7.78%;background:var(--s-broken)" title="broken: 52">52</div><div class="dist__seg" style="width:15.27%;background:var(--s-decayed)" title="decayed: 102">102</div><div class="dist__seg" style="width:55.39%;background:var(--s-dated)" title="dated: 370">370</div><div class="dist__seg" style="width:21.56%;background:var(--s-unconfirmed)" title="unconfirmed: 144">144</div>
+  </div>
+  <div class="dist__legend">
+    <span><i style="background:var(--s-broken)"></i>broken 52</span><span><i style="background:var(--s-decayed)"></i>decayed 102</span><span><i style="background:var(--s-dated)"></i>dated 370</span><span><i style="background:var(--s-unconfirmed)"></i>unconfirmed 144</span>
+  </div>
+
+  <h2>Build queue</h2>
+  <p class="note">Ranked by opportunity, weighted for the Philadelphia region. A declining score outranks a consistently poor one — a business whose site just got worse is a warmer call. Only these consume a build slot.</p>
+  <div class="scroll">
+    <table>
+      <thead><tr>
+        <th>#</th><th>Business</th><th>Their site</th><th>History</th><th>Trend</th><th>Priority</th><th>Worst fault</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+  <td class="c-rank">1</td>
+  <td class="c-biz">
+    <a href="http://germantowndental.us/" target="_blank" rel="noopener noreferrer">Germantown Dental Group</a>
+    <span class="sub">dentist · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>94</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">2</td>
+  <td class="c-biz">
+    <a href="http://www.udisandconnorthodontics.com/" target="_blank" rel="noopener noreferrer">Udis &amp; Conn Orthodontics</a>
+    <span class="sub">dentist · Jenkintown · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>86</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">3</td>
+  <td class="c-biz">
+    <a href="http://jarmanairconditioning.com/" target="_blank" rel="noopener noreferrer">Jarman Sales &amp; Service, Inc</a>
+    <span class="sub">hvac · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 20 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:20%;background:var(--s-broken)"></span></span><span class="meter__num">20</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>82</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">4</td>
+  <td class="c-biz">
+    <a href="http://www.leeshoagieshorsham.com/" target="_blank" rel="noopener noreferrer">Lee's Hoagie House</a>
+    <span class="sub">restaurant · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>82</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">5</td>
+  <td class="c-biz">
+    <a href="https://www.andorradental.com/" target="_blank" rel="noopener noreferrer">Andorra Family Dentistry</a>
+    <span class="sub">dentist · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 26 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:26%;background:var(--s-broken)"></span></span><span class="meter__num">26</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>78</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">6</td>
+  <td class="c-biz">
+    <a href="http://duttonroadvetclinic.com/" target="_blank" rel="noopener noreferrer">Dutton Road Veterinary Clinic</a>
+    <span class="sub">veterinary · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 25 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:25%;background:var(--s-broken)"></span></span><span class="meter__num">25</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>78</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">7</td>
+  <td class="c-biz">
+    <a href="http://www.pandcinsuranceagency.com/" target="_blank" rel="noopener noreferrer">P &amp; C Insurance Agency LLC</a>
+    <span class="sub">insurance · Aldan · Delaware County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>78</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">8</td>
+  <td class="c-biz">
+    <a href="http://broomallinsuranceagency.com/" target="_blank" rel="noopener noreferrer">Anthony Gueriera Jr. Insurance Agency LLC</a>
+    <span class="sub">insurance · Broomall · Delaware County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>78</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">9</td>
+  <td class="c-biz">
+    <a href="http://bigheadtransportllc.com/" target="_blank" rel="noopener noreferrer">Big Head Transport, LLC</a>
+    <span class="sub">tyres · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>78</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">10</td>
+  <td class="c-biz">
+    <a href="http://kehansautoservice.com/" target="_blank" rel="noopener noreferrer">Kehan's Auto Service</a>
+    <span class="sub">car-repair · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>78</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">11</td>
+  <td class="c-biz">
+    <a href="http://cecarparts.com/" target="_blank" rel="noopener noreferrer">Elite Auto Parts</a>
+    <span class="sub">car-parts · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>78</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">12</td>
+  <td class="c-biz">
+    <a href="http://banbanasianbistro.net/" target="_blank" rel="noopener noreferrer">Bàn Bàn Asian Bistro</a>
+    <span class="sub">restaurant · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>78</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ECONNREFUSED)</td>
+</tr>
+<tr>
+  <td class="c-rank">13</td>
+  <td class="c-biz">
+    <a href="http://esauto.net/" target="_blank" rel="noopener noreferrer">E&amp;S Autoparts</a>
+    <span class="sub">doityourself · Twin Oaks · Delaware County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>75</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">14</td>
+  <td class="c-biz">
+    <a href="http://www.govertical.com/" target="_blank" rel="noopener noreferrer">Go Vertical - Indoor Rock Climbing Gym</a>
+    <span class="sub">fitness-centre · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 15 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:15%;background:var(--s-broken)"></span></span><span class="meter__num">15</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>75</strong></td>
+  <td class="c-why">server error 503</td>
+</tr>
+<tr>
+  <td class="c-rank">15</td>
+  <td class="c-biz">
+    <a href="http://ansarispharma.com/index.php" target="_blank" rel="noopener noreferrer">ansarispharma.com</a>
+    <span class="sub">works · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>75</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">16</td>
+  <td class="c-biz">
+    <a href="https://www.bgelectricservicellc.com/" target="_blank" rel="noopener noreferrer">BG Electric Service LLC</a>
+    <span class="sub">electrician · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 33 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:33%;background:var(--s-decayed)"></span></span><span class="meter__num">33</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>74</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">17</td>
+  <td class="c-biz">
+    <a href="https://www.padentalgroup.com/" target="_blank" rel="noopener noreferrer">Pennsylvania Dental Group</a>
+    <span class="sub">dentist · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 33 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:33%;background:var(--s-decayed)"></span></span><span class="meter__num">33</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>74</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">18</td>
+  <td class="c-biz">
+    <a href="https://www.havercrowndental.com/" target="_blank" rel="noopener noreferrer">HaverCrown Dental</a>
+    <span class="sub">dentist · Havertown · Delaware County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 23 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:23%;background:var(--s-broken)"></span></span><span class="meter__num">23</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>74</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">19</td>
+  <td class="c-biz">
+    <a href="http://www.philau.edu/healthservices/" target="_blank" rel="noopener noreferrer">Hortense T. Moss Health Center</a>
+    <span class="sub">doctor · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 11 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:11%;background:var(--s-broken)"></span></span><span class="meter__num">11</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">server error 503</td>
+</tr>
+<tr>
+  <td class="c-rank">20</td>
+  <td class="c-biz">
+    <a href="https://www.mtairypediatrics.com/" target="_blank" rel="noopener noreferrer">Mt. Airy Pediatrics, P.C.</a>
+    <span class="sub">doctor · phialdephia · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 11 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:11%;background:var(--s-broken)"></span></span><span class="meter__num">11</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">server error 503</td>
+</tr>
+<tr>
+  <td class="c-rank">21</td>
+  <td class="c-biz">
+    <a href="https://www.alwaysdentalcare.com/" target="_blank" rel="noopener noreferrer">Always Dental Care</a>
+    <span class="sub">dentist · Phoenixville · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 26 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:26%;background:var(--s-broken)"></span></span><span class="meter__num">26</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">22</td>
+  <td class="c-biz">
+    <a href="http://www.specialtyfloors.net/" target="_blank" rel="noopener noreferrer">Specialty Floors Inc.</a>
+    <span class="sub">floorer · Abington · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">23</td>
+  <td class="c-biz">
+    <a href="https://www.colmarkids.com/" target="_blank" rel="noopener noreferrer">Colmar Dentistry For Kids</a>
+    <span class="sub">dentist · Colmar · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 24 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:24%;background:var(--s-broken)"></span></span><span class="meter__num">24</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">24</td>
+  <td class="c-biz">
+    <a href="http://fletchermasonry.biz/" target="_blank" rel="noopener noreferrer">Fletcher Masonry</a>
+    <span class="sub">stonemason · Chadds Ford · Delaware County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">25</td>
+  <td class="c-biz">
+    <a href="http://moorebrosconstruction.com/" target="_blank" rel="noopener noreferrer">Moore Brothers Construction</a>
+    <span class="sub">paver · Chester · Delaware County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">26</td>
+  <td class="c-biz">
+    <a href="http://mcsheasardmore.com/" target="_blank" rel="noopener noreferrer">Jack McShea's Restaurant &amp; Bar</a>
+    <span class="sub">pub · Ardmore · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">27</td>
+  <td class="c-biz">
+    <a href="http://fultonandsusies.com/" target="_blank" rel="noopener noreferrer">Fulton &amp; Susie's Hairstyling Salon</a>
+    <span class="sub">hairdresser · Boyertown · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">28</td>
+  <td class="c-biz">
+    <a href="http://fantacbeautybar.com/" target="_blank" rel="noopener noreferrer">Fanta C Beauty Bar</a>
+    <span class="sub">beauty · Abington · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">29</td>
+  <td class="c-biz">
+    <a href="http://www.sprinklesicecreamelkinspark.com/" target="_blank" rel="noopener noreferrer">Sprinkles Icecream</a>
+    <span class="sub">ice-cream · Elkins Park · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 11 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:11%;background:var(--s-broken)"></span></span><span class="meter__num">11</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>72</strong></td>
+  <td class="c-why">server error 503</td>
+</tr>
+<tr>
+  <td class="c-rank">30</td>
+  <td class="c-biz">
+    <a href="http://mortonelectric.net/" target="_blank" rel="noopener noreferrer">Morton Electric Pool &amp; Spa Specialists</a>
+    <span class="sub">plumber · Trevose · Bucks County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 0 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:0%;background:var(--s-broken)"></span></span><span class="meter__num">0</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>69</strong></td>
+  <td class="c-why">domain does not resolve or refused connection (ENOTFOUND)</td>
+</tr>
+<tr>
+  <td class="c-rank">31</td>
+  <td class="c-biz">
+    <a href="http://chestnuthillvet.com/" target="_blank" rel="noopener noreferrer">Chestnut Hill Animal Hospital</a>
+    <span class="sub">veterinary · Erdenheim · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 32 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:32%;background:var(--s-decayed)"></span></span><span class="meter__num">32</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>68</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">32</td>
+  <td class="c-biz">
+    <a href="https://www.warminsterhorshamvet.com/" target="_blank" rel="noopener noreferrer">County Line Veterinary Hospital</a>
+    <span class="sub">veterinary · Hatboro · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 33 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:33%;background:var(--s-decayed)"></span></span><span class="meter__num">33</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>68</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">33</td>
+  <td class="c-biz">
+    <a href="https://gleneaglepediatricdentistry.com/" target="_blank" rel="noopener noreferrer">Glen Eagle Pediatric Dentistry</a>
+    <span class="sub">dentist · Delaware County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 33 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:33%;background:var(--s-decayed)"></span></span><span class="meter__num">33</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>68</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">34</td>
+  <td class="c-biz">
+    <a href="https://www.galloinsuranceagency.com/" target="_blank" rel="noopener noreferrer">Gallo Insurance Agency</a>
+    <span class="sub">insurance · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 30 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:30%;background:var(--s-decayed)"></span></span><span class="meter__num">30</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>66</strong></td>
+  <td class="c-why">client error 410</td>
+</tr>
+<tr>
+  <td class="c-rank">35</td>
+  <td class="c-biz">
+    <a href="http://www.grandsportautobody.com/locations/collegeville.php" target="_blank" rel="noopener noreferrer">Grand Sport Auto Body</a>
+    <span class="sub">car-repair · Collegeville · Montgomery County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 11 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:11%;background:var(--s-broken)"></span></span><span class="meter__num">11</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>66</strong></td>
+  <td class="c-why">server error 503</td>
+</tr>
+<tr>
+  <td class="c-rank">36</td>
+  <td class="c-biz">
+    <a href="https://davidsonfab.com/" target="_blank" rel="noopener noreferrer">Davidson Fabricating, Inc.</a>
+    <span class="sub">metal-construction · Chester County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 33 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:33%;background:var(--s-decayed)"></span></span><span class="meter__num">33</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>65</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">37</td>
+  <td class="c-biz">
+    <a href="https://dreamteampa.com/" target="_blank" rel="noopener noreferrer">Dream Team</a>
+    <span class="sub">hvac · Paoli · Chester County</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 33 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:33%;background:var(--s-decayed)"></span></span><span class="meter__num">33</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>65</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">38</td>
+  <td class="c-biz">
+    <a href="https://bpmfitnessphl.com/" target="_blank" rel="noopener noreferrer">BPM Fitness</a>
+    <span class="sub">fitness-centre · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 33 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:33%;background:var(--s-decayed)"></span></span><span class="meter__num">33</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>65</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">39</td>
+  <td class="c-biz">
+    <a href="https://www.firstclassautoland.com/" target="_blank" rel="noopener noreferrer">First Class Auto Land</a>
+    <span class="sub">car · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 23 of 100, broken"><span class="meter__track"><span class="meter__fill" style="width:23%;background:var(--s-broken)"></span></span><span class="meter__num">23</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>65</strong></td>
+  <td class="c-why">no viewport meta — page renders desktop-width on phones</td>
+</tr>
+<tr>
+  <td class="c-rank">40</td>
+  <td class="c-biz">
+    <a href="http://www.easyautotag.com/" target="_blank" rel="noopener noreferrer">Easy Auto Tag &amp; Insurance</a>
+    <span class="sub">insurance · Philadelphia</span>
+  </td>
+  <td class="c-score"><span class="meter" role="img" aria-label="site quality 36 of 100, decayed"><span class="meter__track"><span class="meter__fill" style="width:36%;background:var(--s-decayed)"></span></span><span class="meter__num">36</span></span></td>
+  <td class="c-spark"><span class="spark spark--none" aria-hidden="true">·</span></td>
+  <td class="c-trend"><span class="chip chip--new">new</span></td>
+  <td class="c-prio"><strong>63</strong></td>
+  <td class="c-why">no HTTPS — browsers mark it &quot;Not secure&quot;</td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:10px">Showing the top 40 of 118. Full set in the CSV.</p>
+
+  <div class="rails">
+    <section>
+      <h2>Coverage by county</h2>
+      <p class="note">Philadelphia and the collar counties carry the local-proof advantage, so they are weighted highest in the ranking. Orange marks rebuild targets.</p>
+      <div class="cov">
+  <div class="cov__head"><span>Montgomery County</span><span class="cov__n">389<span class="cov__sub"> · 67 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="Montgomery County: 389 prospects, 67 rebuild targets">
+    <div class="cov__fill" style="width:100.0%"></div>
+    <div class="cov__mark" style="width:17.2%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>Philadelphia</span><span class="cov__n">175<span class="cov__sub"> · 23 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="Philadelphia: 175 prospects, 23 rebuild targets">
+    <div class="cov__fill" style="width:45.0%"></div>
+    <div class="cov__mark" style="width:5.9%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>Chester County</span><span class="cov__n">60<span class="cov__sub"> · 13 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="Chester County: 60 prospects, 13 rebuild targets">
+    <div class="cov__fill" style="width:15.4%"></div>
+    <div class="cov__mark" style="width:3.3%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>Delaware County</span><span class="cov__n">50<span class="cov__sub"> · 11 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="Delaware County: 50 prospects, 11 rebuild targets">
+    <div class="cov__fill" style="width:12.9%"></div>
+    <div class="cov__mark" style="width:2.8%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>Bucks County</span><span class="cov__n">26<span class="cov__sub"> · 4 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="Bucks County: 26 prospects, 4 rebuild targets">
+    <div class="cov__fill" style="width:6.7%"></div>
+    <div class="cov__mark" style="width:1.0%"></div>
+  </div>
+</div>
+    </section>
+
+    <section>
+      <h2>Coverage by vertical</h2>
+      <p class="note">Home services, medical, and legal are the high-value verticals the shipped Philadelphia batch barely touched.</p>
+      <div class="cov">
+  <div class="cov__head"><span>home services</span><span class="cov__n">167<span class="cov__sub"> · 30 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="home services: 167 prospects, 30 rebuild targets">
+    <div class="cov__fill" style="width:100.0%"></div>
+    <div class="cov__mark" style="width:18.0%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>food</span><span class="cov__n">136<span class="cov__sub"> · 25 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="food: 136 prospects, 25 rebuild targets">
+    <div class="cov__fill" style="width:81.4%"></div>
+    <div class="cov__mark" style="width:15.0%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>medical</span><span class="cov__n">151<span class="cov__sub"> · 21 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="medical: 151 prospects, 21 rebuild targets">
+    <div class="cov__fill" style="width:90.4%"></div>
+    <div class="cov__mark" style="width:12.6%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>legal</span><span class="cov__n">100<span class="cov__sub"> · 19 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="legal: 100 prospects, 19 rebuild targets">
+    <div class="cov__fill" style="width:59.9%"></div>
+    <div class="cov__mark" style="width:11.4%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>spa wellness</span><span class="cov__n">56<span class="cov__sub"> · 7 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="spa wellness: 56 prospects, 7 rebuild targets">
+    <div class="cov__fill" style="width:33.5%"></div>
+    <div class="cov__mark" style="width:4.2%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>auto</span><span class="cov__n">32<span class="cov__sub"> · 7 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="auto: 32 prospects, 7 rebuild targets">
+    <div class="cov__fill" style="width:19.2%"></div>
+    <div class="cov__mark" style="width:4.2%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>retail</span><span class="cov__n">40<span class="cov__sub"> · 7 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="retail: 40 prospects, 7 rebuild targets">
+    <div class="cov__fill" style="width:24.0%"></div>
+    <div class="cov__mark" style="width:4.2%"></div>
+  </div>
+</div><div class="cov">
+  <div class="cov__head"><span>industrial</span><span class="cov__n">18<span class="cov__sub"> · 2 rebuild</span></span></div>
+  <div class="cov__track" role="img" aria-label="industrial: 18 prospects, 2 rebuild targets">
+    <div class="cov__fill" style="width:10.8%"></div>
+    <div class="cov__mark" style="width:1.2%"></div>
+  </div>
+</div>
+    </section>
+  </div>
+
+  <div class="rails">
+    <section>
+      <h2>Sell them traffic, not a rebuild</h2>
+      <p class="note">Their sites are good. Pitching a redesign burns credibility — these are Google Ads, local SEO, and GBP prospects.</p>
+      <ul class="list">
+        <li><a href="https://keengas.net/locations/4-oxford-pennsylvania-store" target="_blank" rel="noopener noreferrer">Keen Compressed Gas Company</a><span class="n">55 · Nurture</span></li><li><a href="https://www.tuneupbarbershop.com/" target="_blank" rel="noopener noreferrer">Tune Up Barbershop</a><span class="n">55 · Nurture</span></li><li><a href="https://islandesignsalon.com/" target="_blank" rel="noopener noreferrer">Island Design Natural Hair Salon</a><span class="n">55 · Nurture</span></li><li><a href="https://www.ardmorecafe.com/" target="_blank" rel="noopener noreferrer">Ardmore Station Cafe</a><span class="n">55 · Nurture</span></li><li><a href="https://valleyforgerunning.com/" target="_blank" rel="noopener noreferrer">Valley Forge Running Company</a><span class="n">55 · Nurture</span></li><li><a href="https://www.mcgillrealtor.com/" target="_blank" rel="noopener noreferrer">McGill Agency</a><span class="n">54 · Nurture</span></li><li><a href="https://sentryproperty.net/index.htm" target="_blank" rel="noopener noreferrer">Sentry Property Management Inc</a><span class="n">54 · Nurture</span></li><li><a href="https://www.berrihealthy.net/" target="_blank" rel="noopener noreferrer">Berri Healthy</a><span class="n">54 · Nurture</span></li><li><a href="https://www.marketstreethardware.com/" target="_blank" rel="noopener noreferrer">Market Street Hardware &amp; General Store</a><span class="n">54 · Nurture</span></li><li><a href="https://crossfitlove.com/" target="_blank" rel="noopener noreferrer">Crossfit Love</a><span class="n">54 · Nurture</span></li><li><a href="https://almazcafes.com/" target="_blank" rel="noopener noreferrer">Almaz Cafe</a><span class="n">54 · Nurture</span></li><li><a href="https://mgfloorsupply.com/" target="_blank" rel="noopener noreferrer">MG Floor Supply</a><span class="n">53 · Nurture</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Moved since last audit</h2>
+      <p class="note">Sites that changed materially. A drop is an opening; a rise means pull them out of the queue before we pitch a redesign to someone who just bought one.</p>
+      <ul class="list">
+        <li><span class="n">No movement yet — trends appear once a prospect has two grades.</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="callout"><strong>144 prospects are blocked on a render pass.</strong>
+      Markup checks found no disqualifying fault, but nobody has seen the design — and source HTML cannot tell a beautifully art-directed site from a dated template.
+      Until a Tier 1 audit runs, none of these can be cleared for a pitch or safely written off.</div>
+
+  <footer>
+    Generated 2026-08-06 by <span style="color:var(--fg-mid)">_os/automation/bin/radar-refresh.js</span>.
+    Grades expire and re-audit on a per-verdict schedule. Nothing here is outbound-ready — a human approves every send.
+  </footer>
+</div>

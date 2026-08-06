@@ -52,9 +52,15 @@ flowchart TD
 - **Vertical fit:** does Momentum have an industry page and case studies here (see [[Market Roster]])
 - **Ad presence:** already spending means already sold on marketing
 
-**Status: partly automated.** Decay signals are now harvested automatically by `harvest.js` (`decaySignals.missingViewport`, `staleCopyrightYear`, empty phone/hours, thin homepage copy). Full 0–100 ranking across a prospect sheet is still manual.
+**Status: automated.** Built 2026-08-06 — see [[Site Grader]] and the `/site-grade` skill.
 
-**To automate next:** a scoring script that takes prospect rows, runs harvest, and emits a 0–100 score with reasons. Playwright is already installed for harvest and QA.
+`bin/grade-sites.js` takes prospect rows and emits two 0–100 scores with per-finding reasons: a **Site Quality Score** (how good their current site is) and an **Opportunity Score** (whether to spend a build slot). Discovery is automated too — `bin/discover-prospects.js` pulls candidates from OpenStreetMap and filters chains, social-only listings, and every domain we have already built for.
+
+The scoring runs in tiers so a 500-row pull is affordable: Tier 0 is one HTTP fetch per candidate with no browser, Tier 1 renders only the candidates still undecided, Tier 2 adds a human taste verdict. An existing `harvest.json` is reused as free Tier 1 evidence.
+
+**Crucially, this stage now answers Mac's 2026-08-05 objection** that some prospects already have really great websites. A strong site no longer scores as a good target — and it is not discarded either, it routes to an ads / local SEO / GBP offer instead. Graded against their own sites, only 9% of the completed 100 would qualify for a rebuild today, versus 18% of a fresh Philadelphia pull.
+
+**To automate next:** feed ability-to-pay signals (review count, rating, ad presence, GBP status) from Mac's Maps sheet into the opportunity score. OSM carries none of them, which caps `opportunity_confidence` at 0.65 for discovered rows.
 
 ## Stage 3: Brief
 
@@ -142,8 +148,8 @@ This mirrors the Optimization Ledger hypothesis pattern from the orchestrator sp
 
 | Stage | Automated | Owner | Next action |
 |---|---|---|---|
-| 1 Discover | Partly | Jesse + Dillon | Stand up the shared prospect sheet with stable IDs |
-| 2 Qualify | No | Dillon | Build the site-decay scoring script |
+| 1 Discover | Partly | Jesse + Dillon | OSM discovery shipped; still needs the shared sheet with stable IDs |
+| 2 Qualify | Yes | Dillon | Feed Maps review/ad data into the opportunity score |
 | 3 Brief | Yes (agent) | Dillon | None; runbook exists |
 | 4 Build | Yes | Dillon | None; batch runner shipped |
 | 5 Quality gate | Yes + human | Dillon | None; enforced per batch |
@@ -151,4 +157,4 @@ This mirrors the Optimization Ledger hypothesis pattern from the orchestrator sp
 | 7 Activate | Partly | Dillon + Mac | Deploy token, then pick the mail vendor |
 | 8 Learn | No | Dillon | Create the results ledger on batch 1 |
 
-**Short answer for Mac:** stages 3 through 5 are fully automated now, one command builds and QAs a whole batch. Stage 1 needs the shared sheet, stage 2 needs the scoring script, and stage 7 is blocked on a mail vendor decision plus a deploy token. Approval stays human on purpose.
+**Short answer for Mac:** stages 2 through 5 are fully automated now — one command grades a market, another builds and QAs a whole batch. Stage 1 has automated discovery but still wants the shared sheet for review and ad data. Stage 7 is blocked on a mail vendor decision plus a deploy token. Approval stays human on purpose.

@@ -26,3 +26,8 @@ _templates/site-factory/harvest/
 .env
 .env.*
 !.env.example
+
+# Site grader: the raw discovery pool is large and regenerable in one command
+# (bin/discover-prospects.js). The selected candidate list and the grade reports
+# are tracked; the full pool is not.
+12_Brain/state/candidates/*-pool-*.json

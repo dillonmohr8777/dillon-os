@@ -1,0 +1,104 @@
+{
+  "automation_id": "discover-prospects",
+  "started_at": "2026-08-06T18:25:12.741Z",
+  "status": "ok",
+  "errors": [],
+  "market": "PHL",
+  "market_label": "Philadelphia + collar counties",
+  "target": 4000,
+  "discovered": 3502,
+  "unique_before_target_cut": 3502,
+  "by_vertical_group": {
+    "medical": 365,
+    "legal": 204,
+    "home-services": 167,
+    "spa-wellness": 314,
+    "auto": 223,
+    "industrial": 18,
+    "retail": 399,
+    "food": 1802,
+    "other": 10
+  },
+  "filtered_out": {
+    "raw": 5630,
+    "chain": 1669,
+    "non_site_domain": 84,
+    "excluded_already_done": 17,
+    "duplicate_domain": 358
+  },
+  "exclusion_domains": 80,
+  "per_area": [
+    {
+      "area": "Philadelphia",
+      "raw": 1464,
+      "kept": 1021,
+      "stats": {
+        "raw": 1464,
+        "no_website": 0,
+        "chain": 311,
+        "non_site_domain": 38,
+        "excluded_already_done": 16,
+        "duplicate_domain": 78,
+        "kept": 1021
+      }
+    },
+    {
+      "area": "Montgomery County",
+      "raw": 1486,
+      "kept": 827,
+      "stats": {
+        "raw": 1486,
+        "no_website": 0,
+        "chain": 581,
+        "non_site_domain": 15,
+        "excluded_already_done": 0,
+        "duplicate_domain": 42,
+        "kept": 848
+      }
+    },
+    {
+      "area": "Delaware County",
+      "raw": 735,
+      "kept": 427,
+      "stats": {
+        "raw": 735,
+        "no_website": 0,
+        "chain": 239,
+        "non_site_domain": 4,
+        "excluded_already_done": 1,
+        "duplicate_domain": 21,
+        "kept": 470
+      }
+    },
+    {
+      "area": "Bucks County",
+      "raw": 562,
+      "kept": 310,
+      "stats": {
+        "raw": 562,
+        "no_website": 0,
+        "chain": 214,
+        "non_site_domain": 5,
+        "excluded_already_done": 0,
+        "duplicate_domain": 14,
+        "kept": 329
+      }
+    },
+    {
+      "area": "Chester County",
+      "raw": 1383,
+      "kept": 917,
+      "stats": {
+        "raw": 1383,
+        "no_website": 0,
+        "chain": 324,
+        "non_site_domain": 22,
+        "excluded_already_done": 0,
+        "duplicate_domain": 57,
+        "kept": 980
+      }
+    }
+  ],
+  "dry_run": false,
+  "written_at": "2026-08-06T18:25:12.773Z"
+}

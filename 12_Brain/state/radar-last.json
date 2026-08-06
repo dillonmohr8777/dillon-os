@@ -1,0 +1,25 @@
+{
+  "automation_id": "radar-refresh",
+  "started_at": "2026-08-06T19:35:33.300Z",
+  "status": "ok",
+  "date": "2026-08-06",
+  "rotation_slot": "PHL: Montgomery County",
+  "run": {
+    "discovered_raw": 0,
+    "discovered_new": 0,
+    "regraded": 0,
+    "errors": []
+  },
+  "tracked": 700,
+  "build_queue_size": 118,
+  "needs_render": 144,
+  "mean_site_quality": 57,
+  "by_verdict": {
+    "rebuild": 118,
+    "verify": 144,
+    "polish": 333,
+    "enrich": 43,
+    "nurture": 62
+  },
+  "errors": []
+}
