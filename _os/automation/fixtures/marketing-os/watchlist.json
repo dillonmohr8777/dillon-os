@@ -1,0 +1,11 @@
+{
+  "client_id": "cl_87a6c6799c6cefd6",
+  "client_ref": "01_Clients/Shadow HVAC.md",
+  "vertical": "local HVAC",
+  "x_handles": ["hvacinsider", "@energystar"],
+  "narrative_keywords": ["heat pump rebates", "indoor air quality"],
+  "search_budgets": {
+    "max_x_search_calls": 8,
+    "max_web_search_calls": 3
+  }
+}

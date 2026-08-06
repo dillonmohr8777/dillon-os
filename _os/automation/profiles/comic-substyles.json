@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "rules": [
+    "Use one client ID per manifest.",
+    "Use only the hash-locked canonical logo and approved references.",
+    "Run each substyle separately; never blend brand assets across runs.",
+    "Use image-to-video with the approved panel as the locked first frame.",
+    "Do not claim pixel fidelity; require human review before delivery or publication."
+  ],
+  "substyles": [
+    {
+      "id": "classic-american",
+      "prompt_suffix": "Classic American comic treatment with thick black ink outlines, restrained cel shading, and halftone texture. Preserve the exact logo placement, colors, and proportions."
+    },
+    {
+      "id": "pop-art",
+      "prompt_suffix": "Bright pop-art treatment with bold color blocks and controlled halftone dots. Preserve the exact logo placement, colors, and proportions."
+    },
+    {
+      "id": "noir",
+      "prompt_suffix": "High-contrast noir comic treatment with dramatic shadows and limited accent color. Preserve the exact logo placement, colors, and proportions."
+    },
+    {
+      "id": "manga",
+      "prompt_suffix": "Clean manga-inspired linework and dynamic panel composition without changing approved brand colors. Preserve the exact logo placement, colors, and proportions."
+    }
+  ]
+}

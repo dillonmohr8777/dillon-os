@@ -1,8 +1,9 @@
 # Automation ops operator guide
 
-This is the executable control surface for Dillon OS automation. All commands are
-local and fail closed. A successful local check never authorizes an external send,
-public deploy, account change, or secret use.
+This is the executable control surface for Dillon OS automation. Commands are local
+and fail closed except the explicitly invoked xAI collector, which performs read-only
+X/web API calls after credential and credit approval. A successful check never
+authorizes an external send, public deploy, account change, or secret use.
 
 ## Requirements
 
@@ -48,6 +49,84 @@ Use `-DryRun` to inspect the request without using credits or requiring a key.
 The collector records citations, tool-call types, response ID, token usage, and
 exact USD cost without logging the credential. The default profile asks the
 model to stay within 12 X searches, 4 web searches, and 4,500 output tokens.
+Returned tool-call counts above the configured budget are rejected from ingestion;
+the prompt and post-run rejection cannot prevent the provider from consuming those
+calls, so cost limits remain an operator credential/profile gate.
+
+## Client-scoped marketing intelligence
+
+Three watchlists are wired to exact canonical client notes through opaque
+`automation_client_id` values:
+
+- `_os/automation/profiles/client-watchlists/align-hcm.json`
+- `_os/automation/profiles/client-watchlists/shadow-hvac.json`
+- `_os/automation/profiles/client-watchlists/bok-law.json`
+
+Compile and inspect a watchlist before spending xAI credits:
+
+```powershell
+node _os/automation/bin/marketing-os.js watchlist `
+  --from _os/automation/profiles/client-watchlists/align-hcm.json `
+  --out _os/automation/incoming/grok/align-hcm-profile.json
+
+node _os/automation/bin/xai-research.js `
+  --profile _os/automation/incoming/grok/align-hcm-profile.json `
+  --dry-run
+```
+
+An approved operator with the protected xAI credential can run the same profile:
+
+```powershell
+node _os/automation/bin/xai-research.js `
+  --profile _os/automation/incoming/grok/align-hcm-profile.json `
+  --out _os/automation/incoming/grok/align-hcm-envelope.json `
+  --packet-out _os/automation/incoming/grok/align-hcm-packet.json `
+  --ingest
+
+node _os/automation/bin/marketing-os.js packet `
+  --from _os/automation/incoming/grok/align-hcm-packet.json `
+  --client-id cl_03a7165a637012e8 `
+  --out Daily-Briefs/client-packets/align-hcm-draft.md
+```
+
+The xAI run fails closed unless its JSON packet has the expected client ID,
+sourced and ranked claims, dates, observed metrics, authoritative checks,
+40–60-word FAQ experiment answers, comparison scaffolding, and explicit
+verification labels. `verified` requires an authoritative source and a confirmed
+check that cites the same declared non-X source. This validates source structure
+and corroboration linkage, not factual truth; a human must inspect every source
+before downstream approval. The local packet is always a draft and cannot authorize publication,
+HubSpot writes, email, Slack, spending, deployment, or client delivery.
+
+The equivalent Hermes subscription route is not enabled in this repository.
+Hermes is retired locally, and subscription OAuth can return account allowlist
+errors. Rebuilding it requires a separate connector and acceptance decision; the
+direct xAI collector above is the implemented production path.
+
+### Freshness review experiment
+
+```powershell
+node _os/automation/bin/marketing-os.js freshness --from <freshness-config.json>
+```
+
+This produces a deterministic review queue. A configured cadence is an
+experiment, not a claim that all pages decay after 30, 60, or 90 days.
+
+### Comic panel and image-to-video gate
+
+```powershell
+node _os/automation/bin/marketing-os.js creative `
+  --from <creative-input.json> `
+  --client-id <opaque-client-id> `
+  --out <creative-manifest.json>
+```
+
+The command hashes the canonical logo, approved references, and first frame;
+requires separate substyle runs; forces image-to-video first-frame lock; rejects
+cross-client IDs; disclaims pixel fidelity; and leaves human approval pending.
+`_os/automation/profiles/comic-substyles.json` supplies four isolated style
+prompts. The command never calls Grok Imagine or a video editor. Those are
+operator-controlled external actions after review.
 
 ## Maker/checker gate
 

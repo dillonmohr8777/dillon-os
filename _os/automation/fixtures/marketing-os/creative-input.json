@@ -1,0 +1,37 @@
+{
+  "client_id": "cl_87a6c6799c6cefd6",
+  "client_ref": "01_Clients/Shadow HVAC.md",
+  "canonical_logo": {
+    "path": "_os/automation/fixtures/marketing-os/assets/acme-logo.svg"
+  },
+  "approved_references": [
+    {
+      "path": "_os/automation/fixtures/marketing-os/assets/acme-reference.svg",
+      "approved": true,
+      "approved_by": "fixture-reviewer",
+      "approved_at": "2026-08-01"
+    }
+  ],
+  "style_runs": [
+    {
+      "run_id": "comic-clean-lines",
+      "style": "clean editorial comic",
+      "prompt": "Preserve the exact logo placement, colors, and proportions; use the approved reference only for composition cues."
+    },
+    {
+      "run_id": "comic-halftone",
+      "style": "restrained halftone comic",
+      "prompt": "Preserve the exact logo placement, colors, and proportions in a separate halftone run; do not blend outputs."
+    }
+  ],
+  "video": {
+    "source_style_run_id": "comic-clean-lines",
+    "first_frame": {
+      "path": "_os/automation/fixtures/marketing-os/assets/acme-first-frame.svg"
+    }
+  },
+  "human_approval": {
+    "required": true,
+    "status": "pending"
+  }
+}

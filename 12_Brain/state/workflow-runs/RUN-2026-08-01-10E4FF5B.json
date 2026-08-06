@@ -1,0 +1,183 @@
+{
+  "run_id": "RUN-2026-08-01-10E4FF5B",
+  "workflow_id": "client-scoped-grok-marketing-os",
+  "workflow_type": "general",
+  "task": "Implement and independently verify the client-scoped Grok marketing operating layer",
+  "constraints": [
+    "No publish, send, CRM write, spend, authentication, deployment, or client delivery",
+    "Every packet remains draft-only and client-scoped",
+    "Human factual and creative approval remains required"
+  ],
+  "upstream_artifacts": [
+    "12_Brain/research/2026-08-01 - Grok marketing OS verification.md"
+  ],
+  "maker_id": "bc-d0ff7111-f67e-5003-b732-4401addf5485",
+  "checker_id": "bc-58197ecd-76d3-5690-a37e-cd22df6f3209",
+  "artifact_paths": [
+    "_os/automation/lib/marketing-os.js",
+    "_os/automation/lib/xai-research.js",
+    "_os/automation/bin/marketing-os.js",
+    "_os/automation/bin/xai-research.js",
+    "_os/automation/tests/marketing-os.test.js",
+    "_os/automation/tests/intelligence-stack.test.js",
+    "12_Brain/schemas/marketing-watchlist.json",
+    "12_Brain/schemas/marketing-evidence-packet.json",
+    "12_Brain/schemas/marketing-creative-manifest.json",
+    "12_Brain/schemas/marketing-freshness-config.json",
+    "12_Brain/projects/2026-08-01 - Client-scoped Grok marketing OS.md",
+    "12_Brain/research/2026-08-01 - Grok marketing OS verification.md"
+  ],
+  "acceptance_tests": [
+    "All deterministic automation, brain, and public-safety tests pass",
+    "Independent adversarial checker reports no reproducible contract violations",
+    "Cross-client, structured-action, path, authority-spoof, budget, and creative self-approval probes fail closed",
+    "Human approval is not manufactured"
+  ],
+  "rollback": "Revert the feature commits and remove the three opaque automation_client_id fields; retain review evidence for audit.",
+  "demo_recording_path": null,
+  "visual_review_required": false,
+  "human_gate": true,
+  "budget_tokens": null,
+  "timeout_seconds": 2400,
+  "status": "adoption_ready",
+  "started_at": "2026-08-01T03:04:40.129Z",
+  "updated_at": "2026-08-01T04:15:55.657Z",
+  "maker_evidence": {
+    "maker_id": "bc-d0ff7111-f67e-5003-b732-4401addf5485",
+    "recorded_at": "2026-08-01T03:04:40.155Z",
+    "summary": "Implemented the client-scoped marketing layer, then incorporated repeated adversarial findings until every acceptance probe was deterministic and fail-closed.",
+    "command_results": [
+      {
+        "command": "node --test _os/automation/tests/*.test.js _os/test/brain-hud.test.js _os/test/public-safety.test.js",
+        "status": "pass",
+        "result": "74 tests passed; 0 failed"
+      },
+      {
+        "command": "Three client watchlist dry runs",
+        "status": "pass",
+        "result": "3 valid; 0 external calls"
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "_os/automation/lib/marketing-os.js",
+        "exists": true,
+        "sha256": "f6de6a147785c027b208483b5e96c85ca1a9b73985bfbfda2b3f78e21fce8a9c",
+        "bytes": 34595,
+        "kind": "file"
+      },
+      {
+        "path": "_os/automation/lib/xai-research.js",
+        "exists": true,
+        "sha256": "80e14d22e5466c5a976a50c1a68f2a9608b9acb6f2c52b1cff7efa8987505b10",
+        "bytes": 10970,
+        "kind": "file"
+      },
+      {
+        "path": "_os/automation/bin/marketing-os.js",
+        "exists": true,
+        "sha256": "3c573e41062fb5761d77ba4bff117250b5d05ad2048c6826886d92a9b9fdc1f4",
+        "bytes": 3799,
+        "kind": "file"
+      },
+      {
+        "path": "_os/automation/bin/xai-research.js",
+        "exists": true,
+        "sha256": "8bafec1967bfd54bd348df7584e671bab6613337e7ccb869424adb61a11488fe",
+        "bytes": 2461,
+        "kind": "file"
+      },
+      {
+        "path": "_os/automation/tests/marketing-os.test.js",
+        "exists": true,
+        "sha256": "3e8eb9bdae78b894c42952c78ed3041d20854ec4a2126e7fd794b0ed80c7355b",
+        "bytes": 18544,
+        "kind": "file"
+      },
+      {
+        "path": "_os/automation/tests/intelligence-stack.test.js",
+        "exists": true,
+        "sha256": "65b04747d8786e0c711652af474fc22456b6b7dbccb36b0e7af13a63cdaef2a2",
+        "bytes": 11491,
+        "kind": "file"
+      },
+      {
+        "path": "12_Brain/schemas/marketing-watchlist.json",
+        "exists": true,
+        "sha256": "65fbed32265e5bf9d9717b2329e585386038e0d5070a8766f4a76bb2fe609600",
+        "bytes": 1459,
+        "kind": "file"
+      },
+      {
+        "path": "12_Brain/schemas/marketing-evidence-packet.json",
+        "exists": true,
+        "sha256": "2c36f5d9c37accf8570b5f02f969c417f46c6b39deb9fa2734cfbb354281f0bd",
+        "bytes": 6545,
+        "kind": "file"
+      },
+      {
+        "path": "12_Brain/schemas/marketing-creative-manifest.json",
+        "exists": true,
+        "sha256": "c1741e34d046b3e6ed8432470215aeb71cd53b54b3ef5735b050c2f359d6f4d5",
+        "bytes": 2497,
+        "kind": "file"
+      },
+      {
+        "path": "12_Brain/schemas/marketing-freshness-config.json",
+        "exists": true,
+        "sha256": "1664acf13a790765dd17b1dc5cbed0fb6d9ed7597748eef7f711eb6ac39507b2",
+        "bytes": 1142,
+        "kind": "file"
+      },
+      {
+        "path": "12_Brain/projects/2026-08-01 - Client-scoped Grok marketing OS.md",
+        "exists": true,
+        "sha256": "4ca6b7895d31506edd0b298c34768e10586423a5b2815a8196bab4b9ec5a9536",
+        "bytes": 6912,
+        "kind": "file"
+      },
+      {
+        "path": "12_Brain/research/2026-08-01 - Grok marketing OS verification.md",
+        "exists": true,
+        "sha256": "1d9cf5f28a79fa3fddf3597107a7428a1503bbf0a3379dbfd3b7a9e79b292d46",
+        "bytes": 3464,
+        "kind": "file"
+      }
+    ]
+  },
+  "checker_evidence": {
+    "checker_id": "bc-58197ecd-76d3-5690-a37e-cd22df6f3209",
+    "recorded_at": "2026-08-01T03:04:40.175Z",
+    "verdict": "pass",
+    "summary": "Independent adversarial review at commit 2014707 found no reproducible contract violations. Technical acceptance only; no approval was issued on Dillon's behalf.",
+    "test_results": [
+      {
+        "name": "automation-tests",
+        "status": "pass",
+        "result": "57/57"
+      },
+      {
+        "name": "brain-public-safety-tests",
+        "status": "pass",
+        "result": "17/17"
+      },
+      {
+        "name": "adversarial-contract-probes",
+        "status": "pass",
+        "result": "Cross-client, action structures, authority spoofing, source mismatch, path escapes, budget overrun, and creative self-approval rejected"
+      },
+      {
+        "name": "diff-check",
+        "status": "pass",
+        "result": "git diff --check main...HEAD clean"
+      }
+    ],
+    "demo_reviewed": false,
+    "visual_review": null
+  },
+  "approval": {
+    "approver": "Dillon Mohr",
+    "note": "Explicit follow-up instruction on 2026-08-01: 'Do it', referring to review and adoption of the implementation.",
+    "approved_at": "2026-08-01T04:15:55.656Z"
+  }
+}

@@ -6,7 +6,8 @@ const { spawnSync } = require('child_process');
 const { REPO_ROOT } = require('../../automation/lib/fsutil');
 
 function insideRepo(candidate) {
-  const absolute = path.resolve(REPO_ROOT, candidate || '.');
+  const normalized = String(candidate || '.').replaceAll('\\', '/');
+  const absolute = path.resolve(REPO_ROOT, normalized);
   const root = path.resolve(REPO_ROOT);
   if (absolute !== root && !absolute.startsWith(`${root}${path.sep}`)) {
     throw new Error(`Path escapes repository: ${candidate}`);
@@ -72,7 +73,7 @@ function doctor(profile, options = {}) {
     profile_id: profile.id,
     status: failed.length ? 'fail' : 'pass',
     repository: REPO_ROOT,
-    workspace: path.relative(REPO_ROOT, workspace),
+    workspace: path.relative(REPO_ROOT, workspace).replaceAll(path.sep, '/'),
     checks,
     recommended_actions: failed.map((check) => `Resolve ${check.id}: ${check.detail}`),
     dry_run: options.dryRun !== false,

@@ -1,0 +1,56 @@
+{
+  "experiment_id": "align-hcm-aeo-five-page-baseline",
+  "client_id": "cl_03a7165a637012e8",
+  "client_ref": "01_Clients/Align HCM.md",
+  "selected_at": "2026-08-01",
+  "status": "ready-for-baseline-measurement",
+  "hypothesis": "Clear direct answers, materially supported statistics, entity consistency, visible dates, and crawler access may improve citation visibility; no universal lift is assumed.",
+  "pages": [
+    {
+      "url": "https://www.alignhcm.com/services/implementation",
+      "intent": "HCM implementation services",
+      "baseline_query": "Who provides HCM implementation services for UKG, Dayforce, HiBob, and Paylocity?",
+      "selected_from_live_page": true
+    },
+    {
+      "url": "https://www.alignhcm.com/services/data-conversion",
+      "intent": "HCM data conversion services",
+      "baseline_query": "How should a company clean and validate payroll data before an HCM migration?",
+      "selected_from_live_page": true
+    },
+    {
+      "url": "https://www.alignhcm.com/services",
+      "intent": "HCM consulting and support services",
+      "baseline_query": "What services help an HR team implement, support, and optimize an HCM platform?",
+      "selected_from_live_page": true
+    },
+    {
+      "url": "https://www.alignhcm.com/blog/5-critical-mistakes-to-avoid-during-hcm-implementation",
+      "intent": "HCM implementation risk",
+      "baseline_query": "What mistakes most often derail an HCM implementation?",
+      "selected_from_live_page": true
+    },
+    {
+      "url": "https://www.alignhcm.com/blog/the-hidden-price-tag-why-diy-hcm-implementation-costs-more-than-you-think",
+      "intent": "HCM implementation ROI and cost",
+      "baseline_query": "What hidden costs should a company include when comparing DIY and partner-led HCM implementation?",
+      "selected_from_live_page": true
+    }
+  ],
+  "test_changes": [
+    "Keep or add a concise direct answer near the primary heading.",
+    "Retain only statistics that survive human inspection of the original authoritative source.",
+    "Keep visible publication or material-update dates accurate.",
+    "Confirm consistent Align HCM entity and service descriptions.",
+    "Confirm relevant search and answer-time crawlers are not blocked.",
+    "Add FAQPage or HowTo only when the visible content already supports extraction."
+  ],
+  "measurement_surfaces": [
+    "Google AI Overviews or AI Mode",
+    "ChatGPT Search",
+    "Perplexity"
+  ],
+  "measurement_status": "manual-baseline-required",
+  "success_metric": "Citation change recorded separately by surface for the five fixed queries.",
+  "external_actions": false
+}

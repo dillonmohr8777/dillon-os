@@ -1,6 +1,6 @@
 ---
 tags: [projects, index]
-updated: 2026-07-29
+updated: 2026-08-01
 ---
 
 # Projects
@@ -13,7 +13,7 @@ Use [[12_Brain/templates/Project|Project template]]. View in
 
 ## Active
 
-- (none seeded — create from Dashboard Active Projects or session decisions)
+- [[12_Brain/projects/2026-08-01 - Client-scoped Grok marketing OS|Client-scoped Grok marketing OS]] — verified X evidence to client-separated draft assets and approval-gated creative.
 
 ## Links
 

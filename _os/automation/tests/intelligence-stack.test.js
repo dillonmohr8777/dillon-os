@@ -13,6 +13,7 @@ const {
   buildRequest,
   normalizeCitationMarkdown,
   extractCandidates,
+  extractMarketingPacket,
   extractResponse,
   buildEnvelope,
   runXaiResearch,
@@ -193,6 +194,23 @@ candidates_json
   }]);
 });
 
+test('xAI client marketing contract uses the scoped packet prompt and parses JSON only', () => {
+  const watchlist = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/marketing-os/watchlist.json'), 'utf8'));
+  const request = buildRequest({
+    prompt_contract: 'client-marketing-packet-v1',
+    client_watchlist: watchlist,
+    allowed_x_handles: watchlist.x_handles,
+    max_x_search_calls: 8,
+    max_web_search_calls: 3,
+  }, new Date('2026-08-01T00:00:00.000Z'));
+  assert.match(request.input[0].content, /CLIENT SCOPE: cl_87a6c6799c6cefd6/);
+  assert.match(request.input[0].content, /Output JSON only/);
+  assert.deepEqual(request.tools[0].allowed_x_handles, ['hvacinsider', '@energystar']);
+  assert.deepEqual(extractMarketingPacket('{"client_id":"cl_87a6c6799c6cefd6"}'), { client_id: 'cl_87a6c6799c6cefd6' });
+  assert.deepEqual(extractMarketingPacket('```json\n{"client_id":"cl_87a6c6799c6cefd6"}\n```'), { client_id: 'cl_87a6c6799c6cefd6' });
+  assert.equal(extractMarketingPacket('prefix {"client_id":"cl_87a6c6799c6cefd6"}'), null);
+});
+
 test('xAI research runner produces an ingestible source-linked envelope', async () => {
   const now = new Date('2026-07-30T14:00:00.000Z');
   const fetchImpl = async (_url, options) => {
@@ -228,4 +246,38 @@ test('xAI research runner produces an ingestible source-linked envelope', async 
   assert.equal(validateGrokEnvelope(result.envelope).ok, true);
   assert.match(envelope.content, /https:\/\/x\.com\/example\/status\/2/);
   assert.equal(result.envelope.verification_status, 'partial');
+});
+
+test('xAI research runner rejects responses that exceed configured search budgets', async () => {
+  const fetchImpl = async () => ({
+    ok: true,
+    json: async () => ({
+      id: 'response-over-budget',
+      model: 'grok-4.5',
+      usage: {
+        server_side_tool_usage_details: {
+          x_search_calls: 2,
+          web_search_calls: 0,
+        },
+      },
+      output: [{
+        type: 'message',
+        content: [{ type: 'output_text', text: 'Over budget result.', annotations: [] }],
+      }],
+    }),
+  });
+  await assert.rejects(
+    () => runXaiResearch({
+      lookback_hours: 24,
+      include_web_search: false,
+      max_x_search_calls: 1,
+      max_web_search_calls: 0,
+      focus: ['Test'],
+    }, {
+      apiKey: 'test-key-not-real',
+      fetchImpl,
+      now: new Date('2026-08-01T00:00:00.000Z'),
+    }),
+    /exceeded X Search budget: 2\/1/,
+  );
 });

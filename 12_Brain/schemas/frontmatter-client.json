@@ -10,6 +10,11 @@
     "last_touched": { "type": "string", "description": "ISO date YYYY-MM-DD or ISO datetime" },
     "next_action": { "type": "string" },
     "due": { "type": "string", "description": "ISO date or the literal none" },
+    "automation_client_id": {
+      "type": "string",
+      "pattern": "^cl_[a-f0-9]{16}$",
+      "description": "Opaque client-scope identifier used by local automation; never a platform account ID."
+    },
     "client": { "type": "string" },
     "website": { "type": "string" },
     "monthly_fee": {},

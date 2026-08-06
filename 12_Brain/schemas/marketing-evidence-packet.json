@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/marketing-evidence-packet",
+  "title": "ClientMarketingEvidencePacket",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "client_id",
+    "client_ref",
+    "generated_at",
+    "research_window",
+    "claims",
+    "content_brief",
+    "faqs",
+    "comparison_skeleton",
+    "extractability",
+    "schema_suggestions",
+    "sales_bullets",
+    "client_alert",
+    "external_actions"
+  ],
+  "properties": {
+    "client_id": { "type": "string", "minLength": 8 },
+    "client_ref": { "type": "string", "pattern": "^01_Clients/.+\\.md$" },
+    "generated_at": { "type": "string", "format": "date" },
+    "research_window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "type": "string", "format": "date" },
+        "to": { "type": "string", "format": "date" }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rank", "freshness_date", "id", "claim", "verification_status", "metrics", "sources", "authoritative_check"],
+        "properties": {
+          "rank": { "type": "integer", "minimum": 1 },
+          "freshness_date": { "type": "string", "format": "date" },
+          "id": { "type": "string", "minLength": 1 },
+          "claim": { "type": "string", "minLength": 1 },
+          "verification_status": {
+            "enum": ["verified", "partial", "unverified", "disputed"]
+          },
+          "metrics": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": ["string", "number", "boolean", "null"]
+            }
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["url", "date", "title", "source_type"],
+              "properties": {
+                "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+                "date": { "type": "string", "format": "date" },
+                "title": { "type": "string", "minLength": 1 },
+                "source_type": { "enum": ["x", "authoritative"] }
+              }
+            }
+          },
+          "authoritative_check": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["status", "note", "urls"],
+            "properties": {
+              "status": { "enum": ["confirmed", "not-found", "conflicted"] },
+              "note": { "type": "string", "minLength": 1 },
+              "urls": {
+                "type": "array",
+                "items": { "type": "string", "format": "uri", "pattern": "^https://" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "content_brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "audience", "angle", "key_points"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "audience": { "type": "string", "minLength": 1 },
+        "angle": { "type": "string", "minLength": 1 },
+        "key_points": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "faqs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["question", "answer", "claim_ids"],
+        "properties": {
+          "question": { "type": "string", "minLength": 1 },
+          "answer": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Configured 40-60 word answer experiment; not a proven citation factor."
+          },
+          "claim_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "comparison_skeleton": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "dimensions", "rows"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "dimensions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "values", "claim_ids"],
+            "properties": {
+              "label": { "type": "string", "minLength": 1 },
+              "values": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {
+                  "type": ["string", "number", "boolean", "null"]
+                }
+              },
+              "claim_ids": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "extractability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["exists", "rationale"],
+      "properties": {
+        "exists": { "type": "boolean" },
+        "rationale": { "type": "string", "minLength": 1 }
+      }
+    },
+    "schema_suggestions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "basis", "claim_ids"],
+        "properties": {
+          "type": { "enum": ["FAQPage", "HowTo"] },
+          "basis": { "type": "string", "minLength": 1 },
+          "claim_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "sales_bullets": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "client_alert": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "summary", "claim_ids"],
+      "properties": {
+        "level": { "enum": ["none", "low", "medium", "high"] },
+        "summary": { "type": "string", "minLength": 1 },
+        "claim_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "external_actions": { "const": false }
+  }
+}

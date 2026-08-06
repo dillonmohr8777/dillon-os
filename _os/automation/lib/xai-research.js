@@ -1,5 +1,7 @@
 'use strict';
 
+const { buildResearchPrompt, validateEvidencePacket } = require('./marketing-os');
+
 const XAI_RESPONSES_URL = 'https://api.x.ai/v1/responses';
 const DEFAULT_MODEL = 'grok-4.5';
 
@@ -51,6 +53,10 @@ function buildTools(profile, now = new Date()) {
 }
 
 function buildPrompt(profile, now = new Date()) {
+  if (profile.prompt_contract === 'client-marketing-packet-v1') {
+    if (!profile.client_watchlist) throw new Error('client_watchlist is required for client-marketing-packet-v1');
+    return buildResearchPrompt(profile.client_watchlist);
+  }
   const window = resolveWindow(profile, now);
   const focus = Array.isArray(profile.focus) ? profile.focus.map((item) => `- ${item}`).join('\n') : String(profile.focus || '');
   const xBudget = Number(profile.max_x_search_calls || 12);
@@ -123,6 +129,18 @@ function extractCandidates(text) {
   return [];
 }
 
+function extractMarketingPacket(text) {
+  const value = String(text || '').trim();
+  const fenced = value.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/i);
+  const candidate = fenced ? fenced[1].trim() : value;
+  try {
+    const parsed = JSON.parse(candidate);
+    return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
 function extractResponse(response) {
   const texts = [];
   const annotations = [];
@@ -155,8 +173,9 @@ function extractResponse(response) {
     x_search: Number(details.x_search_calls || toolCalls.filter((type) => type === 'x_search_call').length || 0),
     web_search: Number(details.web_search_calls || toolCalls.filter((type) => type === 'web_search_call').length || 0),
   };
+  const fullText = texts.join('\n\n');
   return {
-    text: texts.join('\n\n').trim(),
+    text: fullText.trim(),
     citations,
     annotations,
     tool_calls: toolCalls,
@@ -165,7 +184,8 @@ function extractResponse(response) {
     cost_usd: Number(usage.cost_in_usd_ticks || 0) / 10_000_000_000,
     response_id: response.id || null,
     model: response.model || null,
-    candidates: extractCandidates(texts.join('\n\n')),
+    candidates: extractCandidates(fullText),
+    marketing_packet: extractMarketingPacket(fullText),
   };
 }
 
@@ -177,7 +197,7 @@ function renderSources(citations) {
 function buildEnvelope(profile, extracted, now = new Date()) {
   const runAt = new Date(now).toISOString();
   const window = resolveWindow(profile, now);
-  return {
+  const envelope = {
     automation: profile.automation || 'xAI X Search daily intelligence',
     run_title: profile.run_title || 'Daily X operating pulse',
     run_at: runAt,
@@ -197,6 +217,11 @@ function buildEnvelope(profile, extracted, now = new Date()) {
       cost_usd: extracted.cost_usd,
     },
   };
+  if (profile.prompt_contract === 'client-marketing-packet-v1') {
+    envelope.client_id = profile.client_watchlist?.client_id || null;
+    envelope.marketing_packet = extracted.marketing_packet;
+  }
+  return envelope;
 }
 
 async function runXaiResearch(profile, options = {}) {
@@ -213,6 +238,7 @@ async function runXaiResearch(profile, options = {}) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(request),
+    signal: options.signal || AbortSignal.timeout(Number(profile.timeout_seconds || 240) * 1000),
   });
   const payload = await response.json();
   if (!response.ok) {
@@ -221,6 +247,23 @@ async function runXaiResearch(profile, options = {}) {
   }
   const extracted = extractResponse(payload);
   if (!extracted.text) throw new Error('xAI returned no output text.');
+  const xBudget = Number(profile.max_x_search_calls);
+  const webBudget = Number(profile.max_web_search_calls);
+  if (Number.isFinite(xBudget) && extracted.tool_call_counts.x_search > xBudget) {
+    throw new Error(`xAI exceeded X Search budget: ${extracted.tool_call_counts.x_search}/${xBudget}`);
+  }
+  if (Number.isFinite(webBudget) && extracted.tool_call_counts.web_search > webBudget) {
+    throw new Error(`xAI exceeded web search budget: ${extracted.tool_call_counts.web_search}/${webBudget}`);
+  }
+  if (profile.prompt_contract === 'client-marketing-packet-v1') {
+    const validation = validateEvidencePacket(
+      extracted.marketing_packet,
+      profile.client_watchlist?.client_id,
+    );
+    if (!validation.ok) {
+      throw new Error(`xAI returned an invalid client marketing packet: ${validation.errors.join('; ')}`);
+    }
+  }
   return {
     request,
     extracted,
@@ -237,6 +280,7 @@ module.exports = {
   buildPrompt,
   buildRequest,
   extractCandidates,
+  extractMarketingPacket,
   extractResponse,
   buildEnvelope,
   runXaiResearch,

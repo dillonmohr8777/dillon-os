@@ -1,0 +1,92 @@
+{
+  "client_id": "cl_87a6c6799c6cefd6",
+  "client_ref": "01_Clients/Shadow HVAC.md",
+  "generated_at": "2026-08-01",
+  "research_window": {
+    "from": "2026-07-25",
+    "to": "2026-08-01"
+  },
+  "claims": [
+    {
+      "rank": 1,
+      "freshness_date": "2026-07-30",
+      "id": "claim-heat-pump-interest",
+      "claim": "Recent discussion shows measurable interest in heat-pump incentives, while eligibility remains location-specific.",
+      "verification_status": "partial",
+      "metrics": {
+        "observed_x_engagements": 184,
+        "posts_sampled": 6
+      },
+      "sources": [
+        {
+          "url": "https://x.com/ENERGYSTAR/status/1950000000000000000",
+          "date": "2026-07-29",
+          "title": "ENERGY STAR heat-pump discussion",
+          "source_type": "x"
+        },
+        {
+          "url": "https://www.energystar.gov/about/federal-tax-credits/air-source-heat-pumps",
+          "date": "2026-07-30",
+          "title": "Air-source heat-pump tax credit guidance",
+          "source_type": "authoritative"
+        }
+      ],
+      "authoritative_check": {
+        "status": "confirmed",
+        "note": "The program page confirms that qualifying equipment may receive a credit, but it does not establish local eligibility.",
+        "urls": [
+          "https://www.energystar.gov/about/federal-tax-credits/air-source-heat-pumps"
+        ]
+      }
+    }
+  ],
+  "content_brief": {
+    "title": "What homeowners should verify before choosing a heat pump",
+    "audience": "Local homeowners comparing replacement systems",
+    "angle": "Turn incentive interest into a practical eligibility checklist.",
+    "key_points": [
+      "Confirm equipment eligibility before quoting a credit.",
+      "Separate federal guidance from utility-specific programs."
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Does every heat pump qualify for an incentive?",
+      "answer": "No. Eligibility depends on the equipment, household, location, installation date, and the specific program being used. Homeowners should verify current requirements with the authoritative program source before treating any incentive as guaranteed, and contractors should avoid quoting a universal amount until the exact system and customer circumstances have been checked.",
+      "claim_ids": ["claim-heat-pump-interest"]
+    }
+  ],
+  "comparison_skeleton": {
+    "title": "Heat-pump incentive verification",
+    "dimensions": ["equipment qualification", "program source", "eligibility check"],
+    "rows": [
+      {
+        "label": "Federal tax credit",
+        "values": {
+          "verification_step": "Check current authoritative program guidance."
+        },
+        "claim_ids": ["claim-heat-pump-interest"]
+      }
+    ]
+  },
+  "extractability": {
+    "exists": true,
+    "rationale": "The source exposes stable eligibility questions and answers that can be quoted with attribution."
+  },
+  "schema_suggestions": [
+    {
+      "type": "FAQPage",
+      "basis": "The reviewed FAQ is directly supported by the cited program guidance.",
+      "claim_ids": ["claim-heat-pump-interest"]
+    }
+  ],
+  "sales_bullets": [
+    "Offer an equipment-specific eligibility review before presenting incentive estimates."
+  ],
+  "client_alert": {
+    "level": "medium",
+    "summary": "Interest is actionable, but marketing copy should avoid universal eligibility claims.",
+    "claim_ids": ["claim-heat-pump-interest"]
+  },
+  "external_actions": false
+}
