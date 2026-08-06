@@ -1,0 +1,289 @@
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioRegular.ttf'); font-weight:400; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioSemiBold.ttf'); font-weight:600; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioBold.ttf'); font-weight:700; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioItalic.ttf'); font-style:italic; font-weight:400; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioBoldItalic.ttf'); font-style:italic; font-weight:700; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterRegular.ttf'); font-weight:400; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterMedium.ttf'); font-weight:500; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterSemiBold.ttf'); font-weight:600; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterBold.ttf'); font-weight:700; }
+  @font-face { font-family:'Inter Tight'; src:url('fonts/InterTightMedium.ttf'); font-weight:500; }
+  @font-face { font-family:'Inter Tight'; src:url('fonts/InterTightSemiBold.ttf'); font-weight:600; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1920px; height:1080px; overflow:hidden; background:transparent; }
+
+  /* ---------- shared background ---------- */
+  .stage { position:absolute; inset:0; width:1920px; height:1080px; overflow:hidden; perspective:1300px;
+           background:linear-gradient(118deg,#0B1626 0%,#0E1A2B 40%,#132A4A 74%,#0C1B31 100%); }
+  .glow  { position:absolute; border-radius:50%; filter:blur(130px); }
+  .glow.blue   { width:1150px; height:900px; right:-160px; top:-260px; background:rgba(46,105,180,.40); }
+  .glow.blue2  { width:800px;  height:700px; right:240px;  bottom:-340px; background:rgba(38,84,150,.28); }
+  .glow.orange { width:640px;  height:640px; left:280px;  top:40px;  background:rgba(198,90,28,.26); }
+  .glow.orange2{ width:520px;  height:520px; left:180px; bottom:-200px; background:rgba(198,90,28,.16); }
+  .vignette { position:absolute; inset:0; background:radial-gradient(120% 95% at 50% 42%, transparent 55%, rgba(4,9,18,.55) 100%); }
+
+  /* ---------- liquid glass squares ---------- */
+  .gwrap { position:absolute; transform-style:preserve-3d; }
+  .gshadow { position:absolute; left:-14%; top:64%; width:128%; height:60%; border-radius:50%;
+             filter:blur(30px);
+             background:radial-gradient(ellipse at center, rgba(244,122,37,.60) 0%, rgba(230,100,30,.28) 48%, rgba(244,122,37,0) 76%); }
+  .glass { position:absolute; inset:0; border-radius:20%; transform:rotate(45deg);
+           background:linear-gradient(135deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.06) 42%, rgba(127,169,240,.13) 72%, rgba(244,122,37,.10) 100%);
+           border:1.5px solid rgba(255,255,255,.30);
+           box-shadow: inset 0 2px 10px rgba(255,255,255,.28), inset 0 -14px 30px rgba(244,122,37,.14),
+                       0 24px 60px rgba(3,8,16,.45);
+           backdrop-filter: blur(12px) saturate(135%); }
+  .glass::after { content:''; position:absolute; left:8%; top:6%; width:52%; height:30%; border-radius:50%;
+                  background:linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,0)); }
+
+  /* ---------- top accent + footer ---------- */
+  .topbar { position:absolute; left:0; right:0; top:0; height:6px; z-index:45;
+            background:linear-gradient(90deg,#F47A25 0%,#F47A25 60%,#7FA9F0 100%); }
+  .footer { position:absolute; left:0; right:0; bottom:0; height:48px; background:rgba(7,12,22,.90);
+            display:flex; align-items:center; justify-content:space-between; padding:0 42px;
+            font-family:Inter; font-size:14px; letter-spacing:.16em; z-index:40; }
+  .footer .l { display:flex; align-items:center; gap:12px; }
+  .footer .dot { width:8px; height:8px; border-radius:50%; background:#F47A25; }
+  .footer .brand { color:#F47A25; font-weight:700; }
+  .footer .sep { color:#4A5A70; }
+  .footer .rest, .footer .r { color:#8FA3BC; font-weight:500; }
+
+  /* ---------- intro ---------- */
+  #intro .dash { position:absolute; left:50%; top:272px; width:84px; height:4px; margin-left:-42px;
+                 background:linear-gradient(90deg,#F47A25,#7FA9F0); transform-origin:left; }
+  #intro .logoWrap { position:absolute; left:50%; top:336px; transform:translateX(-50%); width:660px; }
+  #intro .logoWrap img { width:100%; display:block; }
+  #intro .tag { position:absolute; left:0; right:0; top:752px; text-align:center;
+                font-family:'Gelasio'; font-style:italic; font-size:48px; color:#F7F4EE; }
+  #intro .tag .earned { color:#F47A25; }
+  #intro .ep { position:absolute; left:0; right:0; top:846px; text-align:center; font-family:Inter;
+               font-weight:600; font-size:17px; letter-spacing:.36em; color:#8FA3BC; text-transform:uppercase; }
+
+  /* ---------- outro ---------- */
+  #outro .dash { position:absolute; left:50%; top:250px; width:84px; height:4px; margin-left:-42px;
+                 background:linear-gradient(90deg,#F47A25,#7FA9F0); transform-origin:center; }
+  #outro .h1 { position:absolute; left:0; right:0; top:298px; text-align:center; font-family:'Gelasio';
+               font-weight:700; font-size:95px; color:#F7F4EE; letter-spacing:-1px; }
+  #outro .h1 .accent { color:#F47A25; }
+  #outro .sub { position:absolute; left:0; right:0; top:468px; text-align:center; font-family:'Gelasio';
+                font-style:italic; font-size:38px; color:#D9E3F2; }
+  #outro .sub .orange { color:#F47A25; }
+  #outro .lockup { position:absolute; left:50%; top:600px; transform:translateX(-50%); width:350px; }
+  #outro .lockup img { width:100%; display:block; }
+  #outro .url { position:absolute; left:0; right:0; top:812px; text-align:center; font-family:Inter;
+                font-weight:700; font-size:21px; letter-spacing:.34em; color:#F47A25; }
+
+  /* ---------- plate: sidebar + box ---------- */
+  .sidebar { position:absolute; left:0; top:6px; width:500px; height:1026px; z-index:30;
+             background:linear-gradient(160deg,#0A1422 0%,#0C1828 70%,#0A1320 100%); }
+  .sidebar .sglow { position:absolute; width:420px; height:420px; left:-140px; top:-120px; border-radius:50%;
+                    background:rgba(198,90,28,.13); filter:blur(90px); }
+  .divider { position:absolute; left:500px; top:6px; width:3px; height:1026px; background:#F47A25; z-index:31; }
+  .sidebar .slogo { width:206px; margin:44px 0 0 46px; display:block; }
+  .sidebar .series { margin:36px 46px 0 46px; font-family:Inter; font-weight:700; font-size:17px;
+                     letter-spacing:.30em; color:#F47A25; text-transform:uppercase; }
+  .sidebar .seriesTitle { margin:14px 46px 0 46px; font-family:'Gelasio'; font-style:italic; font-weight:400;
+                          font-size:26px; line-height:1.35; color:#D9E3F2; }
+  .sidebar .secwrap { margin:64px 46px 0 46px; }
+  .sidebar .sec { font-family:Inter; font-weight:700; font-size:18px; letter-spacing:.24em;
+                  color:#F4A96A; text-transform:uppercase; }
+  .sidebar .secline { width:52px; height:4px; background:#F47A25; margin-top:12px; }
+  .sidebar .h { margin-top:28px; font-family:'Gelasio'; font-weight:700; font-size:60px; line-height:1.16;
+                letter-spacing:-1px; color:#F7F4EE; }
+  .sidebar .h .hl { color:#F47A25; }
+  .sidebar .subtext { margin-top:22px; font-family:Inter; font-weight:400; font-size:21.5px; line-height:1.5;
+                      color:#A6B7CC; max-width:410px; }
+  .sidebar .progresswrap { position:absolute; left:46px; bottom:54px; width:408px; }
+  .sidebar .ptrack { width:100%; height:4px; background:rgba(255,255,255,.13); border-radius:2px; }
+  .sidebar .pfill { height:4px; background:linear-gradient(90deg,#F47A25,#FF9A4D); border-radius:2px; width:20%; }
+
+  .boxlabels { position:absolute; left:581px; top:791px; width:1260px; display:flex;
+               justify-content:space-between; align-items:center; z-index:30; }
+  .boxlabels .who { font-family:'Inter Tight'; font-weight:500; font-size:24px; color:#93A5BD; letter-spacing:.02em;
+                    display:flex; align-items:center; gap:12px; }
+  .boxlabels .who b { color:#F7F4EE; font-weight:600; }
+  .boxlabels .who .adot { width:9px; height:9px; border-radius:50%; background:#31405A; }
+  .boxlabels .who.active .adot { background:#F47A25; box-shadow:0 0 10px rgba(244,122,37,.8); }
+  .boxlabels .who.active b { color:#F47A25; }
+
+  .window-shadow { position:absolute; left:581px; top:64px; width:1260px; height:709px; border-radius:14px;
+                   box-shadow:0 30px 90px rgba(2,6,14,.75), 0 6px 26px rgba(2,6,14,.6); background:#000; }
+  .window-glow { position:absolute; left:601px; top:700px; width:1220px; height:120px; border-radius:50%;
+                 filter:blur(46px);
+                 background:radial-gradient(ellipse at center, rgba(244,122,37,.34) 0%, rgba(244,122,37,.10) 55%, transparent 78%); }
+
+  .ring { position:absolute; left:578px; top:61px; width:1266px; height:715px; border-radius:16px;
+          border:3px solid #F47A25; z-index:20; box-shadow:inset 0 1px 0 rgba(255,255,255,.06); }
+</style>
+
+<div class="stage" id="bg">
+  <div class="glow blue"></div><div class="glow blue2"></div>
+  <div class="glow orange"></div><div class="glow orange2"></div>
+  <div class="gwrap" id="g1" style="width:250px;height:250px;right:270px;top:90px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g2" style="width:150px;height:150px;right:64px;top:390px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g3" style="width:200px;height:200px;left:560px;bottom:110px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="vignette"></div>
+</div>
+<div class="topbar" id="topbar" style="display:none"></div>
+
+<div id="intro" style="display:none">
+  <div class="dash"></div>
+  <div class="logoWrap"><img id="introLogo" src="align-logo-white-2x.png"></div>
+  <div class="tag">ROI isn&rsquo;t installed. <span class="earned">It&rsquo;s earned.</span></div>
+  <div class="ep">Maher El-Abdallah &times; Brent Skinner &middot; HR.com Podcast</div>
+</div>
+
+<div id="outro" style="display:none">
+  <div class="dash"></div>
+  <div class="h1">Get more from <span class="accent">your HCM.</span></div>
+  <div class="sub">with <span class="orange">Align HCM</span>, your implementation &amp; optimization partner</div>
+  <div class="lockup"><img src="align-logo-white-2x.png"></div>
+  <div class="url">ALIGNHCM.COM</div>
+</div>
+
+<div id="plate" style="display:none">
+  <div class="window-glow"></div>
+  <div class="window-shadow"></div>
+  <div class="sidebar">
+    <div class="sglow"></div>
+    <img class="slogo" src="align-logo-white-2x.png">
+    <div class="series">HCM ROI</div>
+    <div class="seriesTitle">Value is earned,<br>not installed.</div>
+    <div class="secwrap">
+      <div class="sec" id="pSec">01 &middot; THE GAP</div>
+      <div class="secline"></div>
+      <div class="h" id="pHead">Managed.<br><span class="hl">Not leveraged.</span></div>
+      <div class="subtext" id="pSub">HR isn&rsquo;t invited to the table when HCM is just a system of record.</div>
+    </div>
+    <div class="progresswrap"><div class="ptrack"><div class="pfill" id="pFill"></div></div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="boxlabels">
+    <div class="who" id="pWhoL"><span class="adot"></span><span><b>Brent Skinner</b> &nbsp;&middot;&nbsp; HR.com</span></div>
+    <div class="who" id="pWhoR"><span><b>Maher El-Abdallah</b> &nbsp;&middot;&nbsp; CEO, Align HCM</span><span class="adot"></span></div>
+  </div>
+</div>
+
+<div id="chrome" style="display:none">
+  <div class="ring"></div>
+</div>
+
+<div class="footer" id="footer" style="display:none">
+  <div class="l"><span class="dot"></span><span class="brand">ALIGN HCM</span><span class="sep">&middot;</span>
+    <span class="rest">MAHER &times; BRENT &middot; HR.COM PODCAST</span></div>
+  <div class="r">ALIGNHCM.COM</div>
+</div>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="ink" x="-30%" y="-30%" width="160%" height="160%">
+    <feTurbulence id="inkTurb" type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="7" result="n"/>
+    <feDisplacementMap id="inkDisp" in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<script>
+const $ = s => document.querySelector(s);
+const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
+const easeO = t => 1-Math.pow(1-t,3);
+const seg = (t,a,b) => clamp((t-a)/(b-a),0,1);
+const TAU = Math.PI*2;
+
+function setScene(name){
+  ['intro','outro','plate','chrome','footer','topbar'].forEach(id => $('#'+id).style.display='none');
+  $('#bg').style.display='block';
+  if(name==='intro'){ $('#intro').style.display='block'; $('#footer').style.display='flex'; $('#topbar').style.display='block'; }
+  if(name==='outro'){ $('#outro').style.display='block'; $('#footer').style.display='flex'; $('#topbar').style.display='block'; }
+  if(name==='plate'){ $('#plate').style.display='block'; $('#footer').style.display='flex'; $('#topbar').style.display='block';
+    $('#footer').style.opacity=1; $('#bg').style.opacity=1; $('#topbar').style.opacity=1; }
+  if(name==='chrome'){ $('#chrome').style.display='block'; $('#bg').style.display='none';
+    document.body.style.background='transparent'; document.documentElement.style.background='transparent'; }
+}
+function setPlateParams(sec, head, sub, active, fill){
+  $('#pSec').innerHTML = sec;
+  $('#pHead').innerHTML = head;
+  $('#pSub').innerHTML = sub;
+  $('#pWhoL').classList.toggle('active', active === 'L');
+  $('#pWhoR').classList.toggle('active', active === 'R');
+  $('#pFill').style.width = fill;
+}
+
+/* liquid glass float: period-P seamless loop, 3D pop */
+function glassSeek(t, P){
+  const els = [
+    {id:'g1', amp:16, ph:0.00, rx:9,  ry:7,  sc:.035},
+    {id:'g2', amp:11, ph:0.33, rx:7,  ry:10, sc:.045},
+    {id:'g3', amp:14, ph:0.66, rx:8,  ry:6,  sc:.04},
+  ];
+  for(const e of els){
+    const w = TAU*(t/P + e.ph);
+    const y = Math.sin(w)*e.amp;
+    const g = $('#'+e.id);
+    if(!g) continue;
+    g.style.transform = `translateY(${y}px) rotateX(${Math.sin(w)*e.rx}deg) rotateY(${Math.cos(w)*e.ry}deg) scale(${1 + Math.sin(w)*e.sc})`;
+    const sh = g.querySelector('.gshadow');
+    const lift = (Math.sin(w)+1)/2;                 // 0 low .. 1 high
+    sh.style.opacity = String(0.55 + lift*0.45);
+    sh.style.transform = `translateY(${lift*10+6}px) scale(${1.04 + lift*0.16})`;
+    sh.style.filter = `blur(${26 + lift*12}px)`;
+  }
+}
+function bgSeek(t, P){
+  P = P || 4;
+  const drift = Math.sin(TAU*t/P)*14;
+  $('.glow.blue').style.transform   = `translate(${drift}px, ${-drift*0.6}px)`;
+  $('.glow.orange').style.transform = `translate(${-drift*0.7}px, ${drift*0.5}px)`;
+  glassSeek(t, P);
+}
+
+function introSeek(t){
+  bgSeek(t, 4.8);
+  $('#bg').style.opacity = seg(t,0,0.55);
+  $('#topbar').style.opacity = seg(t,0.3,0.9);
+  $('#intro .dash').style.transform = `scaleX(${easeO(seg(t,0.45,1.05))})`;
+  const p  = seg(t,0.65,2.35), pe = easeO(p);
+  const wrap = $('#intro .logoWrap'), img = $('#introLogo');
+  $('#inkDisp').setAttribute('scale', String(Math.round((1-pe)*140)));
+  $('#inkTurb').setAttribute('baseFrequency', (0.013 + (1-pe)*0.03).toFixed(4));
+  img.style.filter = `url(#ink) blur(${(1-pe)*10}px)`;
+  img.style.opacity = seg(t,0.65,1.5);
+  const r = 20 + pe*135;
+  img.style.webkitMaskImage = `radial-gradient(circle at 50% 52%, black ${r*0.55}%, transparent ${r}%)`;
+  wrap.style.transform = `translateX(-50%) scale(${1.045 - pe*0.045})`;
+  const tq = easeO(seg(t,2.45,3.35));
+  $('#intro .tag').style.opacity = tq;
+  $('#intro .tag').style.transform = `translateY(${(1-tq)*16}px)`;
+  const eq = easeO(seg(t,2.95,3.8));
+  $('#intro .ep').style.opacity = eq*0.9;
+  $('#intro .ep').style.transform = `translateY(${(1-eq)*12}px)`;
+  $('#footer').style.opacity = seg(t,0.8,1.6);
+}
+
+function outroSeek(t){
+  bgSeek(t+2.0, 6.0);
+  $('#bg').style.opacity = 1; $('#footer').style.opacity = 1; $('#topbar').style.opacity = 1;
+  $('#outro .dash').style.transform = `scaleX(${easeO(seg(t,0.15,0.7))})`;
+  const hq = easeO(seg(t,0.35,1.25));
+  $('#outro .h1').style.opacity = hq;
+  $('#outro .h1').style.transform = `translateY(${(1-hq)*26}px)`;
+  const sq = easeO(seg(t,1.0,1.85));
+  $('#outro .sub').style.opacity = sq;
+  $('#outro .sub').style.transform = `translateY(${(1-sq)*18}px)`;
+  const lq = easeO(seg(t,1.9,2.85));
+  $('#outro .lockup').style.opacity = lq;
+  $('#outro .lockup').style.transform = `translateX(-50%) translateY(${(1-lq)*14}px)`;
+  const uq = easeO(seg(t,2.6,3.4));
+  $('#outro .url').style.opacity = uq;
+  $('#outro .url').style.transform = `translateY(${(1-uq)*10}px)`;
+}
+
+window.seek = (t, scene) => {
+  if(scene==='intro') introSeek(t);
+  else if(scene==='outro') outroSeek(t);
+  else bgSeek(t, 4);          /* plate: 4s seamless loop */
+  return true;
+};
+window.setScene = setScene;
+window.setPlateParams = setPlateParams;
+</script>

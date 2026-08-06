@@ -1,0 +1,345 @@
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioRegular.ttf'); font-weight:400; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioSemiBold.ttf'); font-weight:600; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioBold.ttf'); font-weight:700; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioItalic.ttf'); font-style:italic; font-weight:400; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterRegular.ttf'); font-weight:400; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterMedium.ttf'); font-weight:500; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterSemiBold.ttf'); font-weight:600; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterBold.ttf'); font-weight:700; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1920px; height:1080px; overflow:hidden; background:transparent; }
+
+  .stage { position:absolute; inset:0; overflow:hidden; perspective:1400px;
+           background:
+             radial-gradient(140% 110% at 82% 8%, rgba(53,118,201,.34) 0%, rgba(53,118,201,0) 46%),
+             radial-gradient(90% 80% at 12% 88%, rgba(198,90,28,.22) 0%, rgba(198,90,28,0) 52%),
+             radial-gradient(70% 60% at 20% 12%, rgba(198,90,28,.15) 0%, rgba(198,90,28,0) 55%),
+             linear-gradient(118deg,#0A1424 0%,#0E1A2B 38%,#14305A 74%,#0B1A30 100%); }
+  .dots { position:absolute; inset:0; opacity:.15;
+          background-image:radial-gradient(rgba(150,185,235,.55) 1.4px, transparent 1.6px);
+          background-size:46px 46px;
+          -webkit-mask:radial-gradient(95% 80% at 58% 38%, black 25%, transparent 78%); }
+  .beam { position:absolute; filter:blur(64px); }
+  .beam.b1 { width:1700px; height:300px; left:-220px; top:170px; transform:rotate(-16deg);
+             background:linear-gradient(90deg, transparent, rgba(78,130,210,.16) 28%, rgba(127,169,240,.26) 50%, rgba(78,130,210,.14) 72%, transparent); }
+  .beam.b2 { width:1500px; height:250px; left:380px; bottom:-60px; transform:rotate(13deg);
+             background:linear-gradient(90deg, transparent, rgba(244,122,37,.13) 32%, rgba(255,154,77,.20) 50%, rgba(244,122,37,.10) 68%, transparent); }
+  .halo { position:absolute; border-radius:50%;
+          background:conic-gradient(from 0deg, transparent 0%, rgba(244,122,37,.55) 12%, rgba(127,169,240,.48) 30%, transparent 50%);
+          -webkit-mask:radial-gradient(circle, transparent 61%, black 64%, black 68%, transparent 71%);
+          filter:blur(1.5px); }
+  .halo.h1 { width:720px; height:720px; right:-160px; top:-180px; opacity:.55; }
+  .halo.h2 { width:400px; height:400px; left:-110px; bottom:30px; opacity:.32; }
+  .ghost { position:absolute; font-family:'Gelasio'; font-weight:700; color:transparent;
+           -webkit-text-stroke:2px rgba(160,190,235,.085); letter-spacing:-4px; }
+  .gwrap { position:absolute; transform-style:preserve-3d; }
+  .gshadow { position:absolute; left:-14%; top:66%; width:128%; height:58%; border-radius:50%; filter:blur(30px);
+             background:radial-gradient(ellipse at center, rgba(244,122,37,.55) 0%, rgba(230,100,30,.24) 48%, rgba(244,122,37,0) 76%); }
+  .glass { position:absolute; inset:0; border-radius:20%; transform:rotate(45deg);
+           background:linear-gradient(135deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.06) 42%, rgba(127,169,240,.13) 72%, rgba(244,122,37,.10) 100%);
+           border:1.5px solid rgba(255,255,255,.30);
+           box-shadow: inset 0 2px 10px rgba(255,255,255,.28), inset 0 -14px 30px rgba(244,122,37,.14), 0 24px 60px rgba(3,8,16,.45);
+           backdrop-filter: blur(12px) saturate(135%); }
+  .glass::after { content:''; position:absolute; left:8%; top:6%; width:52%; height:30%; border-radius:50%;
+                  background:linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,0)); }
+  .pill { position:absolute; display:flex; align-items:center; gap:11px; padding:11px 20px; border-radius:100px;
+          font-family:Inter; font-weight:600; font-size:13px; letter-spacing:.22em; text-transform:uppercase;
+          color:#B9CBE4; background:rgba(10,18,32,.42); border:1px solid rgba(150,180,225,.20);
+          backdrop-filter:blur(10px); box-shadow:0 14px 36px rgba(3,8,16,.45); }
+  .pill .od { width:7px; height:7px; border-radius:50%; background:#F47A25; box-shadow:0 0 10px rgba(244,122,37,.8); }
+  .streak { position:absolute; height:2px; width:440px; border-radius:2px; opacity:0;
+            background:linear-gradient(90deg, transparent, rgba(214,230,255,.6), transparent); }
+  .grain { position:absolute; inset:0; opacity:.05; mix-blend-mode:overlay; pointer-events:none;
+           background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.9'/%3E%3C/svg%3E"); }
+  .vignette { position:absolute; inset:0; background:radial-gradient(125% 100% at 50% 40%, transparent 52%, rgba(3,8,17,.6) 100%); }
+
+  .topbar { position:absolute; left:0; right:0; top:0; height:6px; z-index:45;
+            background:linear-gradient(90deg,#F47A25 0%,#F47A25 60%,#7FA9F0 100%); }
+  .footer { position:absolute; left:0; right:0; bottom:0; height:48px; background:rgba(7,12,22,.90);
+            display:flex; align-items:center; justify-content:space-between; padding:0 42px;
+            font-family:Inter; font-size:14px; letter-spacing:.16em; z-index:40; }
+  .footer .l { display:flex; align-items:center; gap:12px; }
+  .footer .dot2 { width:8px; height:8px; border-radius:50%; background:#F47A25; }
+  .footer .brand { color:#F47A25; font-weight:700; }
+  .footer .sep { color:#4A5A70; }
+  .footer .rest, .footer .r { color:#8FA3BC; font-weight:500; }
+
+  /* ---------- chapter scene ---------- */
+  .eyebrow { position:absolute; left:350px; top:38px; display:flex; align-items:center; gap:18px; font-family:Inter;
+             font-weight:700; font-size:20px; letter-spacing:.32em; color:#F4A96A; text-transform:uppercase; z-index:36; }
+  .eyebrow .bar { width:38px; height:4px; background:#F47A25; }
+  .cornerlogo { position:absolute; right:46px; top:32px; width:174px; z-index:36; }
+  .cornerlogo img { width:100%; display:block; }
+  .vshadow { position:absolute; left:350px; top:58px; width:1220px; height:686px; border-radius:16px; background:#000;
+             box-shadow:0 34px 100px rgba(2,6,14,.8), 0 8px 30px rgba(2,6,14,.6); }
+  .vglow { position:absolute; left:370px; top:684px; width:1180px; height:110px; border-radius:50%; filter:blur(48px);
+           background:radial-gradient(ellipse at center, rgba(244,122,37,.38) 0%, rgba(244,122,37,.12) 55%, transparent 78%); }
+  .namebar { position:absolute; left:350px; top:752px; width:1220px; display:flex; justify-content:space-between;
+             align-items:center; z-index:34; }
+  .namebar .who { font-family:Inter; font-weight:600; font-size:26px; color:#93A5BD; display:flex; align-items:center; gap:13px; }
+  .namebar .who b { color:#F7F4EE; font-weight:700; }
+  .namebar .who.active b { color:#F47A25; }
+  .namebar .adot { width:10px; height:10px; border-radius:50%; background:#31405A; }
+  .namebar .who.active .adot { background:#F47A25; box-shadow:0 0 11px rgba(244,122,37,.85); }
+  .chtitle { position:absolute; left:50%; top:300px; transform:translateX(-50%); z-index:38; text-align:center;
+             padding:36px 64px; border-radius:20px; background:rgba(8,14,26,.66);
+             border:1px solid rgba(150,180,225,.22); backdrop-filter:blur(16px);
+             box-shadow:0 30px 80px rgba(3,8,16,.6); opacity:0; }
+  .chtitle .cnum { font-family:Inter; font-weight:700; font-size:19px; letter-spacing:.42em; color:#F4A96A;
+                   text-transform:uppercase; }
+  .chtitle .ctext { margin-top:16px; font-family:'Gelasio'; font-weight:700; font-size:78px; color:#F7F4EE;
+                    letter-spacing:-1px; }
+  .chtitle .ctext .o { color:#F47A25; }
+
+  /* ---------- intro / outro ---------- */
+  #intro .dash { position:absolute; left:50%; top:262px; width:88px; height:4px; margin-left:-44px;
+                 background:linear-gradient(90deg,#F47A25,#7FA9F0); transform-origin:left; }
+  #intro .logoWrap { position:absolute; left:50%; top:328px; transform:translateX(-50%); width:680px; }
+  #intro .logoWrap img { width:100%; display:block; }
+  #intro .tag { position:absolute; left:0; right:0; top:756px; text-align:center;
+                font-family:'Gelasio'; font-style:italic; font-size:52px; color:#F7F4EE; }
+  #intro .tag .earned { color:#F47A25; }
+  #intro .ep { position:absolute; left:0; right:0; top:856px; text-align:center; font-family:Inter;
+               font-weight:600; font-size:18px; letter-spacing:.36em; color:#8FA3BC; text-transform:uppercase; }
+  #outro .dash { position:absolute; left:50%; top:246px; width:88px; height:4px; margin-left:-44px;
+                 background:linear-gradient(90deg,#F47A25,#7FA9F0); transform-origin:center; }
+  #outro .h1 { position:absolute; left:0; right:0; top:296px; text-align:center; font-family:'Gelasio';
+               font-weight:700; font-size:100px; color:#F7F4EE; letter-spacing:-1px; }
+  #outro .h1 .accent { color:#F47A25; }
+  #outro .sub { position:absolute; left:0; right:0; top:474px; text-align:center; font-family:'Gelasio';
+                font-style:italic; font-size:40px; color:#D9E3F2; }
+  #outro .sub .orange { color:#F47A25; }
+  #outro .lockup { position:absolute; left:50%; top:608px; transform:translateX(-50%); width:360px; }
+  #outro .lockup img { width:100%; display:block; }
+  #outro .url { position:absolute; left:0; right:0; top:824px; text-align:center; font-family:Inter;
+                font-weight:700; font-size:24px; letter-spacing:.34em; color:#F47A25; }
+
+  /* ---------- page flip sheet ---------- */
+  #pageflip { position:absolute; inset:0; perspective:1900px; }
+  .sheetwrap { position:absolute; left:0; top:0; width:1920px; height:1080px; transform-style:preserve-3d; }
+  .sheet { position:absolute; left:0; top:-60px; width:2040px; height:1200px; transform-origin:left center;
+           backface-visibility:visible;
+           background:linear-gradient(105deg,#101F38 0%,#152A4C 45%,#0D1B31 82%, #0A1626 100%);
+           box-shadow:0 0 120px rgba(2,6,14,.85); border-right:3px solid rgba(244,122,37,.65); }
+  .sheet .sheen { position:absolute; inset:0;
+                  background:linear-gradient(100deg, transparent 55%, rgba(255,255,255,.09) 76%, rgba(255,255,255,.02) 90%); }
+  .sheet .wm { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:520px; opacity:.16; }
+  .sheet .wm img { width:100%; display:block; }
+  .sheet .edge { position:absolute; right:0; top:0; bottom:0; width:110px;
+                 background:linear-gradient(90deg, transparent, rgba(244,122,37,.14)); }
+  .flipshadow { position:absolute; left:0; top:0; width:1920px; height:1080px;
+                background:rgba(3,8,16,.55); opacity:0; }
+</style>
+
+<div class="stage" id="bg">
+  <div class="dots"></div>
+  <div class="beam b1" id="beam1"></div>
+  <div class="beam b2" id="beam2"></div>
+  <div class="halo h1" id="halo1"></div>
+  <div class="halo h2" id="halo2"></div>
+  <div class="ghost" id="ghost1" style="font-size:360px; right:-50px; top:400px;">ROI</div>
+  <div class="ghost" id="ghost2" style="font-size:260px; left:-40px; top:40px;">HCM</div>
+  <div class="gwrap" id="g1" style="width:240px;height:240px;right:240px;top:70px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g2" style="width:140px;height:140px;right:70px;top:430px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g3" style="width:195px;height:195px;left:110px;bottom:140px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g4" style="width:105px;height:105px;left:420px;top:150px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="pill" id="pill1" style="left:38px;top:500px;"><span class="od"></span>System of Intelligence</div>
+  <div class="pill" id="pill2" style="right:76px;bottom:200px;"><span class="od"></span>Earned, Not Installed</div>
+  <div class="streak" id="streak1" style="top:132px;"></div>
+  <div class="streak" id="streak2" style="bottom:120px;"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+</div>
+<div class="topbar" id="topbar" style="display:none"></div>
+
+<div id="ch" style="display:none">
+  <div class="eyebrow"><span class="bar"></span><span id="chEyebrow">CHAPTER 01 &middot; THE ROI MYTH</span></div>
+  <div class="cornerlogo"><img src="align-logo-white-2x.png"></div>
+  <div class="vglow"></div>
+  <div class="vshadow"></div>
+  <div class="namebar">
+    <div class="who" id="whoL"><span class="adot"></span><span><b>Brent Skinner</b> &nbsp;&middot;&nbsp; HR.com</span></div>
+    <div class="who" id="whoR"><span><b>Maher El-Abdallah</b> &nbsp;&middot;&nbsp; CEO, Align HCM</span><span class="adot"></span></div>
+  </div>
+  <div class="chtitle" id="chTitle">
+    <div class="cnum" id="chNum">CHAPTER 01</div>
+    <div class="ctext" id="chText">ROI doesn&rsquo;t <span class="o">just happen.</span></div>
+  </div>
+</div>
+
+<div id="intro" style="display:none">
+  <div class="dash"></div>
+  <div class="logoWrap"><img id="introLogo" src="align-logo-white-2x.png"></div>
+  <div class="tag">ROI isn&rsquo;t installed. <span class="earned">It&rsquo;s earned.</span></div>
+  <div class="ep">Maher El-Abdallah &times; Brent Skinner &middot; HR.com Podcast</div>
+</div>
+
+<div id="outro" style="display:none">
+  <div class="dash"></div>
+  <div class="h1">Get more from <span class="accent">your HCM.</span></div>
+  <div class="sub">with <span class="orange">Align HCM</span>, your implementation &amp; optimization partner</div>
+  <div class="lockup"><img src="align-logo-white-2x.png"></div>
+  <div class="url">ALIGNHCM.COM</div>
+</div>
+
+<div id="pageflip" style="display:none">
+  <div class="flipshadow" id="flipshadow"></div>
+  <div class="sheetwrap">
+    <div class="sheet" id="sheet">
+      <div class="sheen"></div>
+      <div class="wm"><img src="align-logo-white-2x.png"></div>
+      <div class="edge"></div>
+    </div>
+  </div>
+</div>
+
+<div id="chrome" style="display:none"></div>
+
+<div class="footer" id="footer" style="display:none">
+  <div class="l"><span class="dot2"></span><span class="brand">ALIGN HCM</span><span class="sep">&middot;</span>
+    <span class="rest">MAHER &times; BRENT &middot; HR.COM PODCAST</span></div>
+  <div class="r">ALIGNHCM.COM</div>
+</div>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="ink" x="-30%" y="-30%" width="160%" height="160%">
+    <feTurbulence id="inkTurb" type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="7" result="n"/>
+    <feDisplacementMap id="inkDisp" in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<script>
+const $ = s => document.querySelector(s);
+const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
+const easeO = t => 1-Math.pow(1-t,3);
+const back = t => { const c=1.70158; t=clamp(t,0,1); return 1+ (c+1)*Math.pow(t-1,3) + c*Math.pow(t-1,2); };
+const seg = (t,a,b) => clamp((t-a)/(b-a),0,1);
+const TAU = Math.PI*2;
+
+function setScene(name){
+  ['ch','intro','outro','pageflip','footer','topbar'].forEach(id => { const e=$('#'+id); if(e) e.style.display='none'; });
+  $('#bg').style.display = 'block';
+  if(name==='pageflip'){ $('#pageflip').style.display='block'; $('#bg').style.display='none';
+    document.body.style.background='transparent'; document.documentElement.style.background='transparent'; return; }
+  $('#footer').style.display='flex'; $('#topbar').style.display='block';
+  $('#'+name).style.display='block';
+}
+function setCh(eyebrow, num, title, active){
+  $('#chEyebrow').innerHTML = eyebrow;
+  $('#chNum').innerHTML = num;
+  $('#chText').innerHTML = title;
+  $('#whoL').classList.toggle('active', active === 'L');
+  $('#whoR').classList.toggle('active', active === 'R');
+}
+
+function bgSeek(t){
+  const F = (p, sp, a) => Math.sin(TAU*(t/sp) + p) * a;
+  const els = [
+    ['#g1', F(0,8,18),  F(1,8,11),  F(0,8,6),  F(2,8,5)],
+    ['#g2', F(1,4,13),  F(2,8,9),   F(1,4,8),  F(0,8,6)],
+    ['#g3', F(2,8,16),  F(0,4,10),  F(2,8,5),  F(1,4,6)],
+    ['#g4', F(3,4,9),   F(1,8,7),   F(3,4,9),  F(2,8,5)],
+  ];
+  for(const [id, dy, dx, rx, ry] of els){
+    const g = $(id); if(!g) continue;
+    g.style.transform = `translate(${dx}px, ${dy}px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    const sh = g.querySelector('.gshadow');
+    const lift = (Math.sin(TAU*t/8)+1)/2;
+    sh.style.opacity = String(.5 + lift*.5);
+    sh.style.transform = `translateY(${lift*10+4}px) scale(${1.05+lift*.14})`;
+  }
+  $('#ghost1').style.transform = `translate(${F(0,8,24)}px, ${F(1,8,16)}px)`;
+  $('#ghost2').style.transform = `translate(${F(2,8,20)}px, ${F(0,8,14)}px)`;
+  $('#beam1').style.transform  = `rotate(-16deg) translateX(${F(0,8,60)}px)`;
+  $('#beam2').style.transform  = `rotate(13deg) translateX(${F(2,8,50)}px)`;
+  $('#halo1').style.transform  = `rotate(${(t*45)%360}deg)`;
+  $('#halo2').style.transform  = `rotate(${-(t*90)%360}deg)`;
+  $('#pill1').style.transform  = `translate(${F(1,8,7)}px, ${F(0,8,10)}px)`;
+  $('#pill2').style.transform  = `translate(${F(0,8,8)}px, ${F(2,8,9)}px)`;
+  const sweep = (el, period, ph, x0, x1) => {
+    const p = ((t/period + ph) % 1);
+    const vis = p < 0.32 ? Math.sin(Math.PI * p/0.32) : 0;
+    el.style.opacity = String(vis * 0.75);
+    el.style.transform = `translateX(${x0 + (x1-x0)*p}px)`;
+  };
+  sweep($('#streak1'), 8,  0.0, 180, 1450);
+  sweep($('#streak2'), 8, 0.5, 1500, 200);
+}
+
+/* chapter: title panel in/out over the box; bg is 8s-periodic for seamless loops */
+function chSeek(t, withTitle){
+  bgSeek(t);
+  const ti = $('#chTitle');
+  if(!withTitle){ ti.style.opacity = '0'; return; }
+  const inq  = back(seg(t, 0.18, 0.85));
+  const outq = seg(t, 2.55, 3.25);
+  ti.style.opacity = String(clamp(seg(t,0.18,0.6),0,1) * (1-outq));
+  ti.style.transform = `translateX(-50%) translateY(${(1-inq)*40 - outq*34}px) scale(${0.96 + inq*0.04})`;
+}
+
+function introSeek(t){
+  bgSeek(t);
+  $('#bg').style.opacity = seg(t,0,0.55);
+  $('#topbar').style.opacity = seg(t,0.3,0.9);
+  $('#intro .dash').style.transform = `scaleX(${easeO(seg(t,0.45,1.05))})`;
+  const p  = seg(t,0.65,2.45), pe = easeO(p);
+  const wrap = $('#intro .logoWrap'), img = $('#introLogo');
+  $('#inkDisp').setAttribute('scale', String(Math.round((1-pe)*140)));
+  $('#inkTurb').setAttribute('baseFrequency', (0.013 + (1-pe)*0.03).toFixed(4));
+  img.style.filter = `url(#ink) blur(${(1-pe)*10}px)`;
+  img.style.opacity = seg(t,0.65,1.55);
+  const r = 20 + pe*135;
+  img.style.webkitMaskImage = `radial-gradient(circle at 50% 52%, black ${r*0.55}%, transparent ${r}%)`;
+  wrap.style.transform = `translateX(-50%) scale(${1.045 - pe*0.045})`;
+  const tq = easeO(seg(t,2.55,3.45));
+  $('#intro .tag').style.opacity = tq;
+  $('#intro .tag').style.transform = `translateY(${(1-tq)*16}px)`;
+  const eq = easeO(seg(t,3.05,3.9));
+  $('#intro .ep').style.opacity = eq*0.9;
+  $('#intro .ep').style.transform = `translateY(${(1-eq)*12}px)`;
+  $('#footer').style.opacity = seg(t,0.8,1.6);
+}
+
+function outroSeek(t){
+  bgSeek(t+2.0);
+  $('#bg').style.opacity = 1; $('#footer').style.opacity = 1; $('#topbar').style.opacity = 1;
+  $('#outro .dash').style.transform = `scaleX(${easeO(seg(t,0.15,0.7))})`;
+  const hq = easeO(seg(t,0.35,1.25));
+  $('#outro .h1').style.opacity = hq;
+  $('#outro .h1').style.transform = `translateY(${(1-hq)*26}px)`;
+  const sq = easeO(seg(t,1.0,1.85));
+  $('#outro .sub').style.opacity = sq;
+  $('#outro .sub').style.transform = `translateY(${(1-sq)*18}px)`;
+  const lq = easeO(seg(t,1.9,2.85));
+  $('#outro .lockup').style.opacity = lq;
+  $('#outro .lockup').style.transform = `translateX(-50%) translateY(${(1-lq)*14}px)`;
+  const uq = easeO(seg(t,2.6,3.4));
+  $('#outro .url').style.opacity = uq;
+  $('#outro .url').style.transform = `translateY(${(1-uq)*10}px)`;
+}
+
+/* page flip: sheet sweeps in from the right (rotY +88 -> 0) then folds away left (0 -> -88). D = 0.85s */
+function flipSeek(t){
+  const D = 0.85, p = clamp(t/D, 0, 1);
+  const rot = 88 - p*176;
+  $('#sheet').style.transform = `rotateY(${rot}deg)`;
+  const vis = p < 0.06 ? p/0.06 : (p > 0.94 ? (1-p)/0.06 : 1);
+  $('#sheet').style.opacity = String(vis);
+  const cover = Math.cos(rot*Math.PI/180);
+  $('#flipshadow').style.opacity = String(clamp(cover,0,1)*0.5);
+}
+
+window.seek = (t, scene) => {
+  if(scene==='ch') chSeek(t, true);
+  else if(scene==='chloop') chSeek(t, false);
+  else if(scene==='intro') introSeek(t);
+  else if(scene==='outro') outroSeek(t);
+  else if(scene==='pageflip') flipSeek(t);
+  else bgSeek(t);
+  return true;
+};
+window.setScene = setScene;
+window.setCh = setCh;
+</script>

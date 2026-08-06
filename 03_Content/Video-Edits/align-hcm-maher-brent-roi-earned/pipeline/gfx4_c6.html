@@ -1,0 +1,412 @@
+<meta charset="utf-8">
+<style>
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioRegular.ttf'); font-weight:400; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioSemiBold.ttf'); font-weight:600; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioBold.ttf'); font-weight:700; }
+  @font-face { font-family:'Gelasio'; src:url('fonts/GelasioItalic.ttf'); font-style:italic; font-weight:400; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterRegular.ttf'); font-weight:400; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterMedium.ttf'); font-weight:500; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterSemiBold.ttf'); font-weight:600; }
+  @font-face { font-family:'Inter'; src:url('fonts/InterBold.ttf'); font-weight:700; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1920px; height:1080px; overflow:hidden; background:transparent; }
+
+  /* ================= BACKGROUND SYSTEM ================= */
+  .stage { position:absolute; inset:0; overflow:hidden; perspective:1400px;
+           background:
+             radial-gradient(140% 110% at 82% 8%, rgba(53,118,201,.34) 0%, rgba(53,118,201,0) 46%),
+             radial-gradient(90% 80% at 12% 88%, rgba(198,90,28,.22) 0%, rgba(198,90,28,0) 52%),
+             radial-gradient(70% 60% at 20% 12%, rgba(198,90,28,.15) 0%, rgba(198,90,28,0) 55%),
+             linear-gradient(118deg,#0A1424 0%,#0E1A2B 38%,#14305A 74%,#0B1A30 100%); }
+  .grid { position:absolute; inset:-2px; opacity:.055;
+          background-image:linear-gradient(rgba(160,190,235,.8) 1px, transparent 1px),
+                           linear-gradient(90deg, rgba(160,190,235,.8) 1px, transparent 1px);
+          background-size:96px 96px; }
+  .vignette { position:absolute; inset:0; background:radial-gradient(125% 100% at 50% 40%, transparent 52%, rgba(3,8,17,.6) 100%); }
+
+  /* liquid glass squares */
+  .gwrap { position:absolute; transform-style:preserve-3d; }
+  .gshadow { position:absolute; left:-14%; top:66%; width:128%; height:58%; border-radius:50%; filter:blur(30px);
+             background:radial-gradient(ellipse at center, rgba(244,122,37,.55) 0%, rgba(230,100,30,.24) 48%, rgba(244,122,37,0) 76%); }
+  .glass { position:absolute; inset:0; border-radius:20%; transform:rotate(45deg);
+           background:linear-gradient(135deg, rgba(255,255,255,.20) 0%, rgba(255,255,255,.06) 42%, rgba(127,169,240,.13) 72%, rgba(244,122,37,.10) 100%);
+           border:1.5px solid rgba(255,255,255,.30);
+           box-shadow: inset 0 2px 10px rgba(255,255,255,.28), inset 0 -14px 30px rgba(244,122,37,.14), 0 24px 60px rgba(3,8,16,.45);
+           backdrop-filter: blur(12px) saturate(135%); }
+  .glass::after { content:''; position:absolute; left:8%; top:6%; width:52%; height:30%; border-radius:50%;
+                  background:linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,0)); }
+
+  /* premium SaaS field: beams, halo, dots, pills, streaks, grain */
+  .dots { position:absolute; inset:0; opacity:.15;
+          background-image:radial-gradient(rgba(150,185,235,.55) 1.4px, transparent 1.6px);
+          background-size:46px 46px;
+          -webkit-mask:radial-gradient(95% 80% at 58% 38%, black 25%, transparent 78%); }
+  .beam { position:absolute; filter:blur(64px); }
+  .beam.b1 { width:1700px; height:300px; left:-220px; top:170px; transform:rotate(-16deg);
+             background:linear-gradient(90deg, transparent, rgba(78,130,210,.16) 28%, rgba(127,169,240,.26) 50%, rgba(78,130,210,.14) 72%, transparent); }
+  .beam.b2 { width:1500px; height:250px; left:380px; bottom:-60px; transform:rotate(13deg);
+             background:linear-gradient(90deg, transparent, rgba(244,122,37,.13) 32%, rgba(255,154,77,.20) 50%, rgba(244,122,37,.10) 68%, transparent); }
+  .halo { position:absolute; border-radius:50%;
+          background:conic-gradient(from 0deg, transparent 0%, rgba(244,122,37,.55) 12%, rgba(127,169,240,.48) 30%, transparent 50%);
+          -webkit-mask:radial-gradient(circle, transparent 61%, black 64%, black 68%, transparent 71%);
+          filter:blur(1.5px); }
+  .halo.h1 { width:720px; height:720px; right:-160px; top:-180px; opacity:.55; }
+  .halo.h2 { width:400px; height:400px; left:-110px; bottom:30px; opacity:.32; }
+  .ghost { position:absolute; font-family:'Gelasio'; font-weight:700; color:transparent;
+           -webkit-text-stroke:2px rgba(160,190,235,.085); letter-spacing:-4px; }
+  .pill { position:absolute; display:flex; align-items:center; gap:11px; padding:11px 20px; border-radius:100px;
+          font-family:Inter; font-weight:600; font-size:14.5px; letter-spacing:.22em; text-transform:uppercase;
+          color:#B9CBE4; background:rgba(10,18,32,.42); border:1px solid rgba(150,180,225,.20);
+          backdrop-filter:blur(10px); box-shadow:0 14px 36px rgba(3,8,16,.45); }
+  .pill .od { width:7px; height:7px; border-radius:50%; background:#F47A25; box-shadow:0 0 10px rgba(244,122,37,.8); }
+  .streak { position:absolute; height:2px; width:440px; border-radius:2px; opacity:0;
+            background:linear-gradient(90deg, transparent, rgba(214,230,255,.6), transparent); }
+  .grain { position:absolute; inset:0; opacity:.05; mix-blend-mode:overlay; pointer-events:none;
+           background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.9'/%3E%3C/svg%3E"); }
+
+  /* ================= SHARED CHROME ================= */
+  .topbar { position:absolute; left:0; right:0; top:0; height:6px; z-index:45;
+            background:linear-gradient(90deg,#F47A25 0%,#F47A25 60%,#7FA9F0 100%); }
+  .footer { position:absolute; left:0; right:0; bottom:0; height:48px; background:rgba(7,12,22,.90);
+            display:flex; align-items:center; justify-content:space-between; padding:0 42px;
+            font-family:Inter; font-size:14px; letter-spacing:.16em; z-index:40; }
+  .footer .l { display:flex; align-items:center; gap:12px; }
+  .footer .dot2 { width:8px; height:8px; border-radius:50%; background:#F47A25; }
+  .footer .brand { color:#F47A25; font-weight:700; }
+  .footer .sep { color:#4A5A70; }
+  .footer .rest, .footer .r { color:#8FA3BC; font-weight:500; }
+
+  .eyebrow { position:absolute; display:flex; align-items:center; gap:16px; font-family:Inter; font-weight:700;
+             font-size:19px; letter-spacing:.34em; color:#F4A96A; text-transform:uppercase; z-index:36; }
+  .eyebrow .bar { width:34px; height:4px; background:#F47A25; }
+  .cornerlogo { position:absolute; right:46px; top:34px; width:168px; z-index:36; }
+  .cornerlogo img { width:100%; display:block; }
+
+  .vshadow { position:absolute; border-radius:16px; background:#000;
+             box-shadow:0 34px 100px rgba(2,6,14,.8), 0 8px 30px rgba(2,6,14,.6); }
+  .vglow { position:absolute; border-radius:50%; filter:blur(48px);
+           background:radial-gradient(ellipse at center, rgba(244,122,37,.38) 0%, rgba(244,122,37,.12) 55%, transparent 78%); }
+  .namebar { position:absolute; display:flex; justify-content:space-between; align-items:center; z-index:34; }
+  .namebar .who { font-family:Inter; font-weight:600; font-size:24px; color:#93A5BD; display:flex; align-items:center; gap:12px; }
+  .namebar .who b { color:#F7F4EE; font-weight:700; }
+  .namebar .who.active b { color:#F47A25; }
+  .namebar .adot { width:9px; height:9px; border-radius:50%; background:#31405A; }
+  .namebar .who.active .adot { background:#F47A25; box-shadow:0 0 10px rgba(244,122,37,.8); }
+
+  /* ================= CLIP 1: kinetic banner ================= */
+  #c1 .banner { position:absolute; left:302px; top:884px; width:1316px; height:132px; border-radius:16px;
+                overflow:hidden; background:rgba(9,16,29,.72); border:1px solid rgba(150,180,225,.2);
+                backdrop-filter:blur(12px); box-shadow:0 20px 50px rgba(3,8,16,.55); z-index:35; }
+  #c1 .btext { position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+               font-family:'Gelasio'; font-weight:700; font-size:62px; color:#F7F4EE; letter-spacing:-1px; }
+  #c1 .btext .o { color:#F47A25; margin-left:18px; }
+  #c1 .bwipe { position:absolute; inset:0; background:linear-gradient(90deg,#F47A25,#FF9A4D); transform:translateX(-102%); }
+  #c1 .bkicker { position:absolute; left:302px; top:854px; font-family:Inter; font-weight:700; font-size:15px;
+                 letter-spacing:.3em; color:#7E93AE; text-transform:uppercase; z-index:35; }
+
+  /* ================= CLIP 2: skyscraper stack ================= */
+  #c2 .rail { position:absolute; left:64px; top:80px; width:560px; height:920px; z-index:35; }
+  #c2 .rlogo { width:196px; display:block; }
+  #c2 .rhead { margin-top:44px; font-family:'Gelasio'; font-weight:700; font-size:64px; line-height:1.14;
+               letter-spacing:-1px; color:#F7F4EE; }
+  #c2 .rhead .hl { color:#F47A25; }
+  #c2 .stack { position:absolute; left:6px; bottom:120px; width:520px; }
+  #c2 .floor { position:relative; margin-top:14px; height:118px; border-radius:14px; overflow:hidden;
+               background:linear-gradient(120deg, rgba(18,32,56,.85), rgba(12,22,40,.85));
+               border:1px solid rgba(150,180,225,.22); backdrop-filter:blur(8px);
+               display:flex; align-items:center; padding:0 26px; gap:20px;
+               box-shadow:0 18px 44px rgba(3,8,16,.5); }
+  #c2 .floor .lv { font-family:'Gelasio'; font-weight:700; font-size:44px; color:#7FA9F0; width:76px; }
+  #c2 .floor .fl { font-family:Inter; font-weight:700; font-size:23px; letter-spacing:.10em; color:#E8EFF9; text-transform:uppercase; }
+  #c2 .floor .fs { font-family:Inter; font-weight:500; font-size:16px; letter-spacing:.06em; color:#8FA3BC; margin-top:4px; }
+  #c2 .floor.lit { border-color:rgba(244,122,37,.75); }
+  #c2 .floor.lit .lv { color:#F47A25; }
+  #c2 .floor .glowline { position:absolute; left:0; top:0; bottom:0; width:5px; background:#F47A25;
+                         box-shadow:0 0 18px rgba(244,122,37,.9); }
+  #c2 .roof { position:relative; margin-top:14px; height:0; display:flex; justify-content:center; }
+  #c2 .spire { position:absolute; bottom:0; width:4px; height:74px; background:linear-gradient(180deg,#F47A25,rgba(244,122,37,0)); }
+
+  /* ================= CLIP 3: swipe-in cards ================= */
+  #c3 .cardrow { position:absolute; left:340px; top:846px; width:1240px; display:flex; gap:24px; z-index:35; }
+  #c3 .kcard { flex:1; height:150px; border-radius:16px; padding:24px 26px 0;
+               background:linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.03) 50%, rgba(127,169,240,.08));
+               border:1px solid rgba(255,255,255,.24); backdrop-filter:blur(12px);
+               box-shadow:0 20px 50px rgba(3,8,16,.55), inset 0 1px 6px rgba(255,255,255,.18); }
+  #c3 .kcard .kn { font-family:'Gelasio'; font-weight:700; font-size:40px; color:#F7F4EE; letter-spacing:-.5px; }
+  #c3 .kcard .kn .o { color:#F47A25; }
+  #c3 .kcard .ks { font-family:Inter; font-weight:600; font-size:15.5px; letter-spacing:.2em; color:#8FA3BC;
+                   text-transform:uppercase; margin-top:10px; }
+  #c3 .kcard .kline { height:4px; width:56px; background:#F47A25; border-radius:2px; margin-top:14px; }
+
+  /* ================= ENDCARD ================= */
+  #endcard .elogo { position:absolute; left:50%; top:300px; transform:translateX(-50%); width:430px; }
+  #endcard .elogo img { width:100%; display:block; }
+  #endcard .kick { position:absolute; left:0; right:0; top:600px; text-align:center; font-family:'Gelasio';
+                   font-style:italic; font-size:52px; color:#F7F4EE; }
+  #endcard .kick .o { color:#F47A25; font-style:italic; }
+  #endcard .eurl { position:absolute; left:0; right:0; top:706px; text-align:center; font-family:Inter;
+                   font-weight:700; font-size:23px; letter-spacing:.34em; color:#F47A25; }
+
+  /* chrome ring (parametrized) */
+  .ring3 { position:absolute; border-radius:18px; border:3px solid #F47A25; z-index:20;
+           box-shadow:inset 0 1px 0 rgba(255,255,255,.06); }
+</style>
+
+<div class="stage" id="bg">
+  <div class="dots"></div>
+  <div class="beam b1" id="beam1"></div>
+  <div class="beam b2" id="beam2"></div>
+  <div class="halo h1" id="halo1"></div>
+  <div class="halo h2" id="halo2"></div>
+  <div class="ghost" id="ghost1" style="font-size:360px; right:-50px; top:400px;">ROI</div>
+  <div class="ghost" id="ghost2" style="font-size:260px; left:-40px; top:40px;">HCM</div>
+  <div class="gwrap" id="g1" style="width:240px;height:240px;right:240px;top:70px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g2" style="width:140px;height:140px;right:70px;top:430px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g3" style="width:195px;height:195px;left:110px;bottom:140px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="gwrap" id="g4" style="width:105px;height:105px;left:420px;top:150px;"><div class="gshadow"></div><div class="glass"></div></div>
+  <div class="pill" id="pill1" style="left:38px;top:500px;font-size:13px;"><span class="od"></span>System of Intelligence</div>
+  <div class="pill" id="pill2" style="right:76px;bottom:200px;"><span class="od"></span>Earned, Not Installed</div>
+  <div class="streak" id="streak1" style="top:132px;"></div>
+  <div class="streak" id="streak2" style="bottom:120px;"></div>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+</div>
+<div class="topbar" id="topbar" style="display:none"></div>
+
+<!-- CLIP 1 -->
+<div id="c1" style="display:none">
+  <div class="eyebrow" style="left:302px; top:36px;"><span class="bar"></span><span>THE RECORD TRAP</span></div>
+  <div class="cornerlogo"><img src="align-logo-white-2x.png"></div>
+  <div class="vglow" style="left:322px; top:744px; width:1276px; height:120px;"></div>
+  <div class="vshadow" style="left:302px; top:64px; width:1316px; height:740px;"></div>
+  <div class="namebar" style="left:302px; top:816px; width:1316px;">
+    <div class="who" id="c1L"><span class="adot"></span><span><b>Brent Skinner</b> &nbsp;&middot;&nbsp; HR.com</span></div>
+    <div class="who active" id="c1R"><span><b>Maher El-Abdallah</b> &nbsp;&middot;&nbsp; CEO, Align HCM</span><span class="adot"></span></div>
+  </div>
+  <div class="bkicker">MAHER ON WHY HR GETS LEFT OUT</div>
+  <div class="banner">
+    <div class="btext" id="btext">A SEAT <span class="o">AT THE TABLE</span></div>
+    <div class="bwipe" id="bwipe"></div>
+  </div>
+</div>
+
+<!-- CLIP 2 -->
+<div id="c2" style="display:none">
+  <div class="rail">
+    <img class="rlogo" src="align-logo-white-2x.png">
+    <div class="rhead">Speak <span class="hl">business.</span></div>
+    <div class="stack">
+      <div class="roof" id="roofwrap" style="height:80px"><div class="spire" id="spire"></div></div>
+      <div class="floor" id="fl3"><div class="glowline"></div><div class="lv">03</div><div><div class="fl">Liability Exposure</div><div class="fs">Learning completion, translated</div></div></div>
+      <div class="floor" id="fl2"><div class="glowline"></div><div class="lv">02</div><div><div class="fl">Cost of Capital</div><div class="fs">Attrition rates, translated</div></div></div>
+      <div class="floor" id="fl1"><div class="glowline"></div><div class="lv">01</div><div><div class="fl">Revenue Protection</div><div class="fs">Time to fill, translated</div></div></div>
+    </div>
+  </div>
+  <div class="eyebrow" style="left:700px; top:40px;"><span class="bar"></span><span>HR METRICS, CFO LANGUAGE</span></div>
+  <div class="cornerlogo" style="display:none"></div>
+  <div class="vglow" style="left:720px; top:672px; width:1120px; height:110px;"></div>
+  <div class="vshadow" style="left:700px; top:84px; width:1160px; height:652px;"></div>
+  <div class="namebar" style="left:700px; top:748px; width:1160px;">
+    <div class="who" id="c2L"><span class="adot"></span><span><b>Brent Skinner</b> &nbsp;&middot;&nbsp; HR.com</span></div>
+    <div class="who active" id="c2R"><span><b>Maher El-Abdallah</b> &nbsp;&middot;&nbsp; CEO, Align HCM</span><span class="adot"></span></div>
+  </div>
+</div>
+
+<!-- CLIP 3 -->
+<div id="c3" style="display:none">
+  <div class="eyebrow" style="left:340px; top:36px;"><span class="bar"></span><span>UNLOCK LAYERS TWO &amp; THREE</span></div>
+  <div class="cornerlogo"><img src="align-logo-white-2x.png"></div>
+  <div class="vglow" style="left:360px; top:704px; width:1200px; height:110px;"></div>
+  <div class="vshadow" style="left:340px; top:64px; width:1240px; height:697px;"></div>
+  <div class="namebar" style="left:340px; top:772px; width:1240px;">
+    <div class="who" id="c3L"><span class="adot"></span><span><b>Brent Skinner</b> &nbsp;&middot;&nbsp; HR.com</span></div>
+    <div class="who active" id="c3R"><span><b>Maher El-Abdallah</b> &nbsp;&middot;&nbsp; CEO, Align HCM</span><span class="adot"></span></div>
+  </div>
+  <div class="cardrow">
+    <div class="kcard" id="k1"><div class="kn">Strong <span class="o">platforms</span></div><div class="ks">The vendors deliver the base</div><div class="kline"></div></div>
+    <div class="kcard" id="k2"><div class="kn">Intentionality</div><div class="ks">Decide to use the data</div><div class="kline"></div></div>
+    <div class="kcard" id="k3"><div class="kn"><span class="o">Leverage</span> it</div><div class="ks">Not simply manage it</div><div class="kline"></div></div>
+  </div>
+</div>
+
+<!-- ENDCARD -->
+<div id="endcard" style="display:none">
+  <div class="elogo"><img src="align-logo-white-2x.png"></div>
+  <div class="kick" id="ekick">Stop running a <span class="o">system of record.</span></div>
+  <div class="eurl">ALIGNHCM.COM</div>
+</div>
+
+<div id="chrome" style="display:none"><div class="ring3" id="ring3"></div></div>
+
+<div class="footer" id="footer" style="display:none">
+  <div class="l"><span class="dot2"></span><span class="brand">ALIGN HCM</span><span class="sep">&middot;</span>
+    <span class="rest">MAHER &times; BRENT &middot; HR.COM PODCAST</span></div>
+  <div class="r">ALIGNHCM.COM</div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
+const easeO = t => 1-Math.pow(1-t,3);
+const back = t => { const c=1.70158; t=clamp(t,0,1); return 1+ (c+1)*Math.pow(t-1,3) + c*Math.pow(t-1,2); };
+const seg = (t,a,b) => clamp((t-a)/(b-a),0,1);
+const TAU = Math.PI*2;
+
+function setScene(name){
+  ['c1','c2','c3','endcard','chrome','footer','topbar'].forEach(id => $('#'+id).style.display='none');
+  $('#bg').style.display = 'block';
+  if(name==='chrome'){ $('#chrome').style.display='block'; $('#bg').style.display='none';
+    document.body.style.background='transparent'; document.documentElement.style.background='transparent'; return; }
+  $('#footer').style.display='flex'; $('#topbar').style.display='block';
+  $('#'+name).style.display='block';
+}
+function setRing(x,y,w,h){
+  const r = $('#ring3');
+  r.style.left = (x-3)+'px'; r.style.top = (y-3)+'px';
+  r.style.width = (w+6)+'px'; r.style.height = (h+6)+'px';
+}
+function setEndcard(html){ $('#ekick').innerHTML = html; }
+
+/* ---------- pervasive background motion ---------- */
+function bgSeek(t){
+  const F = (p, sp, a) => Math.sin(TAU*(t/sp) + p) * a;
+  const els = [
+    ['#g1', F(0,7,18),  F(1,9,11),  F(0,7,6),  F(2,11,5)],
+    ['#g2', F(1,6,13),  F(2,8,9),   F(1,6,8),  F(0,9,6)],
+    ['#g3', F(2,8,16),  F(0,7,10),  F(2,8,5),  F(1,7,6)],
+    ['#g4', F(3,5.5,9), F(1,7,7),   F(3,6,9),  F(2,8,5)],
+  ];
+  for(const [id, dy, dx, rx, ry] of els){
+    const g = $(id); if(!g) continue;
+    g.style.transform = `translate(${dx}px, ${dy}px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+    const sh = g.querySelector('.gshadow');
+    const lift = (Math.sin(TAU*t/7)+1)/2;
+    sh.style.opacity = String(.5 + lift*.5);
+    sh.style.transform = `translateY(${lift*10+4}px) scale(${1.05+lift*.14})`;
+  }
+  $('#ghost1').style.transform = `translate(${F(0,17,24)}px, ${F(1,14,16)}px)`;
+  $('#ghost2').style.transform = `translate(${F(2,16,20)}px, ${F(0,18,14)}px)`;
+  $('#beam1').style.transform  = `rotate(-16deg) translateX(${F(0,15,60)}px)`;
+  $('#beam2').style.transform  = `rotate(13deg) translateX(${F(2,13,50)}px)`;
+  $('#halo1').style.transform  = `rotate(${(t*9)%360}deg)`;
+  $('#halo2').style.transform  = `rotate(${-(t*13)%360}deg)`;
+  $('#pill1').style.transform  = `translate(${F(1,8,7)}px, ${F(0,7,10)}px)`;
+  $('#pill2').style.transform  = `translate(${F(0,9,8)}px, ${F(2,8,9)}px)`;
+  /* light streaks: periodic sweeps */
+  const sweep = (el, period, ph, x0, x1, y=0) => {
+    const p = ((t/period + ph) % 1);
+    const vis = p < 0.32 ? Math.sin(Math.PI * p/0.32) : 0;
+    el.style.opacity = String(vis * 0.75);
+    el.style.transform = `translateX(${x0 + (x1-x0)*p}px)`;
+  };
+  sweep($('#streak1'), 9,  0.0, 180, 1450);
+  sweep($('#streak2'), 11, 0.5, 1500, 200);
+}
+
+/* entrance for shared chrome elements of a clip container */
+function entrance(t, ids){
+  for(const [sel, delay] of ids){
+    const e = document.querySelector(sel); if(!e) continue;
+    const q = easeO(seg(t, delay, delay+0.6));
+    e.style.opacity = q;
+    e.style.transform = `translateY(${(1-q)*26}px)`;
+  }
+}
+
+/* ---------- CLIP 1 ---------- */
+const C1BEATS = [
+  {at:0.0,  html:'A SEAT <span class="o">AT THE TABLE</span>'},
+  {at:7.2,  html:'LEVERAGE <span class="o">THE INTELLIGENCE</span>'},
+  {at:11.9, html:'NOT JUST A <span class="o">SYSTEM OF RECORD</span>'},
+];
+function c1Seek(t){
+  bgSeek(t);
+  entrance(t, [['#c1 .eyebrow',0.05],['.cornerlogo',0.15],['#c1 .bkicker',0.35],['#c1 .banner',0.45]]);
+  let cur = C1BEATS[0], nxt = null;
+  for(const b of C1BEATS){ if(t >= b.at) cur = b; }
+  const idx = C1BEATS.indexOf(cur);
+  if(idx+1 < C1BEATS.length) nxt = C1BEATS[idx+1];
+  const W = 0.55;
+  let inWipe = false, wq = 0;
+  if(nxt && t >= nxt.at - W && t < nxt.at){ inWipe = true; wq = seg(t, nxt.at - W, nxt.at); }
+  const wipe = $('#bwipe'), bt = $('#btext');
+  if(inWipe){
+    wipe.style.transform = `translateX(${-102 + wq*204}%)`;
+    bt.innerHTML = wq < 0.5 ? cur.html : nxt.html;
+    const half = wq < 0.5 ? seg(wq,0,0.5) : 1-seg(wq,0.5,1);
+    bt.style.opacity = String(1 - half*0.5);
+  } else if(cur.at > 0 && t >= cur.at && t < cur.at + W){
+    wq = seg(t, cur.at, cur.at + W);
+    wipe.style.transform = `translateX(${-102 + (0.5+wq*0.5)*204}%)`;
+    bt.innerHTML = cur.html; bt.style.opacity = '1';
+  } else {
+    wipe.style.transform = 'translateX(-102%)';
+    bt.innerHTML = cur.html; bt.style.opacity = '1';
+    const pq = seg(t, cur.at, cur.at+0.45);
+    bt.style.transform = `scale(${0.96 + back(pq)*0.04})`;
+  }
+}
+
+/* ---------- CLIP 2 ---------- */
+function c2Seek(t){
+  bgSeek(t);
+  entrance(t, [['#c2 .rlogo',0.05],['#c2 .rhead',0.25],['#c2 .eyebrow',0.15]]);
+  const beats = [ ['#fl1', 9.9], ['#fl2', 21.6], ['#fl3', 27.2] ];
+  for(const [sel, at] of beats){
+    const f = $(sel);
+    const q = seg(t, at, at+0.75);
+    const bq = back(q);
+    f.style.opacity = q === 0 ? '0' : String(clamp(q*1.6,0,1));
+    f.style.transform = `translateY(${(1-bq)*70}px) scale(${0.94 + bq*0.06})`;
+    f.classList.toggle('lit', q > 0.55);
+    const gl = f.querySelector('.glowline');
+    gl.style.opacity = String(seg(t, at+0.4, at+0.9));
+  }
+  const sq = seg(t, 27.8, 28.45);
+  $('#spire').style.height = (easeO(sq)*74) + 'px';
+  $('#spire').style.opacity = String(sq);
+}
+
+/* ---------- CLIP 3 ---------- */
+function c3Seek(t){
+  bgSeek(t);
+  entrance(t, [['#c3 .eyebrow',0.05],['.cornerlogo',0.15]]);
+  const beats = [ ['#k1', 6.6], ['#k2', 16.9], ['#k3', 20.7] ];
+  for(const [sel, at] of beats){
+    const k = $(sel);
+    const q = seg(t, at, at+0.7);
+    const bq = back(q);
+    k.style.opacity = q === 0 ? '0' : String(clamp(q*1.7,0,1));
+    k.style.transform = `translateX(${(1-bq)*260}px) rotateY(${(1-bq)*-14}deg)`;
+    const line = k.querySelector('.kline');
+    line.style.transform = `scaleX(${easeO(seg(t, at+0.5, at+1.0))})`;
+    line.style.transformOrigin = 'left';
+  }
+}
+
+/* ---------- ENDCARD ---------- */
+function endSeek(t){
+  bgSeek(t+3);
+  const lq = easeO(seg(t,0.10,0.75));
+  const el = $('#endcard .elogo');
+  el.style.opacity = lq; el.style.transform = `translateX(-50%) translateY(${(1-lq)*24}px)`;
+  const kq = easeO(seg(t,0.45,1.15));
+  const k = $('#ekick');
+  k.style.opacity = kq; k.style.transform = `translateY(${(1-kq)*20}px)`;
+  const uq = easeO(seg(t,0.85,1.5));
+  const u = $('#endcard .eurl');
+  u.style.opacity = uq; u.style.transform = `translateY(${(1-uq)*14}px)`;
+}
+
+window.seek = (t, scene) => {
+  if(scene==='c1') c1Seek(t);
+  else if(scene==='c2') c2Seek(t);
+  else if(scene==='c3') c3Seek(t);
+  else if(scene==='endcard') endSeek(t);
+  else bgSeek(t);
+  return true;
+};
+window.setScene = setScene;
+window.setRing = setRing;
+window.setEndcard = setEndcard;
+</script>
