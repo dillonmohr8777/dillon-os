@@ -1,0 +1,376 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-06",
+  "note": "Every check is worth explicit points so the score is arguable instead of a black box. Change points here, bump the version, then run grade-calibrate.js before trusting a run.",
+  "dimensions": {
+    "structure": {
+      "label": "Structure",
+      "letter": "S",
+      "max": 18,
+      "asks": "Is the technical foundation sound?",
+      "checks": {
+        "https": {
+          "points": 3,
+          "label": "Serves over HTTPS",
+          "tier": "stakes"
+        },
+        "redirectHygiene": {
+          "points": 2,
+          "label": "Clean canonical host, no redirect chain",
+          "tier": "stakes"
+        },
+        "titleQuality": {
+          "points": 3,
+          "label": "Real page title, not a template default",
+          "tier": "stakes"
+        },
+        "metaDescription": {
+          "points": 2,
+          "label": "Meta description present and sized",
+          "tier": "stakes"
+        },
+        "docShape": {
+          "points": 2,
+          "label": "HTML5 doctype with lang attribute",
+          "tier": "stakes"
+        },
+        "noLayoutTables": {
+          "points": 3,
+          "label": "No table/frame/font-tag layout",
+          "tier": "stakes"
+        },
+        "noDeadTech": {
+          "points": 3,
+          "label": "No Flash, framesets, or pre-2013 jQuery",
+          "tier": "stakes"
+        }
+      }
+    },
+    "impression": {
+      "label": "Impression",
+      "letter": "I",
+      "max": 22,
+      "asks": "Does it look current and expensive?",
+      "checks": {
+        "modernCss": {
+          "points": 5,
+          "label": "Custom properties, grid/flex, fluid type",
+          "tier": "craft"
+        },
+        "typography": {
+          "points": 3,
+          "label": "Deliberate typeface, not browser defaults",
+          "tier": "craft"
+        },
+        "noDatedMotion": {
+          "points": 4,
+          "label": "No marquee, blink, or jQuery-era carousel",
+          "tier": "stakes"
+        },
+        "imageCraft": {
+          "points": 4,
+          "label": "Modern formats, srcset, no GIF photography",
+          "tier": "craft"
+        },
+        "heroPresence": {
+          "points": 3,
+          "label": "Real hero: h1 plus a lead image or video",
+          "tier": "craft"
+        },
+        "notStub": {
+          "points": 3,
+          "label": "Not a parked page, ADI default, or coming-soon",
+          "tier": "stakes"
+        }
+      }
+    },
+    "getFound": {
+      "label": "Get found",
+      "letter": "G",
+      "max": 18,
+      "asks": "Can search, maps, and AI answer engines read it?",
+      "checks": {
+        "structuredData": {
+          "points": 5,
+          "label": "JSON-LD parses with a business type",
+          "tier": "craft"
+        },
+        "napOnPage": {
+          "points": 4,
+          "label": "Name, address, phone as selectable text",
+          "tier": "craft"
+        },
+        "socialCards": {
+          "points": 2,
+          "label": "Open Graph and Twitter card tags",
+          "tier": "stakes"
+        },
+        "headingOrder": {
+          "points": 2,
+          "label": "One h1, real h2 structure",
+          "tier": "stakes"
+        },
+        "contentDepth": {
+          "points": 3,
+          "label": "300+ words of genuine body copy",
+          "tier": "craft"
+        },
+        "crawlFiles": {
+          "points": 2,
+          "label": "robots.txt and sitemap.xml reachable",
+          "tier": "stakes"
+        }
+      }
+    },
+    "navigation": {
+      "label": "Navigation",
+      "letter": "N",
+      "max": 16,
+      "asks": "Can a person on a phone actually use it?",
+      "checks": {
+        "viewport": {
+          "points": 4,
+          "label": "Responsive viewport meta",
+          "tier": "stakes"
+        },
+        "realNav": {
+          "points": 3,
+          "label": "Navigation with 3+ internal links",
+          "tier": "stakes"
+        },
+        "multiPage": {
+          "points": 3,
+          "label": "More than a single-page brochure",
+          "tier": "craft"
+        },
+        "altText": {
+          "points": 3,
+          "label": "Images carry alt text",
+          "tier": "craft"
+        },
+        "landmarks": {
+          "points": 2,
+          "label": "main/header/nav landmarks or skip link",
+          "tier": "stakes"
+        },
+        "noFixedWidth": {
+          "points": 1,
+          "label": "No hardcoded desktop-only widths",
+          "tier": "stakes"
+        }
+      }
+    },
+    "action": {
+      "label": "Action",
+      "letter": "A",
+      "max": 16,
+      "asks": "Is there an obvious way to become a customer?",
+      "checks": {
+        "tapToCall": {
+          "points": 4,
+          "label": "Phone number is a tel: link",
+          "tier": "craft"
+        },
+        "primaryCta": {
+          "points": 4,
+          "label": "Clear primary CTA near the top",
+          "tier": "craft"
+        },
+        "contactPath": {
+          "points": 3,
+          "label": "Form, booking embed, or contact page",
+          "tier": "craft"
+        },
+        "directions": {
+          "points": 2,
+          "label": "Address links to a map",
+          "tier": "craft"
+        },
+        "hours": {
+          "points": 2,
+          "label": "Hours published on the page",
+          "tier": "craft"
+        },
+        "socialProof": {
+          "points": 1,
+          "label": "Reviews, ratings, or social links",
+          "tier": "stakes"
+        }
+      }
+    },
+    "load": {
+      "label": "Load",
+      "letter": "L",
+      "max": 10,
+      "asks": "Does it show up fast enough to keep the visit?",
+      "checks": {
+        "htmlWeight": {
+          "points": 3,
+          "label": "HTML document under 150KB",
+          "tier": "craft"
+        },
+        "responseTime": {
+          "points": 3,
+          "label": "First byte under 1200ms",
+          "tier": "craft"
+        },
+        "scriptRestraint": {
+          "points": 2,
+          "label": "Fewer than 15 scripts, none blocking",
+          "tier": "craft"
+        },
+        "lazyImages": {
+          "points": 2,
+          "label": "Offscreen images lazy-loaded",
+          "tier": "craft"
+        }
+      }
+    }
+  },
+  "bands": [
+    {
+      "id": "excellent",
+      "min": 80,
+      "max": 100,
+      "label": "Excellent",
+      "meaning": "Do not pitch a website. They already have one."
+    },
+    {
+      "id": "solid",
+      "min": 65,
+      "max": 79,
+      "label": "Solid",
+      "meaning": "Works fine. Any web pitch reads as insulting. Sell something else."
+    },
+    {
+      "id": "dated",
+      "min": 45,
+      "max": 64,
+      "label": "Dated",
+      "meaning": "Functional but behind. Refresh, not rebuild."
+    },
+    {
+      "id": "weak",
+      "min": 25,
+      "max": 44,
+      "label": "Weak",
+      "meaning": "Real gaps a rebuild fixes. Core outreach target."
+    },
+    {
+      "id": "broken",
+      "min": 0,
+      "max": 24,
+      "label": "Broken",
+      "meaning": "Actively costing them customers. Best outreach target with a site."
+    }
+  ],
+  "confidence": {
+    "escalateBelow": 0.7,
+    "note": "Share of the 100 points the pass could actually determine. Below this, escalate a pass instead of trusting the number."
+  },
+  "ambiguousBand": {
+    "low": 40,
+    "high": 70,
+    "note": "Scores in here decide between rebuild, refresh, and adjacent-offer lanes, so they are worth a render pass. Outside it, the static pass already decided."
+  },
+  "boundaryMargin": 5,
+  "eyesAdjustmentCap": 10,
+  "viability": {
+    "max": 100,
+    "reviewTiers": [
+      {
+        "min": 150,
+        "points": 26,
+        "label": "150+ reviews"
+      },
+      {
+        "min": 60,
+        "points": 21,
+        "label": "60+ reviews"
+      },
+      {
+        "min": 25,
+        "points": 15,
+        "label": "25+ reviews"
+      },
+      {
+        "min": 8,
+        "points": 9,
+        "label": "8+ reviews"
+      },
+      {
+        "min": 1,
+        "points": 4,
+        "label": "some reviews"
+      }
+    ],
+    "ratingBonus": {
+      "minRating": 4.3,
+      "minReviews": 10,
+      "points": 8,
+      "label": "rating 4.3+ on real volume"
+    },
+    "verticalFit": {
+      "full": 22,
+      "partial": 9
+    },
+    "adPresence": 12,
+    "multiLocation": 8,
+    "contactable": 8,
+    "photographyAvailable": 6,
+    "hiringMarketing": 10,
+    "unknownFloor": 35,
+    "unknownFloorNote": "A prospect we know nothing about is not automatically unviable. Floor the score so an empty CRM row still reaches a human, flagged as unenriched."
+  },
+  "lanes": {
+    "minViability": 45,
+    "note": "Below minViability a prospect is parked rather than pitched, regardless of how bad the site is. A great rebuild target that cannot pay is not a target."
+  },
+  "craftGate": {
+    "note": "Table stakes are what stops a site being broken; craft is what makes it good. A site cannot reach a high band on stakes alone, because HTTPS and a viewport tag are not an achievement in 2026.",
+    "stakesPoints": 42,
+    "craftPoints": 58,
+    "caps": [
+      {
+        "minCraftRatio": 0.75,
+        "ceiling": 100
+      },
+      {
+        "minCraftRatio": 0.55,
+        "ceiling": 79
+      },
+      {
+        "minCraftRatio": 0.35,
+        "ceiling": 64
+      },
+      {
+        "minCraftRatio": 0,
+        "ceiling": 44
+      }
+    ]
+  },
+  "obsolescenceCeiling": {
+    "note": "Some failures are not worth points, they are disqualifying. A site with no mobile viewport, a table layout, or a marquee cannot score well no matter how fast it loads, and a primitive page loads fast precisely because it is primitive. Count the tells, cap the score.",
+    "tells": [
+      "noLayoutTables",
+      "noDeadTech",
+      "noDatedMotion",
+      "viewport",
+      "notStub"
+    ],
+    "caps": [
+      {
+        "minTells": 3,
+        "ceiling": 24
+      },
+      {
+        "minTells": 2,
+        "ceiling": 44
+      },
+      {
+        "minTells": 1,
+        "ceiling": 64
+      }
+    ]
+  }
+}

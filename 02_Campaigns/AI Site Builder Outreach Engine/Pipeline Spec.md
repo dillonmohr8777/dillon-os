@@ -52,9 +52,22 @@ flowchart TD
 - **Vertical fit:** does Momentum have an industry page and case studies here (see [[Market Roster]])
 - **Ad presence:** already spending means already sold on marketing
 
-**Status: partly automated.** Decay signals are now harvested automatically by `harvest.js` (`decaySignals.missingViewport`, `staleCopyrightYear`, empty phone/hours, thin homepage copy). Full 0–100 ranking across a prospect sheet is still manual.
+**Status: automated, and now a hard gate.** Shipped 2026-08-06 in response to Mac's 2026-08-05 note that "a lot of these businesses already have good websites."
 
-**To automate next:** a scoring script that takes prospect rows, runs harvest, and emits a 0–100 score with reasons. Playwright is already installed for harvest and QA.
+```bash
+node _os/automation/bin/grade-list.js --from <roster.json> --take 25
+```
+
+The grader scores each prospect's **existing** site 0–100 across six dimensions and routes it into a lane. Only `build`, `rebuild`, and `refresh` may proceed to stage 3. Model: [[12_Brain/concepts/Website SIGNAL Score|Website SIGNAL Score]]. Rules: [[12_Brain/protocols/prospect-grading-gate|prospect-grading-gate]]. Runbook: `_os/automation/docs/GRADER.md`.
+
+Two things changed about how this stage is understood:
+
+- **Decay is not the only signal, and a good site is a stop signal.** The old framing ranked decay upward and had no way to say "leave them alone." A site scoring 80+ is now hands-off, and a site scoring 65–79 routes to a non-web offer instead of a rebuild.
+- **No website at all is the top of the funnel**, not a penalty. The old scorer subtracted for a missing website because it was hard to harvest. That inverted the best signal in the system. This is Jesse's "GMB without websites" point, and batch B3 turned out to be 25 for 25.
+
+Grading the 100 already-built sites found **38 that should never have received a website pitch** (19 excellent, 19 solid), 53 genuine targets pending review-count enrichment, and 9 pages the grader refused to judge. Detail: `08_Prospects/philly-100/README.md`.
+
+**Still needed here:** the roster from stage 1 has no `review_count`, `rating`, or `ad_presence`, so 53 rows land in the `enrich` lane. Adding those three fields to the shared prospect sheet is what turns the gate from a filter into a ranked queue. **Owner: Jesse + Dillon.**
 
 ## Stage 3: Brief
 
@@ -143,7 +156,7 @@ This mirrors the Optimization Ledger hypothesis pattern from the orchestrator sp
 | Stage | Automated | Owner | Next action |
 |---|---|---|---|
 | 1 Discover | Partly | Jesse + Dillon | Stand up the shared prospect sheet with stable IDs |
-| 2 Qualify | No | Dillon | Build the site-decay scoring script |
+| 2 Qualify | Yes, hard gate | Dillon | Add review_count / rating / ad_presence to the shared sheet so the 53 enrich rows route |
 | 3 Brief | Yes (agent) | Dillon | None; runbook exists |
 | 4 Build | Yes | Dillon | None; batch runner shipped |
 | 5 Quality gate | Yes + human | Dillon | None; enforced per batch |
@@ -151,4 +164,6 @@ This mirrors the Optimization Ledger hypothesis pattern from the orchestrator sp
 | 7 Activate | Partly | Dillon + Mac | Deploy token, then pick the mail vendor |
 | 8 Learn | No | Dillon | Create the results ledger on batch 1 |
 
-**Short answer for Mac:** stages 3 through 5 are fully automated now, one command builds and QAs a whole batch. Stage 1 needs the shared sheet, stage 2 needs the scoring script, and stage 7 is blocked on a mail vendor decision plus a deploy token. Approval stays human on purpose.
+**Short answer for Mac:** stages 2 through 5 are fully automated now. One command grades a list and tells you who *not* to contact; one more builds and QAs the survivors. Stage 1 still needs the shared sheet, and it needs three more columns (review count, rating, ad presence) before the grader can rank rather than just filter. Stage 7 is still blocked on a mail vendor decision plus a deploy token. Approval stays human on purpose.
+
+On the list-to-grader ask specifically: the funnel is `large list → grade → lanes`, and only three of the nine lanes reach outreach. A business scoring 80+ on its current site is never pitched a website, and one scoring 65–79 gets a non-web offer instead. Backfilling the existing 100 found 38 that should not have been pitched.

@@ -15,6 +15,14 @@ dist/
 # Playwright QA output
 _templates/site-factory/qa-shots/
 
+# Grader run state: screenshots, resume cache, and per-run summaries are machine
+# output. grader-overrides.json is NOT ignored: human verdicts are real knowledge.
+_os/automation/state/grader-shots/
+_os/automation/state/grader-cache.json
+12_Brain/state/site-grader.json
+12_Brain/state/grader-calibration.json
+12_Brain/state/grader-calibration-last.json
+
 # Harvested third-party reference material (screenshots, source imagery)
 _templates/site-factory/harvest/
 

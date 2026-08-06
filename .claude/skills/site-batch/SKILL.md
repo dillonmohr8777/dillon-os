@@ -17,7 +17,22 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
 
 ## Steps
 
-1. **Scope.** Pick one market and one or two verticals from `02_Campaigns/AI Site Builder Outreach Engine/Market Roster.md`. Over-pull 25 to 30 candidates. Exclude current clients in `01_Clients/`, active deals, and anyone previously mailed.
+1. **Scope.** Pick one market and one or two verticals from `02_Campaigns/AI Site Builder Outreach Engine/Market Roster.md`. Over-pull **60 to 100** candidates, not 25 to 30 — the grader in step 1b is what narrows them, and it typically holds back a third or more. Exclude current clients in `01_Clients/`, active deals, and anyone previously mailed.
+
+1b. **Grade the list. This gate is not optional.**
+
+   ```bash
+   node _os/automation/bin/grade-list.js --from <roster.json> --take 25
+   ```
+
+   Only prospects in the `build`, `rebuild`, or `refresh` lanes may proceed to a
+   brief. Read the do-not-pitch list before anything else and confirm nobody on it
+   reaches outreach. Rows in `manual` need a human to open the site; rows in
+   `enrich` need review data added, then re-run.
+
+   Skipping this step is how the 2026-08-05 batch shipped 38 sites to businesses
+   that already had good websites. Full rules: `.claude/skills/site-grade/SKILL.md`
+   and `12_Brain/protocols/prospect-grading-gate.md`.
 
 2. **Scaffold.** Create `02_Campaigns/AI Site Builder Outreach Engine/batches/<batch-id>/` with `batch.json` (`id`, `title`, `market`, `week`, `idPrefix`, `targetCount: 25`, `deployBaseUrl`) and an empty `briefs/` folder. Batch IDs look like `phl-2026-w31`.
 
@@ -39,6 +54,9 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
 
 ## Hard rules
 
+- **No prospect enters a batch without a current grade in an eligible lane.** A
+  business whose site scores 80+ never gets a website pitch, however good a prospect
+  they look otherwise.
 - Every prospect demo stays `noindex`. No exceptions.
 - Deploying, mailing, and sending are Tier 2. Stage everything, hand Dillon the command, let a human approve the list and the mail piece.
 - `mail_ready` in generated `prospects.csv` is always `hold`. Only an explicit human approval may flip it. `qa_ready` is the automation signal for review eligibility.
