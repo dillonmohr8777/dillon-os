@@ -1,0 +1,110 @@
+<!--
+  Align HCM · Dayforce Partner — hero frame
+  "Keep Dayforce aligned with your business."
+  Change vs. original: the word "Dayforce" is now the Dayforce brand blue (#2E90FA)
+  instead of white. "aligned" stays orange; everything else unchanged.
+  Standalone, no external fonts/scripts. Stage is exactly 1920x1080 for screen-recording.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keep Dayforce aligned with your business</title>
+<style>
+  :root{
+    --navy-1:#081831;      /* darkest corners */
+    --navy-2:#0d2a52;      /* mid */
+    --navy-3:#123f74;      /* lighter, toward upper-right */
+    --orange:#ee822e;      /* brand orange (accent word + ALIGN HCM) */
+    --dayforce-blue:#2e90fa;/* the recolor: Dayforce brand blue */
+    --white:#f4f7fb;
+    --muted:#8a94a6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#081831}
+  body{font-family:Georgia,"Times New Roman",serif}
+  .fit{display:block}
+
+  .stage{
+    position:relative;
+    width:1920px;height:1080px;
+    overflow:hidden;
+    transform-origin:top left;
+    background:
+      radial-gradient(140% 120% at 22% 20%, rgba(238,130,46,.14), rgba(238,130,46,0) 42%),
+      radial-gradient(120% 120% at 88% 8%, rgba(70,130,200,.28), rgba(70,130,200,0) 55%),
+      linear-gradient(125deg, var(--navy-1) 0%, var(--navy-2) 48%, var(--navy-3) 100%);
+    color:var(--white);
+  }
+
+  /* faint geometric shapes echoing the original */
+  .shape{position:absolute;border-radius:42px;opacity:.06;background:#cfe0ff;transform:rotate(45deg)}
+  .shape.tr{width:520px;height:520px;top:-150px;right:-120px;opacity:.05}
+  .shape.bl{width:300px;height:300px;bottom:60px;left:70px;opacity:.05}
+  .shape.bl2{width:150px;height:150px;bottom:150px;left:320px;opacity:.04}
+
+  .headline{
+    position:absolute;left:0;right:0;top:50%;transform:translateY(-54%);
+    text-align:center;
+    font-weight:700;
+    font-size:118px;
+    line-height:1.16;
+    letter-spacing:-.01em;
+    padding:0 120px;
+    text-shadow:0 2px 30px rgba(0,0,0,.35);
+  }
+  .headline .df{
+    color:var(--dayforce-blue);
+    text-shadow:0 0 34px rgba(46,144,250,.35);
+  }
+  .headline .aligned{color:var(--orange)}
+
+  /* bottom brand bar */
+  .footer{
+    position:absolute;left:0;right:0;bottom:0;
+    height:74px;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 60px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:20px;font-weight:600;
+    letter-spacing:.22em;text-transform:uppercase;
+    border-top:1px solid rgba(255,255,255,.10);
+  }
+  .footer .left{display:flex;align-items:center;gap:16px}
+  .footer .dot{width:9px;height:9px;border-radius:50%;background:var(--orange);flex:0 0 auto}
+  .footer .brand{color:var(--orange)}
+  .footer .sep{color:var(--muted);margin:0 4px}
+  .footer .partner{color:var(--muted)}
+  .footer .right{color:var(--muted)}
+
+  /* Scale down only when the window is narrower than 1920px (preview convenience).
+     At >=1920px the stage renders 1:1 for a true 1920x1080 screen-recording. */
+  @media (max-width:1919px){ .stage{transform:scale(calc(100vw / 1920))} }
+</style>
+</head>
+<body>
+  <div class="fit">
+    <div class="stage">
+      <div class="shape tr"></div>
+      <div class="shape bl"></div>
+      <div class="shape bl2"></div>
+
+      <div class="headline">
+        Keep <span class="df">Dayforce</span> <span class="aligned">aligned</span><br>
+        with your business.
+      </div>
+
+      <div class="footer">
+        <div class="left">
+          <span class="dot"></span>
+          <span class="brand">Align HCM</span>
+          <span class="sep">·</span>
+          <span class="partner">Dayforce Partner</span>
+        </div>
+        <div class="right">Practical, by design</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
