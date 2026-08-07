@@ -19,10 +19,10 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] NKCDC — draft launch nudge to Anthony (Free Tax Prep page blocking ads)
-- [ ] Jason/Sean bot — draft status + case-reinstated alert ETA
-- [ ] Hardwood — confirm billing chase with Sean / Dalton card update
-- [[Daily-Briefs/competitive-task-today|Competitive task today]] — full P0 stack + boss asks
+- [ ] NKCDC — draft Anthony nudge on Free Tax Prep page (launch blocked)
+- [ ] Replenish — confirm Mia cleared Google Ads billing; verify campaigns delivering
+- [ ] Hardwood — confirm with Sean whether to chase Dalton card update again
+- [[Daily-Briefs/competitive-task-today|Competitive task brief]] — full ranked stack + boss asks
 
 ## Active Projects
 -
