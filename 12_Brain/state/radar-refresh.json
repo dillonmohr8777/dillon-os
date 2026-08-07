@@ -1,43 +1,35 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-08-07T18:24:17.737Z",
+  "started_at": "2026-08-07T18:39:54.636Z",
   "status": "ok",
   "date": "2026-08-07",
-  "rotation_slot": "PHL: Philadelphia, Bucks County, Delaware County",
+  "rotation_slot": "PHL: Philadelphia, Delaware County, Chester County",
   "run": {
-    "discovered_raw": 192,
-    "discovered_new": 20,
-    "regraded": 20,
-    "enriched": 0,
-    "enrich_no_match": 0,
+    "discovered_raw": 464,
+    "discovered_new": 46,
+    "regraded": 46,
+    "enriched": 29,
+    "enrich_no_match": 31,
     "enrich_skipped": 0,
-    "errors": [
-      "places pandcinsuranceagency.com: Invalid character in header content [\"x-goog-api-key\"]",
-      "places broomallinsuranceagency.com: Invalid character in header content [\"x-goog-api-key\"]",
-      "places bigheadtransportllc.com: Invalid character in header content [\"x-goog-api-key\"]"
-    ],
-    "plan": "targeting the thinnest cells against a 781-row registry",
+    "errors": [],
+    "plan": "targeting the thinnest cells against a 801-row registry",
     "throttled": false,
-    "rendered": 18,
-    "imagery_checked": 2,
+    "rendered": 39,
+    "imagery_checked": 6,
     "imagery_buildable": 0
   },
-  "tracked": 801,
-  "build_queue_size": 135,
+  "tracked": 847,
+  "build_queue_size": 139,
   "needs_render": 1,
   "mean_site_quality": 56,
   "by_verdict": {
-    "rebuild": 135,
-    "polish": 514,
-    "enrich": 49,
-    "nurture": 89,
-    "ads_seo": 13,
+    "rebuild": 139,
+    "polish": 547,
+    "enrich": 50,
+    "nurture": 94,
+    "ads_seo": 14,
     "verify": 1
   },
-  "errors": [
-    "places pandcinsuranceagency.com: Invalid character in header content [\"x-goog-api-key\"]",
-    "places broomallinsuranceagency.com: Invalid character in header content [\"x-goog-api-key\"]",
-    "places bigheadtransportllc.com: Invalid character in header content [\"x-goog-api-key\"]"
-  ],
-  "written_at": "2026-08-07T18:24:17.753Z"
+  "errors": [],
+  "written_at": "2026-08-07T18:39:54.654Z"
 }
