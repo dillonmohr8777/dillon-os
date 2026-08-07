@@ -374,3 +374,102 @@ concept with a column of those is worse than no pitch.
 real constraint — those sites are poor partly *because* nobody ever put decent
 photography on them. Nothing here substitutes another business's images. That
 group needs generation, a photographer, or the prospect's own files.
+
+---
+
+## Contact discovery
+
+`bin/find-contacts.js` reads what each business has **published on its own site**
+for the purpose of being contacted. It runs in the daily sweep at 60/day.
+
+### What the yield actually is
+
+Measured, not promised:
+
+| | Share of live sites |
+|---|---:|
+| Published an email address | **~10–26%** |
+| Offered a contact form | ~21% |
+| Named a person with a title or credential | ~21% |
+
+The spread is because the top of the rebuild queue is thick with dead domains —
+which is *why* they rank there. Most small businesses route contact through a
+form specifically so their address cannot be harvested.
+
+**There is no honest way to get to full email coverage of a local-business list
+by scraping.** Anyone offering it is either guessing addresses from patterns or
+reselling a purchased database. If broad coverage matters, buy it from a provider
+(Apollo, Hunter, Clearbit) and feed it in — that is a purchase decision, not an
+engineering one.
+
+### What it will not do
+
+- **No guessed addresses.** No `firstname@domain` permutation. Guessed addresses
+  bounce, and bounces are what destroy a sending domain's reputation — one
+  campaign to invented addresses can cost more deliverability than the campaign
+  was worth.
+- **No third-party scraping.** No LinkedIn, no aggregators. Only the business's
+  own pages.
+- **No private individuals.** A named practitioner on a practice's team page is a
+  business contact; two capitalised words in a sentence are not. The matcher
+  requires a credential or an explicit title, because a looser earlier version
+  produced entries like "Meet Dr" and "What Parents".
+
+### The agency signal
+
+One prospect's published contact address was on a marketing agency's domain.
+That is not a contact route — it is a **reason not to pitch**: there is an
+incumbent, and a cold redesign pitch walks straight into them. Those addresses
+are excluded from the contact list and surfaced as their own `agency` flag on the
+row and as a filter.
+
+### Where it lives
+
+| Data | Location | Tracked? |
+|---|---|---|
+| Email addresses, names, form URLs | `12_Brain/private/contacts.json` | **No** — gitignored |
+| Mail-merge sheet | `12_Brain/private/contacts-mailmerge.csv` | **No** |
+| Suppression list | `12_Brain/private/contacts-suppressed.json` | **No** |
+| Booleans and counts | the registry | Yes |
+
+`lib/contact-store.js` refuses to write anywhere outside `12_Brain/private/`, and
+the workflow's privacy guard now fails the run if an email address appears in a
+tracked file. The dashboard shows *whether* a route exists, never the address.
+
+### Suppression
+
+```js
+require('./_os/automation/lib/contact-store').suppress('someone@example.com', 'requested');
+```
+
+Suppression is enforced on **read**, not only on write, because the crawler will
+keep rediscovering an address that is still published on the business's site.
+Once suppressed, it never comes back out of the store.
+
+### Before any of this becomes a send
+
+US B2B cold email is governed by CAN-SPAM: accurate headers and subject, a
+physical postal address, and a working opt-out honoured promptly. Nothing in this
+pipeline sends anything — the store is a research artifact and the CSV is a
+human-approved mail-merge input. The documented offer is direct mail plus a QR
+code, where the phone and address in Mac's sheet are the channel anyway.
+
+---
+
+## Today's change feed
+
+The dashboard opens with **what moved since the last sweep**, because a page of
+totals makes a sweep that found six warm leads look identical to one that found
+none.
+
+Three groups, ordered by how much they change what you do:
+
+1. **Verdict changed** — the event that alters the action. A flip *into* rebuild
+   is a new build target; a flip *out* is one fewer.
+2. **Score moved** — 8+ points either way. The early warning: a site that just
+   got worse is a warmer call, and one that got better should leave the queue
+   before someone pitches a redesign to a business that just bought one.
+3. **Newly found** — today's discoveries.
+
+Computed in `radar.summarize()` from grade history that was already being
+stored, so it costs nothing extra to produce.

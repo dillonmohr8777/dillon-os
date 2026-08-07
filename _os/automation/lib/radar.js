@@ -383,6 +383,45 @@ function summarize(registry, { today = todayISO() } = {}) {
     movers,
     new_today: newToday.length,
     graded_today: gradedToday.length,
+    // The change feed. A dashboard that only shows totals makes yesterday and
+    // today look identical — you cannot tell a sweep that found six warm leads
+    // from one that found none. These are the events worth a glance each
+    // morning, cheap to compute because the grade history is already here.
+    today: (() => {
+      const events = [];
+      for (const p of actionable) {
+        if (p.first_seen === today) {
+          events.push({
+            kind: 'found', domain: p.domain, name: p.business_name, area: p.area,
+            verdict: p.current?.verdict || null, sqs: p.current?.sqs ?? null,
+            priority: p.priority_score || 0,
+          });
+        }
+        if (p.last_graded !== today || p.grades.length < 2) continue;
+        const prev = p.grades[p.grades.length - 2];
+        const cur = p.current;
+        if (!prev || !cur) continue;
+        // A verdict flip is the event that changes what you do about a business,
+        // so it outranks a score wobble of the same size.
+        if (prev.verdict !== cur.verdict) {
+          events.push({
+            kind: 'verdict', domain: p.domain, name: p.business_name, area: p.area,
+            from: prev.verdict, to: cur.verdict, sqs: cur.sqs ?? null,
+            priority: p.priority_score || 0,
+          });
+        } else if (prev.sqs != null && cur.sqs != null && Math.abs(cur.sqs - prev.sqs) >= 8) {
+          events.push({
+            kind: 'moved', domain: p.domain, name: p.business_name, area: p.area,
+            from: prev.sqs, to: cur.sqs, delta: cur.sqs - prev.sqs,
+            priority: p.priority_score || 0,
+          });
+        }
+      }
+      const rank = { verdict: 0, moved: 1, found: 2 };
+      return events
+        .sort((a, b) => (rank[a.kind] - rank[b.kind]) || (b.priority - a.priority))
+        .slice(0, 40);
+    })(),
     due_now: dueForRecheck(registry, { limit: 100000, today }).length,
     // The dashboard embeds the whole actionable set, not just the queues, so it
     // can be searched and filtered rather than merely read. Callers that persist

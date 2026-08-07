@@ -205,6 +205,12 @@ function projectRows(prospects) {
       bd: p.imagery ? (p.imagery.buildable ? 1 : 0) : null,
       iu: p.imagery ? Number(p.imagery.usable) || 0 : null,
       il: p.imagery?.logo ? 1 : 0,
+      // Contact routes as flags only. The addresses live in the gitignored
+      // private store; this page is published and must never carry one.
+      ce: p.contact ? (p.contact.has_email ? 1 : 0) : null,
+      cf: p.contact?.has_form ? 1 : 0,
+      cn: p.contact?.named_contacts || 0,
+      cg: p.contact?.has_agency ? 1 : 0,
       f: (p.top_faults || []).filter(Boolean),
       hl: p.headline || '',
       of: p.offer || '',
@@ -341,7 +347,7 @@ function clientScript() {
   var state = {
     queue: META.queues[0].key,
     q: '',
-    filters: { a: [], g: [], b: [], l: [], r: [] },
+    filters: { a: [], g: [], b: [], l: [], r: [], reach: [] },
     sort: META.queues[0].sort,
     dir: 'desc',
     page: 1,
@@ -390,6 +396,11 @@ function clientScript() {
     if (f.a.length && f.a.indexOf(r.a) < 0) return false;
     if (f.g.length && f.g.indexOf(r.g) < 0) return false;
     if (f.b.length && f.b.indexOf(r.b) < 0) return false;
+    if (f.reach.length) {
+      const has = { 'has email': r.ce === 1, 'has form': r.cf === 1,
+                    'named contact': r.cn > 0, 'agency incumbent': r.cg === 1 };
+      if (!f.reach.some((k) => has[k])) return false;
+    }
     if (f.l.length && f.l.indexOf(r.l) < 0) return false;
     if (f.r.length && f.r.indexOf(r.r) < 0) return false;
     if (state.q) {
@@ -462,6 +473,7 @@ function clientScript() {
       '<td class="c-trend">' + trendHtml(r) + '</td>' +
       '<td class="c-prio"><strong>' + n(r.p) + '</strong>' +
         (r.bd === 1 ? '<span class="ready" title="owns enough imagery for a homepage concept">ready</span>' : '') +
+        (r.cg === 1 ? '<span class="agency" title="their published contact goes to a marketing agency — there is an incumbent">agency</span>' : '') +
       '</td>' +
       '<td class="c-why">' + esc((r.f && r.f.length ? S(r.f[0]) : '') || S(r.hl)) + '</td>' +
     '</tr>';
@@ -502,6 +514,10 @@ function clientScript() {
       ['First seen', r.fs || '—'],
       ['Times discovered', n(r.td)],
       ['Phone on file', r.hp ? 'yes' : 'no'],
+      ['Contact route', r.ce === null ? 'not checked yet'
+        : [r.ce ? 'published email' : null, r.cf ? 'contact form' : null,
+           r.cn ? r.cn + ' named contact' + (r.cn > 1 ? 's' : '') : null]
+            .filter(Boolean).join(', ') || 'none published'],
       ['Own imagery', r.bd === null ? 'not checked yet'
         : (r.bd ? 'enough for a homepage' : 'not enough') +
           ' — ' + r.iu + ' usable' + (r.il ? ', logo found' : ', no logo')],
@@ -772,6 +788,7 @@ function renderDashboard(summary, opts = {}) {
   const filterFacets = [
     { k: 'a', label: 'County', values: ct.areaKeys },
     { k: 'g', label: 'Vertical', values: ct.groupKeys },
+    { k: 'reach', label: 'Contact', values: ['has email', 'has form', 'named contact', 'agency incumbent'] },
     { k: 'b', label: 'Band', values: bandOrder.filter((b) => rows.some((r) => r.b === b)) },
     { k: 'l', label: 'Lifecycle', values: lifecycleOrder.filter((l) => rows.some((r) => r.l === l)) },
   ];
@@ -936,6 +953,23 @@ function renderDashboard(summary, opts = {}) {
   .dist__legend { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 8px; font-family: var(--mono); font-size: 11.5px; color: var(--fg-mid); }
   .dist__legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px; }
 
+
+  /* ---- Change feed -------------------------------------------------------- */
+  .feed { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-bottom: 8px; }
+  .feed__g { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 13px 15px 11px; }
+  .feed__g h3 { display: flex; align-items: baseline; gap: 7px; margin-bottom: 7px; }
+  .feed__g h3 b { font-family: var(--mono); color: var(--brand-ink); font-size: 12px; }
+  .feed__l { list-style: none; margin: 0; padding: 0; }
+  .feed__i { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--rule); font-size: 12.5px; }
+  .feed__i:last-child { border-bottom: 0; }
+  .feed__k { font-family: var(--mono); font-size: 10px; padding: 1px 5px; border-radius: 3px; white-space: nowrap; flex: none; }
+  .feed__k--up { background: color-mix(in srgb, var(--s-strong) 20%, transparent); color: var(--s-strong); }
+  .feed__k--down { background: color-mix(in srgb, var(--s-decayed) 20%, transparent); color: var(--s-decayed); }
+  .feed__k--flat { background: var(--sunk); color: var(--fg-faint); }
+  .feed__k--new { background: var(--gold); color: var(--on-gold); font-weight: 700; }
+  .feed__n { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .feed__where { font-family: var(--mono); font-size: 10.5px; color: var(--fg-faint); flex: none; }
+  .feed__more { margin: 6px 0 0; font-family: var(--mono); font-size: 10.5px; color: var(--fg-faint); }
   /* ---- Workbench --------------------------------------------------------- */
   /* The panel is one continuous surface: tabs, controls and table share a card
      so the whole thing reads as a single instrument rather than stacked blocks. */
@@ -1009,6 +1043,11 @@ function renderDashboard(summary, opts = {}) {
   .c-prio strong { font-size: 14px; font-weight: 600; }
   /* Marks a row whose imagery is already in hand — the difference between
      "worth building" and "buildable today". */
+  /* An incumbent agency changes the pitch, so it is called out rather than
+     buried in the drawer. */
+  .agency { display: block; font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--s-decayed); border: 1px solid currentColor;
+    border-radius: 3px; padding: 0 3px; margin-top: 3px; font-weight: 700; }
   .ready { display: block; font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.08em;
     text-transform: uppercase; color: var(--on-gold); background: var(--gold);
     border-radius: 3px; padding: 0 3px; margin-top: 3px; font-weight: 700; }
@@ -1168,6 +1207,7 @@ ${run ? healthStrip(run) : ''}
     </div>
   </div>
 
+${changeFeed(s)}
   <h2>The registry</h2>
   <p class="note">All ${num(s.total)} tracked businesses. Pick a queue, filter it, click any row to see why it scored what it scored. Every number below is from the last audit of that specific site — nothing is modelled or inferred.</p>
 
@@ -1356,6 +1396,61 @@ clientScript();</script>
     );
   }
   return html;
+}
+
+
+/**
+ * What changed today.
+ *
+ * A dashboard of totals makes a sweep that found six warm leads look identical
+ * to one that found none. This is the part you actually read at 7am: verdict
+ * flips first, because those change what you *do* about a business; then score
+ * movements; then new arrivals.
+ */
+function changeFeed(s) {
+  const events = s.today || [];
+  if (!events.length) {
+    return `  <h2>Today</h2>
+  <p class="note">No changes yet today — the sweep either has not run or found nothing new. Totals below are from the last completed sweep.</p>
+`;
+  }
+  const flips = events.filter((e) => e.kind === 'verdict');
+  const moved = events.filter((e) => e.kind === 'moved');
+  const found = events.filter((e) => e.kind === 'found');
+
+  const line = (e) => {
+    const where = e.area ? `<span class="feed__where">${esc(e.area)}</span>` : '';
+    if (e.kind === 'verdict') {
+      const to = VERDICT_LABEL[e.to] || e.to;
+      const from = VERDICT_LABEL[e.from] || e.from;
+      // A flip into rebuild is a new build target; a flip out of it is one fewer.
+      const dir = e.to === 'rebuild' ? 'up' : e.from === 'rebuild' ? 'down' : 'flat';
+      return `<li class="feed__i"><span class="feed__k feed__k--${dir}">${esc(from)} → ${esc(to)}</span>` +
+        `<span class="feed__n">${esc(e.name)}</span>${where}</li>`;
+    }
+    if (e.kind === 'moved') {
+      const dir = e.delta > 0 ? 'up' : 'down';
+      return `<li class="feed__i"><span class="feed__k feed__k--${dir}">${e.delta > 0 ? '+' : ''}${e.delta}</span>` +
+        `<span class="feed__n">${esc(e.name)}</span><span class="feed__where">now ${num(e.to)}</span></li>`;
+    }
+    return `<li class="feed__i"><span class="feed__k feed__k--new">new</span>` +
+      `<span class="feed__n">${esc(e.name)}</span>${where}</li>`;
+  };
+
+  const group = (title, list) =>
+    list.length
+      ? `<section class="feed__g"><h3>${title} <b>${list.length}</b></h3><ul class="feed__l">${list.slice(0, 8).map(line).join('')}</ul>` +
+        (list.length > 8 ? `<p class="feed__more">+${list.length - 8} more</p>` : '') + '</section>'
+      : '';
+
+  return `  <h2>Today</h2>
+  <p class="note">What moved since the last sweep. A verdict change is what alters the action; a score move is the early warning.</p>
+  <div class="feed">
+    ${group('Verdict changed', flips)}
+    ${group('Score moved', moved)}
+    ${group('Newly found', found)}
+  </div>
+`;
 }
 
 /** Last sweep, rendered so a failure is impossible to scroll past. */

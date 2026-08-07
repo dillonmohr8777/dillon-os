@@ -72,6 +72,13 @@ jobs:
             ${{ github.event.inputs.regrade && format('--regrade {0}', github.event.inputs.regrade) || '' }} \
             2>&1 | tee sweep.log
 
+      # Contact discovery reads only each business's own published pages and
+      # writes addresses to the gitignored private layer, never to the repo.
+      # Separate step because a slow site should not fail the whole sweep.
+      - name: Find published contact routes
+        continue-on-error: true
+        run: node _os/automation/bin/find-contacts.js --limit 60 --csv
+
       # Publishing is separate from sweeping so a Netlify outage cannot lose a
       # sweep's worth of grading. The registry is committed either way.
       - name: Publish the dashboard
@@ -98,6 +105,12 @@ jobs:
               echo "::error file=$f::what looks like a phone number is present"
               fail=1
             fi
+            # Contact discovery writes to the private layer; an address reaching
+            # a tracked file means that separation broke.
+            if grep -qE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "$f"; then
+              echo "::error file=$f::an email address is present in a tracked file"
+              fail=1
+            fi
           done
           if [ "$fail" = "1" ]; then
             echo "Refusing to commit. Fix sanitizeForGit before re-running."
@@ -109,7 +122,10 @@ jobs:
         run: |
           git config user.name  "radar-bot"
           git config user.email "noreply@needmomentum.com"
+          # Explicit paths only. `git add -A` from the root would sweep in
+          # 12_Brain/private if .gitignore were ever mis-edited.
           git add -A 12_Brain/state Daily-Briefs || true
+          git reset -q -- 12_Brain/private 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "nothing changed — no commit"
             exit 0
