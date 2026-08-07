@@ -16,7 +16,7 @@ due: none
 
 ## Services
 - Full Paid Media Strategy Document (Word + HTML)
-- Branded under Buzz Bull Marketing Systems
+- Strategy doc historically branded under Buzz Bull Marketing Systems (brand defunct as of 2026-08-07)
 
 ## Links
 - [[Client Index]]

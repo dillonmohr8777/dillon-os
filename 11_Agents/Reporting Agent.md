@@ -27,7 +27,7 @@ The reporting lane. Turns vault context and performance data into client-ready r
 ## Formatting Standards
 
 - `System/writing-rules.md` applies to every word: no em dashes, contractions, bullet character (•) in client-facing lists
-- Client reports carry Momentum 360 branding, never Buzz Bull; Align HCM material never carries Momentum 360 branding
+- Client reports carry Momentum 360 branding, never Buzz Bull (defunct as of 2026-08-07); Align HCM material never carries Momentum 360 branding
 - Numbers get a comparison (vs last period) or they don't go in
 
 ## Notes
