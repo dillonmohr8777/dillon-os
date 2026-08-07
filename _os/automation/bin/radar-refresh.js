@@ -500,16 +500,43 @@ async function main() {
     errors: run.errors,
   };
 
-  const dashFile = repoPath(DASHBOARD_PATH);
-  ensureDir(path.dirname(dashFile));
-  fs.writeFileSync(dashFile, renderDashboard(summary, { run: state }));
-
-  const csvFile = repoPath(CSV_PATH);
-  ensureDir(path.dirname(csvFile));
-  fs.writeFileSync(csvFile, toCsv(summary.build_queue));
-
-  const digestFile = repoPath(path.join('Daily-Briefs', `radar-${today}.md`));
-  fs.writeFileSync(digestFile, digest(summary, run));
+  // Rendering must never cost the day's grading.
+  //
+  // The registry was saved a few lines up. If anything below throws — and
+  // renderDashboard throws by design when the payload outgrows the page budget —
+  // an uncaught error rejects main(), exits non-zero, fails the workflow step,
+  // and skips the commit. The ephemeral runner is then destroyed holding the only
+  // copy of that sweep's work: 60 discoveries and several hundred re-audits, gone.
+  // Worse, it repeats every morning, because tomorrow reloads the same
+  // pre-throw registry and hits the same wall.
+  //
+  // So every artifact is written independently and a failure is recorded rather
+  // than thrown. The grading is the expensive part and it is already on disk.
+  const artifacts = [
+    ['dashboard', () => {
+      const f = repoPath(DASHBOARD_PATH);
+      ensureDir(path.dirname(f));
+      fs.writeFileSync(f, renderDashboard(summary, { run: state }));
+    }],
+    ['queue csv', () => {
+      const f = repoPath(CSV_PATH);
+      ensureDir(path.dirname(f));
+      fs.writeFileSync(f, toCsv(summary.build_queue));
+    }],
+    ['digest', () => {
+      fs.writeFileSync(repoPath(path.join('Daily-Briefs', `radar-${today}.md`)), digest(summary, run));
+    }],
+  ];
+  for (const [name, write] of artifacts) {
+    try {
+      write();
+    } catch (err) {
+      const msg = `${name} failed: ${String(err?.message || err).slice(0, 200)}`;
+      run.errors.push(msg);
+      state.status = 'error';
+      process.stderr.write(`  ${msg}\n`);
+    }
+  }
 
   writeRunState(AUTOMATION_ID, state);
   writeJson(repoPath('12_Brain/state/radar-last.json'), state);

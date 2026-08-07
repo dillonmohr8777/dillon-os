@@ -55,8 +55,18 @@ const EMAIL_RE = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g;
 /** Filename-looking matches and obvious template placeholders. */
 const NOT_AN_ADDRESS =
   /\.(png|jpe?g|gif|webp|svg|css|js|woff2?)$/i;
+/**
+ * Template placeholders and demo addresses.
+ *
+ * The domain alternatives are anchored to a full label (`@wix.`, not `@wix`).
+ * Unanchored, this silently discarded real addresses whose domain merely started
+ * with one of the keywords — verified: hello@emailus.com, info@testkitchen.com,
+ * contact@domainhome.com and jane@wixomlaw.com were all being dropped. On a
+ * module whose measured yield is only ~26%, losing valid addresses to a substring
+ * match is a real recall loss and invisible from the run summary.
+ */
 const PLACEHOLDER =
-  /^(?:you|your|name|email|someone|user|example|test|first\.last|john\.doe|username)@|@(?:example|sentry\.|wix|domain|email|yourdomain|test|sentry-next|localhost)/i;
+  /^(?:you|your|name|email|someone|user|example|test|first\.last|john\.doe|username)@|@(?:example|sentry|wix|domain|email|yourdomain|test|sentry-next|localhost)\./i;
 /** Addresses that reach a vendor's robot rather than the business. */
 const ROBOT = /^(?:no-?reply|donotreply|do-not-reply|postmaster|abuse|bounce|mailer-daemon|notifications?|automated)@/i;
 
@@ -165,7 +175,13 @@ async function findContacts(website, opts = {}) {
         email: c.email,
         // An address on the business's own domain is worth more than a free
         // mailbox: it is likelier to be monitored and likelier to be the owner.
-        onOwnDomain: !!ownDomain && c.domain.endsWith(ownDomain),
+        //
+        // Must match on a label boundary. A bare endsWith made
+        // info@notsmilecare.com read as smilecare.com's own address — and since
+        // own-domain sorts first, the lookalike became the *primary* row in the
+        // mail-merge sheet. The AGENCY_DOMAINS check above already does this
+        // correctly; this now uses the same shape.
+        onOwnDomain: !!ownDomain && (c.domain === ownDomain || c.domain.endsWith(`.${ownDomain}`)),
         source: base + p,
       });
     }

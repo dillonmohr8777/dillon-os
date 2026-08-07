@@ -27,6 +27,49 @@ const fs = require('fs');
 const path = require('path');
 const { repoPath, ensureDir, todayISO } = require('./fsutil');
 
+/**
+ * Write via a temp file and rename.
+ *
+ * `writeFileSync` straight onto the destination leaves truncated JSON behind if
+ * the process dies mid-write. For the suppression list that is not merely a
+ * corrupt file — combined with a fail-open read it silently un-suppresses
+ * everyone. Rename is atomic on the same filesystem, so a reader sees either the
+ * old file or the new one, never half of one.
+ */
+function writeAtomic(abs, text) {
+  const tmp = `${abs}.tmp-${process.pid}`;
+  fs.writeFileSync(tmp, text);
+  fs.renameSync(tmp, abs);
+}
+
+/**
+ * Read JSON, distinguishing "not there yet" from "corrupt".
+ *
+ * Absent is a legitimate first-run state and returns the fallback. A parse
+ * failure is not: it means the file exists and is damaged, and treating that as
+ * empty is how a suppressed address gets mailed again. Throw and let the run
+ * fail loudly.
+ */
+function readJsonStrict(abs, fallback) {
+  let text;
+  try {
+    text = fs.readFileSync(abs, 'utf8');
+  } catch (err) {
+    if (err && err.code === 'ENOENT') return fallback;
+    throw new Error(`cannot read ${abs}: ${err.message}`);
+  }
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    throw new Error(
+      `${abs} exists but is not valid JSON (${err.message}). Refusing to continue: ` +
+        'treating a damaged contact or suppression file as empty would re-contact ' +
+        'people who asked not to be, and would overwrite the store with a partial one. ' +
+        'Restore it from the .tmp file or a backup, then re-run.'
+    );
+  }
+}
+
 const STORE_PATH = '12_Brain/private/contacts.json';
 const SUPPRESS_PATH = '12_Brain/private/contacts-suppressed.json';
 
@@ -42,20 +85,19 @@ function assertPrivatePath(abs) {
 
 function load(file = STORE_PATH) {
   const abs = path.isAbsolute(file) ? file : repoPath(file);
-  try {
-    const doc = JSON.parse(fs.readFileSync(abs, 'utf8'));
+  const doc = readJsonStrict(abs, null);
+  if (doc) {
     if (!doc.contacts) doc.contacts = {};
     return doc;
-  } catch {
-    return {
+  }
+  return {
       _readme:
         'Private contact store. Email addresses and names harvested from each ' +
         'business\'s own published pages. NEVER commit this file — it is gitignored ' +
         'and must stay that way. Nothing here is outbound-ready; a human approves every send.',
-      updated: todayISO(),
-      contacts: {},
-    };
-  }
+    updated: todayISO(),
+    contacts: {},
+  };
 }
 
 function save(store, file = STORE_PATH) {
@@ -64,18 +106,17 @@ function save(store, file = STORE_PATH) {
   ensureDir(path.dirname(abs));
   store.updated = todayISO();
   store.count = Object.keys(store.contacts).length;
-  fs.writeFileSync(abs, JSON.stringify(store, null, 1));
+  writeAtomic(abs, JSON.stringify(store, null, 1));
   return abs;
 }
 
 function loadSuppressed(file = SUPPRESS_PATH) {
   const abs = path.isAbsolute(file) ? file : repoPath(file);
-  try {
-    const doc = JSON.parse(fs.readFileSync(abs, 'utf8'));
-    return new Set((doc.emails || []).map((e) => String(e).toLowerCase().trim()));
-  } catch {
-    return new Set();
-  }
+  // Fail closed. The previous version caught every error and returned an empty
+  // Set, so a truncated file silently un-suppressed every address that had ever
+  // bounced, complained or asked to be removed.
+  const doc = readJsonStrict(abs, { emails: [] });
+  return new Set((doc.emails || []).map((e) => String(e).toLowerCase().trim()));
 }
 
 /**
@@ -88,16 +129,17 @@ function suppress(email, reason = 'requested', file = SUPPRESS_PATH) {
   const abs = path.isAbsolute(file) ? file : repoPath(file);
   assertPrivatePath(abs);
   ensureDir(path.dirname(abs));
-  let doc;
-  try {
-    doc = JSON.parse(fs.readFileSync(abs, 'utf8'));
-  } catch {
-    doc = { _readme: 'Never contact these addresses again, for any campaign.', emails: [], log: [] };
-  }
+  const doc = readJsonStrict(abs, {
+    _readme: 'Never contact these addresses again, for any campaign.',
+    emails: [],
+    log: [],
+  });
+  if (!Array.isArray(doc.emails)) doc.emails = [];
+  if (!Array.isArray(doc.log)) doc.log = [];
   const e = String(email).toLowerCase().trim();
   if (!doc.emails.includes(e)) doc.emails.push(e);
   doc.log.push({ email: e, reason, at: todayISO() });
-  fs.writeFileSync(abs, JSON.stringify(doc, null, 1));
+  writeAtomic(abs, JSON.stringify(doc, null, 1));
   return abs;
 }
 

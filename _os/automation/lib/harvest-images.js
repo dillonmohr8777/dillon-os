@@ -106,7 +106,10 @@ function absolutize(src, baseUrl) {
  * Download and select a prospect's imagery.
  *
  * @param {object} harvest  harvest-lite output (needs `images` and `finalUrl`)
- * @param {object} [opts]   { max, minWidth, minBytes, timeoutMs, concurrency }
+ * @param {object} [opts]   { max, minWidth, minBytes, timeoutMs, concurrency,
+ *                          metadataOnly } — metadataOnly drops the image bodies
+ *                          once dimensions are read, for callers that only need
+ *                          counts and sizes rather than the files themselves
  * @returns {Promise<{images:Array, logo:object|null, rejected:Array, ok:boolean, reason?:string}>}
  *          Each kept image: { url, buffer, ext, width, height, bytes, isLogo }
  */
@@ -179,7 +182,13 @@ async function harvestImages(harvest, opts = {}) {
       kept.push({
         url: item.url,
         alt: item.alt,
-        buffer: res.body,
+        // `metadataOnly` callers just want to count and measure. Retaining the
+        // body for those is expensive enough to matter: up to 12 images at an 8MB
+        // cap across 6 concurrent workers is ~570MB of live Buffers, held on a
+        // shared CI runner that has already spent its memory on 80 Playwright
+        // renders. The dimensions are already probed by this point, so the bytes
+        // have served their purpose.
+        buffer: opts.metadataOnly ? null : res.body,
         ext: extFor(item.url, res.headers?.['content-type'], probed),
         width: probed.width || 0,
         height: probed.height || 0,

@@ -27,6 +27,7 @@
 
 const { DIMENSIONS } = require('./site-grader');
 const { BRAND, TOKENS, cssVariables, lockup, LOCKUP_CSS } = require('./brand');
+const { HOMEPAGE_IMAGE_SLOTS } = require('./imagery');
 
 const BAND_COLORS = {
   broken: 'var(--s-broken)',
@@ -51,7 +52,7 @@ const VERDICT_LABEL = {
 /** Queues, in the order they appear in the switcher. */
 const QUEUES = [
   { key: 'rebuild', label: 'Rebuild', verdicts: ['rebuild'], sort: 'p', desc: 'Ranked by opportunity, weighted for Philadelphia. Each one earns a homepage concept — one page from their own copy and imagery, pitched as the first step of a rebuild.' },
-  { key: 'buildable', label: 'Buildable now', verdicts: ['rebuild'], buildableOnly: true, sort: 'p', desc: 'Rebuild targets that already own enough imagery for a four-slot homepage concept. This is this week\'s batch — no asset chasing required.' },
+  { key: 'buildable', label: 'Buildable now', verdicts: ['rebuild'], buildableOnly: true, sort: 'p', desc: `Rebuild targets that already own enough imagery for a ${HOMEPAGE_IMAGE_SLOTS}-photo homepage concept. This is this week's batch — no asset chasing required.` },
   { key: 'verify', label: 'Needs render', verdicts: ['verify'], sort: 'lg', desc: 'Markup found no disqualifying fault, but nobody has seen the design. Not decisions yet.' },
   { key: 'polish', label: 'Polish', verdicts: ['polish'], sort: 'p', desc: 'Working sites with fixable gaps. A retainer or a paid tune-up, not a rebuild pitch.' },
   { key: 'traffic', label: 'Traffic', verdicts: ['ads_seo', 'nurture'], sort: 'q', desc: 'Sorted by site quality, best first. A genuinely good site means sell traffic, not a redesign.' },
@@ -168,6 +169,14 @@ function coverageBar(label, total, rebuild, max) {
  * tr trend · tl trend delta · hp has phone · f faults · hl headline
  * of offer · na next action · dm dimensions [score, evidenceCode]
  * gh grade history [date, sqs, band]
+ * bd buildable · iu usable images · il has logo
+ * ce has email · cfm has contact form · cn named contacts · cg agency incumbent
+ *
+ * Every key is listed above for one reason: `cf` was once used for both
+ * confidence and the contact-form flag. The later definition won silently and
+ * 743 of 747 rows shipped a fabricated "0%" confidence to the published page.
+ * Object literals do not warn on duplicate keys, and no test caught it — so the
+ * list is the guard, and assertNoDuplicateKeys() below is the enforcement.
  */
 function projectRows(prospects) {
   return (prospects || []).map((p) => {
@@ -208,7 +217,7 @@ function projectRows(prospects) {
       // Contact routes as flags only. The addresses live in the gitignored
       // private store; this page is published and must never carry one.
       ce: p.contact ? (p.contact.has_email ? 1 : 0) : null,
-      cf: p.contact?.has_form ? 1 : 0,
+      cfm: p.contact?.has_form ? 1 : 0,
       cn: p.contact?.named_contacts || 0,
       cg: p.contact?.has_agency ? 1 : 0,
       f: (p.top_faults || []).filter(Boolean),
@@ -397,7 +406,7 @@ function clientScript() {
     if (f.g.length && f.g.indexOf(r.g) < 0) return false;
     if (f.b.length && f.b.indexOf(r.b) < 0) return false;
     if (f.reach.length) {
-      const has = { 'has email': r.ce === 1, 'has form': r.cf === 1,
+      const has = { 'has email': r.ce === 1, 'has form': r.cfm === 1,
                     'named contact': r.cn > 0, 'agency incumbent': r.cg === 1 };
       if (!f.reach.some((k) => has[k])) return false;
     }
@@ -515,7 +524,7 @@ function clientScript() {
       ['Times discovered', n(r.td)],
       ['Phone on file', r.hp ? 'yes' : 'no'],
       ['Contact route', r.ce === null ? 'not checked yet'
-        : [r.ce ? 'published email' : null, r.cf ? 'contact form' : null,
+        : [r.ce ? 'published email' : null, r.cfm ? 'contact form' : null,
            r.cn ? r.cn + ' named contact' + (r.cn > 1 ? 's' : '') : null]
             .filter(Boolean).join(', ') || 'none published'],
       ['Own imagery', r.bd === null ? 'not checked yet'
@@ -1414,6 +1423,7 @@ function changeFeed(s) {
   <p class="note">No changes yet today — the sweep either has not run or found nothing new. Totals below are from the last completed sweep.</p>
 `;
   }
+  const t = s.today_totals || {};
   const flips = events.filter((e) => e.kind === 'verdict');
   const moved = events.filter((e) => e.kind === 'moved');
   const found = events.filter((e) => e.kind === 'found');
@@ -1437,18 +1447,23 @@ function changeFeed(s) {
       `<span class="feed__n">${esc(e.name)}</span>${where}</li>`;
   };
 
-  const group = (title, list) =>
-    list.length
-      ? `<section class="feed__g"><h3>${title} <b>${list.length}</b></h3><ul class="feed__l">${list.slice(0, 8).map(line).join('')}</ul>` +
-        (list.length > 8 ? `<p class="feed__more">+${list.length - 8} more</p>` : '') + '</section>'
-      : '';
+  // `total` is the pre-truncation count from summarize().today_totals; `list` is
+  // what survived the 40-event cap. Printing list.length as the total is how the
+  // feed came to disagree with new_today on the same page.
+  const group = (title, list, total) => {
+    const n = total ?? list.length;
+    if (!n) return '';
+    const hidden = n - Math.min(list.length, 8);
+    return `<section class="feed__g"><h3>${title} <b>${n}</b></h3><ul class="feed__l">${list.slice(0, 8).map(line).join('')}</ul>` +
+      (hidden > 0 ? `<p class="feed__more">+${hidden} more</p>` : '') + '</section>';
+  };
 
   return `  <h2>Today</h2>
   <p class="note">What moved since the last sweep. A verdict change is what alters the action; a score move is the early warning.</p>
   <div class="feed">
-    ${group('Verdict changed', flips)}
-    ${group('Score moved', moved)}
-    ${group('Newly found', found)}
+    ${group('Verdict changed', flips, t.verdict)}
+    ${group('Score moved', moved, t.moved)}
+    ${group('Newly found', found, t.found)}
   </div>
 `;
 }

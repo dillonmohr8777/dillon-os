@@ -78,6 +78,9 @@ async function checkImagery(website, opts = {}) {
   try {
     picked = await harvestImages(harvest, {
       max: 8,
+      // This function reads only `.length` and one `.width`; it has no use for
+      // the image bodies and holding them would be ~570MB at full concurrency.
+      metadataOnly: true,
       // Below this a photograph cannot carry a hero without visible softness.
       minWidth: opts.minWidth || 360,
       minBytes: opts.minBytes || 5000,

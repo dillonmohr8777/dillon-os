@@ -27,7 +27,8 @@
  * queued — roughly five months of work. Discovering 200 businesses a day would
  * not add pipeline, it would add hoard: the registry stops being a decision tool
  * and becomes a list nobody reads. It would also break the dashboard, whose
- * embedded payload has a hard ceiling.
+ * embedded payload starts failing to render somewhere between 1,500 and 2,000
+ * rows — measured, see REGISTRY_SOFT_CAP.
  *
  * So the daily default is deliberately modest and most of the day's effort goes
  * to *confirming* what is already known — re-auditing what went stale and
@@ -81,19 +82,30 @@ const GROUP_TARGETS = {
 };
 
 /**
- * How big a registry is worth keeping.
+ * How big a registry the dashboard can actually render.
  *
- * Past this, discovery throttles: another unaudited row adds less than a
- * rendered one, and the dashboard's embedded payload has a real ceiling
- * (~2,900 rows once the repeated text fields are dictionary-encoded). The
- * dashboard generator throws rather than shipping an unopenable page, so this
- * exists to keep the daily job from ever driving it there.
+ * These caps exist to stop the daily job driving the page past the size where
+ * `renderDashboard` refuses to emit. Getting them wrong is not a tuning
+ * question — a cap above the real ceiling means the throttle never fires and the
+ * sweep wedges permanently.
+ *
+ * I got them wrong once, so the numbers here are now measured by *rendering*
+ * synthetic registries rather than extrapolating a bytes-per-row figure:
+ *
+ *   1,500 rows -> 1.18MB   ok
+ *   2,000 rows -> 1.54MB   THROWS
+ *   2,400 rows -> 1.83MB   THROWS
+ *
+ * The earlier estimate assumed per-row cost stays flat. It does not: the
+ * interned string table grows ~1.43 entries per row, because headlines and fault
+ * text embed measured numbers and so are nearly unique per prospect. Interning
+ * de-duplicates the genuinely repeated strings and cannot help with the rest.
+ *
+ * tests/radar.test.js renders at the hard cap and fails if it throws, so these
+ * cannot silently drift above the ceiling again.
  */
-// Measured, not guessed: after interning, a row costs ~549 bytes in the embedded
-// payload, so the 1.5MB page guard lands near 2,560 rows. The hard cap sits well
-// under that so the daily job can never be the thing that trips the guard.
-const REGISTRY_SOFT_CAP = 2000;
-const REGISTRY_HARD_CAP = 2400;
+const REGISTRY_SOFT_CAP = 1200;
+const REGISTRY_HARD_CAP = 1500;
 
 /** Default daily budgets. Deliberately modest for discovery — see the file header. */
 const DAILY = {

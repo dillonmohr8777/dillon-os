@@ -398,7 +398,11 @@ function summarize(registry, { today = todayISO() } = {}) {
           });
         }
         if (p.last_graded !== today || p.grades.length < 2) continue;
-        const prev = p.grades[p.grades.length - 2];
+        // The newest grade from a *previous day*, not grades[length - 2].
+        // `--regrade` appends a second same-day grade, which made the positional
+        // predecessor today's earlier entry — so yesterday→today flips vanished
+        // for exactly the rows someone had just asked to be re-checked.
+        const prev = [...p.grades].reverse().find((g) => g && g.date !== today);
         const cur = p.current;
         if (!prev || !cur) continue;
         // A verdict flip is the event that changes what you do about a business,
@@ -418,9 +422,27 @@ function summarize(registry, { today = todayISO() } = {}) {
         }
       }
       const rank = { verdict: 0, moved: 1, found: 2 };
-      return events
-        .sort((a, b) => (rank[a.kind] - rank[b.kind]) || (b.priority - a.priority))
-        .slice(0, 40);
+      events.sort((a, b) => (rank[a.kind] - rank[b.kind]) || (b.priority - a.priority));
+      // Totals are counted before truncation. The renderer used to re-count the
+      // survivors of `.slice(0, 40)` and print those as group totals, so a sweep
+      // with 60 discoveries displayed "Newly found 25" while new_today said 60
+      // on the same page.
+      return events.slice(0, 40);
+    })(),
+    // Group totals counted BEFORE the 40-event cap. The renderer must use these
+    // rather than re-counting the truncated list, or it reports a cap as a total.
+    today_totals: (() => {
+      const t = { verdict: 0, moved: 0, found: 0 };
+      for (const p of actionable) {
+        if (p.first_seen === today) t.found += 1;
+        if (p.last_graded !== today || p.grades.length < 2) continue;
+        const prev = [...p.grades].reverse().find((g) => g && g.date !== today);
+        const cur = p.current;
+        if (!prev || !cur) continue;
+        if (prev.verdict !== cur.verdict) t.verdict += 1;
+        else if (prev.sqs != null && cur.sqs != null && Math.abs(cur.sqs - prev.sqs) >= 8) t.moved += 1;
+      }
+      return t;
     })(),
     due_now: dueForRecheck(registry, { limit: 100000, today }).length,
     // The dashboard embeds the whole actionable set, not just the queues, so it

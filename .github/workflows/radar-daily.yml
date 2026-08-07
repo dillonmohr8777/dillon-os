@@ -79,23 +79,24 @@ jobs:
         continue-on-error: true
         run: node _os/automation/bin/find-contacts.js --limit 60 --csv
 
-      # Publishing is separate from sweeping so a Netlify outage cannot lose a
-      # sweep's worth of grading. The registry is committed either way.
-      - name: Publish the dashboard
-        if: ${{ env.NETLIFY_AUTH_TOKEN != '' }}
-        continue-on-error: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: node _os/automation/bin/dashboard-deploy.js
-
-      - name: Guard against committing anything private
+      # Guard BEFORE publish. Ordered the other way round, a sanitizeForGit
+      # regression reaches the public Netlify URL first and the guard only blocks
+      # the Git commit afterwards — stopping the record of the leak, not the leak.
+      - name: Guard against publishing or committing anything private
+        if: always()
         run: |
           # The registry and the queue CSV are tracked in a PUBLIC repository.
           # lib/discovery.sanitizeForGit strips contact detail on every write
           # path, but a guard here means a regression in that function fails the
           # run instead of quietly publishing 500 phone numbers.
           fail=0
-          for f in 12_Brain/state/radar/registry.json 12_Brain/state/radar/build-queue.csv; do
+          # The dashboard HTML is the file that actually gets published and it
+          # embeds every projected row, so it matters most of all — it was the one
+          # file the first version of this guard did not look at.
+          for f in 12_Brain/state/radar/registry.json \
+                   12_Brain/state/radar/build-queue.csv \
+                   Daily-Briefs/prospect-radar.html \
+                   Daily-Briefs/radar-$(date -u +%Y-%m-%d).md; do
             [ -f "$f" ] || continue
             if grep -qE '"(phone|street|lat|lon|osm_id)"[[:space:]]*:' "$f"; then
               echo "::error file=$f::contact or location field present in a tracked file"
@@ -107,25 +108,48 @@ jobs:
             fi
             # Contact discovery writes to the private layer; an address reaching
             # a tracked file means that separation broke.
-            if grep -qE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "$f"; then
-              echo "::error file=$f::an email address is present in a tracked file"
+            # Contact discovery writes to the private layer, so any address in a
+            # tracked file means that separation broke. needmomentum.com is our
+            # own and appears in the footer by design.
+            if grep -oE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "$f" \
+                 | grep -vE '@(needmomentum\.com|momentum360\.com)$' | head -1 | grep -q .; then
+              echo "::error file=$f::a third-party email address is present in a tracked file"
               fail=1
             fi
           done
           if [ "$fail" = "1" ]; then
-            echo "Refusing to commit. Fix sanitizeForGit before re-running."
+            echo "Refusing to publish or commit. Fix sanitizeForGit before re-running."
             exit 1
           fi
           echo "tracked outputs are clean"
 
+      # A Netlify outage must not cost a sweep's worth of grading, so this is
+      # allowed to fail and the commit below still runs.
+      - name: Publish the dashboard
+        if: ${{ env.NETLIFY_AUTH_TOKEN != '' }}
+        continue-on-error: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: node _os/automation/bin/dashboard-deploy.js
+
+      # `always()`: the registry holds the expensive part of the run — the
+      # grading — and must land even when an earlier step failed. Without this a
+      # render error silently bins the whole sweep, every morning, forever.
       - name: Commit the day's registry
+        if: always()
         run: |
           git config user.name  "radar-bot"
           git config user.email "noreply@needmomentum.com"
-          # Explicit paths only. `git add -A` from the root would sweep in
-          # 12_Brain/private if .gitignore were ever mis-edited.
+          # Explicit pathspecs only — never `git add -A` from the root.
           git add -A 12_Brain/state Daily-Briefs || true
-          git reset -q -- 12_Brain/private 2>/dev/null || true
+          # A real assertion, not the `git reset -- 12_Brain/private` this used to
+          # run: that followed a pathspec-limited add which cannot stage anything
+          # there, so it protected nothing while making the gap look covered.
+          if git diff --cached --name-only | grep -q '^12_Brain/private/'; then
+            echo "::error::a file under 12_Brain/private is staged — refusing to push to a public repo"
+            git diff --cached --name-only | grep '^12_Brain/private/'
+            exit 1
+          fi
           if git diff --cached --quiet; then
             echo "nothing changed — no commit"
             exit 0

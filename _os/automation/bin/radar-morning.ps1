@@ -61,8 +61,12 @@
 #>
 [CmdletBinding()]
 param(
-    [int]$Discover = 200,
-    [int]$Recheck = 120,
+    # Defaults mirror lib/coverage-plan.js DAILY. They were 200/120, which is the
+    # rate that reaches the dashboard's render ceiling in roughly a week — the
+    # coverage planner's own header argues at length against it.
+    [int]$Discover = 60,
+    [int]$Recheck = 250,
+    [int]$Render = 80,
     [int]$Enrich = 60,
     [int]$MaxTier = 1,
     [switch]$NoPush,
@@ -95,9 +99,14 @@ try {
     if (-not $DryRun) {
         $dirty = git status --porcelain
         if ($dirty) {
-            Write-Log "working tree has local changes; committing them first so the sweep starts clean" 'WARN'
-            git add -A
-            git commit -q -m "Local vault changes before radar sweep $stamp"
+            # Explicit pathspecs. A bare `git add -A` here would commit whatever
+            # the operator was mid-edit, unreviewed, and would depend on
+            # .gitignore alone to keep 12_Brain/private out of a PUBLIC repo.
+            Write-Log "working tree has local changes; committing the radar's own outputs so the sweep starts clean" 'WARN'
+            git add -A -- 12_Brain/state Daily-Briefs
+            if (-not (git diff --cached --quiet; $LASTEXITCODE -eq 0)) {
+                git commit -q -m "Radar outputs before sweep $stamp"
+            }
         }
         git fetch origin $Branch --quiet
         # Rebase rather than merge: the radar's own commits are the only thing on
@@ -135,12 +144,13 @@ try {
         (Join-Path $PSScriptRoot 'radar-refresh.js'),
         '--discover', $Discover,
         '--recheck', $Recheck,
+        '--render', $Render,
         '--enrich', $Enrich,
         '--max-tier', $MaxTier
     )
     if ($DryRun) { $nodeArgs += '--dry-run' }
 
-    Write-Log "node radar-refresh.js --discover $Discover --recheck $Recheck --enrich $Enrich --max-tier $MaxTier"
+    Write-Log "node radar-refresh.js --discover $Discover --recheck $Recheck --render $Render --enrich $Enrich --max-tier $MaxTier"
     $output = & node @nodeArgs 2>&1
     $exit = $LASTEXITCODE
     $output | ForEach-Object { Add-Content -LiteralPath $logFile -Value "    $_" }
@@ -157,7 +167,38 @@ try {
     } else {
         $changed = git status --porcelain
         if ($changed) {
-            git add -A
+            git add -A -- 12_Brain/state Daily-Briefs
+
+            # The same guard the GitHub workflow runs. This repository is PUBLIC
+            # and after a find-contacts run 12_Brain/private holds real email
+            # addresses and personal names; .gitignore must not be the only thing
+            # standing between them and the internet.
+            $staged = git diff --cached --name-only
+            if ($staged -match '^12_Brain/private/') {
+                Write-Log 'REFUSING TO COMMIT: a file under 12_Brain/private is staged' 'ERROR'
+                git reset -q
+                exit 1
+            }
+            $leaked = @()
+            foreach ($f in @('12_Brain/state/radar/registry.json',
+                             '12_Brain/state/radar/build-queue.csv',
+                             'Daily-Briefs/prospect-radar.html')) {
+                if (-not (Test-Path $f)) { continue }
+                $text = Get-Content $f -Raw
+                if ($text -match '"(phone|street|lat|lon|osm_id)"\s*:') { $leaked += "$f: contact or location field" }
+                if ($text -match '\b(215|267|610|484|445|835)\d{7}\b') { $leaked += "$f: phone-shaped digits" }
+                $addrs = [regex]::Matches($text, '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}') |
+                         ForEach-Object { $_.Value } |
+                         Where-Object { $_ -notmatch '@(needmomentum\.com|momentum360\.com)$' }
+                if ($addrs.Count -gt 0) { $leaked += "$f: third-party email ($($addrs[0]))" }
+            }
+            if ($leaked.Count -gt 0) {
+                Write-Log 'REFUSING TO COMMIT — private data in a tracked file:' 'ERROR'
+                $leaked | ForEach-Object { Write-Log "  $_" 'ERROR' }
+                git reset -q
+                exit 1
+            }
+
             git commit -q -m "Prospect radar sweep $stamp
 
 Automated by _os/automation/bin/radar-morning.ps1.

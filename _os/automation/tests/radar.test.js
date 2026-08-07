@@ -18,6 +18,8 @@ const { renderDashboard, projectRows, crossTab } = require('../lib/radar-dashboa
 const {
   planDiscovery, AREA_TARGETS, REGISTRY_SOFT_CAP, REGISTRY_HARD_CAP,
 } = require('../lib/coverage-plan');
+const { classifyEmail } = require('../lib/contacts');
+const contactStore = require('../lib/contact-store');
 
 const TODAY = '2026-08-06';
 const LATER = '2026-10-01';
@@ -740,4 +742,150 @@ test('an empty field interns to -1 rather than pointing at the wrong string', ()
   const payload = JSON.parse(html.match(/id="radar-rows">([\s\S]*?)<\/script>/)[1]);
   assert.equal(payload.rows[0].of, -1, 'empty must be -1, never index 0');
   assert.equal(payload.rows[0].na, -1);
+});
+
+/* ------------------------------------------------------------------ *
+ * Guards for the defects a code review found — each of these failed
+ * before its fix, and none was caught by any pre-existing test.
+ * ------------------------------------------------------------------ */
+
+test('the row projection has no duplicate keys', () => {
+  // `cf` was defined twice in projectRows — once as confidence, once as the
+  // contact-form flag. Object literals do not warn, the later definition won,
+  // and 743 of 747 rows shipped a fabricated "0%" confidence to the published
+  // page. Nothing in the suite noticed, so the source is checked directly.
+  const src = require('fs').readFileSync(require.resolve('../lib/radar-dashboard'), 'utf8');
+  const body = src.slice(src.indexOf('function projectRows'), src.indexOf('/** County × vertical'));
+  const keys = [...body.matchAll(/^\s{6}([a-z]{1,3}):/gm)].map((m) => m[1]);
+  const seen = new Set();
+  const dupes = keys.filter((k) => (seen.has(k) ? true : (seen.add(k), false)));
+  assert.deepEqual(dupes, [], `projectRows defines these keys twice: ${dupes.join(', ')}`);
+});
+
+test('confidence survives the projection as a real percentage', () => {
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [candidate()], { today: TODAY });
+  radar.recordGrade(reg, 'acme.example', gradeResult({ confidence: 0.91 }), { today: TODAY });
+  const [row] = projectRows([reg.prospects['acme.example']]);
+  assert.equal(row.cf, 91, 'confidence must be a percentage, not a boolean flag');
+});
+
+test('the dashboard renders at the hard cap without throwing', () => {
+  // The caps existed to stop the daily job driving the page past the size where
+  // renderDashboard refuses to emit — but they were set from an extrapolated
+  // bytes-per-row figure and both landed ABOVE the real ceiling, so the throttle
+  // could never fire. Only rendering catches that.
+  const reg = emptyRegistry();
+  for (let i = 0; i < REGISTRY_HARD_CAP; i++) {
+    const d = `d${i}.example`;
+    radar.upsertDiscovered(reg, [candidate({ domain: d, business_name: `Biz ${i}` })], { today: TODAY });
+    // Headlines and faults embed measured numbers, so they are near-unique per
+    // prospect and the interned table grows with the registry. A synthetic set
+    // of identical strings would compress unrealistically well and pass a test
+    // the real data fails.
+    radar.recordGrade(reg, d, gradeResult({
+      site_quality_score: 20 + (i % 60),
+      headline: `${20 + (i % 60)}/100 decayed (provisional — Tier 0 only). Worst: no viewport meta on ${d}.`,
+      findings: [
+        { delta: -42, reason: `no viewport meta — page renders desktop-width (${i})`, dimension: 'mobile' },
+        { delta: -18, reason: `slow first response: ${1000 + i}ms`, dimension: 'performance' },
+      ],
+    }), { today: TODAY });
+  }
+  const s = radar.summarize(reg, { today: TODAY });
+  assert.equal(s.total, REGISTRY_HARD_CAP);
+  assert.doesNotThrow(
+    () => renderDashboard(s),
+    `renderDashboard must not throw at the hard cap of ${REGISTRY_HARD_CAP} rows — ` +
+      'lower REGISTRY_HARD_CAP or shrink the payload'
+  );
+});
+
+test('the change feed reports totals, not the truncated list length', () => {
+  const reg = emptyRegistry();
+  // 60 arrivals, well past the feed's 40-event display cap.
+  const rows = Array.from({ length: 60 }, (_, i) => candidate({ domain: `n${i}.example`, business_name: `New ${i}` }));
+  radar.upsertDiscovered(reg, rows, { today: TODAY });
+  const s = radar.summarize(reg, { today: TODAY });
+
+  assert.equal(s.today.length, 40, 'the displayed list is capped');
+  assert.equal(s.today_totals.found, 60, 'the total must be the pre-cap count');
+  assert.equal(s.today_totals.found, s.new_today, 'the feed total and new_today must agree');
+
+  const html = renderDashboard(s);
+  assert.match(html, /Newly found <b>60<\/b>/, 'the page must show 60, not the capped 40');
+});
+
+test('a same-day re-grade does not erase the previous sweep comparison', () => {
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [candidate()], { today: TODAY });
+  radar.recordGrade(reg, 'acme.example', gradeResult({ verdict: 'verify' }), { today: TODAY });
+  // A sweep flips the verdict, then --regrade appends a second grade the same day.
+  radar.recordGrade(reg, 'acme.example', gradeResult({ verdict: 'rebuild' }), { today: LATER });
+  radar.recordGrade(reg, 'acme.example', gradeResult({ verdict: 'rebuild' }), { today: LATER });
+
+  const s = radar.summarize(reg, { today: LATER });
+  const flip = s.today.find((e) => e.kind === 'verdict');
+  assert.ok(flip, 'the verify -> rebuild flip must survive a same-day re-grade');
+  assert.equal(flip.from, 'verify');
+  assert.equal(flip.to, 'rebuild');
+});
+
+test('an own-domain address is matched on a label boundary', () => {
+  // A bare endsWith made info@notsmilecare.com read as smilecare.com's own
+  // address, and because own-domain sorts first it became the primary row in the
+  // mail-merge sheet.
+  const own = 'smilecare.com';
+  const isOwn = (d) => d === own || d.endsWith(`.${own}`);
+  assert.equal(isOwn(classifyEmail('info@smilecare.com').domain), true);
+  assert.equal(isOwn(classifyEmail('info@mail.smilecare.com').domain), true);
+  assert.equal(isOwn(classifyEmail('info@notsmilecare.com').domain), false);
+  assert.equal(isOwn(classifyEmail('info@evilsmilecare.com').domain), false);
+});
+
+test('the placeholder filter drops fakes without dropping real addresses', () => {
+  for (const real of ['hello@emailus.com', 'info@testkitchen.com', 'contact@domainhome.com', 'jane@wixomlaw.com']) {
+    assert.ok(classifyEmail(real), `${real} is a real address and must survive`);
+  }
+  for (const fake of ['you@example.com', 'info@wix.com', 'a@test.com', 'noreply@acme.com', 'logo@thing.png']) {
+    assert.equal(classifyEmail(fake), null, `${fake} must be rejected`);
+  }
+});
+
+test('an agency address is a signal, never a contact', () => {
+  const c = classifyEmail('info@askmagnify.com');
+  assert.equal(c.agency, 'askmagnify.com', 'the incumbent agency must be identified');
+  // Subdomains of an agency count; a lookalike does not.
+  assert.equal(classifyEmail('a@mail.askmagnify.com').agency, 'askmagnify.com');
+  assert.equal(classifyEmail('a@notaskmagnify.com').agency, null);
+});
+
+test('the suppression list fails closed on a damaged file', () => {
+  const fs = require('fs');
+  const os = require('os');
+  const path = require('path');
+  // Must sit under 12_Brain/private — contact-store refuses to touch anything else.
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'radar-')) + '/12_Brain/private';
+  fs.mkdirSync(dir, { recursive: true });
+  const good = path.join(dir, 'ok.json');
+  const bad = path.join(dir, 'bad.json');
+
+  fs.writeFileSync(good, JSON.stringify({ emails: ['a@b.co'] }));
+  assert.equal(contactStore.loadSuppressed(good).has('a@b.co'), true);
+
+  // Absent is a legitimate first run.
+  assert.equal(contactStore.loadSuppressed(path.join(dir, 'missing.json')).size, 0);
+
+  // Truncated is not. Returning an empty set here would silently un-suppress
+  // everyone who has ever bounced, complained or asked to be removed.
+  fs.writeFileSync(bad, '{"emails": ["a@b.co"');
+  assert.throws(() => contactStore.loadSuppressed(bad), /not valid JSON/);
+});
+
+test('the contact store refuses to write outside the private layer', () => {
+  // The one guarantee that keeps email addresses out of a public repository.
+  assert.throws(
+    () => contactStore.save({ contacts: {} }, '/tmp/somewhere-public/contacts.json'),
+    /must live under 12_Brain\/private/
+  );
 });
