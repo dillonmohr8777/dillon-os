@@ -686,7 +686,18 @@ function renderDashboard(summary, opts = {}) {
 
   const lifecycleOrder = ['new', 'graded', 'queued_build', 'built', 'mailed', 'client', 'excluded'];
   const lifecycle = s.lifecycle || {};
-  const funnel = lifecycleOrder.filter((k) => k !== 'excluded').map((k) => ({ k, n: lifecycle[k] || 0 }));
+  // A zero is only a stall if work has actually reached this far. `new: 0` means
+  // everything discovered has been graded — that is flow, not a blockage — so
+  // flagging it red would point at the one stage that is working.
+  let upstream = 0;
+  const funnel = lifecycleOrder
+    .filter((k) => k !== 'excluded')
+    .map((k) => {
+      const n = lifecycle[k] || 0;
+      const stalled = n === 0 && upstream > 0;
+      upstream = Math.max(upstream, n);
+      return { k, n, stalled };
+    });
   const funnelMax = Math.max(1, ...funnel.map((f) => f.n), s.total || 1);
 
   const graded = Number(s.graded) || 0;
@@ -1121,7 +1132,7 @@ ${run ? healthStrip(run) : ''}
         ${funnel
           .map(
             (f) =>
-              `<li${f.n === 0 ? ' class="stall"' : ''}><span class="fun__l">${esc(f.k.replace(/_/g, ' '))}</span>` +
+              `<li${f.stalled ? ' class="stall"' : ''}><span class="fun__l">${esc(f.k.replace(/_/g, ' '))}</span>` +
               `<span class="fun__t"><span class="fun__f" style="width:${((f.n / funnelMax) * 100).toFixed(1)}%"></span></span>` +
               `<span class="fun__n">${f.n}</span></li>`
           )
