@@ -20,6 +20,7 @@ Single source of truth for all Claude instances across Dillon OS. Updated by `va
 • Commercial Cleaners Alliance — onboarding, creatives in flight.
 • Hardwood Artisan ($150/mo) — AT RISK, billing card update outstanding since 2026-04-07.
 • Onsite Concrete & Landscape — active, standing Thursday 1:00 PM ET call.
+• Fagan Painting — active, Meta handoff to Benson / Legacy Paint Holdings; continuing SEO / AEO / GEO. POC is James (never Jim).
 
 ## Full-time
 • Align HCM — Dillon's full-time employer. Not a client. Not counted in client totals.

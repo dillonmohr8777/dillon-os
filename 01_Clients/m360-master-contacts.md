@@ -1,6 +1,6 @@
 ---
 tags: [momentum360, contacts, master]
-last_updated: 2026-04-15
+last_updated: 2026-07-27
 ---
 
 # Momentum 360 Master Contact List
@@ -24,6 +24,7 @@ last_updated: 2026-04-15
 • **NKCDC** — Anthony Miller (amiller@nkcdc.org), Tess Watts (twatts@nkcdc.org), Mikey Boyd (mboyd@nkcdc.org).
 • **Commercial Cleaners Alliance** — Mike Ross (mross@projectcorporate.com). To confirm: David Stemm as client POC.
 • **Hardwood Artisan** — Dalton Fashik (daltonfashik@me.com, Hardwoodartisanllc@gmail.com).
+• **Fagan Painting** — James (never Jim). Partner handoff: Benson / Legacy Paint Holdings for Facebook.
 • **Onsite Concrete & Landscape** — Grace Slagle (gracieslags@gmail.com), onsiteclp@gmail.com.
 
 ## NOT a Momentum 360 client

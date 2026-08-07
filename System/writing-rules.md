@@ -20,5 +20,6 @@ Applies to ALL output — client emails, blog posts, social copy, reports, docum
 ## Client-specific overrides
 - **Bar Crawl USA** — Never improvise ad copy. Pre-approved library only. Zero alcohol language. Banned terms list lives in `01_Clients/Bar Crawl USA/brand-guidelines.md`.
 - **Kimberly James Bridal** — Every email to Kim MUST CC mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com.
+- **Fagan Painting** — Client POC is **James**. Never call him Jim in Slack, email, reports, or handoffs.
 - **Fresh Blends / Replenish** — Use "Replenish" branding, not "Fresh Blends." No phone-call conversions.
 - **Align HCM** — NOT a Momentum 360 client. Never route Align HCM content under Momentum 360 branding.
