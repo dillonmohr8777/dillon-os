@@ -521,7 +521,18 @@ async function main() {
     ['queue csv', () => {
       const f = repoPath(CSV_PATH);
       ensureDir(path.dirname(f));
-      fs.writeFileSync(f, toCsv(summary.build_queue));
+      // Operator rule: we do not build for sites with no photographs. A row
+      // whose imagery was checked and came back empty stays a rebuild target in
+      // the registry (their site is still bad), but is held out of the working
+      // queue, because a homepage concept with broken-image slots pitches
+      // nothing. Unchecked rows stay in: absence of a check is not evidence of
+      // absence of photos.
+      const buildable = summary.build_queue.filter(
+        (p) => !(p.imagery && p.imagery.checked && p.imagery.usable === 0)
+      );
+      const excluded = summary.build_queue.length - buildable.length;
+      if (excluded > 0) process.stderr.write(`  build queue: ${excluded} row(s) held out (no usable photos)\n`);
+      fs.writeFileSync(f, toCsv(buildable));
     }],
     ['digest', () => {
       fs.writeFileSync(repoPath(path.join('Daily-Briefs', `radar-${today}.md`)), digest(summary, run));

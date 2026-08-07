@@ -473,3 +473,23 @@ Three groups, ordered by how much they change what you do:
 
 Computed in `radar.summarize()` from grade history that was already being
 stored, so it costs nothing extra to produce.
+
+---
+
+## Two house rules, enforced in the pipeline
+
+Both from the operator, 2026-08-07. Both are code, not memos.
+
+**No photos, no build.** A rebuild target whose imagery check came back with
+zero usable photographs is held out of `build-queue.csv` (the sweep logs how
+many). It stays a rebuild target in the registry, because their site is still
+bad; it just cannot consume a build slot until it has photographs, since a
+homepage concept with broken-image slots pitches nothing. Rows that were never
+checked stay in the queue: absence of a check is not evidence of absence of
+photos. Today this holds 56 of 124 rebuild rows out and leaves 68 workable.
+
+**No em dashes on any customer-facing page.** `arch-build` strips them from
+template prose at generation (a comma reads correctly in every position the
+template used them) and treats one surviving in visible text as a hard fault, so
+compliance never depends on a copywriter remembering. The showcase transformer
+applies the same rule and refuses to emit a page that still carries one.

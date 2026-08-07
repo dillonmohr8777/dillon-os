@@ -383,6 +383,11 @@ function buildArchSite(prospect, opts = {}) {
   ];
   const leakedProse = REFERENCE_PROSE.filter((phrase) => new RegExp(phrase, 'i').test(html));
 
+  // Em dash in visible text after the swap above means one arrived through a
+  // data field. Style rule from the operator: none, on any site.
+  const bodyText = html.replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<script[\s\S]*?<\/script>/gi, '');
+  if (/\u2014/.test(bodyText)) leakedProse.push('em dash in page text (house style: never)');
+
   const refNames = ['Advanced Commercial Interior', 'Folcroft', '1050 E Ashland Ave'];
   const leaked = refNames.filter((n) => html.includes(n));
 
@@ -397,6 +402,12 @@ function buildArchSite(prospect, opts = {}) {
     if (!c.tel.includes('6102379900')) leaked.push(`reference phone ${REFERENCE_TEL}`);
   }
   for (const d of new Set(strayTel)) leaked.push(`tel: link to ${d}, which is not this prospect's number`);
+
+  // House rule: no em dashes on any customer-facing page. The template's prose
+  // used them as mid-sentence asides, where a comma reads correctly; generated
+  // copy must simply be written without them. Applied here, at the generator,
+  // so compliance never depends on a copywriter remembering the rule.
+  html = html.replace(/\s*\u2014\s*/g, ', ');
 
   // Prospect demos are always noindex.
   if (!/noindex/.test(html)) {
