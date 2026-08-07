@@ -50,7 +50,8 @@ const VERDICT_LABEL = {
 
 /** Queues, in the order they appear in the switcher. */
 const QUEUES = [
-  { key: 'rebuild', label: 'Rebuild', verdicts: ['rebuild'], sort: 'p', desc: 'Ranked by opportunity, weighted for Philadelphia. Only these consume a build slot.' },
+  { key: 'rebuild', label: 'Rebuild', verdicts: ['rebuild'], sort: 'p', desc: 'Ranked by opportunity, weighted for Philadelphia. Each one earns a homepage concept — one page from their own copy and imagery, pitched as the first step of a rebuild.' },
+  { key: 'buildable', label: 'Buildable now', verdicts: ['rebuild'], buildableOnly: true, sort: 'p', desc: 'Rebuild targets that already own enough imagery for a four-slot homepage concept. This is this week\'s batch — no asset chasing required.' },
   { key: 'verify', label: 'Needs render', verdicts: ['verify'], sort: 'lg', desc: 'Markup found no disqualifying fault, but nobody has seen the design. Not decisions yet.' },
   { key: 'polish', label: 'Polish', verdicts: ['polish'], sort: 'p', desc: 'Working sites with fixable gaps. A retainer or a paid tune-up, not a rebuild pitch.' },
   { key: 'traffic', label: 'Traffic', verdicts: ['ads_seo', 'nurture'], sort: 'q', desc: 'Sorted by site quality, best first. A genuinely good site means sell traffic, not a redesign.' },
@@ -199,6 +200,11 @@ function projectRows(prospects) {
       tr: p.trend || '',
       tl: Number.isFinite(Number(p.trend_delta)) ? Number(p.trend_delta) : null,
       hp: p.has_phone ? 1 : 0,
+      // Imagery: bd = buildable, iu = usable image count, il = has a logo.
+      // Absent means never checked, which is different from "checked and empty".
+      bd: p.imagery ? (p.imagery.buildable ? 1 : 0) : null,
+      iu: p.imagery ? Number(p.imagery.usable) || 0 : null,
+      il: p.imagery?.logo ? 1 : 0,
       f: (p.top_faults || []).filter(Boolean),
       hl: p.headline || '',
       of: p.offer || '',
@@ -379,6 +385,7 @@ function clientScript() {
   function matches(r) {
     var qd = queueDef(state.queue);
     if (qd.verdicts && qd.verdicts.indexOf(r.r) < 0) return false;
+    if (qd.buildableOnly && r.bd !== 1) return false;
     var f = state.filters;
     if (f.a.length && f.a.indexOf(r.a) < 0) return false;
     if (f.g.length && f.g.indexOf(r.g) < 0) return false;
@@ -453,7 +460,9 @@ function clientScript() {
       '<td class="c-score">' + meterHtml(r.q, r.b) + '</td>' +
       '<td class="c-spark">' + sparkHtml(r.gh) + '</td>' +
       '<td class="c-trend">' + trendHtml(r) + '</td>' +
-      '<td class="c-prio"><strong>' + n(r.p) + '</strong></td>' +
+      '<td class="c-prio"><strong>' + n(r.p) + '</strong>' +
+        (r.bd === 1 ? '<span class="ready" title="owns enough imagery for a homepage concept">ready</span>' : '') +
+      '</td>' +
       '<td class="c-why">' + esc((r.f && r.f.length ? S(r.f[0]) : '') || S(r.hl)) + '</td>' +
     '</tr>';
   }
@@ -493,6 +502,9 @@ function clientScript() {
       ['First seen', r.fs || '—'],
       ['Times discovered', n(r.td)],
       ['Phone on file', r.hp ? 'yes' : 'no'],
+      ['Own imagery', r.bd === null ? 'not checked yet'
+        : (r.bd ? 'enough for a homepage' : 'not enough') +
+          ' — ' + r.iu + ' usable' + (r.il ? ', logo found' : ', no logo')],
     ];
     var faults = (r.f || []).length
       ? '<ul class="det__faults">' + r.f.map(function (f) { return '<li>' + esc(S(f)) + '</li>'; }).join('') + '</ul>'
@@ -726,9 +738,15 @@ function renderDashboard(summary, opts = {}) {
 
   // Queue counts come from the projected rows so the tab numbers can never
   // disagree with what clicking the tab actually shows.
+  // Counted from the projected rows so the stat and the queue tab agree.
+  const buildableNow = rows.filter((r) => r.r === 'rebuild' && r.bd === 1).length;
+  const imageryChecked = rows.filter((r) => r.bd !== null).length;
+
   const queueCounts = {};
   for (const q of QUEUES) {
-    queueCounts[q.key] = q.verdicts ? rows.filter((r) => q.verdicts.includes(r.r)).length : rows.length;
+    queueCounts[q.key] = q.verdicts
+      ? rows.filter((r) => q.verdicts.includes(r.r) && (!q.buildableOnly || r.bd === 1)).length
+      : rows.length;
   }
 
   const lifecycleOrder = ['new', 'graded', 'queued_build', 'built', 'mailed', 'client', 'excluded'];
@@ -766,7 +784,11 @@ function renderDashboard(summary, opts = {}) {
     meta: {
       generated: s.generated || '',
       strings,
-      queues: QUEUES.map((q) => ({ key: q.key, label: q.label, verdicts: q.verdicts, sort: q.sort, desc: q.desc })),
+      // Whitelisting fields here is what silently dropped `buildableOnly`: the
+      // tab count is computed server-side and was right, while the client filter
+      // never saw the flag and showed the unfiltered queue. Spread the whole
+      // definition so a new queue property cannot go missing this way again.
+      queues: QUEUES.map((q) => ({ ...q })),
       bandColors: BAND_COLORS,
       verdictLabel: VERDICT_LABEL,
       evidence: EVIDENCE_LABEL,
@@ -899,6 +921,8 @@ function renderDashboard(summary, opts = {}) {
   .stat--act .stat__n { color: var(--s-decayed); }
   .stat--hold::before { background: var(--s-unconfirmed); }
   .stat--hold .stat__n { color: var(--s-unconfirmed); }
+  .stat--ready::before { background: var(--gold); }
+  .stat--ready .stat__n { color: var(--gold-ink); }
   .stat--brand::before { background: var(--brand); }
   .stat--brand .stat__n { color: var(--brand-ink); }
 
@@ -983,6 +1007,11 @@ function renderDashboard(summary, opts = {}) {
   .c-biz .sub { display: block; font-size: 11px; color: var(--fg-faint); font-family: var(--mono); margin-top: 2px; }
   .c-prio { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; width: 66px; }
   .c-prio strong { font-size: 14px; font-weight: 600; }
+  /* Marks a row whose imagery is already in hand — the difference between
+     "worth building" and "buildable today". */
+  .ready { display: block; font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--on-gold); background: var(--gold);
+    border-radius: 3px; padding: 0 3px; margin-top: 3px; font-weight: 700; }
   .c-why { color: var(--fg-mid); font-size: 12.5px; max-width: 34ch; }
   .c-spark { width: 60px; } .c-trend { width: 64px; } .c-score { width: 138px; }
   .empty { padding: 34px 14px; color: var(--fg-faint); text-align: center; }
@@ -1123,11 +1152,11 @@ ${run ? healthStrip(run) : ''}
   <div class="decide">
     <div class="stat stat--act">
       <div class="stat__n">${num(s.build_queue_size)}</div>
-      <div class="stat__l">Rebuild targets ready to brief</div>
+      <div class="stat__l">Homepage concepts ready to brief</div>
     </div>
-    <div class="stat stat--hold">
-      <div class="stat__n">${num((s.needs_render || []).length)}</div>
-      <div class="stat__l">Blocked on a render pass</div>
+    <div class="stat stat--ready">
+      <div class="stat__n">${num(buildableNow)}</div>
+      <div class="stat__l">Buildable today — imagery already in hand</div>
     </div>
     <div class="stat stat--brand">
       <div class="stat__n">${num(s.mean_site_quality)}</div>

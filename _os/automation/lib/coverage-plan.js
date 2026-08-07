@@ -100,6 +100,10 @@ const DAILY = {
   discover: 60,
   render: 80,
   enrich: 60,
+  // Imagery checks are cheap (a fetch plus a few image HEAD-equivalents) and
+  // answer the question that actually gates a build, so the whole rebuild queue
+  // gets covered within a couple of days and then only re-checked on TTL.
+  imagery: 60,
 };
 
 function num(v, d = 0) {

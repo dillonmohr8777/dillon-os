@@ -209,14 +209,82 @@ async function harvestLite(url, opts = {}) {
     /book|call|schedule|request|quote|estimate|contact|appointment|order|shop|get started|learn more|apply/i.test(t)
   );
 
-  const images = [];
-  for (const tag of html.match(/<img\b[^>]*>/gi) || []) {
-    const src = (tag.match(/\bsrc=["']([^"']+)/i) || [])[1] || '';
-    const alt = (tag.match(/\balt=["']([^"']*)/i) || [])[1] || '';
-    if (src && !/^data:/i.test(src)) images.push({ src, alt });
+  // Reading only `src` misses most of the real photographs on a modern site.
+  //
+  // Measured on live prospects: Andorra Family Dentistry has 32 `<img>` tags and
+  // reading `src` yielded 3 usable URLs, one of which was the literal string
+  // `{href}` — an unsubstituted template placeholder. Lazy-loading themes park
+  // a spacer GIF in `src` and put the real file in `data-src`, `data-lazy-src`
+  // or `srcset`, so a harvester that trusts `src` concludes the business has no
+  // imagery when in fact it has plenty. That wrong conclusion is what made
+  // rebuild builds look unbuildable.
+  //
+  // Order matters: the lazy attributes are checked first, because when a theme
+  // sets both, `src` is the placeholder and the lazy attribute is the content.
+  const LAZY_ATTRS = ['data-src', 'data-lazy-src', 'data-original', 'data-large_image', 'data-full-url'];
+
+  /** Widest candidate from a srcset — the one worth using for a hero. */
+  function widestFromSrcset(value) {
+    let best = null;
+    let bestW = -1;
+    for (const part of String(value).split(',')) {
+      const bits = part.trim().split(/\s+/);
+      if (!bits[0]) continue;
+      const w = /^(\d+)w$/.test(bits[1] || '') ? parseInt(bits[1], 10) : 0;
+      if (w >= bestW) {
+        bestW = w;
+        best = bits[0];
+      }
+    }
+    return best;
   }
+
+  const images = [];
+  const seenSrc = new Set();
+  const pushImage = (src, alt) => {
+    if (!src || /^data:/i.test(src)) return;
+    // An unsubstituted template placeholder is not a URL. These 404 and, worse,
+    // crowd out real candidates because they de-duplicate to a single entry.
+    if (/[{}]|%7[bB]|%7[dD]/.test(src)) return;
+    if (seenSrc.has(src)) return;
+    seenSrc.add(src);
+    images.push({ src, alt: alt || '' });
+  };
+
+  for (const tag of html.match(/<img\b[^>]*>/gi) || []) {
+    const alt = (tag.match(/\balt=["']([^"']*)/i) || [])[1] || '';
+    let picked = '';
+    for (const attr of LAZY_ATTRS) {
+      const m = tag.match(new RegExp(`\\b${attr}=["']([^"']+)`, 'i'));
+      if (m && m[1]) {
+        picked = m[1];
+        break;
+      }
+    }
+    if (!picked) {
+      const ss = (tag.match(/\b(?:data-srcset|srcset)=["']([^"']+)/i) || [])[1];
+      if (ss) picked = widestFromSrcset(ss) || '';
+    }
+    if (!picked) picked = (tag.match(/\bsrc=["']([^"']+)/i) || [])[1] || '';
+    pushImage(picked, alt);
+  }
+
+  // <source> inside <picture> carries the real asset when <img> is a fallback.
+  for (const tag of html.match(/<source\b[^>]*>/gi) || []) {
+    const ss = (tag.match(/\b(?:data-srcset|srcset)=["']([^"']+)/i) || [])[1];
+    if (ss) pushImage(widestFromSrcset(ss) || '', '');
+  }
+
+  // CSS background images: hero photographs on older themes live here and
+  // nowhere else, so a site can look image-free without them.
+  for (const m of html.matchAll(/background(?:-image)?\s*:\s*url\((['"]?)([^'")]+)\1\)/gi)) {
+    pushImage(m[2], '');
+  }
+
   const og = (html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)/i) || [])[1];
-  if (og) images.unshift({ src: og, alt: 'og:image' });
+  if (og && !/[{}]/.test(og)) {
+    images.unshift({ src: og, alt: 'og:image' });
+  }
 
   const facts = extractFacts(html, text);
   const wordCount = text ? text.split(/\s+/).filter(Boolean).length : 0;

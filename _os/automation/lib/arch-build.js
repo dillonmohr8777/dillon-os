@@ -437,7 +437,12 @@ function buildArchSite(prospect, opts = {}) {
     // page renders with broken images. Never report a build as done on this.
     // Ready means every <img> resolves to an asset we actually downloaded from
     // this prospect. Pointing at assets/ is only correct when those files ship.
-    imagesReady: assets.length > 0 && imgs.length > 0,
+    // The page has a fixed number of image slots and every one of them renders
+    // as a broken-image icon if unfilled, so "ready" means *all* slots covered —
+    // not merely that one asset was copied in. A homepage concept is the pitch
+    // artifact; a column of broken icons is worse than no pitch.
+    imageSlots: imgs.length,
+    imagesReady: imgs.length > 0 && assets.length >= imgs.length,
     imageCount: assets.length,
     hasLogo: !!opts.logo,
     noindex: /noindex/.test(html),

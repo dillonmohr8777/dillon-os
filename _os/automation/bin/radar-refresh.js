@@ -38,6 +38,7 @@ const path = require('path');
 const { repoPath, readJson, writeJson, ensureDir, todayISO, nowISO, slugify } = require('../lib/fsutil');
 const radar = require('../lib/radar');
 const { planDiscovery, describePlan, DAILY } = require('../lib/coverage-plan');
+const { surveyImagery, imageryStale, HOMEPAGE_IMAGE_SLOTS } = require('../lib/imagery');
 const { renderDashboard } = require('../lib/radar-dashboard');
 const { gradeSite, mergeAudits } = require('../lib/site-grader');
 const { auditTier0, auditTier1 } = require('../lib/site-audit');
@@ -85,7 +86,8 @@ function parseArgs(argv) {
     // Defaults come from lib/coverage-plan DAILY so the scheduled job and a
     // hand-run share one definition of "a day's work".
     discover: DAILY.discover, recheck: 250, market: null, concurrency: 12, maxTier: 0,
-    enrich: DAILY.enrich, render: DAILY.render, dryRun: false, regrade: null, force: false,
+    enrich: DAILY.enrich, render: DAILY.render, imagery: DAILY.imagery,
+    dryRun: false, regrade: null, force: false,
   };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -101,6 +103,7 @@ function parseArgs(argv) {
     else if (a === '--max-tier') o.maxTier = parseInt(argv[++i], 10) || 0;
     else if (a === '--enrich') o.enrich = Math.max(0, parseInt(argv[++i], 10) || 0);
     else if (a === '--render') o.render = Math.max(0, parseInt(argv[++i], 10) || 0);
+    else if (a === '--imagery') o.imagery = Math.max(0, parseInt(argv[++i], 10) || 0);
     else if (a === '--dry-run') o.dryRun = true;
     else if (a === '--help' || a === '-h') o.help = true;
   }
@@ -441,6 +444,31 @@ async function main() {
     if (renderBudget) {
       run.rendered = args.render - renderBudget.left;
       process.stderr.write(`  tier 1 renders: ${run.rendered} of ${args.render} budgeted\n`);
+    }
+  }
+
+  // --- 3b. Can we actually build these? ------------------------------------
+  // Runs after grading so it only inspects rows that are currently rebuild
+  // targets. The deliverable is a four-slot homepage concept, so this answers a
+  // question the grader cannot: their site being bad says nothing about whether
+  // they own enough photographs to replace it with.
+  if (args.imagery > 0) {
+    const needCheck = Object.values(registry.prospects)
+      .filter((p) => p.current?.verdict === 'rebuild' && p.website)
+      .filter((p) => imageryStale(p, { today }))
+      .sort((a, b) => (b.priority_score || 0) - (a.priority_score || 0))
+      .slice(0, args.imagery);
+
+    if (needCheck.length) {
+      process.stderr.write(`  imagery: checking ${needCheck.length} rebuild target(s)\n`);
+      const st = await surveyImagery(registry, needCheck, {
+        today, concurrency: Math.min(6, args.concurrency), need: HOMEPAGE_IMAGE_SLOTS,
+      });
+      run.imagery_checked = st.checked;
+      run.imagery_buildable = st.buildable;
+      process.stderr.write(
+        `  imagery: ${st.buildable} buildable now, ${st.partial} partial, ${st.none} with nothing usable\n`
+      );
     }
   }
 

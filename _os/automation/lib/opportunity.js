@@ -17,7 +17,7 @@
  * So a high Site Quality Score does not disqualify a prospect. It changes the
  * offer:
  *
- *   rebuild   site is dated/decayed + business can pay  -> Tier-A demo site, direct mail + QR
+ *   rebuild   site is dated/decayed + business can pay  -> homepage concept, direct mail + QR
  *   polish    site is decent with specific gaps         -> landing page / CRO engagement
  *   ads_seo   site is strong but nobody can find them   -> Google Ads / local SEO / GBP
  *   nurture   strong site AND strong visibility         -> relationship, no cold pitch
@@ -220,7 +220,7 @@ function routeOpportunity(prospect, options = {}) {
   if (!website) {
     return {
       verdict: 'rebuild',
-      offer: 'first website (no site exists)',
+      offer: 'homepage concept — they have no site at all',
       opportunity_score: clamp(45 + abilityToPay(p, reasons) / 2, 0, 100),
       site_quality_score: 0,
       site_quality_band: 'absent',
@@ -324,8 +324,14 @@ function routeOpportunity(prospect, options = {}) {
   } else if (sqs <= th.rebuildCeiling) {
     if (opportunity >= th.buildFloor) {
       verdict = 'rebuild';
-      offer = 'Tier-A demo site + direct mail QR';
-      next_action = 'Queue a site-factory brief (/mirror-and-improve)';
+      // The deliverable is a **homepage concept**, not a finished site. It is the
+      // pitch artifact — one page, built from their own copy and imagery, good
+      // enough that the rebuild sells itself. The full build is the engagement
+      // that follows if they say yes. Naming it "demo site" oversold what gets
+      // made and undersold what gets sold, and it set the wrong expectation for
+      // how much imagery a build needs (four slots, not a whole site's worth).
+      offer = 'homepage concept + direct mail QR (full rebuild follows)';
+      next_action = 'Queue a homepage-concept brief (/mirror-and-improve)';
     } else {
       verdict = 'nurture';
       offer = 'low-cost touch only';
@@ -335,7 +341,7 @@ function routeOpportunity(prospect, options = {}) {
   } else if (sqs <= th.polishCeiling) {
     verdict = 'polish';
     offer = 'landing page + CRO engagement';
-    next_action = 'Pitch a single high-intent landing page, not a full rebuild — their site is decent';
+    next_action = 'Pitch a single high-intent landing page, not a rebuild — their site is decent';
     reasons.push(`site is decent (${sqs}) — a full rebuild pitch would not land`);
   } else {
     // The great-website case. Their site is not the problem.

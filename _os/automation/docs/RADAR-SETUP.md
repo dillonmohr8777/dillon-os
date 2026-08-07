@@ -311,3 +311,66 @@ Philadelphia target may be **unreachable with OpenStreetMap alone**. That is the
 same gap as "OSM under-maps suburban trades", seen from the other side. A second
 discovery source is what fixes it; until then, treat a persistently unmet
 Philadelphia deficit as evidence of source coverage, not of a planner bug.
+
+---
+
+## The deliverable is a homepage concept, not a site
+
+This was modelled wrong at first and it mattered, so it is written down.
+
+What gets built for a `rebuild` prospect is **one page** — a homepage concept
+assembled from their own copy and imagery, good enough that the rebuild sells
+itself. The full site is the engagement that follows if they say yes. The live
+batch URL says so plainly: `philly-25-homepage-concepts-batch-3`.
+
+The generator was always right — `arch-build` emits a single `html`. The wrong
+part was everywhere else: the offer read "Tier-A demo site", and more
+importantly the **imagery requirement was sized for a whole site**.
+
+### What that error cost
+
+The arch homepage has **four image slots** plus a logo. Reported against that
+real number, the queue looks completely different:
+
+| | Before the fix | After |
+|---|---:|---:|
+| Rebuild targets with enough imagery | reported as ~none | **28 of 106 (26%)** |
+| Partial (1–3 slots) | — | 22 (21%) |
+| Nothing usable | — | 56 (53%) |
+| Have a logo | — | 39 (37%) |
+
+Two separate mistakes were compounding:
+
+1. **The need was sized for a full site**, so nothing ever looked sufficient.
+2. **`harvest-lite` only read `<img src>`.** Lazy-loading themes park a spacer
+   GIF there and put the real photograph in `data-src`, `data-lazy-src` or
+   `srcset`. Andorra Family Dentistry went from **0 usable images to 8** at
+   1920×1037 on that fix alone, and one of its three "candidates" had been the
+   literal string `{href}` — an unsubstituted template placeholder.
+
+`harvest-lite` now reads the lazy attributes first (when a theme sets both, `src`
+is the placeholder and the lazy attribute is the content), takes the widest
+entry from `srcset`, reads `<source>` inside `<picture>`, picks up CSS
+`background-image` URLs, and discards anything containing a template placeholder.
+
+### Buildability is now a field, not an afternoon
+
+`lib/imagery.js` checks each rebuild target and stores the result on the row, so
+the dashboard can answer "which 25 do I build this week" as a filter:
+
+- A **Buildable now** queue and a headline stat, counted from the rows.
+- A gold `READY` badge on any row whose imagery is already in hand.
+- The drawer states it exactly: *"enough for a homepage — 8 usable, logo found"*.
+
+Checks are budgeted at `--imagery 60` per day and cached for 45 days, so the
+whole rebuild queue is covered within a couple of sweeps.
+
+`imagesReady` in `arch-build` also changed: it required *one* asset, which let a
+build report success with three of four slots empty. It now requires every slot
+filled, because each unfilled slot renders as a broken-image icon and a homepage
+concept with a column of those is worse than no pitch.
+
+**Still true:** 53% of rebuild targets own no usable photographs, and that is a
+real constraint — those sites are poor partly *because* nobody ever put decent
+photography on them. Nothing here substitutes another business's images. That
+group needs generation, a photographer, or the prospect's own files.
