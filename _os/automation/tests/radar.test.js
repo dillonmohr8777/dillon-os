@@ -15,6 +15,9 @@ const assert = require('node:assert/strict');
 
 const radar = require('../lib/radar');
 const { renderDashboard, projectRows, crossTab } = require('../lib/radar-dashboard');
+const {
+  planDiscovery, AREA_TARGETS, REGISTRY_SOFT_CAP, REGISTRY_HARD_CAP,
+} = require('../lib/coverage-plan');
 
 const TODAY = '2026-08-06';
 const LATER = '2026-10-01';
@@ -605,4 +608,136 @@ test('token contrast maths matches WCAG at known anchors', () => {
   // A light gold accent cannot carry white text, so on-accent must flip.
   assert.equal(archTokens.onColor('#D7A243').color, '#090909');
   assert.equal(archTokens.onColor('#176B5E').color, '#FFFFFF');
+});
+
+/* ------------------------------------------------------------------ *
+ * Coverage planning — the thing that decides what tomorrow looks for
+ * ------------------------------------------------------------------ */
+
+function registryWith(counts) {
+  // counts: { 'Philadelphia': {'home-services': 3, medical: 1}, ... }
+  const reg = emptyRegistry();
+  let n = 0;
+  const rows = [];
+  for (const [area, groups] of Object.entries(counts)) {
+    for (const [group, howMany] of Object.entries(groups)) {
+      for (let i = 0; i < howMany; i++) {
+        rows.push(candidate({
+          domain: `d${n++}.example`, area, city: area, vertical_group: group,
+        }));
+      }
+    }
+  }
+  radar.upsertDiscovered(reg, rows, { today: TODAY });
+  return reg;
+}
+
+test('the plan sends the budget to the areas furthest behind target', () => {
+  // Mirrors the real skew that motivated this: one county badly over-collected,
+  // the priority market badly under-collected.
+  const reg = registryWith({
+    'Montgomery County': { 'home-services': 400 },
+    Philadelphia: { 'home-services': 100 },
+  });
+  const plan = planDiscovery(reg, { budget: 60 });
+
+  const names = plan.targets.map((t) => t.name);
+  assert.ok(names.includes('Philadelphia'), 'the under-served priority market must be targeted');
+  assert.ok(!names.includes('Montgomery County'), 'an over-collected county must not be targeted');
+
+  const mont = plan.areaDeficits.find((a) => a.name === 'Montgomery County');
+  assert.ok(mont.deficit < 0, 'over-target areas carry a negative deficit');
+});
+
+test('no single area can absorb the whole budget', () => {
+  const reg = registryWith({ 'Montgomery County': { food: 500 } });
+  const plan = planDiscovery(reg, { budget: 60 });
+  for (const t of plan.targets) {
+    assert.ok(t.cap <= plan.budget, `${t.name} cap ${t.cap} must not exceed the day's budget`);
+  }
+  const capSum = plan.targets.reduce((s, t) => s + t.cap, 0);
+  // Caps are per-area ceilings, not reservations, so they may sum above the
+  // budget — but the run stops at the budget, and no one cap may swallow it all.
+  assert.ok(plan.targets.length > 1, 'the budget spreads across multiple areas');
+});
+
+test('the plan picks verticals that are behind, not verticals that are plentiful', () => {
+  const reg = registryWith({
+    Philadelphia: { food: 300, 'home-services': 5 },
+  });
+  const plan = planDiscovery(reg, { budget: 60 });
+  const groups = plan.targets[0].groups;
+  assert.ok(groups.includes('home-services'), 'an under-collected high-value group must be chosen');
+  assert.ok(!groups.includes('food'), 'an over-collected group must not be chosen');
+});
+
+test('discovery throttles as the registry approaches its useful size', () => {
+  const under = registryWith({ Philadelphia: { 'home-services': 100 } });
+  assert.equal(planDiscovery(under, { budget: 60 }).throttled, false);
+
+  // Past the soft cap the budget shrinks; past the hard cap it stops entirely,
+  // because another unaudited row is worth less than a rendered one — and the
+  // dashboard's embedded payload has a real ceiling.
+  const soft = { prospects: {} };
+  for (let i = 0; i < REGISTRY_SOFT_CAP + 10; i++) soft.prospects[`s${i}`] = { domain: `s${i}`, area: 'Philadelphia' };
+  const softPlan = planDiscovery(soft, { budget: 60 });
+  assert.equal(softPlan.throttled, true);
+  assert.ok(softPlan.budget < 60, 'the soft cap reduces the budget');
+
+  const hard = { prospects: {} };
+  for (let i = 0; i < REGISTRY_HARD_CAP + 10; i++) hard.prospects[`h${i}`] = { domain: `h${i}`, area: 'Philadelphia' };
+  const hardPlan = planDiscovery(hard, { budget: 60 });
+  assert.equal(hardPlan.budget, 0, 'the hard cap stops discovery');
+  assert.equal(hardPlan.targets.length, 0);
+  assert.match(hardPlan.reason, /hard cap/);
+});
+
+test('a balanced registry still produces something to do', () => {
+  // If every area is at or above target, planning nothing and reporting success
+  // would look identical to a broken sweep. It tops up instead.
+  const reg = { prospects: {} };
+  for (const a of AREA_TARGETS) {
+    const n = Math.round(1000 * a.share) + 5;
+    for (let i = 0; i < n; i++) {
+      reg.prospects[`${a.name}-${i}`] = { domain: `${a.name}-${i}`, area: a.name, vertical_group: 'home-services' };
+    }
+  }
+  const plan = planDiscovery(reg, { budget: 60 });
+  assert.ok(plan.targets.length >= 1, 'a balanced registry still gets a target');
+  assert.ok(plan.budget > 0);
+});
+
+test('the dashboard payload interns repeated text and the client can resolve it', () => {
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [candidate(), candidate({ domain: 'b.example', business_name: 'B Co' })], { today: TODAY });
+  // Two prospects, identical generated copy — the point of interning.
+  const g = gradeResult({ headline: 'same headline', offer: 'same offer', next_action: 'same next' });
+  radar.recordGrade(reg, 'acme.example', g, { today: TODAY });
+  radar.recordGrade(reg, 'b.example', g, { today: TODAY });
+
+  const html = renderDashboard(radar.summarize(reg, { today: TODAY }));
+  const payload = JSON.parse(html.match(/id="radar-rows">([\s\S]*?)<\/script>/)[1]);
+
+  assert.ok(Array.isArray(payload.meta.strings), 'a string table must ship');
+  // The shared sentences appear once in the table, not once per row.
+  assert.equal(payload.meta.strings.filter((v) => v === 'same headline').length, 1);
+  for (const row of payload.rows) {
+    assert.equal(typeof row.hl, 'number', 'headline is an index, not a string');
+    assert.equal(payload.meta.strings[row.hl], 'same headline');
+    assert.ok(Array.isArray(row.f), 'faults are an index array');
+    for (const i of row.f) assert.equal(typeof i, 'number');
+  }
+  // Faults share the table, so the fault text must still be recoverable.
+  const faultText = payload.rows[0].f.map((i) => payload.meta.strings[i]);
+  assert.ok(faultText.includes('no viewport meta'), `faults must round-trip, got ${faultText}`);
+});
+
+test('an empty field interns to -1 rather than pointing at the wrong string', () => {
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [candidate()], { today: TODAY });
+  radar.recordGrade(reg, 'acme.example', gradeResult({ offer: '', next_action: '' }), { today: TODAY });
+  const html = renderDashboard(radar.summarize(reg, { today: TODAY }));
+  const payload = JSON.parse(html.match(/id="radar-rows">([\s\S]*?)<\/script>/)[1]);
+  assert.equal(payload.rows[0].of, -1, 'empty must be -1, never index 0');
+  assert.equal(payload.rows[0].na, -1);
 });

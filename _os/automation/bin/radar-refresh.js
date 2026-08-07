@@ -37,6 +37,7 @@ const fs = require('fs');
 const path = require('path');
 const { repoPath, readJson, writeJson, ensureDir, todayISO, nowISO, slugify } = require('../lib/fsutil');
 const radar = require('../lib/radar');
+const { planDiscovery, describePlan, DAILY } = require('../lib/coverage-plan');
 const { renderDashboard } = require('../lib/radar-dashboard');
 const { gradeSite, mergeAudits } = require('../lib/site-grader');
 const { auditTier0, auditTier1 } = require('../lib/site-audit');
@@ -81,8 +82,10 @@ const GROUP_ORDER = ['home-services', 'medical', 'legal', 'industrial', 'spa-wel
 
 function parseArgs(argv) {
   const o = {
-    discover: 200, recheck: 120, market: null, concurrency: 12, maxTier: 0, enrich: 60,
-    dryRun: false, regrade: null, force: false,
+    // Defaults come from lib/coverage-plan DAILY so the scheduled job and a
+    // hand-run share one definition of "a day's work".
+    discover: DAILY.discover, recheck: 250, market: null, concurrency: 12, maxTier: 0,
+    enrich: DAILY.enrich, render: DAILY.render, dryRun: false, regrade: null, force: false,
   };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -97,6 +100,7 @@ function parseArgs(argv) {
     else if (a === '--concurrency') o.concurrency = Math.max(1, parseInt(argv[++i], 10) || 12);
     else if (a === '--max-tier') o.maxTier = parseInt(argv[++i], 10) || 0;
     else if (a === '--enrich') o.enrich = Math.max(0, parseInt(argv[++i], 10) || 0);
+    else if (a === '--render') o.render = Math.max(0, parseInt(argv[++i], 10) || 0);
     else if (a === '--dry-run') o.dryRun = true;
     else if (a === '--help' || a === '-h') o.help = true;
   }
@@ -150,7 +154,13 @@ async function gradeOne(p, ctx) {
     { grade, suppressDomains: ctx.suppressDomains, suppressIds: ctx.suppressIds }
   );
 
-  if (ctx.maxTier >= 1 && route.verdict !== 'suppress' && shouldEscalate(route, { tier: 0 }).escalate) {
+  // Tier 1 is the expensive tier, so it is budgeted rather than unlimited. The
+  // budget is consumed in dueForRecheck order — never-graded rows first, then
+  // most-overdue, then highest-priority — which means it lands on the biggest
+  // blind spots rather than on whichever row happened to be enumerated first.
+  const canRender = ctx.renderBudget == null || ctx.renderBudget.left > 0;
+  if (canRender && ctx.maxTier >= 1 && route.verdict !== 'suppress' && shouldEscalate(route, { tier: 0 }).escalate) {
+    if (ctx.renderBudget) ctx.renderBudget.left -= 1;
     try {
       const t1 = await auditTier1(p.website, { timeoutMs: 35000 });
       if (!t1.tier1Failed) {
@@ -285,31 +295,50 @@ async function main() {
   }
 
   const run = { discovered_raw: 0, discovered_new: 0, regraded: 0, enriched: 0, enrich_no_match: 0, enrich_skipped: 0, errors: [] };
-  const slot = args.market
-    ? ROTATION.find((r) => r.market === args.market) || ROTATION[0]
-    : ROTATION[dayOfYear(today) % ROTATION.length];
-  const areaLabel = slot.areas.map((a) => a.name).join(', ');
+  // Coverage-driven targeting. The old day-of-year rotation was even in *slots*
+  // but not in *rows* — Montgomery County yields far more per query than
+  // Philadelphia does, which is how the registry ended up 2.2:1 against the
+  // priority market with no mechanism to correct itself. --market still forces a
+  // single area for a manual run.
+  const plan = args.market
+    ? (() => {
+        const r = ROTATION.find((x) => x.market === args.market) || ROTATION[0];
+        return {
+          targets: r.areas.map((a) => ({ ...a, market: r.market, groups: GROUP_ORDER.slice(0, 3), cap: args.discover })),
+          budget: args.discover, throttled: false, total: Object.keys(registry.prospects).length,
+          reason: `forced market ${args.market}`, areaDeficits: [], groupDeficits: [],
+        };
+      })()
+    : planDiscovery(registry, { budget: args.discover });
+  const slot = { market: plan.targets[0]?.market || 'PHL', areas: plan.targets };
+  const areaLabel = plan.targets.map((a) => a.name).join(', ') || 'none (discovery paused)';
 
-  process.stderr.write(`radar refresh ${today} · rotation slot: ${slot.market} (${areaLabel})\n`);
+  process.stderr.write(`radar refresh ${today} · ${plan.reason}\n`);
+  process.stderr.write(`  plan: ${describePlan(plan)}\n`);
+  run.plan = plan.reason;
+  run.throttled = plan.throttled;
 
   // --- 1. Expand -----------------------------------------------------------
-  if (args.discover > 0) {
+  if (plan.budget > 0 && plan.targets.length) {
     const fresh = new Map();
-    for (const area of slot.areas) {
-      if (fresh.size >= args.discover) break;
-      const query = buildQuery(area, GROUP_ORDER);
-      process.stderr.write(`  discovering ${area.name} … `);
+    for (const area of plan.targets) {
+      if (fresh.size >= plan.budget) break;
+      // Each target carries its own groups (the ones behind target) and its own
+      // cap, so a densely-mapped county cannot absorb the whole day's budget —
+      // which is precisely how the Montgomery skew accumulated.
+      const query = buildQuery(area, area.groups);
+      process.stderr.write(`  discovering ${area.name} [${area.groups.join(',')}] cap ${area.cap} … `);
       const res = await runOverpass(query);
       if (!res.ok) {
         process.stderr.write(`FAILED (${res.error.slice(0, 90)})\n`);
         run.errors.push(`discover ${area.name}: ${res.error}`);
         continue;
       }
-      const { candidates, stats } = toCandidates(res.elements, { excludeDomains, market: slot.market });
+      const { candidates, stats } = toCandidates(res.elements, { excludeDomains, market: area.market });
       run.discovered_raw += stats.raw;
       let added = 0;
       for (const c of candidates) {
-        if (fresh.size >= args.discover) break;
+        if (added >= area.cap || fresh.size >= plan.budget) break;
         if (registry.prospects[c.domain] || fresh.has(c.domain)) continue;
         fresh.set(c.domain, { ...c, area: area.name });
         added += 1;
@@ -319,6 +348,8 @@ async function main() {
     const upserted = radar.upsertDiscovered(registry, [...fresh.values()], { today });
     run.discovered_new = upserted.added;
     process.stderr.write(`  added ${upserted.added} to the registry\n`);
+  } else {
+    process.stderr.write(`  discovery skipped: ${plan.reason}\n`);
   }
 
   // --- 1b. Enrich with ability-to-pay signals ------------------------------
@@ -376,7 +407,11 @@ async function main() {
   });
   if (toGrade.length) {
     process.stderr.write(`  grading ${toGrade.length} (new + due for re-audit)\n`);
-    const ctx = { suppressIds, suppressDomains, maxTier: args.maxTier, currentYear: new Date().getUTCFullYear() };
+    const renderBudget = args.maxTier >= 1 ? { left: args.render, spent: 0 } : null;
+    const ctx = {
+      suppressIds, suppressDomains, maxTier: args.maxTier,
+      currentYear: new Date().getUTCFullYear(), renderBudget,
+    };
     let done = 0;
     const results = await mapLimit(toGrade, args.concurrency, async (p) => {
       const r = await gradeOne(p, ctx);
@@ -402,6 +437,10 @@ async function main() {
         }
       }
       run.regraded += 1;
+    }
+    if (renderBudget) {
+      run.rendered = args.render - renderBudget.left;
+      process.stderr.write(`  tier 1 renders: ${run.rendered} of ${args.render} budgeted\n`);
     }
   }
 

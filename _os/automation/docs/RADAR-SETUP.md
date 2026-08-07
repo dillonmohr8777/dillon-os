@@ -179,3 +179,135 @@ live site is recorded as unreachable. One real example in this registry —
 `andorradental.com` — went from "wouldn't serve markup" to a 497KB 200 response
 once cookies were kept. Nothing persists between calls, so audits stay
 independent.
+
+---
+
+## The daily sweep
+
+One scheduled job keeps the radar useful: `.github/workflows/radar-daily.yml`,
+06:10 UTC. It runs on GitHub's runners rather than a desktop, so it does not
+depend on any particular machine being awake, and it commits the day's registry
+back to the branch.
+
+```
+discover into the thinnest coverage cells
+  -> re-audit whatever is past its recheck date
+  -> spend a Tier 1 render budget on the rows still guessing
+  -> rewrite dashboard, queue CSV and dated digest
+  -> check nothing private is about to be committed
+  -> commit, push, publish
+```
+
+### Why the numbers are what they are
+
+| Budget | Default | Reasoning |
+|---|---:|---|
+| Discovery | **60/day** | The factory builds 25/week and 118 rebuild targets are already queued — about five months of work. Discovering 200/day would not add pipeline, it would add hoard. |
+| Tier 1 renders | **80/day** | The expensive tier. Spent in `dueForRecheck` order, so it lands on never-graded rows first, then the most overdue — the biggest blind spots rather than whatever was enumerated first. |
+| Re-audits | **250/day** | Cheap. Only rows actually past their per-verdict recheck date are touched, so this is a ceiling, not a target. |
+| Places lookups | **60/day** | Billed per call. |
+
+Override any of them on a manual run: `--discover`, `--render`, `--recheck`,
+`--enrich`. The workflow also accepts them via **Run workflow** in the Actions
+tab, plus a `regrade` input for forcing a verdict class to be re-audited.
+
+### Coverage-driven targeting, not a rotation
+
+Discovery used to pick its target by day-of-year — seven slots, Philadelphia
+taking one. That is even in *slots* but not in *rows*: Montgomery County is
+densely mapped and yields far more per query than Philadelphia does. The result
+was a registry at **Montgomery 389 / Philadelphia 175**, a 2.2:1 skew away from
+the priority market, with nothing in the loop to correct it.
+
+`lib/coverage-plan.js` plans from the registry instead. It compares what each
+county and vertical *holds* against what it *should* hold and spends the day on
+the largest deficits, so coverage self-corrects: the thinner a cell, the more of
+tomorrow it gets. Each target also carries a per-area cap, so one dense county
+can never absorb the whole day again.
+
+Target shares live in `AREA_TARGETS` and `GROUP_TARGETS`. Vertical shares are
+weighted by how well a group converts, **not** by how many OSM happens to hold —
+OSM under-maps suburban trades badly, and following availability would keep
+over-collecting restaurants and under-collecting the contractors that close.
+
+Inspect a plan without running anything:
+
+```bash
+node -e "
+const radar=require('./_os/automation/lib/radar');
+const {planDiscovery,describePlan}=require('./_os/automation/lib/coverage-plan');
+const p=planDiscovery(radar.load());
+console.log(describePlan(p));
+console.table(p.areaDeficits.map(({name,have,want,deficit})=>({name,have,want,deficit})));
+"
+```
+
+### The registry has a ceiling, and the job respects it
+
+The dashboard embeds every row, and the generator throws rather than shipping a
+page too large to open. Measured: **~549 bytes per row** after interning, so the
+1.5MB guard lands near **2,560 rows**.
+
+So discovery ramps down between a soft cap (2,000) and a hard cap (2,400), and
+stops entirely above it — the day's budget goes to rendering and re-auditing
+instead, because past that size another unaudited row is worth less than a
+rendered one. A linear ramp rather than a cliff: there is no reason the last row
+under a threshold and the first row over it should be treated differently.
+
+| Registry size | Discovery budget |
+|---:|---:|
+| ≤ 2,000 | 60 |
+| 2,100 | 45 |
+| 2,200 | 30 |
+| 2,300 | 15 |
+| ≥ 2,400 | 0 |
+
+To raise the ceiling, trim `projectRows()` or start excluding closed prospects —
+do not just raise the caps.
+
+### Secrets the workflow expects
+
+Set these in **Settings → Secrets and variables → Actions**:
+
+| Secret | Effect if missing |
+|---|---|
+| `NETLIFY_AUTH_TOKEN` | The publish step is skipped. The sweep still runs and still commits; the dashboard on disk is current, the hosted one is not. |
+| `GOOGLE_PLACES_API_KEY` | Enrichment does nothing, so ability-to-pay signals stay absent and `opportunity_confidence` stays low. **This is the highest-value one to set.** |
+
+Publishing is a separate step with `continue-on-error`, so a Netlify outage
+cannot cost a sweep's worth of grading.
+
+### The privacy guard
+
+The registry and queue CSV are tracked in a **public** repository.
+`discovery.sanitizeForGit` strips contact detail on every write path, and the
+workflow re-checks the tracked outputs for phone, street, coordinate and OSM-id
+fields before committing. A regression in that function fails the run rather than
+quietly publishing several hundred phone numbers.
+
+### Running it on the desktop instead
+
+`_os/automation/bin/radar-morning.ps1` does the same thing locally. On a machine
+with no proxy, Chromium does its own networking and Tier 1 is faster — see the
+Tier 1 section above.
+
+### When it breaks
+
+The dashboard's run-health strip turns red and prints the error verbatim; the
+Actions run summary carries the same numbers. The failure that stayed invisible
+before the strip existed was Places returning HTTP 400 on an invalid key for
+days, silently enriching nothing.
+
+### A limit worth knowing about
+
+The planner can ask for rows that do not exist. On the first plan-driven sweep
+Philadelphia was allotted 23 and returned **10**: Overpass had 120 raw matches
+for those three verticals, but almost all were chains, had no website, or were
+already tracked. The deficit therefore persists and Philadelphia gets asked
+again tomorrow, yielding little again.
+
+Nothing breaks — the run just under-delivers quietly — but it means the
+Philadelphia target may be **unreachable with OpenStreetMap alone**. That is the
+same gap as "OSM under-maps suburban trades", seen from the other side. A second
+discovery source is what fixes it; until then, treat a persistently unmet
+Philadelphia deficit as evidence of source coverage, not of a planner bug.

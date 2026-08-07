@@ -211,6 +211,47 @@ function projectRows(prospects) {
   });
 }
 
+/**
+ * Replace repeated template strings with indices into a shared table.
+ *
+ * `headline`, `offer` and `next_action` are generated from a small number of
+ * templates, so across 700 rows there are only ~550 distinct values filling
+ * ~2,100 slots. Storing them inline costs about 240 bytes per row — a third of
+ * the payload — to say the same handful of sentences over and over.
+ *
+ * This matters because the embedded payload has a real ceiling: the generator
+ * refuses to emit a page over 1.5MB, and at the raw size that ceiling arrives at
+ * roughly 1,950 prospects. Interning roughly halves the per-row cost and pushes
+ * it past 2,900, which is what makes a daily discovery job survivable rather
+ * than something that breaks the dashboard within a week.
+ *
+ * Mutates `rows` in place and returns the table. An index of -1 means empty.
+ */
+function internStrings(rows, fields = ['hl', 'of', 'na'], arrayFields = ['f']) {
+  const table = [];
+  const index = new Map();
+  const put = (v) => {
+    let i = index.get(v);
+    if (i === undefined) {
+      i = table.length;
+      table.push(v);
+      index.set(v, i);
+    }
+    return i;
+  };
+  for (const row of rows) {
+    for (const f of fields) {
+      row[f] = row[f] ? put(row[f]) : -1;
+    }
+    // Faults share the same table: a fault string and a headline can be
+    // identical text, and there is no reason to store it twice.
+    for (const f of arrayFields) {
+      if (Array.isArray(row[f])) row[f] = row[f].filter(Boolean).map(put);
+    }
+  }
+  return table;
+}
+
 /** County × vertical counts, computed once server-side. */
 function crossTab(rows) {
   const areas = new Map();
@@ -286,6 +327,9 @@ function clientScript() {
       .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
   function n(v, f) { return v === null || v === undefined || v !== v ? (f === undefined ? '—' : f) : String(v); }
+  // Headline / offer / next-action are stored as indices into a shared table —
+  // the same sentence appears on dozens of rows, so shipping it once matters.
+  function S(i) { return (i === null || i === undefined || i < 0) ? '' : (META.strings[i] || ''); }
 
   var PAGE = 100;
   var state = {
@@ -410,7 +454,7 @@ function clientScript() {
       '<td class="c-spark">' + sparkHtml(r.gh) + '</td>' +
       '<td class="c-trend">' + trendHtml(r) + '</td>' +
       '<td class="c-prio"><strong>' + n(r.p) + '</strong></td>' +
-      '<td class="c-why">' + esc((r.f && r.f[0]) || r.hl || '') + '</td>' +
+      '<td class="c-why">' + esc((r.f && r.f.length ? S(r.f[0]) : '') || S(r.hl)) + '</td>' +
     '</tr>';
   }
 
@@ -451,7 +495,7 @@ function clientScript() {
       ['Phone on file', r.hp ? 'yes' : 'no'],
     ];
     var faults = (r.f || []).length
-      ? '<ul class="det__faults">' + r.f.map(function (f) { return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>'
+      ? '<ul class="det__faults">' + r.f.map(function (f) { return '<li>' + esc(S(f)) + '</li>'; }).join('') + '</ul>'
       : '<p class="det__none">No faults recorded.</p>';
     var hist = (r.gh || []).length
       ? '<ul class="det__hist">' + r.gh.slice().reverse().map(function (g) {
@@ -472,9 +516,9 @@ function clientScript() {
       '</div>' +
       '<div class="det__col">' +
         '<h3>Read</h3>' +
-        (r.hl ? '<p class="det__head">' + esc(r.hl) + '</p>' : '') +
-        (r.of ? '<p><span class="det__k">Offer</span> ' + esc(r.of) + '</p>' : '') +
-        (r.na ? '<p><span class="det__k">Next</span> ' + esc(r.na) + '</p>' : '') +
+        (S(r.hl) ? '<p class="det__head">' + esc(S(r.hl)) + '</p>' : '') +
+        (S(r.of) ? '<p><span class="det__k">Offer</span> ' + esc(S(r.of)) + '</p>' : '') +
+        (S(r.na) ? '<p><span class="det__k">Next</span> ' + esc(S(r.na)) + '</p>' : '') +
         '<dl class="det__facts">' + facts.map(function (f) {
           return '<dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd>';
         }).join('') + '</dl>' +
@@ -549,7 +593,9 @@ function clientScript() {
     var out = [cols.map(function (c) { return c[0]; }).join(',')];
     rows.forEach(function (r) {
       out.push(cols.map(function (c) {
-        return csvCell(c[1] === null ? (r.f && r.f[0]) || '' : r[c[1]]);
+        if (c[1] === null) return csvCell(r.f && r.f.length ? S(r.f[0]) : '');
+        if (c[1] === 'na') return csvCell(S(r.na));
+        return csvCell(r[c[1]]);
       }).join(','));
     });
     var blob = new Blob([out.join('\n')], { type: 'text/csv' });
@@ -712,9 +758,14 @@ function renderDashboard(summary, opts = {}) {
     { k: 'l', label: 'Lifecycle', values: lifecycleOrder.filter((l) => rows.some((r) => r.l === l)) },
   ];
 
+  // Interned before the payload is assembled, so the table and the indices in
+  // the rows can never disagree.
+  const strings = internStrings(rows);
+
   const payload = {
     meta: {
       generated: s.generated || '',
+      strings,
       queues: QUEUES.map((q) => ({ key: q.key, label: q.label, verdicts: q.verdicts, sort: q.sort, desc: q.desc })),
       bandColors: BAND_COLORS,
       verdictLabel: VERDICT_LABEL,
