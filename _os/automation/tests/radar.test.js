@@ -266,7 +266,11 @@ test('the dashboard renders self-contained HTML with no external requests', () =
   assert.doesNotMatch(html, /<link[^>]+\bhref\s*=/i, 'no external stylesheet or preload');
   assert.doesNotMatch(html, /@import/i, 'no CSS import');
   assert.doesNotMatch(html, /\burl\(\s*['"]?https?:/i, 'no remote asset in CSS');
-  assert.doesNotMatch(html, /<img[^>]+\bsrc\s*=/i, 'no remote images');
+  // The brand mark and the search icon are inlined as data: URIs. Those are
+  // bytes already in the document, not a fetch — what must never appear is an
+  // <img> pointing at a host.
+  assert.doesNotMatch(html, /<img[^>]+\bsrc\s*=\s*['"](?!data:)/i, 'images must be inlined, never remote');
+  assert.match(html, /<img class="lock__mark" src="data:image\//, 'the NeedMomentum mark ships inline');
 
   // Any absolute URL left in the document must be a link the user clicks, never
   // something the page fetches on load.
