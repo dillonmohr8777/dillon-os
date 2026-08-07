@@ -254,8 +254,12 @@ test('the dashboard renders self-contained HTML with no external requests', () =
 
   assert.match(html, /<title>Prospect Radar/);
   assert.match(html, /Acme Plumbing/);
-  assert.match(html, /data-theme="dark"/, 'must honour the viewer theme toggle, not only the media query');
-  assert.match(html, /prefers-color-scheme: dark/);
+  // Pinned to the blue theme: no media query, so a viewer whose OS is in light
+  // mode still sees the branded surface rather than a cream one.
+  assert.doesNotMatch(html, /prefers-color-scheme/, 'the page must not follow the OS theme');
+  assert.match(html, /:root \{\s*--bg:#101823/, 'blue is the base theme, not an override');
+  assert.match(html, /\[data-theme="light"\]/, 'the light theme stays reachable by attribute');
+  assert.match(html, /\[data-theme="dark"\]/);
   assert.match(html, /noindex/, 'this page names real businesses and must never be indexed');
 
   // The page is interactive, so it now has inline script — but the property that

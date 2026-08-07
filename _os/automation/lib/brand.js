@@ -155,14 +155,19 @@ const TYPE = {
 };
 
 /**
- * Emit the CSS custom-property block for both themes.
+ * Emit the CSS custom-property block.
  *
- * Covers the media query *and* an explicit `data-theme` override in both
- * directions, so a viewer's manual toggle wins over their OS preference.
- *
- * @param {object} [opts] `{ selector }` root selector, default `:root`
+ * @param {object} [opts]
+ * @param {string} [opts.selector=':root'] root selector
+ * @param {'dark'|'light'} [opts.theme] Pin the page to one theme. The radar is
+ *   pinned to `dark`: it is a branded surface someone may screenshot into a
+ *   pitch, so it must look the same for every viewer instead of turning cream
+ *   for anyone whose OS is in light mode. `data-theme` still overrides, so the
+ *   other theme stays one attribute away and the print stylesheet still works.
+ * @param {boolean} [opts.followSystem=true] Honour `prefers-color-scheme`.
+ *   Forced off when `theme` is pinned — a pin that the OS could undo is not one.
  */
-function cssVariables({ selector = ':root' } = {}) {
+function cssVariables({ selector = ':root', theme = null, followSystem = true } = {}) {
   const decl = (t) =>
     [
       `--bg:${t.bg}`,
@@ -191,13 +196,18 @@ function cssVariables({ selector = ':root' } = {}) {
       `--s-strong:${t.scale.strong}`,
     ].join(';');
 
+  const base = theme === 'dark' ? TOKENS.dark : TOKENS.light;
+  const systemQuery =
+    theme || !followSystem
+      ? ''
+      : `\n  @media (prefers-color-scheme: dark) { ${selector} { ${decl(TOKENS.dark)} } }`;
+
   return `${selector} {
-    ${decl(TOKENS.light)};
+    ${decl(base)};
     --display:${TYPE.display};
     --sans:${TYPE.sans};
     --mono:${TYPE.mono};
-  }
-  @media (prefers-color-scheme: dark) { ${selector} { ${decl(TOKENS.dark)} } }
+  }${systemQuery}
   ${selector}[data-theme="dark"] { ${decl(TOKENS.dark)} }
   ${selector}[data-theme="light"] { ${decl(TOKENS.light)} }`;
 }

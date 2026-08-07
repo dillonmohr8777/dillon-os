@@ -738,8 +738,13 @@ function renderDashboard(summary, opts = {}) {
 <style>
   /* Brand tokens come from lib/brand.js — measured from the NeedMomentum mark
      and WCAG-checked there, so this file never hand-picks a colour. Legacy
-     aliases keep older selectors pointing at the new names. */
-  ${cssVariables()}
+     aliases keep older selectors pointing at the new names.
+
+     Pinned to the blue theme rather than following the viewer's OS: this is a
+     branded surface that gets screenshotted into pitches, so it has to look the
+     same for everyone. A data-theme="light" attribute on the root still flips
+     it, and the print block below overrides both. */
+  ${cssVariables({ theme: 'dark' })}
   :root { --bg-panel: var(--panel); --bg-sunk: var(--sunk); --accent: var(--brand-ink); }
   ${LOCKUP_CSS}
 
@@ -1026,7 +1031,17 @@ function renderDashboard(summary, opts = {}) {
 
   /* Print: Mac wants one link, and a page that prints cleanly is the fallback. */
   @media print {
-    :root { --bg: #fff; --panel: #fff; --sunk: #f6f8fa; --bg-panel: #fff; --bg-sunk: #f6f8fa; --fg: #000; --fg-mid: #333; --fg-faint: #666; --rule: #ccc; --rule-strong: #999; --brand-wash: transparent; }
+    /* Matches the attribute form as well: [data-theme] out-specifies :root, so
+       without this a pinned dark page would print dark and waste a cartridge. */
+    :root, :root[data-theme="dark"], :root[data-theme="light"] {
+      --bg: #fff; --panel: #fff; --sunk: #f6f8fa; --bg-panel: #fff; --bg-sunk: #f6f8fa;
+      --fg: #000; --fg-mid: #333; --fg-faint: #666; --rule: #ccc; --rule-strong: #999;
+      --brand-ink: #1C5480; --brand: #2A80C2; --brand-wash: transparent;
+      --field-blue: transparent; --field-gold: transparent;
+      --s-broken: #A63D2F; --s-decayed: #B15B28; --s-dated: #6E5A1C;
+      --s-unconfirmed: #6B6F8C; --s-strong: #1F7A5E;
+    }
+    body::before, body::after { display: none !important; }
     .tabs, .bar, .facets, #more, #showall, .keys { display: none !important; }
     .scroll { overflow: visible; border: 0; }
     thead th { position: static; }

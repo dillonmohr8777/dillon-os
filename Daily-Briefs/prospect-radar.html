@@ -7,14 +7,18 @@
 <style>
   /* Brand tokens come from lib/brand.js — measured from the NeedMomentum mark
      and WCAG-checked there, so this file never hand-picks a colour. Legacy
-     aliases keep older selectors pointing at the new names. */
+     aliases keep older selectors pointing at the new names.
+
+     Pinned to the blue theme rather than following the viewer's OS: this is a
+     branded surface that gets screenshotted into pitches, so it has to look the
+     same for everyone. A data-theme="light" attribute on the root still flips
+     it, and the print block below overrides both. */
   :root {
-    --bg:#F4F7FA;--panel:#FFFFFF;--sunk:#EAF0F6;--fg:#111823;--fg-mid:#4A5769;--fg-faint:#7A8798;--rule:#DDE5EE;--rule-strong:#BECBD9;--brand:#2A80C2;--brand-ink:#2673AF;--brand-fill:#2776B2;--on-brand:#FFFFFF;--brand-wash:rgba(42,128,194,0.08);--gold:#FFC63B;--gold-ink:#6B4A00;--on-gold:#111823;--gold-wash:rgba(255,198,59,0.14);--field-blue:rgba(42,128,194,0.16);--field-gold:rgba(255,186,30,0.26);--s-broken:#A63D2F;--s-decayed:#B15B28;--s-dated:#6E5A1C;--s-unconfirmed:#6B6F8C;--s-strong:#1F7A5E;
+    --bg:#101823;--panel:#18222E;--sunk:#0B1119;--fg:#E7ECF2;--fg-mid:#A3B1C0;--fg-faint:#6F7E8E;--rule:#26323F;--rule-strong:#3A4857;--brand:#2A80C2;--brand-ink:#5FA0D1;--brand-fill:#2A80C2;--on-brand:#FFFFFF;--brand-wash:rgba(95,160,209,0.12);--gold:#FFC63B;--gold-ink:#FFC63B;--on-gold:#111823;--gold-wash:rgba(255,198,59,0.10);--field-blue:rgba(58,140,210,0.34);--field-gold:rgba(255,186,30,0.22);--s-broken:#E0705C;--s-decayed:#EE8C4C;--s-dated:#A8863C;--s-unconfirmed:#9A9EBC;--s-strong:#3FB08B;
     --display:"Avenir Next", "Segoe UI Variable Display", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
     --sans:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --mono:ui-monospace, "SF Mono", SFMono-Regular, "Cascadia Mono", Menlo, Consolas, monospace;
   }
-  @media (prefers-color-scheme: dark) { :root { --bg:#101823;--panel:#18222E;--sunk:#0B1119;--fg:#E7ECF2;--fg-mid:#A3B1C0;--fg-faint:#6F7E8E;--rule:#26323F;--rule-strong:#3A4857;--brand:#2A80C2;--brand-ink:#5FA0D1;--brand-fill:#2A80C2;--on-brand:#FFFFFF;--brand-wash:rgba(95,160,209,0.12);--gold:#FFC63B;--gold-ink:#FFC63B;--on-gold:#111823;--gold-wash:rgba(255,198,59,0.10);--field-blue:rgba(58,140,210,0.34);--field-gold:rgba(255,186,30,0.22);--s-broken:#E0705C;--s-decayed:#EE8C4C;--s-dated:#A8863C;--s-unconfirmed:#9A9EBC;--s-strong:#3FB08B } }
   :root[data-theme="dark"] { --bg:#101823;--panel:#18222E;--sunk:#0B1119;--fg:#E7ECF2;--fg-mid:#A3B1C0;--fg-faint:#6F7E8E;--rule:#26323F;--rule-strong:#3A4857;--brand:#2A80C2;--brand-ink:#5FA0D1;--brand-fill:#2A80C2;--on-brand:#FFFFFF;--brand-wash:rgba(95,160,209,0.12);--gold:#FFC63B;--gold-ink:#FFC63B;--on-gold:#111823;--gold-wash:rgba(255,198,59,0.10);--field-blue:rgba(58,140,210,0.34);--field-gold:rgba(255,186,30,0.22);--s-broken:#E0705C;--s-decayed:#EE8C4C;--s-dated:#A8863C;--s-unconfirmed:#9A9EBC;--s-strong:#3FB08B }
   :root[data-theme="light"] { --bg:#F4F7FA;--panel:#FFFFFF;--sunk:#EAF0F6;--fg:#111823;--fg-mid:#4A5769;--fg-faint:#7A8798;--rule:#DDE5EE;--rule-strong:#BECBD9;--brand:#2A80C2;--brand-ink:#2673AF;--brand-fill:#2776B2;--on-brand:#FFFFFF;--brand-wash:rgba(42,128,194,0.08);--gold:#FFC63B;--gold-ink:#6B4A00;--on-gold:#111823;--gold-wash:rgba(255,198,59,0.14);--field-blue:rgba(42,128,194,0.16);--field-gold:rgba(255,186,30,0.26);--s-broken:#A63D2F;--s-decayed:#B15B28;--s-dated:#6E5A1C;--s-unconfirmed:#6B6F8C;--s-strong:#1F7A5E }
   :root { --bg-panel: var(--panel); --bg-sunk: var(--sunk); --accent: var(--brand-ink); }
@@ -310,7 +314,17 @@
 
   /* Print: Mac wants one link, and a page that prints cleanly is the fallback. */
   @media print {
-    :root { --bg: #fff; --panel: #fff; --sunk: #f6f8fa; --bg-panel: #fff; --bg-sunk: #f6f8fa; --fg: #000; --fg-mid: #333; --fg-faint: #666; --rule: #ccc; --rule-strong: #999; --brand-wash: transparent; }
+    /* Matches the attribute form as well: [data-theme] out-specifies :root, so
+       without this a pinned dark page would print dark and waste a cartridge. */
+    :root, :root[data-theme="dark"], :root[data-theme="light"] {
+      --bg: #fff; --panel: #fff; --sunk: #f6f8fa; --bg-panel: #fff; --bg-sunk: #f6f8fa;
+      --fg: #000; --fg-mid: #333; --fg-faint: #666; --rule: #ccc; --rule-strong: #999;
+      --brand-ink: #1C5480; --brand: #2A80C2; --brand-wash: transparent;
+      --field-blue: transparent; --field-gold: transparent;
+      --s-broken: #A63D2F; --s-decayed: #B15B28; --s-dated: #6E5A1C;
+      --s-unconfirmed: #6B6F8C; --s-strong: #1F7A5E;
+    }
+    body::before, body::after { display: none !important; }
     .tabs, .bar, .facets, #more, #showall, .keys { display: none !important; }
     .scroll { overflow: visible; border: 0; }
     thead th { position: static; }
