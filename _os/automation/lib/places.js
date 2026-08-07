@@ -96,7 +96,7 @@ function buildQueryText(row) {
  *          status: 'ok' | 'no_match' | 'skipped' | 'error'
  */
 async function enrichProspect(row, opts = {}) {
-  const apiKey = opts.apiKey || process.env.GOOGLE_PLACES_API_KEY;
+  const apiKey = String(opts.apiKey || process.env.GOOGLE_PLACES_API_KEY || '').trim();
   if (!apiKey) return { status: 'skipped', reason: 'no GOOGLE_PLACES_API_KEY set' };
 
   const ourDomain = row.domain || normalizeDomain(row.website);
