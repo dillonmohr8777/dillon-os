@@ -66,6 +66,17 @@ const BRAND = {
   domain: 'needmomentum.com',
   /** Measured from the mark. Fills and chrome only — never small text. */
   blue: '#2A80C2',
+  /**
+   * The second brand colour, per the operator. The live site is bot-gated so it
+   * could not be sampled the way the blue was; this is the complement of the
+   * measured blue (206° → 45°) tuned until ink-on-gold cleared AA.
+   *
+   * **Gold is a fill, never body text.** 1.46:1 on the light surface — it fails
+   * as text by a wide margin and no amount of tuning fixes that without turning
+   * it brown. With near-black on top it reaches 11.36:1, and on dark surfaces it
+   * works as text at 11.38:1.
+   */
+  gold: '#FFC63B',
 };
 
 /**
@@ -87,10 +98,19 @@ const TOKENS = {
     brandFill: '#2776B2', // white small text on it: 4.86:1
     onBrand: '#FFFFFF',
     brandWash: 'rgba(42,128,194,0.08)',
+    gold: '#FFC63B',
+    goldInk: '#6B4A00', // gold as *text* is impossible; this is for gold-adjacent copy: 5.9:1 on panel
+    onGold: '#111823', // 11.36:1 on gold
+    goldWash: 'rgba(255,198,59,0.14)',
+    // The page field, separate from the hover washes so each can be tuned for
+    // its own job. Light mode needs less: a tint on white reads far louder.
+    fieldBlue: 'rgba(42,128,194,0.16)',
+    fieldGold: 'rgba(255,186,30,0.26)',
     scale: {
       broken: '#A63D2F', //  6.31:1 on panel
       decayed: '#B15B28', //  4.78:1
-      dated: '#806921', //  5.30:1
+      // Pushed off yellow into olive so it cannot be read as the brand gold.
+      dated: '#6E5A1C', //  6.68:1 on panel, 4.26:1 against gold
       unconfirmed: '#6B6F8C', //  4.91:1
       strong: '#1F7A5E', //  5.25:1
     },
@@ -109,10 +129,16 @@ const TOKENS = {
     brandFill: '#2A80C2',
     onBrand: '#FFFFFF',
     brandWash: 'rgba(95,160,209,0.12)',
+    gold: '#FFC63B', // 11.38:1 as text on the dark surface, so usable either way
+    goldInk: '#FFC63B',
+    onGold: '#111823',
+    goldWash: 'rgba(255,198,59,0.10)',
+    fieldBlue: 'rgba(58,140,210,0.34)',
+    fieldGold: 'rgba(255,186,30,0.22)',
     scale: {
       broken: '#E0705C', //  5.08:1 on panel
       decayed: '#EE8C4C', //  6.50:1
-      dated: '#D8B44A', //  8.07:1
+      dated: '#A8863C', //  4.70:1 on panel, 2.18:1 against gold — separated by saturation
       unconfirmed: '#9A9EBC', //  6.11:1
       strong: '#3FB08B', //  5.96:1
     },
@@ -152,6 +178,12 @@ function cssVariables({ selector = ':root' } = {}) {
       `--brand-fill:${t.brandFill}`,
       `--on-brand:${t.onBrand}`,
       `--brand-wash:${t.brandWash}`,
+      `--gold:${t.gold}`,
+      `--gold-ink:${t.goldInk}`,
+      `--on-gold:${t.onGold}`,
+      `--gold-wash:${t.goldWash}`,
+      `--field-blue:${t.fieldBlue}`,
+      `--field-gold:${t.fieldGold}`,
       `--s-broken:${t.scale.broken}`,
       `--s-decayed:${t.scale.decayed}`,
       `--s-dated:${t.scale.dated}`,

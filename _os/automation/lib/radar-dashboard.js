@@ -752,6 +752,40 @@ function renderDashboard(summary, opts = {}) {
     font-size: 15px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  /* Depth without an image: two brand-tinted pools bleeding in from the top
+     corners — blue from the left, gold from the right — over a flat base. Fixed,
+     so it reads as a lit field the content sits on rather than something that
+     scrolls with the table. */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+      radial-gradient(1150px 660px at 2% -12%, var(--field-blue), transparent 66%),
+      radial-gradient(1050px 620px at 100% 2%, var(--field-gold), transparent 64%),
+      radial-gradient(780px 540px at 46% 110%, var(--field-blue), transparent 70%);
+  }
+  /* A whisper of grain over the gradients. Large flat washes band on cheap
+     panels; the texture breaks the ramp up without reading as a pattern. */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: .5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+  }
+
+  /* Motion is opt-out, and every transform below is disabled wholesale for
+     anyone who asked for less of it. */
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+    .stat:hover, .qtab:hover, tr.row:hover, .fchip:hover, .btn:hover { transform: none !important; }
   }
   .wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px 88px; }
   a { color: var(--brand-ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
@@ -771,7 +805,7 @@ function renderDashboard(summary, opts = {}) {
   .mast h1 em { font-style: normal; color: var(--brand-ink); }
   .mast .lede { color: var(--fg-mid); font-size: 14px; max-width: 54ch; margin: 8px 0 0; }
   .eyebrow { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-ink); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-  .eyebrow::before { content: ''; width: 18px; height: 2px; background: var(--brand); flex: none; }
+  .eyebrow::before { content: ''; width: 22px; height: 2px; background: linear-gradient(90deg, var(--brand), var(--gold)); flex: none; border-radius: 999px; }
 
   /* Run health: silence here is how a broken sweep went unnoticed for a week. */
   .health { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 18px; margin: 20px 0 0; padding: 11px 15px;
@@ -786,8 +820,22 @@ function renderDashboard(summary, opts = {}) {
 
   /* The four numbers that decide the morning. Cards, not a fused strip — each
      one is a separate claim and reads better with air around it. */
-  .decide { display: grid; grid-template-columns: repeat(auto-fit, minmax(168px, 1fr)); gap: 12px; margin: 22px 0 10px; }
-  .stat { background: var(--panel); padding: 16px 18px 15px; border: 1px solid var(--rule); border-radius: 10px; position: relative; overflow: hidden; }
+  .decide { display: grid; grid-template-columns: repeat(auto-fit, minmax(168px, 1fr)); gap: 12px; margin: 22px 0 10px; perspective: 900px; }
+  .stat { background: var(--panel); padding: 16px 18px 15px; border: 1px solid var(--rule); border-radius: 10px; position: relative; overflow: hidden;
+    transform-style: preserve-3d; will-change: transform;
+    transition: transform .28s cubic-bezier(.2,.7,.3,1), box-shadow .28s ease, border-color .28s ease; }
+  /* Tilt away from the viewer's cursor side and lift — the shadow is what sells
+     it, so it grows with the rotation rather than being a constant drop. */
+  .stat:hover { transform: translateY(-4px) rotateX(6deg) scale(1.014);
+    box-shadow: 0 16px 34px -14px rgba(8,14,22,.55), 0 3px 10px -4px rgba(8,14,22,.3);
+    border-color: var(--brand); }
+  .stat:hover .stat__n { transform: translateZ(14px); }
+  .stat__n, .stat__l { transition: transform .28s cubic-bezier(.2,.7,.3,1); }
+  .stat:hover .stat__l { transform: translateZ(6px); }
+  .stat::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0;
+    background: linear-gradient(115deg, transparent 38%, var(--gold-wash) 50%, transparent 62%);
+    transition: opacity .32s ease; }
+  .stat:hover::after { opacity: 1; }
   .stat::before { content: ''; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--fg-faint); }
   .stat__n { font-family: var(--display); font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -0.035em; }
   .stat__l { font-size: 12.5px; color: var(--fg-mid); margin-top: 6px; line-height: 1.35; }
@@ -811,14 +859,19 @@ function renderDashboard(summary, opts = {}) {
   /* ---- Workbench --------------------------------------------------------- */
   /* The panel is one continuous surface: tabs, controls and table share a card
      so the whole thing reads as a single instrument rather than stacked blocks. */
-  .work { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; }
+  .work { background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden;
+    box-shadow: 0 24px 50px -30px rgba(8,14,22,.5), 0 2px 6px -3px rgba(8,14,22,.18); position: relative; }
+  .work::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 2px; z-index: 3;
+    background: linear-gradient(90deg, var(--brand) 0%, var(--brand) 34%, var(--gold) 72%, var(--gold) 100%); }
   .tabs { display: flex; flex-wrap: wrap; gap: 2px; padding: 8px 10px 0; background: var(--sunk); border-bottom: 1px solid var(--rule); }
   .qtab { background: none; border: 0; border-radius: 7px 7px 0 0; padding: 9px 15px; cursor: pointer;
     font-size: 13.5px; color: var(--fg-mid); position: relative; }
   .qtab b { font-family: var(--mono); font-variant-numeric: tabular-nums; margin-left: 8px; font-weight: 400; color: var(--fg-faint); font-size: 12px; }
-  .qtab[aria-selected="true"] { background: var(--panel); color: var(--fg); font-weight: 600; box-shadow: inset 0 2px 0 var(--brand); }
+  .qtab { transition: background .2s ease, color .2s ease, transform .2s cubic-bezier(.2,.7,.3,1); }
+  .qtab[aria-selected="true"] { background: var(--panel); color: var(--fg); font-weight: 600;
+    box-shadow: inset 0 2px 0 var(--gold), 0 -6px 16px -10px rgba(8,14,22,.5); }
   .qtab[aria-selected="true"] b { color: var(--brand-ink); }
-  .qtab:hover:not([aria-selected="true"]) { color: var(--fg); background: var(--brand-wash); }
+  .qtab:hover:not([aria-selected="true"]) { color: var(--fg); background: var(--brand-wash); transform: translateY(-2px); }
 
   .bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 14px 16px 12px; }
   .search { flex: 1 1 280px; min-width: 200px; padding: 9px 12px 9px 34px; background: var(--sunk); color: var(--fg);
@@ -828,18 +881,24 @@ function renderDashboard(summary, opts = {}) {
   .search:focus { border-color: var(--brand); outline: none; box-shadow: 0 0 0 3px var(--brand-wash); }
   .search::placeholder { color: var(--fg-faint); }
   .bar__n { font-family: var(--mono); font-size: 12.5px; color: var(--fg-mid); font-variant-numeric: tabular-nums; }
-  .btn { background: var(--sunk); border: 1px solid var(--rule-strong); border-radius: 8px; padding: 8px 13px; cursor: pointer; font-size: 12.5px; color: var(--fg-mid); }
-  .btn:hover { border-color: var(--brand); color: var(--fg); }
-  .btn--brand { background: var(--brand-fill); border-color: var(--brand-fill); color: var(--on-brand); font-weight: 550; }
-  .btn--brand:hover { filter: brightness(1.08); color: var(--on-brand); }
+  .btn { background: var(--sunk); border: 1px solid var(--rule-strong); border-radius: 8px; padding: 8px 13px; cursor: pointer; font-size: 12.5px; color: var(--fg-mid);
+    transition: transform .16s cubic-bezier(.2,.7,.3,1), box-shadow .16s ease, border-color .16s ease, color .16s ease; }
+  .btn:hover { border-color: var(--brand); color: var(--fg); transform: translateY(-2px); box-shadow: 0 8px 18px -10px rgba(8,14,22,.5); }
+  .btn:active { transform: translateY(0); box-shadow: none; }
+  /* The one gold call-to-action on the page. Gold is a fill with ink on it,
+     which is the only way it clears contrast. */
+  .btn--brand { background: var(--gold); border-color: var(--gold); color: var(--on-gold); font-weight: 650; }
+  .btn--brand:hover { filter: brightness(1.06); color: var(--on-gold); box-shadow: 0 8px 20px -8px rgba(255,198,59,.5); }
   .linkish { background: none; border: 0; color: var(--brand-ink); cursor: pointer; text-decoration: underline; padding: 0; font-size: inherit; }
 
   .facets { display: flex; flex-direction: column; gap: 7px; padding: 0 16px 14px; }
   .facet { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
   .facet__l { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.11em; text-transform: uppercase; color: var(--fg-faint); width: 66px; flex: none; }
-  .fchip { background: none; border: 1px solid var(--rule); border-radius: 999px; color: var(--fg-mid); padding: 3px 11px; font-size: 12px; cursor: pointer; }
-  .fchip:hover { border-color: var(--brand); color: var(--fg); }
-  .fchip[aria-pressed="true"] { background: var(--brand-fill); border-color: var(--brand-fill); color: var(--on-brand); font-weight: 550; }
+  .fchip { background: none; border: 1px solid var(--rule); border-radius: 999px; color: var(--fg-mid); padding: 3px 11px; font-size: 12px; cursor: pointer;
+    transition: transform .16s cubic-bezier(.2,.7,.3,1), background .16s ease, border-color .16s ease, color .16s ease; }
+  .fchip:hover { border-color: var(--brand); color: var(--fg); transform: translateY(-1px); }
+  .fchip[aria-pressed="true"] { background: var(--brand-fill); border-color: var(--brand-fill); color: var(--on-brand); font-weight: 550;
+    box-shadow: 0 4px 12px -5px rgba(42,128,194,.7); }
 
   /* What this queue means, sitting on the seam between controls and data. */
   .qdesc { margin: 0; padding: 11px 16px; font-size: 12.5px; color: var(--fg-mid);
@@ -854,8 +913,13 @@ function renderDashboard(summary, opts = {}) {
   th[aria-sort="descending"]::after { content: ' ↓'; opacity: 1; color: var(--brand-ink); }
   th[aria-sort="ascending"]::after { content: ' ↑'; opacity: 1; color: var(--brand-ink); }
   tbody td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
-  tr.row { cursor: pointer; }
+  tr.row { cursor: pointer; transition: transform .18s cubic-bezier(.2,.7,.3,1); }
+  tr.row td { transition: background .18s ease, box-shadow .18s ease; }
   tr.row:hover td { background: var(--brand-wash); }
+  /* Nudge, not a leap: a row is 40px tall and anything larger turns a scan
+     down the list into a wobble. */
+  tr.row:hover { transform: translateX(3px); }
+  tr.row:hover td:first-child { box-shadow: inset 3px 0 0 var(--gold); }
   tr.row--open td { background: var(--brand-wash); box-shadow: inset 3px 0 0 var(--brand); }
   .c-rank { font-family: var(--mono); color: var(--fg-faint); font-size: 11.5px; width: 38px; font-variant-numeric: tabular-nums; }
   .c-biz .biz { font-weight: 600; letter-spacing: -0.008em; }
