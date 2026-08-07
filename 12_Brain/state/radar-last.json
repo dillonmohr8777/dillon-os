@@ -1,0 +1,32 @@
+{
+  "automation_id": "radar-refresh",
+  "started_at": "2026-08-07T03:59:26.193Z",
+  "status": "ok",
+  "date": "2026-08-07",
+  "rotation_slot": "PHL: Philadelphia, Bucks County, Delaware County",
+  "run": {
+    "discovered_raw": 364,
+    "discovered_new": 47,
+    "regraded": 47,
+    "enriched": 0,
+    "enrich_no_match": 0,
+    "enrich_skipped": 0,
+    "errors": [],
+    "plan": "targeting the thinnest cells against a 700-row registry",
+    "throttled": false,
+    "rendered": 39
+  },
+  "tracked": 747,
+  "build_queue_size": 124,
+  "needs_render": 1,
+  "mean_site_quality": 56,
+  "by_verdict": {
+    "rebuild": 124,
+    "polish": 483,
+    "enrich": 48,
+    "nurture": 81,
+    "ads_seo": 10,
+    "verify": 1
+  },
+  "errors": []
+}

@@ -18,9 +18,11 @@ function readJson(file, fallback = null) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
-function writeJson(file, data) {
+function writeJson(file, data, { compact = false } = {}) {
   ensureDir(path.dirname(file));
-  fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+  // Large machine-read outputs (graded prospect sets) skip pretty-printing —
+  // indentation was roughly two thirds of a multi-megabyte grades file.
+  fs.writeFileSync(file, JSON.stringify(data, null, compact ? 0 : 2) + '\n');
 }
 
 function appendJsonl(file, row) {

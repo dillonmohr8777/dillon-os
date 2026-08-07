@@ -1,0 +1,55 @@
+{
+  "slug": "county-line-veterinary-hospital",
+  "domain": "warminsterhorshamvet.com",
+  "business_name": "County Line Veterinary Hospital",
+  "vertical": "veterinary",
+  "city": "Hatboro",
+  "county": "Montgomery County",
+  "logo": "No logo found. Generate assets/logo-display.png: a flat, minimal monogram badge using the business initials only, transparent background, 512x512. No other text.",
+  "output_dir": "12_Brain/private/generated-assets/county-line-veterinary-hospital/",
+  "disclosure": "This build MUST be deployed with generated-imagery disclosure on. arch-build injects it when passed { generatedAssets: true }. Never present these images as their photographs.",
+  "slots": [
+    {
+      "file": "image-1.png",
+      "role": "hero",
+      "dimensions": "1600x1100",
+      "where_it_lands": "wide establishing shot; carries the top of the page",
+      "prompt": "a modern veterinary exam room with a stainless table, warm and calm. Photorealistic. Natural light. No HDR glow, no fisheye. ABSOLUTELY NO text, lettering, signage, logos or brand marks anywhere in the image. No human faces. Hands at work are fine. No recognizable real locations or other businesses' premises. One consistent light temperature across all six images so the page reads as one shoot."
+    },
+    {
+      "file": "image-2.png",
+      "role": "story",
+      "dimensions": "1200x900",
+      "where_it_lands": "process or workspace detail; sits beside the story copy",
+      "prompt": "a technician's gloved hands holding a clipboard beside kennels. Photorealistic. Natural light. No HDR glow, no fisheye. ABSOLUTELY NO text, lettering, signage, logos or brand marks anywhere in the image. No human faces. Hands at work are fine. No recognizable real locations or other businesses' premises. One consistent light temperature across all six images so the page reads as one shoot."
+    },
+    {
+      "file": "image-3.png",
+      "role": "story",
+      "dimensions": "1200x900",
+      "where_it_lands": "second process detail; must read differently from image-2",
+      "prompt": "a retail wall of pet-care products, neatly faced. Photorealistic. Natural light. No HDR glow, no fisheye. ABSOLUTELY NO text, lettering, signage, logos or brand marks anywhere in the image. No human faces. Hands at work are fine. No recognizable real locations or other businesses' premises. One consistent light temperature across all six images so the page reads as one shoot."
+    },
+    {
+      "file": "image-4.png",
+      "role": "gallery",
+      "dimensions": "1200x900",
+      "where_it_lands": "finished work, subject one",
+      "prompt": "a clean surgical suite. Photorealistic. Natural light. No HDR glow, no fisheye. ABSOLUTELY NO text, lettering, signage, logos or brand marks anywhere in the image. No human faces. Hands at work are fine. No recognizable real locations or other businesses' premises. One consistent light temperature across all six images so the page reads as one shoot."
+    },
+    {
+      "file": "image-5.png",
+      "role": "gallery",
+      "dimensions": "1200x900",
+      "where_it_lands": "finished work, subject two",
+      "prompt": "a bright lobby with bench seating. Photorealistic. Natural light. No HDR glow, no fisheye. ABSOLUTELY NO text, lettering, signage, logos or brand marks anywhere in the image. No human faces. Hands at work are fine. No recognizable real locations or other businesses' premises. One consistent light temperature across all six images so the page reads as one shoot."
+    },
+    {
+      "file": "image-6.png",
+      "role": "gallery",
+      "dimensions": "1200x900",
+      "where_it_lands": "finished work, subject three",
+      "prompt": "an exam room with a small dog bed. Photorealistic. Natural light. No HDR glow, no fisheye. ABSOLUTELY NO text, lettering, signage, logos or brand marks anywhere in the image. No human faces. Hands at work are fine. No recognizable real locations or other businesses' premises. One consistent light temperature across all six images so the page reads as one shoot."
+    }
+  ]
+}

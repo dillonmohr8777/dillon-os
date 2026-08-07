@@ -2,6 +2,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const path = require('path');
 const fs = require('fs');
 const { repoPath } = require('../lib/fsutil');
 const { validateGrokEnvelope, normalizeCandidate, extractUrls } = require('../lib/intelligence');
@@ -64,7 +65,9 @@ test('website factory requires recorded demo and independent visual evidence', (
 });
 
 test('artifact hashing rejects paths outside the repository', () => {
-  assert.throws(() => hashArtifacts(['..\\outside.txt']), /escapes repository/);
+  // Host separator, so the guard is exercised on Linux as well as Windows.
+  assert.throws(() => hashArtifacts([path.join('..', 'outside.txt')]), /escapes repository/);
+  assert.throws(() => hashArtifacts(['/etc/passwd']), /escapes repository/);
 });
 
 test('MCP acceptance gate stays sandbox-only while Inspector is pending', () => {

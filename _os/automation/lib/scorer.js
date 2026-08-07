@@ -102,7 +102,8 @@ function decayFromHarvest(harvest) {
  * Score a normalized prospect + optional harvest.
  * Returns { score, reasons, components, suppress }.
  */
-function scoreProspect(prospect, { harvest = null, suppressIds = new Set(), suppressDomains = new Set() } = {}) {
+function scoreProspect(prospect, opts = {}) {
+  const { harvest = null, suppressIds = new Set(), suppressDomains = new Set() } = opts;
   const reasons = [];
   const components = {};
   let score = 0;
@@ -226,6 +227,38 @@ function scoreProspect(prospect, { harvest = null, suppressIds = new Set(), supp
   } else {
     components.website = 0;
     reasons.push('no website URL — hard to harvest');
+  }
+
+  // Site quality penalty — up to -35.
+  //
+  // Everything above rewards decay but nothing punished quality, so a prospect
+  // with an excellent website scored ~50 on reviews + vertical + ads + URL and
+  // crossed the 60 `queued_build` threshold on any hiring signal. That is how a
+  // Tier-A build slot gets spent pitching a redesign to a business whose site is
+  // already better than the mirror — Mac's 2026-08-05 objection.
+  //
+  // Pass `siteQuality` (a gradeSite() result from ./site-grader.js, or a bare
+  // 0–100 number) to close that hole. Omitted, behaviour is unchanged, so
+  // existing callers and fixtures keep working.
+  const sq = opts.siteQuality;
+  const sqScore = sq && typeof sq === 'object' ? num(sq.score, null) : num(sq, null);
+  if (sqScore != null) {
+    const provisional = !!(sq && typeof sq === 'object' && sq.capped);
+    let penalty = 0;
+    if (sqScore >= 85) penalty = -35;
+    else if (sqScore >= 70) penalty = -25;
+    else if (sqScore >= 56) penalty = -12;
+    if (penalty !== 0) {
+      // A capped Tier 0 grade cannot certify quality, so it only half-counts.
+      if (provisional) penalty = Math.round(penalty / 2);
+      score += penalty;
+      reasons.push(
+        `${penalty} site quality ${sqScore}/100${provisional ? ' (provisional, Tier 0)' : ''} — ` +
+        'their site is already good; a rebuild pitch will not land'
+      );
+    }
+    components.site_quality = penalty;
+    components.site_quality_score = sqScore;
   }
 
   // Indeed / hiring signal — up to 15 (second discover source)
