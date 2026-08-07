@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-01",
+  "generated": "2026-08-07",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-08-01"
+    "end": "2026-08-07"
   },
   "source": "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
   "note": "All watchdog and dashboard reporting uses the fixed window start 2026-01-01. The window extends daily on its own.",
@@ -62,9 +62,9 @@
     },
     {
       "month": "2026-08",
-      "views": 1,
-      "submissions": 0,
-      "contacts": 0,
+      "views": 409,
+      "submissions": 8,
+      "contacts": 2,
       "partial": true
     }
   ],
@@ -93,7 +93,13 @@
       { "date": "2026-07-29", "views": 100, "submissions": 5, "submissionsClean": 5, "contacts": 3 },
       { "date": "2026-07-30", "views": 180, "submissions": 5, "submissionsClean": 5, "contacts": 3 },
       { "date": "2026-07-31", "views": 80, "submissions": 2, "submissionsClean": 2, "contacts": 2 },
-      { "date": "2026-08-01", "views": 1, "submissions": 0, "submissionsClean": 0, "contacts": 0, "partial": true }
+      { "date": "2026-08-01", "views": 24, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-08-02", "views": 18, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-08-03", "views": 73, "submissions": 3, "submissionsClean": 3, "contacts": 0 },
+      { "date": "2026-08-04", "views": 104, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
+      { "date": "2026-08-05", "views": 81, "submissions": 2, "submissionsClean": 2, "contacts": 0 },
+      { "date": "2026-08-06", "views": 61, "submissions": 2, "submissionsClean": 2, "contacts": 1 },
+      { "date": "2026-08-07", "views": 48, "submissions": 0, "submissionsClean": 0, "contacts": 0, "partial": true }
     ]
   },
   "attribution_snapshot": {
@@ -258,8 +264,8 @@
   },
   "contact_sources_window": {
     "AI_REFERRALS": 3,
-    "DIRECT_TRAFFIC": 123,
-    "OFFLINE": 2177,
+    "DIRECT_TRAFFIC": 125,
+    "OFFLINE": 2185,
     "ORGANIC_SEARCH": 20,
     "REFERRALS": 8,
     "SOCIAL_MEDIA": 6
@@ -308,9 +314,9 @@
     "wonRevenue": 54000,
     "lostValue": 361000
   },
-  "last_run": "2026-08-01 (Saturday; no new alert. Jul 23 influenced-pipeline alert RESOLVED: recovered $15K to ~$416K on a new $400K Direct deal. July closed strong at 2,262 views/45 subs. New business $2.88M/33. Kaiser still individually closed-lost. Edge audit folded in: invalid GA4 ID G-320235048, duplicate GA4 firing, CTA form missing align_* fields.)",
+  "last_run": "2026-08-07 (Friday; no new alert. Influenced pipeline up again to ~$542K (Diversified $493.5K + new Royal Credit Union $48K organic; RPM $15K went closed-lost). New business unchanged $2.88M/33; total closed-won 116/$5.62M. August MTD 409 views/8 subs. Kaiser still not reopened. GA4/attribution Edge-audit items still open.)",
   "leading_indicators": {
-    "asOf": "2026-08-01",
+    "asOf": "2026-08-07",
     "conversion_rate": {
       "ytd": 0.0197,
       "monthly": {
@@ -320,26 +326,27 @@
         "2026-04": 0.0269,
         "2026-05": 0.0193,
         "2026-06": 0.0225,
-        "2026-07": 0.0199
+        "2026-07": 0.0199,
+        "2026-08": 0.0196
       },
       "alert_floor": 0.012
     },
     "influenced_open_pipeline": {
-      "total": 416056,
+      "total": 542556,
       "deals": 5,
-      "prior": 15000,
-      "alert": "RESOLVED. Recovered from $15K to ~$416K, above the pre-drop $140K, driven by a new $400K Direct-sourced deal (Diversified Energy - Paycor to Dayforce). Kaiser Permanente ($125K Organic) is still individually closed-lost and needs a manual reopen; the Edge pass fixed the Expressing Interest stage config but not Kaiser's own record.",
+      "prior": 416056,
+      "alert": "Up again to ~$542K: Diversified Energy grew to $493.5K and a new organic deal (Royal Credit Union $48K) opened; RPM xConstruction ($15K Organic) went closed-lost on Aug 6. Kaiser Permanente ($125K Organic) still individually closed-lost and unreopened.",
       "detail": [
         {
           "company": "Diversified Energy - Paycor to Dayforce Migration",
-          "amount": 400000,
-          "stage": "2405262028",
+          "amount": 493500,
+          "stage": "2405262030",
           "source": "DIRECT_TRAFFIC"
         },
         {
-          "company": "RPM xConstruction",
-          "amount": 15000,
-          "stage": "presentationscheduled",
+          "company": "Royal Credit Union - SmartCare Optimize",
+          "amount": 48000,
+          "stage": "2405262029",
           "source": "ORGANIC_SEARCH"
         },
         {
@@ -363,9 +370,9 @@
       ]
     },
     "lead_follow_up_gap": {
-      "convertedContacts": 200,
-      "noOutreach": 84,
-      "noOutreachPct": 0.42,
+      "convertedContacts": 204,
+      "noOutreach": 83,
+      "noOutreachPct": 0.41,
       "qualifiedSubset": {
         "total": 22,
         "noFollowUp": 9
@@ -373,12 +380,12 @@
     }
   },
   "data_integrity": {
-    "asOf": "2026-08-01",
+    "asOf": "2026-08-07",
     "closed_lost_without_reason": {
-      "deals": 85,
-      "value": 13755343,
+      "deals": 87,
+      "value": 13881643,
       "pctOfLost": 1.0,
-      "note": "Every lost deal in the window still has no reason logged; count rose to 85. Track down as the required-field fix takes hold."
+      "note": "Every lost deal in the window still has no reason logged; count rose to 87 (RPM and one other lost this week). Track down as the required-field fix takes hold."
     },
     "premature_closes": [
       {
@@ -399,12 +406,12 @@
     ]
   },
   "closed_won_reconciliation": {
-    "asOf": "2026-08-01",
+    "asOf": "2026-08-07",
     "source": "Live HubSpot DEAL record, reconciled. Supersedes the Jul 15 design one-pager ($162K) which was representative placeholder data.",
-    "window": "2026-01-01 to 2026-08-01, by close date",
+    "window": "2026-01-01 to 2026-08-07, by close date",
     "total_closed_won": {
-      "deals": 115,
-      "amount": 5604196
+      "deals": 116,
+      "amount": 5618596
     },
     "by_deal_type": {
       "new_business": {
@@ -416,8 +423,8 @@
         "amount": 1337473
       },
       "change_order": {
-        "deals": 51,
-        "amount": 923428
+        "deals": 52,
+        "amount": 937828
       },
       "renewal": {
         "deals": 10,

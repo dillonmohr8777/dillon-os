@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-01T09:00:00-04:00",
+  "generated": "2026-08-07T09:00:00-04:00",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-08-01"
+    "end": "2026-08-07"
   },
   "source": "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
   "directives": [
@@ -109,8 +109,8 @@
     },
     {
       "month": "2026-08",
-      "views": 1,
-      "submissions": 0,
+      "views": 409,
+      "submissions": 8,
       "note": "month in progress"
     }
   ],
@@ -143,7 +143,7 @@
   "sources": [
     {
       "source": "Direct Traffic",
-      "contacts": 123,
+      "contacts": 125,
       "aeo": false
     },
     {
@@ -1319,7 +1319,7 @@
     "privacy": "Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard."
   },
   "leadingIndicators": {
-    "asOf": "2026-08-01",
+    "asOf": "2026-08-07",
     "note": "First-party leading indicators computed each watchdog run. See 02_FullTimeJob/AlignHCM/Watchdog/leading-indicators.md.",
     "conversionRate": {
       "ytd": 0.0197,
@@ -1351,25 +1351,30 @@
         {
           "month": "2026-07",
           "rate": 0.0199
+        },
+        {
+          "month": "2026-08",
+          "rate": 0.0196,
+          "partial": true
         }
       ]
     },
     "influencedOpenPipeline": {
-      "total": 416056,
+      "total": 542556,
       "deals": 5,
-      "prior": 15000,
-      "alert": "Recovered from $15K to ~$416K (above the pre-drop $140K) on a new $400K Direct-sourced deal, Diversified Energy. Kaiser Permanente ($125K Organic) is still individually closed-lost and needs a manual reopen.",
+      "prior": 416056,
+      "alert": "Up to ~$542K: Diversified Energy grew to $493.5K and a new organic deal (Royal Credit Union $48K) opened; RPM ($15K Organic) went closed-lost. Kaiser Permanente ($125K Organic) still closed-lost and needs a manual reopen.",
       "detail": [
         {
           "company": "Diversified Energy - Paycor to Dayforce Migration",
-          "amount": 400000,
+          "amount": 493500,
           "stage": "Proposal",
           "source": "Direct Traffic"
         },
         {
-          "company": "RPM xConstruction",
-          "amount": 15000,
-          "stage": "Presentation Scheduled",
+          "company": "Royal Credit Union - SmartCare Optimize",
+          "amount": 48000,
+          "stage": "Qualified",
           "source": "Organic Search"
         },
         {
@@ -1381,19 +1386,19 @@
       ]
     },
     "followUpGap": {
-      "convertedContacts": 200,
-      "noOutreach": 84,
-      "noOutreachPct": 0.42,
+      "convertedContacts": 204,
+      "noOutreach": 83,
+      "noOutreachPct": 0.41,
       "qualifiedTotal": 22,
       "qualifiedNoFollowUp": 9
     }
   },
   "dataIntegrity": {
-    "asOf": "2026-08-01",
+    "asOf": "2026-08-07",
     "closedLostWithoutReason": {
-      "deals": 85,
+      "deals": 87,
       "pctOfLost": 1.0,
-      "note": "Every lost deal has no reason logged; count rose to 85. This is CRM hygiene, not site health."
+      "note": "Every lost deal has no reason logged; count rose to 87. This is CRM hygiene, not site health."
     },
     "prematureCloses": 3
   }
