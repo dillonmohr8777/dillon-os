@@ -215,6 +215,15 @@ function httpGet(rawUrl, opts = {}) {
   return new Promise((resolve) => {
     const started = Date.now();
     const hops = [];
+    // A per-request cookie jar, kept only for the redirect chain.
+    //
+    // Plenty of small-business sites answer the first request with `302 → /` and
+    // a Set-Cookie, expecting the next request to carry it. Without a jar that
+    // is an infinite self-redirect: maxRedirects is exhausted, the body comes
+    // back empty, and a perfectly healthy site is recorded as unreachable. The
+    // jar is deliberately request-scoped — no state survives the call, so audits
+    // stay independent of each other.
+    const jar = new Map();
 
     const go = (urlStr, depth) => {
       let u;
@@ -240,6 +249,7 @@ function httpGet(rawUrl, opts = {}) {
                 'content-length': String(payload.length),
               }
             : {}),
+          ...(jar.size ? { cookie: [...jar].map(([k, v]) => `${k}=${v}`).join('; ') } : {}),
           ...extraHeaders,
         },
         timeout: timeoutMs,
@@ -267,6 +277,19 @@ function httpGet(rawUrl, opts = {}) {
       function onResponse(res) {
         const status = res.statusCode || 0;
         hops.push({ url: u.href, status });
+
+        // Collect cookies before deciding whether to follow. Only the name=value
+        // pair matters here; attributes (Path, Secure, SameSite) are for a real
+        // browser jar, and honouring them would mean re-implementing one.
+        const setCookie = res.headers['set-cookie'];
+        if (Array.isArray(setCookie)) {
+          for (const c of setCookie) {
+            const pair = String(c).split(';')[0];
+            const eq = pair.indexOf('=');
+            if (eq > 0) jar.set(pair.slice(0, eq).trim(), pair.slice(eq + 1).trim());
+          }
+        }
+
         const loc = res.headers.location;
         if (status >= 300 && status < 400 && loc && depth < maxRedirects) {
           res.resume();

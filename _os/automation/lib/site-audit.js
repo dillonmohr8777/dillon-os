@@ -370,20 +370,27 @@ async function auditTier1(url, opts = {}) {
   const exe = resolveChromiumPath(chromium);
   const launchOpts = { args: ['--no-sandbox', '--disable-dev-shm-usage'] };
   if (exe) launchOpts.executablePath = exe;
-  // Chromium does not read HTTPS_PROXY from the environment. Without this the
-  // browser gets ERR_CONNECTION_RESET on every navigation, Tier 1 reports the
-  // site unreachable, and the grader scores a healthy business as a dead domain.
+
+  // How the browser reaches the network.
+  //
+  // Chromium cannot use a CONNECT proxy in every environment this runs in. In
+  // the agent sandbox the proxy never even logs the CONNECT — Chromium's socket
+  // is reset before it arrives — so `launchOpts.proxy` produces
+  // ERR_CONNECTION_RESET on every navigation, Tier 1 reports the site
+  // unreachable, and a healthy business gets scored as a dead domain.
+  //
+  // Node's fetch path through the same proxy works (it is what every Tier 0
+  // audit already uses), so when a proxy is configured we relay: Node fetches
+  // each subresource and hands the bytes to Chromium via request interception.
+  // Chromium never opens a socket; it only does layout. TLS is still verified,
+  // by Node, against the same CA bundle — nothing here bypasses the proxy or
+  // relaxes certificate checking.
+  //
+  // With no proxy configured (the desktop case) Chromium does its own
+  // networking, which is faster and closer to what a visitor experiences.
   const proxyEnv = process.env.https_proxy || process.env.HTTPS_PROXY || process.env.http_proxy || process.env.HTTP_PROXY;
-  if (proxyEnv) {
-    launchOpts.proxy = { server: proxyEnv };
-    if (process.env.no_proxy || process.env.NO_PROXY) {
-      launchOpts.proxy.bypass = (process.env.no_proxy || process.env.NO_PROXY)
-        .split(',')
-        .map((s) => s.trim())
-        .filter(Boolean)
-        .join(',');
-    }
-  }
+  const relay = opts.relay != null ? opts.relay : !!proxyEnv;
+
   const browser = await chromium.launch(launchOpts);
   const audit = { tier: 1, url };
   try {
@@ -392,12 +399,49 @@ async function auditTier1(url, opts = {}) {
     let transferBytes = 0;
     let requestCount = 0;
     const failed = [];
-    context.on('response', (res) => {
-      requestCount += 1;
-      const len = parseInt(res.headers()['content-length'] || '0', 10);
-      if (Number.isFinite(len)) transferBytes += len;
-      if (res.status() >= 400) failed.push(`${res.status()} ${res.url().slice(0, 120)}`);
-    });
+
+    if (relay) {
+      audit.renderRelay = true;
+      await context.route('**/*', async (route) => {
+        const reqUrl = route.request().url();
+        if (!/^https?:/i.test(reqUrl)) return route.abort();
+        requestCount += 1;
+        try {
+          const r = await httpGet(reqUrl, {
+            encoding: null,
+            timeoutMs: Math.min(15000, timeoutMs),
+            maxBytes: 6_000_000,
+            headers: { 'user-agent': UA },
+          });
+          if (!r.ok || !Buffer.isBuffer(r.body) || !r.body.length) {
+            if (r.status >= 400) failed.push(`${r.status} ${reqUrl.slice(0, 120)}`);
+            return route.abort();
+          }
+          transferBytes += r.body.length;
+          const headers = {};
+          for (const [k, v] of Object.entries(r.headers || {})) {
+            // The body is already decoded and the response is being replayed, so
+            // the original framing/encoding headers would describe bytes that no
+            // longer exist. CSP and X-Frame-Options are dropped because they are
+            // about embedding, not rendering, and would block the replay.
+            if (/^(content-encoding|content-length|transfer-encoding|content-security-policy|x-frame-options)$/i.test(k)) continue;
+            headers[k] = String(v);
+          }
+          // httpGet has already followed redirects, so this is the final body.
+          return route.fulfill({ status: 200, headers, body: r.body });
+        } catch {
+          failed.push(`fetch failed ${reqUrl.slice(0, 120)}`);
+          return route.abort();
+        }
+      });
+    } else {
+      context.on('response', (res) => {
+        requestCount += 1;
+        const len = parseInt(res.headers()['content-length'] || '0', 10);
+        if (Number.isFinite(len)) transferBytes += len;
+        if (res.status() >= 400) failed.push(`${res.status()} ${res.url().slice(0, 120)}`);
+      });
+    }
 
     const page = await context.newPage();
     const t0 = Date.now();

@@ -125,3 +125,57 @@ The radar deliberately does **not** send anything. `rebuild` means a human may d
 - [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]] — rubric, thresholds, calibration history
 - `/site-grade` — the on-demand version, for grading one market by hand
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]] — where this sits in the eight stages
+
+---
+
+## Tier 1 rendering (how the browser reaches the network)
+
+Tier 1 renders a prospect's page in real Chromium to measure what markup cannot
+show: computed palette, actual fonts, horizontal overflow at three viewports,
+tap-target sizing, payload weight. A Tier 0 grade can prove a site is *bad*; only
+a render can certify one *good*, which is why `verify` exists as a verdict.
+
+Chromium cannot always use a CONNECT proxy. In the agent sandbox the proxy never
+even logs the CONNECT — the socket is reset first — so pointing Chromium at it
+produces `ERR_CONNECTION_RESET` on every navigation. Left unhandled that reads as
+"site unreachable" and scores a healthy business as a dead domain.
+
+`lib/site-audit.js` therefore has two networking modes:
+
+| Condition | Mode | What happens |
+|---|---|---|
+| `HTTPS_PROXY` set | **relay** | Node fetches each subresource through the proxy and hands the bytes to Chromium via `context.route()`. Chromium never opens a socket; it only does layout. |
+| no proxy (desktop) | **direct** | Chromium does its own networking — faster, and closer to what a visitor experiences. |
+
+Override with `auditTier1(url, { relay: true|false })`.
+
+TLS is still verified in relay mode — by Node, against the same CA bundle. The
+relay does not bypass the proxy or relax certificate checking; it exists because
+Node's proxy client works where Chromium's does not.
+
+### Running a Tier 1 pass
+
+```bash
+# Re-audit everything currently blocked on a render, at Tier 1.
+node _os/automation/bin/radar-refresh.js \
+  --discover 0 --enrich 0 --recheck 150 --regrade verify --max-tier 1 --concurrency 6
+```
+
+`--regrade <verdict[,verdict]>` re-audits those verdicts regardless of their
+recheck date, because a stored grade's schedule says nothing about whether the
+code that produced it was correct. `--force` does the same for every row.
+
+Expect roughly 4–8s per site. Chromium is at `/opt/pw-browsers` in the sandbox;
+`resolveChromiumPath()` tolerates Playwright build skew. If `require('playwright')`
+fails, set `NODE_PATH=/opt/node22/lib/node_modules`.
+
+### Cookie handling
+
+`lib/net.js` keeps a **request-scoped** cookie jar across a redirect chain. Many
+small-business sites answer the first request with `302 → /` plus a `Set-Cookie`
+and expect the next request to carry it. Without a jar that is an infinite
+self-redirect: the redirect budget is exhausted, the body comes back empty, and a
+live site is recorded as unreachable. One real example in this registry —
+`andorradental.com` — went from "wouldn't serve markup" to a 497KB 200 response
+once cookies were kept. Nothing persists between calls, so audits stay
+independent.

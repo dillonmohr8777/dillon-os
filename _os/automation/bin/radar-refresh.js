@@ -80,11 +80,19 @@ const ROTATION = [
 const GROUP_ORDER = ['home-services', 'medical', 'legal', 'industrial', 'spa-wellness', 'auto', 'retail', 'food'];
 
 function parseArgs(argv) {
-  const o = { discover: 200, recheck: 120, market: null, concurrency: 12, maxTier: 0, enrich: 60, dryRun: false };
+  const o = {
+    discover: 200, recheck: 120, market: null, concurrency: 12, maxTier: 0, enrich: 60,
+    dryRun: false, regrade: null, force: false,
+  };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--discover') o.discover = Math.max(0, parseInt(argv[++i], 10) || 0);
     else if (a === '--recheck') o.recheck = Math.max(0, parseInt(argv[++i], 10) || 0);
+    // Re-audit specific verdicts regardless of their schedule. Needed whenever
+    // the audit itself improves: a stored grade's recheck date says nothing
+    // about whether the code that produced it was right.
+    else if (a === '--regrade') { o.regrade = String(argv[++i] || '').split(',').map((s) => s.trim()).filter(Boolean); o.force = true; }
+    else if (a === '--force') o.force = true;
     else if (a === '--market') o.market = String(argv[++i] || '').toUpperCase();
     else if (a === '--concurrency') o.concurrency = Math.max(1, parseInt(argv[++i], 10) || 12);
     else if (a === '--max-tier') o.maxTier = parseInt(argv[++i], 10) || 0;
@@ -174,6 +182,10 @@ async function gradeOne(p, ctx) {
     headline: grade.headline,
     findings: grade.findings,
     hard_faults: grade.hard_faults || [],
+    // The per-dimension breakdown is what lets the dashboard answer "why is this
+    // a 26" instead of just asserting it. radar.recordGrade slims it down before
+    // it reaches the registry.
+    dimensions: grade.dimensions,
     trail,
   };
 }
@@ -356,7 +368,12 @@ async function main() {
   }
 
   // --- 2 & 3. Grade new arrivals and re-audit what went stale --------------
-  const toGrade = radar.dueForRecheck(registry, { limit: args.recheck + run.discovered_new, today });
+  const toGrade = radar.dueForRecheck(registry, {
+    limit: args.recheck + run.discovered_new,
+    today,
+    verdicts: args.regrade,
+    force: args.force,
+  });
   if (toGrade.length) {
     process.stderr.write(`  grading ${toGrade.length} (new + due for re-audit)\n`);
     const ctx = { suppressIds, suppressDomains, maxTier: args.maxTier, currentYear: new Date().getUTCFullYear() };
@@ -397,17 +414,10 @@ async function main() {
   }
 
   radar.save(registry);
-  const dashFile = repoPath(DASHBOARD_PATH);
-  ensureDir(path.dirname(dashFile));
-  fs.writeFileSync(dashFile, renderDashboard(summary));
 
-  const csvFile = repoPath(CSV_PATH);
-  ensureDir(path.dirname(csvFile));
-  fs.writeFileSync(csvFile, toCsv(summary.build_queue));
-
-  const digestFile = repoPath(path.join('Daily-Briefs', `radar-${today}.md`));
-  fs.writeFileSync(digestFile, digest(summary, run));
-
+  // Build the run record before rendering: the dashboard shows sweep health, and
+  // reading it back off disk would show the *previous* sweep — which is exactly
+  // the failure mode that let a broken Places key go unnoticed.
   const state = {
     automation_id: AUTOMATION_ID,
     started_at: nowISO(),
@@ -422,6 +432,18 @@ async function main() {
     by_verdict: summary.by_verdict,
     errors: run.errors,
   };
+
+  const dashFile = repoPath(DASHBOARD_PATH);
+  ensureDir(path.dirname(dashFile));
+  fs.writeFileSync(dashFile, renderDashboard(summary, { run: state }));
+
+  const csvFile = repoPath(CSV_PATH);
+  ensureDir(path.dirname(csvFile));
+  fs.writeFileSync(csvFile, toCsv(summary.build_queue));
+
+  const digestFile = repoPath(path.join('Daily-Briefs', `radar-${today}.md`));
+  fs.writeFileSync(digestFile, digest(summary, run));
+
   writeRunState(AUTOMATION_ID, state);
   writeJson(repoPath('12_Brain/state/radar-last.json'), state);
 

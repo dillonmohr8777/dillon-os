@@ -14,7 +14,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 
 const radar = require('../lib/radar');
-const { renderDashboard } = require('../lib/radar-dashboard');
+const { renderDashboard, projectRows, crossTab } = require('../lib/radar-dashboard');
 
 const TODAY = '2026-08-06';
 const LATER = '2026-10-01';
@@ -256,28 +256,131 @@ test('the dashboard renders self-contained HTML with no external requests', () =
   assert.match(html, /Acme Plumbing/);
   assert.match(html, /data-theme="dark"/, 'must honour the viewer theme toggle, not only the media query');
   assert.match(html, /prefers-color-scheme: dark/);
-  assert.match(html, /<svg class="spark"/, 'two grades should draw a sparkline');
-  // No external hosts: no CDN fonts, no remote images, no script tags.
-  assert.doesNotMatch(html, /<script/i);
-  assert.doesNotMatch(html, /https?:\/\/(?:fonts|cdn|unpkg|cdnjs)\./i);
-  assert.doesNotMatch(html, /@import/i);
+  assert.match(html, /noindex/, 'this page names real businesses and must never be indexed');
+
+  // The page is interactive, so it now has inline script — but the property that
+  // actually matters is unchanged and is asserted directly rather than through
+  // the old "no <script> at all" proxy: nothing may be loaded from anywhere.
+  // It must work from file://, from Netlify, and with the network unplugged.
+  assert.doesNotMatch(html, /<script[^>]+\bsrc\s*=/i, 'no external script');
+  assert.doesNotMatch(html, /<link[^>]+\bhref\s*=/i, 'no external stylesheet or preload');
+  assert.doesNotMatch(html, /@import/i, 'no CSS import');
+  assert.doesNotMatch(html, /\burl\(\s*['"]?https?:/i, 'no remote asset in CSS');
+  assert.doesNotMatch(html, /<img[^>]+\bsrc\s*=/i, 'no remote images');
+
+  // Any absolute URL left in the document must be a link the user clicks, never
+  // something the page fetches on load.
+  const hosts = [...html.matchAll(/https?:\/\/([a-z0-9.-]+)/gi)].map((m) => m[1].toLowerCase());
+  const fetched = hosts.filter((h) => /^(fonts|cdn|unpkg|cdnjs|ajax|use)\./.test(h));
+  assert.deepEqual(fetched, [], `page must not reference asset CDNs, found: ${fetched.join(', ')}`);
+});
+
+test('the dashboard embeds every prospect, not just the queues', () => {
+  const reg = emptyRegistry();
+  const domains = ['a.example', 'b.example', 'c.example', 'd.example'];
+  radar.upsertDiscovered(reg, domains.map((d) => candidate({ domain: d })), { today: TODAY });
+  radar.recordGrade(reg, 'a.example', gradeResult({ verdict: 'rebuild', site_quality_score: 21 }), { today: TODAY });
+  radar.recordGrade(reg, 'b.example', gradeResult({ verdict: 'polish', site_quality_score: 61 }), { today: TODAY });
+  radar.recordGrade(reg, 'c.example', gradeResult({ verdict: 'nurture', site_quality_score: 88 }), { today: TODAY });
+  // d.example stays ungraded on purpose — an unaudited row is still a row.
+
+  const s = radar.summarize(reg, { today: TODAY });
+  assert.equal(s.prospects.length, 4, 'summarize must expose the whole actionable set');
+
+  const rows = projectRows(s.prospects);
+  assert.equal(rows.length, 4);
+  assert.deepEqual(rows.map((r) => r.d).sort(), domains);
+  // Only one row is in the rebuild queue, but all four ship to the client.
+  assert.equal(s.build_queue_size, 1);
+
+  const html = renderDashboard(s);
+  const island = html.match(/<script type="application\/json" id="radar-rows">([\s\S]*?)<\/script>/);
+  assert.ok(island, 'the row payload must be embedded as a JSON island');
+  const payload = JSON.parse(island[1]);
+  assert.equal(payload.rows.length, 4, 'every prospect must survive the round-trip into the page');
+  assert.deepEqual(payload.rows.map((r) => r.d).sort(), domains);
+});
+
+test('projectRows keeps dimension evidence, not just the score', () => {
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [candidate()], { today: TODAY });
+  radar.recordGrade(
+    reg,
+    'acme.example',
+    gradeResult({
+      dimensions: {
+        foundation: { label: 'Foundation', score: 67, evidence: 'measured', weight: 20 },
+        craft: { label: 'Design craft', score: 50, evidence: 'unknown', weight: 18 },
+        mobile: { label: 'Mobile', score: 41, evidence: 'partial', weight: 22 },
+      },
+    }),
+    { today: TODAY }
+  );
+
+  const stored = reg.prospects['acme.example'].current.dimensions;
+  assert.deepEqual(stored.foundation, { score: 67, evidence: 'measured' });
+  assert.deepEqual(stored.craft, { score: 50, evidence: 'unknown' });
+  // History stays lean: only `current` carries the breakdown.
+  assert.equal(reg.prospects['acme.example'].grades[0].dimensions, undefined);
+
+  const [row] = projectRows([reg.prospects['acme.example']]);
+  assert.deepEqual(row.dm.foundation, [67, 2], 'measured encodes as 2');
+  assert.deepEqual(row.dm.mobile, [41, 1], 'partial encodes as 1');
+  assert.deepEqual(row.dm.craft, [50, 0], 'unknown encodes as 0 so the UI can mark it unmeasured');
 });
 
 test('the dashboard escapes business names rather than injecting them', () => {
   const reg = emptyRegistry();
-  radar.upsertDiscovered(reg, [candidate({ business_name: '<img src=x onerror=alert(1)>Bad & Co' })], { today: TODAY });
+  const nasty = '</script><img src=x onerror=alert(1)>Bad & "Co"';
+  radar.upsertDiscovered(reg, [candidate({ business_name: nasty })], { today: TODAY });
   radar.recordGrade(reg, 'acme.example', gradeResult(), { today: TODAY });
 
   const html = renderDashboard(radar.summarize(reg, { today: TODAY }));
   assert.doesNotMatch(html, /<img src=x onerror/);
-  assert.match(html, /&lt;img src=x onerror/);
-  assert.match(html, /Bad &amp; Co/);
+
+  // The JSON island is the dangerous surface: a literal </script> in a business
+  // name would close the tag and turn the rest of the payload into markup.
+  const island = html.match(/<script type="application\/json" id="radar-rows">([\s\S]*?)<\/script>/);
+  assert.ok(island, 'island must still be parseable after a hostile name');
+  const payload = JSON.parse(island[1]);
+  assert.equal(payload.rows[0].n, nasty, 'the name round-trips intact');
+  assert.doesNotMatch(island[1], /<\/script/i, 'no raw closing tag may survive inside the island');
 });
 
 test('the dashboard survives an empty registry', () => {
   const html = renderDashboard(radar.summarize(emptyRegistry(), { today: TODAY }));
-  assert.match(html, /Nothing qualifies for a rebuild/);
-  assert.doesNotMatch(html, /NaN|undefined/);
+
+  // Scoped to the markup: the client script legitimately contains the strings
+  // "undefined" and "NaN" in its own null-guards, so asserting over the whole
+  // document would only ever prove that those guards exist.
+  const markup = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+  assert.doesNotMatch(markup, /NaN|undefined/, 'no unformatted value may reach the page');
+
+  const island = html.match(/<script type="application\/json" id="radar-rows">([\s\S]*?)<\/script>/);
+  assert.deepEqual(JSON.parse(island[1]).rows, [], 'an empty registry embeds an empty row set, not a crash');
+});
+
+test('the dashboard refuses to emit a page too large to open', () => {
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [candidate()], { today: TODAY });
+  radar.recordGrade(reg, 'acme.example', gradeResult(), { today: TODAY });
+  const s = radar.summarize(reg, { today: TODAY });
+  // The guard exists so registry growth fails at generation rather than
+  // silently producing something unusable on a phone.
+  assert.throws(() => renderDashboard(s, { maxBytes: 1000 }), /over the .* limit/);
+});
+
+test('crossTab counts each prospect once per county and vertical', () => {
+  const rows = [
+    { a: 'Philadelphia', g: 'medical', r: 'rebuild' },
+    { a: 'Philadelphia', g: 'medical', r: 'polish' },
+    { a: 'Bucks County', g: 'legal', r: 'rebuild' },
+  ];
+  const ct = crossTab(rows);
+  assert.equal(ct.areas.get('Philadelphia'), 2);
+  assert.equal(ct.groups.get('medical'), 2);
+  assert.deepEqual(ct.cells.get('Philadelphia medical'), { n: 2, rebuild: 1 });
+  assert.deepEqual(ct.cells.get('Bucks County legal'), { n: 1, rebuild: 1 });
 });
 
 test('addDays and daysBetween agree', () => {

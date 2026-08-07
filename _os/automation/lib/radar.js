@@ -180,6 +180,32 @@ function upsertDiscovered(registry, candidates, { today = todayISO() } = {}) {
 }
 
 /**
+ * Reduce the grader's dimension breakdown to what the registry needs to keep.
+ *
+ * `label`, `about` and `weight` are static properties of DIMENSIONS in
+ * site-grader.js, so storing them 700 times would be duplicating a constant.
+ * `appliedWeight` is derivable from `evidence` (measured → full, partial → half,
+ * unknown → nothing). Score and evidence are the only two facts that belong to
+ * this particular grade, and `evidence` is the one that must survive: a craft
+ * score with `evidence: 'unknown'` is a placeholder, not a measurement, and a UI
+ * that shows the number without the label is lying by omission.
+ *
+ * @returns {object|null} null when the grade carried no breakdown at all
+ */
+function slimDimensions(dimensions) {
+  if (!dimensions || typeof dimensions !== 'object') return null;
+  const out = {};
+  for (const [key, d] of Object.entries(dimensions)) {
+    if (!d || typeof d !== 'object') continue;
+    out[key] = {
+      score: Number.isFinite(Number(d.score)) ? Math.round(Number(d.score)) : null,
+      evidence: d.evidence || 'unknown',
+    };
+  }
+  return Object.keys(out).length ? out : null;
+}
+
+/**
  * Append a grade result. Keeps the last 12 grades per prospect — enough to see a
  * trajectory without letting the registry grow without bound.
  */
@@ -201,7 +227,13 @@ function recordGrade(registry, domain, result, { today = todayISO() } = {}) {
   const previous = p.current;
   p.grades.push(entry);
   if (p.grades.length > 12) p.grades = p.grades.slice(-12);
-  p.current = entry;
+
+  // `current` carries the dimension breakdown; the history entries deliberately
+  // do not. Twelve copies of six dimensions per prospect would add roughly 2MB
+  // to a tracked registry to answer a question nobody asks ("what was its
+  // content score in April"), where the current breakdown answers the one that
+  // gets asked every morning: why is this a 26.
+  p.current = { ...entry, dimensions: slimDimensions(result.dimensions) };
   p.last_graded = today;
   p.headline = result.headline || p.headline || '';
   p.offer = result.offer || '';
@@ -252,11 +284,17 @@ function priorityScore(p) {
  * Prospects due for a re-audit, most overdue first. Never-graded rows come
  * first — an ungraded prospect is a blind spot, not a known quantity.
  */
-function dueForRecheck(registry, { limit = 200, today = todayISO(), verdicts = null } = {}) {
+function dueForRecheck(registry, { limit = 200, today = todayISO(), verdicts = null, force = false } = {}) {
   const rows = Object.values(registry.prospects).filter((p) => {
     if (p.lifecycle === 'client' || p.lifecycle === 'excluded') return false;
     if (verdicts && p.current && !verdicts.includes(p.current.verdict)) return false;
     if (!p.last_graded) return true;
+    // `force` re-audits regardless of the schedule. The schedule assumes the
+    // grade it produced is still worth trusting, which stops being true when the
+    // audit itself changes — a new tier becoming available, or a client bug that
+    // mis-read a whole class of sites. Both have happened; neither moves a
+    // next_recheck date on its own.
+    if (force) return true;
     return !p.next_recheck || p.next_recheck <= today;
   });
 
@@ -346,6 +384,10 @@ function summarize(registry, { today = todayISO() } = {}) {
     new_today: newToday.length,
     graded_today: gradedToday.length,
     due_now: dueForRecheck(registry, { limit: 100000, today }).length,
+    // The dashboard embeds the whole actionable set, not just the queues, so it
+    // can be searched and filtered rather than merely read. Callers that persist
+    // a summary (radar-last.json) cherry-pick fields and never see this.
+    prospects: actionable,
     lifecycle: all.reduce((acc, p) => {
       acc[p.lifecycle] = (acc[p.lifecycle] || 0) + 1;
       return acc;
@@ -358,6 +400,7 @@ module.exports = {
   save,
   upsertDiscovered,
   recordGrade,
+  slimDimensions,
   dueForRecheck,
   setLifecycle,
   summarize,

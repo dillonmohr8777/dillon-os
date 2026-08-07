@@ -47,7 +47,18 @@ async function main() {
 
   const today = todayISO();
   const summary = radar.summarize(radar.load(), { today });
-  const html = renderDashboard(summary);
+
+  // Sweep health comes off disk here: by the time this runs, radar-last.json is
+  // the record of the sweep that produced the registry we just loaded.
+  let lastRun = null;
+  try {
+    lastRun = JSON.parse(fs.readFileSync(repoPath('12_Brain/state/radar-last.json'), 'utf8'));
+  } catch {
+    // No sweep has completed yet, or the file is unreadable. The strip is
+    // omitted rather than faked — an absent record is not a healthy one.
+  }
+
+  const html = renderDashboard(summary, { run: lastRun });
 
   const files = new Map();
   files.set('/index.html', html);
