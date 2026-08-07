@@ -72,6 +72,14 @@ jobs:
             ${{ github.event.inputs.regrade && format('--regrade {0}', github.event.inputs.regrade) || '' }} \
             2>&1 | tee sweep.log
 
+      # Refresh the Codex image queue: every zero-photo rebuild target gets a
+      # generation brief. Briefs are tracked (they carry nothing beyond what the
+      # registry already publishes); the generated binaries go to the private
+      # layer on whatever machine runs the generation.
+      - name: Refresh image-generation briefs
+        continue-on-error: true
+        run: node _os/automation/bin/image-briefs.js
+
       # Contact discovery reads only each business's own published pages and
       # writes addresses to the gitignored private layer, never to the repo.
       # Separate step because a slow site should not fail the whole sweep.

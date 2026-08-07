@@ -531,7 +531,7 @@ async function main() {
         (p) => !(p.imagery && p.imagery.checked && p.imagery.usable === 0)
       );
       const excluded = summary.build_queue.length - buildable.length;
-      if (excluded > 0) process.stderr.write(`  build queue: ${excluded} row(s) held out (no usable photos)\n`);
+      if (excluded > 0) process.stderr.write(`  build queue: ${excluded} row(s) held out pending generated imagery (briefs in 12_Brain/state/radar/image-briefs)\n`);
       fs.writeFileSync(f, toCsv(buildable));
     }],
     ['digest', () => {

@@ -480,13 +480,23 @@ stored, so it costs nothing extra to produce.
 
 Both from the operator, 2026-08-07. Both are code, not memos.
 
-**No photos, no build.** A rebuild target whose imagery check came back with
-zero usable photographs is held out of `build-queue.csv` (the sweep logs how
-many). It stays a rebuild target in the registry, because their site is still
-bad; it just cannot consume a build slot until it has photographs, since a
-homepage concept with broken-image slots pitches nothing. Rows that were never
-checked stay in the queue: absence of a check is not evidence of absence of
-photos. Today this holds 56 of 124 rebuild rows out and leaves 68 workable.
+**No photos, no build — and the resolution is generation.** A rebuild target
+whose imagery check came back with zero usable photographs is held out of
+`build-queue.csv` until it has imagery. The operator's route for those rows is
+**generated images, produced by Codex**: `bin/image-briefs.js` writes one brief
+per held-out prospect to `12_Brain/state/radar/image-briefs/` (56 today), each
+specifying the six slots as they land on the arch template (hero, two story,
+three gallery), per-vertical scene direction, dimensions, and the constraints —
+photorealistic, no text or lettering, no faces, one light temperature per
+prospect, and their real logo kept when they have one. Generated binaries go to
+`12_Brain/private/generated-assets/<slug>/`, never the public repo.
+
+The honesty half is enforced in the builder: `buildArchSite(p, { generatedAssets:
+true })` injects a disclosure line and prefixes every alt with "Illustrative
+concept image"; a generated-asset build missing its disclosure is a hard
+blocker. The images are concepts for the design preview, never presented as the
+business's own photographs. Rows that were never checked stay in the queue:
+absence of a check is not evidence of absence of photos.
 
 **No em dashes on any customer-facing page.** `arch-build` strips them from
 template prose at generation (a comma reads correctly in every position the

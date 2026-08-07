@@ -889,3 +889,28 @@ test('the contact store refuses to write outside the private layer', () => {
     /must live under 12_Brain\/private/
   );
 });
+
+test('generated assets ship with the disclosure and labelled alts, or not at all', () => {
+  // The operator's route for zero-photo rebuild targets: Codex generates the
+  // imagery. The non-negotiable half of that decision is that the page says so
+  // — a demo passing generated photos off as the business's own work poisons
+  // the meeting it exists to open.
+  const { buildArchSite } = require('../lib/arch-build');
+  const prospect = candidate({ business_name: 'Test Trade Co', vertical: 'hvac' });
+
+  const withFlag = buildArchSite(prospect, { generatedAssets: true });
+  assert.ok(withFlag.html.includes('data-generated-imagery'), 'disclosure line must be present');
+  assert.match(withFlag.html, /alt="Illustrative concept image:/, 'every alt must say what the image is');
+  assert.ok(!withFlag.blockers.includes('generated imagery without its disclosure line'));
+
+  const without = buildArchSite(prospect, {});
+  assert.ok(!without.html.includes('data-generated-imagery'), 'harvested-asset builds carry no disclosure');
+  assert.doesNotMatch(without.html, /alt="Illustrative concept image:/);
+});
+
+test('no em dash survives into a generated page', () => {
+  const { buildArchSite } = require('../lib/arch-build');
+  const r = buildArchSite(candidate({ business_name: 'Dash Test' }), {});
+  const text = r.html.replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<script[\s\S]*?<\/script>/gi, '');
+  assert.doesNotMatch(text, /—/, 'house style: no em dashes on any customer-facing page');
+});

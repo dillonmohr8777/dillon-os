@@ -360,6 +360,26 @@ function buildArchSite(prospect, opts = {}) {
   };
   html = html.replace(/(<img\b[^>]*?\balt=")[^"]*(")/g, (m, pre, post) => `${pre}${esc(altFor())}${post}`);
 
+  // Generated imagery ships honestly or not at all. When the assets were
+  // produced by a model rather than harvested from the prospect (the operator's
+  // route for zero-photo targets), the page carries a disclosure and every alt
+  // says so. A demo passing off generated photos as the business's own work
+  // would poison the exact meeting it exists to open — and the pitch survives
+  // the label: "here is what your site could look like" is the pitch anyway.
+  if (opts.generatedAssets) {
+    html = html.replace(/(<img\b[^>]*?\balt=")([^"]*)(")/g, (m, pre, alt, post) =>
+      `${pre}Illustrative concept image: ${alt}${post}`);
+    const disclosure =
+      '<p data-generated-imagery style="margin-top:14px;font-size:12px;opacity:.75">' +
+      'Concept imagery on this page is illustrative, generated for this design preview. ' +
+      `It does not show ${esc(c.name)}'s premises or work.</p>`;
+    if (/<footer[^>]*>/.test(html)) {
+      html = html.replace(/(<footer[^>]*>)/, `$1${disclosure}`);
+    } else {
+      html = html.replace('</body>', `${disclosure}</body>`);
+    }
+  }
+
   /**
    * Trade-specific prose from the reference that a fact swap cannot fix. These
    * phrases describe interior painting, so on a dental or fabrication page they
@@ -382,6 +402,9 @@ function buildArchSite(prospect, opts = {}) {
     'substrate',
   ];
   const leakedProse = REFERENCE_PROSE.filter((phrase) => new RegExp(phrase, 'i').test(html));
+  if (opts.generatedAssets && !html.includes('data-generated-imagery')) {
+    leakedProse.push('generated imagery without its disclosure line');
+  }
 
   // Em dash in visible text after the swap above means one arrived through a
   // data field. Style rule from the operator: none, on any site.
