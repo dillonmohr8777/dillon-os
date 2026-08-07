@@ -1,0 +1,42 @@
+{
+  "summary": "The authenticated gateway passed deterministic and independent review for development use; durable production deployment remains blocked.",
+  "run_date": "2026-08-01",
+  "artifact": "_os/webhook-gateway.js",
+  "maker": {
+    "identity": "GPT-5.6 Sol primary agent",
+    "commits": [
+      "e86bb05",
+      "92349be"
+    ]
+  },
+  "checkers": [
+    {
+      "identity": "GPT-5.6 code-reviewer bc-345402cb-574a-58f3-9616-d82c9ae2dae4",
+      "verdict": "pass for development-only infrastructure",
+      "high_findings": 0
+    },
+    {
+      "identity": "GPT-5.6 security-reviewer bc-6d53bed1-1c6f-5963-acb1-d327779b3e59",
+      "verdict": "fail for production",
+      "remaining_findings": [
+        "replay and route substitution",
+        "origin-level rate and concurrency controls",
+        "full-payload privacy and retention"
+      ]
+    }
+  ],
+  "evidence": {
+    "tests": "23 passed, 0 failed",
+    "live_checks": {
+      "health": 200,
+      "unsigned_webhook": 401,
+      "signed_webhook": 200,
+      "secret_mode": "0600"
+    }
+  },
+  "deployment": {
+    "status": "blocked",
+    "reason": "The available Cursor Cloud host is ephemeral and the active Quick Tunnel is not a stable production endpoint.",
+    "operator_gate": "Provide access to the intended 64 GB host and authenticate a Cloudflare account with a managed domain."
+  }
+}
