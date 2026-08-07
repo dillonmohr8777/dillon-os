@@ -1,0 +1,17 @@
+{
+  "slug": "harbor-hvac",
+  "siteUrl": "https://harborhvac.example",
+  "decaySignals": {
+    "missingViewport": true,
+    "staleCopyrightYear": "2017"
+  },
+  "facts": {
+    "phone": "",
+    "hours": "Mon-Fri 8-5",
+    "jsonLd": []
+  },
+  "voice": {
+    "paragraphs": ["AC and heat."],
+    "headings": ["Harbor HVAC"]
+  }
+}

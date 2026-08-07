@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/prospect",
+  "title": "Prospect",
+  "type": "object",
+  "required": ["prospect_id", "business_name", "source"],
+  "properties": {
+    "prospect_id": { "type": "string", "description": "Stable id (place_id, domain, or indeed:<jobId>)" },
+    "business_name": { "type": "string" },
+    "source": { "type": "string", "enum": ["maps", "indeed", "manual", "sheet"] },
+    "website": { "type": ["string", "null"] },
+    "phone": { "type": ["string", "null"] },
+    "email": { "type": ["string", "null"] },
+    "address": { "type": ["string", "null"] },
+    "market": { "type": ["string", "null"] },
+    "category": { "type": ["string", "null"] },
+    "vertical": { "type": ["string", "null"] },
+    "place_id": { "type": ["string", "null"] },
+    "maps_url": { "type": ["string", "null"] },
+    "rating": { "type": ["number", "null"] },
+    "review_count": { "type": ["integer", "null"] },
+    "ad_presence": { "type": ["boolean", "null"] },
+    "hiring_signal": {
+      "type": ["object", "null"],
+      "properties": {
+        "role": { "type": "string" },
+        "salary_band": { "type": ["string", "null"] },
+        "posted_at": { "type": ["string", "null"] },
+        "job_url": { "type": ["string", "null"] },
+        "source": { "type": "string" }
+      }
+    },
+    "harvest_path": { "type": ["string", "null"] },
+    "status": {
+      "type": "string",
+      "enum": ["new", "scored", "queued_build", "suppressed", "mailed", "replied", "closed_won", "closed_lost"]
+    },
+    "score": { "type": ["number", "null"] },
+    "score_reasons": { "type": "array", "items": { "type": "string" } },
+    "last_touched": { "type": ["string", "null"] },
+    "next_action": { "type": ["string", "null"] }
+  }
+}

@@ -1,69 +1,59 @@
 ---
-tags: [client, moc]
+note_type: index
+status: active
+updated: 2026-08-07
+canonical_registry: C:/Users/dillo/Documents/Codex/projects/client-operations/registry/clients.json
+canonical_active_route_count: 23
+registry_reconciliation_required: 2
+tags: [clients, active-roster, client-intelligence]
 ---
 
-# Client Index
+# Active Client and Relationship Index
 
-## Momentum 360 (Account Manager)
+The canonical non-secret roster is
+`C:\Users\dillo\Documents\Codex\projects\client-operations\registry\clients.json`.
+The strategy overlays below compile dated evidence for every registry route
+currently marked active. They do not replace the canonical client records or
+prove present-tense platform state.
 
-| Client                       | Website                     | Rate         | Start     | Services                                                        |
-| ---------------------------- | --------------------------- | ------------ | --------- | --------------------------------------------------------------- |
-| [[Bar Crawl USA]]            | barcrawlusa.com             | $950/mo      | 2/16/2026 | Google Ads, 20-city landing pages, WordPress publisher tool     |
-| [[Shadow HVAC]]              | shadowheatingandcooling.com | $250/mo      | 2/13/2026 | GBP content (4x/week), Google Ads Search, LSA                   |
-| [[Link Eze]]                 | linkeze.biz                 | $300/mo      | 2/26/2026 | Google Ads (ecommerce/Shopify), HTML reports                    |
-| [[Omega Landscaping]]        | omegalandscapecorp.com      | $200/mo      | 3/1/2026  | GBP content (4x/week), blogs, local SEO, reports                |
-| [[Jeff Hozias]]              | jeffhozias.randrealty.com   | $200/mo      | 3/1/2026  | GBP content (3x/week), Google Ads (pending), Systeme.io         |
-| [[KJB]]                      | kimberlyjamesbridal.com     | $300/mo      | 3/12/2026 | Google Ads, Squarespace SEO pages, brand design                 |
-| [[Fresh Blends - Replenish]] | freshblends.com             | $500/mo      | 3/23/2026 | Paid media strategy (B2C), Google Ads (awaiting access)         |
-| [[Hardwood Artisan]]         | hardwood-artisan.com        | —            | —         | GBP content (4x/week), HTML reports                             |
-| [[NKCDC]]                    | —                           | —            | —         | ICP research, keyword strategy, campaign architecture           |
-| [[Onsite Concrete]]          | onsiteconcretelandscape.com | —            | —         | WordPress/Divi website repair                                   |
-| [[Blissful Events]]          | —                           | $500 project | One-time  | Bollywood concert campaign (FB Events + Google Local PMax)      |
-| [[Bridge of Hope OTC]]       | —                           | —            | —         | SEO blog content (substance use / mental health)                |
-| [[Bok Law]]                  | —                           | —            | Dec 2025+ | Weekly social media (Wed Wisdom, Family Fridays, Sat Solutions) |
-| [[Bluegrass Janitorial]]     | —                           | —            | —         | SEO blogs, MailChimp emails, product content                    |
+## Portfolio intelligence
 
-## Software Development
+![[../12_Brain/Bases/Client Strategy Overlays.base#Active Portfolio Intelligence]]
 
-- [[Bridge Software Development/overview|Bridge Software Development]] — Tori's cannabis-industry professional network; product discovery, UX/UI, Next.js front end, Supabase planning
+## Immediate attention
 
-## 1099
-- [[Bok Law]] (also listed under M360)
-- [[Buzz Bull]]
+![[../12_Brain/Bases/Client Strategy Overlays.base#Immediate Attention]]
 
-## Direct
+## Client operating records
 
-| Client | Services |
-|--------|----------|
-| [[Next Gen Solutions]] | Keyword strategy, competitor gap analysis |
-| [[Florecita]] | Full paid media strategy (Phoenix wedding florist) |
-| [[Commercial Cleaners Alliance]] | Google/Meta Ads report, keyword research, tiered pricing |
-| [[Sally Compton]] | Collaborator on Bridge of Hope service pages |
-| [[PNW Pro Clean]] | FAQ content, blog writing |
-| [[PureClean Carpets]] | — |
-| [[Ram Air]] | — |
-| [[Bluegrass Janitorial]] | (also under M360) |
-| [[Bridge of Hope OTC]] | (also under M360) |
-| [[Dryer Vent John]] | — |
-| [[Biohazard Remediation]] | — |
-| [[Guaranteed Cleaning]] | — |
-| [[Bend Plastic Surgery]] | Monthly blog content |
-| [[Bend Oral Surgery]] | — |
-| [[Coach B]] | Google Ads proposal, HTML sales presentation |
-| [[Vanessa]] | Facebook Ads (lead gen, retargeting, sales) |
-| [[AWCI]] | Blog content |
-| [[MMC Land Management]] | Landscape social media content |
+![[../12_Brain/Bases/Client Intelligence.base#Active Clients]]
 
-## Full-Time
-- [[Align HCM]] — alignhcm.com — LinkedIn calendars, CEO blogs, carousels, case studies, sales proposals, HTML reports, SEO blogs
+## Relationship boundary
 
-## Past Clients
-- 
+- [[../02_FullTimeJob/AlignHCM/overview|Align HCM]] is Dillon's full-time
+  employer, not freelance or Momentum 360 client revenue. Its intelligence
+  overlay remains in the portfolio view because the canonical registry route is
+  active, but the underlying work and metrics stay separate.
+- [[Momentum 360/overview|Momentum 360]] is an agency operating layer. Its
+  overlay may coordinate common methods but never replaces individual client
+  records or blends their metrics.
 
-## Prospects
-- 
+## Reconciliation required
 
----
+The following vault overviews still say `active` but have no matching canonical
+registry entry. Preserve them until Dillon confirms their current disposition:
 
-> Create new client notes using the **Client** template.
-> Link sessions, campaigns, and transcripts back here.
+- [[Capsule & Tonic/overview|Capsule & Tonic]]
+- [[Everyday Life Insurance/overview|Everyday Life Insurance]]
+
+Do not promote, demote, delete, merge, or include either route in canonical
+portfolio totals by inference.
+
+## Roster rule
+
+1. Resolve identity and status through the canonical registry.
+2. Keep one overlay per active registry route.
+3. Refresh live evidence before present-tense reporting or account action.
+4. Keep every client, brand, account, and reporting period separate.
+5. Run [[../12_Brain/09_Ops/Client Intelligence Coverage|Client Intelligence Coverage]]
+   after roster or overlay changes.
