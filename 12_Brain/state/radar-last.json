@@ -1,42 +1,42 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-08-07T18:16:01.330Z",
+  "started_at": "2026-08-07T18:24:17.737Z",
   "status": "ok",
   "date": "2026-08-07",
   "rotation_slot": "PHL: Philadelphia, Bucks County, Delaware County",
   "run": {
-    "discovered_raw": 239,
-    "discovered_new": 34,
-    "regraded": 34,
+    "discovered_raw": 192,
+    "discovered_new": 20,
+    "regraded": 20,
     "enriched": 0,
     "enrich_no_match": 0,
     "enrich_skipped": 0,
     "errors": [
-      "places leeshoagieshorsham.com: Invalid character in header content [\"x-goog-api-key\"]",
-      "places andorradental.com: Invalid character in header content [\"x-goog-api-key\"]",
-      "places duttonroadvetclinic.com: Invalid character in header content [\"x-goog-api-key\"]"
+      "places pandcinsuranceagency.com: Invalid character in header content [\"x-goog-api-key\"]",
+      "places broomallinsuranceagency.com: Invalid character in header content [\"x-goog-api-key\"]",
+      "places bigheadtransportllc.com: Invalid character in header content [\"x-goog-api-key\"]"
     ],
-    "plan": "targeting the thinnest cells against a 747-row registry",
+    "plan": "targeting the thinnest cells against a 781-row registry",
     "throttled": false,
-    "rendered": 25,
-    "imagery_checked": 27,
+    "rendered": 18,
+    "imagery_checked": 2,
     "imagery_buildable": 0
   },
-  "tracked": 781,
-  "build_queue_size": 133,
+  "tracked": 801,
+  "build_queue_size": 135,
   "needs_render": 1,
   "mean_site_quality": 56,
   "by_verdict": {
-    "rebuild": 133,
-    "polish": 501,
-    "enrich": 48,
-    "nurture": 87,
-    "ads_seo": 11,
+    "rebuild": 135,
+    "polish": 514,
+    "enrich": 49,
+    "nurture": 89,
+    "ads_seo": 13,
     "verify": 1
   },
   "errors": [
-    "places leeshoagieshorsham.com: Invalid character in header content [\"x-goog-api-key\"]",
-    "places andorradental.com: Invalid character in header content [\"x-goog-api-key\"]",
-    "places duttonroadvetclinic.com: Invalid character in header content [\"x-goog-api-key\"]"
+    "places pandcinsuranceagency.com: Invalid character in header content [\"x-goog-api-key\"]",
+    "places broomallinsuranceagency.com: Invalid character in header content [\"x-goog-api-key\"]",
+    "places bigheadtransportllc.com: Invalid character in header content [\"x-goog-api-key\"]"
   ]
 }
