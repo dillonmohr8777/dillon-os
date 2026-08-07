@@ -1,0 +1,24 @@
+{
+  "id": "competitive-task-orchestrator",
+  "run_date": "2026-08-06",
+  "status": "complete",
+  "started_at": "2026-08-06T13:00:22Z",
+  "completed_at": "2026-08-06T13:15:00Z",
+  "run_number": 1,
+  "branch": "cursor/competitive-task-consolidation-b323",
+  "lanes": [
+    { "id": "gmail-intel", "status": "complete", "mcp": "unavailable", "fallback": "vault" },
+    { "id": "slack-intel", "status": "complete", "mcp": "unavailable", "fallback": "00_Inbox/slack" },
+    { "id": "vault-pulse", "status": "complete", "frontmatter_complete": 38 },
+    { "id": "codex-session-sync", "status": "complete" },
+    { "id": "domain-ads-seo", "status": "complete", "site_health": "dry-run" },
+    { "id": "content-routines", "status": "complete", "thursday_seo_sweep": true },
+    { "id": "memory-consolidator", "status": "complete" }
+  ],
+  "p0_count": 5,
+  "mcp_gaps": ["gmail", "slack"],
+  "outputs": {
+    "brief": "Daily-Briefs/competitive-task-today.md",
+    "lane_dir": "automation-runs/competitive-task-orchestrator/2026-08-06/lane-outputs/"
+  }
+}

@@ -19,9 +19,10 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] NKCDC — draft Anthony nudge on Free Tax Prep page (launch blocked)
+- [ ] Replenish — confirm Mia cleared Google Ads billing; verify campaigns delivering
+- [ ] Hardwood — confirm with Sean whether to chase Dalton card update again
+- [[Daily-Briefs/competitive-task-today|Competitive task brief]] — full ranked stack + boss asks
 
 ## Active Projects
 -
