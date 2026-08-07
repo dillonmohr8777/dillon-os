@@ -3,14 +3,14 @@
 /**
  * Can we actually build a homepage concept for this prospect today?
  *
- * The deliverable is **one page**, not a site: the arch template has four image
- * slots plus a logo. That is a much lower bar than a full rebuild, and getting it
- * wrong cost real time — the pipeline reported builds as blocked on imagery when
- * a quarter of the queue was buildable.
+ * The deliverable is **one page**, not a site: the arch template asks for six
+ * content photographs plus a logo. That is a much lower bar than a full rebuild,
+ * and getting it wrong cost real time — the pipeline reported builds as blocked
+ * on imagery when a fifth of the queue was buildable.
  *
  * Two mistakes produced that wrong answer, both now fixed:
  *
- * 1. **The need was sized for a whole site** rather than four slots.
+ * 1. **The need was sized for a whole site** rather than one page.
  * 2. **The harvester only read `<img src>`.** Lazy-loading themes park a spacer
  *    GIF there and put the real photograph in `data-src` or `srcset`, so sites
  *    with plenty of imagery looked empty. Andorra Family Dentistry went from 0
@@ -28,8 +28,21 @@
 const { harvestLite } = require('./harvest-lite');
 const { harvestImages } = require('./harvest-images');
 
-/** Image slots in the arch homepage template, plus the logo. */
-const HOMEPAGE_IMAGE_SLOTS = 4;
+/**
+ * Content-photo slots in the arch homepage template.
+ *
+ * Counted from a real build, not from the reference's `assets/image-` string
+ * count: the generated page asks for `image-1` … `image-6` plus a logo used
+ * twice. An earlier threshold of 4 came from grepping the template and was too
+ * lenient — it reported 28 prospects buildable where 22 actually clear the bar,
+ * and 18 clear it with a logo as well.
+ *
+ * A build with unfilled slots renders broken-image icons, so this is a floor,
+ * not a target. Raising the buildable count is a *template* problem — degrade the
+ * gallery to fewer tiles when a prospect has fewer photographs — not a reason to
+ * lower the number here.
+ */
+const HOMEPAGE_IMAGE_SLOTS = 6;
 
 /** How long an imagery check stays trustworthy. Sites change slowly. */
 const IMAGERY_TTL_DAYS = 45;
