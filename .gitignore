@@ -7,3 +7,6 @@
 # 12_Brain private layer — GitHub repo is PUBLIC; keep PII/access/secrets out of Git
 12_Brain/private/**
 !12_Brain/private/README.md
+
+# Runtime public-safety test fixture (regenerated during tests)
+_os/test/fixtures/

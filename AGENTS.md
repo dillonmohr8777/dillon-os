@@ -38,6 +38,23 @@ node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
 - `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has no ESLint config — interactive only; do not run non-interactively.
 - `immohrtal-site` has no lint script.
 
+### Browser automation (Chromium / Edge remote)
+
+Project MCP config: `.cursor/mcp.json`
+
+| Server | Purpose | How to use |
+|---|---|---|
+| `playwright` | Fresh **Chromium** via Playwright MCP | Default. First local run: `npx playwright install chromium` |
+| `playwright-edge-cdp` | Attach to **Edge** on `127.0.0.1:9222` | Start Edge first (below), then use this server |
+
+Start Edge for remote attach (Windows local only — not reachable from Cloud VMs):
+
+```powershell
+msedge.exe --remote-debugging-port=9222 --user-data-dir="$env:TEMP\edge-cdp"
+```
+
+Cloud agents already have Chrome + Playwright MCP in the VM; Edge CDP is for the desktop machine.
+
 ### Non-obvious caveats
 
 - **D.I.L.L.O.N. OS Command Deck needs the `claude` CLI on PATH** for skill buttons. The dashboard (vitals/directives/brain counts) works without it.
