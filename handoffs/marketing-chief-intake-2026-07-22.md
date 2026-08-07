@@ -1,7 +1,9 @@
 # Marketing Chief intake handoff
 
-Updated: 2026-07-22
+Updated: 2026-08-01
 Authority: route into the canonical Marketing Chief queue on the sole-writer host. This file is a handoff, not canonical queue state.
+
+Compiled week board (cloud evidence only): `12_Brain/projects/2026-08-01 - Marketing Chief Week Ops.md` · operator entity: `12_Brain/entities/Marketing Chief Operator.md`.
 
 ## Intake 1: Slack AI reintegration
 

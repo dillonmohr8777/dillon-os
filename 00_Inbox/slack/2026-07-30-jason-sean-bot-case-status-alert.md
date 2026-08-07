@@ -6,9 +6,10 @@ requested_by: Jason Fallon and Sean Boyle
 permalink: "https://momentum3d.slack.com/archives/C0B2N20A0SW/p1785418358256719"
 type: automation
 client: Momentum 360
-status: new
+status: draft-ready
 priority: urgent
 source_as_of: 2026-07-30T09:35:59-04:00
+updated: 2026-08-01
 tags: [slack, momentum360, automation, urgent]
 ---
 
@@ -20,13 +21,14 @@ Confirm bot stability and provide status on automatic alerts to Jason and Sean w
 
 ## Verified context
 
-1. The latest ask was unanswered as of July 30 at 9:35 AM ET.
-2. The current bot owner and delivery timeline were not verified in the source.
-3. The intended outcome is faster case follow-through and urgent upsell handoff.
+1. Jason's ask is still unanswered in-thread as of the 2026-08-01 live Slack read.
+2. Dillon's 2026-07-30 `#360marketing` validation list already includes reinstated-case automation after Jason portal permissions.
+3. Chatbot finish path still needs Jason HubSpot session + Customer Agent credits + public-site test.
+4. Unsent reply draft: [[Daily-Briefs/drafts/2026-08-01-jason-reinstated-case-reply]].
 
 ## Suggested next step
 
-Identify the current bot runtime and case-status event source, reproduce the missed behavior, and draft a bounded implementation plan with an ETA.
+Get exact approval to send the draft, finish Jason ticket/workflow permissions, then test one Reinstated transition to Sean + Jason.
 
 ## Links
 

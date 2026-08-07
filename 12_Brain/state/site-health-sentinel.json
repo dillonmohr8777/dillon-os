@@ -1,16 +1,112 @@
 {
   "automation_id": "site-health-sentinel",
-  "started_at": "2026-07-29T21:12:51.340Z",
+  "started_at": "2026-08-01T04:33:11.861Z",
   "status": "error",
-  "dry_run": true,
+  "dry_run": false,
   "counts": {
     "total": 5,
-    "pass": 1,
-    "warn": 0,
-    "fail": 1,
-    "skipped": 3
+    "pass": 2,
+    "warn": 1,
+    "fail": 2,
+    "skipped": 0
   },
   "results": [
+    {
+      "id": "book-ironicineptocracy",
+      "name": "Ironic Ineptocracy book site",
+      "url": "https://ironicineptocracy.com",
+      "priority": "critical",
+      "mode": "live",
+      "ok": false,
+      "status": "fail",
+      "checks": [
+        {
+          "id": "http_ok",
+          "ok": true,
+          "detail": "HTTP 200",
+          "severity": "critical"
+        },
+        {
+          "id": "viewport",
+          "ok": true,
+          "detail": "viewport meta present"
+        },
+        {
+          "id": "tracking_hints",
+          "ok": true,
+          "detail": "tracking hints: ga=true meta=false",
+          "severity": "warn"
+        },
+        {
+          "id": "form_endpoint",
+          "ok": false,
+          "detail": "form endpoint not found in markup: /api/dossier-leads",
+          "severity": "critical"
+        }
+      ]
+    },
+    {
+      "id": "mohr-media",
+      "name": "Mohr Media",
+      "url": "https://themohrmedia.com",
+      "priority": "high",
+      "mode": "live",
+      "ok": true,
+      "status": "pass",
+      "checks": [
+        {
+          "id": "http_ok",
+          "ok": true,
+          "detail": "HTTP 200",
+          "severity": "critical"
+        },
+        {
+          "id": "viewport",
+          "ok": true,
+          "detail": "viewport meta present"
+        },
+        {
+          "id": "tracking_hints",
+          "ok": true,
+          "detail": "tracking hints: ga=true meta=false",
+          "severity": "warn"
+        }
+      ]
+    },
+    {
+      "id": "immohrtal",
+      "name": "IMMOHRTAL",
+      "url": "https://immohrtal-site.netlify.app",
+      "priority": "medium",
+      "mode": "live",
+      "ok": true,
+      "status": "warn",
+      "checks": [
+        {
+          "id": "http_ok",
+          "ok": true,
+          "detail": "HTTP 200",
+          "severity": "critical"
+        },
+        {
+          "id": "viewport",
+          "ok": true,
+          "detail": "viewport meta present"
+        },
+        {
+          "id": "tracking_hints",
+          "ok": false,
+          "detail": "no GA4/Meta pixel hints",
+          "severity": "warn"
+        },
+        {
+          "id": "form_endpoint",
+          "ok": true,
+          "detail": "form endpoint referenced: /",
+          "severity": "critical"
+        }
+      ]
+    },
     {
       "id": "fixture-healthy",
       "name": "Fixture healthy site",
@@ -60,58 +156,10 @@
           "severity": "critical"
         }
       ]
-    },
-    {
-      "id": "book-ironicineptocracy",
-      "name": "Ironic Ineptocracy book site",
-      "url": "https://ironicineptocracy.com",
-      "mode": "dry-run-skip-live",
-      "ok": true,
-      "status": "skipped",
-      "checks": [
-        {
-          "id": "live_skipped",
-          "ok": true,
-          "detail": "skipped in dry-run; pass --live to GET",
-          "severity": "info"
-        }
-      ]
-    },
-    {
-      "id": "mohr-media",
-      "name": "Mohr Media",
-      "url": "https://themohrmedia.com",
-      "mode": "dry-run-skip-live",
-      "ok": true,
-      "status": "skipped",
-      "checks": [
-        {
-          "id": "live_skipped",
-          "ok": true,
-          "detail": "skipped in dry-run; pass --live to GET",
-          "severity": "info"
-        }
-      ]
-    },
-    {
-      "id": "immohrtal",
-      "name": "IMMOHRTAL",
-      "url": "https://immohrtal-site.netlify.app",
-      "mode": "dry-run-skip-live",
-      "ok": true,
-      "status": "skipped",
-      "checks": [
-        {
-          "id": "live_skipped",
-          "ok": true,
-          "detail": "skipped in dry-run; pass --live to GET",
-          "severity": "info"
-        }
-      ]
     }
   ],
   "artifact_paths": [
     "/workspace/Daily-Briefs/site-health-report.md"
   ],
-  "written_at": "2026-07-29T21:12:51.340Z"
+  "written_at": "2026-08-01T04:33:11.861Z"
 }
