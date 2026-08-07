@@ -1,0 +1,469 @@
+{
+  "generated": "2026-08-07",
+  "window": {
+    "start": "2026-01-01",
+    "end": "2026-08-07"
+  },
+  "source": "HubSpot content analytics + CRM + revenue attribution (portal 242825734, no Google dependency)",
+  "note": "All watchdog and dashboard reporting uses the fixed window start 2026-01-01. The window extends daily on its own.",
+  "aggregates_ytd_jan1_snapshot": {
+    "asOf": "2026-07-16",
+    "rawViews": 14182,
+    "submissions": 280,
+    "contacts": 140,
+    "leads": 128,
+    "customers": 3,
+    "bounceRate": 0.835,
+    "avgTimePerPageviewSec": 98.9
+  },
+  "monthly_series": [
+    {
+      "month": "2026-01",
+      "views": 3123,
+      "submissions": 28,
+      "contacts": 16
+    },
+    {
+      "month": "2026-02",
+      "views": 2231,
+      "submissions": 58,
+      "contacts": 26,
+      "customers": 3
+    },
+    {
+      "month": "2026-03",
+      "views": 1597,
+      "submissions": 38,
+      "contacts": 16
+    },
+    {
+      "month": "2026-04",
+      "views": 2192,
+      "submissions": 59,
+      "contacts": 31
+    },
+    {
+      "month": "2026-05",
+      "views": 2229,
+      "submissions": 43,
+      "contacts": 24
+    },
+    {
+      "month": "2026-06",
+      "views": 1779,
+      "submissions": 40,
+      "contacts": 21
+    },
+    {
+      "month": "2026-07",
+      "views": 2262,
+      "submissions": 45,
+      "contacts": 29
+    },
+    {
+      "month": "2026-08",
+      "views": 409,
+      "submissions": 8,
+      "contacts": 2,
+      "partial": true
+    }
+  ],
+  "daily_series": {
+    "note": "Rolling per-day series (~last 45 days) for the weekly PDF views chart. Appended each run from the HubSpot DAILY SUMMARY pull. submissionsClean strips QA-test and spam-bot fills per the PLAYBOOK exclusions.",
+    "days": [
+      { "date": "2026-07-10", "views": 79, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
+      { "date": "2026-07-11", "views": 30, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-12", "views": 16, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-13", "views": 38, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-14", "views": 139, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-15", "views": 58, "submissions": 1, "submissionsClean": 1, "contacts": 0 },
+      { "date": "2026-07-16", "views": 82, "submissions": 2, "submissionsClean": 2, "contacts": 1 },
+      { "date": "2026-07-17", "views": 54, "submissions": 2, "submissionsClean": 2, "contacts": 1 },
+      { "date": "2026-07-18", "views": 28, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-19", "views": 47, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-20", "views": 73, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
+      { "date": "2026-07-21", "views": 112, "submissions": 2, "submissionsClean": 2, "contacts": 2 },
+      { "date": "2026-07-22", "views": 87, "submissions": 5, "submissionsClean": 2, "contacts": 4 },
+      { "date": "2026-07-23", "views": 73, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
+      { "date": "2026-07-24", "views": 66, "submissions": 4, "submissionsClean": 4, "contacts": 3 },
+      { "date": "2026-07-25", "views": 24, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-26", "views": 20, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-07-27", "views": 87, "submissions": 2, "submissionsClean": 2, "contacts": 1 },
+      { "date": "2026-07-28", "views": 163, "submissions": 2, "submissionsClean": 2, "contacts": 2 },
+      { "date": "2026-07-29", "views": 100, "submissions": 5, "submissionsClean": 5, "contacts": 3 },
+      { "date": "2026-07-30", "views": 180, "submissions": 5, "submissionsClean": 5, "contacts": 3 },
+      { "date": "2026-07-31", "views": 80, "submissions": 2, "submissionsClean": 2, "contacts": 2 },
+      { "date": "2026-08-01", "views": 24, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-08-02", "views": 18, "submissions": 0, "submissionsClean": 0, "contacts": 0 },
+      { "date": "2026-08-03", "views": 73, "submissions": 3, "submissionsClean": 3, "contacts": 0 },
+      { "date": "2026-08-04", "views": 104, "submissions": 1, "submissionsClean": 1, "contacts": 1 },
+      { "date": "2026-08-05", "views": 81, "submissions": 2, "submissionsClean": 2, "contacts": 0 },
+      { "date": "2026-08-06", "views": 61, "submissions": 2, "submissionsClean": 2, "contacts": 1 },
+      { "date": "2026-08-07", "views": 48, "submissions": 0, "submissionsClean": 0, "contacts": 0, "partial": true }
+    ]
+  },
+  "attribution_snapshot": {
+    "asOf": "2026-07-18",
+    "model": "LINEAR",
+    "window": "2026-01-01 to 2026-07-18, closed-won influenced revenue",
+    "note": "HubSpot campaign attribution: closed-won revenue split across marketing touchpoints. It measures influence, not deal origination, and is not added to verified or CRM-reported Website revenue. Corrected 2026-07-18: values now computed on the Jan 1 window; the prior snapshot carried Jan 26 window values.",
+    "byChannel": [
+      {
+        "channel": "Meetings",
+        "revenue": 447052,
+        "deals": 23
+      },
+      {
+        "channel": "Marketing email",
+        "revenue": 253905,
+        "deals": 4
+      },
+      {
+        "channel": "Calls",
+        "revenue": 22800,
+        "deals": 2
+      },
+      {
+        "channel": "Website pages",
+        "revenue": 14727,
+        "deals": 1
+      }
+    ],
+    "totalAttributedRevenue": 738484
+  },
+  "aeo_referrals_ytd": {
+    "asOf": "2026-07-27",
+    "chatgpt.com": 3,
+    "perplexity.ai": 0,
+    "claude.ai": 0,
+    "gemini.google.com": 0,
+    "copilot.microsoft.com": 0
+  },
+  "blog_conversions_ytd": {
+    "asOf": "2026-07-16",
+    "totalBlogSubmissions": 2,
+    "converting": [
+      "best-practices-for-implementing-workday-a-strategic-guide-to-success (1)",
+      "why-fast-growing-companies-choose-6-week-implementations-over-18-month-enterprise-projects (1)"
+    ]
+  },
+  "known_issues_open": [
+    "hubspot-sitemap-cache-stale-redirects (2 healthy 301s remain in the HubSpot sitemap cache; no private-token sitemap write endpoint)",
+    "duplicate-case-study-path (/success-stories and /case-studies both live and indexed for the same content; pick one canonical path and 301 the other, or set a canonical tag; found in daily SEO sweep 2026-07-23)",
+    "ga4-invalid-id-in-hubspot (HubSpot GA4 integration field holds G-320235048, an invalid measurement ID firing into a non-existent property; the real live stream is G-0Y6LQTTBRJ; Edge audit 2026-07-30; awaiting Dillon: repoint or uncheck)",
+    "duplicate-ga4-firing (theme includes align-attribution.min.js twice around the global footer, so G-0Y6LQTTBRJ fires twice per pageview; needs a dev to remove one include; Edge audit 2026-07-30)",
+    "cta-form-missing-attribution-fields (footer CTA form e733d928 posts only name/email/phone/company/service_interest/message, so the 33 Align attribution properties sit at ~0% fill; add align_* fields to the payload; Edge audit 2026-07-30)"
+  ],
+  "known_issues_resolved": [
+    {
+      "id": "slug-typo-paylocity-vs-paycheck",
+      "resolvedAt": "2026-07-17",
+      "evidence": "The published post now uses /blog/paylocity-vs-paychex-best-platform. The former URL returns HTTP 301 to the new URL, the new page returns HTTP 200 with the correct canonical, and the internal link crawl has no broken targets.",
+      "followUp": "The HubSpot sitemap cache still lists the former URL and omits the new URL. Recheck after cache refresh."
+    },
+    {
+      "id": "waf-blocks-ai-crawlers",
+      "resolvedAt": "2026-07-16",
+      "evidence": "HTTP 200 for GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended, and Applebot-Extended on the site, robots.txt, and llms.txt",
+      "llmsUrl": "https://www.alignhcm.com/llms.txt",
+      "followUp": "Track AEO referrals; reopen as critical if any crawler probe returns 403 or llms.txt stops returning text/plain."
+    },
+    {
+      "id": "case-studies-native-main-domain-coverage",
+      "resolvedAt": "2026-07-16",
+      "evidence": "Twenty built-in case-study URLs on alignhcm.com have GA4, HubSpot tracking, native tracked CTAs, forms, and no sandbox links."
+    },
+    {
+      "id": "duplicate-ukg-buyers-guide",
+      "resolvedAt": "2026-07-16",
+      "evidence": "The duplicate post was archived and /blog/ukg-buyers-guide redirects to the canonical strategic buyer's guide."
+    },
+    {
+      "id": "legacy-case-study-pages",
+      "resolvedAt": "2026-07-16",
+      "evidence": "Legacy success-stories and case-studies-old pages were archived and their visitor paths redirect to current canonical case studies."
+    },
+    {
+      "id": "legacy-apex-urls",
+      "resolvedAt": "2026-07-16",
+      "evidence": "/welcome/ resolves to the home page and /news/ resolves to /blog on the canonical www host."
+    },
+    {
+      "id": "untitled-content-238611079877",
+      "resolvedAt": "2026-07-16",
+      "evidence": "The content ID is absent from current and archived site-page, landing-page, and blog APIs and is not a live sitemap URL."
+    },
+    {
+      "id": "production-sandbox-links-and-reporting-pollution",
+      "resolvedAt": "2026-07-16",
+      "evidence": "The full production crawl found zero sandbox links and watchdog KPIs exclude sandbox, Netlify, app, and meeting hosts."
+    },
+    {
+      "id": "blog-conversion-path",
+      "resolvedAt": "2026-07-16",
+      "evidence": "The production blog template now includes the tracked buyer's-guide CTA and form; the full crawl reports zero conversion-coverage gaps."
+    },
+    {
+      "id": "smartcare-tracking-and-form-integrity",
+      "resolvedAt": "2026-07-16",
+      "evidence": "/align-hcm-smartcare has GA4, HubSpot tracking, attribution capture, a real managed-form submission path, and no false-success handler."
+    },
+    {
+      "id": "historical-404-views",
+      "resolvedAt": "2026-07-16",
+      "evidence": "The full internal-link crawl found zero broken visitor-facing targets. The daily /404 view threshold remains active for regression monitoring."
+    }
+  ],
+  "alert_thresholds": {
+    "views_wow_drop_pct": 40,
+    "submissions_zero_days": 3,
+    "daily_404_views": 5,
+    "top10_bounce_max": 0.97,
+    "new_untracked_domains": true,
+    "aeo_referrals_monthly_min": 1,
+    "conversion_rate_monthly_floor": 0.012,
+    "conversion_rate_drop_pct": 40,
+    "influenced_pipeline_mom_drop_pct": 50,
+    "follow_up_gap_max_pct": 0.35,
+    "hot_lead_untouched_days": 3,
+    "lost_without_reason_share_max": 0.5
+  },
+  "channel_revenue_live": {
+    "asOf": "2026-07-17",
+    "window": "2026-01-01 to 2026-07-17",
+    "methodology": "New-business deals created and closed in-window; verified owned-channel source only when partner, vendor, rep, meeting-link, renewal, existing-client, and change-request evidence does not conflict.",
+    "totalWon": 54000,
+    "deals": 1,
+    "byChannel": [
+      {
+        "sourceKey": "ORGANIC_SEARCH",
+        "channel": "Organic Search",
+        "won": 54000,
+        "deals": 1,
+        "note": "Verified deal source is Organic Search, the deal entered the cohort during the window, and no partner or sales-source field contradicts it."
+      },
+      {
+        "sourceKey": "DIRECT_TRAFFIC",
+        "channel": "Direct Traffic",
+        "won": 0,
+        "deals": 0,
+        "note": "Verified direct origin only. Meeting links and partner/vendor-sourced deals are excluded from Direct."
+      },
+      {
+        "sourceKey": "SOCIAL_MEDIA",
+        "channel": "Organic Social",
+        "won": 0,
+        "deals": 0,
+        "note": "Verified deal source is Organic Social, the deal entered the cohort during the window, and no partner or sales-source field contradicts it."
+      }
+    ],
+    "crmReportedWebsiteWon": 108000,
+    "crmReportedWebsiteDeals": 1,
+    "conflictingOwnedSourceWon": 192000,
+    "conflictingOwnedSourceDeals": 1
+  },
+  "contact_sources_window": {
+    "AI_REFERRALS": 3,
+    "DIRECT_TRAFFIC": 125,
+    "OFFLINE": 2185,
+    "ORGANIC_SEARCH": 20,
+    "REFERRALS": 8,
+    "SOCIAL_MEDIA": 6
+  },
+  "aeo_referrals_window": {
+    "ChatGPT": 3,
+    "Perplexity": 0,
+    "Claude": 0,
+    "Gemini": 0,
+    "Microsoft Copilot": 0
+  },
+  "attribution_health_live": {
+    "asOf": "2026-07-17T10:48:57.6656180-04:00",
+    "totalKnownConversions": 104,
+    "trackedForms": 5,
+    "completeForms": 5,
+    "requiredChecksPassing": 15,
+    "requiredChecksFailing": 0,
+    "hubspotCustomEventScope": "not_granted_ga4_fallback_active"
+  },
+  "site_coverage_live": {
+    "asOf": "2026-07-17T10:50:22.9817089-04:00",
+    "sitemapUrls": 109,
+    "finalOk": 109,
+    "internalTargets": 159,
+    "brokenInternalTargets": 0,
+    "attributionCoverageGaps": 0,
+    "conversionCoveredPages": 109,
+    "conversionCoverageGaps": 0,
+    "missingGa4": 0,
+    "missingHubSpot": 0,
+    "redirectingSitemapUrls": 1,
+    "legacyCaseStudyPages": 0
+  },
+  "qualified_leads_live": {
+    "asOf": "2026-07-17T10:48:57.6656180-04:00",
+    "window": "2026-01-01 to 2026-07-17",
+    "total": 22,
+    "followedUp": 13,
+    "missingFollowUp": 9,
+    "open": 2,
+    "won": 1,
+    "lost": 4,
+    "noDeal": 15,
+    "openPipeline": 415000,
+    "wonRevenue": 54000,
+    "lostValue": 361000
+  },
+  "last_run": "2026-08-07 (Friday; no new alert. Influenced pipeline up again to ~$542K (Diversified $493.5K + new Royal Credit Union $48K organic; RPM $15K went closed-lost). New business unchanged $2.88M/33; total closed-won 116/$5.62M. August MTD 409 views/8 subs. Kaiser still not reopened. GA4/attribution Edge-audit items still open.)",
+  "leading_indicators": {
+    "asOf": "2026-08-07",
+    "conversion_rate": {
+      "ytd": 0.0197,
+      "monthly": {
+        "2026-01": 0.009,
+        "2026-02": 0.026,
+        "2026-03": 0.0238,
+        "2026-04": 0.0269,
+        "2026-05": 0.0193,
+        "2026-06": 0.0225,
+        "2026-07": 0.0199,
+        "2026-08": 0.0196
+      },
+      "alert_floor": 0.012
+    },
+    "influenced_open_pipeline": {
+      "total": 542556,
+      "deals": 5,
+      "prior": 416056,
+      "alert": "Up again to ~$542K: Diversified Energy grew to $493.5K and a new organic deal (Royal Credit Union $48K) opened; RPM xConstruction ($15K Organic) went closed-lost on Aug 6. Kaiser Permanente ($125K Organic) still individually closed-lost and unreopened.",
+      "detail": [
+        {
+          "company": "Diversified Energy - Paycor to Dayforce Migration",
+          "amount": 493500,
+          "stage": "2405262030",
+          "source": "DIRECT_TRAFFIC"
+        },
+        {
+          "company": "Royal Credit Union - SmartCare Optimize",
+          "amount": 48000,
+          "stage": "2405262029",
+          "source": "ORGANIC_SEARCH"
+        },
+        {
+          "company": "goway - Banking change request",
+          "amount": 1056,
+          "stage": "appointmentscheduled",
+          "source": "DIRECT_TRAFFIC"
+        },
+        {
+          "company": "Parrys Pizza - Managed Payroll",
+          "amount": 0,
+          "stage": "appointmentscheduled",
+          "source": "DIRECT_TRAFFIC"
+        },
+        {
+          "company": "TRA - Managed Payroll",
+          "amount": 0,
+          "stage": "appointmentscheduled",
+          "source": "DIRECT_TRAFFIC"
+        }
+      ]
+    },
+    "lead_follow_up_gap": {
+      "convertedContacts": 204,
+      "noOutreach": 83,
+      "noOutreachPct": 0.41,
+      "qualifiedSubset": {
+        "total": 22,
+        "noFollowUp": 9
+      }
+    }
+  },
+  "data_integrity": {
+    "asOf": "2026-08-07",
+    "closed_lost_without_reason": {
+      "deals": 87,
+      "value": 13881643,
+      "pctOfLost": 1.0,
+      "note": "Every lost deal in the window still has no reason logged; count rose to 87 (RPM and one other lost this week). Track down as the required-field fix takes hold."
+    },
+    "premature_closes": [
+      {
+        "deal": "Kaiser Permanente - PRO Optimization",
+        "issue": "newly closed-lost with future close date (Sep 30) and amount zeroed to $0; was $125K open Organic Search deal",
+        "amount": 0
+      },
+      {
+        "deal": "Superior Propane - Dayforce SmartCare",
+        "issue": "closed-lost with future close date (Jul 31)",
+        "amount": 200000
+      },
+      {
+        "deal": "Eat'n Park - UTA to Pro WFM",
+        "issue": "no amount entered",
+        "amount": null
+      }
+    ]
+  },
+  "closed_won_reconciliation": {
+    "asOf": "2026-08-07",
+    "source": "Live HubSpot DEAL record, reconciled. Supersedes the Jul 15 design one-pager ($162K) which was representative placeholder data.",
+    "window": "2026-01-01 to 2026-08-07, by close date",
+    "total_closed_won": {
+      "deals": 116,
+      "amount": 5618596
+    },
+    "by_deal_type": {
+      "new_business": {
+        "deals": 33,
+        "amount": 2882563
+      },
+      "existing_business": {
+        "deals": 20,
+        "amount": 1337473
+      },
+      "change_order": {
+        "deals": 52,
+        "amount": 937828
+      },
+      "renewal": {
+        "deals": 10,
+        "amount": 452732
+      },
+      "untyped": {
+        "deals": 1,
+        "amount": 8000
+      }
+    },
+    "new_business_by_origin": {
+      "offline_partner_sales_outbound": {
+        "deals": 27,
+        "amount": 2532343,
+        "pct": 0.878
+      },
+      "direct_web": {
+        "deals": 1,
+        "amount": 141145,
+        "pct": 0.049,
+        "note": "BioScript; origin disputed in CRM"
+      },
+      "organic_search_web": {
+        "deals": 1,
+        "amount": 54000,
+        "pct": 0.019,
+        "note": "Weissman; verified"
+      },
+      "untagged": {
+        "deals": 4,
+        "amount": 155075
+      }
+    },
+    "marketing_headline": {
+      "new_business_won": 2882563,
+      "web_sourced_won": 195145,
+      "verified_originated": 54000,
+      "web_sourced_pct": 0.068
+    },
+    "guard": "Standing directive 4: no revenue figure is reported unless a live DEAL query reproduces it."
+  }
+}

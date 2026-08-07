@@ -1,0 +1,16 @@
+<section id="blog-conversion-form" class="contact-form-blog shift" data-align-conversion-context data-align-offer-id="hcm_assessment" data-align-cta-placement="blog_end_form" data-align-conversion-type="contact_form" aria-labelledby="blog-conversion-heading">
+  <h2 id="blog-conversion-heading">
+    Turn this insight into an HCM action plan
+  </h2>
+  <p>
+    Tell us what you are evaluating or trying to fix. An Align HCM specialist will follow up with a free, no-obligation assessment.
+  </p>
+  {% form
+	form_to_use="{{ module.form_field.form_id }}"
+	response_response_type="{{ module.form_field.response_type }}"
+	response_message="{{ module.form_field.message }}"
+	response_redirect_id="{{ module.form_field.redirect_id }}"
+	response_redirect_url="{{module.form_field.redirect_url}}"
+	gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+%}
+</section>
