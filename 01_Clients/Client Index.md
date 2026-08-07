@@ -29,7 +29,6 @@ tags: [client, moc]
 
 ## 1099
 - [[Bok Law]] (also listed under M360)
-- [[Buzz Bull]]
 
 ## Direct
 
@@ -58,7 +57,7 @@ tags: [client, moc]
 - [[Align HCM]] — alignhcm.com — LinkedIn calendars, CEO blogs, carousels, case studies, sales proposals, HTML reports, SEO blogs
 
 ## Past Clients
-- 
+- [[Buzz Bull]] — 1099 brand, defunct as of 2026-08-07 (operator confirmed; see [[12_Brain/decisions/2026-08-07 - Buzz Bull Marketing Systems is defunct|decision]])
 
 ## Prospects
 - 

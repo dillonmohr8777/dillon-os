@@ -1,6 +1,6 @@
 ---
 tags: [decisions, index]
-updated: 2026-07-29
+updated: 2026-08-07
 ---
 
 # Decisions
@@ -14,6 +14,7 @@ Use [[12_Brain/templates/Decision|Decision template]]. View in
 
 `/session-mine` writes stubs here when a session makes a material decision.
 
-## Seed decision
+## Log
 
 - [[12_Brain/decisions/2026-07-29 - 12_Brain is the canonical brain layer|2026-07-29 — 12_Brain is the canonical brain layer]]
+- [[12_Brain/decisions/2026-08-07 - Buzz Bull Marketing Systems is defunct|2026-08-07 — Buzz Bull Marketing Systems is defunct]]
