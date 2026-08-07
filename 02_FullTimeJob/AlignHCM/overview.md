@@ -35,6 +35,12 @@ Post-go-live HCM support product. Four maturity stages:
 
 Messaging emphasis: ongoing expert access, platform optimization, post-go-live support.
 
+## Customer Agent (HubSpot)
+- Portal **242825734** · agent **Align HCM Customer Agent** · **LAUNCH HOLD** (Preview only, no website chat).
+- Docs: [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Knowledge-Core|Knowledge Core]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Readiness-Report|Readiness Report]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Test-Results-2026-07-30|Test Results 2026-07-30]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Question-Registry|Question Registry (all 39 messages)]].
+- Prompt version: **v2026-07-30.5** · G0 (UKG timeclock) **PASS** · 2 High guardrail fails open (cases 49, 52).
+- Branded PDFs of the Knowledge Core, Readiness Report, and Question Registry are generated from the Markdown: `python3 generate-pdfs.py` in `Customer-Agent/` (see that folder's `README.md`).
+
 ## Deliverables in flight
 - April and May 2026 LinkedIn content calendars (both complete).
 - HTML / CSS motion graphic carousel assets.

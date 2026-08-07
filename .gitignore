@@ -12,6 +12,10 @@ node_modules/
 .next/
 dist/
 
+# Python
+__pycache__/
+*.pyc
+
 # Playwright QA output
 _templates/site-factory/qa-shots/
 
