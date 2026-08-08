@@ -47,6 +47,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/concepts/Competitive Task|Competitive Task]] — one umbrella daily loop replacing seven morning crons.
 
 ## Raw captures (Git-safe)
 
