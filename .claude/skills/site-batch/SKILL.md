@@ -19,7 +19,7 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
 
 1. **Scope.** Pick one market and one or two verticals from `02_Campaigns/AI Site Builder Outreach Engine/Market Roster.md`. Over-pull 25 to 30 candidates. Exclude current clients in `01_Clients/`, active deals, and anyone previously mailed.
 
-2. **Scaffold.** Create `02_Campaigns/AI Site Builder Outreach Engine/batches/<batch-id>/` with `batch.json` (`id`, `title`, `market`, `week`, `idPrefix`, `targetCount: 25`, `deployBaseUrl`) and an empty `briefs/` folder. Batch IDs look like `phl-2026-w31`.
+2. **Scaffold.** Create `02_Campaigns/AI Site Builder Outreach Engine/batches/<batch-id>/` with `batch.json` (`id`, `title`, `market`, `week`, `idPrefix`, `targetCount: 25`, `deployBaseUrl`) and an empty `briefs/` folder. Batch IDs look like `phl-2026-w31`. Add `runtime.triggerIdentity` with an exact `kind` (`user`, `schedule`, or `connector`) and safe opaque `locator`, plus safe `runtime.sourceLocators` and a `runtime.budget`. Missing or private-path identity and source locators fail before any prospect runs.
 
 3. **Harvest.** Build `targets.json` as an array of `{slug, siteUrl, socials}` then run:
    `node _templates/site-factory/harvest.js --from targets.json`
@@ -30,6 +30,7 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
 5. **Build and QA the batch.**
    `node _templates/site-factory/build-batch.js <batch-dir>`
    This builds every site, runs the QA gate on each (static + visual), checks spec compliance, and fails any site sharing a duplicate image with another in the batch. Brief count must equal `targetCount` unless `--allow-partial` (test/preview only). Non-zero exit means something is held. Fix and rerun.
+   The runner writes `agent-run.json` before the first prospect starts and updates it atomically after each item. If interrupted, run the same command to resume pending, retryable failed, or interrupted items. Completed items are reused only when their input hash still matches. A changed completed brief fails closed and requires a new run manifest.
 
 6. **Taste pass.** Open the generated `index.html` hub and judge every site by eye: does it look expensive, does it look like that specific business, is the palette dull. Check `_templates/site-factory/qa-shots/<slug>/phone.png` for cramped mobile headlines. Send failures back to step 4.
 
@@ -45,3 +46,4 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
 - Facts come from the harvest or verified research. Unverifiable fields stay empty.
 - Never reuse a photo within a site or across the batch; the runner enforces this by content hash.
 - Slugs must match `^[a-z0-9]+(?:-[a-z0-9]+)*$`. Harvest URLs must be public http(s).
+- `agent-run.json` is execution evidence only. It never becomes queue state and never authorizes deployment, mailing, or sending.

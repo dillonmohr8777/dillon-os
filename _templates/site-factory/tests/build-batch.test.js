@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const crypto = require('crypto');
 const { runBatch } = require('../build-batch.js');
 const { buildSite } = require('../build-site.js');
 const {
@@ -17,6 +18,24 @@ const {
 
 function tmp() {
   return fs.mkdtempSync(path.join(os.tmpdir(), 'sf-batch-'));
+}
+
+function digestFiles(root, relativePaths) {
+  const digests = {};
+  const visit = (relativePath) => {
+    const absolute = path.join(root, relativePath);
+    const stat = fs.statSync(absolute);
+    if (stat.isDirectory()) {
+      for (const name of fs.readdirSync(absolute).sort()) visit(path.join(relativePath, name));
+      return;
+    }
+    digests[relativePath.split(path.sep).join('/')] = crypto
+      .createHash('sha256')
+      .update(fs.readFileSync(absolute))
+      .digest('hex');
+  };
+  relativePaths.forEach(visit);
+  return digests;
 }
 
 describe('build-batch human approval gating', () => {
@@ -139,5 +158,88 @@ describe('build-batch visual QA and spec gates', () => {
     assert.equal(summary.results[0].qaReady, 'hold');
     // Must not create a traversal directory under sites
     assert.ok(!fs.existsSync(path.join(root, 'sites', '..', 'evil')));
+  });
+});
+
+describe('build-batch runtime resumability', () => {
+  it('fails closed before build work when trigger identity is missing', async () => {
+    const root = tmp();
+    const briefs = [passingBrief({ slug: 'identity-gate', name: 'Identity Gate' })];
+    writeBatchFixture(root, { targetCount: 1, briefs });
+    const batchPath = path.join(root, 'batch.json');
+    const batch = JSON.parse(fs.readFileSync(batchPath, 'utf8'));
+    delete batch.runtime;
+    fs.writeFileSync(batchPath, JSON.stringify(batch, null, 2));
+    let builds = 0;
+    await assert.rejects(
+      runBatch(root, {
+        quiet: true,
+        runQa: fullPassQa,
+        buildSite: (...args) => {
+          builds += 1;
+          return buildSite(...args);
+        },
+      }),
+      /triggerIdentity is required/
+    );
+    assert.equal(builds, 0);
+    assert.equal(fs.existsSync(path.join(root, 'agent-run.json')), false);
+  });
+
+  it('resumes at the first unfinished item and matches an uninterrupted artifact set', async () => {
+    const briefs = [
+      passingBrief({ slug: 'alpha-runtime', name: 'Alpha Runtime' }),
+      passingBrief({ slug: 'beta-runtime', name: 'Beta Runtime' }),
+    ];
+
+    const uninterruptedRoot = tmp();
+    writeBatchFixture(uninterruptedRoot, { targetCount: 2, briefs });
+    briefs.forEach((brief) => buildSite(brief, path.join(uninterruptedRoot, 'sites')));
+    writeUniqueAssets(uninterruptedRoot, briefs.map((brief) => brief.slug), 12);
+    const uninterrupted = await runBatch(uninterruptedRoot, { quiet: true, runQa: fullPassQa });
+    assert.equal(uninterrupted.ok, true);
+
+    const resumedRoot = tmp();
+    writeBatchFixture(resumedRoot, { targetCount: 2, briefs });
+    briefs.forEach((brief) => buildSite(brief, path.join(resumedRoot, 'sites')));
+    writeUniqueAssets(resumedRoot, briefs.map((brief) => brief.slug), 12);
+
+    await assert.rejects(
+      runBatch(resumedRoot, {
+        quiet: true,
+        runQa: fullPassQa,
+        interruptAfterItems: 1,
+      }),
+      (error) => error.code === 'SITE_BATCH_INTERRUPTED'
+    );
+    const interruptedManifest = JSON.parse(
+      fs.readFileSync(path.join(resumedRoot, 'agent-run.json'), 'utf8')
+    );
+    assert.equal(interruptedManifest.items[0].status, 'completed');
+    assert.equal(interruptedManifest.items[1].status, 'running');
+
+    let resumedBuilds = 0;
+    const resumed = await runBatch(resumedRoot, {
+      quiet: true,
+      runQa: fullPassQa,
+      buildSite: (brief, outputRoot) => {
+        resumedBuilds += 1;
+        return buildSite(brief, outputRoot);
+      },
+    });
+    assert.equal(resumed.ok, true);
+    assert.equal(resumedBuilds, 1, 'the completed first item must not rebuild');
+
+    const manifest = JSON.parse(fs.readFileSync(path.join(resumedRoot, 'agent-run.json'), 'utf8'));
+    assert.equal(manifest.status, 'awaiting_review');
+    assert.deepEqual(manifest.items.map((item) => item.status), ['completed', 'completed']);
+    assert.deepEqual(manifest.items.map((item) => item.attempts), [1, 2]);
+    assert.ok(manifest.items.every((item) => item.artifacts.every((artifact) => /^[a-f0-9]{64}$/.test(artifact.sha256))));
+
+    const materialPaths = ['sites', 'index.html', 'manifest.csv', 'prospects.csv', 'batch-report.md'];
+    assert.deepEqual(
+      digestFiles(resumedRoot, materialPaths),
+      digestFiles(uninterruptedRoot, materialPaths)
+    );
   });
 });

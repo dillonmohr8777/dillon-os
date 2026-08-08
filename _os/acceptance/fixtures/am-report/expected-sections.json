@@ -1,0 +1,6 @@
+{
+  "fixture": true,
+  "requiredSections": ["Top 3 priorities", "Client movement", "Inbox", "Content", "Schedule"],
+  "maximumLines": 40,
+  "externalActionsAllowed": false
+}

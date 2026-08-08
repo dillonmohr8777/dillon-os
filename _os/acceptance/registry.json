@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "skills": [
+    {
+      "id": "site-batch",
+      "skillPath": ".claude/skills/site-batch/SKILL.md",
+      "fixtures": ["_os/acceptance/fixtures/site-batch/interruption.json"],
+      "commands": [
+        ["node", "--test", "_templates/site-factory/tests/build-batch.test.js", "_templates/site-factory/tests/workflow.test.js", "_os/automation/tests/agent-runtime.test.js"]
+      ],
+      "expectedFiles": [
+        "12_Brain/schemas/agent-runtime-contract-v1.json",
+        "_os/automation/lib/agent-runtime.js",
+        "_templates/site-factory/build-batch.js"
+      ],
+      "requiredPatterns": ["agent-run.json", "resume", "mail_ready"],
+      "forbiddenPatterns": ["mail_ready=ready from automation"],
+      "independentReview": true,
+      "timeoutSeconds": 30,
+      "retryLimit": 0
+    },
+    {
+      "id": "site-factory",
+      "skillPath": ".claude/skills/site-factory/SKILL.md",
+      "fixtures": ["_templates/site-factory/example-brief.json"],
+      "commands": [
+        ["node", "--test", "_templates/site-factory/tests/skins.test.js", "_templates/site-factory/tests/validate.test.js", "_templates/site-factory/tests/workflow.test.js"]
+      ],
+      "expectedFiles": [
+        "_templates/site-factory/build-site.js",
+        "_templates/site-factory/qa.js",
+        "_templates/site-factory/workflow/evaluator.js"
+      ],
+      "requiredPatterns": ["noindex", "QA", "Never"],
+      "forbiddenPatterns": [],
+      "independentReview": true,
+      "timeoutSeconds": 30,
+      "retryLimit": 0
+    },
+    {
+      "id": "vault-compile",
+      "skillPath": ".claude/skills/vault-compile/SKILL.md",
+      "fixtures": ["_os/acceptance/fixtures/vault-compile/source-note.md"],
+      "commands": [
+        ["node", "--test", "_os/acceptance/tests/skills-contract.test.js", "_os/test/brain-hud.test.js", "_os/test/public-safety.test.js"]
+      ],
+      "expectedFiles": ["12_Brain/INDEX.md", "12_Brain/raw/README.md"],
+      "requiredPatterns": ["Never edit anything in `12_Brain/raw/`", "source:", "Update the existing page"],
+      "forbiddenPatterns": [],
+      "independentReview": true,
+      "timeoutSeconds": 30,
+      "retryLimit": 0
+    },
+    {
+      "id": "am-report",
+      "skillPath": ".claude/skills/am-report/SKILL.md",
+      "fixtures": ["_os/acceptance/fixtures/am-report/expected-sections.json"],
+      "commands": [["node", "--test", "_os/acceptance/tests/skills-contract.test.js"]],
+      "expectedFiles": ["Dashboard.md", "System/OS Config.md"],
+      "requiredPatterns": ["Top 3 priorities", "Client movement", "under 40 lines"],
+      "forbiddenPatterns": ["send email", "publish"],
+      "independentReview": true,
+      "timeoutSeconds": 15,
+      "retryLimit": 0
+    },
+    {
+      "id": "client-report",
+      "skillPath": ".claude/skills/client-report/SKILL.md",
+      "fixtures": ["_os/acceptance/fixtures/client-report/sample-data.json"],
+      "commands": [["node", "--test", "_os/acceptance/tests/skills-contract.test.js"]],
+      "expectedFiles": ["_os/reporting/build-report.js", "_os/reporting/report-template.html"],
+      "requiredPatterns": ["Never invent live metrics", "sampleData", "Align HCM"],
+      "forbiddenPatterns": ["sampleData\": false"],
+      "independentReview": true,
+      "timeoutSeconds": 15,
+      "retryLimit": 0
+    }
+  ]
+}

@@ -58,7 +58,22 @@ node _templates/site-factory/harvest.js --from targets.json
 node _templates/site-factory/build-batch.js <batch-dir>
 ```
 
-A batch directory holds `batch.json` plus `briefs/*.json`, and the runner emits `sites/`, `index.html` (the review hub, one link for the bosses), `manifest.csv` (QR sheet), `prospects.csv` (`qa_ready` + always-held `mail_ready`), `batch-report.md`, and `batch-summary.json`.
+A batch directory holds `batch.json` plus `briefs/*.json`, and the runner emits `sites/`, `index.html` (the review hub, one link for the bosses), `manifest.csv` (QR sheet), `prospects.csv` (`qa_ready` + always-held `mail_ready`), `batch-report.md`, `batch-summary.json`, and the atomic `agent-run.json` receipt.
+
+`batch.json` must declare the bounded runtime context before work begins:
+
+```json
+{
+  "runtime": {
+    "triggerIdentity": { "kind": "schedule", "locator": "schedule:weekly-site-batch" },
+    "sourceLocators": ["queue-item:safe-opaque-id"],
+    "budget": { "tokens": null, "timeoutSeconds": 7200 },
+    "maxAttempts": 3
+  }
+}
+```
+
+The runner checkpoints after each prospect. Rerunning the same command resumes only pending, interrupted, or retryable failed items. A completed item is never rebuilt unless a new run manifest is intentionally started; input drift fails closed.
 
 Production runs require brief count == `targetCount`. Use `--allow-partial` only for test/preview. Full QA requires Playwright visual checks; static-only is not a pass.
 

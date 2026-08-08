@@ -1,0 +1,8 @@
+{
+  "fixture": "interrupt-after-item",
+  "interruptAfterItems": 1,
+  "expectedFirstRun": ["completed", "running"],
+  "expectedResume": ["completed", "completed"],
+  "completedItemRebuilds": 0,
+  "finalArtifactsMatchUninterruptedRun": true
+}

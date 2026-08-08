@@ -95,6 +95,11 @@ function writeBatchFixture(root, { targetCount, briefs, batchId = 'test-batch' }
         idPrefix: 'TST',
         targetCount,
         deployBaseUrl: 'https://example-batch.netlify.app',
+        runtime: {
+          triggerIdentity: { kind: 'user', locator: 'fixture:site-batch-tests' },
+          sourceLocators: ['fixture:site-batch'],
+          budget: { tokens: null, timeoutSeconds: 30 },
+        },
       },
       null,
       2

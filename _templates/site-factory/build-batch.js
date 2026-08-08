@@ -20,6 +20,11 @@ const { buildSite } = require('./build-site.js');
 const { runQa: defaultRunQa } = require('./qa.js');
 const { SPEC, checkSpec } = require('./lib/spec.js');
 const { assertSafeSlug } = require('./lib/validate.js');
+const {
+  AgentRun,
+  artifactEvidence,
+  stableItemInputHash,
+} = require('../../_os/automation/lib/agent-runtime.js');
 
 const csvCell = (v) => {
   const s = String(v ?? '');
@@ -28,14 +33,83 @@ const csvCell = (v) => {
 const esc = (s) =>
   String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+function listFiles(rootDir) {
+  if (!rootDir || !fs.existsSync(rootDir)) return [];
+  const files = [];
+  const visit = (current) => {
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const full = path.join(current, entry.name);
+      if (entry.isDirectory()) visit(full);
+      else if (entry.isFile()) files.push(full);
+    }
+  };
+  visit(rootDir);
+  return files.sort();
+}
+
+function rowCheckpoint(row, batchDir) {
+  const checkpoint = { ...row };
+  delete checkpoint.outDir;
+  if (row.outDir) checkpoint.outputPath = path.relative(batchDir, row.outDir).split(path.sep).join('/');
+  return checkpoint;
+}
+
+function rowFromCheckpoint(checkpoint, batchDir) {
+  const row = { ...checkpoint };
+  delete row.outputPath;
+  if (checkpoint.outputPath) row.outDir = path.resolve(batchDir, checkpoint.outputPath);
+  return row;
+}
+
+function itemArtifacts(batchDir, row) {
+  if (!row.outDir || !fs.existsSync(row.outDir)) return [];
+  return artifactEvidence(
+    batchDir,
+    listFiles(row.outDir).map((file) => path.relative(batchDir, file))
+  );
+}
+
+function itemVerification(row) {
+  return [
+    {
+      check: 'canonical-site-spec',
+      status: row.specFailures && row.specFailures.length ? 'fail' : 'pass',
+      sections: row.sections ?? null,
+      words: row.words ?? null,
+      images: row.images ?? null,
+    },
+    {
+      check: 'site-qa',
+      status: row.qa === 'PASS' && row.visualQa === 'ran' && row.qaReady === 'ready' ? 'pass' : 'fail',
+      qa: row.qa,
+      visualQa: row.visualQa,
+      qaReady: row.qaReady,
+    },
+  ];
+}
+
+function recordImageHashes(imageHashes, row) {
+  const assetsDir = row.outDir && path.join(row.outDir, 'assets');
+  if (!assetsDir || !fs.existsSync(assetsDir)) return;
+  for (const file of fs.readdirSync(assetsDir)) {
+    const full = path.join(assetsDir, file);
+    if (!fs.statSync(full).isFile()) continue;
+    const hash = crypto.createHash('sha1').update(fs.readFileSync(full)).digest('hex');
+    const key = `${row.slug}/${file}`;
+    if (imageHashes.has(hash)) imageHashes.get(hash).push(key);
+    else imageHashes.set(hash, [key]);
+  }
+}
+
 /**
  * @param {string} batchDir
- * @param {{ allowPartial?: boolean, skipQa?: boolean, quiet?: boolean, runQa?: Function }} [options]
+ * @param {{ allowPartial?: boolean, skipQa?: boolean, quiet?: boolean, runQa?: Function, buildSite?: Function, interruptAfterItems?: number, runId?: string, triggerIdentity?: object, sourceLocators?: string[], budget?: object }} [options]
  */
 async function runBatch(batchDir, options = {}) {
   const allowPartial = !!options.allowPartial;
   const skipQa = !!options.skipQa;
   const runQa = options.runQa || defaultRunQa;
+  const build = options.buildSite || buildSite;
   const log = options.quiet ? () => {} : console.log.bind(console);
 
   if (!batchDir || !fs.existsSync(path.join(batchDir, 'batch.json'))) {
@@ -50,6 +124,26 @@ async function runBatch(batchDir, options = {}) {
   if (!briefFiles.length) {
     throw new Error(`No briefs found in ${briefsDir}`);
   }
+
+  const run = new AgentRun({
+    manifestPath: options.manifestPath || path.join(batchDir, 'agent-run.json'),
+    workflowId: 'site-batch',
+    runId: options.runId || batch.runtime?.runId,
+    workItemId: options.workItemId ?? batch.runtime?.workItemId ?? null,
+    clientId: options.clientId ?? batch.runtime?.clientId ?? null,
+    triggerIdentity:
+      options.triggerIdentity ||
+      batch.runtime?.triggerIdentity,
+    sourceLocators:
+      options.sourceLocators || batch.runtime?.sourceLocators || [`batch:${batch.id || path.basename(batchDir)}`],
+    approval: { gate: 'explicit', status: 'pending' },
+    budget: options.budget || batch.runtime?.budget || { tokens: null, timeoutSeconds: null },
+    maxAttempts: options.maxAttempts || batch.runtime?.maxAttempts || 3,
+    items: briefFiles.map((file) => ({
+      id: file.replace(/\.json$/i, ''),
+      inputHash: stableItemInputHash(fs.readFileSync(path.join(briefsDir, file))),
+    })),
+  });
 
   const TARGET_COUNT = batch.targetCount ?? 25;
   const countMismatch = briefFiles.length !== TARGET_COUNT;
@@ -68,6 +162,7 @@ async function runBatch(batchDir, options = {}) {
 
   const results = [];
   const imageHashes = new Map();
+  let finishedThisInvocation = 0;
 
   log(`Batch ${batch.id} | ${briefFiles.length} briefs | market: ${batch.market || 'n/a'}\n`);
 
@@ -75,9 +170,33 @@ async function runBatch(batchDir, options = {}) {
   const forceHoldAll = countMismatch && !allowPartial;
 
   for (const [i, file] of briefFiles.entries()) {
+    const runtimeItemId = file.replace(/\.json$/i, '');
+    if (!run.shouldRun(runtimeItemId)) {
+      const runtimeItem = run.getItem(runtimeItemId);
+      const resumedRow = runtimeItem.checkpoint
+        ? rowFromCheckpoint(runtimeItem.checkpoint, batchDir)
+        : {
+            file,
+            slug: runtimeItemId,
+            warnings: [],
+            failures: [runtimeItem.lastError || `item ${runtimeItem.status}`],
+            qa: 'NOT_RUN',
+            visualQa: 'skipped',
+            qaReady: 'hold',
+            mailReady: 'hold',
+            specFailures: [],
+          };
+      resumedRow.runtimeItemId = runtimeItemId;
+      results.push(resumedRow);
+      recordImageHashes(imageHashes, resumedRow);
+      log(`[${i + 1}/${briefFiles.length}] ${resumedRow.slug}: resumed from completed checkpoint`);
+      continue;
+    }
+    run.startItem(runtimeItemId);
     const briefPath = path.join(briefsDir, file);
     const row = {
       file,
+      runtimeItemId,
       warnings: [],
       failures: [],
       qa: 'NOT_RUN',
@@ -122,7 +241,7 @@ async function runBatch(batchDir, options = {}) {
     }
 
     try {
-      const built = buildSite(brief, sitesRoot);
+      const built = build(brief, sitesRoot);
       row.sections = built.sections.length;
       row.words = built.words;
       row.images = built.images;
@@ -142,17 +261,7 @@ async function runBatch(batchDir, options = {}) {
         row.failures.push(`${built.missingAssets.length} missing asset file(s)`);
       }
 
-      const assetsDir = path.join(built.outDir, 'assets');
-      if (fs.existsSync(assetsDir)) {
-        for (const f of fs.readdirSync(assetsDir)) {
-          const full = path.join(assetsDir, f);
-          if (!fs.statSync(full).isFile()) continue;
-          const hash = crypto.createHash('sha1').update(fs.readFileSync(full)).digest('hex');
-          const key = `${brief.slug}/${f}`;
-          if (imageHashes.has(hash)) imageHashes.get(hash).push(key);
-          else imageHashes.set(hash, [key]);
-        }
-      }
+      recordImageHashes(imageHashes, row);
       log(
         `[${i + 1}/${briefFiles.length}] ${brief.slug}: ${row.sections} sections, ${row.words} words, ${row.images} images, ${row.kb} KB`
       );
@@ -173,14 +282,15 @@ async function runBatch(batchDir, options = {}) {
   });
 
   // Per-site QA
-  if (!forceHoldAll) {
-    log('\nRunning QA...');
-    for (const row of results) {
-      if (!row.outDir || !fs.existsSync(row.outDir)) {
-        row.qa = 'NOT_RUN';
-        row.visualQa = 'skipped';
-        continue;
-      }
+  log('\nRunning QA...');
+  for (const row of results) {
+    const runtimeItemId = row.runtimeItemId;
+    const runtimeItem = run.getItem(runtimeItemId);
+    if (runtimeItem.status === 'completed' || runtimeItem.status === 'blocked' || runtimeItem.status === 'skipped') {
+      continue;
+    }
+
+    if (!forceHoldAll && row.outDir && fs.existsSync(row.outDir)) {
       try {
         const qaResult = await runQa(row.outDir, { skipVisual: skipQa });
         row.qa = qaResult.status;
@@ -198,7 +308,40 @@ async function runBatch(batchDir, options = {}) {
         row.visualQa = 'error';
         row.failures.push(`QA failed: ${err.message}`);
       }
-      log(`  ${row.slug}: ${row.qa} (visual=${row.visualQa})`);
+    } else {
+      row.qa = 'NOT_RUN';
+      row.visualQa = 'skipped';
+    }
+
+    row.mailReady = 'hold';
+    const eligible =
+      !forceHoldAll &&
+      row.qa === 'PASS' &&
+      row.visualQa === 'ran' &&
+      !row.failures.length &&
+      !!row.address;
+    row.qaReady = eligible ? 'ready' : 'hold';
+
+    const isPermanentBlock =
+      forceHoldAll ||
+      row.failures.some((failure) => /brief does not parse|slug must|invalid slug/i.test(failure));
+    const isRetryableFailure = row.failures.some((failure) => /^(build|QA) failed:/i.test(failure));
+    const status = isPermanentBlock ? 'blocked' : isRetryableFailure ? 'failed' : 'completed';
+    run.finishItem(runtimeItemId, {
+      status,
+      retryable: isRetryableFailure,
+      checkpoint: rowCheckpoint(row, batchDir),
+      artifacts: itemArtifacts(batchDir, row),
+      verification: itemVerification(row),
+      error: status === 'completed' ? null : row.failures.join('; '),
+    });
+    finishedThisInvocation += 1;
+    log(`  ${row.slug}: ${row.qa} (visual=${row.visualQa})`);
+
+    if (options.interruptAfterItems && finishedThisInvocation >= options.interruptAfterItems) {
+      const error = new Error(`synthetic interruption after ${finishedThisInvocation} item(s)`);
+      error.code = 'SITE_BATCH_INTERRUPTED';
+      throw error;
     }
   }
 
@@ -212,6 +355,11 @@ async function runBatch(batchDir, options = {}) {
       !row.failures.length &&
       !!row.address;
     row.qaReady = eligible ? 'ready' : 'hold';
+    run.updateItem(row.runtimeItemId, {
+      checkpoint: rowCheckpoint(row, batchDir),
+      artifacts: itemArtifacts(batchDir, row),
+      verification: itemVerification(row),
+    });
   }
 
   const qaReadyCount = results.filter((r) => r.qaReady === 'ready').length;
@@ -432,6 +580,9 @@ ${duplicates.length ? duplicates.map((list) => `- ${list.join(' = ')}`).join('\n
 
   // Machine-readable summary for orchestrator / tests
   const summary = {
+    schemaVersion: 1,
+    runId: run.manifest.runId,
+    runManifest: path.relative(batchDir, run.manifestPath).split(path.sep).join('/'),
     batchId: batch.id,
     targetCount: TARGET_COUNT,
     briefCount: briefFiles.length,
@@ -457,6 +608,49 @@ ${duplicates.length ? duplicates.map((list) => `- ${list.join(' = ')}`).join('\n
     ok: !forceHoldAll && blocked.length === 0 && qaReadyCount === results.length,
   };
   fs.writeFileSync(path.join(batchDir, 'batch-summary.json'), JSON.stringify(summary, null, 2));
+
+  const acceptanceChecks = [
+    {
+      id: 'target-count',
+      status: forceHoldAll ? 'fail' : 'pass',
+      expected: TARGET_COUNT,
+      actual: briefFiles.length,
+      allowPartial,
+    },
+    {
+      id: 'full-site-qa',
+      status: blocked.length ? 'fail' : 'pass',
+      passed: qaReadyCount,
+      total: results.length,
+    },
+    {
+      id: 'mail-approval-fail-closed',
+      status: results.every((row) => row.mailReady === 'hold') ? 'pass' : 'fail',
+      expected: 'hold',
+    },
+  ];
+  run.setAcceptanceChecks(acceptanceChecks);
+  const runtimeStatus = summary.ok ? 'awaiting_review' : 'degraded';
+  run.finalize(runtimeStatus, {
+    approval: { gate: 'explicit', status: 'pending' },
+    artifacts: artifactEvidence(batchDir, [
+      'index.html',
+      'manifest.csv',
+      'prospects.csv',
+      'batch-report.md',
+      'batch-summary.json',
+    ]),
+    steps: [
+      {
+        id: 'build-and-qa-items',
+        status: results.every((row) => row.qaReady === 'ready') ? 'completed' : 'degraded',
+        completedItems: run.manifest.items.filter((item) => item.status === 'completed').length,
+        failedItems: run.manifest.items.filter((item) => item.status === 'failed').length,
+        blockedItems: run.manifest.items.filter((item) => item.status === 'blocked').length,
+      },
+      { id: 'human-approval', status: 'pending' },
+    ],
+  });
 
   log(
     `\n${qaReadyCount}/${results.length} qa_ready | mail_ready=hold on all | avg ${avg('sections')} sections, ${avg('words')} words, ${avg('images')} images`

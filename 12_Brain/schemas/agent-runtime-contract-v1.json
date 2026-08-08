@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/agent-runtime-contract-v1",
+  "title": "Agent Runtime Contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "workflowId",
+    "runId",
+    "workItemId",
+    "clientId",
+    "triggerIdentity",
+    "sourceLocators",
+    "approval",
+    "budget",
+    "steps",
+    "items",
+    "acceptanceChecks",
+    "artifacts",
+    "status",
+    "startedAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "workflowId": { "type": "string", "minLength": 1 },
+    "runId": { "type": "string", "minLength": 1 },
+    "workItemId": { "type": ["string", "null"] },
+    "clientId": { "type": ["string", "null"] },
+    "triggerIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "locator"],
+      "properties": {
+        "kind": { "enum": ["user", "schedule", "connector"] },
+        "locator": { "type": "string", "minLength": 1 }
+      }
+    },
+    "sourceLocators": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gate", "status"],
+      "properties": {
+        "gate": { "enum": ["none", "explicit", "human_authentication"] },
+        "status": { "enum": ["not_required", "pending", "approved"] }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tokens", "timeoutSeconds"],
+      "properties": {
+        "tokens": { "type": ["integer", "null"], "minimum": 0 },
+        "timeoutSeconds": { "type": ["number", "null"], "minimum": 0 }
+      }
+    },
+    "steps": { "type": "array", "items": { "type": "object" } },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["id", "inputHash", "status", "attempts", "maxAttempts", "checkpoint", "artifacts", "verification"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "inputHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "status": { "enum": ["pending", "running", "completed", "failed", "blocked", "skipped"] },
+          "attempts": { "type": "integer", "minimum": 0 },
+          "maxAttempts": { "type": "integer", "minimum": 1 },
+          "checkpoint": {},
+          "artifacts": { "type": "array", "items": { "$ref": "#/$defs/artifact" } },
+          "verification": { "type": "array", "items": { "type": "object" } }
+        }
+      }
+    },
+    "acceptanceChecks": { "type": "array", "items": { "type": "object" } },
+    "artifacts": { "type": "array", "items": { "$ref": "#/$defs/artifact" } },
+    "status": { "enum": ["running", "degraded", "failed", "awaiting_review", "complete"] },
+    "startedAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "finishedAt": { "type": "string", "format": "date-time" }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "bytes"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "bytes": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}
