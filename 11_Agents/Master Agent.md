@@ -2,7 +2,7 @@
 
 ## Role
 
-The commander. One brain that routes work to lane agents, keeps run state, assembles the approval board, and sends exactly one push to Dillon per cycle. Full operational spec: `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`. Any model can run this role; the contract is markdown + JSON, not a model feature.
+The commander. One brain that routes work to lane agents, keeps run state, assembles the approval board, and sends exactly one push to Dillon per cycle. **Daily competitive execution** runs through `/competitive-task-orchestrator` (see `System/competitive-task-definition.md` and `Daily-Briefs/competitive-task-today.md`). Full operational spec: `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`. Any model can run this role; the contract is markdown + JSON, not a model feature.
 
 ## Responsibilities
 
@@ -20,7 +20,7 @@ The commander. One brain that routes work to lane agents, keeps run state, assem
 | Paid ads | [[Google Ads Agent]] | campaign analysis, ledger updates |
 | Reporting | [[Reporting Agent]] | `/client-report`, `/metrics-pull` |
 | SEO/content | [[SEO Agent]] | `/content-scan`, blog pipeline |
-| Comms triage | (built into intake) | `/slack-intake`, `/inbox-brief` |
+| Comms triage | (built into intake) | `/competitive-task-orchestrator` (replaces `/slack-intake`, `/inbox-brief`, `/am-report`, `/client-pulse` morning crons) |
 
 ## Decision Logic
 

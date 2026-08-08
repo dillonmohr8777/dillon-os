@@ -1,6 +1,6 @@
 {
   "automation_id": "site-health-sentinel",
-  "started_at": "2026-07-29T21:12:51.340Z",
+  "started_at": "2026-08-08T13:02:58.156Z",
   "status": "error",
   "dry_run": true,
   "counts": {
@@ -113,5 +113,5 @@
   "artifact_paths": [
     "/workspace/Daily-Briefs/site-health-report.md"
   ],
-  "written_at": "2026-07-29T21:12:51.340Z"
+  "written_at": "2026-08-08T13:02:58.157Z"
 }

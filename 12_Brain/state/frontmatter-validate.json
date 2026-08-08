@@ -1,11 +1,11 @@
 {
   "automation_id": "frontmatter-validate",
-  "started_at": "2026-07-29T21:13:09.932Z",
+  "started_at": "2026-08-08T13:02:47.941Z",
   "status": "ok",
   "counts": {
-    "files": 37,
+    "files": 38,
     "incomplete": 0,
-    "complete": 37
+    "complete": 38
   },
   "rows": [
     {
@@ -52,6 +52,15 @@
       "status": "active",
       "last_touched": "2026-07-29",
       "due": "none"
+    },
+    {
+      "file": "01_Clients/BigOrange Marketing/overview.md",
+      "ok": true,
+      "missing": [],
+      "warnings": [],
+      "status": "active",
+      "last_touched": "2026-07-30",
+      "due": "2026-08-10"
     },
     {
       "file": "01_Clients/Blissful Events.md",
@@ -342,5 +351,5 @@
       "due": "none"
     }
   ],
-  "written_at": "2026-07-29T21:13:09.932Z"
+  "written_at": "2026-08-08T13:02:47.941Z"
 }

@@ -1,0 +1,36 @@
+{
+  "run_id": "competitive-task-orchestrator-2026-08-08",
+  "run_number": 3,
+  "status": "complete",
+  "started_at": "2026-08-08T13:02:00Z",
+  "completed_at": "2026-08-08T13:10:00Z",
+  "branch": "cursor/competitive-task-consolidation-e25d",
+  "lanes": [
+    "gmail-intel",
+    "slack-intel",
+    "vault-pulse",
+    "codex-session-sync",
+    "domain-ads-seo",
+    "content-routines",
+    "memory-consolidator"
+  ],
+  "lanes_completed": 7,
+  "p0_count": 5,
+  "mcp": {
+    "gmail": "unavailable",
+    "slack": "unavailable"
+  },
+  "fallback": "vault",
+  "mcp_gaps": [
+    "Gmail MCP unavailable — email ages from vault overviews (through Apr 2026)",
+    "Slack MCP unavailable — mirrors through 2026-07-30 only",
+    "Codex session history on operator machine not visible to cloud"
+  ],
+  "p0": [
+    "NKCDC launch blocked",
+    "Replenish billing block",
+    "Hardwood billing at_risk",
+    "Jason/Sean bot case-status alerts",
+    "BigOrange pillar review due 2026-08-10"
+  ]
+}

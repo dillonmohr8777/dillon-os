@@ -5,6 +5,7 @@ tags: [dashboard, moc]
 # Dashboard
 
 ## Quick Links
+- [[Daily-Briefs/competitive-task-today|Competitive task today]] — one umbrella daily brief
 - [[12_Brain/INDEX|12_Brain INDEX]] — canonical second brain
 - [[12_Brain/Brain Map.canvas|Brain Map]] · [[12_Brain/bases/Clients.base|Clients base]]
 - [[12_Brain/System/Second Brain Ops|Second Brain Ops]]
@@ -19,9 +20,11 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] NKCDC — draft nudge to Anthony on Free Tax Prep page (launch blocked 115d)
+- [ ] Replenish — confirm Mia cleared Google Ads billing screen
+- [ ] Jason/Sean bot — map runtime + draft case-status alert ETA
+
+> Full competitive brief: [[Daily-Briefs/competitive-task-today|competitive-task-today.md]]
 
 ## Active Projects
 -
