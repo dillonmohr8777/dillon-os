@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "communications-concierge",
+  "displayName": "Communications Concierge",
+  "category": "control",
+  "purpose": "Perform exact-thread Slack, Gmail, and calendar intake, classification, routing, drafting, and approval previews without sending or creating canonical work.",
+  "orchestration": { "pattern": "sequential", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": true, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": [] },
+  "memory": { "localReadScopes": ["source-thread:exact", "communications-policy:read-only", "client-registry:read-only"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["gmail:read-only", "slack:read-only", "calendar:read-only", "draft-renderer"], "deny": ["raw_secrets", "gmail_send", "slack_post", "calendar_write", "canonical_queue_write"] },
+  "actionClasses": { "automatic": ["read_only_verification", "local_draft"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["send", "post", "schedule", "state_advance_before_notification_success"] },
+  "runtime": { "default": "local", "managedEligibility": "blocked-local", "managedPilot": false, "managedRestrictions": ["no_managed_channels", "no_outbound_connectors", "redacted_context_only"] },
+  "budget": { "tokens": 8000, "timeoutSeconds": 600, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["communications.full-thread-read", "communications.exact-route", "communications.preview-only", "communications.notification-state-gate"],
+  "legacyAliases": ["old-claude-slack-intake"]
+}

@@ -74,6 +74,33 @@
       "independentReview": true,
       "timeoutSeconds": 15,
       "retryLimit": 0
+    },
+    {
+      "id": "agent-fleet",
+      "skillPath": ".claude/skills/agent-fleet/SKILL.md",
+      "fixtures": ["_os/acceptance/fixtures/agent-fleet/forbidden-external-authority.json"],
+      "commands": [
+        ["node", "--test", "_os/automation/tests/agent-fleet.test.js"]
+      ],
+      "expectedFiles": [
+        "12_Brain/registry/agent-fleet.json",
+        "12_Brain/registry/legacy-agent-aliases.json",
+        "12_Brain/schemas/agent-definition-v1.json",
+        "_os/automation/lib/agent-fleet.js",
+        "_os/automation/bin/validate-agent-fleet.js"
+      ],
+      "requiredPatterns": [
+        "exactly fifteen agents",
+        "only canonical queue writer",
+        "not deployed production agents"
+      ],
+      "forbiddenPatterns": [
+        "deploy the managed pilot now",
+        "store raw secrets"
+      ],
+      "independentReview": true,
+      "timeoutSeconds": 30,
+      "retryLimit": 0
     }
   ]
 }

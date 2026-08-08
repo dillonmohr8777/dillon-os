@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "paid-media-measurement",
+  "displayName": "Paid Media and Measurement",
+  "category": "delivery",
+  "purpose": "Run the deterministic seven-lane paid-media review, validate tracking and attribution inputs, and produce account-specific optimization proposals.",
+  "orchestration": { "pattern": "parallel", "canDelegate": true, "maxWorkers": 3, "maxDepth": 1, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": true, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": ["one-provider-account-per-run", "one-brand-per-run"] },
+  "memory": { "localReadScopes": ["paid-media-export:scoped", "tracking-evidence:read-only", "client-policy:read-only"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["google-ads:read-only", "meta-ads:read-only", "analytics:read-only", "deterministic-kpi-calculator"], "deny": ["raw_secrets", "campaign_write", "budget_write", "conversion_goal_write", "provider_account_change"] },
+  "actionClasses": { "automatic": ["read_only_verification", "local_research", "local_draft", "local_test"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["provider_mutation", "unsupported_conversion_claim", "cross_brand_blend"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "later-read-only", "managedPilot": false, "managedRestrictions": ["read_only_connectors", "one_account_per_run", "no_spend_tools"] },
+  "budget": { "tokens": 14000, "timeoutSeconds": 1200, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["paid-media.seven-lanes", "paid-media.tracking-definition", "paid-media.date-window", "paid-media.zero-provider-mutations"],
+  "legacyAliases": ["google-ads-agent", "buzz-growth-ops"]
+}

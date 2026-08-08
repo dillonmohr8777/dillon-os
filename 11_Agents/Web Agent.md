@@ -1,5 +1,7 @@
 # Web Agent
 
+> **Legacy alias:** `web-agent` now resolves to `web-product` through `12_Brain/registry/legacy-agent-aliases.json`. This document is historical lane guidance and owns no separate identity, run state, deployment, or approval authority.
+
 ## Role
 
 The web design lane. Builds new sites, upgrades existing ones, and QAs everything visual. Consumes `website-build` tasks from `00_Inbox/slack/` and direct briefs from Dillon.

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "fleetId": "dillon-managed-agent-fleet",
+  "supervisorAgentId": "marketing-chief",
+  "canonicalQueueSystem": "client-operations",
+  "canonicalBrainSystem": "dillon-os",
+  "maxWorkers": 3,
+  "maxDepth": 1,
+  "agentManifestPaths": [
+    "12_Brain/registry/agents/marketing-chief.json",
+    "12_Brain/registry/agents/client-identity-access-router.json",
+    "12_Brain/registry/agents/communications-concierge.json",
+    "12_Brain/registry/agents/knowledge-steward-brain-compiler.json",
+    "12_Brain/registry/agents/evidence-market-intelligence.json",
+    "12_Brain/registry/agents/client-success-revenue-operations.json",
+    "12_Brain/registry/agents/paid-media-measurement.json",
+    "12_Brain/registry/agents/crm-lifecycle.json",
+    "12_Brain/registry/agents/web-product.json",
+    "12_Brain/registry/agents/seo-aeo-local-discovery.json",
+    "12_Brain/registry/agents/content-brand-creative-studio.json",
+    "12_Brain/registry/agents/reporting-attribution.json",
+    "12_Brain/registry/agents/independent-verifier-release-gate.json",
+    "12_Brain/registry/agents/runtime-watchtower-agent-sre.json",
+    "12_Brain/registry/agents/finance-account-risk-sentinel.json"
+  ],
+  "managedPilotAgentIds": [
+    "evidence-market-intelligence",
+    "web-product",
+    "independent-verifier-release-gate",
+    "runtime-watchtower-agent-sre"
+  ],
+  "managedPilotProjects": [
+    {
+      "agentId": "evidence-market-intelligence",
+      "path": "_os/managed-pilot/evidence-market-intelligence"
+    },
+    {
+      "agentId": "web-product",
+      "path": "_os/managed-pilot/web-product"
+    },
+    {
+      "agentId": "independent-verifier-release-gate",
+      "path": "_os/managed-pilot/independent-verifier-release-gate"
+    },
+    {
+      "agentId": "runtime-watchtower-agent-sre",
+      "path": "_os/managed-pilot/runtime-watchtower-agent-sre"
+    }
+  ],
+  "legacyAliasRegistry": "12_Brain/registry/legacy-agent-aliases.json",
+  "deterministicServices": [
+    "canonical-queue-and-client-registry",
+    "agent-runtime-contract-v1",
+    "skill-acceptance-registry",
+    "one-way-correction-compiler",
+    "access-broker-and-credential-bridge",
+    "approval-and-delivery-executor",
+    "agent-vault-sync",
+    "scheduler-artifact-store-and-evidence-ledger"
+  ]
+}

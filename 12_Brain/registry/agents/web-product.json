@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "web-product",
+  "displayName": "Web and Product",
+  "category": "delivery",
+  "purpose": "Build and verify sites, applications, dashboards, landing pages, and product surfaces within an exact repository and deployment route.",
+  "orchestration": { "pattern": "orchestrator", "canDelegate": true, "maxWorkers": 3, "maxDepth": 1, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": true, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": ["one-repository-per-run", "mapped-deployment-target-only"] },
+  "memory": { "localReadScopes": ["repository:scoped", "project-agents:read-only", "design-system:read-only", "client-assets:scoped"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["sandbox:workspace", "repository:scoped", "build-test", "impeccable", "visual-inspection", "staging-artifact"], "deny": ["raw_secrets", "unmapped_deploy", "cross_repository_write", "production_publish_tool"] },
+  "actionClasses": { "automatic": ["local_artifact", "local_test", "local_research", "read_only_verification"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["unmapped_deployment", "noindex_removal_without_authority", "cross_client_asset_use"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "synthetic", "managedPilot": true, "managedRestrictions": ["synthetic_or_public_only", "no_external_actions", "no_private_data", "no_managed_memory", "no_channels", "no_schedules"] },
+  "budget": { "tokens": 20000, "timeoutSeconds": 1800, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["web.build-tests", "web.desktop-mobile", "web.accessibility", "web.impeccable", "web.noindex", "managed.synthetic-only"],
+  "legacyAliases": ["web-agent", "buzz-web-product"]
+}

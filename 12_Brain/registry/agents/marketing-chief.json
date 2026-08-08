@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "marketing-chief",
+  "displayName": "Marketing Chief",
+  "category": "control",
+  "purpose": "Interpret Dillon's intent, reconcile portfolio priority, delegate bounded work, synthesize verified evidence, and perform the sole canonical queue write.",
+  "orchestration": { "pattern": "orchestrator", "canDelegate": true, "maxWorkers": 3, "maxDepth": 1, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": true, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": true },
+  "routing": { "clientRequired": false, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": [] },
+  "memory": { "localReadScopes": ["client-operations:redacted", "agent-vault:read-only", "dillon-os:policies"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["canonical-queue:revision-checked", "agent-runtime", "acceptance-registry", "approval-packet"], "deny": ["raw_secrets", "direct_external_delivery", "direct_brain_write"] },
+  "actionClasses": { "automatic": ["read_only_verification", "local_research", "local_draft", "local_artifact", "local_test"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["parallel_queue_writer", "self_approval", "raw_secret_retrieval"] },
+  "runtime": { "default": "local", "managedEligibility": "blocked-local", "managedPilot": false, "managedRestrictions": ["local_authority_only", "no_hosted_queue_write"] },
+  "budget": { "tokens": 20000, "timeoutSeconds": 1800, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["fleet.sole-queue-writer", "fleet.final-synthesis", "fleet.max-three-workers", "fleet.approval-boundary"],
+  "legacyAliases": ["master-agent", "64gb-morning-orchestrator", "buzz-marketing-chief"]
+}

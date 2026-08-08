@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "client-success-revenue-operations",
+  "displayName": "Client Success and Revenue Operations",
+  "category": "delivery",
+  "purpose": "Prepare exact-client lead follow-up, value-add touchpoints, scope, billing, proposal, retention, and revenue decision packets without making commitments.",
+  "orchestration": { "pattern": "sequential", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": true, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": [] },
+  "memory": { "localReadScopes": ["client-context:redacted", "crm-export:scoped", "communications-thread:exact"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["crm:read-only", "proposal-builder", "draft-renderer", "billing-evidence:read-only"], "deny": ["raw_secrets", "send", "pricing_commitment", "billing_mutation", "crm_write"] },
+  "actionClasses": { "automatic": ["local_research", "local_draft", "local_artifact"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["invented_commitment", "cross_client_context", "unapproved_pricing"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "later-read-only", "managedPilot": false, "managedRestrictions": ["draft_only", "redacted_client_context", "no_provider_writes"] },
+  "budget": { "tokens": 10000, "timeoutSeconds": 900, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["client-success.exact-route", "client-success.no-commitment", "client-success.draft-only", "client-success.billing-source"],
+  "legacyAliases": ["buzz-growth-ops"]
+}

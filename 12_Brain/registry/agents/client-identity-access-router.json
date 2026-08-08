@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "client-identity-access-router",
+  "displayName": "Client Identity and Access Router",
+  "category": "control",
+  "purpose": "Resolve exact client, brand, account, portal, and authorized access route while returning only non-secret capability receipts and human-authentication handoffs.",
+  "orchestration": { "pattern": "router", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": false, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": ["align-hcm:hubspot:242825734", "momentum-jason:hubspot:50612503"] },
+  "memory": { "localReadScopes": ["client-registry:read-only", "access-broker:metadata-only", "credential-locators:opaque-only"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["client-registry:resolve", "access-broker:validate", "credential-bridge:metadata"], "deny": ["raw_secrets", "clipboard_secret", "mfa_consumption", "account_switch_without_route"] },
+  "actionClasses": { "automatic": ["read_only_verification"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["credential_disclosure", "cross_client_route", "human_gate_bypass"] },
+  "runtime": { "default": "local", "managedEligibility": "blocked-local", "managedPilot": false, "managedRestrictions": ["local_identity_authority_only", "capability_receipts_only"] },
+  "budget": { "tokens": 6000, "timeoutSeconds": 300, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["route.exact-client", "route.exact-account", "route.portal-isolation", "route.no-secret-output", "route.human-auth-stop"],
+  "legacyAliases": ["buzz-client-access-router"]
+}

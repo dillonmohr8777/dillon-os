@@ -64,9 +64,20 @@ function assertTriggerIdentity(identity) {
   };
 }
 
+function assertAgentId(value, field, allowNull = false) {
+  if (allowNull && value == null) return null;
+  if (typeof value !== 'string' || !/^[a-z][a-z0-9-]+$/.test(value)) {
+    throw new Error(`${field} must be a lowercase portable agent id`);
+  }
+  return value;
+}
+
 function validateManifest(manifest) {
   if (!manifest || typeof manifest !== 'object') throw new Error('run manifest must be an object');
   if (manifest.schemaVersion !== 1) throw new Error('run manifest schemaVersion must be 1');
+  const agentId = assertAgentId(manifest.agentId, 'run manifest agentId');
+  const verifierAgentId = assertAgentId(manifest.verifierAgentId, 'run manifest verifierAgentId', true);
+  if (agentId === verifierAgentId) throw new Error('run manifest maker and verifier must be different agents');
   if (typeof manifest.workflowId !== 'string' || !manifest.workflowId) {
     throw new Error('run manifest workflowId is required');
   }
@@ -160,6 +171,9 @@ class AgentRun {
     const itemInputs = options.items || [];
     if (!Array.isArray(itemInputs) || !itemInputs.length) throw new Error('AgentRun items are required');
     const declaredTriggerIdentity = assertTriggerIdentity(options.triggerIdentity);
+    const declaredAgentId = assertAgentId(options.agentId, 'agentId');
+    const declaredVerifierAgentId = assertAgentId(options.verifierAgentId, 'verifierAgentId', true);
+    if (declaredAgentId === declaredVerifierAgentId) throw new Error('maker and verifier must be different agents');
     const declaredSourceLocators = (options.sourceLocators || []).map((locator, index) =>
       assertSafeLocator(locator, `sourceLocators[${index}]`)
     );
@@ -180,6 +194,12 @@ class AgentRun {
       this.manifest = validateManifest(JSON.parse(fs.readFileSync(this.manifestPath, 'utf8')));
       if (this.manifest.workflowId !== options.workflowId) {
         throw new Error(`run manifest workflow mismatch: ${this.manifest.workflowId}`);
+      }
+      if (this.manifest.agentId !== declaredAgentId) {
+        throw new Error('run agent identity changed; start a new run manifest');
+      }
+      if ((this.manifest.verifierAgentId ?? null) !== declaredVerifierAgentId) {
+        throw new Error('run verifier identity changed; start a new run manifest');
       }
       if (options.runId && this.manifest.runId !== options.runId) {
         throw new Error(`run manifest id mismatch: ${this.manifest.runId}`);
@@ -223,6 +243,8 @@ class AgentRun {
     const startedAt = isoNow(this.clock);
     this.manifest = {
       schemaVersion: 1,
+      agentId: declaredAgentId,
+      verifierAgentId: declaredVerifierAgentId,
       workflowId: options.workflowId,
       runId: options.runId || createRunId(options.workflowId, this.clock),
       workItemId: options.workItemId ?? null,
@@ -337,6 +359,7 @@ module.exports = {
   RUN_STATUSES,
   ITEM_STATUSES,
   artifactEvidence,
+  assertAgentId,
   assertSafeLocator,
   assertTriggerIdentity,
   atomicWriteJson,

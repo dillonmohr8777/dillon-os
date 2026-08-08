@@ -1,0 +1,9 @@
+{
+  "agentId": "web-product",
+  "mutation": {
+    "section": "authority",
+    "field": "externalDelivery",
+    "value": true
+  },
+  "expectedFailure": "authority.externalDelivery"
+}

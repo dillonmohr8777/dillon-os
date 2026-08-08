@@ -19,7 +19,7 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
 
 1. **Scope.** Pick one market and one or two verticals from `02_Campaigns/AI Site Builder Outreach Engine/Market Roster.md`. Over-pull 25 to 30 candidates. Exclude current clients in `01_Clients/`, active deals, and anyone previously mailed.
 
-2. **Scaffold.** Create `02_Campaigns/AI Site Builder Outreach Engine/batches/<batch-id>/` with `batch.json` (`id`, `title`, `market`, `week`, `idPrefix`, `targetCount: 25`, `deployBaseUrl`) and an empty `briefs/` folder. Batch IDs look like `phl-2026-w31`. Add `runtime.triggerIdentity` with an exact `kind` (`user`, `schedule`, or `connector`) and safe opaque `locator`, plus safe `runtime.sourceLocators` and a `runtime.budget`. Missing or private-path identity and source locators fail before any prospect runs.
+2. **Scaffold.** Create `02_Campaigns/AI Site Builder Outreach Engine/batches/<batch-id>/` with `batch.json` (`id`, `title`, `market`, `week`, `idPrefix`, `targetCount: 25`, `deployBaseUrl`) and an empty `briefs/` folder. Batch IDs look like `phl-2026-w31`. Bind `runtime.agentId` to `web-product` and `runtime.verifierAgentId` to `independent-verifier-release-gate`. Add `runtime.triggerIdentity` with an exact `kind` (`user`, `schedule`, or `connector`) and safe opaque `locator`, plus safe `runtime.sourceLocators` and a `runtime.budget`. Missing, self-verifying, or private-path identity and source locators fail before any prospect runs.
 
 3. **Harvest.** Build `targets.json` as an array of `{slug, siteUrl, socials}` then run:
    `node _templates/site-factory/harvest.js --from targets.json`

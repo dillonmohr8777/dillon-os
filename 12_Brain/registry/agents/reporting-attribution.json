@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "reporting-attribution",
+  "displayName": "Reporting and Attribution",
+  "category": "delivery",
+  "purpose": "Reconcile exact-source metrics and attribution definitions into internal and client-ready reports without fabricating unavailable outcomes.",
+  "orchestration": { "pattern": "sequential", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": true, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": ["one-client-report-per-run"] },
+  "memory": { "localReadScopes": ["reporting-exports:scoped", "crm-attribution:read-only", "client-brand:read-only", "report-brain:read-only"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["deterministic-kpi-calculator", "report-builder", "schema-validator", "artifact-writer:bounded"], "deny": ["raw_secrets", "send", "metric_invention", "cross_client_aggregation"] },
+  "actionClasses": { "automatic": ["local_artifact", "local_test", "read_only_verification", "local_draft"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["fabricated_metric", "unsupported_conversion_claim", "cross_client_report"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "later-read-only", "managedPilot": false, "managedRestrictions": ["synthetic_then_redacted_exports", "no_live_crm", "no_send"] },
+  "budget": { "tokens": 12000, "timeoutSeconds": 900, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["reporting.kpi-reconciliation", "reporting.source-date-window", "reporting.momentum-whole-integers", "reporting.neutral-pending-language"],
+  "legacyAliases": ["reporting-agent"]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "crm-lifecycle",
+  "displayName": "CRM and Lifecycle",
+  "category": "delivery",
+  "purpose": "Analyze CRM health, lifecycle logic, forms, lead routing, nurture design, and attribution inputs within one exact portal per run.",
+  "orchestration": { "pattern": "router", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": true, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": ["align-hcm:242825734", "momentum-jason:50612503"] },
+  "memory": { "localReadScopes": ["hubspot:exact-portal-read-only", "client-registry:read-only", "reporting-contracts:read-only"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["hubspot:read-only", "schema-inspector", "lifecycle-simulator", "artifact-writer:bounded"], "deny": ["raw_secrets", "hubspot_write", "cross_portal_query", "contact_export_unredacted"] },
+  "actionClasses": { "automatic": ["read_only_verification", "local_research", "local_draft", "local_test"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["cross_portal_context", "crm_mutation", "unrouted_contact_data"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "later-read-only", "managedPilot": false, "managedRestrictions": ["read_only_portal", "one_portal_per_run", "redacted_exports_only"] },
+  "budget": { "tokens": 12000, "timeoutSeconds": 900, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["crm.portal-identity", "crm.zero-cross-portal", "crm.read-only", "crm.redacted-artifacts"],
+  "legacyAliases": ["buzz-growth-ops"]
+}

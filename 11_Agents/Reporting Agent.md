@@ -1,5 +1,7 @@
 # Reporting Agent
 
+> **Legacy alias:** `reporting-agent` now resolves to `reporting-attribution` through `12_Brain/registry/legacy-agent-aliases.json`. This document is historical lane guidance and owns no separate identity, run state, delivery, or approval authority.
+
 ## Role
 
 The reporting lane. Turns vault context and performance data into client-ready reports and internal snapshots. Everything it produces is a draft for Dillon's review; sending is Tier 2.

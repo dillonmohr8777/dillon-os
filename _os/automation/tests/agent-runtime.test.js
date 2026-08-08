@@ -17,6 +17,8 @@ function fixtureRoot() {
 function options(root, overrides = {}) {
   return {
     manifestPath: path.join(root, 'run-manifest.json'),
+    agentId: 'web-product',
+    verifierAgentId: 'independent-verifier-release-gate',
     workflowId: 'fixture-workflow',
     triggerIdentity: { kind: 'user', locator: 'local:test-runner' },
     sourceLocators: ['fixture:agent-runtime'],
@@ -74,6 +76,22 @@ describe('Agent Runtime Contract v1', () => {
       triggerIdentity: { kind: 'connector', locator: 'connector:different-owner' },
     });
     assert.throws(() => new AgentRun(changed), /trigger identity changed/);
+  });
+
+  it('binds maker and verifier identities and rejects drift or self-verification', () => {
+    const root = fixtureRoot();
+    new AgentRun(options(root));
+    assert.throws(
+      () => new AgentRun(options(root, { agentId: 'evidence-market-intelligence' })),
+      /agent identity changed/
+    );
+    assert.throws(
+      () => new AgentRun(options(fixtureRoot(), {
+        agentId: 'web-product',
+        verifierAgentId: 'web-product',
+      })),
+      /maker and verifier must be different/
+    );
   });
 
   it('hashes bounded artifacts and rejects private source locators', () => {

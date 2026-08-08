@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-31
+updated: 2026-08-08
 ---
 
 # INDEX — the front door
@@ -65,6 +65,15 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
 - Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
 
+## Agent fleet and runtime contracts
+
+- `12_Brain/registry/agent-fleet.json` - canonical portable registry for the fifteen managed-agent identities.
+- `12_Brain/registry/agents/` - one Runtime Contract-compatible definition per fleet agent.
+- `12_Brain/registry/legacy-agent-aliases.json` - one-way resolution for retired and split role names.
+- `12_Brain/schemas/agent-definition-v1.json` - executable agent-definition schema.
+- `_os/automation/docs/AGENT-FLEET-V1.md` - fleet authority, validation, and synthetic pilot boundaries.
+- `_os/managed-pilot/` - four undeployed synthetic Managed Deep Agents-compatible scaffolds.
+
 ## Outreach engine
 
 - [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]] — Stage 2 qualification: scores the website a prospect already has, routes strong-site prospects to ads/SEO instead of a wasted rebuild. Skill: `/site-grade`.
@@ -77,5 +86,5 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[01_Clients/Client Index|Client Index]] — full roster.
 - [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs.
 - [[10_Sessions/Session Index|Session Index]] — build logs.
-- `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).
+- `11_Agents/` — legacy role guidance; active identities resolve through `12_Brain/registry/legacy-agent-aliases.json`.
 - `System/` — [[System/OS Config|OS Config]]; brain ops in [[12_Brain/System/Second Brain Ops|Second Brain Ops]].

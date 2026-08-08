@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "agentId": "evidence-market-intelligence",
+  "manifestPath": "12_Brain/registry/agents/evidence-market-intelligence.json",
+  "status": "scaffold",
+  "deployed": false,
+  "allowedData": ["synthetic", "public"],
+  "allowedActions": ["research", "write_workspace_artifact"],
+  "forbiddenCapabilities": ["private_data", "external_actions", "managed_memory", "channels", "schedules", "raw_secrets"],
+  "acceptanceRegistryId": "agent-fleet"
+}

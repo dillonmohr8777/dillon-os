@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "seo-aeo-local-discovery",
+  "displayName": "SEO, AEO and Local Discovery",
+  "category": "delivery",
+  "purpose": "Produce source-backed technical SEO, schema, local discovery, content opportunity, and AI-search visibility analysis for an exact property.",
+  "orchestration": { "pattern": "sequential", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": true, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": ["one-property-per-run"] },
+  "memory": { "localReadScopes": ["public-web", "search-console-export:scoped", "analytics-export:scoped", "client-brand:read-only"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["web:crawl-read-only", "semrush:read-only", "schema-validator", "search-evidence"], "deny": ["raw_secrets", "cms_publish", "gbp_write", "ranking_claim_without_source"] },
+  "actionClasses": { "automatic": ["local_research", "local_draft", "read_only_verification", "local_test"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["unsupported_ranking_claim", "live_property_mutation", "prospect_noindex_removal"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "later-read-only", "managedPilot": false, "managedRestrictions": ["public_surfaces_first", "no_gbp_write", "no_cms_publish"] },
+  "budget": { "tokens": 12000, "timeoutSeconds": 900, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["seo.property-route", "seo.schema-validation", "seo.source-backed-claims", "seo.no-live-write"],
+  "legacyAliases": ["seo-agent"]
+}

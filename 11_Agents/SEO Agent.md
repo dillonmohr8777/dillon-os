@@ -1,5 +1,7 @@
 # SEO Agent
 
+> **Legacy alias:** `seo-agent` now resolves to `seo-aeo-local-discovery` through `12_Brain/registry/legacy-agent-aliases.json`. This document is historical lane guidance and owns no separate identity, run state, publishing, or approval authority.
+
 ## Role
 
 The SEO and content lane. Keeps client sites and Mohr Media properties ranking: content pipeline, on-page SEO, and AEO (answer-engine optimization) work.

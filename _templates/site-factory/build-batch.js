@@ -103,7 +103,7 @@ function recordImageHashes(imageHashes, row) {
 
 /**
  * @param {string} batchDir
- * @param {{ allowPartial?: boolean, skipQa?: boolean, quiet?: boolean, runQa?: Function, buildSite?: Function, interruptAfterItems?: number, runId?: string, triggerIdentity?: object, sourceLocators?: string[], budget?: object }} [options]
+ * @param {{ allowPartial?: boolean, skipQa?: boolean, quiet?: boolean, runQa?: Function, buildSite?: Function, interruptAfterItems?: number, runId?: string, agentId?: string, verifierAgentId?: string, triggerIdentity?: object, sourceLocators?: string[], budget?: object }} [options]
  */
 async function runBatch(batchDir, options = {}) {
   const allowPartial = !!options.allowPartial;
@@ -127,6 +127,8 @@ async function runBatch(batchDir, options = {}) {
 
   const run = new AgentRun({
     manifestPath: options.manifestPath || path.join(batchDir, 'agent-run.json'),
+    agentId: options.agentId || batch.runtime?.agentId,
+    verifierAgentId: options.verifierAgentId || batch.runtime?.verifierAgentId,
     workflowId: 'site-batch',
     runId: options.runId || batch.runtime?.runId,
     workItemId: options.workItemId ?? batch.runtime?.workItemId ?? null,

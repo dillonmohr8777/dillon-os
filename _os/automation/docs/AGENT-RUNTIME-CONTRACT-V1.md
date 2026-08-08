@@ -21,7 +21,7 @@ The schema is `12_Brain/schemas/agent-runtime-contract-v1.json`. The implementat
 
 Each run:
 
-1. Validates the exact trigger identity, client and work-item route, safe source locators, budget, retry limit, and stable item set.
+1. Binds a portable maker `agentId` and separate `verifierAgentId`, then validates the exact trigger identity, client and work-item route, safe source locators, budget, retry limit, and stable item set.
 2. Writes the manifest before the first item starts.
 3. Writes every update through a validated temporary file and atomic rename while preserving the previous valid manifest revision.
 4. Records item attempts, immutable input hashes, status, checkpoints, SHA-256 artifact evidence, verification results, and retryability.

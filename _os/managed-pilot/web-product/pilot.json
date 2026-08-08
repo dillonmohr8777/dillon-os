@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "agentId": "web-product",
+  "manifestPath": "12_Brain/registry/agents/web-product.json",
+  "status": "scaffold",
+  "deployed": false,
+  "allowedData": ["synthetic", "public"],
+  "allowedActions": ["read_workspace", "write_workspace_artifact", "run_local_tests"],
+  "forbiddenCapabilities": ["private_data", "external_actions", "deployment", "managed_memory", "channels", "schedules", "raw_secrets"],
+  "acceptanceRegistryId": "agent-fleet"
+}

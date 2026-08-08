@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "agentId": "independent-verifier-release-gate",
+  "manifestPath": "12_Brain/registry/agents/independent-verifier-release-gate.json",
+  "status": "scaffold",
+  "deployed": false,
+  "allowedData": ["synthetic", "public"],
+  "allowedActions": ["read_workspace", "evaluate", "return_verdict"],
+  "forbiddenCapabilities": ["artifact_write", "private_data", "external_actions", "managed_memory", "channels", "schedules", "raw_secrets"],
+  "acceptanceRegistryId": "agent-fleet"
+}

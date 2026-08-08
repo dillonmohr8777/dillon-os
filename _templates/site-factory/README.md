@@ -65,6 +65,8 @@ A batch directory holds `batch.json` plus `briefs/*.json`, and the runner emits 
 ```json
 {
   "runtime": {
+    "agentId": "web-product",
+    "verifierAgentId": "independent-verifier-release-gate",
     "triggerIdentity": { "kind": "schedule", "locator": "schedule:weekly-site-batch" },
     "sourceLocators": ["queue-item:safe-opaque-id"],
     "budget": { "tokens": null, "timeoutSeconds": 7200 },

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "independent-verifier-release-gate",
+  "displayName": "Independent Verifier and Release Gate",
+  "category": "assurance",
+  "purpose": "Independently accept or reject artifacts against deterministic contracts, source evidence, policy gates, and runtime state without modifying maker output.",
+  "orchestration": { "pattern": "evaluator", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": null },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": true, "finalSynthesis": false },
+  "routing": { "clientRequired": false, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": [] },
+  "memory": { "localReadScopes": ["artifact-under-review:read-only", "acceptance-registry:read-only", "source-evidence:read-only", "policy:read-only"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["acceptance-runner", "artifact-hash", "source-readback", "test-runner:read-only"], "deny": ["raw_secrets", "artifact_edit", "canonical_queue_write", "external_delivery"] },
+  "actionClasses": { "automatic": ["read_only_verification", "local_test"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["self_approval", "maker_artifact_mutation", "approval_without_evidence"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "synthetic", "managedPilot": true, "managedRestrictions": ["synthetic_or_public_only", "no_external_actions", "no_private_data", "no_managed_memory", "no_channels", "no_schedules"] },
+  "budget": { "tokens": 10000, "timeoutSeconds": 900, "maxRetries": 0 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["verify.separate-identity", "verify.no-artifact-write", "verify.structured-reject-reason", "verify.seeded-failure-detection", "managed.synthetic-only"],
+  "legacyAliases": ["buzz-independent-verifier"]
+}

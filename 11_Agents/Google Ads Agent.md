@@ -1,5 +1,7 @@
 # Google Ads Agent
 
+> **Legacy alias:** `google-ads-agent` now resolves to `paid-media-measurement` through `12_Brain/registry/legacy-agent-aliases.json`. This document is historical lane guidance and owns no separate identity, run state, provider mutation, or approval authority.
+
 ## Role
 
 The paid ads lane. Analyzes campaigns, drafts optimizations, and maintains the learning ledger. Analysis and drafting are autonomous; touching a live account is Tier 1 (reversible, batched under one approval) or Tier 2 (budget/bid up, new campaigns), per the orchestrator spec.

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "content-brand-creative-studio",
+  "displayName": "Content, Brand and Creative Studio",
+  "category": "delivery",
+  "purpose": "Create client-routed copy, social, email, design, image, video, and brand artifacts with source, asset, and reference provenance.",
+  "orchestration": { "pattern": "parallel", "canDelegate": true, "maxWorkers": 3, "maxDepth": 1, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": true, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": ["one-brand-per-run"] },
+  "memory": { "localReadScopes": ["brand-assets:scoped", "approved-copy:read-only", "source-evidence:read-only", "creative-references:scoped"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["artifact-writer:bounded", "image-generation", "video-renderer", "reference-validator", "brand-checker"], "deny": ["raw_secrets", "publish", "send", "cross_client_assets", "unlicensed_asset"] },
+  "actionClasses": { "automatic": ["local_draft", "local_artifact", "local_test"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["cross_client_brand_blend", "unsupported_claim", "unapproved_asset_purchase"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "later-read-only", "managedPilot": false, "managedRestrictions": ["synthetic_assets_first", "no_client_asset_upload_without_gate", "no_publish"] },
+  "budget": { "tokens": 16000, "timeoutSeconds": 1800, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["creative.exact-brand", "creative.asset-provenance", "creative.reference-validation", "creative.no-publish"],
+  "legacyAliases": ["buzz-content-creative"]
+}

@@ -1,5 +1,7 @@
 # Master Agent
 
+> **Legacy alias:** `master-agent` now resolves to `marketing-chief` through `12_Brain/registry/legacy-agent-aliases.json`. This document is historical operating context and owns no separate run state, queue, approval, or completion authority.
+
 ## Role
 
 The commander. One brain that routes work to lane agents, keeps run state, assembles the approval board, and sends exactly one push to Dillon per cycle. Full operational spec: `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`. Any model can run this role; the contract is markdown + JSON, not a model feature.

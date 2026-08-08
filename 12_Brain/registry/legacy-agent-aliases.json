@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "aliases": [
+    { "alias": "master-agent", "mode": "alias", "targetAgentIds": ["marketing-chief"] },
+    { "alias": "64gb-morning-orchestrator", "mode": "alias", "targetAgentIds": ["marketing-chief"] },
+    { "alias": "buzz-marketing-chief", "mode": "alias", "targetAgentIds": ["marketing-chief"] },
+    { "alias": "buzz-client-access-router", "mode": "alias", "targetAgentIds": ["client-identity-access-router"] },
+    { "alias": "buzz-evidence-research", "mode": "alias", "targetAgentIds": ["evidence-market-intelligence"] },
+    { "alias": "buzz-content-creative", "mode": "alias", "targetAgentIds": ["content-brand-creative-studio"] },
+    { "alias": "buzz-web-product", "mode": "alias", "targetAgentIds": ["web-product"] },
+    { "alias": "buzz-growth-ops", "mode": "split", "targetAgentIds": ["client-success-revenue-operations", "paid-media-measurement", "crm-lifecycle"] },
+    { "alias": "google-ads-agent", "mode": "alias", "targetAgentIds": ["paid-media-measurement"] },
+    { "alias": "reporting-agent", "mode": "alias", "targetAgentIds": ["reporting-attribution"] },
+    { "alias": "seo-agent", "mode": "alias", "targetAgentIds": ["seo-aeo-local-discovery"] },
+    { "alias": "web-agent", "mode": "alias", "targetAgentIds": ["web-product"] },
+    { "alias": "buzz-independent-verifier", "mode": "alias", "targetAgentIds": ["independent-verifier-release-gate"] },
+    { "alias": "buzz-watchtower-checker", "mode": "alias", "targetAgentIds": ["runtime-watchtower-agent-sre"] },
+    { "alias": "old-claude-slack-intake", "mode": "retired-writer", "targetAgentIds": ["communications-concierge"] }
+  ]
+}

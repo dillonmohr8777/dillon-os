@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "runtime-watchtower-agent-sre",
+  "displayName": "Runtime Watchtower and Agent SRE",
+  "category": "assurance",
+  "purpose": "Observe liveness, checkpoints, retries, budgets, timeouts, duplication, and degraded receipts without gaining content or external action authority.",
+  "orchestration": { "pattern": "sequential", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": null },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": false, "identityReceiptRequired": true, "clientScope": "none", "portalIsolation": [] },
+  "memory": { "localReadScopes": ["runtime-metadata:read-only", "agent-run-receipts:read-only", "trace-summaries:redacted"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["runtime-status:read-only", "trace-reader:redacted", "checkpoint-validator", "alert-packet"], "deny": ["raw_secrets", "content_authority", "provider_restart", "state_advance", "external_notification"] },
+  "actionClasses": { "automatic": ["read_only_verification", "local_artifact", "local_test"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["unauthorized_restart", "checkpoint_mutation", "completion_claim"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "synthetic", "managedPilot": true, "managedRestrictions": ["synthetic_or_public_only", "no_external_actions", "no_private_data", "no_managed_memory", "no_channels", "no_schedules"] },
+  "budget": { "tokens": 6000, "timeoutSeconds": 300, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["watchtower.liveness", "watchtower.resume-integrity", "watchtower.no-state-advance", "watchtower.budget-stop", "managed.synthetic-only"],
+  "legacyAliases": ["buzz-watchtower-checker"]
+}

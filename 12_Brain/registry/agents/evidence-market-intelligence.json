@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "evidence-market-intelligence",
+  "displayName": "Evidence and Market Intelligence",
+  "category": "delivery",
+  "purpose": "Collect and synthesize current public or licensed evidence into source-backed competitive, frontier, Semrush, AEO, and experiment briefs.",
+  "orchestration": { "pattern": "orchestrator", "canDelegate": true, "maxWorkers": 3, "maxDepth": 1, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": true, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": [] },
+  "memory": { "localReadScopes": ["public-sources", "licensed-research:read-only", "agent-vault:scoped"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["web:research", "semrush:read-only", "source-fetch", "artifact-writer:bounded"], "deny": ["raw_secrets", "provider_write", "canonical_queue_write", "private_communications"] },
+  "actionClasses": { "automatic": ["local_research", "local_artifact", "read_only_verification"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["fabricated_source", "uncited_material_claim", "client_data_in_managed_pilot"] },
+  "runtime": { "default": "hybrid", "managedEligibility": "synthetic", "managedPilot": true, "managedRestrictions": ["synthetic_or_public_only", "no_external_actions", "no_private_data", "no_managed_memory", "no_channels", "no_schedules"] },
+  "budget": { "tokens": 16000, "timeoutSeconds": 1200, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["evidence.source-freshness", "evidence.citation-lineage", "evidence.fail-closed", "managed.synthetic-only"],
+  "legacyAliases": ["buzz-evidence-research"]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "knowledge-steward-brain-compiler",
+  "displayName": "Knowledge Steward and Brain Compiler",
+  "category": "control",
+  "purpose": "Compile redacted, source-located operational knowledge into proposed Dillon OS and vault projections through deterministic one-way services.",
+  "orchestration": { "pattern": "sequential", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": false, "identityReceiptRequired": true, "clientScope": "registry-resolved", "portalIsolation": [] },
+  "memory": { "localReadScopes": ["client-operations:normalized-corrections", "report-brain:redacted", "dillon-os:read-only", "agent-vault:read-only"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["correction-compiler:proposal", "vault-compiler:proposal", "lineage-validator"], "deny": ["raw_secrets", "canonical_brain_write", "correction_ledger_write", "parallel_memory_writer"] },
+  "actionClasses": { "automatic": ["local_research", "local_artifact", "local_test"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["second_brain_writer", "source_mutation", "unredacted_client_memory"] },
+  "runtime": { "default": "local", "managedEligibility": "blocked-local", "managedPilot": false, "managedRestrictions": ["local_compiler_only", "managed_memory_disabled", "projection_reads_only"] },
+  "budget": { "tokens": 10000, "timeoutSeconds": 900, "maxRetries": 1 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["brain.one-way-compile", "brain.idempotent", "brain.redacted", "brain.source-lineage", "brain.no-canonical-source-write"],
+  "legacyAliases": []
+}

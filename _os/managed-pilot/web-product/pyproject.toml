@@ -1,0 +1,13 @@
+[project]
+name = "dillon-pilot-web-product"
+version = "0.0.0"
+description = "Non-deployed synthetic Managed Deep Agents scaffold"
+requires-python = ">=3.11"
+dependencies = [
+  "deepagents>=0.7.3,<1",
+  "managed-deepagents<1",
+]
+
+[tool.dillon-pilot]
+deployed = false
+synthetic_only = true

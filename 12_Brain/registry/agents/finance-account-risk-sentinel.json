@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "agentId": "finance-account-risk-sentinel",
+  "displayName": "Finance and Account Risk Sentinel",
+  "category": "sentinel",
+  "purpose": "Classify local personal spending and account-security signals into alert-only evidence packets without transacting or changing accounts.",
+  "orchestration": { "pattern": "sequential", "canDelegate": false, "maxWorkers": 0, "maxDepth": 0, "verifierAgentId": "independent-verifier-release-gate" },
+  "authority": { "canonicalQueueWrite": false, "canonicalBrainWrite": false, "correctionLedgerWrite": false, "externalDelivery": false, "spend": false, "accountChange": false, "secretAccess": false, "artifactAcceptance": false, "finalSynthesis": false },
+  "routing": { "clientRequired": false, "identityReceiptRequired": true, "clientScope": "personal-local-only", "portalIsolation": [] },
+  "memory": { "localReadScopes": ["finance-alert-input:local-only", "account-security-alerts:local-only", "finance-policy:read-only"], "localWriteScopes": [], "managedDurableMemory": "disabled" },
+  "tools": { "allow": ["local-classifier", "threshold-calculator", "alert-packet"], "deny": ["raw_secrets", "transaction", "account_change", "crypto_trade", "external_delivery"] },
+  "actionClasses": { "automatic": ["read_only_verification", "local_artifact"], "approvalGated": ["external_delivery", "publishing", "deployment", "spend", "account_change", "destructive", "human_authentication", "business_decision"], "prohibited": ["transaction", "account_authorization", "prohibited_service_reconnection", "hosted_raw_finance_data"] },
+  "runtime": { "default": "local", "managedEligibility": "blocked-local", "managedPilot": false, "managedRestrictions": ["local_only", "alert_only", "no_raw_finance_export"] },
+  "budget": { "tokens": 4000, "timeoutSeconds": 300, "maxRetries": 0 },
+  "evidence": { "sourceLocatorsRequired": true, "artifactHashesRequired": true, "degradedReceiptRequired": true },
+  "acceptanceChecks": ["finance.alert-only", "finance.no-transaction-path", "finance.local-only", "finance.prohibited-services"],
+  "legacyAliases": []
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "agentId": "runtime-watchtower-agent-sre",
+  "manifestPath": "12_Brain/registry/agents/runtime-watchtower-agent-sre.json",
+  "status": "scaffold",
+  "deployed": false,
+  "allowedData": ["synthetic", "public", "redacted_runtime_metadata"],
+  "allowedActions": ["evaluate_runtime_receipt", "return_status_packet"],
+  "forbiddenCapabilities": ["filesystem_access", "private_data", "external_actions", "restart", "state_write", "managed_memory", "channels", "schedules", "raw_secrets"],
+  "acceptanceRegistryId": "agent-fleet"
+}

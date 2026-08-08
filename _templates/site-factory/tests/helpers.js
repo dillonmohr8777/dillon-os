@@ -96,6 +96,8 @@ function writeBatchFixture(root, { targetCount, briefs, batchId = 'test-batch' }
         targetCount,
         deployBaseUrl: 'https://example-batch.netlify.app',
         runtime: {
+          agentId: 'web-product',
+          verifierAgentId: 'independent-verifier-release-gate',
           triggerIdentity: { kind: 'user', locator: 'fixture:site-batch-tests' },
           sourceLocators: ['fixture:site-batch'],
           budget: { tokens: null, timeoutSeconds: 30 },

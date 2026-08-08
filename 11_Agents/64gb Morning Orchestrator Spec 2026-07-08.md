@@ -1,5 +1,7 @@
 # 64GB Morning Orchestrator Spec
 
+> **Legacy alias:** `64gb-morning-orchestrator` now resolves to `marketing-chief` through `12_Brain/registry/legacy-agent-aliases.json`. This specification remains historical context and cannot create a parallel command center, queue, scheduler, or writer.
+
 Date: 2026-07-08
 Companion to: `11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md`
 Status: operational spec for the daily order-shooter. No credentials included.
