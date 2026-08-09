@@ -19,9 +19,14 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] [[Daily-Briefs/competitive-task-today|Competitive task brief]] — umbrella daily loop
+- [ ] Stabilize Jason/Sean bot case-status alerts (4 Slack loops 10+ days old)
+- [ ] Hardwood Artisan billing — Dalton card on file (at_risk)
+
+## Competitive Task
+- Definition: [[System/competitive-task-definition|competitive-task-definition]]
+- Latest brief: `Daily-Briefs/competitive-task-today.md`
+- Run artifacts: `automation-runs/competitive-task-orchestrator/`
 
 ## Active Projects
 -
