@@ -103,4 +103,55 @@ describe('Agent Runtime Contract v1', () => {
     assert.equal(evidence[0].bytes, 22);
     assert.throws(() => assertSafeLocator('C:\\Users\\Example\\private.txt'), /private absolute path/);
   });
+
+  it('rejects malformed artifact evidence and invalid timestamps', () => {
+    const root = fixtureRoot();
+    const run = new AgentRun(options(root));
+    const malformedArtifact = structuredClone(run.manifest);
+    malformedArtifact.artifacts = [{ path: 'result.json', sha256: 'not-a-hash', bytes: -1 }];
+    assert.throws(() => validateManifest(malformedArtifact), /sha256/);
+
+    const malformedTimestamp = structuredClone(run.manifest);
+    malformedTimestamp.updatedAt = 'not-a-date';
+    assert.throws(() => validateManifest(malformedTimestamp), /valid ISO timestamp/);
+  });
+
+  it('requires structured, unique, passing checks before complete', () => {
+    const root = fixtureRoot();
+    const run = new AgentRun(options(root));
+    run.startItem('alpha');
+    run.finishItem('alpha', { status: 'completed' });
+    run.startItem('beta');
+    run.finishItem('beta', { status: 'completed' });
+
+    const complete = structuredClone(run.manifest);
+    complete.status = 'complete';
+    complete.finishedAt = new Date().toISOString();
+    assert.throws(() => validateManifest(complete), /requires acceptance checks/);
+
+    complete.acceptanceChecks = [{ id: 'quality', status: 'fail' }];
+    assert.throws(() => validateManifest(complete), /cannot contain failing/);
+
+    complete.acceptanceChecks = [
+      { id: 'quality', status: 'pass' },
+      { id: 'quality', status: 'pass' },
+    ];
+    assert.throws(() => validateManifest(complete), /duplicate acceptance check/);
+
+    complete.acceptanceChecks = [{ id: 'quality', status: 'pass' }];
+    assert.doesNotThrow(() => validateManifest(complete));
+  });
+
+  it('enforces the timeout again before item completion', () => {
+    const root = fixtureRoot();
+    let now = Date.parse('2026-08-08T12:00:00.000Z');
+    const run = new AgentRun(options(root, {
+      budget: { tokens: 100, timeoutSeconds: 1 },
+      clock: () => new Date(now),
+    }));
+    run.startItem('alpha');
+    now += 2000;
+    assert.throws(() => run.finishItem('alpha', { status: 'completed' }), /timeout budget exhausted/);
+    assert.equal(run.getItem('alpha').status, 'running');
+  });
 });

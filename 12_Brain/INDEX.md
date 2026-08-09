@@ -71,7 +71,10 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - `12_Brain/registry/agents/` - one Runtime Contract-compatible definition per fleet agent.
 - `12_Brain/registry/legacy-agent-aliases.json` - one-way resolution for retired and split role names.
 - `12_Brain/schemas/agent-definition-v1.json` - executable agent-definition schema.
+- `12_Brain/schemas/agent-runtime-contract-v1.json` - atomic run, checkpoint, evidence, budget, identity, and approval schema.
+- `12_Brain/schemas/fleet-muster-v1.json` - synthetic fifteen-agent behavioral-muster scenario schema.
 - `_os/automation/docs/AGENT-FLEET-V1.md` - fleet authority, validation, and synthetic pilot boundaries.
+- `_os/automation/docs/FLEET-MUSTER.md` - local execution, scoring, and safety-gate runbook for all fifteen roles.
 - `_os/managed-pilot/` - four undeployed synthetic Managed Deep Agents-compatible scaffolds.
 
 ## Outreach engine

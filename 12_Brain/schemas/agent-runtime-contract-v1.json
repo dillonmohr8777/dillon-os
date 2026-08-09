@@ -79,14 +79,41 @@
         }
       }
     },
-    "acceptanceChecks": { "type": "array", "items": { "type": "object" } },
+    "acceptanceChecks": { "type": "array", "items": { "$ref": "#/$defs/acceptanceCheck" } },
     "artifacts": { "type": "array", "items": { "$ref": "#/$defs/artifact" } },
     "status": { "enum": ["running", "degraded", "failed", "awaiting_review", "complete"] },
     "startedAt": { "type": "string", "format": "date-time" },
     "updatedAt": { "type": "string", "format": "date-time" },
     "finishedAt": { "type": "string", "format": "date-time" }
   },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "complete" } }, "required": ["status"] },
+      "then": {
+        "properties": {
+          "acceptanceChecks": {
+            "minItems": 1,
+            "items": {
+              "allOf": [
+                { "$ref": "#/$defs/acceptanceCheck" },
+                { "properties": { "status": { "const": "pass" } } }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
   "$defs": {
+    "acceptanceCheck": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["id", "status"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["pass", "fail"] }
+      }
+    },
     "artifact": {
       "type": "object",
       "additionalProperties": false,

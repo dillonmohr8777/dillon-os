@@ -101,6 +101,32 @@
       "independentReview": true,
       "timeoutSeconds": 30,
       "retryLimit": 0
+    },
+    {
+      "id": "fleet-muster",
+      "skillPath": ".claude/skills/agent-fleet/SKILL.md",
+      "fixtures": ["_os/automation/fixtures/fleet-muster/scenario-v1.json"],
+      "commands": [
+        ["node", "--test", "_os/automation/tests/fleet-muster.test.js"]
+      ],
+      "expectedFiles": [
+        "12_Brain/schemas/fleet-muster-v1.json",
+        "_os/automation/lib/fleet-muster.js",
+        "_os/automation/bin/fleet-muster.js",
+        "_os/automation/docs/FLEET-MUSTER.md"
+      ],
+      "requiredPatterns": [
+        "Synthetic Fleet Contract Simulation",
+        "cover all fifteen roles",
+        "token limits as configured-only"
+      ],
+      "forbiddenPatterns": [
+        "deploy all fifteen agents now",
+        "store raw client secrets"
+      ],
+      "independentReview": true,
+      "timeoutSeconds": 30,
+      "retryLimit": 0
     }
   ]
 }

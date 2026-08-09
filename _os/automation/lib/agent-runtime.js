@@ -20,6 +20,7 @@ const ITEM_STATUSES = new Set([
 const TRIGGER_KINDS = new Set(['user', 'schedule', 'connector']);
 const APPROVAL_GATES = new Set(['none', 'explicit', 'human_authentication']);
 const APPROVAL_STATUSES = new Set(['not_required', 'pending', 'approved']);
+const CHECK_STATUSES = new Set(['pass', 'fail']);
 
 function isoNow(clock = () => new Date()) {
   return clock().toISOString();
@@ -72,6 +73,46 @@ function assertAgentId(value, field, allowNull = false) {
   return value;
 }
 
+function assertIsoTimestamp(value, field) {
+  if (
+    typeof value !== 'string'
+    || Number.isNaN(Date.parse(value))
+    || new Date(value).toISOString() !== value
+  ) {
+    throw new Error(`${field} must be a valid ISO timestamp`);
+  }
+  return value;
+}
+
+function validateArtifact(artifact, field) {
+  if (!artifact || typeof artifact !== 'object' || Array.isArray(artifact)) {
+    throw new Error(`${field} must be an artifact object`);
+  }
+  const artifactPath = assertSafeLocator(artifact.path, `${field}.path`);
+  const normalized = path.posix.normalize(artifactPath.replace(/\\/g, '/'));
+  if (path.isAbsolute(artifactPath) || normalized === '..' || normalized.startsWith('../')) {
+    throw new Error(`${field}.path must stay inside the run root`);
+  }
+  if (typeof artifact.sha256 !== 'string' || !/^[a-f0-9]{64}$/.test(artifact.sha256)) {
+    throw new Error(`${field}.sha256 must be a lowercase SHA-256 digest`);
+  }
+  if (!Number.isInteger(artifact.bytes) || artifact.bytes < 0) {
+    throw new Error(`${field}.bytes must be a non-negative integer`);
+  }
+  return artifact;
+}
+
+function validateAcceptanceCheck(check, field) {
+  if (!check || typeof check !== 'object' || Array.isArray(check)) {
+    throw new Error(`${field} must be an acceptance-check object`);
+  }
+  assertSafeLocator(check.id, `${field}.id`);
+  if (!CHECK_STATUSES.has(check.status)) {
+    throw new Error(`${field}.status must be pass or fail`);
+  }
+  return check;
+}
+
 function validateManifest(manifest) {
   if (!manifest || typeof manifest !== 'object') throw new Error('run manifest must be an object');
   if (manifest.schemaVersion !== 1) throw new Error('run manifest schemaVersion must be 1');
@@ -102,6 +143,9 @@ function validateManifest(manifest) {
     throw new Error('run manifest budget.timeoutSeconds must be a non-negative number or null');
   }
   if (!RUN_STATUSES.has(manifest.status)) throw new Error(`invalid run status: ${manifest.status}`);
+  assertIsoTimestamp(manifest.startedAt, 'run manifest startedAt');
+  assertIsoTimestamp(manifest.updatedAt, 'run manifest updatedAt');
+  if (manifest.status !== 'running') assertIsoTimestamp(manifest.finishedAt, 'run manifest finishedAt');
   if (!Array.isArray(manifest.items)) throw new Error('run manifest items must be an array');
   const seen = new Set();
   for (const item of manifest.items) {
@@ -114,6 +158,44 @@ function validateManifest(manifest) {
     }
     if (item.maxAttempts != null && (!Number.isInteger(item.maxAttempts) || item.maxAttempts < 1)) {
       throw new Error(`item maxAttempts must be a positive integer: ${item.id}`);
+    }
+    if (typeof item.inputHash !== 'string' || !/^[a-f0-9]{64}$/.test(item.inputHash)) {
+      throw new Error(`item inputHash must be a lowercase SHA-256 digest: ${item.id}`);
+    }
+    if (['running', 'completed', 'failed'].includes(item.status) && item.attempts < 1) {
+      throw new Error(`${item.status} item must have at least one attempt: ${item.id}`);
+    }
+    if (item.status !== 'pending') assertIsoTimestamp(item.startedAt, `item ${item.id} startedAt`);
+    if (['completed', 'failed', 'blocked', 'skipped'].includes(item.status)) {
+      assertIsoTimestamp(item.finishedAt, `item ${item.id} finishedAt`);
+    }
+    if (!Array.isArray(item.artifacts)) throw new Error(`item artifacts must be an array: ${item.id}`);
+    item.artifacts.forEach((artifact, index) => validateArtifact(artifact, `item ${item.id} artifacts[${index}]`));
+    if (!Array.isArray(item.verification)) throw new Error(`item verification must be an array: ${item.id}`);
+    item.verification.forEach((check, index) => {
+      if (!check || typeof check !== 'object' || Array.isArray(check)) {
+        throw new Error(`item ${item.id} verification[${index}] must be an object`);
+      }
+      const checkId = check.check || check.id;
+      assertSafeLocator(checkId, `item ${item.id} verification[${index}].check`);
+      if (!CHECK_STATUSES.has(check.status)) {
+        throw new Error(`item ${item.id} verification[${index}].status must be pass or fail`);
+      }
+    });
+  }
+  if (!Array.isArray(manifest.acceptanceChecks)) throw new Error('run manifest acceptanceChecks must be an array');
+  const checkIds = new Set();
+  manifest.acceptanceChecks.forEach((check, index) => {
+    validateAcceptanceCheck(check, `acceptanceChecks[${index}]`);
+    if (checkIds.has(check.id)) throw new Error(`duplicate acceptance check id: ${check.id}`);
+    checkIds.add(check.id);
+  });
+  if (!Array.isArray(manifest.artifacts)) throw new Error('run manifest artifacts must be an array');
+  manifest.artifacts.forEach((artifact, index) => validateArtifact(artifact, `artifacts[${index}]`));
+  if (manifest.status === 'complete') {
+    if (!manifest.acceptanceChecks.length) throw new Error('complete run requires acceptance checks');
+    if (manifest.acceptanceChecks.some((check) => check.status !== 'pass')) {
+      throw new Error('complete run cannot contain failing acceptance checks');
     }
   }
   return manifest;
@@ -295,7 +377,7 @@ class AgentRun {
   assertBudget() {
     const timeoutSeconds = this.manifest.budget.timeoutSeconds;
     if (Number.isFinite(timeoutSeconds) && timeoutSeconds >= 0) {
-      const elapsed = (Date.now() - Date.parse(this.manifest.startedAt)) / 1000;
+      const elapsed = (this.clock().getTime() - Date.parse(this.manifest.startedAt)) / 1000;
       if (elapsed > timeoutSeconds) throw new Error(`run timeout budget exhausted after ${elapsed.toFixed(3)}s`);
     }
   }
@@ -313,6 +395,7 @@ class AgentRun {
   }
 
   finishItem(id, outcome = {}) {
+    this.assertBudget();
     const item = this.getItem(id);
     const status = outcome.status || 'completed';
     if (!ITEM_STATUSES.has(status) || status === 'pending' || status === 'running') {
@@ -343,6 +426,7 @@ class AgentRun {
   }
 
   finalize(status, options = {}) {
+    this.assertBudget();
     if (!RUN_STATUSES.has(status) || status === 'running') throw new Error(`invalid final run status: ${status}`);
     this.manifest.status = status;
     if (options.approval) this.manifest.approval = options.approval;
@@ -365,5 +449,7 @@ module.exports = {
   atomicWriteJson,
   sha256File,
   stableItemInputHash,
+  validateAcceptanceCheck,
+  validateArtifact,
   validateManifest,
 };

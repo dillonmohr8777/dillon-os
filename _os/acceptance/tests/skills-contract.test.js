@@ -29,9 +29,17 @@ describe('production skill acceptance registry', () => {
     }
   });
 
-  it('maps the initial five production skills while brain-compile awaits layout reconciliation', () => {
+  it('maps the production skills and contract fleet muster while brain-compile awaits layout reconciliation', () => {
     const ids = new Set(registry.skills.map((skill) => skill.id));
-    for (const id of ['site-batch', 'site-factory', 'vault-compile', 'am-report', 'client-report']) {
+    for (const id of [
+      'site-batch',
+      'site-factory',
+      'vault-compile',
+      'am-report',
+      'client-report',
+      'agent-fleet',
+      'fleet-muster',
+    ]) {
       assert.ok(ids.has(id), `missing ${id}`);
     }
     assert.equal(ids.has('brain-compile'), false);
