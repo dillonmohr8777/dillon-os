@@ -64,6 +64,12 @@ describe('Fleet contract simulation v1', () => {
       validateManifest(manifest);
       assert.equal(manifest.agentId, agent.agentId);
       assert.notEqual(manifest.agentId, manifest.verifierAgentId);
+      assert.deepEqual(manifest.clarification, {
+        protocol: 'grill-me-v1',
+        invocation: 'explicit-user-only',
+        status: 'not_applicable',
+        receipt: null,
+      });
       const checkIds = new Set(manifest.acceptanceChecks.map((check) => check.id));
       for (const declared of agent.acceptanceChecks) {
         assert.equal(checkIds.has(declared), true, `${agent.agentId}: missing ${declared}`);

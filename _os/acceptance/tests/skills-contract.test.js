@@ -46,6 +46,7 @@ describe('production skill acceptance registry', () => {
       'client-report',
       'agent-fleet',
       'fleet-muster',
+      'grill-me',
     ]) {
       assert.ok(ids.has(id), `missing ${id}`);
     }

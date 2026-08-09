@@ -139,6 +139,39 @@
       "independentReview": true,
       "timeoutSeconds": 30,
       "retryLimit": 0
+    },
+    {
+      "id": "grill-me",
+      "skillPath": ".claude/skills/grill-me/SKILL.md",
+      "fixtures": ["_os/automation/fixtures/grill-me/fleet-plan.json"],
+      "commands": [
+        ["node", "--test", "_os/automation/tests/grill-me.test.js", "_os/automation/tests/agent-runtime.test.js", "_os/automation/tests/agent-fleet.test.js"]
+      ],
+      "reviewCommands": [["node", "_os/acceptance/verify-run.js", "--receipt", "{receipt}", "--skill", "{skillId}"]],
+      "expectedFiles": [
+        "12_Brain/schemas/grill-me-receipt-v1.json",
+        "12_Brain/schemas/agent-runtime-contract-v1.json",
+        "12_Brain/registry/agent-fleet.json",
+        "_os/automation/lib/grill-me.js",
+        "_os/automation/bin/grill-me.js",
+        "_os/automation/docs/GRILL-ME.md",
+        ".claude/skills/grill-me/agents/openai.yaml",
+        ".claude/skills/grill-me/references/fleet-integration.md"
+      ],
+      "requiredPatterns": [
+        "Ask exactly one question per turn",
+        "recommended answer",
+        "Do not run Grill Me implicitly",
+        "not a sixteenth agent"
+      ],
+      "forbiddenPatterns": [
+        "Grill Me may approve",
+        "ask for passwords",
+        "automatic on every task"
+      ],
+      "independentReview": true,
+      "timeoutSeconds": 30,
+      "retryLimit": 0
     }
   ]
 }

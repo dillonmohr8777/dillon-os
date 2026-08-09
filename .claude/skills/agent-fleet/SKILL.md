@@ -19,6 +19,12 @@ Use this skill when a workflow must select or validate one of Dillon's managed a
 8. Treat the four `_os/managed-pilot/` projects as synthetic scaffolds only. They are not deployed production agents.
 9. Distinguish static fleet validation, deterministic contract simulation, and real model-role execution. Passing either of the first two does not prove open-ended agent capability.
 
+## Grill Me clarification protocol
+
+All fifteen agents can participate in `$grill-me` when Dillon explicitly invokes it. The current task-owning agent must inspect available sources first, walk unresolved decisions in dependency order, ask exactly one question per turn with a recommended answer, and attach the completed local receipt to Agent Runtime Contract v1 when it governs a nontrivial run.
+
+Grill Me is not a sixteenth agent and never runs implicitly. It cannot write the canonical queue or brain, grant approval, take external action, or accept its own artifact; Marketing Chief and Independent Verifier retain their existing singular authorities.
+
 ## Synthetic Fleet Contract Simulation
 
 Use the local muster before any hosted or client-data pilot:

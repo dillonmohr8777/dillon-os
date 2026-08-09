@@ -27,6 +27,19 @@ describe('Dillon managed agent fleet', () => {
     assert.deepEqual(result.agents.filter((agent) => agent.authority.artifactAcceptance).map((agent) => agent.agentId), ['independent-verifier-release-gate']);
   });
 
+  it('makes Grill Me available to all fifteen agents without creating another authority', () => {
+    const result = validateFleet();
+    const protocol = result.fleet.clarificationProtocol;
+    assert.equal(protocol.id, 'grill-me-v1');
+    assert.equal(protocol.scope, 'all-registered-agents');
+    assert.equal(protocol.invocation, 'explicit-user-only');
+    assert.equal(protocol.sessionOwner, 'current-task-agent');
+    for (const field of ['canonicalQueueWrite', 'canonicalBrainWrite', 'approvalGrant', 'externalActions', 'artifactAcceptance']) {
+      assert.equal(protocol[field], false, field);
+    }
+    assert.equal(result.agents.length, 15);
+  });
+
   it('denies direct durable brain writes and consequential actions for every agent', () => {
     const result = validateFleet();
     for (const agent of result.agents) {

@@ -6,6 +6,19 @@
   "canonicalBrainSystem": "dillon-os",
   "maxWorkers": 3,
   "maxDepth": 1,
+  "clarificationProtocol": {
+    "id": "grill-me-v1",
+    "skillPath": ".claude/skills/grill-me/SKILL.md",
+    "receiptSchemaPath": "12_Brain/schemas/grill-me-receipt-v1.json",
+    "invocation": "explicit-user-only",
+    "scope": "all-registered-agents",
+    "sessionOwner": "current-task-agent",
+    "canonicalQueueWrite": false,
+    "canonicalBrainWrite": false,
+    "approvalGrant": false,
+    "externalActions": false,
+    "artifactAcceptance": false
+  },
   "agentManifestPaths": [
     "12_Brain/registry/agents/marketing-chief.json",
     "12_Brain/registry/agents/client-identity-access-router.json",
@@ -51,6 +64,7 @@
   "deterministicServices": [
     "canonical-queue-and-client-registry",
     "agent-runtime-contract-v1",
+    "grill-me-session-and-receipt",
     "skill-acceptance-registry",
     "one-way-correction-compiler",
     "access-broker-and-credential-bridge",

@@ -60,6 +60,22 @@
         "timeoutSeconds": { "type": ["number", "null"], "minimum": 0 }
       }
     },
+    "clarification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["protocol", "invocation", "status", "receipt"],
+      "properties": {
+        "protocol": { "const": "grill-me-v1" },
+        "invocation": { "const": "explicit-user-only" },
+        "status": { "enum": ["not_invoked", "in_progress", "shared_understanding", "blocked", "not_applicable"] },
+        "receipt": {
+          "oneOf": [
+            { "$ref": "#/$defs/artifact" },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
     "steps": { "type": "array", "items": { "type": "object" } },
     "items": {
       "type": "array",
@@ -99,6 +115,49 @@
                 { "properties": { "status": { "const": "pass" } } }
               ]
             }
+          },
+          "clarification": {
+            "properties": {
+              "status": { "enum": ["not_invoked", "shared_understanding", "not_applicable"] }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "clarification": {
+            "properties": { "status": { "const": "shared_understanding" } },
+            "required": ["status"]
+          }
+        },
+        "required": ["clarification"]
+      },
+      "then": {
+        "properties": {
+          "clarification": {
+            "properties": {
+              "receipt": { "$ref": "#/$defs/artifact" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "clarification": {
+            "properties": { "status": { "const": "blocked" } },
+            "required": ["status"]
+          }
+        },
+        "required": ["clarification"]
+      },
+      "then": {
+        "properties": {
+          "clarification": {
+            "properties": { "receipt": { "$ref": "#/$defs/artifact" } }
           }
         }
       }

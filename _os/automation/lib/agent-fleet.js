@@ -166,6 +166,24 @@ function validateFleet(root = REPO_ROOT) {
   if (fleet.canonicalQueueSystem !== 'client-operations') failures.push('client-operations must remain canonical queue');
   if (fleet.canonicalBrainSystem !== 'dillon-os') failures.push('dillon-os must remain canonical brain');
   if (fleet.maxWorkers !== 3 || fleet.maxDepth !== 1) failures.push('fleet limits must be three workers and depth one');
+  const clarification = fleet.clarificationProtocol;
+  if (!clarification || typeof clarification !== 'object' || Array.isArray(clarification)) {
+    failures.push('fleet requires the Grill Me clarification protocol');
+  } else {
+    if (clarification.id !== 'grill-me-v1') failures.push('fleet clarification protocol must be grill-me-v1');
+    if (clarification.invocation !== 'explicit-user-only') failures.push('Grill Me must remain explicitly user-invoked');
+    if (clarification.scope !== 'all-registered-agents') failures.push('Grill Me must be available to all registered agents');
+    if (clarification.sessionOwner !== 'current-task-agent') failures.push('Grill Me must stay with the current task owner');
+    for (const field of ['canonicalQueueWrite', 'canonicalBrainWrite', 'approvalGrant', 'externalActions', 'artifactAcceptance']) {
+      if (clarification[field] !== false) failures.push(`Grill Me cannot hold ${field} authority`);
+    }
+    for (const relativePath of [clarification.skillPath, clarification.receiptSchemaPath]) {
+      const unsafe = typeof relativePath !== 'string' || path.isAbsolute(relativePath) || relativePath.includes('..');
+      if (unsafe || !fs.existsSync(path.join(root, relativePath))) {
+        failures.push(`Grill Me integration is missing ${relativePath || 'a required path'}`);
+      }
+    }
+  }
   if (!Array.isArray(fleet.agentManifestPaths) || fleet.agentManifestPaths.length !== EXPECTED_AGENT_COUNT) {
     failures.push(`fleet must contain exactly ${EXPECTED_AGENT_COUNT} manifests`);
   }

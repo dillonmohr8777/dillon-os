@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/grill-me-receipt-v1",
+  "title": "Grill Me Receipt v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "protocolId", "sessionId", "owningAgentId", "subject",
+    "triggerIdentity", "sourceLocators", "invocation", "questionPolicy", "status",
+    "revision", "currentQuestionId", "branches", "decisions", "blockedReason",
+    "authority", "startedAt", "updatedAt", "finishedAt"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "protocolId": { "const": "grill-me-v1" },
+    "sessionId": { "type": "string", "minLength": 1 },
+    "owningAgentId": { "type": "string", "pattern": "^[a-z][a-z0-9-]+$" },
+    "subject": { "type": "string", "minLength": 1 },
+    "triggerIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "locator"],
+      "properties": {
+        "kind": { "enum": ["user", "schedule", "connector"] },
+        "locator": { "type": "string", "minLength": 1 }
+      }
+    },
+    "sourceLocators": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "invocation": { "const": "explicit-user-only" },
+    "questionPolicy": { "const": "one-at-a-time-depth-first" },
+    "status": { "enum": ["in_progress", "shared_understanding", "blocked"] },
+    "revision": { "type": "integer", "minimum": 0 },
+    "currentQuestionId": { "type": ["string", "null"] },
+    "branches": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "question", "recommendation", "rationale", "dependsOn", "codebaseAnswerable", "status", "answer", "resolutionSource", "evidenceLocators", "resolvedAt"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "question": { "type": "string", "minLength": 1 },
+          "recommendation": { "type": "string", "minLength": 1 },
+          "rationale": { "type": "string", "minLength": 1 },
+          "dependsOn": { "type": "array", "items": { "type": "string" } },
+          "codebaseAnswerable": { "type": "boolean" },
+          "status": { "enum": ["pending", "asked", "resolved"] },
+          "answer": { "type": ["string", "null"] },
+          "resolutionSource": { "enum": ["user", "codebase", "vault", "connected_source", "runtime", null] },
+          "evidenceLocators": { "type": "array", "items": { "type": "string" } },
+          "resolvedAt": { "type": ["string", "null"], "format": "date-time" }
+        }
+      }
+    },
+    "decisions": { "type": "array", "items": { "type": "object" } },
+    "blockedReason": { "type": ["string", "null"] },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canonicalQueueWrite", "canonicalBrainWrite", "approvalGrant", "externalDelivery", "spend", "accountChange", "artifactAcceptance"],
+      "properties": {
+        "canonicalQueueWrite": { "const": false },
+        "canonicalBrainWrite": { "const": false },
+        "approvalGrant": { "const": false },
+        "externalDelivery": { "const": false },
+        "spend": { "const": false },
+        "accountChange": { "const": false },
+        "artifactAcceptance": { "const": false }
+      }
+    },
+    "startedAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "finishedAt": { "type": ["string", "null"], "format": "date-time" }
+  }
+}

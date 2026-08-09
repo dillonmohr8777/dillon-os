@@ -21,6 +21,13 @@ const TRIGGER_KINDS = new Set(['user', 'schedule', 'connector']);
 const APPROVAL_GATES = new Set(['none', 'explicit', 'human_authentication']);
 const APPROVAL_STATUSES = new Set(['not_required', 'pending', 'approved']);
 const CHECK_STATUSES = new Set(['pass', 'fail']);
+const CLARIFICATION_STATUSES = new Set([
+  'not_invoked',
+  'in_progress',
+  'shared_understanding',
+  'blocked',
+  'not_applicable',
+]);
 
 function isoNow(clock = () => new Date()) {
   return clock().toISOString();
@@ -113,6 +120,32 @@ function validateAcceptanceCheck(check, field) {
   return check;
 }
 
+function validateClarification(clarification) {
+  if (!clarification || typeof clarification !== 'object' || Array.isArray(clarification)) {
+    throw new Error('run manifest clarification must be an object');
+  }
+  if (clarification.protocol !== 'grill-me-v1') {
+    throw new Error('run manifest clarification.protocol must be grill-me-v1');
+  }
+  if (clarification.invocation !== 'explicit-user-only') {
+    throw new Error('run manifest clarification.invocation must be explicit-user-only');
+  }
+  if (!CLARIFICATION_STATUSES.has(clarification.status)) {
+    throw new Error('run manifest clarification.status is invalid');
+  }
+  if (clarification.receipt != null) validateArtifact(clarification.receipt, 'clarification.receipt');
+  if (clarification.status === 'shared_understanding' && clarification.receipt == null) {
+    throw new Error('shared understanding requires a Grill Me receipt');
+  }
+  if (clarification.status === 'blocked' && clarification.receipt == null) {
+    throw new Error('blocked clarification requires a Grill Me receipt');
+  }
+  if (['not_invoked', 'not_applicable'].includes(clarification.status) && clarification.receipt != null) {
+    throw new Error(`${clarification.status} clarification cannot have a receipt`);
+  }
+  return clarification;
+}
+
 function validateManifest(manifest) {
   if (!manifest || typeof manifest !== 'object') throw new Error('run manifest must be an object');
   if (manifest.schemaVersion !== 1) throw new Error('run manifest schemaVersion must be 1');
@@ -192,10 +225,15 @@ function validateManifest(manifest) {
   });
   if (!Array.isArray(manifest.artifacts)) throw new Error('run manifest artifacts must be an array');
   manifest.artifacts.forEach((artifact, index) => validateArtifact(artifact, `artifacts[${index}]`));
+  if (manifest.clarification != null) validateClarification(manifest.clarification);
   if (manifest.status === 'complete') {
     if (!manifest.acceptanceChecks.length) throw new Error('complete run requires acceptance checks');
     if (manifest.acceptanceChecks.some((check) => check.status !== 'pass')) {
       throw new Error('complete run cannot contain failing acceptance checks');
+    }
+    if (['in_progress', 'blocked'].includes(manifest.clarification?.status)) {
+      const state = manifest.clarification.status === 'in_progress' ? 'in-progress' : 'blocked';
+      throw new Error(`complete run cannot have a ${state} Grill Me session`);
     }
   }
   return manifest;
@@ -341,6 +379,12 @@ class AgentRun {
         tokens: options.budget?.tokens ?? null,
         timeoutSeconds: options.budget?.timeoutSeconds ?? null,
       },
+      clarification: {
+        protocol: 'grill-me-v1',
+        invocation: 'explicit-user-only',
+        status: options.clarification?.status || 'not_invoked',
+        receipt: options.clarification?.receipt || null,
+      },
       steps: [],
       items: declaredItems,
       acceptanceChecks: [],
@@ -425,6 +469,17 @@ class AgentRun {
     this.save();
   }
 
+  setClarification(clarification) {
+    this.manifest.clarification = {
+      protocol: 'grill-me-v1',
+      invocation: 'explicit-user-only',
+      status: clarification?.status,
+      receipt: clarification?.receipt ?? null,
+    };
+    this.save();
+    return this.manifest.clarification;
+  }
+
   finalize(status, options = {}) {
     this.assertBudget();
     if (!RUN_STATUSES.has(status) || status === 'running') throw new Error(`invalid final run status: ${status}`);
@@ -440,6 +495,7 @@ class AgentRun {
 
 module.exports = {
   AgentRun,
+  CLARIFICATION_STATUSES,
   RUN_STATUSES,
   ITEM_STATUSES,
   artifactEvidence,
@@ -451,5 +507,6 @@ module.exports = {
   stableItemInputHash,
   validateAcceptanceCheck,
   validateArtifact,
+  validateClarification,
   validateManifest,
 };

@@ -1,0 +1,35 @@
+{
+  "owningAgentId": "marketing-chief",
+  "subject": "Integrate an explicitly invoked clarification protocol into the fifteen-agent fleet",
+  "triggerIdentity": { "kind": "user", "locator": "thread:synthetic-grill-me" },
+  "sourceLocators": ["repo:12_Brain/registry/agent-fleet.json", "source:github.com/mattpocock/skills"],
+  "branches": [
+    {
+      "id": "authority-boundary",
+      "title": "Authority boundary",
+      "question": "Should Grill Me be a new autonomous agent or a shared protocol used by the current task owner?",
+      "recommendation": "Use a shared protocol, not a sixteenth agent.",
+      "rationale": "That preserves the singular Marketing Chief and verifier authorities.",
+      "dependsOn": [],
+      "codebaseAnswerable": false
+    },
+    {
+      "id": "runtime-seam",
+      "title": "Runtime seam",
+      "question": "Where should the resumable interview receipt attach to an execution?",
+      "recommendation": "Attach a hashed clarification receipt to Agent Runtime Contract v1.",
+      "rationale": "The existing runtime already owns resumability, evidence, and approval state.",
+      "dependsOn": ["authority-boundary"],
+      "codebaseAnswerable": true
+    },
+    {
+      "id": "invocation-policy",
+      "title": "Invocation policy",
+      "question": "Should every task be grilled automatically?",
+      "recommendation": "Keep Grill Me explicitly user-invoked.",
+      "rationale": "Automatic interrogation would slow clear work and diverge from the source skill.",
+      "dependsOn": ["runtime-seam"],
+      "codebaseAnswerable": false
+    }
+  ]
+}

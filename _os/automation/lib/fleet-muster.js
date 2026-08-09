@@ -364,6 +364,7 @@ function createRuns(fleetResult, scenario, outDir, clock) {
       sourceLocators: [`scenario:${scenario.scenarioId}`],
       approval: { gate: 'none', status: 'not_required' },
       budget: { tokens: agent.budget.tokens, timeoutSeconds: agent.budget.timeoutSeconds },
+      clarification: { status: 'not_applicable' },
       maxAttempts: agent.budget.maxRetries + 1,
       items,
       clock,
