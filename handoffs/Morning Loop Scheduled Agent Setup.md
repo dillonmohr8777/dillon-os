@@ -4,6 +4,11 @@ tags: [handoff, automation, slack]
 
 # Morning Loop: Scheduled Agent Setup
 
+> **Superseded 2026-08-09** by the umbrella
+> [[System/competitive-task-definition|competitive task orchestrator]].
+> Use `System/competitive-task-orchestrator-prompt.md` instead of the prompt below.
+> Disable this cron after three green runs of the new automation.
+
 This wires the daily loop: every morning a cloud agent reads Slack, files boss requests into the vault, and writes the morning brief. Dillon does this once; it runs forever after.
 
 ## One-time setup (Dillon, ~3 minutes)

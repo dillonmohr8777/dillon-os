@@ -1,0 +1,43 @@
+{
+  "run_id": "2099-01-01-1786280676663",
+  "started_at": "2026-08-09T13:04:36.663Z",
+  "status": "planned",
+  "date": "2099-01-01",
+  "blockers": [
+    {
+      "id": "slack-open-loops",
+      "count": 4,
+      "severity": "high"
+    },
+    {
+      "id": "client-urgent",
+      "count": 8,
+      "severity": "high"
+    },
+    {
+      "id": "gate-obsidian_sync_cli",
+      "severity": "low",
+      "status": "pending-human"
+    },
+    {
+      "id": "gate-netlify_deploy_token",
+      "severity": "low",
+      "status": "pending-secret"
+    },
+    {
+      "id": "gate-landingfolio_token",
+      "severity": "low",
+      "status": "pending-secret"
+    },
+    {
+      "id": "gate-mail_vendor",
+      "severity": "low",
+      "status": "pending-decision"
+    }
+  ],
+  "artifact_paths": [
+    "/workspace/automation-runs/competitive-task-orchestrator/2099-01-01/run-plan.json"
+  ],
+  "automation_id": "competitive-task-orchestrator",
+  "written_at": "2026-08-09T13:04:36.663Z"
+}

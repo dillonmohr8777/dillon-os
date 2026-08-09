@@ -1,9 +1,23 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-09",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
+    {
+      "id": "competitive-task-orchestrator",
+      "name": "Umbrella competitive task loop (parallel lane agents)",
+      "lane": "operations",
+      "tier": 0,
+      "cadence": "daily 0 13 * * *",
+      "command": "node _os/automation/bin/command-loop.js plan && <parallel lane agents per .claude/skills/competitive-task-orchestrator/SKILL.md>",
+      "inputs": ["Gmail MCP", "Slack MCP", "01_Clients/", "00_Inbox/slack/", "10_Sessions/", "12_Brain/registry/"],
+      "outputs": ["Daily-Briefs/competitive-task-today.md", "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/", "12_Brain/state/competitive-task-orchestrator.json"],
+      "external_actions": false,
+      "replaces": ["morning-loop-slack-am-pulse", "nightly-client-pulse", "gmail-to-vault-digest", "vault-integrity-sync", "chat-to-vault-sync", "bok-law-social-content", "linkedin-growth-engine", "book-site-seo-sweep"],
+      "notes": "Six parallel Tier-0 scouts (gmail-intel, slack-intel, vault-pulse, codex-session-sync, domain-ads-seo, content-routines) then sequential memory-consolidator. Vault fallback when MCPs unavailable. One PR per run.",
+      "status": "implemented"
+    },
     {
       "id": "frontmatter-validate",
       "name": "Client frontmatter validation",
