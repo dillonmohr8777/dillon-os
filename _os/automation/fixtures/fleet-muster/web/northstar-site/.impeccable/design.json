@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-09T02:45:02.5905260Z",
+  "title": "Design System: Northstar Hearth & Home Synthetic Fixture",
+  "extensions": {
+    "colorMeta": {
+      "ember-copper": { "role": "primary", "displayName": "Ember Copper", "canonical": "#c76635", "tonalRamp": ["#3b1a0d", "#642917", "#8f3f1f", "#c76635", "#de7440", "#eca27b", "#f6d0b8", "#fff3e8"] },
+      "midnight-slate": { "role": "neutral", "displayName": "Midnight Slate", "canonical": "#172126", "tonalRamp": ["#11181b", "#172126", "#233138", "#435258", "#77888d", "#aebcbf", "#d7dfdf", "#f2f6f5"] },
+      "hearth-cream": { "role": "neutral", "displayName": "Hearth Cream", "canonical": "#f4ead8", "tonalRamp": ["#2e281f", "#524838", "#786b57", "#9e8f7b", "#c2b39d", "#e7d6be", "#f4ead8", "#fffaf1"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Route Display", "purpose": "Viewport thesis and section headlines." },
+      "body": { "displayName": "Field Copy", "purpose": "Evidence, guidance, controls, and state language." }
+    },
+    "shadows": [
+      { "name": "route-lift", "value": "0 24px 60px rgba(0, 0, 0, 0.28)", "purpose": "The single focal cream route sheet." }
+    ],
+    "motion": [
+      { "name": "route-trace", "value": "5s cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Trace the planning route once; reduced motion receives the final state." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "860px" },
+      { "name": "mobile", "value": "520px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one high-confidence local planning action.",
+      "html": "<button class=\"ds-button-primary\">PLAN YOUR HEARTH PROJECT</button>",
+      "css": ".ds-button-primary { background:#c76635; color:#fffaf1; min-height:52px; padding:13.6px 19.2px; border:0; border-radius:4px; font:700 15.2px/1 'Northstar Barlow',sans-serif; } .ds-button-primary:hover { background:#de7440; } .ds-button-primary:focus-visible { outline:3px solid #ffb078; outline-offset:4px; }"
+    },
+    {
+      "name": "Project ZIP Field",
+      "kind": "input",
+      "description": "A visible-label, local-only planning field.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-zip\">Project ZIP code</label><input class=\"ds-field\" id=\"ds-zip\" inputmode=\"numeric\">",
+      "css": ".ds-field-label { display:block; margin-bottom:8px; color:#172126; font:700 16px/1.2 'Northstar Barlow',sans-serif; } .ds-field { min-height:52px; padding:12px; border:2px solid #637276; border-radius:4px; background:#fffdf7; color:#172126; font:700 16px/1 'Northstar Barlow',sans-serif; } .ds-field:focus-visible { outline:3px solid #ffb078; outline-offset:4px; }"
+    },
+    {
+      "name": "Route Surface",
+      "kind": "custom",
+      "refersTo": "route-surface",
+      "description": "The focal inspectable planning sheet.",
+      "html": "<section class=\"ds-route\"><strong>YOUR PREPARATION ROUTE</strong><p>HOME · FIT · INSTALL · CARE</p></section>",
+      "css": ".ds-route { max-width:520px; padding:35px; border-radius:14px; background:#f4ead8; color:#172126; box-shadow:0 24px 60px rgba(0,0,0,.28); font-family:'Northstar Barlow',sans-serif; } .ds-route strong { letter-spacing:.08em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Home-Preparation Route",
+    "overview": "A midnight planning field holds one cream route sheet while copper marks the active path. The system is warm, procedural, source-bounded, and explicitly synthetic.",
+    "keyCharacteristics": ["One route-scale first-viewport visual", "Copper reserved for action and progress", "Cream reserved for inspectable work", "Synthetic evidence labeled at point of use"],
+    "rules": [
+      { "name": "The One Route Voice Rule", "body": "One self-hosted family spans display, body, map labels, and controls.", "section": "typography" },
+      { "name": "The One Lift Rule", "body": "Only the focal route sheet floats.", "section": "elevation" }
+    ],
+    "dos": ["Do use route geometry to explain sequence or dependency.", "Do keep proof boundaries adjacent to the content they qualify.", "Do preserve local-only, zero-network, and reduced-motion behavior."],
+    "donts": ["Don't turn the route into interchangeable feature cards.", "Don't add unsupported claims.", "Don't hide overflow; fix and measure it."]
+  }
+}

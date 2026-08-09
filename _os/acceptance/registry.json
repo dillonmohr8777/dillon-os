@@ -8,6 +8,7 @@
       "commands": [
         ["node", "--test", "_templates/site-factory/tests/build-batch.test.js", "_templates/site-factory/tests/workflow.test.js", "_os/automation/tests/agent-runtime.test.js"]
       ],
+      "reviewCommands": [["node", "_os/acceptance/verify-run.js", "--receipt", "{receipt}", "--skill", "{skillId}"]],
       "expectedFiles": [
         "12_Brain/schemas/agent-runtime-contract-v1.json",
         "_os/automation/lib/agent-runtime.js",
@@ -26,6 +27,7 @@
       "commands": [
         ["node", "--test", "_templates/site-factory/tests/skins.test.js", "_templates/site-factory/tests/validate.test.js", "_templates/site-factory/tests/workflow.test.js"]
       ],
+      "reviewCommands": [["node", "_os/acceptance/verify-run.js", "--receipt", "{receipt}", "--skill", "{skillId}"]],
       "expectedFiles": [
         "_templates/site-factory/build-site.js",
         "_templates/site-factory/qa.js",
@@ -44,6 +46,7 @@
       "commands": [
         ["node", "--test", "_os/acceptance/tests/skills-contract.test.js", "_os/test/brain-hud.test.js", "_os/test/public-safety.test.js"]
       ],
+      "reviewCommands": [["node", "_os/acceptance/verify-run.js", "--receipt", "{receipt}", "--skill", "{skillId}"]],
       "expectedFiles": ["12_Brain/INDEX.md", "12_Brain/raw/README.md"],
       "requiredPatterns": ["Never edit anything in `12_Brain/raw/`", "source:", "Update the existing page"],
       "forbiddenPatterns": [],
@@ -56,6 +59,7 @@
       "skillPath": ".claude/skills/am-report/SKILL.md",
       "fixtures": ["_os/acceptance/fixtures/am-report/expected-sections.json"],
       "commands": [["node", "--test", "_os/acceptance/tests/skills-contract.test.js"]],
+      "reviewCommands": [["node", "_os/acceptance/verify-run.js", "--receipt", "{receipt}", "--skill", "{skillId}"]],
       "expectedFiles": ["Dashboard.md", "System/OS Config.md"],
       "requiredPatterns": ["Top 3 priorities", "Client movement", "under 40 lines"],
       "forbiddenPatterns": ["send email", "publish"],
@@ -68,6 +72,7 @@
       "skillPath": ".claude/skills/client-report/SKILL.md",
       "fixtures": ["_os/acceptance/fixtures/client-report/sample-data.json"],
       "commands": [["node", "--test", "_os/acceptance/tests/skills-contract.test.js"]],
+      "reviewCommands": [["node", "_os/acceptance/verify-run.js", "--receipt", "{receipt}", "--skill", "{skillId}"]],
       "expectedFiles": ["_os/reporting/build-report.js", "_os/reporting/report-template.html"],
       "requiredPatterns": ["Never invent live metrics", "sampleData", "Align HCM"],
       "forbiddenPatterns": ["sampleData\": false"],
@@ -82,6 +87,7 @@
       "commands": [
         ["node", "--test", "_os/automation/tests/agent-fleet.test.js"]
       ],
+      "reviewCommands": [["node", "_os/acceptance/verify-run.js", "--receipt", "{receipt}", "--skill", "{skillId}"]],
       "expectedFiles": [
         "12_Brain/registry/agent-fleet.json",
         "12_Brain/registry/legacy-agent-aliases.json",
@@ -107,13 +113,19 @@
       "skillPath": ".claude/skills/agent-fleet/SKILL.md",
       "fixtures": ["_os/automation/fixtures/fleet-muster/scenario-v1.json"],
       "commands": [
-        ["node", "--test", "_os/automation/tests/fleet-muster.test.js"]
+        ["node", "--test", "_os/automation/tests/fleet-muster.test.js", "_os/automation/fixtures/fleet-muster/web/northstar-site/tests/site.test.js"]
       ],
+      "reviewCommands": [["node", "_os/acceptance/verify-run.js", "--receipt", "{receipt}", "--skill", "{skillId}"]],
       "expectedFiles": [
         "12_Brain/schemas/fleet-muster-v1.json",
         "_os/automation/lib/fleet-muster.js",
         "_os/automation/bin/fleet-muster.js",
-        "_os/automation/docs/FLEET-MUSTER.md"
+        "_os/automation/bin/verify-live-fleet.js",
+        "_os/automation/docs/FLEET-MUSTER.md",
+        "_os/automation/fixtures/fleet-muster/web/northstar-site/PRODUCT.md",
+        "_os/automation/fixtures/fleet-muster/web/northstar-site/DESIGN.md",
+        "_os/automation/fixtures/fleet-muster/web/northstar-site/index.html",
+        "_os/automation/fixtures/fleet-muster/web/northstar-site/tests/site.test.js"
       ],
       "requiredPatterns": [
         "Synthetic Fleet Contract Simulation",

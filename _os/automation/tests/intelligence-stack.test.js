@@ -42,11 +42,15 @@ test('website factory requires recorded demo and independent visual evidence', (
   const run = {
     ...fixture,
     workflow_type: 'website_factory',
+    maker_evidence: {
+      artifacts: hashArtifacts(fixture.artifact_paths),
+    },
   };
   const valid = validateCheckerEvidence(run, {
     checker_id: fixture.checker_id,
     verdict: 'pass',
     summary: 'Independent functional and visual review passed.',
+    test_results: fixture.acceptance_tests.map((name) => ({ name, status: 'pass' })),
     demo_reviewed: true,
     visual_review: {
       verdict: 'pass',
@@ -62,6 +66,50 @@ test('website factory requires recorded demo and independent visual evidence', (
   });
   assert.equal(invalid.ok, false);
   assert.ok(invalid.errors.includes('website_factory checker must review the screen recording'));
+});
+
+test('checker evidence fails closed on missing, duplicate, unknown, failed, or tampered evidence', () => {
+  const fixture = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/workflows/sample-workflow.json'), 'utf8'));
+  const run = {
+    ...fixture,
+    maker_evidence: { artifacts: hashArtifacts(fixture.artifact_paths) },
+  };
+  const base = {
+    checker_id: fixture.checker_id,
+    verdict: 'pass',
+    summary: 'Independent checks completed.',
+    test_results: fixture.acceptance_tests.map((name) => ({ name, status: 'pass' })),
+  };
+  assert.equal(validateCheckerEvidence(run, base).ok, true);
+  assert.ok(validateCheckerEvidence(run, { ...base, test_results: [] }).errors.includes(
+    'Checker evidence must include a non-empty test_results array',
+  ));
+  assert.ok(validateCheckerEvidence(run, {
+    ...base,
+    test_results: [base.test_results[0], base.test_results[0]],
+  }).errors.some((error) => error.startsWith('Duplicate checker test result:')));
+  assert.ok(validateCheckerEvidence(run, {
+    ...base,
+    test_results: [...base.test_results, { name: 'invented check', status: 'pass' }],
+  }).errors.includes('Unknown checker test result: invented check'));
+  assert.ok(validateCheckerEvidence(run, {
+    ...base,
+    test_results: base.test_results.map((result, index) => ({
+      ...result,
+      status: index === 0 ? 'fail' : 'pass',
+    })),
+  }).errors.includes('Checker verdict cannot pass when any acceptance test fails'));
+  const tampered = {
+    ...run,
+    maker_evidence: {
+      artifacts: run.maker_evidence.artifacts.map((artifact, index) => (
+        index === 0 ? { ...artifact, sha256: '0'.repeat(64) } : artifact
+      )),
+    },
+  };
+  assert.ok(validateCheckerEvidence(tampered, base).errors.some((error) => (
+    error.startsWith('Maker artifact changed before checker validation:')
+  )));
 });
 
 test('artifact hashing rejects paths outside the repository', () => {

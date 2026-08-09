@@ -1,0 +1,11 @@
+{
+  "name": "northstar-fleet-muster-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Synthetic, local-only Web and Product agent acceptance fixture.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "capture:evidence": "node scripts/capture-evidence.js",
+    "test": "node --test tests/site.test.js"
+  }
+}

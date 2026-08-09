@@ -4,7 +4,11 @@
   "summary": "A separate fixture checker confirmed the expected artifact and acceptance contract.",
   "test_results": [
     {
-      "name": "artifact-exists",
+      "name": "Artifact exists and is hashable",
+      "status": "pass"
+    },
+    {
+      "name": "AEO and trust gate passes",
       "status": "pass"
     }
   ]

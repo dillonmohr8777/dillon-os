@@ -60,6 +60,51 @@ function validateCheckerEvidence(run, evidence) {
   if (evidence?.checker_id === run.maker_id) errors.push('Maker cannot check their own work');
   if (!['pass', 'fail'].includes(evidence?.verdict)) errors.push('Checker verdict must be pass or fail');
   if (!String(evidence?.summary || '').trim()) errors.push('Checker evidence summary is required');
+  const expectedTests = Array.isArray(run?.acceptance_tests) ? run.acceptance_tests : [];
+  const testResults = Array.isArray(evidence?.test_results) ? evidence.test_results : [];
+  if (!testResults.length) {
+    errors.push('Checker evidence must include a non-empty test_results array');
+  } else {
+    const seen = new Set();
+    for (const [index, result] of testResults.entries()) {
+      const name = String(result?.name || '').trim();
+      if (!name) errors.push(`test_results[${index}].name is required`);
+      if (!['pass', 'fail'].includes(result?.status)) {
+        errors.push(`test_results[${index}].status must be pass or fail`);
+      }
+      if (seen.has(name)) errors.push(`Duplicate checker test result: ${name}`);
+      seen.add(name);
+      if (name && !expectedTests.includes(name)) errors.push(`Unknown checker test result: ${name}`);
+    }
+    for (const expected of expectedTests) {
+      if (!seen.has(expected)) errors.push(`Missing checker test result: ${expected}`);
+    }
+    if (evidence?.verdict === 'pass' && testResults.some((result) => result?.status !== 'pass')) {
+      errors.push('Checker verdict cannot pass when any acceptance test fails');
+    }
+  }
+  const recordedArtifacts = run?.maker_evidence?.artifacts;
+  if (!Array.isArray(recordedArtifacts) || !recordedArtifacts.length) {
+    errors.push('Maker artifact evidence is required before checker validation');
+  } else {
+    const currentArtifacts = hashArtifacts(run.artifact_paths || []);
+    if (currentArtifacts.length !== recordedArtifacts.length) {
+      errors.push('Maker artifact evidence count changed before checker validation');
+    } else {
+      for (let index = 0; index < currentArtifacts.length; index += 1) {
+        const current = currentArtifacts[index];
+        const recorded = recordedArtifacts[index];
+        if (
+          current.path !== recorded.path
+          || current.exists !== recorded.exists
+          || current.sha256 !== recorded.sha256
+          || current.bytes !== recorded.bytes
+        ) {
+          errors.push(`Maker artifact changed before checker validation: ${current.path}`);
+        }
+      }
+    }
+  }
   if (run.workflow_type === 'website_factory') {
     if (evidence?.demo_reviewed !== true) errors.push('website_factory checker must review the screen recording');
     if (!['pass', 'fail'].includes(evidence?.visual_review?.verdict)) {

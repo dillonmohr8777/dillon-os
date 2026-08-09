@@ -18,6 +18,7 @@
           "skillPath",
           "fixtures",
           "commands",
+          "reviewCommands",
           "expectedFiles",
           "requiredPatterns",
           "forbiddenPatterns",
@@ -30,6 +31,11 @@
           "skillPath": { "type": "string", "minLength": 1 },
           "fixtures": { "type": "array", "minItems": 1, "items": { "type": "string" } },
           "commands": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+          },
+          "reviewCommands": {
             "type": "array",
             "minItems": 1,
             "items": { "type": "array", "minItems": 1, "items": { "type": "string" } }

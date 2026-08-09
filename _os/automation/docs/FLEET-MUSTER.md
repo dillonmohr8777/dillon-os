@@ -6,7 +6,7 @@ Status: local, deterministic, synthetic acceptance exercise
 
 Fleet Muster deterministically simulates the exact fifteen-agent registry against the fictional Northstar Hearth & Home scenario. It proves contract wiring, bounded assignments, identity-receipt propagation, receipt integrity, seeded-trap coverage, evidence hashing, resume behavior, and authority boundaries. It does not prove open-ended model reasoning or production-quality role performance.
 
-This is a sequential contract and orchestration simulation, not fifteen autonomous cloud deployments. It makes zero external calls and does not connect to Slack, Gmail, advertising platforms, CRM systems, websites, financial accounts, or any client source.
+This is a sequential contract and orchestration simulation, not fifteen autonomous cloud deployments. It makes zero external calls and does not connect to Slack, Gmail, advertising platforms, CRM systems, live websites, financial accounts, or any client source. The Web and Product role uses a dependency-free local synthetic site fixture; it is explicitly `noindex`, has no deployment target, and sends no data.
 
 The fixture is `_os/automation/fixtures/fleet-muster/scenario-v1.json`. Northstar Hearth & Home and Blue Ember Outdoor are fictional. Blue Ember records are deliberate cross-client decoys.
 
@@ -34,6 +34,14 @@ Expected evidence:
 - An Independent Verifier acceptance register and a Watchtower observation-only packet
 
 The summary must report fifteen agents, fifteen manifests, zero audited external calls, zero external actions, zero durable brain writes, zero durable queue writes, zero secrets accessed, and no missed seeded traps. These counts are derived from the generated artifact declarations; they are not a machine-wide filesystem or network audit.
+
+## Executable Web and Product evidence
+
+The Web and Product role's executable fixture is `_os/automation/fixtures/fleet-muster/web/northstar-site`. From that directory, `npm test` validates the required sections, claim boundary, `noindex`, associated form label, mobile containment, reduced-motion rule, zero-network implementation, and deterministic build manifest. `npm run build` emits a local ignored `dist/` bundle with SHA-256 evidence.
+
+For rendered proof, start `dist/` on a local loopback server and run `npm run capture:evidence -- --out <dedicated-output-directory>`. The capture command uses headless Chrome through the DevTools Protocol to measure desktop and mobile scroll width, read the accessibility tree, exercise the local-only form, record requests and console errors, and save full-page screenshots. It fails when either viewport overflows, the ZIP field lacks the correct accessible name, `noindex` is absent, an external request occurs, or the console reports an error.
+
+The production acceptance runner now invokes a distinct verifier process after every maker command. That process recomputes required-file hashes, rechecks contract patterns, validates the exact maker command receipt, and fails closed on missing, extra, or changed evidence. The `independentReview` flag is retained as policy metadata, not accepted as proof by itself.
 
 ## Execution phases and dependency waves
 
