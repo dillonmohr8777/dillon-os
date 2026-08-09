@@ -1,0 +1,7 @@
+node_modules/
+dist/
+deploy-site/
+artifacts/browser/
+artifacts/preview.*.log
+artifacts/BROWSER-QA-round-*.json
+.netlify/

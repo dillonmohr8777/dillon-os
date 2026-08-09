@@ -1,0 +1,179 @@
+{
+  "generatedAt": "2026-08-09T20:36:35.002Z",
+  "ok": true,
+  "pages": 4,
+  "checks": [
+    {
+      "label": "Production dist directory exists",
+      "passed": true
+    },
+    {
+      "label": "index.html exists",
+      "passed": true
+    },
+    {
+      "label": "index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "index.html preserves its direction contract",
+      "passed": true
+    },
+    {
+      "label": "index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/maclaren-kitchen-bath/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/maclaren-kitchen-bath/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/maclaren-kitchen-bath/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/maclaren-kitchen-bath/index.html preserves its direction contract",
+      "passed": true
+    },
+    {
+      "label": "sites/maclaren-kitchen-bath/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/maclaren-kitchen-bath/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/golden-eagle-jewelry/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/golden-eagle-jewelry/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/golden-eagle-jewelry/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/golden-eagle-jewelry/index.html preserves its direction contract",
+      "passed": true
+    },
+    {
+      "label": "sites/golden-eagle-jewelry/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/golden-eagle-jewelry/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/morton-electric-pool-spa/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/morton-electric-pool-spa/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/morton-electric-pool-spa/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/morton-electric-pool-spa/index.html preserves its direction contract",
+      "passed": true
+    },
+    {
+      "label": "sites/morton-electric-pool-spa/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/morton-electric-pool-spa/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "Exactly seven generated WebP material assets ship",
+      "passed": true
+    },
+    {
+      "label": "Generated material assets have unique SHA-256 hashes",
+      "passed": true
+    },
+    {
+      "label": "Production JavaScript remains below 180 KB gzipped",
+      "passed": true
+    },
+    {
+      "label": "Reduced-motion styling ships",
+      "passed": true
+    },
+    {
+      "label": "Visible keyboard focus styling ships",
+      "passed": true
+    },
+    {
+      "label": "Static WebGL fallback styling ships",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "materials": [
+    {
+      "name": "copper-patina.webp",
+      "bytes": 4256,
+      "sha256": "2a9191c9c93e3b8d0e972a92777f9d4daba4ad39aedb4433e61bf77fbe53590a"
+    },
+    {
+      "name": "polished-gem.webp",
+      "bytes": 6166,
+      "sha256": "c0a3402ebe4524ebf68dfd042f695df30dc10d51b70dc0f310929ee586b31c3e"
+    },
+    {
+      "name": "raw-gem.webp",
+      "bytes": 5940,
+      "sha256": "73500481569709aefe789071fde1ef477beb8e75831744d9a05a6ddeb2eae8ab"
+    },
+    {
+      "name": "steam-noise.webp",
+      "bytes": 57554,
+      "sha256": "7b5d7d2940e92d9c3f03ffc3a61d20fcd766bbb1d8d89d4a3b7c540ff990e66f"
+    },
+    {
+      "name": "stone-vein.webp",
+      "bytes": 13346,
+      "sha256": "dc79ba8b1034a40b84cb38448c506e0d2341cc569031f52127fc0ab97ac1cf66"
+    },
+    {
+      "name": "water-caustics.webp",
+      "bytes": 13292,
+      "sha256": "d24e5129fd345d813e39417acffc0e4f8c52855c45952a954c4fdf883f3dd827"
+    },
+    {
+      "name": "wood-grain.webp",
+      "bytes": 20368,
+      "sha256": "4ec11ebcef40dc9e7a1abd66063745aa08bd1558b02330616ae73bb0d5c4c0e2"
+    }
+  ],
+  "productionJavaScript": {
+    "files": [
+      "dist/assets/lab-D9huO-5A.js",
+      "dist/assets/modulepreload-polyfill-B5Qt9EMX.js",
+      "dist/assets/site-oUJlVYR1.js"
+    ],
+    "bytes": 535228,
+    "gzipBytes": 136701,
+    "gzipKilobytes": 133.5
+  }
+}

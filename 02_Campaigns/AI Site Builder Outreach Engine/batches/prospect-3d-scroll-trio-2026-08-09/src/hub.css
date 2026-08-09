@@ -1,0 +1,248 @@
+@font-face {
+  font-family: "Lab Display";
+  src: url("/assets/fonts/lab-display.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Lab Text";
+  src: url("/assets/fonts/lab-text.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Lab Text";
+  src: url("/assets/fonts/lab-text-bold.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 700;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: "Lab Text", "Aptos", sans-serif;
+  font-synthesis: none;
+  --ground: #11100e;
+  --paper: #eee8dc;
+  --muted: #aaa397;
+  --line: rgba(238, 232, 220, 0.24);
+  --focus: #ffbd6d;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--ground); }
+body { margin: 0; min-width: 320px; overflow-x: clip; color: var(--paper); background: var(--ground); }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--focus); outline-offset: 5px; }
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.8rem 1rem;
+  color: #11100e;
+  background: #ffbd6d;
+  transform: translateY(-160%);
+  transition: transform 180ms ease-out;
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+.lab-header {
+  position: fixed;
+  z-index: 20;
+  inset: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 5.25rem;
+  padding: 0.75rem clamp(1rem, 3vw, 3.5rem);
+  border-bottom: 1px solid var(--line);
+  background: rgba(17, 16, 14, 0.96);
+}
+
+.lab-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-size: 0.74rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lab-mark svg { width: 2.5rem; height: 2.5rem; fill: var(--paper); }
+.lab-status { display: grid; justify-items: end; font-size: 0.72rem; }
+.lab-status span { color: var(--muted); }
+.lab-status strong { margin-top: 0.2rem; letter-spacing: 0.03em; }
+
+.lab-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(5rem, 11vw, 11rem);
+  min-height: 100svh;
+  padding: 9rem clamp(1rem, 6vw, 7rem) 4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.lab-hero-copy { align-self: center; }
+.lab-hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-family: "Lab Display", Georgia, serif;
+  font-size: clamp(4rem, 9vw, 9.5rem);
+  font-weight: 700;
+  line-height: 0.84;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.lab-hero p {
+  max-width: 54ch;
+  margin: 2.5rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.65;
+}
+
+.text-link {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.specimen-rail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.45rem; height: 100%; }
+.specimen { background-position: center; background-size: cover; }
+.specimen-wood { background-image: url("/assets/materials/wood-grain.webp"); }
+.specimen-gem { background-image: url("/assets/materials/polished-gem.webp"); }
+.specimen-water { background-image: url("/assets/materials/water-caustics.webp"); }
+
+.lab-builds {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  padding: clamp(4rem, 9vw, 10rem) clamp(1rem, 4vw, 4.5rem);
+}
+
+.lab-route {
+  position: relative;
+  min-height: 42rem;
+  display: grid;
+  grid-template-columns: 1fr 0.78fr;
+  overflow: hidden;
+  border-top: 1px solid currentColor;
+  text-decoration: none;
+}
+
+.route-maclaren { grid-column: 1 / 10; color: #1a1813; background: #dfd5c3; }
+.route-golden { grid-column: 4 / 13; margin-top: 6rem; color: #f3ead9; background: #080808; }
+.route-morton { grid-column: 1 / 11; margin-top: 6rem; color: #e8f5f2; background: #082329; }
+
+.route-count {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-family: "Lab Display", Georgia, serif;
+  font-size: 1.3rem;
+}
+
+.route-copy {
+  z-index: 2;
+  align-self: end;
+  padding: clamp(1.5rem, 4vw, 4rem);
+}
+
+.route-copy h2 {
+  max-width: 10ch;
+  margin: 0;
+  font-family: "Lab Display", Georgia, serif;
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.route-copy p { max-width: 36ch; margin: 1.5rem 0 0; font-size: 1.05rem; line-height: 1.55; opacity: 0.75; }
+.route-action { min-height: 48px; display: inline-flex; align-items: center; gap: 0.7rem; margin-top: 2rem; border-bottom: 1px solid currentColor; font-weight: 700; }
+
+.route-material {
+  display: block;
+  grid-column: 2;
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.03);
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lab-route:hover .route-material { transform: scale(1.09); }
+.route-maclaren .route-material { background-image: url("/assets/materials/wood-grain.webp"); }
+.route-golden .route-material { background-image: url("/assets/materials/polished-gem.webp"); }
+.route-morton .route-material { background-image: url("/assets/materials/water-caustics.webp"); }
+
+.lab-boundary {
+  min-height: 70svh;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: end;
+  gap: 4rem;
+  padding: clamp(5rem, 10vw, 11rem) clamp(1rem, 6vw, 7rem);
+  color: #11100e;
+  background: #ffbd6d;
+}
+
+.lab-boundary h2 {
+  max-width: 13ch;
+  margin: 0;
+  font-family: "Lab Display", Georgia, serif;
+  font-size: clamp(3.2rem, 7vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.lab-boundary p { max-width: 55ch; margin: 0; font-size: 1.05rem; line-height: 1.65; }
+
+.lab-footer {
+  min-height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem clamp(1rem, 3vw, 3.5rem);
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 850px) {
+  .lab-hero { grid-template-columns: 1fr; padding-top: 8rem; }
+  .lab-hero h1 { font-size: clamp(4rem, 15vw, 7rem); }
+  .specimen-rail { height: 8rem; margin-top: 3rem; }
+  .lab-builds { display: block; }
+  .lab-route { min-height: 38rem; margin: 0 0 2rem; }
+  .lab-boundary { grid-template-columns: 1fr; align-items: start; }
+}
+
+@media (max-width: 560px) {
+  .lab-status span { display: none; }
+  .lab-status strong { max-width: 9rem; text-align: right; }
+  .lab-hero h1 { font-size: clamp(3.5rem, 17vw, 5.2rem); }
+  .lab-route { grid-template-columns: 1fr; min-height: 42rem; }
+  .route-copy { align-self: end; }
+  .route-copy h2 { font-size: clamp(3.2rem, 14vw, 5rem); }
+  .route-material { position: absolute; inset: 0 0 46%; grid-column: auto; grid-row: auto; width: 100%; min-height: 54%; opacity: 0.82; }
+  .lab-footer { align-items: flex-start; flex-direction: column; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }
+}

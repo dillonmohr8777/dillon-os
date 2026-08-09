@@ -1,0 +1,39 @@
+# Static QA
+
+- Result: PASS
+- Pages: 4
+- Generated WebP assets: 7
+- Production JavaScript: 133.5 KB gzipped
+- Checks: 31/31
+
+- PASS: Production dist directory exists
+- PASS: index.html exists
+- PASS: index.html carries noindex
+- PASS: index.html has a skip link
+- PASS: index.html preserves its direction contract
+- PASS: index.html contains no form
+- PASS: index.html has no unapproved external runtime dependency
+- PASS: sites/maclaren-kitchen-bath/index.html exists
+- PASS: sites/maclaren-kitchen-bath/index.html carries noindex
+- PASS: sites/maclaren-kitchen-bath/index.html has a skip link
+- PASS: sites/maclaren-kitchen-bath/index.html preserves its direction contract
+- PASS: sites/maclaren-kitchen-bath/index.html contains no form
+- PASS: sites/maclaren-kitchen-bath/index.html has no unapproved external runtime dependency
+- PASS: sites/golden-eagle-jewelry/index.html exists
+- PASS: sites/golden-eagle-jewelry/index.html carries noindex
+- PASS: sites/golden-eagle-jewelry/index.html has a skip link
+- PASS: sites/golden-eagle-jewelry/index.html preserves its direction contract
+- PASS: sites/golden-eagle-jewelry/index.html contains no form
+- PASS: sites/golden-eagle-jewelry/index.html has no unapproved external runtime dependency
+- PASS: sites/morton-electric-pool-spa/index.html exists
+- PASS: sites/morton-electric-pool-spa/index.html carries noindex
+- PASS: sites/morton-electric-pool-spa/index.html has a skip link
+- PASS: sites/morton-electric-pool-spa/index.html preserves its direction contract
+- PASS: sites/morton-electric-pool-spa/index.html contains no form
+- PASS: sites/morton-electric-pool-spa/index.html has no unapproved external runtime dependency
+- PASS: Exactly seven generated WebP material assets ship
+- PASS: Generated material assets have unique SHA-256 hashes
+- PASS: Production JavaScript remains below 180 KB gzipped
+- PASS: Reduced-motion styling ships
+- PASS: Visible keyboard focus styling ships
+- PASS: Static WebGL fallback styling ships

@@ -1,0 +1,21 @@
+{
+  "name": "prospect-radar-3d-scroll-trio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "textures": "node scripts/generate-textures.mjs",
+    "build": "npm run textures && vite build",
+    "qa": "node scripts/qa.mjs",
+    "qa:browser": "node scripts/qa-browser.mjs",
+    "qa:deploy": "node scripts/verify-deploy.mjs",
+    "compose": "node scripts/compose-deploy.mjs"
+  },
+  "dependencies": {
+    "three": "^0.179.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.2",
+    "vite": "^7.1.1"
+  }
+}

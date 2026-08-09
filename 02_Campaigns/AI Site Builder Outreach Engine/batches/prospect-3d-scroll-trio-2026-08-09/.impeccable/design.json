@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-09T20:42:00.000Z",
+  "title": "Design System: Prospect Radar Cinematic Scroll Trio",
+  "extensions": {
+    "colorMeta": {
+      "night-ink": { "role": "neutral", "displayName": "Night Ink", "canonical": "#07090a", "tonalRamp": ["#020303", "#07090a", "#14191b", "#293033", "#465053", "#687376", "#aab1b2", "#f1f3f3"] },
+      "gallery-paper": { "role": "neutral", "displayName": "Gallery Paper", "canonical": "#f5f2ea", "tonalRamp": ["#25231f", "#3e3a33", "#5d574d", "#827a6c", "#a9a092", "#cec7ba", "#e8e3da", "#f9f7f2"] },
+      "maclaren-sage": { "role": "primary", "displayName": "MacLaren Sage", "canonical": "#8aae98", "tonalRamp": ["#10211a", "#1f3c30", "#345a49", "#4d7863", "#69977e", "#8aae98", "#b7d0bf", "#e7f0e9"] },
+      "maclaren-blue": { "role": "secondary", "displayName": "MacLaren Blue", "canonical": "#1e70b8", "tonalRamp": ["#061727", "#0b2a47", "#103f69", "#18558d", "#1e70b8", "#5a96cb", "#9cc1df", "#e5f0f8"] },
+      "golden-yellow": { "role": "primary", "displayName": "Golden Yellow", "canonical": "#ffc90e", "tonalRamp": ["#281e00", "#4a3800", "#705400", "#9a7300", "#c99700", "#ffc90e", "#ffe078", "#fff5cf"] },
+      "golden-brass": { "role": "secondary", "displayName": "Golden Brass", "canonical": "#d99b12", "tonalRamp": ["#251800", "#442d00", "#684600", "#8d6100", "#b57d08", "#d99b12", "#edc56e", "#faefd0"] },
+      "morton-cyan": { "role": "primary", "displayName": "Morton Cyan", "canonical": "#4bd8e4", "tonalRamp": ["#062326", "#0a4045", "#105f66", "#177f89", "#24a7b2", "#4bd8e4", "#9cebf1", "#e5f9fb"] },
+      "morton-heat": { "role": "secondary", "displayName": "Morton Heat", "canonical": "#ff9a45", "tonalRamp": ["#2b1302", "#502503", "#783a08", "#a45113", "#cf6d25", "#ff9a45", "#ffc08b", "#ffead7"] },
+      "lab-ground": { "role": "neutral", "displayName": "Lab Ground", "canonical": "#11100e", "tonalRamp": ["#050504", "#11100e", "#26231f", "#403b34", "#625b50", "#898073", "#bbb4a8", "#f1eee8"] },
+      "lab-amber": { "role": "tertiary", "displayName": "Lab Amber", "canonical": "#ffbd6d", "tonalRamp": ["#281a09", "#4b310e", "#704b19", "#986727", "#c0863c", "#ffbd6d", "#ffdaa8", "#fff1dc"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Route hero statements and oversized editorial moments." },
+      "facet-display": { "displayName": "Facet Display", "purpose": "Golden Eagle display text only." },
+      "headline": { "displayName": "Headline", "purpose": "Chapter and source-verification titles." },
+      "body": { "displayName": "Body", "purpose": "Narrative and factual-boundary copy." },
+      "label": { "displayName": "Label", "purpose": "Navigation, steps, controls, and provenance metadata." }
+    },
+    "shadows": [
+      { "name": "inset-ambient", "value": "0 24px 65px rgba(0,0,0,.32)", "purpose": "Separates the hero plate crop from the cinematic field." },
+      { "name": "display-legibility", "value": "0 14px 42px rgba(0,0,0,.48)", "purpose": "Keeps display type legible over complex imagery." },
+      { "name": "active-progress-glow", "value": "0 0 18px color-mix(in srgb, var(--accent) 60%, transparent)", "purpose": "Small luminous response on the scroll progress rail." }
+    ],
+    "motion": [
+      { "name": "ease-cinematic", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Opening dolly, editorial entrances, and chapter settling." },
+      { "name": "opening-dolly", "value": "2.4s", "purpose": "Initial plate and camera reveal." },
+      { "name": "chapter-reveal", "value": "opacity .75s ease, transform .9s cubic-bezier(.16, 1, .3, 1)", "purpose": "Brings active chapter copy into focus." },
+      { "name": "webgl-fade", "value": "opacity .45s ease", "purpose": "Coordinates the WebGL atmosphere with fallback state." },
+      { "name": "reduced-motion", "value": "0.001ms", "purpose": "Effectively removes nonessential transitions and animation when requested." }
+    ],
+    "breakpoints": [
+      { "name": "compact", "value": "680px" },
+      { "name": "tablet", "value": "960px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "primary-action",
+      "description": "Square route-accent action used for the primary next step.",
+      "html": "<a class=\"ds-primary-action\" href=\"#\">Enter the sequence</a>",
+      "css": ".ds-primary-action{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:0 19px;color:#07100f;background:var(--accent,#8aae98);font:700 10px/1.2 'Lab Text',Arial,sans-serif;letter-spacing:.14em;text-decoration:none;text-transform:uppercase;transition:color .3s ease,background .3s ease,transform .3s cubic-bezier(.16,1,.3,1)}.ds-primary-action:hover{transform:translateY(-3px);background:#f5f2ea}.ds-primary-action:focus-visible{outline:2px solid var(--accent,#8aae98);outline-offset:5px}"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "secondary-action",
+      "description": "Border-led secondary route action.",
+      "html": "<a class=\"ds-secondary-action\" href=\"#\">View source</a>",
+      "css": ".ds-secondary-action{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:0 19px;color:#f5f2ea;border-bottom:1px solid #f5f2ea;font:700 10px/1.2 'Lab Text',Arial,sans-serif;letter-spacing:.14em;text-decoration:none;text-transform:uppercase;transition:color .3s ease}.ds-secondary-action:hover{color:var(--accent,#8aae98)}.ds-secondary-action:focus-visible{outline:2px solid var(--accent,#8aae98);outline-offset:5px}"
+    },
+    {
+      "name": "Fixed Brand Navigation",
+      "kind": "nav",
+      "description": "Transparent cinematic header with small uppercase links.",
+      "html": "<nav class=\"ds-nav\"><strong>Business name</strong><a href=\"#\">Process</a><a href=\"#\">Source</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:32px;padding:18px 28px;border-bottom:1px solid rgba(255,255,255,.13);color:#f5f2ea;background:linear-gradient(180deg,rgba(3,5,6,.88),rgba(3,5,6,.25) 72%,transparent);font-family:'Lab Text',Arial,sans-serif}.ds-nav strong{margin-right:auto;font-family:'Lab Display',Georgia,serif;font-weight:400}.ds-nav a{position:relative;color:inherit;font-size:10px;font-weight:700;letter-spacing:.16em;text-decoration:none;text-transform:uppercase}.ds-nav a:hover{color:var(--accent,#8aae98)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#8aae98);outline-offset:5px}"
+    },
+    {
+      "name": "Hero Inset",
+      "kind": "card",
+      "description": "A square alternate crop that proves the cinematic world without becoming dashboard chrome.",
+      "html": "<figure class=\"ds-hero-inset\"><span>Material study</span><strong>One world, another focal plane.</strong></figure>",
+      "css": ".ds-hero-inset{width:176px;aspect-ratio:1/1.1;display:flex;flex-direction:column;justify-content:flex-end;gap:7px;margin:0;padding:14px;border:1px solid rgba(255,255,255,.34);color:#f5f2ea;background:linear-gradient(180deg,transparent,rgba(2,4,5,.78)),#293033;box-shadow:0 24px 65px rgba(0,0,0,.32);font-family:'Lab Text',Arial,sans-serif}.ds-hero-inset span{font-size:8px;letter-spacing:.2em;text-transform:uppercase}.ds-hero-inset strong{font-size:10px;line-height:1.35}"
+    },
+    {
+      "name": "Material Ledger",
+      "kind": "custom",
+      "description": "Border-led technical proof rows used inside transformation chapters.",
+      "html": "<dl class=\"ds-ledger\"><div><dt>Material</dt><dd>Verified or conceptual detail</dd></div><div><dt>State</dt><dd>Current transformation beat</dd></div></dl>",
+      "css": ".ds-ledger{margin:0;color:#f5f2ea;border-top:1px solid rgba(255,255,255,.22);font-family:'Lab Text',Arial,sans-serif}.ds-ledger div{display:grid;grid-template-columns:92px 1fr;gap:20px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.22)}.ds-ledger dt{color:var(--accent,#8aae98);font-size:9px;letter-spacing:.16em;text-transform:uppercase}.ds-ledger dd{margin:0;color:rgba(245,242,234,.7);font-size:13px;line-height:1.45}"
+    },
+    {
+      "name": "Source Verification Panel",
+      "kind": "custom",
+      "description": "Light final panel separating conceptual imagery from verified sources and caveats.",
+      "html": "<section class=\"ds-verification\"><span>Source boundary</span><h2>Verify before outreach.</h2><p>Concept imagery is not evidence of current services or availability.</p></section>",
+      "css": ".ds-verification{max-width:720px;padding:64px;color:#0b0c0c;background:#f5f2ea;font-family:'Lab Text',Arial,sans-serif}.ds-verification span{display:block;margin-bottom:24px;color:#1e70b8;font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.ds-verification h2{max-width:12ch;margin:0;font:400 clamp(3rem,5vw,5.2rem)/.92 'Lab Display',Georgia,serif;letter-spacing:-.03em}.ds-verification p{max-width:52ch;margin:28px 0 0;font-size:16px;line-height:1.75}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Material Transformation Stage",
+    "overview": "The system behaves like a dark exhibition space in which one business-specific material world is progressively revealed. Editorial HTML remains readable and controlled while a persistent cinematic plate, foreground crop, WebGL atmosphere, and authored camera path create depth behind it. The three routes share one motion grammar but never one costume. This is a persuasive experience surface, not an application dashboard.",
+    "keyCharacteristics": [
+      "Fixed full-viewport cinematic stage behind scrolling editorial chapters.",
+      "Dark opening states that withhold the completed transformation.",
+      "Brand-specific accent pairs, materials, light, and camera choreography.",
+      "Square, border-led components with no ornamental pill language.",
+      "Reduced-motion and static fallback modes that resolve to the final legible composition."
+    ],
+    "rules": [
+      { "name": "The Narrow Signal Rule", "body": "A route uses only its assigned accent pair; never mix accent palettes across businesses.", "section": "colors" },
+      { "name": "The One Giant Word Rule", "body": "Each route gets one oversized action word per hero; do not stack multiple display gimmicks in the same frame.", "section": "typography" },
+      { "name": "The World Before Chrome Rule", "body": "Interface styling must remain subordinate to the material transformation and cannot become a floating-card layer over the scene.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do preserve the shared four-shot scroll grammar while giving each business its own materials, lighting, and camera framing.",
+      "Do use verified official brand art exactly as sourced and keep provenance notes with the build.",
+      "Do make the opening, midpoint, and final frames materially different states of one transformation.",
+      "Do resolve reduced-motion and WebGL-fallback users to a complete, legible final composition.",
+      "Do keep touch targets at least 46px high and preserve visible keyboard focus."
+    ],
+    "donts": [
+      "Don't copy Kage code, artwork, Japanese motifs, or decorative costume.",
+      "Don't invent a logo when authentic brand artwork cannot be verified.",
+      "Don't reveal the finished room, ring, or pool system in full at the opening frame.",
+      "Don't introduce rounded cards, dashboard chrome, stock gradients, or interchangeable route styling.",
+      "Don't let WebGL become required for understanding the brand, copy, source boundary, or action."
+    ]
+  }
+}

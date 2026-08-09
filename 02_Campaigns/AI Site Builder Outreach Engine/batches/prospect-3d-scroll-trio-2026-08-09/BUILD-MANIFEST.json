@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "baselineBuildCount": 165,
+  "baselinePolicy": "The prior verified Prospect Radar inventory is treated as 165 builds for this release.",
+  "branch": "feature/prospect-3d-scroll-trio",
+  "destination": {
+    "repository": "dillonmohr8777/dillon-os",
+    "netlifySiteName": "momentum-prospect-radar-next10-2026-08-08",
+    "netlifySiteId": "4c6ea488-5a2f-4bc7-ba54-7d3456784487",
+    "productionUrl": "https://momentum-prospect-radar-next10-2026-08-08.netlify.app"
+  },
+  "labRoute": "/labs/prospect-3d-scroll-trio/",
+  "builds": [
+    {
+      "buildNumber": 166,
+      "business": "MacLaren Kitchen and Bath",
+      "slug": "maclaren-kitchen-bath",
+      "route": "/sites/maclaren-kitchen-bath/",
+      "narrative": "room assembly",
+      "status": "mail_hold"
+    },
+    {
+      "buildNumber": 167,
+      "business": "Golden Eagle Jewelry",
+      "slug": "golden-eagle-jewelry",
+      "route": "/sites/golden-eagle-jewelry/",
+      "narrative": "raw gem to finished jewel",
+      "status": "mail_hold"
+    },
+    {
+      "buildNumber": 168,
+      "business": "Morton Electric Pool & Spa Specialists",
+      "slug": "morton-electric-pool-spa",
+      "route": "/sites/morton-electric-pool-spa/",
+      "narrative": "pool system cutaway",
+      "status": "mail_hold"
+    }
+  ],
+  "factualBoundary": "Addresses are retained from the August 9 QA handoff. Services, hours, availability, contact details, and business claims require confirmation before outreach or reuse."
+}
