@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-08T09:00:00-04:00",
+  "generated": "2026-08-09T09:00:00-04:00",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-08-08"
+    "end": "2026-08-09"
   },
   "source": "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
   "directives": [
@@ -109,7 +109,7 @@
     },
     {
       "month": "2026-08",
-      "views": 448,
+      "views": 486,
       "submissions": 8,
       "note": "month in progress"
     }
@@ -1319,7 +1319,7 @@
     "privacy": "Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard."
   },
   "leadingIndicators": {
-    "asOf": "2026-08-08",
+    "asOf": "2026-08-09",
     "note": "First-party leading indicators computed each watchdog run. See 02_FullTimeJob/AlignHCM/Watchdog/leading-indicators.md.",
     "conversionRate": {
       "ytd": 0.0197,
@@ -1354,7 +1354,7 @@
         },
         {
           "month": "2026-08",
-          "rate": 0.0179,
+          "rate": 0.0165,
           "partial": true
         }
       ]
