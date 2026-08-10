@@ -36,7 +36,7 @@ function chapterSection(ch, index, spec) {
   } else if (ch.cta) {
     extra = `<a class="primary-action" href="${ch.cta[1]}" target="_blank" rel="noopener">${esc(ch.cta[0])}</a>`;
   } else {
-    extra = `<blockquote>Visual confidence should sharpen the next question — not disguise what still needs verification.</blockquote>`;
+    extra = `<blockquote>${esc(ch.pullquote ?? spec.copy.pullquote ?? "Visual confidence should sharpen the next question, not disguise what still needs verification.")}</blockquote>`;
   }
   const visual = index === 1
     ? `\n        <figure class="chapter-visual chapter-visual-macro" data-reveal="fade" aria-label="Synthetic concept plate: process detail for ${esc(spec.name)}">
@@ -63,10 +63,11 @@ function chapterSection(ch, index, spec) {
 function renderSiteCss(spec) {
   if (!spec.fonts) return null;
   const face = (f) => `@font-face { font-family: "${f.family}"; src: url("${f.file}") format("woff2"); font-weight: ${f.weightRange ?? "100 900"}; font-display: swap; }`;
+  const d = spec.fonts.display;
   return [
-    face(spec.fonts.display),
+    face(d),
     face(spec.fonts.text),
-    `:root { --font-display: "${spec.fonts.display.family}", "Arial Narrow", sans-serif; --font-text: "${spec.fonts.text.family}", "Segoe UI", sans-serif; }`,
+    `:root { --font-display: "${d.family}", "Arial Narrow", sans-serif; --font-text: "${spec.fonts.text.family}", "Segoe UI", sans-serif; --display-line: ${d.line ?? 0.95}; --display-pad-top: ${d.padTop ?? "0.06em"}; }`,
     "",
   ].join("\n");
 }
@@ -143,7 +144,7 @@ function renderSite(slug) {
     <link rel="icon" href="${favicon(spec)}" />
     <meta name="theme-color" content="${spec.bg}" />
     <meta name="description" content="A private cinematic scroll concept for ${esc(spec.name)}." />
-    <title>${esc(spec.name)} — Cinematic Scroll Concept</title>
+    <title>${esc(spec.name)} | ${esc(spec.city)}</title>
     <script type="module" src="/src/site.js"></script>${spec.fonts ? `\n    <link rel="stylesheet" href="/sites/${slug}/site.css" />` : ""}
   </head>
   <body data-site="${slug}" style="${bodyVars}">
@@ -156,11 +157,14 @@ function renderSite(slug) {
     <a class="skip-link" href="#story">Skip to content</a>
 
     <header class="site-header">
-      <a class="brand-lockup" href="/sites/${slug}/" aria-label="${esc(spec.name)} concept home">
-        <span class="brand-coin" aria-hidden="true">${esc(spec.initials)}</span>
-        <span class="brand-name">${esc(spec.lockup[0])}<b><i>${esc(spec.lockup[1])}</i> · concept mark</b></span>
+      <a class="brand-lockup" href="/sites/${slug}/" aria-label="${esc(spec.name)} home">
+        ${spec.logo?.official
+          ? `<img class="brand-logo" src="${spec.logo.src}" alt="${esc(spec.name)} logo" />
+        <span class="brand-name">${esc(spec.lockup[0])}<b><i>${esc(spec.lockup[1])}</i></b></span>`
+          : `<span class="brand-coin" aria-hidden="true">${esc(spec.initials)}</span>
+        <span class="brand-name">${esc(spec.lockup[0])}<b><i>${esc(spec.lockup[1])}</i> · concept mark</b></span>`}
       </a>
-      <nav aria-label="Primary navigation"><a href="#sequence">Sequence</a><a href="#verify">Source</a></nav>
+      <nav aria-label="Primary navigation"><a href="#sequence">Process</a>${spec.copy.services ? `<a href="#services-title">Services</a>` : ""}<a href="#site-footer">Contact</a></nav>
       <a class="lab-back" href="${META.labPath}">Build ${spec.build} <span>${esc(META.labBackLabel)}</span></a>
     </header>
 
@@ -239,13 +243,35 @@ ${c.brief.map((par, i) => `          <p data-reveal="up" style="--d:${i}">${esc(
         </div>
       </section>
 
-      <section class="verification-panel" data-reveal="up" id="verify" aria-labelledby="verify-title">
-        <div><span>Source boundary</span><h2 id="verify-title">The name is real. The imagery is synthetic.</h2></div>
-        <p>${esc(spec.name)} — ${esc(spec.city)}. ${esc(c.verify.line)} Every image on this page is generated concept art direction; none of it depicts the business, its premises, its people, or its work.</p>
-        <div class="verification-actions">${contactActions(c)}</div>
-      </section>
     </main>
-    <footer class="site-footer"><a href="${META.labPath}">${esc(META.labFooterLabel ?? "All builds in this batch")}</a><span>Concept only · noindex · mail hold · synthetic imagery</span></footer>
+
+    <footer class="biz-footer" id="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          ${spec.logo?.official
+            ? `<img class="brand-logo" src="${spec.logo.src}" alt="${esc(spec.name)} logo" />`
+            : `<strong>${esc(spec.name)}</strong>`}
+          <p>${esc(c.footer_line ?? `${spec.vertical.replace(/-/g, " ")} in ${spec.city}.`)}</p>
+        </div>
+        <nav class="footer-nav" aria-label="Page sections">
+          <h3>On this page</h3>
+          <a href="#story">Top</a>
+          <a href="#sequence">${esc(c.sequence.nav_label ?? "The process")}</a>
+          ${c.services?.items?.length ? `<a href="#services-title">Services</a>` : ""}
+          ${c.faq?.items?.length ? `<a href="#faq-title">Common questions</a>` : ""}
+        </nav>
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          ${contactActions(c)}
+          ${c.verify.address ? `<address>${esc(c.verify.address)}</address>` : ""}
+        </div>
+      </div>
+      <div class="footer-fine"><div>
+        <span>${esc(c.verify.line)}</span>
+        <span>Homepage concept for ${esc(spec.name)} by Momentum 360. Synthetic concept imagery${spec.logo?.official ? "" : " and a labeled concept mark"}; confirm every detail with the business at its official listing.</span>
+        <span><a href="${META.labPath}">${esc(META.labFooterLabel ?? "All builds in this batch")}</a></span>
+      </div></div>
+    </footer>
   </body>
 </html>
 `;

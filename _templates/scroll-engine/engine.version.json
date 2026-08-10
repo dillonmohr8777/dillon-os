@@ -1,5 +1,5 @@
 {
-  "engine_version": "0.2.1",
+  "engine_version": "0.3.0",
   "extracted_from": "refs/pull/270/head",
   "source_commit": "a519c581bd4f4a89bdc45e60d569b8ba81e63d18",
   "source_path": "02_Campaigns/AI Site Builder Outreach Engine/batches/prospect-3d-scroll-next10-2026-08-10",
@@ -16,15 +16,19 @@
     {
       "version": "0.2.1",
       "note": "qa-browser launch args for Chromium 1234+: --use-angle=swiftshader (–use-gl removed upstream) + --disable-gpu so static pages produce capturable frames; WebGL still renders via SwiftShader (verified webgl-ready on the fixture site)."
+    },
+    {
+      "version": "0.3.0",
+      "note": "Owner art-direction pass (2026-08-10 feedback): real business footer (brand/nav/verified contact/fine-print disclosure) replaces the verification-panel section and lab footer; official extracted logos render in header+footer with concept mark as labeled fallback; page titles are Name | City; font-metric-driven display masks (--display-line/--display-pad-top per pool family) fix tall-font clipping; pullquote/footer_line copy hooks; static QA gains dash ban, footer, and contact gates with the concept-mark check now conditional on an official logo."
     }
   ],
   "files": {
     "src/scenes.js": "7a170f2733e4f2cddb83665f68e6e3439c8db7b2330ecc05e62271753561ec50",
     "src/site.js": "a99f2581bb4aab1dc71ae0f252d874a63a96ef5d844c7209f39e162df1a1ff32",
-    "src/styles.css": "cebb4d784b1ef1e2f66c7c62be18e35d639f9d1d0c4ff7352bdc61e3e35b4631",
-    "scripts/build-pages.mjs": "bf1471f95db7cfd58c1c024eed7c35488cbe50f3551c8ddab1e33d28a78f1d61",
+    "src/styles.css": "4f2de6dbe076cc52c78c61051d7bf644ba325061fcf8fe96cf83c10ece462ecd",
+    "scripts/build-pages.mjs": "01e4661d97c9076c20866a88aaa93fe55ab52dd9659b868053b1fb6268f8e311",
     "scripts/generate-textures.mjs": "302befa99eae9f8f8212b327637fcd6232803075fcaab11f6db4770ca79b106d",
-    "scripts/qa.mjs": "2e31404d14d29e68778359fb4e4e22d385d01a03193a08bfd8cd6dfbe92816f4",
+    "scripts/qa.mjs": "592175491015fd330beef0ebfdd60f7290d6ab3ea68e5e111751cc477220ee6d",
     "scripts/qa-browser.mjs": "0f1409f77abb7ef5fca57fa4be92eaae0bfb0c18d94155b96d863ba62e2a7296",
     "vite.config.js": "d2435c57607d04a88387c2b55a16e816cc0ebaaec1d3c9d2ab8bce8e7c4464b7"
   }

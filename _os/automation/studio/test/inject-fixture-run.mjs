@@ -118,6 +118,8 @@ const copyData = {
   brief_paragraphs: deepDeDash(c.brief),
   note: deDash(c.note),
   verify_line: deDash(c.verify.line),
+  footer_line: "A neighborhood dental practice serving Philadelphia families from one corner office.",
+  pullquote: "Good dentistry is mostly seeing clearly before touching anything.",
 };
 
 const worldspec = {

@@ -11,6 +11,15 @@ in the same value ranges or the validator rejects it.
   six beats; the props enact the business verb; a warm practical "switch-on"
   resolves the final third. Plate grade never opens below 1.0 equivalent
   (exposure >= 1.0). 5-9 props, real-world scale (a chair is ~1m, not 10).
+- **Props are RECOGNIZABLE trade objects, not abstract decoration** (owner
+  directive). A dental world shows molar and arch forms, a chair silhouette, an
+  instrument tray. A tire shop shows tires, a lift, lug hardware. A hoagie shop
+  shows loaves and a slicing board. Compose recognizable silhouettes from the
+  primitive DSL: a molar = a rounded capsule crown over two cone roots; a tire =
+  a fat dark torus with a disc hub; a loaf = a stretched capsule. Someone who
+  knows the trade must recognize the objects with the text hidden. Fall back to
+  abstraction only when a trade genuinely has no objects (consulting), and say
+  so in the panel labels.
 
 ## Worked example (build 169, germantown-dental-group, verb ALIGN)
 {{EXAMPLE_ENTRY}}

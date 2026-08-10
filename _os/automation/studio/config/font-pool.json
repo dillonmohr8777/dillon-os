@@ -3,19 +3,206 @@
   "urlTemplateVariable": "https://cdn.jsdelivr.net/fontsource/fonts/{id}:vf@latest/latin-wght-normal.woff2",
   "urlTemplateStatic": "https://cdn.jsdelivr.net/fontsource/fonts/{id}@latest/latin-{weight}-normal.woff2",
   "families": [
-    { "id": "oswald", "family": "Oswald", "role": "display", "voices": ["machined", "condensed", "industrial", "compact"], "variable": true, "license": "OFL-1.1" },
-    { "id": "bebas-neue", "family": "Bebas Neue", "role": "display", "voices": ["monumental", "compact", "poster"], "variable": false, "weights": [400], "license": "OFL-1.1" },
-    { "id": "barlow-condensed", "family": "Barlow Condensed", "role": "display", "voices": ["industrial", "utilitarian", "machined"], "variable": false, "weights": [500, 600, 700], "license": "OFL-1.1" },
-    { "id": "anton", "family": "Anton", "role": "display", "voices": ["heavy", "monumental", "loud"], "variable": false, "weights": [400], "license": "OFL-1.1" },
-    { "id": "archivo", "family": "Archivo", "role": "display", "voices": ["grotesk", "technical", "contemporary"], "variable": true, "license": "OFL-1.1" },
-    { "id": "chivo", "family": "Chivo", "role": "display", "voices": ["grotesk", "warm-machined", "confident"], "variable": true, "license": "OFL-1.1" },
-    { "id": "zilla-slab", "family": "Zilla Slab", "role": "display", "voices": ["slab", "warm", "crafted"], "variable": false, "weights": [500, 600, 700], "license": "OFL-1.1" },
-    { "id": "alumni-sans", "family": "Alumni Sans", "role": "display", "voices": ["condensed", "athletic", "compact"], "variable": true, "license": "OFL-1.1" },
-    { "id": "libre-franklin", "family": "Libre Franklin", "role": "text", "voices": ["american", "workhorse", "plainspoken"], "variable": true, "license": "OFL-1.1" },
-    { "id": "work-sans", "family": "Work Sans", "role": "text", "voices": ["friendly", "humanist", "open"], "variable": true, "license": "OFL-1.1" },
-    { "id": "source-sans-3", "family": "Source Sans 3", "role": "text", "voices": ["neutral", "engineered", "quiet"], "variable": true, "license": "OFL-1.1" },
-    { "id": "public-sans", "family": "Public Sans", "role": "text", "voices": ["civic", "plain", "durable"], "variable": true, "license": "OFL-1.1" },
-    { "id": "bitter", "family": "Bitter", "role": "text", "voices": ["slab", "warm", "editorial-body"], "variable": true, "license": "OFL-1.1" },
-    { "id": "besley", "family": "Besley", "role": "text", "voices": ["serif", "sturdy", "traditional"], "variable": true, "license": "OFL-1.1" }
+    {
+      "id": "oswald",
+      "family": "Oswald",
+      "role": "display",
+      "voices": [
+        "machined",
+        "condensed",
+        "industrial",
+        "compact"
+      ],
+      "variable": true,
+      "license": "OFL-1.1",
+      "line": 0.95,
+      "padTop": "0.08em"
+    },
+    {
+      "id": "bebas-neue",
+      "family": "Bebas Neue",
+      "role": "display",
+      "voices": [
+        "monumental",
+        "compact",
+        "poster"
+      ],
+      "variable": false,
+      "weights": [
+        400
+      ],
+      "license": "OFL-1.1",
+      "line": 0.95,
+      "padTop": "0.02em"
+    },
+    {
+      "id": "barlow-condensed",
+      "family": "Barlow Condensed",
+      "role": "display",
+      "voices": [
+        "industrial",
+        "utilitarian",
+        "machined"
+      ],
+      "variable": false,
+      "weights": [
+        500,
+        600,
+        700
+      ],
+      "license": "OFL-1.1",
+      "line": 0.92,
+      "padTop": "0.06em"
+    },
+    {
+      "id": "anton",
+      "family": "Anton",
+      "role": "display",
+      "voices": [
+        "heavy",
+        "monumental",
+        "loud"
+      ],
+      "variable": false,
+      "weights": [
+        400
+      ],
+      "license": "OFL-1.1",
+      "line": 0.98,
+      "padTop": "0.06em"
+    },
+    {
+      "id": "archivo",
+      "family": "Archivo",
+      "role": "display",
+      "voices": [
+        "grotesk",
+        "technical",
+        "contemporary"
+      ],
+      "variable": true,
+      "license": "OFL-1.1",
+      "line": 1,
+      "padTop": "0.08em"
+    },
+    {
+      "id": "chivo",
+      "family": "Chivo",
+      "role": "display",
+      "voices": [
+        "grotesk",
+        "warm-machined",
+        "confident"
+      ],
+      "variable": true,
+      "license": "OFL-1.1",
+      "line": 1,
+      "padTop": "0.08em"
+    },
+    {
+      "id": "zilla-slab",
+      "family": "Zilla Slab",
+      "role": "display",
+      "voices": [
+        "slab",
+        "warm",
+        "crafted"
+      ],
+      "variable": false,
+      "weights": [
+        500,
+        600,
+        700
+      ],
+      "license": "OFL-1.1",
+      "line": 1.02,
+      "padTop": "0.08em"
+    },
+    {
+      "id": "alumni-sans",
+      "family": "Alumni Sans",
+      "role": "display",
+      "voices": [
+        "condensed",
+        "athletic",
+        "compact"
+      ],
+      "variable": true,
+      "license": "OFL-1.1",
+      "line": 0.84,
+      "padTop": "0em"
+    },
+    {
+      "id": "libre-franklin",
+      "family": "Libre Franklin",
+      "role": "text",
+      "voices": [
+        "american",
+        "workhorse",
+        "plainspoken"
+      ],
+      "variable": true,
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "work-sans",
+      "family": "Work Sans",
+      "role": "text",
+      "voices": [
+        "friendly",
+        "humanist",
+        "open"
+      ],
+      "variable": true,
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "source-sans-3",
+      "family": "Source Sans 3",
+      "role": "text",
+      "voices": [
+        "neutral",
+        "engineered",
+        "quiet"
+      ],
+      "variable": true,
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "public-sans",
+      "family": "Public Sans",
+      "role": "text",
+      "voices": [
+        "civic",
+        "plain",
+        "durable"
+      ],
+      "variable": true,
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "bitter",
+      "family": "Bitter",
+      "role": "text",
+      "voices": [
+        "slab",
+        "warm",
+        "editorial-body"
+      ],
+      "variable": true,
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "besley",
+      "family": "Besley",
+      "role": "text",
+      "voices": [
+        "serif",
+        "sturdy",
+        "traditional"
+      ],
+      "variable": true,
+      "license": "OFL-1.1"
+    }
   ]
 }

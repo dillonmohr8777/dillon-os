@@ -429,7 +429,7 @@ h2 {
 h1 {
   max-width: 12ch;
   font-size: clamp(5rem, 10vw, 11rem);
-  line-height: .84;
+  line-height: var(--display-line, .84);
   letter-spacing: -.038em;
   text-shadow: 0 2px 0 rgba(0,0,0,.25), 0 18px 54px rgba(0,0,0,.62), 0 44px 96px rgba(0,0,0,.4);
 }
@@ -635,7 +635,7 @@ blockquote {
 .final-frame::after { content: ""; position: absolute; inset: 5vh 4vw; border: 1px solid rgba(255,255,255,.16); pointer-events: none; }
 .final-frame > p { position: relative; z-index: 2; display: grid; gap: 14px; margin: 0 0 3vh; }
 .final-frame > p > span { color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
-.final-frame > p strong { max-width: 14ch; font-family: var(--font-display); font-size: clamp(4.2rem, 9vw, 9.4rem); font-weight: 640; line-height: .86; text-transform: uppercase; letter-spacing: -.04em; text-shadow: 0 18px 56px rgba(0,0,0,.6); }
+.final-frame > p strong { max-width: 14ch; font-family: var(--font-display); font-size: clamp(4.2rem, 9vw, 9.4rem); font-weight: 640; line-height: var(--display-line, .86); text-transform: uppercase; letter-spacing: -.04em; text-shadow: 0 18px 56px rgba(0,0,0,.6); }
 
 .verification-panel {
   position: relative;
@@ -717,8 +717,13 @@ blockquote {
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
+  /* Mask padding is font-metric-driven: tall faces (Oswald, Archivo) need
+     cap-height headroom or the mask crops them; the pool carries per-family
+     values and site.css sets the vars. Defaults preserve Alumni Sans. */
   padding-bottom: .24em;
   margin-bottom: -.24em;
+  padding-top: var(--display-pad-top, 0em);
+  margin-top: calc(var(--display-pad-top, 0em) * -1);
 }
 
 .has-js .word > i {
@@ -1101,6 +1106,26 @@ blockquote {
   [data-reveal="left"],
   [data-reveal="right"] { transform: translate3d(0, 34px, 0); }
 }
+
+/* Business footer: what a real site ships. Brand column, section nav,
+   verified contact block, then one fine-print line that carries the source
+   boundary and synthetic-imagery disclosure without shouting them. */
+.biz-footer { position: relative; z-index: 2; margin-top: clamp(60px, 9vw, 130px); border-top: 1px solid var(--line); background: rgba(5, 7, 8, .72); backdrop-filter: blur(6px); }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: clamp(28px, 5vw, 70px); max-width: 1200px; margin: 0 auto; padding: clamp(40px, 6vw, 74px) clamp(22px, 5vw, 60px) clamp(26px, 4vw, 44px); }
+.footer-brand { display: grid; gap: 14px; align-content: start; }
+.footer-brand .brand-logo { max-height: 44px; max-width: 200px; object-fit: contain; justify-self: start; }
+.footer-brand strong { font-family: var(--font-display); font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 650; letter-spacing: .02em; text-transform: uppercase; line-height: 1; }
+.footer-brand p { margin: 0; max-width: 34ch; color: var(--paper-dim); font-size: 13.5px; line-height: 1.7; }
+.biz-footer h3 { margin: 0 0 14px; color: var(--accent); font-size: 10.5px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.footer-nav, .footer-contact { display: grid; gap: 0; align-content: start; }
+.footer-nav a, .footer-contact a { display: block; padding: 7px 0; color: var(--paper); font-size: 14px; text-decoration: none; border-bottom: 1px solid transparent; width: fit-content; }
+.footer-nav a:hover, .footer-contact a:hover { border-bottom-color: var(--accent); }
+.footer-contact address { margin: 8px 0 0; color: var(--paper-dim); font-style: normal; font-size: 13.5px; line-height: 1.65; }
+.footer-fine { border-top: 1px solid rgba(255, 255, 255, .1); }
+.footer-fine > div { display: flex; flex-wrap: wrap; gap: 6px 22px; max-width: 1200px; margin: 0 auto; padding: 16px clamp(22px, 5vw, 60px) 22px; }
+.footer-fine span { color: rgba(245, 242, 234, .42); font-size: 10.5px; letter-spacing: .04em; line-height: 1.6; }
+.footer-fine a { color: inherit; }
+@media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr; gap: 34px; } }
 
 /* Long-form sections: services band reuses index-band/index-card; FAQ and
    area panels reuse brief-panel geometry with their own item rhythm. */

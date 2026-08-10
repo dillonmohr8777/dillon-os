@@ -23,6 +23,14 @@ Verified facts (the only permissible business-specific claims): {{FACTS_JSON}}
 Verified contact links (label + url pairs you may use): {{CONTACT_LINKS}}
 
 ## Structure to fill (matches the page generator)
+- Voice: write like the business's own site, not like a design studio annotating
+  its concept. First person plural where natural. ZERO meta-language in body copy:
+  never "concept", "synthetic", "verified", "this page", "imagery" — the footer
+  fine print handles disclosure; your copy just has to read like a real homepage.
+- footer_line: one grounded sentence for the footer brand column (who they are,
+  where, in plain words).
+- pullquote: one sentence in the owner's register that could hang on the shop wall.
+
 - context: one-line hero kicker (a thought about the trade, not a slogan)
 - h1: 3-7 words, can carry one "<br />", written for the display face
 - h1_compact: shorter alternate for narrow phones (max ~16 chars/line, 2 lines)

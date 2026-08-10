@@ -115,6 +115,7 @@ export async function fontsStage(ctx, prospect, briefData) {
         family: f.family, id: f.id, file: `/assets/fonts/${f.id}.woff2`,
         localFile: local, weightRange: f.variable ? "100 900" : String(f.weights.at(-1)),
         license: f.license, source_url: url,
+        ...(role === "display" ? { line: f.line ?? 0.95, padTop: f.padTop ?? "0.06em" } : {}),
       };
       ctx.db.prepare(
         `INSERT OR REPLACE INTO fonts (site_slug, role, family, source_url, license, subset_sha, ledger_note)
@@ -218,7 +219,7 @@ export async function worldspecStage(ctx, prospect, briefRow, briefData) {
 }
 
 // -------------------------------------------------------------- assemble
-export function assembleEntry({ prospect, briefData, copyData, worldspec, fonts, contacts, buildNumber }) {
+export function assembleEntry({ prospect, briefData, copyData, worldspec, fonts, contacts, buildNumber, logo = null }) {
   const lastChapter = copyData.chapters[3];
   const allowed = new Set([...contacts.contact, ...contacts.links].map(([, u]) => u));
   if (lastChapter.cta && !allowed.has(lastChapter.cta[1])) {
@@ -240,9 +241,10 @@ export function assembleEntry({ prospect, briefData, copyData, worldspec, fonts,
     plates: { __raw: `plates(${JSON.stringify(prospect.slug)})` },
     heroAlt: briefData.hero_alt,
     fonts: {
-      display: { family: fonts.display.family, file: fonts.display.file, weightRange: fonts.display.weightRange },
+      display: { family: fonts.display.family, file: fonts.display.file, weightRange: fonts.display.weightRange, line: fonts.display.line, padTop: fonts.display.padTop },
       text: { family: fonts.text.family, file: fonts.text.file, weightRange: fonts.text.weightRange },
     },
+    logo,
     world: worldspec.world,
     panels: worldspec.panels,
     states: briefData.states_arc,
@@ -262,7 +264,9 @@ export function assembleEntry({ prospect, briefData, copyData, worldspec, fonts,
       faq: copyData.faq,
       brief: copyData.brief_paragraphs,
       note: copyData.note,
-      verify: { line: copyData.verify_line, links: contacts.links },
+      pullquote: copyData.pullquote,
+      footer_line: copyData.footer_line,
+      verify: { line: copyData.verify_line, links: contacts.links, address: contacts.facts.address ?? null },
       contact: contacts.contact,
     },
   };

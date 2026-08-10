@@ -166,7 +166,8 @@ export async function buildPhase(runId) {
         await imagesStage(ctx, prospect, briefData);
         console.log(`worldspec: ${slug} ...`);
         const wsOut = await worldspecStage(ctx, prospect, briefRow, briefData);
-        entries.push({ prospect, briefData, copyData: copyOut.data, worldspec: wsOut.data, fonts: fontsOut.data, contacts });
+        const logoRow = ctx.db.prepare(`SELECT * FROM logos WHERE prospect_id = ?`).get(slug);
+        entries.push({ prospect, briefData, copyData: copyOut.data, worldspec: wsOut.data, fonts: fontsOut.data, contacts, logoRow });
       } catch (err) {
         quarantined.push({ slug, reason: err.message.slice(0, 400) });
         console.error(`QUARANTINED ${slug}: ${err.message}`);
@@ -182,7 +183,17 @@ export async function buildPhase(runId) {
     const sites = {}; const order = [];
     for (const e of entries) {
       e.buildNumber = nextBuild++;
-      sites[e.prospect.slug] = assembleEntry({ ...e, buildNumber: e.buildNumber });
+      // official extracted logo (never redrawn) ships into the batch; anything
+      // less keeps the labeled concept mark
+      let logo = null;
+      if (e.logoRow?.official && e.logoRow.file_path && fs.existsSync(e.logoRow.file_path)) {
+        const ext = path.extname(e.logoRow.file_path);
+        const dst = path.join(batch, "public", "assets", "logos", `${e.prospect.slug}${ext}`);
+        fs.mkdirSync(path.dirname(dst), { recursive: true });
+        fs.copyFileSync(e.logoRow.file_path, dst);
+        logo = { src: `/assets/logos/${e.prospect.slug}${ext}`, official: true };
+      }
+      sites[e.prospect.slug] = assembleEntry({ ...e, buildNumber: e.buildNumber, logo });
       order.push(e.prospect.slug);
       // plates + fonts into the batch tree
       const plateDst = path.join(batch, "public", "assets", "plates", e.prospect.slug);
@@ -208,9 +219,9 @@ export async function buildPhase(runId) {
 
     writeConfig(batch, {
       meta: {
-        labTitle: `Prospect Radar — Daily Studio ${runId}`,
+        labTitle: `Prospect Radar Daily Studio ${runId}`,
         labHeading: `${entries.length === 1 ? "One world" : entries.length === 2 ? "Two worlds" : entries.length + " worlds"},<br />one grammar.`,
-        labLede: `Builds ${entries[0].buildNumber}–${entries.at(-1).buildNumber} of the Prospect Radar daily studio. Each homepage is a composited scroll world: a synthetic concept plate, business-specific 3D choreography, and editorial panels sharing one camera. Concept work only; every page carries its own source boundary.`,
+        labLede: `Builds ${entries[0].buildNumber} through ${entries.at(-1).buildNumber} of the Prospect Radar daily studio. Each homepage is a composited scroll world: a synthetic concept plate, business specific 3D choreography, and editorial panels sharing one camera. Concept work only; every page carries its own source boundary.`,
         labPath: "/", labBackLabel: "Daily hub", labFooterLabel: "All builds in this run",
         expectedFonts: 2,
       },

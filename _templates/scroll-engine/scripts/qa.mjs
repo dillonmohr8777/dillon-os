@@ -41,8 +41,12 @@ for (const page of pages) {
   if (page !== "index.html") {
     check(/class="skip-link"/.test(html), `${page} has a skip link`);
     check(/synthetic/i.test(html), `${page} discloses synthetic imagery`);
-    check(/concept mark/i.test(html), `${page} labels its lockup as a concept mark`);
+    check(/class="brand-logo"/.test(html) || /concept mark/i.test(html), `${page} shows the official logo or labels its concept mark`);
     check(!externalPattern.test(html.replace(/href="tel:[^"]*"/g, "")), `${page} has no unapproved external runtime dependency`);
+    // house rules: no dashes on customer-visible pages; a real footer with contact
+    check(!/[—–]/.test(html.replace(/<!--[\s\S]*?-->/g, "")), `${page} contains no em or en dashes`);
+    check(/class="biz-footer"/.test(html), `${page} ships a business footer`);
+    check(/href="tel:/.test(html) || /google\.com\/maps/.test(html), `${page} carries verified contact (tel or maps)`);
   }
 }
 

@@ -32,7 +32,12 @@ Known imagery status: {{IMAGERY_STATUS}}
 
 ## Criticals (any one forces verdict=fail regardless of score)
 unsupported_fact, mobile_clipping, broken_image, missing_fallback,
-ambiguous_identity, unverified_logo_presented_as_official, blank_or_black_scene.
+ambiguous_identity, unverified_logo_presented_as_official, blank_or_black_scene,
+headline_glyphs_cut_off (top or bottom of display type cropped by its mask),
+dash_in_visible_copy, missing_business_footer (no contact/nav footer),
+concept_meta_language_in_body (copy talks about "concepts/synthetic/verification"
+outside the footer fine print), unrecognizable_trade_props (a stranger could not
+name the trade from the 3D objects alone).
 
 ## Output contract
 ```json

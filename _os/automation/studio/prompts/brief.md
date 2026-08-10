@@ -25,6 +25,9 @@ product-catalog-narrative, diagnostic-manual, care-pathway.
 - Palette: tinted neutrals, never pure black/white; bg + two accents as hex; name
   the physical materials the colors come from. First-order slop test: if the palette
   is guessable from the category alone (dentist → clinical teal), pick again.
+- Type color hierarchy (owner directive): the accent colors must live IN the type
+  system, not only in UI chrome. Name where color appears: kickers, numerals, one
+  heading tint, ledger terms. A page whose every heading is paper-white fails.
 - One choreography verb the trade actually performs (ALIGN, STACK, MOVE, RESTORE,
   COVER, SHAPE, BALANCE, IGNITE, CARE, ASSEMBLE are taken examples — coin the right
   one for THIS trade, reuse only if it is genuinely the trade's verb).
