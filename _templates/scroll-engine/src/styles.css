@@ -14,6 +14,10 @@
 
 :root {
   color-scheme: dark;
+  /* Per-brand type systems override these two vars via a per-site stylesheet.
+     Defaults preserve the next10 batch appearance exactly. */
+  --font-display: "Alumni Sans", "Arial Narrow", sans-serif;
+  --font-text: "Public Sans", "Segoe UI", sans-serif;
   --scroll-progress: 0;
   --world-reveal: 0;
   --late-reveal: 0;
@@ -22,7 +26,7 @@
   --ink: #07090a;
   --line: rgba(255, 255, 255, 0.22);
   --header-height: 90px;
-  font-family: "Public Sans", "Segoe UI", sans-serif;
+  font-family: var(--font-text);
   font-synthesis: none;
 }
 
@@ -99,7 +103,7 @@ img { display: block; max-width: 100%; }
 .brand-name {
   display: grid;
   gap: 1px;
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-size: 17px;
   line-height: .96;
   letter-spacing: -.02em;
@@ -107,7 +111,7 @@ img { display: block; max-width: 100%; }
 
 .brand-name b {
   color: var(--accent);
-  font-family: "Public Sans", sans-serif;
+  font-family: var(--font-text);
   font-size: 9px;
   line-height: 1.2;
   letter-spacing: .18em;
@@ -328,7 +332,7 @@ img { display: block; max-width: 100%; }
 .data-strip dd {
   margin: 0;
   color: var(--paper);
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(15px, 1.5vw, 21px);
   line-height: 1;
   letter-spacing: -.01em;
@@ -414,7 +418,7 @@ p { overflow-wrap: break-word; }
 h1,
 h2 {
   margin: 0;
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-weight: 640;
   letter-spacing: -.012em;
   text-transform: uppercase;
@@ -457,7 +461,7 @@ h1 {
   bottom: 8.5vh;
   margin: 0;
   color: rgba(246,243,235,.94);
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(7rem, 19vw, 20rem);
   line-height: .74;
   font-weight: 700;
@@ -594,7 +598,7 @@ blockquote {
   padding: 0 0 0 22px;
   border-left: 1px solid var(--accent);
   color: var(--paper);
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.35rem, 2vw, 2rem);
   line-height: 1.25;
 }
@@ -631,7 +635,7 @@ blockquote {
 .final-frame::after { content: ""; position: absolute; inset: 5vh 4vw; border: 1px solid rgba(255,255,255,.16); pointer-events: none; }
 .final-frame > p { position: relative; z-index: 2; display: grid; gap: 14px; margin: 0 0 3vh; }
 .final-frame > p > span { color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
-.final-frame > p strong { max-width: 14ch; font-family: "Alumni Sans", "Arial Narrow", sans-serif; font-size: clamp(4.2rem, 9vw, 9.4rem); font-weight: 640; line-height: .86; text-transform: uppercase; letter-spacing: -.04em; text-shadow: 0 18px 56px rgba(0,0,0,.6); }
+.final-frame > p strong { max-width: 14ch; font-family: var(--font-display); font-size: clamp(4.2rem, 9vw, 9.4rem); font-weight: 640; line-height: .86; text-transform: uppercase; letter-spacing: -.04em; text-shadow: 0 18px 56px rgba(0,0,0,.6); }
 
 .verification-panel {
   position: relative;
@@ -923,7 +927,7 @@ blockquote {
 .index-card b { color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .2em; }
 .index-card h3 {
   margin: 0;
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.35rem, 1.9vw, 1.85rem);
   font-weight: 400;
   line-height: 1.02;
@@ -945,12 +949,12 @@ blockquote {
 .measures dt { color: var(--paper-dim); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
 .measures dd {
   margin: 0;
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2.6rem, 4.6vw, 4.4rem);
   line-height: .86;
   letter-spacing: -.04em;
 }
-.measures dd small { display: block; margin-top: 12px; color: var(--paper-dim); font-family: "Public Sans", sans-serif; font-size: 12.5px; line-height: 1.55; letter-spacing: 0; }
+.measures dd small { display: block; margin-top: 12px; color: var(--paper-dim); font-family: var(--font-text); font-size: 12.5px; line-height: 1.55; letter-spacing: 0; }
 
 .brief-panel {
   position: relative;
@@ -1098,6 +1102,14 @@ blockquote {
   [data-reveal="right"] { transform: translate3d(0, 34px, 0); }
 }
 
+/* Long-form sections: services band reuses index-band/index-card; FAQ and
+   area panels reuse brief-panel geometry with their own item rhythm. */
+.faq-list { display: grid; gap: 34px; }
+.faq-item h3 { margin: 0 0 10px; font-family: var(--font-display); font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 640; line-height: 1.02; letter-spacing: .01em; text-transform: uppercase; }
+.faq-item p { margin: 0; max-width: 62ch; color: var(--paper-dim); font-size: 15px; line-height: 1.75; }
+.area-panel p { max-width: 66ch; }
+.services-band header p { max-width: 58ch; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
@@ -1140,7 +1152,7 @@ blockquote {
   border: 1px solid color-mix(in srgb, var(--accent) 62%, transparent);
   border-radius: 50%;
   color: var(--accent);
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-size: 19px;
   font-weight: 700;
   letter-spacing: .04em;
@@ -1157,7 +1169,7 @@ blockquote {
 }
 
 .brand-name {
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-size: 21px;
   font-weight: 680;
   line-height: .9;
@@ -1167,7 +1179,7 @@ blockquote {
 
 .brand-name b {
   color: var(--paper-dim);
-  font-family: "Public Sans", sans-serif;
+  font-family: var(--font-text);
   font-size: 8.5px;
   font-weight: 600;
   letter-spacing: .22em;
@@ -1201,7 +1213,7 @@ blockquote {
   padding: 7px 14px 6px;
   border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
   color: var(--accent);
-  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  font-family: var(--font-display);
   font-size: 15px;
   font-weight: 700;
   letter-spacing: .3em;

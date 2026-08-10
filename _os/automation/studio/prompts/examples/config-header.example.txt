@@ -1,0 +1,21 @@
+/*
+  Ten worlds, one engine.
+
+  Every spec follows the same contract: verified business facts (name, domain
+  where a radar brief supplied one, city), a palette pulled from the plate set,
+  a world (ground, props, choreography, lighting, particles, panels, camera
+  route), and the page copy. Copy describes the trade, never the client — no
+  services, prices, hours, staff, or history are asserted anywhere.
+
+  Image provenance: /assets/plates/<slug>/ — synthetic concept plates from the
+  agent/momentum-next10-image-system handoff. They are art direction, not
+  photographs of the business.
+*/
+
+const plates = (slug) => ({
+  hero: `/assets/plates/${slug}/hero.webp`,
+  hero900: `/assets/plates/${slug}/hero-900.webp`,
+  macro: `/assets/plates/${slug}/macro.webp`,
+  material: `/assets/plates/${slug}/material.webp`
+});
+

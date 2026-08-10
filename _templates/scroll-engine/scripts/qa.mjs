@@ -2,7 +2,17 @@ import { createHash } from "node:crypto";
 import { gzipSync } from "node:zlib";
 import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
-import { ORDER, SITES } from "../src/config.mjs";
+import * as CONFIG from "../src/config.mjs";
+
+const { ORDER, SITES } = CONFIG;
+/* Expectations derive from the config so the gate works for any batch size.
+   allowedHosts: google maps + every verified domain a spec carries. */
+const allowedHosts = [
+  "www\\.google\\.com/maps",
+  ...ORDER.map((slug) => SITES[slug].domain).filter(Boolean).map((d) => d.replace(/\./g, "\\.")),
+];
+const externalPattern = new RegExp(`(src|href)=["']https?:\\/\\/(?!${allowedHosts.join("|")})`, "i");
+const expectedFonts = CONFIG.META?.expectedFonts ?? 2;
 
 const root = resolve(import.meta.dirname, "..");
 const dist = join(root, "dist");
@@ -19,7 +29,7 @@ const check = (condition, label) => {
 check(existsSync(dist), "Production dist directory exists");
 
 const pages = ["index.html", ...ORDER.map((slug) => `sites/${slug}/index.html`)];
-check(pages.length === 11, "Lab index plus exactly ten prospect routes");
+check(pages.length === ORDER.length + 1, `Lab index plus exactly ${ORDER.length} prospect routes`);
 
 for (const page of pages) {
   const path = join(dist, page);
@@ -32,7 +42,7 @@ for (const page of pages) {
     check(/class="skip-link"/.test(html), `${page} has a skip link`);
     check(/synthetic/i.test(html), `${page} discloses synthetic imagery`);
     check(/concept mark/i.test(html), `${page} labels its lockup as a concept mark`);
-    check(!/(src|href)=["']https?:\/\/(?!www\.google\.com\/maps|germantowndental|udisandconnorthodontics|jarmanairconditioning|leeshoagieshorsham|broomallinsuranceagency|banbanasianbistro|bigheadtransportllc|cecarparts|kehansautoservice)/i.test(html), `${page} has no unapproved external runtime dependency`);
+    check(!externalPattern.test(html.replace(/href="tel:[^"]*"/g, "")), `${page} has no unapproved external runtime dependency`);
   }
 }
 
@@ -52,7 +62,7 @@ const plateFiles = [];
 for (const slug of readdirSync(plateDir)) {
   for (const f of readdirSync(join(plateDir, slug))) plateFiles.push(join(plateDir, slug, f));
 }
-check(plateFiles.length === 40, "Exactly forty optimized plate derivatives ship");
+check(plateFiles.length === ORDER.length * 4, `Exactly ${ORDER.length * 4} optimized plate derivatives ship (4 per site)`);
 const plateHashes = plateFiles.map((f) => createHash("sha256").update(readFileSync(f)).digest("hex"));
 check(new Set(plateHashes).size === plateFiles.length, "Plate derivatives are unique — no recolored copies");
 
@@ -62,7 +72,7 @@ check(materials.length === 7, "Exactly seven generated WebP material maps ship")
 
 const fontDir = join(dist, "assets", "fonts");
 const fonts = existsSync(fontDir) ? readdirSync(fontDir).filter((n) => n.endsWith(".woff2")) : [];
-check(fonts.length === 2, "Two self-hosted variable fonts ship (Alumni Sans, Public Sans)");
+check(fonts.length >= expectedFonts, `At least ${expectedFonts} self-hosted fonts ship (found ${fonts.length})`);
 
 const assetsDir = join(dist, "assets");
 const javascript = readdirSync(assetsDir).filter((n) => n.endsWith(".js"));

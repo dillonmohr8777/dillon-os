@@ -12,9 +12,9 @@ const [, , command, ...rest] = process.argv;
 const flags = parseFlags(rest);
 
 const COMMANDS = {
-  doctor, status, "run-daily": notYet("run-daily"), resume: notYet("resume"),
-  approve: notYet("approve"), arm, disarm, rollback: notYet("rollback"),
-  "register-schedule": refuseSchedule, "verify-live": notYet("verify-live"),
+  doctor, status, "run-daily": runDaily, resume, approve, arm, disarm,
+  rollback: notYet("rollback"), "register-schedule": refuseSchedule,
+  "verify-live": notYet("verify-live"),
 };
 
 if (!command || !COMMANDS[command]) {
@@ -180,6 +180,55 @@ async function disarm() {
   const f = authorityFile();
   if (fs.existsSync(f)) { fs.rmSync(f); console.log("disarmed: authority file removed. Scheduled runs will build locally and stop."); }
   else console.log("already disarmed (no authority file).");
+}
+
+// ---------------------------------------------------------------- run/resume/approve
+function todayRunId() {
+  const d = new Date().toLocaleDateString("en-CA", { timeZone: loadConfig().timezone });
+  return d; // YYYY-MM-DD
+}
+
+async function runDaily() {
+  const { researchPhase, buildPhase } = await import("../core/run-daily.mjs");
+  const runId = flags.run ?? todayRunId();
+  const phase = flags.phase ?? "research";
+  if (phase === "research") {
+    const count = Number(flags.count ?? loadConfig().intake.dailyTarget);
+    await researchPhase(runId, { count });
+  } else if (phase === "build") {
+    await buildPhase(runId);
+  } else {
+    console.error(`unknown --phase ${phase} (research|build)`);
+    process.exit(2);
+  }
+}
+
+async function resume() {
+  const { researchPhase, buildPhase } = await import("../core/run-daily.mjs");
+  const runId = flags.run ?? todayRunId();
+  const db = openDb();
+  const run = db.prepare(`SELECT * FROM runs WHERE run_id = ?`).get(runId);
+  db.close();
+  if (!run) { console.error(`no run ${runId} to resume`); process.exit(2); }
+  console.log(`resuming run ${runId} from phase=${run.phase}`);
+  if (run.phase === "research") await researchPhase(runId, { count: Number(flags.count ?? loadConfig().intake.dailyTarget) });
+  else if (run.phase === "awaiting_approval") console.log("awaiting approval — run the approve command from the reviewer page");
+  else if (run.phase === "building") await buildPhase(runId);
+  else console.log(`run ${runId} is ${run.phase}; nothing to resume`);
+}
+
+async function approve() {
+  const { approveRun } = await import("../core/run-daily.mjs");
+  const runId = flags.run ?? todayRunId();
+  if (!flags.approver) {
+    console.error(`approve requires an explicit human approver:\n  radar-studio approve --run ${runId} --approver "Dillon Mohr" [--exclude slug,slug] [--note "..."]`);
+    process.exit(2);
+  }
+  approveRun(runId, {
+    approver: flags.approver,
+    exclude: flags.exclude ? String(flags.exclude).split(",").map((s) => s.trim()).filter(Boolean) : [],
+    note: flags.note ?? "",
+  });
 }
 
 // ---------------------------------------------------------------- stubs

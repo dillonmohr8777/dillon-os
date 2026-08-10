@@ -1,6 +1,15 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
-import { SITES, ORDER } from "../src/config.mjs";
+import * as CONFIG from "../src/config.mjs";
+
+const { SITES, ORDER } = CONFIG;
+const META = CONFIG.META ?? {
+  labTitle: "Scroll Lab — Next Ten Cinematic Builds",
+  labHeading: "Ten worlds,<br />one grammar.",
+  labLede: "Builds 169–178 of the Prospect Radar. Each homepage is a composited scroll world — a synthetic cinematic plate, business-specific 3D choreography, and editorial stills sharing one camera. Concept work only: every page carries its own source boundary.",
+  labPath: "/labs/prospect-3d-scroll-next10/",
+  labBackLabel: "Scroll Lab",
+};
 
 /*
   Renders the ten prospect pages plus the lab index from src/config.mjs.
@@ -48,6 +57,72 @@ function chapterSection(ch, index, spec) {
       </section>`;
 }
 
+/* Optional per-brand type system: spec.fonts = { display: {family, file},
+   text: {family, file} }. Emits sites/<slug>/site.css with @font-face and the
+   two font vars; pages without spec.fonts keep the batch defaults. */
+function renderSiteCss(spec) {
+  if (!spec.fonts) return null;
+  const face = (f) => `@font-face { font-family: "${f.family}"; src: url("${f.file}") format("woff2"); font-weight: ${f.weightRange ?? "100 900"}; font-display: swap; }`;
+  return [
+    face(spec.fonts.display),
+    face(spec.fonts.text),
+    `:root { --font-display: "${spec.fonts.display.family}", "Arial Narrow", sans-serif; --font-text: "${spec.fonts.text.family}", "Segoe UI", sans-serif; }`,
+    "",
+  ].join("\n");
+}
+
+/* Optional long-form sections rendered between the sequence band and the
+   measures strip: services (dl), area (prose), faq (h3+p pairs). All static,
+   fully visible without JS, and word-count carriers for the 1,100-1,700 target. */
+function extraSections(c, spec) {
+  const parts = [];
+  if (c.services?.items?.length) {
+    parts.push(`      <section class="index-band services-band" aria-labelledby="services-title">
+        <header>
+          <span data-reveal="up">${esc(c.services.kicker ?? "What this covers")}</span>
+          <h2 id="services-title">${esc(c.services.heading)}</h2>
+          <p data-reveal="up" style="--d:1">${esc(c.services.lede ?? "")}</p>
+        </header>
+        <div class="index-grid">
+${c.services.items.map(([t, b], i) => `          <article class="index-card" data-reveal="up" style="--d:${i % 3}">
+            <b>${String(i + 1).padStart(2, "0")}</b>
+            <h3>${esc(t)}</h3>
+            <p>${esc(b)}</p>
+          </article>`).join("\n")}
+        </div>
+      </section>`);
+  }
+  if (c.area?.body) {
+    parts.push(`      <section class="brief-panel area-panel" aria-labelledby="area-title">
+        <div><h2 id="area-title">${esc(c.area.heading)}</h2></div>
+        <div>
+${(Array.isArray(c.area.body) ? c.area.body : [c.area.body]).map((p, i) => `          <p data-reveal="up" style="--d:${i}">${esc(p)}</p>`).join("\n")}
+        </div>
+      </section>`);
+  }
+  if (c.faq?.items?.length) {
+    parts.push(`      <section class="brief-panel faq-panel" aria-labelledby="faq-title">
+        <div><h2 id="faq-title">${esc(c.faq.heading ?? "Questions worth asking first.")}</h2></div>
+        <div class="faq-list">
+${c.faq.items.map(([q, a], i) => `          <div class="faq-item" data-reveal="up" style="--d:${i % 4}">
+            <h3>${esc(q)}</h3>
+            <p>${esc(a)}</p>
+          </div>`).join("\n")}
+        </div>
+      </section>`);
+  }
+  return parts.join("\n\n");
+}
+
+/* Verified contact actions (tel/directions/site) — only what the evidence
+   ledger verified reaches this array; the generator renders whatever it gets. */
+function contactActions(c) {
+  const links = [...(c.contact ?? []), ...c.verify.links];
+  const seen = new Set();
+  return links.filter(([t, u]) => !seen.has(u) && seen.add(u))
+    .map(([t, u]) => `<a href="${u}"${u.startsWith("tel:") ? "" : ' target="_blank" rel="noopener"'}>${esc(t)}</a>`).join("");
+}
+
 function renderSite(slug) {
   const spec = SITES[slug];
   const c = spec.copy;
@@ -69,7 +144,7 @@ function renderSite(slug) {
     <meta name="theme-color" content="${spec.bg}" />
     <meta name="description" content="A private cinematic scroll concept for ${esc(spec.name)}." />
     <title>${esc(spec.name)} — Cinematic Scroll Concept</title>
-    <script type="module" src="/src/site.js"></script>
+    <script type="module" src="/src/site.js"></script>${spec.fonts ? `\n    <link rel="stylesheet" href="/sites/${slug}/site.css" />` : ""}
   </head>
   <body data-site="${slug}" style="${bodyVars}">
     <!--
@@ -86,7 +161,7 @@ function renderSite(slug) {
         <span class="brand-name">${esc(spec.lockup[0])}<b><i>${esc(spec.lockup[1])}</i> · concept mark</b></span>
       </a>
       <nav aria-label="Primary navigation"><a href="#sequence">Sequence</a><a href="#verify">Source</a></nav>
-      <a class="lab-back" href="/labs/prospect-3d-scroll-next10/">Build ${spec.build} <span>Scroll Lab</span></a>
+      <a class="lab-back" href="${META.labPath}">Build ${spec.build} <span>${esc(META.labBackLabel)}</span></a>
     </header>
 
     <div class="scene-stage" aria-hidden="true">
@@ -147,6 +222,8 @@ ${c.sequence.cards.map(([n, t, b], i) => `          <article class="index-card" 
         </div>
       </section>
 
+${extraSections(c, spec)}
+
       <dl class="measures" aria-label="How this concept page was built">
         <div data-reveal="up"><dt>Chapters</dt><dd>04<small>Directed camera beats across one continuous world.</small></dd></div>
         <div data-reveal="up" style="--d:1"><dt>Plates</dt><dd>03<small>Synthetic concept images, each placed more than once.</small></dd></div>
@@ -165,10 +242,10 @@ ${c.brief.map((par, i) => `          <p data-reveal="up" style="--d:${i}">${esc(
       <section class="verification-panel" data-reveal="up" id="verify" aria-labelledby="verify-title">
         <div><span>Source boundary</span><h2 id="verify-title">The name is real. The imagery is synthetic.</h2></div>
         <p>${esc(spec.name)} — ${esc(spec.city)}. ${esc(c.verify.line)} Every image on this page is generated concept art direction; none of it depicts the business, its premises, its people, or its work.</p>
-        <div class="verification-actions">${c.verify.links.map(([t, u]) => `<a href="${u}" target="_blank" rel="noopener">${esc(t)}</a>`).join("")}</div>
+        <div class="verification-actions">${contactActions(c)}</div>
       </section>
     </main>
-    <footer class="site-footer"><a href="/labs/prospect-3d-scroll-next10/">All ten cinematic builds</a><span>Concept only · noindex · mail hold · synthetic imagery</span></footer>
+    <footer class="site-footer"><a href="${META.labPath}">${esc(META.labFooterLabel ?? "All builds in this batch")}</a><span>Concept only · noindex · mail hold · synthetic imagery</span></footer>
   </body>
 </html>
 `;
@@ -192,7 +269,7 @@ function renderLab() {
     <link rel="icon" href="data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="#07090a"/><rect x="7" y="7" width="18" height="18" fill="none" stroke="#e8b84a" stroke-width="2"/><circle cx="16" cy="16" r="3.5" fill="#e8b84a"/></svg>')}" />
     <meta name="theme-color" content="#07090a" />
     <meta name="description" content="Ten cinematic scroll builds for the Prospect Radar next-ten batch." />
-    <title>Scroll Lab — Next Ten Cinematic Builds</title>
+    <title>${esc(META.labTitle)}</title>
     <style>
       @font-face { font-family: "Alumni Sans"; src: url("/assets/fonts/alumni-sans-var.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
       @font-face { font-family: "Public Sans"; src: url("/assets/fonts/public-sans-var.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
@@ -215,8 +292,8 @@ function renderLab() {
   </head>
   <body>
     <main>
-      <h1>Ten worlds,<br />one grammar.</h1>
-      <p class="lede">Builds 169–178 of the Prospect Radar. Each homepage is a composited scroll world — a synthetic cinematic plate, business-specific 3D choreography, and editorial stills sharing one camera. Concept work only: every page carries its own source boundary.</p>
+      <h1>${META.labHeading}</h1>
+      <p class="lede">${esc(META.labLede)}</p>
       <nav class="grid" aria-label="The ten builds">
 ${cards}
       </nav>
@@ -231,6 +308,8 @@ for (const slug of ORDER) {
   const dir = join(root, "sites", slug);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, "index.html"), renderSite(slug));
+  const css = renderSiteCss(SITES[slug]);
+  if (css) writeFileSync(join(dir, "site.css"), css);
   console.log(`page  ${slug}`);
 }
 writeFileSync(join(root, "index.html"), renderLab());

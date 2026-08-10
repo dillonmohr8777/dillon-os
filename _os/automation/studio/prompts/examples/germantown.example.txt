@@ -1,0 +1,75 @@
+"germantown-dental-group": {
+    build: 169,
+    name: "Germantown Dental Group",
+    lockup: ["Germantown", "Dental Group"],
+    initials: "GD",
+    verb: "ALIGN",
+    domain: "germantowndental.us",
+    city: "Philadelphia, PA",
+    vertical: "General dentistry",
+    lens: "50 MM",
+    accent: "#8fd8c8",
+    accent2: "#2b7f74",
+    bg: "#071216",
+    plates: plates("germantown-dental-group"),
+    heroAlt: "A sculptural dental chair and circular exam light emerging from layered porcelain planes in a dark teal room.",
+    world: {
+      clear: 0x081419, fog: 0x0e2229, fogDensity: 0.015, exposure: 1.24,
+      sky: 0xbfe8df, ground: 0x0a1a1c, ambient: 1.05,
+      cold: 0xa8ded2, coldIntensity: 2.9, coldPosition: [-8, 11, 8],
+      warm: 0xd9fff2, warmIntensity: 2.2, warmPeak: 9, warmRange: 18, warmPosition: [0.6, 2.6, 1.4], warmRamp: [0.5, 0.86],
+      env: { sky: 0x1d4a46, floor: 0x06100f, lamp: 0xcfffe9, cool: 0x9fd8cc, lampUV: [0.66, 0.4], lampPower: 3.2, coolUV: [0.2, 0.3], coolPower: 2.0, intensity: 1.0 },
+      bloom: 0.16, plateDistance: 26, platePosition: [0.6, 1.7, -15],
+      groundMat: "stone", groundTint: 0x24413f, groundY: -1.75, rootYaw: -0.04,
+      beats: { preset: "pushReveal", r: 8.6, h: 2.4, low: 1.05, target: [0.1, -0.3, 0], fov: 33 },
+      props: [
+        { geo: "box", size: [3.4, 0.22, 2.2], mat: "porcelain", pos: [0, -1.05, 0], from: [-7, 2.2, 0], phase: [0.04, 0.26] },
+        { geo: "box", size: [3.0, 0.22, 1.9], mat: "porcelain", pos: [0.15, -0.66, 0.1], from: [7, 2.6, 0], phase: [0.12, 0.36] },
+        { geo: "box", size: [2.6, 0.22, 1.6], mat: "porcelain", pos: [0.3, -0.27, 0.2], from: [-6, 3.2, 0], phase: [0.2, 0.46] },
+        { geo: "box", size: [2.2, 0.22, 1.3], mat: "ceramicWhite", pos: [0.45, 0.12, 0.3], from: [6, 3.8, 0], phase: [0.28, 0.56] },
+        { geo: "cylinder", size: [0.05, 0.05, 2.3, 12], mat: "steel", pos: [-2.5, -0.6, 0.9], rot: [0, 0, 0.5], from: [0, 4.5, 0], phase: [0.44, 0.66] },
+        { geo: "cylinder", size: [0.04, 0.04, 1.9, 12], mat: "steel", pos: [-2.1, -0.75, 1.2], rot: [0, 0, 0.62], from: [0, 4.5, 0], phase: [0.5, 0.7] },
+        { geo: "torus", size: [0.85, 0.06, 16, 64], mat: "steel", pos: [2.6, 0.9, -0.6], rot: [1.2, 0, 0], from: [0, 3.4, -2], phase: [0.58, 0.8], spin: { axis: "z", speed: 0.12 } },
+        { geo: "sphere", size: [0.34, 24, 18], mat: "glow", tint: 0xd9fff2, pos: [2.6, 0.9, -0.6], glow: true, glowRamp: [0.58, 0.86, 0, 0.85] }
+      ],
+      particles: [{ color: 0xcfffe9, count: 90, spread: [10, 5, 6], seed: 31, size: 0.02, opacity: 0.12, ramp: [0.3, 0.8] }],
+    },
+    panels: [
+      { id: "instruments", src: "macro", label: "Instruments", meta: "Laid out before the first look", size: [3.0, 2.25], position: [-5.6, 1.3, 1.6], rotY: 0.42, in: [0.16, 0.3], out: [0.5, 0.62] },
+      { id: "materials", src: "material", label: "Materials", meta: "Porcelain, steel, frosted glass", size: [2.8, 2.1], position: [5.4, 1.5, 2.2], rotY: -0.44, in: [0.56, 0.7], out: [0.9, 1.02] }
+    ],
+    states: ["Unsettled", "In line", "Instrumented", "Calm"],
+    copy: {
+      context: "A mouth is an argument between forces. Care is the act of settling it.",
+      h1: "Everything in<br />its right line.",
+      chapters: [
+        { step: "Baseline", state: "Unsettled", title: "First, see what is actually there.", body: "The opening shot holds loose porcelain planes in cool shadow. Nothing is claimed yet — the name and the neighborhood are known; everything clinical stays a question for the chair.", ledger: [["Known", "The practice name and its part of Philadelphia"], ["Held open", "Services, insurance, hours, and availability"]] },
+        { step: "Alignment", state: "In line", title: "Order is built one plane at a time.", body: "Layer settles onto layer until the stack reads as a whole. That is the trade: small corrections, in sequence, each one making the next possible." },
+        { step: "Instruments", state: "Instrumented", title: "Steel arrives only after the plan.", body: "Tools enter the frame late and deliberately. The order of operations is the difference between treatment and guesswork.", list: ["Name what hurts before anything touches it", "Agree the sequence before the first instrument", "Ask what can wait — and what cannot"] },
+        { step: "Source", state: "Calm", title: "The finished frame points back to the real practice.", body: "Use the practice's own site to confirm services, insurance participation, hours, and how they book new patients.", cta: ["Visit the practice site", "https://germantowndental.us"] }
+      ],
+      sequence: {
+        heading: "Six checks between discomfort and a settled mouth.",
+        lede: "General dentistry is sequence work. Each stage below exists to make the next one smaller.",
+        cards: [
+          ["01", "Exam", "Look everywhere, not just where it hurts. The quiet tooth next door is usually the next appointment."],
+          ["02", "Imaging", "What enamel hides, film shows. Decisions get made on evidence, not on guesses."],
+          ["03", "Plan", "Sequence matters: stabilize first, restore second, perfect last."],
+          ["04", "Prevention", "The cheapest dentistry is the visit where nothing needs drilling."],
+          ["05", "Restoration", "Match the material to the tooth — porcelain, composite, or metal each earn their place."],
+          ["06", "Recall", "A settled mouth stays settled because someone rechecks it on schedule."]
+        ]
+      },
+      brief: [
+        "This page is a concept. The imagery is synthetic art direction, the sequence describes how general dentistry is commonly staged, and none of it describes this practice's actual services or results.",
+        "Before anything went live we would confirm the real scope with the practice — which treatments they perform in-house versus refer, which insurers they participate with, and how they want new patients to arrive."
+      ],
+      note: "Nothing here should be read as a claim about Germantown Dental Group's services, insurance participation, pricing, hours, or availability. Those come from the practice.",
+      verify: { line: "Confirm everything current directly with the practice.", links: [["Practice site", "https://germantowndental.us"], ["Map", "https://www.google.com/maps/search/?api=1&query=Germantown%20Dental%20Group%20Philadelphia%20PA"]] }
+    }
+  },
+
+  /* ======================================================================
+     170 · Udis & Conn Orthodontics — SHAPE
+     An archwire draws through ceramic brackets like a bridge span.
+  ====================================================================== */
