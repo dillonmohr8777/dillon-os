@@ -1,0 +1,22 @@
+{
+  "name": "@dillon-os/radar-studio",
+  "version": "0.1.0",
+  "description": "Daily production orchestrator for Prospect Radar composited scroll-world homepage concepts. Local, resumable, fail-closed.",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "radar-studio": "bin/radar-studio.mjs"
+  },
+  "scripts": {
+    "doctor": "node bin/radar-studio.mjs doctor",
+    "status": "node bin/radar-studio.mjs status",
+    "test": "node --test test/core.test.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

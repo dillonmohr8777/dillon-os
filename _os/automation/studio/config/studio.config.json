@@ -1,0 +1,63 @@
+{
+  "timezone": "America/New_York",
+  "dataRootEnv": "PROSPECT_RADAR_STUDIO_HOME",
+  "dataRootDefault": "%LOCALAPPDATA%\\prospect-radar-studio",
+  "enginePath": "_templates/scroll-engine",
+  "radar": {
+    "buildQueue": "12_Brain/state/radar/build-queue.csv",
+    "registry": "12_Brain/state/radar/registry.json",
+    "imageBriefs": "12_Brain/state/radar/image-briefs",
+    "dailyBriefDir": "Daily-Briefs"
+  },
+  "approvalsDir": "_os/automation/studio/approvals",
+  "intake": {
+    "dailyTarget": 20,
+    "rebuildBandMax": 55
+  },
+  "lanes": {
+    "research": 4,
+    "browserQa": 3,
+    "images": 4,
+    "heavyCpu": 5
+  },
+  "retries": {
+    "maxRepairAttempts": 2,
+    "leaseHeartbeatSeconds": 15,
+    "leaseStaleSeconds": 90
+  },
+  "budgets": {
+    "perRun": {
+      "llm_usd": 120,
+      "images_count": 140,
+      "wallclock_min": 600
+    },
+    "perStageDefaults": {
+      "llm_timeout_ms": 600000,
+      "llm_max_turns": 24
+    }
+  },
+  "quality": {
+    "visualPassScore": 90,
+    "wordsMin": 1100,
+    "wordsMax": 1700,
+    "sectionsMin": 8,
+    "sectionsMax": 12,
+    "jsGzipBudgetKb": 200,
+    "siteImageBudgetKb": 1228,
+    "mobileH1FloorPx": 44,
+    "duplicateLookbackDays": 30
+  },
+  "models": {
+    "strong": "claude-fable-5",
+    "cheap": "claude-haiku-4-5-20251001"
+  },
+  "netlify": {
+    "siteNamePattern": "^momentum-prospect-radar-daily-\\d{4}-\\d{2}-\\d{2}$",
+    "maxSitesPerDay": 1,
+    "maxDeploysPerDay": 3
+  },
+  "diskFloorGb": {
+    "warn": 10,
+    "fail": 3
+  }
+}
