@@ -1,5 +1,5 @@
 {
-  "engine_version": "0.2.0",
+  "engine_version": "0.2.1",
   "extracted_from": "refs/pull/270/head",
   "source_commit": "a519c581bd4f4a89bdc45e60d569b8ba81e63d18",
   "source_path": "02_Campaigns/AI Site Builder Outreach Engine/batches/prospect-3d-scroll-next10-2026-08-10",
@@ -12,6 +12,10 @@
     {
       "version": "0.2.0",
       "note": "Per-brand type systems via --font-display/--font-text vars + per-site site.css emission (defaults preserve next10 appearance). Optional long-form sections (services/area/faq) in build-pages. Verified tel/contact actions in the verify panel. qa.mjs expectations derive from config (N sites, domain allowlist, font floor) instead of the hardcoded batch of ten. Unmodified from 0.1.0: scenes.js, site.js, generate-textures.mjs, qa-browser.mjs."
+    },
+    {
+      "version": "0.2.1",
+      "note": "qa-browser launch args for Chromium 1234+: --use-angle=swiftshader (–use-gl removed upstream) + --disable-gpu so static pages produce capturable frames; WebGL still renders via SwiftShader (verified webgl-ready on the fixture site)."
     }
   ],
   "files": {
@@ -21,7 +25,7 @@
     "scripts/build-pages.mjs": "bf1471f95db7cfd58c1c024eed7c35488cbe50f3551c8ddab1e33d28a78f1d61",
     "scripts/generate-textures.mjs": "302befa99eae9f8f8212b327637fcd6232803075fcaab11f6db4770ca79b106d",
     "scripts/qa.mjs": "2e31404d14d29e68778359fb4e4e22d385d01a03193a08bfd8cd6dfbe92816f4",
-    "scripts/qa-browser.mjs": "911cbf6611b64ddf4880a4c72335b55a397e68fd9f8d899c3c9bda4eff9d2bcc",
+    "scripts/qa-browser.mjs": "0f1409f77abb7ef5fca57fa4be92eaae0bfb0c18d94155b96d863ba62e2a7296",
     "vite.config.js": "d2435c57607d04a88387c2b55a16e816cc0ebaaec1d3c9d2ab8bce8e7c4464b7"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "run_id": "fixture-smoke",
+  "approver": "radar-studio fixture harness",
+  "note": "mechanical smoke test, not a deliverable",
+  "mode": "explicit",
+  "approved_at": "2026-08-10T21:20:50.108Z",
+  "sites": [
+    {
+      "prospect_id": "fixture-germantown",
+      "brief_hash": "c041b998653144af4535a2c2776e86d27c8f1358ec5f5f5db29719b9f4afa520"
+    }
+  ],
+  "excluded": []
+}

@@ -15,10 +15,14 @@ const round = process.argv[3] || "round-1";
 const output = join(root, "artifacts", "browser", round);
 mkdirSync(output, { recursive: true });
 
+/* --disable-gpu forces the software compositor: modern headless Chromium
+   (1234+) otherwise never produces a capturable frame on STATIC pages (the
+   lab index), while WebGL keeps working through SwiftShader regardless.
+   --use-gl=swiftshader was removed from Chromium; --use-angle is current. */
 const launch = () => chromium.launch({
   headless: true,
   ...(process.env.CHROME_BIN ? { executablePath: process.env.CHROME_BIN } : {}),
-  args: ["--enable-unsafe-swiftshader", "--use-gl=swiftshader"]
+  args: ["--enable-unsafe-swiftshader", "--use-angle=swiftshader", "--disable-gpu"]
 });
 
 const results = [];
