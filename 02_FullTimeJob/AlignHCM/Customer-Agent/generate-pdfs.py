@@ -71,11 +71,11 @@ def css_with_assets() -> str:
     for ttf in sorted(FONTS.glob("*.ttf")):
         css = css.replace(f"url({ttf.name})", f"url({data_uri(ttf, 'font/ttf')})")
     # the anchor markers must be present for text search but invisible in print
-    # Taken out of flow so the measuring passes and the final marker-free pass
-    # paginate identically.
+    # Locators sit inside a heading's own line box: in flow, so they resolve to
+    # the page the heading prints on, but 1px against 30px display type so they
+    # cannot alter the line or repaginate when removed for the final pass.
     css += (
-        "\n.mk { position: absolute; font-size: 1px; line-height: 0; "
-        "color: #F9F9F7; letter-spacing: 0; }\n"
+        "\n.mk { font-size: 1px; color: #F9F9F7; letter-spacing: 0; }\n"
     )
     return css
 

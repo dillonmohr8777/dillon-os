@@ -281,10 +281,10 @@ class Converter:
             label = re.sub(r"\s*[·(].*$", "", title).strip() or title
             self.runs.append((anchor, label.upper()))
             self.emit(
-                f'<div class="section" id="{anchor}">{self.marker(anchor)}'
+                f'<div class="section" id="{anchor}">'
                 f'<div class="eyebrow"><span class="eyebrow__num">{html.escape(num)}</span>'
                 f'<span class="eyebrow__text">{html.escape(label)}</span></div>'
-                f"<h2>{inline(title)}</h2></div>"
+                f"<h2>{self.marker(anchor)}{inline(title)}</h2></div>"
             )
             return i + 1
 
@@ -305,10 +305,11 @@ class Converter:
         self.runs.append((anchor, f"PART {numeral}"))
         self.emit(
             f'<div class="page-break"></div>'
-            f'<div class="phase" id="{anchor}">{self.marker(anchor)}'
+            f'<div class="phase" id="{anchor}">'
             f'<div class="phase__num">{html.escape(numeral)}</div><div>'
             f'<div class="phase__kicker">Part {html.escape(word.title())} · {html.escape(title)}</div>'
-            f'<div class="phase__title">{inline(title)}</div></div></div>'
+            f'<div class="phase__title">{self.marker(anchor)}{inline(title)}</div>'
+            f"</div></div>"
         )
 
     def _code(self, lines, i):

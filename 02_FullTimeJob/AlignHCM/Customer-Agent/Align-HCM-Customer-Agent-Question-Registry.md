@@ -14,9 +14,9 @@ pdf:
   subtitle: Every question and prompt string written into the Align Claude-in-Edge sessions: HubSpot GO and attribution operator prompts, and the Customer Agent Preview test suite.
   running_head: Align HCM Customer Agent
   running_foot: Master Question Registry · Internal
-  docid: AHCM-CA-REG-2026.07.31
+  docid: AHCM-CA-REG-2026.08.10
   status_label: 126+ prompts asked
-  status_note: Parts I to VI carry every question with its execution state. **Part VII is the flat copy-paste list for the next Preview session.**
+  status_note: Parts I to VI carry every question with its execution state. **Twelve further questions were run in an independent August 10 audit; see Readiness Report Part III.**
   hero:
     - 126+
     - Prompts asked
@@ -27,7 +27,7 @@ pdf:
     - 39 · Messages sent in Preview · orange
   meta:
     - Portal · 242825734
-    - Updated · 2026-07-31
+    - Updated · 2026-08-10
     - Prompt · v2026-07-30.5
 ---
 

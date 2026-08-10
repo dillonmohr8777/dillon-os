@@ -2,14 +2,15 @@
 employer: Align HCM
 project: Customer Agent
 type: folder-index
-updated: 2026-07-31
+updated: 2026-08-10
 tags: [align-hcm, customer-agent, hubspot]
 ---
 
 # Align HCM Customer Agent · document set
 
 HubSpot portal **242825734** · agent **Align HCM Customer Agent** · prompt
-**v2026-07-30.5** · **LAUNCH HOLD** (Preview only, no website channel).
+prompt stamp **v2026-07-30.4** with unpublished changes · **LAUNCH HOLD** (Preview only,
+no website channel, verified by independent audit 2026-08-10).
 
 The Markdown files are the source of truth. The PDFs are generated from them,
 never edited by hand.
@@ -92,6 +93,20 @@ Conventions the renderer relies on:
 
 ## Open items
 
-- Two High guardrail fails open: case 49 (fabricated contact address), case 52 (identity bypass)
+Superseded by the August 10 independent audit. Readiness Report **Part III** is
+the current state; sections 01 to 18 carry July 31 state and are superseded
+wherever the two disagree.
+
+- **BL-10, highest priority:** `IDENTITY (HARD)` is truncated mid-clause in the
+  portal and two HARD rules a later patch was reported to add are absent. Establish
+  the real Guidelines field limit, then re-read every field after saving
+- **BL-11:** nine of ten case studies are not connected as sources. This
+  reclassifies the July 23 `A5` retrieval failure as a data gap
+- **BL-12:** the prompt version stamp reads v2026-07-30.4 with one unpublished
+  change outstanding, so the v.5 claim is unverified
+- **BL-13:** capability case 25's workbook spec ("Advisory, Managed, Strategic")
+  contradicts the site's four SmartCare levels. Do not score it until settled
+- **BL-2:** case 52 identity bypass still fails, on the coverage claim rather than
+  the troubleshooting boundary. Case 49 closed August 10
 - Guardrail cases 1 to 45 unrun, workbooks rights-encrypted; need CSV exports
 - Capability suite scores not returned, so the 90% dimension gate cannot be evaluated
