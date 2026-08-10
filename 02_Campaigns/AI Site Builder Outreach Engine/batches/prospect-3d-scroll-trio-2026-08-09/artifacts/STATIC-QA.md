@@ -2,9 +2,10 @@
 
 - Result: PASS
 - Pages: 4
-- Generated WebP assets: 7
+- Generated material WebPs: 7
+- Generated editorial WebPs: 18
 - Production JavaScript: 133.5 KB gzipped
-- Checks: 31/31
+- Checks: 34/34
 
 - PASS: Production dist directory exists
 - PASS: index.html exists
@@ -33,6 +34,9 @@
 - PASS: sites/morton-electric-pool-spa/index.html has no unapproved external runtime dependency
 - PASS: Exactly seven generated WebP material assets ship
 - PASS: Generated material assets have unique SHA-256 hashes
+- PASS: Exactly eighteen generated editorial WebP frames ship
+- PASS: Each prospect ships six distributed editorial frames
+- PASS: Editorial frames have unique SHA-256 hashes across all prospects
 - PASS: Production JavaScript remains below 180 KB gzipped
 - PASS: Reduced-motion styling ships
 - PASS: Visible keyboard focus styling ships

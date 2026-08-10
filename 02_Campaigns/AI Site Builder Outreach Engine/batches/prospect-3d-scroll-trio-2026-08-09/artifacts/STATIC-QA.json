@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T20:36:35.002Z",
+  "generatedAt": "2026-08-10T00:33:57.393Z",
   "ok": true,
   "pages": 4,
   "checks": [
@@ -112,6 +112,18 @@
       "passed": true
     },
     {
+      "label": "Exactly eighteen generated editorial WebP frames ship",
+      "passed": true
+    },
+    {
+      "label": "Each prospect ships six distributed editorial frames",
+      "passed": true
+    },
+    {
+      "label": "Editorial frames have unique SHA-256 hashes across all prospects",
+      "passed": true
+    },
+    {
       "label": "Production JavaScript remains below 180 KB gzipped",
       "passed": true
     },
@@ -166,11 +178,121 @@
       "sha256": "4ec11ebcef40dc9e7a1abd66063745aa08bd1558b02330616ae73bb0d5c4c0e2"
     }
   ],
+  "editorialFrames": [
+    {
+      "site": "maclaren",
+      "name": "01.webp",
+      "bytes": 10854,
+      "sha256": "df8f05e4b237f298a9707876fa89b50d10332eb92d71ac41081525e4b92ac854"
+    },
+    {
+      "site": "maclaren",
+      "name": "02.webp",
+      "bytes": 19718,
+      "sha256": "c24d650adbd0cd51da6a7a0b0e064e1eb6d8d65acfab3f90a1388b8de05fb63c"
+    },
+    {
+      "site": "maclaren",
+      "name": "03.webp",
+      "bytes": 19268,
+      "sha256": "e9e90a3d5440dcce07d798a8b61dac4757b9e9127fc6f45c865eca3ca8cdc8d4"
+    },
+    {
+      "site": "maclaren",
+      "name": "04.webp",
+      "bytes": 14082,
+      "sha256": "6ea928844f13333bbc8738a9330df6e68453a8fc46e3109034923a4a03a2410b"
+    },
+    {
+      "site": "maclaren",
+      "name": "05.webp",
+      "bytes": 13752,
+      "sha256": "d62ebb323d6381d495f936b16f0eb999aa109d5ac7ca93848ece32cfa29c8889"
+    },
+    {
+      "site": "maclaren",
+      "name": "06.webp",
+      "bytes": 18068,
+      "sha256": "b9ffc55f7f17801ba1f52559e1acc393582296e07d6de2195055951c8b11c6da"
+    },
+    {
+      "site": "golden",
+      "name": "01.webp",
+      "bytes": 25178,
+      "sha256": "22054b888e35d9a1b52f3336b72f788511603dbba86e2144de1f0625572232de"
+    },
+    {
+      "site": "golden",
+      "name": "02.webp",
+      "bytes": 48106,
+      "sha256": "e8dbfe3ce949a80ee2b57f2b67c935bb86e9a319e8ad77233e4aacb37cf4e041"
+    },
+    {
+      "site": "golden",
+      "name": "03.webp",
+      "bytes": 13728,
+      "sha256": "cd4173d42a5a740e3aeca5914ee92fc4c8cf5031c748e3e3c8c4dddb64f4487e"
+    },
+    {
+      "site": "golden",
+      "name": "04.webp",
+      "bytes": 30160,
+      "sha256": "5dab2ae97dacf70ff8531c234a782d0f76fdb0c6b9be27a2375de5dacecfec0d"
+    },
+    {
+      "site": "golden",
+      "name": "05.webp",
+      "bytes": 25754,
+      "sha256": "15a2faac8ef002ddb1d315698dfea2b7612e46990f1bf2d5a578fed69fd1a5df"
+    },
+    {
+      "site": "golden",
+      "name": "06.webp",
+      "bytes": 26786,
+      "sha256": "d881c69ef37653d183a614fc8954afed0ed1e670a3a9d3d8bfae81686a0e3a9f"
+    },
+    {
+      "site": "morton",
+      "name": "01.webp",
+      "bytes": 16750,
+      "sha256": "ba609605dcb9a5ca3c6f8bed9cb9b167eeb743aba74a802ccf44345a0f07b1d0"
+    },
+    {
+      "site": "morton",
+      "name": "02.webp",
+      "bytes": 40290,
+      "sha256": "0dd85a786dd2173e540823d185acbf60d406acfa487b437ae43144d05a483558"
+    },
+    {
+      "site": "morton",
+      "name": "03.webp",
+      "bytes": 21310,
+      "sha256": "9038d5d27eeb18befd5c208d8a2d39602f803f3db54cdc6522a85a9015a16b19"
+    },
+    {
+      "site": "morton",
+      "name": "04.webp",
+      "bytes": 30298,
+      "sha256": "d4a81b0c70e4258ffe829a7d74a7a8317f04ab152da66ef8d3bd6a357cd26558"
+    },
+    {
+      "site": "morton",
+      "name": "05.webp",
+      "bytes": 16316,
+      "sha256": "4761e6bb2b061245b70db212b1a0db9947cfbf6328b1b364e746b8157e8fe29c"
+    },
+    {
+      "site": "morton",
+      "name": "06.webp",
+      "bytes": 26942,
+      "sha256": "a5b18b2de2ae02652b2a0e0042e1bb8fbdaed3f88d8fb75be274ee4e57455ada"
+    }
+  ],
   "productionJavaScript": {
     "files": [
       "dist/assets/lab-D9huO-5A.js",
       "dist/assets/modulepreload-polyfill-B5Qt9EMX.js",
-      "dist/assets/site-oUJlVYR1.js"
+      "dist/assets/site-CJz6Iz1A.js"
     ],
     "bytes": 535228,
     "gzipBytes": 136701,

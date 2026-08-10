@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-08-10T00:41:48.868Z",
+  "ok": true,
+  "results": [
+    {
+      "name": "maclaren",
+      "consoleErrors": [],
+      "headerBottom": 72,
+      "panelTop": -1,
+      "titleTop": 177,
+      "footerTop": 731,
+      "previousFrameVisible": false,
+      "titleClearOfHeader": true,
+      "passed": true
+    },
+    {
+      "name": "golden",
+      "consoleErrors": [],
+      "headerBottom": 72,
+      "panelTop": -1,
+      "titleTop": 184,
+      "footerTop": 731,
+      "previousFrameVisible": false,
+      "titleClearOfHeader": true,
+      "passed": true
+    },
+    {
+      "name": "morton",
+      "consoleErrors": [],
+      "headerBottom": 72,
+      "panelTop": -1,
+      "titleTop": 184,
+      "footerTop": 731,
+      "previousFrameVisible": false,
+      "titleClearOfHeader": true,
+      "passed": true
+    }
+  ]
+}

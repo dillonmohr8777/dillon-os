@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-09T20:42:00.000Z",
+  "generatedAt": "2026-08-10T00:45:00.000Z",
   "title": "Design System: Prospect Radar Cinematic Scroll Trio",
   "extensions": {
     "colorMeta": {
@@ -12,14 +12,22 @@
       "golden-brass": { "role": "secondary", "displayName": "Golden Brass", "canonical": "#d99b12", "tonalRamp": ["#251800", "#442d00", "#684600", "#8d6100", "#b57d08", "#d99b12", "#edc56e", "#faefd0"] },
       "morton-cyan": { "role": "primary", "displayName": "Morton Cyan", "canonical": "#4bd8e4", "tonalRamp": ["#062326", "#0a4045", "#105f66", "#177f89", "#24a7b2", "#4bd8e4", "#9cebf1", "#e5f9fb"] },
       "morton-heat": { "role": "secondary", "displayName": "Morton Heat", "canonical": "#ff9a45", "tonalRamp": ["#2b1302", "#502503", "#783a08", "#a45113", "#cf6d25", "#ff9a45", "#ffc08b", "#ffead7"] },
+      "morton-ground": { "role": "neutral", "displayName": "Morton Ground", "canonical": "#031014", "tonalRamp": ["#010405", "#031014", "#092a31", "#124651", "#256775", "#4d8997", "#9fc0c7", "#eaf5f7"] },
+      "action-ink": { "role": "neutral", "displayName": "Action Ink", "canonical": "#07100f", "tonalRamp": ["#020303", "#07100f", "#142321", "#2d3c39", "#52625f", "#7d8c88", "#bec8c5", "#f2f6f5"] },
+      "line-soft": { "role": "neutral", "displayName": "Soft White Line", "canonical": "rgba(255, 255, 255, 0.16)", "tonalRamp": ["rgba(255,255,255,.04)", "rgba(255,255,255,.08)", "rgba(255,255,255,.12)", "rgba(255,255,255,.16)", "rgba(255,255,255,.24)", "rgba(255,255,255,.36)", "rgba(255,255,255,.56)", "rgba(255,255,255,.8)"] },
+      "line-mid": { "role": "neutral", "displayName": "Measured White Line", "canonical": "rgba(255, 255, 255, 0.22)", "tonalRamp": ["rgba(255,255,255,.06)", "rgba(255,255,255,.1)", "rgba(255,255,255,.16)", "rgba(255,255,255,.22)", "rgba(255,255,255,.32)", "rgba(255,255,255,.46)", "rgba(255,255,255,.64)", "rgba(255,255,255,.86)"] },
+      "white-strong": { "role": "neutral", "displayName": "Strong White", "canonical": "rgba(255, 255, 255, 0.7)", "tonalRamp": ["rgba(255,255,255,.12)", "rgba(255,255,255,.22)", "rgba(255,255,255,.34)", "rgba(255,255,255,.5)", "rgba(255,255,255,.7)", "rgba(255,255,255,.8)", "rgba(255,255,255,.9)", "rgba(255,255,255,.98)"] },
       "lab-ground": { "role": "neutral", "displayName": "Lab Ground", "canonical": "#11100e", "tonalRamp": ["#050504", "#11100e", "#26231f", "#403b34", "#625b50", "#898073", "#bbb4a8", "#f1eee8"] },
       "lab-amber": { "role": "tertiary", "displayName": "Lab Amber", "canonical": "#ffbd6d", "tonalRamp": ["#281a09", "#4b310e", "#704b19", "#986727", "#c0863c", "#ffbd6d", "#ffdaa8", "#fff1dc"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Route hero statements and oversized editorial moments." },
+      "display": { "displayName": "Display", "purpose": "Route hero statements at the expanded 4rem to 7.6rem scale." },
       "facet-display": { "displayName": "Facet Display", "purpose": "Golden Eagle display text only." },
+      "action-word": { "displayName": "Action Word", "purpose": "One oversized route verb crossing the hero fold." },
       "headline": { "displayName": "Headline", "purpose": "Chapter and source-verification titles." },
       "body": { "displayName": "Body", "purpose": "Narrative and factual-boundary copy." },
+      "support": { "displayName": "Support", "purpose": "Hero context and short explanatory copy." },
+      "micro": { "displayName": "Micro", "purpose": "HUD readouts, frame indices, captions, and source metadata." },
       "label": { "displayName": "Label", "purpose": "Navigation, steps, controls, and provenance metadata." }
     },
     "shadows": [
@@ -66,9 +74,30 @@
     {
       "name": "Hero Inset",
       "kind": "card",
-      "description": "A square alternate crop that proves the cinematic world without becoming dashboard chrome.",
-      "html": "<figure class=\"ds-hero-inset\"><span>Material study</span><strong>One world, another focal plane.</strong></figure>",
-      "css": ".ds-hero-inset{width:176px;aspect-ratio:1/1.1;display:flex;flex-direction:column;justify-content:flex-end;gap:7px;margin:0;padding:14px;border:1px solid rgba(255,255,255,.34);color:#f5f2ea;background:linear-gradient(180deg,transparent,rgba(2,4,5,.78)),#293033;box-shadow:0 24px 65px rgba(0,0,0,.32);font-family:'Lab Text',Arial,sans-serif}.ds-hero-inset span{font-size:8px;letter-spacing:.2em;text-transform:uppercase}.ds-hero-inset strong{font-size:10px;line-height:1.35}"
+      "description": "A hard-edged alternate editorial frame with an index, inner keyline, and reticle.",
+      "html": "<figure class=\"ds-hero-inset\"><span class=\"ds-index\">02 / 06</span><span>Material study</span><strong>One world, another focal plane.</strong><i></i></figure>",
+      "css": ".ds-hero-inset{position:relative;width:176px;aspect-ratio:1/1.1;display:flex;flex-direction:column;justify-content:flex-end;gap:7px;margin:0;padding:14px;border:1px solid rgba(255,255,255,.34);color:#f5f2ea;background:linear-gradient(180deg,transparent,rgba(2,4,5,.78)),#293033;box-shadow:0 24px 65px rgba(0,0,0,.32);font-family:'Lab Text',Arial,sans-serif}.ds-hero-inset:before{content:'';position:absolute;inset:8px;border:1px solid rgba(255,255,255,.16)}.ds-hero-inset span{font-size:8px;letter-spacing:.2em;text-transform:uppercase}.ds-hero-inset .ds-index{position:absolute;top:14px;right:14px;color:#8aae98}.ds-hero-inset strong{font-size:10px;line-height:1.35}.ds-hero-inset i{position:absolute;top:50%;left:50%;width:18px;height:18px;border:1px solid #8aae98;transform:translate(-50%,-50%) rotate(45deg)}"
+    },
+    {
+      "name": "Scene HUD",
+      "kind": "custom",
+      "description": "Decorative measured axes, route reticle, and lens readout over the persistent scene.",
+      "html": "<div class=\"ds-hud\"><span class=\"ds-axis ds-x\"></span><span class=\"ds-axis ds-y\"></span><i></i><p><span>Study 01 / Interior</span><strong>28 MM · F 2.8</strong></p></div>",
+      "css": ".ds-hud{position:relative;width:360px;height:220px;color:#f5f2ea;font-family:'Lab Text',Arial,sans-serif}.ds-axis{position:absolute;background:rgba(255,255,255,.22)}.ds-x{right:12px;bottom:54px;width:190px;height:1px}.ds-y{right:134px;bottom:20px;width:1px;height:100px}.ds-hud>i{position:absolute;right:121px;bottom:41px;width:27px;height:27px;border:1px solid #8aae98}.ds-hud p{position:absolute;right:12px;bottom:66px;display:grid;gap:5px;margin:0;text-align:right;text-transform:uppercase}.ds-hud p span{color:rgba(245,242,234,.7);font-size:7px;letter-spacing:.2em}.ds-hud p strong{font-size:8px;letter-spacing:.18em}"
+    },
+    {
+      "name": "Editorial Chapter Frame",
+      "kind": "card",
+      "description": "A portrait process image with one accent rule and compact material caption.",
+      "html": "<figure class=\"ds-editorial-frame\"><div></div><figcaption><span>04 / Surface</span><strong>Stone / walnut / reflected light</strong></figcaption></figure>",
+      "css": ".ds-editorial-frame{position:relative;width:300px;margin:0;color:#f5f2ea;font-family:'Lab Text',Arial,sans-serif}.ds-editorial-frame:before{content:'';position:absolute;z-index:2;inset:-9px;border-top:1px solid #8aae98;border-right:1px solid rgba(255,255,255,.3)}.ds-editorial-frame>div{aspect-ratio:4/5;background:linear-gradient(180deg,transparent 45%,rgba(2,4,5,.72)),#293033;box-shadow:0 32px 80px rgba(0,0,0,.42)}.ds-editorial-frame figcaption{display:grid;grid-template-columns:auto 1fr;gap:14px;padding-top:12px;text-transform:uppercase}.ds-editorial-frame span{color:#8aae98;font-size:8px;letter-spacing:.18em}.ds-editorial-frame strong{color:rgba(245,242,234,.7);font-size:8px;font-weight:400;letter-spacing:.14em}"
+    },
+    {
+      "name": "Final Reveal Frame",
+      "kind": "custom",
+      "description": "A near-full-viewport final image with one fine border and oversized closure.",
+      "html": "<section class=\"ds-final-frame\"><div></div><p><span>06 / Whole room</span><strong>One material language.<br>One resolved space.</strong></p></section>",
+      "css": ".ds-final-frame{position:relative;width:720px;aspect-ratio:16/10;display:grid;align-items:end;overflow:hidden;padding:44px;color:#f5f2ea;background:#050708;font-family:'Lab Text',Arial,sans-serif}.ds-final-frame>div{position:absolute;inset:24px;background:linear-gradient(180deg,transparent,rgba(3,5,6,.9)),#293033}.ds-final-frame:after{content:'';position:absolute;inset:24px;border:1px solid rgba(255,255,255,.16)}.ds-final-frame p{position:relative;z-index:2;display:grid;gap:12px;margin:0}.ds-final-frame p span{color:#8aae98;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.ds-final-frame p strong{max-width:12ch;font:400 clamp(3.5rem,7vw,7rem)/.84 'Lab Display',Georgia,serif;letter-spacing:-.035em}"
     },
     {
       "name": "Material Ledger",
@@ -87,22 +116,25 @@
   ],
   "narrative": {
     "northStar": "The Material Transformation Stage",
-    "overview": "The system behaves like a dark exhibition space in which one business-specific material world is progressively revealed. Editorial HTML remains readable and controlled while a persistent cinematic plate, foreground crop, WebGL atmosphere, and authored camera path create depth behind it. The three routes share one motion grammar but never one costume. This is a persuasive experience surface, not an application dashboard.",
+    "overview": "The system behaves like a dark exhibition space in which one business-specific material world is progressively revealed. Editorial HTML remains readable and controlled while a persistent cinematic plate, transparent foreground layer, WebGL atmosphere, technical HUD, and authored camera path create depth behind it. Six generated editorial frames per route are distributed across the inset, alternating chapters, final reveal, and source boundary rather than stacked as a gallery. The three routes share one motion grammar but never one costume.",
     "keyCharacteristics": [
       "Fixed full-viewport cinematic stage behind scrolling editorial chapters.",
+      "Six route-specific editorial frames paced across the full homepage.",
       "Dark opening states that withhold the completed transformation.",
       "Brand-specific accent pairs, materials, light, and camera choreography.",
-      "Square, border-led components with no ornamental pill language.",
+      "Square, border-led components and a measured reticle HUD with no ornamental pill language.",
       "Reduced-motion and static fallback modes that resolve to the final legible composition."
     ],
     "rules": [
       { "name": "The Narrow Signal Rule", "body": "A route uses only its assigned accent pair; never mix accent palettes across businesses.", "section": "colors" },
       { "name": "The One Giant Word Rule", "body": "Each route gets one oversized action word per hero; do not stack multiple display gimmicks in the same frame.", "section": "typography" },
+      { "name": "The No Eyebrow Rule", "body": "Do not place a kicker or eyebrow immediately above a heading; context belongs in body copy, the scene readout, or a frame caption.", "section": "typography" },
       { "name": "The World Before Chrome Rule", "body": "Interface styling must remain subordinate to the material transformation and cannot become a floating-card layer over the scene.", "section": "elevation" }
     ],
     "dos": [
       "Do preserve the shared four-shot scroll grammar while giving each business its own materials, lighting, and camera framing.",
       "Do use verified official brand art exactly as sourced and keep provenance notes with the build.",
+      "Do use the six-frame route sequence as spaced editorial evidence: inset, selected chapters, final reveal, and quiet source accent.",
       "Do make the opening, midpoint, and final frames materially different states of one transformation.",
       "Do resolve reduced-motion and WebGL-fallback users to a complete, legible final composition.",
       "Do keep touch targets at least 46px high and preserve visible keyboard focus."
@@ -112,6 +144,7 @@
       "Don't invent a logo when authentic brand artwork cannot be verified.",
       "Don't reveal the finished room, ring, or pool system in full at the opening frame.",
       "Don't introduce rounded cards, dashboard chrome, stock gradients, or interchangeable route styling.",
+      "Don't place kickers or eyebrows above headings, or bake typography and logos into generated imagery.",
       "Don't let WebGL become required for understanding the brand, copy, source boundary, or action."
     ]
   }
