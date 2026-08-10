@@ -6,16 +6,17 @@ const root = resolve(import.meta.dirname, "..");
 const baseUrl = (process.argv[2] || "http://127.0.0.1:4177").replace(/\/$/, "");
 const round = process.argv[3] || "round-1";
 const routeFilter = process.argv[4] || "";
+const labRoute = process.argv[5] || "/";
 const output = join(root, "artifacts", "browser", round);
 mkdirSync(output, { recursive: true });
 
 const routes = [
-  ["lab", "/"],
+  ["lab", labRoute],
   ["maclaren", "/sites/maclaren-kitchen-bath/"],
   ["golden", "/sites/golden-eagle-jewelry/"],
   ["morton", "/sites/morton-electric-pool-spa/"]
 ];
-const selectedRoutes = routeFilter ? routes.filter(([name]) => name === routeFilter) : routes;
+const selectedRoutes = routeFilter && routeFilter !== "all" ? routes.filter(([name]) => name === routeFilter) : routes;
 if (selectedRoutes.length === 0) throw new Error(`Unknown route filter: ${routeFilter}`);
 const viewports = [
   ["desktop", { width: 1440, height: 1000 }],
