@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T04:50:21.343Z",
+  "generatedAt": "2026-08-10T05:31:25.002Z",
   "ok": true,
   "pages": 4,
   "checks": [
@@ -159,8 +159,8 @@
     },
     {
       "name": "steam-noise.webp",
-      "bytes": 340176,
-      "sha256": "60ef0b290339f792894d10c8a188ba75a75ca08673aeb17ce56c8fdb6e3ce91b"
+      "bytes": 340484,
+      "sha256": "2cf63fdb7eacb7244a2dbe38e33ef6f79fda13e396dc6dabbcf319c849205f81"
     },
     {
       "name": "stone-vein.webp",
@@ -292,10 +292,10 @@
     "files": [
       "dist/assets/lab-D9huO-5A.js",
       "dist/assets/modulepreload-polyfill-B5Qt9EMX.js",
-      "dist/assets/site-BXnTf1BN.js"
+      "dist/assets/site-DxJ3_RUv.js"
     ],
     "bytes": 556099,
-    "gzipBytes": 143868,
+    "gzipBytes": 143866,
     "gzipKilobytes": 140.5
   }
 }

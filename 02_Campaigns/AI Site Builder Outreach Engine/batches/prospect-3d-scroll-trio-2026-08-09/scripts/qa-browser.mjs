@@ -20,7 +20,8 @@ const selectedRoutes = routeFilter && routeFilter !== "all" ? routes.filter(([na
 if (selectedRoutes.length === 0) throw new Error(`Unknown route filter: ${routeFilter}`);
 const viewports = [
   ["desktop", { width: 1440, height: 1000 }],
-  ["mobile", { width: 390, height: 844 }]
+  ["mobile", { width: 390, height: 844 }],
+  ["mobile-short", { width: 375, height: 667 }]
 ];
 const results = [];
 const reportPath = join(root, "artifacts", `BROWSER-QA-${round}.json`);

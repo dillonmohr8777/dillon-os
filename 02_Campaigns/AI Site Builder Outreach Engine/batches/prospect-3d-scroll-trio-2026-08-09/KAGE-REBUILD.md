@@ -136,10 +136,16 @@ not the client.
   choreographed, but it is boxes, tubes and lathes — not modelled assets. It
   reads as authored CG, not as photography. Closing that gap needs either real
   3D assets or generated plates for the mid-ground.
-- **Not deployed.** No Netlify credential is present in this environment, so the
-  composed 30-route deployment to `momentum-prospect-radar-next10-2026-08-08`
-  has not been run. `npm run compose` and `npm run qa:deploy` are unchanged and
-  still expect the verified 30-route handoff as their base.
+- **Deployed August 10, 2026.** The verified 30-route handoff was composed with
+  builds 166 through 168 and published to the existing Netlify site
+  `momentum-prospect-radar-next10-2026-08-08`. Production deploy
+  `6a79628feeb48f62cf22cc84` passed all eight release checks across the root,
+  lab, 30 prospect routes, response headers, and referenced assets.
+- **Copy and mobile refinement.** Customer-facing copy now leads with the
+  decision each visitor is making while keeping every source boundary intact.
+  Visible dash punctuation was removed. Mobile type, touch targets, stacked
+  actions, short-screen spacing, and wordmark clearance were tightened and
+  verified at 390 by 844 and 375 by 667.
 - All prospect content boundaries are unchanged: no fabricated awards,
   testimonials, inventory, pricing, hours or service claims; pages stay
   `noindex` with the mail hold in place.
