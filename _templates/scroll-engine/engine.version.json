@@ -1,0 +1,17 @@
+﻿{
+    "engine_version":  "0.1.0",
+    "extracted_from":  "refs/pull/270/head",
+    "source_commit":  "a519c5815c07b6f10fe778060c604391586829cb",
+    "source_path":  "02_Campaigns/AI Site Builder Outreach Engine/batches/prospect-3d-scroll-next10-2026-08-10",
+    "extracted_at":  "2026-08-10",
+    "files":  {
+                  "src/scenes.js":  "7a170f2733e4f2cddb83665f68e6e3439c8db7b2330ecc05e62271753561ec50",
+                  "src/site.js":  "a99f2581bb4aab1dc71ae0f252d874a63a96ef5d844c7209f39e162df1a1ff32",
+                  "src/styles.css":  "45438e4bc919de93a6f2897eaf2b58e31b700bc0f519e58b4c05cbcebca094bf",
+                  "scripts/build-pages.mjs":  "e6cb8931fb96bc98cc2c6810160d1876d8182b34ec39cf4d187825521cfaa62e",
+                  "scripts/generate-textures.mjs":  "302befa99eae9f8f8212b327637fcd6232803075fcaab11f6db4770ca79b106d",
+                  "scripts/qa.mjs":  "8d67d3a87aeddf19d93132c1773b45243b3c4df2255196f584034d302d2e8a91",
+                  "scripts/qa-browser.mjs":  "911cbf6611b64ddf4880a4c72335b55a397e68fd9f8d899c3c9bda4eff9d2bcc",
+                  "vite.config.js":  "d2435c57607d04a88387c2b55a16e816cc0ebaaec1d3c9d2ab8bce8e7c4464b7"
+              }
+}
