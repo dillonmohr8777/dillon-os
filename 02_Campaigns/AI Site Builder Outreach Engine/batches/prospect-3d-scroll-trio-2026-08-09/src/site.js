@@ -1,6 +1,13 @@
 import "./styles.css";
 import { createScrollScene } from "./scenes.js";
 
+/*
+  Entrances are opt-in from script. If this module never runs, the stylesheet
+  still loads — so the hidden state has to be gated on JS being alive, or a
+  failed bundle would leave a page full of invisible content.
+*/
+document.documentElement.classList.add("has-js");
+
 const body = document.body;
 const site = body.dataset.site;
 const canvas = document.querySelector("#scene-canvas");
@@ -33,9 +40,22 @@ function scrollProgress() {
   return distance > 0 ? clamp(scrollY / distance, 0, 1) : 0;
 }
 
+/*
+  The camera route belongs to the chapters, not to the whole document. The
+  closing sections are read over a world that has already resolved, so the
+  sequence has to finish when the story does rather than dragging its last beat
+  across another few screens of copy.
+*/
+function sceneProgress() {
+  const last = chapters.at(-1);
+  if (!last) return scrollProgress();
+  const end = last.getBoundingClientRect().bottom + scrollY - innerHeight;
+  return end > 0 ? clamp(scrollY / end, 0, 1) : 1;
+}
+
 function updateTarget() {
-  targetProgress = reducedMotion ? 1 : scrollProgress();
-  document.documentElement.style.setProperty("--scroll-progress", targetProgress.toFixed(4));
+  targetProgress = reducedMotion ? 1 : sceneProgress();
+  document.documentElement.style.setProperty("--scroll-progress", scrollProgress().toFixed(4));
   /*
     The closing sections sit below the last chapter, so once the reader is past
     them the observer has nothing left in its band. Latch the final state rather
@@ -112,10 +132,87 @@ function render(time = 0) {
   const shot = scene.update(progress, time / 1000, elapsed);
   scene.render();
   updateAnchors();
+  sweepReveal();
   body.dataset.sceneProgress = progress.toFixed(2);
   if (beatOutput && shot) beatOutput.textContent = String(shot.index + 1).padStart(2, "0");
   if (!reducedMotion) frameId = requestAnimationFrame(render);
 }
+
+/* ---------------------------------------------------------------------------
+   Display type reveal.
+   Words are wrapped in a clipping span so each one can rise out of its own
+   mask. Element children (a <br>, a <b>) are left alone so line breaks and
+   inline emphasis survive the split.
+--------------------------------------------------------------------------- */
+function splitWords(element) {
+  if (element.dataset.split === "done") return;
+  element.dataset.split = "done";
+  let index = 0;
+  for (const node of [...element.childNodes]) {
+    if (node.nodeType !== Node.TEXT_NODE) continue;
+    const fragment = document.createDocumentFragment();
+    for (const part of node.textContent.split(/(\s+)/)) {
+      if (!part) continue;
+      if (!part.trim()) {
+        fragment.appendChild(document.createTextNode(part));
+        continue;
+      }
+      const mask = document.createElement("span");
+      mask.className = "word";
+      mask.style.setProperty("--i", String(index++));
+      const inner = document.createElement("i");
+      inner.textContent = part;
+      mask.appendChild(inner);
+      fragment.appendChild(mask);
+    }
+    node.replaceWith(fragment);
+  }
+}
+
+const headlines = [...document.querySelectorAll("h1, h2, .final-frame strong, .index-card h3")];
+headlines.forEach(splitWords);
+
+/*
+  One observer for everything that animates in. Elements keep their revealed
+  state once seen — re-animating on the way back up reads as a glitch, not a
+  flourish.
+*/
+const revealTargets = [...document.querySelectorAll("[data-reveal]"), ...headlines];
+const pendingReveal = new Set(revealTargets);
+
+function reveal(element) {
+  element.classList.add("is-revealed");
+  pendingReveal.delete(element);
+  revealObserver.unobserve(element);
+}
+
+const revealObserver = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting) reveal(entry.target);
+  }
+}, { rootMargin: "0px 0px -12% 0px", threshold: 0.08 });
+
+revealTargets.forEach((target) => revealObserver.observe(target));
+
+/*
+  The observer is the efficient path, but its callbacks are queued behind the
+  render loop — on a slow device that can leave content sitting at opacity 0
+  well after it has scrolled into view. This sweep runs on the scroll event
+  itself and reveals anything already on screen, so nothing stays hidden
+  waiting for a frame that is late.
+*/
+function sweepReveal() {
+  if (!pendingReveal.size) return;
+  const limit = innerHeight * 0.9;
+  for (const element of [...pendingReveal]) {
+    const rect = element.getBoundingClientRect();
+    if (rect.top < limit && rect.bottom > 0) reveal(element);
+  }
+}
+
+addEventListener("scroll", sweepReveal, { passive: true });
+addEventListener("resize", sweepReveal, { passive: true });
+sweepReveal();
 
 try {
   if (new URLSearchParams(location.search).has("forceWebglFallback")) {
@@ -167,8 +264,19 @@ const observer = new IntersectionObserver((entries) => {
 
 chapters.forEach((chapter) => observer.observe(chapter));
 
+
+/* Pointer-driven highlight, so hovering the page moves light rather than nothing. */
+if (!reducedMotion && !matchMedia("(pointer: coarse)").matches) {
+  const root = document.documentElement;
+  addEventListener("pointermove", (event) => {
+    root.style.setProperty("--mx", `${(event.clientX / innerWidth * 100).toFixed(2)}%`);
+    root.style.setProperty("--my", `${(event.clientY / innerHeight * 100).toFixed(2)}%`);
+  }, { passive: true });
+}
+
 addEventListener("pagehide", () => {
   if (frameId) cancelAnimationFrame(frameId);
   observer.disconnect();
+  revealObserver.disconnect();
   scene?.dispose();
 }, { once: true });

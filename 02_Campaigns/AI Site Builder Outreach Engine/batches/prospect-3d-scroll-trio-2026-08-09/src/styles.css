@@ -492,9 +492,10 @@ body[data-site="golden"] h2 { font-family: "Facet Display", "Lab Display", sans-
 
 h1 {
   max-width: 12ch;
-  font-size: clamp(4rem, 7.5vw, 7.6rem);
-  line-height: .82;
-  text-shadow: 0 14px 42px rgba(0,0,0,.48);
+  font-size: clamp(4.2rem, 8.1vw, 8.4rem);
+  line-height: .86;
+  letter-spacing: -.038em;
+  text-shadow: 0 2px 0 rgba(0,0,0,.25), 0 18px 54px rgba(0,0,0,.62), 0 44px 96px rgba(0,0,0,.4);
 }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
@@ -521,14 +522,14 @@ h1 {
 .hero-wordmark {
   position: absolute;
   right: -1.5vw;
-  bottom: 4.5vh;
+  bottom: 8.5vh;
   margin: 0;
   color: rgba(246,243,235,.94);
   font-family: "Lab Display", sans-serif;
-  font-size: clamp(5.5rem, 14.8vw, 14.5rem);
-  line-height: .7;
-  letter-spacing: -.055em;
-  text-shadow: 0 18px 70px rgba(0,0,0,.4);
+  font-size: clamp(5.8rem, 15.5vw, 15.5rem);
+  line-height: .74;
+  letter-spacing: -.06em;
+  text-shadow: 0 20px 80px rgba(0,0,0,.55), 0 60px 140px rgba(0,0,0,.35);
   transform: translate3d(calc(var(--scroll-progress) * -2vw), 0, 0);
   animation: wordmark-in 1.45s .45s cubic-bezier(.16, 1, .3, 1) both;
   white-space: nowrap;
@@ -632,7 +633,13 @@ body[data-site="golden"] .hero-wordmark { font-family: "Facet Display", "Lab Dis
   transform: rotate(180deg);
 }
 
-.chapter h2 { max-width: 10ch; font-size: clamp(3.1rem, 5.2vw, 5.5rem); line-height: .93; }
+.chapter h2 {
+  max-width: 10ch;
+  font-size: clamp(3.3rem, 5.9vw, 6.2rem);
+  line-height: .92;
+  letter-spacing: -.035em;
+  text-shadow: 0 2px 0 rgba(0,0,0,.22), 0 16px 48px rgba(0,0,0,.6), 0 40px 88px rgba(0,0,0,.36);
+}
 .chapter-copy > p {
   max-width: 60ch;
   margin: 28px 0 0;
@@ -691,8 +698,8 @@ blockquote {
 .final-frame-image { position: absolute; inset: 5vh 4vw; background-image: linear-gradient(180deg, rgba(3,5,6,.08), rgba(3,5,6,.2) 58%, rgba(3,5,6,.9)), var(--frame-6); background-position: center; background-size: cover; filter: brightness(.96) saturate(.9); }
 .final-frame::after { content: ""; position: absolute; inset: 5vh 4vw; border: 1px solid rgba(255,255,255,.16); pointer-events: none; }
 .final-frame > p { position: relative; z-index: 2; display: grid; gap: 14px; margin: 0 0 3vh; }
-.final-frame > p span { color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
-.final-frame > p strong { max-width: 12ch; font-family: "Lab Display", sans-serif; font-size: clamp(3.5rem, 7vw, 7rem); font-weight: 400; line-height: .84; letter-spacing: -.035em; }
+.final-frame > p > span { color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.final-frame > p strong { max-width: 12ch; font-family: "Lab Display", sans-serif; font-size: clamp(3.6rem, 7.6vw, 7.8rem); font-weight: 400; line-height: .88; letter-spacing: -.04em; text-shadow: 0 18px 56px rgba(0,0,0,.6); }
 
 .verification-panel {
   position: relative;
@@ -722,7 +729,7 @@ blockquote {
 }
 .verification-panel > * { position: relative; z-index: 1; }
 
-.verification-panel > div:first-child span {
+.verification-panel > div:first-child > span {
   display: block;
   margin: 0 0 24px;
   color: color-mix(in srgb, var(--accent-strong) 48%, #050505);
@@ -732,7 +739,7 @@ blockquote {
   text-transform: uppercase;
 }
 
-.verification-panel h2 { max-width: 12ch; font-size: clamp(3rem, 5vw, 5.2rem); line-height: .92; }
+.verification-panel h2 { max-width: 12ch; font-size: clamp(3.2rem, 5.8vw, 6rem); line-height: .88; letter-spacing: -.035em; text-shadow: none; }
 .verification-panel > p { max-width: 52ch; margin: 0; font-size: 16px; line-height: 1.75; }
 .verification-actions { grid-column: 2; display: flex; flex-wrap: wrap; gap: 24px; }
 .verification-actions a { padding-bottom: 7px; border-bottom: 1px solid #111; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
@@ -754,6 +761,290 @@ blockquote {
 .site-footer a { text-underline-offset: 6px; }
 .site-footer span { color: var(--paper-dim); }
 
+/* =========================================================================
+   Reveal system
+   Everything that enters does so on the same curve and the same clock, so the
+   page reads as one directed sequence instead of a pile of separate effects.
+========================================================================= */
+:root { --ease-out: cubic-bezier(.16, 1, .3, 1); --mx: 50%; --my: 40%; }
+
+/* Display type rises word by word out of its own mask. */
+.word,
+.word > i {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: .24em;
+  margin-bottom: -.24em;
+}
+
+.has-js .word > i {
+  display: inline-block;
+  font-style: inherit;
+  transform: translate3d(0, 128%, 0) rotate(3deg);
+  transition: transform 1.05s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 52ms);
+  will-change: transform;
+}
+
+.has-js .is-revealed .word > i,
+.has-js .word.is-revealed > i { transform: none; }
+
+/* Generic entrances. Direction is set per element with data-reveal. */
+.has-js [data-reveal] {
+  opacity: 0;
+  transition: opacity .9s var(--ease-out), transform 1.05s var(--ease-out), clip-path 1.15s var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 90ms);
+}
+
+[data-reveal="fade"] { transform: none; }
+[data-reveal="up"] { transform: translate3d(0, 46px, 0); }
+[data-reveal="left"] { transform: translate3d(-52px, 0, 0); }
+[data-reveal="right"] { transform: translate3d(52px, 0, 0); }
+[data-reveal="wipe"] { clip-path: inset(0 100% 0 0); transform: none; }
+[data-reveal="wipe-left"] { clip-path: inset(0 0 0 100%); transform: none; }
+[data-reveal="scale"] { transform: scale(.92); }
+
+.has-js [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 0 0 0);
+}
+
+/* =========================================================================
+   Editorial frames
+   A wipe uncovers the frame while the image inside settles back from an
+   overscan, so the picture arrives rather than appearing.
+========================================================================= */
+.has-js .chapter-visual {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.2s var(--ease-out), transform .7s var(--ease-out);
+}
+
+.chapter-visual.is-revealed { clip-path: inset(0 0 0 0); }
+
+.has-js .chapter-visual > div {
+  transform: scale(1.16);
+  transition: transform 1.5s var(--ease-out), filter .6s ease;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.4),
+    0 26px 60px rgba(0,0,0,.5),
+    0 60px 120px rgba(0,0,0,.42);
+}
+
+.chapter-visual.is-revealed > div { transform: scale(1); }
+
+.chapter-visual:hover { transform: translateY(-8px); }
+.chapter-visual:hover > div { transform: scale(1.06); filter: brightness(1.1) saturate(1.06); }
+.chapter-visual:hover::before { border-color: var(--accent); }
+.chapter-visual::before { transition: border-color .45s ease; }
+
+.hero-inset {
+  transition: transform .6s var(--ease-out), box-shadow .6s ease, filter .5s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,.35), 0 34px 80px rgba(0,0,0,.5);
+}
+
+.hero-inset:hover {
+  transform: translate3d(0, calc(var(--scroll-progress) * 2vh - 9px), 0) scale(1.035);
+  box-shadow: 0 12px 26px rgba(0,0,0,.4), 0 46px 110px rgba(0,0,0,.62);
+  filter: brightness(1.12);
+}
+
+.has-js .final-frame-image {
+  transition: transform 1.6s var(--ease-out), filter .8s ease;
+  transform: scale(1.1);
+}
+
+.final-frame.is-revealed .final-frame-image { transform: scale(1); }
+.final-frame-image:hover { filter: brightness(1.08) saturate(1.05); }
+
+/* =========================================================================
+   Hover behaviour
+   Pointer state should move light and depth, not just swap a colour.
+========================================================================= */
+.primary-action {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 26%, transparent);
+}
+
+.primary-action::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.55) 50%, transparent 80%);
+  transform: translateX(-120%);
+  transition: transform .8s var(--ease-out);
+}
+
+.primary-action:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px color-mix(in srgb, var(--accent) 42%, transparent);
+}
+
+.primary-action:hover::after { transform: translateX(120%); }
+
+.secondary-action { position: relative; }
+.secondary-action::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .45s var(--ease-out);
+}
+.secondary-action:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.detail-list li,
+.material-ledger div { transition: background .4s ease, padding-left .45s var(--ease-out); }
+.detail-list li:hover,
+.material-ledger div:hover {
+  padding-left: 12px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%);
+}
+
+/* A pool of light that follows the pointer across the fixed world. */
+.scene-scrim::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(420px circle at var(--mx) var(--my), color-mix(in srgb, var(--accent) 13%, transparent), transparent 68%);
+  opacity: calc(.35 + var(--world-reveal) * .5);
+  transition: opacity .6s ease;
+}
+
+/* =========================================================================
+   Added sections
+========================================================================= */
+.index-band {
+  position: relative;
+  z-index: 5;
+  padding: 14vh clamp(24px, 5.5vw, 96px) 12vh;
+  background: linear-gradient(180deg, rgba(4,6,8,.72), rgba(4,6,8,.94));
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.index-band > header { max-width: 46ch; margin: 0 0 clamp(38px, 5vw, 68px); }
+.index-band h2 {
+  max-width: 18ch;
+  font-size: clamp(2.6rem, 4.6vw, 4.6rem);
+  line-height: .92;
+  letter-spacing: -.035em;
+}
+.index-band > header > span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+.index-band > header p { margin: 22px 0 0; color: var(--paper-dim); font-size: clamp(14px, 1.1vw, 17px); line-height: 1.75; }
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.13);
+}
+
+.index-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: clamp(24px, 2.4vw, 38px);
+  background: #070a0c;
+  transition: background .5s ease, transform .5s var(--ease-out);
+}
+
+.index-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform .55s var(--ease-out);
+}
+
+.index-card:hover { background: #0c1114; transform: translateY(-6px); }
+.index-card:hover::before { transform: scaleY(1); transform-origin: top; }
+
+.index-card b { color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .2em; }
+.index-card h3 {
+  margin: 0;
+  font-family: "Lab Display", sans-serif;
+  font-size: clamp(1.35rem, 1.9vw, 1.85rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -.02em;
+}
+body[data-site="golden"] .index-card h3 { font-family: "Facet Display", "Lab Display", sans-serif; }
+.index-card p { margin: 0; color: var(--paper-dim); font-size: 13.5px; line-height: 1.65; }
+
+.measures {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(26px, 4vw, 70px);
+  padding: 11vh clamp(24px, 5.5vw, 96px);
+  background: #050708;
+}
+
+.measures div { display: grid; gap: 12px; }
+.measures dt { color: var(--paper-dim); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
+.measures dd {
+  margin: 0;
+  font-family: "Lab Display", sans-serif;
+  font-size: clamp(2.6rem, 4.6vw, 4.4rem);
+  line-height: .86;
+  letter-spacing: -.04em;
+}
+body[data-site="golden"] .measures dd { font-family: "Facet Display", "Lab Display", sans-serif; }
+.measures dd small { display: block; margin-top: 12px; color: var(--paper-dim); font-family: "Lab Text", sans-serif; font-size: 12.5px; line-height: 1.55; letter-spacing: 0; }
+
+.brief-panel {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(40px, 6vw, 110px);
+  padding: 14vh clamp(24px, 5.5vw, 96px);
+  background: linear-gradient(180deg, rgba(4,6,8,.9), rgba(4,6,8,.99));
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.brief-panel h2 { font-size: clamp(2.6rem, 4.4vw, 4.4rem); line-height: .92; }
+.brief-panel > div:last-child { display: grid; gap: 26px; align-content: start; }
+.brief-panel p { margin: 0; color: rgba(245,242,234,.78); font-size: clamp(14px, 1.1vw, 17px); line-height: 1.8; }
+.brief-panel .brief-note {
+  padding: 20px 24px;
+  border-left: 2px solid var(--accent);
+  background: rgba(255,255,255,.035);
+  color: var(--paper);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 @keyframes plate-in { from { opacity: .48; } to { opacity: 1; } }
 @keyframes header-in { from { opacity: 0; transform: translateY(-22px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes copy-in { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
@@ -769,6 +1060,7 @@ blockquote {
   .hero-copy { width: min(610px, 62vw); }
   .chapter-copy { width: min(520px, 55vw); }
   .chapter { gap: 36px; }
+  .index-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
@@ -862,6 +1154,18 @@ blockquote {
   .verification-panel > p { font-size: 14px; }
   .verification-actions { grid-column: 1; }
   .site-footer { align-items: flex-start; flex-direction: column; padding: 30px 22px; }
+
+  .index-band { padding: 10vh 22px 9vh; }
+  .index-grid { grid-template-columns: 1fr; }
+  .index-card { padding: 22px; }
+  .measures { grid-template-columns: 1fr 1fr; gap: 28px 20px; padding: 9vh 22px; }
+  .measures dd { font-size: clamp(2.1rem, 11vw, 3rem); }
+  .brief-panel { grid-template-columns: 1fr; gap: 30px; padding: 10vh 22px; }
+  .brief-panel h2 { font-size: clamp(2.4rem, 11vw, 3.6rem); }
+
+  /* Sideways entrances read as jitter in a narrow column. */
+  [data-reveal="left"],
+  [data-reveal="right"] { transform: translate3d(0, 34px, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -877,4 +1181,16 @@ blockquote {
   .panel-anchor { transition: none; }
   .data-strip { opacity: 1; }
   .scene-scrim { opacity: 1; }
+
+  /*
+    Nothing waits on an observer here: every entrance resolves to its finished
+    state so the page is fully composed on arrival rather than half-hidden.
+  */
+  .word > i { transform: none !important; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .chapter-visual { clip-path: none !important; }
+  .chapter-visual > div,
+  .final-frame-image { transform: none !important; }
+  .primary-action::after { display: none; }
+  .scene-scrim::before { display: none; }
 }

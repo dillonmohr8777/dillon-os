@@ -75,6 +75,54 @@ plastic.
   copper supply and return, pump and heater rise into view, the impeller spins
   up and steam lifts off the surface.
 
+## Second pass — presence and length
+
+The first pass got the architecture right but the pages read quietly and ran
+short. This pass raised the volume and added the material a prospect actually
+reads.
+
+**Type.** Display sizes up roughly 15%, with layered cast shadows instead of a
+single blur. Headlines are split into words at runtime and each word rises out
+of its own clipping mask on a staggered delay — element children (`<br>`,
+inline `<b>`) survive the split, so line breaks and emphasis are preserved.
+
+Two things that had to be got right for that to work:
+
+- The masks are `<span>`s, so any existing descendant `span` rule restyled
+  headline words as if they were captions. Those rules are now scoped to direct
+  children, and `.word` inherits typography explicitly.
+- `overflow: hidden` on a mask clips descenders. The mask carries
+  `padding-bottom: .24em` with a matching negative margin so `g`, `y` and `p`
+  keep their tails.
+
+**Motion and depth.** A single reveal system (`data-reveal` with `up`/`left`/
+`right`/`wipe`/`scale`/`fade`) drives every entrance on one easing curve.
+Editorial frames wipe open while the image inside settles back from a 1.16
+overscan. Buttons carry a sheen sweep, cards lift and light a leading rule,
+list rows inset on hover, and a pointer-tracked pool of light moves across the
+fixed world.
+
+**Reveals are frame-driven, not event-driven.** This is the part worth knowing
+about. Scroll events and IntersectionObserver callbacks both queue behind the
+render loop; on a slow device that left whole sections sitting at `opacity: 0`
+for seconds after scrolling into view. Reveals now run inside the existing rAF
+loop, with the observer kept as the cheap path and a scroll sweep as a
+fallback for the no-WebGL case. The hidden state is also gated behind a
+`has-js` class, so a bundle that never executes leaves a fully visible page
+rather than a blank one.
+
+**Scene progress is chapter-relative.** The added sections roughly doubled page
+height, which would otherwise have stretched the camera route across another
+few screens of copy. The route now completes at the end of the last chapter and
+holds, so the closing material is read over a world that has already resolved.
+
+**Length.** Three sections per prospect: a six-card sequence grid describing how
+the work is actually staged, a measures band reporting how the page itself was
+built, and a brief panel stating plainly what would need to be confirmed with
+the business before anything went live. All of it is written to avoid asserting
+anything about the specific business — the sequence cards describe the trade,
+not the client.
+
 ## Honest limitations
 
 - **No new photography was generated.** This environment has no image-generation
