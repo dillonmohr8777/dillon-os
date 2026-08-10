@@ -19,8 +19,8 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] [[Daily-Briefs/competitive-task-today|Competitive task brief]] — umbrella daily loop
-- [ ] Stabilize Jason/Sean bot case-status alerts (4 Slack loops 10+ days old)
+- [ ] NKCDC launch nudge — Free Tax Prep page blocking go-live
+- [ ] BigOrange pillar audit — due 2026-08-10
 - [ ] Hardwood Artisan billing — Dalton card on file (at_risk)
 
 ## Competitive Task

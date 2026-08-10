@@ -1,0 +1,16 @@
+{
+  "lane": "codex-session-sync",
+  "status": "warn",
+  "connector": "vault",
+  "date": "2026-08-10",
+  "session_notes": 0,
+  "raw_log_exists": true,
+  "newest_session": null,
+  "codex_handoffs_in_repo": [
+    "11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md",
+    "GROK-HANDOFF-DILLON-OS.md",
+    "12_Brain/entities/Codex Workspace (Legacy).md"
+  ],
+  "action": "No new 10_Sessions/ notes since last run; Codex history lives on 64GB desktop",
+  "gaps": ["Codex session_index.jsonl not in Git; operator machine is source"]
+}

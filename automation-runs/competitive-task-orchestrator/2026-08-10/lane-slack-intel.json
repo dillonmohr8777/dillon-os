@@ -1,0 +1,31 @@
+{
+  "lane": "slack-intel",
+  "status": "warn",
+  "connector": "vault-fallback",
+  "date": "2026-08-10",
+  "open_loops": 4,
+  "stale_days": 11,
+  "top_items": [
+    {
+      "file": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md",
+      "priority": "urgent",
+      "ask": "Bot stability + case-status notifications to Jason and Sean"
+    },
+    {
+      "file": "00_Inbox/slack/2026-07-30-sean-callrail-status.md",
+      "priority": "high",
+      "ask": "Verify CallRail activity and report what changed"
+    },
+    {
+      "file": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md",
+      "priority": "high",
+      "ask": "Guidelines training prompt status + Loom timing"
+    },
+    {
+      "file": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md",
+      "priority": "high",
+      "ask": "NeedMomentum brand direction"
+    }
+  ],
+  "gaps": ["Slack MCP unavailable; inbox mirrors frozen at 2026-07-30"]
+}

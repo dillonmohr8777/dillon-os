@@ -1,0 +1,18 @@
+{
+  "lane": "vault-pulse",
+  "status": "ok",
+  "connector": "vault",
+  "date": "2026-08-10",
+  "clients_scanned": 38,
+  "frontmatter_complete": 38,
+  "moving": 0,
+  "at_risk": 1,
+  "urgent_count": 8,
+  "due_today": ["BigOrange Marketing"],
+  "top_urgent": [
+    { "client": "NKCDC", "status": "active", "issue": "launch blocked on Free Tax Prep page" },
+    { "client": "Hardwood Artisan", "status": "at_risk", "issue": "billing card stale" },
+    { "client": "BigOrange Marketing", "status": "active", "due": "2026-08-10", "issue": "pillar audit review today" }
+  ],
+  "gaps": ["No 24h file changes under 01_Clients/ — movement tracking stale"]
+}

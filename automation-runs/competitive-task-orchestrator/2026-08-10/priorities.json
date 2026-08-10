@@ -1,0 +1,96 @@
+{
+  "p0": [
+    {
+      "source": "client",
+      "client": "Hardwood Artisan",
+      "action": "URGENT — Sean is pushing Dalton to update the card on file for the next 90 days. Engagement is at risk of pausing if Dalton doesn't act.",
+      "due": "2026-04-18",
+      "status": "at_risk"
+    },
+    {
+      "source": "client",
+      "client": "NKCDC",
+      "action": "URGENT — launch is pending NKCDC finalizing the Free Tax Prep page. Mac checked in 2026-04-15, no response from Anthony. Nudge again.",
+      "due": "2026-04-16",
+      "status": "active"
+    },
+    {
+      "source": "slack",
+      "file": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md",
+      "client": "Momentum 360",
+      "type": "automation",
+      "requested_by": "Jason Fallon and Sean Boyle",
+      "priority": "urgent"
+    }
+  ],
+  "p1": [
+    {
+      "source": "client",
+      "client": "Bar Crawl USA",
+      "action": "Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing",
+      "due": "2026-04-25",
+      "status": "active"
+    },
+    {
+      "source": "client",
+      "client": "BigOrange Marketing",
+      "action": "Prepare the Custom Home Builder pillar audit and Janice interview for the August 10 review.",
+      "due": "2026-08-10",
+      "status": "active"
+    },
+    {
+      "source": "client",
+      "client": "Bok Law",
+      "action": "Continue weekly social content cadence (Wednesday Wisdom, Turn the Page Thursday, Family Fridays)",
+      "due": "2026-04-19",
+      "status": "active"
+    },
+    {
+      "source": "client",
+      "client": "Commercial Cleaners Alliance",
+      "action": "Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment",
+      "due": "2026-04-16",
+      "status": "onboarding"
+    },
+    {
+      "source": "client",
+      "client": "Link Eze",
+      "action": "Resolve enhanced conversions data source diagnostics warning; confirm MFA is enabled on Google Ads account (customer ID 809-600-6448) before April 6 cutoff",
+      "due": "2026-04-06",
+      "status": "active"
+    },
+    {
+      "source": "client",
+      "client": "Onsite Concrete",
+      "action": "Attend weekly Onsite x M360 call Thursday 2026-04-16 1:00 PM ET",
+      "due": "2026-04-16",
+      "status": "active"
+    },
+    {
+      "source": "slack",
+      "file": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md",
+      "client": "Momentum 360",
+      "type": "content",
+      "requested_by": "Melissa Silber",
+      "priority": "high"
+    },
+    {
+      "source": "slack",
+      "file": "00_Inbox/slack/2026-07-30-sean-callrail-status.md",
+      "client": "Momentum 360",
+      "type": "report",
+      "requested_by": "Sean Boyle",
+      "priority": "high"
+    }
+  ],
+  "p2": [
+    {
+      "source": "slack",
+      "file": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md",
+      "client": "Momentum 360",
+      "type": "question",
+      "requested_by": "Jenny McClain Miller",
+      "priority": "normal"
+    }
+  ]
+}

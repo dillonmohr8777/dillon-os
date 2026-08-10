@@ -1,0 +1,15 @@
+{
+  "lane": "domain-ads-seo",
+  "status": "warn",
+  "connector": "vault",
+  "date": "2026-08-10",
+  "frontmatter": { "status": "ok", "complete": 38, "incomplete": 0 },
+  "site_health": { "status": "fail", "mode": "dry-run", "fail_reason": "fixture-broken-form /api/dossier-leads canary" },
+  "radar": {
+    "file": "Daily-Briefs/radar-2026-08-10.md",
+    "tracked": 921,
+    "build_queue": 152,
+    "needs_render": 1
+  },
+  "gates_pending": ["netlify_deploy_token", "mail_vendor", "landingfolio_token", "obsidian_sync_cli"]
+}

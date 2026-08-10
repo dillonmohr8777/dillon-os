@@ -1,0 +1,33 @@
+{
+  "lane": "gmail-intel",
+  "status": "warn",
+  "connector": "vault-fallback",
+  "date": "2026-08-10",
+  "top_items": [
+    {
+      "client": "Hardwood Artisan",
+      "thread": "Sean card-update request to Dalton",
+      "severity": "p0",
+      "action": "Chase Dalton on card on file — engagement at risk of pausing"
+    },
+    {
+      "client": "NKCDC",
+      "thread": "Mac check-in + Melissa invoice",
+      "severity": "p0",
+      "action": "Launch blocked on Free Tax Prep page; nudge Anthony Miller"
+    },
+    {
+      "client": "Omega Landscaping",
+      "thread": "Google Ads account discussion Thursday",
+      "severity": "p1",
+      "action": "Monitor — Dillon cc'd, not owner"
+    },
+    {
+      "client": "Commercial Cleaners Alliance",
+      "thread": "Buzz Bull Teams invite",
+      "severity": "p1",
+      "action": "Confirm calendar commitment"
+    }
+  ],
+  "gaps": ["Gmail MCP unavailable; used pulse-today.md and client overviews"]
+}
