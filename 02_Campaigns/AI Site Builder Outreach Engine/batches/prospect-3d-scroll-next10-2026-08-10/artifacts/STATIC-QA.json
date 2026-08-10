@@ -1,0 +1,587 @@
+{
+  "generatedAt": "2026-08-10T15:24:43.564Z",
+  "ok": true,
+  "pages": 11,
+  "checks": [
+    {
+      "label": "Production dist directory exists",
+      "passed": true
+    },
+    {
+      "label": "Lab index plus exactly ten prospect routes",
+      "passed": true
+    },
+    {
+      "label": "index.html exists",
+      "passed": true
+    },
+    {
+      "label": "index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/germantown-dental-group/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/germantown-dental-group/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/germantown-dental-group/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/germantown-dental-group/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/germantown-dental-group/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/germantown-dental-group/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/germantown-dental-group/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/udis-conn-orthodontics/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/udis-conn-orthodontics/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/udis-conn-orthodontics/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/udis-conn-orthodontics/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/udis-conn-orthodontics/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/udis-conn-orthodontics/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/udis-conn-orthodontics/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/jarman-sales-service/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/jarman-sales-service/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/jarman-sales-service/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/jarman-sales-service/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/jarman-sales-service/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/jarman-sales-service/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/jarman-sales-service/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/lees-hoagie-house/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/lees-hoagie-house/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/lees-hoagie-house/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/lees-hoagie-house/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/lees-hoagie-house/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/lees-hoagie-house/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/lees-hoagie-house/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/anthony-gueriera-insurance/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/anthony-gueriera-insurance/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/anthony-gueriera-insurance/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/anthony-gueriera-insurance/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/anthony-gueriera-insurance/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/anthony-gueriera-insurance/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/anthony-gueriera-insurance/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/ban-ban-asian-bistro/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/ban-ban-asian-bistro/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/ban-ban-asian-bistro/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/ban-ban-asian-bistro/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/ban-ban-asian-bistro/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/ban-ban-asian-bistro/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/ban-ban-asian-bistro/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/big-head-transport/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/big-head-transport/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/big-head-transport/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/big-head-transport/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/big-head-transport/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/big-head-transport/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/big-head-transport/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/dutton-road-veterinary-clinic/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/dutton-road-veterinary-clinic/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/dutton-road-veterinary-clinic/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/dutton-road-veterinary-clinic/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/dutton-road-veterinary-clinic/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/dutton-road-veterinary-clinic/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/dutton-road-veterinary-clinic/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/elite-auto-parts/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/elite-auto-parts/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/elite-auto-parts/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/elite-auto-parts/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/elite-auto-parts/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/elite-auto-parts/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/elite-auto-parts/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "sites/kehans-auto-service/index.html exists",
+      "passed": true
+    },
+    {
+      "label": "sites/kehans-auto-service/index.html carries noindex",
+      "passed": true
+    },
+    {
+      "label": "sites/kehans-auto-service/index.html contains no form",
+      "passed": true
+    },
+    {
+      "label": "sites/kehans-auto-service/index.html has a skip link",
+      "passed": true
+    },
+    {
+      "label": "sites/kehans-auto-service/index.html discloses synthetic imagery",
+      "passed": true
+    },
+    {
+      "label": "sites/kehans-auto-service/index.html labels its lockup as a concept mark",
+      "passed": true
+    },
+    {
+      "label": "sites/kehans-auto-service/index.html has no unapproved external runtime dependency",
+      "passed": true
+    },
+    {
+      "label": "germantown-dental-group plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "germantown-dental-group page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "germantown-dental-group plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "germantown-dental-group page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "germantown-dental-group plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "germantown-dental-group page references material plate",
+      "passed": true
+    },
+    {
+      "label": "udis-conn-orthodontics plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "udis-conn-orthodontics page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "udis-conn-orthodontics plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "udis-conn-orthodontics page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "udis-conn-orthodontics plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "udis-conn-orthodontics page references material plate",
+      "passed": true
+    },
+    {
+      "label": "jarman-sales-service plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "jarman-sales-service page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "jarman-sales-service plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "jarman-sales-service page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "jarman-sales-service plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "jarman-sales-service page references material plate",
+      "passed": true
+    },
+    {
+      "label": "lees-hoagie-house plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "lees-hoagie-house page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "lees-hoagie-house plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "lees-hoagie-house page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "lees-hoagie-house plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "lees-hoagie-house page references material plate",
+      "passed": true
+    },
+    {
+      "label": "anthony-gueriera-insurance plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "anthony-gueriera-insurance page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "anthony-gueriera-insurance plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "anthony-gueriera-insurance page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "anthony-gueriera-insurance plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "anthony-gueriera-insurance page references material plate",
+      "passed": true
+    },
+    {
+      "label": "ban-ban-asian-bistro plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "ban-ban-asian-bistro page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "ban-ban-asian-bistro plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "ban-ban-asian-bistro page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "ban-ban-asian-bistro plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "ban-ban-asian-bistro page references material plate",
+      "passed": true
+    },
+    {
+      "label": "big-head-transport plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "big-head-transport page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "big-head-transport plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "big-head-transport page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "big-head-transport plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "big-head-transport page references material plate",
+      "passed": true
+    },
+    {
+      "label": "dutton-road-veterinary-clinic plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "dutton-road-veterinary-clinic page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "dutton-road-veterinary-clinic plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "dutton-road-veterinary-clinic page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "dutton-road-veterinary-clinic plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "dutton-road-veterinary-clinic page references material plate",
+      "passed": true
+    },
+    {
+      "label": "elite-auto-parts plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "elite-auto-parts page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "elite-auto-parts plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "elite-auto-parts page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "elite-auto-parts plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "elite-auto-parts page references material plate",
+      "passed": true
+    },
+    {
+      "label": "kehans-auto-service plate exists: hero",
+      "passed": true
+    },
+    {
+      "label": "kehans-auto-service page references hero plate",
+      "passed": true
+    },
+    {
+      "label": "kehans-auto-service plate exists: macro",
+      "passed": true
+    },
+    {
+      "label": "kehans-auto-service page references macro plate",
+      "passed": true
+    },
+    {
+      "label": "kehans-auto-service plate exists: material",
+      "passed": true
+    },
+    {
+      "label": "kehans-auto-service page references material plate",
+      "passed": true
+    },
+    {
+      "label": "Exactly forty optimized plate derivatives ship",
+      "passed": true
+    },
+    {
+      "label": "Plate derivatives are unique — no recolored copies",
+      "passed": true
+    },
+    {
+      "label": "Exactly seven generated WebP material maps ship",
+      "passed": true
+    },
+    {
+      "label": "Two self-hosted variable fonts ship (Alumni Sans, Public Sans)",
+      "passed": true
+    },
+    {
+      "label": "Production JavaScript remains below 185 KB gzipped",
+      "passed": true
+    },
+    {
+      "label": "Reduced-motion styling ships",
+      "passed": true
+    },
+    {
+      "label": "Visible keyboard focus styling ships",
+      "passed": true
+    },
+    {
+      "label": "Static WebGL fallback styling ships",
+      "passed": true
+    },
+    {
+      "label": "Reveal states are gated on JS being alive",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "productionJavaScript": {
+    "gzipKilobytes": 151.2
+  }
+}

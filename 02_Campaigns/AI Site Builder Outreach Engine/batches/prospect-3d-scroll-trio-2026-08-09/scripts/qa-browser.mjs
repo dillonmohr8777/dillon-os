@@ -20,7 +20,8 @@ const selectedRoutes = routeFilter && routeFilter !== "all" ? routes.filter(([na
 if (selectedRoutes.length === 0) throw new Error(`Unknown route filter: ${routeFilter}`);
 const viewports = [
   ["desktop", { width: 1440, height: 1000 }],
-  ["mobile", { width: 390, height: 844 }]
+  ["mobile", { width: 390, height: 844 }],
+  ["mobile-short", { width: 375, height: 667 }]
 ];
 const results = [];
 const reportPath = join(root, "artifacts", `BROWSER-QA-${round}.json`);
@@ -30,7 +31,7 @@ const writeProgress = () => writeFileSync(reportPath, `${JSON.stringify({
 
 for (const [viewportName, viewport] of viewports) {
   for (const [name, route] of selectedRoutes) {
-    const browser = await chromium.launch({ headless: true });
+    const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_BIN ? { executablePath: process.env.CHROME_BIN } : {}) });
     const context = await browser.newContext({ viewport, reducedMotion: "no-preference" });
     const page = await context.newPage();
     const consoleErrors = [];
@@ -91,7 +92,7 @@ for (const [viewportName, viewport] of viewports) {
 }
 
 for (const [name, route] of selectedRoutes.filter(([name]) => name !== "lab")) {
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_BIN ? { executablePath: process.env.CHROME_BIN } : {}) });
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
   const page = await context.newPage();
   await page.goto(`${baseUrl}${route}`, { waitUntil: "networkidle", timeout: 30000 });
@@ -107,7 +108,7 @@ for (const [name, route] of selectedRoutes.filter(([name]) => name !== "lab")) {
 }
 
 for (const [name, route] of selectedRoutes.filter(([name]) => name !== "lab")) {
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_BIN ? { executablePath: process.env.CHROME_BIN } : {}) });
   const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
   const page = await context.newPage();
   const response = await page.goto(`${baseUrl}${route}?forceWebglFallback=1`, { waitUntil: "networkidle", timeout: 30000 });

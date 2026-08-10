@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23031014%22%2F%3E%3Cpath%20d%3D%22M4%2020c4-4%208-4%2012%200s8%204%2012%200%22%20fill%3D%22none%22%20stroke%3D%22%234bd8e4%22%20stroke-width%3D%222.4%22%2F%3E%3Cpath%20d%3D%22M17%204l-6%209h5l-2%207%207-10h-5z%22%20fill%3D%22%234bd8e4%22%2F%3E%3C%2Fsvg%3E" />
     <meta name="theme-color" content="#031014" />
     <meta name="description" content="A private cinematic pool-system cutaway concept for Morton Electric Pool & Spa Specialists." />
-    <title>Morton Electric Pool &amp; Spa — Cinematic System Concept</title>
+    <title>Morton Electric Pool &amp; Spa | Cinematic System Concept</title>
     <script type="module" src="/src/site.js"></script>
   </head>
   <body data-site="morton">
@@ -31,40 +32,47 @@
     <div class="scene-stage" aria-hidden="true">
       <div class="scene-plate"></div>
       <canvas id="scene-canvas"></canvas>
+      <div class="panel-anchors"></div>
       <div class="scene-scrim"></div>
       <div class="scene-foreground"></div>
       <div class="film-grain"></div>
-      <div class="scene-label"><span>System state</span><strong id="scene-state">Surface</strong></div>
       <div class="scene-hud">
         <span class="hud-axis hud-axis-x"></span><span class="hud-axis hud-axis-y"></span>
         <div class="hud-reticle"><i></i></div>
-        <p class="hud-readout"><span>Study 03 / System</span><strong>24 MM · F 3.2</strong></p>
       </div>
     </div>
     <div class="scene-fallback" role="img" aria-label="A blue-hour pool cutaway with visible water chamber, copper paths, pump, filter and warm service lighting."></div>
     <div class="progress-rail" aria-hidden="true"><span></span></div>
+    <dl class="data-strip" aria-hidden="true">
+      <div><dt>Chapters</dt><dd>04</dd></div>
+      <div><dt>Lens</dt><dd>24 MM</dd></div>
+      <div><dt>Subject</dt><dd>System</dd></div>
+      <div><dt>State</dt><dd><b id="scene-state">Surface</b></dd></div>
+      <div class="strip-beat"><dt>Beat</dt><dd id="scene-beat">01</dd></div>
+    </dl>
+    <ol class="chapter-rail" aria-hidden="true"><li class="is-on"><span>Surface</span><i></i></li><li><span>Flow</span><i></i></li><li><span>Service bay</span><i></i></li><li><span>Source</span><i></i></li></ol>
 
     <main id="story">
       <section class="hero-panel" aria-labelledby="page-title">
         <div class="hero-copy">
-          <p class="hero-context">The calmest surface can hide the most active system in the house.</p>
-          <h1 id="page-title">See what moves<br />beneath the water.</h1>
-          <div class="hero-actions"><a class="primary-action" href="#sequence">Open the system</a><a class="secondary-action" href="https://www.guildquality.com/profile/morton-electric-pool-and-spa-specialists" target="_blank" rel="noopener">Listing source</a></div>
+          <p class="hero-context">The best pool experience begins with systems that keep water, power, and heat working together.</p>
+          <h1 id="page-title">Make the whole system<br />visible.</h1>
+          <div class="hero-actions"><a class="primary-action" href="#sequence">See beneath the surface</a><a class="secondary-action" href="https://www.guildquality.com/profile/morton-electric-pool-and-spa-specialists" target="_blank" rel="noopener">Listing source</a></div>
         </div>
         <p class="hero-wordmark" aria-hidden="true">REVEAL</p>
         <p class="vertical-note" aria-hidden="true">WATER · POWER · HEAT</p>
-        <div class="hero-inset"><span class="inset-index">02 / 06</span><span>System study</span><strong>Circulation / copper / steam</strong><i aria-hidden="true"></i></div>
+        <div class="hero-inset" data-reveal="scale"><span class="inset-index">02 / 06</span><span>System study</span><strong>Circulation / copper / steam</strong><i aria-hidden="true"></i></div>
         <a class="scroll-cue" href="#sequence"><span>Scroll to open</span><i aria-hidden="true"></i></a>
       </section>
 
       <section class="chapter chapter-left" id="sequence" data-scene-state="Surface" aria-labelledby="surface-title">
         <div class="chapter-copy">
           <span class="chapter-step">Surface</span>
-          <h2 id="surface-title">Begin with what the water is doing.</h2>
-          <p>The first shot remains whole: wet stone, quiet reflections, a dark horizon. A visitor begins with an experience—not a mechanical diagram.</p>
+          <h2 id="surface-title">Start with the water you want to enjoy.</h2>
+          <p>Clarity, temperature, movement, and sound shape the experience at the surface. The system underneath exists to support that calm.</p>
           <dl class="material-ledger"><div><dt>Known</dt><dd>Business identity, listing, and reviewed address</dd></div><div><dt>Held open</dt><dd>Current services, systems, timing, and availability</dd></div></dl>
         </div>
-        <figure class="chapter-visual chapter-visual-shell" aria-label="Synthetic crop studying the water surface">
+        <figure class="chapter-visual chapter-visual-shell" data-reveal="fade" aria-label="Synthetic crop studying the water surface">
           <div></div><figcaption><span>01 / Surface</span><strong>Calm water / hidden system</strong></figcaption>
         </figure>
       </section>
@@ -72,8 +80,8 @@
       <section class="chapter chapter-right" data-scene-state="Circulation" aria-labelledby="circulation-title">
         <div class="chapter-copy">
           <span class="chapter-step">Flow</span>
-          <h2 id="circulation-title">The second shot gives the water a direction.</h2>
-          <p>The camera drops to the waterline while cool light traces the chamber. Flow becomes visible as an explanatory layer, not a diagnosis.</p>
+          <h2 id="circulation-title">Give the water a clear path.</h2>
+          <p>Circulation connects every stage of the system. Making that path visible helps a homeowner describe what changed without pretending to diagnose it.</p>
           <ul class="detail-list"><li>Describe the visible condition</li><li>Note when it changed</li><li>Confirm the relevant system</li></ul>
         </div>
       </section>
@@ -81,11 +89,11 @@
       <section class="chapter chapter-left" data-scene-state="Power & heat" aria-labelledby="power-title">
         <div class="chapter-copy">
           <span class="chapter-step">Service bay</span>
-          <h2 id="power-title">Copper and steam separate power from heat.</h2>
-          <p>The service bay takes the foreground. Warm copper paths and rising steam answer a visual question while keeping real equipment and service claims unspoken.</p>
-          <blockquote>Seeing the layers helps frame the conversation. It does not replace inspection.</blockquote>
+          <h2 id="power-title">Separate the jobs of power and heat.</h2>
+          <p>The cutaway distinguishes electrical paths, heating, circulation, and filtration so each part has a clear role in the story.</p>
+          <blockquote>Seeing the layers helps frame the conversation. Inspection provides the answer.</blockquote>
         </div>
-        <figure class="chapter-visual chapter-visual-surface" aria-label="Synthetic crop studying pool equipment">
+        <figure class="chapter-visual chapter-visual-surface" data-reveal="fade" aria-label="Synthetic crop studying pool equipment">
           <div></div><figcaption><span>04 / System</span><strong>Power / heat / circulation</strong></figcaption>
         </figure>
       </section>
@@ -93,18 +101,74 @@
       <section class="chapter chapter-right" data-scene-state="Ready to verify" aria-labelledby="ready-title">
         <div class="chapter-copy">
           <span class="chapter-step">Source</span>
-          <h2 id="ready-title">Close the diagram. Open the real listing.</h2>
-          <p>Confirm current service scope, qualifications, service area, availability, contact details, and the appropriate next step directly.</p>
+          <h2 id="ready-title">Turn the cutaway into a useful conversation.</h2>
+          <p>Confirm current service scope, qualifications, service area, availability, contact details, and the right next step directly.</p>
           <a class="primary-action" href="https://www.guildquality.com/profile/morton-electric-pool-and-spa-specialists" target="_blank" rel="noopener">Open listing source</a>
         </div>
       </section>
 
-      <section class="final-frame" aria-label="Synthetic completed pool-system concept image">
+      <section class="final-frame" data-reveal="fade" aria-label="Synthetic completed pool-system concept image">
         <div class="final-frame-image" role="img" aria-label="A blue-hour pool and spa with its circulation system revealed below"></div>
         <p><span>06 / Complete system</span><strong>What you enjoy.<br />What keeps it moving.</strong></p>
       </section>
+      <section class="index-band" aria-labelledby="sequence-title">
+        <header>
+          <span data-reveal="up">The sequence</span>
+          <h2 id="sequence-title">Six connected systems behind one calm surface.</h2>
+          <p data-reveal="up" style="--d:1">The experience is visible at the waterline. The work that protects it happens through a connected system below.</p>
+        </header>
+        <div class="index-grid">
+        <article class="index-card" data-reveal="up" style="--d:0">
+          <b>01</b>
+          <h3>Surface</h3>
+          <p>What the customer sees, and the only part most people ever actually judge.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:1">
+          <b>02</b>
+          <h3>Circulation</h3>
+          <p>Skimmer, main drain, pump, and return create the loop that keeps water moving.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:2">
+          <b>03</b>
+          <h3>Filtration</h3>
+          <p>The stage that decides how hard everything downstream of it has to work.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:0">
+          <b>04</b>
+          <h3>Heat</h3>
+          <p>Where energy enters the loop, and the component most likely to fail quietly.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:1">
+          <b>05</b>
+          <h3>Power</h3>
+          <p>Bonding, GFCI protection and the electrical work that is never optional around water.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:2">
+          <b>06</b>
+          <h3>Service</h3>
+          <p>The visit that prevents the failure, scheduled before the failure picks its own date.</p>
+        </article>
+        </div>
+      </section>
 
-      <section class="verification-panel" id="verify" aria-labelledby="verify-title">
+      <dl class="measures" aria-label="How this concept page was built">
+        <div data-reveal="up"><dt>Chapters</dt><dd>04<small>Directed camera beats across one continuous world.</small></dd></div>
+        <div data-reveal="up" style="--d:1"><dt>Frames</dt><dd>06<small>Editorial stills placed in 3D space, not pasted over it.</small></dd></div>
+        <div data-reveal="up" style="--d:2"><dt>Focal length</dt><dd>24 MM<small>The working lens this sequence was framed on.</small></dd></div>
+        <div data-reveal="up" style="--d:3"><dt>Stock photos</dt><dd>0<small>Every image here was generated or rendered for this page.</small></dd></div>
+      </dl>
+
+      <section class="brief-panel" aria-labelledby="brief-title">
+        <div><h2 id="brief-title">What we would confirm before building the real thing.</h2></div>
+        <div>
+          <p data-reveal="up" style="--d:0">This page is a concept. The cutaway is rendered, and the sequence gives a general view of pool and spa systems. It does not describe specific work this business has performed.</p>
+          <p data-reveal="up" style="--d:1">A production site would use Morton's actual installation and service scope, licensing, emergency process, coverage area, and the details a homeowner should check before calling.</p>
+          <p class="brief-note" data-reveal="up" style="--d:2">Nothing on this page should be read as a claim about Morton Electric Pool &amp; Spa&rsquo;s services, licensing, coverage area, pricing or availability. Those come from the business.</p>
+        </div>
+      </section>
+
+
+      <section class="verification-panel" data-reveal="up" id="verify" aria-labelledby="verify-title">
         <div><span>Source boundary</span><h2 id="verify-title">The listing is verifiable. No logo has been invented.</h2></div>
         <p>2069 Scott Street, Trevose, PA 19053. The pool, equipment, copper paths, and steam are synthetic visual studies. Confirm all business details directly.</p>
         <div class="verification-actions"><a href="https://www.guildquality.com/profile/morton-electric-pool-and-spa-specialists" target="_blank" rel="noopener">Listing source</a><a href="https://www.google.com/maps/search/?api=1&amp;query=2069%20Scott%20Street%2C%20Trevose%2C%20PA%2019053" target="_blank" rel="noopener">Map</a></div>

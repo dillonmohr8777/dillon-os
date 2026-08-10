@@ -1,0 +1,419 @@
+{
+  "generatedAt": "2026-08-10T05:33:15.917Z",
+  "baseUrl": "https://momentum-prospect-radar-next10-2026-08-08.netlify.app",
+  "round": "production-copy-mobile-2026-08-10",
+  "ok": true,
+  "checks": [
+    {
+      "label": "Exactly 30 prospect routes are present",
+      "passed": true
+    },
+    {
+      "label": "Root, lab, and all 30 prospect routes return HTTP 200",
+      "passed": true
+    },
+    {
+      "label": "Every route ships a noindex response header",
+      "passed": true
+    },
+    {
+      "label": "Every referenced production asset returns HTTP 200",
+      "passed": true
+    },
+    {
+      "label": "Scroll Lab title is live",
+      "passed": true
+    },
+    {
+      "label": "Build 166 overlay is live",
+      "passed": true
+    },
+    {
+      "label": "Build 167 overlay is live",
+      "passed": true
+    },
+    {
+      "label": "Build 168 overlay is live",
+      "passed": true
+    }
+  ],
+  "routeCount": 32,
+  "prospectRouteCount": 30,
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Prospect Radar next 30 | Batch Review",
+      "noindex": true,
+      "build166": true,
+      "build167": true,
+      "build168": true,
+      "assets": []
+    },
+    {
+      "path": "/labs/prospect-3d-scroll-trio/",
+      "status": 200,
+      "title": "Prospect Radar — Three.js Scroll Lab",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": [
+        "/assets/lab-D9huO-5A.js",
+        "/assets/modulepreload-polyfill-B5Qt9EMX.js",
+        "/assets/lab-Bf0BMX5f.css"
+      ]
+    },
+    {
+      "path": "/sites/a-new-dawn-massage/",
+      "status": 200,
+      "title": "A New Dawn Therapeutic Massage | Doylestown",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/allure-skin-nails-body/",
+      "status": 200,
+      "title": "Allure - Skincare. Nails. Body. | Lahaska",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/always-dental-care/",
+      "status": 200,
+      "title": "Always Dental Care | Phoenixville",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/ansaris-pharma/",
+      "status": 200,
+      "title": "Ansaris Pharma | Blue Bell",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/ban-ban-asian-bistro/",
+      "status": 200,
+      "title": "Ban Ban Asian Bistro | Abington",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/big-head-transport/",
+      "status": 200,
+      "title": "Big Head Transport, LLC | Philadelphia",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/broomall-insurance-agency/",
+      "status": 200,
+      "title": "Anthony Gueriera Jr. Insurance Agency LLC | Broomall",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/coco-nails/",
+      "status": 200,
+      "title": "CoCo Nails | Warrington",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/colmar-dentistry-for-kids/",
+      "status": 200,
+      "title": "Colmar Dentistry For Kids | Montgomeryville",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/dutton-road-veterinary-clinic/",
+      "status": 200,
+      "title": "Dutton Road Veterinary Clinic | Philadelphia",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/elite-auto-parts/",
+      "status": 200,
+      "title": "Elite Auto Parts | Philadelphia",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/elverson-supply/",
+      "status": 200,
+      "title": "Elverson Supply | Elverson",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/es-autoparts/",
+      "status": 200,
+      "title": "E&amp;S Autoparts | Twin Oaks",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/fanta-c-beauty-bar/",
+      "status": 200,
+      "title": "Fanta C Beauty Bar | Abington",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/fletcher-masonry/",
+      "status": 200,
+      "title": "Fletcher Masonry | Chadds Ford",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/fulton-and-susies-hairstyling-salon/",
+      "status": 200,
+      "title": "Fulton &amp; Susie&#39;s Hairstyling Salon | Boyertown",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/germantown-dental-group/",
+      "status": 200,
+      "title": "Germantown Dental Group | Philadelphia",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/golden-eagle-jewelry/",
+      "status": 200,
+      "title": "Golden Eagle Jewelers | Cinematic Gem Concept",
+      "noindex": true,
+      "build166": false,
+      "build167": true,
+      "build168": false,
+      "assets": [
+        "/assets/modulepreload-polyfill-B5Qt9EMX.js",
+        "/assets/site-D1noLk_R.js",
+        "/assets/site-8BVUq2-g.css",
+        "/assets/brands/golden-eagle-jewelers-facebook-profile-current.png"
+      ]
+    },
+    {
+      "path": "/sites/haver-crown-dental/",
+      "status": 200,
+      "title": "HaverCrown Dental | Havertown",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/jack-mcsheas-restaurant-bar/",
+      "status": 200,
+      "title": "Jack McShea&#39;s Restaurant &amp; Bar | Ardmore",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/jarman-air-conditioning/",
+      "status": 200,
+      "title": "Jarman Sales &amp; Service, Inc | Philadelphia",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/kehans-auto-service/",
+      "status": 200,
+      "title": "Kehan&#39;s Auto Service | Philadelphia",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/lees-hoagie-house/",
+      "status": 200,
+      "title": "Lee&#39;s Hoagie House | Horsham",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/maclaren-kitchen-bath/",
+      "status": 200,
+      "title": "MacLaren Kitchen &amp; Bath | Cinematic Room Concept",
+      "noindex": true,
+      "build166": true,
+      "build167": false,
+      "build168": false,
+      "assets": [
+        "/assets/modulepreload-polyfill-B5Qt9EMX.js",
+        "/assets/site-D1noLk_R.js",
+        "/assets/site-8BVUq2-g.css",
+        "/assets/brands/maclaren-kitchen-bath-logo-official.png"
+      ]
+    },
+    {
+      "path": "/sites/moore-brothers-construction/",
+      "status": 200,
+      "title": "Moore Brothers Construction | Chester",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/morton-electric-pool-spa/",
+      "status": 200,
+      "title": "Morton Electric Pool &amp; Spa | Cinematic System Concept",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": true,
+      "assets": [
+        "/assets/modulepreload-polyfill-B5Qt9EMX.js",
+        "/assets/site-D1noLk_R.js",
+        "/assets/site-8BVUq2-g.css"
+      ]
+    },
+    {
+      "path": "/sites/p-and-c-insurance/",
+      "status": 200,
+      "title": "P &amp; C Insurance Agency LLC | Aldan",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/pisano-and-son-shoe-repair/",
+      "status": 200,
+      "title": "Pisano and Son Shoe Repair | Malvern",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/tax-express-yardley/",
+      "status": 200,
+      "title": "Tax Express | Yardley",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    },
+    {
+      "path": "/sites/udis-conn-orthodontics/",
+      "status": 200,
+      "title": "Udis &amp; Conn Orthodontics | Jenkintown",
+      "noindex": true,
+      "build166": false,
+      "build167": false,
+      "build168": false,
+      "assets": []
+    }
+  ],
+  "assets": [
+    {
+      "path": "/assets/brands/golden-eagle-jewelers-facebook-profile-current.png",
+      "status": 200,
+      "bytes": 346781
+    },
+    {
+      "path": "/assets/brands/maclaren-kitchen-bath-logo-official.png",
+      "status": 200,
+      "bytes": 78620
+    },
+    {
+      "path": "/assets/lab-Bf0BMX5f.css",
+      "status": 200,
+      "bytes": 0
+    },
+    {
+      "path": "/assets/lab-D9huO-5A.js",
+      "status": 200,
+      "bytes": 402
+    },
+    {
+      "path": "/assets/modulepreload-polyfill-B5Qt9EMX.js",
+      "status": 200,
+      "bytes": 771
+    },
+    {
+      "path": "/assets/site-8BVUq2-g.css",
+      "status": 200,
+      "bytes": 0
+    },
+    {
+      "path": "/assets/site-D1noLk_R.js",
+      "status": 200,
+      "bytes": 0
+    }
+  ]
+}

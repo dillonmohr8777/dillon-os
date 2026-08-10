@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%2305080b%22%2F%3E%3Cpath%20d%3D%22M16%205l9%208-9%2014-9-14z%22%20fill%3D%22none%22%20stroke%3D%22%23ffc90e%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M7%2013h18%22%20stroke%3D%22%23ffc90e%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E" />
     <meta name="theme-color" content="#05080b" />
     <meta name="description" content="A private cinematic raw-to-finished jewel concept for Golden Eagle Jewelers." />
-    <title>Golden Eagle Jewelers — Cinematic Gem Concept</title>
+    <title>Golden Eagle Jewelers | Cinematic Gem Concept</title>
     <script type="module" src="/src/site.js"></script>
   </head>
   <body data-site="golden">
@@ -32,40 +33,47 @@
     <div class="scene-stage" aria-hidden="true">
       <div class="scene-plate"></div>
       <canvas id="scene-canvas"></canvas>
+      <div class="panel-anchors"></div>
       <div class="scene-scrim"></div>
       <div class="scene-foreground"></div>
       <div class="film-grain"></div>
-      <div class="scene-label"><span>Material state</span><strong id="scene-state">Uncut</strong></div>
       <div class="scene-hud">
         <span class="hud-axis hud-axis-x"></span><span class="hud-axis hud-axis-y"></span>
         <div class="hud-reticle"><i></i></div>
-        <p class="hud-readout"><span>Study 02 / Object</span><strong>90 MM · F 4.0</strong></p>
       </div>
     </div>
     <div class="scene-fallback" role="img" aria-label="A rough sapphire and a finished gold ring on a cinematic jeweler's bench."></div>
     <div class="progress-rail" aria-hidden="true"><span></span></div>
+    <dl class="data-strip" aria-hidden="true">
+      <div><dt>Chapters</dt><dd>04</dd></div>
+      <div><dt>Lens</dt><dd>90 MM</dd></div>
+      <div><dt>Subject</dt><dd>Object</dd></div>
+      <div><dt>State</dt><dd><b id="scene-state">Uncut</b></dd></div>
+      <div class="strip-beat"><dt>Beat</dt><dd id="scene-beat">01</dd></div>
+    </dl>
+    <ol class="chapter-rail" aria-hidden="true"><li class="is-on"><span>Mineral</span><i></i></li><li><span>Facet</span><i></i></li><li><span>Setting</span><i></i></li><li><span>Source</span><i></i></li></ol>
 
     <main id="story">
       <section class="hero-panel" aria-labelledby="page-title">
         <div class="hero-copy">
-          <p class="hero-context">Every finished object begins as an unanswered question held up to the light.</p>
-          <h1 id="page-title">From rough possibility<br />to a clearer choice.</h1>
-          <div class="hero-actions"><a class="primary-action" href="#sequence">Shape the question</a><a class="secondary-action" href="https://www.facebook.com/GoldenEagleJewelers" target="_blank" rel="noopener">Business source</a></div>
+          <p class="hero-context">The right piece begins with what it needs to mean, then finds the form that can carry it.</p>
+          <h1 id="page-title">Find the form<br />worth keeping.</h1>
+          <div class="hero-actions"><a class="primary-action" href="#sequence">Follow the transformation</a><a class="secondary-action" href="https://www.facebook.com/GoldenEagleJewelers" target="_blank" rel="noopener">Business source</a></div>
         </div>
         <p class="hero-wordmark" aria-hidden="true">REFINE</p>
         <p class="vertical-note" aria-hidden="true">MINERAL · FACET · SETTING</p>
-        <div class="hero-inset"><span class="inset-index">02 / 06</span><span>Object study</span><strong>Rough mineral / polished setting</strong><i aria-hidden="true"></i></div>
+        <div class="hero-inset" data-reveal="scale"><span class="inset-index">02 / 06</span><span>Object study</span><strong>Rough mineral / polished setting</strong><i aria-hidden="true"></i></div>
         <a class="scroll-cue" href="#sequence"><span>Scroll to refine</span><i aria-hidden="true"></i></a>
       </section>
 
       <section class="chapter chapter-left" id="sequence" data-scene-state="Uncut" aria-labelledby="uncut-title">
         <div class="chapter-copy">
           <span class="chapter-step">Mineral</span>
-          <h2 id="uncut-title">Possibility arrives before certainty.</h2>
-          <p>The first shot holds the rough stone in shadow. The business name and reviewed location are known; current inventory, pricing, and availability are not.</p>
+          <h2 id="uncut-title">Start with meaning, not polish.</h2>
+          <p>A strong choice begins with the person, the occasion, and the feeling the piece should hold. Material and form come into focus after the purpose is clear.</p>
           <dl class="material-ledger"><div><dt>Known</dt><dd>Current profile identity and reviewed address</dd></div><div><dt>Held open</dt><dd>Inventory, pricing, timing, and availability</dd></div></dl>
         </div>
-        <figure class="chapter-visual chapter-visual-shell" aria-label="Synthetic crop studying the uncut mineral">
+        <figure class="chapter-visual chapter-visual-shell" data-reveal="fade" aria-label="Synthetic crop studying the uncut mineral">
           <div></div><figcaption><span>01 / Raw</span><strong>Material before intervention</strong></figcaption>
         </figure>
       </section>
@@ -73,8 +81,8 @@
       <section class="chapter chapter-right" data-scene-state="Faceted" aria-labelledby="faceted-title">
         <div class="chapter-copy">
           <span class="chapter-step">Facet</span>
-          <h2 id="faceted-title">One good question changes how the object catches light.</h2>
-          <p>The camera arcs around the stone while cool fill separates its planes. The transformation remains visual—not a claim about any specific item.</p>
+          <h2 id="faceted-title">Let each decision reveal more light.</h2>
+          <p>Proportion, orientation, and cut determine how the material responds. This visual transformation is conceptual and does not represent a specific item.</p>
           <ul class="detail-list"><li>Name the reason for the visit</li><li>Confirm the current offer</li><li>Ask what must be seen in person</li></ul>
         </div>
       </section>
@@ -82,11 +90,11 @@
       <section class="chapter chapter-left" data-scene-state="Set" aria-labelledby="set-title">
         <div class="chapter-copy">
           <span class="chapter-step">Setting</span>
-          <h2 id="set-title">Context turns material into meaning.</h2>
-          <p>Warm light enters only after the form resolves. Gold becomes the near plane and the shot tightens into the finished composition.</p>
-          <blockquote>Visual confidence should sharpen the next question—not disguise what still needs verification.</blockquote>
+          <h2 id="set-title">The setting gives the idea permanence.</h2>
+          <p>Metal, scale, and finish bring the stone into a form made to be worn. The final composition should feel personal before it feels impressive.</p>
+          <blockquote>A clear vision should sharpen the next question while keeping every unknown honest.</blockquote>
         </div>
-        <figure class="chapter-visual chapter-visual-surface" aria-label="Synthetic crop studying the finished setting">
+        <figure class="chapter-visual chapter-visual-surface" data-reveal="fade" aria-label="Synthetic crop studying the finished setting">
           <div></div><figcaption><span>04 / Set</span><strong>Facet / gold / controlled light</strong></figcaption>
         </figure>
       </section>
@@ -94,18 +102,74 @@
       <section class="chapter chapter-right" data-scene-state="Ready to verify" aria-labelledby="verify-step-title">
         <div class="chapter-copy">
           <span class="chapter-step">Source</span>
-          <h2 id="verify-step-title">The finished frame points back to the real business.</h2>
-          <p>Use the business-controlled profile and booking source to confirm current services, hours, contact routes, availability, and the right next step.</p>
+          <h2 id="verify-step-title">Take the idea into a real conversation.</h2>
+          <p>Use the business profile and booking source to confirm current services, hours, availability, and the right next step.</p>
           <a class="primary-action" href="https://golden-eagle-jewelry.reservio.com/" target="_blank" rel="noopener">Open booking source</a>
         </div>
       </section>
 
-      <section class="final-frame" aria-label="Synthetic finished jewelry concept image">
+      <section class="final-frame" data-reveal="fade" aria-label="Synthetic finished jewelry concept image">
         <div class="final-frame-image" role="img" aria-label="A rough golden mineral resolving into a precise jewelry setting"></div>
         <p><span>06 / Finished object</span><strong>From raw matter<br />to lasting form.</strong></p>
       </section>
+      <section class="index-band" aria-labelledby="sequence-title">
+        <header>
+          <span data-reveal="up">The sequence</span>
+          <h2 id="sequence-title">Six decisions that give raw material a lasting form.</h2>
+          <p data-reveal="up" style="--d:1">The character of a finished piece is shaped long before the final polish. Each decision protects what the material can become.</p>
+        </header>
+        <div class="index-grid">
+        <article class="index-card" data-reveal="up" style="--d:0">
+          <b>01</b>
+          <h3>Rough</h3>
+          <p>What the material actually is, before anyone decides what it should become.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:1">
+          <b>02</b>
+          <h3>Orientation</h3>
+          <p>Where the table sits relative to the inclusions you cannot cut out.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:2">
+          <b>03</b>
+          <h3>Cut</h3>
+          <p>Angle, table, and girdle create the geometry that guides light through the stone.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:0">
+          <b>04</b>
+          <h3>Setting</h3>
+          <p>Metal closed onto stone tightly enough to hold it and lightly enough to show it.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:1">
+          <b>05</b>
+          <h3>Finish</h3>
+          <p>Polish, plating or none, and whether tool marks get removed or left as evidence.</p>
+        </article>
+        <article class="index-card" data-reveal="up" style="--d:2">
+          <b>06</b>
+          <h3>Wear</h3>
+          <p>How the piece behaves after a year of being worn, not after an hour of being photographed.</p>
+        </article>
+        </div>
+      </section>
 
-      <section class="verification-panel" id="verify" aria-labelledby="verify-title">
+      <dl class="measures" aria-label="How this concept page was built">
+        <div data-reveal="up"><dt>Chapters</dt><dd>04<small>Directed camera beats across one continuous world.</small></dd></div>
+        <div data-reveal="up" style="--d:1"><dt>Frames</dt><dd>06<small>Editorial stills placed in 3D space, not pasted over it.</small></dd></div>
+        <div data-reveal="up" style="--d:2"><dt>Focal length</dt><dd>90 MM<small>The working lens this sequence was framed on.</small></dd></div>
+        <div data-reveal="up" style="--d:3"><dt>Stock photos</dt><dd>0<small>Every image here was generated or rendered for this page.</small></dd></div>
+      </dl>
+
+      <section class="brief-panel" aria-labelledby="brief-title">
+        <div><h2 id="brief-title">What we would confirm before building the real thing.</h2></div>
+        <div>
+          <p data-reveal="up" style="--d:0">This page is a concept. The stone and setting are rendered, and the sequence describes a general making process. It does not represent specific inventory.</p>
+          <p data-reveal="up" style="--d:1">A production site would use Golden Eagle's current selection, custom work, repair capabilities, timing, and the details customers genuinely need to see in person.</p>
+          <p class="brief-note" data-reveal="up" style="--d:2">Nothing on this page should be read as a claim about Golden Eagle Jewelers&rsquo; inventory, pricing, appraisals, hours or availability. Those come from the business.</p>
+        </div>
+      </section>
+
+
+      <section class="verification-panel" data-reveal="up" id="verify" aria-labelledby="verify-title">
         <div><span>Source boundary</span><h2 id="verify-title">The current profile artwork is real. The objects are synthetic.</h2></div>
         <p>3543 Germantown Avenue, Philadelphia, PA 19140. Confirm the trading name, products, services, hours, contact details, pricing, and availability directly.</p>
         <div class="verification-actions"><a href="https://www.facebook.com/GoldenEagleJewelers" target="_blank" rel="noopener">Business profile</a><a href="https://www.google.com/maps/search/?api=1&amp;query=3543%20Germantown%20Avenue%2C%20Philadelphia%2C%20PA%2019140" target="_blank" rel="noopener">Map</a></div>

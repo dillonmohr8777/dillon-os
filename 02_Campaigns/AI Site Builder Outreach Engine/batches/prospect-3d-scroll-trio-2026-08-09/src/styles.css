@@ -1,18 +1,24 @@
 @font-face {
   font-family: "Lab Display";
   src: url("/assets/fonts/lab-display.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Lab Text";
   src: url("/assets/fonts/lab-text.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Facet Display";
   src: url("/assets/fonts/facet-display.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
 }
 
@@ -21,12 +27,6 @@
   --scroll-progress: 0;
   --world-reveal: 0;
   --late-reveal: 0;
-  --plate-brightness: .62;
-  --plate-saturation: .72;
-  --plate-scale: 1.09;
-  --plate-x: 0vw;
-  --plate-y: 0vh;
-  --webgl-opacity: .5;
   --paper: #f5f2ea;
   --paper-dim: rgba(245, 242, 234, 0.7);
   --ink: #07090a;
@@ -55,12 +55,13 @@ body {
   --frame-5: url("/assets/editorial/maclaren/05.webp");
   --frame-6: url("/assets/editorial/maclaren/06.webp");
   --plate-position: 56% 50%;
-  --foreground-clip: polygon(58% 61%, 100% 42%, 100% 100%, 46% 100%);
   margin: 0;
   min-width: 320px;
   overflow-x: clip;
   color: var(--paper);
   background: #090b0c;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body[data-site="golden"] {
@@ -77,7 +78,6 @@ body[data-site="golden"] {
   --frame-5: url("/assets/editorial/golden/05.webp");
   --frame-6: url("/assets/editorial/golden/06.webp");
   --plate-position: 58% 50%;
-  --foreground-clip: polygon(46% 72%, 100% 54%, 100% 100%, 24% 100%);
   background: #05080b;
 }
 
@@ -95,7 +95,6 @@ body[data-site="morton"] {
   --frame-5: url("/assets/editorial/morton/05.webp");
   --frame-6: url("/assets/editorial/morton/06.webp");
   --plate-position: 60% 50%;
-  --foreground-clip: polygon(47% 66%, 100% 48%, 100% 100%, 35% 100%);
   background: #031014;
 }
 
@@ -149,10 +148,16 @@ img { display: block; max-width: 100%; }
 }
 
 body[data-site="maclaren"] .brand-lockup {
-  padding: 6px 10px;
-  background: rgba(248, 247, 242, .94);
-  box-shadow: 0 10px 32px rgba(0,0,0,.18);
+  padding: 5px 9px;
+  background: rgba(248, 247, 242, .82);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 3px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 26px rgba(0,0,0,.3);
+  transition: background .4s ease, transform .4s cubic-bezier(.16,1,.3,1);
 }
+
+body[data-site="maclaren"] .brand-lockup:hover { background: rgba(248,247,242,.95); transform: translateY(-2px); }
 
 .brand-logo-square {
   width: 48px;
@@ -232,74 +237,98 @@ body[data-site="maclaren"] .brand-lockup {
 .webgl-ready .scene-fallback { opacity: 0; }
 .webgl-fallback .scene-stage { z-index: -2; }
 .webgl-fallback .scene-fallback { z-index: 0; opacity: 1; }
-.webgl-fallback { --world-reveal: 1; --late-reveal: 1; --plate-brightness: 1; --plate-saturation: 1; }
+.webgl-fallback { --world-reveal: 1; --late-reveal: 1; }
 
 .scene-plate,
 .scene-foreground,
 .scene-scrim,
+.panel-anchors,
 .film-grain,
 #scene-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-.scene-plate {
+/*
+  The plates now live inside the Three.js scene, so these two DOM layers only
+  exist to compose the no-WebGL still. They stay out of the way otherwise.
+*/
+.scene-plate,
+.scene-foreground { display: none; }
+
+.webgl-fallback .scene-plate {
+  display: block;
   z-index: 0;
   background-image: var(--plate);
   background-position: var(--plate-position);
   background-size: cover;
-  filter: brightness(var(--plate-brightness)) saturate(var(--plate-saturation));
-  transform: translate3d(var(--plate-x), var(--plate-y), 0) scale(var(--plate-scale));
-  animation: plate-in 2.4s cubic-bezier(.16, 1, .3, 1) both;
-  will-change: transform, filter;
+  filter: brightness(.86) saturate(.9);
+  transform: scale(1.04);
+}
+
+.webgl-fallback .scene-foreground {
+  display: block;
+  z-index: 3;
+  background-image: var(--foreground);
+  background-position: var(--plate-position);
+  background-size: cover;
+  filter: brightness(.6) saturate(.85);
+  transform: scale(1.09);
+  transform-origin: 74% 80%;
+  opacity: .7;
 }
 
 #scene-canvas {
   z-index: 2;
   display: block;
-  opacity: var(--webgl-opacity);
-  mix-blend-mode: soft-light;
+  opacity: 1;
   transition: opacity .45s ease;
 }
 
 .webgl-fallback #scene-canvas { opacity: 0; transition: none; }
 
+/*
+  A light hand. The world is the picture now, so the scrim only has to buy the
+  copy column enough separation to stay readable.
+*/
 .scene-scrim {
-  z-index: 1;
+  z-index: 3;
+  pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(3,5,6,.92) 0%, rgba(3,5,6,.7) 24%, rgba(3,5,6,.12) 58%, rgba(3,5,6,.04) 100%),
-    linear-gradient(180deg, rgba(2,4,5,.3), transparent 35%, rgba(2,4,5,.4));
+    linear-gradient(90deg, rgba(3,5,6,.74) 0%, rgba(3,5,6,.4) 25%, rgba(3,5,6,.04) 52%, transparent 78%),
+    linear-gradient(180deg, rgba(2,4,5,.4), transparent 24%, transparent 70%, rgba(2,4,5,.5));
+  opacity: calc(.66 + var(--world-reveal) * .3);
 }
 
 .scene-scrim::after {
   content: "";
   position: absolute;
-  inset: -4%;
+  inset: 0;
   pointer-events: none;
-  opacity: calc(1 - var(--late-reveal));
-  will-change: opacity;
+  background: radial-gradient(ellipse at 50% 46%, transparent 44%, rgba(2,4,5,.36) 90%, rgba(2,4,5,.62) 100%);
 }
 
-body[data-site="maclaren"] .scene-scrim::after {
-  background: radial-gradient(ellipse at 67% 62%, rgba(3,5,6,.98) 0%, rgba(3,5,6,.95) 38%, rgba(3,5,6,.42) 61%, transparent 76%);
+/* Projected panel captions — HTML type pinned to a world-space anchor. */
+.panel-anchors { z-index: 5; pointer-events: none; overflow: hidden; }
+
+.panel-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  gap: 4px;
+  width: max-content;
+  max-width: 220px;
+  margin: 10px 0 0 -1px;
+  padding: 8px 12px 9px;
+  border-left: 1px solid var(--accent);
+  background: linear-gradient(90deg, rgba(4,7,9,.72), rgba(4,7,9,.18));
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  text-transform: uppercase;
+  transition: opacity .28s ease;
+  will-change: transform, opacity;
 }
 
-body[data-site="golden"] .scene-scrim::after {
-  background: radial-gradient(ellipse at 77% 64%, rgba(3,5,7,.99) 0%, rgba(3,5,7,.96) 19%, rgba(3,5,7,.48) 34%, transparent 52%);
-}
-
-body[data-site="morton"] .scene-scrim::after {
-  background: radial-gradient(ellipse at 77% 73%, rgba(2,12,15,.99) 0%, rgba(2,12,15,.96) 28%, rgba(2,12,15,.52) 50%, transparent 69%);
-}
-
-.scene-foreground {
-  z-index: 3;
-  background-image: var(--foreground);
-  background-position: var(--plate-position);
-  background-size: cover;
-  filter: brightness(.72) saturate(.9) blur(.8px);
-  transform: translate3d(var(--plate-x), var(--plate-y), 0) scale(calc(var(--plate-scale) + .035));
-  transform-origin: 74% 80%;
-  opacity: .52;
-  will-change: transform;
-}
+.panel-anchor b { color: var(--paper); font-size: 10px; font-weight: 700; letter-spacing: .17em; }
+.panel-anchor span { color: var(--paper-dim); font-size: 8px; letter-spacing: .13em; }
 
 .scene-hud {
   position: absolute;
@@ -325,18 +354,6 @@ body[data-site="morton"] .scene-scrim::after {
 .hud-reticle::before { top: 12px; left: -7px; width: 39px; height: 1px; }
 .hud-reticle::after { top: -7px; left: 12px; width: 1px; height: 39px; }
 .hud-reticle i { position: absolute; inset: 9px; border: 1px solid rgba(255,255,255,.7); }
-.hud-readout {
-  position: absolute;
-  right: 6.5vw;
-  bottom: calc(23% + 12px);
-  display: grid;
-  gap: 5px;
-  margin: 0;
-  text-align: right;
-  text-transform: uppercase;
-}
-.hud-readout span { color: var(--paper-dim); font-size: 7px; letter-spacing: .2em; }
-.hud-readout strong { color: var(--paper); font-size: 8px; letter-spacing: .18em; }
 
 .film-grain {
   z-index: 4;
@@ -362,6 +379,75 @@ body[data-site="morton"] .scene-scrim::after {
 
 .scene-label span { color: var(--paper-dim); font-size: 9px; letter-spacing: .18em; }
 .scene-label strong { color: var(--accent); font-size: 10px; letter-spacing: .13em; }
+
+/*
+  Bottom instrument strip. Four fixed measures that stay put while the world
+  moves behind them — the thing that makes the page read as a controlled rig
+  rather than a video.
+*/
+.data-strip {
+  position: fixed;
+  z-index: 1;
+  right: clamp(22px, 3.2vw, 58px);
+  bottom: 0;
+  left: clamp(24px, 5.5vw, 96px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, auto)) 1fr;
+  align-items: end;
+  gap: clamp(26px, 5vw, 78px);
+  padding: 0 0 22px;
+  pointer-events: none;
+  border-top: 1px solid rgba(255,255,255,.14);
+  padding-top: 12px;
+  margin: 0 0 0 0;
+  opacity: calc(.35 + var(--world-reveal) * .65);
+  transition: opacity .5s ease;
+}
+
+.data-strip div { display: grid; gap: 5px; }
+.data-strip dt { color: var(--paper-dim); font-size: 7px; letter-spacing: .22em; text-transform: uppercase; }
+.data-strip dd {
+  margin: 0;
+  color: var(--paper);
+  font-family: "Lab Display", sans-serif;
+  font-size: clamp(15px, 1.5vw, 21px);
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+.data-strip dd b { color: var(--accent); font-weight: 400; }
+.data-strip .strip-beat { justify-self: end; text-align: right; }
+
+/* Chapter rail — the reference keeps the whole journey visible at all times. */
+.chapter-rail {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  right: clamp(14px, 1.6vw, 26px);
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.chapter-rail li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  color: var(--paper-dim);
+  font-size: 7px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  opacity: .42;
+  transition: opacity .4s ease, color .4s ease;
+}
+
+.chapter-rail li i { display: block; width: 16px; height: 1px; background: currentColor; transform-origin: right; transition: transform .4s cubic-bezier(.16,1,.3,1); }
+.chapter-rail li.is-on { color: var(--accent); opacity: 1; }
+.chapter-rail li.is-on i { transform: scaleX(1.875); }
 
 .progress-rail {
   position: fixed;
@@ -420,9 +506,10 @@ body[data-site="golden"] h2 { font-family: "Facet Display", "Lab Display", sans-
 
 h1 {
   max-width: 12ch;
-  font-size: clamp(4rem, 7.5vw, 7.6rem);
-  line-height: .82;
-  text-shadow: 0 14px 42px rgba(0,0,0,.48);
+  font-size: clamp(4.2rem, 8.1vw, 8.4rem);
+  line-height: .86;
+  letter-spacing: -.038em;
+  text-shadow: 0 2px 0 rgba(0,0,0,.25), 0 18px 54px rgba(0,0,0,.62), 0 44px 96px rgba(0,0,0,.4);
 }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
@@ -449,14 +536,14 @@ h1 {
 .hero-wordmark {
   position: absolute;
   right: -1.5vw;
-  bottom: 4.5vh;
+  bottom: 8.5vh;
   margin: 0;
   color: rgba(246,243,235,.94);
   font-family: "Lab Display", sans-serif;
-  font-size: clamp(5.5rem, 14.8vw, 14.5rem);
-  line-height: .7;
-  letter-spacing: -.055em;
-  text-shadow: 0 18px 70px rgba(0,0,0,.4);
+  font-size: clamp(5.8rem, 15.5vw, 15.5rem);
+  line-height: .74;
+  letter-spacing: -.06em;
+  text-shadow: 0 20px 80px rgba(0,0,0,.55), 0 60px 140px rgba(0,0,0,.35);
   transform: translate3d(calc(var(--scroll-progress) * -2vw), 0, 0);
   animation: wordmark-in 1.45s .45s cubic-bezier(.16, 1, .3, 1) both;
   white-space: nowrap;
@@ -502,7 +589,7 @@ body[data-site="golden"] .hero-wordmark { font-family: "Facet Display", "Lab Dis
 
 .scroll-cue {
   position: absolute;
-  bottom: 30px;
+  bottom: 86px;
   left: clamp(24px, 5.5vw, 96px);
   display: flex;
   align-items: center;
@@ -560,7 +647,13 @@ body[data-site="golden"] .hero-wordmark { font-family: "Facet Display", "Lab Dis
   transform: rotate(180deg);
 }
 
-.chapter h2 { max-width: 10ch; font-size: clamp(3.1rem, 5.2vw, 5.5rem); line-height: .93; }
+.chapter h2 {
+  max-width: 10ch;
+  font-size: clamp(3.3rem, 5.9vw, 6.2rem);
+  line-height: .92;
+  letter-spacing: -.035em;
+  text-shadow: 0 2px 0 rgba(0,0,0,.22), 0 16px 48px rgba(0,0,0,.6), 0 40px 88px rgba(0,0,0,.36);
+}
 .chapter-copy > p {
   max-width: 60ch;
   margin: 28px 0 0;
@@ -619,8 +712,8 @@ blockquote {
 .final-frame-image { position: absolute; inset: 5vh 4vw; background-image: linear-gradient(180deg, rgba(3,5,6,.08), rgba(3,5,6,.2) 58%, rgba(3,5,6,.9)), var(--frame-6); background-position: center; background-size: cover; filter: brightness(.96) saturate(.9); }
 .final-frame::after { content: ""; position: absolute; inset: 5vh 4vw; border: 1px solid rgba(255,255,255,.16); pointer-events: none; }
 .final-frame > p { position: relative; z-index: 2; display: grid; gap: 14px; margin: 0 0 3vh; }
-.final-frame > p span { color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
-.final-frame > p strong { max-width: 12ch; font-family: "Lab Display", sans-serif; font-size: clamp(3.5rem, 7vw, 7rem); font-weight: 400; line-height: .84; letter-spacing: -.035em; }
+.final-frame > p > span { color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.final-frame > p strong { max-width: 12ch; font-family: "Lab Display", sans-serif; font-size: clamp(3.6rem, 7.6vw, 7.8rem); font-weight: 400; line-height: .88; letter-spacing: -.04em; text-shadow: 0 18px 56px rgba(0,0,0,.6); }
 
 .verification-panel {
   position: relative;
@@ -650,7 +743,7 @@ blockquote {
 }
 .verification-panel > * { position: relative; z-index: 1; }
 
-.verification-panel > div:first-child span {
+.verification-panel > div:first-child > span {
   display: block;
   margin: 0 0 24px;
   color: color-mix(in srgb, var(--accent-strong) 48%, #050505);
@@ -660,7 +753,7 @@ blockquote {
   text-transform: uppercase;
 }
 
-.verification-panel h2 { max-width: 12ch; font-size: clamp(3rem, 5vw, 5.2rem); line-height: .92; }
+.verification-panel h2 { max-width: 12ch; font-size: clamp(3.2rem, 5.8vw, 6rem); line-height: .88; letter-spacing: -.035em; text-shadow: none; }
 .verification-panel > p { max-width: 52ch; margin: 0; font-size: 16px; line-height: 1.75; }
 .verification-actions { grid-column: 2; display: flex; flex-wrap: wrap; gap: 24px; }
 .verification-actions a { padding-bottom: 7px; border-bottom: 1px solid #111; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
@@ -682,6 +775,290 @@ blockquote {
 .site-footer a { text-underline-offset: 6px; }
 .site-footer span { color: var(--paper-dim); }
 
+/* =========================================================================
+   Reveal system
+   Everything that enters does so on the same curve and the same clock, so the
+   page reads as one directed sequence instead of a pile of separate effects.
+========================================================================= */
+:root { --ease-out: cubic-bezier(.16, 1, .3, 1); --mx: 50%; --my: 40%; }
+
+/* Display type rises word by word out of its own mask. */
+.word,
+.word > i {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: .24em;
+  margin-bottom: -.24em;
+}
+
+.has-js .word > i {
+  display: inline-block;
+  font-style: inherit;
+  transform: translate3d(0, 128%, 0) rotate(3deg);
+  transition: transform 1.05s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 52ms);
+  will-change: transform;
+}
+
+.has-js .is-revealed .word > i,
+.has-js .word.is-revealed > i { transform: none; }
+
+/* Generic entrances. Direction is set per element with data-reveal. */
+.has-js [data-reveal] {
+  opacity: 0;
+  transition: opacity .9s var(--ease-out), transform 1.05s var(--ease-out), clip-path 1.15s var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 90ms);
+}
+
+[data-reveal="fade"] { transform: none; }
+[data-reveal="up"] { transform: translate3d(0, 46px, 0); }
+[data-reveal="left"] { transform: translate3d(-52px, 0, 0); }
+[data-reveal="right"] { transform: translate3d(52px, 0, 0); }
+[data-reveal="wipe"] { clip-path: inset(0 100% 0 0); transform: none; }
+[data-reveal="wipe-left"] { clip-path: inset(0 0 0 100%); transform: none; }
+[data-reveal="scale"] { transform: scale(.92); }
+
+.has-js [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 0 0 0);
+}
+
+/* =========================================================================
+   Editorial frames
+   A wipe uncovers the frame while the image inside settles back from an
+   overscan, so the picture arrives rather than appearing.
+========================================================================= */
+.has-js .chapter-visual {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.2s var(--ease-out), transform .7s var(--ease-out);
+}
+
+.chapter-visual.is-revealed { clip-path: inset(0 0 0 0); }
+
+.has-js .chapter-visual > div {
+  transform: scale(1.16);
+  transition: transform 1.5s var(--ease-out), filter .6s ease;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.4),
+    0 26px 60px rgba(0,0,0,.5),
+    0 60px 120px rgba(0,0,0,.42);
+}
+
+.chapter-visual.is-revealed > div { transform: scale(1); }
+
+.chapter-visual:hover { transform: translateY(-8px); }
+.chapter-visual:hover > div { transform: scale(1.06); filter: brightness(1.1) saturate(1.06); }
+.chapter-visual:hover::before { border-color: var(--accent); }
+.chapter-visual::before { transition: border-color .45s ease; }
+
+.hero-inset {
+  transition: transform .6s var(--ease-out), box-shadow .6s ease, filter .5s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,.35), 0 34px 80px rgba(0,0,0,.5);
+}
+
+.hero-inset:hover {
+  transform: translate3d(0, calc(var(--scroll-progress) * 2vh - 9px), 0) scale(1.035);
+  box-shadow: 0 12px 26px rgba(0,0,0,.4), 0 46px 110px rgba(0,0,0,.62);
+  filter: brightness(1.12);
+}
+
+.has-js .final-frame-image {
+  transition: transform 1.6s var(--ease-out), filter .8s ease;
+  transform: scale(1.1);
+}
+
+.final-frame.is-revealed .final-frame-image { transform: scale(1); }
+.final-frame-image:hover { filter: brightness(1.08) saturate(1.05); }
+
+/* =========================================================================
+   Hover behaviour
+   Pointer state should move light and depth, not just swap a colour.
+========================================================================= */
+.primary-action {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 26%, transparent);
+}
+
+.primary-action::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.55) 50%, transparent 80%);
+  transform: translateX(-120%);
+  transition: transform .8s var(--ease-out);
+}
+
+.primary-action:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px color-mix(in srgb, var(--accent) 42%, transparent);
+}
+
+.primary-action:hover::after { transform: translateX(120%); }
+
+.secondary-action { position: relative; }
+.secondary-action::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .45s var(--ease-out);
+}
+.secondary-action:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.detail-list li,
+.material-ledger div { transition: background .4s ease, transform .45s var(--ease-out); }
+.detail-list li:hover,
+.material-ledger div:hover {
+  transform: translateX(6px);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%);
+}
+
+/* A pool of light that follows the pointer across the fixed world. */
+.scene-scrim::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(420px circle at var(--mx) var(--my), color-mix(in srgb, var(--accent) 13%, transparent), transparent 68%);
+  opacity: calc(.35 + var(--world-reveal) * .5);
+  transition: opacity .6s ease;
+}
+
+/* =========================================================================
+   Added sections
+========================================================================= */
+.index-band {
+  position: relative;
+  z-index: 5;
+  padding: 14vh clamp(24px, 5.5vw, 96px) 12vh;
+  background: linear-gradient(180deg, rgba(4,6,8,.72), rgba(4,6,8,.94));
+  backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.index-band > header { max-width: 46ch; margin: 0 0 clamp(38px, 5vw, 68px); }
+.index-band h2 {
+  max-width: 18ch;
+  font-size: clamp(2.6rem, 4.6vw, 4.6rem);
+  line-height: .92;
+  letter-spacing: -.035em;
+}
+.index-band > header > span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+.index-band > header p { margin: 22px 0 0; color: var(--paper-dim); font-size: clamp(14px, 1.1vw, 17px); line-height: 1.75; }
+
+.index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.13);
+}
+
+.index-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: clamp(24px, 2.4vw, 38px);
+  background: #070a0c;
+  transition: background .5s ease, transform .5s var(--ease-out);
+}
+
+.index-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform .55s var(--ease-out);
+}
+
+.index-card:hover { background: #0c1114; transform: translateY(-6px); }
+.index-card:hover::before { transform: scaleY(1); transform-origin: top; }
+
+.index-card b { color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: .2em; }
+.index-card h3 {
+  margin: 0;
+  font-family: "Lab Display", sans-serif;
+  font-size: clamp(1.35rem, 1.9vw, 1.85rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -.02em;
+}
+body[data-site="golden"] .index-card h3 { font-family: "Facet Display", "Lab Display", sans-serif; }
+.index-card p { margin: 0; color: var(--paper-dim); font-size: 13.5px; line-height: 1.65; }
+
+.measures {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: clamp(26px, 4vw, 70px);
+  padding: 11vh clamp(24px, 5.5vw, 96px);
+  background: #050708;
+}
+
+.measures div { display: grid; gap: 12px; }
+.measures dt { color: var(--paper-dim); font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
+.measures dd {
+  margin: 0;
+  font-family: "Lab Display", sans-serif;
+  font-size: clamp(2.6rem, 4.6vw, 4.4rem);
+  line-height: .86;
+  letter-spacing: -.04em;
+}
+body[data-site="golden"] .measures dd { font-family: "Facet Display", "Lab Display", sans-serif; }
+.measures dd small { display: block; margin-top: 12px; color: var(--paper-dim); font-family: "Lab Text", sans-serif; font-size: 12.5px; line-height: 1.55; letter-spacing: 0; }
+
+.brief-panel {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(40px, 6vw, 110px);
+  padding: 14vh clamp(24px, 5.5vw, 96px);
+  background: linear-gradient(180deg, rgba(4,6,8,.9), rgba(4,6,8,.99));
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.brief-panel h2 { font-size: clamp(2.6rem, 4.4vw, 4.4rem); line-height: .92; }
+.brief-panel > div:last-child { display: grid; gap: 26px; align-content: start; }
+.brief-panel p { margin: 0; color: rgba(245,242,234,.78); font-size: clamp(14px, 1.1vw, 17px); line-height: 1.8; }
+.brief-panel .brief-note {
+  padding: 20px 24px;
+  border-left: 2px solid var(--accent);
+  background: rgba(255,255,255,.035);
+  color: var(--paper);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 @keyframes plate-in { from { opacity: .48; } to { opacity: 1; } }
 @keyframes header-in { from { opacity: 0; transform: translateY(-22px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes copy-in { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
@@ -697,11 +1074,12 @@ blockquote {
   .hero-copy { width: min(610px, 62vw); }
   .chapter-copy { width: min(520px, 55vw); }
   .chapter { gap: 36px; }
+  .index-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
   :root { --header-height: 72px; }
-  body { --plate: var(--plate-mobile); --foreground-clip: polygon(37% 72%, 100% 58%, 100% 100%, 18% 100%); }
+  body { --plate: var(--plate-mobile); }
   .site-header { padding: 12px 18px; }
   .brand-logo-wide { width: 150px; max-height: 44px; }
   .brand-logo-square { width: 42px; height: 42px; }
@@ -709,44 +1087,57 @@ blockquote {
   .brand-name-morton { max-width: 180px; font-size: 15px; }
   .lab-back span { display: none; }
 
-  .scene-plate,
-  .scene-foreground {
-    inset: 0;
-    width: 100%;
-    height: 100%;
+  /*
+    Portrait gets its own composition: the world holds the top two thirds as a
+    picture, the copy sits in the graded floor beneath it. The camera rig does
+    the matching pull-back on its side.
+  */
+  .webgl-fallback .scene-plate,
+  .webgl-fallback .scene-foreground {
     background-size: auto 58svh;
     background-position: 63% 9svh;
     background-repeat: no-repeat;
     transform-origin: 70% 28%;
   }
 
-  body[data-site="golden"] .scene-plate,
-  body[data-site="golden"] .scene-foreground { background-position: 64% 8svh; }
-  body[data-site="morton"] .scene-plate,
-  body[data-site="morton"] .scene-foreground { background-position: 58% 8svh; }
-
   .scene-scrim {
-    background: linear-gradient(180deg, rgba(2,4,5,.28), rgba(2,4,5,.05) 30%, rgba(2,4,5,.4) 52%, rgba(2,4,5,.98) 72%, #030506 100%);
+    background: linear-gradient(180deg, rgba(2,4,5,.3), rgba(2,4,5,0) 24%, rgba(2,4,5,.16) 52%, rgba(2,4,5,.84) 72%, rgba(3,5,6,.97) 100%);
   }
 
-  .scene-foreground { opacity: .48; transform: translate3d(var(--plate-x), var(--plate-y), 0) scale(calc(var(--plate-scale) + .02)); }
+  .scene-scrim::after { background: radial-gradient(ellipse at 50% 34%, transparent 42%, rgba(2,4,5,.42) 92%); }
   .scene-fallback { background-size: auto 58svh; background-position: 63% 9svh; background-repeat: no-repeat; }
-  #scene-canvas { opacity: min(.48, var(--webgl-opacity)); }
+  #scene-canvas { opacity: 1; }
   .scene-label { right: 18px; bottom: 18px; }
   .scene-hud { display: none; }
   .film-grain { opacity: .09; }
+  .chapter-rail { display: none; }
+  .panel-anchor { max-width: 148px; padding: 6px 9px 7px; }
+  .panel-anchor span { display: none; }
+
+  .data-strip {
+    right: 18px;
+    left: 21px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    padding-top: 9px;
+    padding-bottom: 14px;
+  }
+  .data-strip div:nth-child(4) { display: none; }
+  .data-strip .strip-beat { display: none; }
+  .data-strip dd { font-size: 16px; }
+  .data-strip dt { font-size: 8px; letter-spacing: .14em; }
 
   .hero-panel,
   .chapter { padding: var(--header-height) 21px 30px; }
-  .hero-panel { align-content: end; padding-bottom: 13vh; }
+  .hero-panel { align-content: end; padding-bottom: max(148px, 18svh); }
   .hero-copy { width: 100%; padding: 0; }
-  .hero-context { width: 82%; margin-bottom: 18px; font-size: 13px; }
-  h1 { max-width: 10ch; font-size: clamp(2.9rem, 13vw, 4.5rem); }
+  .hero-context { width: min(32ch, 92%); margin-bottom: 18px; font-size: 15px; line-height: 1.55; }
+  h1 { max-width: 11ch; font-size: clamp(3.25rem, 13.5vw, 4.65rem); line-height: .88; }
   .hero-actions { gap: 9px; margin-top: 24px; }
-  .primary-action, .secondary-action { min-height: 44px; padding: 0 14px; font-size: 9px; }
-  .hero-wordmark { right: -3vw; bottom: 49vh; font-size: clamp(4rem, 23vw, 6.4rem); opacity: .92; }
+  .primary-action, .secondary-action { min-height: 48px; padding: 0 16px; font-size: 10px; }
+  .hero-wordmark { right: -3vw; bottom: 61vh; font-size: clamp(4.35rem, 23vw, 6.6rem); opacity: .94; }
   .vertical-note, .hero-inset { display: none; }
-  .scroll-cue { bottom: 22px; left: 21px; }
+  .scroll-cue { bottom: 82px; left: 21px; font-size: 10px; }
 
   .chapter { min-height: 126svh; grid-template-columns: 1fr; align-items: end; justify-items: start; padding-bottom: 15vh; }
   .chapter-right .chapter-copy { grid-column: 1; }
@@ -754,7 +1145,7 @@ blockquote {
   .chapter-copy::before { inset: -35% -18% -20%; background: radial-gradient(ellipse at bottom left, rgba(2,4,5,.96), rgba(2,4,5,.64) 54%, transparent 78%); }
   .chapter-step { left: auto; right: 0; top: 52px; }
   .chapter h2 { max-width: 9ch; font-size: clamp(2.8rem, 12vw, 4.35rem); }
-  .chapter-copy > p { margin-top: 20px; font-size: 14px; line-height: 1.62; }
+  .chapter-copy > p { margin-top: 20px; font-size: 15px; line-height: 1.68; }
   .material-ledger, .detail-list, blockquote { margin-top: 22px; }
   .material-ledger div { grid-template-columns: 76px 1fr; }
   .chapter-visual { position: absolute; top: 15vh; right: 22px; width: 45vw; margin: 0; opacity: .82; transform: none; }
@@ -777,13 +1168,73 @@ blockquote {
   .verification-panel > p { font-size: 14px; }
   .verification-actions { grid-column: 1; }
   .site-footer { align-items: flex-start; flex-direction: column; padding: 30px 22px; }
+
+  .index-band { padding: 10vh 22px 9vh; }
+  .index-grid { grid-template-columns: 1fr; }
+  .index-card { padding: 22px; }
+  .index-card p { font-size: 15px; }
+  .measures { grid-template-columns: 1fr 1fr; gap: 28px 20px; padding: 9vh 22px; }
+  .measures dd { font-size: clamp(2.1rem, 11vw, 3rem); }
+  .brief-panel { grid-template-columns: 1fr; gap: 30px; padding: 10vh 22px; }
+  .brief-panel h2 { font-size: clamp(2.4rem, 11vw, 3.6rem); }
+
+  /* Sideways entrances read as jitter in a narrow column. */
+  [data-reveal="left"],
+  [data-reveal="right"] { transform: translate3d(0, 34px, 0); }
+}
+
+@media (max-width: 480px) {
+  .hero-actions { display: grid; grid-template-columns: 1fr; width: min(100%, 330px); }
+  .hero-actions .primary-action,
+  .hero-actions .secondary-action { width: 100%; }
+  .hero-actions .secondary-action { border: 1px solid rgba(245,242,234,.46); }
+  .hero-wordmark { bottom: 61vh; }
+  .index-band > header p,
+  .brief-panel p,
+  .verification-panel > p { font-size: 15px; }
+}
+
+@media (max-width: 680px) and (max-height: 720px) {
+  .hero-panel { padding-bottom: 118px; }
+  .hero-context { margin-bottom: 12px; font-size: 14px; }
+  h1 { font-size: clamp(2.75rem, 12vw, 3.55rem); }
+  .hero-actions { margin-top: 16px; }
+  .hero-actions .primary-action,
+  .hero-actions .secondary-action { min-height: 44px; }
+  .hero-wordmark { bottom: 66vh; font-size: clamp(3.55rem, 19vw, 5rem); }
+  .scroll-cue { display: none; }
+}
+
+@media (hover: none) {
+  .chapter-visual:hover,
+  .index-card:hover,
+  .primary-action:hover { transform: none; }
+  .chapter-visual:hover > div { transform: scale(1); filter: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   .progress-rail, .scroll-cue { display: none; }
-  .scene-plate { transform: translate3d(0, 0, 0) scale(1.09); }
-  .scene-foreground { transform: translate3d(0, 0, 0) scale(1.08); }
   .chapter-copy { opacity: 1; transform: none; }
+
+  /*
+    Reduced motion still gets a directed frame: the rig parks on the strongest
+    beat of the route and the world simply stops moving. Nothing is emptied out.
+  */
+  .panel-anchor { transition: none; }
+  .data-strip { opacity: 1; }
+  .scene-scrim { opacity: 1; }
+
+  /*
+    Nothing waits on an observer here: every entrance resolves to its finished
+    state so the page is fully composed on arrival rather than half-hidden.
+  */
+  .word > i { transform: none !important; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .chapter-visual { clip-path: none !important; }
+  .chapter-visual > div,
+  .final-frame-image { transform: none !important; }
+  .primary-action::after { display: none; }
+  .scene-scrim::before { display: none; }
 }
