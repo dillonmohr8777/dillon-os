@@ -1,0 +1,151 @@
+# Static QA — next ten
+
+- Result: PASS
+- Pages: 11
+- Production JavaScript: 151.2 KB gzipped
+- Checks: 144/144
+
+- PASS: Production dist directory exists
+- PASS: Lab index plus exactly ten prospect routes
+- PASS: index.html exists
+- PASS: index.html carries noindex
+- PASS: index.html contains no form
+- PASS: sites/germantown-dental-group/index.html exists
+- PASS: sites/germantown-dental-group/index.html carries noindex
+- PASS: sites/germantown-dental-group/index.html contains no form
+- PASS: sites/germantown-dental-group/index.html has a skip link
+- PASS: sites/germantown-dental-group/index.html discloses synthetic imagery
+- PASS: sites/germantown-dental-group/index.html labels its lockup as a concept mark
+- PASS: sites/germantown-dental-group/index.html has no unapproved external runtime dependency
+- PASS: sites/udis-conn-orthodontics/index.html exists
+- PASS: sites/udis-conn-orthodontics/index.html carries noindex
+- PASS: sites/udis-conn-orthodontics/index.html contains no form
+- PASS: sites/udis-conn-orthodontics/index.html has a skip link
+- PASS: sites/udis-conn-orthodontics/index.html discloses synthetic imagery
+- PASS: sites/udis-conn-orthodontics/index.html labels its lockup as a concept mark
+- PASS: sites/udis-conn-orthodontics/index.html has no unapproved external runtime dependency
+- PASS: sites/jarman-sales-service/index.html exists
+- PASS: sites/jarman-sales-service/index.html carries noindex
+- PASS: sites/jarman-sales-service/index.html contains no form
+- PASS: sites/jarman-sales-service/index.html has a skip link
+- PASS: sites/jarman-sales-service/index.html discloses synthetic imagery
+- PASS: sites/jarman-sales-service/index.html labels its lockup as a concept mark
+- PASS: sites/jarman-sales-service/index.html has no unapproved external runtime dependency
+- PASS: sites/lees-hoagie-house/index.html exists
+- PASS: sites/lees-hoagie-house/index.html carries noindex
+- PASS: sites/lees-hoagie-house/index.html contains no form
+- PASS: sites/lees-hoagie-house/index.html has a skip link
+- PASS: sites/lees-hoagie-house/index.html discloses synthetic imagery
+- PASS: sites/lees-hoagie-house/index.html labels its lockup as a concept mark
+- PASS: sites/lees-hoagie-house/index.html has no unapproved external runtime dependency
+- PASS: sites/anthony-gueriera-insurance/index.html exists
+- PASS: sites/anthony-gueriera-insurance/index.html carries noindex
+- PASS: sites/anthony-gueriera-insurance/index.html contains no form
+- PASS: sites/anthony-gueriera-insurance/index.html has a skip link
+- PASS: sites/anthony-gueriera-insurance/index.html discloses synthetic imagery
+- PASS: sites/anthony-gueriera-insurance/index.html labels its lockup as a concept mark
+- PASS: sites/anthony-gueriera-insurance/index.html has no unapproved external runtime dependency
+- PASS: sites/ban-ban-asian-bistro/index.html exists
+- PASS: sites/ban-ban-asian-bistro/index.html carries noindex
+- PASS: sites/ban-ban-asian-bistro/index.html contains no form
+- PASS: sites/ban-ban-asian-bistro/index.html has a skip link
+- PASS: sites/ban-ban-asian-bistro/index.html discloses synthetic imagery
+- PASS: sites/ban-ban-asian-bistro/index.html labels its lockup as a concept mark
+- PASS: sites/ban-ban-asian-bistro/index.html has no unapproved external runtime dependency
+- PASS: sites/big-head-transport/index.html exists
+- PASS: sites/big-head-transport/index.html carries noindex
+- PASS: sites/big-head-transport/index.html contains no form
+- PASS: sites/big-head-transport/index.html has a skip link
+- PASS: sites/big-head-transport/index.html discloses synthetic imagery
+- PASS: sites/big-head-transport/index.html labels its lockup as a concept mark
+- PASS: sites/big-head-transport/index.html has no unapproved external runtime dependency
+- PASS: sites/dutton-road-veterinary-clinic/index.html exists
+- PASS: sites/dutton-road-veterinary-clinic/index.html carries noindex
+- PASS: sites/dutton-road-veterinary-clinic/index.html contains no form
+- PASS: sites/dutton-road-veterinary-clinic/index.html has a skip link
+- PASS: sites/dutton-road-veterinary-clinic/index.html discloses synthetic imagery
+- PASS: sites/dutton-road-veterinary-clinic/index.html labels its lockup as a concept mark
+- PASS: sites/dutton-road-veterinary-clinic/index.html has no unapproved external runtime dependency
+- PASS: sites/elite-auto-parts/index.html exists
+- PASS: sites/elite-auto-parts/index.html carries noindex
+- PASS: sites/elite-auto-parts/index.html contains no form
+- PASS: sites/elite-auto-parts/index.html has a skip link
+- PASS: sites/elite-auto-parts/index.html discloses synthetic imagery
+- PASS: sites/elite-auto-parts/index.html labels its lockup as a concept mark
+- PASS: sites/elite-auto-parts/index.html has no unapproved external runtime dependency
+- PASS: sites/kehans-auto-service/index.html exists
+- PASS: sites/kehans-auto-service/index.html carries noindex
+- PASS: sites/kehans-auto-service/index.html contains no form
+- PASS: sites/kehans-auto-service/index.html has a skip link
+- PASS: sites/kehans-auto-service/index.html discloses synthetic imagery
+- PASS: sites/kehans-auto-service/index.html labels its lockup as a concept mark
+- PASS: sites/kehans-auto-service/index.html has no unapproved external runtime dependency
+- PASS: germantown-dental-group plate exists: hero
+- PASS: germantown-dental-group page references hero plate
+- PASS: germantown-dental-group plate exists: macro
+- PASS: germantown-dental-group page references macro plate
+- PASS: germantown-dental-group plate exists: material
+- PASS: germantown-dental-group page references material plate
+- PASS: udis-conn-orthodontics plate exists: hero
+- PASS: udis-conn-orthodontics page references hero plate
+- PASS: udis-conn-orthodontics plate exists: macro
+- PASS: udis-conn-orthodontics page references macro plate
+- PASS: udis-conn-orthodontics plate exists: material
+- PASS: udis-conn-orthodontics page references material plate
+- PASS: jarman-sales-service plate exists: hero
+- PASS: jarman-sales-service page references hero plate
+- PASS: jarman-sales-service plate exists: macro
+- PASS: jarman-sales-service page references macro plate
+- PASS: jarman-sales-service plate exists: material
+- PASS: jarman-sales-service page references material plate
+- PASS: lees-hoagie-house plate exists: hero
+- PASS: lees-hoagie-house page references hero plate
+- PASS: lees-hoagie-house plate exists: macro
+- PASS: lees-hoagie-house page references macro plate
+- PASS: lees-hoagie-house plate exists: material
+- PASS: lees-hoagie-house page references material plate
+- PASS: anthony-gueriera-insurance plate exists: hero
+- PASS: anthony-gueriera-insurance page references hero plate
+- PASS: anthony-gueriera-insurance plate exists: macro
+- PASS: anthony-gueriera-insurance page references macro plate
+- PASS: anthony-gueriera-insurance plate exists: material
+- PASS: anthony-gueriera-insurance page references material plate
+- PASS: ban-ban-asian-bistro plate exists: hero
+- PASS: ban-ban-asian-bistro page references hero plate
+- PASS: ban-ban-asian-bistro plate exists: macro
+- PASS: ban-ban-asian-bistro page references macro plate
+- PASS: ban-ban-asian-bistro plate exists: material
+- PASS: ban-ban-asian-bistro page references material plate
+- PASS: big-head-transport plate exists: hero
+- PASS: big-head-transport page references hero plate
+- PASS: big-head-transport plate exists: macro
+- PASS: big-head-transport page references macro plate
+- PASS: big-head-transport plate exists: material
+- PASS: big-head-transport page references material plate
+- PASS: dutton-road-veterinary-clinic plate exists: hero
+- PASS: dutton-road-veterinary-clinic page references hero plate
+- PASS: dutton-road-veterinary-clinic plate exists: macro
+- PASS: dutton-road-veterinary-clinic page references macro plate
+- PASS: dutton-road-veterinary-clinic plate exists: material
+- PASS: dutton-road-veterinary-clinic page references material plate
+- PASS: elite-auto-parts plate exists: hero
+- PASS: elite-auto-parts page references hero plate
+- PASS: elite-auto-parts plate exists: macro
+- PASS: elite-auto-parts page references macro plate
+- PASS: elite-auto-parts plate exists: material
+- PASS: elite-auto-parts page references material plate
+- PASS: kehans-auto-service plate exists: hero
+- PASS: kehans-auto-service page references hero plate
+- PASS: kehans-auto-service plate exists: macro
+- PASS: kehans-auto-service page references macro plate
+- PASS: kehans-auto-service plate exists: material
+- PASS: kehans-auto-service page references material plate
+- PASS: Exactly forty optimized plate derivatives ship
+- PASS: Plate derivatives are unique — no recolored copies
+- PASS: Exactly seven generated WebP material maps ship
+- PASS: Two self-hosted variable fonts ship (Alumni Sans, Public Sans)
+- PASS: Production JavaScript remains below 185 KB gzipped
+- PASS: Reduced-motion styling ships
+- PASS: Visible keyboard focus styling ships
+- PASS: Static WebGL fallback styling ships
+- PASS: Reveal states are gated on JS being alive

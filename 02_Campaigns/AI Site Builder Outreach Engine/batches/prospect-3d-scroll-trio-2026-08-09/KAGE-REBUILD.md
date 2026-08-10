@@ -161,3 +161,13 @@ npx vite preview --host 127.0.0.1 --port 4177 --strictPort
 # Playwright browser download is unavailable
 npm run qa:browser -- http://127.0.0.1:4177 round-1 all /
 ```
+
+## Consumer-visibility pass (2026-08-10)
+
+Operator review: "the 3D is incredible, but I wanna really be able to see it
+as a consumer." Exposure raised per world (0.92→1.08 / 0.98→1.12 / 1.08→1.18),
+ambient lifted, plate grade now opens at 0.8+ instead of 0.6, and both desktop
+and portrait scrims carry noticeably less ink. MacLaren's official logo keeps
+its real artwork but sits on a frosted, rounded container instead of a solid
+white slab. The next-ten package (`../prospect-3d-scroll-next10-2026-08-10/`)
+inherits these values as its defaults.

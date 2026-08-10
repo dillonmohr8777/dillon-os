@@ -1,0 +1,20 @@
+{
+  "name": "prospect-radar-3d-scroll-next10",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "textures": "node scripts/generate-textures.mjs",
+    "pages": "node scripts/build-pages.mjs",
+    "build": "npm run textures && npm run pages && vite build",
+    "qa": "node scripts/qa.mjs",
+    "qa:browser": "node scripts/qa-browser.mjs"
+  },
+  "dependencies": {
+    "three": "^0.179.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.2",
+    "vite": "^7.1.1"
+  }
+}

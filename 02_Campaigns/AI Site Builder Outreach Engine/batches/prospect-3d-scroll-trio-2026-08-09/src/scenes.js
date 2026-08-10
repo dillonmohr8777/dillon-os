@@ -542,8 +542,8 @@ function dustField(count, color, spread, seed, size = 0.03, opacity = 0.34) {
    Carcass, stone, island, light. The payoff is the room switching on.
 ========================================================================= */
 const MACLAREN = {
-  clear: 0x0d0f10, fog: 0x1b2124, fogDensity: 0.0165, exposure: 0.92,
-  sky: 0xbcd6dd, ground: 0x2a2019, ambient: 0.42,
+  clear: 0x0d0f10, fog: 0x1b2124, fogDensity: 0.0165, exposure: 1.08,
+  sky: 0xbcd6dd, ground: 0x2a2019, ambient: 0.6,
   cold: 0xa9cfdd, coldIntensity: 1.9, coldPosition: [-9, 11, 8],
   warm: 0xffb066, warmIntensity: 2.0, warmPosition: [0, 1.5, 1.6], warmRange: 22,
   envSky: 0x2b3a42, envFloor: 0x0d0c0b, envLamp: 0xffb066, envCool: 0x9fc9dc,
@@ -726,7 +726,7 @@ function createMacLaren(canvas, options) {
       glow.opacity = switchOn;
       warm.intensity = lerp(1.6, 11, switchOn);
       key.intensity = lerp(1.9, 1.1, phase(progress, 0.5, 0.95));
-      stage.plateMaterial.color.setScalar(lerp(0.6, 1.15, phase(progress, 0.1, 0.9)));
+      stage.plateMaterial.color.setScalar(lerp(0.82, 1.22, phase(progress, 0.1, 0.9)));
       stage.hazeMaterial.opacity = lerp(0.42, 0.16, phase(progress, 0.15, 0.85));
 
       dust.rotation.y = time * 0.016;
@@ -743,8 +743,8 @@ function createMacLaren(canvas, options) {
    gem, then seated into a band. Everything has a surface under it.
 ========================================================================= */
 const GOLDEN = {
-  clear: 0x040405, fog: 0x090809, fogDensity: 0.03, exposure: 0.98,
-  sky: 0x1d1710, ground: 0x020202, ambient: 0.46,
+  clear: 0x040405, fog: 0x090809, fogDensity: 0.03, exposure: 1.12,
+  sky: 0x1d1710, ground: 0x020202, ambient: 0.6,
   cold: 0x6f95d8, coldIntensity: 1.5, coldPosition: [-7, 5.5, 5],
   warm: 0xffc06a, warmIntensity: 7, warmPosition: [1.4, 2.2, 1.9], warmRange: 12,
   envSky: 0x14100b, envFloor: 0x010101, envLamp: 0xffcf8d, envCool: 0x4f6f9e,
@@ -946,7 +946,7 @@ function createGolden(canvas, options) {
       key.intensity = lerp(0.9, 1.9, phase(progress, 0.3, 0.9));
       sparks.rotation.y = time * 0.02;
       sparks.material.opacity = lerp(0.06, 0.2, cut);
-      stage.plateMaterial.color.setScalar(lerp(0.62, 1.05, phase(progress, 0.1, 0.9)));
+      stage.plateMaterial.color.setScalar(lerp(0.8, 1.15, phase(progress, 0.1, 0.9)));
       stage.hazeMaterial.opacity = lerp(0.4, 0.14, phase(progress, 0.15, 0.85));
 
       panels.update(progress);
@@ -960,8 +960,8 @@ function createGolden(canvas, options) {
    becomes the subject. Water, then what moves the water.
 ========================================================================= */
 const MORTON = {
-  clear: 0x04141a, fog: 0x07222b, fogDensity: 0.019, exposure: 1.08,
-  sky: 0x74dcea, ground: 0x03151b, ambient: 0.92,
+  clear: 0x04141a, fog: 0x07222b, fogDensity: 0.019, exposure: 1.18,
+  sky: 0x74dcea, ground: 0x03151b, ambient: 1.05,
   cold: 0xb2f2ff, coldIntensity: 2.9, coldPosition: [-6, 12, 9],
   warm: 0xff8a3d, warmIntensity: 1.2, warmPosition: [-1.0, -1.7, 0.5], warmRange: 17,
   envSky: 0x1d4a58, envFloor: 0x020d11, envLamp: 0xff9c52, envCool: 0x8fe6f7,
@@ -1183,7 +1183,7 @@ function createMorton(canvas, options) {
       positions.needsUpdate = true;
       waterMap.offset.set(time * 0.012, time * 0.008);
 
-      stage.plateMaterial.color.setScalar(lerp(0.62, 1.05, phase(progress, 0.1, 0.9)));
+      stage.plateMaterial.color.setScalar(lerp(0.8, 1.15, phase(progress, 0.1, 0.9)));
       stage.hazeMaterial.opacity = lerp(0.44, 0.18, phase(progress, 0.15, 0.85));
       root.rotation.y = lerp(-0.1, 0.14, smooth(progress));
 

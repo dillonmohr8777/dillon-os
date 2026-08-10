@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%230b0d10%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2210.5%22%20fill%3D%22none%22%20stroke%3D%22%23e84a3a%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2220.5%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%20Narrow%2C%20sans-serif%22%20font-size%3D%2211%22%20font-weight%3D%22700%22%20fill%3D%22%23e84a3a%22%3EEA%3C%2Ftext%3E%3C%2Fsvg%3E" />
+    <meta name="theme-color" content="#0b0d10" />
+    <meta name="description" content="A private cinematic scroll concept for Elite Auto Parts." />
+    <title>Elite Auto Parts — Cinematic Scroll Concept</title>
+    <script type="module" src="/src/site.js"></script>
+  </head>
+  <body data-site="elite-auto-parts" style="--accent:#e84a3a;--accent-strong:#5a8ac8;--accent2:#5a8ac8;--plate:url(/assets/plates/elite-auto-parts/hero.webp);--plate-mobile:url(/assets/plates/elite-auto-parts/hero-900.webp);--macro:url(/assets/plates/elite-auto-parts/macro.webp);--material:url(/assets/plates/elite-auto-parts/material.webp);--plate-position:64% 42%;background:#0b0d10">
+    <!--
+      THESIS: One composited world per business — plate, geometry, and editorial stills share a single camera.
+      FACTS: name and locale verified from the radar brief; everything else stays a question for the business.
+      IMAGES: synthetic concept plates from the momentum-next10 image system; disclosed on-page, never presented as photography.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with QA receipts and KAGE-REBUILD notes.
+    -->
+    <a class="skip-link" href="#story">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand-lockup" href="/sites/elite-auto-parts/" aria-label="Elite Auto Parts concept home">
+        <span class="brand-coin" aria-hidden="true">EA</span>
+        <span class="brand-name">Elite<b><i>Auto Parts</i> · concept mark</b></span>
+      </a>
+      <nav aria-label="Primary navigation"><a href="#sequence">Sequence</a><a href="#verify">Source</a></nav>
+      <a class="lab-back" href="/labs/prospect-3d-scroll-next10/">Build 177 <span>Scroll Lab</span></a>
+    </header>
+
+    <div class="scene-stage" aria-hidden="true">
+      <div class="scene-plate"></div>
+      <canvas id="scene-canvas"></canvas>
+      <div class="panel-anchors"></div>
+      <div class="scene-scrim"></div>
+      <div class="scene-foreground"></div>
+      <div class="film-grain"></div>
+      <div class="scene-hud">
+        <span class="hud-axis hud-axis-x"></span><span class="hud-axis hud-axis-y"></span>
+        <div class="hud-reticle"><i></i></div>
+      </div>
+    </div>
+    <div class="scene-fallback" role="img" aria-label="An exploded brake rotor, bearing, spring and fasteners hovering in exact catalog order above a graphite stage."></div>
+    <div class="progress-rail" aria-hidden="true"><span></span></div>
+    <dl class="data-strip" aria-hidden="true">
+      <div><dt>Chapters</dt><dd>04</dd></div>
+      <div><dt>Lens</dt><dd>50 MM</dd></div>
+      <div><dt>Subject</dt><dd>Auto parts</dd></div>
+      <div><dt>State</dt><dd><b id="scene-state">Exploded</b></dd></div>
+      <div class="strip-beat"><dt>Beat</dt><dd id="scene-beat">01</dd></div>
+    </dl>
+    <ol class="chapter-rail" aria-hidden="true"><li class="is-on"><span>Exploded</span><i></i></li><li><span>Order</span><i></i></li><li><span>The check</span><i></i></li><li><span>Source</span><i></i></li></ol>
+
+    <main id="story">
+      <section class="hero-panel" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="hero-context">The right part is a fact, not an opinion. Everything in this trade hangs on the lookup.</p>
+          <h1 id="page-title">The exact part,<br />or no part.</h1>
+          <div class="hero-actions"><a class="primary-action" href="#sequence">Walk the sequence</a><a class="secondary-action" href="https://cecarparts.com" target="_blank" rel="noopener">Business source</a></div>
+        </div>
+        <p class="hero-wordmark" aria-hidden="true">ASSEMBLE</p>
+        <div class="verb-chip" aria-hidden="true"><span>Philadelphia, PA</span><strong>ASSEMBLE</strong></div>
+        <div class="hero-inset" data-reveal="scale"><span class="inset-index">03 / 03</span><span>Material study</span><strong>Machined faces, one red flag</strong><i aria-hidden="true"></i></div>
+        <a class="scroll-cue" href="#ch-0"><span>Scroll to assemble</span><i aria-hidden="true"></i></a>
+      </section>
+
+      <section class="chapter chapter-left" id="ch-0" data-scene-state="Exploded" aria-labelledby="ch-0-title">
+        <div class="chapter-copy">
+          <span class="chapter-step">Exploded</span>
+          <h2 id="ch-0-title">A car is ten thousand answers to look up.</h2>
+          <p>The rotor stack opens the page mid-air, every component held apart in catalog order. Parts work starts with seeing the assembly the way the book sees it.</p>
+          <dl class="material-ledger"><div><dt>Known</dt><dd>The store name and its Philadelphia location area</dd></div><div><dt>Held open</dt><dd>Inventory, brands stocked, pricing, and hours</dd></div></dl>
+        </div>
+      </section>
+
+      <section class="chapter chapter-right" id="ch-1" data-scene-state="Ordered" aria-labelledby="ch-1-title">
+        <div class="chapter-copy">
+          <span class="chapter-step">Order</span>
+          <h2 id="ch-1-title">Fitment beats brand, every time.</h2>
+          <p>Pieces close toward their seats. Year, make, model, engine, trim — the five questions that separate the right rotor from an expensive guess.</p>
+          <blockquote>Visual confidence should sharpen the next question — not disguise what still needs verification.</blockquote>
+        </div>
+        <figure class="chapter-visual chapter-visual-macro" data-reveal="fade" aria-label="Synthetic concept plate: process detail for Elite Auto Parts">
+          <div></div><figcaption><span>02 / Process</span><strong>Calipers against the spec</strong></figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter chapter-left" id="ch-2" data-scene-state="Fitted" aria-labelledby="ch-2-title">
+        <div class="chapter-copy">
+          <span class="chapter-step">The check</span>
+          <h2 id="ch-2-title">Measured, not assumed.</h2>
+          <p>The red ring flags the last check before the box: does the number on the part match the number on the vehicle. Good counters check twice.</p>
+          <ul class="detail-list"><li>Bring the VIN, not a description</li><li>Ask what grade options exist for the job</li><li>Ask what the return policy expects</li></ul>
+        </div>
+        <figure class="chapter-visual chapter-visual-material chapter-visual-surface" data-reveal="fade" aria-label="Synthetic concept plate: material study for Elite Auto Parts">
+          <div></div><figcaption><span>03 / Material</span><strong>Machined faces, one red flag</strong></figcaption>
+        </figure>
+      </section>
+
+      <section class="chapter chapter-right" id="ch-3" data-scene-state="Boxed" aria-labelledby="ch-3-title">
+        <div class="chapter-copy">
+          <span class="chapter-step">Source</span>
+          <h2 id="ch-3-title">The finished frame points back to the real store.</h2>
+          <p>Use the store's own site to confirm inventory and hours.</p>
+          <a class="primary-action" href="https://cecarparts.com" target="_blank" rel="noopener">Visit the store site</a>
+        </div>
+      </section>
+
+      <section class="final-frame" data-reveal="fade" aria-label="Synthetic concept plate revisited as the closing frame">
+        <div class="final-frame-image" role="img" aria-label="An exploded brake rotor, bearing, spring and fasteners hovering in exact catalog order above a graphite stage."></div>
+        <p><span>ASSEMBLE / Closing frame</span><strong>The exact part,<br />or no part.</strong></p>
+      </section>
+
+      <section class="index-band" aria-labelledby="sequence-title" id="sequence">
+        <header>
+          <span data-reveal="up">The sequence</span>
+          <h2 id="sequence-title">Six lookups between a symptom and the right box.</h2>
+          <p data-reveal="up" style="--d:1">A parts counter is a search engine with a person attached. The discipline is in the questions.</p>
+        </header>
+        <div class="index-grid">
+          <article class="index-card" data-reveal="up" style="--d:0">
+            <b>01</b>
+            <h3>Identify</h3>
+            <p>VIN first. Trim levels lie; the number does not.</p>
+          </article>
+          <article class="index-card" data-reveal="up" style="--d:1">
+            <b>02</b>
+            <h3>Diagnose</h3>
+            <p>The failed part is sometimes the victim. Ask what killed it.</p>
+          </article>
+          <article class="index-card" data-reveal="up" style="--d:2">
+            <b>03</b>
+            <h3>Cross-reference</h3>
+            <p>OEM number to aftermarket equivalents, grade by grade.</p>
+          </article>
+          <article class="index-card" data-reveal="up" style="--d:0">
+            <b>04</b>
+            <h3>Grade</h3>
+            <p>Economy, standard, premium — matched to the vehicle's remaining life.</p>
+          </article>
+          <article class="index-card" data-reveal="up" style="--d:1">
+            <b>05</b>
+            <h3>Verify</h3>
+            <p>Measure the old part against the new before anyone drives away.</p>
+          </article>
+          <article class="index-card" data-reveal="up" style="--d:2">
+            <b>06</b>
+            <h3>Back it</h3>
+            <p>A part is only as good as the counter standing behind it.</p>
+          </article>
+        </div>
+      </section>
+
+      <dl class="measures" aria-label="How this concept page was built">
+        <div data-reveal="up"><dt>Chapters</dt><dd>04<small>Directed camera beats across one continuous world.</small></dd></div>
+        <div data-reveal="up" style="--d:1"><dt>Plates</dt><dd>03<small>Synthetic concept images, each placed more than once.</small></dd></div>
+        <div data-reveal="up" style="--d:2"><dt>Focal length</dt><dd>50 MM<small>The working lens this sequence was framed on.</small></dd></div>
+        <div data-reveal="up" style="--d:3"><dt>Stock photos</dt><dd>0<small>Nothing here is presented as the business's photography.</small></dd></div>
+      </dl>
+
+      <section class="brief-panel" aria-labelledby="brief-title">
+        <div><h2 id="brief-title">What we would confirm before building the real thing.</h2></div>
+        <div>
+          <p data-reveal="up" style="--d:0">This page is a concept. The imagery is synthetic art direction, the sequence describes how parts counters commonly work, and none of it describes this store's actual inventory.</p>
+          <p data-reveal="up" style="--d:1">Before anything went live we would confirm the real scope with the store — lines stocked, delivery and ordering, and how they want lookups to arrive.</p>
+          <p class="brief-note" data-reveal="up" style="--d:2">Nothing here should be read as a claim about Elite Auto Parts' inventory, brands, pricing, hours, or availability. Those come from the store.</p>
+        </div>
+      </section>
+
+      <section class="verification-panel" data-reveal="up" id="verify" aria-labelledby="verify-title">
+        <div><span>Source boundary</span><h2 id="verify-title">The name is real. The imagery is synthetic.</h2></div>
+        <p>Elite Auto Parts — Philadelphia, PA. Confirm everything current directly with the store. Every image on this page is generated concept art direction; none of it depicts the business, its premises, its people, or its work.</p>
+        <div class="verification-actions"><a href="https://cecarparts.com" target="_blank" rel="noopener">Store site</a><a href="https://www.google.com/maps/search/?api=1&query=Elite%20Auto%20Parts%20Philadelphia%20PA" target="_blank" rel="noopener">Map</a></div>
+      </section>
+    </main>
+    <footer class="site-footer"><a href="/labs/prospect-3d-scroll-next10/">All ten cinematic builds</a><span>Concept only · noindex · mail hold · synthetic imagery</span></footer>
+  </body>
+</html>
