@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23031014%22%2F%3E%3Cpath%20d%3D%22M4%2020c4-4%208-4%2012%200s8%204%2012%200%22%20fill%3D%22none%22%20stroke%3D%22%234bd8e4%22%20stroke-width%3D%222.4%22%2F%3E%3Cpath%20d%3D%22M17%204l-6%209h5l-2%207%207-10h-5z%22%20fill%3D%22%234bd8e4%22%2F%3E%3C%2Fsvg%3E" />
     <meta name="theme-color" content="#031014" />
     <meta name="description" content="A private cinematic pool-system cutaway concept for Morton Electric Pool & Spa Specialists." />
     <title>Morton Electric Pool &amp; Spa — Cinematic System Concept</title>
@@ -31,18 +32,25 @@
     <div class="scene-stage" aria-hidden="true">
       <div class="scene-plate"></div>
       <canvas id="scene-canvas"></canvas>
+      <div class="panel-anchors"></div>
       <div class="scene-scrim"></div>
       <div class="scene-foreground"></div>
       <div class="film-grain"></div>
-      <div class="scene-label"><span>System state</span><strong id="scene-state">Surface</strong></div>
       <div class="scene-hud">
         <span class="hud-axis hud-axis-x"></span><span class="hud-axis hud-axis-y"></span>
         <div class="hud-reticle"><i></i></div>
-        <p class="hud-readout"><span>Study 03 / System</span><strong>24 MM · F 3.2</strong></p>
       </div>
     </div>
     <div class="scene-fallback" role="img" aria-label="A blue-hour pool cutaway with visible water chamber, copper paths, pump, filter and warm service lighting."></div>
     <div class="progress-rail" aria-hidden="true"><span></span></div>
+    <dl class="data-strip" aria-hidden="true">
+      <div><dt>Chapters</dt><dd>04</dd></div>
+      <div><dt>Lens</dt><dd>24 MM</dd></div>
+      <div><dt>Subject</dt><dd>System</dd></div>
+      <div><dt>State</dt><dd><b id="scene-state">Surface</b></dd></div>
+      <div class="strip-beat"><dt>Beat</dt><dd id="scene-beat">01</dd></div>
+    </dl>
+    <ol class="chapter-rail" aria-hidden="true"><li class="is-on"><span>Surface</span><i></i></li><li><span>Flow</span><i></i></li><li><span>Service bay</span><i></i></li><li><span>Source</span><i></i></li></ol>
 
     <main id="story">
       <section class="hero-panel" aria-labelledby="page-title">

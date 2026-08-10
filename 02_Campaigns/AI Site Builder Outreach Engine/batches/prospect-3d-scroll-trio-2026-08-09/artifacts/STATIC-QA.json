@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T00:33:57.393Z",
+  "generatedAt": "2026-08-10T02:31:02.403Z",
   "ok": true,
   "pages": 4,
   "checks": [
@@ -144,38 +144,38 @@
   "materials": [
     {
       "name": "copper-patina.webp",
-      "bytes": 4256,
-      "sha256": "2a9191c9c93e3b8d0e972a92777f9d4daba4ad39aedb4433e61bf77fbe53590a"
+      "bytes": 6870,
+      "sha256": "67e50617b13bc031df59bc1f659561f8b9c98ad84c5e4ae1210dfb54feb9dcf7"
     },
     {
       "name": "polished-gem.webp",
-      "bytes": 6166,
-      "sha256": "c0a3402ebe4524ebf68dfd042f695df30dc10d51b70dc0f310929ee586b31c3e"
+      "bytes": 6466,
+      "sha256": "341e9c978c5d27c9815bdbf18d9c64f2b5857b7b6af9b21698d34f82be84afc9"
     },
     {
       "name": "raw-gem.webp",
-      "bytes": 5940,
-      "sha256": "73500481569709aefe789071fde1ef477beb8e75831744d9a05a6ddeb2eae8ab"
+      "bytes": 7992,
+      "sha256": "bf54513e35f17135fb899374ecdda2c3a72e645355860fdceba9883d20d4fc79"
     },
     {
       "name": "steam-noise.webp",
-      "bytes": 57554,
-      "sha256": "7b5d7d2940e92d9c3f03ffc3a61d20fcd766bbb1d8d89d4a3b7c540ff990e66f"
+      "bytes": 340176,
+      "sha256": "60ef0b290339f792894d10c8a188ba75a75ca08673aeb17ce56c8fdb6e3ce91b"
     },
     {
       "name": "stone-vein.webp",
-      "bytes": 13346,
-      "sha256": "dc79ba8b1034a40b84cb38448c506e0d2341cc569031f52127fc0ab97ac1cf66"
+      "bytes": 7542,
+      "sha256": "fa1eb037dd99f984f0c5986c079f8d69c2202d7b11679c7d18563b430bab2028"
     },
     {
       "name": "water-caustics.webp",
-      "bytes": 13292,
-      "sha256": "d24e5129fd345d813e39417acffc0e4f8c52855c45952a954c4fdf883f3dd827"
+      "bytes": 18884,
+      "sha256": "6a62f7aa3de9ee2f6de0367bf80ceb1133054a2ec06de5b4f1c985da4222139b"
     },
     {
       "name": "wood-grain.webp",
-      "bytes": 20368,
-      "sha256": "4ec11ebcef40dc9e7a1abd66063745aa08bd1558b02330616ae73bb0d5c4c0e2"
+      "bytes": 13402,
+      "sha256": "ada5e51118bac428e25df5fc8fc0a96d41341aeb6aec69193cf586fc9ff8edb5"
     }
   ],
   "editorialFrames": [
@@ -292,10 +292,10 @@
     "files": [
       "dist/assets/lab-D9huO-5A.js",
       "dist/assets/modulepreload-polyfill-B5Qt9EMX.js",
-      "dist/assets/site-CJz6Iz1A.js"
+      "dist/assets/site-D3HoDW72.js"
     ],
-    "bytes": 535228,
-    "gzipBytes": 136701,
-    "gzipKilobytes": 133.5
+    "bytes": 554435,
+    "gzipBytes": 143333,
+    "gzipKilobytes": 140
   }
 }

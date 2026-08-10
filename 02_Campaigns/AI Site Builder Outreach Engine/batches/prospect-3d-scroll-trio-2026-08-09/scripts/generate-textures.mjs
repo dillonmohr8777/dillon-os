@@ -17,66 +17,120 @@ const hash = (x, y, seed = 1) => {
   n = (n ^ (n >>> 13)) * 1274126177;
   return ((n ^ (n >>> 16)) >>> 0) / 4294967295;
 };
-const smoothNoise = (x, y, seed) => {
+
+/*
+  Periodic value noise. Wrapping the lattice on an integer period means every
+  octave — and therefore the whole fBm stack — tiles exactly across the unit
+  square, so these maps repeat across a surface without a seam.
+*/
+const wrap = (value, period) => ((value % period) + period) % period;
+const pnoise = (x, y, period, seed) => {
   const x0 = Math.floor(x);
   const y0 = Math.floor(y);
   const tx = x - x0;
   const ty = y - y0;
-  const a = hash(x0, y0, seed);
-  const b = hash(x0 + 1, y0, seed);
-  const c = hash(x0, y0 + 1, seed);
-  const d = hash(x0 + 1, y0 + 1, seed);
+  const a = hash(wrap(x0, period), wrap(y0, period), seed);
+  const b = hash(wrap(x0 + 1, period), wrap(y0, period), seed);
+  const c = hash(wrap(x0, period), wrap(y0 + 1, period), seed);
+  const d = hash(wrap(x0 + 1, period), wrap(y0 + 1, period), seed);
   const sx = tx * tx * (3 - 2 * tx);
   const sy = ty * ty * (3 - 2 * ty);
-  return (a + (b - a) * sx) + ((c + (d - c) * sx) - (a + (b - a) * sx)) * sy;
+  const top = a + (b - a) * sx;
+  const bottom = c + (d - c) * sx;
+  return top + (bottom - top) * sy;
 };
-const octave = (x, y, seed) => smoothNoise(x, y, seed) * 0.55 + smoothNoise(x * 2, y * 2, seed + 3) * 0.3 + smoothNoise(x * 4, y * 4, seed + 8) * 0.15;
+
+const fbm = (u, v, frequency, seed, octaves = 5) => {
+  let amplitude = 0.5;
+  let total = 0;
+  let norm = 0;
+  let freq = frequency;
+  for (let i = 0; i < octaves; i++) {
+    total += pnoise(u * freq, v * freq, freq, seed + i * 13) * amplitude;
+    norm += amplitude;
+    amplitude *= 0.5;
+    freq *= 2;
+  }
+  return total / norm;
+};
+
+/* Ridged noise: the thin bright network that reads as caustics or fracture. */
+const ridge = (u, v, frequency, seed, octaves = 4) =>
+  1 - Math.abs(fbm(u, v, frequency, seed, octaves) * 2 - 1);
+const smoothstep = (edge0, edge1, x) => {
+  const t = Math.max(0, Math.min(1, (x - edge0) / (edge1 - edge0)));
+  return t * t * (3 - 2 * t);
+};
+const mix = (a, b, t) => a + (b - a) * t;
 
 const textures = {
+  /* Rings distorted by a warp field, plus fine fibre running with the grain. */
   "wood-grain": (u, v) => {
-    const n = octave(u * 8, v * 3, 2);
-    const grain = Math.sin((v * 66 + n * 7 + Math.sin(u * 8) * 2) * Math.PI) * 0.5 + 0.5;
-    const pore = hash(Math.floor(u * 512), Math.floor(v * 512), 19) * 8;
-    return [112 + grain * 54 + pore, 61 + grain * 38 + pore * 0.4, 31 + grain * 24];
+    const warp = (fbm(u, v, 3, 11) - 0.5) * 2;
+    const drift = (fbm(u, v, 2, 5) - 0.5) * 2;
+    const rings = 0.5 + 0.5 * Math.sin((v * 9 + warp * 1.7 + drift * 0.8) * Math.PI * 2);
+    const soft = Math.pow(rings, 1.7);
+    const fibre = (fbm(u, v, 64, 21, 3) - 0.5) * 0.16;
+    const pore = Math.max(0, fbm(u, v, 96, 33, 2) - 0.68) * 0.9;
+    const shade = 0.5 + soft * 0.28 + fibre - pore * 0.4;
+    return [shade * 168, shade * 108, shade * 66];
   },
+  /* Marble: broad soft veining over a low-contrast field, not contour lines. */
   "stone-vein": (u, v) => {
-    const n = octave(u * 5, v * 5, 7);
-    const wave = Math.abs(Math.sin((u * 3.4 + v * 1.7 + n * 1.8) * Math.PI * 2));
-    const vein = Math.pow(1 - wave, 18);
-    const gold = Math.pow(1 - Math.abs(Math.sin((u * 1.7 - v * 2.3 + n) * Math.PI * 2)), 28);
-    return [220 - vein * 88 + gold * 24, 216 - vein * 84 + gold * 8, 207 - vein * 72 - gold * 18];
+    const q = (fbm(u, v, 3, 7) - 0.5) * 2;
+    const warp = (fbm(u + q * 0.22, v + q * 0.18, 4, 17) - 0.5) * 2;
+    const seam = 0.5 + 0.5 * Math.sin((u * 2 - v * 1 + warp * 0.9 + q * 0.6) * Math.PI * 2);
+    const vein = Math.pow(1 - seam, 5) * 0.55 + Math.pow(1 - seam, 14) * 0.45;
+    const grit = (fbm(u, v, 48, 41, 3) - 0.5) * 0.07;
+    const base = 0.84 + grit - vein * 0.34;
+    return [base * 238, base * 234, base * 226];
   },
+  /* Rough mineral: mottled body with a sparse fracture network. */
   "raw-gem": (u, v) => {
-    const n = octave(u * 12, v * 12, 13);
-    const fracture = Math.pow(Math.abs(Math.sin((u * 9 + n * 2.1) * Math.PI) * Math.cos((v * 7 - n) * Math.PI)), 12);
-    return [74 + n * 68 + fracture * 34, 50 + n * 44, 61 + n * 54 + fracture * 14];
+    const body = fbm(u, v, 6, 13);
+    const warp = (fbm(u, v, 4, 23) - 0.5) * 2;
+    const fracture = Math.pow(ridge(u + warp * 0.12, v + warp * 0.1, 8, 19, 3), 9);
+    const shade = 0.42 + body * 0.5 + fracture * 0.3;
+    return [shade * 150, shade * 118, shade * 88];
   },
   "polished-gem": (u, v) => {
     const x = u - 0.5;
     const y = v - 0.5;
     const angle = Math.atan2(y, x);
     const radius = Math.hypot(x, y);
-    const facet = Math.floor((angle + Math.PI) / (Math.PI / 6)) % 2;
-    const light = 0.45 + 0.45 * Math.cos(angle * 3 - radius * 12) + facet * 0.16;
-    return [24 + light * 48, 61 + light * 104, 112 + light * 126];
+    const facet = Math.floor((angle + Math.PI) / (Math.PI / 8)) % 2;
+    const sheen = 0.4 + 0.4 * Math.cos(angle * 4 - radius * 9) + facet * 0.14;
+    const grain = (fbm(u, v, 32, 61, 3) - 0.5) * 0.1;
+    const shade = Math.max(0, sheen + grain);
+    return [22 + shade * 44, 58 + shade * 96, 104 + shade * 118];
   },
+  /* Overlapping ridged networks read as light focused through moving water. */
   "water-caustics": (u, v) => {
-    const n = octave(u * 8, v * 8, 23);
-    const c1 = Math.pow(Math.abs(Math.sin((u * 7.1 + n * 1.7) * Math.PI) * Math.sin((v * 5.3 - n) * Math.PI)), 6);
-    const c2 = Math.pow(Math.abs(Math.cos((u * 4.2 - v * 6.4 + n) * Math.PI)), 14);
-    const caustic = Math.min(1, c1 + c2 * 0.65);
-    return [8 + caustic * 76, 88 + caustic * 144, 118 + caustic * 137];
+    const drift = (fbm(u, v, 3, 23) - 0.5) * 2;
+    const a = Math.pow(ridge(u + drift * 0.16, v + drift * 0.13, 6, 31, 3), 6);
+    const b = Math.pow(ridge(u - drift * 0.12, v + drift * 0.17, 9, 37, 3), 9);
+    const caustic = Math.min(1, a * 0.75 + b * 0.55);
+    const deep = fbm(u, v, 4, 47) * 0.22;
+    return [10 + caustic * 92 + deep * 20, 74 + caustic * 150 + deep * 46, 104 + caustic * 140 + deep * 58];
   },
+  /* Patina as blotches eating into the metal, no regular streaking. */
   "copper-patina": (u, v) => {
-    const n = octave(u * 10, v * 5, 31);
-    const patina = Math.pow(Math.max(0, n - 0.55) * 2.2, 1.35);
-    const streak = Math.sin((u * 1.6 + v * 18 + n * 2) * Math.PI) * 5;
-    return [169 - patina * 105 + streak, 82 + patina * 92, 45 + patina * 70];
+    const warp = (fbm(u, v, 3, 31) - 0.5) * 2;
+    const blotch = fbm(u + warp * 0.2, v + warp * 0.16, 5, 43);
+    const patina = smoothstep(0.46, 0.72, blotch);
+    const grime = (fbm(u, v, 40, 51, 3) - 0.5) * 0.12;
+    const shade = 1 + grime;
+    return [
+      mix(176, 88, patina) * shade,
+      mix(102, 142, patina) * shade,
+      mix(60, 116, patina) * shade
+    ];
   },
+  /* Fine neutral grain for the film layer — mostly high frequency. */
   "steam-noise": (u, v) => {
-    const n = octave(u * 9, v * 9, 43);
-    const curl = Math.sin((u * 4 + v * 7 + n * 4) * Math.PI) * 0.5 + 0.5;
-    const value = 112 + n * 104 + curl * 34;
+    const fine = hash(Math.floor(u * width) % width, Math.floor(v * height) % height, 43);
+    const soft = fbm(u, v, 24, 71, 3);
+    const value = 90 + fine * 96 + soft * 60;
     return [value, value, value];
   }
 };

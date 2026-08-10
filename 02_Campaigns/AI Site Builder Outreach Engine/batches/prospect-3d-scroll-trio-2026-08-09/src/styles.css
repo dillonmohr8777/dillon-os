@@ -21,12 +21,6 @@
   --scroll-progress: 0;
   --world-reveal: 0;
   --late-reveal: 0;
-  --plate-brightness: .62;
-  --plate-saturation: .72;
-  --plate-scale: 1.09;
-  --plate-x: 0vw;
-  --plate-y: 0vh;
-  --webgl-opacity: .5;
   --paper: #f5f2ea;
   --paper-dim: rgba(245, 242, 234, 0.7);
   --ink: #07090a;
@@ -55,7 +49,6 @@ body {
   --frame-5: url("/assets/editorial/maclaren/05.webp");
   --frame-6: url("/assets/editorial/maclaren/06.webp");
   --plate-position: 56% 50%;
-  --foreground-clip: polygon(58% 61%, 100% 42%, 100% 100%, 46% 100%);
   margin: 0;
   min-width: 320px;
   overflow-x: clip;
@@ -77,7 +70,6 @@ body[data-site="golden"] {
   --frame-5: url("/assets/editorial/golden/05.webp");
   --frame-6: url("/assets/editorial/golden/06.webp");
   --plate-position: 58% 50%;
-  --foreground-clip: polygon(46% 72%, 100% 54%, 100% 100%, 24% 100%);
   background: #05080b;
 }
 
@@ -95,7 +87,6 @@ body[data-site="morton"] {
   --frame-5: url("/assets/editorial/morton/05.webp");
   --frame-6: url("/assets/editorial/morton/06.webp");
   --plate-position: 60% 50%;
-  --foreground-clip: polygon(47% 66%, 100% 48%, 100% 100%, 35% 100%);
   background: #031014;
 }
 
@@ -232,74 +223,98 @@ body[data-site="maclaren"] .brand-lockup {
 .webgl-ready .scene-fallback { opacity: 0; }
 .webgl-fallback .scene-stage { z-index: -2; }
 .webgl-fallback .scene-fallback { z-index: 0; opacity: 1; }
-.webgl-fallback { --world-reveal: 1; --late-reveal: 1; --plate-brightness: 1; --plate-saturation: 1; }
+.webgl-fallback { --world-reveal: 1; --late-reveal: 1; }
 
 .scene-plate,
 .scene-foreground,
 .scene-scrim,
+.panel-anchors,
 .film-grain,
 #scene-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 
-.scene-plate {
+/*
+  The plates now live inside the Three.js scene, so these two DOM layers only
+  exist to compose the no-WebGL still. They stay out of the way otherwise.
+*/
+.scene-plate,
+.scene-foreground { display: none; }
+
+.webgl-fallback .scene-plate {
+  display: block;
   z-index: 0;
   background-image: var(--plate);
   background-position: var(--plate-position);
   background-size: cover;
-  filter: brightness(var(--plate-brightness)) saturate(var(--plate-saturation));
-  transform: translate3d(var(--plate-x), var(--plate-y), 0) scale(var(--plate-scale));
-  animation: plate-in 2.4s cubic-bezier(.16, 1, .3, 1) both;
-  will-change: transform, filter;
+  filter: brightness(.86) saturate(.9);
+  transform: scale(1.04);
+}
+
+.webgl-fallback .scene-foreground {
+  display: block;
+  z-index: 3;
+  background-image: var(--foreground);
+  background-position: var(--plate-position);
+  background-size: cover;
+  filter: brightness(.6) saturate(.85);
+  transform: scale(1.09);
+  transform-origin: 74% 80%;
+  opacity: .7;
 }
 
 #scene-canvas {
   z-index: 2;
   display: block;
-  opacity: var(--webgl-opacity);
-  mix-blend-mode: soft-light;
+  opacity: 1;
   transition: opacity .45s ease;
 }
 
 .webgl-fallback #scene-canvas { opacity: 0; transition: none; }
 
+/*
+  A light hand. The world is the picture now, so the scrim only has to buy the
+  copy column enough separation to stay readable.
+*/
 .scene-scrim {
-  z-index: 1;
+  z-index: 3;
+  pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(3,5,6,.92) 0%, rgba(3,5,6,.7) 24%, rgba(3,5,6,.12) 58%, rgba(3,5,6,.04) 100%),
-    linear-gradient(180deg, rgba(2,4,5,.3), transparent 35%, rgba(2,4,5,.4));
+    linear-gradient(90deg, rgba(3,5,6,.86) 0%, rgba(3,5,6,.52) 26%, rgba(3,5,6,.06) 54%, transparent 78%),
+    linear-gradient(180deg, rgba(2,4,5,.52), transparent 26%, transparent 68%, rgba(2,4,5,.58));
+  opacity: calc(.72 + var(--world-reveal) * .28);
 }
 
 .scene-scrim::after {
   content: "";
   position: absolute;
-  inset: -4%;
+  inset: 0;
   pointer-events: none;
-  opacity: calc(1 - var(--late-reveal));
-  will-change: opacity;
+  background: radial-gradient(ellipse at 50% 46%, transparent 34%, rgba(2,4,5,.5) 88%, rgba(2,4,5,.78) 100%);
 }
 
-body[data-site="maclaren"] .scene-scrim::after {
-  background: radial-gradient(ellipse at 67% 62%, rgba(3,5,6,.98) 0%, rgba(3,5,6,.95) 38%, rgba(3,5,6,.42) 61%, transparent 76%);
+/* Projected panel captions — HTML type pinned to a world-space anchor. */
+.panel-anchors { z-index: 5; pointer-events: none; overflow: hidden; }
+
+.panel-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  gap: 4px;
+  width: max-content;
+  max-width: 220px;
+  margin: 10px 0 0 -1px;
+  padding: 8px 12px 9px;
+  border-left: 1px solid var(--accent);
+  background: linear-gradient(90deg, rgba(4,7,9,.72), rgba(4,7,9,.18));
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  text-transform: uppercase;
+  transition: opacity .28s ease;
+  will-change: transform, opacity;
 }
 
-body[data-site="golden"] .scene-scrim::after {
-  background: radial-gradient(ellipse at 77% 64%, rgba(3,5,7,.99) 0%, rgba(3,5,7,.96) 19%, rgba(3,5,7,.48) 34%, transparent 52%);
-}
-
-body[data-site="morton"] .scene-scrim::after {
-  background: radial-gradient(ellipse at 77% 73%, rgba(2,12,15,.99) 0%, rgba(2,12,15,.96) 28%, rgba(2,12,15,.52) 50%, transparent 69%);
-}
-
-.scene-foreground {
-  z-index: 3;
-  background-image: var(--foreground);
-  background-position: var(--plate-position);
-  background-size: cover;
-  filter: brightness(.72) saturate(.9) blur(.8px);
-  transform: translate3d(var(--plate-x), var(--plate-y), 0) scale(calc(var(--plate-scale) + .035));
-  transform-origin: 74% 80%;
-  opacity: .52;
-  will-change: transform;
-}
+.panel-anchor b { color: var(--paper); font-size: 10px; font-weight: 700; letter-spacing: .17em; }
+.panel-anchor span { color: var(--paper-dim); font-size: 8px; letter-spacing: .13em; }
 
 .scene-hud {
   position: absolute;
@@ -325,18 +340,6 @@ body[data-site="morton"] .scene-scrim::after {
 .hud-reticle::before { top: 12px; left: -7px; width: 39px; height: 1px; }
 .hud-reticle::after { top: -7px; left: 12px; width: 1px; height: 39px; }
 .hud-reticle i { position: absolute; inset: 9px; border: 1px solid rgba(255,255,255,.7); }
-.hud-readout {
-  position: absolute;
-  right: 6.5vw;
-  bottom: calc(23% + 12px);
-  display: grid;
-  gap: 5px;
-  margin: 0;
-  text-align: right;
-  text-transform: uppercase;
-}
-.hud-readout span { color: var(--paper-dim); font-size: 7px; letter-spacing: .2em; }
-.hud-readout strong { color: var(--paper); font-size: 8px; letter-spacing: .18em; }
 
 .film-grain {
   z-index: 4;
@@ -362,6 +365,75 @@ body[data-site="morton"] .scene-scrim::after {
 
 .scene-label span { color: var(--paper-dim); font-size: 9px; letter-spacing: .18em; }
 .scene-label strong { color: var(--accent); font-size: 10px; letter-spacing: .13em; }
+
+/*
+  Bottom instrument strip. Four fixed measures that stay put while the world
+  moves behind them — the thing that makes the page read as a controlled rig
+  rather than a video.
+*/
+.data-strip {
+  position: fixed;
+  z-index: 1;
+  right: clamp(22px, 3.2vw, 58px);
+  bottom: 0;
+  left: clamp(24px, 5.5vw, 96px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, auto)) 1fr;
+  align-items: end;
+  gap: clamp(26px, 5vw, 78px);
+  padding: 0 0 22px;
+  pointer-events: none;
+  border-top: 1px solid rgba(255,255,255,.14);
+  padding-top: 12px;
+  margin: 0 0 0 0;
+  opacity: calc(.35 + var(--world-reveal) * .65);
+  transition: opacity .5s ease;
+}
+
+.data-strip div { display: grid; gap: 5px; }
+.data-strip dt { color: var(--paper-dim); font-size: 7px; letter-spacing: .22em; text-transform: uppercase; }
+.data-strip dd {
+  margin: 0;
+  color: var(--paper);
+  font-family: "Lab Display", sans-serif;
+  font-size: clamp(15px, 1.5vw, 21px);
+  line-height: 1;
+  letter-spacing: -.01em;
+}
+.data-strip dd b { color: var(--accent); font-weight: 400; }
+.data-strip .strip-beat { justify-self: end; text-align: right; }
+
+/* Chapter rail — the reference keeps the whole journey visible at all times. */
+.chapter-rail {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  right: clamp(14px, 1.6vw, 26px);
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.chapter-rail li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  color: var(--paper-dim);
+  font-size: 7px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  opacity: .42;
+  transition: opacity .4s ease, color .4s ease;
+}
+
+.chapter-rail li i { display: block; width: 16px; height: 1px; background: currentColor; transition: width .4s cubic-bezier(.16,1,.3,1); }
+.chapter-rail li.is-on { color: var(--accent); opacity: 1; }
+.chapter-rail li.is-on i { width: 30px; }
 
 .progress-rail {
   position: fixed;
@@ -502,7 +574,7 @@ body[data-site="golden"] .hero-wordmark { font-family: "Facet Display", "Lab Dis
 
 .scroll-cue {
   position: absolute;
-  bottom: 30px;
+  bottom: 86px;
   left: clamp(24px, 5.5vw, 96px);
   display: flex;
   align-items: center;
@@ -701,7 +773,7 @@ blockquote {
 
 @media (max-width: 680px) {
   :root { --header-height: 72px; }
-  body { --plate: var(--plate-mobile); --foreground-clip: polygon(37% 72%, 100% 58%, 100% 100%, 18% 100%); }
+  body { --plate: var(--plate-mobile); }
   .site-header { padding: 12px 18px; }
   .brand-logo-wide { width: 150px; max-height: 44px; }
   .brand-logo-square { width: 42px; height: 42px; }
@@ -709,32 +781,45 @@ blockquote {
   .brand-name-morton { max-width: 180px; font-size: 15px; }
   .lab-back span { display: none; }
 
-  .scene-plate,
-  .scene-foreground {
-    inset: 0;
-    width: 100%;
-    height: 100%;
+  /*
+    Portrait gets its own composition: the world holds the top two thirds as a
+    picture, the copy sits in the graded floor beneath it. The camera rig does
+    the matching pull-back on its side.
+  */
+  .webgl-fallback .scene-plate,
+  .webgl-fallback .scene-foreground {
     background-size: auto 58svh;
     background-position: 63% 9svh;
     background-repeat: no-repeat;
     transform-origin: 70% 28%;
   }
 
-  body[data-site="golden"] .scene-plate,
-  body[data-site="golden"] .scene-foreground { background-position: 64% 8svh; }
-  body[data-site="morton"] .scene-plate,
-  body[data-site="morton"] .scene-foreground { background-position: 58% 8svh; }
-
   .scene-scrim {
-    background: linear-gradient(180deg, rgba(2,4,5,.28), rgba(2,4,5,.05) 30%, rgba(2,4,5,.4) 52%, rgba(2,4,5,.98) 72%, #030506 100%);
+    background: linear-gradient(180deg, rgba(2,4,5,.34), rgba(2,4,5,.02) 26%, rgba(2,4,5,.34) 50%, rgba(2,4,5,.93) 71%, #030506 100%);
   }
 
-  .scene-foreground { opacity: .48; transform: translate3d(var(--plate-x), var(--plate-y), 0) scale(calc(var(--plate-scale) + .02)); }
+  .scene-scrim::after { background: radial-gradient(ellipse at 50% 34%, transparent 42%, rgba(2,4,5,.42) 92%); }
   .scene-fallback { background-size: auto 58svh; background-position: 63% 9svh; background-repeat: no-repeat; }
-  #scene-canvas { opacity: min(.48, var(--webgl-opacity)); }
+  #scene-canvas { opacity: 1; }
   .scene-label { right: 18px; bottom: 18px; }
   .scene-hud { display: none; }
   .film-grain { opacity: .09; }
+  .chapter-rail { display: none; }
+  .panel-anchor { max-width: 148px; padding: 6px 9px 7px; }
+  .panel-anchor span { display: none; }
+
+  .data-strip {
+    right: 18px;
+    left: 21px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    padding-top: 9px;
+    padding-bottom: 14px;
+  }
+  .data-strip div:nth-child(4) { display: none; }
+  .data-strip .strip-beat { display: none; }
+  .data-strip dd { font-size: 14px; }
+  .data-strip dt { font-size: 6px; letter-spacing: .16em; }
 
   .hero-panel,
   .chapter { padding: var(--header-height) 21px 30px; }
@@ -746,7 +831,7 @@ blockquote {
   .primary-action, .secondary-action { min-height: 44px; padding: 0 14px; font-size: 9px; }
   .hero-wordmark { right: -3vw; bottom: 49vh; font-size: clamp(4rem, 23vw, 6.4rem); opacity: .92; }
   .vertical-note, .hero-inset { display: none; }
-  .scroll-cue { bottom: 22px; left: 21px; }
+  .scroll-cue { bottom: 68px; left: 21px; }
 
   .chapter { min-height: 126svh; grid-template-columns: 1fr; align-items: end; justify-items: start; padding-bottom: 15vh; }
   .chapter-right .chapter-copy { grid-column: 1; }
@@ -783,7 +868,13 @@ blockquote {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   .progress-rail, .scroll-cue { display: none; }
-  .scene-plate { transform: translate3d(0, 0, 0) scale(1.09); }
-  .scene-foreground { transform: translate3d(0, 0, 0) scale(1.08); }
   .chapter-copy { opacity: 1; transform: none; }
+
+  /*
+    Reduced motion still gets a directed frame: the rig parks on the strongest
+    beat of the route and the world simply stops moving. Nothing is emptied out.
+  */
+  .panel-anchor { transition: none; }
+  .data-strip { opacity: 1; }
+  .scene-scrim { opacity: 1; }
 }

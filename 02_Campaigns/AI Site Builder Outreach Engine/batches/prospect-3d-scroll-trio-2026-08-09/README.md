@@ -2,6 +2,12 @@
 
 Builds 166–168 for the existing Momentum 360 Prospect Radar host.
 
+The scroll experience was rebuilt around the reference's motion grammar — plates
+composited inside the Three.js scene, editorial frames as world-space panels with
+projected captions, and a beat-timed camera route. See
+[`KAGE-REBUILD.md`](./KAGE-REBUILD.md) for what changed, why, and what is still
+outstanding.
+
 ## Routes
 
 - `/labs/prospect-3d-scroll-trio/`

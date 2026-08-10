@@ -4,7 +4,7 @@
 - Pages: 4
 - Generated material WebPs: 7
 - Generated editorial WebPs: 18
-- Production JavaScript: 133.5 KB gzipped
+- Production JavaScript: 140 KB gzipped
 - Checks: 34/34
 
 - PASS: Production dist directory exists
