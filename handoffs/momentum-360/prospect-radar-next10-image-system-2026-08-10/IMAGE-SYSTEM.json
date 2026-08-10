@@ -1,0 +1,107 @@
+{
+  "reference": "Golden Eagle Jewelers scroll-lab: cinematic object study, macro material detail, monumental negative space, layered depth; emulate the art direction without WebGL or jewelry-specific content",
+  "global_style": "stylized-concept website plate; photoreal materials; dark tinted exhibition space; off-center subject; foreground occlusion, recognizable midground object, controlled background glow; generous clean negative space for code-native type; dimensional but not glossy CGI; detailed shadows, subtle grain, no crushed blacks; no faces; no text, lettering, signage, labels, logos, watermarks, license plates, readable documents, or business claims; not a real business location; 16:11 hero or 4:3 detail as specified",
+  "disclosure": "Synthetic concept imagery. Never present as the business's photographs, premises, staff, customers, patients, or completed work.",
+  "sites": [
+    {
+      "slug": "germantown-dental-group",
+      "palette": "midnight teal, porcelain, instrument steel, pale mint light",
+      "verb": "ALIGN",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "A sculptural dental chair and circular exam light emerge from layered translucent porcelain planes; left-side type field; calm clinical precision."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Macro still life of gloved hands arranging mirror, explorer, and sterilized instruments on a dark teal tray; exact geometry, no patient."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Extreme close study of porcelain tooth-like curves, brushed surgical steel, frosted glass, and mint reflections; abstract but unmistakably dental."}
+      ]
+    },
+    {
+      "slug": "udis-conn-orthodontics",
+      "palette": "ink blue, ceramic white, restrained coral, cool silver",
+      "verb": "SHAPE",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "An elegant orthodontic archwire sweeps through suspended ceramic brackets like an architectural span; subject right, broad dark type field left."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Gloved hands use a precise orthodontic plier beside ceramic brackets and coiled wire; controlled clinical spotlight, no mouth or patient."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Macro rhythm of translucent ceramic brackets, tensioned silver wire, coral elastics, and ink-blue glass; tactile, technical, refined."}
+      ]
+    },
+    {
+      "slug": "jarman-sales-service",
+      "palette": "oxidized copper, cold steel, smoke blue, amber work light",
+      "verb": "BALANCE",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "Copper refrigeration coils and a condenser fan assemble into a hovering airflow machine; visible cool-to-warm transition; subject right."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Technician hands adjust a manifold gauge set against copper linework; shallow depth, honest tool wear, no readable gauge labels."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Macro study of oxidized copper tubing, aluminum fins, condensation beads, and a thin ribbon of cool vapor under amber shop light."}
+      ]
+    },
+    {
+      "slug": "lees-hoagie-house",
+      "palette": "tomato red, mustard seed, deli-paper cream, charred steel",
+      "verb": "STACK",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "A monumental hoagie cross-section becomes a layered edible landscape on a dark deli counter; tactile bread crust and crisp ingredients; right weighted."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Cook hands layer sliced meat, sharp provolone, shredded lettuce, tomato, onion, and oil on a fresh roll; dramatic but believable deli light."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Macro strata of seeded bread, folded provolone, glossy pepper, deli paper, and brushed stainless steel; rich texture, no packaging marks."}
+      ]
+    },
+    {
+      "slug": "anthony-gueriera-insurance",
+      "palette": "bottle green, warm paper, brass, smoke gray",
+      "verb": "COVER",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "A brass key, house silhouette, vehicle contour, and protective paper layers orbit a calm central void; restrained insurance metaphor; right weighted."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Hands organize blank cream folders, brass keyring, calculator, and pen on a bottle-green desk; no readable forms or screens."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Macro study of embossed blank paper, brass key teeth, green leather, and fine graphite lines suggesting boundaries without readable text."}
+      ]
+    },
+    {
+      "slug": "ban-ban-asian-bistro",
+      "palette": "lacquer red, black ceramic, steam white, chili amber",
+      "verb": "IGNITE",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "A black ceramic bowl, chopstick geometry, hibachi flame, and curling steam form a theatrical night-market still life; subject right."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Chef hands finish a sizzling pan with scallions and sesame under red practical light; stainless reflections, no face, no text."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Macro study of lacquer glaze, charred scallion, chili oil, sesame, black ceramic, and luminous steam; rich but appetizing."}
+      ]
+    },
+    {
+      "slug": "big-head-transport",
+      "palette": "asphalt blue-black, rubber, steel, amber safety light",
+      "verb": "MOVE",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "A monumental tire, tow hook, and taut recovery cable emerge from a wet asphalt night stage; amber beacon glow; subject right."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Work-gloved hands secure a steel recovery hook and cable near a heavy tire; rain beads and amber practical light; no vehicle branding."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Extreme close study of tire tread, braided cable, scarred tow steel, reflective road glass, and amber light across wet asphalt."}
+      ]
+    },
+    {
+      "slug": "dutton-road-veterinary-clinic",
+      "palette": "deep sage, exam steel, warm leather, soft paper",
+      "verb": "CARE",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "A veterinary stethoscope arcs around a folded pet blanket, collar, and polished exam instrument on a sage clinical stage; humane and calm; no animal face."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Veterinary hands gently prepare a stethoscope and soft bandage beside a small paw-shaped impression object; no animal or human face."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Macro study of brushed exam steel, sage textile, worn leather collar, soft fur-like fibers, and blank cream chart paper; warm care, no text."}
+      ]
+    },
+    {
+      "slug": "elite-auto-parts",
+      "palette": "graphite, cobalt, machined aluminum, signal red",
+      "verb": "ASSEMBLE",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "An exploded brake rotor, bearing, spring, and fasteners hover in exact catalog order above a graphite stage; cobalt rim light; subject right."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Mechanic hands compare a clean bearing and machined hub using calipers; cobalt workbench, signal-red accent, no markings."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Macro catalog study of machined aluminum, brake rotor channels, black rubber seal, spring steel, and one signal-red painted edge."}
+      ]
+    },
+    {
+      "slug": "kehans-auto-service",
+      "palette": "oil blue-black, tungsten steel, aged rubber, work-light amber",
+      "verb": "RESTORE",
+      "assets": [
+        {"file": "hero-transformation.png", "ratio": "16:11", "prompt": "A ratchet, piston, belt, and engine components rise from an open service-bay shadow into warm work light; dimensional repair narrative; right weighted."},
+        {"file": "process-macro.png", "ratio": "4:3", "prompt": "Mechanic hands set a torque wrench on a wheel hub under a warm portable work light; honest grease, precise action, no vehicle branding."},
+        {"file": "material-study.png", "ratio": "4:3", "prompt": "Macro study of oiled steel, worn ratchet teeth, serpentine belt rubber, copper washer, and amber reflections on a dark blue bench."}
+      ]
+    }
+  ]
+}
