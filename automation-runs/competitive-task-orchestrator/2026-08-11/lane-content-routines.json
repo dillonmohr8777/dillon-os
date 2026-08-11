@@ -1,0 +1,31 @@
+{
+  "lane": "content-routines",
+  "status": "warn",
+  "connector": "vault-fallback",
+  "top_items": [
+    {
+      "routine": "bok-law-social-content",
+      "due": "2026-08-09",
+      "status": "missed",
+      "note": "Sunday 6 PM ET batch not reflected in vault; Tuesday delivery window open"
+    },
+    {
+      "routine": "linkedin-growth-engine",
+      "due": "2026-08-09",
+      "status": "missed",
+      "note": "Align LinkedIn calendar last_touched 2026-04-15"
+    },
+    {
+      "routine": "book-site-seo-sweep",
+      "due": "2026-08-14",
+      "status": "not_due",
+      "note": "Thursday sweep — 3 days out"
+    },
+    {
+      "routine": "03_Content drafts",
+      "due": "2026-08-11",
+      "status": "idle",
+      "note": "Idea libraries only; Content Index empty"
+    }
+  ]
+}

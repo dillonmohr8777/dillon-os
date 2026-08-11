@@ -1,0 +1,39 @@
+{
+  "lane": "slack-intel",
+  "status": "warn",
+  "connector": "vault-fallback",
+  "top_items": [
+    {
+      "id": "jason-sean-bot-case-status",
+      "priority": "urgent",
+      "requested_by": "Jason Fallon and Sean Boyle",
+      "summary": "Stabilize bot and add case-status reinstatement alerts",
+      "age_days": 12,
+      "file": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md"
+    },
+    {
+      "id": "melissa-guidelines-training",
+      "priority": "high",
+      "requested_by": "Melissa Silber",
+      "summary": "Guidelines/training prompt status, Loom timing, meeting this week",
+      "age_days": 12,
+      "file": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md"
+    },
+    {
+      "id": "sean-callrail-status",
+      "priority": "high",
+      "requested_by": "Sean Boyle",
+      "summary": "Verify CallRail activity and report what changed",
+      "age_days": 12,
+      "file": "00_Inbox/slack/2026-07-30-sean-callrail-status.md"
+    },
+    {
+      "id": "jenny-needmomentum-brand",
+      "priority": "normal",
+      "requested_by": "Jenny McClain Miller",
+      "summary": "NeedMomentum.com brand direction and update timeline",
+      "age_days": 12,
+      "file": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md"
+    }
+  ]
+}
