@@ -19,9 +19,14 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] BigOrange pillar audit — missed due 2026-08-10; reschedule review today
+- [ ] Replenish billing — confirm Mia completed Google Ads payment screen
+- [ ] Jason/Sean bot — 12d unanswered; draft case-status alert plan
+
+## Competitive Task
+- Definition: [[System/competitive-task-definition|competitive-task-definition]]
+- Latest brief: `Daily-Briefs/competitive-task-today.md`
+- Run artifacts: `automation-runs/competitive-task-orchestrator/`
 
 ## Active Projects
 -

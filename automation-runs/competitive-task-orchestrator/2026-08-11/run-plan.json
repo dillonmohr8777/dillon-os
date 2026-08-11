@@ -1,0 +1,766 @@
+{
+  "automation_id": "competitive-task-orchestrator",
+  "run_id": "2026-08-11-1786453598058",
+  "date": "2026-08-11",
+  "started_at": "2026-08-11T13:06:38.058Z",
+  "status": "planned",
+  "replaces": [
+    "morning-loop-slack-am-pulse",
+    "nightly-client-pulse",
+    "gmail-to-vault-digest",
+    "vault-integrity-sync",
+    "chat-to-vault-sync",
+    "bok-law-social-content",
+    "linkedin-growth-engine",
+    "book-site-seo-sweep"
+  ],
+  "lanes": [
+    {
+      "id": "gmail-intel",
+      "name": "Gmail intelligence",
+      "agent": ".cursor/agents/gmail-intel.md",
+      "skill": "inbox-brief",
+      "tier": 0,
+      "parallel": true,
+      "inputs": [
+        "Gmail MCP or vault mirrors"
+      ],
+      "outputs": [
+        "Daily-Briefs/inbox-brief-YYYY-MM-DD.md"
+      ]
+    },
+    {
+      "id": "slack-intel",
+      "name": "Slack intelligence",
+      "agent": ".cursor/agents/slack-intel.md",
+      "skill": "slack-intake",
+      "tier": 0,
+      "parallel": true,
+      "inputs": [
+        "Slack MCP or 00_Inbox/slack/"
+      ],
+      "outputs": [
+        "00_Inbox/slack/*.md",
+        "Daily-Briefs/slack-intake-YYYY-MM-DD.md"
+      ]
+    },
+    {
+      "id": "vault-pulse",
+      "name": "Vault pulse",
+      "agent": ".cursor/agents/vault-pulse.md",
+      "skill": "client-pulse",
+      "tier": 0,
+      "parallel": true,
+      "inputs": [
+        "01_Clients/",
+        "Dashboard.md"
+      ],
+      "outputs": [
+        "Daily-Briefs/pulse-today.md"
+      ]
+    },
+    {
+      "id": "codex-session-sync",
+      "name": "Codex and session sync",
+      "agent": ".cursor/agents/codex-session-sync.md",
+      "skill": "session-mine",
+      "tier": 0,
+      "parallel": true,
+      "inputs": [
+        "10_Sessions/",
+        "12_Brain/raw/sessions/"
+      ],
+      "outputs": [
+        "12_Brain/raw/sessions/session-log.md"
+      ]
+    },
+    {
+      "id": "domain-ads-seo",
+      "name": "Domain, ads, and SEO health",
+      "agent": ".cursor/agents/domain-ads-seo.md",
+      "skill": "site-grade",
+      "tier": 0,
+      "parallel": true,
+      "inputs": [
+        "12_Brain/registry/properties.json",
+        "Daily-Briefs/radar-*.md"
+      ],
+      "outputs": [
+        "Daily-Briefs/site-health-report.md"
+      ]
+    },
+    {
+      "id": "content-routines",
+      "name": "Content routines",
+      "agent": ".cursor/agents/content-routines.md",
+      "skill": "content-scan",
+      "tier": 0,
+      "parallel": true,
+      "inputs": [
+        "03_Content/",
+        "02_FullTimeJob/AlignHCM/linkedin-calendar.md"
+      ],
+      "outputs": [
+        "Daily-Briefs/content-routines-YYYY-MM-DD.md"
+      ]
+    },
+    {
+      "id": "memory-consolidator",
+      "name": "Memory consolidator",
+      "agent": ".cursor/agents/memory-consolidator.md",
+      "skill": "vault-compile",
+      "tier": 0,
+      "parallel": false,
+      "depends_on": [
+        "gmail-intel",
+        "slack-intel",
+        "vault-pulse",
+        "codex-session-sync",
+        "domain-ads-seo",
+        "content-routines"
+      ],
+      "inputs": [
+        "lane outputs",
+        "automation-runs/competitive-task-orchestrator/YYYY-MM-DD/"
+      ],
+      "outputs": [
+        "Daily-Briefs/competitive-task-today.md",
+        "Dashboard.md"
+      ]
+    }
+  ],
+  "vault_snapshot": {
+    "slack": {
+      "total": 4,
+      "new": 4,
+      "items": [
+        {
+          "file": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md",
+          "status": "new",
+          "priority": "urgent",
+          "type": "automation",
+          "client": "Momentum 360",
+          "requested_by": "Jason Fallon and Sean Boyle"
+        },
+        {
+          "file": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md",
+          "status": "new",
+          "priority": "normal",
+          "type": "question",
+          "client": "Momentum 360",
+          "requested_by": "Jenny McClain Miller"
+        },
+        {
+          "file": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md",
+          "status": "new",
+          "priority": "high",
+          "type": "content",
+          "client": "Momentum 360",
+          "requested_by": "Melissa Silber"
+        },
+        {
+          "file": "00_Inbox/slack/2026-07-30-sean-callrail-status.md",
+          "status": "new",
+          "priority": "high",
+          "type": "report",
+          "client": "Momentum 360",
+          "requested_by": "Sean Boyle"
+        }
+      ]
+    },
+    "clients": {
+      "total": 14,
+      "urgent_count": 8,
+      "urgent": [
+        {
+          "client": "Bar Crawl USA",
+          "status": "active",
+          "next_action": "Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing",
+          "due": "2026-04-25",
+          "last_touched": "2026-04-15"
+        },
+        {
+          "client": "BigOrange Marketing",
+          "status": "active",
+          "next_action": "Prepare the Custom Home Builder pillar audit and Janice interview for the August 10 review.",
+          "due": "2026-08-10",
+          "last_touched": "2026-07-30"
+        },
+        {
+          "client": "Bok Law",
+          "status": "active",
+          "next_action": "Continue weekly social content cadence (Wednesday Wisdom, Turn the Page Thursday, Family Fridays)",
+          "due": "2026-04-19",
+          "last_touched": "2026-04-14"
+        },
+        {
+          "client": "Commercial Cleaners Alliance",
+          "status": "onboarding",
+          "next_action": "Deliver CCA creatives + NexGen creative from outstanding 2026-04-08 commitment",
+          "due": "2026-04-16",
+          "last_touched": "2026-04-14"
+        },
+        {
+          "client": "Hardwood Artisan",
+          "status": "at_risk",
+          "next_action": "URGENT — Sean is pushing Dalton to update the card on file for the next 90 days. Engagement is at risk of pausing if Dalton doesn't act.",
+          "due": "2026-04-18",
+          "last_touched": "2026-04-07"
+        },
+        {
+          "client": "Link Eze",
+          "status": "active",
+          "next_action": "Resolve enhanced conversions data source diagnostics warning; confirm MFA is enabled on Google Ads account (customer ID 809-600-6448) before April 6 cutoff",
+          "due": "2026-04-06",
+          "last_touched": "2026-04-05"
+        },
+        {
+          "client": "NKCDC",
+          "status": "active",
+          "next_action": "URGENT — launch is pending NKCDC finalizing the Free Tax Prep page. Mac checked in 2026-04-15, no response from Anthony. Nudge again.",
+          "due": "2026-04-16",
+          "last_touched": "2026-04-15"
+        },
+        {
+          "client": "Onsite Concrete",
+          "status": "active",
+          "next_action": "Attend weekly Onsite x M360 call Thursday 2026-04-16 1:00 PM ET",
+          "due": "2026-04-16",
+          "last_touched": "2026-04-09"
+        }
+      ]
+    },
+    "sessions": {
+      "session_notes": 7,
+      "raw_log_exists": true,
+      "newest_session": {
+        "file": "10_Sessions/Session Index.md",
+        "mtime": "2026-08-11T08:18:52.000Z"
+      }
+    },
+    "radar": {
+      "file": "Daily-Briefs/radar-2026-08-11.md",
+      "tracked": 981,
+      "build_queue": 164
+    }
+  },
+  "preflight": {
+    "frontmatter-validate": {
+      "automation_id": "frontmatter-validate",
+      "started_at": "2026-08-11T13:06:38.012Z",
+      "status": "ok",
+      "counts": {
+        "files": 38,
+        "incomplete": 0,
+        "complete": 38
+      },
+      "rows": [
+        {
+          "file": "01_Clients/AWCI.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Align HCM.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Bar Crawl USA/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-04-15",
+          "due": "2026-04-25"
+        },
+        {
+          "file": "01_Clients/Bar Crawl USA.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Bend Plastic Surgery.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/BigOrange Marketing/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-30",
+          "due": "2026-08-10"
+        },
+        {
+          "file": "01_Clients/Blissful Events.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "completed",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Bluegrass Janitorial.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Bok Law/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-04-14",
+          "due": "2026-04-19"
+        },
+        {
+          "file": "01_Clients/Bok Law.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Bridge Software Development/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active-discovery",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Bridge of Hope OTC.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Buzz Bull.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Coach B.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Commercial Cleaners Alliance/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "onboarding",
+          "last_touched": "2026-04-14",
+          "due": "2026-04-16"
+        },
+        {
+          "file": "01_Clients/Commercial Cleaners Alliance.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Florecita.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Fresh Blends - Replenish.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Fresh Blends Replenish/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-04-13",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Hardwood Artisan/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "at_risk",
+          "last_touched": "2026-04-07",
+          "due": "2026-04-18"
+        },
+        {
+          "file": "01_Clients/Hardwood Artisan.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Jeff Hozias/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-04-14",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Jeff Hozias.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/KJB.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Kimberly James Bridal/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-04-15",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Link Eze/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-04-05",
+          "due": "2026-04-06"
+        },
+        {
+          "file": "01_Clients/Link Eze.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/NKCDC/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-04-15",
+          "due": "2026-04-16"
+        },
+        {
+          "file": "01_Clients/NKCDC.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Next Gen Solutions.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Omega Landscaping/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-04-14",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Omega Landscaping.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Onsite Concrete/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-04-09",
+          "due": "2026-04-16"
+        },
+        {
+          "file": "01_Clients/Onsite Concrete.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/PNW Pro Clean.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Shadow HVAC/overview.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-03-02",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Shadow HVAC.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        },
+        {
+          "file": "01_Clients/Vanessa.md",
+          "ok": true,
+          "missing": [],
+          "warnings": [],
+          "status": "active",
+          "last_touched": "2026-07-29",
+          "due": "none"
+        }
+      ],
+      "written_at": "2026-08-11T13:06:38.012Z"
+    },
+    "site-health-sentinel": {
+      "automation_id": "site-health-sentinel",
+      "started_at": "2026-08-11T13:06:38.038Z",
+      "status": "error",
+      "dry_run": true,
+      "counts": {
+        "total": 5,
+        "pass": 1,
+        "warn": 0,
+        "fail": 1,
+        "skipped": 3
+      },
+      "results": [
+        {
+          "id": "fixture-healthy",
+          "name": "Fixture healthy site",
+          "url": "fixture://healthy",
+          "priority": "test",
+          "mode": "fixture",
+          "ok": true,
+          "status": "pass",
+          "checks": [
+            {
+              "id": "viewport",
+              "ok": true,
+              "detail": "viewport meta present"
+            },
+            {
+              "id": "tracking_hints",
+              "ok": true,
+              "detail": "tracking hints: ga=true meta=false",
+              "severity": "warn"
+            }
+          ]
+        },
+        {
+          "id": "fixture-broken-form",
+          "name": "Fixture broken form",
+          "url": "fixture://broken-form",
+          "priority": "test",
+          "mode": "fixture",
+          "ok": false,
+          "status": "fail",
+          "checks": [
+            {
+              "id": "viewport",
+              "ok": false,
+              "detail": "missing viewport meta"
+            },
+            {
+              "id": "tracking_hints",
+              "ok": false,
+              "detail": "no GA4/Meta pixel hints",
+              "severity": "warn"
+            },
+            {
+              "id": "form_endpoint",
+              "ok": false,
+              "detail": "form endpoint marked missing: /api/dossier-leads",
+              "severity": "critical"
+            }
+          ]
+        },
+        {
+          "id": "book-ironicineptocracy",
+          "name": "Ironic Ineptocracy book site",
+          "url": "https://ironicineptocracy.com",
+          "mode": "dry-run-skip-live",
+          "ok": true,
+          "status": "skipped",
+          "checks": [
+            {
+              "id": "live_skipped",
+              "ok": true,
+              "detail": "skipped in dry-run; pass --live to GET",
+              "severity": "info"
+            }
+          ]
+        },
+        {
+          "id": "mohr-media",
+          "name": "Mohr Media",
+          "url": "https://themohrmedia.com",
+          "mode": "dry-run-skip-live",
+          "ok": true,
+          "status": "skipped",
+          "checks": [
+            {
+              "id": "live_skipped",
+              "ok": true,
+              "detail": "skipped in dry-run; pass --live to GET",
+              "severity": "info"
+            }
+          ]
+        },
+        {
+          "id": "immohrtal",
+          "name": "IMMOHRTAL",
+          "url": "https://immohrtal-site.netlify.app",
+          "mode": "dry-run-skip-live",
+          "ok": true,
+          "status": "skipped",
+          "checks": [
+            {
+              "id": "live_skipped",
+              "ok": true,
+              "detail": "skipped in dry-run; pass --live to GET",
+              "severity": "info"
+            }
+          ]
+        }
+      ],
+      "artifact_paths": [
+        "/workspace/Daily-Briefs/site-health-report.md"
+      ],
+      "written_at": "2026-08-11T13:06:38.038Z"
+    }
+  },
+  "blockers": [
+    {
+      "id": "slack-open-loops",
+      "count": 4,
+      "severity": "high"
+    },
+    {
+      "id": "client-urgent",
+      "count": 8,
+      "severity": "high"
+    },
+    {
+      "id": "gate-obsidian_sync_cli",
+      "severity": "low",
+      "status": "pending-human"
+    },
+    {
+      "id": "gate-netlify_deploy_token",
+      "severity": "low",
+      "status": "pending-secret"
+    },
+    {
+      "id": "gate-landingfolio_token",
+      "severity": "low",
+      "status": "pending-secret"
+    },
+    {
+      "id": "gate-mail_vendor",
+      "severity": "low",
+      "status": "pending-decision"
+    }
+  ],
+  "gates": {
+    "obsidian_sync_cli": "pending-human",
+    "netlify_deploy_token": "pending-secret",
+    "landingfolio_token": "pending-secret",
+    "mail_vendor": "pending-decision",
+    "outreach_send": "hard-blocked"
+  },
+  "artifacts": {
+    "run_dir": "automation-runs/competitive-task-orchestrator/2026-08-11",
+    "plan": "automation-runs/competitive-task-orchestrator/2026-08-11/run-plan.json",
+    "board": "automation-runs/competitive-task-orchestrator/2026-08-11/approval-board.md",
+    "today": "Daily-Briefs/competitive-task-today.md"
+  }
+}
