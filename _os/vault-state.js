@@ -155,10 +155,7 @@ function getBrainVitals(vault) {
   const root = path.join(vault, BRAIN);
   const present = fs.existsSync(root) && fs.statSync(root).isDirectory();
   const forbidden = fs.existsSync(path.join(vault, FORBIDDEN_BRAIN));
-  return {
-    present,
-    forbiddenRival: forbidden,
-    path: BRAIN,
+  const counts = {
     entities: countMdIn(vault, path.join(BRAIN, 'entities')),
     concepts: countMdIn(vault, path.join(BRAIN, 'concepts')),
     projects: countMdIn(vault, path.join(BRAIN, 'projects')),
@@ -167,6 +164,23 @@ function getBrainVitals(vault) {
     memory: countMdIn(vault, path.join(BRAIN, 'memory')),
     protocols: countMdIn(vault, path.join(BRAIN, 'protocols')),
     raw: countMdIn(vault, path.join(BRAIN, 'raw')),
+    captures: countMdIn(vault, path.join(BRAIN, '01_Captures')),
+    experiments: countMdIn(vault, path.join(BRAIN, '05_Projects', 'Experiments')),
+    machineResearch: countMdIn(vault, path.join(BRAIN, '06_Research')),
+    reviews: countMdIn(vault, path.join(BRAIN, '07_Reviews')),
+  };
+  const wikiTotal = counts.entities + counts.concepts + counts.projects +
+    counts.decisions + counts.research + counts.memory + counts.protocols;
+  const machineTotal = counts.captures + counts.experiments +
+    counts.machineResearch + counts.reviews;
+  return {
+    present,
+    forbiddenRival: forbidden,
+    path: BRAIN,
+    ...counts,
+    wikiTotal,
+    machineTotal,
+    total: wikiTotal + machineTotal,
     indexPresent: fs.existsSync(path.join(root, 'INDEX.md')),
   };
 }
@@ -188,6 +202,7 @@ function requiredBrainPaths() {
     '12_Brain/research/README.md',
     '12_Brain/memory/README.md',
     '12_Brain/memory/current/Brain Layer Canonical.md',
+    '12_Brain/memory/as-of',
     '12_Brain/protocols/README.md',
     '12_Brain/protocols/Compiler Protocol.md',
     '12_Brain/protocols/HUD Protocol.md',
@@ -246,7 +261,7 @@ function buildState(vault) {
       content: inDir('03_Content'),
       sessions: inDir('10_Sessions'),
       agents: inDir('11_Agents'),
-      brain: brain.entities + brain.concepts + brain.projects + brain.decisions + brain.memory + brain.protocols,
+      brain: brain.total,
       tasksOpen: open,
       tasksDone: done,
       weekTouches,

@@ -260,7 +260,7 @@ function render() {
   const b = state.brain || {};
   $('v-brain').textContent = v.brain != null ? v.brain : '—';
   $('v-brain-detail').textContent = b.present
-    ? `E${b.entities||0} C${b.concepts||0} D${b.decisions||0}`
+    ? `Wiki ${b.wikiTotal||0} · Machine ${b.machineTotal||0}`
     : 'missing 12_Brain';
   $('pill-vault').textContent = `${v.notes} NOTES`;
   drawSpark(v.activity);

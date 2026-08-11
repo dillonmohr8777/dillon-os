@@ -44,6 +44,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.
 - [[12_Brain/concepts/Google Docs Sharding Pattern|Google Docs Sharding Pattern]] — sub-MB shards → Docs → index.
 - [[12_Brain/concepts/Leading Indicators|Leading Indicators]] — churn/growth signals for `/synthesize`.
+- [[12_Brain/concepts/Communication Intelligence Map|Communication Intelligence Map]] — Gmail + Slack signals mapped to clients/projects.
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
@@ -53,13 +54,15 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
+- `12_Brain/01_Captures/` — machine-emitted captures (Grok daily ingest, Slack scans); automation writes here, humans compile from it. See README "Write surfaces".
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
 
-- [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
-- [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
-- [[12_Brain/research/README|Research]] — compiled research landing.
+- [[12_Brain/projects/README|Projects]] — active delivery threads and goals: [[12_Brain/projects/2026-07-30 - Frontier actions 1-4|Frontier actions 1-4]] · [[12_Brain/projects/2026-07-30 - Integrate daily intelligence stack|Integrate daily intelligence stack]] · [[12_Brain/projects/Netlify Credits Suspension 2026-07-30|Netlify credits suspension]] (blocked, review overdue).
+- [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log: [[12_Brain/decisions/2026-07-29 - 12_Brain is the canonical brain layer|canonical brain layer]] · [[12_Brain/decisions/2026-07-30 - Adopt gated intelligence stack|adopt gated intelligence stack]].
+- [[12_Brain/research/README|Research]] — compiled research landing (+ `References/` reference-only patterns).
+- Research references: [[12_Brain/research/References/2026-07-30 - Casepoint permission-aware MCP pattern|Casepoint permission-aware MCP pattern]] · [[12_Brain/research/References/2026-07-30 - agentlogparser audit pattern|agentlogparser audit pattern]].
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).

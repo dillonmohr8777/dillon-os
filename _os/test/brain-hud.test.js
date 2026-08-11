@@ -75,8 +75,15 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
     assert.ok(state.brain.decisions >= 1);
     assert.ok(state.brain.memory >= 1);
     assert.ok(state.brain.protocols >= 1);
-    assert.ok(typeof state.vitals.brain === 'number');
-    assert.ok(state.vitals.brain >= state.brain.entities);
+    assert.ok(state.brain.captures >= 1);
+    assert.ok(state.brain.experiments >= 1);
+    assert.ok(state.brain.machineResearch >= 1);
+    assert.ok(state.brain.reviews >= 1);
+    assert.equal(state.brain.total, state.brain.wikiTotal + state.brain.machineTotal);
+    assert.equal(state.vitals.brain, state.brain.total);
+
+    const hud = fs.readFileSync(path.join(VAULT, '_os/public/index.html'), 'utf8');
+    assert.match(hud, /Wiki \$\{b\.wikiTotal\|\|0\} · Machine \$\{b\.machineTotal\|\|0\}/);
   });
 
   it('getBrainVitals matches filesystem counts', () => {
