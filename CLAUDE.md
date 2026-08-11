@@ -87,3 +87,7 @@ See `12_Brain/System/Second Brain Ops.md`:
 - Nightly: `/vault-compile` on a cheap model.
 - Weekly: `/wiki-lint` and one `/synthesize` pass on the big model.
 - Weekly: `/research-sweep` to feed verified, dated intelligence into the vault.
+- Monthly: `/model-scout` + `/skill-scout` — the stack audits itself; roster
+  changes propagate via `/stack-sync` (draft-first). "Cheap model" / "big
+  model" above are defined by `12_Brain/System/Model Roster.md`, not memory.
+  See `12_Brain/System/Intelligence Ops.md`.

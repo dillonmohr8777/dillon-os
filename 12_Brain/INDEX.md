@@ -44,6 +44,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.
 - [[12_Brain/concepts/Google Docs Sharding Pattern|Google Docs Sharding Pattern]] — sub-MB shards → Docs → index.
 - [[12_Brain/concepts/Leading Indicators|Leading Indicators]] — churn/growth signals for `/synthesize`.
+- [[12_Brain/concepts/Agent Stack Patterns|Agent Stack Patterns]] — 8 durable 2026 patterns for a personal agent OS + hype list. Expires 2026-11-10.
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
@@ -53,7 +54,18 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
+- [[12_Brain/raw/research/2026-08-10 - model-scout - benchmark landscape|2026-08-10 model-scout benchmark landscape]] — leaderboards, pricing, harness standings (feeds the Model Roster).
+- [[12_Brain/raw/research/2026-08-10 - skill-scout - ecosystem sweep|2026-08-10 skill-scout ecosystem sweep]] — skills ecosystem, marketplaces, 2026 malware incidents (feeds the Skill Registry).
+- [[12_Brain/raw/research/2026-08-10 - agent-stack practitioner pulse|2026-08-10 agent-stack practitioner pulse]] — X/practitioner receipts behind Agent Stack Patterns.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
+
+## Stack Intelligence (the machinery that maintains the machinery)
+
+- [[12_Brain/System/Intelligence Ops|Intelligence Ops]] — the runbook: scouts research and propose, Dillon approves, `/stack-sync` applies, the log remembers.
+- [[12_Brain/System/Model Roster|Model Roster]] — who runs each tier (premium/workhorse/cheap/free/research) and per-role picks, receipts required. Expires 2026-09-10.
+- [[12_Brain/System/Skill Registry|Skill Registry]] — installed / decision-queue / watchlist / banned skills with provenance and vet rules. Expires 2026-09-10.
+- [[12_Brain/System/Upgrade Log|Upgrade Log]] — append-only history of stack changes; an unlogged change is a bug.
+- Skills: `/model-scout` · `/skill-scout` · `/stack-sync` · workflow `intel-sweep`.
 
 ## Projects · Decisions · Research · Memory · Protocols
 

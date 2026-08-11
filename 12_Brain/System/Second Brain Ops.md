@@ -19,6 +19,7 @@ only grows when you remember to feed it is dead in three weeks.
 | Weekly | `/wiki-lint` — contradictions, duplicates, dead links, missing sources | cheap | schedule it |
 | Weekly | `/synthesize` — read across the vault: what changed, what's drifting, what deserves attention | **premium** (the only pass that earns it) | schedule it |
 | Weekly | `/research-sweep <niche question>` — fan out, skeptic attacks, survivors land as dated pages | mixed | run when needed |
+| Monthly | `/model-scout` + `/skill-scout` — the stack audits itself; see [[12_Brain/System/Intelligence Ops\|Intelligence Ops]] | mixed | schedule it |
 
 Scheduling options, pick one:
 - Claude Code on the web / remote: create triggers ("run /vault-compile", cron `0 2 * * *`; `/wiki-lint` + `/synthesize` weekly, e.g. Fri 15:00).
