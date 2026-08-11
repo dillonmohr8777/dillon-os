@@ -30,7 +30,21 @@ const { repoPath, readJson, ensureDir, todayISO } = require('../lib/fsutil');
 const { buildArchSite } = require('../lib/arch-build');
 const { ensureSite, deployFiles, waitForDeploy } = require('../lib/netlify');
 
-const DEFAULT_QUEUE = '12_Brain/state/radar/build-15-2026-08-06.json';
+// Default to the newest build queue the radar has produced, not a fixed date.
+function latestBuildQueue() {
+  const dir = repoPath('12_Brain/state/radar');
+  let best = null;
+  let bestM = 0;
+  try {
+    for (const f of fs.readdirSync(dir)) {
+      if (!/^build-.*\.json$/.test(f)) continue;
+      const m = fs.statSync(path.join(dir, f)).mtimeMs;
+      if (m > bestM) { bestM = m; best = f; }
+    }
+  } catch {}
+  return best ? `12_Brain/state/radar/${best}` : '12_Brain/state/radar/build-15-2026-08-06.json';
+}
+const DEFAULT_QUEUE = latestBuildQueue();
 const OUT_DIR = '_templates/arch-factory/out';
 
 function parseArgs(argv) {

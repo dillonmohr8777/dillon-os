@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/12_Brain/schemas/harvest.json",
+  "title": "Site harvest",
+  "description": "Output of _templates/site-factory/harvest.js (harvest/<slug>/harvest.json), consumed by the _os/automation qualify scorer. Extracted from the PR #226/#228 boundary doc; richer optional decay fields flow through without a rewrite.",
+  "type": "object",
+  "required": ["slug", "siteUrl"],
+  "properties": {
+    "slug": { "type": "string", "minLength": 1 },
+    "siteUrl": { "type": "string", "format": "uri" },
+    "decaySignals": {
+      "type": "object",
+      "properties": {
+        "missingViewport": { "type": "boolean" },
+        "staleCopyrightYear": { "type": ["string", "null"] },
+        "noHttps": { "type": "boolean" },
+        "noSchema": { "type": "boolean" },
+        "thinCopy": { "type": "boolean" },
+        "tableLayout": { "type": "boolean" },
+        "slowLoadMs": { "type": "number" }
+      },
+      "additionalProperties": true
+    },
+    "facts": {
+      "type": "object",
+      "properties": {
+        "phone": { "type": "string" },
+        "hours": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "voice": {
+      "type": "object",
+      "description": "The prospect's own language — carried over verbatim by mirror-and-improve; improve the writing, never the voice, never invent a fact.",
+      "properties": {
+        "title": { "type": "string" },
+        "headings": { "type": "array", "items": { "type": "string" } },
+        "navLabels": { "type": "array", "items": { "type": "string" } },
+        "paragraphs": { "type": "array", "items": { "type": "string" } },
+        "ctaLabels": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

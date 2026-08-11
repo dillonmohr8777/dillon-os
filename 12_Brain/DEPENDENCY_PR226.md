@@ -1,3 +1,10 @@
+# Dependency: PR #226 — HISTORICAL (merged; boundary resolved)
+
+> **Status 2026-08-10:** both PRs landed; every path below exists and is
+> tracked. Kept as the record of the ownership boundary. The one durable
+> artifact — the harvest contract — now lives as a real schema at
+> `12_Brain/schemas/harvest.json`.
+
 # Dependency: PR #226 (do not duplicate)
 
 **Branch:** `cursor/dillon-os-agentic-build-out-6254`

@@ -40,6 +40,19 @@ The layer combines the structured Obsidian brain, its agent protocols, and the f
 
 Runnable code lives in `_os/automation/`. Operator docs live at `_os/automation/docs/OPERATOR.md`.
 
+## Write surfaces (who writes where)
+
+Two author classes share this tree — the split is deliberate, not drift:
+
+| Surface | Dirs | Written by |
+|---|---|---|
+| **Wiki (human + skills)** | `raw/`, `entities/`, `concepts/`, `projects/`, `decisions/`, `research/`, `memory/`, `protocols/` | Dillon + the compile loops (`/vault-compile`, `/session-mine`, `/research-sweep`, `/synthesize`) |
+| **Machine records (automation-emitted)** | `01_Captures/` (`lib/intelligence.js`), `05_Projects/Experiments/` (`lib/intelligence.js`), `06_Research/` (`lib/intelligence.js`), `07_Reviews/MCP/` (`lib/mcp-gate.js`), `07_Reviews/Automation Runs/` (`lib/evaluator.js`) | `_os/automation/bin/*` CLIs and the radar workflow |
+
+Humans compile machine records into the wiki side; automations never write the
+wiki side. Human-authored notes do not belong in the machine dirs — the HUD
+counts both surfaces separately (`getBrainVitals`).
+
 ```bash
 node _os/automation/bin/frontmatter-validate.js
 node _os/automation/bin/frontmatter-repair.js --dry-run
