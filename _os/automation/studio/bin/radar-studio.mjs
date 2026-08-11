@@ -4,6 +4,7 @@
 // public deploy, account change, or secret use (per _os/automation/docs/OPERATOR.md).
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { loadConfig, dataRoot, ensureDataTree, dbPath, REPO_ROOT, enginePath } from "../core/paths.mjs";
 import { openDb } from "../core/db.mjs";
@@ -239,9 +240,42 @@ function notYet(name) {
   };
 }
 
+// Unlocked 2026-08-10 by explicit owner instruction ("automation: 10 a day ...
+// the next 10 builds every day"). Registers two current-user Task Scheduler
+// jobs; remove them with: radar-studio register-schedule --remove
 async function refuseSchedule() {
-  console.error(`register-schedule is gated to milestone M4 (after the measured 20-site capacity run).\nNothing was registered. When unlocked it will create two Task Scheduler triggers\n(05:15 research; 10:00-16:00 half-hourly idempotent build poll) with -StartWhenAvailable.`);
-  process.exit(3);
+  const studio = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+  const node = process.execPath;
+  const logDir = path.join(dataRoot(), "logs");
+  fs.mkdirSync(logDir, { recursive: true });
+
+  if (flags.remove) {
+    for (const name of ["RadarStudio-Research", "RadarStudio-Build"]) {
+      try { execFileSync("powershell", ["-NoProfile", "-Command", `Unregister-ScheduledTask -TaskName '${name}' -Confirm:$false`], { windowsHide: true }); console.log(`removed ${name}`); }
+      catch { console.log(`${name} was not registered`); }
+    }
+    return;
+  }
+
+  const ps = `
+$ErrorActionPreference = 'Stop'
+$settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopIfGoingOnBatteries -AllowStartIfOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours 5) -MultipleInstances IgnoreNew
+$research = New-ScheduledTaskAction -Execute '${node}' -Argument 'bin\\radar-studio.mjs run-daily --phase research' -WorkingDirectory '${studio}'
+$rTrig = New-ScheduledTaskTrigger -Daily -At 05:15
+Register-ScheduledTask -TaskName 'RadarStudio-Research' -Action $research -Trigger $rTrig -Settings $settings -Description 'Prospect Radar daily studio: research the next 10 queue prospects into shape briefs + reviewer page. Logs: ${logDir.replace(/\\/g, "\\\\")}' -Force | Out-Null
+$build = New-ScheduledTaskAction -Execute '${node}' -Argument 'bin\\radar-studio.mjs run-daily --phase build' -WorkingDirectory '${studio}'
+$bTrig = New-ScheduledTaskTrigger -Daily -At 10:00
+$bTrig.Repetition = (New-ScheduledTaskTrigger -Once -At 10:00 -RepetitionInterval (New-TimeSpan -Minutes 30) -RepetitionDuration (New-TimeSpan -Hours 6)).Repetition
+Register-ScheduledTask -TaskName 'RadarStudio-Build' -Action $build -Trigger $bTrig -Settings $settings -Description 'Prospect Radar daily studio: idempotent build poll; exits until the batch is approved, then builds, QAs, publishes if armed.' -Force | Out-Null
+Get-ScheduledTask -TaskName 'RadarStudio-*' | Select-Object TaskName, State | Format-Table -AutoSize | Out-String
+`;
+  const psFile = path.join(dataRoot(), "logs", "register-schedule.ps1");
+  fs.writeFileSync(psFile, ps);
+  const out = execFileSync("powershell", ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", psFile], { encoding: "utf8", windowsHide: true, timeout: 120_000 });
+  console.log(out.trim());
+  console.log(`registered. Research fires daily 05:15; build polls half-hourly 10:00-16:00.`);
+  console.log(`Note: stage output goes to the run DB and artifacts dir; the scheduled runs`);
+  console.log(`fail closed (and say why in 'radar-studio status') until headless claude is logged in.`);
 }
 
 // ---------------------------------------------------------------- util

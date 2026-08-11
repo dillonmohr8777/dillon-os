@@ -11,7 +11,7 @@
   },
   "approvalsDir": "_os/automation/studio/approvals",
   "intake": {
-    "dailyTarget": 20,
+    "dailyTarget": 10,
     "rebuildBandMax": 55
   },
   "lanes": {
@@ -52,6 +52,7 @@
     "cheap": "claude-haiku-4-5-20251001"
   },
   "netlify": {
+    "accountSlug": "dillonmohr8777",
     "siteNamePattern": "^momentum-prospect-radar-daily-\\d{4}-\\d{2}-\\d{2}$",
     "maxSitesPerDay": 1,
     "maxDeploysPerDay": 3

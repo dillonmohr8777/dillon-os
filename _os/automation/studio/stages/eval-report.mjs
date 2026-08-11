@@ -62,7 +62,7 @@ export async function evalStage(ctx, prospect, briefData, { batchDir, round, qaS
   }
 }
 
-export function writeRunReport(ctx, { entries, quarantined, batchDir, timings }) {
+export function writeRunReport(ctx, { entries, quarantined, batchDir, timings, deployInfo }) {
   const budgets = ctx.db.prepare(`SELECT resource, cap, spent FROM budgets WHERE run_id = ?`).all(ctx.runId);
   const llm = ctx.db.prepare(`SELECT COUNT(*) n, COALESCE(SUM(cost_usd),0) usd, COALESCE(SUM(duration_ms),0) ms FROM llm_calls`).get();
   const stageRows = ctx.db.prepare(
@@ -76,6 +76,7 @@ export function writeRunReport(ctx, { entries, quarantined, batchDir, timings })
     "",
     `- Shipped: ${entries.filter((e) => e.verdict === "pass").length} · Quarantined/failed: ${quarantined.length + entries.filter((e) => e.verdict === "fail").length} of ${entries.length + quarantined.length} intake`,
     `- Engine: v${ctx.engineVersion} · Repo SHA: ${ctx.repoSha}`,
+    deployInfo ? (deployInfo.deployed ? `- Published: ${deployInfo.url} (noindex verified)` : `- Published: NO (${deployInfo.reason})`) : "",
     `- Imagery status: placeholder plates (provider decision pending) — imagery/realism scores reflect that honestly`,
     "",
     "## Per-site",

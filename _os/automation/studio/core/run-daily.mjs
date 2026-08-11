@@ -12,6 +12,7 @@ import { Budgets, Semaphore } from "./scheduler.mjs";
 import { intake, research, logo, brief, reviewerPage } from "../stages/research-phase.mjs";
 import { verifiedContacts, copyStage, fontsStage, imagesStage, worldspecStage, assembleEntry, writeConfig, prepareBatchDir, runIn } from "../stages/build-phase.mjs";
 import { evalStage, writeRunReport } from "../stages/eval-report.mjs";
+import { deployIfArmed } from "./deploy.mjs";
 import { sha256 } from "./stage-machine.mjs";
 import { execFileSync } from "node:child_process";
 
@@ -253,6 +254,14 @@ export async function buildPhase(runId) {
     }
     timings.qa = Date.now() - t2;
 
+    // publish (authority-gated): after both QA gates, before eval enrichment.
+    // Eval verdicts inform the morning review; the deploy gate is QA green.
+    let deployInfo = { deployed: false, reason: "browser QA failed" };
+    if (browserQaOk) {
+      try { deployInfo = await deployIfArmed(ctx, batch, entries); }
+      catch (err) { deployInfo = { deployed: false, reason: err.message.slice(0, 300) }; console.error(`publish FAILED: ${err.message.slice(0, 300)}`); }
+    }
+
     // independent visual evaluation
     const t3 = Date.now();
     const round = `run-${runId}`;
@@ -291,8 +300,9 @@ export async function buildPhase(runId) {
     timings.eval = Date.now() - t3;
     timings.total_build_phase = Date.now() - started;
 
-    ctx.db.prepare(`UPDATE runs SET phase = 'reported', finished_at = ? WHERE run_id = ?`).run(Date.now(), runId);
-    const reportFile = writeRunReport(ctx, { entries: reportEntries, quarantined, batchDir: batch, timings });
+    ctx.db.prepare(`UPDATE runs SET phase = ?, finished_at = ? WHERE run_id = ?`)
+      .run(deployInfo.deployed ? "published" : "reported", Date.now(), runId);
+    const reportFile = writeRunReport(ctx, { entries: reportEntries, quarantined, batchDir: batch, timings, deployInfo });
     console.log(`\nrun report: ${reportFile}`);
     return { reportFile, batch, reportEntries, quarantined };
   } finally {
