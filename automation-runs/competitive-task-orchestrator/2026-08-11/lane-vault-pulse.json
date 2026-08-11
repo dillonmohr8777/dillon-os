@@ -1,0 +1,19 @@
+{
+  "lane": "vault-pulse",
+  "status": "warn",
+  "connector": "vault-fallback",
+  "top_items": [
+    "Hardwood Artisan — at_risk, card update overdue",
+    "NKCDC — Anthony blocker on Free Tax Prep page",
+    "BigOrange Marketing — pillar review missed 2026-08-10",
+    "Fresh Blends / Replenish — billing block",
+    "Bar Crawl USA — disapproved ads unresolved",
+    "Commercial Cleaners Alliance — creatives outstanding"
+  ],
+  "counts": {
+    "moving": 0,
+    "watch": 0,
+    "stalled": 14,
+    "urgent": 6
+  }
+}
