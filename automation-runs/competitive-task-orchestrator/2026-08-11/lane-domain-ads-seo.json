@@ -1,0 +1,38 @@
+{
+  "lane": "domain-ads-seo",
+  "status": "warn",
+  "top_items": [
+    "site-health-sentinel dry-run: 1 pass, 1 fail, 3 skipped (live sites not checked without --live)",
+    "fixture-broken-form failed: missing viewport meta, no GA4/Meta pixel hints, form endpoint missing /api/dossier-leads (critical)",
+    "radar-2026-08-11: 981 tracked, 60 new today, 60 re-audited, 164 rebuild queue, 1 blocked on render",
+    "10 sell-traffic-not-rebuild prospects flagged (site 76–79: ads/SEO/GBP pitch, not rebuild)",
+    "automations.json gates all pending: obsidian_sync_cli, netlify_deploy_token, landingfolio_token, mail_vendor; outreach_send hard-blocked"
+  ],
+  "site_health": "fail",
+  "radar": {
+    "status": "ok",
+    "date": "2026-08-11",
+    "tracked": 981,
+    "build_queue": 164,
+    "rendered": 49,
+    "needs_render": 1,
+    "new_today": 60,
+    "re_audited": 60,
+    "by_verdict": {
+      "rebuild": 164,
+      "polish": 626,
+      "enrich": 52,
+      "nurture": 116,
+      "ads_seo": 17,
+      "verify": 1
+    },
+    "source": "Daily-Briefs/radar-2026-08-11.md"
+  },
+  "gates": {
+    "obsidian_sync_cli": "pending-human",
+    "netlify_deploy_token": "pending-secret",
+    "landingfolio_token": "pending-secret",
+    "mail_vendor": "pending-decision",
+    "outreach_send": "hard-blocked"
+  }
+}
