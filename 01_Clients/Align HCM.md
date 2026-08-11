@@ -15,7 +15,7 @@ due: none
 - **Contacts:** Maher El-Abdallah (CEO), Barbara Tonelli, Joann Scolaro, Allison
 - **Website:** alignhcm.com
 - **Industry:** HCM / HR Technology
-- **Tier:** Full-time (managed under Buzz Bull Marketing Systems)
+- **Tier:** Full-time W2 employer (no agency brand; a prior "managed under Buzz Bull" note was wrong, and Buzz Bull is defunct as of 2026-08-07)
 - **Brand Palette:** Navy / Orange
 
 ## Services

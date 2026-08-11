@@ -1,6 +1,6 @@
 ---
 tags: [memory, index]
-updated: 2026-07-29
+updated: 2026-08-07
 ---
 
 # Memory (bi-temporal)
@@ -22,6 +22,7 @@ Related:
 ## Current
 
 - [[12_Brain/memory/current/Brain Layer Canonical|Brain Layer Canonical]]
+- [[12_Brain/memory/current/Vault Sync Status|Vault Sync Status]] — desktop vault is ahead of git; repo client state is April-era until reconciled.
 
 ## As-of snapshots
 

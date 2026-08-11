@@ -3,7 +3,7 @@ client: Commercial Cleaners Alliance (CCA)
 website: unknown
 monthly_fee: unknown
 role: Account Manager
-division: Momentum 360 (with Buzz Bull overlap)
+division: Momentum 360 (formerly with Buzz Bull overlap; Buzz Bull defunct 2026-08-07)
 start_date: 2026-04-04
 status: onboarding
 contact_name: Mike Ross
@@ -20,6 +20,8 @@ tags: [client, momentum360, buzzbull, google-ads, meta-ads, b2b]
 B2B membership organization supporting independent commercial cleaning professionals. NOT a franchise. Referred in by Mike Ross (projectcorporate.com). Runs on Buzz Bull + Momentum 360 rails — this client crosses both brands.
 
 > **Contact correction:** Original spec listed "David Stemm" as primary contact. Gmail shows the active thread is with Mike Ross (mross@projectcorporate.com), with a "Buzz Bull CCA / Sterile Care" Teams call invited 2026-04-14. David Stemm has not surfaced in recent email. Confirm intended POC with Mike / Sean.
+
+> **Brand correction (2026-08-07):** Buzz Bull no longer exists (operator confirmed). The cross-brand Buzz Bull / Momentum 360 instructions and buzzbullmarketing.com addresses on this account are historical. Confirm current branding and POC before the next client-facing send.
 
 ## About CCA
 - Membership-based support org for independent commercial cleaning business owners nationwide.

@@ -12,7 +12,7 @@ Applies to ALL output — client emails, blog posts, social copy, reports, docum
 4. Bullet character (•) only. Never dashes as list markers.
 5. Conversational but professional tone. No corporate jargon. No AI-sounding language.
 6. **Blog formatting:** Times New Roman 12pt body, 16pt bold H1 title, 14pt bold H2 subheadings. No heading labels in output. Meta description, URL slug, primary/secondary keywords at top. Internal links to client pages, external links to authoritative sources. ~950 words per blog.
-7. All client emails go out under **Momentum 360** branding, never Buzz Bull.
+7. All client emails go out under **Momentum 360** branding, never Buzz Bull (Buzz Bull is defunct as of 2026-08-07).
 8. Email signature: `Dillon Mohr | Digital Marketing Manager | Strategic Storyteller | (814)873-5333 | Turning complexity into connection, one message at a time.`
 9. Email body uses `contentType: text/html` with `<ul>`/`<li>` for bullet lists.
 10. Always reply with the correct `threadId` when replying; never start a new thread by accident.

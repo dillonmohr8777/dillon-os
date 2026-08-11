@@ -33,7 +33,7 @@ last_updated: 2026-04-15
 `Dillon Mohr | Digital Marketing Manager | Strategic Storyteller | (814)873-5333 | Turning complexity into connection, one message at a time.`
 
 ## Email rules
-• All client emails under Momentum 360 branding, NEVER Buzz Bull.
+• All client emails under Momentum 360 branding, NEVER Buzz Bull (defunct as of 2026-08-07).
 • KJB emails ALWAYS CC: mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com.
 • Use `contentType: text/html` with `<ul>`/`<li>` for bullet lists.
 • Always use `threadId` for replies.
