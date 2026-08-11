@@ -1,0 +1,418 @@
+<!doctype html>
+<!--
+  The Ironic Ineptocracy — rebuilt in the IMMOHRTAL design language.
+
+  Structural devices taken from immohrtal-site, in the order you meet them:
+    loader with a mono readout that counts in  ·  one fixed ambient particle
+    field over the whole page  ·  a light/dark DUALITY switch  ·  centred
+    single-column spine with generous whitespace  ·  mono pill chips as section
+    stamps  ·  big chrome-edged plates for the art  ·  a right-edge vertical HUD
+    rail with section dots and a rotated readout  ·  Instrument Serif quotes with
+    per-word colour tinting  ·  a continuous horizontal marquee for the hook  ·
+    gradient hairline rules  ·  TiltBox 3D on cards  ·  cold-until-attended art.
+
+  The book already used Anton + IBM Plex Mono, which is immohrtal's own display
+  and mono pairing, so the type bridge was already there. Space Grotesk and
+  Instrument Serif join from immohrtal.
+
+  Copy and imagery are the book's own, from ironicineptocracy.com.
+  Fonts self-hosted. No CDN, no external script.
+-->
+<html lang="en" data-duality="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fdfbfb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c070c" media="(prefers-color-scheme: dark)" />
+    <title>The Ironic Ineptocracy | A Satirical Thriller by Dillon Mohr</title>
+    <meta
+      name="description"
+      content="Smart kid. Bad year. Donor money, draft papers, and a government that did not lose the plot — it authored the plot. Dillon Mohr's debut satirical thriller."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content="The Ironic Ineptocracy | A Satirical Thriller by Dillon Mohr" />
+    <meta
+      property="og:description"
+      content="Case 017 · file open. A coming-of-age story inside the apparatus that calls its appetite order."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "The Ironic Ineptocracy",
+        "author": { "@type": "Person", "name": "Dillon Mohr" },
+        "genre": ["Political thriller", "Satire"],
+        "numberOfPages": 36,
+        "bookFormat": "https://schema.org/EBook",
+        "inLanguage": "en",
+        "url": "https://ironicineptocracy.com/"
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- opens like a case file, then dissolves -->
+    <div id="loader" aria-hidden="true">
+      <div class="l-in">
+        <p class="l-mark">The Ironic<br />Ineptocracy</p>
+        <div class="l-bar"><span></span></div>
+        <p class="l-read" id="loaderRead">CASE 017 // OPENING FILE</p>
+      </div>
+    </div>
+
+    <canvas class="field" id="field" aria-hidden="true"></canvas>
+
+    <!-- the right-edge HUD rail -->
+    <div class="rail" aria-hidden="true">
+      <div class="rail__dots" id="railDots"></div>
+      <p class="rail__read" id="railRead">CASE 017 · FILE OPEN · CLEARANCE 000.0%</p>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#top">The Ironic <span>Ineptocracy</span></a>
+      <nav aria-label="Primary">
+        <a href="#world">World</a>
+        <a href="#power">Power</a>
+        <a href="#cast">Characters</a>
+        <a href="#book">Book</a>
+      </nav>
+      <div class="topbar__act">
+        <button class="dual" id="dualBtn" type="button" aria-pressed="false">
+          <span class="dual__dot" aria-hidden="true"></span><span id="dualLabel">Declassified</span>
+        </button>
+        <a class="btn btn--signal" href="#dossier">Enter the dossier</a>
+        <button class="menub" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav">
+          <span aria-hidden="true"></span><b class="sr-only">Open menu</b>
+        </button>
+      </div>
+    </header>
+
+    <div class="mnav" id="mnav" hidden>
+      <a href="#world">World</a>
+      <a href="#power">Power</a>
+      <a href="#cast">Characters</a>
+      <a href="#book">Book</a>
+      <a class="btn btn--signal" href="#dossier">Enter the dossier</a>
+    </div>
+
+    <main id="main">
+      <!-- 01 · ARRIVAL -->
+      <section class="sec hero" id="top" data-rail="Arrival" aria-labelledby="heroTitle">
+        <div class="wrap">
+          <p class="chip">Case 017 · File open</p>
+
+          <figure class="hero__plate plate" data-tilt>
+            <img
+              src="images/story/javon-darnell-alec-capitol-trio-1024.webp"
+              alt="Darnell, Javon and Alec outside the Capitol"
+              width="983"
+              height="810"
+            />
+            <figcaption>Exhibit A · subjects at the Capitol · unsealed</figcaption>
+          </figure>
+
+          <h1 class="h-display" id="heroTitle">The Ironic Ineptocracy</h1>
+          <p class="lede">
+            Smart kid. Bad year. Donor money, draft papers, and a government that did not lose the
+            plot. It authored the plot, notarized the damage, and asked him to acquiesce while the
+            invoice found his name.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--signal" href="#dossier">Open the file</a>
+            <a class="btn btn--ghost" href="#world">World file</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 · THE LINE — the per-word tinted serif quote -->
+      <section class="sec sec--alt" data-rail="The line" aria-labelledby="lineTitle">
+        <div class="wrap wrap--narrow center">
+          <hr class="hair" />
+          <h2 class="sr-only" id="lineTitle">The line</h2>
+          <blockquote class="quote rise" style="margin: clamp(2rem, 5vw, 3.25rem) 0 0" data-tint>
+            Darnell knew the test. America had another one waiting.
+            <cite>Case 017 · opening statement</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- the hook, running as one continuous band -->
+      <div class="marq" aria-hidden="true">
+        <div class="marq__track" id="marqTrack"></div>
+      </div>
+
+      <!-- 03 · WORLD -->
+      <section class="sec" id="world" data-rail="World" aria-labelledby="worldTitle">
+        <div class="wrap split">
+          <div class="rise">
+            <p class="chip chip--alert">Freedom invoice · status past due</p>
+            <h2 class="h-sec" id="worldTitle" style="margin-top: 1.25rem">The world of the novel</h2>
+            <p class="lede">
+              Every stop makes Darnell pay a little more. The slogans get louder. The screens get
+              cleaner. Obedience starts sounding like civic duty.
+            </p>
+            <p class="meta" style="margin-top: 1.5rem">
+              Freedom is not free. Processing fee applies.
+            </p>
+            <div class="hero__cta" style="justify-content: flex-start">
+              <a class="btn btn--ghost" href="#power">See the locked map</a>
+            </div>
+          </div>
+          <figure class="plate rise d1" data-tilt>
+            <img
+              src="images/world-map-1024.webp"
+              alt="Investigation map of the novel's world, marked obey, secure and comply"
+              width="608"
+              height="375"
+            />
+            <figcaption>Investigation map · obey · secure · comply</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 04 · POWER -->
+      <section class="sec sec--alt" id="power" data-rail="Power" aria-labelledby="powerTitle">
+        <div class="wrap">
+          <div class="wrap--narrow center">
+            <p class="chip">Power map</p>
+            <h2 class="h-sec" id="powerTitle" style="margin-top: 1.25rem">
+              The machine breaks people before anyone names the villain
+            </h2>
+            <p class="lede">
+              McNulty wants power with applause. Garnier wants disasters he can bill. The agencies
+              keep their voices calm while Darnell gets routed through rooms he never entered.
+            </p>
+          </div>
+
+          <ul class="files">
+            <li class="file rise" data-tilt>
+              <p class="file__no">File // 01</p>
+              <h3>Chain of command</h3>
+              <p>Power moves first. Blame shows up late.</p>
+              <blockquote>
+                Speeches are the front door. Darnell starts watching the rooms behind them.
+              </blockquote>
+            </li>
+            <li class="file rise d1" data-tilt>
+              <p class="file__no">File // 02</p>
+              <h3>Donor channel</h3>
+              <p>Private government funding, no public disclosure.</p>
+              <blockquote>&ldquo;Just get it done, and the money is yours,&rdquo; Garnier demanded.</blockquote>
+            </li>
+            <li class="file rise d2" data-tilt>
+              <p class="file__no">File // 03</p>
+              <h3>Body count</h3>
+              <p>The number the briefing rooms round down.</p>
+              <blockquote>
+                &ldquo;An electric fire occurred from a faulty battery, killing 32 workers.&rdquo;
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 05 · CAST -->
+      <section class="sec" id="cast" data-rail="Characters" aria-labelledby="castTitle">
+        <div class="wrap">
+          <div class="wrap--narrow center">
+            <p class="chip">Cast files · early access roster</p>
+            <h2 class="h-sec" id="castTitle" style="margin-top: 1.25rem">
+              Every character gets a file, not a biography
+            </h2>
+            <p class="lede">
+              Nine names are public. Each one opens a file: what the machine sees, what it wants, and
+              what it cannot afford to have known. The rest of the roster stays sealed until the book.
+            </p>
+          </div>
+
+          <ul class="cast">
+            <li class="subj rise" data-tilt data-seen>
+              <img src="images/characters/darnell.webp" alt="Darnell Covington" width="512" height="512" loading="lazy" />
+              <div class="subj__body">
+                <p class="subj__tag">Subject · live · file BI 01</p>
+                <h3>Darnell Covington</h3>
+                <p>Seventeen, mathematically adroit, Harvard bound, and suddenly legible to people who confuse promise with property.</p>
+              </div>
+            </li>
+            <li class="subj rise d1" data-tilt data-seen>
+              <img src="images/characters/javon.webp" alt="Javon Whitfield" width="512" height="512" loading="lazy" />
+              <div class="subj__body">
+                <p class="subj__tag">Subject · drafted · QB · Rosedale, MS</p>
+                <h3>Javon Whitfield</h3>
+                <p>Six foot five, 242 pounds, state title gravity, and a mind nobody gets to reduce to muscle.</p>
+              </div>
+            </li>
+            <li class="subj rise d2" data-tilt data-seen>
+              <img src="images/characters/mcnulty.webp" alt="Ronald McNulty" width="512" height="512" loading="lazy" />
+              <div class="subj__body">
+                <p class="subj__tag">POTUS · erratic · back in office</p>
+                <h3>Ronald McNulty</h3>
+                <p>Reality television ego with executive power and a talent for making collapse sound procedural.</p>
+              </div>
+            </li>
+            <li class="subj rise d3" data-tilt data-seen>
+              <img src="images/characters/garnier.webp" alt="Dijon Garnier" width="512" height="512" loading="lazy" />
+              <div class="subj__body">
+                <p class="subj__tag">Subject · evading · class war architect</p>
+                <h3>Dijon Garnier</h3>
+                <p>Private capital with a cigar, a mansion, a technological alibi, and a brutal appetite for controllable memory.</p>
+              </div>
+            </li>
+            <li class="subj rise" data-tilt data-seen>
+              <img src="images/characters/alec.webp" alt="Alec Daheim" width="512" height="512" loading="lazy" />
+              <div class="subj__body">
+                <p class="subj__tag">Subject · unsealed · file D 09 · Langley</p>
+                <h3>Alec Daheim</h3>
+                <p>A disciplined weapon with green eyes, an empty column, and a conscience arriving later than it should.</p>
+              </div>
+            </li>
+            <li class="subj rise d1" data-tilt data-seen>
+              <img src="images/characters/avigail.webp" alt="Avigail" width="512" height="512" loading="lazy" />
+              <div class="subj__body">
+                <p class="subj__tag">Supporting file · Mamilla file</p>
+                <h3>Avigail</h3>
+                <p>Piercing green eyes, a burner phone, and the rare instinct to help before the paperwork can forbid it.</p>
+              </div>
+            </li>
+            <li class="subj rise d2" data-tilt data-seen>
+              <img src="images/characters/leah.webp" alt="Sabrina" width="512" height="512" loading="lazy" />
+              <div class="subj__body">
+                <p class="subj__tag">Supporting file · CIA field file</p>
+                <h3>Sabrina</h3>
+                <p>Blue eyes returned from gray, a Midwestern accent under fire, and a gun hand that knows obedience is a choice.</p>
+              </div>
+            </li>
+            <li class="subj rise d3" data-tilt data-seen>
+              <img src="images/characters/mark.webp" alt="Sealed roster" width="512" height="512" loading="lazy" />
+              <div class="subj__body">
+                <p class="subj__tag">Sealed · pending release</p>
+                <h3>The rest of the roster</h3>
+                <p>A much larger machine. The remaining files stay closed until the book opens them.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 06 · BOOK -->
+      <section class="sec sec--alt" id="book" data-rail="The book" aria-labelledby="bookTitle">
+        <div class="wrap split split--flip">
+          <div class="rise">
+            <p class="chip">About the book</p>
+            <h2 class="h-sec" id="bookTitle" style="margin-top: 1.25rem">
+              A coming-of-age story inside the apparatus that calls its appetite order
+            </h2>
+            <p class="lede">
+              Thirty-six chapters of friends, money, pressure, and public lies that keep getting
+              bigger. Darnell can see the life he wants. Javon sees the danger sooner. Alec keeps
+              showing up where the file gets strange. The adults with power keep making every exit
+              smaller.
+            </p>
+            <p class="lede">
+              The title lands like a joke until it starts sounding like a diagnosis. People at the top
+              keep failing upward, and everyone else gets the bill.
+            </p>
+            <ul class="stats">
+              <li><strong>36</strong><span>Chapters</span></li>
+              <li><strong>09</strong><span>Public files</span></li>
+              <li><strong>017</strong><span>Case number</span></li>
+              <li><strong>119</strong><span>Named dead</span></li>
+            </ul>
+          </div>
+          <figure class="plate rise d1" data-tilt>
+            <img
+              src="images/story/essays-dossier-desk-1024.webp"
+              alt="The dossier laid out on a desk"
+              width="1024"
+              height="576"
+            />
+            <figcaption>Reader brief · dossier desk · file 017</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 07 · CONTROL ROOM — full-bleed plate, immohrtal's cinematic beat -->
+      <section class="sec" data-rail="Control room" aria-labelledby="crTitle">
+        <div class="wrap">
+          <div class="wrap--narrow center">
+            <p class="chip chip--alert">Story route</p>
+            <h2 class="h-sec" id="crTitle" style="margin-top: 1.25rem">
+              Each stop makes the file heavier
+            </h2>
+            <p class="lede">
+              It starts with a school file. Then come the pressure points, the favors, and the people
+              Darnell can barely afford to lose.
+            </p>
+          </div>
+          <figure class="plate rise" style="margin-top: clamp(2rem, 5vw, 3rem)" data-tilt>
+            <img
+              src="images/control-room-orange-county-1024.webp"
+              alt="A government control room, screens lit"
+              width="1024"
+              height="576"
+            />
+            <figcaption>Control room · Orange County · screens clean, record sealed</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 08 · DOSSIER -->
+      <section class="sec sec--alt" id="dossier" data-rail="Dossier" aria-labelledby="dossierTitle">
+        <div class="wrap wrap--narrow">
+          <div class="dossier">
+            <p class="chip">Enter the dossier</p>
+            <h2 class="h-sec" id="dossierTitle" style="margin-top: 1.25rem">
+              Get the file before the book
+            </h2>
+            <p class="lede">
+              Character files, the investigation map, and the first chapters — sent as the dossier
+              opens. One address, no noise.
+            </p>
+            <form class="form" name="dossier" method="POST" action="/api/dossier-leads">
+              <p class="hp"><label>Do not fill this in <input name="bot-field" /></label></p>
+              <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+              <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+              <button class="btn btn--signal" type="submit">Request clearance</button>
+              <p class="form__note">Case 017 · your address stays in the file.</p>
+              <p class="form__status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="foot__grid">
+        <div>
+          <p class="brand" style="font-size: 1.25rem">The Ironic <span>Ineptocracy</span></p>
+          <p class="lede" style="font-size: 1.0625rem; margin-top: 0.9rem">
+            A satirical thriller by Dillon Mohr — digital marketer, doctoral candidate, Pittsburgh
+            native. Debut novel.
+          </p>
+        </div>
+        <nav aria-label="The file">
+          <h2>The file</h2>
+          <a href="#world">World</a>
+          <a href="#power">Power map</a>
+          <a href="#cast">Characters</a>
+          <a href="#book">About the book</a>
+        </nav>
+        <nav aria-label="Reader">
+          <h2>Reader</h2>
+          <a href="#dossier">Enter the dossier</a>
+          <a href="#book">Reader guide</a>
+          <a href="#cast">Cast index</a>
+        </nav>
+      </div>
+      <p class="foot__legal">
+        Case 017 · concept build in the IMMOHRTAL design language · not the live site
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
