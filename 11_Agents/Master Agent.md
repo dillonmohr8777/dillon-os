@@ -4,9 +4,11 @@
 
 The commander. One brain that routes work to lane agents, keeps run state, assembles the approval board, and sends exactly one push to Dillon per cycle. Full operational spec: `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`. Any model can run this role; the contract is markdown + JSON, not a model feature.
 
+**Daily entry point:** `/competitive-task-orchestrator` (`.claude/skills/competitive-task-orchestrator/SKILL.md`) — one umbrella cron at `0 13 * * *` replaces the morning loop, slack-intake, client-pulse, am-report, plan-today, and inbox-brief crons. Output: `Daily-Briefs/competitive-task-today.md`.
+
 ## Responsibilities
 
-- Intake: pull directives from `00_Inbox/` (including `00_Inbox/slack/` filed by `/slack-intake`) and `Dashboard.md`, classify into lanes, assign a tier
+- Intake: pull directives from `Daily-Briefs/competitive-task-today.md`, `00_Inbox/` (including `00_Inbox/slack/` filed by `/slack-intake`) and `Dashboard.md`, classify into lanes, assign a tier
 - Spawn lane agents in parallel, read-only first (Tier 0 scouts)
 - Synthesize one ranked approval board from lane outputs
 - Track every applied change as a hypothesis in the client's Optimization Ledger
@@ -20,7 +22,7 @@ The commander. One brain that routes work to lane agents, keeps run state, assem
 | Paid ads | [[Google Ads Agent]] | campaign analysis, ledger updates |
 | Reporting | [[Reporting Agent]] | `/client-report`, `/metrics-pull` |
 | SEO/content | [[SEO Agent]] | `/content-scan`, blog pipeline |
-| Comms triage | (built into intake) | `/slack-intake`, `/inbox-brief` |
+| Comms triage | (built into intake) | `/competitive-task-orchestrator`, `/slack-intake`, `/inbox-brief` |
 
 ## Decision Logic
 
