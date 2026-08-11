@@ -1,6 +1,6 @@
 ---
 tags: [concept, ads-research]
-source: "[[12_Brain/raw/2026-07-04 - full-autonomy-directive]]"
+source: "[[12_Brain/private/raw/2026-07-04 - full-autonomy-directive]]"
 updated: 2026-07-05
 expires: 2026-08-04
 ---

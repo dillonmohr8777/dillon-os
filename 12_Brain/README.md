@@ -2,7 +2,7 @@
 tags: [system, brain, automation]
 canonical: 12_Brain
 created: 2026-07-29
-updated: 2026-07-30
+updated: 2026-08-10
 status: active
 sync_gate: desktop-vault-open-api-token-pending
 desktop_source: DESKTOP-4AHKEC4 Monitor Cursor and build vault run
@@ -19,7 +19,8 @@ The layer combines the structured Obsidian brain, its agent protocols, and the f
 | Path | Role |
 |---|---|
 | `INDEX.md` | Agent and operator front door |
-| `raw/` | Private ground truth and read-only history |
+| `raw/` | Git-safe source captures; immutable after landing |
+| `private/` | Gitignored sensitive sources and machine-local proposals |
 | `entities/` and `concepts/` | Compiled wiki |
 | `projects/`, `decisions/`, and `research/` | Delivery, decision, and research records |
 | `memory/current/` and `memory/as-of/` | Bi-temporal memory |
@@ -39,6 +40,19 @@ The layer combines the structured Obsidian brain, its agent protocols, and the f
 | `DEPENDENCY_PR226.md` | Site-factory dependency and ownership boundary |
 
 Runnable code lives in `_os/automation/`. Operator docs live at `_os/automation/docs/OPERATOR.md`.
+
+## Write surfaces (who writes where)
+
+Two author classes share this tree — the split is deliberate, not drift:
+
+| Surface | Dirs | Written by |
+|---|---|---|
+| **Wiki (human + skills)** | `raw/`, `entities/`, `concepts/`, `projects/`, `decisions/`, `research/`, `memory/`, `protocols/` | Dillon + the compile loops (`/vault-compile`, `/session-mine`, `/research-sweep`, `/synthesize`) |
+| **Machine records (automation-emitted)** | `01_Captures/` (`lib/intelligence.js`), `05_Projects/Experiments/` (`lib/intelligence.js`), `06_Research/` (`lib/intelligence.js`), `07_Reviews/MCP/` (`lib/mcp-gate.js`), `07_Reviews/Automation Runs/` (`lib/evaluator.js`) | `_os/automation/bin/*` CLIs and the radar workflow |
+
+Humans compile machine records into the wiki side; automations never write the
+wiki side. Human-authored notes do not belong in the machine dirs — the HUD
+counts both surfaces separately (`getBrainVitals`).
 
 ```bash
 node _os/automation/bin/frontmatter-validate.js
