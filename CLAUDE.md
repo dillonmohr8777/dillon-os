@@ -48,8 +48,9 @@ The second-brain layer lives under **`12_Brain/`**.
 2. **Update the existing page instead of creating a duplicate.** Search
    `12_Brain/INDEX.md` and grep before creating anything new.
 3. **Delete notes that turn out to be wrong.** A wrong page is worse than no page.
-4. **Never touch `12_Brain/raw/`.** Compile from it into entities/concepts; the
-   raw file stays exactly as captured.
+4. **Never rewrite an existing file in `12_Brain/raw/`.** An authorized capture
+   skill may create one new timestamped receipt, then it is immutable. Compile
+   from raw into entities/concepts; the source stays exactly as captured.
 
 Plus:
 
@@ -87,3 +88,8 @@ See `12_Brain/System/Second Brain Ops.md`:
 - Nightly: `/vault-compile` on a cheap model.
 - Weekly: `/wiki-lint` and one `/synthesize` pass on the big model.
 - Weekly: `/research-sweep` to feed verified, dated intelligence into the vault.
+- On demand after a material stack change: `/model-scout` + `/skill-scout`
+  create exact-source evidence and private pending proposals. They do not edit
+  the approved roster, install, commit, push, or schedule. `/stack-sync` drafts
+  reversible diffs and applies only in a separate exact-approval turn. See
+  `12_Brain/System/Intelligence Ops.md`.

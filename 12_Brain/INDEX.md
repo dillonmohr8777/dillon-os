@@ -45,6 +45,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Google Docs Sharding Pattern|Google Docs Sharding Pattern]] — sub-MB shards → Docs → index.
 - [[12_Brain/concepts/Leading Indicators|Leading Indicators]] — churn/growth signals for `/synthesize`.
 - [[12_Brain/concepts/Communication Intelligence Map|Communication Intelligence Map]] — Gmail + Slack signals mapped to clients/projects.
+- [[12_Brain/concepts/Agent Stack Patterns|Agent Stack Patterns]] — governed separation of authority, evidence, proposals, execution, and verification. Expires 2026-11-11.
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
@@ -55,7 +56,18 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - `12_Brain/01_Captures/` — machine-emitted captures (Grok daily ingest, Slack scans); automation writes here, humans compile from it. See README "Write surfaces".
+- [[12_Brain/raw/research/2026-08-11 - verified model and harness snapshot|2026-08-11 verified model and harness snapshot]] — primary provider pricing plus the current verified Terminal-Bench rows.
+- [[12_Brain/raw/research/2026-08-11 - verified skill sources|2026-08-11 verified skill sources]] — exact candidate repositories with discovery-only boundaries.
+- [[12_Brain/raw/research/2026-08-11 - governed agent-stack evidence|2026-08-11 governed agent-stack evidence]] — authority and source rules behind the intelligence plane.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
+
+## Stack Intelligence (proposal-only machinery review)
+
+- [[12_Brain/System/Intelligence Ops|Intelligence Ops]] — authority, exact-receipt, budget, proposal, apply, and verification boundaries.
+- [[12_Brain/System/Model Roster|Model Roster]] — verified provider snapshot and routing candidates; not orchestration or config authority. Expires 2026-09-11.
+- [[12_Brain/System/Skill Registry|Skill Registry]] — project inventory plus exact-source discovery candidates; no implied installation. Expires 2026-09-11.
+- [[12_Brain/System/Upgrade Log|Upgrade Log]] — applied and verified machinery changes only.
+- Skills: `/model-scout` · `/skill-scout` · `/stack-sync` · workflow `intel-sweep`.
 
 ## Projects · Decisions · Research · Memory · Protocols
 

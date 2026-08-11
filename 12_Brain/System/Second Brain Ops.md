@@ -19,11 +19,16 @@ only grows when you remember to feed it is dead in three weeks.
 | Weekly | `/wiki-lint` — contradictions, duplicates, dead links, missing sources | cheap | schedule it |
 | Weekly | `/synthesize` — read across the vault: what changed, what's drifting, what deserves attention | **premium** (the only pass that earns it) | schedule it |
 | Weekly | `/research-sweep <niche question>` — fan out, skeptic attacks, survivors land as dated pages | mixed | run when needed |
+| On demand after a material stack change | `/model-scout` + `/skill-scout` — draft evidence and private proposals; see [[12_Brain/System/Intelligence Ops\|Intelligence Ops]] | mixed | manual unless Dillon explicitly requests a bounded schedule |
 
 Scheduling options, pick one:
 - Claude Code on the web / remote: create triggers ("run /vault-compile", cron `0 2 * * *`; `/wiki-lint` + `/synthesize` weekly, e.g. Fri 15:00).
 - Local: `claude -p "/vault-compile" --model haiku` from cron/launchd inside the vault repo.
 - Manual fallback: `/loop` or just run them — the skills are idempotent.
+
+The stack-intelligence skills are not included in these standing examples.
+Scheduling them requires a separate request, declared worker budgets and
+timeouts, and a real session-level dollar cap.
 
 ## The backfill (run once, then as needed)
 

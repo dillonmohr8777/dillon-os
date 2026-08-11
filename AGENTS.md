@@ -11,6 +11,22 @@ This repo is **Dillon OS** — Dillon Mohr's Obsidian vault + agentic OS.
 - Root `CLAUDE.md` has writing/reading rules. Ops loops: `12_Brain/System/Second Brain Ops.md`.
 - Health automation status: `System/routine-health.md` (linked from `12_Brain/System/Health Automation.md`).
 
+## Authority boundary
+
+- Dillon's current instruction wins.
+- Codex acting as Marketing Chief is the primary orchestrator, final synthesis
+  and verification authority, sole user-facing command center, and only
+  canonical queue writer.
+- Claude, Grok, Cursor, Hermes, and other models or harnesses are bounded
+  specialist workers. They return evidence and artifacts to Codex.
+- `12_Brain/` is the canonical knowledge and evidence layer in this repository.
+  It does not grant approval, control machine configuration, or supersede the
+  canonical `client-operations` registry, queue, execution graphs, evidence,
+  approvals, or durable client decisions.
+- Research may create immutable receipts and private proposals. Installs,
+  configuration changes, schedules, pushes, publishing, spend, and client-state
+  mutations retain their exact approval boundaries.
+
 ## Cursor Cloud specific instructions
 
 There is **no root `package.json` for the vault itself**, no Docker. Node (v18+),
