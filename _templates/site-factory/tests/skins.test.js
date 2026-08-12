@@ -34,6 +34,9 @@ describe('attitude skins', () => {
     assert.match(built.html, /glass-float/);
     assert.match(built.html, /marquee-strip/);
     assert.match(built.html, /mobile-action/);
+    assert.match(built.html, /bottom-dock/);
+    assert.match(built.html, /data-ink-logo/);
+    assert.match(built.html, /live-frame/);
     assert.match(built.html, /vanish-out/);
   });
 });

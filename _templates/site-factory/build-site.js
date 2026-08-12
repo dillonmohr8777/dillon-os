@@ -69,7 +69,8 @@ const img = (n, opts = {}) => {
 };
 const figure = (n, opts = {}) => {
   const cap = opts.caption ? `<figcaption>${esc(opts.caption)}</figcaption>` : '';
-  return `<figure class="media-figure" data-hover>${img(n, opts)}${cap}</figure>`;
+  const live = n % 2 === 1 ? ' live-frame' : ' still-frame';
+  return `<figure class="media-figure${live}" data-hover>${img(n, opts)}${cap}</figure>`;
 };
 
 const cta = (c, cls = 'button button-primary') =>
@@ -220,9 +221,7 @@ const footerLinks = (brief.links || [])
   .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)} \u2197</a></li>`)
   .join('');
 
-const brand = brief.logo === false
-  ? `<span class="wordmark">${esc(brief.name)}</span>`
-  : `<img class="brand-logo" src="assets/logo.png" alt="${esc(brief.name)}">`;
+const brand = `<span class="wordmark">${esc(brief.name)}</span>`;
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -239,14 +238,24 @@ const disclosure = brief.noindex !== false
   : `<div class="footer-disclosure"><span>${esc(brief.name)}</span><p>\u00a9 ${new Date().getFullYear()} ${esc(brief.name)}. All rights reserved.</p></div>`;
 
 const primaryCta = brief.headerCta || (brief.hero && brief.hero.ctaPrimary);
-const mobileBar = primaryCta
-  ? `<div class="mobile-action" role="region" aria-label="Primary action">${cta(primaryCta)}</div>`
-  : '';
+const dockNav = (brief.nav || [
+  { label: 'Explore', href: '#offerings' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Visit', href: '#visit' },
+]);
+const dockLeft = dockNav.slice(0, 2);
+const dockRight = dockNav.slice(2, 4);
+const dockCta = primaryCta || (brief.url ? { label: 'Visit site', href: brief.url } : null);
+const inkMark = brief.logo === false
+  ? `<span class="ink-mark wordmark">${esc(brief.name.split(' ')[0] || brief.name)}</span>`
+  : `<img class="ink-mark" src="assets/logo.png" alt="${esc(brief.name)}">`;
+const dockLinks = (items) => items.map((l) => `<a class="dock-link" href="${esc(l.href)}">${esc(l.label)}</a>`).join('');
+const mobileBar = `<nav class="bottom-dock mobile-action" aria-label="Page"><div class="dock-cluster">${dockLinks(dockLeft)}</div><div class="ink-logo" data-ink-logo><canvas width="80" height="80" aria-hidden="true"></canvas>${inkMark}</div><div class="dock-cluster">${dockLinks(dockRight)}${dockCta ? cta(dockCta, 'button dock-cta') : ''}</div></nav>`;
 
 const attitude = inferAttitude(brief);
 const skinCss = buildSkinCss(brief);
 
-const revealScript = `(()=>{const header=document.querySelector('.site-header');const nodes=[...document.querySelectorAll('.reveal')];const vanish=[...document.querySelectorAll('.vanish-out')];const reveal=node=>node.classList.add('visible','in-view');const show=()=>nodes.forEach(reveal);const revealPassed=()=>nodes.forEach(node=>{if(!node.classList.contains('visible')&&node.getBoundingClientRect().top<innerHeight*1.08)reveal(node)});if(!('IntersectionObserver' in window)){show();return}const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -6% 0px'});nodes.forEach(node=>observer.observe(node));const leave=new IntersectionObserver(entries=>entries.forEach(entry=>{entry.target.classList.toggle('is-leaving',!entry.isIntersecting&&entry.boundingClientRect.bottom<0)}),{threshold:0});vanish.forEach(node=>leave.observe(node));let scheduled=false;const onScroll=()=>{if(header)header.classList.toggle('is-scrolled',scrollY>12);if(!scheduled){scheduled=true;requestAnimationFrame(()=>{revealPassed();scheduled=false})}};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',revealPassed,{passive:true});addEventListener('pageshow',()=>requestAnimationFrame(revealPassed));onScroll();revealPassed()})();`;
+const revealScript = `(()=>{const header=document.querySelector('.site-header');const well=document.querySelector('[data-ink-logo]');const canvas=well&&well.querySelector('canvas');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const nodes=[...document.querySelectorAll('.reveal')];const vanish=[...document.querySelectorAll('.vanish-out')];const reveal=node=>node.classList.add('visible','in-view');const show=()=>nodes.forEach(reveal);const revealPassed=()=>nodes.forEach(node=>{if(!node.classList.contains('visible')&&node.getBoundingClientRect().top<innerHeight*1.08)reveal(node)});if(!('IntersectionObserver' in window)){show()}else{const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -6% 0px'});nodes.forEach(node=>observer.observe(node));const leave=new IntersectionObserver(entries=>entries.forEach(entry=>{entry.target.classList.toggle('is-leaving',!entry.isIntersecting&&entry.boundingClientRect.bottom<0)}),{threshold:0});vanish.forEach(node=>leave.observe(node))}let inked=false,parts=[],raf=0;const burst=()=>{if(!canvas||reduce)return;const ctx=canvas.getContext('2d');if(!ctx)return;const w=canvas.width,h=canvas.height;parts=[];for(let i=0;i<42;i++){const a=Math.random()*Math.PI*2,s=0.6+Math.random()*2.4;parts.push({x:w/2,y:h/2,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:1,r:1+Math.random()*2.2})}const tick=()=>{ctx.clearRect(0,0,w,h);parts=parts.filter(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.02;p.life-=0.016;if(p.life<=0)return false;ctx.globalAlpha=p.life;ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();return true});if(parts.length)raf=requestAnimationFrame(tick);else ctx.clearRect(0,0,w,h)};cancelAnimationFrame(raf);tick()};const setInk=()=>{const on=scrollY>Math.min(innerHeight*0.38,280);if(header){header.classList.toggle('is-scrolled',scrollY>12);if(!reduce)header.classList.toggle('logo-sent',on)}if(well){well.classList.toggle('is-inked',reduce||on);if(on&&!inked)burst();if(!on)inked=false;else inked=true}};let scheduled=false;const onScroll=()=>{if(!scheduled){scheduled=true;requestAnimationFrame(()=>{revealPassed();setInk();scheduled=false})}};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',revealPassed,{passive:true});addEventListener('pageshow',()=>requestAnimationFrame(()=>{revealPassed();setInk()}));setInk();revealPassed()})();`;
 
 const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${noindex}<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script><title>${esc(brief.name)} | ${esc(brief.city)}</title><meta name="description" content="${esc(brief.description || '')}"><meta name="theme-color" content="${t.deep}"><meta name="generator" content="momentum-site-factory"><meta name="attitude" content="${esc(attitude)}"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?${fontFamilies}&display=swap" rel="stylesheet"><script type="application/ld+json">${jsonLd}</script><style>
 ${rootBlock}

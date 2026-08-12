@@ -145,6 +145,16 @@ async function extractPage(page) {
         h: img.naturalHeight || 0,
       }))
       .filter((i) => i.src && i.src.startsWith('http') && i.w >= 400 && i.h >= 300);
+    const logoNodes = [
+      ...document.querySelectorAll(
+        'img[alt*="logo" i], img[src*="logo" i], header img, .logo img, a[class*="logo" i] img, [class*="brand"] img',
+      ),
+    ];
+    const logos = [...new Set(logoNodes.map((img) => img.currentSrc || img.src).filter((s) => s && s.startsWith('http')))];
+    const iconHref = (document.querySelector('link[rel="apple-touch-icon"]') || {}).href
+      || (document.querySelector('link[rel="icon"]') || {}).href
+      || '';
+    if (iconHref && iconHref.startsWith('http')) logos.push(iconHref);
     const ogImage = meta('meta[property="og:image"]');
     if (ogImage) images.unshift({ src: ogImage, alt: 'og:image', w: 1200, h: 630 });
 
@@ -167,6 +177,7 @@ async function extractPage(page) {
       hours: hoursMatch ? hoursMatch[0].trim() : '',
       jsonLd,
       images: images.slice(0, 40),
+      logos: uniq(logos).slice(0, 8),
       socialLinks: uniq(socialLinks),
       hasViewport: !!document.querySelector('meta[name="viewport"]'),
       copyrightYear: (bodyText.match(/(?:©|copyright)\s*(\d{4})/i) || [])[1] || '',
@@ -283,6 +294,29 @@ async function downloadImages(context, images, dir, limit = 14) {
       console.log(`images: ${savedImages.length} downloaded`);
     }
 
+    let savedLogo = null;
+    if (extracted.logos && extracted.logos.length) {
+      const logoDir = path.join(dir, 'logo');
+      fs.mkdirSync(logoDir, { recursive: true });
+      for (const src of extracted.logos) {
+        try {
+          const resp = await context.request.get(src, { timeout: 20000, maxRedirects: 3 });
+          if (!resp.ok()) continue;
+          const buf = await resp.body();
+          if (!buf.length || buf.length > 2_000_000) continue;
+          const extRaw = (src.match(/\.(webp|jpg|jpeg|png|svg|ico|gif)(?:\?|$)/i) || [, 'png'])[1];
+          const ext = extRaw.toLowerCase() === 'jpeg' ? 'jpg' : extRaw.toLowerCase();
+          const dest = path.join(logoDir, `logo.${ext === 'svg' ? 'svg' : ext}`);
+          fs.writeFileSync(dest, buf);
+          savedLogo = { file: path.basename(dest), src, bytes: buf.length };
+          break;
+        } catch {
+          /* try next logo candidate */
+        }
+      }
+      console.log(`logo: ${savedLogo ? savedLogo.file : 'none'}`);
+    }
+
     const harvest = {
       slug,
       harvestedAt: new Date().toISOString(),
@@ -309,6 +343,7 @@ async function downloadImages(context, images, dir, limit = 14) {
         staleCopyrightYear: extracted.copyrightYear || null,
       },
       images: savedImages,
+      logo: savedLogo,
       socials,
     };
     fs.writeFileSync(path.join(dir, 'harvest.json'), JSON.stringify(harvest, null, 2));
