@@ -35,11 +35,13 @@ describe('Grok 4.6 field dashboard', () => {
   });
 
   it('keeps Terminal-Bench versions from collapsing', () => {
+    assert.match(
+      html,
+      /Terminal-Bench \*\*v2\.1\*\* \(AA, 88\.4%\) is not Terminal-Bench \*\*v3\.0\*\* \(vendor, 26%\)|Terminal-Bench v2\.1 \(AA, 88\.4%\) is not Terminal-Bench v3\.0 \(vendor, 26%\)/,
+    );
     assert.match(html, /Terminal-Bench v2\.1/);
     assert.match(html, /Terminal-Bench v3\.0/);
     assert.match(html, /88\.4%/);
-    assert.match(html, /Terminal-Bench v3\.0[\s\S]{0,500}26%/);
-    assert.doesNotMatch(html, /Terminal-Bench v2\.1[\s\S]{0,80}26%/);
   });
 
   it('does not print killed claims', () => {
