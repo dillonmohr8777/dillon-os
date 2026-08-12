@@ -1,4 +1,4 @@
-# Codex image queue — generated 2026-08-11
+# Codex image queue — generated 2026-08-12
 
 100 rebuild targets own no usable photographs. Each has a brief in
 this directory specifying exactly what to generate, slot by slot.
@@ -55,69 +55,69 @@ this directory specifying exactly what to generate, slot by slot.
 | 32 | West Philadelphia VA Clinic | clinic |  | west-philadelphia-va-clinic.json |
 | 33 | Danger Salon | hairdresser | Philadelphia | danger-salon.json |
 | 34 | Sense Zero Float Center | beauty | Yardley | sense-zero-float-center.json |
-| 35 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
-| 36 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
-| 37 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
-| 38 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
-| 39 | BPM Fitness | fitness-centre |  | bpm-fitness.json |
-| 40 | First Class Auto Land | car | Philadelphia | first-class-auto-land.json |
-| 41 | Train and Nourish | fitness-centre | Philadelphia | train-and-nourish.json |
-| 42 | Fusion Gyms | fitness-centre | Philadelphia | fusion-gyms.json |
-| 43 | Easy Auto Tag & Insurance | insurance |  | easy-auto-tag-and-insurance.json |
-| 44 | NewAge® Industries | works | Southampton | newage-industries.json |
-| 45 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
-| 46 | Francis Kaufman House | restaurant |  | francis-kaufman-house.json |
-| 47 | Bei Jing Chinese Food | restaurant | Norristown | bei-jing-chinese-food.json |
-| 48 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
-| 49 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
-| 50 | Golden Sea | restaurant | Blue Bell | golden-sea.json |
-| 51 | Glocker and Co. Inc. Realtors | estate-agent | Boyertown | glocker-and-co-inc-realtors.json |
-| 52 | Upscale Consignments Boutiques Maria Fe's | clothes |  | upscale-consignments-boutiques-maria-fe-s.json |
-| 53 | Wynnewood Eyecare | optometrist |  | wynnewood-eyecare.json |
-| 54 | Bar 31 | bar | Ambler | bar-31.json |
-| 55 | August Moon | restaurant | Norristown | august-moon.json |
-| 56 | Theory | clothes | Pottstown | theory.json |
-| 57 | Highline Motors | car-repair | Aston | highline-motors.json |
-| 58 | Hero Complex | books | Philadelphia | hero-complex.json |
-| 59 | Barnes Financial Group | accountant | Media | barnes-financial-group.json |
-| 60 | Weathers Motors & Auto Sales | car | Media | weathers-motors-and-auto-sales.json |
-| 61 | TM Prestige Home Cash Buyer | estate-agent | Philadelphia | tm-prestige-home-cash-buyer.json |
-| 62 | Kinetic Physical Therapy | physiotherapist | Collegeville | kinetic-physical-therapy.json |
-| 63 | Field 1 Post, LLC | advertising-agency | Havertown | field-1-post-llc.json |
-| 64 | Boyle Energy - Heating, Air Conditioning, Oil & Propane | hvac | Havertown | boyle-energy-heating-air-conditioning-oil-and-propane.json |
-| 65 | Accurate Temperature | hvac | Bensalem | accurate-temperature.json |
-| 66 | Euphoria Nail Bar | beauty |  | euphoria-nail-bar.json |
-| 67 | Narberth Pizza | restaurant | Narberth | narberth-pizza.json |
-| 68 | Al Tacos Locos | restaurant | Jenkintown | al-tacos-locos.json |
-| 69 | Ming's Chinese | restaurant | Hatboro | ming-s-chinese.json |
-| 70 | Ember & Ale | restaurant | Collegeville | ember-and-ale.json |
-| 71 | The Edge Fitness Clubs | fitness-centre | Media | the-edge-fitness-clubs.json |
-| 72 | Epam | it | Philadelphia | epam.json |
-| 73 | Fit4Mom | fitness-centre | Warrington | fit4mom.json |
-| 74 | Belle Palace Nail Spa | beauty | Warrington | belle-palace-nail-spa.json |
-| 75 | Anthropology | clothes | Devon | anthropology.json |
-| 76 | Pier 6 | shipyard |  | pier-6.json |
-| 77 | Colket Translational Research Building | clinic | Philadelphia | colket-translational-research-building.json |
-| 78 | Sangillo Tire Center | tyres | Folsom | sangillo-tire-center.json |
-| 79 | Mack’s Hair Studio | hairdresser | Philadelphia | mack-s-hair-studio.json |
-| 80 | Balance Studios | fitness-centre | Philadelphia | balance-studios.json |
-| 81 | S.B. Health | fitness-centre | Bristol Township | s-b-health.json |
-| 82 | Custom IT Solutions | it | Lower Salford Township | custom-it-solutions.json |
-| 83 | Captain Car Wash | car-wash | Norristown | captain-car-wash.json |
-| 84 | Heart & Soul Tattoo | tattoo | East Greenville | heart-and-soul-tattoo.json |
-| 85 | Manatawny Still Works | distillery |  | manatawny-still-works.json |
-| 86 | Just Tires | car-repair |  | just-tires.json |
-| 87 | Kevin T Coyne Attorney At Law | lawyer | Media | kevin-t-coyne-attorney-at-law.json |
-| 88 | The Rouse Group Development Co. | estate-agent | Havertown | the-rouse-group-development-co.json |
-| 89 | O'Donnell, Weiss & Mattei, P.C. | lawyer |  | o-donnell-weiss-and-mattei-p-c.json |
-| 90 | Seiler & Drury | architect | Norristown | seiler-and-drury.json |
-| 91 | LPL Financial | financial | Colmar | lpl-financial.json |
-| 92 | The Restaurant Store | kitchen | Norristown | the-restaurant-store.json |
-| 93 | NovaCare | clinic | Conshohocken | novacare.json |
-| 94 | J-Pro, Inc. | swimming-pool | Bridgeport | j-pro-inc.json |
-| 95 | Towne Book Center & Wine Bar | books | Collegeville | towne-book-center-and-wine-bar.json |
-| 96 | Agnes Edmunds Bridal & Formals | clothes | Pottstown | agnes-edmunds-bridal-and-formals.json |
-| 97 | Rally House Collegeville | sports | Collegeville | rally-house-collegeville.json |
-| 98 | Rocco's Brick Oven Pizzeria | restaurant | Collegeville | rocco-s-brick-oven-pizzeria.json |
-| 99 | Red Hill Greenhouses & Florist | florist | Red Hill | red-hill-greenhouses-and-florist.json |
-| 100 | Ferrari Philadelphia | car | Newtown Square | ferrari-philadelphia.json |
+| 35 | Mexico Magico | tax-advisor | Avondale | mexico-magico.json |
+| 36 | Chestnut Hill Animal Hospital | veterinary | Erdenheim | chestnut-hill-animal-hospital.json |
+| 37 | County Line Veterinary Hospital | veterinary | Hatboro | county-line-veterinary-hospital.json |
+| 38 | Gallo Insurance Agency | insurance | Philadelphia | gallo-insurance-agency.json |
+| 39 | Grand Sport Auto Body | car-repair | Collegeville | grand-sport-auto-body.json |
+| 40 | BPM Fitness | fitness-centre |  | bpm-fitness.json |
+| 41 | First Class Auto Land | car | Philadelphia | first-class-auto-land.json |
+| 42 | Train and Nourish | fitness-centre | Philadelphia | train-and-nourish.json |
+| 43 | Fusion Gyms | fitness-centre | Philadelphia | fusion-gyms.json |
+| 44 | Easy Auto Tag & Insurance | insurance |  | easy-auto-tag-and-insurance.json |
+| 45 | NewAge® Industries | works | Southampton | newage-industries.json |
+| 46 | The Juice Merchant | restaurant | Narberth | the-juice-merchant.json |
+| 47 | Francis Kaufman House | restaurant |  | francis-kaufman-house.json |
+| 48 | Bei Jing Chinese Food | restaurant | Norristown | bei-jing-chinese-food.json |
+| 49 | Sciacca Service Center | car-repair |  | sciacca-service-center.json |
+| 50 | Malvern Veterinary Hospital | veterinary |  | malvern-veterinary-hospital.json |
+| 51 | Golden Sea | restaurant | Blue Bell | golden-sea.json |
+| 52 | Glocker and Co. Inc. Realtors | estate-agent | Boyertown | glocker-and-co-inc-realtors.json |
+| 53 | Upscale Consignments Boutiques Maria Fe's | clothes |  | upscale-consignments-boutiques-maria-fe-s.json |
+| 54 | Wynnewood Eyecare | optometrist |  | wynnewood-eyecare.json |
+| 55 | Bar 31 | bar | Ambler | bar-31.json |
+| 56 | August Moon | restaurant | Norristown | august-moon.json |
+| 57 | Theory | clothes | Pottstown | theory.json |
+| 58 | Highline Motors | car-repair | Aston | highline-motors.json |
+| 59 | Hero Complex | books | Philadelphia | hero-complex.json |
+| 60 | Barnes Financial Group | accountant | Media | barnes-financial-group.json |
+| 61 | Weathers Motors & Auto Sales | car | Media | weathers-motors-and-auto-sales.json |
+| 62 | TM Prestige Home Cash Buyer | estate-agent | Philadelphia | tm-prestige-home-cash-buyer.json |
+| 63 | Kinetic Physical Therapy | physiotherapist | Collegeville | kinetic-physical-therapy.json |
+| 64 | Field 1 Post, LLC | advertising-agency | Havertown | field-1-post-llc.json |
+| 65 | Boyle Energy - Heating, Air Conditioning, Oil & Propane | hvac | Havertown | boyle-energy-heating-air-conditioning-oil-and-propane.json |
+| 66 | Accurate Temperature | hvac | Bensalem | accurate-temperature.json |
+| 67 | Euphoria Nail Bar | beauty |  | euphoria-nail-bar.json |
+| 68 | Narberth Pizza | restaurant | Narberth | narberth-pizza.json |
+| 69 | Al Tacos Locos | restaurant | Jenkintown | al-tacos-locos.json |
+| 70 | Ming's Chinese | restaurant | Hatboro | ming-s-chinese.json |
+| 71 | Ember & Ale | restaurant | Collegeville | ember-and-ale.json |
+| 72 | The Edge Fitness Clubs | fitness-centre | Media | the-edge-fitness-clubs.json |
+| 73 | Epam | it | Philadelphia | epam.json |
+| 74 | Fit4Mom | fitness-centre | Warrington | fit4mom.json |
+| 75 | Belle Palace Nail Spa | beauty | Warrington | belle-palace-nail-spa.json |
+| 76 | Anthropology | clothes | Devon | anthropology.json |
+| 77 | Better Homes and Gardens Real Estate Community Realty | estate-agent | Phoenixville | better-homes-and-gardens-real-estate-community-realty.json |
+| 78 | Pier 6 | shipyard |  | pier-6.json |
+| 79 | Colket Translational Research Building | clinic | Philadelphia | colket-translational-research-building.json |
+| 80 | Sangillo Tire Center | tyres | Folsom | sangillo-tire-center.json |
+| 81 | Mack’s Hair Studio | hairdresser | Philadelphia | mack-s-hair-studio.json |
+| 82 | Balance Studios | fitness-centre | Philadelphia | balance-studios.json |
+| 83 | S.B. Health | fitness-centre | Bristol Township | s-b-health.json |
+| 84 | Custom IT Solutions | it | Lower Salford Township | custom-it-solutions.json |
+| 85 | Captain Car Wash | car-wash | Norristown | captain-car-wash.json |
+| 86 | Heart & Soul Tattoo | tattoo | East Greenville | heart-and-soul-tattoo.json |
+| 87 | Manatawny Still Works | distillery |  | manatawny-still-works.json |
+| 88 | Just Tires | car-repair |  | just-tires.json |
+| 89 | Kevin T Coyne Attorney At Law | lawyer | Media | kevin-t-coyne-attorney-at-law.json |
+| 90 | The Rouse Group Development Co. | estate-agent | Havertown | the-rouse-group-development-co.json |
+| 91 | O'Donnell, Weiss & Mattei, P.C. | lawyer |  | o-donnell-weiss-and-mattei-p-c.json |
+| 92 | Seiler & Drury | architect | Norristown | seiler-and-drury.json |
+| 93 | LPL Financial | financial | Colmar | lpl-financial.json |
+| 94 | The Restaurant Store | kitchen | Norristown | the-restaurant-store.json |
+| 95 | NovaCare | clinic | Conshohocken | novacare.json |
+| 96 | J-Pro, Inc. | swimming-pool | Bridgeport | j-pro-inc.json |
+| 97 | Towne Book Center & Wine Bar | books | Collegeville | towne-book-center-and-wine-bar.json |
+| 98 | Agnes Edmunds Bridal & Formals | clothes | Pottstown | agnes-edmunds-bridal-and-formals.json |
+| 99 | Rally House Collegeville | sports | Collegeville | rally-house-collegeville.json |
+| 100 | Rocco's Brick Oven Pizzeria | restaurant | Collegeville | rocco-s-brick-oven-pizzeria.json |
