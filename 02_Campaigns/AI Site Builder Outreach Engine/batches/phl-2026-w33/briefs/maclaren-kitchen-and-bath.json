@@ -1,0 +1,235 @@
+{
+  "slug": "maclaren-kitchen-and-bath",
+  "name": "MacLaren Kitchen and Bath",
+  "city": "West Chester",
+  "category": "Kitchen and bath remodeling",
+  "vertical": "Home Services",
+  "attitude": "industrial",
+  "url": "https://maclarenfab.com/",
+  "hours": "Monday-Friday 8:30 AM-4:30 PM",
+  "description": "Kitchen and bath remodeling in West Chester. Countertops, cabinetry, and fabrication. Showroom hours Monday-Friday 8:30 AM to 4:30 PM.",
+  "fonts": {
+    "display": "Barlow Condensed",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Jost"
+  },
+  "tokens": {
+    "paper": "#F6F4EF",
+    "ink": "#3A4F66",
+    "accent": "#8AAE99",
+    "accent2": "#C4A574",
+    "panel": "#D5DDD8",
+    "deep": "#3A4F66",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "6px"
+  },
+  "marquee": [
+    "Countertops",
+    "Cabinetry",
+    "Fabrication",
+    "West Chester"
+  ],
+  "nav": [
+    {
+      "label": "Cabinets",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "West Chester | Kitchen and bath",
+    "headline": "Kitchen remodeling, built in the shop",
+    "sub": "MacLaren Kitchen and Bath remodels kitchens and baths in West Chester. Countertops, cabinetry, fabrication. Showroom hours Monday through Friday, 8:30 to 4:30. Start on the official site.",
+    "ctaPrimary": {
+      "label": "Get started",
+      "href": "https://maclarenfab.com/"
+    },
+    "ctaSecondary": {
+      "label": "See cabinets",
+      "href": "https://maclarenfab.com/cabinets/"
+    },
+    "glassFloat": {
+      "title": "West Chester",
+      "sub": "Mon-Fri 8:30-4:30"
+    },
+    "marquee": [
+      "Cabinets",
+      "Countertops",
+      "Fabrication",
+      "Showroom"
+    ]
+  },
+  "offerings": {
+    "heading": "Cabinets, tops, <mark>and the fab floor.</mark>",
+    "items": [
+      "Cabinetry for kitchens and baths, specified in the showroom before anyone cuts a box.",
+      "Countertops selected and templated so the top matches the run, not a leftover slab photo.",
+      "Fabrication in house, which is why the remodel doesn't die between a cabinet shop and a stone yard."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Kitchen and bath remodeling in West Chester",
+      "Monday-Friday 8:30 AM-4:30 PM",
+      "Countertops, cabinetry, fabrication",
+      "Start at maclarenfab.com"
+    ]
+  },
+  "gallery": {
+    "heading": "Slab, box, <mark>and edge.</mark>",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A West Chester shop that still fabricates",
+    "paragraphs": [
+      "MacLaren runs kitchen and bath remodels from a showroom that also fabricates. Cabinets and countertops aren't two separate errands.",
+      "Weekday hours are 8:30 to 4:30. There's no public phone on the harvest, so the official site is the door. Cabinets and countertops have their own pages."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a remodel is supposed to start.",
+    "items": [
+      "Meet in the showroom. Scope first, then a preliminary design and a real number.",
+      "You pick cabinets and the countertop as one sequence, not two vendors.",
+      "Install follows fabrication. Follow-up is part of the same job."
+    ]
+  },
+  "feature": {
+    "heading": "Fabrication keeps the remodel on one floor",
+    "text": "A kitchen dies in the handoff between cabinetry and stone. MacLaren keeps both in the same shop, then installs what they built.",
+    "cta": {
+      "label": "See countertops",
+      "href": "https://maclarenfab.com/countertops/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Open the <mark>showroom pages.</mark>",
+    "items": [
+      {
+        "title": "Cabinets",
+        "href": "https://maclarenfab.com/cabinets/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Countertops",
+        "href": "https://maclarenfab.com/countertops/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Get started",
+        "href": "https://maclarenfab.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Plan the next <mark>showroom visit.</mark>",
+    "sub": "West Chester. Monday-Friday 8:30 to 4:30. Confirm the address on the official site before you drive."
+  },
+  "closing": {
+    "heading": "MacLaren Kitchen and Bath",
+    "cta": {
+      "label": "Get started",
+      "href": "https://maclarenfab.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://maclarenfab.com/"
+    },
+    {
+      "label": "Cabinets",
+      "href": "https://maclarenfab.com/cabinets/"
+    },
+    {
+      "label": "Countertops",
+      "href": "https://maclarenfab.com/countertops/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Kitchen with new shaker cabinets and a stone island"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Fabricator polishing a countertop edge"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Showroom wall of cabinet door samples"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Slab rack of quartz and granite"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Bathroom vanity with a solid-surface top"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "CNC cutting a cabinet panel"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk exterior of a remodeling shop"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close view of a waterfall island corner"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Open cabinet interior with soft-close hardware"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Templated countertop on sawhorses"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Consultation table with finish boards"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Night lights over a finished kitchen"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

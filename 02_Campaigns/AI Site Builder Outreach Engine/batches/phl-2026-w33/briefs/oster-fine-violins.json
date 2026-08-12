@@ -1,0 +1,233 @@
+{
+  "slug": "oster-fine-violins",
+  "name": "Frederick W. Oster Fine Violins",
+  "city": "Philadelphia",
+  "category": "Fine string instruments",
+  "vertical": "Retail",
+  "attitude": "editorial",
+  "url": "https://www.osterviolins.com/",
+  "phone": "215-545-1100",
+  "hours": "Monday-Friday 10am-5pm",
+  "description": "Frederick W. Oster Fine Violins. Violins, violas, cellos, bows, appraisals, and restorers. Call 215-545-1100. Monday-Friday 10am-5pm.",
+  "fonts": {
+    "display": "EB Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Serif 4"
+  },
+  "tokens": {
+    "paper": "#F6F6F6",
+    "ink": "#222931",
+    "accent": "#8B6914",
+    "accent2": "#C4A574",
+    "panel": "#E4E0D6",
+    "deep": "#222931",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "marquee": [
+    "Violins",
+    "Violas",
+    "Cellos",
+    "Bows",
+    "Appraisals"
+  ],
+  "nav": [
+    {
+      "label": "Instruments",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Fine string instruments",
+    "headline": "Dealer, restorers, and appraisers",
+    "sub": "Frederick W. Oster Fine Violins specializes in violins, violas, cellos, and bows. Appraisals and restorers on staff. Call 215-545-1100. Monday through Friday, 10 to 5.",
+    "ctaPrimary": {
+      "label": "Call for an appointment",
+      "href": "tel:2155451100"
+    },
+    "ctaSecondary": {
+      "label": "Official site",
+      "href": "https://www.osterviolins.com/"
+    },
+    "glassFloat": {
+      "title": "Fine strings",
+      "sub": "Mon-Fri 10am-5pm"
+    },
+    "marquee": [
+      "Violins",
+      "Violas",
+      "Cellos",
+      "Bows"
+    ]
+  },
+  "offerings": {
+    "heading": "The violin family, <mark>plus the bow.</mark>",
+    "items": [
+      "Violins, violas, and cellos, antique through modern, chosen for players who need the instrument in the hand.",
+      "Bows for violin, viola, cello, and bass, because the stick is half the sound.",
+      "Appraisals, certifications, and restorers when the instrument needs a written value or a real repair."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Telephone 215-545-1100",
+      "Monday-Friday 10am-5pm",
+      "Violins, violas, cellos, bows",
+      "Appraisals and restorers"
+    ]
+  },
+  "gallery": {
+    "heading": "Varnish, hair, <mark>and quiet light.</mark>",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Fine string instruments, treated as instruments",
+    "paragraphs": [
+      "Oster's shop is built around the violin family. You come for a violin, a viola, a cello, or a bow, and you try it. The site still lists restorers by name.",
+      "Appraisals cover insurance, estate, and donation work. Call 215-545-1100 and book the appointment inside weekday hours, 10 to 5."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a shop visit should go.",
+    "items": [
+      "Call first. Fine instruments aren't a walk-up impulse for every bench.",
+      "Play the instrument in the room. A listing photo won't tell you the response.",
+      "If you need an appraisal or a restoration, say that on the call so the right person is in."
+    ]
+  },
+  "feature": {
+    "heading": "Appraisals and restorers in the same house",
+    "text": "A dealer who can also write the value and repair the crack is rarer than a pretty shop window. The bench exists for that work.",
+    "cta": {
+      "label": "Learn about the restorers",
+      "href": "https://www.osterviolins.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Instruments, bows, <mark>paperwork.</mark>",
+    "items": [
+      {
+        "title": "Instruments",
+        "href": "https://www.osterviolins.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Bows",
+        "href": "https://www.osterviolins.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Appraisals",
+        "href": "https://www.osterviolins.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Book the bench <mark>visit.</mark>",
+    "sub": "Philadelphia. Monday-Friday 10 to 5. Confirm the street on the official site before you travel with an instrument."
+  },
+  "closing": {
+    "heading": "Frederick W. Oster Fine Violins",
+    "cta": {
+      "label": "Call for an appointment",
+      "href": "tel:2155451100"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.osterviolins.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:2155451100"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Violin hanging in a quiet shop window"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Hands fitting a bow to a cello"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Row of violas on a felt-lined rack"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Close crop of maple back and varnish"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Bow hair and frog on a workbench"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Restorer's tools beside an open instrument"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk facade of a Center City shop"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Sheet music and a violin in soft light"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Violin scroll against a dark cloth"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Cello standing in a corner of the shop"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Appraisal documents on a wooden desk"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Evening lamps over a string-instrument wall"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

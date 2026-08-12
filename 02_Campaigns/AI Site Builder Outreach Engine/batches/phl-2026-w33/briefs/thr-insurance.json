@@ -1,0 +1,226 @@
+{
+  "slug": "thr-insurance",
+  "name": "THR Insurance",
+  "city": "Philadelphia",
+  "category": "Business insurance",
+  "vertical": "Professional Services",
+  "attitude": "glass",
+  "url": "http://www.thrinsurance.com/",
+  "description": "Business insurance specialists. Business, home and auto, and human resources coverage. Request a quote on the official site.",
+  "schemaType": "InsuranceAgency",
+  "fonts": {
+    "display": "Josefin Sans",
+    "displayFallback": "sans-serif",
+    "text": "Manrope"
+  },
+  "tokens": {
+    "paper": "#F1EDE4",
+    "ink": "#494A4C",
+    "accent": "#6B7F4A",
+    "accent2": "#C4B48A",
+    "panel": "#E4DDD0",
+    "deep": "#494A4C",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "marquee": [
+    "Business",
+    "Home & auto",
+    "Human resources",
+    "Request a quote"
+  ],
+  "nav": [
+    {
+      "label": "Coverage",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Insurance specialists | Business, home, HR",
+    "headline": "The easy, trusted way to buy insurance",
+    "sub": "THR Insurance is a business insurance specialist. Business, home and auto, and human resources. Request a quote on the official site. No public phone was listed.",
+    "ctaPrimary": {
+      "label": "Request a quote",
+      "href": "http://www.thrinsurance.com/"
+    },
+    "ctaSecondary": {
+      "label": "See coverage",
+      "href": "#offerings"
+    },
+    "glassFloat": {
+      "title": "Business first",
+      "sub": "Home, auto, HR"
+    },
+    "marquee": [
+      "Business insurance",
+      "Home & auto",
+      "Human resources",
+      "Quote"
+    ]
+  },
+  "offerings": {
+    "heading": "Three desks. <mark>One agency.</mark>",
+    "items": [
+      "Business insurance for the shop that needs a specialist, not a personal-lines leftover.",
+      "Home and auto when the same client wants the household on the same relationship.",
+      "Human resources coverage as a named line, not a footnote under a commercial package."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Business insurance specialists",
+      "Business / Home & Auto / Human Resources",
+      "Request a quote on the official site",
+      "No public phone listed on the harvest"
+    ]
+  },
+  "gallery": {
+    "heading": "Paper, glass, <mark>quiet offices.</mark>",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "An agency that leads with business coverage",
+    "paragraphs": [
+      "THR Insurance puts business insurance first, then home and auto, then human resources. The homepage is three doors, not a maze of products.",
+      "Request a quote on the official site. The harvest didn't publish a phone number, so the site is the door."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a quote should start.",
+    "items": [
+      "Say whether you need business, home and auto, or HR. The site is built that way.",
+      "Request the quote. They'll come back with the partners they actually place.",
+      "Keep the conversation on one agency so the household and the shop aren't split."
+    ]
+  },
+  "feature": {
+    "heading": "Human resources is a named line, not an afterthought",
+    "text": "Plenty of agencies will sell a BOP and smile. THR lists HR beside business and home. The specialist tell is the named HR line.",
+    "cta": {
+      "label": "Request a quote",
+      "href": "http://www.thrinsurance.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Pick the <mark>door.</mark>",
+    "items": [
+      {
+        "title": "Business insurance",
+        "href": "http://www.thrinsurance.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Home & auto",
+        "href": "http://www.thrinsurance.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Human resources",
+        "href": "http://www.thrinsurance.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Start with the <mark>quote.</mark>",
+    "sub": "Use the official site to request a quote. No public phone or street was listed on the harvest."
+  },
+  "closing": {
+    "heading": "THR Insurance",
+    "cta": {
+      "label": "Request a quote",
+      "href": "http://www.thrinsurance.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://www.thrinsurance.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Quiet insurance office with wood and glass"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Hands reviewing a policy binder"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Conference table with notepads and coffee"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Storefront window with frosted lettering"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Laptop open to a quote form"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Filing cabinet and a green desk lamp"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk exterior of a small professional office"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of a signed coverage page"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Business storefront as a coverage stand-in"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Family car in a driveway at dusk"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "HR handbook on a meeting table"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Evening lamps in an empty waiting room"
+    }
+  ],
+  "noindex": true,
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

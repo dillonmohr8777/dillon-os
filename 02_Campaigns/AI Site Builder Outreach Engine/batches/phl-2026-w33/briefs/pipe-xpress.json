@@ -1,0 +1,231 @@
+{
+  "slug": "pipe-xpress",
+  "name": "Pipe Xpress",
+  "city": "West Chester",
+  "category": "PVC pipe supply",
+  "vertical": "Industrial",
+  "attitude": "industrial",
+  "url": "https://pipexpressinc.com/",
+  "phone": "610-918-7120",
+  "description": "PVC pipe supply in West Chester. Schedule 40 and Schedule 80 PVC, same-day pickup. Call 610-918-7120.",
+  "fonts": {
+    "display": "Barlow Condensed",
+    "displayFallback": "Impact,sans-serif",
+    "text": "IBM Plex Sans"
+  },
+  "tokens": {
+    "paper": "#F2F4F6",
+    "ink": "#3A3A3A",
+    "accent": "#0170B9",
+    "accent2": "#4B4F58",
+    "panel": "#D5D8DE",
+    "deep": "#3A3A3A",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "3px",
+    "radius": "4px"
+  },
+  "marquee": [
+    "Schedule 40",
+    "Schedule 80",
+    "Same-day pickup",
+    "West Chester"
+  ],
+  "nav": [
+    {
+      "label": "Products",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "West Chester | PVC pipe supply",
+    "headline": "Schedule 40 and 80, ready for pickup",
+    "sub": "Pipe Xpress supplies PVC in West Chester. Schedule 40, Schedule 80, same-day pickup. Call 610-918-7120 and tell them the size before you roll the truck.",
+    "ctaPrimary": {
+      "label": "Call Pipe Xpress",
+      "href": "tel:6109187120"
+    },
+    "ctaSecondary": {
+      "label": "Official site",
+      "href": "https://pipexpressinc.com/"
+    },
+    "glassFloat": {
+      "title": "West Chester, PA",
+      "sub": "Same-day pickup"
+    },
+    "marquee": [
+      "PVC pipe",
+      "Schedule 40",
+      "Schedule 80",
+      "Fittings"
+    ]
+  },
+  "offerings": {
+    "heading": "Pipe on the rack. <mark>Pickup today.</mark>",
+    "items": [
+      "Schedule 40 PVC for the runs that don't need extra wall.",
+      "Schedule 80 when the job wants the heavier pipe, not a substitute.",
+      "Same-day pickup in West Chester if you call 610-918-7120 with the list first."
+    ]
+  },
+  "proof": {
+    "items": [
+      "PVC pipe supply in West Chester",
+      "Telephone 610-918-7120",
+      "Schedule 40 and Schedule 80 PVC",
+      "Same-day pickup"
+    ]
+  },
+  "gallery": {
+    "heading": "Blue print, <mark>white pipe.</mark>",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A West Chester yard that stocks the schedule you asked for",
+    "paragraphs": [
+      "Pipe Xpress is a PVC supply house. The site is built around Schedule 40 and Schedule 80, in the lengths and diameters a contractor actually orders.",
+      "Same-day pickup is the promise. Call 610-918-7120, read the list, and don't drive empty."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a pipe run should start.",
+    "items": [
+      "Know the schedule, the diameter, and the count before you call.",
+      "They'll tell you if it's on the rack for same-day pickup.",
+      "Fittings and the next size up are the reason you call instead of guessing in the aisle."
+    ]
+  },
+  "feature": {
+    "heading": "Schedule 40 and 80, not a hardware-store remnant",
+    "text": "A job stalls when the pipe isn't the schedule you spec'd. This yard is built to hand you 40 or 80 and get the truck back on the road.",
+    "cta": {
+      "label": "See products",
+      "href": "https://pipexpressinc.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Pull the <mark>schedule.</mark>",
+    "items": [
+      {
+        "title": "Schedule 40 PVC",
+        "href": "https://pipexpressinc.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Schedule 80 PVC",
+        "href": "https://pipexpressinc.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "https://pipexpressinc.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Call before you <mark>load.</mark>",
+    "sub": "West Chester. Confirm the yard address and cutoff time on the official site."
+  },
+  "closing": {
+    "heading": "Pipe Xpress",
+    "cta": {
+      "label": "Call Pipe Xpress",
+      "href": "tel:6109187120"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://pipexpressinc.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6109187120"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Stacks of white PVC pipe in a warehouse"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Cut Schedule 80 pipe on a saw table"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Bins of PVC fittings and couplings"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Forklift moving a bundle of pipe"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Close crop of Schedule 40 markings"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Contractor loading pipe into a truck"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk exterior of a West Chester supply yard"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Blue branded pipe cart in an aisle"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Rack of Schedule 40 lengths"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Rack of Schedule 80 lengths"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Counter with a phone and order pad"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Night floodlights over pipe racks"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

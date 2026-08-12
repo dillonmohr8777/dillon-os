@@ -1,0 +1,234 @@
+{
+  "slug": "eastern-dragon",
+  "name": "Eastern Dragon",
+  "city": "North Wales",
+  "category": "Chinese and Japanese restaurant",
+  "vertical": "Restaurant",
+  "attitude": "neon",
+  "url": "http://easterndragonfood.com/",
+  "phone": "(215) 855-0366",
+  "address": "830 Upper State Rd., North Wales, PA 19454",
+  "hours": "Sun-Thurs 11:00 am - 9:30 pm",
+  "description": "Chinese and Japanese restaurant in North Wales. Dine in, take out, delivery, and catering. Szechuan Chicken and a full menu at 830 Upper State Rd.",
+  "schemaType": "Restaurant",
+  "fonts": {
+    "display": "Great Vibes",
+    "displayFallback": "cursive",
+    "text": "Oswald"
+  },
+  "tokens": {
+    "paper": "#F5EFEF",
+    "ink": "#1A0A0A",
+    "accent": "#CC0000",
+    "accent2": "#F9F1E1",
+    "panel": "#E8D4C8",
+    "deep": "#1A0A0A",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "marquee": [
+    "Dine in",
+    "Take out",
+    "Delivery",
+    "Catering",
+    "North Wales"
+  ],
+  "nav": [
+    {
+      "label": "Menu",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "North Wales | Chinese and Japanese",
+    "headline": "Eastern Dragon",
+    "sub": "Chinese and Japanese cooking at 830 Upper State Rd. in North Wales. Dine in, take out, delivery, and catering. Call (215) 855-0366 and order the Szechuan Chicken.",
+    "ctaPrimary": {
+      "label": "Call to order",
+      "href": "tel:2158550366"
+    },
+    "ctaSecondary": {
+      "label": "See the menu",
+      "href": "http://easterndragonfood.com/"
+    },
+    "glassFloat": {
+      "title": "North Wales 19454",
+      "sub": "Sun-Thurs 11 to 9:30"
+    },
+    "marquee": [
+      "Szechuan Chicken",
+      "Dine in",
+      "Take out",
+      "Delivery"
+    ]
+  },
+  "offerings": {
+    "heading": "Chinese, Japanese, <mark>one kitchen.</mark>",
+    "items": [
+      "Szechuan Chicken and the rest of the Chinese board, cooked for dine in or the ride home.",
+      "Japanese plates beside the Chinese menu, so the table doesn't have to pick a single lane.",
+      "Delivery and catering when the meal has to land somewhere that isn't a booth."
+    ]
+  },
+  "proof": {
+    "items": [
+      "830 Upper State Rd., North Wales, PA 19454",
+      "Tel (215) 855-0366",
+      "Sun-Thurs 11:00 am - 9:30 pm",
+      "Dine in, take out, delivery, catering"
+    ]
+  },
+  "gallery": {
+    "heading": "Steam, lacquer, <mark>red light.</mark>",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Upper State Road, North Wales",
+    "paragraphs": [
+      "Eastern Dragon sits at 830 Upper State Rd. with a kitchen that runs Chinese and Japanese on the same ticket.",
+      "You come in, you call (215) 855-0366, or you send the order out. Szechuan Chicken is the dish the site still names first."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How dinner actually moves.",
+    "items": [
+      "Walk in for a table, or call ahead if you already know the order.",
+      "Take out and delivery cover the nights you aren't sitting down.",
+      "Catering is on the board when the count is bigger than a booth."
+    ]
+  },
+  "feature": {
+    "heading": "Szechuan Chicken, then the rest of the menu",
+    "text": "The kitchen is built for the regular order. Spice, rice, and a second cuisine if the table wants Japanese next to the Chinese plates.",
+    "cta": {
+      "label": "Open the menu",
+      "href": "http://easterndragonfood.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Order it <mark>your way.</mark>",
+    "items": [
+      {
+        "title": "Menu",
+        "href": "http://easterndragonfood.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Take out",
+        "href": "http://easterndragonfood.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Catering",
+        "href": "http://easterndragonfood.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come in or <mark>call it in.</mark>",
+    "sub": "830 Upper State Rd., North Wales. Confirm Friday and Saturday hours on the official site."
+  },
+  "closing": {
+    "heading": "Eastern Dragon",
+    "cta": {
+      "label": "Call to order",
+      "href": "tel:2158550366"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://easterndragonfood.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:2158550366"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Red neon restaurant sign over a dark dining room"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Plate of Szechuan chicken with chili oil"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Sushi roll beside chopsticks on black lacquer"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Wok flame in a tight restaurant kitchen"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Takeout cartons stacked at a pickup window"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Booth seating under warm pendant lights"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Night storefront on a suburban commercial road"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of steamed dumplings in a bamboo basket"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Printed Chinese and Japanese menu on a table"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Paper bag of takeout by a car door"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Catering trays lined on a steel counter"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Dusk parking lot outside a North Wales restaurant"
+    }
+  ],
+  "noindex": true,
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

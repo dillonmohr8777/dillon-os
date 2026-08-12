@@ -1,0 +1,232 @@
+{
+  "slug": "wja-landscaping",
+  "name": "WJA Landscaping",
+  "city": "Collegeville",
+  "category": "Landscaping",
+  "vertical": "Home Services",
+  "attitude": "warm",
+  "url": "https://www.wjalandscaping.com/",
+  "phone": "610-831-3819",
+  "hours": "Monday-Friday 7:00am-5:00pm",
+  "description": "Landscaping in Collegeville, Gilbertsville, and Limerick Township. Patios, outdoor kitchens, lighting, plantings, hardscapes. Call 610-831-3819.",
+  "fonts": {
+    "display": "Outfit",
+    "displayFallback": "sans-serif",
+    "text": "Lato"
+  },
+  "tokens": {
+    "paper": "#F4F6F0",
+    "ink": "#212934",
+    "accent": "#2F5D3A",
+    "accent2": "#003A8B",
+    "panel": "#D5DDD0",
+    "deep": "#212934",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "18px"
+  },
+  "marquee": [
+    "Patios",
+    "Outdoor kitchens",
+    "Lighting",
+    "Hardscapes"
+  ],
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Collegeville | Landscaping",
+    "headline": "Patios, kitchens, light, and plantings",
+    "sub": "WJA Landscaping works in Collegeville, Gilbertsville, and Limerick Township. Patios, outdoor kitchens, lighting, plantings, hardscapes. Call 610-831-3819. Weekdays 7 to 5.",
+    "ctaPrimary": {
+      "label": "Call WJA",
+      "href": "tel:6108313819"
+    },
+    "ctaSecondary": {
+      "label": "Get a free estimate",
+      "href": "https://www.wjalandscaping.com/"
+    },
+    "glassFloat": {
+      "title": "Collegeville",
+      "sub": "Mon-Fri 7am-5pm"
+    },
+    "marquee": [
+      "Patios",
+      "Hardscapes",
+      "Lighting",
+      "Plantings"
+    ]
+  },
+  "offerings": {
+    "heading": "The yard as a <mark>room you can use.</mark>",
+    "items": [
+      "Backyard patios and hardscapes that hold furniture, not just a strip of pavers.",
+      "Outdoor kitchens and lighting so the space works after dinner, not only at noon.",
+      "Plantings and softscapes for Collegeville, Gilbertsville, and Limerick Township yards."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Collegeville, Gilbertsville, Limerick Township",
+      "Telephone 610-831-3819",
+      "Monday-Friday 7:00am-5:00pm",
+      "Patios, outdoor kitchens, lighting, plantings, hardscapes"
+    ]
+  },
+  "gallery": {
+    "heading": "Stone, leaf, <mark>warm light.</mark>",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Collegeville crew for the whole outdoor room",
+    "paragraphs": [
+      "WJA Landscaping is the contractor you call when the backyard needs a patio, a kitchen, light, and plants that survive this climate.",
+      "The map is Collegeville, Gilbertsville, and Limerick Township. Weekdays run 7 to 5. Call 610-831-3819 for the estimate."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a landscape job should start.",
+    "items": [
+      "Walk the yard. They design against what you already have, not a stock rendering.",
+      "Hardscape and planting get sequenced so the patio isn't waiting on a shrub order.",
+      "Lighting is part of the plan, not a leftover string of spots."
+    ]
+  },
+  "feature": {
+    "heading": "An outdoor kitchen only works if the patio does",
+    "text": "WJA builds the hardscape, the kitchen, the light, and the planting as one backyard. Collegeville weather is the constraint. The crew already knows it.",
+    "cta": {
+      "label": "See the work",
+      "href": "https://www.wjalandscaping.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Start with the <mark>outdoor room.</mark>",
+    "items": [
+      {
+        "title": "Patios",
+        "href": "https://www.wjalandscaping.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Outdoor kitchens",
+        "href": "https://www.wjalandscaping.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Hardscapes",
+        "href": "https://www.wjalandscaping.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Call for the <mark>estimate.</mark>",
+    "sub": "Collegeville, Gilbertsville, Limerick Township. Weekdays 7 to 5. Confirm a Saturday crew on the official site."
+  },
+  "closing": {
+    "heading": "WJA Landscaping",
+    "cta": {
+      "label": "Call WJA",
+      "href": "tel:6108313819"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.wjalandscaping.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6108313819"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Pavers patio with dining furniture at dusk"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Outdoor kitchen with a stone grill island"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Path lighting along a planted walkway"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Retaining wall with new shrubs"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Crew setting pavers on a sand bed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Fire pit built into a hardscape terrace"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Evening backyard with warm landscape lights"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of wet bluestone"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Finished patio off a Collegeville house"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Outdoor kitchen counter with bar stools"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Walkway and retaining wall in one shot"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Night view of a lit planting bed"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

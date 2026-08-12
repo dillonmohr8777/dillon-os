@@ -1,0 +1,220 @@
+{
+  "slug": "andorra-family-dentistry",
+  "name": "Andorra Family Dentistry",
+  "city": "Philadelphia",
+  "category": "Family Dentistry",
+  "vertical": "Health",
+  "attitude": "editorial",
+  "url": "https://www.andorradental.com/",
+  "phone": "(215) 515-5710",
+  "address": "8919 Ridge Ave., Suite 9, Philadelphia, PA 19128",
+  "description": "Family dentistry in Philadelphia with Dr. Dhaval Shah, Dr. Shilpa Emani, and Dr. Sucheta Bansal. Comfort-first care for every age.",
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Sans 3"
+  },
+  "tokens": {
+    "paper": "#F3EEE4",
+    "ink": "#1F3370",
+    "accent": "#2C4A80",
+    "accent2": "#C4A574",
+    "panel": "#D9DEE4",
+    "deep": "#1F3370",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "28px"
+  },
+  "marquee": [
+    "Smile brighter",
+    "Dentistry for all ages",
+    "Ridge Avenue",
+    "Schedule online"
+  ],
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Family dentistry",
+    "headline": "Here to help you smile brighter",
+    "sub": "Dr. Dhaval Shah, Dr. Shilpa Emani, and Dr. Sucheta Bansal serve Philadelphia from Ridge Avenue. Call today and sit with a team built around comfort.",
+    "ctaPrimary": {
+      "label": "Schedule online",
+      "href": "https://www.andorradental.com/"
+    },
+    "ctaSecondary": {
+      "label": "Call the office",
+      "href": "tel:2155155710"
+    },
+    "glassFloat": {
+      "title": "All ages",
+      "sub": "8919 Ridge Ave."
+    },
+    "marquee": [
+      "Cosmetic",
+      "Fillings",
+      "Veneers",
+      "Whitening"
+    ]
+  },
+  "offerings": {
+    "heading": "Dentistry for <mark>all ages.</mark>",
+    "items": [
+      "Cosmetic fillings, bonding, veneers, contouring, and whitening planned as one smile makeover.",
+      "Family exams and cleanings so kids, parents, and grandparents share one office.",
+      "A comfort-first chairside manner the reviews keep naming by name."
+    ]
+  },
+  "proof": {
+    "items": [
+      "8919 Ridge Ave., Suite 9, Philadelphia 19128",
+      "Telephone (215) 515-5710",
+      "Three doctors on the floor",
+      "Schedule online from the official site"
+    ]
+  },
+  "gallery": {
+    "heading": "The room, the light, the <mark>calm.</mark>",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Welcome to Andorra",
+    "paragraphs": [
+      "Welcome to Andorra Family Dentistry. The practice is built around a simple ask: sit down, get heard, and leave with a plan you can actually keep.",
+      "Cosmetic work lives next to everyday fillings. The point is not a spa pitch. It is dentistry that still feels like a neighborhood office on Ridge Avenue."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "What a visit actually feels like.",
+    "items": [
+      "You call or schedule online. The front desk is the first proof they mean comfort.",
+      "Treatment is explained in plain language before anything starts.",
+      "Follow-up is a real person, not a portal maze."
+    ]
+  },
+  "feature": {
+    "heading": "A brighter smile, planned as one piece of work",
+    "text": "Whitening, veneers, bonding, and contouring are listed as a makeover path, not a menu of upsells. You pick the finish. They sequence the visits.",
+    "cta": {
+      "label": "See services",
+      "href": "https://www.andorradental.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Ways into <mark>care.</mark>",
+    "items": [
+      {
+        "title": "Schedule",
+        "href": "https://www.andorradental.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "About the doctors",
+        "href": "https://www.andorradental.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Patient info",
+        "href": "https://www.andorradental.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit <mark>easy.</mark>",
+    "sub": "Ridge Avenue, Suite 9. Confirm hours on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Andorra Family Dentistry",
+    "cta": {
+      "label": "Schedule online",
+      "href": "https://www.andorradental.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.andorradental.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:2155155710"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Sunlit dental treatment room with an empty chair"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Sterile instrument tray in soft clinical light"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Quiet waiting room with plants and linen chairs"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Close crop of a healthy natural smile"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Family arriving at a medical plaza entrance"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Dusk exterior of a suburban professional building"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated atmosphere of a calm dental corridor"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close view of a treatment light over a chair"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Reception desk with warm wood and navy accents"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Pediatric corner with soft seating"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Window light across a clean operatory"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Evening glow through clinic windows"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true
+}
