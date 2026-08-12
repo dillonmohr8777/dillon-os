@@ -70,6 +70,12 @@ describe('Grok 4.6 field dashboard', () => {
     assert.match(index, /Grok 4\.6 Frontier Comparison/);
   });
 
+  it('markdown board is readable without HTML preview', () => {
+    assert.match(research, /Cursor mobile cannot preview HTML/);
+    assert.match(research, /\|\s*\*\*Grok 4\.6 \(high\)\*\*\s*\|\s*SpaceXAI\s*\|\s*\*\*61\*\*/);
+    assert.match(research, /\| AA Intelligence Index \| \*\*61\*\* \| 56 \|/);
+  });
+
   it('labels vendor-compiled evals and skips unconfirmed Harvey LAB', () => {
     assert.match(html, /Vendor-compiled/);
     assert.doesNotMatch(html, /Harvey LAB[\s\S]{0,80}15\.8%/);

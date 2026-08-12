@@ -18,7 +18,7 @@ in the same change.
 
 > [!tip] Visual views: [[12_Brain/Brain Map.canvas|Brain Map]] ·
 > [[12_Brain/bases/Clients.base|Clients table]] · [[Dashboard|Dashboard]] ·
-> `grok-46-dashboard/` (Grok 4.6 field board, as of 2026-08-12)
+> [[12_Brain/research/Grok 4.6 Frontier Comparison|Grok 4.6 field board]] (markdown; HTML is desktop-only)
 
 ## Entities
 
@@ -62,7 +62,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
-- [[12_Brain/research/Grok 4.6 Frontier Comparison|Grok 4.6 Frontier Comparison]] — 4.6 vs 4.5 vs the field; expires 2026-11-10. Dashboard: `grok-46-dashboard/`.
+- [[12_Brain/research/Grok 4.6 Frontier Comparison|Grok 4.6 Frontier Comparison]] — 4.6 vs 4.5 vs the field (markdown board for mobile; HTML is desktop-only). Expires 2026-11-10.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
