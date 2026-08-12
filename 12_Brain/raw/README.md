@@ -1,6 +1,6 @@
 ---
 tags: [raw, system]
-updated: 2026-07-29
+updated: 2026-08-12
 ---
 
 # 12_Brain/raw/ — ground truth (Git-safe subset)
@@ -25,4 +25,5 @@ on the operator machine / Obsidian Sync private notes.
 ## Tracked here
 
 - `2026-07-04 - obsidian-second-brain-article.md` — public blueprint article
+- `research/2026-08-12 - research - grok-4.6-benchmarks.md` — Grok 4.6 field receipts
 - `sessions/session-log.md` — non-sensitive cadence lines

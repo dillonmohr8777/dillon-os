@@ -1,0 +1,25 @@
+{
+  "asOf": "2026-08-12",
+  "expires": "2026-11-10",
+  "subject": "Grok 4.6 (high)",
+  "predecessor": "Grok 4.5 (high)",
+  "aaIndex": {
+    "grok46": 61,
+    "grok45": 56,
+    "opus5Max": 63,
+    "opus5Xhigh": 63,
+    "fable5": 62,
+    "opus5High": 61,
+    "solMax": 61
+  },
+  "sources": {
+    "launch": "https://x.ai/news/grok-4-6",
+    "card": "https://media.x.ai/v1/website/card-7f81d41b.pdf",
+    "docs": "https://docs.x.ai/developers/models",
+    "docs46": "https://docs.x.ai/developers/models/grok-4.6",
+    "aaGrok": "https://artificialanalysis.ai/models/grok-4-6",
+    "aaBoard": "https://artificialanalysis.ai/leaderboards/models",
+    "aaArticle": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
+    "cursor": "https://cursor.com/blog/grok-4-6"
+  }
+}

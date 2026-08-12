@@ -1,6 +1,6 @@
 ---
 tags: [research, index]
-updated: 2026-07-29
+updated: 2026-08-12
 ---
 
 # Research
@@ -12,7 +12,9 @@ Survivors compile into `12_Brain/concepts/` with `expires:` dates via
 
 ## Active research pages
 
-See Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
+- [[12_Brain/research/Grok 4.6 Frontier Comparison|Grok 4.6 Frontier Comparison]] — vs Grok 4.5 and the field; expires 2026-11-10. Live board: `grok-46-dashboard/`.
+
+See also Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
 
 ## Links
 

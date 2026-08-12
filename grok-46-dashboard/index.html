@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-snapshot="2026-08-12" data-aa-grok46="61" data-aa-grok45="56" data-aa-opus5-max="63" data-aa-fable5="62" data-aa-sol-max="61">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Grok 4.6 field dashboard: independent Artificial Analysis scores versus Grok 4.5 and every major lab, plus vendor-compiled coding evals. Snapshot 2026-08-12.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Grok 4.6 Field Dashboard — vs 4.5 and the frontier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --void: #070708;
+      --paper: #0e0e10;
+      --panel: #161618;
+      --line: #2a2a2c;
+      --ink: #f3efe6;
+      --muted: #b7b3a8;
+      --dim: #7c786e;
+      --grok: #d6ff3c;
+      --on-grok: #070708;
+      --loss: #ff6a3d;
+      --peer: #9aa4ff;
+      --ok: #7ee0a8;
+      --radius: 2px;
+      --border: 1px;
+      --max: 1280px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--void);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(214,255,60,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(214,255,60,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at 50% 0%, #000 20%, transparent 70%);
+      z-index: 0;
+    }
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: -40px;
+      background: var(--grok);
+      color: var(--on-grok);
+      padding: 8px 12px;
+      z-index: 20;
+    }
+    .skip:focus { top: 12px; }
+    h1, h2, h3 { font-family: Syne, sans-serif; text-wrap: balance; margin: 0; letter-spacing: -0.03em; }
+    p { text-wrap: pretty; }
+    a { color: var(--grok); }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+      outline: 2px solid var(--grok);
+      outline-offset: 3px;
+    }
+    .wrap { width: min(100% - 32px, var(--max)); margin-inline: auto; position: relative; z-index: 1; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+    .kicker {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--grok);
+    }
+    .badge {
+      display: inline-block;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: var(--border) solid currentColor;
+      padding: 0.15rem 0.45rem;
+      border-radius: var(--radius);
+    }
+    .badge-aa { color: var(--ok); }
+    .badge-vendor { color: var(--loss); }
+    .badge-caveat { color: var(--peer); }
+
+    header.top {
+      border-bottom: var(--border) solid var(--line);
+      background: color-mix(in srgb, var(--void) 88%, transparent);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .top-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 0;
+      flex-wrap: wrap;
+    }
+    nav[aria-label="Primary"] { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav[aria-label="Primary"] a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+    nav[aria-label="Primary"] a:hover { color: var(--ink); }
+
+    .hero { padding: clamp(48px, 8vw, 96px) 0 36px; }
+    .hero h1 {
+      font-size: clamp(2.6rem, 7vw, 5.6rem);
+      line-height: 0.92;
+      max-width: 18ch;
+      margin: 12px 0 20px;
+    }
+    .lede { max-width: 62ch; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.25rem); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: end;
+      margin-top: 36px;
+    }
+    .score-card {
+      background: var(--grok);
+      color: var(--on-grok);
+      padding: clamp(22px, 4vw, 36px);
+      border-radius: var(--radius);
+    }
+    .score-card .num {
+      font-family: Syne, sans-serif;
+      font-size: clamp(4.2rem, 10vw, 8rem);
+      line-height: 0.8;
+      font-weight: 800;
+    }
+    .delta-list { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 8px; }
+    .delta-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: var(--border) solid color-mix(in srgb, var(--on-grok) 20%, transparent);
+      padding-top: 8px;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.85rem;
+    }
+
+    .proof {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border: var(--border) solid var(--line);
+    }
+    .proof div {
+      padding: 18px 16px;
+      border-right: var(--border) solid var(--line);
+    }
+    .proof div:last-child { border-right: 0; }
+    .proof dt { color: var(--dim); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; font-family: "IBM Plex Mono", ui-monospace, monospace; }
+    .proof dd { margin: 6px 0 0; font-family: Syne, sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); }
+
+    section { padding: clamp(56px, 8vw, 110px) 0; }
+    section + section { border-top: var(--border) solid var(--line); }
+    .section-head { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 28px; align-items: end; }
+    .section-head h2 { font-size: clamp(2rem, 4.4vw, 3.6rem); max-width: 18ch; }
+    .section-head p { max-width: 46ch; color: var(--muted); margin: 0; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card {
+      background: var(--panel);
+      border: var(--border) solid var(--line);
+      padding: 22px 20px;
+      border-radius: var(--radius);
+    }
+    .card h3 { font-size: 1.2rem; margin-bottom: 8px; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .card .stat {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      color: var(--grok);
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    input[type="search"], select, button.chip {
+      background: var(--panel);
+      color: var(--ink);
+      border: var(--border) solid var(--line);
+      border-radius: var(--radius);
+      padding: 10px 12px;
+      font: inherit;
+    }
+    input[type="search"] { min-width: min(100%, 240px); }
+    button.chip { cursor: pointer; }
+    button.chip[aria-pressed="true"] {
+      background: var(--grok);
+      color: var(--on-grok);
+      border-color: var(--grok);
+    }
+
+    .table-wrap { overflow-x: auto; border: var(--border) solid var(--line); }
+    table { width: 100%; border-collapse: collapse; min-width: 720px; }
+    th, td { padding: 10px 12px; text-align: left; border-bottom: var(--border) solid var(--line); font-size: 0.92rem; }
+    th {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dim);
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    th[aria-sort="ascending"]::after { content: " ↑"; color: var(--grok); }
+    th[aria-sort="descending"]::after { content: " ↓"; color: var(--grok); }
+    tbody tr:hover { background: color-mix(in srgb, var(--grok) 6%, transparent); }
+    tr.me td { background: color-mix(in srgb, var(--grok) 12%, transparent); color: var(--ink); font-weight: 600; }
+    tr.prev td { background: color-mix(in srgb, var(--peer) 10%, transparent); }
+    .num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+    .bar-mini {
+      display: inline-block;
+      height: 8px;
+      width: 88px;
+      background: var(--line);
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .bar-mini > span { display: block; height: 100%; background: var(--peer); }
+    tr.me .bar-mini > span { background: var(--grok); }
+
+    .bars { display: grid; gap: 14px; }
+    .bar-row { display: grid; grid-template-columns: minmax(140px, 22%) 1fr auto; gap: 12px; align-items: center; }
+    .track { height: 18px; background: var(--panel); border: var(--border) solid var(--line); position: relative; }
+    .fill-45 { position: absolute; inset: 0 auto 0 0; background: color-mix(in srgb, var(--peer) 55%, var(--panel)); }
+    .fill-46 { position: absolute; inset: 0 auto 0 0; background: var(--grok); mix-blend-mode: normal; opacity: 0.92; }
+    .bar-val { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 0.82rem; color: var(--muted); white-space: nowrap; }
+
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .pane {
+      background: var(--paper);
+      border: var(--border) solid var(--line);
+      padding: 22px;
+    }
+    .pane h3 { margin-bottom: 14px; font-size: 1.35rem; }
+
+    .gap-list { display: grid; gap: 12px; padding: 0; margin: 0; list-style: none; }
+    .gap-list li {
+      border-left: 3px solid var(--loss);
+      padding: 10px 14px;
+      background: var(--panel);
+    }
+
+    footer {
+      border-top: var(--border) solid var(--line);
+      padding: 36px 0 56px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    footer ol { padding-left: 1.2rem; }
+    footer li { margin: 6px 0; }
+
+    .note {
+      margin-top: 16px;
+      color: var(--dim);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid, .cards, .split, .proof, .bar-row { grid-template-columns: 1fr; }
+      .proof div { border-right: 0; border-bottom: var(--border) solid var(--line); }
+      nav[aria-label="Primary"] { display: none; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 20px, var(--max)); }
+    }
+    html.no-js .js-only { display: none; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main</a>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div>
+        <div class="kicker">SpaceXAI · field snapshot</div>
+        <strong>Grok 4.6 vs the frontier</strong>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#vs-45">vs 4.5</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#evals">Evals</a>
+        <a href="#cost">Cost / speed</a>
+        <a href="#gaps">Gaps</a>
+        <a href="#sources">Sources</a>
+      </nav>
+      <span class="mono" style="color:var(--dim);font-size:0.8rem">as of 2026-08-12 · expires 2026-11-10</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <p class="kicker">Independent index first · vendor charts labeled</p>
+      <h1>Five points up. Same headline price. Still not first.</h1>
+      <p class="lede">Grok 4.6 is the upgrade over Grok 4.5: longer-running agents, harder visual/interactive work, and a real jump on independent evals. Artificial Analysis puts it on the frontier with GPT-5.6 Sol Max — and still behind Claude Opus 5.</p>
+      <div class="hero-grid">
+        <div class="score-card">
+          <div class="kicker" style="color:var(--on-grok)">AA Intelligence Index v4.1.1</div>
+          <div class="num mono">61</div>
+          <p style="margin:10px 0 0;max-width:36ch">Grok 4.6 (high). Tied with GPT-5.6 Sol (max) and Claude Opus 5 (high). Opus 5 max is 63. Grok 4.5 high was 56.</p>
+          <ul class="delta-list">
+            <li><span>vs Grok 4.5 High</span><span>+5</span></li>
+            <li><span>vs Grok 4.3</span><span>+23</span></li>
+            <li><span>vs Opus 5 Max</span><span>−2</span></li>
+            <li><span>vs Fable 5</span><span>−1</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="kicker">How to read this board</p>
+          <p class="lede" style="font-size:1rem">Green badges are Artificial Analysis runs. Orange badges are xAI launch/card figures compiled from self-reports and public leaderboards. Terminal-Bench v2.1 (AA, 88.4%) is not Terminal-Bench v3.0 (vendor, 26%).</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <dl class="proof">
+        <div><dt>AA Index</dt><dd class="mono">61</dd></div>
+        <div><dt>vs 4.5</dt><dd class="mono">+5</dd></div>
+        <div><dt>AA $/task</dt><dd class="mono">$0.84</dd></div>
+        <div><dt>Output</dt><dd class="mono">78 t/s</dd></div>
+        <div><dt>Context</dt><dd class="mono">500k</dd></div>
+      </dl>
+    </div>
+
+    <section id="vs-45" class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Benefits over Grok 4.5</p>
+          <h2>What actually moved</h2>
+        </div>
+        <p>Headline API price did not. Context did not. Intelligence, agent scores, and decode speed did. Cache hits got slightly more expensive.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <p class="stat"><span class="badge badge-aa">AA</span> Index 56 → 61</p>
+          <h3>Back on the frontier</h3>
+          <p>Five points in a month. AA: in line with GPT-5.6 Sol, behind only Anthropic. Not a rank-1 claim.</p>
+        </article>
+        <article class="card">
+          <p class="stat"><span class="badge badge-aa">AA</span> GDPval 1526 → 1753</p>
+          <h3>Knowledge-work agents</h3>
+          <p>Second on GDPval-AA v2 Elo behind Opus 5 (1849). Overlaps Fable and Qwen3.8 Max on confidence intervals.</p>
+        </article>
+        <article class="card">
+          <p class="stat"><span class="badge badge-aa">AA</span> Briefcase 1313 → 1577</p>
+          <h3>Fewer turns, Fable-tier</h3>
+          <p>~53 turns and ~0.5B input tokens vs ~103 turns and ~2.0B for Opus 5 max on AA-Briefcase.</p>
+        </article>
+        <article class="card">
+          <p class="stat"><span class="badge badge-aa">AA</span> 57 → 78 tok/s</p>
+          <h3>Faster decode, slower first token</h3>
+          <p>Median output sped up. TTFT 9.32s → 42.09s because high-reasoning traces think longer.</p>
+        </article>
+        <article class="card">
+          <p class="stat"><span class="badge badge-aa">AA</span> $0.84 / task</p>
+          <h3>Same $2 / $6, cheaper than peers</h3>
+          <p>Unchanged headline vs 4.5. Cost/task still under Sol Max ($1.23), Opus 5 max ($2.34), Fable ($3.14). Cache $0.30 → $0.50.</p>
+        </article>
+        <article class="card">
+          <p class="stat"><span class="badge badge-vendor">Vendor</span> every launch row up</p>
+          <h3>Coding evals all rose</h3>
+          <p>DeepSWE 54% → 65.9%. Terminal-Bench v3.0 15.7% → 26%. Still behind Opus/Sol on those two. Peers are vendor-compiled.</p>
+        </article>
+      </div>
+      <p class="note">Vendor-only, not scored here: longer supplemental training, 4.5-regenerated SFT, more self-testing, stronger first visual passes, RL for kernels / web / CAD. Available in Cursor, Grok Build, API, OpenRouter, Vercel, Cloudflare. Not on consumer Grok/X at launch.</p>
+    </section>
+
+    <section id="leaderboard">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Independent · Artificial Analysis</p>
+            <h2>Every major model on the board</h2>
+          </div>
+          <p>Intelligence Index v4.1.1, fetched 2026-08-12. Filter by lab. Grok 4.6 is highlighted. Asterisks are AA-preliminary.</p>
+        </div>
+        <div class="controls js-only">
+          <label class="mono" style="font-size:0.8rem;color:var(--dim)">Search
+            <input type="search" id="q" placeholder="Opus, Gemini, Kimi…" aria-controls="aa-table">
+          </label>
+          <div role="group" aria-label="Lab filter" id="labs"></div>
+        </div>
+        <div class="table-wrap">
+          <table id="aa-table">
+            <thead>
+              <tr>
+                <th data-key="name" scope="col">Model</th>
+                <th data-key="lab" scope="col">Lab</th>
+                <th data-key="index" scope="col">AA Index</th>
+                <th data-key="cost" scope="col">$/task</th>
+                <th data-key="speed" scope="col">tok/s</th>
+                <th data-key="ttft" scope="col">TTFT s</th>
+                <th data-key="ctx" scope="col">Context</th>
+              </tr>
+            </thead>
+            <tbody id="aa-body">
+              <tr class="me"><td>Grok 4.6 (high)</td><td>SpaceXAI</td><td class="num">61</td><td class="num">$0.84</td><td class="num">78</td><td class="num">42.09</td><td class="num">500k</td></tr>
+              <tr class="prev"><td>Grok 4.5 (high)</td><td>SpaceXAI</td><td class="num">56</td><td class="num">$0.36</td><td class="num">57</td><td class="num">9.32</td><td class="num">500k</td></tr>
+              <tr><td>Claude Opus 5 (max)</td><td>Anthropic</td><td class="num">63</td><td class="num">$2.34</td><td class="num">55</td><td class="num">52.35</td><td class="num">1M</td></tr>
+              <tr><td>GPT-5.6 Sol (max)</td><td>OpenAI</td><td class="num">61</td><td class="num">$1.23</td><td class="num">62</td><td class="num">153.87</td><td class="num">1M</td></tr>
+              <tr><td>Kimi K3 (max)</td><td>Kimi</td><td class="num">60</td><td class="num">$0.84</td><td class="num">41</td><td class="num">2.84</td><td class="num">1.05M</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">AA Grok page says #6 / 183; leaderboard FAQ says 144 ranked. This table does not print a single rank. Open-weights lead: Kimi K3 (60).</p>
+      </div>
+    </section>
+
+    <section id="evals" class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Two ledgers, not one</p>
+          <h2>Agentic wins, coding caveats</h2>
+        </div>
+        <p>Left: AA-run. Right: xAI card/launch, peers taken from other labs’ cards and public boards.</p>
+      </div>
+      <div class="split">
+        <div class="pane">
+          <p class="badge badge-aa">Independent AA</p>
+          <h3>Where 4.6 is actually strong</h3>
+          <div class="bars" style="margin-top:18px">
+            <div class="bar-row">
+              <span>GDPval-AA Elo</span>
+              <div class="track" aria-hidden="true"><span class="fill-46" style="width:94.8%"></span></div>
+              <span class="bar-val">1753 · Opus 1849</span>
+            </div>
+            <div class="bar-row">
+              <span>AA-Briefcase Elo</span>
+              <div class="track" aria-hidden="true"><span class="fill-46" style="width:92.0%"></span></div>
+              <span class="bar-val">1577 · Opus 1715</span>
+            </div>
+            <div class="bar-row">
+              <span>τ³-Banking</span>
+              <div class="track" aria-hidden="true"><span class="fill-46" style="width:50.7%"></span></div>
+              <span class="bar-val">50.7% · Qwen 51.3%</span>
+            </div>
+            <div class="bar-row">
+              <span>Terminal-Bench v2.1</span>
+              <div class="track" aria-hidden="true"><span class="fill-46" style="width:88.4%"></span></div>
+              <span class="bar-val">88.4% · with the leaders</span>
+            </div>
+          </div>
+        </div>
+        <div class="pane">
+          <p class="badge badge-vendor">Vendor-compiled</p>
+          <h3>4.5 → 4.6 on the launch table</h3>
+          <div class="bars" style="margin-top:18px">
+            <div class="bar-row">
+              <span>CursorBench 3.2</span>
+              <div class="track" aria-hidden="true"><span class="fill-45" style="width:66.7%"></span><span class="fill-46" style="width:69.9%;opacity:0.85"></span></div>
+              <span class="bar-val">66.7 → 69.9 · Fable 70.5</span>
+            </div>
+            <div class="bar-row">
+              <span>DeepSWE v1.1</span>
+              <div class="track" aria-hidden="true"><span class="fill-45" style="width:54%"></span><span class="fill-46" style="width:65.9%;opacity:0.85"></span></div>
+              <span class="bar-val">54 → 65.9 · Opus 74 / Sol 73</span>
+            </div>
+            <div class="bar-row">
+              <span>FrontierCode Ext.</span>
+              <div class="track" aria-hidden="true"><span class="fill-45" style="width:56.6%"></span><span class="fill-46" style="width:61.3%;opacity:0.85"></span></div>
+              <span class="bar-val">56.6 → 61.3 · Fable 64.9</span>
+            </div>
+            <div class="bar-row">
+              <span>APEX-Agents</span>
+              <div class="track" aria-hidden="true"><span class="fill-45" style="width:47.1%"></span><span class="fill-46" style="width:57.5%;opacity:0.85"></span></div>
+              <span class="bar-val">47.1 → 57.5 · Opus 60.6</span>
+            </div>
+            <div class="bar-row">
+              <span>Terminal-Bench v3.0</span>
+              <div class="track" aria-hidden="true"><span class="fill-45" style="width:15.7%"></span><span class="fill-46" style="width:26%;opacity:0.85"></span></div>
+              <span class="bar-val">15.7 → 26 · Opus 43.5 / Sol 34.6</span>
+            </div>
+            <div class="bar-row">
+              <span>SWE-Marathon</span>
+              <div class="track" aria-hidden="true"><span class="fill-45" style="width:29.4%"></span><span class="fill-46" style="width:31.9%;opacity:0.85"></span></div>
+              <span class="bar-val">29.4 → 31.9 · Opus 50</span>
+            </div>
+          </div>
+          <p class="note">FrontierCode Fable is 64.9% on the model card. The launch table printed 63.6% (Opus 5’s number). Card wins. Harvey LAB is omitted — vendor-only, not independently confirmed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cost" class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Price · speed · window</p>
+          <h2>The buyer’s row</h2>
+        </div>
+        <p>Official Grok 4.6: $2 in / $0.50 cached / $6 out per 1M below 200k prompt; doubles for the whole request at ≥200k. Fast variant is 2× per the launch post.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Model</th>
+              <th scope="col">AA Index</th>
+              <th scope="col">AA $/task</th>
+              <th scope="col">tok/s</th>
+              <th scope="col">TTFT</th>
+              <th scope="col">Context</th>
+              <th scope="col">API in/out (1M)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="me">
+              <td>Grok 4.6 (high)</td>
+              <td class="num">61</td>
+              <td class="num">$0.84</td>
+              <td class="num">78</td>
+              <td class="num">42.09s</td>
+              <td class="num">500k</td>
+              <td class="num">$2 / $6</td>
+            </tr>
+            <tr class="prev">
+              <td>Grok 4.5 (high)</td>
+              <td class="num">56</td>
+              <td class="num">$0.36</td>
+              <td class="num">57</td>
+              <td class="num">9.32s</td>
+              <td class="num">500k</td>
+              <td class="num">$2 / $6</td>
+            </tr>
+            <tr>
+              <td>Claude Opus 5 (max)</td>
+              <td class="num">63</td>
+              <td class="num">$2.34</td>
+              <td class="num">55</td>
+              <td class="num">52.35s</td>
+              <td class="num">1M</td>
+              <td class="num">$5 / $25</td>
+            </tr>
+            <tr>
+              <td>Claude Fable 5</td>
+              <td class="num">62</td>
+              <td class="num">$3.14</td>
+              <td class="num">63</td>
+              <td class="num">99.62s</td>
+              <td class="num">1M</td>
+              <td class="num">$10 / $50</td>
+            </tr>
+            <tr>
+              <td>GPT-5.6 Sol (max)</td>
+              <td class="num">61</td>
+              <td class="num">$1.23</td>
+              <td class="num">62</td>
+              <td class="num">153.87s</td>
+              <td class="num">1M</td>
+              <td class="num">$5 / $30</td>
+            </tr>
+            <tr>
+              <td>Kimi K3 (max)</td>
+              <td class="num">60</td>
+              <td class="num">$0.84</td>
+              <td class="num">41</td>
+              <td class="num">2.84s</td>
+              <td class="num">1.05M</td>
+              <td class="num">open weights</td>
+            </tr>
+            <tr>
+              <td>Gemini 3.6 Flash</td>
+              <td class="num">52</td>
+              <td class="num">$0.56</td>
+              <td class="num">234</td>
+              <td class="num">17.76s</td>
+              <td class="num">1M</td>
+              <td class="num">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">API in/out for Anthropic/OpenAI from AA’s 2026-08-12 Grok analysis ($5/$25 Opus, $5/$30 Sol) plus the xAI models table. Fable $10/$50 is from secondary pricing roundups — treat as directional. AA cost/task is the number that already includes token use.</p>
+    </section>
+
+    <section id="gaps" class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Do not overclaim</p>
+          <h2>Where 4.6 still loses</h2>
+        </div>
+        <p>A dashboard that only shows wins is a press release. These are the rows that should change how you route work.</p>
+      </div>
+      <ul class="gap-list">
+        <li><strong>Not #1.</strong> Opus 5 max/xhigh 63, Fable 62, then the 61-tie. “World’s third-best” is a collapsed headline — don’t use it.</li>
+        <li><strong>Long-horizon repos.</strong> SWE-Marathon 31.9% vs Opus 5 50%. Terminal-Bench v3.0 26% vs 43.5% / 34.6%.</li>
+        <li><strong>DeepSWE v1.1</strong> 65.9% vs Opus 74% and Sol 73% (vendor-compiled peers).</li>
+        <li><strong>500k context</strong> vs 1M on Opus, Sol, Gemini, Kimi. Same window as 4.5 — this was not a context release.</li>
+        <li><strong>Cache is dearer than 4.5</strong> ($0.50 vs $0.30). Cost per AA task rose $0.36 → $0.84 because the smarter traces spend more.</li>
+        <li><strong>Consumer Grok/X later.</strong> Ships in Cursor, Grok Build, API, and partners today.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer id="sources">
+    <div class="wrap">
+      <p class="kicker">Sources · 2026-08-12</p>
+      <h2 style="font-size:1.8rem;margin:8px 0 16px">Receipts, not vibes</h2>
+      <ol>
+        <li><a href="https://x.ai/news/grok-4-6">Introducing Grok 4.6</a> — SpaceXAI launch, Aug 12, 2026</li>
+        <li><a href="https://media.x.ai/v1/website/card-7f81d41b.pdf">Grok 4.6 model card</a> — PDF, rev 2026-08-12</li>
+        <li><a href="https://docs.x.ai/developers/models">xAI model pricing</a> and <a href="https://docs.x.ai/developers/models/grok-4.6">Grok 4.6 docs</a></li>
+        <li><a href="https://artificialanalysis.ai/leaderboards/models">AA LLM leaderboard</a> · <a href="https://artificialanalysis.ai/models/grok-4-6">Grok 4.6 model page</a></li>
+        <li><a href="https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis">AA analysis: Grok 4.6 returns to the frontier</a></li>
+        <li><a href="https://cursor.com/blog/grok-4-6">Cursor: Introducing Grok 4.6</a></li>
+      </ol>
+      <p>Compiled vault page: <span class="mono">12_Brain/research/Grok 4.6 Frontier Comparison.md</span>. Raw receipts: <span class="mono">12_Brain/raw/research/2026-08-12 - research - grok-4.6-benchmarks.md</span>. This GitHub repo is public; no account IDs live here.</p>
+      <nav aria-label="Footer">
+        <a href="#main">Top</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.documentElement.classList.remove("no-js");
+    document.documentElement.classList.add("js");
+
+    const MODELS = [
+      { name: "Claude Opus 5 (max)", lab: "Anthropic", index: 63, cost: 2.34, speed: 55, ttft: 52.35, ctx: "1M", me: false },
+      { name: "Claude Opus 5 (xhigh)", lab: "Anthropic", index: 63, cost: 1.80, speed: 54, ttft: 23.83, ctx: "1M" },
+      { name: "Claude Fable 5 (with fallback)", lab: "Anthropic", index: 62, cost: 3.14, speed: 63, ttft: 99.62, ctx: "1M" },
+      { name: "Claude Opus 5 (high)", lab: "Anthropic", index: 61, cost: 1.23, speed: 54, ttft: 12.57, ctx: "1M" },
+      { name: "GPT-5.6 Sol (max)", lab: "OpenAI", index: 61, cost: 1.23, speed: 62, ttft: 153.87, ctx: "1M" },
+      { name: "Grok 4.6 (high)", lab: "SpaceXAI", index: 61, cost: 0.84, speed: 78, ttft: 42.09, ctx: "500k", me: true },
+      { name: "Kimi K3 (max)", lab: "Kimi", index: 60, cost: 0.84, speed: 41, ttft: 2.84, ctx: "1.05M" },
+      { name: "GPT-5.6 Sol (xhigh)", lab: "OpenAI", index: 59, cost: 0.81, speed: 61, ttft: 43.35, ctx: "1M" },
+      { name: "Claude Opus 5 (medium)", lab: "Anthropic", index: 59, cost: 0.72, speed: 54, ttft: 6.84, ctx: "1M" },
+      { name: "Qwen3.8 Max", lab: "Alibaba", index: 58, cost: 1.13, speed: 47, ttft: 2.75, ctx: "1M" },
+      { name: "GPT-5.6 Sol (high)", lab: "OpenAI", index: 57, cost: 0.55, speed: 56, ttft: 15.73, ctx: "1M" },
+      { name: "Muse Spark 1.2 (xhigh)", lab: "Meta", index: 57, cost: 0.40, speed: null, ttft: null, ctx: "1.05M" },
+      { name: "GPT-5.6 Terra (max)", lab: "OpenAI", index: 57, cost: 0.51, speed: 119, ttft: 164.01, ctx: "1M" },
+      { name: "Grok 4.5 (high)", lab: "SpaceXAI", index: 56, cost: 0.36, speed: 57, ttft: 9.32, ctx: "500k", prev: true },
+      { name: "GPT-5.6 Sol (medium)", lab: "OpenAI", index: 56, cost: 0.37, speed: 57, ttft: 5.75, ctx: "1M" },
+      { name: "Claude Sonnet 5 (max)", lab: "Anthropic", index: 55, cost: 1.72, speed: 73, ttft: 188.91, ctx: "1M" },
+      { name: "GPT-5.6 Terra (xhigh)", lab: "OpenAI", index: 53, cost: 0.31, speed: 108, ttft: 29.77, ctx: "1M" },
+      { name: "GLM-5.2 (max)", lab: "Z AI", index: 53, cost: 0.31, speed: 124, ttft: 1.51, ctx: "1M" },
+      { name: "Claude Opus 5 (low)", lab: "Anthropic", index: 52, cost: 0.43, speed: 53, ttft: 2.94, ctx: "1M" },
+      { name: "GPT-5.6 Luna (max)", lab: "OpenAI", index: 52, cost: 0.05, speed: 153, ttft: 132.71, ctx: "1M" },
+      { name: "DeepSeek V4 Flash 0731 (max)", lab: "DeepSeek", index: 52, cost: 0.03, speed: 125, ttft: 1.43, ctx: "1M" },
+      { name: "Gemini 3.6 Flash", lab: "Google", index: 52, cost: 0.56, speed: 234, ttft: 17.76, ctx: "1M" },
+      { name: "GPT-5.6 Sol (low)", lab: "OpenAI", index: 51, cost: 0.23, speed: 56, ttft: 3.28, ctx: "1M" },
+      { name: "GPT-5.6 Terra (high)", lab: "OpenAI", index: 50, cost: 0.22, speed: 100, ttft: 3.54, ctx: "1M" },
+      { name: "GPT-5.6 Luna (xhigh)", lab: "OpenAI", index: 50, cost: 0.03, speed: 153, ttft: 50.93, ctx: "1M" },
+      { name: "Kimi K3 (low)", lab: "Kimi", index: 48, cost: 0.24, speed: 37, ttft: 3.10, ctx: "1.05M" },
+      { name: "Gemini 3.1 Pro Preview", lab: "Google", index: 48, cost: 0.33, speed: 115, ttft: 32.87, ctx: "1M" },
+      { name: "GPT-5.6 Luna (high)", lab: "OpenAI", index: 47, cost: 0.02, speed: 153, ttft: 14.68, ctx: "1M" },
+      { name: "GPT-5.6 Terra (medium)", lab: "OpenAI", index: 47, cost: 0.12, speed: 101, ttft: 1.50, ctx: "1M" },
+      { name: "Gemini 3.5 Flash (medium)", lab: "Google", index: 47, cost: null, speed: 167, ttft: 17.53, ctx: "1M", star: true },
+      { name: "GPT-5.3 Codex (xhigh)", lab: "OpenAI", index: 46, cost: null, speed: 110, ttft: 66.96, ctx: "400k", star: true },
+      { name: "MiniMax-M3", lab: "MiniMax", index: 45, cost: 0.14, speed: 83, ttft: 1.57, ctx: "1M" },
+      { name: "DeepSeek V4 Pro (max)", lab: "DeepSeek", index: 45, cost: 0.05, speed: 76, ttft: 1.68, ctx: "1M" },
+      { name: "DeepSeek V4 Pro (high)", lab: "DeepSeek", index: 44, cost: 0.04, speed: 68, ttft: 1.78, ctx: "1M" },
+      { name: "Kimi K2.7 Code", lab: "Kimi", index: 43, cost: 0.22, speed: 39, ttft: 2.84, ctx: "256k" },
+      { name: "MiMo-V2.5-Pro", lab: "Xiaomi", index: 43, cost: 0.03, speed: 47, ttft: 3.42, ctx: "1M" },
+      { name: "Claude Sonnet 5 (non-reasoning)", lab: "Anthropic", index: 43, cost: 0.42, speed: 63, ttft: 1.85, ctx: "1M" },
+      { name: "Inkling", lab: "Thinking Machines", index: 42, cost: 0.34, speed: 74, ttft: 1.90, ctx: "1M" },
+      { name: "Hy3", lab: "Tencent", index: 42, cost: 0.04, speed: 63, ttft: 2.84, ctx: "256k" },
+      { name: "GPT-5.6 Sol (non-reasoning)", lab: "OpenAI", index: 42, cost: 0.24, speed: 59, ttft: 1.33, ctx: "1M" },
+      { name: "Solar Pro 4", lab: "Upstage", index: 42, cost: null, speed: 59, ttft: 2.16, ctx: "512k" },
+      { name: "GPT-5.6 Terra (low)", lab: "OpenAI", index: 41, cost: 0.09, speed: 96, ttft: 1.68, ctx: "1M" },
+      { name: "Inkling Small", lab: "Thinking Machines", index: 41, cost: 0.07, speed: 128, ttft: 1.62, ctx: "1M" },
+      { name: "Qwen3.7 Plus", lab: "Alibaba", index: 39, cost: 0.24, speed: 56, ttft: 2.15, ctx: "1M" },
+      { name: "GPT-5.6 Luna (medium)", lab: "OpenAI", index: 39, cost: 0.01, speed: 141, ttft: 2.35, ctx: "1M" },
+      { name: "Nemotron 3 Ultra", lab: "NVIDIA", index: 38, cost: 0.38, speed: 118, ttft: 2.51, ctx: "262k" },
+      { name: "MiMo-V2.5", lab: "Xiaomi", index: 38, cost: 0.01, speed: 80, ttft: 2.77, ctx: "1M" },
+      { name: "Ling 3.0 Flash", lab: "InclusionAI", index: 38, cost: 0.04, speed: 402, ttft: 2.02, ctx: "262k" },
+      { name: "Qwen3.6 27B", lab: "Alibaba", index: 38, cost: 0.29, speed: 55, ttft: 3.80, ctx: "262k" },
+      { name: "Gemini 3.5 Flash-Lite", lab: "Google", index: 37, cost: 0.10, speed: 365, ttft: 10.22, ctx: "1M" },
+      { name: "Grok 4.3 (medium)", lab: "SpaceXAI", index: 37, cost: null, speed: 119, ttft: 13.65, ctx: "1M", star: true },
+      { name: "Grok 4.3 (low)", lab: "SpaceXAI", index: 36, cost: null, speed: 113, ttft: 6.30, ctx: "1M", star: true },
+      { name: "Muse Glimmer (high)", lab: "Meta", index: 35, cost: 0.07, speed: 101, ttft: 0.83, ctx: "131k" },
+      { name: "GLM-5.2", lab: "Z AI", index: 35, cost: null, speed: 119, ttft: 2.03, ctx: "1M" },
+      { name: "Qwen3.5 397B A17B", lab: "Alibaba", index: 34, cost: 0.36, speed: 81, ttft: 2.16, ctx: "262k" },
+      { name: "GPT-5.6 Luna (low)", lab: "OpenAI", index: 34, cost: 0.01, speed: 139, ttft: 1.70, ctx: "1M" },
+      { name: "Qwen3.5 122B A10B", lab: "Alibaba", index: 33, cost: 0.25, speed: 132, ttft: 2.34, ctx: "262k" },
+      { name: "DeepSeek V4 Pro", lab: "DeepSeek", index: 32, cost: null, speed: 68, ttft: 1.73, ctx: "1M", star: true },
+      { name: "Mistral Medium 3.5", lab: "Mistral", index: 30, cost: 0.46, speed: 119, ttft: 2.49, ctx: "256k" },
+      { name: "Claude 4.5 Haiku", lab: "Anthropic", index: 30, cost: 0.22, speed: 96, ttft: 9.68, ctx: "200k" },
+      { name: "Gemma 4 31B", lab: "Google", index: 30, cost: 0.00, speed: 35, ttft: 1.14, ctx: "256k" },
+      { name: "DeepSeek V4 Flash", lab: "DeepSeek", index: 29, cost: null, speed: null, ttft: null, ctx: "1M", star: true },
+      { name: "GPT-5.5 Instant (June 2026)", lab: "OpenAI", index: 29, cost: 0.54, speed: 142, ttft: 1.21, ctx: "400k" },
+      { name: "Amazon Nova 2.0 Pro Preview (medium)", lab: "Amazon", index: 22, cost: null, speed: 117, ttft: 16.18, ctx: "256k", star: true },
+      { name: "Command A+", lab: "Cohere", index: 23, cost: 0.00, speed: 184, ttft: 0.40, ctx: "192k" },
+      { name: "gpt-oss-120b (high)", lab: "OpenAI", index: 24, cost: 0.07, speed: 164, ttft: 0.92, ctx: "131k" },
+      { name: "Mistral Large 3", lab: "Mistral", index: 16, cost: 0.08, speed: 40, ttft: 1.33, ctx: "256k" },
+      { name: "Llama 4 Maverick", lab: "Meta", index: 14, cost: 0.04, speed: 131, ttft: 1.03, ctx: "1M" },
+      { name: "Llama 4 Scout", lab: "Meta", index: 10, cost: 0.01, speed: 122, ttft: 0.84, ctx: "10M" }
+    ];
+
+    const labs = ["All", ...Array.from(new Set(MODELS.map((m) => m.lab)))];
+    let lab = "All";
+    let query = "";
+    let sortKey = "index";
+    let sortDir = "desc";
+
+    const labBox = document.getElementById("labs");
+    labs.forEach((name) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "chip";
+      b.textContent = name;
+      b.setAttribute("aria-pressed", name === "All" ? "true" : "false");
+      b.addEventListener("click", () => {
+        lab = name;
+        labBox.querySelectorAll("button").forEach((el) => el.setAttribute("aria-pressed", el === b ? "true" : "false"));
+        render();
+      });
+      labBox.appendChild(b);
+    });
+
+    document.getElementById("q").addEventListener("input", (e) => {
+      query = e.target.value.trim().toLowerCase();
+      render();
+    });
+
+    document.querySelectorAll("#aa-table thead th").forEach((th) => {
+      th.addEventListener("click", () => {
+        const key = th.dataset.key;
+        if (sortKey === key) sortDir = sortDir === "desc" ? "asc" : "desc";
+        else { sortKey = key; sortDir = key === "name" || key === "lab" ? "asc" : "desc"; }
+        document.querySelectorAll("#aa-table thead th").forEach((el) => el.removeAttribute("aria-sort"));
+        th.setAttribute("aria-sort", sortDir === "asc" ? "ascending" : "descending");
+        render();
+      });
+    });
+    document.querySelector('#aa-table th[data-key="index"]').setAttribute("aria-sort", "descending");
+
+    function fmt(n, prefix) {
+      if (n === null || n === undefined) return "—";
+      if (prefix === "$") return "$" + n.toFixed(n < 1 ? 2 : 2);
+      if (Number.isInteger(n)) return String(n);
+      return String(n);
+    }
+
+    function render() {
+      const rows = MODELS
+        .filter((m) => lab === "All" || m.lab === lab)
+        .filter((m) => !query || (m.name + " " + m.lab).toLowerCase().includes(query))
+        .sort((a, b) => {
+          const av = a[sortKey];
+          const bv = b[sortKey];
+          if (av === null || av === undefined) return 1;
+          if (bv === null || bv === undefined) return -1;
+          if (typeof av === "string") return sortDir === "asc" ? av.localeCompare(bv) : bv.localeCompare(av);
+          return sortDir === "asc" ? av - bv : bv - av;
+        });
+      const body = document.getElementById("aa-body");
+      body.replaceChildren();
+      rows.forEach((m) => {
+        const tr = document.createElement("tr");
+        if (m.me) tr.className = "me";
+        if (m.prev) tr.className = "prev";
+        const width = Math.max(4, (m.index / 63) * 100);
+        tr.innerHTML =
+          "<td>" + m.name + (m.star ? " *" : "") + "</td>" +
+          "<td>" + m.lab + "</td>" +
+          "<td class='num'><span class='bar-mini' aria-hidden='true'><span style='width:" + width + "%'></span></span>" + m.index + "</td>" +
+          "<td class='num'>" + fmt(m.cost, "$") + "</td>" +
+          "<td class='num'>" + (m.speed === null ? "—" : m.speed) + "</td>" +
+          "<td class='num'>" + (m.ttft === null ? "—" : m.ttft) + "</td>" +
+          "<td class='num'>" + m.ctx + "</td>";
+        body.appendChild(tr);
+      });
+    }
+    render();
+  </script>
+</body>
+</html>

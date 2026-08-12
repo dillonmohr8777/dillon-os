@@ -34,3 +34,4 @@ tags: [dashboard, moc]
 - Private / Sync-only notes: [[12_Brain/private/README|12_Brain/private/]] (not in Git — repo is public)
 - Projects · Decisions · Research · Memory · Protocols under `12_Brain/`
 - HUD: run `node _os/server.js` → http://127.0.0.1:4242
+- Grok 4.6 field dashboard: `grok-46-dashboard/index.html` (snapshot 2026-08-12) · [[12_Brain/research/Grok 4.6 Frontier Comparison|compiled page]]

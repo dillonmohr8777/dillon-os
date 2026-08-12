@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-31
+updated: 2026-08-12
 ---
 
 # INDEX — the front door
@@ -17,7 +17,8 @@ in the same change.
 > [[12_Brain/private/README|12_Brain/private/]] (gitignored).
 
 > [!tip] Visual views: [[12_Brain/Brain Map.canvas|Brain Map]] ·
-> [[12_Brain/bases/Clients.base|Clients table]] · [[Dashboard|Dashboard]]
+> [[12_Brain/bases/Clients.base|Clients table]] · [[Dashboard|Dashboard]] ·
+> `grok-46-dashboard/` (Grok 4.6 field board, as of 2026-08-12)
 
 ## Entities
 
@@ -51,6 +52,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Raw captures (Git-safe)
 
 - [[12_Brain/raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
+- [[12_Brain/raw/research/2026-08-12 - research - grok-4.6-benchmarks|2026-08-12 grok-4.6-benchmarks]] — receipts for the Grok 4.6 field dashboard.
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
@@ -60,6 +62,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
+- [[12_Brain/research/Grok 4.6 Frontier Comparison|Grok 4.6 Frontier Comparison]] — 4.6 vs 4.5 vs the field; expires 2026-11-10. Dashboard: `grok-46-dashboard/`.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
