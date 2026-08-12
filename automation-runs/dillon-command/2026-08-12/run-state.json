@@ -1,0 +1,59 @@
+{
+  "workflow": "dillon-command",
+  "date": "2026-08-12",
+  "started_at": "2026-08-12T13:19:00.277Z",
+  "status": "ok",
+  "dry_run": false,
+  "signals": {
+    "date": "2026-08-12",
+    "inbox_unprocessed": 5,
+    "slack_new_requests": 4,
+    "slack_total_filed": 4,
+    "dashboard_open_tasks": 3,
+    "clients_moving_48h": 0,
+    "clients_stalled": 0,
+    "briefs_present": {
+      "am_report": false,
+      "slack_intake": false,
+      "inbox_brief": false,
+      "pulse": true
+    },
+    "latest_briefs": [
+      "frontmatter-report.md",
+      "site-health-report.md",
+      "pulse-today.md",
+      "radar-2026-08-06.md",
+      "radar-2026-08-07.md"
+    ]
+  },
+  "cli_results": [
+    {
+      "lane": "clients",
+      "command": "node _os/automation/bin/frontmatter-validate.js",
+      "status": "ok",
+      "code": 0
+    },
+    {
+      "lane": "intelligence",
+      "command": "node _os/automation/bin/queue-status.js",
+      "status": "ok",
+      "code": 0
+    },
+    {
+      "lane": "websites",
+      "command": "node _os/automation/bin/site-health.js --dry-run",
+      "status": "ok",
+      "code": 0
+    }
+  ],
+  "lanes_active": [
+    "comms",
+    "clients",
+    "intelligence",
+    "websites",
+    "outreach",
+    "ads",
+    "reporting",
+    "command"
+  ]
+}

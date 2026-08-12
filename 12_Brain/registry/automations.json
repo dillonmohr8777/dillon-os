@@ -1,9 +1,39 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-12",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
+    {
+      "id": "dillon-command",
+      "name": "Dillon Command Center (umbrella daily workflow)",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "daily weekdays 06:45 ET",
+      "command": "node _os/automation/bin/dillon-command.js --agent-mode",
+      "inputs": [
+        "Dashboard.md",
+        "00_Inbox/",
+        "01_Clients/",
+        "Daily-Briefs/",
+        "12_Brain/registry/automations.json",
+        "11_Agents/"
+      ],
+      "outputs": [
+        "automation-runs/dillon-command/*/approval-board.md",
+        "automation-runs/dillon-command/*/agent-manifest.json",
+        "Daily-Briefs/am-report-*.md",
+        "Daily-Briefs/pulse-today.md",
+        "12_Brain/state/dillon-command.json"
+      ],
+      "external_actions": false,
+      "notes": "One commander, parallel scouts (comms/clients/intel/websites/outreach/ads/reporting), one approval board. Supersedes separate morning-loop crons and duplicate daily-orchestrator PRs. Skill: /dillon-command. Contract: 11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md.",
+      "status": "implemented",
+      "supersedes": [
+        "morning-loop-cron-only",
+        "duplicate-daily-orchestrator-prs"
+      ]
+    },
     {
       "id": "frontmatter-validate",
       "name": "Client frontmatter validation",

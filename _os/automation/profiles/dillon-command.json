@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "id": "dillon-command",
+  "name": "Dillon Command Center",
+  "description": "One umbrella daily workflow. Parallel lane scouts, one approval board, one push.",
+  "contract": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "max_parallel_lanes": 8,
+  "max_agent_depth": 3,
+  "max_agents_per_run": 60,
+  "lanes": [
+    {
+      "id": "comms",
+      "name": "Comms intake",
+      "codex_lane": "B",
+      "tier": 0,
+      "parallel": true,
+      "agent": "comms-scout",
+      "skills": ["slack-intake", "inbox-brief"],
+      "requires_mcp": ["slack"],
+      "outputs": [
+        "Daily-Briefs/slack-intake-*.md",
+        "Daily-Briefs/inbox-brief-*.md",
+        "00_Inbox/slack/"
+      ],
+      "notes": "Gmail + Slack read-only. Drafts stay in vault; sends are Tier 2."
+    },
+    {
+      "id": "clients",
+      "name": "Client pulse",
+      "codex_lane": "F",
+      "tier": 0,
+      "parallel": true,
+      "agent": "client-scout",
+      "skills": ["client-pulse"],
+      "cli": ["node _os/automation/bin/frontmatter-validate.js"],
+      "outputs": ["Daily-Briefs/pulse-today.md", "Daily-Briefs/frontmatter-report.md"]
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence bridge",
+      "codex_lane": "H",
+      "tier": 0,
+      "parallel": true,
+      "agent": "intel-scout",
+      "skills": ["research-sweep"],
+      "cli": ["node _os/automation/bin/queue-status.js"],
+      "registry_ids": ["grok-intelligence-ingest", "xai-daily-search", "experiment-queue"],
+      "outputs": ["12_Brain/06_Research/", "12_Brain/state/grok-intelligence-ingest.json"]
+    },
+    {
+      "id": "websites",
+      "name": "Website health",
+      "codex_lane": "D",
+      "tier": 0,
+      "parallel": true,
+      "agent": "web-scout",
+      "skills": ["site-grade", "ux-audit"],
+      "cli": ["node _os/automation/bin/site-health.js --dry-run"],
+      "registry_ids": ["site-health-sentinel", "aeo-trust-gate"],
+      "outputs": ["Daily-Briefs/site-health-report.md"]
+    },
+    {
+      "id": "outreach",
+      "name": "Outreach queue",
+      "codex_lane": "Mac pipeline",
+      "tier": 0,
+      "parallel": true,
+      "agent": "outreach-scout",
+      "skills": ["site-factory", "site-batch"],
+      "registry_ids": ["discover-qualify", "indeed-hiring-adapter"],
+      "outputs": ["12_Brain/queue/qualify-*.jsonl", "08_Prospects/"]
+    },
+    {
+      "id": "ads",
+      "name": "Paid media",
+      "codex_lane": "C",
+      "tier": 0,
+      "parallel": true,
+      "agent": "ads-scout",
+      "vault_agent": "11_Agents/Google Ads Agent.md",
+      "skills": ["metrics-pull"],
+      "notes": "Analysis and drafts only. Live account writes batch under one Tier-1 approval."
+    },
+    {
+      "id": "reporting",
+      "name": "Reporting delivery",
+      "codex_lane": "F",
+      "tier": 0,
+      "parallel": true,
+      "agent": "report-scout",
+      "vault_agent": "11_Agents/Reporting Agent.md",
+      "skills": ["client-report"],
+      "outputs": ["Daily-Briefs/reports/"]
+    },
+    {
+      "id": "command",
+      "name": "Command synthesis",
+      "codex_lane": "A",
+      "tier": 0,
+      "parallel": false,
+      "agent": "commander",
+      "skills": ["am-report", "plan-today"],
+      "depends_on": ["comms", "clients", "intelligence", "websites", "outreach", "ads", "reporting"],
+      "outputs": [
+        "Daily-Briefs/am-report-*.md",
+        "Daily-Briefs/plan-*.md",
+        "automation-runs/dillon-command/*/approval-board.md"
+      ]
+    }
+  ],
+  "supersedes": [
+    "handoffs/Morning Loop Scheduled Agent Setup.md",
+    "separate cron per lane",
+    "duplicate daily-orchestrator PRs"
+  ],
+  "tier_rules": "12_Brain/protocols/approval-tiers.md"
+}

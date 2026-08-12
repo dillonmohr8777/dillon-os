@@ -1,10 +1,18 @@
 ---
 tags: [handoff, automation, slack]
+updated: 2026-08-12
+superseded_by: ".claude/skills/dillon-command/SKILL.md"
 ---
 
 # Morning Loop: Scheduled Agent Setup
 
-This wires the daily loop: every morning a cloud agent reads Slack, files boss requests into the vault, and writes the morning brief. Dillon does this once; it runs forever after.
+> **Superseded.** Use the unified **Dillon Command Center** (`/dillon-command`) instead of
+> scheduling slack-intake, am-report, and client-pulse as three separate steps. This handoff
+> remains as setup reference for the single cron prompt below.
+
+This wires the daily loop: every morning a cloud agent runs one umbrella workflow with
+parallel lane scouts, then writes a single approval board + morning brief. Dillon does
+this once; it runs forever after.
 
 ## One-time setup (Dillon, ~3 minutes)
 
@@ -15,26 +23,29 @@ This wires the daily loop: every morning a cloud agent reads Slack, files boss r
 ## The prompt to paste
 
 ```
-Read AGENTS.md at the repo root first. Then run the morning loop:
+Read AGENTS.md and .claude/skills/dillon-command/SKILL.md at the repo root. Run the
+unified Dillon Command Center for today:
 
-1. Follow .claude/skills/slack-intake/SKILL.md exactly: scan the priority
-   Slack channels for the last 24h, classify requests, and file task notes
-   into 00_Inbox/slack/. Read and draft only, never post to Slack.
-2. Follow .claude/skills/am-report/SKILL.md to write today's briefing to
-   Daily-Briefs/ and update the ## Today section of Dashboard.md.
-3. Follow .claude/skills/client-pulse/SKILL.md and write the pulse file.
-4. Commit everything to a branch named cursor/morning-loop-YYYY-MM-DD and
-   open a PR titled "Morning loop YYYY-MM-DD" so I can review from my phone.
+1. Phase 0: node _os/automation/bin/dillon-command.js --agent-mode
+2. Phase 1: spawn parallel lane scouts per agent-manifest.json (comms, clients,
+   intelligence, websites, outreach, ads, reporting). Each scout runs its skills
+   Tier 0 only. If Slack MCP is missing, log needs-mcp:slack and continue.
+3. Phase 2: commander lane runs /am-report and /plan-today; merge scout outputs
+   into the approval board.
+4. Commit to cursor/dillon-command-YYYY-MM-DD and open ONE PR titled
+   "Dillon Command YYYY-MM-DD".
 
-Hard rules: never send Slack messages or emails, never deploy anything,
-never delete vault notes. Drafts stay in the vault for my approval.
+Hard rules: never send Slack messages or emails, never deploy anything, never delete
+vault notes. Tier 1 batches wait for approval. Tier 2 stays gated.
 ```
 
 ## What lands in the vault each morning
 
-- `00_Inbox/slack/` — one note per boss/client request, classified and linked to the client
+- `automation-runs/dillon-command/YYYY-MM-DD/` — run-state, approval board, agent manifest, evidence log
+- `00_Inbox/slack/` — one note per boss/client request (comms lane)
 - `Daily-Briefs/slack-intake-YYYY-MM-DD.md` — intake summary
 - `Daily-Briefs/am-report-YYYY-MM-DD.md` — the briefing, with a **Boss requests** section
+- `Daily-Briefs/plan-YYYY-MM-DD.md` — time-blocked plan
 - `Daily-Briefs/pulse-today.md` — client pulse
 - Updated `## Today` in `Dashboard.md`
 
@@ -42,3 +53,4 @@ never delete vault notes. Drafts stay in the vault for my approval.
 
 - Website asks classified as `website-build` are ready-made briefs for `/site-factory` (see `_templates/site-factory/README.md`). Reply to the morning PR with "build it" and an agent can generate the site the same day.
 - Add more MCPs (Gmail, Google Ads, GA4, Vercel) in Cursor Dashboard → Integrations to widen what the loop can see. Secrets go in Dashboard → Cloud Agents → Secrets.
+- Local Ops Box: keep `radar-morning.ps1` on the machine with Chromium; its output feeds the outreach lane but is not part of the cloud cron.

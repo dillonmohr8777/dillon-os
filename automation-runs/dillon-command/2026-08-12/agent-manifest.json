@@ -1,0 +1,246 @@
+{
+  "workflow": "dillon-command",
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T13:19:00.276Z",
+  "commander": "11_Agents/Master Agent.md",
+  "contract": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "signals": {
+    "date": "2026-08-12",
+    "inbox_unprocessed": 5,
+    "slack_new_requests": 4,
+    "slack_total_filed": 4,
+    "dashboard_open_tasks": 3,
+    "clients_moving_48h": 0,
+    "clients_stalled": 0,
+    "briefs_present": {
+      "am_report": false,
+      "slack_intake": false,
+      "inbox_brief": false,
+      "pulse": true
+    },
+    "latest_briefs": [
+      "frontmatter-report.md",
+      "site-health-report.md",
+      "pulse-today.md",
+      "radar-2026-08-06.md",
+      "radar-2026-08-07.md"
+    ]
+  },
+  "parallel_lanes": [
+    {
+      "lane_id": "comms",
+      "agent": "comms-scout",
+      "tier": 0,
+      "parallel": true,
+      "skills": [
+        "slack-intake",
+        "inbox-brief"
+      ],
+      "skill_invocations": "/slack-intake, /inbox-brief",
+      "requires_mcp": [
+        "slack"
+      ],
+      "vault_agent": null,
+      "outputs": [
+        "Daily-Briefs/slack-intake-*.md",
+        "Daily-Briefs/inbox-brief-*.md",
+        "00_Inbox/slack/"
+      ],
+      "prompt": "Lane comms (Comms intake) for 2026-08-12. Run: /slack-intake, /inbox-brief. Requires MCP: slack. Tier 0 only — read, analyze, draft, file. Never send, post, deploy, or spend. Return the worker contract JSON from 11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md."
+    },
+    {
+      "lane_id": "clients",
+      "agent": "client-scout",
+      "tier": 0,
+      "parallel": true,
+      "skills": [
+        "client-pulse"
+      ],
+      "skill_invocations": "/client-pulse",
+      "requires_mcp": [],
+      "vault_agent": null,
+      "outputs": [
+        "Daily-Briefs/pulse-today.md",
+        "Daily-Briefs/frontmatter-report.md"
+      ],
+      "prompt": "Lane clients (Client pulse) for 2026-08-12. Run: /client-pulse. Tier 0 only — read, analyze, draft, file. Never send, post, deploy, or spend. Return the worker contract JSON from 11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md."
+    },
+    {
+      "lane_id": "intelligence",
+      "agent": "intel-scout",
+      "tier": 0,
+      "parallel": true,
+      "skills": [
+        "research-sweep"
+      ],
+      "skill_invocations": "/research-sweep",
+      "requires_mcp": [],
+      "vault_agent": null,
+      "outputs": [
+        "12_Brain/06_Research/",
+        "12_Brain/state/grok-intelligence-ingest.json"
+      ],
+      "prompt": "Lane intelligence (Intelligence bridge) for 2026-08-12. Run: /research-sweep. Tier 0 only — read, analyze, draft, file. Never send, post, deploy, or spend. Return the worker contract JSON from 11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md."
+    },
+    {
+      "lane_id": "websites",
+      "agent": "web-scout",
+      "tier": 0,
+      "parallel": true,
+      "skills": [
+        "site-grade",
+        "ux-audit"
+      ],
+      "skill_invocations": "/site-grade, /ux-audit",
+      "requires_mcp": [],
+      "vault_agent": null,
+      "outputs": [
+        "Daily-Briefs/site-health-report.md"
+      ],
+      "prompt": "Lane websites (Website health) for 2026-08-12. Run: /site-grade, /ux-audit. Tier 0 only — read, analyze, draft, file. Never send, post, deploy, or spend. Return the worker contract JSON from 11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md."
+    },
+    {
+      "lane_id": "outreach",
+      "agent": "outreach-scout",
+      "tier": 0,
+      "parallel": true,
+      "skills": [
+        "site-factory",
+        "site-batch"
+      ],
+      "skill_invocations": "/site-factory, /site-batch",
+      "requires_mcp": [],
+      "vault_agent": null,
+      "outputs": [
+        "12_Brain/queue/qualify-*.jsonl",
+        "08_Prospects/"
+      ],
+      "prompt": "Lane outreach (Outreach queue) for 2026-08-12. Run: /site-factory, /site-batch. Tier 0 only — read, analyze, draft, file. Never send, post, deploy, or spend. Return the worker contract JSON from 11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md."
+    },
+    {
+      "lane_id": "ads",
+      "agent": "ads-scout",
+      "tier": 0,
+      "parallel": true,
+      "skills": [
+        "metrics-pull"
+      ],
+      "skill_invocations": "/metrics-pull",
+      "requires_mcp": [],
+      "vault_agent": "11_Agents/Google Ads Agent.md",
+      "outputs": [],
+      "prompt": "Lane ads (Paid media) for 2026-08-12. Run: /metrics-pull. Tier 0 only — read, analyze, draft, file. Never send, post, deploy, or spend. Return the worker contract JSON from 11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md."
+    },
+    {
+      "lane_id": "reporting",
+      "agent": "report-scout",
+      "tier": 0,
+      "parallel": true,
+      "skills": [
+        "client-report"
+      ],
+      "skill_invocations": "/client-report",
+      "requires_mcp": [],
+      "vault_agent": "11_Agents/Reporting Agent.md",
+      "outputs": [
+        "Daily-Briefs/reports/"
+      ],
+      "prompt": "Lane reporting (Reporting delivery) for 2026-08-12. Run: /client-report. Tier 0 only — read, analyze, draft, file. Never send, post, deploy, or spend. Return the worker contract JSON from 11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md."
+    }
+  ],
+  "synthesis_lane": {
+    "lane_id": "command",
+    "agent": "commander",
+    "tier": 0,
+    "parallel": false,
+    "skills": [
+      "am-report",
+      "plan-today"
+    ],
+    "skill_invocations": "/am-report, /plan-today",
+    "requires_mcp": [],
+    "vault_agent": null,
+    "outputs": [
+      "Daily-Briefs/am-report-*.md",
+      "Daily-Briefs/plan-*.md",
+      "automation-runs/dillon-command/*/approval-board.md"
+    ],
+    "prompt": "Lane command (Command synthesis) for 2026-08-12. Run: /am-report, /plan-today. Tier 0 only — read, analyze, draft, file. Never send, post, deploy, or spend. Return the worker contract JSON from 11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md."
+  },
+  "lanes": [
+    {
+      "id": "comms",
+      "name": "Comms intake",
+      "agent": "comms-scout",
+      "skills": [
+        "slack-intake",
+        "inbox-brief"
+      ]
+    },
+    {
+      "id": "clients",
+      "name": "Client pulse",
+      "agent": "client-scout",
+      "skills": [
+        "client-pulse"
+      ]
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence bridge",
+      "agent": "intel-scout",
+      "skills": [
+        "research-sweep"
+      ]
+    },
+    {
+      "id": "websites",
+      "name": "Website health",
+      "agent": "web-scout",
+      "skills": [
+        "site-grade",
+        "ux-audit"
+      ]
+    },
+    {
+      "id": "outreach",
+      "name": "Outreach queue",
+      "agent": "outreach-scout",
+      "skills": [
+        "site-factory",
+        "site-batch"
+      ]
+    },
+    {
+      "id": "ads",
+      "name": "Paid media",
+      "agent": "ads-scout",
+      "skills": [
+        "metrics-pull"
+      ]
+    },
+    {
+      "id": "reporting",
+      "name": "Reporting delivery",
+      "agent": "report-scout",
+      "skills": [
+        "client-report"
+      ]
+    },
+    {
+      "id": "command",
+      "name": "Command synthesis",
+      "agent": "commander",
+      "skills": [
+        "am-report",
+        "plan-today"
+      ]
+    }
+  ],
+  "hard_rules": [
+    "Never send email, post to Slack, deploy, or change ad spend without explicit Tier-2 approval.",
+    "One worker per client per lane; never two writers on the same ads account.",
+    "Expired auth marks needs-reauth; other lanes continue.",
+    "STOP flag in run folder halts everything."
+  ]
+}
