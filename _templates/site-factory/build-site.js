@@ -17,6 +17,19 @@ const path = require('path');
 const { assertSafeSlug } = require('./lib/validate.js');
 const { buildSkinCss, inferAttitude } = require('./lib/skins.js');
 
+function readPngSize(file) {
+  try {
+    const buf = fs.readFileSync(file);
+    if (buf.length < 24 || buf[0] !== 0x89 || buf[1] !== 0x50) return null;
+    const width = buf.readUInt32BE(16);
+    const height = buf.readUInt32BE(20);
+    if (!width || !height) return null;
+    return { width, height };
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Render a brief into a finished site directory.
  * Returns { outDir, htmlBytes, sections, words, images, missingAssets }.
@@ -58,6 +71,8 @@ for (const key of required) {
   }
 }
 assertSafeSlug(brief.slug);
+const logoFile = path.join(outRoot, brief.slug, 'assets', 'logo.png');
+const logoSize = brief.logo === false ? null : readPngSize(logoFile);
 
 const t = brief.tokens;
 const tokenDefaults = {
@@ -178,10 +193,7 @@ const pickSurface = (preferred) => {
 const builders = {
   hero(d) {
     lastSurface = 'paper';
-    const float = d.glassFloat
-      ? `<div class="glass-panel glass-float"><strong>${esc(d.glassFloat.title || brief.name)}</strong><span>${esc(d.glassFloat.sub || brief.city)}</span></div>`
-      : `<div class="glass-panel glass-float"><strong>${esc(brief.name)}</strong><span>${esc(brief.city)}</span></div>`;
-    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1>${plainHeading(d.headline, brief.name)}</h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
+    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1>${plainHeading(d.headline, brief.name)}</h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
   },
   offerings(d) {
     const cards = d.items
@@ -192,11 +204,8 @@ const builders = {
       .join('');
     return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'What to explore')}<h2>${plainHeading(d.heading, 'What they actually do.')}</h2></header><div class="offering-grid">${cards}</div></section>`;
   },
-  proof(d) {
-    const cells = d.items
-      .map((item, i) => `<article class="reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><strong>${esc(item)}</strong></article>`)
-      .join('');
-    return `<section class="proof ${pickSurface(d.surface || 'panel')} vanish-out reveal"><div class="proof-grid">${cells}</div></section>`;
+  proof() {
+    return '';
   },
   gallery(d) {
     const figs = (d.imageIndexes || [3, 4, 5, 6, 7]).map((n) => figure(n)).join('');
@@ -265,11 +274,13 @@ const builders = {
   },
   closing(d) {
     const tag = d.kicker || brief.city || '';
+    const sizeAttr = logoSize ? ` width="${logoSize.width}" height="${logoSize.height}"` : '';
+    const logoVars = logoSize ? ` style="--logo-w:${logoSize.width}px;--logo-h:${logoSize.height}px"` : '';
     const mark =
       brief.logo === false
-        ? `<span class="logo-outro-wordmark">${esc(brief.name)}</span>`
-        : `<img class="logo-outro-mark" src="assets/logo.png" alt="${esc(brief.name)}" width="1000" height="906" loading="lazy">`;
-    return `<section class="closing logo-outro surface-paper" aria-label="${esc(brief.name)} logo"><div class="ink-reveal reveal">${mark}</div>${tag ? `<p class="logo-outro-tag">${esc(tag)}</p>` : ''}${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
+        ? `<span class="logo-outro-wordmark">${esc(brief.name)}</span><span class="logo-outro-wordmark logo-outro-ghost" aria-hidden="true">${esc(brief.name)}</span>`
+        : `<img class="logo-outro-mark" src="assets/logo.png" alt="${esc(brief.name)}"${sizeAttr} decoding="sync" fetchpriority="high"><img class="logo-outro-ghost" src="assets/logo.png" alt=""${sizeAttr} decoding="async" aria-hidden="true">`;
+    return `<section class="closing logo-outro surface-paper" aria-label="${esc(brief.name)} logo"><div class="ink-reveal reveal"${logoVars}>${mark}</div>${tag ? `<p class="logo-outro-tag">${esc(tag)}</p>` : ''}${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
   },
 };
 
@@ -277,7 +288,6 @@ const builders = {
 const defaultOrder = [
   'hero',
   'offerings',
-  'proof',
   'gallery',
   'story',
   'experience',
@@ -343,7 +353,7 @@ const dockRight = dockNav.slice(2, 4);
 const dockCta = primaryCta || (brief.url ? { label: 'Visit site', href: brief.url } : null);
 const inkMark = brief.logo === false
   ? `<span class="ink-mark wordmark">${esc(brief.name.split(' ')[0] || brief.name)}</span>`
-  : `<img class="ink-mark" src="assets/logo.png" alt="${esc(brief.name)}">`;
+  : `<img class="ink-mark" src="assets/logo.png" alt="${esc(brief.name)}"${logoSize ? ` width="${logoSize.width}" height="${logoSize.height}"` : ''} decoding="async">`;
 const dockLinks = (items) => items.map((l) => `<a class="dock-link" href="${esc(l.href)}">${esc(l.label)}</a>`).join('');
 const mobileBar = `<nav class="bottom-dock mobile-action" aria-label="Page"><div class="dock-cluster">${dockLinks(dockLeft)}</div><div class="ink-logo" data-ink-logo><canvas width="240" height="240" aria-hidden="true"></canvas>${inkMark}</div><div class="dock-cluster">${dockLinks(dockRight)}${dockCta ? cta(dockCta, 'button dock-cta') : ''}</div></nav>`;
 

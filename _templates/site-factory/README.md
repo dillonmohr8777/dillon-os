@@ -27,7 +27,7 @@ See `example-brief.json` for the full shape. The important parts:
 
 - `tokens` — the whole brand personality: 6 surface colors, 5 `--on-*` contrast colors, `border` (1px elegant to 8px loud) and `radius` (0 brutalist to 56px soft). Derive them from the business's real signage and photos, per the design system.
 - `fonts.display` / `fonts.text` — Google Font names. Display carries the brand, text stays quiet.
-- `sections` — optional array to reorder; defaults to hero, offerings, proof, gallery, story, experience, feature, catalog, contact, closing. Sections with no content are skipped automatically.
+- `sections` — optional array to reorder; defaults to hero, offerings, gallery, story, experience, feature, catalog, contact, closing. Address and phone live in the visit section, not a proof strip. Sections with no content are skipped automatically.
 - `noindex` — defaults to true (prospect demo). Set `false` only when a paying client's site goes live.
 - `skinCss` — optional per-site decoration layer, scoped under `.slug-<name>`. Base classes never change.
 

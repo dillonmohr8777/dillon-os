@@ -1,7 +1,9 @@
 const { describe, it } = require('node:test');
 const assert = require('node:assert/strict');
+const fs = require('fs');
+const path = require('path');
 const { buildSite } = require('../build-site.js');
-const { passingBrief } = require('./helpers.js');
+const { passingBrief, png } = require('./helpers.js');
 
 function imageSrcs(html) {
   return [...html.matchAll(/src="assets\/(image-\d+\.webp)"/g)].map((m) => m[1]);
@@ -109,5 +111,45 @@ describe('filled cards, unique images, embedded map', () => {
     assert.doesNotMatch(built.html, /<h3>Follow-up is a real person, not<\/h3>/);
     assert.doesNotMatch(built.html, /<h3>Family exams and cleanings so kids<\/h3>/);
     assert.doesNotMatch(built.html, /<h3>A comfort-first chairside manner the reviews<\/h3>/);
+  });
+
+  it('never renders the proof address strip or a hero address card', () => {
+    const built = buildSite(
+      passingBrief({
+        slug: 'no-proof-co',
+        name: 'No Proof Co',
+        proof: {
+          items: [
+            '123 Main Street, Philadelphia, PA 19103',
+            'Telephone (215) 555-0100',
+            'Open weekdays',
+            'Schedule online from the official site',
+          ],
+        },
+        hero: {
+          ...passingBrief().hero,
+          glassFloat: { title: 'All ages', sub: '123 Main Street' },
+        },
+      }),
+      '/tmp/no-proof-test'
+    );
+    assert.doesNotMatch(built.html, /<section class="proof[\s"]/);
+    assert.doesNotMatch(built.html, /<div class="[^"]*glass-float/);
+    assert.doesNotMatch(built.html, /123 Main Street/);
+  });
+
+  it('keeps the real logo at native size and never filters those pixels', () => {
+    const root = '/tmp/sharp-logo-test';
+    const assets = path.join(root, 'sharp-logo-co', 'assets');
+    fs.mkdirSync(assets, { recursive: true });
+    fs.writeFileSync(path.join(assets, 'logo.png'), png(10, 10, 10));
+    const built = buildSite(
+      passingBrief({ slug: 'sharp-logo-co', name: 'Sharp Logo Co', logo: true }),
+      root
+    );
+    assert.match(built.html, /logo-outro-mark"[^>]*width="8" height="8"/);
+    assert.doesNotMatch(built.html, /logo-outro-mark"[^>]*width="1000"/);
+    assert.match(built.html, /--logo-w:8px/);
+    assert.match(built.html, /class="logo-outro-ghost"/);
   });
 });

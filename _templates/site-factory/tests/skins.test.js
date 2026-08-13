@@ -31,7 +31,7 @@ describe('attitude skins', () => {
     const brief = passingBrief({ slug: 'glass-shop', name: 'Glass Shop', attitude: 'glass' });
     const built = buildSite(brief, '/tmp/skin-test');
     assert.match(built.html, /name="attitude" content="glass"/);
-    assert.match(built.html, /glass-float/);
+    assert.doesNotMatch(built.html, /<div class="[^"]*glass-float/);
     assert.match(built.html, /marquee-strip/);
     assert.match(built.html, /mobile-action/);
     assert.match(built.html, /bottom-dock/);

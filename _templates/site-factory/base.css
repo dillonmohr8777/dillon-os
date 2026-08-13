@@ -9,6 +9,9 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 img{display:block;width:100%;height:100%;object-fit:cover}
+img.logo-outro-mark,img.logo-outro-ghost,img.ink-mark{
+  width:auto;height:auto;max-width:100%;object-fit:contain;
+}
 a{color:inherit;text-decoration-thickness:from-font}
 :root{
   --glass-blur:22px;
@@ -96,7 +99,7 @@ body{padding-bottom:max(132px, calc(118px + env(safe-area-inset-bottom, 0px)))}
   min-height:48px;justify-content:center;padding:10px 14px;font-size:.8rem;border-radius:999px;
 }
 .ink-logo{
-  position:relative;width:108px;height:108px;flex:0 0 108px;margin-top:-38px;border-radius:50%;
+  position:relative;width:168px;height:72px;flex:0 0 168px;margin-top:-24px;border-radius:22px;
   overflow:visible;isolation:isolate;
   background:var(--paper);
   border:2px solid color-mix(in srgb,var(--ink) 16%,transparent);
@@ -104,17 +107,16 @@ body{padding-bottom:max(132px, calc(118px + env(safe-area-inset-bottom, 0px)))}
 }
 .ink-logo canvas{position:absolute;left:50%;top:50%;width:240px;height:240px;margin:-120px 0 0 -120px;pointer-events:none;z-index:3}
 .ink-logo .ink-mark{
-  position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:contain;
-  opacity:1;transform:scale(.96);filter:none;
-  transition:opacity .55s ease, transform .7s cubic-bezier(.2,.75,.2,1), filter .6s ease;
+  position:absolute;inset:8px 12px;width:calc(100% - 24px);height:calc(100% - 16px);object-fit:contain;
+  z-index:2;opacity:1;transform:none;filter:none;
 }
 .ink-logo.is-inked .ink-mark{
-  opacity:1;transform:scale(1.04);filter:none;
+  opacity:1;transform:none;filter:none;
 }
 .ink-logo::after{
-  content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;z-index:1;
-  background:radial-gradient(circle at 30% 20%, color-mix(in srgb,#fff 40%,transparent), transparent 48%);
-  mix-blend-mode:screen;opacity:.6;
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;
+  background:radial-gradient(circle at 30% 20%, color-mix(in srgb,#fff 28%,transparent), transparent 58%);
+  opacity:.45;
 }
 .ink-logo .ink-mark.wordmark{
   display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:900;letter-spacing:-.04em;text-align:center;color:var(--ink);line-height:1.05;padding:6px;
@@ -173,12 +175,6 @@ section{position:relative;padding:clamp(78px,10vw,150px) clamp(20px,6vw,110px);i
   border:var(--border) solid currentColor;border-radius:var(--radius);
   box-shadow:18px 22px 0 color-mix(in srgb,var(--accent2) 70%,transparent);
 }
-.hero-media .glass-float{
-  position:absolute;left:6%;bottom:8%;z-index:3;max-width:min(70%,320px);
-  padding:16px 18px;pointer-events:none;
-}
-.hero-media .glass-float strong{display:block;font-size:1.05rem;line-height:1.25}
-.hero-media .glass-float span{display:block;margin-top:6px;font-size:.72rem;opacity:.8;letter-spacing:.08em;text-transform:uppercase}
 
 figure{position:relative;margin:0;overflow:hidden}
 figcaption{
@@ -309,11 +305,17 @@ figcaption{
 .closing{text-align:center;padding-block:clamp(112px,18vw,200px);overflow:hidden}
 .closing .button{margin:28px auto 0}
 .logo-outro .ink-reveal{
-  width:min(100%,560px);margin:0 auto;
+  position:relative;
+  width:max-content;max-width:min(100%,560px);
+  margin:0 auto;
 }
 .logo-outro .logo-outro-mark,
-.logo-outro .logo-outro-wordmark{
-  display:block;width:100%;height:auto;object-fit:contain;margin-inline:auto;
+.logo-outro .logo-outro-wordmark:not(.logo-outro-ghost){
+  position:relative;z-index:1;
+  display:block;width:auto;height:auto;
+  max-width:min(100%,560px,var(--logo-w,560px));
+  object-fit:contain;margin-inline:auto;
+  filter:none;transform:none;
 }
 .logo-outro-wordmark{
   font-family:var(--display);font-size:clamp(2.6rem,8vw,5.8rem);font-weight:800;letter-spacing:-.06em;line-height:.9;
@@ -321,17 +323,26 @@ figcaption{
 .logo-outro-tag{
   margin:32px auto 0;font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.62;
 }
+.logo-outro-ghost{display:none}
 .js .logo-outro .ink-reveal.reveal{opacity:1;transform:none;filter:none}
-.js .logo-outro .ink-reveal img,
-.js .logo-outro .ink-reveal .logo-outro-wordmark{
-  opacity:0;transform:scale(1.06);
+.js .logo-outro .ink-reveal .logo-outro-mark,
+.js .logo-outro .ink-reveal .logo-outro-wordmark:not(.logo-outro-ghost){
+  opacity:0;filter:none;transform:none;
+  transition:opacity 1.4s ease-out;
+}
+.js .logo-outro .ink-reveal.visible .logo-outro-mark,
+.js .logo-outro .ink-reveal.visible .logo-outro-wordmark:not(.logo-outro-ghost){
+  opacity:1;
+}
+.js .logo-outro-ghost{
+  display:block;position:absolute;inset:0;z-index:0;pointer-events:none;
+  width:100%;height:100%;object-fit:contain;margin:0;
+  opacity:1;transform:scale(1.06);
   filter:blur(26px) contrast(2.4) saturate(.3);
   transition:opacity 1.4s ease-out,transform 2.1s var(--ease-ink),filter 2.3s ease-out;
-  will-change:filter,opacity,transform;
 }
-.js .logo-outro .ink-reveal.visible img,
-.js .logo-outro .ink-reveal.visible .logo-outro-wordmark{
-  opacity:1;transform:none;filter:blur(0) contrast(1) saturate(1);
+.js .logo-outro .ink-reveal.visible .logo-outro-ghost{
+  opacity:0;transform:none;filter:none;
 }
 
 .site-footer{
@@ -461,9 +472,11 @@ p,address{text-wrap:pretty}
   .js .reveal,.js .reveal.visible,.js .vanish-out.is-leaving{
     opacity:1!important;transform:none!important;filter:none!important;transition:none!important;
   }
-  .js .logo-outro .ink-reveal img,
-  .js .logo-outro .ink-reveal .logo-outro-wordmark{
+  .js .logo-outro .ink-reveal .logo-outro-mark,
+  .js .logo-outro .ink-reveal .logo-outro-wordmark,
+  .js .logo-outro .ink-reveal .logo-outro-ghost{
     opacity:1!important;transform:none!important;filter:none!important;transition:none!important;
   }
+  .js .logo-outro-ghost{display:none!important}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
 }

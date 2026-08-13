@@ -75,6 +75,23 @@ async function runQa(siteDir, opts = {}) {
 
   if (/<mark[\s>]/.test(html)) failures.push('Highlighted mark tags are not allowed');
   if (!/class="ink-reveal/.test(html)) failures.push('Missing ink-reveal logo outro');
+  if (/<section class="proof[\s"]/.test(html)) failures.push('Proof address strip is not allowed');
+  if (/<div class="[^"]*glass-float/.test(html)) failures.push('Hero address float card is not allowed');
+  const logoPath = path.join(siteDir, 'assets', 'logo.png');
+  if (fs.existsSync(logoPath)) {
+    const buf = fs.readFileSync(logoPath);
+    if (buf.length >= 24 && buf[0] === 0x89) {
+      const w = buf.readUInt32BE(16);
+      const h = buf.readUInt32BE(20);
+      if (!new RegExp(`logo-outro-mark"[^>]*width="${w}" height="${h}"`).test(html)) {
+        failures.push(`Logo markup is not native size ${w}x${h}`);
+      }
+      if (/logo-outro-mark[^>]*width="1000"/.test(html) && w !== 1000) {
+        failures.push('Logo is stretched with a fake 1000px box');
+      }
+    }
+    if (!/class="logo-outro-ghost"/.test(html)) failures.push('Missing ink ghost; the real mark must stay unfiltered');
+  }
   const danglingHead = /(?:\s+(?:a|an|the|and|or|but|nor|not|so|for|with|to|of|in|on|at|by|from)|,)\s*$/i;
   [...html.matchAll(/<h([1-3])[^>]*>([\s\S]*?)<\/h\1>/gi)].forEach((m) => {
     const text = m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -130,7 +147,10 @@ async function runQa(siteDir, opts = {}) {
           await new Promise((r) => setTimeout(r, 400));
           await page.evaluate(() => {
             document.querySelectorAll('.reveal').forEach((n) => n.classList.add('visible', 'in-view'));
-            document.querySelectorAll('.logo-outro .ink-reveal img, .logo-outro .ink-reveal .logo-outro-wordmark').forEach((n) => {
+            document.querySelectorAll('.logo-outro-ghost').forEach((n) => {
+              n.style.display = 'none';
+            });
+            document.querySelectorAll('.logo-outro-mark, .logo-outro-wordmark:not(.logo-outro-ghost)').forEach((n) => {
               n.style.transition = 'none';
               n.style.opacity = '1';
               n.style.filter = 'none';
