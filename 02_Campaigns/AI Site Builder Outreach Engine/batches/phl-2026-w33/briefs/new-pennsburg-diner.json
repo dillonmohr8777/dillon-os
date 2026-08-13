@@ -1,0 +1,234 @@
+{
+  "slug": "new-pennsburg-diner",
+  "name": "The New Pennsburg Diner",
+  "city": "Pennsburg",
+  "category": "Family diner",
+  "vertical": "Restaurant",
+  "attitude": "warm",
+  "url": "https://pennsburgdiner.com/",
+  "phone": "215-679-2190",
+  "address": "321 Pottstown Ave, Pennsburg, PA 18073",
+  "description": "Family owned diner since 1981. Breakfast all day, half-pound burgers, and online ordering. Call 215-679-2190.",
+  "schemaType": "Restaurant",
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Nunito"
+  },
+  "tokens": {
+    "paper": "#F6EFE4",
+    "ink": "#1F1F1F",
+    "accent": "#C45C26",
+    "accent2": "#E8C36A",
+    "panel": "#E6D8C4",
+    "deep": "#1F1F1F",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "18px"
+  },
+  "marquee": [
+    "Breakfast all day",
+    "Since 1981",
+    "1/2 lb burgers",
+    "Order online"
+  ],
+  "nav": [
+    {
+      "label": "Menu",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Pennsburg | Family diner since 1981",
+    "headline": "Breakfast all day. Burgers when you want them",
+    "sub": "The New Pennsburg Diner has been family owned since 1981. Breakfast all day, half-pound burgers, homemade plates. Order online or call 215-679-2190. Family owned diner since 1981. Breakfast all day, half-pound burgers, and online ordering. Call 215-679-2190.",
+    "ctaPrimary": {
+      "label": "Call now",
+      "href": "tel:2156792190"
+    },
+    "ctaSecondary": {
+      "label": "Order online",
+      "href": "https://pennsburgdiner.com/"
+    },
+    "glassFloat": {
+      "title": "Since 1981",
+      "sub": "Family owned"
+    },
+    "marquee": [
+      "Breakfast",
+      "Burgers",
+      "Lunch",
+      "Dinner"
+    ]
+  },
+  "offerings": {
+    "heading": "Diner food, still homemade.",
+    "items": [
+      "Breakfast all day, because the first meal shouldn't expire at 11.",
+      "Signature half-pound burgers with steak fries and a choice of coleslaw or guacamole.",
+      "Order online when you already know the plate, or call 215-679-2190 for the rest."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Family owned since 1981",
+      "Telephone 215-679-2190",
+      "Breakfast all day",
+      "Order online from the official site"
+    ]
+  },
+  "gallery": {
+    "heading": "Coffee, chrome, and a full plate.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A family diner since 1981",
+    "paragraphs": [
+      "The New Pennsburg Diner has been family owned since 1981. The room is built for regulars and for people who just found the lot.",
+      "Breakfast runs all day. The half-pound burger is the lunch they still name on the site. Call 215-679-2190 or order online. The family still runs the room.",
+      "Call 215-679-2190. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a diner visit should feel.",
+    "items": [
+      "Sit down for breakfast at 2 if that's when you got hungry.",
+      "The burger comes with steak fries. Pick coleslaw or guacamole.",
+      "Events and a bigger table are possible. Ask when you call."
+    ]
+  },
+  "feature": {
+    "heading": "The half-pound burger is the lunch special that stuck",
+    "text": "A diner lives on the plate you reorder. Breakfast all day covers the morning people. The burger covers everyone else. Breakfast all day, because the first meal shouldn't expire at 11.",
+    "cta": {
+      "label": "Order online",
+      "href": "https://pennsburgdiner.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Eat in or order ahead.",
+    "items": [
+      {
+        "title": "Breakfast",
+        "href": "https://pennsburgdiner.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Burgers",
+        "href": "https://pennsburgdiner.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Order online",
+        "href": "https://pennsburgdiner.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come hungry. Call if you can't.",
+    "sub": "Pennsburg. Confirm the street and hours on the official site before you drive. Call 215-679-2190. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "The New Pennsburg Diner",
+    "cta": {
+      "label": "Call now",
+      "href": "tel:2156792190"
+    },
+    "sub": "Family owned diner since 1981. Breakfast all day, half-pound burgers, and online ordering. Call 215-679-2190."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://pennsburgdiner.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:2156792190"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Diner counter with coffee mugs and a pie case"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "All-day breakfast plate with eggs and toast"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Half-pound burger with steak fries"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Booth seating under warm pendant lights"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Short-order cook at a flat-top grill"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Milkshake and a slice of pie"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk neon diner sign"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of crispy home fries"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Pancakes with butter and syrup"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Burger on a bun with coleslaw"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Phone and laptop for an online order"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Evening empty counter with chrome stools"
+    }
+  ],
+  "noindex": true,
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

@@ -46,13 +46,13 @@ Pages compose from this fixed set, each `<section class="<name> surface-<paper|a
 | `proof` | Strip of 2 to 4 hard facts (founded date, hours, signature item, service area) |
 | `offerings` | Numbered grid (01/02/03) of what they sell or do |
 | `story` | Split layout: history/positioning copy beside a photo |
-| `gallery` | Bento image grid with pill captions |
+| `gallery` | Horizontal filmstrip (snap + optional L-R drift). Never a stacked column of photos. |
 | `experience` | Numbered grid of what visiting/working with them is like |
 | `catalog` | Card grid of deep links (menu, delivery, shop, booking) |
 | `feature` | Split layout spotlighting one signature thing |
 | `spotlight` / `commercial-spotlight` | Secondary business line (merch, wholesale, events) |
-| `contact-system` / `visit` | Address, hours, phone, and a `visit-links` list (call / order / directions) |
-| `closing` | Big repeat of the main claim + one CTA |
+| `contact-system` / `visit` | Address, hours, phone, and a square Google Maps embed (`map-embed`, `aspect-ratio: 1/1`, max 1080px) that actually shows the map |
+| `closing` | Required last section: the real logo soaks into the paper like ink (IMMOHRTAL `ink-reveal`), then a short lead and one CTA. No highlighted type. |
 
 Surface rhythm: alternate surfaces so no two adjacent sections share one (typical flow: paper → accent → panel → deep → paper...).
 
@@ -63,7 +63,7 @@ Every new batch site must resemble the majority of the 25. These are the actual 
 | Dimension | Range across the 25 | Target for new builds |
 |---|---|---|
 | Sections total | 8 to 11 | **10** (hero + 8 middle + closing) |
-| Words of real copy | 293 to 543 | **350 to 500** |
+| Words of real copy | 293 to 543 | **400 to 720** |
 | Images | 7 to 13 (mode 13) | **12 to 13** |
 | Final page weight | 22 to 36 KB | **27 to 37 KB** |
 
@@ -87,13 +87,14 @@ So the floor is 6 required sections; hitting the target of 10 means adding `proo
 
 ## Shared chrome and behavior
 
-- `site-header`: fixed/absolute pill bar with `brand-logo` (or `wordmark` fallback), 3 anchor links, one `nav-cta`. Collapses to logo + CTA under 850px.
-- `mobile-action`: fixed bottom CTA bar, mobile only.
+- `site-header`: sticky liquid-glass bar with `brand-logo` (or `wordmark` fallback), chip nav links, one header CTA. Nav stays visible on small screens as a horizontal chip scroller. On scroll the header mark inks away as the bottom logo arrives.
+- `bottom-dock` (also class `mobile-action`): always-on liquid-glass page menu at the thumb line. Explore / Gallery, a center paper well with the real logo, Visit, and the primary CTA. The same mark soaks into the closing section as a large ink-reveal, matching the IMMOHRTAL outro.
 - `site-footer`: name + address + `footer-links`.
 - Reveal-on-scroll with direction/delay variants; sections can `.vanish-out` as they leave upward
 - Marquee strip after the hero (their lingo, not filler)
-- Liquid-glass header, contact cards, and hero float
-- Sticky mobile action bar
+- Liquid-glass header, bottom dock, contact cards, hero float, and a live Google Map in Visit
+- Sticky bottom dock with scroll-triggered ink/particle logo
+- Ken-burns live frames on odd images; glass sheen on even stills
 - Per-site `attitude` skin (`glass` | `editorial` | `brutal` | `warm` | `industrial` | `neon`) so every homepage has its own feel
 - Social rail fed by harvested site/social imagery via `apply-harvest-images.js`
 - Buttons: pill (`border-radius:999px`) with hover lift (`translateY(-2px)` + shadow) and active scale `.97`. `:focus-visible` outline in `--accent`.

@@ -1,0 +1,230 @@
+{
+  "slug": "pro-nails",
+  "name": "Pro Nails",
+  "city": "Willow Grove",
+  "category": "Nail salon and spa",
+  "vertical": "Health",
+  "attitude": "neon",
+  "url": "https://gopronails.com/",
+  "phone": "(215) 657-6245",
+  "address": "2500 W Moreland Rd, Willow Grove, PA 19090",
+  "description": "Nail salon and spa with multiple locations. Professional service, rare quality, sanitary and durable work. Find a location on the official site.",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "Montserrat"
+  },
+  "tokens": {
+    "paper": "#F8F9FA",
+    "ink": "#404040",
+    "accent": "#C45B7A",
+    "accent2": "#E8B4C4",
+    "panel": "#EDE4E8",
+    "deep": "#404040",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "marquee": [
+    "Professional",
+    "Rare quality",
+    "Sanitary",
+    "Durable"
+  ],
+  "nav": [
+    {
+      "label": "Ideas",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Nail salon and spa | Multiple locations",
+    "headline": "Professional. Rare quality.",
+    "sub": "Pro Nails is a nail salon and spa with more than one location. The promise is professional work that's sanitary and durable. Find a Pro Nails near you on the official site. Nail salon and spa with multiple locations. Professional service, rare quality, sanitary and durable work. Find a location on the official site.",
+    "ctaPrimary": {
+      "label": "Find a location",
+      "href": "https://gopronails.com/"
+    },
+    "ctaSecondary": {
+      "label": "Nail ideas",
+      "href": "https://gopronails.com/"
+    },
+    "glassFloat": {
+      "title": "Multiple locations",
+      "sub": "Salon and spa"
+    },
+    "marquee": [
+      "Manicure",
+      "Pedicure",
+      "Spa",
+      "Nail ideas"
+    ]
+  },
+  "offerings": {
+    "heading": "A salon that still talks about sanitary work.",
+    "items": [
+      "Professional service as the first word, not a spa slogan piled on top of a rush job.",
+      "Rare quality they put on the homepage, meaning the set should last and look like the photo.",
+      "Sanitary, durable work across multiple locations. Pick the shop on gopronails.com."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Nail salon and spa",
+      "Multiple locations",
+      "Professional, rare quality",
+      "Sanitary and durable work"
+    ]
+  },
+  "gallery": {
+    "heading": "Pink light, clean tools.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Find a Pro Nails near you",
+    "paragraphs": [
+      "Pro Nails runs more than one salon. The homepage doesn't hide behind a single chair. You pick a location, then you sit.",
+      "The official site is the door. Professional, rare quality, sanitary, durable. The whole claim sits on those four words.",
+      "Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How the appointment should feel.",
+    "items": [
+      "Pick the location first. Multiple shops means the closest one matters.",
+      "Bring a nail idea or use theirs. The set should match what you asked for.",
+      "Sanitary tools aren't a bonus. They're the reason you came back."
+    ]
+  },
+  "feature": {
+    "heading": "Durable work is the only review that counts",
+    "text": "A pretty set that chips on day two isn't rare quality. Pro Nails puts sanitary and durable on the same line as professional. Professional service as the first word, not a spa slogan piled on top of a rush job.",
+    "cta": {
+      "label": "See locations",
+      "href": "https://gopronails.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Ideas, then a chair.",
+    "items": [
+      {
+        "title": "Locations",
+        "href": "https://gopronails.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Nail ideas",
+        "href": "https://gopronails.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "About",
+        "href": "https://gopronails.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Pick the location.",
+    "sub": "Multiple shops. Use the official site to find a Pro Nails near you. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Pro Nails",
+    "cta": {
+      "label": "Find a location",
+      "href": "https://gopronails.com/"
+    },
+    "sub": "Nail salon and spa with multiple locations. Professional service, rare quality, sanitary and durable work. Find a location on the official site."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://gopronails.com/"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Nail salon station with pink lighting"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Manicurist painting a precise French tip"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Pedicure chairs in a clean spa row"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Color wall of nail polish bottles"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Sterilized tools on a tray"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Finished gel set under a desk lamp"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk storefront of a nail salon"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Close crop of a chrome-and-pink manicure"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Map pin over a salon interior"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Inspiration photos on a tablet"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Reception desk with appointment book"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Evening neon in a salon window"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}

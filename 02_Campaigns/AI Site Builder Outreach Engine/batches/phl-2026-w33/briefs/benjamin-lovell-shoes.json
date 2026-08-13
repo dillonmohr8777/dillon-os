@@ -1,0 +1,222 @@
+{
+  "slug": "benjamin-lovell-shoes",
+  "name": "Benjamin Lovell Shoes",
+  "city": "Philadelphia",
+  "category": "Independent shoe stores",
+  "vertical": "Retail",
+  "attitude": "editorial",
+  "url": "https://www.blshoes.com/",
+  "phone": "215.564.4655",
+  "address": "1728 Chestnut Street, Philadelphia, PA 19103",
+  "description": "Independent shoe stores in Rittenhouse, Old City, Glen Eagle, Spring House, and Allen's. Shop the floor, not a warehouse photo.",
+  "fonts": {
+    "display": "Bodoni Moda",
+    "displayFallback": "Georgia,serif",
+    "text": "Poppins"
+  },
+  "tokens": {
+    "paper": "#F4F1EA",
+    "ink": "#333333",
+    "accent": "#6E7B91",
+    "accent2": "#C4A574",
+    "panel": "#E4E0D6",
+    "deep": "#343841",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "marquee": [
+    "Rittenhouse",
+    "Old City",
+    "Glen Eagle",
+    "Spring House",
+    "Allen's Shoes"
+  ],
+  "nav": [
+    {
+      "label": "Shop",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Independent shoes",
+    "headline": "The floor still matters",
+    "sub": "Benjamin Lovell Shoes fits leather on Chestnut Street and across four more shops. Brands you can hold. Staff who actually measure. Independent shoe stores in Rittenhouse, Old City, Glen Eagle, Spring House, and Allen's. Shop the floor, not a warehouse photo.",
+    "ctaPrimary": {
+      "label": "Shop now",
+      "href": "https://www.blshoes.com/"
+    },
+    "ctaSecondary": {
+      "label": "Call Rittenhouse",
+      "href": "tel:2155644655"
+    },
+    "glassFloat": {
+      "title": "1728 Chestnut",
+      "sub": "Rittenhouse"
+    },
+    "marquee": [
+      "Locations",
+      "Events",
+      "Brands",
+      "New in store"
+    ]
+  },
+  "offerings": {
+    "heading": "Five shops, one standard.",
+    "items": [
+      "Rittenhouse and Old City for the city walkers who want leather that lasts.",
+      "Glen Eagle and Spring House when you want the same fit without Center City parking.",
+      "Allen's Shoes in the family, with the SAS sale the site still shouts about."
+    ]
+  },
+  "proof": {
+    "items": [
+      "1728 Chestnut Street, Philadelphia 19103",
+      "Tel 215.564.4655",
+      "Five named locations",
+      "Shop the current floor online"
+    ]
+  },
+  "gallery": {
+    "heading": "Leather, last, and light.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "What people say about us",
+    "paragraphs": [
+      "The shops are still shops. You walk in, you try the pair, you leave with something that bends the way your foot actually bends.",
+      "Rittenhouse, Old City, Glen Eagle, Spring House, and Allen's share the same idea: independent retail with a real fitting bench.",
+      "Find them at 1728 Chestnut Street, Philadelphia, PA 19103. Call 215.564.4655. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit should go.",
+    "items": [
+      "Tell them how you walk. They will pull last and width, not just size.",
+      "New-in-store sits on the table, not buried three clicks down.",
+      "Events and brand days are posted when they are real, not invented."
+    ]
+  },
+  "feature": {
+    "heading": "Fit first, then the receipt",
+    "text": "A shoe store that still measures is rarer than a new drop. That is the whole pitch, and it is the one the reviews keep repeating. Rittenhouse and Old City for the city walkers who want leather that lasts.",
+    "cta": {
+      "label": "See locations",
+      "href": "https://www.blshoes.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Shop now",
+        "href": "https://www.blshoes.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Locations",
+        "href": "https://www.blshoes.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Brands",
+        "href": "https://www.blshoes.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the shop that fits.",
+    "sub": "Start at 1728 Chestnut Street or confirm the other four on the official site. Find them at 1728 Chestnut Street, Philadelphia, PA 19103. Call 215.564.4655. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Benjamin Lovell Shoes",
+    "cta": {
+      "label": "Shop now",
+      "href": "https://www.blshoes.com/"
+    },
+    "sub": "Independent shoe stores in Rittenhouse, Old City, Glen Eagle, Spring House, and Allen's. Shop the floor, not a warehouse photo."
+  },
+  "links": [
+    {
+      "label": "Shop",
+      "href": "https://www.blshoes.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:2155644655"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Luxury shoe wall of leather oxfords"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Hands fitting a brown leather oxford"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Chestnut Street shop window at dusk"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Macro of full-grain leather and stitching"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Walking on cobblestones in polished shoes"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "After-hours boutique with warm lamps"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Harvested shop photography"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Interior seating and fitting bench"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Boxed pairs on walnut shelves"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Storefront at street level"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Detail of a loafer vamp"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Evening light on a shoe wall"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true
+}

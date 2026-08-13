@@ -1,0 +1,236 @@
+{
+  "slug": "floral-and-hardy",
+  "name": "Floral and Hardy of Skippack",
+  "city": "Skippack",
+  "category": "Garden center",
+  "vertical": "Retail",
+  "attitude": "warm",
+  "url": "https://floralandhardyofskippack.com/",
+  "phone": "610-584-0797",
+  "address": "4007 Skippack Pike, Skippack, PA 19474",
+  "hours": "Monday-Friday 8:00 AM to 4:00 PM",
+  "description": "Garden center in Skippack with a succulent bar, gift shop, design services, herbs, veggies, and an online shop. Call 610-584-0797.",
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "Raleway"
+  },
+  "tokens": {
+    "paper": "#E3E5DC",
+    "ink": "#303030",
+    "accent": "#5F7A4A",
+    "accent2": "#C1C2AE",
+    "panel": "#D5D7CC",
+    "deep": "#303030",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "22px"
+  },
+  "marquee": [
+    "Succulent bar",
+    "Gift shop",
+    "Design",
+    "Herbs",
+    "Veggies"
+  ],
+  "nav": [
+    {
+      "label": "Shop",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Skippack | Garden center",
+    "headline": "Garden center, gift shop, succulent bar",
+    "sub": "Floral and Hardy sits in Skippack with plants, a gift shop, and a succulent bar upstairs. Herbs, veggies, design, and an online shop. Call 610-584-0797. Garden center in Skippack with a succulent bar, gift shop, design services, herbs, veggies, and an online shop. Call 610-584-0797.",
+    "ctaPrimary": {
+      "label": "Call the garden center",
+      "href": "tel:6105840797"
+    },
+    "ctaSecondary": {
+      "label": "Shop online",
+      "href": "https://floralandhardyofskippack.com/"
+    },
+    "glassFloat": {
+      "title": "Skippack Village",
+      "sub": "Mon-Fri 8 to 4"
+    },
+    "marquee": [
+      "Garden center",
+      "Succulent bar",
+      "Gift shop",
+      "Online shop"
+    ]
+  },
+  "offerings": {
+    "heading": "Plants, gifts, and a succulent bar.",
+    "items": [
+      "The garden center carries herbs, veggies, and the plants you actually came to Skippack to find.",
+      "Upstairs, the succulent bar lets you build a container instead of grabbing a finished one.",
+      "Design services and the online shop cover the days you can't walk the floor."
+    ]
+  },
+  "proof": {
+    "items": [
+      "Garden center in Skippack",
+      "Telephone 610-584-0797",
+      "Monday-Friday 8:00 AM to 4:00 PM",
+      "Succulent bar, gift shop, design, online shop"
+    ]
+  },
+  "gallery": {
+    "heading": "Green, clay, and light.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Skippack garden center that still feels like a shop",
+    "paragraphs": [
+      "Floral and Hardy is a garden center and gift shop in Skippack Village. You browse plants, you duck into gifts, and you can climb to the succulent bar.",
+      "Weekdays run 8 to 4. Call 610-584-0797 if you need design, or open the online shop when you already know the plant.",
+      "Call 610-584-0797. Hours: Monday-Friday 8:00 AM to 4:00 PM. Confirm details on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "A visit with dirt on the floor.",
+    "items": [
+      "Walk the garden center for herbs, veggies, and whatever's in season.",
+      "Build a succulent upstairs, or ask about design if the yard needs a plan.",
+      "The gift shop and online shop catch the days you aren't planting."
+    ]
+  },
+  "feature": {
+    "heading": "The succulent bar is the reason people linger",
+    "text": "You don't have to leave with a finished pot. The bar is set up so you pick the vessel, the plant, and the topping, then take it home. The garden center carries herbs, veggies, and the plants you actually came to Skippack to find.",
+    "cta": {
+      "label": "Open the shop",
+      "href": "https://floralandhardyofskippack.com/"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "heading": "Shop the floor or the site.",
+    "items": [
+      {
+        "title": "Garden center",
+        "href": "https://floralandhardyofskippack.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Succulent bar",
+        "href": "https://floralandhardyofskippack.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Online shop",
+        "href": "https://floralandhardyofskippack.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come walk the benches.",
+    "sub": "Skippack Village. Weekdays 8 to 4. Confirm weekend hours on the official site. Call 610-584-0797. Hours: Monday-Friday 8:00 AM to 4:00 PM. Confirm details on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Floral and Hardy of Skippack",
+    "cta": {
+      "label": "Call the garden center",
+      "href": "tel:6105840797"
+    },
+    "sub": "Garden center in Skippack with a succulent bar, gift shop, design services, herbs, veggies, and an online shop. Call 610-584-0797."
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://floralandhardyofskippack.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:6105840797"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Greenhouse benches packed with potted annuals"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Hands planting a succulent in a ceramic bowl"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Herb starts in clay pots on a wooden table"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Gift shop shelves with candles and garden tools"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Vegetable seedlings in a sunny cold frame"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Cut flowers in galvanized buckets"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dusk storefront of a village garden center"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Overhead view of a succulent bar with toppings"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Rows of shrubs along a gravel path"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Close crop of echeveria in a shallow dish"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Laptop and plant tags for an online order"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Evening light through greenhouse glass"
+    }
+  ],
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "sections": [
+    "hero",
+    "offerings",
+    "proof",
+    "gallery",
+    "story",
+    "experience",
+    "feature",
+    "catalog",
+    "contact",
+    "closing"
+  ]
+}
