@@ -31,15 +31,25 @@ const esc = (s) =>
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;');
-const plainHeading = (s, fallback = '') =>
-  esc(
-    String(s || fallback)
-      .replace(/<\/?mark>/gi, '')
-      .replace(/\s+/g, ' ')
-      .replace(/\s+,/g, ',')
-      .replace(/,\s*$/g, '')
-      .trim()
-  );
+const DANGLE =
+  /(?:\s+(?:a|an|the|and|or|but|nor|not|so|for|with|to|of|in|on|at|by|from|as|than|then|if|when|because)|,|;|:)\s*$/i;
+const cleanWords = (s) =>
+  String(s || '')
+    .replace(/<\/?mark>/gi, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s+,/g, ',')
+    .replace(/\s+([.!?])/g, '$1')
+    .trim();
+const completePhrase = (s) => {
+  let t = cleanWords(s).replace(/[,\s]+$/g, '').trim();
+  while (t && DANGLE.test(t)) t = t.replace(DANGLE, '').trim();
+  return t;
+};
+const plainHeading = (s, fallback = '') => {
+  const cleaned = completePhrase(s);
+  const chosen = cleaned.length >= 3 ? cleaned : completePhrase(fallback);
+  return esc(chosen);
+};
 
 const required = ['slug', 'name', 'city', 'tokens', 'fonts', 'hero'];
 for (const key of required) {
@@ -106,35 +116,30 @@ const capSentence = (s) => {
   if (!t) return '';
   return t.charAt(0).toUpperCase() + t.slice(1);
 };
+const supportingCopy = () => {
+  const bits = [`${brief.name} in ${brief.city}.`];
+  if (brief.phone) bits.push(`Call ${brief.phone}.`);
+  else if (brief.url) bits.push('Open the official site for details.');
+  return bits.join(' ');
+};
 const cardCopy = (item) => {
   if (item && typeof item === 'object' && !Array.isArray(item)) {
-    const title = String(item.title || item.heading || '').trim();
+    const title = completePhrase(item.title || item.heading || '');
     const text = String(item.text || item.body || '').trim();
     if (title && text) return { title, text };
-    if (title) return cardCopy(title);
+    if (title) return { title, text: supportingCopy() };
     if (text) return cardCopy(text);
   }
-  const raw = String(item || '').trim();
+  const raw = cleanWords(item);
   if (!raw) return { title: '', text: '' };
   const two = raw.match(/^(.+?[.!?])\s+(.+)$/s);
   if (two && two[2].trim().length > 8) {
-    return { title: two[1].replace(/[.!?]+$/, '').trim(), text: capSentence(two[2]) };
-  }
-  const comma = raw.indexOf(', ');
-  if (comma >= 12 && raw.length - comma > 20) {
-    return { title: raw.slice(0, comma).replace(/[.!?]+$/, '').trim(), text: capSentence(raw.slice(comma + 2)) };
-  }
-  for (const sep of [' so ', ' because ', ' when ', ' with ', ' for ']) {
-    const i = raw.indexOf(sep);
-    if (i >= 16 && raw.length - i > 16) {
-      return { title: raw.slice(0, i).replace(/[.!?]+$/, '').trim(), text: capSentence(raw.slice(i + sep.length)) };
+    const title = completePhrase(two[1].replace(/[.!?]+$/, ''));
+    if (title.length >= 8 && !DANGLE.test(title)) {
+      return { title, text: capSentence(two[2]) };
     }
   }
-  const words = raw.replace(/[.!?]+$/, '').split(/\s+/);
-  if (words.length > 8) {
-    return { title: words.slice(0, 6).join(' '), text: capSentence(words.slice(6).join(' ')) };
-  }
-  return { title: raw.replace(/[.!?]+$/, ''), text: raw };
+  return { title: completePhrase(raw.replace(/[.!?]+$/, '')), text: supportingCopy() };
 };
 const catalogBlurb = (item) => {
   if (item && item.text) return String(item.text).trim();
@@ -221,7 +226,7 @@ const builders = {
     const cards = d.items
       .map((item, i) => {
         const blurb = catalogBlurb(item);
-        return `<article class="catalog-card reveal delay-${(i % 3) + 1}">${figure(item.imageIndex || 9 + i)}<h3>${esc(item.title)}</h3>${blurb ? `<p>${esc(blurb)}</p>` : ''}<a href="${esc(item.href)}">Explore \u2197</a></article>`;
+        return `<article class="catalog-card reveal delay-${(i % 3) + 1}">${figure(item.imageIndex || 9 + i)}<h3>${esc(completePhrase(item.title))}</h3>${blurb ? `<p>${esc(blurb)}</p>` : ''}<a href="${esc(item.href)}">Explore \u2197</a></article>`;
       })
       .join('');
     return `<section class="catalog ${pickSurface(d.surface || 'deep')} vanish-out"><header class="section-head reveal"><h2>${plainHeading(d.heading, 'More ways into the experience.')}</h2></header><div class="catalog-grid">${cards}</div></section>`;
@@ -259,12 +264,12 @@ const builders = {
     return `<section class="contact-system ${pickSurface(d.surface || 'panel')} vanish-out" id="visit"><div class="section-kicker">Visit and contact</div><div class="contact-intro reveal"><h2>${plainHeading(d.heading, 'Make the next visit easy.')}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div>${mapFrame}</section>`;
   },
   closing(d) {
-    const lead = d.sub || brief.description || '';
+    const tag = d.kicker || brief.city || '';
     const mark =
       brief.logo === false
         ? `<span class="logo-outro-wordmark">${esc(brief.name)}</span>`
         : `<img class="logo-outro-mark" src="assets/logo.png" alt="${esc(brief.name)}" width="1000" height="906" loading="lazy">`;
-    return `<section class="closing logo-outro surface-paper" aria-label="${esc(brief.name)} logo">${sectionKicker(d.kicker || brief.city)}<div class="ink-reveal reveal">${mark}</div>${lead ? `<p class="closing-lead">${esc(lead)}</p>` : ''}${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
+    return `<section class="closing logo-outro surface-paper" aria-label="${esc(brief.name)} logo"><div class="ink-reveal reveal">${mark}</div>${tag ? `<p class="logo-outro-tag">${esc(tag)}</p>` : ''}${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
   },
 };
 
@@ -345,7 +350,7 @@ const mobileBar = `<nav class="bottom-dock mobile-action" aria-label="Page"><div
 const attitude = inferAttitude(brief);
 const skinCss = buildSkinCss(brief);
 
-const revealScript = `(()=>{const header=document.querySelector('.site-header');const well=document.querySelector('[data-ink-logo]');const canvas=well&&well.querySelector('canvas');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const nodes=[...document.querySelectorAll('.reveal')];const vanish=[...document.querySelectorAll('.vanish-out')];const reveal=node=>node.classList.add('visible','in-view');const show=()=>nodes.forEach(reveal);const revealPassed=()=>nodes.forEach(node=>{if(!node.classList.contains('visible')&&node.getBoundingClientRect().top<innerHeight*1.08)reveal(node)});if(!('IntersectionObserver' in window)){show()}else{const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -6% 0px'});nodes.forEach(node=>observer.observe(node));const leave=new IntersectionObserver(entries=>entries.forEach(entry=>{entry.target.classList.toggle('is-leaving',!entry.isIntersecting&&entry.boundingClientRect.bottom<0)}),{threshold:0});vanish.forEach(node=>leave.observe(node))}let inked=false,parts=[],raf=0;const burst=()=>{if(!canvas||reduce)return;const ctx=canvas.getContext('2d');if(!ctx)return;const dpr=Math.min(2,window.devicePixelRatio||1);const css=240;canvas.width=css*dpr;canvas.height=css*dpr;const w=canvas.width,h=canvas.height;const cs=well?getComputedStyle(well):null;const accent=(cs&&cs.getPropertyValue('--accent').trim())||'#fff';const accent2=(cs&&cs.getPropertyValue('--accent2').trim())||'#ffe08a';const colors=['#fff',accent,accent2,'#ffe9a8'];parts=[];for(let i=0;i<110;i++){const a=Math.random()*Math.PI*2,s=(1.4+Math.random()*6.2)*dpr;parts.push({x:w/2,y:h/2,vx:Math.cos(a)*s,vy:Math.sin(a)*s-1.4*dpr,life:1,r:(2.8+Math.random()*6.5)*dpr,color:colors[i%colors.length]})}const tick=()=>{ctx.clearRect(0,0,w,h);parts=parts.filter(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.045*dpr;p.life-=0.012;if(p.life<=0)return false;ctx.globalAlpha=Math.max(0,p.life);ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();return true});if(parts.length)raf=requestAnimationFrame(tick);else ctx.clearRect(0,0,w,h)};cancelAnimationFrame(raf);tick()};const setInk=()=>{const on=scrollY>28;if(header){header.classList.toggle('is-scrolled',scrollY>12);if(!reduce)header.classList.toggle('logo-sent',on)}if(well){well.classList.toggle('is-inked',reduce||on);if(on&&!inked)burst();if(!on)inked=false;else inked=true}};let scheduled=false;const onScroll=()=>{if(!scheduled){scheduled=true;requestAnimationFrame(()=>{revealPassed();setInk();scheduled=false})}};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',revealPassed,{passive:true});addEventListener('pageshow',()=>requestAnimationFrame(()=>{revealPassed();setInk()}));setInk();revealPassed();const rail=document.querySelector('[data-filmstrip]');if(rail&&!reduce){let paused=false,dir=1;const pause=()=>{paused=true};const resume=()=>{paused=false};rail.addEventListener('pointerenter',pause);rail.addEventListener('pointerleave',resume);rail.addEventListener('focusin',pause);rail.addEventListener('focusout',resume);rail.addEventListener('touchstart',pause,{passive:true});const drift=()=>{if(!paused){rail.scrollLeft+=dir*0.55;if(rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-2)dir=-1;if(rail.scrollLeft<=0)dir=1}requestAnimationFrame(drift)};requestAnimationFrame(drift)}})();`;
+const revealScript = `(()=>{const header=document.querySelector('.site-header');const well=document.querySelector('[data-ink-logo]');const canvas=well&&well.querySelector('canvas');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const nodes=[...document.querySelectorAll('.reveal')];const vanish=[...document.querySelectorAll('.vanish-out')];const reveal=node=>node.classList.add('visible','in-view');const show=()=>nodes.forEach(reveal);const revealPassed=()=>nodes.forEach(node=>{if(!node.classList.contains('visible')&&node.getBoundingClientRect().top<innerHeight*1.08)reveal(node)});if(!('IntersectionObserver' in window)){show()}else{const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});nodes.forEach(node=>observer.observe(node));const leave=new IntersectionObserver(entries=>entries.forEach(entry=>{entry.target.classList.toggle('is-leaving',!entry.isIntersecting&&entry.boundingClientRect.bottom<0)}),{threshold:0});vanish.forEach(node=>leave.observe(node))}let inked=false,parts=[],raf=0;const burst=()=>{if(!canvas||reduce)return;const ctx=canvas.getContext('2d');if(!ctx)return;const dpr=Math.min(2,window.devicePixelRatio||1);const css=240;canvas.width=css*dpr;canvas.height=css*dpr;const w=canvas.width,h=canvas.height;const cs=well?getComputedStyle(well):null;const accent=(cs&&cs.getPropertyValue('--accent').trim())||'#fff';const accent2=(cs&&cs.getPropertyValue('--accent2').trim())||'#ffe08a';const colors=['#fff',accent,accent2,'#ffe9a8'];parts=[];for(let i=0;i<110;i++){const a=Math.random()*Math.PI*2,s=(1.4+Math.random()*6.2)*dpr;parts.push({x:w/2,y:h/2,vx:Math.cos(a)*s,vy:Math.sin(a)*s-1.4*dpr,life:1,r:(2.8+Math.random()*6.5)*dpr,color:colors[i%colors.length]})}const tick=()=>{ctx.clearRect(0,0,w,h);parts=parts.filter(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.045*dpr;p.life-=0.012;if(p.life<=0)return false;ctx.globalAlpha=Math.max(0,p.life);ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();return true});if(parts.length)raf=requestAnimationFrame(tick);else ctx.clearRect(0,0,w,h)};cancelAnimationFrame(raf);tick()};const setInk=()=>{const on=scrollY>28;if(header){header.classList.toggle('is-scrolled',scrollY>12);if(!reduce)header.classList.toggle('logo-sent',on)}if(well){well.classList.toggle('is-inked',reduce||on);if(on&&!inked)burst();if(!on)inked=false;else inked=true}};let scheduled=false;const onScroll=()=>{if(!scheduled){scheduled=true;requestAnimationFrame(()=>{revealPassed();setInk();scheduled=false})}};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',revealPassed,{passive:true});addEventListener('pageshow',()=>requestAnimationFrame(()=>{revealPassed();setInk()}));setInk();revealPassed();const rail=document.querySelector('[data-filmstrip]');if(rail&&!reduce){let paused=false,dir=1;const pause=()=>{paused=true};const resume=()=>{paused=false};rail.addEventListener('pointerenter',pause);rail.addEventListener('pointerleave',resume);rail.addEventListener('focusin',pause);rail.addEventListener('focusout',resume);rail.addEventListener('touchstart',pause,{passive:true});const drift=()=>{if(!paused){rail.scrollLeft+=dir*0.55;if(rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-2)dir=-1;if(rail.scrollLeft<=0)dir=1}requestAnimationFrame(drift)};requestAnimationFrame(drift)}})();`;
 
 const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${noindex}<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script><title>${esc(brief.name)} | ${esc(brief.city)}</title><meta name="description" content="${esc(brief.description || '')}"><meta name="theme-color" content="${t.deep}"><meta name="generator" content="momentum-site-factory"><meta name="attitude" content="${esc(attitude)}"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?${fontFamilies}&display=swap" rel="stylesheet"><script type="application/ld+json">${jsonLd}</script><style>
 ${rootBlock}

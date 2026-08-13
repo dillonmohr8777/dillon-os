@@ -83,7 +83,7 @@ function buildSkinCss(brief) {
 .slug-${slug} .hero .eyebrow,.slug-${slug} .hero h1,.slug-${slug} .hero-copy>p{color:var(--on-deep)}
 .slug-${slug} .hero-media figure{border:1px solid color-mix(in srgb,var(--accent2) 55%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 40%,transparent),0 25px 80px color-mix(in srgb,var(--accent) 35%,transparent)}
 .slug-${slug} .offering-card,.slug-${slug} .contact-card{background:color-mix(in srgb,var(--deep) 55%,transparent);color:var(--on-deep);border-color:color-mix(in srgb,var(--accent2) 40%,transparent)}
-.slug-${slug} .marquee-strip{background:var(--accent);color:var(--on-accent);text-shadow:0 0 18px color-mix(in srgb,var(--on-accent) 35%,transparent)}
+.slug-${slug} .marquee-strip{background:var(--accent);color:var(--on-accent)}
 `,
   };
 

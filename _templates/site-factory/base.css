@@ -14,6 +14,7 @@ a{color:inherit;text-decoration-thickness:from-font}
   --glass-blur:22px;
   --glass-alpha:.4;
   --liquid:color-mix(in srgb,var(--paper) 55%,transparent);
+  --ease-ink:cubic-bezier(.17,.4,.02,.99);
 }
 
 /* ----- chrome ----- */
@@ -305,26 +306,27 @@ figcaption{
 }
 .map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
-.closing{text-align:center;padding-block:clamp(110px,16vw,200px)}
-.closing-lead{margin:0 auto 36px;max-width:28ch}
-.closing .button{margin:auto}
+.closing{text-align:center;padding-block:clamp(112px,18vw,200px);overflow:hidden}
+.closing .button{margin:28px auto 0}
 .logo-outro .ink-reveal{
-  width:min(100%,560px);margin:0 auto 28px;
-  background:var(--paper);padding:clamp(24px,4vw,48px);border-radius:var(--radius);
+  width:min(100%,560px);margin:0 auto;
 }
 .logo-outro .logo-outro-mark,
 .logo-outro .logo-outro-wordmark{
-  display:block;width:100%;height:auto;max-height:min(70vw,520px);object-fit:contain;margin-inline:auto;
+  display:block;width:100%;height:auto;object-fit:contain;margin-inline:auto;
 }
 .logo-outro-wordmark{
   font-family:var(--display);font-size:clamp(2.6rem,8vw,5.8rem);font-weight:800;letter-spacing:-.06em;line-height:.9;
+}
+.logo-outro-tag{
+  margin:32px auto 0;font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.62;
 }
 .js .logo-outro .ink-reveal.reveal{opacity:1;transform:none;filter:none}
 .js .logo-outro .ink-reveal img,
 .js .logo-outro .ink-reveal .logo-outro-wordmark{
   opacity:0;transform:scale(1.06);
   filter:blur(26px) contrast(2.4) saturate(.3);
-  transition:opacity 1.4s ease-out,transform 2.1s cubic-bezier(.2,.75,.2,1),filter 2.3s ease-out;
+  transition:opacity 1.4s ease-out,transform 2.1s var(--ease-ink),filter 2.3s ease-out;
   will-change:filter,opacity,transform;
 }
 .js .logo-outro .ink-reveal.visible img,

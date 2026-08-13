@@ -22,7 +22,7 @@ describe('attitude skins', () => {
     const neon = buildSkinCss({ slug: 'c', attitude: 'neon', fonts: { display: 'X' } });
     assert.match(glass, /--glass-blur:28px/);
     assert.match(brutal, /border-radius:0/);
-    assert.match(neon, /text-shadow/);
+    assert.match(neon, /linear-gradient\(160deg,var\(--deep\)/);
     assert.notEqual(glass, brutal);
     assert.notEqual(brutal, neon);
   });

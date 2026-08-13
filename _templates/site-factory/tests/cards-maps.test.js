@@ -74,6 +74,40 @@ describe('filled cards, unique images, embedded map', () => {
     assert.match(built.html, /<h2>Five shops, one standard\.<\/h2>/);
     assert.match(built.html, /class="ink-reveal reveal"/);
     assert.match(built.html, /logo-outro-wordmark/);
+    assert.match(built.html, /logo-outro-tag/);
     assert.doesNotMatch(built.html, /<h2>[^<]*,\s*<\/h2>/);
+  });
+
+  it('never splits a heading on a comma or mid-phrase', () => {
+    const built = buildSite(
+      passingBrief({
+        slug: 'comma-head-co',
+        name: 'Comma Head Co',
+        offerings: {
+          heading: 'Dentistry for all ages.',
+          items: [
+            'Follow-up is a real person, not a portal maze.',
+            'Family exams and cleanings so kids, parents, and grandparents share one office.',
+            'A comfort-first chairside manner the reviews keep naming by name.',
+          ],
+        },
+        experience: {
+          heading: 'What a visit actually feels like.',
+          items: [
+            'You call or schedule online. The front desk is the first proof they mean comfort.',
+            'Treatment is explained in plain language before anything starts.',
+            'Follow-up is a real person, not a portal maze.',
+          ],
+        },
+      }),
+      '/tmp/comma-head-test'
+    );
+    assert.match(built.html, /<h3>Follow-up is a real person, not a portal maze<\/h3>/);
+    assert.match(built.html, /<h3>Family exams and cleanings so kids, parents, and grandparents share one office<\/h3>/);
+    assert.match(built.html, /<h3>A comfort-first chairside manner the reviews keep naming by name<\/h3>/);
+    assert.match(built.html, /<h3>You call or schedule online<\/h3>/);
+    assert.doesNotMatch(built.html, /<h3>Follow-up is a real person, not<\/h3>/);
+    assert.doesNotMatch(built.html, /<h3>Family exams and cleanings so kids<\/h3>/);
+    assert.doesNotMatch(built.html, /<h3>A comfort-first chairside manner the reviews<\/h3>/);
   });
 });

@@ -74,7 +74,13 @@ async function runQa(siteDir, opts = {}) {
   }
 
   if (/<mark[\s>]/.test(html)) failures.push('Highlighted mark tags are not allowed');
+  if (/mark\s*\{/.test(html)) failures.push('Highlighted mark styles are not allowed');
   if (!/class="ink-reveal/.test(html)) failures.push('Missing ink-reveal logo outro');
+  const danglingHead = /(?:\s+(?:a|an|the|and|or|but|nor|not|so|for|with|to|of|in|on|at|by|from)|,)\s*$/i;
+  [...html.matchAll(/<h([1-3])[^>]*>([\s\S]*?)<\/h\1>/gi)].forEach((m) => {
+    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (danglingHead.test(text)) failures.push(`Incomplete heading: "${text}"`);
+  });
 
   const imgSrcs = [...html.matchAll(/<img[^>]*src="(assets\/image-[^"]+)"/g)].map((m) => m[1]);
   const seenSrc = new Set();
