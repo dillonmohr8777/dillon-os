@@ -8,6 +8,7 @@ const { hmac } = require('./ids.ts');
 const { validateIntake } = require('./intake.ts');
 const { submitIntake, resolveProspect, funnelView, qaDecision } = require('./pipeline.ts');
 const { loadConfig } = require('./config.ts');
+const { storageAdapter } = require('./reports.ts');
 
 function layout(title, body, { noindex = true } = {}) {
   return `<!doctype html>
@@ -208,8 +209,10 @@ function createServer({ store, adapters, campaign, cfg }) {
         }
         const version = store.get('report_versions', report.current_version_id);
         await store.emitEvent({ actor: 'prospect', type: 'report.viewed', prospectId: report.prospect_id, reason: 'report viewed', payload: { report_id: report.id } });
+        const storage = storageAdapter(config);
+        const html = version ? await storage.get(version.html_ref) : Buffer.from('missing');
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'x-robots-tag': 'noindex, nofollow' });
-        return res.end(version ? require('fs').readFileSync(version.html_ref, 'utf8') : 'missing');
+        return res.end(html);
       }
       if (req.method === 'GET' && url.pathname.startsWith('/cta/')) {
         const tok = url.pathname.slice('/cta/'.length);

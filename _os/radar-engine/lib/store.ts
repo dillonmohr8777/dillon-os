@@ -331,6 +331,19 @@ class PgStore {
       }
     }
   }
+
+  async hydrate() {
+    for (const table of Object.keys(this.memory.tables)) {
+      if (!this.schema[table]) continue;
+      const { rows } = await this.pool.query(`SELECT * FROM ${table}`);
+      this.memory.tables[table] = new Map();
+      for (const row of rows) {
+        const rec = decodeRow(row);
+        if (rec && rec.id) this.memory.tables[table].set(rec.id, rec);
+      }
+    }
+    return this;
+  }
 }
 
 async function migrate(databaseUrl) {
@@ -367,6 +380,7 @@ async function createStore({ databaseUrl } = {}) {
   }
   const store = new PgStore(pool, loadMigrationSchema());
   store.pgReady = true;
+  await store.hydrate();
   return store;
 }
 

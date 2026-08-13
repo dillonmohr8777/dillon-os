@@ -14,14 +14,16 @@ const { buildManifest } = require('../lib/manifest.ts');
 const { checkReport, renderReportHtml } = require('../lib/reports.ts');
 const { processJobs } = require('../lib/jobs.ts');
 const { hmac } = require('../lib/ids.ts');
-const { bookingAdapter } = require('../lib/adapters.ts');
+const { bookingAdapter, captchaAdapter, placesAdapter } = require('../lib/adapters.ts');
 const { listMigrationTables } = require('../lib/store.ts');
 const { loadMigrationSchema, encodeRow, CLAIM_JOB_SQL } = require('../lib/schema.ts');
 const { containsPii } = require('../lib/redact.ts');
 const { validateIntake } = require('../lib/intake.ts');
-const { runVerticalSlice, finishVerticalSlice, funnelView } = require('../lib/pipeline.ts');
+const { runVerticalSlice, finishVerticalSlice, funnelView, createCampaign, submitIntake, resolveProspect } = require('../lib/pipeline.ts');
 const { funnelPage } = require('../lib/web.ts');
 const { loadConfig } = require('../lib/config.ts');
+const { storageAdapter } = require('../lib/reports.ts');
+const { createAdapters } = require('../lib/adapters.ts');
 
 describe('normalization', () => {
   it('normalizes domains, phones, names, and addresses', () => {
@@ -205,6 +207,61 @@ describe('webhooks', () => {
   });
 });
 
+describe('outbound adapters', () => {
+  it('fails Turnstile closed without a live verify flag', async () => {
+    const missing = captchaAdapter({ captcha: 'turnstile', captchaSecret: '' });
+    assert.equal((await missing.verify('tok')).ok, false);
+    const gated = captchaAdapter({ captcha: 'turnstile', captchaSecret: 'secret' });
+    assert.equal((await gated.verify('tok')).state, 'live-verify-disabled');
+  });
+
+  it('skips Places unless RADAR_V2_PLACES_LIVE is on', async () => {
+    const prev = process.env.RADAR_V2_PLACES_LIVE;
+    delete process.env.RADAR_V2_PLACES_LIVE;
+    const skipped = await placesAdapter({ placesApiKey: 'fake' }).lookup({ website: 'https://a.example', business_name: 'A' });
+    assert.equal(skipped.status, 'skipped');
+    const noKey = await placesAdapter({}).lookup({ website: 'https://a.example', business_name: 'A' });
+    assert.equal(noKey.status, 'skipped');
+    if (prev == null) delete process.env.RADAR_V2_PLACES_LIVE;
+    else process.env.RADAR_V2_PLACES_LIVE = prev;
+  });
+
+  it('object storage writes privately and refuses path traversal', async () => {
+    const dir = require('path').join(__dirname, '..', 'artifacts', 'storage-test');
+    const store = storageAdapter({ storage: 'object', storageDir: dir, s3Bucket: 'unused' });
+    const put = await store.put('reports/t.html', '<p>ok</p>', 'text/html');
+    assert.match(put.ref, /^object:\/\//);
+    assert.equal(put.dryRun, true);
+    const got = await store.get(put.ref);
+    assert.match(String(got), /ok/);
+    await assert.rejects(() => store.get('/etc/passwd'));
+  });
+
+  it('does not insert a second identity for the same domain', async () => {
+    const store = new MemoryStore();
+    const adapters = createAdapters(loadConfig());
+    const campaign = await createCampaign(store);
+    const body = {
+      business_name: 'Acme HVAC',
+      website: 'https://acmehvac.example',
+      city_state: 'Hatboro, PA',
+      requester_name: 'Pat',
+      role: 'owner',
+      requester_email: 'pat@acmehvac.example',
+      primary_services: 'hvac',
+      growth_goals: 'leads',
+      current_channels: 'none',
+      consent_analyze: true,
+    };
+    const first = await submitIntake(store, adapters, loadConfig(), campaign, body);
+    await resolveProspect(store, campaign, first.submission);
+    const second = await submitIntake(store, adapters, loadConfig(), campaign, body, { ip: '203.0.113.11' });
+    await resolveProspect(store, campaign, second.submission);
+    const ids = store.find('prospect_identities', (i) => i.kind === 'domain' && i.value_normalized === 'acmehvac.example');
+    assert.equal(ids.length, 1);
+  });
+});
+
 describe('intake validation', () => {
   it('requires analyze consent and does not treat it as marketing consent', () => {
     const missing = validateIntake({
@@ -250,8 +307,8 @@ describe('migrations', () => {
       allowed_offers: ['rebuild', 'seo_aeo'],
       provenance: { actor: 'test' },
     });
-    assert.equal(typeof encoded.geography, 'object');
-    assert.equal(encoded.geography.market, 'PHL');
+    assert.equal(typeof encoded.geography, 'string');
+    assert.equal(JSON.parse(encoded.geography).market, 'PHL');
     assert.deepEqual(encoded.allowed_offers, ['rebuild', 'seo_aeo']);
     assert.match(CLAIM_JOB_SQL, /FOR UPDATE SKIP LOCKED/);
   });
@@ -259,7 +316,7 @@ describe('migrations', () => {
 
 describe('vertical slice', () => {
   it('runs a fictional fixture from intake through won without live outbound', async () => {
-    const result = await runVerticalSlice({ fixtureName: 'cedar-ridge-hvac', reviewer: 'qa.reviewer' });
+    const result = await runVerticalSlice({ fixtureName: 'cedar-ridge-hvac', reviewer: 'qa.reviewer', configOverrides: { databaseUrl: '' } });
     assert.equal(result.prospect.lifecycle, 'won');
     assert.equal(result.offer.offer, 'rebuild');
     assert.ok((result.snapshot.components.site_quality.hard_faults || []).length > 0);
@@ -289,7 +346,7 @@ describe('vertical slice', () => {
   });
 
   it('pauses at qa_pending so human review can happen before won', async () => {
-    const paused = await runVerticalSlice({ fixtureName: 'cedar-ridge-hvac', reviewer: 'qa.reviewer', pauseAt: 'qa_pending' });
+    const paused = await runVerticalSlice({ fixtureName: 'cedar-ridge-hvac', reviewer: 'qa.reviewer', pauseAt: 'qa_pending', configOverrides: { databaseUrl: '' } });
     assert.equal(paused.prospect.lifecycle, 'qa_pending');
     assert.equal(paused.offer.offer, 'rebuild');
     const finished = await finishVerticalSlice(paused);

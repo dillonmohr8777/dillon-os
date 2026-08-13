@@ -122,14 +122,17 @@ async function resolveProspect(store, campaign, submission, { actor = 'system', 
     source_record_id: submission.id,
     payload: { channel: 'self-serve' },
   });
-  store.insert('prospect_identities', {
-    id: id('identity'),
-    prospect_id: prospect.id,
-    kind: 'domain',
-    value_normalized: domain,
-    value_display: prospect.website,
-    confidence: 0.99,
-  });
+  const ident = store.findOne('prospect_identities', (i) => i.kind === 'domain' && i.value_normalized === domain);
+  if (!ident) {
+    store.insert('prospect_identities', {
+      id: id('identity'),
+      prospect_id: prospect.id,
+      kind: 'domain',
+      value_normalized: domain,
+      value_display: prospect.website,
+      confidence: 0.99,
+    });
+  }
   if (!existing) {
     await store.transition(prospect.id, 'deduped', { actor, reason: 'intake identity resolved', correlationId: prospect.correlation_id });
   }
@@ -143,14 +146,27 @@ async function resolveProspect(store, campaign, submission, { actor = 'system', 
   return { prospect: store.get('prospects', prospect.id), suppression };
 }
 
-async function runScan(store, cfg, prospect, fixture) {
+async function runScan(store, cfg, prospect, fixture, adapters) {
   await store.transition(prospect.id, 'scanning', { actor: 'scanner', reason: 'audit run started', correlationId: prospect.correlation_id });
   await store.emitEvent({ actor: 'scanner', type: 'scan.started', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'scan started' });
+  let places = fixture.meta.places || null;
+  if (!places && adapters && adapters.places) {
+    const looked = await adapters.places.lookup(prospect);
+    if (looked.status === 'ok') {
+      places = {
+        id: looked.place_id,
+        rating: looked.rating,
+        userRatingCount: looked.review_count,
+        businessStatus: looked.business_status,
+        displayName: looked.matched_name,
+      };
+    }
+  }
   const scanned = scanFixture({
     html: fixture.html,
     url: prospect.website,
     prospect,
-    places: fixture.meta.places || null,
+    places,
   });
   const run = store.insert('audit_runs', {
     id: id('audit'),
@@ -558,7 +574,7 @@ async function runVerticalSlice({ fixtureName = 'cedar-ridge-hvac', reviewer = '
     if (!intake.ok) throw new Error(intake.errors.join('; '));
     const resolved = await resolveProspect(store, campaign, intake.submission);
     if (resolved.suppression.suppressed) throw new Error(`suppressed: ${resolved.suppression.reason}`);
-    const scanned = await runScan(store, cfg, resolved.prospect, fixture);
+    const scanned = await runScan(store, cfg, resolved.prospect, fixture, adapters);
     const scored = await scoreAndRoute(store, cfg, campaign, resolved.prospect, scanned.run, scanned.evidence, { ...scanned.scanned, prospect: { ...resolved.prospect, ...fixture.meta.signals } });
     const prospect = store.get('prospects', resolved.prospect.id);
     const report = await generateReport(store, cfg, prospect, scanned.run, scored.snapshot, scored.snapshotIn, scanned.evidence, scored.routed.offer);

@@ -9,21 +9,55 @@ const { paraphraseAllowed } = require('./claims.ts');
 const { safePathJoin } = require('./ssrf.ts');
 const { token } = require('./ids.ts');
 
+function loadPlaywright() {
+  try {
+    return require('playwright');
+  } catch {
+    try {
+      return require(path.join(__dirname, '..', 'node_modules', 'playwright'));
+    } catch {
+      return null;
+    }
+  }
+}
+
 function storageAdapter(cfg) {
   const root = cfg.storageDir;
+  const kind = cfg.storage || 'fs';
+  const liveObject = kind === 'object' && cfg.s3Bucket && process.env.AWS_ACCESS_KEY_ID && process.env.RADAR_V2_OBJECT_LIVE === 'true';
   return {
-    kind: cfg.storage || 'fs',
+    kind: liveObject ? 'object-live-blocked' : kind,
     async put(rel, bytes, contentType = 'application/octet-stream') {
-      if (cfg.storage === 'object') {
-        return { ref: `object://${rel}`, contentType, note: 'object storage interface only' };
-      }
       const abs = safePathJoin(root, rel);
       fs.mkdirSync(path.dirname(abs), { recursive: true });
       fs.writeFileSync(abs, bytes);
+      if (kind === 'object') {
+        return {
+          ref: `object://${rel}`,
+          contentType,
+          path: abs,
+          dryRun: !liveObject,
+          note: liveObject
+            ? 'live object put is blocked until a provider is approved'
+            : 'object adapter writes the private filesystem; S3 stays off',
+        };
+      }
       return { ref: abs, contentType };
     },
     async get(ref) {
-      return fs.readFileSync(ref);
+      if (!ref) throw new Error('missing storage ref');
+      if (String(ref).startsWith('object://')) {
+        const rel = String(ref).slice('object://'.length);
+        return fs.readFileSync(safePathJoin(root, rel));
+      }
+      const abs = path.resolve(String(ref));
+      const allowed = [
+        path.resolve(root),
+        path.resolve(__dirname, '..', 'artifacts'),
+      ];
+      const ok = allowed.some((base) => abs === base || abs.startsWith(base + path.sep));
+      if (!ok) throw new Error('storage get refused outside storage root');
+      return fs.readFileSync(abs);
     },
   };
 }
@@ -197,16 +231,8 @@ function checkReport(html, manifest) {
 }
 
 async function renderPdf(html, outPath) {
-  let playwright;
-  try {
-    playwright = require('playwright');
-  } catch {
-    try {
-      playwright = require(path.join(__dirname, '..', 'node_modules', 'playwright'));
-    } catch {
-      return { ok: false, reason: 'playwright not installed', path: null };
-    }
-  }
+  const playwright = loadPlaywright();
+  if (!playwright) return { ok: false, reason: 'playwright not installed', path: null };
   const browser = await playwright.chromium.launch({
     executablePath: process.env.PLAYWRIGHT_CHROMIUM_PATH || undefined,
     headless: true,
@@ -227,16 +253,8 @@ async function renderPdf(html, outPath) {
 }
 
 async function visualCheck(html) {
-  let playwright;
-  try {
-    playwright = require('playwright');
-  } catch {
-    try {
-      playwright = require(path.join(__dirname, '..', 'node_modules', 'playwright'));
-    } catch {
-      return { ok: false, reason: 'playwright not installed', shots: [] };
-    }
-  }
+  const playwright = loadPlaywright();
+  if (!playwright) return { ok: false, reason: 'playwright not installed', shots: [] };
   const browser = await playwright.chromium.launch({ headless: true });
   const shots = [];
   try {
@@ -256,6 +274,7 @@ async function visualCheck(html) {
 
 module.exports = {
   storageAdapter,
+  loadPlaywright,
   renderReportHtml,
   checkReport,
   renderPdf,

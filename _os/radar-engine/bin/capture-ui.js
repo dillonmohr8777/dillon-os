@@ -6,7 +6,7 @@ const path = require('path');
 const { runVerticalSlice, finishVerticalSlice } = require('../lib/pipeline.ts');
 const { createServer } = require('../lib/web.ts');
 const { createAdapters } = require('../lib/adapters.ts');
-const { renderPdf } = require('../lib/reports.ts');
+const { renderPdf, loadPlaywright } = require('../lib/reports.ts');
 
 async function shot(page, file) {
   await page.screenshot({ path: file, fullPage: true });
@@ -23,7 +23,8 @@ async function main() {
   const pdfPath = path.join(outDir, 'report.pdf');
   const pdf = await renderPdf(paused.report.html, pdfPath);
 
-  const playwright = require('playwright');
+  const playwright = loadPlaywright();
+  if (!playwright) throw new Error('playwright not installed');
   const browser = await playwright.chromium.launch({ headless: true });
   const cfg = { ...paused.cfg, qaToken: 'qa-test-token', port: 4344 };
   const adapters = createAdapters(cfg);

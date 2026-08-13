@@ -14,7 +14,9 @@ Engine: `_os/radar-engine/`. Setup: `_os/radar-engine/README.md`. Decision:
 [[12_Brain/decisions/2026-08-13 - Prospect Radar V2 audit engine]].
 
 Durable private state is PostgreSQL when `DATABASE_URL` is set. Jobs claim with
-`FOR UPDATE SKIP LOCKED`. Outbound adapters stay dry-run. Human QA is mandatory.
+`FOR UPDATE SKIP LOCKED`. Stores hydrate on boot. Object storage writes the
+private filesystem; live S3/Places/Turnstile/CRM stay off until an explicit
+live flag is set. Outbound adapters stay dry-run. Human QA is mandatory.
 
 Existing radar (preserve): `_os/automation/lib/radar.js`, `site-audit.js`,
 `site-grader.js`, `opportunity.js`, `places.js`, `contacts.js`,

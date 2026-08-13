@@ -1,8 +1,12 @@
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
 const { outboundBlocked } = require('./config.ts');
 const { redactText } = require('./redact.ts');
 const { hmac } = require('./ids.ts');
+const { enrichProspect } = require('../../automation/lib/places');
+const { safePathJoin } = require('./ssrf.ts');
 
 function captchaAdapter(cfg) {
   const mode = cfg.captcha || 'off';
@@ -13,7 +17,29 @@ function captchaAdapter(cfg) {
       if (mode === 'dry-run') {
         return { ok: Boolean(token), state: token ? 'dry-run-accepted' : 'missing' };
       }
+      if (mode === 'turnstile') {
+        if (!cfg.captchaSecret) return { ok: false, state: 'provider-not-configured' };
+        if (!token) return { ok: false, state: 'missing' };
+        if (process.env.RADAR_V2_CAPTCHA_LIVE !== 'true') {
+          return { ok: false, state: 'live-verify-disabled' };
+        }
+        return { ok: false, state: 'live-verify-not-implemented', reason: 'Turnstile siteverify is not enabled in v1' };
+      }
       return { ok: false, state: 'provider-not-configured' };
+    },
+  };
+}
+
+function placesAdapter(cfg) {
+  return {
+    name: 'places',
+    async lookup(prospect, opts = {}) {
+      const key = cfg.placesApiKey || process.env.GOOGLE_PLACES_API_KEY || '';
+      if (!key) return { status: 'skipped', reason: 'no GOOGLE_PLACES_API_KEY set' };
+      if (process.env.RADAR_V2_PLACES_LIVE !== 'true') {
+        return { status: 'skipped', reason: 'Places live lookup disabled until RADAR_V2_PLACES_LIVE=true' };
+      }
+      return enrichProspect(prospect, { apiKey: key, fetchImpl: opts.fetchImpl });
     },
   };
 }
@@ -64,10 +90,14 @@ function crmAdapter(cfg) {
     async handoff(payload) {
       const gate = outboundBlocked(cfg, 'crm');
       const preview = JSON.parse(redactText(JSON.stringify(payload)));
+      const rel = `crm-previews/${Date.now()}-${Math.random().toString(16).slice(2)}.json`;
+      const abs = safePathJoin(cfg.storageDir, rel);
+      fs.mkdirSync(path.dirname(abs), { recursive: true });
+      fs.writeFileSync(abs, JSON.stringify({ dryRun: true, liveWrite: false, preview }, null, 2));
       if (gate.blocked) {
-        return { written: false, dryRun: true, liveWrite: false, reason: gate.reason, preview };
+        return { written: false, dryRun: true, liveWrite: false, reason: gate.reason, preview, previewRef: abs };
       }
-      return { written: false, dryRun: true, liveWrite: false, reason: 'live CRM write requires a separate approval', preview };
+      return { written: false, dryRun: true, liveWrite: false, reason: 'live CRM write requires a separate approval', preview, previewRef: abs };
     },
   };
 }
@@ -95,6 +125,7 @@ function bookingAdapter(cfg) {
 function createAdapters(cfg) {
   return {
     captcha: captchaAdapter(cfg),
+    places: placesAdapter(cfg),
     enrichment: enrichmentAdapter(),
     emailVerify: emailVerifyAdapter(),
     email: emailDeliveryAdapter(cfg),
@@ -107,6 +138,7 @@ function createAdapters(cfg) {
 module.exports = {
   createAdapters,
   captchaAdapter,
+  placesAdapter,
   crmAdapter,
   bookingAdapter,
 };

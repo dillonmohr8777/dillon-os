@@ -39,11 +39,16 @@ function encodeValue(tableMeta, col, value) {
   if (value === undefined) return undefined;
   if (value instanceof Date) return value.toISOString();
   if (tableMeta.jsonb.has(col)) {
-    if (value == null) return {};
+    if (value == null) return JSON.stringify({});
     if (typeof value === 'string') {
-      try { return JSON.parse(value); } catch { return { raw: value }; }
+      try {
+        JSON.parse(value);
+        return value;
+      } catch {
+        return JSON.stringify({ raw: value });
+      }
     }
-    return value;
+    return JSON.stringify(value);
   }
   if (tableMeta.arrays.has(col)) {
     if (value == null) return [];
