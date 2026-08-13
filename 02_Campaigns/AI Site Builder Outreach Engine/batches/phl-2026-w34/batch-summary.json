@@ -1,0 +1,389 @@
+{
+  "batchId": "phl-2026-w34",
+  "targetCount": 25,
+  "briefCount": 25,
+  "allowPartial": false,
+  "skipQa": true,
+  "forceHoldAll": false,
+  "batchFailures": [],
+  "qaReadyCount": 0,
+  "mailReadyAlwaysHold": true,
+  "results": [
+    {
+      "slug": "always-dental-care",
+      "prospectId": "PHL001",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 491,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "auger-manufacturing",
+      "prospectId": "PHL002",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 422,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "barnes-financial-group",
+      "prospectId": "PHL003",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 440,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "be-balanced-hormone",
+      "prospectId": "PHL004",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 486,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "bg-electric",
+      "prospectId": "PHL005",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 476,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "bpm-fitness",
+      "prospectId": "PHL006",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 440,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "chestnut-hill-animal-hospital",
+      "prospectId": "PHL007",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 442,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "colmar-dentistry-for-kids",
+      "prospectId": "PHL008",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 481,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "county-line-veterinary-hospital",
+      "prospectId": "PHL009",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 468,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "dreammaker-bath-kitchen",
+      "prospectId": "PHL010",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 480,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "easy-auto-tag-insurance",
+      "prospectId": "PHL011",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 480,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "eisenberg-rothweiler",
+      "prospectId": "PHL012",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 478,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "fillman-and-sons-floors",
+      "prospectId": "PHL013",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 474,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "glen-eagle-pediatric-dentistry",
+      "prospectId": "PHL014",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 469,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "havercrown-dental",
+      "prospectId": "PHL015",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 400,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "jarman-hvac",
+      "prospectId": "PHL016",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 491,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "live-urgent-care",
+      "prospectId": "PHL017",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 475,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "malvern-vision-care",
+      "prospectId": "PHL018",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 444,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "mcmenamin-margiotti",
+      "prospectId": "PHL019",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 475,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "pennsylvania-dental-group",
+      "prospectId": "PHL020",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 484,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "plastic-surgery-solutions",
+      "prospectId": "PHL021",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 433,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "sciacca-service-center",
+      "prospectId": "PHL022",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 467,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "train-and-nourish",
+      "prospectId": "PHL023",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 427,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "verruni-landscaping",
+      "prospectId": "PHL024",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 458,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    },
+    {
+      "slug": "wynnewood-eyecare",
+      "prospectId": "PHL025",
+      "qa": "STATIC_ONLY",
+      "visualQa": "skipped",
+      "qaReady": "hold",
+      "mailReady": "hold",
+      "sections": 10,
+      "words": 430,
+      "images": 13,
+      "failures": [
+        "visual QA skipped (skipped by caller (--skip-qa / skipVisual)); not a full QA pass"
+      ],
+      "warnings": []
+    }
+  ],
+  "ok": false
+}

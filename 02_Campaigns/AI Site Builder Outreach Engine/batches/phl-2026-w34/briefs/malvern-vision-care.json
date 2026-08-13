@@ -1,0 +1,211 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "attitude": "align",
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#EFEBE0",
+    "ink": "#0A1628",
+    "accent": "#14685C",
+    "accent2": "#F08A32",
+    "panel": "#D4E3DD",
+    "deep": "#0A1628",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.svg",
+      "alt": "Animated Align-teal illustration of optometry work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "malvern-vision-care",
+  "name": "Malvern Vision Care",
+  "city": "Malvern",
+  "category": "Optometry",
+  "vertical": "Health",
+  "url": "https://www.malvernvision.com/",
+  "description": "Optometry in Malvern, Chester County. Eye exams and optical care for people who want the prescription filled by the same office that measured it.",
+  "marquee": [
+    "Malvern",
+    "Chester",
+    "Eye"
+  ],
+  "hero": {
+    "eyebrow": "Malvern | Optometry",
+    "headline": "Vision care in Malvern",
+    "sub": "Malvern Vision Care serves Chester County. The current homepage is not built for a phone. The exam still is.",
+    "ctaPrimary": {
+      "label": "Open the official site",
+      "href": "https://www.malvernvision.com/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Malvern",
+      "sub": "Chester County"
+    }
+  },
+  "offerings": {
+    "heading": "Measure, fit, follow up.",
+    "items": [
+      "Eye exams for the people who already work and live in Malvern.",
+      "Optical dispensing so the pair leaves the same building.",
+      "A follow-up when the first pair is not quite right."
+    ]
+  },
+  "gallery": {
+    "heading": "Lenses, light, a quiet room.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Chester County eyecare",
+    "paragraphs": [
+      "Malvern Vision Care is an optometry practice in Malvern. The radar scored the site as broken: no viewport, a desktop-width page on phones.",
+      "Confirm the street address, phone, and hours on the official site before you drive. Facts we cannot verify stay off this page."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "One office, one prescription.",
+    "items": [
+      "The exam and the frames live in the same conversation.",
+      "You leave with a pair you saw on your own face.",
+      "You can come back when the fit needs a tweak."
+    ]
+  },
+  "feature": {
+    "heading": "The phone page should not fight the exam",
+    "text": "A practice that measures your eyes should not make you pinch-zoom the homepage. That is the rebuild.",
+    "cta": {
+      "label": "Open the site",
+      "href": "https://www.malvernvision.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Malvern and the Main Line edge",
+    "text": "If Malvern is the workday, this is the eyecare stop that does not send you into King of Prussia traffic for a fitting.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.malvernvision.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Exams",
+        "href": "https://www.malvernvision.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Optical",
+        "href": "https://www.malvernvision.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "https://www.malvernvision.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm before you drive.",
+    "sub": "Malvern, Chester County. Pull live address and hours from the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the official site",
+      "href": "https://www.malvernvision.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.malvernvision.com/"
+    }
+  ]
+}

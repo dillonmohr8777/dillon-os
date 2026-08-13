@@ -1,0 +1,217 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "attitude": "align",
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#EFEBE0",
+    "ink": "#0A1628",
+    "accent": "#14685C",
+    "accent2": "#F08A32",
+    "panel": "#D4E3DD",
+    "deep": "#0A1628",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.svg",
+      "alt": "Animated Align-teal illustration of auger and flighting manufacturer work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "auger-manufacturing",
+  "name": "Auger Manufacturing Specialists",
+  "city": "Frazer",
+  "category": "Auger and flighting manufacturer",
+  "vertical": "Industrial",
+  "url": "http://augermfgspec.com/",
+  "phone": "1-610-647-4677",
+  "address": "22A Bacton Hill Rd, Frazer, Pennsylvania 19355",
+  "description": "Auger and spiral flighting manufacturer in Frazer since 1973. Food, pharma, cosmetics, plastics, and chemical tooling, plus repair of worn augers.",
+  "marquee": [
+    "Since",
+    "Frazer",
+    "Flighting"
+  ],
+  "hero": {
+    "eyebrow": "Frazer | Augers since 1973",
+    "headline": "Flighting for the line you already run",
+    "sub": "Auger Manufacturing Specialists builds and repairs augers, conveyor screws, and helicoid flighting from 22A Bacton Hill Rd. Food, pharma, cosmetics, plastics, chemical. Call 1-800-544-1199.",
+    "ctaPrimary": {
+      "label": "Call the shop",
+      "href": "tel:16106474677"
+    },
+    "ctaSecondary": {
+      "label": "Email the shop",
+      "href": "mailto:info@augermfgspec.com"
+    },
+    "glassFloat": {
+      "title": "Since 1973",
+      "sub": "Frazer, PA"
+    }
+  },
+  "offerings": {
+    "heading": "Build new. Repair what still has a shaft.",
+    "items": [
+      "All types, sizes, and lengths of augers and spiral flighting for process industries.",
+      "Repair that straightens shafts, adds flights, and takes out nicks instead of forcing a new buy.",
+      "Vertical auger filler tooling and horizontal feeder augers as the specialty."
+    ]
+  },
+  "gallery": {
+    "heading": "Flighting, shafts, a Chester County floor.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Original manufacturer since 1973",
+    "paragraphs": [
+      "Auger Manufacturing Specialists has been on this work since 1973. The site still mentions PACK EXPO 2020. The shop is still in Frazer.",
+      "22A Bacton Hill Rd, Frazer, PA 19355. USA and Canada 1-800-544-1199."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a job moves.",
+    "items": [
+      "You send the worn auger. They tell you if repair beats a new tool.",
+      "OEM and one-off users sit on the same floor.",
+      "You get a part that matches the filler you already own."
+    ]
+  },
+  "feature": {
+    "heading": "Repair before you scrap the shaft",
+    "text": "The homepage’s own line: frequently they can save you the cost of a new auger by repairing it. Straighten, add flights, take out nicks.",
+    "cta": {
+      "label": "Contact the shop",
+      "href": "http://augermfgspec.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Process industries, one specialty",
+    "text": "Food, chemical, pharmaceutical, cosmetic, plastics.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Call",
+      "href": "tel:18005441199"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "New augers",
+        "href": "http://augermfgspec.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Repair",
+        "href": "http://augermfgspec.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "http://augermfgspec.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the shop.",
+    "sub": "22A Bacton Hill Rd, Frazer. Confirm dock hours before you ship a worn auger."
+  },
+  "closing": {
+    "cta": {
+      "label": "Call the shop",
+      "href": "tel:16106474677"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:16106474677"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:info@augermfgspec.com"
+    }
+  ]
+}

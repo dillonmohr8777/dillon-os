@@ -1,0 +1,221 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "attitude": "align",
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F6F1E4",
+    "ink": "#0A1628",
+    "accent": "#157A6A",
+    "accent2": "#E8832A",
+    "panel": "#D4E3DD",
+    "deep": "#0A1628",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.svg",
+      "alt": "Animated Align-teal illustration of pediatric dentistry work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "glen-eagle-pediatric-dentistry",
+  "name": "Glen Eagle Pediatric Dentistry",
+  "city": "Glen Mills",
+  "category": "Pediatric dentistry",
+  "vertical": "Health",
+  "url": "https://gleneaglepediatricdentistry.com/",
+  "phone": "(484) 639-9066",
+  "address": "589 Wilmington West Chester Pike, Glen Mills, PA 19342",
+  "hours": "Patient visits Tuesday through Thursday, 8am-5pm",
+  "description": "Pediatric dentistry in Glen Mills with Dr. Marc. A dental home for kids across Delaware County, with parents welcome in the room.",
+  "marquee": [
+    "Glen",
+    "Dr.",
+    "Delaware"
+  ],
+  "hero": {
+    "eyebrow": "Glen Mills | Pediatric dentistry",
+    "headline": "We know kids",
+    "sub": "Glen Eagle Pediatric Dentistry treats children of all ages, including kids with different needs. Dr. Marc builds the visit so a nervous four-year-old can look forward to coming back.",
+    "ctaPrimary": {
+      "label": "Call the office",
+      "href": "tel:4846399066"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://gleneaglepediatricdentistry.com/"
+    },
+    "glassFloat": {
+      "title": "Dr. Marc",
+      "sub": "Glen Mills"
+    }
+  },
+  "offerings": {
+    "heading": "A dental home, not a one-off cleaning.",
+    "items": [
+      "Prevention and education for the whole family, with parents welcome in the room.",
+      "Conservative treatment when a child actually needs it.",
+      "A first visit that includes a tour so the rooms feel known."
+    ]
+  },
+  "gallery": {
+    "heading": "A room kids will walk back into.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Meet Dr. Marc",
+    "paragraphs": [
+      "Dr. Marc took a Master of Public Health at West Chester University and a DDS at NYU, then chose pediatric dentistry on purpose. The site says every child deserves a positive dental experience.",
+      "The office is 589 Wilmington West Chester Pike in Glen Mills. Call (484) 639-9066."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How they settle a first visit.",
+    "items": [
+      "A tour of each room before the work starts.",
+      "Parents stay. The reviews keep naming that.",
+      "The plan is explained to the child, not around the child."
+    ]
+  },
+  "feature": {
+    "heading": "Parents in the room, on purpose",
+    "text": "The practice says parents are welcome during appointments. Reviews from Amyan, Melissa, Jess, and Ellie all land on the same point: the staff made a first visit feel like a visit, not a trial.",
+    "cta": {
+      "label": "Read the story",
+      "href": "https://gleneaglepediatricdentistry.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Delaware County, one dental home",
+    "text": "Glen Mills is the chair.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Contact",
+      "href": "https://gleneaglepediatricdentistry.com/contact-us/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Meet Dr. Marc",
+        "href": "https://gleneaglepediatricdentistry.com/",
+        "imageIndex": 9,
+        "text": "Pediatric dentist in Glen Mills."
+      },
+      {
+        "title": "First visit",
+        "href": "https://gleneaglepediatricdentistry.com/",
+        "imageIndex": 10,
+        "text": "Tour the rooms with a parent."
+      },
+      {
+        "title": "Contact",
+        "href": "https://gleneaglepediatricdentistry.com/contact-us/",
+        "imageIndex": 11,
+        "text": "Call before you drive over."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "589 Wilmington West Chester Pike, Glen Mills. Patient visits Tuesday through Thursday."
+  },
+  "closing": {
+    "cta": {
+      "label": "Call the office",
+      "href": "tel:4846399066"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:4846399066"
+    },
+    {
+      "label": "Official site",
+      "href": "https://gleneaglepediatricdentistry.com/"
+    }
+  ]
+}

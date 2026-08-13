@@ -1,7 +1,7 @@
 ---
 tags: [entity, system]
 source: "[[12_Brain/raw/2026-07-04 - obsidian-second-brain-article]]"
-updated: 2026-07-29
+updated: 2026-08-13
 ---
 
 # Website Factory
@@ -15,6 +15,8 @@ deploy credentials.
 - Outputs: static / Netlify / Vercel marketing sites for clients.
 - Templates and QA live under `_templates/site-factory/` when present, or
   campaign folders under `02_Campaigns/`.
+- Attitude skins: `glass`, `editorial`, `brutal`, `warm`, `industrial`, `neon`,
+  and `align` (Align HCM teal / navy / orange, liquid glass, 3D, ink-reveal).
 - Secrets and host tokens never land in this note.
 
 ## Links

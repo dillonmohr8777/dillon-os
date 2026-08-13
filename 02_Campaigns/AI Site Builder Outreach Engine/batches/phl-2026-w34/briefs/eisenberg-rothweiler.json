@@ -1,0 +1,217 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "attitude": "align",
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F2EEE0",
+    "ink": "#0A1628",
+    "accent": "#0F6B5C",
+    "accent2": "#E8832A",
+    "panel": "#D4E3DD",
+    "deep": "#0A1628",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.svg",
+      "alt": "Animated Align-teal illustration of personal injury law work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "eisenberg-rothweiler",
+  "name": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck",
+  "city": "Philadelphia",
+  "category": "Personal injury law",
+  "vertical": "Legal",
+  "url": "https://www.erlegal.com/",
+  "phone": "(215) 546-6636",
+  "address": "1634 Spruce Street, Philadelphia, PA 19103",
+  "description": "Philadelphia personal injury firm on Spruce Street near Rittenhouse Square. Catastrophic injury, medical malpractice, products, and a free consult.",
+  "marquee": [
+    "Spruce",
+    "Rittenhouse",
+    "Injury"
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Personal injury",
+    "headline": "Serious injury. A firm on Spruce.",
+    "sub": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck sits at 1634 Spruce Street, one block from Rittenhouse Square. Personal injury, medical malpractice, products. Call (215) 546-6636 for a free consult.",
+    "ctaPrimary": {
+      "label": "Call for a consult",
+      "href": "tel:2155466636"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.erlegal.com/"
+    },
+    "glassFloat": {
+      "title": "1634 Spruce",
+      "sub": "Rittenhouse"
+    }
+  },
+  "offerings": {
+    "heading": "Cases that change a life.",
+    "items": [
+      "Catastrophic personal injury and the defendants who can actually pay a verdict.",
+      "Medical malpractice and birth injury work that needs a firm used to hospitals.",
+      "Product liability and construction accidents, not a volume fender-bender mill."
+    ]
+  },
+  "gallery": {
+    "heading": "A Center City office, not a billboard.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Spruce Street, one block from the Square",
+    "paragraphs": [
+      "The firm’s office is 1634 Spruce Street, Philadelphia, PA 19103. Listings still use erlegal.com. Related pages also sit at 1634legal.com under a longer partnership name. Confirm the live letterhead before you send records.",
+      "Call (215) 546-6636. Toll-free listings also show (866) 569-3400."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a consult should go.",
+    "items": [
+      "You call. You get a person, not a form that goes nowhere.",
+      "They tell you if the case is theirs, or they tell you it is not.",
+      "You leave with a next step, even if the next step is no."
+    ]
+  },
+  "feature": {
+    "heading": "A free consult, on purpose",
+    "text": "The firm asks injured people to call before they guess. The rebuild puts the Spruce Street map, the phone, and that consult on the first screen.",
+    "cta": {
+      "label": "Call Spruce Street",
+      "href": "tel:2155466636"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Philadelphia and Pennsylvania",
+    "text": "The office is Center City.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.erlegal.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Injury",
+        "href": "https://www.erlegal.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Consult",
+        "href": "https://www.erlegal.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Office",
+        "href": "https://www.google.com/maps/search/?api=1&query=1634+Spruce+Street+Philadelphia+PA",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the office.",
+    "sub": "1634 Spruce Street, Philadelphia. One block from Rittenhouse Square."
+  },
+  "closing": {
+    "cta": {
+      "label": "Call for a consult",
+      "href": "tel:2155466636"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2155466636"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.erlegal.com/"
+    }
+  ]
+}

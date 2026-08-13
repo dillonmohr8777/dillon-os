@@ -1,0 +1,211 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "attitude": "align",
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F6F1E4",
+    "ink": "#0A1628",
+    "accent": "#157A6A",
+    "accent2": "#E8832A",
+    "panel": "#D4E3DD",
+    "deep": "#0A1628",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.svg",
+      "alt": "Animated Align-teal illustration of auto service work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "sciacca-service-center",
+  "name": "Sciacca Service Center",
+  "city": "Montgomery County",
+  "category": "Auto service",
+  "vertical": "Home Services",
+  "url": "http://sciaccaservicecenter.com/",
+  "description": "Auto service center in Montgomery County. Repairs, maintenance, and a bay you can actually visit. Confirm hours on the official site.",
+  "marquee": [
+    "Service",
+    "Montgomery",
+    "Maintenance"
+  ],
+  "hero": {
+    "eyebrow": "Montgomery County | Auto service",
+    "headline": "A bay that still talks to you",
+    "sub": "Sciacca Service Center is a Montgomery County auto shop. The current site is dated. The work is still the inspection, the repair, and a person who will walk you to the car.",
+    "ctaPrimary": {
+      "label": "Open the official site",
+      "href": "http://sciaccaservicecenter.com/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Montgomery County",
+      "sub": "Auto service"
+    }
+  },
+  "offerings": {
+    "heading": "Inspect, repair, hand the keys back.",
+    "items": [
+      "Maintenance for the cars that already live in the driveway.",
+      "Repairs explained before the parts order, not after.",
+      "A service writer you can call without a chatbot."
+    ]
+  },
+  "gallery": {
+    "heading": "Lifts, lights, a clean bay.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A county shop, not a chain tablet",
+    "paragraphs": [
+      "Sciacca Service Center is listed in Montgomery County. The radar flagged a site with no viewport.",
+      "Confirm the street address, phone, and hours on the official site before you leave the car. We will not invent a bay number."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a drop-off should go.",
+    "items": [
+      "You describe the noise. They road-test it.",
+      "You get a call before they replace the expensive part.",
+      "You pick up a car that starts, with the old part in a bag if you asked."
+    ]
+  },
+  "feature": {
+    "heading": "The estimate belongs on the phone",
+    "text": "A shop homepage that cannot be read on a phone is a shop that loses the afternoon drop-off. The rebuild puts hours, map, and the next action first.",
+    "cta": {
+      "label": "Open the site",
+      "href": "http://sciaccaservicecenter.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Montgomery County cars",
+    "text": "Confirm the service radius and whether they handle your make before you assume every bay is a specialist bay.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "http://sciaccaservicecenter.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Service",
+        "href": "http://sciaccaservicecenter.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Repairs",
+        "href": "http://sciaccaservicecenter.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "http://sciaccaservicecenter.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm before you drop the car.",
+    "sub": "Montgomery County. Pull live address and phone from the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the official site",
+      "href": "http://sciaccaservicecenter.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://sciaccaservicecenter.com/"
+    }
+  ]
+}

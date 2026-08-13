@@ -1,0 +1,217 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "attitude": "align",
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F3F0E8",
+    "ink": "#0A1628",
+    "accent": "#155E54",
+    "accent2": "#F08A32",
+    "panel": "#D4E3DD",
+    "deep": "#0A1628",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.svg",
+      "alt": "Animated Align-teal illustration of women’s personal training work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "train-and-nourish",
+  "name": "Train and Nourish",
+  "city": "Philadelphia",
+  "category": "Women’s personal training",
+  "vertical": "Spas & Wellness",
+  "url": "https://trainandnourish.com/",
+  "phone": "(267) 710-7744",
+  "address": "1621 East Passyunk Ave, Philadelphia, PA 19148",
+  "description": "Women-only personal training and nutrition studios in Philadelphia, Ardmore, and West Chester. Founded by Jenna Reilly. Book a free consult.",
+  "marquee": [
+    "East",
+    "Fishtown",
+    "Ardmore"
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Women’s training",
+    "headline": "Weight training without the gym intimidation",
+    "sub": "Train and Nourish is Jenna Reilly’s women-only studio. Five locations: East Passyunk, Art Museum, Fishtown, Ardmore, West Chester. Private training, small classes, nutrition coaching.",
+    "ctaPrimary": {
+      "label": "Book a free consult",
+      "href": "https://trainandnourish.com/"
+    },
+    "ctaSecondary": {
+      "label": "Call Passyunk",
+      "href": "tel:2677107744"
+    },
+    "glassFloat": {
+      "title": "1621 E Passyunk",
+      "sub": "Women only"
+    }
+  },
+  "offerings": {
+    "heading": "Train. Nourish. Stay.",
+    "items": [
+      "1-on-1 and semi-private training with female coaches in a women-only room.",
+      "Small group classes capped at 11, modified to the body in front of them.",
+      "Virtual nutrition coaching for energy, weight, and hormones."
+    ]
+  },
+  "gallery": {
+    "heading": "Bright rooms, real barbells, no audience.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Born from gym intimidation",
+    "paragraphs": [
+      "Jenna Reilly built Train and Nourish because her clients felt watched on a gym floor and stuck on cardio machines. The studios are private and women-only on purpose.",
+      "East Passyunk is 1621 East Passyunk Ave, (267) 710-7744. Art Museum 559 North 20th St."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "A free 30-minute consult.",
+    "items": [
+      "You talk goals and history. They build a plan.",
+      "Beginners, pregnancy, injury, peri-menopause: the site names those rooms on purpose.",
+      "You leave knowing which studio and which coach."
+    ]
+  },
+  "feature": {
+    "heading": "Five studios, one standard",
+    "text": "East Passyunk, Art Museum, Fishtown, Ardmore, West Chester. Same idea in each: female coaches, a private room, weight training taught as a skill.",
+    "cta": {
+      "label": "See locations",
+      "href": "https://trainandnourish.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Nutrition sits next to the barbell",
+    "text": "Karley Kochenour leads nutrition coaching.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Book a consult",
+      "href": "https://trainandnourish.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Personal training",
+        "href": "https://trainandnourish.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Classes",
+        "href": "https://trainandnourish.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Locations",
+        "href": "https://trainandnourish.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Pick the studio.",
+    "sub": "Start at 1621 East Passyunk Ave, or confirm the other four on the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Book a free consult",
+      "href": "https://trainandnourish.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://trainandnourish.com/"
+    },
+    {
+      "label": "Call Passyunk",
+      "href": "tel:2677107744"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "attitude": "align",
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F5F2E7",
+    "ink": "#0A1628",
+    "accent": "#186F62",
+    "accent2": "#E07A22",
+    "panel": "#D4E3DD",
+    "deep": "#0A1628",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.svg",
+      "alt": "Animated Align-teal illustration of law firm work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "mcmenamin-margiotti",
+  "name": "McMenamin & Margiotti",
+  "city": "Colmar",
+  "category": "Law firm",
+  "vertical": "Legal",
+  "url": "https://buxmontlaw.com/",
+  "address": "2307 N Broad St, Colmar, PA 18915",
+  "description": "Montgomery and Bucks County law firm. Family, divorce, criminal defense, DUI, injury, and civil litigation. Free consult with Pat McMenamin.",
+  "marquee": [
+    "Colmar",
+    "Family",
+    "DUI"
+  ],
+  "hero": {
+    "eyebrow": "Colmar | Montgomery and Bucks",
+    "headline": "Honesty. Integrity. Results.",
+    "sub": "McMenamin Law focuses on you, not a brochure about themselves. Family and divorce, criminal defense, DUI, injury, civil litigation. Pat McMenamin has practiced in these suburbs for over 35 years.",
+    "ctaPrimary": {
+      "label": "Request a consult",
+      "href": "https://buxmontlaw.com/"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://buxmontlaw.com/"
+    },
+    "glassFloat": {
+      "title": "Colmar",
+      "sub": "Bucks and Montco"
+    }
+  },
+  "offerings": {
+    "heading": "Family, criminal, injury, one firm.",
+    "items": [
+      "Family and divorce, including support and custody, with a plan you hear in the first meeting.",
+      "Criminal and DUI defense that does not plead you out for a quick fee.",
+      "Accident and injury work that still names compassion and a result."
+    ]
+  },
+  "gallery": {
+    "heading": "A suburban office that still takes the meeting.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Over 35 years in these counties",
+    "paragraphs": [
+      "Patrick J. McMenamin has practiced in the Philadelphia suburbs for over 35 years. The firm’s site is buxmontlaw.com. Listings also put an office at 2307 N Broad St, Colmar, PA 18915.",
+      "The first consult is free. They say they will tell you the cost and what you can expect."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "What the consult is for.",
+    "items": [
+      "Pat meets you. There is no charge for the first conversation.",
+      "They listen without a clock on the table.",
+      "You leave knowing the strategy, the cost, and whether to hire them."
+    ]
+  },
+  "feature": {
+    "heading": "DUI defense that actually defends",
+    "text": "The firm warns that some DUI lawyers take the money and plead you guilty. They want you in the office, with an attorney who will fight the charge in Montgomery and Bucks County courts.",
+    "cta": {
+      "label": "Read the practice",
+      "href": "https://buxmontlaw.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Lansdale, Colmar, the two counties",
+    "text": "The homepage speaks to Lansdale.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "https://buxmontlaw.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Family law",
+        "href": "https://buxmontlaw.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "DUI defense",
+        "href": "https://buxmontlaw.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Consult",
+        "href": "https://buxmontlaw.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the office.",
+    "sub": "Colmar / Lansdale. Confirm the live address and phone on buxmontlaw.com."
+  },
+  "closing": {
+    "cta": {
+      "label": "Request a consult",
+      "href": "https://buxmontlaw.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://buxmontlaw.com/"
+    }
+  ]
+}

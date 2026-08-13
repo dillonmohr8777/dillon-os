@@ -1,0 +1,211 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "attitude": "align",
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F6F1E4",
+    "ink": "#0A1628",
+    "accent": "#155E54",
+    "accent2": "#F08A32",
+    "panel": "#D4E3DD",
+    "deep": "#0A1628",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.svg",
+      "alt": "Animated Align-teal illustration of fitness studio work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "bpm-fitness",
+  "name": "BPM Fitness",
+  "city": "Philadelphia",
+  "category": "Fitness studio",
+  "vertical": "Spas & Wellness",
+  "url": "https://bpmfitnessphl.com/",
+  "description": "Fitness studio in Philadelphia. Classes, training, and a floor that should be easy to find on a phone. Confirm hours on the official site.",
+  "marquee": [
+    "Philadelphia",
+    "Training",
+    "Classes"
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Fitness",
+    "headline": "A studio with a pulse",
+    "sub": "BPM Fitness is a Philadelphia studio. The current site is dated and sometimes errors out. The rebuild puts the schedule, the map, and the next class on the first screen.",
+    "ctaPrimary": {
+      "label": "Open the official site",
+      "href": "https://bpmfitnessphl.com/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "Fitness studio"
+    }
+  },
+  "offerings": {
+    "heading": "Train, recover, come back.",
+    "items": [
+      "Classes and training for people who already live in the city.",
+      "A floor that should tell you the next session without a desktop maze.",
+      "Coaches you can name, not a rotating app trainer."
+    ]
+  },
+  "gallery": {
+    "heading": "A room that wants you back tomorrow.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Philadelphia studio",
+    "paragraphs": [
+      "BPM Fitness is listed in Philadelphia. The radar scored the site as a rebuild: no viewport, almost no homepage copy.",
+      "Confirm the street address, the schedule, and the drop-in rules on the official site before you go. We will not invent a class time."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a first session should go.",
+    "items": [
+      "You find the door from your phone.",
+      "You meet a coach who asks what you are here for.",
+      "You leave knowing the next class, not guessing from Instagram."
+    ]
+  },
+  "feature": {
+    "heading": "The schedule belongs on the homepage",
+    "text": "A studio that hides hours on a broken page loses the 6am visitor. The rebuild puts schedule, map, and a real CTA where a tired thumb can hit them.",
+    "cta": {
+      "label": "Open the site",
+      "href": "https://bpmfitnessphl.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Philadelphia, one floor",
+    "text": "Confirm parking, the neighborhood, and whether drop-ins are real before you bag the shoes.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "https://bpmfitnessphl.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Classes",
+        "href": "https://bpmfitnessphl.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Training",
+        "href": "https://bpmfitnessphl.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "https://bpmfitnessphl.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm before you go.",
+    "sub": "Philadelphia. Pull live address and hours from the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the official site",
+      "href": "https://bpmfitnessphl.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://bpmfitnessphl.com/"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "attitude": "align",
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#EFEBE0",
+    "ink": "#0A1628",
+    "accent": "#14685C",
+    "accent2": "#F08A32",
+    "panel": "#D4E3DD",
+    "deep": "#0A1628",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.svg",
+      "alt": "Animated Align-teal illustration of financial planning work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "barnes-financial-group",
+  "name": "Barnes Financial Group",
+  "city": "Media",
+  "category": "Financial planning",
+  "vertical": "Professional Services",
+  "url": "http://www.barnesfinancial.com/",
+  "description": "Financial planning in Media, Delaware County. Confirm advisors, credentials, and hours on the official site before you send documents.",
+  "marquee": [
+    "Media",
+    "Planning",
+    "Delaware"
+  ],
+  "hero": {
+    "eyebrow": "Media | Financial planning",
+    "headline": "A plan you can sit with",
+    "sub": "Barnes Financial Group is listed in Media. The current site is dated. The work is still a conversation about money, risk, and a next step you can keep.",
+    "ctaPrimary": {
+      "label": "Open the official site",
+      "href": "http://www.barnesfinancial.com/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Media",
+      "sub": "Delaware County"
+    }
+  },
+  "offerings": {
+    "heading": "Advice, documents, a real review.",
+    "items": [
+      "Financial planning for households that already have a tax person and still need a plan.",
+      "A review of the accounts you actually hold, not a product ladder.",
+      "Follow-up that belongs to the same advisor who took the first meeting."
+    ]
+  },
+  "gallery": {
+    "heading": "A quiet office, a clear table.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Media, Delaware County",
+    "paragraphs": [
+      "Barnes Financial Group is listed in Media. The radar flagged a site with no viewport.",
+      "Confirm the street address, phone, and advisor names on the official site before you send account statements. We will not invent credentials."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a first meeting should go.",
+    "items": [
+      "You bring the statements. They ask what the money is for.",
+      "You hear a plan in language you can repeat at dinner.",
+      "You leave with homework, not a binder you will not open."
+    ]
+  },
+  "feature": {
+    "heading": "Trust starts with a readable page",
+    "text": "A planning firm that cannot render on a phone is asking for personal data from a desktop-only relic. The rebuild puts the next action and the map first.",
+    "cta": {
+      "label": "Open the site",
+      "href": "http://www.barnesfinancial.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Delaware County households",
+    "text": "Media is the listed city.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "http://www.barnesfinancial.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Planning",
+        "href": "http://www.barnesfinancial.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Advisors",
+        "href": "http://www.barnesfinancial.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "http://www.barnesfinancial.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm before you send files.",
+    "sub": "Media, Delaware County. Pull live address and phone from the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the official site",
+      "href": "http://www.barnesfinancial.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://www.barnesfinancial.com/"
+    }
+  ]
+}
