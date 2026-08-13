@@ -282,7 +282,7 @@ const builders = {
     const mark =
       brief.logo === false
         ? `<span class="logo-outro-wordmark">${esc(brief.name)}</span><span class="logo-outro-wordmark logo-outro-ghost" aria-hidden="true">${esc(brief.name)}</span>`
-        : `<img class="logo-outro-mark" src="assets/logo.png" alt="${esc(brief.name)}"${sizeAttr} decoding="sync" fetchpriority="high"><img class="logo-outro-ghost" src="assets/logo.png" alt=""${sizeAttr} decoding="async" aria-hidden="true">`;
+        : `<img class="logo-outro-mark" src="assets/logo.png" alt="${esc(brief.name)}"${sizeAttr} decoding="sync" fetchpriority="high"><img class="logo-outro-ghost" src="assets/logo.png" alt="${esc(brief.name)}"${sizeAttr} decoding="async" aria-hidden="true">`;
     return `<section class="closing logo-outro surface-paper" aria-label="${esc(brief.name)} logo"><div class="ink-reveal reveal"${logoVars}>${mark}</div>${tag ? `<p class="logo-outro-tag">${esc(tag)}</p>` : ''}${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
   },
 };
@@ -328,7 +328,10 @@ const footerLinks = (brief.links || [])
   .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)} \u2197</a></li>`)
   .join('');
 
-const brand = `<span class="wordmark">${esc(brief.name)}</span>`;
+const brand =
+  brief.logo === false
+    ? `<span class="wordmark">${esc(brief.name)}</span>`
+    : `<img class="brand-logo" src="assets/logo.png" alt="${esc(brief.name)}"${logoSize ? ` width="${logoSize.width}" height="${logoSize.height}"` : ''} decoding="async">`;
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
