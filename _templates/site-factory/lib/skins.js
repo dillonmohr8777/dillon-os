@@ -98,7 +98,9 @@ function buildSkinCss(brief) {
 .slug-${slug} .hero::after{content:"";position:absolute;inset:auto 6% 8% auto;width:min(42vw,460px);height:min(42vw,460px);border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 62%,transparent),transparent 70%);filter:blur(10px);pointer-events:none;z-index:0;animation:glass-orb 14s ease-in-out infinite alternate}
 .slug-${slug} .hero-media{transform-style:preserve-3d}
 .slug-${slug} .hero-media figure{border:1px solid color-mix(in srgb,#fff 50%,var(--accent) 18%);border-radius:calc(var(--radius) + 10px);box-shadow:0 34px 90px color-mix(in srgb,var(--deep) 30%,transparent),inset 0 1px 0 color-mix(in srgb,#fff 60%,transparent);transform:rotateY(-8deg) rotateX(4deg);animation:align-tilt 9s ease-in-out infinite alternate}
-.slug-${slug} .hero-media .glass-float{background:color-mix(in srgb,var(--paper) 40%,transparent);border:1px solid color-mix(in srgb,#fff 55%,var(--accent) 20%)}
+.slug-${slug} .media-caption{background:color-mix(in srgb,var(--deep) 86%,#000);border:1px solid color-mix(in srgb,var(--accent) 32%,transparent)}
+.slug-${slug} .media-kicker{color:var(--accent)}
+.slug-${slug} .card-icon{background:#101218;color:var(--accent);box-shadow:0 0 18px color-mix(in srgb,var(--accent) 48%,transparent)}
 .slug-${slug} .offering-card,.slug-${slug} .experience-grid article,.slug-${slug} .catalog-card,.slug-${slug} .contact-card{
   background:color-mix(in srgb,var(--paper) 36%,transparent);
   border:1px solid color-mix(in srgb,#fff 40%,var(--accent) 16%);
@@ -111,7 +113,7 @@ function buildSkinCss(brief) {
   box-shadow:0 28px 70px color-mix(in srgb,var(--accent) 28%,transparent);
 }
 .slug-${slug} .marquee-strip{background:color-mix(in srgb,var(--deep) 82%,var(--accent));color:var(--on-deep)}
-.slug-${slug} .section-kicker,.slug-${slug} .offering-card>span,.slug-${slug} .experience-grid article>span{color:var(--accent2);letter-spacing:.18em}
+.slug-${slug} .section-kicker,.slug-${slug} .media-kicker{color:var(--accent);letter-spacing:.18em}
 .slug-${slug} .button-primary{background:var(--accent);color:var(--on-accent);box-shadow:0 16px 40px color-mix(in srgb,var(--accent) 38%,transparent)}
 .slug-${slug} .button-primary:hover,.slug-${slug} .button-primary:focus-visible{background:color-mix(in srgb,var(--accent) 82%,var(--deep))}
 .slug-${slug} .logo-outro{background:var(--paper)}

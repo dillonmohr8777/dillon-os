@@ -35,17 +35,19 @@ describe('attitude skins', () => {
     assert.match(align, /align-ken/);
   });
 
-  it('buildSite injects attitude meta and liquid-glass float', () => {
+  it('buildSite injects attitude meta and Align media captions', () => {
     const brief = passingBrief({ slug: 'glass-shop', name: 'Glass Shop', attitude: 'glass' });
     const built = buildSite(brief, '/tmp/skin-test');
     assert.match(built.html, /name="attitude" content="glass"/);
-    assert.match(built.html, /glass-float/);
+    assert.match(built.html, /media-caption/);
+    assert.match(built.html, /card-icon/);
+    assert.doesNotMatch(built.html, /glass-float/);
     assert.match(built.html, /marquee-strip/);
     assert.match(built.html, /mobile-action/);
     assert.match(built.html, /vanish-out/);
   });
 
-  it('align attitude keeps glass float, maps embed, and ink-reveal closing', () => {
+  it('align attitude keeps captions, copper icons, maps embed, and ink-reveal closing', () => {
     const brief = passingBrief({
       slug: 'align-clinic',
       name: 'Align Clinic',
@@ -54,7 +56,10 @@ describe('attitude skins', () => {
     });
     const built = buildSite(brief, '/tmp/align-skin-test');
     assert.match(built.html, /name="attitude" content="align"/);
-    assert.match(built.html, /glass-float/);
+    assert.match(built.html, /media-caption/);
+    assert.match(built.html, /media-kicker/);
+    assert.match(built.html, /card-icon/);
+    assert.doesNotMatch(built.html, /glass-float/);
     assert.match(built.html, /map-embed/);
     assert.match(built.html, /maps\.google\.com\/maps\?q=/);
     assert.match(built.html, /ink-reveal/);

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Copy 6 industry-solutions stills per site, then write 13 unique webps.
+"""Copy 6 collage stills per site, then write 13 unique webps.
 
 Images 1-6 are the generated frames (light resize only).
 Images 7-13 are unique crops of those frames. No muddy blends.
+Prefers `{slug}-col*.png`, falls back to `{slug}-is*.png`.
 """
 from __future__ import annotations
 
@@ -54,7 +55,7 @@ def prep(im: Image.Image, seed: int, crop: bool) -> Image.Image:
 
 
 def collect(slug: str) -> list[Path]:
-    files = sorted(ART.glob(f"{slug}-is*.png"))
+    files = sorted(ART.glob(f"{slug}-col*.png")) or sorted(ART.glob(f"{slug}-is*.png"))
     if len(files) < 5:
         raise SystemExit(f"{slug}: only {len(files)} stills")
     dest = SRC / slug
