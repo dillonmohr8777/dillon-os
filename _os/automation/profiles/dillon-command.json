@@ -1,0 +1,127 @@
+{
+  "id": "dillon-command",
+  "name": "Dillon Command Center",
+  "version": 1,
+  "contract": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "companion": "11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md",
+  "targets": [
+    "ROAD TO 100 CLIENTS (12/100)",
+    "$40K Mohr Media in 5 months",
+    "2,000 book subscribers in 4 months"
+  ],
+  "run_artifacts_dir": "automation-runs/dillon-command",
+  "max_concurrent_lanes": 8,
+  "approval_tiers": {
+    "0": "read/analyze/draft/build — no gate",
+    "1": "reversible tweaks — one morning approval batch",
+    "2": "outbound/spend/deploy/send — prepared only, Dillon executes live"
+  },
+  "lanes": [
+    {
+      "id": "comms",
+      "codex_lane": "B",
+      "agent": "Comms Scout",
+      "skills": ["slack-intake", "inbox-brief"],
+      "tier": 0,
+      "parallel": true,
+      "outputs": [
+        "00_Inbox/slack/*.md",
+        "Daily-Briefs/slack-intake-YYYY-MM-DD.md",
+        "Daily-Briefs/inbox-brief-YYYY-MM-DD.md"
+      ],
+      "description": "Slack + inbox triage into structured vault tasks"
+    },
+    {
+      "id": "clients",
+      "codex_lane": "F",
+      "agent": "Client Pulse",
+      "skills": ["client-pulse"],
+      "tier": 0,
+      "parallel": true,
+      "outputs": ["Daily-Briefs/pulse-today.md"],
+      "description": "Client movement, stalls, and due-soon work"
+    },
+    {
+      "id": "intelligence",
+      "codex_lane": "A",
+      "agent": "Intel Scout",
+      "skills": ["research-sweep"],
+      "tier": 0,
+      "parallel": true,
+      "trigger": "weekly or when vault flags stale research",
+      "outputs": ["12_Brain/research/*.md", "Daily-Briefs/research-sweep-YYYY-MM-DD.md"],
+      "description": "Verified research sweep when triggers fire; skip if fresh"
+    },
+    {
+      "id": "websites",
+      "codex_lane": "D",
+      "agent": "Site Health",
+      "skills": ["site-grade"],
+      "cli": "node _os/automation/bin/site-health.js --dry-run",
+      "tier": 0,
+      "parallel": true,
+      "outputs": ["Daily-Briefs/site-health-report.md", "12_Brain/state/site-health-sentinel.json"],
+      "description": "Site health sentinel across managed properties"
+    },
+    {
+      "id": "outreach",
+      "codex_lane": "E",
+      "agent": "Outreach Scout",
+      "skills": ["site-factory"],
+      "cli": "node _os/automation/bin/queue-status.js",
+      "tier": 0,
+      "parallel": true,
+      "outputs": ["12_Brain/queue/*.jsonl", "Daily-Briefs/outreach-status-YYYY-MM-DD.md"],
+      "description": "Prospect pipeline + site-factory queue status"
+    },
+    {
+      "id": "ads",
+      "codex_lane": "C",
+      "agent": "Ads Scout",
+      "skills": ["metrics-pull"],
+      "tier": 0,
+      "parallel": true,
+      "outputs": ["Daily-Briefs/metrics-YYYY-MM-DD.md"],
+      "description": "Vault metrics + ads-account readiness signals (read-only)"
+    },
+    {
+      "id": "reporting",
+      "codex_lane": "F",
+      "agent": "Reporting Scout",
+      "skills": ["client-report"],
+      "tier": 0,
+      "parallel": true,
+      "outputs": ["Daily-Briefs/reports/*.html"],
+      "description": "Draft client reports from vault JSON when data exists"
+    },
+    {
+      "id": "command",
+      "codex_lane": "H",
+      "agent": "Commander",
+      "skills": ["am-report", "plan-today"],
+      "tier": 0,
+      "parallel": false,
+      "depends_on": ["comms", "clients", "websites", "ads"],
+      "outputs": [
+        "Daily-Briefs/am-report-YYYY-MM-DD.md",
+        "Daily-Briefs/plan-YYYY-MM-DD.md",
+        "automation-runs/dillon-command/YYYY-MM-DD/approval-board.md"
+      ],
+      "description": "Synthesize lane outputs into one approval board + morning push"
+    }
+  ],
+  "p0_tiebreak": [
+    "launch blocked",
+    "billing risk",
+    "ad disapprovals",
+    "calendar commitment"
+  ],
+  "hard_rules": [
+    "Never send Slack messages or emails",
+    "Never deploy, publish, or change ad spend",
+    "Never delete vault notes",
+    "One PR per cycle — approval board + AM report",
+    "KJB emails CC mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com",
+    "Align HCM is full-time — never under Momentum 360"
+  ]
+}

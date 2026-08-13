@@ -1,0 +1,20 @@
+{
+  "status": "ok",
+  "summary": "8-lane command cycle complete; 6 ok, 1 warn, 2 skipped",
+  "run_id": "dillon-command-2026-08-13",
+  "counts": {
+    "total": 8,
+    "pending": 0,
+    "running": 0,
+    "ok": 5,
+    "warn": 1,
+    "error": 0,
+    "skipped": 2
+  },
+  "artifact_paths": [
+    "automation-runs/dillon-command/2026-08-13/run-state.json",
+    "automation-runs/dillon-command/2026-08-13/approval-board.md"
+  ],
+  "automation_id": "dillon-command",
+  "written_at": "2026-08-13T13:14:57.245Z"
+}

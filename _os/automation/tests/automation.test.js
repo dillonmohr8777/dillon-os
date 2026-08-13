@@ -157,3 +157,62 @@ test('analyzeHtml detects missing viewport on broken fixture', () => {
   const viewport = analyzed.checks.find((c) => c.id === 'viewport');
   assert.equal(viewport.ok, false);
 });
+
+const {
+  loadProfile,
+  createRun,
+  buildApprovalBoard,
+  renderAgentPrompt,
+  scanCompetitiveSignals,
+} = require('../lib/dillon-command');
+
+test('dillon-command profile has eight parallel lanes + commander', () => {
+  const profile = loadProfile();
+  assert.equal(profile.id, 'dillon-command');
+  assert.equal(profile.lanes.length, 8);
+  const parallel = profile.lanes.filter((l) => l.parallel !== false);
+  assert.equal(parallel.length, 7);
+  const commander = profile.lanes.find((l) => l.id === 'command');
+  assert.ok(commander);
+  assert.deepEqual(commander.depends_on, ['comms', 'clients', 'websites', 'ads']);
+});
+
+test('dillon-command createRun writes run-state with pending lanes', () => {
+  const day = '2099-01-01';
+  const state = createRun({ day, mode: 'test' });
+  assert.equal(state.run_id, `dillon-command-${day}`);
+  assert.equal(state.lanes.length, 8);
+  assert.equal(state.counts.pending, 8);
+  const file = repoPath('automation-runs/dillon-command', day, 'run-state.json');
+  assert.equal(fs.existsSync(file), true);
+  fs.rmSync(repoPath('automation-runs/dillon-command', day), { recursive: true, force: true });
+});
+
+test('dillon-command approval board includes lane table', () => {
+  const profile = loadProfile();
+  const state = {
+    day: '2099-01-02',
+    run_id: 'dillon-command-2099-01-02',
+    mode: 'test',
+    lanes: profile.lanes.map((l) => ({ id: l.id, agent: l.agent, status: 'ok', artifacts: [] })),
+  };
+  const board = buildApprovalBoard(state, profile, [{ source: 'slack', file: '00_Inbox/slack/test.md', priority: 'urgent' }]);
+  assert.match(board, /Approval Board/);
+  assert.match(board, /comms/);
+  assert.match(board, /urgent/);
+});
+
+test('dillon-command agent prompt references all lanes', () => {
+  const profile = loadProfile();
+  const prompt = renderAgentPrompt(profile, '2099-01-03');
+  for (const lane of profile.lanes.filter((l) => l.parallel !== false)) {
+    assert.match(prompt, new RegExp(`Lane ${lane.id}`));
+  }
+  assert.match(prompt, /Hard rules/);
+});
+
+test('dillon-command scans open slack requests', () => {
+  const { signals } = scanCompetitiveSignals();
+  assert.ok(Array.isArray(signals));
+  assert.ok(signals.length >= 1, 'expected at least one status:new slack note in fixtures');
+});

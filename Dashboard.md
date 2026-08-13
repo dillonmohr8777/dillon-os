@@ -19,9 +19,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Reply to Jason/Sean bot case-status alert (urgent, 14d open)
+- [ ] Review Dillon Command Center PR — canonical umbrella automation
+- [ ] Fix book site `/api/dossier-leads` form endpoint
 
 ## Active Projects
 -

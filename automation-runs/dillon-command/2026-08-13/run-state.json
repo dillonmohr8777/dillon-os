@@ -1,0 +1,176 @@
+{
+  "automation_id": "dillon-command",
+  "run_id": "dillon-command-2026-08-13",
+  "day": "2026-08-13",
+  "mode": "agent",
+  "started_at": "2026-08-13T13:13:49.502Z",
+  "finished_at": "2026-08-13T13:14:57.245Z",
+  "status": "ok",
+  "targets": [
+    "ROAD TO 100 CLIENTS (12/100)",
+    "$40K Mohr Media in 5 months",
+    "2,000 book subscribers in 4 months"
+  ],
+  "lanes": [
+    {
+      "id": "comms",
+      "agent": "Comms Scout",
+      "skills": [
+        "slack-intake",
+        "inbox-brief"
+      ],
+      "cli": null,
+      "tier": 0,
+      "parallel": true,
+      "depends_on": [],
+      "status": "ok",
+      "started_at": null,
+      "finished_at": "2026-08-13T13:14:57.243Z",
+      "artifacts": [
+        "Daily-Briefs/inbox-brief-2026-08-13.md"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "clients",
+      "agent": "Client Pulse",
+      "skills": [
+        "client-pulse"
+      ],
+      "cli": null,
+      "tier": 0,
+      "parallel": true,
+      "depends_on": [],
+      "status": "ok",
+      "started_at": null,
+      "finished_at": "2026-08-13T13:14:57.243Z",
+      "artifacts": [
+        "Daily-Briefs/pulse-today.md"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "intelligence",
+      "agent": "Intel Scout",
+      "skills": [
+        "research-sweep"
+      ],
+      "cli": null,
+      "tier": 0,
+      "parallel": true,
+      "depends_on": [],
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": "2026-08-13T13:14:57.244Z",
+      "artifacts": [],
+      "blockers": []
+    },
+    {
+      "id": "websites",
+      "agent": "Site Health",
+      "skills": [
+        "site-grade"
+      ],
+      "cli": "node _os/automation/bin/site-health.js --dry-run",
+      "tier": 0,
+      "parallel": true,
+      "depends_on": [],
+      "status": "warn",
+      "started_at": null,
+      "finished_at": "2026-08-13T13:14:57.244Z",
+      "artifacts": [
+        "Daily-Briefs/site-health-report.md"
+      ],
+      "blockers": [
+        "book form /api/dossier-leads FAIL"
+      ]
+    },
+    {
+      "id": "outreach",
+      "agent": "Outreach Scout",
+      "skills": [
+        "site-factory"
+      ],
+      "cli": "node _os/automation/bin/queue-status.js",
+      "tier": 0,
+      "parallel": true,
+      "depends_on": [],
+      "status": "ok",
+      "started_at": null,
+      "finished_at": "2026-08-13T13:14:57.244Z",
+      "artifacts": [
+        "Daily-Briefs/outreach-status-2026-08-13.md"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "ads",
+      "agent": "Ads Scout",
+      "skills": [
+        "metrics-pull"
+      ],
+      "cli": null,
+      "tier": 0,
+      "parallel": true,
+      "depends_on": [],
+      "status": "ok",
+      "started_at": null,
+      "finished_at": "2026-08-13T13:14:57.244Z",
+      "artifacts": [
+        "Daily-Briefs/metrics-2026-08-13.md"
+      ],
+      "blockers": []
+    },
+    {
+      "id": "reporting",
+      "agent": "Reporting Scout",
+      "skills": [
+        "client-report"
+      ],
+      "cli": null,
+      "tier": 0,
+      "parallel": true,
+      "depends_on": [],
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": "2026-08-13T13:14:57.244Z",
+      "artifacts": [],
+      "blockers": []
+    },
+    {
+      "id": "command",
+      "agent": "Commander",
+      "skills": [
+        "am-report",
+        "plan-today"
+      ],
+      "cli": null,
+      "tier": 0,
+      "parallel": false,
+      "depends_on": [
+        "comms",
+        "clients",
+        "websites",
+        "ads"
+      ],
+      "status": "ok",
+      "started_at": null,
+      "finished_at": "2026-08-13T13:14:57.245Z",
+      "artifacts": [
+        "Daily-Briefs/am-report-2026-08-13.md",
+        "Daily-Briefs/plan-2026-08-13.md"
+      ],
+      "blockers": []
+    }
+  ],
+  "counts": {
+    "total": 8,
+    "pending": 0,
+    "running": 0,
+    "ok": 5,
+    "warn": 1,
+    "error": 0,
+    "skipped": 2
+  },
+  "summary": "8-lane command cycle complete; 6 ok, 1 warn, 2 skipped"
+}

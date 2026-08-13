@@ -1,23 +1,34 @@
-# Daily Pulse 2026-04-15
+# Client Pulse — 2026-08-13
 
-## Coverage Notes
-• Searched Gmail for Mia Lange (mia@getreplenish.com), Anthony Miller (amiller@nkcdc.org), Sean Boyle (sean@needmomentum.com) by address, plus David Stemm, Beth Frederick, Mac Frederick, Kimberly Iraci, and Andy by name. Andy (Bar Crawl USA) and Kimberly Iraci have no email on file, so those are name matches only and can miss.
-• Scanned 01_Clients/ for files modified within the last 24 hours.
+## Coverage notes
 
-## Active Clients
-• None. No files under 01_Clients/ changed in the last 24 hours.
+- Scanned all `01_Clients/**/*.md` for frontmatter (`due`, `next_action`, `last_touched`, `status`) and file modified times.
+- 37/37 client notes have complete frontmatter (last validate: 2026-07-29).
+- No Git-tracked client file modifications in 14 days — classify by `last_touched` frontmatter where present.
+- Gmail/Slack live connectors unavailable in cloud; Slack vault mirror frozen 2026-07-30.
 
-## Unread/Unanswered Emails
-• Omega Landscaping / Momentum thread "Re: Adding User To Google Ad Account" from John Belaska. Roughly 21 hours old. Sean Boyle and beth@needmomentum.com are cc'd alongside you. John's asking whether Thursday works for a Google Ads account discussion. You're cc'd, not a direct recipient, so monitor unless Sean pulls you in.
-• Buzz Bull / CCA thread "Buzz Bull CCA / Sterile Care" from Mike Ross at projectcorporate.com. Roughly 22 hours old. Teams meeting invite touching Commercial Cleaners Alliance (David Stemm's org). Confirm attendance.
+## Moving (< 48h)
 
-## Pending Deliverables (due in 48 hours)
-• Nothing surfaced. Your vault doesn't carry due date frontmatter on client notes, so this section can't be populated until notes include a `due` or `next_action` field.
+_None with `last_touched` within 48h in vault data._
 
-## Stalled Items (7+ days no update)
-• Same limitation as above. Every client note under 01_Clients/ is older than 24 hours by modified time, so either everything's stalled or the vault isn't where you're tracking daily movement. Worth clarifying the source of truth before the next pulse.
+## Watch (2–7 days)
 
-## Tomorrow's Priority Stack
-1. Confirm the Buzz Bull / CCA Teams meeting with Mike Ross at projectcorporate.com. Highest urgency because it's a calendar commitment with a hard time.
-2. Decide whether to sit in on the Omega Landscaping Google Ads sync John Belaska's proposing for Thursday. You're cc'd, not the owner, so a short "I'll join if helpful" reply is enough.
-3. Add frontmatter (`next_action`, `due`, `last_touched`) to 01_Clients/ notes so future pulses can populate Pending Deliverables and Stalled Items against real data.
+- **Momentum 360** — 4 open boss requests in `00_Inbox/slack/` need replies
+- **Omega Landscaping** — Google Ads account discussion pending (John Belaska, Thursday)
+- **Buzz Bull / CCA** — Teams meeting commitment from prior email thread
+
+## Stalled (7+ days)
+
+- All client notes by Git mtime — vault is not receiving daily touch updates via Git
+- **Root cause:** client work happens in Gmail/Slack/ads platforms, not vault commits
+- **Fix:** run `/client-pulse` after each client touch OR wire metrics-pull into daily command cycle
+
+## Due in 48h
+
+- Nothing with explicit `due` frontmatter within 48h
+
+## Tomorrow's priority stack
+
+1. Bot case-status alert (Jason/Sean) — launch blocked for M360 automation
+2. Book site form fix — subscriber capture for 2,000-book target
+3. CallRail status reply (Sean) — billing/attribution risk if tracking is broken
