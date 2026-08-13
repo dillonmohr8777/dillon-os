@@ -1,0 +1,18 @@
+{
+  "prospect": "Cedar Ridge Heating and Cooling",
+  "lifecycle": "won",
+  "offer": "rebuild",
+  "scores": {
+    "site_quality_score": 41,
+    "rebuild_opportunity": 82,
+    "selected_offer": "rebuild"
+  },
+  "report_url": "http://127.0.0.1:4343/r/qjL32WhYjzXVla4or_WWtMpkOIRZ4RKR",
+  "pdf": {
+    "ok": true,
+    "path": "/workspace/_os/radar-engine/artifacts/reports/rpt_e5ec8aac571f4e06a4d796154ce09140.pdf"
+  },
+  "crm_live": false,
+  "email_sent": false,
+  "network_outbound": []
+}

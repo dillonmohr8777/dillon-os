@@ -1,0 +1,62 @@
+{
+  "counts": {
+    "intake.submitted": 1,
+    "lifecycle.transition": 18,
+    "scan.started": 1,
+    "scan.completed": 1,
+    "report.generated": 1,
+    "qa.approved": 1,
+    "contact.enriched": 1,
+    "outreach.approved": 1,
+    "handoff.created": 1,
+    "report.viewed": 1,
+    "report.revisited": 1,
+    "cta.clicked": 1,
+    "booking.started": 1,
+    "booking.completed": 1,
+    "meeting.held": 1,
+    "qualified": 1,
+    "proposal.created": 1,
+    "won": 1
+  },
+  "byStage": {
+    "won": 1
+  },
+  "conversion": {
+    "intake_to_scan": 1,
+    "qa_approval_rate": 1,
+    "qa_rejection_rate": 0,
+    "booking_rate": 1,
+    "win_rate": 1
+  },
+  "median_minutes": 0.0073,
+  "revenue": 4800,
+  "expected_revenue": 4800,
+  "cost": {
+    "per_scan": 0,
+    "per_report": 0,
+    "per_booking": 0,
+    "per_win": 0,
+    "note": "no paid APIs used in the fixture slice"
+  },
+  "unsupported_claim_rejection_rate": 0,
+  "false_route_corrections": 0,
+  "usage": {
+    "api": 0,
+    "llm": 0
+  },
+  "segments": {
+    "campaign": {
+      "cmp_1bb1877db302428596024ffc9f774d0f": 1
+    },
+    "vertical": {
+      "hvac": 1
+    },
+    "geography": {
+      "Hatboro": 1
+    },
+    "offer": {
+      "rebuild": 1
+    }
+  }
+}

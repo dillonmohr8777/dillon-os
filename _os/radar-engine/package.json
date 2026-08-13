@@ -1,0 +1,19 @@
+{
+  "name": "prospect-radar-engine-v2",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Prospect Radar V2 — evidence-backed audit engine wrapping the existing radar.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "migrate": "node --experimental-strip-types bin/radar-v2.js migrate",
+    "slice": "node --experimental-strip-types bin/radar-v2.js slice --fixture cedar-ridge-hvac",
+    "serve": "node --experimental-strip-types bin/radar-v2.js serve",
+    "typecheck": "node --experimental-strip-types -e \"require('./lib/pipeline.ts'); console.log('ok')\""
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}

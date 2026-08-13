@@ -13,7 +13,7 @@ Use [[12_Brain/templates/Project|Project template]]. View in
 
 ## Active
 
-- (none seeded — create from Dashboard Active Projects or session decisions)
+- [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — evidence-backed audit engine wrapping the existing radar.
 
 ## Links
 
