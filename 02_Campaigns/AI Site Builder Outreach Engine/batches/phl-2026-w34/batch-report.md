@@ -69,12 +69,13 @@ No duplicate images across the batch.
 
 ## Outputs
 
-- Review hub: `index.html`
+- Live hub: https://phl-2026-w34.netlify.app (pinned Netlify site `phl-2026-w34`, 2026-08-13). 26 URLs verified HTTP 200 with `noindex`.
+- Review hub source: `index.html`
 - QR sheet: `manifest.csv`
 - Mail merge: `prospects.csv` (`qa_ready` for review; `mail_ready` always hold until human approval)
 
 ## Next steps
 
-1. Human taste pass on the hub.
+1. Human taste pass on the live hub.
 2. Explicit human approval flips `mail_ready` to ready on approved rows only.
-3. Deploy stays Tier 2. No outreach send from this runner.
+3. Nothing mailed from this runner.
