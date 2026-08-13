@@ -75,6 +75,8 @@ async function runQa(siteDir, opts = {}) {
 
   if (/<mark[\s>]/.test(html)) failures.push('Highlighted mark tags are not allowed');
   if (!/class="ink-reveal/.test(html)) failures.push('Missing ink-reveal logo outro');
+
+  const imgSrcs = [...html.matchAll(/<img[^>]*src="(assets\/image-[^"]+)"/g)].map((m) => m[1]);
   const seenSrc = new Set();
   imgSrcs.forEach((src) => {
     if (seenSrc.has(src)) failures.push(`Duplicate image on page: ${src}`);

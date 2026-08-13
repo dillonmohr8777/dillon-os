@@ -19,35 +19,35 @@ qa_ready_count: 8
 
 Canonical targets: 9-11 sections, 400-720 words, 12-13 images. Spec misses block `qa_ready`.
 
-Batch averages: **10 sections, 518 words, 13 images, 39 KB**.
+Batch averages: **10 sections, 509 words, 12 images, 39 KB**.
 
 | Prospect | Business | Sections | Words | Images | QA | Visual | qa_ready | mail_ready | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| PHL001 | Andorra Family Dentistry | 10 | 518 | 13 | PASS | ran | ready | hold | clean |
-| PHL002 | Benjamin Lovell Shoes | 10 | 492 | 13 | PASS | ran | ready | hold | clean |
-| PHL003 | Davidson Fabricating | 10 | 540 | 13 | PASS | ran | ready | hold | clean |
-| PHL004 | Dream Team Home Services | 10 | 507 | 13 | PASS | ran | hold | hold | clean |
-| PHL005 | Dutton Road Veterinary Clinic | 10 | 490 | 13 | PASS | ran | hold | hold | clean |
-| PHL006 | Eastern Dragon | 10 | 607 | 13 | PASS | ran | ready | hold | clean |
-| PHL007 | Electric Direct | 10 | 478 | 13 | PASS | ran | hold | hold | clean |
-| PHL008 | Elverson Supply | 10 | 494 | 13 | PASS | ran | hold | hold | clean |
-| PHL009 | Floral and Hardy of Skippack | 10 | 590 | 13 | PASS | ran | hold | hold | clean |
-| PHL010 | GO2 Tech | 10 | 510 | 13 | PASS | ran | hold | hold | clean |
-| PHL011 | Home Furnishing Consignment | 10 | 561 | 13 | PASS | ran | ready | hold | clean |
-| PHL012 | Johnny's Pizza & Pasta | 10 | 550 | 13 | PASS | ran | ready | hold | clean |
-| PHL013 | MacLaren Kitchen and Bath | 10 | 532 | 13 | PASS | ran | hold | hold | clean |
-| PHL014 | Metalmorphose Ironworks | 10 | 527 | 13 | PASS | ran | hold | hold | clean |
-| PHL015 | The New Pennsburg Diner | 10 | 460 | 13 | PASS | ran | hold | hold | clean |
-| PHL016 | Oaks Italian Deli And Pizzeria | 10 | 577 | 13 | PASS | ran | ready | hold | clean |
-| PHL017 | Frederick W. Oster Fine Violins | 10 | 524 | 13 | PASS | ran | hold | hold | clean |
-| PHL018 | Peking Gourmet | 10 | 589 | 13 | PASS | ran | ready | hold | clean |
-| PHL019 | Philadelphia Garage | 10 | 480 | 13 | PASS | ran | hold | hold | clean |
-| PHL020 | Pipe Xpress | 10 | 484 | 13 | PASS | ran | hold | hold | clean |
-| PHL021 | Pro Nails | 10 | 487 | 13 | PASS | ran | hold | hold | clean |
-| PHL022 | Salter's Fireplace | 10 | 486 | 13 | PASS | ran | hold | hold | clean |
-| PHL023 | Southampton Hot Tub | 10 | 498 | 13 | PASS | ran | hold | hold | clean |
-| PHL024 | THR Insurance | 10 | 503 | 13 | PASS | ran | hold | hold | clean |
-| PHL025 | WJA Landscaping | 10 | 468 | 13 | PASS | ran | hold | hold | clean |
+| PHL001 | Andorra Family Dentistry | 10 | 509 | 12 | PASS | ran | ready | hold | clean |
+| PHL002 | Benjamin Lovell Shoes | 10 | 483 | 12 | PASS | ran | ready | hold | clean |
+| PHL003 | Davidson Fabricating | 10 | 533 | 12 | PASS | ran | ready | hold | clean |
+| PHL004 | Dream Team Home Services | 10 | 497 | 12 | PASS | ran | hold | hold | clean |
+| PHL005 | Dutton Road Veterinary Clinic | 10 | 480 | 12 | PASS | ran | hold | hold | clean |
+| PHL006 | Eastern Dragon | 10 | 599 | 12 | PASS | ran | ready | hold | clean |
+| PHL007 | Electric Direct | 10 | 470 | 12 | PASS | ran | hold | hold | clean |
+| PHL008 | Elverson Supply | 10 | 486 | 12 | PASS | ran | hold | hold | clean |
+| PHL009 | Floral and Hardy of Skippack | 10 | 579 | 12 | PASS | ran | hold | hold | clean |
+| PHL010 | GO2 Tech | 10 | 502 | 12 | PASS | ran | hold | hold | clean |
+| PHL011 | Home Furnishing Consignment | 10 | 552 | 12 | PASS | ran | ready | hold | clean |
+| PHL012 | Johnny's Pizza & Pasta | 10 | 540 | 12 | PASS | ran | ready | hold | clean |
+| PHL013 | MacLaren Kitchen and Bath | 10 | 522 | 12 | PASS | ran | hold | hold | clean |
+| PHL014 | Metalmorphose Ironworks | 10 | 519 | 12 | PASS | ran | hold | hold | clean |
+| PHL015 | The New Pennsburg Diner | 10 | 450 | 12 | PASS | ran | hold | hold | clean |
+| PHL016 | Oaks Italian Deli And Pizzeria | 10 | 566 | 12 | PASS | ran | ready | hold | clean |
+| PHL017 | Frederick W. Oster Fine Violins | 10 | 513 | 12 | PASS | ran | hold | hold | clean |
+| PHL018 | Peking Gourmet | 10 | 581 | 12 | PASS | ran | ready | hold | clean |
+| PHL019 | Philadelphia Garage | 10 | 472 | 12 | PASS | ran | hold | hold | clean |
+| PHL020 | Pipe Xpress | 10 | 476 | 12 | PASS | ran | hold | hold | clean |
+| PHL021 | Pro Nails | 10 | 479 | 12 | PASS | ran | hold | hold | clean |
+| PHL022 | Salter's Fireplace | 10 | 478 | 12 | PASS | ran | hold | hold | clean |
+| PHL023 | Southampton Hot Tub | 10 | 489 | 12 | PASS | ran | hold | hold | clean |
+| PHL024 | THR Insurance | 10 | 495 | 12 | PASS | ran | hold | hold | clean |
+| PHL025 | WJA Landscaping | 10 | 460 | 12 | PASS | ran | hold | hold | clean |
 
 ## Held (17)
 

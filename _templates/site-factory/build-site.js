@@ -361,6 +361,7 @@ const usedImages = html.match(/assets\/[a-z0-9-]+\.(webp|png|jpg)/g) || [];
 usedImages.forEach((u) => wanted.add(u.replace('assets/', '')));
 const have = new Set(fs.readdirSync(path.join(outDir, 'assets')));
 const missingAssets = [...wanted].filter((f) => !have.has(f));
+const photos = [...new Set(usedImages.filter((u) => /image-\d+\./.test(u)))];
 
 // Measured against the canonical batch spec in philly-sites/DESIGN-SYSTEM.md
   // Count copy only: strip style/script before word tally so skins don't inflate metrics.
@@ -377,7 +378,7 @@ const missingAssets = [...wanted].filter((f) => !have.has(f));
     htmlBytes: html.length,
     sections: sectionNames,
     words,
-    images: usedImages.length,
+    images: photos.length,
     missingAssets,
   };
 }
