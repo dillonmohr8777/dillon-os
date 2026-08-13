@@ -31,6 +31,15 @@ const esc = (s) =>
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;');
+const plainHeading = (s, fallback = '') =>
+  esc(
+    String(s || fallback)
+      .replace(/<\/?mark>/gi, '')
+      .replace(/\s+/g, ' ')
+      .replace(/\s+,/g, ',')
+      .replace(/,\s*$/g, '')
+      .trim()
+  );
 
 const required = ['slug', 'name', 'city', 'tokens', 'fonts', 'hero'];
 for (const key of required) {
@@ -167,7 +176,7 @@ const builders = {
     const float = d.glassFloat
       ? `<div class="glass-panel glass-float"><strong>${esc(d.glassFloat.title || brief.name)}</strong><span>${esc(d.glassFloat.sub || brief.city)}</span></div>`
       : `<div class="glass-panel glass-float"><strong>${esc(brief.name)}</strong><span>${esc(brief.city)}</span></div>`;
-    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1><mark>${esc(d.headline || brief.name)}</mark></h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
+    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1>${plainHeading(d.headline, brief.name)}</h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
   },
   offerings(d) {
     const cards = d.items
@@ -176,7 +185,7 @@ const builders = {
         return `<article class="offering-card reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><h3>${esc(title)}</h3>${text ? `<p>${esc(text)}</p>` : ''}</article>`;
       })
       .join('');
-    return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'What to explore')}<h2>${d.heading || 'Signature offerings, <mark>clearly framed.</mark>'}</h2></header><div class="offering-grid">${cards}</div></section>`;
+    return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'What to explore')}<h2>${plainHeading(d.heading, 'What they actually do.')}</h2></header><div class="offering-grid">${cards}</div></section>`;
   },
   proof(d) {
     const cells = d.items
@@ -186,11 +195,11 @@ const builders = {
   },
   gallery(d) {
     const figs = (d.imageIndexes || [3, 4, 5, 6, 7]).map((n) => figure(n)).join('');
-    return `<section class="gallery ${pickSurface(d.surface || 'paper')} vanish-out" id="gallery"><header class="section-head reveal"><h2>${d.heading || 'See what makes this place <mark>distinct.</mark>'}</h2></header><div class="gallery-rail" data-filmstrip>${figs}</div></section>`;
+    return `<section class="gallery ${pickSurface(d.surface || 'paper')} vanish-out" id="gallery"><header class="section-head reveal"><h2>${plainHeading(d.heading, 'See what makes this place distinct.')}</h2></header><div class="gallery-rail" data-filmstrip>${figs}</div></section>`;
   },
   story(d) {
     const paras = (d.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join('');
-    return `<section class="story ${pickSurface(d.surface || 'deep')} vanish-out"><div class="story-copy reveal reveal-left"><h2>${esc(d.heading || 'About')}</h2>${paras}</div><div class="reveal reveal-right">${figure(d.imageIndex || 2)}</div></section>`;
+    return `<section class="story ${pickSurface(d.surface || 'deep')} vanish-out"><div class="story-copy reveal reveal-left"><h2>${plainHeading(d.heading, 'About')}</h2>${paras}</div><div class="reveal reveal-right">${figure(d.imageIndex || 2)}</div></section>`;
   },
   experience(d) {
     const cards = d.items
@@ -199,14 +208,14 @@ const builders = {
         return `<article class="reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><h3>${esc(title)}</h3>${text ? `<p>${esc(text)}</p>` : ''}</article>`;
       })
       .join('');
-    return `<section class="experience ${pickSurface(d.surface || 'panel')} vanish-out"><header class="section-head reveal"><h2>${esc(d.heading || 'Built around the details.')}</h2></header><div class="experience-grid">${cards}</div></section>`;
+    return `<section class="experience ${pickSurface(d.surface || 'panel')} vanish-out"><header class="section-head reveal"><h2>${plainHeading(d.heading, 'Built around the details.')}</h2></header><div class="experience-grid">${cards}</div></section>`;
   },
   feature(d) {
-    return `<section class="feature ${pickSurface(d.surface || 'accent')} vanish-out"><div class="reveal reveal-left">${figure(d.imageIndex || 8)}</div><div class="feature-copy reveal reveal-right"><h2>${esc(d.heading)}</h2><p>${esc(d.text || '')}</p>${cta(d.cta, 'button button-secondary')}</div></section>`;
+    return `<section class="feature ${pickSurface(d.surface || 'accent')} vanish-out"><div class="reveal reveal-left">${figure(d.imageIndex || 8)}</div><div class="feature-copy reveal reveal-right"><h2>${plainHeading(d.heading)}</h2><p>${esc(d.text || '')}</p>${cta(d.cta, 'button button-secondary')}</div></section>`;
   },
   spotlight(d) {
     if (!d.heading) return '';
-    return `<section class="spotlight ${pickSurface(d.surface || 'panel')} vanish-out"><div class="feature-copy reveal reveal-left"><h2>${esc(d.heading)}</h2><p>${esc(d.text || '')}</p>${cta(d.cta, 'button button-secondary')}</div><div class="reveal reveal-right">${figure(d.imageIndex || 6)}</div></section>`;
+    return `<section class="spotlight ${pickSurface(d.surface || 'panel')} vanish-out"><div class="feature-copy reveal reveal-left"><h2>${plainHeading(d.heading)}</h2><p>${esc(d.text || '')}</p>${cta(d.cta, 'button button-secondary')}</div><div class="reveal reveal-right">${figure(d.imageIndex || 6)}</div></section>`;
   },
   catalog(d) {
     const cards = d.items
@@ -215,7 +224,7 @@ const builders = {
         return `<article class="catalog-card reveal delay-${(i % 3) + 1}">${figure(item.imageIndex || 9 + i)}<h3>${esc(item.title)}</h3>${blurb ? `<p>${esc(blurb)}</p>` : ''}<a href="${esc(item.href)}">Explore \u2197</a></article>`;
       })
       .join('');
-    return `<section class="catalog ${pickSurface(d.surface || 'deep')} vanish-out"><header class="section-head reveal"><h2>${d.heading || 'More ways into the <mark>experience.</mark>'}</h2></header><div class="catalog-grid">${cards}</div></section>`;
+    return `<section class="catalog ${pickSurface(d.surface || 'deep')} vanish-out"><header class="section-head reveal"><h2>${plainHeading(d.heading, 'More ways into the experience.')}</h2></header><div class="catalog-grid">${cards}</div></section>`;
   },
   social(d) {
     const indexes = d.imageIndexes || [3, 4, 5, 6, 7, 8];
@@ -224,7 +233,7 @@ const builders = {
       .map((n, i) => figure(n, { caption: captions[i] || 'From their feed' }))
       .join('');
     if (!figs) return '';
-    return `<aside class="social-strip ${pickSurface(d.surface || 'paper')} vanish-out" id="social"><header class="section-head reveal">${sectionKicker(d.kicker || 'Pulled from their world')}<h2>${d.heading || 'Social energy, <mark>built into the page.</mark>'}</h2></header><div class="social-rail">${figs}</div></aside>`;
+    return `<aside class="social-strip ${pickSurface(d.surface || 'paper')} vanish-out" id="social"><header class="section-head reveal">${sectionKicker(d.kicker || 'Pulled from their world')}<h2>${plainHeading(d.heading, 'From their world.')}</h2></header><div class="social-rail">${figs}</div></aside>`;
   },
   contact(d) {
     const mapQuery = brief.address || `${brief.name}, ${brief.city}`;
@@ -247,11 +256,15 @@ const builders = {
       .filter(Boolean)
       .join('');
     const mapFrame = `<figure class="map-embed"><iframe title="${esc(`Map of ${brief.name} in ${brief.city}`)}" src="${esc(mapsEmbed)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe></figure>`;
-    return `<section class="contact-system ${pickSurface(d.surface || 'deep')} vanish-out" id="visit"><div class="section-kicker">Visit and contact</div><div class="contact-intro reveal"><h2>${d.heading || 'Make the next visit <mark>easy.</mark>'}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div>${mapFrame}</section>`;
+    return `<section class="contact-system ${pickSurface(d.surface || 'deep')} vanish-out" id="visit"><div class="section-kicker">Visit and contact</div><div class="contact-intro reveal"><h2>${plainHeading(d.heading, 'Make the next visit easy.')}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div>${mapFrame}</section>`;
   },
   closing(d) {
     const lead = d.sub || brief.description || '';
-    return `<section class="closing ${pickSurface(d.surface || 'panel')} vanish-out reveal">${sectionKicker(d.kicker || `${brief.city}, in full`)}<h2><mark>${esc(d.heading || brief.name)}</mark></h2>${lead ? `<p class="closing-lead">${esc(lead)}</p>` : ''}${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
+    const mark =
+      brief.logo === false
+        ? `<span class="logo-outro-wordmark">${esc(brief.name)}</span>`
+        : `<img class="logo-outro-mark" src="assets/logo.png" alt="${esc(brief.name)}" width="1000" height="906" loading="lazy">`;
+    return `<section class="closing logo-outro ${pickSurface(d.surface || 'paper')}" aria-label="${esc(brief.name)} logo">${sectionKicker(d.kicker || brief.city)}<div class="ink-reveal reveal">${mark}</div>${lead ? `<p class="closing-lead">${esc(lead)}</p>` : ''}${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
   },
 };
 

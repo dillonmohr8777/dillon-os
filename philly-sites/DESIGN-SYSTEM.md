@@ -52,7 +52,7 @@ Pages compose from this fixed set, each `<section class="<name> surface-<paper|a
 | `feature` | Split layout spotlighting one signature thing |
 | `spotlight` / `commercial-spotlight` | Secondary business line (merch, wholesale, events) |
 | `contact-system` / `visit` | Address, hours, phone, and a square Google Maps embed (`map-embed`, `aspect-ratio: 1/1`, max 1080px) that actually shows the map |
-| `closing` | Big repeat of the main claim + one CTA |
+| `closing` | Required last section: the real logo soaks into the paper like ink (IMMOHRTAL `ink-reveal`), then a short lead and one CTA. No highlighted type. |
 
 Surface rhythm: alternate surfaces so no two adjacent sections share one (typical flow: paper → accent → panel → deep → paper...).
 
@@ -88,7 +88,7 @@ So the floor is 6 required sections; hitting the target of 10 means adding `proo
 ## Shared chrome and behavior
 
 - `site-header`: sticky liquid-glass bar with `brand-logo` (or `wordmark` fallback), chip nav links, one header CTA. Nav stays visible on small screens as a horizontal chip scroller. On scroll the header mark inks away as the bottom logo arrives.
-- `bottom-dock` (also class `mobile-action`): always-on liquid-glass page menu at the thumb line. Explore / Gallery, a center ink-logo well, Visit, and the primary CTA. The real logo is not baked into photos. It blooms into the well with disappearing-ink masking and particle spray after the hero.
+- `bottom-dock` (also class `mobile-action`): always-on liquid-glass page menu at the thumb line. Explore / Gallery, a center paper well with the real logo, Visit, and the primary CTA. The same mark soaks into the closing section as a large ink-reveal, matching the IMMOHRTAL outro.
 - `site-footer`: name + address + `footer-links`.
 - Reveal-on-scroll with direction/delay variants; sections can `.vanish-out` as they leave upward
 - Marquee strip after the hero (their lingo, not filler)

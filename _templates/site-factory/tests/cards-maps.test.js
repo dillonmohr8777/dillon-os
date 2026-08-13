@@ -53,4 +53,27 @@ describe('filled cards, unique images, embedded map', () => {
     assert.equal(new Set(srcs).size, srcs.length, `duplicate srcs: ${srcs}`);
     assert.equal(srcs.length, 12);
   });
+
+  it('soaks the logo into paper and never highlights type', () => {
+    const built = buildSite(
+      passingBrief({
+        slug: 'ink-logo-co',
+        name: 'Ink Logo Co',
+        offerings: {
+          heading: 'Five shops, <mark>one standard.</mark>',
+          items: [
+            'Residential dryer vent cleaning with before-and-after airflow readings',
+            'Bird guard and vent cap installation to keep nests out for good',
+            'Multi-unit and laundromat service with scheduled maintenance plans',
+          ],
+        },
+      }),
+      '/tmp/ink-logo-test'
+    );
+    assert.doesNotMatch(built.html, /<mark[\s>]/);
+    assert.match(built.html, /<h2>Five shops, one standard\.<\/h2>/);
+    assert.match(built.html, /class="ink-reveal reveal"/);
+    assert.match(built.html, /logo-outro-wordmark/);
+    assert.doesNotMatch(built.html, /<h2>[^<]*,\s*<\/h2>/);
+  });
 });

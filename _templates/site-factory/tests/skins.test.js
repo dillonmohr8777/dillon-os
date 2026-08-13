@@ -40,5 +40,8 @@ describe('attitude skins', () => {
     assert.doesNotMatch(built.html, /gallery-grid/);
     assert.match(built.html, /live-frame/);
     assert.match(built.html, /vanish-out/);
+    assert.doesNotMatch(built.html, /<mark[\s>]/);
+    assert.match(built.html, /class="ink-reveal reveal"/);
+    assert.match(built.html, /logo-outro-mark|logo-outro-wordmark/);
   });
 });
