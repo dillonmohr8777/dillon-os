@@ -17,3 +17,4 @@ Use [[12_Brain/templates/Decision|Decision template]]. View in
 ## Seed decision
 
 - [[12_Brain/decisions/2026-07-29 - 12_Brain is the canonical brain layer|2026-07-29 — 12_Brain is the canonical brain layer]]
+- [[12_Brain/decisions/2026-08-13 - Prospect Radar V2 audit engine|2026-08-13 — Prospect Radar V2 is an adapter layer]]

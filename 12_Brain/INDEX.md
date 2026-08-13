@@ -58,6 +58,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Projects · Decisions · Research · Memory · Protocols
 
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
+- [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
@@ -71,6 +72,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]] — the eight-stage model and the honest automation status of each stage.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Market Roster|Market Roster]] — geography ladder (Philadelphia → PA → national) and vertical priorities.
 - `handoffs/prospect-radar-blockers-2026-08-06.md` — open blockers for the desktop agent: Tier 1 unproven, thresholds Tier-0-anchored, OSM trade coverage, no outcome data.
+- `_os/radar-engine/` — Prospect Radar V2 adapter layer (intake, QA, reports, dry-run handoff). See [[12_Brain/projects/Prospect Radar V2]].
 
 ## Folder indexes (working vault)
 

@@ -1,0 +1,45 @@
+name: Radar V2
+
+on:
+  pull_request:
+    paths:
+      - '_os/radar-engine/**'
+      - '.github/workflows/radar-v2.yml'
+  push:
+    paths:
+      - '_os/radar-engine/**'
+      - '.github/workflows/radar-v2.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: radar
+          POSTGRES_PASSWORD: radar
+          POSTGRES_DB: radar_v2
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U radar -d radar_v2"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install engine deps
+        working-directory: _os/radar-engine
+        run: npm install --omit=dev
+      - name: Run Radar V2 tests
+        env:
+          DATABASE_URL: postgres://radar:radar@127.0.0.1:5432/radar_v2
+        run: node --experimental-strip-types --test _os/radar-engine/tests/*.test.ts
