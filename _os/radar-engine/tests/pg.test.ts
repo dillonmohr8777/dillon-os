@@ -58,10 +58,18 @@ describe('postgres repositories', () => {
       process.env.RADAR_V2_FIELD_KEY = 'ab'.repeat(32);
       try {
         const locked = await createStore({ databaseUrl: url });
+        const prospect = locked.insert('prospects', {
+          business_name: 'Encrypt HVAC',
+          lifecycle: 'discovered',
+          domain: `encrypt-${Date.now()}.example`,
+        });
         const contact = locked.insert('contacts', {
+          prospect_id: prospect.id,
           value: 'jordan.hale@cedarridgehvac.example',
+          type: 'email',
           person_name: 'Jordan Hale',
           person_title: 'Owner',
+          source: 'own-site',
         });
         await locked.flush();
         const { rows: raw } = await locked.query('SELECT value FROM contacts WHERE id = $1', [contact.id]);
