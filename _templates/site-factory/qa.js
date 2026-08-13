@@ -45,7 +45,11 @@ async function runQa(siteDir, opts = {}) {
   imgs.forEach((m) => {
     const tag = m[1];
     const src = (tag.match(/src="([^"]*)"/) || [])[1];
-    if (!/alt="[^"]+"/.test(tag)) failures.push(`Image missing alt text: ${src}`);
+    if (/aria-hidden="true"/.test(tag)) {
+      if (!/\balt="/.test(tag)) failures.push(`Hidden image missing alt attribute: ${src}`);
+    } else if (!/alt="[^"]+"/.test(tag)) {
+      failures.push(`Image missing alt text: ${src}`);
+    }
     if (src && src.startsWith('assets/') && !fs.existsSync(path.join(siteDir, src))) {
       failures.push(`Missing asset file: ${src}`);
     }
