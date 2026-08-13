@@ -92,9 +92,9 @@
   },
   "catalog": {
     "items": [
-      { "title": "Residential Service", "href": "https://example.com/residential", "imageIndex": 9 },
-      { "title": "Multi-Unit Buildings", "href": "https://example.com/multi-unit", "imageIndex": 10 },
-      { "title": "Maintenance Plans", "href": "https://example.com/plans", "imageIndex": 11 }
+      { "title": "Residential Service", "href": "https://example.com/residential", "imageIndex": 9, "text": "Residential dryer vent cleaning at Dryer Vent John in Philadelphia. Call 215-555-0142." },
+      { "title": "Multi-Unit Buildings", "href": "https://example.com/multi-unit", "imageIndex": 10, "text": "Stacked laundry rooms and long duct runs, quoted before work starts." },
+      { "title": "Maintenance Plans", "href": "https://example.com/plans", "imageIndex": 11, "text": "Scheduled return visits so the vent stays clear. Monday-Saturday, 8am-6pm." }
     ]
   },
   "contact": {},

@@ -51,7 +51,7 @@ Pages compose from this fixed set, each `<section class="<name> surface-<paper|a
 | `catalog` | Card grid of deep links (menu, delivery, shop, booking) |
 | `feature` | Split layout spotlighting one signature thing |
 | `spotlight` / `commercial-spotlight` | Secondary business line (merch, wholesale, events) |
-| `contact-system` / `visit` | Address, hours, phone, and a `visit-links` list (call / order / directions) |
+| `contact-system` / `visit` | Address, hours, phone, and a square Google Maps embed (`map-embed`, `aspect-ratio: 1/1`, max 1080px) that actually shows the map |
 | `closing` | Big repeat of the main claim + one CTA |
 
 Surface rhythm: alternate surfaces so no two adjacent sections share one (typical flow: paper → accent → panel → deep → paper...).
@@ -92,7 +92,7 @@ So the floor is 6 required sections; hitting the target of 10 means adding `proo
 - `site-footer`: name + address + `footer-links`.
 - Reveal-on-scroll with direction/delay variants; sections can `.vanish-out` as they leave upward
 - Marquee strip after the hero (their lingo, not filler)
-- Liquid-glass header, bottom dock, contact cards, and hero float
+- Liquid-glass header, bottom dock, contact cards, hero float, and a live Google Map in Visit
 - Sticky bottom dock with scroll-triggered ink/particle logo
 - Ken-burns live frames on odd images; glass sheen on even stills
 - Per-site `attitude` skin (`glass` | `editorial` | `brutal` | `warm` | `industrial` | `neon`) so every homepage has its own feel

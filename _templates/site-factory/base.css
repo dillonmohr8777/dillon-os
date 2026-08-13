@@ -232,7 +232,11 @@ figcaption{
   background:color-mix(in srgb,var(--accent2) 28%,transparent);
   box-shadow:10px 12px 0 color-mix(in srgb,currentColor 25%,transparent);
 }
-.offering-card h3,.experience-grid h3{margin-top:55px;font-size:clamp(1.25rem,2.3vw,2rem);line-height:1.15;text-wrap:balance}
+.offering-card h3,.experience-grid h3{margin:14px 0 0;font-size:clamp(1.25rem,2.3vw,2rem);line-height:1.15;text-wrap:balance}
+.offering-card p,.experience-grid p,.catalog-card p{
+  margin:12px 0 0;max-width:34ch;
+  font-size:clamp(1.02rem,1.55vw,1.22rem);line-height:1.45;text-wrap:pretty;
+}
 
 .story,.feature,.spotlight{display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,7vw,110px);align-items:center}
 .story p,.feature p,.spotlight p,.closing-lead{font-size:clamp(1.22rem,2.1vw,1.7rem);max-width:36ch;text-wrap:pretty;line-height:1.45}
@@ -263,7 +267,8 @@ figcaption{
 }
 .catalog-card:hover,.catalog-card:focus-within{transform:translateY(-8px) scale(1.01)}
 .catalog-card figure{height:330px}
-.catalog-card h3{font-size:1.4rem}
+.catalog-card h3{font-size:1.4rem;margin:14px 0 0}
+.catalog-card a{margin-top:14px}
 
 /* Social strip — harvested / mirrored imagery captions */
 .social-strip{padding-block:clamp(60px,8vw,110px)}
@@ -293,6 +298,15 @@ figcaption{
 .contact-card>span{font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.16em}
 .contact-card strong{font-size:clamp(1.1rem,2vw,1.65rem)}
 .contact-card a{align-self:flex-start}
+.map-embed{
+  position:relative;display:block;
+  width:min(100%,1080px);max-width:100%;
+  aspect-ratio:1/1;height:auto;
+  margin:28px auto 0;
+  border:var(--border) solid currentColor;border-radius:var(--radius);
+  overflow:hidden;background:color-mix(in srgb,var(--panel) 70%,#cfd4da);
+}
+.map-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
 .closing{text-align:center;padding-block:clamp(100px,14vw,180px)}
 .closing h2{max-width:1100px;margin:0 auto 28px}
@@ -406,6 +420,7 @@ p,address{text-wrap:pretty}
   .gallery{padding-inline:0}
   .gallery .section-head{padding-inline:18px}
   .gallery-rail{padding-inline:18px;scroll-padding-inline:18px}
+  .map-embed{width:100%;max-width:100%}
   .footer-disclosure{grid-template-columns:1fr}
   .button-row{flex-direction:column;align-items:stretch}
   .button-row .button{width:100%;min-height:52px}

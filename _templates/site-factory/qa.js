@@ -63,6 +63,23 @@ async function runQa(siteDir, opts = {}) {
     }
   });
 
+  if (!/<iframe[^>]+src="https:\/\/maps\.google\.com\/maps\?[^"]*output=embed/.test(html)) {
+    failures.push('Missing embedded Google Map iframe');
+  }
+  if (/class="offering-card/.test(html) && !/<article class="offering-card[\s\S]*?<p>/.test(html)) {
+    failures.push('Offering cards are missing body copy');
+  }
+  if (/class="catalog-card/.test(html) && !/<article class="catalog-card[\s\S]*?<p>/.test(html)) {
+    failures.push('Catalog cards are missing body copy');
+  }
+
+  const imgSrcs = [...html.matchAll(/<img[^>]*src="(assets\/image-[^"]+)"/g)].map((m) => m[1]);
+  const seenSrc = new Set();
+  imgSrcs.forEach((src) => {
+    if (seenSrc.has(src)) failures.push(`Duplicate image on page: ${src}`);
+    seenSrc.add(src);
+  });
+
   const surfaces = [...html.matchAll(/<section class="[^"]*surface-([a-z]+)/g)].map((m) => m[1]);
   surfaces.forEach((s, i) => {
     if (i > 0 && s === surfaces[i - 1]) {
@@ -101,7 +118,8 @@ async function runQa(siteDir, opts = {}) {
           ['desktop', 1440, 900],
         ]) {
           const page = await browser.newPage({ viewport: { width, height } });
-          await page.goto(url, { waitUntil: 'networkidle' });
+          await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
+          await new Promise((r) => setTimeout(r, 400));
           await page.evaluate(() =>
             document.querySelectorAll('.reveal').forEach((n) => n.classList.add('visible', 'in-view'))
           );

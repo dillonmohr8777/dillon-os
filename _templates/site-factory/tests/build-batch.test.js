@@ -123,6 +123,22 @@ describe('build-batch visual QA and spec gates', () => {
     assert.equal(summary.results[0].mailReady, 'hold');
   });
 
+  it('rejects duplicate image bytes inside one site', async () => {
+    const root = tmp();
+    const briefs = [passingBrief({ slug: 'dup-bytes-co', name: 'Dup Bytes Co' })];
+    writeBatchFixture(root, { targetCount: 1, briefs });
+    buildSite(briefs[0], path.join(root, 'sites'));
+    writeUniqueAssets(root, ['dup-bytes-co'], 12);
+    const dir = path.join(root, 'sites', 'dup-bytes-co', 'assets');
+    fs.copyFileSync(path.join(dir, 'image-1.webp'), path.join(dir, 'image-3.webp'));
+
+    const summary = await runBatch(root, { quiet: true, runQa: fullPassQa });
+    assert.equal(summary.ok, false);
+    assert.ok(summary.results[0].failures.some((f) => /duplicate image/.test(f)));
+    assert.equal(summary.results[0].qaReady, 'hold');
+    assert.equal(summary.results[0].mailReady, 'hold');
+  });
+
   it('rejects hostile slugs before path joins', async () => {
     const root = tmp();
     const briefs = [passingBrief({ slug: 'ok-shop', name: 'Ok' })];
