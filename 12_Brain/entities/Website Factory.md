@@ -19,6 +19,18 @@ deploy credentials.
   and `align` (Align HCM liquid glass / 3D / ink-reveal; colors from each brand).
 - Secrets and host tokens never land in this note.
 
+## Prospect Radar release rule
+
+The August 13, 2026 call-review consolidation established a reusable boundary:
+organize saved routes separately from callable businesses. Preserve duplicate
+URLs as redirects, exclude unverifiable or closed prospects from the sales
+list, and keep one canonical row per real business. That release reconciled
+245 routes into 238 callable businesses, five aliases, and two exclusions.
+Every callable row required a sourced phone, one canonical private site, full
+desktop, tablet, and mobile browser checks, and production readback before it
+entered Jesse's call sheet. Call readiness does not equal final client design
+approval, and `mail_ready` remains held until an exact outreach approval.
+
 ## Links
 
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]]

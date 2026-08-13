@@ -1,0 +1,483 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-08-13",
+  "purpose": "One verified call row per current business for Jesse; stale, invalid, and alias routes are not callable businesses.",
+  "aliases": {
+    "frederick-oster-fine-violins": "oster-fine-violins",
+    "jarman-sales-service": "jarman-hvac",
+    "l-a-verruni-landscaping": "verruni-landscaping",
+    "maclaren-kitchen-bath": "maclaren-kitchen-and-bath",
+    "pipe-xpress-inc": "pipe-xpress"
+  },
+  "exclusions": {
+    "pier-6": {
+      "reason": "Invalid prospect identity: the saved source is a federal Ready Reserve Force page, not a verifiable individual business.",
+      "evidenceUrl": "https://www.maritime.dot.gov/national-defense-reserve-fleet/ndrf/maritime-administration%E2%80%99s-ready-reserve-force"
+    },
+    "the-little-gym": {
+      "reason": "Closed or stale location: the saved Doylestown/Warrington official location route returns HTTP 404 and current listings mark the location closed.",
+      "evidenceUrl": "https://www.thelittlegym.com/doylestownpa"
+    }
+  },
+  "acceptedOfficialFetch": {
+    "art-city-vets": "(215) 563-8387",
+    "artisan-wine-and-cheese-cellars": "(610) 813-2851",
+    "borsello-landscaping": "(302) 472-2600",
+    "boyle-energy-heating-air-conditioning-oil-propane": "(215) 878-1111",
+    "brandywine-auto-parts": "(302) 429-0643",
+    "captain-car-wash": "(610) 539-9390",
+    "chadds-ford-animal-hospital": "(610) 388-2141",
+    "ciocca-pre-owned-autos": "(610) 395-3745",
+    "del-chevrolet": "(610) 647-9440",
+    "dentistry-for-life": "(267) 656-6763",
+    "dinse-dental-care": "(717) 396-0330",
+    "easy-auto-tag-insurance": "(267) 239-0692",
+    "faulkner-buick-gmc": "(610) 674-0610",
+    "ferrari-philadelphia": "(610) 527-1100",
+    "field-1-post-llc": "(610) 789-2882",
+    "fillman-and-sons-floors": "(610) 928-1515",
+    "francis-kaufman-house": "(215) 234-2499",
+    "fredo-s-deli": "(412) 344-1060",
+    "hamburg-animal-hospital": "(610) 562-5000",
+    "harry-s-hotdogs": "(610) 389-7179",
+    "johnny-s-pizza": "(610) 287-4771",
+    "kinetic-physical-therapy": "(610) 424-1100",
+    "main-line-veterinary-hospital": "(610) 695-0860",
+    "morton-electric-pool-spa": "(888) 355-9223",
+    "nottingham-creamery": "(610) 932-0825",
+    "ooka-hibachi-and-sushi": "(215) 659-7688",
+    "openarc": "(724) 602-0286",
+    "oss-health": "(717) 633-0031",
+    "pizza-peddler": "(610) 399-8311",
+    "radiance-dental": "(610) 436-4088",
+    "riley-rodzianko-and-clymer-llp": "(215) 536-8000",
+    "rocco-s-brick-oven-pizzeria": "(610) 831-0100",
+    "sciacca-service-center": "(610) 277-7744",
+    "scott-lot": "(610) 439-0700",
+    "seiler-drury": "(610) 272-4148",
+    "sesame-inn": "(412) 341-2555",
+    "thr-insurance-agency": "(610) 426-0007",
+    "tm-prestige-home-cash-buyer": "(267) 332-4669",
+    "towne-book-center-wine-bar": "(610) 454-0640",
+    "urgentvet-pottstown": "(484) 763-4500",
+    "zuber-realty": "(610) 369-0303"
+  },
+  "overrides": {
+    "wja-landscaping": {
+      "phone": "(267) 278-9754",
+      "address": "138 Pennapacker Rd, Collegeville, PA 19426",
+      "sourceUrl": "https://wjalandscaping.com/",
+      "verification": "Current official homepage"
+    },
+    "harry-s-hotdogs": {
+      "business": "Harry's Hotdogs"
+    },
+    "agnes-edmunds-bridal-formals": {
+      "phone": "(610) 323-6712",
+      "address": "Pottstown, PA",
+      "sourceUrl": "https://www.waze.com/live-map/directions/us/pa/pottstown/agnes-edmunds-bridal-and-formals?to=place.ChIJH2LOp0GGxokRfDMm3kfVbm4",
+      "verification": "Current location directory corroborated by recent reviews"
+    },
+    "al-tacos-locos": {
+      "phone": "(215) 883-6446",
+      "address": "408 York Rd, Jenkintown, PA",
+      "sourceUrl": "https://altacoslocos.com/",
+      "verification": "Official website"
+    },
+    "anthony-gueriera-insurance": {
+      "business": "Anthony Gueriera Jr. Insurance Agency LLC",
+      "phone": "(610) 368-4537",
+      "address": "83 First Ave, Broomall, PA",
+      "sourceUrl": "http://aguerierajrinsuranceagency.com",
+      "verification": "Current public business listing"
+    },
+    "apr-supply-company": {
+      "phone": "(484) 318-8104",
+      "address": "81 Lancaster Ave, Malvern, PA",
+      "sourceUrl": "https://www.aprsupply.com/malvern",
+      "verification": "Official location page"
+    },
+    "baldwins-book-barn": {
+      "phone": "(610) 696-0816",
+      "sourceUrl": "https://bookbarn.com/contact-us/",
+      "verification": "Official contact page"
+    },
+    "ban-ban-asian-bistro": {
+      "business": "Bàn Bàn Asian Bistro",
+      "phone": "(215) 277-5653",
+      "address": "1533 Old York Rd, Abington, PA",
+      "sourceUrl": "https://www.banbanasian.com/contact-us/",
+      "verification": "Official contact page"
+    },
+    "barnes-financial-group": {
+      "phone": "(610) 627-2340",
+      "address": "Media, PA",
+      "sourceUrl": "https://www.bbb.org/us/pa/media/profile/financial-services/barnes-financial-group-incorporated-0241-235985925",
+      "verification": "Current BBB profile"
+    },
+    "be-balanced-hormone": {
+      "business": "BeBalanced Royersford",
+      "phone": "(610) 968-2322",
+      "address": "519 Main St, Royersford, PA",
+      "sourceUrl": "https://www.bebalancedliving.com/our-story-learn-more",
+      "verification": "Current official website"
+    },
+    "bg-electric": {
+      "phone": "(215) 990-7966",
+      "address": "Philadelphia, PA",
+      "sourceUrl": "https://www.electrician-philadelphia.net/",
+      "verification": "Official website"
+    },
+    "big-head-transport": {
+      "phone": "(215) 494-8007",
+      "address": "2219 Shields St, Philadelphia, PA",
+      "sourceUrl": "https://scribblemaps.azurewebsites.net/maps/view/BigHeadTransport%2CLLC/VWrM5QRsat",
+      "verification": "Current public business listing"
+    },
+    "bpm-fitness": {
+      "phone": "(215) 515-3110",
+      "address": "1808 Spring Garden St, Philadelphia, PA",
+      "sourceUrl": "https://gymnearx.com/philadelphia/gnx/bpm-fitness",
+      "verification": "Current location directory"
+    },
+    "city-electric-supply": {
+      "business": "City Electric Supply West Chester",
+      "phone": "(610) 696-1962",
+      "address": "840 Lincoln Ave, West Chester, PA",
+      "sourceUrl": "https://www.mapquest.com/us/pennsylvania/city-electric-supply-west-chester-549173665",
+      "verification": "Current location listing"
+    },
+    "colmar-dentistry-for-kids": {
+      "phone": "(215) 822-6777",
+      "address": "Colmar, PA",
+      "sourceUrl": "https://www.colmarkids.com/contact/",
+      "verification": "Official contact page"
+    },
+    "custom-it-solutions": {
+      "phone": "(215) 860-7270",
+      "sourceUrl": "https://customitsolutions.com/wp-content/uploads/2023/11/CustomITSolutions_Overview_Brochure_Final-072723.pdf",
+      "verification": "Official company brochure"
+    },
+    "dreammaker-bath-kitchen": {
+      "business": "DreamMaker Bath & Kitchen of Chester County",
+      "phone": "(610) 484-2000",
+      "address": "Chester County, PA",
+      "sourceUrl": "https://www.dreammaker-remodel.com/locations/",
+      "verification": "Official locations page"
+    },
+    "dr-weiss-s-office": {
+      "business": "Orthodontic Associates of Collegeville",
+      "phone": "(610) 409-9880",
+      "address": "555 Second Ave, Suite E-202, Collegeville, PA 19426",
+      "sourceUrl": "https://www.collegevilleorthodontics.com/",
+      "verification": "Official website"
+    },
+    "elite-auto-parts": {
+      "business": "Elite Philly Auto Parts",
+      "phone": "(215) 724-4065",
+      "address": "6796 Essington Ave, Philadelphia, PA 19153",
+      "sourceUrl": "https://www.yellowpages.com/philadelphia-pa/mip/elite-philly-auto-parts-496703416",
+      "verification": "Current business directory; former website is unavailable"
+    },
+    "ember-ale": {
+      "phone": "(484) 902-8053",
+      "sourceUrl": "https://emberandale.com/",
+      "verification": "Official website"
+    },
+    "epam": {
+      "business": "EPAM Philadelphia",
+      "phone": "(267) 759-9000",
+      "address": "Philadelphia, PA",
+      "sourceUrl": "https://www.epam.com/about/who-we-are/contact",
+      "verification": "Official contact page"
+    },
+    "euphoria-nail-bar": {
+      "phone": "(215) 483-4341",
+      "sourceUrl": "https://www.euphorianailbar.com/",
+      "verification": "Official website"
+    },
+    "frazer-antiques": {
+      "phone": "(610) 651-8299",
+      "address": "Frazer, PA",
+      "sourceUrl": "https://www.frazer-antiques.com/",
+      "verification": "Official website"
+    },
+    "germantown-dental-group": {
+      "phone": "(215) 226-2171",
+      "address": "3609 Germantown Ave, Philadelphia, PA 19140",
+      "sourceUrl": "https://www.denteldoc.com/location/?id=78668",
+      "verification": "Current dental directory corroborated by multiple current listings"
+    },
+    "go2tech": {
+      "business": "GO2 Tech",
+      "phone": "(610) 567-3462",
+      "sourceUrl": "https://www.go2tech.com/",
+      "verification": "Official website"
+    },
+    "golden-eagle-jewelry": {
+      "business": "Golden Eagle Jewelers",
+      "phone": "(215) 225-1830",
+      "address": "Philadelphia, PA",
+      "sourceUrl": "https://www.facebook.com/GoldenEagleJewelers",
+      "verification": "Business-controlled profile artwork displays the matching phone"
+    },
+    "heart-soul-tattoo": {
+      "phone": "(215) 679-3775",
+      "address": "205 Main St, East Greenville, PA 18041",
+      "sourceUrl": "https://www.loc8nearme.com/pennsylvania/east-greenville/heart-and-soul-tattoo/4086981/",
+      "verification": "Current location directory corroborated by multiple listings"
+    },
+    "hero-complex": {
+      "business": "Johnny Destructo's Hero Complex",
+      "phone": "(215) 482-7700",
+      "sourceUrl": "https://www.jdsherocomplex.com/about",
+      "verification": "Official website"
+    },
+    "highline-motors": {
+      "business": "Highline Motors Aston",
+      "phone": "(610) 753-4536",
+      "address": "Aston, PA",
+      "sourceUrl": "https://www.highlineaston.com/contact",
+      "verification": "Official contact page"
+    },
+    "holiday-hair": {
+      "business": "Holiday Hair Quakertown",
+      "phone": "(215) 536-9902",
+      "address": "1465 W Broad St, Quakertown, PA",
+      "sourceUrl": "https://www.superpages.com/quakertown-pa/bpp/holiday-hair-459225221",
+      "verification": "Current location directory"
+    },
+    "ivc-wealth-advisors": {
+      "phone": "(215) 392-6631",
+      "sourceUrl": "https://www.ivcwealth.com/ivc-wealth-advisors-team",
+      "verification": "Official website"
+    },
+    "j-pro-inc": {
+      "business": "J-Pro Pools, Inc.",
+      "phone": "(610) 277-7665",
+      "address": "57 E 4th St, Bridgeport, PA 19405",
+      "sourceUrl": "https://www.j-propools.com/",
+      "verification": "Official website"
+    },
+    "just-tires": {
+      "business": "Just Tires Media",
+      "phone": "(610) 892-9214",
+      "address": "Media, PA",
+      "sourceUrl": "https://www.justtires.com/en_US/location/Media-PA-19063-US-000901223",
+      "verification": "Official location page"
+    },
+    "katana": {
+      "business": "Katana Pittsburgh",
+      "phone": "(412) 388-1800",
+      "address": "3229 West Liberty Ave, Dormont, PA 15216",
+      "sourceUrl": "https://www.katanapittsburgh.com/m/direction.html",
+      "verification": "Official directions page"
+    },
+    "kehans-auto-service": {
+      "phone": "(215) 624-3935",
+      "address": "9337 Torresdale Ave, Philadelphia, PA 19114",
+      "sourceUrl": "https://www.drivecleanpa.state.pa.us/stations/se_philadelphia.pdf",
+      "verification": "Current Pennsylvania inspection-station registry"
+    },
+    "verruni-landscaping": {
+      "business": "L. A. Verruni Landscaping",
+      "phone": "(610) 327-2622",
+      "address": "Sanatoga, PA",
+      "sourceUrl": "https://www.bbb.org/us/pa/sanatoga/profile/landscape-architect/la-verruni-landscaping-0241-80018970",
+      "verification": "Current BBB profile"
+    },
+    "lees-hoagie-house": {
+      "business": "Lee's Hoagie House of Horsham",
+      "phone": "(215) 674-8000",
+      "address": "870 Easton Rd, Horsham, PA 19044",
+      "sourceUrl": "https://leeshoagiesabh.com/locations/",
+      "verification": "Official locations page"
+    },
+    "legacy-jewelers": {
+      "phone": "(610) 261-5102",
+      "address": "Schnecksville, PA",
+      "sourceUrl": "https://www.yellowpages.com/schnecksville-pa/mip/legacy-jewelers-545224421",
+      "verification": "Current business directory"
+    },
+    "live-urgent-care": {
+      "business": "Live Urgent Care King of Prussia",
+      "phone": "(484) 750-5212",
+      "address": "King of Prussia, PA",
+      "sourceUrl": "https://liveurgentcare.com/locations/kingofprussia/",
+      "verification": "Official location page"
+    },
+    "lpl-financial": {
+      "business": "Apollo Wealth Advisors",
+      "phone": "(215) 996-9920",
+      "address": "110 Jenkins Ave, Colmar, PA 18915",
+      "sourceUrl": "https://www.apollowealthadvisors.net/contact",
+      "verification": "Official contact page; securities offered through LPL Financial"
+    },
+    "maclaren-kitchen-and-bath": {
+      "business": "MacLaren Kitchen and Bath",
+      "phone": "(610) 436-5436",
+      "sourceUrl": "https://maclarenfab.com/contact-us/",
+      "verification": "Official contact page"
+    },
+    "malvern-vision-care": {
+      "phone": "(610) 644-1879",
+      "address": "Malvern, PA",
+      "sourceUrl": "https://www.loc8nearme.com/pennsylvania/malvern/malvern-vision-care/8461282/",
+      "verification": "Current location directory; former website is unavailable"
+    },
+    "manatawny-still-works": {
+      "phone": "(484) 624-8271",
+      "address": "320 Circle of Progress Dr, Stowe, PA",
+      "sourceUrl": "https://www.waze.com/live-map/directions/manatawny-still-works-circle-of-progress-dr-320-stowe?to=place.w.186319251.1863389114.2105593",
+      "verification": "Current location listing; former domain no longer represents the business"
+    },
+    "mcmenamin-margiotti": {
+      "phone": "(215) 822-1888",
+      "address": "2303 N Broad St, Suite 2, Colmar, PA 18915",
+      "sourceUrl": "https://www.bbb.org/us/pa/north-penn/category/personal-injury-lawyer",
+      "verification": "Current BBB listing corroborated by legal directories"
+    },
+    "ming-s-chinese": {
+      "business": "Ming's Chinese Restaurant",
+      "phone": "(215) 674-8804",
+      "address": "Hatboro, PA",
+      "sourceUrl": "https://mings-restaurant.com/",
+      "verification": "Official website"
+    },
+    "narberth-pizza": {
+      "business": "Narberth Pizza and Steaks",
+      "phone": "(610) 668-2230",
+      "address": "Narberth, PA",
+      "sourceUrl": "https://www.restaurantji.com/pa/narberth/narberth-pizza-/",
+      "verification": "Current restaurant directory"
+    },
+    "nicky-s-thai-kitchen": {
+      "business": "Nicky's Thai Kitchen Downtown",
+      "phone": "(412) 471-8424",
+      "address": "903 Penn Ave, Pittsburgh, PA 15222",
+      "sourceUrl": "https://nickysthaikitchen.com/",
+      "verification": "Official website; downtown location selected from the three listed locations"
+    },
+    "novacare": {
+      "business": "NovaCare Rehabilitation Conshohocken",
+      "phone": "(610) 832-5335",
+      "address": "Conshohocken, PA",
+      "sourceUrl": "https://www.novacare.com/contact/find-a-location/pa/conshohocken/conshohocken/",
+      "verification": "Official location page"
+    },
+    "o-donnell-weiss-mattei-p-c": {
+      "business": "O'Donnell, Weiss & Mattei, P.C.",
+      "phone": "(610) 323-2800",
+      "address": "1503 Sunset Dr, Suite 201, Pottstown, PA 19464",
+      "sourceUrl": "https://www.owmlaw.com/contact/",
+      "verification": "Official contact page"
+    },
+    "philadelphia-auto-accident-injury-attorney": {
+      "phone": "(786) 471-7844",
+      "address": "Philadelphia, PA",
+      "sourceUrl": "https://carcrashinjuryfirm.com/philadelphia-auto-accident-injury-attorney/",
+      "verification": "Official landing page repeatedly displays this contact number"
+    },
+    "philadelphia-garage": {
+      "phone": "(610) 788-2242",
+      "address": "11 Hagerty Blvd, Suite 8, West Chester, PA 19382",
+      "sourceUrl": "https://www.loc8nearme.com/pennsylvania/west-chester/philadelphia-garage/7681162/",
+      "verification": "Current location directory"
+    },
+    "plastic-surgery-solutions": {
+      "business": "Plastic & Reconstructive Surgical Solutions",
+      "phone": "(610) 474-2767",
+      "address": "900 Heritage Dr, Suite 920, Sanatoga, PA 19464",
+      "sourceUrl": "https://towerhealth.org/locations/plastic-reconstructive-surgical-solutions",
+      "verification": "Current Tower Health location page"
+    },
+    "rally-house-collegeville": {
+      "phone": "(484) 460-1445",
+      "address": "60 Town Center Dr, Suite 2, Collegeville, PA 19426",
+      "sourceUrl": "https://www.rallyhouse.com/stores/collegeville/60-town-center-drive",
+      "verification": "Official location page"
+    },
+    "reardon-dental": {
+      "business": "Reardon Dental Exton",
+      "phone": "(610) 624-8552",
+      "address": "45 Dowlin Forge Rd, Exton, PA 19341",
+      "sourceUrl": "https://reardondental.com/",
+      "verification": "Current official website and location listing; Exton selected for the generic Chester County prospect"
+    },
+    "red-hill-greenhouses-florist": {
+      "phone": "(215) 679-7847",
+      "address": "Red Hill, PA",
+      "sourceUrl": "https://www.mapquest.com/us/pennsylvania/red-hill-greenhouse-florist-289395816",
+      "verification": "Current location listing"
+    },
+    "snyder-online-marketing": {
+      "phone": "(267) 688-6493",
+      "address": "107 N Broad St, Doylestown, PA 18901",
+      "sourceUrl": "https://www.bbb.org/us/pa/phila/profile/internet-marketing-services/snyder-online-marketing-llc-0241-236003162",
+      "verification": "Current BBB profile corroborated by the official website"
+    },
+    "the-edge-fitness-clubs": {
+      "business": "The Edge Fitness Clubs Media",
+      "phone": "(484) 443-4154",
+      "address": "Media, PA",
+      "sourceUrl": "https://www.theedgefitnessclubs.com/appt-media",
+      "verification": "Official location page"
+    },
+    "the-restaurant-store": {
+      "business": "The Restaurant Store Plymouth Meeting",
+      "phone": "(610) 272-1653",
+      "address": "2811 DeKalb Pike, Norristown, PA 19401",
+      "sourceUrl": "https://www.therestaurantstore.com/stores/Plymouth-Meeting",
+      "verification": "Official location page corroborated by current map listing"
+    },
+    "theory": {
+      "business": "Theory Outlet at Philadelphia Premium Outlets",
+      "phone": "(610) 326-5040",
+      "address": "18 W Lightcap Rd, Pottstown, PA 19464",
+      "sourceUrl": "https://www.premiumoutlets.com/outlet/philadelphia/stores/theory-outlet",
+      "verification": "Current shopping-center location page"
+    },
+    "trend-auto-trader": {
+      "phone": "(267) 227-1863",
+      "address": "Quakertown, PA",
+      "sourceUrl": "https://www.autotrader.com/car-dealers/quakertown-pa/71779633/trend-auto-trader-inc",
+      "verification": "Current AutoTrader dealer page"
+    },
+    "udis-conn-orthodontics": {
+      "phone": "(215) 576-5805",
+      "address": "403 Washington Ln, Jenkintown, PA 19046",
+      "sourceUrl": "https://npiprofile.com/npi/1871466441",
+      "verification": "Current public provider and location listings; legacy practice identity"
+    },
+    "uno-chicago-style-pizza": {
+      "business": "UNO Pizzeria & Grill Oaks",
+      "phone": "(610) 539-8300",
+      "address": "Oaks, PA",
+      "sourceUrl": "https://unos.com/order-pizza-online/",
+      "verification": "Official locations and ordering page"
+    },
+    "welcome-dental": {
+      "phone": "(610) 692-7868",
+      "sourceUrl": "https://welcomedental.com/contact-us/",
+      "verification": "Official contact page"
+    },
+    "whitelands-animal-hospital": {
+      "phone": "(610) 644-6996",
+      "sourceUrl": "https://www.whitelandsah.com/contact/",
+      "verification": "Official contact page"
+    },
+    "wholly-grounds": {
+      "business": "Wholly Grounds Coffeehouse",
+      "phone": "(610) 806-0573",
+      "sourceUrl": "https://whollygroundscoffeehouse.com/menu",
+      "verification": "Official website"
+    },
+    "wynnewood-eyecare": {
+      "business": "Wynnewood Eye Care",
+      "phone": "(610) 896-4540",
+      "address": "Wynnewood, PA",
+      "sourceUrl": "https://www.wynnewoodeyecare.net/contact-us.html",
+      "verification": "Current official replacement website"
+    }
+  }
+}
