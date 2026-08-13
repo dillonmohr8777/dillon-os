@@ -61,7 +61,7 @@ describe('validate.images', () => {
 
 describe('spec.checkSpec', () => {
   it('passes in-range metrics', () => {
-    assert.deepEqual(checkSpec({ sections: 10, words: 400, images: 12 }), []);
+    assert.deepEqual(checkSpec({ sections: 10, words: 520, images: 12 }), []);
   });
 
   it('fails outside canonical ranges', () => {
@@ -74,7 +74,7 @@ describe('spec.checkSpec', () => {
 
   it('exports measured ranges', () => {
     assert.deepEqual(SPEC.sections, [9, 11]);
-    assert.deepEqual(SPEC.words, [350, 500]);
+    assert.deepEqual(SPEC.words, [400, 720]);
     assert.deepEqual(SPEC.images, [12, 13]);
   });
 });

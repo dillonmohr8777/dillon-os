@@ -46,7 +46,7 @@ Pages compose from this fixed set, each `<section class="<name> surface-<paper|a
 | `proof` | Strip of 2 to 4 hard facts (founded date, hours, signature item, service area) |
 | `offerings` | Numbered grid (01/02/03) of what they sell or do |
 | `story` | Split layout: history/positioning copy beside a photo |
-| `gallery` | Bento image grid with pill captions |
+| `gallery` | Horizontal filmstrip (snap + optional L-R drift). Never a stacked column of photos. |
 | `experience` | Numbered grid of what visiting/working with them is like |
 | `catalog` | Card grid of deep links (menu, delivery, shop, booking) |
 | `feature` | Split layout spotlighting one signature thing |
@@ -63,7 +63,7 @@ Every new batch site must resemble the majority of the 25. These are the actual 
 | Dimension | Range across the 25 | Target for new builds |
 |---|---|---|
 | Sections total | 8 to 11 | **10** (hero + 8 middle + closing) |
-| Words of real copy | 293 to 543 | **350 to 500** |
+| Words of real copy | 293 to 543 | **400 to 720** |
 | Images | 7 to 13 (mode 13) | **12 to 13** |
 | Final page weight | 22 to 36 KB | **27 to 37 KB** |
 

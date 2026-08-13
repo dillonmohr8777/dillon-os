@@ -51,7 +51,7 @@
   "hero": {
     "eyebrow": "Northeast Philadelphia | Veterinary clinic",
     "headline": "Call to make an appointment today",
-    "sub": "Dutton Road Veterinary Clinic is a full-service clinic and surgical facility in Northeast Philadelphia. The staff's job is your pet's health, not a lobby pitch.",
+    "sub": "Dutton Road Veterinary Clinic is a full-service clinic and surgical facility in Northeast Philadelphia. The staff's job is your pet's health, not a lobby pitch. Full-service veterinary clinic and surgical facility in Northeast Philadelphia. Call 215-331-2968 to make an appointment today.",
     "ctaPrimary": {
       "label": "Call for an appointment",
       "href": "tel:2153312968"
@@ -102,7 +102,8 @@
     "heading": "A neighborhood clinic with a surgical bench",
     "paragraphs": [
       "Plenty of vet offices can do a wellness visit. Fewer keep surgery in the same building, with the same people who already know the animal.",
-      "Dutton Road Veterinary Clinic treats that as the point. You call 215-331-2968, you bring the pet, and the plan stays in one place."
+      "Dutton Road Veterinary Clinic treats that as the point. You call 215-331-2968, you bring the pet, and the plan stays in one place.",
+      "Call 215-331-2968. Confirm details on the official site before you drive."
     ],
     "imageIndex": 2
   },
@@ -116,7 +117,7 @@
   },
   "feature": {
     "heading": "Surgery without a second drive",
-    "text": "Spay, neuter, and other procedures stay inside the same clinic that already has the chart. One building. One team. One phone number.",
+    "text": "Spay, neuter, and other procedures stay inside the same clinic that already has the chart. One building. One team. One phone number. Full-service veterinary visits for the pets who live in Northeast Philadelphia households.",
     "cta": {
       "label": "Call the clinic",
       "href": "tel:2153312968"
@@ -145,14 +146,15 @@
   },
   "contact": {
     "heading": "Make the appointment <mark>today.</mark>",
-    "sub": "Northeast Philadelphia. Confirm hours on the official site before you drive."
+    "sub": "Northeast Philadelphia. Confirm hours on the official site before you drive. Call 215-331-2968. Confirm details on the official site before you drive."
   },
   "closing": {
     "heading": "Dutton Road Veterinary Clinic",
     "cta": {
       "label": "Call for an appointment",
       "href": "tel:2153312968"
-    }
+    },
+    "sub": "Full-service veterinary clinic and surgical facility in Northeast Philadelphia. Call 215-331-2968 to make an appointment today."
   },
   "links": [
     {

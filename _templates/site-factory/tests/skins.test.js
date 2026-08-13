@@ -36,6 +36,8 @@ describe('attitude skins', () => {
     assert.match(built.html, /mobile-action/);
     assert.match(built.html, /bottom-dock/);
     assert.match(built.html, /data-ink-logo/);
+    assert.match(built.html, /gallery-rail/);
+    assert.doesNotMatch(built.html, /gallery-grid/);
     assert.match(built.html, /live-frame/);
     assert.match(built.html, /vanish-out/);
   });

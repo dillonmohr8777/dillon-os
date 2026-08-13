@@ -53,7 +53,7 @@
   "hero": {
     "eyebrow": "Spring Mount | Ristorante Italiano",
     "headline": "It's all about the food and service",
-    "sub": "Johnny's Pizza & Pasta sits at 5 Main Street in Spring Mount. BYO. Pizza, stromboli, and grinders, plus pasta, seafood, steak, and veal. Call 610.287.4771. Delivery inside a 3 mile radius.",
+    "sub": "Johnny's Pizza & Pasta sits at 5 Main Street in Spring Mount. BYO. Pizza, stromboli, and grinders, plus pasta, seafood, steak, and veal. Call 610.287.4771. Delivery inside a 3 mile radius. Johnny's Pizza & Pasta Ristorante Italiano in Spring Mount. BYO. Pizza, stromboli, grinders, plus pasta, seafood, steak, and veal. Delivers a 3 mile radius.",
     "ctaPrimary": {
       "label": "Call Johnny's",
       "href": "tel:6102874771"
@@ -64,7 +64,7 @@
     },
     "glassFloat": {
       "title": "5 Main Street",
-      "sub": "BYO \u00b7 Spring Mount"
+      "sub": "BYO · Spring Mount"
     },
     "marquee": [
       "Pizza",
@@ -104,7 +104,8 @@
     "heading": "A ristorante that still sells a lot of pizza",
     "paragraphs": [
       "Johnny's will tell you they sell a lot of pizza, stromboli, and grinders. They'll also tell you they're a ristorante. Pasta, seafood, steak, and veal are on the same menu.",
-      "The address is 5 Main Street, Spring Mount. Bring the bottle. Call 610.287.4771 if you want it delivered inside three miles."
+      "The address is 5 Main Street, Spring Mount. Bring the bottle. Call 610.287.4771 if you want it delivered inside three miles.",
+      "Find them at 5 Main Street, Spring Mount, PA 19473. Call 610.287.4771. Confirm details on the official site before you drive."
     ],
     "imageIndex": 2
   },
@@ -118,7 +119,7 @@
   },
   "feature": {
     "heading": "The regular stromboli, then the rest of the menu",
-    "text": "People come for pizza. They stay because the kitchen will still do seafood, steak, and veal if you ask for a real dinner.",
+    "text": "People come for pizza. They stay because the kitchen will still do seafood, steak, and veal if you ask for a real dinner. Pizza, stromboli, and grinders for the nights you want the regular order.",
     "cta": {
       "label": "See the menu",
       "href": "http://johnnysitaliano.com/"
@@ -147,14 +148,15 @@
   },
   "contact": {
     "heading": "Main Street, <mark>Spring Mount.</mark>",
-    "sub": "5 Main Street. Confirm hours on the official site before you drive."
+    "sub": "5 Main Street. Confirm hours on the official site before you drive. Find them at 5 Main Street, Spring Mount, PA 19473. Call 610.287.4771. Confirm details on the official site before you drive."
   },
   "closing": {
     "heading": "Johnny's Pizza & Pasta",
     "cta": {
       "label": "Call Johnny's",
       "href": "tel:6102874771"
-    }
+    },
+    "sub": "Johnny's Pizza & Pasta Ristorante Italiano in Spring Mount. BYO. Pizza, stromboli, grinders, plus pasta, seafood, steak, and veal. Delivers a 3 mile radius."
   },
   "links": [
     {

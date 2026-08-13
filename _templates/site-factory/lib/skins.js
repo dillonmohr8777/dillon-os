@@ -46,14 +46,14 @@ function buildSkinCss(brief) {
 .slug-${slug} .hero h1{font-weight:500;letter-spacing:-.04em;max-width:14ch}
 .slug-${slug} .hero-media figure{border-radius:2px;box-shadow:none;border-width:1px}
 .slug-${slug} .offering-card,.slug-${slug} .experience-grid article{border-radius:2px;background:transparent}
-.slug-${slug} .gallery-grid figure{border-radius:2px}
+.slug-${slug} .gallery-rail figure{border-radius:2px}
 .slug-${slug} .marquee-strip{letter-spacing:.28em;font-weight:500}
 .slug-${slug} .section-head h2 mark{background:transparent;color:var(--accent);padding:0;box-shadow:inset 0 -.12em 0 var(--accent2)}
 `,
     brutal: `
 .slug-${slug}{--glass-blur:0px}
 .slug-${slug} .site-header{backdrop-filter:none;background:var(--paper);border-bottom-width:4px}
-.slug-${slug} .hero-media figure,.slug-${slug} .offering-card,.slug-${slug} .gallery-grid figure,.slug-${slug} .catalog-card,.slug-${slug} .contact-card,.slug-${slug} .story figure,.slug-${slug} .feature figure{border-radius:0;box-shadow:12px 12px 0 var(--ink)}
+.slug-${slug} .hero-media figure,.slug-${slug} .offering-card,.slug-${slug} .gallery-rail figure,.slug-${slug} .catalog-card,.slug-${slug} .contact-card,.slug-${slug} .story figure,.slug-${slug} .feature figure{border-radius:0;box-shadow:12px 12px 0 var(--ink)}
 .slug-${slug} .button{border-radius:0;box-shadow:6px 6px 0 var(--ink)}
 .slug-${slug} .button:hover,.slug-${slug} .button:focus-visible{transform:translate(-2px,-2px);box-shadow:10px 10px 0 var(--ink)}
 .slug-${slug} .marquee-strip{border-block:4px solid var(--ink);text-transform:uppercase}
@@ -74,7 +74,7 @@ function buildSkinCss(brief) {
 .slug-${slug} .site-header{background:color-mix(in srgb,var(--deep) 92%,transparent);color:var(--on-deep);border-bottom-color:var(--accent)}
 .slug-${slug} .site-header .wordmark,.slug-${slug} .site-header nav a{color:var(--on-deep)}
 .slug-${slug} .hero h1{text-transform:uppercase;letter-spacing:-.02em}
-.slug-${slug} .hero-media figure,.slug-${slug} .gallery-grid figure{border-radius:4px;filter:contrast(1.05) saturate(.92)}
+.slug-${slug} .hero-media figure,.slug-${slug} .gallery-rail figure{border-radius:4px;filter:contrast(1.05) saturate(.92)}
 .slug-${slug} .proof-grid{background:repeating-linear-gradient(-45deg,transparent,transparent 8px,color-mix(in srgb,currentColor 6%,transparent) 8px,color-mix(in srgb,currentColor 6%,transparent) 16px)}
 .slug-${slug} .marquee-strip{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em}
 `,
