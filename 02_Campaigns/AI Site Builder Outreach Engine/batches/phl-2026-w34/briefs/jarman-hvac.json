@@ -1,0 +1,217 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F2F6FA",
+    "ink": "#0F1F2A",
+    "accent": "#02537E",
+    "accent2": "#E07A2F",
+    "panel": "#BDD2DF",
+    "deep": "#01243A",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of window and wall air conditioning work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "jarman-hvac",
+  "name": "Jarman Sales & Service",
+  "city": "Philadelphia",
+  "category": "Window and wall air conditioning",
+  "vertical": "Home Services",
+  "url": "http://jarmanairconditioning.com/",
+  "phone": "(215) 389-2345",
+  "address": "2041 Point Breeze Ave, Philadelphia, PA 19145",
+  "description": "Family-owned Friedrich dealer in Point Breeze. Window, wall, and PTAC air conditioning, installation, winter storage, and service since 1951.",
+  "marquee": [
+    "Point",
+    "Friedrich",
+    "Window"
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Window and wall AC",
+    "headline": "Point Breeze still services the unit",
+    "sub": "Jarman Sales & Service installs and services window, wall, and PTAC units from 2041 Point Breeze Ave. Family owned. Friedrich authorized. Call (215) 389-2345.",
+    "ctaPrimary": {
+      "label": "Call the shop",
+      "href": "tel:2153892345"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "http://jarmanairconditioning.com/"
+    },
+    "glassFloat": {
+      "title": "Since 1951",
+      "sub": "Point Breeze"
+    }
+  },
+  "offerings": {
+    "heading": "Window, wall, PTAC, one shop.",
+    "items": [
+      "Custom installation for through-the-wall and window units that have to fit the opening you have.",
+      "Offseason maintenance, winter storage, and steam cleaning so the unit lasts.",
+      "Friedrich product on the floor, including heat pumps, electric heat, and PTAC."
+    ]
+  },
+  "gallery": {
+    "heading": "Sleeves, chassis, a South Philly shop.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Family owned since 1951",
+    "paragraphs": [
+      "Jarman Sales & Service sits at 2041 Point Breeze Ave in Philadelphia. The radar still has jarmanairconditioning.com. Listings also point at jarmansalesandservice.com. Confirm the live site before you send a deposit.",
+      "Robert Jarman\u2019s shop has been the Friedrich stop in this part of the city for people who still want a wall unit that works. Call (215) 389-2345."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a job should go.",
+    "items": [
+      "You call with the opening size, not a guess from a big-box aisle.",
+      "They install to the sleeve you have, or they tell you the sleeve has to change.",
+      "Winter storage and a clean-out sit on the same account as the install."
+    ]
+  },
+  "feature": {
+    "heading": "Friedrich, on purpose",
+    "text": "The shop is listed as a Friedrich authorized dealer and service provider. Energy Star units, window and wall, PTAC for the rooms that need a commercial chassis.",
+    "cta": {
+      "label": "Call Point Breeze",
+      "href": "tel:2153892345"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "South Philadelphia, one specialty",
+    "text": "This is not a whole-house furnace company pretending to do window units.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Call",
+      "href": "tel:2153892345"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Installation",
+        "href": "http://jarmanairconditioning.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Service",
+        "href": "http://jarmanairconditioning.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Call the shop",
+        "href": "tel:2153892345",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the shop.",
+    "sub": "2041 Point Breeze Ave, Philadelphia. Confirm hours before you roll a truck."
+  },
+  "closing": {
+    "cta": {
+      "label": "Call the shop",
+      "href": "tel:2153892345"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2153892345"
+    },
+    {
+      "label": "Official site",
+      "href": "http://jarmanairconditioning.com/"
+    }
+  ]
+}

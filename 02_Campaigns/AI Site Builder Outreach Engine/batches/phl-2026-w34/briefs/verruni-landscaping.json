@@ -1,0 +1,212 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Barlow Condensed",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#FBF8E8",
+    "ink": "#3B3414",
+    "accent": "#F5C400",
+    "accent2": "#2F6B2F",
+    "panel": "#FAEDB5",
+    "deep": "#111111",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of landscaping work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "verruni-landscaping",
+  "name": "L A Verruni Landscaping",
+  "city": "Pottstown",
+  "category": "Landscaping",
+  "vertical": "Home Services",
+  "url": "http://www.verrunilandscaping.com/",
+  "address": "1357 Farmington Avenue, Pottstown, PA 19464",
+  "description": "Landscaping in Pottstown. The current site is a coming-soon page. The work is still the property, the plantings, and a crew that shows up.",
+  "marquee": [
+    "Pottstown",
+    "Farmington",
+    "Landscaping"
+  ],
+  "hero": {
+    "eyebrow": "Pottstown | Landscaping",
+    "headline": "The property still needs a crew",
+    "sub": "L A Verruni Landscaping is listed on Farmington Avenue in Pottstown. The website currently says coming soon. The rebuild is the page a property owner can actually use.",
+    "ctaPrimary": {
+      "label": "Open the site",
+      "href": "http://www.verrunilandscaping.com/"
+    },
+    "ctaSecondary": {
+      "label": "Find the shop",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Pottstown",
+      "sub": "Farmington Ave"
+    }
+  },
+  "offerings": {
+    "heading": "Ground, plantings, a finished edge.",
+    "items": [
+      "Landscape work for Pottstown properties that have outgrown weekend maintenance.",
+      "Plantings and beds that match the house you already have.",
+      "A crew you can reach when the site is not a coming-soon graphic."
+    ]
+  },
+  "gallery": {
+    "heading": "Beds, stone, a finished yard.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Pottstown, Farmington Avenue",
+    "paragraphs": [
+      "Listings put L A Verruni Landscaping at 1357 Farmington Avenue, Pottstown, PA 19464. The live domain currently shows a coming-soon page.",
+      "Confirm the phone and the season\u2019s book of work before you send a deposit. A coming-soon site is not a quote."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a landscape job should start.",
+    "items": [
+      "You walk the property. They name what the soil and the light will actually support.",
+      "You get a scope, not a vibe board.",
+      "The crew returns to maintain what they installed."
+    ]
+  },
+  "feature": {
+    "heading": "A coming-soon page cannot take the job",
+    "text": "The radar flagged a broken homepage. The rebuild puts the map, the next action, and the work in front of a Pottstown owner who is done waiting on a splash screen.",
+    "cta": {
+      "label": "Open the domain",
+      "href": "http://www.verrunilandscaping.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Montgomery County properties",
+    "text": "Pottstown is the listed city.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Map the address",
+      "href": "https://www.google.com/maps/search/?api=1&query=1357+Farmington+Avenue+Pottstown+PA"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Landscaping",
+        "href": "http://www.verrunilandscaping.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Property work",
+        "href": "http://www.verrunilandscaping.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Map",
+        "href": "https://www.google.com/maps/search/?api=1&query=1357+Farmington+Avenue+Pottstown+PA",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the yard.",
+    "sub": "1357 Farmington Avenue, Pottstown. Confirm phone and hours before you drive."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the site",
+      "href": "http://www.verrunilandscaping.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://www.verrunilandscaping.com/"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
  * one hub URL plus /sites/<slug>/ for each prospect.
  *
  *   node _os/automation/bin/batch-deploy.js \
- *     --batch "02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33"
+ *     --batch "02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w34"
  *
  * Safety:
  *   - Site is pinned by exact name (from --site or batch.json deployBaseUrl).
@@ -26,7 +26,7 @@ const { collectBatchFiles, siteNameFromBatch } = require('../lib/batch-files');
 const { ensureSite, deployFiles, waitForDeploy } = require('../lib/netlify');
 const { httpGet } = require('../lib/net');
 
-const DEFAULT_BATCH = '02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33';
+const DEFAULT_BATCH = '02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w34';
 
 function parseArgs(argv) {
   const o = { batch: DEFAULT_BATCH, site: '', dryRun: false, skipVerify: false };

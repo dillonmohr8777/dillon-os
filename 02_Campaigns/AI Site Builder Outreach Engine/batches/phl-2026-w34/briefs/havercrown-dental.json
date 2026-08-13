@@ -1,0 +1,217 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Lora",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F3F6EE",
+    "ink": "#14211E",
+    "accent": "#1F5C3A",
+    "accent2": "#C4A35A",
+    "panel": "#C4D4C6",
+    "deep": "#102418",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of family dentistry work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "havercrown-dental",
+  "name": "HaverCrown Dental",
+  "city": "Havertown",
+  "category": "Family dentistry",
+  "vertical": "Health",
+  "url": "https://www.havercrowndental.com/",
+  "phone": "(610) 446-6688",
+  "address": "100 S Eagle Rd, Havertown, PA 19083",
+  "description": "Family-owned dentistry on South Eagle Road in Havertown. Dr. Shafagh and the team keep modern care in a comforting room.",
+  "marquee": [
+    "Havertown",
+    "Family",
+    "Eagle"
+  ],
+  "hero": {
+    "eyebrow": "Havertown | Family dentistry",
+    "headline": "Your best interests, on Eagle Road",
+    "sub": "HaverCrown Dental is a local, family-owned practice. Dr. Shafagh and the team take the time to make the chair feel like a neighborhood office, not a mill.",
+    "ctaPrimary": {
+      "label": "Call the office",
+      "href": "tel:6104466688"
+    },
+    "ctaSecondary": {
+      "label": "Open the official site",
+      "href": "https://www.havercrowndental.com/"
+    },
+    "glassFloat": {
+      "title": "100 S Eagle Rd",
+      "sub": "Havertown 19083"
+    }
+  },
+  "offerings": {
+    "heading": "Modern care, comforting rooms.",
+    "items": [
+      "Family dentistry for the people who already live in 19083.",
+      "Time in the chair for concerns you have been putting off.",
+      "A local team that still answers the phone at (610) 446-6688."
+    ]
+  },
+  "gallery": {
+    "heading": "Light, linen, a calm wait.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Family owned on purpose",
+    "paragraphs": [
+      "Welcome to HaverCrown Dental, where they say they have your best interests at heart. The office sits at 100 S Eagle Rd in Havertown.",
+      "Call (610) 446-6688. Confirm hours on the official site before you drive."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit should go.",
+    "items": [
+      "You call. A person picks up.",
+      "You sit. They listen before they plan.",
+      "You leave with a next step you can keep."
+    ]
+  },
+  "feature": {
+    "heading": "Comfort is the first clinical tool",
+    "text": "Dr. Shafagh and the team treat the fear of the chair as part of the job.",
+    "cta": {
+      "label": "Call Havertown",
+      "href": "tel:6104466688"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Havertown, not a chain lobby",
+    "text": "Family-owned means the same faces at the desk.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Get directions",
+      "href": "https://www.google.com/maps/search/?api=1&query=100+S+Eagle+Rd+Havertown+PA"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Call the desk",
+        "href": "tel:6104466688",
+        "imageIndex": 9
+      },
+      {
+        "title": "Official site",
+        "href": "https://www.havercrowndental.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Map the office",
+        "href": "https://www.google.com/maps/search/?api=1&query=100+S+Eagle+Rd+Havertown+PA",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the office.",
+    "sub": "100 S Eagle Rd, Havertown. Confirm hours before you drive."
+  },
+  "closing": {
+    "cta": {
+      "label": "Call the office",
+      "href": "tel:6104466688"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6104466688"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.havercrowndental.com/"
+    }
+  ]
+}

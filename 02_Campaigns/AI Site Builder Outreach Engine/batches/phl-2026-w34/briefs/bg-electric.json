@@ -1,0 +1,211 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F7F4E8",
+    "ink": "#35301E",
+    "accent": "#D4AF37",
+    "accent2": "#D86E07",
+    "panel": "#EFE5C1",
+    "deep": "#111111",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of electrical contractor work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "bg-electric",
+  "name": "BG Electric Service LLC",
+  "city": "Philadelphia",
+  "category": "Electrical contractor",
+  "vertical": "Home Services",
+  "url": "https://www.bgelectricservicellc.com/",
+  "description": "Electrical contractor in Philadelphia. Service, panels, and lighting for homes and small commercial work. Confirm license details on the official site.",
+  "marquee": [
+    "Philadelphia",
+    "Electrical",
+    "Service"
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Electrical contractor",
+    "headline": "Service that shows up for the panel",
+    "sub": "BG Electric Service LLC is a Philadelphia electrical contractor. The current site is dated and sometimes errors out. The work is still the panel, the lighting, and the call you make when the breaker will not reset.",
+    "ctaPrimary": {
+      "label": "Open the official site",
+      "href": "https://www.bgelectricservicellc.com/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "Electrical service"
+    }
+  },
+  "offerings": {
+    "heading": "Panels, lighting, the call-out.",
+    "items": [
+      "Service calls when a breaker, outlet, or fixture fails.",
+      "Panel work for homes that have outgrown the original box.",
+      "Lighting and small commercial jobs that still need a licensed electrician."
+    ]
+  },
+  "gallery": {
+    "heading": "Copper, panel covers, a van.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Philadelphia electrical shop",
+    "paragraphs": [
+      "BG Electric Service LLC is listed in Philadelphia. The radar scored the site as a rebuild: no viewport, almost no homepage copy, no phone on the page.",
+      "Confirm the phone, the license, and the service area on the official site before you book. We will not invent a van number."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a service call should go.",
+    "items": [
+      "You describe the fault. They tell you if it is a call-out or a panel job.",
+      "They show up with the parts that actually fit the panel you have.",
+      "You get a price before the cover comes off, not after."
+    ]
+  },
+  "feature": {
+    "heading": "The phone number belongs on the first screen",
+    "text": "An electrician\u2019s site that hides the phone is a site that cannot take the job. The rebuild puts the next action where a person with a dead outlet can hit it.",
+    "cta": {
+      "label": "Open the site",
+      "href": "https://www.bgelectricservicellc.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Philadelphia homes, small commercial",
+    "text": "The vertical is electrical service.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.bgelectricservicellc.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Service",
+        "href": "https://www.bgelectricservicellc.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Panels",
+        "href": "https://www.bgelectricservicellc.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "https://www.bgelectricservicellc.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm before you book.",
+    "sub": "Philadelphia. Pull live phone and address from the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the official site",
+      "href": "https://www.bgelectricservicellc.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.bgelectricservicellc.com/"
+    }
+  ]
+}

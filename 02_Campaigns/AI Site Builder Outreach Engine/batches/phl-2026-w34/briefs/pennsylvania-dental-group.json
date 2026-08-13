@@ -1,0 +1,229 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F3F6F4",
+    "ink": "#132427",
+    "accent": "#1A6B6B",
+    "accent2": "#3D5A80",
+    "panel": "#C3D7D6",
+    "deep": "#0E2E2E",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of general and cosmetic dentistry work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "pennsylvania-dental-group",
+  "name": "Pennsylvania Dental Group",
+  "city": "Philadelphia",
+  "category": "General and cosmetic dentistry",
+  "vertical": "Health",
+  "url": "https://www.padentalgroup.com/",
+  "phone": "(215) 387-0883",
+  "address": "3700 Market Street, Suite 101, Philadelphia, PA 19104",
+  "hours": "Monday-Thursday 7am-5pm, Friday 7am-3pm",
+  "description": "General and cosmetic dentistry in University City and Center City. Pennsylvania Dental Group has served Philadelphia for over 45 years.",
+  "marquee": [
+    "University",
+    "Center",
+    "General"
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Family of practices",
+    "headline": "Gentle quality care, 45 years in",
+    "sub": "Pennsylvania Dental Group treats University City and Center City with the same plan they would want for themselves. Call Market Street or South Street and sit with a team that still talks like neighbors.",
+    "ctaPrimary": {
+      "label": "Book University City",
+      "href": "https://www.padentalgroup.com/"
+    },
+    "ctaSecondary": {
+      "label": "Call the office",
+      "href": "tel:2153870883"
+    },
+    "glassFloat": {
+      "title": "University City",
+      "sub": "3700 Market St"
+    },
+    "marquee": [
+      "General",
+      "Cosmetic",
+      "Hygiene"
+    ]
+  },
+  "offerings": {
+    "heading": "Care that stays on one floor.",
+    "kicker": "Where we help",
+    "items": [
+      "General dentistry that restores function before it chases a photo.",
+      "Cosmetic work planned so the bite still works when you leave.",
+      "Hygiene visits that keep the same chair, the same faces, the same plan."
+    ]
+  },
+  "gallery": {
+    "heading": "Rooms built for a long visit.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A top Philadelphia dentist, still local",
+    "paragraphs": [
+      "Pennsylvania Dental Group has practiced in Philadelphia for over 45 years. The claim on their site is gentle quality care, and the offices still sit where people actually live and work.",
+      "University City is 3700 Market Street, Suite 101. Center City is 1740 South Street, Suite 504."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "Support that moves from clarity to capability.",
+    "items": [
+      "You register as a new patient online, then you walk into a room that already has your chart.",
+      "Treatment is explained in plain language before anything starts.",
+      "Follow-up is a real person at the desk, not a portal maze."
+    ]
+  },
+  "feature": {
+    "heading": "No insurance. They still have a path.",
+    "text": "Dental saving plans on the official site cut fees without deductibles, waiting periods, or claim denials. Ask the front desk which plan fits the work you actually need.",
+    "cta": {
+      "label": "See patient info",
+      "href": "https://www.padentalgroup.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Two offices, one standard",
+    "text": "West Philadelphia and South Philadelphia share the same doctors and the same promise.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Find an office",
+      "href": "https://www.padentalgroup.com/contact/"
+    }
+  },
+  "catalog": {
+    "heading": "Ways into care.",
+    "items": [
+      {
+        "title": "University City",
+        "href": "https://www.padentalgroup.com/",
+        "imageIndex": 9,
+        "text": "3700 Market Street, Suite 101."
+      },
+      {
+        "title": "Center City",
+        "href": "https://www.padentalgroup.com/",
+        "imageIndex": 10,
+        "text": "1740 South Street, Suite 504."
+      },
+      {
+        "title": "New patient forms",
+        "href": "https://www.padentalgroup.com/",
+        "imageIndex": 11,
+        "text": "Register before you sit down."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Start at 3700 Market Street, Suite 101. Confirm Center City hours on the official site."
+  },
+  "closing": {
+    "heading": "Pennsylvania Dental Group",
+    "cta": {
+      "label": "Book University City",
+      "href": "https://www.padentalgroup.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.padentalgroup.com/"
+    },
+    {
+      "label": "Call",
+      "href": "tel:2153870883"
+    }
+  ]
+}

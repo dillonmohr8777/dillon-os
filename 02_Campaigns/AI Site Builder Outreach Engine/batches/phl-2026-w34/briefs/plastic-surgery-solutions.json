@@ -1,0 +1,211 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F2F8F8",
+    "ink": "#0F3137",
+    "accent": "#00B3C4",
+    "accent2": "#C9A66B",
+    "panel": "#BDE9ED",
+    "deep": "#1B1B1B",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of plastic surgery work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "plastic-surgery-solutions",
+  "name": "Plastic Surgery Solutions",
+  "city": "Sanatoga",
+  "category": "Plastic surgery",
+  "vertical": "Health",
+  "url": "https://plasticsurgerysolutions.com/",
+  "description": "Plastic surgery practice in Sanatoga, Montgomery County. Consult first. Confirm surgeons, procedures, and hours on the official site.",
+  "marquee": [
+    "Sanatoga",
+    "Consult",
+    "Montgomery"
+  ],
+  "hero": {
+    "eyebrow": "Sanatoga | Plastic surgery",
+    "headline": "A consult before a plan",
+    "sub": "Plastic Surgery Solutions serves Sanatoga and Montgomery County. The current site is dated. The work still starts with a conversation, not a gallery of before-and-afters you cannot verify.",
+    "ctaPrimary": {
+      "label": "Open the official site",
+      "href": "https://plasticsurgerysolutions.com/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Sanatoga",
+      "sub": "Montgomery County"
+    }
+  },
+  "offerings": {
+    "heading": "Consult, plan, recover.",
+    "items": [
+      "A consult that names the procedure in plain language.",
+      "Surgical care scheduled around recovery you can actually take.",
+      "Follow-up that belongs to the same practice that operated."
+    ]
+  },
+  "gallery": {
+    "heading": "Quiet rooms, serious work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Sanatoga, Montgomery County",
+    "paragraphs": [
+      "Plastic Surgery Solutions is listed in Sanatoga. The radar flagged a site with no viewport and thin trust signals.",
+      "Confirm the surgeon names, the street address, and the phone on the official site before you book. We will not invent credentials."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a consult should go.",
+    "items": [
+      "You ask what they actually do. They answer without a brochure fog.",
+      "You hear recovery time before you hear a quote.",
+      "You leave with a next step you can keep or decline."
+    ]
+  },
+  "feature": {
+    "heading": "The consult is the product",
+    "text": "A plastic surgery homepage that cannot be read on a phone is a bad first impression for a practice that asks for trust. The rebuild leads with the consult, the map, and a real next action.",
+    "cta": {
+      "label": "Open the site",
+      "href": "https://plasticsurgerysolutions.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Montgomery County, one practice",
+    "text": "Sanatoga is the listed city.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "https://plasticsurgerysolutions.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Consult",
+        "href": "https://plasticsurgerysolutions.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Procedures",
+        "href": "https://plasticsurgerysolutions.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "https://plasticsurgerysolutions.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm before you book.",
+    "sub": "Sanatoga, Montgomery County. Pull live address and phone from the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the official site",
+      "href": "https://plasticsurgerysolutions.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://plasticsurgerysolutions.com/"
+    }
+  ]
+}

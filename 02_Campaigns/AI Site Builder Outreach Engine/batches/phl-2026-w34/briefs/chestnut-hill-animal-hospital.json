@@ -1,0 +1,217 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Nunito",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F4F6E8",
+    "ink": "#1F281B",
+    "accent": "#5A8128",
+    "accent2": "#CF7745",
+    "panel": "#D2DCBE",
+    "deep": "#1E2A12",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "chestnut-hill-animal-hospital",
+  "name": "Chestnut Hill Animal Hospital",
+  "city": "Erdenheim",
+  "category": "Veterinary hospital",
+  "vertical": "Health",
+  "url": "http://chestnuthillvet.com/",
+  "phone": "215-836-2950",
+  "address": "903 Bethlehem Pike, Erdenheim, PA 19038",
+  "description": "Veterinary hospital in Erdenheim since 1974. Traditional medicine, surgery, rehab, and complementary care for the animals you actually live with.",
+  "marquee": [
+    "Since",
+    "Bethlehem",
+    "Rehab"
+  ],
+  "hero": {
+    "eyebrow": "Erdenheim | Veterinary hospital",
+    "headline": "Honor the bond. Treat the animal.",
+    "sub": "Chestnut Hill Animal Hospital has been on Bethlehem Pike since 1974. Cats, dogs, birds, rabbits, and the rest of the house. Call 215-836-2950.",
+    "ctaPrimary": {
+      "label": "Call the hospital",
+      "href": "tel:2158362950"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "http://chestnuthillvet.com/"
+    },
+    "glassFloat": {
+      "title": "Since 1974",
+      "sub": "903 Bethlehem Pike"
+    }
+  },
+  "offerings": {
+    "heading": "Medicine, surgery, rehab, in one hospital.",
+    "items": [
+      "Traditional medical and surgical care for the animals you brought in.",
+      "Rehab, fitness, and pain management with certified people on the floor.",
+      "Complementary tools when they earn a place: laser, acupuncture, herbs, diet."
+    ]
+  },
+  "gallery": {
+    "heading": "A hospital that still feels like a practice.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Established in 1974",
+    "paragraphs": [
+      "Chestnut Hill Animal Hospital sits at 903 Bethlehem Pike in Erdenheim. The homepage is a table layout from another decade. The work is not.",
+      "They care for cats, dogs, birds, ferrets, reptiles, fish, rabbits, and small mammals. Specialist work in the building includes ultrasound, radiology, cardiology, surgery, and dentistry."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit moves.",
+    "items": [
+      "You call. They tell you if it is wellness, sick, or rehab.",
+      "In-house lab, ECG, blood pressure, and radiographs so the work stays in the building.",
+      "Nutrition, exercise, and mental stimulation sit next to the medical plan."
+    ]
+  },
+  "feature": {
+    "heading": "Rehab in the same building as surgery",
+    "text": "Certified rehab and pain management live on the same floor as the surgical suite. You are not driving a recovering dog across the county for the second half of the plan.",
+    "cta": {
+      "label": "See services",
+      "href": "http://chestnuthillvet.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Creatures great and small",
+    "text": "The site lists the species on purpose.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Call",
+      "href": "tel:2158362950"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Services",
+        "href": "http://chestnuthillvet.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Rehab",
+        "href": "http://chestnuthillvet.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "http://chestnuthillvet.com/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the hospital.",
+    "sub": "903 Bethlehem Pike, Erdenheim. Confirm hours on the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Call the hospital",
+      "href": "tel:2158362950"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2158362950"
+    },
+    {
+      "label": "Official site",
+      "href": "http://chestnuthillvet.com/"
+    }
+  ]
+}

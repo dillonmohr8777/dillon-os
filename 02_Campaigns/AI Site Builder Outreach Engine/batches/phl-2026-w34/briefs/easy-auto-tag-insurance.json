@@ -1,0 +1,214 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Barlow Condensed",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F2F5FA",
+    "ink": "#151E2D",
+    "accent": "#244E8A",
+    "accent2": "#C45C26",
+    "panel": "#C5D0E1",
+    "deep": "#0F2748",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of auto tags and insurance work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "easy-auto-tag-insurance",
+  "name": "Easy Auto Tag & Insurance",
+  "city": "Philadelphia",
+  "category": "Auto tags and insurance",
+  "vertical": "Professional Services",
+  "url": "http://www.easyautotag.com/",
+  "description": "Auto tags and insurance in Philadelphia. Notary, tags, and a desk that still takes walk-ins. The current site is not on HTTPS.",
+  "marquee": [
+    "Philadelphia",
+    "Tags",
+    "Insurance"
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Tags and insurance",
+    "headline": "Tags, insurance, a desk that is open",
+    "sub": "Easy Auto Tag & Insurance is a Philadelphia tag and insurance office. The current site is marked not secure and barely has copy. The rebuild puts the map and the next action on the first screen.",
+    "ctaPrimary": {
+      "label": "Open the official site",
+      "href": "http://www.easyautotag.com/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "Tags and insurance"
+    }
+  },
+  "offerings": {
+    "heading": "Tags, insurance, the errand that has to finish.",
+    "items": [
+      "Auto tags and title work for the people who still have to stand in a line.",
+      "Insurance conversations at the same desk, when they actually write it.",
+      "A notary and the paper the state still wants in an envelope."
+    ]
+  },
+  "gallery": {
+    "heading": "A counter, a printer, a finished errand.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Philadelphia tag office",
+    "paragraphs": [
+      "Easy Auto Tag & Insurance is listed in Philadelphia. The radar scored the site as a rebuild: no HTTPS, 11 words on the homepage, no phone on the page.",
+      "Confirm the street address, phone, and hours on the official site or by walking up. We will not invent a window number."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How the errand should go.",
+    "items": [
+      "You bring the title, the ID, and the question.",
+      "They tell you if they can finish it today.",
+      "You leave with tags or a list of the one document you still need."
+    ]
+  },
+  "feature": {
+    "heading": "HTTPS is the first trust signal",
+    "text": "A tag and insurance office asking for personal information on a non-secure page is the fault the radar caught. The rebuild is the page you can actually use.",
+    "cta": {
+      "label": "Open the site",
+      "href": "http://www.easyautotag.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Philadelphia walk-ins",
+    "text": "Confirm hours before you take a number.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "http://www.easyautotag.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Tags",
+        "href": "http://www.easyautotag.com/",
+        "imageIndex": 9,
+        "text": "Title work at a walk-in desk."
+      },
+      {
+        "title": "Insurance",
+        "href": "http://www.easyautotag.com/",
+        "imageIndex": 10,
+        "text": "Ask at the same counter."
+      },
+      {
+        "title": "Contact",
+        "href": "http://www.easyautotag.com/",
+        "imageIndex": 11,
+        "text": "Confirm hours on the official site."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm before you go.",
+    "sub": "Philadelphia. Pull live address and hours from the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the official site",
+      "href": "http://www.easyautotag.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://www.easyautotag.com/"
+    }
+  ]
+}

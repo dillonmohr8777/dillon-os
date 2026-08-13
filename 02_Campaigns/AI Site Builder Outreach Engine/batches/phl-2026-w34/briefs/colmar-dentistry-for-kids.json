@@ -1,0 +1,212 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Nunito",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#EEF6FC",
+    "ink": "#132637",
+    "accent": "#1878C2",
+    "accent2": "#E85AA0",
+    "panel": "#BFDAEF",
+    "deep": "#0C3A66",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of pediatric dentistry work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "colmar-dentistry-for-kids",
+  "name": "Colmar Dentistry For Kids",
+  "city": "Montgomeryville",
+  "category": "Pediatric dentistry",
+  "vertical": "Health",
+  "url": "https://www.colmarkids.com/",
+  "address": "671 Bethlehem Pike, Montgomeryville, PA 18936",
+  "description": "Pediatric dentistry in Montgomeryville with Dr. Kathryn Leahey, DMD. A dental home for kids who still need the visit to feel kind.",
+  "marquee": [
+    "Kids",
+    "Bethlehem",
+    "Dr."
+  ],
+  "hero": {
+    "eyebrow": "Montgomeryville | Pediatric dentistry",
+    "headline": "A dental home for kids",
+    "sub": "Dr. Kathryn Leahey is the pediatric dentist at Colmar Dentistry For Kids. The job is good oral habits that last, taught without rushing a nervous child.",
+    "ctaPrimary": {
+      "label": "Request a visit",
+      "href": "https://www.colmarkids.com/"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.colmarkids.com/"
+    },
+    "glassFloat": {
+      "title": "671 Bethlehem Pike",
+      "sub": "Montgomeryville"
+    }
+  },
+  "offerings": {
+    "heading": "Built for children, not a scaled-down adult chair.",
+    "items": [
+      "Pediatric exams that teach habits instead of scolding them.",
+      "A first visit planned so the room feels known before the work starts.",
+      "Conservative options when a child needs treatment, not a sales ladder."
+    ]
+  },
+  "gallery": {
+    "heading": "Color, calm, a smaller scale.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Welcome to the practice",
+    "paragraphs": [
+      "Dr. Kathryn Leahey is the friendly, experienced pediatric dentist named on the homepage. Colmar Dentistry For Kids sits at 671 Bethlehem Pike in Montgomeryville.",
+      "The site is thin. The promise is not."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "What the first visit is for.",
+    "items": [
+      "The room is introduced before the tools.",
+      "Parents stay when the child needs them in the chair.",
+      "The plan is prevention first, treatment when it earns its place."
+    ]
+  },
+  "feature": {
+    "heading": "Habits that outlast the sticker",
+    "text": "The homepage says she will help them learn good oral habits so they can enjoy a beautiful smile for a lifetime. That is the work.",
+    "cta": {
+      "label": "Request an appointment",
+      "href": "https://www.colmarkids.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Montgomeryville and the towns around it",
+    "text": "If Bethlehem Pike is on the way home from school, this is the dental home that fits the route.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Open the site",
+      "href": "https://www.colmarkids.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Meet Dr. Leahey",
+        "href": "https://www.colmarkids.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Request a visit",
+        "href": "https://www.colmarkids.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Find the office",
+        "href": "https://www.google.com/maps/search/?api=1&query=671+Bethlehem+Pike+Montgomeryville+PA",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the kids office.",
+    "sub": "671 Bethlehem Pike, Montgomeryville. Confirm hours on the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Request a visit",
+      "href": "https://www.colmarkids.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.colmarkids.com/"
+    }
+  ]
+}
