@@ -22,9 +22,17 @@ describe('attitude skins', () => {
     const neon = buildSkinCss({ slug: 'c', attitude: 'neon', fonts: { display: 'X' } });
     assert.match(glass, /--glass-blur:28px/);
     assert.match(brutal, /border-radius:0/);
-    assert.match(neon, /text-shadow/);
+    assert.match(neon, /linear-gradient\(160deg,var\(--deep\)/);
     assert.notEqual(glass, brutal);
     assert.notEqual(brutal, neon);
+  });
+
+  it('emits Align HCM industry-solutions skin when attitude is align', () => {
+    const align = buildSkinCss({ slug: 'align-shop', attitude: 'align', fonts: { display: 'Plus Jakarta Sans' } });
+    assert.match(align, /var\(--accent\)/);
+    assert.doesNotMatch(align, /--align-teal:#2BB5A0/);
+    assert.match(align, /align-tilt/);
+    assert.match(align, /align-ken/);
   });
 
   it('buildSite injects attitude meta and liquid-glass float', () => {
@@ -35,5 +43,22 @@ describe('attitude skins', () => {
     assert.match(built.html, /marquee-strip/);
     assert.match(built.html, /mobile-action/);
     assert.match(built.html, /vanish-out/);
+  });
+
+  it('align attitude keeps glass float, maps embed, and ink-reveal closing', () => {
+    const brief = passingBrief({
+      slug: 'align-clinic',
+      name: 'Align Clinic',
+      attitude: 'align',
+      address: '1 Market St, Philadelphia, PA 19103',
+    });
+    const built = buildSite(brief, '/tmp/align-skin-test');
+    assert.match(built.html, /name="attitude" content="align"/);
+    assert.match(built.html, /glass-float/);
+    assert.match(built.html, /map-embed/);
+    assert.match(built.html, /maps\.google\.com\/maps\?q=/);
+    assert.match(built.html, /ink-reveal/);
+    assert.match(built.html, /var\(--accent\)/);
+    assert.doesNotMatch(built.html, /--align-teal:#2BB5A0/);
   });
 });
