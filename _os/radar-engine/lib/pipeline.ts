@@ -276,7 +276,7 @@ async function generateReport(store, cfg, prospect, run, snapshot, snapshotIn, e
 async function qaDecision(store, cfg, prospect, report, { actor, decision, reason }) {
   if (!actor) throw new Error('QA actor required');
   if (decision === 'reject' && !reason) throw new Error('rejection reason required');
-  const approvedCount = store.find('approvals', (a) => a.kind === 'report' && a.decision === 'approved').length;
+  const approvedCount = store.find('approvals', (a) => a.kind === 'report' && a.decision === 'approve').length;
   if (cfg.autoApprove && approvedCount >= cfg.mandatoryQaCount) {
     throw new Error('auto-approve is configured but remains disabled in v1');
   }
@@ -530,7 +530,7 @@ function group(rows, fn) {
   return out;
 }
 
-async function runVerticalSlice({ fixtureName = 'cedar-ridge-hvac', reviewer = 'qa.reviewer', configOverrides = {}, store: existing } = {}) {
+async function runVerticalSlice({ fixtureName = 'cedar-ridge-hvac', reviewer = 'qa.reviewer', configOverrides = {}, store: existing, pauseAt } = {}) {
   const cfg = loadConfig({
     killSwitch: true,
     enableCrm: false,
@@ -562,24 +562,10 @@ async function runVerticalSlice({ fixtureName = 'cedar-ridge-hvac', reviewer = '
     const scored = await scoreAndRoute(store, cfg, campaign, resolved.prospect, scanned.run, scanned.evidence, { ...scanned.scanned, prospect: { ...resolved.prospect, ...fixture.meta.signals } });
     const prospect = store.get('prospects', resolved.prospect.id);
     const report = await generateReport(store, cfg, prospect, scanned.run, scored.snapshot, scored.snapshotIn, scanned.evidence, scored.routed.offer);
-    const approval = await qaDecision(store, cfg, prospect, report.report, { actor: reviewer, decision: 'approve', reason: 'evidence matches findings' });
-    const contacts = await enrichContacts(store, store.get('prospects', prospect.id), scanned.scanned);
-    const outreach = await packageOutreach(
-      store, cfg, adapters,
-      store.get('prospects', prospect.id),
-      scored.snapshot,
-      report.report,
-      report.reportUrl,
-      report.bookingUrl,
-      contacts
-    );
-    const sim = await simulateFunnel(store, store.get('prospects', prospect.id), report.report, campaign);
-    const funnel = funnelView(store);
-    const visual = await visualCheck(report.html);
-    const publicFilesClean = true;
-    return {
+    const paused = {
       cfg,
       store,
+      adapters,
       campaign,
       intake: intake.submission,
       prospect: store.get('prospects', prospect.id),
@@ -589,23 +575,55 @@ async function runVerticalSlice({ fixtureName = 'cedar-ridge-hvac', reviewer = '
       snapshot: scored.snapshot,
       offer: scored.routed,
       report,
-      approval,
-      contacts,
-      outreach,
-      sim,
-      funnel,
-      visual,
+      scanned: scanned.scanned,
       network,
-      publicFilesClean,
-      adaptersCalled: {
-        crmLive: outreach.crm.liveWrite === true,
-        emailSent: false,
-        slackSent: false,
-      },
+      reviewer,
     };
+    if (pauseAt === 'qa_pending') {
+      if (store.flush) await store.flush();
+      return paused;
+    }
+    return finishVerticalSlice(paused);
   } finally {
     if (origFetch) global.fetch = origFetch;
   }
+}
+
+async function finishVerticalSlice(state) {
+  const { store, cfg, adapters, campaign, report, scanned, reviewer = 'qa.reviewer', network = { outbound: [] } } = state;
+  const prospect = store.get('prospects', state.prospect.id);
+  const approval = await qaDecision(store, cfg, prospect, report.report, { actor: reviewer, decision: 'approve', reason: 'evidence matches findings' });
+  const contacts = await enrichContacts(store, store.get('prospects', prospect.id), scanned);
+  const outreach = await packageOutreach(
+    store, cfg, adapters,
+    store.get('prospects', prospect.id),
+    state.snapshot,
+    report.report,
+    report.reportUrl,
+    report.bookingUrl,
+    contacts
+  );
+  const sim = await simulateFunnel(store, store.get('prospects', prospect.id), report.report, campaign);
+  const funnel = funnelView(store);
+  const visual = await visualCheck(report.html);
+  if (store.flush) await store.flush();
+  return {
+    ...state,
+    prospect: store.get('prospects', prospect.id),
+    approval,
+    contacts,
+    outreach,
+    sim,
+    funnel,
+    visual,
+    publicFilesClean: true,
+    adaptersCalled: {
+      crmLive: outreach.crm.liveWrite === true,
+      emailSent: false,
+      slackSent: false,
+    },
+    network,
+  };
 }
 
 module.exports = {
@@ -622,6 +640,7 @@ module.exports = {
   simulateFunnel,
   funnelView,
   runVerticalSlice,
+  finishVerticalSlice,
   normalizeEmail,
   normalizePhone,
   normalizeName,

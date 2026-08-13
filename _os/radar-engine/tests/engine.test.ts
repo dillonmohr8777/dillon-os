@@ -16,9 +16,11 @@ const { processJobs } = require('../lib/jobs.ts');
 const { hmac } = require('../lib/ids.ts');
 const { bookingAdapter } = require('../lib/adapters.ts');
 const { listMigrationTables } = require('../lib/store.ts');
+const { loadMigrationSchema, encodeRow, CLAIM_JOB_SQL } = require('../lib/schema.ts');
 const { containsPii } = require('../lib/redact.ts');
 const { validateIntake } = require('../lib/intake.ts');
-const { runVerticalSlice } = require('../lib/pipeline.ts');
+const { runVerticalSlice, finishVerticalSlice, funnelView } = require('../lib/pipeline.ts');
+const { funnelPage } = require('../lib/web.ts');
 const { loadConfig } = require('../lib/config.ts');
 
 describe('normalization', () => {
@@ -234,6 +236,25 @@ describe('migrations', () => {
       assert.ok(tables.includes(need), need);
     }
   });
+
+  it('encodes JSONB objects and text arrays without double-stringifying', () => {
+    const schema = loadMigrationSchema();
+    assert.ok(schema.jobs.columns.includes('payload'));
+    assert.ok(schema.jobs.jsonb.has('payload'));
+    assert.ok(schema.campaigns.arrays.has('allowed_offers'));
+    const encoded = encodeRow(schema, 'campaigns', {
+      id: 'cmp_1',
+      name: 'Test',
+      owner: 'Jesse',
+      geography: { market: 'PHL' },
+      allowed_offers: ['rebuild', 'seo_aeo'],
+      provenance: { actor: 'test' },
+    });
+    assert.equal(typeof encoded.geography, 'object');
+    assert.equal(encoded.geography.market, 'PHL');
+    assert.deepEqual(encoded.allowed_offers, ['rebuild', 'seo_aeo']);
+    assert.match(CLAIM_JOB_SQL, /FOR UPDATE SKIP LOCKED/);
+  });
 });
 
 describe('vertical slice', () => {
@@ -265,6 +286,19 @@ describe('vertical slice', () => {
     assert.equal(result.cfg.enableCrm, false);
     assert.equal(result.cfg.enableOutreach, false);
     assert.equal(loadConfig().killSwitch, true);
+  });
+
+  it('pauses at qa_pending so human review can happen before won', async () => {
+    const paused = await runVerticalSlice({ fixtureName: 'cedar-ridge-hvac', reviewer: 'qa.reviewer', pauseAt: 'qa_pending' });
+    assert.equal(paused.prospect.lifecycle, 'qa_pending');
+    assert.equal(paused.offer.offer, 'rebuild');
+    const finished = await finishVerticalSlice(paused);
+    assert.equal(finished.prospect.lifecycle, 'won');
+    const html = funnelPage(funnelView(finished.store));
+    assert.match(html, /<h1>Funnel<\/h1>/);
+    assert.match(html, /QA approval/);
+    assert.match(html, /noindex/);
+    assert.doesNotMatch(html, /"counts":/);
   });
 
   it('refuses delivery and live handoff without approval and with kill switch on', async () => {

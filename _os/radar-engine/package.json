@@ -11,7 +11,7 @@
     "migrate": "node --experimental-strip-types bin/radar-v2.js migrate",
     "slice": "node --experimental-strip-types bin/radar-v2.js slice --fixture cedar-ridge-hvac",
     "serve": "node --experimental-strip-types bin/radar-v2.js serve",
-    "typecheck": "node --experimental-strip-types -e \"require('./lib/pipeline.ts'); console.log('ok')\""
+    "capture": "node --experimental-strip-types bin/capture-ui.js"
   },
   "dependencies": {
     "pg": "^8.16.3"

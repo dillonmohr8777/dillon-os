@@ -76,6 +76,65 @@ function intakeForm(cfg, errors = [], values = {}) {
   `);
 }
 
+function pct(n) {
+  return `${Math.round(Number(n || 0) * 100)}%`;
+}
+
+function scoreTable(snap) {
+  if (!snap) return '<p>No score snapshot.</p>';
+  const rows = [
+    ['Site Quality Score', snap.site_quality_score],
+    ['Opportunity Score', snap.opportunity_score],
+    ['Rebuild', snap.rebuild_opportunity],
+    ['SEO / AEO', snap.seo_aeo_opportunity],
+    ['Local', snap.local_opportunity],
+    ['Paid', snap.paid_opportunity],
+    ['Conversion', snap.conversion_opportunity],
+    ['Market fit', snap.market_fit_score],
+    ['Contactability', snap.contactability_score],
+    ['Audit confidence', snap.audit_confidence],
+    ['Priority', snap.priority_score],
+  ];
+  const why = (snap.explanations || []).map((e) => `<li><strong>${escapeHtml(e.score)}</strong>: ${escapeHtml(e.because)}</li>`).join('');
+  return `
+    <table>
+      ${rows.map(([k, v]) => `<tr><th>${escapeHtml(k)}</th><td>${escapeHtml(v == null ? '—' : String(v))}</td></tr>`).join('')}
+    </table>
+    <ul>${why}</ul>`;
+}
+
+function funnelPage(view) {
+  const stages = Object.entries(view.byStage || {});
+  const conv = view.conversion || {};
+  const segs = view.segments || {};
+  return layout('Funnel', `
+    <div class="card">
+      <h1>Funnel</h1>
+      <p>Revenue ${escapeHtml(String(view.revenue || 0))} · expected ${escapeHtml(String(view.expected_revenue || 0))} · median ${escapeHtml(String(Math.round((view.median_minutes || 0) * 100) / 100))} min</p>
+      <h2>Conversion</h2>
+      <table>
+        <tr><th>Intake to scan</th><td>${pct(conv.intake_to_scan)}</td></tr>
+        <tr><th>QA approval</th><td>${pct(conv.qa_approval_rate)}</td></tr>
+        <tr><th>QA rejection</th><td>${pct(conv.qa_rejection_rate)}</td></tr>
+        <tr><th>Booking</th><td>${pct(conv.booking_rate)}</td></tr>
+        <tr><th>Win</th><td>${pct(conv.win_rate)}</td></tr>
+      </table>
+      <h2>Lifecycle</h2>
+      <table>${stages.map(([k, v]) => `<tr><th>${escapeHtml(k)}</th><td>${escapeHtml(String(v))}</td></tr>`).join('')}</table>
+      <h2>Events</h2>
+      <table>${Object.entries(view.counts || {}).map(([k, v]) => `<tr><th>${escapeHtml(k)}</th><td>${escapeHtml(String(v))}</td></tr>`).join('')}</table>
+      <h2>Segments</h2>
+      <p>Campaign, vertical, geography, and offer counts. Cost and API usage stay zero until a paid provider is enabled.</p>
+      <table>
+        ${['campaign', 'vertical', 'geography', 'offer'].map((key) => {
+          const inner = Object.entries(segs[key] || {}).map(([k, v]) => `${escapeHtml(k)}: ${escapeHtml(String(v))}`).join(', ');
+          return `<tr><th>${escapeHtml(key)}</th><td>${inner || '—'}</td></tr>`;
+        }).join('')}
+      </table>
+      <p class="note">QA unsupported-claim rejection rate: ${pct(view.unsupported_claim_rejection_rate)} · false-route corrections: ${escapeHtml(String(view.false_route_corrections || 0))}</p>
+    </div>`);
+}
+
 function parseForm(body) {
   const params = new URLSearchParams(body);
   const obj = {};
@@ -186,19 +245,7 @@ function createServer({ store, adapters, campaign, cfg }) {
             <div class="card">
               <h1>${escapeHtml(p.business_name)}</h1>
               <p>Lifecycle ${escapeHtml(p.lifecycle)} · offer ${escapeHtml(p.selected_offer || '')} · suppression ${escapeHtml(p.suppression_reason || 'none')}</p>
-              <pre>${escapeHtml(JSON.stringify(snap ? {
-                site_quality_score: snap.site_quality_score,
-                rebuild_opportunity: snap.rebuild_opportunity,
-                seo_aeo_opportunity: snap.seo_aeo_opportunity,
-                local_opportunity: snap.local_opportunity,
-                paid_opportunity: snap.paid_opportunity,
-                conversion_opportunity: snap.conversion_opportunity,
-                market_fit_score: snap.market_fit_score,
-                contactability_score: snap.contactability_score,
-                audit_confidence: snap.audit_confidence,
-                priority_score: snap.priority_score,
-                explanations: snap.explanations,
-              } : {}, null, 2))}</pre>
+              ${scoreTable(snap)}
               <p><a class="btn" href="/r/${report ? report.access_token : ''}">Open report</a></p>
               <h2>Findings / evidence</h2>
               ${findings.map((f) => `<p><strong>${escapeHtml(f.claim)}</strong><br>${escapeHtml((f.evidence_ids || []).join(', '))}</p>`).join('')}
@@ -225,11 +272,7 @@ function createServer({ store, adapters, campaign, cfg }) {
         if (!requireQa(req, config)) { res.writeHead(401); return res.end('QA token required'); }
         const view = funnelView(store);
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
-        return res.end(layout('Funnel', `
-          <div class="card">
-            <h1>Funnel</h1>
-            <pre>${escapeHtml(JSON.stringify(view, null, 2))}</pre>
-          </div>`));
+        return res.end(funnelPage(view));
       }
       if (req.method === 'POST' && url.pathname === '/webhooks/booking') {
         const chunks = [];
@@ -253,4 +296,4 @@ function createServer({ store, adapters, campaign, cfg }) {
   return server;
 }
 
-module.exports = { createServer, intakeForm, layout };
+module.exports = { createServer, intakeForm, layout, funnelPage, scoreTable };

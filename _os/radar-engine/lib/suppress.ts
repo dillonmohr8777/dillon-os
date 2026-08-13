@@ -71,7 +71,7 @@ function checkSuppression({ store, prospect, campaign, intake, now = new Date() 
     if (live) return suppressionHit('duplicate domain already in pipeline', live.id);
   }
 
-  const priorOutreach = store.find('approvals', (a) => a.prospect_id === prospect.id && a.kind === 'outreach' && a.decision === 'approved');
+  const priorOutreach = store.find('approvals', (a) => a.prospect_id === prospect.id && a.kind === 'outreach' && (a.decision === 'approve' || a.decision === 'approved'));
   if (priorOutreach.length && campaign?.suppression_policy?.block_previous_outreach !== false) {
     return suppressionHit('previous outreach', priorOutreach[0].id);
   }

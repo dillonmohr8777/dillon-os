@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { id, nowIso } = require('./ids.ts');
 const { assertTransition } = require('./states.ts');
+const { loadMigrationSchema, encodeRow, decodeRow, CLAIM_JOB_SQL } = require('./schema.ts');
 
 function stamp(row, extra = {}) {
   const now = nowIso();
@@ -193,13 +194,17 @@ class MemoryStore {
 }
 
 class PgStore {
-  constructor(pool) {
+  constructor(pool, schema) {
     this.kind = 'postgres';
     this.pool = pool;
+    this.schema = schema || loadMigrationSchema();
     this.memory = new MemoryStore();
+    this.pending = Promise.resolve();
+    this.lastWriteError = null;
   }
 
   async close() {
+    await this.flush();
     await this.pool.end();
   }
 
@@ -207,12 +212,48 @@ class PgStore {
     return this.pool.query(sql, params);
   }
 
+  enqueueWrite(fn) {
+    this.pending = this.pending.then(fn).catch((err) => {
+      this.lastWriteError = err;
+      throw err;
+    });
+    return this.pending;
+  }
+
+  async flush() {
+    await this.pending;
+    if (this.lastWriteError) throw this.lastWriteError;
+  }
+
+  async upsertRow(table, row) {
+    const encoded = encodeRow(this.schema, table, row);
+    const keys = Object.keys(encoded);
+    if (!keys.length) return;
+    const cols = keys.map((k) => `"${k}"`).join(', ');
+    const placeholders = keys.map((_, i) => `$${i + 1}`).join(', ');
+    const updates = keys
+      .filter((k) => k !== 'id')
+      .map((k) => `"${k}" = EXCLUDED."${k}"`)
+      .join(', ');
+    const values = keys.map((k) => encoded[k]);
+    await this.pool.query(
+      `INSERT INTO ${table} (${cols}) VALUES (${placeholders}) ON CONFLICT (id) DO UPDATE SET ${updates}`,
+      values
+    );
+  }
+
   insert(table, row) {
-    return this.memory.insert(table, row);
+    const rec = this.memory.insert(table, row);
+    this.enqueueWrite(() => this.upsertRow(table, rec));
+    return rec;
   }
+
   update(table, idValue, patch) {
-    return this.memory.update(table, idValue, patch);
+    const rec = this.memory.update(table, idValue, patch);
+    this.enqueueWrite(() => this.upsertRow(table, rec));
+    return rec;
   }
+
   get(table, idValue) {
     return this.memory.get(table, idValue);
   }
@@ -225,58 +266,69 @@ class PgStore {
   findOne(table, pred) {
     return this.memory.findOne(table, pred);
   }
-  emitEvent(args) {
-    return this.memory.emitEvent(args);
+
+  async emitEvent(args) {
+    await this.flush();
+    return this.memory.emitEvent(args).then((row) => {
+      this.enqueueWrite(() => this.upsertRow('events', row));
+      return row;
+    });
   }
-  transition(prospectId, to, meta) {
-    return this.memory.transition(prospectId, to, meta);
+
+  async transition(prospectId, to, meta) {
+    await this.flush();
+    const updated = await this.memory.transition(prospectId, to, meta);
+    this.enqueueWrite(() => this.upsertRow('prospects', updated));
+    const ev = this.memory.all('events').at(-1);
+    if (ev) this.enqueueWrite(() => this.upsertRow('events', ev));
+    return updated;
   }
-  enqueueJob(args) {
-    return this.memory.enqueueJob(args);
+
+  async enqueueJob(args) {
+    await this.flush();
+    const result = await this.memory.enqueueJob(args);
+    if (!result.duplicate) this.enqueueWrite(() => this.upsertRow('jobs', result.job));
+    return result;
   }
-  claimJob(workerId) {
-    return this.memory.claimJob(workerId);
+
+  async claimJob(workerId) {
+    await this.flush();
+    const { rows } = await this.pool.query(CLAIM_JOB_SQL, [workerId]);
+    if (!rows[0]) return null;
+    const rec = decodeRow(rows[0]);
+    this.memory.tables.jobs.set(rec.id, rec);
+    return rec;
   }
-  completeJob(jobId) {
-    return this.memory.completeJob(jobId);
+
+  async completeJob(jobId) {
+    await this.flush();
+    const rec = await this.memory.completeJob(jobId);
+    await this.upsertRow('jobs', rec);
+    return rec;
   }
-  failJob(jobId, error) {
-    return this.memory.failJob(jobId, error);
+
+  async failJob(jobId, error) {
+    await this.flush();
+    const rec = await this.memory.failJob(jobId, error);
+    await this.upsertRow('jobs', rec);
+    return rec;
   }
-  bumpRateLimit(key, windowMs, max) {
-    return this.memory.bumpRateLimit(key, windowMs, max);
+
+  async bumpRateLimit(key, windowMs, max) {
+    await this.flush();
+    const result = await this.memory.bumpRateLimit(key, windowMs, max);
+    const row = this.memory.findOne('rate_limits', (r) => r.key === key);
+    if (row) this.enqueueWrite(() => this.upsertRow('rate_limits', row));
+    return result;
   }
 
   async persistAll() {
-    const client = await this.pool.connect();
-    try {
-      await client.query('BEGIN');
-      for (const [table, rows] of Object.entries(this.memory.tables)) {
-        for (const row of rows.values()) {
-          const keys = Object.keys(row);
-          const cols = keys.map((k) => `"${k}"`).join(', ');
-          const placeholders = keys.map((_, i) => `$${i + 1}`).join(', ');
-          const updates = keys
-            .filter((k) => k !== 'id')
-            .map((k) => `"${k}" = EXCLUDED."${k}"`)
-            .join(', ');
-          const values = keys.map((k) => {
-            const v = row[k];
-            if (v && typeof v === 'object' && !(v instanceof Date)) return JSON.stringify(v);
-            return v;
-          });
-          await client.query(
-            `INSERT INTO ${table} (${cols}) VALUES (${placeholders}) ON CONFLICT (id) DO UPDATE SET ${updates}`,
-            values
-          );
-        }
+    await this.flush();
+    for (const [table, rows] of Object.entries(this.memory.tables)) {
+      if (!this.schema[table]) continue;
+      for (const row of rows.values()) {
+        await this.upsertRow(table, row);
       }
-      await client.query('COMMIT');
-    } catch (err) {
-      await client.query('ROLLBACK');
-      throw err;
-    } finally {
-      client.release();
     }
   }
 }
@@ -313,7 +365,7 @@ async function createStore({ databaseUrl } = {}) {
     store.pgUnavailable = String(err.message || err);
     return store;
   }
-  const store = new PgStore(pool);
+  const store = new PgStore(pool, loadMigrationSchema());
   store.pgReady = true;
   return store;
 }

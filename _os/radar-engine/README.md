@@ -41,6 +41,15 @@ node --test _os/automation/tests/site-grader.test.js _os/automation/tests/automa
 Copy `_os/radar-engine/.env.example` to a gitignored `.env`. All write/send
 flags default off. The kill switch defaults on.
 
+Postgres writes are typed (JSONB objects, text arrays) and job claiming uses
+`FOR UPDATE SKIP LOCKED`. Tests and the default slice still run in memory when
+`DATABASE_URL` is unset. Playwright is optional for PDF/screenshots:
+
+```bash
+cd _os/radar-engine && npm install --no-save playwright@1.56.1
+NODE_PATH=_os/radar-engine/node_modules node --experimental-strip-types _os/radar-engine/bin/capture-ui.js
+```
+
 ## Privacy
 
 Submissions, contacts, approvals, and bookings belong in PostgreSQL, never in
