@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F4F6F0",
+    "ink": "#142016",
+    "accent": "#2D4C33",
+    "accent2": "#C4A35A",
+    "panel": "#D0DCC8",
+    "deep": "#1A2C1E",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of insurance work for Caise Benefits, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "caise-benefits",
+  "name": "Caise Benefits",
+  "city": "Aston",
+  "category": "Insurance",
+  "vertical": "insurance",
+  "url": "https://caisebenefits.com/",
+  "phone": "610-494-8270",
+  "address": "3561 Concord Road, Aston, PA 19014",
+  "hours": "Mon-Fri 8am-5pm",
+  "description": "Caise Benefits has a combined 50 years of experience, which we use to recommend, implement and customize solutions for all of our clients.",
+  "marquee": [
+    "Aston",
+    "Insurance",
+    "Link to X",
+    "Link to LinkedIn"
+  ],
+  "hero": {
+    "eyebrow": "Aston | Insurance",
+    "headline": "Stop By to See the Caise Difference",
+    "sub": "Our ProductsDental & Vision InsuranceDisabilityHealth InsuranceMedicareLife InsurancePersonal LinesBusiness InsuranceOur CarriersGeoBlue Travel Insurance",
+    "ctaPrimary": {
+      "label": "Link to Facebook",
+      "href": "tel:6104948270"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://caisebenefits.com/"
+    },
+    "glassFloat": {
+      "title": "Aston",
+      "sub": "Insurance"
+    },
+    "marquee": [
+      "Aston",
+      "Insurance",
+      "Link to X",
+      "Link to LinkedIn"
+    ]
+  },
+  "offerings": {
+    "heading": "Welcome to Caise Benefits.",
+    "items": [
+      {
+        "title": "Welcome to Caise Benefits",
+        "text": "Our Clients Are Like FamilyLife Insurance Disability"
+      },
+      {
+        "title": "Our Clients Are Like Family",
+        "text": "Review your plans at anytime to keep coverage and cost manageable, helping recommend ideal solutions to fit your needs"
+      },
+      {
+        "title": "Insurance Made Simple",
+        "text": "Making any changes to plans, adding or removing employees"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Our Clients Are Like Family",
+    "paragraphs": [
+      "Our ProductsDental & Vision InsuranceDisabilityHealth InsuranceMedicareLife InsurancePersonal LinesBusiness InsuranceOur CarriersGeoBlue Travel Insurance",
+      "Stop By to See the Caise DifferenceRequest a QuoteGet Directions"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Caise Benefits at 610-494-8270."
+      },
+      {
+        "title": "Hours they publish",
+        "text": "Mon-Fri 8am-5pm"
+      },
+      {
+        "title": "A real street",
+        "text": "3561 Concord Road, Aston, PA 19014."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Stop By to See the Caise Difference",
+    "text": "Review your plans at anytime to keep coverage and cost manageable, helping recommend ideal solutions to fit your needs",
+    "cta": {
+      "label": "Official site",
+      "href": "https://caisebenefits.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Our Clients Are Like Family",
+    "text": "Making any changes to plans, adding or removing employees",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://caisebenefits.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "About",
+        "href": "https://caisebenefits.com/",
+        "imageIndex": 9,
+        "text": "About at Caise Benefits in Aston."
+      },
+      {
+        "title": "Our Products",
+        "href": "https://caisebenefits.com/",
+        "imageIndex": 10,
+        "text": "Our Products at Caise Benefits in Aston."
+      },
+      {
+        "title": "Dental & Vision Insurance",
+        "href": "https://caisebenefits.com/",
+        "imageIndex": 11,
+        "text": "Dental & Vision Insurance at Caise Benefits in Aston."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "3561 Concord Road, Aston, PA 19014"
+  },
+  "closing": {
+    "cta": {
+      "label": "Link to Facebook",
+      "href": "tel:6104948270"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6104948270"
+    },
+    {
+      "label": "Official site",
+      "href": "https://caisebenefits.com/"
+    }
+  ]
+}

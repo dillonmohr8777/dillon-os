@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F3F6FA",
+    "ink": "#142536",
+    "accent": "#2D72AD",
+    "accent2": "#C8102E",
+    "panel": "#C4D9ED",
+    "deep": "#0C2A44",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Weathers Motors, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "weathers-motors",
+  "name": "Weathers Motors",
+  "city": "Media",
+  "category": "Auto dealer",
+  "vertical": "car",
+  "url": "https://www.weathersmotors.com/",
+  "phone": "866-799-0712",
+  "address": "1187 West Baltimore Pike, Media, PA, 19063",
+  "hours": "",
+  "description": "Shop quality used cars and expert auto service at Weathers Motors in Media, PA. Proudly serving Philadelphia, West Chester, and Norristown. Browse inventory t",
+  "marquee": [
+    "Media",
+    "Auto dealer",
+    "Directions",
+    "Contact"
+  ],
+  "hero": {
+    "eyebrow": "Media | Auto dealer",
+    "headline": "Weathers Motors",
+    "sub": "1187 West Baltimore Pike Directions Media, PA 19063",
+    "ctaPrimary": {
+      "label": "Shop By Price",
+      "href": "tel:8667990712"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.weathersmotors.com/"
+    },
+    "glassFloat": {
+      "title": "Media",
+      "sub": "Auto dealer"
+    },
+    "marquee": [
+      "Media",
+      "Auto dealer",
+      "Directions",
+      "Contact"
+    ]
+  },
+  "offerings": {
+    "heading": "Welcome to Weathers Motors.",
+    "items": [
+      {
+        "title": "Welcome to Weathers Motors",
+        "text": "InventoryInventoryPre-Owned Special OffersShop By PriceShop By BrandShop By Body StyleCarfax One Owner VehiclesVehicles Under $20kKBB Instant Cash Offer"
+      },
+      {
+        "title": "Schedule Service",
+        "text": "Shop Fuel EfficiencyElectric Vehicle InformationHybrids / Ev's at Weathers MotorsResourcesCertified Pre-owned Vehicles & Weathers MotorsNew Car vs Used Car PurchaseCarFinderKBB Instant Cash Offer"
+      },
+      {
+        "title": "Special Offers & Incentives",
+        "text": "Trade or SellWe Buy CarsKBB Instant Cash Offer $100 Gift Card Program"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Trade or Sell Your Vehicle",
+    "paragraphs": [
+      "1187 West Baltimore Pike Directions Media, PA 19063",
+      "InventoryInventoryInventoryPre-Owned Special OffersShop By PriceShop By BrandShop By Body StyleCarfax One Owner VehiclesVehicles Under $20kKBB Instant Cash OfferShop Fuel EfficiencyElectric Vehicle InformationHybrids / Ev's at Weathers MotorsResourcesCertified Pre-owned Vehicles & Weathers MotorsNew Car vs Used Car PurchaseCarFinderKBB Instant Cash Offer Featured Vehicles"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Weathers Motors at 866-799-0712."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "1187 West Baltimore Pike, Media, PA, 19063."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Welcome to Weathers Motors",
+    "text": "Shop Fuel EfficiencyElectric Vehicle InformationHybrids / Ev's at Weathers MotorsResourcesCertified Pre-owned Vehicles & Weathers MotorsNew Car vs Used Car PurchaseCarFinderKBB Instant Cash Offer",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.weathersmotors.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Schedule Service",
+    "text": "Trade or SellWe Buy CarsKBB Instant Cash Offer $100 Gift Card Program",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://www.weathersmotors.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Directions",
+        "href": "https://www.weathersmotors.com/",
+        "imageIndex": 9,
+        "text": "Directions at Weathers Motors in Media."
+      },
+      {
+        "title": "Contact",
+        "href": "https://www.weathersmotors.com/",
+        "imageIndex": 10,
+        "text": "Contact at Weathers Motors in Media."
+      },
+      {
+        "title": "About",
+        "href": "https://www.weathersmotors.com/",
+        "imageIndex": 11,
+        "text": "About at Weathers Motors in Media."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "1187 West Baltimore Pike, Media, PA, 19063"
+  },
+  "closing": {
+    "cta": {
+      "label": "Shop By Price",
+      "href": "tel:8667990712"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:8667990712"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.weathersmotors.com/"
+    }
+  ]
+}

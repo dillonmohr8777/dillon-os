@@ -1,0 +1,244 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F4F2EE",
+    "ink": "#2B2B2B",
+    "accent": "#7A8F72",
+    "accent2": "#7A1F2B",
+    "panel": "#D8DDD1",
+    "deep": "#2B2B2B",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of nail salon work for Euphoria Nail Bar, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "euphoria-nail-bar",
+  "name": "Euphoria Nail Bar",
+  "city": "Philadelphia",
+  "category": "Nail salon",
+  "vertical": "beauty",
+  "url": "https://euphorianailbar.com/",
+  "phone": "(215) 483-4341",
+  "address": "4430 Main Street, Philadelphia, PA 19127",
+  "hours": "Mon-Sat 9am-8pm, Sun 10am-6pm",
+  "description": "Euphoria Nail Bar in Philadelphia. Nail salon.",
+  "marquee": [
+    "Philadelphia",
+    "Nail salon",
+    "Euphoria"
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Nail salon",
+    "headline": "Manayunk's newest nail bar",
+    "sub": "Euphoria Nail Bar is a nail salon in Philadelphia.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2154834341"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://euphorianailbar.com/"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "Nail salon"
+    },
+    "marquee": [
+      "Philadelphia",
+      "Nail salon",
+      "Euphoria"
+    ]
+  },
+  "offerings": {
+    "heading": "Manicures, pedicures, waxing.",
+    "items": [
+      {
+        "title": "Manicures, pedicures, waxing",
+        "text": "Euphoria Nail Bar in Philadelphia. Call (215) 483-4341."
+      },
+      {
+        "title": "Walk-in questions and the jobs they actually take",
+        "text": "Euphoria Nail Bar in Philadelphia. Call (215) 483-4341."
+      },
+      {
+        "title": "A homepage that names the next step instead of hiding it",
+        "text": "Euphoria Nail Bar in Philadelphia. Call (215) 483-4341."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About Euphoria",
+    "paragraphs": [
+      "Euphoria Nail Bar serves Philadelphia in Philadelphia. The rebuild keeps their words and puts the next action on the page.",
+      "The radar flagged this site: 33/100 decayed (provisional — Tier 0 only). Worst: no viewport meta — page renders desktop-width on phones; only 0 words on the homepage.."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Euphoria Nail Bar at (215) 483-4341."
+      },
+      {
+        "title": "Hours they publish",
+        "text": "Mon-Sat 9am-8pm, Sun 10am-6pm"
+      },
+      {
+        "title": "A real street",
+        "text": "4430 Main Street, Philadelphia, PA 19127."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Manicures, pedicures, waxing",
+    "text": "Euphoria Nail Bar keeps the work in Philadelphia. The rebuild puts the next action where a phone can hit it.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://euphorianailbar.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Philadelphia on the map",
+    "text": "The current site still shows this fault: 33/100 decayed (provisional — Tier 0 only). Worst: no viewport meta — page renders desktop-width on phones; only 0 words.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://euphorianailbar.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Visit",
+        "href": "https://euphorianailbar.com/",
+        "imageIndex": 9,
+        "text": "Visit at Euphoria Nail Bar in Philadelphia."
+      },
+      {
+        "title": "Call",
+        "href": "https://euphorianailbar.com/",
+        "imageIndex": 10,
+        "text": "Call at Euphoria Nail Bar in Philadelphia."
+      },
+      {
+        "title": "Official site",
+        "href": "https://euphorianailbar.com/",
+        "imageIndex": 11,
+        "text": "Official site at Euphoria Nail Bar in Philadelphia."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "4430 Main Street, Philadelphia, PA 19127"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2154834341"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2154834341"
+    },
+    {
+      "label": "Official site",
+      "href": "https://euphorianailbar.com/"
+    }
+  ]
+}

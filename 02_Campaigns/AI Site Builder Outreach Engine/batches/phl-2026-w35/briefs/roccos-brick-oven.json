@@ -1,0 +1,240 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F4F7F0",
+    "ink": "#142414",
+    "accent": "#006837",
+    "accent2": "#C45C26",
+    "panel": "#CDE0D0",
+    "deep": "#0C2418",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Rocco's Brick Oven Pizzeria, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "roccos-brick-oven",
+  "name": "Rocco's Brick Oven Pizzeria",
+  "city": "Collegeville",
+  "category": "Restaurant",
+  "vertical": "restaurant",
+  "url": "https://roccosbrickoven.com/",
+  "phone": "",
+  "address": "",
+  "hours": "Sunday - Thursday: 11:00 am - 8:30pm",
+  "description": "Pizza Collegeville, Pizza Norristown Pa, Pizza Plymouth Meeting Pa, Welcome to Rocco's, where we believe in old world traditions...using only the best ingredi",
+  "marquee": [
+    "Collegeville",
+    "Restaurant",
+    "Rocco's"
+  ],
+  "hero": {
+    "eyebrow": "Collegeville | Restaurant",
+    "headline": "Norristown - Plymouth Meeting",
+    "sub": "Using only the best ingredients and preparing them the old-fashioned way...fresh and simple.",
+    "ctaPrimary": {
+      "label": "Catering Menu",
+      "href": "https://roccosbrickoven.com/"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://roccosbrickoven.com/"
+    },
+    "glassFloat": {
+      "title": "Collegeville",
+      "sub": "Restaurant"
+    },
+    "marquee": [
+      "Collegeville",
+      "Restaurant",
+      "Rocco's"
+    ]
+  },
+  "offerings": {
+    "heading": "Collegeville.",
+    "items": [
+      {
+        "title": "Collegeville",
+        "text": "to our own brickoven pizzas. We believe only the best will do."
+      },
+      {
+        "title": "Walk-in questions and the jobs they actually take",
+        "text": "Rocco's Brick Oven Pizzeria in Collegeville. Open the official site for details."
+      },
+      {
+        "title": "A homepage that names the next step instead of hiding it",
+        "text": "Rocco's Brick Oven Pizzeria in Collegeville. Open the official site for details."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About Rocco's",
+    "paragraphs": [
+      "Using only the best ingredients and preparing them the old-fashioned way...fresh and simple.",
+      "From our homeade sauces and cheesecakes, to the imported meats and cheeses,"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Start on the official site",
+        "text": "Open https://roccosbrickoven.com/ for the current details."
+      },
+      {
+        "title": "Hours they publish",
+        "text": "Sunday - Thursday: 11:00 am - 8:30pm"
+      },
+      {
+        "title": "Collegeville on the map",
+        "text": "Rocco's Brick Oven Pizzeria is listed in Collegeville. No street address is invented here."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Collegeville",
+    "text": "Rocco's Brick Oven Pizzeria keeps the work in Collegeville. The rebuild puts the next action where a phone can hit it.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://roccosbrickoven.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Collegeville on the map",
+    "text": "Rocco's Brick Oven Pizzeria is a restaurant serving Collegeville.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://roccosbrickoven.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Visit",
+        "href": "https://roccosbrickoven.com/",
+        "imageIndex": 9,
+        "text": "Visit at Rocco's Brick Oven Pizzeria in Collegeville."
+      },
+      {
+        "title": "Call",
+        "href": "https://roccosbrickoven.com/",
+        "imageIndex": 10,
+        "text": "Call at Rocco's Brick Oven Pizzeria in Collegeville."
+      },
+      {
+        "title": "Official site",
+        "href": "https://roccosbrickoven.com/",
+        "imageIndex": 11,
+        "text": "Official site at Rocco's Brick Oven Pizzeria in Collegeville."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Collegeville. Confirm before you go.",
+    "sub": "Rocco's Brick Oven Pizzeria is listed in Collegeville. Street address stays empty until a harvest or listing proves it."
+  },
+  "closing": {
+    "cta": {
+      "label": "Catering Menu",
+      "href": "https://roccosbrickoven.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://roccosbrickoven.com/"
+    }
+  ]
+}

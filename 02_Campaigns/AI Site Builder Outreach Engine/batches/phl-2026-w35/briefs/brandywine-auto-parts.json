@@ -1,0 +1,244 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F4F6FA",
+    "ink": "#0F1C33",
+    "accent": "#0047AB",
+    "accent2": "#FFD700",
+    "panel": "#C4D2EE",
+    "deep": "#0A1A3A",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of auto parts work for Brandywine Auto Parts, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "brandywine-auto-parts",
+  "name": "Brandywine Auto Parts",
+  "city": "Chester",
+  "category": "Auto parts",
+  "vertical": "car-parts",
+  "url": "http://www.brandywine-ap.com/",
+  "phone": "302.429.0643",
+  "address": "",
+  "hours": "Mon-Fri 8am-5:30pm",
+  "description": "Brandywine Auto Parts in Chester. Auto parts.",
+  "marquee": [
+    "Chester",
+    "Auto parts",
+    "Brandywine"
+  ],
+  "hero": {
+    "eyebrow": "Chester | Auto parts",
+    "headline": "LOCATIONS & HOURS",
+    "sub": "368 Wilmington-West Chester PkGlen Mills, PA 19342",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:3024290643"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "http://www.brandywine-ap.com/"
+    },
+    "glassFloat": {
+      "title": "Chester",
+      "sub": "Auto parts"
+    },
+    "marquee": [
+      "Chester",
+      "Auto parts",
+      "Brandywine"
+    ]
+  },
+  "offerings": {
+    "heading": "Auto parts work for people who already know the shop.",
+    "items": [
+      {
+        "title": "Auto parts work for people who already know the shop",
+        "text": "Brandywine Auto Parts in Chester. Call 302.429.0643."
+      },
+      {
+        "title": "Walk-in questions and the jobs they actually take",
+        "text": "Brandywine Auto Parts in Chester. Call 302.429.0643."
+      },
+      {
+        "title": "A homepage that names the next step instead of hiding it",
+        "text": "Brandywine Auto Parts in Chester. Call 302.429.0643."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "LOCATIONS & HOURS",
+    "paragraphs": [
+      "368 Wilmington-West Chester PkGlen Mills, PA 19342",
+      "Brandywine Auto Parts serves Chester in Delaware County. The rebuild keeps their words and puts the next action on the page."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Brandywine Auto Parts at 302.429.0643."
+      },
+      {
+        "title": "Hours they publish",
+        "text": "Mon-Fri 8am-5:30pm"
+      },
+      {
+        "title": "Chester on the map",
+        "text": "Brandywine Auto Parts is listed in Chester. No street address is invented here."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "What Brandywine Auto Parts is known for",
+    "text": "Brandywine Auto Parts keeps the work in Chester. The rebuild puts the next action where a phone can hit it.",
+    "cta": {
+      "label": "Official site",
+      "href": "http://www.brandywine-ap.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Chester on the map",
+    "text": "The current site still shows this fault: 37/100 decayed (provisional — Tier 0 only). Worst: no viewport meta — page renders desktop-width on phones; no obvious c.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "http://www.brandywine-ap.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Visit",
+        "href": "http://www.brandywine-ap.com/",
+        "imageIndex": 9,
+        "text": "Visit at Brandywine Auto Parts in Chester."
+      },
+      {
+        "title": "Call",
+        "href": "http://www.brandywine-ap.com/",
+        "imageIndex": 10,
+        "text": "Call at Brandywine Auto Parts in Chester."
+      },
+      {
+        "title": "Official site",
+        "href": "http://www.brandywine-ap.com/",
+        "imageIndex": 11,
+        "text": "Official site at Brandywine Auto Parts in Chester."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Chester. Confirm before you go.",
+    "sub": "Brandywine Auto Parts is listed in Chester. Street address stays empty until a harvest or listing proves it."
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:3024290643"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:3024290643"
+    },
+    {
+      "label": "Official site",
+      "href": "http://www.brandywine-ap.com/"
+    }
+  ]
+}

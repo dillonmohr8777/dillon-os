@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F7F4EE",
+    "ink": "#141820",
+    "accent": "#2F4C6E",
+    "accent2": "#8B7355",
+    "panel": "#D4CFC4",
+    "deep": "#0E1A2C",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for Bala Financial Group, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "bala-financial",
+  "name": "Bala Financial Group",
+  "city": "Phoenixville",
+  "category": "Wealth management",
+  "vertical": "financial",
+  "url": "https://www.balafinancial.com/",
+  "phone": "856-273-0800",
+  "address": "",
+  "hours": "",
+  "description": "Bala Financial Group in Phoenixville. Wealth management.",
+  "marquee": [
+    "Phoenixville",
+    "Wealth management",
+    "856-273-0800",
+    "Schedule an Appointment"
+  ],
+  "hero": {
+    "eyebrow": "Phoenixville | Wealth management",
+    "headline": "Our Team Approach…",
+    "sub": "About LeadershipMoorestown, NJDevon, PAMarlton, NJPhoenixville, PA",
+    "ctaPrimary": {
+      "label": "Schedule an Appointment",
+      "href": "tel:8562730800"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.balafinancial.com/"
+    },
+    "glassFloat": {
+      "title": "Phoenixville",
+      "sub": "Wealth management"
+    },
+    "marquee": [
+      "Phoenixville",
+      "Wealth management",
+      "856-273-0800",
+      "Schedule an Appointment"
+    ]
+  },
+  "offerings": {
+    "heading": "Reliable Care and Guidance….",
+    "items": [
+      {
+        "title": "Reliable Care and Guidance…",
+        "text": "Tools Market UpdateCalculators GlossaryTax Resources"
+      },
+      {
+        "title": "Tailored Personal Solutions…",
+        "text": "adds perspective and experience to serve our clients"
+      },
+      {
+        "title": "In the News - Market Update",
+        "text": "Our focus is to provide tailored solutions to help clients realize their dreams. For over 30 years, our independent financial services firm, has helped professionals, growing families, and retirees reach their financial milestones. Through our comprehensive investment planning and dynamic financial strategies…we strive for those dreams to be achieved."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Our Team Approach…",
+    "paragraphs": [
+      "About LeadershipMoorestown, NJDevon, PAMarlton, NJPhoenixville, PA",
+      "Resource Center RetirementEstateInvestmentInsuranceTaxMoneyLifestyle"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Bala Financial Group at 856-273-0800."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "Phoenixville on the map",
+        "text": "Bala Financial Group is listed in Phoenixville. No street address is invented here."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Reliable Care and Guidance…",
+    "text": "adds perspective and experience to serve our clients",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.balafinancial.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Tailored Personal Solutions…",
+    "text": "Our focus is to provide tailored solutions to help clients realize their dreams. For over 30 years, our independent financial services firm, has helped professionals, growing families, and retirees reach their financial milestones. Through our comprehensive investment planning and dynamic financial strategies…we strive for those dreams to be achieved.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://www.balafinancial.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "856-273-0800",
+        "href": "https://www.balafinancial.com/",
+        "imageIndex": 9,
+        "text": "856-273-0800 at Bala Financial Group in Phoenixville."
+      },
+      {
+        "title": "Schedule an Appointment",
+        "href": "https://www.balafinancial.com/",
+        "imageIndex": 10,
+        "text": "Schedule an Appointment at Bala Financial Group in Phoenixville."
+      },
+      {
+        "title": "About",
+        "href": "https://www.balafinancial.com/",
+        "imageIndex": 11,
+        "text": "About at Bala Financial Group in Phoenixville."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Phoenixville. Confirm before you go.",
+    "sub": "Bala Financial Group is listed in Phoenixville. Street address stays empty until a harvest or listing proves it."
+  },
+  "closing": {
+    "cta": {
+      "label": "Schedule an Appointment",
+      "href": "tel:8562730800"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:8562730800"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.balafinancial.com/"
+    }
+  ]
+}

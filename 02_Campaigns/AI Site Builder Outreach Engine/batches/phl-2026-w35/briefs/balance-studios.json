@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Outfit",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F5F7F8",
+    "ink": "#111111",
+    "accent": "#00A8E8",
+    "accent2": "#111111",
+    "panel": "#C5E8F4",
+    "deep": "#0A0A0A",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of fitness work for Balance Studios, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "balance-studios",
+  "name": "Balance Studios",
+  "city": "Philadelphia",
+  "category": "Fitness",
+  "vertical": "fitness-centre",
+  "url": "https://www.balancestudios.net/",
+  "phone": "215-988-9347",
+  "address": "",
+  "hours": "",
+  "description": "Join us for 7 days free in Gracie Brazilian Jiu Jitsu and Muay Thai Boxing classes in Center City, Northeast and Fishtown Philadelphia.",
+  "marquee": [
+    "Philadelphia",
+    "Fitness",
+    "Home",
+    "News & Blog"
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Fitness",
+    "headline": "Balance Studios Story",
+    "sub": "About Balance Studios [The Headquarters] Migliarese Bros. [Fearless Leaders] Team Balance [Worldwide Team] Relson Gracie [Our Instructor] Hélio Gracie [Our Inspiration]",
+    "ctaPrimary": {
+      "label": "Price/Schedule",
+      "href": "tel:2159889347"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.balancestudios.net/"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "Fitness"
+    },
+    "marquee": [
+      "Philadelphia",
+      "Fitness",
+      "Home",
+      "News & Blog"
+    ]
+  },
+  "offerings": {
+    "heading": "Balance Mission.",
+    "items": [
+      {
+        "title": "Balance Mission",
+        "text": "Locations Fishtown, Philadelphia (HQ) Center City, Philadelphia Northeast, Philadelphia Haddonfield, New Jersey"
+      },
+      {
+        "title": "Migliarese Bros",
+        "text": "Balance Studios is a multiple award winner of “Best of Philly” and the leading source of instruction in Gracie Brazilian Jiu-Jitsu (BJJ), Mixed Martial Arts, Muay Thai Kickboxing, Kids Martial Arts, and Women’s Self Defense in Philadelphia."
+      },
+      {
+        "title": "Gracie Family Approved",
+        "text": "Balance Studios is a family-focused studio, prioritizing a positive atmosphere. Our level-specific Muay Thai and Gracie Brazilian Jiu-Jitsu courses are designed for beginners, ensuring a comfortable learning experience with peers of similar skill level."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Balance Studios Story",
+    "paragraphs": [
+      "About Balance Studios [The Headquarters] Migliarese Bros. [Fearless Leaders] Team Balance [Worldwide Team] Relson Gracie [Our Instructor] Hélio Gracie [Our Inspiration]",
+      "Programs Gracie Brazilian Jiu-Jitsu Muay Thai Kickboxing Kids Jiu-Jitsu Women’s Jiu-Jitsu Self Defense"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Balance Studios at 215-988-9347."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "Philadelphia on the map",
+        "text": "Balance Studios is listed in Philadelphia. No street address is invented here."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Balance Mission",
+    "text": "Balance Studios is a multiple award winner of “Best of Philly” and the leading source of instruction in Gracie Brazilian Jiu-Jitsu (BJJ), Mixed Martial Arts, Muay Thai Kickboxing, Kids Martial Arts, and Women’s Self Defense in Philadelphia.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.balancestudios.net/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Migliarese Bros",
+    "text": "Balance Studios is a family-focused studio, prioritizing a positive atmosphere. Our level-specific Muay Thai and Gracie Brazilian Jiu-Jitsu courses are designed for beginners, ensuring a comfortable learning experience with peers of similar skill level.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://www.balancestudios.net/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "News & Blog",
+        "href": "https://www.balancestudios.net/",
+        "imageIndex": 9,
+        "text": "News & Blog at Balance Studios in Philadelphia."
+      },
+      {
+        "title": "7 Days Free",
+        "href": "https://www.balancestudios.net/",
+        "imageIndex": 10,
+        "text": "7 Days Free at Balance Studios in Philadelphia."
+      },
+      {
+        "title": "About",
+        "href": "https://www.balancestudios.net/",
+        "imageIndex": 11,
+        "text": "About at Balance Studios in Philadelphia."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Philadelphia. Confirm before you go.",
+    "sub": "Balance Studios is listed in Philadelphia. Street address stays empty until a harvest or listing proves it."
+  },
+  "closing": {
+    "cta": {
+      "label": "Price/Schedule",
+      "href": "tel:2159889347"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2159889347"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.balancestudios.net/"
+    }
+  ]
+}

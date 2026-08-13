@@ -1,0 +1,244 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F7F4F0",
+    "ink": "#1A1214",
+    "accent": "#C8102E",
+    "accent2": "#012169",
+    "panel": "#E8C8CC",
+    "deep": "#012169",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of bar work for Union Jack's Olde Congo Hotel, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "union-jacks",
+  "name": "Union Jack's Olde Congo Hotel",
+  "city": "Barto",
+  "category": "Bar",
+  "vertical": "bar",
+  "url": "http://www.unionjackscongo.com/",
+  "phone": "610.754.0189",
+  "address": "",
+  "hours": "",
+  "description": "Union Jack's Olde Congo Hotel in Barto. Bar.",
+  "marquee": [
+    "Barto",
+    "Bar",
+    "Union"
+  ],
+  "hero": {
+    "eyebrow": "Barto | Bar",
+    "headline": "Union Jack's Olde Congo Hotel",
+    "sub": "Union Jack's Congo is a friendly local bar with great food, cocktails, and a pretty hefty draft list. Heavily influenced by local ingredients, craft beer, and all that is tasty.",
+    "ctaPrimary": {
+      "label": "Menu",
+      "href": "tel:6107540189"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "http://www.unionjackscongo.com/"
+    },
+    "glassFloat": {
+      "title": "Barto",
+      "sub": "Bar"
+    },
+    "marquee": [
+      "Barto",
+      "Bar",
+      "Union"
+    ]
+  },
+  "offerings": {
+    "heading": "Bar work for people who already know the shop.",
+    "items": [
+      {
+        "title": "Bar work for people who already know the shop",
+        "text": "We are pretty famous for our ever changing daily specials- you can find those our F​ace book and instagram pages!"
+      },
+      {
+        "title": "Walk-in questions and the jobs they actually take",
+        "text": "Certified best bar in Barto* full of friends, family, and food."
+      },
+      {
+        "title": "A homepage that names the next step instead of hiding it",
+        "text": "*self-proclaimed. but like, if there were a \"Best Bar in Barto\" contest, we'd totally enter and probably win."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About Union",
+    "paragraphs": [
+      "Union Jack's Congo is a friendly local bar with great food, cocktails, and a pretty hefty draft list. Heavily influenced by local ingredients, craft beer, and all that is tasty.",
+      "We're cooking up food for everyone- all our vegan, vegetarian, and meat eating friends. We don't judge. We just love food."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Union Jack's Olde Congo Hotel at 610.754.0189."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "Barto on the map",
+        "text": "Union Jack's Olde Congo Hotel is listed in Barto. No street address is invented here."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "What Union Jack's Olde Congo Hotel is known for",
+    "text": "Certified best bar in Barto* full of friends, family, and food.",
+    "cta": {
+      "label": "Official site",
+      "href": "http://www.unionjackscongo.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Barto on the map",
+    "text": "*self-proclaimed. but like, if there were a \"Best Bar in Barto\" contest, we'd totally enter and probably win.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "http://www.unionjackscongo.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Visit",
+        "href": "http://www.unionjackscongo.com/",
+        "imageIndex": 9,
+        "text": "Visit at Union Jack's Olde Congo Hotel in Barto."
+      },
+      {
+        "title": "Call",
+        "href": "http://www.unionjackscongo.com/",
+        "imageIndex": 10,
+        "text": "Call at Union Jack's Olde Congo Hotel in Barto."
+      },
+      {
+        "title": "Official site",
+        "href": "http://www.unionjackscongo.com/",
+        "imageIndex": 11,
+        "text": "Official site at Union Jack's Olde Congo Hotel in Barto."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Barto. Confirm before you go.",
+    "sub": "Union Jack's Olde Congo Hotel is listed in Barto. Street address stays empty until a harvest or listing proves it."
+  },
+  "closing": {
+    "cta": {
+      "label": "Menu",
+      "href": "tel:6107540189"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6107540189"
+    },
+    {
+      "label": "Official site",
+      "href": "http://www.unionjackscongo.com/"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F7F1E8",
+    "ink": "#2A1814",
+    "accent": "#7A3B2E",
+    "accent2": "#C45C26",
+    "panel": "#E8D4C4",
+    "deep": "#1A100C",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ooka Hibachi and Sushi, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "ooka-hibachi",
+  "name": "Ooka Hibachi and Sushi",
+  "city": "Willow Grove",
+  "category": "Restaurant",
+  "vertical": "restaurant",
+  "url": "http://ookasushi.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "description": "Ooka Hibachi and Sushi in Willow Grove. Restaurant.",
+  "marquee": [
+    "Willow Grove",
+    "Restaurant",
+    "Doylestown",
+    "Montgomeryville"
+  ],
+  "hero": {
+    "eyebrow": "Willow Grove | Restaurant",
+    "headline": "Hibachi and sushi in four towns",
+    "sub": "Ooka Hibachi and Sushi lists four towns on the current homepage: Doylestown, Willow Grove, Montgomeryville, and Riverside.",
+    "ctaPrimary": {
+      "label": "Open the site",
+      "href": "http://ookasushi.com/"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "http://ookasushi.com/"
+    },
+    "glassFloat": {
+      "title": "Willow Grove",
+      "sub": "Restaurant"
+    },
+    "marquee": [
+      "Willow Grove",
+      "Restaurant",
+      "Doylestown",
+      "Montgomeryville"
+    ]
+  },
+  "offerings": {
+    "heading": "Doylestown.",
+    "items": [
+      {
+        "title": "Doylestown",
+        "text": "Ooka Hibachi and Sushi in Willow Grove. Open the official site for details."
+      },
+      {
+        "title": "Willow Grove",
+        "text": "Ooka Hibachi and Sushi in Willow Grove. Open the official site for details."
+      },
+      {
+        "title": "Montgomeryville",
+        "text": "Ooka Hibachi and Sushi in Willow Grove. Open the official site for details."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Hibachi and sushi in four towns",
+    "paragraphs": [
+      "Ooka Hibachi and Sushi lists four towns on the current homepage: Doylestown, Willow Grove, Montgomeryville, and Riverside.",
+      "The live root URL currently shows a page-not-found overlay on a sushi-case photo. This rebuild keeps the four towns they print and leaves street, phone, and hours empty until a harvest proves them."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Start on the official site",
+        "text": "Open http://ookasushi.com/ for the current details."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "Willow Grove on the map",
+        "text": "Ooka Hibachi and Sushi is listed in Willow Grove. No street address is invented here."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Doylestown",
+    "text": "Ooka Hibachi and Sushi keeps the work in Willow Grove. The rebuild puts the next action where a phone can hit it.",
+    "cta": {
+      "label": "Official site",
+      "href": "http://ookasushi.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Willow Grove",
+    "text": "The current site still shows this fault: 40/100 decayed (provisional — Tier 0 only). Worst: no HTTPS — browsers mark it \"Not secure\"; no phone number on the home.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "http://ookasushi.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Doylestown",
+        "href": "http://ookasushi.com/",
+        "imageIndex": 9,
+        "text": "Doylestown at Ooka Hibachi and Sushi in Willow Grove."
+      },
+      {
+        "title": "Willow Grove",
+        "href": "http://ookasushi.com/",
+        "imageIndex": 10,
+        "text": "Willow Grove at Ooka Hibachi and Sushi in Willow Grove."
+      },
+      {
+        "title": "Montgomeryville",
+        "href": "http://ookasushi.com/",
+        "imageIndex": 11,
+        "text": "Montgomeryville at Ooka Hibachi and Sushi in Willow Grove."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Willow Grove. Confirm before you go.",
+    "sub": "Ooka Hibachi and Sushi is listed in Willow Grove. Street address stays empty until a harvest or listing proves it."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the site",
+      "href": "http://ookasushi.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://ookasushi.com/"
+    }
+  ]
+}

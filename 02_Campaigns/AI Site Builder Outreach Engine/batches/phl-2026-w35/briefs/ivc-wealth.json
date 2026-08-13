@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F6F4EA",
+    "ink": "#141E29",
+    "accent": "#1F4E79",
+    "accent2": "#C4A35A",
+    "panel": "#C7CFD1",
+    "deep": "#0E2438",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of wealth management work for IVC Wealth Advisors, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "ivc-wealth",
+  "name": "IVC Wealth Advisors",
+  "city": "Silverdale",
+  "category": "Wealth management",
+  "vertical": "financial",
+  "url": "https://www.ivcwealth.com/",
+  "phone": "215-392-6631",
+  "address": "163 East Main Street, PO Box 539, Silverdale, PA, 18962",
+  "hours": "",
+  "description": "Providing Wealth Management and Retirement Plan Advisory Services for the Delaware Valley,",
+  "marquee": [
+    "Silverdale",
+    "Wealth management",
+    "215-392-6631",
+    "info@ivcwealth.com"
+  ],
+  "hero": {
+    "eyebrow": "Silverdale | Wealth management",
+    "headline": "Successful retirement plan outcomes for plan sponsors and participants",
+    "sub": "About Us Our Company FoundationOur ServicesCompany OverviewOur Team",
+    "ctaPrimary": {
+      "label": "Menu",
+      "href": "tel:2153926631"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.ivcwealth.com/"
+    },
+    "glassFloat": {
+      "title": "Silverdale",
+      "sub": "Wealth management"
+    },
+    "marquee": [
+      "Silverdale",
+      "Wealth management",
+      "215-392-6631",
+      "info@ivcwealth.com"
+    ]
+  },
+  "offerings": {
+    "heading": "Charitable Gifting - Smart from the Heart.",
+    "items": [
+      {
+        "title": "Charitable Gifting - Smart from the Heart",
+        "text": "Personalization, automation, and intelligent investment management"
+      },
+      {
+        "title": "Investment strategies tailored to each individual",
+        "text": "Our philosophy is simple. Your interests come first."
+      },
+      {
+        "title": "Personalization, automation, and intelligent investment management",
+        "text": "We believe in designing strategies that are aligned with your stated objectives. Our service-centered approach and years of experience serve as our foundation for understanding your vision."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About IVC",
+    "paragraphs": [
+      "About Us Our Company FoundationOur ServicesCompany OverviewOur Team",
+      "Successful retirement plan outcomes for plan sponsors and participants."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach IVC Wealth Advisors at 215-392-6631."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "163 East Main Street, PO Box 539, Silverdale, PA, 18962."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Charitable Gifting - Smart from the Heart",
+    "text": "Our philosophy is simple. Your interests come first.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.ivcwealth.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Investment strategies tailored to each individual",
+    "text": "We believe in designing strategies that are aligned with your stated objectives. Our service-centered approach and years of experience serve as our foundation for understanding your vision.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://www.ivcwealth.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "215-392-6631",
+        "href": "https://www.ivcwealth.com/",
+        "imageIndex": 9,
+        "text": "215-392-6631 at IVC Wealth Advisors in Silverdale."
+      },
+      {
+        "title": "info@ivcwealth.com",
+        "href": "https://www.ivcwealth.com/",
+        "imageIndex": 10,
+        "text": "info@ivcwealth.com at IVC Wealth Advisors in Silverdale."
+      },
+      {
+        "title": "Orion Client Login",
+        "href": "https://www.ivcwealth.com/",
+        "imageIndex": 11,
+        "text": "Orion Client Login at IVC Wealth Advisors in Silverdale."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "163 East Main Street, PO Box 539, Silverdale, PA, 18962"
+  },
+  "closing": {
+    "cta": {
+      "label": "Menu",
+      "href": "tel:2153926631"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2153926631"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.ivcwealth.com/"
+    }
+  ]
+}

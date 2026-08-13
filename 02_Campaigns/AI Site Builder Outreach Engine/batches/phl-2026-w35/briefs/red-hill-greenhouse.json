@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F4F7F2",
+    "ink": "#1A241E",
+    "accent": "#4F7965",
+    "accent2": "#8E447D",
+    "panel": "#D0E0D4",
+    "deep": "#1E3228",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of florist work for Red Hill Greenhouse & Florist, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "red-hill-greenhouse",
+  "name": "Red Hill Greenhouse & Florist",
+  "city": "Red Hill",
+  "category": "Florist",
+  "vertical": "florist",
+  "url": "https://www.redhillgreenhouse.com/",
+  "phone": "(215) 679-7847",
+  "address": "1006 Main St, Red Hill, PA 18076",
+  "hours": "",
+  "description": "Order flowers online from your florist in Red Hill, PA. Red Hill Greenhouse & Florist, offers fresh flowers and hand delivery right to your door in Red Hill.",
+  "marquee": [
+    "Red Hill",
+    "Florist",
+    "Red Hill Greenhouse & Florist",
+    "(215) 679-7847"
+  ],
+  "hero": {
+    "eyebrow": "Red Hill | Florist",
+    "headline": "Summer vibes, floral style",
+    "sub": "Occasions Main Menu Best Selling Products Occasions Anniversary Birthday Get Well Just Because Love & Romance Make Someone Smile New Baby Sympathy Thank You Shop All Occasions Upcoming Occasions",
+    "ctaPrimary": {
+      "label": "Main Menu",
+      "href": "tel:2156797847"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.redhillgreenhouse.com/"
+    },
+    "glassFloat": {
+      "title": "Red Hill",
+      "sub": "Florist"
+    },
+    "marquee": [
+      "Red Hill",
+      "Florist",
+      "Red Hill Greenhouse & Florist",
+      "(215) 679-7847"
+    ]
+  },
+  "offerings": {
+    "heading": "Send Summer Flowers.",
+    "items": [
+      {
+        "title": "Send Summer Flowers",
+        "text": "Flowers Main Menu Best Selling Products Flowers Summer Bouquets Best Sellers Plants Flowers in a Gift Roses Shop all Flower Types Shop Price $45 - $55 $55 - $75 $75 - $100 $100 - $150 Over $150"
+      },
+      {
+        "title": "Birthday Flowers",
+        "text": "Flowers Summer Bouquets Best Sellers Plants Flowers in a Gift Roses Shop all Flower Types"
+      },
+      {
+        "title": "Our Most Popular Bouquets",
+        "text": "Shop Price $45 - $55 $55 - $75 $75 - $100 $100 - $150 Over $150"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Our Most Popular Bouquets",
+    "paragraphs": [
+      "Occasions Main Menu Best Selling Products Occasions Anniversary Birthday Get Well Just Because Love & Romance Make Someone Smile New Baby Sympathy Thank You Shop All Occasions Upcoming Occasions",
+      "Occasions Anniversary Birthday Get Well Just Because Love & Romance Make Someone Smile New Baby Sympathy Thank You Shop All Occasions"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Red Hill Greenhouse & Florist at (215) 679-7847."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "1006 Main St, Red Hill, PA 18076."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Send Summer Flowers",
+    "text": "Flowers Summer Bouquets Best Sellers Plants Flowers in a Gift Roses Shop all Flower Types",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.redhillgreenhouse.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Birthday Flowers",
+    "text": "Shop Price $45 - $55 $55 - $75 $75 - $100 $100 - $150 Over $150",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://www.redhillgreenhouse.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Red Hill Greenhouse & Florist",
+        "href": "https://www.redhillgreenhouse.com/",
+        "imageIndex": 9,
+        "text": "Red Hill Greenhouse & Florist at Red Hill Greenhouse & Florist in Red Hill."
+      },
+      {
+        "title": "(215) 679-7847",
+        "href": "https://www.redhillgreenhouse.com/",
+        "imageIndex": 10,
+        "text": "(215) 679-7847 at Red Hill Greenhouse & Florist in Red Hill."
+      },
+      {
+        "title": "Log In",
+        "href": "https://www.redhillgreenhouse.com/",
+        "imageIndex": 11,
+        "text": "Log In at Red Hill Greenhouse & Florist in Red Hill."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "1006 Main St, Red Hill, PA 18076"
+  },
+  "closing": {
+    "cta": {
+      "label": "Main Menu",
+      "href": "tel:2156797847"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2156797847"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.redhillgreenhouse.com/"
+    }
+  ]
+}

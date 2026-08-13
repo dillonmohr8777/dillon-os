@@ -1,0 +1,248 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F7F3E8",
+    "ink": "#2A1C10",
+    "accent": "#E0A020",
+    "accent2": "#5C3A1E",
+    "panel": "#E8D8B0",
+    "deep": "#1A140C",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of excavation work for Dirt Work Solutions, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "dirt-work-solutions",
+  "name": "Dirt Work Solutions",
+  "city": "Slatington",
+  "category": "Excavation",
+  "vertical": "excavation",
+  "url": "https://www.dirtworksolutions.com/",
+  "phone": "484-239-6961",
+  "address": "3755 Main Street, Slatington, PA 18080",
+  "hours": "",
+  "description": "Dirt Work Solutions in Slatington. Excavation.",
+  "marquee": [
+    "Slatington",
+    "Excavation",
+    "Employee Center",
+    "Home"
+  ],
+  "hero": {
+    "eyebrow": "Slatington | Excavation",
+    "headline": "Employee Center",
+    "sub": "Dirt Work Solutions, LLC is all about family. When you work for us, you work not only for the owners, but with the owners.",
+    "ctaPrimary": {
+      "label": "Contact",
+      "href": "tel:4842396961"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.dirtworksolutions.com/"
+    },
+    "glassFloat": {
+      "title": "Slatington",
+      "sub": "Excavation"
+    },
+    "marquee": [
+      "Slatington",
+      "Excavation",
+      "Employee Center",
+      "Home"
+    ]
+  },
+  "offerings": {
+    "heading": "Family Owned.",
+    "items": [
+      {
+        "title": "Family Owned",
+        "text": "Dirt Work Solutions in Slatington. Call 484-239-6961."
+      },
+      {
+        "title": "& Operated",
+        "text": "Dirt Work Solutions in Slatington. Call 484-239-6961."
+      },
+      {
+        "title": "A homepage that names the next step instead of hiding it",
+        "text": "Dirt Work Solutions in Slatington. Call 484-239-6961."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About Dirt",
+    "paragraphs": [
+      "Dirt Work Solutions, LLC is all about family. When you work for us, you work not only for the owners, but with the owners.",
+      "© 2019 by Dirt Work Solutions, LLC created with Wix.com",
+      "Dirt Work Solutions keeps the work in Slatington. Details belong on the official site, not guessed here.",
+      "Dirt Work Solutions keeps the work in Slatington. Details belong on the official site, not guessed here."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Dirt Work Solutions at 484-239-6961."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "3755 Main Street, Slatington, PA 18080."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Family Owned",
+    "text": "Dirt Work Solutions keeps the work in Slatington. The rebuild puts the next action where a phone can hit it.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.dirtworksolutions.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "& Operated",
+    "text": "Dirt Work Solutions is a excavation serving Slatington.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://www.dirtworksolutions.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Employee Center",
+        "href": "https://www.dirtworksolutions.com/",
+        "imageIndex": 9,
+        "text": "Employee Center at Dirt Work Solutions in Slatington."
+      },
+      {
+        "title": "About",
+        "href": "https://www.dirtworksolutions.com/",
+        "imageIndex": 10,
+        "text": "About at Dirt Work Solutions in Slatington."
+      },
+      {
+        "title": "Services",
+        "href": "https://www.dirtworksolutions.com/",
+        "imageIndex": 11,
+        "text": "Services at Dirt Work Solutions in Slatington."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "3755 Main Street, Slatington, PA 18080"
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact",
+      "href": "tel:4842396961"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:4842396961"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.dirtworksolutions.com/"
+    }
+  ]
+}

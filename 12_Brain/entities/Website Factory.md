@@ -17,6 +17,8 @@ deploy credentials.
   campaign folders under `02_Campaigns/`.
 - Attitude skins: `glass`, `editorial`, `brutal`, `warm`, `industrial`, `neon`,
   and `align` (Align HCM liquid glass / 3D / ink-reveal; colors from each brand).
+- Latest radar batch: `phl-2026-w35` (25 rebuilds after w33/w34). Hub:
+  https://phl-2026-w35.netlify.app. `noindex` on. `mail_ready` stays hold.
 - Secrets and host tokens never land in this note.
 
 ## Links

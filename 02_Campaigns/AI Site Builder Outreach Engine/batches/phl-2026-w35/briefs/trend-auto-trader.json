@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F7F3F0",
+    "ink": "#1A1210",
+    "accent": "#E24C2A",
+    "accent2": "#1A1A1A",
+    "panel": "#E8C8BC",
+    "deep": "#141414",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of auto dealer work for Trend Auto Trader, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "trend-auto-trader",
+  "name": "Trend Auto Trader",
+  "city": "Quakertown",
+  "category": "Auto dealer",
+  "vertical": "car",
+  "url": "https://www.trendautotrader.com/",
+  "phone": "(267) 680-1777",
+  "address": "1455 S West End Blvd, Quakertown, PA, 18951",
+  "hours": "",
+  "description": "Find great deals on used cars for sale in Quakertown, PA at Trend Auto Trader Inc. Quality vehicles at affordable prices. Visit us today!",
+  "marquee": [
+    "Quakertown",
+    "Auto dealer",
+    "Select Language​▼",
+    "(267) 680-1777"
+  ],
+  "hero": {
+    "eyebrow": "Quakertown | Auto dealer",
+    "headline": "Affordable Used Cars for Sale in Quakertown, PA",
+    "sub": "Apply Online Apply Online Get pre-qualified with Capital One (no impact to your credit score)",
+    "ctaPrimary": {
+      "label": "We Buy Your Car",
+      "href": "tel:2676801777"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.trendautotrader.com/"
+    },
+    "glassFloat": {
+      "title": "Quakertown",
+      "sub": "Auto dealer"
+    },
+    "marquee": [
+      "Quakertown",
+      "Auto dealer",
+      "Select Language​▼",
+      "(267) 680-1777"
+    ]
+  },
+  "offerings": {
+    "heading": "QUICK SEARCH.",
+    "items": [
+      {
+        "title": "QUICK SEARCH",
+        "text": "Your Trusted Source for Quality Used Cars in Quakertown, PA. Affordable Cars, Flexible Fin"
+      },
+      {
+        "title": "High-Quality Pre-owned Car Listings in Quakertown, PA at Affordable Prices",
+        "text": "Trend Auto Trader Inc. is a premier used car dealer located at 1455 S West End Blvd, Quake"
+      },
+      {
+        "title": "High-Quality Used Car Listings in Quakertown, PA",
+        "text": "At Trend Auto Trader Inc., we take pride in curating a diverse inventory of reliable, thor"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About Trend",
+    "paragraphs": [
+      "Apply Online Apply Online Get pre-qualified with Capital One (no impact to your credit score)",
+      "Get pre-qualified with Capital One (no impact to your credit score)"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Trend Auto Trader at (267) 680-1777."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "1455 S West End Blvd, Quakertown, PA, 18951."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "QUICK SEARCH",
+    "text": "Trend Auto Trader Inc. is a premier used car dealer located at 1455 S West End Blvd, Quakertown, PA 18951. We offer a wide selection of high",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.trendautotrader.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "High-Quality Pre-owned Car Listings in Quakertown, PA at Affordable Prices",
+    "text": "At Trend Auto Trader Inc., we take pride in curating a diverse inventory of reliable, thoroughly inspected used vehicles. Our listings are u",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://www.trendautotrader.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Select Language​▼",
+        "href": "https://www.trendautotrader.com/",
+        "imageIndex": 9,
+        "text": "Select Language​▼ at Trend Auto Trader in Quakertown."
+      },
+      {
+        "title": "(267) 680-1777",
+        "href": "https://www.trendautotrader.com/",
+        "imageIndex": 10,
+        "text": "(267) 680-1777 at Trend Auto Trader in Quakertown."
+      },
+      {
+        "title": "(267) 291-0673",
+        "href": "https://www.trendautotrader.com/",
+        "imageIndex": 11,
+        "text": "(267) 291-0673 at Trend Auto Trader in Quakertown."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "1455 S West End Blvd, Quakertown, PA, 18951"
+  },
+  "closing": {
+    "cta": {
+      "label": "We Buy Your Car",
+      "href": "tel:2676801777"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2676801777"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.trendautotrader.com/"
+    }
+  ]
+}

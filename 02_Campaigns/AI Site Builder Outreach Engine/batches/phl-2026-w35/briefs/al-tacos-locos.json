@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#FBF6F0",
+    "ink": "#2A1010",
+    "accent": "#EC0E1C",
+    "accent2": "#F5C400",
+    "panel": "#F0D0C8",
+    "deep": "#3B0A0E",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Al Tacos Locos, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "al-tacos-locos",
+  "name": "Al Tacos Locos",
+  "city": "Jenkintown",
+  "category": "Restaurant",
+  "vertical": "restaurant",
+  "url": "https://altacoslocos.com/",
+  "phone": "(215) 883-6446",
+  "address": "408 York Rd, Jenkintown, PA, 19046",
+  "hours": "",
+  "description": "Al Tacos Locos: the best Mexican Food in Jenkintown, PA. Order directly online today for takeout or delivery. Save money, support local business!",
+  "marquee": [
+    "Jenkintown",
+    "Restaurant",
+    "Menu",
+    "Catering Menu"
+  ],
+  "hero": {
+    "eyebrow": "Jenkintown | Restaurant",
+    "headline": "Best Mexican Food in Jenkintown",
+    "sub": "Get a closer look at what makes our dishes a local favorite. From sizzling carne asada to vibrant tacos topped with fresh cilantro and lime, our gallery shows t",
+    "ctaPrimary": {
+      "label": "Menu",
+      "href": "tel:2158836446"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://altacoslocos.com/"
+    },
+    "glassFloat": {
+      "title": "Jenkintown",
+      "sub": "Restaurant"
+    },
+    "marquee": [
+      "Jenkintown",
+      "Restaurant",
+      "Menu",
+      "Catering Menu"
+    ]
+  },
+  "offerings": {
+    "heading": "AL Tacos Locos.",
+    "items": [
+      {
+        "title": "AL Tacos Locos",
+        "text": "This new place sure knows how to put it down. Everything was fresh and delicious. Beautifu"
+      },
+      {
+        "title": "Image gallery",
+        "text": "We serve the following areas: Cedarbrook, Abington, Jenkintown, Benson East, Cheltenham, N"
+      },
+      {
+        "title": "Welcome to AL Tacos Locos",
+        "text": "ContactCall (215) 883-6446Email altacoslocos@gmail.com"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Explore Our Menu",
+    "paragraphs": [
+      "Get a closer look at what makes our dishes a local favorite. From sizzling carne asada to vibrant tacos topped with fresh cilantro and lime, our gallery shows the color, care, and ",
+      "First time coming here, and will definitely be coming back/recommending to others. My sister and I came by for some quick halal food and were greeted by such friendly staff and gre"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Al Tacos Locos at (215) 883-6446."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "408 York Rd, Jenkintown, PA, 19046."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "AL Tacos Locos",
+    "text": "We serve the following areas: Cedarbrook, Abington, Jenkintown, Benson East, Cheltenham, Noble, Wyncote, McKinley, Baederwood, Rydal, Elkins",
+    "cta": {
+      "label": "Official site",
+      "href": "https://altacoslocos.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Image gallery",
+    "text": "ContactCall (215) 883-6446Email altacoslocos@gmail.com",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://altacoslocos.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Menu",
+        "href": "https://altacoslocos.com/",
+        "imageIndex": 9,
+        "text": "Menu at Al Tacos Locos in Jenkintown."
+      },
+      {
+        "title": "Catering Menu",
+        "href": "https://altacoslocos.com/",
+        "imageIndex": 10,
+        "text": "Catering Menu at Al Tacos Locos in Jenkintown."
+      },
+      {
+        "title": "Catering",
+        "href": "https://altacoslocos.com/",
+        "imageIndex": 11,
+        "text": "Catering at Al Tacos Locos in Jenkintown."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "408 York Rd, Jenkintown, PA, 19046"
+  },
+  "closing": {
+    "cta": {
+      "label": "Menu",
+      "href": "tel:2158836446"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2158836446"
+    },
+    {
+      "label": "Official site",
+      "href": "https://altacoslocos.com/"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F4F1EC",
+    "ink": "#1A1A1C",
+    "accent": "#E63946",
+    "accent2": "#C4A35A",
+    "panel": "#E8C9C9",
+    "deep": "#141416",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of heating and cooling work for Boyle Energy, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "boyle-energy",
+  "name": "Boyle Energy",
+  "city": "Havertown",
+  "category": "Heating and cooling",
+  "vertical": "hvac",
+  "url": "https://boylebrothersenergy.com/",
+  "phone": "610-446-2444",
+  "address": "40 W Manoa Rd, Havertown, PA, 19083",
+  "hours": "",
+  "description": "Boyle Energy is a HVAC Service, Oil & Propane delivery company in Havertown PA. Also serving Newtown, Delaware, Chester, Montgomery County etc.",
+  "marquee": [
+    "Havertown",
+    "Heating and cooling",
+    "Home",
+    "About Us"
+  ],
+  "hero": {
+    "eyebrow": "Havertown | Heating and cooling",
+    "headline": "HVAC Service, Oil & Propane delivery company in Philadelphia.",
+    "sub": "About Us Our Story Areas We Serve HVAC Service In Wayne HVAC Service In West Grove HVAC Service In Havertown Our Team Core Values Boyle In Action In the Community Careers",
+    "ctaPrimary": {
+      "label": "Get a Quote",
+      "href": "tel:6104462444"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://boylebrothersenergy.com/"
+    },
+    "glassFloat": {
+      "title": "Havertown",
+      "sub": "Heating and cooling"
+    },
+    "marquee": [
+      "Havertown",
+      "Heating and cooling",
+      "Home",
+      "About Us"
+    ]
+  },
+  "offerings": {
+    "heading": "Oil Delivery.",
+    "items": [
+      {
+        "title": "Oil Delivery",
+        "text": "HVAC HVAC: Tune Up Overview HVAC Products AC Repair AC Maintenance and Service"
+      },
+      {
+        "title": "Propane Delivery",
+        "text": "Oil Residential Service Plans Deliveries Payment Plans Tune-Up Overview Oil Products"
+      },
+      {
+        "title": "Explore Our Work & Projects",
+        "text": "Propane Deliveries Tune Up Overview Propane Products"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Explore Our Work & Projects",
+    "paragraphs": [
+      "About Us Our Story Areas We Serve HVAC Service In Wayne HVAC Service In West Grove HVAC Service In Havertown Our Team Core Values Boyle In Action In the Community Careers",
+      "Areas We Serve HVAC Service In Wayne HVAC Service In West Grove HVAC Service In Havertown"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Boyle Energy at 610-446-2444."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "40 W Manoa Rd, Havertown, PA, 19083."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "HVAC",
+    "text": "Oil Residential Service Plans Deliveries Payment Plans Tune-Up Overview Oil Products",
+    "cta": {
+      "label": "Official site",
+      "href": "https://boylebrothersenergy.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Oil Delivery",
+    "text": "Propane Deliveries Tune Up Overview Propane Products",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://boylebrothersenergy.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "About Us",
+        "href": "https://boylebrothersenergy.com/",
+        "imageIndex": 9,
+        "text": "About Us at Boyle Energy in Havertown."
+      },
+      {
+        "title": "Our Story",
+        "href": "https://boylebrothersenergy.com/",
+        "imageIndex": 10,
+        "text": "Our Story at Boyle Energy in Havertown."
+      },
+      {
+        "title": "Areas We Serve",
+        "href": "https://boylebrothersenergy.com/",
+        "imageIndex": 11,
+        "text": "Areas We Serve at Boyle Energy in Havertown."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "40 W Manoa Rd, Havertown, PA, 19083"
+  },
+  "closing": {
+    "cta": {
+      "label": "Get a Quote",
+      "href": "tel:6104462444"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6104462444"
+    },
+    {
+      "label": "Official site",
+      "href": "https://boylebrothersenergy.com/"
+    }
+  ]
+}

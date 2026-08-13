@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F7F2EE",
+    "ink": "#140808",
+    "accent": "#C70000",
+    "accent2": "#E0B422",
+    "panel": "#E8C8C4",
+    "deep": "#0A0A0A",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D illustrated scene of restaurant work for Ember & Ale, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "ember-and-ale",
+  "name": "Ember & Ale",
+  "city": "Collegeville",
+  "category": "Restaurant",
+  "vertical": "restaurant",
+  "url": "https://emberandale.com/",
+  "phone": "(484) 902-8053",
+  "address": "99 Market St Suite 4, Collegeville, PA, 19426",
+  "hours": "",
+  "description": "Ember + Ale: the best Pizza in Collegeville, PA. Order directly online today for takeout or delivery. Save money, support local business!",
+  "marquee": [
+    "Collegeville",
+    "Restaurant",
+    "Menu",
+    "Catering"
+  ],
+  "hero": {
+    "eyebrow": "Collegeville | Restaurant",
+    "headline": "Best Pizza in Collegeville",
+    "sub": "Enjoy our rich Italian dishes complemented by a curated selection of craft cocktails and beers. We hope you enjoy all we have to offer and share the experience ",
+    "ctaPrimary": {
+      "label": "Menu",
+      "href": "tel:4849028053"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://emberandale.com/"
+    },
+    "glassFloat": {
+      "title": "Collegeville",
+      "sub": "Restaurant"
+    },
+    "marquee": [
+      "Collegeville",
+      "Restaurant",
+      "Menu",
+      "Catering"
+    ]
+  },
+  "offerings": {
+    "heading": "Welcome To Ember + Ale.",
+    "items": [
+      {
+        "title": "Welcome To Ember + Ale",
+        "text": "Fantastic pizza, service was great and the pesto cheesy loaf was amazing. Glad to have a g"
+      },
+      {
+        "title": "Image gallery",
+        "text": "My husband and I came here after a nice 9 holes of golf. Our friends recommended and it di"
+      },
+      {
+        "title": "Buffalo Chicken Pizza",
+        "text": "This pizza takes me back to Italy, love the concept of a simple menu and great food. We or"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Order From Our Website",
+    "paragraphs": [
+      "Enjoy our rich Italian dishes complemented by a curated selection of craft cocktails and beers. We hope you enjoy all we have to offer and share the experience with others.",
+      "Take a visual tour through Ember + Ale's dishes! From artisan pizzas to sandwiches and fresh salads, each photo captures the essence of our Italian-inspired flavors and craft drink"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Ember & Ale at (484) 902-8053."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "99 Market St Suite 4, Collegeville, PA, 19426."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Featured",
+    "text": "My husband and I came here after a nice 9 holes of golf. Our friends recommended and it did not disappoint! Ashley provided great service an",
+    "cta": {
+      "label": "Official site",
+      "href": "https://emberandale.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Welcome To Ember + Ale",
+    "text": "This pizza takes me back to Italy, love the concept of a simple menu and great food. We ordered the white cheese pizza and brisket cheeseste",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://emberandale.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Menu",
+        "href": "https://emberandale.com/",
+        "imageIndex": 9,
+        "text": "Menu at Ember & Ale in Collegeville."
+      },
+      {
+        "title": "Catering",
+        "href": "https://emberandale.com/",
+        "imageIndex": 10,
+        "text": "Catering at Ember & Ale in Collegeville."
+      },
+      {
+        "title": "Our Story",
+        "href": "https://emberandale.com/",
+        "imageIndex": 11,
+        "text": "Our Story at Ember & Ale in Collegeville."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "99 Market St Suite 4, Collegeville, PA, 19426"
+  },
+  "closing": {
+    "cta": {
+      "label": "Menu",
+      "href": "tel:4849028053"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:4849028053"
+    },
+    {
+      "label": "Official site",
+      "href": "https://emberandale.com/"
+    }
+  ]
+}
