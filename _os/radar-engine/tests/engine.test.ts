@@ -11,8 +11,9 @@ const { selectOffer } = require('../lib/routing.ts');
 const { assertSafeScanUrl } = require('../lib/ssrf.ts');
 const { validateNarrative } = require('../lib/claims.ts');
 const { buildManifest } = require('../lib/manifest.ts');
-const { checkReport, renderReportHtml } = require('../lib/reports.ts');
-const { processJobs } = require('../lib/jobs.ts');
+const { checkReport, renderReportHtml, reportAccessible } = require('../lib/reports.ts');
+const { processJobs, applyRetention } = require('../lib/jobs.ts');
+const { encryptValue, decryptValue, PREFIX, keyFromHex } = require('../lib/crypto.ts');
 const { hmac } = require('../lib/ids.ts');
 const { bookingAdapter, captchaAdapter, placesAdapter } = require('../lib/adapters.ts');
 const { listMigrationTables } = require('../lib/store.ts');
@@ -173,6 +174,50 @@ describe('manifest and claims', () => {
     assert.equal(bad.ok, false);
     const good = validateNarrative(manifest, 'Homepage HTML does not include a viewport meta tag.');
     assert.equal(good.ok, true);
+  });
+});
+
+describe('privacy', () => {
+  it('round-trips AES-256-GCM field encryption and rejects a short key', () => {
+    const key = keyFromHex('a'.repeat(64));
+    const cipher = encryptValue('jordan.hale@cedarridgehvac.example', key);
+    assert.ok(String(cipher).startsWith(PREFIX));
+    assert.equal(decryptValue(cipher, key), 'jordan.hale@cedarridgehvac.example');
+    assert.equal(decryptValue('plain', key), 'plain');
+    assert.equal(encryptValue(cipher, key), cipher);
+    assert.throws(() => keyFromHex('short'));
+  });
+
+  it('retention revokes expired reports and anonymizes aged PII', async () => {
+    const store = new MemoryStore();
+    const now = new Date('2026-08-13T00:00:00Z');
+    store.insert('reports', {
+      id: 'report-old',
+      expires_at: '2026-01-01T00:00:00Z',
+      created_at: '2025-01-01T00:00:00Z',
+    });
+    store.insert('intake_submissions', {
+      id: 'intake-old',
+      requester_name: 'Jordan Hale',
+      requester_email: 'jordan.hale@cedarridgehvac.example',
+      requester_phone: '555-010-0199',
+      notes: 'call back',
+      created_at: '2025-01-01T00:00:00Z',
+    });
+    store.insert('contacts', {
+      id: 'contact-old',
+      value: 'jordan.hale@cedarridgehvac.example',
+      person_name: 'Jordan Hale',
+      person_title: 'Owner',
+      created_at: '2025-01-01T00:00:00Z',
+    });
+    const result = await applyRetention(store, { retentionDays: 365 }, now);
+    assert.ok(result.revoked.includes('report-old'));
+    assert.ok(store.get('reports', 'report-old').revoked_at);
+    assert.equal(reportAccessible(store.get('reports', 'report-old'), now), false);
+    assert.equal(store.get('intake_submissions', 'intake-old').requester_email, '[deleted]');
+    assert.equal(store.get('contacts', 'contact-old').value, '[deleted]');
+    assert.equal(store.get('contacts', 'contact-old').person_name, null);
   });
 });
 

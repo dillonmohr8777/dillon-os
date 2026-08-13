@@ -56,3 +56,14 @@ NODE_PATH=_os/radar-engine/node_modules node --experimental-strip-types _os/rada
 Submissions, contacts, approvals, and bookings belong in PostgreSQL, never in
 tracked JSON. Report binaries in `12_Brain/private/radar-engine/` are gitignored.
 Fixture output uses fictional businesses only.
+
+Set `RADAR_V2_FIELD_KEY` to 32-byte hex to encrypt intake and contact columns
+at rest (AES-256-GCM, `enc:v1:` prefix). An invalid key fails closed. Empty
+means plaintext in Postgres (tests and local memory store).
+
+```bash
+node --experimental-strip-types _os/radar-engine/bin/radar-v2.js retain
+```
+
+Retention revokes expired report URLs and anonymizes intake/contact rows older
+than `RADAR_V2_RETENTION_DAYS`. Live outbound flags stay off.

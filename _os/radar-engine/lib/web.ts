@@ -8,7 +8,7 @@ const { hmac } = require('./ids.ts');
 const { validateIntake } = require('./intake.ts');
 const { submitIntake, resolveProspect, funnelView, qaDecision } = require('./pipeline.ts');
 const { loadConfig } = require('./config.ts');
-const { storageAdapter } = require('./reports.ts');
+const { storageAdapter, reportAccessible } = require('./reports.ts');
 
 function layout(title, body, { noindex = true } = {}) {
   return `<!doctype html>
@@ -204,7 +204,7 @@ function createServer({ store, adapters, campaign, cfg }) {
       if (req.method === 'GET' && url.pathname.startsWith('/r/')) {
         const tok = url.pathname.slice('/r/'.length);
         const report = store.findOne('reports', (r) => r.access_token === tok);
-        if (!report || report.revoked_at || (report.expires_at && new Date(report.expires_at) < new Date())) {
+        if (!reportAccessible(report)) {
           res.writeHead(404); return res.end('not found');
         }
         const version = store.get('report_versions', report.current_version_id);
@@ -217,7 +217,7 @@ function createServer({ store, adapters, campaign, cfg }) {
       if (req.method === 'GET' && url.pathname.startsWith('/cta/')) {
         const tok = url.pathname.slice('/cta/'.length);
         const report = store.findOne('reports', (r) => r.access_token === tok);
-        if (!report) { res.writeHead(404); return res.end('not found'); }
+        if (!reportAccessible(report)) { res.writeHead(404); return res.end('not found'); }
         await store.emitEvent({ actor: 'prospect', type: 'cta.clicked', prospectId: report.prospect_id, reason: 'cta clicked', payload: { report_id: report.id } });
         res.writeHead(302, { location: config.bookingUrl });
         return res.end();

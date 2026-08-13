@@ -53,6 +53,27 @@ describe('postgres repositories', () => {
       const { rows: jobs } = await reloaded.query('SELECT status, locked_by FROM jobs WHERE idempotency_key = $1', [`pg-scan:${stamp}`]);
       assert.equal(jobs[0].status, 'succeeded');
       await reloaded.close();
+
+      const prevKey = process.env.RADAR_V2_FIELD_KEY;
+      process.env.RADAR_V2_FIELD_KEY = 'ab'.repeat(32);
+      try {
+        const locked = await createStore({ databaseUrl: url });
+        const contact = locked.insert('contacts', {
+          value: 'jordan.hale@cedarridgehvac.example',
+          person_name: 'Jordan Hale',
+          person_title: 'Owner',
+        });
+        await locked.flush();
+        const { rows: raw } = await locked.query('SELECT value FROM contacts WHERE id = $1', [contact.id]);
+        assert.match(String(raw[0].value), /^enc:v1:/);
+        await locked.close();
+        const decrypted = await createStore({ databaseUrl: url });
+        assert.equal(decrypted.get('contacts', contact.id).value, 'jordan.hale@cedarridgehvac.example');
+        await decrypted.close();
+      } finally {
+        if (prevKey == null) delete process.env.RADAR_V2_FIELD_KEY;
+        else process.env.RADAR_V2_FIELD_KEY = prevKey;
+      }
     } catch (err) {
       await store.close().catch(() => {});
       throw err;

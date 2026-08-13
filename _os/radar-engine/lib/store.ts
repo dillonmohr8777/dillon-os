@@ -5,6 +5,7 @@ const path = require('path');
 const { id, nowIso } = require('./ids.ts');
 const { assertTransition } = require('./states.ts');
 const { loadMigrationSchema, encodeRow, decodeRow, CLAIM_JOB_SQL } = require('./schema.ts');
+const { keyFromHex, encryptRow, decryptRow } = require('./crypto.ts');
 
 function stamp(row, extra = {}) {
   const now = nowIso();
@@ -201,6 +202,7 @@ class PgStore {
     this.memory = new MemoryStore();
     this.pending = Promise.resolve();
     this.lastWriteError = null;
+    this.fieldKey = keyFromHex(process.env.RADAR_V2_FIELD_KEY || '');
   }
 
   async close() {
@@ -226,7 +228,8 @@ class PgStore {
   }
 
   async upsertRow(table, row) {
-    const encoded = encodeRow(this.schema, table, row);
+    const protectedRow = encryptRow(table, row, this.fieldKey);
+    const encoded = encodeRow(this.schema, table, protectedRow);
     const keys = Object.keys(encoded);
     if (!keys.length) return;
     const cols = keys.map((k) => `"${k}"`).join(', ');
@@ -338,7 +341,7 @@ class PgStore {
       const { rows } = await this.pool.query(`SELECT * FROM ${table}`);
       this.memory.tables[table] = new Map();
       for (const row of rows) {
-        const rec = decodeRow(row);
+        const rec = decryptRow(table, decodeRow(row), this.fieldKey);
         if (rec && rec.id) this.memory.tables[table].set(rec.id, rec);
       }
     }

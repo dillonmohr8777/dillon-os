@@ -272,6 +272,12 @@ async function visualCheck(html) {
   }
 }
 
+function reportAccessible(report, now = new Date()) {
+  if (!report || report.revoked_at) return false;
+  if (report.expires_at && new Date(report.expires_at) < now) return false;
+  return true;
+}
+
 module.exports = {
   storageAdapter,
   loadPlaywright,
@@ -279,6 +285,7 @@ module.exports = {
   checkReport,
   renderPdf,
   visualCheck,
+  reportAccessible,
   token,
   markDataUri,
 };

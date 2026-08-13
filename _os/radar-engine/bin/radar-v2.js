@@ -8,6 +8,7 @@ const { createStore, migrate, listMigrationTables } = require('../lib/store.ts')
 const { createAdapters } = require('../lib/adapters.ts');
 const { createServer } = require('../lib/web.ts');
 const { runVerticalSlice, createCampaign } = require('../lib/pipeline.ts');
+const { applyRetention } = require('../lib/jobs.ts');
 
 async function main() {
   const args = process.argv.slice(2);
@@ -56,6 +57,15 @@ async function main() {
     return;
   }
 
+  if (cmd === 'retain') {
+    const store = await createStore({ databaseUrl: cfg.databaseUrl });
+    const result = await applyRetention(store, cfg);
+    if (store.flush) await store.flush();
+    await store.close();
+    console.log(JSON.stringify(result, null, 2));
+    return;
+  }
+
   if (cmd === 'serve') {
     const store = await createStore({ databaseUrl: cfg.databaseUrl });
     const adapters = createAdapters(cfg);
@@ -69,6 +79,7 @@ async function main() {
   console.log(`Usage:
   node --experimental-strip-types _os/radar-engine/bin/radar-v2.js migrate
   node --experimental-strip-types _os/radar-engine/bin/radar-v2.js slice --fixture cedar-ridge-hvac
+  node --experimental-strip-types _os/radar-engine/bin/radar-v2.js retain
   node --experimental-strip-types _os/radar-engine/bin/radar-v2.js serve`);
 }
 

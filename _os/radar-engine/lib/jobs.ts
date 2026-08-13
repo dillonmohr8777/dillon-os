@@ -34,16 +34,37 @@ function retentionPlan(cfg, now = new Date()) {
   };
 }
 
-async function applyRetention(store, cfg) {
-  const plan = retentionPlan(cfg);
+async function applyRetention(store, cfg, now = new Date()) {
+  const plan = retentionPlan(cfg, now);
+  const cutoff = new Date(plan.cutoff);
   const revoked = [];
+  const anonymized = [];
   for (const report of store.all('reports')) {
-    if (report.expires_at && new Date(report.expires_at) < new Date()) {
-      store.update('reports', report.id, { revoked_at: new Date().toISOString() });
+    const expired = report.expires_at && new Date(report.expires_at) < now;
+    const aged = report.created_at && new Date(report.created_at) < cutoff;
+    if ((expired || aged) && !report.revoked_at) {
+      store.update('reports', report.id, { revoked_at: now.toISOString() });
       revoked.push(report.id);
     }
   }
-  return { ...plan, revoked };
+  for (const sub of store.all('intake_submissions')) {
+    if (sub.created_at && new Date(sub.created_at) < cutoff) {
+      store.update('intake_submissions', sub.id, {
+        requester_name: '[deleted]',
+        requester_email: '[deleted]',
+        requester_phone: '',
+        notes: '',
+      });
+      anonymized.push(sub.id);
+    }
+  }
+  for (const c of store.all('contacts')) {
+    if (c.created_at && new Date(c.created_at) < cutoff) {
+      store.update('contacts', c.id, { value: '[deleted]', person_name: null, person_title: null });
+      anonymized.push(c.id);
+    }
+  }
+  return { ...plan, revoked, anonymized };
 }
 
 module.exports = { processJobs, retentionPlan, applyRetention };
