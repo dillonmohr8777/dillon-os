@@ -256,7 +256,7 @@ const builders = {
       .filter(Boolean)
       .join('');
     const mapFrame = `<figure class="map-embed"><iframe title="${esc(`Map of ${brief.name} in ${brief.city}`)}" src="${esc(mapsEmbed)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe></figure>`;
-    return `<section class="contact-system ${pickSurface(d.surface || 'deep')} vanish-out" id="visit"><div class="section-kicker">Visit and contact</div><div class="contact-intro reveal"><h2>${plainHeading(d.heading, 'Make the next visit easy.')}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div>${mapFrame}</section>`;
+    return `<section class="contact-system ${pickSurface(d.surface || 'panel')} vanish-out" id="visit"><div class="section-kicker">Visit and contact</div><div class="contact-intro reveal"><h2>${plainHeading(d.heading, 'Make the next visit easy.')}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div>${mapFrame}</section>`;
   },
   closing(d) {
     const lead = d.sub || brief.description || '';
@@ -264,7 +264,7 @@ const builders = {
       brief.logo === false
         ? `<span class="logo-outro-wordmark">${esc(brief.name)}</span>`
         : `<img class="logo-outro-mark" src="assets/logo.png" alt="${esc(brief.name)}" width="1000" height="906" loading="lazy">`;
-    return `<section class="closing logo-outro ${pickSurface(d.surface || 'paper')}" aria-label="${esc(brief.name)} logo">${sectionKicker(d.kicker || brief.city)}<div class="ink-reveal reveal">${mark}</div>${lead ? `<p class="closing-lead">${esc(lead)}</p>` : ''}${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
+    return `<section class="closing logo-outro surface-paper" aria-label="${esc(brief.name)} logo">${sectionKicker(d.kicker || brief.city)}<div class="ink-reveal reveal">${mark}</div>${lead ? `<p class="closing-lead">${esc(lead)}</p>` : ''}${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
   },
 };
 

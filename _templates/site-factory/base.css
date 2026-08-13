@@ -310,6 +310,7 @@ figcaption{
 .closing .button{margin:auto}
 .logo-outro .ink-reveal{
   width:min(100%,560px);margin:0 auto 28px;
+  background:var(--paper);padding:clamp(24px,4vw,48px);border-radius:var(--radius);
 }
 .logo-outro .logo-outro-mark,
 .logo-outro .logo-outro-wordmark{
