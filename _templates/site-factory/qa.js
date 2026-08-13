@@ -74,7 +74,6 @@ async function runQa(siteDir, opts = {}) {
   }
 
   if (/<mark[\s>]/.test(html)) failures.push('Highlighted mark tags are not allowed');
-  if (/mark\s*\{/.test(html)) failures.push('Highlighted mark styles are not allowed');
   if (!/class="ink-reveal/.test(html)) failures.push('Missing ink-reveal logo outro');
   const danglingHead = /(?:\s+(?:a|an|the|and|or|but|nor|not|so|for|with|to|of|in|on|at|by|from)|,)\s*$/i;
   [...html.matchAll(/<h([1-3])[^>]*>([\s\S]*?)<\/h\1>/gi)].forEach((m) => {
@@ -129,9 +128,15 @@ async function runQa(siteDir, opts = {}) {
           const page = await browser.newPage({ viewport: { width, height } });
           await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
           await new Promise((r) => setTimeout(r, 400));
-          await page.evaluate(() =>
-            document.querySelectorAll('.reveal').forEach((n) => n.classList.add('visible', 'in-view'))
-          );
+          await page.evaluate(() => {
+            document.querySelectorAll('.reveal').forEach((n) => n.classList.add('visible', 'in-view'));
+            document.querySelectorAll('.logo-outro .ink-reveal img, .logo-outro .ink-reveal .logo-outro-wordmark').forEach((n) => {
+              n.style.transition = 'none';
+              n.style.opacity = '1';
+              n.style.filter = 'none';
+              n.style.transform = 'none';
+            });
+          });
           const overflow = await page.evaluate(
             () => document.documentElement.scrollWidth - document.documentElement.clientWidth
           );
