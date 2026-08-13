@@ -1,4 +1,17 @@
+---
+tags: [agent, fleet]
+chain_id: 1
+callsign: master
+lane: command
+layer: chain
+tier_ceiling: 0
+source: "[[11_Agents/Fleet Roster]]"
+updated: 2026-08-12
+---
+
 # Master Agent
+
+**Summary:** commander. Routes work to the 15-agent link chain, keeps run state, assembles one approval board.
 
 ## Role
 
@@ -14,13 +27,25 @@ The commander. One brain that routes work to lane agents, keeps run state, assem
 
 ## Delegations
 
-| Lane | Agent | Primary skills |
-|---|---|---|
-| Websites | [[Web Agent]] | `/site-factory`, QA pipeline |
-| Paid ads | [[Google Ads Agent]] | campaign analysis, ledger updates |
-| Reporting | [[Reporting Agent]] | `/client-report`, `/metrics-pull` |
-| SEO/content | [[SEO Agent]] | `/content-scan`, blog pipeline |
-| Comms triage | (built into intake) | `/slack-intake`, `/inbox-brief` |
+Full graph: [[11_Agents/Fleet Roster|Fleet Roster]]. Invoke with `[INVOKE:callsign|question]` (max depth 2).
+
+| Lane | Agent | Callsign | Primary skills |
+|---|---|---|---|
+| Command | [[Morning Orchestrator]] | `orchestrator` | `/am-report`, `/plan-today` |
+| Websites | [[Web Agent]] | `web` | `/site-factory`, QA pipeline |
+| Design | [[Web Design Lane]] · [[Mira Motion]] | `design` · `mira` | `/ui-design`, `/motion-design` |
+| Paid ads | [[Google Ads Agent]] · [[Ari Ads]] | `ads` · `ari` | campaign analysis, ledger updates |
+| Reporting | [[Reporting Agent]] · [[Remy Reports]] | `reporting` · `remy` | `/client-report`, `/metrics-pull` |
+| SEO | [[SEO Agent]] | `seo` | `/content-scan`, blog pipeline |
+| Copy | [[Cora Copy]] | `cora` | writing-rules, social drafts |
+| Outreach | [[Leo Leadwell]] | `leo` | `/site-grade`, qualify |
+| Pipeline | [[Piper Pipeline]] | `piper` | stalled-client chase |
+| CRO | [[Calvin Convert]] | `calvin` | `/ux-audit`, page-cro |
+| Analytics | [[Sage Signals]] | `sage` | `/metrics-pull`, site-health |
+| Comms | [[Comms Agent]] | `comms` | `/slack-intake`, `/inbox-brief` |
+| W2 | [[Align HCM Agent]] | `align` | LinkedIn cadence, SmartCare |
+| Brain | [[Brain Agent]] | `brain` | `/vault-compile`, `/wiki-lint` |
+| Compliance | [[Guardrail Agent]] | `guardrail` | maker/checker, AEO/trust |
 
 ## Decision Logic
 

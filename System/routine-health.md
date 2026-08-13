@@ -21,3 +21,4 @@ All routines: initialized, first runs scheduled. Vault is seeded with frontmatte
 
 ## Brain layer
 - Canonical: [[12_Brain/README|12_Brain]] · [[12_Brain/System/Health Automation|Health Automation]]
+- Fleet owners for these routines: [[11_Agents/Routine Map|Routine Map]]

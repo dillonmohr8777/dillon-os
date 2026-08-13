@@ -1,6 +1,6 @@
 ---
 tags: [decisions, index]
-updated: 2026-07-29
+updated: 2026-08-12
 ---
 
 # Decisions
@@ -14,6 +14,7 @@ Use [[12_Brain/templates/Decision|Decision template]]. View in
 
 `/session-mine` writes stubs here when a session makes a material decision.
 
-## Seed decision
+## Decisions
 
 - [[12_Brain/decisions/2026-07-29 - 12_Brain is the canonical brain layer|2026-07-29 — 12_Brain is the canonical brain layer]]
+- [[12_Brain/decisions/2026-08-12 - 15-agent fleet is the operational chain|2026-08-12 — 15-agent fleet is the operational chain]]

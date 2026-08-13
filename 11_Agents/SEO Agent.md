@@ -1,4 +1,17 @@
+---
+tags: [agent, fleet]
+chain_id: 5
+callsign: seo
+lane: seo
+layer: chain
+tier_ceiling: 0
+source: "[[11_Agents/Fleet Roster]]"
+updated: 2026-08-12
+---
+
 # SEO Agent
+
+**Summary:** SEO and AEO lane. Keywords and on-page structure; [[11_Agents/Cora Copy|Cora Copy]] owns the sentence.
 
 ## Role
 

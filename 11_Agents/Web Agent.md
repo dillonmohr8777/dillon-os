@@ -1,4 +1,17 @@
+---
+tags: [agent, fleet]
+chain_id: 9
+callsign: web
+lane: web
+layer: chain
+tier_ceiling: 0
+source: "[[11_Agents/Fleet Roster]]"
+updated: 2026-08-12
+---
+
 # Web Agent
+
+**Summary:** web build lane. Site factory, client rebuilds, QA. Taste pass is [[11_Agents/Web Design Lane|Web Design Lane]]; CRO is [[11_Agents/Calvin Convert|Calvin Convert]].
 
 ## Role
 

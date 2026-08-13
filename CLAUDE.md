@@ -37,7 +37,7 @@ The second-brain layer lives under **`12_Brain/`**.
 | `12_Brain/bases/` | Native Obsidian Bases (Clients, Projects, Decisions). |
 | `12_Brain/templates/` | Brain-specific note templates. |
 | `00_Inbox` → `07_DBA` | Working folders: clients, campaigns, content, SOPs, offers, personal. |
-| `10_Sessions`, `11_Agents` | Build logs and agent definitions. |
+| `10_Sessions`, `11_Agents` | Build logs and agent definitions. Front door: `11_Agents/Fleet Roster.md`. |
 | `System/` | OS config + health automation (`System/routine-health.md`). |
 | `Daily-Briefs/` | Output of the daily skills (am-report, inbox-brief, pulse). |
 | `_os/` | D.I.L.L.O.N. OS HUD — reads this vault live (`node _os/server.js`). |

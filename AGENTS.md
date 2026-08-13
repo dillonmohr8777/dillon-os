@@ -7,7 +7,7 @@ This repo is **Dillon OS** — Dillon Mohr's Obsidian vault + agentic OS.
 - **Canonical second-brain layer:** `12_Brain/` (front door: `12_Brain/INDEX.md`)
 - **Do not create `1Z_Brain/`** or any competing brain tree.
 - **GitHub is PUBLIC.** Sensitive notes → `12_Brain/private/` (gitignored). See `12_Brain/private/README.md`.
-- Working folders (`00_Inbox` … `11_Agents`) stay outside `12_Brain/`; link, don't duplicate clients.
+- Working folders (`00_Inbox` … `11_Agents`) stay outside `12_Brain/`; link, don't duplicate clients. Agent front door: `11_Agents/Fleet Roster.md`.
 - Root `CLAUDE.md` has writing/reading rules. Ops loops: `12_Brain/System/Second Brain Ops.md`.
 - Health automation status: `System/routine-health.md` (linked from `12_Brain/System/Health Automation.md`).
 

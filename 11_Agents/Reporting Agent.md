@@ -1,4 +1,17 @@
+---
+tags: [agent, fleet]
+chain_id: 7
+callsign: reporting
+lane: reporting
+layer: chain
+tier_ceiling: 0
+source: "[[11_Agents/Fleet Roster]]"
+updated: 2026-08-12
+---
+
 # Reporting Agent
+
+**Summary:** reporting lane. Client HTML reports, pulse, metrics, week review. Public roster alias: [[11_Agents/Remy Reports|Remy Reports]].
 
 ## Role
 

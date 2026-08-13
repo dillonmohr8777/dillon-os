@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-31
+updated: 2026-08-12
 ---
 
 # INDEX — the front door
@@ -29,6 +29,7 @@ in the same change.
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/entities/Agent Fleet|Agent Fleet]] — 15-agent link chain plus surface agents; owns 54 routines and 22 readable codebases.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -61,7 +62,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
-- [[12_Brain/protocols/README|Protocols]] — agent protocols.
+- [[12_Brain/protocols/README|Protocols]] — agent protocols (compiler, HUD, fleet, approval tiers).
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
 - Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
 
@@ -77,5 +78,5 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[01_Clients/Client Index|Client Index]] — full roster.
 - [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs.
 - [[10_Sessions/Session Index|Session Index]] — build logs.
-- `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).
+- `11_Agents/` — [[11_Agents/Fleet Roster|Fleet Roster]] (15-agent chain + surfaces). Maps: [[11_Agents/Routine Map|Routine Map]], [[11_Agents/Repo Map|Repo Map]].
 - `System/` — [[System/OS Config|OS Config]]; brain ops in [[12_Brain/System/Second Brain Ops|Second Brain Ops]].

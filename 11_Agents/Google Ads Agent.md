@@ -1,4 +1,17 @@
+---
+tags: [agent, fleet]
+chain_id: 3
+callsign: ads
+lane: ads
+layer: chain
+tier_ceiling: 0
+source: "[[11_Agents/Fleet Roster]]"
+updated: 2026-08-12
+---
+
 # Google Ads Agent
+
+**Summary:** paid ads lane. Analyzes campaigns, drafts optimizations, maintains the learning ledger. Public roster alias: [[11_Agents/Ari Ads|Ari Ads]].
 
 ## Role
 

@@ -1,0 +1,954 @@
+{
+  "version": 1,
+  "updated": "2026-08-12",
+  "pattern": "supervisor",
+  "max_invoke_depth": 2,
+  "contract": "11_Agents/Fleet Roster.md",
+  "protocol": "12_Brain/protocols/Agent Fleet Protocol.md",
+  "chain": [
+    {
+      "id": 1,
+      "callsign": "master",
+      "name": "Master Agent",
+      "file": "11_Agents/Master Agent.md",
+      "lane": "command",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/master-agent.md",
+      "routines": [],
+      "repos": [
+        "dillon-os",
+        "_os"
+      ]
+    },
+    {
+      "id": 2,
+      "callsign": "orchestrator",
+      "name": "Morning Orchestrator",
+      "file": "11_Agents/Morning Orchestrator.md",
+      "lane": "command",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/morning-orchestrator.md",
+      "routines": [
+        "am-report",
+        "plan-today",
+        "money-run"
+      ],
+      "repos": [
+        "claude-skills-repo"
+      ]
+    },
+    {
+      "id": 3,
+      "callsign": "ads",
+      "name": "Google Ads Agent",
+      "file": "11_Agents/Google Ads Agent.md",
+      "lane": "ads",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/google-ads-agent.md",
+      "routines": [
+        "campaign-intel",
+        "paid-ads"
+      ],
+      "repos": []
+    },
+    {
+      "id": 4,
+      "callsign": "ari",
+      "name": "Ari Ads",
+      "file": "11_Agents/Ari Ads.md",
+      "lane": "ads",
+      "layer": "chain",
+      "alias_of": "ads",
+      "cursor_agent": ".cursor/agents/ari-ads.md",
+      "routines": [],
+      "repos": []
+    },
+    {
+      "id": 5,
+      "callsign": "seo",
+      "name": "SEO Agent",
+      "file": "11_Agents/SEO Agent.md",
+      "lane": "seo",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/seo-agent.md",
+      "routines": [
+        "content-scan"
+      ],
+      "repos": [
+        "semrush-proxy"
+      ]
+    },
+    {
+      "id": 6,
+      "callsign": "cora",
+      "name": "Cora Copy",
+      "file": "11_Agents/Cora Copy.md",
+      "lane": "content",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/cora-copy.md",
+      "routines": [
+        "bok-law-social-content"
+      ],
+      "repos": []
+    },
+    {
+      "id": 7,
+      "callsign": "reporting",
+      "name": "Reporting Agent",
+      "file": "11_Agents/Reporting Agent.md",
+      "lane": "reporting",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/reporting-agent.md",
+      "routines": [
+        "client-pulse",
+        "client-report",
+        "week-review"
+      ],
+      "repos": []
+    },
+    {
+      "id": 8,
+      "callsign": "remy",
+      "name": "Remy Reports",
+      "file": "11_Agents/Remy Reports.md",
+      "lane": "reporting",
+      "layer": "chain",
+      "alias_of": "reporting",
+      "cursor_agent": ".cursor/agents/remy-reports.md",
+      "routines": [],
+      "repos": []
+    },
+    {
+      "id": 9,
+      "callsign": "web",
+      "name": "Web Agent",
+      "file": "11_Agents/Web Agent.md",
+      "lane": "web",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/web-agent.md",
+      "routines": [
+        "frontend-build",
+        "mirror-and-improve",
+        "site-batch",
+        "site-factory",
+        "dillon-frontend-maker",
+        "dillon-dev-sandbox",
+        "context7-docs"
+      ],
+      "repos": [
+        "bigorange-marketing-homepage",
+        "mohr-media-site",
+        "philly-sites",
+        "shadow-hvac-website",
+        "site-factory"
+      ]
+    },
+    {
+      "id": 10,
+      "callsign": "design",
+      "name": "Web Design Lane",
+      "file": "11_Agents/Web Design Lane.md",
+      "lane": "design",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/web-design-lane.md",
+      "routines": [
+        "ui-design",
+        "dillon-plan-grill",
+        "landingfolio-design-reference"
+      ],
+      "repos": [
+        "Google-Flash"
+      ]
+    },
+    {
+      "id": 11,
+      "callsign": "mira",
+      "name": "Mira Motion",
+      "file": "11_Agents/Mira Motion.md",
+      "lane": "design",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/mira-motion.md",
+      "routines": [
+        "motion-design"
+      ],
+      "repos": [
+        "workflow-voiceover-claude-edit"
+      ]
+    },
+    {
+      "id": 12,
+      "callsign": "leo",
+      "name": "Leo Leadwell",
+      "file": "11_Agents/Leo Leadwell.md",
+      "lane": "outreach",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/leo-leadwell.md",
+      "routines": [
+        "site-grade",
+        "discover-qualify",
+        "outreach-activate",
+        "indeed-hiring-adapter"
+      ],
+      "repos": []
+    },
+    {
+      "id": 13,
+      "callsign": "piper",
+      "name": "Piper Pipeline",
+      "file": "11_Agents/Piper Pipeline.md",
+      "lane": "pipeline",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/piper-pipeline.md",
+      "routines": [],
+      "repos": [
+        "nkcdc-phase-two-growth-proposal"
+      ]
+    },
+    {
+      "id": 14,
+      "callsign": "calvin",
+      "name": "Calvin Convert",
+      "file": "11_Agents/Calvin Convert.md",
+      "lane": "cro",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/calvin-convert.md",
+      "routines": [
+        "ux-audit",
+        "landing-page-generator",
+        "page-cro"
+      ],
+      "repos": []
+    },
+    {
+      "id": 15,
+      "callsign": "sage",
+      "name": "Sage Signals",
+      "file": "11_Agents/Sage Signals.md",
+      "lane": "analytics",
+      "layer": "chain",
+      "alias_of": null,
+      "cursor_agent": ".cursor/agents/sage-signals.md",
+      "routines": [
+        "metrics-pull",
+        "site-health-sentinel"
+      ],
+      "repos": []
+    }
+  ],
+  "surfaces": [
+    {
+      "callsign": "align",
+      "name": "Align HCM Agent",
+      "file": "11_Agents/Align HCM Agent.md",
+      "lane": "w2",
+      "layer": "surface",
+      "cursor_agent": ".cursor/agents/align-hcm-agent.md",
+      "routines": [
+        "linkedin-growth-engine"
+      ],
+      "repos": [
+        "align-hcm-public-content",
+        "align-hcm-maher-brent-chatcut"
+      ]
+    },
+    {
+      "callsign": "book",
+      "name": "Book Agent",
+      "file": "11_Agents/Book Agent.md",
+      "lane": "book",
+      "layer": "surface",
+      "cursor_agent": ".cursor/agents/book-agent.md",
+      "routines": [
+        "book-site-seo-sweep"
+      ],
+      "repos": [
+        "ironic-ineptocracy-site"
+      ]
+    },
+    {
+      "callsign": "immohrtal",
+      "name": "IMMOHRTAL Agent",
+      "file": "11_Agents/IMMOHRTAL Agent.md",
+      "lane": "artist",
+      "layer": "surface",
+      "cursor_agent": ".cursor/agents/immohrtal-agent.md",
+      "routines": [],
+      "repos": [
+        "immohrtal-website",
+        "immohrtal-kimi-redesign",
+        "immohrtal-site"
+      ]
+    },
+    {
+      "callsign": "bridge",
+      "name": "Bridge Agent",
+      "file": "11_Agents/Bridge Agent.md",
+      "lane": "product",
+      "layer": "surface",
+      "cursor_agent": ".cursor/agents/bridge-agent.md",
+      "routines": [],
+      "repos": [
+        "bridge-discovery-prototype-kimi-design",
+        "bridge-discovery-prototype"
+      ]
+    },
+    {
+      "callsign": "hubspot",
+      "name": "HubSpot Agent",
+      "file": "11_Agents/HubSpot Agent.md",
+      "lane": "crm",
+      "layer": "surface",
+      "cursor_agent": ".cursor/agents/hubspot-agent.md",
+      "routines": [],
+      "repos": [
+        "jason-fallon-hubspot-agent"
+      ]
+    },
+    {
+      "callsign": "intel",
+      "name": "Intelligence Agent",
+      "file": "11_Agents/Intelligence Agent.md",
+      "lane": "intelligence",
+      "layer": "surface",
+      "cursor_agent": ".cursor/agents/intelligence-agent.md",
+      "routines": [
+        "research-sweep",
+        "grok-intelligence-ingest",
+        "xai-daily-search",
+        "experiment-queue",
+        "deep-research"
+      ],
+      "repos": []
+    },
+    {
+      "callsign": "guardrail",
+      "name": "Guardrail Agent",
+      "file": "11_Agents/Guardrail Agent.md",
+      "lane": "compliance",
+      "layer": "surface",
+      "cursor_agent": ".cursor/agents/guardrail-agent.md",
+      "routines": [
+        "automation-ops",
+        "dillon-independent-web-checker",
+        "maker-checker",
+        "mcp-acceptance-gate",
+        "aeo-trust-gate"
+      ],
+      "repos": []
+    },
+    {
+      "callsign": "brain",
+      "name": "Brain Agent",
+      "file": "11_Agents/Brain Agent.md",
+      "lane": "brain",
+      "layer": "surface",
+      "cursor_agent": ".cursor/agents/brain-agent.md",
+      "routines": [
+        "session-mine",
+        "synthesize",
+        "vault-clean",
+        "vault-compile",
+        "wiki-lint",
+        "vault-integrity-sync",
+        "chat-to-vault-sync",
+        "frontmatter-validate",
+        "frontmatter-repair"
+      ],
+      "repos": [
+        "mohr-vault"
+      ]
+    },
+    {
+      "callsign": "comms",
+      "name": "Comms Agent",
+      "file": "11_Agents/Comms Agent.md",
+      "lane": "comms",
+      "layer": "surface",
+      "cursor_agent": ".cursor/agents/comms-agent.md",
+      "routines": [
+        "inbox-brief",
+        "slack-intake",
+        "gmail-to-vault-digest"
+      ],
+      "repos": []
+    }
+  ],
+  "routines": [
+    {
+      "n": 1,
+      "id": "am-report",
+      "kind": "vault-skill",
+      "owner": "orchestrator",
+      "path": ".claude/skills/am-report"
+    },
+    {
+      "n": 2,
+      "id": "automation-ops",
+      "kind": "vault-skill",
+      "owner": "guardrail",
+      "path": ".claude/skills/automation-ops"
+    },
+    {
+      "n": 3,
+      "id": "client-pulse",
+      "kind": "vault-skill",
+      "owner": "reporting",
+      "path": ".claude/skills/client-pulse"
+    },
+    {
+      "n": 4,
+      "id": "client-report",
+      "kind": "vault-skill",
+      "owner": "reporting",
+      "path": ".claude/skills/client-report"
+    },
+    {
+      "n": 5,
+      "id": "content-scan",
+      "kind": "vault-skill",
+      "owner": "seo",
+      "path": ".claude/skills/content-scan"
+    },
+    {
+      "n": 6,
+      "id": "frontend-build",
+      "kind": "vault-skill",
+      "owner": "web",
+      "path": ".claude/skills/frontend-build"
+    },
+    {
+      "n": 7,
+      "id": "inbox-brief",
+      "kind": "vault-skill",
+      "owner": "comms",
+      "path": ".claude/skills/inbox-brief"
+    },
+    {
+      "n": 8,
+      "id": "metrics-pull",
+      "kind": "vault-skill",
+      "owner": "sage",
+      "path": ".claude/skills/metrics-pull"
+    },
+    {
+      "n": 9,
+      "id": "mirror-and-improve",
+      "kind": "vault-skill",
+      "owner": "web",
+      "path": ".claude/skills/mirror-and-improve"
+    },
+    {
+      "n": 10,
+      "id": "motion-design",
+      "kind": "vault-skill",
+      "owner": "mira",
+      "path": ".claude/skills/motion-design"
+    },
+    {
+      "n": 11,
+      "id": "plan-today",
+      "kind": "vault-skill",
+      "owner": "orchestrator",
+      "path": ".claude/skills/plan-today"
+    },
+    {
+      "n": 12,
+      "id": "research-sweep",
+      "kind": "vault-skill",
+      "owner": "intel",
+      "path": ".claude/skills/research-sweep"
+    },
+    {
+      "n": 13,
+      "id": "session-mine",
+      "kind": "vault-skill",
+      "owner": "brain",
+      "path": ".claude/skills/session-mine"
+    },
+    {
+      "n": 14,
+      "id": "site-batch",
+      "kind": "vault-skill",
+      "owner": "web",
+      "path": ".claude/skills/site-batch"
+    },
+    {
+      "n": 15,
+      "id": "site-factory",
+      "kind": "vault-skill",
+      "owner": "web",
+      "path": ".claude/skills/site-factory"
+    },
+    {
+      "n": 16,
+      "id": "site-grade",
+      "kind": "vault-skill",
+      "owner": "leo",
+      "path": ".claude/skills/site-grade"
+    },
+    {
+      "n": 17,
+      "id": "slack-intake",
+      "kind": "vault-skill",
+      "owner": "comms",
+      "path": ".claude/skills/slack-intake"
+    },
+    {
+      "n": 18,
+      "id": "synthesize",
+      "kind": "vault-skill",
+      "owner": "brain",
+      "path": ".claude/skills/synthesize"
+    },
+    {
+      "n": 19,
+      "id": "ui-design",
+      "kind": "vault-skill",
+      "owner": "design",
+      "path": ".claude/skills/ui-design"
+    },
+    {
+      "n": 20,
+      "id": "ux-audit",
+      "kind": "vault-skill",
+      "owner": "calvin",
+      "path": ".claude/skills/ux-audit"
+    },
+    {
+      "n": 21,
+      "id": "vault-clean",
+      "kind": "vault-skill",
+      "owner": "brain",
+      "path": ".claude/skills/vault-clean"
+    },
+    {
+      "n": 22,
+      "id": "vault-compile",
+      "kind": "vault-skill",
+      "owner": "brain",
+      "path": ".claude/skills/vault-compile"
+    },
+    {
+      "n": 23,
+      "id": "week-review",
+      "kind": "vault-skill",
+      "owner": "reporting",
+      "path": ".claude/skills/week-review"
+    },
+    {
+      "n": 24,
+      "id": "wiki-lint",
+      "kind": "vault-skill",
+      "owner": "brain",
+      "path": ".claude/skills/wiki-lint"
+    },
+    {
+      "n": 25,
+      "id": "dillon-plan-grill",
+      "kind": "github-skill",
+      "owner": "design",
+      "path": ".github/skills/dillon-plan-grill"
+    },
+    {
+      "n": 26,
+      "id": "dillon-independent-web-checker",
+      "kind": "github-skill",
+      "owner": "guardrail",
+      "path": ".github/skills/dillon-independent-web-checker"
+    },
+    {
+      "n": 27,
+      "id": "dillon-frontend-maker",
+      "kind": "github-skill",
+      "owner": "web",
+      "path": ".github/skills/dillon-frontend-maker"
+    },
+    {
+      "n": 28,
+      "id": "gmail-to-vault-digest",
+      "kind": "scheduled",
+      "owner": "comms",
+      "path": "System/routine-health.md"
+    },
+    {
+      "n": 29,
+      "id": "vault-integrity-sync",
+      "kind": "scheduled",
+      "owner": "brain",
+      "path": "System/routine-health.md"
+    },
+    {
+      "n": 30,
+      "id": "chat-to-vault-sync",
+      "kind": "scheduled",
+      "owner": "brain",
+      "path": "System/routine-health.md"
+    },
+    {
+      "n": 31,
+      "id": "bok-law-social-content",
+      "kind": "scheduled",
+      "owner": "cora",
+      "path": "01_Clients/Bok Law/content-calendar.md"
+    },
+    {
+      "n": 32,
+      "id": "linkedin-growth-engine",
+      "kind": "scheduled",
+      "owner": "align",
+      "path": "02_FullTimeJob/AlignHCM/linkedin-calendar.md"
+    },
+    {
+      "n": 33,
+      "id": "book-site-seo-sweep",
+      "kind": "scheduled",
+      "owner": "book",
+      "path": "05_Book/seo-strategy.md"
+    },
+    {
+      "n": 34,
+      "id": "frontmatter-validate",
+      "kind": "automation",
+      "owner": "brain",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 35,
+      "id": "frontmatter-repair",
+      "kind": "automation",
+      "owner": "brain",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 36,
+      "id": "site-health-sentinel",
+      "kind": "automation",
+      "owner": "sage",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 37,
+      "id": "discover-qualify",
+      "kind": "automation",
+      "owner": "leo",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 38,
+      "id": "outreach-activate",
+      "kind": "automation",
+      "owner": "leo",
+      "path": "12_Brain/registry/automations.json",
+      "tier": 2
+    },
+    {
+      "n": 39,
+      "id": "indeed-hiring-adapter",
+      "kind": "automation",
+      "owner": "leo",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 40,
+      "id": "grok-intelligence-ingest",
+      "kind": "automation",
+      "owner": "intel",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 41,
+      "id": "xai-daily-search",
+      "kind": "automation",
+      "owner": "intel",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 42,
+      "id": "experiment-queue",
+      "kind": "automation",
+      "owner": "intel",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 43,
+      "id": "dillon-dev-sandbox",
+      "kind": "automation",
+      "owner": "web",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 44,
+      "id": "maker-checker",
+      "kind": "automation",
+      "owner": "guardrail",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 45,
+      "id": "mcp-acceptance-gate",
+      "kind": "automation",
+      "owner": "guardrail",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 46,
+      "id": "context7-docs",
+      "kind": "automation",
+      "owner": "web",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 47,
+      "id": "landingfolio-design-reference",
+      "kind": "automation",
+      "owner": "design",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 48,
+      "id": "aeo-trust-gate",
+      "kind": "automation",
+      "owner": "guardrail",
+      "path": "12_Brain/registry/automations.json"
+    },
+    {
+      "n": 49,
+      "id": "campaign-intel",
+      "kind": "skills-repo",
+      "owner": "ads",
+      "path": "claude-skills-repo/skills/campaign-intel"
+    },
+    {
+      "n": 50,
+      "id": "paid-ads",
+      "kind": "skills-repo",
+      "owner": "ads",
+      "path": "claude-skills-repo/skills/paid-ads"
+    },
+    {
+      "n": 51,
+      "id": "landing-page-generator",
+      "kind": "skills-repo",
+      "owner": "calvin",
+      "path": "claude-skills-repo/skills/landing-page-generator"
+    },
+    {
+      "n": 52,
+      "id": "page-cro",
+      "kind": "skills-repo",
+      "owner": "calvin",
+      "path": "claude-skills-repo/skills/page-cro"
+    },
+    {
+      "n": 53,
+      "id": "deep-research",
+      "kind": "skills-repo",
+      "owner": "intel",
+      "path": "claude-skills-repo/skills/deep-research"
+    },
+    {
+      "n": 54,
+      "id": "money-run",
+      "kind": "codex-port",
+      "owner": "orchestrator",
+      "path": "12_Brain/entities/King Agent OS.md"
+    }
+  ],
+  "repos": [
+    {
+      "n": 1,
+      "id": "dillon-os",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/dillon-os",
+      "owner": "master",
+      "note": "This vault. Canonical OS."
+    },
+    {
+      "n": 2,
+      "id": "mohr-vault",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/mohr-vault",
+      "owner": "brain",
+      "note": "Legacy vault MCP. Do not fork a third brain."
+    },
+    {
+      "n": 3,
+      "id": "claude-skills-repo",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/claude-skills-repo",
+      "owner": "orchestrator",
+      "note": "Shared skill + agent-protocol source."
+    },
+    {
+      "n": 4,
+      "id": "ironic-ineptocracy-site",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/ironic-ineptocracy-site",
+      "owner": "book",
+      "note": "Book website source."
+    },
+    {
+      "n": 5,
+      "id": "immohrtal-website",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/immohrtal-website",
+      "owner": "immohrtal",
+      "note": "Public IMMOHRTAL preview."
+    },
+    {
+      "n": 6,
+      "id": "immohrtal-kimi-redesign",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/immohrtal-kimi-redesign",
+      "owner": "immohrtal",
+      "note": "Isolated Kimi redesign preview."
+    },
+    {
+      "n": 7,
+      "id": "Google-Flash",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/Google-Flash",
+      "owner": "design",
+      "note": "Design sandbox."
+    },
+    {
+      "n": 8,
+      "id": "workflow-voiceover-claude-edit",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/workflow-voiceover-claude-edit",
+      "owner": "mira",
+      "note": "Voiceover edit handoff."
+    },
+    {
+      "n": 9,
+      "id": "align-hcm-public-content",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/align-hcm-public-content",
+      "owner": "align",
+      "note": "Public-safe Align blog drafts."
+    },
+    {
+      "n": 10,
+      "id": "bigorange-marketing-homepage",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/bigorange-marketing-homepage",
+      "owner": "web",
+      "note": "Homepage concept. Not a live client deploy."
+    },
+    {
+      "n": 11,
+      "id": "nkcdc-phase-two-growth-proposal",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/nkcdc-phase-two-growth-proposal",
+      "owner": "piper",
+      "note": "NKCDC proposal package."
+    },
+    {
+      "n": 12,
+      "id": "jason-fallon-hubspot-agent",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/jason-fallon-hubspot-agent",
+      "owner": "hubspot",
+      "note": "Portal-guarded HubSpot agent."
+    },
+    {
+      "n": 13,
+      "id": "semrush-proxy",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/semrush-proxy",
+      "owner": "seo",
+      "note": "SEO tooling proxy. No secrets in Git."
+    },
+    {
+      "n": 14,
+      "id": "align-hcm-maher-brent-chatcut",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/align-hcm-maher-brent-chatcut",
+      "owner": "align",
+      "note": "Align internal cut. Public-safe only."
+    },
+    {
+      "n": 15,
+      "id": "bridge-discovery-prototype-kimi-design",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/bridge-discovery-prototype-kimi-design",
+      "owner": "bridge",
+      "note": "Kimi design preview for Bridge."
+    },
+    {
+      "n": 16,
+      "id": "bridge-discovery-prototype",
+      "kind": "github",
+      "url": "github.com/dillonmohr8777/bridge-discovery-prototype",
+      "owner": "bridge",
+      "note": "Bridge product package."
+    },
+    {
+      "n": 17,
+      "id": "_os",
+      "kind": "in-vault",
+      "url": "_os/",
+      "owner": "master",
+      "note": "D.I.L.L.O.N. OS HUD."
+    },
+    {
+      "n": 18,
+      "id": "immohrtal-site",
+      "kind": "in-vault",
+      "url": "immohrtal-site/",
+      "owner": "immohrtal",
+      "note": "React 19 + Vite artist site."
+    },
+    {
+      "n": 19,
+      "id": "mohr-media-site",
+      "kind": "in-vault",
+      "url": "mohr-media-site/",
+      "owner": "web",
+      "note": "Mohr Media agency site. Hosts the public 8-agent roster."
+    },
+    {
+      "n": 20,
+      "id": "philly-sites",
+      "kind": "in-vault",
+      "url": "philly-sites/",
+      "owner": "web",
+      "note": "25 prospect demos + DESIGN-SYSTEM."
+    },
+    {
+      "n": 21,
+      "id": "shadow-hvac-website",
+      "kind": "in-vault",
+      "url": "01_Clients/Shadow HVAC/website/",
+      "owner": "web",
+      "note": "Next.js 15 client rebuild."
+    },
+    {
+      "n": 22,
+      "id": "site-factory",
+      "kind": "in-vault",
+      "url": "_templates/site-factory/",
+      "owner": "web",
+      "note": "Website factory core."
+    }
+  ],
+  "honesty": {
+    "routines_proven": 54,
+    "github_repos_enumerable": 16,
+    "in_vault_codebases": 6,
+    "repos_total_mapped": 22,
+    "note": "GitHub search returned 16 public repos for dillonmohr8777. Six in-vault codebases make 22 surfaces this agent can actually read. Private repos were not enumerable and are not invented."
+  }
+}

@@ -2,7 +2,7 @@
 tags: [system, brain, automation]
 canonical: 12_Brain
 created: 2026-07-29
-updated: 2026-07-30
+updated: 2026-08-12
 status: active
 sync_gate: desktop-vault-open-api-token-pending
 desktop_source: DESKTOP-4AHKEC4 Monitor Cursor and build vault run
@@ -33,6 +33,7 @@ The layer combines the structured Obsidian brain, its agent protocols, and the f
 | Path | Role |
 |---|---|
 | `registry/automations.json` | Canonical automations, tiers, owners, and dependencies |
+| `registry/agent-fleet.json` | 15-agent chain, 54 routines, 22 codebases |
 | `queue/` | Pending JSONL work. Agents append; humans approve Tier 2 |
 | `state/` | Last-run state per automation |
 | `schemas/` | Prospects, runs, client frontmatter, trust, and workflow contracts |
