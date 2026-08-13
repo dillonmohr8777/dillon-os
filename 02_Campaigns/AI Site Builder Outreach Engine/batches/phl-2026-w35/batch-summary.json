@@ -6,7 +6,7 @@
   "skipQa": false,
   "forceHoldAll": false,
   "batchFailures": [],
-  "qaReadyCount": 15,
+  "qaReadyCount": 25,
   "mailReadyAlwaysHold": true,
   "results": [
     {
@@ -14,10 +14,10 @@
       "prospectId": "PHL001",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 447,
+      "words": 439,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -40,10 +40,10 @@
       "prospectId": "PHL003",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 428,
+      "words": 420,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -53,10 +53,10 @@
       "prospectId": "PHL004",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 471,
+      "words": 468,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -79,10 +79,10 @@
       "prospectId": "PHL006",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 401,
+      "words": 381,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -105,10 +105,10 @@
       "prospectId": "PHL008",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 471,
+      "words": 474,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -118,10 +118,10 @@
       "prospectId": "PHL009",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 494,
+      "words": 475,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -170,10 +170,10 @@
       "prospectId": "PHL013",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 430,
+      "words": 436,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -222,10 +222,10 @@
       "prospectId": "PHL017",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 440,
+      "words": 428,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -261,10 +261,10 @@
       "prospectId": "PHL020",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 392,
+      "words": 384,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -313,10 +313,10 @@
       "prospectId": "PHL024",
       "qa": "PASS",
       "visualQa": "ran",
-      "qaReady": "hold",
+      "qaReady": "ready",
       "mailReady": "hold",
       "sections": 10,
-      "words": 464,
+      "words": 471,
       "images": 13,
       "failures": [],
       "warnings": []
@@ -335,5 +335,5 @@
       "warnings": []
     }
   ],
-  "ok": false
+  "ok": true
 }

@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Copy 6 collage stills per site, then write 13 unique webps.
+"""Copy collage stills per site, then write 13 unique webps.
 
-Images 1-6 are the generated frames (light resize only).
-Images 7-13 are unique crops of those frames. No muddy blends.
-Prefers `{slug}-col*.png`, falls back to `{slug}-is*.png`.
+Prefers 13 generated `{slug}-col*.png` frames (no crops).
+If fewer than 13 exist, remaining slots are unique tight crops.
 """
 from __future__ import annotations
 
@@ -61,7 +60,7 @@ def collect(slug: str) -> list[Path]:
     dest = SRC / slug
     dest.mkdir(parents=True, exist_ok=True)
     out = []
-    for i, src in enumerate(files[:7], start=1):
+    for i, src in enumerate(files[:13], start=1):
         p = dest / f"frame-{i:02d}.png"
         shutil.copy2(src, p)
         out.append(p)

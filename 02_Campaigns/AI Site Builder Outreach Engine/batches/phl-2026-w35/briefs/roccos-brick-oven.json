@@ -97,8 +97,8 @@
   "category": "Restaurant",
   "vertical": "restaurant",
   "url": "https://roccosbrickoven.com/",
-  "phone": "",
-  "address": "",
+  "phone": "(610) 831-0100",
+  "address": "201 Second Ave, Collegeville, PA 19426",
   "hours": "Sunday - Thursday: 11:00 am - 8:30pm",
   "description": "Pizza Collegeville, Pizza Norristown Pa, Pizza Plymouth Meeting Pa, Welcome to Rocco's, where we believe in old world traditions...using only the best ingredi",
   "marquee": [
@@ -111,8 +111,8 @@
     "headline": "Norristown - Plymouth Meeting",
     "sub": "Using only the best ingredients and preparing them the old-fashioned way...fresh and simple.",
     "ctaPrimary": {
-      "label": "Catering Menu",
-      "href": "https://roccosbrickoven.com/"
+      "label": "Call",
+      "href": "tel:6108310100"
     },
     "ctaSecondary": {
       "label": "Open the site",
@@ -176,8 +176,8 @@
         "text": "Sunday - Thursday: 11:00 am - 8:30pm"
       },
       {
-        "title": "Collegeville on the map",
-        "text": "Rocco's Brick Oven Pizzeria is listed in Collegeville. No street address is invented here."
+        "title": "A real street",
+        "text": "201 Second Ave, Collegeville, PA 19426."
       }
     ]
   },
@@ -222,8 +222,8 @@
     ]
   },
   "contact": {
-    "heading": "Collegeville. Confirm before you go.",
-    "sub": "Rocco's Brick Oven Pizzeria is listed in Collegeville. Street address stays empty until a harvest or listing proves it."
+    "heading": "The address, the phone, the map.",
+    "sub": "201 Second Ave, Collegeville, PA 19426"
   },
   "closing": {
     "cta": {
@@ -236,5 +236,9 @@
       "label": "Official site",
       "href": "https://roccosbrickoven.com/"
     }
-  ]
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6108310100"
+  }
 }

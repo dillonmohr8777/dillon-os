@@ -97,9 +97,9 @@
   "category": "Fitness",
   "vertical": "fitness-centre",
   "url": "https://fusiongyms.com/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "(215) 821-3451",
+  "address": "2801 Grant Ave, Philadelphia, PA 19114",
+  "hours": "24/7 access",
   "description": "Join Fusion Gyms! 5 premium locations across Philadelphia & Bucks County. No contracts. 24/7 access, student & first responder discounts.",
   "marquee": [
     "Philadelphia",
@@ -112,8 +112,8 @@
     "headline": "Built for Real Athletes. Made for Real Results. Fusion Gyms",
     "sub": "To provide premium fitness facilities with top-tier equipment, specialized training areas, and unmatched convenience at an affordable price. No contracts, no hidden fees, no excuses. Just pure access to the best fitness ",
     "ctaPrimary": {
-      "label": "Contact Us",
-      "href": "https://fusiongyms.com/"
+      "label": "Call",
+      "href": "tel:2158213451"
     },
     "ctaSecondary": {
       "label": "Open the site",
@@ -170,16 +170,16 @@
     "heading": "How a visit actually goes.",
     "items": [
       {
-        "title": "Start on the official site",
-        "text": "Open https://fusiongyms.com/ for the current details."
+        "title": "Call before you go",
+        "text": "Reach Fusion Gyms Grant Avenue at (215) 821-3451."
       },
       {
-        "title": "Confirm hours first",
-        "text": "Hours were not verified on the harvest. Check the official site."
+        "title": "Open 24/7",
+        "text": "Grant Avenue lists 24/7 access, 365 days."
       },
       {
-        "title": "Philadelphia on the map",
-        "text": "Fusion Gyms is listed in Philadelphia. No street address is invented here."
+        "title": "A real street",
+        "text": "Grant Avenue gym at 2801 Grant Ave, Philadelphia, PA 19114."
       }
     ]
   },
@@ -224,8 +224,8 @@
     ]
   },
   "contact": {
-    "heading": "Philadelphia. Confirm before you go.",
-    "sub": "Fusion Gyms is listed in Philadelphia. Street address stays empty until a harvest or listing proves it."
+    "heading": "The address, the phone, the map.",
+    "sub": "2801 Grant Ave, Philadelphia, PA 19114"
   },
   "closing": {
     "cta": {
@@ -238,5 +238,9 @@
       "label": "Official site",
       "href": "https://fusiongyms.com/"
     }
-  ]
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2158213451"
+  }
 }
