@@ -16,7 +16,7 @@ deploy credentials.
 - Templates and QA live under `_templates/site-factory/` when present, or
   campaign folders under `02_Campaigns/`.
 - Attitude skins: `glass`, `editorial`, `brutal`, `warm`, `industrial`, `neon`,
-  and `align` (Align HCM teal / navy / orange, liquid glass, 3D, ink-reveal).
+  and `align` (Align HCM liquid glass / 3D / ink-reveal; colors from each brand).
 - Secrets and host tokens never land in this note.
 
 ## Links

@@ -29,7 +29,8 @@ describe('attitude skins', () => {
 
   it('emits Align HCM industry-solutions skin when attitude is align', () => {
     const align = buildSkinCss({ slug: 'align-shop', attitude: 'align', fonts: { display: 'Plus Jakarta Sans' } });
-    assert.match(align, /--align-teal:#2BB5A0/);
+    assert.match(align, /var\(--accent\)/);
+    assert.doesNotMatch(align, /--align-teal:#2BB5A0/);
     assert.match(align, /align-tilt/);
     assert.match(align, /align-ken/);
   });
@@ -57,6 +58,7 @@ describe('attitude skins', () => {
     assert.match(built.html, /map-embed/);
     assert.match(built.html, /maps\.google\.com\/maps\?q=/);
     assert.match(built.html, /ink-reveal/);
-    assert.match(built.html, /--align-teal:#2BB5A0/);
+    assert.match(built.html, /var\(--accent\)/);
+    assert.doesNotMatch(built.html, /--align-teal:#2BB5A0/);
   });
 });

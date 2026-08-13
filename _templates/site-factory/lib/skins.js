@@ -4,8 +4,9 @@
  *
  * Attitudes: glass | editorial | brutal | warm | industrial | neon | align
  * Liquid-glass is available to all; glass attitude leans into it hardest.
- * `align` mirrors Align HCM industry-solutions / public-sector pages: teal
- * greenness, 3D liquid glass, cream-paper ink-reveal.
+ * `align` mirrors Align HCM industry-solutions / public-sector motion:
+ * 3D liquid glass, cream-paper ink-reveal. Colors come from brief tokens
+ * (the prospect's real brand), never a shared teal.
  */
 function inferAttitude(brief) {
   if (brief.attitude) return brief.attitude;
@@ -88,33 +89,33 @@ function buildSkinCss(brief) {
 .slug-${slug} .marquee-strip{background:var(--accent);color:var(--on-accent)}
 `,
     align: `
-.slug-${slug}{--glass-blur:30px;--glass-alpha:.48;--align-teal:#2BB5A0;--align-navy:#0A1628;--align-orange:#E8832A}
-.slug-${slug} .site-header{background:color-mix(in srgb,var(--paper) 58%,transparent);border-bottom-color:color-mix(in srgb,var(--align-teal) 28%,transparent);box-shadow:0 12px 44px color-mix(in srgb,var(--deep) 14%,transparent)}
+.slug-${slug}{--glass-blur:30px;--glass-alpha:.48}
+.slug-${slug} .site-header{background:color-mix(in srgb,var(--paper) 58%,transparent);border-bottom-color:color-mix(in srgb,var(--accent) 28%,transparent);box-shadow:0 12px 44px color-mix(in srgb,var(--deep) 14%,transparent)}
 .slug-${slug} .hero{background:
-  radial-gradient(1100px 640px at 8% -12%,color-mix(in srgb,var(--align-teal) 38%,transparent),transparent 62%),
+  radial-gradient(1100px 640px at 8% -12%,color-mix(in srgb,var(--accent) 38%,transparent),transparent 62%),
   radial-gradient(900px 520px at 92% 8%,color-mix(in srgb,var(--accent2) 22%,transparent),transparent 58%),
   var(--paper);perspective:1400px}
-.slug-${slug} .hero::after{content:"";position:absolute;inset:auto 6% 8% auto;width:min(42vw,460px);height:min(42vw,460px);border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--align-teal) 62%,transparent),transparent 70%);filter:blur(10px);pointer-events:none;z-index:0;animation:glass-orb 14s ease-in-out infinite alternate}
+.slug-${slug} .hero::after{content:"";position:absolute;inset:auto 6% 8% auto;width:min(42vw,460px);height:min(42vw,460px);border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 62%,transparent),transparent 70%);filter:blur(10px);pointer-events:none;z-index:0;animation:glass-orb 14s ease-in-out infinite alternate}
 .slug-${slug} .hero-media{transform-style:preserve-3d}
-.slug-${slug} .hero-media figure{border:1px solid color-mix(in srgb,#fff 50%,var(--align-teal) 18%);border-radius:calc(var(--radius) + 10px);box-shadow:0 34px 90px color-mix(in srgb,var(--deep) 30%,transparent),inset 0 1px 0 color-mix(in srgb,#fff 60%,transparent);transform:rotateY(-8deg) rotateX(4deg);animation:align-tilt 9s ease-in-out infinite alternate}
-.slug-${slug} .hero-media .glass-float{background:color-mix(in srgb,var(--paper) 40%,transparent);border:1px solid color-mix(in srgb,#fff 55%,var(--align-teal) 20%)}
+.slug-${slug} .hero-media figure{border:1px solid color-mix(in srgb,#fff 50%,var(--accent) 18%);border-radius:calc(var(--radius) + 10px);box-shadow:0 34px 90px color-mix(in srgb,var(--deep) 30%,transparent),inset 0 1px 0 color-mix(in srgb,#fff 60%,transparent);transform:rotateY(-8deg) rotateX(4deg);animation:align-tilt 9s ease-in-out infinite alternate}
+.slug-${slug} .hero-media .glass-float{background:color-mix(in srgb,var(--paper) 40%,transparent);border:1px solid color-mix(in srgb,#fff 55%,var(--accent) 20%)}
 .slug-${slug} .offering-card,.slug-${slug} .experience-grid article,.slug-${slug} .catalog-card,.slug-${slug} .contact-card{
   background:color-mix(in srgb,var(--paper) 36%,transparent);
-  border:1px solid color-mix(in srgb,#fff 40%,var(--align-teal) 16%);
+  border:1px solid color-mix(in srgb,#fff 40%,var(--accent) 16%);
   box-shadow:0 22px 54px color-mix(in srgb,var(--deep) 16%,transparent);
   backdrop-filter:blur(26px) saturate(180%);
   transform-style:preserve-3d;
 }
 .slug-${slug} .offering-card:hover,.slug-${slug} .experience-grid article:hover,.slug-${slug} .catalog-card:hover{
   transform:translateY(-12px) rotateX(6deg) rotateY(-4deg) scale(1.015);
-  box-shadow:0 28px 70px color-mix(in srgb,var(--align-teal) 28%,transparent);
+  box-shadow:0 28px 70px color-mix(in srgb,var(--accent) 28%,transparent);
 }
-.slug-${slug} .marquee-strip{background:color-mix(in srgb,var(--align-navy) 82%,var(--align-teal));color:#fff}
-.slug-${slug} .section-kicker,.slug-${slug} .offering-card>span,.slug-${slug} .experience-grid article>span{color:var(--align-orange);letter-spacing:.18em}
-.slug-${slug} .button-primary{background:var(--align-teal);color:#fff;box-shadow:0 16px 40px color-mix(in srgb,var(--align-teal) 38%,transparent)}
-.slug-${slug} .button-primary:hover,.slug-${slug} .button-primary:focus-visible{background:color-mix(in srgb,var(--align-teal) 82%,var(--align-navy))}
+.slug-${slug} .marquee-strip{background:color-mix(in srgb,var(--deep) 82%,var(--accent));color:var(--on-deep)}
+.slug-${slug} .section-kicker,.slug-${slug} .offering-card>span,.slug-${slug} .experience-grid article>span{color:var(--accent2);letter-spacing:.18em}
+.slug-${slug} .button-primary{background:var(--accent);color:var(--on-accent);box-shadow:0 16px 40px color-mix(in srgb,var(--accent) 38%,transparent)}
+.slug-${slug} .button-primary:hover,.slug-${slug} .button-primary:focus-visible{background:color-mix(in srgb,var(--accent) 82%,var(--deep))}
 .slug-${slug} .logo-outro{background:var(--paper)}
-.slug-${slug} .map-embed{border-color:color-mix(in srgb,var(--align-teal) 45%,var(--ink));box-shadow:0 24px 60px color-mix(in srgb,var(--deep) 18%,transparent)}
+.slug-${slug} .map-embed{border-color:color-mix(in srgb,var(--accent) 45%,var(--ink));box-shadow:0 24px 60px color-mix(in srgb,var(--deep) 18%,transparent)}
 .slug-${slug} figure img{animation:align-ken 18s ease-in-out infinite alternate}
 .slug-${slug} figure:nth-child(even) img,.slug-${slug} .hero-media figure img{animation-duration:22s;animation-direction:alternate-reverse}
 .slug-${slug} .offering-card::before,.slug-${slug} .catalog-card::before{
