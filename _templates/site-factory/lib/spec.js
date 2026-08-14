@@ -4,7 +4,7 @@
  */
 const SPEC = {
   sections: [9, 11],
-  words: [350, 500],
+  words: [380, 720],
   images: [12, 13],
   kb: [27, 37],
 };

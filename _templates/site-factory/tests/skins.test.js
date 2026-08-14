@@ -45,6 +45,12 @@ describe('attitude skins', () => {
     assert.match(built.html, /marquee-strip/);
     assert.match(built.html, /mobile-action/);
     assert.match(built.html, /vanish-out/);
+    assert.match(built.html, /t-stagger/);
+    assert.match(built.html, /t-tilt/);
+    assert.match(built.html, /t-learn/);
+    assert.match(built.html, /t-acc/);
+    assert.match(built.html, /t-tabs/);
+    assert.match(built.html, /t-shimmer/);
   });
 
   it('align attitude keeps captions, copper icons, maps embed, and ink-reveal closing', () => {

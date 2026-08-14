@@ -36,6 +36,9 @@ function readPngSize(file) {
  */
 function buildSite(brief, outRoot) {
 const baseCss = fs.readFileSync(path.join(__dirname, 'base.css'), 'utf8');
+const transitionsRoot = fs.readFileSync(path.join(__dirname, 'lib', 'transitions-root.css'), 'utf8');
+const transitionsCss = fs.readFileSync(path.join(__dirname, 'lib', 'transitions.css'), 'utf8');
+const transitionsRuntime = fs.readFileSync(path.join(__dirname, 'lib', 'transitions.js'), 'utf8');
 
 const esc = (s) =>
   String(s ?? '')
@@ -199,8 +202,14 @@ const catalogBlurb = (item) => {
   return bits.join(' ');
 };
 
+const learnChevron =
+  '<span class="t-learn-chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path class="t-learn-arm t-learn-arm-top" d="M6 4L10 8"/><path class="t-learn-arm t-learn-arm-bot" d="M10 8L6 12"/></svg></span>';
+const accChevron =
+  '<span class="t-acc-chevron" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5L8 10.5L12 6.5"/></svg></span>';
 const cta = (c, cls = 'button button-primary') =>
-  c ? `<a class="${cls}" href="${esc(c.href)}">${esc(c.label)}<span aria-hidden="true">\u2197</span></a>` : '';
+  c ? `<a class="${cls} t-learn" href="${esc(c.href)}">${esc(c.label)}${learnChevron}</a>` : '';
+const tooltip = (label, tip) =>
+  `<span class="t-tt-wrap"><span class="t-tt-trigger">${esc(label)}</span><span class="t-tt" role="tooltip">${esc(tip)}</span></span>`;
 
 const sectionKicker = (text) => {
   const t = completePhrase(String(text || '').replace(/^[\s\-–—]+/, ''));
@@ -234,16 +243,25 @@ const builders = {
       kicker: d.mediaCaption?.kicker || brief.category || d.glassFloat?.sub || brief.city,
       line: overlayLine(d.mediaCaption?.line, 'Work that belongs here.'),
     };
-    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(eyebrow)}</span><h1>${plainHeading(d.headline, brief.name)}</h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true, overlay })}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
+    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal t-stagger"><span class="eyebrow t-shimmer t-stagger-line t-stagger-line--1" data-text="${esc(eyebrow)}">${esc(eyebrow)}</span><h1 class="t-stagger-line t-stagger-line--2">${plainHeading(d.headline, brief.name)}</h1><p class="t-stagger-line t-stagger-line--3">${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true, overlay })}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
   },
   offerings(d) {
-    const cards = d.items
+    const items = d.items.map((item) => cardCopy(item));
+    const tabs = items.length
+      ? `<div class="t-tabs offerings-tabs" role="tablist"><span class="t-tabs-pill" aria-hidden="true"></span>${items
+          .map(
+            (it, i) =>
+              `<button type="button" class="t-tab" role="tab" id="offering-tab-${i}" aria-controls="offering-panel-${i}" aria-selected="${i === 0 ? 'true' : 'false'}" tabindex="${i === 0 ? '0' : '-1'}">${esc(it.title)}</button>`
+          )
+          .join('')}</div>`
+      : '';
+    const cards = items
       .map((item, i) => {
-        const { title, text } = cardCopy(item);
-        return `<article class="offering-card reveal delay-${(i % 3) + 1}">${cardIcon(i)}<h3>${esc(title)}</h3>${text ? `<p>${esc(text)}</p>` : ''}</article>`;
+        const { title, text } = item;
+        return `<div class="t-tilt"><article class="offering-card t-tilt-card reveal delay-${(i % 3) + 1}" id="offering-panel-${i}" role="tabpanel" aria-labelledby="offering-tab-${i}">${cardIcon(i)}<h3>${esc(title)}</h3>${text ? `<p>${esc(text)}</p>` : ''}<span class="t-tilt-glare" aria-hidden="true"></span></article></div>`;
       })
       .join('');
-    return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'Industry focus')}<h2>${plainHeading(d.heading, 'What they actually do.')}</h2></header><div class="offering-grid">${cards}</div></section>`;
+    return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'Industry focus')}<h2>${plainHeading(d.heading, 'What they actually do.')}</h2></header>${tabs}<div class="offering-grid">${cards}</div></section>`;
   },
   proof() {
     return '';
@@ -260,7 +278,8 @@ const builders = {
     const cards = d.items
       .map((item, i) => {
         const { title, text } = cardCopy(item);
-        return `<article class="reveal delay-${(i % 3) + 1}">${cardIcon(i + 3)}<h3>${esc(title)}</h3>${text ? `<p>${esc(text)}</p>` : ''}</article>`;
+        const open = i === 0 ? 'true' : 'false';
+        return `<div class="t-acc experience-acc reveal delay-${(i % 3) + 1}" data-open="${open}"><button type="button" class="t-acc-head" aria-expanded="${open}">${cardIcon(i + 3)}<span>${esc(title)}</span>${accChevron}</button><div class="t-acc-panel"><div class="t-acc-panel-inner">${text ? `<p>${esc(text)}</p>` : ''}</div></div></div>`;
       })
       .join('');
     return `<section class="experience ${pickSurface(d.surface || 'panel')} vanish-out"><header class="section-head reveal">${sectionKicker(d.kicker || 'How we work')}<h2>${plainHeading(d.heading, 'Built around the details.')}</h2></header><div class="experience-grid">${cards}</div></section>`;
@@ -276,7 +295,7 @@ const builders = {
     const cards = d.items
       .map((item, i) => {
         const blurb = catalogBlurb(item);
-        return `<article class="catalog-card reveal delay-${(i % 3) + 1}">${figure(item.imageIndex || 9 + i)}<h3>${esc(completePhrase(item.title))}</h3>${blurb ? `<p>${esc(blurb)}</p>` : ''}<a href="${esc(item.href)}">Explore \u2197</a></article>`;
+        return `<div class="t-tilt"><article class="catalog-card t-tilt-card reveal delay-${(i % 3) + 1}">${figure(item.imageIndex || 9 + i)}<h3>${esc(completePhrase(item.title))}</h3>${blurb ? `<p>${esc(blurb)}</p>` : ''}<a class="t-learn" href="${esc(item.href)}">Explore${learnChevron}</a><span class="t-tilt-glare" aria-hidden="true"></span></article></div>`;
       })
       .join('');
     return `<section class="catalog ${pickSurface(d.surface || 'deep')} vanish-out"><header class="section-head reveal">${sectionKicker(d.kicker || 'More ways in')}<h2>${plainHeading(d.heading, 'More ways into the experience.')}</h2></header><div class="catalog-grid">${cards}</div></section>`;
@@ -297,14 +316,14 @@ const builders = {
     const phoneDigits = (brief.phone || '').replace(/\D/g, '');
     const cards = [
       brief.address &&
-        `<article class="contact-card glass-panel reveal"><span>Address</span><strong>${esc(brief.address)}</strong><a class="button button-quiet" href="${esc(mapsHref)}">Open map<span aria-hidden="true">\u2197</span></a></article>`,
+        `<article class="contact-card glass-panel reveal">${tooltip('Address', 'Opens Google Maps')}<strong>${esc(brief.address)}</strong><a class="button button-quiet t-learn" href="${esc(mapsHref)}">Open map${learnChevron}</a></article>`,
       !brief.address &&
         brief.city &&
-        `<article class="contact-card glass-panel reveal"><span>Location</span><strong>${esc(brief.city)}</strong><a class="button button-quiet" href="${esc(mapsHref)}">Open map<span aria-hidden="true">\u2197</span></a></article>`,
+        `<article class="contact-card glass-panel reveal">${tooltip('Location', 'Opens Google Maps')}<strong>${esc(brief.city)}</strong><a class="button button-quiet t-learn" href="${esc(mapsHref)}">Open map${learnChevron}</a></article>`,
       brief.phone &&
-        `<article class="contact-card glass-panel reveal delay-1"><span>Telephone</span><strong><a href="tel:${phoneDigits}">${esc(brief.phone)}</a></strong></article>`,
+        `<article class="contact-card glass-panel reveal delay-1">${tooltip('Telephone', 'Tap to call')}<strong><a href="tel:${phoneDigits}">${esc(brief.phone)}</a></strong></article>`,
       brief.hours &&
-        `<article class="contact-card glass-panel reveal delay-2"><span>Hours</span><strong>${esc(brief.hours)}</strong>${brief.url ? `<a href="${esc(brief.url)}">Confirm on official site \u2197</a>` : ''}</article>`,
+        `<article class="contact-card glass-panel reveal delay-2">${tooltip('Hours', 'Confirm on the official site')}<strong>${esc(brief.hours)}</strong>${brief.url ? `<a class="t-learn" href="${esc(brief.url)}">Confirm on official site${learnChevron}</a>` : ''}</article>`,
       d.extraCard &&
         `<article class="contact-card glass-panel reveal delay-3"><span>${esc(d.extraCard.label)}</span><strong>${esc(d.extraCard.title)}</strong>${cta(d.extraCard.cta, 'button button-quiet')}</article>`,
     ]
@@ -363,7 +382,7 @@ const navLinks = (brief.nav || [
   .join('');
 
 const footerLinks = (brief.links || [])
-  .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)} \u2197</a></li>`)
+  .map((l) => `<li><a class="t-learn" href="${esc(l.href)}">${esc(l.label)}${learnChevron}</a></li>`)
   .join('');
 
 const brand =
@@ -407,8 +426,10 @@ const revealScript = `(()=>{const header=document.querySelector('.site-header');
 
 const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${noindex}<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script><title>${esc(brief.name)} | ${esc(brief.city)}</title><meta name="description" content="${esc(brief.description || '')}"><meta name="theme-color" content="${t.deep}"><meta name="generator" content="momentum-site-factory"><meta name="attitude" content="${esc(attitude)}"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?${fontFamilies}&display=swap" rel="stylesheet"><script type="application/ld+json">${jsonLd}</script><style>
 ${rootBlock}
+${transitionsRoot}
 ${baseCss}
-${skinCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)}"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="#top">${brand}</a><nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header><main id="main">${sections}</main><footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
+${transitionsCss}
+${skinCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)}"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="#top">${brand}</a><nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header><main id="main">${sections}</main><footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a class="t-learn" href="${esc(brief.url)}">Official website${learnChevron}</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script><script>${transitionsRuntime}</script></body></html>`;
 
 const outDir = path.join(outRoot, brief.slug);
 fs.mkdirSync(path.join(outDir, 'assets'), { recursive: true });
@@ -426,7 +447,9 @@ const photos = [...new Set(usedImages.filter((u) => /image-\d+\./.test(u)))];
   const sectionNames = [...html.matchAll(/<section class="([a-z-]+)/g)].map((m) => m[1]);
   const copyHtml = html
     .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(/<script[\s\S]*?<\/script>/gi, '');
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<div class="marquee-strip"[^>]*>[\s\S]*?<\/div>\s*<\/div>/gi, '')
+    .replace(/<button[^>]*class="t-tab"[^>]*>[\s\S]*?<\/button>/gi, '');
   const words = (copyHtml.match(/>[^<>]{3,}</g) || []).join(' ').split(/\s+/).filter(Boolean).length;
 
   return {

@@ -70,6 +70,10 @@ describe('batch-files collector', () => {
       siteNameFromBatch({ deployBaseUrl: 'https://phl-2026-w35.netlify.app' }),
       'phl-2026-w35'
     );
+    assert.equal(
+      siteNameFromBatch({ deployBaseUrl: 'https://phl-2026-w36.netlify.app' }),
+      'phl-2026-w36'
+    );
     assert.equal(siteNameFromBatch({ deployBaseUrl: 'https://evil.example.com' }), '');
   });
 });

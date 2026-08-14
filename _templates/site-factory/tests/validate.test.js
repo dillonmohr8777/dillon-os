@@ -74,7 +74,7 @@ describe('spec.checkSpec', () => {
 
   it('exports measured ranges', () => {
     assert.deepEqual(SPEC.sections, [9, 11]);
-    assert.deepEqual(SPEC.words, [350, 500]);
+    assert.deepEqual(SPEC.words, [380, 720]);
     assert.deepEqual(SPEC.images, [12, 13]);
   });
 });
