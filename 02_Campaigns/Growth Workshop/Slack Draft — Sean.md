@@ -7,26 +7,24 @@ slack_draft: Dr0BQ95TKSDB
 dm: D0A6ECLQ0S1
 ---
 
-# Slack draft — DM to Sean
+# Slack draft, DM to Sean
 
-**Staged as a Slack draft in the Sean DM. It has not been sent.** Open the DM, edit if needed, then send yourself.
+Staged as a Slack draft in the Sean DM. It has not been sent. Open the DM, edit if needed, then send yourself.
 
 Draft: https://momentum3d.slack.com/archives/D0A6ECLQ0S1
 
-Dropped the "how many emails do you already have" ask. We already have the 720 + Philly list. That question made it sound like we were still shopping for a list.
-
 ---
 
-Need your read on the workshop fill before Tuesday.
+Hey need your take on the workshop fill before Tuesday.
 
-Page is live for *Thu Aug 27, 12pm ET*. Registering already opens Google Calendar in the same click. Confirmation email (once they opt in) is what actually puts it on Gmail — we're not blasting a calendar invite to a cold list.
+Page is live for Thu Aug 27 at 12pm ET. When someone registers it already opens Google Calendar. The confirmation email is what actually puts it on their Gmail once they opt in. We are not blasting a calendar invite to a cold list.
 
-On the list, plain English: I had pulled thousands of UPS Store emails. Those are *the store's shipping-counter inbox* (the address on the door for "where's my package"), not the owner's email. Sending the workshop there would look like spam and wouldn't fill the room.
+Plain English on the list. I had pulled thousands of UPS Store emails. Those are the store shipping counter inbox, the address on the door for wheres my package, not the owner. Sending the workshop there would look like spam and would not fill the room.
 
-The actual send list is *720 franchisee / office emails* that the businesses themselves published (CertaPro, Synergy HomeCare, Mosquito Squad, Comfort Keepers, 1-800-PACKOUTS). *50 named people first*, then the rest if bounces stay clean. Plus the Philly 200-list.
+The actual send list is 720 franchisee and office emails the businesses published themselves. CertaPro, Synergy HomeCare, Mosquito Squad, Comfort Keepers, and 1-800-PACKOUTS. 50 named people first, then the rest if bounces stay clean. Plus the Philly 200 list.
 
-What do you think of that? If you'd rather still blast the UPS counters, say so — I'd push back, but it's your workshop.
+What do you think of that? If you would rather still blast the UPS counters say so. I would push back but it is your workshop.
 
-Also still need: confirm the Meet link (https://meet.google.com/ive-hkws-xdg) or send a Zoom, which mailbox sends (I'd use sean@needmomentum.com), and seat cap or no cap.
+Also still need you to confirm the Meet link https://meet.google.com/ive-hkws-xdg or send a Zoom, which mailbox sends (I would use sean@needmomentum.com), and seat cap or no cap.
 
-First invites would go Tue morning once you greenlight.
+First invites would go Tuesday morning once you greenlight.
