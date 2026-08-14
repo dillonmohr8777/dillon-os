@@ -80,6 +80,10 @@ Missing or failed evidence holds the batch. Automation cannot waive this gate.
 | `build-site.js` | Brief JSON in, finished `index.html` out. Also requireable as `buildSite(brief, outRoot)`. |
 | `build-batch.js` | Whole-batch runner: builds, QAs, checks spec compliance, detects duplicate imagery, emits the hub and CSVs |
 | `harvest.js` | Playwright harvester: screenshots a target's site and socials, downloads their imagery, extracts their copy, brand palette, fonts, facts, and decay signals |
+| `brief-from-harvest.js` | Harvest JSON + radar row → brief (no social clone, 12 image refs, JSON-LD facts) |
+| `fill-atmosphere-images.js` | Unique generated fills for empty image slots, labeled in PROVENANCE.json |
+| `uniquify-assets.js` | Per-site JPEG stamp so batch image hashes never collide |
+| `apply-harvest-images.js` | Copy harvested photos into `assets/image-N.webp` |
 | `qa.js` | Ship checklist from the design system: JSON-LD, meta, alt text, assets, CTAs, surface rhythm, plus Playwright screenshots and overflow checks at 390/850/1440px |
 | `example-brief.json` | A complete worked example (fictional Philly service business) |
 

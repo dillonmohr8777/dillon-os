@@ -16,6 +16,7 @@
  * Requires Playwright: npm i --no-save playwright && npx playwright install chromium
  * Every target is isolated; one failure never kills the run. Login-walled socials
  * are recorded as blocked rather than silently skipped.
+ * Set HARVEST_SKIP_SOCIALS=1 to skip social profile crawls (site harvest still runs).
  */
 const fs = require('fs');
 const path = require('path');
@@ -268,7 +269,10 @@ async function downloadImages(context, images, dir, limit = 14) {
         /* drop non-public discovered links */
       }
     }
-    const socialUrls = [...new Set([...(target.socials || []), ...discovered])].slice(0, 6);
+    const skipSocials = process.env.HARVEST_SKIP_SOCIALS === '1';
+    const socialUrls = skipSocials
+      ? []
+      : [...new Set([...(target.socials || []), ...discovered])].slice(0, 6);
     const socials = [];
     for (const [i, url] of socialUrls.entries()) {
       const platform = (url.match(/(instagram|facebook|tiktok|x|twitter|linkedin|youtube|yelp)/i) || [, 'social'])[1].toLowerCase();
