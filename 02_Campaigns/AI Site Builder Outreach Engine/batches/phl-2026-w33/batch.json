@@ -1,0 +1,12 @@
+{
+  "id": "phl-2026-w33",
+  "title": "Philadelphia home services + medical starter, Week 33",
+  "market": "Philadelphia, PA",
+  "week": "2026-08-10",
+  "idPrefix": "PHL",
+  "targetCount": 8,
+  "status": "scaffold",
+  "mailReady": "hold",
+  "deployBaseUrl": "",
+  "note": "Starter 8 from Radar rebuild queue (reachable home services + dental). Expand to 25 after Mac confirms vertical mix. Restaurants in the same queue were skipped on purpose. Harvest has not run. mail_ready stays hold."
+}

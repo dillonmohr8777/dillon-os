@@ -46,9 +46,12 @@ Apply the designated skills in order. Each one has its own SKILL.md:
 | Skill | Job |
 |---|---|
 | `ui-design` | Palette derived from their real brand colors, type pairing, attitude tokens, hierarchy |
+| `anti-slop-design` | Harvested tokens, honest copy, structural variety vs 25 recolors |
+| `web-design-guidelines` | Fetch Vercel guidelines at review time; overlay factory rules |
 | `ux-audit` | Conversion flow, one primary action, Maps-first directions, accessibility |
 | `motion-design` | Scroll reveals, hover states, one signature micro-interaction |
 | `frontend-build` | Semantic markup, page-weight budget, image handling, no-JS resilience |
+| `ship-gate` | One methodology check before the folder leaves the machine |
 
 Non-negotiable: the palette comes from `brand.palette` in their harvest, not from taste. Their brand, better executed.
 

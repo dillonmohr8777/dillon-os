@@ -63,3 +63,5 @@ Pick from the business, not from preference. A South Philly roast pork counter a
 - Does every text/background pair pass AA?
 - Does the palette appear in their real photos, or did it come from nowhere?
 - Is there exactly one primary action per screen?
+- Anti-slop: `.claude/skills/anti-slop-design/SKILL.md` (no Inter-on-purple, no italic headers, no fake proof).
+- Optional Vercel pass: `.claude/skills/web-design-guidelines/SKILL.md`.

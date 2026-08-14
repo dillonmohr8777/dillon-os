@@ -1,6 +1,6 @@
 ---
 tags: [research, index]
-updated: 2026-07-29
+updated: 2026-08-14
 ---
 
 # Research
@@ -12,7 +12,11 @@ Survivors compile into `12_Brain/concepts/` with `expires:` dates via
 
 ## Active research pages
 
-See Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
+- [[12_Brain/concepts/Need Momentum AI Division|Need Momentum AI Division]] — what to offer, how to differentiate, what to do (expires 2026-11-12).
+- [[12_Brain/concepts/AI Division Collateral|AI Division Collateral]] — launch kit vs waste (expires 2026-11-12).
+- Raw: [[12_Brain/raw/research/2026-08-14 - research - need-momentum-ai-division|2026-08-14 receipts]].
+
+See also Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
 
 ## Links
 

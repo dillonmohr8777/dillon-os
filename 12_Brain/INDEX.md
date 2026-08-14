@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-31
+updated: 2026-08-14
 ---
 
 # INDEX — the front door
@@ -21,7 +21,7 @@ in the same change.
 
 ## Entities
 
-- [[12_Brain/entities/Momentum 360|Momentum 360]] — agency context for a subset of clients (stub; contacts private).
+- [[12_Brain/entities/Momentum 360|Momentum 360]] — agency context for a subset of clients (stub; contacts private). AI division play: [[12_Brain/concepts/Need Momentum AI Division]].
 - [[12_Brain/entities/Website Factory|Website Factory]] — web/landing-page production pipeline.
 - [[12_Brain/entities/Hermes|Hermes]] — retired local worker agent; rebuild-or-replace decision open.
 - [[12_Brain/entities/King Agent OS|King Agent OS]] — old daily command layer; patterns worth porting.
@@ -47,10 +47,13 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/concepts/Need Momentum AI Division|Need Momentum AI Division]] — package factory + radar + Kind Insurance; sell proof not acronyms (expires 2026-11-12).
+- [[12_Brain/concepts/AI Division Collateral|AI Division Collateral]] — four pages, one Loom, offer index; no SaaS kit (expires 2026-11-12).
 
 ## Raw captures (Git-safe)
 
 - [[12_Brain/raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
+- [[12_Brain/raw/research/2026-08-14 - research - need-momentum-ai-division|2026-08-14 Need Momentum AI division]] — receipts + skeptic for the AI service line.
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
@@ -59,6 +62,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
+- [[12_Brain/projects/Need Momentum AI Division|Need Momentum AI Division]] — vault pack staged; Mac confirms SKUs/prices/pilots; Beth publishes; counsel marks addendum.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
@@ -68,6 +72,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Outreach engine
 
+- [[02_Campaigns/Need Momentum AI Division/README|Need Momentum AI Division]] — operating plan, WordPress paste, legal drafts, Mac hub, pretty pack, proposed pilots. Live site waits on Mac / counsel / Beth.
+- `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/` — home services + dental starter 8. Scaffold only. `mail_ready` hold.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]] — Stage 2 qualification: scores the website a prospect already has, routes strong-site prospects to ads/SEO instead of a wasted rebuild. Skill: `/site-grade`.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]] — the eight-stage model and the honest automation status of each stage.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Market Roster|Market Roster]] — geography ladder (Philadelphia → PA → national) and vertical priorities.
@@ -77,6 +83,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Folder indexes (working vault)
 
 - [[01_Clients/Client Index|Client Index]] — full roster.
+- [[02_Campaigns/Campaign Index|Campaign Index]] — active campaigns including the AI division pack.
 - [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs.
 - [[10_Sessions/Session Index|Session Index]] — build logs.
 - `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).

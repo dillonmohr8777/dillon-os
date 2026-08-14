@@ -25,15 +25,15 @@ cd /workspace && npm i --no-save playwright && npx playwright install chromium -
    `node _templates/site-factory/harvest.js --from targets.json`
    Drop any target whose harvest failed. Never build on invented facts.
 
-4. **Mirror each prospect.** Follow `.claude/skills/mirror-and-improve/SKILL.md` per target, which applies `ui-design`, `ux-audit`, `motion-design`, and `frontend-build`. Produce one `briefs/<slug>.json` per prospect hitting the canonical spec: **10 sections, 350 to 500 words, 12 to 13 images**. Keep their exact lingo; improve the writing and everything else. Set a distinct `attitude` (`glass` | `editorial` | `brutal` | `warm` | `industrial` | `neon`) so the batch does not look like 25 recolors. Copy harvested imagery with `node _templates/site-factory/apply-harvest-images.js <slug> <site-dir>`; if harvest is thin, generate lookalike atmosphere images and label them generated.
+4. **Mirror each prospect.** Follow `.claude/skills/mirror-and-improve/SKILL.md` per target, which applies `ui-design`, `anti-slop-design`, `web-design-guidelines`, `ux-audit`, `motion-design`, `frontend-build`, and `ship-gate`. Produce one `briefs/<slug>.json` per prospect hitting the canonical spec: **10 sections, 350 to 500 words, 12 to 13 images**. Keep their exact lingo; improve the writing and everything else. Set a distinct `attitude` (`glass` | `editorial` | `brutal` | `warm` | `industrial` | `neon`) so the batch does not look like 25 recolors. Copy harvested imagery with `node _templates/site-factory/apply-harvest-images.js <slug> <site-dir>`; if harvest is thin, generate lookalike atmosphere images and label them generated.
 
 5. **Build and QA the batch.**
    `node _templates/site-factory/build-batch.js <batch-dir>`
    This builds every site, runs the QA gate on each (static + visual), checks spec compliance, and fails any site sharing a duplicate image with another in the batch. Brief count must equal `targetCount` unless `--allow-partial` (test/preview only). Non-zero exit means something is held. Fix and rerun.
 
-6. **Taste pass.** Open the generated `index.html` hub and judge every site by eye: does it look expensive, does it look like that specific business, is the palette dull. Check `_templates/site-factory/qa-shots/<slug>/phone.png` for cramped mobile headlines. Send failures back to step 4.
+6. **Taste pass.** Open the generated `index.html` hub and judge every site by eye: does it look expensive, does it look like that specific business, is the palette dull. Check `_templates/site-factory/qa-shots/<slug>/phone.png` for cramped mobile headlines. Send failures back to step 4. Run `.claude/skills/anti-slop-design/SKILL.md` across the hub: no shared hero, no invented metrics, harvested palettes.
 
-7. **Package for approval.** One hub URL, a five-minute Loom on the strongest three or four, `prospects.csv`, and the mail piece proof. Mac wants one link and a short Loom, not a long document. Generated `mail_ready` is always `hold`.
+7. **Ship gate.** `.claude/skills/ship-gate/SKILL.md`. Then package for approval: one hub URL, a five-minute Loom on the strongest three or four, `prospects.csv`, and the mail piece proof. Mac wants one link and a short Loom, not a long document. Generated `mail_ready` is always `hold`.
 
 8. **Log.** Commit the batch, then update the Results section of the generated `batch-report.md` once the drop happens.
 

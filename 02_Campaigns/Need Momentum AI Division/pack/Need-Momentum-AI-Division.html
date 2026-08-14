@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeedMomentum AI Division: internal pack</title>
+  <style>
+    :root {
+      --blue: #2A80C2;
+      --navy: #1a365d;
+      --gold: #FFC63B;
+      --ink: #111823;
+      --mid: #4A5769;
+      --paper: #F4F7FA;
+      --panel: #ffffff;
+      --rule: #DDE5EE;
+      --brand-ink: #2673AF;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+    .banner {
+      background: var(--gold);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.7rem 1rem;
+    }
+    header.hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 2.75rem 0 2.4rem;
+    }
+    header.hero .wrap { display: flex; gap: 1.1rem; align-items: center; }
+    .mark, .mark-fallback {
+      width: 56px; height: 56px; border-radius: 12px; flex: none;
+      background: #fff;
+    }
+    .mark-fallback {
+      display: grid; place-items: center;
+      color: var(--blue); font-weight: 800; font-family: Arial, sans-serif;
+    }
+    header.hero h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    header.hero p {
+      margin: 0.45rem 0 0;
+      color: #d5e4f2;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+    }
+    nav.toc {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+      margin: -1.4rem auto 2rem;
+      max-width: 760px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.88rem;
+      box-shadow: 0 10px 30px rgba(26,54,93,0.08);
+    }
+    nav.toc a { color: var(--brand-ink); text-decoration: none; margin-right: 0.85rem; }
+    nav.toc a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin: 2.4rem 0 0.7rem;
+      letter-spacing: -0.02em;
+    }
+    h3 { font-size: 1.05rem; margin: 1.2rem 0 0.4rem; color: var(--navy); }
+    p, li { color: var(--ink); }
+    .mid { color: var(--mid); font-family: Arial, Helvetica, sans-serif; font-size: 0.92rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+    }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 1rem 1.05rem;
+    }
+    .card h3 { margin-top: 0; }
+    .card p, .card li { font-family: Arial, Helvetica, sans-serif; font-size: 0.9rem; color: var(--mid); }
+    .card .tag {
+      display: inline-block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(42,128,194,0.1);
+      color: var(--brand-ink);
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      margin-bottom: 0.45rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.86rem;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--rule);
+    }
+    th {
+      text-align: left;
+      background: var(--navy);
+      color: #fff;
+      padding: 0.65rem 0.7rem;
+      font-weight: 700;
+    }
+    td {
+      padding: 0.6rem 0.7rem;
+      border-top: 1px solid var(--rule);
+      vertical-align: top;
+      color: var(--mid);
+    }
+    .ask {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-left: 6px solid var(--gold);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem 0.4rem;
+    }
+    .ask ol { font-family: Arial, Helvetica, sans-serif; color: var(--ink); }
+    .gate {
+      display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.8rem 0 1.2rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .gate span {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.78rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+    .no {
+      background: #fff5f3;
+      border-color: #f0d2cc;
+    }
+    footer.pack {
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--rule);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      color: var(--mid);
+    }
+    ul { padding-left: 1.15rem; }
+    li { margin: 0.28rem 0; }
+    a { color: var(--brand-ink); }
+    @media print {
+      .banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      header.hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      nav.toc { display: none; }
+      .card, table, .ask { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">Internal · drafts until Mac / counsel / Beth · not a public page</div>
+  <header class="hero">
+    <div class="wrap">
+      <img class="mark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAgAElEQVR4nO2dfWxd5Z3nP2NZURR50iibZSJkRVGUCeg2k2FTJgovvaAAgYW2pECBoVCghQKhTKlCmmGy2ZyITTMpzfYlJIUC5bVTYEJ5KWQLhSy9k0I2k42yUXqXZryRFXlR5LUs17Isy7Ku9o/vc5yLc89znufcc+89ts9Xsgzxueeel9/7K+TIkSNHjhw5cuTIkSNHjhzTBH/W6guYSigEpXZgpvnpBOYDZwHzgM+Y323AXPO7GhWgHxgzv/8E9JmfT8zPMDBSDopjjb6X6YKcARKgEJRmAnOAhcBi4LPAEvP/nZwm9DRRQczQA3QDx4E/AF3m/wfKQXEk5e+c8sgZIAaFoNQGdAALgGXABcBSRPhzkbRPm9hdUQFGkMboAo4BHwFHgZPAUDkoVlp0bZMCOQNEoBCU5gMXAlcCK5B0n03riN0VFWAQaYUDwG+BD8tB8VQrLyqryBnAwEj6JcAq4HrgfETwUwGDwCHgVWAfcDzXDMK0ZgDjtHYCq4HbkInTQfalfD0YRCbSC8C7QM90dqqnJQMUglIHcDFwJ5L481p7RS1DL/AB8AywvxwUh1p7Oc3HtGEAY+IsAG4AbgcKNE7SjwFD5mcYOakD5mcMSeGJUrcdmVztKMI0BznZs5BW6jB/awQqQBl4DtgDnJwuJtKUZwBD+MuQtL8OOJv0CH8EEfkJFIXpAv6IQpX95mcIEXvF/CbK5DAmGYjQ28zvDsQIc5G5dg6KQC0GFpm/z0zpfioo3/ArpBWOTnVGmNIMUAhKS4D1SOrPSem0XSi6EoYbTyBCH20WsRimDnMRizgdnl2JGCMNDCBt8Gg5KB5P6ZyZw5RjAEMc5yLCv5n6pOMokuYHgPeB95DTmEmpaO69E7gcuAwxRCcwo47TjgAvAY8CH2f13pNiSjFAISgtAh4AbiW5YzuCsqz7gLeBwyjLOqlevGGGOcBy4Brk7C8huUDoA14EdpaD4olULjIDmBIMYKI6XwM2IEc3CU4CbwFvAAfKQXEwpcvLBApBaTbSCNcCX6C+57QdeH4qRI0mNQMYKbca2IISV77O7TBQQjHxveWgOJDuFWYThaA0B7ga5T6KKNLkgwpKrG0G3p1s2rEak5YBCkHpbGATMnc6PD/eB7wOPAEcm65FZKaobylwD7AGf7NxCJlFj5SD4icpX15TMOkYwEj9NUgN+0Y8+oDdKMQ3bWLdcajKkdwJrMWfEbqQ+fn6ZHumk4oBCkGpE9gIfBM/c6cbEf3j5aDY24BLqwkjYWeYnw5kaoQFddWFdWEBW/h7GEnXURRebZqGKgSls4B7ETMs9PhoBfgZsLUcFHsacGkNwaRgACOhViGpfx7uxN8LPAvsokHhS3Nts5DUXIDi8n9pfs83/x6WTbdzOps7Mas7VvV7jNNlzn3AKZRv+Dfz+6T59+EG3lMncD9wB2rqcUEFOIK0wb7JoA0yzwCFoDQDqeXNuCezRoFXEMOU034RRrIvQ2XSnzP/3YmkelpZ2SiMIC3RgxJx/xM4iHyZ4TS/yDBCARH0jbjnEwZQYGJ3OSiOpnlNaSPTDGDU8U6UyXWR+hVEDBuBD9IifFOisAhpoStQOHEe9SWY0sQo0ghh/f8+4ERaVZ6GES4FtiKmd30Xe4AHmml2+iKTDGAe+FJUnHWe48f6gW3AU2mEM42UXwR8CcXOC0yOUukK8h/KKKfxJmKGuv0IEz69C3gYmXUuOIKKD49l0STKHAMY4r8a+CkyK+JQQbH8deWgeDiF7z4LEf1NSNL7xsizhmGkGV5GzNBbLyEWgtJyYAfKIbgIhB7gPpRryRQTZIoBjKmxFqlal9h+vzn28XrsX+NnrECS6ku4O32TDb2ICZ4DDtZjnxeC0iwULdqImzYYMsfuzlIDTmYYwJgcDwN/j5ttfQhYhxo5EkkV8xJXoUTQpfgn1CYrhlAjzBMoWpNIeBiNeTHSBuc7fGQU+EdgW1aSj5lgAEP825H0d2n6eBZ4OGmjt9E0q1F0YyXZcWabjVFkHm1HJQ2JJLMZILANhUzjMIaSkRuywAQtZwAjhZ9Epctx9uQAKn/YnUTqG8K/HIVUXaMZ0wFh9GwL8F4SRjDaYC3wCPHh6goqsb477dCtL1rKACaqsANJjjhi7EKlzt7FV4bwlyGJv4bpK/HjMIpqpLYDRxI857A4cSfxZSoVpMnXtbIIsWUMYCT/TtyI/zBwezkoHkvwPXORr/BNpm/zuy/6UFnDjnJQ7Pf9cCEohSHs5TGHhkzwQKs0QUsYwNj8T+Nm9ryFVKWXvW+k/tXINi0kuc4clFFgYq+vWWT8gidR74ENLTWHmm4DVzm8ccRfQaW2tycg/nmo/ucX5MRfDwroGe4yz9QZ5p3djt6hzZRqQ7SwzdBGU9FUDWCk8ibgH7BHeyrA88D9vlKhEJSKyLRalvQ6c9TEUWSqlHw+ZEzdXahjzybwxoDvod6CpuUJmsYAxkH6Fmqutjmho8CPgM0+YTIjPR5CKnuyZ2+zimFkUv4gwbvZAjxI/LtfDzzWrIxxUxigqrzhl9iTTRXgB/gTfyeKJl1H44ZH5RDG0NygdT51/1VM8BB2TTAE/C1NKptolg+wFNX2xBH/8/gT/3I09PVGcuJvBtrRs37VPHsnmHe6Gb1jG2F3IFpZWs9FuqLhGsCUNL9DfFXni8A9rjZ/lVZ5mqlbu5N19ALfwENaG5/gCdTLbcMR4MpGl1I3VAOYIrOdxBP/W8C3PYi/HZXl/oKc+FuJs9A7uKtqrKMV5h1/G71zG84DdhoaahgaxgBVqfEbYg49jGLATgkX86AfRIw1Veb3T2bMRu/iQQ8m6AfuRu/ehhuAtYaWGoJGaoBVyOazfUcXHnH+KkdqO3k5Q5YwA72TLa6x/Ko8QZflsDZEQ6vqvkLLF6QOE5XZjr0oagDFlZ3KG8yD3UR8FCFHa9CG3s0mDyY4huq7bLVAc4DthqZSR+qEZNTVRuLt/k1oQ4nLOcME2kPkkj/LmMFpJnCNyL2L3q0N5wEbG2EKNUKSriF+bs+zOJY0V9n8ro0yOVqLGehdOfkEhgZ2I5qIQhuiqTVpXGA1Ug2DmnGFv8NeCnsI+KKL3W84/i7kZOXEP7kwisybpxwF3Xzg19g7y7qAS9Icw5iaBjDEugk78fejDKJrcdvVxJdO5MgmZqB3d7XLwYYm1iEaicJiZF6lRrdpmkCrsSc3KqiBfb/LyUyW8WnyUOdkxmzgaY+M8X5EIzaNcSuitVSQiglk5vO/j9oMo/ABcI1Lsst4/K/GnC/H5MFB4HqX2iGTKX4bDSmwne+yNPYTpKUBvobddgtNHxfin4kK23LinzpYAexwCY8aGokzhc5HNFc36mYAs5Zog+VcFTQGw3Vo1UOoqjPH1MJ16N3GwtDKNqJNoTZgg6G9ulAXAxhn5AHs63YOAk85nq+I6vnzqs6ph3bgYfOOXfAUop0oLAAeqNchrlcDnIvd8R0FNrp0/ZuWu53kzSxTGbNQgVtse6WhmY2IhqJwK6LBxKiXAdZjn7TwCnJ+rTAJk63kbYzTAcuArY6Z4g8QDUVhHqLBxEjMAGYJ9c2WQ3qB7Y514lcDtyS9lhyTDrfgkB8wtLMd0VIUbja0mAiJGMDYXeuxL4N4Fo3ViDvXXOTwuM7lzMxg1RyJ0YGmQLgM1S1jL5OYCaxP6gsk1QDLsNf5dwO74qS/UYPrcBtdchB1H10EfBWNRM/UqO1JiFPAXuRwvogmPzRro0sBWBdnChka2oVoKgo3kNB89mYAw2l3Yi91fgbNhI/DMlTkFIcDwLXloPjzclA8WA6K/wRcD/zG4bONRAWV8h5BDHocrTDKOgaB7wOXAF8uB8W7UW3+JejdHm/SdXwTN8LtQTQVhTnAnUm0gHcmuBCUFgL/QvTyij7gs3G9nIbzf4EarG0YRVnEM1roCkHpQuC/05paoVNIMu1BL6iC1PFyZB6mlq5PGR+jZRWlKA1dCErnA6/htqCkXrwCfDVuFpDpLf8D0UGXHuDz5aDY7fPlSeLtNwBnW/6+27GR+XLcyltPEh1JOo4yhvMdzpMWxtCSiW/XSO0PA+8VgtJ+lM1e28TrcsGHwG3loHjCdlA5KB4qBKVNqBar0c1HaxAtWLV5OSj2FoLSbuA/RxxyNqLNH/h8udfNmZqf2y2f68OuqsLztKNWNxfJ/RtLzUe4g7dZGEHjv2+z1bWYESDrcSz8awIq6FqujyP+KryCvV0xLcwANjuGRZ9BNFYLbcDthkad4cvdF2N3WF9HEjsOq3Gr9amgorgozMN9dWq9GAG+A3zPpabJHPNjshG1OoLMDOcZq+b632zcJX0KK3AzGU8iGotCAdGoM5wZwHDonZbPDANPOER+ZmGvHapGGfvkgMWO56kXg2hO6eOecys/xB7Dbga6gJvKQdFFME3E72gOA4e1PdYqAENbTyBaizrPnR7tmF7E04m9O78EuDS4r0JriVywF43Ki0LiBIgHBlGo9vkEnx2itQzQh6ZuJDVlTtK8sOhK3KY/HEO0FoVVeDjvPgywGnvZwwtxIw3NkKN7cLPbK8DLlkhFO3COw3nqwSga4vRsHROLW5WrGEZTNz6s4xwDNC+sOwO4J24QlqGxFyyHzMMjAufEACa+epvlkJNIWsdhBfZGh2ocxq5R2olfw1MPRoD15aBYD/G30ZoQ7Shy1m11NC4YJNrcaAQuxc033Ivd17zNNSfgqgGWYE9YvBVX8Wku6HbcSh4qwGsxe2znYC/DrgejqDxjd53naac11a0vAj9JYbryKM114jtQJMdKl4bWbKMVl+FoHrsywCqiCXcEeMPhHOEGdhcMEq9R5tO4uaC7ge9naaGzBw4izVW35DbnaJYPEMJ1UfkbRJtnHThOk3NlgOstxx5HpQpx8NnAfpD4QrpzsRfjJUG4r+rhlHbYNlsDnEROr/diuwzBVVAeILpkow3RbCxiGcDMa7H1++4rB8XBmHPMBG5yuSBM7D/G/AH4D47n88G7yHFMy/Frpg8Qhmo/TuuExhRpxRjKm+L6hw3N7bMcstyUT1jhcnMXEj2aZBR18MdhEe6hz15iRiaaCJDzcgZHHEH7CaIyjUnQLOKpIKfXJRDhgw7S17IuWIloJg5vE22izcEhKWZ9QUYCXGk5pIf4EdcgleZqCuwjvpK0g3S3P/YAX0mYLLJhDo3vbw63aabh9E5EO63RALNwM4MOY6eVK+Mc6rib68AeljqAfbJvKK2vjfmeEBXglw7O52LApZnCBb3AnXUki1qNg8AGB5NxHB5lw7No3VS+ax0yugPY/c8VxEQd4x7EAmCh5e/vO0idRbhL61PY7boQy0hHNYczaFy+Mwlm0VgJ2ovsfucan0JQWoD7+2glAxSIMYMM7b1vOWQhMaHyuJezDPtowvdiPg/2EOpEvOQYvrvA8Xw2jKERLP/UwG2EM2kcA4whn8V13lJYh/UI7mbZDFq3i8E1lGmjwdnENNzE3dwFlmO6cOv6usLhe0Ax3ZcdjgPPir8aGEOxfqcR7dWIK9hqEipol7JztaYxe+5FZkG348dm0RonGEQzVzgc10N02XYbMcIykjBNGMq2qvKAQ+XnTNyjP8dQT6oVZgR7vRPB3gQ2+Sa6TDecSwtniEZJ0PfQRnUf5j0PTe/uwl5gWI1Wb+JZ6VghavMDltpCqrYbnIO91uYj24UZLMNeQFeNXzjG31dQn11aQqaDNXcxEYWgNAct+v73Hh+bRfpRoOMoV+F8/Wb6wi70Tg97MH6zei2iMA+3fcG/t/xtMZb7sDHAQqIjLSM4SGvcibUf9wb3zzseVwvHUabUK9Zvuox+jLTZ/6vj++vFEGrFdG5aN6bPOvQuKsC/enzfbFqrBWbgVhx3jOiyiLlYAjm2m1tMtP03BFhb68yD/5ztmCrsjzufOWfYdJ4EpxDxd/t8qGoG0i2IgFpV319BCyec9qpV4WLg79C77sdv4oNXe2GD8DmHsO0Jos26mVgsGduJP2v5+wli4v9I/bvOavmlYxz7LNxU4kT0o1i/S83SRHwN+C6nTZlWMcAeVKDnbPcbs20Xpwm5G/BZL5SFJeTLiE+i9hMtQNsQLUf+MQq2ctIu4hsl5uHWmfMJbuFU0MPwtUvDBnVfyUkhKK1AUjfUhK3SAGW0X8G5RskkkTbwaYFxGL/6/j+n9Y5wJ/F+5Cj2Bv5IWq55c+bhLbScsMtBEi3Abb3Rux42+UX4OZVjaEzG8wnCnWej/tPqhz+GfXHDRMymfid4GCW7XELO1SiisGc1PvJ8DlkwgWYTk8wy92RjgIVRWeUo7p6JXXr/0XZBBouIjyGPoMhKLIz9f6HLsVX4OQoX+oY7ZwE/5cxdx74tgvUSfzhe/gOfD1XNW63WliNoQ6cP0io3qQczcQt722iykwhatDFAlNoZwy0B9pcOx3RhX4JQjfn4NcHvxbNGBsad3oepPb24mT2yILv/Zwk+9x3OLGHvxX/OTxYYANxoqYfo7rV5RPgRUQzQafnbEG5mgAvX7nVZnmGwDPcXcgQ5va7nrsYX0CqfWtK7mQxwFDGwV2dXISidhxaLT3x/hxP0OWTBBAI3WuonOhLURsQ0wygit40ajGUAY67EjSscBv455phqXIRbTuFjNATK21k1xLOLaNOtt0ltkoMoWedl91flKyYSbgV7sigKrU6EhZjvsGDPxgAQQY9RDGALfw3HfBGIUOM896M47A+Acafcpf7nFHBfOSg6nXfCd5yFiMfm+zQjAjQGbE0Ysv06tZ/TGP72P7hn8RuNecQLvyHsEa6aNB3FALYb7yd+UsAM4s2V1zzU+1ziS3hH0cI+29CkmjB2/yPEM5lz2XEd2As85vshsyVlPbXfaT+e9r8JBLSqFHoi5hJ/LXERupo0HRWl+IzlRAPED3uKa6Ubw29mzXLs6ngMTULY43HOanwduIv4mPf/TXh+V4R1Pr52fzuK+kRpr+4EYdQOsrOtcya6Hlu4PNzVEIWaNJ1EAwwQrwHiisD24zZEN5TOl1gOGUOlwY+7nK/G+S9ExOOS8GmkBggnuSVpy1yDnPcoJDF/ssQALtM1xrAzQE2LJOql24jBxQmMSwC95pGQacce/98DbPENd8J4smsn7raurw8wjNtoxLC+3zUjPg5zD3Gj5n0K4EJ0xJyzmWjHLalqo02vRJjNfh90iITYGKgPv+kFtvqfD5DT61rfPg4TVfgxfsV1vhpgBDcG2Iv7Rs1xVFV62uqjKigs7IssaQCI0dCGJm0l4pnRAAdxNH8MllL74o+hUKF3rL+qO8plQ02IMew2aFJ0o3i/V3+CwQrkv9hwCr8CuBBzaH0dUIg0NEDNe2nUDdrO+2tPc6WW/d8HfMOnLn4Cishs8JFwLtGvJFiXMGzbhnboxsXqu7FLxihkJQscoiG02mwV14uHnWte8qUT/nkIJbpcSygmnnMhWrXjm+RJmwEqwI/KQfFXCT9/F2LkOJRJdt1ZY4CGoFEaIMqWPYRbHVGIs/l0M8MwMhe8S5thPLa9C3ulaxT6SXfW/35ga5IPFoLSIlSv5IL/nXDqhU/rZzPQkMkdUQxg+zIXrTFIbanzjmc9SnX9fwX4CVrq7A0TK38IuCrJ54H+BGUQo9R+lp8A30kyxLaqzn+h40eSzgrNShYYREsuZpyNNmvSdBQD2F7MbIeJXbW+bAj/2ZWXcPqmnkelzUnHda8hOlPqgiQO8DBnCoJRRMBJIjOglaK3eBzv7SeZ95s1Eyhuj3Cco1yTpqOIwTueOgG1NEAZh77fCQht3BJyFhPNvC8EpaXIYaynujGNCFA4x/OlJGaJKXbbgvt9DJDsutvJTiEciJZcQt022qxJ00k0gMvA16EJX1hB0R+fftb5aAdAmTpm3hui+Sn1zxJKYxrEUbR7wNspNQGBu3CbkhDiFMnKt7OmAVxMoDim9dIAf7KcyCU+PLFidAT/ntzl6Kb/1neSQwizcG0b9U+SA79WyBDVibB+4O4kZdoGS3B3fEP0kWzDS9YYYIh4Rm7DzgA1aTqKkG1qcy7xGmCUTxNMN24rVKuxDG2U9P1cNW7Bb5JbFCoki6WHpRAVNJXNeY5nNYx9uxn/KQ2nEkaAOmjNbrMo9BPPAHFMW5OmowjZxgCz0AOyEcTIhHOUfOx388JfB44nHVxbCErLUZgxjXoWVxs0Cr8CnqpjCO9V+GWtQyQt3ptD62aC1kIv8Zosjmlrat4oBrClzjsQp0UeUw6Ko4WgVB3vd1miV/35MZKH78Km8GeIaINLANcwXK3PHUUhz0TRq0JQms2nR7P4IGn59myyUwgH0OPw/OZiDw7UFAZRJtAnROcCQgaIw/8xv/tIHvLzhkl2/RD3oVwuqJDMmTyFRhn61uIDnyp2OzfJ50keuZpNtjTAvzkcY2OAChECO0oDDKOHV8vmbMdt4FUYfz5EY4rIzkBVkZtPnNwFiUwgU6iXyO43OI8zZ/u4IqnWgtbPBJ0Il262TuwmfU0TPOomR7CXLJzjcEHdiGh+28R9u1fjX+TmgqQaIDGMJttC8vGE9Vxz1iJA3Q7H2Wiyh4hnUZMBDMHavnSxw8DSHiSBvHt0k8DUx+zCrWzWFxX8RgqmgetQ1jcpkkauIFtJsH5iyucNLdpG+XdHCWEbEdtS6LbJ0SEGgA9jzpMKTLLrSWJG6NWBpm6MN078Flpnh/+7Fn1vLZwgnpFnYGeASBq0McAfiHaEFxEvJUaAp6kvfBgLk+z6IW77pJIiqrgvdRhptoX6M9f1ICsDsQCOOhRQziX6eVUQLdeEjQFsE6A7LF8IjA8sfbeBC+hCYvkWGmE+VbASuKPF19AIMzIJhrBvgQyxiGimHcHiRNsYoJvo9P9MHMKMjSR+g9XEN4RPGlRtcWyZBDZJyCxogMPAV4C3HI5dSrS52I/Fn7VFSwYQ50SFPC9AmxZbAjPG8AmaI61GaY4J9HXcurxc0EbyZ9NKgdKLTNrHPfq9L7L8rQvLuJRIDWDsLlsdzkqPjeOpwowCaaTTOxGu0x0So6rLK60QblJJ3k5rnO9hVCp+GdqE40T8hgZtm0iP2XyIuIf9EbCW2oyyGGmHJIOcEsM4vU9y5vjvSQtzT5tJr3QD9M6SxPPbaC4DjKH20E1o9a6vpu0kOgJUIWabaRwDHEURkKiIz+VoCUVTYGb57KD27P7JjC8ANzfgvH/RgHOmhRFgHzJ39tXhL9pyJYPEbDONM2FOYk+IXdYsM8g4Zw+ippBmo50GlQaYxp8tNMbuTmIiVmisvzOIqmO/DFxfDorv1VHx24ZMpih0E2OhuHR2HeDMVUEhViLtkKhbyxO3IBu5FQ5aIxZeh1hP/OTrpFhQCEptngRWb+l3FPoQ4T8NHKmjt7sac7Db/weJuZe4cXMV4LeWQzpJvrfXGYWgtJrGlTm0DIWgtJLTO3wbgQX42/MV0mOAMUSE9wF/VQ6K95SD4sE44vewKpZjL8x8J475Xb7oQ6JT0TOAaxzOkRhmevMztDY2nbr0Nzt8f9iIc1dhAZ7jTQzB1DMFO0w8/VcUnrykHBQfLwdFp3MWgtIC4A5HJriGaItgADnXVsQ+/HJQPFUISoeILjVYVQhKsxPOtrSiEJQKpNvYkhSpNohUZbB9GtyToB2Zr76ROpf6+2oMI6L/DfAOcMiXHswzKSJN/3Cc5DaNQrbyl8Mu/deu0udVy5ctQXZYomltUSgEpcXAy/hthmwUwo03ae0HuBBtcmxGAOGyQlB6y9MPOISIulaLYTgk+CSKsPwOmTknkpa9mwz4g2he0ikUHYrDSqJpo4JoNhauDLAPmUG1bPCZwLWkyACFoHQu8AL2sd/NxAxUl+89xHYijOTaTvNq7ovoHfmUc59CWf4lnN68cgp1+XWh6EofMFxvuYvR8ltRKLgNeMVx3P21RPs3Q7gxkTMDHEfcHjVe5AuFoLQx4VrST8FkRF8gW4mumaSQdTZq/kHskYu0sRQRsnNbajkongDWhxMAG9HQZM59B0qAhc+2D4fF6aZc/EuWQ47iWIbvpIINl79gOWQBKSSnzCSH35It4g/xuRTOsQqp+WaWkLQDtyf5YDkojqVN/IWg1FYISsvQoISJ5Sxv4jYM4Srs0Z8XXDWTz4t4F/uKoNscdrnWRCEozSoEpbuA/0Zr6+BtKJqShUQwa1h30Jp5O9eZhFtLUQhK81DJx/ucKTCHgKcdnN+ZwG2WQ/rwMMd9QnA9aCXRjRF/LyJ167yQzdjDK5BDeDnZLmtehu7Pu8ndmD5bSXdShQ86gRtIsH41DRiivQ5pv6hn8B5utLMUe8XsPjxG8P+Z64EAhaB0FfA20ZrjKbS2KI6LO5FJtQiFOLO0i8qGZ9F4Q2ezwBD/LSic28r7PAH8TdIZq0lgNOZqlMFfQfT9jwEXxS09Mc/yCaLLYSrANeWg+BvXa/S1Rfdjj4Sswc1Z/ASpvAVMHuIHFazd4Fn/VESDrVp9nwupcmwbiUJQmlkISpcjO/9lFPa1fe9e3KT/AuwT8so4JL+q4cUAJjz1HNG18fOAOx3OU0EmQUP7hRuAmWitqlP/sSl1eBpouf2N3vVaJJEbAkP4a5Av9zZyVuN8niFgq6PTeifRme0K8JzvxlAvEwjGd2z9C9FeeB/w2bgsnJGiu0g++KmVGEYVnM8DvRNfnnH2bjXHZK1+6RPgy0l3rE2E0SidKCx5H/5T7B5D0/PizOazUHN7FAP0AJ/3nSSehAHaUA3L31kO2wz8F4ebWoLCns3q7EoTFWRXvwf8D1QROxeFSy9HsfcsTVerxgkUSTmQcFFH2GxzPvBVpBHn43+/J4HLykHROvnNfN9/QgIlCj9BM1i97sf7BZkveAb7Wvo7cRuf2IWYaTIiHMZ0L3oeb5jf30JSMKvEDwo+vAF81xTlOaEQlM4ygZBdwO/NOW5FgYwk9/tD3LYGdWI3revooGEAAAqsSURBVAeAZ5Iws7cGACdvHOD7uBU1zUJa4MIk15KjLlSQFN6DanpOIpt8FFXfzkHM8tcoe72U9BZofwhcETc239DaNuC7lsOcoo+1kIgBzIUtAf4X0fUYvUi9xS64KASlIpImWRrJN90whgg/nIAxA73bRnTD9QPXloNibMTG7Hd7n+gZqSPAXyddmp74xswXvmQ55Cxgg2PIcD/wOA2evJDDinYUsZmDHM2wBDxt4q8gx/fDuAMN7WzAPiD4paTED/Xf3KPYR5/fyJmb3s+AUV3bcHgoOSY99gM7HM2VS4muPADR3qP1XEy9DPAxmuUShRnAVhdHyzRQPEBz+otztAb9wAMuzTKGZuJWXL1IHZuEoE4GMFy8E3vH0QocJzmUg+IRYCPJNhvmyDZGgY3loGgdU1KFuJWwJ4Gd9fYj1G3fmdrx7UTb723Aw6bU2QU/Nz+5PzB1UOH0e42FoZWHiabPCrDd0F5dSMvBeR57LcdcYIcJeVphJgZsQpWnOaYGPgA2uYxCMTSyA3vH3CFEc3UjFQYw9Rebsdf2FIF7XaJC5aDYh9Lq3WlcX46Wohu4z7xTK6p2vNnKnYeAzb41P1FIM8T1LnaHuA3Z905b201o6zbsTTg5so1e4DaPMOXFiEZsdPkiKfafJ06E1YKZ2vw77OtqDgFf9JgTcyOqqMzCzPoc7hgCvlEOiq+4HGw61n6NvR22C80Zsu2x9kKqSQ5zYRuwO7DnA9s8aur3oI6xpu7pylEXxtA72+NycFW5g434K8CGNIkfGlOw9TrwM+xMcAew1tEfCCMIG2j+psYc/hhG7+rnLiFKQwNrsa+FqiCaej2NC6xG6gxQ1ewSN4bjERybM8w5H0PlsDkTZBdhn8RjHvH51YgWbDiCe9OMF1L1AaphWuL+GXuBWxdqzogtmDPnnIHKjbfT+hbDHJ/GGJL8j7lOfjaFbq9h9xkHgK+Ug+J79V/imWhkzfo+JA1sXLsYeM51ZId5sD8C7ifXBFnCMHonP/Ig/vmovdZG/BVEQ05T3pKgYQxg1NVu4h2h5cCTZtqX63mfQg0SsbHlHA1HH3oXT7maKOZdP0n8aP09wO5GbhttmAkUwvRyvkP0ko0QL6KmBmfJXghKlyIpMhlbKqcCTqKpcyUP4p+FmqlujTn0CHCly4TnetBwBgAwo/Dext4mWUHp7fscNoNXn/tc9EDTWi+aww0l9K6cBwabAVk/RYvNbdZHD5rv41o4lxjN6ls9hkobbOnrNvRgtviMWCwHxY+Bm1CoNM8VNB5j6FnflID4txBP/EOIVpwCI/WiKQxg1ONe4kudw+nJvkxwCj20DURvs8lRPwbRM77PNZMPnyL+B7HT3Ciikb2NtPur0RQTKISZIbMJ+AfsYczQHLrfxycw37ES+DGN374y3XAQze854PMhY/PvIl7yjwHfAx5pxDj2KDR1dIe5sW0oOmTj8NAcesI1OlT1HQeAK9GOqlwb1I9B9Cz/YwLin4v8szjiDyOG25pJ/NBkDRDCqMSn0azNOCZ8Cw2k9VpPZFLsl6OkWVwEKkdtHEEmj/cuXxPnfxJtfrGhgoYrfMMn+JEWWsIAMK4ad6IakDgmOAzc7poxnvA9s9EUu/vJxozOyYBTyGz5SZLlhybD+xzxcf4Kmrj9gK+pmxZaxgAw3vi8Azcm6EJN8+8mkEZtaBn1ejRlINEij2mAEbTMehtQTvicVyPBZsvwwmniX5fGaq2kaCkDwLgmeBI3c2gAOdGJsoPGCS+iSMOlDt83XVBBbYtbUVLL2w6vqup8hPgBZ6HZc3erJH+IljMAjDPBNvQAXYrcnkVjFxOtLTWMsBpphJVMX40wgqI725FmTbrmdD56f3c4HD6GHN4NrbD5JyITDADjjvHDwN/jtirpELAO2J80ZmwYrwjcgyYcZ22UeaMwiArMnkASP5EUNlL/YmTGuiw2HAX+EUV7Wk78kCEGgHHJvBapYpcWyH5z7OP1qFJTZr0c9SBfx9R1lk8hG/8FtEk98fwlIzzuReakS6h6yBy7u9mhThsyxQAwLlWuRjUjLiPWK6guZV05KHovsKvx/fPQsoeb0MTqyd6LPIRGTr4MvOkynSEOZm7PDqQ9XfyoHpSpb1qG1xWZYwAYZ4IwlOYaw+9HduhTKS3snolGg38J+KK5ng6y7zhXENGX0cTtN4ETaZgcJmp3FzJVXROUR1DF6LGsET9klAFCmFLqnWjFpwvhVZBTtxH4IK0HbhhyEfITrkCaYR7ZWes6iuryP0S7FvYhok/z/i9F5uYK3N/FHhTjz+xom0wzAIzb52vR4C3X/QGjwCsouuEdz3a4pllII5wP/A3afduJnOhGR5RGkBPbAxwF/hUFBI6lHVKsyp9sQPkTV4YfQMVvu+vxM5qBzDMAjL+IVZwua3A1Q3pRyHQX0NMIFWyubRbSCJ1IU5yD1pKebf59LqeXTYRh3onh3rGq32OI0PuRZP8ETVj7I1op1GP+fbiB99SJsud3YJ/PX40Kp8sn9mXR5JmIScEAIcyC7Y3AN/GzxbvR/q7Hm6mOjR8xw/x0IEaZja49/A0inMGq38OcXlU02syQoTE770Vtjgs9PhqOLtlaDorOm9pbjUnFADAundYgbRCXbp+IPpSEeQY4ORkkVDNgnukCRPRriV5FGoUuJPVfn2zPdNIxQAgzhnET6i31DVX2oSFLTyDbORNJmWbDaKilKBG4Bn/CH0K93I+kPbGtWZi0DACfKr7aghxS3xDlMMohvIBi1C0rymomTJ3+VSjxVyR+m/tEVJDjvZkExYlZwqRmgBCFoNSBmi42kHxCxEnUe/AGWiA9pZppTFn4SuBalNtwSTLWwklkfj6f1ojyVmJKMECIQlBahEqmb8VfnYcYAY6jWPrbqBdhYLJJOaMd56ASj2tQFG0JycO0fcjc2ZnGZpasYEoxAIy/+HNRpefN1BeXH0UhxwNoV+17NCicmgaqwpeXA5chid9JfQm7EVS6/CjwcVbvPSmmHANUwyzzXo8yyWkt4e5CDPF7NLrjBIrXjzaLOAyhz0D5hUXIkb0IEbxvZCwKAyiT+2g9e3izjinNADBOLMtQiO86lJxKq55nBEVCTiDG6ELJqh7EFP3m72PIcRyD8eEAta61OknWZn53IEKfi6T5OYjIFyPi7yC97HMFJd1+hULFR6eaxJ+IKc8AIapi3Teg4qwCjStsG0OEP4QiTf1Iog6Yvw1y5hCvdpQca0faag4i+lmIyDto3ETsCiqeew5J/WmTI5k2DFANEzW6GGmFVSR3mCc7+pCz/wxqLJr0UR1fTEsGCGFMjk6US7gNmUqToeQ5KcJS6aMo9/Eucuoz06DSbExrBqiGMZGWII1wPQofpuU4txqDKHH1KpL4x6eLiROHnAEiYIrCLkZT5lagwrDqArasIiyo60a9Ee8AHyYdIDDVkTNADIxm6EAO9DLgAhR2XMzpMudWMUWF02XTXSgs+xEycU4CQ7mktyNngAQwRWRzkFZYDHwWmU8LkU8xj/SZooKc1h4k3Y8Df0CE342y1dOyqK8e5AyQIoxTPROFLs9G0yXOQgzxGaQx2s3viQxSQZJ8zPz+EyL4XjTN4RMUUh2Zzk5rjhw5cuTIkSNHjhw5cuTIkSMh/j9c5e4JOwc2KwAAAABJRU5ErkJggg==" alt="NeedMomentum" width="56" height="56" />
+      <div>
+        <h1>NeedMomentum AI Division</h1>
+        <p>Operating plan, four offers, legal drafts, 90-day pilots. One pack for Dillon. Record the Loom against the hub. Nothing live until Mac answers.</p>
+      </div>
+    </div>
+  </header>
+  <div class="wrap">
+    <nav class="toc">
+      <a href="#plan">Plan</a>
+      <a href="#skus">Four SKUs</a>
+      <a href="#proof">Proof</a>
+      <a href="#pilots">Pilots</a>
+      <a href="#legal">Legal</a>
+      <a href="#mac">Mac's five</a>
+      <a href="#wont">Won't do</a>
+    </nav>
+
+    <h2 id="plan">The plan</h2>
+    <p>NeedMomentum sells proof: a demo site, a Radar PDF, a Kind Insurance ops number. Homepage stays human. AI lives in the nav and on four service pages. Four invoices for four acronyms is the wrong product.</p>
+    <div class="gate">
+      <span>A Confirm</span>
+      <span>B Publish</span>
+      <span>C Loom</span>
+      <span>D Counsel</span>
+      <span>E Pilots</span>
+      <span>F Outbound</span>
+    </div>
+    <table>
+      <tr><th>Gate</th><th>What happens</th><th>Owner</th></tr>
+      <tr><td>A Confirm</td><td>Mac answers SKUs, automation prices, AEO dollars, pilots, counsel.</td><td>Mac</td></tr>
+      <tr><td>B Publish</td><td>Beth pastes four WordPress pages. Homepage unchanged.</td><td>Beth after Mac</td></tr>
+      <tr><td>C Loom</td><td>Five minutes against the hub. Kind Insurance, Radar fixture, Philly factory.</td><td>Dillon</td></tr>
+      <tr><td>D Counsel</td><td>Addendum + claims markup. Don't paste the draft into a live SOW.</td><td>Counsel Mac names</td></tr>
+      <tr><td>E Pilots</td><td>90 days, paid, one number. Shadow, Onsite, Omega proposed.</td><td>Dillon after Mac yes</td></tr>
+      <tr><td>F Outbound</td><td>Harvest phl-2026-w33 (8 staged). mail_ready stays hold.</td><td>Dillon after E</td></tr>
+    </table>
+    <p class="mid">Entry motion for every SKU: paid diagnostic → 90-day pilot → retainer. Dillon does not invent a public price.</p>
+
+    <h2 id="skus">Four SKUs, one system</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="tag">Visibility</div>
+        <h3>AEO / GEO</h3>
+        <p>Paid Radar, then 90 days of people-first pages, GBP, and citation measurement. Google still sits underneath. Ignore llms.txt, chunking, fake mentions.</p>
+        <p><strong>Good:</strong> named prompts + Search Console generative AI / AI referrals.</p>
+        <p><strong>Stack:</strong> Radar, GSC, GA4, GBP, Claude drafts. AM publishes.</p>
+      </article>
+      <article class="card">
+        <div class="tag">Design</div>
+        <h3>AI Design</h3>
+        <p>Factory harvests their photos, words, and colors. Volume rebuild or bespoke after they engage. The live homepage never says "AI-designed."</p>
+        <p><strong>Good:</strong> Site Quality Score up + one conversion path above the fold.</p>
+        <p><strong>Stack:</strong> factory, harvest, locked tokens, human QA. noindex until they own it.</p>
+      </article>
+      <article class="card">
+        <div class="tag">Marketing</div>
+        <h3>AI Marketing</h3>
+        <p>More tests, same brand. AI drafts. The AM still ships the ad and owns spend. Ads don't lead with the word AI.</p>
+        <p><strong>Good:</strong> tests shipped with tracking that fires.</p>
+        <p><strong>Stack:</strong> Google Ads, Meta, Claude drafts. ads-audit skill: no spend.</p>
+      </article>
+      <article class="card">
+        <div class="tag">Ops</div>
+        <h3>AI Automation</h3>
+        <p>Missed follow-up becomes a booked conversation in <em>their</em> CRM. Live packages $1,500 to $3,000 + setup until Mac confirms sold vs brochure. Growth currently sits under Starter. That table stays off the rewrite.</p>
+        <p><strong>Good:</strong> time-to-first-response. Form-to-CRM with zero manual entry.</p>
+        <p><strong>Stack:</strong> client CRM, chat/SMS/email, UTMs. First message discloses software.</p>
+      </article>
+    </div>
+
+    <h2 id="proof">Proof we lead with</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Kind Insurance PA</h3>
+        <p>Live case. Chatbot + CRM. 5 qualified conversations, 1 policy, ~30 days. Agency-reported. Hero for automation. Not Dillon's AM book.</p>
+      </article>
+      <article class="card">
+        <h3>Prospect Radar</h3>
+        <p>PDF a human QAs before mail. Cedar Ridge in the hub is a <strong>fixture</strong> (cedarridgehvac.example). Use it in the Loom. Never present it as a client.</p>
+      </article>
+      <article class="card">
+        <h3>Philly factory</h3>
+        <p>25-site week gallery. Harvested palettes. Proof we already ship sites, not a $497 public product.</p>
+      </article>
+      <article class="card">
+        <h3>Live automation page</h3>
+        <p>needmomentum.com/ai-powered-marketing-automation/. Keep the $1,500 to $3,000 band. Drop the inverted Starter/Growth table until Mac says the dollars sold.</p>
+      </article>
+    </div>
+
+    <h2 id="pilots">90-day pilots (proposed)</h2>
+    <p>Paid. No 12-month lock. One operational number. Mac picks yes / swap / wait before anyone emails the owner.</p>
+    <table>
+      <tr><th>Pilot</th><th>Client</th><th>Day-1 number</th></tr>
+      <tr><td>Automation</td><td>Shadow HVAC</td><td>Time-to-first-response on inbound form/call</td></tr>
+      <tr><td>Design</td><td>Onsite Concrete</td><td>Site Quality Score + conversion path above the fold</td></tr>
+      <tr><td>Visibility</td><td>Omega Landscaping</td><td>Named prompt list + AI referrals. Confirm the public domain first.</td></tr>
+    </table>
+    <p class="mid">Days 1-14 diagnostic. 15-45 build. 46-75 live. 76-90 keep, expand, or stop. Client keeps the accounts either way.</p>
+
+    <h2 id="legal">Legal (counsel, not clients)</h2>
+    <div class="grid">
+      <article class="card"><h3>Claims sheet</h3><p>Allowed: "AI-assisted production with human review." Kind Insurance numbers exactly as published. Forbidden: citation guarantees, invented metrics, Cedar Ridge as a real client.</p></article>
+      <article class="card"><h3>AI addendum</h3><p>Draft only. IP, no public-model training on confidentials, human review, chatbot disclosure, client-owned accounts. Counsel rewrites.</p></article>
+      <article class="card"><h3>Creative disclosure</h3><p>NY synthetic-performer rule (2026-06-09) and platform labels when ads use generated people. Operator checklist, not a footer stamp.</p></article>
+      <article class="card"><h3>Ownership FAQ</h3><p>Client owns ads, GSC, GA4, CRM, domain. Offboarding returns access. No personal ChatGPT for confidentials.</p></article>
+    </div>
+
+    <h2 id="mac">Mac, five questions</h2>
+    <div class="ask">
+      <ol>
+        <li>Confirm nav names as SKUs: AEO/GEO, AI Design, AI Marketing, AI Automation?</li>
+        <li>Automation $1,500 to $3,000: sold, or brochure? Drop the inverted Growth/Starter table?</li>
+        <li>AEO/GEO: dollar band from you, or diagnostic-first until a client bites?</li>
+        <li>Pilots: Shadow HVAC, Onsite Concrete, Omega Landscaping. Yes / swap / wait?</li>
+        <li>Who is counsel for the addendum?</li>
+      </ol>
+    </div>
+
+    <h2 id="wont">What we will not do</h2>
+    <ul>
+      <li>Launch an AI startup, waitlist, or Product Hunt page.</li>
+      <li>Guarantee ChatGPT or Overview citations.</li>
+      <li>Publish a public exact rate card for unproven SKUs.</li>
+      <li>Index a demo of a business we don't work for.</li>
+      <li>Auto-send mail, Slack, or CRM writes.</li>
+      <li>Sell a 300-skill dump, or put "AI-designed" on a client's homepage.</li>
+    </ul>
+
+    <h2>Where the files live</h2>
+    <p class="mid">Vault: <code>02_Campaigns/Need Momentum AI Division/</code>. Hub: <code>hub/index.html</code>. Pages for Beth: <code>pages/</code>. Offers: <code>05_Offers/</code>. Batch scaffold: <code>phl-2026-w33</code> (mail_ready hold). Print this file to PDF from the browser if you want a leave-behind.</p>
+
+    <footer class="pack">NeedMomentum / Momentum 360 · internal pack · 2026-08-14 · Dillon Mohr · drafts until Mac / counsel / Beth</footer>
+  </div>
+</body>
+</html>

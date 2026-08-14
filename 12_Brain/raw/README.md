@@ -25,4 +25,5 @@ on the operator machine / Obsidian Sync private notes.
 ## Tracked here
 
 - `2026-07-04 - obsidian-second-brain-article.md` — public blueprint article
+- `research/2026-08-14 - research - need-momentum-ai-division.md` — AI division receipts + skeptic
 - `sessions/session-log.md` — non-sensitive cadence lines

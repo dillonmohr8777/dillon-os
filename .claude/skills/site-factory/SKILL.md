@@ -24,7 +24,9 @@ Accept any of:
    Prospect demos go in `philly-sites/` (or a sibling folder for other cities); client builds go in `01_Clients/<Client>/website/`. Keep `noindex: true` for demos.
 5. **Images.** The build prints which `assets/` files are needed. Source real photos of the business when possible (their site, with attribution noted in the vault). Convert to webp. Write honest alt text.
 6. **QA.** `node _templates/site-factory/qa.js <site-dir>` and fix every FAIL. When Playwright is available, review the three screenshots in `_templates/site-factory/qa-shots/<slug>/` for visual problems the checks can't catch: cramped headlines, bad contrast, dull palette.
-7. **Log it.** Add or update the client/prospect note in `01_Clients/` with a link to the site folder and the source of each verified fact. If the job came from a Slack intake note, set its `status: built`.
+7. **Anti-slop + guidelines.** Run `.claude/skills/anti-slop-design/SKILL.md`. Optional Vercel pass: `.claude/skills/web-design-guidelines/SKILL.md` (fetch upstream at review time).
+8. **Ship gate.** `.claude/skills/ship-gate/SKILL.md` before anyone sees the folder. Facts sourced, palette harvested, `noindex` still on, human still owns deploy.
+9. **Log it.** Add or update the client/prospect note in `01_Clients/` with a link to the site folder and the source of each verified fact. If the job came from a Slack intake note, set its `status: built`.
 
 ## Hard rules
 
