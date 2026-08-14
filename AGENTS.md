@@ -27,6 +27,7 @@ for the two npm-based sites below.
 | Mohr Media site | `mohr-media-site/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML/JS/WebGL. |
 | Philly 25 gallery | `philly-sites/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML. |
 | Client report builder (CLI) | `_os/reporting/` | `node _os/reporting/build-report.js <data.json>` | — | Writes HTML into `Daily-Briefs/reports/`. |
+| Grok 4.6 field dashboard | `12_Brain/research/Grok 4.6 Frontier Comparison.md` | open the markdown in Cursor | — | Mobile-readable board. HTML twin: `grok-46-dashboard/index.html` (desktop browser). |
 
 ### MCP servers
 
@@ -42,10 +43,10 @@ Inspector check. Any new MCP goes through `_os/automation/bin/mcp-gate.js` first
 ### Tests / lint
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/grok-46-dashboard.test.js
 ```
 
-- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, and public-safety scanning.
+- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, public-safety scanning, and the Grok 4.6 field dashboard snapshot.
 - `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has no ESLint config — interactive only; do not run non-interactively.
 - `immohrtal-site` has no lint script.
 
