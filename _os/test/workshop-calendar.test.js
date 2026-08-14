@@ -161,6 +161,7 @@ describe("landing page wiring", () => {
       path.join(VAULT, "02_Campaigns/Growth Workshop/lp-date-push/script.js"),
       "utf8",
     );
+    assert.match(html, /The workshop lands on your calendar/);
     assert.match(html, /name="calendar_open"[\s\S]*checked/);
     assert.match(js, /momentum-workshop-event-v5/);
     assert.match(js, /https:\/\/meet\.google\.com\/ive-hkws-xdg/);
