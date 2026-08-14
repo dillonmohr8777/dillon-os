@@ -169,6 +169,8 @@ Industry pages drafted or needed: Medical & Healthcare, Spas & Wellness, Home Se
 
 **Dillon Mohr, 2026-08-14** — outreach engine wired to the 238 call sheet. QR, mail proofs, Zapier CSVs, and the sales-call gate generated for all 238. `mail_ready` remains hold.
 
+**Dillon Mohr → Mac Frederick DM, 2026-08-13 21:41 EDT** — told Mac the 238 sheet is now the outbound engine, not just a call list. Nothing mails until Mac or Melissa approve exact rows. Live hub: https://momentum-prospect-radar-next20-2026-08-11.netlify.app/ Message: https://momentum3d.slack.com/archives/D0A8UQQ27D1/p1786671714628479
+
 ## What Slack does NOT say
 
 Worth stating plainly so nobody mistakes assumption for instruction:

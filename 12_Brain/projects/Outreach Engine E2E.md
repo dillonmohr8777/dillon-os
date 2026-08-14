@@ -17,6 +17,7 @@ Close scrape → database → site → QR → mail → gatekeep so Jesse can cal
 
 ## Next actions
 
+- [x] Slack Mac that the 238 sheet is the outbound engine (DM 2026-08-13 21:41 EDT)
 - [ ] Mac/Melissa review the hub and pick a mail vendor
 - [ ] Wire `qrtiger.csv` / `postgrid.csv` into the existing Zapier zaps
 - [ ] Log Jesse's call results into the Stage 8 ledger
