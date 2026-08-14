@@ -22,7 +22,9 @@ deploy credentials.
   is a new unused radar slice (priority desc). Follows
   `.claude/skills/mirror-and-improve/SKILL.md`: harvest each prospect's live
   site, keep their voice, photos, palette, and logo, then rebuild. No
-  wow-library chrome. Demos stay noindex. mail_ready stays hold.
+  wow-library chrome. Missing image slots get unique generated fills: half
+  the slugs are animated WebP, half are photoreal stills. Headings do not
+  use highlight marks. Demos stay noindex. mail_ready stays hold.
 - Secrets and host tokens never land in this note.
 
 ## Links

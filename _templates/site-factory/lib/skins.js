@@ -48,7 +48,7 @@ function buildSkinCss(brief) {
 .slug-${slug} .offering-card,.slug-${slug} .experience-grid article{border-radius:2px;background:transparent}
 .slug-${slug} .gallery-grid figure{border-radius:2px}
 .slug-${slug} .marquee-strip{letter-spacing:.28em;font-weight:500}
-.slug-${slug} .section-head h2 mark{background:transparent;color:var(--accent);padding:0;box-shadow:inset 0 -.12em 0 var(--accent2)}
+.slug-${slug} .section-head h2{color:inherit}
 `,
     brutal: `
 .slug-${slug}{--glass-blur:0px}
@@ -82,7 +82,7 @@ function buildSkinCss(brief) {
 .slug-${slug}{--glass-blur:26px}
 .slug-${slug} .hero{background:linear-gradient(160deg,var(--deep),color-mix(in srgb,var(--deep) 70%,var(--accent)) 55%,var(--deep));color:var(--on-deep)}
 .slug-${slug} .hero .eyebrow,.slug-${slug} .hero h1,.slug-${slug} .hero-copy>p{color:var(--on-deep)}
-.slug-${slug} .hero h1 mark{background:transparent;color:var(--accent2);text-shadow:0 0 28px color-mix(in srgb,var(--accent2) 55%,transparent)}
+.slug-${slug} .hero h1{color:var(--on-deep)}
 .slug-${slug} .hero-media figure{border:1px solid color-mix(in srgb,var(--accent2) 55%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 40%,transparent),0 25px 80px color-mix(in srgb,var(--accent) 35%,transparent)}
 .slug-${slug} .offering-card,.slug-${slug} .contact-card{background:color-mix(in srgb,var(--deep) 55%,transparent);color:var(--on-deep);border-color:color-mix(in srgb,var(--accent2) 40%,transparent)}
 .slug-${slug} .marquee-strip{background:var(--accent);color:var(--on-accent);text-shadow:0 0 18px color-mix(in srgb,var(--on-accent) 35%,transparent)}

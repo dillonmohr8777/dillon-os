@@ -104,13 +104,13 @@ const builders = {
     const float = d.glassFloat
       ? `<div class="glass-panel glass-float"><strong>${esc(d.glassFloat.title || brief.name)}</strong><span>${esc(d.glassFloat.sub || brief.city)}</span></div>`
       : `<div class="glass-panel glass-float"><strong>${esc(brief.name)}</strong><span>${esc(brief.city)}</span></div>`;
-    return `<section class="hero hero-${layout.hero} surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1><mark>${esc(d.headline || brief.name)}</mark></h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
+    return `<section class="hero hero-${layout.hero} surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1>${esc(d.headline || brief.name)}</h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
   },
   offerings(d) {
     const cards = d.items
       .map((item, i) => `<article class="offering-card reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><h3>${esc(item)}</h3></article>`)
       .join('');
-    return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'What to explore')}<h2>${d.heading || 'Signature offerings, <mark>clearly framed.</mark>'}</h2></header><div class="offering-grid">${cards}</div></section>`;
+    return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'What to explore')}<h2>${esc(d.heading || 'Signature offerings, clearly framed.')}</h2></header><div class="offering-grid">${cards}</div></section>`;
   },
   proof(d) {
     const cells = d.items
@@ -120,7 +120,7 @@ const builders = {
   },
   gallery(d) {
     const figs = (d.imageIndexes || [3, 4, 5, 6, 7]).map((n) => figure(n)).join('');
-    return `<section class="gallery ${pickSurface(d.surface || 'paper')} vanish-out" id="gallery"><header class="section-head reveal"><h2>${d.heading || 'See what makes this place <mark>distinct.</mark>'}</h2></header><div class="gallery-grid reveal">${figs}</div></section>`;
+    return `<section class="gallery ${pickSurface(d.surface || 'paper')} vanish-out" id="gallery"><header class="section-head reveal"><h2>${esc(d.heading || 'See what makes this place distinct.')}</h2></header><div class="gallery-grid reveal">${figs}</div></section>`;
   },
   story(d) {
     const paras = (d.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join('');
@@ -146,7 +146,7 @@ const builders = {
           `<article class="catalog-card reveal delay-${(i % 3) + 1}">${figure(item.imageIndex || 9 + i)}<h3>${esc(item.title)}</h3><a href="${esc(item.href)}">Explore \u2197</a></article>`
       )
       .join('');
-    return `<section class="catalog ${pickSurface(d.surface || 'deep')} vanish-out"><header class="section-head reveal"><h2>${d.heading || 'More ways into the <mark>experience.</mark>'}</h2></header><div class="catalog-grid">${cards}</div></section>`;
+    return `<section class="catalog ${pickSurface(d.surface || 'deep')} vanish-out"><header class="section-head reveal"><h2>${esc(d.heading || 'More ways into the experience.')}</h2></header><div class="catalog-grid">${cards}</div></section>`;
   },
   social(d) {
     const indexes = d.imageIndexes || [3, 4, 5, 6, 7, 8];
@@ -155,7 +155,7 @@ const builders = {
       .map((n, i) => figure(n, { caption: captions[i] || 'From their feed' }))
       .join('');
     if (!figs) return '';
-    return `<aside class="social-strip ${pickSurface(d.surface || 'paper')} vanish-out" id="social"><header class="section-head reveal">${sectionKicker(d.kicker || 'Pulled from their world')}<h2>${d.heading || 'Social energy, <mark>built into the page.</mark>'}</h2></header><div class="social-rail">${figs}</div></aside>`;
+    return `<aside class="social-strip ${pickSurface(d.surface || 'paper')} vanish-out" id="social"><header class="section-head reveal">${sectionKicker(d.kicker || 'Pulled from their world')}<h2>${esc(d.heading || 'Social energy, built into the page.')}</h2></header><div class="social-rail">${figs}</div></aside>`;
   },
   contact(d) {
     const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brief.address || brief.name + ' ' + brief.city)}`;
@@ -172,10 +172,10 @@ const builders = {
     ]
       .filter(Boolean)
       .join('');
-    return `<section class="contact-system ${pickSurface(d.surface || 'deep')} vanish-out" id="visit"><div class="section-kicker">Visit and contact</div><div class="contact-intro reveal"><h2>${d.heading || 'Make the next visit <mark>easy.</mark>'}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div></section>`;
+    return `<section class="contact-system ${pickSurface(d.surface || 'deep')} vanish-out" id="visit"><div class="section-kicker">Visit and contact</div><div class="contact-intro reveal"><h2>${esc(d.heading || 'Make the next visit easy.')}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div></section>`;
   },
   closing(d) {
-    return `<section class="closing ${pickSurface(d.surface || 'panel')} vanish-out reveal">${sectionKicker(d.kicker || `${brief.city}, in full`)}<h2><mark>${esc(d.heading || brief.name)}</mark></h2>${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
+    return `<section class="closing ${pickSurface(d.surface || 'panel')} vanish-out reveal">${sectionKicker(d.kicker || `${brief.city}, in full`)}<h2>${esc(d.heading || brief.name)}</h2>${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
   },
 };
 

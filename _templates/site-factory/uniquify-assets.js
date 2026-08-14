@@ -14,20 +14,65 @@ const path = require('path');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 
+function isAnimatedBuffer(buf) {
+  if (!buf || buf.length < 12) return false;
+  if (buf[0] === 0x47 && buf[1] === 0x49 && buf[2] === 0x46) return true;
+  if (buf.slice(0, 4).toString('ascii') === 'RIFF' && buf.slice(8, 12).toString('ascii') === 'WEBP') {
+    return buf.includes(Buffer.from('ANIM')) || buf.includes(Buffer.from('ANMF'));
+  }
+  return false;
+}
+
 function uniquifyAssets(siteDir, slug) {
   const assets = path.join(siteDir, 'assets');
   if (!fs.existsSync(assets)) return { updated: 0 };
   const id = slug || path.basename(siteDir);
   const files = fs
     .readdirSync(assets)
-    .filter((f) => /^image-\d+\.(webp|jpg|jpeg|png)$/i.test(f))
+    .filter((f) => /^image-\d+\.(webp|jpg|jpeg|png|gif)$/i.test(f))
     .sort();
   let updated = 0;
   for (const file of files) {
     const src = path.join(assets, file);
-    const dest = path.join(assets, file.replace(/\.(jpg|jpeg|png)$/i, '.webp'));
-    const tmp = `${src}.${process.pid}.uniq.jpg`;
+    const dest = path.join(assets, file.replace(/\.(jpg|jpeg|png|gif)$/i, '.webp'));
     const stamp = crypto.createHash('sha1').update(`${id}/${file}`).digest('hex').slice(0, 6);
+    const raw = fs.readFileSync(src);
+    if (isAnimatedBuffer(raw)) {
+      const tmp = `${src}.${process.pid}.uniq.webp`;
+      try {
+        execFileSync(
+          'ffmpeg',
+          [
+            '-y',
+            '-i',
+            src,
+            '-vf',
+            `drawbox=x=iw-12:y=ih-12:w=10:h=10:color=0x${stamp}@1:t=fill`,
+            '-an',
+            '-c:v',
+            'libwebp',
+            '-q:v',
+            '72',
+            '-loop',
+            '0',
+            tmp,
+          ],
+          { stdio: ['ignore', 'pipe', 'pipe'] }
+        );
+        const out = fs.readFileSync(tmp);
+        if (out.length < 800) throw new Error('uniquify produced a tiny file');
+        fs.writeFileSync(dest, out);
+        if (src !== dest && fs.existsSync(src)) fs.unlinkSync(src);
+        updated += 1;
+      } catch (err) {
+        console.warn(`uniquify keep-anim ${file}: ${(err.message || err).toString().split('\n')[0]}`);
+        if (src !== dest) fs.copyFileSync(src, dest);
+      } finally {
+        if (fs.existsSync(tmp)) fs.unlinkSync(tmp);
+      }
+      continue;
+    }
+    const tmp = `${src}.${process.pid}.uniq.jpg`;
     try {
       execFileSync(
         'ffmpeg',

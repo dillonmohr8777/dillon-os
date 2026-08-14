@@ -8,7 +8,7 @@ const path = require('path');
 const { buildBrief, fitBriefToMeasuredSpec } = require('/workspace/_templates/site-factory/brief-from-harvest.js');
 const { buildSite } = require('/workspace/_templates/site-factory/build-site.js');
 const { applyHarvestImages } = require('/workspace/_templates/site-factory/apply-harvest-images.js');
-const { fillAtmosphereImages } = require('/workspace/_templates/site-factory/fill-atmosphere-images.js');
+const { generateUniqueMedia } = require('/workspace/_templates/site-factory/generate-unique-media.js');
 const { uniquifyAssets } = require('/workspace/_templates/site-factory/uniquify-assets.js');
 const { checkSpec } = require('/workspace/_templates/site-factory/lib/spec.js');
 
@@ -39,7 +39,7 @@ const targets = JSON.parse(fs.readFileSync(path.join(BATCH, 'targets.json'), 'ut
     const briefPath = path.join(briefsDir, `${target.slug}.json`);
     const built = buildSite(brief, sitesRoot);
     applyHarvestImages(target.slug, built.outDir);
-    await fillAtmosphereImages(built.outDir, brief, path.dirname(harvestFile));
+    await generateUniqueMedia(built.outDir, brief, path.dirname(harvestFile));
     uniquifyAssets(built.outDir, target.slug);
     const measured = fitBriefToMeasuredSpec(brief, () => buildSite(brief, sitesRoot));
     fs.writeFileSync(briefPath, JSON.stringify(brief, null, 2));

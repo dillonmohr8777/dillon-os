@@ -74,7 +74,7 @@ section{position:relative;padding:clamp(78px,10vw,150px) clamp(20px,6vw,110px);i
 .surface-panel{background:var(--panel);color:var(--ink)}
 .surface-accent{background:var(--accent);color:var(--on-accent)}
 .surface-deep{background:var(--deep);color:var(--on-deep)}
-mark{padding:0 .12em;background:var(--accent2);color:var(--on-accent2);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+mark{background:transparent;color:inherit;padding:0}
 .eyebrow,.section-kicker{display:block;margin-bottom:18px;font-size:.74rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
 .section-head{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end;margin-bottom:55px}
 .section-head h2{font-size:clamp(2.8rem,6vw,6.5rem);line-height:.95;letter-spacing:-.055em;text-wrap:balance}
