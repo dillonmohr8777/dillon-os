@@ -44,6 +44,7 @@ Starting **2026-10-05**, Google will reject commercial contracts, trade licenses
 3. Keep title/registration campaigns paused until the certificate appears.
 4. After approval, appeal the disapproved assets and relaunch Search only, geo-limited to the authorization area, with a landing page that discloses the business is an independent authorized provider and not a government site. Google will add a “Not a government website” disclosure on Search ads for non-government providers.
 5. Do not mix notary/office keywords into the restricted campaign. Do not pivot the paid program to extras unless the client asks for that.
+6. Do not email the client while chasing the certificate. Outreach is Google Ads support / the certification form, plus the PennDOT units that own agent listings (Contract Administration and DAS). Do not reply on title-support threads that already copy the client.
 
 ## What not to do
 
