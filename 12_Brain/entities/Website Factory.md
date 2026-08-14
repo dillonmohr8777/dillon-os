@@ -18,7 +18,8 @@ deploy credentials.
 - Week 33 batch: `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/`
   maps [[12_Brain/research/2026-08-14 - Reddit-cited UI wow library|200 wow-site
   composition refs]] onto 25 unbuilt radar rebuilds. Harvest owns brand and
-  facts. Demos stay noindex. mail_ready stays hold.
+  facts. Layout chrome is mirrored from the mapped wow homepage. Demos stay
+  noindex. mail_ready stays hold.
 - Secrets and host tokens never land in this note.
 
 ## Links

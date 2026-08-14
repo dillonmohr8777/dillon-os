@@ -15,6 +15,9 @@ dist/
 # Playwright QA output
 _templates/site-factory/qa-shots/
 
+# Local wow-reference JPEGs used for side-by-side taste passes (not for git)
+02_Campaigns/AI Site Builder Outreach Engine/batches/*/refs/
+
 # Public-safety scanner writes this allowlisted fixture during tests
 _os/test/fixtures/
 

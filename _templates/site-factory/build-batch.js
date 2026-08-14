@@ -111,6 +111,7 @@ async function runBatch(batchDir, options = {}) {
     row.address = brief.address || '';
     row.phone = brief.phone || '';
     row.sourceUrl = brief.url || '';
+    row.compositionRef = brief.composition_ref || brief.layout || '';
     row.prospectId =
       brief.prospectId || `${(batch.idPrefix || 'B').toUpperCase()}${String(i + 1).padStart(3, '0')}`;
 
@@ -320,7 +321,8 @@ async function runBatch(batchDir, options = {}) {
       if (r.qaReady === 'ready') status = '<span class="good">QA ready</span>';
       else if (r.failures.length) status = '<span class="bad">Held</span>';
       else status = '<span class="warn">Held</span>';
-      return `<a class="card" data-kind="${esc(r.vertical)}" href="${esc(href)}"><span class="meta"><span>${esc(r.prospectId)}</span><span>${esc(r.vertical)}</span></span><h2>${esc(r.name || r.slug)}</h2><p>${esc(r.address || 'Address not verified')}</p><span class="row">${status}<span class="spec">${r.sections ?? '-'} sec / ${r.words ?? '-'} words · mail hold</span></span><span class="open">Open homepage</span></a>`;
+      const host = String(r.compositionRef || '').replace(/^https?:\/\//, '').replace(/\/$/, '');
+      return `<a class="card" data-kind="${esc(r.vertical)}" href="${esc(href)}"><span class="meta"><span>${esc(r.prospectId)}</span><span>${esc(r.vertical)}</span></span><h2>${esc(r.name || r.slug)}</h2><p>${esc(r.address || 'Address not verified')}</p><span class="row">${status}<span class="spec">${r.sections ?? '-'} sec / ${r.words ?? '-'} words · mail hold</span></span>${host ? `<span class="spec">Mirrors ${esc(host)}</span>` : ''}<span class="open">Open homepage</span></a>`;
     })
     .join('\n');
 
@@ -361,7 +363,7 @@ footer{padding:40px 0 70px;border-top:1px solid var(--line);color:var(--muted);f
 <main class="wrap"><div class="grid">
 ${cards}
 </div></main>
-<div class="wrap"><footer>Private staging. Batch ${esc(batch.id)}. Generated mail_ready=hold on every row.</footer></div>
+<div class="wrap"><footer>Private staging. Batch ${esc(batch.id)}. Generated mail_ready=hold on every row.${fs.existsSync(path.join(batchDir, 'compare.html')) ? ' <a href="compare.html" style="color:var(--accent)">Wow vs rebuilt</a>' : ''}${fs.existsSync(path.join(batchDir, 'library.html')) ? ' · <a href="library.html" style="color:var(--accent)">200-shot library</a>' : ''}</footer></div>
 <script>
 const cards=[...document.querySelectorAll('.card')],q=document.querySelector('#q');let kind='all';
 function apply(){const s=q.value.toLowerCase().trim();cards.forEach(c=>{const name=c.querySelector('h2').textContent.toLowerCase();c.hidden=(kind!=='all'&&c.dataset.kind!==kind)||(s&&!name.includes(s))})}

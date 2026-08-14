@@ -69,6 +69,7 @@ const verified = fs.existsSync(verifiedPath) ? JSON.parse(fs.readFileSync(verifi
       attitude: brief.attitude,
       address: Boolean(brief.address),
       composition_ref: brief.composition_ref,
+      layout: brief.layout,
       specFails,
     });
     console.log(

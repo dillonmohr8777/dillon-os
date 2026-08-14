@@ -25,10 +25,11 @@ demos. Never clone a reference brand onto a local business.
 
 ## How the factory is allowed to use it
 
-Each prospect brief may carry one `composition_ref` URL. That URL picks a
-rhythm (hero split, type scale, gallery density). Harvest still owns palette,
-copy, phone, address, and photography. Two sites in a batch may not share a
-reference or an image hash.
+Each prospect brief carries one `composition_ref` URL. The factory maps that
+host to a layout id in `_templates/site-factory/lib/layouts.js` and injects
+matching chrome (search pill, dark stage, player dock, repo bar) plus hero
+architecture. Harvest still owns palette, copy, phone, address, and
+photography. Two sites in a batch may not share a reference or an image hash.
 
 ## First 25 mapped onto radar
 

@@ -317,6 +317,7 @@ function buildBrief(harvest, target, compositionRef) {
     vertical: target.vertical_group || target.vertical,
     attitude,
     composition_ref: compositionRef || null,
+    layout: compositionRef || undefined,
     url,
     phone: phone || undefined,
     address: address || undefined,
