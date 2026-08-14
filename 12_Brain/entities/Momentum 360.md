@@ -1,7 +1,7 @@
 ---
 tags: [entity, org]
 source: "[[12_Brain/raw/2026-07-04 - obsidian-second-brain-article]]"
-updated: 2026-07-29
+updated: 2026-08-14
 ---
 
 # Momentum 360
@@ -19,5 +19,7 @@ account inventories live in the private layer (`12_Brain/private/`), not here.
 ## Links
 
 - [[12_Brain/entities/Website Factory|Website Factory]]
+- [[12_Brain/concepts/Need Momentum AI Division|Need Momentum AI Division]]
+- [[12_Brain/projects/Need Momentum AI Division|Need Momentum AI Division (project)]]
 - [[01_Clients/Client Index|Client Index]]
 - Private layer: [[12_Brain/private/README|private/]]
