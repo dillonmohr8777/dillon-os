@@ -1,6 +1,6 @@
 ---
 tags: [research, index]
-updated: 2026-07-29
+updated: 2026-08-14
 ---
 
 # Research
@@ -13,6 +13,8 @@ Survivors compile into `12_Brain/concepts/` with `expires:` dates via
 ## Active research pages
 
 See Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
+
+- [[12_Brain/concepts/Google Ads Government Documents Certification|Google Ads Government Documents Certification]] — Pennsylvania tag agencies vs Google’s government-documents certificate; PennDOT will not add agent websites (expires 2026-11-12).
 
 ## Links
 

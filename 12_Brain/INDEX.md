@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-31
+updated: 2026-08-14
 ---
 
 # INDEX — the front door
@@ -46,11 +46,14 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Leading Indicators|Leading Indicators]] — churn/growth signals for `/synthesize`.
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
+- [[12_Brain/concepts/Google Ads Government Documents Certification|Google Ads Government Documents Certification]] — tag-agency ads need Google’s authorized-provider certificate; PennDOT confirmed in writing that agent directories have no website field.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
 
 ## Raw captures (Git-safe)
 
 - [[12_Brain/raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
+- [[12_Brain/raw/research/2026-08-14 - research - google-ads-govdocs-penndot-agents|2026-08-14 google-ads-govdocs-penndot-agents]] — receipts for Google’s authorized-provider rule vs PennDOT agent PDFs.
+- [[12_Brain/raw/research/2026-08-14 - research - penndot-agent-directory-no-url|2026-08-14 penndot-agent-directory-no-url]] — Contract Administration written reply: public agent lists are address and phone only.
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
