@@ -26,7 +26,9 @@ One-line summary: deploy the patched LP (now including the public ICS), verify A
 
 **Option B — no local copy.** Download live `styles.css` and `assets/` from the site, put them next to these files (including the ICS), drag-drop the folder onto Netlify Deploys.
 
-Do **not** drag-drop only the two HTML/JS files this time — without the ICS, Apple/webcal 404s.
+**Option C — agent deploy script.** `NETLIFY_AUTH_TOKEN=… node _os/automation/bin/workshop-lp-deploy.js` mirrors live assets, overlays the three patched files, and publishes to the existing site named `momentum-workshop-pilot`. It will not create a site. `--dry-run` prints the file list only.
+
+Do **not** drag-drop only the two HTML/JS files — without styles/assets/ICS the site breaks or Apple/webcal 404s.
 
 The Netlify function is optional. Layer-1 auto-invite is the Apps Script webhook in [[../Calendar Auto-Add|Calendar Auto-Add]] — it does not have to ship with this static deploy.
 

@@ -163,9 +163,26 @@ describe("landing page wiring", () => {
     );
     assert.match(html, /The workshop lands on your calendar/);
     assert.match(html, /name="calendar_open"[\s\S]*checked/);
+    assert.match(html, /Thu, Aug 27/);
     assert.match(js, /momentum-workshop-event-v5/);
     assert.match(js, /https:\/\/meet\.google\.com\/ive-hkws-xdg/);
     assert.match(js, /growth-workshop-20260827@momentum-workshop-pilot\.netlify\.app/);
     assert.doesNotMatch(js, /Nothing is added without/);
+  });
+});
+
+describe("workshop LP deploy assembler", () => {
+  it("extracts local assets and never treats the Netlify origin as a missing file", () => {
+    const { pathsFromMarkup, PATCH_FILES, SITE_NAME } = require("../automation/bin/workshop-lp-deploy");
+    const html = fs.readFileSync(
+      path.join(VAULT, "02_Campaigns/Growth Workshop/lp-date-push/index.html"),
+      "utf8",
+    );
+    const paths = pathsFromMarkup(html);
+    assert.ok(paths.includes("styles.css"));
+    assert.ok(paths.includes("script.js"));
+    assert.ok(paths.includes("assets/momentum-360-logo.png"));
+    assert.equal(SITE_NAME, "momentum-workshop-pilot");
+    assert.ok(!paths.some((p) => p.includes('%23') || p.startsWith('%')));
   });
 });
