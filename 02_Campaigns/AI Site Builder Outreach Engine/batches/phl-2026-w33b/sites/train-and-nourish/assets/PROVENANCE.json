@@ -1,0 +1,40 @@
+{
+  "slug": "train-and-nourish",
+  "appliedAt": "2026-08-14T23:08:00.159Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/train-and-nourish",
+  "copied": 6,
+  "sources": [
+    {
+      "from": "source-01.png",
+      "to": "image-1.webp",
+      "as": "image-1.png"
+    },
+    {
+      "from": "source-02.png",
+      "to": "image-2.webp",
+      "as": "image-2.png"
+    },
+    {
+      "from": "source-03.png",
+      "to": "image-3.webp",
+      "as": "image-3.png"
+    },
+    {
+      "from": "source-04.png",
+      "to": "image-4.webp",
+      "as": "image-4.png"
+    },
+    {
+      "from": "source-05.png",
+      "to": "image-5.webp",
+      "as": "image-5.png"
+    },
+    {
+      "from": "source-06.png",
+      "to": "image-6.webp",
+      "as": "image-6.png"
+    }
+  ],
+  "hint": null,
+  "siteUrl": "https://trainandnourish.com/"
+}

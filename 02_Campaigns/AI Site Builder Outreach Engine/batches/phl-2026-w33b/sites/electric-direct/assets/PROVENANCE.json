@@ -1,0 +1,30 @@
+{
+  "slug": "electric-direct",
+  "appliedAt": "2026-08-14T23:08:08.708Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/electric-direct",
+  "copied": 4,
+  "sources": [
+    {
+      "from": "source-01.jpg",
+      "to": "image-1.webp",
+      "as": "image-1.jpg"
+    },
+    {
+      "from": "source-02.jpg",
+      "to": "image-2.webp",
+      "as": "image-2.jpg"
+    },
+    {
+      "from": "source-03.jpg",
+      "to": "image-3.webp",
+      "as": "image-3.jpg"
+    },
+    {
+      "from": "source-04.jpg",
+      "to": "image-4.webp",
+      "as": "image-4.jpg"
+    }
+  ],
+  "hint": "GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.",
+  "siteUrl": "https://www.electric-direct.net/"
+}

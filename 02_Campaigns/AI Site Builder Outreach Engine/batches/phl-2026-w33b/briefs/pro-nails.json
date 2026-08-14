@@ -1,0 +1,247 @@
+{
+  "slug": "pro-nails",
+  "name": "Pro Nails",
+  "city": "Royersford",
+  "category": "beauty",
+  "vertical": "spa-wellness",
+  "attitude": "warm",
+  "composition_ref": null,
+  "layout": "harvest-photo",
+  "heroMode": "photo",
+  "url": "https://gopronails.com/",
+  "description": "Pro Nails is dedicated to providing professional service and quality design. You can count on our work to be durable, sanitary, and of the highest caliber.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#E8F0FE",
+    "ink": "#2A2A2A",
+    "accent": "#E9B9D6",
+    "accent2": "#BA68C8",
+    "panel": "#E8DEF1",
+    "deep": "#3C4043",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Montserrat",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "About Us",
+      "href": "#top"
+    },
+    {
+      "label": "Locations",
+      "href": "#visit"
+    },
+    {
+      "label": "Nail Ideas",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Royersford | About Us",
+    "headline": "Professional",
+    "sub": "Pro Nails is dedicated to providing professional service and quality design. You can count on our work to be durable, sanitary, and of the highest caliber.",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "https://gopronails.com/"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Royersford",
+      "sub": "beauty"
+    },
+    "marquee": [
+      "About Us",
+      "Locations",
+      "Nail Ideas",
+      "Professional",
+      "Rare Quality",
+      "Only The Best"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Rare Quality",
+      "Only The Best",
+      "Looking for an idea?"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Pro Nails is a Royersford beauty.",
+      "Reach them through the official site.",
+      "Contact runs through their official site.",
+      "Serving Royersford and nearby towns."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Pro Nails is dedicated to providing professional service and quality design. You can count on our work to be durable, sanitary, and",
+      "Professional",
+      "Pro Nails serves people who live and work in Royersford.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Pro Nails is dedicated to providing professional service and quality design. You can count on our work to",
+      "Professional",
+      "Rare Quality"
+    ]
+  },
+  "feature": {
+    "heading": "Rare Quality",
+    "text": "Pro Nails is dedicated to providing professional service and quality design. You can count on our work to be durable, sanitary, and of the highest caliber.",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://gopronails.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Only The Best",
+    "text": "Pro Nails is a Royersford beauty. Come in when you're ready.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "About Us",
+        "href": "https://gopronails.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Locations",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Nail Ideas",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages."
+  },
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "https://gopronails.com/"
+    },
+    "heading": "Pro Nails"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://gopronails.com/"
+    },
+    {
+      "label": "Locations",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Pro Nails beauty in Royersford, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "marquee": [
+    "About Us",
+    "Locations",
+    "Nail Ideas",
+    "Professional",
+    "Rare Quality",
+    "Only The Best"
+  ],
+  "_wordCount": 234,
+  "_measuredWords": 366,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

@@ -1,0 +1,246 @@
+{
+  "slug": "red-hill-greenhouses-and-florist",
+  "name": "Red Hill Greenhouses & Florist",
+  "city": "Red Hill",
+  "category": "florist",
+  "vertical": "retail",
+  "attitude": "warm",
+  "composition_ref": null,
+  "layout": "harvest-shop",
+  "heroMode": "grid",
+  "url": "https://www.redhillgreenhouse.com/",
+  "phone": "(215) 679-7847",
+  "address": "1006 Main St, Red Hill, PA, 18076",
+  "description": "Order flowers online from your florist in Red Hill, PA. Red Hill Greenhouse & Florist, offers fresh flowers and hand delivery right to your door in Red Hill.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#F7F7F7",
+    "ink": "#232323",
+    "accent": "#15472D",
+    "accent2": "#8B3673",
+    "panel": "#AFBFB6",
+    "deep": "#242424",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "(215) 679-7847",
+      "href": "#offerings"
+    },
+    {
+      "label": "Log In",
+      "href": "#offerings"
+    },
+    {
+      "label": "Internal Search: Recommend",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Red Hill | (215) 679-7847",
+    "headline": "Summer vibes, floral style",
+    "sub": "Order flowers online from your florist in Red Hill, PA. Red Hill Greenhouse & Florist, offers fresh flowers and hand delivery right to your door in Red Hill.",
+    "ctaPrimary": {
+      "label": "Shop All Occasions",
+      "href": "tel:2156797847"
+    },
+    "ctaSecondary": {
+      "label": "Main Menu",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Red Hill",
+      "sub": "florist"
+    },
+    "marquee": [
+      "(215) 679-7847",
+      "Log In",
+      "Internal Search: Recommend",
+      "Summer Flowers",
+      "Occasions",
+      "Main Menu"
+    ]
+  },
+  "offerings": {
+    "heading": "Main Menu",
+    "items": [
+      "Summer vibes, floral style",
+      "Send Summer Flowers",
+      "Birthday Flowers"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Red Hill Greenhouses & Florist is a Red Hill florist.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Visit 1006 Main St, Red Hill, PA, 18076."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Birthday Flowers",
+    "paragraphs": [
+      "Flowers Summer Bouquets Best Sellers Plants Flowers in a Gift Roses Shop all Flower Types",
+      "Shop Price $45 - $55 $55 - $75 $75 - $100 $100 - $150 Over $150"
+    ]
+  },
+  "experience": {
+    "items": [
+      "In a hurry? Quick Shop Main Menu Quick Shop Select OccasionAnniversaryBirthdayGet WellJust BecauseLove & RomanceMake Someone SmileNew BabyThank",
+      "THE ITEMS YOU SEE HERE NEED TO BE ORDERED IN ADVANCE AND ARE ONLY AVAILABLE IN OUR DELIVERY",
+      "Only three add on items can be selected at a time. If you wish to change your selection,"
+    ]
+  },
+  "feature": {
+    "heading": "Send Summer Flowers",
+    "text": "In a hurry? Quick Shop Main Menu Quick Shop Select OccasionAnniversaryBirthdayGet WellJust BecauseLove & RomanceMake Someone SmileNew BabyThank You Select Price$45 - $55$55 - $75$75 - $100$100 -",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://www.redhillgreenhouse.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Our Most Popular Bouquets",
+    "text": "Shop Price $45 - $55 $55 - $75 $75 - $100 $100 - $150 Over $150",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "(215) 679-7847",
+        "href": "https://www.redhillgreenhouse.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Log In",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Internal Search: Recommend",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "THE ITEMS YOU SEE HERE NEED TO BE ORDERED IN ADVANCE AND ARE ONLY AVAILABLE IN OUR DELIVERY AREA RED HILL, PENNSBURG, EAST GREENVILLE, PALM, & HEREFORD. WE MUST HAVE A PHONE NUMBER FOR THE RECIPIENT TO DO THE DELIVERY! WE DO NOT DELIVER AFTER 5PM."
+  },
+  "closing": {
+    "cta": {
+      "label": "Shop All Occasions",
+      "href": "tel:2156797847"
+    },
+    "heading": "Red Hill Greenhouses & Florist"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.redhillgreenhouse.com/"
+    },
+    {
+      "label": "Log In",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Red Hill Greenhouses & Florist florist in Red Hill, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 52,
+    "sqs": 35,
+    "opportunity": 57,
+    "hard_faults": [
+      "client error 403",
+      "only 3 words on the homepage",
+      "homepage is noindex — invisible to search"
+    ]
+  },
+  "marquee": [
+    "(215) 679-7847",
+    "Log In",
+    "Internal Search: Recommend",
+    "Summer Flowers",
+    "Occasions",
+    "Main Menu"
+  ],
+  "_wordCount": 293,
+  "_measuredWords": 469,
+  "_measuredImages": 12,
+  "_measuredSections": 11
+}

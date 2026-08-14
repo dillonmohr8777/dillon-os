@@ -1,0 +1,15 @@
+{
+  "slug": "oaks-italian-deli-and-pizzeria",
+  "appliedAt": "2026-08-14T23:08:10.946Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/oaks-italian-deli-and-pizzeria",
+  "copied": 1,
+  "sources": [
+    {
+      "from": "source-01.png",
+      "to": "image-1.webp",
+      "as": "image-1.png"
+    }
+  ],
+  "hint": "GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.",
+  "siteUrl": "http://oaksitaliandeli.com/"
+}

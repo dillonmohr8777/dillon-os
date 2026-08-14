@@ -1,0 +1,251 @@
+{
+  "slug": "heart-and-soul-tattoo",
+  "name": "Heart & Soul Tattoo",
+  "city": "East Greenville",
+  "category": "tattoo",
+  "vertical": "spa-wellness",
+  "attitude": "neon",
+  "composition_ref": null,
+  "layout": "harvest-photo",
+  "heroMode": "photo",
+  "url": "https://heartandsoultattoos.com/",
+  "address": "205 MAIN STREET, East Greenville, PA",
+  "hours": "Monday: 12pm-5pm",
+  "description": "Artists Josh Hernandez​ Kevin Walker Sam Vanderberg​​ Scott Wilgeroth",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#F2DEDB",
+    "ink": "#333333",
+    "accent": "#CC3366",
+    "accent2": "#0D866F",
+    "panel": "#E6A7B6",
+    "deep": "#591E36",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Poppins",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "About",
+      "href": "#top"
+    },
+    {
+      "label": "Artists",
+      "href": "#offerings"
+    },
+    {
+      "label": "Josh Hernandez​",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "East Greenville | About",
+    "headline": "205 MAIN STREET",
+    "sub": "Artists Josh Hernandez​ Kevin Walker Sam Vanderberg​​ Scott Wilgeroth",
+    "ctaPrimary": {
+      "label": "Contact",
+      "href": "https://heartandsoultattoos.com/"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "East Greenville",
+      "sub": "tattoo"
+    },
+    "marquee": [
+      "About",
+      "Artists",
+      "Josh Hernandez​",
+      "Kevin Walker",
+      "Sam Vanderberg​​",
+      "Scott Wilgeroth"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "ABOUT US",
+      "205 MAIN STREET",
+      "(215)679-3775"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Heart & Soul Tattoo is a East Greenville tattoo.",
+      "Hours listed as Monday: 12pm-5pm.",
+      "Contact runs through their official site.",
+      "Visit 205 MAIN STREET, East Greenville, PA."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "ABOUT US",
+    "paragraphs": [
+      "Artists Josh Hernandez​ Kevin Walker Sam Vanderberg​​ Scott Wilgeroth",
+      "205 MAIN STREET",
+      "Heart & Soul Tattoo serves people who live and work in East Greenville.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "East Greenville tattoo care, written so a person can act on it."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Artists Josh Hernandez​ Kevin Walker Sam Vanderberg​​ Scott Wilgeroth",
+      "205 MAIN STREET",
+      "(215)679-3775"
+    ]
+  },
+  "feature": {
+    "heading": "(215)679-3775",
+    "text": "Artists Josh Hernandez​ Kevin Walker Sam Vanderberg​​ Scott Wilgeroth",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://heartandsoultattoos.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "East Greenville tattoo",
+    "text": "Heart & Soul Tattoo is a East Greenville tattoo. Come in when you're ready.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "About",
+        "href": "https://heartandsoultattoos.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Artists",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Josh Hernandez​",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages."
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact",
+      "href": "https://heartandsoultattoos.com/"
+    },
+    "heading": "Heart & Soul Tattoo"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://heartandsoultattoos.com/"
+    },
+    {
+      "label": "Artists",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Heart & Soul Tattoo tattoo in East Greenville, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "marquee": [
+    "About",
+    "Artists",
+    "Josh Hernandez​",
+    "Kevin Walker",
+    "Sam Vanderberg​​",
+    "Scott Wilgeroth"
+  ],
+  "_wordCount": 194,
+  "_measuredWords": 366,
+  "_measuredImages": 12,
+  "_measuredSections": 11
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "golden-sea",
+  "appliedAt": "2026-08-14T23:08:11.587Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/golden-sea",
+  "copied": 1,
+  "sources": [
+    {
+      "from": "source-01.gif",
+      "to": "image-1.webp",
+      "as": "image-1.gif"
+    }
+  ],
+  "hint": "GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.",
+  "siteUrl": "http://goldenseabluebell.com/"
+}

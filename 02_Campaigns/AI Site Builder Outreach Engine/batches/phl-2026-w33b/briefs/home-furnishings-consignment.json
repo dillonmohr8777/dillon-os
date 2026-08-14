@@ -1,0 +1,243 @@
+{
+  "slug": "home-furnishings-consignment",
+  "name": "Home Furnishings Consignment",
+  "city": "Wayne",
+  "category": "furniture",
+  "vertical": "retail",
+  "attitude": "warm",
+  "composition_ref": null,
+  "layout": "harvest-shop",
+  "heroMode": "grid",
+  "url": "http://www.hfconsignment.com/",
+  "phone": "610.964.1903",
+  "address": "139 East Swedesford Road, Wayne, PA 19087",
+  "description": "Home Furnishing Consignment • Gateway Shopping Center, 139 East Swedesford Road, Wayne, PA 19087 • 610.964.1903 • Email Us",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#E5E5E5",
+    "ink": "#404040",
+    "accent": "#BFA97D",
+    "accent2": "#C8A54F",
+    "panel": "#D9D2C4",
+    "deep": "#544D3F",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Raleway",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "Our Store & Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Consign With Us",
+      "href": "#offerings"
+    },
+    {
+      "label": "Why Consign?",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Wayne | Our Store & Services",
+    "headline": "Home Furnishings Consignment",
+    "sub": "Home Furnishing Consignment • Gateway Shopping Center, 139 East Swedesford Road, Wayne, PA 19087 • 610.964.1903 • Email Us",
+    "ctaPrimary": {
+      "label": "Location & Contact",
+      "href": "tel:6109641903"
+    },
+    "ctaSecondary": {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Wayne",
+      "sub": "furniture"
+    },
+    "marquee": [
+      "Our Store & Services",
+      "Consign With Us",
+      "Why Consign?",
+      "Gallery",
+      "Location & Contact"
+    ]
+  },
+  "offerings": {
+    "heading": "Our Store & Services",
+    "items": [
+      "Home Furnishing Consignment • Gateway Shopping Center, 139 East Swedesford Road, Wayne,",
+      "Come meet our experienced and friendly staff, browse our extensive inventory, and",
+      "Consign With Us! It’s the smart and easy way to sell! We"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Home Furnishings Consignment is a Wayne furniture.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Visit 139 East Swedesford Road, Wayne, PA 19087."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Home Furnishing Consignment • Gateway Shopping Center, 139 East Swedesford Road, Wayne, PA 19087 • 610.964.1903 • Email Us"
+    ]
+  },
+  "experience": {
+    "items": [
+      "Consign With Us! It’s the smart and easy way to sell! We take care of everything from pricing,",
+      "Conveniently located on the Mainline in Wayne, in the bustling Gateway Shopping Center, we’re closer than you think.",
+      "\"Shhh! Best kept secret around. While searching for items for our school's silent auction, I found Baker and"
+    ]
+  },
+  "feature": {
+    "heading": "Home Furnishing Consignment • Gateway Shopping Center, 139 East Swedesford Road, Wayne,",
+    "text": "Consign With Us! It’s the smart and easy way to sell! We take care of everything from pricing, merchandising, marketing, as well as third party delivery options.",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "http://www.hfconsignment.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Wayne furniture",
+    "text": "Come meet our experienced and friendly staff, browse our extensive inventory, and find some amazing deals!",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Location & Contact",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Our Store & Services",
+        "href": "http://www.hfconsignment.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Consign With Us",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Why Consign?",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "\"Great store! Was looking for Barrister bookcases and they did not have any, left my number and a couple of days later they called to let me know a set had come in. Stopped in and they had a great pair of bookcases at a great price. Service and convenience was great. I'll keep going back. Terrific furniture consignment store!\"- Richard from Phoenixville"
+  },
+  "closing": {
+    "cta": {
+      "label": "Location & Contact",
+      "href": "tel:6109641903"
+    },
+    "heading": "Home Furnishings Consignment"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://www.hfconsignment.com/"
+    },
+    {
+      "label": "Consign With Us",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Home Furnishings Consignment furniture in Wayne, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 31,
+    "opportunity": 60,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "table-based page layout"
+    ]
+  },
+  "marquee": [
+    "Our Store & Services",
+    "Consign With Us",
+    "Why Consign?",
+    "Gallery",
+    "Location & Contact"
+  ],
+  "_wordCount": 309,
+  "_measuredWords": 486,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

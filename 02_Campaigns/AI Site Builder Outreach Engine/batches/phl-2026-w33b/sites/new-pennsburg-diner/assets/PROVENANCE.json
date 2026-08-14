@@ -1,0 +1,40 @@
+{
+  "slug": "new-pennsburg-diner",
+  "appliedAt": "2026-08-14T23:08:05.162Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/new-pennsburg-diner",
+  "copied": 6,
+  "sources": [
+    {
+      "from": "source-01.jpg",
+      "to": "image-1.webp",
+      "as": "image-1.jpg"
+    },
+    {
+      "from": "source-02.jpg",
+      "to": "image-2.webp",
+      "as": "image-2.jpg"
+    },
+    {
+      "from": "source-03.jpg",
+      "to": "image-3.webp",
+      "as": "image-3.jpg"
+    },
+    {
+      "from": "source-04.png",
+      "to": "image-4.webp",
+      "as": "image-4.png"
+    },
+    {
+      "from": "source-05.gif",
+      "to": "image-5.webp",
+      "as": "image-5.gif"
+    },
+    {
+      "from": "source-06.gif",
+      "to": "image-6.webp",
+      "as": "image-6.gif"
+    }
+  ],
+  "hint": null,
+  "siteUrl": "https://pennsburgdiner.com/"
+}

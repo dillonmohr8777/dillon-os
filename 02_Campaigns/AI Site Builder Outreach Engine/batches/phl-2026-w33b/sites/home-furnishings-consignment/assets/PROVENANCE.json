@@ -1,0 +1,15 @@
+{
+  "slug": "home-furnishings-consignment",
+  "appliedAt": "2026-08-14T23:08:09.390Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/home-furnishings-consignment",
+  "copied": 1,
+  "sources": [
+    {
+      "from": "source-01.jpg",
+      "to": "image-1.webp",
+      "as": "image-1.jpg"
+    }
+  ],
+  "hint": "GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.",
+  "siteUrl": "http://www.hfconsignment.com/"
+}

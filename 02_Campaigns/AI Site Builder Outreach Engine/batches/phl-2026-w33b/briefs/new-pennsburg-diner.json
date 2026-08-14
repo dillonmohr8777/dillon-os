@@ -1,0 +1,246 @@
+{
+  "slug": "new-pennsburg-diner",
+  "name": "New Pennsburg Diner",
+  "city": "Montgomery County",
+  "category": "restaurant",
+  "vertical": "food",
+  "attitude": "warm",
+  "composition_ref": null,
+  "layout": "harvest-diner",
+  "heroMode": "photo",
+  "url": "https://pennsburgdiner.com/",
+  "phone": "Call Now: 215-679-2190",
+  "description": "Family owned restaurant serving the community for over 30 years. Come enjoyn your dinner with your friends and family. Order online and pickup.",
+  "noindex": true,
+  "schemaType": "Restaurant",
+  "logo": false,
+  "tokens": {
+    "paper": "#BFBFBF",
+    "ink": "#111111",
+    "accent": "#C39D63",
+    "accent2": "#2EA3F2",
+    "panel": "#C0B4A2",
+    "deep": "#1F1F1F",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "Order Online",
+      "href": "#offerings"
+    },
+    {
+      "label": "Menus",
+      "href": "#offerings"
+    },
+    {
+      "label": "Breakfast",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Montgomery County | Order Online",
+    "headline": "The New Pennsburg Diner.",
+    "sub": "Family owned restaurant serving the community for over 30 years. Come enjoyn your dinner with your friends and family. Order online and pickup.",
+    "ctaPrimary": {
+      "label": "Order Online",
+      "href": "tel:2156792190"
+    },
+    "ctaSecondary": {
+      "label": "Menus",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Montgomery County",
+      "sub": "restaurant"
+    },
+    "marquee": [
+      "Order Online",
+      "Menus",
+      "Breakfast",
+      "Dinner",
+      "Photo Gallery",
+      "Events Gallery"
+    ]
+  },
+  "offerings": {
+    "heading": "Menus",
+    "items": [
+      "Our Story",
+      "Only the Best",
+      "Fresh Ingredients, Tasty Homemade Meals"
+    ]
+  },
+  "proof": {
+    "items": [
+      "New Pennsburg Diner has served Montgomery County since 1981.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Serving Montgomery County and nearby towns."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Our Story",
+    "paragraphs": [
+      "Our family owned business has been serving the local community and new faces alike since 1981, providing a warm family atmosphere. You",
+      "Come enjoy your family & friends with us. Schedule your events. We can accommodate almost every request.",
+      "New Pennsburg Diner serves people who live and work in Montgomery County."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Our signature fresh 1/2 lb burgers are served with steak fries and a choice of coleslaw or guacamole.",
+      "Stay tuned for upcoming events. Sign up to our newsletter.",
+      "Don't be shy. Let us know if you have any questions!"
+    ]
+  },
+  "feature": {
+    "heading": "Only the Best",
+    "text": "Our signature fresh 1/2 lb burgers are served with steak fries and a choice of coleslaw or guacamole.",
+    "cta": {
+      "label": "Order Online",
+      "href": "https://pennsburgdiner.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Fresh Ingredients, Tasty Homemade Meals",
+    "text": "Come enjoy your family & friends with us. Schedule your events. We can accommodate almost every request.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Contact Us",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Order Online",
+        "href": "https://pennsburgdiner.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Menus",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Breakfast",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages."
+  },
+  "closing": {
+    "cta": {
+      "label": "Order Online",
+      "href": "tel:2156792190"
+    },
+    "heading": "New Pennsburg Diner"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://pennsburgdiner.com/"
+    },
+    {
+      "label": "Menus",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "New Pennsburg Diner restaurant in Montgomery County, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 60,
+    "sqs": 33,
+    "opportunity": 65,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "marquee": [
+    "Order Online",
+    "Menus",
+    "Breakfast",
+    "Dinner",
+    "Photo Gallery",
+    "Events Gallery"
+  ],
+  "_wordCount": 234,
+  "_measuredWords": 363,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

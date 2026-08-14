@@ -16,10 +16,13 @@ deploy credentials.
 - Templates and QA live under `_templates/site-factory/` when present, or
   campaign folders under `02_Campaigns/`.
 - Week 33 batch: `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/`
-  maps [[12_Brain/research/2026-08-14 - Reddit-cited UI wow library|200 wow-site
-  composition refs]] onto 25 unbuilt radar rebuilds. Harvest owns brand and
-  facts. Layout chrome is mirrored from the mapped wow homepage. Demos stay
+  mapped wow-library composition refs onto 25 radar rebuilds. Demos stay
   noindex. mail_ready stays hold.
+- Week 33b batch: `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33b/`
+  is a new unused radar slice (priority desc). Follows
+  `.claude/skills/mirror-and-improve/SKILL.md`: harvest each prospect's live
+  site, keep their voice, photos, palette, and logo, then rebuild. No
+  wow-library chrome. Demos stay noindex. mail_ready stays hold.
 - Secrets and host tokens never land in this note.
 
 ## Links

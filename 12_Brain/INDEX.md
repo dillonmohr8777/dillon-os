@@ -75,6 +75,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - `handoffs/prospect-radar-blockers-2026-08-06.md` — open blockers for the desktop agent: Tier 1 unproven, thresholds Tier-0-anchored, OSM trade coverage, no outcome data.
 - `_os/radar-engine/` — Prospect Radar V2 adapter layer (intake, QA, reports, dry-run handoff). See [[12_Brain/projects/Prospect Radar V2]].
 - `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/` — week 33 radar rebuild batch (25 noindex demos, mail hold).
+- `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33b/` — week 33b unused radar slice, mirror-and-improve (25 noindex demos, mail hold).
 
 ## Folder indexes (working vault)
 
