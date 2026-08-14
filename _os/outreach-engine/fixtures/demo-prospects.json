@@ -1,0 +1,28 @@
+{
+  "id": "demo",
+  "title": "Fictional demo batch",
+  "prospects": [
+    {
+      "prospect_id": "DEMO-001",
+      "business_name": "Ridley Park Roofing Co",
+      "slug": "ridley-park-roofing-co",
+      "vertical": "Home Services",
+      "city": "Philadelphia",
+      "address": "100 Demo Ave, Philadelphia, PA 19125",
+      "phone": "215-555-0199",
+      "website": "https://example.com/ridley-park-roofing",
+      "live_site": ""
+    },
+    {
+      "prospect_id": "DEMO-002",
+      "business_name": "Kensington Coil HVAC",
+      "slug": "kensington-coil-hvac",
+      "vertical": "HVAC",
+      "city": "Philadelphia",
+      "address": "200 Demo St, Philadelphia, PA 19125",
+      "phone": "215-555-0188",
+      "website": "https://example.com/kensington-coil",
+      "live_site": ""
+    }
+  ]
+}

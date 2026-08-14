@@ -163,6 +163,10 @@
           <div class="label">12_Brain layer</div>
           <div class="row"><span class="value" id="v-brain">—</span><span class="delta" id="v-brain-detail">canonical</span></div>
         </div>
+        <div class="tile">
+          <div class="label">Outreach · Jesse 238</div>
+          <div class="row"><span class="value" id="v-outreach">—</span><span class="delta" id="v-outreach-detail">mail hold</span></div>
+        </div>
       </div>
       <div class="panel scroll" style="flex:1">
         <h2>Directives <span class="tag" id="dir-src"></span></h2>
@@ -262,6 +266,11 @@ function render() {
   $('v-brain-detail').textContent = b.present
     ? `E${b.entities||0} C${b.concepts||0} D${b.decisions||0}`
     : 'missing 12_Brain';
+  const o = state.outreach || {};
+  $('v-outreach').textContent = o.jesse238 != null ? o.jesse238 : '—';
+  $('v-outreach-detail').textContent = o.latestBatch
+    ? `${o.latestBatch} · ${o.latestCount} packed · mail hold`
+    : 'mail hold';
   $('pill-vault').textContent = `${v.notes} NOTES`;
   drawSpark(v.activity);
 

@@ -148,6 +148,66 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (p === '/api/outreach/book' && req.method === 'POST') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 8192) req.destroy(); });
+    req.on('end', () => {
+      try {
+        const payload = JSON.parse(body || '{}');
+        const batchId = String(payload.batch_id || 'jesse-238').replace(/[^a-z0-9._-]/gi, '');
+        const prospectId = String(payload.prospect_id || '').slice(0, 40);
+        if (!prospectId) return json(res, 400, { error: 'prospect_id required' });
+        const dir = path.join(VAULT, '02_Campaigns/AI Site Builder Outreach Engine/batches', batchId);
+        if (!fs.existsSync(dir)) return json(res, 404, { error: 'unknown batch' });
+        const row = {
+          type: 'call_booked',
+          prospect_id: prospectId,
+          at: new Date().toISOString(),
+        };
+        fs.appendFileSync(path.join(dir, 'bookings.jsonl'), JSON.stringify(row) + '\n');
+        try {
+          const { loadLedger, saveLedger, recordEvent, emptyLedger } = require('./outreach-engine/lib/ledger');
+          let ledger = loadLedger(dir);
+          if (!ledger) {
+            const batch = JSON.parse(fs.readFileSync(path.join(dir, 'batch.json'), 'utf8'));
+            ledger = emptyLedger(batch);
+          }
+          recordEvent(ledger, row);
+          saveLedger(dir, ledger);
+        } catch { /* ledger is best-effort */ }
+        json(res, 200, { ok: true, held: true });
+      } catch {
+        json(res, 400, { error: 'bad request' });
+      }
+    });
+    return;
+  }
+
+  const outreach = p.match(/^\/outreach\/([a-z0-9._-]+)(?:\/(.*))?$/i);
+  if (outreach && req.method === 'GET') {
+    const batchId = outreach[1];
+    const rel = decodeURIComponent(outreach[2] || 'index.html').replace(/^\/+/, '');
+    if (rel.includes('..') || path.isAbsolute(rel)) return json(res, 400, { error: 'bad path' });
+    const root = path.join(VAULT, '02_Campaigns/AI Site Builder Outreach Engine/batches', batchId);
+    const file = path.join(root, rel);
+    const resolved = path.resolve(file);
+    if (!resolved.startsWith(path.resolve(root) + path.sep) && resolved !== path.resolve(root)) {
+      return json(res, 400, { error: 'bad path' });
+    }
+    if (!fs.existsSync(resolved) || fs.statSync(resolved).isDirectory()) {
+      const index = path.join(resolved, 'index.html');
+      if (fs.existsSync(index)) {
+        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+        return res.end(fs.readFileSync(index));
+      }
+      return json(res, 404, { error: 'not found' });
+    }
+    const ext = path.extname(resolved);
+    const types = { '.html': 'text/html; charset=utf-8', '.svg': 'image/svg+xml', '.csv': 'text/csv; charset=utf-8', '.json': 'application/json', '.md': 'text/markdown; charset=utf-8' };
+    res.writeHead(200, { 'content-type': types[ext] || 'application/octet-stream', 'cache-control': 'no-store' });
+    return res.end(fs.readFileSync(resolved));
+  }
+
   json(res, 404, { error: 'not found' });
 });
 
