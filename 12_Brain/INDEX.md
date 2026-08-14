@@ -34,7 +34,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Concepts
 
-- [[12_Brain/concepts/Second Brain Architecture|Second Brain Architecture]] — vault-as-codebase: raw → compiled pages → linked graph.
+- [[12_Brain/concepts/Dillon Command Center|Dillon Command Center]] — umbrella daily loop: 8 parallel scouts + one approval board.
 - [[12_Brain/concepts/Context Economy|Context Economy]] — read by trail not sweep; tier model use.
 - [[12_Brain/concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
 - [[12_Brain/concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.

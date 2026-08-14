@@ -157,3 +157,25 @@ test('analyzeHtml detects missing viewport on broken fixture', () => {
   const viewport = analyzed.checks.find((c) => c.id === 'viewport');
   assert.equal(viewport.ok, false);
 });
+
+test('dillon-command scaffolds run folder and profile lanes', async () => {
+  const { spawnSync } = require('node:child_process');
+  const date = '2099-01-01';
+  const result = spawnSync(process.execPath, [
+    repoPath('_os/automation/bin/dillon-command.js'),
+    '--date',
+    date,
+  ], { cwd: repoPath(), encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
+  const out = JSON.parse(result.stdout);
+  assert.equal(out.ok, true);
+  const runDir = repoPath('automation-runs/dillon-command', date);
+  assert.equal(fs.existsSync(path.join(runDir, 'run-state.json')), true);
+  const state = JSON.parse(fs.readFileSync(path.join(runDir, 'run-state.json'), 'utf8'));
+  assert.equal(state.workflow_id, 'dillon-command');
+  assert.equal(state.lanes.length, 8);
+  const profile = JSON.parse(
+    fs.readFileSync(repoPath('_os/automation/profiles/dillon-command.json'), 'utf8')
+  );
+  assert.equal(profile.lanes.length, 8);
+});

@@ -1,9 +1,29 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-14",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
+    {
+      "id": "dillon-command",
+      "name": "Dillon Command Center (umbrella daily loop)",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "daily weekdays ~06:45 ET",
+      "command": "node _os/automation/bin/dillon-command.js --preflight",
+      "depends_on": ["frontmatter-validate", "site-health-sentinel"],
+      "inputs": ["vault inbox", "01_Clients/", "12_Brain/registry/", "Daily-Briefs/"],
+      "outputs": [
+        "automation-runs/dillon-command/YYYY-MM-DD/",
+        "Daily-Briefs/am-report-YYYY-MM-DD.md",
+        "Daily-Briefs/plan-YYYY-MM-DD.md",
+        "Daily-Briefs/pulse-today.md",
+        "12_Brain/state/dillon-command.json"
+      ],
+      "external_actions": false,
+      "notes": "Umbrella workflow: 8 parallel scout lanes + command synthesis. Skill: .claude/skills/dillon-command/SKILL.md. Supersedes separate morning-loop crons.",
+      "status": "implemented"
+    },
     {
       "id": "frontmatter-validate",
       "name": "Client frontmatter validation",
