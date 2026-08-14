@@ -11,16 +11,17 @@ status: DRAFT-NOT-SENT
 
 ---
 
-Hey man — workshop update. Since the 13th came and went, I moved everything to **Thursday Aug 27, 12 PM ET** and built the whole two-week push around it:
+Hey — need your read on the fill plan before Tuesday.
 
-1. **Page** — I have the updated landing page ready with the new date (5-min swap on my end, same link: momentumvirtualtours.com/growth-workshop)
-2. **Franchise emails** — list is BUILT: **5,359 unique contacts, $0, public sources, MX-checked.** We are **not** blasting the 4,914 UPS Store location inboxes (those are shipping mailboxes; that's how you get marked spam). First sends are the Philly 200-list + owner-density franchise rows (CertaPro / PACKOUTS / named / Comfort Keepers). UPS PA/NJ/DE is LinkedIn/DM research, not email. Drive folder still has the full file — I'll share it to you directly (not posting the link here).
-3. **All the copy** — 3-touch invite (plain text, one link). When someone registers, confirmation is HTML so Gmail can put Thursday on their calendar automatically. That's the Google piece — registrants only, not the cold list.
-4. **Calendar** — day-by-day from now to the 27th: emails Tue–Thu mornings, your reels on the 20th and 25th, Mac's LinkedIn posts on the 18th/21st/26th. Registering on the page already opens Google Calendar in the same click.
+Page is live for **Thu Aug 27, 12 PM ET**. Registering already opens Google Calendar in the same click. Confirmation email (once they opt in) is what actually puts it on Gmail — we're not blasting a calendar invite to a cold list. Google won't let a public page silently write onto someone else's calendar, and doing that to a scraped list is how you get marked spam.
 
-Need three things from you to go live:
-1. **Confirm the Meet link** I already created on the workshop calendar (https://meet.google.com/ive-hkws-xdg) — or send a Zoom and I'll swap it
-2. **Which mailbox sends** — I'd use sean@needmomentum.com (needs SPF/DKIM; that's also what Gmail requires for the confirmation card)
-3. **Seat cap or no cap?**
+On the list: I pulled **5,359 public franchise emails at $0**, but **4,914 are UPS Store location inboxes** (shipping mailboxes, not owners). If we send the workshop to those we burn the domain and still don't fill the room. My call is we email the **Philly 200-list + the owner-density franchise rows** (CertaPro / PACKOUTS / named / Comfort Keepers — a few hundred, first wave 50) and use UPS only as LinkedIn/DM research in PA/NJ/DE.
 
-Not blasting the franchise list onto the Google event. Registrants only. Send me those and the first invites go out Tuesday morning. LFG
+Two things I need from you:
+
+1. **What do you think of that?** If you'd rather still blast the UPS boxes, say so — I'd push back, but it's your workshop.
+2. **How many emails do you actually have access to right now?** GHL, Skool, past leads, Momentum list, whatever is already permissioned. That's probably a better fill than the scrape. Rough number is enough.
+
+Also still need: confirm the Meet link (https://meet.google.com/ive-hkws-xdg) or send a Zoom, which mailbox sends (I'd use sean@needmomentum.com), and seat cap or no cap.
+
+First invites would go Tue morning once you greenlight.
