@@ -2,42 +2,44 @@
 tags: [research, franchise, sourcing, outreach]
 created: 2026-08-14
 expires: 2026-11-14
-source: "[[12_Brain/raw/research/2026-08-14 Franchise Email Sourcing Receipts]]"
+source: "[[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest]]"
 ---
 
 # Franchise Email Sourcing
 
-One-line summary: brand locator dumps and static Yext store pages produced
-**5,359 MX-ok franchise contacts at $0** on 2026-08-14; most other locators
-are JS shells and are not worth crawling.
+One-line summary: the send list is **720 MX-ok franchisee/office mailboxes**
+(not the 4,914 UPS Store front-desk inboxes). Evening harvest added Synergy
+HomeCare + Mosquito Squad on top of CertaPro / PACKOUTS / Comfort Keepers.
 
-Method and rules live in
-[[02_Campaigns/Growth Workshop/Franchise Email Sourcing Playbook|the campaign playbook]].
-Contact rows live in the private Drive folder / artifact, never here.
+Method: [[02_Campaigns/Growth Workshop/Franchise Email Sourcing Playbook]].
+Contact rows: private Drive / artifact only.
 
-## Verified (receipts in source file)
+Afternoon receipts: [[12_Brain/raw/research/2026-08-14 Franchise Email Sourcing Receipts]].
+Evening receipts: [[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest]].
+
+## Send-ready (what to email)
 
 | Mechanism | Unique emails | Notes |
 |---|---|---|
-| CertaPro `GET /wp-json/certapro-location-profiles/v1/profiles` | 354 | Full dump; zip-by-zip sweep is obsolete |
-| UPS Store Yext sitemap → store pages | 4,914 | National, all 50 states, role mailboxes |
-| Comfort Keepers `ckficms-api.ckweb.org/api/states?filter[include]=offices` | 54 | 567 offices, most share/omit email |
-| 1-800-PACKOUTS `/locations/` HTML | 38 | 31 named first.last@ |
-| **Total unique, MX-ok** | **5,359** | 46 named-heuristic, 429 PA/NJ/DE |
+| CertaPro `GET /wp-json/certapro-location-profiles/v1/profiles` | 354 | Franchisee territory mailbox |
+| Synergy HomeCare location pages (`location-sitemap.xml`) | 152 | Printed on the location home |
+| Mosquito Squad `/{territory}/contact-us/` | 123 | Franchisee territory mailbox |
+| Comfort Keepers offices API | 53 | Office mailbox |
+| 1-800-PACKOUTS `/locations/` HTML | 38 | 30 named first.last |
+| **Send-ready, MX-ok** | **720** | 123 named-style · 56 PA/NJ/DE |
 
-MX pass rate 5,359 / 5,360 (one concatenated-mailbox row dropped). Brand-published corporate domains remain effectively always-deliverable.
+UPS Store Yext pages still exist (**4,914** `store####@` front-desk boxes). They are a LinkedIn/GBP research pool, not a send list. MX-ok ≠ owner.
 
 ## Lessons
 
-- **Look for the dump endpoint before crawling.** CertaPro's plural `…-profiles/v1/profiles` and Comfort Keepers' JSON:API include beat thousands of zip GETs. Check `/wp-json/` namespaces and fat locator HTML for embedded `api.` hosts.
-- **Yext sitemaps are not enough.** UPS Store pages print `email` in JSON-LD. Massage Envy / Merry Maids / Two Men sitemaps exist but sample pages had no mailbox — probe one page before a national crawl.
-- **Static HTML is still the filter.** Neighborly, 360/Five Star Painting, SERVPRO, Visiting Angels (621 location homes), PostalAnnex store pages: large sitemaps, zero harvestable emails.
-- **Named-owner density is brand-specific.** PACKOUTS locations page is ~80% named; UPS Store is ~0% named (store####@); CertaPro is a mix. Sort by `Email Type`, don't trust the heuristic as identity.
-- **Sister brands do not always share a GET dump.** Paul Davis (FirstService sibling) zip lookup is POST / token-gated. Don't assume CertaPro's route exists next door.
+- **A store counter inbox is not an owner.** UPS `store####@` is for shipping customers. Do not blast it.
+- **Look for the dump endpoint before crawling.** CertaPro's plural profiles dump and Comfort Keepers' JSON:API include beat zip GETs.
+- **When there is no dump, probe one location page, then the contact subpage.** Mosquito Squad homes have no email; `contact-us` does. Synergy homes often do.
+- **Yext / Neighborly locators are usually JS shells.** Joint clinic pages print a vendor domain. Lawn Doctor REST dumps are 401. Probe one page before a national crawl.
+- **Named-owner density is brand-specific.** PACKOUTS is mostly first.last. CertaPro/MSQ are territory mailboxes (still the franchisee's business email). Sort by `Email Type`.
 
 ## Open (next passes)
 
-- Lane A: FDD Item 20 owner-name enrichment on the 4,914 UPS rows.
-- Yext brands whose *sample page* shows an email (none of the afternoon probes did).
+- Lane A: FDD Item 20 owner-name enrichment for LinkedIn/GBP DMs (still almost never emails).
 - Lane C franchisor-tier after send data.
-- Lane D trade-press multi-unit names.
+- Lane D trade-press multi-unit names with a literal public email.

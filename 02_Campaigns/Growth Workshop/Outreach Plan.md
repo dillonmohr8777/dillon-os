@@ -13,15 +13,15 @@ All copy lives in [[Drip Copy]]. Contact sourcing lives in [[Franchise Email Sou
 
 ## Goals and honest math
 
-Cold B2B email converts when it hits an owner. UPS Store `store####@` boxes are customer-shipping inboxes; blasting them inflates send volume and spam-complaint risk without filling Thursday.
+Cold B2B email converts when it hits an owner. A UPS Store `store####@` box is the **shipping counter** — the person who hands you a package, not the person who owns the franchise. Blasting those inflates send volume and spam-complaint risk without filling Thursday.
 
 | Source | Volume | Expected registrations |
 |---|---|---|
 | Philly 200-list (3 touches) | ~200 | 4–10 |
-| Franchise owner-density (3 touches) | ~50 wave 1, then ~350 if gate green | 4–12 |
-| UPS Store role mailboxes | 4,914 | **0 from email.** LinkedIn/GBP DMs on PA/NJ/DE owners only, 1–4 |
+| Franchise send-ready (3 touches) | 50 wave 1, then 670 if gate green | 8–20 |
+| UPS Store front-desk inboxes | 4,914 | **0 from email.** LinkedIn/GBP DMs on PA/NJ/DE owners only, 1–4 |
 | Skool + LinkedIn + DMs + GBP + IG/X + signatures | — | 5–15 |
-| **Total realistic range** | | **14–41 registered / ~40–60% show rate** |
+| **Total realistic range** | | **18–49 registered / ~40–60% show rate** |
 
 Show rate is the Google problem, not the fill problem. Registrants get the Gmail EventReservation C1 + LP one-click calendar save. A 15–25 person live room is still a strong pilot. The real asset is the repeatable engine + a domain that is not burned.
 
@@ -30,8 +30,8 @@ Show rate is the Google problem, not the fill problem. Registrants get the Gmail
 | # | Channel | Owner | Cadence |
 |---|---|---|---|
 | 1 | Cold email — 200-list | Sean sends, Dillon preps | T1 Aug 18 · T2 Aug 21 · T3 Aug 25 |
-| 2 | Cold email — franchise owner-density (50, then rest if gate green) | Sean sends, Dillon preps | T1 Aug 19 · T2 Aug 24 · T3 Aug 26 |
-| 3 | Cold email — UPS Store role mailboxes | **blocked** | Do not send. Convert PA/NJ/DE rows to owner DMs instead |
+| 2 | Cold email — franchise send-ready (50 named, then rest if gate green) | Sean sends, Dillon preps | T1 Aug 19 · T2 Aug 24 · T3 Aug 26 |
+| 3 | Cold email — UPS Store front-desk inboxes | **blocked** | Do not send. Convert PA/NJ/DE rows to owner DMs instead |
 | 4 | Skool community post | Sean | Aug 18, bump Aug 25 |
 | 5 | LinkedIn posts (Mac + Sean, Dillon reposts) | Mac/Sean | Aug 18 · Aug 21 · Aug 26 |
 | 6 | LinkedIn DMs (10–15/day, manual) | Sean/Mac | Aug 19–26 |
@@ -52,7 +52,7 @@ Show rate is the Google problem, not the fill problem. Registrants get the Gmail
 **Mon Aug 17**
 - LP verified live with Aug 27. Meeting link into all copy placeholders.
 - 200-list cleaned in the Drive sheet (dupes out, dead domains flagged, statuses normalized).
-- Franchise pilot sheet delivered to Sean (wave 1 = 50 **owner-density** rows marked; UPS `store@` rows tagged do-not-blast).
+- Franchise **send-ready** sheet delivered to Sean (wave 1 = 50 named people marked; 670 more franchisee mailboxes in Wave 2; UPS counters are not in this file).
 - Sean/Mac approve Touch-1 copy word-for-word. Signatures go live.
 
 **Tue Aug 18** — 200-list Touch 1 (40–60 sends, spread through the morning; rest Wed). Skool post. GBP post. LinkedIn post 1.

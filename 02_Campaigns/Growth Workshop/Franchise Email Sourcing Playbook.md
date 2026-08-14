@@ -37,18 +37,22 @@ Item 20 gives **names + cities + phones, almost never emails** — it's the auth
 
 ### Lane B — brand location pages (the email harvest) — RUN 2026-08-14
 
-Service franchises publish per-location pages, and some list the location email right on the page. This is the volume lane, and it's now verified: **the winning move is the brand's own locator endpoint, not page-by-page crawling.** Check the locator page's JS for `wp-json`/Yext routes first.
+Service franchises publish per-location pages, and some list the location email right on the page. **The winning move is the brand's own locator endpoint** (`wp-json` / offices API). When that is 401/JS-shell, probe one location home **and** its contact-us page before a national crawl.
 
-Verified mechanisms (full receipts: [[12_Brain/research/Franchise Email Sourcing]]):
+**UPS Store `store####@` is not Lane B for sending.** It is a front-desk shipping inbox. Keep those rows as LinkedIn/GBP research only.
 
-| Mechanism | Yield |
-|---|---|
-| CertaPro Painters `GET /wp-json/certapro-location-profiles/v1/profiles` (full dump) | 354 unique territory emails |
-| The UPS Store national Yext sitemap → store pages | 4,914 store mailboxes, all 50 states |
-| Comfort Keepers `ckficms-api.ckweb.org` offices include | 54 unique office emails |
-| 1-800-PACKOUTS `/locations/` HTML | 38 (31 named) |
+Verified sendable mechanisms (full receipts: [[12_Brain/research/Franchise Email Sourcing]]):
 
-Confirmed dead ends (JS-shell locators, no static emails): Pillar To Post, HouseMaster, Mathnasium, Fish Window Cleaning, Minuteman Press, Signarama, AlphaGraphics, Visiting Angels, Senior Helpers, Interim HealthCare, Amada. Probe one location page per brand before committing to a crawl.
+| Mechanism | Yield | Send? |
+|---|---|---|
+| CertaPro Painters `GET /wp-json/certapro-location-profiles/v1/profiles` | 354 territory emails | yes — franchisee business mailbox |
+| Synergy HomeCare location pages (`location-sitemap.xml`) | 152 | yes — printed on the location page |
+| Mosquito Squad `/{territory}/contact-us/` | 123 | yes — franchisee territory mailbox |
+| Comfort Keepers offices API | 53 | yes — office mailbox |
+| 1-800-PACKOUTS `/locations/` HTML | 38 (30 named) | yes — best named density |
+| The UPS Store national Yext sitemap → store pages | 4,914 `store####@` | **no** — front desk, not owner |
+
+Confirmed dead ends (JS-shell locators, no static emails): Pillar To Post, HouseMaster, Mathnasium, Fish Window Cleaning, Minuteman Press, Signarama, AlphaGraphics, Visiting Angels, Senior Helpers, Interim HealthCare, Amada, The Joint (vendor mailbox on clinic pages), Lawn Doctor REST (401), Neighborly family, ShelfGenie, Precision Door, Always Best Care, Griswold, Homewatch. Probe one location page per brand before committing to a crawl.
 
 Per row capture: brand, location, contact name, email, phone, city, state, category, `role_type` (owner_operator | location_mailbox), source URL, accessed date.
 
@@ -71,7 +75,7 @@ Franchise trade press (1851franchise.com, Franchise Times, local business journa
 7. Wave 1 = 50 rows, prioritized: named owner > PA/NJ/DE > category fit.
 8. After sends: bounces/replies/opt-outs → `Outreach Status` immediately.
 
-**Scale run result (2026-08-14 afternoon):** **5,359** unique contacts, 429 PA/NJ/DE, 5,359/5,359 `mx_ok` after dropping one bad row. Wave 1 = 50. Send Batch A = first 1,000. Remainder = 4,359 behind the bounce gate. Delivered as Drive folder "Franchise Workshop Lists — 2026-08-14" + private artifact — zero contact rows in this repo.
+**Send-ready result (2026-08-14 evening):** **720** unique MX-ok franchisee/office mailboxes (CertaPro 354 · Synergy 152 · Mosquito Squad 123 · Comfort Keepers 53 · PACKOUTS 38). Named-style **123**. Wave 1 = 50 named. PA/NJ/DE = 56. The 4,914 UPS Store front-desk inboxes are **not** in this file. Drive sheets live in folder "Franchise Workshop Lists — 2026-08-14" (Wave 1 + full 720). Zero contact rows in this repo.
 
 ## Tracker schema (same as the 200-list sheet)
 

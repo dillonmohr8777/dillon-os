@@ -7,11 +7,11 @@ source: "[[12_Brain/research/Franchise Email Sourcing]]"
 
 # Google RSVP Rail
 
-One-line summary: Google is the RSVP rail for people who opted in; the 5,359-row file is a ranked pool, not a blast list — never calendar-invite or EventReservation the cold franchise rows.
+One-line summary: Google is the RSVP rail for people who opted in; email the **720 send-ready franchisee rows**, never the UPS Store front-desk inboxes, and never calendar-invite the cold list.
 
 ## The breakthrough
 
-Blasting 4,914 UPS Store role mailboxes will not fill Thursday. Those boxes exist for shipping customers. A "grow without you" workshop in that inbox looks like spam, and one complaint round kills `needmomentum.com` before Gate #1.
+Blasting 4,914 UPS Store location inboxes will not fill Thursday. Those boxes are the **shipping counter** — customers asking where a package is. A "grow without you" workshop in that inbox looks like spam, and one complaint round kills the sending domain before Gate #1.
 
 Google will not let a public page silently write onto someone else's calendar. Calendar-inviting the cold list is the same abuse with a nicer UI.
 
@@ -19,7 +19,7 @@ The working split:
 
 | Rail | Who | What Google does |
 |---|---|---|
-| **Fill** | 200-list + owner-density franchise rows (CertaPro, PACKOUTS, named, Comfort Keepers). UPS `store…@` stays a LinkedIn/GBP research pool | Nothing. Plain-text email, one register link. LP already opens Google Calendar on submit. |
+| **Fill** | 200-list + **720 send-ready** franchisee rows (CertaPro, Synergy, Mosquito Squad, PACKOUTS, Comfort Keepers). UPS `store####@` stays a LinkedIn/GBP research pool | Nothing. Plain-text email, one register link. LP already opens Google Calendar on submit. |
 | **Show** | Registrants only | EventReservation card in Gmail (C1 HTML) + Calendar API invite (Apps Script, still to connect) + Event JSON-LD on the live LP so Search can understand Thursday |
 
 ## Do not do
@@ -34,8 +34,8 @@ The working split:
 | Pool | Approx | Use |
 |---|---|---|
 | Philly 200-list | ~200 | Touch 1 Tue Aug 18 |
-| Named + PACKOUTS + CertaPro + Comfort Keepers | ~400 | Franchise wave 1 = 50 from this pool, then the rest if Gate #1 is green |
-| UPS Store role mailboxes | 4,914 | **Do not blast.** PA/NJ/DE subset only as LinkedIn/GBP owner lookup, then DMs |
+| Send-ready franchisee mailboxes | **720** (123 named-style) | Wave 1 = 50 named. Wave 2 = remaining 670 if Gate #1 is green |
+| UPS Store front-desk inboxes | 4,914 | **Do not email.** PA/NJ/DE subset only as LinkedIn/GBP owner lookup, then DMs |
 | Franchisor / franchise-dev | later | After wave-1 data |
 
 Wave 1's original 50-cap still holds. It is 50 *owners*, not the first 50 spreadsheet rows if those rows are `store####@theupsstore.com`.

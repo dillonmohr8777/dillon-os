@@ -18,7 +18,7 @@ Companion notes:
 - [[Google RSVP Rail]] — quality-first send pool + Gmail EventReservation for registrants (not the cold list)
 - [[Drip Copy]] — every email, reminder, DM script, and organic post, paste-ready
 - [[Franchise Email Sourcing Playbook]] — how the free franchise contact engine works
-- [[Scale Harvest Report]] — 5,359-contact scale run counts (no addresses)
+- [[Scale Harvest Report]] — 720 send-ready franchisee emails (UPS counters dropped)
 - `lp-date-push/` — patched LP files + [[lp-date-push/DEPLOY-CHECKLIST|deploy checklist]] for the Aug 27 date
 - [[Calendar Auto-Add]] — Google Calendar invitation for registrants + ICS / template URLs (never the cold list)
 - Project page: [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]]
@@ -47,7 +47,7 @@ Answered with the phased plan in the same DM (Aug 8, 03:21 ET): lock one canonic
 ## Audiences
 
 1. **Existing 200-prospect Philly list** (Drive sheet, all rows `Not sent`) — warm-up audience, invite is fresh, not a reschedule.
-2. **Franchise list** (scaled) — ranked pool, not a blast. Email **owner-density rows** (CertaPro, PACKOUTS, named, Comfort Keepers). **Do not blast the 4,914 UPS Store role mailboxes** — those are a LinkedIn/GBP research pool for PA/NJ/DE DMs. Wave 1 still capped at 50 owners; remaining owner-density rows sit behind the bounce gate. See [[Google RSVP Rail]].
+2. **Franchise list** (send-ready) — **720** franchisee/office mailboxes a human can actually email (CertaPro, Synergy HomeCare, Mosquito Squad, Comfort Keepers, PACKOUTS). Wave 1 = 50 named people. **Do not email the 4,914 UPS Store front-desk inboxes** — those are shipping counters, used only as LinkedIn/GBP research in PA/NJ/DE. See [[Google RSVP Rail]].
 3. **Franchisor marketing / franchise-development contacts** — secondary tier, only after wave-1 data.
 
 ## Hard rules

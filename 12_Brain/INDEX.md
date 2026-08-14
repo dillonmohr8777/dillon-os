@@ -53,7 +53,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
-- [[12_Brain/raw/research/2026-08-14 Franchise Email Sourcing Receipts|2026-08-14 Franchise Email Sourcing Receipts]] — verified endpoints, dead ends, counts (no contact rows).
+- [[12_Brain/raw/research/2026-08-14 Franchise Email Sourcing Receipts|2026-08-14 Franchise Email Sourcing Receipts]] — afternoon locator dumps, dead ends, counts (no contact rows).
+- [[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -63,7 +64,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
-- [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 5,359 MX-ok franchise contacts from free locator dumps (expires 2026-11-14).
+- [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-14).
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
@@ -71,8 +72,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Outreach engine
 
-- [[02_Campaigns/Growth Workshop/Growth Workshop|Growth Workshop]] — Sean's Aug 27 webinar campaign: LP date push, 5,359-contact franchise list, drip copy, two-week calendar, registrant Google Calendar auto-add.
-- [[02_Campaigns/Growth Workshop/Google RSVP Rail|Google RSVP Rail]] — Google is the RSVP rail for registrants; franchise file is a ranked pool, not a 4,914-row UPS blast.
+- [[02_Campaigns/Growth Workshop/Growth Workshop|Growth Workshop]] — Sean's Aug 27 webinar campaign: LP date push, 720 send-ready franchise emails, drip copy, registrant Google Calendar auto-add.
+- [[02_Campaigns/Growth Workshop/Google RSVP Rail|Google RSVP Rail]] — Google is the RSVP rail for registrants; email the 720 send-ready rows, not UPS store counters.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]] — Stage 2 qualification: scores the website a prospect already has, routes strong-site prospects to ads/SEO instead of a wasted rebuild. Skill: `/site-grade`.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]] — the eight-stage model and the honest automation status of each stage.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Market Roster|Market Roster]] — geography ladder (Philadelphia → PA → national) and vertical priorities.
