@@ -13,6 +13,8 @@ dm: D0A6ECLQ0S1
 
 Draft: https://momentum3d.slack.com/archives/D0A6ECLQ0S1
 
+Dropped the "how many emails do you already have" ask. We already have the 720 + Philly list. That question made it sound like we were still shopping for a list.
+
 ---
 
 Need your read on the workshop fill before Tuesday.
@@ -23,9 +25,7 @@ On the list, plain English: I had pulled thousands of UPS Store emails. Those ar
 
 The actual send list is *720 franchisee / office emails* that the businesses themselves published (CertaPro, Synergy HomeCare, Mosquito Squad, Comfort Keepers, 1-800-PACKOUTS). *50 named people first*, then the rest if bounces stay clean. Plus the Philly 200-list.
 
-Two things I need from you:
-1. *What do you think of that?* If you'd rather still blast the UPS counters, say so — I'd push back, but it's your workshop.
-2. *How many emails do you actually have access to right now?* GHL, Skool, past leads, Momentum list, whatever is already permissioned. That's probably a better fill than any scrape. Rough number is enough.
+What do you think of that? If you'd rather still blast the UPS counters, say so — I'd push back, but it's your workshop.
 
 Also still need: confirm the Meet link (https://meet.google.com/ive-hkws-xdg) or send a Zoom, which mailbox sends (I'd use sean@needmomentum.com), and seat cap or no cap.
 
