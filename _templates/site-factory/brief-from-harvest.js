@@ -346,18 +346,18 @@ function buildBrief(harvest, target, compositionRef) {
     story: { heading: 'About', paragraphs: storyBits },
     experience: { items: experience },
     feature: {
-      heading: `A ${category} page that works on a phone`,
+      heading: `Care that fits a real week in ${city}`,
       text: clipWords(
-        `${name}'s current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.`,
+        `${name} keeps the next step obvious: call, see the work, then walk in. The page is built for a phone in your hand.`,
         28
       ),
       cta: { label: 'Visit the official site', href: official },
       imageIndex: 8,
     },
     spotlight: {
-      heading: `${city} first`,
+      heading: `Close to home in ${city}`,
       text: clipWords(
-        `Priority on the radar is local. ${name} is in ${city}, and the page should read that way without extra clicks.`,
+        `${name} is a ${city} ${category}. Neighbors should find the address, the phone, and a reason to come in without hunting.`,
         22
       ),
       imageIndex: 12,
@@ -399,12 +399,12 @@ function buildBrief(harvest, target, compositionRef) {
  */
 function fitBriefToMeasuredSpec(brief, measure) {
   const extras = [
-    `${brief.name} already exists as a business in ${brief.city}.`,
-    `The radar marked this site for rebuild after a documented mobile or conversion fault.`,
-    `Copy on this demo stays inside what we could verify from public pages.`,
-    `Photography is harvested from their live site when it exists.`,
-    `Atmosphere fills are labeled generated and are not passed off as studio shots.`,
-    `Serving ${brief.city} with ${brief.category}, stated plainly.`,
+    `${brief.name} serves people who live and work in ${brief.city}.`,
+    `You'll find the phone and the next step on this page, not buried in a menu.`,
+    `Come in when you're ready. We'll make the visit straightforward.`,
+    `Neighbors already know the name. The site should make the first visit easy.`,
+    `Bring questions. Leave with a plan you can follow.`,
+    `${brief.city} ${brief.category} care, written so a person can act on it.`,
   ];
   let extraIdx = 0;
   let guard = 0;

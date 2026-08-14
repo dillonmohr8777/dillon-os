@@ -9,10 +9,10 @@
   "url": "https://www.andorradental.com/",
   "phone": "(215) 515-5710",
   "address": "8919 Ridge Ave., Suite 9, Philadelphia, Pennsylvania, 19128",
-  "description": "Welcome to our dental practice in Philadelphia, PA! We invite you to call today to make an appointment with our dentists and learn more about our services.",
+  "description": "Dr. Shah, Dr. Emani, and Dr. Bansal take care of kids, parents, and grandparents in one office. Call when you want a cleaning, a repair, or a calmer first visit.",
   "noindex": true,
   "schemaType": "Dentist",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#F7DFD5",
     "ink": "#481619",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Philadelphia | dentist",
-    "headline": "Andorra Family Dentistry",
-    "sub": "Welcome to our dental practice in Philadelphia, PA! We invite you to call today to make an appointment with our dentists and learn more about our services.",
+    "eyebrow": "Andorra, Philadelphia",
+    "headline": "Family dentistry on Ridge Avenue",
+    "sub": "Dr. Shah, Dr. Emani, and Dr. Bansal take care of kids, parents, and grandparents in one office. Call when you want a cleaning, a repair, or a calmer first visit.",
     "ctaPrimary": {
-      "label": "Contact",
+      "label": "Call the office",
       "href": "tel:2155155710"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "Cosmetic Dentist Cosmetic Dental Fillings Cosmetic Tooth Contouring Dental Bonding Dental Veneers",
-      "Dental Technology 3D Scanning Digital X-Rays Intraoral Cameras iTero® Digital Scanning Laser",
-      "General & Family Dentistry Dental Cleanings & Exams Dental Sealants Same-Day Emergency"
-    ]
+      "Cleanings and exams",
+      "Veneers and whitening",
+      "Implants and restorations"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for dentist in Philadelphia.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "Dentists you can name",
+      "Ridge Avenue, Suite 9",
+      "Andorra and Roxborough",
+      "Same-day emergency care"
     ]
   },
   "gallery": {
@@ -75,31 +76,33 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A practice that knows your name",
     "paragraphs": [
-      "Cosmetic Dentist Cosmetic Dental Fillings Cosmetic Tooth Contouring Dental Bonding Dental Veneers Smile Makeover Teeth Whitening",
-      "Dental Technology 3D Scanning Digital X-Rays Intraoral Cameras iTero® Digital Scanning Laser Therapy"
-    ]
+      "Our team focuses on comfortable visits and a full range of care, from a first cleaning to implants and Invisalign. People come from Andorra, Conshohocken, Lafayette Hill, and Roxborough.",
+      "You will see digital scans, clear explanations, and a plan you can follow. Bring the whole family. We will make room."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Book from your phone",
+      "See the room before you sit",
+      "Talk to a person, not a form"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A dentist page that works on a phone",
-    "text": "Andorra Family Dentistry's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "A smile you will actually show",
+    "text": "Cosmetic work here is practical: bonding, veneers, whitening, and clear aligners when they fit. We start with what you want to change, then pick the smallest step that gets you there.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://www.andorradental.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Philadelphia first",
-    "text": "Priority on the radar is local. Andorra Family Dentistry is in Philadelphia, and the page should read that way without extra clicks.",
+    "heading": "Close to home in Andorra",
+    "text": "The office sits at 8919 Ridge Avenue. Park, walk in, and tell us what is bothering you. We will tell you what we can do today.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -107,6 +110,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -114,7 +118,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -126,15 +130,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Come see us on Ridge Avenue",
+    "sub": "Phone and address are on this page so you can act without hunting. Confirm hours on the official site before you drive."
   },
   "closing": {
+    "heading": "Ready when you are",
     "cta": {
-      "label": "Contact",
+      "label": "Call the office",
       "href": "tel:2155155710"
-    },
-    "heading": "Andorra Family Dentistry"
+    }
   },
   "links": [
     {
@@ -207,8 +211,26 @@
     ]
   },
   "_wordCount": 255,
-  "_measuredWords": 362,
-  "_measuredImages": 12,
+  "_measuredWords": 370,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://stripe.com"
+  "layout": "https://stripe.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call the office",
+    "href": "tel:2155155710"
+  }
 }

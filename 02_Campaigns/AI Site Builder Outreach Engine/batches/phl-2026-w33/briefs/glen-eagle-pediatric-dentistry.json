@@ -9,10 +9,10 @@
   "url": "https://gleneaglepediatricdentistry.com/",
   "phone": "484-639-9066",
   "address": "589 Wilmington West Chester Pike, Glen Mills,, PA, 19342",
-  "description": "Make an appointment for your child for a great dental experience and high-quality dentistry from our pediatric dentist in Glen Mills.",
+  "description": "Glen Eagle Pediatric Dentistry helps children through first visits, cleanings, and the days that feel scary. Parents stay in the loop the whole time.",
   "noindex": true,
   "schemaType": "Dentist",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#E4E2DC",
     "ink": "#14202B",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Delaware County | dentist",
-    "headline": "Glen Eagle Pediatric Dentistry",
-    "sub": "Make an appointment for your child for a great dental experience and high-quality dentistry from our pediatric dentist in Glen Mills.",
+    "eyebrow": "Glen Mills",
+    "headline": "Dentistry built for kids, not for waiting rooms",
+    "sub": "Glen Eagle Pediatric Dentistry helps children through first visits, cleanings, and the days that feel scary. Parents stay in the loop the whole time.",
     "ctaPrimary": {
-      "label": "Contact Us",
+      "label": "Call for kids",
       "href": "tel:4846399066"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "At Glen Eagle Pediatric Dentistry, we know kids! That’s because we specialize",
-      "Glen Eagle Pediatric Dentistry provides a “dental home” for your child, a",
-      "Our team at Glen Eagle Pediatric Dentistry strives to make each dental"
-    ]
+      "First visits",
+      "Cleanings and sealants",
+      "Gentle repairs"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for dentist in Delaware County.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "Pediatric focus",
+      "Glen Mills office",
+      "Parents stay involved",
+      "Calm, clear visits"
     ]
   },
   "gallery": {
@@ -75,31 +76,37 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A first dentist they will come back to",
     "paragraphs": [
-      "At Glen Eagle Pediatric Dentistry, we know kids! That’s because we specialize in treating children of all ages and those who have",
-      "Glen Eagle Pediatric Dentistry provides a “dental home” for your child, a place where oral health care is delivered in a comprehensive,"
-    ]
+      "Kids remember how a visit felt. We keep the room calm, the words simple, and the work careful.",
+      "Parents get a plain explanation before anything starts. No surprises, no rush.",
+      "Glen Eagle Pediatric Dentistry serves people who live and work in Delaware County.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Prep your child at home",
+      "Stay in the room",
+      "Leave with home care that makes sense"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A dentist page that works on a phone",
-    "text": "Glen Eagle Pediatric Dentistry's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Small mouths, careful work",
+    "text": "Sealants, cleanings, and repairs are paced for children. We would rather go slow than scare someone out of coming back.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://gleneaglepediatricdentistry.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Delaware County first",
-    "text": "Priority on the radar is local. Glen Eagle Pediatric Dentistry is in Delaware County, and the page should read that way without",
+    "heading": "Wilmington West Chester Pike",
+    "text": "The Glen Mills office is set up for families. Call ahead if your child is nervous. We will make time.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -107,6 +114,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -114,7 +122,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -126,15 +134,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Schedule a kid visit",
+    "sub": "Phone and address are listed so you can book without a scavenger hunt."
   },
   "closing": {
+    "heading": "Bring them in",
     "cta": {
-      "label": "Contact Us",
+      "label": "Call for kids",
       "href": "tel:4846399066"
-    },
-    "heading": "Glen Eagle Pediatric Dentistry"
+    }
   },
   "links": [
     {
@@ -206,9 +214,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 263,
-  "_measuredWords": 387,
-  "_measuredImages": 12,
+  "_wordCount": 242,
+  "_measuredWords": 362,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://www.notion.so"
+  "layout": "https://www.notion.so",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call for kids",
+    "href": "tel:4846399066"
+  }
 }

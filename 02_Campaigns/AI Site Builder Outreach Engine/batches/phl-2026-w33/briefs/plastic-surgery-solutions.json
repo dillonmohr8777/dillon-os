@@ -5,14 +5,14 @@
   "category": "doctor",
   "vertical": "medical",
   "attitude": "glass",
-  "composition_ref": "https://cal.com",
+  "composition_ref": "https://www.midjourney.com",
   "url": "https://plasticsurgerysolutions.com/",
   "phone": "(610) 474-2767",
   "address": "900 Heritage Drive, Suite 920, Sanatoga, PA 19464",
-  "description": "Discover top-tier cosmetic surgery in the heart of Pottstown, PA, at Plastic Surgery Solutions. Our conveniently located office offers a full range of advanced cosmetic procedures to enhance",
+  "description": "Plastic Surgery Solutions in Sanatoga is for people who want a careful consult, honest limits, and a result that still looks like them.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#E6EEE6",
     "ink": "#193F47",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Sanatoga | doctor",
-    "headline": "Plastic Surgery Solutions",
-    "sub": "Discover top-tier cosmetic surgery in the heart of Pottstown, PA, at Plastic Surgery Solutions. Our conveniently located office offers a full range of advanced cosmetic procedures to enhance",
+    "eyebrow": "Sanatoga",
+    "headline": "Surgery decisions made in good light",
+    "sub": "Plastic Surgery Solutions in Sanatoga is for people who want a careful consult, honest limits, and a result that still looks like them.",
     "ctaPrimary": {
-      "label": "CONTACT",
+      "label": "Request a consult",
       "href": "tel:6104742767"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "AbdominalAbdominoplastyMini AbdominoplastyAbdominal LiposuctionBelt LipectomyHD Abdominal LiposuctionLabiaplastyLipoabdominoplastyLiposuction 360Mommy MakeoverReverse AbdominoplastyAbdominal Diastasis Repair",
-      "BreastBreast AugmentationBreast Augmentation/MastopexyBreast , Chest Wall LiposuctionBreast Fat GraftingBreast Implant Removal &",
-      "Face & NeckBrow LiftBuccal Fat RemovalDermal FillersEarlobe RepairFace LiftFacial Fat GraftingLower Eyelid"
-    ]
+      "Consultations",
+      "Surgical care",
+      "Follow-through visits"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for doctor in Sanatoga.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "Heritage Drive, Sanatoga",
+      "Named practice",
+      "Consult first",
+      "Photos of real work"
     ]
   },
   "gallery": {
@@ -75,31 +76,39 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A consult before a commitment",
     "paragraphs": [
-      "AbdominalAbdominoplastyMini AbdominoplastyAbdominal LiposuctionBelt LipectomyHD Abdominal LiposuctionLabiaplastyLipoabdominoplastyLiposuction 360Mommy MakeoverReverse AbdominoplastyAbdominal Diastasis Repair",
-      "BreastBreast AugmentationBreast Augmentation/MastopexyBreast , Chest Wall LiposuctionBreast Fat GraftingBreast Implant Removal & CapsulectomyBreast Lift-MastopexyBreast ReconstructionBreast ReductionBreast RevisionGynecomastiaNipple Areola Reconstruction"
-    ]
+      "You should hear what is possible and what is not before anyone books a date. We keep that conversation unhurried.",
+      "Bring photos of what you like. We will talk about anatomy, recovery, and whether surgery is the right tool.",
+      "Plastic Surgery Solutions serves people who live and work in Sanatoga.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "Sanatoga doctor care, written so a person can act on it."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Book the consult",
+      "See comparable work",
+      "Decide with the lights on"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A doctor page that works on a phone",
-    "text": "Plastic Surgery Solutions's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Results that still look like you",
+    "text": "The goal is a change you can live with in daylight, not a trend. We will decline work that will not age well.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://plasticsurgerysolutions.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Sanatoga first",
-    "text": "Priority on the radar is local. Plastic Surgery Solutions is in Sanatoga, and the page should read that way without extra clicks.",
+    "heading": "900 Heritage Drive",
+    "text": "Suite 920 in Sanatoga. Call ahead so we can set aside time for a real consult.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -107,6 +116,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -114,7 +124,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -126,15 +136,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Talk before you book",
+    "sub": "Use the phone on this page. Have your questions written down."
   },
   "closing": {
+    "heading": "Start with a consult",
     "cta": {
-      "label": "CONTACT",
+      "label": "Request a consult",
       "href": "tel:6104742767"
-    },
-    "heading": "Plastic Surgery Solutions"
+    }
   },
   "links": [
     {
@@ -207,8 +217,26 @@
     ]
   },
   "_wordCount": 257,
-  "_measuredWords": 363,
+  "_measuredWords": 369,
   "_measuredImages": 12,
   "_measuredSections": 11,
-  "layout": "https://cal.com"
+  "layout": "https://www.midjourney.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Request a consult",
+    "href": "tel:6104742767"
+  }
 }

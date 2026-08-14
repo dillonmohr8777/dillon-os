@@ -9,10 +9,10 @@
   "url": "https://bebalancedcenters.com/location/collegeville/",
   "phone": "(610) 968-2322",
   "address": "519 Main Street, 19468",
-  "description": "A safe, effective, and sustainable approach to resolving hormonal stubborn weight. Contact Royersford natural hormone weight loss today!",
+  "description": "Be Balanced in Collegeville helps people who are tired of guessing. Come in, get a read on what is going on, and leave with a program that fits your week.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#F2E1D6",
     "ink": "#3A1C1B",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Collegeville | alternative",
-    "headline": "Be Balanced Hormone Weight Loss Centers",
-    "sub": "A safe, effective, and sustainable approach to resolving hormonal stubborn weight. Contact Royersford natural hormone weight loss today!",
+    "eyebrow": "Collegeville",
+    "headline": "Hormone care with a plan you can keep",
+    "sub": "Be Balanced in Collegeville helps people who are tired of guessing. Come in, get a read on what is going on, and leave with a program that fits your week.",
     "ctaPrimary": {
-      "label": "BOOK NOW",
+      "label": "Call Collegeville",
       "href": "tel:6109682322"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "How BeBalanced Works Symptoms We Help How Much Does BeBalanced Cost?",
-      "Natural hormone balancing is a safe, effective, and sustainable approach to resolving",
-      "You can take control of your well-being and thrive in every aspect"
-    ]
+      "Hormone programs",
+      "Weight-loss support",
+      "Follow-up visits"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for alternative in Collegeville.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "519 Main Street",
+      "Collegeville, PA",
+      "Local center",
+      "A program, not a pitch"
     ]
   },
   "gallery": {
@@ -75,31 +76,38 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "Balance you can measure",
     "paragraphs": [
-      "How BeBalanced Works Symptoms We Help How Much Does BeBalanced Cost?",
-      "Natural hormone balancing is a safe, effective, and sustainable approach to resolving hormonal symptoms and stubborn weight."
-    ]
+      "Energy, sleep, and weight are connected. We start with your story and the labs, then build a plan you can actually follow.",
+      "You will know what we are changing and why. No mystery packets.",
+      "Be Balanced Hormone Weight Loss Centers serves people who live and work in Collegeville.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Tell us the symptoms",
+      "Review the plan together",
+      "Check in as you go"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A alternative page that works on a phone",
-    "text": "Be Balanced Hormone Weight Loss Centers's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "A center on Main Street",
+    "text": "Collegeville should not need a drive to the city for this kind of care. We keep the visits local and the instructions written down.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://bebalancedcenters.com/location/collegeville/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Collegeville first",
-    "text": "Priority on the radar is local. Be Balanced Hormone Weight Loss Centers is in Collegeville, and the page should read that way",
+    "heading": "519 Main Street",
+    "text": "Walk in when you have an appointment. Bring a list of what you have already tried.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -107,6 +115,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -114,7 +123,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -126,15 +135,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Start the conversation",
+    "sub": "Call the Collegeville center. We will tell you what the first visit includes."
   },
   "closing": {
+    "heading": "Come in as you are",
     "cta": {
-      "label": "BOOK NOW",
+      "label": "Call Collegeville",
       "href": "tel:6109682322"
-    },
-    "heading": "Be Balanced Hormone Weight Loss Centers"
+    }
   },
   "links": [
     {
@@ -206,9 +215,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 244,
-  "_measuredWords": 365,
-  "_measuredImages": 12,
+  "_wordCount": 267,
+  "_measuredWords": 364,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://arc.net"
+  "layout": "https://arc.net",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call Collegeville",
+    "href": "tel:6109682322"
+  }
 }

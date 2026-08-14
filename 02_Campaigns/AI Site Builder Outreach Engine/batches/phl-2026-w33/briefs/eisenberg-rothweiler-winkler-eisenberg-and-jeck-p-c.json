@@ -9,10 +9,10 @@
   "url": "https://www.erlegal.com/",
   "phone": "(866) 569-3400",
   "address": "1634 Spruce Street, Philadelphia, PA, 19103",
-  "description": "Our Philadelphia personal injury and medical malpractice lawyers will fight for your rights if you were wrongfully injured. Free Consultation",
+  "description": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck represent people who got hurt and need a firm that will stand in court, not just send a letter.",
   "noindex": true,
   "schemaType": "LegalService",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#EEDFD9",
     "ink": "#301824",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Philadelphia | lawyer",
-    "headline": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck, P.C.",
-    "sub": "Our Philadelphia personal injury and medical malpractice lawyers will fight for your rights if you were wrongfully injured. Free Consultation",
+    "eyebrow": "Spruce Street, Philadelphia",
+    "headline": "Trial lawyers who take the case personally",
+    "sub": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck represent people who got hurt and need a firm that will stand in court, not just send a letter.",
     "ctaPrimary": {
-      "label": "Contact",
+      "label": "Call the firm",
       "href": "tel:8665693400"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "About Us Why Us? Fredric S. Eisenberg Nancy J. Winkler Daniel Jeck",
-      "Practice Areas Personal Injury Catastrophic Injury Wrongful Death Medical Malpractice Birth Injuries",
-      "$2.4B settlement in the Boy Scouts of America case for sexual abuse"
-    ]
+      "Personal injury",
+      "Trial work",
+      "Client-first counsel"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for lawyer in Philadelphia.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "1634 Spruce Street",
+      "Philadelphia trial firm",
+      "Named partners",
+      "One conversation to start"
     ]
   },
   "gallery": {
@@ -75,31 +76,36 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A firm built for the courtroom",
     "paragraphs": [
-      "About Us Why Us? Fredric S. Eisenberg Nancy J. Winkler Daniel Jeck Joshua B. Schwartz Todd A. Schoenhaus Daniel J. Sherry Jr.",
-      "Practice Areas Personal Injury Catastrophic Injury Wrongful Death Medical Malpractice Birth Injuries Product Liability Auto Defects Auto Accident Truck Accidents Child Sexual"
-    ]
+      "You should know who is handling your case. Our name is on the door because the work is ours.",
+      "Bring the facts. We will tell you if we can help, and we will not waste your time if we cannot.",
+      "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck, P.C. serves people who live and work in Philadelphia.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Tell us what happened",
+      "Meet the lawyer, not a script",
+      "Get a clear yes or no"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A lawyer page that works on a phone",
-    "text": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck, P.C.'s current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Counsel you can reach",
+    "text": "Injury work is personal. We keep the file close and the updates human so you are never guessing what happens next.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://www.erlegal.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Philadelphia first",
-    "text": "Priority on the radar is local. Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck, P.C. is in Philadelphia, and the page should read that",
+    "heading": "Center City office",
+    "text": "The Spruce Street office is where we meet clients. Call first so we can make time.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -107,6 +113,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -114,7 +121,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -126,15 +133,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Start with a call",
+    "sub": "Use the phone on this page. Have the date, the place, and what you have already been told."
   },
   "closing": {
+    "heading": "Tell us what happened",
     "cta": {
-      "label": "Contact",
+      "label": "Call the firm",
       "href": "tel:8665693400"
-    },
-    "heading": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck, P.C."
+    }
   },
   "links": [
     {
@@ -206,9 +213,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 268,
-  "_measuredWords": 390,
-  "_measuredImages": 12,
+  "_wordCount": 244,
+  "_measuredWords": 361,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://www.apple.com"
+  "layout": "https://www.apple.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call the firm",
+    "href": "tel:8665693400"
+  }
 }

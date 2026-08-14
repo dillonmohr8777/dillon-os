@@ -10,10 +10,10 @@
   "phone": "+1-610-436-5436",
   "address": "1135 Phoenixville Pike West Chester, PA 19380, West Chester, Pennsylvania, 19380",
   "hours": "Mon-Fri 8:30 AM- 4:30 PM",
-  "description": "We are your one-stop shop for bathroom and kitchen remodeling West Chester PA. We offer custom countertops, cabinetry, and fabrication.",
+  "description": "MacLaren Kitchen and Bath on Phoenixville Pike fabricates the cabinets and surfaces you live with every morning. Come see the work before you pick a finish.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#E5E7E4",
     "ink": "#162B41",
@@ -35,11 +35,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "West Chester | hardware",
-    "headline": "MacLaren Kitchen and Bath",
-    "sub": "We are your one-stop shop for bathroom and kitchen remodeling West Chester PA. We offer custom countertops, cabinetry, and fabrication.",
+    "eyebrow": "West Chester",
+    "headline": "Kitchens and baths built in the shop",
+    "sub": "MacLaren Kitchen and Bath on Phoenixville Pike fabricates the cabinets and surfaces you live with every morning. Come see the work before you pick a finish.",
     "ctaPrimary": {
-      "label": "Contact Us",
+      "label": "Call MacLaren",
       "href": "tel:16104365436"
     },
     "ctaSecondary": {
@@ -53,17 +53,18 @@
   },
   "offerings": {
     "items": [
-      "Kitchen remodeling West Chester, PA is a process that requires careful consideration",
-      "Here are some tips that can help you decide on a budget",
-      "Start by evaluating your current kitchen. Make a list of the things"
-    ]
+      "Kitchen cabinetry",
+      "Bath vanities",
+      "Shop fabrication"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for hardware in West Chester.",
-      "Hours listed as Mon-Fri 8:30 AM- 4:30 PM.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "West Chester shop",
+      "Phoenixville Pike",
+      "Built here",
+      "See a finished job"
     ]
   },
   "gallery": {
@@ -76,31 +77,36 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A fabricator, not a showroom chain",
     "paragraphs": [
-      "Kitchen remodeling West Chester, PA is a process that requires careful consideration and planning. There are many things to consider when remodeling",
-      "Here are some tips that can help you decide on a budget for your kitchen remodel."
-    ]
+      "We build in West Chester. You can see how a door is made and how a finish is applied before you sign.",
+      "Bring the drawings or the messy kitchen photos. We will tell you what is worth changing.",
+      "MacLaren Kitchen and Bath serves people who live and work in West Chester.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Walk a finished kitchen",
+      "Pick the door style",
+      "Get a shop date"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A hardware page that works on a phone",
-    "text": "MacLaren Kitchen and Bath's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "The shop is the proof",
+    "text": "Catalog photos hide the joints. Come look at a real box, a real drawer, and a finish under shop lights.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://maclarenfab.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "West Chester first",
-    "text": "Priority on the radar is local. MacLaren Kitchen and Bath is in West Chester, and the page should read that way without",
+    "heading": "1135 Phoenixville Pike",
+    "text": "West Chester is home. Call so someone can pull samples for the visit.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -108,6 +114,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -115,7 +122,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -127,15 +134,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Start in the shop",
+    "sub": "Phone and address are on this page. Bring measurements if you have them."
   },
   "closing": {
+    "heading": "Let's open a door",
     "cta": {
-      "label": "Contact Us",
+      "label": "Call MacLaren",
       "href": "tel:16104365436"
-    },
-    "heading": "MacLaren Kitchen and Bath"
+    }
   },
   "links": [
     {
@@ -207,9 +214,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 257,
-  "_measuredWords": 402,
-  "_measuredImages": 12,
+  "_wordCount": 229,
+  "_measuredWords": 363,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://cursor.com"
+  "layout": "https://cursor.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call MacLaren",
+    "href": "tel:16104365436"
+  }
 }

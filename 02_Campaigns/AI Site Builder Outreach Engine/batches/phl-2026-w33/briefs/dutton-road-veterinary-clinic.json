@@ -9,10 +9,10 @@
   "url": "http://duttonroadvetclinic.com/",
   "phone": "215-331-2968",
   "address": "10901 Dutton Road, Philadelphia, PA 19154",
-  "description": "Dutton Road Veterinary Clinic handles veterinary in Philadelphia. The new page makes that obvious on the first screen.",
+  "description": "Dutton Road Veterinary Clinic looks after the dogs and cats who live in the Northeast. Call when something feels off, or when it is time for the yearly visit.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#EEE2D8",
     "ink": "#312020",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Philadelphia | veterinary",
-    "headline": "Dutton Road Veterinary Clinic",
-    "sub": "Dutton Road Veterinary Clinic handles veterinary in Philadelphia. The new page makes that obvious on the first screen.",
+    "eyebrow": "Northeast Philadelphia",
+    "headline": "Vet care on Dutton Road",
+    "sub": "Dutton Road Veterinary Clinic looks after the dogs and cats who live in the Northeast. Call when something feels off, or when it is time for the yearly visit.",
     "ctaPrimary": {
-      "label": "Get in touch",
+      "label": "Call the clinic",
       "href": "tel:2153312968"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "Dutton Road Veterinary Clinic is a full-service, state-of-the art veterinary clinic and",
-      "PLEASE NOTE: An additional 2% fee will be added to all Visa",
-      "Welcome to Dutton Road Veterinary Clinic & Surgical Facility"
-    ]
+      "Wellness visits",
+      "Sick pets",
+      "Local clinic care"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for veterinary in Philadelphia.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "10901 Dutton Road",
+      "Philadelphia, PA 19154",
+      "Neighborhood clinic",
+      "Call first"
     ]
   },
   "gallery": {
@@ -75,31 +76,37 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A clinic the neighborhood already knows",
     "paragraphs": [
-      "Dutton Road Veterinary Clinic is a full-service, state-of-the art veterinary clinic and surgical facility located in Northeast Philadelphia, PA. Our caring and",
-      "PLEASE NOTE: An additional 2% fee will be added to all Visa and Mastercard charges. An additional 5% fee will be added"
-    ]
+      "You want a vet who has seen your pet before the emergency. We keep the visits steady so the scary days are easier.",
+      "Bring the questions you typed into a search bar. We will answer them in the room.",
+      "Dutton Road Veterinary Clinic serves people who live and work in Philadelphia.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Call with the symptom",
+      "Come in for the exam",
+      "Leave with home care you understand"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A veterinary page that works on a phone",
-    "text": "Dutton Road Veterinary Clinic's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Northeast, close to home",
+    "text": "Dutton Road is easy to reach when a pet will not wait. We will tell you if you need an emergency hospital instead.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "http://duttonroadvetclinic.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Philadelphia first",
-    "text": "Priority on the radar is local. Dutton Road Veterinary Clinic is in Philadelphia, and the page should read that way without extra",
+    "heading": "10901 Dutton Road",
+    "text": "Park, come in, and tell us what changed. We will take it from there.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -107,6 +114,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -114,7 +122,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -126,15 +134,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Call before you load the carrier",
+    "sub": "The phone is on this page. Confirm hours on the official site if you are coming after work."
   },
   "closing": {
+    "heading": "Bring them in",
     "cta": {
-      "label": "Get in touch",
+      "label": "Call the clinic",
       "href": "tel:2153312968"
-    },
-    "heading": "Dutton Road Veterinary Clinic"
+    }
   },
   "links": [
     {
@@ -206,9 +214,27 @@
       "table-based page layout"
     ]
   },
-  "_wordCount": 252,
-  "_measuredWords": 373,
-  "_measuredImages": 12,
+  "_wordCount": 256,
+  "_measuredWords": 362,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://www.shopify.com"
+  "layout": "https://www.shopify.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call the clinic",
+    "href": "tel:2153312968"
+  }
 }

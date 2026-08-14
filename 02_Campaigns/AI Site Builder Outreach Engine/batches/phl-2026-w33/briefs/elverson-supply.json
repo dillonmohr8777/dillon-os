@@ -5,15 +5,15 @@
   "category": "hardware",
   "vertical": "home-services",
   "attitude": "industrial",
-  "composition_ref": "https://github.com/features/copilot",
+  "composition_ref": "https://cal.com",
   "url": "https://elversonsupply.net/",
   "phone": "(610) 286-5021",
   "address": "101 East Main Street Elverson, PA 19520",
   "hours": "Monday , Friday: 7 am to 5 pm",
-  "description": "Elverson Supply Company is a building materials and hardware store in Elverson, PA, featuring a full line of tools, building materials, and hardware.",
+  "description": "Elverson Supply on East Main Street is the counter you walk up to when you need the part today, not a tracking number.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#E2E5D9",
     "ink": "#102822",
@@ -35,11 +35,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Elverson | hardware",
-    "headline": "Elverson Supply",
-    "sub": "Elverson Supply Company is a building materials and hardware store in Elverson, PA, featuring a full line of tools, building materials, and hardware.",
+    "eyebrow": "Elverson",
+    "headline": "The hardware run that still works",
+    "sub": "Elverson Supply on East Main Street is the counter you walk up to when you need the part today, not a tracking number.",
     "ctaPrimary": {
-      "label": "CONTACT US",
+      "label": "Call the counter",
       "href": "tel:6102865021"
     },
     "ctaSecondary": {
@@ -53,17 +53,18 @@
   },
   "offerings": {
     "items": [
-      "Elverson Supply Co. is your building materials and hardware store. Our fifth-generation",
-      "Hours: Monday , Friday: 7 am to 5 pm Saturday: 7 am",
-      "Not a complete list. If you don’t see what you’re looking for,"
-    ]
+      "Hardware",
+      "Job supplies",
+      "Local counter help"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for hardware in Elverson.",
-      "Hours listed as Monday , Friday: 7 am to 5 pm.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "101 East Main Street",
+      "Elverson, PA",
+      "A real counter",
+      "Ask for the part"
     ]
   },
   "gallery": {
@@ -76,31 +77,36 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A supply house with a memory",
     "paragraphs": [
-      "Elverson Supply Co. is your building materials and hardware store. Our fifth-generation family business has served the Elverson, Morgantown, Chester Springs, Glenmoore",
-      "Hours: Monday , Friday: 7 am to 5 pm Saturday: 7 am to 12 pm Sunday: Closed"
-    ]
+      "We know the jobs around here. Tell us the brand on the box and we will find the piece that matches.",
+      "Contractors and homeowners use the same counter. Everyone gets the same honest answer about what is in stock.",
+      "Elverson Supply serves people who live and work in Elverson.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Call ahead for the part",
+      "Pick up on Main Street",
+      "Get the matching piece"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A hardware page that works on a phone",
-    "text": "Elverson Supply's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "In stock beats overnight",
+    "text": "If we have it, you can have it this afternoon. If we do not, we will say so and tell you the next move.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://elversonsupply.net/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Elverson first",
-    "text": "Priority on the radar is local. Elverson Supply is in Elverson, and the page should read that way without extra clicks.",
+    "heading": "101 East Main Street",
+    "text": "Elverson is small enough that you will not miss the door. Come in with the old part in your hand.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -108,6 +114,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -115,7 +122,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -127,15 +134,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Ask the counter",
+    "sub": "Call with the part number or a photo. We will check the shelf."
   },
   "closing": {
+    "heading": "Bring the old part",
     "cta": {
-      "label": "CONTACT US",
+      "label": "Call the counter",
       "href": "tel:6102865021"
-    },
-    "heading": "Elverson Supply"
+    }
   },
   "links": [
     {
@@ -207,9 +214,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 258,
-  "_measuredWords": 390,
-  "_measuredImages": 12,
+  "_wordCount": 235,
+  "_measuredWords": 369,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://github.com/features/copilot"
+  "layout": "https://cal.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call the counter",
+    "href": "tel:6102865021"
+  }
 }

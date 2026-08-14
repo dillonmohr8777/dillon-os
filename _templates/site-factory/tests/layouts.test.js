@@ -53,7 +53,8 @@ describe('wow composition layouts', () => {
     ];
     const ids = urls.map((u) => resolveLayout({ composition_ref: u }).id);
     assert.equal(new Set(ids).size, 25);
-    assert.equal(RULES.length, 25);
+    assert.equal(resolveLayout({ composition_ref: 'https://godly.website' }).id, 'godly-masonry');
+    assert.equal(resolveLayout({ composition_ref: 'https://www.midjourney.com' }).id, 'midjourney-bleed');
   });
 
   it('emits different layout CSS, chrome, and a layout body class', () => {

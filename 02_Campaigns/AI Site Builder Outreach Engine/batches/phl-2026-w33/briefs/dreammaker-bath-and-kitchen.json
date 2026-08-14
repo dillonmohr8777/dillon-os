@@ -5,14 +5,14 @@
   "category": "kitchen",
   "vertical": "home-services",
   "attitude": "industrial",
-  "composition_ref": "https://todoist.com",
+  "composition_ref": "https://resend.com",
   "url": "https://www.dreammaker-remodel.com/chester-county/",
   "phone": "610-947-5399",
   "address": "12 Pottstown Pike, Chester Springs, PA, 19425",
-  "description": "Transform your home with DreamMaker Bath & Kitchen of Chester County, PA. Specializing in luxury kitchen, bathroom, and interior remodeling",
+  "description": "DreamMaker Bath & Kitchen in Chester Springs plans the rooms you use every day, then builds them so the next decade feels easy.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#F7EFDB",
     "ink": "#474429",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Chester Springs | kitchen",
-    "headline": "DreamMaker Bath & Kitchen",
-    "sub": "Transform your home with DreamMaker Bath & Kitchen of Chester County, PA. Specializing in luxury kitchen, bathroom, and interior remodeling",
+    "eyebrow": "Chester Springs",
+    "headline": "Remodels you can cook and bathe in",
+    "sub": "DreamMaker Bath & Kitchen in Chester Springs plans the rooms you use every day, then builds them so the next decade feels easy.",
     "ctaPrimary": {
-      "label": "CALL US TODAY!",
+      "label": "Start a remodel",
       "href": "tel:6109475399"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "Services Kitchen Remodeling Bathroom Remodeling Interior Remodeling Accessible Remodeling General Contracting",
-      "About Blog Design Center Events Join Our Team",
-      "Expert Remodeling Rooted in Faith and Excellence"
-    ]
+      "Kitchen remodels",
+      "Bath remodels",
+      "Design and build"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for kitchen in Chester Springs.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "Pottstown Pike",
+      "Chester Springs",
+      "Design, then build",
+      "A project manager"
     ]
   },
   "gallery": {
@@ -75,32 +76,37 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A remodel with a sequence",
     "paragraphs": [
-      "Services Kitchen Remodeling Bathroom Remodeling Interior Remodeling Accessible Remodeling General Contracting",
-      "About Blog Design Center Events Join Our Team",
-      "DreamMaker Bath & Kitchen already exists as a business in Chester Springs."
-    ]
+      "Kitchens fail when the plan skips how you cook. Baths fail when the tile wins and the storage loses. We start with how you live.",
+      "You will know the order of work and who to call when a question shows up at 7 a.m.",
+      "DreamMaker Bath & Kitchen serves people who live and work in Chester Springs.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Walk the current rooms",
+      "Lock the plan",
+      "Live through the build with a point person"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A kitchen page that works on a phone",
-    "text": "DreamMaker Bath & Kitchen's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Chester County, start to finish",
+    "text": "We stay on the job after the pretty photos. Punch lists get closed. You should not hunt a sub for a missing stop.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://www.dreammaker-remodel.com/chester-county/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Chester Springs first",
-    "text": "Priority on the radar is local. DreamMaker Bath & Kitchen is in Chester Springs, and the page should read that way without",
+    "heading": "12 Pottstown Pike",
+    "text": "Chester Springs is the office. Come in with the rooms you cannot stand anymore.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -108,6 +114,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -115,7 +122,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -127,15 +134,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Talk through the rooms",
+    "sub": "Call to set a design visit. Bring photos and a sense of what you will not compromise on."
   },
   "closing": {
+    "heading": "Let's open the walls on purpose",
     "cta": {
-      "label": "CALL US TODAY!",
+      "label": "Start a remodel",
       "href": "tel:6109475399"
-    },
-    "heading": "DreamMaker Bath & Kitchen"
+    }
   },
   "links": [
     {
@@ -207,9 +214,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 238,
-  "_measuredWords": 363,
-  "_measuredImages": 12,
+  "_wordCount": 256,
+  "_measuredWords": 370,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://todoist.com"
+  "layout": "https://resend.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Start a remodel",
+    "href": "tel:6109475399"
+  }
 }

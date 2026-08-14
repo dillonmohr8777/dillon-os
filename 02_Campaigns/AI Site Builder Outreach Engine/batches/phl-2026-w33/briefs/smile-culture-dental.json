@@ -10,7 +10,7 @@
   "phone": "267-715-7373",
   "address": "2150 E County Line Rd.Huntingdon Valley, PA 19006",
   "hours": "Mon: 9AM - 7PM",
-  "description": "Smile Culture Dental handles dentist in Huntingdon Valley. The new page makes that obvious on the first screen.",
+  "description": "Smile Culture Dental on County Line Road keeps cleanings, cosmetics, and everyday repairs in one modern office. Book when the calendar opens.",
   "noindex": true,
   "schemaType": "Dentist",
   "logo": false,
@@ -35,11 +35,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Huntingdon Valley | dentist",
-    "headline": "Smile Culture Dental",
-    "sub": "Smile Culture Dental handles dentist in Huntingdon Valley. The new page makes that obvious on the first screen.",
+    "eyebrow": "Huntingdon Valley",
+    "headline": "A dental visit that feels current",
+    "sub": "Smile Culture Dental on County Line Road keeps cleanings, cosmetics, and everyday repairs in one modern office. Book when the calendar opens.",
     "ctaPrimary": {
-      "label": "Book Now",
+      "label": "Call Smile Culture",
       "href": "tel:2677157373"
     },
     "ctaSecondary": {
@@ -53,17 +53,18 @@
   },
   "offerings": {
     "items": [
-      "Orthodontics Close orthodontics Open orthodontics orthodontic services We offer modern solutions to",
-      "Resources Close resources Open resources forms & financial options We make your",
-      "Careers Close careers Open careers join our team Help us create brighter,"
-    ]
+      "Family dentistry",
+      "Cosmetic care",
+      "Same-week visits"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for dentist in Huntingdon Valley.",
-      "Hours listed as Mon: 9AM - 7PM.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "Huntingdon Valley",
+      "County Line Road",
+      "Modern chairs",
+      "Phone on the page"
     ]
   },
   "gallery": {
@@ -76,31 +77,35 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "Culture is how the visit feels",
     "paragraphs": [
-      "Orthodontics Close orthodontics Open orthodontics orthodontic services We offer modern solutions to gently and discreetly align your smile. invisalign® Invisalign clear aligners",
-      "Resources Close resources Open resources forms & financial options We make your visit easy with convenient online forms and flexible payment choices."
-    ]
+      "People stay with a dentist who explains the work and respects the clock. That is the bar.",
+      "Come in for a cleaning or a change you have been putting off. We will show you the options in plain language.",
+      "Smile Culture Dental serves people who live and work in Huntingdon Valley.",
+      "You'll find the phone and the next step on this page, not buried in a menu."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Text or call to book",
+      "See the plan on a screen",
+      "Leave knowing the next date"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A dentist page that works on a phone",
-    "text": "Smile Culture Dental's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Cosmetic work without the sales pitch",
+    "text": "Whitening, aligners, and repairs are on the menu. We will tell you what is worth it for your mouth, not for a monthly special.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://smileculture.com/huntingdon-valley/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Huntingdon Valley first",
-    "text": "Priority on the radar is local. Smile Culture Dental is in Huntingdon Valley, and the page should read that way without extra",
+    "heading": "2150 E County Line Road",
+    "text": "Huntingdon Valley is easy to reach. Park, check in, and we will take it from there.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -108,6 +113,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -115,7 +121,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -127,15 +133,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Reserve a chair",
+    "sub": "Call the office or confirm on the official site if you already have a portal login."
   },
   "closing": {
+    "heading": "Your next cleaning is waiting",
     "cta": {
-      "label": "Book Now",
+      "label": "Call Smile Culture",
       "href": "tel:2677157373"
-    },
-    "heading": "Smile Culture Dental"
+    }
   },
   "links": [
     {
@@ -207,9 +213,27 @@
       "no schema.org structured data"
     ]
   },
-  "_wordCount": 255,
-  "_measuredWords": 391,
+  "_wordCount": 228,
+  "_measuredWords": 360,
   "_measuredImages": 12,
   "_measuredSections": 11,
-  "layout": "https://www.raycast.com"
+  "layout": "https://www.raycast.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call Smile Culture",
+    "href": "tel:2677157373"
+  }
 }

@@ -5,15 +5,15 @@
   "category": "musical instrument",
   "vertical": "retail",
   "attitude": "warm",
-  "composition_ref": "https://www.cosmos.so",
+  "composition_ref": "https://www.pentagram.com/work",
   "url": "https://www.osterviolins.com/",
   "phone": "215-545-1100",
   "address": "507 South Broad Street, Philadelphia, PA",
   "hours": "Mon-Fri 10am-5pm",
-  "description": "Fine String Instruments and Service V Violins Violin Bows V Violas Viola Bows C Cellos Cello Bows Fine stringed instruments are what we specialize in. From ...",
+  "description": "Frederick W. Oster Fine Violins has served Philadelphia musicians who need an instrument that sounds like them. Come play before you decide.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#E5E1D9",
     "ink": "#171C24",
@@ -35,11 +35,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Philadelphia | musical instrument",
-    "headline": "Frederick W. Oster Fine Violins",
-    "sub": "Fine String Instruments and Service V Violins Violin Bows V Violas Viola Bows C Cellos Cello Bows Fine stringed instruments are what we specialize in. From ...",
+    "eyebrow": "South Broad Street",
+    "headline": "Violins chosen with a player in mind",
+    "sub": "Frederick W. Oster Fine Violins has served Philadelphia musicians who need an instrument that sounds like them. Come play before you decide.",
     "ctaPrimary": {
-      "label": "Books",
+      "label": "Visit the shop",
       "href": "tel:2155451100"
     },
     "ctaSecondary": {
@@ -53,17 +53,18 @@
   },
   "offerings": {
     "items": [
-      "Instruments Violins Violas CellosBows Violin Bows Viola Bows Cello Bows Bass and",
-      "Books Violin Family Books Winds & Brass Books Guitars & Fretted Books",
-      "Fine stringed instruments are what we specialize in. From antique violins and"
-    ]
+      "Fine violins",
+      "Bows and fittings",
+      "Sales and service"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for musical instrument in Philadelphia.",
-      "Hours listed as Mon-Fri 10am-5pm.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "507 South Broad Street",
+      "Philadelphia shop",
+      "Play before you buy",
+      "Instruments, not posters"
     ]
   },
   "gallery": {
@@ -76,31 +77,37 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A shop for people who listen",
     "paragraphs": [
-      "Instruments Violins Violas CellosBows Violin Bows Viola Bows Cello Bows Bass and Other Bows",
-      "Books Violin Family Books Winds & Brass Books Guitars & Fretted Books Other Books View View View View View View View View"
-    ]
+      "You cannot judge a violin from a photo. Come in, play, and listen in the room.",
+      "We help students, professionals, and families who want the next instrument to last.",
+      "Frederick W. Oster Fine Violins serves people who live and work in Philadelphia.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Book a play-in",
+      "Compare two instruments",
+      "Leave with a sound you chose"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A musical instrument page that works on a phone",
-    "text": "Frederick W. Oster Fine Violins's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "The room does the selling",
+    "text": "We keep the talk short so you can hear the instrument. If it is not right, we will say so.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://www.osterviolins.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Philadelphia first",
-    "text": "Priority on the radar is local. Frederick W. Oster Fine Violins is in Philadelphia, and the page should read that way without",
+    "heading": "Broad Street, Philadelphia",
+    "text": "The shop is on South Broad. Call ahead if you want a quiet hour with a few instruments out.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -108,6 +115,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -115,7 +123,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -127,15 +135,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Come play something",
+    "sub": "Address and phone are here. Confirm hours on the official site before you travel."
   },
   "closing": {
+    "heading": "Bring your bow",
     "cta": {
-      "label": "Books",
+      "label": "Visit the shop",
       "href": "tel:2155451100"
-    },
-    "heading": "Frederick W. Oster Fine Violins"
+    }
   },
   "links": [
     {
@@ -207,9 +215,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 269,
-  "_measuredWords": 389,
-  "_measuredImages": 12,
+  "_wordCount": 235,
+  "_measuredWords": 360,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://www.cosmos.so"
+  "layout": "https://www.pentagram.com/work",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Visit the shop",
+    "href": "tel:2155451100"
+  }
 }

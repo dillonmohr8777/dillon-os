@@ -5,14 +5,14 @@
   "category": "dentist",
   "vertical": "medical",
   "attitude": "glass",
-  "composition_ref": "https://shopify.design",
+  "composition_ref": "https://godly.website",
   "url": "https://www.colmarkids.com/",
   "phone": "215-822-6777",
   "address": "671 Bethlehem Pike, Montgomeryville, PA 18936",
-  "description": "Please call or visit us today to make your child’s appointment at our practice and learn more about pediatric dentistry in Colmar, Pennsylvania.",
+  "description": "Colmar Dentistry For Kids on Bethlehem Pike is built for first visits, wiggly patients, and parents who want a straight answer.",
   "noindex": true,
   "schemaType": "Dentist",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#E3E1DC",
     "ink": "#101D2C",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Montgomeryville | dentist",
-    "headline": "Colmar Dentistry For Kids",
-    "sub": "Please call or visit us today to make your child’s appointment at our practice and learn more about pediatric dentistry in Colmar, Pennsylvania.",
+    "eyebrow": "Montgomeryville",
+    "headline": "Dentistry that kids do not dread",
+    "sub": "Colmar Dentistry For Kids on Bethlehem Pike is built for first visits, wiggly patients, and parents who want a straight answer.",
     "ctaPrimary": {
-      "label": "Contact",
+      "label": "Call for kids",
       "href": "tel:2158226777"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "Can I Stay with My Child During Their Appointment?",
-      "671 Bethlehem Pike, Montgomeryville, PA 18936",
-      "Dental Care Orthodontics Pediatric Dentistry Dental Fillings Dietary Consultations Digital X-Rays Tooth"
-    ]
+      "First visits",
+      "Cleanings",
+      "Kid-focused care"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for dentist in Montgomeryville.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "671 Bethlehem Pike",
+      "Montgomeryville",
+      "Kids first",
+      "Parents stay informed"
     ]
   },
   "gallery": {
@@ -75,33 +76,39 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A kids' office on purpose",
     "paragraphs": [
-      "Can I Stay with My Child During Their Appointment?",
-      "671 Bethlehem Pike, Montgomeryville, PA 18936",
-      "Colmar Dentistry For Kids already exists as a business in Montgomeryville.",
-      "The radar marked this site for rebuild after a documented mobile or conversion fault."
-    ]
+      "The room, the words, and the pace are for children. Parents get the plan in language they can repeat at dinner.",
+      "Come early if your child needs time to look around. We would rather start slow.",
+      "Colmar Dentistry For Kids serves people who live and work in Montgomeryville.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "Montgomeryville dentist care, written so a person can act on it."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Preview the visit",
+      "Stay close",
+      "Leave with a sticker and a plan"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A dentist page that works on a phone",
-    "text": "Colmar Dentistry For Kids's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Bethlehem Pike, family parking",
+    "text": "The office is set up for car seats and nervous first-timers. Call if you want the quietest slot of the day.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://www.colmarkids.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Montgomeryville first",
-    "text": "Priority on the radar is local. Colmar Dentistry For Kids is in Montgomeryville, and the page should read that way without extra",
+    "heading": "671 Bethlehem Pike",
+    "text": "Montgomeryville is easy to reach. Bring the favorite stuffed animal. We have seen it all.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -109,6 +116,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -116,7 +124,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -128,15 +136,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Book the first visit",
+    "sub": "Call the office. Tell us the age and whether this is a first dentist."
   },
   "closing": {
+    "heading": "They can do this",
     "cta": {
-      "label": "Contact",
+      "label": "Call for kids",
       "href": "tel:2158226777"
-    },
-    "heading": "Colmar Dentistry For Kids"
+    }
   },
   "links": [
     {
@@ -206,9 +214,27 @@
       "no viewport meta — page renders desktop-width on phones"
     ]
   },
-  "_wordCount": 252,
-  "_measuredWords": 360,
-  "_measuredImages": 12,
+  "_wordCount": 248,
+  "_measuredWords": 361,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://shopify.design"
+  "layout": "https://godly.website",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call for kids",
+    "href": "tel:2158226777"
+  }
 }

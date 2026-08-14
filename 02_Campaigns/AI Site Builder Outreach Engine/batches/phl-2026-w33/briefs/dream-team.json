@@ -9,10 +9,10 @@
   "url": "https://dreamteampa.com/",
   "phone": "610-477-8226",
   "address": "436 S. Lansdowne Ave, Lansdowne, PA 19050",
-  "description": "Dream Team handles hvac in Paoli. The new page makes that obvious on the first screen.",
+  "description": "Dream Team keeps houses in Lansdowne comfortable when the weather will not cooperate. Call for a repair, a tune-up, or a system that has had enough.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#F6E8D9",
     "ink": "#462E22",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Paoli | hvac",
-    "headline": "Dream Team",
-    "sub": "Dream Team handles hvac in Paoli. The new page makes that obvious on the first screen.",
+    "eyebrow": "Lansdowne",
+    "headline": "Heat, air, and a crew that shows up",
+    "sub": "Dream Team keeps houses in Lansdowne comfortable when the weather will not cooperate. Call for a repair, a tune-up, or a system that has had enough.",
     "ctaPrimary": {
-      "label": "BOOK NOW",
+      "label": "Call Dream Team",
       "href": "tel:6104778226"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "Plumbing Plumbing Repair Services Plumbing Installation Services Water Heater Services Tankless Water",
-      "HVAC Heating Air Conditioning / Cooling Air Conditioning Repair Air Conditioning Replacement",
-      "Air Conditioning / Cooling Air Conditioning Repair Air Conditioning Replacement Air Conditioning"
-    ]
+      "Heating repair",
+      "Air conditioning",
+      "System replacements"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for hvac in Paoli.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "Lansdowne crew",
+      "S. Lansdowne Avenue",
+      "Houses, not showrooms",
+      "Phone first"
     ]
   },
   "gallery": {
@@ -75,32 +76,37 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "The truck you wanted yesterday",
     "paragraphs": [
-      "Plumbing Plumbing Repair Services Plumbing Installation Services Water Heater Services Tankless Water Heater Services Pipe Repair Services",
-      "HVAC Heating Air Conditioning / Cooling Air Conditioning Repair Air Conditioning Replacement Air Conditioning Installation Air Conditioning Maintenance Emergency Air Conditioning Repair",
-      "Dream Team already exists as a business in Paoli."
-    ]
+      "When the house is too hot or too cold, you want a person who will come over and fix it. That is the job.",
+      "We keep the conversation plain: what failed, what it costs, and when we can be there.",
+      "Dream Team serves people who live and work in Paoli.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Call with the symptom",
+      "Get a window, not a maybe",
+      "See the work before you pay"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A hvac page that works on a phone",
-    "text": "Dream Team's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Repair first, replace when you must",
+    "text": "We would rather fix a system that still has life than sell you a new one. If replacement is the honest answer, you will hear why.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://dreamteampa.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Paoli first",
-    "text": "Priority on the radar is local. Dream Team is in Paoli, and the page should read that way without extra clicks.",
+    "heading": "436 S. Lansdowne Avenue",
+    "text": "Local houses, local trucks. If you can describe the noise, we can usually guess the part.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -108,6 +114,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -115,7 +122,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -127,15 +134,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Get a tech on the way",
+    "sub": "Call the number on this page. Tell us the town and what the system is doing."
   },
   "closing": {
+    "heading": "We will come to the house",
     "cta": {
-      "label": "BOOK NOW",
+      "label": "Call Dream Team",
       "href": "tel:6104778226"
-    },
-    "heading": "Dream Team"
+    }
   },
   "links": [
     {
@@ -207,9 +214,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 248,
-  "_measuredWords": 363,
-  "_measuredImages": 12,
+  "_wordCount": 261,
+  "_measuredWords": 366,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://www.figma.com"
+  "layout": "https://www.figma.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call Dream Team",
+    "href": "tel:6104778226"
+  }
 }

@@ -41,6 +41,12 @@ domain is a South Carolina developer, not the Philly climbing gym the radar
 still lists. Replacement slot: Colmar Dentistry For Kids (`colmarkids.com`),
 next unused high-priority rebuild in `12_Brain/state/radar/build-queue.csv`.
 
+Week 33 demos now carry each business's real logo and forward-facing copy.
+The first 15 composition refs are the screenshots shown in review (Stripe,
+Apple, Airbnb, Arc, Webflow, Cursor, Figma, Linear, Notion, Godly, Land-book,
+Pentagram, Studio Freight, Awwwards architecture, Midjourney). Ten more fill
+the rest of the batch. Demos stay noindex.
+
 Remaining rebuilds on the radar (168 queued, 0 built at capture) are later
 batches, not this PR.
 

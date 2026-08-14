@@ -222,9 +222,14 @@ const footerLinks = (brief.links || [])
   .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)} \u2197</a></li>`)
   .join('');
 
-const brand = brief.logo === false
-  ? `<span class="wordmark">${esc(brief.name)}</span>`
-  : `<img class="brand-logo" src="assets/logo.png" alt="${esc(brief.name)}">`;
+const priorAssets = path.join(outRoot, brief.slug, 'assets');
+const logoFile = ['logo.png', 'logo.svg', 'logo.webp', 'logo.jpg'].find((f) =>
+  fs.existsSync(path.join(priorAssets, f))
+);
+const brand =
+  brief.logo === false && !logoFile
+    ? `<span class="wordmark">${esc(brief.name)}</span>`
+    : `<img class="brand-logo" src="assets/${logoFile || 'logo.png'}" alt="${esc(brief.name)}">`;
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -262,7 +267,9 @@ const outDir = path.join(outRoot, brief.slug);
 fs.mkdirSync(path.join(outDir, 'assets'), { recursive: true });
 fs.writeFileSync(path.join(outDir, 'index.html'), html);
 
-const wanted = new Set(brief.logo === false ? [] : ['logo.png']);
+const wanted = new Set();
+if (logoFile) wanted.add(logoFile);
+else if (brief.logo !== false) wanted.add('logo.png');
 const usedImages = html.match(/assets\/[a-z0-9-]+\.(webp|png|jpg)/g) || [];
 usedImages.forEach((u) => wanted.add(u.replace('assets/', '')));
 const have = new Set(fs.readdirSync(path.join(outDir, 'assets')));

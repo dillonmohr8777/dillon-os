@@ -5,14 +5,14 @@
   "category": "shoes",
   "vertical": "retail",
   "attitude": "warm",
-  "composition_ref": "https://openai.com",
+  "composition_ref": "https://land-book.com",
   "url": "https://www.blshoes.com/",
   "phone": "Tel: 215.564.4655",
   "address": "1728 Chestnut Street, Philadelphia, PA 19103",
-  "description": "Benjamin Lovell Shoes handles shoes in Spring House. The new page makes that obvious on the first screen.",
+  "description": "Benjamin Lovell Shoes on Chestnut Street is for people who want comfort that still looks like a choice. Come try the pair on.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#EBE8E1",
     "ink": "#282E39",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Spring House | shoes",
-    "headline": "Benjamin Lovell Shoes",
-    "sub": "Benjamin Lovell Shoes handles shoes in Spring House. The new page makes that obvious on the first screen.",
+    "eyebrow": "Chestnut Street",
+    "headline": "Shoes you can walk Philadelphia in",
+    "sub": "Benjamin Lovell Shoes on Chestnut Street is for people who want comfort that still looks like a choice. Come try the pair on.",
     "ctaPrimary": {
-      "label": "Shop Now",
+      "label": "Visit Chestnut Street",
       "href": "tel:2155644655"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "1728 Chestnut Street, Philadelphia, PA 19103",
-      "525 Glen Eagle Square, Glen Mills, PA 19342",
-      "Hours: Mon-Wed & Sat 10-6, Thurs-Fri 10-7, Sun 11-5"
-    ]
+      "Everyday shoes",
+      "Fit help",
+      "Brands you can feel"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for shoes in Spring House.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "1728 Chestnut Street",
+      "Philadelphia",
+      "Fit before you buy",
+      "A store, not a warehouse"
     ]
   },
   "gallery": {
@@ -75,34 +76,39 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A shoe store that still fits you",
     "paragraphs": [
-      "1728 Chestnut Street, Philadelphia, PA 19103",
-      "525 Glen Eagle Square, Glen Mills, PA 19342",
-      "Benjamin Lovell Shoes already exists as a business in Spring House.",
-      "The radar marked this site for rebuild after a documented mobile or conversion fault.",
-      "Copy on this demo stays inside what we could verify from public pages."
-    ]
+      "Size is a starting point. We watch you walk and tell you when a pair is lying to you.",
+      "Come in with the shoes that already hurt. We will use that information.",
+      "Benjamin Lovell Shoes serves people who live and work in Spring House.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "Spring House shoes care, written so a person can act on it."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Tell us where it hurts",
+      "Try two lasts",
+      "Walk the aisle before you pay"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A shoes page that works on a phone",
-    "text": "Benjamin Lovell Shoes's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Chestnut Street, in person",
+    "text": "Photos flatten a shoe. The last, the leather, and the way it flexes only show up when you stand in it.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://www.blshoes.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Spring House first",
-    "text": "Priority on the radar is local. Benjamin Lovell Shoes is in Spring House, and the page should read that way without extra",
+    "heading": "1728 Chestnut Street",
+    "text": "Center City is easy to reach. Bring the socks you actually wear.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -110,6 +116,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -117,7 +124,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -129,15 +136,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Come try a pair",
+    "sub": "Confirm hours on the official site. The address is on this page."
   },
   "closing": {
+    "heading": "Walk in, walk out better",
     "cta": {
-      "label": "Shop Now",
+      "label": "Visit Chestnut Street",
       "href": "tel:2155644655"
-    },
-    "heading": "Benjamin Lovell Shoes"
+    }
   },
   "links": [
     {
@@ -209,9 +216,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 249,
-  "_measuredWords": 369,
-  "_measuredImages": 12,
+  "_wordCount": 254,
+  "_measuredWords": 368,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://openai.com"
+  "layout": "https://land-book.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Visit Chestnut Street",
+    "href": "tel:2155644655"
+  }
 }

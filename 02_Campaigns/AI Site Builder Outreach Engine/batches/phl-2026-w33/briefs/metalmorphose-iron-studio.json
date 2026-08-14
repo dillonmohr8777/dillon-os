@@ -5,14 +5,14 @@
   "category": "metal construction",
   "vertical": "home-services",
   "attitude": "industrial",
-  "composition_ref": "https://www.webflow.com",
+  "composition_ref": "https://studiofreight.com",
   "url": "https://metalmorphoseironworks.com/",
   "phone": "(484) 919-4548",
   "address": "1296 Cannery Rd, Kennett Square, PA 19348",
-  "description": "Metalmorphose Iron Studio handles metal construction in Coatesville. The new page makes that obvious on the first screen.",
+  "description": "Metalmorphose Iron Studio builds rails, gates, and custom pieces you can see from the street. Call when you want metal that looks considered.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#EFE4D9",
     "ink": "#332523",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Coatesville | metal construction",
-    "headline": "Metalmorphose Iron Studio",
-    "sub": "Metalmorphose Iron Studio handles metal construction in Coatesville. The new page makes that obvious on the first screen.",
+    "eyebrow": "Kennett Square",
+    "headline": "Ironwork with a maker's fingerprint",
+    "sub": "Metalmorphose Iron Studio builds rails, gates, and custom pieces you can see from the street. Call when you want metal that looks considered.",
     "ctaPrimary": {
-      "label": "Get in touch",
+      "label": "Call the studio",
       "href": "tel:4849194548"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "Metalmorphose is your local source for custom wrought iron…with a french twist",
-      "Eric Zandotti, artist and master blacksmith, started Metalmorphose Iron Works nearly twenty",
-      "Come visit the Chester County studio near the Brandywine River to discuss"
-    ]
+      "Custom ironwork",
+      "Rails and gates",
+      "Studio pieces"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for metal construction in Coatesville.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "Cannery Road studio",
+      "Kennett Square",
+      "Handmade, not catalog",
+      "See the shop"
     ]
   },
   "gallery": {
@@ -75,31 +76,37 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A studio, not a warehouse",
     "paragraphs": [
-      "Metalmorphose is your local source for custom wrought iron…with a french twist.",
-      "Eric Zandotti, artist and master blacksmith, started Metalmorphose Iron Works nearly twenty years ago to bring steel to life in the classical"
-    ]
+      "We draw, forge, and finish in one place. You can watch the work if you want to understand the timeline.",
+      "Bring a photo, a measurement, and the feeling you want at the front door. We will answer with a sketch.",
+      "Metalmorphose Iron Studio serves people who live and work in Coatesville.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Share the opening size",
+      "Review a sketch",
+      "See it in steel"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A metal construction page that works on a phone",
-    "text": "Metalmorphose Iron Studio's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Iron that belongs on the house",
+    "text": "The best rail looks like it grew there. We match the line of the stairs and the color of the brick, then we get out of the way.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://metalmorphoseironworks.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Coatesville first",
-    "text": "Priority on the radar is local. Metalmorphose Iron Studio is in Coatesville, and the page should read that way without extra clicks.",
+    "heading": "1296 Cannery Road",
+    "text": "The Kennett Square studio is where the heat is. Call before you visit so someone is at the door.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -107,6 +114,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -114,7 +122,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -126,15 +134,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Start with a sketch",
+    "sub": "Call with the project and a few photos. We will tell you if it is a fit."
   },
   "closing": {
+    "heading": "Let's make the gate",
     "cta": {
-      "label": "Get in touch",
+      "label": "Call the studio",
       "href": "tel:4849194548"
-    },
-    "heading": "Metalmorphose Iron Studio"
+    }
   },
   "links": [
     {
@@ -206,9 +214,27 @@
       "hard-coded 1130px page width"
     ]
   },
-  "_wordCount": 244,
-  "_measuredWords": 369,
-  "_measuredImages": 12,
+  "_wordCount": 253,
+  "_measuredWords": 366,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://www.webflow.com"
+  "layout": "https://studiofreight.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call the studio",
+    "href": "tel:4849194548"
+  }
 }

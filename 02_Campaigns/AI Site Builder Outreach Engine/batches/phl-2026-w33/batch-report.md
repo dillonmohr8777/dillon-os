@@ -19,35 +19,35 @@ qa_ready_count: 23
 
 Canonical targets: 9-11 sections, 350-500 words, 12-13 images. Spec misses block `qa_ready`.
 
-Batch averages: **11 sections, 373 words, 12 images, 29 KB**.
+Batch averages: **11 sections, 365 words, 13 images, 31 KB**.
 
 | Prospect | Business | Sections | Words | Images | QA | Visual | qa_ready | mail_ready | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| PHL001 | Always Dental Care | 11 | 360 | 12 | PASS | ran | ready | hold | clean |
-| PHL002 | Andorra Family Dentistry | 11 | 362 | 12 | PASS | ran | ready | hold | clean |
-| PHL003 | Be Balanced Hormone Weight Loss Centers | 11 | 365 | 12 | PASS | ran | ready | hold | clean |
-| PHL004 | Benjamin Lovell Shoes | 11 | 369 | 12 | PASS | ran | ready | hold | clean |
-| PHL005 | Colmar Dentistry For Kids | 11 | 360 | 12 | PASS | ran | ready | hold | clean |
-| PHL006 | Davidson Fabricating, Inc. | 11 | 387 | 12 | PASS | ran | ready | hold | clean |
-| PHL007 | Dream Team | 11 | 363 | 12 | PASS | ran | ready | hold | clean |
-| PHL008 | DreamMaker Bath & Kitchen | 11 | 363 | 12 | PASS | ran | ready | hold | clean |
-| PHL009 | Dutton Road Veterinary Clinic | 11 | 373 | 12 | PASS | ran | ready | hold | clean |
-| PHL010 | Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck, P.C. | 11 | 390 | 12 | PASS | ran | ready | hold | clean |
-| PHL011 | Elverson Supply | 11 | 390 | 12 | PASS | ran | ready | hold | clean |
-| PHL012 | Floral and Hardy | 11 | 362 | 12 | PASS | ran | ready | hold | clean |
-| PHL013 | Frederick W. Oster Fine Violins | 11 | 389 | 12 | PASS | ran | ready | hold | clean |
-| PHL014 | Glen Eagle Pediatric Dentistry | 11 | 387 | 12 | PASS | ran | ready | hold | clean |
-| PHL015 | GO2Tech | 11 | 365 | 12 | PASS | ran | ready | hold | clean |
-| PHL016 | Live Urgent Care | 11 | 377 | 12 | PASS | ran | ready | hold | clean |
-| PHL017 | MacLaren Kitchen and Bath | 11 | 402 | 12 | PASS | ran | ready | hold | clean |
-| PHL018 | Metalmorphose Iron Studio | 11 | 369 | 12 | PASS | ran | ready | hold | clean |
-| PHL019 | Mt. Airy Pediatrics, P.C. | 11 | 367 | 12 | PASS | ran | ready | hold | clean |
-| PHL020 | Pennsylvania Dental Group | 11 | 372 | 12 | PASS | ran | ready | hold | clean |
-| PHL021 | Philadelphia Garage | 11 | 365 | 12 | PASS | ran | hold | hold | clean |
-| PHL022 | Plastic Surgery Solutions | 11 | 363 | 12 | PASS | ran | ready | hold | clean |
-| PHL023 | Salter's Fireplace & Outdoor Living | 11 | 365 | 12 | PASS | ran | ready | hold | clean |
-| PHL024 | Smile Culture Dental | 11 | 391 | 12 | PASS | ran | ready | hold | clean |
-| PHL025 | Southampton Hot Tub | 11 | 364 | 12 | PASS | ran | hold | hold | clean |
+| PHL001 | Always Dental Care | 11 | 363 | 13 | PASS | ran | ready | hold | clean |
+| PHL002 | Andorra Family Dentistry | 11 | 370 | 13 | PASS | ran | ready | hold | clean |
+| PHL003 | Be Balanced Hormone Weight Loss Centers | 11 | 364 | 13 | PASS | ran | ready | hold | clean |
+| PHL004 | Benjamin Lovell Shoes | 11 | 368 | 13 | PASS | ran | ready | hold | clean |
+| PHL005 | Colmar Dentistry For Kids | 11 | 361 | 13 | PASS | ran | ready | hold | clean |
+| PHL006 | Davidson Fabricating, Inc. | 11 | 362 | 13 | PASS | ran | ready | hold | clean |
+| PHL007 | Dream Team | 11 | 366 | 13 | PASS | ran | ready | hold | clean |
+| PHL008 | DreamMaker Bath & Kitchen | 11 | 370 | 13 | PASS | ran | ready | hold | clean |
+| PHL009 | Dutton Road Veterinary Clinic | 11 | 362 | 13 | PASS | ran | ready | hold | clean |
+| PHL010 | Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck, P.C. | 11 | 361 | 13 | PASS | ran | ready | hold | clean |
+| PHL011 | Elverson Supply | 11 | 369 | 13 | PASS | ran | ready | hold | clean |
+| PHL012 | Floral and Hardy | 11 | 364 | 13 | PASS | ran | ready | hold | clean |
+| PHL013 | Frederick W. Oster Fine Violins | 11 | 360 | 13 | PASS | ran | ready | hold | clean |
+| PHL014 | Glen Eagle Pediatric Dentistry | 11 | 362 | 13 | PASS | ran | ready | hold | clean |
+| PHL015 | GO2Tech | 11 | 362 | 13 | PASS | ran | ready | hold | clean |
+| PHL016 | Live Urgent Care | 11 | 368 | 13 | PASS | ran | ready | hold | clean |
+| PHL017 | MacLaren Kitchen and Bath | 11 | 363 | 13 | PASS | ran | ready | hold | clean |
+| PHL018 | Metalmorphose Iron Studio | 11 | 366 | 13 | PASS | ran | ready | hold | clean |
+| PHL019 | Mt. Airy Pediatrics, P.C. | 11 | 363 | 13 | PASS | ran | ready | hold | clean |
+| PHL020 | Pennsylvania Dental Group | 11 | 360 | 13 | PASS | ran | ready | hold | clean |
+| PHL021 | Philadelphia Garage | 11 | 371 | 12 | PASS | ran | hold | hold | clean |
+| PHL022 | Plastic Surgery Solutions | 11 | 369 | 12 | PASS | ran | ready | hold | clean |
+| PHL023 | Salter's Fireplace & Outdoor Living | 11 | 369 | 13 | PASS | ran | ready | hold | clean |
+| PHL024 | Smile Culture Dental | 11 | 360 | 12 | PASS | ran | ready | hold | clean |
+| PHL025 | Southampton Hot Tub | 11 | 363 | 12 | PASS | ran | hold | hold | clean |
 
 ## Held (2)
 

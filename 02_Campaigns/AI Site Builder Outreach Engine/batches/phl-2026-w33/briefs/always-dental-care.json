@@ -9,10 +9,10 @@
   "url": "https://www.alwaysdentalcare.com/",
   "phone": "484.392.7687",
   "address": "1570 Egypt Rd #210, Phoenixville, Pennsylvania, 19460",
-  "description": "Always Dental Family & Cosmetic Care Welcome to , the finest in dental care for you and your family. Dr. has been providing dental care in , ,",
+  "description": "Always Dental Care on Egypt Road is for cleanings, repairs, and the visit you have been moving to next month. Book it while you are thinking about it.",
   "noindex": true,
   "schemaType": "Dentist",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#E2EAE7",
     "ink": "#103549",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Phoenixville | dentist",
-    "headline": "Always Dental Care",
-    "sub": "Always Dental Family & Cosmetic Care Welcome to , the finest in dental care for you and your family. Dr. has been providing dental care in , ,",
+    "eyebrow": "Phoenixville",
+    "headline": "Dental care you can keep on the calendar",
+    "sub": "Always Dental Care on Egypt Road is for cleanings, repairs, and the visit you have been moving to next month. Book it while you are thinking about it.",
     "ctaPrimary": {
-      "label": "Contact",
+      "label": "Call Always Dental",
       "href": "tel:4843927687"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "1570 Egypt Rd #210Phoenixville, PA 19460 (Behind WAWA, next to Hand &",
-      "Services Cosmetic Dentistry Dental Veneers Teeth Whitening General & Family Dentistry Dental",
-      "Cosmetic Dentistry Dental Veneers Teeth Whitening"
-    ]
+      "Cleanings",
+      "Repairs",
+      "Family visits"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for dentist in Phoenixville.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "1570 Egypt Road",
+      "Phoenixville",
+      "Suite 210",
+      "A number you can tap"
     ]
   },
   "gallery": {
@@ -75,31 +76,36 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "Always means we will get you in",
     "paragraphs": [
-      "1570 Egypt Rd #210Phoenixville, PA 19460 (Behind WAWA, next to Hand & Stone Massage)",
-      "Services Cosmetic Dentistry Dental Veneers Teeth Whitening General & Family Dentistry Dental Crowns Dental Emergency Care Dental Exams & Cleanings Dental Implants"
-    ]
+      "People skip the dentist when booking feels like a project. We keep the phone on the page and the next step obvious.",
+      "Come in for the cleaning. Stay for the work you have been postponing. We will sequence it so it fits your month.",
+      "Always Dental Care serves people who live and work in Phoenixville.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Tap to call",
+      "Pick a morning or after work",
+      "Leave with the next date set"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A dentist page that works on a phone",
-    "text": "Always Dental Care's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Egypt Road, Suite 210",
+    "text": "Phoenixville patients should not need a downtown trip for everyday dentistry. We keep the visits local and the explanations short.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://www.alwaysdentalcare.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Phoenixville first",
-    "text": "Priority on the radar is local. Always Dental Care is in Phoenixville, and the page should read that way without extra clicks.",
+    "heading": "1570 Egypt Road",
+    "text": "Suite 210 is easy to find. Call if you want the first or last slot of the day.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -107,6 +113,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -114,7 +121,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -126,15 +133,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Put it on the calendar",
+    "sub": "Call the office. Tell us if you are new or if you are coming back after a while. Either is fine."
   },
   "closing": {
+    "heading": "See you on Egypt Road",
     "cta": {
-      "label": "Contact",
+      "label": "Call Always Dental",
       "href": "tel:4843927687"
-    },
-    "heading": "Always Dental Care"
+    }
   },
   "links": [
     {
@@ -206,9 +213,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 258,
-  "_measuredWords": 360,
-  "_measuredImages": 12,
+  "_wordCount": 252,
+  "_measuredWords": 363,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://www.spotify.com"
+  "layout": "https://www.spotify.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call Always Dental",
+    "href": "tel:4843927687"
+  }
 }

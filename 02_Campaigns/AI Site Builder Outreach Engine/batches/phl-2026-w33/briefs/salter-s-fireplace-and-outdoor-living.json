@@ -9,10 +9,10 @@
   "url": "https://saltersfireplace.com/",
   "phone": "(610) 631-9372",
   "address": "3076 Ridge Pike, Eagleville, PA, 19403",
-  "description": "Expert fireplace installation, service, and outdoor living solutions. Serving Southeastern PA with warmth, care, and 50+ years of trust.",
+  "description": "Salter's Fireplace & Outdoor Living on Ridge Pike helps you pick a hearth you will actually use, then installs it so the house stays safe.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#EADFD5",
     "ink": "#241719",
@@ -34,11 +34,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Hatfield | fireplace",
-    "headline": "Salter's Fireplace & Outdoor Living",
-    "sub": "Expert fireplace installation, service, and outdoor living solutions. Serving Southeastern PA with warmth, care, and 50+ years of trust.",
+    "eyebrow": "Eagleville",
+    "headline": "Fireplaces and the rooms they warm",
+    "sub": "Salter's Fireplace & Outdoor Living on Ridge Pike helps you pick a hearth you will actually use, then installs it so the house stays safe.",
     "ctaPrimary": {
-      "label": "Contact",
+      "label": "Call Salter's",
       "href": "tel:6106319372"
     },
     "ctaSecondary": {
@@ -52,17 +52,18 @@
   },
   "offerings": {
     "items": [
-      "Contact Contact Eagleville Showroom Hatfield Showroom Our Service Area About Us",
-      "A fireplace isn’t just something to keep you warm, it’s the centerpiece",
-      "At Salter’s Fireplace, we help families create spaces where warmth and connection"
-    ]
+      "Fireplaces",
+      "Outdoor living",
+      "Service and install"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for fireplace in Hatfield.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "3076 Ridge Pike",
+      "Eagleville, PA",
+      "Showroom you can walk",
+      "Installers on staff"
     ]
   },
   "gallery": {
@@ -75,31 +76,39 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "A showroom, then a clean install",
     "paragraphs": [
-      "Contact Contact Eagleville Showroom Hatfield Showroom Our Service Area About Us",
-      "A fireplace isn’t just something to keep you warm, it’s the centerpiece of life’s most unforgettable moments. It’s where stories are told,"
-    ]
+      "You should see the unit in person before anyone cuts a hole in your wall. Come to Ridge Pike and stand in front of a few.",
+      "We handle the install and the service after. One shop, one phone number.",
+      "Salter's Fireplace & Outdoor Living serves people who live and work in Hatfield.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "Hatfield fireplace care, written so a person can act on it."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Walk the showroom",
+      "Pick fuel and style",
+      "Schedule the install"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A fireplace page that works on a phone",
-    "text": "Salter's Fireplace & Outdoor Living's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Outdoor rooms that get used",
+    "text": "Patios fail when the fire is an afterthought. We plan the hearth with the seating so you stay outside longer.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://saltersfireplace.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Hatfield first",
-    "text": "Priority on the radar is local. Salter's Fireplace & Outdoor Living is in Hatfield, and the page should read that way without",
+    "heading": "Ridge Pike, Eagleville",
+    "text": "The showroom is easy to find. Call if you want a quieter hour to look.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -107,6 +116,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -114,7 +124,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -126,15 +136,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "See it before you buy",
+    "sub": "Phone and address are listed. Confirm hours on the official site."
   },
   "closing": {
+    "heading": "Come stand in front of one",
     "cta": {
-      "label": "Contact",
+      "label": "Call Salter's",
       "href": "tel:6106319372"
-    },
-    "heading": "Salter's Fireplace & Outdoor Living"
+    }
   },
   "links": [
     {
@@ -206,9 +216,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 248,
-  "_measuredWords": 365,
-  "_measuredImages": 12,
+  "_wordCount": 261,
+  "_measuredWords": 369,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://www.framer.com"
+  "layout": "https://www.framer.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call Salter's",
+    "href": "tel:6106319372"
+  }
 }

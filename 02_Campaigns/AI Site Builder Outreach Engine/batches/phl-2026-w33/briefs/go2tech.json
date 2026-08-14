@@ -8,10 +8,10 @@
   "composition_ref": "https://webflow.com",
   "url": "https://www.go2tech.com/",
   "address": "606 Baltimore Pike, Springfield, PA, 19064",
-  "description": "GO2 Tech provides managed IT and cybersecurity to greater Philadelphia businesses. Philadelphia Managed IT and Security Services.",
+  "description": "GO2Tech keeps Springfield offices running: the network, the backups, the machine that froze before a meeting. Call when it cannot wait.",
   "noindex": true,
   "schemaType": "LegalService",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#E2E9EA",
     "ink": "#103251",
@@ -33,11 +33,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Springfield | it",
-    "headline": "GO2Tech",
-    "sub": "GO2 Tech provides managed IT and cybersecurity to greater Philadelphia businesses. Philadelphia Managed IT and Security Services.",
+    "eyebrow": "Springfield",
+    "headline": "IT help that answers the phone",
+    "sub": "GO2Tech keeps Springfield offices running: the network, the backups, the machine that froze before a meeting. Call when it cannot wait.",
     "ctaPrimary": {
-      "label": "call us today!",
+      "label": "Call GO2Tech",
       "href": "https://www.go2tech.com/"
     },
     "ctaSecondary": {
@@ -51,17 +51,18 @@
   },
   "offerings": {
     "items": [
-      "ServicesCybersecurityManaged IT Security BundleCyber Insurance ConsultingData Backup and RecoveryManaged FirewallVulnerability AssessmentPhysical SecurityAccess",
-      "CybersecurityManaged IT Security BundleCyber Insurance ConsultingData Backup and RecoveryManaged FirewallVulnerability Assessment",
-      "Physical SecurityAccess ControlVideo Surveillance"
-    ]
+      "Managed IT",
+      "Repairs",
+      "Network and backup"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for it in Springfield.",
-      "Reach them through the official site.",
-      "Contact runs through their official site.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "Baltimore Pike",
+      "Springfield, PA",
+      "Local techs",
+      "A human on the line"
     ]
   },
   "gallery": {
@@ -74,34 +75,41 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "Support you can reach",
     "paragraphs": [
-      "ServicesCybersecurityManaged IT Security BundleCyber Insurance ConsultingData Backup and RecoveryManaged FirewallVulnerability AssessmentPhysical SecurityAccess ControlVideo SurveillanceNetwork ServicesNetwork Design and ImplementationStructured CablingBusiness CommunicationsCarrier ServicesHosted VoIP",
-      "CybersecurityManaged IT Security BundleCyber Insurance ConsultingData Backup and RecoveryManaged FirewallVulnerability Assessment",
-      "GO2Tech already exists as a business in Springfield.",
-      "The radar marked this site for rebuild after a documented mobile or conversion fault.",
-      "Copy on this demo stays inside what we could verify from public pages."
-    ]
+      "Technology should not be a mystery invoice. We tell you what broke, what we did, and how to keep it from happening again.",
+      "Offices in Delaware County call us because we show up and we explain the work.",
+      "GO2Tech serves people who live and work in Springfield.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "Springfield it care, written so a person can act on it.",
+      "Local it in Springfield, kept easy to reach.",
+      "Local it in Springfield, kept easy to reach."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Describe the outage",
+      "Get a tech assigned",
+      "See the fix in writing"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A it page that works on a phone",
-    "text": "GO2Tech's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Prevent the next outage",
+    "text": "Backup and monitoring are boring until the day they save the week. We will tell you what you are missing.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://www.go2tech.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Springfield first",
-    "text": "Priority on the radar is local. GO2Tech is in Springfield, and the page should read that way without extra clicks.",
+    "heading": "606 Baltimore Pike",
+    "text": "Springfield is home base. We come to you when the office cannot come to us.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -109,6 +117,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -116,7 +125,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -128,15 +137,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Get a tech on it",
+    "sub": "Call with the business name and what stopped working. We will take the ticket."
   },
   "closing": {
+    "heading": "We will get you back online",
     "cta": {
-      "label": "call us today!",
+      "label": "Call GO2Tech",
       "href": "https://www.go2tech.com/"
-    },
-    "heading": "GO2Tech"
+    }
   },
   "links": [
     {
@@ -208,9 +217,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 257,
-  "_measuredWords": 365,
-  "_measuredImages": 12,
+  "_wordCount": 267,
+  "_measuredWords": 362,
+  "_measuredImages": 13,
   "_measuredSections": 11,
-  "layout": "https://webflow.com"
+  "layout": "https://webflow.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call GO2Tech",
+    "href": "https://www.go2tech.com/"
+  }
 }

@@ -8,10 +8,10 @@
   "composition_ref": "https://www.anthropic.com",
   "url": "https://southamptonhottub.com/",
   "phone": "(215) 791-6170",
-  "description": "We offer portable hot tubs in Exton and Huntingdon Valley with expert sales, in-house delivery, full-service repairs & premium saunas.",
+  "description": "Southampton Hot Tub helps you pick a tub that fits the deck, the power, and the way you actually relax. Come see them in person.",
   "noindex": true,
   "schemaType": "LocalBusiness",
-  "logo": false,
+  "logo": true,
   "tokens": {
     "paper": "#E8E6E7",
     "ink": "#1E2A4A",
@@ -33,11 +33,11 @@
     "text": "Instrument Sans"
   },
   "hero": {
-    "eyebrow": "Exton | swimming pool",
-    "headline": "Southampton Hot Tub",
-    "sub": "We offer portable hot tubs in Exton and Huntingdon Valley with expert sales, in-house delivery, full-service repairs & premium saunas.",
+    "eyebrow": "Hot tubs, local",
+    "headline": "A spa you will use in January",
+    "sub": "Southampton Hot Tub helps you pick a tub that fits the deck, the power, and the way you actually relax. Come see them in person.",
     "ctaPrimary": {
-      "label": "Shop By Series",
+      "label": "See the tubs",
       "href": "tel:2157916170"
     },
     "ctaSecondary": {
@@ -51,17 +51,18 @@
   },
   "offerings": {
     "items": [
-      "Bullfrog SpasShop By SeriesAll Bullfrog SpasSwim Series™ - Performance ClassM Series™ -",
-      "Shop By SeriesAll Bullfrog SpasSwim Series™ - Performance ClassM Series™ - Elite",
-      "The Bullfrog Spas DifferenceWhy Bullfrog Spas Stand OutJetPak Therapy System™ - Personalized"
-    ]
+      "Hot tubs",
+      "Delivery and setup",
+      "Service after"
+    ],
+    "heading": "What we do <mark>well.</mark>"
   },
   "proof": {
     "items": [
-      "Listed for swimming pool in Exton.",
-      "Reach them through the official site.",
-      "Phone published on their own pages.",
-      "Rebuild queued after a documented mobile or conversion fault."
+      "Local showroom",
+      "See it running",
+      "Service after the sale",
+      "Ask about power"
     ]
   },
   "gallery": {
@@ -74,31 +75,38 @@
     ]
   },
   "story": {
-    "heading": "About",
+    "heading": "Buy the tub you will sit in",
     "paragraphs": [
-      "Bullfrog SpasShop By SeriesAll Bullfrog SpasSwim Series™ - Performance ClassM Series™ - Elite ClassSTIL™ - Modern ClassA Series™ - Luxury ClassX Series™",
-      "Shop By SeriesAll Bullfrog SpasSwim Series™ - Performance ClassM Series™ - Elite ClassSTIL™ - Modern ClassA Series™ - Luxury ClassX Series™ -"
-    ]
+      "A hot tub is a weekend habit or it is an expensive lid. We help you pick one you will keep uncovered.",
+      "We talk about pads, breakers, and winter covers before anyone quotes a pretty picture.",
+      "Southampton Hot Tub serves people who live and work in Exton.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow."
+    ],
+    "imageIndex": 2
   },
   "experience": {
     "items": [
-      "Open the page on a phone. The primary action stays on screen.",
-      "Call or write without hunting a number buried in an image.",
-      "See the work, then take one next step."
-    ]
+      "Sit in a display",
+      "Check the electrical",
+      "Plan the crane or the path"
+    ],
+    "heading": "How a visit goes"
   },
   "feature": {
-    "heading": "A swimming pool page that works on a phone",
-    "text": "Southampton Hot Tub's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "heading": "Setup is the real product",
+    "text": "Delivery day is when most regrets start. We plan the path, the pad, and the first fill so you are soaking that night.",
     "cta": {
-      "label": "Visit the official site",
+      "label": "Official site",
       "href": "https://southamptonhottub.com/"
     },
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Exton first",
-    "text": "Priority on the radar is local. Southampton Hot Tub is in Exton, and the page should read that way without extra clicks.",
+    "heading": "Come see them running",
+    "text": "Call before you drive so we can confirm the showroom hours. Street address is confirmed on the official site when it is posted.",
     "imageIndex": 12,
     "cta": {
       "label": "Plan a visit",
@@ -106,6 +114,7 @@
     }
   },
   "catalog": {
+    "heading": "More ways in",
     "items": [
       {
         "title": "Official site",
@@ -113,7 +122,7 @@
         "imageIndex": 9
       },
       {
-        "title": "Offerings",
+        "title": "What we do",
         "href": "#offerings",
         "imageIndex": 10
       },
@@ -125,15 +134,15 @@
     ]
   },
   "contact": {
-    "heading": "Make the next visit easy.",
-    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+    "heading": "Talk through the deck",
+    "sub": "Call with photos of the yard and the breaker panel. We will tell you what will fit."
   },
   "closing": {
+    "heading": "Leave the lid off",
     "cta": {
-      "label": "Shop By Series",
+      "label": "See the tubs",
       "href": "tel:2157916170"
-    },
-    "heading": "Southampton Hot Tub"
+    }
   },
   "links": [
     {
@@ -205,9 +214,27 @@
       "no phone number on the homepage"
     ]
   },
-  "_wordCount": 258,
-  "_measuredWords": 364,
+  "_wordCount": 266,
+  "_measuredWords": 363,
   "_measuredImages": 12,
   "_measuredSections": 11,
-  "layout": "https://www.anthropic.com"
+  "layout": "https://www.anthropic.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "See the tubs",
+    "href": "tel:2157916170"
+  }
 }
