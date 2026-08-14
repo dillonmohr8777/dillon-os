@@ -497,7 +497,8 @@ p,address{text-wrap:pretty}
   .button-row{flex-direction:column;align-items:stretch}
   .button-row .button{width:100%;min-height:52px}
   .site-header .wordmark{font-size:clamp(1.05rem, 4.6vw, 1.25rem)}
-  .ink-logo{width:72px;height:56px;flex-basis:72px;margin-top:-14px}
+  .ink-logo{width:72px;height:56px;flex-basis:72px;margin-top:-14px;overflow:hidden}
+  .catalog-card,.offering-card{scroll-margin-bottom:96px}
   .bottom-dock.mobile-action{width:calc(100% - 10px);border-radius:32px;padding:8px 8px 10px}
   .bottom-dock a.dock-link{font-size:.64rem;letter-spacing:.04em;padding:0 4px}
   a[href^="tel:"],a[href^="mailto:"]{min-height:44px;display:inline-flex;align-items:center}

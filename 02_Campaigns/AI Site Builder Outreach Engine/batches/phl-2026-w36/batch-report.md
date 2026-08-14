@@ -19,7 +19,7 @@ qa_ready_count: 25
 
 Canonical targets: 9-11 sections, 380-720 words, 12-13 images. Spec misses block `qa_ready`.
 
-Batch averages: **10 sections, 645 words, 13 images, 77 KB**.
+Batch averages: **10 sections, 645 words, 13 images, 78 KB**.
 
 | Prospect | Business | Sections | Words | Images | QA | Visual | qa_ready | mail_ready | Notes |
 |---|---|---|---|---|---|---|---|---|---|
