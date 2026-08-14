@@ -24,10 +24,13 @@ Sean/Mac can still replace Meet with Zoom later. Until they do, this Meet URL is
 
 ## How a registrant actually gets it on their calendar
 
-Google will not let a public webpage silently write onto someone else's calendar. The working pattern is two layers:
+Google will not let a public webpage silently write onto someone else's calendar. The working pattern is three layers:
 
 1. **True auto for Gmail (Calendar API invite).** After Netlify Forms receives `workshop-registration`, a webhook adds that email as an attendee on the canonical event with `sendUpdates=all`. Google emails the invitation. Gmail usually places it on the calendar (often tentative until they click Yes). Outlook and Apple receive the same invite email and can accept it.
 2. **Same-click save for everyone (no backend).** The LP defaults "Open my calendar" on. Submit opens Google Calendar's event template (or Outlook, or an ICS download) in the same click as register, so popup blockers do not eat it. Public ICS: https://momentum-workshop-pilot.netlify.app/momentum-workshops.ics
+3. **Gmail inbox card for registrants (EventReservation).** C1 HTML in `c1-gmail-event.html`. Google documents this as a confirmation schema, not a cold-email trick ([EventReservation](https://developers.google.com/workspace/gmail/markup/reference/event-reservation)). Production cards need DKIM + [markup registration](https://developers.google.com/workspace/gmail/markup/registering-with-google). Until then, self-test (same From and To) still shows the card.
+
+The live LP also carries schema.org `Event` JSON-LD so Search can understand Thursday. Runbook for the fill/show split: [[Google RSVP Rail]].
 
 Template URLs still need the person to hit Save. The API invite is the path that does not depend on that click.
 

@@ -17,7 +17,7 @@ One-line summary: every message the campaign needs, paste-ready, nothing sends u
 - **Volume:** 25–40 cold sends per day per mailbox, spread across the morning. Never blast the whole list at once.
 - **Windows:** Tue–Thu 8:30–11:00 AM ET first, Mon/Fri second.
 - **Three-touch cap** per contact, then stop (Mac's rule). Replies remove a contact from all remaining touches.
-- **Format:** plain text, one link per email, no images, no attachments.
+- **Format:** plain text, one link per email, no images, no attachments — **except C1**, which is HTML with Gmail EventReservation markup (`c1-gmail-event.html`) and is registrants-only.
 - **CAN-SPAM footer on every cold email** (fill the address once in the template):
 
 > Momentum 360 · [MOMENTUM 360 MAILING ADDRESS — required, fill before send]
@@ -58,7 +58,7 @@ I'm Sean, co-founder of Momentum 360 in Philadelphia. On **Thursday, August 27 a
 
 For franchise owners it's built around one thing: the brand gives you the playbook, but local demand — Google Business Profile, reviews, local pages, lead flow — is yours to win. Bring the one bottleneck slowing {{business}} down and you'll leave with a 30-day plan for it. No pitch, no fluff, working session format.
 
-Grab a seat here (takes 30 seconds): {{reg_link}}
+Grab a seat here (takes 30 seconds — we drop Thursday on your Google Calendar in the same click): {{reg_link}}
 
 If it's not for you, no worries at all — reply "no thanks" and that's the last you'll hear from me.
 
@@ -130,7 +130,7 @@ I'm Sean, co-founder of Momentum 360 here in Philadelphia. On **Thursday, August
 
 We came across {{business}} doing research on {{city}} businesses we think we can genuinely help. The format is simple: bring the one bottleneck slowing you down — leads, reviews, the website, hiring pressure on your time — and leave with a written 30-day plan for it. No pitch, working session.
 
-Seat's here (30 seconds): {{reg_link}}
+Seat's here (30 seconds — Google Calendar opens with Thursday already filled in): {{reg_link}}
 
 Not for you? Reply "no thanks" and that's the last email you'll get from me.
 
@@ -145,6 +145,10 @@ Momentum 360 · Philadelphia
 ## C1 · Confirmation (instant, or same-day manual)
 
 **Subject:** `You're in — Growth Workshop, Thu Aug 27, 12 PM ET`
+
+**Send as HTML** from Sean's mailbox (GHL HTML or Gmail). Paste `c1-gmail-event.html`. Merge `{{first_name}}`, `{{email}}`, `{{reservation_id}}` (any stable id is fine). Do **not** use this file on the cold sequence.
+
+Plain-text fallback if the ESP cannot send HTML:
 
 Hi {{first_name}},
 

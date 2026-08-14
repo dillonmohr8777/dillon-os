@@ -17,6 +17,7 @@ const WORKSHOP_EVENT = {
   meetingUrl: "https://meet.google.com/ive-hkws-xdg",
   publicUrl:
     "https://momentum-workshop-pilot.netlify.app/?utm_source=calendar&utm_medium=event&utm_campaign=growth-workshop",
+  canonicalUrl: "https://momentum-workshop-pilot.netlify.app/",
   icsUrl: "https://momentum-workshop-pilot.netlify.app/momentum-workshops.ics",
   host: "Sean and Mac",
   organizerName: "Momentum 360",
@@ -220,6 +221,156 @@ function calendarInvitePatch(emails, options = {}) {
   };
 }
 
+function clockWithColon(hhmm) {
+  const raw = String(hhmm || "");
+  if (raw.includes(":")) return raw.length === 5 ? raw : `${raw}:00`.slice(0, 5);
+  return `${raw.slice(0, 2)}:${raw.slice(2, 4) || "00"}`;
+}
+
+function eventIsoTimes(config = WORKSHOP_EVENT) {
+  // Aug 27 2026 is Eastern Daylight Time (UTC−4). Do not send Z here — Gmail
+  // EventReservation and schema.org Event want a local offset.
+  const endClock = clockWithColon(addMinutesToClock(config.time, config.durationMinutes));
+  return {
+    start: `${config.date}T${clockWithColon(config.time)}:00-04:00`,
+    end: `${config.date}T${endClock}:00-04:00`,
+  };
+}
+
+function eventJsonLd(config = WORKSHOP_EVENT) {
+  const iso = eventIsoTimes(config);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: config.title,
+    description: calendarDescription(config),
+    startDate: iso.start,
+    endDate: iso.end,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+    isAccessibleForFree: true,
+    url: config.canonicalUrl || config.publicUrl,
+    image: "https://momentum-workshop-pilot.netlify.app/assets/mac-sean-momentum-glass-hero.webp",
+    location: {
+      "@type": "VirtualLocation",
+      url: config.canonicalUrl || config.publicUrl,
+    },
+    organizer: {
+      "@type": "Organization",
+      name: config.organizerName,
+      url: "https://www.momentumvirtualtours.com/",
+    },
+    performer: [
+      { "@type": "Person", name: "Sean Boyle" },
+      { "@type": "Person", name: "Mac Frederick" },
+    ],
+    offers: {
+      "@type": "Offer",
+      url: `${(config.canonicalUrl || config.publicUrl).replace(/[?#].*$/, "")}#register`,
+      price: 0,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      validFrom: "2026-08-14",
+    },
+  };
+}
+
+function eventJsonLdScript(config = WORKSHOP_EVENT) {
+  return `<script type="application/ld+json">\n${JSON.stringify(eventJsonLd(config), null, 2)}\n</script>`;
+}
+
+function gmailEventReservation(options = {}) {
+  const config = { ...WORKSHOP_EVENT, ...(options.config || {}) };
+  const template = options.template === true;
+  const email = template
+    ? String(options.attendeeEmail || "{{email}}").trim()
+    : normalizeEmail(options.attendeeEmail);
+  if (!template && !email) {
+    throw new Error(
+      "EventReservation requires a single attendeeEmail. Registrants only — never the cold list.",
+    );
+  }
+  const name = String(options.attendeeName || "there").trim() || "there";
+  const reservationNumber = template
+    ? "GW-20260827-{{reservation_id}}"
+    : `GW-20260827-${crypto.createHash("sha256").update(email).digest("hex").slice(0, 10)}`;
+  const iso = eventIsoTimes(config);
+  return {
+    "@context": "http://schema.org",
+    "@type": "EventReservation",
+    reservationNumber,
+    reservationStatus: "http://schema.org/Confirmed",
+    url: config.publicUrl,
+    underName: {
+      "@type": "Person",
+      name,
+      email,
+    },
+    reservationFor: {
+      "@type": "Event",
+      name: config.title,
+      startDate: iso.start,
+      endDate: iso.end,
+      url: config.publicUrl,
+      location: {
+        "@type": "Place",
+        name: "Google Meet (live online)",
+        url: config.meetingUrl,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Philadelphia",
+          addressRegion: "PA",
+          addressCountry: "US",
+        },
+      },
+    },
+  };
+}
+
+function htmlEscape(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function buildConfirmationMarkupHtml(options = {}) {
+  const config = { ...WORKSHOP_EVENT, ...(options.config || {}) };
+  const template = options.template === true;
+  const reservation = gmailEventReservation(options);
+  const name = htmlEscape(reservation.underName.name);
+  const meet = htmlEscape(config.meetingUrl);
+  const google = htmlEscape(googleCalendarUrl(config));
+  const outlook = htmlEscape(outlookCalendarUrl(config));
+  const ics = htmlEscape(config.icsUrl);
+  const jsonLd = JSON.stringify(reservation, null, 2);
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>You're in — ${htmlEscape(config.title)}</title>
+  <script type="application/ld+json">
+${jsonLd}
+  </script>
+</head>
+<body>
+  <p>Hi ${name},</p>
+  <p>You're registered for the Momentum 360 Growth Workshop — <strong>Thursday, August 27, 12:00–1:00 PM ET</strong>.</p>
+  <p>Join link: <a href="${meet}">${meet}</a></p>
+  <p>Add to calendar:
+    <a href="${google}">Google</a> ·
+    <a href="${outlook}">Outlook</a> ·
+    <a href="${ics}">ICS</a>
+  </p>
+  <p>One ask before Thursday: hit reply and tell us the single biggest bottleneck at your business right now. Mac and I build the session around what registrants send.</p>
+  <p>See you Thursday,<br/>Sean + Mac</p>
+  ${template ? "<p style=\"color:#666;font-size:12px\">GHL/HTML send. Gmail cards need DKIM on the From domain, then a one-time markup registration. Cold sequence stays plain text — do not paste this into Touch 1.</p>" : ""}
+</body>
+</html>
+`;
+}
+
 function zonedDateTimeToUtc(dateValue, timeValue, timeZone) {
   const [year, month, day] = dateValue.split("-").map(Number);
   const [hour, minute] = timeValue.split(":").map(Number);
@@ -320,6 +471,11 @@ module.exports = {
   extractRegistrationEmails,
   assertInviteBatch,
   calendarInvitePatch,
+  eventIsoTimes,
+  eventJsonLd,
+  eventJsonLdScript,
+  gmailEventReservation,
+  buildConfirmationMarkupHtml,
   zonedDateTimeToUtc,
   utcStamp,
   normalizeEmail,

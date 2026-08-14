@@ -72,6 +72,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Outreach engine
 
 - [[02_Campaigns/Growth Workshop/Growth Workshop|Growth Workshop]] — Sean's Aug 27 webinar campaign: LP date push, 5,359-contact franchise list, drip copy, two-week calendar, registrant Google Calendar auto-add.
+- [[02_Campaigns/Growth Workshop/Google RSVP Rail|Google RSVP Rail]] — Google is the RSVP rail for registrants; franchise file is a ranked pool, not a 4,914-row UPS blast.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]] — Stage 2 qualification: scores the website a prospect already has, routes strong-site prospects to ads/SEO instead of a wasted rebuild. Skill: `/site-grade`.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]] — the eight-stage model and the honest automation status of each stage.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Market Roster|Market Roster]] — geography ladder (Philadelphia → PA → national) and vertical priorities.

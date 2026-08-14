@@ -16,6 +16,9 @@ const {
   extractRegistrationEmails,
   calendarInvitePatch,
   utcStamp,
+  eventJsonLd,
+  gmailEventReservation,
+  buildConfirmationMarkupHtml,
 } = require("../automation/lib/workshop-calendar");
 
 const VAULT = path.resolve(__dirname, "../..");
@@ -168,6 +171,60 @@ describe("landing page wiring", () => {
     assert.match(js, /https:\/\/meet\.google\.com\/ive-hkws-xdg/);
     assert.match(js, /growth-workshop-20260827@momentum-workshop-pilot\.netlify\.app/);
     assert.doesNotMatch(js, /Nothing is added without/);
+  });
+
+  it("ships schema.org Event JSON-LD for an online Aug 27 session", () => {
+    const html = fs.readFileSync(
+      path.join(VAULT, "02_Campaigns/Growth Workshop/lp-date-push/index.html"),
+      "utf8",
+    );
+    const jsonLd = eventJsonLd();
+    assert.equal(jsonLd["@type"], "Event");
+    assert.equal(jsonLd.eventAttendanceMode, "https://schema.org/OnlineEventAttendanceMode");
+    assert.equal(jsonLd.startDate, "2026-08-27T12:00:00-04:00");
+    assert.equal(jsonLd.endDate, "2026-08-27T13:00:00-04:00");
+    assert.equal(jsonLd.location["@type"], "VirtualLocation");
+    assert.match(html, /"@type": "Event"/);
+    assert.match(html, /OnlineEventAttendanceMode/);
+    assert.match(html, /2026-08-27T12:00:00-04:00/);
+    assert.doesNotMatch(html, /EventReservation/);
+  });
+});
+
+describe("gmail EventReservation markup", () => {
+  it("requires a single registrant email and never scans a list", () => {
+    assert.throws(() => gmailEventReservation({}), /attendeeEmail/);
+    const card = gmailEventReservation({
+      attendeeEmail: "Owner@Example.com",
+      attendeeName: "Pat",
+    });
+    assert.equal(card["@type"], "EventReservation");
+    assert.equal(card.underName.email, "owner@example.com");
+    assert.equal(card.reservationFor.startDate, "2026-08-27T12:00:00-04:00");
+    assert.match(card.reservationNumber, /^GW-20260827-[a-f0-9]{10}$/);
+  });
+
+  it("committed C1 HTML matches the template builder and stays off the cold sequence", () => {
+    const committed = fs.readFileSync(
+      path.join(VAULT, "02_Campaigns/Growth Workshop/c1-gmail-event.html"),
+      "utf8",
+    );
+    const generated = buildConfirmationMarkupHtml({
+      template: true,
+      attendeeName: "{{first_name}}",
+      attendeeEmail: "{{email}}",
+    });
+    assert.equal(committed, generated);
+    assert.match(committed, /EventReservation/);
+    assert.match(committed, /\{\{email\}\}/);
+    const drip = fs.readFileSync(
+      path.join(VAULT, "02_Campaigns/Growth Workshop/Drip Copy.md"),
+      "utf8",
+    );
+    const a1Body = drip.split("## A1")[1].split("## A2")[0];
+    assert.doesNotMatch(a1Body, /application\/ld\+json/);
+    assert.doesNotMatch(a1Body, /c1-gmail-event\.html/);
+    assert.match(drip, /c1-gmail-event\.html/);
   });
 });
 

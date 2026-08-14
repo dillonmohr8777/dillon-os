@@ -24,11 +24,11 @@ MX: 5,359 ok / 1 dropped (two addresses concatenated in one field).
 
 ## How to use it
 
-- Wave 1 = rows 1–50 (original pilot cap).
-- Send Batch A = rows 1–1,000 (named owners, then PA/NJ/DE, then national).
-- Send Batch B = rows 1,001–5,359, only if Gate #1 (bounce < 5%) is green.
+- Wave 1 = 50 **owner-density** rows (named, PACKOUTS, CertaPro, Comfort Keepers) — not the first 50 UPS `store@` rows.
+- Owner-density remainder = next send pool if Gate #1 is green.
+- UPS Store role mailboxes (4,914) = **do-not-blast**. PA/NJ/DE subset is LinkedIn/GBP research only.
 - Private delivery: Drive folder "Franchise Workshop Lists — 2026-08-14" + artifact CSV. Share the folder to Sean; do not paste the link in Slack.
-- No agent sends.
+- No agent sends. See [[Google RSVP Rail]].
 
 ## What did not scale
 

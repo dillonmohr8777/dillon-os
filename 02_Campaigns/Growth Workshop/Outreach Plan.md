@@ -9,29 +9,29 @@ event_date: 2026-08-27
 
 One-line summary: fill the Aug 27 workshop with zero ad spend — three email audiences inside Mac's three-touch cap, plus seven free organic channels, with deliverability gates before anything scales.
 
-All copy lives in [[Drip Copy]]. Contact sourcing lives in [[Franchise Email Sourcing Playbook]]. Registrant calendar auto-add lives in [[Calendar Auto-Add]]. Nothing sends without Sean/Mac approval; no agent sends anything, ever.
+All copy lives in [[Drip Copy]]. Contact sourcing lives in [[Franchise Email Sourcing Playbook]]. Registrant calendar auto-add lives in [[Calendar Auto-Add]]. The Google/outreach split lives in [[Google RSVP Rail]]. Nothing sends without Sean/Mac approval; no agent sends anything, ever.
 
 ## Goals and honest math
 
-Cold B2B email to a fresh list converts registration at roughly 1–3%; organic + warm channels do the heavy lifting on a two-week runway.
+Cold B2B email converts when it hits an owner. UPS Store `store####@` boxes are customer-shipping inboxes; blasting them inflates send volume and spam-complaint risk without filling Thursday.
 
 | Source | Volume | Expected registrations |
 |---|---|---|
 | Philly 200-list (3 touches) | ~200 | 4–10 |
-| Franchise wave 1 (3 touches) | 50 | 1–3 |
-| Franchise wave 2 (if gate passes) | 4,359 built (Batch B) | 2–5 |
+| Franchise owner-density (3 touches) | ~50 wave 1, then ~350 if gate green | 4–12 |
+| UPS Store role mailboxes | 4,914 | **0 from email.** LinkedIn/GBP DMs on PA/NJ/DE owners only, 1–4 |
 | Skool + LinkedIn + DMs + GBP + IG/X + signatures | — | 5–15 |
-| **Total realistic range** | | **12–33 registered / ~40–60% show rate** |
+| **Total realistic range** | | **14–41 registered / ~40–60% show rate** |
 
-A 15–25 person live room is a strong pilot. The real asset is the repeatable engine + the list + the replay.
+Show rate is the Google problem, not the fill problem. Registrants get the Gmail EventReservation C1 + LP one-click calendar save. A 15–25 person live room is still a strong pilot. The real asset is the repeatable engine + a domain that is not burned.
 
 ## Channel plan (all free)
 
 | # | Channel | Owner | Cadence |
 |---|---|---|---|
 | 1 | Cold email — 200-list | Sean sends, Dillon preps | T1 Aug 18 · T2 Aug 21 · T3 Aug 25 |
-| 2 | Cold email — franchise wave 1 (50) | Sean sends, Dillon preps | T1 Aug 19 · T2 Aug 24 · T3 Aug 26 |
-| 3 | Cold email — franchise wave 2 | gated | T1 Aug 21 · T2 Aug 25 · T3 Aug 27 AM |
+| 2 | Cold email — franchise owner-density (50, then rest if gate green) | Sean sends, Dillon preps | T1 Aug 19 · T2 Aug 24 · T3 Aug 26 |
+| 3 | Cold email — UPS Store role mailboxes | **blocked** | Do not send. Convert PA/NJ/DE rows to owner DMs instead |
 | 4 | Skool community post | Sean | Aug 18, bump Aug 25 |
 | 5 | LinkedIn posts (Mac + Sean, Dillon reposts) | Mac/Sean | Aug 18 · Aug 21 · Aug 26 |
 | 6 | LinkedIn DMs (10–15/day, manual) | Sean/Mac | Aug 19–26 |
@@ -52,22 +52,22 @@ A 15–25 person live room is a strong pilot. The real asset is the repeatable e
 **Mon Aug 17**
 - LP verified live with Aug 27. Meeting link into all copy placeholders.
 - 200-list cleaned in the Drive sheet (dupes out, dead domains flagged, statuses normalized).
-- Franchise pilot sheet delivered to Sean (wave 1 = 50 rows marked).
+- Franchise pilot sheet delivered to Sean (wave 1 = 50 **owner-density** rows marked; UPS `store@` rows tagged do-not-blast).
 - Sean/Mac approve Touch-1 copy word-for-word. Signatures go live.
 
 **Tue Aug 18** — 200-list Touch 1 (40–60 sends, spread through the morning; rest Wed). Skool post. GBP post. LinkedIn post 1.
 
-**Wed Aug 19** — 200-list Touch 1 remainder. **Franchise wave 1 Touch 1** (25–40 sends, rest Thu AM). LinkedIn DMs batch 1.
+**Wed Aug 19** — 200-list Touch 1 remainder. **Franchise owner-density Touch 1** (25–40 sends, rest Thu AM). LinkedIn DMs batch 1 (start with PA/NJ/DE UPS *owners*, not store inboxes).
 
 **Thu Aug 20** — **Gate check #1** (see gates). IG reel 1. DMs batch 2.
 
-**Fri Aug 21** — 200-list Touch 2. Franchise wave 2 Touch 1 *only if gate #1 green*. LinkedIn post 2.
+**Fri Aug 21** — 200-list Touch 2. Remaining owner-density Touch 1 *only if gate #1 green*. LinkedIn post 2.
 
 **Sat–Sun Aug 22–23** — quiet. Reply handling only.
 
 **Mon Aug 24** — Franchise wave 1 Touch 2. X post. DMs batch 3.
 
-**Tue Aug 25** — 200-list Touch 3 (final call). Franchise wave 2 Touch 2. IG reel 2. Skool bump.
+**Tue Aug 25** — 200-list Touch 3 (final call). Owner-density Touch 2. IG reel 2. Skool bump.
 
 **Wed Aug 26** — Franchise wave 1 Touch 3 (final call). Registrant day-before reminder (C2). LinkedIn post 3 ("tomorrow").
 
@@ -82,10 +82,11 @@ Note on compression: wave-1 touches land Aug 19 → 24 → 26 (3 business days, 
 
 ## Go/no-go gates
 
-**Gate #1 — after franchise wave 1 Touch 1 (Thu Aug 20):**
-- Bounce rate < 5% and zero spam complaints → green: proceed to wave 2.
-- Bounce 5–8% → yellow: send wave 2 only to rows with `mx_ok` + named contacts.
-- Bounce > 8% or any spam complaint → red: stop cold email, organic only, fix list quality before any further sends.
+**Gate #1 — after franchise owner-density Touch 1 (Thu Aug 20):**
+- Bounce rate < 5% and zero spam complaints → green: remaining owner-density rows.
+- Bounce 5–8% → yellow: named contacts only.
+- Bounce > 8% or any spam complaint → red: stop cold email, organic + LinkedIn only.
+- UPS Store role mailboxes stay blocked regardless of this gate.
 
 **Gate #2 — scale decision (post-event):** only consider paid data/enrichment tools if the free pilot converts registrations and Sean wants volume; take it through the normal MCP/tool gate with a firm monthly cap (per the Aug 8 DM commitment).
 
@@ -98,7 +99,7 @@ Note on compression: wave-1 touches land Aug 19 → 24 → 26 (3 business days, 
 
 ## Metrics table (fill at retro, Aug 28)
 
-| Metric | 200-list | Franchise w1 | Franchise w2 | Organic |
+| Metric | 200-list | Owner-density | UPS DMs | Organic |
 |---|---|---|---|---|
 | Sent T1/T2/T3 | | | | — |
 | Bounce % | | | | — |

@@ -12,6 +12,8 @@
  * Usage:
  *   node _os/automation/bin/workshop-calendar-invite.js --write-ics
  *   node _os/automation/bin/workshop-calendar-invite.js --print-urls
+ *   node _os/automation/bin/workshop-calendar-invite.js --write-markup
+ *   node _os/automation/bin/workshop-calendar-invite.js --print-markup --email a@b.co --name Pat
  *   node _os/automation/bin/workshop-calendar-invite.js --dry-run --email a@b.co
  *   node _os/automation/bin/workshop-calendar-invite.js --invite --email a@b.co
  */
@@ -23,6 +25,8 @@ const {
   buildIcs,
   googleCalendarUrl,
   outlookCalendarUrl,
+  eventJsonLd,
+  buildConfirmationMarkupHtml,
   extractRegistrationEmails,
   calendarInvitePatch,
   normalizeEmail,
@@ -32,6 +36,10 @@ const VAULT = path.resolve(__dirname, "../../..");
 const DEFAULT_ICS = path.join(
   VAULT,
   "02_Campaigns/Growth Workshop/lp-date-push/momentum-workshops.ics",
+);
+const DEFAULT_MARKUP = path.join(
+  VAULT,
+  "02_Campaigns/Growth Workshop/c1-gmail-event.html",
 );
 
 function argValue(args, name) {
@@ -146,6 +154,8 @@ async function main() {
     console.log(`Usage:
   node _os/automation/bin/workshop-calendar-invite.js --write-ics [--out path]
   node _os/automation/bin/workshop-calendar-invite.js --print-urls
+  node _os/automation/bin/workshop-calendar-invite.js --write-markup [--out path]
+  node _os/automation/bin/workshop-calendar-invite.js --print-markup --email name@domain.tld [--name Pat]
   node _os/automation/bin/workshop-calendar-invite.js --dry-run --email name@domain.tld
   node _os/automation/bin/workshop-calendar-invite.js --invite --email name@domain.tld
 
@@ -170,10 +180,35 @@ Registrants only. Caps at ${MAX_CLI_INVITES} emails. Never pass the franchise CS
           google: googleCalendarUrl(),
           outlook: outlookCalendarUrl(),
           ics: WORKSHOP_EVENT.icsUrl,
+          eventJsonLd: eventJsonLd(),
         },
         null,
         2,
       ),
+    );
+    return;
+  }
+
+  if (args.includes("--write-markup")) {
+    const out = argValue(args, "--out") || DEFAULT_MARKUP;
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    fs.writeFileSync(
+      out,
+      buildConfirmationMarkupHtml({
+        template: true,
+        attendeeName: "{{first_name}}",
+        attendeeEmail: "{{email}}",
+      }),
+    );
+    console.log(`Wrote ${out}`);
+    return;
+  }
+
+  if (args.includes("--print-markup")) {
+    const email = argValue(args, "--email");
+    const name = argValue(args, "--name") || "there";
+    process.stdout.write(
+      buildConfirmationMarkupHtml({ attendeeEmail: email, attendeeName: name }),
     );
     return;
   }
