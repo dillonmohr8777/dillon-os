@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-31
+updated: 2026-08-14
 ---
 
 # INDEX — the front door
@@ -29,6 +29,7 @@ in the same change.
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/entities/Cursor Cloud Environment|Cursor Cloud Environment]] — personal Cloud Agent boot: install sites + radar, start HUD, no secrets in Git.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
