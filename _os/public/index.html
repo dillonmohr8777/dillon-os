@@ -244,7 +244,7 @@
       <a id="a-clients" target="_blank" rel="noopener">Clients</a>
       <a id="a-dash" target="_blank" rel="noopener">Dashboard.md</a>
     </div>
-    <div class="ops-status" id="ops-status">Unlock vault writes to check Today and save captures into Git. Links already work.</div>
+    <div class="ops-status" id="ops-status">No calls. No emails. Unlock vault writes to check Today and save captures into Git.</div>
     <div class="row">
       <button type="button" id="unlock-btn">Unlock writes</button>
       <button type="button" id="lock-btn" hidden>Lock</button>
@@ -333,7 +333,7 @@
   </main>
 
   <footer>
-    <span>D.I.L.L.O.N. OS · wired to Obsidian</span>
+    <span>D.I.L.L.O.N. OS · no calls · no emails</span>
     <span id="foot-op">—</span>
     <span id="foot-tick">last sync —</span>
   </footer>
@@ -537,9 +537,9 @@ function refreshOpsChrome() {
   const armed = !!(Ops && Ops.getToken());
   if ($('unlock-btn')) $('unlock-btn').hidden = !hosted || armed;
   if ($('lock-btn')) $('lock-btn').hidden = !hosted || !armed;
-  if (!hosted) setOpsStatus('Live HUD — captures and Today checks write into this vault now.');
-  else if (armed) setOpsStatus('Writes armed. Inbox, Today, and skill queues commit to GitHub. Skills still run on the desktop.');
-  else setOpsStatus('Links work now. Unlock vault writes to check Today and save captures into Git.');
+  if (!hosted) setOpsStatus('No calls. No emails. Live HUD writes inbox and Today into this vault.');
+  else if (armed) setOpsStatus('No calls. No emails. Writes armed for inbox / Today / skill queue only.');
+  else setOpsStatus('No calls. No emails. Links work. Unlock writes to save captures into Git.');
 }
 
 function wireLinks() {

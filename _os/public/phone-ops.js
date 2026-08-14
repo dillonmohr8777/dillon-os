@@ -1,7 +1,7 @@
 /**
  * Phone operator helpers for D.I.L.L.O.N. OS.
  * Isomorphic: Node tests + the HUD script tag.
- * No tokens live in this file. Writes never send mail or launch skills.
+ * No tokens live in this file. Never call or email anyone.
  */
 (function (root, factory) {
   const api = factory();
@@ -17,9 +17,18 @@
     github: 'https://github.com/dillonmohr8777/dillon-os',
     clients: 'https://github.com/dillonmohr8777/dillon-os/blob/main/01_Clients/Client%20Index.md',
     dashboard: 'https://github.com/dillonmohr8777/dillon-os/blob/main/Dashboard.md',
-    slack: 'https://app.slack.com/client',
     tokenHelp: 'https://github.com/settings/personal-access-tokens/new',
   };
+
+  function assertNoContact(href) {
+    const u = String(href || '');
+    if (/^(mailto:|tel:|sms:|callto:)/i.test(u)) {
+      throw new Error('no calls, no emails');
+    }
+    return u;
+  }
+
+  Object.keys(LINKS).forEach((k) => { LINKS[k] = assertNoContact(LINKS[k]); });
 
   function slugify(text) {
     const s = String(text || '')
@@ -193,5 +202,6 @@
     setToken,
     githubGet,
     githubPut,
+    assertNoContact,
   };
 });

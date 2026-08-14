@@ -4,6 +4,8 @@
 
 This repo is **Dillon OS** — Dillon Mohr's Obsidian vault + agentic OS.
 
+- **Do not call or email anyone.** No `mailto:`, no `tel:`, no outbound mail, no dialer. `mail_ready` stays hold unless a named human already approved — and even then this agent does not send.
+
 - **Canonical second-brain layer:** `12_Brain/` (front door: `12_Brain/INDEX.md`)
 - **Do not create `1Z_Brain/`** or any competing brain tree.
 - **GitHub is PUBLIC.** Sensitive notes → `12_Brain/private/` (gitignored). See `12_Brain/private/README.md`.

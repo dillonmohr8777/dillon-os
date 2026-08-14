@@ -20,3 +20,4 @@ source: "[[_os/README]]"
    `00_Inbox/phone/`, tap Today checkboxes, open the Jesse sheet / live sites,
    queue skills. Claude Command Deck jobs still do not run on that origin.
    Hosted writes use a phone-stored GitHub token (Contents: read/write).
+7. **Do not call or email anyone.** No `tel:`, `mailto:`, Gmail send, or mail drop from the HUD or this agent.

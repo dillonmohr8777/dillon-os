@@ -19,7 +19,9 @@ describe('D.I.L.L.O.N. OS phone HUD', () => {
     assert.match(html, /viewport-fit=cover/);
     assert.match(html, /manifest\.webmanifest/);
     assert.match(html, /@media \(max-width: 900px\)/);
-    assert.match(html, /Drop in inbox/);
+    assert.match(html, /no calls/);
+    assert.doesNotMatch(html, /href=["']mailto:/i);
+    assert.doesNotMatch(html, /href=["']tel:/i);
     assert.match(html, /phone-ops\.js/);
     assert.match(html, /Unlock writes/);
     assert.match(html, /if \(READONLY\) return/);

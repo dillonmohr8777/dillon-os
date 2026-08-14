@@ -44,6 +44,12 @@ describe('phone operator helpers', () => {
     assert.equal(row.action, 'queue_skill');
   });
 
+  it('refuses tel and mailto', () => {
+    assert.throws(() => PhoneOps.assertNoContact('mailto:user@example.com'), /no calls/);
+    assert.throws(() => PhoneOps.assertNoContact('tel:+15555550100'), /no calls/);
+    assert.equal(PhoneOps.assertNoContact(PhoneOps.LINKS.sheet), PhoneOps.LINKS.sheet);
+  });
+
   it('refuses to encode a PII capture as safe', () => {
     const md = PhoneOps.inboxNote('email me at user@example.com please', new Date());
     assert.ok(scanText(md).some((h) => h.id === 'email'));
