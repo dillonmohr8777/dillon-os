@@ -9,16 +9,17 @@
   "phone": "215-798-7777",
   "address": "1509 Main St, Warrington, PA 18976",
   "hours": "Mon-Fri 10am-7:30pm Sat 9:30am-6pm Sun 10am-4pm",
-  "description": "Nail spa in Warrington. Manicure, pedicure, spa.",
+  "description": "Nail spa on Main Street in Warrington. Dip, gel, acrylic, Gel X, BIAB, pedicure, waxing, lashes, kids. Large shop, many techs.",
   "noindex": true,
   "schemaType": "BeautySalon",
   "logo": false,
   "marquee": [
-    "Manicure",
+    "Dip",
+    "Gel X",
+    "BIAB",
+    "Acrylic",
     "Pedicure",
-    "Spa",
-    "Warrington",
-    "Main Street"
+    "Lashes"
   ],
   "tokens": {
     "paper": "#F7F2F4",
@@ -114,8 +115,8 @@
   ],
   "hero": {
     "eyebrow": "Warrington | Nail spa",
-    "headline": "Manicure, pedicure, spa",
-    "sub": "Belle Palace Nail Spa is a nail spa on Main Street in Warrington. The work is manicure, pedicure, and spa care. You book the chair, you sit for the service they publish, and you leave with hands or feet that were actually worked in that room. Hours come from their booking page.",
+    "headline": "Dip, Gel X, BIAB, acrylic",
+    "sub": "Belle Palace Nail Spa is the big shop at 1509 Main St in Warrington. Dip, gel, acrylic, Gel X, and BIAB are the nail work. Pedicures, waxing, and lashes sit in the same room. Kids get chairs too. Many techs, so a Saturday pedicure and a Gel X set can happen without turning the visit into a hostage situation.",
     "ctaPrimary": {
       "label": "Call",
       "href": "tel:2157987777"
@@ -126,30 +127,31 @@
     },
     "glassFloat": {
       "title": "Warrington",
-      "sub": "Nail spa"
+      "sub": "Dip, Gel X, BIAB"
     },
     "marquee": [
-      "Manicure",
+      "Dip",
+      "Gel X",
+      "BIAB",
+      "Acrylic",
       "Pedicure",
-      "Spa",
-      "Warrington",
-      "Main Street"
+      "Lashes"
     ]
   },
   "offerings": {
-    "heading": "The services the spa actually books",
+    "heading": "What the Warrington chairs actually do",
     "items": [
       {
-        "title": "Manicure",
-        "text": "Manicure is the hand work. Belle Palace books it as a nail spa service, in a Warrington chair, not as a mall kiosk rush."
+        "title": "Dip, gel, acrylic, Gel X, BIAB",
+        "text": "Dip powder for the set that has to last. Gel for the shine. Acrylic when you want length. Gel X and BIAB for the newer overlays people keep asking for. Pick the system, sit the chair, leave with nails that match the appointment you booked."
       },
       {
-        "title": "Pedicure",
-        "text": "Pedicure is the foot work. The spa puts it next to manicure on purpose. You can do one or both in the same visit."
+        "title": "Pedicure, waxing, lashes",
+        "text": "Pedicures run beside the nail tables. Waxing and lash work live in the same spa, so you are not driving Main Street twice for brows and a fill."
       },
       {
-        "title": "Spa",
-        "text": "Spa is the third word they use. The visit is meant to feel like a nail spa, not a hallway of dryers. Main Street in Warrington is the room."
+        "title": "Kids and a shop that can take a crowd",
+        "text": "Kids chairs are on the books. The floor has enough techs that a family Saturday is the point of a large Warrington spa, not a problem."
       }
     ]
   },
@@ -165,33 +167,33 @@
     ]
   },
   "story": {
-    "heading": "Main Street, Warrington",
+    "heading": "Main Street, a lot of techs, the sets people ask for",
     "paragraphs": [
-      "Belle Palace Nail Spa keeps the menu in three words: manicure, pedicure, spa. That is what this page will sell. The booking page hours run later on weekdays, a little earlier on Saturday, and shorter on Sunday. The address is 1509 Main St.",
-      "A nail spa visit is time in a chair with a named service. You are not promised a treatment this page cannot verify. You are promised manicure, pedicure, and spa care in Warrington, booked like a spa books a chair. Belle Palace Nail Spa is the Main Street room that publishes those three services and the booking-page hours that hold them."
+      "Belle Palace is the Warrington nail spa you book when you already know you want dip or Gel X, not a mystery \"spa manicure.\" Weekdays run 10am to 7:30pm. Saturday opens at 9:30am. Sunday is shorter. Call 215-798-7777 and take the chair.",
+      "People come for acrylic length, for BIAB, for a pedicure that is actually a pedicure, and for lashes on the same trip. The shop is large on purpose. You can hear more than one drill at once, which is how a Main Street spa keeps the wait from eating the afternoon."
     ],
     "imageIndex": 2
   },
   "experience": {
-    "heading": "How a spa visit actually goes",
+    "heading": "How a Belle Palace visit actually goes",
     "items": [
       {
-        "title": "Book the chair",
-        "text": "The spa runs on booked time. You take a manicure, a pedicure, or both, inside the hours on their booking page."
+        "title": "Book the set by name",
+        "text": "Dip, gel, acrylic, Gel X, or BIAB. Say the system when you book so the tech is ready for that overlay, not a generic polish change."
       },
       {
-        "title": "Sit for the published service",
-        "text": "Manicure and pedicure are the hands-and-feet work. Spa is the way they want that work to feel in the Warrington room."
+        "title": "Add pedicure, wax, or lashes",
+        "text": "Feet, brows, and lashes can live in the same visit as the fill. Kids can sit too."
       },
       {
         "title": "Leave from Main Street",
-        "text": "1509 Main St is the door. The service happens in that nail spa, not at a pop-up table."
+        "text": "1509 Main St is the door. Many techs, one spa, nails that match the appointment you actually asked for."
       }
     ]
   },
   "feature": {
-    "heading": "A nail spa with three verbs",
-    "text": "Manicure. Pedicure. Spa. Belle Palace uses those words on purpose. The Warrington shop is a chair for that work, on Main Street. You book the service they publish and sit in the nail spa that put those three words on the visit.",
+    "heading": "The Warrington shop for Gel X and dip",
+    "text": "Dip, gel, acrylic, Gel X, BIAB. Pedicure, waxing, lashes, kids. Belle Palace is a large Main Street spa with enough chairs that Saturday is still possible.",
     "cta": {
       "label": "Official site",
       "href": "https://bellepalacewarrington.com/"
@@ -199,8 +201,8 @@
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Booked like a spa, not a rush bar",
-    "text": "Their booking page is the public clock. Weekdays run to 7:30pm. Saturday starts at 9:30am. Sunday closes at 4pm. The services inside those hours are manicure, pedicure, and spa.",
+    "heading": "Book the overlay, not a mystery manicure",
+    "text": "Say Gel X or BIAB or dip when you call. The techs already do those sets. Weekdays until 7:30pm. Saturday from 9:30am. Sunday still open.",
     "imageIndex": 13,
     "cta": {
       "label": "Book",
@@ -210,22 +212,22 @@
   "catalog": {
     "items": [
       {
-        "title": "Manicure",
+        "title": "Dip and gel",
         "href": "https://bellepalacewarrington.com/",
         "imageIndex": 9,
-        "text": "Hand work in the Warrington nail spa on Main Street."
+        "text": "Dip powder and gel sets in the Warrington spa, built to last past the weekend."
       },
       {
-        "title": "Pedicure",
+        "title": "Gel X, BIAB, acrylic",
         "href": "https://bellepalacewarrington.com/",
         "imageIndex": 10,
-        "text": "Foot work in the same Belle Palace chair as the manicure."
+        "text": "Overlays and length from techs who already run those systems every day."
       },
       {
-        "title": "Spa visit",
+        "title": "Pedicure, wax, lashes",
         "href": "https://bellepalacewarrington.com/",
         "imageIndex": 11,
-        "text": "Nail spa care booked as a spa visit, not a hallway rush."
+        "text": "Feet, waxing, and lash work in the same Main Street shop, with chairs for kids."
       }
     ]
   },

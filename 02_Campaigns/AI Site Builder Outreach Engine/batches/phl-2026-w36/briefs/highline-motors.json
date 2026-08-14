@@ -8,17 +8,18 @@
   "url": "https://www.highlineaston.com/",
   "phone": "610-753-4536",
   "address": "469 Conchester Hwy, Aston, PA 19014",
-  "hours": "",
-  "description": "Used car dealer in Aston. Inventory and trade-ins from their live contact page.",
+  "hours": "Mon-Fri 9am-6pm, Sat 10am-4pm",
+  "description": "Used cars, SUVs, trucks, and vans on Conchester Highway in Aston. Honda, Ford, Subaru, BMW, Lexus, Audi on the row. Trade-ins. Pat on the lot. Weekdays 9-6, Saturday 10-4.",
   "noindex": true,
   "schemaType": "AutoDealer",
   "logo": false,
   "marquee": [
-    "Inventory",
+    "SUVs",
+    "Trucks",
     "Trade-ins",
-    "Used cars",
-    "Aston",
-    "Conchester Hwy"
+    "Honda",
+    "Subaru",
+    "Aston"
   ],
   "tokens": {
     "paper": "#EEEAE3",
@@ -114,8 +115,8 @@
   ],
   "hero": {
     "eyebrow": "Aston | Used car dealer",
-    "headline": "Inventory and trade-ins in Aston",
-    "sub": "Highline Motors is a used car dealer on Conchester Highway in Aston. Their live contact page puts the work in two words: inventory and trade-ins. You come to see the used cars they hold, and you can bring the car you already have. The lot is 469 Conchester Hwy.",
+    "headline": "SUVs, trucks, and the car you trade",
+    "sub": "Highline Motors sits at 469 Conchester Hwy in Aston with used SUVs, sedans, trucks, and vans on the row. Recent inventory has run Honda CR-Vs, Ford Fusions, Subaru Foresters, BMW X3s, Lexus RXs, and Audi Q5s. Bring the car you already drive. Pat is the name regulars keep using when the deal actually closes.",
     "ctaPrimary": {
       "label": "Call",
       "href": "tel:6107534536"
@@ -126,30 +127,31 @@
     },
     "glassFloat": {
       "title": "Aston",
-      "sub": "Inventory and trade-ins"
+      "sub": "SUVs, trucks, trade-ins"
     },
     "marquee": [
-      "Inventory",
+      "SUVs",
+      "Trucks",
       "Trade-ins",
-      "Used cars",
-      "Aston",
-      "Conchester Hwy"
+      "Honda",
+      "Subaru",
+      "Aston"
     ]
   },
   "offerings": {
-    "heading": "What the Aston lot actually does",
+    "heading": "What the Conchester Highway lot actually holds",
     "items": [
       {
-        "title": "Used car inventory",
-        "text": "The dealer holds used cars you can come see. Inventory is their word. The product is a vehicle on the Conchester Highway lot, not a maybe in transit."
+        "title": "SUVs, trucks, sedans, vans",
+        "text": "The lot turns over Honda, Ford, Subaru, BMW, Lexus, Audi, Chevy, and GMC. You walk a CR-V, a Forester, an Explorer, a Silverado, or a Sienna depending on the week. The car you buy is the one sitting in Aston that day."
       },
       {
-        "title": "Trade-ins",
-        "text": "Trade-ins are the other half of their contact-page offer. You bring the car you have. They look at it as part of the deal for the car you want."
+        "title": "Trade-ins with Pat",
+        "text": "They want your vehicle. Trade-ins are half the driveway. Pat works the deal so the car you drive in can pay down the car you drive out. Miss Jay is the other name people mention when the paperwork stays calm."
       },
       {
-        "title": "A dealer you visit",
-        "text": "Highline Motors is an Aston lot. The visit is the point: walk the inventory, talk the trade, decide on a used car that is actually there."
+        "title": "A weekday lot you can actually catch",
+        "text": "Monday through Friday the lot runs 9am to 6pm. Saturday is 10am to 4pm. You look at miles, you take a drive, you talk money on Conchester Highway before anyone emails a maybe."
       }
     ]
   },
@@ -165,33 +167,33 @@
     ]
   },
   "story": {
-    "heading": "Conchester Highway, used cars",
+    "heading": "Aston, on the highway, with a person on the lot",
     "paragraphs": [
-      "Highline Motors keeps the claim as tight as their contact page. Inventory. Trade-ins. A used car dealer in Aston. You are not promised a brand of car this page cannot verify. You are promised a lot that holds vehicles and takes trades.",
-      "A used-car deal works when both sides of the driveway are honest. They have inventory. You may have a trade. Conchester Highway is where those two facts meet. The rest is the specific car on the ground that day. Highline Motors is the Aston dealer that put both words on the contact page."
+      "Highline Motors is the used-car stop on Conchester Highway when you want an SUV or a truck you can see in daylight. Buyers come back for a second car years later and still ask for Pat. The inventory moves: Honda and Subaru for the school run, Ford and Chevy when you need the bed, BMW and Lexus when the budget can take the badge.",
+      "A deal here is walk the row, pick the vehicle, put your trade on the table. People who liked the lot talk about leaving with a car that lasted. Look at the specific car. Ask Pat the hard questions while you are still on the pavement."
     ],
     "imageIndex": 2
   },
   "experience": {
-    "heading": "How a deal actually starts",
+    "heading": "How an Aston deal actually starts",
     "items": [
       {
-        "title": "See the inventory",
-        "text": "You start with the used cars Highline Motors is holding in Aston. Inventory means the row you can walk, not a hidden list."
+        "title": "Walk the SUVs and trucks",
+        "text": "CR-Vs, Foresters, Explorers, Silverados, and the sedan row sit in the same lot. You pick the one with the miles you can live with."
       },
       {
-        "title": "Bring a trade if you have one",
-        "text": "Trade-ins are a published part of the work. The car you already drive can enter the same conversation as the car you want."
+        "title": "Put your trade in the conversation",
+        "text": "Drive in with the car you have. Pat and Miss Jay work the number so the trade is part of the deal, not a later errand."
       },
       {
-        "title": "Deal on the lot",
-        "text": "The dealer and the inventory are in one place: 469 Conchester Hwy. The purchase happens around a vehicle that is there."
+        "title": "Leave Conchester in the new one",
+        "text": "Weekdays until 6, Saturday until 4. The purchase happens around a vehicle that is already in Aston."
       }
     ]
   },
   "feature": {
-    "heading": "Used cars, plus the one you bring",
-    "text": "Inventory and trade-ins are a paired offer. Highline Motors sells used cars in Aston and takes the car you already have as part of the deal.",
+    "heading": "Honda to Lexus, plus the trade",
+    "text": "Highline Motors turns over SUVs, trucks, sedans, and vans on Conchester Highway. Honda, Ford, Subaru, BMW, Lexus, Audi show up on the row. Pat works the trade so you are not stuck with two cars in the driveway.",
     "cta": {
       "label": "Official site",
       "href": "https://www.highlineaston.com/"
@@ -199,8 +201,8 @@
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "The contact page named the work",
-    "text": "Plenty of lots hide behind adjectives. Their live contact page did not. Inventory. Trade-ins. That is the Highline Motors offer, written the way they run the Aston lot.",
+    "heading": "Ask for Pat",
+    "text": "Regulars who bought twice still name Pat. Miss Jay shows up in the paperwork stories. Highline Motors is that Aston lot: look at the SUV, talk the trade, decide before dark.",
     "imageIndex": 13,
     "cta": {
       "label": "See inventory",
@@ -210,22 +212,22 @@
   "catalog": {
     "items": [
       {
-        "title": "Inventory",
+        "title": "SUVs and crossovers",
         "href": "https://www.highlineaston.com/",
         "imageIndex": 9,
-        "text": "Used cars on the ground at the Aston dealer on Conchester Highway."
+        "text": "Honda CR-V, Subaru Forester, BMW X3, Lexus RX, Audi Q5, and the week's other crossovers."
+      },
+      {
+        "title": "Trucks and vans",
+        "href": "https://www.highlineaston.com/",
+        "imageIndex": 10,
+        "text": "Silverados, Explorers, Siennas, and the work vehicles that share the Aston row."
       },
       {
         "title": "Trade-ins",
         "href": "https://www.highlineaston.com/",
-        "imageIndex": 10,
-        "text": "Bring the car you have. Trade-ins are part of how Highline Motors deals."
-      },
-      {
-        "title": "Aston lot",
-        "href": "https://www.highlineaston.com/",
         "imageIndex": 11,
-        "text": "A used car dealer you visit at 469 Conchester Hwy, Aston, PA."
+        "text": "Bring the car you have. Pat works the number into the car you want."
       }
     ]
   },

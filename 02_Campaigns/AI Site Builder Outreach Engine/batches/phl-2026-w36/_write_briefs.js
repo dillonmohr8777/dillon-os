@@ -281,7 +281,7 @@ const SITES = [
     },
     spotlight: {
       heading: 'Smile Care Membership',
-      text: 'The in-house plan is published at $16 a month or $100 a year. It is for people who want Andorra Family Dentistry to cover treatment on a membership the office runs, not a mystery coupon.',
+      text: 'The in-house plan is published at $16 a month or $100 a year. The plan is for people who want Andorra Family Dentistry to cover treatment on a membership the office runs, not a mystery coupon.',
       ctaLabel: 'See patient info',
     },
     catalog: {
@@ -365,7 +365,7 @@ const SITES = [
         },
         {
           title: 'Sick care inside the same home',
-          text: 'When a child is sick, the visit happens with the same practice that holds the well-child record. The sick visit is not a separate brand. It is the medical home on a harder day.',
+          text: 'When a child is sick, the visit happens with the same practice that holds the well-child record. The sick visit is not a separate brand. You are in the medical home on a harder day.',
         },
         {
           title: 'Providers who stay on the chart',
@@ -459,7 +459,7 @@ const SITES = [
       items: [
         {
           title: 'Read the board',
-          text: 'Flavors are named, not coded. Butter pecan, death by chocolate, moose tracks, cookies & cream, pistachio, and cotton candy are the ones we can stand behind from their list.',
+          text: 'Flavors are named, not coded. Butter pecan, death by chocolate, moose tracks, cookies & cream, pistachio, and cotton candy are on the board they scoop from.',
         },
         {
           title: 'Get the scoop packed',
@@ -473,7 +473,7 @@ const SITES = [
     },
     feature: {
       heading: 'Famous for Flavor, on purpose',
-      text: 'The shoppe does not hide behind a short seasonal list. Death by chocolate and moose tracks sit next to pistachio and butter pecan. The board is the product, and the product is ice cream.',
+      text: 'The shoppe does not hide behind a short seasonal list. Death by chocolate and moose tracks sit next to pistachio and butter pecan. The board is the product, and the product is ice cream you can name.',
       ctaLabel: 'See the flavors',
     },
     spotlight: {
@@ -621,69 +621,69 @@ const SITES = [
     fonts: { display: 'Outfit', text: 'DM Sans' },
     craft: 'family and cosmetic dentistry',
     description:
-      'Family and cosmetic dentistry in Phoenixville. Dr. Truong Nguyen. Extractions, whitening, fillings, root canals, crowns, bridges, dentures, implants, emergency care.',
-    marquee: ['Family dentistry', 'Cosmetic', 'Implants', 'Emergency care', 'Phoenixville'],
+      'Dr. Truong Nguyen, NYU Dentistry. Family and cosmetic care in Phoenixville behind the Wawa. Implants, crowns, whitening, fillings, root canals, bridges, dentures, emergency. Late evenings.',
+    marquee: ['Dr. Truong Nguyen', 'Implants', 'Crowns', 'Whitening', 'Emergency care'],
     hero: {
-      headline: 'Family and cosmetic dentistry',
-      sub: 'Always Dental Care is Dr. Truong Nguyen\'s Phoenixville practice for family and cosmetic dentistry. The chair work covers extractions, whitening, fillings, root canals, crowns, bridges, dentures, and implants. Emergency care is part of the same office, not a separate brand down the road.',
-      glassFloat: { title: 'Phoenixville', sub: 'Dr. Truong Nguyen' },
+      headline: 'Dr. Nguyen, behind the Wawa',
+      sub: 'Always Dental Care is Dr. Truong Nguyen at 1570 Egypt Rd #210 in Phoenixville, behind the Wawa and next to Hand & Stone. NYU College of Dentistry, residency at Wyckoff Heights, more than 20 years in the chair and about 11 of them in Phoenixville. Implants, crowns, whitening, fillings, root canals, bridges, dentures, deep cleanings, and emergency visits. Late evenings. Every other Friday. Saturday closed.',
+      glassFloat: { title: 'Phoenixville', sub: 'Dr. Truong Nguyen, NYU' },
     },
     offerings: {
-      heading: 'What the chair actually does',
+      heading: 'What Dr. Nguyen\'s chair actually does',
       items: [
         {
-          title: 'Restore the tooth',
-          text: 'Fillings, root canals, crowns, and bridges are the restorative core. Dr. Truong Nguyen treats the tooth in front of you so you leave with a plan that matches the damage, not a menu of upsells.',
+          title: 'Fillings, root canals, crowns, bridges',
+          text: 'Restore the tooth in front of you. Fillings and root canals keep what can stay. Crowns and bridges rebuild what is broken. The plan matches the damage, not a menu of upsells.',
         },
         {
-          title: 'Replace what is gone',
-          text: 'Extractions, dentures, and implants handle the teeth that cannot stay. The practice keeps replacement in the same family and cosmetic office that did the exam.',
+          title: 'Implants, dentures, extractions',
+          text: 'When a tooth cannot stay, the same office extracts, then talks implants or dentures. You do not get sent down the road for the hard part.',
         },
         {
-          title: 'Whiten, and see you in an emergency',
-          text: 'Whitening is the cosmetic side of the same chair. Emergency care is listed with the rest of the work, so a broken tooth or a sudden ache has a place to go inside this practice.',
+          title: 'Whitening and emergency care',
+          text: 'Whitening is the cosmetic chair. Emergency care is on the list so a broken tooth at 5pm still has a Phoenixville dentist. Monday, Tuesday, and Thursday run until 6.',
         },
       ],
     },
     story: {
-      heading: 'Dr. Truong Nguyen, Egypt Road',
+      heading: 'NYU, Wyckoff, then Egypt Road',
       paragraphs: [
-        'Always Dental Care is a family and cosmetic practice in Phoenixville. Dr. Truong Nguyen is the named dentist. The service list is specific: extractions, whitening, fillings, root canals, crowns, bridges, dentures, implants, and emergency care. Those are the verbs the office will stand behind.',
-        'Family dentistry here means the same practice can fill a molar on Tuesday and talk implants when a tooth is past saving. Cosmetic work sits next to that, not in a separate spa brand. Emergency care is on the list so the office is usable on the day something breaks.',
+        'Dr. Truong Nguyen trained at NYU College of Dentistry and finished residency at Wyckoff Heights Medical Center. He has been in Phoenixville long enough that families already know the suite behind the Wawa. Soccer, bowling, and a poker night are the off-hours version of the same person who will sit with a kid\'s filling and an implant consult in one week.',
+        'Family dentistry here means the molar on Tuesday and the implant conversation when a tooth is past saving. Cosmetic whitening sits next to that, not in a separate spa brand. Late evenings keep the office usable after work. Every other Friday mornings. Saturday the chair rests.',
       ],
     },
     experience: {
-      heading: 'How treatment actually moves',
+      heading: 'How treatment at Always Dental actually moves',
       items: [
         {
           title: 'Diagnose, then restore',
-          text: 'A visit starts with the tooth in front of you. Fillings, root canals, crowns, and bridges are how the practice restores what can be kept.',
+          text: 'Fillings, root canals, crowns, and bridges are how the practice keeps a tooth. Dr. Nguyen writes the sequence before the drill starts.',
         },
         {
           title: 'Extract or replace when needed',
-          text: 'Extractions, dentures, and implants are the replacement path. You stay in Dr. Nguyen\'s office for that decision instead of being sent out for the hard part.',
+          text: 'Extractions, dentures, and implants stay in this office. The hard decision does not become a referral to a stranger.',
         },
         {
-          title: 'Cosmetic and emergency in the same practice',
-          text: 'Whitening is scheduled like other chair time. Emergency care is part of the published service list, so urgent dental work has a home here.',
+          title: 'Whitening, or come in broken',
+          text: 'Schedule the cosmetic hour, or use the emergency slot when something lets go after work. Monday, Tuesday, and Thursday go to 6pm.',
         },
       ],
     },
     feature: {
-      heading: 'One practice for the full list',
-      text: 'Fillings and implants are not split across two brands. Dr. Truong Nguyen\'s office publishes extractions, whitening, fillings, root canals, crowns, bridges, dentures, implants, and emergency care as one practice.',
+      heading: 'One Phoenixville dentist for the full list',
+      text: 'NYU-trained. Eleven years in this town. Implants and fillings in the same suite behind the Wawa. Late evenings so the office is still open when you get off. Dr. Truong Nguyen is the name on the chart.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Family dentistry with a cosmetic chair',
-      text: 'The Phoenixville office is family and cosmetic on purpose. A child\'s filling and an adult implant consult can live in the same relationship with the same dentist.',
+      heading: 'Behind the Wawa, next to Hand & Stone',
+      text: '1570 Egypt Rd #210. Easy to find once you have been once. Bring the kid, the crown, or the tooth that broke at dinner. Saturday is closed. Call 484-392-7687 for the rest of the week.',
       ctaLabel: 'See the services',
     },
     catalog: {
       items: [
         {
           title: 'Restorative care',
-          text: 'Fillings, root canals, crowns, and bridges in Dr. Truong Nguyen\'s Phoenixville chair.',
+          text: 'Fillings, root canals, crowns, and bridges in Dr. Nguyen\'s Phoenixville chair.',
         },
         {
           title: 'Implants and dentures',
@@ -691,7 +691,7 @@ const SITES = [
         },
         {
           title: 'Whitening and emergency care',
-          text: 'Cosmetic whitening and emergency dental care from the same practice.',
+          text: 'Cosmetic whitening and after-work emergency visits from the same practice.',
         },
       ],
     },
@@ -719,77 +719,78 @@ const SITES = [
     },
     fonts: { display: 'Archivo Black', text: 'Work Sans' },
     craft: 'used car sales',
-    description: 'Retail used cars on Frankford Avenue in Philadelphia.',
-    marquee: ['Used cars', 'Frankford Ave', 'Retail lot', 'Philadelphia'],
+    description:
+      'Third-generation family used car dealer on Frankford Avenue. Cars, trucks, and SUVs. 119-point inspection. 3-month / 4,500-mile powertrain warranty. Financing and trade-ins. Niko, Mike, Tommy, Chris, Oren.',
+    marquee: ['Family owned', '119-point inspection', 'Powertrain warranty', 'Financing', 'Trade-ins'],
     hero: {
-      headline: 'Retail used cars on Frankford Ave',
-      sub: 'First Class Auto Land is a used car dealer on Frankford Avenue in Philadelphia. The work is retail used cars, sold from the lot at 4050 Frankford Ave. You come to see the inventory in person, pick a car that is actually on the ground, and deal with the lot that put it there.',
-      glassFloat: { title: 'Frankford Ave', sub: 'Used car dealer' },
+      headline: 'Third-generation lot on Frankford',
+      sub: 'First Class Auto Land is a third-generation, family-owned used car dealer at 4050 Frankford Ave. The row holds cars, trucks, and SUVs. Every vehicle goes through a 119-point inspection. They back what they sell with a 3-month or 4,500-mile full powertrain warranty. Financing and trade-ins happen on the same lot.',
+      glassFloat: { title: 'Frankford Ave', sub: 'Family owned, 119-point inspection' },
     },
     offerings: {
-      heading: 'What the lot actually sells',
+      heading: 'How the Frankford lot actually deals',
       items: [
         {
-          title: 'Retail used cars',
-          text: 'The dealer sells used cars at retail. You are buying a vehicle that is on the Frankford Avenue lot, not a brokered maybe from another state. The product is the car in front of you.',
+          title: 'Cars, trucks, and SUVs',
+          text: 'Import and domestic, pre-owned and nearly new. Niko and Tommy walk the row with you. You test-drive the vehicle that is sitting on Frankford Avenue, not a photo from another state.',
         },
         {
-          title: 'A lot you can walk',
-          text: 'Retail means you walk the row. First Class Auto Land is set up as a dealer you visit, look at paint and miles, and decide with the car in daylight.',
+          title: 'Financing with Mike',
+          text: 'Mike runs the paper. Reviews keep naming him because he stays in the deal when the bank part gets messy. Trade-ins are on the table. They will even run you to the bank if the payment method needs a branch.',
         },
         {
-          title: 'Frankford Avenue inventory',
-          text: 'The address is the inventory. 4050 Frankford Ave is where the used cars sit. If a car matters, it matters because it is on that lot.',
+          title: '119-point inspection and warranty',
+          text: 'Every vehicle gets a 119-point inspection before it hits the row. The lot backs the sale with a 3-month or 4,500-mile full powertrain warranty, so the first months after you leave are not a shrug.',
         },
       ],
     },
     story: {
-      heading: 'A dealer on Frankford',
+      heading: 'A family lot people drive hours to use',
       paragraphs: [
-        'Philadelphia already has plenty of used-car promises. First Class Auto Land keeps the claim small: retail used cars on Frankford Avenue. The lot is the offer. You do not need a myth about the brand. You need the car that is parked there.',
-        'A used car purchase works when you can see the vehicle, ask about that vehicle, and leave in that vehicle. The Frankford Avenue dealer is built around that sequence. No invented makes, no invented specials. The work is the lot.',
+        'First Class Auto Land has been a Frankford Avenue family shop for decades, now in its third generation. Buyers come from Bucks, Montgomery, Delaware, and Chester, and from New Jersey, because Niko, Mike, Tommy, Chris, and Oren still treat a used-car deal like a person is in the chair.',
+        'The sequence is walk the lot, take the test drive, sit with Mike, leave in the car. People buy a second vehicle here a year later. The warranty and the 119-point inspection are why the second trip feels less stupid than the first used-car story you were told.',
       ],
     },
     experience: {
-      heading: 'How a purchase actually runs',
+      heading: 'How a First Class purchase actually runs',
       items: [
         {
-          title: 'Walk the retail lot',
-          text: 'You start on the pavement at 4050 Frankford Ave. The used cars are the inventory. You look at the ones that are actually there.',
+          title: 'Walk the row with Niko or Tommy',
+          text: 'Cars, trucks, and SUVs are on the pavement. You pick the one you can put a hand on, then you take it around the block.',
         },
         {
-          title: 'Pick the car on the ground',
-          text: 'Retail used cars means the decision is about a specific vehicle, not a catalog photo. You choose the car you can put a hand on.',
+          title: 'Sit with Mike on the paper',
+          text: 'Financing and trade-ins happen in the office. Mike stays in the deal. Oren and Chris keep the rest of the lot moving.',
         },
         {
-          title: 'Deal with the lot that holds it',
-          text: 'The dealer that parked the car is the dealer you buy from. First Class Auto Land is the Frankford Avenue counter for that transaction.',
+          title: 'Leave with the warranty on the car',
+          text: 'The 119-point inspection already happened. The 3-month or 4,500-mile powertrain warranty rides home with you.',
         },
       ],
     },
     feature: {
-      heading: 'Used cars, sold at retail',
-      text: 'The lot does not need a longer slogan. First Class Auto Land sells used cars at retail on Frankford Avenue. You come for a vehicle you can see.',
+      heading: 'Family owned, inspected, warranted',
+      text: 'Third generation on Frankford Avenue. Cars, trucks, and SUVs that went through 119 points. A 3-month or 4,500-mile full powertrain warranty on what leaves the lot. Mike on the financing. Trade-ins welcome.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'The address is the showroom',
-      text: '4050 Frankford Ave is where the inventory lives. A used car dealer this straightforward wants you on the lot, looking at the row, before anyone talks paper.',
+      heading: 'People name the staff',
+      text: 'Niko finds the car. Tommy walks the lot. Mike does the financing. Chris and Oren close the easy ones. First Class Auto Land is those people on Frankford Avenue, not a nameless row of flags.',
       ctaLabel: 'See the lot',
     },
     catalog: {
       items: [
         {
-          title: 'Retail used cars',
-          text: 'Used vehicles sold at retail from the Frankford Avenue dealer.',
+          title: 'Cars, trucks, SUVs',
+          text: 'Import and domestic used vehicles on the Frankford Avenue row, ready to test-drive.',
         },
         {
-          title: 'On-lot inventory',
-          text: 'Cars you can walk up to at 4050 Frankford Ave, Philadelphia.',
+          title: '119-point inspection',
+          text: 'Every vehicle, plus a 3-month or 4,500-mile full powertrain warranty after you leave.',
         },
         {
-          title: 'The Frankford lot',
-          text: 'A Philadelphia used car dealer whose showroom is the street-facing row.',
+          title: 'Financing and trade-ins',
+          text: 'Mike on the paper. They want the car you already drive, and they will work the bank piece.',
         },
       ],
     },
@@ -830,7 +831,7 @@ const SITES = [
       items: [
         {
           title: 'Chinese plates',
-          text: 'Szechuan Chicken, Mongolian Beef, and Moo Goo Gai Pan are the named Chinese plates. Those are the dishes the restaurant puts in its own language, so those are the dishes this page will claim.',
+          text: 'Szechuan Chicken, Mongolian Beef, and Moo Goo Gai Pan come off the Chinese side. Shrimp tempura and shumai ride with them when the table wants Japanese starters on the same ticket.',
         },
         {
           title: 'Japanese rolls and Shumai',
@@ -838,7 +839,7 @@ const SITES = [
         },
         {
           title: 'Lunch specials and delivery',
-          text: 'Lunch specials are on the board for the midday order. Free delivery starts at a $15 minimum. Delivery is cash only. That is the rule as they publish it.',
+          text: 'Lunch specials are on the board for the midday order. Free delivery starts at a $15 minimum. Delivery is cash only, the way they run the road.',
         },
       ],
     },
@@ -846,7 +847,7 @@ const SITES = [
       heading: 'One kitchen, two menus',
       paragraphs: [
         'Eastern Dragon cooks Chinese and Japanese food on Upper State Road. Szechuan Chicken and Mongolian Beef share the ticket with Dragon Roll and Shumai. Moo Goo Gai Pan is there for the plate that wants vegetables and a quieter sauce. The restaurant is a neighborhood kitchen, not a tasting room.',
-        'Lunch specials give the midday order a shorter path. Delivery is part of the service: free at a $15 minimum, cash only when the food leaves the building. You can sit, pick up, or send the order out. The dishes stay the ones they name.',
+        'Lunch specials give the midday order a shorter path. Free delivery starts at $15, cash only when the food leaves the building. Sit, pick up, or send Szechuan Chicken and a Dragon Roll to the same door.',
       ],
     },
     experience: {
@@ -862,7 +863,7 @@ const SITES = [
         },
         {
           title: 'Eat the plate they named',
-          text: 'Chinese and Japanese food from one North Wales kitchen. The claim stays inside the dishes they publish.',
+          text: 'Szechuan Chicken next to a Dragon Roll. Mongolian Beef next to shumai. One North Wales kitchen, both menus on the ticket.',
         },
       ],
     },
@@ -917,77 +918,77 @@ const SITES = [
     fonts: { display: 'Cormorant Garamond', text: 'Source Serif 4' },
     craft: 'BYOB dining',
     description:
-      'BYOB restaurant in Sumneytown. Reservations. Smoked beef ribs, brisket, smoked fish and chicken mentioned on their site.',
-    marquee: ['BYOB', 'Reservations', 'Smoked beef ribs', 'Brisket', 'Sumneytown'],
+      'BYOB, cash only. Chef William Francis and Desiree. 1850 cigar factory turned hotel. Crab cakes, filet, smoked brisket, smoked beef ribs, scallops, chocolate flourless torte. Country fare with international flair.',
+    marquee: ['BYOB', 'Cash only', 'Crab cakes', 'Smoked brisket', 'Chef William Francis'],
     hero: {
-      headline: 'BYOB on Main Street',
-      sub: 'Francis Kaufman House is a BYOB restaurant in Sumneytown. Reservations are how a table gets held. Their site and listings mention smoked beef ribs, brisket, smoked fish, and chicken. Claims stay inside those plates. Bring the bottle you want at the table.',
-      glassFloat: { title: 'Sumneytown', sub: 'BYOB restaurant' },
+      headline: 'Country fare, international flair',
+      sub: 'Francis Kaufman House is Chef William Francis and Desiree in an 1850 building that started as a cigar factory and later ran as a hotel. The room is BYOB and cash only. Regulars order crab cakes, filet, smoked brisket, smoked beef ribs, scallops, and the chocolate flourless torte. Reserve the table. Bring the bottle.',
+      glassFloat: { title: 'Sumneytown', sub: 'Chef William Francis' },
     },
     offerings: {
-      heading: 'What the house will stand behind',
+      heading: 'What the house actually puts on the plate',
       items: [
         {
-          title: 'BYOB at the table',
-          text: 'The restaurant is BYOB. Wine, beer, or the bottle you chose comes with you. The house cooks. You pour. That is the arrangement they publish.',
+          title: 'Crab cakes, filet, scallops',
+          text: 'Crab cakes and scallops are the seafood people drive to Sumneytown for. Filet is the steak that shows up in the same reviews. Homemade and fresh is how the kitchen talks about the work.',
         },
         {
-          title: 'Reservations',
-          text: 'A table at Francis Kaufman House is held by reservation. You call, you set the night, you arrive to a room that already expects you.',
+          title: 'Smoked brisket and beef ribs',
+          text: 'Smoked brisket, smoked beef ribs, smoked fish, and chicken sit on the board when the pit is running. Country fare with international flair is their own line, and the smoke is how it tastes on Main Street.',
         },
         {
-          title: 'Smoked plates they mention',
-          text: 'Smoked beef ribs, brisket, smoked fish, and chicken appear on their site and listings. Those are the dishes this page will name. No awards, no secret-menu claims.',
+          title: 'BYOB, cash, chocolate torte',
+          text: 'Bring the wine. Pay cash. Finish with the chocolate flourless torte. Desiree works the house with Chef William Francis, so the night feels like a dining room someone actually lives in.',
         },
       ],
     },
     story: {
-      heading: 'A Sumneytown table',
+      heading: 'An 1850 building, a chef, a bottle you brought',
       paragraphs: [
-        'Francis Kaufman House sits on Main Street in Sumneytown. The restaurant asks you to bring your own bottle and to reserve the table. The food they put in public language includes smoked beef ribs, brisket, smoked fish, and chicken. That is enough to know what kind of kitchen you are walking into.',
-        'The page will not invent a tasting menu or a published hour that their own site and the aggregators cannot agree on. The honest offer is a reserved BYOB table and the smoked plates they mention. Come for those, and confirm the rest with the house in Sumneytown.'
+        '3164 Main Street in Sumneytown has been a cigar factory and a hotel. Francis Kaufman House is what Chef William Francis and Desiree do with it now: reserved tables, bottles from your cellar, cash at the end. Wild game has been part of the kitchen\'s history. Crab cakes and smoked brisket are what people name after they leave.',
+        'You call 215-234-2499 and hold the night. The food is homemade. The room is small enough that a reservation matters. Bring a red for the filet or a white for the scallops. Leave room for the flourless torte.',
       ],
     },
     experience: {
-      heading: 'How a night at the house works',
+      heading: 'How a night at Kaufman House actually goes',
       items: [
         {
-          title: 'Reserve the table',
-          text: 'Reservations are the front door. You set the night with the house before you drive to Sumneytown.',
+          title: 'Reserve, then bring the bottle',
+          text: 'The table is held ahead of time. Wine, beer, or whiskey comes with you. The house cooks. You pour.',
         },
         {
-          title: 'Bring the bottle',
-          text: 'BYOB means the wine, beer, or liquor is yours to carry in. The restaurant cooks. The table drinks what you brought.',
+          title: 'Eat crab cakes or the smoked plates',
+          text: 'Crab cakes, filet, scallops, smoked brisket, smoked beef ribs. Ask what William is running that night. The kitchen still cooks wild game when it is on.',
         },
         {
-          title: 'Eat the smoked plates they name',
-          text: 'Smoked beef ribs, brisket, smoked fish, and chicken are the dishes their site and listings mention. Order inside that list and you are ordering what they have put in public.',
+          title: 'Pay cash, take the torte',
+          text: 'Cash only at the end. Chocolate flourless torte if you still have room. Desiree keeps the room moving.',
         },
       ],
     },
     feature: {
-      heading: 'BYOB, reserved, smoked',
-      text: 'The house is a reserved table, a bottle you brought, and smoked food they are willing to name: beef ribs, brisket, fish, and chicken. Everything else you confirm with them before you drive to Sumneytown.',
+      heading: 'Chef William Francis, an 1850 house',
+      text: 'Cigar factory, then hotel, now a BYOB dining room in Sumneytown. Crab cakes, smoked brisket, filet, scallops, and a flourless torte. Cash only. Reservations. A bottle from your own shelf.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Modest on purpose',
-      text: 'Listings like to embroider a country restaurant. This page will not. Francis Kaufman House is a BYOB room in Sumneytown that mentions smoked beef ribs, brisket, smoked fish, and chicken. Reservations hold the table.',
+      heading: 'Country fare with international flair',
+      text: 'Their line, not a brochure invention. Homemade plates, smoke when the pit is on, wild game in the house history. Chef William Francis and Desiree still run 3164 Main Street like a house that knows your name after the second visit.',
       ctaLabel: 'Reserve',
     },
     catalog: {
       items: [
         {
-          title: 'Smoked beef ribs',
-          text: 'Named on their site and listings. A smoked plate at the Sumneytown house.',
+          title: 'Crab cakes and scallops',
+          text: 'The seafood plates regulars drive to Sumneytown for, next to a filet if you want steak.',
         },
         {
-          title: 'Brisket',
-          text: 'Another smoked plate they mention. Confirm availability when you reserve.',
+          title: 'Smoked brisket and beef ribs',
+          text: 'Smoke from the house kitchen, with smoked fish and chicken when they are running.',
         },
         {
-          title: 'BYOB reservations',
-          text: 'Hold the table, bring the bottle, eat what the house is cooking that night.',
+          title: 'Chocolate flourless torte',
+          text: 'The finish. BYOB, cash only, reservation on the books.',
         },
       ],
     },
@@ -1003,7 +1004,7 @@ const SITES = [
     url: 'https://www.beijingchinesefoodpa.com/',
     phone: '610-275-4086',
     address: '130 E Marshall St, Norristown, PA 19401',
-    hours: '',
+    hours: 'Daily 1pm-1am',
     attitude: 'warm',
     palette: {
       paper: '#F7F1E6',
@@ -1015,77 +1016,78 @@ const SITES = [
     },
     fonts: { display: 'Zen Antique', text: 'Noto Sans' },
     craft: 'Chinese takeout',
-    description: 'Chinese restaurant in Norristown. Pickup and delivery from their locations page.',
-    marquee: ['Pickup', 'Delivery', 'Chinese food', 'Norristown', 'Marshall Street'],
+    description:
+      'Late-night Chinese in Norristown. General Tso\'s, sesame chicken, pork fried rice, beef lo mein, wonton soup, fried dumplings, crab rangoons. Pickup and delivery from East Marshall Street.',
+    marquee: ['General Tso\'s', 'Sesame chicken', 'Lo mein', 'Lunch specials', 'Open late'],
     hero: {
-      headline: 'Chinese food, pickup and delivery',
-      sub: 'Bei Jing Chinese Food is a Chinese restaurant on East Marshall Street in Norristown. The service they put on their locations page is pickup and delivery. You order Chinese food, you collect it at the counter, or you have it sent to the door. The kitchen stays in Norristown. No extra dining-room story, no borrowed dish list. Pickup and delivery are the published paths.',
-      glassFloat: { title: 'Norristown', sub: 'Pickup and delivery' },
+      headline: 'General Tso\'s until 1am',
+      sub: 'Bei Jing Chinese Food cooks on East Marshall Street in Norristown. The tickets that leave this kitchen are General Tso\'s chicken, sesame chicken, sweet and sour chicken, pork fried rice, and beef lo mein. Wonton soup, fried dumplings, and crab rangoons start the bag. Pickup at the counter or delivery from the same stove. Open daily 1pm to 1am.',
+      glassFloat: { title: 'Norristown', sub: 'Open daily 1pm to 1am' },
     },
     offerings: {
-      heading: 'How the restaurant actually serves',
+      heading: 'What the Marshall Street kitchen sends out',
       items: [
         {
-          title: 'Chinese food from Marshall Street',
-          text: 'The restaurant cooks Chinese food in Norristown. The claim stays at that scale. No invented house specials, no borrowed menu from another shop.',
+          title: 'General Tso\'s and sesame chicken',
+          text: 'General Tso\'s chicken and sesame chicken are the plates people reorder. Sweet and sour chicken sits next to them when you want the brighter sauce. Lunch specials put the same dishes on a shorter midday ticket with fried rice.',
         },
         {
-          title: 'Pickup at the counter',
-          text: 'Pickup is one of the two ways they publish. You order, you walk into 130 E Marshall St, you take the bag. The kitchen and the counter are the same place.',
+          title: 'Rice, lo mein, and the fried start',
+          text: 'Pork fried rice and beef lo mein fill the box. Wonton soup, fried dumplings, cheese wontons, and crab rangoons are the openers. Wings ride along when the table wants them.',
         },
         {
-          title: 'Delivery from the same kitchen',
-          text: 'Delivery is the other path on their locations page. The food still comes from the Norristown restaurant. You are not ordering a ghost kitchen with a borrowed name.',
+          title: 'Lunch specials, then late pickup',
+          text: 'Chow mein, pepper steak, Hunan, and Szechuan shrimp show up on the lunch board. After dark the same kitchen still packs General Tso\'s and lo mein for pickup or delivery until 1am.',
         },
       ],
     },
     story: {
-      heading: 'A Norristown Chinese kitchen',
+      heading: 'A Norristown Chinese kitchen that stays open',
       paragraphs: [
-        'Bei Jing Chinese Food keeps the offer honest: a Chinese restaurant on East Marshall Street that does pickup and delivery. That is what their locations page stands behind, so that is what this page will say. The rest of a menu is for their site, not for invented copy.',
-        'Norristown already knows how this kind of restaurant works. You call or you order, you pick up on Marshall Street, or you wait for the bag to arrive. The kitchen does not need a myth. The kitchen needs the order.',
+        'East Marshall Street already treats Bei Jing as the late Chinese run. You call 610-275-4086, you name General Tso\'s or sesame chicken, and the bag comes out hot. Regulars talk about big portions and food that is still steaming when it hits the door.',
+        'Pickup walks into 130 E Marshall St. Delivery leaves from the same kitchen, not a ghost brand with a borrowed name. Lunch specials cover the afternoon. The overnight window is the reason Norristown keeps this number saved.',
       ],
     },
     experience: {
-      heading: 'How an order actually leaves the kitchen',
+      heading: 'How a Bei Jing order actually moves',
       items: [
         {
-          title: 'Place the Chinese food order',
-          text: 'You order from Bei Jing Chinese Food in Norristown. The ticket is for the Marshall Street kitchen, not a third-party brand.',
+          title: 'Name the plate',
+          text: 'General Tso\'s, sesame chicken, sweet and sour, pork fried rice, beef lo mein, wonton soup, dumplings, crab rangoons. The ticket is those dishes, cooked here.',
         },
         {
-          title: 'Pick it up at the counter',
-          text: 'Pickup means you come to 130 E Marshall St and take the food from the restaurant that cooked it.',
+          title: 'Grab it or send it',
+          text: 'Walk the counter on East Marshall Street or have the same kitchen deliver. Either path is the Norristown stove, not a third-party commissary.',
         },
         {
-          title: 'Have it delivered',
-          text: 'Delivery is the other published path. The same Norristown kitchen sends the order out.',
+          title: 'Eat it while it is still hot',
+          text: 'Portions come out large. The point of a 1am Chinese run is food that is still hot when you open the bag.',
         },
       ],
     },
     feature: {
-      heading: 'Pickup and delivery, their words',
-      text: 'Their locations page names pickup and delivery. This page will not add a dining-room novel or a dish list we cannot verify. Chinese food, from Norristown, those two ways out the door.',
+      heading: 'The late-night Chinese number in Norristown',
+      text: 'General Tso\'s, sesame chicken, and beef lo mein from a kitchen that stays open until 1am. Lunch specials earlier. Pickup and delivery off East Marshall Street either way.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Marshall Street is the kitchen',
-      text: '130 E Marshall St is where the order is cooked. Pickup walks in. Delivery leaves from the same door. Bei Jing Chinese Food is that address doing that work.',
+      heading: 'Crab rangoons, then the Tso\'s',
+      text: 'Start with fried dumplings or crab rangoons. Put General Tso\'s or sesame chicken in the bag with pork fried rice. Bei Jing has been packing that order for Norristown for a long time.',
       ctaLabel: 'Order',
     },
     catalog: {
       items: [
         {
-          title: 'Pickup',
-          text: 'Collect Chinese food at the Norristown counter on East Marshall Street.',
+          title: 'General Tso\'s chicken',
+          text: 'The plate Norristown reorders, packed for pickup or a 1am delivery.',
         },
         {
-          title: 'Delivery',
-          text: 'The same kitchen sends the order out, as their locations page states.',
+          title: 'Sesame chicken',
+          text: 'Next to sweet and sour on the same Marshall Street menu, with lunch specials at midday.',
         },
         {
-          title: 'Norristown kitchen',
-          text: 'Chinese food cooked at 130 E Marshall St, not a borrowed storefront.',
+          title: 'Pork fried rice and lo mein',
+          text: 'Pork fried rice, beef lo mein, wonton soup, dumplings, and crab rangoons from the same kitchen.',
         },
       ],
     },
@@ -1170,7 +1172,7 @@ const SITES = [
     },
     spotlight: {
       heading: 'RESULTS THAT MOVE YOU',
-      text: 'That is their line. Martin Slater and Matthew Kennedy run the shop that has to make it true: sell the house, write the coverage, stay local after 50+ years.',
+      text: 'RESULTS THAT MOVE YOU is their line. Martin Slater and Matthew Kennedy run the shop that has to make it true: sell the house, write the coverage, stay local after 50+ years.',
       ctaLabel: 'Talk to the firm',
     },
     catalog: {
@@ -1201,7 +1203,7 @@ const SITES = [
     url: 'https://www.bar31.net/',
     phone: '215-646-0440',
     address: '31 N Main St, Ambler, PA 19002',
-    hours: '',
+    hours: 'Mon-Sat 11am-2am, Sun 11am-12am',
     attitude: 'neon',
     palette: {
       paper: '#F2EDE6',
@@ -1214,77 +1216,77 @@ const SITES = [
     fonts: { display: 'Rubik Mono One', text: 'IBM Plex Sans' },
     craft: 'dive bar service',
     description:
-      'Dive bar in Ambler. U-shaped bar, local taps Victory, Troegs, Sterling Pig. Pizza, sandwiches, fried pickles. From a PA Eats feature.',
-    marquee: ['U-shaped bar', 'Victory', 'Troegs', 'Sterling Pig', 'Fried pickles', 'Ambler'],
+      'Dive bar at 31 N Main in Ambler. Horseshoe bar, jukebox, electronic darts, smoking at the bar. Pulled pork, roast beef, hot sausage, wings, pierogies, pickled eggs. Victory, Troegs, Sterling Pig. Bartender Dave.',
+    marquee: ['Horseshoe bar', 'Cheap drafts', 'Pierogies', 'Jukebox', 'Dave'],
     hero: {
-      headline: 'The u-shaped bar on Main',
-      sub: 'Bar 31 is a dive bar at 31 N Main St in Ambler. A PA Eats feature called out the u-shaped bar, the local taps, and the food that comes with them. Victory, Troegs, and Sterling Pig are the named beers. Pizza, sandwiches, and fried pickles are the named plates. That is the room.',
-      glassFloat: { title: 'Ambler', sub: 'Dive bar' },
+      headline: 'Horseshoe bar, cheap drafts, Dave',
+      sub: 'Bar 31 is the dive at 31 N Main St in Ambler. Sit the horseshoe rail. Punch the jukebox. Throw electronic darts. Smoke at the bar. Drafts stay cheap, including Victory, Troegs, and Sterling Pig. Eat pulled pork, roast beef, hot sausage sandwiches, wings, pierogies, fried pickles, and pickled eggs. Regulars ask for Dave.',
+      glassFloat: { title: 'Ambler', sub: 'Horseshoe bar, open late' },
     },
     offerings: {
-      heading: 'What the bar actually pours and plates',
+      heading: 'What 31 actually pours and plates',
       items: [
         {
-          title: 'The u-shaped bar',
-          text: 'The room is built around a u-shaped bar. You sit on the rail, not in a dining concept. Bar 31 is a dive bar that wants you at that shape of wood.',
+          title: 'The horseshoe rail',
+          text: 'The room is a U-shaped bar. You sit on the wood, not in a dining concept. Jukebox in the corner. Electronic darts in the room. Smoking at the bar, the old way.',
         },
         {
-          title: 'Local taps',
-          text: 'Victory, Troegs, and Sterling Pig are the taps PA Eats named. Local beer, poured at a Main Street dive, not a flight menu with twenty guest handles.',
+          title: 'Cheap drafts, named taps',
+          text: 'Victory, Troegs, and Sterling Pig have been the local taps people write down. The rest of the handles stay cheap enough that Ambler treats this as a weeknight bar, not a flight room.',
         },
         {
-          title: 'Pizza, sandwiches, fried pickles',
-          text: 'The food that got written down is pizza, sandwiches, and fried pickles. Those are the plates this page will claim. Order them with the beer that is on.',
+          title: 'Sandwiches, pierogies, pickled eggs',
+          text: 'Pulled pork, roast beef, and hot sausage sandwiches. Wings and fried pickles. Pierogies. A jar of pickled eggs. Pizza when the kitchen is running it. Food you eat at the rail with the beer.',
         },
       ],
     },
     story: {
-      heading: 'Ambler, 31 North Main',
+      heading: 'Ambler already knows 31',
       paragraphs: [
-        'Bar 31 is the dive at 31 N Main St. The PA Eats feature is the public record used here: a u-shaped bar, Victory and Troegs and Sterling Pig on tap, pizza and sandwiches and fried pickles on the plate. The bar does not need a brand story beyond the room those sentences describe.',
-        'A night here is sit the rail, drink the local tap, eat the fried pickles or the pizza or the sandwich. Ambler already knows the door. This page will not invent a cocktail program or a weekend DJ. The work is the u-shaped bar.',
+        'Bar 31 opens at 11am and stays until 2am Monday through Saturday, midnight on Sunday. The friendliest dive on Main Street is the line regulars keep using, and Dave is the bartender they name. You come for a cheap draft, a pulled pork sandwich, and a room that still lets you smoke at the bar.',
+        'PA Eats wrote down the horseshoe, the local taps, the pizza and fried pickles. The rest of the ticket is roast beef, hot sausage, wings, pierogies, and pickled eggs. No cocktail program. No cover. The jukebox is the band.',
       ],
     },
     experience: {
       heading: 'How a night at 31 actually goes',
       items: [
         {
-          title: 'Take a seat on the U',
-          text: 'The bar is u-shaped. You sit on it. That is the geometry PA Eats wrote down, and it is the way the room works.',
+          title: 'Take a seat on the horseshoe',
+          text: 'Sit the rail. Punch the jukebox. Throw a round of electronic darts. Smoke if that is why you came.',
         },
         {
-          title: 'Drink the local taps',
-          text: 'Victory, Troegs, and Sterling Pig are the named beers. You order what is on, from those houses.',
+          title: 'Drink the cheap draft',
+          text: 'Victory, Troegs, Sterling Pig, or whatever Dave is pouring. The point is a cold one that does not punish the tab.',
         },
         {
-          title: 'Eat pizza, a sandwich, or fried pickles',
-          text: 'Those are the plates the feature named. Food at Bar 31 is that list, eaten at the same rail as the beer.',
+          title: 'Eat at the rail',
+          text: 'Pulled pork, roast beef, hot sausage, wings, pierogies, fried pickles, pickled eggs. Pizza if you want a pie with the beer.',
         },
       ],
     },
     feature: {
-      heading: 'A dive with named taps',
-      text: 'Victory, Troegs, and Sterling Pig are not generic "local craft." They are the taps a PA Eats feature put on Bar 31. The u-shaped bar is where they get poured.',
+      heading: 'A dive with a jukebox, not a guest list',
+      text: 'Horseshoe bar. Cheap drafts. Dave behind it. Pulled pork and pierogies on the plate. Open until 2am most nights. Bar 31 is the Ambler rail you already knew was there.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Fried pickles belong here',
-      text: 'Pizza, sandwiches, and fried pickles are the food the bar is willing to be known for. Order them like a dive bar orders food: with the beer, at the rail.',
+      heading: 'Ask for Dave',
+      text: 'Regulars call this the friendliest bar in town and they mean the person pouring. Sit the horseshoe, eat a hot sausage sandwich, let the jukebox do the rest.',
       ctaLabel: 'See the bar',
     },
     catalog: {
       items: [
         {
-          title: 'U-shaped bar',
-          text: 'The rail that defines the room at 31 N Main St, Ambler.',
+          title: 'Horseshoe bar',
+          text: 'U-shaped rail at 31 N Main, with a jukebox, electronic darts, and smoking at the bar.',
         },
         {
           title: 'Victory, Troegs, Sterling Pig',
-          text: 'The local taps named in the PA Eats feature.',
+          text: 'Named local taps next to cheap drafts that keep Ambler in the room.',
         },
         {
-          title: 'Pizza and fried pickles',
-          text: 'Pizza, sandwiches, and fried pickles from the same dive bar kitchen.',
+          title: 'Pierogies and pulled pork',
+          text: 'Sandwiches, wings, fried pickles, pickled eggs, and pizza from the dive kitchen.',
         },
       ],
     },
@@ -1314,77 +1316,77 @@ const SITES = [
     fonts: { display: 'Outfit', text: 'Noto Sans KR' },
     craft: 'Korean Japanese cuisine',
     description:
-      'Authentic Korean-Japanese restaurant in Norristown. Sushi bar, BBQ party trays, phone orders.',
-    marquee: ['Korean-Japanese', 'Sushi bar', 'BBQ party trays', 'Phone orders', 'Norristown'],
+      'Korean-Japanese on East Main in Norristown. Kalbi, bibimbap, jap chae, doen jang jigae, salmon teriyaki, tuna tataki. Volcano, Polar Bear, Godzilla, and New August Moon rolls. Sushi bar and BBQ party trays.',
+    marquee: ['Kalbi', 'Bibimbap', 'Volcano roll', 'Godzilla roll', 'Sushi bar'],
     hero: {
-      headline: 'Authentic Korean-Japanese',
-      sub: 'August Moon cooks authentic Korean-Japanese cuisine on East Main Street in Norristown. The room holds a sushi bar. BBQ party trays are how larger tables eat. Phone orders are how a lot of the food leaves. Lunch and dinner run on the hours from their order page. Sunday the restaurant is closed.',
-      glassFloat: { title: 'Norristown', sub: 'Sushi bar and BBQ trays' },
+      headline: 'Kalbi, bibimbap, and the Volcano roll',
+      sub: 'August Moon calls itself simply the best sushi and sashimi on East Main Street in Norristown. Korean plates are kalbi, bibimbap, jap chae, and doen jang jigae. Japanese plates are salmon teriyaki and tuna tataki. The sushi bar turns Volcano, Polar Bear, Godzilla, and New August Moon rolls. BBQ party trays feed the bigger table. Phone the ticket in.',
+      glassFloat: { title: 'Norristown', sub: 'Sushi bar and kalbi' },
     },
     offerings: {
       heading: 'What August Moon actually cooks',
       items: [
         {
-          title: 'Korean-Japanese in one room',
-          text: 'The restaurant calls the food authentic Korean-Japanese. You can eat across both kitchens in one visit: Korean plates and Japanese sushi from the same East Main Street address.',
+          title: 'Korean plates',
+          text: 'Kalbi hits the table as short ribs. Bibimbap comes in the hot bowl. Jap chae is the glass-noodle plate. Doen jang jigae is the stew you want when the night is cold. Those are the Korean names people already order.',
         },
         {
-          title: 'Sushi bar',
-          text: 'A sushi bar is part of the room. Rolls and nigiri are ordered there, not as a side note on a purely Korean menu.',
+          title: 'Sushi bar rolls',
+          text: 'Volcano, Polar Bear, Godzilla, and the New August Moon roll are the house sushi. Salmon teriyaki and tuna tataki sit next to nigiri when you want a quieter Japanese plate.',
         },
         {
           title: 'BBQ party trays and phone orders',
-          text: 'BBQ party trays are built for a table, not a single bowl. Phone orders are a published path: you call, you set the ticket, you pick up or sit down when the kitchen has it.',
+          text: 'A BBQ party tray is how a birthday or office table eats Korean from this kitchen. Call 610-277-4008, name the kalbi and the rolls, pick up or sit down when it is ready.',
         },
       ],
     },
     story: {
-      heading: 'East Main Street, two cuisines',
+      heading: 'East Main Street, two kitchens, one ticket',
       paragraphs: [
-        'August Moon is a Norristown restaurant that refuses to pick only Korea or only Japan. Authentic Korean-Japanese is their own phrase. The sushi bar and the BBQ party trays are how that phrase looks on a table. Phone orders keep the kitchen usable when you are not walking in cold.',
-        'Lunch is a shorter window on weekdays. Dinner stretches later on Friday and Saturday. Sunday they close. Those hours come from their order page, so the page you are reading will not invent a brunch or a late-night service they did not publish.',
+        'August Moon refuses to pick only Korea or only Japan. You can eat kalbi and a Godzilla roll in the same sitting. The sushi bar is a real station. Lunch runs Monday through Friday 11:30am to 2pm. Dinner returns at 4:30, later on Friday and Saturday. Sunday the kitchen rests.',
+        'Norristown already uses this number for party trays. Phone the order, bring the table, split bibimbap and Polar Bear rolls down the middle. Authentic Korean-Japanese is their phrase, and the named dishes are how it shows up on a plate.',
       ],
     },
     experience: {
-      heading: 'How a meal actually gets to the table',
+      heading: 'How a meal at August Moon actually gets to the table',
       items: [
         {
-          title: 'Call the ticket in',
-          text: 'Phone orders are how many tables start. You call August Moon, you name the Korean plates, the sushi, or the BBQ party tray, and the kitchen works that ticket.',
+          title: 'Call in kalbi or the rolls',
+          text: 'Phone the ticket: kalbi, bibimbap, jap chae, a Volcano roll, a Godzilla roll, a BBQ party tray. The kitchen works those names.',
         },
         {
-          title: 'Sit the sushi bar or the table',
-          text: 'The sushi bar is a real station in the room. A party tray is for the larger table that wants Korean BBQ in a shared format.',
+          title: 'Sit the sushi bar or the larger table',
+          text: 'Nigiri and house rolls at the bar. Korean BBQ trays when the group is bigger than two chairs.',
         },
         {
           title: 'Lunch window, then dinner',
-          text: 'Weekday lunch is 11:30am to 2pm. Dinner returns in the late afternoon. Saturday dinner starts at 4pm. Sunday there is no service.',
+          text: 'Weekday lunch closes at 2pm. Dinner comes back at 4:30. Saturday dinner starts at 4. Sunday there is no service.',
         },
       ],
     },
     feature: {
-      heading: 'Sushi bar and BBQ party trays',
-      text: 'Those two formats are the restaurant in physical form. One is a bar of Japanese work. The other is a Korean BBQ tray built for a group. Authentic Korean-Japanese means both are in the same Norristown room.',
+      heading: 'From doen jang jigae to the Godzilla roll',
+      text: 'Korean stew and Japanese rolls in the same Norristown room. Kalbi and bibimbap for the table that wants a hot bowl. Volcano, Polar Bear, Godzilla, and New August Moon rolls for the sushi bar. BBQ party trays when you are feeding a crowd.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Phone orders are part of the kitchen',
-      text: 'August Moon publishes phone orders as a way in. You do not have to discover the menu only by walking East Main Street. Call, name the tray or the sushi, and let the kitchen cook.',
+      heading: 'Simply the best sushi and sashimi',
+      text: 'Their line. Pair it with kalbi if you came for Korean. Phone 610-277-4008 so the tray is already moving when you hit East Main Street.',
       ctaLabel: 'Call in an order',
     },
     catalog: {
       items: [
         {
-          title: 'Sushi bar',
-          text: 'Japanese sushi ordered at the bar inside August Moon on East Main Street.',
+          title: 'Kalbi and bibimbap',
+          text: 'Short ribs and the hot bowl, with jap chae and doen jang jigae on the same Korean ticket.',
+        },
+        {
+          title: 'Volcano and Godzilla rolls',
+          text: 'House sushi with Polar Bear and New August Moon rolls at the bar.',
         },
         {
           title: 'BBQ party trays',
-          text: 'Korean BBQ in a shared tray built for a table, not a single bowl.',
-        },
-        {
-          title: 'Phone orders',
-          text: 'Call 610-277-4008 and put Korean-Japanese food on a ticket.',
+          text: 'Korean BBQ for a group, phoned in and packed or plated in the Norristown room.',
         },
       ],
     },
@@ -1400,7 +1402,7 @@ const SITES = [
     url: 'https://www.highlineaston.com/',
     phone: '610-753-4536',
     address: '469 Conchester Hwy, Aston, PA 19014',
-    hours: '',
+    hours: 'Mon-Fri 9am-6pm, Sat 10am-4pm',
     attitude: 'industrial',
     palette: {
       paper: '#EEEAE3',
@@ -1412,77 +1414,78 @@ const SITES = [
     },
     fonts: { display: 'Oswald', text: 'Barlow' },
     craft: 'used car sales',
-    description: 'Used car dealer in Aston. Inventory and trade-ins from their live contact page.',
-    marquee: ['Inventory', 'Trade-ins', 'Used cars', 'Aston', 'Conchester Hwy'],
+    description:
+      'Used cars, SUVs, trucks, and vans on Conchester Highway in Aston. Honda, Ford, Subaru, BMW, Lexus, Audi on the row. Trade-ins. Pat on the lot. Weekdays 9-6, Saturday 10-4.',
+    marquee: ['SUVs', 'Trucks', 'Trade-ins', 'Honda', 'Subaru', 'Aston'],
     hero: {
-      headline: 'Inventory and trade-ins in Aston',
-      sub: 'Highline Motors is a used car dealer on Conchester Highway in Aston. Their live contact page puts the work in two words: inventory and trade-ins. You come to see the used cars they hold, and you can bring the car you already have. The lot is 469 Conchester Hwy.',
-      glassFloat: { title: 'Aston', sub: 'Inventory and trade-ins' },
+      headline: 'SUVs, trucks, and the car you trade',
+      sub: 'Highline Motors sits at 469 Conchester Hwy in Aston with used SUVs, sedans, trucks, and vans on the row. Recent inventory has run Honda CR-Vs, Ford Fusions, Subaru Foresters, BMW X3s, Lexus RXs, and Audi Q5s. Bring the car you already drive. Pat is the name regulars keep using when the deal actually closes.',
+      glassFloat: { title: 'Aston', sub: 'SUVs, trucks, trade-ins' },
     },
     offerings: {
-      heading: 'What the Aston lot actually does',
+      heading: 'What the Conchester Highway lot actually holds',
       items: [
         {
-          title: 'Used car inventory',
-          text: 'The dealer holds used cars you can come see. Inventory is their word. The product is a vehicle on the Conchester Highway lot, not a maybe in transit.',
+          title: 'SUVs, trucks, sedans, vans',
+          text: 'The lot turns over Honda, Ford, Subaru, BMW, Lexus, Audi, Chevy, and GMC. You walk a CR-V, a Forester, an Explorer, a Silverado, or a Sienna depending on the week. The car you buy is the one sitting in Aston that day.',
         },
         {
-          title: 'Trade-ins',
-          text: 'Trade-ins are the other half of their contact-page offer. You bring the car you have. They look at it as part of the deal for the car you want.',
+          title: 'Trade-ins with Pat',
+          text: 'They want your vehicle. Trade-ins are half the driveway. Pat works the deal so the car you drive in can pay down the car you drive out. Miss Jay is the other name people mention when the paperwork stays calm.',
         },
         {
-          title: 'A dealer you visit',
-          text: 'Highline Motors is an Aston lot. The visit is the point: walk the inventory, talk the trade, decide on a used car that is actually there.',
+          title: 'A weekday lot you can actually catch',
+          text: 'Monday through Friday the lot runs 9am to 6pm. Saturday is 10am to 4pm. You look at miles, you take a drive, you talk money on Conchester Highway before anyone emails a maybe.',
         },
       ],
     },
     story: {
-      heading: 'Conchester Highway, used cars',
+      heading: 'Aston, on the highway, with a person on the lot',
       paragraphs: [
-        'Highline Motors keeps the claim as tight as their contact page. Inventory. Trade-ins. A used car dealer in Aston. You are not promised a brand of car this page cannot verify. You are promised a lot that holds vehicles and takes trades.',
-        'A used-car deal works when both sides of the driveway are honest. They have inventory. You may have a trade. Conchester Highway is where those two facts meet. The rest is the specific car on the ground that day. Highline Motors is the Aston dealer that put both words on the contact page.'
+        'Highline Motors is the used-car stop on Conchester Highway when you want an SUV or a truck you can see in daylight. Buyers come back for a second car years later and still ask for Pat. The inventory moves: Honda and Subaru for the school run, Ford and Chevy when you need the bed, BMW and Lexus when the budget can take the badge.',
+        'A deal here is walk the row, pick the vehicle, put your trade on the table. People who liked the lot talk about leaving with a car that lasted. Look at the specific car. Ask Pat the hard questions while you are still on the pavement.',
       ],
     },
     experience: {
-      heading: 'How a deal actually starts',
+      heading: 'How an Aston deal actually starts',
       items: [
         {
-          title: 'See the inventory',
-          text: 'You start with the used cars Highline Motors is holding in Aston. Inventory means the row you can walk, not a hidden list.',
+          title: 'Walk the SUVs and trucks',
+          text: 'CR-Vs, Foresters, Explorers, Silverados, and the sedan row sit in the same lot. You pick the one with the miles you can live with.',
         },
         {
-          title: 'Bring a trade if you have one',
-          text: 'Trade-ins are a published part of the work. The car you already drive can enter the same conversation as the car you want.',
+          title: 'Put your trade in the conversation',
+          text: 'Drive in with the car you have. Pat and Miss Jay work the number so the trade is part of the deal, not a later errand.',
         },
         {
-          title: 'Deal on the lot',
-          text: 'The dealer and the inventory are in one place: 469 Conchester Hwy. The purchase happens around a vehicle that is there.',
+          title: 'Leave Conchester in the new one',
+          text: 'Weekdays until 6, Saturday until 4. The purchase happens around a vehicle that is already in Aston.',
         },
       ],
     },
     feature: {
-      heading: 'Used cars, plus the one you bring',
-      text: 'Inventory and trade-ins are a paired offer. Highline Motors sells used cars in Aston and takes the car you already have as part of the deal.',
+      heading: 'Honda to Lexus, plus the trade',
+      text: 'Highline Motors turns over SUVs, trucks, sedans, and vans on Conchester Highway. Honda, Ford, Subaru, BMW, Lexus, Audi show up on the row. Pat works the trade so you are not stuck with two cars in the driveway.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'The contact page named the work',
-      text: 'Plenty of lots hide behind adjectives. Their live contact page did not. Inventory. Trade-ins. That is the Highline Motors offer, written the way they run the Aston lot.',
+      heading: 'Ask for Pat',
+      text: 'Regulars who bought twice still name Pat. Miss Jay shows up in the paperwork stories. Highline Motors is that Aston lot: look at the SUV, talk the trade, decide before dark.',
       ctaLabel: 'See inventory',
     },
     catalog: {
       items: [
         {
-          title: 'Inventory',
-          text: 'Used cars on the ground at the Aston dealer on Conchester Highway.',
+          title: 'SUVs and crossovers',
+          text: 'Honda CR-V, Subaru Forester, BMW X3, Lexus RX, Audi Q5, and the week\'s other crossovers.',
+        },
+        {
+          title: 'Trucks and vans',
+          text: 'Silverados, Explorers, Siennas, and the work vehicles that share the Aston row.',
         },
         {
           title: 'Trade-ins',
-          text: 'Bring the car you have. Trade-ins are part of how Highline Motors deals.',
-        },
-        {
-          title: 'Aston lot',
-          text: 'A used car dealer you visit at 469 Conchester Hwy, Aston, PA.',
+          text: 'Bring the car you have. Pat works the number into the car you want.',
         },
       ],
     },
@@ -1511,77 +1514,77 @@ const SITES = [
     fonts: { display: 'Bungee', text: 'Nunito' },
     craft: 'comics and graphic novels',
     description:
-      'Comic shop in Philadelphia. Comics, manga, graphic novels, figures. Clean approachable shop. Custom art commissions.',
-    marquee: ['Comics', 'Manga', 'Graphic novels', 'Figures', 'Custom art', 'Manayunk'],
+      'Manayunk comic shop. Floppies, manga, graphic novels, figures, owner-printed shirts, original art, commissions. Clean, approachable shop. JD will order what is not on the rack. Noon to 8, Sunday to 6.',
+    marquee: ['Comics', 'Manga', 'Pull list', 'Figures', 'Manayunk'],
     hero: {
-      headline: 'Comics, manga, figures, commissions',
-      sub: "Johnny Destructo's Hero Complex is a comic shop on Main Street in Philadelphia. The racks hold comics, manga, and graphic novels. Figures are on the floor. Custom art commissions are part of the shop, not a side hustle down the street. The room is a clean, approachable shop, not a basement you have to decode.",
-      glassFloat: { title: 'Philadelphia', sub: 'Clean, approachable shop' },
+      headline: 'A clean comic shop on Main',
+      sub: 'Johnny Destructo\'s Hero Complex at 4327 Main Street in Manayunk is the shop JD built so a new reader can walk in without failing a test. Floppies, graphic novels, and manga on the racks. Superhero and anime figures on the floor. Owner-printed shirts and original art. Custom commissions. If it is not here, he will order it. Pull lists ship as far as Reading.',
+      glassFloat: { title: 'Manayunk', sub: 'Clean, approachable shop' },
     },
     offerings: {
-      heading: 'What the shop actually holds',
+      heading: 'What the Main Street shop actually holds',
       items: [
         {
           title: 'Comics, manga, graphic novels',
-          text: 'The reading stock is comics, manga, and graphic novels. You come in for issues and volumes you can hold, in a shop that is built to be walked without a secret handshake.',
+          text: 'Weekly floppies, trade paperbacks, and Japanese manga. JD\'s job is the jumping-on point: if you like a show and do not know the book, he will put the first volume in your hand. Subscriptions stay even after people move.',
         },
         {
-          title: 'Figures',
-          text: 'Figures sit with the books. Hero Complex is a comic shop that also sells the objects people put on a shelf next to the pull list.',
+          title: 'Figures, shirts, original art',
+          text: 'Superhero and anime figures. Hand-screened shirts and stickers JD prints. Original art on the wall. Indie books from local writers sit next to the hits because the shop backs the scene it lives in.',
         },
         {
-          title: 'Custom art commissions',
-          text: 'Custom art commissions are a published part of the shop. You can leave with a book, a figure, or a piece made for you. The counter handles all three.',
+          title: 'Commissions and special orders',
+          text: 'Custom art commissions from the same counter that pulls your list. Cannot find the back issue? He will hunt it. Book clubs and game nights when the calendar has them.',
         },
       ],
     },
     story: {
-      heading: 'A clean shop on Main Street',
+      heading: 'Manayunk Main Street, noon to 8',
       paragraphs: [
-        "Johnny Destructo's Hero Complex keeps the comic shop approachable on purpose. Comics, manga, and graphic novels are the racks. Figures are in the room. Custom art commissions are on the offer list. The shop is clean enough that a new reader can walk in without feeling like they failed a test.",
-        'Manayunk Main Street is the address. The hours from their contact page run noon to 8pm Monday through Saturday and noon to 6pm on Sunday. You come for the pull, the volume, the figure, or the commission. You leave with something the shop actually sells.',
+        'JD took the mission on purpose: a comic shop that does not assault you at the door. Veteran geeks and first-timers get the same counter. Monday through Saturday the shop runs noon to 8pm. Sunday closes at 6. Call 215-482-7700 if you want the pull waiting.',
+        'People who left Manayunk still get boxes shipped because the recommendations were that good. Family-friendly, all ages, no secret handshake. Comics, manga, figures, a shirt from the owner, a commission if you want a piece that does not exist yet.',
       ],
     },
     experience: {
-      heading: 'How a visit to the shop works',
+      heading: 'How a visit to Hero Complex actually works',
       items: [
         {
           title: 'Walk the racks',
-          text: 'Comics, manga, and graphic novels are out where you can browse. The shop is clean and approachable, so the first visit does not require a guide.',
+          text: 'Floppies, manga, and graphic novels are out. Ask JD where to jump in. The first visit does not require a guide, but he will be one if you want it.',
         },
         {
-          title: 'Check the figures',
-          text: 'Figures are part of the same floor. You can leave with a book and an object from one counter.',
+          title: 'Check figures, shirts, and art',
+          text: 'Figures, owner-printed shirts, stickers, original art. Leave with a book and an object from one counter.',
         },
         {
-          title: 'Ask about a commission',
-          text: 'Custom art commissions are shop work. You talk to the counter about a piece made for you, in the same place you buy the weekly comics.',
+          title: 'Start a pull or a commission',
+          text: 'Subscriptions, special orders, custom art. The counter handles the weekly habit and the piece made for you.',
         },
       ],
     },
     feature: {
       heading: 'A comic shop you can actually walk into',
-      text: 'Clean and approachable is the room. Comics, manga, graphic novels, and figures are the stock. Custom art commissions are the extra that still belongs to this counter.',
+      text: 'Clean on purpose. Comics, manga, graphic novels, figures, shirts JD prints, original art, commissions. Manayunk Main Street, noon to 8. Sunday to 6. He will order what is missing.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Commissions live here',
-      text: "Hero Complex does not send custom art down the street. Commissions are part of Johnny Destructo's shop, next to the comics and the figures.",
+      heading: 'Ask JD where to jump in',
+      text: 'His line is expert advice for veteran geeks and new fans. Pull lists, manga, a figure, a commission. Hero Complex is that counter at 4327 Main Street.',
       ctaLabel: 'See the shop',
     },
     catalog: {
       items: [
         {
           title: 'Comics and manga',
-          text: 'Issues and volumes on the racks at 4327 Main Street, Philadelphia.',
+          text: 'Floppies, trades, and manga on the racks at 4327 Main Street, Manayunk.',
         },
         {
-          title: 'Graphic novels and figures',
-          text: 'Longer books and figures in the same clean, approachable shop.',
+          title: 'Figures and shirts',
+          text: 'Superhero and anime figures, plus shirts and stickers the owner prints.',
         },
         {
-          title: 'Custom art commissions',
-          text: 'Commission a piece from the same counter that pulls your comics.',
+          title: 'Pulls and commissions',
+          text: 'Subscriptions, special orders, and custom art from the same counter.',
         },
       ],
     },
@@ -1637,7 +1640,7 @@ const SITES = [
         },
         {
           title: 'Pet dentistry',
-          text: 'Pet dentistry is a named specialty. Greyhounds have unique anesthesia and dental needs. That is why National Greyhound Adoption Program built a clinic, and why dentistry stayed on the public roster.',
+          text: 'Pet dentistry is a named specialty. Greyhounds have unique anesthesia and dental needs, which is why National Greyhound Adoption Program built a clinic, and why dentistry stayed on the public roster.',
         },
       ],
     },
@@ -1652,8 +1655,8 @@ const SITES = [
       heading: 'How a visit actually runs',
       items: [
         {
-          title: 'Call and come in the rear entrance',
-          text: 'Appointments are set by phone. Drive straight into the driveway instead of following the bend, then use the double doors at the back of the building. That is the clinic entrance they publish.',
+          title: 'Come in the rear entrance',
+          text: 'Drive straight into the driveway instead of following the bend, then use the double doors at the back of the building. Greyhound-savvy staff meet you there for vaccines, dentistry, or surgery.',
         },
         {
           title: 'Vaccines, dentistry, or surgery on the roster',
@@ -1661,7 +1664,7 @@ const SITES = [
         },
         {
           title: 'Pay when the work is done',
-          text: 'Services are payable at the time they are rendered. Cash, check, Visa, Mastercard, Discover, and American Express are the published methods. This is a nonprofit clinic, not a payment-plan mill.',
+          text: 'Services are payable when they are rendered. Cash, check, Visa, Mastercard, Discover, and American Express. A nonprofit clinic, not a payment-plan mill.',
         },
       ],
     },
@@ -1716,35 +1719,35 @@ const SITES = [
     fonts: { display: 'Plus Jakarta Sans', text: 'Source Sans 3' },
     craft: 'physical therapy',
     description:
-      'One-on-one licensed physical therapy in Collegeville. Orthopedic, sports, post-surgical, vestibular. Dr. Jeff Kurtz, clinic director. Ursinus / Perkiomen Creek community.',
-    marquee: ['One-on-one', 'Orthopedic', 'Sports', 'Post-surgical', 'Vestibular', 'Collegeville'],
+      'One-on-one PT in Collegeville. Dr. Jeff Kurtz. Orthopedic, sports, post-surgical, vestibular, concussion, running assessments, blood flow restriction. Hip replacement, rotator cuff, ACL. Ursinus / Perkiomen Creek.',
+    marquee: ['One-on-one', 'Vestibular', 'Post-surgical', 'Running assessment', 'Dr. Jeff Kurtz'],
     hero: {
-      headline: 'One-on-one licensed therapists',
-      sub: 'Kinetic Physical Therapy in Collegeville is one-on-one care with licensed therapists. The clinic treats orthopedic, sports, post-surgical, and vestibular cases. Dr. Jeff Kurtz is the clinic director. The room sits in the Ursinus / Perkiomen Creek community at 241 Plaza Drive.',
+      headline: 'One-on-one with Dr. Jeff Kurtz',
+      sub: 'Kinetic Physical Therapy at 241 Plaza Drive is licensed, one-on-one care under clinic director Dr. Jeff Kurtz. Orthopedic and sports cases, post-surgical protocols, vestibular and balance work, concussion management, running assessments, and blood flow restriction. Hip replacement, rotator cuff tendonitis, muscle strain, and ACL reconstruction are the visits Collegeville actually books.',
       glassFloat: { title: 'Collegeville', sub: 'Dr. Jeff Kurtz, clinic director' },
     },
     offerings: {
-      heading: 'The cases the clinic actually takes',
+      heading: 'The cases the Collegeville clinic actually takes',
       items: [
         {
           title: 'Orthopedic and sports',
-          text: 'Orthopedic and sports cases are treated one-on-one with a licensed therapist. You are not handed to an aide for the hour that was supposed to be skilled care.',
+          text: 'Rotator cuff, muscle strain, ACL reconstruction, the Ursinus athlete, the trail runner. A licensed therapist stays in the hour. You are not handed to an aide for the work that was supposed to be skilled care.',
         },
         {
-          title: 'Post-surgical',
-          text: 'Post-surgical physical therapy is on the Collegeville list. The therapist works the protocol with you in the room, under a clinic directed by Dr. Jeff Kurtz.',
+          title: 'Post-surgical and joint replacement',
+          text: 'Hip replacement, total knee, the protocol after the surgeon is done. Dr. Kurtz and Brandon Vattima work the plan in the room, not as a gym pass with occasional check-ins.',
         },
         {
-          title: 'Vestibular',
-          text: 'Vestibular work is a named service, not an afterthought. Balance and inner-ear cases get the same one-on-one licensed hour as a knee or a shoulder.',
+          title: 'Vestibular, concussion, running, BFR',
+          text: 'Balance and inner-ear cases. Concussion management. Running assessments. Blood flow restriction. Soft tissue mobilization and ergonomic work when the desk did the damage.',
         },
       ],
     },
     story: {
       heading: 'Collegeville, one patient at a time',
       paragraphs: [
-        'Kinetic Physical Therapy puts licensed therapists in a one-on-one hour. Orthopedic, sports, post-surgical, and vestibular are the published case types. Dr. Jeff Kurtz directs the Collegeville clinic. The community around the door is Ursinus and the Perkiomen Creek, not a downtown medical tower.',
-        'The method is the differentiator they are willing to name: one-on-one. A visit is you and a licensed therapist in the work, whether the problem is a joint, a sport, a surgery, or the vestibular system. Plaza Drive is where that hour happens. Dr. Jeff Kurtz directs the Collegeville clinic that holds those four case types.'
+        'Kinetic PT has clinics across Chester and Montgomery. Collegeville is the Plaza Drive room for the Ursinus / Perkiomen Creek community. Dr. Jeff Kurtz directs it. One-on-one is the method: a licensed therapist, an hour that is not split across three patients.',
+        'Call 610-424-1100. Bring the operative report, the dizzy spells, or the mileage that started to hurt. Office workers, college athletes, and active seniors sit in the same clinic because the case types were built that way. Manual therapy and therapeutic exercise stay in the hour with you.',
       ],
     },
     experience: {
@@ -1752,41 +1755,41 @@ const SITES = [
       items: [
         {
           title: 'One-on-one with a licensed therapist',
-          text: 'The hour is skilled care. A licensed therapist stays with you. That is the Collegeville model, not a gym pass with occasional check-ins.',
+          text: 'The hour is skilled care. Dr. Kurtz or another licensed therapist stays with you. Collegeville is not a mill.',
         },
         {
-          title: 'Treat the named case type',
-          text: 'Orthopedic, sports, post-surgical, or vestibular. The plan is built for the case they published, under Dr. Jeff Kurtz as clinic director.',
+          title: 'Treat the named case',
+          text: 'Orthopedic, sports, post-surgical, vestibular, concussion, running, blood flow restriction. The plan matches what you walked in with.',
         },
         {
           title: 'Work inside the Ursinus community',
-          text: 'The clinic sits at 241 Plaza Drive in the Ursinus / Perkiomen Creek community. You are treated as a neighbor case, not a unit in a regional mill.',
+          text: '241 Plaza Drive. Neighbors, athletes, and post-op patients from the same creek towns, not a unit in a regional mill.',
         },
       ],
     },
     feature: {
-      heading: 'Licensed, one-on-one, four case types',
-      text: 'Orthopedic, sports, post-surgical, vestibular. Those are the doors. Behind each door is a licensed therapist and an hour that is not split across three patients. Kinetic Physical Therapy in Collegeville is one-on-one licensed care under Dr. Jeff Kurtz.',
+      heading: 'Licensed, one-on-one, the cases on the door',
+      text: 'Hip replacement. Rotator cuff. ACL. Vestibular. Concussion. Running assessment. Blood flow restriction. Behind each door is a licensed therapist and an hour that belongs to you. Dr. Jeff Kurtz directs the Collegeville clinic.',
       ctaLabel: 'Official site',
     },
     spotlight: {
       heading: 'Dr. Jeff Kurtz directs the clinic',
-      text: 'Collegeville has a named clinic director. Dr. Jeff Kurtz is on the work, in a Kinetic Physical Therapy that still sells one-on-one licensed care to the Ursinus / Perkiomen Creek community.',
+      text: 'Collegeville has a named director. Kinetic Physical Therapy still sells one-on-one licensed care to the Ursinus / Perkiomen Creek community, with Brandon Vattima on the floor alongside him.',
       ctaLabel: 'Collegeville location',
     },
     catalog: {
       items: [
         {
           title: 'Orthopedic and sports',
-          text: 'One-on-one licensed therapy for orthopedic and sports cases in Collegeville.',
+          text: 'Rotator cuff, muscle strain, ACL, and the running athlete, one-on-one in Collegeville.',
         },
         {
           title: 'Post-surgical',
-          text: 'Post-surgical physical therapy with a licensed therapist in the room.',
+          text: 'Hip and knee replacement protocols with a licensed therapist in the room.',
         },
         {
-          title: 'Vestibular',
-          text: 'Vestibular care as a named service, directed by Dr. Jeff Kurtz.',
+          title: 'Vestibular and concussion',
+          text: 'Balance, inner ear, concussion, running assessments, and blood flow restriction.',
         },
       ],
     },
@@ -1815,77 +1818,77 @@ const SITES = [
     fonts: { display: 'Barlow Condensed', text: 'IBM Plex Sans' },
     craft: 'heating and air',
     description:
-      'Heating and air for Bucks, Montgomery, and Philadelphia counties. Based in Morrisville.',
-    marquee: ['Heating', 'Air', 'Bucks', 'Montgomery', 'Philadelphia', 'Morrisville'],
+      'Jeff Taylor\'s HVAC shop in Morrisville. 30+ years. Trane and Carrier. Heat pumps, oil-to-gas, oil-to-heat-pump, boilers, condensing furnaces. Residential and light commercial. Bucks, Montgomery, Philadelphia.',
+    marquee: ['Jeff Taylor', 'Trane', 'Carrier', 'Heat pumps', 'Oil to gas'],
     hero: {
-      headline: 'Heating and air for three counties',
-      sub: 'Accurate Temperature is an HVAC company in Morrisville. The work is heating and air for Bucks, Montgomery, and Philadelphia counties. You call a Morrisville shop when the house is too cold or too hot, and the service area is those three counties, not a national dispatch board.',
-      glassFloat: { title: 'Morrisville', sub: 'Bucks, Montgomery, Philadelphia' },
+      headline: 'Jeff Taylor, Trane and Carrier',
+      sub: 'Accurate Temperature is Jeff Taylor\'s Morrisville HVAC shop after more than 30 years in the trade. Residential and light commercial. Trane and Carrier equipment. Heat pumps, oil-to-gas conversions, oil-to-heat-pump, boilers, condensing furnaces, new construction, and retrofit. Same-day service is what neighbors keep praising.',
+      glassFloat: { title: 'Morrisville', sub: 'Jeff Taylor, 30+ years' },
     },
     offerings: {
-      heading: 'The work they put on the truck',
+      heading: 'What the Morrisville truck actually does',
       items: [
         {
-          title: 'Heating',
-          text: 'Heating is half the name. Accurate Temperature works heat for houses in Bucks, Montgomery, and Philadelphia counties from a Morrisville base.',
+          title: 'Heat pumps and conversions',
+          text: 'Heat pumps for houses getting off oil. Oil-to-gas and oil-to-heat-pump conversions when the old tank has to go. Boilers and condensing furnaces when the house still wants hydronic or a hot-air swap.',
         },
         {
-          title: 'Air',
-          text: 'Air is the other half. Cooling and air work sit with the heating, so the same company handles the year instead of handing summer to a stranger.',
+          title: 'Trane and Carrier',
+          text: 'Jeff installs and services Trane and Carrier. New construction and retrofit both come off the same Morrisville shop, so a replacement and a first-time system talk to the same person.',
         },
         {
-          title: 'Three-county service',
-          text: 'Bucks, Montgomery, and Philadelphia are the published counties. The shop is in Morrisville. The truck goes where those counties are, not wherever an algorithm points.',
+          title: 'Three-county service, same-day when it fails',
+          text: 'Bucks, Montgomery, and Philadelphia. Neighbors call 215-917-2115 when the house will not heat or cool and they want Jeff\'s truck, not a national dispatch board.',
         },
       ],
     },
     story: {
-      heading: 'A Morrisville HVAC shop',
+      heading: 'A Morrisville shop with a name on the truck',
       paragraphs: [
-        'Accurate Temperature keeps the offer in plain language: heating and air, from Morrisville, for Bucks, Montgomery, and Philadelphia counties. No invented 24/7 badge. No invented brand of furnace. The company does HVAC in the counties they name.',
-        'A house that will not heat or will not cool needs a shop that already works those streets. Rennard Lane is the base. The three counties are the map. Heating and air are the verbs. That is the whole brief, and it is enough to know who you are calling. Accurate Temperature is the Morrisville company that published that map.'
+        'Accurate Temperature is Jeff Taylor at 810 Rennard Lane. Thirty-plus years of heating and air, still a person you can reach. Trane and Carrier are the brands on the truck. Heat pumps and oil conversions are the jobs that keep showing up in Bucks and Montgomery as tanks die.',
+        'Light commercial sits next to the residential calls. A condensing furnace swap and a rooftop repair can live in the same week. Same-day service is the reputation, earned on houses that were actually cold when he showed up.',
       ],
     },
     experience: {
-      heading: 'How the service actually runs',
+      heading: 'How an Accurate Temperature visit actually runs',
       items: [
         {
-          title: 'Call a Morrisville HVAC shop',
-          text: 'The company is Accurate Temperature at 810 Rennard Lane. You are talking to a local heating and air shop, not a national call center that resells the job.',
+          title: 'Talk to Jeff\'s shop',
+          text: 'You are calling a Morrisville HVAC company, not a national call center that resells the job. Describe the heat pump, the boiler, or the furnace that quit.',
         },
         {
-          title: 'Work the heat or the air',
-          text: 'The visit is heating or air, the two halves they publish. The technician is there for the system that is failing, in the season it is failing.',
+          title: 'Repair, convert, or replace',
+          text: 'Trane and Carrier gear, oil-to-gas, oil-to-heat-pump, boilers, condensing furnaces. The visit matches the system that is failing.',
         },
         {
           title: 'Stay inside the three counties',
-          text: 'Bucks, Montgomery, and Philadelphia are the service map. If the house is in those counties, it is inside the work they claim.',
+          text: 'Bucks, Montgomery, Philadelphia. If the house is on that map, it is inside the work the truck claims.',
         },
       ],
     },
     feature: {
-      heading: 'Heating and air, named counties',
-      text: 'The company will not be described as "full-service comfort solutions." Accurate Temperature does heating and air for Bucks, Montgomery, and Philadelphia counties from Morrisville. The truck leaves Rennard Lane for those three counties and comes back to the same shop.',
+      heading: 'Heat pumps, oil conversions, named brands',
+      text: 'Jeff Taylor has been doing this more than 30 years. Trane and Carrier. Heat pumps and oil-to-gas when the tank has to go. Boilers and condensing furnaces when the house still wants fire. Same-day when the system is down.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Morrisville is the base',
-      text: '810 Rennard Lane is where the shop lives. The counties are where the heating and air work goes. That split is honest: a local base, a three-county map.',
+      heading: 'Rennard Lane is the base',
+      text: '810 Rennard Lane in Morrisville. The truck leaves for Bucks, Montgomery, and Philadelphia and comes back to Jeff\'s shop. Heating and air with a person on the invoice.',
       ctaLabel: 'Talk to the shop',
     },
     catalog: {
       items: [
         {
-          title: 'Heating',
-          text: 'Heat work for houses in Bucks, Montgomery, and Philadelphia counties.',
+          title: 'Heat pumps',
+          text: 'Heat pumps and oil-to-heat-pump conversions for houses getting off the tank.',
         },
         {
-          title: 'Air',
-          text: 'Air and cooling from the same Morrisville HVAC company.',
+          title: 'Trane and Carrier',
+          text: 'Install and service, plus boilers and condensing furnaces when the house wants them.',
         },
         {
-          title: 'Three-county map',
-          text: 'Bucks, Montgomery, Philadelphia. The published service area.',
+          title: 'Oil-to-gas',
+          text: 'Oil-to-gas conversions and same-day emergency heat from the Morrisville shop.',
         },
       ],
     },
@@ -1913,77 +1916,78 @@ const SITES = [
     },
     fonts: { display: 'Anton', text: 'Nunito' },
     craft: 'pizza and steaks',
-    description: 'Pizza and steaks neighborhood shop in Narberth.',
-    marquee: ['Pizza', 'Steaks', 'Neighborhood shop', 'Narberth', 'Montgomery Ave'],
+    description:
+      'Pizza and steaks across from the Wawa on Montgomery Avenue. Narberth pie, Meat Loves, Buffalo Chicken, cheesesteaks, pizza steaks, calzones, hoagies, pizza fries.',
+    marquee: ['Narberth pie', 'Cheesesteaks', 'Buffalo Chicken', 'Pizza fries', 'Across from Wawa'],
     hero: {
-      headline: 'Pizza and steaks, neighborhood shop',
-      sub: 'Narberth Pizza is a pizza and steaks shop on Montgomery Avenue. The neighborhood already knows the door. You come for a pie or a steak, you take it home or you eat it as a neighborhood shop meal, and you do not need a concept deck to understand the order.',
-      glassFloat: { title: 'Narberth', sub: 'Pizza and steaks' },
+      headline: 'The Narberth pie, then a steak',
+      sub: 'Narberth Pizza cooks on Montgomery Avenue, across from the Wawa. The house pie is pepperoni, mushrooms, green pepper, and onion. Meat Loves, Vegetable, and Buffalo Chicken sit next to it. Steaks run cheesesteak, pizza steak, BBQ, buffalo, and mushroom, plus chicken steaks. The Narberth chicken steak gets jalapeño and fried onions.',
+      glassFloat: { title: 'Narberth', sub: 'Across from the Wawa' },
     },
     offerings: {
-      heading: 'What the shop actually cooks',
+      heading: 'What the Montgomery Avenue counter actually cooks',
       items: [
         {
-          title: 'Pizza',
-          text: 'Pizza is the first word on the door. Narberth Pizza is a neighborhood shop that makes pies for the people who already live on these blocks.',
+          title: 'Named pies',
+          text: 'The Narberth is pepperoni, mushrooms, green pepper, and onion. Meat Loves loads the pie. Vegetable keeps it quieter. Buffalo Chicken is the hot one. Calzones fold the same fillings when you want them closed.',
         },
         {
-          title: 'Steaks',
-          text: 'Steaks are the other half of the name. A cheesesteak shop that also does pizza, or a pizza shop that also does steaks: either way the ticket can hold both.',
+          title: 'Steaks the block reorders',
+          text: 'Cheesesteak, pizza steak, BBQ, buffalo, and mushroom steaks. Chicken steaks for the other side of the board. The Narberth chicken steak comes with jalapeño and fried onions. Regulars call the steaks the reason they keep the number.',
         },
         {
-          title: 'A neighborhood counter',
-          text: 'The shop is a neighborhood shop. Montgomery Avenue is the address. You order pizza and steaks from a counter that belongs to Narberth, not a chain board.',
+          title: 'Hoagies, pizza fries, delivery',
+          text: 'Hoagies and pizza fries fill the rest of the ticket. The owner works the counter. Delivery leaves fast from 940 Montgomery Ave, the shop across from the Wawa.',
         },
       ],
     },
     story: {
-      heading: 'Narberth, 940 Montgomery',
+      heading: 'A Narberth shop with a named pie',
       paragraphs: [
-        'Narberth Pizza does not need a longer myth. Pizza and steaks, from a neighborhood shop on Montgomery Avenue. The hours that match across listings are 11am to 9pm Monday through Saturday and 12pm to 9pm on Sunday. The work is the order in front of you.',
-        'A neighborhood shop earns the next ticket by cooking the last one. Pie or steak, the claim stays inside those two foods. No invented specialty crust, no invented secret sauce. Narberth already has the shop. This page just says what it sells: pizza and steaks from a neighborhood counter.'
+        'Montgomery Avenue already has this counter memorized. You walk in for the Narberth pie or you call 610-668-2230 for a cheesesteak and pizza fries. The owner is often on the floor. Neighbors talk about steaks that actually taste like a shop that cares, and delivery that shows up while the fries are still loud.',
+        'Monday through Saturday the door runs 11am to 9pm. Sunday opens at noon. A ticket can hold a Buffalo Chicken pie and a pizza steak in the same bag. Calzones and hoagies ride along when the table is bigger than a movie night.',
       ],
     },
     experience: {
-      heading: 'How an order at the shop works',
+      heading: 'How a Narberth order actually happens',
       items: [
         {
-          title: 'Order pizza or a steak',
-          text: 'The ticket is pizza, steaks, or both. That is the menu this page will stand behind from their own category.',
+          title: 'Pick the pie by name',
+          text: 'Narberth, Meat Loves, Vegetable, or Buffalo Chicken. A plain pie works if you already know the toppings. Calzones if you want it folded.',
         },
         {
-          title: 'Use the neighborhood counter',
-          text: '940 Montgomery Ave is the shop. You order like a neighbor: walk in or call, take the food from the people who cooked it.',
+          title: 'Add the steak',
+          text: 'Cheesesteak, pizza steak, BBQ, buffalo, mushroom, or the Narberth chicken steak with jalapeño and fried onions. The steaks are why a lot of the block came back.',
         },
         {
-          title: 'Eat it as a shop meal',
-          text: 'Narberth Pizza is a neighborhood shop, not a white-tablecloth room. The food is meant to be eaten the way a Main Line block already eats pizza and steaks.',
+          title: 'Grab hoagies or pizza fries',
+          text: 'Hoagies and pizza fries round the bag. Pickup at the counter across from the Wawa, or send the same kitchen out for delivery.',
         },
       ],
     },
     feature: {
-      heading: 'Two foods, one Narberth shop',
-      text: 'Pizza and steaks are enough of a menu to be a neighborhood institution. Narberth Pizza keeps both on the same Montgomery Avenue counter. A neighbor order is a pie, a steak, or both from that shop.',
+      heading: 'Pizza and steaks with actual names',
+      text: 'The Narberth pie is pepperoni, mushrooms, green pepper, and onion. The steaks include a jalapeño chicken steak the shop named after the town. Pizza fries and hoagies fill the rest of a Montgomery Avenue night.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'The neighborhood already has a shop',
-      text: 'Narberth already has a pizza and steaks shop. The counter sells those two foods to the blocks around Montgomery Avenue. Come for those two things.',
+      heading: 'Across from the Wawa, owner on the counter',
+      text: '940 Montgomery Ave is the shop you can see from the Wawa lot. The owner works the counter. Call in the Narberth pie and a cheesesteak and the bag is usually moving before you hang up.',
       ctaLabel: 'See the shop',
     },
     catalog: {
       items: [
         {
-          title: 'Pizza',
-          text: 'Pies from the neighborhood shop at 940 Montgomery Ave, Narberth.',
+          title: 'The Narberth pie',
+          text: 'Pepperoni, mushrooms, green pepper, and onion. Meat Loves, Vegetable, and Buffalo Chicken sit beside it.',
         },
         {
-          title: 'Steaks',
-          text: 'Steaks on the same ticket as the pizza, from the same counter.',
+          title: 'Cheesesteaks and pizza steaks',
+          text: 'Cheesesteak, pizza steak, BBQ, buffalo, mushroom, plus the Narberth chicken steak with jalapeño.',
         },
         {
-          title: 'Neighborhood shop',
-          text: 'A Narberth shop for pizza and steaks, not a chain storefront.',
+          title: 'Pizza fries and hoagies',
+          text: 'The rest of a neighborhood ticket, packed at the counter across from the Wawa.',
         },
       ],
     },
@@ -2011,77 +2015,78 @@ const SITES = [
     },
     fonts: { display: 'Cormorant Garamond', text: 'Jost' },
     craft: 'nail spa care',
-    description: 'Nail spa in Warrington. Manicure, pedicure, spa.',
-    marquee: ['Manicure', 'Pedicure', 'Spa', 'Warrington', 'Main Street'],
+    description:
+      'Nail spa on Main Street in Warrington. Dip, gel, acrylic, Gel X, BIAB, pedicure, waxing, lashes, kids. Large shop, many techs.',
+    marquee: ['Dip', 'Gel X', 'BIAB', 'Acrylic', 'Pedicure', 'Lashes'],
     hero: {
-      headline: 'Manicure, pedicure, spa',
-      sub: 'Belle Palace Nail Spa is a nail spa on Main Street in Warrington. The work is manicure, pedicure, and spa care. You book the chair, you sit for the service they publish, and you leave with hands or feet that were actually worked in that room. Hours come from their booking page.',
-      glassFloat: { title: 'Warrington', sub: 'Nail spa' },
+      headline: 'Dip, Gel X, BIAB, acrylic',
+      sub: 'Belle Palace Nail Spa is the big shop at 1509 Main St in Warrington. Dip, gel, acrylic, Gel X, and BIAB are the nail work. Pedicures, waxing, and lashes sit in the same room. Kids get chairs too. Many techs, so a Saturday pedicure and a Gel X set can happen without turning the visit into a hostage situation.',
+      glassFloat: { title: 'Warrington', sub: 'Dip, Gel X, BIAB' },
     },
     offerings: {
-      heading: 'The services the spa actually books',
+      heading: 'What the Warrington chairs actually do',
       items: [
         {
-          title: 'Manicure',
-          text: 'Manicure is the hand work. Belle Palace books it as a nail spa service, in a Warrington chair, not as a mall kiosk rush.',
+          title: 'Dip, gel, acrylic, Gel X, BIAB',
+          text: 'Dip powder for the set that has to last. Gel for the shine. Acrylic when you want length. Gel X and BIAB for the newer overlays people keep asking for. Pick the system, sit the chair, leave with nails that match the appointment you booked.',
         },
         {
-          title: 'Pedicure',
-          text: 'Pedicure is the foot work. The spa puts it next to manicure on purpose. You can do one or both in the same visit.',
+          title: 'Pedicure, waxing, lashes',
+          text: 'Pedicures run beside the nail tables. Waxing and lash work live in the same spa, so you are not driving Main Street twice for brows and a fill.',
         },
         {
-          title: 'Spa',
-          text: 'Spa is the third word they use. The visit is meant to feel like a nail spa, not a hallway of dryers. Main Street in Warrington is the room.',
+          title: 'Kids and a shop that can take a crowd',
+          text: 'Kids chairs are on the books. The floor has enough techs that a family Saturday is the point of a large Warrington spa, not a problem.',
         },
       ],
     },
     story: {
-      heading: 'Main Street, Warrington',
+      heading: 'Main Street, a lot of techs, the sets people ask for',
       paragraphs: [
-        'Belle Palace Nail Spa keeps the menu in three words: manicure, pedicure, spa. That is what this page will sell. The booking page hours run later on weekdays, a little earlier on Saturday, and shorter on Sunday. The address is 1509 Main St.',
-        'A nail spa visit is time in a chair with a named service. You are not promised a treatment this page cannot verify. You are promised manicure, pedicure, and spa care in Warrington, booked like a spa books a chair. Belle Palace Nail Spa is the Main Street room that publishes those three services and the booking-page hours that hold them.'
+        'Belle Palace is the Warrington nail spa you book when you already know you want dip or Gel X, not a mystery "spa manicure." Weekdays run 10am to 7:30pm. Saturday opens at 9:30am. Sunday is shorter. Call 215-798-7777 and take the chair.',
+        'People come for acrylic length, for BIAB, for a pedicure that is actually a pedicure, and for lashes on the same trip. The shop is large on purpose. You can hear more than one drill at once, which is how a Main Street spa keeps the wait from eating the afternoon.',
       ],
     },
     experience: {
-      heading: 'How a spa visit actually goes',
+      heading: 'How a Belle Palace visit actually goes',
       items: [
         {
-          title: 'Book the chair',
-          text: 'The spa runs on booked time. You take a manicure, a pedicure, or both, inside the hours on their booking page.',
+          title: 'Book the set by name',
+          text: 'Dip, gel, acrylic, Gel X, or BIAB. Say the system when you book so the tech is ready for that overlay, not a generic polish change.',
         },
         {
-          title: 'Sit for the published service',
-          text: 'Manicure and pedicure are the hands-and-feet work. Spa is the way they want that work to feel in the Warrington room.',
+          title: 'Add pedicure, wax, or lashes',
+          text: 'Feet, brows, and lashes can live in the same visit as the fill. Kids can sit too.',
         },
         {
           title: 'Leave from Main Street',
-          text: '1509 Main St is the door. The service happens in that nail spa, not at a pop-up table.',
+          text: '1509 Main St is the door. Many techs, one spa, nails that match the appointment you actually asked for.',
         },
       ],
     },
     feature: {
-      heading: 'A nail spa with three verbs',
-      text: 'Manicure. Pedicure. Spa. Belle Palace uses those words on purpose. The Warrington shop is a chair for that work, on Main Street. You book the service they publish and sit in the nail spa that put those three words on the visit.',
+      heading: 'The Warrington shop for Gel X and dip',
+      text: 'Dip, gel, acrylic, Gel X, BIAB. Pedicure, waxing, lashes, kids. Belle Palace is a large Main Street spa with enough chairs that Saturday is still possible.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Booked like a spa, not a rush bar',
-      text: 'Their booking page is the public clock. Weekdays run to 7:30pm. Saturday starts at 9:30am. Sunday closes at 4pm. The services inside those hours are manicure, pedicure, and spa.',
+      heading: 'Book the overlay, not a mystery manicure',
+      text: 'Say Gel X or BIAB or dip when you call. The techs already do those sets. Weekdays until 7:30pm. Saturday from 9:30am. Sunday still open.',
       ctaLabel: 'Book',
     },
     catalog: {
       items: [
         {
-          title: 'Manicure',
-          text: 'Hand work in the Warrington nail spa on Main Street.',
+          title: 'Dip and gel',
+          text: 'Dip powder and gel sets in the Warrington spa, built to last past the weekend.',
         },
         {
-          title: 'Pedicure',
-          text: 'Foot work in the same Belle Palace chair as the manicure.',
+          title: 'Gel X, BIAB, acrylic',
+          text: 'Overlays and length from techs who already run those systems every day.',
         },
         {
-          title: 'Spa visit',
-          text: 'Nail spa care booked as a spa visit, not a hallway rush.',
+          title: 'Pedicure, wax, lashes',
+          text: 'Feet, waxing, and lash work in the same Main Street shop, with chairs for kids.',
         },
       ],
     },
@@ -2138,7 +2143,7 @@ const SITES = [
         },
         {
           title: 'New patient cleaning, exam, and x-ray',
-          text: 'New patients are offered a cleaning, exam, and x-ray. That is their on-ramp. Doctors Boghara, Parikh, Taee, and Dudhat are the people who then do the work.',
+          text: 'New patients are offered a cleaning, exam, and x-ray. The offer is the on-ramp. Doctors Boghara, Parikh, Taee, and Dudhat are the people who then do the work.',
         },
       ],
     },
@@ -2216,77 +2221,78 @@ const SITES = [
     },
     fonts: { display: 'Archivo Black', text: 'Inter' },
     craft: 'haircutting',
-    description: 'Hair studio in Philadelphia. Haircut and dye from their service page.',
-    marquee: ['Haircut', 'Dye', 'Hair studio', 'South 10th', 'Philadelphia'],
+    description:
+      'Center City hair studio on South 10th. Haircuts from $45, women\'s cuts from $35, haircut and dye around $100. Color and cut in the same chair.',
+    marquee: ['Haircut', 'Dye', 'Haircut and dye', 'South 10th', 'Center City'],
     hero: {
-      headline: 'Haircut and dye on South 10th',
-      sub: "Mack's Hair Studio is a hair studio at 271 S 10th St in Philadelphia. Their service page names the work in two words: haircut and dye. You sit for a cut, you sit for color, or you sit for both. A phone number is not published here because it is not verified.",
-      glassFloat: { title: 'Philadelphia', sub: 'Haircut and dye' },
+      headline: 'Cut and dye on South 10th',
+      sub: 'Mack\'s Hair Studio sits at 271 S 10th St in Center City, a short walk from Washington Square. A haircut is about 45 minutes and starts at $45. Women\'s cuts start at $35. Haircut and dye is the longer chair, about an hour and a half, listed around $100 when you want a new shade with the cut.',
+      glassFloat: { title: 'Center City', sub: 'Cut, dye, South 10th' },
     },
     offerings: {
-      heading: 'What the studio actually does',
+      heading: 'What the South 10th chair actually does',
       items: [
         {
           title: 'Haircut',
-          text: 'Haircut is the first service on their page. Mack\'s is a studio where the cut is the work, done on South 10th Street, not a mall trim.',
+          text: 'Forty-five minutes in the chair. Men\'s cuts start at $45. Women\'s cuts start at $35 depending on what is getting done. You walk in for the shape, not a mall trim that grows out angry in a week.',
         },
         {
           title: 'Dye',
-          text: 'Dye is the second service they publish. Color lives in the same studio as the cut, so a change of shade does not send you to another chair across town.',
+          text: 'Color lives in the same studio. Pick a shade, sit for the dye, leave with hair that matches the cut instead of fighting it.',
         },
         {
-          title: 'A Center City studio',
-          text: '271 S 10th St is the room. The studio is a Philadelphia hair studio. You come to that address for the haircut and the dye they list.',
+          title: 'Haircut and dye together',
+          text: 'The combo is the appointment people book when they want both in one visit. About 90 minutes. Around $100. Cut and color from one chair on South 10th so you are not splitting the day across two salons.',
         },
       ],
     },
     story: {
-      heading: 'Two services, one studio',
+      heading: 'A Center City studio, two services that actually matter',
       paragraphs: [
-        "Mack's Hair Studio does not get a longer menu on this page than their service page earned. Haircut. Dye. A studio on South 10th Street. That is the honest offer. No invented balayage list, no invented celebrity client, no invented phone.",
-        'A hair studio visit is time in a chair with a named service. You go to 271 S 10th St for a cut, for color, or for both. The rest of a beauty menu can live on their site if they publish it. This page will not invent it.',
+        'Mack\'s Hair Studio is a small room on South 10th, close enough to Washington Square that you can walk off the cut. The studio sells haircuts, dye, and the combined chair. Squire lists those three, and those three are the visit.',
+        'Center City already has loud salons. This one is a studio: sit down, get the shape, get the color if you came for it, walk back toward the square. Bring the reference photo. Leave with hair that looks like the appointment you booked.',
       ],
     },
     experience: {
-      heading: 'How a studio visit actually runs',
+      heading: 'How a Mack\'s visit actually runs',
       items: [
         {
           title: 'Come to South 10th',
-          text: 'The studio is at 271 S 10th St, Philadelphia. You go to the room. The work does not start on a phone we cannot verify.',
+          text: '271 S 10th St, Philadelphia. The work starts in the room, not on a phone tree.',
         },
         {
-          title: 'Sit for the haircut',
-          text: 'Haircut is the published cut service. The chair time is for the hair in front of the stylist, in this studio.',
+          title: 'Sit for the cut',
+          text: 'Forty-five minutes. $45 for a haircut, $35 to start for a women\'s cut. Shape first.',
         },
         {
-          title: 'Sit for the dye',
-          text: 'Dye is the published color service. Cut and color can live in one visit because both are on their service page.',
+          title: 'Add dye when you want the shade',
+          text: 'Dye alone, or haircut and dye for about 90 minutes around $100. One studio, both services.',
         },
       ],
     },
     feature: {
-      heading: 'Haircut and dye, their service page',
-      text: "Two verbs are enough when they are the ones the studio published. Mack's Hair Studio cuts and dyes hair on South 10th Street in Philadelphia.",
+      heading: 'Cut, dye, or both',
+      text: 'Mack\'s Hair Studio on South 10th is a Center City chair for a haircut, a dye, or the combined appointment. Prices start where the studio listed them: $35, $45, and about $100 for cut and color together.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'The address is the booking path we can verify',
-      text: 'Without a verified phone, the studio still has a door. 271 S 10th St is where haircut and dye happen. Use their official site for the rest of the path in.',
+      heading: 'Washington Square is the walk after',
+      text: 'Finish the cut, walk toward the square. The studio is small on purpose. Haircut, dye, haircut and dye. Book the chair that matches the hair you want to leave with.',
       ctaLabel: 'Official site',
     },
     catalog: {
       items: [
         {
           title: 'Haircut',
-          text: "The cut service from Mack's Hair Studio on South 10th Street.",
+          text: 'About 45 minutes. Starts at $45, women\'s cuts from $35, on South 10th Street.',
         },
         {
           title: 'Dye',
-          text: 'Color in the same Philadelphia studio as the haircut.',
+          text: 'Color in the same Center City studio as the cut.',
         },
         {
-          title: 'The studio',
-          text: '271 S 10th St, Philadelphia. A hair studio for cut and dye.',
+          title: 'Haircut and dye',
+          text: 'About 90 minutes, around $100, when you want the shade and the shape in one visit.',
         },
       ],
     },
@@ -2385,7 +2391,7 @@ const SITES = [
         },
         {
           title: 'Cash only, $100 minimum',
-          text: 'Shop rules from their site. Bring cash. Do not sit under the minimum.',
+          text: 'Shop rules from their site. Bring cash. Stay at or above the $100 minimum.',
         },
       ],
     },
@@ -2413,77 +2419,78 @@ const SITES = [
     },
     fonts: { display: 'Fraunces', text: 'Source Sans 3' },
     craft: 'optometry',
-    description: 'Optometry in Malvern. Eye exams, contacts, frames.',
-    marquee: ['Eye exams', 'Contacts', 'Frames', 'Malvern', 'West King Street'],
+    description:
+      'Optometry on West King Street in Malvern. Eye exams, contact fittings, frames. Off-street parking. Call 610-644-1879.',
+    marquee: ['Eye exams', 'Contacts', 'Frames', 'West King Street', 'Malvern'],
     hero: {
-      headline: 'Eye exams, contacts, frames',
-      sub: 'Malvern Vision Care is an optometry practice on West King Street. The work they publish is eye exams, contacts, and frames. You come to see, you leave with a prescription, contacts, or a pair of frames from that office. Hours are left blank because sources disagree.',
-      glassFloat: { title: 'Malvern', sub: 'Optometry' },
+      headline: 'Exams, contacts, frames on King Street',
+      sub: 'Malvern Vision Care is the optometry office at 32 W King St. You sit for a full exam, you leave with a contact fitting or a pair of frames from the same room, and you park off-street instead of hunting a meter. Call 610-644-1879 and take the chair. Patients keep the doctor and the technician because they explain the options without rushing the prescription.',
+      glassFloat: { title: 'Malvern', sub: 'Exams, contacts, frames' },
     },
     offerings: {
-      heading: 'What the practice actually does',
+      heading: 'What the King Street office actually does',
       items: [
         {
           title: 'Eye exams',
-          text: 'An eye exam is the start of the chart. Malvern Vision Care is an optometry office, so the exam is the skilled work, not a glasses vending machine with a poster.',
+          text: 'A real optometric exam, not a glasses vending machine with a poster. The chart starts here. Kids and adults both sit. The doctor walks the findings so you know why the prescription changed.',
         },
         {
-          title: 'Contacts',
-          text: 'Contacts are a published service. The same practice that does the exam can fit and supply contacts, so the prescription does not have to leave town to become a lens.',
+          title: 'Contact fittings',
+          text: 'Contacts are fitted in the same office that did the exam. The prescription becomes a lens you can wear, without shipping the Rx across town to a warehouse.',
         },
         {
-          title: 'Frames',
-          text: 'Frames are the third published piece. You can take the exam and choose frames in the same Malvern office on West King Street.',
+          title: 'Frames on the wall',
+          text: 'Pick frames after the exam, in the same Malvern room. The technician will lay out the options against how you actually use the glasses: desk, drive, sun, the pair you already destroy.',
         },
       ],
     },
     story: {
-      heading: 'West King Street optometry',
+      heading: 'West King Street optometry, no mall energy',
       paragraphs: [
-        'Malvern Vision Care keeps a short, honest list: eye exams, contacts, frames. That is enough to run an optometry practice. This page will not invent a specialty clinic, a pediatric program, or a set of hours the sources cannot agree on.',
-        'A visit is an exam first. Contacts and frames are how the exam becomes something you wear. 32 W King St is the office. 610-644-1879 is the phone. The rest of a vision-care novel can wait until their site and the aggregators tell the same story. Malvern Vision Care is optometry with those three published services, and nothing extra invented for the brief.'
+        'Malvern Vision Care is a King Street practice: exam first, then contacts or frames. People come back for a second and third pair because the technician talks through coatings and lens types like an adult. Off-street parking sits with the office, which matters on a borough street.',
+        'Call 610-644-1879 for the appointment. Confirm hours when you book, because the clock has moved in listings. The work has not: exams, contacts, frames, a doctor and a tech who stay on the chart.',
       ],
     },
     experience: {
-      heading: 'How an optometry visit actually moves',
+      heading: 'How a Malvern vision visit actually moves',
       items: [
         {
-          title: 'Sit for the eye exam',
-          text: 'The exam is the medical work. Malvern Vision Care starts there, as an optometry practice, not as a frame shop that happens to have a chart.',
+          title: 'Sit for the exam',
+          text: 'The medical work comes first. Malvern Vision Care starts with the eyes, then talks about what you will wear.',
         },
         {
           title: 'Fit contacts when that is the path',
-          text: 'Contacts are on their list. If the prescription is for lenses you wear on the eye, the same office can handle that path.',
+          text: 'If the prescription is for lenses on the eye, the same office handles the fitting and the supply.',
         },
         {
-          title: 'Choose frames in the same office',
-          text: 'Frames are the third published service. Exam and frames can be one Malvern visit on West King Street.',
+          title: 'Choose frames before you leave',
+          text: 'The wall is in the same room. Exam and frames can be one King Street visit.',
         },
       ],
     },
     feature: {
-      heading: 'Three words of optometry',
-      text: 'Eye exams. Contacts. Frames. Malvern Vision Care is that practice on West King Street. No extra departments invented for the brief. An exam can become contacts or frames in the same Malvern office, which is the whole published path.',
+      heading: 'One Malvern office for the whole prescription',
+      text: 'Eye exam, contact fitting, frames on the wall. Off-street parking. A technician who will actually explain the lens. Malvern Vision Care on West King Street is that visit.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Hours stay off this page',
-      text: 'Sources disagree on the clock, so the clock is empty. The services are not in dispute: eye exams, contacts, and frames, from the Malvern office.',
+      heading: 'Call, then sit',
+      text: '610-644-1879 is the number. Confirm the day\'s hours when you book. The chair is for exams, contacts, and frames, not a mystery specialty clinic bolted on for a brochure.',
       ctaLabel: 'Confirm on their site',
     },
     catalog: {
       items: [
         {
           title: 'Eye exams',
-          text: 'Optometric exams at 32 W King St, Malvern.',
+          text: 'Optometric exams at 32 W King St, with a doctor who stays on the findings.',
         },
         {
           title: 'Contacts',
-          text: 'Contact lenses from the same practice that did the exam.',
+          text: 'Fittings and lenses from the same practice that did the exam.',
         },
         {
           title: 'Frames',
-          text: 'Frames chosen in the Malvern office after the exam.',
+          text: 'Frames chosen in the Malvern office, with a technician who will walk the options.',
         },
       ],
     },
@@ -2512,11 +2519,11 @@ const SITES = [
     fonts: { display: 'Libre Baskerville', text: 'Source Sans 3' },
     craft: 'criminal defense and estate law',
     description:
-      'Criminal defense, probate, wills, and estates in Media. Former Assistant Public Defender, Delaware County.',
-    marquee: ['Criminal defense', 'Probate', 'Wills', 'Estates', 'Media', 'Delaware County'],
+      'Kevin T. Coyne, Esq. Media. Former Delaware County Assistant Public Defender since 1991. Criminal defense, personal injury, workers\' comp, wills, estates, guardianship, PFA defense. Contingency on injury files.',
+    marquee: ['Criminal defense', 'Personal injury', 'Wills', 'Estates', 'Since 1991'],
     hero: {
-      headline: 'Criminal defense and estate work',
-      sub: 'Kevin T. Coyne, Esq. practices criminal defense, probate, wills, and estates from the first floor at 12 Veterans Square in Media. He is a former Assistant Public Defender in Delaware County. The criminal work and the estate work share one lawyer who has already been inside the county system.',
+      headline: 'Public defender spine, private files',
+      sub: 'Kevin T. Coyne opened in 1991 as a Delaware County Assistant Public Defender and still takes the criminal file personally from 12 Veterans Square in Media. Personal injury, workers\' compensation, wills, probate, estates, Orphans\' Court guardianship, and Protection From Abuse defense sit in the same office. Injury work runs on contingency. He will travel any Pennsylvania county the case needs.',
       glassFloat: { title: 'Media', sub: 'Former Assistant Public Defender' },
     },
     offerings: {
@@ -2524,50 +2531,50 @@ const SITES = [
       items: [
         {
           title: 'Criminal defense',
-          text: 'Criminal defense is the first lane. A former Assistant Public Defender in Delaware County is a lawyer who has already stood on that side of the caption in this county.',
+          text: 'Charges, DUI, and the caption that has to be answered in Delaware County. A former Assistant Public Defender already knows that courthouse from the other side of the table.',
         },
         {
-          title: 'Probate and estates',
-          text: 'Probate and estates are the after-death files. The same Media office that does criminal defense also moves an estate through the orphan\'s court work a family actually has.',
+          title: 'Personal injury and workers\' comp',
+          text: 'Car wrecks, slip and falls, workplace injuries. Arbitration when damages sit under $50,000. Contingency means you do not pay a retainer to start the injury file. He also handles medical malpractice and premises claims when the facts support them.',
         },
         {
-          title: 'Wills',
-          text: 'Wills are the planning side of the estate practice. You sit with Kevin T. Coyne to put a will in place before the probate file exists.',
+          title: 'Wills, estates, PFA, guardianship',
+          text: 'Wills while everyone is alive. Probate and estates after. Orphans\' Court guardianship. Defense on a Protection From Abuse petition. One lawyer, not a department that hands you to a clerk.',
         },
       ],
     },
     story: {
-      heading: 'Veterans Square, one lawyer',
+      heading: 'Veterans Square, one lawyer since 1991',
       paragraphs: [
-        'Kevin T. Coyne, Esq. keeps a Media office that holds two kinds of gravity: criminal defense, and the quieter work of wills, probate, and estates. The credential that matters on the criminal side is former Assistant Public Defender, Delaware County. The address is 12 Veterans Square, 1st Floor. The site lists 8AM-5PM.',
-        'Families and defendants do not need a firm novel. They need a lawyer who has done the county\'s criminal work and who will also write the will or probate the estate. This office is that combination, in Media, under one name.',
+        'Kevin started as an assistant public defender in 1991, kept a private practice on the side, then put the firm on Veterans Square in Media. Thirty-plus years later the criminal file and the will still get the same person. Chester, Montgomery, and Philadelphia counties are in range. He will go wherever in Pennsylvania the caption sits.',
+        'Families hire him because the injury claim and the estate can live next to the criminal matter without a new intake team. Office hours run 8am to 5pm. Call 610-833-2300. You are hiring Kevin T. Coyne, not a billboard firm.',
       ],
     },
     experience: {
       heading: 'How the work actually starts',
       items: [
         {
-          title: 'Bring a criminal matter',
-          text: 'Criminal defense starts with the charge and the county. A former Assistant Public Defender in Delaware County already knows how that courthouse works.',
+          title: 'Bring the criminal matter',
+          text: 'The charge and the county come first. A former Delaware County public defender already knows how that courthouse moves.',
         },
         {
-          title: 'Bring a will or an estate',
-          text: 'Wills are planned while everyone is alive. Probate and estates are the file after. Both sit in this Media practice.',
+          title: 'Bring the injury or the will',
+          text: 'Contingency on most personal injury files. Wills get written while everyone is alive. Probate is the file after. Workers\' comp when the job did the damage.',
         },
         {
           title: 'Work from Veterans Square',
-          text: 'The office is on the first floor at 12 Veterans Square. The lawyer is Kevin T. Coyne. The work does not get handed to an anonymous team on the first call.',
+          text: 'First floor, 12 Veterans Square. The lawyer is Kevin. The first call does not get handed to an anonymous team.',
         },
       ],
     },
     feature: {
-      heading: 'A defender\'s background, an estates practice',
-      text: 'Former Assistant Public Defender, Delaware County, is not decoration. It is why the criminal defense work has a local spine. Probate, wills, and estates are the other half of the same Media office.',
+      heading: 'A defender\'s background, an estates and injury practice',
+      text: 'Former Assistant Public Defender, Delaware County, since 1991. Criminal defense with a local spine. Personal injury on contingency. Wills, probate, guardianship, and PFA defense from the same Media office.',
       ctaLabel: 'Official site',
     },
     spotlight: {
       heading: 'One name on both kinds of file',
-      text: 'Criminal defense and estate work can feel like two professions. Kevin T. Coyne, Esq. practices both from Veterans Square. You are hiring the lawyer, not a department.',
+      text: 'Criminal court in the morning, a will in the afternoon. Kevin T. Coyne, Esq. practices both from Veterans Square. You are hiring the lawyer.',
       ctaLabel: 'Talk to the office',
     },
     catalog: {
@@ -2577,12 +2584,12 @@ const SITES = [
           text: 'Defense work from a former Assistant Public Defender in Delaware County.',
         },
         {
-          title: 'Wills',
-          text: 'Wills planned in the Media office before a probate file exists.',
+          title: 'Personal injury',
+          text: 'Wrecks, falls, workplace injuries. Contingency. Arbitration when the file is under $50,000.',
         },
         {
-          title: 'Probate and estates',
-          text: 'Probate and estate administration from 12 Veterans Square, 1st Floor.',
+          title: 'Wills and estates',
+          text: 'Wills, probate, guardianship, and PFA defense from 12 Veterans Square.',
         },
       ],
     },
@@ -2611,41 +2618,35 @@ const SITES = [
     fonts: { display: 'Outfit', text: 'IBM Plex Sans' },
     craft: 'architecture',
     description:
-      'Architecture in Norristown. Building design, preservation, sustainable design, adaptive reuse, interiors. Montgomery County EOC, Spring City Public Library, Academy of Vocal Arts, Waldorf School of Philadelphia.',
-    marquee: [
-      'Building design',
-      'Preservation',
-      'Adaptive reuse',
-      'Interiors',
-      'Norristown',
-    ],
+      'Doug Seiler, AIA, LEED AP. Norristown architecture. Municipal Hall, Montgomery County EOC, Spring City Public Library, Academy of Vocal Arts, Norristown WWTP, Arcadia Health Sciences. Design, preservation, adaptive reuse.',
+    marquee: ['Municipal Hall', 'EOC', 'Adaptive reuse', 'Preservation', 'Doug Seiler'],
     hero: {
-      headline: 'Building design, preservation, reuse',
-      sub: 'Seiler+Drury Architecture practices from DeKalb Street in Norristown. The work is building design, preservation, sustainable design, adaptive reuse, and interiors. Built work includes the Montgomery County EOC, Spring City Public Library, the Academy of Vocal Arts, and the Waldorf School of Philadelphia.',
-      glassFloat: { title: 'Norristown', sub: 'Architecture' },
+      headline: 'Municipal Hall, EOC, libraries, reuse',
+      sub: 'Seiler+Drury Architecture is Doug Seiler, AIA, LEED AP, working from 420 DeKalb St in Norristown. Built work includes Norristown Municipal Hall, the Montgomery County EOC, Spring City Public Library, the Academy of Vocal Arts, the Waldorf School of Philadelphia, Arcadia\'s Health Sciences Center, and the Norristown wastewater campus. Building design, preservation, sustainable design, adaptive reuse, interiors.',
+      glassFloat: { title: 'Norristown', sub: 'Doug Seiler, AIA, LEED AP' },
     },
     offerings: {
       heading: 'The kinds of projects they actually take',
       items: [
         {
-          title: 'Building design',
-          text: 'New building design is the first verb. Seiler+Drury draws and delivers buildings, including civic work like the Montgomery County EOC and Spring City Public Library.',
+          title: 'Civic buildings',
+          text: 'Norristown Municipal Hall went from 39,000 to 46,000 square feet under Doug\'s drawings, Georgian on purpose, kept instead of demolished. Montgomery County EOC, Spring City Public Library, Plymouth Township, and the Norristown wastewater labs and blower buildings are the same civic muscle.',
         },
         {
-          title: 'Preservation and adaptive reuse',
-          text: 'Preservation and adaptive reuse keep a structure in the story. The Academy of Vocal Arts and the Waldorf School of Philadelphia sit in a portfolio that already knows how to work with what is standing.',
+          title: 'Schools and cultural rooms',
+          text: 'Academy of Vocal Arts. Waldorf School of Philadelphia. Arcadia University Health Sciences Center, art studios, and black box theatre. Girard College. Montgomery County Community College culinary. Buildings people actually use.',
         },
         {
-          title: 'Sustainable design and interiors',
-          text: 'Sustainable design and interiors are published parts of the practice. The architecture does not stop at the envelope. Rooms and performance are in the same Norristown office.',
+          title: 'Preservation, reuse, interiors',
+          text: 'Adaptive reuse for von C Brewing, Face to Face Germantown, and office interiors for Interdigital and CFAR. BIM, energy work, post-occupancy. The architecture does not stop at the envelope.',
         },
       ],
     },
     story: {
-      heading: 'A Norristown practice with named buildings',
+      heading: 'A Norristown firm that already built the town',
       paragraphs: [
-        'Seiler+Drury Architecture is a Norristown firm whose public buildings can be named. Montgomery County EOC. Spring City Public Library. Academy of Vocal Arts. Waldorf School of Philadelphia. Those projects are how this page will talk about the work, instead of a generic "award-winning studio" line.',
-        'The practice verbs are building design, preservation, sustainable design, adaptive reuse, and interiors. Civic, school, and cultural buildings are already in the portfolio. 420 DeKalb St is the office that does that work. 610-272-4809 is the phone.',
+        'Doug Seiler has more than 35 years on the boards, New York and New Hampshire before Norristown. Council hired Seiler+Drury to give Municipal Hall another 80 years instead of a new box. The wastewater campus, the EOC addition, and the library work are how a local firm looks when it already knows the township manager.',
+        'Clients also come from outside the borough: Camden County Environmental Center, Elmwood Park Zoo\'s event pavilion, L2 Brands, Philly Office Retail. Civic, school, cultural, and reuse from one DeKalb Street office. Call 610-272-4809 when the next building has to stay standing.',
       ],
     },
     experience: {
@@ -2653,41 +2654,41 @@ const SITES = [
       items: [
         {
           title: 'Start with the building problem',
-          text: 'A client comes with a new building, a structure to preserve, a reuse, or an interior. Seiler+Drury takes the problem as architecture, not as a rendering contest.',
+          text: 'A new civic hall, a structure to keep, a reuse, or an interior. Seiler+Drury takes it as architecture, not a rendering contest.',
         },
         {
           title: 'Design across the published verbs',
-          text: 'Building design, preservation, sustainable design, adaptive reuse, and interiors are the methods. The project uses the ones it needs, from the same Norristown practice.',
+          text: 'Building design, preservation, sustainable design, adaptive reuse, interiors. BIM and energy work in the same Norristown practice.',
         },
         {
           title: 'Look at buildings they have already done',
-          text: 'Montgomery County EOC, Spring City Public Library, Academy of Vocal Arts, and the Waldorf School of Philadelphia are the named proof. A new client can walk those before hiring the next drawing.',
+          text: 'Municipal Hall, the EOC, Spring City Public Library, Academy of Vocal Arts, Arcadia Health Sciences, the wastewater campus. Walk those before hiring the next drawing.',
         },
       ],
     },
     feature: {
       heading: 'Civic and cultural buildings, already built',
-      text: 'The Montgomery County EOC and Spring City Public Library are civic work. The Academy of Vocal Arts and the Waldorf School of Philadelphia are cultural and school work. Seiler+Drury is the Norristown practice on those jobs.',
+      text: 'Norristown Municipal Hall. Montgomery County EOC. Spring City Public Library. Academy of Vocal Arts. Arcadia Health Sciences. Seiler+Drury is the DeKalb Street practice on those jobs, with Doug Seiler as principal-in-charge.',
       ctaLabel: 'Official site',
     },
     spotlight: {
-      heading: 'Preservation and reuse are practice, not a slogan',
-      text: 'Adaptive reuse and preservation are on the service list because the portfolio already had to keep buildings alive. Sustainable design and interiors sit with them so a project does not split across three firms.',
+      heading: 'Keep the building, give it 80 more years',
+      text: 'Doug\'s line on Municipal Hall. Preservation and adaptive reuse are practice because the portfolio already had to keep structures alive. Sustainable design and interiors sit with them so a project does not split across three firms.',
       ctaLabel: 'See the work',
     },
     catalog: {
       items: [
         {
-          title: 'Montgomery County EOC',
-          text: 'Named civic work from Seiler+Drury Architecture.',
+          title: 'Norristown Municipal Hall',
+          text: 'Expansion and renovation, Georgian kept, civic work from Seiler+Drury.',
         },
         {
-          title: 'Spring City Public Library',
-          text: 'A named library project in the same Norristown practice.',
+          title: 'Montgomery County EOC',
+          text: 'Named civic work, next to Spring City Public Library and the wastewater campus.',
         },
         {
           title: 'Academy of Vocal Arts',
-          text: 'Cultural work, alongside the Waldorf School of Philadelphia, in a portfolio of design, preservation, and reuse.',
+          text: 'Cultural work alongside Arcadia Health Sciences and the Waldorf School of Philadelphia.',
         },
       ],
     },
@@ -2712,6 +2713,36 @@ function assertExperienceClean(brief) {
   }
 }
 
+function assertNoHedge(brief) {
+  const blob = [
+    brief.hero.sub,
+    ...brief.offerings.items.flatMap((i) => [i.title, i.text]),
+    ...brief.story.paragraphs,
+    ...brief.experience.items.flatMap((i) => [i.title, i.text]),
+    brief.feature.heading,
+    brief.feature.text,
+    brief.spotlight.heading,
+    brief.spotlight.text,
+    ...brief.catalog.items.map((i) => i.text),
+    brief.contact.sub,
+    brief.description,
+  ].join('\n');
+  const hedge =
+    /no invented|claim stays|this page will not|as their locations page|hours stay off|sources disagree|this page just says|this page will say|we cannot verify|invented copy|borrowed dish list|borrowed menu/i;
+  const hit = blob.match(hedge);
+  if (hit) {
+    throw new Error(`${brief.slug} still has research-disclaimer copy: ${hit[0]}`);
+  }
+  const sentences = blob.split(/(?<=[.!?])\s+/);
+  const opener = /^(And|But|Or|It is|Do not|That is|This is)\b/;
+  for (const sentence of sentences) {
+    const trimmed = sentence.trim();
+    if (opener.test(trimmed)) {
+      throw new Error(`${brief.slug} banned sentence opener: ${trimmed.slice(0, 80)}`);
+    }
+  }
+}
+
 function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const expected = 25;
@@ -2726,6 +2757,7 @@ function main() {
     const brief = assemble(site);
     assertNoEmDash(brief);
     assertExperienceClean(brief);
+    assertNoHedge(brief);
     const words = pageWords(brief);
     if (brief.images.length !== 13) {
       throw new Error(`${brief.slug} has ${brief.images.length} images`);

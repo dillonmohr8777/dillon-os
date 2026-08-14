@@ -9,16 +9,16 @@
   "phone": "610-668-2230",
   "address": "940 Montgomery Ave, Narberth, PA 19072",
   "hours": "Mon-Sat 11am-9pm Sunday 12pm-9pm",
-  "description": "Pizza and steaks neighborhood shop in Narberth.",
+  "description": "Pizza and steaks across from the Wawa on Montgomery Avenue. Narberth pie, Meat Loves, Buffalo Chicken, cheesesteaks, pizza steaks, calzones, hoagies, pizza fries.",
   "noindex": true,
   "schemaType": "Restaurant",
   "logo": false,
   "marquee": [
-    "Pizza",
-    "Steaks",
-    "Neighborhood shop",
-    "Narberth",
-    "Montgomery Ave"
+    "Narberth pie",
+    "Cheesesteaks",
+    "Buffalo Chicken",
+    "Pizza fries",
+    "Across from Wawa"
   ],
   "tokens": {
     "paper": "#F6EFE4",
@@ -114,8 +114,8 @@
   ],
   "hero": {
     "eyebrow": "Narberth | Pizza and steaks",
-    "headline": "Pizza and steaks, neighborhood shop",
-    "sub": "Narberth Pizza is a pizza and steaks shop on Montgomery Avenue. The neighborhood already knows the door. You come for a pie or a steak, you take it home or you eat it as a neighborhood shop meal, and you do not need a concept deck to understand the order.",
+    "headline": "The Narberth pie, then a steak",
+    "sub": "Narberth Pizza cooks on Montgomery Avenue, across from the Wawa. The house pie is pepperoni, mushrooms, green pepper, and onion. Meat Loves, Vegetable, and Buffalo Chicken sit next to it. Steaks run cheesesteak, pizza steak, BBQ, buffalo, and mushroom, plus chicken steaks. The Narberth chicken steak gets jalapeño and fried onions.",
     "ctaPrimary": {
       "label": "Call",
       "href": "tel:6106682230"
@@ -126,30 +126,30 @@
     },
     "glassFloat": {
       "title": "Narberth",
-      "sub": "Pizza and steaks"
+      "sub": "Across from the Wawa"
     },
     "marquee": [
-      "Pizza",
-      "Steaks",
-      "Neighborhood shop",
-      "Narberth",
-      "Montgomery Ave"
+      "Narberth pie",
+      "Cheesesteaks",
+      "Buffalo Chicken",
+      "Pizza fries",
+      "Across from Wawa"
     ]
   },
   "offerings": {
-    "heading": "What the shop actually cooks",
+    "heading": "What the Montgomery Avenue counter actually cooks",
     "items": [
       {
-        "title": "Pizza",
-        "text": "Pizza is the first word on the door. Narberth Pizza is a neighborhood shop that makes pies for the people who already live on these blocks."
+        "title": "Named pies",
+        "text": "The Narberth is pepperoni, mushrooms, green pepper, and onion. Meat Loves loads the pie. Vegetable keeps it quieter. Buffalo Chicken is the hot one. Calzones fold the same fillings when you want them closed."
       },
       {
-        "title": "Steaks",
-        "text": "Steaks are the other half of the name. A cheesesteak shop that also does pizza, or a pizza shop that also does steaks: either way the ticket can hold both."
+        "title": "Steaks the block reorders",
+        "text": "Cheesesteak, pizza steak, BBQ, buffalo, and mushroom steaks. Chicken steaks for the other side of the board. The Narberth chicken steak comes with jalapeño and fried onions. Regulars call the steaks the reason they keep the number."
       },
       {
-        "title": "A neighborhood counter",
-        "text": "The shop is a neighborhood shop. Montgomery Avenue is the address. You order pizza and steaks from a counter that belongs to Narberth, not a chain board."
+        "title": "Hoagies, pizza fries, delivery",
+        "text": "Hoagies and pizza fries fill the rest of the ticket. The owner works the counter. Delivery leaves fast from 940 Montgomery Ave, the shop across from the Wawa."
       }
     ]
   },
@@ -165,33 +165,33 @@
     ]
   },
   "story": {
-    "heading": "Narberth, 940 Montgomery",
+    "heading": "A Narberth shop with a named pie",
     "paragraphs": [
-      "Narberth Pizza does not need a longer myth. Pizza and steaks, from a neighborhood shop on Montgomery Avenue. The hours that match across listings are 11am to 9pm Monday through Saturday and 12pm to 9pm on Sunday. The work is the order in front of you.",
-      "A neighborhood shop earns the next ticket by cooking the last one. Pie or steak, the claim stays inside those two foods. No invented specialty crust, no invented secret sauce. Narberth already has the shop. This page just says what it sells: pizza and steaks from a neighborhood counter."
+      "Montgomery Avenue already has this counter memorized. You walk in for the Narberth pie or you call 610-668-2230 for a cheesesteak and pizza fries. The owner is often on the floor. Neighbors talk about steaks that actually taste like a shop that cares, and delivery that shows up while the fries are still loud.",
+      "Monday through Saturday the door runs 11am to 9pm. Sunday opens at noon. A ticket can hold a Buffalo Chicken pie and a pizza steak in the same bag. Calzones and hoagies ride along when the table is bigger than a movie night."
     ],
     "imageIndex": 2
   },
   "experience": {
-    "heading": "How an order at the shop works",
+    "heading": "How a Narberth order actually happens",
     "items": [
       {
-        "title": "Order pizza or a steak",
-        "text": "The ticket is pizza, steaks, or both. That is the menu this page will stand behind from their own category."
+        "title": "Pick the pie by name",
+        "text": "Narberth, Meat Loves, Vegetable, or Buffalo Chicken. A plain pie works if you already know the toppings. Calzones if you want it folded."
       },
       {
-        "title": "Use the neighborhood counter",
-        "text": "940 Montgomery Ave is the shop. You order like a neighbor: walk in or call, take the food from the people who cooked it."
+        "title": "Add the steak",
+        "text": "Cheesesteak, pizza steak, BBQ, buffalo, mushroom, or the Narberth chicken steak with jalapeño and fried onions. The steaks are why a lot of the block came back."
       },
       {
-        "title": "Eat it as a shop meal",
-        "text": "Narberth Pizza is a neighborhood shop, not a white-tablecloth room. The food is meant to be eaten the way a Main Line block already eats pizza and steaks."
+        "title": "Grab hoagies or pizza fries",
+        "text": "Hoagies and pizza fries round the bag. Pickup at the counter across from the Wawa, or send the same kitchen out for delivery."
       }
     ]
   },
   "feature": {
-    "heading": "Two foods, one Narberth shop",
-    "text": "Pizza and steaks are enough of a menu to be a neighborhood institution. Narberth Pizza keeps both on the same Montgomery Avenue counter. A neighbor order is a pie, a steak, or both from that shop.",
+    "heading": "Pizza and steaks with actual names",
+    "text": "The Narberth pie is pepperoni, mushrooms, green pepper, and onion. The steaks include a jalapeño chicken steak the shop named after the town. Pizza fries and hoagies fill the rest of a Montgomery Avenue night.",
     "cta": {
       "label": "Official site",
       "href": "https://www.narberthpizza.com/"
@@ -199,8 +199,8 @@
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "The neighborhood already has a shop",
-    "text": "Narberth already has a pizza and steaks shop. The counter sells those two foods to the blocks around Montgomery Avenue. Come for those two things.",
+    "heading": "Across from the Wawa, owner on the counter",
+    "text": "940 Montgomery Ave is the shop you can see from the Wawa lot. The owner works the counter. Call in the Narberth pie and a cheesesteak and the bag is usually moving before you hang up.",
     "imageIndex": 13,
     "cta": {
       "label": "See the shop",
@@ -210,22 +210,22 @@
   "catalog": {
     "items": [
       {
-        "title": "Pizza",
+        "title": "The Narberth pie",
         "href": "https://www.narberthpizza.com/",
         "imageIndex": 9,
-        "text": "Pies from the neighborhood shop at 940 Montgomery Ave, Narberth."
+        "text": "Pepperoni, mushrooms, green pepper, and onion. Meat Loves, Vegetable, and Buffalo Chicken sit beside it."
       },
       {
-        "title": "Steaks",
+        "title": "Cheesesteaks and pizza steaks",
         "href": "https://www.narberthpizza.com/",
         "imageIndex": 10,
-        "text": "Steaks on the same ticket as the pizza, from the same counter."
+        "text": "Cheesesteak, pizza steak, BBQ, buffalo, mushroom, plus the Narberth chicken steak with jalapeño."
       },
       {
-        "title": "Neighborhood shop",
+        "title": "Pizza fries and hoagies",
         "href": "https://www.narberthpizza.com/",
         "imageIndex": 11,
-        "text": "A Narberth shop for pizza and steaks, not a chain storefront."
+        "text": "The rest of a neighborhood ticket, packed at the counter across from the Wawa."
       }
     ]
   },

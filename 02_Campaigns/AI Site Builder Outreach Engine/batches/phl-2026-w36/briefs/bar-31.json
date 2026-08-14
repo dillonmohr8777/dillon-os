@@ -8,18 +8,17 @@
   "url": "https://www.bar31.net/",
   "phone": "215-646-0440",
   "address": "31 N Main St, Ambler, PA 19002",
-  "hours": "",
-  "description": "Dive bar in Ambler. U-shaped bar, local taps Victory, Troegs, Sterling Pig. Pizza, sandwiches, fried pickles. From a PA Eats feature.",
+  "hours": "Mon-Sat 11am-2am, Sun 11am-12am",
+  "description": "Dive bar at 31 N Main in Ambler. Horseshoe bar, jukebox, electronic darts, smoking at the bar. Pulled pork, roast beef, hot sausage, wings, pierogies, pickled eggs. Victory, Troegs, Sterling Pig. Bartender Dave.",
   "noindex": true,
   "schemaType": "BarOrPub",
   "logo": false,
   "marquee": [
-    "U-shaped bar",
-    "Victory",
-    "Troegs",
-    "Sterling Pig",
-    "Fried pickles",
-    "Ambler"
+    "Horseshoe bar",
+    "Cheap drafts",
+    "Pierogies",
+    "Jukebox",
+    "Dave"
   ],
   "tokens": {
     "paper": "#F2EDE6",
@@ -115,8 +114,8 @@
   ],
   "hero": {
     "eyebrow": "Ambler | Dive bar",
-    "headline": "The u-shaped bar on Main",
-    "sub": "Bar 31 is a dive bar at 31 N Main St in Ambler. A PA Eats feature called out the u-shaped bar, the local taps, and the food that comes with them. Victory, Troegs, and Sterling Pig are the named beers. Pizza, sandwiches, and fried pickles are the named plates. That is the room.",
+    "headline": "Horseshoe bar, cheap drafts, Dave",
+    "sub": "Bar 31 is the dive at 31 N Main St in Ambler. Sit the horseshoe rail. Punch the jukebox. Throw electronic darts. Smoke at the bar. Drafts stay cheap, including Victory, Troegs, and Sterling Pig. Eat pulled pork, roast beef, hot sausage sandwiches, wings, pierogies, fried pickles, and pickled eggs. Regulars ask for Dave.",
     "ctaPrimary": {
       "label": "Call",
       "href": "tel:2156460440"
@@ -127,31 +126,30 @@
     },
     "glassFloat": {
       "title": "Ambler",
-      "sub": "Dive bar"
+      "sub": "Horseshoe bar, open late"
     },
     "marquee": [
-      "U-shaped bar",
-      "Victory",
-      "Troegs",
-      "Sterling Pig",
-      "Fried pickles",
-      "Ambler"
+      "Horseshoe bar",
+      "Cheap drafts",
+      "Pierogies",
+      "Jukebox",
+      "Dave"
     ]
   },
   "offerings": {
-    "heading": "What the bar actually pours and plates",
+    "heading": "What 31 actually pours and plates",
     "items": [
       {
-        "title": "The u-shaped bar",
-        "text": "The room is built around a u-shaped bar. You sit on the rail, not in a dining concept. Bar 31 is a dive bar that wants you at that shape of wood."
+        "title": "The horseshoe rail",
+        "text": "The room is a U-shaped bar. You sit on the wood, not in a dining concept. Jukebox in the corner. Electronic darts in the room. Smoking at the bar, the old way."
       },
       {
-        "title": "Local taps",
-        "text": "Victory, Troegs, and Sterling Pig are the taps PA Eats named. Local beer, poured at a Main Street dive, not a flight menu with twenty guest handles."
+        "title": "Cheap drafts, named taps",
+        "text": "Victory, Troegs, and Sterling Pig have been the local taps people write down. The rest of the handles stay cheap enough that Ambler treats this as a weeknight bar, not a flight room."
       },
       {
-        "title": "Pizza, sandwiches, fried pickles",
-        "text": "The food that got written down is pizza, sandwiches, and fried pickles. Those are the plates this page will claim. Order them with the beer that is on."
+        "title": "Sandwiches, pierogies, pickled eggs",
+        "text": "Pulled pork, roast beef, and hot sausage sandwiches. Wings and fried pickles. Pierogies. A jar of pickled eggs. Pizza when the kitchen is running it. Food you eat at the rail with the beer."
       }
     ]
   },
@@ -167,10 +165,10 @@
     ]
   },
   "story": {
-    "heading": "Ambler, 31 North Main",
+    "heading": "Ambler already knows 31",
     "paragraphs": [
-      "Bar 31 is the dive at 31 N Main St. The PA Eats feature is the public record used here: a u-shaped bar, Victory and Troegs and Sterling Pig on tap, pizza and sandwiches and fried pickles on the plate. The bar does not need a brand story beyond the room those sentences describe.",
-      "A night here is sit the rail, drink the local tap, eat the fried pickles or the pizza or the sandwich. Ambler already knows the door. This page will not invent a cocktail program or a weekend DJ. The work is the u-shaped bar."
+      "Bar 31 opens at 11am and stays until 2am Monday through Saturday, midnight on Sunday. The friendliest dive on Main Street is the line regulars keep using, and Dave is the bartender they name. You come for a cheap draft, a pulled pork sandwich, and a room that still lets you smoke at the bar.",
+      "PA Eats wrote down the horseshoe, the local taps, the pizza and fried pickles. The rest of the ticket is roast beef, hot sausage, wings, pierogies, and pickled eggs. No cocktail program. No cover. The jukebox is the band."
     ],
     "imageIndex": 2
   },
@@ -178,22 +176,22 @@
     "heading": "How a night at 31 actually goes",
     "items": [
       {
-        "title": "Take a seat on the U",
-        "text": "The bar is u-shaped. You sit on it. That is the geometry PA Eats wrote down, and it is the way the room works."
+        "title": "Take a seat on the horseshoe",
+        "text": "Sit the rail. Punch the jukebox. Throw a round of electronic darts. Smoke if that is why you came."
       },
       {
-        "title": "Drink the local taps",
-        "text": "Victory, Troegs, and Sterling Pig are the named beers. You order what is on, from those houses."
+        "title": "Drink the cheap draft",
+        "text": "Victory, Troegs, Sterling Pig, or whatever Dave is pouring. The point is a cold one that does not punish the tab."
       },
       {
-        "title": "Eat pizza, a sandwich, or fried pickles",
-        "text": "Those are the plates the feature named. Food at Bar 31 is that list, eaten at the same rail as the beer."
+        "title": "Eat at the rail",
+        "text": "Pulled pork, roast beef, hot sausage, wings, pierogies, fried pickles, pickled eggs. Pizza if you want a pie with the beer."
       }
     ]
   },
   "feature": {
-    "heading": "A dive with named taps",
-    "text": "Victory, Troegs, and Sterling Pig are not generic \"local craft.\" They are the taps a PA Eats feature put on Bar 31. The u-shaped bar is where they get poured.",
+    "heading": "A dive with a jukebox, not a guest list",
+    "text": "Horseshoe bar. Cheap drafts. Dave behind it. Pulled pork and pierogies on the plate. Open until 2am most nights. Bar 31 is the Ambler rail you already knew was there.",
     "cta": {
       "label": "Official site",
       "href": "https://www.bar31.net/"
@@ -201,8 +199,8 @@
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Fried pickles belong here",
-    "text": "Pizza, sandwiches, and fried pickles are the food the bar is willing to be known for. Order them like a dive bar orders food: with the beer, at the rail.",
+    "heading": "Ask for Dave",
+    "text": "Regulars call this the friendliest bar in town and they mean the person pouring. Sit the horseshoe, eat a hot sausage sandwich, let the jukebox do the rest.",
     "imageIndex": 13,
     "cta": {
       "label": "See the bar",
@@ -212,22 +210,22 @@
   "catalog": {
     "items": [
       {
-        "title": "U-shaped bar",
+        "title": "Horseshoe bar",
         "href": "https://www.bar31.net/",
         "imageIndex": 9,
-        "text": "The rail that defines the room at 31 N Main St, Ambler."
+        "text": "U-shaped rail at 31 N Main, with a jukebox, electronic darts, and smoking at the bar."
       },
       {
         "title": "Victory, Troegs, Sterling Pig",
         "href": "https://www.bar31.net/",
         "imageIndex": 10,
-        "text": "The local taps named in the PA Eats feature."
+        "text": "Named local taps next to cheap drafts that keep Ambler in the room."
       },
       {
-        "title": "Pizza and fried pickles",
+        "title": "Pierogies and pulled pork",
         "href": "https://www.bar31.net/",
         "imageIndex": 11,
-        "text": "Pizza, sandwiches, and fried pickles from the same dive bar kitchen."
+        "text": "Sandwiches, wings, fried pickles, pickled eggs, and pizza from the dive kitchen."
       }
     ]
   },

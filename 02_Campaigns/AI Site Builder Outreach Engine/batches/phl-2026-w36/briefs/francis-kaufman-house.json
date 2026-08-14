@@ -9,16 +9,16 @@
   "phone": "215-234-2499",
   "address": "3164 Main Street #63, Sumneytown, PA 18084",
   "hours": "",
-  "description": "BYOB restaurant in Sumneytown. Reservations. Smoked beef ribs, brisket, smoked fish and chicken mentioned on their site.",
+  "description": "BYOB, cash only. Chef William Francis and Desiree. 1850 cigar factory turned hotel. Crab cakes, filet, smoked brisket, smoked beef ribs, scallops, chocolate flourless torte. Country fare with international flair.",
   "noindex": true,
   "schemaType": "Restaurant",
   "logo": false,
   "marquee": [
     "BYOB",
-    "Reservations",
-    "Smoked beef ribs",
-    "Brisket",
-    "Sumneytown"
+    "Cash only",
+    "Crab cakes",
+    "Smoked brisket",
+    "Chef William Francis"
   ],
   "tokens": {
     "paper": "#F3EDE2",
@@ -114,8 +114,8 @@
   ],
   "hero": {
     "eyebrow": "Sumneytown | BYOB restaurant",
-    "headline": "BYOB on Main Street",
-    "sub": "Francis Kaufman House is a BYOB restaurant in Sumneytown. Reservations are how a table gets held. Their site and listings mention smoked beef ribs, brisket, smoked fish, and chicken. Claims stay inside those plates. Bring the bottle you want at the table.",
+    "headline": "Country fare, international flair",
+    "sub": "Francis Kaufman House is Chef William Francis and Desiree in an 1850 building that started as a cigar factory and later ran as a hotel. The room is BYOB and cash only. Regulars order crab cakes, filet, smoked brisket, smoked beef ribs, scallops, and the chocolate flourless torte. Reserve the table. Bring the bottle.",
     "ctaPrimary": {
       "label": "Call",
       "href": "tel:2152342499"
@@ -126,30 +126,30 @@
     },
     "glassFloat": {
       "title": "Sumneytown",
-      "sub": "BYOB restaurant"
+      "sub": "Chef William Francis"
     },
     "marquee": [
       "BYOB",
-      "Reservations",
-      "Smoked beef ribs",
-      "Brisket",
-      "Sumneytown"
+      "Cash only",
+      "Crab cakes",
+      "Smoked brisket",
+      "Chef William Francis"
     ]
   },
   "offerings": {
-    "heading": "What the house will stand behind",
+    "heading": "What the house actually puts on the plate",
     "items": [
       {
-        "title": "BYOB at the table",
-        "text": "The restaurant is BYOB. Wine, beer, or the bottle you chose comes with you. The house cooks. You pour. That is the arrangement they publish."
+        "title": "Crab cakes, filet, scallops",
+        "text": "Crab cakes and scallops are the seafood people drive to Sumneytown for. Filet is the steak that shows up in the same reviews. Homemade and fresh is how the kitchen talks about the work."
       },
       {
-        "title": "Reservations",
-        "text": "A table at Francis Kaufman House is held by reservation. You call, you set the night, you arrive to a room that already expects you."
+        "title": "Smoked brisket and beef ribs",
+        "text": "Smoked brisket, smoked beef ribs, smoked fish, and chicken sit on the board when the pit is running. Country fare with international flair is their own line, and the smoke is how it tastes on Main Street."
       },
       {
-        "title": "Smoked plates they mention",
-        "text": "Smoked beef ribs, brisket, smoked fish, and chicken appear on their site and listings. Those are the dishes this page will name. No awards, no secret-menu claims."
+        "title": "BYOB, cash, chocolate torte",
+        "text": "Bring the wine. Pay cash. Finish with the chocolate flourless torte. Desiree works the house with Chef William Francis, so the night feels like a dining room someone actually lives in."
       }
     ]
   },
@@ -165,33 +165,33 @@
     ]
   },
   "story": {
-    "heading": "A Sumneytown table",
+    "heading": "An 1850 building, a chef, a bottle you brought",
     "paragraphs": [
-      "Francis Kaufman House sits on Main Street in Sumneytown. The restaurant asks you to bring your own bottle and to reserve the table. The food they put in public language includes smoked beef ribs, brisket, smoked fish, and chicken. That is enough to know what kind of kitchen you are walking into.",
-      "The page will not invent a tasting menu or a published hour that their own site and the aggregators cannot agree on. The honest offer is a reserved BYOB table and the smoked plates they mention. Come for those, and confirm the rest with the house in Sumneytown."
+      "3164 Main Street in Sumneytown has been a cigar factory and a hotel. Francis Kaufman House is what Chef William Francis and Desiree do with it now: reserved tables, bottles from your cellar, cash at the end. Wild game has been part of the kitchen's history. Crab cakes and smoked brisket are what people name after they leave.",
+      "You call 215-234-2499 and hold the night. The food is homemade. The room is small enough that a reservation matters. Bring a red for the filet or a white for the scallops. Leave room for the flourless torte."
     ],
     "imageIndex": 2
   },
   "experience": {
-    "heading": "How a night at the house works",
+    "heading": "How a night at Kaufman House actually goes",
     "items": [
       {
-        "title": "Reserve the table",
-        "text": "Reservations are the front door. You set the night with the house before you drive to Sumneytown."
+        "title": "Reserve, then bring the bottle",
+        "text": "The table is held ahead of time. Wine, beer, or whiskey comes with you. The house cooks. You pour."
       },
       {
-        "title": "Bring the bottle",
-        "text": "BYOB means the wine, beer, or liquor is yours to carry in. The restaurant cooks. The table drinks what you brought."
+        "title": "Eat crab cakes or the smoked plates",
+        "text": "Crab cakes, filet, scallops, smoked brisket, smoked beef ribs. Ask what William is running that night. The kitchen still cooks wild game when it is on."
       },
       {
-        "title": "Eat the smoked plates they name",
-        "text": "Smoked beef ribs, brisket, smoked fish, and chicken are the dishes their site and listings mention. Order inside that list and you are ordering what they have put in public."
+        "title": "Pay cash, take the torte",
+        "text": "Cash only at the end. Chocolate flourless torte if you still have room. Desiree keeps the room moving."
       }
     ]
   },
   "feature": {
-    "heading": "BYOB, reserved, smoked",
-    "text": "The house is a reserved table, a bottle you brought, and smoked food they are willing to name: beef ribs, brisket, fish, and chicken. Everything else you confirm with them before you drive to Sumneytown.",
+    "heading": "Chef William Francis, an 1850 house",
+    "text": "Cigar factory, then hotel, now a BYOB dining room in Sumneytown. Crab cakes, smoked brisket, filet, scallops, and a flourless torte. Cash only. Reservations. A bottle from your own shelf.",
     "cta": {
       "label": "Official site",
       "href": "http://franciskaufmanhouse.com/"
@@ -199,8 +199,8 @@
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Modest on purpose",
-    "text": "Listings like to embroider a country restaurant. This page will not. Francis Kaufman House is a BYOB room in Sumneytown that mentions smoked beef ribs, brisket, smoked fish, and chicken. Reservations hold the table.",
+    "heading": "Country fare with international flair",
+    "text": "Their line, not a brochure invention. Homemade plates, smoke when the pit is on, wild game in the house history. Chef William Francis and Desiree still run 3164 Main Street like a house that knows your name after the second visit.",
     "imageIndex": 13,
     "cta": {
       "label": "Reserve",
@@ -210,22 +210,22 @@
   "catalog": {
     "items": [
       {
-        "title": "Smoked beef ribs",
+        "title": "Crab cakes and scallops",
         "href": "http://franciskaufmanhouse.com/",
         "imageIndex": 9,
-        "text": "Named on their site and listings. A smoked plate at the Sumneytown house."
+        "text": "The seafood plates regulars drive to Sumneytown for, next to a filet if you want steak."
       },
       {
-        "title": "Brisket",
+        "title": "Smoked brisket and beef ribs",
         "href": "http://franciskaufmanhouse.com/",
         "imageIndex": 10,
-        "text": "Another smoked plate they mention. Confirm availability when you reserve."
+        "text": "Smoke from the house kitchen, with smoked fish and chicken when they are running."
       },
       {
-        "title": "BYOB reservations",
+        "title": "Chocolate flourless torte",
         "href": "http://franciskaufmanhouse.com/",
         "imageIndex": 11,
-        "text": "Hold the table, bring the bottle, eat what the house is cooking that night."
+        "text": "The finish. BYOB, cash only, reservation on the books."
       }
     ]
   },

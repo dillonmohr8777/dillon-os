@@ -9,16 +9,16 @@
   "phone": "",
   "address": "271 S 10th St, Philadelphia, PA 19107",
   "hours": "",
-  "description": "Hair studio in Philadelphia. Haircut and dye from their service page.",
+  "description": "Center City hair studio on South 10th. Haircuts from $45, women's cuts from $35, haircut and dye around $100. Color and cut in the same chair.",
   "noindex": true,
   "schemaType": "HairSalon",
   "logo": false,
   "marquee": [
     "Haircut",
     "Dye",
-    "Hair studio",
+    "Haircut and dye",
     "South 10th",
-    "Philadelphia"
+    "Center City"
   ],
   "tokens": {
     "paper": "#F3EEE6",
@@ -114,8 +114,8 @@
   ],
   "hero": {
     "eyebrow": "Philadelphia | Hair studio",
-    "headline": "Haircut and dye on South 10th",
-    "sub": "Mack's Hair Studio is a hair studio at 271 S 10th St in Philadelphia. Their service page names the work in two words: haircut and dye. You sit for a cut, you sit for color, or you sit for both. A phone number is not published here because it is not verified.",
+    "headline": "Cut and dye on South 10th",
+    "sub": "Mack's Hair Studio sits at 271 S 10th St in Center City, a short walk from Washington Square. A haircut is about 45 minutes and starts at $45. Women's cuts start at $35. Haircut and dye is the longer chair, about an hour and a half, listed around $100 when you want a new shade with the cut.",
     "ctaPrimary": {
       "label": "Official site",
       "href": "https://www.mackshairstudio.com/"
@@ -125,31 +125,31 @@
       "href": "#visit"
     },
     "glassFloat": {
-      "title": "Philadelphia",
-      "sub": "Haircut and dye"
+      "title": "Center City",
+      "sub": "Cut, dye, South 10th"
     },
     "marquee": [
       "Haircut",
       "Dye",
-      "Hair studio",
+      "Haircut and dye",
       "South 10th",
-      "Philadelphia"
+      "Center City"
     ]
   },
   "offerings": {
-    "heading": "What the studio actually does",
+    "heading": "What the South 10th chair actually does",
     "items": [
       {
         "title": "Haircut",
-        "text": "Haircut is the first service on their page. Mack's is a studio where the cut is the work, done on South 10th Street, not a mall trim."
+        "text": "Forty-five minutes in the chair. Men's cuts start at $45. Women's cuts start at $35 depending on what is getting done. You walk in for the shape, not a mall trim that grows out angry in a week."
       },
       {
         "title": "Dye",
-        "text": "Dye is the second service they publish. Color lives in the same studio as the cut, so a change of shade does not send you to another chair across town."
+        "text": "Color lives in the same studio. Pick a shade, sit for the dye, leave with hair that matches the cut instead of fighting it."
       },
       {
-        "title": "A Center City studio",
-        "text": "271 S 10th St is the room. The studio is a Philadelphia hair studio. You come to that address for the haircut and the dye they list."
+        "title": "Haircut and dye together",
+        "text": "The combo is the appointment people book when they want both in one visit. About 90 minutes. Around $100. Cut and color from one chair on South 10th so you are not splitting the day across two salons."
       }
     ]
   },
@@ -165,33 +165,33 @@
     ]
   },
   "story": {
-    "heading": "Two services, one studio",
+    "heading": "A Center City studio, two services that actually matter",
     "paragraphs": [
-      "Mack's Hair Studio does not get a longer menu on this page than their service page earned. Haircut. Dye. A studio on South 10th Street. That is the honest offer. No invented balayage list, no invented celebrity client, no invented phone.",
-      "A hair studio visit is time in a chair with a named service. You go to 271 S 10th St for a cut, for color, or for both. The rest of a beauty menu can live on their site if they publish it. This page will not invent it."
+      "Mack's Hair Studio is a small room on South 10th, close enough to Washington Square that you can walk off the cut. The studio sells haircuts, dye, and the combined chair. Squire lists those three, and those three are the visit.",
+      "Center City already has loud salons. This one is a studio: sit down, get the shape, get the color if you came for it, walk back toward the square. Bring the reference photo. Leave with hair that looks like the appointment you booked."
     ],
     "imageIndex": 2
   },
   "experience": {
-    "heading": "How a studio visit actually runs",
+    "heading": "How a Mack's visit actually runs",
     "items": [
       {
         "title": "Come to South 10th",
-        "text": "The studio is at 271 S 10th St, Philadelphia. You go to the room. The work does not start on a phone we cannot verify."
+        "text": "271 S 10th St, Philadelphia. The work starts in the room, not on a phone tree."
       },
       {
-        "title": "Sit for the haircut",
-        "text": "Haircut is the published cut service. The chair time is for the hair in front of the stylist, in this studio."
+        "title": "Sit for the cut",
+        "text": "Forty-five minutes. $45 for a haircut, $35 to start for a women's cut. Shape first."
       },
       {
-        "title": "Sit for the dye",
-        "text": "Dye is the published color service. Cut and color can live in one visit because both are on their service page."
+        "title": "Add dye when you want the shade",
+        "text": "Dye alone, or haircut and dye for about 90 minutes around $100. One studio, both services."
       }
     ]
   },
   "feature": {
-    "heading": "Haircut and dye, their service page",
-    "text": "Two verbs are enough when they are the ones the studio published. Mack's Hair Studio cuts and dyes hair on South 10th Street in Philadelphia.",
+    "heading": "Cut, dye, or both",
+    "text": "Mack's Hair Studio on South 10th is a Center City chair for a haircut, a dye, or the combined appointment. Prices start where the studio listed them: $35, $45, and about $100 for cut and color together.",
     "cta": {
       "label": "Official site",
       "href": "https://www.mackshairstudio.com/"
@@ -199,8 +199,8 @@
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "The address is the booking path we can verify",
-    "text": "Without a verified phone, the studio still has a door. 271 S 10th St is where haircut and dye happen. Use their official site for the rest of the path in.",
+    "heading": "Washington Square is the walk after",
+    "text": "Finish the cut, walk toward the square. The studio is small on purpose. Haircut, dye, haircut and dye. Book the chair that matches the hair you want to leave with.",
     "imageIndex": 13,
     "cta": {
       "label": "Official site",
@@ -213,19 +213,19 @@
         "title": "Haircut",
         "href": "https://www.mackshairstudio.com/",
         "imageIndex": 9,
-        "text": "The cut service from Mack's Hair Studio on South 10th Street."
+        "text": "About 45 minutes. Starts at $45, women's cuts from $35, on South 10th Street."
       },
       {
         "title": "Dye",
         "href": "https://www.mackshairstudio.com/",
         "imageIndex": 10,
-        "text": "Color in the same Philadelphia studio as the haircut."
+        "text": "Color in the same Center City studio as the cut."
       },
       {
-        "title": "The studio",
+        "title": "Haircut and dye",
         "href": "https://www.mackshairstudio.com/",
         "imageIndex": 11,
-        "text": "271 S 10th St, Philadelphia. A hair studio for cut and dye."
+        "text": "About 90 minutes, around $100, when you want the shade and the shape in one visit."
       }
     ]
   },

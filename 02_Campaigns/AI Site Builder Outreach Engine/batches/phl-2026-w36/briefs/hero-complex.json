@@ -9,16 +9,15 @@
   "phone": "215-482-7700",
   "address": "4327 Main Street, Philadelphia, PA 19127",
   "hours": "Mon-Sat 12pm-8pm Sunday 12pm-6pm",
-  "description": "Comic shop in Philadelphia. Comics, manga, graphic novels, figures. Clean approachable shop. Custom art commissions.",
+  "description": "Manayunk comic shop. Floppies, manga, graphic novels, figures, owner-printed shirts, original art, commissions. Clean, approachable shop. JD will order what is not on the rack. Noon to 8, Sunday to 6.",
   "noindex": true,
   "schemaType": "Store",
   "logo": false,
   "marquee": [
     "Comics",
     "Manga",
-    "Graphic novels",
+    "Pull list",
     "Figures",
-    "Custom art",
     "Manayunk"
   ],
   "tokens": {
@@ -115,8 +114,8 @@
   ],
   "hero": {
     "eyebrow": "Philadelphia | Comic shop",
-    "headline": "Comics, manga, figures, commissions",
-    "sub": "Johnny Destructo's Hero Complex is a comic shop on Main Street in Philadelphia. The racks hold comics, manga, and graphic novels. Figures are on the floor. Custom art commissions are part of the shop, not a side hustle down the street. The room is a clean, approachable shop, not a basement you have to decode.",
+    "headline": "A clean comic shop on Main",
+    "sub": "Johnny Destructo's Hero Complex at 4327 Main Street in Manayunk is the shop JD built so a new reader can walk in without failing a test. Floppies, graphic novels, and manga on the racks. Superhero and anime figures on the floor. Owner-printed shirts and original art. Custom commissions. If it is not here, he will order it. Pull lists ship as far as Reading.",
     "ctaPrimary": {
       "label": "Call",
       "href": "tel:2154827700"
@@ -126,32 +125,31 @@
       "href": "#visit"
     },
     "glassFloat": {
-      "title": "Philadelphia",
+      "title": "Manayunk",
       "sub": "Clean, approachable shop"
     },
     "marquee": [
       "Comics",
       "Manga",
-      "Graphic novels",
+      "Pull list",
       "Figures",
-      "Custom art",
       "Manayunk"
     ]
   },
   "offerings": {
-    "heading": "What the shop actually holds",
+    "heading": "What the Main Street shop actually holds",
     "items": [
       {
         "title": "Comics, manga, graphic novels",
-        "text": "The reading stock is comics, manga, and graphic novels. You come in for issues and volumes you can hold, in a shop that is built to be walked without a secret handshake."
+        "text": "Weekly floppies, trade paperbacks, and Japanese manga. JD's job is the jumping-on point: if you like a show and do not know the book, he will put the first volume in your hand. Subscriptions stay even after people move."
       },
       {
-        "title": "Figures",
-        "text": "Figures sit with the books. Hero Complex is a comic shop that also sells the objects people put on a shelf next to the pull list."
+        "title": "Figures, shirts, original art",
+        "text": "Superhero and anime figures. Hand-screened shirts and stickers JD prints. Original art on the wall. Indie books from local writers sit next to the hits because the shop backs the scene it lives in."
       },
       {
-        "title": "Custom art commissions",
-        "text": "Custom art commissions are a published part of the shop. You can leave with a book, a figure, or a piece made for you. The counter handles all three."
+        "title": "Commissions and special orders",
+        "text": "Custom art commissions from the same counter that pulls your list. Cannot find the back issue? He will hunt it. Book clubs and game nights when the calendar has them."
       }
     ]
   },
@@ -167,33 +165,33 @@
     ]
   },
   "story": {
-    "heading": "A clean shop on Main Street",
+    "heading": "Manayunk Main Street, noon to 8",
     "paragraphs": [
-      "Johnny Destructo's Hero Complex keeps the comic shop approachable on purpose. Comics, manga, and graphic novels are the racks. Figures are in the room. Custom art commissions are on the offer list. The shop is clean enough that a new reader can walk in without feeling like they failed a test.",
-      "Manayunk Main Street is the address. The hours from their contact page run noon to 8pm Monday through Saturday and noon to 6pm on Sunday. You come for the pull, the volume, the figure, or the commission. You leave with something the shop actually sells."
+      "JD took the mission on purpose: a comic shop that does not assault you at the door. Veteran geeks and first-timers get the same counter. Monday through Saturday the shop runs noon to 8pm. Sunday closes at 6. Call 215-482-7700 if you want the pull waiting.",
+      "People who left Manayunk still get boxes shipped because the recommendations were that good. Family-friendly, all ages, no secret handshake. Comics, manga, figures, a shirt from the owner, a commission if you want a piece that does not exist yet."
     ],
     "imageIndex": 2
   },
   "experience": {
-    "heading": "How a visit to the shop works",
+    "heading": "How a visit to Hero Complex actually works",
     "items": [
       {
         "title": "Walk the racks",
-        "text": "Comics, manga, and graphic novels are out where you can browse. The shop is clean and approachable, so the first visit does not require a guide."
+        "text": "Floppies, manga, and graphic novels are out. Ask JD where to jump in. The first visit does not require a guide, but he will be one if you want it."
       },
       {
-        "title": "Check the figures",
-        "text": "Figures are part of the same floor. You can leave with a book and an object from one counter."
+        "title": "Check figures, shirts, and art",
+        "text": "Figures, owner-printed shirts, stickers, original art. Leave with a book and an object from one counter."
       },
       {
-        "title": "Ask about a commission",
-        "text": "Custom art commissions are shop work. You talk to the counter about a piece made for you, in the same place you buy the weekly comics."
+        "title": "Start a pull or a commission",
+        "text": "Subscriptions, special orders, custom art. The counter handles the weekly habit and the piece made for you."
       }
     ]
   },
   "feature": {
     "heading": "A comic shop you can actually walk into",
-    "text": "Clean and approachable is the room. Comics, manga, graphic novels, and figures are the stock. Custom art commissions are the extra that still belongs to this counter.",
+    "text": "Clean on purpose. Comics, manga, graphic novels, figures, shirts JD prints, original art, commissions. Manayunk Main Street, noon to 8. Sunday to 6. He will order what is missing.",
     "cta": {
       "label": "Official site",
       "href": "https://www.jdsherocomplex.com/"
@@ -201,8 +199,8 @@
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Commissions live here",
-    "text": "Hero Complex does not send custom art down the street. Commissions are part of Johnny Destructo's shop, next to the comics and the figures.",
+    "heading": "Ask JD where to jump in",
+    "text": "His line is expert advice for veteran geeks and new fans. Pull lists, manga, a figure, a commission. Hero Complex is that counter at 4327 Main Street.",
     "imageIndex": 13,
     "cta": {
       "label": "See the shop",
@@ -215,19 +213,19 @@
         "title": "Comics and manga",
         "href": "https://www.jdsherocomplex.com/",
         "imageIndex": 9,
-        "text": "Issues and volumes on the racks at 4327 Main Street, Philadelphia."
+        "text": "Floppies, trades, and manga on the racks at 4327 Main Street, Manayunk."
       },
       {
-        "title": "Graphic novels and figures",
+        "title": "Figures and shirts",
         "href": "https://www.jdsherocomplex.com/",
         "imageIndex": 10,
-        "text": "Longer books and figures in the same clean, approachable shop."
+        "text": "Superhero and anime figures, plus shirts and stickers the owner prints."
       },
       {
-        "title": "Custom art commissions",
+        "title": "Pulls and commissions",
         "href": "https://www.jdsherocomplex.com/",
         "imageIndex": 11,
-        "text": "Commission a piece from the same counter that pulls your comics."
+        "text": "Subscriptions, special orders, and custom art from the same counter."
       }
     ]
   },

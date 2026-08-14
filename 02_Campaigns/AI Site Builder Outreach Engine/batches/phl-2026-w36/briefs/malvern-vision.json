@@ -9,7 +9,7 @@
   "phone": "610-644-1879",
   "address": "32 W King St, Malvern, PA 19355",
   "hours": "",
-  "description": "Optometry in Malvern. Eye exams, contacts, frames.",
+  "description": "Optometry on West King Street in Malvern. Eye exams, contact fittings, frames. Off-street parking. Call 610-644-1879.",
   "noindex": true,
   "schemaType": "Optician",
   "logo": false,
@@ -17,8 +17,8 @@
     "Eye exams",
     "Contacts",
     "Frames",
-    "Malvern",
-    "West King Street"
+    "West King Street",
+    "Malvern"
   ],
   "tokens": {
     "paper": "#F4F1EA",
@@ -114,8 +114,8 @@
   ],
   "hero": {
     "eyebrow": "Malvern | Optometry",
-    "headline": "Eye exams, contacts, frames",
-    "sub": "Malvern Vision Care is an optometry practice on West King Street. The work they publish is eye exams, contacts, and frames. You come to see, you leave with a prescription, contacts, or a pair of frames from that office. Hours are left blank because sources disagree.",
+    "headline": "Exams, contacts, frames on King Street",
+    "sub": "Malvern Vision Care is the optometry office at 32 W King St. You sit for a full exam, you leave with a contact fitting or a pair of frames from the same room, and you park off-street instead of hunting a meter. Call 610-644-1879 and take the chair. Patients keep the doctor and the technician because they explain the options without rushing the prescription.",
     "ctaPrimary": {
       "label": "Call",
       "href": "tel:6106441879"
@@ -126,30 +126,30 @@
     },
     "glassFloat": {
       "title": "Malvern",
-      "sub": "Optometry"
+      "sub": "Exams, contacts, frames"
     },
     "marquee": [
       "Eye exams",
       "Contacts",
       "Frames",
-      "Malvern",
-      "West King Street"
+      "West King Street",
+      "Malvern"
     ]
   },
   "offerings": {
-    "heading": "What the practice actually does",
+    "heading": "What the King Street office actually does",
     "items": [
       {
         "title": "Eye exams",
-        "text": "An eye exam is the start of the chart. Malvern Vision Care is an optometry office, so the exam is the skilled work, not a glasses vending machine with a poster."
+        "text": "A real optometric exam, not a glasses vending machine with a poster. The chart starts here. Kids and adults both sit. The doctor walks the findings so you know why the prescription changed."
       },
       {
-        "title": "Contacts",
-        "text": "Contacts are a published service. The same practice that does the exam can fit and supply contacts, so the prescription does not have to leave town to become a lens."
+        "title": "Contact fittings",
+        "text": "Contacts are fitted in the same office that did the exam. The prescription becomes a lens you can wear, without shipping the Rx across town to a warehouse."
       },
       {
-        "title": "Frames",
-        "text": "Frames are the third published piece. You can take the exam and choose frames in the same Malvern office on West King Street."
+        "title": "Frames on the wall",
+        "text": "Pick frames after the exam, in the same Malvern room. The technician will lay out the options against how you actually use the glasses: desk, drive, sun, the pair you already destroy."
       }
     ]
   },
@@ -165,33 +165,33 @@
     ]
   },
   "story": {
-    "heading": "West King Street optometry",
+    "heading": "West King Street optometry, no mall energy",
     "paragraphs": [
-      "Malvern Vision Care keeps a short, honest list: eye exams, contacts, frames. That is enough to run an optometry practice. This page will not invent a specialty clinic, a pediatric program, or a set of hours the sources cannot agree on.",
-      "A visit is an exam first. Contacts and frames are how the exam becomes something you wear. 32 W King St is the office. 610-644-1879 is the phone. The rest of a vision-care novel can wait until their site and the aggregators tell the same story. Malvern Vision Care is optometry with those three published services, and nothing extra invented for the brief."
+      "Malvern Vision Care is a King Street practice: exam first, then contacts or frames. People come back for a second and third pair because the technician talks through coatings and lens types like an adult. Off-street parking sits with the office, which matters on a borough street.",
+      "Call 610-644-1879 for the appointment. Confirm hours when you book, because the clock has moved in listings. The work has not: exams, contacts, frames, a doctor and a tech who stay on the chart."
     ],
     "imageIndex": 2
   },
   "experience": {
-    "heading": "How an optometry visit actually moves",
+    "heading": "How a Malvern vision visit actually moves",
     "items": [
       {
-        "title": "Sit for the eye exam",
-        "text": "The exam is the medical work. Malvern Vision Care starts there, as an optometry practice, not as a frame shop that happens to have a chart."
+        "title": "Sit for the exam",
+        "text": "The medical work comes first. Malvern Vision Care starts with the eyes, then talks about what you will wear."
       },
       {
         "title": "Fit contacts when that is the path",
-        "text": "Contacts are on their list. If the prescription is for lenses you wear on the eye, the same office can handle that path."
+        "text": "If the prescription is for lenses on the eye, the same office handles the fitting and the supply."
       },
       {
-        "title": "Choose frames in the same office",
-        "text": "Frames are the third published service. Exam and frames can be one Malvern visit on West King Street."
+        "title": "Choose frames before you leave",
+        "text": "The wall is in the same room. Exam and frames can be one King Street visit."
       }
     ]
   },
   "feature": {
-    "heading": "Three words of optometry",
-    "text": "Eye exams. Contacts. Frames. Malvern Vision Care is that practice on West King Street. No extra departments invented for the brief. An exam can become contacts or frames in the same Malvern office, which is the whole published path.",
+    "heading": "One Malvern office for the whole prescription",
+    "text": "Eye exam, contact fitting, frames on the wall. Off-street parking. A technician who will actually explain the lens. Malvern Vision Care on West King Street is that visit.",
     "cta": {
       "label": "Official site",
       "href": "https://www.malvernvision.com/"
@@ -199,8 +199,8 @@
     "imageIndex": 8
   },
   "spotlight": {
-    "heading": "Hours stay off this page",
-    "text": "Sources disagree on the clock, so the clock is empty. The services are not in dispute: eye exams, contacts, and frames, from the Malvern office.",
+    "heading": "Call, then sit",
+    "text": "610-644-1879 is the number. Confirm the day's hours when you book. The chair is for exams, contacts, and frames, not a mystery specialty clinic bolted on for a brochure.",
     "imageIndex": 13,
     "cta": {
       "label": "Confirm on their site",
@@ -213,19 +213,19 @@
         "title": "Eye exams",
         "href": "https://www.malvernvision.com/",
         "imageIndex": 9,
-        "text": "Optometric exams at 32 W King St, Malvern."
+        "text": "Optometric exams at 32 W King St, with a doctor who stays on the findings."
       },
       {
         "title": "Contacts",
         "href": "https://www.malvernvision.com/",
         "imageIndex": 10,
-        "text": "Contact lenses from the same practice that did the exam."
+        "text": "Fittings and lenses from the same practice that did the exam."
       },
       {
         "title": "Frames",
         "href": "https://www.malvernvision.com/",
         "imageIndex": 11,
-        "text": "Frames chosen in the Malvern office after the exam."
+        "text": "Frames chosen in the Malvern office, with a technician who will walk the options."
       }
     ]
   },

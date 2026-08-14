@@ -9,17 +9,16 @@
   "phone": "610-424-1100",
   "address": "241 Plaza Drive, Collegeville, PA 19426",
   "hours": "",
-  "description": "One-on-one licensed physical therapy in Collegeville. Orthopedic, sports, post-surgical, vestibular. Dr. Jeff Kurtz, clinic director. Ursinus / Perkiomen Creek community.",
+  "description": "One-on-one PT in Collegeville. Dr. Jeff Kurtz. Orthopedic, sports, post-surgical, vestibular, concussion, running assessments, blood flow restriction. Hip replacement, rotator cuff, ACL. Ursinus / Perkiomen Creek.",
   "noindex": true,
   "schemaType": "MedicalClinic",
   "logo": false,
   "marquee": [
     "One-on-one",
-    "Orthopedic",
-    "Sports",
-    "Post-surgical",
     "Vestibular",
-    "Collegeville"
+    "Post-surgical",
+    "Running assessment",
+    "Dr. Jeff Kurtz"
   ],
   "tokens": {
     "paper": "#F3F6F4",
@@ -115,8 +114,8 @@
   ],
   "hero": {
     "eyebrow": "Collegeville | Physical therapy",
-    "headline": "One-on-one licensed therapists",
-    "sub": "Kinetic Physical Therapy in Collegeville is one-on-one care with licensed therapists. The clinic treats orthopedic, sports, post-surgical, and vestibular cases. Dr. Jeff Kurtz is the clinic director. The room sits in the Ursinus / Perkiomen Creek community at 241 Plaza Drive.",
+    "headline": "One-on-one with Dr. Jeff Kurtz",
+    "sub": "Kinetic Physical Therapy at 241 Plaza Drive is licensed, one-on-one care under clinic director Dr. Jeff Kurtz. Orthopedic and sports cases, post-surgical protocols, vestibular and balance work, concussion management, running assessments, and blood flow restriction. Hip replacement, rotator cuff tendonitis, muscle strain, and ACL reconstruction are the visits Collegeville actually books.",
     "ctaPrimary": {
       "label": "Call",
       "href": "tel:6104241100"
@@ -131,27 +130,26 @@
     },
     "marquee": [
       "One-on-one",
-      "Orthopedic",
-      "Sports",
-      "Post-surgical",
       "Vestibular",
-      "Collegeville"
+      "Post-surgical",
+      "Running assessment",
+      "Dr. Jeff Kurtz"
     ]
   },
   "offerings": {
-    "heading": "The cases the clinic actually takes",
+    "heading": "The cases the Collegeville clinic actually takes",
     "items": [
       {
         "title": "Orthopedic and sports",
-        "text": "Orthopedic and sports cases are treated one-on-one with a licensed therapist. You are not handed to an aide for the hour that was supposed to be skilled care."
+        "text": "Rotator cuff, muscle strain, ACL reconstruction, the Ursinus athlete, the trail runner. A licensed therapist stays in the hour. You are not handed to an aide for the work that was supposed to be skilled care."
       },
       {
-        "title": "Post-surgical",
-        "text": "Post-surgical physical therapy is on the Collegeville list. The therapist works the protocol with you in the room, under a clinic directed by Dr. Jeff Kurtz."
+        "title": "Post-surgical and joint replacement",
+        "text": "Hip replacement, total knee, the protocol after the surgeon is done. Dr. Kurtz and Brandon Vattima work the plan in the room, not as a gym pass with occasional check-ins."
       },
       {
-        "title": "Vestibular",
-        "text": "Vestibular work is a named service, not an afterthought. Balance and inner-ear cases get the same one-on-one licensed hour as a knee or a shoulder."
+        "title": "Vestibular, concussion, running, BFR",
+        "text": "Balance and inner-ear cases. Concussion management. Running assessments. Blood flow restriction. Soft tissue mobilization and ergonomic work when the desk did the damage."
       }
     ]
   },
@@ -169,8 +167,8 @@
   "story": {
     "heading": "Collegeville, one patient at a time",
     "paragraphs": [
-      "Kinetic Physical Therapy puts licensed therapists in a one-on-one hour. Orthopedic, sports, post-surgical, and vestibular are the published case types. Dr. Jeff Kurtz directs the Collegeville clinic. The community around the door is Ursinus and the Perkiomen Creek, not a downtown medical tower.",
-      "The method is the differentiator they are willing to name: one-on-one. A visit is you and a licensed therapist in the work, whether the problem is a joint, a sport, a surgery, or the vestibular system. Plaza Drive is where that hour happens. Dr. Jeff Kurtz directs the Collegeville clinic that holds those four case types."
+      "Kinetic PT has clinics across Chester and Montgomery. Collegeville is the Plaza Drive room for the Ursinus / Perkiomen Creek community. Dr. Jeff Kurtz directs it. One-on-one is the method: a licensed therapist, an hour that is not split across three patients.",
+      "Call 610-424-1100. Bring the operative report, the dizzy spells, or the mileage that started to hurt. Office workers, college athletes, and active seniors sit in the same clinic because the case types were built that way. Manual therapy and therapeutic exercise stay in the hour with you."
     ],
     "imageIndex": 2
   },
@@ -179,21 +177,21 @@
     "items": [
       {
         "title": "One-on-one with a licensed therapist",
-        "text": "The hour is skilled care. A licensed therapist stays with you. That is the Collegeville model, not a gym pass with occasional check-ins."
+        "text": "The hour is skilled care. Dr. Kurtz or another licensed therapist stays with you. Collegeville is not a mill."
       },
       {
-        "title": "Treat the named case type",
-        "text": "Orthopedic, sports, post-surgical, or vestibular. The plan is built for the case they published, under Dr. Jeff Kurtz as clinic director."
+        "title": "Treat the named case",
+        "text": "Orthopedic, sports, post-surgical, vestibular, concussion, running, blood flow restriction. The plan matches what you walked in with."
       },
       {
         "title": "Work inside the Ursinus community",
-        "text": "The clinic sits at 241 Plaza Drive in the Ursinus / Perkiomen Creek community. You are treated as a neighbor case, not a unit in a regional mill."
+        "text": "241 Plaza Drive. Neighbors, athletes, and post-op patients from the same creek towns, not a unit in a regional mill."
       }
     ]
   },
   "feature": {
-    "heading": "Licensed, one-on-one, four case types",
-    "text": "Orthopedic, sports, post-surgical, vestibular. Those are the doors. Behind each door is a licensed therapist and an hour that is not split across three patients. Kinetic Physical Therapy in Collegeville is one-on-one licensed care under Dr. Jeff Kurtz.",
+    "heading": "Licensed, one-on-one, the cases on the door",
+    "text": "Hip replacement. Rotator cuff. ACL. Vestibular. Concussion. Running assessment. Blood flow restriction. Behind each door is a licensed therapist and an hour that belongs to you. Dr. Jeff Kurtz directs the Collegeville clinic.",
     "cta": {
       "label": "Official site",
       "href": "https://www.kineticptpa.com/locations/collegeville/"
@@ -202,7 +200,7 @@
   },
   "spotlight": {
     "heading": "Dr. Jeff Kurtz directs the clinic",
-    "text": "Collegeville has a named clinic director. Dr. Jeff Kurtz is on the work, in a Kinetic Physical Therapy that still sells one-on-one licensed care to the Ursinus / Perkiomen Creek community.",
+    "text": "Collegeville has a named director. Kinetic Physical Therapy still sells one-on-one licensed care to the Ursinus / Perkiomen Creek community, with Brandon Vattima on the floor alongside him.",
     "imageIndex": 13,
     "cta": {
       "label": "Collegeville location",
@@ -215,19 +213,19 @@
         "title": "Orthopedic and sports",
         "href": "https://www.kineticptpa.com/locations/collegeville/",
         "imageIndex": 9,
-        "text": "One-on-one licensed therapy for orthopedic and sports cases in Collegeville."
+        "text": "Rotator cuff, muscle strain, ACL, and the running athlete, one-on-one in Collegeville."
       },
       {
         "title": "Post-surgical",
         "href": "https://www.kineticptpa.com/locations/collegeville/",
         "imageIndex": 10,
-        "text": "Post-surgical physical therapy with a licensed therapist in the room."
+        "text": "Hip and knee replacement protocols with a licensed therapist in the room."
       },
       {
-        "title": "Vestibular",
+        "title": "Vestibular and concussion",
         "href": "https://www.kineticptpa.com/locations/collegeville/",
         "imageIndex": 11,
-        "text": "Vestibular care as a named service, directed by Dr. Jeff Kurtz."
+        "text": "Balance, inner ear, concussion, running assessments, and blood flow restriction."
       }
     ]
   },
