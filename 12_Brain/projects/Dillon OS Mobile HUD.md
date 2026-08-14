@@ -7,19 +7,19 @@ source: "[[12_Brain/decisions/2026-08-14 - HUD mobile is hosted readonly]]"
 
 # Dillon OS Mobile HUD
 
-**Summary:** Installable phone view of D.I.L.L.O.N. OS. Read-only snapshot, home-screen app, always on.
+**Summary:** Installable phone operator for D.I.L.L.O.N. OS. Capture, Today, sheet/sites, skill queue. Claude jobs stay desktop.
 
 URL: https://dillon-os-hud.netlify.app
 
 ## Goal
 
-Open the HUD from a phone anytime without the laptop, without exposing the Command Deck.
+Use Dillon OS from a phone — not just look at it.
 
 ## Next actions
 
-- [ ] Add to Home Screen on Dillon's phone (Share → Add to Home Screen)
-- [ ] Confirm the GitHub Action published after this lands on the branch
-- [ ] Keep NETLIFY_AUTH_TOKEN on the repo so the snapshot stays current
+- [ ] Add to Home Screen
+- [ ] Unlock writes with a fine-grained GitHub token (this repo, Contents: read/write)
+- [ ] Drop a capture and tap a Today item once to confirm Git commits
 
 ## Links
 
