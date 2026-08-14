@@ -17,7 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const { repoPath } = require('../lib/fsutil');
 const { httpGet } = require('../lib/net');
-const { api, deployFiles, waitForDeploy } = require('../lib/netlify');
+const { findSite, deployFiles, waitForDeploy } = require('../lib/netlify');
 
 const SITE_NAME = 'momentum-workshop-pilot';
 const LIVE_ORIGIN = 'https://momentum-workshop-pilot.netlify.app';
@@ -28,25 +28,6 @@ function parseArgs(argv) {
   return {
     dryRun: argv.includes('--dry-run'),
     help: argv.includes('--help') || argv.includes('-h'),
-  };
-}
-
-async function findExistingSite(name) {
-  const list = await api(`/sites?per_page=100&filter=all&name=${encodeURIComponent(name)}`);
-  if (!list.ok) {
-    throw new Error(`listing Netlify sites failed: ${list.status} ${list.raw || list.error || ''}`);
-  }
-  const sites = Array.isArray(list.body) ? list.body : [];
-  const found = sites.find((s) => s.name === name);
-  if (!found) {
-    throw new Error(
-      `Refusing to deploy: no existing Netlify site named "${name}". Will not create one.`,
-    );
-  }
-  return {
-    id: found.id,
-    name: found.name,
-    url: found.ssl_url || found.url,
   };
 }
 
@@ -99,8 +80,7 @@ async function assembleFiles() {
   }
 
   for (const name of PATCH_FILES) {
-    const buf = fs.readFileSync(path.join(PATCH_DIR, name));
-    files.set(`/${name}`, buf);
+    files.set(`/${name}`, fs.readFileSync(path.join(PATCH_DIR, name)));
   }
   return files;
 }
@@ -114,11 +94,10 @@ async function main() {
 
   const files = await assembleFiles();
   const names = [...files.keys()].sort();
-  const html = files.get('/index.html').toString('utf8');
   const ics = files.get('/momentum-workshops.ics').toString('utf8');
   const js = files.get('/script.js').toString('utf8');
 
-  if (!html.includes('momentum-workshop-event-v5') && !js.includes('momentum-workshop-event-v5')) {
+  if (!js.includes('momentum-workshop-event-v5')) {
     throw new Error('patch check failed: script.js is not v5');
   }
   if (!js.includes('https://meet.google.com/ive-hkws-xdg')) {
@@ -139,7 +118,7 @@ async function main() {
     return;
   }
 
-  const site = await findExistingSite(SITE_NAME);
+  const site = await findSite(SITE_NAME);
   console.log(`pinned site ${site.name} (${site.id}) ${site.url}`);
   const dep = await deployFiles(site.id, files, {
     title: 'Growth Workshop LP Aug 27 + calendar auto-add',
@@ -154,7 +133,7 @@ async function main() {
   console.log(`live ${waited.url || site.url}`);
 }
 
-module.exports = { SITE_NAME, PATCH_FILES, pathsFromMarkup, assembleFiles, findExistingSite };
+module.exports = { SITE_NAME, PATCH_FILES, pathsFromMarkup, assembleFiles };
 
 if (require.main === module) {
   main().catch((err) => {
