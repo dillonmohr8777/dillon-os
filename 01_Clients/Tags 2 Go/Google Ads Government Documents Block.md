@@ -8,7 +8,7 @@ client: "[[01_Clients/Tags 2 Go|Tags 2 Go]]"
 area: Google Ads policy
 priority: urgent
 outcome: Get Google to certify Tags 2 Go as an authorized provider so title and registration Search can run.
-next_action: Operator signs into Gmail and completes Google webapproval for case 1-8585000041572. Then wait on that certification case plus PennDOT Contract Admin, DAS, and DVS publications. Do not email the client.
+next_action: Wait on Google certification case 1-8585000041572. PennDOT closed the website-field path in writing. Do not email the client. Do not ask PennDOT for a URL again.
 source_refs:
   - "gmail:thread:19ff221c45d90254"
   - "gmail:thread:19ffd746f33989f2"
@@ -16,6 +16,7 @@ source_refs:
   - "gmail:thread:1a001d851cf3c721"
   - "gmail:thread:1a001e4518e9aea8"
   - "gmail:thread:1a001ec4ad1109eb"
+  - "gmail:thread:1a001f6e1d5858ab"
 tags: [brain, project, tags-2-go, google-ads, government-documents, blocked]
 ---
 
@@ -31,15 +32,18 @@ Google’s form asks for a government webpage that **links to tags2go.pro**. Pen
 
 A general Google Ads support case (`3-2595000042211`) already had the authorization packet. That is not the same as the certification form.
 
-The official form was submitted 2026-08-14 as **authorized, non-government provider** for `tags2go.pro`, pointing at PennDOT’s Authorized Agents page. Google opened case `1-8585000041572` and asked for account webapproval. A follow-up on that case explains that the PennDOT PDFs list the business but have no website column. **The certificate is not on the account until Google decides, and the webapproval click is still an operator gate.**
+The official form was submitted 2026-08-14 as **authorized, non-government provider** for `tags2go.pro`, pointing at PennDOT’s Authorized Agents page. Google opened case `1-8585000041572`. PennDOT Contract Administration then confirmed in writing that DAS has no URL field and the public list is address and phone only. That written confirmation was forwarded to the certification case. Operator reported the Google webapproval click complete. **Ads stay off until Google applies the certificate.**
 
 The client declined notary/extra campaigns on 2026-08-14. Operator rule from 2026-08-14: **do not email the client** on this block. No client status mail. No reply on the Agent Support thread (the client is CC’d there).
 
 Sent 2026-08-14, client not copied:
 - Google Ads support, case `3-2595000042211`: PennDOT title support is a dead end; request manual authorized-provider certification off the directory PDF.
 - PennDOT Contract Administration and DAS: request to add `tags2go.pro` to the public listing for agent 18005397, or name the unit that owns that directory.
-- DVS publications / bulletin inbox (the address on PennDOT’s “subscribe to DVS Update” page): route to whoever publishes the DVSPubsForms agent PDFs, or reply with that office. Not a newsletter signup.
-- Official `godos_certification` form, then a note on new case `1-8585000041572`.
+- DVS publications / bulletin inbox: route to whoever publishes the DVSPubsForms agent PDFs.
+- Official `godos_certification` form, then notes on case `1-8585000041572`, including PennDOT’s written “no website field” confirmation.
+- Thank-you to Contract Administration closing the URL-field request.
+
+PennDOT answer (Contract Administration, Bureau of Support Services, 2026-08-14): DAS has no business-URL field; they do not advertise websites; the public agent list is address and phone only. That path is closed.
 
 Not sent, on purpose:
 - No reply to Agent Support (wrong unit; client is on that thread).
@@ -57,6 +61,7 @@ Playbook: [[12_Brain/concepts/Google Ads Government Documents Certification]].
 4. Do not submit multiple certification requests for the same domain.
 5. Do not copy passwords, DAS logins, or payment details into Git.
 6. Keep the restricted Search campaign paused until the certificate is on the account.
+7. Do not ask PennDOT again to add a website field. Contract Administration already answered.
 
 ## Next actions
 
@@ -64,9 +69,10 @@ Playbook: [[12_Brain/concepts/Google Ads Government Documents Certification]].
 2. [x] PennDOT Contract Administration + DAS website-listing request sent (2026-08-14). Client not copied.
 3. [x] One `godos_certification` form submitted (2026-08-14). New case `1-8585000041572`. Do not file a second copy of the same domain.
 4. [x] DVS publications inbox asked to route to whoever publishes the public agent PDFs (2026-08-14). Client not copied.
-5. [ ] Operator: sign into Gmail and complete Google webapproval for case `1-8585000041572`.
-6. [ ] After Google’s written decision, appeal the disapproved assets or report the exact remaining gap.
-7. [ ] After Contract Administration / DAS / DVS publications replies, use only that answer. Do not go back to Agent Support.
+5. [x] Operator reported Google webapproval complete for case `1-8585000041572`.
+6. [x] PennDOT Contract Administration replied: no URL field, public list is address and phone only. Written confirmation forwarded to Google. Thank-you sent. Do not ask again.
+7. [ ] Wait for Google’s written certification decision on case `1-8585000041572`.
+8. [ ] After Google’s written decision, appeal the disapproved assets or report the exact remaining gap.
 
 ## Evidence
 
@@ -75,6 +81,7 @@ Playbook: [[12_Brain/concepts/Google Ads Government Documents Certification]].
 3. [Google Ads evidence case](https://mail.google.com/mail/u/0/#all/19ffbf0a0b63dc84)
 4. [Google Ads certification case](https://mail.google.com/mail/u/0/#all/1a001ec4ad1109eb)
 5. [PennDOT DVS publications routing](https://mail.google.com/mail/u/0/#all/1a001e4518e9aea8)
-6. [PennDOT agent directory PDF](https://docs.penndot.pa.gov/Public/DVSPubsForms/Agent%20Services%20for%20Web.pdf)
-7. [Google certification form](https://support.google.com/adspolicy/contact/godos_certification)
-8. [DVS bulletin subscribe page (publications inbox)](https://www.pa.gov/services/dmv/subscribe-to-the-driver-and-vehicle-services-update-newsletter)
+6. [PennDOT Contract Administration reply](https://mail.google.com/mail/u/0/#all/1a001d851cf3c721)
+7. [PennDOT agent directory PDF](https://docs.penndot.pa.gov/Public/DVSPubsForms/Agent%20Services%20for%20Web.pdf)
+8. [Google certification form](https://support.google.com/adspolicy/contact/godos_certification)
+9. [DVS bulletin subscribe page (publications inbox)](https://www.pa.gov/services/dmv/subscribe-to-the-driver-and-vehicle-services-update-newsletter)
