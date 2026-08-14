@@ -13,9 +13,20 @@ This repo is **Dillon OS** — Dillon Mohr's Obsidian vault + agentic OS.
 
 ## Cursor Cloud specific instructions
 
-There is **no root `package.json` for the vault itself**, no Docker. Node (v18+),
-npm, and Python 3 are available; the startup update script runs `npm install`
-for the two npm-based sites below.
+There is **no root `package.json` for the vault itself**, no Docker. Node 22,
+npm, and Python 3 are on the image. The Cloud Agent environment is
+**dashboard-managed** (no committed `.cursor/environment.json` — a repo file
+would override the personal config). Canonical install:
+
+```
+bash _os/dev/bin/cloud-agent-install.sh
+```
+
+That script `npm ci`s `immohrtal-site`, `01_Clients/Shadow HVAC/website`, and
+`_os/radar-engine` when lockfiles exist. It must terminate.
+HUD start belongs in the dashboard `start` field as `node _os/server.js`
+(detached; logs under `/tmp/cursor/start-user/`). Do not start Mohr Media and
+Philly 25 together — both bind port 8080.
 
 ### Services / products and how to run them (dev mode)
 
@@ -30,19 +41,22 @@ for the two npm-based sites below.
 
 ### MCP servers
 
-`.cursor/mcp.json` and `.mcp.json` register one project server, `landingfolio`, a
-layout-reference library for site builds. It reads `LANDINGFOLIO_TOKEN` from the
-environment and **is inert until that variable is set** — no token lives in this
-repo. Its tools are optional everywhere they are used, so an unset variable degrades
-to harvest-only design instead of failing a build. Status, rules, and rollback:
-`12_Brain/entities/LandingFolio MCP.md`. It is still **sandbox-only** until an
-operator runs `node _os/automation/bin/landingfolio-verify.js` to finish the
-Inspector check. Any new MCP goes through `_os/automation/bin/mcp-gate.js` first.
+Cloud Agents already have Gmail, Slack, Calendar, Drive, and X when those
+servers report `ready`. **Draft-first:** never send, publish, or spend from
+research or MCP output. See `12_Brain/concepts/Draft-First Operating Rules.md`.
+
+`.cursor/mcp.json` and `.mcp.json` register one *project* server, `landingfolio`.
+It reads `LANDINGFOLIO_TOKEN` and **is inert until that variable is set** — no
+token lives in this repo. Unset degrades to harvest-only design. Status:
+`12_Brain/entities/LandingFolio MCP.md`. Still **sandbox-only** until an
+operator runs `node _os/automation/bin/landingfolio-verify.js`. Any new MCP
+goes through `_os/automation/bin/mcp-gate.js` first. Cloud boot notes:
+`12_Brain/entities/Cursor Cloud Environment.md`.
 
 ### Tests / lint
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/cloud-agent-env.test.js
 ```
 
 - Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, and public-safety scanning.
