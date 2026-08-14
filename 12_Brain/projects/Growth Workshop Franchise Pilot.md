@@ -25,7 +25,7 @@ Campaign home: [[02_Campaigns/Growth Workshop/Growth Workshop|Growth Workshop]] 
 | Piece | Status |
 |---|---|
 | LP date push (Aug 27) | patched files staged, operator deploy pending |
-| Franchise pilot list | building — free public sources, wave 1 = 50 |
+| Franchise pilot list | **built** — 112 contacts, 66 PA/NJ/DE, 112/112 MX-pass, wave 1 = 50 flagged, private Drive sheet delivered |
 | Drip + lifecycle copy | drafted, awaiting Sean/Mac word-for-word approval |
 | Two-week calendar | drafted (Aug 14 → 28) |
 | Meeting link / sender mailbox / seat cap | **owed by Sean/Mac** |

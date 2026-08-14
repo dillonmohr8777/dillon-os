@@ -35,9 +35,18 @@ Franchisors must file Franchise Disclosure Documents; **Item 20** lists every cu
 
 Item 20 gives **names + cities + phones, almost never emails** — it's the authoritative "who owns which location" ledger. Emails come from Lane B enrichment. Full SOP + verified portal behavior: see the research page.
 
-### Lane B — brand location pages (the email harvest)
+### Lane B — brand location pages (the email harvest) — RUN 2026-08-14
 
-Service franchises publish per-location pages, and many list the location email and owner name right on the page ("Meet the owner"). This is the volume lane. Priority brands with confirmed Philly-market presence (seen in our own radar registry): CertaPro Painters, Hand & Stone, The Little Gym, YogaSix, StretchLab, Removery, PrimoHoagies, Saxbys, Fit4Mom, Any Lab Test Now — plus the classic home-services franchise families (Budget Blinds, Fish Window Cleaning, Weed Man, Pillar To Post, Visiting Angels, 360 Painting…).
+Service franchises publish per-location pages, and some list the location email right on the page. This is the volume lane, and it's now verified: **the winning move is the brand's own locator endpoint, not page-by-page crawling.** Check the locator page's JS for `wp-json`/Yext routes first.
+
+Verified mechanisms (full receipts: [[12_Brain/research/Franchise Email Sourcing]]):
+
+| Mechanism | Yield |
+|---|---|
+| CertaPro Painters zip-profile REST endpoint (one GET per zip returns territory email + subdomain) | 73 territories, 25 PA/NJ/DE, 3 named owners |
+| The UPS Store static Yext store pages (`locations.theupsstore.com`) | 43 stores, all PA/NJ/DE |
+
+Confirmed dead ends (JS-shell locators, no static emails): Pillar To Post, HouseMaster, Mathnasium, Fish Window Cleaning, Minuteman Press, Signarama, AlphaGraphics, Visiting Angels, Senior Helpers, Interim HealthCare, Amada. Probe one location page per brand before committing to a crawl.
 
 Per row capture: brand, location, contact name, email, phone, city, state, category, `role_type` (owner_operator | location_mailbox), source URL, accessed date.
 
@@ -52,13 +61,15 @@ Franchise trade press (1851franchise.com, Franchise Times, local business journa
 ## Pipeline (repeatable)
 
 1. Pick brands (ICP: home services, fitness/wellness, senior care, pet; PA/NJ/DE first).
-2. Lane B harvest → rows with literal on-page emails.
+2. Lane B harvest → rows with literal on-page/on-endpoint emails.
 3. Lane A cross-check for owner names where location pages don't name them.
 4. Dedupe (email + domain), one row per company.
 5. MX-verify: `node _os/automation/bin/mx-check.js <list.csv>` (DNS-only, adds `mx_status`).
 6. Load `mx_ok` rows into the Drive tracker with per-row UTM registration links (`utm_content=FRAN-WORKSHOP-###`).
 7. Wave 1 = 50 rows, prioritized: named owner > PA/NJ/DE > category fit.
 8. After sends: bounces/replies/opt-outs → `Outreach Status` immediately.
+
+**Pilot run result (2026-08-14):** 112 unique contacts, 66 PA/NJ/DE, 112/112 `mx_ok`, wave 1 = 50 flagged. Delivered as the private Drive sheet "Franchise Workshop Pilot List — 2026-08-14" (same folder pattern as the 200 list) — zero contact rows in this repo.
 
 ## Tracker schema (same as the 200-list sheet)
 
