@@ -132,6 +132,21 @@ async function runQa(siteDir, opts = {}) {
                 );
               }
             }
+            const galleryLayout = await page.evaluate(() => {
+              const rail = document.querySelector('.gallery-rail');
+              if (!rail || !rail.children.length) return { skipped: true };
+              const first = rail.children[0].getBoundingClientRect();
+              return {
+                skipped: false,
+                firstWidth: first.width,
+                viewport: window.innerWidth,
+              };
+            });
+            if (!galleryLayout.skipped && galleryLayout.firstWidth < galleryLayout.viewport * 0.78) {
+              failures.push(
+                `gallery tile too narrow on phone: ${Math.round(galleryLayout.firstWidth)}px wide in ${galleryLayout.viewport}px viewport`
+              );
+            }
             const dockCover = await page.evaluate(() => {
               const dock = document.querySelector('.bottom-dock');
               if (!dock) return { skipped: true };

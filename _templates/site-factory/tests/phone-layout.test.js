@@ -17,11 +17,12 @@ describe('phone catalog layout', () => {
     const css = fs.readFileSync(path.join(factoryRoot, 'base.css'), 'utf8');
     const phone = mediaBlock(css, '(max-width:700px)');
     assert.ok(phone.includes('.catalog-grid') && phone.includes('grid-template-columns:1fr'));
-    assert.match(phone, /\.catalog-grid\{\s*display:grid/);
+    assert.match(phone, /\.catalog-grid[^{]*\{\s*display:grid/);
     assert.doesNotMatch(phone, /\.catalog-grid\{\s*display:flex/);
     assert.doesNotMatch(phone, /\.catalog-card\{[^}]*flex:0 0/);
-    assert.match(phone, /\.site-header nav,.button-header\{display:none\}|\.site-header nav\{display:none\}/);
-    assert.match(phone, /\.catalog-card figure\{height:220px\}/);
+    assert.match(phone, /\.site-header nav,.button-header,.offerings-tabs,.marquee-strip\{display:none\}/);
+    assert.match(phone, /\.catalog-card figure,.gallery-rail figure,.social-rail figure\{height:180px\}/);
+    assert.match(phone, /\.gallery-rail figure\{flex:0 0 100%/);
     assert.match(phone, /min-height:0/);
   });
 

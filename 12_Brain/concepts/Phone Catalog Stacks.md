@@ -14,6 +14,8 @@ Fix lives in the factory, not in one brief:
 
 - `@media (max-width: 700px)` catalog is `grid-template-columns: 1fr`
 - tilt wrappers are `height: auto; width: 100%` on phones
+- gallery tiles are full-width snap slides, not a 3-up peek
+- phone type scale and section padding stay compact so short copy does not sit in empty columns
 - QA fails a 390px pass if the first two catalog items share a row or the first item is under 78% of the viewport
 
 Do not bulk-add catalog copy to clear whitespace. The word cap is 380–720; stacked cards make the existing sentence fill. Skip Dutton / Sprinkles / Andorra if a site is already against the cap.

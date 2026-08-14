@@ -706,43 +706,65 @@ p,address{text-wrap:pretty}
   .site-footer{grid-template-columns:1fr 1fr}
 }
 @media(max-width:850px){
-  .hero h1{font-size:clamp(3.15rem,13vw,4.6rem);line-height:.94}
-  .section-head h2,.contact-intro h2,.story h2,.feature h2,.spotlight h2{font-size:clamp(2.7rem,10.5vw,3.8rem);line-height:1.02}
-  section{padding-block:64px}
+  .hero h1{font-size:clamp(2.35rem,9vw,3.4rem);line-height:.98}
+  .section-head h2,.contact-intro h2,.story h2,.feature h2,.spotlight h2{font-size:clamp(1.85rem,7.5vw,2.8rem);line-height:1.08}
+  section{padding-block:48px}
   .js .reveal{filter:none;transform:translateY(22px)}
   .hero-media{min-height:0}
-  .story figure,.feature figure,.spotlight figure{min-height:0}
-  .social-rail figure{height:280px}
-  .gallery-rail figure{flex-basis:min(86vw,440px);height:min(58vh,460px)}
+  .story figure,.feature figure,.spotlight figure{min-height:0;aspect-ratio:4/3;height:auto}
+  .social-rail figure{height:220px}
+  .gallery-rail figure{flex-basis:min(86vw,440px);height:min(42vh,320px)}
   .ink-logo{width:96px;height:96px;flex-basis:96px;margin-top:-32px}
 }
 @media(max-width:700px){
   body{padding-bottom:max(148px, calc(128px + env(safe-area-inset-bottom, 0px)))}
-  section{padding:48px 16px}
+  section{padding:28px 16px}
+  .section-head{gap:12px;margin-bottom:18px}
+  .eyebrow,.section-kicker{margin-bottom:8px}
+  .hero h1{font-size:clamp(1.85rem,8.4vw,2.4rem);line-height:1.08;letter-spacing:-.04em}
+  .section-head h2,.contact-intro h2,.story h2,.feature h2,.spotlight h2{font-size:clamp(1.55rem,7.2vw,2.05rem);line-height:1.12;letter-spacing:-.03em}
+  .hero-copy>p,.story p,.feature p,.spotlight p,.closing-lead{font-size:1.05rem;line-height:1.45}
   .site-header{padding:12px 16px;grid-template-columns:1fr}
-  .site-header nav,.button-header{display:none}
-  .hero{display:flex;flex-direction:column;min-height:auto}
+  .site-header nav,.button-header,.offerings-tabs,.marquee-strip{display:none}
+  .hero{display:flex;flex-direction:column;min-height:0;padding-block:24px}
   .hero-copy{order:1}
-  .hero-media{order:2;width:100%;min-height:min(48svh, 360px)}
+  .hero-media{order:2;width:100%;min-height:0}
+  .hero-media figure{height:auto;max-height:220px;aspect-ratio:4/3}
   .proof-grid,.offering-grid,.experience-grid,.contact-grid,.catalog-grid,.site-footer{grid-template-columns:1fr}
   .proof article{border-right:0;border-bottom:var(--border) solid currentColor}
-  .catalog-grid{
+  .catalog-grid,.offering-grid,.experience-grid{
     display:grid;
-    gap:16px;
-    padding-bottom:8px;
+    gap:12px;
+    padding-bottom:0;
   }
   .catalog-grid .t-tilt,.offering-grid .t-tilt,.t-tilt-card{width:100%;height:auto}
-  .catalog-card figure{height:220px}
-  .offering-card,.experience-grid article,.contact-card{min-height:0}
+  .catalog-card{padding:12px}
+  .catalog-card figure,.gallery-rail figure,.social-rail figure{height:180px}
+  .offering-card,.experience-grid article,.contact-card{min-height:0;padding:18px}
   .offering-card p,.experience-grid p,.catalog-card p,.story p,.feature p,.spotlight p{max-width:none}
-  .gallery{padding-inline:0}
+  .gallery{padding-inline:0;padding-block:28px}
   .gallery .section-head{padding-inline:16px}
-  .gallery-rail{padding-inline:16px;scroll-padding-inline:16px}
+  .gallery-rail{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding:0 16px 8px;
+    gap:12px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .gallery-rail figure{flex:0 0 100%;width:100%;height:180px;scroll-snap-align:start}
+  .social-rail{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:12px;
+  }
+  .social-rail figure{flex:0 0 100%;height:180px;scroll-snap-align:start}
   .map-embed{width:100%;max-width:100%;aspect-ratio:4/3}
-  .closing{padding-block:72px}
-  .contact-system{padding-bottom:48px}
+  .closing{padding-block:40px}
+  .contact-system{padding-bottom:28px}
   .footer-disclosure{grid-template-columns:1fr}
-  .button-row{flex-direction:column;align-items:stretch}
+  .button-row{flex-direction:column;align-items:stretch;margin-top:18px}
   .button-row .button{width:100%;min-height:52px}
   .site-header .wordmark{font-size:clamp(1.05rem, 4.6vw, 1.25rem)}
   .ink-logo{width:72px;height:56px;flex-basis:72px;margin-top:-14px;overflow:hidden}
