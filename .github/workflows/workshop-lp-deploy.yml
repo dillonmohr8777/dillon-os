@@ -1,9 +1,13 @@
 name: Deploy Growth Workshop LP
 
-# Manual only. Overlays index.html, script.js, and the Aug 27 ICS onto the
-# existing momentum-workshop-pilot Netlify site. Does not create sites.
+# Uses the repo Actions secret NETLIFY_AUTH_TOKEN (value is not readable via
+# API). workflow_dispatch only works once this file is on main; push on this
+# branch is the way to publish from the PR. Does not create sites.
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - cursor/growth-workshop-franchise-pilot-742c
 
 permissions:
   contents: read
