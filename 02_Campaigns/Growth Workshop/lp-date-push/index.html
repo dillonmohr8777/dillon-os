@@ -1,0 +1,933 @@
+<!doctype html>
+<!--
+  THESIS: A founder-led command stage turns one messy growth constraint into a weekly operating system; it refuses the anonymous webinar-template hero.
+  OWN-WORLD: Midnight navy, founder gold, optical cyan, close-cropped portraiture, and functional Liquid Glass.
+  STORY: Meet Mac and Sean, see the system work, understand the hour, register intentionally, and choose the calendar action.
+  FIRST VIEWPORT: A monumental statement at left and a close founder portrait occupying the right half, with the date and primary action always visible.
+  FORM: Cinematic founder story extending the incumbent Momentum 360 world, with one horizontal operating-system sequence and progressive-enhancement motion.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#071632" />
+    <meta
+      name="description"
+      content="A live Momentum 360 workshop for owners building a repeatable local growth system."
+    />
+    <title>Momentum 360 Growth Workshop</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="assets/mac-sean-momentum-glass-hero.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }</style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+    <header class="site-header" id="siteHeader">
+      <div class="shell header-inner">
+        <a
+          class="brand-lockup"
+          href="#top"
+          data-route="register"
+          aria-label="Momentum 360 Growth Workshop home"
+        >
+          <span class="brand-mark"
+            ><img src="assets/momentum-360-logo.png" alt="Momentum 360"
+          /></span>
+          <span class="brand-copy"
+            ><strong>MOMENTUM <em>360</em></strong
+            ><small>GROWTH WORKSHOP</small></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#hosts">The founders</a>
+          <a href="#system">The system</a>
+          <a href="#agenda">The hour</a>
+          <button type="button" data-route="operator">Operator studio</button>
+          <a class="nav-cta" href="#register">Reserve a seat</a>
+        </nav>
+        <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="false">
+          <span aria-hidden="true">&#9678;</span><b>Motion on</b>
+        </button>
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          <span></span><span></span><span></span
+          ><b class="sr-only">Open menu</b>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="#hosts">The founders</a><a href="#system">The system</a
+        ><a href="#agenda">The hour</a
+        ><button type="button" data-route="operator">Operator studio</button
+        ><a href="#register">Reserve a seat</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="view active" data-view="register">
+        <section class="scene hero" id="top" aria-labelledby="workshop-title">
+          <div class="hero-atmosphere" data-depth="1" aria-hidden="true"><i></i><i></i></div>
+          <div class="hero-glass-rails" data-depth="2" aria-hidden="true"><i></i><i></i></div>
+          <div class="shell hero-layout" data-depth="4">
+            <div class="hero-copy reveal" data-depth="4">
+              <p class="eyebrow">
+                <span class="live-dot"></span> LIVE OWNER WORKSHOP
+              </p>
+              <h1 id="workshop-title">
+                Build a business.<br /><span>That grows</span><br /><span
+                  >without you.</span
+                >
+              </h1>
+              <p class="hero-lede">
+                Turn local attention into qualified conversations with a growth
+                system your team can run every week.
+              </p>
+              <div class="session-rail" aria-label="Next session information">
+                <span class="session-status"><i aria-hidden="true"></i> NEXT SESSION</span>
+                <strong id="rail-date">Thursday, August 27</strong>
+                <span id="rail-time">12:00 PM ET</span>
+                <span class="host-chip">WITH MAC + SEAN</span>
+              </div>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#register"
+                  >Reserve your seat <span aria-hidden="true">↗</span></a
+                ><a class="button button-ghost" href="#system"
+                  >See the system</a
+                >
+              </div>
+              <div class="hero-meta">
+                <span><b>60</b> minutes</span><span><b>3</b> systems</span
+                ><span><b>1</b> live Q&amp;A</span>
+              </div>
+            </div>
+
+            <aside class="founder-portrait reveal" data-depth="3" aria-label="Mac Frederick and Sean Boyle of Momentum 360">
+              <div class="founder-frame">
+                <img
+                  src="assets/mac-sean-momentum-glass-hero.webp"
+                  alt="Mac Frederick and Sean Boyle, Momentum 360 founders"
+                  width="800"
+                  height="1251"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+                <div class="glass-badge">
+                  <span>THE FOUNDERS</span>
+                  <strong>MAC + SEAN</strong>
+                </div>
+                <div class="glass-session">
+                  <div>
+                    <span>NEXT LIVE SESSION</span>
+                    <strong id="hero-date">Thursday, August 27</strong>
+                    <p id="hero-time">12:00 PM ET</p>
+                  </div>
+                  <b>FREE PILOT</b>
+                </div>
+              </div>
+              <div class="founder-credit">
+                <span>MOMENTUM 360</span>
+                <span>BUILD IT. SYSTEMIZE IT. SCALE IT.</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section
+          class="scene registration-section"
+          id="register"
+          aria-labelledby="register-title"
+        >
+          <div class="shell">
+            <div class="command-frame reveal">
+              <div class="command-topbar">
+                <span class="terminal-dots" aria-hidden="true"
+                  ><i></i><i></i><i></i></span
+                ><span>MOMENTUM 360 / WORKSHOP REGISTRATION</span
+                ><span>CONSENT-FIRST PILOT</span>
+              </div>
+              <div class="command-layout">
+                <div class="command-intro">
+                  <p class="section-label">RESERVE YOUR SEAT</p>
+                  <h2 id="register-title">
+                    Bring the bottleneck slowing growth.
+                  </h2>
+                  <p>
+                    Bring one real offer, the numbers you already have, and the
+                    person responsible for the next move. Leave with a focused
+                    30&#8209;day action plan your team can run.
+                  </p>
+                  <div class="registration-promises">
+                    <span><b>01</b> Your seat is confirmed immediately</span
+                    ><span><b>02</b> Calendar access stays in your control</span
+                    ><span><b>03</b> Workshop updates are optional</span>
+                  </div>
+                </div>
+                <form action='/' class='registration-form' data-submit-mode='netlify' id='registration' method='POST' name='workshop-registration' novalidate>
+                  <input type="hidden" name="form-name" value="workshop-registration" />
+                  <input type="hidden" name="registration_id" />
+                  <input type="hidden" name="registration_status" value="registered" />
+                  <input type="hidden" name="registered_at" />
+                  <input type="hidden" name="event_title" />
+                  <input type="hidden" name="event_date" />
+                  <input type="hidden" name="event_time" />
+                  <input type="hidden" name="event_timezone" />
+                  <input type="hidden" name="page_url" />
+                  <input type="hidden" name="referrer" />
+                  <input type="hidden" name="utm_source" />
+                  <input type="hidden" name="utm_medium" />
+                  <input type="hidden" name="utm_campaign" />
+                  <input type="hidden" name="utm_content" />
+                  <input type="hidden" name="source_prospect_id" />
+                  <input type="hidden" name="source_list" />
+                  <p class="bot-field" aria-hidden="true">
+                    <label>Leave this field empty <input name="bot-field" /></label>
+                  </p>
+                  <div class="form-progress" aria-live="polite">
+                    <div><span>YOUR REGISTRATION</span><b id="formProgressText">0 of 5 complete</b></div>
+                    <span class="form-progress-track" aria-hidden="true"><i id="formProgressBar"></i></span>
+                  </div>
+                  <div class="form-step"><span>01</span><div><b>Your details</b><small>Where to hold the seat.</small></div></div>
+                  <div class="field-row">
+                    <label
+                      >First name<input
+                        name="first_name"
+                        autocomplete="given-name"
+                        required /></label
+                    ><label
+                      >Last name<input
+                        name="last_name"
+                        autocomplete="family-name"
+                        required
+                    /></label>
+                  </div>
+                  <label
+                    >Work email<input
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                  /></label>
+                  <label
+                    >Company<input
+                      name="company"
+                      autocomplete="organization"
+                      required
+                  /></label>
+                  <label
+                    >Biggest growth constraint<select
+                      name="constraint"
+                      required
+                    >
+                      <option value="">Choose one</option>
+                      <option>Generating qualified demand</option>
+                      <option>Converting leads</option>
+                      <option>Retaining customers</option>
+                      <option>Building repeatable operations</option>
+                    </select></label
+                  >
+                  <div class="form-step consent-step"><span>02</span><div><b>Calendar access</b><small>Choose whether to open your calendar after registration.</small></div></div>
+                  <label class="consent"
+                    ><input name="reminders" type="checkbox" /><span
+                      ><strong>Workshop updates</strong>Email me the
+                      confirmation, reminders, and replay. I can opt out at any
+                      time.</span
+                    ></label
+                  >
+                  <label class="consent"
+                    ><input
+                       name="calendar_open"
+                       type="checkbox"
+                     /><span
+                       ><strong>Open my calendar after registration</strong>Optional.
+                       We will open the calendar provider you choose so you can
+                       review and save the workshop yourself.</span
+                    ></label
+                  >
+                  <label
+                    >Open after registration<select
+                      name="calendar_provider"
+                      required
+                    >
+                      <option value="google">Google Calendar</option>
+                      <option value="outlook">Outlook Calendar</option>
+                      <option value="apple">Apple / other calendar app</option>
+                    </select></label
+                  >
+                  <button
+                    class="button button-primary command-submit"
+                    type="submit"
+                    data-state="idle"
+                  >
+                    <span class="submit-label">Reserve my seat</span
+                    ><span class="submit-glyph" aria-hidden="true">→</span>
+                  </button>
+                  <p class="form-privacy">
+                    We use your details to administer this workshop. Calendar
+                    access stays in your control, and other email updates are
+                    optional. Use an email address you control. Review Momentum
+                    Digital's
+                    <a
+                      href="https://www.needmomentum.com/privacy-policy/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Privacy Policy</a
+                    >.
+                  </p>
+                  <p id="form-error" class="form-error" role="alert" hidden>
+                    Please complete each required field.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene proof-section" aria-label="Momentum 360 recognition">
+          <div class="shell proof-inner">
+            <div class="proof-copy">
+              <small>BUILT BY A REAL AGENCY</small
+              ><strong
+                >Momentum 360 serves businesses across all 50 states and 10
+                countries.</strong
+              >
+            </div>
+            <div class="badge-row" aria-label="Momentum 360 recognition">
+              <div class="badge-track">
+                <div class="badge-set">
+                  <img src="assets/badges/google-partner.webp" alt="Google Partner" />
+                  <img src="assets/badges/inc-5000.png" alt="Inc. 5000" />
+                  <img src="assets/badges/philly-100.png" alt="Philadelphia 100" />
+                  <img src="assets/badges/rankwatch-2024.png" alt="RankWatch Top Agency 2024" />
+                  <img src="assets/badges/best-of-pennsylvania.webp" alt="Best of Pennsylvania" />
+                </div>
+                <div class="badge-set" aria-hidden="true">
+                  <img src="assets/badges/google-partner.webp" alt="" />
+                  <img src="assets/badges/inc-5000.png" alt="" />
+                  <img src="assets/badges/philly-100.png" alt="" />
+                  <img src="assets/badges/rankwatch-2024.png" alt="" />
+                  <img src="assets/badges/best-of-pennsylvania.webp" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene founder-story" id="hosts" aria-labelledby="hosts-title">
+          <div class="founder-story-media" aria-hidden="true">
+            <img
+              src="assets/mac-sean-instagram-editorial-source.jpg"
+              alt=""
+              width="1440"
+              height="1800"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="founder-story-wash"></div>
+          </div>
+          <div class="shell founder-story-shell">
+            <div class="founder-story-lead reveal">
+              <span class="story-kicker">MAC + SEAN / BUILT IN THE WORK</span>
+              <h2 id="hosts-title">Two founders. One next move.</h2>
+              <p>
+                Momentum’s process is direct: find what is blocking growth,
+                clarify the offer, choose one channel, assign an owner, and
+                measure the result. Mac and Sean bring that same owner-level
+                focus into the room.
+              </p>
+            </div>
+            <div class="founder-story-beats">
+              <article class="founder-beat founder-beat-mac reveal">
+                <figure class="founder-crop founder-crop-mac">
+                  <img
+                    src="assets/mac-frederick-founder-bio-v1.webp"
+                    alt="Mac Frederick, founder and managing partner of Momentum 360"
+                    width="1122"
+                    height="1402"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div class="founder-glass">
+                  <span>MAC FREDERICK</span>
+                  <p class="founder-role">FOUNDER &amp; MANAGING PARTNER</p>
+                  <h3>Find the demand. Make the offer easy to choose.</h3>
+                  <p>
+                    Mac founded Momentum after working with small businesses at
+                    Google. His lane is search, positioning, and the practical
+                    marketing decisions that turn visibility into qualified
+                    opportunities.
+                  </p>
+                  <p class="founder-workshop-note">
+                    In the workshop: identify the clearest growth lever and
+                    pressure-test the offer behind it.
+                  </p>
+                </div>
+              </article>
+              <article class="founder-beat founder-beat-sean reveal">
+                <figure class="founder-crop founder-crop-sean">
+                  <img
+                    src="assets/sean-boyle-founder-bio-v1.webp"
+                    alt="Sean Boyle, co-founder and managing partner of Momentum 360"
+                    width="1122"
+                    height="1402"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div class="founder-glass">
+                  <span>SEAN BOYLE</span>
+                  <p class="founder-role">CO-FOUNDER &amp; MANAGING PARTNER</p>
+                  <h3>Turn the next move into a system.</h3>
+                  <p>
+                    Sean grew through Momentum from sales intern to managing
+                    partner, learning the operation from the inside out. His
+                    lane is execution: connecting the message, follow-up, and
+                    ownership so the plan survives Monday morning.
+                  </p>
+                  <p class="founder-workshop-note">
+                    In the workshop: turn the plan into a repeatable weekly
+                    action your team can actually run.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="scene system-section"
+          id="system"
+          aria-labelledby="system-title"
+        >
+          <div class="shell">
+            <div class="section-heading reveal">
+              <p class="section-label">THE WORKSHOP SYSTEM</p>
+              <h2 id="system-title">
+                Three decisions. One 30&#8209;day plan.
+              </h2>
+              <p>
+                The hour moves from one measurable bottleneck to a clearer
+                offer, an accountable owner, and a weekly scorecard.
+              </p>
+            </div>
+            <div class="system-track reveal">
+              <article data-depth="2">
+                <span>01</span><b>DIAGNOSE</b>
+                <h3>Find the bottleneck.</h3>
+                <p>
+                  Use real numbers to identify where leads, sales, or delivery
+                  are slowing down.
+                </p>
+                <small>LEAVE WITH / ONE PRIORITY</small>
+              </article>
+              <article data-depth="3">
+                <span>02</span><b>CLARIFY</b>
+                <h3>Make the offer easier to buy.</h3>
+                <p>
+                  Define who it is for, the problem it solves, and why a
+                  customer should choose it.
+                </p>
+                <small>LEAVE WITH / A CLEAR OFFER</small>
+              </article>
+              <article data-depth="4">
+                <span>03</span><b>EXECUTE</b>
+                <h3>Build the 30&#8209;day plan.</h3>
+                <p>
+                  Choose the channel, assign an owner, set the weekly number,
+                  and schedule the review.
+                </p>
+                <small>LEAVE WITH / THE ACTION PLAN</small>
+              </article>
+            </div>
+            <div class="workshop-callout" id="workshop">
+              <div>
+                <span>LIVE WORKING SESSION</span>
+                <h2>Bring the mess.<br />Leave with the system.</h2>
+              </div>
+              <a class="button button-primary" href="#register"
+                >Reserve a free seat</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="scene agenda-section" id="agenda" aria-labelledby="agenda-title">
+          <div class="shell agenda-shell">
+            <div class="agenda-intro reveal">
+              <span class="story-kicker">THE 60-MINUTE BUILD</span>
+              <h2 id="agenda-title">One hour. One bottleneck. One 30&#8209;day plan.</h2>
+              <p>
+                This is a working session, not a slide deck. Each chapter
+                creates one part of the plan you take back to the team.
+              </p>
+              <a class="button button-ghost" href="#register">Bring your bottleneck</a>
+            </div>
+            <div class="agenda-viewport">
+              <div class="agenda-track" id="agendaTrack">
+                <article class="agenda-chapter">
+                  <span>00—10</span>
+                  <strong>Find the bottleneck</strong>
+                  <p>Use current numbers to choose the one problem worth solving.</p>
+                  <small>LEAVE WITH / ONE PRIORITY</small>
+                </article>
+                <article class="agenda-chapter">
+                  <span>10—25</span>
+                  <strong>Clarify the offer</strong>
+                  <p>Define the customer, problem, promise, and proof.</p>
+                  <small>LEAVE WITH / A STRONGER OFFER</small>
+                </article>
+                <article class="agenda-chapter">
+                  <span>25—40</span>
+                  <strong>Build the lead path</strong>
+                  <p>Choose one channel, one call to action, and one owner.</p>
+                  <small>LEAVE WITH / A LEAD PATH</small>
+                </article>
+                <article class="agenda-chapter">
+                  <span>40—50</span>
+                  <strong>Set the weekly scorecard</strong>
+                  <p>Choose the actions and numbers the team will review.</p>
+                  <small>LEAVE WITH / THE SCORECARD</small>
+                </article>
+                <article class="agenda-chapter">
+                  <span>50—60</span>
+                  <strong>Commit to the next 30 days</strong>
+                  <p>Assign the work, set the review date, and pressure-test the plan.</p>
+                  <small>LEAVE WITH / THE ACTION PLAN</small>
+                </article>
+              </div>
+            </div>
+            <div class="agenda-progress" aria-hidden="true"><i id="agendaProgress"></i></div>
+            <div class="agenda-controls" aria-label="Workshop chapters">
+              <button type="button" class="agenda-step" id="agendaPrev" aria-label="Previous workshop chapter">
+                <span aria-hidden="true">←</span>
+              </button>
+              <div class="agenda-dots" id="agendaDots" aria-hidden="true"></div>
+              <button type="button" class="agenda-step" id="agendaNext" aria-label="Next workshop chapter">
+                <span aria-hidden="true">→</span>
+              </button>
+              <span class="sr-only" id="agendaStatus" aria-live="polite"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene outcomes-section" aria-labelledby="outcomes-title">
+          <div class="shell outcomes-shell">
+            <div class="outcomes-statement reveal">
+              <span class="story-kicker">WHAT LEAVES THE ROOM</span>
+              <h2 id="outcomes-title">Four working documents. Ready for Monday.</h2>
+            </div>
+            <div class="outcome-board reveal">
+              <div class="outcome-line">
+                <span>01</span><strong>Growth bottleneck</strong
+                ><p>The exact point where leads, sales, or delivery slow down.</p>
+              </div>
+              <div class="outcome-line">
+                <span>02</span><strong>Offer statement</strong
+                ><p>Who it is for, what changes, and why it is credible.</p>
+              </div>
+              <div class="outcome-line">
+                <span>03</span><strong>Lead path</strong
+                ><p>The channel, call to action, follow-up, and owner.</p>
+              </div>
+              <div class="outcome-line">
+                <span>04</span><strong>30&#8209;day scorecard</strong
+                ><p>The actions, weekly numbers, owner, and review date.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene calendar-section" aria-labelledby="calendar-title">
+          <div class="shell calendar-shell">
+            <div class="calendar-event-card" aria-hidden="true">
+              <div class="event-card-topline">
+                <span>LIVE WORKSHOP</span><b>60 MINUTES</b>
+              </div>
+              <div class="event-date-block">
+                <span id="orbit-month">AUG</span><strong id="orbit-day">13</strong>
+              </div>
+              <div class="event-card-details">
+                <span>WITH MAC + SEAN</span>
+                <strong>Bring one bottleneck.<br />Leave with the plan.</strong>
+              </div>
+            </div>
+            <div class="calendar-copy reveal">
+              <span class="story-kicker">CALENDAR, WITH CONSENT</span>
+              <h2 id="calendar-title">Reserve your seat. Save the time yourself.</h2>
+              <p>
+                After registration, choose Google, Outlook, or ICS to review and
+                save the workshop in your own calendar. Nothing is added without
+                your action.
+              </p>
+              <div class="calendar-steps">
+                <span><b>1</b> Register</span>
+                <span><b>2</b> Review</span>
+                <span><b>3</b> Save</span>
+              </div>
+              <a class="button button-primary" href="#register">Reserve and add</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene faq-section" aria-labelledby="faq-title">
+          <div class="shell faq-shell">
+            <div class="faq-heading reveal">
+              <span class="story-kicker">BEFORE YOU JOIN</span>
+              <h2 id="faq-title">Bring the real version.</h2>
+              <p>Short answers for owners who want to know exactly what the hour is.</p>
+            </div>
+            <div class="faq-list reveal">
+              <details>
+                <summary>Who is this workshop for?</summary>
+                <p>
+                  Owners and operators of local service businesses who have an
+                  active offer, a visible growth constraint, and a team that
+                  needs a repeatable next move.
+                </p>
+              </details>
+              <details>
+                <summary>What should I bring?</summary>
+                <p>
+                  Bring one current offer, the bottleneck slowing it down, and
+                  the numbers your team already uses to judge progress.
+                </p>
+              </details>
+              <details>
+                <summary>Will anything be added to my calendar automatically?</summary>
+                <p>
+                  No. After registration, Google, Outlook, and ICS options let
+                  you review and save the workshop yourself. Nothing is added
+                  without your action.
+                </p>
+              </details>
+              <details>
+                <summary>What happens after the workshop?</summary>
+                <p>
+                  Registrants who request updates receive the approved replay
+                  and follow-up plan, with an unsubscribe link in every
+                  production email.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene closing-portal" aria-label="Workshop registration">
+          <div class="closing-portrait" aria-hidden="true"></div>
+          <div class="shell closing-shell">
+            <div class="closing-glass reveal">
+              <span class="story-kicker">THE NEXT MOVE IS THE WORK</span>
+              <h2>Bring the bottleneck.<br />Leave with a 30&#8209;day plan.</h2>
+              <p>
+                A focused owner workshop with Mac and Sean. No hidden consent.
+                No generic tactics. Four working documents your team can use.
+              </p>
+              <a class="button button-primary" href="#register"
+                >Reserve your seat <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section
+        class="view confirmation-view"
+        data-view="confirmation"
+        aria-labelledby="confirmation-title"
+        hidden
+      >
+        <div class="confirmation-shell">
+          <a class="brand-lockup" href="#register" data-route="register"
+            ><span class="brand-mark"
+              ><img
+                src="assets/momentum-360-logo.png"
+                alt="Momentum 360" /></span
+            ><span class="brand-copy"
+              ><strong>MOMENTUM <em>360</em></strong
+              ><small>GROWTH WORKSHOP</small></span
+            ></a
+          >
+          <div class="confirmation-card">
+            <p class="eyebrow">
+              <span class="live-dot"></span> REGISTRATION RECEIVED
+            </p>
+            <h2 id="confirmation-title">Your seat is on the board.</h2>
+            <p id="confirmation-copy">
+              Use the calendar options below to review and save the workshop.
+              Nothing is added without your action.
+            </p>
+            <dl class="event-ticket">
+              <div>
+                <dt>Workshop</dt>
+                <dd id="ticket-title">
+                  Build a Business That Grows Without You
+                </dd>
+              </div>
+              <div>
+                <dt>Date</dt>
+                <dd id="ticket-date">Thursday, August 27</dd>
+              </div>
+              <div>
+                <dt>Time</dt>
+                <dd id="ticket-time">12:00 PM ET · 60 minutes</dd>
+              </div>
+            </dl>
+            <div class="confirmation-actions">
+              <a
+                id="google-calendar"
+                class="button button-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open Google Calendar</a
+              ><a
+                id="outlook-calendar"
+                class="button button-ghost"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open Outlook Calendar</a
+              ><button
+                id="download-ics"
+                class="button button-ghost"
+                type="button"
+              >
+                Apple / other calendars
+              </button
+              ><a
+                class="button button-ghost"
+                href="webcal://momentum-workshop-pilot.netlify.app/momentum-workshops.ics"
+                >Subscribe to workshop updates</a
+              >
+            </div>
+            <p class="calendar-assurance">
+              Calendar times are locked to Eastern Time and converted correctly
+              for each provider. You review the event before saving it.
+            </p>
+            <button class="text-action" data-route="register" type="button">
+              Back to workshop
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="view operator-view"
+        data-view="operator"
+        aria-labelledby="studio-title"
+        hidden
+      >
+        <div class="shell operator-shell">
+          <header class="operator-heading">
+            <button class="text-action" data-route="register" type="button">
+              ← Back to workshop
+            </button>
+            <p class="eyebrow">
+              <span class="live-dot"></span> OPERATOR STUDIO
+            </p>
+            <h2 id="studio-title">Workshop pilot command.</h2>
+            <p>
+              Configure the event and simulate the attendee flow without
+              contacting anyone.
+            </p>
+          </header>
+          <section class="metric-strip">
+            <article>
+              <span>PAGE VISITS</span><strong>248</strong
+              ><small>Sample baseline</small>
+            </article>
+            <article>
+              <span>REGISTRATIONS</span
+              ><strong id="registration-count">32</strong
+              ><small>Includes local tests</small>
+            </article>
+            <article>
+              <span>REGISTRATION RATE</span
+              ><strong id="conversion-rate">12.9%</strong
+              ><small>Target: 15%</small>
+            </article>
+            <article>
+              <span>ATTENDANCE TARGET</span><strong>45%</strong
+              ><small>Reminder sequence on</small>
+            </article>
+          </section>
+          <div class="studio-grid">
+            <form id="event-config" class="studio-panel config-panel">
+              <div class="panel-heading">
+                <div>
+                  <span>EVENT SETTINGS</span>
+                  <h2>Workshop details</h2>
+                </div>
+                <small id="save-status">Saved locally</small>
+              </div>
+              <label
+                >Workshop title<input
+                  name="title"
+                  value="Build a Business That Grows Without You"
+                  required
+              /></label>
+              <div class="field-row">
+                <label
+                  >Date<input
+                    name="date"
+                    type="date"
+                    value="2026-08-27"
+                    required /></label
+                ><label
+                  >Start time<input
+                    name="time"
+                    type="time"
+                    value="12:00"
+                    required
+                /></label>
+              </div>
+              <div class="field-row">
+                <label
+                  >Duration<select name="duration">
+                    <option value="45">45 minutes</option>
+                    <option value="60" selected>60 minutes</option>
+                    <option value="90">90 minutes</option>
+                  </select></label
+                ><label
+                  >Timezone<select name="timezone">
+                    <option value="America/New_York">Eastern Time</option>
+                    <option value="America/Chicago">Central Time</option>
+                    <option value="America/Denver">Mountain Time</option>
+                    <option value="America/Los_Angeles">Pacific Time</option>
+                  </select></label
+                >
+              </div>
+              <label
+                >Meeting URL <small>(optional until approved)</small><input
+                  name="meeting_url"
+                  type="url"
+                  placeholder="https://meet.google.com/..."
+                  value="" /></label
+              ><label
+                >Host name<input
+                  name="host"
+                  value="Sean and Mac"
+                  required /></label
+              ><button class="button button-primary" type="submit">
+                Save and update workshop
+              </button>
+            </form>
+            <section class="studio-panel reminder-panel">
+              <div class="panel-heading">
+                <div>
+                  <span>SEQUENCE SIMULATOR</span>
+                  <h2>Reminder timeline</h2>
+                </div>
+                <small>NO DELIVERY</small>
+              </div>
+              <div class="timeline">
+                <article>
+                  <span>NOW</span>
+                  <div>
+                    <strong>Confirmation</strong>
+                    <p>Seat details and optional calendar actions.</p>
+                  </div>
+                  <button type="button" data-preview="confirmation">
+                    Preview
+                  </button>
+                </article>
+                <article>
+                  <span>24H</span>
+                  <div>
+                    <strong>Preparation reminder</strong>
+                    <p>Bring one offer and one growth constraint.</p>
+                  </div>
+                  <button type="button" data-preview="24-hour">Preview</button>
+                </article>
+                <article>
+                  <span>1H</span>
+                  <div>
+                    <strong>Starting soon</strong>
+                    <p>Meeting link and concise agenda.</p>
+                  </div>
+                  <button type="button" data-preview="1-hour">Preview</button>
+                </article>
+                <article>
+                  <span>+2H</span>
+                  <div>
+                    <strong>Replay and next step</strong>
+                    <p>Replay placeholder and optional call.</p>
+                  </div>
+                  <button type="button" data-preview="replay">Preview</button>
+                </article>
+              </div>
+            </section>
+            <section class="studio-panel registrants-panel">
+              <div class="panel-heading">
+                <div>
+                  <span>BROWSER ONLY</span>
+                  <h2>Test registrations</h2>
+                </div>
+                <button id="clear-tests" class="text-action" type="button">
+                  Clear tests
+                </button>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Company</th>
+                      <th>Constraint</th>
+                      <th>Consent</th>
+                    </tr>
+                  </thead>
+                  <tbody id="registrant-rows">
+                    <tr class="empty-row">
+                      <td colspan="4">No local test registrations yet.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <aside class="studio-panel readiness-panel">
+              <span>ACTIVATION GATE</span>
+              <h2>Still requires approval</h2>
+              <ul>
+                <li>Email service and sender domain</li>
+                <li>Audience source and lawful basis</li>
+                <li>Analytics and CRM destination</li>
+                <li>Final meeting URL and host schedule</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="mobile-conversion-dock" id="mobileDock" aria-label="Workshop registration shortcut">
+      <div><span>NEXT LIVE SESSION</span><strong id="dock-date">Thu, Aug 13 · 12 PM ET</strong></div>
+      <a class="button button-primary" href="#register">Reserve free seat</a>
+    </aside>
+
+    <dialog id="message-preview">
+      <button class="dialog-close" type="button" aria-label="Close preview">
+        ×
+      </button>
+      <p class="section-label">MESSAGE PREVIEW</p>
+      <h2 id="preview-subject">Confirmation</h2>
+      <div id="preview-body"></div>
+      <div class="dialog-note">Simulation only. No message is sent.</div>
+    </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

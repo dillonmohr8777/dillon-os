@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-31
+updated: 2026-08-14
 ---
 
 # INDEX — the front door
@@ -59,8 +59,10 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
+- [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
+- [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — free, legitimate franchise contact lanes with receipts.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
@@ -68,6 +70,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Outreach engine
 
+- [[02_Campaigns/Growth Workshop/Growth Workshop|Growth Workshop]] — Sean's Aug 27 webinar campaign: LP date push, franchise email pilot, drip copy, two-week calendar.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]] — Stage 2 qualification: scores the website a prospect already has, routes strong-site prospects to ads/SEO instead of a wasted rebuild. Skill: `/site-grade`.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]] — the eight-stage model and the honest automation status of each stage.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Market Roster|Market Roster]] — geography ladder (Philadelphia → PA → national) and vertical priorities.
