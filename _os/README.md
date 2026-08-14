@@ -12,6 +12,24 @@ node _os/server.js
 Requires Node 18+ and the `claude` CLI on PATH (only needed for the Command
 Deck buttons; the dashboard itself works without it).
 
+## Phone / always-on
+
+The live server stays on loopback because the Command Deck can run skills.
+The phone HUD is an **operator**, not a poster:
+
+- Capture → `00_Inbox/phone/`
+- Tap Today checkboxes on `Dashboard.md`
+- Open the Jesse 238 sheet, live sites, clients
+- Queue skills for the desktop HUD
+- Unlock writes with a fine-grained GitHub token stored on the phone
+
+```
+node _os/bin/export-hud.js
+node _os/bin/hud-deploy.js    # needs NETLIFY_AUTH_TOKEN
+```
+
+URL: https://dillon-os-hud.netlify.app
+
 ## What's on screen
 
 | Region | Source |
@@ -42,7 +60,7 @@ They also work straight from a terminal: `claude "/am-report"`.
 ## Tests
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/hud-mobile.test.js
 ```
 
 Deterministic checks for `12_Brain` structure, no `1Z_Brain` rival, skill path

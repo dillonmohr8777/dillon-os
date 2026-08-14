@@ -35,9 +35,9 @@ flowchart TD
 
 **Fields required:** business name, category/vertical, market, address, phone, website URL, Google Maps URL, review count, rating, place ID.
 
-**Status: manual to partly automated.** Orbit can run Maps-first discovery and identity verification. Jesse owns prospect data in `#ghl-leads-apollo`, and Mac's stated column set there is Platform, Campaign, Ad Set, Name, Number, Email, Business, Website/other plus custom columns for notes and status.
+**Status: automated against the live 238 sheet.** Dillon's Google Sheet [Momentum 360 - 238 Call-Ready Businesses](https://docs.google.com/spreadsheets/d/1U6qB7EWRL7DRXMK46W7-KLhDYoVXV4Q-9rpC14qMTlo) is the database Jesse is calling from (`JESSE CALL SHEET` + `BUSINESSES`). Public-safe snapshot: `_os/automation/fixtures/prospects/jesse-238-call-ready.json` (238 rows, 71 with public email; phones and street addresses omitted). Loader: `_os/outreach-engine/lib/jesse-238.js`. Stable ids are `J238-001` … `J238-238`. Mac's Zapier column set is emitted as `zapier.csv` by the outreach engine.
 
-**To automate:** one shared Google Sheet as the prospect database, populated by Maps scrape, with a stable `prospect_id`. That sheet is also the surface Zapier reads later, so it must be the single source of truth. **Owner: Jesse + Dillon.**
+The 238 sheet is that database today. New weekly batches still flow through OSM + radar; they merge here by domain.
 
 **Guardrails:** dedupe by place ID; suppress existing Momentum clients (cross-check `01_Clients/`), current pipeline deals, and anyone previously mailed.
 
@@ -126,21 +126,27 @@ Per the tier rules in `AGENTS.md` and the orchestrator spec, everything up to he
 
 | Step | Status | Notes |
 |---|---|---|
-| Deploy previews | Manual, scripted | Netlify per-batch, private noindex drafts. Needs a deploy token in Cursor Cloud Agent secrets to automate. |
-| Tracked URL per prospect | **Automated** | Batch runner emits `qr_target_url` with UTM parameters per prospect. |
-| QR code generation | Partly automated | Zapier + QRTiger from the sheet, per Mac's 2026-07-22 links. Our CSV is the input; we deliberately use his chosen tooling rather than a parallel QR system. |
-| Mail merge | Not automated | PostGrid or StackAdapt via Zapier from the sheet. Generated `prospects.csv` always sets `mail_ready=hold`; `qa_ready` is the automation signal. Only explicit human approval may flip `mail_ready`. Vendor not yet chosen. **This is the known gap.** |
-| Gatekeep the call | Not built | QR should land on the site with a clear "this was built for you, book a call" path, and the booking link should carry the prospect ID so scans attribute to calls. |
+| Deploy previews | Manual, scripted | 238 live noindex drafts already sit on the Netlify hub. HUD also serves the pack at `/outreach/<batch>/`. |
+| Tracked URL per prospect | **Automated** | `qr_target_url` with UTM parameters per prospect. |
+| QR code generation | **Automated locally** | `_os/outreach-engine/lib/qr.js` writes SVG per row. `qrtiger.csv` still feeds Mac's Zapier + QRTiger zap if he wants that path. |
+| Mail merge | **Proof automated, send is not** | Print-ready 6×4 HTML in `mail/`. `postgrid.csv` + `zapier.csv` for the vendor zap. `mail_ready` always `hold` until `approve-batch.js`. Vendor still Mac's call (PostGrid or StackAdapt). |
+| Gatekeep the call | **Automated** | `gate/<slug>/` landing: "we built this for you" → homepage → book-a-call form with prospect id. HUD `POST /api/outreach/book` logs the request and does not send. |
 
-**To automate next, in order:** Netlify deploy token, then the mail vendor decision, then the QR-to-booking attribution.
+**To automate next:** Mac/Melissa approve a list, pick the mail vendor, drop `postgrid.csv` into the zap. No engineering blocker.
 
 ## Stage 8: Learn
 
 **Goal:** the engine gets smarter every week.
 
-**Status: not built.**
+**Status: automated.**
 
-Per-batch ledger: `02_Campaigns/AI Site Builder Outreach Engine/batches/<batch-id>/results.md` recording pieces mailed, scans, calls booked, closes, and revenue, sliced by market, vertical, and design direction. Feeds Stage 2 scoring and the offer.
+Per-batch ledger: `batches/<batch-id>/results.md` + `results.json`. Ingest:
+
+```bash
+node _os/outreach-engine/bin/record-results.js <batch-dir> --prospect J238-001 --event scan
+```
+
+Events: `scan`, `call_booked`, `mailed`, `closed`, `no_answer`, `not_interested`, `wrong_number`. Sliced by vertical. No PII.
 
 This mirrors the Optimization Ledger hypothesis pattern from the orchestrator spec: every batch is a hypothesis with an expected outcome and a review date; wins become patterns, losses become documented mistakes.
 
@@ -148,13 +154,13 @@ This mirrors the Optimization Ledger hypothesis pattern from the orchestrator sp
 
 | Stage | Automated | Owner | Next action |
 |---|---|---|---|
-| 1 Discover | Partly | Jesse + Dillon | OSM discovery shipped; still needs the shared sheet with stable IDs |
+| 1 Discover | Yes | Jesse + Dillon | 238-row sheet is live; OSM/radar still feeds new weeks |
 | 2 Qualify | Yes | Dillon | Feed Maps review/ad data into the opportunity score |
 | 3 Brief | Yes (agent) | Dillon | None; runbook exists |
-| 4 Build | Yes | Dillon | None; batch runner shipped |
-| 5 Quality gate | Yes + human | Dillon | None; enforced per batch |
-| 6 Approval | Manual by design | Mac / Melissa | Keep the one-link plus Loom format |
-| 7 Activate | Partly | Dillon + Mac | Deploy token, then pick the mail vendor |
-| 8 Learn | No | Dillon | Create the results ledger on batch 1 |
+| 4 Build | Yes | Dillon | 238 already built; factory still runs new weeks |
+| 5 Quality gate | Yes + human | Dillon | 238 QA passed 2026-08-13 |
+| 6 Approval | Manual by design | Mac / Melissa | `approve-batch.js` is the only mail_ready flip |
+| 7 Activate | Yes, send held | Dillon + Mac | QR + mail proof + gatekeep + Zapier CSVs shipped |
+| 8 Learn | Yes | Dillon | Ledger + HUD booking log |
 
-**Short answer for Mac:** stages 2 through 5 are fully automated now — one command grades a market, another builds and QAs a whole batch. Stage 1 has automated discovery but still wants the shared sheet for review and ad data. Stage 7 is blocked on a mail vendor decision plus a deploy token. Approval stays human on purpose.
+**Short answer for Mac:** one command now runs the whole chain on the 238 sheet Jesse already has. Sites are live. QR, mail proofs, and the sales-call gate are generated. Nothing mails until you or Melissa approve the exact list. Pick PostGrid or StackAdapt and the zap reads the CSV this already emits.

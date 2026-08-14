@@ -1,6 +1,6 @@
 ---
 tags: [projects, index]
-updated: 2026-07-29
+updated: 2026-08-14
 ---
 
 # Projects
@@ -14,6 +14,8 @@ Use [[12_Brain/templates/Project|Project template]]. View in
 ## Active
 
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — evidence-backed audit engine wrapping the existing radar.
+- [[12_Brain/projects/Outreach Engine E2E|Outreach Engine E2E]] — QR / mail / gatekeep pack on the 238 Jesse call sheet.
+- [[12_Brain/projects/Dillon OS Mobile HUD|Dillon OS Mobile HUD]] — installable read-only phone snapshot of the HUD.
 
 ## Links
 

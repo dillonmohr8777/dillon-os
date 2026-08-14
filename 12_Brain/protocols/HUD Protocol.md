@@ -1,6 +1,6 @@
 ---
 tags: [protocol]
-updated: 2026-07-29
+updated: 2026-08-14
 source: "[[_os/README]]"
 ---
 
@@ -14,4 +14,10 @@ source: "[[_os/README]]"
 3. Browser polls every 15s — no restart needed after vault edits.
 4. Command Deck skills include brain loops (`vault-compile`, `wiki-lint`,
    `synthesize`, `session-mine`, `research-sweep`) when the `claude` CLI is on PATH.
-5. The HUD never writes the vault itself except via skill jobs.
+5. Loopback HUD writes via `/api/inbox`, `/api/directive`, `/api/today`, and
+   `/api/queue-skill`. Claude jobs still only start from `/api/run` on loopback.
+6. Phone HUD (https://dillon-os-hud.netlify.app) is an operator: capture to
+   `00_Inbox/phone/`, tap Today checkboxes, open the Jesse sheet / live sites,
+   queue skills. Claude Command Deck jobs still do not run on that origin.
+   Hosted writes use a phone-stored GitHub token (Contents: read/write).
+7. **Do not call or email anyone.** No `tel:`, `mailto:`, Gmail send, or mail drop from the HUD or this agent.

@@ -19,6 +19,8 @@ const path = require('node:path');
 const { spawn } = require('node:child_process');
 const crypto = require('node:crypto');
 const { buildState, getSkills } = require('./vault-state');
+const PhoneOps = require('./public/phone-ops');
+const { scanText } = require('./public-safety');
 
 const VAULT = path.resolve(__dirname, '..');
 const PUBLIC = path.join(__dirname, 'public');
@@ -99,6 +101,41 @@ function json(res, code, body) {
   res.end(data);
 }
 
+function readJson(req, res, fn, limit = 8192) {
+  let body = '';
+  req.on('data', (c) => { body += c; if (body.length > limit) req.destroy(); });
+  req.on('end', () => {
+    try { fn(JSON.parse(body || '{}')); }
+    catch (err) { json(res, 400, { error: err.message || 'bad request' }); }
+  });
+}
+
+const PUBLIC_TYPES = {
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.webmanifest': 'application/manifest+json',
+  '.json': 'application/json',
+  '.png': 'image/png',
+  '.svg': 'image/svg+xml',
+  '.txt': 'text/plain; charset=utf-8',
+};
+
+function servePublic(pathname, res) {
+  const rel = decodeURIComponent(pathname).replace(/^\/+/, '');
+  if (!rel || rel.includes('..') || path.isAbsolute(rel)) return false;
+  const resolved = path.resolve(path.join(PUBLIC, rel));
+  const root = path.resolve(PUBLIC) + path.sep;
+  if (resolved !== path.resolve(PUBLIC) && !resolved.startsWith(root)) return false;
+  if (!fs.existsSync(resolved) || fs.statSync(resolved).isDirectory()) return false;
+  const ext = path.extname(resolved);
+  res.writeHead(200, {
+    'content-type': PUBLIC_TYPES[ext] || 'application/octet-stream',
+    'cache-control': ext === '.png' ? 'public, max-age=86400' : 'no-store',
+  });
+  res.end(fs.readFileSync(resolved));
+  return true;
+}
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   const p = url.pathname;
@@ -111,12 +148,77 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  if (p === '/favicon.ico') { res.writeHead(204); return res.end(); }
+  if (p === '/favicon.ico') {
+    const icon = path.join(PUBLIC, 'icons', 'icon-192.png');
+    if (fs.existsSync(icon)) {
+      res.writeHead(200, { 'content-type': 'image/png', 'cache-control': 'no-store' });
+      return res.end(fs.readFileSync(icon));
+    }
+    res.writeHead(204); return res.end();
+  }
+
+  const publicFile = servePublic(p, res);
+  if (publicFile) return;
 
   if (p === '/api/state' && req.method === 'GET') {
     try { json(res, 200, statePayload()); }
     catch (err) { json(res, 500, { error: err.message }); }
     return;
+  }
+
+  if (p === '/api/ops' && req.method === 'GET') {
+    json(res, 200, { live: true, writes: true, skills: true });
+    return;
+  }
+
+  if (p === '/api/inbox' && req.method === 'POST') {
+    return readJson(req, res, (payload) => {
+      const text = String(payload.text || '').trim();
+      if (!text) return json(res, 400, { error: 'text required' });
+      const rel = PhoneOps.inboxPath(text, new Date());
+      const markdown = PhoneOps.inboxNote(text, new Date());
+      if (scanText(markdown).length) return json(res, 400, { error: 'public repo: that looks like PII — not saved' });
+      const dest = path.join(VAULT, rel);
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+      fs.writeFileSync(dest, markdown);
+      json(res, 200, { ok: true, path: rel });
+    });
+  }
+
+  if (p === '/api/directive' && req.method === 'POST') {
+    return readJson(req, res, (payload) => {
+      const text = String(payload.text || '').trim();
+      if (!text) return json(res, 400, { error: 'text required' });
+      const file = path.join(VAULT, 'Dashboard.md');
+      const next = PhoneOps.toggleDirective(fs.readFileSync(file, 'utf8'), text, !!payload.done);
+      fs.writeFileSync(file, next);
+      json(res, 200, { ok: true, path: 'Dashboard.md', done: !!payload.done });
+    });
+  }
+
+  if (p === '/api/today' && req.method === 'POST') {
+    return readJson(req, res, (payload) => {
+      const text = String(payload.text || '').trim();
+      if (!text) return json(res, 400, { error: 'text required' });
+      if (scanText(text).length) return json(res, 400, { error: 'public repo: that looks like PII — not saved' });
+      const file = path.join(VAULT, 'Dashboard.md');
+      fs.writeFileSync(file, PhoneOps.addDirective(fs.readFileSync(file, 'utf8'), text));
+      json(res, 200, { ok: true, path: 'Dashboard.md' });
+    });
+  }
+
+  if (p === '/api/queue-skill' && req.method === 'POST') {
+    return readJson(req, res, (payload) => {
+      const skill = String(payload.skill || '').trim();
+      const known = getSkills(VAULT).some((s) => s.name === skill);
+      if (!known) return json(res, 400, { error: 'unknown skill: ' + skill });
+      const rel = '12_Brain/queue/phone-hud.jsonl';
+      const file = path.join(VAULT, rel);
+      const prev = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '';
+      fs.mkdirSync(path.dirname(file), { recursive: true });
+      fs.writeFileSync(file, PhoneOps.appendQueue(prev, skill, new Date()));
+      json(res, 200, { ok: true, path: rel, skill, queued: true });
+    });
   }
 
   if (p === '/api/run' && req.method === 'POST') {
@@ -146,6 +248,66 @@ const server = http.createServer((req, res) => {
     job.watchers.add(res);
     req.on('close', () => job.watchers.delete(res));
     return;
+  }
+
+  if (p === '/api/outreach/book' && req.method === 'POST') {
+    let body = '';
+    req.on('data', (c) => { body += c; if (body.length > 8192) req.destroy(); });
+    req.on('end', () => {
+      try {
+        const payload = JSON.parse(body || '{}');
+        const batchId = String(payload.batch_id || 'jesse-238').replace(/[^a-z0-9._-]/gi, '');
+        const prospectId = String(payload.prospect_id || '').slice(0, 40);
+        if (!prospectId) return json(res, 400, { error: 'prospect_id required' });
+        const dir = path.join(VAULT, '02_Campaigns/AI Site Builder Outreach Engine/batches', batchId);
+        if (!fs.existsSync(dir)) return json(res, 404, { error: 'unknown batch' });
+        const row = {
+          type: 'call_booked',
+          prospect_id: prospectId,
+          at: new Date().toISOString(),
+        };
+        fs.appendFileSync(path.join(dir, 'bookings.jsonl'), JSON.stringify(row) + '\n');
+        try {
+          const { loadLedger, saveLedger, recordEvent, emptyLedger } = require('./outreach-engine/lib/ledger');
+          let ledger = loadLedger(dir);
+          if (!ledger) {
+            const batch = JSON.parse(fs.readFileSync(path.join(dir, 'batch.json'), 'utf8'));
+            ledger = emptyLedger(batch);
+          }
+          recordEvent(ledger, row);
+          saveLedger(dir, ledger);
+        } catch { /* ledger is best-effort */ }
+        json(res, 200, { ok: true, held: true });
+      } catch {
+        json(res, 400, { error: 'bad request' });
+      }
+    });
+    return;
+  }
+
+  const outreach = p.match(/^\/outreach\/([a-z0-9._-]+)(?:\/(.*))?$/i);
+  if (outreach && req.method === 'GET') {
+    const batchId = outreach[1];
+    const rel = decodeURIComponent(outreach[2] || 'index.html').replace(/^\/+/, '');
+    if (rel.includes('..') || path.isAbsolute(rel)) return json(res, 400, { error: 'bad path' });
+    const root = path.join(VAULT, '02_Campaigns/AI Site Builder Outreach Engine/batches', batchId);
+    const file = path.join(root, rel);
+    const resolved = path.resolve(file);
+    if (!resolved.startsWith(path.resolve(root) + path.sep) && resolved !== path.resolve(root)) {
+      return json(res, 400, { error: 'bad path' });
+    }
+    if (!fs.existsSync(resolved) || fs.statSync(resolved).isDirectory()) {
+      const index = path.join(resolved, 'index.html');
+      if (fs.existsSync(index)) {
+        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+        return res.end(fs.readFileSync(index));
+      }
+      return json(res, 404, { error: 'not found' });
+    }
+    const ext = path.extname(resolved);
+    const types = { '.html': 'text/html; charset=utf-8', '.svg': 'image/svg+xml', '.csv': 'text/csv; charset=utf-8', '.json': 'application/json', '.md': 'text/markdown; charset=utf-8' };
+    res.writeHead(200, { 'content-type': types[ext] || 'application/octet-stream', 'cache-control': 'no-store' });
+    return res.end(fs.readFileSync(resolved));
   }
 
   json(res, 404, { error: 'not found' });

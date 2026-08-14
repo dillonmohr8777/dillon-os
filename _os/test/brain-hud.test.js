@@ -88,9 +88,16 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
 
   it('Command Deck includes brain loop skills', () => {
     const names = getSkills(VAULT).map((s) => s.name);
-    for (const need of ['vault-compile', 'wiki-lint', 'synthesize', 'session-mine', 'research-sweep']) {
+    for (const need of ['vault-compile', 'wiki-lint', 'synthesize', 'session-mine', 'research-sweep', 'outreach-engine']) {
       assert.ok(names.includes(need), `missing skill ${need}`);
     }
+  });
+
+  it('buildState exposes Jesse 238 outreach vitals', () => {
+    const state = buildState(VAULT);
+    assert.ok(state.outreach);
+    assert.equal(state.outreach.jesse238, 238);
+    assert.equal(state.outreach.mailHold, true);
   });
 
   it('preserves Dashboard Today directives for the HUD', () => {

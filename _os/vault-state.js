@@ -128,6 +128,7 @@ function getSkills(vault) {
     'am-report', 'inbox-brief', 'plan-today', 'client-pulse',
     'metrics-pull', 'content-scan', 'week-review', 'vault-clean',
     'session-mine', 'vault-compile', 'wiki-lint', 'synthesize', 'research-sweep',
+    'outreach-engine', 'site-batch',
   ];
   skills.sort((a, b) => {
     const ai = order.indexOf(a.name), bi = order.indexOf(b.name);
@@ -257,6 +258,41 @@ function buildState(vault) {
     docs: recent.slice(0, 7).map((n) => ({ rel: n.rel, name: path.basename(n.rel, '.md'), ago: relTime(n.mtime) })),
     wire: recent.slice(0, 12).map((n) => ({ text: `${path.basename(n.rel, '.md')} touched`, ago: relTime(n.mtime) })),
     skills: getSkills(vault),
+    outreach: getOutreachVitals(vault),
+  };
+}
+
+function getOutreachVitals(vault) {
+  const fixture = path.join(vault, '_os/automation/fixtures/prospects/jesse-238-call-ready.json');
+  let jesse = { count: 0, withEmail: 0 };
+  try {
+    const doc = JSON.parse(fs.readFileSync(fixture, 'utf8'));
+    const prospects = doc.prospects || [];
+    jesse = {
+      count: prospects.length,
+      withEmail: prospects.filter((p) => p.has_email).length,
+      source: doc._source || 'jesse-238',
+    };
+  } catch { /* fixture optional in tests with empty vaults */ }
+  const batchDir = path.join(vault, '02_Campaigns/AI Site Builder Outreach Engine/batches');
+  let latest = null;
+  try {
+    const ids = fs.readdirSync(batchDir, { withFileTypes: true }).filter((e) => e.isDirectory()).map((e) => e.name);
+    for (const id of ids) {
+      const summaryFile = path.join(batchDir, id, 'engine-summary.json');
+      if (!fs.existsSync(summaryFile)) continue;
+      const st = fs.statSync(summaryFile);
+      if (!latest || st.mtimeMs > latest.mtime) {
+        latest = { ...JSON.parse(fs.readFileSync(summaryFile, 'utf8')), mtime: st.mtimeMs };
+      }
+    }
+  } catch { /* no batches yet */ }
+  return {
+    jesse238: jesse.count,
+    jesseEmail: jesse.withEmail,
+    latestBatch: latest ? latest.batchId : null,
+    latestCount: latest ? latest.count : 0,
+    mailHold: true,
   };
 }
 
@@ -277,4 +313,5 @@ module.exports = {
   requiredBrainPaths,
   assertBrainStructure,
   buildState,
+  getOutreachVitals,
 };

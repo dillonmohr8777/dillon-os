@@ -1,0 +1,47 @@
+name: Dillon OS HUD — phone snapshot
+
+# Rebuild the read-only HUD and publish it so Dillon can open it on a phone
+# without the laptop. Command Deck is not on this origin.
+on:
+  push:
+    paths:
+      - '_os/public/**'
+      - '_os/bin/export-hud.js'
+      - '_os/bin/hud-deploy.js'
+      - '_os/vault-state.js'
+      - '_os/hud-icons.js'
+      - '_os/server.js'
+      - '12_Brain/**'
+      - 'Dashboard.md'
+      - 'System/OS Config.md'
+      - '.claude/skills/**'
+      - '.github/workflows/hud-mobile.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: hud-mobile
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Test HUD + public safety
+        run: node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/hud-mobile.test.js
+
+      - name: Publish phone HUD
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: node _os/bin/hud-deploy.js

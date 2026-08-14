@@ -4,6 +4,8 @@
 
 This repo is **Dillon OS** — Dillon Mohr's Obsidian vault + agentic OS.
 
+- **Do not call or email anyone.** No `mailto:`, no `tel:`, no outbound mail, no dialer. `mail_ready` stays hold unless a named human already approved — and even then this agent does not send.
+
 - **Canonical second-brain layer:** `12_Brain/` (front door: `12_Brain/INDEX.md`)
 - **Do not create `1Z_Brain/`** or any competing brain tree.
 - **GitHub is PUBLIC.** Sensitive notes → `12_Brain/private/` (gitignored). See `12_Brain/private/README.md`.
@@ -21,7 +23,8 @@ for the two npm-based sites below.
 
 | Product | Location | Dev command | URL | Notes |
 |---|---|---|---|---|
-| D.I.L.L.O.N. OS (HUD) — flagship | `_os/` | `node _os/server.js` | http://127.0.0.1:4242 | Reads the vault + `12_Brain` live. `GET /api/state` includes `brain` vitals. |
+| D.I.L.L.O.N. OS (HUD) — flagship | `_os/` | `node _os/server.js` | http://127.0.0.1:4242 | Reads the vault + `12_Brain` live. Phone operator: https://dillon-os-hud.netlify.app (capture / Today / links; Claude jobs stay desktop). |
+| Outreach engine | `_os/outreach-engine/` | `node _os/outreach-engine/bin/run-engine.js --source jesse-238` | http://127.0.0.1:4242/outreach/jesse-238/ | QR + mail proof + gatekeep around the 238 Jesse call sheet. `mail_ready` stays hold. |
 | IMMOHRTAL site | `immohrtal-site/` | `npm run dev` | http://localhost:5173 | Vite 6 + React 19. Append `?forcegl` in headless/VM browsers. |
 | Shadow HVAC site | `01_Clients/Shadow HVAC/website/` | `npm run dev` | http://localhost:3000 | Next.js 15. First route compile is slow. |
 | Mohr Media site | `mohr-media-site/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML/JS/WebGL. |
@@ -42,7 +45,7 @@ Inspector check. Any new MCP goes through `_os/automation/bin/mcp-gate.js` first
 ### Tests / lint
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/hud-mobile.test.js _os/test/phone-ops.test.js _os/outreach-engine/tests/outreach-engine.test.js
 ```
 
 - Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, and public-safety scanning.

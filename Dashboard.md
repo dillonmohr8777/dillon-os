@@ -19,6 +19,7 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
+- [x] Call Mac about mail vendor
 - [ ] Check inbox and process
 - [ ] Review active campaigns
 - [ ] Follow up with clients

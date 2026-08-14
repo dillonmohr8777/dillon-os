@@ -12,8 +12,15 @@ node_modules/
 .next/
 dist/
 
+# Generated phone HUD snapshot (rebuild with node _os/bin/export-hud.js)
+_os/hud-dist/
+
 # Playwright QA output
 _templates/site-factory/qa-shots/
+
+# Outreach engine local booking captures (may contain callback details)
+02_Campaigns/AI Site Builder Outreach Engine/batches/**/bookings.jsonl
+_os/outreach-engine/artifacts/
 
 # Public-safety scanner writes this allowlisted fixture during tests
 _os/test/fixtures/
