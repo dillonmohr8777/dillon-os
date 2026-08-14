@@ -1,6 +1,6 @@
 ---
 tags: [protocols, index]
-updated: 2026-07-29
+updated: 2026-08-10
 ---
 
 # Protocols
@@ -13,6 +13,7 @@ operating protocols the brain layer expects every agent to follow.
 
 - [[12_Brain/protocols/Compiler Protocol|Compiler Protocol]] — raw → wiki compile rules
 - [[12_Brain/protocols/HUD Protocol|HUD Protocol]] — how D.I.L.L.O.N. OS reads the vault
+- [[12_Brain/protocols/Branded Deliverable Protocol|Branded Deliverable Protocol]] — every Align HCM deliverable ships with the exact logo + shipped tokens; tabular work gets an HTML twin
 
 ## Agent definitions (working vault)
 
