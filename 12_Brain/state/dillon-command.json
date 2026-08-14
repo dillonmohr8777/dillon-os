@@ -1,0 +1,16 @@
+{
+  "automation_id": "dillon-command",
+  "started_at": "2026-08-14T13:20:35.586Z",
+  "status": "ok",
+  "dry_run": true,
+  "summary": "Scaffolded /workspace/automation-runs/dillon-command/2099-01-01",
+  "counts": {
+    "lanes": 8,
+    "preflight_jobs": 0,
+    "preflight_ok": 0
+  },
+  "artifact_paths": [
+    "/workspace/automation-runs/dillon-command/2099-01-01"
+  ],
+  "written_at": "2026-08-14T13:20:35.587Z"
+}

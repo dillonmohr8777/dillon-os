@@ -1,23 +1,51 @@
-# Daily Pulse 2026-04-15
+# Daily Pulse — 2026-08-14
 
-## Coverage Notes
-• Searched Gmail for Mia Lange (mia@getreplenish.com), Anthony Miller (amiller@nkcdc.org), Sean Boyle (sean@needmomentum.com) by address, plus David Stemm, Beth Frederick, Mac Frederick, Kimberly Iraci, and Andy by name. Andy (Bar Crawl USA) and Kimberly Iraci have no email on file, so those are name matches only and can miss.
-• Scanned 01_Clients/ for files modified within the last 24 hours.
+## Coverage notes
 
-## Active Clients
-• None. No files under 01_Clients/ changed in the last 24 hours.
+- Scanned all `01_Clients/*/overview.md` frontmatter (`status`, `due`, `next_action`, `last_touched`).
+- Frontmatter validation: **38/38 complete** (preflight `frontmatter-validate.js`).
+- Gmail/Slack live comms not scanned — pulse is vault-only.
+- Many `last_touched` dates are April 2026; treat stalled list as **data staleness** until refreshed on live work.
 
-## Unread/Unanswered Emails
-• Omega Landscaping / Momentum thread "Re: Adding User To Google Ad Account" from John Belaska. Roughly 21 hours old. Sean Boyle and beth@needmomentum.com are cc'd alongside you. John's asking whether Thursday works for a Google Ads account discussion. You're cc'd, not a direct recipient, so monitor unless Sean pulls you in.
-• Buzz Bull / CCA thread "Buzz Bull CCA / Sterile Care" from Mike Ross at projectcorporate.com. Roughly 22 hours old. Teams meeting invite touching Commercial Cleaners Alliance (David Stemm's org). Confirm attendance.
+## Moving (< 48h since `last_touched`)
 
-## Pending Deliverables (due in 48 hours)
-• Nothing surfaced. Your vault doesn't carry due date frontmatter on client notes, so this section can't be populated until notes include a `due` or `next_action` field.
+- **BigOrange Marketing** — touched 2026-07-30; pillar audit prep for Aug 10 review (now overdue).
 
-## Stalled Items (7+ days no update)
-• Same limitation as above. Every client note under 01_Clients/ is older than 24 hours by modified time, so either everything's stalled or the vault isn't where you're tracking daily movement. Worth clarifying the source of truth before the next pulse.
+## Watch (2–7 days)
 
-## Tomorrow's Priority Stack
-1. Confirm the Buzz Bull / CCA Teams meeting with Mike Ross at projectcorporate.com. Highest urgency because it's a calendar commitment with a hard time.
-2. Decide whether to sit in on the Omega Landscaping Google Ads sync John Belaska's proposing for Thursday. You're cc'd, not the owner, so a short "I'll join if helpful" reply is enough.
-3. Add frontmatter (`next_action`, `due`, `last_touched`) to 01_Clients/ notes so future pulses can populate Pending Deliverables and Stalled Items against real data.
+- **Bridge Software Development** — touched 2026-07-29; `next_action` still TBD.
+
+## Stalled (7+ days untouched or stale frontmatter)
+
+| Client | last_touched | Risk |
+| --- | --- | --- |
+| Shadow HVAC | 2026-03-02 | LSA/GBP cadence unknown for months |
+| Link Eze | 2026-04-05 | MFA/enhanced conversions deadline passed |
+| Hardwood Artisan | 2026-04-07 | **at_risk** — card on file / engagement pause |
+| Fresh Blends Replenish | 2026-04-13 | First-week pacing check never closed out |
+| NKCDC | 2026-04-15 | Tax prep launch blocked on client |
+| Bar Crawl USA | 2026-04-15 | Disapproved ads still open |
+| Kimberly James Bridal | 2026-04-15 | Timeline page publish unverified |
+| Bok Law | 2026-04-14 | Sunday social cadence — missed Aug 9 per automation memory |
+| Commercial Cleaners Alliance | 2026-04-14 | Creative delivery overdue |
+| Jeff Hozias | 2026-04-14 | Meta launch status unclear |
+| Omega Landscaping | 2026-04-14 | Drone footage + John Belaska meeting |
+| Onsite Concrete | 2026-04-09 | Weekly call note stale |
+
+## Due / overdue (`due` field)
+
+| Client | due | next_action |
+| --- | --- | --- |
+| BigOrange Marketing | **2026-08-10 (OVERDUE)** | Custom Home Builder pillar audit + Janice interview |
+| Bar Crawl USA | 2026-04-25 (stale) | Resolve disapproved Halloween/Fall ads |
+| NKCDC | 2026-04-16 (stale) | Nudge Anthony on Free Tax Prep launch |
+| Commercial Cleaners Alliance | 2026-04-16 (stale) | Deliver CCA + NexGen creatives |
+| Hardwood Artisan | 2026-04-18 (stale) | Card on file — engagement at risk |
+| Bok Law | 2026-04-19 (stale) | Weekly social cadence |
+| Link Eze | 2026-04-06 (stale) | Enhanced conversions / MFA |
+
+## Tomorrow's priority stack
+
+1. **BigOrange overdue deliverable** — only hard date still within ROAD TO 100 relevance; ship or reset date with Janice.
+2. **Four Slack mirrors** — bot alerts + Melissa Loom are boss-visible; draft replies for approval.
+3. **Refresh client `last_touched`** on whoever you actually touch today so future pulses aren't noise.

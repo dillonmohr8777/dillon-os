@@ -1,0 +1,168 @@
+{
+  "workflow_id": "dillon-command",
+  "run_id": "dillon-command-2099-01-01",
+  "date": "2099-01-01",
+  "started_at": "2026-08-14T13:20:35.586Z",
+  "finished_at": null,
+  "status": "running",
+  "commander": "Master Agent",
+  "contract": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "lanes": [
+    {
+      "id": "comms",
+      "label": "Gmail / Slack / inbox triage",
+      "codex_lane": "B",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "slack-intake",
+        "inbox-brief"
+      ],
+      "outputs": [
+        "00_Inbox/slack/",
+        "Daily-Briefs/slack-intake-YYYY-MM-DD.md",
+        "Daily-Briefs/inbox-brief-YYYY-MM-DD.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "clients",
+      "label": "Client roster pulse + frontmatter health",
+      "codex_lane": "F",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "client-pulse"
+      ],
+      "outputs": [
+        "Daily-Briefs/pulse-today.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "intelligence",
+      "label": "Research sweep + Grok/xAI ingest",
+      "codex_lane": "H",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "research-sweep"
+      ],
+      "outputs": [
+        "12_Brain/raw/research/",
+        "12_Brain/06_Research/",
+        "12_Brain/state/grok-intelligence-ingest.json"
+      ],
+      "worker": null
+    },
+    {
+      "id": "websites",
+      "label": "Site health sentinel + property QA",
+      "codex_lane": "D",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "site-grade",
+        "ux-audit"
+      ],
+      "outputs": [
+        "Daily-Briefs/site-health-report.md",
+        "12_Brain/state/site-health-sentinel.json"
+      ],
+      "worker": null
+    },
+    {
+      "id": "outreach",
+      "label": "Prospect radar + site-factory queue",
+      "codex_lane": "Mac pipeline",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "site-factory",
+        "site-batch",
+        "site-grade"
+      ],
+      "outputs": [
+        "12_Brain/queue/",
+        "08_Prospects/",
+        "02_Campaigns/AI Site Builder Outreach Engine/"
+      ],
+      "worker": null
+    },
+    {
+      "id": "ads",
+      "label": "Paid media scouts + metrics",
+      "codex_lane": "C",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "metrics-pull"
+      ],
+      "outputs": [
+        "01_Clients/*/Optimization Ledger.md"
+      ],
+      "worker": null
+    },
+    {
+      "id": "reporting",
+      "label": "Client report factory",
+      "codex_lane": "F",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "scout",
+      "skills": [
+        "client-report"
+      ],
+      "outputs": [
+        "Daily-Briefs/reports/"
+      ],
+      "worker": null
+    },
+    {
+      "id": "command",
+      "label": "AM report + plan synthesis",
+      "codex_lane": "A",
+      "status": "pending",
+      "tier_default": 0,
+      "parallel_group": "command",
+      "skills": [
+        "am-report",
+        "plan-today"
+      ],
+      "outputs": [
+        "Daily-Briefs/am-report-YYYY-MM-DD.md",
+        "Daily-Briefs/plan-YYYY-MM-DD.md",
+        "Dashboard.md",
+        "automation-runs/dillon-command/YYYY-MM-DD/approval-board.md"
+      ],
+      "worker": null
+    }
+  ],
+  "gates": {
+    "obsidian_sync_cli": "pending-human",
+    "netlify_deploy_token": "pending-secret",
+    "landingfolio_token": "pending-secret",
+    "mail_vendor": "pending-decision",
+    "outreach_send": "hard-blocked"
+  },
+  "tier_policy": {
+    "0": "read, analyze, draft, vault writes, deterministic CLIs — unattended",
+    "1": "reversible platform tweaks — one approval executes the batch",
+    "2": "send, post, deploy, spend, credentials — prepared only, never autonomous"
+  },
+  "parallel_lane_cap": 8,
+  "artifacts": {
+    "run_dir": "/workspace/automation-runs/dillon-command/2099-01-01",
+    "approval_board": "/workspace/automation-runs/dillon-command/2099-01-01/approval-board.md",
+    "tier1_batch": "/workspace/automation-runs/dillon-command/2099-01-01/tier1-batch.json",
+    "tier2_queue": "/workspace/automation-runs/dillon-command/2099-01-01/tier2-queue.json",
+    "evidence_log": "/workspace/automation-runs/dillon-command/2099-01-01/evidence-log.md",
+    "lane_results": "/workspace/automation-runs/dillon-command/2099-01-01/lane-results.json"
+  }
+}

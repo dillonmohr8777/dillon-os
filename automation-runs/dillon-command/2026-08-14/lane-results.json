@@ -1,0 +1,115 @@
+{
+  "date": "2026-08-14",
+  "lanes": {
+    "comms": {
+      "lane": "comms",
+      "status": "ok",
+      "verified_facts": [
+        "4 Slack notes in 00_Inbox/slack/ with status:new, last mirrored 2026-07-30",
+        "Live Slack scan not performed — MCP unavailable"
+      ],
+      "artifacts_created": [
+        "Daily-Briefs/slack-intake-2026-08-14.md",
+        "Daily-Briefs/inbox-brief-2026-08-14.md"
+      ],
+      "blockers": ["Slack MCP not connected"],
+      "approval_required": ["Send any Slack reply"],
+      "tier1_candidates": [],
+      "tier2_candidates": [
+        "Draft+send replies to Jason/Sean, Melissa, Sean CallRail, Jenny"
+      ],
+      "recommended_next_action": "Run slack-intake on 64GB or with Slack MCP"
+    },
+    "clients": {
+      "lane": "clients",
+      "status": "ok",
+      "verified_facts": [
+        "38/38 client frontmatter complete",
+        "BigOrange due 2026-08-10 overdue",
+        "Most last_touched dates are April 2026"
+      ],
+      "artifacts_created": ["Daily-Briefs/pulse-today.md"],
+      "blockers": [],
+      "approval_required": [],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "Touch BigOrange + update last_touched on active clients"
+    },
+    "intelligence": {
+      "lane": "intelligence",
+      "status": "skipped",
+      "verified_facts": ["No new research question beyond open Slack loops"],
+      "artifacts_created": [],
+      "blockers": [],
+      "approval_required": [],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "Skip until inbox surfaces a dated question"
+    },
+    "websites": {
+      "lane": "websites",
+      "status": "warn",
+      "verified_facts": [
+        "Fixture broken-form fails on viewport + /api/dossier-leads",
+        "Live properties skipped in dry-run"
+      ],
+      "artifacts_created": ["Daily-Briefs/site-health-report.md"],
+      "blockers": ["Need --live run for book site"],
+      "approval_required": [],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "node _os/automation/bin/site-health.js --live"
+    },
+    "outreach": {
+      "lane": "outreach",
+      "status": "ok",
+      "verified_facts": [
+        "1030 prospects tracked; 169 in build queue",
+        "outreach-activate gated; mail_vendor pending"
+      ],
+      "artifacts_created": [],
+      "blockers": ["netlify_deploy_token", "mail_vendor"],
+      "approval_required": ["outreach send", "mail merge"],
+      "tier1_candidates": [],
+      "tier2_candidates": ["Batch Netlify deploy", "Zapier mail path"],
+      "recommended_next_action": "Pick radar top-10 for site-batch when client work clears"
+    },
+    "ads": {
+      "lane": "ads",
+      "status": "blocked",
+      "verified_facts": ["No Google Ads / Meta MCP in this session"],
+      "artifacts_created": [],
+      "blockers": ["Missing Ads/Meta API or MCP"],
+      "approval_required": ["Any live ads write"],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "Connect Ads MCP or run metrics-pull on 64GB"
+    },
+    "reporting": {
+      "lane": "reporting",
+      "status": "blocked",
+      "verified_facts": ["client-report needs per-client JSON from API pullers — not built"],
+      "artifacts_created": [],
+      "blockers": ["W5 report data pulls open from Automation Deep Analysis"],
+      "approval_required": ["Send report to client"],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "Scope one client report pull as pilot"
+    },
+    "command": {
+      "lane": "command",
+      "status": "ok",
+      "verified_facts": ["AM report + plan synthesized from scout outputs"],
+      "artifacts_created": [
+        "Daily-Briefs/am-report-2026-08-14.md",
+        "Daily-Briefs/plan-2026-08-14.md",
+        "Dashboard.md updated"
+      ],
+      "blockers": [],
+      "approval_required": [],
+      "tier1_candidates": [],
+      "tier2_candidates": [],
+      "recommended_next_action": "Review PR from phone"
+    }
+  }
+}

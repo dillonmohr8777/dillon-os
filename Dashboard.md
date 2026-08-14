@@ -19,9 +19,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] BigOrange pillar audit — overdue since Aug 10; ship or reset date with Janice
+- [ ] Draft Slack replies for 4 open boss requests (bot alerts, Melissa, Sean, Jenny) — approval before send
+- [ ] Review approval board: `automation-runs/dillon-command/2026-08-14/approval-board.md`
 
 ## Active Projects
 -

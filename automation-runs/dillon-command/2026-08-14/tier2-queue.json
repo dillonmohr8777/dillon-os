@@ -1,0 +1,24 @@
+{
+  "date": "2026-08-14",
+  "items": [
+    {
+      "lane": "comms",
+      "action": "Send Slack replies to Jason/Sean, Melissa, Sean, Jenny",
+      "tier": 2,
+      "status": "draft_in_vault"
+    },
+    {
+      "lane": "outreach",
+      "action": "Netlify batch deploy for approved prospect sites",
+      "tier": 2,
+      "gate": "netlify_deploy_token"
+    },
+    {
+      "lane": "outreach",
+      "action": "Direct mail + QR activate via Zapier",
+      "tier": 2,
+      "gate": "mail_vendor"
+    }
+  ],
+  "note": "Tier-2 outbound/deploy/spend — prepared only, never auto-executed."
+}
