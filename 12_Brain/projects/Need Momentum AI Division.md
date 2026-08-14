@@ -19,6 +19,7 @@ Need Momentum can sell AI as a service line (not a product company) without look
 ## Next actions
 
 - [x] Vault pack staged 2026-08-14: four WordPress pages, legal drafts, hub + Loom script, three proposed pilots, factory skill adapters, `phl-2026-w33` scaffold (`mail_ready` hold). Campaign: `02_Campaigns/Need Momentum AI Division/`.
+- [x] Operating plan fleshed (`plan.md`) plus branded HTML pack (`pack/Need-Momentum-AI-Division.html`). Offers gained named stack, human checkpoints, sample SOW bullets. Pack emailed to Dillon.
 - [ ] Mac/Sean/Beth: confirm the four nav items are **SKUs**, not just copy. Confirm sold vs brochure prices on the live automation page (Growth $1500 < Starter $2000). Confirm AEO price band. Dillon does not invent the number. Slack draft staged in `#ai-tech-news`.
 - [ ] Keep the four offer cards in `05_Offers/` current as Mac answers.
 - [ ] Beth publishes after Mac: rewrite https://www.needmomentum.com/ai-powered-marketing-automation/ from `pages/ai-automation.md`. Kind Insurance as the hero proof, inverted pricing off until sold prices confirmed.

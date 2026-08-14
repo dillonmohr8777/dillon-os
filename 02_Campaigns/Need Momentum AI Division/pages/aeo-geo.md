@@ -42,6 +42,10 @@ Local and multi-location businesses already investing in SEO, or ready to. Home 
 
 **Out:** `llms.txt` as a deliverable, paid "best of" listicles as the product, vanity AI-visibility scores with no referrals, citation guarantees.
 
+## Named stack
+
+Prospect Radar, Google Search Console, GA4, Google Business Profile. Claude drafts on a commercial tier. An account manager publishes. We name those tools in the SOW. "Leading AI tools" isn't an answer.
+
 ## Pricing
 
 Quoted after the diagnostic. We don't publish a public rate card for this SKU until Mac sets the number. The diagnostic is paid. The audit isn't a free toy.

@@ -39,8 +39,30 @@ Addon to the ads retainer. Do not invent a new $5k “AI marketing” SKU that i
 - “Will this replace our AM?” No. It makes the AM ship more tests.
 - “Put AI in the headline.” No. Put the offer in the headline.
 
+## Named stack
+
+Google Ads, Meta Ads, existing conversion tracking, Claude for draft variants, AM for spend and publish. `ads-audit` skill is capability-gated: **no spend** from the skill. Creative disclosure checklist when generated people or photoreal media appear.
+
+## Human checkpoints
+
+• AM edits every variant before it runs.
+• Spend changes happen in the ads UI, by a person.
+• NY synthetic-performer and platform labels when the creative needs them.
+• Client brand and banned-term lists (Bar Crawl: pre-approved copy only).
+
+## Sample SOW bullets (counsel still reviews)
+
+• Addon to the existing ads retainer. More tests, same account.
+• AI drafts. Humans ship. Tracking events you can defend in a report.
+• Weekly test log. No "AI insights" dashboard as the deliverable.
+• Ads don't lead with the word AI.
+
+## First meeting (15 min)
+
+Open last month's account. Show the next ten tests. Don't tour models.
+
 ## Sales Assets
 
-- Last-week brief + redlined variants (the buyer ask)
-- `claude-ads` upstream as an internal audit skill, capability-gated, no spend from the skill
-- [[03_Content/Facebook Ads Offer Angles]]
+• Last-week brief + redlined variants (the buyer ask)
+• `claude-ads` upstream as an internal audit skill, capability-gated, no spend from the skill
+• [[03_Content/Facebook Ads Offer Angles]]

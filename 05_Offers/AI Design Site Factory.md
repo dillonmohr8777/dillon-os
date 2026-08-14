@@ -38,8 +38,30 @@ Automaton publishes $5–25k web/ops projects and $2–5k sprints (seller, 2026-
 - “Will you index a demo of my business?” No. Private noindex until they hire us.
 - “Can you just generate it in an afternoon?” Fast is the factory. Taste is the gate.
 
+## Named stack
+
+Website Factory (`site-factory` / `mirror-and-improve`), harvest from the live site, locked brand tokens, Claude drafts, QA script, Hallmark anti-slop adapter. LandingFolio is optional layout reference only, sandbox until Inspector passes.
+
+## Human checkpoints
+
+• Facts we can't verify stay blank.
+• Taste pass on the hub before Mac sees it.
+• `noindex` until the client owns the launch.
+• `mail_ready` stays `hold` until a human flips it.
+
+## Sample SOW bullets (counsel still reviews)
+
+• Grade the current site. Rebuild only if a hard fault is proven.
+• Harvest palette, copy, and photography from properties they already own.
+• Handoff: files or CMS path on their account. Demos stay private.
+• Homepage never says "AI-designed."
+
+## First meeting (15 min)
+
+Open their current URL. Grade it. Rebuild or traffic, not both as a default. Show one factory before/after from Philly (not their competitors if that would burn the motion).
+
 ## Sales Assets
 
-- Review hub (one URL per batch) + 5-min Loom
-- Philly 25 + three Kimi pilots as internal proof, not a public portfolio of businesses we don’t work for
-- [[02_Campaigns/AI Site Builder Outreach Engine/AI Site Builder Outreach Engine]]
+• Review hub (one URL per batch) + 5-min Loom
+• Philly 25 as internal proof, not a public portfolio of businesses we don't work for
+• [[02_Campaigns/AI Site Builder Outreach Engine/AI Site Builder Outreach Engine]]

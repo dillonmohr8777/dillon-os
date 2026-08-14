@@ -34,6 +34,10 @@ Accounts already in Google or Meta with NeedMomentum, or a site rebuild that now
 
 **Out:** turning on Meta's default generator and calling it strategy, "AI" in the customer-facing headline, replacing the AM, spend changes fired from a skill with no human.
 
+## Named stack
+
+Google Ads and Meta Ads on your accounts. Claude for first-pass variants. Your NeedMomentum account manager edits, sets spend, and hits publish. Conversion events you already own (or we fix). No spend changes fired from a skill.
+
 ## Pricing
 
 Addon to the ads retainer. Mac sets the delta. We don't invent a new $5k SKU that is the same hours with a new label.

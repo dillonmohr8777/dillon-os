@@ -39,8 +39,30 @@ Live FAQ: $1,500–$3,000 depending on tier and industry, plus setup. Ecommerce 
 - “Do you keep our leads?” No. CRM stays theirs.
 - “Is the chatbot a person?” Disclose AI at first interaction.
 
+## Named stack
+
+Client-owned CRM (HubSpot or whatever they already pay for), site chat or form, email/SMS on their vendor, UTM parameters into the CRM, Claude only for copy drafts of bot copy. HubSpot agent prototype stays internal until it runs on a live client account.
+
+## Human checkpoints
+
+• First bot message discloses software.
+• Staff set qualification questions and routing.
+• A named person owns breakage after launch.
+• Leads never live in a NeedMomentum-owned box the client can't leave.
+
+## Sample SOW bullets (counsel still reviews)
+
+• Funnel map + stack audit, then workflows in **their** tools.
+• Chat / SMS / email paths the client approved. Exceptions route to a person.
+• Packages currently published **$1,500–$3,000 plus setup** pending Mac's sold-vs-brochure confirm.
+• Client owns the CRM, the data, and the offboarding.
+
+## First meeting (15 min)
+
+Map one inbound path (form or call). Time-to-first-response today vs the Kind Insurance pattern. Leave with a scope, not a pitch deck.
+
 ## Sales Assets
 
-- [Kind Insurance case](https://www.needmomentum.com/marketing-case-studies/lead-automation/) — 5 qualified conversations, 1 policy, 30 days, agency-reported
-- Live page to rewrite: https://www.needmomentum.com/ai-powered-marketing-automation/
-- HubSpot agent prototype is an internal pattern, not a public product
+• [Kind Insurance case](https://www.needmomentum.com/marketing-case-studies/lead-automation/) — 5 qualified conversations, 1 policy, 30 days, agency-reported
+• Live page to rewrite: https://www.needmomentum.com/ai-powered-marketing-automation/
+• HubSpot agent prototype is an internal pattern, not a public product

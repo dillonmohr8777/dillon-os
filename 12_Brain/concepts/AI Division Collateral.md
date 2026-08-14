@@ -13,7 +13,7 @@ Mac already prefers one link and a five-minute Loom. Buyer checklists in 2026 as
 
 ## Shipped in vault (2026-08-14)
 
-Pack lives at `02_Campaigns/Need Momentum AI Division/`. WordPress pages, legal drafts, hub, Loom script, proposed pilots. Live site, Loom recording, counsel markup, and client pilots still wait on Mac.
+Pack lives at `02_Campaigns/Need Momentum AI Division/`. Operating plan (`plan.md`), WordPress pages, legal drafts, hub, Loom script, proposed pilots, branded HTML leave-behind (`pack/Need-Momentum-AI-Division.html`). Live site, Loom recording, counsel markup, and client pilots still wait on Mac.
 
 ## Must-have before launch
 

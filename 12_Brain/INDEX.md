@@ -72,7 +72,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Outreach engine
 
-- [[02_Campaigns/Need Momentum AI Division/README|Need Momentum AI Division]] — WordPress paste, legal drafts, Mac hub, proposed pilots. Live site waits on Mac / counsel / Beth.
+- [[02_Campaigns/Need Momentum AI Division/README|Need Momentum AI Division]] — operating plan, WordPress paste, legal drafts, Mac hub, pretty pack, proposed pilots. Live site waits on Mac / counsel / Beth.
 - `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/` — home services + dental starter 8. Scaffold only. `mail_ready` hold.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]] — Stage 2 qualification: scores the website a prospect already has, routes strong-site prospects to ads/SEO instead of a wasted rebuild. Skill: `/site-grade`.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]] — the eight-stage model and the honest automation status of each stage.

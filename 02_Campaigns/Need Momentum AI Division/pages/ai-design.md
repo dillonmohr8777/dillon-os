@@ -39,6 +39,10 @@ Operators with a dated site, real photography (or a shoot we can do in Philadelp
 
 **Out:** indexing a demo of a business we don't work for, invented addresses, the same template dropped on 25 competitors with a hue shift, "generated in an afternoon" as the pitch.
 
+## Named stack
+
+NeedMomentum site factory: harvest from your live site, locked colors and type, human QA, handoff on your hosting or CMS. Claude drafts copy. A designer still looks at the page. The live homepage never says "AI-designed."
+
 ## Pricing
 
 Project quote after we grade the current site. We don't publish a public card for this SKU until Mac sets the number.

@@ -48,6 +48,10 @@ You keep the CRM, the ad accounts, and the data. We connect to tools you own. We
 
 When a visitor talks to the bot, the first message says so. A person still approves strategy, watches performance, and takes the cases the bot shouldn't.
 
+## Named stack
+
+Your CRM (HubSpot or the one you already pay for), your forms, your email/SMS vendor, UTMs into the CRM. Claude drafts bot copy. A named NeedMomentum person owns launch and breakage. You keep every login.
+
 ## Pricing
 
 Packages on this page run **from $1,500 to $3,000**, plus a one-time setup for integrations, workflow build, testing, and launch support. Final number depends on workflow count, channels (email, SMS, ads), and how many systems we connect.

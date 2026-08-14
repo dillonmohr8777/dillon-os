@@ -16,13 +16,15 @@ Play: [[12_Brain/concepts/Need Momentum AI Division]]. Collateral: [[12_Brain/co
 
 ## One link for Mac
 
-Open `hub/index.html`. Five-minute talk track: `hub/loom-script.md`.
+Open `hub/index.html`. Five-minute talk track: `hub/loom-script.md`. Pretty leave-behind: `pack/Need-Momentum-AI-Division.html`. Full operating plan: `plan.md`.
 
 ## Folder
 
 - `pages/` — WordPress-ready service copy. Beth pastes. Homepage stays human.
-- `legal/` — claims sheet, addendum draft, disclosure checklist, ownership FAQ. Counsel marks up. Not live SOW language.
+- `legal/` — claims sheet, addendum draft, disclosure checklist, ownership FAQ, sample SOW. Counsel marks up. Not live SOW language.
 - `pilots/` — 90-day one-pager and three current-client picks. Mac confirms before anyone talks to the client.
+- `plan.md` — gates, RACI, SKU cards, kill criteria.
+- `pack/` — branded HTML leave-behind (print to PDF from the browser).
 - `drafts/` — Slack and Gmail drafts. Staged, not sent from this folder.
 - `hub/` — the review surface.
 
