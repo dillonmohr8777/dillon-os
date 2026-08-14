@@ -1,7 +1,7 @@
 ---
 tags: [entity, system]
 source: "[[12_Brain/raw/2026-07-04 - obsidian-second-brain-article]]"
-updated: 2026-07-29
+updated: 2026-08-14
 ---
 
 # Website Factory
@@ -15,6 +15,10 @@ deploy credentials.
 - Outputs: static / Netlify / Vercel marketing sites for clients.
 - Templates and QA live under `_templates/site-factory/` when present, or
   campaign folders under `02_Campaigns/`.
+- Week 33 batch: `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/`
+  maps [[12_Brain/research/2026-08-14 - Reddit-cited UI wow library|200 wow-site
+  composition refs]] onto 25 unbuilt radar rebuilds. Harvest owns brand and
+  facts. Demos stay noindex. mail_ready stays hold.
 - Secrets and host tokens never land in this note.
 
 ## Links
