@@ -31,7 +31,10 @@ That means:
 
 - DAS / dealers.penndot.gov cannot add a public URL field that does not exist.
 - The Agent Support resource account handles **title and registration transactions**, not Google Ads packets and not public-directory websites.
-- Contract Administration / DAS can update the **business name and address** that appear in the PDF. They are the only PennDOT units worth asking if the public listing is wrong. They are a long-shot for adding a website hyperlink.
+- Contract Administration / DAS can update the **business name and address** that appear in the PDF. Ask them if the public listing is wrong. They are a long-shot for adding a website hyperlink.
+- The DVS Update newsletter/publications inbox is the published mailbox for agent bulletins. Use it only as a **routing** ask to whoever generates the DVSPubsForms agent PDFs, not as a newsletter signup and not as a title-support ticket.
+- The public “Motor Vehicle Questions” web form is the wrong queue for this. It is a vehicle-record form (title, plate, VIN), the same class of work Agent Support already rejected.
+- DVS press officers and Central Communications are media contacts. Do not send listing-website requests there.
 
 A government-managed partner directory is the kind of source Google’s October 2026 update still treats as valid authorization **if** it identifies the provider. The gap is the missing hyperlink from that directory to the advertiser domain. Submit the official PDF URL plus the authorization certificate and ask for a manual review. Do not invent a government backlink.
 
@@ -44,11 +47,13 @@ Starting **2026-10-05**, Google will reject commercial contracts, trade licenses
 3. Keep title/registration campaigns paused until the certificate appears.
 4. After approval, appeal the disapproved assets and relaunch Search only, geo-limited to the authorization area, with a landing page that discloses the business is an independent authorized provider and not a government site. Google will add a “Not a government website” disclosure on Search ads for non-government providers.
 5. Do not mix notary/office keywords into the restricted campaign. Do not pivot the paid program to extras unless the client asks for that.
-6. Do not email the client while chasing the certificate. Outreach is Google Ads support / the certification form, plus the PennDOT units that own agent listings (Contract Administration and DAS). Do not reply on title-support threads that already copy the client.
+6. Do not email the client while chasing the certificate. Outreach is the `godos_certification` form (one filing per domain), Google Ads support on that case, plus the PennDOT units that own or publish agent listings (Contract Administration, DAS, DVS publications routing). Do not reply on title-support threads that already copy the client. After the form, Google emails a webapproval link; the filing is incomplete until that click happens on the same login mailbox.
 
 ## What not to do
 
 - Do not keep emailing PennDOT Agent Support with Google Ads evidence.
+- Do not send this packet to DVS press officers or Central Communications.
+- Do not use the public Motor Vehicle Questions form for a directory-website request.
 - Do not tell the client a Hostinger domain certificate satisfies Google’s government-link rule.
 - Do not claim the ads are “out of scope” while the live site sells registration, titles, plates, or driver-license products.
 

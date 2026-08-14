@@ -5,7 +5,7 @@ industry: auto-tag / title / registration
 start_date: 2026-08-01
 google_ads_id: 921-429-2423
 last_touched: 2026-08-14
-next_action: Wait for Google certification routing and PennDOT Contract Admin / DAS reply on adding tags2go.pro to the public agent listing. Do not email the client.
+next_action: Operator must sign into Gmail and open Google’s webapproval link for certification case 1-8585000041572. Then wait on that case plus PennDOT Contract Admin, DAS, and DVS publications routing. Do not email the client.
 due: 2026-08-18
 ---
 
@@ -31,13 +31,14 @@ PennDOT-authorized Philadelphia tag agency. Google Ads cannot promote title/regi
 - Block: Government documents and official services (certificate required)
 - Prior Search mixed notary with tag/title/registration; that mix is why the ad was disapproved. Restricted campaign is paused.
 - A $15/day notary/document campaign was built as a workaround. Client declined extras on 2026-08-14. Do not launch it.
-- Open Google support case `3-2595000042211` (opened 2026-08-13). Evidence packets sent. Follow-up sent 2026-08-14 asking the case be routed as authorized-provider certification. The in-browser [certification form](https://support.google.com/adspolicy/contact/godos_certification) is still the official application if Google says the case is not that queue.
+- Open Google support case `3-2595000042211` (opened 2026-08-13). Evidence packets sent. Follow-up sent 2026-08-14 asking the case be routed as authorized-provider certification.
+- Official [godos_certification](https://support.google.com/adspolicy/contact/godos_certification) form submitted 2026-08-14 as authorized, non-government provider. Google opened case `1-8585000041572`. Directory-limitation note sent on that case. **Operator still has to click Google’s webapproval link while signed into the Gmail that filed it.**
 
 ## What is already proven
 - Client has no affiliation with the prior occupant at the location (East Coast Insurance & Tags). Live PennDOT PDFs now list Tags 2 Go LLC at 6001 Torresdale Ave.
 - Certificate of Authorization, domain registration, entity filings, and the public agent PDF are already in Gmail and were forwarded to Google support.
 - DAS has no website field. PennDOT Agent Support will not process Google Ads packets.
-- **Comms rule (2026-08-14):** do not email the client on this block. Outreach only to Google Ads support / certification and the PennDOT units that own agent listings (Contract Administration and DAS). Do not reply on the Agent Support thread; the client is on that CC list.
+- **Comms rule (2026-08-14):** do not email the client on this block. Outreach only to Google Ads support / certification and the PennDOT units that own or publish agent listings. Do not reply on the Agent Support thread; the client is on that CC list. Do not use the public Motor Vehicle Questions form (it is a title/plate record form). Do not email DVS press officers.
 
 ## Next actions
 See [[01_Clients/Tags 2 Go/Google Ads Government Documents Block]].
