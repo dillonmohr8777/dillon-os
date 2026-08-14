@@ -11,6 +11,10 @@ expires: 2026-11-12
 
 Mac already prefers one link and a five-minute Loom. Buyer checklists in 2026 ask for the same thing: named stack, human edits on last week’s work, client-owned accounts, itemized fees, a short paid pilot. Seller-authored lists (Soku 2026-07-20, DigiMark 2026-05-04, Bliss Drive 2026-06-30) still converge. Strategy: [[12_Brain/concepts/Need Momentum AI Division]].
 
+## Shipped in vault (2026-08-14)
+
+Pack lives at `02_Campaigns/Need Momentum AI Division/`. WordPress pages, legal drafts, hub, Loom script, proposed pilots. Live site, Loom recording, counsel markup, and client pilots still wait on Mac.
+
 ## Must-have before launch
 
 1. **Internal offer index** — four cards, not public. Deliverables, in/out, stack, human checkpoints, price *band*, sample SOW. Without this the nav is vapor. Cards live in `05_Offers/`.

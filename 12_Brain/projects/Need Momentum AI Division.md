@@ -18,15 +18,16 @@ Need Momentum can sell AI as a service line (not a product company) without look
 
 ## Next actions
 
-- [ ] Mac/Sean/Beth: confirm the four nav items are **SKUs**, not just copy. Confirm sold vs brochure prices on the live automation page (Growth $1500 < Starter $2000). Confirm AEO price band. Dillon does not invent the number.
+- [x] Vault pack staged 2026-08-14: four WordPress pages, legal drafts, hub + Loom script, three proposed pilots, factory skill adapters, `phl-2026-w33` scaffold (`mail_ready` hold). Campaign: `02_Campaigns/Need Momentum AI Division/`.
+- [ ] Mac/Sean/Beth: confirm the four nav items are **SKUs**, not just copy. Confirm sold vs brochure prices on the live automation page (Growth $1500 < Starter $2000). Confirm AEO price band. Dillon does not invent the number. Slack draft staged in `#ai-tech-news`.
 - [ ] Keep the four offer cards in `05_Offers/` current as Mac answers.
-- [ ] Rewrite https://www.needmomentum.com/ai-powered-marketing-automation/ — Kind Insurance as the hero proof, inverted pricing fixed, chatbot disclosure, client-owned CRM, named stack.
-- [ ] Ship service pages (not blogs) for AEO/GEO, AI Design, AI Marketing. Existing AEO URL is a 2026-02-08 blog.
-- [ ] Record the 5-min Loom: Radar → human QA → recommended offer. One hub link for Mac.
-- [ ] Send AI addendum + claims sheet to counsel. Do not paste blog clause kits into a live SOW.
-- [ ] Pick 2–3 current clients for 90-day pilots (one Kind-like ops, one site rebuild, one visibility add-on to SEO).
-- [ ] Only then: resume weekly factory + QR + audit outreach on Philly home services / medical / legal. Mail stays human-approved. `mail_ready` stays hold.
-- [ ] Internal skills: add Hallmark + Vercel `web-design-guidelines` + upstream `claude-ads` into the factory. Pick one of Superpowers / Pocock / Osmani. Do not merge `claude-skills-repo` wholesale. Do not productize camofox, Open-Generative-AI, or semrush-proxy.
+- [ ] Beth publishes after Mac: rewrite https://www.needmomentum.com/ai-powered-marketing-automation/ from `pages/ai-automation.md`. Kind Insurance as the hero proof, inverted pricing off until sold prices confirmed.
+- [ ] Beth publishes after Mac: service pages for AEO/GEO (`/aeo-geo/`), AI Design, AI Marketing. Existing AEO URL stays a 2026-02-08 blog. Paste order: `pages/wordpress-paste.md`. Slack draft staged in `#momentumsites`.
+- [ ] Record the 5-min Loom against `hub/index.html` (script is written; video is not).
+- [ ] Counsel marks up the addendum. Gmail draft staged to Sean/Beth/Mac asking who counsel is. Don't paste into a live SOW.
+- [ ] Mac picks 2–3 current clients for 90-day pilots. Proposed: Shadow HVAC, Onsite Concrete, Omega Landscaping. No client email until yes.
+- [ ] Only then: harvest `phl-2026-w33` (8 targets staged, briefs empty). Mail stays human-approved. `mail_ready` stays hold.
+- [x] Internal skills: Hallmark adapter (`anti-slop-design`), Vercel `web-design-guidelines`, upstream `ads-audit` (no spend), `ship-gate` (Pocock-style, one methodology). Wired into site-factory / site-batch / ui-design / mirror-and-improve. Didn't merge `claude-skills-repo`.
 
 ## Not this project
 
@@ -37,7 +38,9 @@ Need Momentum can sell AI as a service line (not a product company) without look
 
 ## Links
 
+- [[02_Campaigns/Need Momentum AI Division/README]]
 - [[12_Brain/entities/Momentum 360]]
 - [[12_Brain/projects/Prospect Radar V2]]
 - [[12_Brain/entities/Website Factory]]
 - [[02_Campaigns/AI Site Builder Outreach Engine/Slack Evidence Log]]
+- `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/`

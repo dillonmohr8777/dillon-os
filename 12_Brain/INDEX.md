@@ -62,7 +62,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
-- [[12_Brain/projects/Need Momentum AI Division|Need Momentum AI Division]] — four offers, three missing service pages, Loom, then pilots.
+- [[12_Brain/projects/Need Momentum AI Division|Need Momentum AI Division]] — vault pack staged; Mac confirms SKUs/prices/pilots; Beth publishes; counsel marks addendum.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
@@ -72,6 +72,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 ## Outreach engine
 
+- [[02_Campaigns/Need Momentum AI Division/README|Need Momentum AI Division]] — WordPress paste, legal drafts, Mac hub, proposed pilots. Live site waits on Mac / counsel / Beth.
+- `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/` — home services + dental starter 8. Scaffold only. `mail_ready` hold.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]] — Stage 2 qualification: scores the website a prospect already has, routes strong-site prospects to ads/SEO instead of a wasted rebuild. Skill: `/site-grade`.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]] — the eight-stage model and the honest automation status of each stage.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Market Roster|Market Roster]] — geography ladder (Philadelphia → PA → national) and vertical priorities.
@@ -81,6 +83,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Folder indexes (working vault)
 
 - [[01_Clients/Client Index|Client Index]] — full roster.
+- [[02_Campaigns/Campaign Index|Campaign Index]] — active campaigns including the AI division pack.
 - [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs.
 - [[10_Sessions/Session Index|Session Index]] — build logs.
 - `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).
