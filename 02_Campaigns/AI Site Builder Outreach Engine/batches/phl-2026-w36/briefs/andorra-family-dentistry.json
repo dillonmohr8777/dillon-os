@@ -1,0 +1,260 @@
+{
+  "slug": "andorra-family-dentistry",
+  "name": "Andorra Family Dentistry",
+  "city": "Philadelphia",
+  "category": "Family and cosmetic dentistry",
+  "vertical": "healthcare",
+  "attitude": "glass",
+  "url": "https://www.andorradental.com/",
+  "phone": "215-515-5710",
+  "address": "8919 Ridge Ave., Suite 9, Philadelphia, PA 19128",
+  "hours": "Mon-Fri 9am-5pm, Sat 9am-3pm",
+  "description": "Family and cosmetic dentistry on Ridge Avenue in Andorra. Dr. Dhaval Shah, Dr. Shilpa Emani, and Dr. Sucheta Bansal. Invisalign, implants, iTero scanning, smile makeovers, emergency care.",
+  "noindex": true,
+  "schemaType": "Dentist",
+  "logo": false,
+  "marquee": [
+    "Personalized service",
+    "State-of-the-art",
+    "Dentistry for all ages",
+    "Smile brighter",
+    "Ridge Avenue"
+  ],
+  "tokens": {
+    "paper": "#F4F1EC",
+    "ink": "#1F3370",
+    "accent": "#2C4A80",
+    "accent2": "#C0392B",
+    "panel": "#D8DDE4",
+    "deep": "#161A1B",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Open Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2155155710"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Andorra Family Dentistry, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Family and cosmetic dentistry",
+    "headline": "Here to help you smile brighter",
+    "sub": "Andorra Family Dentistry is personalized service with state-of-the-art technology on Ridge Avenue. Dr. Dhaval Shah, Dr. Shilpa Emani, and Dr. Sucheta Bansal work one-on-one so the plan fits the mouth in the chair. The practice serves Philadelphia plus Andorra, Conshohocken, Lafayette Hill, and Roxborough.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2155155710"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Andorra",
+      "sub": "Drs. Shah, Emani, and Bansal"
+    },
+    "marquee": [
+      "Personalized service",
+      "State-of-the-art",
+      "Dentistry for all ages",
+      "Smile brighter",
+      "Ridge Avenue"
+    ]
+  },
+  "offerings": {
+    "heading": "How we can help you today",
+    "items": [
+      {
+        "title": "Invisalign and aesthetic dentistry",
+        "text": "Invisalign clear aligners discreetly line the teeth. Aesthetic dentistry, veneers, whitening, and a full-range smile makeover sit next to that work when the goal is how the smile reads in the room."
+      },
+      {
+        "title": "Implants, crowns, and restorations",
+        "text": "Dental implants, implant-supported dentures, crowns, bridges, root canals, and extractions are on the same roster. The restorative side is built to last, not to upsell a second visit you did not ask for."
+      },
+      {
+        "title": "iTero scanning and family care",
+        "text": "iTero digital scanners, 3D scanning, and digital X-rays keep the diagnostics precise. General and family dentistry covers cleanings, exams, sealants, fluoride, night guards, and same-day emergency care for every age."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Dentistry for all ages on Ridge Avenue",
+    "paragraphs": [
+      "The line they use is personalized service with state-of-the-art technology. Dr. Shah, Dr. Emani, and Dr. Bansal take time so you feel at ease in the chair. Health, smile, and comfort are the named priorities. The team is multilingual and the office is set up for patients who arrive in a wheelchair.",
+      "Neighbors come from Andorra, Conshohocken, Lafayette Hill, and Roxborough, not only from the 19128 block. Smile Care Membership is published at $16 a month or $100 a year for people who want treatment covered on a plan the office runs in-house."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually runs",
+    "items": [
+      {
+        "title": "Start with a one-on-one plan",
+        "text": "The first visit is a consultation with Dr. Shah, Dr. Emani, or Dr. Bansal. They write an individualized plan before any restorative or cosmetic work starts, so you know the sequence."
+      },
+      {
+        "title": "Scan, then treat",
+        "text": "iTero and 3D scanning replace a lot of the old impression work. Cleanings, Invisalign, implants, and emergency visits all run from that digital record instead of a second guessing pass."
+      },
+      {
+        "title": "Keep the smile on a schedule",
+        "text": "Family dentistry is built for a first visit through senior maintenance. Same-day emergency care is on the list when something breaks between the regular exams."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "State-of-the-art, still a family room",
+    "text": "Advanced technology is there to make the treatment precise. The room is still a family practice: children, adults, and seniors, with a multilingual team and a plan written for the person in the chair.",
+    "cta": {
+      "label": "Meet the team",
+      "href": "https://www.andorradental.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Smile Care Membership",
+    "text": "The in-house plan is published at $16 a month or $100 a year. It is for people who want Andorra Family Dentistry to cover treatment on a membership the office runs, not a mystery coupon.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See patient info",
+      "href": "https://www.andorradental.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Invisalign",
+        "href": "https://www.andorradental.com/",
+        "imageIndex": 9,
+        "text": "Clear aligners designed to line teeth without a metal smile. Part of the aesthetic roster next to veneers and whitening."
+      },
+      {
+        "title": "Dental implants",
+        "href": "https://www.andorradental.com/",
+        "imageIndex": 10,
+        "text": "Implant placements, All-on-4, and implant-supported dentures. Built as long-lasting restorations, not a one-season fix."
+      },
+      {
+        "title": "iTero digital scanning",
+        "href": "https://www.andorradental.com/",
+        "imageIndex": 11,
+        "text": "iTero scanners, 3D scanning, digital X-rays, and intraoral cameras. Diagnostics first, then the treatment."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Ridge Avenue, Andorra",
+    "sub": "8919 Ridge Ave., Suite 9, Philadelphia, PA 19128"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2155155710"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2155155710"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.andorradental.com/"
+    },
+    {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/Andorra-Family-Dentistry-2360086290978211/"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/andorrafamilydentistry/"
+    }
+  ]
+}

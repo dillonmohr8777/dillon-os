@@ -17,7 +17,7 @@ ART = Path("/opt/cursor/artifacts/assets")
 SRC = Path("/tmp/w36-is-frames")
 DST_ROOT = Path("/workspace/02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w36/sites")
 CHOSEN = json.loads(
-    Path("/workspace/02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w35/chosen.json").read_text()
+    Path("/workspace/02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w36/chosen.json").read_text()
 )
 
 
