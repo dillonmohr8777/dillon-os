@@ -59,7 +59,9 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
+- [[12_Brain/projects/Dillon OS Mobile HUD|Dillon OS Mobile HUD]] — installable read-only phone snapshot (https://dillon-os-hud.netlify.app).
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
+- [[12_Brain/decisions/2026-08-14 - HUD mobile is hosted readonly|2026-08-14 — HUD mobile is a hosted read-only snapshot]]
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.

@@ -1,6 +1,6 @@
 ---
 tags: [protocol]
-updated: 2026-07-29
+updated: 2026-08-14
 source: "[[_os/README]]"
 ---
 
@@ -15,3 +15,7 @@ source: "[[_os/README]]"
 4. Command Deck skills include brain loops (`vault-compile`, `wiki-lint`,
    `synthesize`, `session-mine`, `research-sweep`) when the `claude` CLI is on PATH.
 5. The HUD never writes the vault itself except via skill jobs.
+6. Phone view is a **read-only snapshot** at https://dillon-os-hud.netlify.app
+   (`node _os/bin/export-hud.js` then `node _os/bin/hud-deploy.js`). Add to
+   Home Screen. Skills do not run on that origin. Loopback stays the only
+   Command Deck.
