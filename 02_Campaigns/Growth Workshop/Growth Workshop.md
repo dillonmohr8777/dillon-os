@@ -17,6 +17,7 @@ Companion notes:
 - [[Outreach Plan]] — channels, day-by-day Aug 14–27 calendar, send rules, go/no-go gates
 - [[Drip Copy]] — every email, reminder, DM script, and organic post, paste-ready
 - [[Franchise Email Sourcing Playbook]] — how the free franchise contact engine works
+- [[Scale Harvest Report]] — 5,359-contact scale run counts (no addresses)
 - `lp-date-push/` — patched LP files + [[lp-date-push/DEPLOY-CHECKLIST|deploy checklist]] for the Aug 27 date
 - Project page: [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]]
 
@@ -44,7 +45,7 @@ Answered with the phased plan in the same DM (Aug 8, 03:21 ET): lock one canonic
 ## Audiences
 
 1. **Existing 200-prospect Philly list** (Drive sheet, all rows `Not sent`) — warm-up audience, invite is fresh, not a reschedule.
-2. **Franchise pilot list** (new) — franchisee owner/operators, single + multi-unit, home services / fitness / senior care / pet services, Philly metro → Northeast → US. Wave 1 capped at 50 per the pilot agreement.
+2. **Franchise list** (scaled) — franchisee owner/operators and location mailboxes, home services / senior care / shipping-print, Philly metro → Northeast → US. Wave 1 still capped at 50 per the original pilot agreement; Send Batch A is the first 1,000 by priority; 4,359 more sit behind the bounce gate.
 3. **Franchisor marketing / franchise-development contacts** — secondary tier, only after wave-1 data.
 
 ## Hard rules

@@ -19,7 +19,7 @@ Cold B2B email to a fresh list converts registration at roughly 1–3%; organic 
 |---|---|---|
 | Philly 200-list (3 touches) | ~200 | 4–10 |
 | Franchise wave 1 (3 touches) | 50 | 1–3 |
-| Franchise wave 2 (if gate passes) | 62 built, more on tap | 2–5 |
+| Franchise wave 2 (if gate passes) | 4,359 built (Batch B) | 2–5 |
 | Skool + LinkedIn + DMs + GBP + IG/X + signatures | — | 5–15 |
 | **Total realistic range** | | **12–33 registered / ~40–60% show rate** |
 

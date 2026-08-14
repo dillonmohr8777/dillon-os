@@ -43,8 +43,10 @@ Verified mechanisms (full receipts: [[12_Brain/research/Franchise Email Sourcing
 
 | Mechanism | Yield |
 |---|---|
-| CertaPro Painters zip-profile REST endpoint (one GET per zip returns territory email + subdomain) | 73 territories, 25 PA/NJ/DE, 3 named owners |
-| The UPS Store static Yext store pages (`locations.theupsstore.com`) | 43 stores, all PA/NJ/DE |
+| CertaPro Painters `GET /wp-json/certapro-location-profiles/v1/profiles` (full dump) | 354 unique territory emails |
+| The UPS Store national Yext sitemap → store pages | 4,914 store mailboxes, all 50 states |
+| Comfort Keepers `ckficms-api.ckweb.org` offices include | 54 unique office emails |
+| 1-800-PACKOUTS `/locations/` HTML | 38 (31 named) |
 
 Confirmed dead ends (JS-shell locators, no static emails): Pillar To Post, HouseMaster, Mathnasium, Fish Window Cleaning, Minuteman Press, Signarama, AlphaGraphics, Visiting Angels, Senior Helpers, Interim HealthCare, Amada. Probe one location page per brand before committing to a crawl.
 
@@ -69,7 +71,7 @@ Franchise trade press (1851franchise.com, Franchise Times, local business journa
 7. Wave 1 = 50 rows, prioritized: named owner > PA/NJ/DE > category fit.
 8. After sends: bounces/replies/opt-outs → `Outreach Status` immediately.
 
-**Pilot run result (2026-08-14):** 112 unique contacts, 66 PA/NJ/DE, 112/112 `mx_ok`, wave 1 = 50 flagged. Delivered as the private Drive sheet "Franchise Workshop Pilot List — 2026-08-14" (same folder pattern as the 200 list) — zero contact rows in this repo.
+**Scale run result (2026-08-14 afternoon):** **5,359** unique contacts, 429 PA/NJ/DE, 5,359/5,359 `mx_ok` after dropping one bad row. Wave 1 = 50. Send Batch A = first 1,000. Remainder = 4,359 behind the bounce gate. Delivered as Drive folder "Franchise Workshop Lists — 2026-08-14" + private artifact — zero contact rows in this repo.
 
 ## Tracker schema (same as the 200-list sheet)
 

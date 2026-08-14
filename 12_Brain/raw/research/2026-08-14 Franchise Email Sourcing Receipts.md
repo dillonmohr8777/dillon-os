@@ -68,3 +68,42 @@ directly in the main session instead (Lane B, the volume lane).
 - Lane A (FDD/Item 20 owner-name cross-check): not run this pass.
 - Lane C (franchisor-tier contacts): intentionally held until wave-1 data.
 - Lane D (trade-press multi-unit owners): not run this pass.
+
+---
+
+## Scale run (same day, afternoon) — 5,359 MX-ok unique contacts
+
+Operator ask: "way more emails… like a thousand." Same rules (public sources, no guessed addresses, no sends, no PII in repo). Subagents still unavailable (usage limit). Direct fetches again.
+
+### Mechanism 1b — CertaPro all-profiles dump (supersedes the 93-zip sweep)
+
+- `GET https://certapro.com/wp-json/certapro-location-profiles/v1/profiles` (plural namespace, discovered from `/wp-json/` index). One unauthenticated GET returns the full franchisee table: outlet, email, phone, city, state, website.
+- 406 profiles, 399 with emails, **354 unique emails** after dedupe (multi-unit territories share a mailbox). Also `…/v1/bystate?state=PA` works (19 PA rows).
+- Zip-by-zip sweep is obsolete for this brand.
+
+### Mechanism 2b — UPS Store national Yext sitemap
+
+- `locations.theupsstore.com/sitemap.xml` → 36 shards. Unique US store-detail URLs (`/{st}/{city}/{slug}`, skip `/es/` and `/search`): **4,922**.
+- Fetched at concurrency 8: **4,914 unique store mailboxes**, 5 pages with no email, 3 404s (`&amp;` in sitemap slugs). All 50 US states. Role mailboxes (`store####@theupsstore.com`) printed in JSON-LD / mailto on each page.
+
+### Mechanism 3 — Comfort Keepers offices API
+
+- Locations HTML embeds `https://ckficms-api.ckweb.org/api/states?filter[include]=offices`. JSON:API dump: 52 states, **567 offices**, 58 unique emails published. Dropped gmail/msn/yahoo personal inboxes for send-quality → **54 kept**.
+
+### Mechanism 4 — 1-800-PACKOUTS locations page
+
+- `https://www.1800packouts.com/locations/` prints franchisee mailboxes in static HTML. **38 contacts, 31 named first.last@** (highest named-owner density of the run). Dropped corporate `info@`.
+
+### Brand probe (68 locators) — dead ends worth not repeating
+
+JS-shell / no static emails: 360 Painting, Five Star Painting, SERVPRO, Neighborly family (Molly Maid, Mr Rooter, Mr Electric, Aire Serv, Window Genie, Grounds Guys, Mister Sparky), Fish, Mathnasium, Visiting Angels (621 `/home` pages, 0 emails), Massage Envy Yext pages (no email in JSON-LD), HouseMaster, PostalAnnex store pages (345 URLs, 0 emails), PakMail. Yext sitemaps exist for Merry Maids / Two Men / ServiceMaster Restore / Stanley Steemer / Tropical Smoothie / Smoothie King but sample pages did not print emails — do not crawl those until a sample page shows a mailbox.
+
+Paul Davis zip lookup is POST + auth-token on the franchise-code route; skipped.
+
+### Output (scale)
+
+- 5,360 merged unique emails → 1 concatenated-mailbox row dropped (`bad_syntax`) → **5,359 mx_ok** (DNS-only).
+- Mix: UPS Store 4,914 · CertaPro 354 · Comfort Keepers 54 · 1-800-PACKOUTS 38.
+- Named-owner heuristic: 46 (PACKOUTS 31 + CertaPro first.last). A couple of role mailboxes still match `first.last` (e.g. territory names); treat `Email Type=named_mailbox` as a sort key, not a legal identity.
+- PA/NJ/DE: 429. Wave 1 = first 50. Send Batch A = first 1,000 by priority. Batch B = remainder 4,359.
+- Delivered: Drive folder `Franchise Workshop Lists — 2026-08-14` (README, no contact rows in git) + private artifact `franchise_pilot_list_scale_2026-08-14.csv`.

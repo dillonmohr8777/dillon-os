@@ -25,7 +25,7 @@ Campaign home: [[02_Campaigns/Growth Workshop/Growth Workshop|Growth Workshop]] 
 | Piece | Status |
 |---|---|
 | LP date push (Aug 27) | patched files staged, operator deploy pending |
-| Franchise pilot list | **built** — 112 contacts, 66 PA/NJ/DE, 112/112 MX-pass, wave 1 = 50 flagged, private Drive sheet delivered |
+| Franchise list | **built / scaled** — **5,359** unique MX-ok contacts (UPS 4,914 · CertaPro 354 · Comfort Keepers 54 · PACKOUTS 38), 429 PA/NJ/DE, wave 1 = 50, send-batch A = first 1,000, private Drive folder + artifact |
 | Drip + lifecycle copy | drafted, awaiting Sean/Mac word-for-word approval |
 | Two-week calendar | drafted (Aug 14 → 28) |
 | Meeting link / sender mailbox / seat cap | **owed by Sean/Mac** |
