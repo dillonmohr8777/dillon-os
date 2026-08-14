@@ -44,9 +44,9 @@ Direct mail vendor floated: StackAdapt programmatic direct mail. QR automation f
 
 > whats the steps taken we can use to automate everything
 
-Build through quality gate is automated. Approval stays human. Activate (QR via Zapier/QRTiger, mail via PostGrid or StackAdapt) still needs the mail vendor decision and a deploy token.
+The 238-row sheet Dillon sent Jesse is now the database. Those homepages are live. `_os/outreach-engine/` generates QR codes, mail proofs, Zapier/QRTiger/PostGrid CSVs, and the sales-call gate from that list. Approval stays human. Command: `node _os/outreach-engine/bin/run-engine.js --source jesse-238`.
 
-**Known gaps as of 2026-07-29:** mail vendor still undecided; discovery/qualify scoring still manual; Netlify deploy token not in Cloud Agent secrets yet. QR path is ready once the sheet zap is wired to `manifest.csv`.
+**Known gaps as of 2026-08-14:** mail vendor still Mac's call (PostGrid vs StackAdapt). That is a vendor pick, not an engineering blocker. Phones and addresses stay in the Google Sheet on purpose — this GitHub repo is public.
 
 ## Strategy: three waves
 

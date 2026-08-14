@@ -20,6 +20,16 @@ npm i --no-save playwright && npx playwright install chromium --with-deps
 
 Node 18+ is required. Nothing else; the generator has no dependencies.
 
+## Fast path: the 238 Jesse already has
+
+If the batch is the live call sheet, skip harvest/build. Pack QR, mail proofs, and the gate:
+
+```bash
+node _os/outreach-engine/bin/run-engine.js --source jesse-238
+```
+
+Hub: `02_Campaigns/AI Site Builder Outreach Engine/batches/jesse-238/index.html` or http://127.0.0.1:4242/outreach/jesse-238/ after `node _os/server.js`.
+
 ## Step 0: Pick the market and pull the list
 
 From [[Market Roster]], choose one market and one or two verticals. Build the prospect list of 25 to 30 candidates (over-pull, because some will be blocked).

@@ -167,6 +167,8 @@ Industry pages drafted or needed: Medical & Healthcare, Spas & Wellness, Home Se
 
 **Why this matters here:** batch verticals should mirror this list so prospect sites and industry pages reinforce each other. See the vertical alignment section in [[AI Site Builder Outreach Engine]] and the vertical column in [[Market Roster]].
 
+**Dillon Mohr, 2026-08-14** — outreach engine wired to the 238 call sheet. QR, mail proofs, Zapier CSVs, and the sales-call gate generated for all 238. `mail_ready` remains hold.
+
 ## What Slack does NOT say
 
 Worth stating plainly so nobody mistakes assumption for instruction:
