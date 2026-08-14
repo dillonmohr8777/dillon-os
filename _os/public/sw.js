@@ -1,8 +1,9 @@
 /* D.I.L.L.O.N. OS — network-first, last snapshot offline. */
-const CACHE = 'dillon-os-hud-v1';
+const CACHE = 'dillon-os-hud-v2';
 const SHELL = [
   './',
   './index.html',
+  './phone-ops.js',
   './manifest.webmanifest',
   './state.json',
   './icons/icon-192.png',

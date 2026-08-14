@@ -19,6 +19,8 @@ const path = require('node:path');
 const { spawn } = require('node:child_process');
 const crypto = require('node:crypto');
 const { buildState, getSkills } = require('./vault-state');
+const PhoneOps = require('./public/phone-ops');
+const { scanText } = require('./public-safety');
 
 const VAULT = path.resolve(__dirname, '..');
 const PUBLIC = path.join(__dirname, 'public');
@@ -99,6 +101,15 @@ function json(res, code, body) {
   res.end(data);
 }
 
+function readJson(req, res, fn, limit = 8192) {
+  let body = '';
+  req.on('data', (c) => { body += c; if (body.length > limit) req.destroy(); });
+  req.on('end', () => {
+    try { fn(JSON.parse(body || '{}')); }
+    catch (err) { json(res, 400, { error: err.message || 'bad request' }); }
+  });
+}
+
 const PUBLIC_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
@@ -153,6 +164,61 @@ const server = http.createServer((req, res) => {
     try { json(res, 200, statePayload()); }
     catch (err) { json(res, 500, { error: err.message }); }
     return;
+  }
+
+  if (p === '/api/ops' && req.method === 'GET') {
+    json(res, 200, { live: true, writes: true, skills: true });
+    return;
+  }
+
+  if (p === '/api/inbox' && req.method === 'POST') {
+    return readJson(req, res, (payload) => {
+      const text = String(payload.text || '').trim();
+      if (!text) return json(res, 400, { error: 'text required' });
+      const rel = PhoneOps.inboxPath(text, new Date());
+      const markdown = PhoneOps.inboxNote(text, new Date());
+      if (scanText(markdown).length) return json(res, 400, { error: 'public repo: that looks like PII — not saved' });
+      const dest = path.join(VAULT, rel);
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+      fs.writeFileSync(dest, markdown);
+      json(res, 200, { ok: true, path: rel });
+    });
+  }
+
+  if (p === '/api/directive' && req.method === 'POST') {
+    return readJson(req, res, (payload) => {
+      const text = String(payload.text || '').trim();
+      if (!text) return json(res, 400, { error: 'text required' });
+      const file = path.join(VAULT, 'Dashboard.md');
+      const next = PhoneOps.toggleDirective(fs.readFileSync(file, 'utf8'), text, !!payload.done);
+      fs.writeFileSync(file, next);
+      json(res, 200, { ok: true, path: 'Dashboard.md', done: !!payload.done });
+    });
+  }
+
+  if (p === '/api/today' && req.method === 'POST') {
+    return readJson(req, res, (payload) => {
+      const text = String(payload.text || '').trim();
+      if (!text) return json(res, 400, { error: 'text required' });
+      if (scanText(text).length) return json(res, 400, { error: 'public repo: that looks like PII — not saved' });
+      const file = path.join(VAULT, 'Dashboard.md');
+      fs.writeFileSync(file, PhoneOps.addDirective(fs.readFileSync(file, 'utf8'), text));
+      json(res, 200, { ok: true, path: 'Dashboard.md' });
+    });
+  }
+
+  if (p === '/api/queue-skill' && req.method === 'POST') {
+    return readJson(req, res, (payload) => {
+      const skill = String(payload.skill || '').trim();
+      const known = getSkills(VAULT).some((s) => s.name === skill);
+      if (!known) return json(res, 400, { error: 'unknown skill: ' + skill });
+      const rel = '12_Brain/queue/phone-hud.jsonl';
+      const file = path.join(VAULT, rel);
+      const prev = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '';
+      fs.mkdirSync(path.dirname(file), { recursive: true });
+      fs.writeFileSync(file, PhoneOps.appendQueue(prev, skill, new Date()));
+      json(res, 200, { ok: true, path: rel, skill, queued: true });
+    });
   }
 
   if (p === '/api/run' && req.method === 'POST') {

@@ -19,7 +19,9 @@ describe('D.I.L.L.O.N. OS phone HUD', () => {
     assert.match(html, /viewport-fit=cover/);
     assert.match(html, /manifest\.webmanifest/);
     assert.match(html, /@media \(max-width: 900px\)/);
-    assert.match(html, /Add to Home Screen/);
+    assert.match(html, /Drop in inbox/);
+    assert.match(html, /phone-ops\.js/);
+    assert.match(html, /Unlock writes/);
     assert.match(html, /if \(READONLY\) return/);
     assert.match(html, /serviceWorker\.register/);
     const manifest = JSON.parse(fs.readFileSync(path.join(PUBLIC, 'manifest.webmanifest'), 'utf8'));
@@ -36,7 +38,8 @@ describe('D.I.L.L.O.N. OS phone HUD', () => {
     const state = JSON.parse(fs.readFileSync(path.join(dist, 'state.json'), 'utf8'));
     assert.match(html, /noindex/);
     assert.match(html, /window\.__HUD__=\{mode:"readonly"/);
-    assert.match(html, /Phone view is read-only/);
+    assert.match(html, /Skills queue into the vault/);
+    assert.ok(fs.existsSync(path.join(dist, 'phone-ops.js')));
     assert.equal(state.mode, 'readonly');
     assert.deepEqual(state.jobs, []);
     assert.equal(state.outreach.jesse238, 238);

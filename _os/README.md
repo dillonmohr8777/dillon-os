@@ -15,7 +15,13 @@ Deck buttons; the dashboard itself works without it).
 ## Phone / always-on
 
 The live server stays on loopback because the Command Deck can run skills.
-The phone view is a **read-only snapshot** you can install like an app:
+The phone HUD is an **operator**, not a poster:
+
+- Capture → `00_Inbox/phone/`
+- Tap Today checkboxes on `Dashboard.md`
+- Open the Jesse 238 sheet, live sites, clients
+- Queue skills for the desktop HUD
+- Unlock writes with a fine-grained GitHub token stored on the phone
 
 ```
 node _os/bin/export-hud.js
@@ -23,11 +29,6 @@ node _os/bin/hud-deploy.js    # needs NETLIFY_AUTH_TOKEN
 ```
 
 URL: https://dillon-os-hud.netlify.app
-
-On iPhone: open that URL → Share → **Add to Home Screen**. Android: menu →
-**Install app**. It opens full-screen, works offline on the last snapshot,
-and never launches skills. GitHub Action `.github/workflows/hud-mobile.yml`
-rebuilds it when the vault or HUD changes.
 
 ## What's on screen
 

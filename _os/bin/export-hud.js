@@ -10,7 +10,8 @@
  * `node _os/bin/hud-deploy.js` so the HUD is a URL on a phone, not a
  * localhost tab that dies when the laptop sleeps.
  *
- * Command Deck is stripped: the hosted view cannot launch skills.
+ * Command Deck Claude jobs stay off this origin. Inbox, Today, and skill
+ * queues write through GitHub once the phone is unlocked.
  */
 
 const fs = require('node:fs');
@@ -59,6 +60,7 @@ function main() {
   fs.writeFileSync(path.join(OUT, 'state.json'), json);
   copy(path.join(PUBLIC, 'manifest.webmanifest'), path.join(OUT, 'manifest.webmanifest'));
   copy(path.join(PUBLIC, 'sw.js'), path.join(OUT, 'sw.js'));
+  copy(path.join(PUBLIC, 'phone-ops.js'), path.join(OUT, 'phone-ops.js'));
   fs.writeFileSync(path.join(OUT, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
   fs.writeFileSync(
     path.join(OUT, '_headers'),

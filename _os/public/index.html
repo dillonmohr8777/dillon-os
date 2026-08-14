@@ -142,6 +142,37 @@
     letter-spacing: .04em;
     line-height: 1.45;
   }
+  .ops {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ops textarea, .ops input[type="text"], .ops input[type="password"] {
+    width: 100%; font: inherit; color: var(--ink);
+    background: #101a13; border: 1px solid var(--edge); border-radius: 4px;
+    padding: 10px; min-height: 72px;
+  }
+  .ops input[type="text"], .ops input[type="password"] { min-height: 44px; }
+  .ops .row { display: flex; gap: 8px; }
+  .ops button, .actions a, .li.dir {
+    font: inherit; color: var(--ink); background: #101a13;
+    border: 1px solid var(--edge-hi); border-radius: 4px;
+    padding: 10px 12px; min-height: 44px; text-decoration: none;
+    letter-spacing: .06em; text-transform: uppercase; font-size: 11px;
+    display: flex; align-items: center; justify-content: center; cursor: pointer;
+  }
+  .ops button.primary { background: #16351f; border-color: var(--green-dim); color: var(--green); }
+  .ops [hidden] { display: none !important; }
+  .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .ops-status { color: var(--ink-2); font-size: 11px; line-height: 1.4; }
+  .li.dir { width: 100%; text-align: left; justify-content: flex-start; text-transform: none; letter-spacing: 0; font-size: 12px; gap: 8px; background: transparent; border-color: var(--edge); }
+  .li.dir .tx { white-space: normal; }
+  dialog { border: 1px solid var(--edge-hi); background: var(--panel); color: var(--ink); padding: 16px; max-width: 420px; }
+  dialog::backdrop { background: rgba(0,0,0,.65); }
+  dialog p { color: var(--ink-2); margin: 8px 0 12px; line-height: 1.45; }
+  html.phone .ops { display: flex; }
+  html.phone .install { display: block; }
+
   .readonly-note { color: var(--ink-3); font-size: 10px; letter-spacing: .08em; grid-column: 1 / -1; padding: 2px 0 4px; }
   .deck button:disabled { cursor: default; opacity: .6; }
   .mode-pill { color: var(--amber); }
@@ -161,13 +192,15 @@
     .clock .time { font-size: 22px; }
     .brand .callsign { font-size: 20px; }
     main { display: flex; flex-direction: column; min-height: 0; }
-    .core { min-height: 220px; max-height: 260px; flex: none; }
+    .core { min-height: 140px; max-height: 180px; flex: none; }
+    #orb { display: none; }
     .hero .big { font-size: 36px; }
     .hero .meter { max-width: none; }
     .col { overflow: visible; }
     .panel.scroll, .panel.console { max-height: none !important; }
     .deck button { min-height: 44px; font-size: 12px; }
     .install { display: block; }
+    .ops { display: flex; }
     .li .tx { white-space: normal; }
     footer { font-size: 11px; }
   }
@@ -179,7 +212,7 @@
 <body>
 
 <div id="app">
-  <div class="install" id="install">Add to Home Screen — iPhone: Share → Add to Home Screen. Android: menu → Install app. Opens full-screen and keeps the last snapshot offline.</div>
+  <div class="install" id="install">Home screen: iPhone Share → Add to Home Screen · Android menu → Install app</div>
   <header>
     <div class="brand">
       <div class="callsign" id="callsign">D.I.L.L.O.N.</div>
@@ -196,6 +229,38 @@
       <div class="date" id="date">—</div>
     </div>
   </header>
+
+  <section class="ops" id="ops">
+    <form id="capture-form">
+      <textarea id="capture-text" maxlength="2000" placeholder="Capture — drops into 00_Inbox. Public repo: no phones, emails, or addresses."></textarea>
+      <div class="row">
+        <button class="primary" type="submit" id="capture-btn">Drop in inbox</button>
+        <button type="button" id="today-btn">Add to Today</button>
+      </div>
+    </form>
+    <div class="actions" id="quick-actions">
+      <a id="a-sheet" target="_blank" rel="noopener">Jesse 238 sheet</a>
+      <a id="a-hub" target="_blank" rel="noopener">Live sites</a>
+      <a id="a-clients" target="_blank" rel="noopener">Clients</a>
+      <a id="a-dash" target="_blank" rel="noopener">Dashboard.md</a>
+    </div>
+    <div class="ops-status" id="ops-status">Unlock vault writes to check Today and save captures into Git. Links already work.</div>
+    <div class="row">
+      <button type="button" id="unlock-btn">Unlock writes</button>
+      <button type="button" id="lock-btn" hidden>Lock</button>
+    </div>
+  </section>
+
+  <dialog id="unlock-dlg">
+    <h2>Unlock vault writes</h2>
+    <p>Fine-grained GitHub token, this repo only, Contents: Read and write. Stored on this phone, never in the vault. Claude skills still do not run from here.</p>
+    <input id="pat" type="password" autocomplete="off" placeholder="github_pat_…">
+    <div class="row" style="margin-top:10px">
+      <button type="button" id="unlock-cancel">Cancel</button>
+      <button type="button" class="primary" id="unlock-arm">Arm</button>
+    </div>
+    <p><a id="a-token" target="_blank" rel="noopener">Create a token</a></p>
+  </dialog>
 
   <main>
     <!-- left -->
@@ -275,12 +340,23 @@
 </div>
 <div id="tip"></div>
 
+<script src="./phone-ops.js"></script>
 <script>
 const $ = (id) => document.getElementById(id);
 let state = null;
 let activeJob = null;   // { id, skill, es }
 const hud = window.__HUD__ || {};
 const READONLY = hud.mode === 'readonly';
+const Ops = window.PhoneOps;
+
+function isPhone() {
+  return READONLY || window.matchMedia('(max-width: 900px)').matches;
+}
+function markPhone() {
+  document.documentElement.classList.toggle('phone', isPhone());
+}
+markPhone();
+window.addEventListener('resize', markPhone);
 
 if (READONLY) {
   const wrap = $('pill-mode-wrap');
@@ -374,23 +450,29 @@ function render() {
   // directives
   $('directives').innerHTML = directives.length
     ? directives.map((d) =>
-        `<div class="li"><span class="mk ${d.done ? 'done' : ''}">${d.done ? '■' : '□'}</span>` +
-        `<span class="tx ${d.done ? 'done' : ''}" title="${esc(d.text)}">${esc(d.text)}</span></div>`).join('')
-    : '<div class="li"><span class="tx">no open directives — run PLAN TODAY</span></div>';
+        `<button type="button" class="li dir" data-text="${esc(d.text)}" data-done="${d.done ? '1' : '0'}">` +
+        `<span class="mk ${d.done ? 'done' : ''}">${d.done ? '■' : '□'}</span>` +
+        `<span class="tx ${d.done ? 'done' : ''}">${esc(d.text)}</span></button>`).join('')
+    : '<div class="li"><span class="tx">no open directives — add one above</span></div>';
   $('dir-src').textContent = directives[0] ? directives[0].source.toLowerCase() : '';
+  for (const b of document.querySelectorAll('#directives .dir')) {
+    b.onclick = () => toggleDir(b.dataset.text, b.dataset.done !== '1');
+  }
 
   // docs
   $('docs').innerHTML = docs.map((d) =>
-    `<div class="li"><span class="mk">▸</span><span class="tx" title="${esc(d.rel)}">${esc(d.name)}</span><span class="ago">${d.ago}</span></div>`).join('');
+    `<a class="li" href="${esc(Ops.blobUrl(d.rel))}" target="_blank" rel="noopener">` +
+    `<span class="mk">▸</span><span class="tx" title="${esc(d.rel)}">${esc(d.name)}</span><span class="ago">${d.ago}</span></a>`).join('');
 
   // deck
   const running = new Set((jobs || []).filter((j) => j.status === 'running').map((j) => j.skill));
   if (READONLY) {
     $('deck').innerHTML =
-      '<div class="readonly-note">Phone view is read-only. Skills stay on the desktop HUD.</div>' +
+      '<div class="readonly-note">Skills queue into the vault. They run on the desktop HUD, not from this phone.</div>' +
       skills.map((s) =>
-        `<button disabled title="${esc(s.description)}">${esc(s.name.replace(/-/g, ' '))}</button>`).join('');
-    $('deck-count').textContent = 'desktop only';
+        `<button data-skill="${esc(s.name)}" title="${esc(s.description)}">${esc(s.name.replace(/-/g, ' '))}</button>`).join('');
+    $('deck-count').textContent = 'queue';
+    for (const b of document.querySelectorAll('.deck button')) b.onclick = () => queueSkill(b.dataset.skill);
   } else {
     $('deck').innerHTML = skills.map((s) =>
       `<button data-skill="${esc(s.name)}" title="${esc(s.description)}" class="${running.has(s.name) ? 'running' : ''}">${esc(s.name.replace(/-/g, ' '))}</button>`).join('');
@@ -443,6 +525,142 @@ $('spark').addEventListener('mousemove', (e) => {
   tip.style.left = (e.clientX + 12) + 'px'; tip.style.top = (e.clientY - 8) + 'px';
 });
 $('spark').addEventListener('mouseleave', () => { $('tip').style.display = 'none'; });
+
+// ---------------- phone operator ----------------
+function setOpsStatus(msg) {
+  const el = $('ops-status');
+  if (el) el.textContent = msg;
+}
+
+function refreshOpsChrome() {
+  const hosted = READONLY;
+  const armed = !!(Ops && Ops.getToken());
+  if ($('unlock-btn')) $('unlock-btn').hidden = !hosted || armed;
+  if ($('lock-btn')) $('lock-btn').hidden = !hosted || !armed;
+  if (!hosted) setOpsStatus('Live HUD — captures and Today checks write into this vault now.');
+  else if (armed) setOpsStatus('Writes armed. Inbox, Today, and skill queues commit to GitHub. Skills still run on the desktop.');
+  else setOpsStatus('Links work now. Unlock vault writes to check Today and save captures into Git.');
+}
+
+function wireLinks() {
+  if (!Ops) return;
+  const L = Ops.LINKS;
+  $('a-sheet').href = L.sheet;
+  $('a-hub').href = L.hub;
+  $('a-clients').href = L.clients;
+  $('a-dash').href = L.dashboard;
+  $('a-token').href = L.tokenHelp;
+}
+
+async function localPost(path, body) {
+  const r = await fetch(path, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(data.error || r.statusText);
+  return data;
+}
+
+async function githubWrite(rel, mutator, message) {
+  const token = Ops.getToken();
+  if (!token) {
+    $('unlock-dlg').showModal();
+    throw new Error('unlock vault writes first');
+  }
+  const existing = await Ops.githubGet(rel, { token });
+  const next = mutator(existing ? existing.content : '');
+  return Ops.githubPut(rel, next, message, { token, sha: existing && existing.sha });
+}
+
+async function dropInbox(text) {
+  const body = String(text || '').trim();
+  if (!body) return;
+  if (!READONLY) {
+    const data = await localPost('/api/inbox', { text: body });
+    setOpsStatus(`Saved ${data.path}`);
+    return data;
+  }
+  const rel = Ops.inboxPath(body, new Date());
+  await githubWrite(rel, () => Ops.inboxNote(body, new Date()), `phone: capture ${rel}`);
+  setOpsStatus(`Saved ${rel}`);
+  return { path: rel };
+}
+
+async function toggleDir(text, done) {
+  try {
+    if (!READONLY) await localPost('/api/directive', { text, done });
+    else {
+      await githubWrite('Dashboard.md', (md) => Ops.toggleDirective(md, text, done), `phone: ${done ? 'done' : 'reopen'} ${text}`);
+    }
+    const d = (state.directives || []).find((x) => x.text === text);
+    if (d) d.done = done;
+    render();
+    setOpsStatus(done ? `Checked off: ${text}` : `Reopened: ${text}`);
+  } catch (err) {
+    setOpsStatus(String(err.message || err));
+  }
+}
+
+async function addToday(text) {
+  const body = String(text || '').trim();
+  if (!body) return;
+  if (!READONLY) await localPost('/api/today', { text: body });
+  else await githubWrite('Dashboard.md', (md) => Ops.addDirective(md, body), `phone: today ${body}`);
+  (state.directives || []).unshift({ text: body, done: false, source: 'Dashboard.md' });
+  render();
+  setOpsStatus(`Added to Today: ${body}`);
+}
+
+async function queueSkill(skill) {
+  try {
+    if (!READONLY) {
+      const data = await localPost('/api/queue-skill', { skill });
+      setOpsStatus(`Queued ${data.skill} → ${data.path}`);
+      $('console').innerHTML += `\n<span class="ok">>> queued ${esc(skill)}</span>`;
+      return;
+    }
+    await githubWrite(
+      '12_Brain/queue/phone-hud.jsonl',
+      (prev) => Ops.appendQueue(prev, skill, new Date()),
+      `phone: queue ${skill}`,
+    );
+    setOpsStatus(`Queued ${skill} for the desktop HUD`);
+    $('console').innerHTML += `\n<span class="ok">>> queued ${esc(skill)}</span>`;
+  } catch (err) {
+    setOpsStatus(String(err.message || err));
+  }
+}
+
+$('capture-form').addEventListener('submit', async (ev) => {
+  ev.preventDefault();
+  const text = $('capture-text').value;
+  try {
+    await dropInbox(text);
+    $('capture-text').value = '';
+    sync();
+  } catch (err) { setOpsStatus(String(err.message || err)); }
+});
+$('today-btn').onclick = async () => {
+  const text = $('capture-text').value;
+  try {
+    await addToday(text);
+    $('capture-text').value = '';
+  } catch (err) { setOpsStatus(String(err.message || err)); }
+};
+$('unlock-btn').onclick = () => $('unlock-dlg').showModal();
+$('unlock-cancel').onclick = () => $('unlock-dlg').close();
+$('unlock-arm').onclick = () => {
+  Ops.setToken($('pat').value);
+  $('pat').value = '';
+  $('unlock-dlg').close();
+  refreshOpsChrome();
+};
+$('lock-btn').onclick = () => { Ops.setToken(''); refreshOpsChrome(); };
+
+wireLinks();
+refreshOpsChrome();
 
 // ---------------- skill runner ----------------
 async function run(skill) {
