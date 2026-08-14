@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { buildBrief, fitBriefToMeasuredSpec, looksLikePhone, looksLikeHours } = require('../brief-from-harvest.js');
+const { buildBrief, fitBriefToMeasuredSpec, looksLikePhone, looksLikeHours, pickTokens } = require('../brief-from-harvest.js');
 const { buildSite } = require('../build-site.js');
 const { checkSpec } = require('../lib/spec.js');
 
@@ -70,6 +70,54 @@ describe('brief-from-harvest', () => {
     assert.equal(brief.composition_ref, 'https://stripe.com');
     assert.equal(brief.attitude, 'glass');
     assert.equal(brief.noindex, true);
+  });
+
+  it('mirrors harvest voice and layout when no wow ref is passed', () => {
+    const dinerHarvest = {
+      ...harvest,
+      voice: {
+        ...harvest.voice,
+        headings: ['Fresh Ingredients, Tasty Homemade Meals', 'Our Story', 'Breakfast'],
+        paragraphs: [
+          'Our family owned business has been serving the local community since 1981, providing a warm family atmosphere.',
+          'Come enjoy your family and friends with us. Schedule your events.',
+        ],
+        navLabels: ['Home', 'Order Online', 'Menus', 'Photo Gallery', 'Contact Us'],
+        ctaLabels: ['Order Online'],
+      },
+    };
+    const dinerTarget = {
+      slug: 'new-pennsburg-diner',
+      name: 'New Pennsburg Diner',
+      city: 'Pennsburg',
+      vertical: 'restaurant',
+      vertical_group: 'food',
+    };
+    const brief = buildBrief(dinerHarvest, dinerTarget);
+    assert.equal(brief.composition_ref, null);
+    assert.equal(brief.layout, 'harvest-diner');
+    assert.match(brief.hero.headline, /Fresh Ingredients|New Pennsburg Diner/);
+    assert.equal(brief.hero.ctaPrimary.label, 'Order Online');
+    assert.ok(brief.nav.some((n) => n.label === 'Menus'));
+    assert.ok(brief.story.heading === 'Our Story');
+    assert.match(brief.proof.items.join(' '), /1981/);
+  });
+
+  it('picks the painted brand gold over a tiny saturated link blue', () => {
+    const tokens = pickTokens(
+      {
+        brand: {
+          palette: [
+            { hex: '#1F1F1F', weight: 4000000 },
+            { hex: '#F6F1E8', weight: 3000000 },
+            { hex: '#C39D63', weight: 42790 },
+            { hex: '#2EA3F2', weight: 22384 },
+          ],
+        },
+      },
+      'warm'
+    );
+    assert.equal(tokens.accent.toUpperCase(), '#C39D63');
   });
 
   it('fits HTML into the canonical word and image spec', () => {

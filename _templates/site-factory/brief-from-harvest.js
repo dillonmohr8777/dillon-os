@@ -146,18 +146,61 @@ function extractAddressFromText(texts, city) {
   return '';
 }
 
+const GOOGLE_FONT_MAP = {
+  georgia: 'Playfair Display',
+  times: 'Libre Baskerville',
+  'times new roman': 'Libre Baskerville',
+  garamond: 'Cormorant Garamond',
+  palatino: 'Cormorant Garamond',
+  impact: 'Anton',
+  'arial black': 'Archivo Black',
+  oswald: 'Oswald',
+  bebas: 'Bebas Neue',
+  montserrat: 'Montserrat',
+  lato: 'Lato',
+  roboto: 'Roboto',
+  'open sans': 'Open Sans',
+  poppins: 'Poppins',
+  merriweather: 'Merriweather',
+  raleway: 'Raleway',
+  playfair: 'Playfair Display',
+  'playfair display': 'Playfair Display',
+  cormorant: 'Cormorant Garamond',
+  fraunces: 'Fraunces',
+  anton: 'Anton',
+};
+
 function pickTokens(harvest, attitude) {
   const palette = (harvest.brand && harvest.brand.palette) || harvest.palette || [];
-  const hexes = palette
-    .map((p) => (typeof p === 'string' ? p : p.hex))
-    .filter((h) => /^#[0-9A-Fa-f]{6}$/.test(h || ''));
-  const usable = hexes.filter((h) => lum(h) > 18 && lum(h) < 240);
-  const accent = [...usable].sort((a, b) => sat(b) - sat(a))[0] || '#C2410C';
-  const accent2 = [...usable].filter((h) => h !== accent).sort((a, b) => sat(b) - sat(a))[0] || '#D4A017';
-  const paper = mix('#F6F1E8', accent, 0.08);
-  const ink = mix('#141820', accent, 0.22);
-  const panel = mix(paper, accent, 0.28);
-  const deep = mix('#0C1016', accent, 0.35);
+  const entries = palette
+    .map((p) => (typeof p === 'string' ? { hex: p, weight: 1 } : p))
+    .filter((p) => /^#[0-9A-Fa-f]{6}$/.test((p && p.hex) || ''));
+  const usable = entries.filter((p) => lum(p.hex) > 12 && lum(p.hex) < 248);
+  const hexes = usable.map((p) => p.hex);
+  const lights = hexes.filter((h) => lum(h) > 170).sort((a, b) => lum(b) - lum(a));
+  const darks = hexes.filter((h) => lum(h) < 70).sort((a, b) => lum(a) - lum(b));
+  const scored = [...usable]
+    .filter((p) => sat(p.hex) > 0.12)
+    .sort((a, b) => {
+      const aw = a.weight || 1;
+      const bw = b.weight || 1;
+      if (bw > aw * 1.4) return 1;
+      if (aw > bw * 1.4) return -1;
+      return sat(b.hex) - sat(a.hex);
+    });
+  const accent = (scored[0] && scored[0].hex) || [...hexes].sort((a, b) => sat(b) - sat(a))[0] || '#C2410C';
+  let accent2 = (scored[1] && scored[1].hex) || hexes.filter((h) => h !== accent).sort((a, b) => sat(b) - sat(a))[0];
+  if (!accent2 || sat(accent2) < 0.12) accent2 = mix(accent, '#D4A017', 0.45);
+  let paper = lights[0] || mix('#F6F1E8', accent, 0.1);
+  let ink = darks[0] || mix('#141820', accent, 0.22);
+  if (['warm', 'glass', 'editorial'].includes(attitude) && lum(paper) < 160) {
+    paper = mix('#F6F1E8', accent, 0.12);
+  }
+  if (['industrial', 'brutal', 'neon'].includes(attitude) && lum(ink) > 80) {
+    ink = mix('#121212', accent, 0.25);
+  }
+  const panel = mix(paper, accent, 0.32);
+  const deep = darks[1] || mix('#0C1016', accent, 0.4);
   const border = attitude === 'brutal' || attitude === 'industrial' ? '4px' : attitude === 'editorial' || attitude === 'glass' ? '1px' : '2px';
   const radius = attitude === 'brutal' ? '0px' : attitude === 'industrial' ? '4px' : attitude === 'glass' ? '28px' : attitude === 'editorial' ? '2px' : '16px';
   return {
@@ -178,9 +221,8 @@ function pickTokens(harvest, attitude) {
 }
 
 function pickFonts(harvest, attitude) {
-  const families = ((harvest.brand && harvest.brand.fonts) || harvest.fonts || []).map((f) =>
-    typeof f === 'string' ? f : f.family
-  );
+  const rawFonts = (harvest.brand && harvest.brand.fonts) || harvest.fonts || [];
+  const families = rawFonts.map((f) => (typeof f === 'string' ? f : f.family));
   const displayMap = {
     brutal: 'Archivo Black',
     industrial: 'Anton',
@@ -189,25 +231,102 @@ function pickFonts(harvest, attitude) {
     editorial: 'Cormorant Garamond',
     warm: 'Fraunces',
   };
-  const looksSerif = families.some((f) => /serif|garamond|times|georgia|playfair|bodoni|cormorant/i.test(f || ''));
-  const display = looksSerif && attitude !== 'brutal' && attitude !== 'industrial' ? 'Playfair Display' : displayMap[attitude] || 'Archivo';
+  const looksSerif = families.some((f) => /serif|garamond|times|georgia|playfair|bodoni|cormorant|palatino/i.test(f || ''));
+  const bySize = [...rawFonts]
+    .map((f) => (typeof f === 'string' ? { family: f, maxSizePx: 0 } : f))
+    .sort((a, b) => (b.maxSizePx || 0) - (a.maxSizePx || 0));
+  let mapped = '';
+  for (const fam of [...bySize.map((f) => f.family), ...families]) {
+    const key = String(fam || '').toLowerCase().replace(/['"]/g, '').trim();
+    if (GOOGLE_FONT_MAP[key]) {
+      mapped = GOOGLE_FONT_MAP[key];
+      break;
+    }
+  }
+  const display =
+    mapped && attitude !== 'brutal' && attitude !== 'industrial'
+      ? mapped
+      : looksSerif && attitude !== 'brutal' && attitude !== 'industrial'
+        ? 'Playfair Display'
+        : displayMap[attitude] || 'Archivo';
   return { display, displayFallback: looksSerif ? 'Georgia,serif' : 'Impact,sans-serif', text: 'Instrument Sans' };
 }
 
-function pickAttitude(target) {
-  const g = target.vertical_group || target.vertical || '';
-  if (/legal/.test(g)) return 'editorial';
-  if (/medical/.test(g)) return 'glass';
-  if (/home-services|industrial/.test(g)) return 'industrial';
-  if (/auto/.test(g)) return 'brutal';
-  if (/spa|food|retail/.test(g)) return 'warm';
+function pickAttitude(target, harvest) {
+  const g = `${target.vertical_group || ''} ${target.vertical || ''}`.toLowerCase();
+  if (/legal|lawyer/.test(g)) return 'editorial';
+  if (/medical|dentist|vet|clinic|doctor/.test(g)) return 'glass';
+  if (/tattoo|bar|nightlife|pub/.test(g)) return 'neon';
+  if (/auto|car|tire/.test(g)) return 'brutal';
+  if (/home-services|industrial|electric|hvac|metal|hardware|pipe|floorer/.test(g)) return 'industrial';
+  if (/spa|food|retail|restaurant|beauty|fitness|florist|furniture|ice/.test(g)) return 'warm';
+  if (harvest) {
+    const palette = (harvest.brand && harvest.brand.palette) || [];
+    const hexes = palette.map((p) => (typeof p === 'string' ? p : p.hex)).filter((h) => /^#[0-9A-Fa-f]{6}$/.test(h || ''));
+    const avg = hexes.slice(0, 4).reduce((s, h) => s + lum(h), 0) / Math.max(hexes.slice(0, 4).length, 1);
+    if (avg < 70) return 'industrial';
+  }
   return 'warm';
+}
+
+function inferMirrorLayout(target, harvest) {
+  const v = `${target.vertical || ''} ${target.vertical_group || ''}`.toLowerCase();
+  if (/restaurant|bar|diner|pizza|chicken|food|sushi|taco|pub/.test(v)) return { layout: 'harvest-diner', heroMode: 'photo' };
+  if (/dentist|vet|clinic|doctor|lawyer|legal|physical|therapy/.test(v)) return { layout: 'harvest-clinic', heroMode: 'split' };
+  if (/electric|metal|hvac|auto|car|tire|industrial|manufact|hardware|pipe/.test(v)) {
+    return { layout: 'harvest-dark', heroMode: 'bleed' };
+  }
+  if (/gym|fitness|train|nail|beauty|spa|tattoo/.test(v)) return { layout: 'harvest-photo', heroMode: 'photo' };
+  if (/shop|retail|shoes|jewelry|florist|furniture|consignment/.test(v)) return { layout: 'harvest-shop', heroMode: 'grid' };
+  const palette = ((harvest && harvest.brand && harvest.brand.palette) || []).map((p) => (typeof p === 'string' ? p : p.hex));
+  const avg = palette.slice(0, 4).reduce((s, h) => s + lum(h), 0) / Math.max(palette.slice(0, 4).length, 1);
+  if (avg < 70) return { layout: 'harvest-dark', heroMode: 'bleed' };
+  return { layout: 'harvest-split', heroMode: 'split' };
+}
+
+function isJunkHead(h) {
+  const t = clean(h);
+  if (!t || t.length < 4 || t.length > 80) return true;
+  if (/^(home|success!?|featured on:?|welcome to|our newsletter|drop us a line|hours of operation|checking your browser)$/i.test(t)) {
+    return true;
+  }
+  if (/cookie|privacy policy|terms of use|copyright|just a moment/i.test(t)) return true;
+  return false;
+}
+
+function isJunkPara(p) {
+  const t = clean(p);
+  if (!t || t.length < 40) return true;
+  if (/copyright|privacy policy|terms of use|media room|dialogue is an essential/i.test(t)) return true;
+  if (/ServicesLandscape|AreasAll Service|Personal Training Personal Training/i.test(t)) return true;
+  if ((t.match(/[A-Z][a-z]+/g) || []).length > 14 && !/[.!?']/.test(t)) return true;
+  return false;
+}
+
+function usefulNav(labels) {
+  return (labels || [])
+    .map(clean)
+    .filter((t) => t && t.length < 28)
+    .filter((t) => !/^(home|facebook|instagram|twitter|linkedin|logo|menu|close|search|cart)$/i.test(t));
+}
+
+function foundingLine(texts, name, city, category) {
+  const blob = texts.join(' ');
+  const year = blob.match(/\bsince\s+(19\d{2}|20\d{2})\b/i);
+  const years = blob.match(/\bover\s+(\d{2,})\s+years\b/i);
+  if (year) return `${name} has served ${city} since ${year[1]}.`;
+  if (years) return `${name} has served ${city} for over ${years[1]} years.`;
+  return `${name} is a ${city} ${category}.`;
 }
 
 function sentencesFrom(harvest, n, fallback) {
   const voice = harvest.voice || {};
-  const paras = [...(voice.paragraphs || harvest.paragraphs || [])].map(noLead).filter((p) => p.length > 40);
-  const heads = [...(voice.headings || harvest.headings || [])].map(noLead).filter((h) => h.length > 8 && h.length < 90);
+  const paras = [...(voice.paragraphs || harvest.paragraphs || [])]
+    .map(noLead)
+    .filter((p) => !isJunkPara(p));
+  const heads = [...(voice.headings || harvest.headings || [])]
+    .map(noLead)
+    .filter((h) => !isJunkHead(h) && h.length > 8 && h.length < 90);
   const out = [];
   for (const p of paras) {
     if (out.length >= n) break;
@@ -242,9 +361,10 @@ function countWords(brief) {
 }
 
 function buildBrief(harvest, target, compositionRef) {
-  const attitude = pickAttitude(target);
+  const attitude = pickAttitude(target, harvest);
   const tokens = pickTokens(harvest, attitude);
   const fonts = pickFonts(harvest, attitude);
+  const mirror = inferMirrorLayout(target, harvest);
   const name = target.name || harvest.title || target.slug;
   const city = target.city || 'Philadelphia';
   const category = (target.vertical || target.vertical_group || 'Local service').replace(/-/g, ' ');
@@ -252,9 +372,12 @@ function buildBrief(harvest, target, compositionRef) {
   const jsonLd = [].concat((harvest.facts && harvest.facts.jsonLd) || harvest.jsonLd || []);
   const extracted = walkJsonLd(jsonLd);
   const voice = harvest.voice || {};
+  const heads = (voice.headings || []).map(noLead).filter((h) => !isJunkHead(h));
+  const paras = (voice.paragraphs || []).map(noLead).filter((p) => !isJunkPara(p));
+  const navs = usefulNav(voice.navLabels || []);
   const textPool = [
-    ...(voice.paragraphs || []),
-    ...(voice.headings || []),
+    ...paras,
+    ...heads,
     harvest.metaDescription,
     voice.metaDescription,
     voice.ogDescription,
@@ -275,39 +398,67 @@ function buildBrief(harvest, target, compositionRef) {
     `Public details kept in one place`,
   ];
   const storyBits = sentencesFrom(harvest, 2, [
-    `${name} serves ${city} with ${category}. The live homepage hides that behind a layout that fights phones.`,
-    `The rebuild keeps their name, their work, and a direct way to get in touch.`,
+    `${name} serves ${city} with ${category}. Neighbors already know the name.`,
+    `The rebuild keeps their wording, their work, and a direct way to get in touch.`,
   ]).map((s) => clipWords(s, 24));
-  const offerings = sentencesFrom(harvest, 3, fallbackOffer).map((s) => clipWords(s.replace(/\.$/, ''), 12));
-  const experience = [
+  const offerHeads = heads.filter((h) => h.length < 48 && !new RegExp(name.split(' ')[0], 'i').test(h));
+  const offerings = (offerHeads.length >= 3 ? offerHeads.slice(0, 3) : sentencesFrom(harvest, 3, fallbackOffer)).map(
+    (s) => clipWords(s.replace(/\.$/, ''), 12)
+  );
+  const experience = (paras.slice(2, 5).length >= 3 ? paras.slice(2, 5) : sentencesFrom(harvest, 3, [
     `Open the page on a phone. The primary action stays on screen.`,
     `Call or write without hunting a number buried in an image.`,
     `See the work, then take one next step.`,
-  ];
+  ])).map((s) => clipWords(s, 18));
   const proof = [
-    `Listed for ${category} in ${city}.`,
+    foundingLine(textPool, name, city, category),
     hours ? `Hours listed as ${hours}.` : `Reach them through the official site.`,
     phone ? `Phone published on their own pages.` : `Contact runs through their official site.`,
-    `Rebuild queued after a documented mobile or conversion fault.`,
+    address ? `Visit ${address}.` : `Serving ${city} and nearby towns.`,
   ];
+  const heroLine =
+    heads.find((h) => h.length >= 12 && h.length <= 64 && h.toLowerCase() !== name.toLowerCase()) || name;
   const heroSub = clipWords(
     noLead(
-      (harvest.voice && harvest.voice.metaDescription) ||
+      voice.metaDescription ||
         harvest.metaDescription ||
+        paras[0] ||
         `${name} handles ${category} in ${city}. The new page makes that obvious on the first screen.`
     ),
     28
   );
 
-  const ctaLabel =
-    [...((harvest.voice && harvest.voice.ctaLabels) || [])].find(looksLikeCta) || 'Get in touch';
+  const ctaLabel = [...(voice.ctaLabels || [])].find(looksLikeCta) || navs.find(looksLikeCta) || 'Get in touch';
   const ctaHref = phone ? `tel:${phone.replace(/\D/g, '')}` : url || '#visit';
   const official = url || '#visit';
+  const storyHead = heads.find((h) => /story|about|birth|welcome|history/i.test(h)) || 'About';
+  const featureHead = heads.find((h) => h !== heroLine && h !== storyHead && h.length > 10) || offerings[0] || name;
+  const featureText = paras.find((p) => !storyBits.some((s) => p.startsWith(s.slice(0, 18)))) || paras[0] || heroSub;
+  const spotlightHead = heads.find((h) => h !== heroLine && h !== storyHead && h !== featureHead) || `${city} ${category}`;
+  const catalogTitles = (navs.length >= 3 ? navs : ['Official site', 'Offerings', 'Visit']).slice(0, 3);
+  const nav = (navs.length ? navs : ['Explore', 'Gallery', 'Visit']).slice(0, 3).map((label) => {
+    if (/menu|service|offer|food|breakfast|dinner/i.test(label)) return { label, href: '#offerings' };
+    if (/photo|gallery|work|look/i.test(label)) return { label, href: '#gallery' };
+    if (/contact|visit|hour|location|map/i.test(label)) return { label, href: '#visit' };
+    if (/about|story/i.test(label)) return { label, href: '#top' };
+    return { label, href: '#offerings' };
+  });
+  const marquee = [...navs, ...heads.filter((h) => h.length < 28)].filter(Boolean).slice(0, 6);
 
   const images = Array.from({ length: 12 }, (_, i) => ({
     file: `image-${i + 1}.webp`,
     alt: `${name} ${category} in ${city}, reference ${i + 1}`,
   }));
+
+  const schemaType = /dental|dentist/.test(category)
+    ? 'Dentist'
+    : /vet/.test(category)
+      ? 'VeterinaryCare'
+      : /legal|lawyer/.test(`${target.vertical_group || ''} ${category}`)
+        ? 'LegalService'
+        : /restaurant|diner|pizza|bar|food/.test(category)
+          ? 'Restaurant'
+          : 'LocalBusiness';
 
   const brief = {
     slug: target.slug,
@@ -317,67 +468,59 @@ function buildBrief(harvest, target, compositionRef) {
     vertical: target.vertical_group || target.vertical,
     attitude,
     composition_ref: compositionRef || null,
-    layout: compositionRef || undefined,
+    layout: compositionRef || mirror.layout,
+    heroMode: compositionRef ? undefined : mirror.heroMode,
     url,
     phone: phone || undefined,
     address: address || undefined,
     hours: hours || undefined,
     description: heroSub,
     noindex: true,
-    schemaType: /dental|dentist/.test(category)
-      ? 'Dentist'
-      : /legal/.test(String(target.vertical_group))
-        ? 'LegalService'
-        : 'LocalBusiness',
+    schemaType,
     logo: false,
     tokens,
     fonts,
+    nav,
     hero: {
-      eyebrow: `${city} | ${category}`,
-      headline: name,
+      eyebrow: navs[0] ? `${city} | ${navs[0]}` : `${city} | ${category}`,
+      headline: heroLine,
       sub: heroSub,
       ctaPrimary: { label: ctaLabel, href: ctaHref },
-      ctaSecondary: { label: 'See the work', href: '#gallery' },
+      ctaSecondary: { label: navs.find((n) => /gallery|menu|photo|work/i.test(n)) || 'See the work', href: '#gallery' },
       glassFloat: { title: city, sub: category },
     },
-    offerings: { items: offerings },
+    offerings: { heading: navs.find((n) => /menu|service/i.test(n)) || undefined, items: offerings },
     proof: { items: proof },
     gallery: { imageIndexes: [3, 4, 5, 6, 7] },
-    story: { heading: 'About', paragraphs: storyBits },
+    story: { heading: storyHead, paragraphs: storyBits },
     experience: { items: experience },
     feature: {
-      heading: `Care that fits a real week in ${city}`,
-      text: clipWords(
-        `${name} keeps the next step obvious: call, see the work, then walk in. The page is built for a phone in your hand.`,
-        28
-      ),
-      cta: { label: 'Visit the official site', href: official },
+      heading: featureHead,
+      text: clipWords(featureText, 28),
+      cta: { label: navs.find((n) => /order|book|quote|call/i.test(n)) || 'Visit the official site', href: official },
       imageIndex: 8,
     },
     spotlight: {
-      heading: `Close to home in ${city}`,
-      text: clipWords(
-        `${name} is a ${city} ${category}. Neighbors should find the address, the phone, and a reason to come in without hunting.`,
-        22
-      ),
+      heading: spotlightHead,
+      text: clipWords(paras[1] || `${name} is a ${city} ${category}. Come in when you're ready.`, 22),
       imageIndex: 12,
-      cta: { label: 'Plan a visit', href: '#visit' },
+      cta: { label: navs.find((n) => /contact|visit/i.test(n)) || 'Plan a visit', href: '#visit' },
     },
     catalog: {
-      items: [
-        { title: 'Official site', href: official, imageIndex: 9 },
-        { title: 'Offerings', href: '#offerings', imageIndex: 10 },
-        { title: 'Visit', href: '#visit', imageIndex: 11 },
-      ],
+      items: catalogTitles.map((title, i) => ({
+        title,
+        href: i === 0 ? official : i === 1 ? '#offerings' : '#visit',
+        imageIndex: 9 + i,
+      })),
     },
     contact: {
-      heading: 'Make the next visit easy.',
-      sub: 'Details below come from their public pages. Empty fields stayed empty on purpose.',
+      heading: heads.find((h) => /contact|visit|drop us|get in/i.test(h)) || 'Make the next visit easy.',
+      sub: paras.find((p) => /visit|call|order|book|address/i.test(p)) || 'Details below come from their public pages.',
     },
     closing: { cta: { label: ctaLabel, href: ctaHref }, heading: name },
     links: [
       { label: 'Official website', href: official },
-      { label: 'Offerings', href: '#offerings' },
+      { label: catalogTitles[1] || 'Offerings', href: '#offerings' },
     ],
     images,
     radar: {
@@ -387,6 +530,11 @@ function buildBrief(harvest, target, compositionRef) {
       hard_faults: target.hard_faults || [],
     },
   };
+
+  if (!compositionRef && marquee.length >= 3) {
+    brief.marquee = marquee;
+    brief.hero.marquee = marquee;
+  }
 
   brief._wordCount = countWords(brief);
   brief.attitude = inferAttitude(brief);
@@ -436,7 +584,16 @@ function fitBriefToMeasuredSpec(brief, measure) {
   return metrics;
 }
 
-module.exports = { buildBrief, pickTokens, countWords, fitBriefToMeasuredSpec, looksLikePhone, looksLikeHours };
+module.exports = {
+  buildBrief,
+  pickTokens,
+  countWords,
+  fitBriefToMeasuredSpec,
+  looksLikePhone,
+  looksLikeHours,
+  inferMirrorLayout,
+  pickAttitude,
+};
 
 if (require.main === module) {
   const harvest = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));

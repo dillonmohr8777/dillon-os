@@ -35,6 +35,10 @@ function uniquifyAssets(siteDir, slug) {
           '-y',
           '-i',
           src,
+          '-frames:v',
+          '1',
+          '-update',
+          '1',
           '-vf',
           `crop=iw:'min(ih,980)':0:0,scale='min(1400,iw)':-2,drawbox=x=iw-10:y=ih-10:w=8:h=8:color=0x${stamp}@1:t=fill`,
           '-q:v',
@@ -48,6 +52,8 @@ function uniquifyAssets(siteDir, slug) {
       fs.writeFileSync(dest, out);
       if (src !== dest && fs.existsSync(src)) fs.unlinkSync(src);
       updated += 1;
+    } catch (err) {
+      console.warn(`uniquify skip ${file}: ${(err.message || err).toString().split('\n')[0]}`);
     } finally {
       if (fs.existsSync(tmp)) fs.unlinkSync(tmp);
     }
