@@ -1,0 +1,252 @@
+{
+  "slug": "narberth-pizza",
+  "name": "Narberth Pizza",
+  "city": "Narberth",
+  "category": "Pizza and steaks",
+  "vertical": "food",
+  "attitude": "warm",
+  "url": "https://www.narberthpizza.com/",
+  "phone": "610-668-2230",
+  "address": "940 Montgomery Ave, Narberth, PA 19072",
+  "hours": "Mon-Sat 11am-9pm Sunday 12pm-9pm",
+  "description": "Pizza and steaks neighborhood shop in Narberth.",
+  "noindex": true,
+  "schemaType": "Restaurant",
+  "logo": false,
+  "marquee": [
+    "Pizza",
+    "Steaks",
+    "Neighborhood shop",
+    "Narberth",
+    "Montgomery Ave"
+  ],
+  "tokens": {
+    "paper": "#F6EFE4",
+    "ink": "#2A140C",
+    "accent": "#C43C14",
+    "accent2": "#E6B422",
+    "panel": "#E4D4C0",
+    "deep": "#1A0E0A",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "18px"
+  },
+  "fonts": {
+    "display": "Anton",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Nunito"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6106682230"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of pizza and steaks for Narberth Pizza, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Narberth | Pizza and steaks",
+    "headline": "Pizza and steaks, neighborhood shop",
+    "sub": "Narberth Pizza is a pizza and steaks shop on Montgomery Avenue. The neighborhood already knows the door. You come for a pie or a steak, you take it home or you eat it as a neighborhood shop meal, and you do not need a concept deck to understand the order.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6106682230"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Narberth",
+      "sub": "Pizza and steaks"
+    },
+    "marquee": [
+      "Pizza",
+      "Steaks",
+      "Neighborhood shop",
+      "Narberth",
+      "Montgomery Ave"
+    ]
+  },
+  "offerings": {
+    "heading": "What the shop actually cooks",
+    "items": [
+      {
+        "title": "Pizza",
+        "text": "Pizza is the first word on the door. Narberth Pizza is a neighborhood shop that makes pies for the people who already live on these blocks."
+      },
+      {
+        "title": "Steaks",
+        "text": "Steaks are the other half of the name. A cheesesteak shop that also does pizza, or a pizza shop that also does steaks: either way the ticket can hold both."
+      },
+      {
+        "title": "A neighborhood counter",
+        "text": "The shop is a neighborhood shop. Montgomery Avenue is the address. You order pizza and steaks from a counter that belongs to Narberth, not a chain board."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Narberth, 940 Montgomery",
+    "paragraphs": [
+      "Narberth Pizza does not need a longer myth. Pizza and steaks, from a neighborhood shop on Montgomery Avenue. The hours that match across listings are 11am to 9pm Monday through Saturday and 12pm to 9pm on Sunday. The work is the order in front of you.",
+      "A neighborhood shop earns the next ticket by cooking the last one. Pie or steak, the claim stays inside those two foods. No invented specialty crust, no invented secret sauce. Narberth already has the shop. This page just says what it sells: pizza and steaks from a neighborhood counter."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How an order at the shop works",
+    "items": [
+      {
+        "title": "Order pizza or a steak",
+        "text": "The ticket is pizza, steaks, or both. That is the menu this page will stand behind from their own category."
+      },
+      {
+        "title": "Use the neighborhood counter",
+        "text": "940 Montgomery Ave is the shop. You order like a neighbor: walk in or call, take the food from the people who cooked it."
+      },
+      {
+        "title": "Eat it as a shop meal",
+        "text": "Narberth Pizza is a neighborhood shop, not a white-tablecloth room. The food is meant to be eaten the way a Main Line block already eats pizza and steaks."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Two foods, one Narberth shop",
+    "text": "Pizza and steaks are enough of a menu to be a neighborhood institution. Narberth Pizza keeps both on the same Montgomery Avenue counter. A neighbor order is a pie, a steak, or both from that shop.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.narberthpizza.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "The neighborhood already has a shop",
+    "text": "Narberth already has a pizza and steaks shop. The counter sells those two foods to the blocks around Montgomery Avenue. Come for those two things.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See the shop",
+      "href": "https://www.narberthpizza.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Pizza",
+        "href": "https://www.narberthpizza.com/",
+        "imageIndex": 9,
+        "text": "Pies from the neighborhood shop at 940 Montgomery Ave, Narberth."
+      },
+      {
+        "title": "Steaks",
+        "href": "https://www.narberthpizza.com/",
+        "imageIndex": 10,
+        "text": "Steaks on the same ticket as the pizza, from the same counter."
+      },
+      {
+        "title": "Neighborhood shop",
+        "href": "https://www.narberthpizza.com/",
+        "imageIndex": 11,
+        "text": "A Narberth shop for pizza and steaks, not a chain storefront."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Montgomery Avenue",
+    "sub": "940 Montgomery Ave, Narberth, PA 19072"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6106682230"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6106682230"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.narberthpizza.com/"
+    }
+  ]
+}

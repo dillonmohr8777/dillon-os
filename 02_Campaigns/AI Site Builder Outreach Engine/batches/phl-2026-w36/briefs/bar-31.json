@@ -1,0 +1,254 @@
+{
+  "slug": "bar-31",
+  "name": "Bar 31",
+  "city": "Ambler",
+  "category": "Dive bar",
+  "vertical": "nightlife",
+  "attitude": "neon",
+  "url": "https://www.bar31.net/",
+  "phone": "215-646-0440",
+  "address": "31 N Main St, Ambler, PA 19002",
+  "hours": "",
+  "description": "Dive bar in Ambler. U-shaped bar, local taps Victory, Troegs, Sterling Pig. Pizza, sandwiches, fried pickles. From a PA Eats feature.",
+  "noindex": true,
+  "schemaType": "BarOrPub",
+  "logo": false,
+  "marquee": [
+    "U-shaped bar",
+    "Victory",
+    "Troegs",
+    "Sterling Pig",
+    "Fried pickles",
+    "Ambler"
+  ],
+  "tokens": {
+    "paper": "#F2EDE6",
+    "ink": "#14181C",
+    "accent": "#E23B2F",
+    "accent2": "#F0C14B",
+    "panel": "#2A3036",
+    "deep": "#0C0E10",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "8px"
+  },
+  "fonts": {
+    "display": "Rubik Mono One",
+    "displayFallback": "Impact,sans-serif",
+    "text": "IBM Plex Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2156460440"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of dive bar service for Bar 31, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Ambler | Dive bar",
+    "headline": "The u-shaped bar on Main",
+    "sub": "Bar 31 is a dive bar at 31 N Main St in Ambler. A PA Eats feature called out the u-shaped bar, the local taps, and the food that comes with them. Victory, Troegs, and Sterling Pig are the named beers. Pizza, sandwiches, and fried pickles are the named plates. That is the room.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2156460440"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Ambler",
+      "sub": "Dive bar"
+    },
+    "marquee": [
+      "U-shaped bar",
+      "Victory",
+      "Troegs",
+      "Sterling Pig",
+      "Fried pickles",
+      "Ambler"
+    ]
+  },
+  "offerings": {
+    "heading": "What the bar actually pours and plates",
+    "items": [
+      {
+        "title": "The u-shaped bar",
+        "text": "The room is built around a u-shaped bar. You sit on the rail, not in a dining concept. Bar 31 is a dive bar that wants you at that shape of wood."
+      },
+      {
+        "title": "Local taps",
+        "text": "Victory, Troegs, and Sterling Pig are the taps PA Eats named. Local beer, poured at a Main Street dive, not a flight menu with twenty guest handles."
+      },
+      {
+        "title": "Pizza, sandwiches, fried pickles",
+        "text": "The food that got written down is pizza, sandwiches, and fried pickles. Those are the plates this page will claim. Order them with the beer that is on."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Ambler, 31 North Main",
+    "paragraphs": [
+      "Bar 31 is the dive at 31 N Main St. The PA Eats feature is the public record used here: a u-shaped bar, Victory and Troegs and Sterling Pig on tap, pizza and sandwiches and fried pickles on the plate. The bar does not need a brand story beyond the room those sentences describe.",
+      "A night here is sit the rail, drink the local tap, eat the fried pickles or the pizza or the sandwich. Ambler already knows the door. This page will not invent a cocktail program or a weekend DJ. The work is the u-shaped bar."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a night at 31 actually goes",
+    "items": [
+      {
+        "title": "Take a seat on the U",
+        "text": "The bar is u-shaped. You sit on it. That is the geometry PA Eats wrote down, and it is the way the room works."
+      },
+      {
+        "title": "Drink the local taps",
+        "text": "Victory, Troegs, and Sterling Pig are the named beers. You order what is on, from those houses."
+      },
+      {
+        "title": "Eat pizza, a sandwich, or fried pickles",
+        "text": "Those are the plates the feature named. Food at Bar 31 is that list, eaten at the same rail as the beer."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "A dive with named taps",
+    "text": "Victory, Troegs, and Sterling Pig are not generic \"local craft.\" They are the taps a PA Eats feature put on Bar 31. The u-shaped bar is where they get poured.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.bar31.net/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Fried pickles belong here",
+    "text": "Pizza, sandwiches, and fried pickles are the food the bar is willing to be known for. Order them like a dive bar orders food: with the beer, at the rail.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See the bar",
+      "href": "https://www.bar31.net/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "U-shaped bar",
+        "href": "https://www.bar31.net/",
+        "imageIndex": 9,
+        "text": "The rail that defines the room at 31 N Main St, Ambler."
+      },
+      {
+        "title": "Victory, Troegs, Sterling Pig",
+        "href": "https://www.bar31.net/",
+        "imageIndex": 10,
+        "text": "The local taps named in the PA Eats feature."
+      },
+      {
+        "title": "Pizza and fried pickles",
+        "href": "https://www.bar31.net/",
+        "imageIndex": 11,
+        "text": "Pizza, sandwiches, and fried pickles from the same dive bar kitchen."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "31 North Main",
+    "sub": "31 N Main St, Ambler, PA 19002"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2156460440"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2156460440"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.bar31.net/"
+    }
+  ]
+}

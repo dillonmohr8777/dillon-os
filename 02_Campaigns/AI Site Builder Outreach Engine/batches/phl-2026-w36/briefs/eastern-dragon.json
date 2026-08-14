@@ -1,0 +1,252 @@
+{
+  "slug": "eastern-dragon",
+  "name": "Eastern Dragon",
+  "city": "North Wales",
+  "category": "Chinese and Japanese restaurant",
+  "vertical": "food",
+  "attitude": "warm",
+  "url": "http://www.easterndragonfood.com/",
+  "phone": "215-855-0366",
+  "address": "830 Upper State Rd, North Wales, PA 19454",
+  "hours": "Sun-Thurs 11am-9:30pm, Fri-Sat 11am-10:30pm",
+  "description": "Chinese and Japanese restaurant in North Wales. Szechuan Chicken, Mongolian Beef, Moo Goo Gai Pan, Dragon Roll, Shumai, lunch specials. Free delivery minimum $15, cash only on delivery.",
+  "noindex": true,
+  "schemaType": "Restaurant",
+  "logo": false,
+  "marquee": [
+    "Szechuan Chicken",
+    "Mongolian Beef",
+    "Dragon Roll",
+    "Lunch specials",
+    "North Wales"
+  ],
+  "tokens": {
+    "paper": "#F6EFE4",
+    "ink": "#2A120C",
+    "accent": "#B42318",
+    "accent2": "#D4A017",
+    "panel": "#E4D3C0",
+    "deep": "#1A0C08",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "18px"
+  },
+  "fonts": {
+    "display": "Bebas Neue",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Noto Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2158550366"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of Chinese and Japanese cooking for Eastern Dragon, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "North Wales | Chinese and Japanese restaurant",
+    "headline": "Chinese and Japanese, Upper State Road",
+    "sub": "Eastern Dragon is a Chinese and Japanese restaurant in North Wales. The kitchen is known for Szechuan Chicken, Mongolian Beef, Moo Goo Gai Pan, Dragon Roll, and Shumai. Lunch specials run during the day. Free delivery starts at a $15 minimum, and delivery is cash only.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2158550366"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "North Wales",
+      "sub": "Chinese and Japanese"
+    },
+    "marquee": [
+      "Szechuan Chicken",
+      "Mongolian Beef",
+      "Dragon Roll",
+      "Lunch specials",
+      "North Wales"
+    ]
+  },
+  "offerings": {
+    "heading": "What the kitchen actually sends out",
+    "items": [
+      {
+        "title": "Chinese plates",
+        "text": "Szechuan Chicken, Mongolian Beef, and Moo Goo Gai Pan are the named Chinese plates. Those are the dishes the restaurant puts in its own language, so those are the dishes this page will claim."
+      },
+      {
+        "title": "Japanese rolls and Shumai",
+        "text": "Dragon Roll and Shumai sit on the Japanese side of the same menu. You can eat Chinese and Japanese in one order from one North Wales kitchen."
+      },
+      {
+        "title": "Lunch specials and delivery",
+        "text": "Lunch specials are on the board for the midday order. Free delivery starts at a $15 minimum. Delivery is cash only. That is the rule as they publish it."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "One kitchen, two menus",
+    "paragraphs": [
+      "Eastern Dragon cooks Chinese and Japanese food on Upper State Road. Szechuan Chicken and Mongolian Beef share the ticket with Dragon Roll and Shumai. Moo Goo Gai Pan is there for the plate that wants vegetables and a quieter sauce. The restaurant is a neighborhood kitchen, not a tasting room.",
+      "Lunch specials give the midday order a shorter path. Delivery is part of the service: free at a $15 minimum, cash only when the food leaves the building. You can sit, pick up, or send the order out. The dishes stay the ones they name."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How an order actually moves",
+    "items": [
+      {
+        "title": "Build the ticket",
+        "text": "You order Szechuan Chicken, Mongolian Beef, Moo Goo Gai Pan, Dragon Roll, Shumai, or a lunch special. The kitchen cooks the names on the ticket."
+      },
+      {
+        "title": "Stay, pick up, or send it out",
+        "text": "The restaurant serves the room and the road. Delivery is free at a $15 minimum. Cash only on delivery, as they state it."
+      },
+      {
+        "title": "Eat the plate they named",
+        "text": "Chinese and Japanese food from one North Wales kitchen. The claim stays inside the dishes they publish."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Szechuan Chicken to Dragon Roll",
+    "text": "The menu is allowed to be both. Szechuan Chicken and Mongolian Beef sit next to Dragon Roll and Shumai. Moo Goo Gai Pan keeps a milder plate on the same ticket.",
+    "cta": {
+      "label": "See the menu",
+      "href": "http://www.easterndragonfood.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Lunch specials, then delivery",
+    "text": "Midday orders can take a lunch special. When the food goes out, free delivery starts at $15 and the driver collects cash. Those are their rules, written here the way they run them.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "http://www.easterndragonfood.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Szechuan Chicken",
+        "href": "http://www.easterndragonfood.com/",
+        "imageIndex": 9,
+        "text": "A named Chinese plate from the Eastern Dragon kitchen in North Wales."
+      },
+      {
+        "title": "Dragon Roll",
+        "href": "http://www.easterndragonfood.com/",
+        "imageIndex": 10,
+        "text": "Japanese side of the same menu, ordered with Shumai or a Chinese plate."
+      },
+      {
+        "title": "Lunch specials",
+        "href": "http://www.easterndragonfood.com/",
+        "imageIndex": 11,
+        "text": "Midday specials, plus free delivery at a $15 minimum, cash only on delivery."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Upper State Road",
+    "sub": "830 Upper State Rd, North Wales, PA 19454"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2158550366"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2158550366"
+    },
+    {
+      "label": "Official site",
+      "href": "http://www.easterndragonfood.com/"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "slug": "accurate-temperature",
+  "name": "Accurate Temperature",
+  "city": "Morrisville",
+  "category": "HVAC",
+  "vertical": "home-services",
+  "attitude": "industrial",
+  "url": "https://accuratetemperatures.com/",
+  "phone": "215-917-2115",
+  "address": "810 Rennard Lane, Morrisville, PA 19067",
+  "hours": "",
+  "description": "Heating and air for Bucks, Montgomery, and Philadelphia counties. Based in Morrisville.",
+  "noindex": true,
+  "schemaType": "HVACBusiness",
+  "logo": false,
+  "marquee": [
+    "Heating",
+    "Air",
+    "Bucks",
+    "Montgomery",
+    "Philadelphia",
+    "Morrisville"
+  ],
+  "tokens": {
+    "paper": "#EEF0F4",
+    "ink": "#10162C",
+    "accent": "#2B5AA8",
+    "accent2": "#E07A2A",
+    "panel": "#D5D9E2",
+    "deep": "#10162C",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Barlow Condensed",
+    "displayFallback": "Impact,sans-serif",
+    "text": "IBM Plex Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2159172115"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of heating and air for Accurate Temperature, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Morrisville | HVAC",
+    "headline": "Heating and air for three counties",
+    "sub": "Accurate Temperature is an HVAC company in Morrisville. The work is heating and air for Bucks, Montgomery, and Philadelphia counties. You call a Morrisville shop when the house is too cold or too hot, and the service area is those three counties, not a national dispatch board.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2159172115"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Morrisville",
+      "sub": "Bucks, Montgomery, Philadelphia"
+    },
+    "marquee": [
+      "Heating",
+      "Air",
+      "Bucks",
+      "Montgomery",
+      "Philadelphia",
+      "Morrisville"
+    ]
+  },
+  "offerings": {
+    "heading": "The work they put on the truck",
+    "items": [
+      {
+        "title": "Heating",
+        "text": "Heating is half the name. Accurate Temperature works heat for houses in Bucks, Montgomery, and Philadelphia counties from a Morrisville base."
+      },
+      {
+        "title": "Air",
+        "text": "Air is the other half. Cooling and air work sit with the heating, so the same company handles the year instead of handing summer to a stranger."
+      },
+      {
+        "title": "Three-county service",
+        "text": "Bucks, Montgomery, and Philadelphia are the published counties. The shop is in Morrisville. The truck goes where those counties are, not wherever an algorithm points."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Morrisville HVAC shop",
+    "paragraphs": [
+      "Accurate Temperature keeps the offer in plain language: heating and air, from Morrisville, for Bucks, Montgomery, and Philadelphia counties. No invented 24/7 badge. No invented brand of furnace. The company does HVAC in the counties they name.",
+      "A house that will not heat or will not cool needs a shop that already works those streets. Rennard Lane is the base. The three counties are the map. Heating and air are the verbs. That is the whole brief, and it is enough to know who you are calling. Accurate Temperature is the Morrisville company that published that map."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How the service actually runs",
+    "items": [
+      {
+        "title": "Call a Morrisville HVAC shop",
+        "text": "The company is Accurate Temperature at 810 Rennard Lane. You are talking to a local heating and air shop, not a national call center that resells the job."
+      },
+      {
+        "title": "Work the heat or the air",
+        "text": "The visit is heating or air, the two halves they publish. The technician is there for the system that is failing, in the season it is failing."
+      },
+      {
+        "title": "Stay inside the three counties",
+        "text": "Bucks, Montgomery, and Philadelphia are the service map. If the house is in those counties, it is inside the work they claim."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Heating and air, named counties",
+    "text": "The company will not be described as \"full-service comfort solutions.\" Accurate Temperature does heating and air for Bucks, Montgomery, and Philadelphia counties from Morrisville. The truck leaves Rennard Lane for those three counties and comes back to the same shop.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://accuratetemperatures.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Morrisville is the base",
+    "text": "810 Rennard Lane is where the shop lives. The counties are where the heating and air work goes. That split is honest: a local base, a three-county map.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Talk to the shop",
+      "href": "https://accuratetemperatures.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Heating",
+        "href": "https://accuratetemperatures.com/",
+        "imageIndex": 9,
+        "text": "Heat work for houses in Bucks, Montgomery, and Philadelphia counties."
+      },
+      {
+        "title": "Air",
+        "href": "https://accuratetemperatures.com/",
+        "imageIndex": 10,
+        "text": "Air and cooling from the same Morrisville HVAC company."
+      },
+      {
+        "title": "Three-county map",
+        "href": "https://accuratetemperatures.com/",
+        "imageIndex": 11,
+        "text": "Bucks, Montgomery, Philadelphia. The published service area."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Rennard Lane, Morrisville",
+    "sub": "810 Rennard Lane, Morrisville, PA 19067"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2159172115"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2159172115"
+    },
+    {
+      "label": "Official site",
+      "href": "https://accuratetemperatures.com/"
+    }
+  ]
+}

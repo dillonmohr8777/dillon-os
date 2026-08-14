@@ -1,0 +1,254 @@
+{
+  "slug": "hero-complex",
+  "name": "Johnny Destructo's Hero Complex",
+  "city": "Philadelphia",
+  "category": "Comic shop",
+  "vertical": "retail",
+  "attitude": "neon",
+  "url": "https://www.jdsherocomplex.com/",
+  "phone": "215-482-7700",
+  "address": "4327 Main Street, Philadelphia, PA 19127",
+  "hours": "Mon-Sat 12pm-8pm Sunday 12pm-6pm",
+  "description": "Comic shop in Philadelphia. Comics, manga, graphic novels, figures. Clean approachable shop. Custom art commissions.",
+  "noindex": true,
+  "schemaType": "Store",
+  "logo": false,
+  "marquee": [
+    "Comics",
+    "Manga",
+    "Graphic novels",
+    "Figures",
+    "Custom art",
+    "Manayunk"
+  ],
+  "tokens": {
+    "paper": "#F4F0E8",
+    "ink": "#16141C",
+    "accent": "#5B2C91",
+    "accent2": "#E23B2F",
+    "panel": "#D8D2E4",
+    "deep": "#120E18",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "8px"
+  },
+  "fonts": {
+    "display": "Bungee",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Nunito"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2154827700"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of comics and graphic novels for Johnny Destructo's Hero Complex, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Comic shop",
+    "headline": "Comics, manga, figures, commissions",
+    "sub": "Johnny Destructo's Hero Complex is a comic shop on Main Street in Philadelphia. The racks hold comics, manga, and graphic novels. Figures are on the floor. Custom art commissions are part of the shop, not a side hustle down the street. The room is a clean, approachable shop, not a basement you have to decode.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2154827700"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "Clean, approachable shop"
+    },
+    "marquee": [
+      "Comics",
+      "Manga",
+      "Graphic novels",
+      "Figures",
+      "Custom art",
+      "Manayunk"
+    ]
+  },
+  "offerings": {
+    "heading": "What the shop actually holds",
+    "items": [
+      {
+        "title": "Comics, manga, graphic novels",
+        "text": "The reading stock is comics, manga, and graphic novels. You come in for issues and volumes you can hold, in a shop that is built to be walked without a secret handshake."
+      },
+      {
+        "title": "Figures",
+        "text": "Figures sit with the books. Hero Complex is a comic shop that also sells the objects people put on a shelf next to the pull list."
+      },
+      {
+        "title": "Custom art commissions",
+        "text": "Custom art commissions are a published part of the shop. You can leave with a book, a figure, or a piece made for you. The counter handles all three."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A clean shop on Main Street",
+    "paragraphs": [
+      "Johnny Destructo's Hero Complex keeps the comic shop approachable on purpose. Comics, manga, and graphic novels are the racks. Figures are in the room. Custom art commissions are on the offer list. The shop is clean enough that a new reader can walk in without feeling like they failed a test.",
+      "Manayunk Main Street is the address. The hours from their contact page run noon to 8pm Monday through Saturday and noon to 6pm on Sunday. You come for the pull, the volume, the figure, or the commission. You leave with something the shop actually sells."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit to the shop works",
+    "items": [
+      {
+        "title": "Walk the racks",
+        "text": "Comics, manga, and graphic novels are out where you can browse. The shop is clean and approachable, so the first visit does not require a guide."
+      },
+      {
+        "title": "Check the figures",
+        "text": "Figures are part of the same floor. You can leave with a book and an object from one counter."
+      },
+      {
+        "title": "Ask about a commission",
+        "text": "Custom art commissions are shop work. You talk to the counter about a piece made for you, in the same place you buy the weekly comics."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "A comic shop you can actually walk into",
+    "text": "Clean and approachable is the room. Comics, manga, graphic novels, and figures are the stock. Custom art commissions are the extra that still belongs to this counter.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.jdsherocomplex.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Commissions live here",
+    "text": "Hero Complex does not send custom art down the street. Commissions are part of Johnny Destructo's shop, next to the comics and the figures.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See the shop",
+      "href": "https://www.jdsherocomplex.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Comics and manga",
+        "href": "https://www.jdsherocomplex.com/",
+        "imageIndex": 9,
+        "text": "Issues and volumes on the racks at 4327 Main Street, Philadelphia."
+      },
+      {
+        "title": "Graphic novels and figures",
+        "href": "https://www.jdsherocomplex.com/",
+        "imageIndex": 10,
+        "text": "Longer books and figures in the same clean, approachable shop."
+      },
+      {
+        "title": "Custom art commissions",
+        "href": "https://www.jdsherocomplex.com/",
+        "imageIndex": 11,
+        "text": "Commission a piece from the same counter that pulls your comics."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Main Street, Philadelphia",
+    "sub": "4327 Main Street, Philadelphia, PA 19127"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2154827700"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2154827700"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.jdsherocomplex.com/"
+    }
+  ]
+}

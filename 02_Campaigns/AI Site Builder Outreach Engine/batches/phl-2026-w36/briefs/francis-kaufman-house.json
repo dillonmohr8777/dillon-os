@@ -1,0 +1,252 @@
+{
+  "slug": "francis-kaufman-house",
+  "name": "Francis Kaufman House",
+  "city": "Sumneytown",
+  "category": "BYOB restaurant",
+  "vertical": "food",
+  "attitude": "editorial",
+  "url": "http://franciskaufmanhouse.com/",
+  "phone": "215-234-2499",
+  "address": "3164 Main Street #63, Sumneytown, PA 18084",
+  "hours": "",
+  "description": "BYOB restaurant in Sumneytown. Reservations. Smoked beef ribs, brisket, smoked fish and chicken mentioned on their site.",
+  "noindex": true,
+  "schemaType": "Restaurant",
+  "logo": false,
+  "marquee": [
+    "BYOB",
+    "Reservations",
+    "Smoked beef ribs",
+    "Brisket",
+    "Sumneytown"
+  ],
+  "tokens": {
+    "paper": "#F3EDE2",
+    "ink": "#2A2118",
+    "accent": "#7A2E12",
+    "accent2": "#C4A574",
+    "panel": "#DCCFC0",
+    "deep": "#1A140E",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Serif 4"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2152342499"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Sumneytown | BYOB restaurant",
+    "headline": "BYOB on Main Street",
+    "sub": "Francis Kaufman House is a BYOB restaurant in Sumneytown. Reservations are how a table gets held. Their site and listings mention smoked beef ribs, brisket, smoked fish, and chicken. Claims stay inside those plates. Bring the bottle you want at the table.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2152342499"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Sumneytown",
+      "sub": "BYOB restaurant"
+    },
+    "marquee": [
+      "BYOB",
+      "Reservations",
+      "Smoked beef ribs",
+      "Brisket",
+      "Sumneytown"
+    ]
+  },
+  "offerings": {
+    "heading": "What the house will stand behind",
+    "items": [
+      {
+        "title": "BYOB at the table",
+        "text": "The restaurant is BYOB. Wine, beer, or the bottle you chose comes with you. The house cooks. You pour. That is the arrangement they publish."
+      },
+      {
+        "title": "Reservations",
+        "text": "A table at Francis Kaufman House is held by reservation. You call, you set the night, you arrive to a room that already expects you."
+      },
+      {
+        "title": "Smoked plates they mention",
+        "text": "Smoked beef ribs, brisket, smoked fish, and chicken appear on their site and listings. Those are the dishes this page will name. No awards, no secret-menu claims."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Sumneytown table",
+    "paragraphs": [
+      "Francis Kaufman House sits on Main Street in Sumneytown. The restaurant asks you to bring your own bottle and to reserve the table. The food they put in public language includes smoked beef ribs, brisket, smoked fish, and chicken. That is enough to know what kind of kitchen you are walking into.",
+      "The page will not invent a tasting menu or a published hour that their own site and the aggregators cannot agree on. The honest offer is a reserved BYOB table and the smoked plates they mention. Come for those, and confirm the rest with the house in Sumneytown."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a night at the house works",
+    "items": [
+      {
+        "title": "Reserve the table",
+        "text": "Reservations are the front door. You set the night with the house before you drive to Sumneytown."
+      },
+      {
+        "title": "Bring the bottle",
+        "text": "BYOB means the wine, beer, or liquor is yours to carry in. The restaurant cooks. The table drinks what you brought."
+      },
+      {
+        "title": "Eat the smoked plates they name",
+        "text": "Smoked beef ribs, brisket, smoked fish, and chicken are the dishes their site and listings mention. Order inside that list and you are ordering what they have put in public."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "BYOB, reserved, smoked",
+    "text": "The house is a reserved table, a bottle you brought, and smoked food they are willing to name: beef ribs, brisket, fish, and chicken. Everything else you confirm with them before you drive to Sumneytown.",
+    "cta": {
+      "label": "Official site",
+      "href": "http://franciskaufmanhouse.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Modest on purpose",
+    "text": "Listings like to embroider a country restaurant. This page will not. Francis Kaufman House is a BYOB room in Sumneytown that mentions smoked beef ribs, brisket, smoked fish, and chicken. Reservations hold the table.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Reserve",
+      "href": "http://franciskaufmanhouse.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Smoked beef ribs",
+        "href": "http://franciskaufmanhouse.com/",
+        "imageIndex": 9,
+        "text": "Named on their site and listings. A smoked plate at the Sumneytown house."
+      },
+      {
+        "title": "Brisket",
+        "href": "http://franciskaufmanhouse.com/",
+        "imageIndex": 10,
+        "text": "Another smoked plate they mention. Confirm availability when you reserve."
+      },
+      {
+        "title": "BYOB reservations",
+        "href": "http://franciskaufmanhouse.com/",
+        "imageIndex": 11,
+        "text": "Hold the table, bring the bottle, eat what the house is cooking that night."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Main Street, Sumneytown",
+    "sub": "3164 Main Street #63, Sumneytown, PA 18084"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2152342499"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2152342499"
+    },
+    {
+      "label": "Official site",
+      "href": "http://franciskaufmanhouse.com/"
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "slug": "seiler-and-drury",
+  "name": "Seiler+Drury Architecture",
+  "city": "Norristown",
+  "category": "Architecture",
+  "vertical": "architecture",
+  "attitude": "industrial",
+  "url": "https://sdarc.com/",
+  "phone": "610-272-4809",
+  "address": "420 DeKalb St, Norristown, PA 19401",
+  "hours": "",
+  "description": "Architecture in Norristown. Building design, preservation, sustainable design, adaptive reuse, interiors. Montgomery County EOC, Spring City Public Library, Academy of Vocal Arts, Waldorf School of Philadelphia.",
+  "noindex": true,
+  "schemaType": "ProfessionalService",
+  "logo": false,
+  "marquee": [
+    "Building design",
+    "Preservation",
+    "Adaptive reuse",
+    "Interiors",
+    "Norristown"
+  ],
+  "tokens": {
+    "paper": "#F2EFE8",
+    "ink": "#1A1A1A",
+    "accent": "#3D5A4C",
+    "accent2": "#C4A35A",
+    "panel": "#D8D4CC",
+    "deep": "#121212",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Outfit",
+    "displayFallback": "Impact,sans-serif",
+    "text": "IBM Plex Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6102724809"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of architecture for Seiler+Drury Architecture, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Norristown | Architecture",
+    "headline": "Building design, preservation, reuse",
+    "sub": "Seiler+Drury Architecture practices from DeKalb Street in Norristown. The work is building design, preservation, sustainable design, adaptive reuse, and interiors. Built work includes the Montgomery County EOC, Spring City Public Library, the Academy of Vocal Arts, and the Waldorf School of Philadelphia.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6102724809"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Norristown",
+      "sub": "Architecture"
+    },
+    "marquee": [
+      "Building design",
+      "Preservation",
+      "Adaptive reuse",
+      "Interiors",
+      "Norristown"
+    ]
+  },
+  "offerings": {
+    "heading": "The kinds of projects they actually take",
+    "items": [
+      {
+        "title": "Building design",
+        "text": "New building design is the first verb. Seiler+Drury draws and delivers buildings, including civic work like the Montgomery County EOC and Spring City Public Library."
+      },
+      {
+        "title": "Preservation and adaptive reuse",
+        "text": "Preservation and adaptive reuse keep a structure in the story. The Academy of Vocal Arts and the Waldorf School of Philadelphia sit in a portfolio that already knows how to work with what is standing."
+      },
+      {
+        "title": "Sustainable design and interiors",
+        "text": "Sustainable design and interiors are published parts of the practice. The architecture does not stop at the envelope. Rooms and performance are in the same Norristown office."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Norristown practice with named buildings",
+    "paragraphs": [
+      "Seiler+Drury Architecture is a Norristown firm whose public buildings can be named. Montgomery County EOC. Spring City Public Library. Academy of Vocal Arts. Waldorf School of Philadelphia. Those projects are how this page will talk about the work, instead of a generic \"award-winning studio\" line.",
+      "The practice verbs are building design, preservation, sustainable design, adaptive reuse, and interiors. Civic, school, and cultural buildings are already in the portfolio. 420 DeKalb St is the office that does that work. 610-272-4809 is the phone."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How an architectural project actually moves",
+    "items": [
+      {
+        "title": "Start with the building problem",
+        "text": "A client comes with a new building, a structure to preserve, a reuse, or an interior. Seiler+Drury takes the problem as architecture, not as a rendering contest."
+      },
+      {
+        "title": "Design across the published verbs",
+        "text": "Building design, preservation, sustainable design, adaptive reuse, and interiors are the methods. The project uses the ones it needs, from the same Norristown practice."
+      },
+      {
+        "title": "Look at buildings they have already done",
+        "text": "Montgomery County EOC, Spring City Public Library, Academy of Vocal Arts, and the Waldorf School of Philadelphia are the named proof. A new client can walk those before hiring the next drawing."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Civic and cultural buildings, already built",
+    "text": "The Montgomery County EOC and Spring City Public Library are civic work. The Academy of Vocal Arts and the Waldorf School of Philadelphia are cultural and school work. Seiler+Drury is the Norristown practice on those jobs.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://sdarc.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Preservation and reuse are practice, not a slogan",
+    "text": "Adaptive reuse and preservation are on the service list because the portfolio already had to keep buildings alive. Sustainable design and interiors sit with them so a project does not split across three firms.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See the work",
+      "href": "https://sdarc.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Montgomery County EOC",
+        "href": "https://sdarc.com/",
+        "imageIndex": 9,
+        "text": "Named civic work from Seiler+Drury Architecture."
+      },
+      {
+        "title": "Spring City Public Library",
+        "href": "https://sdarc.com/",
+        "imageIndex": 10,
+        "text": "A named library project in the same Norristown practice."
+      },
+      {
+        "title": "Academy of Vocal Arts",
+        "href": "https://sdarc.com/",
+        "imageIndex": 11,
+        "text": "Cultural work, alongside the Waldorf School of Philadelphia, in a portfolio of design, preservation, and reuse."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "DeKalb Street, Norristown",
+    "sub": "420 DeKalb St, Norristown, PA 19401"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6102724809"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6102724809"
+    },
+    {
+      "label": "Official site",
+      "href": "https://sdarc.com/"
+    }
+  ]
+}

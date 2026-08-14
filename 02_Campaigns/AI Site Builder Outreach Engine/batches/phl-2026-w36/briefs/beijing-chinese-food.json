@@ -1,0 +1,252 @@
+{
+  "slug": "beijing-chinese-food",
+  "name": "Bei Jing Chinese Food",
+  "city": "Norristown",
+  "category": "Chinese restaurant",
+  "vertical": "food",
+  "attitude": "warm",
+  "url": "https://www.beijingchinesefoodpa.com/",
+  "phone": "610-275-4086",
+  "address": "130 E Marshall St, Norristown, PA 19401",
+  "hours": "",
+  "description": "Chinese restaurant in Norristown. Pickup and delivery from their locations page.",
+  "noindex": true,
+  "schemaType": "Restaurant",
+  "logo": false,
+  "marquee": [
+    "Pickup",
+    "Delivery",
+    "Chinese food",
+    "Norristown",
+    "Marshall Street"
+  ],
+  "tokens": {
+    "paper": "#F7F1E6",
+    "ink": "#1F120C",
+    "accent": "#C81E1E",
+    "accent2": "#E6B422",
+    "panel": "#E6D7C4",
+    "deep": "#1A0E0A",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "18px"
+  },
+  "fonts": {
+    "display": "Zen Antique",
+    "displayFallback": "Georgia,serif",
+    "text": "Noto Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6102754086"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of Chinese takeout for Bei Jing Chinese Food, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Norristown | Chinese restaurant",
+    "headline": "Chinese food, pickup and delivery",
+    "sub": "Bei Jing Chinese Food is a Chinese restaurant on East Marshall Street in Norristown. The service they put on their locations page is pickup and delivery. You order Chinese food, you collect it at the counter, or you have it sent to the door. The kitchen stays in Norristown. No extra dining-room story, no borrowed dish list. Pickup and delivery are the published paths.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6102754086"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Norristown",
+      "sub": "Pickup and delivery"
+    },
+    "marquee": [
+      "Pickup",
+      "Delivery",
+      "Chinese food",
+      "Norristown",
+      "Marshall Street"
+    ]
+  },
+  "offerings": {
+    "heading": "How the restaurant actually serves",
+    "items": [
+      {
+        "title": "Chinese food from Marshall Street",
+        "text": "The restaurant cooks Chinese food in Norristown. The claim stays at that scale. No invented house specials, no borrowed menu from another shop."
+      },
+      {
+        "title": "Pickup at the counter",
+        "text": "Pickup is one of the two ways they publish. You order, you walk into 130 E Marshall St, you take the bag. The kitchen and the counter are the same place."
+      },
+      {
+        "title": "Delivery from the same kitchen",
+        "text": "Delivery is the other path on their locations page. The food still comes from the Norristown restaurant. You are not ordering a ghost kitchen with a borrowed name."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A Norristown Chinese kitchen",
+    "paragraphs": [
+      "Bei Jing Chinese Food keeps the offer honest: a Chinese restaurant on East Marshall Street that does pickup and delivery. That is what their locations page stands behind, so that is what this page will say. The rest of a menu is for their site, not for invented copy.",
+      "Norristown already knows how this kind of restaurant works. You call or you order, you pick up on Marshall Street, or you wait for the bag to arrive. The kitchen does not need a myth. The kitchen needs the order."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How an order actually leaves the kitchen",
+    "items": [
+      {
+        "title": "Place the Chinese food order",
+        "text": "You order from Bei Jing Chinese Food in Norristown. The ticket is for the Marshall Street kitchen, not a third-party brand."
+      },
+      {
+        "title": "Pick it up at the counter",
+        "text": "Pickup means you come to 130 E Marshall St and take the food from the restaurant that cooked it."
+      },
+      {
+        "title": "Have it delivered",
+        "text": "Delivery is the other published path. The same Norristown kitchen sends the order out."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Pickup and delivery, their words",
+    "text": "Their locations page names pickup and delivery. This page will not add a dining-room novel or a dish list we cannot verify. Chinese food, from Norristown, those two ways out the door.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.beijingchinesefoodpa.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Marshall Street is the kitchen",
+    "text": "130 E Marshall St is where the order is cooked. Pickup walks in. Delivery leaves from the same door. Bei Jing Chinese Food is that address doing that work.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Order",
+      "href": "https://www.beijingchinesefoodpa.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Pickup",
+        "href": "https://www.beijingchinesefoodpa.com/",
+        "imageIndex": 9,
+        "text": "Collect Chinese food at the Norristown counter on East Marshall Street."
+      },
+      {
+        "title": "Delivery",
+        "href": "https://www.beijingchinesefoodpa.com/",
+        "imageIndex": 10,
+        "text": "The same kitchen sends the order out, as their locations page states."
+      },
+      {
+        "title": "Norristown kitchen",
+        "href": "https://www.beijingchinesefoodpa.com/",
+        "imageIndex": 11,
+        "text": "Chinese food cooked at 130 E Marshall St, not a borrowed storefront."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "East Marshall Street",
+    "sub": "130 E Marshall St, Norristown, PA 19401"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6102754086"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6102754086"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.beijingchinesefoodpa.com/"
+    }
+  ]
+}

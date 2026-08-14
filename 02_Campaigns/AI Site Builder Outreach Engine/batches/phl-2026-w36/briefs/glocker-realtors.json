@@ -1,0 +1,256 @@
+{
+  "slug": "glocker-realtors",
+  "name": "Glocker Realty & Insurance",
+  "city": "Boyertown",
+  "category": "Real estate and insurance",
+  "vertical": "real-estate",
+  "attitude": "align",
+  "url": "https://www.glocker.com/",
+  "phone": "610-367-2058",
+  "address": "900 E. Philadelphia Ave, Boyertown, PA 19512",
+  "hours": "",
+  "description": "Locally owned real estate and insurance in Boyertown for 50+ years. Owners Martin Slater and Matthew Kennedy. RESULTS THAT MOVE YOU.",
+  "noindex": true,
+  "schemaType": "RealEstateAgent",
+  "logo": false,
+  "marquee": [
+    "RESULTS THAT MOVE YOU",
+    "Real estate",
+    "Insurance",
+    "Boyertown",
+    "50+ years"
+  ],
+  "tokens": {
+    "paper": "#F4F1EA",
+    "ink": "#1A2420",
+    "accent": "#2F6B4F",
+    "accent2": "#C4A35A",
+    "panel": "#DDE5DF",
+    "deep": "#12201A",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "displayFallback": "Impact,sans-serif",
+    "text": "DM Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6103672058"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of real estate and insurance for Glocker Realty & Insurance, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Boyertown | Real estate and insurance",
+    "headline": "RESULTS THAT MOVE YOU",
+    "sub": "Glocker Realty & Insurance is a locally owned Boyertown shop with more than 50 years on the work. Owners Martin Slater and Matthew Kennedy run real estate and insurance from 900 E. Philadelphia Ave. The line they use is RESULTS THAT MOVE YOU. Real estate reaches 610-367-2058. The insurance office is a separate line at 610-948-3301.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6103672058"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Boyertown",
+      "sub": "Locally owned 50+ years"
+    },
+    "marquee": [
+      "RESULTS THAT MOVE YOU",
+      "Real estate",
+      "Insurance",
+      "Boyertown",
+      "50+ years"
+    ]
+  },
+  "offerings": {
+    "heading": "Two desks, one locally owned firm",
+    "items": [
+      {
+        "title": "Real estate",
+        "text": "The realty side lists, shows, and closes. RESULTS THAT MOVE YOU is their line for that work. Martin Slater and Matthew Kennedy own the firm that does it in Boyertown."
+      },
+      {
+        "title": "Insurance",
+        "text": "Insurance sits in the same locally owned company. The insurance office has its own number, 610-948-3301, so a policy question does not have to wait on a listing conversation."
+      },
+      {
+        "title": "Fifty-plus years, still local",
+        "text": "The firm is locally owned after more than 50 years. Boyertown is not a franchise sticker on a national desk. The owners are named: Martin Slater and Matthew Kennedy."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Boyertown, still theirs",
+    "paragraphs": [
+      "Glocker Realty & Insurance has been locally owned for more than 50 years. Martin Slater and Matthew Kennedy are the owners now. The firm still works real estate and insurance from East Philadelphia Avenue in Boyertown. RESULTS THAT MOVE YOU is the sentence they put on that work.",
+      "Real estate and insurance in one company means a house question and a policy question can live under the same roof. The numbers stay distinct so you reach the right desk: real estate at 610-367-2058, insurance at 610-948-3301. The ownership stays local either way."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How the firm actually works a file",
+    "items": [
+      {
+        "title": "Real estate that is meant to move",
+        "text": "Listings, showings, and closings are the realty work. RESULTS THAT MOVE YOU is their measure, not a borrowed slogan from a national desk."
+      },
+      {
+        "title": "Insurance at the sister desk",
+        "text": "A policy is handled by the insurance office inside the same locally owned firm. You are not sent to a distant carrier lobby for the first conversation."
+      },
+      {
+        "title": "Owners on the letterhead",
+        "text": "Martin Slater and Matthew Kennedy own the company. After 50+ years the firm is still a Boyertown name, not a sold-off brand."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Real estate and insurance, locally owned",
+    "text": "The firm does both on purpose. A move and a policy can start in the same Boyertown company, with owners whose names are on the door.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.glocker.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "RESULTS THAT MOVE YOU",
+    "text": "That is their line. Martin Slater and Matthew Kennedy run the shop that has to make it true: sell the house, write the coverage, stay local after 50+ years.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Talk to the firm",
+      "href": "https://www.glocker.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Real estate",
+        "href": "https://www.glocker.com/",
+        "imageIndex": 9,
+        "text": "Boyertown realty from a locally owned firm. RESULTS THAT MOVE YOU."
+      },
+      {
+        "title": "Insurance office",
+        "href": "https://www.glocker.com/",
+        "imageIndex": 10,
+        "text": "Insurance inside the same company. Separate office line at 610-948-3301."
+      },
+      {
+        "title": "Martin Slater and Matthew Kennedy",
+        "href": "https://www.glocker.com/",
+        "imageIndex": 11,
+        "text": "The owners. Locally held after more than 50 years in Boyertown."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "East Philadelphia Avenue",
+    "sub": "900 E. Philadelphia Ave, Boyertown, PA 19512"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6103672058"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6103672058"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.glocker.com/"
+    },
+    {
+      "label": "Insurance office",
+      "href": "tel:6109483301"
+    }
+  ]
+}

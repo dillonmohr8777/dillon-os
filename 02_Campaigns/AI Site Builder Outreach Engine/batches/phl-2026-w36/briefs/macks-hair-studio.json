@@ -1,0 +1,248 @@
+{
+  "slug": "macks-hair-studio",
+  "name": "Mack's Hair Studio",
+  "city": "Philadelphia",
+  "category": "Hair studio",
+  "vertical": "beauty",
+  "attitude": "brutal",
+  "url": "https://www.mackshairstudio.com/",
+  "phone": "",
+  "address": "271 S 10th St, Philadelphia, PA 19107",
+  "hours": "",
+  "description": "Hair studio in Philadelphia. Haircut and dye from their service page.",
+  "noindex": true,
+  "schemaType": "HairSalon",
+  "logo": false,
+  "marquee": [
+    "Haircut",
+    "Dye",
+    "Hair studio",
+    "South 10th",
+    "Philadelphia"
+  ],
+  "tokens": {
+    "paper": "#F3EEE6",
+    "ink": "#161616",
+    "accent": "#111111",
+    "accent2": "#E8C547",
+    "panel": "#D8D2C8",
+    "deep": "#0E0E0E",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "0"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Inter"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Official site",
+    "href": "https://www.mackshairstudio.com/"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of haircutting for Mack's Hair Studio, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Hair studio",
+    "headline": "Haircut and dye on South 10th",
+    "sub": "Mack's Hair Studio is a hair studio at 271 S 10th St in Philadelphia. Their service page names the work in two words: haircut and dye. You sit for a cut, you sit for color, or you sit for both. A phone number is not published here because it is not verified.",
+    "ctaPrimary": {
+      "label": "Official site",
+      "href": "https://www.mackshairstudio.com/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "Haircut and dye"
+    },
+    "marquee": [
+      "Haircut",
+      "Dye",
+      "Hair studio",
+      "South 10th",
+      "Philadelphia"
+    ]
+  },
+  "offerings": {
+    "heading": "What the studio actually does",
+    "items": [
+      {
+        "title": "Haircut",
+        "text": "Haircut is the first service on their page. Mack's is a studio where the cut is the work, done on South 10th Street, not a mall trim."
+      },
+      {
+        "title": "Dye",
+        "text": "Dye is the second service they publish. Color lives in the same studio as the cut, so a change of shade does not send you to another chair across town."
+      },
+      {
+        "title": "A Center City studio",
+        "text": "271 S 10th St is the room. The studio is a Philadelphia hair studio. You come to that address for the haircut and the dye they list."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Two services, one studio",
+    "paragraphs": [
+      "Mack's Hair Studio does not get a longer menu on this page than their service page earned. Haircut. Dye. A studio on South 10th Street. That is the honest offer. No invented balayage list, no invented celebrity client, no invented phone.",
+      "A hair studio visit is time in a chair with a named service. You go to 271 S 10th St for a cut, for color, or for both. The rest of a beauty menu can live on their site if they publish it. This page will not invent it."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a studio visit actually runs",
+    "items": [
+      {
+        "title": "Come to South 10th",
+        "text": "The studio is at 271 S 10th St, Philadelphia. You go to the room. The work does not start on a phone we cannot verify."
+      },
+      {
+        "title": "Sit for the haircut",
+        "text": "Haircut is the published cut service. The chair time is for the hair in front of the stylist, in this studio."
+      },
+      {
+        "title": "Sit for the dye",
+        "text": "Dye is the published color service. Cut and color can live in one visit because both are on their service page."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Haircut and dye, their service page",
+    "text": "Two verbs are enough when they are the ones the studio published. Mack's Hair Studio cuts and dyes hair on South 10th Street in Philadelphia.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.mackshairstudio.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "The address is the booking path we can verify",
+    "text": "Without a verified phone, the studio still has a door. 271 S 10th St is where haircut and dye happen. Use their official site for the rest of the path in.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.mackshairstudio.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Haircut",
+        "href": "https://www.mackshairstudio.com/",
+        "imageIndex": 9,
+        "text": "The cut service from Mack's Hair Studio on South 10th Street."
+      },
+      {
+        "title": "Dye",
+        "href": "https://www.mackshairstudio.com/",
+        "imageIndex": 10,
+        "text": "Color in the same Philadelphia studio as the haircut."
+      },
+      {
+        "title": "The studio",
+        "href": "https://www.mackshairstudio.com/",
+        "imageIndex": 11,
+        "text": "271 S 10th St, Philadelphia. A hair studio for cut and dye."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "South 10th Street",
+    "sub": "271 S 10th St, Philadelphia, PA 19107"
+  },
+  "closing": {
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.mackshairstudio.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "https://www.mackshairstudio.com/"
+    }
+  ]
+}

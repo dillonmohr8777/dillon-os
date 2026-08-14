@@ -1,0 +1,252 @@
+{
+  "slug": "august-moon",
+  "name": "August Moon",
+  "city": "Norristown",
+  "category": "Korean Japanese cuisine",
+  "vertical": "food",
+  "attitude": "glass",
+  "url": "https://augustmoonpa.com/",
+  "phone": "610-277-4008",
+  "address": "300 East Main Street, Norristown, PA 19401",
+  "hours": "Lunch Mon-Fri 11:30am-2pm; Dinner Mon-Thu 4:30pm-9pm Fri 4:30pm-9:30pm Sat 4pm-9:30pm; Sunday closed",
+  "description": "Authentic Korean-Japanese restaurant in Norristown. Sushi bar, BBQ party trays, phone orders.",
+  "noindex": true,
+  "schemaType": "Restaurant",
+  "logo": false,
+  "marquee": [
+    "Korean-Japanese",
+    "Sushi bar",
+    "BBQ party trays",
+    "Phone orders",
+    "Norristown"
+  ],
+  "tokens": {
+    "paper": "#F6F3EE",
+    "ink": "#1A1A1A",
+    "accent": "#C45C2C",
+    "accent2": "#2B6B4F",
+    "panel": "#E4DCD2",
+    "deep": "#14120F",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Outfit",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Noto Sans KR"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6102774008"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Norristown | Korean Japanese cuisine",
+    "headline": "Authentic Korean-Japanese",
+    "sub": "August Moon cooks authentic Korean-Japanese cuisine on East Main Street in Norristown. The room holds a sushi bar. BBQ party trays are how larger tables eat. Phone orders are how a lot of the food leaves. Lunch and dinner run on the hours from their order page. Sunday the restaurant is closed.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6102774008"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Norristown",
+      "sub": "Sushi bar and BBQ trays"
+    },
+    "marquee": [
+      "Korean-Japanese",
+      "Sushi bar",
+      "BBQ party trays",
+      "Phone orders",
+      "Norristown"
+    ]
+  },
+  "offerings": {
+    "heading": "What August Moon actually cooks",
+    "items": [
+      {
+        "title": "Korean-Japanese in one room",
+        "text": "The restaurant calls the food authentic Korean-Japanese. You can eat across both kitchens in one visit: Korean plates and Japanese sushi from the same East Main Street address."
+      },
+      {
+        "title": "Sushi bar",
+        "text": "A sushi bar is part of the room. Rolls and nigiri are ordered there, not as a side note on a purely Korean menu."
+      },
+      {
+        "title": "BBQ party trays and phone orders",
+        "text": "BBQ party trays are built for a table, not a single bowl. Phone orders are a published path: you call, you set the ticket, you pick up or sit down when the kitchen has it."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "East Main Street, two cuisines",
+    "paragraphs": [
+      "August Moon is a Norristown restaurant that refuses to pick only Korea or only Japan. Authentic Korean-Japanese is their own phrase. The sushi bar and the BBQ party trays are how that phrase looks on a table. Phone orders keep the kitchen usable when you are not walking in cold.",
+      "Lunch is a shorter window on weekdays. Dinner stretches later on Friday and Saturday. Sunday they close. Those hours come from their order page, so the page you are reading will not invent a brunch or a late-night service they did not publish."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a meal actually gets to the table",
+    "items": [
+      {
+        "title": "Call the ticket in",
+        "text": "Phone orders are how many tables start. You call August Moon, you name the Korean plates, the sushi, or the BBQ party tray, and the kitchen works that ticket."
+      },
+      {
+        "title": "Sit the sushi bar or the table",
+        "text": "The sushi bar is a real station in the room. A party tray is for the larger table that wants Korean BBQ in a shared format."
+      },
+      {
+        "title": "Lunch window, then dinner",
+        "text": "Weekday lunch is 11:30am to 2pm. Dinner returns in the late afternoon. Saturday dinner starts at 4pm. Sunday there is no service."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Sushi bar and BBQ party trays",
+    "text": "Those two formats are the restaurant in physical form. One is a bar of Japanese work. The other is a Korean BBQ tray built for a group. Authentic Korean-Japanese means both are in the same Norristown room.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://augustmoonpa.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Phone orders are part of the kitchen",
+    "text": "August Moon publishes phone orders as a way in. You do not have to discover the menu only by walking East Main Street. Call, name the tray or the sushi, and let the kitchen cook.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Call in an order",
+      "href": "https://augustmoonpa.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Sushi bar",
+        "href": "https://augustmoonpa.com/",
+        "imageIndex": 9,
+        "text": "Japanese sushi ordered at the bar inside August Moon on East Main Street."
+      },
+      {
+        "title": "BBQ party trays",
+        "href": "https://augustmoonpa.com/",
+        "imageIndex": 10,
+        "text": "Korean BBQ in a shared tray built for a table, not a single bowl."
+      },
+      {
+        "title": "Phone orders",
+        "href": "https://augustmoonpa.com/",
+        "imageIndex": 11,
+        "text": "Call 610-277-4008 and put Korean-Japanese food on a ticket."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "300 East Main Street",
+    "sub": "300 East Main Street, Norristown, PA 19401"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6102774008"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6102774008"
+    },
+    {
+      "label": "Official site",
+      "href": "https://augustmoonpa.com/"
+    }
+  ]
+}

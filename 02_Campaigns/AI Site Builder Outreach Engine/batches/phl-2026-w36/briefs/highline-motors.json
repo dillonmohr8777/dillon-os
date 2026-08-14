@@ -1,0 +1,252 @@
+{
+  "slug": "highline-motors",
+  "name": "Highline Motors",
+  "city": "Aston",
+  "category": "Used car dealer",
+  "vertical": "auto",
+  "attitude": "industrial",
+  "url": "https://www.highlineaston.com/",
+  "phone": "610-753-4536",
+  "address": "469 Conchester Hwy, Aston, PA 19014",
+  "hours": "",
+  "description": "Used car dealer in Aston. Inventory and trade-ins from their live contact page.",
+  "noindex": true,
+  "schemaType": "AutoDealer",
+  "logo": false,
+  "marquee": [
+    "Inventory",
+    "Trade-ins",
+    "Used cars",
+    "Aston",
+    "Conchester Hwy"
+  ],
+  "tokens": {
+    "paper": "#EEEAE3",
+    "ink": "#161616",
+    "accent": "#C45C12",
+    "accent2": "#4A90C4",
+    "panel": "#D4D0C8",
+    "deep": "#101010",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Barlow"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6107534536"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of used car sales for Highline Motors, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Aston | Used car dealer",
+    "headline": "Inventory and trade-ins in Aston",
+    "sub": "Highline Motors is a used car dealer on Conchester Highway in Aston. Their live contact page puts the work in two words: inventory and trade-ins. You come to see the used cars they hold, and you can bring the car you already have. The lot is 469 Conchester Hwy.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6107534536"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Aston",
+      "sub": "Inventory and trade-ins"
+    },
+    "marquee": [
+      "Inventory",
+      "Trade-ins",
+      "Used cars",
+      "Aston",
+      "Conchester Hwy"
+    ]
+  },
+  "offerings": {
+    "heading": "What the Aston lot actually does",
+    "items": [
+      {
+        "title": "Used car inventory",
+        "text": "The dealer holds used cars you can come see. Inventory is their word. The product is a vehicle on the Conchester Highway lot, not a maybe in transit."
+      },
+      {
+        "title": "Trade-ins",
+        "text": "Trade-ins are the other half of their contact-page offer. You bring the car you have. They look at it as part of the deal for the car you want."
+      },
+      {
+        "title": "A dealer you visit",
+        "text": "Highline Motors is an Aston lot. The visit is the point: walk the inventory, talk the trade, decide on a used car that is actually there."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Conchester Highway, used cars",
+    "paragraphs": [
+      "Highline Motors keeps the claim as tight as their contact page. Inventory. Trade-ins. A used car dealer in Aston. You are not promised a brand of car this page cannot verify. You are promised a lot that holds vehicles and takes trades.",
+      "A used-car deal works when both sides of the driveway are honest. They have inventory. You may have a trade. Conchester Highway is where those two facts meet. The rest is the specific car on the ground that day. Highline Motors is the Aston dealer that put both words on the contact page."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a deal actually starts",
+    "items": [
+      {
+        "title": "See the inventory",
+        "text": "You start with the used cars Highline Motors is holding in Aston. Inventory means the row you can walk, not a hidden list."
+      },
+      {
+        "title": "Bring a trade if you have one",
+        "text": "Trade-ins are a published part of the work. The car you already drive can enter the same conversation as the car you want."
+      },
+      {
+        "title": "Deal on the lot",
+        "text": "The dealer and the inventory are in one place: 469 Conchester Hwy. The purchase happens around a vehicle that is there."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Used cars, plus the one you bring",
+    "text": "Inventory and trade-ins are a paired offer. Highline Motors sells used cars in Aston and takes the car you already have as part of the deal.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.highlineaston.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "The contact page named the work",
+    "text": "Plenty of lots hide behind adjectives. Their live contact page did not. Inventory. Trade-ins. That is the Highline Motors offer, written the way they run the Aston lot.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See inventory",
+      "href": "https://www.highlineaston.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Inventory",
+        "href": "https://www.highlineaston.com/",
+        "imageIndex": 9,
+        "text": "Used cars on the ground at the Aston dealer on Conchester Highway."
+      },
+      {
+        "title": "Trade-ins",
+        "href": "https://www.highlineaston.com/",
+        "imageIndex": 10,
+        "text": "Bring the car you have. Trade-ins are part of how Highline Motors deals."
+      },
+      {
+        "title": "Aston lot",
+        "href": "https://www.highlineaston.com/",
+        "imageIndex": 11,
+        "text": "A used car dealer you visit at 469 Conchester Hwy, Aston, PA."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Conchester Highway",
+    "sub": "469 Conchester Hwy, Aston, PA 19014"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6107534536"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6107534536"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.highlineaston.com/"
+    }
+  ]
+}

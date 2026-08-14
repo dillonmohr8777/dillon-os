@@ -1,0 +1,252 @@
+{
+  "slug": "always-dental-care",
+  "name": "Always Dental Care",
+  "city": "Phoenixville",
+  "category": "Family and cosmetic dentistry",
+  "vertical": "healthcare",
+  "attitude": "glass",
+  "url": "https://www.alwaysdentalcare.com/",
+  "phone": "484-392-7687",
+  "address": "1570 Egypt Rd #210, Phoenixville, PA 19460",
+  "hours": "Mon Tue Thu 9am-6pm, Wed 9am-5pm, Friday 9am-1pm every other Friday, Sat-Sun closed",
+  "description": "Family and cosmetic dentistry in Phoenixville. Dr. Truong Nguyen. Extractions, whitening, fillings, root canals, crowns, bridges, dentures, implants, emergency care.",
+  "noindex": true,
+  "schemaType": "Dentist",
+  "logo": false,
+  "marquee": [
+    "Family dentistry",
+    "Cosmetic",
+    "Implants",
+    "Emergency care",
+    "Phoenixville"
+  ],
+  "tokens": {
+    "paper": "#F7F4EE",
+    "ink": "#1B2430",
+    "accent": "#2B6CB0",
+    "accent2": "#E8C547",
+    "panel": "#E3E7EE",
+    "deep": "#122033",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Outfit",
+    "displayFallback": "Impact,sans-serif",
+    "text": "DM Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:4843927687"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Phoenixville | Family and cosmetic dentistry",
+    "headline": "Family and cosmetic dentistry",
+    "sub": "Always Dental Care is Dr. Truong Nguyen's Phoenixville practice for family and cosmetic dentistry. The chair work covers extractions, whitening, fillings, root canals, crowns, bridges, dentures, and implants. Emergency care is part of the same office, not a separate brand down the road.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:4843927687"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Phoenixville",
+      "sub": "Dr. Truong Nguyen"
+    },
+    "marquee": [
+      "Family dentistry",
+      "Cosmetic",
+      "Implants",
+      "Emergency care",
+      "Phoenixville"
+    ]
+  },
+  "offerings": {
+    "heading": "What the chair actually does",
+    "items": [
+      {
+        "title": "Restore the tooth",
+        "text": "Fillings, root canals, crowns, and bridges are the restorative core. Dr. Truong Nguyen treats the tooth in front of you so you leave with a plan that matches the damage, not a menu of upsells."
+      },
+      {
+        "title": "Replace what is gone",
+        "text": "Extractions, dentures, and implants handle the teeth that cannot stay. The practice keeps replacement in the same family and cosmetic office that did the exam."
+      },
+      {
+        "title": "Whiten, and see you in an emergency",
+        "text": "Whitening is the cosmetic side of the same chair. Emergency care is listed with the rest of the work, so a broken tooth or a sudden ache has a place to go inside this practice."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Dr. Truong Nguyen, Egypt Road",
+    "paragraphs": [
+      "Always Dental Care is a family and cosmetic practice in Phoenixville. Dr. Truong Nguyen is the named dentist. The service list is specific: extractions, whitening, fillings, root canals, crowns, bridges, dentures, implants, and emergency care. Those are the verbs the office will stand behind.",
+      "Family dentistry here means the same practice can fill a molar on Tuesday and talk implants when a tooth is past saving. Cosmetic work sits next to that, not in a separate spa brand. Emergency care is on the list so the office is usable on the day something breaks."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How treatment actually moves",
+    "items": [
+      {
+        "title": "Diagnose, then restore",
+        "text": "A visit starts with the tooth in front of you. Fillings, root canals, crowns, and bridges are how the practice restores what can be kept."
+      },
+      {
+        "title": "Extract or replace when needed",
+        "text": "Extractions, dentures, and implants are the replacement path. You stay in Dr. Nguyen's office for that decision instead of being sent out for the hard part."
+      },
+      {
+        "title": "Cosmetic and emergency in the same practice",
+        "text": "Whitening is scheduled like other chair time. Emergency care is part of the published service list, so urgent dental work has a home here."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "One practice for the full list",
+    "text": "Fillings and implants are not split across two brands. Dr. Truong Nguyen's office publishes extractions, whitening, fillings, root canals, crowns, bridges, dentures, implants, and emergency care as one practice.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.alwaysdentalcare.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Family dentistry with a cosmetic chair",
+    "text": "The Phoenixville office is family and cosmetic on purpose. A child's filling and an adult implant consult can live in the same relationship with the same dentist.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See the services",
+      "href": "https://www.alwaysdentalcare.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Restorative care",
+        "href": "https://www.alwaysdentalcare.com/",
+        "imageIndex": 9,
+        "text": "Fillings, root canals, crowns, and bridges in Dr. Truong Nguyen's Phoenixville chair."
+      },
+      {
+        "title": "Implants and dentures",
+        "href": "https://www.alwaysdentalcare.com/",
+        "imageIndex": 10,
+        "text": "Extractions, dentures, and implants when a tooth cannot be kept."
+      },
+      {
+        "title": "Whitening and emergency care",
+        "href": "https://www.alwaysdentalcare.com/",
+        "imageIndex": 11,
+        "text": "Cosmetic whitening and emergency dental care from the same practice."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Egypt Road, suite 210",
+    "sub": "1570 Egypt Rd #210, Phoenixville, PA 19460"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:4843927687"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:4843927687"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.alwaysdentalcare.com/"
+    }
+  ]
+}
