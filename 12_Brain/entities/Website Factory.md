@@ -21,9 +21,12 @@ deploy credentials.
   Antalik transitions.dev motion on every homepage). Hub:
   https://phl-2026-w36.netlify.app. `noindex` on. `mail_ready` stays hold.
   Prior hub still live: https://phl-2026-w35.netlify.app.
+- Phone catalog stacks full-width. Do not ship a 3-up squeeze under the dock.
+  Lesson: [[12_Brain/concepts/Phone Catalog Stacks|Phone Catalog Stacks]].
 - Secrets and host tokens never land in this note.
 
 ## Links
 
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]]
+- [[12_Brain/concepts/Phone Catalog Stacks|Phone Catalog Stacks]]
 - [[12_Brain/entities/Momentum 360|Momentum 360]]

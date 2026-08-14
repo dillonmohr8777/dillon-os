@@ -349,6 +349,15 @@
 .offering-grid .t-tilt,
 .catalog-grid .t-tilt { height: 100%; }
 .t-tilt-card { height: 100%; border-radius: var(--radius); }
+@media (max-width: 700px) {
+  .t-tilt,
+  .offering-grid .t-tilt,
+  .catalog-grid .t-tilt,
+  .t-tilt-card {
+    height: auto;
+    width: 100%;
+  }
+}
 .t-learn {
   display: inline-flex;
   align-items: center;
