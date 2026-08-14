@@ -1,0 +1,25 @@
+{
+  "name": "D.I.L.L.O.N. OS",
+  "short_name": "DILLON OS",
+  "description": "Dillon Mohr's agentic OS — vault vitals, directives, and outreach, on your phone.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0f0c",
+  "theme_color": "#0a0f0c",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

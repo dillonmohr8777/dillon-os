@@ -99,6 +99,32 @@ function json(res, code, body) {
   res.end(data);
 }
 
+const PUBLIC_TYPES = {
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.webmanifest': 'application/manifest+json',
+  '.json': 'application/json',
+  '.png': 'image/png',
+  '.svg': 'image/svg+xml',
+  '.txt': 'text/plain; charset=utf-8',
+};
+
+function servePublic(pathname, res) {
+  const rel = decodeURIComponent(pathname).replace(/^\/+/, '');
+  if (!rel || rel.includes('..') || path.isAbsolute(rel)) return false;
+  const resolved = path.resolve(path.join(PUBLIC, rel));
+  const root = path.resolve(PUBLIC) + path.sep;
+  if (resolved !== path.resolve(PUBLIC) && !resolved.startsWith(root)) return false;
+  if (!fs.existsSync(resolved) || fs.statSync(resolved).isDirectory()) return false;
+  const ext = path.extname(resolved);
+  res.writeHead(200, {
+    'content-type': PUBLIC_TYPES[ext] || 'application/octet-stream',
+    'cache-control': ext === '.png' ? 'public, max-age=86400' : 'no-store',
+  });
+  res.end(fs.readFileSync(resolved));
+  return true;
+}
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
   const p = url.pathname;
@@ -111,7 +137,17 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  if (p === '/favicon.ico') { res.writeHead(204); return res.end(); }
+  if (p === '/favicon.ico') {
+    const icon = path.join(PUBLIC, 'icons', 'icon-192.png');
+    if (fs.existsSync(icon)) {
+      res.writeHead(200, { 'content-type': 'image/png', 'cache-control': 'no-store' });
+      return res.end(fs.readFileSync(icon));
+    }
+    res.writeHead(204); return res.end();
+  }
+
+  const publicFile = servePublic(p, res);
+  if (publicFile) return;
 
   if (p === '/api/state' && req.method === 'GET') {
     try { json(res, 200, statePayload()); }

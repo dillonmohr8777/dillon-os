@@ -1,6 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0f0c">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex,nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="DILLON OS">
+<meta name="mobile-web-app-capable" content="yes">
 <title>D.I.L.L.O.N. OS</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
 <style>
   :root {
     --surface: #0a0f0c;
@@ -99,7 +112,7 @@
   .deck button:hover { border-color: var(--edge-hi); color: var(--ink); background: #101a13; }
   .deck button.running { border-color: var(--amber); color: var(--amber); }
   .deck button.running::before { content: "▶ "; color: var(--amber); }
-  .deck button:disabled { cursor: wait; }
+  .deck button:disabled { cursor: default; opacity: .6; }
 
   /* ---------- console ---------- */
   .console { flex: 1; display: flex; flex-direction: column; min-height: 0; }
@@ -112,14 +125,61 @@
   .console pre .err { color: var(--amber); }
   .console pre .ok { color: var(--green); }
 
-  footer { display: flex; justify-content: space-between; color: var(--ink-3); font-size: 10px; letter-spacing: .08em; }
+  footer { display: flex; justify-content: space-between; color: var(--ink-3); font-size: 10px; letter-spacing: .08em; gap: 8px; flex-wrap: wrap; }
 
   #tip { position: fixed; z-index: 20; pointer-events: none; display: none;
     background: #101a13; border: 1px solid var(--edge-hi); border-radius: 4px;
     padding: 4px 8px; font-size: 10px; color: var(--ink); }
+
+  .install {
+    display: none;
+    border: 1px solid var(--edge-hi);
+    background: #101a13;
+    color: var(--ink-2);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 11px;
+    letter-spacing: .04em;
+    line-height: 1.45;
+  }
+  .readonly-note { color: var(--ink-3); font-size: 10px; letter-spacing: .08em; grid-column: 1 / -1; padding: 2px 0 4px; }
+  .deck button:disabled { cursor: default; opacity: .6; }
+  .mode-pill { color: var(--amber); }
+
+  @media (max-width: 900px) {
+    html, body { height: auto; min-height: 100%; overflow: auto; }
+    body { -webkit-text-size-adjust: 100%; }
+    #app {
+      height: auto;
+      min-height: 100dvh;
+      padding: calc(12px + env(safe-area-inset-top)) 12px calc(14px + env(safe-area-inset-bottom));
+      gap: 10px;
+    }
+    header { flex-direction: column; gap: 8px; }
+    .pills { margin: 0; flex-wrap: wrap; gap: 10px 14px; }
+    .clock { text-align: left; }
+    .clock .time { font-size: 22px; }
+    .brand .callsign { font-size: 20px; }
+    main { display: flex; flex-direction: column; min-height: 0; }
+    .core { min-height: 220px; max-height: 260px; flex: none; }
+    .hero .big { font-size: 36px; }
+    .hero .meter { max-width: none; }
+    .col { overflow: visible; }
+    .panel.scroll, .panel.console { max-height: none !important; }
+    .deck button { min-height: 44px; font-size: 12px; }
+    .install { display: block; }
+    .li .tx { white-space: normal; }
+    footer { font-size: 11px; }
+  }
+  @media (display-mode: standalone) {
+    .install { display: none !important; }
+  }
 </style>
+</head>
+<body>
 
 <div id="app">
+  <div class="install" id="install">Add to Home Screen — iPhone: Share → Add to Home Screen. Android: menu → Install app. Opens full-screen and keeps the last snapshot offline.</div>
   <header>
     <div class="brand">
       <div class="callsign" id="callsign">D.I.L.L.O.N.</div>
@@ -129,6 +189,7 @@
       <span class="pill"><span class="dot" id="dot-core"></span>CORE · <b id="pill-core">IDLE</b></span>
       <span class="pill"><span class="dot cyan" id="dot-link"></span>LINK · <b id="pill-link">ONLINE</b></span>
       <span class="pill"><span class="dot" id="dot-vault"></span>VAULT · <b id="pill-vault">—</b></span>
+      <span class="pill" id="pill-mode-wrap" hidden><span class="dot amber"></span>VIEW · <b class="mode-pill">PHONE</b></span>
     </div>
     <div class="clock">
       <div class="time" id="time">--:--<small>:--</small></div>
@@ -218,6 +279,17 @@
 const $ = (id) => document.getElementById(id);
 let state = null;
 let activeJob = null;   // { id, skill, es }
+const hud = window.__HUD__ || {};
+const READONLY = hud.mode === 'readonly';
+
+if (READONLY) {
+  const wrap = $('pill-mode-wrap');
+  if (wrap) wrap.hidden = false;
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {});
+}
 
 // ---------------- clock ----------------
 function tickClock() {
@@ -229,11 +301,26 @@ function tickClock() {
 setInterval(tickClock, 1000); tickClock();
 
 // ---------------- state ----------------
+async function pullState() {
+  const urls = [];
+  if (!READONLY) urls.push('/api/state');
+  urls.push(hud.stateUrl || './state.json');
+  let lastErr;
+  for (const url of urls) {
+    try {
+      const r = await fetch(url, { cache: 'no-store' });
+      if (!r.ok) continue;
+      return await r.json();
+    } catch (err) { lastErr = err; }
+  }
+  throw lastErr || new Error('no state');
+}
+
 async function sync() {
   try {
-    const r = await fetch('/api/state');
-    state = await r.json();
-    $('pill-link').textContent = 'ONLINE'; $('dot-link').className = 'dot cyan';
+    state = await pullState();
+    $('pill-link').textContent = READONLY ? 'SNAPSHOT' : 'ONLINE';
+    $('dot-link').className = READONLY ? 'dot amber' : 'dot cyan';
     render();
   } catch {
     $('pill-link').textContent = 'LOST'; $('dot-link').className = 'dot off';
@@ -297,11 +384,19 @@ function render() {
     `<div class="li"><span class="mk">▸</span><span class="tx" title="${esc(d.rel)}">${esc(d.name)}</span><span class="ago">${d.ago}</span></div>`).join('');
 
   // deck
-  const running = new Set(jobs.filter((j) => j.status === 'running').map((j) => j.skill));
-  $('deck').innerHTML = skills.map((s) =>
-    `<button data-skill="${esc(s.name)}" title="${esc(s.description)}" class="${running.has(s.name) ? 'running' : ''}">${esc(s.name.replace(/-/g, ' '))}</button>`).join('');
-  $('deck-count').textContent = `${skills.length} skills`;
-  for (const b of document.querySelectorAll('.deck button')) b.onclick = () => run(b.dataset.skill);
+  const running = new Set((jobs || []).filter((j) => j.status === 'running').map((j) => j.skill));
+  if (READONLY) {
+    $('deck').innerHTML =
+      '<div class="readonly-note">Phone view is read-only. Skills stay on the desktop HUD.</div>' +
+      skills.map((s) =>
+        `<button disabled title="${esc(s.description)}">${esc(s.name.replace(/-/g, ' '))}</button>`).join('');
+    $('deck-count').textContent = 'desktop only';
+  } else {
+    $('deck').innerHTML = skills.map((s) =>
+      `<button data-skill="${esc(s.name)}" title="${esc(s.description)}" class="${running.has(s.name) ? 'running' : ''}">${esc(s.name.replace(/-/g, ' '))}</button>`).join('');
+    $('deck-count').textContent = `${skills.length} skills`;
+    for (const b of document.querySelectorAll('.deck button')) b.onclick = () => run(b.dataset.skill);
+  }
 
   // schedule
   $('schedule').innerHTML = state.config.schedule.map((s) =>
@@ -351,6 +446,7 @@ $('spark').addEventListener('mouseleave', () => { $('tip').style.display = 'none
 
 // ---------------- skill runner ----------------
 async function run(skill) {
+  if (READONLY) return;
   if (activeJob) { activeJob.es.close(); activeJob = null; }
   const out = $('console');
   out.innerHTML = `<span class="in">&gt;&gt; launching ${esc(skill)} …</span>\n`;
@@ -376,7 +472,7 @@ async function run(skill) {
 let orbEnergy = 0.35;
 (function orb() {
   const cv = $('orb'), ctx = cv.getContext('2d');
-  const N = 900, pts = [];
+  const N = window.matchMedia('(max-width: 900px)').matches ? 280 : 900, pts = [];
   // fibonacci sphere + jitter cloud
   for (let i = 0; i < N; i++) {
     const t = i / N, inc = Math.acos(1 - 2 * t), az = i * 2.39996;
@@ -411,3 +507,5 @@ let orbEnergy = 0.35;
   requestAnimationFrame(frame);
 })();
 </script>
+</body>
+</html>
