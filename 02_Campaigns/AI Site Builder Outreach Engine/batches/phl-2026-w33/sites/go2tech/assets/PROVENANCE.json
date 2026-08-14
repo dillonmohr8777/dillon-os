@@ -1,0 +1,30 @@
+{
+  "slug": "go2tech",
+  "appliedAt": "2026-08-14T20:23:26.638Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/go2tech",
+  "copied": 4,
+  "sources": [
+    {
+      "from": "source-01.png",
+      "to": "image-1.webp",
+      "as": "image-1.png"
+    },
+    {
+      "from": "source-02.png",
+      "to": "image-2.webp",
+      "as": "image-2.png"
+    },
+    {
+      "from": "source-03.png",
+      "to": "image-3.webp",
+      "as": "image-3.png"
+    },
+    {
+      "from": "source-05.png",
+      "to": "image-4.webp",
+      "as": "image-4.png"
+    }
+  ],
+  "hint": "GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.",
+  "siteUrl": "https://www.go2tech.com/"
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "metalmorphose-iron-studio",
+  "appliedAt": "2026-08-14T20:23:27.254Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/metalmorphose-iron-studio",
+  "copied": 10,
+  "sources": [
+    {
+      "from": "source-01.png",
+      "to": "image-1.webp",
+      "as": "image-1.png"
+    },
+    {
+      "from": "source-02.jpg",
+      "to": "image-2.webp",
+      "as": "image-2.jpg"
+    },
+    {
+      "from": "source-03.jpg",
+      "to": "image-3.webp",
+      "as": "image-3.jpg"
+    },
+    {
+      "from": "source-04.jpg",
+      "to": "image-4.webp",
+      "as": "image-4.jpg"
+    },
+    {
+      "from": "source-05.png",
+      "to": "image-5.webp",
+      "as": "image-5.png"
+    },
+    {
+      "from": "source-06.png",
+      "to": "image-6.webp",
+      "as": "image-6.png"
+    },
+    {
+      "from": "source-07.jpg",
+      "to": "image-7.webp",
+      "as": "image-7.jpg"
+    },
+    {
+      "from": "source-08.jpg",
+      "to": "image-8.webp",
+      "as": "image-8.jpg"
+    },
+    {
+      "from": "source-09.jpg",
+      "to": "image-9.webp",
+      "as": "image-9.jpg"
+    },
+    {
+      "from": "source-10.jpg",
+      "to": "image-10.webp",
+      "as": "image-10.jpg"
+    }
+  ],
+  "hint": null,
+  "siteUrl": "https://metalmorphoseironworks.com/"
+}

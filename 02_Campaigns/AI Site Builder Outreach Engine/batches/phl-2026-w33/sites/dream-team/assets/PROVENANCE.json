@@ -1,0 +1,35 @@
+{
+  "slug": "dream-team",
+  "appliedAt": "2026-08-14T20:23:21.562Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/dream-team",
+  "copied": 5,
+  "sources": [
+    {
+      "from": "source-01.webp",
+      "to": "image-1.webp",
+      "as": "image-1.webp"
+    },
+    {
+      "from": "source-02.webp",
+      "to": "image-2.webp",
+      "as": "image-2.webp"
+    },
+    {
+      "from": "source-03.webp",
+      "to": "image-3.webp",
+      "as": "image-3.webp"
+    },
+    {
+      "from": "source-04.webp",
+      "to": "image-4.webp",
+      "as": "image-4.webp"
+    },
+    {
+      "from": "source-05.webp",
+      "to": "image-5.webp",
+      "as": "image-5.webp"
+    }
+  ],
+  "hint": "GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.",
+  "siteUrl": "https://dreamteampa.com/"
+}

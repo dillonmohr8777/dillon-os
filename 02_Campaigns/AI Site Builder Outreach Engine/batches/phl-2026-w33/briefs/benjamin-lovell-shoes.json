@@ -1,0 +1,216 @@
+{
+  "slug": "benjamin-lovell-shoes",
+  "name": "Benjamin Lovell Shoes",
+  "city": "Spring House",
+  "category": "shoes",
+  "vertical": "retail",
+  "attitude": "warm",
+  "composition_ref": "https://openai.com",
+  "url": "https://www.blshoes.com/",
+  "phone": "Tel: 215.564.4655",
+  "address": "1728 Chestnut Street, Philadelphia, PA 19103",
+  "description": "Benjamin Lovell Shoes handles shoes in Spring House. The new page makes that obvious on the first screen.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#EBE8E1",
+    "ink": "#282E39",
+    "accent": "#6E7B91",
+    "accent2": "#2F333D",
+    "panel": "#C8C9CB",
+    "deep": "#2E3541",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Spring House | shoes",
+    "headline": "Benjamin Lovell Shoes",
+    "sub": "Benjamin Lovell Shoes handles shoes in Spring House. The new page makes that obvious on the first screen.",
+    "ctaPrimary": {
+      "label": "Shop Now",
+      "href": "tel:2155644655"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Spring House",
+      "sub": "shoes"
+    }
+  },
+  "offerings": {
+    "items": [
+      "1728 Chestnut Street, Philadelphia, PA 19103",
+      "525 Glen Eagle Square, Glen Mills, PA 19342",
+      "Hours: Mon-Wed & Sat 10-6, Thurs-Fri 10-7, Sun 11-5"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Listed for shoes in Spring House.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Rebuild queued after a documented mobile or conversion fault."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "1728 Chestnut Street, Philadelphia, PA 19103",
+      "525 Glen Eagle Square, Glen Mills, PA 19342",
+      "Benjamin Lovell Shoes already exists as a business in Spring House.",
+      "The radar marked this site for rebuild after a documented mobile or conversion fault.",
+      "Copy on this demo stays inside what we could verify from public pages."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Open the page on a phone. The primary action stays on screen.",
+      "Call or write without hunting a number buried in an image.",
+      "See the work, then take one next step."
+    ]
+  },
+  "feature": {
+    "heading": "A shoes page that works on a phone",
+    "text": "Benjamin Lovell Shoes's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://www.blshoes.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Spring House first",
+    "text": "Priority on the radar is local. Benjamin Lovell Shoes is in Spring House, and the page should read that way without extra",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.blshoes.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Offerings",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+  },
+  "closing": {
+    "cta": {
+      "label": "Shop Now",
+      "href": "tel:2155644655"
+    },
+    "heading": "Benjamin Lovell Shoes"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.blshoes.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 249,
+  "_measuredWords": 369,
+  "_measuredImages": 12,
+  "_measuredSections": 11
+}

@@ -1,0 +1,11 @@
+{
+  "id": "phl-2026-w33",
+  "title": "Radar rebuild batch, week 33 — Reddit-cited UI library mapped onto 25 unbuilt prospects",
+  "market": "Philadelphia, PA",
+  "week": "2026-08-14",
+  "idPrefix": "PHL",
+  "targetCount": 25,
+  "deployBaseUrl": "https://phl-2026-w33.netlify.app",
+  "radar": "https://momentum-prospect-radar.netlify.app/#sort=p:desc",
+  "note": "First 25 of a 200-site factory run. Queue is radar rebuild + unbuilt, priority desc, preferring imagery-buildable then live sites. Composition references come from the Reddit-cited wow library. Brand, copy, and photos come from harvest. Demos stay noindex. mail_ready stays hold. Do not clone a reference site onto a local business."
+}

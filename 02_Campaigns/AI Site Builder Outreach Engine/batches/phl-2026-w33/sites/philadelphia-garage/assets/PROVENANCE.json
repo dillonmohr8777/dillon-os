@@ -1,0 +1,40 @@
+{
+  "slug": "philadelphia-garage",
+  "appliedAt": "2026-08-14T20:23:30.245Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/philadelphia-garage",
+  "copied": 6,
+  "sources": [
+    {
+      "from": "source-01.jpg",
+      "to": "image-1.webp",
+      "as": "image-1.jpg"
+    },
+    {
+      "from": "source-02.webp",
+      "to": "image-2.webp",
+      "as": "image-2.webp"
+    },
+    {
+      "from": "source-03.webp",
+      "to": "image-3.webp",
+      "as": "image-3.webp"
+    },
+    {
+      "from": "source-04.webp",
+      "to": "image-4.webp",
+      "as": "image-4.webp"
+    },
+    {
+      "from": "source-05.webp",
+      "to": "image-5.webp",
+      "as": "image-5.webp"
+    },
+    {
+      "from": "source-06.webp",
+      "to": "image-6.webp",
+      "as": "image-6.webp"
+    }
+  ],
+  "hint": null,
+  "siteUrl": "https://www.philadelphiagarage.com/"
+}

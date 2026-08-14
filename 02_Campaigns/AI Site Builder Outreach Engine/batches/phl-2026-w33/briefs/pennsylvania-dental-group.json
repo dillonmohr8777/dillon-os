@@ -1,0 +1,213 @@
+{
+  "slug": "pennsylvania-dental-group",
+  "name": "Pennsylvania Dental Group",
+  "city": "Philadelphia",
+  "category": "dentist",
+  "vertical": "medical",
+  "attitude": "glass",
+  "composition_ref": "https://linear.app",
+  "url": "https://www.padentalgroup.com/",
+  "phone": "(215) 387-0883",
+  "address": "3700 Market Street, Suite 101, Philadelphia, PA 19104",
+  "description": "At Pennsylvania Dental Group, we've proudly served as a top Philadelphia dentist for over 45 years, specializing in both general and cosmetic dentistry.",
+  "noindex": true,
+  "schemaType": "Dentist",
+  "logo": false,
+  "tokens": {
+    "paper": "#E2E7E1",
+    "ink": "#102C39",
+    "accent": "#007490",
+    "accent2": "#900900",
+    "panel": "#A3C7CA",
+    "deep": "#083341",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "28px"
+  },
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Philadelphia | dentist",
+    "headline": "Pennsylvania Dental Group",
+    "sub": "At Pennsylvania Dental Group, we've proudly served as a top Philadelphia dentist for over 45 years, specializing in both general and cosmetic dentistry.",
+    "ctaPrimary": {
+      "label": "Contact Us",
+      "href": "tel:2153870883"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "dentist"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Our Philadelphia Dental Practices are conveniently located in West Philadelphia (University City)",
+      "At Pennsylvania Dental Group, our primary goal is to help every patient",
+      "Quality Dentists in Philadelphia enriching the overall health of our community with"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Listed for dentist in Philadelphia.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Rebuild queued after a documented mobile or conversion fault."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Our Philadelphia Dental Practices are conveniently located in West Philadelphia (University City) and Center City (South Philadelphia)",
+      "At Pennsylvania Dental Group, our primary goal is to help every patient achieve the satisfaction of optimal dental health through personalized dental"
+    ]
+  },
+  "experience": {
+    "items": [
+      "Open the page on a phone. The primary action stays on screen.",
+      "Call or write without hunting a number buried in an image.",
+      "See the work, then take one next step."
+    ]
+  },
+  "feature": {
+    "heading": "A dentist page that works on a phone",
+    "text": "Pennsylvania Dental Group's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://www.padentalgroup.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Philadelphia first",
+    "text": "Priority on the radar is local. Pennsylvania Dental Group is in Philadelphia, and the page should read that way without extra clicks.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.padentalgroup.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Offerings",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact Us",
+      "href": "tel:2153870883"
+    },
+    "heading": "Pennsylvania Dental Group"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.padentalgroup.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Pennsylvania Dental Group dentist in Philadelphia, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 74,
+    "sqs": 33,
+    "opportunity": 74,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 257,
+  "_measuredWords": 372,
+  "_measuredImages": 12,
+  "_measuredSections": 11
+}

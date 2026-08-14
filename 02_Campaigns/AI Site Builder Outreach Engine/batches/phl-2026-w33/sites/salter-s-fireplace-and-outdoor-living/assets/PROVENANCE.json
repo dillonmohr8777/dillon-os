@@ -1,0 +1,35 @@
+{
+  "slug": "salter-s-fireplace-and-outdoor-living",
+  "appliedAt": "2026-08-14T20:23:26.006Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/salter-s-fireplace-and-outdoor-living",
+  "copied": 5,
+  "sources": [
+    {
+      "from": "source-01.png",
+      "to": "image-1.webp",
+      "as": "image-1.png"
+    },
+    {
+      "from": "source-02.png",
+      "to": "image-2.webp",
+      "as": "image-2.png"
+    },
+    {
+      "from": "source-03.png",
+      "to": "image-3.webp",
+      "as": "image-3.png"
+    },
+    {
+      "from": "source-04.jpg",
+      "to": "image-4.webp",
+      "as": "image-4.jpg"
+    },
+    {
+      "from": "source-05.png",
+      "to": "image-5.webp",
+      "as": "image-5.png"
+    }
+  ],
+  "hint": "GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.",
+  "siteUrl": "https://saltersfireplace.com/"
+}

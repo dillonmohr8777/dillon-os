@@ -1,0 +1,214 @@
+{
+  "slug": "dream-team",
+  "name": "Dream Team",
+  "city": "Paoli",
+  "category": "hvac",
+  "vertical": "home-services",
+  "attitude": "industrial",
+  "composition_ref": "https://www.figma.com",
+  "url": "https://dreamteampa.com/",
+  "phone": "610-477-8226",
+  "address": "436 S. Lansdowne Ave, Lansdowne, PA 19050",
+  "description": "Dream Team handles hvac in Paoli. The new page makes that obvious on the first screen.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#F6E8D9",
+    "ink": "#462E22",
+    "accent": "#F57E29",
+    "accent2": "#184822",
+    "panel": "#F6CAA8",
+    "deep": "#5E361D",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Anton",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Paoli | hvac",
+    "headline": "Dream Team",
+    "sub": "Dream Team handles hvac in Paoli. The new page makes that obvious on the first screen.",
+    "ctaPrimary": {
+      "label": "BOOK NOW",
+      "href": "tel:6104778226"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Paoli",
+      "sub": "hvac"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Plumbing Plumbing Repair Services Plumbing Installation Services Water Heater Services Tankless Water",
+      "HVAC Heating Air Conditioning / Cooling Air Conditioning Repair Air Conditioning Replacement",
+      "Air Conditioning / Cooling Air Conditioning Repair Air Conditioning Replacement Air Conditioning"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Listed for hvac in Paoli.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Rebuild queued after a documented mobile or conversion fault."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Plumbing Plumbing Repair Services Plumbing Installation Services Water Heater Services Tankless Water Heater Services Pipe Repair Services",
+      "HVAC Heating Air Conditioning / Cooling Air Conditioning Repair Air Conditioning Replacement Air Conditioning Installation Air Conditioning Maintenance Emergency Air Conditioning Repair",
+      "Dream Team already exists as a business in Paoli."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Open the page on a phone. The primary action stays on screen.",
+      "Call or write without hunting a number buried in an image.",
+      "See the work, then take one next step."
+    ]
+  },
+  "feature": {
+    "heading": "A hvac page that works on a phone",
+    "text": "Dream Team's current site failed the radar audit on mobile and conversion. The rebuild keeps their identity and makes the next step obvious.",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://dreamteampa.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Paoli first",
+    "text": "Priority on the radar is local. Dream Team is in Paoli, and the page should read that way without extra clicks.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://dreamteampa.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Offerings",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages. Empty fields stayed empty on purpose."
+  },
+  "closing": {
+    "cta": {
+      "label": "BOOK NOW",
+      "href": "tel:6104778226"
+    },
+    "heading": "Dream Team"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://dreamteampa.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Dream Team hvac in Paoli, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Dream Team hvac in Paoli, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Dream Team hvac in Paoli, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Dream Team hvac in Paoli, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Dream Team hvac in Paoli, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Dream Team hvac in Paoli, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Dream Team hvac in Paoli, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Dream Team hvac in Paoli, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Dream Team hvac in Paoli, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Dream Team hvac in Paoli, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Dream Team hvac in Paoli, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Dream Team hvac in Paoli, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 65,
+    "sqs": 33,
+    "opportunity": 74,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 248,
+  "_measuredWords": 363,
+  "_measuredImages": 12,
+  "_measuredSections": 11
+}
