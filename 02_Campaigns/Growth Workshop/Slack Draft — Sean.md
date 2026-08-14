@@ -19,8 +19,10 @@ Hey man — workshop update. Since the 13th came and went, I moved everything to
 4. **Calendar** — day-by-day from now to the 27th: emails Tue–Thu mornings, your reels on the 20th and 25th, Mac's LinkedIn posts on the 18th/21st/26th.
 
 Need three things from you to go live:
-1. **Meeting link** (Zoom or Meet — whichever you want to host on)
+1. **Confirm the Meet link** I already created on the workshop calendar (https://meet.google.com/ive-hkws-xdg) — or send a Zoom and I'll swap it
 2. **Which mailbox sends** — I'd use sean@needmomentum.com
 3. **Seat cap or no cap?**
+
+Calendar: registering on the page now opens Google Calendar with the event ready, and once I flip on the invite webhook each registrant also gets a real Google Calendar invitation (Gmail puts it on the calendar). Not blasting the franchise list onto the event — registrants only.
 
 Send me those and the first invites go out Tuesday morning. LFG

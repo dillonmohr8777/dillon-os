@@ -9,7 +9,7 @@ event_date: 2026-08-27
 
 One-line summary: fill the Aug 27 workshop with zero ad spend — three email audiences inside Mac's three-touch cap, plus seven free organic channels, with deliverability gates before anything scales.
 
-All copy lives in [[Drip Copy]]. Contact sourcing lives in [[Franchise Email Sourcing Playbook]]. Nothing sends without Sean/Mac approval; no agent sends anything, ever.
+All copy lives in [[Drip Copy]]. Contact sourcing lives in [[Franchise Email Sourcing Playbook]]. Registrant calendar auto-add lives in [[Calendar Auto-Add]]. Nothing sends without Sean/Mac approval; no agent sends anything, ever.
 
 ## Goals and honest math
 

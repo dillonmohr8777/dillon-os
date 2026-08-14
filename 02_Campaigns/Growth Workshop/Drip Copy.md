@@ -150,8 +150,10 @@ Hi {{first_name}},
 
 You're registered for the Momentum 360 Growth Workshop — **Thursday, August 27, 12:00–1:00 PM ET**.
 
-Join link: [MEETING LINK]
-Add to calendar: [GCAL LINK] · [OUTLOOK LINK] · [ICS]
+Join link: https://meet.google.com/ive-hkws-xdg
+Add to calendar: https://calendar.google.com/calendar/render?action=TEMPLATE&text=Build+a+Business+That+Grows+Without+You&dates=20260827T160000Z%2F20260827T170000Z&details=Live+Momentum+360+workshop+hosted+by+Sean+and+Mac.+Bring+one+active+offer+and+one+growth+constraint.+Join+the+live+workshop%3A+https%3A%2F%2Fmeet.google.com%2Five-hkws-xdg&location=https%3A%2F%2Fmeet.google.com%2Five-hkws-xdg&ctz=America%2FNew_York
+Outlook: https://outlook.live.com/calendar/0/deeplink/compose?rru=addevent&subject=Build+a+Business+That+Grows+Without+You&startdt=2026-08-27T16%3A00%3A00.000Z&enddt=2026-08-27T17%3A00%3A00.000Z&body=Live+Momentum+360+workshop+hosted+by+Sean+and+Mac.+Bring+one+active+offer+and+one+growth+constraint.+Join+the+live+workshop%3A+https%3A%2F%2Fmeet.google.com%2Five-hkws-xdg&location=https%3A%2F%2Fmeet.google.com%2Five-hkws-xdg
+ICS: https://momentum-workshop-pilot.netlify.app/momentum-workshops.ics
 
 One ask before Thursday: hit reply and tell us the single biggest bottleneck at your business right now. Mac and I build the session around what registrants send.
 
@@ -166,7 +168,7 @@ Hi {{first_name}},
 
 Quick reminder: the Growth Workshop is **tomorrow at 12 PM ET**. 60 minutes, live, working format.
 
-Join link: [MEETING LINK]
+Join link: https://meet.google.com/ive-hkws-xdg
 
 Have your numbers handy (rough is fine): where leads come from now, and what a new customer is worth. That's all the prep the session needs.
 
@@ -176,7 +178,7 @@ Sean + Mac
 
 **Subject:** `We're live at noon — join link inside`
 
-{{first_name}} — we go live in an hour. Join here at 12 PM ET: [MEETING LINK]
+{{first_name}} — we go live in an hour. Join here at 12 PM ET: https://meet.google.com/ive-hkws-xdg
 
 Bring the bottleneck. We'll bring the plan.
 
@@ -291,7 +293,7 @@ Free 60-min working session Thu Aug 27, 12 PM ET: bring your business's biggest 
 
 # F. Fill-before-send checklist
 
-- [ ] [MEETING LINK] everywhere (owed by Sean/Mac)
+- [ ] Meeting link: live Meet https://meet.google.com/ive-hkws-xdg — Sean/Mac confirm or replace with Zoom
 - [ ] [MOMENTUM 360 MAILING ADDRESS] in the footer template
 - [ ] [BOOKING LINK] (Sean's or Mac's calendar link)
 - [ ] [REPLAY LINK] + [TEMPLATE LINK] after the event

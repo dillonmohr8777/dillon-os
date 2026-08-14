@@ -1,14 +1,15 @@
 const KEYS = {
-  event: "momentum-workshop-event-v4",
+  event: "momentum-workshop-event-v5",
   registrations: "momentum-workshop-registrations-v2",
 };
+const ICS_UID = "growth-workshop-20260827@momentum-workshop-pilot.netlify.app";
 const defaults = {
   title: "Build a Business That Grows Without You",
   date: "2026-08-27",
   time: "12:00",
   duration: "60",
   timezone: "America/New_York",
-  meeting_url: "",
+  meeting_url: "https://meet.google.com/ive-hkws-xdg",
   public_url:
     "https://momentum-workshop-pilot.netlify.app/?utm_source=calendar&utm_medium=event&utm_campaign=growth-workshop",
   host: "Sean and Mac",
@@ -87,11 +88,15 @@ registrationForm.addEventListener("submit", async (event) => {
       : "",
   );
   const hostedSubmission = isHostedSubmission();
-  const calendarWindow = record.calendarConsent
-    ? window.open("about:blank", "_blank")
-    : null;
+  const calendarWindow =
+    record.calendarConsent && record.calendarProvider !== "apple"
+      ? window.open("about:blank", "_blank")
+      : null;
   if (calendarWindow) {
     calendarWindow.opener = null;
+  }
+  if (record.calendarConsent && record.calendarProvider === "apple") {
+    downloadIcs();
   }
   setSubmitState("loading", "Saving your registration", "…");
   try {
@@ -267,8 +272,8 @@ function updateConfirmation(
     }[calendarProvider] || "your calendar";
   document.querySelector("#confirmation-copy").textContent =
     calendarRequested
-      ? `${firstName}, the organizer invitation is queued and ${provider} has opened with the event ready. Accept the invitation when it arrives to keep RSVP updates connected.`
-      : `${firstName}, your seat is ready. Choose Google, Outlook, or Apple Calendar below to add the workshop.`;
+      ? `${firstName}, ${provider} opened with the workshop ready to save. A calendar invitation is also sent to the email you registered with — accept it so the event stays on your calendar with the Meet link and reminders.`
+      : `${firstName}, your seat is ready. A calendar invitation is on its way to your email. Use Google, Outlook, or the ICS file below if you want it on the calendar now.`;
   updateEventDetails();
 }
 
@@ -673,26 +678,60 @@ function calendarTargetUrl(provider) {
 }
 
 function downloadIcs() {
-  const { start, end } = eventTimes();
+  const { start } = eventTimes();
+  const localStart = `${eventConfig.date.replace(/-/g, "")}T${eventConfig.time.replace(":", "")}00`;
+  const [hour, minute] = eventConfig.time.split(":").map(Number);
+  const total = hour * 60 + minute + Number(eventConfig.duration);
+  const endClock = `${String(Math.floor(total / 60) % 24).padStart(2, "0")}${String(total % 60).padStart(2, "0")}`;
+  const localEnd = `${eventConfig.date.replace(/-/g, "")}T${endClock}00`;
   const body = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Momentum Workshop Pilot//EN",
+    "PRODID:-//Momentum 360//Growth Workshop//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
     `X-WR-CALNAME:${icsEscape(eventConfig.title)}`,
     `X-WR-TIMEZONE:${icsEscape(eventConfig.timezone)}`,
+    "BEGIN:VTIMEZONE",
+    "TZID:America/New_York",
+    "BEGIN:DAYLIGHT",
+    "TZOFFSETFROM:-0500",
+    "TZOFFSETTO:-0400",
+    "TZNAME:EDT",
+    "DTSTART:19700308T020000",
+    "RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU",
+    "END:DAYLIGHT",
+    "BEGIN:STANDARD",
+    "TZOFFSETFROM:-0400",
+    "TZOFFSETTO:-0500",
+    "TZNAME:EST",
+    "DTSTART:19701101T020000",
+    "RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU",
+    "END:STANDARD",
+    "END:VTIMEZONE",
     "BEGIN:VEVENT",
-    `UID:${crypto.randomUUID()}@momentum-workshop.local`,
-    `DTSTAMP:${calendarStamp(new Date())}`,
-    `DTSTART:${calendarStamp(start)}`,
-    `DTEND:${calendarStamp(end)}`,
+    `UID:${ICS_UID}`,
+    `DTSTAMP:${calendarStamp(start)}`,
+    `DTSTART;TZID=${eventConfig.timezone}:${localStart}`,
+    `DTEND;TZID=${eventConfig.timezone}:${localEnd}`,
     `SUMMARY:${icsEscape(eventConfig.title)}`,
     `DESCRIPTION:${icsEscape(calendarDescription())}`,
     `LOCATION:${icsEscape(calendarLocation())}`,
     `URL:${icsEscape(eventConfig.public_url)}`,
+    "ORGANIZER;CN=Momentum 360:MAILTO:sean@needmomentum.com",
     "STATUS:CONFIRMED",
     "TRANSP:OPAQUE",
+    "SEQUENCE:0",
+    "BEGIN:VALARM",
+    "ACTION:DISPLAY",
+    "DESCRIPTION:Workshop starts in 24 hours",
+    "TRIGGER:-PT24H",
+    "END:VALARM",
+    "BEGIN:VALARM",
+    "ACTION:DISPLAY",
+    "DESCRIPTION:Workshop starts in 1 hour",
+    "TRIGGER:-PT1H",
+    "END:VALARM",
     "END:VEVENT",
     "END:VCALENDAR",
   ].join("\r\n");

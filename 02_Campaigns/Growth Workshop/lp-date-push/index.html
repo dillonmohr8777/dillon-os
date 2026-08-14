@@ -239,7 +239,7 @@
                       <option>Building repeatable operations</option>
                     </select></label
                   >
-                  <div class="form-step consent-step"><span>02</span><div><b>Calendar access</b><small>Choose whether to open your calendar after registration.</small></div></div>
+                  <div class="form-step consent-step"><span>02</span><div><b>Calendar access</b><small>Registration sends a calendar invitation. Optionally open your calendar now.</small></div></div>
                   <label class="consent"
                     ><input name="reminders" type="checkbox" /><span
                       ><strong>Workshop updates</strong>Email me the
@@ -251,10 +251,11 @@
                     ><input
                        name="calendar_open"
                        type="checkbox"
+                       checked
                      /><span
-                       ><strong>Open my calendar after registration</strong>Optional.
-                       We will open the calendar provider you choose so you can
-                       review and save the workshop yourself.</span
+                       ><strong>Open my calendar after registration</strong>Recommended.
+                       We open Google, Outlook, or an ICS download with the
+                       workshop already filled in so you can save it in one click.</span
                     ></label
                   >
                   <label
@@ -276,9 +277,11 @@
                     ><span class="submit-glyph" aria-hidden="true">→</span>
                   </button>
                   <p class="form-privacy">
-                    We use your details to administer this workshop. Calendar
-                    access stays in your control, and other email updates are
-                    optional. Use an email address you control. Review Momentum
+                    We use your details to administer this workshop. Registering
+                    sends a calendar invitation to the email you enter so the
+                    event can land on Google Calendar automatically. You can
+                    decline it. Extra email updates stay optional. Use an email
+                    address you control. Review Momentum
                     Digital's
                     <a
                       href="https://www.needmomentum.com/privacy-policy/"
@@ -558,7 +561,7 @@
                 <span>LIVE WORKSHOP</span><b>60 MINUTES</b>
               </div>
               <div class="event-date-block">
-                <span id="orbit-month">AUG</span><strong id="orbit-day">13</strong>
+                <span id="orbit-month">AUG</span><strong id="orbit-day">27</strong>
               </div>
               <div class="event-card-details">
                 <span>WITH MAC + SEAN</span>
@@ -566,17 +569,18 @@
               </div>
             </div>
             <div class="calendar-copy reveal">
-              <span class="story-kicker">CALENDAR, WITH CONSENT</span>
-              <h2 id="calendar-title">Reserve your seat. Save the time yourself.</h2>
+              <span class="story-kicker">ON YOUR CALENDAR</span>
+              <h2 id="calendar-title">Reserve your seat. The hour lands on your calendar.</h2>
               <p>
-                After registration, choose Google, Outlook, or ICS to review and
-                save the workshop in your own calendar. Nothing is added without
-                your action.
+                Registration sends a calendar invitation to your email. Gmail
+                users usually see it on Google Calendar immediately. Everyone
+                else gets Google, Outlook, or ICS with the event already filled
+                in — including the live Meet link.
               </p>
               <div class="calendar-steps">
                 <span><b>1</b> Register</span>
-                <span><b>2</b> Review</span>
-                <span><b>3</b> Save</span>
+                <span><b>2</b> Invitation sent</span>
+                <span><b>3</b> Event saved</span>
               </div>
               <a class="button button-primary" href="#register">Reserve and add</a>
             </div>
@@ -607,11 +611,12 @@
                 </p>
               </details>
               <details>
-                <summary>Will anything be added to my calendar automatically?</summary>
+                <summary>Will this show up on my Google Calendar?</summary>
                 <p>
-                  No. After registration, Google, Outlook, and ICS options let
-                  you review and save the workshop yourself. Nothing is added
-                  without your action.
+                  Yes. Registering sends a calendar invitation to the email you
+                  enter. Gmail adds it (often as tentative until you accept).
+                  We also open Google Calendar with the event ready to save, and
+                  offer Outlook plus an ICS file for Apple and other apps.
                 </p>
               </details>
               <details>
@@ -667,8 +672,8 @@
             </p>
             <h2 id="confirmation-title">Your seat is on the board.</h2>
             <p id="confirmation-copy">
-              Use the calendar options below to review and save the workshop.
-              Nothing is added without your action.
+              A calendar invitation is on its way to your email. Use the buttons
+              below if you want the workshop on your calendar right now.
             </p>
             <dl class="event-ticket">
               <div>
@@ -713,8 +718,8 @@
               >
             </div>
             <p class="calendar-assurance">
-              Calendar times are locked to Eastern Time and converted correctly
-              for each provider. You review the event before saving it.
+              Thursday, August 27, 12:00–1:00 PM Eastern. Join link is on the
+              calendar event. Accept the invitation so reminders stay in sync.
             </p>
             <button class="text-action" data-route="register" type="button">
               Back to workshop
@@ -810,11 +815,11 @@
                 >
               </div>
               <label
-                >Meeting URL <small>(optional until approved)</small><input
+                >Meeting URL <small>(live Meet link on the canonical event)</small><input
                   name="meeting_url"
                   type="url"
                   placeholder="https://meet.google.com/..."
-                  value="" /></label
+                  value="https://meet.google.com/ive-hkws-xdg" /></label
               ><label
                 >Host name<input
                   name="host"

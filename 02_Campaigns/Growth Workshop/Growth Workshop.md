@@ -19,6 +19,7 @@ Companion notes:
 - [[Franchise Email Sourcing Playbook]] — how the free franchise contact engine works
 - [[Scale Harvest Report]] — 5,359-contact scale run counts (no addresses)
 - `lp-date-push/` — patched LP files + [[lp-date-push/DEPLOY-CHECKLIST|deploy checklist]] for the Aug 27 date
+- [[Calendar Auto-Add]] — Google Calendar invitation for registrants + ICS / template URLs (never the cold list)
 - Project page: [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]]
 
 ## The event
@@ -28,7 +29,7 @@ Companion notes:
 | What | Momentum 360 Growth Workshop — "Build a Business That Grows Without You" |
 | When | **Thursday, August 27, 2026, 12:00 PM ET** (60 min) — pushed from Aug 13 |
 | Hosts | Mac Frederick + Sean Boyle |
-| Where | Live online; meeting link still owed by Sean/Mac |
+| Where | Live online — working Meet link https://meet.google.com/ive-hkws-xdg (Sean/Mac may still swap in Zoom) |
 | Registration (pretty URL) | https://www.momentumvirtualtours.com/growth-workshop/ |
 | Registration (tracking URL for email CTAs) | https://momentum-workshop-pilot.netlify.app/ + UTMs + `#register` |
 | Captures | name, email, company, real growth bottleneck; calendar add; UTM source |
@@ -59,7 +60,8 @@ Answered with the phased plan in the same DM (Aug 8, 03:21 ET): lock one canonic
 
 | Decision | Owner | Status |
 |---|---|---|
-| Meeting link (Zoom/Meet) | Sean/Mac | open |
+| Meeting link (Zoom vs this Meet) | Sean/Mac | **Meet is live** on the canonical calendar event; confirm or replace |
+| Calendar auto-invite webhook | Dillon | Apps Script (or Netlify function) not connected yet — LP click-to-save works now |
 | Sender mailbox for cold email (recommend `sean@needmomentum.com`) | Sean | open |
 | Seat cap | Sean/Mac | open (default: none) |
 | Wave-2 franchise expansion | Dillon+Sean | gated on wave-1 deliverability |

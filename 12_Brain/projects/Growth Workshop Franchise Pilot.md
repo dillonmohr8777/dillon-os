@@ -24,11 +24,12 @@ Campaign home: [[02_Campaigns/Growth Workshop/Growth Workshop|Growth Workshop]] 
 
 | Piece | Status |
 |---|---|
-| LP date push (Aug 27) | patched files staged, operator deploy pending |
+| LP date push (Aug 27) | patched files staged, operator deploy pending (now includes public ICS + calendar-open default) |
+| Calendar auto-add | **canonical event + Meet live** (`3onjuqp9rcgc5p346bc67h59vs`, https://meet.google.com/ive-hkws-xdg). LP opens Google/Outlook/ICS on register. Registrant invite webhook still to connect (Apps Script). Never invite the cold list. Runbook: [[02_Campaigns/Growth Workshop/Calendar Auto-Add|Calendar Auto-Add]] |
 | Franchise list | **built / scaled** — **5,359** unique MX-ok contacts (UPS 4,914 · CertaPro 354 · Comfort Keepers 54 · PACKOUTS 38), 429 PA/NJ/DE, wave 1 = 50, send-batch A = first 1,000, private Drive folder + artifact |
-| Drip + lifecycle copy | drafted, awaiting Sean/Mac word-for-word approval |
+| Drip + lifecycle copy | drafted, awaiting Sean/Mac word-for-word approval; C1–C3 now carry Meet + calendar URLs |
 | Two-week calendar | drafted (Aug 14 → 28) |
-| Meeting link / sender mailbox / seat cap | **owed by Sean/Mac** |
+| Meeting link / sender mailbox / seat cap | Meet is live as a working join URL; Sean/Mac still confirm or replace. Sender + seat cap owed. |
 
 ## Rules this project runs on
 
