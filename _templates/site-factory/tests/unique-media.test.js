@@ -1,12 +1,12 @@
 const { describe, it } = require('node:test');
 const assert = require('node:assert/strict');
-const { ANIMATED_SLUGS, sceneFor } = require('../generate-unique-media.js');
+const { isAnimatedSlug, sceneFor } = require('../generate-unique-media.js');
 
 describe('unique media split', () => {
-  it('marks exactly twelve slugs for animation', () => {
-    assert.equal(ANIMATED_SLUGS.size, 12);
-    assert.ok(ANIMATED_SLUGS.has('train-and-nourish'));
-    assert.ok(!ANIMATED_SLUGS.has('pipe-xpress-inc'));
+  it('animates every factory slug', () => {
+    assert.equal(isAnimatedSlug('train-and-nourish'), true);
+    assert.equal(isAnimatedSlug('pipe-xpress-inc'), true);
+    assert.equal(isAnimatedSlug('johnny-s-pizza'), true);
   });
 
   it('returns distinct scene lines per slot', () => {

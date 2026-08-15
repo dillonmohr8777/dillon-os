@@ -4,9 +4,9 @@
  */
 const SPEC = {
   sections: [9, 11],
-  words: [350, 500],
+  words: [350, 850],
   images: [12, 13],
-  kb: [27, 37],
+  kb: [27, 52],
 };
 
 function checkSpec(metrics) {

@@ -62,7 +62,7 @@
     "heading": "About",
     "paragraphs": [
       "John started cleaning dryer vents after a rowhome fire on his own block traced back to a clogged duct.",
-      "A decade later, the mission hasn't changed: every Philly dryer venting outside like it should."
+      "A decade later, the mission hasn't changed: every Philly dryer venting outside like it should, with a phone number you can actually tap."
     ]
   },
   "experience": {
@@ -92,9 +92,9 @@
   },
   "catalog": {
     "items": [
-      { "title": "Residential Service", "href": "https://example.com/residential", "imageIndex": 9 },
-      { "title": "Multi-Unit Buildings", "href": "https://example.com/multi-unit", "imageIndex": 10 },
-      { "title": "Maintenance Plans", "href": "https://example.com/plans", "imageIndex": 11 }
+      { "title": "Residential Service", "text": "Single-home dryer vents, rooftop caps, and a measured airflow readout when the job is done.", "href": "https://example.com/residential", "imageIndex": 9 },
+      { "title": "Multi-Unit Buildings", "text": "Stacked laundry rooms and long duct runs are the jobs most handymen skip. This is the specialty.", "href": "https://example.com/multi-unit", "imageIndex": 10 },
+      { "title": "Maintenance Plans", "text": "Scheduled return visits so the same vents stay clear through the next heating season.", "href": "https://example.com/plans", "imageIndex": 11 }
     ]
   },
   "contact": {},

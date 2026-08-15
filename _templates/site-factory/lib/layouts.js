@@ -527,13 +527,23 @@ ${L} .site-footer{background:#000}
     'harvest-diner': `
 ${L} .hero{grid-template-columns:1fr;min-height:auto;padding-top:10vh;text-align:center}
 ${L} .hero-copy{max-width:920px;margin:0 auto}
-${L} .hero h1{max-width:16ch;margin-inline:auto}
+${L} .hero h1{max-width:22ch;margin-inline:auto}
 ${L} .hero-copy>p{margin-inline:auto}
-${L} .hero-media{min-height:68svh;max-width:1120px;margin:28px auto 0}
-${L} .hero-media figure{border-radius:calc(var(--radius) + 10px)}
+${L} .hero-media{min-height:68svh;max-width:1120px;margin:28px auto 0;perspective:1400px}
+${L} .hero-media figure{
+  border-radius:calc(var(--radius) + 14px);
+  transform:rotate(-1.4deg);
+  box-shadow:22px 28px 0 color-mix(in srgb,var(--accent2) 62%,transparent);
+}
+${L} .media-figure{
+  border-radius:calc(var(--radius) + 12px);
+  box-shadow:18px 22px 0 color-mix(in srgb,var(--accent2) 70%,transparent);
+}
+${L} .story,.feature,.spotlight,.gallery,.catalog,.contact-system{perspective:1200px}
 ${L} .layout-pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;padding:16px clamp(16px,5vw,80px)}
 ${L} .layout-pills span{border:var(--border) solid currentColor;border-radius:999px;padding:8px 16px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
 ${L} .offering-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+${L} .offering-card,.experience-grid article,.proof article,.catalog-card{min-height:300px}
 ${L} .glass-float{display:none}
 `,
     'harvest-clinic': `

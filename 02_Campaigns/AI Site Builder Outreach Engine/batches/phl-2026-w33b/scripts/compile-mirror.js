@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Mirror-and-improve compile: harvest owns brand, copy, photos, palette.
- * No wow-library composition_ref. Layout comes from inferMirrorLayout.
+ * No wow-library composition_ref. Every site uses harvest-diner + animated 3D.
  */
 const fs = require('fs');
 const path = require('path');
@@ -27,6 +27,11 @@ const targets = JSON.parse(fs.readFileSync(path.join(BATCH, 'targets.json'), 'ut
     if (!fs.existsSync(harvestFile)) {
       report.push({ slug: target.slug, status: 'no-harvest' });
       console.log('SKIP no harvest', target.slug);
+      continue;
+    }
+    if (fs.existsSync(path.join(sitesRoot, target.slug, 'HANDMADE.md'))) {
+      report.push({ slug: target.slug, status: 'handmade-skip' });
+      console.log('SKIP handmade gold standard', target.slug);
       continue;
     }
     const harvest = JSON.parse(fs.readFileSync(harvestFile, 'utf8'));

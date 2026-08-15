@@ -64,7 +64,7 @@ describe('brief-from-harvest', () => {
     assert.equal(brief.hero.marquee, undefined);
     assert.equal(brief.hero.ctaPrimary.label, 'Book a visit');
     assert.deepEqual(brief.gallery.imageIndexes, [3, 4, 5, 6, 7]);
-    assert.equal(brief.images.length, 12);
+    assert.equal(brief.images.length, 13);
     assert.equal(brief.spotlight.imageIndex, 12);
     assert.equal(brief.catalog.items.length, 3);
     assert.equal(brief.composition_ref, 'https://stripe.com');
@@ -96,11 +96,17 @@ describe('brief-from-harvest', () => {
     const brief = buildBrief(dinerHarvest, dinerTarget);
     assert.equal(brief.composition_ref, null);
     assert.equal(brief.layout, 'harvest-diner');
+    assert.equal(brief.heroMode, 'photo');
+    assert.equal(brief.fonts.display, 'Playfair Display');
     assert.match(brief.hero.headline, /Fresh Ingredients|New Pennsburg Diner/);
+    assert.ok(brief.offerings.items.every((item) => typeof item === 'object' && item.text.split(/\s+/).length >= 12));
     assert.equal(brief.hero.ctaPrimary.label, 'Order Online');
     assert.ok(brief.nav.some((n) => n.label === 'Menus'));
     assert.ok(brief.story.heading === 'Our Story');
-    assert.match(brief.proof.items.join(' '), /1981/);
+    const proofText = brief.proof.items
+      .map((item) => (typeof item === 'string' ? item : [item.title, item.text].filter(Boolean).join(' ')))
+      .join(' ');
+    assert.match(proofText, /1981/);
   });
 
   it('picks the painted brand gold over a tiny saturated link blue', () => {
@@ -130,7 +136,7 @@ describe('brief-from-harvest', () => {
       images: measured.images,
     });
     assert.deepEqual(fails, [], fails.join('; '));
-    assert.ok(measured.words >= 350 && measured.words <= 500);
+    assert.ok(measured.words >= 350 && measured.words <= 850);
     assert.ok(measured.images >= 12 && measured.images <= 13);
   });
 });

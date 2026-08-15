@@ -2,10 +2,10 @@
 /**
  * Fill every factory image slot with a unique still or short loop.
  *
- * Half the week-33b slugs get photoreal stills. The other half get CSS Ken
- * Burns motion on unique stills. Harvest photos stay when they are real
- * first-party files.
- * Atmosphere gradients and empty slots are replaced. Never claimed as the
+ * Every week-33b slug is animated: CSS Ken Burns on the photo plus a 3D
+ * card tilt on the figure. Harvest photos stay when they are real
+ * first-party files. Map, zone, and leftover files are replaced.
+ * Slot 13 is a 3D town still for the city they name. Never claimed as the
  * business's official photography.
  *
  *   node generate-unique-media.js <site-dir> <brief.json> [harvest-dir]
@@ -15,22 +15,15 @@ const path = require('path');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 const { chromium } = require('playwright');
-const { applyHarvestImages } = require('./apply-harvest-images.js');
+const { applyHarvestImages, isMapLikeSource } = require('./apply-harvest-images.js');
 
-const ANIMATED_SLUGS = new Set([
-  'train-and-nourish',
-  'o-donnell-weiss-and-mattei-p-c',
-  'tm-prestige-home-cash-buyer',
-  'balance-studios',
-  'weathers-motors-and-auto-sales',
-  'custom-it-solutions',
-  'captain-car-wash',
-  'johnny-s-pizza',
-  'home-furnishings-consignment',
-  'chestnut-hill-animal-hospital',
-  'golden-sea',
-  'pro-nails',
-]);
+function isAnimatedSlug(_slug) {
+  return true;
+}
+const ANIMATED_SLUGS = {
+  has: () => true,
+  size: Infinity,
+};
 
 const SCENES = {
   hardware: [
@@ -301,6 +294,8 @@ function hexToRgb(hex) {
 }
 
 function sceneFor(brief, n) {
+  const town = brief.town || brief.city || 'Pennsylvania';
+  if (n === 13) return `isometric 3D townscape of ${town}, no signage`;
   const vertical = String(brief.vertical || brief.category || 'restaurant').toLowerCase();
   const list = SCENES[vertical] || SCENES.restaurant;
   return list[(n - 1) % list.length];
@@ -322,6 +317,8 @@ function isTinyOrMissing(file) {
 
 function looksLikeAtmosphere(file, n, prov) {
   if ((prov.generatedAtmosphere || []).includes(n)) return true;
+  const src = (prov.sources || []).find((s) => String(s.to || '').includes(`image-${n}`));
+  if (src && isMapLikeSource(src.from, `${src.from} ${src.to}`)) return true;
   if (!fs.existsSync(file)) return true;
   const buf = fs.readFileSync(file);
   const animatedFile =
@@ -332,7 +329,7 @@ function looksLikeAtmosphere(file, n, prov) {
   const size = buf.length;
   const harvested = harvestSlotSet(prov);
   if (harvested.has(n) && size >= 800) return false;
-  return size < 45000;
+  return true;
 }
 
 function sceneHtml(brief, n, scene) {
@@ -415,6 +412,56 @@ ${
 <div class="vignette"></div>`;
 }
 
+function cityHtml(brief, n) {
+  const t = brief.tokens || {};
+  const a = hexToRgb(t.accent || '#4B4F58');
+  const b = hexToRgb(t.accent2 || '#C2410C');
+  const d = hexToRgb(t.deep || '#12161C');
+  const p = hexToRgb(t.paper || '#E5E1DA');
+  const salt = parseInt(hash(`${brief.slug}:${n}:city3d`).slice(0, 8), 16);
+  const yaw = 32 + (salt % 18);
+  const pitch = 58 + ((salt >> 4) % 10);
+  const skyA = `rgb(${Math.min(255, p.r + 20)},${Math.min(255, p.g + 12)},${Math.min(255, p.b + 8)})`;
+  const skyB = `rgb(${Math.max(20, d.r)},${Math.max(30, d.g + 10)},${Math.min(255, d.b + 40)})`;
+  const brick = `rgb(${Math.min(255, a.r + 20)},${Math.max(30, a.g - 10)},${Math.max(20, a.b - 15)})`;
+  const roof = `rgb(${Math.max(20, d.r + 10)},${Math.max(20, d.g)},${Math.max(20, d.b)})`;
+  const grass = `rgb(${40 + (salt % 30)},${90 + (salt % 40)},${40 + ((salt >> 3) % 20)})`;
+  const buildings = Array.from({ length: 9 }, (_, i) => {
+    const hgt = 70 + ((salt >> i) % 90);
+    const w = 46 + ((salt >> (i + 2)) % 28);
+    const left = 8 + (i % 3) * 30 + ((salt >> i) % 6);
+    const top = 18 + Math.floor(i / 3) * 26 + ((salt >> (i + 1)) % 5);
+    return `<div class="bldg" style="left:${left}%;top:${top}%;width:${w}px;height:${hgt}px;background:${
+      i % 2 ? brick : `rgb(${b.r},${b.g},${b.b})`
+    }"><i></i><b style="background:${roof}"></b></div>`;
+  }).join('');
+  return `<!doctype html><meta charset="utf-8">
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:${skyB}}
+body{background:linear-gradient(180deg,${skyA} 0%,${skyB} 62%,#1a1c18 100%)}
+.horizon{position:absolute;inset:auto 0 0 0;height:46%;background:linear-gradient(180deg,${grass},#24301f)}
+.road{position:absolute;left:8%;right:8%;bottom:18%;height:70px;background:#2a2a2a;transform:perspective(600px) rotateX(62deg);box-shadow:0 0 0 14px #3a3a3a}
+.world{position:absolute;inset:8% 10% 22%;perspective:1400px}
+.iso{width:100%;height:100%;transform:rotateX(${pitch}deg) rotateZ(-${yaw}deg);transform-style:preserve-3d}
+.bldg{position:absolute;transform-style:preserve-3d;box-shadow:18px 22px 0 rgba(0,0,0,.18)}
+.bldg i{position:absolute;inset:12% 18%;background:linear-gradient(#fff6,transparent);opacity:.35}
+.bldg b{position:absolute;left:-6%;right:-6%;top:-14px;height:16px;transform:translateZ(8px)}
+.tree{position:absolute;width:18px;height:18px;border-radius:50%;background:#2f6a38;box-shadow:0 10px 0 #1d3f22}
+.grain{position:fixed;inset:0;opacity:.14;pointer-events:none;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.vignette{position:fixed;inset:0;box-shadow:inset 0 0 160px 36px rgba(0,0,0,.4);pointer-events:none}
+</style>
+<div class="horizon"></div>
+<div class="road"></div>
+<div class="world"><div class="iso">${buildings}
+<div class="tree" style="left:12%;top:62%"></div>
+<div class="tree" style="left:78%;top:54%"></div>
+<div class="tree" style="left:44%;top:70%"></div>
+</div></div>
+<div class="grain"></div>
+<div class="vignette"></div>`;
+}
+
 function animateStill(stillPath, destPath, slug, n) {
   const h = hash(`${slug}:${n}:kenburns`);
   const zoomEnd = (1.08 + (parseInt(h.slice(0, 2), 16) / 255) * 0.1).toFixed(3);
@@ -491,7 +538,7 @@ async function generateUniqueMedia(siteDir, brief, harvestDir) {
   fs.mkdirSync(assets, { recursive: true });
   const needed = (brief.images || []).length || 12;
   const slug = brief.slug || path.basename(siteDir);
-  const animated = ANIMATED_SLUGS.has(slug);
+  const animated = isAnimatedSlug(slug);
   if (harvestDir && slug) {
     applyHarvestImages(slug, siteDir, { harvestDir, targetCount: needed });
   }
@@ -535,7 +582,11 @@ async function generateUniqueMedia(siteDir, brief, harvestDir) {
       );
     } else {
       const scene = sceneFor(brief, job.n);
-      await page.setContent(sceneHtml(brief, job.n, scene));
+      const html =
+        job.n === 13 || (brief.contact && brief.contact.imageIndex === job.n)
+          ? cityHtml(brief, job.n)
+          : sceneHtml(brief, job.n, scene);
+      await page.setContent(html);
       const buf = await page.screenshot({ type: 'jpeg', quality: 88 });
       fs.writeFileSync(still, buf);
       generated.push(job.n);
@@ -573,7 +624,7 @@ async function generateUniqueMedia(siteDir, brief, harvestDir) {
   prev.photorealSlots = photorealSlots;
   prev.mediaMode = animated ? 'animated' : 'photoreal';
   prev.generatedNote =
-    'Generated atmosphere and lookalike stills. Not the business official photography. Half the batch is animated, half is photoreal.';
+    'Generated atmosphere, lookalike stills, and a 3D town slot. Not the business official photography. Every site is CSS-animated.';
   prev.harvestDir = harvestDir || prev.harvestDir || null;
   fs.writeFileSync(provPath, JSON.stringify(prev, null, 2));
   return {
@@ -585,7 +636,7 @@ async function generateUniqueMedia(siteDir, brief, harvestDir) {
   };
 }
 
-module.exports = { generateUniqueMedia, ANIMATED_SLUGS, sceneFor };
+module.exports = { generateUniqueMedia, ANIMATED_SLUGS, isAnimatedSlug, sceneFor, looksLikeAtmosphere };
 
 if (require.main === module) {
   const siteDir = process.argv[2];

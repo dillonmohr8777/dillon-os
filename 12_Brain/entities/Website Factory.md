@@ -22,9 +22,14 @@ deploy credentials.
   is a new unused radar slice (priority desc). Follows
   `.claude/skills/mirror-and-improve/SKILL.md`: harvest each prospect's live
   site, keep their voice, photos, palette, and logo, then rebuild. No
-  wow-library chrome.   Missing image slots get unique generated fills: half
-  the slugs use CSS Ken Burns motion, half stay photoreal stills. Headings
-  do not use highlight marks. Demos stay noindex. mail_ready stays hold.
+  wow-library chrome. All 25 use the Johnny's diner layout: Playfair,
+  centered hero, popping 3D image frames, Ken Burns plus card tilt, H1–H6
+  copy, and a generated 3D town still instead of a map. Harvest maps and
+  delivery-zone graphics are skipped. Headings do not use highlight marks.
+  Johnny's (`johnny-s-pizza`) is the handmade gold-standard homepage for
+  the diner pop, H1–H6 copy, and 3D town treatment. A `HANDMADE.md` file
+  keeps `compile-mirror.js` from overwriting it. Clone that system to the
+  other 24 after sign-off. Demos stay noindex. mail_ready stays hold.
 - Secrets and host tokens never land in this note.
 
 ## Links

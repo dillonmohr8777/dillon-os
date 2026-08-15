@@ -63,7 +63,7 @@ Every new batch site must resemble the majority of the 25. These are the actual 
 | Dimension | Range across the 25 | Target for new builds |
 |---|---|---|
 | Sections total | 8 to 11 | **10** (hero + 8 middle + closing) |
-| Words of real copy | 293 to 543 | **350 to 500** |
+| Words of real copy | 293 to 543 | **350 to 850** (week 33b diner pages aim for the high end) |
 | Images | 7 to 13 (mode 13) | **12 to 13** |
 | Final page weight | 22 to 36 KB | **27 to 37 KB** |
 

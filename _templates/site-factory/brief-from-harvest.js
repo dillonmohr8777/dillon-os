@@ -95,8 +95,14 @@ function looksLikePhone(s) {
 function looksLikeCta(s) {
   const t = clean(s);
   if (!t || t.length > 28) return false;
-  if (/icon|facebook|instagram|twitter|linkedin|logo|close|search|cart|youtube/i.test(t)) return false;
-  return /book|call|contact|schedule|visit|get in touch|plan|quote|start|shop|order|reserve|appoint/i.test(t);
+  if (
+    /icon|facebook|instagram|twitter|linkedin|logo|close|search|cart|youtube|menu|shrimp|scallop|stromboli|coupon|50%|browse|newsletter/i.test(
+      t
+    )
+  ) {
+    return false;
+  }
+  return /book|call|contact|schedule|visit|get in touch|plan a visit|quote|order|reserve|appoint/i.test(t);
 }
 
 function walkJsonLd(nodes) {
@@ -269,19 +275,51 @@ function pickAttitude(target, harvest) {
   return 'warm';
 }
 
-function inferMirrorLayout(target, harvest) {
-  const v = `${target.vertical || ''} ${target.vertical_group || ''}`.toLowerCase();
-  if (/restaurant|bar|diner|pizza|chicken|food|sushi|taco|pub/.test(v)) return { layout: 'harvest-diner', heroMode: 'photo' };
-  if (/dentist|vet|clinic|doctor|lawyer|legal|physical|therapy/.test(v)) return { layout: 'harvest-clinic', heroMode: 'split' };
-  if (/electric|metal|hvac|auto|car|tire|industrial|manufact|hardware|pipe/.test(v)) {
-    return { layout: 'harvest-dark', heroMode: 'bleed' };
+function inferMirrorLayout(_target, _harvest) {
+  return { layout: 'harvest-diner', heroMode: 'photo' };
+}
+
+function rawHarvestTexts(harvest) {
+  const voice = harvest.voice || {};
+  return [
+    harvest.title,
+    harvest.metaDescription,
+    voice.title,
+    voice.metaDescription,
+    voice.ogDescription,
+    ...(voice.headings || harvest.headings || []),
+    ...(voice.paragraphs || harvest.paragraphs || []),
+  ].filter(Boolean);
+}
+
+function inferTown(harvest, target, address) {
+  const addrTown = String(address || '').match(
+    /\b([A-Z][A-Za-z.'-]{2,}(?:\s+[A-Z][A-Za-z.'-]{2,}){0,2})\s+(?:PA|Pennsylvania)\b/
+  );
+  if (addrTown && !/county|street|avenue|road|drive|lane|pike/i.test(addrTown[1])) return clean(addrTown[1]);
+  const blob = rawHarvestTexts(harvest).join(' ');
+  const named = blob.match(/\b(?:of|in|at)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)\s+PA\b/);
+  if (named && !/county/i.test(named[1])) return named[1];
+  const city = target.city || '';
+  if (city && !/county/i.test(city)) return city;
+  return city || 'Pennsylvania';
+}
+
+function flattenCopy(value) {
+  if (!value) return [];
+  if (typeof value === 'string') return [value];
+  if (Array.isArray(value)) return value.flatMap((item) => flattenCopy(item));
+  if (typeof value === 'object') {
+    return [value.title, value.text, value.body, value.heading, value.sub, value.label].filter(Boolean);
   }
-  if (/gym|fitness|train|nail|beauty|spa|tattoo/.test(v)) return { layout: 'harvest-photo', heroMode: 'photo' };
-  if (/shop|retail|shoes|jewelry|florist|furniture|consignment/.test(v)) return { layout: 'harvest-shop', heroMode: 'grid' };
-  const palette = ((harvest && harvest.brand && harvest.brand.palette) || []).map((p) => (typeof p === 'string' ? p : p.hex));
-  const avg = palette.slice(0, 4).reduce((s, h) => s + lum(h), 0) / Math.max(palette.slice(0, 4).length, 1);
-  if (avg < 70) return { layout: 'harvest-dark', heroMode: 'bleed' };
-  return { layout: 'harvest-split', heroMode: 'split' };
+  return [];
+}
+
+function ensureCardText(text, fallback) {
+  const t = noLead(text || '');
+  if (wordsOf(t) >= 12) return clipWords(t, 28);
+  const extra = noLead(fallback || '');
+  return clipWords([t, extra].filter(Boolean).join(' '), 28);
 }
 
 function isJunkHead(h) {
@@ -319,22 +357,22 @@ function foundingLine(texts, name, city, category) {
   return `${name} is a ${city} ${category}.`;
 }
 
-function sentencesFrom(harvest, n, fallback) {
+function sentencesFrom(harvest, n, fallback, clip = 32) {
   const voice = harvest.voice || {};
   const paras = [...(voice.paragraphs || harvest.paragraphs || [])]
     .map(noLead)
-    .filter((p) => !isJunkPara(p));
+    .filter((p) => !isJunkPara(p) && !/mobile website is live/i.test(p));
   const heads = [...(voice.headings || harvest.headings || [])]
     .map(noLead)
     .filter((h) => !isJunkHead(h) && h.length > 8 && h.length < 90);
   const out = [];
   for (const p of paras) {
     if (out.length >= n) break;
-    out.push(clipWords(p, 22));
+    out.push(clipWords(p, clip));
   }
   for (const h of heads) {
     if (out.length >= n) break;
-    if (!out.some((x) => x.includes(h))) out.push(clipWords(h, 12));
+    if (!out.some((x) => x.includes(h))) out.push(clipWords(h, Math.min(18, clip)));
   }
   while (out.length < n) out.push(fallback[out.length % fallback.length]);
   return out.slice(0, n);
@@ -345,15 +383,17 @@ function countWords(brief) {
     brief.description,
     brief.hero && brief.hero.sub,
     brief.hero && brief.hero.headline,
-    ...(brief.offerings?.items || []),
-    ...(brief.proof?.items || []),
-    ...(brief.story?.paragraphs || []),
-    ...(brief.experience?.items || []),
+    ...flattenCopy(brief.offerings?.items || brief.offerings),
+    ...flattenCopy(brief.proof?.items || brief.proof),
+    brief.story?.heading,
+    ...flattenCopy(brief.story?.paragraphs || []),
+    ...flattenCopy(brief.experience?.items || brief.experience),
     brief.feature?.heading,
     brief.feature?.text,
     brief.spotlight?.heading,
     brief.spotlight?.text,
-    ...(brief.catalog?.items || []).map((i) => i.title),
+    ...flattenCopy(brief.catalog?.items || []),
+    brief.contact?.heading,
     brief.contact?.sub,
     brief.closing?.heading,
   ];
@@ -365,6 +405,10 @@ function buildBrief(harvest, target, compositionRef) {
   const tokens = pickTokens(harvest, attitude);
   const fonts = pickFonts(harvest, attitude);
   const mirror = inferMirrorLayout(target, harvest);
+  if (!compositionRef) {
+    fonts.display = 'Playfair Display';
+    fonts.displayFallback = 'Georgia,serif';
+  }
   const name = target.name || harvest.title || target.slug;
   const city = target.city || 'Philadelphia';
   const category = (target.vertical || target.vertical_group || 'Local service').replace(/-/g, ' ');
@@ -389,32 +433,74 @@ function buildBrief(harvest, target, compositionRef) {
   const address =
     clean((harvest.facts && harvest.facts.address) || '') ||
     extracted.addrs.find((a) => /\d/.test(a) && a.length > 10) ||
+    extractAddressFromText(rawHarvestTexts(harvest), city) ||
     extractAddressFromText(textPool, city) ||
     '';
+  const town = inferTown(harvest, target, address);
 
   const fallbackOffer = [
-    `${category} work around ${city}`,
-    `A direct way to reach ${name}`,
-    `Public details kept in one place`,
+    `${name} handles ${category} for people who already look for that work in ${town}.`,
+    `A visitor can reach ${name} from this page without hunting through a buried menu.`,
+    `Public details stay in one place so the next visit is straightforward.`,
   ];
-  const storyBits = sentencesFrom(harvest, 2, [
-    `${name} serves ${city} with ${category}. Neighbors already know the name.`,
-    `The rebuild keeps their wording, their work, and a direct way to get in touch.`,
-  ]).map((s) => clipWords(s, 24));
-  const offerHeads = heads.filter((h) => h.length < 48 && !new RegExp(name.split(' ')[0], 'i').test(h));
-  const offerings = (offerHeads.length >= 3 ? offerHeads.slice(0, 3) : sentencesFrom(harvest, 3, fallbackOffer)).map(
-    (s) => clipWords(s.replace(/\.$/, ''), 12)
+  const storyBits = sentencesFrom(
+    harvest,
+    3,
+    [
+      `${name} serves ${town} with ${category}. Neighbors already know the name from the work, not from a slogan.`,
+      `The rebuild keeps their wording, their work, and a direct way to get in touch when someone is ready.`,
+      `Come in with a question. Leave with a next step you can actually follow.`,
+    ],
+    36
   );
-  const experience = (paras.slice(2, 5).length >= 3 ? paras.slice(2, 5) : sentencesFrom(harvest, 3, [
-    `Open the page on a phone. The primary action stays on screen.`,
-    `Call or write without hunting a number buried in an image.`,
-    `See the work, then take one next step.`,
-  ])).map((s) => clipWords(s, 18));
+  const offerHeads = heads.filter((h) => {
+    if (h.length < 6 || h.length > 48) return false;
+    if (/direction|newsletter|sharing|copyright|delivers to|looking to take|call \d/i.test(h)) return false;
+    return true;
+  });
+  const offerBodies = sentencesFrom(harvest, 3, fallbackOffer, 28);
+  const offerings = [0, 1, 2].map((i) => ({
+    title: clipWords((offerHeads[i] || offerBodies[i] || fallbackOffer[i]).replace(/\.$/, ''), 10),
+    text: ensureCardText(offerBodies[i], fallbackOffer[i]),
+  }));
+  const experienceBits = paras.slice(2, 6).filter((p) => wordsOf(p) >= 10);
+  const experienceFallback = [
+    `Open the page on a phone. The primary action stays on screen so nobody has to pinch and hunt.`,
+    `Call or write without digging a number out of a flattened image or a footer graphic.`,
+    `See the work they already talk about, then take one next step when you are ready.`,
+  ];
+  const experienceSource = experienceBits.length >= 3 ? experienceBits : sentencesFrom(harvest, 3, experienceFallback, 24);
+  const experienceTitles = ['The visit', 'The work', 'The next step'];
+  const experience = [0, 1, 2].map((i) => ({
+    title: clipWords(offerHeads[i + 3] || experienceTitles[i], 8),
+    text: ensureCardText(experienceSource[i], experienceFallback[i]),
+  }));
   const proof = [
-    foundingLine(textPool, name, city, category),
-    hours ? `Hours listed as ${hours}.` : `Reach them through the official site.`,
-    phone ? `Phone published on their own pages.` : `Contact runs through their official site.`,
-    address ? `Visit ${address}.` : `Serving ${city} and nearby towns.`,
+    {
+      title: town,
+      text: ensureCardText(
+        foundingLine([...textPool, ...rawHarvestTexts(harvest)], name, town, category),
+        `${name} is a ${town} ${category} whose public pages already carry the wording on this rebuild.`
+      ),
+    },
+    {
+      title: hours ? 'Hours' : 'Reach them',
+      text: hours
+        ? `Hours listed as ${hours} on their public pages. Confirm before you drive.`
+        : `Use the official website when you want current hours or a next step that still matches their desk.`,
+    },
+    {
+      title: phone ? 'Call' : 'Contact',
+      text: phone
+        ? `Call ${phone} the way their own pages publish it. That number is the one they already give the public.`
+        : `Contact runs through their official site so the published number stays the one they control.`,
+    },
+    {
+      title: address ? 'Visit' : `${town} work`,
+      text: address
+        ? `Find them at ${address}. The street line comes from their own pages, not a guessed pin.`
+        : `${name} works with people in ${town} and the towns around it. The official site stays the source for a street line.`,
+    },
   ];
   const heroLine =
     heads.find((h) => h.length >= 12 && h.length <= 64 && h.toLowerCase() !== name.toLowerCase()) || name;
@@ -423,19 +509,34 @@ function buildBrief(harvest, target, compositionRef) {
       voice.metaDescription ||
         harvest.metaDescription ||
         paras[0] ||
-        `${name} handles ${category} in ${city}. The new page makes that obvious on the first screen.`
+        `${name} handles ${category} in ${town}. The new page makes that obvious on the first screen.`
     ),
-    28
+    40
   );
 
-  const ctaLabel = [...(voice.ctaLabels || [])].find(looksLikeCta) || navs.find(looksLikeCta) || 'Get in touch';
+  const ctaLabel =
+    [...(voice.ctaLabels || [])].find(looksLikeCta) ||
+    navs.find(looksLikeCta) ||
+    (phone ? 'Call now' : 'Get in touch');
   const ctaHref = phone ? `tel:${phone.replace(/\D/g, '')}` : url || '#visit';
   const official = url || '#visit';
-  const storyHead = heads.find((h) => /story|about|birth|welcome|history/i.test(h)) || 'About';
-  const featureHead = heads.find((h) => h !== heroLine && h !== storyHead && h.length > 10) || offerings[0] || name;
-  const featureText = paras.find((p) => !storyBits.some((s) => p.startsWith(s.slice(0, 18)))) || paras[0] || heroSub;
-  const spotlightHead = heads.find((h) => h !== heroLine && h !== storyHead && h !== featureHead) || `${city} ${category}`;
+  const storyHead = heads.find((h) => /story|about|birth|welcome|history/i.test(h)) || `About ${name}`;
+  const featureHead =
+    heads.find((h) => h !== heroLine && h !== storyHead && h.length > 10) || offerings[0].title || name;
+  const featureText = clipWords(
+    paras.find((p) => !storyBits.some((s) => p.startsWith(s.slice(0, 18)))) || paras[0] || heroSub,
+    40
+  );
+  const spotlightHead =
+    heads.find((h) => h !== heroLine && h !== storyHead && h !== featureHead) || `${town} ${category}`;
   const catalogTitles = (navs.length >= 3 ? navs : ['Official site', 'Offerings', 'Visit']).slice(0, 3);
+  const catalogCopy = [
+    `Open ${name}'s own website for the latest hours, offerings, and announcements they still control.`,
+    `Read the ${category} work they already name on their pages, then pick the one that matches your visit.`,
+    address
+      ? `Set a course for ${address} when you are ready to walk in.`
+      : `Plan the visit around ${town}. Confirm the street line on their official site before you drive.`,
+  ];
   const nav = (navs.length ? navs : ['Explore', 'Gallery', 'Visit']).slice(0, 3).map((label) => {
     if (/menu|service|offer|food|breakfast|dinner/i.test(label)) return { label, href: '#offerings' };
     if (/photo|gallery|work|look/i.test(label)) return { label, href: '#gallery' };
@@ -445,9 +546,12 @@ function buildBrief(harvest, target, compositionRef) {
   });
   const marquee = [...navs, ...heads.filter((h) => h.length < 28)].filter(Boolean).slice(0, 6);
 
-  const images = Array.from({ length: 12 }, (_, i) => ({
+  const images = Array.from({ length: 13 }, (_, i) => ({
     file: `image-${i + 1}.webp`,
-    alt: `${name} ${category} in ${city}, reference ${i + 1}`,
+    alt:
+      i === 12
+        ? `3D view of ${town}, Pennsylvania`
+        : `${name} ${category} in ${town}, reference ${i + 1}`,
   }));
 
   const schemaType = /dental|dentist/.test(category)
@@ -464,6 +568,7 @@ function buildBrief(harvest, target, compositionRef) {
     slug: target.slug,
     name,
     city,
+    town,
     category,
     vertical: target.vertical_group || target.vertical,
     attitude,
@@ -482,12 +587,12 @@ function buildBrief(harvest, target, compositionRef) {
     fonts,
     nav,
     hero: {
-      eyebrow: navs[0] ? `${city} | ${navs[0]}` : `${city} | ${category}`,
+      eyebrow: navs[0] ? `${town} | ${navs[0]}` : `${town} | ${category}`,
       headline: heroLine,
       sub: heroSub,
       ctaPrimary: { label: ctaLabel, href: ctaHref },
       ctaSecondary: { label: navs.find((n) => /gallery|menu|photo|work/i.test(n)) || 'See the work', href: '#gallery' },
-      glassFloat: { title: city, sub: category },
+      glassFloat: { title: town, sub: category },
     },
     offerings: { heading: navs.find((n) => /menu|service/i.test(n)) || undefined, items: offerings },
     proof: { items: proof },
@@ -496,26 +601,36 @@ function buildBrief(harvest, target, compositionRef) {
     experience: { items: experience },
     feature: {
       heading: featureHead,
-      text: clipWords(featureText, 28),
+      text: featureText,
       cta: { label: navs.find((n) => /order|book|quote|call/i.test(n)) || 'Visit the official site', href: official },
       imageIndex: 8,
     },
     spotlight: {
       heading: spotlightHead,
-      text: clipWords(paras[1] || `${name} is a ${city} ${category}. Come in when you're ready.`, 22),
+      text: clipWords(
+        paras[1] || `${name} is a ${town} ${category}. Come in when you're ready to see the work in person.`,
+        36
+      ),
       imageIndex: 12,
       cta: { label: navs.find((n) => /contact|visit/i.test(n)) || 'Plan a visit', href: '#visit' },
     },
     catalog: {
       items: catalogTitles.map((title, i) => ({
         title,
+        text: catalogCopy[i],
         href: i === 0 ? official : i === 1 ? '#offerings' : '#visit',
         imageIndex: 9 + i,
       })),
     },
     contact: {
-      heading: heads.find((h) => /contact|visit|drop us|get in/i.test(h)) || 'Make the next visit easy.',
-      sub: paras.find((p) => /visit|call|order|book|address/i.test(p)) || 'Details below come from their public pages.',
+      heading: heads.find((h) => /contact|visit|drop us|get in/i.test(h)) || `Come see us in ${town}.`,
+      sub:
+        paras.find((p) => /visit|call|order|book|address/i.test(p)) ||
+        `Details below come from their public pages. The town view is a 3D reading of ${town}, not a delivery-zone map.`,
+      imageIndex: 13,
+      imageCaption: `${town}, Pennsylvania`,
+      kicker: 'Visit and contact',
+      aside: `Public details for ${town}`,
     },
     closing: { cta: { label: ctaLabel, href: ctaHref }, heading: name },
     links: [
@@ -542,37 +657,39 @@ function buildBrief(harvest, target, compositionRef) {
 }
 
 /**
- * Mutate a brief until a measure() callback reports HTML words in 350–500.
+ * Mutate a brief until a measure() callback reports HTML words in 450–850.
  * measure() should build the site and return { words }.
  */
 function fitBriefToMeasuredSpec(brief, measure) {
+  const place = brief.town || brief.city;
   const extras = [
-    `${brief.name} serves people who live and work in ${brief.city}.`,
+    `${brief.name} serves people who live and work in ${place}.`,
     `You'll find the phone and the next step on this page, not buried in a menu.`,
     `Come in when you're ready. We'll make the visit straightforward.`,
     `Neighbors already know the name. The site should make the first visit easy.`,
     `Bring questions. Leave with a plan you can follow.`,
-    `${brief.city} ${brief.category} care, written so a person can act on it.`,
+    `${place} ${brief.category} care, written so a person can act on it.`,
   ];
   let extraIdx = 0;
   let guard = 0;
   let metrics = measure();
-  while (metrics.words > 500 && guard < 16) {
+  while (metrics.words > 850 && guard < 20) {
     guard += 1;
-    if (brief.story.paragraphs.length > 1) brief.story.paragraphs.pop();
-    else if (brief.experience.items.length > 2) brief.experience.items.pop();
-    else if ((brief.feature.text || '').split(/\s+/).length > 14) {
-      brief.feature.text = clipWords(brief.feature.text, 14);
-    } else if ((brief.spotlight.text || '').split(/\s+/).length > 12) {
-      brief.spotlight.text = clipWords(brief.spotlight.text, 12);
+    if (brief.story.paragraphs.length > 2) brief.story.paragraphs.pop();
+    else if ((brief.feature.text || '').split(/\s+/).length > 22) {
+      brief.feature.text = clipWords(brief.feature.text, 22);
+    } else if ((brief.spotlight.text || '').split(/\s+/).length > 20) {
+      brief.spotlight.text = clipWords(brief.spotlight.text, 20);
+    } else if ((brief.story.paragraphs[0] || '').split(/\s+/).length > 24) {
+      brief.story.paragraphs[0] = clipWords(brief.story.paragraphs[0], 24);
     } else {
       break;
     }
     metrics = measure();
   }
-  while (metrics.words < 360 && guard < 24) {
+  while (metrics.words < 450 && guard < 28) {
     guard += 1;
-    const next = extras[extraIdx] || `Local ${brief.category} in ${brief.city}, kept easy to reach.`;
+    const next = extras[extraIdx] || `Local ${brief.category} in ${place}, kept easy to reach from a phone.`;
     extraIdx += 1;
     brief.story.paragraphs.push(next);
     metrics = measure();
@@ -593,6 +710,7 @@ module.exports = {
   looksLikeHours,
   inferMirrorLayout,
   pickAttitude,
+  inferTown,
 };
 
 if (require.main === module) {
