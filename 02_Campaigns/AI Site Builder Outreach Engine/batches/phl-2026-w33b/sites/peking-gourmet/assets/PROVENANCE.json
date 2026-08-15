@@ -1,6 +1,6 @@
 {
   "slug": "peking-gourmet",
-  "appliedAt": "2026-08-14T23:08:07.673Z",
+  "appliedAt": "2026-08-15T00:33:16.642Z",
   "harvestDir": "/workspace/_templates/site-factory/harvest/peking-gourmet",
   "copied": 4,
   "sources": [
@@ -26,5 +26,30 @@
     }
   ],
   "hint": "GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.",
-  "siteUrl": "http://pekinggourmetpottstown.com/"
+  "siteUrl": "http://pekinggourmetpottstown.com/",
+  "generatedAtmosphere": [],
+  "generatedUnique": [],
+  "aiStills": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "animatedSlots": [],
+  "photorealSlots": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "mediaMode": "photoreal",
+  "generatedNote": "Generated atmosphere and lookalike stills. Not the business official photography. Half the batch is animated, half is photoreal."
 }

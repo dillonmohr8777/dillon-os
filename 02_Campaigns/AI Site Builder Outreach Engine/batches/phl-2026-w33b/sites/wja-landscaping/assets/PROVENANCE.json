@@ -1,6 +1,6 @@
 {
   "slug": "wja-landscaping",
-  "appliedAt": "2026-08-14T23:08:00.667Z",
+  "appliedAt": "2026-08-15T00:33:46.947Z",
   "harvestDir": "/workspace/_templates/site-factory/harvest/wja-landscaping",
   "copied": 9,
   "sources": [
@@ -51,5 +51,20 @@
     }
   ],
   "hint": null,
-  "siteUrl": "https://www.wjalandscaping.com/"
+  "siteUrl": "https://www.wjalandscaping.com/",
+  "generatedAtmosphere": [],
+  "generatedUnique": [],
+  "aiStills": [
+    10,
+    11,
+    12
+  ],
+  "animatedSlots": [],
+  "photorealSlots": [
+    10,
+    11,
+    12
+  ],
+  "mediaMode": "photoreal",
+  "generatedNote": "Generated atmosphere and lookalike stills. Not the business official photography. Half the batch is animated, half is photoreal."
 }

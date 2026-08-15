@@ -1,6 +1,6 @@
 {
   "slug": "new-pennsburg-diner",
-  "appliedAt": "2026-08-14T23:08:05.162Z",
+  "appliedAt": "2026-08-15T00:33:06.492Z",
   "harvestDir": "/workspace/_templates/site-factory/harvest/new-pennsburg-diner",
   "copied": 6,
   "sources": [
@@ -36,5 +36,30 @@
     }
   ],
   "hint": null,
-  "siteUrl": "https://pennsburgdiner.com/"
+  "siteUrl": "https://pennsburgdiner.com/",
+  "generatedAtmosphere": [],
+  "generatedUnique": [],
+  "aiStills": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "animatedSlots": [],
+  "photorealSlots": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "mediaMode": "photoreal",
+  "generatedNote": "Generated atmosphere and lookalike stills. Not the business official photography. Half the batch is animated, half is photoreal."
 }

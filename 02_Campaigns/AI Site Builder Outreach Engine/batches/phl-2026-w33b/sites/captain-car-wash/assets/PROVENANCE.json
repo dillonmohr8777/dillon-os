@@ -1,6 +1,6 @@
 {
   "slug": "captain-car-wash",
-  "appliedAt": "2026-08-14T23:08:06.969Z",
+  "appliedAt": "2026-08-15T00:32:31.515Z",
   "harvestDir": "/workspace/_templates/site-factory/harvest/captain-car-wash",
   "copied": 6,
   "sources": [
@@ -36,5 +36,32 @@
     }
   ],
   "hint": null,
-  "siteUrl": "https://captaincarwashpa.com/"
+  "siteUrl": "https://captaincarwashpa.com/",
+  "generatedAtmosphere": [],
+  "generatedUnique": [],
+  "aiStills": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "animatedSlots": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "photorealSlots": [],
+  "mediaMode": "animated",
+  "generatedNote": "Generated atmosphere and lookalike stills. Not the business official photography. Half the batch is animated, half is photoreal."
 }
