@@ -13,6 +13,7 @@ Survivors compile into `12_Brain/concepts/` with `expires:` dates via
 ## Active research pages
 
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; Lanes A/C/D probed 2026-08-15 (expires 2026-11-15).
+- [[12_Brain/concepts/Ads Optimization Skill Stack|Ads Optimization Skill Stack]] — four vault-native ads skills; owned claude-ads fork is reference-only (expires 2026-11-13).
 
 See also Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
 

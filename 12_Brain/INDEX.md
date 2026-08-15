@@ -29,6 +29,7 @@ in the same change.
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/entities/Claude Ads|Claude Ads]] — owned fork of the MIT ads-audit plugin; reference only, not vendored into the HUD.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -47,6 +48,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/concepts/Ads Optimization Skill Stack|Ads Optimization Skill Stack]] — four vault-native ads skills on the Command Deck; claude-ads fork stays reference-only (expires 2026-11-13).
 
 ## Raw captures (Git-safe)
 
@@ -57,6 +59,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/raw/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
+- [[12_Brain/raw/research/2026-08-15 - research - ads-optimization-skills|2026-08-15 ads-optimization-skills]] — owned claude-ads fork + paid-ads skill vs rejected ads MCPs; no X bearer in Composio.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -67,6 +70,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
+- [[12_Brain/concepts/Ads Optimization Skill Stack|Ads Optimization Skill Stack]] — Command Deck ads skills; do not install Adspirer/AdKit without mcp-gate (expires 2026-11-13).
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).

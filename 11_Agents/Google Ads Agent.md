@@ -28,6 +28,16 @@ The live client map is verified each run, never trusted from an old list (orches
 - Spend anomaly (daily spend far off plan): flag immediately, don't self-correct
 - Expired platform session: mark `needs-reauth`, never attempt login or 2FA
 
+## Command Deck skills
+
+- `/ads-audit` — weekly health check → `Daily-Briefs/` + draft Optimization Ledger
+- `/ads-search-terms` — query waste → themed negative draft
+- `/ads-tracking` — conversion preflight; stop Smart Bidding if tracking is dead
+- `/meta-ads` — Lead Ads / Advantage+ / CAPI quality pass
+
+Do not vendor `dillonmohr8777/claude-ads` into this vault. See
+[[12_Brain/concepts/Ads Optimization Skill Stack]].
+
 ## Notes
 
 - Execution against live ad platforms requires the authenticated Chrome on the 64GB machine (CDP) or platform MCPs; cloud sessions do analysis, drafting, and ledger work
