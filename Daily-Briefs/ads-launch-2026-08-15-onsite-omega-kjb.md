@@ -45,6 +45,14 @@ Composio Google Ads is connected but quota-exhausted (HTTP 429, retry on the ord
 - **Omega:** Supplier / wholesale negatives. Brand protected. Two unmatched conversion events stay unmatched until named inquiries exist.
 - **Kimberly:** Meta stays primary. July 14 "cancel Google" is on file; the 2026-08-15 order overrides that for a small appointment-intent Search campaign to the existing request URL.
 
+## Codex handoff
+
+Paste-ready launch prompt (skills created + found + the three packets):
+
+`Daily-Briefs/codex-three-campaign-launch-prompt-2026-08-15.md`
+
+Run it on a machine that already has a trusted Google session. This Cloud Agent desktop cannot sign in.
+
 ## Next action
 
 Sign into Google Ads from a device this account already trusts (or approve this Cloud Agent browser), then apply the three packets in-account. Do not send client email.
