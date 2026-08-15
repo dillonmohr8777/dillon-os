@@ -60,6 +60,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/raw/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
 - [[12_Brain/raw/research/2026-08-15 - research - ads-optimization-skills|2026-08-15 ads-optimization-skills]] — owned claude-ads fork + paid-ads skill vs rejected ads MCPs; no X bearer in Composio.
+- [[12_Brain/raw/research/2026-08-15 - research - x-api-search-credits|2026-08-15 x-api-search-credits]] — operator Bearer authenticates; recent search is 402 credit-blocked; Activity API is not keyword search.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols

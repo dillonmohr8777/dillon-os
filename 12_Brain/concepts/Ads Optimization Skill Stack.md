@@ -36,8 +36,15 @@ All four refuse invented metrics, client email, and Tier 2 live edits
 
 - Adspirer and AdKit hosted ads MCPs — OAuth + paid + overlap with Composio
   Google Ads. Must pass `_os/automation/bin/mcp-gate.js` first.
-- Any new Twitter/X bearer. Composio `twitter` has no active connection.
-  Do not paste tokens into this public repo.
+- `itallstartedwithaidea/agent-skills` (googleadsagent.ai / Buddy Agent) —
+  MIT reference dump, 12 Google Ads skills plus a commercial agent. Do not
+  vendor into `.claude/skills/`.
+- X keyword search this session. Operator Bearer authenticates, but
+  `GET /2/tweets/search/recent` returns 402 credits-depleted. The tweet-usage
+  meter (`/2/usage/tweets`) showed 0 used — a different wallet. Activity API
+  is a per-user event stream, not a search substitute. Keys stay gitignored
+  under `12_Brain/private/access/`. See
+  [[12_Brain/raw/research/2026-08-15 - research - x-api-search-credits]].
 
 ## Feeds
 
