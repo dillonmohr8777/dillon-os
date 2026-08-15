@@ -1,0 +1,52 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Momentum 360//Growth Workshop//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Build a Business That Grows Without You
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:growth-workshop-20260827@momentum-workshop-pilot.netlify.app
+DTSTAMP:20260814T185735Z
+DTSTART;TZID=America/New_York:20260827T120000
+DTEND;TZID=America/New_York:20260827T130000
+SUMMARY:Build a Business That Grows Without You
+DESCRIPTION:Live Momentum 360 workshop hosted by Sean and Mac. Bring one ac
+ tive offer and one growth constraint. Join the live workshop: https://meet
+ .google.com/ive-hkws-xdg
+LOCATION:https://meet.google.com/ive-hkws-xdg
+URL:https://momentum-workshop-pilot.netlify.app/?utm_source=calendar&utm_me
+ dium=event&utm_campaign=growth-workshop
+ORGANIZER;CN=Momentum 360:MAILTO:sean@needmomentum.com
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+SEQUENCE:0
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Workshop starts in 24 hours
+TRIGGER:-PT24H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Workshop starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

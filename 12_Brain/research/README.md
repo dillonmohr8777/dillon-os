@@ -1,6 +1,6 @@
 ---
 tags: [research, index]
-updated: 2026-07-29
+updated: 2026-08-15
 ---
 
 # Research
@@ -12,7 +12,9 @@ Survivors compile into `12_Brain/concepts/` with `expires:` dates via
 
 ## Active research pages
 
-See Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
+- [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; Lanes A/C/D probed 2026-08-15 (expires 2026-11-15).
+
+See also Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
 
 ## Links
 

@@ -75,6 +75,18 @@ async function ensureSite(name, opts = {}) {
   return { id: made.body.id, name: made.body.name, url: made.body.ssl_url || made.body.url, created: true };
 }
 
+/** Find a site by exact name. Throws if missing. Never creates. */
+async function findSite(name, opts = {}) {
+  const tok = token(opts.token);
+  const list = await api(`/sites?per_page=100&filter=all&name=${encodeURIComponent(name)}`, { tok });
+  if (!list.ok) throw new Error(`listing sites failed: ${list.status} ${list.raw || list.error || ''}`);
+  const found = (list.body || []).find((s) => s.name === name);
+  if (!found) {
+    throw new Error(`No existing Netlify site named "${name}". Refusing to create one.`);
+  }
+  return { id: found.id, name: found.name, url: found.ssl_url || found.url };
+}
+
 /**
  * Deploy a set of in-memory files.
  *
@@ -164,4 +176,4 @@ async function waitForDeploy(deployId, opts = {}) {
   return { ok: false, state: last?.state || 'timeout', error: 'timed out waiting for deploy' };
 }
 
-module.exports = { ensureSite, deployFiles, waitForDeploy, sha1, api };
+module.exports = { ensureSite, findSite, deployFiles, waitForDeploy, sha1, api };
