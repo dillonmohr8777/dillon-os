@@ -7,7 +7,7 @@ event_date: 2026-08-27
 
 # Outreach Plan — two-week run to Aug 27
 
-One-line summary: fill the Aug 27 workshop with zero ad spend — three email audiences inside Mac's three-touch cap, plus seven free organic channels, with deliverability gates before anything scales.
+One-line summary: fill the Aug 27 workshop with zero ad spend — three email audiences inside Mac's three-touch cap, plus nine free organic channels, with deliverability gates before anything scales.
 
 All copy lives in [[Drip Copy]]. Contact sourcing lives in [[Franchise Email Sourcing Playbook]]. Registrant calendar auto-add lives in [[Calendar Auto-Add]]. The Google/outreach split lives in [[Google RSVP Rail]]. Nothing sends without Sean/Mac approval; no agent sends anything, ever.
 
@@ -20,7 +20,7 @@ Cold B2B email converts when it hits an owner. A UPS Store `store####@` box is t
 | Philly 200-list (3 touches) | ~200 | 4–10 |
 | Franchise send-ready (3 touches) | 50 wave 1, then 670 if gate green | 8–20 |
 | UPS Store front-desk inboxes | 4,914 | **0 from email.** LinkedIn/GBP DMs on PA/NJ/DE owners only, 1–4 |
-| Skool + LinkedIn + DMs + GBP + IG/X + signatures | — | 5–15 |
+| Skool + LinkedIn + DMs + GBP + IG/X + signatures + Facebook/Alignable | — | 5–15 |
 | **Total realistic range** | | **18–49 registered / ~40–60% show rate** |
 
 Show rate is the Google problem, not the fill problem. Registrants get the Gmail EventReservation C1 + LP one-click calendar save. A 15–25 person live room is still a strong pilot. The real asset is the repeatable engine + a domain that is not burned.
@@ -39,6 +39,8 @@ Show rate is the Google problem, not the fill problem. Registrants get the Gmail
 | 8 | IG reels (Sean on camera) | Sean | Aug 20 · Aug 25 |
 | 9 | X post | Dillon | Aug 24 |
 | 10 | Email signatures (whole team) | everyone | from Aug 17 |
+| 11 | Facebook franchise/owner groups | Sean, rules-first | Aug 18, optional bump Aug 26 in the same thread |
+| 12 | Alignable local circles | Sean | Aug 18 |
 
 ## Day-by-day calendar
 
@@ -55,7 +57,7 @@ Show rate is the Google problem, not the fill problem. Registrants get the Gmail
 - Franchise **send-ready** sheet delivered to Sean (wave 1 = 50 named people marked; 670 more franchisee mailboxes in Wave 2; UPS counters are not in this file).
 - Sean/Mac approve Touch-1 copy word-for-word. Signatures go live.
 
-**Tue Aug 18** — 200-list Touch 1 (40–60 sends, spread through the morning; rest Wed). Skool post. GBP post. LinkedIn post 1.
+**Tue Aug 18** — 200-list Touch 1 (40–60 sends, spread through the morning; rest Wed). Skool post. GBP post. LinkedIn post 1. Sean: one Facebook group post + one Alignable post after reading each group's rules (copy in [[Drip Copy]] E9/E10).
 
 **Wed Aug 19** — 200-list Touch 1 remainder. **Franchise owner-density Touch 1** (25–40 sends, rest Thu AM). LinkedIn DMs batch 1 (start with PA/NJ/DE UPS *owners*, not store inboxes).
 
@@ -69,7 +71,7 @@ Show rate is the Google problem, not the fill problem. Registrants get the Gmail
 
 **Tue Aug 25** — 200-list Touch 3 (final call). Owner-density Touch 2. IG reel 2. Skool bump.
 
-**Wed Aug 26** — Franchise wave 1 Touch 3 (final call). Registrant day-before reminder (C2). LinkedIn post 3 ("tomorrow").
+**Wed Aug 26** — Franchise wave 1 Touch 3 (final call). Registrant day-before reminder (C2). LinkedIn post 3 ("tomorrow"). Optional Facebook bump in the Aug 18 thread only.
 
 **Thu Aug 27 — event day**
 - 11:00 AM: one-hour reminder (C3).

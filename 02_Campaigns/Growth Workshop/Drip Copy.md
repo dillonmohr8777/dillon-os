@@ -293,6 +293,34 @@ Free 60-min working session Thu Aug 27, 12 PM ET: bring your business's biggest 
 
 `P.S. Free Growth Workshop Thu Aug 27, 12 PM ET — bring your bottleneck, leave with a 30-day plan → momentumvirtualtours.com/growth-workshop`
 
+## E9 · Facebook / franchise-owner groups (Sean only, rules-respecting)
+
+**Do this first, every group:** read the pinned rules. If the group bans events or promo, skip it. One post per group, no blasting, no tagging strangers, no paid boost.
+
+**Who posts:** Sean from his personal profile, and only in groups he already belongs to (or gets approved into before Aug 18). Dillon does not post as the brand into groups he is not in.
+
+**Post (paste after the rules check):**
+
+Free live working session for owners — Thu Aug 27, 12 PM ET.
+
+Mac and I (Momentum 360, Philly) are running a 60-minute session: bring the one bottleneck slowing your location down (leads, reviews, Google), leave with a 30-day plan. Built for franchise and multi-location owners. No pitch.
+
+Register: https://www.momentumvirtualtours.com/growth-workshop/
+
+If this breaks a group rule, tell me and I'll take it down.
+
+**Cadence:** one post Mon Aug 18 in the friendliest group Sean is already in. Optional bump Wed Aug 26 ("tomorrow") in that same thread only — no second group blast.
+
+## E10 · Alignable (Sean, local-business network)
+
+Same rules as E9. Post from Sean's Alignable profile to his local neighborhood / industry circles, not as a cold directory scrape.
+
+**Post:**
+
+Philly-area owners: free 60-min working session Thu Aug 27 at noon ET. Bring one growth bottleneck, leave with a 30-day plan. Hosted by the two founders of Momentum 360. https://www.momentumvirtualtours.com/growth-workshop/
+
+**Cadence:** Mon Aug 18. No follow-up post unless someone asks in comments.
+
 ---
 
 # F. Fill-before-send checklist

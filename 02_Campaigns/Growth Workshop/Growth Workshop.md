@@ -18,6 +18,7 @@ Companion notes:
 - [[Google RSVP Rail]] — quality-first send pool + Gmail EventReservation for registrants (not the cold list)
 - [[Drip Copy]] — every email, reminder, DM script, and organic post, paste-ready
 - [[Franchise Email Sourcing Playbook]] — how the free franchise contact engine works
+- [[Tracker Spec]] — sheet columns, status values, UTM pattern (rows stay in Drive)
 - [[Scale Harvest Report]] — 720 send-ready franchisee emails (UPS counters dropped)
 - `lp-date-push/` — patched LP files + [[lp-date-push/DEPLOY-CHECKLIST|deploy checklist]] for the Aug 27 date
 - [[Calendar Auto-Add]] — Google Calendar invitation for registrants + ICS / template URLs (never the cold list)

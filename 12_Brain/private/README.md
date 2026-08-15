@@ -31,7 +31,7 @@ must never be committed. Use this folder for:
 ```
 12_Brain/private/
   README.md          ← this file (tracked)
-  contacts/          ← gitignored
+  contacts/          ← gitignored (Growth Workshop send-ready CSVs live here locally)
   access/            ← gitignored
   sessions/          ← gitignored
   raw/               ← gitignored sensitive captures

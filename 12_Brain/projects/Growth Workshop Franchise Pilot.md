@@ -1,7 +1,7 @@
 ---
 tags: [project, webinar, franchise, momentum360]
 status: active
-updated: 2026-08-14
+updated: 2026-08-15
 event_date: 2026-08-27
 source: "https://momentum3d.slack.com/archives/D0A6ECLQ0S1/p1786129058687979"
 ---
@@ -26,9 +26,12 @@ Campaign home: [[02_Campaigns/Growth Workshop/Growth Workshop|Growth Workshop]] 
 |---|---|
 | LP date push (Aug 27) | **live** on `momentum-workshop-pilot.netlify.app` (Event JSON-LD + calendar-open default + Aug 27 ICS) |
 | Calendar auto-add | **canonical event + Meet live.** LP opens Google/Outlook/ICS on register. C1 is Gmail EventReservation HTML (`c1-gmail-event.html`). Registrant Calendar API webhook still to connect (Apps Script). Never invite the cold list. Runbook: [[02_Campaigns/Growth Workshop/Calendar Auto-Add|Calendar Auto-Add]] · [[02_Campaigns/Growth Workshop/Google RSVP Rail|Google RSVP Rail]] |
-| Franchise list | **send-ready** — **720** MX-ok franchisee/office mailboxes (CertaPro 354 · Synergy 152 · Mosquito Squad 123 · Comfort Keepers 53 · PACKOUTS 38). UPS 4,914 front-desk inboxes **dropped**. Wave 1 = 50 named. Drive folder "Franchise Workshop Lists — 2026-08-14" has the Wave 1 sheet, the 720 sheet, and the how-to Doc |
-| Drip + lifecycle copy | drafted, awaiting Sean/Mac word-for-word approval; C1–C3 now carry Meet + calendar URLs |
+| Franchise list | **send-ready** — **720** MX-ok franchisee/office mailboxes (CertaPro 354 · Synergy 152 · Mosquito Squad 123 · Comfort Keepers 53 · PACKOUTS 38). UPS 4,914 front-desk inboxes **dropped**. Wave 1 = 50 named. Drive folder "Franchise Workshop Lists — 2026-08-14" + gitignored `12_Brain/private/contacts/` |
+| Sourcing lanes A/C/D | probed 2026-08-15: Item 20 is a names ledger (no new emails); directories are brand pickers; CAN-SPAM + MX rules written. Receipts: [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts]] |
+| Radar targeting | opt-in `discover-prospects.js --keep-chains service-franchise` keeps ICP franchises; default site-grader still drops every chain |
+| Drip + lifecycle copy | drafted, awaiting Sean/Mac word-for-word approval; C1–C3 now carry Meet + calendar URLs; Facebook/Alignable posts added (rules-first) |
 | Two-week calendar | drafted (Aug 14 → 28) |
+| Slack DM to Sean | draft only in [[02_Campaigns/Growth Workshop/Slack Draft — Sean]] — not sent |
 | Meeting link / sender mailbox / seat cap | Meet is live as a working join URL; Sean/Mac still confirm or replace. Sender + seat cap owed. |
 
 ## Rules this project runs on
