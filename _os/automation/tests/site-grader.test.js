@@ -15,7 +15,7 @@ const assert = require('node:assert/strict');
 const { gradeSite, mergeAudits, TIER0_SCORE_CEILING } = require('../lib/site-grader');
 const { analyzeTier0, visibleText, detectPlatform } = require('../lib/site-audit');
 const { routeOpportunity, shouldEscalate, verticalTier } = require('../lib/opportunity');
-const { toCandidates, classify, isChain, isNonSiteDomain, normalizeDomain, buildQuery } = require('../lib/discovery');
+const { toCandidates, classify, isChain, isServiceFranchise, isNonSiteDomain, normalizeDomain, buildQuery } = require('../lib/discovery');
 const { scoreProspect } = require('../lib/scorer');
 
 const html = (body, head = '') => `<!doctype html><html><head>${head}</head><body>${body}</body></html>`;
@@ -339,6 +339,41 @@ test('chain and non-site helpers behave', () => {
   assert.equal(isNonSiteDomain('instagram.com'), true);
   assert.equal(isNonSiteDomain('joesplumbing.com'), false);
   assert.equal(normalizeDomain('https://WWW.Example.com/path'), 'example.com');
+});
+
+test('default discovery still drops service franchises (site-grader)', () => {
+  const elements = [
+    { type: 'node', id: 1, tags: { name: 'CertaPro Painters of Philly', craft: 'painter', website: 'https://philly.certapro.example', brand: 'CertaPro' } },
+    { type: 'node', id: 2, tags: { name: 'CVS Pharmacy', amenity: 'pharmacy', website: 'https://cvs.com' } },
+    { type: 'node', id: 3, tags: { name: 'Independent HVAC', craft: 'hvac', website: 'https://indyhvac.example' } },
+  ];
+  const { candidates, stats } = toCandidates(elements, { market: 'PHL' });
+  assert.equal(candidates.length, 1);
+  assert.equal(candidates[0].business_name, 'Independent HVAC');
+  assert.equal(stats.chain, 2);
+  assert.equal(stats.service_franchise_kept, 0);
+});
+
+test('keepChains service-franchise keeps ICP brands and still drops CVS', () => {
+  const elements = [
+    { type: 'node', id: 1, tags: { name: 'CertaPro Painters of Philly', craft: 'painter', website: 'https://philly.certapro.example', brand: 'CertaPro' } },
+    { type: 'node', id: 2, tags: { name: 'CVS Pharmacy', amenity: 'pharmacy', website: 'https://cvs.com' } },
+    { type: 'node', id: 3, tags: { name: 'Wawa', shop: 'convenience', website: 'https://wawa.com' } },
+    { type: 'node', id: 4, tags: { name: 'Independent HVAC', craft: 'hvac', website: 'https://indyhvac.example' } },
+  ];
+  const { candidates, stats } = toCandidates(elements, { market: 'PHL', keepChains: 'service-franchise' });
+  const names = candidates.map((c) => c.business_name).sort();
+  assert.deepEqual(names, ['CertaPro Painters of Philly', 'Independent HVAC']);
+  assert.equal(stats.chain, 2, 'CVS and Wawa still dropped');
+  assert.equal(stats.service_franchise_kept, 1);
+  assert.equal(candidates.find((c) => c.business_name.startsWith('CertaPro')).is_service_franchise, true);
+});
+
+test('isServiceFranchise matches brand tags, not hotel Comfort Inn', () => {
+  assert.equal(isServiceFranchise({ name: 'Comfort Keepers of Bucks', brand: 'Comfort Keepers' }), true);
+  assert.equal(isServiceFranchise({ name: 'Comfort Inn Center City' }), false);
+  assert.equal(isServiceFranchise({ name: 'The UPS Store' }), true);
+  assert.equal(isServiceFranchise({ name: "Joe's Plumbing" }), false);
 });
 
 /* ------------------------------------------------------------------ *

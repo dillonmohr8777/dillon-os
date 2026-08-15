@@ -22,6 +22,11 @@
  *   --mix <g:n,g:n>      per-vertical-group caps, e.g. "home-services:170,medical:150,legal:100".
  *                        Without it you get whatever the source is richest in (restaurants).
  *   --dry-run            query and report counts, write nothing
+ *   --keep-chains <mode> default: drop every chain (site-grader). Pass
+ *                        `service-franchise` to keep Momentum ICP franchise
+ *                        locations (CertaPro, SERVPRO, senior-care, etc.) and
+ *                        still drop CVS/Wawa/hotels. Writes to
+ *                        12_Brain/private/contacts/ unless --out is set.
  *
  * Coverage note: OSM only carries a `website` tag for businesses somebody has
  * mapped. It skews toward city centres and under-represents suburban trades.
@@ -68,7 +73,7 @@ const MARKETS = {
 };
 
 function parseArgs(argv) {
-  const o = { market: 'PHL', areas: null, bbox: null, groups: [], target: 500, exclude: null, out: null, mix: null, dryRun: false };
+  const o = { market: 'PHL', areas: null, bbox: null, groups: [], target: 500, exclude: null, out: null, mix: null, dryRun: false, keepChains: null };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--market') o.market = String(argv[++i] || 'PHL').toUpperCase();
@@ -79,6 +84,7 @@ function parseArgs(argv) {
     else if (a === '--exclude') o.exclude = argv[++i];
     else if (a === '--out') o.out = argv[++i];
     else if (a === '--mix') o.mix = argv[++i];
+    else if (a === '--keep-chains') o.keepChains = String(argv[++i] || '').trim() || null;
     else if (a === '--dry-run') o.dryRun = true;
     else if (a === '--help' || a === '-h') o.help = true;
   }
@@ -143,16 +149,23 @@ async function main() {
     process.exit(1);
   }
 
+  const keepChains = args.keepChains || null;
+  if (keepChains && keepChains !== 'service-franchise' && keepChains !== 'all') {
+    console.error(`Unknown --keep-chains "${keepChains}". Use service-franchise or all.`);
+    process.exit(1);
+  }
+
   const { domains: excludeDomains, notes: exclusionNotes } = buildExclusions(args.exclude);
   process.stderr.write(`exclusions: ${exclusionNotes.join('; ')}\n`);
   process.stderr.write(
     `market ${args.market}${preset ? ` (${preset.label})` : ''} · ` +
-    `${areaSpecs.length} area(s) · ${groups.length} vertical group(s) · target ${args.target}\n`
+    `${areaSpecs.length} area(s) · ${groups.length} vertical group(s) · target ${args.target}` +
+    `${keepChains ? ` · keep-chains ${keepChains}` : ''}\n`
   );
 
   const all = new Map();
   const perArea = [];
-  const totals = { raw: 0, chain: 0, non_site_domain: 0, excluded_already_done: 0, duplicate_domain: 0 };
+  const totals = { raw: 0, chain: 0, service_franchise_kept: 0, non_site_domain: 0, excluded_already_done: 0, duplicate_domain: 0 };
 
   for (const spec of areaSpecs) {
     if (all.size >= args.target) {
@@ -169,7 +182,11 @@ async function main() {
       continue;
     }
 
-    const { candidates, stats } = toCandidates(res.elements, { excludeDomains, market: args.market });
+    const { candidates, stats } = toCandidates(res.elements, {
+      excludeDomains,
+      market: args.market,
+      keepChains,
+    });
     let added = 0;
     for (const c of candidates) {
       if (all.has(c.domain)) {
@@ -252,6 +269,7 @@ async function main() {
     unique_before_target_cut: all.size,
     by_vertical_group: byGroup,
     filtered_out: totals,
+    keep_chains: keepChains,
     exclusion_domains: excludeDomains.size,
     per_area: perArea,
     dry_run: !!args.dryRun,
@@ -260,7 +278,8 @@ async function main() {
   process.stderr.write(
     `\ndiscovered ${candidates.length} candidate(s) · ` +
     `filtered: ${totals.chain} chains, ${totals.non_site_domain} social/directory-only, ` +
-    `${totals.excluded_already_done} already built, ${totals.duplicate_domain} duplicate domains\n`
+    `${totals.excluded_already_done} already built, ${totals.duplicate_domain} duplicate domains` +
+    `${totals.service_franchise_kept ? ` · kept ${totals.service_franchise_kept} service-franchise` : ''}\n`
   );
 
   if (args.dryRun) {
@@ -268,18 +287,25 @@ async function main() {
     return;
   }
 
+  const defaultRel = keepChains === 'service-franchise'
+    ? path.join('12_Brain/private/contacts', `osm-franchises-${args.market.toLowerCase()}-${todayISO()}.json`)
+    : path.join('12_Brain/state/candidates', `${args.market.toLowerCase()}-${todayISO()}.json`);
   const outFile = args.out
     ? (path.isAbsolute(args.out) ? args.out : repoPath(args.out))
-    : repoPath(path.join('12_Brain/state/candidates', `${args.market.toLowerCase()}-${todayISO()}.json`));
+    : repoPath(defaultRel);
+  const trackedOut = !path.relative(repoPath('.'), outFile).startsWith(`12_Brain${path.sep}private${path.sep}`);
   ensureDir(path.dirname(outFile));
   writeJson(outFile, {
     _readme:
       'Discovered prospect candidates from OpenStreetMap. Nothing here is qualified or ' +
-      'outbound-ready — feed it to bin/grade-sites.js, then a human approves any send.',
+      'outbound-ready — feed it to bin/grade-sites.js, then a human approves any send.' +
+      (keepChains === 'service-franchise'
+        ? ' keep-chains=service-franchise: OSM franchise hits are targeting leads, not sendable emails.'
+        : ''),
     ...summary,
-    // This file is committed and the repo is public: no street addresses, phone
-    // numbers or coordinates. See sanitizeForGit() for why.
-    prospects: sanitizeForGit(candidates),
+    // Tracked files are public: strip street / phone / GPS. Private copies may
+    // keep those fields for GBP/LinkedIn research.
+    prospects: trackedOut ? sanitizeForGit(candidates) : candidates,
   });
 
   const stateFile = writeRunState(AUTOMATION_ID, summary);

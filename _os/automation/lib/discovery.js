@@ -154,6 +154,32 @@ const CHAIN_NAMES = [
   'goodwill', 'salvation army', 'savers', 'plato\'s closet', 'once upon a child',
 ];
 
+/**
+ * Service-franchise brands that match Momentum's Multi-Location & Franchise ICP
+ * (home services, restoration, senior care, local fitness/wellness). Used only
+ * when `toCandidates(..., { keepChains: 'service-franchise' })` — the site
+ * grader still drops every chain by default. An OSM hit is a targeting lead,
+ * not a sendable email: still require a literal on-page mailbox (Lane B).
+ */
+const SERVICE_FRANCHISE_NAMES = [
+  'certapro', 'certa pro',
+  'synergy homecare', 'synergy home care',
+  'mosquito squad', 'mosquito joe',
+  'comfort keepers',
+  'packouts', '1-800-packouts',
+  'servpro', 'servicemaster', 'stanley steemer', 'chem-dry', 'molly maid',
+  'roto-rooter', 'mr rooter', 'benjamin franklin plumbing', 'one hour heating',
+  'terminix', 'orkin', 'ehrlich',
+  'visiting angels', 'always best care', 'home instead', 'brightstar care',
+  'homewatch', 'griswold', 'interim healthcare', 'amada senior',
+  'lawn doctor', 'budget blinds', 'fish window', 'christmas decor',
+  'the joint chiropractic',
+  'anytime fitness', 'orangetheory', 'crunch fitness', 'retro fitness',
+  'great clips', 'sport clips', 'supercuts',
+  'massage envy', 'european wax', 'amazing lash',
+  'ups store',
+];
+
 /** Their "website" is really a social or directory page, not a site we can grade. */
 const NON_SITE_DOMAINS = [
   'facebook.com', 'fb.com', 'fb.me', 'instagram.com', 'twitter.com', 'x.com',
@@ -203,6 +229,26 @@ function isChain(tags = {}) {
   // OSM marks chains explicitly; trust those tags first.
   if (tags.brand || tags['brand:wikidata'] || tags['operator:wikidata']) return true;
   return CHAIN_NAMES.some((c) => name.includes(c));
+}
+
+function franchiseHaystack(tags = {}) {
+  return [tags.name, tags.brand, tags.operator, tags['brand:en'], tags['name:en']]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+}
+
+function isServiceFranchise(tags = {}) {
+  const hay = franchiseHaystack(tags);
+  if (!hay) return false;
+  return SERVICE_FRANCHISE_NAMES.some((c) => hay.includes(c));
+}
+
+function shouldKeepChain(tags, keepChains) {
+  if (!keepChains) return false;
+  if (keepChains === true || keepChains === 'all') return true;
+  if (keepChains === 'service-franchise') return isServiceFranchise(tags);
+  return false;
 }
 
 function isNonSiteDomain(domain) {
@@ -344,6 +390,9 @@ async function runOverpass(query, { timeoutMs = 200000, endpoints = OVERPASS_END
  * @param {Set}   opts.excludeDomains  domains already built for / clients / mailed
  * @param {string} opts.market
  * @param {string[]} [opts.groups]     restrict to these vertical groups
+ * @param {boolean|'all'|'service-franchise'} [opts.keepChains]
+ *        default: drop every chain (site-grader). `service-franchise` keeps
+ *        ICP franchise locations and still drops CVS/Wawa/hotels.
  */
 function toCandidates(elements, opts = {}) {
   const excludeDomains = opts.excludeDomains || new Set();
@@ -353,6 +402,7 @@ function toCandidates(elements, opts = {}) {
     raw: elements.length,
     no_website: 0,
     chain: 0,
+    service_franchise_kept: 0,
     non_site_domain: 0,
     excluded_already_done: 0,
     duplicate_domain: 0,
@@ -367,8 +417,12 @@ function toCandidates(elements, opts = {}) {
       continue;
     }
     if (isChain(tags)) {
-      stats.chain += 1;
-      continue;
+      if (shouldKeepChain(tags, opts.keepChains)) {
+        stats.service_franchise_kept += 1;
+      } else {
+        stats.chain += 1;
+        continue;
+      }
     }
     const url = normalizeUrl(rawSite.split(';')[0]);
     const domain = normalizeDomain(url);
@@ -406,6 +460,7 @@ function toCandidates(elements, opts = {}) {
       street,
       phone: tags.phone || tags['contact:phone'] || '',
       location_count: 1,
+      is_service_franchise: isServiceFranchise(tags),
       osm_type: el.type,
       osm_id: el.id,
       lat: el.lat ?? (el.center ? el.center.lat : null),
@@ -457,11 +512,14 @@ module.exports = {
   GIT_UNSAFE_FIELDS,
   classify,
   isChain,
+  isServiceFranchise,
+  shouldKeepChain,
   isNonSiteDomain,
   normalizeDomain,
   normalizeUrl,
   VERTICAL_GROUPS,
   CHAIN_NAMES,
+  SERVICE_FRANCHISE_NAMES,
   NON_SITE_DOMAINS,
   OVERPASS_ENDPOINTS,
 };
