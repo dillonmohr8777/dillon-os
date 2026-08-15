@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Outfit",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F3F6F2",
+    "ink": "#132018",
+    "accent": "#1B4F8A",
+    "accent2": "#9FEF22",
+    "panel": "#D4E8B0",
+    "deep": "#0B1A2E",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of it services work for Custom IT Solutions, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "custom-it-solutions",
+  "name": "Custom IT Solutions",
+  "city": "Lower Salford Township",
+  "category": "IT services",
+  "vertical": "it",
+  "url": "https://customitsolutions.com/",
+  "phone": "973-726-0202",
+  "address": "292 Main Street, Suite 282, Harleysville, PA 19438",
+  "hours": "",
+  "description": "Custom IT Solutions offers tailored IT services & consulting. Maximize ROI with our managed services, Microsoft Dynamics 365, and Infor XA expertise.",
+  "marquee": [
+    "Lower Salford Township",
+    "IT services",
+    "Solutions",
+    "Managed Services & Security"
+  ],
+  "hero": {
+    "eyebrow": "Lower Salford Township | IT services",
+    "headline": "See IT Flourish\u2122",
+    "sub": "SolutionsManaged Services & SecurityMicrosoft Dynamics 365 Business CentralMicrosoft 365 Business ProductsInfor XA Services & ConsultingEnterprise Access Portal (EAX)",
+    "ctaPrimary": {
+      "label": "Contact",
+      "href": "tel:9737260202"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://customitsolutions.com/"
+    },
+    "glassFloat": {
+      "title": "Lower Salford Township",
+      "sub": "IT services"
+    },
+    "marquee": [
+      "Lower Salford Township",
+      "IT services",
+      "Solutions",
+      "Managed Services & Security"
+    ]
+  },
+  "offerings": {
+    "heading": "Managed Security Services & Security.",
+    "items": [
+      {
+        "title": "Managed Security Services & Security",
+        "text": "Comprehensive managed services, ensuring peak IT system performance and compliance. From EDR to tailored service plans, we align technology with your business needs"
+      },
+      {
+        "title": "Microsoft 365 Business Products",
+        "text": "Expert guidance on Microsoft 365. From tailored transitions to maximizing potential, we empower businesses with 24/7 serverless cloud computing and robust collaboration tools."
+      },
+      {
+        "title": "Infor XA Services & Consulting",
+        "text": "Specialized Infor XA consulting and services. From EDI integration to custom software development and self-service portals, we enhance operational efficiency and maximize ROI."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "See IT Flourish\u2122",
+    "paragraphs": [
+      "Custom IT Solutions is a trusted services and consulting company known for lasting partnerships and business-technology alignment.",
+      "We tailor plans to your budget and challenges, fueling return on IT investments and putting company goals on a faster path."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Custom IT Solutions at 973-726-0202."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "Pennsylvania office at 292 Main Street, Suite 282, Harleysville, PA 19438."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Managed Security Services & Security",
+    "text": "Expert guidance on Microsoft 365, from tailored transitions to 24/7 cloud collaboration.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://customitsolutions.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Microsoft 365 Business Products",
+    "text": "Infor XA consulting, EDI, and custom portals that keep operations moving.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://customitsolutions.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Solutions",
+        "href": "https://customitsolutions.com/",
+        "imageIndex": 9,
+        "text": "Solutions at Custom IT Solutions in Lower Salford Township."
+      },
+      {
+        "title": "Managed Services & Security",
+        "href": "https://customitsolutions.com/",
+        "imageIndex": 10,
+        "text": "Managed Services & Security at Custom IT Solutions in Lower Salford Township."
+      },
+      {
+        "title": "Microsoft Dynamics 365 Business Central",
+        "href": "https://customitsolutions.com/",
+        "imageIndex": 11,
+        "text": "Microsoft Dynamics 365 Business Central at Custom IT Solutions in Lower Salford Township."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "292 Main Street, Suite 282, Harleysville, PA 19438"
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact",
+      "href": "tel:9737260202"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:9737260202"
+    },
+    {
+      "label": "Official site",
+      "href": "https://customitsolutions.com/"
+    }
+  ]
+}

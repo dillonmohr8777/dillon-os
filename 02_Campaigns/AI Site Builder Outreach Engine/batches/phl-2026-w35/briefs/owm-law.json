@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F5F6F0",
+    "ink": "#141820",
+    "accent": "#152C54",
+    "accent2": "#B5E048",
+    "panel": "#D4E8B0",
+    "deep": "#0E1A2C",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of law firm work for O'Donnell, Weiss & Mattei, P.C., frame 13, generated not photographed"
+    }
+  ],
+  "slug": "owm-law",
+  "name": "O'Donnell, Weiss & Mattei, P.C.",
+  "city": "Pottstown",
+  "category": "Law firm",
+  "vertical": "lawyer",
+  "url": "https://www.owmlaw.com/",
+  "phone": "610-323-2800",
+  "address": "1503 Sunset Drive, Suite 201, Pottstown, PA, 19464",
+  "hours": "",
+  "description": "O\u2019Donnell, Weiss & Mattei, P.C., provides full-service legal solutions for clients in southeastern Pennsylvania. Call 610-323-2800 for a consultation.",
+  "marquee": [
+    "Pottstown",
+    "Law firm",
+    "610-323-2800",
+    "Home"
+  ],
+  "hero": {
+    "eyebrow": "Pottstown | Law firm",
+    "headline": "Our Work Matters\u2026",
+    "sub": "Our Attorneys John A. Koury Jr. David A. Megay Michael B. Murray Jr. Rebecca A. Hobbs, CELA* Joseph K. Koury James C. Kovaleski Thomas A. Mastroianni Gary L. Stein Stephen I. Baer James R. Freeman Megan D. Hazel Esq. Dav",
+    "ctaPrimary": {
+      "label": "Contact",
+      "href": "tel:6103232800"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.owmlaw.com/"
+    },
+    "glassFloat": {
+      "title": "Pottstown",
+      "sub": "Law firm"
+    },
+    "marquee": [
+      "Pottstown",
+      "Law firm",
+      "610-323-2800",
+      "Home"
+    ]
+  },
+  "offerings": {
+    "heading": "Your Committed, Regional Full-Service Law Firm.",
+    "items": [
+      {
+        "title": "Your Committed, Regional Full-Service Law Firm",
+        "text": "Elder Law Assistance With Personal Injury Settlements Guardianship Medicaid Social Security Disability Veterans Benefits"
+      },
+      {
+        "title": "Our Clients Say It Best",
+        "text": "Family Law Custody How Do Pennsylvania Child Courts Determine Custody? Modifications Divorce Property Division Gray Divorce Support"
+      },
+      {
+        "title": "Defined By Dedication",
+        "text": "How Do Pennsylvania Child Courts Determine Custody?"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Our Work Matters\u2026",
+    "paragraphs": [
+      "Our Attorneys John A. Koury Jr. David A. Megay Michael B. Murray Jr. Rebecca A. Hobbs, CELA* Joseph K. Koury James C. Kovaleski Thomas A. Mastroianni Gary L. Stein Stephen I. Baer James R. Freeman Megan D. Hazel Esq. David S. Kaplan Henry T. Zale Richard D. Linderman",
+      "Criminal Defense Drug Crimes DUI Traffic Violations What Does A Criminal Defense Lawyer Do?"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach O'Donnell, Weiss & Mattei, P.C. at 610-323-2800."
+      },
+      {
+        "title": "Confirm hours first",
+        "text": "Hours were not verified on the harvest. Check the official site."
+      },
+      {
+        "title": "A real street",
+        "text": "1503 Sunset Drive, Suite 201, Pottstown, PA, 19464."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Your Committed, Regional Full-Service Law Firm",
+    "text": "Family Law Custody How Do Pennsylvania Child Courts Determine Custody? Modifications Divorce Property Division Gray Divorce Support",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.owmlaw.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Our Clients Say It Best",
+    "text": "How Do Pennsylvania Child Courts Determine Custody?",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://www.owmlaw.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "610-323-2800",
+        "href": "https://www.owmlaw.com/",
+        "imageIndex": 9,
+        "text": "610-323-2800 at O'Donnell, Weiss & Mattei, P.C. in Pottstown."
+      },
+      {
+        "title": "Our Attorneys",
+        "href": "https://www.owmlaw.com/",
+        "imageIndex": 10,
+        "text": "Our Attorneys at O'Donnell, Weiss & Mattei, P.C. in Pottstown."
+      },
+      {
+        "title": "John A. Koury Jr.",
+        "href": "https://www.owmlaw.com/",
+        "imageIndex": 11,
+        "text": "John A. Koury Jr. at O'Donnell, Weiss & Mattei, P.C. in Pottstown."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "1503 Sunset Drive, Suite 201, Pottstown, PA, 19464"
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact",
+      "href": "tel:6103232800"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6103232800"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.owmlaw.com/"
+    }
+  ]
+}

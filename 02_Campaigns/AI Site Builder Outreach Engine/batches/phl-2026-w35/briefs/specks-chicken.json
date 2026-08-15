@@ -1,0 +1,244 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#FFFCD7",
+    "ink": "#1A1010",
+    "accent": "#B22222",
+    "accent2": "#111111",
+    "panel": "#F0D8A8",
+    "deep": "#3B0A0A",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of restaurant work for Speck's Broasted Chicken, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "specks-chicken",
+  "name": "Speck's Broasted Chicken",
+  "city": "Collegeville",
+  "category": "Restaurant",
+  "vertical": "restaurant",
+  "url": "http://speckschicken.com/",
+  "phone": "(610) 489-2110",
+  "address": "3969 Ridge Pike, Collegeville, PA 19426",
+  "hours": "Mon-Fri 10am-9pm, Sat 11am-9pm, Sun 12pm-9pm",
+  "description": "Speck's Broasted Chicken in Collegeville. Restaurant.",
+  "marquee": [
+    "Collegeville",
+    "Restaurant",
+    "Speck's"
+  ],
+  "hero": {
+    "eyebrow": "Collegeville | Restaurant",
+    "headline": "Chicken at its finest",
+    "sub": "Speck's Drive-In has been family-owned since 1953. They are known for broasted chicken, sandwiches, daily specials, sides, garden salads, and a secret-recipe coleslaw.",
+    "ctaPrimary": {
+      "label": "menu",
+      "href": "tel:6104892110"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "http://speckschicken.com/"
+    },
+    "glassFloat": {
+      "title": "Collegeville",
+      "sub": "Restaurant"
+    },
+    "marquee": [
+      "Collegeville",
+      "Restaurant",
+      "Speck's"
+    ]
+  },
+  "offerings": {
+    "heading": "Broasted chicken since 1953.",
+    "items": [
+      {
+        "title": "Broasted chicken since 1953",
+        "text": "Speck's Broasted Chicken in Collegeville. Call (610) 489-2110."
+      },
+      {
+        "title": "Drive-in in Collegeville",
+        "text": "Speck's Broasted Chicken in Collegeville. Call (610) 489-2110."
+      },
+      {
+        "title": "A homepage that names the next step instead of hiding it",
+        "text": "Speck's Broasted Chicken in Collegeville. Call (610) 489-2110."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About Speck's",
+    "paragraphs": [
+      "Speck's Drive-In has been family-owned since 1953. They are known for broasted chicken, sandwiches, daily specials, sides, garden salads, and a secret-recipe coleslaw.",
+      "Order for pickup, or use the Grubhub and DoorDash links they publish. Party orders are on the menu too."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Speck's Broasted Chicken at (610) 489-2110."
+      },
+      {
+        "title": "Hours they publish",
+        "text": "Mon-Fri 10am-9pm, Sat 11am-9pm, Sun 12pm-9pm"
+      },
+      {
+        "title": "A real street",
+        "text": "3969 Ridge Pike, Collegeville, PA 19426."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Broasted chicken since 1953",
+    "text": "Speck's Broasted Chicken keeps the work in Collegeville. The rebuild puts the next action where a phone can hit it.",
+    "cta": {
+      "label": "Official site",
+      "href": "http://speckschicken.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Drive-in in Collegeville",
+    "text": "The current site still shows this fault: 30/100 decayed (provisional \u2014 Tier 0 only). Worst: no viewport meta \u2014 page renders desktop-width on phones; no HTTPS \u2014 b.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "http://speckschicken.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Visit",
+        "href": "http://speckschicken.com/",
+        "imageIndex": 9,
+        "text": "Visit at Speck's Broasted Chicken in Collegeville."
+      },
+      {
+        "title": "Call",
+        "href": "http://speckschicken.com/",
+        "imageIndex": 10,
+        "text": "Call at Speck's Broasted Chicken in Collegeville."
+      },
+      {
+        "title": "Official site",
+        "href": "http://speckschicken.com/",
+        "imageIndex": 11,
+        "text": "Official site at Speck's Broasted Chicken in Collegeville."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "3969 Ridge Pike, Collegeville, PA 19426"
+  },
+  "closing": {
+    "cta": {
+      "label": "menu",
+      "href": "tel:6104892110"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6104892110"
+    },
+    {
+      "label": "Official site",
+      "href": "http://speckschicken.com/"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F4F6FA",
+    "ink": "#121820",
+    "accent": "#1B365D",
+    "accent2": "#4A90C8",
+    "panel": "#C5D0DE",
+    "deep": "#0E1A2C",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of roofing work for Advance Exterior Solutions, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "advance-exterior",
+  "name": "Advance Exterior Solutions",
+  "city": "Macungie",
+  "category": "Roofing",
+  "vertical": "roofing",
+  "url": "https://advanceexteriorsolutions.com/",
+  "phone": "(484) 601-5137",
+  "address": "1433 Kennington Ln, Macungie, PA 18062",
+  "hours": "Mon-Fri 9am-5pm",
+  "description": "Roofing Contractor in Macungie PA Macungie\u2019s leader in full-service roofing & siding repairs and replacements. Give us a call for a free roof inspection! Call",
+  "marquee": [
+    "Macungie",
+    "Roofing",
+    "Home",
+    "About"
+  ],
+  "hero": {
+    "eyebrow": "Macungie | Roofing",
+    "headline": "Roofing Contractor in Macungie PA",
+    "sub": "Macungie\u2019s leader in full-service roofing & siding repairs and replacements. Give us a call for a free roof inspection!",
+    "ctaPrimary": {
+      "label": "Contact",
+      "href": "tel:4846015137"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://advanceexteriorsolutions.com/"
+    },
+    "glassFloat": {
+      "title": "Macungie",
+      "sub": "Roofing"
+    },
+    "marquee": [
+      "Macungie",
+      "Roofing",
+      "Home",
+      "About"
+    ]
+  },
+  "offerings": {
+    "heading": "REPUTABLE & TRUSTWORTHY MACUNGIE ROOFERS.",
+    "items": [
+      {
+        "title": "REPUTABLE & TRUSTWORTHY MACUNGIE ROOFERS",
+        "text": "We\u2019ll do a full inspection to determine whether you\u2019ll need a roof replacement or a simple"
+      },
+      {
+        "title": "Licensed & Insured PA Roofing Company",
+        "text": "The average lifespan of a roof usually ranges between 25 to 50 years. However, a roof\u2019s li"
+      },
+      {
+        "title": "Macungie Residential Roofing Services",
+        "text": "Most homeowners insurance policies cover roof replacement if the damage is the result of a"
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "OUR QUALIFICATIONS",
+    "paragraphs": [
+      "Macungie\u2019s leader in full-service roofing & siding repairs and replacements. Give us a call for a free roof inspection!",
+      "Whether you\u2019re looking for roofers in Lehigh Valley for your roofing, siding or you need a brand new roof altogether, Advance Exterior Solutions has the tools to get the job done. "
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Advance Exterior Solutions at (484) 601-5137."
+      },
+      {
+        "title": "Hours they publish",
+        "text": "Mon-Fri 9am-5pm"
+      },
+      {
+        "title": "A real street",
+        "text": "1433 Kennington Ln, Macungie, PA 18062."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "REPUTABLE & TRUSTWORTHY MACUNGIE ROOFERS",
+    "text": "The average lifespan of a roof usually ranges between 25 to 50 years. However, a roof\u2019s life expectancy ultimately depends on the quality, d",
+    "cta": {
+      "label": "Official site",
+      "href": "https://advanceexteriorsolutions.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Licensed & Insured PA Roofing Company",
+    "text": "Most homeowners insurance policies cover roof replacement if the damage is the result of an act of nature or sudden accidental event. Most h",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://advanceexteriorsolutions.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "About",
+        "href": "https://advanceexteriorsolutions.com/",
+        "imageIndex": 9,
+        "text": "About at Advance Exterior Solutions in Macungie."
+      },
+      {
+        "title": "Residential Roofing",
+        "href": "https://advanceexteriorsolutions.com/",
+        "imageIndex": 10,
+        "text": "Residential Roofing at Advance Exterior Solutions in Macungie."
+      },
+      {
+        "title": "Roof Repair",
+        "href": "https://advanceexteriorsolutions.com/",
+        "imageIndex": 11,
+        "text": "Roof Repair at Advance Exterior Solutions in Macungie."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "1433 Kennington Ln, Macungie, PA 18062"
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact",
+      "href": "tel:4846015137"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:4846015137"
+    },
+    {
+      "label": "Official site",
+      "href": "https://advanceexteriorsolutions.com/"
+    }
+  ]
+}
