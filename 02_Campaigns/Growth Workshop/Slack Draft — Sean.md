@@ -13,18 +13,13 @@ Staged as a Slack draft in the Sean DM. It has not been sent. Open the DM, edit 
 
 Draft: https://momentum3d.slack.com/archives/D0A6ECLQ0S1
 
-No UPS mention in the DM. The send list is the 720 franchisee emails plus the Philly list.
-
 ---
 
-Hey need your take on the workshop fill before Tuesday.
+Hey workshop page is live for Thu Aug 27 at 12pm ET.
 
-Page is live for Thu Aug 27 at 12pm ET. When someone registers it already opens Google Calendar. The confirmation email is what actually puts it on their Gmail once they opt in. We are not blasting a calendar invite to a cold list.
+https://www.momentumvirtualtours.com/growth-workshop/
 
-The send list is 720 franchisee and office emails the businesses published themselves. CertaPro, Synergy HomeCare, Mosquito Squad, Comfort Keepers, and 1-800-PACKOUTS. 50 named people first, then the rest if bounces stay clean. Plus the Philly 200 list.
+- 720 franchisee emails ready, 50 named people first, plus the Philly list
+- need you to confirm Meet or Zoom, which mailbox sends, and seat cap
 
-What do you think of that?
-
-Also still need you to confirm the Meet link https://meet.google.com/ive-hkws-xdg or send a Zoom, which mailbox sends (I would use sean@needmomentum.com), and seat cap or no cap.
-
-First invites would go Tuesday morning once you greenlight.
+First invites Tuesday morning once you say go.
