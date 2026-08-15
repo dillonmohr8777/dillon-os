@@ -31,12 +31,15 @@ The live client map is verified each run, never trusted from an old list (orches
 ## Command Deck skills
 
 - `/ads-audit` — weekly health check → `Daily-Briefs/` + draft Optimization Ledger
-- `/ads-search-terms` — query waste → themed negative draft
+- `/ads-optimize` — Optmyzr-style IF/THEN rule drafts (waste, bid-fit, budget, PMax)
+- `/ads-search-terms` — query waste → Waste / Review / Protected → themed negatives
 - `/ads-tracking` — conversion preflight; stop Smart Bidding if tracking is dead
 - `/meta-ads` — Lead Ads / Advantage+ / CAPI quality pass
 
-Do not vendor `dillonmohr8777/claude-ads` into this vault. See
-[[12_Brain/concepts/Ads Optimization Skill Stack]].
+Do not vendor `dillonmohr8777/claude-ads` or `optmyzr-skills/*` into this vault.
+Do not connect the Optmyzr MCP without `_os/automation/bin/mcp-gate.js`.
+See [[12_Brain/concepts/Ads Optimization Skill Stack]] and
+[[12_Brain/entities/Optmyzr Skills]].
 
 ## Notes
 

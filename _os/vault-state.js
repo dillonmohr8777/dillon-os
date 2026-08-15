@@ -127,7 +127,7 @@ function getSkills(vault) {
   const order = [
     'am-report', 'inbox-brief', 'plan-today', 'client-pulse',
     'metrics-pull', 'content-scan', 'week-review', 'vault-clean',
-    'ads-audit', 'ads-search-terms', 'ads-tracking', 'meta-ads',
+    'ads-audit', 'ads-optimize', 'ads-search-terms', 'ads-tracking', 'meta-ads',
     'session-mine', 'vault-compile', 'wiki-lint', 'synthesize', 'research-sweep',
   ];
   skills.sort((a, b) => {

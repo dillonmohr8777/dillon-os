@@ -1,25 +1,27 @@
 ---
 tags: [concept, ads, skills]
-source: "[[12_Brain/raw/research/2026-08-15 - research - ads-optimization-skills]]"
+source: "[[12_Brain/raw/research/2026-08-15 - research - optmyzr-skills]]"
 updated: 2026-08-15
 expires: 2026-11-13
 ---
 
 # Ads Optimization Skill Stack
 
-One-line: Dillon OS now runs four vault-native ads skills on the Command Deck;
-the owned `claude-ads` fork stays a reference pack, not a vendored plugin.
+One-line: Dillon OS now runs five vault-native ads skills; Optmyzr's
+official libraries stay reference-only, and `/ads-optimize` drafts the
+IF/THEN rules their MCP would write.
 
 ## What shipped in this vault
 
 | Skill | Job |
 |---|---|
 | `/ads-audit` | Evidence-only Google + Meta health check → `Daily-Briefs/` + draft ledger |
-| `/ads-search-terms` | Query waste → themed negative draft (Tier 1) |
+| `/ads-optimize` | Optmyzr-style IF/THEN rule drafts (waste, bid-fit, budget, PMax) |
+| `/ads-search-terms` | Query waste → Waste / Review / Protected → themed negatives |
 | `/ads-tracking` | Primary/secondary, EC, GA4 double-count, CAPI preflight |
 | `/meta-ads` | Higher Intent forms, Advantage+ geo hold, CAPI, fatigue |
 
-All four refuse invented metrics, client email, and Tier 2 live edits
+All five refuse invented metrics, client email, and Tier 2 live edits
 (budget, bid, new campaigns, goal changes). See
 [[11_Agents/Google Ads Agent]] and [[12_Brain/protocols/approval-tiers]].
 
@@ -31,6 +33,8 @@ All four refuse invented metrics, client email, and Tier 2 live edits
 - `dillonmohr8777/claude-skills-repo` skills `paid-ads` and
   `campaign-analytics` — generic strategy / offline JSON math. Useful
   reference, not Command Deck buttons.
+- [[12_Brain/entities/Optmyzr Skills|Optmyzr Skills]] — official Apache-2.0
+  audit / waste-finder / audience-segmentation repos. Distilled, not copied.
 
 ## Stay out until an operator gate
 
@@ -39,6 +43,10 @@ All four refuse invented metrics, client email, and Tier 2 live edits
 - `itallstartedwithaidea/agent-skills` (googleadsagent.ai / Buddy Agent) —
   MIT reference dump, 12 Google Ads skills plus a commercial agent. Do not
   vendor into `.claude/skills/`.
+- Optmyzr hosted MCP (`tools.optmyzr.com/OptmyzrMcp`) — paid account +
+  `mcp-gate.js`. Keyword writes only; preview in Optmyzr. Not this session.
+- `mardab96/google-ads-skills` — CPA-spike / IS-gap / PMax diagnosis.
+  Next harvest, not vendored.
 - X keyword search this session. Operator Bearer authenticates, but
   `GET /2/tweets/search/recent` returns 402 credits-depleted. The tweet-usage
   meter (`/2/usage/tweets`) showed 0 used — a different wallet. Activity API
@@ -57,6 +65,7 @@ All four refuse invented metrics, client email, and Tier 2 live edits
 ## Links
 
 - [[12_Brain/entities/Claude Ads]]
+- [[12_Brain/entities/Optmyzr Skills]]
 - [[12_Brain/entities/LandingFolio MCP]] — still the only project MCP
-- Skill files: `.claude/skills/ads-audit`, `ads-search-terms`,
-  `ads-tracking`, `meta-ads`
+- Skill files: `.claude/skills/ads-audit`, `ads-optimize`,
+  `ads-search-terms`, `ads-tracking`, `meta-ads`

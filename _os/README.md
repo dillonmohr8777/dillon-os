@@ -20,7 +20,7 @@ Deck buttons; the dashboard itself works without it).
 | **Directives** | `## Today` checkboxes in `Dashboard.md`, topped up from the latest daily brief's priority stack |
 | **Documents** | most recently modified notes |
 | **Core + hero number** | `System/OS Config.md` frontmatter — `primary_directive`, `goal_current`, `goal_target` |
-| **Command Deck** | one button per skill in `.claude/skills/` — daily ops, ads (`ads-audit`, `ads-search-terms`, `ads-tracking`, `meta-ads`), plus brain loops (`session-mine`, `vault-compile`, `wiki-lint`, `synthesize`, `research-sweep`) |
+| **Command Deck** | one button per skill in `.claude/skills/` — daily ops, ads (`ads-audit`, `ads-optimize`, `ads-search-terms`, `ads-tracking`, `meta-ads`), plus brain loops (`session-mine`, `vault-compile`, `wiki-lint`, `synthesize`, `research-sweep`) |
 | **Schedule** | the `## Schedule` list in `System/OS Config.md` |
 | **AI Wire** | recent vault activity when idle; live Claude output while a skill runs |
 
@@ -35,7 +35,7 @@ results back into `Daily-Briefs/` or `12_Brain/`):
 Daily: `am-report` · `inbox-brief` · `plan-today` · `client-pulse` · `metrics-pull`
 · `content-scan` · `week-review` · `vault-clean`
 
-Ads: `ads-audit` · `ads-search-terms` · `ads-tracking` · `meta-ads`
+Ads: `ads-audit` · `ads-optimize` · `ads-search-terms` · `ads-tracking` · `meta-ads`
 
 Brain: `session-mine` · `vault-compile` · `wiki-lint` · `synthesize` · `research-sweep`
 

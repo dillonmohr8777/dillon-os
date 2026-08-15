@@ -95,7 +95,7 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
 
   it('Command Deck includes vault-native ads optimization skills', () => {
     const names = getSkills(VAULT).map((s) => s.name);
-    for (const need of ['ads-audit', 'ads-search-terms', 'ads-tracking', 'meta-ads']) {
+    for (const need of ['ads-audit', 'ads-optimize', 'ads-search-terms', 'ads-tracking', 'meta-ads']) {
       assert.ok(names.includes(need), `missing skill ${need}`);
     }
   });

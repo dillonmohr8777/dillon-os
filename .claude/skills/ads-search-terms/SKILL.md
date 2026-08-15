@@ -26,9 +26,22 @@ Sources, in order:
 If none of those exist, stop and ask for a 30-day search terms export. Do not
 guess the query graph.
 
-## 2. Theme the waste
+## 2. Guardrail, then theme
 
-Group spend into themes. Local-service defaults:
+A zero-conversion term is not automatically waste. Classify every flagged
+row **before** theming (Optmyzr waste-finder contract):
+
+| Status | Meaning | Goes on the negative list? |
+|---|---|---|
+| **Waste** | Off-topic / jobs / DIY / geo-miss in a non-brand, non-conquest campaign | Yes |
+| **Review — competitor** | Rival brand in a Competitors / Conquest campaign | Human only |
+| **Protected — brand** | Own name or misspelling, or a Brand campaign | Never |
+
+Default filter when the export has dollars: lookback ≥ 7 days, cost above a
+stated threshold (Optmyzr default $20), conversions = 0. Use the operator's
+numbers if they give different ones. Projected savings count **Waste only**.
+
+Then group **Waste** into themes. Local-service defaults:
 
 - **Jobs** — hiring, salary, indeed, career
 - **DIY / free** — how to, diy, cheap, free, template
@@ -49,9 +62,13 @@ on PMax when a branded Search campaign is also live.
 Write `Daily-Briefs/ads-search-terms-YYYY-MM-DD-<slug>.md`:
 
 - **Coverage** — where the terms came from, how complete
-- **Waste table** — theme, spend, proof queries
-- **Draft negatives** — phrase/exact, campaign vs account, Tier 1
-- **Do not add** — brand, high-intent close variants, anything without spend
+- **Waste table** — term, theme, campaign, spend, status
+  (`Waste` / `Review — competitor` / `Protected — brand`)
+- **Draft negatives** — `Waste` only; exact per term, phrase per theme;
+  campaign vs account; Tier 1. Paste-ready block = negatives only, no
+  comments inside the fence.
+- **Do not add** — `Protected — brand`, `Review — competitor` until Dillon
+  says so, high-intent close variants, anything without spend
 - **PMax / Search Partners** — separate yes/no calls
 
 Append the same draft list to `01_Clients/<Client>/Optimization Ledger.md`
