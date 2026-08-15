@@ -22,20 +22,31 @@ Verified findings and receipts live in [[12_Brain/research/Franchise Email Sourc
 
 ## The four lanes
 
-### Lane A — FDDs and state franchise registries (names ledger)
+### Lane A — FDDs and state franchise registries (names ledger) — PROBED 2026-08-15
 
-Franchisors must file Franchise Disclosure Documents; **Item 20** lists every current franchisee with business address and phone. Several states publish FDDs free:
+Franchisors must file Franchise Disclosure Documents. [16 CFR § 436.5(t) Item 20](https://www.law.cornell.edu/cfr/text/16/436.5) requires **name + outlet address + telephone** for current franchisees. Email is not a required field. Treat Item 20 as the owner-name ledger; emails still come from Lane B. Never invent a mailbox from a filing name.
 
-| Portal | What you get |
-|---|---|
-| Minnesota CARDS (`cards.web.commerce.state.mn.us`) | free direct FDD PDF downloads, easiest flow |
-| California DFPI DocQNet (`docqnet.dfpi.ca.gov`) | free FDD search/download |
-| Wisconsin DFI | free franchise filing search |
-| Indiana Securities Portal | free filings search |
+| Portal | Probed 2026-08-15 | Use |
+|---|---|---|
+| Wisconsin DFI Franchise Search | **200** — https://dfi.wi.gov/apps/FranchiseSearch/MainSearch.aspx | first stop; name search + disclosure when registered |
+| Minnesota CARDS | bot-walled from this environment (403); operator browser: Area of Interest = Franchise Registrations at https://www.cards.commerce.state.mn.us/ | free public filings after the state accepts them |
+| Indiana Securities Portal | **200** — https://securities.sos.in.gov/general-information/franchise/ | franchise registration-type search |
+| California DFPI | DocQNet **200**; public search is https://dfpi.ca.gov/search. Older copies may need a PRA request | second-line, not a dump |
+| Maryland OAG Securities | **200** but **no public FDD search** | skip for this pilot |
 
-Item 20 gives **names + cities + phones, almost never emails** — it's the authoritative "who owns which location" ledger. Emails come from Lane B enrichment. Full SOP + verified portal behavior: see the research page.
+Receipts: [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts]].
 
-### Lane B — brand location pages (the email harvest) — RUN 2026-08-14
+### Lane B — brand location pages + radar targeting — RUN 2026-08-14 / flip 2026-08-15
+
+OSM discovery used to **drop** every franchise so the site grader would not pitch CVS. That signal now has an opt-in targeting mode that does **not** change the default grader:
+
+```
+node _os/automation/bin/discover-prospects.js --market PHL --keep-chains service-franchise --dry-run
+```
+
+Keeps Momentum ICP service franchises (home services, restoration, senior care, local fitness). Still drops pharmacies, convenience, hotels, banks. Default write path for that flag is gitignored `12_Brain/private/contacts/`. An OSM hit is a lead — still require a literal on-page mailbox before the row is send-ready.
+
+### Lane B harvest — brand location pages — RUN 2026-08-14
 
 Service franchises publish per-location pages, and some list the location email right on the page. **The winning move is the brand's own locator endpoint** (`wp-json` / offices API). When that is 401/JS-shell, probe one location home **and** its contact-us page before a national crawl.
 
@@ -56,13 +67,27 @@ Confirmed dead ends (JS-shell locators, no static emails): Pillar To Post, House
 
 Per row capture: brand, location, contact name, email, phone, city, state, category, `role_type` (owner_operator | location_mailbox), source URL, accessed date.
 
-### Lane C — franchisor-tier contacts (secondary)
+### Lane C — directories, then brand pages (secondary) — PROBED 2026-08-15
 
-Corporate `franchising@` / `marketing@` addresses and named marketing leads from brand sites — one email can influence many locations, but it's a different pitch (partner/co-marketing, not "attend the workshop"). Hold until wave-1 data exists. PA/NJ-headquartered brands first (Visiting Angels — Bryn Mawr; Hand & Stone — NJ; PrimoHoagies — NJ; Saxbys — Philly).
+Use directories to **pick the next brands**, then run the Lane B one-page probe. Not an email source.
 
-### Lane D — trade-press multi-unit owners (quality seasoning)
+| Directory | URL | Notes |
+|---|---|---|
+| IFA opportunities | https://www.franchise.org/franchise-opportunities | brand list |
+| Entrepreneur Franchise 500 | https://www.entrepreneur.com/franchise500 | ranked; teaser without a subscription |
+| Franchise Times Top 400 | https://www.franchisetimes.com/top-400-2025/ | same |
 
-Franchise trade press (1851franchise.com, Franchise Times, local business journals) names multi-unit franchisees and area developers in the Philly metro. Named owner + their operating company's public email = the highest-value rows on the list.
+Franchisor-tier corporate marketing / franchise-development mailboxes stay **held** until wave-1 send data. Different pitch (co-marketing). PA/NJ-headquartered brands first when that pass opens.
+
+LinkedIn (free): `"{brand}" "{city}" (owner OR franchisee OR "multi-unit")` — message only people who show as the operator. No scraped profiles in git.
+
+### Lane D — verification + compliance — DOCUMENTED 2026-08-15
+
+- MX: `node _os/automation/bin/mx-check.js <csv> --email-col Email` (DNS only). Send-ready is 720/720 `mx_ok`.
+- MX-ok ≠ owner. Store-counter and vendor mailboxes stay off the send file.
+- CAN-SPAM applies to B2B ([FTC guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)): truthful headers, non-deceptive subject, physical postal address, working opt-out honored within 10 business days.
+- 25–40 cold sends/day from one real mailbox after SPF/DKIM. Three-touch cap. No calendar invite on the cold list.
+- PII: Drive + `12_Brain/private/contacts/` only.
 
 ## Pipeline (repeatable)
 

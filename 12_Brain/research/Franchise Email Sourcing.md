@@ -1,7 +1,8 @@
 ---
 tags: [research, franchise, sourcing, outreach]
 created: 2026-08-14
-expires: 2026-11-14
+updated: 2026-08-15
+expires: 2026-11-15
 source: "[[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest]]"
 ---
 
@@ -10,12 +11,15 @@ source: "[[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest]]"
 One-line summary: the send list is **720 MX-ok franchisee/office mailboxes**
 (not the 4,914 UPS Store front-desk inboxes). Evening harvest added Synergy
 HomeCare + Mosquito Squad on top of CertaPro / PACKOUTS / Comfort Keepers.
+2026-08-15 filled Lanes A/C/D (no new emails) and flipped OSM discovery into
+an opt-in franchise targeting mode.
 
 Method: [[02_Campaigns/Growth Workshop/Franchise Email Sourcing Playbook]].
-Contact rows: private Drive / artifact only.
+Contact rows: private Drive / `12_Brain/private/contacts/` only.
 
 Afternoon receipts: [[12_Brain/raw/research/2026-08-14 Franchise Email Sourcing Receipts]].
 Evening receipts: [[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest]].
+Lane A/C/D + radar flip: [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts]].
 
 ## Send-ready (what to email)
 
@@ -38,8 +42,15 @@ UPS Store Yext pages still exist (**4,914** `store####@` front-desk boxes). They
 - **Yext / Neighborly locators are usually JS shells.** Joint clinic pages print a vendor domain. Lawn Doctor REST dumps are 401. Probe one page before a national crawl.
 - **Named-owner density is brand-specific.** PACKOUTS is mostly first.last. CertaPro/MSQ are territory mailboxes (still the franchisee's business email). Sort by `Email Type`.
 
+## Lanes A / C / D (2026-08-15)
+
+- **Lane A:** Item 20 is names + phones ([16 CFR § 436.5(t)](https://www.law.cornell.edu/cfr/text/16/436.5)). WI DFI search is the easiest free FDD UI. MN CARDS is bot-walled from agents. CA search moved to dfpi.ca.gov/search. MD has no public FDD download. Zero new emails (correct).
+- **Lane B flip:** `discover-prospects.js --keep-chains service-franchise` keeps ICP franchises and still drops CVS. Default grader unchanged. OSM hit ≠ sendable email.
+- **Lane C:** IFA / Entrepreneur 500 / Franchise Times 400 are brand pickers. Franchisor-tier still held.
+- **Lane D:** CAN-SPAM applies to B2B ([FTC guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)). MX DNS-only. 25–40/day. Three-touch cap. No cold-list calendar invites.
+
 ## Open (next passes)
 
-- Lane A: FDD Item 20 owner-name enrichment for LinkedIn/GBP DMs (still almost never emails).
-- Lane C franchisor-tier after send data.
-- Lane D trade-press multi-unit names with a literal public email.
+- Lane A owner-name enrichment on the existing 720 (WI first) for LinkedIn/GBP DMs.
+- Lane C franchisor-tier after wave-1 send data.
+- Lane D trade-press multi-unit names only when a literal public email is on the page.
