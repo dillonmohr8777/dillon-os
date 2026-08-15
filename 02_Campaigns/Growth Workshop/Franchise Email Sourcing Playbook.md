@@ -85,7 +85,7 @@ LinkedIn (free): `"{brand}" "{city}" (owner OR franchisee OR "multi-unit")` — 
 
 - MX: `node _os/automation/bin/mx-check.js <csv> --email-col Email` (DNS only). Send-ready is 720/720 `mx_ok`.
 - MX-ok ≠ owner. Store-counter and vendor mailboxes stay off the send file.
-- CAN-SPAM applies to B2B ([FTC guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)): truthful headers, non-deceptive subject, physical postal address, working opt-out honored within 10 business days.
+- CAN-SPAM applies to B2B ([FTC guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)): truthful headers, non-deceptive subject, **identify as a commercial message**, physical postal address, working opt-out honored within 10 business days (house rule: same hour). Hold `.ca` / Canada rows for a separate CASL review.
 - 25–40 cold sends/day from one real mailbox after SPF/DKIM. Three-touch cap. No calendar invite on the cold list.
 - PII: Drive + `12_Brain/private/contacts/` only.
 

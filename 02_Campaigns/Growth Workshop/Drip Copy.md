@@ -18,12 +18,14 @@ One-line summary: every message the campaign needs, paste-ready, nothing sends u
 - **Windows:** Tue–Thu 8:30–11:00 AM ET first, Mon/Fri second.
 - **Three-touch cap** per contact, then stop (Mac's rule). Replies remove a contact from all remaining touches.
 - **Format:** plain text, one link per email, no images, no attachments — **except C1**, which is HTML with Gmail EventReservation markup (`c1-gmail-event.html`) and is registrants-only.
-- **CAN-SPAM footer on every cold email** (fill the address once in the template):
+- **CAN-SPAM footer on every cold email** (fill the address once in the template). B2B is not exempt. Identify the message as commercial, include a real postal address, and keep the opt-out working for 30 days ([FTC CAN-SPAM guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)).
 
+> This is a commercial message from Momentum 360.
 > Momentum 360 · [MOMENTUM 360 MAILING ADDRESS — required, fill before send]
 > Don't want these? Reply "no thanks" and we won't email you again. {{unsubscribe_link}}
 
-- **Suppression:** any bounce, "no thanks," or unsubscribe goes into the sheet's `Outreach Status` column immediately (`suppressed`).
+- **Hold Canada.** This sequence is US CAN-SPAM only. Any `.ca` or Canada-located row stays off Wave 1 until a separate CASL review.
+- **Suppression:** any bounce, "no thanks," or unsubscribe goes into the sheet's `Outreach Status` column immediately (`suppressed`). One spam complaint stops the cold wave (Gate #1 red).
 
 ## Token map
 
@@ -327,6 +329,7 @@ Philly-area owners: free 60-min working session Thu Aug 27 at noon ET. Bring one
 
 - [ ] Meeting link: live Meet https://meet.google.com/ive-hkws-xdg — Sean/Mac confirm or replace with Zoom
 - [ ] [MOMENTUM 360 MAILING ADDRESS] in the footer template
+- [ ] Commercial-message line in the cold footer (required; not just opt-out)
 - [ ] [BOOKING LINK] (Sean's or Mac's calendar link)
 - [ ] [REPLAY LINK] + [TEMPLATE LINK] after the event
 - [ ] Sean/Mac approve A1/B1 word-for-word before the first send

@@ -47,7 +47,7 @@ UPS Store Yext pages still exist (**4,914** `store####@` front-desk boxes). They
 - **Lane A:** Item 20 is names + phones ([16 CFR § 436.5(t)](https://www.law.cornell.edu/cfr/text/16/436.5)). WI DFI search is the easiest free FDD UI. MN CARDS is bot-walled from agents. CA search moved to dfpi.ca.gov/search. MD has no public FDD download. Zero new emails (correct).
 - **Lane B flip:** `discover-prospects.js --keep-chains service-franchise` keeps ICP franchises and still drops CVS. Default grader unchanged. OSM hit ≠ sendable email.
 - **Lane C:** IFA / Entrepreneur 500 / Franchise Times 400 are brand pickers. Franchisor-tier still held.
-- **Lane D:** CAN-SPAM applies to B2B ([FTC guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)). MX DNS-only. 25–40/day. Three-touch cap. No cold-list calendar invites.
+- **Lane D:** CAN-SPAM applies to B2B ([FTC guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)). Cold footer needs a commercial-message line plus a real postal address, not opt-out alone. Hold Canada / `.ca` rows. MX DNS-only. 25–40/day. Three-touch cap. No cold-list calendar invites.
 
 ## Open (next passes)
 
