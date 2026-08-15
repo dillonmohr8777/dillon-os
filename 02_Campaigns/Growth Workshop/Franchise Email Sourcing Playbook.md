@@ -73,13 +73,25 @@ Use directories to **pick the next brands**, then run the Lane B one-page probe.
 
 | Directory | URL | Notes |
 |---|---|---|
-| IFA opportunities | https://www.franchise.org/franchise-opportunities | brand list |
-| Entrepreneur Franchise 500 | https://www.entrepreneur.com/franchise500 | ranked; teaser without a subscription |
-| Franchise Times Top 400 | https://www.franchisetimes.com/top-400-2025/ | same |
+| Franchise Times Top 400 **category** tables | https://www.franchisetimes.com/top-400-2025/ | **Best free ranked list.** Homepage teasers; category pages (home services, health/medical, cleaning) render full tables with no login. 2026 list is not up yet. |
+| Entrepreneur Franchise 500 hub | https://www.entrepreneur.com/franchise500 | JS teaser / subscribe wall. Use the free 2026 editorial top-10-by-industry articles instead of scraping the hub. |
+| IFA opportunities | https://www.franchise.org/franchise-opportunities/ | Free, JS grid. Brand cards sometimes print a franchise-development mailbox (franchisor-tier, not owner). |
 
-Franchisor-tier corporate marketing / franchise-development mailboxes stay **held** until wave-1 send data. Different pitch (co-marketing). PA/NJ-headquartered brands first when that pass opens.
+**Next Lane B probes** (one page each, then stop if no literal mailbox). Subtract the 720 + known dead ends first:
 
-LinkedIn (free): `"{brand}" "{city}" (owner OR franchisee OR "multi-unit")` — message only people who show as the operator. No scraped profiles in git.
+| Brand | Why | First probe |
+|---|---|---|
+| Blue Kangaroo Packoutz | Public `GET /wp-json/belfor/v1/locations` includes an email field (same restoration family as PACKOUTS) | one record from the dump, then decide on a crawl |
+| Mosquito Authority | Static territory index, 0 emails on the list page | one territory home + contact subpage |
+| Mighty Dog Roofing | Static `/locations/` with phones, many `/contact` hrefs | same one-page rule as Mosquito Squad |
+| HomeWell | 187 location URLs, sampled PA contact-us = form only | one `/meet-the-team/` page, not a crawl |
+| PuroClean / ComForCare | Phone/form locators | one location page |
+
+Do not recrawl Joint, Lawn Doctor REST, Neighborly, Christmas Decor, Visiting Angels locations, Senior Helpers, SERVPRO JS, or UPS store counters.
+
+Franchisor-tier stays **held** until wave-1 send data. Different pitch. If that pass opens: Visiting Angels (Bryn Mawr) and PrimoHoagies (Westville NJ) have corporate development/support mailboxes; Hand & Stone HQ is Trevose PA and form-only; **drop Saxbys** (campus / company-operated, `/franchise/` 404).
+
+LinkedIn (free, no Sales Nav): Google `site:linkedin.com/in "{Brand}" ("Owner" OR Franchisee) (Pennsylvania OR "New Jersey" OR Philadelphia)` — confirm the operator, then take the mailbox from a location page. No scraped profiles in git.
 
 ### Lane D — verification + compliance — DOCUMENTED 2026-08-15
 

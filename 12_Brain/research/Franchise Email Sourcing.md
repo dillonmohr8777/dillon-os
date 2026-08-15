@@ -46,11 +46,11 @@ UPS Store Yext pages still exist (**4,914** `store####@` front-desk boxes). They
 
 - **Lane A:** Item 20 is names + phones ([16 CFR § 436.5(t)](https://www.law.cornell.edu/cfr/text/16/436.5)). WI DFI search is the easiest free FDD UI. MN CARDS is bot-walled from agents. CA search moved to dfpi.ca.gov/search. MD has no public FDD download. Zero new emails (correct).
 - **Lane B flip:** `discover-prospects.js --keep-chains service-franchise` keeps ICP franchises and still drops CVS. Default grader unchanged. OSM hit ≠ sendable email.
-- **Lane C:** IFA / Entrepreneur 500 / Franchise Times 400 are brand pickers. Franchisor-tier still held.
+- **Lane C:** FT 2025 **category** tables are the free ranked list; Entrepreneur's hub is a teaser (use editorial top-10s). Next Lane B probe is Blue Kangaroo Packoutz `wp-json/belfor/v1/locations` (one record first). Franchisor-tier still held; drop Saxbys from that list.
 - **Lane D:** CAN-SPAM applies to B2B ([FTC guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business)). Cold footer needs a commercial-message line plus a real postal address, not opt-out alone. Hold Canada / `.ca` rows. MX DNS-only. 25–40/day. Three-touch cap. No cold-list calendar invites.
 
 ## Open (next passes)
 
 - Lane A owner-name enrichment on the existing 720 (WI first) for LinkedIn/GBP DMs.
-- Lane C franchisor-tier after wave-1 send data.
+- Lane C franchisor-tier after wave-1 send data. Next owner harvest: Blue Kangaroo Packoutz one-record probe, then Mosquito Authority / Mighty Dog if that prints a franchisee mailbox.
 - Lane D trade-press multi-unit names only when a literal public email is on the page.
