@@ -7,4 +7,5 @@ Dillon signs off.
 
 Photos keep their own frame. No `object-fit: cover` boxes, no Ken Burns
 zoom, no masonry cells that slice a 3:2 plate. Figures wrap the still.
-Hero is eager; everything else is lazy.
+Hero is eager; everything else is lazy. Motion pops the frame (tilt,
+stamp, steam, dual marquees, magnetic CTAs). The plate never zooms.
