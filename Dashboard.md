@@ -19,9 +19,11 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Unblock Replenish Google Ads billing — confirm Mia completed payment screen
+- [ ] Draft replies for 4 open Slack loops (bot alert, CallRail, guidelines, brand direction)
+- [ ] Growth Workshop Aug 27 checklist — LP, drip, RSVP rail
+- [ ] Review approval board at `automation-runs/dillon-command/2026-08-15/approval-board.md`
+- [ ] Triage top outreach candidates from radar (172 rebuild queue)
 
 ## Active Projects
 -

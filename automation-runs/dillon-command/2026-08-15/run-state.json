@@ -1,0 +1,215 @@
+{
+  "automation_id": "dillon-command",
+  "run_id": "dillon-command-2026-08-15",
+  "date": "2026-08-15",
+  "started_at": "2026-08-15T13:03:27.567Z",
+  "finished_at": "2026-08-15T13:03:59.695Z",
+  "status": "ok",
+  "lanes": [
+    {
+      "id": "comms",
+      "label": "Comms triage",
+      "tier": 0,
+      "skills": [
+        "slack-intake",
+        "inbox-brief"
+      ],
+      "commands": [],
+      "depends_on": [],
+      "blocked_without": [],
+      "status": "ok",
+      "started_at": null,
+      "finished_at": "2026-08-15T13:03:59.692Z",
+      "artifacts": [
+        "Daily-Briefs/slack-intake-2026-08-15.md",
+        "Daily-Briefs/inbox-brief-2026-08-15.md"
+      ],
+      "notes": []
+    },
+    {
+      "id": "clients",
+      "label": "Client roster",
+      "tier": 0,
+      "skills": [
+        "client-pulse"
+      ],
+      "commands": [
+        "node _os/automation/bin/frontmatter-validate.js"
+      ],
+      "depends_on": [],
+      "blocked_without": [],
+      "status": "ok",
+      "started_at": "2026-08-15T13:03:27.567Z",
+      "finished_at": "2026-08-15T13:03:27.760Z",
+      "artifacts": [
+        "Daily-Briefs/pulse-today.md",
+        "Daily-Briefs/frontmatter-report.md"
+      ],
+      "notes": [],
+      "command_results": [
+        {
+          "command": "node _os/automation/bin/frontmatter-validate.js",
+          "ok": true,
+          "status": 0,
+          "stdout": "{\n  \"status\": \"ok\",\n  \"counts\": {\n    \"files\": 38,\n    \"incomplete\": 0,\n    \"complete\": 38\n  },\n  \"state\": \"/workspace/12_Brain/state/frontmatter-validate.json\",\n  \"report\": \"/workspace/Daily-Briefs/frontmatter-report.md\"\n}",
+          "stderr": "",
+          "duration_ms": 193
+        }
+      ]
+    },
+    {
+      "id": "intelligence",
+      "label": "Intelligence",
+      "tier": 0,
+      "skills": [
+        "research-sweep"
+      ],
+      "commands": [],
+      "depends_on": [],
+      "blocked_without": [],
+      "status": "ok",
+      "started_at": null,
+      "finished_at": "2026-08-15T13:03:59.692Z",
+      "artifacts": [
+        "Daily-Briefs/radar-2026-08-15.md"
+      ],
+      "notes": [
+        "radar brief read"
+      ]
+    },
+    {
+      "id": "websites",
+      "label": "Site health",
+      "tier": 0,
+      "skills": [],
+      "commands": [
+        "node _os/automation/bin/site-health.js --dry-run"
+      ],
+      "depends_on": [],
+      "blocked_without": [],
+      "status": "ok",
+      "started_at": "2026-08-15T13:03:27.761Z",
+      "finished_at": "2026-08-15T13:03:27.783Z",
+      "artifacts": [
+        "Daily-Briefs/site-health-report.md"
+      ],
+      "notes": [],
+      "command_results": [
+        {
+          "command": "node _os/automation/bin/site-health.js --dry-run",
+          "ok": true,
+          "status": 0,
+          "stdout": "{\n  \"status\": \"fail\",\n  \"dry_run\": true,\n  \"counts\": {\n    \"total\": 5,\n    \"pass\": 1,\n    \"warn\": 0,\n    \"fail\": 1,\n    \"skipped\": 3\n  },\n  \"state\": \"/workspace/12_Brain/state/site-health-sentinel.json\",\n  \"report\": \"/workspace/Daily-Briefs/site-health-report.md\"\n}",
+          "stderr": "",
+          "duration_ms": 22
+        }
+      ]
+    },
+    {
+      "id": "outreach",
+      "label": "Outreach queue",
+      "tier": 0,
+      "skills": [
+        "site-grade"
+      ],
+      "commands": [
+        "node _os/automation/bin/queue-status.js"
+      ],
+      "depends_on": [],
+      "blocked_without": [],
+      "status": "ok",
+      "started_at": "2026-08-15T13:03:27.783Z",
+      "finished_at": "2026-08-15T13:03:27.804Z",
+      "artifacts": [
+        "12_Brain/queue/discover-qualify-2026-07-29.jsonl",
+        "12_Brain/queue/grok-intelligence-ingest-2026-07-30.jsonl",
+        "12_Brain/queue/mcp-acceptance-gate-2026-07-31.jsonl",
+        "12_Brain/queue/site-grader-2026-08-06.jsonl",
+        "Daily-Briefs/radar-2026-08-15.md"
+      ],
+      "notes": [],
+      "command_results": [
+        {
+          "command": "node _os/automation/bin/queue-status.js",
+          "ok": true,
+          "status": 0,
+          "stdout": "{\n  \"automations\": [\n    {\n      \"id\": \"frontmatter-validate\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": {\n        \"status\": \"ok\",\n        \"written_at\": \"2026-08-15T13:03:27.756Z\",\n        \"counts\": {\n          \"files\": 38,\n          \"incomplete\": 0,\n          \"complete\": 38\n        }\n      }\n    },\n    {\n      \"id\": \"frontmatter-repair\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": {\n        \"status\": \"ok\",\n        \"written_at\": \"2026-07-29T21:13:09.908Z\",\n        \"counts\": {\n          \"candidates\": 25\n        }\n      }\n    },\n    {\n      \"id\": \"site-health-sentinel\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": {\n        \"status\": \"error\",\n        \"written_at\": \"2026-08-15T13:03:27.780Z\",\n        \"counts\": {\n          \"total\": 5,\n          \"pass\": 1,\n          \"warn\": 0,\n          \"fail\": 1,\n          \"skipped\": 3\n        }\n      }\n    },\n    {\n      \"id\": \"discover-qualify\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": {\n        \"status\": \"ok\",\n        \"written_at\": \"2026-07-29T21:12:51.390Z\",\n        \"counts\": {\n          \"total\": 2,\n          \"queued_build\": 1,\n          \"scored\": 1,\n          \"suppressed\": 0\n        }\n      }\n    },\n    {\n      \"id\": \"site-factory-batch\",\n      \"status\": \"external-dependency\",\n      \"tier\": 0,\n      \"last\": null\n    },\n    {\n      \"id\": \"outreach-activate\",\n      \"status\": \"gated\",\n      \"tier\": 2,\n      \"last\": null\n    },\n    {\n      \"id\": \"indeed-hiring-adapter\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": null\n    },\n    {\n      \"id\": \"grok-intelligence-ingest\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": {}\n    },\n    {\n      \"id\": \"xai-daily-search\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": null\n    },\n    {\n      \"id\": \"experiment-queue\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": null\n    },\n    {\n      \"id\": \"dillon-dev-sandbox\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": null\n    },\n    {\n      \"id\": \"maker-checker\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": null\n    },\n    {\n      \"id\": \"mcp-acceptance-gate\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": null\n    },\n    {\n      \"id\": \"context7-docs\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": null\n    },\n    {\n      \"id\": \"landingfolio-design-reference\",\n      \"status\": \"pending-gate\",\n      \"tier\": 0,\n      \"last\": null\n    },\n    {\n      \"id\": \"dillon-command\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": {\n        \"status\": \"running\",\n        \"written_at\": \"2026-08-15T13:03:27.519Z\",\n        \"counts\": {\n          \"lanes\": 8,\n          \"ok\": 0,\n          \"open_slack\": 4,\n          \"inbox_notes\": 4\n        }\n      }\n    },\n    {\n      \"id\": \"aeo-trust-gate\",\n      \"status\": \"implemented\",\n      \"tier\": 0,\n      \"last\": null\n    }\n  ],\n  \"gates\": {\n    \"obsidian_sync_cli\": \"pending-human\",\n    \"netlify_deploy_token\": \"pending-secret\",\n    \"landingfolio_token\": \"pending-secret\",\n    \"mail_vendor\": \"pending-decision\",\n    \"outreach_send\": \"hard-blocked\"\n  },\n  \"queue_files\": [\n    \"discover-qualify-2026-07-29.jsonl\",\n    \"grok-intelligence-ingest-2026-07-30.jsonl\",\n    \"mcp-acceptance-gate-2026-07-31.jsonl\",\n    \"site-grader-2026-08-06.jsonl\"\n  ]\n}",
+          "stderr": "",
+          "duration_ms": 21
+        }
+      ]
+    },
+    {
+      "id": "ads",
+      "label": "Paid media",
+      "tier": 0,
+      "skills": [
+        "metrics-pull"
+      ],
+      "commands": [],
+      "depends_on": [],
+      "blocked_without": [
+        "google-ads-mcp",
+        "meta-mcp",
+        "ga4-mcp"
+      ],
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": "2026-08-15T13:03:59.693Z",
+      "artifacts": [],
+      "notes": [
+        "no Google Ads/Meta/GA4 MCP in cloud"
+      ]
+    },
+    {
+      "id": "reporting",
+      "label": "Client reporting",
+      "tier": 0,
+      "skills": [
+        "client-report"
+      ],
+      "commands": [],
+      "depends_on": [],
+      "blocked_without": [
+        "google-ads-mcp"
+      ],
+      "status": "skipped",
+      "started_at": null,
+      "finished_at": "2026-08-15T13:03:59.693Z",
+      "artifacts": [],
+      "notes": [
+        "no Google Ads MCP in cloud"
+      ]
+    },
+    {
+      "id": "command",
+      "label": "Command synthesis",
+      "tier": 0,
+      "skills": [
+        "am-report",
+        "plan-today"
+      ],
+      "commands": [],
+      "depends_on": [
+        "comms",
+        "clients",
+        "intelligence",
+        "websites",
+        "outreach"
+      ],
+      "blocked_without": [],
+      "status": "ok",
+      "started_at": null,
+      "finished_at": "2026-08-15T13:03:59.694Z",
+      "artifacts": [
+        "Daily-Briefs/am-report-2026-08-15.md",
+        "Daily-Briefs/plan-2026-08-15.md"
+      ],
+      "notes": []
+    }
+  ],
+  "profile_version": 1,
+  "artifact_paths": [
+    "automation-runs/dillon-command/2026-08-15/approval-board.md"
+  ]
+}
