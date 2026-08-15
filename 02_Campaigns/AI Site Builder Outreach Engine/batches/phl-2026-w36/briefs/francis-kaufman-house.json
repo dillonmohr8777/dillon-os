@@ -1,0 +1,252 @@
+{
+  "slug": "francis-kaufman-house",
+  "name": "Francis Kaufman House",
+  "city": "Sumneytown",
+  "category": "BYOB restaurant",
+  "vertical": "food",
+  "attitude": "editorial",
+  "url": "http://franciskaufmanhouse.com/",
+  "phone": "215-234-2499",
+  "address": "3164 Main Street #63, Sumneytown, PA 18084",
+  "hours": "",
+  "description": "BYOB, cash only. Chef William Francis and Desiree. 1850 cigar factory turned hotel. Crab cakes, filet, smoked brisket, smoked beef ribs, scallops, chocolate flourless torte. Country fare with international flair.",
+  "noindex": true,
+  "schemaType": "Restaurant",
+  "logo": false,
+  "marquee": [
+    "BYOB",
+    "Cash only",
+    "Crab cakes",
+    "Smoked brisket",
+    "Chef William Francis"
+  ],
+  "tokens": {
+    "paper": "#F3EDE2",
+    "ink": "#2A2118",
+    "accent": "#7A2E12",
+    "accent2": "#C4A574",
+    "panel": "#DCCFC0",
+    "deep": "#1A140E",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Serif 4"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2152342499"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of BYOB dining for Francis Kaufman House, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Sumneytown | BYOB restaurant",
+    "headline": "Country fare, international flair",
+    "sub": "Francis Kaufman House is Chef William Francis and Desiree in an 1850 building that started as a cigar factory and later ran as a hotel. The room is BYOB and cash only. Regulars order crab cakes, filet, smoked brisket, smoked beef ribs, scallops, and the chocolate flourless torte. Reserve the table. Bring the bottle.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2152342499"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Sumneytown",
+      "sub": "Chef William Francis"
+    },
+    "marquee": [
+      "BYOB",
+      "Cash only",
+      "Crab cakes",
+      "Smoked brisket",
+      "Chef William Francis"
+    ]
+  },
+  "offerings": {
+    "heading": "What the house actually puts on the plate",
+    "items": [
+      {
+        "title": "Crab cakes, filet, scallops",
+        "text": "Crab cakes and scallops are the seafood people drive to Sumneytown for. Filet is the steak that shows up in the same reviews. Homemade and fresh is how the kitchen talks about the work."
+      },
+      {
+        "title": "Smoked brisket and beef ribs",
+        "text": "Smoked brisket, smoked beef ribs, smoked fish, and chicken sit on the board when the pit is running. Country fare with international flair is their own line, and the smoke is how it tastes on Main Street."
+      },
+      {
+        "title": "BYOB, cash, chocolate torte",
+        "text": "Bring the wine. Pay cash. Finish with the chocolate flourless torte. Desiree works the house with Chef William Francis, so the night feels like a dining room someone actually lives in."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "An 1850 building, a chef, a bottle you brought",
+    "paragraphs": [
+      "3164 Main Street in Sumneytown has been a cigar factory and a hotel. Francis Kaufman House is what Chef William Francis and Desiree do with it now: reserved tables, bottles from your cellar, cash at the end. Wild game has been part of the kitchen's history. Crab cakes and smoked brisket are what people name after they leave.",
+      "You call 215-234-2499 and hold the night. The food is homemade. The room is small enough that a reservation matters. Bring a red for the filet or a white for the scallops. Leave room for the flourless torte."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a night at Kaufman House actually goes",
+    "items": [
+      {
+        "title": "Reserve, then bring the bottle",
+        "text": "The table is held ahead of time. Wine, beer, or whiskey comes with you. The house cooks. You pour."
+      },
+      {
+        "title": "Eat crab cakes or the smoked plates",
+        "text": "Crab cakes, filet, scallops, smoked brisket, smoked beef ribs. Ask what William is running that night. The kitchen still cooks wild game when it is on."
+      },
+      {
+        "title": "Pay cash, take the torte",
+        "text": "Cash only at the end. Chocolate flourless torte if you still have room. Desiree keeps the room moving."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Chef William Francis, an 1850 house",
+    "text": "Cigar factory, then hotel, now a BYOB dining room in Sumneytown. Crab cakes, smoked brisket, filet, scallops, and a flourless torte. Cash only. Reservations. A bottle from your own shelf.",
+    "cta": {
+      "label": "Official site",
+      "href": "http://franciskaufmanhouse.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Country fare with international flair",
+    "text": "Their line, not a brochure invention. Homemade plates, smoke when the pit is on, wild game in the house history. Chef William Francis and Desiree still run 3164 Main Street like a house that knows your name after the second visit.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Reserve",
+      "href": "http://franciskaufmanhouse.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Crab cakes and scallops",
+        "href": "http://franciskaufmanhouse.com/",
+        "imageIndex": 9,
+        "text": "The seafood plates regulars drive to Sumneytown for, next to a filet if you want steak."
+      },
+      {
+        "title": "Smoked brisket and beef ribs",
+        "href": "http://franciskaufmanhouse.com/",
+        "imageIndex": 10,
+        "text": "Smoke from the house kitchen, with smoked fish and chicken when they are running."
+      },
+      {
+        "title": "Chocolate flourless torte",
+        "href": "http://franciskaufmanhouse.com/",
+        "imageIndex": 11,
+        "text": "The finish. BYOB, cash only, reservation on the books."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Main Street, Sumneytown",
+    "sub": "3164 Main Street #63, Sumneytown, PA 18084"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2152342499"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2152342499"
+    },
+    {
+      "label": "Official site",
+      "href": "http://franciskaufmanhouse.com/"
+    }
+  ]
+}

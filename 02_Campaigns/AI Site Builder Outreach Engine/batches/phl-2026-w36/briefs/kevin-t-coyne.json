@@ -1,0 +1,252 @@
+{
+  "slug": "kevin-t-coyne",
+  "name": "Kevin T. Coyne, Esq.",
+  "city": "Media",
+  "category": "Criminal defense, probate, wills, estates",
+  "vertical": "legal",
+  "attitude": "editorial",
+  "url": "https://kevintcoyneattorney.com/",
+  "phone": "610-833-2300",
+  "address": "12 Veterans Square, 1st Floor, Media, PA 19063",
+  "hours": "8AM-5PM",
+  "description": "Kevin T. Coyne, Esq. Media. Former Delaware County Assistant Public Defender since 1991. Criminal defense, personal injury, workers' comp, wills, estates, guardianship, PFA defense. Contingency on injury files.",
+  "noindex": true,
+  "schemaType": "Attorney",
+  "logo": false,
+  "marquee": [
+    "Criminal defense",
+    "Personal injury",
+    "Wills",
+    "Estates",
+    "Since 1991"
+  ],
+  "tokens": {
+    "paper": "#F4F0E8",
+    "ink": "#1A2430",
+    "accent": "#1B4F8A",
+    "accent2": "#C4A35A",
+    "panel": "#DCE3EA",
+    "deep": "#0E1C2A",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Libre Baskerville",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Sans 3"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6108332300"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of criminal defense and estate law for Kevin T. Coyne, Esq., frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Media | Criminal defense, probate, wills, estates",
+    "headline": "Public defender spine, private files",
+    "sub": "Kevin T. Coyne opened in 1991 as a Delaware County Assistant Public Defender and still takes the criminal file personally from 12 Veterans Square in Media. Personal injury, workers' compensation, wills, probate, estates, Orphans' Court guardianship, and Protection From Abuse defense sit in the same office. Injury work runs on contingency. He will travel any Pennsylvania county the case needs.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6108332300"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Media",
+      "sub": "Former Assistant Public Defender"
+    },
+    "marquee": [
+      "Criminal defense",
+      "Personal injury",
+      "Wills",
+      "Estates",
+      "Since 1991"
+    ]
+  },
+  "offerings": {
+    "heading": "The files this office actually takes",
+    "items": [
+      {
+        "title": "Criminal defense",
+        "text": "Charges, DUI, and the caption that has to be answered in Delaware County. A former Assistant Public Defender already knows that courthouse from the other side of the table."
+      },
+      {
+        "title": "Personal injury and workers' comp",
+        "text": "Car wrecks, slip and falls, workplace injuries. Arbitration when damages sit under $50,000. Contingency means you do not pay a retainer to start the injury file. He also handles medical malpractice and premises claims when the facts support them."
+      },
+      {
+        "title": "Wills, estates, PFA, guardianship",
+        "text": "Wills while everyone is alive. Probate and estates after. Orphans' Court guardianship. Defense on a Protection From Abuse petition. One lawyer, not a department that hands you to a clerk."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Veterans Square, one lawyer since 1991",
+    "paragraphs": [
+      "Kevin started as an assistant public defender in 1991, kept a private practice on the side, then put the firm on Veterans Square in Media. Thirty-plus years later the criminal file and the will still get the same person. Chester, Montgomery, and Philadelphia counties are in range. He will go wherever in Pennsylvania the caption sits.",
+      "Families hire him because the injury claim and the estate can live next to the criminal matter without a new intake team. Office hours run 8am to 5pm. Call 610-833-2300. You are hiring Kevin T. Coyne, not a billboard firm."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How the work actually starts",
+    "items": [
+      {
+        "title": "Bring the criminal matter",
+        "text": "The charge and the county come first. A former Delaware County public defender already knows how that courthouse moves."
+      },
+      {
+        "title": "Bring the injury or the will",
+        "text": "Contingency on most personal injury files. Wills get written while everyone is alive. Probate is the file after. Workers' comp when the job did the damage."
+      },
+      {
+        "title": "Work from Veterans Square",
+        "text": "First floor, 12 Veterans Square. The lawyer is Kevin. The first call does not get handed to an anonymous team."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "A defender's background, an estates and injury practice",
+    "text": "Former Assistant Public Defender, Delaware County, since 1991. Criminal defense with a local spine. Personal injury on contingency. Wills, probate, guardianship, and PFA defense from the same Media office.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://kevintcoyneattorney.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "One name on both kinds of file",
+    "text": "Criminal court in the morning, a will in the afternoon. Kevin T. Coyne, Esq. practices both from Veterans Square. You are hiring the lawyer.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Talk to the office",
+      "href": "https://kevintcoyneattorney.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Criminal defense",
+        "href": "https://kevintcoyneattorney.com/",
+        "imageIndex": 9,
+        "text": "Defense work from a former Assistant Public Defender in Delaware County."
+      },
+      {
+        "title": "Personal injury",
+        "href": "https://kevintcoyneattorney.com/",
+        "imageIndex": 10,
+        "text": "Wrecks, falls, workplace injuries. Contingency. Arbitration when the file is under $50,000."
+      },
+      {
+        "title": "Wills and estates",
+        "href": "https://kevintcoyneattorney.com/",
+        "imageIndex": 11,
+        "text": "Wills, probate, guardianship, and PFA defense from 12 Veterans Square."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Veterans Square, first floor",
+    "sub": "12 Veterans Square, 1st Floor, Media, PA 19063"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6108332300"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6108332300"
+    },
+    {
+      "label": "Official site",
+      "href": "https://kevintcoyneattorney.com/"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F7F8F2",
+    "ink": "#10314A",
+    "accent": "#F7C325",
+    "accent2": "#008CB4",
+    "panel": "#D6EEF4",
+    "deep": "#10314A",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of car wash work for Captain Car Wash, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "captain-car-wash",
+  "name": "Captain Car Wash",
+  "city": "Norristown",
+  "category": "Car wash",
+  "vertical": "car-wash",
+  "url": "https://captaincarwashpa.com/",
+  "phone": "610-539-9390",
+  "address": "3008 W Germantown Pike, Norristown, PA 19403",
+  "hours": "Mon-Sat 7AM-7PM, Sun 8AM-6PM",
+  "description": "Captain Carwash, conveniently located in Norristown, PA, is the go-to destination for all your car cleaning needs. With our Unlimited Wash club options, you c",
+  "marquee": [
+    "Norristown",
+    "Car wash",
+    "Manage My Plan",
+    "Aston"
+  ],
+  "hero": {
+    "eyebrow": "Norristown | Car wash",
+    "headline": "Where a Quality Wash Meets Happiness Every Time!",
+    "sub": "At Captain Car Wash, we understand that your vehicle is not just a mode of transportation; it's a reflection of your personality and style. That's why we are committed to providing more than just a wash ,  we deliver an ",
+    "ctaPrimary": {
+      "label": "Contact Us",
+      "href": "tel:6105399390"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://captaincarwashpa.com/"
+    },
+    "glassFloat": {
+      "title": "Norristown",
+      "sub": "Car wash"
+    },
+    "marquee": [
+      "Norristown",
+      "Car wash",
+      "Manage My Plan",
+      "Aston"
+    ]
+  },
+  "offerings": {
+    "heading": "Cleanliness Fuels Happiness.",
+    "items": [
+      {
+        "title": "Cleanliness Fuels Happiness",
+        "text": "Great family owned local business. Very friendly staff and my car always looks great!"
+      },
+      {
+        "title": "Manage Your Plan Online",
+        "text": "Join the Unlimited Club and wash as much as you want, whenever you want for one low monthly price. Save money and stay clean."
+      },
+      {
+        "title": "How It Works",
+        "text": "Captain Car Wash in Norristown. Call 610-539-9390."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Manage Your Plan Online",
+    "paragraphs": [
+      "Captain Car Wash treats the vehicle as more than transportation. The wash is meant to leave it looking immaculate.",
+      "Best car wash. Gets my car totally dry. My car has never been so clean. I highly recommend this car wash. Just think of it as maintenance for your vehicle."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Captain Car Wash at 610-539-9390."
+      },
+      {
+        "title": "Hours they publish",
+        "text": "Mon-Sat 7AM-7PM, Sun 8AM-6PM"
+      },
+      {
+        "title": "A real street",
+        "text": "3008 W Germantown Pike, Norristown, PA 19403."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Cleanliness Fuels Happiness",
+    "text": "Join the Unlimited Club and wash as much as you want, whenever you want for one low monthly price. Save money and stay clean.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://captaincarwashpa.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Manage Your Plan Online",
+    "text": "Unlimited Club members wash as often as they want for one monthly price. Save money and stay clean.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "https://captaincarwashpa.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Manage My Plan",
+        "href": "https://captaincarwashpa.com/",
+        "imageIndex": 9,
+        "text": "Manage My Plan at Captain Car Wash in Norristown."
+      },
+      {
+        "title": "Aston",
+        "href": "https://captaincarwashpa.com/",
+        "imageIndex": 10,
+        "text": "Aston at Captain Car Wash in Norristown."
+      },
+      {
+        "title": "Norristown (Worcester)",
+        "href": "https://captaincarwashpa.com/",
+        "imageIndex": 11,
+        "text": "Norristown (Worcester) at Captain Car Wash in Norristown."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "3008 W Germantown Pike, Norristown, PA 19403"
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact Us",
+      "href": "tel:6105399390"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6105399390"
+    },
+    {
+      "label": "Official site",
+      "href": "https://captaincarwashpa.com/"
+    }
+  ]
+}

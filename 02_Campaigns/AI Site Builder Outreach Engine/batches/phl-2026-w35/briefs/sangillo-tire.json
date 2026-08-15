@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F4F6F8",
+    "ink": "#1A1A1A",
+    "accent": "#0066CC",
+    "accent2": "#C8102E",
+    "panel": "#C5D8EE",
+    "deep": "#1A1A1A",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of tires work for Sangillo Tire Center, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "sangillo-tire",
+  "name": "Sangillo Tire Center",
+  "city": "Folsom",
+  "category": "Tires",
+  "vertical": "tyres",
+  "url": "http://www.sangillos.com/",
+  "phone": "(610) 586-3340",
+  "address": "1114 MacDade Blvd, Folsom, PA 19033",
+  "hours": "Mon-Fri 8am-5pm, Sat 8am-12pm. Closed Sunday.",
+  "description": "Sangillo Tire Center has been Selling Car most major Tire brands for Over 60 Years in Folsom, Pa",
+  "marquee": [
+    "Folsom",
+    "Tires",
+    "Home",
+    "Tire Brands"
+  ],
+  "hero": {
+    "eyebrow": "Folsom | Tires",
+    "headline": "Sangillo Tire Center",
+    "sub": "Sangillo Tire has been serving the Delaware Valley for more than 60 years. We are family owned and operated and take great pride providing our customers with excellent service for decades.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6105863340"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "http://www.sangillos.com/"
+    },
+    "glassFloat": {
+      "title": "Folsom",
+      "sub": "Tires"
+    },
+    "marquee": [
+      "Folsom",
+      "Tires",
+      "Home",
+      "Tire Brands"
+    ]
+  },
+  "offerings": {
+    "heading": "1114 MacDade Blvd.",
+    "items": [
+      {
+        "title": "1114 MacDade Blvd",
+        "text": "Sangillo Tire Center in Folsom. Call (610) 586-3340."
+      },
+      {
+        "title": "Folsom, PA 19033",
+        "text": "Sangillo Tire Center in Folsom. Call (610) 586-3340."
+      },
+      {
+        "title": "(610) 586-3340",
+        "text": "Sangillo Tire Center in Folsom. Call (610) 586-3340."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About Sangillo",
+    "paragraphs": [
+      "Sangillo Tire has been serving the Delaware Valley for more than 60 years. We are family owned and operated and take great pride providing our customers with excellent service for decades.",
+      "Sangillo Tire Center 1114 MacDade Blvd Folsom, PA 19033 US Phone: (610) 586-3340 Website: http://www.sangillos.com/"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Sangillo Tire Center at (610) 586-3340."
+      },
+      {
+        "title": "Hours they publish",
+        "text": "Mon-Fri 8am-5pm, Sat 8am-12pm. Closed Sunday."
+      },
+      {
+        "title": "A real street",
+        "text": "1114 MacDade Blvd, Folsom, PA 19033."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "1114 MacDade Blvd",
+    "text": "Sangillo Tire Center keeps the work in Folsom. The rebuild puts the next action where a phone can hit it.",
+    "cta": {
+      "label": "Official site",
+      "href": "http://www.sangillos.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Folsom, PA 19033",
+    "text": "The current site still shows this fault: 29/100 broken (provisional \u2014 Tier 0 only). Worst: no viewport meta \u2014 page renders desktop-width on phones; no HTTPS \u2014 br.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "http://www.sangillos.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Tire Brands",
+        "href": "http://www.sangillos.com/",
+        "imageIndex": 9,
+        "text": "Tire Brands at Sangillo Tire Center in Folsom."
+      },
+      {
+        "title": "Tire Care",
+        "href": "http://www.sangillos.com/",
+        "imageIndex": 10,
+        "text": "Tire Care at Sangillo Tire Center in Folsom."
+      },
+      {
+        "title": "Services",
+        "href": "http://www.sangillos.com/",
+        "imageIndex": 11,
+        "text": "Services at Sangillo Tire Center in Folsom."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "1114 MacDade Blvd, Folsom, PA 19033"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6105863340"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6105863340"
+    },
+    {
+      "label": "Official site",
+      "href": "http://www.sangillos.com/"
+    }
+  ]
+}

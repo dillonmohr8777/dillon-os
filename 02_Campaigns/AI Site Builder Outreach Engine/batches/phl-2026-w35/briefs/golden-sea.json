@@ -1,0 +1,244 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#FBF6E8",
+    "ink": "#2A1E08",
+    "accent": "#DA9100",
+    "accent2": "#C92B00",
+    "panel": "#F0E0B0",
+    "deep": "#3B2200",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of restaurant work for Golden Sea, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "golden-sea",
+  "name": "Golden Sea",
+  "city": "Blue Bell",
+  "category": "Restaurant",
+  "vertical": "restaurant",
+  "url": "http://goldenseabluebell.com/",
+  "phone": "(610) 292-8881",
+  "address": "1301 Skippack Pike, Blue Bell, PA 19422",
+  "hours": "Tue-Thu 11:30am-9:30pm; Fri-Sat 11:30am-10:30pm; Sun 12-9:30pm. Closed Mondays.",
+  "description": "Golden Sea in Blue Bell. Restaurant.",
+  "marquee": [
+    "Blue Bell",
+    "Restaurant",
+    "Golden"
+  ],
+  "hero": {
+    "eyebrow": "Blue Bell | Restaurant",
+    "headline": "1301 Skippack Pike Blue Bell, PA 19422",
+    "sub": "Tuesday to Thursday: 11:30am to 9:30pm Friday to Saturday: 11:30am to 10:30pm Sunday: 12:00pm to 9:30pm",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6102928881"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "http://goldenseabluebell.com/"
+    },
+    "glassFloat": {
+      "title": "Blue Bell",
+      "sub": "Restaurant"
+    },
+    "marquee": [
+      "Blue Bell",
+      "Restaurant",
+      "Golden"
+    ]
+  },
+  "offerings": {
+    "heading": "Now Open For Take Out Only.",
+    "items": [
+      {
+        "title": "Now Open For Take Out Only",
+        "text": "Golden Sea in Blue Bell. Call (610) 292-8881."
+      },
+      {
+        "title": "Voted Best Chinese Restaurant by The Reporter and The Times Herald",
+        "text": "Golden Sea in Blue Bell. Call (610) 292-8881."
+      },
+      {
+        "title": "A homepage that names the next step instead of hiding it",
+        "text": "Golden Sea in Blue Bell. Call (610) 292-8881."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "About Golden",
+    "paragraphs": [
+      "Tuesday to Thursday: 11:30am to 9:30pm Friday to Saturday: 11:30am to 10:30pm Sunday: 12:00pm to 9:30pm",
+      "Golden Sea, a family owned restaurant, has been serving the community since 1992. Thank you for your business!"
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call before you drive",
+        "text": "Reach Golden Sea at (610) 292-8881."
+      },
+      {
+        "title": "Hours they publish",
+        "text": "Tue-Thu 11:30am-9:30pm; Fri-Sat 11:30am-10:30pm; Sun 12-9:30pm. Closed Mondays."
+      },
+      {
+        "title": "A real street",
+        "text": "1301 Skippack Pike, Blue Bell, PA 19422."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Now Open For Take Out Only",
+    "text": "Golden Sea keeps the work in Blue Bell. The rebuild puts the next action where a phone can hit it.",
+    "cta": {
+      "label": "Official site",
+      "href": "http://goldenseabluebell.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Voted Best Chinese Restaurant by The Reporter and The Times Herald",
+    "text": "The current site still shows this fault: 29/100 broken (provisional \u2014 Tier 0 only). Worst: no viewport meta \u2014 page renders desktop-width on phones; no HTTPS \u2014 br.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "http://goldenseabluebell.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Visit",
+        "href": "http://goldenseabluebell.com/",
+        "imageIndex": 9,
+        "text": "Visit at Golden Sea in Blue Bell."
+      },
+      {
+        "title": "Call",
+        "href": "http://goldenseabluebell.com/",
+        "imageIndex": 10,
+        "text": "Call at Golden Sea in Blue Bell."
+      },
+      {
+        "title": "Official site",
+        "href": "http://goldenseabluebell.com/",
+        "imageIndex": 11,
+        "text": "Official site at Golden Sea in Blue Bell."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "1301 Skippack Pike, Blue Bell, PA 19422"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6102928881"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6102928881"
+    },
+    {
+      "label": "Official site",
+      "href": "http://goldenseabluebell.com/"
+    }
+  ]
+}

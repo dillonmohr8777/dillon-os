@@ -1,0 +1,252 @@
+{
+  "slug": "heart-and-soul-tattoo",
+  "name": "Heart and Soul Tattoo",
+  "city": "East Greenville",
+  "category": "Tattoo shop",
+  "vertical": "tattoo",
+  "attitude": "brutal",
+  "url": "https://heartandsoultattoos.com/",
+  "phone": "215-679-3775",
+  "address": "205 Main Street, East Greenville, PA 18041",
+  "hours": "Mon 12pm-5pm Tue-Sat 12pm-7pm Sun 12pm-5pm",
+  "description": "Tattoo shop in East Greenville. Black & Grey, American Traditional, cover ups, re-works. $100 shop minimum, cash only. Artists Scott Wilgeroth, Sam Vanderberg, Kevin Walker, Josh Hernandez.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "marquee": [
+    "Black & Grey",
+    "American Traditional",
+    "Cover ups",
+    "Cash only",
+    "$100 minimum"
+  ],
+  "tokens": {
+    "paper": "#EDE8E0",
+    "ink": "#141414",
+    "accent": "#8B1E1E",
+    "accent2": "#C4A574",
+    "panel": "#D4CCC2",
+    "deep": "#0C0C0C",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "0"
+  },
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Work Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2156793775"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of tattoo work for Heart and Soul Tattoo, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "East Greenville | Tattoo shop",
+    "headline": "Black & Grey, American Traditional, cover ups",
+    "sub": "Heart and Soul Tattoo is a shop on Main Street in East Greenville. The work they name is Black & Grey, American Traditional, cover ups, and re-works. The shop minimum is $100. The shop is cash only. The artists are Scott Wilgeroth, Sam Vanderberg, Kevin Walker, and Josh Hernandez.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2156793775"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "East Greenville",
+      "sub": "Cash only, $100 minimum"
+    },
+    "marquee": [
+      "Black & Grey",
+      "American Traditional",
+      "Cover ups",
+      "Cash only",
+      "$100 minimum"
+    ]
+  },
+  "offerings": {
+    "heading": "What the shop will actually tattoo",
+    "items": [
+      {
+        "title": "Black & Grey and American Traditional",
+        "text": "Those two styles are the published lanes. You come to Heart and Soul for Black & Grey or American Traditional, done by the artists on the wall."
+      },
+      {
+        "title": "Cover ups and re-works",
+        "text": "Cover ups and re-works are shop work, not a favor. An old tattoo can be the reason you sit, and the shop treats that as a named service."
+      },
+      {
+        "title": "Cash only, $100 minimum",
+        "text": "The shop minimum is $100. Payment is cash only. Those rules are theirs. Bring cash, and do not expect a $40 walk-in butterfly to clear the floor."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Main Street, four artists",
+    "paragraphs": [
+      "Heart and Soul Tattoo puts the rules on the table. Black & Grey. American Traditional. Cover ups. Re-works. One hundred dollars to sit. Cash only. Scott Wilgeroth, Sam Vanderberg, Kevin Walker, and Josh Hernandez are the artists. East Greenville is the town. 205 Main Street is the door.",
+      "A tattoo shop that publishes a minimum and a cash rule is doing you a favor. You know how to arrive. You know what styles they will stand behind. You know the names of the people who will do the work. Hours from their site run noon to 5pm Monday and Sunday, noon to 7pm Tuesday through Saturday."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a sit at the shop actually works",
+    "items": [
+      {
+        "title": "Pick a published style",
+        "text": "Black & Grey, American Traditional, a cover up, or a re-work. Those are the lanes. You talk the idea inside what the shop already does."
+      },
+      {
+        "title": "Sit with a named artist",
+        "text": "Scott Wilgeroth, Sam Vanderberg, Kevin Walker, or Josh Hernandez. The tattoo is done by one of those four, in the East Greenville shop."
+      },
+      {
+        "title": "Clear the shop minimum in cash",
+        "text": "The floor is $100. The till is cash only. You come ready for both, or you do not sit."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Styles, artists, rules",
+    "text": "Black & Grey and American Traditional are the styles. Cover ups and re-works are the repair work. Four named artists. Cash only. $100 minimum. Heart and Soul Tattoo is that list, on Main Street.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://heartandsoultattoos.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "The artists are the shop",
+    "text": "Scott Wilgeroth, Sam Vanderberg, Kevin Walker, and Josh Hernandez are not decorations on a landing page. They are who tattoos at 205 Main Street. You sit with one of them.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See the shop",
+      "href": "https://heartandsoultattoos.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Black & Grey",
+        "href": "https://heartandsoultattoos.com/",
+        "imageIndex": 9,
+        "text": "A published style at Heart and Soul Tattoo in East Greenville."
+      },
+      {
+        "title": "American Traditional",
+        "href": "https://heartandsoultattoos.com/",
+        "imageIndex": 10,
+        "text": "The other published lane, next to cover ups and re-works."
+      },
+      {
+        "title": "Cash only, $100 minimum",
+        "href": "https://heartandsoultattoos.com/",
+        "imageIndex": 11,
+        "text": "Shop rules from their site. Bring cash. Stay at or above the $100 minimum."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Main Street, East Greenville",
+    "sub": "205 Main Street, East Greenville, PA 18041"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2156793775"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2156793775"
+    },
+    {
+      "label": "Official site",
+      "href": "https://heartandsoultattoos.com/"
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "slug": "always-dental-care",
+  "name": "Always Dental Care",
+  "city": "Phoenixville",
+  "category": "Family and cosmetic dentistry",
+  "vertical": "healthcare",
+  "attitude": "glass",
+  "url": "https://www.alwaysdentalcare.com/",
+  "phone": "484-392-7687",
+  "address": "1570 Egypt Rd #210, Phoenixville, PA 19460",
+  "hours": "Mon Tue Thu 9am-6pm, Wed 9am-5pm, Friday 9am-1pm every other Friday, Sat-Sun closed",
+  "description": "Dr. Truong Nguyen, NYU Dentistry. Family and cosmetic care in Phoenixville behind the Wawa. Implants, crowns, whitening, fillings, root canals, bridges, dentures, emergency. Late evenings.",
+  "noindex": true,
+  "schemaType": "Dentist",
+  "logo": false,
+  "marquee": [
+    "Dr. Truong Nguyen",
+    "Implants",
+    "Crowns",
+    "Whitening",
+    "Emergency care"
+  ],
+  "tokens": {
+    "paper": "#F7F4EE",
+    "ink": "#1B2430",
+    "accent": "#2B6CB0",
+    "accent2": "#E8C547",
+    "panel": "#E3E7EE",
+    "deep": "#122033",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Outfit",
+    "displayFallback": "Impact,sans-serif",
+    "text": "DM Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:4843927687"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of family and cosmetic dentistry for Always Dental Care, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Phoenixville | Family and cosmetic dentistry",
+    "headline": "Dr. Nguyen, behind the Wawa",
+    "sub": "Always Dental Care is Dr. Truong Nguyen at 1570 Egypt Rd #210 in Phoenixville, behind the Wawa and next to Hand & Stone. NYU College of Dentistry, residency at Wyckoff Heights, more than 20 years in the chair and about 11 of them in Phoenixville. Implants, crowns, whitening, fillings, root canals, bridges, dentures, deep cleanings, and emergency visits. Late evenings. Every other Friday. Saturday closed.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:4843927687"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Phoenixville",
+      "sub": "Dr. Truong Nguyen, NYU"
+    },
+    "marquee": [
+      "Dr. Truong Nguyen",
+      "Implants",
+      "Crowns",
+      "Whitening",
+      "Emergency care"
+    ]
+  },
+  "offerings": {
+    "heading": "What Dr. Nguyen's chair actually does",
+    "items": [
+      {
+        "title": "Fillings, root canals, crowns, bridges",
+        "text": "Restore the tooth in front of you. Fillings and root canals keep what can stay. Crowns and bridges rebuild what is broken. The plan matches the damage, not a menu of upsells."
+      },
+      {
+        "title": "Implants, dentures, extractions",
+        "text": "When a tooth cannot stay, the same office extracts, then talks implants or dentures. You do not get sent down the road for the hard part."
+      },
+      {
+        "title": "Whitening and emergency care",
+        "text": "Whitening is the cosmetic chair. Emergency care is on the list so a broken tooth at 5pm still has a Phoenixville dentist. Monday, Tuesday, and Thursday run until 6."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "NYU, Wyckoff, then Egypt Road",
+    "paragraphs": [
+      "Dr. Truong Nguyen trained at NYU College of Dentistry and finished residency at Wyckoff Heights Medical Center. He has been in Phoenixville long enough that families already know the suite behind the Wawa. Soccer, bowling, and a poker night are the off-hours version of the same person who will sit with a kid's filling and an implant consult in one week.",
+      "Family dentistry here means the molar on Tuesday and the implant conversation when a tooth is past saving. Cosmetic whitening sits next to that, not in a separate spa brand. Late evenings keep the office usable after work. Every other Friday mornings. Saturday the chair rests."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How treatment at Always Dental actually moves",
+    "items": [
+      {
+        "title": "Diagnose, then restore",
+        "text": "Fillings, root canals, crowns, and bridges are how the practice keeps a tooth. Dr. Nguyen writes the sequence before the drill starts."
+      },
+      {
+        "title": "Extract or replace when needed",
+        "text": "Extractions, dentures, and implants stay in this office. The hard decision does not become a referral to a stranger."
+      },
+      {
+        "title": "Whitening, or come in broken",
+        "text": "Schedule the cosmetic hour, or use the emergency slot when something lets go after work. Monday, Tuesday, and Thursday go to 6pm."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "One Phoenixville dentist for the full list",
+    "text": "NYU-trained. Eleven years in this town. Implants and fillings in the same suite behind the Wawa. Late evenings so the office is still open when you get off. Dr. Truong Nguyen is the name on the chart.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.alwaysdentalcare.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Behind the Wawa, next to Hand & Stone",
+    "text": "1570 Egypt Rd #210. Easy to find once you have been once. Bring the kid, the crown, or the tooth that broke at dinner. Saturday is closed. Call 484-392-7687 for the rest of the week.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See the services",
+      "href": "https://www.alwaysdentalcare.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Restorative care",
+        "href": "https://www.alwaysdentalcare.com/",
+        "imageIndex": 9,
+        "text": "Fillings, root canals, crowns, and bridges in Dr. Nguyen's Phoenixville chair."
+      },
+      {
+        "title": "Implants and dentures",
+        "href": "https://www.alwaysdentalcare.com/",
+        "imageIndex": 10,
+        "text": "Extractions, dentures, and implants when a tooth cannot be kept."
+      },
+      {
+        "title": "Whitening and emergency care",
+        "href": "https://www.alwaysdentalcare.com/",
+        "imageIndex": 11,
+        "text": "Cosmetic whitening and after-work emergency visits from the same practice."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Egypt Road, suite 210",
+    "sub": "1570 Egypt Rd #210, Phoenixville, PA 19460"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:4843927687"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:4843927687"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.alwaysdentalcare.com/"
+    }
+  ]
+}

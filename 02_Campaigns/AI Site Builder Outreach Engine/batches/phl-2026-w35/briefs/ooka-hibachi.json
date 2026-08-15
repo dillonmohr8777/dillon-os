@@ -1,0 +1,246 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F7F1E8",
+    "ink": "#2A1814",
+    "accent": "#7A3B2E",
+    "accent2": "#C45C26",
+    "panel": "#E8D4C4",
+    "deep": "#1A100C",
+    "border": "1px",
+    "radius": "24px",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of restaurant work for Ooka Hibachi and Sushi, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "ooka-hibachi",
+  "name": "Ooka Hibachi and Sushi",
+  "city": "Willow Grove",
+  "category": "Restaurant",
+  "vertical": "restaurant",
+  "url": "http://ookasushi.com/",
+  "phone": "(215) 659-7688",
+  "address": "1109 Easton Road, Willow Grove, PA 19090",
+  "hours": "Lunch and dinner daily. Sunday 12-10PM.",
+  "description": "Ooka Hibachi and Sushi in Willow Grove. Restaurant.",
+  "marquee": [
+    "Willow Grove",
+    "Restaurant",
+    "Doylestown",
+    "Montgomeryville"
+  ],
+  "hero": {
+    "eyebrow": "Willow Grove | Restaurant",
+    "headline": "Hibachi and sushi in four towns",
+    "sub": "Ooka Hibachi and Sushi lists four towns on the current homepage: Doylestown, Willow Grove, Montgomeryville, and Riverside.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2156597688"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "http://ookasushi.com/"
+    },
+    "glassFloat": {
+      "title": "Willow Grove",
+      "sub": "Restaurant"
+    },
+    "marquee": [
+      "Willow Grove",
+      "Restaurant",
+      "Doylestown",
+      "Montgomeryville"
+    ]
+  },
+  "offerings": {
+    "heading": "Doylestown.",
+    "items": [
+      {
+        "title": "Doylestown",
+        "text": "Ooka Hibachi and Sushi in Willow Grove. Open the official site for details."
+      },
+      {
+        "title": "Willow Grove",
+        "text": "Ooka Hibachi and Sushi in Willow Grove. Open the official site for details."
+      },
+      {
+        "title": "Montgomeryville",
+        "text": "Ooka Hibachi and Sushi in Willow Grove. Open the official site for details."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Hibachi and sushi in four towns",
+    "paragraphs": [
+      "Ooka Hibachi and Sushi lists four towns on the current homepage: Doylestown, Willow Grove, Montgomeryville, and Riverside.",
+      "The live root URL currently shows a page-not-found overlay on a sushi-case photo. Willow Grove is at 1109 Easton Road. Doylestown, Montgomeryville, and Riverside stay on the map as printed towns."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a visit actually goes.",
+    "items": [
+      {
+        "title": "Call Willow Grove",
+        "text": "Reach Ooka at (215) 659-7688."
+      },
+      {
+        "title": "Hours on the Willow Grove card",
+        "text": "Lunch into mid-afternoon, dinner into late evening, Sunday noon to 10."
+      },
+      {
+        "title": "A real street",
+        "text": "1109 Easton Road, Willow Grove, PA 19090."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Doylestown",
+    "text": "Ooka Hibachi and Sushi keeps the work in Willow Grove. The rebuild puts the next action where a phone can hit it.",
+    "cta": {
+      "label": "Official site",
+      "href": "http://ookasushi.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Willow Grove",
+    "text": "Hibachi and sushi at 1109 Easton Road in Willow Grove. Call (215) 659-7688.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit",
+      "href": "http://ookasushi.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Doylestown",
+        "href": "http://ookasushi.com/",
+        "imageIndex": 9,
+        "text": "Doylestown at Ooka Hibachi and Sushi in Willow Grove."
+      },
+      {
+        "title": "Willow Grove",
+        "href": "http://ookasushi.com/",
+        "imageIndex": 10,
+        "text": "Willow Grove at Ooka Hibachi and Sushi in Willow Grove."
+      },
+      {
+        "title": "Montgomeryville",
+        "href": "http://ookasushi.com/",
+        "imageIndex": 11,
+        "text": "Montgomeryville at Ooka Hibachi and Sushi in Willow Grove."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The address, the phone, the map.",
+    "sub": "1109 Easton Road, Willow Grove, PA 19090"
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the site",
+      "href": "http://ookasushi.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://ookasushi.com/"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2156597688"
+  }
+}

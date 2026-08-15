@@ -1,0 +1,252 @@
+{
+  "slug": "first-class-auto-land",
+  "name": "First Class Auto Land",
+  "city": "Philadelphia",
+  "category": "Used car dealer",
+  "vertical": "auto",
+  "attitude": "brutal",
+  "url": "https://www.firstclassautoland.com/",
+  "phone": "215-533-5181",
+  "address": "4050 Frankford Ave, Philadelphia, PA 19124",
+  "hours": "",
+  "description": "Third-generation family used car dealer on Frankford Avenue. Cars, trucks, and SUVs. 119-point inspection. 3-month / 4,500-mile powertrain warranty. Financing and trade-ins. Niko, Mike, Tommy, Chris, Oren.",
+  "noindex": true,
+  "schemaType": "AutoDealer",
+  "logo": false,
+  "marquee": [
+    "Family owned",
+    "119-point inspection",
+    "Powertrain warranty",
+    "Financing",
+    "Trade-ins"
+  ],
+  "tokens": {
+    "paper": "#F2EDE4",
+    "ink": "#161616",
+    "accent": "#C2410C",
+    "accent2": "#F4B942",
+    "panel": "#D5D0C6",
+    "deep": "#111111",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "0"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Work Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2155335181"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of used car sales for First Class Auto Land, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Used car dealer",
+    "headline": "Third-generation lot on Frankford",
+    "sub": "First Class Auto Land is a third-generation, family-owned used car dealer at 4050 Frankford Ave. The row holds cars, trucks, and SUVs. Every vehicle goes through a 119-point inspection. They back what they sell with a 3-month or 4,500-mile full powertrain warranty. Financing and trade-ins happen on the same lot.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2155335181"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Frankford Ave",
+      "sub": "Family owned, 119-point inspection"
+    },
+    "marquee": [
+      "Family owned",
+      "119-point inspection",
+      "Powertrain warranty",
+      "Financing",
+      "Trade-ins"
+    ]
+  },
+  "offerings": {
+    "heading": "How the Frankford lot actually deals",
+    "items": [
+      {
+        "title": "Cars, trucks, and SUVs",
+        "text": "Import and domestic, pre-owned and nearly new. Niko and Tommy walk the row with you. You test-drive the vehicle that is sitting on Frankford Avenue, not a photo from another state."
+      },
+      {
+        "title": "Financing with Mike",
+        "text": "Mike runs the paper. Reviews keep naming him because he stays in the deal when the bank part gets messy. Trade-ins are on the table. They will even run you to the bank if the payment method needs a branch."
+      },
+      {
+        "title": "119-point inspection and warranty",
+        "text": "Every vehicle gets a 119-point inspection before it hits the row. The lot backs the sale with a 3-month or 4,500-mile full powertrain warranty, so the first months after you leave are not a shrug."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A family lot people drive hours to use",
+    "paragraphs": [
+      "First Class Auto Land has been a Frankford Avenue family shop for decades, now in its third generation. Buyers come from Bucks, Montgomery, Delaware, and Chester, and from New Jersey, because Niko, Mike, Tommy, Chris, and Oren still treat a used-car deal like a person is in the chair.",
+      "The sequence is walk the lot, take the test drive, sit with Mike, leave in the car. People buy a second vehicle here a year later. The warranty and the 119-point inspection are why the second trip feels less stupid than the first used-car story you were told."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a First Class purchase actually runs",
+    "items": [
+      {
+        "title": "Walk the row with Niko or Tommy",
+        "text": "Cars, trucks, and SUVs are on the pavement. You pick the one you can put a hand on, then you take it around the block."
+      },
+      {
+        "title": "Sit with Mike on the paper",
+        "text": "Financing and trade-ins happen in the office. Mike stays in the deal. Oren and Chris keep the rest of the lot moving."
+      },
+      {
+        "title": "Leave with the warranty on the car",
+        "text": "The 119-point inspection already happened. The 3-month or 4,500-mile powertrain warranty rides home with you."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Family owned, inspected, warranted",
+    "text": "Third generation on Frankford Avenue. Cars, trucks, and SUVs that went through 119 points. A 3-month or 4,500-mile full powertrain warranty on what leaves the lot. Mike on the financing. Trade-ins welcome.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.firstclassautoland.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "People name the staff",
+    "text": "Niko finds the car. Tommy walks the lot. Mike does the financing. Chris and Oren close the easy ones. First Class Auto Land is those people on Frankford Avenue, not a nameless row of flags.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "See the lot",
+      "href": "https://www.firstclassautoland.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Cars, trucks, SUVs",
+        "href": "https://www.firstclassautoland.com/",
+        "imageIndex": 9,
+        "text": "Import and domestic used vehicles on the Frankford Avenue row, ready to test-drive."
+      },
+      {
+        "title": "119-point inspection",
+        "href": "https://www.firstclassautoland.com/",
+        "imageIndex": 10,
+        "text": "Every vehicle, plus a 3-month or 4,500-mile full powertrain warranty after you leave."
+      },
+      {
+        "title": "Financing and trade-ins",
+        "href": "https://www.firstclassautoland.com/",
+        "imageIndex": 11,
+        "text": "Mike on the paper. They want the car you already drive, and they will work the bank piece."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The Frankford Avenue lot",
+    "sub": "4050 Frankford Ave, Philadelphia, PA 19124"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2155335181"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2155335181"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.firstclassautoland.com/"
+    }
+  ]
+}

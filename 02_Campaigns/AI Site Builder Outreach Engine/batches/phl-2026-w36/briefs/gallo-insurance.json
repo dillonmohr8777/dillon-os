@@ -1,0 +1,256 @@
+{
+  "slug": "gallo-insurance",
+  "name": "Gallo Insurance Agency",
+  "city": "Folsom",
+  "category": "Independent insurance",
+  "vertical": "insurance",
+  "attitude": "editorial",
+  "url": "https://www.erieinsurance.com/agencies/aa8210/gallo-insurance-agency",
+  "phone": "610-237-1500",
+  "address": "143 Macdade Blvd, Folsom, PA 19033",
+  "hours": "Monday-Friday 9am-5pm",
+  "description": "Independent hometown insurance agency in Folsom. Justin Gallo. Auto, home, life, and business. Erie and other carriers.",
+  "noindex": true,
+  "schemaType": "InsuranceAgency",
+  "logo": false,
+  "marquee": [
+    "Independent",
+    "Erie Insurance",
+    "Auto",
+    "Home",
+    "Life",
+    "Business",
+    "Folsom"
+  ],
+  "tokens": {
+    "paper": "#F6F1E8",
+    "ink": "#1A2430",
+    "accent": "#0B3A6A",
+    "accent2": "#C4A35A",
+    "panel": "#D7DDE4",
+    "deep": "#0E1C2A",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Georgia,serif",
+    "text": "Source Sans 3"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6102371500"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of independent insurance for Gallo Insurance Agency, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Folsom | Independent insurance",
+    "headline": "An independent hometown agency",
+    "sub": "Gallo Insurance Agency is Justin Gallo's independent shop on Macdade Boulevard in Folsom. The work is auto, home, life, and business coverage, placed with Erie and other carriers. You get a hometown agency that can shop more than one paper, not a single-company window.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6102371500"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Folsom",
+      "sub": "Independent agency"
+    },
+    "marquee": [
+      "Independent",
+      "Erie Insurance",
+      "Auto",
+      "Home",
+      "Life",
+      "Business",
+      "Folsom"
+    ]
+  },
+  "offerings": {
+    "heading": "Coverage the agency actually places",
+    "items": [
+      {
+        "title": "Auto and home",
+        "text": "Personal auto and home are the everyday policies. Justin Gallo places them as an independent agent, which means Erie can be the answer and another carrier can be the answer when the risk wants it."
+      },
+      {
+        "title": "Life and business",
+        "text": "Life and business coverage sit in the same agency. The hometown shop is built to keep personal and commercial questions in one conversation instead of sending you down the road."
+      },
+      {
+        "title": "Erie and other carriers",
+        "text": "The agency writes with Erie and other carriers. Independence is the method: compare, recommend, bind. You are not locked to one company's appetite before the first question."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Justin Gallo, Folsom",
+    "paragraphs": [
+      "The agency is a person and a street. Justin Gallo runs an independent hometown shop at 143 Macdade Blvd. Folsom neighbors come in for auto, home, life, and business, and they leave with a policy that was placed, not a referral to a 1-800 desk.",
+      "Erie is on the door through the agency listing, and other carriers are in the toolkit. That mix is the point of an independent agency. The recommendation can follow the risk instead of the logo on the window."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How an independent quote actually runs",
+    "items": [
+      {
+        "title": "Tell the agency the risk",
+        "text": "You bring the car, the house, the life question, or the business. Justin Gallo works the facts as an independent agent, not as a single-carrier script."
+      },
+      {
+        "title": "Compare Erie and other carriers",
+        "text": "The agency can place with Erie and with other carriers. The comparison is the service. You see which paper fits the risk before anyone binds."
+      },
+      {
+        "title": "Bind the policy at the hometown shop",
+        "text": "Coverage is bound through the Folsom agency. Auto, home, life, and business stay in one relationship so the next change does not start from zero."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "Independence is the product",
+    "text": "A captive window sells one company. Gallo Insurance Agency sells the ability to place auto, home, life, and business with Erie and other carriers from a hometown desk.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.erieinsurance.com/agencies/aa8210/gallo-insurance-agency"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Folsom, on Macdade",
+    "text": "The agency is local on purpose. Justin Gallo's shop is the place you walk into when the policy should be written by someone who will still be on Macdade Boulevard after the binder goes out.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Visit the agency",
+      "href": "https://www.erieinsurance.com/agencies/aa8210/gallo-insurance-agency"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Auto",
+        "href": "https://www.erieinsurance.com/agencies/aa8210/gallo-insurance-agency",
+        "imageIndex": 9,
+        "text": "Personal auto placed by an independent hometown agency. Erie and other carriers."
+      },
+      {
+        "title": "Home",
+        "href": "https://www.erieinsurance.com/agencies/aa8210/gallo-insurance-agency",
+        "imageIndex": 10,
+        "text": "Home coverage written from the Folsom shop, compared across the carriers the agency can use."
+      },
+      {
+        "title": "Life and business",
+        "href": "https://www.erieinsurance.com/agencies/aa8210/gallo-insurance-agency",
+        "imageIndex": 11,
+        "text": "Life and business policies in the same independent agency as the personal lines."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "The Folsom agency",
+    "sub": "143 Macdade Blvd, Folsom, PA 19033"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6102371500"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6102371500"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.erieinsurance.com/agencies/aa8210/gallo-insurance-agency"
+    }
+  ]
+}

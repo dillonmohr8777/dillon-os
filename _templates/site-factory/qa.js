@@ -109,6 +109,59 @@ async function runQa(siteDir, opts = {}) {
             () => document.documentElement.scrollWidth - document.documentElement.clientWidth
           );
           if (overflow > 1) failures.push(`Horizontal overflow of ${overflow}px at ${name} width (${width}px)`);
+          if (name === 'phone') {
+            const catalogLayout = await page.evaluate(() => {
+              const grid = document.querySelector('.catalog-grid');
+              if (!grid || grid.children.length < 2) return { skipped: true };
+              const first = grid.children[0].getBoundingClientRect();
+              const second = grid.children[1].getBoundingClientRect();
+              return {
+                skipped: false,
+                firstWidth: first.width,
+                viewport: window.innerWidth,
+                sameRow: Math.abs(first.top - second.top) < 8,
+              };
+            });
+            if (!catalogLayout.skipped) {
+              if (catalogLayout.sameRow) {
+                failures.push('catalog cards sit side-by-side on phone; they must stack');
+              }
+              if (catalogLayout.firstWidth < catalogLayout.viewport * 0.78) {
+                failures.push(
+                  `catalog not stacked on phone: first item ${Math.round(catalogLayout.firstWidth)}px wide in ${catalogLayout.viewport}px viewport`
+                );
+              }
+            }
+            const galleryLayout = await page.evaluate(() => {
+              const rail = document.querySelector('.gallery-rail');
+              if (!rail || !rail.children.length) return { skipped: true };
+              const first = rail.children[0].getBoundingClientRect();
+              return {
+                skipped: false,
+                firstWidth: first.width,
+                viewport: window.innerWidth,
+              };
+            });
+            if (!galleryLayout.skipped && galleryLayout.firstWidth < galleryLayout.viewport * 0.78) {
+              failures.push(
+                `gallery tile too narrow on phone: ${Math.round(galleryLayout.firstWidth)}px wide in ${galleryLayout.viewport}px viewport`
+              );
+            }
+            const dockCover = await page.evaluate(() => {
+              const dock = document.querySelector('.bottom-dock');
+              if (!dock) return { skipped: true };
+              const dockTop = dock.getBoundingClientRect().top;
+              const links = [...document.querySelectorAll('.catalog-card a')];
+              const covered = links.filter((a) => {
+                const r = a.getBoundingClientRect();
+                return r.height > 0 && r.top < window.innerHeight && r.bottom > dockTop + 4;
+              });
+              return { skipped: false, covered: covered.length };
+            });
+            if (!dockCover.skipped && dockCover.covered > 0) {
+              failures.push(`bottom dock covers ${dockCover.covered} catalog CTA(s) in the phone viewport`);
+            }
+          }
           await page.screenshot({ path: path.join(shotsDir, `${name}.png`), fullPage: true });
           await page.close();
         }

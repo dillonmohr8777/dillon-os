@@ -1,0 +1,254 @@
+{
+  "slug": "belle-palace-nail-spa",
+  "name": "Belle Palace Nail Spa",
+  "city": "Warrington",
+  "category": "Nail spa",
+  "vertical": "beauty",
+  "attitude": "glass",
+  "url": "https://bellepalacewarrington.com/",
+  "phone": "215-798-7777",
+  "address": "1509 Main St, Warrington, PA 18976",
+  "hours": "Mon-Fri 10am-7:30pm Sat 9:30am-6pm Sun 10am-4pm",
+  "description": "Nail spa on Main Street in Warrington. Dip, gel, acrylic, Gel X, BIAB, pedicure, waxing, lashes, kids. Large shop, many techs.",
+  "noindex": true,
+  "schemaType": "BeautySalon",
+  "logo": false,
+  "marquee": [
+    "Dip",
+    "Gel X",
+    "BIAB",
+    "Acrylic",
+    "Pedicure",
+    "Lashes"
+  ],
+  "tokens": {
+    "paper": "#F7F2F4",
+    "ink": "#2A1820",
+    "accent": "#C45C7A",
+    "accent2": "#E8C4A0",
+    "panel": "#EDE4E8",
+    "deep": "#1A1014",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "Jost"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:2157987777"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of nail spa care for Belle Palace Nail Spa, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Warrington | Nail spa",
+    "headline": "Dip, Gel X, BIAB, acrylic",
+    "sub": "Belle Palace Nail Spa is the big shop at 1509 Main St in Warrington. Dip, gel, acrylic, Gel X, and BIAB are the nail work. Pedicures, waxing, and lashes sit in the same room. Kids get chairs too. Many techs, so a Saturday pedicure and a Gel X set can happen without turning the visit into a hostage situation.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:2157987777"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Warrington",
+      "sub": "Dip, Gel X, BIAB"
+    },
+    "marquee": [
+      "Dip",
+      "Gel X",
+      "BIAB",
+      "Acrylic",
+      "Pedicure",
+      "Lashes"
+    ]
+  },
+  "offerings": {
+    "heading": "What the Warrington chairs actually do",
+    "items": [
+      {
+        "title": "Dip, gel, acrylic, Gel X, BIAB",
+        "text": "Dip powder for the set that has to last. Gel for the shine. Acrylic when you want length. Gel X and BIAB for the newer overlays people keep asking for. Pick the system, sit the chair, leave with nails that match the appointment you booked."
+      },
+      {
+        "title": "Pedicure, waxing, lashes",
+        "text": "Pedicures run beside the nail tables. Waxing and lash work live in the same spa, so you are not driving Main Street twice for brows and a fill."
+      },
+      {
+        "title": "Kids and a shop that can take a crowd",
+        "text": "Kids chairs are on the books. The floor has enough techs that a family Saturday is the point of a large Warrington spa, not a problem."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Main Street, a lot of techs, the sets people ask for",
+    "paragraphs": [
+      "Belle Palace is the Warrington nail spa you book when you already know you want dip or Gel X, not a mystery \"spa manicure.\" Weekdays run 10am to 7:30pm. Saturday opens at 9:30am. Sunday is shorter. Call 215-798-7777 and take the chair.",
+      "People come for acrylic length, for BIAB, for a pedicure that is actually a pedicure, and for lashes on the same trip. The shop is large on purpose. You can hear more than one drill at once, which is how a Main Street spa keeps the wait from eating the afternoon."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a Belle Palace visit actually goes",
+    "items": [
+      {
+        "title": "Book the set by name",
+        "text": "Dip, gel, acrylic, Gel X, or BIAB. Say the system when you book so the tech is ready for that overlay, not a generic polish change."
+      },
+      {
+        "title": "Add pedicure, wax, or lashes",
+        "text": "Feet, brows, and lashes can live in the same visit as the fill. Kids can sit too."
+      },
+      {
+        "title": "Leave from Main Street",
+        "text": "1509 Main St is the door. Many techs, one spa, nails that match the appointment you actually asked for."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "The Warrington shop for Gel X and dip",
+    "text": "Dip, gel, acrylic, Gel X, BIAB. Pedicure, waxing, lashes, kids. Belle Palace is a large Main Street spa with enough chairs that Saturday is still possible.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://bellepalacewarrington.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Book the overlay, not a mystery manicure",
+    "text": "Say Gel X or BIAB or dip when you call. The techs already do those sets. Weekdays until 7:30pm. Saturday from 9:30am. Sunday still open.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Book",
+      "href": "https://bellepalacewarrington.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Dip and gel",
+        "href": "https://bellepalacewarrington.com/",
+        "imageIndex": 9,
+        "text": "Dip powder and gel sets in the Warrington spa, built to last past the weekend."
+      },
+      {
+        "title": "Gel X, BIAB, acrylic",
+        "href": "https://bellepalacewarrington.com/",
+        "imageIndex": 10,
+        "text": "Overlays and length from techs who already run those systems every day."
+      },
+      {
+        "title": "Pedicure, wax, lashes",
+        "href": "https://bellepalacewarrington.com/",
+        "imageIndex": 11,
+        "text": "Feet, waxing, and lash work in the same Main Street shop, with chairs for kids."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Main Street, Warrington",
+    "sub": "1509 Main St, Warrington, PA 18976"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:2157987777"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2157987777"
+    },
+    {
+      "label": "Official site",
+      "href": "https://bellepalacewarrington.com/"
+    }
+  ]
+}

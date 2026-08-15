@@ -1,0 +1,252 @@
+{
+  "slug": "august-moon",
+  "name": "August Moon",
+  "city": "Norristown",
+  "category": "Korean Japanese cuisine",
+  "vertical": "food",
+  "attitude": "glass",
+  "url": "https://augustmoonpa.com/",
+  "phone": "610-277-4008",
+  "address": "300 East Main Street, Norristown, PA 19401",
+  "hours": "Lunch Mon-Fri 11:30am-2pm; Dinner Mon-Thu 4:30pm-9pm Fri 4:30pm-9:30pm Sat 4pm-9:30pm; Sunday closed",
+  "description": "Korean-Japanese on East Main in Norristown. Kalbi, bibimbap, jap chae, doen jang jigae, salmon teriyaki, tuna tataki. Volcano, Polar Bear, Godzilla, and New August Moon rolls. Sushi bar and BBQ party trays.",
+  "noindex": true,
+  "schemaType": "Restaurant",
+  "logo": false,
+  "marquee": [
+    "Kalbi",
+    "Bibimbap",
+    "Volcano roll",
+    "Godzilla roll",
+    "Sushi bar"
+  ],
+  "tokens": {
+    "paper": "#F6F3EE",
+    "ink": "#1A1A1A",
+    "accent": "#C45C2C",
+    "accent2": "#2B6B4F",
+    "panel": "#E4DCD2",
+    "deep": "#14120F",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "fonts": {
+    "display": "Outfit",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Noto Sans KR"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call",
+    "href": "tel:6102774008"
+  },
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 12"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Grainy collage illustration of Korean Japanese cuisine for August Moon, frame 13"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Norristown | Korean Japanese cuisine",
+    "headline": "Kalbi, bibimbap, and the Volcano roll",
+    "sub": "August Moon calls itself simply the best sushi and sashimi on East Main Street in Norristown. Korean plates are kalbi, bibimbap, jap chae, and doen jang jigae. Japanese plates are salmon teriyaki and tuna tataki. The sushi bar turns Volcano, Polar Bear, Godzilla, and New August Moon rolls. BBQ party trays feed the bigger table. Phone the ticket in.",
+    "ctaPrimary": {
+      "label": "Call",
+      "href": "tel:6102774008"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Norristown",
+      "sub": "Sushi bar and kalbi"
+    },
+    "marquee": [
+      "Kalbi",
+      "Bibimbap",
+      "Volcano roll",
+      "Godzilla roll",
+      "Sushi bar"
+    ]
+  },
+  "offerings": {
+    "heading": "What August Moon actually cooks",
+    "items": [
+      {
+        "title": "Korean plates",
+        "text": "Kalbi hits the table as short ribs. Bibimbap comes in the hot bowl. Jap chae is the glass-noodle plate. Doen jang jigae is the stew you want when the night is cold. Those are the Korean names people already order."
+      },
+      {
+        "title": "Sushi bar rolls",
+        "text": "Volcano, Polar Bear, Godzilla, and the New August Moon roll are the house sushi. Salmon teriyaki and tuna tataki sit next to nigiri when you want a quieter Japanese plate."
+      },
+      {
+        "title": "BBQ party trays and phone orders",
+        "text": "A BBQ party tray is how a birthday or office table eats Korean from this kitchen. Call 610-277-4008, name the kalbi and the rolls, pick up or sit down when it is ready."
+      }
+    ]
+  },
+  "gallery": {
+    "heading": "A look at the work.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "East Main Street, two kitchens, one ticket",
+    "paragraphs": [
+      "August Moon refuses to pick only Korea or only Japan. You can eat kalbi and a Godzilla roll in the same sitting. The sushi bar is a real station. Lunch runs Monday through Friday 11:30am to 2pm. Dinner returns at 4:30, later on Friday and Saturday. Sunday the kitchen rests.",
+      "Norristown already uses this number for party trays. Phone the order, bring the table, split bibimbap and Polar Bear rolls down the middle. Authentic Korean-Japanese is their phrase, and the named dishes are how it shows up on a plate."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a meal at August Moon actually gets to the table",
+    "items": [
+      {
+        "title": "Call in kalbi or the rolls",
+        "text": "Phone the ticket: kalbi, bibimbap, jap chae, a Volcano roll, a Godzilla roll, a BBQ party tray. The kitchen works those names."
+      },
+      {
+        "title": "Sit the sushi bar or the larger table",
+        "text": "Nigiri and house rolls at the bar. Korean BBQ trays when the group is bigger than two chairs."
+      },
+      {
+        "title": "Lunch window, then dinner",
+        "text": "Weekday lunch closes at 2pm. Dinner comes back at 4:30. Saturday dinner starts at 4. Sunday there is no service."
+      }
+    ]
+  },
+  "feature": {
+    "heading": "From doen jang jigae to the Godzilla roll",
+    "text": "Korean stew and Japanese rolls in the same Norristown room. Kalbi and bibimbap for the table that wants a hot bowl. Volcano, Polar Bear, Godzilla, and New August Moon rolls for the sushi bar. BBQ party trays when you are feeding a crowd.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://augustmoonpa.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Simply the best sushi and sashimi",
+    "text": "Their line. Pair it with kalbi if you came for Korean. Phone 610-277-4008 so the tray is already moving when you hit East Main Street.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Call in an order",
+      "href": "https://augustmoonpa.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Kalbi and bibimbap",
+        "href": "https://augustmoonpa.com/",
+        "imageIndex": 9,
+        "text": "Short ribs and the hot bowl, with jap chae and doen jang jigae on the same Korean ticket."
+      },
+      {
+        "title": "Volcano and Godzilla rolls",
+        "href": "https://augustmoonpa.com/",
+        "imageIndex": 10,
+        "text": "House sushi with Polar Bear and New August Moon rolls at the bar."
+      },
+      {
+        "title": "BBQ party trays",
+        "href": "https://augustmoonpa.com/",
+        "imageIndex": 11,
+        "text": "Korean BBQ for a group, phoned in and packed or plated in the Norristown room."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "300 East Main Street",
+    "sub": "300 East Main Street, Norristown, PA 19401"
+  },
+  "closing": {
+    "cta": {
+      "label": "Call",
+      "href": "tel:6102774008"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:6102774008"
+    },
+    {
+      "label": "Official site",
+      "href": "https://augustmoonpa.com/"
+    }
+  ]
+}
