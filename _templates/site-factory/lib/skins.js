@@ -28,7 +28,7 @@ function buildSkinCss(brief) {
 
   const shared = `
 .slug-${slug}{--attitude:${attitude}}
-.slug-${slug} .hero h1,.slug-${slug} .section-head h2,.slug-${slug} .story h2,.slug-${slug} .feature h2,.slug-${slug} .spotlight h2,.slug-${slug} .contact-intro h2,.slug-${slug} .closing h2,.slug-${slug} .offering-card h3,.slug-${slug} .experience-grid h3,.slug-${slug} .catalog-card h3,.slug-${slug} .footer-identity strong{font-family:var(--display);font-weight:700}
+.slug-${slug} .hero h1,.slug-${slug} .section-head h2,.slug-${slug} .story h2,.slug-${slug} .feature h2,.slug-${slug} .spotlight h2,.slug-${slug} .contact-intro h2,.slug-${slug} .closing h2,.slug-${slug} .offering-card h3,.slug-${slug} .experience-grid h3,.slug-${slug} .catalog-card h3,.slug-${slug} .proof h4,.slug-${slug} .footer-identity strong{font-family:var(--display);font-weight:700}
 .slug-${slug} .glass-panel,.slug-${slug} .contact-card,.slug-${slug} .site-header,.slug-${slug} figcaption{backdrop-filter:blur(var(--glass-blur,22px)) saturate(160%);-webkit-backdrop-filter:blur(var(--glass-blur,22px)) saturate(160%)}
 `;
 
@@ -44,11 +44,11 @@ function buildSkinCss(brief) {
     editorial: `
 .slug-${slug}{--glass-blur:16px}
 .slug-${slug} .hero h1{font-weight:500;letter-spacing:-.04em;max-width:14ch}
-.slug-${slug} .hero-media figure{border-radius:2px;box-shadow:none;border-width:1px}
+.slug-${slug} .hero-media figure{border-radius:calc(var(--radius) + 10px);box-shadow:18px 22px 0 color-mix(in srgb,var(--accent2) 55%,transparent);border-width:1px}
 .slug-${slug} .offering-card,.slug-${slug} .experience-grid article{border-radius:2px;background:transparent}
 .slug-${slug} .gallery-grid figure{border-radius:2px}
 .slug-${slug} .marquee-strip{letter-spacing:.28em;font-weight:500}
-.slug-${slug} .section-head h2 mark{background:transparent;color:var(--accent);padding:0;box-shadow:inset 0 -.12em 0 var(--accent2)}
+.slug-${slug} .section-head h2{color:inherit}
 `,
     brutal: `
 .slug-${slug}{--glass-blur:0px}
@@ -74,7 +74,7 @@ function buildSkinCss(brief) {
 .slug-${slug} .site-header{background:color-mix(in srgb,var(--deep) 92%,transparent);color:var(--on-deep);border-bottom-color:var(--accent)}
 .slug-${slug} .site-header .wordmark,.slug-${slug} .site-header nav a{color:var(--on-deep)}
 .slug-${slug} .hero h1{text-transform:uppercase;letter-spacing:-.02em}
-.slug-${slug} .hero-media figure,.slug-${slug} .gallery-grid figure{border-radius:4px;filter:contrast(1.05) saturate(.92)}
+.slug-${slug} .hero-media figure,.slug-${slug} .gallery-grid figure{border-radius:calc(var(--radius) + 8px);filter:contrast(1.05) saturate(.92);box-shadow:16px 20px 0 color-mix(in srgb,var(--accent2) 55%,transparent)}
 .slug-${slug} .proof-grid{background:repeating-linear-gradient(-45deg,transparent,transparent 8px,color-mix(in srgb,currentColor 6%,transparent) 8px,color-mix(in srgb,currentColor 6%,transparent) 16px)}
 .slug-${slug} .marquee-strip{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em}
 `,
@@ -82,8 +82,8 @@ function buildSkinCss(brief) {
 .slug-${slug}{--glass-blur:26px}
 .slug-${slug} .hero{background:linear-gradient(160deg,var(--deep),color-mix(in srgb,var(--deep) 70%,var(--accent)) 55%,var(--deep));color:var(--on-deep)}
 .slug-${slug} .hero .eyebrow,.slug-${slug} .hero h1,.slug-${slug} .hero-copy>p{color:var(--on-deep)}
-.slug-${slug} .hero h1 mark{background:transparent;color:var(--accent2);text-shadow:0 0 28px color-mix(in srgb,var(--accent2) 55%,transparent)}
-.slug-${slug} .hero-media figure{border:1px solid color-mix(in srgb,var(--accent2) 55%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 40%,transparent),0 25px 80px color-mix(in srgb,var(--accent) 35%,transparent)}
+.slug-${slug} .hero h1{color:var(--on-deep)}
+.slug-${slug} .hero-media figure{border:1px solid color-mix(in srgb,var(--accent2) 55%,transparent);box-shadow:18px 22px 0 color-mix(in srgb,var(--accent2) 55%,transparent),0 25px 80px color-mix(in srgb,var(--accent) 35%,transparent);border-radius:calc(var(--radius) + 10px)}
 .slug-${slug} .offering-card,.slug-${slug} .contact-card{background:color-mix(in srgb,var(--deep) 55%,transparent);color:var(--on-deep);border-color:color-mix(in srgb,var(--accent2) 40%,transparent)}
 .slug-${slug} .marquee-strip{background:var(--accent);color:var(--on-accent);text-shadow:0 0 18px color-mix(in srgb,var(--on-accent) 35%,transparent)}
 `,

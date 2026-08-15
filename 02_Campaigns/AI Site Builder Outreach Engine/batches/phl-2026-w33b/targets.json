@@ -1,0 +1,492 @@
+[
+  {
+    "slug": "pipe-xpress-inc",
+    "name": "Pipe Xpress Inc",
+    "siteUrl": "https://pipexpressinc.com/",
+    "domain": "pipexpressinc.com",
+    "city": "West Chester",
+    "area": "Chester County",
+    "vertical": "hardware",
+    "vertical_group": "home-services",
+    "priority": 51,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "train-and-nourish",
+    "name": "Train and Nourish",
+    "siteUrl": "https://trainandnourish.com/",
+    "domain": "trainandnourish.com",
+    "city": "Philadelphia",
+    "area": "Philadelphia",
+    "vertical": "fitness-centre",
+    "vertical_group": "spa-wellness",
+    "priority": 65,
+    "sqs": 32,
+    "opportunity": 65,
+    "band": "decayed",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "wja-landscaping",
+    "name": "WJA Landscaping",
+    "siteUrl": "https://www.wjalandscaping.com/",
+    "domain": "wjalandscaping.com",
+    "city": "Collegeville",
+    "area": "Montgomery County",
+    "vertical": "gardener",
+    "vertical_group": "home-services",
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "o-donnell-weiss-and-mattei-p-c",
+    "name": "O'Donnell, Weiss & Mattei, P.C.",
+    "siteUrl": "https://www.owmlaw.com/",
+    "domain": "owmlaw.com",
+    "city": "Montgomery County",
+    "area": "Montgomery County",
+    "vertical": "lawyer",
+    "vertical_group": "legal",
+    "priority": 52,
+    "sqs": 34,
+    "opportunity": 57,
+    "hard_faults": [
+      "client error 403",
+      "only 3 words on the homepage",
+      "homepage is noindex — invisible to search"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "boyle-energy-heating-air-conditioning-oil-and-propane",
+    "name": "Boyle Energy - Heating, Air Conditioning, Oil & Propane",
+    "siteUrl": "https://boylebrothersenergy.com/",
+    "domain": "boylebrothersenergy.com",
+    "city": "Havertown",
+    "area": "Delaware County",
+    "vertical": "hvac",
+    "vertical_group": "home-services",
+    "priority": 58,
+    "sqs": 49,
+    "opportunity": 63,
+    "band": "decayed",
+    "hard_faults": [
+      "only 10 words on the homepage",
+      "no phone number on the homepage",
+      "no obvious call to action"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "tm-prestige-home-cash-buyer",
+    "name": "TM Prestige Home Cash Buyer",
+    "siteUrl": "https://tmprestige.com/",
+    "domain": "tmprestige.com",
+    "city": "Philadelphia",
+    "area": "Philadelphia",
+    "vertical": "estate-agent",
+    "vertical_group": "legal",
+    "priority": 58,
+    "sqs": 33,
+    "opportunity": 58,
+    "band": "decayed",
+    "hard_faults": [
+      "parked / for-sale / placeholder page, not a real site",
+      "only 16 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "mcmenamin-and-margiotti",
+    "name": "McMenamin & Margiotti",
+    "siteUrl": "https://buxmontlaw.com/",
+    "domain": "buxmontlaw.com",
+    "city": "Colmar",
+    "area": "Montgomery County",
+    "vertical": "lawyer",
+    "vertical_group": "legal",
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "band": "decayed",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "balance-studios",
+    "name": "Balance Studios",
+    "siteUrl": "https://www.balancestudios.net/",
+    "domain": "balancestudios.net",
+    "city": "Philadelphia",
+    "area": "Philadelphia",
+    "vertical": "fitness-centre",
+    "vertical_group": "spa-wellness",
+    "priority": 55,
+    "sqs": 33,
+    "opportunity": 55,
+    "band": "decayed",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "red-hill-greenhouses-and-florist",
+    "name": "Red Hill Greenhouses & Florist",
+    "siteUrl": "https://www.redhillgreenhouse.com/",
+    "domain": "redhillgreenhouse.com",
+    "city": "Red Hill",
+    "area": "Montgomery County",
+    "vertical": "florist",
+    "vertical_group": "retail",
+    "priority": 52,
+    "sqs": 35,
+    "opportunity": 57,
+    "hard_faults": [
+      "client error 403",
+      "only 3 words on the homepage",
+      "homepage is noindex — invisible to search"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "weathers-motors-and-auto-sales",
+    "name": "Weathers Motors & Auto Sales",
+    "siteUrl": "https://www.weathersmotors.com/",
+    "domain": "weathersmotors.com",
+    "city": "Media",
+    "area": "Delaware County",
+    "vertical": "car",
+    "vertical_group": "auto",
+    "priority": 60,
+    "sqs": 23,
+    "opportunity": 65,
+    "band": "broken",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "client error 403",
+      "only 16 words on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "new-pennsburg-diner",
+    "name": "New Pennsburg Diner",
+    "siteUrl": "https://pennsburgdiner.com/",
+    "domain": "pennsburgdiner.com",
+    "city": "Montgomery County",
+    "area": "Montgomery County",
+    "vertical": "restaurant",
+    "vertical_group": "food",
+    "priority": 60,
+    "sqs": 33,
+    "opportunity": 65,
+    "band": "decayed",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "custom-it-solutions",
+    "name": "Custom IT Solutions",
+    "siteUrl": "https://customitsolutions.com/",
+    "domain": "customitsolutions.com",
+    "city": "Lower Salford Township",
+    "area": "Montgomery County",
+    "vertical": "it",
+    "vertical_group": "legal",
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "ember-and-ale",
+    "name": "Ember & Ale",
+    "siteUrl": "https://emberandale.com/",
+    "domain": "emberandale.com",
+    "city": "Collegeville",
+    "area": "Montgomery County",
+    "vertical": "restaurant",
+    "vertical_group": "food",
+    "priority": 58,
+    "sqs": 35,
+    "opportunity": 63,
+    "band": "decayed",
+    "hard_faults": [
+      "client error 403",
+      "only 3 words on the homepage",
+      "homepage is noindex — invisible to search"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "captain-car-wash",
+    "name": "Captain Car Wash",
+    "siteUrl": "https://captaincarwashpa.com/",
+    "domain": "captaincarwashpa.com",
+    "city": "Norristown",
+    "area": "Montgomery County",
+    "vertical": "car-wash",
+    "vertical_group": "auto",
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 2 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "peking-gourmet",
+    "name": "Peking Gourmet",
+    "siteUrl": "http://pekinggourmetpottstown.com/",
+    "domain": "pekinggourmetpottstown.com",
+    "city": "Pottstown",
+    "area": "Montgomery County",
+    "vertical": "restaurant",
+    "vertical_group": "food",
+    "priority": 58,
+    "sqs": 36,
+    "opportunity": 63,
+    "band": "decayed",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "hard-coded 966px page width"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "johnny-s-pizza",
+    "name": "Johnny's Pizza",
+    "siteUrl": "http://johnnysitaliano.com/",
+    "domain": "johnnysitaliano.com",
+    "city": "Montgomery County",
+    "area": "Montgomery County",
+    "vertical": "restaurant",
+    "vertical_group": "food",
+    "priority": 59,
+    "sqs": 36,
+    "opportunity": 64,
+    "band": "decayed",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "no obvious call to action"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "electric-direct",
+    "name": "Electric Direct",
+    "siteUrl": "https://www.electric-direct.net/",
+    "domain": "electric-direct.net",
+    "city": "Havertown",
+    "area": "Delaware County",
+    "vertical": "electrician",
+    "vertical_group": "home-services",
+    "priority": 63,
+    "sqs": 40,
+    "opportunity": 69,
+    "band": "decayed",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "thin homepage copy (126 words)",
+      "legacy site builder detected (godaddy)"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "home-furnishings-consignment",
+    "name": "Home Furnishings Consignment",
+    "siteUrl": "http://www.hfconsignment.com/",
+    "domain": "hfconsignment.com",
+    "city": "Wayne",
+    "area": "Chester County",
+    "vertical": "furniture",
+    "vertical_group": "retail",
+    "priority": 53,
+    "sqs": 31,
+    "opportunity": 60,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "table-based page layout"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "union-jack-s-olde-congo-hotel",
+    "name": "Union Jack's Olde Congo Hotel",
+    "siteUrl": "http://www.unionjackscongo.com/",
+    "domain": "unionjackscongo.com",
+    "city": "Barto",
+    "area": "Montgomery County",
+    "vertical": "bar",
+    "vertical_group": "food",
+    "priority": 61,
+    "sqs": 29,
+    "opportunity": 66,
+    "band": "broken",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "copyright still says 2013 (13 years stale)"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "chestnut-hill-animal-hospital",
+    "name": "Chestnut Hill Animal Hospital",
+    "siteUrl": "http://chestnuthillvet.com/",
+    "domain": "chestnuthillvet.com",
+    "city": "Erdenheim",
+    "area": "Montgomery County",
+    "vertical": "veterinary",
+    "vertical_group": "medical",
+    "priority": 68,
+    "sqs": 32,
+    "opportunity": 74,
+    "band": "decayed",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "table-based page layout"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "oaks-italian-deli-and-pizzeria",
+    "name": "Oaks Italian Deli & Pizzeria",
+    "siteUrl": "http://oaksitaliandeli.com/",
+    "domain": "oaksitaliandeli.com",
+    "city": "Phoenixville",
+    "area": "Montgomery County",
+    "vertical": "restaurant",
+    "vertical_group": "food",
+    "priority": 52,
+    "sqs": 46,
+    "opportunity": 57,
+    "hard_faults": [
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "only 53 words on the homepage",
+      "no obvious call to action"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "golden-sea",
+    "name": "Golden Sea",
+    "siteUrl": "http://goldenseabluebell.com/",
+    "domain": "goldenseabluebell.com",
+    "city": "Blue Bell",
+    "area": "Montgomery County",
+    "vertical": "restaurant",
+    "vertical_group": "food",
+    "priority": 62,
+    "sqs": 29,
+    "opportunity": 67,
+    "band": "broken",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "copyright still says 2020 (6 years stale)"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "sangillo-tire-center",
+    "name": "Sangillo Tire Center",
+    "siteUrl": "http://www.sangillos.com/",
+    "domain": "sangillos.com",
+    "city": "Folsom",
+    "area": "Delaware County",
+    "vertical": "tyres",
+    "vertical_group": "auto",
+    "priority": 55,
+    "sqs": 29,
+    "opportunity": 60,
+    "band": "broken",
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "table-based page layout"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "pro-nails",
+    "name": "Pro Nails",
+    "siteUrl": "https://gopronails.com/",
+    "domain": "gopronails.com",
+    "city": "Royersford",
+    "area": "Montgomery County",
+    "vertical": "beauty",
+    "vertical_group": "spa-wellness",
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  },
+  {
+    "slug": "heart-and-soul-tattoo",
+    "name": "Heart & Soul Tattoo",
+    "siteUrl": "https://heartandsoultattoos.com/",
+    "domain": "heartandsoultattoos.com",
+    "city": "East Greenville",
+    "area": "Montgomery County",
+    "vertical": "tattoo",
+    "vertical_group": "spa-wellness",
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ],
+    "socials": []
+  }
+]

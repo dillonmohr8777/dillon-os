@@ -1,0 +1,240 @@
+{
+  "slug": "electric-direct",
+  "name": "Electric Direct",
+  "city": "Havertown",
+  "category": "electrician",
+  "vertical": "home-services",
+  "attitude": "industrial",
+  "composition_ref": null,
+  "layout": "harvest-dark",
+  "heroMode": "bleed",
+  "url": "https://www.electric-direct.net/",
+  "phone": "610.853.8288",
+  "description": "Friendly & Affordable electricians serving all of Delaware County & the Main Line. Offering free estimates for all of your electrical projects!",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#DDDDD8",
+    "ink": "#222222",
+    "accent": "#002C48",
+    "accent2": "#F28F1D",
+    "panel": "#96A4AA",
+    "deep": "#002C48",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Anton",
+    "displayFallback": "Georgia,serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "Explore",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Havertown | electrician",
+    "headline": "​Our Services",
+    "sub": "Friendly & Affordable electricians serving all of Delaware County & the Main Line. Offering free estimates for all of your electrical projects!",
+    "ctaPrimary": {
+      "label": "Contact",
+      "href": "tel:6108538288"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Havertown",
+      "sub": "electrician"
+    },
+    "marquee": [
+      "​Our Services",
+      "Our Pros",
+      "​​Electric Direct"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "If you are in need of a friendly and affordable residential electrician,",
+      "Electric Direct is an owner operated company servicing all of the Main",
+      "​Our Services"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Electric Direct is a Havertown electrician.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Serving Havertown and nearby towns."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "If you are in need of a friendly and affordable residential electrician, we are your guys. Contact us today!​",
+      "Electric Direct is an owner operated company servicing all of the Main Line and Delaware County. At Electric Direct, no job is",
+      "Electric Direct serves people who live and work in Havertown.",
+      "You'll find the phone and the next step on this page, not buried in a menu."
+    ]
+  },
+  "experience": {
+    "items": [
+      "If you are in need of a friendly and affordable residential electrician, we are your guys. Contact us",
+      "Electric Direct is an owner operated company servicing all of the Main Line and Delaware County. At Electric",
+      "​Our Services"
+    ]
+  },
+  "feature": {
+    "heading": "​​Electric Direct",
+    "text": "If you are in need of a friendly and affordable residential electrician, we are your guys. Contact us today!​",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://www.electric-direct.net/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Our Pros",
+    "text": "Electric Direct is an owner operated company servicing all of the Main Line and Delaware County. At Electric Direct, no job is",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.electric-direct.net/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Offerings",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages."
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact",
+      "href": "tel:6108538288"
+    },
+    "heading": "Electric Direct"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.electric-direct.net/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Electric Direct electrician in Havertown, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 63,
+    "sqs": 40,
+    "opportunity": 69,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "thin homepage copy (126 words)",
+      "legacy site builder detected (godaddy)"
+    ]
+  },
+  "marquee": [
+    "​Our Services",
+    "Our Pros",
+    "​​Electric Direct"
+  ],
+  "_wordCount": 258,
+  "_measuredWords": 365,
+  "_measuredImages": 12,
+  "_measuredSections": 11
+}

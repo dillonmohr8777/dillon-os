@@ -1,0 +1,49 @@
+name: Deploy phl-2026-w33b preview hub
+
+# One Netlify site, one hub URL, 25 /sites/<slug>/ paths.
+# Uses the existing NETLIFY_AUTH_TOKEN repo secret. Pins the site by name so
+# this cannot overwrite immohrtal-site, phl-2026-w33, or a client property.
+
+on:
+  push:
+    branches: [cursor/radar-batch-reddit-ui-79f9]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: batch-preview-phl-2026-w33b
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      BATCH_DIR: 02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33b
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Confirm the built 25-site batch
+        run: |
+          test -f "$BATCH_DIR/index.html"
+          test -f "$BATCH_DIR/sites/johnny-s-pizza/index.html"
+          test -d "$BATCH_DIR/sites"
+          echo "sites: $(find "$BATCH_DIR/sites" -mindepth 1 -maxdepth 1 -type d | wc -l)"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Deploy hub + 25 site paths
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "::error::NETLIFY_AUTH_TOKEN secret is empty. Set it in repo Actions secrets."
+            exit 1
+          fi
+          node _os/automation/bin/batch-deploy.js --batch "$BATCH_DIR" --site phl-2026-w33b

@@ -1,0 +1,247 @@
+{
+  "slug": "wja-landscaping",
+  "name": "WJA Landscaping",
+  "city": "Collegeville",
+  "category": "gardener",
+  "vertical": "home-services",
+  "attitude": "industrial",
+  "composition_ref": null,
+  "layout": "harvest-split",
+  "heroMode": "split",
+  "url": "https://www.wjalandscaping.com/",
+  "phone": "610-831-3819",
+  "address": "138 Pennapacker Rd, Collegeville, PA, 19426",
+  "hours": "Mon , Fri: 7:00am , 5:00pm",
+  "description": "Discover expert landscaping design and installation tailored to your vision. Serving Collegeville, Limerick Township, and surrounding areas. Request a free quote!",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#E5E1DA",
+    "ink": "#1D242D",
+    "accent": "#4A4E57",
+    "accent2": "#003A8B",
+    "panel": "#B3B2B0",
+    "deep": "#212934",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Anton",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "Services",
+      "href": "#offerings"
+    },
+    {
+      "label": "Landscape Design & Install",
+      "href": "#offerings"
+    },
+    {
+      "label": "Backyard Patios",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Collegeville | Services",
+    "headline": "Your Trusted Landscaping Contractor in Collegeville, PA",
+    "sub": "Discover expert landscaping design and installation tailored to your vision. Serving Collegeville, Limerick Township, and surrounding areas. Request a free quote!",
+    "ctaPrimary": {
+      "label": "Contact",
+      "href": "tel:6108313819"
+    },
+    "ctaSecondary": {
+      "label": "Our Work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Collegeville",
+      "sub": "gardener"
+    },
+    "marquee": [
+      "Services",
+      "Landscape Design & Install",
+      "Backyard Patios",
+      "Design & Renderings",
+      "Outdoor Kitchen",
+      "Outdoor Lighting"
+    ]
+  },
+  "offerings": {
+    "heading": "Services",
+    "items": [
+      "Custom Landscape Designs and Renderings",
+      "Backyard Patios and Outdoor Living Spaces",
+      "Retaining Walls, Walkways, and Hardscapes"
+    ]
+  },
+  "proof": {
+    "items": [
+      "WJA Landscaping is a Collegeville gardener.",
+      "Hours listed as Mon , Fri: 7:00am , 5:00pm.",
+      "Phone published on their own pages.",
+      "Visit 138 Pennapacker Rd, Collegeville, PA, 19426."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Your Trusted Landscaping Contractor in Collegeville, PA",
+      "At WJA Landscaping, we help homeowners in Collegeville and nearby areas transform their outdoor spaces into functional, beautiful, and lasting landscapes. Whether"
+    ]
+  },
+  "experience": {
+    "items": [
+      "As a locally owned and operated landscaping contractor in Collegeville, we take pride in delivering personalized service, transparent",
+      "Transforming outdoor spaces in the Collegeville area, WJA Landscaping leverages expertise in local climate and plant life to",
+      "Your outdoor space should be an extension of your home,not just functional, but beautiful and uniquely yours. At"
+    ]
+  },
+  "feature": {
+    "heading": "Landscape Design and Installation Services Tailored to You",
+    "text": "As a locally owned and operated landscaping contractor in Collegeville, we take pride in delivering personalized service, transparent communication, and high-quality craftsmanship in every project,no matter the size.",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://www.wjalandscaping.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Custom Landscape Designs and Renderings",
+    "text": "At WJA Landscaping, we help homeowners in Collegeville and nearby areas transform their outdoor spaces into functional, beautiful, and lasting landscapes. Whether",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Services",
+        "href": "https://www.wjalandscaping.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Landscape Design & Install",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Backyard Patios",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "As a locally owned and operated landscaping contractor in Collegeville, we take pride in delivering personalized service, transparent communication, and high-quality craftsmanship in every project,no matter the size."
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact",
+      "href": "tel:6108313819"
+    },
+    "heading": "WJA Landscaping"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.wjalandscaping.com/"
+    },
+    {
+      "label": "Landscape Design & Install",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "WJA Landscaping gardener in Collegeville, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "marquee": [
+    "Services",
+    "Landscape Design & Install",
+    "Backyard Patios",
+    "Design & Renderings",
+    "Outdoor Kitchen",
+    "Outdoor Lighting"
+  ],
+  "_wordCount": 276,
+  "_measuredWords": 449,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

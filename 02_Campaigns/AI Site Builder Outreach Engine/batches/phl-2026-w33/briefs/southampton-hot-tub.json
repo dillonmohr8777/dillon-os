@@ -1,0 +1,240 @@
+{
+  "slug": "southampton-hot-tub",
+  "name": "Southampton Hot Tub",
+  "city": "Exton",
+  "category": "swimming pool",
+  "vertical": "home-services",
+  "attitude": "industrial",
+  "composition_ref": "https://www.anthropic.com",
+  "url": "https://southamptonhottub.com/",
+  "phone": "(215) 791-6170",
+  "description": "Southampton Hot Tub helps you pick a tub that fits the deck, the power, and the way you actually relax. Come see them in person.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "tokens": {
+    "paper": "#E8E6E7",
+    "ink": "#1E2A4A",
+    "accent": "#4169E1",
+    "accent2": "#2A3890",
+    "panel": "#B9C3E5",
+    "deep": "#1F2F5D",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Anton",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Hot tubs, local",
+    "headline": "A spa you will use in January",
+    "sub": "Southampton Hot Tub helps you pick a tub that fits the deck, the power, and the way you actually relax. Come see them in person.",
+    "ctaPrimary": {
+      "label": "See the tubs",
+      "href": "tel:2157916170"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Exton",
+      "sub": "swimming pool"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Hot tubs",
+      "Delivery and setup",
+      "Service after"
+    ],
+    "heading": "What we do <mark>well.</mark>"
+  },
+  "proof": {
+    "items": [
+      "Local showroom",
+      "See it running",
+      "Service after the sale",
+      "Ask about power"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Buy the tub you will sit in",
+    "paragraphs": [
+      "A hot tub is a weekend habit or it is an expensive lid. We help you pick one you will keep uncovered.",
+      "We talk about pads, breakers, and winter covers before anyone quotes a pretty picture.",
+      "Southampton Hot Tub serves people who live and work in Exton.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "items": [
+      "Sit in a display",
+      "Check the electrical",
+      "Plan the crane or the path"
+    ],
+    "heading": "How a visit goes"
+  },
+  "feature": {
+    "heading": "Setup is the real product",
+    "text": "Delivery day is when most regrets start. We plan the path, the pad, and the first fill so you are soaking that night.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://southamptonhottub.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Come see them running",
+    "text": "Call before you drive so we can confirm the showroom hours. Street address is confirmed on the official site when it is posted.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "heading": "More ways in",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://southamptonhottub.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "What we do",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Talk through the deck",
+    "sub": "Call with photos of the yard and the breaker panel. We will tell you what will fit."
+  },
+  "closing": {
+    "heading": "Leave the lid off",
+    "cta": {
+      "label": "See the tubs",
+      "href": "tel:2157916170"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://southamptonhottub.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Southampton Hot Tub swimming pool in Exton, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 51,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 266,
+  "_measuredWords": 363,
+  "_measuredImages": 12,
+  "_measuredSections": 11,
+  "layout": "https://www.anthropic.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "See the tubs",
+    "href": "tel:2157916170"
+  }
+}

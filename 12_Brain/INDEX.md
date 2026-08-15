@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-07-31
+updated: 2026-08-14
 ---
 
 # INDEX — the front door
@@ -47,10 +47,11 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/research/2026-08-14 - Reddit-cited UI wow library|Reddit-cited UI wow library]] — 200 composition references; first 25 radar rebuilds in `phl-2026-w33`.
 
 ## Raw captures (Git-safe)
 
-- [[12_Brain/raw/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
+- [[12_Brain/raw/research/2026-08-14 - reddit-cited-wow-ui-library|2026-08-14 reddit-cited-wow-ui-library]] — receipt for the 200-site composition catalog.
 - `12_Brain/raw/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
@@ -73,6 +74,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[02_Campaigns/AI Site Builder Outreach Engine/Market Roster|Market Roster]] — geography ladder (Philadelphia → PA → national) and vertical priorities.
 - `handoffs/prospect-radar-blockers-2026-08-06.md` — open blockers for the desktop agent: Tier 1 unproven, thresholds Tier-0-anchored, OSM trade coverage, no outcome data.
 - `_os/radar-engine/` — Prospect Radar V2 adapter layer (intake, QA, reports, dry-run handoff). See [[12_Brain/projects/Prospect Radar V2]].
+- `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/` — week 33 radar rebuild batch (25 noindex demos, mail hold).
+- `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33b/` — week 33b unused radar slice, mirror-and-improve (25 noindex demos, mail hold).
 
 ## Folder indexes (working vault)
 

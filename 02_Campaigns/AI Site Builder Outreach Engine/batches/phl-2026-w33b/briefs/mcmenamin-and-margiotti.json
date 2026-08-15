@@ -1,0 +1,245 @@
+{
+  "slug": "mcmenamin-and-margiotti",
+  "name": "McMenamin & Margiotti",
+  "city": "Colmar",
+  "category": "lawyer",
+  "vertical": "legal",
+  "attitude": "editorial",
+  "composition_ref": null,
+  "layout": "harvest-clinic",
+  "heroMode": "split",
+  "url": "https://buxmontlaw.com/",
+  "phone": "(215) 967-5185",
+  "address": "650 North Cannon Ave, Suite, Colmar, PA",
+  "description": "Montgomery County PA Attorneys providing expert legal services in Lansdale and surrounding areas. Our lawyers are diligent, compassionate and they are here to help you.",
+  "noindex": true,
+  "schemaType": "LegalService",
+  "logo": false,
+  "tokens": {
+    "paper": "#D1D3E2",
+    "ink": "#1D1B1B",
+    "accent": "#1B2771",
+    "accent2": "#384378",
+    "panel": "#979CBE",
+    "deep": "#333333",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "(215) 967-5185",
+      "href": "#offerings"
+    },
+    {
+      "label": "X-twitter",
+      "href": "#offerings"
+    },
+    {
+      "label": "Youtube",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Colmar | (215) 967-5185",
+    "headline": "Family & Divorce Law",
+    "sub": "Montgomery County PA Attorneys providing expert legal services in Lansdale and surrounding areas. Our lawyers are diligent, compassionate and they are here to help you.",
+    "ctaPrimary": {
+      "label": "Contact Us",
+      "href": "tel:2159675185"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Colmar",
+      "sub": "lawyer"
+    },
+    "marquee": [
+      "(215) 967-5185",
+      "X-twitter",
+      "Youtube",
+      "About",
+      "Patrick J. McMenamin, Jr.",
+      "Practice Areas"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Honesty",
+      "Integrity",
+      "Results!"
+    ]
+  },
+  "proof": {
+    "items": [
+      "McMenamin & Margiotti has served Colmar for over 35 years.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Visit 650 North Cannon Ave, Suite, Colmar, PA."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "What Our Clients Say About Us",
+    "paragraphs": [
+      "650 North Cannon Ave, Suite 130, Lansdale, PA 19446",
+      "We know when to fight and when to negotiate to yield the best outcome for you."
+    ]
+  },
+  "experience": {
+    "items": [
+      "If you've been arrested or are under police investigation we will protect your rights.",
+      "We're DUI Specialists. We'll take the burden from you and defend you aggressively.",
+      "Our personal injury practice is based on compassion for our clients with a focus on results."
+    ]
+  },
+  "feature": {
+    "heading": "Criminal Defense",
+    "text": "If you've been arrested or are under police investigation we will protect your rights.",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://buxmontlaw.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Honesty.",
+    "text": "We know when to fight and when to negotiate to yield the best outcome for you.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Contact Us",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "(215) 967-5185",
+        "href": "https://buxmontlaw.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "X-twitter",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Youtube",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "If you’ve been charged with a DUI in Montgomery or Bucks County Pa, it’s critical that you hire an experienced and conscientious DUI Defense attorney. Beware, some so-called DUI lawyers will take your money then plead you guilty just to make a quick fee with little effort. You should meet the attorney in his or her office and be sure they will aggressively defend you to minimize the impact the DUI has on your life."
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact Us",
+      "href": "tel:2159675185"
+    },
+    "heading": "McMenamin & Margiotti"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://buxmontlaw.com/"
+    },
+    {
+      "label": "X-twitter",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "McMenamin & Margiotti lawyer in Colmar, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "marquee": [
+    "(215) 967-5185",
+    "X-twitter",
+    "Youtube",
+    "About",
+    "Patrick J. McMenamin, Jr.",
+    "Practice Areas"
+  ],
+  "_wordCount": 270,
+  "_measuredWords": 423,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

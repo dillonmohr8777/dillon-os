@@ -1,0 +1,244 @@
+{
+  "slug": "balance-studios",
+  "name": "Balance Studios",
+  "city": "Philadelphia",
+  "category": "fitness centre",
+  "vertical": "spa-wellness",
+  "attitude": "warm",
+  "composition_ref": null,
+  "layout": "harvest-photo",
+  "heroMode": "photo",
+  "url": "https://www.balancestudios.net/",
+  "phone": "215-988-9347",
+  "description": "Join us for 7 days free in Gracie Brazilian Jiu Jitsu and Muay Thai Boxing classes in Center City, Northeast and Fishtown Philadelphia.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#F5F8FA",
+    "ink": "#333333",
+    "accent": "#03AEF4",
+    "accent2": "#1EBDFF",
+    "panel": "#A8E0F8",
+    "deep": "#084F6F",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Poppins",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "News & Blog",
+      "href": "#offerings"
+    },
+    {
+      "label": "7 Days Free",
+      "href": "#offerings"
+    },
+    {
+      "label": "About",
+      "href": "#top"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | News & Blog",
+    "headline": "Balance Studios Story",
+    "sub": "Join us for 7 days free in Gracie Brazilian Jiu Jitsu and Muay Thai Boxing classes in Center City, Northeast and Fishtown Philadelphia.",
+    "ctaPrimary": {
+      "label": "Price/Schedule",
+      "href": "tel:2159889347"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "fitness centre"
+    },
+    "marquee": [
+      "News & Blog",
+      "7 Days Free",
+      "About",
+      "Programs",
+      "Gracie Brazilian Jiu-Jitsu",
+      "Muay Thai Kickboxing"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Migliarese Bros",
+      "Gracie Family Approved!",
+      "We're looking for quality students!"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Balance Studios has served Philadelphia for over 30 years.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Serving Philadelphia and nearby towns."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Balance Studios Story",
+    "paragraphs": [
+      "About Balance Studios [The Headquarters] Migliarese Bros. [Fearless Leaders] Team Balance [Worldwide Team] Relson Gracie [Our Instructor] Hélio Gracie [Our Inspiration]",
+      "Locations Fishtown, Philadelphia (HQ) Center City, Philadelphia Northeast, Philadelphia Haddonfield, New Jersey"
+    ]
+  },
+  "experience": {
+    "items": [
+      "Balance Studios is a multiple award winner of “Best of Philly” and the leading source of instruction in",
+      "Balance Studios is a family-focused studio, prioritizing a positive atmosphere. Our level-specific Muay Thai and Gracie Brazilian Jiu-Jitsu",
+      "The Migliarese Brothers are the founders of Balance Studios and have over 30 years of experience in Gracie"
+    ]
+  },
+  "feature": {
+    "heading": "Balance Mission",
+    "text": "Balance Studios is a multiple award winner of “Best of Philly” and the leading source of instruction in Gracie Brazilian Jiu-Jitsu (BJJ), Mixed Martial Arts, Muay Thai Kickboxing,",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://www.balancestudios.net/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Migliarese Bros.",
+    "text": "Locations Fishtown, Philadelphia (HQ) Center City, Philadelphia Northeast, Philadelphia Haddonfield, New Jersey",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "News & Blog",
+        "href": "https://www.balancestudios.net/",
+        "imageIndex": 9
+      },
+      {
+        "title": "7 Days Free",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "About",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "We seek quality students and offer quality instruction, making us a perfect match. If you’re searching for the best Brazilian Jiu-Jitsu and Muay Thai Kickboxing in Philadelphia, we have what you’re looking for. We screen and filter out negative attitudes and potential hazards to provide a safe and positive atmosphere. Our clean, beautiful studios are filled with dedicated students and instructors who take their martial arts studies seriously. We hope you’ll fall in love with our amazing staff and facility on your first visit."
+  },
+  "closing": {
+    "cta": {
+      "label": "Price/Schedule",
+      "href": "tel:2159889347"
+    },
+    "heading": "Balance Studios"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.balancestudios.net/"
+    },
+    {
+      "label": "7 Days Free",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Balance Studios fitness centre in Philadelphia, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 55,
+    "sqs": 33,
+    "opportunity": 55,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "marquee": [
+    "News & Blog",
+    "7 Days Free",
+    "About",
+    "Programs",
+    "Gracie Brazilian Jiu-Jitsu",
+    "Muay Thai Kickboxing"
+  ],
+  "_wordCount": 309,
+  "_measuredWords": 454,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

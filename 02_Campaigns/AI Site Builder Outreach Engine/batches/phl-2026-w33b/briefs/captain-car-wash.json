@@ -1,0 +1,245 @@
+{
+  "slug": "captain-car-wash",
+  "name": "Captain Car Wash",
+  "city": "Norristown",
+  "category": "car wash",
+  "vertical": "auto",
+  "attitude": "brutal",
+  "composition_ref": null,
+  "layout": "harvest-dark",
+  "heroMode": "bleed",
+  "url": "https://captaincarwashpa.com/",
+  "phone": "610-539-9390",
+  "description": "Captain Carwash, conveniently located in Norristown, PA, is the go-to destination for all your car cleaning needs. With our Unlimited Wash club options, you can keep your vehicle",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#CED9E8",
+    "ink": "#222222",
+    "accent": "#046A8C",
+    "accent2": "#114760",
+    "panel": "#8DB5CB",
+    "deep": "#333333",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "0px"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Georgia,serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "Manage My Plan",
+      "href": "#offerings"
+    },
+    {
+      "label": "Aston",
+      "href": "#offerings"
+    },
+    {
+      "label": "Norristown (Worcester)",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Norristown | Manage My Plan",
+    "headline": "Where a Quality Wash Meets Happiness Every Time!",
+    "sub": "Captain Carwash, conveniently located in Norristown, PA, is the go-to destination for all your car cleaning needs. With our Unlimited Wash club options, you can keep your vehicle",
+    "ctaPrimary": {
+      "label": "Contact Us",
+      "href": "tel:6105399390"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Norristown",
+      "sub": "car wash"
+    },
+    "marquee": [
+      "Manage My Plan",
+      "Aston",
+      "Norristown (Worcester)",
+      "Locations",
+      "Fundraising",
+      "Coupon Recovery"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Cleanliness Fuels Happiness",
+      "Manage Your Plan Online",
+      "How It Works"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Captain Car Wash is a Norristown car wash.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Serving Norristown and nearby towns."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Manage My Plan Aston Norristown (Worcester)",
+      "Studies show: a clean car equals a happier you.",
+      "Captain Car Wash serves people who live and work in Norristown."
+    ]
+  },
+  "experience": {
+    "items": [
+      "At Captain Car Wash, we understand that your vehicle is not just a mode of transportation; it's a",
+      "Best car wash. Gets my car totally dry. My car has never been so clean. I highly recommend",
+      "Great family owned local business. Very friendly staff and my car always looks great!"
+    ]
+  },
+  "feature": {
+    "heading": "Cleanliness Fuels Happiness",
+    "text": "At Captain Car Wash, we understand that your vehicle is not just a mode of transportation; it's a reflection of your personality and style. That's why we are",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://captaincarwashpa.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Manage Your Plan Online",
+    "text": "Studies show: a clean car equals a happier you.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Contact Us",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Manage My Plan",
+        "href": "https://captaincarwashpa.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Aston",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Norristown (Worcester)",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages."
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact Us",
+      "href": "tel:6105399390"
+    },
+    "heading": "Captain Car Wash"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://captaincarwashpa.com/"
+    },
+    {
+      "label": "Aston",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Captain Car Wash car wash in Norristown, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 2 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "marquee": [
+    "Manage My Plan",
+    "Aston",
+    "Norristown (Worcester)",
+    "Locations",
+    "Fundraising",
+    "Coupon Recovery"
+  ],
+  "_wordCount": 235,
+  "_measuredWords": 361,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

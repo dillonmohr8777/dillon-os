@@ -1,0 +1,240 @@
+{
+  "slug": "live-urgent-care",
+  "name": "Live Urgent Care",
+  "city": "King of Prussia",
+  "category": "clinic",
+  "vertical": "medical",
+  "attitude": "glass",
+  "composition_ref": "https://www.cosmos.so",
+  "url": "https://liveurgentcare.com/locations/kingofprussia/",
+  "phone": "(484) 750-5212",
+  "address": "107 Town Center Road, King of Prussia, PA, 19406",
+  "description": "Live Urgent Care on Town Center Road is for the sprain, the fever, the cut, and the thing that cannot wait for a Tuesday physical.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "tokens": {
+    "paper": "#E3E1DB",
+    "ink": "#111D27",
+    "accent": "#052D41",
+    "accent2": "#08415C",
+    "panel": "#A5AFB0",
+    "deep": "#0A1A25",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "28px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "King of Prussia",
+    "headline": "Urgent care when the day goes sideways",
+    "sub": "Live Urgent Care on Town Center Road is for the sprain, the fever, the cut, and the thing that cannot wait for a Tuesday physical.",
+    "ctaPrimary": {
+      "label": "Get directions",
+      "href": "tel:4847505212"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "King of Prussia",
+      "sub": "clinic"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Walk-in visits",
+      "Illness and injury",
+      "On-site testing"
+    ],
+    "heading": "What we do <mark>well.</mark>"
+  },
+  "proof": {
+    "items": [
+      "King of Prussia",
+      "Town Center Road",
+      "Open for the unexpected",
+      "Phone listed"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "A clinic for the unplanned",
+    "paragraphs": [
+      "You do not plan an urgent care visit. You just need the door to be open and the staff to move.",
+      "Tell us what started, when it started, and what you have already taken. We will take it from there.",
+      "Live Urgent Care serves people who live and work in King of Prussia.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "items": [
+      "Check the hours",
+      "Walk in or call first",
+      "Leave with next steps"
+    ],
+    "heading": "How a visit goes"
+  },
+  "feature": {
+    "heading": "King of Prussia, same day",
+    "text": "We handle the problems that show up after work and on weekends. If you need the ER instead, we will say so.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://liveurgentcare.com/locations/kingofprussia/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "107 Town Center Road",
+    "text": "Easy to find in King of Prussia. Bring an ID and a short list of medications.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "heading": "More ways in",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://liveurgentcare.com/locations/kingofprussia/",
+        "imageIndex": 9
+      },
+      {
+        "title": "What we do",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come in today",
+    "sub": "Confirm hours on the official site, then head over. The address is on this page."
+  },
+  "closing": {
+    "heading": "We will see you shortly",
+    "cta": {
+      "label": "Get directions",
+      "href": "tel:4847505212"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://liveurgentcare.com/locations/kingofprussia/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Live Urgent Care clinic in King of Prussia, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 32,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 253,
+  "_measuredWords": 368,
+  "_measuredImages": 13,
+  "_measuredSections": 11,
+  "layout": "https://www.cosmos.so",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Get directions",
+    "href": "tel:4847505212"
+  }
+}

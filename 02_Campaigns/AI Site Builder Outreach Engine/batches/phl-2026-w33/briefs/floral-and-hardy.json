@@ -1,0 +1,241 @@
+{
+  "slug": "floral-and-hardy",
+  "name": "Floral and Hardy",
+  "city": "Skippack",
+  "category": "garden centre",
+  "vertical": "home-services",
+  "attitude": "industrial",
+  "composition_ref": "https://clerk.com",
+  "url": "https://floralandhardyofskippack.com/",
+  "phone": "610-584-0797",
+  "address": "4007 Skippack Pike, Skippack, PA 19474",
+  "hours": "Mon-Fri 8:00 AM to 4:00 PM",
+  "description": "Floral and Hardy on Skippack Pike is the garden center you drive to when you want something alive, not a plastic bouquet.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "tokens": {
+    "paper": "#F2E5D8",
+    "ink": "#3A261F",
+    "accent": "#C2571B",
+    "accent2": "#787F34",
+    "panel": "#E5BDA3",
+    "deep": "#4C2918",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Anton",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Skippack",
+    "headline": "Plants, pots, and a yard that looks loved",
+    "sub": "Floral and Hardy on Skippack Pike is the garden center you drive to when you want something alive, not a plastic bouquet.",
+    "ctaPrimary": {
+      "label": "Visit Skippack",
+      "href": "tel:6105840797"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Skippack",
+      "sub": "garden centre"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Seasonal plants",
+      "Garden supplies",
+      "Local advice"
+    ],
+    "heading": "What we do <mark>well.</mark>"
+  },
+  "proof": {
+    "items": [
+      "4007 Skippack Pike",
+      "Skippack, PA",
+      "A real greenhouse",
+      "Ask before you buy"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "A garden center with dirt under the nails",
+    "paragraphs": [
+      "We grow and stock what does well here, then tell you how to keep it alive. That is the whole offer.",
+      "Come walk the benches. If you are unsure, ask. We would rather send you home with the right plant.",
+      "Floral and Hardy serves people who live and work in Skippack.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "items": [
+      "Walk the benches",
+      "Ask what survives here",
+      "Load the car once"
+    ],
+    "heading": "How a visit goes"
+  },
+  "feature": {
+    "heading": "Skippack Pike, in season",
+    "text": "The mix changes with the weather. Spring is busy. Fall is for the people who plan. Winter still has something green if you ask.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://floralandhardyofskippack.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "4007 Skippack Pike",
+    "text": "Park, wander, and leave with more than you meant to. That is a good day here.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "heading": "More ways in",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://floralandhardyofskippack.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "What we do",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come walk the benches",
+    "sub": "Confirm hours before you drive. The address is on this page."
+  },
+  "closing": {
+    "heading": "Bring the wagon",
+    "cta": {
+      "label": "Visit Skippack",
+      "href": "tel:6105840797"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://floralandhardyofskippack.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Floral and Hardy garden centre in Skippack, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 238,
+  "_measuredWords": 364,
+  "_measuredImages": 13,
+  "_measuredSections": 11,
+  "layout": "https://clerk.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Visit Skippack",
+    "href": "tel:6105840797"
+  }
+}

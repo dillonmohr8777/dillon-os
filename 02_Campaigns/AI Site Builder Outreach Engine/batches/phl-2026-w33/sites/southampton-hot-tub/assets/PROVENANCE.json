@@ -1,0 +1,70 @@
+{
+  "slug": "southampton-hot-tub",
+  "appliedAt": "2026-08-14T20:23:28.711Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/southampton-hot-tub",
+  "copied": 12,
+  "sources": [
+    {
+      "from": "source-01.jpg",
+      "to": "image-1.webp",
+      "as": "image-1.jpg"
+    },
+    {
+      "from": "source-02.webp",
+      "to": "image-2.webp",
+      "as": "image-2.webp"
+    },
+    {
+      "from": "source-03.jpg",
+      "to": "image-3.webp",
+      "as": "image-3.jpg"
+    },
+    {
+      "from": "source-04.jpg",
+      "to": "image-4.webp",
+      "as": "image-4.jpg"
+    },
+    {
+      "from": "source-05.webp",
+      "to": "image-5.webp",
+      "as": "image-5.webp"
+    },
+    {
+      "from": "source-06.jpg",
+      "to": "image-6.webp",
+      "as": "image-6.jpg"
+    },
+    {
+      "from": "source-07.jpg",
+      "to": "image-7.webp",
+      "as": "image-7.jpg"
+    },
+    {
+      "from": "source-08.webp",
+      "to": "image-8.webp",
+      "as": "image-8.webp"
+    },
+    {
+      "from": "source-09.jpg",
+      "to": "image-9.webp",
+      "as": "image-9.jpg"
+    },
+    {
+      "from": "source-10.avif",
+      "to": "image-10.webp",
+      "as": "image-10.avif"
+    },
+    {
+      "from": "source-11.avif",
+      "to": "image-11.webp",
+      "as": "image-11.avif"
+    },
+    {
+      "from": "source-12.jpg",
+      "to": "image-12.webp",
+      "as": "image-12.jpg"
+    }
+  ],
+  "hint": null,
+  "siteUrl": "https://southamptonhottub.com/"
+}

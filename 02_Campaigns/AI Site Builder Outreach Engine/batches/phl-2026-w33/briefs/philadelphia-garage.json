@@ -1,0 +1,240 @@
+{
+  "slug": "philadelphia-garage",
+  "name": "Philadelphia Garage",
+  "city": "Chester County",
+  "category": "floorer",
+  "vertical": "home-services",
+  "attitude": "industrial",
+  "composition_ref": "https://github.com",
+  "url": "https://www.philadelphiagarage.com/",
+  "description": "Philadelphia Garage coats and finishes floors so the space works for cars, tools, and the overflow from the house. Call for a look at your slab.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "tokens": {
+    "paper": "#EEDED6",
+    "ink": "#2F131B",
+    "accent": "#8E0008",
+    "accent2": "#AF0A1B",
+    "panel": "#D3A09C",
+    "deep": "#3A0A11",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "4px"
+  },
+  "fonts": {
+    "display": "Anton",
+    "displayFallback": "Georgia,serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Garage floors, done once",
+    "headline": "A garage you can park on and live with",
+    "sub": "Philadelphia Garage coats and finishes floors so the space works for cars, tools, and the overflow from the house. Call for a look at your slab.",
+    "ctaPrimary": {
+      "label": "Request a look",
+      "href": "https://www.philadelphiagarage.com/"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Chester County",
+      "sub": "floorer"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Floor coatings",
+      "Prep and repair",
+      "Clean handoff"
+    ],
+    "heading": "What we do <mark>well.</mark>"
+  },
+  "proof": {
+    "items": [
+      "Local crew",
+      "Prep is the job",
+      "Photos of real slabs",
+      "One project at a time"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "The floor is the room",
+    "paragraphs": [
+      "A pretty coat on a dirty slab fails. We talk about prep, moisture, and what you park on it before we talk color.",
+      "You will know how long the car lives in the driveway. We keep that timeline honest.",
+      "Philadelphia Garage serves people who live and work in Chester County.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "Chester County floorer care, written so a person can act on it."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "items": [
+      "Send slab photos",
+      "Hear the prep plan",
+      "Park when we say you can"
+    ],
+    "heading": "How a visit goes"
+  },
+  "feature": {
+    "heading": "Prep you can trust",
+    "text": "Most failures start with skipped grind work. We will not skip it to win a cheaper bid.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.philadelphiagarage.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "We come to the garage",
+    "text": "Street address is confirmed on the official site when the listing is complete. Call and we will meet you at the house.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "heading": "More ways in",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.philadelphiagarage.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "What we do",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Show us the slab",
+    "sub": "Call with photos and the town. We will tell you if the floor is ready."
+  },
+  "closing": {
+    "heading": "Let's see the concrete",
+    "cta": {
+      "label": "Request a look",
+      "href": "https://www.philadelphiagarage.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.philadelphiagarage.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Philadelphia Garage floorer in Chester County, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 51,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 279,
+  "_measuredWords": 371,
+  "_measuredImages": 12,
+  "_measuredSections": 11,
+  "layout": "https://github.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Request a look",
+    "href": "https://www.philadelphiagarage.com/"
+  }
+}

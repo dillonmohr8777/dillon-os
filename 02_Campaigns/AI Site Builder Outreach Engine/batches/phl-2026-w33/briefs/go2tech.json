@@ -1,0 +1,243 @@
+{
+  "slug": "go2tech",
+  "name": "GO2Tech",
+  "city": "Springfield",
+  "category": "it",
+  "vertical": "legal",
+  "attitude": "editorial",
+  "composition_ref": "https://webflow.com",
+  "url": "https://www.go2tech.com/",
+  "address": "606 Baltimore Pike, Springfield, PA, 19064",
+  "description": "GO2Tech keeps Springfield offices running: the network, the backups, the machine that froze before a meeting. Call when it cannot wait.",
+  "noindex": true,
+  "schemaType": "LegalService",
+  "logo": true,
+  "tokens": {
+    "paper": "#E2E9EA",
+    "ink": "#103251",
+    "accent": "#008FFF",
+    "accent2": "#9AC247",
+    "panel": "#A3D0F0",
+    "deep": "#083C68",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Springfield",
+    "headline": "IT help that answers the phone",
+    "sub": "GO2Tech keeps Springfield offices running: the network, the backups, the machine that froze before a meeting. Call when it cannot wait.",
+    "ctaPrimary": {
+      "label": "Call GO2Tech",
+      "href": "https://www.go2tech.com/"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Springfield",
+      "sub": "it"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Managed IT",
+      "Repairs",
+      "Network and backup"
+    ],
+    "heading": "What we do <mark>well.</mark>"
+  },
+  "proof": {
+    "items": [
+      "Baltimore Pike",
+      "Springfield, PA",
+      "Local techs",
+      "A human on the line"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Support you can reach",
+    "paragraphs": [
+      "Technology should not be a mystery invoice. We tell you what broke, what we did, and how to keep it from happening again.",
+      "Offices in Delaware County call us because we show up and we explain the work.",
+      "GO2Tech serves people who live and work in Springfield.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "Springfield it care, written so a person can act on it.",
+      "Local it in Springfield, kept easy to reach.",
+      "Local it in Springfield, kept easy to reach."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "items": [
+      "Describe the outage",
+      "Get a tech assigned",
+      "See the fix in writing"
+    ],
+    "heading": "How a visit goes"
+  },
+  "feature": {
+    "heading": "Prevent the next outage",
+    "text": "Backup and monitoring are boring until the day they save the week. We will tell you what you are missing.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.go2tech.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "606 Baltimore Pike",
+    "text": "Springfield is home base. We come to you when the office cannot come to us.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "heading": "More ways in",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.go2tech.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "What we do",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Get a tech on it",
+    "sub": "Call with the business name and what stopped working. We will take the ticket."
+  },
+  "closing": {
+    "heading": "We will get you back online",
+    "cta": {
+      "label": "Call GO2Tech",
+      "href": "https://www.go2tech.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.go2tech.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "GO2Tech it in Springfield, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "GO2Tech it in Springfield, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "GO2Tech it in Springfield, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "GO2Tech it in Springfield, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "GO2Tech it in Springfield, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "GO2Tech it in Springfield, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "GO2Tech it in Springfield, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "GO2Tech it in Springfield, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "GO2Tech it in Springfield, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "GO2Tech it in Springfield, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "GO2Tech it in Springfield, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "GO2Tech it in Springfield, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 267,
+  "_measuredWords": 362,
+  "_measuredImages": 13,
+  "_measuredSections": 11,
+  "layout": "https://webflow.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call GO2Tech",
+    "href": "https://www.go2tech.com/"
+  }
+}

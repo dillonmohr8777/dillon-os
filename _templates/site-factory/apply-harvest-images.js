@@ -15,6 +15,20 @@ const fs = require('fs');
 const path = require('path');
 const { assertSafeSlug } = require('./lib/validate.js');
 
+function isMapLikeSource(name, src) {
+  return /map|zone|delivery-zone|service-area|radius|directions|coverage/i.test(`${name || ''} ${src || ''}`);
+}
+
+function harvestSrcFor(harvestDir, file) {
+  try {
+    const meta = JSON.parse(fs.readFileSync(path.join(harvestDir, 'harvest.json'), 'utf8'));
+    const hit = (meta.images || []).find((img) => img.file === file || String(img.src || '').endsWith(file));
+    return hit ? `${hit.file || ''} ${hit.src || ''} ${hit.alt || ''}` : '';
+  } catch {
+    return '';
+  }
+}
+
 function applyHarvestImages(slug, siteDir, opts = {}) {
   const safe = assertSafeSlug(slug);
   const harvestDir = opts.harvestDir || path.join(__dirname, 'harvest', safe);
@@ -29,6 +43,7 @@ function applyHarvestImages(slug, siteDir, opts = {}) {
   const files = fs
     .readdirSync(imagesDir)
     .filter((f) => /\.(webp|jpg|jpeg|png|avif|gif)$/i.test(f))
+    .filter((f) => !isMapLikeSource(f, harvestSrcFor(harvestDir, f)))
     .sort();
 
   const targetCount = opts.targetCount || 12;
@@ -70,7 +85,7 @@ function applyHarvestImages(slug, siteDir, opts = {}) {
   return provenance;
 }
 
-module.exports = { applyHarvestImages };
+module.exports = { applyHarvestImages, isMapLikeSource };
 
 if (require.main === module) {
   const slug = process.argv[2];

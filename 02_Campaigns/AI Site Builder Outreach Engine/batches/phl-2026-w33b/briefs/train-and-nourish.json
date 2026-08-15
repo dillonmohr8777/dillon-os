@@ -1,0 +1,245 @@
+{
+  "slug": "train-and-nourish",
+  "name": "Train and Nourish",
+  "city": "Philadelphia",
+  "category": "fitness centre",
+  "vertical": "spa-wellness",
+  "attitude": "warm",
+  "composition_ref": null,
+  "layout": "harvest-photo",
+  "heroMode": "photo",
+  "url": "https://trainandnourish.com/",
+  "phone": "(267) 710-7744",
+  "address": "1621 East Passyunk Ave. Philadelphia PA 19148 (267) 710-7744 G",
+  "description": "Seeking a Philadelphia personal trainer for women? At Train & Nourish, our female personal trainers serve all ages, levels, and body types!",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#F8F7F7",
+    "ink": "#181818",
+    "accent": "#F8D3D2",
+    "accent2": "#A42141",
+    "panel": "#F8EBEB",
+    "deep": "#323232",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Montserrat",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "Personal Training",
+      "href": "#offerings"
+    },
+    {
+      "label": "Personal Training Fishtown",
+      "href": "#offerings"
+    },
+    {
+      "label": "Personal Training Ardmore",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Philadelphia | Personal Training",
+    "headline": "Your Go-To Philadelphia Personal Trainers for Women",
+    "sub": "Seeking a Philadelphia personal trainer for women? At Train & Nourish, our female personal trainers serve all ages, levels, and body types!",
+    "ctaPrimary": {
+      "label": "Book a Free Consult",
+      "href": "tel:2677107744"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "fitness centre"
+    },
+    "marquee": [
+      "Personal Training",
+      "Personal Training Fishtown",
+      "Personal Training Ardmore",
+      "Classes",
+      "Nutrition",
+      "Locations"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Are youOverwhelmed By…",
+      "Ready to Level Up Your Fitness",
+      "Pregnant & Post-Natal"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Train and Nourish is a Philadelphia fitness centre.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Visit 1621 East Passyunk Ave. Philadelphia PA 19148 (267) 710-7744 G."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Birth of Train & Nourish",
+    "paragraphs": [
+      "Locations East Passyunk, PA Art Museum, PA Fishtown, PA Ardmore, PA West Chester, PA",
+      "Quick fix weight loss “solutions” that fail"
+    ]
+  },
+  "experience": {
+    "items": [
+      "Feeling stuck, unmotivated, or alone in your fitness journey",
+      "If you’re just starting out, our female trainers and women’s only private studio will help you gain confidence",
+      "Are you a fitness enthusiast looking to level up? We’ll design a new weight training program filled with"
+    ]
+  },
+  "feature": {
+    "heading": "Are youOverwhelmed By…",
+    "text": "Feeling stuck, unmotivated, or alone in your fitness journey",
+    "cta": {
+      "label": "Book a Free Consult",
+      "href": "https://trainandnourish.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "We’re the Perfect Personal Trainer in Philly for You, If You Are:",
+    "text": "Quick fix weight loss “solutions” that fail",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Personal Training",
+        "href": "https://trainandnourish.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Personal Training Fishtown",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Personal Training Ardmore",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "“T&N Studio is a place I can finally call home. I tried a lot of gyms and studios in the city, and nothing felt right until I came here.”"
+  },
+  "closing": {
+    "cta": {
+      "label": "Book a Free Consult",
+      "href": "tel:2677107744"
+    },
+    "heading": "Train and Nourish"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://trainandnourish.com/"
+    },
+    {
+      "label": "Personal Training Fishtown",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Train and Nourish fitness centre in Philadelphia, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 65,
+    "sqs": 32,
+    "opportunity": 65,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "marquee": [
+    "Personal Training",
+    "Personal Training Fishtown",
+    "Personal Training Ardmore",
+    "Classes",
+    "Nutrition",
+    "Locations"
+  ],
+  "_wordCount": 231,
+  "_measuredWords": 409,
+  "_measuredImages": 12,
+  "_measuredSections": 11
+}

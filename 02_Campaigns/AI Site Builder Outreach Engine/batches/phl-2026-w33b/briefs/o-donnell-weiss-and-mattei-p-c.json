@@ -1,0 +1,244 @@
+{
+  "slug": "o-donnell-weiss-and-mattei-p-c",
+  "name": "O'Donnell, Weiss & Mattei, P.C.",
+  "city": "Montgomery County",
+  "category": "lawyer",
+  "vertical": "legal",
+  "attitude": "editorial",
+  "composition_ref": null,
+  "layout": "harvest-clinic",
+  "heroMode": "split",
+  "url": "https://www.owmlaw.com/",
+  "phone": "610-323-2800",
+  "description": "O’Donnell, Weiss & Mattei, P.C., provides full-service legal solutions for clients in southeastern Pennsylvania. Call 610-323-2800 for a consultation.",
+  "noindex": true,
+  "schemaType": "LegalService",
+  "logo": false,
+  "tokens": {
+    "paper": "#F4F4F4",
+    "ink": "#A81400",
+    "accent": "#A81400",
+    "accent2": "#0A8DFF",
+    "panel": "#DCACA6",
+    "deep": "#444444",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "2px"
+  },
+  "fonts": {
+    "display": "Roboto",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "610-323-2800",
+      "href": "#offerings"
+    },
+    {
+      "label": "Our Attorneys",
+      "href": "#offerings"
+    },
+    {
+      "label": "John A. Koury Jr.",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Montgomery County | 610-323-2800",
+    "headline": "Our Work Matters…",
+    "sub": "O’Donnell, Weiss & Mattei, P.C., provides full-service legal solutions for clients in southeastern Pennsylvania. Call 610-323-2800 for a consultation.",
+    "ctaPrimary": {
+      "label": "Contact",
+      "href": "tel:6103232800"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Montgomery County",
+      "sub": "lawyer"
+    },
+    "marquee": [
+      "610-323-2800",
+      "Our Attorneys",
+      "John A. Koury Jr.",
+      "David A. Megay",
+      "Michael B. Murray Jr.",
+      "Rebecca A. Hobbs, CELA*"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Our Work Matters…",
+      "Your Committed, Regional Full-Service Law Firm",
+      "Our Clients Say It Best"
+    ]
+  },
+  "proof": {
+    "items": [
+      "O'Donnell, Weiss & Mattei, P.C. is a Montgomery County lawyer.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Serving Montgomery County and nearby towns."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Our Attorneys John A. Koury Jr. David A. Megay Michael B. Murray Jr. Rebecca A. Hobbs, CELA* Joseph K. Koury James C.",
+      "Business Law Business Formation Banking & Finance"
+    ]
+  },
+  "experience": {
+    "items": [
+      "Civil Litigation Landlord Tenant Litigation",
+      "Criminal Defense Drug Crimes DUI Traffic Violations What Does A Criminal Defense Lawyer Do?",
+      "Elder Law Assistance With Personal Injury Settlements Guardianship Medicaid Social Security Disability Veterans Benefits"
+    ]
+  },
+  "feature": {
+    "heading": "Your Committed, Regional Full-Service Law Firm",
+    "text": "Civil Litigation Landlord Tenant Litigation",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://www.owmlaw.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Our Clients Say It Best",
+    "text": "Business Law Business Formation Banking & Finance",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "610-323-2800",
+        "href": "https://www.owmlaw.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Our Attorneys",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "John A. Koury Jr.",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "“I just called this law firm for a recent real estate purchase. My issue is a little bit complicated, involving a relocation company. From the secretary to the attorney I spoke with, all of them are very nice and willing to help out from the very first beginning. It is quiet contradictory to some law firms that require payments before an attorney even starts to listen to your problem.”, H.Z."
+  },
+  "closing": {
+    "cta": {
+      "label": "Contact",
+      "href": "tel:6103232800"
+    },
+    "heading": "O'Donnell, Weiss & Mattei, P.C."
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.owmlaw.com/"
+    },
+    {
+      "label": "Our Attorneys",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "O'Donnell, Weiss & Mattei, P.C. lawyer in Montgomery County, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 52,
+    "sqs": 34,
+    "opportunity": 57,
+    "hard_faults": [
+      "client error 403",
+      "only 3 words on the homepage",
+      "homepage is noindex — invisible to search"
+    ]
+  },
+  "marquee": [
+    "610-323-2800",
+    "Our Attorneys",
+    "John A. Koury Jr.",
+    "David A. Megay",
+    "Michael B. Murray Jr.",
+    "Rebecca A. Hobbs, CELA*"
+  ],
+  "_wordCount": 250,
+  "_measuredWords": 425,
+  "_measuredImages": 12,
+  "_measuredSections": 11
+}

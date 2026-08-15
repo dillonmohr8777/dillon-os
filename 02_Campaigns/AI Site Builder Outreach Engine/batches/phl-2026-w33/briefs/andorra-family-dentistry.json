@@ -1,0 +1,236 @@
+{
+  "slug": "andorra-family-dentistry",
+  "name": "Andorra Family Dentistry",
+  "city": "Philadelphia",
+  "category": "dentist",
+  "vertical": "medical",
+  "attitude": "glass",
+  "composition_ref": "https://stripe.com",
+  "url": "https://www.andorradental.com/",
+  "phone": "(215) 515-5710",
+  "address": "8919 Ridge Ave., Suite 9, Philadelphia, Pennsylvania, 19128",
+  "description": "Dr. Shah, Dr. Emani, and Dr. Bansal take care of kids, parents, and grandparents in one office. Call when you want a cleaning, a repair, or a calmer first visit.",
+  "noindex": true,
+  "schemaType": "Dentist",
+  "logo": true,
+  "tokens": {
+    "paper": "#F7DFD5",
+    "ink": "#481619",
+    "accent": "#FF0F00",
+    "accent2": "#FDB913",
+    "panel": "#F9A599",
+    "deep": "#61100E",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "28px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Andorra, Philadelphia",
+    "headline": "Family dentistry on Ridge Avenue",
+    "sub": "Dr. Shah, Dr. Emani, and Dr. Bansal take care of kids, parents, and grandparents in one office. Call when you want a cleaning, a repair, or a calmer first visit.",
+    "ctaPrimary": {
+      "label": "Call the office",
+      "href": "tel:2155155710"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "dentist"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Cleanings and exams",
+      "Veneers and whitening",
+      "Implants and restorations"
+    ],
+    "heading": "What we do <mark>well.</mark>"
+  },
+  "proof": {
+    "items": [
+      "Dentists you can name",
+      "Ridge Avenue, Suite 9",
+      "Andorra and Roxborough",
+      "Same-day emergency care"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "A practice that knows your name",
+    "paragraphs": [
+      "Our team focuses on comfortable visits and a full range of care, from a first cleaning to implants and Invisalign. People come from Andorra, Conshohocken, Lafayette Hill, and Roxborough.",
+      "You will see digital scans, clear explanations, and a plan you can follow. Bring the whole family. We will make room."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "items": [
+      "Book from your phone",
+      "See the room before you sit",
+      "Talk to a person, not a form"
+    ],
+    "heading": "How a visit goes"
+  },
+  "feature": {
+    "heading": "A smile you will actually show",
+    "text": "Cosmetic work here is practical: bonding, veneers, whitening, and clear aligners when they fit. We start with what you want to change, then pick the smallest step that gets you there.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.andorradental.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Close to home in Andorra",
+    "text": "The office sits at 8919 Ridge Avenue. Park, walk in, and tell us what is bothering you. We will tell you what we can do today.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "heading": "More ways in",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.andorradental.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "What we do",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come see us on Ridge Avenue",
+    "sub": "Phone and address are on this page so you can act without hunting. Confirm hours on the official site before you drive."
+  },
+  "closing": {
+    "heading": "Ready when you are",
+    "cta": {
+      "label": "Call the office",
+      "href": "tel:2155155710"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.andorradental.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Andorra Family Dentistry dentist in Philadelphia, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 78,
+    "sqs": 26,
+    "opportunity": 78,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 255,
+  "_measuredWords": 370,
+  "_measuredImages": 13,
+  "_measuredSections": 11,
+  "layout": "https://stripe.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call the office",
+    "href": "tel:2155155710"
+  }
+}

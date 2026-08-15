@@ -1,0 +1,242 @@
+{
+  "slug": "mt-airy-pediatrics-p-c",
+  "name": "Mt. Airy Pediatrics, P.C.",
+  "city": "phialdephia",
+  "category": "doctor",
+  "vertical": "medical",
+  "attitude": "glass",
+  "composition_ref": "https://www.airbnb.com",
+  "url": "https://www.mtairypediatrics.com/",
+  "phone": "215-247-2996",
+  "address": "6673 Germantown Avenue , Philadelphia, 19119",
+  "description": "Mt. Airy Pediatrics, P.C. is the neighborhood practice for checkups, sick days, and the questions that show up at 9 p.m. Call the office when you need us.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "tokens": {
+    "paper": "#E2DEE8",
+    "ink": "#10134D",
+    "accent": "#0000EE",
+    "accent2": "#01738D",
+    "panel": "#A3A0EA",
+    "deep": "#080A62",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "28px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Mt. Airy",
+    "headline": "Pediatrics on Germantown Avenue",
+    "sub": "Mt. Airy Pediatrics, P.C. is the neighborhood practice for checkups, sick days, and the questions that show up at 9 p.m. Call the office when you need us.",
+    "ctaPrimary": {
+      "label": "Call pediatrics",
+      "href": "tel:2152472996"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "phialdephia",
+      "sub": "doctor"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Well visits",
+      "Sick visits",
+      "Growing-up care"
+    ],
+    "heading": "What we do <mark>well.</mark>"
+  },
+  "proof": {
+    "items": [
+      "6673 Germantown Avenue",
+      "Philadelphia 19119",
+      "Neighborhood pediatrics",
+      "Call the desk"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "A practice that grows with them",
+    "paragraphs": [
+      "We see children through the ordinary years and the scary ones. You should feel known when you walk in.",
+      "Bring the list. We will go through it without making you feel like you overreacted.",
+      "Mt. Airy Pediatrics, P.C. serves people who live and work in phialdephia.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "phialdephia doctor care, written so a person can act on it."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "items": [
+      "Call the desk",
+      "Come in for the visit",
+      "Leave knowing the after-hours plan"
+    ],
+    "heading": "How a visit goes"
+  },
+  "feature": {
+    "heading": "Mt. Airy, close by",
+    "text": "Germantown Avenue is home base. We keep the instructions written so the other parent can follow them too.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.mtairypediatrics.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "6673 Germantown Avenue",
+    "text": "Park, come upstairs, and tell us what changed since last time.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "heading": "More ways in",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.mtairypediatrics.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "What we do",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Reach the desk",
+    "sub": "Call the office number on this page. Confirm hours if you are coming before school."
+  },
+  "closing": {
+    "heading": "We are here for the ordinary days too",
+    "cta": {
+      "label": "Call pediatrics",
+      "href": "tel:2152472996"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.mtairypediatrics.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Mt. Airy Pediatrics, P.C. doctor in phialdephia, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 72,
+    "sqs": 11,
+    "opportunity": 72,
+    "hard_faults": [
+      "server error 503",
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\""
+    ]
+  },
+  "_wordCount": 259,
+  "_measuredWords": 363,
+  "_measuredImages": 13,
+  "_measuredSections": 11,
+  "layout": "https://www.airbnb.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Call pediatrics",
+    "href": "tel:2152472996"
+  }
+}

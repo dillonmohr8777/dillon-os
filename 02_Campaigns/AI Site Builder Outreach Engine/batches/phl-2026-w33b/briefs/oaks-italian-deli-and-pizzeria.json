@@ -1,0 +1,249 @@
+{
+  "slug": "oaks-italian-deli-and-pizzeria",
+  "name": "Oaks Italian Deli & Pizzeria",
+  "city": "Phoenixville",
+  "category": "restaurant",
+  "vertical": "food",
+  "attitude": "warm",
+  "composition_ref": null,
+  "layout": "harvest-diner",
+  "heroMode": "photo",
+  "url": "http://oaksitaliandeli.com/",
+  "phone": "610-666-0280",
+  "address": "1570 Egypt Rd, Phoenixville, PA 19460",
+  "description": "Oaks Italian Deli And Pizzeria",
+  "noindex": true,
+  "schemaType": "Restaurant",
+  "logo": false,
+  "tokens": {
+    "paper": "#E8FFBB",
+    "ink": "#0F1215",
+    "accent": "#0F1215",
+    "accent2": "#E8FFBB",
+    "panel": "#A3B386",
+    "deep": "#333333",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "Order Online",
+      "href": "#offerings"
+    },
+    {
+      "label": "Loyal Club",
+      "href": "#offerings"
+    },
+    {
+      "label": "Career",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Phoenixville | Order Online",
+    "headline": "1570 Egypt Rd, Phoenixville, PA 19460, USA",
+    "sub": "Oaks Italian Deli And Pizzeria",
+    "ctaPrimary": {
+      "label": "Order Online",
+      "href": "tel:6106660280"
+    },
+    "ctaSecondary": {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Phoenixville",
+      "sub": "restaurant"
+    },
+    "marquee": [
+      "Order Online",
+      "Loyal Club",
+      "Career",
+      "About us",
+      "Gallery",
+      "Contact"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Navigation",
+      "1570 Egypt Rd, Phoenixville, PA 19460, USA",
+      "610-666-0280"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Oaks Italian Deli & Pizzeria is a Phoenixville restaurant.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Visit 1570 Egypt Rd, Phoenixville, PA 19460."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "We listen to our customers, please allow us to resolve should you have any issue contact the manager.",
+      "Navigation",
+      "Oaks Italian Deli & Pizzeria serves people who live and work in Phoenixville.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ]
+  },
+  "experience": {
+    "items": [
+      "We listen to our customers, please allow us to resolve should you have any issue contact the manager.",
+      "Navigation",
+      "1570 Egypt Rd, Phoenixville, PA 19460, USA"
+    ]
+  },
+  "feature": {
+    "heading": "610-666-0280",
+    "text": "We listen to our customers, please allow us to resolve should you have any issue contact the manager.",
+    "cta": {
+      "label": "Order Online",
+      "href": "http://oaksitaliandeli.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Navigation",
+    "text": "Oaks Italian Deli & Pizzeria is a Phoenixville restaurant. Come in when you're ready.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Order Online",
+        "href": "http://oaksitaliandeli.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Loyal Club",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Career",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages."
+  },
+  "closing": {
+    "cta": {
+      "label": "Order Online",
+      "href": "tel:6106660280"
+    },
+    "heading": "Oaks Italian Deli & Pizzeria"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://oaksitaliandeli.com/"
+    },
+    {
+      "label": "Loyal Club",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Oaks Italian Deli & Pizzeria restaurant in Phoenixville, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 52,
+    "sqs": 46,
+    "opportunity": 57,
+    "hard_faults": [
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "only 53 words on the homepage",
+      "no obvious call to action"
+    ]
+  },
+  "marquee": [
+    "Order Online",
+    "Loyal Club",
+    "Career",
+    "About us",
+    "Gallery",
+    "Contact"
+  ],
+  "_wordCount": 202,
+  "_measuredWords": 362,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

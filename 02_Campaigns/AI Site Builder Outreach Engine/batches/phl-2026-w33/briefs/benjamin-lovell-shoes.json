@@ -1,0 +1,242 @@
+{
+  "slug": "benjamin-lovell-shoes",
+  "name": "Benjamin Lovell Shoes",
+  "city": "Spring House",
+  "category": "shoes",
+  "vertical": "retail",
+  "attitude": "warm",
+  "composition_ref": "https://land-book.com",
+  "url": "https://www.blshoes.com/",
+  "phone": "Tel: 215.564.4655",
+  "address": "1728 Chestnut Street, Philadelphia, PA 19103",
+  "description": "Benjamin Lovell Shoes on Chestnut Street is for people who want comfort that still looks like a choice. Come try the pair on.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "tokens": {
+    "paper": "#EBE8E1",
+    "ink": "#282E39",
+    "accent": "#6E7B91",
+    "accent2": "#2F333D",
+    "panel": "#C8C9CB",
+    "deep": "#2E3541",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "Chestnut Street",
+    "headline": "Shoes you can walk Philadelphia in",
+    "sub": "Benjamin Lovell Shoes on Chestnut Street is for people who want comfort that still looks like a choice. Come try the pair on.",
+    "ctaPrimary": {
+      "label": "Visit Chestnut Street",
+      "href": "tel:2155644655"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Spring House",
+      "sub": "shoes"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Everyday shoes",
+      "Fit help",
+      "Brands you can feel"
+    ],
+    "heading": "What we do <mark>well.</mark>"
+  },
+  "proof": {
+    "items": [
+      "1728 Chestnut Street",
+      "Philadelphia",
+      "Fit before you buy",
+      "A store, not a warehouse"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "A shoe store that still fits you",
+    "paragraphs": [
+      "Size is a starting point. We watch you walk and tell you when a pair is lying to you.",
+      "Come in with the shoes that already hurt. We will use that information.",
+      "Benjamin Lovell Shoes serves people who live and work in Spring House.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy.",
+      "Bring questions. Leave with a plan you can follow.",
+      "Spring House shoes care, written so a person can act on it."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "items": [
+      "Tell us where it hurts",
+      "Try two lasts",
+      "Walk the aisle before you pay"
+    ],
+    "heading": "How a visit goes"
+  },
+  "feature": {
+    "heading": "Chestnut Street, in person",
+    "text": "Photos flatten a shoe. The last, the leather, and the way it flexes only show up when you stand in it.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.blshoes.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "1728 Chestnut Street",
+    "text": "Center City is easy to reach. Bring the socks you actually wear.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "heading": "More ways in",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.blshoes.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "What we do",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come try a pair",
+    "sub": "Confirm hours on the official site. The address is on this page."
+  },
+  "closing": {
+    "heading": "Walk in, walk out better",
+    "cta": {
+      "label": "Visit Chestnut Street",
+      "href": "tel:2155644655"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.blshoes.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Benjamin Lovell Shoes shoes in Spring House, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 53,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 254,
+  "_measuredWords": 368,
+  "_measuredImages": 13,
+  "_measuredSections": 11,
+  "layout": "https://land-book.com",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Visit Chestnut Street",
+    "href": "tel:2155644655"
+  }
+}

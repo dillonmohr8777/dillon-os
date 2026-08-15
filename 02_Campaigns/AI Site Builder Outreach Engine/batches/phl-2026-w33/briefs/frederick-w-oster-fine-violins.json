@@ -1,0 +1,241 @@
+{
+  "slug": "frederick-w-oster-fine-violins",
+  "name": "Frederick W. Oster Fine Violins",
+  "city": "Philadelphia",
+  "category": "musical instrument",
+  "vertical": "retail",
+  "attitude": "warm",
+  "composition_ref": "https://www.pentagram.com/work",
+  "url": "https://www.osterviolins.com/",
+  "phone": "215-545-1100",
+  "address": "507 South Broad Street, Philadelphia, PA",
+  "hours": "Mon-Fri 10am-5pm",
+  "description": "Frederick W. Oster Fine Violins has served Philadelphia musicians who need an instrument that sounds like them. Come play before you decide.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "tokens": {
+    "paper": "#E5E1D9",
+    "ink": "#171C24",
+    "accent": "#222931",
+    "accent2": "#4B4F58",
+    "panel": "#AEADAA",
+    "deep": "#14191F",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "2px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "hero": {
+    "eyebrow": "South Broad Street",
+    "headline": "Violins chosen with a player in mind",
+    "sub": "Frederick W. Oster Fine Violins has served Philadelphia musicians who need an instrument that sounds like them. Come play before you decide.",
+    "ctaPrimary": {
+      "label": "Visit the shop",
+      "href": "tel:2155451100"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Philadelphia",
+      "sub": "musical instrument"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Fine violins",
+      "Bows and fittings",
+      "Sales and service"
+    ],
+    "heading": "What we do <mark>well.</mark>"
+  },
+  "proof": {
+    "items": [
+      "507 South Broad Street",
+      "Philadelphia shop",
+      "Play before you buy",
+      "Instruments, not posters"
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "A shop for people who listen",
+    "paragraphs": [
+      "You cannot judge a violin from a photo. Come in, play, and listen in the room.",
+      "We help students, professionals, and families who want the next instrument to last.",
+      "Frederick W. Oster Fine Violins serves people who live and work in Philadelphia.",
+      "You'll find the phone and the next step on this page, not buried in a menu.",
+      "Come in when you're ready. We'll make the visit straightforward.",
+      "Neighbors already know the name. The site should make the first visit easy."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "items": [
+      "Book a play-in",
+      "Compare two instruments",
+      "Leave with a sound you chose"
+    ],
+    "heading": "How a visit goes"
+  },
+  "feature": {
+    "heading": "The room does the selling",
+    "text": "We keep the talk short so you can hear the instrument. If it is not right, we will say so.",
+    "cta": {
+      "label": "Official site",
+      "href": "https://www.osterviolins.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Broad Street, Philadelphia",
+    "text": "The shop is on South Broad. Call ahead if you want a quiet hour with a few instruments out.",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "heading": "More ways in",
+    "items": [
+      {
+        "title": "Official site",
+        "href": "https://www.osterviolins.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "What we do",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Visit",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Come play something",
+    "sub": "Address and phone are here. Confirm hours on the official site before you travel."
+  },
+  "closing": {
+    "heading": "Bring your bow",
+    "cta": {
+      "label": "Visit the shop",
+      "href": "tel:2155451100"
+    }
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.osterviolins.com/"
+    },
+    {
+      "label": "Offerings",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Frederick W. Oster Fine Violins musical instrument in Philadelphia, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 58,
+    "sqs": 33,
+    "opportunity": 58,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "only 0 words on the homepage",
+      "no phone number on the homepage"
+    ]
+  },
+  "_wordCount": 235,
+  "_measuredWords": 360,
+  "_measuredImages": 13,
+  "_measuredSections": 11,
+  "layout": "https://www.pentagram.com/work",
+  "nav": [
+    {
+      "label": "Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Work",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "headerCta": {
+    "label": "Visit the shop",
+    "href": "tel:2155451100"
+  }
+}

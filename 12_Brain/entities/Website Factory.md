@@ -1,7 +1,7 @@
 ---
 tags: [entity, system]
 source: "[[12_Brain/raw/2026-07-04 - obsidian-second-brain-article]]"
-updated: 2026-07-29
+updated: 2026-08-14
 ---
 
 # Website Factory
@@ -15,6 +15,21 @@ deploy credentials.
 - Outputs: static / Netlify / Vercel marketing sites for clients.
 - Templates and QA live under `_templates/site-factory/` when present, or
   campaign folders under `02_Campaigns/`.
+- Week 33 batch: `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33/`
+  mapped wow-library composition refs onto 25 radar rebuilds. Demos stay
+  noindex. mail_ready stays hold.
+- Week 33b batch: `02_Campaigns/AI Site Builder Outreach Engine/batches/phl-2026-w33b/`
+  is a new unused radar slice (priority desc). Follows
+  `.claude/skills/mirror-and-improve/SKILL.md`: harvest each prospect's live
+  site, keep their voice, photos, palette, and logo, then rebuild. No
+  wow-library chrome. All 25 use the Johnny's diner layout: Playfair,
+  centered hero, popping 3D image frames, Ken Burns plus card tilt, H1–H6
+  copy, and a generated 3D town still instead of a map. Harvest maps and
+  delivery-zone graphics are skipped. Headings do not use highlight marks.
+  Johnny's (`johnny-s-pizza`) is the handmade gold-standard homepage for
+  the diner pop, H1–H6 copy, and 3D town treatment. A `HANDMADE.md` file
+  keeps `compile-mirror.js` from overwriting it. Clone that system to the
+  other 24 after sign-off. Demos stay noindex. mail_ready stays hold.
 - Secrets and host tokens never land in this note.
 
 ## Links

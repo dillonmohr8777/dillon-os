@@ -1,0 +1,246 @@
+{
+  "slug": "sangillo-tire-center",
+  "name": "Sangillo Tire Center",
+  "city": "Folsom",
+  "category": "tyres",
+  "vertical": "auto",
+  "attitude": "brutal",
+  "composition_ref": null,
+  "layout": "harvest-dark",
+  "heroMode": "bleed",
+  "url": "http://www.sangillos.com/",
+  "phone": "(610) 586-3340",
+  "address": "1114 MacDade Blvd Folsom, PA 19033",
+  "description": "Sangillo Tire Center has been Selling Car most major Tire brands for Over 60 Years in Folsom, Pa",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#DDE3EA",
+    "ink": "#102951",
+    "accent": "#0066FF",
+    "accent2": "#FF0000",
+    "panel": "#96BBF1",
+    "deep": "#073273",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "0px"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "Tire Brands",
+      "href": "#offerings"
+    },
+    {
+      "label": "Tire Care",
+      "href": "#offerings"
+    },
+    {
+      "label": "Services",
+      "href": "#offerings"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Folsom | Tire Brands",
+    "headline": "1114 MacDade Blvd.",
+    "sub": "Sangillo Tire Center has been Selling Car most major Tire brands for Over 60 Years in Folsom, Pa",
+    "ctaPrimary": {
+      "label": "Get in touch",
+      "href": "tel:6105863340"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Folsom",
+      "sub": "tyres"
+    },
+    "marquee": [
+      "Tire Brands",
+      "Tire Care",
+      "Services",
+      "Sangillo Tire Center",
+      "1114 MacDade Blvd.",
+      "Folsom, PA 19033"
+    ]
+  },
+  "offerings": {
+    "heading": "Services",
+    "items": [
+      "1114 MacDade Blvd",
+      "Folsom, PA 19033",
+      "(610) 586-3340"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Sangillo Tire Center has served Folsom for over 60 years.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Visit 1114 MacDade Blvd Folsom, PA 19033."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Sangillo Tire has been serving the Delaware Valley for more than 60 years. We are family owned and operated and take great",
+      "Sangillo Tire Center 1114 MacDade Blvd Folsom, PA 19033 US Phone: (610) 586-3340 Website: http://www.sangillos.com/"
+    ]
+  },
+  "experience": {
+    "items": [
+      "Sangillo Tire has been serving the Delaware Valley for more than 60 years. We are family owned and",
+      "Sangillo Tire Center 1114 MacDade Blvd Folsom, PA 19033 US Phone: (610) 586-3340 Website: http://www.sangillos.com/",
+      "1114 MacDade Blvd."
+    ]
+  },
+  "feature": {
+    "heading": "Sangillo Tire Center",
+    "text": "Sangillo Tire has been serving the Delaware Valley for more than 60 years. We are family owned and operated and take great pride providing our customers with excellent",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "http://www.sangillos.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Folsom, PA 19033",
+    "text": "Sangillo Tire Center 1114 MacDade Blvd Folsom, PA 19033 US Phone: (610) 586-3340 Website: http://www.sangillos.com/",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Tire Brands",
+        "href": "http://www.sangillos.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Tire Care",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "Services",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Make the next visit easy.",
+    "sub": "Details below come from their public pages."
+  },
+  "closing": {
+    "cta": {
+      "label": "Get in touch",
+      "href": "tel:6105863340"
+    },
+    "heading": "Sangillo Tire Center"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "http://www.sangillos.com/"
+    },
+    {
+      "label": "Tire Care",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Sangillo Tire Center tyres in Folsom, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 55,
+    "sqs": 29,
+    "opportunity": 60,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "no HTTPS — browsers mark it \"Not secure\"",
+      "table-based page layout"
+    ]
+  },
+  "marquee": [
+    "Tire Brands",
+    "Tire Care",
+    "Services",
+    "Sangillo Tire Center",
+    "1114 MacDade Blvd.",
+    "Folsom, PA 19033"
+  ],
+  "_wordCount": 213,
+  "_measuredWords": 382,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

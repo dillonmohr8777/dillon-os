@@ -1,0 +1,245 @@
+{
+  "slug": "weathers-motors-and-auto-sales",
+  "name": "Weathers Motors & Auto Sales",
+  "city": "Media",
+  "category": "car",
+  "vertical": "auto",
+  "attitude": "brutal",
+  "composition_ref": null,
+  "layout": "harvest-dark",
+  "heroMode": "bleed",
+  "url": "https://www.weathersmotors.com/",
+  "phone": "866-799-0712",
+  "address": "1187 West Baltimore Pike, Media, PA, 19063",
+  "description": "Shop quality used cars and expert auto service at Weathers Motors in Media, PA. Proudly serving Philadelphia, West Chester, and Norristown. Browse inventory today.",
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": false,
+  "tokens": {
+    "paper": "#EEF4F8",
+    "ink": "#008000",
+    "accent": "#2D72AD",
+    "accent2": "#215080",
+    "panel": "#B0CAE0",
+    "deep": "#434447",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "4px",
+    "radius": "0px"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Instrument Sans"
+  },
+  "nav": [
+    {
+      "label": "Directions",
+      "href": "#offerings"
+    },
+    {
+      "label": "Contact",
+      "href": "#visit"
+    },
+    {
+      "label": "About",
+      "href": "#top"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Media | Directions",
+    "headline": "Weathers Motors",
+    "sub": "Shop quality used cars and expert auto service at Weathers Motors in Media, PA. Proudly serving Philadelphia, West Chester, and Norristown. Browse inventory today.",
+    "ctaPrimary": {
+      "label": "Shop By Price",
+      "href": "tel:8667990712"
+    },
+    "ctaSecondary": {
+      "label": "See the work",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Media",
+      "sub": "car"
+    },
+    "marquee": [
+      "Directions",
+      "Contact",
+      "About",
+      "Privacy",
+      "Sitemap",
+      "Weathers Motors"
+    ]
+  },
+  "offerings": {
+    "items": [
+      "Schedule Service",
+      "Special Offers & Incentives",
+      "Trade or Sell Your Vehicle"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Weathers Motors & Auto Sales is a Media car.",
+      "Reach them through the official site.",
+      "Phone published on their own pages.",
+      "Visit 1187 West Baltimore Pike, Media, PA, 19063."
+    ]
+  },
+  "gallery": {
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "story": {
+    "heading": "Welcome to Weathers Motors",
+    "paragraphs": [
+      "1187 West Baltimore Pike Directions Media, PA 19063",
+      "InventoryInventoryInventoryPre-Owned Special OffersShop By PriceShop By BrandShop By Body StyleCarfax One Owner VehiclesVehicles Under $20kKBB Instant Cash OfferShop Fuel EfficiencyElectric Vehicle InformationHybrids"
+    ]
+  },
+  "experience": {
+    "items": [
+      "Shop Fuel EfficiencyElectric Vehicle InformationHybrids / Ev's at Weathers MotorsResourcesCertified Pre-owned Vehicles & Weathers MotorsNew Car vs Used",
+      "Certified Pre-owned Vehicles & Weathers Motors",
+      "Trade or SellWe Buy CarsKBB Instant Cash Offer $100 Gift Card Program"
+    ]
+  },
+  "feature": {
+    "heading": "Schedule Service",
+    "text": "Shop Fuel EfficiencyElectric Vehicle InformationHybrids / Ev's at Weathers MotorsResourcesCertified Pre-owned Vehicles & Weathers MotorsNew Car vs Used Car PurchaseCarFinderKBB Instant Cash Offer",
+    "cta": {
+      "label": "Visit the official site",
+      "href": "https://www.weathersmotors.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Special Offers & Incentives",
+    "text": "InventoryInventoryInventoryPre-Owned Special OffersShop By PriceShop By BrandShop By Body StyleCarfax One Owner VehiclesVehicles Under $20kKBB Instant Cash OfferShop Fuel EfficiencyElectric Vehicle InformationHybrids",
+    "imageIndex": 12,
+    "cta": {
+      "label": "Contact",
+      "href": "#visit"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Directions",
+        "href": "https://www.weathersmotors.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Contact",
+        "href": "#offerings",
+        "imageIndex": 10
+      },
+      {
+        "title": "About",
+        "href": "#visit",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Visit Weathers Motors Today",
+    "sub": "As a family-owned and operated used car dealer here in Media, Weathers Motors has been a trusted Delaware County dealership for over a century now. We're proud to call Delco our home, but we've happily served drivers from West Chester to Allentown, PA and all points in between over our many years in business. Whether you're looking for a dependable ride for your daily commute, competitive rates on car loans, or just certified auto service at a fair price close to home, you can always rely on our team here at Weathers Motors."
+  },
+  "closing": {
+    "cta": {
+      "label": "Shop By Price",
+      "href": "tel:8667990712"
+    },
+    "heading": "Weathers Motors & Auto Sales"
+  },
+  "links": [
+    {
+      "label": "Official website",
+      "href": "https://www.weathersmotors.com/"
+    },
+    {
+      "label": "Contact",
+      "href": "#offerings"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 1"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 2"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 3"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 4"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 5"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 6"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 7"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 8"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 9"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 10"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 11"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Weathers Motors & Auto Sales car in Media, reference 12"
+    }
+  ],
+  "radar": {
+    "priority": 60,
+    "sqs": 23,
+    "opportunity": 65,
+    "hard_faults": [
+      "no viewport meta — page renders desktop-width on phones",
+      "client error 403",
+      "only 16 words on the homepage"
+    ]
+  },
+  "marquee": [
+    "Directions",
+    "Contact",
+    "About",
+    "Privacy",
+    "Sitemap",
+    "Weathers Motors"
+  ],
+  "_wordCount": 308,
+  "_measuredWords": 447,
+  "_measuredImages": 13,
+  "_measuredSections": 11
+}

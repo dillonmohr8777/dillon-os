@@ -59,7 +59,7 @@ For section composition only, the `landingfolio` MCP tools return reference scre
 Copy `_templates/site-factory/example-brief.json` and fill it out. Hit the canonical spec from `philly-sites/DESIGN-SYSTEM.md`, which was measured across all 25 existing sites:
 
 - **10 sections** (hero, offerings, story, gallery, contact, closing are required; add proof, feature, and two of experience/catalog/spotlight)
-- **350 to 500 words** of real copy
+- **350 to 500 words** of real copy (week 33b diner pages: **450 to 850**, with H1–H6 structure and no three-word text boxes)
 - **12 to 13 images**, all from their own harvested photography, none repeated
 
 A build that lands at 8 sections and 300 words is thin next to the batch. Go back and research more rather than shipping it.

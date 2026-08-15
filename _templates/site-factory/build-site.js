@@ -16,6 +16,8 @@ const fs = require('fs');
 const path = require('path');
 const { assertSafeSlug } = require('./lib/validate.js');
 const { buildSkinCss, inferAttitude } = require('./lib/skins.js');
+const { resolveLayout, buildLayoutCss, buildLayoutChrome } = require('./lib/layouts.js');
+const { isAnimatedSlug } = require('./generate-unique-media.js');
 
 /**
  * Render a brief into a finished site directory.
@@ -39,6 +41,7 @@ for (const key of required) {
   }
 }
 assertSafeSlug(brief.slug);
+const layout = resolveLayout(brief);
 
 const t = brief.tokens;
 const tokenDefaults = {
@@ -64,7 +67,7 @@ const img = (n, opts = {}) => {
   const meta = images[n - 1] || {};
   const file = meta.file || `image-${n}.webp`;
   const alt = esc(meta.alt || brief.name);
-  const eager = opts.eager ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
+  const eager = opts.eager ? ' loading="eager" fetchpriority="high"' : ' loading="eager"';
   return `<img${eager} src="assets/${file}" alt="${alt}">`;
 };
 const figure = (n, opts = {}) => {
@@ -75,7 +78,17 @@ const figure = (n, opts = {}) => {
 const cta = (c, cls = 'button button-primary') =>
   c ? `<a class="${cls}" href="${esc(c.href)}">${esc(c.label)}<span aria-hidden="true">\u2197</span></a>` : '';
 
-const sectionKicker = (text) => (text ? `<span class="section-kicker">${esc(text)}</span>` : '');
+const sectionKicker = (text) => (text ? `<p class="section-kicker">${esc(text)}</p>` : '');
+const itemTitle = (item) => (item && typeof item === 'object' ? item.title : item);
+const itemText = (item) => (item && typeof item === 'object' ? item.text || item.body || '' : '');
+const numberedCard = (item, i, titleTag, extraClass = '') => {
+  const title = itemTitle(item);
+  const text = itemText(item);
+  const cls = ['reveal', `delay-${(i % 3) + 1}`, extraClass].filter(Boolean).join(' ');
+  return `<article class="${cls}"><h6>0${i + 1}</h6><${titleTag}>${esc(title)}</${titleTag}>${
+    text ? `<p>${esc(text)}</p>` : ''
+  }</article>`;
+};
 
 const marqueeHtml = (phrases) => {
   const list = (phrases || []).filter(Boolean);
@@ -102,33 +115,36 @@ const builders = {
     const float = d.glassFloat
       ? `<div class="glass-panel glass-float"><strong>${esc(d.glassFloat.title || brief.name)}</strong><span>${esc(d.glassFloat.sub || brief.city)}</span></div>`
       : `<div class="glass-panel glass-float"><strong>${esc(brief.name)}</strong><span>${esc(brief.city)}</span></div>`;
-    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1><mark>${esc(d.headline || brief.name)}</mark></h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
+    return `<section class="hero hero-${layout.hero} surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1>${esc(d.headline || brief.name)}</h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
   },
   offerings(d) {
-    const cards = d.items
-      .map((item, i) => `<article class="offering-card reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><h3>${esc(item)}</h3></article>`)
-      .join('');
-    return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'What to explore')}<h2>${d.heading || 'Signature offerings, <mark>clearly framed.</mark>'}</h2></header><div class="offering-grid">${cards}</div></section>`;
+    const cards = d.items.map((item, i) => numberedCard(item, i, 'h3', 'offering-card')).join('');
+    return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'What to explore')}<h2>${esc(d.heading || 'What they actually offer.')}</h2></header><div class="offering-grid">${cards}</div></section>`;
   },
   proof(d) {
     const cells = d.items
-      .map((item, i) => `<article class="reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><strong>${esc(item)}</strong></article>`)
+      .map((item, i) => {
+        const title = itemTitle(item);
+        const text = itemText(item);
+        if (text) {
+          return `<article class="reveal delay-${(i % 3) + 1}"><h6>0${i + 1}</h6><h4>${esc(title)}</h4><p>${esc(text)}</p></article>`;
+        }
+        return `<article class="reveal delay-${(i % 3) + 1}"><h6>0${i + 1}</h6><h4>${esc(title)}</h4></article>`;
+      })
       .join('');
     return `<section class="proof ${pickSurface(d.surface || 'panel')} vanish-out reveal"><div class="proof-grid">${cells}</div></section>`;
   },
   gallery(d) {
     const figs = (d.imageIndexes || [3, 4, 5, 6, 7]).map((n) => figure(n)).join('');
-    return `<section class="gallery ${pickSurface(d.surface || 'paper')} vanish-out" id="gallery"><header class="section-head reveal"><h2>${d.heading || 'See what makes this place <mark>distinct.</mark>'}</h2></header><div class="gallery-grid reveal">${figs}</div></section>`;
+    return `<section class="gallery ${pickSurface(d.surface || 'paper')} vanish-out" id="gallery"><header class="section-head reveal"><h2>${esc(d.heading || 'See what makes this place distinct.')}</h2></header><div class="gallery-grid reveal">${figs}</div></section>`;
   },
   story(d) {
     const paras = (d.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join('');
     return `<section class="story ${pickSurface(d.surface || 'deep')} vanish-out"><div class="story-copy reveal reveal-left"><h2>${esc(d.heading || 'About')}</h2>${paras}</div><div class="reveal reveal-right">${figure(d.imageIndex || 2)}</div></section>`;
   },
   experience(d) {
-    const cards = d.items
-      .map((item, i) => `<article class="reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><h3>${esc(item)}</h3></article>`)
-      .join('');
-    return `<section class="experience ${pickSurface(d.surface || 'panel')} vanish-out"><header class="section-head reveal"><h2>${esc(d.heading || 'Built around the details.')}</h2></header><div class="experience-grid">${cards}</div></section>`;
+    const cards = d.items.map((item, i) => numberedCard(item, i, 'h3')).join('');
+    return `<section class="experience ${pickSurface(d.surface || 'panel')} vanish-out"><header class="section-head reveal">${sectionKicker(d.kicker || 'How a visit goes')}<h2>${esc(d.heading || 'Built around the details.')}</h2></header><div class="experience-grid">${cards}</div></section>`;
   },
   feature(d) {
     return `<section class="feature ${pickSurface(d.surface || 'accent')} vanish-out"><div class="reveal reveal-left">${figure(d.imageIndex || 8)}</div><div class="feature-copy reveal reveal-right"><h2>${esc(d.heading)}</h2><p>${esc(d.text || '')}</p>${cta(d.cta, 'button button-secondary')}</div></section>`;
@@ -141,10 +157,12 @@ const builders = {
     const cards = d.items
       .map(
         (item, i) =>
-          `<article class="catalog-card reveal delay-${(i % 3) + 1}">${figure(item.imageIndex || 9 + i)}<h3>${esc(item.title)}</h3><a href="${esc(item.href)}">Explore \u2197</a></article>`
+          `<article class="catalog-card reveal delay-${(i % 3) + 1}">${figure(item.imageIndex || 9 + i)}<h3>${esc(item.title)}</h3>${
+            item.text ? `<p>${esc(item.text)}</p>` : ''
+          }<a href="${esc(item.href)}">Explore \u2197</a></article>`
       )
       .join('');
-    return `<section class="catalog ${pickSurface(d.surface || 'deep')} vanish-out"><header class="section-head reveal"><h2>${d.heading || 'More ways into the <mark>experience.</mark>'}</h2></header><div class="catalog-grid">${cards}</div></section>`;
+    return `<section class="catalog ${pickSurface(d.surface || 'deep')} vanish-out"><header class="section-head reveal"><h2>${esc(d.heading || 'More ways into the experience.')}</h2></header><div class="catalog-grid">${cards}</div></section>`;
   },
   social(d) {
     const indexes = d.imageIndexes || [3, 4, 5, 6, 7, 8];
@@ -153,27 +171,32 @@ const builders = {
       .map((n, i) => figure(n, { caption: captions[i] || 'From their feed' }))
       .join('');
     if (!figs) return '';
-    return `<aside class="social-strip ${pickSurface(d.surface || 'paper')} vanish-out" id="social"><header class="section-head reveal">${sectionKicker(d.kicker || 'Pulled from their world')}<h2>${d.heading || 'Social energy, <mark>built into the page.</mark>'}</h2></header><div class="social-rail">${figs}</div></aside>`;
+    return `<aside class="social-strip ${pickSurface(d.surface || 'paper')} vanish-out" id="social"><header class="section-head reveal">${sectionKicker(d.kicker || 'Pulled from their world')}<h2>${esc(d.heading || 'Social energy, built into the page.')}</h2></header><div class="social-rail">${figs}</div></aside>`;
   },
   contact(d) {
     const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brief.address || brief.name + ' ' + brief.city)}`;
     const phoneDigits = (brief.phone || '').replace(/\D/g, '');
     const cards = [
       brief.address &&
-        `<article class="contact-card glass-panel reveal"><span>Address</span><strong>${esc(brief.address)}</strong><a class="button button-quiet" href="${esc(mapsHref)}">Open map<span aria-hidden="true">\u2197</span></a></article>`,
+        `<article class="contact-card glass-panel reveal"><h4>Address</h4><strong>${esc(brief.address)}</strong><a class="button button-quiet" href="${esc(mapsHref)}">Open directions<span aria-hidden="true">\u2197</span></a></article>`,
       brief.phone &&
-        `<article class="contact-card glass-panel reveal delay-1"><span>Telephone</span><strong><a href="tel:${phoneDigits}">${esc(brief.phone)}</a></strong></article>`,
+        `<article class="contact-card glass-panel reveal delay-1"><h4>Telephone</h4><strong><a href="tel:${phoneDigits}">${esc(brief.phone)}</a></strong></article>`,
       brief.hours &&
-        `<article class="contact-card glass-panel reveal delay-2"><span>Hours</span><strong>${esc(brief.hours)}</strong>${brief.url ? `<a href="${esc(brief.url)}">Confirm on official site \u2197</a>` : ''}</article>`,
+        `<article class="contact-card glass-panel reveal delay-2"><h4>Hours</h4><strong>${esc(brief.hours)}</strong>${brief.url ? `<a href="${esc(brief.url)}">Confirm on official site \u2197</a>` : ''}</article>`,
       d.extraCard &&
-        `<article class="contact-card glass-panel reveal delay-3"><span>${esc(d.extraCard.label)}</span><strong>${esc(d.extraCard.title)}</strong>${cta(d.extraCard.cta, 'button button-quiet')}</article>`,
+        `<article class="contact-card glass-panel reveal delay-3"><h4>${esc(d.extraCard.label)}</h4><strong>${esc(d.extraCard.title)}</strong>${cta(d.extraCard.cta, 'button button-quiet')}</article>`,
     ]
       .filter(Boolean)
       .join('');
-    return `<section class="contact-system ${pickSurface(d.surface || 'deep')} vanish-out" id="visit"><div class="section-kicker">Visit and contact</div><div class="contact-intro reveal"><h2>${d.heading || 'Make the next visit <mark>easy.</mark>'}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div></section>`;
+    const cityFig = d.imageIndex
+      ? `<div class="contact-visual reveal">${figure(d.imageIndex, {
+          caption: d.imageCaption || `${brief.town || brief.city}, Pennsylvania`,
+        })}</div>`
+      : '';
+    return `<section class="contact-system ${pickSurface(d.surface || 'deep')} vanish-out" id="visit">${sectionKicker(d.kicker || 'Visit and contact')}<div class="contact-intro reveal"><h2>${esc(d.heading || 'Make the next visit easy.')}</h2><div><h5>${esc(d.aside || `Public details for ${brief.town || brief.city}`)}</h5><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div></div><div class="contact-grid">${cards}</div>${cityFig}</section>`;
   },
   closing(d) {
-    return `<section class="closing ${pickSurface(d.surface || 'panel')} vanish-out reveal">${sectionKicker(d.kicker || `${brief.city}, in full`)}<h2><mark>${esc(d.heading || brief.name)}</mark></h2>${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
+    return `<section class="closing ${pickSurface(d.surface || 'panel')} vanish-out reveal">${sectionKicker(d.kicker || `${brief.city}, in full`)}<h2>${esc(d.heading || brief.name)}</h2>${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
   },
 };
 
@@ -220,9 +243,14 @@ const footerLinks = (brief.links || [])
   .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)} \u2197</a></li>`)
   .join('');
 
-const brand = brief.logo === false
-  ? `<span class="wordmark">${esc(brief.name)}</span>`
-  : `<img class="brand-logo" src="assets/logo.png" alt="${esc(brief.name)}">`;
+const priorAssets = path.join(outRoot, brief.slug, 'assets');
+const logoFile = ['logo.png', 'logo.svg', 'logo.webp', 'logo.jpg'].find((f) =>
+  fs.existsSync(path.join(priorAssets, f))
+);
+const brand =
+  brief.logo === false && !logoFile
+    ? `<span class="wordmark">${esc(brief.name)}</span>`
+    : `<img class="brand-logo" src="assets/${logoFile || 'logo.png'}" alt="${esc(brief.name)}">`;
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -245,19 +273,24 @@ const mobileBar = primaryCta
 
 const attitude = inferAttitude(brief);
 const skinCss = buildSkinCss(brief);
+const layoutCss = buildLayoutCss(brief, layout);
+const chrome = buildLayoutChrome(brief, layout, esc);
 
 const revealScript = `(()=>{const header=document.querySelector('.site-header');const nodes=[...document.querySelectorAll('.reveal')];const vanish=[...document.querySelectorAll('.vanish-out')];const reveal=node=>node.classList.add('visible','in-view');const show=()=>nodes.forEach(reveal);const revealPassed=()=>nodes.forEach(node=>{if(!node.classList.contains('visible')&&node.getBoundingClientRect().top<innerHeight*1.08)reveal(node)});if(!('IntersectionObserver' in window)){show();return}const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -6% 0px'});nodes.forEach(node=>observer.observe(node));const leave=new IntersectionObserver(entries=>entries.forEach(entry=>{entry.target.classList.toggle('is-leaving',!entry.isIntersecting&&entry.boundingClientRect.bottom<0)}),{threshold:0});vanish.forEach(node=>leave.observe(node));let scheduled=false;const onScroll=()=>{if(header)header.classList.toggle('is-scrolled',scrollY>12);if(!scheduled){scheduled=true;requestAnimationFrame(()=>{revealPassed();scheduled=false})}};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',revealPassed,{passive:true});addEventListener('pageshow',()=>requestAnimationFrame(revealPassed));onScroll();revealPassed()})();`;
 
-const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${noindex}<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script><title>${esc(brief.name)} | ${esc(brief.city)}</title><meta name="description" content="${esc(brief.description || '')}"><meta name="theme-color" content="${t.deep}"><meta name="generator" content="momentum-site-factory"><meta name="attitude" content="${esc(attitude)}"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?${fontFamilies}&display=swap" rel="stylesheet"><script type="application/ld+json">${jsonLd}</script><style>
+const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${noindex}<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script><title>${esc(brief.name)} | ${esc(brief.city)}</title><meta name="description" content="${esc(brief.description || '')}"><meta name="theme-color" content="${t.deep}"><meta name="generator" content="momentum-site-factory"><meta name="attitude" content="${esc(attitude)}"><meta name="layout" content="${esc(layout.id)}">${layout.ref ? `<meta name="composition-ref" content="${esc(layout.ref)}">` : ''}<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?${fontFamilies}&display=swap" rel="stylesheet"><script type="application/ld+json">${jsonLd}</script><style>
 ${rootBlock}
 ${baseCss}
-${skinCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)}"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="#top">${brand}</a><nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header><main id="main">${sections}</main><footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
+${skinCss}
+${layoutCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)} layout-${esc(layout.id)}${isAnimatedSlug(brief.slug) ? ' media-animated' : ' media-photoreal'}"><a class="skip-link" href="#main">Skip to content</a>${chrome.rail}<header class="site-header"><a class="brand" href="#top">${brand}</a>${chrome.headerMid}<nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header>${chrome.afterHeader}<main id="main">${sections}</main>${chrome.afterMain}<footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h3>Contact</h3>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h3>Visit</h3>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h3>Links</h3><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
 
 const outDir = path.join(outRoot, brief.slug);
 fs.mkdirSync(path.join(outDir, 'assets'), { recursive: true });
 fs.writeFileSync(path.join(outDir, 'index.html'), html);
 
-const wanted = new Set(brief.logo === false ? [] : ['logo.png']);
+const wanted = new Set();
+if (logoFile) wanted.add(logoFile);
+else if (brief.logo !== false) wanted.add('logo.png');
 const usedImages = html.match(/assets\/[a-z0-9-]+\.(webp|png|jpg)/g) || [];
 usedImages.forEach((u) => wanted.add(u.replace('assets/', '')));
 const have = new Set(fs.readdirSync(path.join(outDir, 'assets')));
@@ -268,7 +301,8 @@ const missingAssets = [...wanted].filter((f) => !have.has(f));
   const sectionNames = [...html.matchAll(/<section class="([a-z-]+)/g)].map((m) => m[1]);
   const copyHtml = html
     .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(/<script[\s\S]*?<\/script>/gi, '');
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<[^>]*aria-hidden="true"[^>]*>[\s\S]*?<\/(?:div|span)>/gi, '');
   const words = (copyHtml.match(/>[^<>]{3,}</g) || []).join(' ').split(/\s+/).filter(Boolean).length;
 
   return {

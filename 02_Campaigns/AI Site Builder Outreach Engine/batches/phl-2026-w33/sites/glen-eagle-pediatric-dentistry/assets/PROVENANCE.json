@@ -1,0 +1,25 @@
+{
+  "slug": "glen-eagle-pediatric-dentistry",
+  "appliedAt": "2026-08-14T20:23:20.486Z",
+  "harvestDir": "/workspace/_templates/site-factory/harvest/glen-eagle-pediatric-dentistry",
+  "copied": 3,
+  "sources": [
+    {
+      "from": "source-01.jpg",
+      "to": "image-1.webp",
+      "as": "image-1.jpg"
+    },
+    {
+      "from": "source-02.jpg",
+      "to": "image-2.webp",
+      "as": "image-2.jpg"
+    },
+    {
+      "from": "source-03.png",
+      "to": "image-3.webp",
+      "as": "image-3.png"
+    }
+  ],
+  "hint": "GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.",
+  "siteUrl": "https://gleneaglepediatricdentistry.com/"
+}
