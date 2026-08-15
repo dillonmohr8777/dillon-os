@@ -45,3 +45,34 @@ How to use it
 Send the top 50 first, from one real mailbox, three emails max per person. If that looks clean we do the rest. I have the copy ready. Nothing goes out until you say go.
 
 Need you to confirm Meet or Zoom, which mailbox sends, and seat cap. First invites Tuesday morning once you give those.
+
+---
+
+# Calendar follow-up (if he asks how it lands on their calendar)
+
+How it gets on their calendar
+
+We do not drop the workshop on anyone's calendar from the invite email. Google will not let a webpage silently write onto someone else's calendar, and blasting a calendar invite at the cold list is how you get marked spam.
+
+Cold email is just the register link. Calendar starts after they opt in.
+
+What happens when they register (already live)
+They hit the page, fill the form. "Open my calendar" is on by default. Same click as submit opens Google Calendar with Thursday Aug 27, 12 to 1pm ET, and the Meet link already in the event. They hit Save. Outlook and Apple get the same thing (Outlook link or a calendar file).
+
+https://www.momentumvirtualtours.com/growth-workshop/
+
+What happens after they register
+They get a confirmation email with the same Google / Outlook / calendar file links plus the Meet link.
+
+Then we add their email as a guest on the real Google event. Google sends them the official invite. Gmail usually puts it on the calendar (sometimes as tentative until they click Yes). Outlook and Apple get that invite too and can accept it. The event already has reminders at 24 hours and 1 hour.
+
+That guest-add piece is built. I still have to connect it to the registration form (quick flip on my side). Until that is on, the page Save click plus the confirmation email is how it lands.
+
+What they see Thursday
+Same Meet we already have on the event:
+https://meet.google.com/ive-hkws-xdg
+
+You can still swap Zoom. If you do, I update the event, the page, and the confirmation in one pass.
+
+What we will not do
+We will not calendar-invite the 720 people who have not registered. That list only gets the register link.
