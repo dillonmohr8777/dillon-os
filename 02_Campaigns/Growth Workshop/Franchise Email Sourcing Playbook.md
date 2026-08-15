@@ -28,13 +28,13 @@ Franchisors must file Franchise Disclosure Documents. [16 CFR § 436.5(t) Item 2
 
 | Portal | Probed 2026-08-15 | Use |
 |---|---|---|
-| Wisconsin DFI Franchise Search | **200** — https://dfi.wi.gov/apps/FranchiseSearch/MainSearch.aspx | first stop; name search + disclosure when registered |
-| Minnesota CARDS | bot-walled from this environment (403); operator browser: Area of Interest = Franchise Registrations at https://www.cards.commerce.state.mn.us/ | free public filings after the state accepts them |
-| Indiana Securities Portal | **200** — https://securities.sos.in.gov/general-information/franchise/ | franchise registration-type search |
-| California DFPI | DocQNet **200**; public search is https://dfpi.ca.gov/search. Older copies may need a PRA request | second-line, not a dump |
-| Maryland OAG Securities | **200** but **no public FDD search** | skip for this pilot |
+| Minnesota CARDS | Browser UA: no-login FDD PDFs at https://cards.web.commerce.state.mn.us/franchise-registrations. Bots get 403. 2026 Clean FDD first page = 500 rows / 340 file numbers | **Primary** owner-name source |
+| Wisconsin DFI | Search → Details → Download is a no-login PDF. Active list = **1,861** names only (no FDD on that page) | **Primary** |
+| Indiana Securities search | https://securities.sos.in.gov/public-portfolio-search/ — form is public, **reCAPTCHA** on submit | Human-only; FDD download not verified |
+| California DFPI DocQNet / FRANSES | **Not a free FDD library.** Filings moved to FRANSES (account). Copies via PRA | **Skip** |
+| Maryland OAG | Guidance only; no public download corpus | **Skip** |
 
-Receipts: [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts]].
+Receipts: [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts]] · [[12_Brain/raw/research/2026-08-15 Franchise Lane A Portal Probe]].
 
 ### Lane B — brand location pages + radar targeting — RUN 2026-08-14 / flip 2026-08-15
 
