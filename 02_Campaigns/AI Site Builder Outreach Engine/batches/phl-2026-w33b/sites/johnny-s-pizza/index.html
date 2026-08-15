@@ -32,7 +32,7 @@ body::before{
   content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opacity:.07;mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-img{display:block;width:100%;height:100%;object-fit:cover}
+img{display:block;width:100%;height:auto;object-fit:contain;object-position:center}
 a{color:inherit;text-decoration-thickness:from-font}
 h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.12;text-wrap:balance;letter-spacing:-.03em}
 h1{font-size:clamp(3.4rem,8vw,7.2rem);font-weight:800}
@@ -81,29 +81,16 @@ section{position:relative;padding:clamp(78px,10vw,150px) clamp(20px,6vw,110px);i
   margin:0;overflow:hidden;border:var(--border) solid currentColor;
   border-radius:calc(var(--radius) + 8px);
   box-shadow:22px 28px 0 color-mix(in srgb,var(--accent2) 70%,transparent);
-  transform:rotate(-1.25deg);transform-style:preserve-3d;
+  background:color-mix(in srgb,var(--panel) 40%,var(--paper));
+  aspect-ratio:3/2;
+  transform:rotate(-.6deg);
 }
-.gallery-grid .media-figure:nth-child(even),.catalog-card:nth-child(even) .media-figure{transform:rotate(1.2deg)}
-.media-animated .media-figure{animation:media-pop3d 8.4s ease-in-out infinite alternate}
-.media-animated .media-figure img{animation:media-kenburns 11s ease-in-out infinite alternate;transform-origin:center}
-@keyframes media-kenburns{from{transform:scale(1)}to{transform:scale(1.08) translate3d(-2%,-1.4%,0)}}
-@keyframes media-pop3d{
-  from{transform:rotateY(-5deg) rotateX(1.2deg) rotate(-1.25deg) translateZ(0)}
-  to{transform:rotateY(5deg) rotateX(-1deg) rotate(-1.25deg) translateZ(16px)}
-}
-@supports (animation-timeline:view()){
-  .media-figure{
-    animation:enter-pop linear both, media-pop3d 8.4s ease-in-out infinite alternate;
-    animation-timeline:view(), auto;
-    animation-range:entry 0% cover 35%, normal;
-  }
-  @keyframes enter-pop{from{opacity:.35;transform:rotateY(12deg) scale(.94)}to{opacity:1}}
-}
+.media-figure img{width:100%;height:100%;object-fit:contain;object-position:center}
+.gallery-grid .media-figure:nth-child(even),.catalog-card:nth-child(even) .media-figure{transform:rotate(.55deg)}
 .hero{min-height:auto;display:grid;grid-template-columns:1fr;text-align:center;padding-top:10vh}
 .hero-copy{max-width:920px;margin:0 auto}
 .hero-copy>p{margin-inline:auto;font-size:clamp(1.08rem,1.7vw,1.45rem)}
-.hero-media{min-height:68svh;max-width:1120px;margin:36px auto 0;perspective:1400px}
-.hero-media .media-figure{height:68svh}
+.hero-media{max-width:1120px;width:100%;margin:36px auto 0}
 .marquee-strip{overflow:hidden;white-space:nowrap;padding:18px 0;background:var(--deep);color:var(--on-deep);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .marquee-track{display:inline-flex;gap:3rem;min-width:100%;animation:marquee-scroll 28s linear infinite}
 @keyframes marquee-scroll{to{transform:translateX(-50%)}}
@@ -115,36 +102,17 @@ section{position:relative;padding:clamp(78px,10vw,150px) clamp(20px,6vw,110px);i
 .offer-stack{display:grid;gap:18px}
 .offer-lead p,.offer-stack p,.experience-grid p,.proof p,.catalog-card p{margin-top:12px;font-size:1.05rem}
 .proof-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
-.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:170px;gap:16px}
-.gallery-grid .media-figure:nth-child(1){grid-column:span 7;grid-row:span 3}
-.gallery-grid .media-figure:nth-child(2){grid-column:span 5;grid-row:span 2}
-.gallery-grid .media-figure:nth-child(3){grid-column:span 5;grid-row:span 3}
-.gallery-grid .media-figure:nth-child(4){grid-column:span 7;grid-row:span 2}
-.gallery-grid .media-figure:nth-child(5){grid-column:span 12;grid-row:span 2}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.gallery-grid .media-figure:first-child{grid-column:1/-1}
 .story,.feature,.spotlight{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,6vw,90px);align-items:center}
-.story .media-figure,.feature .media-figure,.spotlight .media-figure{min-height:620px}
 .experience-grid{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:18px}
 .catalog-grid{display:grid;grid-template-columns:1.1fr .9fr 1fr;gap:22px}
-.catalog-card .media-figure{height:320px;margin-bottom:18px}
-.town{
-  min-height:560px;perspective:1600px;border-radius:calc(var(--radius) + 10px);
-  overflow:hidden;border:var(--border) solid currentColor;
-  box-shadow:22px 28px 0 color-mix(in srgb,var(--gold) 70%,transparent);
-  background:linear-gradient(180deg,#c9d6c4,#6a7d5c 55%,#2a3324);
-}
-.town-iso{
-  height:100%;min-height:560px;transform-style:preserve-3d;
-  transform:rotateX(58deg) rotateZ(-38deg);
-  animation:town-orbit 18s ease-in-out infinite alternate;
-}
-@keyframes town-orbit{to{transform:rotateX(54deg) rotateZ(-28deg) translate3d(20px,-12px,20px)}}
-.bldg{position:absolute;transform-style:preserve-3d;background:#6b4a32;box-shadow:16px 18px 0 rgba(0,0,0,.18)}
-.bldg b{position:absolute;left:-8%;right:-8%;top:-14px;height:14px;background:#2a2118}
-.tree{position:absolute;width:22px;height:22px;border-radius:50%;background:#2f6a38}
-.road{position:absolute;left:10%;right:10%;top:48%;height:54px;background:#2c2c2c;transform:translateZ(-20px)}
+.catalog-card .media-figure{margin-bottom:18px}
 .contact-intro{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:end;margin-bottom:40px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:36px}
-.contact-visual .media-figure{min-height:480px}
+.contact-visual .media-figure figcaption{
+  padding:12px 16px 16px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;
+}
 .closing{text-align:center}
 .closing .button{margin-inline:auto}
 .site-footer{
@@ -164,9 +132,8 @@ a:focus-visible,.button:focus-visible{outline:4px solid var(--gold);outline-offs
   .mobile-action{display:block}
   body{padding-bottom:84px}
   .offer-split,.story,.feature,.spotlight,.proof-grid,.experience-grid,.catalog-grid,.contact-intro,.contact-grid,.site-footer{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr;grid-auto-rows:320px}
-  .gallery-grid .media-figure:nth-child(n){grid-column:auto;grid-row:auto}
-  .hero-media,.hero-media .media-figure{min-height:420px;height:420px}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-grid .media-figure:first-child{grid-column:auto}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -198,7 +165,7 @@ a:focus-visible,.button:focus-visible{outline:4px solid var(--gold);outline-offs
       </div>
     </div>
     <div class="hero-media reveal">
-      <figure class="media-figure"><img loading="eager" fetchpriority="high" src="assets/image-1.webp" alt="Sliced stromboli with melted mozzarella and marinara at Johnny's in Spring Mount"></figure>
+      <figure class="media-figure"><img width="1536" height="1024" loading="eager" fetchpriority="high" src="assets/image-1.webp" alt="Sliced stromboli with melted mozzarella and marinara at Johnny's in Spring Mount"></figure>
     </div>
   </section>
   <div class="marquee-strip" aria-hidden="true"><div class="marquee-track"><span>Regular stromboli</span><span>Chef's recommendations</span><span>BYO comfort</span><span>Call 610.287.4771</span><span>3 mile delivery</span><span>Regular stromboli</span><span>Chef's recommendations</span><span>BYO comfort</span><span>Call 610.287.4771</span><span>3 mile delivery</span></div></div>
@@ -249,11 +216,11 @@ a:focus-visible,.button:focus-visible{outline:4px solid var(--gold);outline-offs
       <h2>See what comes out of the kitchen</h2>
     </header>
     <div class="gallery-grid reveal">
-      <figure class="media-figure"><img loading="eager" src="assets/image-3.webp" alt="Deck-oven pizza with a blistered crust at Johnny's"></figure>
-      <figure class="media-figure"><img loading="eager" src="assets/image-4.webp" alt="Red-sauce pasta with basil at Johnny's Pizza and Pasta"></figure>
-      <figure class="media-figure"><img loading="eager" src="assets/image-5.webp" alt="Shrimp and scallops in lobster cream sauce"></figure>
-      <figure class="media-figure"><img loading="eager" src="assets/image-6.webp" alt="Steak and veal plate prepared at Johnny's"></figure>
-      <figure class="media-figure"><img loading="eager" src="assets/image-7.webp" alt="Italian grinder cut for takeout from Johnny's"></figure>
+      <figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-3.webp" alt="Deck-oven pizza with a blistered crust at Johnny's"></figure>
+      <figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-4.webp" alt="Red-sauce pasta with basil at Johnny's Pizza and Pasta"></figure>
+      <figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-5.webp" alt="Shrimp and scallops in lobster cream sauce"></figure>
+      <figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-6.webp" alt="Steak and veal plate prepared at Johnny's"></figure>
+      <figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-7.webp" alt="Italian grinder cut for takeout from Johnny's"></figure>
     </div>
   </section>
 
@@ -263,7 +230,7 @@ a:focus-visible,.button:focus-visible{outline:4px solid var(--gold);outline-offs
       <p>Johnny's Pizza and Pasta Ristorante Italiano sits at 5 Main Street in Spring Mount. The public pages have carried that street line since the 2010 copyright on their own site.</p>
       <p>We take great pride in the fact that we only serve the finest pasta, seafood, and choicest cuts of steak and veal available. If your favorite dish isn't on our menu, just ask. We'll accommodate whenever possible.</p>
     </div>
-    <div class="reveal"><figure class="media-figure"><img loading="eager" src="assets/image-2.webp" alt="Warm booth and hanging lights inside an Italian dining room"></figure></div>
+    <div class="reveal"><figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-2.webp" alt="Warm booth and hanging lights inside an Italian dining room"></figure></div>
   </section>
 
   <section class="experience surface-panel vanish-out">
@@ -291,7 +258,7 @@ a:focus-visible,.button:focus-visible{outline:4px solid var(--gold);outline-offs
   </section>
 
   <section class="feature surface-accent vanish-out">
-    <div class="reveal"><figure class="media-figure"><img loading="eager" src="assets/image-8.webp" alt="Close-up of melted mozzarella from a Johnny's pie or stromboli"></figure></div>
+    <div class="reveal"><figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-8.webp" alt="Close-up of melted mozzarella from a Johnny's pie or stromboli"></figure></div>
     <div class="feature-copy reveal">
       <h2>Always a wonderful experience</h2>
       <p>Guests already say the quiet part: thank you, Johnny's. The rebuild keeps their wording, their dishes, and the number they already publish.</p>
@@ -305,7 +272,7 @@ a:focus-visible,.button:focus-visible{outline:4px solid var(--gold);outline-offs
       <p>Shrimp and scallops sauteed in lobster cream. Spring mix greens with goat cheese and red onion. Ask if your favorite isn't printed. The kitchen already works that way.</p>
       <a class="button button-secondary" href="#visit">Plan a visit<span aria-hidden="true">↗</span></a>
     </div>
-    <div class="reveal"><figure class="media-figure"><img loading="eager" src="assets/image-12.webp" alt="Seafood linguine plated at Johnny's"></figure></div>
+    <div class="reveal"><figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-12.webp" alt="Seafood linguine plated at Johnny's"></figure></div>
   </section>
 
   <section class="catalog surface-deep vanish-out">
@@ -314,19 +281,19 @@ a:focus-visible,.button:focus-visible{outline:4px solid var(--gold);outline-offs
     </header>
     <div class="catalog-grid">
       <article class="catalog-card reveal">
-        <figure class="media-figure"><img loading="eager" src="assets/image-9.webp" alt="Spring mix salad with goat cheese at Johnny's"></figure>
+        <figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-9.webp" alt="Spring mix salad with goat cheese at Johnny's"></figure>
         <h3>Official menu</h3>
         <p>Open Johnny's own website for the latest plates, party trays, and the coupons they still run themselves.</p>
         <a href="http://johnnysitaliano.com/">Explore ↗</a>
       </article>
       <article class="catalog-card reveal delay-1">
-        <figure class="media-figure"><img loading="eager" src="assets/image-10.webp" alt="BYO table setting with bread and water at an Italian restaurant"></figure>
+        <figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-10.webp" alt="BYO table setting with bread and water at an Italian restaurant"></figure>
         <h3>BYO comfort</h3>
         <p>Bring the bottle you already like. The room is set for family pricing and a meal that doesn't rush you out.</p>
         <a href="#offerings">Explore ↗</a>
       </article>
       <article class="catalog-card reveal delay-2">
-        <figure class="media-figure"><img loading="eager" src="assets/image-11.webp" alt="Dusk street outside a small Pennsylvania brick restaurant"></figure>
+        <figure class="media-figure"><img width="1536" height="1024" loading="lazy" src="assets/image-11.webp" alt="Dusk street outside a small Pennsylvania brick restaurant"></figure>
         <h3>Spring Mount</h3>
         <p>Set a course for 5 Main Street when you're ready to walk in. The town view below is a 3D reading of the borough, not a map.</p>
         <a href="#visit">Explore ↗</a>
@@ -356,22 +323,9 @@ a:focus-visible,.button:focus-visible{outline:4px solid var(--gold);outline-offs
     </div>
     <div class="contact-visual reveal">
       <figure class="media-figure">
-        <img loading="eager" src="assets/image-13.webp" alt="3D view of Spring Mount, Pennsylvania">
+        <img width="1536" height="1024" loading="lazy" src="assets/image-13.webp" alt="3D view of Spring Mount, Pennsylvania">
         <figcaption>Spring Mount, Pennsylvania</figcaption>
       </figure>
-    </div>
-    <div class="town reveal" aria-hidden="true" style="margin-top:36px">
-      <div class="town-iso">
-        <div class="road"></div>
-        <div class="bldg" style="left:18%;top:28%;width:70px;height:120px"><b></b></div>
-        <div class="bldg" style="left:38%;top:22%;width:86px;height:160px;background:#8a5a3a"><b></b></div>
-        <div class="bldg" style="left:58%;top:30%;width:64px;height:110px;background:#5a4030"><b></b></div>
-        <div class="bldg" style="left:28%;top:48%;width:90px;height:90px;background:#714c34"><b></b></div>
-        <div class="bldg" style="left:52%;top:52%;width:74px;height:130px"><b></b></div>
-        <div class="tree" style="left:14%;top:62%"></div>
-        <div class="tree" style="left:72%;top:58%"></div>
-        <div class="tree" style="left:44%;top:70%"></div>
-      </div>
     </div>
   </section>
 

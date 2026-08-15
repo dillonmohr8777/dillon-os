@@ -350,15 +350,7 @@ p,address{text-wrap:pretty}
 .media-animated .media-figure:nth-child(3n){animation-duration:7.2s;animation-delay:-2.8s}
 .media-animated .hero-media .media-figure{animation-duration:11s}
 .media-animated .media-figure img{
-  animation:media-kenburns 9.6s ease-in-out infinite alternate;
   transform-origin:center center;
-}
-.media-animated .media-figure:nth-child(2n) img{animation-duration:11.2s;animation-delay:-1.8s}
-.media-animated .media-figure:nth-child(3n) img{animation-duration:8.4s;animation-delay:-3.4s}
-.media-animated .hero-media img{animation-duration:14s}
-@keyframes media-kenburns{
-  from{transform:scale(1) translate3d(0,0,0)}
-  to{transform:scale(1.08) translate3d(-2.4%,-1.6%,0)}
 }
 @keyframes media-pop3d{
   from{transform:rotateY(-5deg) rotateX(1.3deg) rotate(-1.1deg) translateZ(0)}
