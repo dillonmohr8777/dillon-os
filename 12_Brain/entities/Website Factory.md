@@ -1,7 +1,7 @@
 ---
 tags: [entity, system]
 source: "[[12_Brain/raw/2026-07-04 - obsidian-second-brain-article]]"
-updated: 2026-07-29
+updated: 2026-08-15
 ---
 
 # Website Factory
@@ -21,3 +21,6 @@ deploy credentials.
 
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]]
 - [[12_Brain/entities/Momentum 360|Momentum 360]]
+- [[12_Brain/research/Homepage Template Systems 2026|Homepage Template Systems 2026]]
+- [[12_Brain/concepts/Ultimate Homepage System|Ultimate Homepage System]]
+- [[12_Brain/protocols/Codex Homepage Implementation Brief|Codex Homepage Implementation Brief]]
