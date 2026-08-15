@@ -38,38 +38,9 @@ function uniquifyAssets(siteDir, slug) {
     const stamp = crypto.createHash('sha1').update(`${id}/${file}`).digest('hex').slice(0, 6);
     const raw = fs.readFileSync(src);
     if (isAnimatedBuffer(raw)) {
-      const tmp = `${src}.${process.pid}.uniq.webp`;
-      try {
-        execFileSync(
-          'ffmpeg',
-          [
-            '-y',
-            '-i',
-            src,
-            '-vf',
-            `drawbox=x=iw-12:y=ih-12:w=10:h=10:color=0x${stamp}@1:t=fill`,
-            '-an',
-            '-c:v',
-            'libwebp',
-            '-q:v',
-            '72',
-            '-loop',
-            '0',
-            tmp,
-          ],
-          { stdio: ['ignore', 'pipe', 'pipe'] }
-        );
-        const out = fs.readFileSync(tmp);
-        if (out.length < 800) throw new Error('uniquify produced a tiny file');
-        fs.writeFileSync(dest, out);
-        if (src !== dest && fs.existsSync(src)) fs.unlinkSync(src);
-        updated += 1;
-      } catch (err) {
-        console.warn(`uniquify keep-anim ${file}: ${(err.message || err).toString().split('\n')[0]}`);
-        if (src !== dest) fs.copyFileSync(src, dest);
-      } finally {
-        if (fs.existsSync(tmp)) fs.unlinkSync(tmp);
-      }
+      // Ken Burns loops are already unique per slug/slot. Re-encoding
+      // animated WebP with drawbox fails on this ffmpeg build, so keep bytes.
+      if (src !== dest) fs.copyFileSync(src, dest);
       continue;
     }
     const tmp = `${src}.${process.pid}.uniq.jpg`;

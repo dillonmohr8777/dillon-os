@@ -17,6 +17,7 @@ const path = require('path');
 const { assertSafeSlug } = require('./lib/validate.js');
 const { buildSkinCss, inferAttitude } = require('./lib/skins.js');
 const { resolveLayout, buildLayoutCss, buildLayoutChrome } = require('./lib/layouts.js');
+const { ANIMATED_SLUGS } = require('./generate-unique-media.js');
 
 /**
  * Render a brief into a finished site directory.
@@ -66,7 +67,7 @@ const img = (n, opts = {}) => {
   const meta = images[n - 1] || {};
   const file = meta.file || `image-${n}.webp`;
   const alt = esc(meta.alt || brief.name);
-  const eager = opts.eager ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
+  const eager = opts.eager ? ' loading="eager" fetchpriority="high"' : ' loading="eager"';
   return `<img${eager} src="assets/${file}" alt="${alt}">`;
 };
 const figure = (n, opts = {}) => {
@@ -261,7 +262,7 @@ const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="
 ${rootBlock}
 ${baseCss}
 ${skinCss}
-${layoutCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)} layout-${esc(layout.id)}"><a class="skip-link" href="#main">Skip to content</a>${chrome.rail}<header class="site-header"><a class="brand" href="#top">${brand}</a>${chrome.headerMid}<nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header>${chrome.afterHeader}<main id="main">${sections}</main>${chrome.afterMain}<footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
+${layoutCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)} layout-${esc(layout.id)}${ANIMATED_SLUGS.has(brief.slug) ? ' media-animated' : ' media-photoreal'}"><a class="skip-link" href="#main">Skip to content</a>${chrome.rail}<header class="site-header"><a class="brand" href="#top">${brand}</a>${chrome.headerMid}<nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header>${chrome.afterHeader}<main id="main">${sections}</main>${chrome.afterMain}<footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
 
 const outDir = path.join(outRoot, brief.slug);
 fs.mkdirSync(path.join(outDir, 'assets'), { recursive: true });

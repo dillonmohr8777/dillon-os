@@ -168,6 +168,8 @@ figcaption{
 .story,.feature,.spotlight{display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,7vw,110px);align-items:center}
 .story p,.feature p,.spotlight p{font-size:clamp(1.06rem,1.5vw,1.35rem);max-width:62ch;text-wrap:pretty}
 .story figure,.feature figure,.spotlight figure{min-height:650px;border:var(--border) solid currentColor;border-radius:var(--radius)}
+.story figure img,.feature figure img,.spotlight figure img{min-height:650px}
+.catalog-card img{min-height:330px}
 
 .gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:180px;gap:16px}
 .gallery-grid figure{border:var(--border) solid currentColor;border-radius:var(--radius)}
@@ -317,6 +319,18 @@ p,address{text-wrap:pretty}
   .profile-page figure:hover img,.profile-page figure:focus-within img{transform:none}
   .offering-card:hover,.experience-grid article:hover{transform:none;box-shadow:none}
 }
+.media-animated .media-figure img{
+  animation:media-kenburns 9.6s ease-in-out infinite alternate;
+  transform-origin:center center;
+}
+.media-animated .media-figure:nth-child(2n) img{animation-duration:11.2s;animation-delay:-1.8s}
+.media-animated .media-figure:nth-child(3n) img{animation-duration:8.4s;animation-delay:-3.4s}
+.media-animated .hero-media img{animation-duration:14s}
+@keyframes media-kenburns{
+  from{transform:scale(1) translate3d(0,0,0)}
+  to{transform:scale(1.08) translate3d(-2.4%,-1.6%,0)}
+}
+
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .reveal,.js .reveal.visible,.js .vanish-out.is-leaving{

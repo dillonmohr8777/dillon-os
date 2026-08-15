@@ -2,8 +2,9 @@
 /**
  * Fill every factory image slot with a unique still or short loop.
  *
- * Half the week-33b slugs get photoreal stills. The other half get Ken Burns
- * animated WebP. Harvest photos stay when they are real first-party files.
+ * Half the week-33b slugs get photoreal stills. The other half get CSS Ken
+ * Burns motion on unique stills. Harvest photos stay when they are real
+ * first-party files.
  * Atmosphere gradients and empty slots are replaced. Never claimed as the
  * business's official photography.
  *
@@ -14,6 +15,7 @@ const path = require('path');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 const { chromium } = require('playwright');
+const { applyHarvestImages } = require('./apply-harvest-images.js');
 
 const ANIMATED_SLUGS = new Set([
   'train-and-nourish',
@@ -321,10 +323,16 @@ function isTinyOrMissing(file) {
 function looksLikeAtmosphere(file, n, prov) {
   if ((prov.generatedAtmosphere || []).includes(n)) return true;
   if (!fs.existsSync(file)) return true;
-  const size = fs.statSync(file).size;
+  const buf = fs.readFileSync(file);
+  const animatedFile =
+    (buf[0] === 0x47 && buf[1] === 0x49 && buf[2] === 0x46) ||
+    (buf.slice(0, 4).toString('ascii') === 'RIFF' &&
+      (buf.includes(Buffer.from('ANIM')) || buf.includes(Buffer.from('ANMF'))));
+  if (animatedFile) return true;
+  const size = buf.length;
   const harvested = harvestSlotSet(prov);
   if (harvested.has(n) && size >= 800) return false;
-  return size < 40000;
+  return size < 45000;
 }
 
 function sceneHtml(brief, n, scene) {
@@ -460,7 +468,8 @@ function assignAiStills(slug, needed, harvested, destFor, prov) {
     const p = findGeneratedStill(slug, n);
     if (!p) continue;
     const dest = destFor(n);
-    if (n <= needed && (looksLikeAtmosphere(dest, n, prov) || !harvested.has(n))) {
+    const harvestIsReal = harvested.has(n) && !looksLikeAtmosphere(dest, n, prov);
+    if (n <= needed && !harvestIsReal) {
       named[n] = p;
     } else {
       unused.push(p);
@@ -468,9 +477,8 @@ function assignAiStills(slug, needed, harvested, destFor, prov) {
   }
   let i = 0;
   for (let n = 1; n <= needed; n++) {
-    if (named[n]) continue;
-    const dest = destFor(n);
-    if ((looksLikeAtmosphere(dest, n, prov) || !harvested.has(n)) && unused[i]) {
+    if (named[n] || harvested.has(n)) continue;
+    if (unused[i]) {
       named[n] = unused[i];
       i += 1;
     }
@@ -484,6 +492,9 @@ async function generateUniqueMedia(siteDir, brief, harvestDir) {
   const needed = (brief.images || []).length || 12;
   const slug = brief.slug || path.basename(siteDir);
   const animated = ANIMATED_SLUGS.has(slug);
+  if (harvestDir && slug) {
+    applyHarvestImages(slug, siteDir, { harvestDir, targetCount: needed });
+  }
   const provPath = path.join(assets, 'PROVENANCE.json');
   const prev = fs.existsSync(provPath) ? JSON.parse(fs.readFileSync(provPath, 'utf8')) : {};
   const harvested = harvestSlotSet(prev);
@@ -530,31 +541,27 @@ async function generateUniqueMedia(siteDir, brief, harvestDir) {
       generated.push(job.n);
     }
 
-    if (animated) {
-      animateStill(still, job.dest, slug, job.n);
-      animatedSlots.push(job.n);
-    } else {
-      const stamp = hash(`${slug}/image-${job.n}.webp`).slice(0, 6);
-      execFileSync(
-        'ffmpeg',
-        [
-          '-y',
-          '-i',
-          still,
-          '-frames:v',
-          '1',
-          '-update',
-          '1',
-          '-vf',
-          `scale=1400:-2,drawbox=x=iw-12:y=ih-12:w=10:h=10:color=0x${stamp}@1:t=fill`,
-          '-q:v',
-          '5',
-          job.dest,
-        ],
-        { stdio: ['ignore', 'pipe', 'pipe'] }
-      );
-      photorealSlots.push(job.n);
-    }
+    const stamp = hash(`${slug}/image-${job.n}.webp:${animated ? 'anim' : 'still'}`).slice(0, 6);
+    execFileSync(
+      'ffmpeg',
+      [
+        '-y',
+        '-i',
+        still,
+        '-frames:v',
+        '1',
+        '-update',
+        '1',
+        '-vf',
+        `scale=1400:-2,drawbox=x=iw-12:y=ih-12:w=10:h=10:color=0x${stamp}@1:t=fill`,
+        '-q:v',
+        '4',
+        job.dest,
+      ],
+      { stdio: ['ignore', 'pipe', 'pipe'] }
+    );
+    if (animated) animatedSlots.push(job.n);
+    else photorealSlots.push(job.n);
     if (fs.existsSync(still)) fs.unlinkSync(still);
   }
   await browser.close();
