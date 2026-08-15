@@ -17,62 +17,15 @@ Sheet shared with sean@needmomentum.com as writer, Google notify off.
 
 ---
 
-Hey workshop page is live for Thu Aug 27 at 12pm ET.
+Hey man I was able to put together all of these franchise emails for the workshop.
 
 https://www.momentumvirtualtours.com/growth-workshop/
 
-Franchise list is in this sheet (already shared with you):
+Sheet is here, already shared with you:
 https://docs.google.com/spreadsheets/d/1sCb-PjUzewfyf8N5tbgcnHlVVzVCbO5eGX6Wlz-oemE/edit
 
-What we did
-We built a free franchise owner list from public sources only. No bought data, no guessed emails. If the brand did not already publish a location email on its own site, that brand is not on the sheet.
+It's CertaPro, Synergy HomeCare, Mosquito Squad, Comfort Keepers, and PACKOUTS. Not five companies. Like 700 local owners. Each row is a different territory. Those are the brands that actually had a location email sitting on their own site. I only took what was already public, no bought list, no making up addresses. Most franchise sites just have a form or a map so they never made the sheet. 720 emails, phones on most of them, a name when the page had one. 50 named people at the top to send first.
 
-How the research worked
-1. Started from home services, senior care, and restoration brands. Those are the owners the workshop is actually for. The brand gives them a playbook, local demand is still theirs.
-2. Opened each brand's locator, location pages, and any public listing API.
-3. Only kept an address if it was sitting on the page. One contact per territory.
-4. Most brands failed that test. Maps, contact forms, or one corporate inbox for the whole country. We skipped those instead of inventing an email.
-5. Checked that the domains actually accept mail.
-6. Also looked at state franchise filings. Those have owner names and phones, almost never emails, so they did not add addresses. They are useful later for putting a name on a row and for LinkedIn.
+When someone registers, the page opens Google Calendar with Thursday Aug 27 at 12pm and the Meet link already in there. They hit save and it's on their calendar. They also get a confirmation with the same thing. After that they get added to the real Google event so the invite shows up in Gmail with the reminders.
 
-What landed
-Five brands published location emails, so they became the list:
-CertaPro, Synergy HomeCare, Mosquito Squad, Comfort Keepers, PACKOUTS.
-
-Not 5 companies. About 700 local owners. Each row is a different territory. 720 emails, phones on most, a name when the page had one. 50 named people at the top to send first. The Philly list is separate and still unused.
-
-How to use it
-Send the top 50 first, from one real mailbox, three emails max per person. If that looks clean we do the rest. I have the copy ready. Nothing goes out until you say go.
-
-Need you to confirm Meet or Zoom, which mailbox sends, and seat cap. First invites Tuesday morning once you give those.
-
----
-
-# Calendar follow-up (if he asks how it lands on their calendar)
-
-How it gets on their calendar
-
-We do not drop the workshop on anyone's calendar from the invite email. Google will not let a webpage silently write onto someone else's calendar, and blasting a calendar invite at the cold list is how you get marked spam.
-
-Cold email is just the register link. Calendar starts after they opt in.
-
-What happens when they register (already live)
-They hit the page, fill the form. "Open my calendar" is on by default. Same click as submit opens Google Calendar with Thursday Aug 27, 12 to 1pm ET, and the Meet link already in the event. They hit Save. Outlook and Apple get the same thing (Outlook link or a calendar file).
-
-https://www.momentumvirtualtours.com/growth-workshop/
-
-What happens after they register
-They get a confirmation email with the same Google / Outlook / calendar file links plus the Meet link.
-
-Then we add their email as a guest on the real Google event. Google sends them the official invite. Gmail usually puts it on the calendar (sometimes as tentative until they click Yes). Outlook and Apple get that invite too and can accept it. The event already has reminders at 24 hours and 1 hour.
-
-That guest-add piece is built. I still have to connect it to the registration form (quick flip on my side). Until that is on, the page Save click plus the confirmation email is how it lands.
-
-What they see Thursday
-Same Meet we already have on the event:
-https://meet.google.com/ive-hkws-xdg
-
-You can still swap Zoom. If you do, I update the event, the page, and the confirmation in one pass.
-
-What we will not do
-We will not calendar-invite the 720 people who have not registered. That list only gets the register link.
+Copy is ready. First 50 whenever you want to start.
