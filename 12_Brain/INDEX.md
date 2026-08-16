@@ -48,7 +48,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
 - [[12_Brain/concepts/Haoqi Design Language|Haoqi Design Language]] — retro-futurist CAD grid, glass script, dithered stickers (expires 2026-11-15).
-- [[12_Brain/concepts/Haoqi Craft Word|Haoqi Craft Word]] — one lowercase glass word in the back; skip the trade if there is no honest hook (expires 2026-11-15).
+- [[12_Brain/concepts/Haoqi Craft Word|Haoqi Craft Word]] — one or two lowercase glass words in the back; skip the trade if there is no honest hook (expires 2026-11-15).
 
 ## Raw captures (Git-safe)
 
@@ -61,6 +61,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/raw/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
 - [[12_Brain/raw/research/2026-08-15 - research - High-Craft Front-End References|2026-08-15 High-Craft Front-End References]] — live checks of the operator URL lists plus Haoqi.
 - [[12_Brain/raw/research/2026-08-16 - research - Haoqi Craft Words|2026-08-16 Haoqi Craft Words]] — 1,042 radar rows scored for one glass word.
+- [[12_Brain/raw/research/2026-08-16 - research - Haoqi Craft Words Two|2026-08-16 Haoqi Craft Words Two]] — same 1,042 rows recut to one- or two-word outcome lines.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -72,7 +73,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
 - [[12_Brain/research/High-Craft Front-End References|High-Craft Front-End References]] — Awwwards / CSSDA / Codrops / WebGL shelf for craft demos (expires 2026-11-15).
-- [[12_Brain/concepts/Haoqi Craft Word|Haoqi Craft Word]] — one glass word per trade; 100-row cut from the 1,042 radar (expires 2026-11-15).
+- [[12_Brain/concepts/Haoqi Craft Word|Haoqi Craft Word]] — one or two glass words per trade; 100-row cut from the 1,042 radar (expires 2026-11-15).
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
@@ -85,7 +86,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[02_Campaigns/Growth Workshop/Google RSVP Rail|Google RSVP Rail]] — Google is the RSVP rail for registrants; email the 720 send-ready rows, not UPS store counters.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]] — Stage 2 qualification: scores the website a prospect already has, routes strong-site prospects to ads/SEO instead of a wasted rebuild. Skill: `/site-grade`.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Haoqi Craft Demos|Haoqi Craft Demos]] — noindex Jarman + Andorra Haoqi skins; live at https://haoqi-radar-craft.netlify.app/.
-- [[02_Campaigns/AI Site Builder Outreach Engine/Haoqi Craft Word 100|Haoqi Craft Word 100]] — 100 radar businesses with one honest glass word.
+- [[02_Campaigns/AI Site Builder Outreach Engine/Haoqi Craft Word 100|Haoqi Craft Word 100]] — 100 radar businesses with a one- or two-word glass line.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]] — the eight-stage model and the honest automation status of each stage.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Market Roster|Market Roster]] — geography ladder (Philadelphia → PA → national) and vertical priorities.
 - `handoffs/prospect-radar-blockers-2026-08-06.md` — open blockers for the desktop agent: Tier 1 unproven, thresholds Tier-0-anchored, OSM trade coverage, no outcome data.
