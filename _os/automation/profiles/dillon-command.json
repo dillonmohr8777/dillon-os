@@ -1,0 +1,99 @@
+{
+  "id": "dillon-command",
+  "name": "Dillon Command Center",
+  "version": 1,
+  "contract": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "supersedes": [
+    "handoffs/Morning Loop Scheduled Agent Setup.md (3-step morning loop)",
+    "duplicate daily-orchestrator PR family (GROK-HANDOFF)"
+  ],
+  "run_dir": "automation-runs/dillon-command/{date}",
+  "lanes": [
+    {
+      "id": "comms",
+      "label": "Comms triage",
+      "tier": 0,
+      "skills": ["slack-intake", "inbox-brief"],
+      "commands": [],
+      "artifacts": [
+        "Daily-Briefs/slack-intake-{date}.md",
+        "Daily-Briefs/inbox-brief-{date}.md",
+        "00_Inbox/slack/*.md"
+      ]
+    },
+    {
+      "id": "clients",
+      "label": "Client roster",
+      "tier": 0,
+      "skills": ["client-pulse"],
+      "commands": ["node _os/automation/bin/frontmatter-validate.js"],
+      "artifacts": ["Daily-Briefs/pulse-today.md", "Daily-Briefs/frontmatter-report.md"]
+    },
+    {
+      "id": "intelligence",
+      "label": "Intelligence",
+      "tier": 0,
+      "skills": ["research-sweep"],
+      "commands": [],
+      "artifacts": ["Daily-Briefs/radar-{date}.md", "12_Brain/06_Research/*"]
+    },
+    {
+      "id": "websites",
+      "label": "Site health",
+      "tier": 0,
+      "skills": [],
+      "commands": ["node _os/automation/bin/site-health.js --dry-run"],
+      "artifacts": ["Daily-Briefs/site-health-report.md"]
+    },
+    {
+      "id": "outreach",
+      "label": "Outreach queue",
+      "tier": 0,
+      "skills": ["site-grade"],
+      "commands": ["node _os/automation/bin/queue-status.js"],
+      "artifacts": ["12_Brain/queue/*.jsonl", "Daily-Briefs/radar-{date}.md"]
+    },
+    {
+      "id": "ads",
+      "label": "Paid media",
+      "tier": 0,
+      "skills": ["metrics-pull"],
+      "commands": [],
+      "blocked_without": ["google-ads-mcp", "meta-mcp", "ga4-mcp"],
+      "artifacts": []
+    },
+    {
+      "id": "reporting",
+      "label": "Client reporting",
+      "tier": 0,
+      "skills": ["client-report"],
+      "commands": [],
+      "blocked_without": ["google-ads-mcp"],
+      "artifacts": ["Daily-Briefs/reports/*.html"]
+    },
+    {
+      "id": "command",
+      "label": "Command synthesis",
+      "tier": 0,
+      "skills": ["am-report", "plan-today"],
+      "depends_on": ["comms", "clients", "intelligence", "websites", "outreach"],
+      "artifacts": [
+        "Daily-Briefs/am-report-{date}.md",
+        "Daily-Briefs/plan-{date}.md",
+        "automation-runs/dillon-command/{date}/approval-board.md"
+      ]
+    }
+  ],
+  "tie_break": [
+    "launch blocked",
+    "billing risk",
+    "ad disapprovals",
+    "calendar commitments"
+  ],
+  "operator_rules": [
+    "KJB emails CC mjfrederick334@gmail.com, sean@needmomentum.com, melissarobinn@gmail.com",
+    "Align HCM is full-time — never route under Momentum 360 client revenue",
+    "One push per cycle: approval board + AM report PR",
+    "Tier 2 (send/post/deploy/spend) stays gated — board only"
+  ]
+}

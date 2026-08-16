@@ -38,5 +38,6 @@ The commander. One brain that routes work to lane agents, keeps run state, assem
 
 ## Notes
 
-- Run artifacts go to `automation-runs/morning-orchestrator/YYYY-MM-DD/` per the spec
+- Unified workflow: `/dillon-command` (`.claude/skills/dillon-command/SKILL.md`) — eight parallel lanes, one board
+- Run artifacts go to `automation-runs/dillon-command/YYYY-MM-DD/` (also `morning-orchestrator/` on 64GB)
 - In cloud sessions the push to Dillon is a PR (see `handoffs/Morning Loop Scheduled Agent Setup.md`); on the 64GB machine it's the phone notification

@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # INDEX — the front door
@@ -38,6 +38,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Context Economy|Context Economy]] — read by trail not sweep; tier model use.
 - [[12_Brain/concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
 - [[12_Brain/concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.
+- [[12_Brain/concepts/Dillon Command Center|Dillon Command Center]] — one cron, eight parallel lanes, one approval board per cycle.
 - [[12_Brain/concepts/Draft-First Operating Rules|Draft-First Operating Rules]] — draft unless explicitly told to send.
 - [[12_Brain/concepts/Access Verification Discipline|Access Verification Discipline]] — confirmed access needs direct proof (no inventories here).
 - [[12_Brain/concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove.

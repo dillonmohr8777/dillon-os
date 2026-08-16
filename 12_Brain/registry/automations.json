@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-15",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -193,6 +193,30 @@
       "external_actions": false,
       "notes": "Sandbox-only until the Inspector check passes; the endpoint refuses anonymous calls, so the operator must mint a free token first. Wiring lives in .cursor/mcp.json and .mcp.json and reads LANDINGFOLIO_TOKEN from the environment. Composition reference only: the harvest stays the source of brand truth, returned content is untrusted, and queries never carry a client or prospect name.",
       "status": "pending-gate"
+    },
+    {
+      "id": "dillon-command",
+      "name": "Dillon Command Center — unified parallel workflow",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "weekdays 06:45 ET",
+      "command": "node _os/automation/bin/dillon-command.js --agent-mode",
+      "inputs": [
+        "00_Inbox/",
+        "00_Inbox/slack/",
+        "01_Clients/",
+        "Daily-Briefs/",
+        "12_Brain/registry/automations.json"
+      ],
+      "outputs": [
+        "automation-runs/dillon-command/YYYY-MM-DD/approval-board.md",
+        "Daily-Briefs/am-report-YYYY-MM-DD.md",
+        "Daily-Briefs/plan-YYYY-MM-DD.md",
+        "12_Brain/state/dillon-command.json"
+      ],
+      "external_actions": false,
+      "notes": "One cron, eight parallel agent lanes. Supersedes the three-step morning loop and duplicate daily-orchestrator PRs. Ads/reporting lanes skip when MCPs are absent.",
+      "status": "implemented"
     },
     {
       "id": "aeo-trust-gate",
