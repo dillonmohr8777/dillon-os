@@ -5,6 +5,88 @@
       "headers": {
         "Authorization": "Bearer ${env:LANDINGFOLIO_TOKEN}"
       }
+    },
+    "google-docs": {
+      "url": "https://docsmcp.googleapis.com/mcp/v1"
+    },
+    "google-sheets": {
+      "url": "https://sheetsmcp.googleapis.com/mcp/v1"
+    },
+    "google-slides": {
+      "url": "https://slidesmcp.googleapis.com/mcp/v1"
+    },
+    "google-bigquery": {
+      "url": "https://bigquery.googleapis.com/mcp"
+    },
+    "microsoft-advertising": {
+      "url": "https://partner.api.bingads.microsoft.com/ext/mcp/vnext?toolSetNames=OpenBeta"
+    },
+    "builtwith": {
+      "url": "https://api.builtwith.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:BUILTWITH_API_KEY}"
+      }
+    },
+    "birdeye": {
+      "url": "https://mcp.birdeye.com/mcp"
+    },
+    "cal-com": {
+      "url": "https://mcp.cal.com/mcp"
+    },
+    "intercom": {
+      "url": "https://mcp.intercom.com/mcp"
+    },
+    "klaviyo": {
+      "url": "https://mcp.klaviyo.com/mcp?read-only=true&disable-tools-with-user-generated-content=true&core-tools-only=true"
+    },
+    "parallel-search": {
+      "url": "https://search.parallel.ai/mcp"
+    },
+    "tavily": {
+      "url": "https://mcp.tavily.com/mcp/"
+    },
+    "apify": {
+      "url": "https://mcp.apify.com",
+      "headers": {
+        "Authorization": "Bearer ${env:APIFY_TOKEN}"
+      }
+    },
+    "mixpanel": {
+      "url": "https://mcp.mixpanel.com/mcp"
+    },
+    "amplitude": {
+      "url": "https://mcp.amplitude.com/mcp"
+    },
+    "resend": {
+      "url": "https://mcp.resend.com/mcp"
+    },
+    "supabase": {
+      "url": "https://mcp.supabase.com/mcp?read_only=true"
+    },
+    "airtable": {
+      "url": "https://mcp.airtable.com/mcp"
+    },
+    "twilio-docs": {
+      "url": "https://mcp.twilio.com/docs"
+    },
+    "microsoft-clarity": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@microsoft/clarity-mcp-server"
+      ],
+      "env": {
+        "CLARITY_API_TOKEN": "${env:CLARITY_API_TOKEN}"
+      }
+    },
+    "elevenlabs": {
+      "command": "uvx",
+      "args": [
+        "elevenlabs-mcp"
+      ],
+      "env": {
+        "ELEVENLABS_API_KEY": "${env:ELEVENLABS_API_KEY}"
+      }
     }
   }
 }

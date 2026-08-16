@@ -115,6 +115,20 @@ The same variable drives the committed wiring in `.cursor/mcp.json` and `.mcp.js
 Both are inert until the variable is set, and the design skills treat the tools as
 optional, so an unset variable degrades to harvest-only design rather than failing.
 
+### Blind-spot batch (2026-08-16)
+
+Candidates live in `_os/automation/fixtures/mcp/blind-spots/`. Replay:
+
+```powershell
+node _os/automation/fixtures/mcp/blind-spots/write-and-gate.js --gate
+```
+
+`--inspect` is only used on remotes whose anonymous `tools/list` already succeeded
+(Docs, Sheets, Slides, BigQuery, BuiltWith, Parallel Search, Twilio Docs). Auth-gated
+remotes stay **sandbox-only** with Inspector pending — do not pass `--inspect` or a
+failed probe becomes REJECT. Twilio Docs is the only ACCEPT. CallRail has no public
+URL and is not wired. Minting tokens and completing OAuth is Tier 2.
+
 ## Website deployment checks
 
 ```powershell

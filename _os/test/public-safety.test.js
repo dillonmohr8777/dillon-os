@@ -98,9 +98,22 @@ describe('12_Brain public-safety scanner', () => {
     // files would be published the moment the repo syncs.
     for (const rel of ['.cursor/mcp.json', '.mcp.json']) {
       const raw = fs.readFileSync(path.join(VAULT, rel), 'utf8');
-      const landingfolio = JSON.parse(raw).mcpServers.landingfolio;
+      const parsed = JSON.parse(raw);
+      const landingfolio = parsed.mcpServers.landingfolio;
       assert.equal(landingfolio.url, 'https://mcp.landingfolio.com/mcp');
       assert.match(landingfolio.headers.Authorization, /\$\{(env:)?LANDINGFOLIO_TOKEN\}/);
+      assert.ok(parsed.mcpServers['twilio-docs'], `${rel} missing twilio-docs`);
+      assert.equal(parsed.mcpServers['twilio-docs'].url, 'https://mcp.twilio.com/docs');
+      assert.equal(parsed.mcpServers.callrail, undefined, `${rel} must not invent a CallRail URL`);
+      for (const [name, server] of Object.entries(parsed.mcpServers)) {
+        if (server.headers && server.headers.Authorization) {
+          assert.match(
+            server.headers.Authorization,
+            /\$\{/,
+            `${rel} ${name} Authorization must interpolate from the environment`,
+          );
+        }
+      }
       assert.doesNotMatch(raw, /\blf_[A-Za-z0-9]/, `${rel} looks like it holds a real token`);
       assert.deepEqual(scanText(raw), [], `${rel} trips the public-safety scanner`);
     }

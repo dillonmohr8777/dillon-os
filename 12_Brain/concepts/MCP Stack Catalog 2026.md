@@ -15,7 +15,10 @@ Google Cloud's remotes table plus Workspace Docs/Sheets/Slides remotes are extra
 
 ## What you actually have
 
-Vault-declared in `.cursor/mcp.json` / `.mcp.json`: **one** server.
+Vault-declared in `.cursor/mcp.json` / `.mcp.json`: **LandingFolio** plus the
+[[12_Brain/concepts/MCP Blind Spots 2026|2026-08-16 blind-spot batch]]. Those extra
+servers are sandbox-only except Twilio Docs (ACCEPT, docs search only). Session-injected
+host MCPs are still not vault-owned.
 
 | Server | Status | Job |
 |---|---|---|
@@ -141,6 +144,7 @@ Do not add community GSC or GBP servers to close those official gaps.
 
 - Receipts: [[12_Brain/raw/research/2026-08-16 MCP Stack Catalog 50 Receipts]]
 - Slice: [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]]
+- Blind spots: [[12_Brain/concepts/MCP Blind Spots 2026|MCP Blind Spots 2026]]
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] · [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7 review]]
 - [[12_Brain/06_Research/References/2026-07-30 - Casepoint permission-aware MCP pattern|Casepoint permission-aware pattern]]
 - [[12_Brain/concepts/Draft-First Operating Rules|Draft-First]] · [[12_Brain/concepts/Truth Hierarchy|Truth Hierarchy]]
