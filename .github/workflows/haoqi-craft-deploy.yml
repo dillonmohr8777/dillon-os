@@ -1,17 +1,10 @@
 name: Deploy Haoqi radar craft
 
-# Temporary push trigger for cursor/haoqi-radar-craft-c387 so CI can use
-# secrets.NETLIFY_AUTH_TOKEN. Remove the push: block after this publish.
-# Manual only after that. Pins site haoqi-radar-craft. Never creates or
-# overwrites workshop, radar, IMMOHRTAL, or Philly hub sites.
+# Manual only once this file is on the branch. Pins site haoqi-radar-craft.
+# Never creates or overwrites workshop, radar, IMMOHRTAL, or Philly hub sites.
+# Uses secrets.NETLIFY_AUTH_TOKEN (value is not readable via API).
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - cursor/haoqi-radar-craft-c387
-    paths:
-      - 'haoqi-radar-sites/**'
-      - '_os/automation/bin/haoqi-craft-deploy.js'
 
 permissions:
   contents: read

@@ -1,7 +1,7 @@
 ---
 tags: [entity, system]
 source: "[[12_Brain/raw/2026-07-04 - obsidian-second-brain-article]]"
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Website Factory
@@ -20,6 +20,6 @@ deploy credentials.
 ## Links
 
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]]
-- [[12_Brain/concepts/Haoqi Design Language|Haoqi Design Language]] — craft skin used on `haoqi-radar-sites/` (not the profile template).
+- [[12_Brain/concepts/Haoqi Design Language|Haoqi Design Language]] — craft skin used on `haoqi-radar-sites/` (not the profile template). Live: https://haoqi-radar-craft.netlify.app/
 - [[12_Brain/research/High-Craft Front-End References|High-Craft Front-End References]]
 - [[12_Brain/entities/Momentum 360|Momentum 360]]

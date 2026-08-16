@@ -1,7 +1,7 @@
 ---
 tags: [campaign, website, radar]
 source: "[[12_Brain/raw/research/2026-08-15 - research - High-Craft Front-End References]]"
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Haoqi Craft Demos
@@ -9,6 +9,12 @@ updated: 2026-08-15
 **Summary:** two `noindex` prospect demos that apply the [[12_Brain/concepts/Haoqi Design Language|Haoqi Design Language]] to rebuild rows from [[Daily-Briefs/radar-2026-08-15|radar-2026-08-15]].
 
 Nothing here is outbound-ready. A human approves every send.
+
+Live on the pinned Netlify site `haoqi-radar-craft` (2026-08-16):
+
+- Hub: https://haoqi-radar-craft.netlify.app/
+- Jarman: https://haoqi-radar-craft.netlify.app/jarman-sales/
+- Andorra: https://haoqi-radar-craft.netlify.app/andorra-family-dentistry/
 
 ## Why these two
 
@@ -28,4 +34,4 @@ Workflow: `/site-grade` queue from the radar, then `/mirror-and-improve` harvest
 
 ## Hard rules still on
 
-Prospect demos stay `noindex`. Deploy is Tier 2. Generated imagery is never presented as their photography.
+Prospect demos stay `noindex`. Generated imagery is never presented as their photography. Republish only through `_os/automation/bin/haoqi-craft-deploy.js` onto `haoqi-radar-craft`.

@@ -108,6 +108,8 @@ describe('haoqi craft vault pages', () => {
     const index = read('12_Brain/INDEX.md');
     assert.match(index, /Haoqi Design Language/);
     assert.match(index, /High-Craft Front-End References/);
+    assert.match(index, /Haoqi Craft Demos/);
+    assert.match(index, /haoqi-radar-craft\.netlify\.app/);
   });
 
   it('compiled pages carry source and expires', () => {

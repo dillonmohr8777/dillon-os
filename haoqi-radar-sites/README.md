@@ -25,7 +25,13 @@ NETLIFY_AUTH_TOKEN=… node _os/automation/bin/haoqi-craft-deploy.js
 
 `--dry-run` prints the file list and publishes nothing. The script refuses workshop, radar, IMMOHRTAL, and Philly hub names.
 
-Live URL lands at `https://haoqi-radar-craft.netlify.app` after a successful publish.
+Live (2026-08-16):
+
+- Hub: https://haoqi-radar-craft.netlify.app/
+- Jarman: https://haoqi-radar-craft.netlify.app/jarman-sales/
+- Andorra: https://haoqi-radar-craft.netlify.app/andorra-family-dentistry/
+
+Site id `0004715a-65b4-4af5-8315-315e6a15814e`. Republish with the command above or the manual `Deploy Haoqi radar craft` workflow.
 
 ## Rules
 

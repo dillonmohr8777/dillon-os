@@ -1,7 +1,7 @@
 ---
 tags: [concept, design, front-end]
 source: "[[12_Brain/raw/research/2026-08-15 - research - High-Craft Front-End References]]"
-updated: 2026-08-15
+updated: 2026-08-16
 expires: 2026-11-15
 ---
 
@@ -34,7 +34,7 @@ Codrops rule worth keeping: one scroll source and one pointer UV for every effec
 
 [[12_Brain/entities/Website Factory|Website Factory]] ships the Philly profile template (10 sections, 27-37 KB, attitude skins). This language is a separate craft skin. Prospect demos that use it still keep `noindex`, harvested voice, and verifiable facts. They do not go through `build-site.js`.
 
-Shipped demos: `haoqi-radar-sites/jarman-sales/` and `haoqi-radar-sites/andorra-family-dentistry/`.
+Shipped demos: `haoqi-radar-sites/jarman-sales/` and `haoqi-radar-sites/andorra-family-dentistry/`. Live hub: https://haoqi-radar-craft.netlify.app/
 
 ## Links
 
