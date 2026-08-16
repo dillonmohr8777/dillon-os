@@ -2,6 +2,8 @@
 
 const { REBUILD_CEILING, POLISH_CEILING } = require('./scoring.ts');
 
+const { OFFER_LABELS, offerLabel } = require('./copy.ts');
+
 const OFFERS = [
   'rebuild',
   'seo_aeo',
@@ -85,4 +87,4 @@ function selectOffer(snapshot, { allowedOffers = OFFERS, minCoverage = 0.35 } = 
   return { offer: chosen.offer, route: chosen.offer, eligible, reasons };
 }
 
-module.exports = { OFFERS, selectOffer };
+module.exports = { OFFERS, OFFER_LABELS, offerLabel, selectOffer };

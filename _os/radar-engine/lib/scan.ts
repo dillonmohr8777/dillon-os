@@ -213,25 +213,25 @@ function evidenceFromAudit(audit, html, url, extra = {}) {
   return { items, aeo, contacts, text };
 }
 
-function scanFixture({ html, url, prospect = {}, places = null }) {
+function scanDocument({ html, url, prospect = {}, places = null, source = 'tier0', fixture = false, audit = null }) {
   assertSafeScanUrl(url);
-  const audit = analyzeHtmlDocument(html, url);
-  const social = [...html.matchAll(/https?:\/\/(?:www\.)?(facebook|instagram|linkedin|yelp)\.com\/[^\s"'<]+/gi)]
+  const resolvedAudit = audit || analyzeHtmlDocument(html, url);
+  const social = [...String(html || '').matchAll(/https?:\/\/(?:www\.)?(facebook|instagram|linkedin|yelp)\.com\/[^\s"'<]+/gi)]
     .map((m) => m[0]);
-  const { items, aeo, contacts } = evidenceFromAudit(audit, html, url, {
-    source: 'fixture',
+  const { items, aeo, contacts } = evidenceFromAudit(resolvedAudit, html, url, {
+    source,
     places,
     social,
   });
   return {
     scanner_version: SCANNER_VERSION,
-    fixture: true,
+    fixture,
     audit: {
-      ...audit,
-      hasCta: audit.hasCta === true || /contact|schedule|call now|get a quote/i.test(html),
-      hasPhone: audit.clickToCall === true || audit.phoneVisible === true,
-      hasForm: /<form[\s>]/i.test(html),
-      wordCount: visibleText(html).split(/\s+/).filter(Boolean).length,
+      ...resolvedAudit,
+      hasCta: resolvedAudit.hasCta === true || /contact|schedule|call now|get a quote/i.test(html || ''),
+      hasPhone: resolvedAudit.clickToCall === true || resolvedAudit.phoneVisible === true,
+      hasForm: /<form[\s>]/i.test(html || ''),
+      wordCount: visibleText(html || '').split(/\s+/).filter(Boolean).length,
     },
     evidence: items,
     aeo,
@@ -240,11 +240,34 @@ function scanFixture({ html, url, prospect = {}, places = null }) {
   };
 }
 
+function scanFixture({ html, url, prospect = {}, places = null }) {
+  return scanDocument({ html, url, prospect, places, source: 'fixture', fixture: true });
+}
+
+async function scanLive({ url, prospect = {}, places = null, fetchImpl = null }) {
+  assertSafeScanUrl(url);
+  const { fetchPage, analyzeTier0 } = require('../../automation/lib/site-audit');
+  const res = fetchImpl ? await fetchImpl(url) : await fetchPage(url);
+  const html = res.html || res.body || '';
+  const finalUrl = res.finalUrl || url;
+  return scanDocument({
+    html,
+    url: finalUrl,
+    prospect,
+    places,
+    source: 'live-tier0',
+    fixture: false,
+    audit: analyzeTier0(res, url),
+  });
+}
+
 module.exports = {
   SCANNER_VERSION,
   analyzeHtmlDocument,
   evidenceFromAudit,
+  scanDocument,
   scanFixture,
+  scanLive,
   publishedContacts,
   aeoSignals,
 };

@@ -1,18 +1,24 @@
 'use strict';
 
 const { id } = require('./ids.ts');
+const { offerLabel } = require('./copy.ts');
+const { collapse } = require('./normalize.ts');
 
 const SECTIONS = [
   'cover',
   'executive_summary',
   'opportunity_scorecard',
+  'intake_brief',
   'website_technical_seo',
   'search_architecture',
   'local_seo',
+  'brand_presence',
   'competitive_positioning',
   'conversion_trust',
   'paid_media',
   'content_aeo',
+  'content_strategy',
+  'lead_generation',
   'roadmap_90_day',
   'sources_limitations',
 ];
@@ -35,10 +41,14 @@ function finding(partial) {
   };
 }
 
-function buildManifest({ prospect, snapshot, evidence, offer, auditId, observedAt, config }) {
+function buildManifest({ prospect, snapshot, evidence, offer, auditId, observedAt, config, intake = null }) {
   const byClass = (c) => evidence.filter((e) => e.classification === c);
   const findings = [];
   const modules = new Set(['cover', 'executive_summary', 'opportunity_scorecard', 'sources_limitations']);
+  const services = collapse(intake?.primary_services || prospect.vertical || 'the services on the homepage');
+  const goals = collapse(intake?.growth_goals || '');
+  const channels = collapse(intake?.current_channels || '');
+  const label = offerLabel(offer);
 
   const tech = byClass('technical').concat(byClass('reachability'), byClass('performance'));
   if (tech.length) {
@@ -163,6 +173,91 @@ function buildManifest({ prospect, snapshot, evidence, offer, auditId, observedA
     }));
   }
 
+  const imagery = byClass('imagery')[0];
+  if (imagery) {
+    modules.add('brand_presence');
+    findings.push(finding({
+      section: 'brand_presence',
+      claim: `Homepage platform and logo signals were read from markup (${imagery.metric}). This is not a full brand system review.`,
+      type: 'observed',
+      evidence_ids: [imagery.id],
+      confidence: imagery.confidence,
+      severity: 'info',
+      why_it_matters: 'A visitor decides in seconds whether the site looks like a real local business.',
+      recommended_action: 'Use one first party logo, a clear service line, and photos of the actual work.',
+      allowed_wording: 'Brand signals on this audit come from homepage markup, not a separate brand workshop.',
+    }));
+  }
+
+  const onpageForComp = byClass('onpage')[0];
+  const convForComp = byClass('conversion')[0];
+  modules.add('competitive_positioning');
+  findings.push(finding({
+    section: 'competitive_positioning',
+    claim: 'No named competitor was measured in this run. Position is limited to whether the homepage states service, city, and a next step.',
+    type: 'validation_required',
+    evidence_ids: [onpageForComp, convForComp].filter(Boolean).map((e) => e.id),
+    confidence: 0.4,
+    severity: 'info',
+    why_it_matters: 'A local service page that omits city or a next step loses the comparison a buyer makes in a search tab.',
+    recommended_action: 'Name the service and city in the title, then put one clear next step above the fold.',
+    allowed_wording: 'This audit did not name or rank competitors.',
+  }));
+
+  const content = byClass('content')[0];
+  if (content || goals || services) {
+    modules.add('content_strategy');
+    findings.push(finding({
+      section: 'content_strategy',
+      claim: content
+        ? `Homepage copy length was measured (${content.metric}). A content plan can start from the services you submitted.`
+        : `A content plan can start from the services you submitted: ${services}.`,
+      type: content ? 'measured' : 'recommendation',
+      evidence_ids: content ? [content.id] : [],
+      confidence: content ? content.confidence : 0.5,
+      severity: 'medium',
+      why_it_matters: goals
+        ? `You asked for help with ${goals}. Pages that answer that request in plain language convert better than generic copy.`
+        : 'Thin or generic copy gives search and answer engines nothing local to quote.',
+      recommended_action: `Write one service page that names ${services} and the city, then add a short FAQ a buyer would actually ask.`,
+      allowed_wording: 'Content recommendations use homepage word count plus the services submitted on intake.',
+    }));
+  }
+
+  if (conv.length || goals) {
+    modules.add('lead_generation');
+    findings.push(finding({
+      section: 'lead_generation',
+      claim: conv.length
+        ? `Published contact routes were counted (${conv[0].metric}).`
+        : 'No published contact route was counted on the homepage.',
+      type: conv.length ? 'observed' : 'recommendation',
+      evidence_ids: conv.length ? conv.map((e) => e.id) : [],
+      confidence: 0.75,
+      severity: 'medium',
+      why_it_matters: goals
+        ? `A lead path has to match the goal you submitted: ${goals}.`
+        : 'Paid and organic traffic both leak when the next step is unclear.',
+      recommended_action: 'Keep one primary call to action, one form, and a click to call path on every page.',
+      allowed_wording: 'Lead generation notes use published contact routes, not private CRM or call data.',
+    }));
+  }
+
+  if (intake && (services || goals || channels)) {
+    modules.add('intake_brief');
+    findings.push(finding({
+      section: 'intake_brief',
+      claim: `Intake listed services as ${services || 'not stated'}${goals ? `, with a growth goal of ${goals}` : ''}${channels ? `, and current channels of ${channels}` : ''}.`,
+      type: 'observed',
+      evidence_ids: [],
+      confidence: 1,
+      severity: 'info',
+      why_it_matters: 'The report should answer the request you made, not a generic scorecard.',
+      recommended_action: 'Use the 90 day roadmap to attach each fix to that goal.',
+      allowed_wording: 'Intake answers are the services, goals, and channels you typed. They are not proof of spend or traffic.',
+    }));
+  }
+
   if (offer === 'paid' || snapshot.paid_opportunity >= 50) {
     modules.add('paid_media');
     findings.push(finding({
@@ -181,14 +276,16 @@ function buildManifest({ prospect, snapshot, evidence, offer, auditId, observedA
   modules.add('roadmap_90_day');
   findings.push(finding({
     section: 'roadmap_90_day',
-    claim: `Priority offer for this audit: ${offer || 'needs review'}.`,
+    claim: `Priority offer for this audit: ${label}.`,
     type: 'recommendation',
     evidence_ids: evidence.slice(0, 3).map((e) => e.id),
     confidence: snapshot.audit_confidence / 100,
     severity: 'info',
     why_it_matters: 'The selected offer is the highest eligible route, not the highest raw score.',
-    recommended_action: 'Complete the 90-day sequence in the report only where evidence exists.',
-    allowed_wording: `Recommended next service: ${offer || 'human review'}.`,
+    recommended_action: goals
+      ? `Days 1 to 30 fix proven site faults. Days 31 to 60 tighten service and city copy for ${services}. Days 61 to 90 point the main call to action at ${goals}.`
+      : 'Days 1 to 30 fix proven site faults. Days 31 to 60 tighten service and city copy. Days 61 to 90 put one clear next step on every page.',
+    allowed_wording: `Recommended next service: ${label}.`,
   }));
 
   findings.push(finding({
@@ -230,6 +327,13 @@ function buildManifest({ prospect, snapshot, evidence, offer, auditId, observedA
       priority_score: snapshot.priority_score,
     },
     selected_offer: offer,
+    selected_offer_label: label,
+    intake: intake ? {
+      primary_services: services,
+      growth_goals: goals,
+      current_channels: channels,
+      role: collapse(intake.role || ''),
+    } : null,
     modules: [...modules],
     findings,
     evidence: evidence.map((e) => ({
