@@ -136,11 +136,11 @@
       ctx.stroke();
     });
     return [
-      { img: heart, x: 0.72, y: 0.58, s: 0.11, vx: 0.00004, vy: -0.00003 },
-      { img: leaf, x: 0.12, y: 0.28, s: 0.09, vx: -0.00003, vy: 0.00004 },
-      { img: smile, x: 0.82, y: 0.22, s: 0.08, vx: 0.00002, vy: 0.00003 },
-      { img: head, x: 0.18, y: 0.62, s: 0.08, vx: -0.00002, vy: -0.00002 },
-      { img: zig, x: 0.58, y: 0.18, s: 0.1, vx: 0.00003, vy: -0.00004 },
+      { img: heart, x: 0.78, y: 0.16, s: 0.09, vx: 0.00003, vy: -0.00002 },
+      { img: leaf, x: 0.10, y: 0.20, s: 0.08, vx: -0.00002, vy: 0.00003 },
+      { img: smile, x: 0.84, y: 0.28, s: 0.07, vx: 0.00002, vy: 0.00002 },
+      { img: head, x: 0.22, y: 0.12, s: 0.07, vx: -0.00002, vy: -0.00002 },
+      { img: zig, x: 0.52, y: 0.10, s: 0.09, vx: 0.00003, vy: -0.00003 },
     ];
   }
 
@@ -155,10 +155,8 @@
     ctx.textBaseline = "middle";
     ctx.font = `700 ${size}px Pacifico, cursive`;
 
-    ctx.fillStyle = "rgba(255,50,90,0.32)";
-    ctx.fillText(word, -4, 3);
-    ctx.fillStyle = "rgba(40,90,255,0.32)";
-    ctx.fillText(word, 4, -2);
+    ctx.fillStyle = "rgba(255,255,255,0.55)";
+    ctx.fillText(word, 2, 3);
 
     const g = ctx.createLinearGradient(-size, -size * 0.4, size, size * 0.6);
     g.addColorStop(0, getComputedStyle(document.documentElement).getPropertyValue("--glass-a").trim() || "#7ec8ff");
@@ -320,6 +318,7 @@
     const ctx = stage.getContext("2d");
     let glDraw = null;
     try { glDraw = createGL(glCanvas, stage); } catch { glDraw = null; }
+    if (glDraw) stage.style.opacity = "0";
 
     const loop = (t) => {
       const dpr = Math.min(devicePixelRatio || 1, 2);
@@ -331,8 +330,8 @@
         if (!reduced()) {
           s.x += s.vx;
           s.y += s.vy;
-          if (s.x < 0.04 || s.x > 0.92) s.vx *= -1;
-          if (s.y < 0.08 || s.y > 0.78) s.vy *= -1;
+          if (s.x < 0.04 || s.x > 0.90) s.vx *= -1;
+          if (s.y < 0.06 || s.y > 0.34) s.vy *= -1;
         }
         const size = Math.min(innerWidth, innerHeight) * s.s;
         ctx.drawImage(s.img, s.x * innerWidth, s.y * innerHeight, size, size);

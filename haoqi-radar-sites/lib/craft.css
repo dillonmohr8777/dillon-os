@@ -88,7 +88,7 @@ body.js .reveal.visible {
   opacity: 0.85;
 }
 #stage { z-index: 2; }
-#gl { z-index: 3; }
+#gl { z-index: 3; mix-blend-mode: normal; }
 
 .load {
   position: fixed;
