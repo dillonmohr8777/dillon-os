@@ -1,11 +1,8 @@
 # Haoqi craft demos
 
-Two `noindex` prospect sites that apply the Haoqi.design language to rebuild rows from the 2026-08-15 Momentum prospect radar.
+27 `noindex` prospect sites that apply the Haoqi.design language to rebuild rows from the 2026-08-15 Momentum prospect radar.
 
-| Demo | Path | Their live site |
-|---|---|---|
-| Jarman Sales & Service | `jarman-sales/` | Harvested `https://jarmansalesandservice.com/` (radar host `jarmanairconditioning.com` was 404) |
-| Andorra Family Dentistry | `andorra-family-dentistry/` | `https://www.andorradental.com/` |
+Jarman and Andorra were the first two. The next 25 use the same template, with proof / process / area sections after offerings, and the business logo in the header when harvest found a clean mark.
 
 ## Run locally
 
@@ -13,7 +10,7 @@ Two `noindex` prospect sites that apply the Haoqi.design language to rebuild row
 python3 -m http.server 8080
 ```
 
-Then open `http://localhost:8080/haoqi-radar-sites/` or the site folders directly.
+Then open `http://localhost:8080/haoqi-radar-sites/`.
 
 ## Publish
 
@@ -23,18 +20,11 @@ Pinned Netlify site: `haoqi-radar-craft` only.
 NETLIFY_AUTH_TOKEN=… node _os/automation/bin/haoqi-craft-deploy.js
 ```
 
-`--dry-run` prints the file list and publishes nothing. The script refuses workshop, radar, IMMOHRTAL, and Philly hub names.
-
-Live (2026-08-16):
-
-- Hub: https://haoqi-radar-craft.netlify.app/
-- Jarman: https://haoqi-radar-craft.netlify.app/jarman-sales/
-- Andorra: https://haoqi-radar-craft.netlify.app/andorra-family-dentistry/
-
-Site id `0004715a-65b4-4af5-8315-315e6a15814e`. Republish with the command above or the manual `Deploy Haoqi radar craft` workflow.
+Live hub: https://haoqi-radar-craft.netlify.app/
 
 ## Rules
 
 - Demos stay `noindex`.
-- Andorra stills are generated atmosphere and labeled on the page.
-- Vault write-up: `12_Brain/concepts/Haoqi Design Language.md` and `02_Campaigns/AI Site Builder Outreach Engine/Haoqi Craft Demos.md`.
+- Their logo only. Background cut to alpha. No invented marks.
+- Photographs are theirs, or the slot is empty.
+- Vault write-up: `02_Campaigns/AI Site Builder Outreach Engine/Haoqi Craft Demos.md`.

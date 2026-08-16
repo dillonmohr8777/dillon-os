@@ -134,6 +134,19 @@ body.js .reveal.visible {
   color: var(--ink);
   line-height: 1;
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: min(46vw, 220px);
+}
+.mark.has-logo {
+  font-size: 0;
+}
+.mark img {
+  height: 44px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  background: transparent;
 }
 .sticker-slot {
   position: absolute;
@@ -288,20 +301,41 @@ section h2 {
 }
 
 .offer-grid,
-.exp-grid {
+.exp-grid,
+.proof-grid {
   display: grid;
   gap: 16px;
 }
 @media (min-width: 850px) {
   .offer-grid,
-  .exp-grid { grid-template-columns: repeat(3, 1fr); }
+  .exp-grid,
+  .proof-grid { grid-template-columns: repeat(3, 1fr); }
 }
 .offer-grid article,
-.exp-grid article {
+.exp-grid article,
+.proof-grid article {
   background: var(--panel);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(10, 10, 10, 0.12);
   padding: 16px;
+}
+.proof blockquote {
+  margin: 0;
+  font-size: 0.92rem;
+}
+.proof cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-style: normal;
+  opacity: 0.7;
+}
+.portrait-empty {
+  min-height: 42vh;
+  margin: 0;
+  background: color-mix(in srgb, var(--brand) 35%, var(--deep));
 }
 .offer-grid .idx {
   display: block;
