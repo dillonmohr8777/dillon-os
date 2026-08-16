@@ -8,7 +8,7 @@ source: "[[philly-sites/DESIGN-SYSTEM]] · Gmail sent 2026-08-05 (100 hubs) and 
 
 # Jesse Call Sheet QA Audit
 
-One-line summary: the **original Batch 1–4 hubs are design-QA ready**; the **238-row remount is not**. 71 remounts fail a design show (47 identical unfinished concepts + 24 flattened Batch 2 pages).
+One-line summary: the **original Batch 1–4 hubs are design-QA ready**; the **238-row remount is not**. The Drive sheet now lists the 100 designed originals first and the 138 later-batch rows after. 71 remounts still fail a design show (47 identical unfinished concepts + 24 flattened Batch 2 pages).
 
 Contact rows stay in the Drive sheet. This page names businesses and design verdicts only.
 
@@ -101,11 +101,25 @@ W31 remounts: Academy Chiropractic · Acupuncture Medical Practice · Bridesburg
 
 **Never show from the remount:** all 47 `radar_next15`, all 24 W31.
 
+## Sheet order (rewritten 2026-08-16)
+
+Drive sheet: [Momentum 360 call sheet](https://docs.google.com/spreadsheets/d/1U6qB7EWRL7DRXMK46W7-KLhDYoVXV4Q-9rpC14qMTlo)
+
+`JESSE CALL SHEET` now leads with the 100 designed originals, then the 138 later-batch rows. Contact rows stay in Drive.
+
+| Block | Sheet rows | n | Live Site |
+|---|---|---:|---|
+| SHOW | 1–100 | 100 | Original Batch 1–4 hubs. All 24 W31 names open the Batch 2 hub, not the thin remount. |
+| REVIEW | 101–191 | 91 | Remount. W33 / W34 / next20 / impeccable stay as-is. Cinematic + telegram include `?forcegl`. |
+| DO NOT SHOW | 192–238 | 47 | Remount `radar_next15`. Same unfinished hero. |
+
+This is a sheet fix, not a live rebuild. The 47 placeholder pages and the W34 taste flags still need a site-factory pass plus a Dillon-run deploy. Do not treat the new order as those 138 sites being design-QA.
+
 ## What I would do (design)
 
 1. **Tell Jesse which URL to open.** For Batches 1–4, use the original hub, not the 238 remount. For anything in W31, the remount is the worse page.
 2. **Hide `radar_next15` from any screenshare.** Fill real copy and a real hero, or delete the 47 rows. Do not ship three shared palettes and one sentence.
-3. **Restore W31 from Batch 2** (or change the sheet links back to the Batch 2 hub). Do not remount custom-arch sites onto `vt-thin` again.
+3. **W31 sheet links now open the Batch 2 hub.** Do not remount custom-arch sites onto `vt-thin` again. Live remount pages are still thin until a Dillon-run deploy restores them.
 4. **Keep cinematic / telegram.** They are the most designed pages in the later set. Open with `?forcegl`. Expect a shared "new world in motion" line on the 3D ten.
 5. **Taste-pass W34 before a screenshare.** Always Dental is complete; the hero is not a real operatory. Fix the run-together caption.
 6. **Do not treat `Passed | live verified` as design QA.** Live 200 plus 12 images still ships a generic hero. Design QA is: unique claim, unique palette, looks like that business, no "private concept" badge.
@@ -115,9 +129,9 @@ W31 remounts: Academy Chiropractic · Acupuncture Medical Practice · Bridesburg
 
 > Jesse — design correction on the 238-row sheet.
 >
-> The original Batch 1–4 hubs are the ones to show. Those look finished.
+> The sheet is now ordered: 100 designed originals first, then 138 later-batch rows.
 >
-> The sheet links a remount. For the old Batch 2 names (the W31 rows) that remount is a thinner template — name as the headline, half the copy. Open those from the Batch 2 hub instead.
+> The original Batch 1–4 hubs are the ones to show. Those look finished. W31 Live Site URLs now open the Batch 2 hub.
 >
 > Do not screenshare the 47 newest radar pages. They all use the same headline ("A clearer next step begins with the right question") and say details are pending. That is a concept shell, not 47 designs.
 >

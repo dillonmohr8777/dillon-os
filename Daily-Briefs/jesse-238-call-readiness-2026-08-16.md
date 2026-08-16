@@ -9,11 +9,12 @@ The question is design-showable, not call-ready. Full writeup: [[12_Brain/resear
 
 ## Do today
 
-1. Point Jesse at the **original Batch 1–4 hubs**, not the 238 remount, for anything from those 100.
-2. **Do not screenshare W31 remounts** (24 flattened Batch 2 pages). Use `philly-25-homepage-concepts-batch-2.netlify.app`.
+1. Work the Drive sheet from the top. Rows **1–100 are SHOW**. Rows **101–191 are REVIEW**. Rows **192–238 are DO NOT SHOW**.
+2. W31 Live Site URLs now open the Batch 2 hub. Do not screenshare those remounts.
 3. **Do not screenshare `radar_next15`** (47 pages, one hero, "private concept").
 4. Cinematic / telegram_3d: show with `?forcegl`. They are designed.
-5. Correction is drafted on the research page. **Do not send** unless Dillon says send.
+5. The 138 later-batch rows are ordered and stamped. They are **not** rebuilt live. Next15 still needs a site-factory pass plus a Dillon-run deploy.
+6. Correction is drafted on the research page. **Do not send** unless Dillon says send.
 
 ## Design show? (238 remount)
 

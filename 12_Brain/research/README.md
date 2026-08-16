@@ -13,7 +13,7 @@ Survivors compile into `12_Brain/concepts/` with `expires:` dates via
 ## Active research pages
 
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; Lanes A/C/D probed 2026-08-15 (expires 2026-11-15).
-- [[12_Brain/research/Jesse Call Sheet QA Audit|Jesse Call Sheet QA Audit]] — original B1–B4 hubs are design-QA ready; the 238 remount hides 71 unshowable pages (expires 2026-09-16).
+- [[12_Brain/research/Jesse Call Sheet QA Audit|Jesse Call Sheet QA Audit]] — sheet now lists 100 design-QA originals first, then 138 later-batch rows (expires 2026-09-16).
 
 See also Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
 
