@@ -147,8 +147,12 @@
   function drawHello(ctx, w, h, word, ptr, t) {
     const x = w * 0.54 + (ptr.x - 0.5) * 28;
     const y = h * 0.40 + (ptr.y - 0.5) * 16;
-    const size = Math.min(w, h) * 0.30;
+    const base = Math.min(w, h) * 0.30;
     ctx.save();
+    ctx.font = `700 ${base}px Pacifico, cursive`;
+    const slot = ctx.measureText("hello").width;
+    const own = Math.max(1, ctx.measureText(word).width);
+    const size = base * Math.min(1, slot / own);
     ctx.translate(x, y);
     ctx.rotate(-0.1 + Math.sin(t * 0.0004) * 0.02);
     ctx.textAlign = "center";

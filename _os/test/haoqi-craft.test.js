@@ -54,6 +54,12 @@ describe('haoqi-radar-sites', () => {
     });
   }
 
+  it('Andorra glass word is SMILE; Jarman stays hello', () => {
+    assert.match(read('haoqi-radar-sites/andorra-family-dentistry/index.html'), /word:\s*"SMILE"/);
+    assert.match(read('haoqi-radar-sites/jarman-sales/index.html'), /word:\s*"hello"/);
+    assert.match(read('haoqi-radar-sites/lib/craft.js'), /measureText\("hello"\)/);
+  });
+
   it('craft runtime has scramble, dither, and a WebGL refraction pass', () => {
     const js = read('haoqi-radar-sites/lib/craft.js');
     assert.match(js, /function scramble/);
