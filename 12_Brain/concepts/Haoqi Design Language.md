@@ -24,7 +24,7 @@ Compiled from the live [haoqi.design](https://haoqi.design/) mobile frame and Ha
 
 ## What CSS owns vs what a shader owns
 
-CSS / DOM: structure, type, grid, accessibility, the photo, CTAs.
+CSS / DOM: structure, type, grid, accessibility, the photo, CTAs. Copy lives in glass text boxes: IBM Plex Mono 500, cool layered shadows, inset highlight. Hover lifts with transform only.
 
 Canvas / WebGL: glass word, sticker field, chromatic refraction, sparkles, curl or bulge, fullscreen dot wipe.
 

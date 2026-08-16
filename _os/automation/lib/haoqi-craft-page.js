@@ -130,25 +130,25 @@ function render(page) {
   const ghostLabel = page.ghostLabel || 'Plan a visit';
 
   const offers = (page.offers || []).slice(0, 3).map((line, i) => `
-        <article class="reveal${i ? ` delay-${i}` : ''}">
+        <article class="text-box reveal${i ? ` delay-${i}` : ''}">
           <span class="idx">0${i + 1}</span>
           <p>${esc(line)}</p>
         </article>`).join('');
 
   const proofs = (page.proofs || []).slice(0, 3).map((item) => `
-        <article class="reveal">
+        <article class="text-box reveal">
           <blockquote>${esc(item.quote)}</blockquote>
           ${item.cite ? `<cite>${esc(item.cite)}</cite>` : ''}
         </article>`).join('');
 
   const steps = (page.steps || []).slice(0, 3).map((line, i) => `
-        <article class="reveal">
+        <article class="text-box reveal">
           <span class="idx">0${i + 1}</span>
           <p>${esc(line)}</p>
         </article>`).join('');
 
   const areas = (page.areas || []).slice(0, 3).map((line) => `
-        <article class="reveal"><p>${esc(line)}</p></article>`).join('');
+        <article class="text-box reveal"><p>${esc(line)}</p></article>`).join('');
 
   const storyImg = page.images.story
     ? `<figure class="reveal">
@@ -251,7 +251,9 @@ function render(page) {
     <section class="story" id="story">
       <div class="reveal">
         <h2>${esc(page.storyTitle)}</h2>
+        <div class="text-box">
         ${(page.story || []).map((p) => `<p>${esc(p)}</p>`).join('\n        ')}
+        </div>
       </div>
       ${storyImg}
     </section>
@@ -272,7 +274,7 @@ function render(page) {
     <section class="experience">
       <h2 class="reveal">${esc(page.expTitle)}</h2>
       <div class="exp-grid">
-        ${(page.experience || []).slice(0, 3).map((line) => `        <article class="reveal"><p>${esc(line)}</p></article>`).join('\n')}
+        ${(page.experience || []).slice(0, 3).map((line) => `        <article class="text-box reveal"><p>${esc(line)}</p></article>`).join('\n')}
       </div>
     </section>
 
@@ -291,7 +293,7 @@ function render(page) {
 
     <section class="contact-system" id="visit">
       <h2 class="reveal">${esc(page.visitTitle || 'Come in')}</h2>
-      <address class="reveal">
+      <address class="text-box reveal">
         ${addressHtml}
       </address>
       <div class="visit-links reveal">

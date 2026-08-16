@@ -72,6 +72,8 @@ describe('haoqi 25-pack guards', () => {
     assert.match(html, /class="process"/);
     assert.match(html, /class="area"/);
     assert.match(html, /word: "smile more"/);
+    assert.match(html, /class="text-box reveal"/);
+    assert.match(html, /<div class="text-box">/);
     assert.match(html, /has-logo/);
     assert.match(html, /assets\/logo\.png/);
     assert.match(html, /tel:\+12155550100/);
@@ -161,6 +163,7 @@ describe('haoqi shipped pages', () => {
       assert.match(html, /class="proof"/, slug);
       assert.match(html, /class="process"/, slug);
       assert.match(html, /class="area"/, slug);
+      assert.match(html, /class="text-box reveal"/, slug);
       assert.match(html, /HaoqiCraft\.mount/, slug);
       assert.match(html, /<main id="main">/, slug);
     }

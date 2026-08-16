@@ -14,7 +14,7 @@ Live on the pinned Netlify site `haoqi-radar-craft` (2026-08-16):
 
 - Hub: https://haoqi-radar-craft.netlify.app/
 
-The first two skins were Jarman (`stay cool`) and Andorra (`smile more`). The next 25 use the same template, plus proof / process / area sections so the page keeps the same arc. Their homepage logo sits in the mark when harvest found a clean one. Backgrounds are edge-flooded to alpha. Favicons and black boxes are not logos. Sites with no honest mark keep type.
+The first two skins were Jarman (`stay cool`) and Andorra (`smile more`). The next 25 use the same template, plus proof / process / area sections so the page keeps the same arc. Copy panels share one glass text-box: mono 500, inset highlight, cool layered shadow. Their homepage logo sits in the mark when harvest found a clean one. Backgrounds are edge-flooded to alpha. Favicons and black boxes are not logos. Sites with no honest mark keep type.
 
 The 25 are unused radar rows. None of them already lived in `haoqi-radar-sites/`, `philly-sites/`, or `01_Clients/`.
 

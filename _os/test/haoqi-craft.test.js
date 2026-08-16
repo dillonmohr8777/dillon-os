@@ -73,6 +73,21 @@ describe('haoqi-radar-sites', () => {
     assert.match(read('haoqi-radar-sites/lib/craft.css'), /\.word-slot/);
   });
 
+  it('shared craft.css owns glass text-box type and layered shadows', () => {
+    const css = read('haoqi-radar-sites/lib/craft.css');
+    assert.match(css, /--box-shadow:/);
+    assert.match(css, /--box-inset:/);
+    assert.match(css, /--box-type-shadow:/);
+    assert.match(css, /\.text-box/);
+    assert.match(css, /box-shadow:\s*var\(--box-inset\),\s*var\(--box-shadow\)/);
+    assert.match(css, /font-weight:\s*500/);
+    assert.doesNotMatch(css, /transition:[^;{]*box-shadow/);
+    for (const slug of SITES) {
+      const html = fs.readFileSync(path.join(ROOT, slug, 'index.html'), 'utf8');
+      assert.match(html, /href="\.\.\/lib\/craft\.css"/, slug);
+    }
+  });
+
   it('craft runtime has scramble, dither, and a WebGL refraction pass', () => {
     const js = read('haoqi-radar-sites/lib/craft.js');
     assert.match(js, /function scramble/);
