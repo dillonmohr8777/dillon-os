@@ -6,32 +6,20 @@ updated: 2026-08-16
 
 # Haoqi Craft Demos
 
-**Summary:** two `noindex` prospect demos that apply the [[12_Brain/concepts/Haoqi Design Language|Haoqi Design Language]] to rebuild rows from [[Daily-Briefs/radar-2026-08-15|radar-2026-08-15]].
+**Summary:** 27 `noindex` prospect demos that apply the [[12_Brain/concepts/Haoqi Design Language|Haoqi Design Language]] to rebuild rows from [[Daily-Briefs/radar-2026-08-15|radar-2026-08-15]].
 
 Nothing here is outbound-ready. A human approves every send.
 
 Live on the pinned Netlify site `haoqi-radar-craft` (2026-08-16):
 
 - Hub: https://haoqi-radar-craft.netlify.app/
-- Jarman: https://haoqi-radar-craft.netlify.app/jarman-sales/
-- Andorra: https://haoqi-radar-craft.netlify.app/andorra-family-dentistry/
 
-## Why these two
+The first two skins were Jarman (`stay cool`) and Andorra (`smile more`). The next 25 use the same template, plus proof / process / area sections so the page keeps the same arc. Their homepage logo sits in the mark when harvest found a clean one. Backgrounds are edge-flooded to alpha. Favicons and black boxes are not logos. Sites with no honest mark keep type.
 
-The 2026-08-15 radar listed 172 rebuilds. Dead domains were skipped. The first two harvestable rows were:
+The 25 are unused radar rows. None of them already lived in `haoqi-radar-sites/`, `philly-sites/`, or `01_Clients/`.
 
-| Radar row | Their live site | Demo |
-|---|---|---|
-| Jarman Sales & Service (hvac, opportunity 82) | Radar host `jarmanairconditioning.com` is IIS 404. Harvested `https://jarmansalesandservice.com/` | `haoqi-radar-sites/jarman-sales/` |
-| Andorra Family Dentistry (dentist, opportunity 78) | `https://www.andorradental.com/` | `haoqi-radar-sites/andorra-family-dentistry/` |
-
-Workflow: `/site-grade` queue from the radar, then `/mirror-and-improve` harvest, then a hand-built Haoqi skin instead of `build-site.js`. `/ui-design`, `/ux-audit`, `/motion-design`, and `/frontend-build` still apply (tokens from harvest, one primary action, scramble + glass as the signature motion, semantic `noindex` page).
-
-## Fact sources
-
-- Jarman: harvest.json from the GoDaddy site. Family-owned since 1951, Friedrich authorized dealer, window and wall units, 72 years in Philadelphia. Portrait uses their harvested truck photo. Extra AC still is generated atmosphere. Glass line is lowercase `stay cool`. Window and wall units stay a catalog skip; the HVAC trade now has an honest two-word hook.
-- Andorra: harvest.json from andorradental.com. Drs Shah, Emani, Bansal. Service list and membership line come from their homepage. Images are generated atmosphere (harvest returned zero photos) and are labeled on the page. Glass line is lowercase `smile more` in the same Pacifico cut as `hello`, parked in a reserved slot so it does not cover the headline.
+Skipped on purpose: `govertical.com` (now a South Carolina developer, not the Philly gym), parked or challenge-wall hosts, and any row already shipped.
 
 ## Hard rules still on
 
-Prospect demos stay `noindex`. Generated imagery is never presented as their photography. Republish only through `_os/automation/bin/haoqi-craft-deploy.js` onto `haoqi-radar-craft`.
+Prospect demos stay `noindex`. Generated imagery is never presented as their photography. A black box is not a logo. Republish only through `_os/automation/bin/haoqi-craft-deploy.js` onto `haoqi-radar-craft`.
