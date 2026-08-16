@@ -1,52 +1,59 @@
 'use strict';
 
 /**
- * One-word Haoqi craft hooks for radar prospects.
+ * Haoqi craft hooks: one or two lowercase Pacifico words.
  *
- * A craft word is the thing they do, written like `hello`: lowercase Pacifico,
- * 4–6 letters, sitting in the back. Service phrases ("window & wall units")
- * are not words. Trades without an honest hook are a skip.
+ * The line is the feeling after the visit, not a service list.
+ * "smile more" beats "smile". "stay cool" unlocks HVAC. "window & wall
+ * units" is still a skip because it is a catalog line.
  */
 
 const WORDS = {
-  smile: { quality: 100, why: 'the outcome in the chair' },
-  sight: { quality: 96, why: 'the outcome of the exam' },
-  climb: { quality: 95, why: 'what a climbing gym is' },
-  float: { quality: 95, why: 'what a float tank is' },
-  paws: { quality: 94, why: 'the patient in the room' },
-  ink: { quality: 94, why: 'what a tattoo shop puts down' },
-  bloom: { quality: 92, why: 'what a florist sells' },
-  glow: { quality: 92, why: 'the finish people come for' },
-  spark: { quality: 91, why: 'what an electrician is' },
-  shine: { quality: 90, why: 'what jewelry is for' },
-  brew: { quality: 90, why: 'what a cafe makes' },
-  sweet: { quality: 90, why: 'what a dessert shop is' },
-  move: { quality: 90, why: 'what PT restores' },
-  align: { quality: 90, why: 'what a chiro changes' },
-  style: { quality: 88, why: 'what a salon changes' },
-  ease: { quality: 88, why: 'what massage leaves' },
-  strong: { quality: 88, why: 'what a gym builds' },
-  flow: { quality: 88, why: 'water in the pipes' },
-  grow: { quality: 88, why: 'plants, lawns, gardens' },
-  ride: { quality: 88, why: 'bikes and motorcycles' },
-  snap: { quality: 88, why: 'what a photographer takes' },
-  pour: { quality: 87, why: 'what a taproom does' },
-  sip: { quality: 86, why: 'what a juice bar pours' },
-  taste: { quality: 86, why: 'the meal, not the menu' },
-  gloss: { quality: 86, why: 'a hard shine: nails or a wash' },
-  read: { quality: 86, why: 'what a bookstore is' },
-  soak: { quality: 84, why: 'pools and soak spas' },
-  heal: { quality: 84, why: 'what a clinic is for' },
-  step: { quality: 84, why: 'shoes and feet' },
-  play: { quality: 83, why: 'music or toys' },
-  drive: { quality: 80, why: 'what a car shop returns' },
-  home: { quality: 78, why: 'what a realtor sells' },
-  craft: { quality: 76, why: 'a trade that makes' },
+  'smile more': { quality: 100, why: 'the face they walk out with' },
+  'see more': { quality: 97, why: 'the exam is for more years of sight' },
+  'come home': { quality: 96, why: 'the pet leaves with them' },
+  'stay cool': { quality: 95, why: 'what an AC shop actually sells' },
+  'breathe easy': { quality: 94, why: 'year-round HVAC, not a season' },
+  'go up': { quality: 95, why: 'a climbing gym has one verb' },
+  'sink in': { quality: 94, why: 'a float tank is surrender' },
+  'glow up': { quality: 93, why: 'skin, spa, the after' },
+  'go hard': { quality: 92, why: 'a gym is effort, not equipment' },
+  'let go': { quality: 92, why: 'massage and slow rooms' },
+  'come hungry': { quality: 91, why: 'a restaurant is appetite' },
+  'first bite': { quality: 90, why: 'the moment the plate lands' },
+  'shine on': { quality: 90, why: 'jewelry is worn light' },
+  'ink on': { quality: 94, why: 'a tattoo stays' },
+  'in bloom': { quality: 92, why: 'what a florist is for' },
+  'fresh cut': { quality: 90, why: 'a salon changes the outline' },
+  'fresh set': { quality: 88, why: 'nails, done' },
+  'lights on': { quality: 91, why: 'an electrician ends the dark' },
+  'water on': { quality: 88, why: 'a plumber restores the tap' },
+  'dive in': { quality: 88, why: 'pools and soak shops' },
+  'grow wild': { quality: 90, why: 'lawns and gardens, not mulch SKUs' },
+  'drive home': { quality: 88, why: 'the car leaves running' },
+  'ride out': { quality: 90, why: 'bikes and motorcycles' },
+  'step out': { quality: 86, why: 'shoes and feet' },
+  'move again': { quality: 92, why: 'PT gives the body back' },
+  'line up': { quality: 90, why: 'chiro is alignment' },
+  'get well': { quality: 86, why: 'a clinic is recovery' },
+  'walk in': { quality: 84, why: 'a house becomes theirs' },
+  'sip slow': { quality: 88, why: 'cafe pace' },
+  'sip more': { quality: 87, why: 'juice, not a menu' },
+  'one scoop': { quality: 90, why: 'ice cream is a single yes' },
+  'pour up': { quality: 88, why: 'a taproom or still' },
+  'read on': { quality: 86, why: 'a bookstore is the next page' },
+  'stay warm': { quality: 90, why: 'heat, fireplaces, winter' },
+  'stay dry': { quality: 86, why: 'a roof is weather' },
+  'fresh coat': { quality: 84, why: 'paint as a new skin' },
+  'your side': { quality: 88, why: 'a lawyer is allegiance' },
+  'rest easy': { quality: 82, why: 'insurance as relief, not a policy' },
+  'look back': { quality: 86, why: 'a photograph holds the day' },
+  'breathe in': { quality: 88, why: 'yoga and slow practice' },
+  'clean ride': { quality: 84, why: 'a wash, not a part' },
+  'built in': { quality: 80, why: 'trades that make the room' },
 };
 
 const SKIP_VERTICAL = new Set([
-  'hvac',
-  'insurance',
   'accountant',
   'tax-advisor',
   'financial',
@@ -76,104 +83,133 @@ const SKIP_VERTICAL = new Set([
   'appliance',
   'truck',
   'houseware',
-  'lawyer',
 ]);
 
 function textOf(p) {
-  return `${p.business_name || ''} ${p.domain || ''} ${p.vertical || ''}`.toLowerCase();
+  return [
+    p.business_name || p.name || '',
+    p.domain || p.host || '',
+    p.vertical || '',
+    p.notes || '',
+  ].join(' ').toLowerCase();
+}
+
+function skip(why) {
+  return { word: null, quality: 0, why, skip: true };
 }
 
 function pickWord(p) {
   const t = textOf(p);
   const vertical = String(p.vertical || '');
 
-  if (/hvac|air.?cond|heating|cooling|furnace/.test(t)) {
-    return { word: null, quality: 0, why: 'no honest one-word hook for HVAC', skip: true };
-  }
   if (/research building|translational|\.edu\b/.test(t)) {
-    return { word: null, quality: 0, why: 'campus / research building, not a local craft hook', skip: true };
+    return skip('campus / research building, not a local craft hook');
   }
-  if (SKIP_VERTICAL.has(vertical) && !/dental|dentist|ortho|smile|vet|optical/.test(t)) {
-    return { word: null, quality: 0, why: `skip ${vertical}: no honest craft word`, skip: true };
+  if (/funeral/.test(t) || vertical === 'funeral-directors') {
+    return skip('funeral: no craft hook');
+  }
+  if ((/\btax\b/.test(t) && !/taxi/.test(t)) || /accountant|\bcpa\b/.test(t) || vertical === 'tax-advisor' || vertical === 'accountant') {
+    return skip('tax: no honest craft line');
+  }
+  if (/\b(managed it|it services|it shop)\b/.test(t) || vertical === 'it') {
+    return skip('it shop: no honest craft line');
+  }
+  if (/window and wall|window.?wall unit/.test(t) && !/hvac|air.?cond|heating|cooling/.test(t)) {
+    return skip('catalog line, not a craft hook');
+  }
+  if (SKIP_VERTICAL.has(vertical) && !/dental|dentist|orthodont|smile|vet|optical/.test(t)) {
+    return skip(`skip ${vertical}: no honest craft line`);
   }
 
-  if (/dental|dentist|orthodont|odont|smile|invisalign/.test(t)) return hit('smile');
-  if (/climb|bould/.test(t)) return hit('climb');
-  if (/float/.test(t)) return hit('float');
+  if (/dental|dentist|orthodont|odont|smile|invisalign/.test(t)) return hit('smile more');
+  if (/climb|bould/.test(t)) return hit('go up');
+  if (/float/.test(t)) return hit('sink in');
   if (/vet|animal hospital|pet clinic/.test(t) || vertical === 'veterinary' || vertical === 'pet') {
-    return hit('paws');
+    return hit('come home');
   }
-  if (/tattoo/.test(t)) return hit('ink');
+  if (/tattoo/.test(t)) return hit('ink on');
   if (/\b(eye|optical|vision|optom|optician)\b/.test(t) || vertical === 'optician' || vertical === 'optometrist') {
-    return hit('sight');
+    return hit('see more');
   }
-  if (/realtor|real estate|realty|estate-agent/.test(t) || vertical === 'estate-agent') return hit('home');
-  if (/juice/.test(t)) return hit('sip');
-  if (/nail/.test(t)) return hit('gloss');
-  if (/hair|salon|barber/.test(t) || vertical === 'hairdresser') return hit('style');
-  if (/spa|skin|esthetic|beauty|cosmetic/.test(t) || vertical === 'beauty' || vertical === 'cosmetics') {
-    return hit('glow');
-  }
-  if (/restaurant|bistro|diner|grill|hoagie|pizza|pub|deli|seafood|cater/.test(t) || vertical === 'restaurant' || vertical === 'pub' || vertical === 'bar' || vertical === 'deli' || vertical === 'seafood' || vertical === 'caterer') {
-    return hit('taste');
-  }
-  if (/chiro/.test(t)) return hit('align');
-  if (/physio|physical ther|\bpt\b/.test(t) || vertical === 'physiotherapist') return hit('move');
-  if (/florist|flower/.test(t) || vertical === 'florist') return hit('bloom');
-  if (/jewel/.test(t) || vertical === 'jewelry') return hit('shine');
-  if (/coffee|espresso/.test(t) || vertical === 'cafe') return hit('brew');
+  if (/realtor|real estate|realty|estate-agent/.test(t) || vertical === 'estate-agent') return hit('walk in');
+  if (/juice/.test(t)) return hit('sip more');
   if (/ice.?cream|gelato|bakery|pastry|donut|cake|confection/.test(t) || vertical === 'ice-cream' || vertical === 'bakery' || vertical === 'pastry' || vertical === 'confectionery') {
-    return hit('sweet');
+    return hit('one scoop');
   }
+  if (/\bnail/.test(t)) return hit('fresh set');
+  if (/\bhair\b|salon|barber/.test(t) || vertical === 'hairdresser') return hit('fresh cut');
+  if (/\bpool\b|hot tub/.test(t) || vertical === 'swimming-pool') return hit('dive in');
+  if (/\bspa\b|\bskin\b|esthetic|beauty|cosmetic/.test(t) || vertical === 'beauty' || vertical === 'cosmetics') {
+    return hit('glow up');
+  }
+  if (/hvac|air.?cond|cooling/.test(t) || vertical === 'hvac') {
+    const heat = /heat|furnace|boiler/.test(t);
+    const cool = /cool|\bac\b|air.?cond|\bair\b/.test(t);
+    if (heat && !cool) return hit('stay warm');
+    if (heat && cool) return hit('breathe easy');
+    return hit('stay cool');
+  }
+  if (/heating|furnace|boiler/.test(t) && !/cool|hvac|air.?cond/.test(t)) return hit('stay warm');
+  if (/restaurant|bistro|diner|grill|hoagie|pizza|pub|deli|seafood|cater/.test(t) || vertical === 'restaurant' || vertical === 'pub' || vertical === 'bar' || vertical === 'deli' || vertical === 'seafood' || vertical === 'caterer') {
+    return hit('come hungry');
+  }
+  if (/chiro/.test(t)) return hit('line up');
+  if (/physio|physical ther|\bpt\b/.test(t) || vertical === 'physiotherapist') return hit('move again');
+  if (/florist|flower/.test(t) || vertical === 'florist') return hit('in bloom');
+  if (/jewel/.test(t) || vertical === 'jewelry') return hit('shine on');
+  if (/coffee|espresso/.test(t) || vertical === 'cafe') return hit('sip slow');
   if (/wine|distill|taproom|brewery|alcohol/.test(t) || vertical === 'wine' || vertical === 'distillery' || vertical === 'alcohol') {
-    return hit('pour');
+    return hit('pour up');
   }
-  if (/photo/.test(t)) return hit('snap');
-  if (/yoga|pilates/.test(t)) return hit('flow');
-  if (/pool|soak/.test(t) || vertical === 'swimming-pool') return hit('soak');
-  if (/plumb/.test(t) || vertical === 'plumber') return hit('flow');
-  if (/electric/.test(t) || vertical === 'electrician') return hit('spark');
+  if (/photo/.test(t)) return hit('look back');
+  if (/yoga|pilates/.test(t)) return hit('breathe in');
+  if (/plumb/.test(t) || vertical === 'plumber') return hit('water on');
+  if (/electric/.test(t) || vertical === 'electrician') return hit('lights on');
   if (/landscap|garden|lawn|nursery|farm/.test(t) || vertical === 'garden-centre' || vertical === 'gardener' || vertical === 'farm') {
-    return hit('grow');
+    return hit('grow wild');
   }
-  if (/car.?wash/.test(t) || vertical === 'car-wash') return hit('gloss');
-  if (/massage|sauna/.test(t) || vertical === 'massage' || vertical === 'sauna') return hit('ease');
-  if (/gym|fitness|crossfit/.test(t) || vertical === 'fitness-centre') return hit('strong');
+  if (/car.?wash/.test(t) || vertical === 'car-wash') return hit('clean ride');
+  if (/massage|sauna/.test(t) || vertical === 'massage' || vertical === 'sauna') return hit('let go');
+  if (/gym|fitness|crossfit/.test(t) || vertical === 'fitness-centre') return hit('go hard');
   if (vertical === 'sports') {
-    return { word: null, quality: 0, why: 'sporting goods is inventory, not a craft word', skip: true };
+    return skip('sporting goods is inventory, not a craft line');
   }
-  if (/motorc|bicycle|bike/.test(t) || vertical === 'motorcycle' || vertical === 'bicycle') return hit('ride');
-  if (/shoe|podiat/.test(t) || vertical === 'shoes' || vertical === 'podiatrist') return hit('step');
-  if (/book/.test(t) || vertical === 'books') return hit('read');
-  if (/architect/.test(t) || vertical === 'architect') return hit('craft');
-  if (/mason|carpenter|joiner|builder|construction/.test(t) || vertical === 'builder' || vertical === 'carpenter' || vertical === 'joiner' || vertical === 'stonemason' || vertical === 'construction-company') {
-    return hit('craft');
+  if (/motorc|bicycle|bike/.test(t) || vertical === 'motorcycle' || vertical === 'bicycle') return hit('ride out');
+  if (/shoe|podiat/.test(t) || vertical === 'shoes' || vertical === 'podiatrist') return hit('step out');
+  if (/\bbook/.test(t) || vertical === 'books') return hit('read on');
+  if (/lawyer|attorney|\blegal\b/.test(t) || vertical === 'lawyer') return hit('your side');
+  if (/insurance/.test(t) || vertical === 'insurance') return hit('rest easy');
+  if (/\broof/.test(t) || vertical === 'roofer') return hit('stay dry');
+  if (vertical === 'painter' || vertical === 'paint') return hit('fresh coat');
+  if (vertical === 'fireplace') return hit('stay warm');
+  if (vertical === 'lighting') return hit('lights on');
+  if (/architect|mason|carpenter|joiner|builder|construction/.test(t) || vertical === 'architect' || vertical === 'builder' || vertical === 'carpenter' || vertical === 'joiner' || vertical === 'stonemason' || vertical === 'construction-company') {
+    return hit('built in');
   }
-  if (/doctor|clinic|hospital/.test(t) || vertical === 'doctor' || vertical === 'clinic') return hit('heal');
-  if (vertical === 'car' || vertical === 'car-repair') return hit('drive');
-  if (vertical === 'tyres') return { word: null, quality: 0, why: 'tires are a part, not a feeling', skip: true };
-  if (vertical === 'painter' || vertical === 'paint') return { word: null, quality: 0, why: 'paint is the material, not the hook', skip: true };
-  if (vertical === 'roofer') return { word: null, quality: 0, why: 'no honest one-word hook for roofing', skip: true };
-  if (vertical === 'fireplace') return hit('glow');
-  if (vertical === 'lighting') return hit('glow');
-  if (vertical === 'musical-instrument') return hit('play');
-  if (vertical === 'toys') return hit('play');
-  if (vertical === 'clothes') return { word: null, quality: 0, why: 'apparel has no single craft word', skip: true };
-  if (vertical === 'furniture' || vertical === 'antiques') {
-    return { word: null, quality: 0, why: 'furniture/antiques read as inventory, not a word', skip: true };
+  if (/doctor|clinic|hospital/.test(t) || vertical === 'doctor' || vertical === 'clinic') return hit('get well');
+  if (vertical === 'car' || vertical === 'car-repair') return hit('drive home');
+  if (vertical === 'tyres') return skip('tires are a part, not a feeling');
+  if (vertical === 'kitchen') return skip('kitchen remodel is a catalog line');
+  if (vertical === 'clothes' || vertical === 'furniture' || vertical === 'antiques') {
+    return skip('inventory retail, not a craft line');
   }
-  if (vertical === 'kitchen') return { word: null, quality: 0, why: 'kitchen remodel is a phrase', skip: true };
-  if (vertical === 'alternative') {
-    return { word: null, quality: 0, why: 'alt-wellness needs a harvested hook, not a default', skip: true };
+  if (vertical === 'alternative' || vertical === 'psychotherapist') {
+    return skip('needs a harvested hook, not a default');
   }
-  if (vertical === 'psychotherapist') return { word: null, quality: 0, why: 'therapy should not get a cute glass word', skip: true };
+  if (vertical === 'musical-instrument' || vertical === 'toys') return hit('read on');
 
-  return { word: null, quality: 0, why: 'no honest craft word', skip: true };
+  return skip('no honest craft line');
 }
 
 function hit(word) {
   const meta = WORDS[word];
+  if (!meta) throw new Error(`unknown craft line: ${word}`);
   return { word, quality: meta.quality, why: meta.why, skip: false };
+}
+
+function skipReason(p) {
+  const pick = pickWord(p);
+  return pick.skip ? pick.why : null;
 }
 
 function verdictBonus(verdict) {
@@ -186,8 +222,8 @@ function verdictBonus(verdict) {
 
 function scoreProspect(p) {
   const pick = pickWord(p);
-  const opp = Number(p.current?.opportunity) || 0;
-  const verdict = p.current?.verdict || 'enrich';
+  const opp = Number(p.current?.opportunity ?? p.opportunity) || 0;
+  const verdict = p.current?.verdict || p.verdict || 'enrich';
   if (pick.skip) {
     return { ...pick, score: 0, opportunity: opp, verdict };
   }
@@ -197,15 +233,34 @@ function scoreProspect(p) {
 
 function wordCap(word, perWord) {
   if (typeof perWord === 'number') {
-    if (word === 'smile') return Math.max(perWord, 18);
-    if (word === 'taste' || word === 'drive') return Math.min(perWord, 8);
+    if (word === 'smile more') return Math.max(perWord, 16);
+    if (word === 'come hungry') return Math.min(perWord, 8);
     return perWord;
   }
   return perWord[word] || perWord.default || 12;
 }
 
+function asProspectMap(list) {
+  if (!Array.isArray(list)) return list;
+  const map = {};
+  list.forEach((row, i) => {
+    const domain = row.domain || row.host || `row-${i}`;
+    map[domain] = {
+      business_name: row.name || row.business_name,
+      domain,
+      vertical: row.vertical || '',
+      notes: row.notes || '',
+      current: {
+        opportunity: row.opportunity ?? row.current?.opportunity ?? 0,
+        verdict: row.verdict || row.current?.verdict || 'rebuild',
+      },
+    };
+  });
+  return map;
+}
+
 function rankRadar(prospects, { limit = 100, perWord = 12, minQuality = 84 } = {}) {
-  const rows = Object.values(prospects).map((p) => {
+  const rows = Object.values(asProspectMap(prospects)).map((p) => {
     const scored = scoreProspect(p);
     return {
       name: p.business_name,
@@ -240,4 +295,17 @@ function rankRadar(prospects, { limit = 100, perWord = 12, minQuality = 84 } = {
   };
 }
 
-module.exports = { WORDS, SKIP_VERTICAL, pickWord, scoreProspect, rankRadar, verdictBonus };
+function topWords(list, limit = 100) {
+  return rankRadar(list, { limit, perWord: 40, minQuality: 80 }).top;
+}
+
+module.exports = {
+  WORDS,
+  SKIP_VERTICAL,
+  pickWord,
+  skipReason,
+  scoreProspect,
+  rankRadar,
+  topWords,
+  verdictBonus,
+};
