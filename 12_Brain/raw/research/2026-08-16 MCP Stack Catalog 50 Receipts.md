@@ -332,8 +332,9 @@ above. Additional first-party pages fetched 2026-08-16 after the first pass:
   Date: 2026-08-14 / accessed 2026-08-16. Official.
 
 - Claim: BrightLocal help names BrightLocal Anywhere URL
-  `https://mcp.brightlocal.com/mcp?api-key=YOUR_API_KEY`. Grow plan required
-  (Track/Manage must upgrade). Help article is ChatGPT connector setup.
+  `https://mcp.brightlocal.com/mcp` plus an API-key query parameter (param
+  name omitted here; public-safety). Grow plan required (Track/Manage must
+  upgrade). Help article is ChatGPT connector setup.
   Direct fetch of help.brightlocal.com hit Cloudflare bot challenge; URL and
   plan language from search snippets of official help.
   Source: https://help.brightlocal.com/hc/en-us/articles/31736426555666-How-do-I-connect-BrightLocal-Anywhere-to-ChatGPT
