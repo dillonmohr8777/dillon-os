@@ -101,6 +101,24 @@ test('Twilio Docs is ACCEPT; Sheets stays sandbox-only while writes are pending'
   assert.ok(sheetsResult.pending_tests.includes('permission_review'));
 });
 
+test('free need-list: Context7 and Firecrawl ACCEPT; Playwright and Netlify stay sandbox-only', () => {
+  const context7 = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/free-stack/context7.json'), 'utf8'));
+  const firecrawl = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/free-stack/firecrawl.json'), 'utf8'));
+  const playwright = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/free-stack/playwright.json'), 'utf8'));
+  const netlify = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/free-stack/netlify.json'), 'utf8'));
+  assert.equal(evaluateCandidate(context7).verdict, 'accept');
+  assert.equal(evaluateCandidate(firecrawl).verdict, 'accept');
+  assert.equal(firecrawl.secret_requirements.length, 0);
+  assert.ok(!firecrawl.tools.includes('firecrawl_interact'));
+  const playwrightResult = evaluateCandidate(playwright);
+  assert.equal(playwrightResult.verdict, 'sandbox-only');
+  assert.ok(playwrightResult.pending_tests.includes('permission_review'));
+  assert.ok(playwright.tools.includes('browser_run_code_unsafe'));
+  const netlifyResult = evaluateCandidate(netlify);
+  assert.equal(netlifyResult.verdict, 'sandbox-only');
+  assert.ok(netlifyResult.pending_tests.includes('inspector'));
+});
+
 test('MCP acceptance gate rejects critical broad permissions', () => {
   const candidate = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/context7-candidate.json'), 'utf8'));
   candidate.permissions = ['full access'];

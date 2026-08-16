@@ -30,21 +30,22 @@ for the two npm-based sites below.
 
 ### MCP servers
 
-`.cursor/mcp.json` and `.mcp.json` register **LandingFolio** plus the 2026-08-16
-blind-spot batch (Google Docs/Sheets/Slides/BigQuery, Microsoft Advertising,
-BuiltWith, Birdeye, Cal.com, Intercom, Klaviyo read-only, Parallel Search,
-Tavily, Apify, Mixpanel, Amplitude, Resend, Supabase read-only, Airtable,
-Twilio Docs, Microsoft Clarity, ElevenLabs). **CallRail is not wired** — no
-public URL. Tokens and OAuth grants live in the environment, never in Git.
+`.cursor/mcp.json` and `.mcp.json` register **LandingFolio**, the 2026-08-16
+blind-spot batch, and the free need-list / design helpers (Context7, Firecrawl
+keyless, Google Design, Playwright, Brandfetch, Netlify, official GA4
+`pipx run analytics-mcp`). **CallRail is not wired** — no public URL. Tokens
+and OAuth grants live in the environment, never in Git.
 
-Almost every new server is **sandbox-only** (pending Inspector and/or
-write-tool review). The only ACCEPT in this batch is **Twilio Docs**
-(`https://mcp.twilio.com/docs`) — public OpenAPI search, no SMS send. LandingFolio
-stays sandbox-only until `node _os/automation/bin/landingfolio-verify.js` runs
-with `LANDINGFOLIO_TOKEN`. Enable one server per job. Do not call send, spend,
-or mutate tools unless Dillon asks in the same turn. Any newer MCP still goes
-through `_os/automation/bin/mcp-gate.js` first. Catalog and reviews:
-`12_Brain/concepts/MCP Blind Spots 2026.md`.
+**ACCEPT (live tools/list, no secret):** Twilio Docs, Context7, Firecrawl
+keyless (`firecrawl_scrape` / `search` / `parse` only — do not add
+`FIRECRAWL_API_KEY`), Google Design. LandingFolio stays sandbox-only until
+`node _os/automation/bin/landingfolio-verify.js` runs with `LANDINGFOLIO_TOKEN`.
+Playwright, Brandfetch, Netlify, and GA4 are sandbox-only. Do not call
+`browser_run_code_unsafe`, Netlify deploy, or send/spend/mutate tools unless
+Dillon asks in the same turn. Enable one server per job. Any newer MCP still
+goes through `_os/automation/bin/mcp-gate.js` first. Catalogs:
+`12_Brain/concepts/MCP Stack Catalog 2026.md` and
+`12_Brain/concepts/Web Design MCP Catalog 2026.md`.
 
 ### Tests / lint
 

@@ -109,6 +109,46 @@
       "env": {
         "ELEVENLABS_API_KEY": "${ELEVENLABS_API_KEY}"
       }
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "firecrawl": {
+      "type": "http",
+      "url": "https://mcp.firecrawl.dev/v2/mcp"
+    },
+    "google-design": {
+      "type": "http",
+      "url": "https://design.googleapis.com/mcp"
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "brandfetch": {
+      "type": "http",
+      "url": "https://mcp.brandfetch.io/mcp"
+    },
+    "netlify": {
+      "type": "http",
+      "url": "https://netlify-mcp.netlify.app/mcp"
+    },
+    "google-analytics": {
+      "type": "stdio",
+      "command": "pipx",
+      "args": [
+        "run",
+        "analytics-mcp"
+      ],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "${GOOGLE_APPLICATION_CREDENTIALS}",
+        "GOOGLE_PROJECT_ID": "${GOOGLE_PROJECT_ID}"
+      }
     }
   }
 }
