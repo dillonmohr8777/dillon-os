@@ -8,6 +8,7 @@ const { validateNarrative } = require('./claims.ts');
 const { paraphraseAllowed } = require('./claims.ts');
 const { safePathJoin } = require('./ssrf.ts');
 const { token } = require('./ids.ts');
+const { offerLabel } = require('./copy.ts');
 
 function loadPlaywright() {
   try {
@@ -67,7 +68,7 @@ function sectionHtml(title, body) {
 }
 
 function scoreRow(label, value) {
-  const n = value == null ? '—' : String(value);
+  const n = value == null ? 'n/a' : String(value);
   return `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(n)}</td></tr>`;
 }
 
@@ -95,21 +96,43 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
   }
 
   const parts = [];
+  const offer = manifest.selected_offer_label || offerLabel(manifest.selected_offer);
+  const place = [p.city, p.state].filter(Boolean).join(', ');
   parts.push(`<header class="cover">
     ${lockup({ size: 36, subtitle: 'Private marketing audit' })}
     <p class="kicker">Confidential · ${escapeHtml(observed)}</p>
+    <p class="cover-product">SEO + MARKETING AUDIT</p>
+    <hr class="cover-rule">
     <h1>${escapeHtml(p.business_name)}</h1>
-    <p class="lede">${escapeHtml(p.website || '')} · ${escapeHtml([p.city, p.state].filter(Boolean).join(', '))}</p>
-    <p class="ids">Audit ${escapeHtml(manifest.audit_id)} · Score ${escapeHtml(manifest.score_version)}</p>
+    <p class="lede">Website SEO, brand audit, competitor analysis, content strategy and lead generation roadmap.</p>
+    <p class="ids">${escapeHtml(p.website || '')}${place ? ` · ${escapeHtml(place)}` : ''}</p>
   </header>`);
 
   if (mods.has('executive_summary')) {
-    const offer = manifest.selected_offer || 'needs review';
     const sqs = manifest.scores.site_quality_score;
+    const goal = manifest.intake?.growth_goals;
     parts.push(sectionHtml('Executive summary', `
-      <p>This audit measured the public homepage for ${escapeHtml(p.business_name)}. Site Quality Score is ${escapeHtml(sqs == null ? 'ungraded' : String(sqs))}. The highest eligible offer is <strong>${escapeHtml(offer)}</strong>, not simply the highest raw score.</p>
-      <p>Rebuild is only on the table when a hard fault is proven. Strong verified websites are not offered a redesign.</p>
+      <p>We reviewed the public homepage for ${escapeHtml(p.business_name)}. Site quality score is ${escapeHtml(sqs == null ? 'ungraded' : String(sqs))} out of 100. The first offer we can honestly make is <strong>${escapeHtml(offer)}</strong>, not simply the highest raw score.</p>
+      ${goal ? `<p>You asked for help with ${escapeHtml(goal)}. The roadmap below ties each fix to that request.</p>` : ''}
+      <p>A website rebuild is only offered when a hard fault is proven. A strong verified website is not offered a redesign.</p>
     `));
+  }
+
+  if (mods.has('intake_brief')) {
+    const intake = manifest.intake || {};
+    const rows = [
+      ['Services', intake.primary_services],
+      ['Growth goal', intake.growth_goals],
+      ['Current channels', intake.current_channels],
+    ].filter(([, v]) => v);
+    if (rows.length) {
+      parts.push(sectionHtml('What you told us', `
+        <table class="scores intake">
+          ${rows.map(([k, v]) => scoreRow(k, v)).join('')}
+        </table>
+        <p class="note">These answers came from the audit request. They are not proof of traffic, spend, or rankings.</p>
+      `));
+    }
   }
 
   if (mods.has('opportunity_scorecard')) {
@@ -118,10 +141,10 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
       <table class="scores">
         ${scoreRow('Site Quality Score', s.site_quality_score)}
         ${scoreRow('Opportunity Score', s.opportunity_score)}
-        ${scoreRow('Rebuild opportunity', s.rebuild_opportunity)}
-        ${scoreRow('SEO / AEO opportunity', s.seo_aeo_opportunity)}
-        ${scoreRow('Local opportunity', s.local_opportunity)}
-        ${scoreRow('Paid opportunity', s.paid_opportunity)}
+        ${scoreRow('Website rebuild opportunity', s.rebuild_opportunity)}
+        ${scoreRow('SEO and AI search opportunity', s.seo_aeo_opportunity)}
+        ${scoreRow('Local visibility opportunity', s.local_opportunity)}
+        ${scoreRow('Paid ads opportunity', s.paid_opportunity)}
         ${scoreRow('Conversion opportunity', s.conversion_opportunity)}
         ${scoreRow('Market fit', s.market_fit_score)}
         ${scoreRow('Contactability', s.contactability_score)}
@@ -136,10 +159,13 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
     ['website_technical_seo', 'Website and technical SEO'],
     ['search_architecture', 'Search architecture and on-page SEO'],
     ['local_seo', 'Local SEO and reputation'],
+    ['brand_presence', 'Brand presence'],
     ['competitive_positioning', 'Competitive positioning'],
     ['conversion_trust', 'Conversion and trust'],
-    ['paid_media', 'Paid-media opportunity'],
-    ['content_aeo', 'Content and AI / AEO readiness'],
+    ['paid_media', 'Paid ads opportunity'],
+    ['content_aeo', 'Content and AI search readiness'],
+    ['content_strategy', 'Content strategy'],
+    ['lead_generation', 'Lead generation'],
   ];
   for (const [key, title] of named) {
     if (!mods.has(key)) continue;
@@ -154,8 +180,8 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
       ${fs.map(findingHtml).join('')}
       <ol>
         <li>Fix proven hard faults or confirm the site is strong enough to keep.</li>
-        <li>Close the highest eligible offer: ${escapeHtml(manifest.selected_offer || 'review')}.</li>
-        <li>Only then consider paid media, and only if the site can hold the click.</li>
+        <li>Close the highest eligible offer: ${escapeHtml(offer)}.</li>
+        <li>Only then consider paid ads, and only if the site can hold the click.</li>
       </ol>
     `));
   }
@@ -184,8 +210,15 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); line-height: 1.5; }
     main { max-width: 860px; margin: 0 auto; padding: 32px 20px 80px; }
-    .cover { background: var(--panel); border: 1px solid var(--rule); padding: 28px; border-radius: 16px; }
+    .cover { background: #101823; color: #E7ECF2; padding: 36px 28px 32px; border-radius: 16px; }
+    .cover .lock__word { color: #E7ECF2; }
+    .cover .lock__sub { color: #FFC63B; }
+    .cover .kicker, .cover .ids { color: #A3B1C0; }
+    .cover-product { font-family: var(--display); font-size: clamp(28px, 5vw, 44px); letter-spacing: 0.04em; font-weight: 700; margin: 28px 0 0; }
+    .cover-rule { border: 0; height: 3px; width: 88px; background: #FFC63B; margin: 16px 0 20px; }
     h1 { font-family: var(--display); font-size: clamp(28px, 4vw, 42px); margin: 12px 0 8px; }
+    .cover h1 { color: #FFFFFF; margin-top: 0; }
+    .cover .lede { color: #C5D0DB; font-size: 16px; max-width: 34em; }
     h2 { font-family: var(--display); font-size: 22px; margin: 0 0 12px; }
     .kicker, .ids, .meta, .note, .contact { color: var(--fg-mid); font-size: 13px; }
     .mod { background: var(--panel); border: 1px solid var(--rule); border-radius: 16px; padding: 22px; margin-top: 18px; }
@@ -195,9 +228,10 @@ function renderReportHtml(manifest, { reportUrl, bookingUrl, config }) {
     table.scores { width: 100%; border-collapse: collapse; }
     table.scores th { text-align: left; padding: 6px 0; color: var(--fg-mid); font-weight: 550; }
     table.scores td { text-align: right; font-variant-numeric: tabular-nums; }
+    table.scores.intake td { text-align: left; }
     .cta { display: inline-block; background: var(--brand-fill); color: var(--on-brand); text-decoration: none; padding: 12px 18px; border-radius: 999px; font-weight: 650; }
     .src { font-size: 12px; color: var(--fg-mid); }
-    @media (max-width: 640px) { main { padding: 16px 12px 48px; } }
+    @media (max-width: 640px) { main { padding: 16px 12px 48px; } .cover { padding: 24px 18px; } }
   </style>
 </head>
 <body>

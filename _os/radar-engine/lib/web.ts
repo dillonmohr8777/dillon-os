@@ -6,9 +6,10 @@ const { cssVariables, lockup, LOCKUP_CSS } = require('../../automation/lib/brand
 const { escapeHtml } = require('./redact.ts');
 const { hmac } = require('./ids.ts');
 const { validateIntake } = require('./intake.ts');
-const { submitIntake, resolveProspect, funnelView, qaDecision } = require('./pipeline.ts');
+const { submitIntake, processSubmission, funnelView, qaDecision } = require('./pipeline.ts');
 const { loadConfig } = require('./config.ts');
 const { storageAdapter, reportAccessible } = require('./reports.ts');
+const { stageLabel, offerLabel } = require('./copy.ts');
 
 function layout(title, body, { noindex = true } = {}) {
   return `<!doctype html>
@@ -29,6 +30,8 @@ function layout(title, body, { noindex = true } = {}) {
     input, select, textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--rule-strong); border-radius: 10px; font: inherit; }
     button, .btn { background: var(--brand-fill); color: var(--on-brand); border: 0; padding: 12px 18px; border-radius: 999px; font-weight: 650; cursor: pointer; text-decoration: none; display: inline-block; }
     .err { color: var(--s-broken); }
+    .kicker { color: var(--fg-mid); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 8px; }
+    h2 { font-size: 16px; margin: 22px 0 0; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; }
     th, td { text-align: left; padding: 8px 4px; border-bottom: 1px solid var(--rule); }
     .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -42,15 +45,23 @@ function intakeForm(cfg, errors = [], values = {}) {
   const err = errors.length ? `<p class="err">${errors.map(escapeHtml).join('<br>')}</p>` : '';
   const v = (k) => escapeHtml(values[k] || '');
   return layout('Request a marketing audit', `
-    ${lockup({ subtitle: 'Free public-presence audit' })}
+    ${lockup({ subtitle: 'Free public presence audit' })}
     <div class="card">
-      <h1>Request a marketing audit</h1>
-      <p>We will analyze the public website and listing signals you submit. Required consent covers this report only, not recurring marketing.</p>
+      <p class="kicker">Free SEO, AI, and marketing audit</p>
+      <h1>Get a NeedMomentum audit of your public presence</h1>
+      <p>Enter the site and a few facts. We measure the public homepage, then a human checks the evidence before anyone gets a report link. Required consent covers this report only, not recurring marketing.</p>
       ${err}
       <form method="post" action="/intake">
+        <h2>The business</h2>
         <label>Business name</label><input name="business_name" required value="${v('business_name')}">
-        <label>Website</label><input name="website" required value="${v('website')}">
+        <label>Website</label><input name="website" required value="${v('website')}" placeholder="https://">
         <label>City / state or service area</label><input name="city_state" required value="${v('city_state')}">
+        <label>Primary services</label><input name="primary_services" required value="${v('primary_services')}">
+        <h2>What you want</h2>
+        <label>Main growth goals</label><textarea name="growth_goals" required>${v('growth_goals')}</textarea>
+        <label>Current marketing channels</label><input name="current_channels" required value="${v('current_channels')}">
+        <label>Notes (optional)</label><textarea name="notes">${v('notes')}</textarea>
+        <h2>How we reach you</h2>
         <div class="row">
           <div><label>Your name</label><input name="requester_name" required value="${v('requester_name')}"></div>
           <div><label>Role</label>
@@ -64,10 +75,6 @@ function intakeForm(cfg, errors = [], values = {}) {
           <div><label>Business email</label><input name="requester_email" type="email" required value="${v('requester_email')}"></div>
           <div><label>Phone (optional)</label><input name="requester_phone" value="${v('requester_phone')}"></div>
         </div>
-        <label>Primary services</label><input name="primary_services" required value="${v('primary_services')}">
-        <label>Main growth goals</label><textarea name="growth_goals" required>${v('growth_goals')}</textarea>
-        <label>Current marketing channels</label><input name="current_channels" required value="${v('current_channels')}">
-        <label>Notes (optional)</label><textarea name="notes">${v('notes')}</textarea>
         <p><label><input type="checkbox" name="consent_analyze" ${values.consent_analyze ? 'checked' : ''}> I consent to analysis of this business's public website and listings, and to delivery of the requested report.</label></p>
         <p><label><input type="checkbox" name="consent_marketing"> Optional: you may follow up with marketing. Leave unchecked if you only want the report.</label></p>
         <p><a href="${escapeHtml(cfg.privacyUrl)}">Privacy</a> · <a href="${escapeHtml(cfg.termsUrl)}">Terms</a></p>
@@ -75,6 +82,29 @@ function intakeForm(cfg, errors = [], values = {}) {
       </form>
     </div>
   `);
+}
+
+function statusPage(sub, prospect, report, cfg) {
+  const life = prospect ? prospect.lifecycle : 'discovered';
+  const reportReady = report && life === 'report_approved';
+  const inReview = life === 'qa_pending' || life === 'report_draft';
+  let next = 'We received the request and will scan the public site.';
+  if (life === 'suppressed') next = 'We cannot run this audit on the submitted site.';
+  else if (life === 'failed_retryable' || life === 'failed_terminal') next = 'The scan failed. A teammate can retry it.';
+  else if (inReview) next = 'A teammate is checking the evidence. The report link stays private until that check.';
+  else if (reportReady) next = 'The report is ready. Open it below.';
+  else if (life === 'scan_pending' || life === 'scanning') next = 'We are measuring the public homepage now.';
+  return layout('Audit status', `
+    <div class="card">
+      <h1>Request received</h1>
+      <p>We will analyze the public presence of ${escapeHtml(sub.business_name)}.</p>
+      <p>Status: ${escapeHtml(stageLabel(life))}</p>
+      <p>${escapeHtml(next)}</p>
+      <p>Marketing follow-up consent: ${sub.consent_marketing ? 'yes' : 'no (report only)'}</p>
+      ${reportReady ? `<p><a class="btn" href="/r/${escapeHtml(report.access_token)}">Open your NeedMomentum audit</a></p>` : ''}
+      ${inReview ? `<p>Refresh this page after review. Nothing is emailed until a human approves the report.</p>` : ''}
+      <p><a href="${escapeHtml(cfg.contactUrl)}">${escapeHtml(cfg.contactName)}</a></p>
+    </div>`);
 }
 
 function pct(n) {
@@ -99,7 +129,7 @@ function scoreTable(snap) {
   const why = (snap.explanations || []).map((e) => `<li><strong>${escapeHtml(e.score)}</strong>: ${escapeHtml(e.because)}</li>`).join('');
   return `
     <table>
-      ${rows.map(([k, v]) => `<tr><th>${escapeHtml(k)}</th><td>${escapeHtml(v == null ? '—' : String(v))}</td></tr>`).join('')}
+      ${rows.map(([k, v]) => `<tr><th>${escapeHtml(k)}</th><td>${escapeHtml(v == null ? 'n/a' : String(v))}</td></tr>`).join('')}
     </table>
     <ul>${why}</ul>`;
 }
@@ -129,7 +159,7 @@ function funnelPage(view) {
       <table>
         ${['campaign', 'vertical', 'geography', 'offer'].map((key) => {
           const inner = Object.entries(segs[key] || {}).map(([k, v]) => `${escapeHtml(k)}: ${escapeHtml(String(v))}`).join(', ');
-          return `<tr><th>${escapeHtml(key)}</th><td>${inner || '—'}</td></tr>`;
+          return `<tr><th>${escapeHtml(key)}</th><td>${inner || 'n/a'}</td></tr>`;
         }).join('')}
       </table>
       <p class="note">QA unsupported-claim rejection rate: ${pct(view.unsupported_claim_rejection_rate)} · false-route corrections: ${escapeHtml(String(view.false_route_corrections || 0))}</p>
@@ -166,11 +196,11 @@ function createServer({ store, adapters, campaign, cfg }) {
       }
       if (req.method === 'GET' && url.pathname === '/privacy') {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
-        return res.end(layout('Privacy', `<div class="card"><h1>Privacy</h1><p>Placeholder. Public-presence analysis is used to produce the requested report. Marketing follow-up is optional and off by default.</p></div>`));
+        return res.end(layout('Privacy', `<div class="card"><h1>Privacy</h1><p>NeedMomentum uses the website and listing facts you submit to produce a public presence audit. Analyze consent covers this report only. Marketing follow up is optional and off unless you check that box. Report links expire and can be revoked. We do not sell intake data.</p></div>`));
       }
       if (req.method === 'GET' && url.pathname === '/terms') {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
-        return res.end(layout('Terms', `<div class="card"><h1>Terms</h1><p>Placeholder. This is a public-presence audit, not a ranking or spend guarantee.</p></div>`));
+        return res.end(layout('Terms', `<div class="card"><h1>Terms</h1><p>This audit measures public pages and listings. It is not a ranking promise, traffic promise, or spend promise. A website rebuild is offered only when a site fault is proven.</p></div>`));
       }
       if (req.method === 'POST' && url.pathname === '/intake') {
         const chunks = [];
@@ -182,6 +212,7 @@ function createServer({ store, adapters, campaign, cfg }) {
           res.writeHead(400, { 'content-type': 'text/html; charset=utf-8' });
           return res.end(intakeForm(config, result.errors, body));
         }
+        await processSubmission(store, adapters, config, campaign, result.submission);
         res.writeHead(303, { location: `/status/${result.submission.status_token}` });
         return res.end();
       }
@@ -192,14 +223,9 @@ function createServer({ store, adapters, campaign, cfg }) {
           res.writeHead(404); return res.end('not found');
         }
         const prospect = sub.prospect_id ? store.get('prospects', sub.prospect_id) : null;
+        const report = prospect ? store.findOne('reports', (r) => r.prospect_id === prospect.id) : null;
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
-        return res.end(layout('Audit status', `
-          <div class="card">
-            <h1>Request received</h1>
-            <p>We will analyze the public presence of ${escapeHtml(sub.business_name)}.</p>
-            <p>Status: ${escapeHtml(prospect ? prospect.lifecycle : 'received')}</p>
-            <p>Marketing follow-up consent: ${sub.consent_marketing ? 'yes' : 'no (report only)'}</p>
-          </div>`));
+        return res.end(statusPage(sub, prospect, report, config));
       }
       if (req.method === 'GET' && url.pathname.startsWith('/r/')) {
         const tok = url.pathname.slice('/r/'.length);
@@ -247,9 +273,11 @@ function createServer({ store, adapters, campaign, cfg }) {
           return res.end(layout('QA review', `
             <div class="card">
               <h1>${escapeHtml(p.business_name)}</h1>
-              <p>Lifecycle ${escapeHtml(p.lifecycle)} · offer ${escapeHtml(p.selected_offer || '')} · suppression ${escapeHtml(p.suppression_reason || 'none')}</p>
+              <p>Lifecycle ${escapeHtml(stageLabel(p.lifecycle))} · offer ${escapeHtml(offerLabel(p.selected_offer))} · suppression ${escapeHtml(p.suppression_reason || 'none')}</p>
               ${scoreTable(snap)}
               <p><a class="btn" href="/r/${report ? report.access_token : ''}">Open report</a></p>
+              <h2>Report checks</h2>
+              <p>${version && version.check_results ? escapeHtml(version.check_results.ok ? 'passed' : `failed: ${(version.check_results.fails || []).join('; ')}`) : 'n/a'}</p>
               <h2>Findings / evidence</h2>
               ${findings.map((f) => `<p><strong>${escapeHtml(f.claim)}</strong><br>${escapeHtml((f.evidence_ids || []).join(', '))}</p>`).join('')}
               <h2>Evidence</h2>
@@ -299,4 +327,4 @@ function createServer({ store, adapters, campaign, cfg }) {
   return server;
 }
 
-module.exports = { createServer, intakeForm, layout, funnelPage, scoreTable };
+module.exports = { createServer, intakeForm, layout, funnelPage, scoreTable, statusPage };
