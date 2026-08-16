@@ -9,17 +9,24 @@ const path = require('node:path');
 
 const VAULT = path.resolve(__dirname, '..', '..');
 const ROOT = path.join(VAULT, 'haoqi-radar-sites');
-const SITES = ['jarman-sales', 'andorra-family-dentistry'];
+const SITES = fs
+  .readdirSync(ROOT, { withFileTypes: true })
+  .filter((e) => e.isDirectory() && e.name !== 'lib')
+  .map((e) => e.name)
+  .sort();
 
 function read(rel) {
   return fs.readFileSync(path.join(VAULT, rel), 'utf8');
 }
 
 describe('haoqi-radar-sites', () => {
-  it('ships a hub and two prospect folders', () => {
+  it('ships a hub and 27 prospect folders', () => {
     assert.equal(fs.existsSync(path.join(ROOT, 'index.html')), true);
     assert.equal(fs.existsSync(path.join(ROOT, 'lib/craft.js')), true);
     assert.equal(fs.existsSync(path.join(ROOT, 'lib/craft.css')), true);
+    assert.equal(SITES.length, 27);
+    assert.ok(SITES.includes('jarman-sales'));
+    assert.ok(SITES.includes('andorra-family-dentistry'));
     for (const slug of SITES) {
       assert.equal(fs.existsSync(path.join(ROOT, slug, 'index.html')), true);
     }
@@ -37,11 +44,11 @@ describe('haoqi-radar-sites', () => {
       assert.match(html, /class="contact-system"/);
       assert.match(html, /class="closing"/);
       assert.match(html, /HaoqiCraft\.mount/);
-      assert.match(html, /tel:\+1/);
       const jsonLd = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
       assert.ok(jsonLd, 'JSON-LD block');
       const data = JSON.parse(jsonLd[1]);
       assert.ok(data.name);
+      if (data.telephone) assert.match(html, /tel:\+1/);
       const imgs = [...html.matchAll(/src="assets\/([^"]+)"/g)].map((m) => m[1]);
       for (const file of new Set(imgs)) {
         assert.equal(
@@ -50,7 +57,7 @@ describe('haoqi-radar-sites', () => {
           `missing ${slug}/assets/${file}`,
         );
       }
-      assert.match(html, /alt="[^"]+"/);
+      if (imgs.length) assert.match(html, /alt="[^"]+"/);
     });
   }
 
