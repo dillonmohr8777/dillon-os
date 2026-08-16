@@ -1,9 +1,17 @@
 name: Deploy Haoqi radar craft
 
-# Manual only. Pins site haoqi-radar-craft. Never creates or overwrites
-# workshop, radar, IMMOHRTAL, or Philly hub sites.
+# Temporary push trigger for cursor/haoqi-radar-craft-c387 so CI can republish
+# the two-word glass lines. Remove the push: block after this publish.
+# Pins site haoqi-radar-craft. Never creates or overwrites workshop, radar,
+# IMMOHRTAL, or Philly hub sites.
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - cursor/haoqi-radar-craft-c387
+    paths:
+      - 'haoqi-radar-sites/**'
+      - '_os/automation/bin/haoqi-craft-deploy.js'
 
 permissions:
   contents: read
