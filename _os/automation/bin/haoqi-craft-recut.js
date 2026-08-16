@@ -32,6 +32,10 @@ const SCHEMA_TO_VERTICAL = {
   IceCreamShop: 'ice-cream',
   RealEstateAgent: 'estate-agent',
   Physician: 'physiotherapist',
+  CafeOrCoffeeShop: 'cafe',
+  Florist: 'florist',
+  AutoWash: 'car-wash',
+  Optician: 'optician',
 };
 
 function slugs() {
@@ -95,7 +99,7 @@ function buildPage(slug, parsed, over) {
   const titles = titlesFor(over.word || parsed.word, parsed.vertical);
   const name = over.name || parsed.name;
   const word = over.word || parsed.word;
-  const phone = over.phone || parsed.phone;
+  const phone = Object.prototype.hasOwnProperty.call(over, 'phone') ? over.phone : parsed.phone;
   const city = over.city || parsed.city;
   const logo = existingLogo(slug, over);
   const images = {

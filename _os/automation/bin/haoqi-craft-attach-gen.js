@@ -13,6 +13,7 @@ const { repoPath } = require('../lib/fsutil');
 
 const ROOT = repoPath('haoqi-radar-sites');
 const GEN = '/opt/cursor/artifacts/assets';
+const { KEEP3 } = require('./haoqi-craft-attach-gen-3');
 
 const KEEP = [
   'colmar-dentistry-for-kids',
@@ -150,7 +151,7 @@ function dropExtras() {
   const dropped = [];
   for (const ent of fs.readdirSync(ROOT, { withFileTypes: true })) {
     if (!ent.isDirectory() || ent.name === 'lib') continue;
-    if (ORIG.has(ent.name) || KEEP.includes(ent.name)) continue;
+    if (ORIG.has(ent.name) || KEEP.includes(ent.name) || KEEP3.includes(ent.name)) continue;
     fs.rmSync(path.join(ROOT, ent.name), { recursive: true, force: true });
     dropped.push(ent.name);
   }

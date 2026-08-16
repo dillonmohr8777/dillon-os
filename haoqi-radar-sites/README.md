@@ -1,8 +1,8 @@
 # Haoqi craft demos
 
-52 `noindex` prospect sites that apply the Haoqi.design language to rebuild rows from the 2026-08-15 Momentum prospect radar.
+77 `noindex` prospect sites that apply the Haoqi.design language to rebuild rows from the 2026-08-15 Momentum prospect radar.
 
-Jarman and Andorra were the first two. Two unused 25-packs follow the same template. Exact logos sit in the mark when the homepage had one. Empty photo slots get generated atmosphere, labeled as generated. When a keeper has a real mark, that same logo is stamped on the generated portrait.
+Jarman and Andorra were the first two. Three unused 25-packs follow the same template. Exact logos sit in the mark when the homepage had one. Empty photo slots get generated atmosphere, labeled as generated. When a keeper has a real mark, that same logo is stamped on the generated portrait.
 
 ## Run locally
 

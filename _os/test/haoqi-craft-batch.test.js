@@ -9,7 +9,9 @@ const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const { DONE, QUEUE, slugify } = require('../automation/bin/haoqi-craft-batch');
 const { QUEUE2 } = require('../automation/bin/haoqi-craft-batch-2');
+const { QUEUE3 } = require('../automation/bin/haoqi-craft-batch-3');
 const { KEEP } = require('../automation/bin/haoqi-craft-attach-gen');
+const { KEEP3 } = require('../automation/bin/haoqi-craft-attach-gen-3');
 const { render } = require('../automation/lib/haoqi-craft-page');
 const { markFromName, tidy } = require('../automation/lib/haoqi-craft-copy');
 
@@ -32,12 +34,27 @@ describe('haoqi 25-pack guards', () => {
     assert.ok(QUEUE.length >= 25);
     assert.equal(new Set(QUEUE2).size, QUEUE2.length);
     assert.ok(QUEUE2.length >= 25);
+    assert.equal(new Set(QUEUE3).size, QUEUE3.length);
+    assert.ok(QUEUE3.length >= 25);
   });
 
   it('second pack keepers are unused slugs with generated atmosphere', () => {
     assert.equal(KEEP.length, 25);
     for (const slug of KEEP) {
       assert.equal(DONE.has(slug), false, slug);
+      const html = fs.readFileSync(path.join(ROOT, slug, 'index.html'), 'utf8');
+      assert.match(html, /noindex/, slug);
+      assert.match(html, /HaoqiCraft\.mount/, slug);
+      const gen = path.join(ROOT, slug, 'assets', 'image-gen.webp');
+      assert.equal(fs.existsSync(gen), true, slug);
+    }
+  });
+
+  it('third pack keepers are unused slugs with generated atmosphere', () => {
+    assert.equal(KEEP3.length, 25);
+    for (const slug of KEEP3) {
+      assert.equal(DONE.has(slug), false, slug);
+      assert.equal(KEEP.includes(slug), false, slug);
       const html = fs.readFileSync(path.join(ROOT, slug, 'index.html'), 'utf8');
       assert.match(html, /noindex/, slug);
       assert.match(html, /HaoqiCraft\.mount/, slug);
@@ -158,7 +175,7 @@ describe('haoqi shipped pages', () => {
       .readdirSync(ROOT, { withFileTypes: true })
       .filter((e) => e.isDirectory() && e.name !== 'lib')
       .map((e) => e.name);
-    const banned = /They do the work they already list|Start with contact us\.|TOP PHILADELPHIA DENTIST|document\.getElementById|404 Error|404 Not Found|OOPS! THAT PAGE|New Patient Registration General Dentistry|User Portal|SITE NOT FOUND|Just a moment|Site is not available|wynnewoodeyecare\.com|friendly used car|Parts and Service Service|Get Directions Phone|allot of Pizza/;
+    const banned = /They do the work they already list|Start with contact us\.|TOP PHILADELPHIA DENTIST|document\.getElementById|404 Error|404 Not Found|403 Forbidden|OOPS! THAT PAGE|New Patient Registration General Dentistry|User Portal|SITE NOT FOUND|Just a moment|Site is not available|wynnewoodeyecare\.com|friendly used car|Parts and Service Service|Get Directions Phone|allot of Pizza|spothopper|ART Wellness/;
     for (const slug of slugs) {
       const html = fs.readFileSync(path.join(ROOT, slug, 'index.html'), 'utf8');
       assert.doesNotMatch(html, banned, slug);
