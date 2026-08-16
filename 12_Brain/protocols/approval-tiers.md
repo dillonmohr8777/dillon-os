@@ -15,5 +15,5 @@ Mirrors `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`.
 - Qualify never sets status past `scored` / `queued_build` / `suppressed` without a human flipping mail_ready downstream in #226 CSVs
 - Grok/browser research may be read and captured, but it may never like, reply, repost, send, connect, install, or authorize
 - Maker/checker runs require distinct identities; a human gate is required by default
-- MCP candidates with any pending check remain sandbox-only; failed checks or critical permissions are rejected
+- MCP candidates with any pending check remain sandbox-only; failed checks or critical permissions are rejected. Why: [[12_Brain/concepts/MCP Stack Failure Modes 2026|MCP Stack Failure Modes 2026]]
 - A failing AEO/trust gate blocks website deployment
