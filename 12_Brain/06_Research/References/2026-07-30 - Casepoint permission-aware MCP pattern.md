@@ -35,3 +35,6 @@ Use this pattern for future CRM, analytics, GBP, Slack, Gmail, and client-system
 An MCP may expose only the exact capabilities already authorized for the selected user
 and client. It may never infer cross-client access or approval for publishing, sending,
 spending, deployment, or account changes.
+
+See also [[12_Brain/concepts/MCP Stack Failure Modes 2026|MCP Stack Failure Modes 2026]]
+(2026 receipts: trusted-server language, write gates, unofficial Ads wrappers).

@@ -1,6 +1,6 @@
 ---
 tags: [research, index]
-updated: 2026-08-15
+updated: 2026-08-16
 ---
 
 # Research
@@ -13,6 +13,7 @@ Survivors compile into `12_Brain/concepts/` with `expires:` dates via
 ## Active research pages
 
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; Lanes A/C/D probed 2026-08-15 (expires 2026-11-15).
+- [[12_Brain/concepts/MCP Stack Failure Modes 2026|MCP Stack Failure Modes 2026]] — injection, secret sprawl, overlap, ungated writes, unofficial Ads wrappers, directory junk (expires 2026-11-14). Receipts: [[12_Brain/raw/research/2026-08-16 MCP Stack Failure Modes Receipts]].
 
 See also Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
 

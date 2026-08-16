@@ -72,3 +72,4 @@ content depends on the server being reachable.
 - [[12_Brain/protocols/approval-tiers|Approval & safety protocol]]
 - Consuming skills: `.claude/skills/ui-design`, `.claude/skills/ux-audit`,
   `.claude/skills/mirror-and-improve`, `.claude/skills/site-factory`
+- Why the gate exists: [[12_Brain/concepts/MCP Stack Failure Modes 2026|MCP Stack Failure Modes 2026]]

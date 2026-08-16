@@ -14,4 +14,4 @@ updated: 2026-07-04
 4. **Drafts/staged HTML/dry-runs are not live until verified live.** Deploy manifests are routing signals, not delivery proof.
 
 ## Links
-- [[12_Brain/concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] · [[12_Brain/concepts/Access Verification Discipline|Access Verification Discipline]] · [[12_Brain/concepts/Truth Hierarchy|Truth Hierarchy]]
+- [[12_Brain/concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] · [[12_Brain/concepts/Access Verification Discipline|Access Verification Discipline]] · [[12_Brain/concepts/Truth Hierarchy|Truth Hierarchy]] · [[12_Brain/concepts/MCP Stack Failure Modes 2026|MCP Stack Failure Modes 2026]]
