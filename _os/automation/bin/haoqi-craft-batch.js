@@ -129,12 +129,20 @@ function logoUrls(html, base) {
   }
   for (const tag of html.match(/<img\b[^>]*>/gi) || []) {
     const blob = tag.toLowerCase();
-    if (!/logo|brandmark|wordmark|navbar-brand|site-logo|custom-logo/.test(blob)) continue;
     const src =
-      (tag.match(/\b(?:data-src|data-lazy-src|src)=["']([^"']+)/i) || [])[1] ||
+      (tag.match(/\b(?:data-src|data-lazy-src|srcset|src)=["']([^"'\s,]+)/i) || [])[1] ||
       '';
+    if (!/logo|brandmark|wordmark|navbar-brand|site-logo|custom-logo|header-logo/.test(blob) && !/logo|brandmark|wordmark/i.test(src)) {
+      continue;
+    }
     const alt = (tag.match(/\balt=["']([^"']*)/i) || [])[1] || 'logo';
     push(src, alt);
+  }
+  for (const m of html.matchAll(/"logo"\s*:\s*\[\s*"?(https?:[^"'\s\]]+)/gi)) push(m[1], 'logo');
+  for (const m of html.matchAll(/"logo"\s*:\s*"?(https?:[^"'\s,}]+)/gi)) push(m[1], 'logo');
+  for (const m of html.matchAll(/itemprop=["']logo["'][^>]*content=["']([^"']+)/gi)) push(m[1], 'logo');
+  for (const m of html.matchAll(/property=["']og:image["'][^>]*content=["']([^"']+)/gi)) {
+    if (/logo|brand|mark/i.test(m[1])) push(m[1], 'logo');
   }
   return out;
 }
@@ -376,7 +384,7 @@ async function main() {
   }
 }
 
-module.exports = { QUEUE, DONE, slugify, buildOne, logoUrls };
+module.exports = { QUEUE, DONE, slugify, buildOne, logoUrls, writeLogo };
 
 if (require.main === module) {
   main().catch((err) => {

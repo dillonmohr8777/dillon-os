@@ -8,6 +8,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const { DONE, QUEUE, slugify } = require('../automation/bin/haoqi-craft-batch');
+const { QUEUE2 } = require('../automation/bin/haoqi-craft-batch-2');
+const { KEEP } = require('../automation/bin/haoqi-craft-attach-gen');
 const { render } = require('../automation/lib/haoqi-craft-page');
 const { markFromName, tidy } = require('../automation/lib/haoqi-craft-copy');
 
@@ -28,6 +30,20 @@ describe('haoqi 25-pack guards', () => {
   it('queue is unique and long enough to fill 25', () => {
     assert.equal(new Set(QUEUE).size, QUEUE.length);
     assert.ok(QUEUE.length >= 25);
+    assert.equal(new Set(QUEUE2).size, QUEUE2.length);
+    assert.ok(QUEUE2.length >= 25);
+  });
+
+  it('second pack keepers are unused slugs with generated atmosphere', () => {
+    assert.equal(KEEP.length, 25);
+    for (const slug of KEEP) {
+      assert.equal(DONE.has(slug), false, slug);
+      const html = fs.readFileSync(path.join(ROOT, slug, 'index.html'), 'utf8');
+      assert.match(html, /noindex/, slug);
+      assert.match(html, /HaoqiCraft\.mount/, slug);
+      const gen = path.join(ROOT, slug, 'assets', 'image-gen.webp');
+      assert.equal(fs.existsSync(gen), true, slug);
+    }
   });
 
   it('renderer ships proof, process, and area plus noindex', () => {

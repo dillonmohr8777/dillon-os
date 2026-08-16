@@ -20,11 +20,11 @@ function read(rel) {
 }
 
 describe('haoqi-radar-sites', () => {
-  it('ships a hub and 27 prospect folders', () => {
+  it('ships a hub and 52 prospect folders', () => {
     assert.equal(fs.existsSync(path.join(ROOT, 'index.html')), true);
     assert.equal(fs.existsSync(path.join(ROOT, 'lib/craft.js')), true);
     assert.equal(fs.existsSync(path.join(ROOT, 'lib/craft.css')), true);
-    assert.equal(SITES.length, 27);
+    assert.equal(SITES.length, 52);
     assert.ok(SITES.includes('jarman-sales'));
     assert.ok(SITES.includes('andorra-family-dentistry'));
     for (const slug of SITES) {

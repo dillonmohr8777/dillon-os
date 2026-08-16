@@ -6,7 +6,7 @@ updated: 2026-08-16
 
 # Haoqi Craft Demos
 
-**Summary:** 27 `noindex` prospect demos that apply the [[12_Brain/concepts/Haoqi Design Language|Haoqi Design Language]] to rebuild rows from [[Daily-Briefs/radar-2026-08-15|radar-2026-08-15]].
+**Summary:** 52 `noindex` prospect demos that apply the [[12_Brain/concepts/Haoqi Design Language|Haoqi Design Language]] to rebuild rows from [[Daily-Briefs/radar-2026-08-15|radar-2026-08-15]].
 
 Nothing here is outbound-ready. A human approves every send.
 
@@ -16,7 +16,7 @@ Live on the pinned Netlify site `haoqi-radar-craft` (2026-08-16):
 
 The first two skins were Jarman (`stay cool`) and Andorra (`smile more`). The next 25 use the same template, plus proof / process / area sections so the page keeps the same arc. Copy panels share one glass text-box: mono 500, inset highlight, cool layered shadow. Their homepage logo sits in the mark when harvest found a clean one. Backgrounds are edge-flooded to alpha. Favicons and black boxes are not logos. Sites with no honest mark keep type.
 
-The 25 are unused radar rows. None of them already lived in `haoqi-radar-sites/`, `philly-sites/`, or `01_Clients/`.
+The first 25 and the second 25 are unused radar rows. None of them already lived in `haoqi-radar-sites/`, `philly-sites/`, or `01_Clients/`. The second pack uses two-word glass lines, exact business logos when a real mark exists, and generated atmosphere in empty photo slots. Generated images are labeled as generated. A WP Engine header and a Pre-Owned badge were dropped. Holiday Hair and Belle Palace use their exact marks. Sites with no honest mark keep type.
 
 Skipped on purpose: `govertical.com` (now a South Carolina developer, not the Philly gym), parked or challenge-wall hosts, and any row already shipped.
 

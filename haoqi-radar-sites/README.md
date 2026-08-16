@@ -1,8 +1,8 @@
 # Haoqi craft demos
 
-27 `noindex` prospect sites that apply the Haoqi.design language to rebuild rows from the 2026-08-15 Momentum prospect radar.
+52 `noindex` prospect sites that apply the Haoqi.design language to rebuild rows from the 2026-08-15 Momentum prospect radar.
 
-Jarman and Andorra were the first two. The next 25 use the same template, with proof / process / area sections after offerings, and the business logo in the header when harvest found a clean mark.
+Jarman and Andorra were the first two. Two unused 25-packs follow the same template. Exact logos sit in the mark when the homepage had one. Empty photo slots get generated atmosphere, labeled as generated.
 
 ## Run locally
 
@@ -26,5 +26,5 @@ Live hub: https://haoqi-radar-craft.netlify.app/
 
 - Demos stay `noindex`.
 - Their logo only. Background cut to alpha. No invented marks.
-- Photographs are theirs, or the slot is empty.
+- Photographs are theirs when harvest found them. Empty slots get generated atmosphere, labeled as generated.
 - Vault write-up: `02_Campaigns/AI Site Builder Outreach Engine/Haoqi Craft Demos.md`.
