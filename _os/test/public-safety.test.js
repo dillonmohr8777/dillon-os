@@ -113,7 +113,30 @@ describe('12_Brain public-safety scanner', () => {
       assert.equal(parsed.mcpServers.brandfetch.url, 'https://mcp.brandfetch.io/mcp');
       assert.equal(parsed.mcpServers.netlify.url, 'https://netlify-mcp.netlify.app/mcp');
       assert.deepEqual(parsed.mcpServers['google-analytics'].args, ['run', 'analytics-mcp']);
-      assert.equal(parsed.mcpServers['google-ads'], undefined, `${rel} must not invent a Google Ads URL`);
+      assert.equal(parsed.mcpServers.gmail.url, 'https://gmailmcp.googleapis.com/mcp/v1');
+      assert.equal(parsed.mcpServers['google-drive'].url, 'https://drivemcp.googleapis.com/mcp/v1');
+      assert.equal(parsed.mcpServers['google-calendar'].url, 'https://calendarmcp.googleapis.com/mcp/v1');
+      assert.deepEqual(
+        parsed.mcpServers['google-ads'].args,
+        ['run', '--spec', 'git+https://github.com/googleads/google-ads-mcp.git', 'google-ads-mcp'],
+      );
+      assert.equal(parsed.mcpServers['google-ads'].url, undefined, `${rel} must not invent a Google Ads URL`);
+      assert.match(
+        parsed.mcpServers['google-ads'].env.GOOGLE_ADS_DEVELOPER_TOKEN,
+        /\$\{(env:)?GOOGLE_ADS_DEVELOPER_TOKEN\}/,
+      );
+      assert.match(
+        parsed.mcpServers['google-ads'].env.GOOGLE_PROJECT_ID,
+        /\$\{(env:)?GOOGLE_PROJECT_ID\}/,
+      );
+      assert.equal(parsed.mcpServers['maps-grounding-lite'].url, 'https://mapstools.googleapis.com/mcp');
+      assert.equal(parsed.mcpServers['maps-grounding-lite'].headers, undefined, `${rel} maps must not ship an empty API key header`);
+      assert.equal(parsed.mcpServers['developer-knowledge'].url, 'https://developerknowledge.googleapis.com/mcp');
+      assert.equal(parsed.mcpServers['google-business-profile'], undefined, `${rel} must not invent a GBP MCP`);
+      assert.equal(parsed.mcpServers.merchant, undefined, `${rel} must not wire Merchant as GBP`);
+      assert.doesNotMatch(raw, /mybusiness\.googleapis\.com\/mcp/, `${rel} must not invent a my-business MCP URL`);
+      assert.doesNotMatch(raw, /merchantapi\.googleapis\.com\/mcp/, `${rel} must not wire Merchant MCP`);
+      assert.doesNotMatch(raw, /storage\.googleapis\.com\/storage\/mcp/, `${rel} must not add a Cloud Storage data lake`);
       assert.equal(parsed.mcpServers['chrome-devtools'], undefined, `${rel} must not also wire Chrome DevTools`);
       for (const [name, server] of Object.entries(parsed.mcpServers)) {
         if (server.headers && server.headers.Authorization) {

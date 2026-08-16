@@ -101,6 +101,21 @@ test('Twilio Docs is ACCEPT; Sheets stays sandbox-only while writes are pending'
   assert.ok(sheetsResult.pending_tests.includes('permission_review'));
 });
 
+test('google ops: Developer Knowledge ACCEPT; Gmail and Ads stay sandbox-only', () => {
+  const knowledge = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/google-ops/developer-knowledge.json'), 'utf8'));
+  const gmail = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/google-ops/gmail.json'), 'utf8'));
+  const ads = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/google-ops/google-ads.json'), 'utf8'));
+  assert.equal(evaluateCandidate(knowledge).verdict, 'accept');
+  const gmailResult = evaluateCandidate(gmail);
+  assert.equal(gmailResult.verdict, 'sandbox-only');
+  assert.ok(gmailResult.pending_tests.includes('permission_review'));
+  assert.ok(!gmail.tools.includes('send_message'));
+  const adsResult = evaluateCandidate(ads);
+  assert.equal(adsResult.verdict, 'sandbox-only');
+  assert.ok(adsResult.pending_tests.includes('inspector'));
+  assert.deepEqual(ads.tools, ['get_resource_metadata', 'list_accessible_customers', 'search']);
+});
+
 test('free need-list: Context7 and Firecrawl ACCEPT; Playwright and Netlify stay sandbox-only', () => {
   const context7 = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/free-stack/context7.json'), 'utf8'));
   const firecrawl = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/free-stack/firecrawl.json'), 'utf8'));
