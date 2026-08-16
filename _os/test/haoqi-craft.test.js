@@ -65,6 +65,44 @@ describe('haoqi-radar-sites', () => {
   });
 });
 
+describe('haoqi-craft-deploy pin', () => {
+  const deploy = require('../automation/bin/haoqi-craft-deploy');
+
+  it('pins haoqi-radar-craft and refuses live client sites', () => {
+    assert.equal(deploy.SITE_NAME, 'haoqi-radar-craft');
+    assert.equal(deploy.assertSiteName(), 'haoqi-radar-craft');
+    assert.equal(deploy.assertSiteName('haoqi-radar-craft'), 'haoqi-radar-craft');
+    assert.throws(() => deploy.assertSiteName('momentum-workshop-pilot'), /refusing site/);
+    assert.throws(() => deploy.assertSiteName('immohrtal-site'), /refusing site/);
+    assert.throws(() => deploy.assertSiteName('omega-landscaping-landing-page'), /refusing site/);
+    for (const name of [
+      'immohrtal-site',
+      'momentum-workshop-pilot',
+      'momentum-prospect-radar',
+      'omega-landscaping-landing-page',
+    ]) {
+      assert.equal(deploy.BLOCKED_SITES.includes(name), true, name);
+    }
+  });
+
+  it('collects demo files, skips README, and keeps noindex on every HTML page', () => {
+    const files = deploy.collectFiles(path.join(VAULT, deploy.SOURCE_DIR));
+    const keys = [...files.keys()];
+    assert.equal(keys.includes('/README.md'), false);
+    assert.equal(keys.includes('/index.html'), true);
+    assert.equal(keys.includes('/jarman-sales/index.html'), true);
+    assert.equal(keys.includes('/andorra-family-dentistry/index.html'), true);
+    assert.equal(keys.includes('/lib/craft.js'), true);
+    assert.equal(keys.includes('/_headers'), true);
+    assert.equal(keys.includes('/robots.txt'), true);
+    const htmlPages = keys.filter((k) => /\.html?$/i.test(k));
+    assert.ok(htmlPages.length >= 3);
+    for (const p of htmlPages) {
+      assert.match(files.get(p).toString('utf8'), /noindex/i, p);
+    }
+  });
+});
+
 describe('haoqi craft vault pages', () => {
   it('INDEX lists the compiled research and language pages', () => {
     const index = read('12_Brain/INDEX.md');
