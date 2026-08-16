@@ -1,0 +1,15 @@
+{
+  "automation_id": "dillon-command",
+  "written_at": "2026-08-16T13:02:26.267Z",
+  "date": "2099-01-16",
+  "status": "running",
+  "counts": {
+    "lanes": 8,
+    "ok": 0,
+    "open_slack": 4,
+    "inbox_notes": 4
+  },
+  "artifact_paths": [
+    "automation-runs/dillon-command/2099-01-16/approval-board.md"
+  ]
+}

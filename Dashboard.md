@@ -19,9 +19,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Replenish Google Ads billing — confirm Mia completed payment (P0)
+- [ ] Draft replies for four stale M360 Slack loops (Jason/Sean bot, Melissa, Sean CallRail, Jenny)
+- [ ] Growth Workshop runway — LP + franchise send prep for Aug 27
 
 ## Active Projects
 -

@@ -1,23 +1,34 @@
-# Daily Pulse 2026-04-15
+# Daily Pulse — 2026-08-16
 
-## Coverage Notes
-• Searched Gmail for Mia Lange (mia@getreplenish.com), Anthony Miller (amiller@nkcdc.org), Sean Boyle (sean@needmomentum.com) by address, plus David Stemm, Beth Frederick, Mac Frederick, Kimberly Iraci, and Andy by name. Andy (Bar Crawl USA) and Kimberly Iraci have no email on file, so those are name matches only and can miss.
-• Scanned 01_Clients/ for files modified within the last 24 hours.
+## Coverage notes
 
-## Active Clients
-• None. No files under 01_Clients/ changed in the last 24 hours.
+- Scanned `01_Clients/` (398 markdown files). Frontmatter validate: **38/38 complete** (2026-08-16 run).
+- No client files modified in the last 48h in Git — movement signals come from frontmatter `next_action` and campaign notes, not file mtime.
+- Gmail/Slack live scan not run in cloud; pulse is vault-only.
 
-## Unread/Unanswered Emails
-• Omega Landscaping / Momentum thread "Re: Adding User To Google Ad Account" from John Belaska. Roughly 21 hours old. Sean Boyle and beth@needmomentum.com are cc'd alongside you. John's asking whether Thursday works for a Google Ads account discussion. You're cc'd, not a direct recipient, so monitor unless Sean pulls you in.
-• Buzz Bull / CCA thread "Buzz Bull CCA / Sterile Care" from Mike Ross at projectcorporate.com. Roughly 22 hours old. Teams meeting invite touching Commercial Cleaners Alliance (David Stemm's org). Confirm attendance.
+## Moving (< 48h evidence in vault)
 
-## Pending Deliverables (due in 48 hours)
-• Nothing surfaced. Your vault doesn't carry due date frontmatter on client notes, so this section can't be populated until notes include a `due` or `next_action` field.
+- **Growth Workshop** — active campaign, event **Aug 27**; LP, drip, and 720 franchise sends in flight ([[02_Campaigns/Growth Workshop/Growth Workshop]]).
+- **Prospect Radar** — daily sweep: **1065** tracked, **178** rebuild-ready ([[Daily-Briefs/radar-2026-08-16]]).
 
-## Stalled Items (7+ days no update)
-• Same limitation as above. Every client note under 01_Clients/ is older than 24 hours by modified time, so either everything's stalled or the vault isn't where you're tracking daily movement. Worth clarifying the source of truth before the next pulse.
+## Watch (2–7 days or open loops)
 
-## Tomorrow's Priority Stack
-1. Confirm the Buzz Bull / CCA Teams meeting with Mike Ross at projectcorporate.com. Highest urgency because it's a calendar commitment with a hard time.
-2. Decide whether to sit in on the Omega Landscaping Google Ads sync John Belaska's proposing for Thursday. You're cc'd, not the owner, so a short "I'll join if helpful" reply is enough.
-3. Add frontmatter (`next_action`, `due`, `last_touched`) to 01_Clients/ notes so future pulses can populate Pending Deliverables and Stalled Items against real data.
+- **Replenish** — Google Ads billing block note still open ([[01_Clients/Replenish/Google Ads Billing Block 2026-07-30]]). P0 billing risk until Mia confirms payment.
+- **Shadow HVAC** — LSA clearance + GBP cadence on `next_action` ([[01_Clients/Shadow HVAC/overview]]).
+- **Omega Landscaping** — drone footage + John Belaska account review ([[01_Clients/Omega Landscaping/overview]]).
+- **Commercial Cleaners Alliance** — creatives commitment on overview `due: 2026-04-16` (stale date — verify if still owed).
+
+## Stalled (7+ days / TBD next_action)
+
+- Many roster notes still carry `next_action: TBD — needs human next action` — frontmatter repair defaults, not real plans. Run a focused pass on top 12 M360 retainers.
+
+## Due in 48h
+
+- None with valid `due` frontmatter landing in the next 48h window.
+- **Calendar:** Growth Workshop is **11 days out** — treat outreach + LP verification as the hard deadline stack.
+
+## Tomorrow's priority stack
+
+1. **Replenish billing** — unblock Google Ads delivery before spend stalls (billing risk tier).
+2. **Answer Jason/Sean bot + Melissa Loom + Sean CallRail** — four Slack loops are 17 days open; damages trust before workshop push.
+3. **Growth Workshop send rail** — confirm registration URL + UTM pattern before franchise batch touches ([[02_Campaigns/Growth Workshop/Google RSVP Rail]]).
