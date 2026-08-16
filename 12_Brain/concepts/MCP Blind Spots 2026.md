@@ -84,6 +84,8 @@ Operator asked to configure the batch. Declared in `.cursor/mcp.json` and `.mcp.
 
 Enable one server per job. Unset env vars and OAuth grants rollback the token-gated ones. Delete the matching block from both mcp.json files to roll back wiring.
 
+Free need-list / design helpers wired the same evening (Context7, Firecrawl keyless, Google Design, Playwright, Brandfetch, Netlify, official GA4) are cataloged on [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] and [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]]. They are not blind spots.
+
 ## What to ignore vs what to gate later
 
 Operator action, not authorization.

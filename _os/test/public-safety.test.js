@@ -105,6 +105,16 @@ describe('12_Brain public-safety scanner', () => {
       assert.ok(parsed.mcpServers['twilio-docs'], `${rel} missing twilio-docs`);
       assert.equal(parsed.mcpServers['twilio-docs'].url, 'https://mcp.twilio.com/docs');
       assert.equal(parsed.mcpServers.callrail, undefined, `${rel} must not invent a CallRail URL`);
+      assert.equal(parsed.mcpServers.context7.url, 'https://mcp.context7.com/mcp');
+      assert.equal(parsed.mcpServers.firecrawl.url, 'https://mcp.firecrawl.dev/v2/mcp');
+      assert.equal(parsed.mcpServers.firecrawl.headers, undefined, `${rel} firecrawl must stay keyless`);
+      assert.equal(parsed.mcpServers['google-design'].url, 'https://design.googleapis.com/mcp');
+      assert.deepEqual(parsed.mcpServers.playwright.args, ['-y', '@playwright/mcp@latest']);
+      assert.equal(parsed.mcpServers.brandfetch.url, 'https://mcp.brandfetch.io/mcp');
+      assert.equal(parsed.mcpServers.netlify.url, 'https://netlify-mcp.netlify.app/mcp');
+      assert.deepEqual(parsed.mcpServers['google-analytics'].args, ['run', 'analytics-mcp']);
+      assert.equal(parsed.mcpServers['google-ads'], undefined, `${rel} must not invent a Google Ads URL`);
+      assert.equal(parsed.mcpServers['chrome-devtools'], undefined, `${rel} must not also wire Chrome DevTools`);
       for (const [name, server] of Object.entries(parsed.mcpServers)) {
         if (server.headers && server.headers.Authorization) {
           assert.match(

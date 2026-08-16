@@ -28,7 +28,7 @@ in the same change.
 - [[12_Brain/entities/Codex Workspace (Legacy)|Codex Workspace (Legacy)]] — previous command center (no local paths in Git).
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
-- [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes. Factory companions: Firecrawl (ACCEPT keyless), Playwright, Google Design (ACCEPT).
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -47,8 +47,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
-- [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] — 50 official MCP servers sampled 2026-08-16; unique gaps vs vault. Expires 2026-11-14.
-- [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]] — 25 web-design-orbit MCPs; factory needs four. Expires 2026-11-14.
+- [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] — 50 official MCP servers; free need-list wired 2026-08-16. Expires 2026-11-14.
+- [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]] — 25 web-design-orbit MCPs; factory four plus free design helpers wired. Expires 2026-11-14.
 - [[12_Brain/concepts/MCP Blind Spots 2026|MCP Blind Spots 2026]] — official MCPs the 50 and the design 25 never ranked (Sheets, Microsoft Ads, BuiltWith, Birdeye). Expires 2026-11-14.
 
 ## Raw captures (Git-safe)
@@ -73,12 +73,12 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
-- [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] — 50 official MCP servers; unique gaps vs vault-owned vs session. Expires 2026-11-14.
-- [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]] — 25 web-design-orbit MCPs; factory needs four. Expires 2026-11-14.
+- [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] — 50 official MCP servers; free need-list wired 2026-08-16. Expires 2026-11-14.
+- [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]] — 25 web-design-orbit MCPs; factory four plus free design helpers wired. Expires 2026-11-14.
 - [[12_Brain/concepts/MCP Blind Spots 2026|MCP Blind Spots 2026]] — omitted official MCPs the ads/SEO/design catalogs never ranked. Expires 2026-11-14.
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
-- `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]], 2026-08-16 blind-spot batch: Twilio Docs ACCEPT, others sandbox-only).
+- `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-08-16 - context7|Context7 ACCEPT]], [[12_Brain/07_Reviews/MCP/2026-08-16 - firecrawl|Firecrawl ACCEPT]], [[12_Brain/07_Reviews/MCP/2026-08-16 - google-design|Google Design ACCEPT]], 2026-08-16 blind-spot + free-stack sandbox-only).
 - Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
 
 ## Outreach engine

@@ -7,24 +7,25 @@ expires: 2026-11-14
 
 # Web Design MCP Catalog — 2026
 
-**Summary:** this factory needs four web-design MCPs, not 25 — LandingFolio (have), Firecrawl, one browser QA, and Netlify when deploy is an explicit ask.
+**Summary:** this factory needs four web-design MCPs, not 25 — LandingFolio (have, sandbox), Firecrawl (ACCEPT keyless), Playwright (sandbox QA), and Netlify (sandbox; writes off). Google Design is ACCEPT; Brandfetch is sandbox-only after OAuth.
 
 This page does not authorize connect, send, spend, or account change. Every new server still goes through `_os/automation/bin/mcp-gate.js`. See [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] for the wider 50. Factory contract: [[12_Brain/entities/Website Factory|Website Factory]] + [[12_Brain/entities/LandingFolio MCP|LandingFolio]] composition-only + `philly-sites/DESIGN-SYSTEM.md`.
 
 ## What you need
 
-Vault-declared: **LandingFolio only** (sandbox; Inspector pending). Brand still comes from harvest, never from a reference screenshot.
+Vault-declared factory helpers (2026-08-16): LandingFolio, Firecrawl keyless, Playwright, Google Design, Brandfetch, Netlify. Brand still comes from harvest, never from a reference screenshot or Brandfetch context.
 
 | Need | MCP | Job in this factory | Do not |
 |---|---|---|---|
-| Have | **LandingFolio** | Section composition screenshots. Skills already name it. | Copy a reference through. Query by client name. |
-| Gate | **Firecrawl** | Harvest the live site → markdown/map. Not a layout library. | Enable `firecrawl_interact` (overlaps Playwright). |
-| Gate | **Playwright** (`npx @playwright/mcp@latest`) | Factory QA already wants headed shots at 390/850/1440. | Also leave Chrome DevTools always-on. Pick one browser. |
-| Later | **Netlify** | Factory host. Deploy/forms. Not design. | Turn on writes until Dillon asks for a deploy. |
+| Have (sandbox) | **LandingFolio** | Section composition screenshots. Skills already name it. | Copy a reference through. Query by client name. |
+| Have (**ACCEPT**) | **Firecrawl** keyless | Harvest the live site → markdown. Search/scrape/parse only. | Add `FIRECRAWL_API_KEY` (unlocks interact/crawl). |
+| Have (sandbox) | **Playwright** (`npx @playwright/mcp@latest`) | Factory QA shots at 390/850/1440. | Call `browser_run_code_unsafe`. Also leave Chrome DevTools always-on. |
+| Have (sandbox) | **Netlify** | Factory host. Deploy/forms. Not design. | Turn on writes until Dillon asks for a deploy. |
+| Have (**ACCEPT**) | **Google Design** | Material palettes + icons when harvest is thin. | Treat generated tokens as the client's brand. |
+| Have (sandbox) | **Brandfetch** | Live logos/colors after free OAuth (100/mo). | Compose a page from `get_brand_context`. |
 | Only if | **WordPress.com** | Paid WP.com clients. Webflow does not touch WP. | Self-hosted WP (use Adapter, write off) or static demos. |
-| Optional | **Brandfetch** *or* **Google Design** | Logos/colors/icons when harvest shots are thin. | Both. Neither composes a page. Harvest still wins. |
 
-Context7 (ACCEPT, not in vault mcp.json) stays for the Next exception ([[01_Clients/Shadow HVAC/website|Shadow HVAC]]), not for batch HTML.
+Context7 is ACCEPT and vault-declared for the Next exception ([[01_Clients/Shadow HVAC/website|Shadow HVAC]]), not for batch HTML.
 
 **Do not add** Figma, Magic Patterns, Lovable, Webflow, Wix, Penpot, Builder, Stitch, Canva, Recraft, Higgsfield, shadcn, or Storybook to the factory stack. They replace the pipeline or target React/canvas products this vault does not ship.
 
@@ -37,19 +38,19 @@ Fit: **vault** / **accept** / **need** / **session** / **skip** / **watch**.
 | # | Server | Job | Fit | Write | Endpoint |
 |---|---|---|---|---|---|
 | 1 | LandingFolio | composition screenshots | vault | read | `mcp.landingfolio.com/mcp` |
-| 2 | Firecrawl | harvest scrape | **need** | mixed | `mcp.firecrawl.dev/v2/mcp` |
-| 3 | Playwright | visual QA | **need** | browser | `npx @playwright/mcp@latest` |
+| 2 | Firecrawl | harvest scrape | vault | read | `mcp.firecrawl.dev/v2/mcp` (ACCEPT keyless) |
+| 3 | Playwright | visual QA | vault | browser | `npx @playwright/mcp@latest` |
 | 4 | Chrome DevTools | LCP / console | skip | local | `npx chrome-devtools-mcp@latest` (overlaps #3) |
-| 5 | Netlify | factory deploy | **need** | **write** | `netlify-mcp.netlify.app/mcp` |
+| 5 | Netlify | factory deploy | vault | **write** | `netlify-mcp.netlify.app/mcp` |
 | 6 | WordPress.com | WP.com admin | watch | **write** | `public-api.wordpress.com/wpcom/v2/mcp/v1` (paid plans) |
-| 7 | Context7 | library docs | accept | read | `mcp.context7.com/mcp` |
-| 8 | Brandfetch | logos / colors | watch | credits | `mcp.brandfetch.io/mcp` (100/mo free) |
+| 7 | Context7 | library docs | vault | read | `mcp.context7.com/mcp` |
+| 8 | Brandfetch | logos / colors | vault | credits | `mcp.brandfetch.io/mcp` (100/mo free; OAuth) |
 | 9 | Figma | canvas + design-to-code | skip | **write** | `mcp.figma.com/mcp` |
 | 10 | Webflow | hosted builder | skip | **write** | `mcp.webflow.com/mcp` |
 | 11 | Canva | design assets | skip | **write** | `mcp.canva.com/mcp` |
 | 12 | Magic Patterns | prototype ↔ code | skip | **write** | `mcp.magicpatterns.com/mcp` (paid; readonly URL exists) |
 | 13 | Lovable | full-stack app builder | skip | **write** | `mcp.lovable.dev` |
-| 14 | Google Design | color / icons | watch | read | `design.googleapis.com/mcp` |
+| 14 | Google Design | color / icons | vault | read | `design.googleapis.com/mcp` (ACCEPT) |
 | 15 | Penpot | open-source canvas | skip | **write** | per-user stream URL + plugin; no single public URL |
 | 16 | Builder Fusion | visual / design-system agent | skip | **write** | `mcp.builder.io/mcp/fusion` |
 | 17 | Builder CMS | Publish-space CMS | skip | **write** | `mcp.builder.io/mcp/publish` |
@@ -73,11 +74,12 @@ Fit: **vault** / **accept** / **need** / **session** / **skip** / **watch**.
 
 ## Gate next (vault judgment, not a receipt)
 
+Free factory helpers are vault-declared. Remaining operator work:
+
 1. Finish LandingFolio Inspector (`landingfolio-verify.js` + token).
-2. Firecrawl — harvest already expects it; interact off.
-3. Playwright — if the host is not already injecting it; QA only.
-4. Netlify — writes off until an explicit deploy ask.
-5. WordPress.com — only for a paid WP.com client, write off.
+2. Brandfetch OAuth if harvest shots are thin (free plan).
+3. Netlify OAuth — writes off until an explicit deploy ask.
+4. WordPress.com — only for a paid WP.com client, write off. Do not add Figma / Lovable / Magic Patterns / Webflow.
 
 ## Links
 

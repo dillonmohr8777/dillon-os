@@ -126,8 +126,24 @@ node _os/automation/fixtures/mcp/blind-spots/write-and-gate.js --gate
 `--inspect` is only used on remotes whose anonymous `tools/list` already succeeded
 (Docs, Sheets, Slides, BigQuery, BuiltWith, Parallel Search, Twilio Docs). Auth-gated
 remotes stay **sandbox-only** with Inspector pending — do not pass `--inspect` or a
-failed probe becomes REJECT. Twilio Docs is the only ACCEPT. CallRail has no public
-URL and is not wired. Minting tokens and completing OAuth is Tier 2.
+failed probe becomes REJECT. Twilio Docs is the only ACCEPT in that batch. CallRail
+has no public URL and is not wired. Minting tokens and completing OAuth is Tier 2.
+
+### Free need-list / design helpers (2026-08-16)
+
+Candidates live in `_os/automation/fixtures/mcp/free-stack/`. Replay:
+
+```powershell
+node _os/automation/fixtures/mcp/free-stack/write-and-gate.js --gate
+```
+
+`--inspect` ran on Context7, Firecrawl keyless, Google Design, and Playwright
+stdio. Those first three are **ACCEPT**. Playwright stays **sandbox-only**
+(`browser_run_code_unsafe` is RCE-equivalent; QA screenshots only). Brandfetch,
+Netlify, and official GA4 (`pipx run analytics-mcp`) stay sandbox-only — do not
+`--inspect` them without credentials. Do not add `FIRECRAWL_API_KEY` (that
+unlocks interact/crawl). Do not deploy from the Netlify MCP until Dillon asks.
+Paid Google Ads / Meta / DataForSEO / WordPress.com MCPs are not in this batch.
 
 ## Website deployment checks
 
