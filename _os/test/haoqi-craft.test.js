@@ -54,10 +54,14 @@ describe('haoqi-radar-sites', () => {
     });
   }
 
-  it('Andorra glass word is SMILE; Jarman stays hello', () => {
-    assert.match(read('haoqi-radar-sites/andorra-family-dentistry/index.html'), /word:\s*"SMILE"/);
+  it('Andorra glass word is lowercase smile; Jarman stays hello', () => {
+    assert.match(read('haoqi-radar-sites/andorra-family-dentistry/index.html'), /word:\s*"smile"/);
+    assert.match(read('haoqi-radar-sites/andorra-family-dentistry/index.html'), /id="word-slot"/);
     assert.match(read('haoqi-radar-sites/jarman-sales/index.html'), /word:\s*"hello"/);
-    assert.match(read('haoqi-radar-sites/lib/craft.js'), /measureText\("hello"\)/);
+    assert.match(read('haoqi-radar-sites/jarman-sales/index.html'), /id="word-slot"/);
+    assert.match(read('haoqi-radar-sites/lib/craft.js'), /toLowerCase\(\)/);
+    assert.match(read('haoqi-radar-sites/lib/craft.js'), /word-slot/);
+    assert.match(read('haoqi-radar-sites/lib/craft.css'), /\.word-slot/);
   });
 
   it('craft runtime has scramble, dither, and a WebGL refraction pass', () => {
@@ -115,15 +119,19 @@ describe('haoqi craft vault pages', () => {
     assert.match(index, /Haoqi Design Language/);
     assert.match(index, /High-Craft Front-End References/);
     assert.match(index, /Haoqi Craft Demos/);
+    assert.match(index, /Haoqi Craft Word/);
     assert.match(index, /haoqi-radar-craft\.netlify\.app/);
   });
 
   it('compiled pages carry source and expires', () => {
     const lang = read('12_Brain/concepts/Haoqi Design Language.md');
     const research = read('12_Brain/research/High-Craft Front-End References.md');
+    const words = read('12_Brain/concepts/Haoqi Craft Word.md');
     assert.match(lang, /source:/);
     assert.match(lang, /expires: 2026-11-15/);
     assert.match(research, /source:/);
     assert.match(research, /expires: 2026-11-15/);
+    assert.match(words, /source:/);
+    assert.match(words, /expires: 2026-11-15/);
   });
 });

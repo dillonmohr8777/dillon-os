@@ -16,8 +16,8 @@ Compiled from the live [haoqi.design](https://haoqi.design/) mobile frame and Ha
 1. **Paper is a sky, not a fill.** Pale blue vertical gradient, soft diagonal light beams, never pure white.
 2. **Drafting grid stays visible.** Hairline gray plus `+` crosshairs at intersections. The page should feel like a CAD sheet.
 3. **Three type voices.** Heavy gothic all-caps for the mark and the one headline. Monospace for body, meta, and decode. One lime (or brand-tinted) script for the signature only.
-4. **One glass word.** A tubular, refractive script (`hello` on the source) sits in the hero. Pointer-driven rim light stays on the letter edge, not the face.
-5. **Dithered stickers.** Pixel heart, leaf, smile, head, zigzag. They overlap type. Continuous progress becomes the size of a shape on a fixed cell grid.
+4. **One glass word.** A tubular, refractive script (`hello` on the source) sits in a reserved slot in the back. Always lowercase Pacifico. Caps (`SMILE`) read as a different font. Desktop slot is larger so the word is larger. Pointer-driven rim light stays on the letter edge, not the face.
+5. **Dithered stickers stay in the word slot.** Pixel heart, leaf, smile, head, zigzag. They do not sit on headlines, body copy, or photos.
 6. **Interface feedback is discrete.** Scramble-decode on text. Dot-matrix on hover, load, menu, and route changes. Shared 40ms ticker.
 7. **Corner chrome.** Mark top-left, two-line hamburger top-right, live clock + temperature bottom-left, record-dot bottom-right. Pointer UV readout when there is room.
 8. **Portrait closer.** Grainy high-contrast photo, lime script over the frame, tiny technical meta in the corner.
@@ -34,7 +34,7 @@ Codrops rule worth keeping: one scroll source and one pointer UV for every effec
 
 [[12_Brain/entities/Website Factory|Website Factory]] ships the Philly profile template (10 sections, 27-37 KB, attitude skins). This language is a separate craft skin. Prospect demos that use it still keep `noindex`, harvested voice, and verifiable facts. They do not go through `build-site.js`.
 
-Shipped demos: `haoqi-radar-sites/jarman-sales/` and `haoqi-radar-sites/andorra-family-dentistry/`. Live hub: https://haoqi-radar-craft.netlify.app/
+Shipped demos: `haoqi-radar-sites/jarman-sales/` (source `hello`, no HVAC trade word) and `haoqi-radar-sites/andorra-family-dentistry/` (`smile`). Live hub: https://haoqi-radar-craft.netlify.app/. Word rules: [[12_Brain/concepts/Haoqi Craft Word|Haoqi Craft Word]].
 
 ## Links
 

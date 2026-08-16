@@ -196,10 +196,41 @@ main {
 
 .hero {
   min-height: 92vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-rows: minmax(34vh, 1fr) auto;
+  align-content: end;
   padding-bottom: 88px;
+  gap: 8px;
+}
+.word-slot {
+  grid-row: 1;
+  min-height: 34vh;
+  pointer-events: none;
+}
+.hero-copy {
+  grid-row: 2;
+  position: relative;
+  z-index: 12;
+  max-width: 38rem;
+}
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(26rem, 1fr) minmax(24rem, 48vw);
+    grid-template-rows: 1fr;
+    align-items: end;
+    gap: 32px;
+  }
+  .word-slot {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: stretch;
+    min-height: 58vh;
+  }
+  .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+  }
 }
 .hero h1 {
   font-family: var(--display);

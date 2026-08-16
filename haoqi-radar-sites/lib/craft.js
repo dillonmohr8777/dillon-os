@@ -136,23 +136,32 @@
       ctx.stroke();
     });
     return [
-      { img: heart, x: 0.78, y: 0.16, s: 0.09, vx: 0.00003, vy: -0.00002 },
-      { img: leaf, x: 0.10, y: 0.20, s: 0.08, vx: -0.00002, vy: 0.00003 },
-      { img: smile, x: 0.84, y: 0.28, s: 0.07, vx: 0.00002, vy: 0.00002 },
-      { img: head, x: 0.22, y: 0.12, s: 0.07, vx: -0.00002, vy: -0.00002 },
-      { img: zig, x: 0.52, y: 0.10, s: 0.09, vx: 0.00003, vy: -0.00003 },
+      { img: heart, u: 0.86, v: 0.18, s: 0.16, vu: 0.00004, vv: -0.00003 },
+      { img: leaf, u: 0.10, v: 0.22, s: 0.14, vu: -0.00003, vv: 0.00004 },
+      { img: smile, u: 0.88, v: 0.72, s: 0.13, vu: 0.00003, vv: 0.00003 },
+      { img: head, u: 0.14, v: 0.70, s: 0.13, vu: -0.00003, vv: -0.00003 },
+      { img: zig, u: 0.50, v: 0.10, s: 0.16, vu: 0.00004, vv: -0.00004 },
     ];
   }
 
-  function drawHello(ctx, w, h, word, ptr, t) {
-    const x = w * 0.54 + (ptr.x - 0.5) * 28;
-    const y = h * 0.40 + (ptr.y - 0.5) * 16;
-    const base = Math.min(w, h) * 0.30;
+  function wordSlot() {
+    const el = document.getElementById("word-slot");
+    if (!el) return null;
+    const r = el.getBoundingClientRect();
+    if (r.width < 48 || r.height < 48) return null;
+    return r;
+  }
+
+  function drawHello(ctx, word, ptr, t, box) {
+    const x = box.left + box.width * 0.5 + (ptr.x - 0.5) * 18;
+    const y = box.top + box.height * 0.52 + (ptr.y - 0.5) * 10;
+    const desktop = innerWidth >= 900;
+    const base = Math.min(box.width * (desktop ? 0.56 : 0.44), box.height * (desktop ? 0.72 : 0.58));
     ctx.save();
     ctx.font = `700 ${base}px Pacifico, cursive`;
-    const slot = ctx.measureText("hello").width;
+    const helloW = ctx.measureText("hello").width;
     const own = Math.max(1, ctx.measureText(word).width);
-    const size = base * Math.min(1, slot / own);
+    const size = base * Math.min(1, helloW / own);
     ctx.translate(x, y);
     ctx.rotate(-0.1 + Math.sin(t * 0.0004) * 0.02);
     ctx.textAlign = "center";
@@ -209,14 +218,14 @@
     ctx.restore();
   }
 
-  function drawSparkles(ctx, w, h, t) {
+  function drawSparkles(ctx, box, t) {
     ctx.fillStyle = "#fff";
     for (let i = 0; i < 14; i++) {
       const seed = Math.sin(i * 12.9898 + t * 0.001) * 43758.5453;
       const flicker = (seed - Math.floor(seed));
       if (flicker < 0.55) continue;
-      const x = (Math.sin(i * 3.1 + t * 0.0003) * 0.5 + 0.5) * w * 0.7 + w * 0.15;
-      const y = (Math.cos(i * 2.4 + t * 0.00025) * 0.5 + 0.5) * h * 0.45 + h * 0.18;
+      const x = box.left + (Math.sin(i * 3.1 + t * 0.0003) * 0.5 + 0.5) * box.width;
+      const y = box.top + (Math.cos(i * 2.4 + t * 0.00025) * 0.5 + 0.5) * box.height;
       const s = 0.8 + flicker * 1.8;
       ctx.fillRect(x, y, s, s);
     }
@@ -304,7 +313,7 @@
   function mount(opts) {
     document.documentElement.classList.remove("no-js");
     document.body.classList.add("js");
-    const word = opts.word || "hello";
+    const word = String(opts.word || "hello").trim().toLowerCase();
     const city = opts.cityMeta || "26°C";
     const stage = document.getElementById("stage");
     const glCanvas = document.getElementById("gl");
@@ -330,21 +339,28 @@
       stage.height = innerHeight * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, innerWidth, innerHeight);
+      const box = wordSlot() || { left: innerWidth * 0.42, top: innerHeight * 0.08, width: innerWidth * 0.5, height: innerHeight * 0.36 };
       stickers.forEach((s) => {
         if (!reduced()) {
-          s.x += s.vx;
-          s.y += s.vy;
-          if (s.x < 0.04 || s.x > 0.90) s.vx *= -1;
-          if (s.y < 0.06 || s.y > 0.34) s.vy *= -1;
+          s.u += s.vu;
+          s.v += s.vv;
+          if (s.u < 0.06 || s.u > 0.90) s.vu *= -1;
+          if (s.v < 0.08 || s.v > 0.88) s.vv *= -1;
+          if (s.u > 0.30 && s.u < 0.70 && s.v > 0.32 && s.v < 0.70) {
+            s.u += s.u < 0.5 ? -0.01 : 0.01;
+            s.v += s.v < 0.5 ? -0.01 : 0.01;
+          }
         }
-        const size = Math.min(innerWidth, innerHeight) * s.s;
-        ctx.drawImage(s.img, s.x * innerWidth, s.y * innerHeight, size, size);
+        const size = Math.min(box.width, box.height) * s.s;
+        ctx.drawImage(s.img, box.left + s.u * box.width - size / 2, box.top + s.v * box.height - size / 2, size, size);
       });
       const fade = reduced() ? 1 : Math.max(0, 1 - (scrollY || 0) / (innerHeight * 0.85));
       ctx.globalAlpha = fade;
-      const hello = drawHello(ctx, innerWidth, innerHeight, word, ptr, t);
-      drawPointer(ctx, hello, ptr);
-      drawSparkles(ctx, innerWidth, innerHeight, t);
+      if (word) {
+        const hello = drawHello(ctx, word, ptr, t, box);
+        drawPointer(ctx, hello, ptr);
+      }
+      drawSparkles(ctx, box, t);
       ctx.globalAlpha = 1;
       if (glDraw && !reduced() && fade > 0.05) {
         glCanvas.style.opacity = String(fade);
