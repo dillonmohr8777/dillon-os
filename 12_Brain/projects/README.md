@@ -1,6 +1,6 @@
 ---
 tags: [projects, index]
-updated: 2026-07-29
+updated: 2026-08-15
 ---
 
 # Projects
@@ -14,6 +14,7 @@ Use [[12_Brain/templates/Project|Project template]]. View in
 ## Active
 
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — evidence-backed audit engine wrapping the existing radar.
+- [[12_Brain/projects/Three Campaign Launch 2026-08-15|Three Campaign Launch 2026-08-15]] — three Search CREATE packets; live apply blocked on Google login.
 
 ## Links
 
