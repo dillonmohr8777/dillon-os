@@ -16,7 +16,7 @@ Live on the pinned Netlify site `haoqi-radar-craft` (2026-08-16):
 
 The first two skins were Jarman (`stay cool`) and Andorra (`smile more`). The next 25 use the same template, plus proof / process / area sections so the page keeps the same arc. Copy panels share one glass text-box: mono 500, inset highlight, cool layered shadow. Their homepage logo sits in the mark when harvest found a clean one. Backgrounds are edge-flooded to alpha. Favicons and black boxes are not logos. Sites with no honest mark keep type.
 
-The first 25 and the second 25 are unused radar rows. None of them already lived in `haoqi-radar-sites/`, `philly-sites/`, or `01_Clients/`. The second pack uses two-word glass lines, exact business logos when a real mark exists, and generated atmosphere in empty photo slots. Generated images are labeled as generated. A WP Engine header and a Pre-Owned badge were dropped. Holiday Hair and Belle Palace use their exact marks. Sites with no honest mark keep type.
+The first 25 and the second 25 are unused radar rows. None of them already lived in `haoqi-radar-sites/`, `philly-sites/`, or `01_Clients/`. The second pack uses two-word glass lines. Fifteen keepers carry an exact homepage or published brand mark. Generated atmosphere stills sit in empty photo slots, and the exact logo is stamped on that still when we have one. Generated images stay labeled as generated. A WP Engine header and a Pre-Owned badge were dropped. Sites with no honest mark keep type.
 
 Skipped on purpose: `govertical.com` (now a South Carolina developer, not the Philly gym), parked or challenge-wall hosts, and any row already shipped.
 

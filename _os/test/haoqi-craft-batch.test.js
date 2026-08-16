@@ -158,11 +158,14 @@ describe('haoqi shipped pages', () => {
       .readdirSync(ROOT, { withFileTypes: true })
       .filter((e) => e.isDirectory() && e.name !== 'lib')
       .map((e) => e.name);
-    const banned = /They do the work they already list|Start with contact us\.|TOP PHILADELPHIA DENTIST|document\.getElementById|404 Error|OOPS! THAT PAGE|New Patient Registration General Dentistry/;
+    const banned = /They do the work they already list|Start with contact us\.|TOP PHILADELPHIA DENTIST|document\.getElementById|404 Error|404 Not Found|OOPS! THAT PAGE|New Patient Registration General Dentistry|User Portal|SITE NOT FOUND|Just a moment|Site is not available|wynnewoodeyecare\.com|friendly used car|Parts and Service Service|Get Directions Phone|allot of Pizza/;
     for (const slug of slugs) {
       const html = fs.readFileSync(path.join(ROOT, slug, 'index.html'), 'utf8');
       assert.doesNotMatch(html, banned, slug);
       assert.doesNotMatch(html, /\u2014/, slug);
+      if (/has-logo/.test(html)) {
+        assert.doesNotMatch(html, /mark stays type/, slug);
+      }
     }
   });
 
