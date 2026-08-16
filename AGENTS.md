@@ -31,19 +31,27 @@ for the two npm-based sites below.
 ### MCP servers
 
 `.cursor/mcp.json` and `.mcp.json` register **LandingFolio**, the 2026-08-16
-blind-spot batch, and the free need-list / design helpers (Context7, Firecrawl
+blind-spot batch, the free need-list / design helpers (Context7, Firecrawl
 keyless, Google Design, Playwright, Brandfetch, Netlify, official GA4
-`pipx run analytics-mcp`). **CallRail is not wired** — no public URL. Tokens
-and OAuth grants live in the environment, never in Git.
+`pipx run analytics-mcp`), and the Google ops set (Gmail, Drive, Calendar,
+official Ads `pipx` + developer token, Maps Grounding Lite, Developer
+Knowledge). **CallRail is not wired** — no public URL. **No official GBP
+MCP** — do not invent a hostname; see
+`12_Brain/concepts/Google Business Profile API 2026.md`. Do not add a data
+lake (Cloud Storage / Bigtable). Tokens and OAuth grants live in the
+environment, never in Git.
 
 **ACCEPT (live tools/list, no secret):** Twilio Docs, Context7, Firecrawl
 keyless (`firecrawl_scrape` / `search` / `parse` only — do not add
-`FIRECRAWL_API_KEY`), Google Design. LandingFolio stays sandbox-only until
-`node _os/automation/bin/landingfolio-verify.js` runs with `LANDINGFOLIO_TOKEN`.
-Playwright, Brandfetch, Netlify, and GA4 are sandbox-only. Do not call
-`browser_run_code_unsafe`, Netlify deploy, or send/spend/mutate tools unless
-Dillon asks in the same turn. Enable one server per job. Any newer MCP still
-goes through `_os/automation/bin/mcp-gate.js` first. Catalogs:
+`FIRECRAWL_API_KEY`), Google Design, Developer Knowledge. LandingFolio stays
+sandbox-only until `node _os/automation/bin/landingfolio-verify.js` runs with
+`LANDINGFOLIO_TOKEN`. Playwright, Brandfetch, Netlify, GA4, Gmail, Drive,
+Calendar, Ads, and Maps are sandbox-only. Gmail: `create_draft` / read only
+(no send tool on the official 2026-08-16 `tools/list`). Do not call
+`browser_run_code_unsafe`, Netlify deploy, Calendar/Drive writes, or
+send/spend/mutate tools unless Dillon asks in the same turn. Enable one
+server per job. Any newer MCP still goes through
+`_os/automation/bin/mcp-gate.js` first. Catalogs:
 `12_Brain/concepts/MCP Stack Catalog 2026.md` and
 `12_Brain/concepts/Web Design MCP Catalog 2026.md`.
 

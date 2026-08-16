@@ -11,7 +11,7 @@ expires: 2026-11-14
 
 This page does not authorize send, spend, or account change. Wiring a URL is not an ACCEPT verdict and is not permission to mutate. Every new server still goes through `_os/automation/bin/mcp-gate.js`. See [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] and [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]]. Draft-first still wins: [[12_Brain/concepts/Draft-First Operating Rules|Draft-First Operating Rules]].
 
-HubSpot, Notion, Linear, Stripe, PostHog, Cloudflare, Neon, Exa, Gmail, Drive, and Calendar are already in the 50. They are not blind spots.
+HubSpot, Notion, Linear, Stripe, PostHog, Cloudflare, Neon, and Exa are already in the 50. They are not blind spots. Gmail, Drive, and Calendar were in the 50 as session-present; they are vault-declared as of the 2026-08-16 Google ops batch.
 
 ## What you were not ranking
 
@@ -49,9 +49,9 @@ Google Slides (`slidesmcp.googleapis.com/mcp/v1`) is the same omitted-Workspace 
 
 ## Still missing as official MCPs
 
-ServiceTitan, Housecall Pro, Jobber, Podium inbox. LinkedIn Ads, YouTube. Google Search Console, Google Business Profile, Obsidian. Do not fill those with community wrappers.
+ServiceTitan, Housecall Pro, Jobber, Podium inbox. LinkedIn Ads, YouTube. Google Search Console, Google Business Profile, Obsidian. Do not fill those with community wrappers. GBP is API-only — [[12_Brain/concepts/Google Business Profile API 2026|Google Business Profile API 2026]].
 
-Cloud infra remotes (AlloyDB, Cloud Storage, Cloud Run, Firestore, …) are also omitted from the 50. They are not this business.
+Cloud infra remotes (AlloyDB, Cloud Storage, Cloud Run, Firestore, …) are also omitted from the 50. They are not this business. Do not add a data lake.
 
 ## Wiring (2026-08-16)
 

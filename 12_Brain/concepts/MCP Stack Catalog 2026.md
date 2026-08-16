@@ -16,10 +16,12 @@ Google Cloud's remotes table plus Workspace Docs/Sheets/Slides remotes are extra
 ## What you actually have
 
 Vault-declared in `.cursor/mcp.json` / `.mcp.json`: **LandingFolio**, the
-[[12_Brain/concepts/MCP Blind Spots 2026|2026-08-16 blind-spot batch]], and the
+[[12_Brain/concepts/MCP Blind Spots 2026|2026-08-16 blind-spot batch]], the
 free need-list / design helpers (Context7, Firecrawl keyless, Google Design,
-Playwright, Brandfetch, Netlify, official GA4). Session-injected host MCPs are
-still not vault-owned.
+Playwright, Brandfetch, Netlify, official GA4), and the 2026-08-16 Google ops
+set (Gmail, Drive, Calendar, official Ads, Maps Grounding Lite, Developer
+Knowledge). Session-injected host MCPs are still not vault-owned. No data lake.
+GBP stays API-only — [[12_Brain/concepts/Google Business Profile API 2026|Google Business Profile API 2026]].
 
 | Server | Status | Job |
 |---|---|---|
@@ -31,23 +33,28 @@ still not vault-owned.
 | [[12_Brain/07_Reviews/MCP/2026-08-16 - brandfetch|Brandfetch]] | sandbox-only | Free-plan brand lookup after OAuth. Harvest still wins. |
 | [[12_Brain/07_Reviews/MCP/2026-08-16 - netlify|Netlify]] | sandbox-only | Factory host. Writes off until an explicit deploy ask. |
 | [[12_Brain/07_Reviews/MCP/2026-08-16 - google-analytics|GA4]] | sandbox-only | Official `pipx run analytics-mcp`. Needs ADC. |
+| [[12_Brain/07_Reviews/MCP/2026-08-16 - gmail|Gmail]] | sandbox-only | Official `gmailmcp.googleapis.com/mcp/v1`. `create_draft` / read. No send on 2026-08-16 `tools/list`. |
+| [[12_Brain/07_Reviews/MCP/2026-08-16 - google-drive|Drive]] | sandbox-only | File-level. Writes off. |
+| [[12_Brain/07_Reviews/MCP/2026-08-16 - google-calendar|Calendar]] | sandbox-only | Workshop RSVP rail. Writes off. |
+| [[12_Brain/07_Reviews/MCP/2026-08-16 - google-ads|Google Ads]] | sandbox-only | Official read-only `pipx` + developer token. Inspector pending (needs token). |
+| [[12_Brain/07_Reviews/MCP/2026-08-16 - maps-grounding-lite|Maps Grounding Lite]] | sandbox-only | Places/weather/routes. Not GBP. Live calls billed. |
+| [[12_Brain/07_Reviews/MCP/2026-08-16 - developer-knowledge|Developer Knowledge]] | **ACCEPT** | Official Google docs. Context7 stays for third-party libs. |
 
-This Cloud Agent session also injected GitHub, Playwright, Slack, Gmail, Drive, Calendar, Vercel, Webflow, Exa, and others. **Session-present is not vault-owned and is not gate-accepted.** Official Google Gmail MCP is draft-only; the session Gmail surface listed send/reply/forward — catalog the Google docs, not the host dump.
+This Cloud Agent session also injected GitHub, Slack, Vercel, Webflow, Exa, and others. **Session-present is not vault-owned and is not gate-accepted.** Official Gmail MCP had no send/reply/forward on the 2026-08-16 `tools/list`; ignore host dumps that listed send.
 
 ## Unique ones you do not have
 
-Vault judgment, not vendor proof. Free need-list servers were vault-declared 2026-08-16. These remaining gaps still need a paid plan, a developer token, or do not exist as official MCPs.
+Vault judgment, not vendor proof. Free need-list and Google ops servers were vault-declared 2026-08-16. These remaining gaps still need a paid plan or do not exist as official MCPs.
 
 | # | MCP | Unique job | Why it is a gap | Risk |
 |---|---|---|---|---|
-| 1 | **Google Ads** (official, read-only) | Live GAQL / account discovery | Ads agent and morning loop already assume platform reads. No CSV hop. Current official MCP has **no mutate tools**. | Self-host + developer token. Not free. |
-| 2 | **Meta Ads** (official, `mcp.facebook.com/ads`) | Meta Lead Ads read + writes | Core lane. First-party. | **WRITE.** Create/edit campaigns. Rolling access. Vault policy: keep writes off. Not free. |
-| 3 | **DataForSEO** (official) | SERP / keyword / business-data listings | Local SEO + prospect radar. Pick **one** SEO-data vendor. | Burns API credits. Overlaps Ahrefs/Semrush. Not a GBP API. |
-| 4 | **WordPress.com / WP MCP Adapter** | Live WP posts/pages | Service list includes WordPress. Webflow MCP does not touch WP. | **WRITE.** Paid plans. Keep write tools off. |
-| 5 | **BrightLocal** (official) | BrightLocal account data (rankings / reviews / citations) | Closest first-party **local-SEO dataset** MCP. **Not** Google Business Profile API. **No official GBP MCP exists.** | Grow plan. Write still unproven shipped. |
-| 6 | **ScrapeCreators** (official) | Public social + ad-library scrape | Practitioner intel when X is down. | Untrusted third-party text. Burns credits. |
+| 1 | **Meta Ads** (official, `mcp.facebook.com/ads`) | Meta Lead Ads read + writes | Core lane. First-party. | **WRITE.** Create/edit campaigns. Rolling access. Vault policy: keep writes off. Not free. |
+| 2 | **DataForSEO** (official) | SERP / keyword / business-data listings | Local SEO + prospect radar. Pick **one** SEO-data vendor. | Burns API credits. Overlaps Ahrefs/Semrush. Not a GBP API. |
+| 3 | **WordPress.com / WP MCP Adapter** | Live WP posts/pages | Service list includes WordPress. Webflow MCP does not touch WP. | **WRITE.** Paid plans. Keep write tools off. |
+| 4 | **BrightLocal** (official) | BrightLocal account data (rankings / reviews / citations) | Closest first-party **local-SEO dataset** MCP. **Not** Google Business Profile API. **No official GBP MCP exists.** | Grow plan. Write still unproven shipped. |
+| 5 | **ScrapeCreators** (official) | Public social + ad-library scrape | Practitioner intel when X is down. | Untrusted third-party text. Burns credits. |
 
-GA4, Firecrawl, Netlify, Playwright, Context7, and Google Design are now vault-declared. Chrome DevTools stays skipped (overlaps Playwright).
+Google Ads, GA4, Firecrawl, Netlify, Playwright, Context7, Google Design, Gmail, Drive, Calendar, Maps Grounding Lite, and Developer Knowledge are now vault-declared. Chrome DevTools stays skipped (overlaps Playwright). Do not add a data lake. GBP stays [[12_Brain/concepts/Google Business Profile API 2026|API-only]].
 
 Also unique but **do not add unless the product is already paid and gated**: Ahrefs *or* Semrush (not both; not with DataForSEO), Screaming Frog 24 (licensed desktop), Instantly (conflicts with draft-first), HubSpot (CRM write), Higgsfield (UGC video; generations burn credits; already in some Cloud sessions).
 
@@ -66,13 +73,13 @@ Fit: **vault** = declared in vault mcp.json. **accept** = MCP review ACCEPT, not
 | 3 | GitHub | `api.githubcopilot.com/mcp/` | session | mixed | Official Copilot MCP docs. Host-injected here. |
 | 4 | Playwright | `microsoft/playwright-mcp` | vault | browser | Official local. Vault-declared. QA only; `browser_run_code_unsafe` off. |
 | 5 | Slack | `mcp.slack.com/mcp` | session | **write** | Official. `/slack-intake` needs it. Draft-only in skills. |
-| 6 | Gmail | `gmailmcp.googleapis.com/mcp/v1` | session | draft | Official is draft/label. Session dump had send — ignore dump. |
-| 7 | Google Drive | `drivemcp.googleapis.com/mcp/v1` | session | mixed | Developer Preview. |
-| 8 | Google Calendar | `calendarmcp.googleapis.com/mcp/v1` | session | **write** | Official tools include create/update/delete. Setup snippet lists read scopes. |
+| 6 | Gmail | `gmailmcp.googleapis.com/mcp/v1` | vault | draft | Official remote. `create_draft` / read. No send on 2026-08-16 `tools/list`. Writes beyond draft stay off. |
+| 7 | Google Drive | `drivemcp.googleapis.com/mcp/v1` | vault | mixed | Developer Preview. Writes off. |
+| 8 | Google Calendar | `calendarmcp.googleapis.com/mcp/v1` | vault | **write** | Official tools include create/update/delete. Writes off. Workshop RSVP rail. |
 | 9 | Vercel | `mcp.vercel.com` | session | mixed | Official. Shadow HVAC / Next. Not the factory host. |
 | 10 | Webflow | `mcp.webflow.com/mcp` | session | **write** | Official. Canvas writes need Designer Bridge. |
 | 11 | Exa | `mcp.exa.ai/mcp` | session | read | Official GitHub `exa-labs/exa-mcp-server` + docs URL. Hosted works anonymously with rate limits. Overlaps Perplexity. |
-| 12 | Google Ads | google-ads-mcp (stdio / Cloud Run) | **need** | read | Official. Unique. Self-host + developer token. No mutate tools. |
+| 12 | Google Ads | google-ads-mcp (stdio) | vault | read | Official `pipx` + developer token. No mutate tools. Inspector pending. Do not deploy the Cloud Run sample. |
 | 13 | Meta Ads | `mcp.facebook.com/ads` | **need** | **write** | Official. Unique. Gate writes. Rolling access. |
 | 14 | GA4 | analytics MCP (local Experimental) | vault | read | Official `pipx run analytics-mcp`. Sandbox-only until ADC. Do not ship a guessed remote Data API URL. |
 | 15 | Firecrawl | `mcp.firecrawl.dev/v2/mcp` | vault | read | **ACCEPT** keyless (search/scrape/parse). Do not add `FIRECRAWL_API_KEY`. |
@@ -98,7 +105,7 @@ Fit: **vault** = declared in vault mcp.json. **accept** = MCP review ACCEPT, not
 | 35 | Browserbase | `mcp.browserbase.com/mcp` | skip | browser | Official. Overlaps Playwright. |
 | 36 | Google Design | `design.googleapis.com/mcp` | vault | read | **ACCEPT**. Tokens/icons. Harvest still wins. |
 | 37 | Google Stitch | `stitch.googleapis.com/mcp` | watch | mixed | Official Beta on Cloud remotes table. |
-| 38 | Maps Grounding Lite | `mapstools.googleapis.com/mcp` | watch | read | Official. Maps/places/weather/routes, not GBP posts. |
+| 38 | Maps Grounding Lite | `mapstools.googleapis.com/mcp` | vault | read | Official. Places/weather/routes, not GBP posts. Live calls billed. |
 | 39 | Google Chat | `chatmcp.googleapis.com/mcp/v1` | skip | mixed | Developer Preview. Slack is the Momentum rail. |
 | 40 | People API | `people.googleapis.com/mcp/v1` | skip | read | Developer Preview. |
 | 41 | Maps Code Assist | `mapscodeassist.googleapis.com/mcp` | skip | read | Product page: **experimental**. Cloud table: Preview. Dev helper, not local SEO ops. |
@@ -116,20 +123,23 @@ Fit: **vault** = declared in vault mcp.json. **accept** = MCP review ACCEPT, not
 
 Operator action, not authorization. One candidate JSON through `mcp-gate.js` at a time. Pending Inspector = sandbox-only.
 
-Free need-list servers are already vault-declared (2026-08-16 evening). Still paid / not free:
+Free need-list and Google ops remotes are already vault-declared (2026-08-16). Still paid / not free / not an MCP:
 
-1. Google Ads (read-only official) — biggest remaining reporting hole. Developer token. Not free.
+1. Finish Ads + GA4 ADC / developer token so the read-only servers actually answer.
 2. DataForSEO **or** Ahrefs — one SEO dataset, not three. Credits.
 3. Meta Ads — after Ads MCP server rules; read first. Not free.
 4. WordPress.com or Adapter — only for WP clients, write off. Paid plans.
 5. Finish LandingFolio Inspector (`landingfolio-verify.js` + token).
-6. Authenticate Brandfetch / Netlify / GA4 ADC if those products are already in use. Do not deploy from Netlify MCP until asked.
+6. Authenticate Brandfetch / Netlify / Workspace OAuth / Maps key if those products are already in use. Do not deploy from Netlify MCP until asked.
+7. GBP API access request — only if the 60-day verified profile + website rule is already true. See [[12_Brain/concepts/Google Business Profile API 2026|GBP API 2026]].
 
-Do not add community GSC or GBP servers to close those official gaps.
+Do not add community GSC or GBP servers. Do not add Cloud Storage / Bigtable / a data lake. Do not wire Merchant MCP as GBP.
 
 ## Killed this sweep
 
 - Official GBP MCP, official GSC MCP, official Obsidian MCP.
+- A data lake (Cloud Storage / Bigtable / extra warehouse remotes).
+- Merchant API MCP as a GBP substitute.
 - last30days as an MCP product (it is a skill).
 - "No official Google Ads / Meta / Semrush" (stale directory).
 - Connecting 50 servers.
@@ -148,6 +158,7 @@ Do not add community GSC or GBP servers to close those official gaps.
 ## Links
 
 - Receipts: [[12_Brain/raw/research/2026-08-16 MCP Stack Catalog 50 Receipts]]
+- GBP API: [[12_Brain/concepts/Google Business Profile API 2026|Google Business Profile API 2026]] · [[12_Brain/raw/research/2026-08-16 Google GBP API Receipts]]
 - Slice: [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]]
 - Blind spots: [[12_Brain/concepts/MCP Blind Spots 2026|MCP Blind Spots 2026]]
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] · [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7 review]]

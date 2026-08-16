@@ -143,7 +143,31 @@ stdio. Those first three are **ACCEPT**. Playwright stays **sandbox-only**
 Netlify, and official GA4 (`pipx run analytics-mcp`) stay sandbox-only — do not
 `--inspect` them without credentials. Do not add `FIRECRAWL_API_KEY` (that
 unlocks interact/crawl). Do not deploy from the Netlify MCP until Dillon asks.
-Paid Google Ads / Meta / DataForSEO / WordPress.com MCPs are not in this batch.
+Paid Meta / DataForSEO / WordPress.com MCPs are not in this batch.
+
+### Google ops (2026-08-16)
+
+Candidates live in `_os/automation/fixtures/mcp/google-ops/`. Replay:
+
+```powershell
+node _os/automation/fixtures/mcp/google-ops/write-and-gate.js --gate
+```
+
+`--inspect` ran on Gmail, Drive, Calendar, Maps Grounding Lite, and Developer
+Knowledge. Developer Knowledge is **ACCEPT**. The Workspace remotes and Maps
+stay **sandbox-only** (permission pending — mutate / billed). Google Ads stays
+sandbox-only with Inspector pending — do not `--inspect` it without
+`GOOGLE_ADS_DEVELOPER_TOKEN` plus OAuth or ADC (REJECT). Official Ads command
+is `pipx run --spec git+https://github.com/googleads/google-ads-mcp.git google-ads-mcp`.
+Do not deploy the Cloud Run sample. Maps is URL-only in mcp.json; do not add an
+empty `X-Goog-Api-Key` header. Gmail: `create_draft` / `list_drafts` / read
+only — the official 2026-08-16 `tools/list` has no send tool.
+
+**Not wired:** Google Business Profile (no official MCP — API-only after
+approval; 0 QPM vs 300 QPM), Merchant API MCP (shopping feeds, not listings),
+Chat, People, Stitch, Cloud Storage, Bigtable, or any data lake. CallRail is
+still unwired. GBP access request is Tier 2 and only if a verified profile has
+been active 60+ days with a website on that listing.
 
 ## Website deployment checks
 
