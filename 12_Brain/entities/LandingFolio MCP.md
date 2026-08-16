@@ -29,7 +29,10 @@ action — see [[12_Brain/registry/automations|the automation registry]] entry
 The wiring is already committed in `.cursor/mcp.json` and `.mcp.json`, both reading
 the token from the `LANDINGFOLIO_TOKEN` environment variable. Nothing in this
 repository contains the token, and nothing breaks when the variable is unset — the
-server simply fails to authenticate and its tools stay absent.
+server simply fails to authenticate and its tools stay absent. Other vault-declared
+servers (2026-08-16 blind-spot batch) are listed in
+[[12_Brain/concepts/MCP Blind Spots 2026|MCP Blind Spots 2026]]; they do not change
+LandingFolio's composition-only rule.
 
 ## How agents must use it
 

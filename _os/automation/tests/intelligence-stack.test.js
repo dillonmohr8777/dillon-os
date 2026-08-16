@@ -90,6 +90,17 @@ test('LandingFolio stays sandbox-only until an operator completes the Inspector 
   assert.ok(result.findings.some((finding) => finding.code === 'secret-scope'));
 });
 
+test('Twilio Docs is ACCEPT; Sheets stays sandbox-only while writes are pending', () => {
+  const twilio = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/blind-spots/twilio-docs.json'), 'utf8'));
+  const sheets = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/blind-spots/google-sheets.json'), 'utf8'));
+  const twilioResult = evaluateCandidate(twilio);
+  assert.equal(twilioResult.verdict, 'accept');
+  assert.equal(twilioResult.accepted, true);
+  const sheetsResult = evaluateCandidate(sheets);
+  assert.equal(sheetsResult.verdict, 'sandbox-only');
+  assert.ok(sheetsResult.pending_tests.includes('permission_review'));
+});
+
 test('MCP acceptance gate rejects critical broad permissions', () => {
   const candidate = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/context7-candidate.json'), 'utf8'));
   candidate.permissions = ['full access'];

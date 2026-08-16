@@ -7,9 +7,9 @@ expires: 2026-11-14
 
 # MCP Blind Spots — 2026
 
-**Summary:** the 50-catalog and the web-design 25 skipped the MCPs sitting next to work this vault already does — Sheets, Docs, Microsoft Advertising, BuiltWith, Birdeye, Cal.com — not another layout library.
+**Summary:** the 50-catalog and the web-design 25 skipped the MCPs sitting next to work this vault already does — Sheets, Docs, Microsoft Advertising, BuiltWith, Birdeye, Cal.com — not another layout library. Wired 2026-08-16 as sandbox-only except Twilio Docs.
 
-This page does not authorize connect, send, spend, or account change. Every new server still goes through `_os/automation/bin/mcp-gate.js`. See [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] and [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]]. Draft-first still wins: [[12_Brain/concepts/Draft-First Operating Rules|Draft-First Operating Rules]].
+This page does not authorize send, spend, or account change. Wiring a URL is not an ACCEPT verdict and is not permission to mutate. Every new server still goes through `_os/automation/bin/mcp-gate.js`. See [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] and [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]]. Draft-first still wins: [[12_Brain/concepts/Draft-First Operating Rules|Draft-First Operating Rules]].
 
 HubSpot, Notion, Linear, Stripe, PostHog, Cloudflare, Neon, Exa, Gmail, Drive, and Calendar are already in the 50. They are not blind spots.
 
@@ -53,23 +53,58 @@ ServiceTitan, Housecall Pro, Jobber, Podium inbox. LinkedIn Ads, YouTube. Google
 
 Cloud infra remotes (AlloyDB, Cloud Storage, Cloud Run, Firestore, …) are also omitted from the 50. They are not this business.
 
+## Wiring (2026-08-16)
+
+Operator asked to configure the batch. Declared in `.cursor/mcp.json` and `.mcp.json`. Secrets stay in the environment. **CallRail is not wired** (no public URL).
+
+| Server | mcp.json key | Gate | Still needs |
+|---|---|---|---|
+| Google Docs | `google-docs` | sandbox-only | OAuth; do not call `update_doc` |
+| Google Sheets | `google-sheets` | sandbox-only | OAuth; `get_values` only until a write is asked |
+| Google Slides | `google-slides` | sandbox-only | OAuth; do not call `update_presentation` |
+| BigQuery | `google-bigquery` | sandbox-only | Cloud OAuth; `execute_sql_readonly` only |
+| Microsoft Advertising | `microsoft-advertising` | sandbox-only | Azure AD app + OAuth (OpenBeta) |
+| BuiltWith | `builtwith` | sandbox-only | `BUILTWITH_API_KEY`; never `payment-purchase` |
+| Birdeye | `birdeye` | sandbox-only | OAuth |
+| Cal.com | `cal-com` | sandbox-only | OAuth; no booking writes |
+| Intercom | `intercom` | sandbox-only | OAuth; no article writes |
+| Klaviyo | `klaviyo` | sandbox-only | OAuth; URL already has `read-only=true` |
+| Parallel Search | `parallel-search` | sandbox-only | None (anonymous). Overlaps Exa |
+| Tavily | `tavily` | sandbox-only | OAuth or `TAVILY_API_KEY` |
+| Apify | `apify` | sandbox-only | `APIFY_TOKEN`; do not run Actors |
+| Mixpanel | `mixpanel` | sandbox-only | OAuth; no dashboard writes |
+| Amplitude | `amplitude` | sandbox-only | OAuth; no creates |
+| Resend | `resend` | sandbox-only | OAuth; **do not send** |
+| Supabase | `supabase` | sandbox-only | OAuth; URL has `read_only=true`; never prod |
+| Airtable | `airtable` | sandbox-only | OAuth; no record writes |
+| Twilio Docs | `twilio-docs` | **ACCEPT** | None. Docs search only — not SMS |
+| Microsoft Clarity | `microsoft-clarity` | sandbox-only | `CLARITY_API_TOKEN`; 10 req/day |
+| ElevenLabs | `elevenlabs` | sandbox-only | `ELEVENLABS_API_KEY` + `uvx`; no TTS until asked |
+| CallRail | — | skipped | Account-team URL. Do not invent a hostname |
+
+Enable one server per job. Unset env vars and OAuth grants rollback the token-gated ones. Delete the matching block from both mcp.json files to roll back wiring.
+
 ## What to ignore vs what to gate later
 
 Operator action, not authorization.
 
-- Do not add Parallel, Tavily, Mixpanel, Amplitude, Apify, Resend, Twilio-as-SMS, or Airtable to close a "blind spot."
-- Sheets (read) is the only omitted server that already matches a live vault workflow (tracker in Drive). Still gate; still write-off.
-- Microsoft Advertising only if a Bing account is real and Dillon wants agent-visible reads. OpenBeta.
+- Do not treat Parallel, Tavily, Mixpanel, Amplitude, Apify, Resend, or Airtable as unique needs — they are wired sandbox-only because this configure pass asked for the whole batch.
+- Sheets (read) is the only omitted server that already matches a live vault workflow (tracker in Drive). Write tools stay off.
+- Microsoft Advertising only if a Bing account is real. OpenBeta.
 - BuiltWith only as a Prospect Radar enricher, and only after DataForSEO/Ahrefs is the SERP pick — different job, do not swap.
 - Birdeye / CallRail / Intercom / Klaviyo / Cal.com only if that product is already on the account.
 - Clarity only as a per-session UX probe. Do not put it on the morning loop.
+- Resend send/broadcast and Cal.com booking writes stay off under draft-first.
 
 ## Killed this sweep
 
 - Official GSC / GBP / Obsidian MCP (still none).
 - "No official Microsoft Ads / Birdeye / Intercom / CallRail MCP."
 - Sheets = Drive. Cal.com = Google Calendar. Parallel = unique search. Clarity = daily GA4. Resend = missing Gmail. Twilio MCP = SMS sender.
-- Connecting the list. Treating Cloud injections as vault-owned.
+- Treating Twilio Docs as an SMS sender.
+- Treating Cloud injections as vault-owned.
+- Inventing a CallRail hostname.
+- Invoking send, spend, or mutate tools from a sandbox-only wiring.
 
 ## Links
 

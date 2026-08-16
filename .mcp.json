@@ -6,6 +6,109 @@
       "headers": {
         "Authorization": "Bearer ${LANDINGFOLIO_TOKEN}"
       }
+    },
+    "google-docs": {
+      "type": "http",
+      "url": "https://docsmcp.googleapis.com/mcp/v1"
+    },
+    "google-sheets": {
+      "type": "http",
+      "url": "https://sheetsmcp.googleapis.com/mcp/v1"
+    },
+    "google-slides": {
+      "type": "http",
+      "url": "https://slidesmcp.googleapis.com/mcp/v1"
+    },
+    "google-bigquery": {
+      "type": "http",
+      "url": "https://bigquery.googleapis.com/mcp"
+    },
+    "microsoft-advertising": {
+      "type": "http",
+      "url": "https://partner.api.bingads.microsoft.com/ext/mcp/vnext?toolSetNames=OpenBeta"
+    },
+    "builtwith": {
+      "type": "http",
+      "url": "https://api.builtwith.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${BUILTWITH_API_KEY}"
+      }
+    },
+    "birdeye": {
+      "type": "http",
+      "url": "https://mcp.birdeye.com/mcp"
+    },
+    "cal-com": {
+      "type": "http",
+      "url": "https://mcp.cal.com/mcp"
+    },
+    "intercom": {
+      "type": "http",
+      "url": "https://mcp.intercom.com/mcp"
+    },
+    "klaviyo": {
+      "type": "http",
+      "url": "https://mcp.klaviyo.com/mcp?read-only=true&disable-tools-with-user-generated-content=true&core-tools-only=true"
+    },
+    "parallel-search": {
+      "type": "http",
+      "url": "https://search.parallel.ai/mcp"
+    },
+    "tavily": {
+      "type": "http",
+      "url": "https://mcp.tavily.com/mcp/"
+    },
+    "apify": {
+      "type": "http",
+      "url": "https://mcp.apify.com",
+      "headers": {
+        "Authorization": "Bearer ${APIFY_TOKEN}"
+      }
+    },
+    "mixpanel": {
+      "type": "http",
+      "url": "https://mcp.mixpanel.com/mcp"
+    },
+    "amplitude": {
+      "type": "http",
+      "url": "https://mcp.amplitude.com/mcp"
+    },
+    "resend": {
+      "type": "http",
+      "url": "https://mcp.resend.com/mcp"
+    },
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp?read_only=true"
+    },
+    "airtable": {
+      "type": "http",
+      "url": "https://mcp.airtable.com/mcp"
+    },
+    "twilio-docs": {
+      "type": "http",
+      "url": "https://mcp.twilio.com/docs"
+    },
+    "microsoft-clarity": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@microsoft/clarity-mcp-server"
+      ],
+      "env": {
+        "CLARITY_API_TOKEN": "${CLARITY_API_TOKEN}"
+      }
+    },
+    "elevenlabs": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "elevenlabs-mcp"
+      ],
+      "env": {
+        "ELEVENLABS_API_KEY": "${ELEVENLABS_API_KEY}"
+      }
     }
   }
 }

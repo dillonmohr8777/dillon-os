@@ -15,7 +15,10 @@ Google Cloud's remotes table plus Workspace Docs/Sheets/Slides remotes are extra
 
 ## What you actually have
 
-Vault-declared in `.cursor/mcp.json` / `.mcp.json`: **one** server.
+Vault-declared in `.cursor/mcp.json` / `.mcp.json`: **LandingFolio** plus the
+[[12_Brain/concepts/MCP Blind Spots 2026|2026-08-16 blind-spot batch]]. Those extra
+servers are sandbox-only except Twilio Docs (ACCEPT, docs search only). Session-injected
+host MCPs are still not vault-owned.
 
 | Server | Status | Job |
 |---|---|---|

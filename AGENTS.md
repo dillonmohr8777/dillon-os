@@ -30,14 +30,21 @@ for the two npm-based sites below.
 
 ### MCP servers
 
-`.cursor/mcp.json` and `.mcp.json` register one project server, `landingfolio`, a
-layout-reference library for site builds. It reads `LANDINGFOLIO_TOKEN` from the
-environment and **is inert until that variable is set** — no token lives in this
-repo. Its tools are optional everywhere they are used, so an unset variable degrades
-to harvest-only design instead of failing a build. Status, rules, and rollback:
-`12_Brain/entities/LandingFolio MCP.md`. It is still **sandbox-only** until an
-operator runs `node _os/automation/bin/landingfolio-verify.js` to finish the
-Inspector check. Any new MCP goes through `_os/automation/bin/mcp-gate.js` first.
+`.cursor/mcp.json` and `.mcp.json` register **LandingFolio** plus the 2026-08-16
+blind-spot batch (Google Docs/Sheets/Slides/BigQuery, Microsoft Advertising,
+BuiltWith, Birdeye, Cal.com, Intercom, Klaviyo read-only, Parallel Search,
+Tavily, Apify, Mixpanel, Amplitude, Resend, Supabase read-only, Airtable,
+Twilio Docs, Microsoft Clarity, ElevenLabs). **CallRail is not wired** — no
+public URL. Tokens and OAuth grants live in the environment, never in Git.
+
+Almost every new server is **sandbox-only** (pending Inspector and/or
+write-tool review). The only ACCEPT in this batch is **Twilio Docs**
+(`https://mcp.twilio.com/docs`) — public OpenAPI search, no SMS send. LandingFolio
+stays sandbox-only until `node _os/automation/bin/landingfolio-verify.js` runs
+with `LANDINGFOLIO_TOKEN`. Enable one server per job. Do not call send, spend,
+or mutate tools unless Dillon asks in the same turn. Any newer MCP still goes
+through `_os/automation/bin/mcp-gate.js` first. Catalog and reviews:
+`12_Brain/concepts/MCP Blind Spots 2026.md`.
 
 ### Tests / lint
 
