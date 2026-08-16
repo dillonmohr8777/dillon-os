@@ -20,11 +20,14 @@ const { listMigrationTables } = require('../lib/store.ts');
 const { loadMigrationSchema, encodeRow, CLAIM_JOB_SQL } = require('../lib/schema.ts');
 const { containsPii } = require('../lib/redact.ts');
 const { validateIntake } = require('../lib/intake.ts');
-const { runVerticalSlice, finishVerticalSlice, funnelView, createCampaign, submitIntake, resolveProspect } = require('../lib/pipeline.ts');
-const { funnelPage } = require('../lib/web.ts');
+const { runVerticalSlice, finishVerticalSlice, funnelView, createCampaign, submitIntake, resolveProspect, processSubmission, draftCopy } = require('../lib/pipeline.ts');
+const { funnelPage, createServer } = require('../lib/web.ts');
 const { loadConfig } = require('../lib/config.ts');
 const { storageAdapter } = require('../lib/reports.ts');
 const { createAdapters } = require('../lib/adapters.ts');
+const { inferVertical } = require('../lib/vertical.ts');
+const { offerLabel } = require('../lib/copy.ts');
+const { createStore } = require('../lib/store.ts');
 
 describe('normalization', () => {
   it('normalizes domains, phones, names, and addresses', () => {
@@ -142,6 +145,8 @@ describe('SSRF', () => {
     assert.throws(() => assertSafeScanUrl('http://10.0.0.5/'));
     assert.throws(() => assertSafeScanUrl('http://192.168.1.8/'));
     assert.throws(() => assertSafeScanUrl('file:///etc/passwd'));
+    assert.throws(() => assertSafeScanUrl('http://[::ffff:127.0.0.1]/'));
+    assert.throws(() => assertSafeScanUrl('http://[::ffff:169.254.169.254]/'));
     assert.doesNotThrow(() => assertSafeScanUrl('https://www.cedarridgehvac.example/'));
   });
 });
@@ -172,6 +177,12 @@ describe('manifest and claims', () => {
     });
     const bad = validateNarrative(manifest, 'They spend $12,000 a month on Google Ads and rank #1 vs Rival HVAC.');
     assert.equal(bad.ok, false);
+    const withIntake = {
+      ...manifest,
+      intake: { growth_goals: 'we spend 12000 a month', primary_services: 'hvac', current_channels: 'ads', role: 'owner' },
+    };
+    const stillBad = validateNarrative(withIntake, 'They spend $12,000 a month on Google Ads and rank #1 vs Rival HVAC.');
+    assert.equal(stillBad.ok, false);
     const good = validateNarrative(manifest, 'Homepage HTML does not include a viewport meta tag.');
     assert.equal(good.ok, true);
   });
@@ -385,6 +396,14 @@ describe('vertical slice', () => {
       config: result.cfg,
     });
     assert.equal(checkReport(rendered.html, result.report.manifest).ok, true);
+    assert.match(html, /SEO \+ MARKETING AUDIT/);
+    assert.match(html, /What you told us/);
+    assert.match(html, /more service calls from nearby homeowners/);
+    assert.match(html, /This audit did not name or rank competitors/);
+    assert.match(html, /website rebuild/);
+    assert.equal(/\u2014/.test(html), false);
+    assert.equal(result.prospect.vertical, 'hvac');
+    assert.match(result.outreach.emailDraft.body, /Free public presence audit|This is a draft for a human to send/);
     assert.equal(result.cfg.enableCrm, false);
     assert.equal(result.cfg.enableOutreach, false);
     assert.equal(loadConfig().killSwitch, true);
@@ -409,5 +428,155 @@ describe('vertical slice', () => {
     assert.equal(cfg.enableReportDelivery, false);
     assert.equal(cfg.enableCrm, false);
     assert.equal(cfg.enableOutreach, false);
+    assert.equal(cfg.liveScan, false);
+  });
+});
+
+describe('vertical inference', () => {
+  it('reads HVAC, dental, and remodeling from intake language', () => {
+    assert.equal(inferVertical({ services: 'heating, air conditioning', name: 'Cedar Ridge' }), 'hvac');
+    assert.equal(inferVertical({ services: 'family dentistry', name: 'Bright Smile Dental' }), 'dental');
+    assert.equal(inferVertical({ services: 'kitchen remodel', name: 'Fallston Remodeling' }), 'remodeling');
+    assert.equal(inferVertical({ services: 'widgets' }), 'unknown');
+    assert.equal(offerLabel('seo_aeo'), 'SEO and AI search');
+  });
+});
+
+describe('intake to report', () => {
+  it('does not force HVAC when the form is a dental practice', async () => {
+    const store = await createStore({ databaseUrl: '' });
+    const adapters = createAdapters(loadConfig({ databaseUrl: '' }));
+    const campaign = await createCampaign(store);
+    const body = {
+      business_name: 'Bright Smile Dental',
+      website: 'https://brightsmile.example',
+      city_state: 'Hatboro, PA',
+      requester_name: 'Pat Lee',
+      role: 'owner',
+      requester_email: 'pat@brightsmile.example',
+      primary_services: 'family dentistry and Invisalign',
+      growth_goals: 'more new patient exams',
+      current_channels: 'referrals',
+      consent_analyze: true,
+    };
+    const first = await submitIntake(store, adapters, loadConfig({ databaseUrl: '' }), campaign, body);
+    const resolved = await resolveProspect(store, campaign, first.submission);
+    assert.equal(resolved.prospect.vertical, 'dental');
+  });
+
+  it('turns a fixture intake into a qa_pending branded report', async () => {
+    const store = await createStore({ databaseUrl: '' });
+    const cfg = loadConfig({ databaseUrl: '', liveScan: false });
+    const adapters = createAdapters(cfg);
+    const campaign = await createCampaign(store);
+    const meta = require('../fixtures/cedar-ridge-hvac/meta.json');
+    const submitted = await submitIntake(store, adapters, cfg, campaign, meta.intake);
+    const processed = await processSubmission(store, adapters, cfg, campaign, submitted.submission);
+    assert.equal(processed.ok, true);
+    assert.equal(processed.prospect.lifecycle, 'qa_pending');
+    assert.equal(processed.prospect.vertical, 'hvac');
+    assert.match(processed.report.html, /SEO \+ MARKETING AUDIT/);
+    assert.match(processed.report.html, /What you told us/);
+    assert.equal(processed.report.checks.ok, true, processed.report.checks.fails.join(','));
+  });
+
+  it('serves intake through status without live outbound', async () => {
+    const store = await createStore({ databaseUrl: '' });
+    const cfg = loadConfig({ databaseUrl: '', liveScan: false, qaToken: 'qa-test' });
+    const adapters = createAdapters(cfg);
+    const campaign = await createCampaign(store);
+    const server = createServer({ store, adapters, campaign, cfg });
+    await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+    const { port } = server.address();
+    try {
+      const meta = require('../fixtures/cedar-ridge-hvac/meta.json');
+      const params = new URLSearchParams({
+        business_name: meta.intake.business_name,
+        website: meta.intake.website,
+        city_state: meta.intake.city_state,
+        requester_name: meta.intake.requester_name,
+        role: meta.intake.role,
+        requester_email: meta.intake.requester_email,
+        primary_services: meta.intake.primary_services,
+        growth_goals: meta.intake.growth_goals,
+        current_channels: meta.intake.current_channels,
+        consent_analyze: 'on',
+      });
+      const posted = await fetch(`http://127.0.0.1:${port}/intake`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        body: params,
+        redirect: 'manual',
+      });
+      assert.equal(posted.status, 303);
+      const loc = posted.headers.get('location');
+      assert.match(loc, /^\/status\//);
+      const status = await fetch(`http://127.0.0.1:${port}${loc}`);
+      const html = await status.text();
+      assert.match(html, /Cedar Ridge Heating and Cooling/);
+      assert.match(html, /in human review/);
+      const privacy = await (await fetch(`http://127.0.0.1:${port}/privacy`)).text();
+      assert.doesNotMatch(privacy, /Placeholder/);
+      const prospect = store.findOne('prospects', (p) => p.domain === 'cedarridgehvac.example');
+      assert.equal(prospect.lifecycle, 'qa_pending');
+    } finally {
+      await new Promise((resolve) => server.close(resolve));
+    }
+  });
+
+  it('reuses an in flight audit instead of crashing on a second submit', async () => {
+    const store = await createStore({ databaseUrl: '' });
+    const cfg = loadConfig({ databaseUrl: '', liveScan: false });
+    const adapters = createAdapters(cfg);
+    const campaign = await createCampaign(store);
+    const meta = require('../fixtures/cedar-ridge-hvac/meta.json');
+    const first = await submitIntake(store, adapters, cfg, campaign, meta.intake);
+    const processed = await processSubmission(store, adapters, cfg, campaign, first.submission);
+    assert.equal(processed.prospect.lifecycle, 'qa_pending');
+    const second = await submitIntake(store, adapters, cfg, campaign, {
+      ...meta.intake,
+      requester_email: 'other@cedarridgehvac.example',
+    }, { ip: '203.0.113.20' });
+    const again = await processSubmission(store, adapters, cfg, campaign, second.submission);
+    assert.equal(again.ok, true);
+    assert.equal(again.reuse, true);
+    assert.equal(store.get('prospects', processed.prospect.id).lifecycle, 'qa_pending');
+  });
+
+  it('redacts phones and emails from intake before they reach the report', async () => {
+    const store = await createStore({ databaseUrl: '' });
+    const cfg = loadConfig({ databaseUrl: '', liveScan: false });
+    const adapters = createAdapters(cfg);
+    const campaign = await createCampaign(store);
+    const meta = require('../fixtures/cedar-ridge-hvac/meta.json');
+    const submitted = await submitIntake(store, adapters, cfg, campaign, {
+      ...meta.intake,
+      growth_goals: 'call me at 555-010-0199 or jordan.hale@gmail.com',
+    });
+    const processed = await processSubmission(store, adapters, cfg, campaign, submitted.submission);
+    assert.equal(processed.ok, true);
+    assert.doesNotMatch(processed.report.html, /555-010-0199/);
+    assert.doesNotMatch(processed.report.html, /jordan\.hale@gmail\.com/);
+    assert.match(processed.report.html, /redacted/);
+    assert.equal(processed.report.checks.ok, true, processed.report.checks.fails.join(','));
+    assert.equal(processed.prospect.lifecycle, 'qa_pending');
+  });
+
+  it('writes owner facing outreach drafts that stay unsent', () => {
+    const draft = draftCopy(
+      { business_name: 'Cedar Ridge Heating and Cooling' },
+      {
+        selected_offer: 'rebuild',
+        site_quality_score: 41,
+        explanations: [{ because: 'provable hard faults: no responsive viewport' }],
+      },
+      'http://127.0.0.1:4343/r/test',
+      'http://127.0.0.1:4343/cta/test',
+      { requester_name: 'Jordan Hale', growth_goals: 'more service calls from nearby homeowners' }
+    );
+    assert.match(draft.email.subject, /Free public presence audit/);
+    assert.match(draft.email.body, /Hi Jordan/);
+    assert.match(draft.email.body, /Nothing here has been emailed/);
+    assert.match(draft.callBrief.body, /website rebuild/);
   });
 });

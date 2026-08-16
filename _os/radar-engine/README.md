@@ -31,6 +31,9 @@ node --experimental-strip-types _os/radar-engine/bin/radar-v2.js migrate
 # In-memory vertical slice (no Postgres required)
 node --experimental-strip-types _os/radar-engine/bin/radar-v2.js slice --fixture cedar-ridge-hvac
 
+# Local intake + QA + report server (outbound still dry-run)
+node --experimental-strip-types _os/radar-engine/bin/radar-v2.js serve
+
 # Tests
 node --experimental-strip-types --test _os/radar-engine/tests/*.test.ts
 
@@ -39,7 +42,10 @@ node --test _os/automation/tests/site-grader.test.js _os/automation/tests/automa
 ```
 
 Copy `_os/radar-engine/.env.example` to a gitignored `.env`. All write/send
-flags default off. The kill switch defaults on.
+flags default off. The kill switch defaults on. `POST /intake` now resolves the
+business, infers vertical from the form, scans a matching fixture or a live
+public URL when `RADAR_V2_LIVE_SCAN=true`, and drafts the NeedMomentum report
+through human QA. Outreach, CRM, and report email stay dry-run.
 
 Postgres writes are typed (JSONB objects, text arrays) and job claiming uses
 `FOR UPDATE SKIP LOCKED`. `createStore` hydrates from Postgres on boot. Tests
