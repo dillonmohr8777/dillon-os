@@ -153,7 +153,7 @@
   }
 
   function drawHello(ctx, word, ptr, t, box) {
-    const x = box.left + box.width * 0.5 + (ptr.x - 0.5) * 18;
+    const x = box.left + box.width * 0.56 + (ptr.x - 0.5) * 12;
     const y = box.top + box.height * 0.52 + (ptr.y - 0.5) * 10;
     const desktop = innerWidth >= 900;
     const base = Math.min(box.width * (desktop ? 0.56 : 0.44), box.height * (desktop ? 0.72 : 0.58));

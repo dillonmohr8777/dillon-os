@@ -218,13 +218,14 @@ main {
     grid-template-columns: minmax(26rem, 1fr) minmax(24rem, 48vw);
     grid-template-rows: 1fr;
     align-items: end;
-    gap: 32px;
+    gap: 56px;
   }
   .word-slot {
     grid-column: 2;
     grid-row: 1;
     align-self: stretch;
     min-height: 58vh;
+    padding-left: 6%;
   }
   .hero-copy {
     grid-column: 1;
