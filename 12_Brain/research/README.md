@@ -15,6 +15,7 @@ Survivors compile into `12_Brain/concepts/` with `expires:` dates via
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; Lanes A/C/D probed 2026-08-15 (expires 2026-11-15).
 - [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]] — 50 official MCP servers sampled 2026-08-16; unique gaps vs vault. Expires 2026-11-14.
 - [[12_Brain/concepts/Web Design MCP Catalog 2026|Web Design MCP Catalog 2026]] — 25 web-design-orbit MCPs; factory needs four. Expires 2026-11-14.
+- [[12_Brain/concepts/MCP Blind Spots 2026|MCP Blind Spots 2026]] — official MCPs the 50 and the design 25 never ranked. Expires 2026-11-14.
 
 See also Concepts section of [[12_Brain/INDEX|INDEX]] (dated / expiring pages).
 

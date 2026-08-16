@@ -83,6 +83,7 @@ Fit: **vault** / **accept** / **need** / **session** / **skip** / **watch**.
 
 - Receipts: [[12_Brain/raw/research/2026-08-16 Web Design MCP 25 Receipts]]
 - [[12_Brain/concepts/MCP Stack Catalog 2026|MCP Stack Catalog 2026]]
+- [[12_Brain/concepts/MCP Blind Spots 2026|MCP Blind Spots 2026]]
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] · [[12_Brain/entities/Website Factory|Website Factory]]
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]]
 - Skills: `/site-factory` · `/frontend-build` · `/ui-design`
