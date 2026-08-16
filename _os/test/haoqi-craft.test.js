@@ -54,13 +54,15 @@ describe('haoqi-radar-sites', () => {
     });
   }
 
-  it('Andorra glass word is lowercase smile; Jarman stays hello', () => {
-    assert.match(read('haoqi-radar-sites/andorra-family-dentistry/index.html'), /word:\s*"smile"/);
+  it('Andorra glass line is smile more; Jarman is stay cool', () => {
+    assert.match(read('haoqi-radar-sites/andorra-family-dentistry/index.html'), /word:\s*"smile more"/);
     assert.match(read('haoqi-radar-sites/andorra-family-dentistry/index.html'), /id="word-slot"/);
-    assert.match(read('haoqi-radar-sites/jarman-sales/index.html'), /word:\s*"hello"/);
+    assert.match(read('haoqi-radar-sites/jarman-sales/index.html'), /word:\s*"stay cool"/);
     assert.match(read('haoqi-radar-sites/jarman-sales/index.html'), /id="word-slot"/);
     assert.match(read('haoqi-radar-sites/lib/craft.js'), /toLowerCase\(\)/);
     assert.match(read('haoqi-radar-sites/lib/craft.js'), /word-slot/);
+    assert.match(read('haoqi-radar-sites/lib/craft.js'), /box\.width \* \(desktop \? 0\.96/);
+    assert.doesNotMatch(read('haoqi-radar-sites/lib/craft.js'), /measureText\("hello"\)/);
     assert.match(read('haoqi-radar-sites/lib/craft.css'), /\.word-slot/);
   });
 

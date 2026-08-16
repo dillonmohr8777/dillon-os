@@ -215,10 +215,10 @@ main {
 }
 @media (min-width: 900px) {
   .hero {
-    grid-template-columns: minmax(26rem, 1fr) minmax(24rem, 48vw);
+    grid-template-columns: minmax(22rem, 0.88fr) minmax(28rem, 54vw);
     grid-template-rows: 1fr;
     align-items: end;
-    gap: 56px;
+    gap: 40px;
   }
   .word-slot {
     grid-column: 2;

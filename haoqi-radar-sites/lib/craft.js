@@ -153,20 +153,21 @@
   }
 
   function drawHello(ctx, word, ptr, t, box) {
-    const x = box.left + box.width * 0.56 + (ptr.x - 0.5) * 12;
-    const y = box.top + box.height * 0.52 + (ptr.y - 0.5) * 10;
+    const x = box.left + box.width * 0.5 + (ptr.x - 0.5) * 10;
+    const y = box.top + box.height * 0.48 + (ptr.y - 0.5) * 8;
     const desktop = innerWidth >= 900;
-    const base = Math.min(box.width * (desktop ? 0.56 : 0.44), box.height * (desktop ? 0.72 : 0.58));
+    const maxW = box.width * (desktop ? 0.96 : 0.92);
+    const maxH = box.height * (desktop ? 0.84 : 0.70);
+    let size = Math.min(maxH, desktop ? 300 : 150);
     ctx.save();
-    ctx.font = `700 ${base}px Pacifico, cursive`;
-    const helloW = ctx.measureText("hello").width;
+    ctx.font = `400 ${size}px Pacifico, cursive`;
     const own = Math.max(1, ctx.measureText(word).width);
-    const size = base * Math.min(1, helloW / own);
+    if (own > maxW) size = size * (maxW / own);
     ctx.translate(x, y);
     ctx.rotate(-0.1 + Math.sin(t * 0.0004) * 0.02);
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.font = `700 ${size}px Pacifico, cursive`;
+    ctx.font = `400 ${size}px Pacifico, cursive`;
 
     ctx.fillStyle = "rgba(255,255,255,0.55)";
     ctx.fillText(word, 2, 3);
@@ -346,7 +347,7 @@
           s.v += s.vv;
           if (s.u < 0.06 || s.u > 0.90) s.vu *= -1;
           if (s.v < 0.08 || s.v > 0.88) s.vv *= -1;
-          if (s.u > 0.30 && s.u < 0.70 && s.v > 0.32 && s.v < 0.70) {
+          if (s.u > 0.16 && s.u < 0.84 && s.v > 0.34 && s.v < 0.66) {
             s.u += s.u < 0.5 ? -0.01 : 0.01;
             s.v += s.v < 0.5 ? -0.01 : 0.01;
           }
