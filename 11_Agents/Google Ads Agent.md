@@ -31,3 +31,4 @@ The live client map is verified each run, never trusted from an old list (orches
 ## Notes
 
 - Execution against live ad platforms requires the authenticated Chrome on the 64GB machine (CDP) or platform MCPs; cloud sessions do analysis, drafting, and ledger work
+- `/cli-anything` does not add a Google Ads CLI; missing Ads MCP is still an access problem, not a missing harness

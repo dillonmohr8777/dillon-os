@@ -17,8 +17,11 @@ Break the question into 3–5 sub-questions covering different angles
 Launch parallel subagents, each owning one sub-question on a different
 surface — use whatever is connected this session (WebSearch/WebFetch always;
 X MCP, ScrapeCreators/last30days, yt-dlp, Perplexity, Firecrawl if available).
-Prioritize the practitioner layer (socials, forums, recent threads) over
-6-month-old blog posts — in AI/marketing, stale advice is often actively wrong.
+If a connected MCP returns auth, rate-limit, or discovery errors, follow
+`/cli-anything` before declaring that surface dead (`gh` for GitHub; do not
+install VE Twini for X). Prioritize the practitioner layer (socials, forums,
+recent threads) over 6-month-old blog posts — in AI/marketing, stale advice
+is often actively wrong.
 
 Every finding comes back as a **receipt**: claim + source link + date. No
 receipt, no finding.

@@ -16,7 +16,7 @@ The reporting lane. Turns vault context and performance data into client-ready r
 - `01_Clients/` notes and frontmatter (`due`, `next_action`, status)
 - `System/claude-memory-sync.md` for cross-instance client truth
 - `Daily-Briefs/` history for deltas
-- Platform metrics (Google Ads, GA4, Meta) arrive as JSON exports for now; direct API pulls need those MCPs connected in Cursor first
+- Platform metrics (Google Ads, GA4, Meta) arrive as JSON exports for now; direct API pulls need those MCPs connected in Cursor first. `/cli-anything` does not invent those CLIs.
 
 ## Delivery Schedule
 

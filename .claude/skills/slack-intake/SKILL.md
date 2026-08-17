@@ -5,7 +5,7 @@ description: Read boss and client requests from Slack, classify them, and file s
 
 # Slack Intake
 
-Turn what the bosses and clients ask for in Slack into structured, actionable vault tasks. Requires the Slack MCP connection (available in Cursor cloud agents and any session with Slack MCP configured). If Slack tools aren't available, stop and say so; don't fabricate messages.
+Turn what the bosses and clients ask for in Slack into structured, actionable vault tasks. Requires the Slack MCP connection (available in Cursor cloud agents and any session with Slack MCP configured). If Slack tools aren't available, stop and say so; don't fabricate messages. `/cli-anything` will not repair Slack OAuth or Composio write blocks.
 
 ## Channels to scan
 

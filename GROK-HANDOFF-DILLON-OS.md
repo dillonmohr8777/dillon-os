@@ -33,6 +33,7 @@ Read `AGENTS.md`, `CLAUDE.md`, `12_Brain/INDEX.md`, and `12_Brain/System/Second 
 | `philly-sites/` | Weekly 25-site outreach gallery/factory output | Main contains the shipped batch. Preserve site identity checks, first-party logo provenance, `noindex,nofollow`, and maker-checker QA. |
 | `_os/reporting/` | Client-report CLI | Writes report HTML into `Daily-Briefs/reports/`. Keep client data and attribution definitions separated. |
 | `.mcp.json` / LandingFolio | Optional design-reference MCP | Requires `LANDINGFOLIO_TOKEN`; no token is stored in Git. It remains sandbox-only until the Inspector verification command passes. |
+| `/cli-anything` | CLI-first fallback when an MCP or API fails | Lookup only (`node _os/automation/bin/cli-first.js`). Does not install packages or skip `mcp-gate.js`. |
 
 ## GitHub backlog truth
 

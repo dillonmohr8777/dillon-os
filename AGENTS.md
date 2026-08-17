@@ -39,10 +39,16 @@ to harvest-only design instead of failing a build. Status, rules, and rollback:
 operator runs `node _os/automation/bin/landingfolio-verify.js` to finish the
 Inspector check. Any new MCP goes through `_os/automation/bin/mcp-gate.js` first.
 
+When an MCP or API is missing, expired, rate-limited, or ungated, run
+`/cli-anything` (or `node _os/automation/bin/cli-first.js --query "<error>"`)
+before proposing another server. Prefer official CLIs already on PATH (`gh`
+for GitHub). A catalog harness is not a minted token and does not skip the
+MCP gate. See `12_Brain/concepts/CLI-First Integration.md`.
+
 ### Tests / lint
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/workshop-calendar.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/workshop-calendar.test.js _os/test/cli-anything.test.js
 ```
 
 - Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, and public-safety scanning.

@@ -72,3 +72,4 @@ content depends on the server being reachable.
 - [[12_Brain/protocols/approval-tiers|Approval & safety protocol]]
 - Consuming skills: `.claude/skills/ui-design`, `.claude/skills/ux-audit`,
   `.claude/skills/mirror-and-improve`, `.claude/skills/site-factory`
+- [[12_Brain/concepts/CLI-First Integration|CLI-First Integration]] — no catalog CLI; token + Inspector still required

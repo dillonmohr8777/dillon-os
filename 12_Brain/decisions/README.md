@@ -1,6 +1,6 @@
 ---
 tags: [decisions, index]
-updated: 2026-07-29
+updated: 2026-08-17
 ---
 
 # Decisions
@@ -18,3 +18,4 @@ Use [[12_Brain/templates/Decision|Decision template]]. View in
 
 - [[12_Brain/decisions/2026-07-29 - 12_Brain is the canonical brain layer|2026-07-29 — 12_Brain is the canonical brain layer]]
 - [[12_Brain/decisions/2026-08-13 - Prospect Radar V2 audit engine|2026-08-13 — Prospect Radar V2 is an adapter layer]]
+- [[12_Brain/decisions/2026-08-17 - Institute CLI-Anything as CLI-first fallback|2026-08-17 — CLI-first fallback]] — `/cli-anything` before a new MCP; installs stay Tier 2
