@@ -128,6 +128,18 @@ placeholder copy. A failing result blocks deployment. A pass must still be follo
 by visual review, functional QA, maker/checker review, and exact Netlify target
 verification.
 
+## System heartbeat
+
+```powershell
+node _os/automation/bin/heartbeat.js
+node _os/automation/bin/heartbeat.js --as-of 2026-08-17 --no-write --json
+```
+
+One command that fails the run when a power is ungoverned. Exit `0` on clean or
+advisory-only, `2` on unresolved critical, `1` on crash. It does not send,
+deploy, or enqueue. Generated `12_Brain/state/heartbeat.json` and
+`Daily-Briefs/heartbeat-manifest.md` are gitignored.
+
 ## Other existing commands
 
 ```powershell

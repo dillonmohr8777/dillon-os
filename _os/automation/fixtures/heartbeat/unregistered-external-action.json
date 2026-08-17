@@ -1,0 +1,80 @@
+{
+  "as_of": "2026-08-12",
+  "registry": {
+    "automations": [
+      {
+        "id": "honest-deploy",
+        "name": "Honest deploy",
+        "tier": 2,
+        "command": "node _os/automation/bin/honest-deploy.js",
+        "outputs": ["12_Brain/state/honest-deploy.json"],
+        "external_actions": true,
+        "status": "implemented"
+      },
+      {
+        "id": "blocked-build",
+        "name": "Blocked build",
+        "tier": 0,
+        "command": "node _templates/site-factory/build-batch.js",
+        "external_actions": false,
+        "status": "external-dependency"
+      }
+    ],
+    "gates": {
+      "netlify_deploy_token": "pending-secret"
+    }
+  },
+  "definitions": [],
+  "evidence": [
+    {
+      "id": "home-path-note",
+      "path": "12_Brain/research/ok.md",
+      "expires": "2026-12-01",
+      "evidence": "ran from C:\\Users\\ExampleUser\\codex-wt\\note.md"
+    }
+  ],
+  "commands": [
+    {
+      "id": "honest-deploy",
+      "path": "_os/automation/bin/honest-deploy.js",
+      "exists": true
+    },
+    {
+      "id": "radar-morning",
+      "path": "_os/automation/bin/radar-morning.ps1",
+      "exists": true
+    },
+    {
+      "id": "arch-deploy",
+      "path": "_os/automation/bin/arch-deploy.js",
+      "exists": true
+    },
+    {
+      "id": "read-search",
+      "path": "_os/automation/bin/read-search.js",
+      "exists": true
+    },
+    {
+      "id": "sibling-read",
+      "path": "_os/automation/bin/sibling-read.js",
+      "exists": true
+    }
+  ],
+  "sources": {
+    "_os/automation/lib/netlify.js": "async function deployFiles() {}\nasync function ensureSite() {}\nmodule.exports = { deployFiles, ensureSite };\n",
+    "_os/automation/lib/http.js": "function httpGet() {}\nmodule.exports = { httpGet };\n",
+    "_os/automation/lib/search.js": "const { httpGet } = require('./http');\nasync function search() {\n  return httpGet('/search', { method: 'POST', body: '{}' });\n}\nmodule.exports = { search };\n",
+    "_os/automation/bin/honest-deploy.js": "const { deployFiles, ensureSite } = require('../lib/netlify');\nmodule.exports = { deployFiles, ensureSite };\n",
+    "_os/automation/bin/arch-deploy.js": "const { deployFiles, ensureSite } = require('../lib/netlify');\nmodule.exports = { deployFiles, ensureSite };\n",
+    "_os/automation/bin/radar-morning.ps1": "$repoRoot = 'repo'\ngit push --quiet origin HEAD\n",
+    "_os/automation/bin/read-search.js": "const { search } = require('../lib/search');\nmodule.exports = { search };\n",
+    "_os/automation/bin/sibling-read.js": "const { httpGet } = require('../lib/http');\nmodule.exports = { httpGet };\n"
+  },
+  "files": {
+    "_os/automation/bin/honest-deploy.js": true,
+    "_os/automation/bin/radar-morning.ps1": true,
+    "_os/automation/bin/arch-deploy.js": true,
+    "_templates/site-factory/build-batch.js": false
+  },
+  "assume_missing_unlisted": true
+}

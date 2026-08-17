@@ -1,0 +1,49 @@
+{
+  "as_of": "2026-08-12",
+  "registry": {
+    "automations": [
+      {
+        "id": "nightly-pulse",
+        "name": "Nightly pulse",
+        "tier": 0,
+        "command": "node _os/automation/bin/pulse.js",
+        "outputs": ["structured doctor result"],
+        "external_actions": false,
+        "status": "implemented"
+      }
+    ],
+    "gates": {}
+  },
+  "definitions": [
+    {
+      "id": "nightly-pulse",
+      "status": "ACTIVE",
+      "source": "definitions/pulse.md",
+      "path": "_os/automation/bin/pulse.js",
+      "command": "node _os/automation/bin/pulse.js",
+      "active": true
+    },
+    {
+      "id": "nightly-pulse",
+      "status": "ACTIVE",
+      "source": "11_Agents/pulse-shadow.md",
+      "path": "_os/automation/bin/pulse.js",
+      "command": "node _os/automation/bin/pulse.js",
+      "active": true
+    }
+  ],
+  "evidence": [],
+  "commands": [
+    {
+      "id": "pulse",
+      "path": "_os/automation/bin/pulse.js",
+      "exists": true
+    }
+  ],
+  "sources": {
+    "_os/automation/bin/pulse.js": "module.exports = {};\n"
+  },
+  "files": {
+    "_os/automation/bin/pulse.js": true
+  }
+}
