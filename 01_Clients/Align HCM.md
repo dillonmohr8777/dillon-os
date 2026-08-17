@@ -4,8 +4,8 @@ status: active
 industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
-last_touched: 2026-07-29
-next_action: TBD — needs human next action
+last_touched: 2026-08-17
+next_action: Claude-in-Chrome deploy prompt after Preview gates pass
 due: none
 ---
 
@@ -43,6 +43,11 @@ due: none
 - TPI Composites: 17-slide sales proposal rebuilt in Canva
 - UTA data migration sales sheet
 - Kimberly-Clark case study LinkedIn adaptation
+
+## Customer Agent
+- HubSpot Customer Agent for alignhcm.com. **Launch hold.** No website chat widget as of 2026-08-17.
+- Working files: [[02_FullTimeJob/AlignHCM/Customer-Agent/README|Customer-Agent folder]] · [[02_FullTimeJob/AlignHCM/Customer-Agent/DEPLOY|deploy runbook]]
+- Project: [[12_Brain/projects/Align HCM Customer Agent|Align HCM Customer Agent]]
 
 ## Monthly Reporting
 - Interactive HTML report: SEO blog metrics + LinkedIn engagement

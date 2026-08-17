@@ -7,11 +7,18 @@ tags: [smartcare]
 
 SmartCare is Align HCM's post-go-live HCM support product. It's the core content pillar for the company page and the spine of 2026 marketing strategy.
 
-## Maturity ladder (4 stages)
-1. **Stabilize** — immediate post-go-live support. Fix what's broken, stabilize payroll and timekeeping.
-2. **Essentials** — steady-state operational support and expert access.
-3. **Accelerate** — optimization, reporting, and process improvement.
-4. **Transform** — strategic HCM transformation and platform maturity.
+## Live page ladder (checked 2026-08-17)
+
+Source: [alignhcm.com/align-hcm-smartcare](https://www.alignhcm.com/align-hcm-smartcare)
+
+Partnership levels:
+1. **Stabilize** — prioritized action plan, issue triage, knowledge transfer, monitoring.
+2. **Optimize** — improvements, reporting, integrations, module activation.
+3. **Optimize Plus** — senior expertise, executive alignment, roadmap, advanced analytics.
+
+Managed services (separate block on the same page): **Managed Payroll**, **Managed HRIS**, **Managed WFM**.
+
+Superseded names (do not teach the agent these): Essentials / Accelerate / Transform, and Advisory / Managed / Strategic.
 
 ## Core messages
 - Ongoing expert access.

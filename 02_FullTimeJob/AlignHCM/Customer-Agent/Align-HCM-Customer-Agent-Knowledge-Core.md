@@ -22,7 +22,7 @@ pdf:
     - Service lines
     - Across the full HCM lifecycle
   stats:
-    - 4 · SmartCare levels
+    - 3 · SmartCare levels + managed
     - 6 · Core HCM platforms · teal
     - 59 · Questions asked · orange
   meta:
@@ -86,20 +86,25 @@ Ten service lines across the HCM lifecycle. Scope is always confirmed through di
 
 ## 03 SmartCare
 
-Vendor-agnostic managed HCM support. Four public service levels:
+Vendor-agnostic post-go-live HCM support. Live page copy as of 2026-08-17.
 
-| Level | Name | Focus |
-|-------|------|-------|
-| 01 | Stabilize | Steady environment; control day-to-day operational risk after go-live |
-| 02 | Essentials | Reliable ongoing administration, support, maintenance |
-| 03 | Accelerate | Optimization, reporting, improvement work |
-| 04 | Transform | Strategic, roadmap-level partnership |
+Partnership levels on [alignhcm.com/align-hcm-smartcare](https://www.alignhcm.com/align-hcm-smartcare):
+
+| Level | Name | Focus on the live page |
+|-------|------|------------------------|
+| 01 | Stabilize | Prioritized action plan, issue triage, knowledge transfer, monitoring |
+| 02 | Optimize | Improvements, reporting, integrations, module activation |
+| 03 | Optimize Plus | Senior expertise, executive alignment, roadmap, advanced analytics |
+
+Managed services on the same page (not a fourth partnership level): **Managed Payroll**, **Managed HRIS**, **Managed WFM**.
+
+Do not answer with Essentials / Accelerate / Transform, or Advisory / Managed / Strategic. Those strings are not on the live page.
 
 **Public commitments:** No migration required · No co-employment · No vendor lock-in (UKG, Dayforce, Paylocity, Workday, ADP, and more).
 
 **Never infer from a tier name:** The right level and included services require discovery. Never infer entitlement, staffing, response time, or price from a tier name alone.
 
-Source: [alignhcm.com/align-hcm-smartcare](https://www.alignhcm.com/align-hcm-smartcare)
+Source: [alignhcm.com/align-hcm-smartcare](https://www.alignhcm.com/align-hcm-smartcare) · checked 2026-08-17
 
 ---
 
@@ -349,7 +354,7 @@ Full verbatim set from `handoffs/align-customer-agent-autonomous-prompt-2026-07-
 
 | ID | Pri | Verbatim question | Must include (approved answer spec) | Status |
 |----|-----|-------------------|--------------------------------------|--------|
-| 25 | High | What is SmartCare? | Advisory, Managed, Strategic; one line each. **Conflicts with the site and with the Aug 10 audit bar, which expects Stabilize, Essentials, Accelerate, Transform. Do not score until settled.** | ASKED · Jul 23 probe A1 asked a cite-requiring variant, EXEC FAIL · Aug 10 spot-check FAIL, tiers not named |
+| 25 | High | What is SmartCare? | Live page 2026-08-17: Stabilize, Optimize, Optimize Plus, plus Managed Payroll / HRIS / WFM. Not Advisory/Managed/Strategic and not Essentials/Accelerate/Transform. | ASKED · settled against live page · Jul 23 A1 EXEC FAIL · Aug 10 spot-check FAIL under the old ladder |
 | 26 | High | What managed services? | Managed Payroll, Managed HRIS, Managed WFM; ongoing ops support. | ASKED |
 | 27 | Med | Live but system is a mess | Advisory plus assessment; ask platform; route to a human. | SCENARIO, not a question string |
 | 28 | Med | What is HOPE? | HCM Optimization and Performance Evaluation diagnostic; duration only if published. | ASKED |

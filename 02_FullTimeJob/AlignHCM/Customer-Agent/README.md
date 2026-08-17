@@ -2,15 +2,15 @@
 employer: Align HCM
 project: Customer Agent
 type: folder-index
-updated: 2026-08-10
+updated: 2026-08-17
 tags: [align-hcm, customer-agent, hubspot]
 ---
 
 # Align HCM Customer Agent · document set
 
-HubSpot portal **242825734** · agent **Align HCM Customer Agent** · prompt
-prompt stamp **v2026-07-30.4** with unpublished changes · **LAUNCH HOLD** (Preview only,
-no website channel, verified by independent audit 2026-08-10).
+HubSpot portal **242825734** · agent **Align HCM Customer Agent** · last
+verified prompt **v2026-07-30.5** · **LAUNCH HOLD** (Preview only, no website
+channel as of 2026-08-17). Live deploy is a Claude in Chrome run. See `DEPLOY.md`.
 
 The Markdown files are the source of truth. The PDFs are generated from them,
 never edited by hand.
@@ -21,6 +21,7 @@ never edited by hand.
 | `Align-HCM-Customer-Agent-Readiness-Report.md` | Evidence-based readiness review, launch gates, go/no-go, appendices A to G |
 | `Align-HCM-Customer-Agent-Question-Registry.md` | Master registry of every Claude-in-Edge prompt, parts I to VII |
 | `Align-HCM-Customer-Agent-Test-Results-2026-07-30.md` | Raw July 30 Preview session log |
+| `DEPLOY.md` | Why the cloud agent cannot click Deploy, and the gated local path |
 | `generate-pdfs.py` | Build script for the three PDFs |
 | `align_html/style.css` | The design system: palette, type scale, and every component |
 | `align_html/render.py` | Markdown to HTML converter targeting those components |
@@ -93,20 +94,21 @@ Conventions the renderer relies on:
 
 ## Open items
 
-Superseded by the August 10 independent audit. Readiness Report **Part III** is
-the current state; sections 01 to 18 carry July 31 state and are superseded
-wherever the two disagree.
+August 10 portal audit still governs channel state. August 17 live-site checks
+updated SmartCare copy and the case-study list. PDFs were not rebuilt for the
+SmartCare correction; Markdown is current.
 
-- **BL-10, highest priority:** `IDENTITY (HARD)` is truncated mid-clause in the
-  portal and two HARD rules a later patch was reported to add are absent. Establish
-  the real Guidelines field limit, then re-read every field after saving
-- **BL-11:** nine of ten case studies are not connected as sources. This
-  reclassifies the July 23 `A5` retrieval failure as a data gap
-- **BL-12:** the prompt version stamp reads v2026-07-30.4 with one unpublished
-  change outstanding, so the v.5 claim is unverified
-- **BL-13:** capability case 25's workbook spec ("Advisory, Managed, Strategic")
-  contradicts the site's four SmartCare levels. Do not score it until settled
-- **BL-2:** case 52 identity bypass still fails, on the coverage claim rather than
-  the troubleshooting boundary. Case 49 closed August 10
-- Guardrail cases 1 to 45 unrun, workbooks rights-encrypted; need CSV exports
-- Capability suite scores not returned, so the 90% dimension gate cannot be evaluated
+- **BL-10:** `IDENTITY (HARD)` truncated in the portal on Aug 10. Fix prompt:
+  `handoffs/align-customer-agent-truncation-fix-2026-08-10.md`
+- **BL-11:** most individual case studies were unconnected on Aug 10. Live site
+  has **11** individual studies plus the index (Alsco is on page 2). Connect
+  them during the deploy prompt, do not invent extras
+- **BL-13, settled against the live page:** SmartCare is Stabilize, Optimize,
+  Optimize Plus, plus Managed Payroll / HRIS / WFM. The workbook spec and the
+  old four-name ladder are both wrong
+- **BL-2:** case 52 identity bypass still fails. This is the live-channel gate
+- alignhcm.com has **no chat widget** yet. Deploy must create or assign a live
+  chat channel, then click Deploy, only after G0 / 49 / 52 pass
+- Guardrail cases 1 to 45 unrun; capability scores outstanding
+- Paste `handoffs/align-customer-agent-deploy-prompt-2026-08-17.md` on the Align
+  machine to execute the gated deploy
