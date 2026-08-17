@@ -5,7 +5,7 @@ role: Digital Marketing Manager
 employment_type: full-time W2
 division: Align HCM (full-time)
 status: active
-last_touched: 2026-04-15
+last_touched: 2026-08-17
 tags: [fulltime, align-hcm, smartcare, linkedin, content]
 ---
 
@@ -27,13 +27,26 @@ Digital Marketing Manager. Owns LinkedIn content production across five profiles
 60–90 second talking-head video scripts; 1080x1350 portrait motion graphics; 1200x627 landscape motion graphics; static graphics; carousels; native text posts.
 
 ## SmartCare — core content pillar
-Post-go-live HCM support product. Four maturity stages:
+Post-go-live HCM support product. Live page copy as of 2026-08-17
+([alignhcm.com/align-hcm-smartcare](https://www.alignhcm.com/align-hcm-smartcare)):
+
+Partnership levels:
 1. **Stabilize**
-2. **Essentials**
-3. **Accelerate**
-4. **Transform**
+2. **Optimize**
+3. **Optimize Plus**
+
+Managed services: **Managed Payroll**, **Managed HRIS**, **Managed WFM**.
+
+The older vault ladder (Essentials / Accelerate / Transform) and the capability
+workbook spec (Advisory / Managed / Strategic) do not match the live page.
 
 Messaging emphasis: ongoing expert access, platform optimization, post-go-live support.
+
+## Customer Agent (HubSpot)
+- Portal **242825734** · agent **Align HCM Customer Agent** · **LAUNCH HOLD** (Preview only, no website chat as of 2026-08-17).
+- Docs: [[02_FullTimeJob/AlignHCM/Customer-Agent/README|folder]], [[02_FullTimeJob/AlignHCM/Customer-Agent/DEPLOY|deploy runbook]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Knowledge-Core|Knowledge Core]], [[02_FullTimeJob/AlignHCM/Customer-Agent/Align-HCM-Customer-Agent-Readiness-Report|Readiness Report]].
+- Prompt version last verified in portal: **v2026-07-30.5**. G0 **PASS**. Case 52 still a High fail. Live deploy is a Claude in Chrome run, not a cloud action.
+- Project: [[12_Brain/projects/Align HCM Customer Agent|Align HCM Customer Agent]]
 
 ## Deliverables in flight
 - April and May 2026 LinkedIn content calendars (both complete).

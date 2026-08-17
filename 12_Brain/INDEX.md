@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-17
 ---
 
 # INDEX — the front door
@@ -64,6 +64,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
+- [[12_Brain/projects/Align HCM Customer Agent|Align HCM Customer Agent]] — HubSpot Customer Agent; launch hold; live channel needs Claude in Chrome.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
@@ -86,6 +87,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Folder indexes (working vault)
 
 - [[01_Clients/Client Index|Client Index]] — full roster.
+- [[02_FullTimeJob/AlignHCM/Customer-Agent/README|Align HCM Customer Agent]] — HubSpot agent docs; launch hold; gated deploy prompt.
 - [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs.
 - [[10_Sessions/Session Index|Session Index]] — build logs.
 - `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).
