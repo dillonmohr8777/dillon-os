@@ -1,0 +1,114 @@
+{
+  "id": "dillon-command",
+  "name": "Dillon Command Center",
+  "version": 1,
+  "contract": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "codex_handoff": "11_Agents/Next Codex 64GB Orchestrator Handoff 2026-07-08.md",
+  "supersedes": [
+    "morning-loop (slack-intake + am-report + client-pulse as separate crons)",
+    "per-lane scheduled agents without a commander"
+  ],
+  "run_artifacts": "automation-runs/dillon-command/YYYY-MM-DD/",
+  "concurrency": {
+    "max_parallel_lanes": 8,
+    "max_concurrent_agents": 8,
+    "max_depth": 3
+  },
+  "tiers": {
+    "0": "read, analyze, draft, build vault artifacts — unattended",
+    "1": "reversible platform tweaks — one approval batch",
+    "2": "outbound, spend, deploy, credentials — Dillon only"
+  },
+  "lanes": [
+    {
+      "id": "command",
+      "name": "Command / routing",
+      "codex_lane": "A+H",
+      "tier": 0,
+      "skill": "dillon-command",
+      "scout": "scan Dashboard.md, System/OS Config.md, Morning Directives if present",
+      "outputs": ["approval-board.md", "run-state.json", "tier2-queue.md"]
+    },
+    {
+      "id": "comms",
+      "name": "Gmail / Slack / follow-up",
+      "codex_lane": "B",
+      "tier": 0,
+      "skills": ["slack-intake", "inbox-brief"],
+      "scout": "00_Inbox/slack/, Daily-Briefs/slack-intake-*.md, System/urgent-replies.md",
+      "outputs": ["00_Inbox/slack/", "Daily-Briefs/slack-intake-YYYY-MM-DD.md"],
+      "mcp_optional": ["slack"],
+      "notes": "Slack MCP read-only when available; vault digest fallback otherwise"
+    },
+    {
+      "id": "clients",
+      "name": "Client roster / pulse",
+      "codex_lane": "F-pulse",
+      "tier": 0,
+      "skills": ["client-pulse"],
+      "command": "node _os/automation/bin/frontmatter-validate.js",
+      "scout": "01_Clients/**/*.md frontmatter and open tasks",
+      "outputs": ["Daily-Briefs/pulse-today.md", "Daily-Briefs/frontmatter-report.md"]
+    },
+    {
+      "id": "intelligence",
+      "name": "Research / Grok / X scout",
+      "codex_lane": "G-intel",
+      "tier": 0,
+      "skills": ["research-sweep"],
+      "scout": "12_Brain/01_Captures/Grok/, 12_Brain/06_Research/",
+      "outputs": ["12_Brain/01_Captures/Grok/", "12_Brain/state/grok-intelligence-ingest.json"],
+      "mcp_optional": ["grok", "xai"]
+    },
+    {
+      "id": "websites",
+      "name": "Site health / factory queue",
+      "codex_lane": "D+E",
+      "tier": 0,
+      "skills": ["site-factory", "site-grade"],
+      "command": "node _os/automation/bin/site-health.js --dry-run",
+      "scout": "12_Brain/registry/properties.json, 00_Inbox/slack/ type:website-build",
+      "outputs": ["Daily-Briefs/site-health-report.md", "12_Brain/state/site-health.json"]
+    },
+    {
+      "id": "outreach",
+      "name": "Prospect discover / qualify",
+      "codex_lane": "outreach",
+      "tier": 0,
+      "skills": ["site-batch"],
+      "command": "node _os/automation/bin/queue-status.js",
+      "scout": "12_Brain/queue/, 08_Prospects/",
+      "outputs": ["12_Brain/queue/qualify-*.jsonl", "08_Prospects/*.md"]
+    },
+    {
+      "id": "ads",
+      "name": "Paid media scouts",
+      "codex_lane": "C",
+      "tier": 0,
+      "skills": ["metrics-pull"],
+      "scout": "01_Clients/*/Optimization Ledger.md, ads-related 00_Inbox/slack/",
+      "outputs": ["lane-ads.md"],
+      "mcp_required_for_live": ["google-ads", "meta-ads"],
+      "notes": "Cloud runs vault-only scouts; live account reads need authenticated Chrome or ads MCP"
+    },
+    {
+      "id": "reporting",
+      "name": "AM brief / client reports",
+      "codex_lane": "F",
+      "tier": 0,
+      "skills": ["am-report", "client-report"],
+      "scout": "Daily-Briefs/, report due dates in client notes",
+      "outputs": ["Daily-Briefs/am-report-YYYY-MM-DD.md", "Daily-Briefs/reports/"]
+    }
+  ],
+  "p0_tiebreak": [
+    "launch blocked",
+    "billing risk",
+    "ad disapprovals",
+    "calendar hard deadline"
+  ],
+  "push": {
+    "cloud": "one PR: approval board + AM report + pulse",
+    "local": "one phone notification deep-linked to approval board"
+  }
+}

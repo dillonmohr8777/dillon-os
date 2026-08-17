@@ -128,6 +128,27 @@ placeholder copy. A failing result blocks deployment. A pass must still be follo
 by visual review, functional QA, maker/checker review, and exact Netlify target
 verification.
 
+## Dillon Command Center (umbrella daily loop)
+
+One scheduled automation replaces separate morning-loop crons. The commander fans out eight
+parallel lane scouts and writes a single approval board.
+
+```powershell
+node _os/automation/bin/dillon-command.js
+node _os/automation/bin/dillon-command.js --agent-mode --json
+```
+
+Artifacts land in `automation-runs/dillon-command/YYYY-MM-DD/`:
+
+- `approval-board.md` — ranked P0 stack + lane status
+- `run-state.json` — counts and lane vitals
+- `tier2-queue.md` — outbound/deploy/spend (never auto-run)
+- `agent-manifest.json` — parallel sub-agent contract for cloud runs
+
+Profile: `_os/automation/profiles/dillon-command.json`
+Skill: `.claude/skills/dillon-command/SKILL.md`
+Cron setup: `handoffs/Dillon Command Center Scheduled Agent Setup.md`
+
 ## Other existing commands
 
 ```powershell

@@ -1,9 +1,31 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-17",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
+    {
+      "id": "dillon-command",
+      "name": "Dillon Command Center (umbrella daily orchestrator)",
+      "lane": "command",
+      "tier": 0,
+      "cadence": "weekdays 06:45 ET",
+      "command": "node _os/automation/bin/dillon-command.js",
+      "skill": ".claude/skills/dillon-command/SKILL.md",
+      "profile": "_os/automation/profiles/dillon-command.json",
+      "inputs": ["Dashboard.md", "00_Inbox/slack/", "01_Clients/", "12_Brain/registry/automations.json"],
+      "outputs": [
+        "automation-runs/dillon-command/YYYY-MM-DD/approval-board.md",
+        "automation-runs/dillon-command/YYYY-MM-DD/run-state.json",
+        "Daily-Briefs/am-report-YYYY-MM-DD.md",
+        "Daily-Briefs/pulse-today.md"
+      ],
+      "parallel_lanes": ["command", "comms", "clients", "intelligence", "websites", "outreach", "ads", "reporting"],
+      "supersedes": ["morning-loop-slack-intake", "morning-loop-am-report", "morning-loop-client-pulse"],
+      "external_actions": false,
+      "notes": "One cron replaces separate morning-loop agents. Cloud push = one PR. Lane agents fan out in parallel per agent-manifest.json.",
+      "status": "implemented"
+    },
     {
       "id": "frontmatter-validate",
       "name": "Client frontmatter validation",

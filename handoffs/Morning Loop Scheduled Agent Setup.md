@@ -4,7 +4,9 @@ tags: [handoff, automation, slack]
 
 # Morning Loop: Scheduled Agent Setup
 
-This wires the daily loop: every morning a cloud agent reads Slack, files boss requests into the vault, and writes the morning brief. Dillon does this once; it runs forever after.
+> **Superseded** by `handoffs/Dillon Command Center Scheduled Agent Setup.md`. Do not schedule this as a separate cron — use `/dillon-command` instead.
+
+This wired the old three-step daily loop: every morning a cloud agent reads Slack, files boss requests into the vault, and writes the morning brief.
 
 ## One-time setup (Dillon, ~3 minutes)
 

@@ -32,7 +32,7 @@ Deck buttons; the dashboard itself works without it).
 Defined in `.claude/skills/`, all vault-native (they read the vault and write
 results back into `Daily-Briefs/` or `12_Brain/`):
 
-Daily: `am-report` · `inbox-brief` · `plan-today` · `client-pulse` · `metrics-pull`
+Daily: **`dillon-command`** (umbrella — 8 parallel lanes) · `am-report` · `inbox-brief` · `plan-today` · `client-pulse` · `metrics-pull`
 · `content-scan` · `week-review` · `vault-clean`
 
 Brain: `session-mine` · `vault-compile` · `wiki-lint` · `synthesize` · `research-sweep`
