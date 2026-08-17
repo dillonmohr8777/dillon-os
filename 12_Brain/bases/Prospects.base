@@ -1,0 +1,22 @@
+filters:
+  and:
+    - file.inFolder("08_Prospects")
+    - file.ext == "md"
+views:
+  - type: table
+    name: Scored
+    filters:
+      and:
+        - status == "scored"
+    order:
+      - score
+      - file.name
+  - type: table
+    name: Suppressed
+    filters:
+      and:
+        - status == "suppressed"
+---
+# Prospects Base stub
+
+Lists notes under `08_Prospects/`. Score and status come from qualify frontmatter.

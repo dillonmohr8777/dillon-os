@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "landingfolio": {
+      "url": "https://mcp.landingfolio.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:LANDINGFOLIO_TOKEN}"
+      }
+    }
+  }
+}

@@ -18,3 +18,6 @@ All routines: initialized, first runs scheduled. Vault is seeded with frontmatte
 
 ## Notes
 - First real test of the full routine stack begins 2026-04-16.
+
+## Brain layer
+- Canonical: [[12_Brain/README|12_Brain]] · [[12_Brain/System/Health Automation|Health Automation]]

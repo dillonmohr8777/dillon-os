@@ -240,13 +240,6 @@ tags:
 
 This note compiles immutable Grok run captures. External claims remain time-bound
 until independently verified.
-
-## Brain connections
-
-- [[12_Brain/00_Home|Brain Home]]
-- [[12_Brain/05_Projects/2026-07-30 - Integrate daily intelligence stack|Daily intelligence stack]]
-- [[12_Brain/03_Concepts/Marketing Intelligence Operating System|Marketing intelligence operating system]]
-- [[12_Brain/03_Concepts/Automation and Workflow Engineering|Automation and workflow engineering]]
 `;
 }
 
@@ -345,6 +338,5 @@ module.exports = {
   normalizeCandidate,
   validateGrokEnvelope,
   createExperiment,
-  renderResearchHeader,
   ingestGrokRun,
 };

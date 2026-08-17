@@ -52,9 +52,15 @@ flowchart TD
 - **Vertical fit:** does Momentum have an industry page and case studies here (see [[Market Roster]])
 - **Ad presence:** already spending means already sold on marketing
 
-**Status: partly automated.** Decay signals are now harvested automatically by `harvest.js` (`decaySignals.missingViewport`, `staleCopyrightYear`, empty phone/hours, thin homepage copy). Full 0–100 ranking across a prospect sheet is still manual.
+**Status: automated.** Built 2026-08-06 — see [[Site Grader]] and the `/site-grade` skill.
 
-**To automate next:** a scoring script that takes prospect rows, runs harvest, and emits a 0–100 score with reasons. Playwright is already installed for harvest and QA.
+`bin/grade-sites.js` takes prospect rows and emits two 0–100 scores with per-finding reasons: a **Site Quality Score** (how good their current site is) and an **Opportunity Score** (whether to spend a build slot). Discovery is automated too — `bin/discover-prospects.js` pulls candidates from OpenStreetMap and filters chains, social-only listings, and every domain we have already built for.
+
+The scoring runs in tiers so a 500-row pull is affordable: Tier 0 is one HTTP fetch per candidate with no browser, Tier 1 renders only the candidates still undecided, Tier 2 adds a human taste verdict. An existing `harvest.json` is reused as free Tier 1 evidence.
+
+**Crucially, this stage now answers Mac's 2026-08-05 objection** that some prospects already have really great websites. A strong site no longer scores as a good target — and it is not discarded either, it routes to an ads / local SEO / GBP offer instead. Graded against their own sites, only 9% of the completed 100 would qualify for a rebuild today, versus 18% of a fresh Philadelphia pull.
+
+**To automate next:** feed ability-to-pay signals (review count, rating, ad presence, GBP status) from Mac's Maps sheet into the opportunity score. OSM carries none of them, which caps `opportunity_confidence` at 0.65 for discovered rows.
 
 ## Stage 3: Brief
 
@@ -123,10 +129,10 @@ Per the tier rules in `AGENTS.md` and the orchestrator spec, everything up to he
 | Deploy previews | Manual, scripted | Netlify per-batch, private noindex drafts. Needs a deploy token in Cursor Cloud Agent secrets to automate. |
 | Tracked URL per prospect | **Automated** | Batch runner emits `qr_target_url` with UTM parameters per prospect. |
 | QR code generation | Partly automated | Zapier + QRTiger from the sheet, per Mac's 2026-07-22 links. Our CSV is the input; we deliberately use his chosen tooling rather than a parallel QR system. |
-| Mail merge | Test-mode staging implemented | PostGrid is selected for the Sheet/Zapier/API path. `direct-mail-plan.js` validates factory output without sending or copying recipient addresses into its plan. Generated `prospects.csv` always sets `mail_ready=hold`; only exact batch approval may authorize production. |
+| Mail merge | Not automated | PostGrid or StackAdapt via Zapier from the sheet. Generated `prospects.csv` always sets `mail_ready=hold`; `qa_ready` is the automation signal. Only explicit human approval may flip `mail_ready`. Vendor not yet chosen. **This is the known gap.** |
 | Gatekeep the call | Not built | QR should land on the site with a clear "this was built for you, book a call" path, and the booking link should carry the prospect ID so scans attribute to calls. |
 
-**To activate next, in order:** verify the exact Netlify target for the batch, provision an approved PostGrid test account and secret locator, then validate QR-to-booking attribution. The authenticated Netlify session exists; no site is selected by inference.
+**To automate next, in order:** Netlify deploy token, then the mail vendor decision, then the QR-to-booking attribution.
 
 ## Stage 8: Learn
 
@@ -142,13 +148,13 @@ This mirrors the Optimization Ledger hypothesis pattern from the orchestrator sp
 
 | Stage | Automated | Owner | Next action |
 |---|---|---|---|
-| 1 Discover | Partly | Jesse + Dillon | Stand up the shared prospect sheet with stable IDs |
-| 2 Qualify | No | Dillon | Build the site-decay scoring script |
+| 1 Discover | Partly | Jesse + Dillon | OSM discovery shipped; still needs the shared sheet with stable IDs |
+| 2 Qualify | Yes | Dillon | Feed Maps review/ad data into the opportunity score |
 | 3 Brief | Yes (agent) | Dillon | None; runbook exists |
 | 4 Build | Yes | Dillon | None; batch runner shipped |
 | 5 Quality gate | Yes + human | Dillon | None; enforced per batch |
 | 6 Approval | Manual by design | Mac / Melissa | Keep the one-link plus Loom format |
-| 7 Activate | Partly | Dillon + Mac | Verify the exact Netlify target, connect the approved PostGrid test account, then approve an exact production batch |
+| 7 Activate | Partly | Dillon + Mac | Deploy token, then pick the mail vendor |
 | 8 Learn | No | Dillon | Create the results ledger on batch 1 |
 
-**Short answer for Mac:** stages 2 through 5 are automated, the factory builds and QAs a whole batch, and PostGrid is selected with a safe planning command. Live Indeed intake needs Partner API access. Stage 7 needs an exact verified deployment target, an approved PostGrid account, and exact batch approval. Approval stays human on purpose.
+**Short answer for Mac:** stages 2 through 5 are fully automated now — one command grades a market, another builds and QAs a whole batch. Stage 1 has automated discovery but still wants the shared sheet for review and ad data. Stage 7 is blocked on a mail vendor decision plus a deploy token. Approval stays human on purpose.

@@ -7,7 +7,7 @@ owner: Dillon Mohr
 area: automation
 priority: high
 outcome: "Daily Grok research becomes source-linked Dillon OS intelligence and only verified experiments can affect the stack or websites."
-next_action: "Review the first real scheduled Grok ingestion and run the AEO gate on each production batch preview."
+next_action: "Review the first real scheduled Grok ingestion and connect the AEO gate to the merged site-factory entrypoint."
 review_on: 2026-07-31
 verification_status: verified
 source_refs:
@@ -27,6 +27,8 @@ tags:
 
 - Grok JSON ingestion with immutable captures, daily research synthesis, and replay
   protection
+- direct xAI Responses API collection with X Search, web verification, citations,
+  usage evidence, and a DPAPI-protected credential route
 - Obsidian experiment queue with deterministic experiment IDs
 - maker/checker handoff contracts, artifact hashes, independent verdicts, and a
   default human adoption gate
@@ -37,18 +39,19 @@ tags:
 
 ## Verified
 
-- 28 local automation tests pass
+- 17 local automation tests pass
 - Grok fixture ingests once and the exact replay is detected as a duplicate
 - Context7 returns only its two declared read-only documentation tools
 - healthy AEO fixture passes and broken fixture fails
 - maker/checker fixture stops after checker pass because human approval was not
   manufactured
-- Indeed's official Partner API path now has one bounded command for dry-run,
-  live envelope creation, and shared qualification; OAuth uses the documented
-  HTTP Basic token exchange and no credentials are persisted.
 
-## Factory integration
+## Remaining integration edge
 
-PR #226 is merged and its weekly 25-site factory is installed in this vault at
-merge commit `a2d99ad`. Run `aeo-trust-gate.js` on every built preview before an
-exact mapped deployment. A gate pass does not authorize publication.
+PR #226 is still the canonical weekly 25-site factory dependency. Once that exact
+branch is merged or reconciled, call `aeo-trust-gate.js` on every built preview
+before its existing deploy command. Do not duplicate the factory into this vault.
+
+The xAI research key is intentionally chat-only, limited to 10 requests per
+minute and 250,000 tokens per minute, and expires on 2026-10-28. Its non-secret
+Access Broker locator is `dpapi-bootstrap://xai/dillon-os/daily-x-search`.

@@ -1,0 +1,68 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>Philadelphia 25 | Design Upgrade Review</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><style>
+:root{--bg:#0b0d12;--ink:#f2f5fb;--muted:#9aa5b8;--accent:#b6f36d;--line:#ffffff1e;--card:#ffffff0a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Space Grotesk",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{width:min(1280px,calc(100% - 40px));margin:auto}
+header{padding:84px 0 40px}
+.k{font:600 11px/1 "IBM Plex Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.03em;margin:18px 0 20px;max-width:16ch;text-wrap:balance}
+header p{max-width:640px;color:var(--muted);margin:0;text-wrap:pretty}
+.controls{position:sticky;top:0;z-index:5;background:#0b0d12e6;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.controls .wrap{display:flex;gap:10px;flex-wrap:wrap;padding:14px 0}
+.controls button{min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);font:600 12px "IBM Plex Mono",monospace;letter-spacing:.04em;cursor:pointer;transition:border-color .2s ease,background .2s ease}
+.controls button:hover{border-color:#ffffff45}
+.controls button.active{background:var(--accent);border-color:var(--accent);color:#111708}
+.controls input{min-height:44px;flex:1;min-width:200px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 13px "Space Grotesk",sans-serif}
+.controls input::placeholder{color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+main{padding:38px 0 96px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{display:flex;flex-direction:column;gap:8px;padding:22px 22px 20px;border:1px solid var(--line);border-radius:16px;background:var(--card);text-decoration:none;color:inherit;transition:transform .2s ease,border-color .25s ease,background .25s ease}
+.card:hover{transform:translateY(-3px);border-color:#ffffff40;background:#ffffff10}
+.card:active{transform:translateY(-1px) scale(.99)}
+.meta{display:flex;justify-content:space-between;font:600 10px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.card h2{margin:6px 0 0;font-size:1.35rem;line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+.card p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.55;text-wrap:pretty}
+.card .open{margin-top:auto;padding-top:14px;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+footer{padding:26px 0 40px;border-top:1px solid var(--line);color:var(--muted);font:500 11px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+[hidden]{display:none!important}
+@media(max-width:960px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){header{padding-top:60px}.grid{grid-template-columns:1fr}.card{padding:20px 18px 18px}}
+@media(prefers-reduced-motion:reduce){.card,.controls button{transition:none}}
+</style></head><body>
+<header class="wrap"><p class="k">Momentum Digital | internal review | upgraded set</p><h1>Philadelphia 25, upgraded.</h1><p>All twenty five polished prospect homepages after the design taste pass: real brand fonts wired up, proper transparent logos, cleaner copy, and mobile typography that breathes.</p></header>
+<div class="controls"><div class="wrap"><button class="active" data-filter="all">All 25</button><button data-filter="food">Food &amp; drink</button><button data-filter="culture">Culture &amp; gardens</button><button data-filter="retail">Retail</button><input id="q" type="search" placeholder="Search business"></div></div>
+<main class="wrap"><div class="grid">
+<a class="card" data-kind="food" href="genos-steaks/index.html"><span class="meta"><span>PHL011</span><span>Restaurant</span></span><h2>Geno's Steaks</h2><p>1219 South 9th Street, Philadelphia, PA 19147</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="pats-king-steaks/index.html"><span class="meta"><span>PHL012</span><span>Restaurant</span></span><h2>Pat's King of Steaks</h2><p>1237 E. Passyunk Ave, Philadelphia, PA 19147</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="dibruno-bros/index.html"><span class="meta"><span>PHL013</span><span>Specialty foods</span></span><h2>Di Bruno Bros. Italian Market</h2><p>930 S. 9th Street, Philadelphia, PA 19147</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="termini-bros/index.html"><span class="meta"><span>PHL014</span><span>Bakery</span></span><h2>Termini Brothers Bakery</h2><p>1523 South 8th Street, Philadelphia, PA 19147</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="isgro-pastries/index.html"><span class="meta"><span>PHL015</span><span>Bakery</span></span><h2>Isgro Pastries</h2><p>1009 Christian Street, Philadelphia, PA 19147</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="johns-roast-pork/index.html"><span class="meta"><span>PHL016</span><span>Restaurant</span></span><h2>John's Roast Pork</h2><p>14 East Snyder Avenue, Philadelphia, PA 19148</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="franklin-fountain/index.html"><span class="meta"><span>PHL017</span><span>Ice cream</span></span><h2>Franklin Fountain</h2><p>116 Market Street, Philadelphia, PA 19106</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="zahav/index.html"><span class="meta"><span>PHL018</span><span>Restaurant</span></span><h2>Zahav</h2><p>237 St. James Pl, Philadelphia, PA 19106</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="standard-tap/index.html"><span class="meta"><span>PHL019</span><span>Gastropub</span></span><h2>Standard Tap</h2><p>901 N 2nd Street, Philadelphia, PA 19123</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="la-colombe-rittenhouse/index.html"><span class="meta"><span>PHL020</span><span>Coffee</span></span><h2>La Colombe, Rittenhouse Square</h2><p>130 South 19th Street, Philadelphia, PA 19103</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="frankford-hall/index.html"><span class="meta"><span>PHL021</span><span>Beer garden</span></span><h2>Frankford Hall</h2><p>1210 Frankford Avenue, Philadelphia, PA 19125</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="johnny-brendas/index.html"><span class="meta"><span>PHL022</span><span>Music venue</span></span><h2>Johnny Brenda's</h2><p>1201 Frankford Ave, Philadelphia, PA 19125</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="suraya/index.html"><span class="meta"><span>PHL023</span><span>Restaurant</span></span><h2>Suraya</h2><p>1528 Frankford Avenue, Philadelphia, PA 19125</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="reanimator-coffee/index.html"><span class="meta"><span>PHL024</span><span>Coffee</span></span><h2>ReAnimator Coffee</h2><p>310 W. Master St., Philadelphia, PA</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="victor-cafe/index.html"><span class="meta"><span>PHL025</span><span>Restaurant</span></span><h2>Victor Cafe</h2><p>1303 Dickinson Street, Philadelphia, PA 19147</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="culture" href="morris-arboretum/index.html"><span class="meta"><span>PHL026</span><span>Garden</span></span><h2>Morris Arboretum &amp; Gardens</h2><p>100 East Northwestern Avenue, Philadelphia, PA 19118</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="culture" href="eastern-state/index.html"><span class="meta"><span>PHL027</span><span>Historic site</span></span><h2>Eastern State Penitentiary</h2><p>2027 Fairmount Avenue, Philadelphia, PA 19130</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="culture" href="magic-gardens/index.html"><span class="meta"><span>PHL028</span><span>Arts</span></span><h2>Philadelphia's Magic Gardens</h2><p>1020 South Street, Philadelphia, PA 19147</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="culture" href="bartram-garden/index.html"><span class="meta"><span>PHL029</span><span>Garden</span></span><h2>Bartram's Garden</h2><p>5400 Lindbergh Boulevard, Philadelphia, PA 19143</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="reading-terminal/index.html"><span class="meta"><span>PHL030</span><span>Public market</span></span><h2>Reading Terminal Market</h2><p>1136 Arch Street, Philadelphia, PA 19107</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="retail" href="fantes-kitchen-shop/index.html"><span class="meta"><span>PHL031</span><span>Kitchenware</span></span><h2>Fante's Kitchen Shop</h2><p>1006 South 9th Street, Philadelphia, PA 19147</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="retail" href="philadelphia-record-exchange/index.html"><span class="meta"><span>PHL032</span><span>Record store</span></span><h2>Philadelphia Record Exchange</h2><p>1524 Frankford Avenue, Philadelphia, PA 19125</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="retail" href="moms-organic-market/index.html"><span class="meta"><span>PHL033</span><span>Grocery</span></span><h2>MOM's Organic Market, Center City</h2><p>34 South 11th Street, Philadelphia, PA 19107</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="good-dog-bar/index.html"><span class="meta"><span>PHL034</span><span>Bar</span></span><h2>Good Dog Bar</h2><p>224 South 15th Street, Philadelphia, PA 19102</p><span class="open">Open homepage</span></a>
+<a class="card" data-kind="food" href="square-1682/index.html"><span class="meta"><span>PHL035</span><span>Restaurant</span></span><h2>Square 1682</h2><p>121 South 17th Street, Philadelphia, PA 19103</p><span class="open">Open homepage</span></a>
+</div></main>
+<footer><div class="wrap">Private review surface | upgraded 2026-07-12 | sources: immutable Netlify drafts of 2026-07-11</div></footer>
+<script>
+const cards=[...document.querySelectorAll('.card')],q=document.querySelector('#q');let kind='all';
+function apply(){const s=q.value.toLowerCase().trim();cards.forEach(c=>{const name=c.querySelector('h2').textContent.toLowerCase();c.hidden=(kind!=='all'&&c.dataset.kind!==kind)||(s&&!name.includes(s))})}
+document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{kind=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));apply()});
+q.oninput=apply;
+</script></body></html>

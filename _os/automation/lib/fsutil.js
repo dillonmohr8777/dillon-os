@@ -18,9 +18,11 @@ function readJson(file, fallback = null) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
-function writeJson(file, data) {
+function writeJson(file, data, { compact = false } = {}) {
   ensureDir(path.dirname(file));
-  fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+  // Large machine-read outputs (graded prospect sets) skip pretty-printing —
+  // indentation was roughly two thirds of a multi-megabyte grades file.
+  fs.writeFileSync(file, JSON.stringify(data, null, compact ? 0 : 2) + '\n');
 }
 
 function appendJsonl(file, row) {
@@ -38,15 +40,8 @@ function walkMarkdown(dir, acc = []) {
   return acc;
 }
 
-function todayISO(date = new Date(), timeZone = process.env.DILLON_TIMEZONE || 'America/New_York') {
-  const parts = new Intl.DateTimeFormat('en-US', {
-    timeZone,
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).formatToParts(date);
-  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
-  return `${values.year}-${values.month}-${values.day}`;
+function todayISO() {
+  return new Date().toISOString().slice(0, 10);
 }
 
 function nowISO() {

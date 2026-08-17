@@ -1,0 +1,222 @@
+name: Prospect radar — daily sweep
+
+# 06:10 UTC. Deliberately not on the hour: Overpass is a free community API and
+# the top of the hour is when every naive cron in the world hits it.
+#
+# This is the only thing that has to keep running for the radar to stay useful.
+# It discovers into the thinnest coverage cells, re-audits what went stale,
+# spends a Tier 1 budget on the rows whose verdict is still a guess, then
+# rewrites and publishes the dashboard.
+on:
+  schedule:
+    - cron: '10 6 * * *'
+  workflow_dispatch:
+    inputs:
+      discover:
+        description: 'New prospects to look for (0 to skip discovery)'
+        required: false
+        default: '60'
+      render:
+        description: 'Tier 1 renders to spend'
+        required: false
+        default: '80'
+      regrade:
+        description: 'Force re-audit of these verdicts, e.g. verify,polish'
+        required: false
+        default: ''
+
+# One sweep at a time. Two concurrent runs would both load the registry, both
+# write it, and the second push would silently discard the first run's work.
+concurrency:
+  group: radar-daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The sweep commits the registry back, so it needs a real branch, not
+          # a detached HEAD at the triggering SHA.
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Playwright only — everything else in _os/automation is dependency-free
+      # on purpose, and Tier 1 is the one thing that genuinely needs a browser.
+      - name: Install Chromium for Tier 1
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+
+      - name: Run the sweep
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          set -o pipefail
+          node _os/automation/bin/radar-refresh.js \
+            --discover "${{ github.event.inputs.discover || '60' }}" \
+            --render "${{ github.event.inputs.render || '80' }}" \
+            --max-tier 1 \
+            --concurrency 8 \
+            ${{ github.event.inputs.regrade && format('--regrade {0}', github.event.inputs.regrade) || '' }} \
+            2>&1 | tee sweep.log
+
+      # Refresh the Codex image queue: every zero-photo rebuild target gets a
+      # generation brief. Briefs are tracked (they carry nothing beyond what the
+      # registry already publishes); the generated binaries go to the private
+      # layer on whatever machine runs the generation.
+      - name: Refresh image-generation briefs
+        continue-on-error: true
+        run: node _os/automation/bin/image-briefs.js
+
+      # Contact discovery reads only each business's own published pages and
+      # writes addresses to the gitignored private layer, never to the repo.
+      # Separate step because a slow site should not fail the whole sweep.
+      - name: Find published contact routes
+        continue-on-error: true
+        run: node _os/automation/bin/find-contacts.js --limit 60 --csv
+
+      # Guard BEFORE publish. Ordered the other way round, a sanitizeForGit
+      # regression reaches the public Netlify URL first and the guard only blocks
+      # the Git commit afterwards — stopping the record of the leak, not the leak.
+      - name: Guard against publishing or committing anything private
+        if: always()
+        run: |
+          # The registry and the queue CSV are tracked in a PUBLIC repository.
+          # lib/discovery.sanitizeForGit strips contact detail on every write
+          # path, but a guard here means a regression in that function fails the
+          # run instead of quietly publishing 500 phone numbers.
+          fail=0
+          # The dashboard HTML is the file that actually gets published and it
+          # embeds every projected row, so it matters most of all — it was the one
+          # file the first version of this guard did not look at.
+          for f in 12_Brain/state/radar/registry.json \
+                   12_Brain/state/radar/build-queue.csv \
+                   Daily-Briefs/prospect-radar.html \
+                   Daily-Briefs/radar-$(date -u +%Y-%m-%d).md; do
+            [ -f "$f" ] || continue
+            if grep -qE '"(phone|street|lat|lon|osm_id)"[[:space:]]*:' "$f"; then
+              echo "::error file=$f::contact or location field present in a tracked file"
+              fail=1
+            fi
+            if grep -qE '\b(215|267|610|484|445|835)[0-9]{7}\b' "$f"; then
+              echo "::error file=$f::what looks like a phone number is present"
+              fail=1
+            fi
+            # Contact discovery writes to the private layer; an address reaching
+            # a tracked file means that separation broke.
+            # Contact discovery writes to the private layer, so any address in a
+            # tracked file means that separation broke. needmomentum.com is our
+            # own and appears in the footer by design.
+            if grep -oE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}' "$f" \
+                 | grep -vE '@(needmomentum\.com|momentum360\.com)$' | head -1 | grep -q .; then
+              echo "::error file=$f::a third-party email address is present in a tracked file"
+              fail=1
+            fi
+          done
+          if [ "$fail" = "1" ]; then
+            echo "Refusing to publish or commit. Fix sanitizeForGit before re-running."
+            exit 1
+          fi
+          echo "tracked outputs are clean"
+
+      # A Netlify outage must not cost a sweep's worth of grading, so this is
+      # allowed to fail and the commit below still runs.
+      - name: Publish the dashboard
+        if: ${{ env.NETLIFY_AUTH_TOKEN != '' }}
+        continue-on-error: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: node _os/automation/bin/dashboard-deploy.js
+
+      # `always()`: the registry holds the expensive part of the run — the
+      # grading — and must land even when an earlier step failed. Without this a
+      # render error silently bins the whole sweep, every morning, forever.
+      - name: Commit the day's registry
+        if: always()
+        run: |
+          git config user.name  "radar-bot"
+          git config user.email "noreply@needmomentum.com"
+          # Explicit pathspecs only — never `git add -A` from the root.
+          git add -A 12_Brain/state Daily-Briefs || true
+          # A real assertion, not the `git reset -- 12_Brain/private` this used to
+          # run: that followed a pathspec-limited add which cannot stage anything
+          # there, so it protected nothing while making the gap look covered.
+          if git diff --cached --name-only | grep -q '^12_Brain/private/'; then
+            echo "::error::a file under 12_Brain/private is staged — refusing to push to a public repo"
+            git diff --cached --name-only | grep '^12_Brain/private/'
+            exit 1
+          fi
+          if git diff --cached --quiet; then
+            echo "nothing changed — no commit"
+            exit 0
+          fi
+          # Summary line comes from the run's own JSON so the commit message
+          # says what actually happened rather than a fixed string.
+          SUMMARY=$(node -e "
+            const s=require('./12_Brain/state/radar-last.json');
+            const v=s.by_verdict||{};
+            process.stdout.write(
+              \`+\${s.run.discovered_new||0} found, \${s.run.regraded||0} re-graded, \${s.run.rendered||0} rendered · \` +
+              \`\${s.tracked} tracked · rebuild \${v.rebuild||0} · needs render \${v.verify||0}\`
+            );
+          " 2>/dev/null || echo "daily sweep")
+          git commit -m "Radar sweep $(date -u +%Y-%m-%d): ${SUMMARY}"
+          for i in 1 2 3 4; do
+            git push && break
+            echo "push failed, retrying in $((2**i))s"
+            sleep $((2**i))
+            git pull --rebase --autostash || true
+          done
+
+      - name: Surface the run in the job summary
+        if: always()
+        run: |
+          {
+            echo "## Radar sweep $(date -u +%Y-%m-%d)"
+            echo
+            if [ -f 12_Brain/state/radar-last.json ]; then
+              node -e "
+                const s=require('./12_Brain/state/radar-last.json');
+                const v=s.by_verdict||{};
+                console.log('| | |'); console.log('|---|---|');
+                console.log(\`| Status | \${s.status} |\`);
+                console.log(\`| Plan | \${s.run.plan||'—'} |\`);
+                console.log(\`| Found | \${s.run.discovered_new||0} |\`);
+                console.log(\`| Re-graded | \${s.run.regraded||0} |\`);
+                console.log(\`| Tier 1 rendered | \${s.run.rendered||0} |\`);
+                console.log(\`| Tracked | \${s.tracked} |\`);
+                console.log(\`| Rebuild queue | \${v.rebuild||0} |\`);
+                console.log(\`| Awaiting a render | \${v.verify||0} |\`);
+                console.log(\`| Mean site quality | \${s.mean_site_quality} |\`);
+                if ((s.errors||[]).length) {
+                  console.log('');
+                  console.log('### Errors');
+                  s.errors.slice(0,10).forEach(e=>console.log('- ' + e));
+                }
+              "
+            else
+              echo 'No run state written — the sweep did not reach the publish step.'
+            fi
+            echo
+            echo "Dashboard: https://momentum-prospect-radar.netlify.app"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sweep-log
+          path: sweep.log
+          retention-days: 14
+          if-no-files-found: ignore

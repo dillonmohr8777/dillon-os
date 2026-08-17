@@ -1,6 +1,5 @@
 # Frontmatter validation report
 
-Generated: 2026-08-17T11:08:21.348Z
-Complete: 25/25
+Generated: 2026-07-29T21:13:09.932Z
+Complete: 37/37
 Incomplete: 0
-

@@ -1,0 +1,30 @@
+{
+  "workflow_id": "fixture-website-factory",
+  "workflow_type": "website_factory",
+  "task": "Build and independently verify a fixture website",
+  "constraints": [
+    "No public deployment",
+    "No external send"
+  ],
+  "upstream_artifacts": [
+    "_os/automation/fixtures/sites/aeo-healthy/index.html"
+  ],
+  "maker_id": "fixture-web-maker",
+  "checker_id": "fixture-web-checker",
+  "artifact_paths": [
+    "_os/automation/fixtures/sites/aeo-healthy/index.html",
+    "_os/automation/evidence/fixture-website-demo.webm"
+  ],
+  "demo_recording_path": "_os/automation/evidence/fixture-website-demo.webm",
+  "visual_review_required": true,
+  "acceptance_tests": [
+    "Artifact exists and is hashable",
+    "Screen recording covers desktop and mobile",
+    "Independent visual review passes",
+    "AEO and trust gate passes"
+  ],
+  "rollback": "Discard the fixture run record and retain the original fixture.",
+  "human_gate": true,
+  "budget_tokens": 12000,
+  "timeout_seconds": 900
+}

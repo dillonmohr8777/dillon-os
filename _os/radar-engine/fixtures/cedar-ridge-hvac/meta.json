@@ -1,0 +1,32 @@
+{
+  "slug": "cedar-ridge-hvac",
+  "fictional": true,
+  "signals": {
+    "review_count": 22,
+    "rating": 4.6,
+    "gbp_claimed": false,
+    "ad_presence": false,
+    "vertical": "hvac",
+    "area": "Hatboro",
+    "city": "Hatboro",
+    "state": "PA",
+    "market": "PHL"
+  },
+  "places": null,
+  "intake": {
+    "business_name": "Cedar Ridge Heating and Cooling",
+    "website": "https://www.cedarridgehvac.example",
+    "city_state": "Hatboro, PA",
+    "requester_name": "Jordan Hale",
+    "role": "owner",
+    "requester_email": "jordan.hale@cedarridgehvac.example",
+    "requester_phone": "555-010-0199",
+    "primary_services": "heating, air conditioning, maintenance",
+    "growth_goals": "more service calls from nearby homeowners",
+    "current_channels": "word of mouth, truck wraps",
+    "notes": "Fictional fixture for Prospect Radar V2 tests.",
+    "consent_analyze": true,
+    "consent_marketing": false,
+    "captcha_token": "test"
+  }
+}

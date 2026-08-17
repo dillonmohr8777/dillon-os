@@ -1,0 +1,69 @@
+/* D.I.L.L.O.N. OS — vault polish. Toggle in Settings → Appearance → CSS snippets. */
+
+/* Page titles with a subtle accent underline */
+.markdown-preview-view h1,
+.markdown-source-view.mod-cm6 .cm-header-1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.markdown-preview-view h1 {
+  border-bottom: 2px solid var(--interactive-accent);
+  padding-bottom: 0.25em;
+}
+
+/* H2 section labels */
+.markdown-preview-view h2,
+.markdown-source-view.mod-cm6 .cm-header-2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.markdown-preview-view h2 {
+  color: var(--interactive-accent);
+}
+
+/* Rounded, hoverable tables */
+.markdown-preview-view table,
+.markdown-source-view table {
+  border-radius: 8px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+.markdown-preview-view th {
+  background: var(--background-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.72em;
+  letter-spacing: 0.06em;
+}
+.markdown-preview-view tr:hover td {
+  background: var(--background-modifier-hover);
+}
+
+/* Tag pills */
+.tag, a.tag {
+  background: color-mix(in srgb, var(--interactive-accent) 18%, transparent);
+  color: var(--interactive-accent);
+  border-radius: 999px;
+  padding: 0.1em 0.7em;
+  font-size: 0.78em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Callouts: tighter, rounder */
+.callout {
+  border-radius: 10px;
+  border-left-width: 4px;
+}
+
+/* Checkbox tasks: satisfying strikethrough */
+.markdown-preview-view .task-list-item.is-checked {
+  opacity: 0.55;
+}
+
+/* Frontmatter status pill on client pages */
+.metadata-property[data-property-key="status"] .metadata-property-value {
+  font-weight: 700;
+}

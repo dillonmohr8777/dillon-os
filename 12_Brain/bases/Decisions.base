@@ -1,0 +1,28 @@
+filters:
+  and:
+    - file.inFolder("12_Brain/decisions")
+    - file.ext == "md"
+    - file.name != "README"
+views:
+  - type: table
+    name: Active
+    filters:
+      and:
+        - status != "superseded"
+    order:
+      - decided
+      - file.name
+      - status
+  - type: table
+    name: Superseded
+    filters:
+      and:
+        - status == "superseded"
+    order:
+      - decided
+      - file.name
+  - type: cards
+    name: All Decisions
+    order:
+      - decided
+      - file.name

@@ -83,7 +83,7 @@ Sequencing by ROI, best first:
 
 Pulled from the qualification stage in [[Pipeline Spec]]. Rank candidates by:
 
-1. Site decay score (missing viewport, no mobile layout, stale copyright, thin homepage, no phone above the fold)
+1. **Site Quality Score** from `/site-grade` — run [[Site Grader]] over the market before picking anyone. Only `rebuild` verdicts consume a build slot; `ads_seo` rows go to outreach as a traffic offer instead of being discarded.
 2. Evidence they can pay (review volume, price point, multiple locations, already running ads)
 3. Vertical fit with an existing Momentum industry page and case study
 4. Whether we can source real photography (their own site, socials, or our own shoot)

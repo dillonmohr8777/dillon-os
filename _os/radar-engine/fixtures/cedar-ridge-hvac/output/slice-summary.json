@@ -1,0 +1,19 @@
+{
+  "prospect": "Cedar Ridge Heating and Cooling",
+  "lifecycle": "won",
+  "qa_lifecycle_at_screenshot": "qa_pending",
+  "offer": "rebuild",
+  "scores": {
+    "site_quality_score": 41,
+    "rebuild_opportunity": 82,
+    "selected_offer": "rebuild"
+  },
+  "report_url": "http://127.0.0.1:4343/r/V5uKZc9aKsopcKKQgccNk0UAjZjyvMSi",
+  "pdf": {
+    "ok": true,
+    "path": "/workspace/_os/radar-engine/fixtures/cedar-ridge-hvac/output/report.pdf"
+  },
+  "crm_live": false,
+  "email_sent": false,
+  "network_outbound": []
+}

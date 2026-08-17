@@ -1,12 +1,49 @@
-.obsidian/workspace.json
+﻿.obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/plugins/obsidian-local-rest-api/data.json
 08_Assets/
 09_Transcripts/
 
+# Large binaries never belong in git
+*.zip
+
+# Node
+node_modules/
+.next/
+dist/
+
+# Playwright QA output
+_templates/site-factory/qa-shots/
+
+# Public-safety scanner writes this allowlisted fixture during tests
+_os/test/fixtures/
+
+# Harvested third-party reference material (screenshots, source imagery)
+_templates/site-factory/harvest/
+
+# 12_Brain private layer — GitHub repo is PUBLIC; keep PII/access/secrets out of Git
+12_Brain/private/**
+!12_Brain/private/README.md
+
+# Local environment files — MCP tokens (LANDINGFOLIO_TOKEN) belong here, never in Git
+.env
+.env.*
+!.env.example
+
+# Radar V2 local artifacts (PII-capable). Never commit.
+_os/radar-engine/artifacts/
+_os/radar-engine/.data/
+
+# Site grader: the raw discovery pool is large and regenerable in one command
+# (bin/discover-prospects.js). The selected candidate list and the grade reports
+# are tracked; the full pool is not.
+12_Brain/state/candidates/*-pool-*.json
+
+# Arch factory build output — regenerable from the queue in one command
+_templates/arch-factory/out/
+
 # Public-safety quarantine (2026-08-07): raw comms + media stay local
 /videos/
-/*.zip
 00_Inbox/slack/
 _os/automation/incoming/
 12_Brain/queue/daily-communications-brain-*.jsonl

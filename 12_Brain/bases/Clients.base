@@ -1,0 +1,31 @@
+filters:
+  and:
+    - file.inFolder("01_Clients")
+    - file.ext == "md"
+    - file.name != "Client Index"
+    - file.name != "m360-master-contacts"
+views:
+  - type: table
+    name: Active
+    filters:
+      and:
+        - status != "former"
+    order:
+      - file.name
+      - status
+      - tags
+      - updated
+  - type: table
+    name: Former
+    filters:
+      and:
+        - status == "former"
+    order:
+      - file.name
+      - tags
+      - updated
+  - type: cards
+    name: All Clients
+    order:
+      - file.name
+      - status

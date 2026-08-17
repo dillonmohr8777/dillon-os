@@ -1,0 +1,3342 @@
+{
+  "automation_id": "site-grader",
+  "started_at": "2026-08-06T18:50:47.383Z",
+  "market": "BUILT",
+  "status": "ok",
+  "dry_run": false,
+  "source": "/tmp/claude-0/-home-user/421af793-e1de-59bf-a790-cd5acb6e80ec/scratchpad/built69.json",
+  "counts": {
+    "total": 69,
+    "polish": 45,
+    "verify": 19,
+    "nurture": 1,
+    "rebuild": 3,
+    "enrich": 1
+  },
+  "build_slots_needed": 3,
+  "mean_site_quality": 66,
+  "playwright_missing": false,
+  "render_failed_count": 0,
+  "fetch_inconclusive_count": 0,
+  "dead_domains": 0,
+  "results": [
+    {
+      "prospect_id": "built:1",
+      "business_name": "Geno's Steaks",
+      "website": "https://www.genosteaks.com/",
+      "vertical": "Restaurant",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 64,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 51,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "64/100 dated (provisional — Tier 0 only). Worst: copyright says 2023; sluggish first response: 2299ms.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 2422
+    },
+    {
+      "prospect_id": "built:2",
+      "business_name": "Pat's King of Steaks",
+      "website": "https://www.patskingofsteaks.com/",
+      "vertical": "Restaurant",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 67,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 43,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "67/100 dated (provisional — Tier 0 only). Worst: no meta description; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 729
+    },
+    {
+      "prospect_id": "built:3",
+      "business_name": "Di Bruno Bros. Italian Market",
+      "website": "https://dibruno.com/",
+      "vertical": "Specialty Foods",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 65,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 51,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "65/100 dated (provisional — Tier 0 only). Worst: no phone number on the homepage; phone is not a tel: link.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 887
+    },
+    {
+      "prospect_id": "built:4",
+      "business_name": "Termini Brothers Bakery",
+      "website": "https://termini.com/",
+      "vertical": "Bakery",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 70,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 48,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "70/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 751
+    },
+    {
+      "prospect_id": "built:5",
+      "business_name": "Isgro Pastries",
+      "website": "https://www.isgropastries.com/",
+      "vertical": "Bakery",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 72,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 46,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "72/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 11,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 804
+    },
+    {
+      "prospect_id": "built:6",
+      "business_name": "John's Roast Pork",
+      "website": "https://johnsroastpork.com/",
+      "vertical": "Restaurant",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 55,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 51,
+      "opportunity_confidence": 0.57,
+      "verdict": "nurture",
+      "offer": "low-cost touch only",
+      "next_action": "Bad site but opportunity 51 < build floor 55 — not worth a build slot",
+      "unknown_dimensions": [],
+      "headline": "55/100 dated (provisional — Tier 0 only). Worst: no phone number on the homepage; no obvious call to action.",
+      "components": {
+        "replaceability": 18,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 671
+    },
+    {
+      "prospect_id": "built:7",
+      "business_name": "Franklin Fountain",
+      "website": "https://franklinfountain.com/",
+      "vertical": "Ice Cream & Sweets",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 60,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 48,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "60/100 dated (provisional — Tier 0 only). Worst: thin homepage copy (159 words); mixed content — insecure assets on a secure page.",
+      "components": {
+        "replaceability": 16,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 5,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 1365
+    },
+    {
+      "prospect_id": "built:8",
+      "business_name": "Zahav",
+      "website": "https://www.zahavrestaurant.com/",
+      "vertical": "Restaurant",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 68,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 49,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "68/100 dated (provisional — Tier 0 only). Worst: no meta description; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 654
+    },
+    {
+      "prospect_id": "built:9",
+      "business_name": "Standard Tap",
+      "website": "https://standardtap.com/",
+      "vertical": "Gastropub",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 63,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 52,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "63/100 dated (provisional — Tier 0 only). Worst: no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 15,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 773
+    },
+    {
+      "prospect_id": "built:10",
+      "business_name": "La Colombe Coffee Roasters, Rittenhouse Square",
+      "website": "https://www.lacolombe.com/pages/cafes/south-station",
+      "vertical": "Coffee Roaster",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 68,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 49,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "68/100 dated (provisional — Tier 0 only). Worst: hard-coded 1440px page width; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 997
+    },
+    {
+      "prospect_id": "built:11",
+      "business_name": "Frankford Hall",
+      "website": "https://frankfordhall.com/",
+      "vertical": "Beer Garden",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 66,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 45,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "66/100 dated (provisional — Tier 0 only). Worst: no obvious call to action; hard-coded 1024px page width.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 5,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 435
+    },
+    {
+      "prospect_id": "built:12",
+      "business_name": "Johnny Brenda's",
+      "website": "https://johnnybrendas.com/",
+      "vertical": "Restaurant & Music",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 72,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 40,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "72/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 11,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 498
+    },
+    {
+      "prospect_id": "built:13",
+      "business_name": "Suraya",
+      "website": "https://www.surayaphilly.com/",
+      "vertical": "Restaurant",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 72,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 46,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "72/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 11,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 382
+    },
+    {
+      "prospect_id": "built:14",
+      "business_name": "ReAnimator Coffee",
+      "website": "https://www.reanimatorcoffee.com/",
+      "vertical": "Coffee",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 65,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 51,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "65/100 dated (provisional — Tier 0 only). Worst: no phone number on the homepage; phone is not a tel: link.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 549
+    },
+    {
+      "prospect_id": "built:15",
+      "business_name": "Victor Cafe",
+      "website": "https://victorcafe.com/",
+      "vertical": "Restaurant",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 58,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 55,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "58/100 dated (provisional — Tier 0 only). Worst: \"under construction\" or placeholder copy still live; no meta description.",
+      "components": {
+        "replaceability": 17,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 514
+    },
+    {
+      "prospect_id": "built:16",
+      "business_name": "Morris Arboretum & Gardens",
+      "website": "https://www.morrisarboretum.org/",
+      "vertical": "Botanical Garden",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 64,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 51,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "64/100 dated (provisional — Tier 0 only). Worst: no schema.org structured data; phone is not a tel: link.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 620
+    },
+    {
+      "prospect_id": "built:17",
+      "business_name": "Eastern State Penitentiary",
+      "website": "https://easternstate.org/",
+      "vertical": "Historic Site",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 58,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 55,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "58/100 dated (provisional — Tier 0 only). Worst: no phone number on the homepage; no schema.org structured data.",
+      "components": {
+        "replaceability": 17,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 389
+    },
+    {
+      "prospect_id": "built:18",
+      "business_name": "Philadelphia's Magic Gardens",
+      "website": "https://www.phillymagicgardens.org/",
+      "vertical": "Arts & Culture",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 68,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 49,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "68/100 dated (provisional — Tier 0 only). Worst: phone is not a tel: link; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 803
+    },
+    {
+      "prospect_id": "built:19",
+      "business_name": "Bartram's Garden",
+      "website": "https://www.bartramsgarden.org/",
+      "vertical": "Botanical Garden",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 73,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 46,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "73/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 11,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 720
+    },
+    {
+      "prospect_id": "built:20",
+      "business_name": "Reading Terminal Market",
+      "website": "https://readingterminalmarket.org/",
+      "vertical": "Public Market",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 69,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 42,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "69/100 dated (provisional — Tier 0 only). Worst: layout driven by inline style attributes.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 5,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 1432
+    },
+    {
+      "prospect_id": "built:21",
+      "business_name": "Fante's Kitchen Shop",
+      "website": "https://fantes.com/",
+      "vertical": "Kitchenware",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 64,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 45,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "64/100 dated (provisional — Tier 0 only). Worst: no schema.org structured data; no Open Graph tags — link previews are blank.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 5,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 678
+    },
+    {
+      "prospect_id": "built:23",
+      "business_name": "MOM's Organic Market, Center City",
+      "website": "https://momsorganicmarket.com/pennsylvania/center-city/",
+      "vertical": "Natural Grocery",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 67,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 37,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "67/100 dated (provisional — Tier 0 only). Worst: hard-coded 2560px page width; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 5,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 624
+    },
+    {
+      "prospect_id": "built:24",
+      "business_name": "Good Dog Bar",
+      "website": "https://gooddogbar.com/",
+      "vertical": "Bar & Restaurant",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 71,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 42,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "71/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 393
+    },
+    {
+      "prospect_id": "built:25",
+      "business_name": "Square 1682",
+      "website": "https://www.square1682.com/",
+      "vertical": "Restaurant",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 57,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 49,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "57/100 dated (provisional — Tier 0 only). Worst: no phone number on the homepage; no meta description.",
+      "components": {
+        "replaceability": 17,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 9,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 539
+    },
+    {
+      "prospect_id": "built:26",
+      "business_name": "Academy Chiropractic Center",
+      "website": "https://www.academychiropracticcenter.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 66,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 54,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "66/100 dated (provisional — Tier 0 only). Worst: copyright still says 2015 (11 years stale); hard-coded 9999px page width.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 379
+    },
+    {
+      "prospect_id": "built:27",
+      "business_name": "Acupuncture Medical Practice",
+      "website": "https://acupuncturephilly.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 64,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 60,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "64/100 dated (provisional — Tier 0 only). Worst: mixed content — insecure assets on a secure page; most images have no alt text.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 341
+    },
+    {
+      "prospect_id": "built:28",
+      "business_name": "Bridesburg Spine and Injury Clinic",
+      "website": "https://www.bridesburgchiro.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 71,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 51,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "71/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 502
+    },
+    {
+      "prospect_id": "built:29",
+      "business_name": "Bustleton Services, Inc",
+      "website": "https://www.bustletonservices.com/",
+      "vertical": "Home Services",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 69,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 57,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "69/100 dated (provisional — Tier 0 only). Worst: phone is not a tel: link; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 383
+    },
+    {
+      "prospect_id": "built:30",
+      "business_name": "Dependable Concrete Contractor LLC",
+      "website": "https://dependableconcrete.com/",
+      "vertical": "Home Services",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 75,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 54,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "75/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 10,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 490
+    },
+    {
+      "prospect_id": "built:31",
+      "business_name": "E & E Cleaning Services",
+      "website": "https://www.eandecleaning.com/",
+      "vertical": "Home Services",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 66,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 60,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "66/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; layout driven by inline style attributes.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 303
+    },
+    {
+      "prospect_id": "built:32",
+      "business_name": "Farrell's Roofing",
+      "website": "https://www.farrellsroofingphiladelphia.com/",
+      "vertical": "Home Services",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 71,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 57,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "71/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 455
+    },
+    {
+      "prospect_id": "built:33",
+      "business_name": "Greater Philadelphia Chiropractic Center",
+      "website": "https://www.philadelphiachiropractic.net/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 69,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 51,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "69/100 dated (provisional — Tier 0 only). Worst: no hours published.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 608
+    },
+    {
+      "prospect_id": "built:34",
+      "business_name": "Hal Rosenthaler DMD",
+      "website": "https://halrosenthalerdmd.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 63,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 62,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "63/100 dated (provisional — Tier 0 only). Worst: no obvious call to action; no meta description.",
+      "components": {
+        "replaceability": 15,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 385
+    },
+    {
+      "prospect_id": "built:36",
+      "business_name": "Martha's Sophisticated Shine",
+      "website": "https://sophisticatedshine.com/",
+      "vertical": "Home Services",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 66,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 60,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "66/100 dated (provisional — Tier 0 only). Worst: legacy site builder detected (godaddy); no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 499
+    },
+    {
+      "prospect_id": "built:37",
+      "business_name": "Mayfair Family Chiropractic Center",
+      "website": "https://www.mayfairchiro.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 68,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 52,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "68/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; layout driven by inline style attributes.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 334
+    },
+    {
+      "prospect_id": "built:38",
+      "business_name": "Mayfair Fence",
+      "website": "https://www.mayfairfence.com/",
+      "vertical": "Home Services",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 54,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 66,
+      "opportunity_confidence": 0.57,
+      "verdict": "rebuild",
+      "offer": "Tier-A demo site + direct mail QR",
+      "next_action": "Queue a site-factory brief (/mirror-and-improve)",
+      "unknown_dimensions": [],
+      "headline": "54/100 dated (provisional — Tier 0 only). Worst: copyright still says 2018 (8 years stale); no schema.org structured data.",
+      "components": {
+        "replaceability": 18,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 585
+    },
+    {
+      "prospect_id": "built:39",
+      "business_name": "Metro Physical Medicine",
+      "website": "https://metrophysicalmedicine.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 66,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 54,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "66/100 dated (provisional — Tier 0 only). Worst: hard-coded 1920px page width; most images have no alt text.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 363
+    },
+    {
+      "prospect_id": "built:40",
+      "business_name": "Moss Contracting",
+      "website": "https://mosscontractingllc.com/",
+      "vertical": "Home Services",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 71,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 57,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "71/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 305
+    },
+    {
+      "prospect_id": "built:41",
+      "business_name": "Northeast Family Foot Care",
+      "website": "https://www.northeastfamilyfootcare.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 67,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 52,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "67/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; layout driven by inline style attributes.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 454
+    },
+    {
+      "prospect_id": "built:42",
+      "business_name": "Oxford Rehabilitation Center",
+      "website": "https://www.oxfordrehab.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 72,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 49,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "72/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 11,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 589
+    },
+    {
+      "prospect_id": "built:43",
+      "business_name": "Patriot Fence & Ironworks, LLC",
+      "website": "https://www.patriotfenceandironworks.com/",
+      "vertical": "Home Services",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 64,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 54,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "64/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; no meta description.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 389
+    },
+    {
+      "prospect_id": "built:44",
+      "business_name": "Philly Medical and Rehab Associates",
+      "website": "https://www.mypmra.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 65,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 60,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "65/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; no meta description.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 421
+    },
+    {
+      "prospect_id": "built:45",
+      "business_name": "PT in Philly",
+      "website": "https://www.ptinphilly.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 68,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 58,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "68/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; layout driven by inline style attributes.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 474
+    },
+    {
+      "prospect_id": "built:47",
+      "business_name": "Rittenhouse Square Chiropractic",
+      "website": "https://rittenhousechiro.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 66,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 60,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "66/100 dated (provisional — Tier 0 only). Worst: hard-coded 1100px page width; phone is not a tel: link.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 1429
+    },
+    {
+      "prospect_id": "built:48",
+      "business_name": "Rufus Chiropractic and Wellness",
+      "website": "https://www.rufuschiropractic.com/",
+      "vertical": "Medical & Healthcare",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 71,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 51,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "71/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 468
+    },
+    {
+      "prospect_id": "built:50",
+      "business_name": "ZBC General Contracting",
+      "website": "https://www.zbccontracting.com/",
+      "vertical": "Plumbing / sewer",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 68,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 58,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "68/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; layout driven by inline style attributes.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 402
+    },
+    {
+      "prospect_id": "built:76",
+      "business_name": "A.M. Electric, Inc.",
+      "website": "https://www.amelectricservice.com/",
+      "vertical": "Electrical",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 70,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 57,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "70/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 615
+    },
+    {
+      "prospect_id": "built:77",
+      "business_name": "All Phase Electric Co.",
+      "website": "https://allphaseelectricco.com/",
+      "vertical": "Electrical",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 70,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 57,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "70/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 912
+    },
+    {
+      "prospect_id": "built:78",
+      "business_name": "APT Heating and Cooling",
+      "website": "https://www.aptheating.com/",
+      "vertical": "HVAC",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 63,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 62,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "63/100 dated (provisional — Tier 0 only). Worst: no schema.org structured data; phone is not a tel: link.",
+      "components": {
+        "replaceability": 15,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 547
+    },
+    {
+      "prospect_id": "built:79",
+      "business_name": "Bill Frusco Plumbing, Heating & Cooling",
+      "website": "https://www.billfrusco.com/",
+      "vertical": "Plumbing / HVAC /",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 75,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 48,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "75/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 10,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 567
+    },
+    {
+      "prospect_id": "built:80",
+      "business_name": "Borden Heating & Cooling, Inc.",
+      "website": "https://bordenco.com/",
+      "vertical": "HVAC",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 67,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 52,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "67/100 dated (provisional — Tier 0 only). Worst: sluggish first response: 1503ms; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 1644
+    },
+    {
+      "prospect_id": "built:81",
+      "business_name": "Brandon Electric, Inc.",
+      "website": "https://brandonelectricpa.com/",
+      "vertical": "Electrical",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 68,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 52,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "68/100 dated (provisional — Tier 0 only). Worst: hard-coded 1440px page width; sluggish first response: 2080ms.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 2296
+    },
+    {
+      "prospect_id": "built:82",
+      "business_name": "Centrum Mechanical Services",
+      "website": "https://centrummechanical.com/",
+      "vertical": "Mechanical / HVAC /",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 68,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 52,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "68/100 dated (provisional — Tier 0 only). Worst: most images have no alt text; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 377
+    },
+    {
+      "prospect_id": "built:83",
+      "business_name": "Charles Schillinger Company",
+      "website": "https://cschillinger.com/",
+      "vertical": "Metal spinning / forming 1329 Ford Road, Bensalem, PA 19020",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 64,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 38,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "64/100 dated (provisional — Tier 0 only). Worst: slow first response: 4677ms; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 5,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 4733
+    },
+    {
+      "prospect_id": "built:84",
+      "business_name": "Cleaned by D&D, LLC",
+      "website": "https://www.cleanedbydd.com/",
+      "vertical": "Commercial cleaning",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 69,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 57,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "69/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; layout driven by inline style attributes.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 231
+    },
+    {
+      "prospect_id": "built:86",
+      "business_name": "Dunryte Electric, Inc.",
+      "website": "https://dunryteelectric.com/",
+      "vertical": "Electrical",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 54,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 66,
+      "opportunity_confidence": 0.57,
+      "verdict": "rebuild",
+      "offer": "Tier-A demo site + direct mail QR",
+      "next_action": "Queue a site-factory brief (/mirror-and-improve)",
+      "unknown_dimensions": [],
+      "headline": "54/100 dated (provisional — Tier 0 only). Worst: table-based page layout; thin homepage copy (147 words).",
+      "components": {
+        "replaceability": 18,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 361
+    },
+    {
+      "prospect_id": "built:87",
+      "business_name": "Ernest D. Menold, Inc.",
+      "website": "https://www.menold.com/",
+      "vertical": "General sheet metal",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 67,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 43,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "67/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; layout driven by inline style attributes.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 5,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 448
+    },
+    {
+      "prospect_id": "built:88",
+      "business_name": "Gallagher Fabrication & Machine",
+      "website": "https://www.gallagherfab.com/",
+      "vertical": "Fabrication / machining",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 63,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 62,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "63/100 dated (provisional — Tier 0 only). Worst: copyright still says 2018 (8 years stale); hard-coded 9999px page width.",
+      "components": {
+        "replaceability": 15,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 299
+    },
+    {
+      "prospect_id": "built:89",
+      "business_name": "Guaranteed Plumbing & Heating",
+      "website": "https://www.guaranteedplumbingandheating.com/",
+      "vertical": "Plumbing / HVAC",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 75,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 48,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "75/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 10,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 724
+    },
+    {
+      "prospect_id": "built:90",
+      "business_name": "H&G Sign Company",
+      "website": "https://www.hgsign.com/",
+      "vertical": "Signage / fabrication",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 27,
+      "site_quality_band": "broken",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.36,
+      "opportunity_score": 83,
+      "opportunity_confidence": 0.57,
+      "verdict": "enrich",
+      "offer": "undecided",
+      "next_action": "Confidence 36% is too low to route. Run the Tier 1 rendered audit.",
+      "unknown_dimensions": [
+        "mobile",
+        "craft",
+        "content",
+        "discoverability"
+      ],
+      "headline": "27/100 broken (provisional — Tier 0 only) (low confidence — deepen the audit). Worst: TLS is broken (CERT_HAS_EXPIRED) — browsers show a full-page security warning; no HTTPS — browsers mark it \"Not secure\".",
+      "components": {
+        "replaceability": 29,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": "broken_tls",
+      "elapsed_ms": 451
+    },
+    {
+      "prospect_id": "built:91",
+      "business_name": "JDV Electric, LLC",
+      "website": "https://www.jdvelectric.com/",
+      "vertical": "Electrical",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 76,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 48,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "76/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 10,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 459
+    },
+    {
+      "prospect_id": "built:92",
+      "business_name": "K.A.M. Sheet Metal & Fab",
+      "website": "https://www.kamsheetmetal.com/home-1",
+      "vertical": "Sheet metal /",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 66,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 45,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "66/100 dated (provisional — Tier 0 only). Worst: hard-coded 9999px page width; no schema.org structured data.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 5,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 391
+    },
+    {
+      "prospect_id": "built:93",
+      "business_name": "Manayunk Plumbing & Heating",
+      "website": "https://manayunkplumbingheating.com/",
+      "vertical": "Plumbing / HVAC",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 67,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 52,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "67/100 dated (provisional — Tier 0 only). Worst: no schema.org structured data; most images have no alt text.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 1037
+    },
+    {
+      "prospect_id": "built:94",
+      "business_name": "Solution Based Plumbing and Heating, Inc.",
+      "website": "https://sbphinc.com/",
+      "vertical": "Plumbing / heating",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 70,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 51,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "70/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 346
+    },
+    {
+      "prospect_id": "built:95",
+      "business_name": "Strickland Electric",
+      "website": "https://strickelectric.com/",
+      "vertical": "Electrical",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 65,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 60,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "65/100 dated (provisional — Tier 0 only). Worst: sluggish first response: 2428ms; most images have no alt text.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 3136
+    },
+    {
+      "prospect_id": "built:96",
+      "business_name": "Summers Quality Services",
+      "website": "https://www.summersquality.com/",
+      "vertical": "HVAC / plumbing /",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 67,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 52,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "67/100 dated (provisional — Tier 0 only). Worst: sluggish first response: 1596ms; no webp/avif — all legacy image formats.",
+      "components": {
+        "replaceability": 13,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 6,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 1792
+    },
+    {
+      "prospect_id": "built:98",
+      "business_name": "Waste Gas Fabricating Company, Inc.",
+      "website": "https://wastegas.com/",
+      "vertical": "Heavy steel fabrication",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 33,
+      "site_quality_band": "decayed",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 80,
+      "opportunity_confidence": 0.57,
+      "verdict": "rebuild",
+      "offer": "Tier-A demo site + direct mail QR",
+      "next_action": "Queue a site-factory brief (/mirror-and-improve)",
+      "unknown_dimensions": [],
+      "headline": "33/100 decayed (provisional — Tier 0 only). Worst: no viewport meta — page renders desktop-width on phones; only 0 words on the homepage.",
+      "components": {
+        "replaceability": 27,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 288
+    },
+    {
+      "prospect_id": "built:99",
+      "business_name": "Wilson's Forklift Service, LLC",
+      "website": "https://wilsonsforklift.com/",
+      "vertical": "Forklift service",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 66,
+      "site_quality_band": "dated",
+      "provisional": true,
+      "capped": false,
+      "confidence": 0.91,
+      "opportunity_score": 45,
+      "opportunity_confidence": 0.57,
+      "verdict": "polish",
+      "offer": "landing page + CRO engagement",
+      "next_action": "Pitch a single high-intent landing page, not a full rebuild — their site is decent",
+      "unknown_dimensions": [],
+      "headline": "66/100 dated (provisional — Tier 0 only). Worst: no meta description; most images have no alt text.",
+      "components": {
+        "replaceability": 14,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 5,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 488
+    },
+    {
+      "prospect_id": "built:100",
+      "business_name": "Young's Electrical Services Inc.",
+      "website": "https://www.youngselectricalservicesinc.com/",
+      "vertical": "Electrical",
+      "market": "PHL",
+      "graded_at": "2026-08-06",
+      "tier_reached": 0,
+      "site_quality_score": 70,
+      "site_quality_band": "unconfirmed",
+      "provisional": true,
+      "capped": true,
+      "confidence": 0.91,
+      "opportunity_score": 57,
+      "opportunity_confidence": 0.57,
+      "verdict": "verify",
+      "offer": "undecided — needs a rendered audit",
+      "next_action": "Run Tier 1 (rendered) audit: no markup faults found, but design was never seen",
+      "unknown_dimensions": [],
+      "headline": "70/100 unconfirmed. Markup checks found no disqualifying fault, but the design was never rendered, so this is not yet a decision. Run the Tier 1 audit before skipping this prospect.",
+      "components": {
+        "replaceability": 12,
+        "ability_to_pay": 0,
+        "visibility_gap": 0,
+        "vertical": 15,
+        "reachability": 10,
+        "available": {
+          "replaceability": true,
+          "ability_to_pay": false,
+          "visibility_gap": false,
+          "vertical": true,
+          "reachability": true
+        },
+        "missing_signals": [
+          "ability_to_pay",
+          "visibility_gap"
+        ]
+      },
+      "audit_trail": [
+        "tier0: fetched"
+      ],
+      "playwright_missing": false,
+      "render_failed": false,
+      "fetch_inconclusive": false,
+      "dead_domain": false,
+      "error_kind": null,
+      "elapsed_ms": 469
+    }
+  ],
+  "written_at": "2026-08-06T18:50:47.389Z"
+}

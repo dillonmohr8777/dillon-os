@@ -41,6 +41,40 @@ function validateManifest(manifest) {
   if (manifest?.timeout_seconds != null && (!Number.isFinite(manifest.timeout_seconds) || manifest.timeout_seconds <= 0)) {
     errors.push('timeout_seconds must be a positive number');
   }
+  if (manifest?.workflow_type === 'website_factory') {
+    const demoPath = String(manifest.demo_recording_path || '').trim();
+    if (!demoPath) errors.push('website_factory requires demo_recording_path');
+    if (manifest.visual_review_required !== true) errors.push('website_factory requires visual_review_required=true');
+    if (demoPath && !manifest.artifact_paths?.includes(demoPath)) {
+      errors.push('demo_recording_path must be included in artifact_paths');
+    }
+  }
+  return { ok: errors.length === 0, errors };
+}
+
+function validateCheckerEvidence(run, evidence) {
+  const errors = [];
+  if (!evidence?.checker_id || evidence.checker_id !== run.checker_id) {
+    errors.push(`Checker identity mismatch: expected ${run.checker_id}`);
+  }
+  if (evidence?.checker_id === run.maker_id) errors.push('Maker cannot check their own work');
+  if (!['pass', 'fail'].includes(evidence?.verdict)) errors.push('Checker verdict must be pass or fail');
+  if (!String(evidence?.summary || '').trim()) errors.push('Checker evidence summary is required');
+  if (run.workflow_type === 'website_factory') {
+    if (evidence?.demo_reviewed !== true) errors.push('website_factory checker must review the screen recording');
+    if (!['pass', 'fail'].includes(evidence?.visual_review?.verdict)) {
+      errors.push('website_factory checker requires a visual_review verdict');
+    }
+    if (!String(evidence?.visual_review?.summary || '').trim()) {
+      errors.push('website_factory checker requires a visual_review summary');
+    }
+    if (!Array.isArray(evidence?.visual_review?.viewports) || evidence.visual_review.viewports.length < 2) {
+      errors.push('website_factory checker requires at least two reviewed viewports');
+    }
+    if (evidence?.verdict === 'pass' && evidence?.visual_review?.verdict !== 'pass') {
+      errors.push('overall checker verdict cannot pass when visual review fails');
+    }
+  }
   return { ok: errors.length === 0, errors };
 }
 
@@ -106,6 +140,7 @@ tags:
 ## Handoff contract
 
 - **Workflow:** ${run.workflow_id}
+- **Workflow type:** ${run.workflow_type}
 - **Maker:** ${run.maker_id}
 - **Checker:** ${run.checker_id}
 - **Status:** ${run.status}
@@ -113,6 +148,7 @@ tags:
 - **Timeout:** ${run.timeout_seconds || 'not set'} seconds
 - **Human gate:** ${run.human_gate ? 'required' : 'not required'}
 - **Rollback:** ${run.rollback}
+${run.demo_recording_path ? `- **Screen recording:** \`${run.demo_recording_path}\`` : ''}
 
 ## Expected artifacts
 
@@ -133,6 +169,12 @@ ${(makerEvidence.artifacts || []).map((artifact) => `- ${artifact.exists ? 'pres
 - Verdict: ${checkerEvidence.verdict || 'pending'}
 - Checker: ${checkerEvidence.checker_id || run.checker_id}
 - Evidence: ${checkerEvidence.summary || 'pending'}
+${run.workflow_type === 'website_factory'
+    ? `- Demo reviewed: ${checkerEvidence.demo_reviewed ? 'yes' : 'pending'}
+- Visual verdict: ${checkerEvidence.visual_review?.verdict || 'pending'}
+- Visual evidence: ${checkerEvidence.visual_review?.summary || 'pending'}
+- Viewports: ${(checkerEvidence.visual_review?.viewports || []).join(', ') || 'pending'}`
+    : ''}
 
 ## Human approval
 
@@ -160,6 +202,7 @@ function createRun(manifest) {
   const run = {
     run_id: runId,
     workflow_id: manifest.workflow_id,
+    workflow_type: manifest.workflow_type || 'general',
     task: manifest.task,
     constraints: manifest.constraints || [],
     upstream_artifacts: manifest.upstream_artifacts || [],
@@ -168,6 +211,8 @@ function createRun(manifest) {
     artifact_paths: manifest.artifact_paths,
     acceptance_tests: manifest.acceptance_tests,
     rollback: manifest.rollback,
+    demo_recording_path: manifest.demo_recording_path || null,
+    visual_review_required: manifest.visual_review_required === true,
     human_gate: manifest.human_gate !== false,
     budget_tokens: manifest.budget_tokens || null,
     timeout_seconds: manifest.timeout_seconds || null,
@@ -215,18 +260,16 @@ function recordMaker(runId, evidence) {
 function recordChecker(runId, evidence) {
   const run = loadRun(runId);
   if (run.status !== 'awaiting_check') throw new Error(`Run ${runId} is not awaiting an independent check`);
-  if (!evidence.checker_id || evidence.checker_id !== run.checker_id) {
-    throw new Error(`Checker identity mismatch: expected ${run.checker_id}`);
-  }
-  if (evidence.checker_id === run.maker_id) throw new Error('Maker cannot check their own work');
-  if (!['pass', 'fail'].includes(evidence.verdict)) throw new Error('Checker verdict must be pass or fail');
-  if (!String(evidence.summary || '').trim()) throw new Error('Checker evidence summary is required');
+  const validation = validateCheckerEvidence(run, evidence);
+  if (!validation.ok) throw new Error(validation.errors.join('; '));
   run.checker_evidence = {
     checker_id: evidence.checker_id,
     recorded_at: nowISO(),
     verdict: evidence.verdict,
     summary: evidence.summary,
     test_results: evidence.test_results || [],
+    demo_reviewed: evidence.demo_reviewed === true,
+    visual_review: evidence.visual_review || null,
   };
   run.status = evidence.verdict === 'pass' ? 'checker_passed' : 'checker_failed';
   persistRun(run);
@@ -267,6 +310,7 @@ function gateRun(runId) {
 
 module.exports = {
   validateManifest,
+  validateCheckerEvidence,
   createRun,
   loadRun,
   recordMaker,

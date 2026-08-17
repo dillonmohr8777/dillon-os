@@ -1,0 +1,141 @@
+{
+  "nodes": [
+    {
+      "id": "n001",
+      "type": "text",
+      "text": "# D.I.L.L.O.N. OS\n**12_Brain** canonical layer\n(public Git — no PII here)",
+      "x": -200,
+      "y": -160,
+      "width": 400,
+      "height": 160,
+      "color": "6"
+    },
+    {
+      "id": "n002",
+      "type": "file",
+      "file": "12_Brain/INDEX.md",
+      "x": -180,
+      "y": 40,
+      "width": 360,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "n003",
+      "type": "file",
+      "file": "Dashboard.md",
+      "x": -180,
+      "y": 140,
+      "width": 360,
+      "height": 70,
+      "color": "6"
+    },
+    {
+      "id": "n010",
+      "type": "file",
+      "file": "12_Brain/raw/README.md",
+      "x": -900,
+      "y": -100,
+      "width": 320,
+      "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "n011",
+      "type": "file",
+      "file": "12_Brain/raw/2026-07-04 - obsidian-second-brain-article.md",
+      "x": -900,
+      "y": 0,
+      "width": 320,
+      "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "n020",
+      "type": "file",
+      "file": "12_Brain/entities/README.md",
+      "x": -500,
+      "y": -100,
+      "width": 280,
+      "height": 70,
+      "color": "4"
+    },
+    {
+      "id": "n021",
+      "type": "file",
+      "file": "12_Brain/concepts/Second Brain Architecture.md",
+      "x": -500,
+      "y": 0,
+      "width": 280,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "n030",
+      "type": "file",
+      "file": "12_Brain/projects/README.md",
+      "x": 280,
+      "y": -120,
+      "width": 280,
+      "height": 70,
+      "color": "4"
+    },
+    {
+      "id": "n031",
+      "type": "file",
+      "file": "12_Brain/decisions/README.md",
+      "x": 280,
+      "y": -30,
+      "width": 280,
+      "height": 70,
+      "color": "4"
+    },
+    {
+      "id": "n032",
+      "type": "file",
+      "file": "12_Brain/memory/README.md",
+      "x": 280,
+      "y": 60,
+      "width": 280,
+      "height": 70,
+      "color": "5"
+    },
+    {
+      "id": "n033",
+      "type": "file",
+      "file": "12_Brain/protocols/README.md",
+      "x": 280,
+      "y": 150,
+      "width": 280,
+      "height": 70,
+      "color": "2"
+    },
+    {
+      "id": "n040",
+      "type": "file",
+      "file": "12_Brain/private/README.md",
+      "x": 280,
+      "y": 260,
+      "width": 280,
+      "height": 80,
+      "color": "1"
+    },
+    {
+      "id": "n050",
+      "type": "file",
+      "file": "12_Brain/System/Second Brain Ops.md",
+      "x": -180,
+      "y": 260,
+      "width": 360,
+      "height": 80,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "n001", "toNode": "n002", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e2", "fromNode": "n002", "toNode": "n010", "fromSide": "left", "toSide": "right" },
+    { "id": "e3", "fromNode": "n002", "toNode": "n020", "fromSide": "left", "toSide": "right" },
+    { "id": "e4", "fromNode": "n002", "toNode": "n030", "fromSide": "right", "toSide": "left" },
+    { "id": "e5", "fromNode": "n002", "toNode": "n040", "fromSide": "right", "toSide": "left" }
+  ]
+}

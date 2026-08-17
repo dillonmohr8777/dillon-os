@@ -4,11 +4,10 @@ status: active
 industry: HCM/HR tech
 start_date: 2026-01-25
 rate: Full-time
-last_touched: 2026-07-30
+last_touched: 2026-07-29
 next_action: TBD — needs human next action
 due: none
 ---
-
 
 # Align HCM
 
@@ -16,7 +15,7 @@ due: none
 - **Contacts:** Maher El-Abdallah (CEO), Barbara Tonelli, Joann Scolaro, Allison
 - **Website:** alignhcm.com
 - **Industry:** HCM / HR Technology
-- **Tier:** Full-time employment; not a client
+- **Tier:** Full-time (managed under Buzz Bull Marketing Systems)
 - **Brand Palette:** Navy / Orange
 
 ## Services

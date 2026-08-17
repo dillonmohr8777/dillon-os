@@ -69,3 +69,47 @@ Read these before doing anything:
 
 Start with lane 1 (outreach list + email pack) and lane 3 (calendar), and
 put deliverables in `02_Campaigns/IMMOHRTAL/` alongside the existing work.
+
+---
+
+## Shared Claude and Codex folder map
+
+Use these paths so both agents can work without creating disconnected copies:
+
+| Codex output | Canonical location |
+|---|---|
+| Outreach lists, pitch tracking, and CRM files | `02_Campaigns/IMMOHRTAL/Outreach/` |
+| Created entity-profile URLs | Append to `02_Campaigns/IMMOHRTAL/Entity Pack.md` under a `Created profiles` section, then wire verified URLs into site schema |
+| Captions, calendars, publishing plans, capture handoffs, and posting logs | `02_Campaigns/IMMOHRTAL/Social/` |
+| Email and ESP work | `02_Campaigns/IMMOHRTAL/Email/` |
+| Site code | `immohrtal-site/` |
+| Rendered visual assets | `02_Campaigns/IMMOHRTAL/asset-studio/out/` |
+| Campaign-wide status, manifests, or unfinished notes | `02_Campaigns/IMMOHRTAL/` as clearly named Markdown files |
+
+Claude owns the visual design lane. Codex should consume the approved visual system and must not change `asset-studio/` render scripts or the site's design system without flagging the change first. Site changes must preserve the SubPage/spine convention and dash-free copy rule.
+
+Before shared work is pushed, update from `main`, keep commits small and campaign-scoped, and confirm no unrelated files are included.
+
+## Codex deliverables added July 15, 2026
+
+### Social operating system
+
+- `Social/Content Upgrade Plan.md`
+- `Social/Claude Production Briefs.md`
+- `Social/Social Scale Plan.md`
+- `Social/30-Day Content Calendar v2.csv`
+- `Social/Weekly Capture Handoff.md`
+- `Social/Weekly Scorecard.csv`
+- `Social/Profile Links.csv`
+
+### Viewable books
+
+- `Social/IMMOHRTAL Content Upgrade and Production Book.pdf`
+- `Social/IMMOHRTAL Complete Campaign Handoff.pdf`
+
+### Campaign-wide records
+
+- `Codex Implementation Status.md`
+- `Codex Source Manifest.md`
+
+These files are planning, production, and review artifacts. Their presence in the repository is not approval to publish social posts, send outreach, launch ads, deploy site changes, or claim unverified release facts.

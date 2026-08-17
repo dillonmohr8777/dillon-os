@@ -1,0 +1,31 @@
+name: Deploy Growth Workshop LP
+
+# Manual only once this file is on main. Overlays index.html, script.js, and
+# the Aug 27 ICS onto the existing momentum-workshop-pilot Netlify site.
+# Does not create sites. Uses secrets.NETLIFY_AUTH_TOKEN (value is not readable
+# via API). To publish from a feature branch, temporarily add a `push:` trigger
+# for that branch name — do not leave auto-deploy on.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Publish patched LP
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "NETLIFY_AUTH_TOKEN is not set on this repo."
+            exit 1
+          fi
+          node _os/automation/bin/workshop-lp-deploy.js

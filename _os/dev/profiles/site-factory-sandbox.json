@@ -1,0 +1,39 @@
+{
+  "id": "site-factory-sandbox",
+  "purpose": "Isolated proof that a fresh agent can diagnose and verify the Dillon OS website workflow without tribal knowledge.",
+  "workspace": "_os/automation/fixtures/sites/aeo-healthy",
+  "allowed_commands": ["node"],
+  "required_paths": [
+    "_os/automation/bin/aeo-trust-gate.js",
+    "_os/dev/bin/check-aeo-fixture.js",
+    "_os/automation/tests/automation.test.js",
+    "_os/automation/tests/intelligence-stack.test.js",
+    "_os/automation/fixtures/sites/aeo-healthy/index.html"
+  ],
+  "required_skills": [
+    ".github/skills/dillon-plan-grill/SKILL.md",
+    ".github/skills/dillon-frontend-maker/SKILL.md",
+    ".github/skills/dillon-independent-web-checker/SKILL.md"
+  ],
+  "verify_steps": [
+    {
+      "id": "automation-tests",
+      "command": "node",
+      "args": [
+        "--test",
+        "_os/automation/tests/automation.test.js",
+        "_os/automation/tests/intelligence-stack.test.js"
+      ],
+      "timeout_seconds": 120
+    },
+    {
+      "id": "aeo-trust-fixture",
+      "command": "node",
+      "args": [
+        "_os/dev/bin/check-aeo-fixture.js"
+      ],
+      "timeout_seconds": 60
+    }
+  ],
+  "timeout_seconds": 180
+}
