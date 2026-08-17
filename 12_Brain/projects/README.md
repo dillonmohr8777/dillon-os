@@ -1,6 +1,6 @@
 ---
 tags: [projects, index]
-updated: 2026-07-29
+updated: 2026-08-17
 ---
 
 # Projects
@@ -14,6 +14,7 @@ Use [[12_Brain/templates/Project|Project template]]. View in
 ## Active
 
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — evidence-backed audit engine wrapping the existing radar.
+- [[12_Brain/projects/HubSpot Attribution Repair|HubSpot Attribution Repair]] — split organic GMB vs Google PMax HubSpot segments.
 
 ## Links
 

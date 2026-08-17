@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-17",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -205,6 +205,19 @@
       "outputs": ["12_Brain/state/aeo-trust-gate.json", "Daily-Briefs/aeo-trust-report.md"],
       "external_actions": false,
       "notes": "A fail blocks deployment. A pass does not replace visual review, functional QA, or exact Netlify target verification.",
+      "status": "implemented"
+    },
+    {
+      "id": "hubspot-attribution-repair",
+      "name": "HubSpot GMB organic vs PMax segment repair",
+      "lane": "crm",
+      "tier": 0,
+      "cadence": "on-demand",
+      "command": "node _os/automation/bin/hubspot-attribution-repair.js --dry-run",
+      "inputs": ["HUBSPOT_TOKEN when applying", "named segments GMB_LP_Organic and Google P-max Suspensions"],
+      "outputs": ["12_Brain/state/hubspot-attribution-repair.json"],
+      "external_actions": false,
+      "notes": "Dry-run is the default. --apply requires --confirm-apply and a live token. Never prints contact rows.",
       "status": "implemented"
     }
   ],

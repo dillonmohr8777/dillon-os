@@ -19,12 +19,12 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] HubSpot: apply GMB_LP_Organic vs Google P-max Suspensions filter split once token is ACTIVE
+- [ ] Send drafted Jason/Alexandra Slack replies after approval
+- [ ] Map `#360leads` Source to original traffic source
 
 ## Active Projects
--
+- [[12_Brain/projects/HubSpot Attribution Repair]]
 
 ## Notes
 -
