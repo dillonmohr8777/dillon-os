@@ -1,0 +1,105 @@
+{
+  "id": "dillon-command",
+  "date": "2026-08-17",
+  "started_at": "2026-08-17T13:07:17.711Z",
+  "status": "ok",
+  "lanes": {
+    "command": {
+      "status": "ok",
+      "summary": "4 open Slack loops, 0 moving clients",
+      "artifacts": []
+    },
+    "comms": {
+      "status": "warn",
+      "summary": "4 slack notes, 4 open",
+      "artifacts": [
+        "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md",
+        "00_Inbox/slack/2026-07-30-jenny-brand-direction.md",
+        "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md",
+        "00_Inbox/slack/2026-07-30-sean-callrail-status.md"
+      ]
+    },
+    "clients": {
+      "status": "ok",
+      "summary": "{\"files\":38,\"incomplete\":0,\"complete\":38}",
+      "artifacts": [
+        "/workspace/Daily-Briefs/frontmatter-report.md"
+      ],
+      "blocked": null
+    },
+    "websites": {
+      "status": "warn",
+      "summary": "{\"total\":5,\"pass\":1,\"warn\":0,\"fail\":1,\"skipped\":3}",
+      "artifacts": [
+        "/workspace/Daily-Briefs/site-health-report.md"
+      ],
+      "blocked": null
+    },
+    "outreach": {
+      "status": "ok",
+      "summary": "completed",
+      "artifacts": [],
+      "blocked": null
+    },
+    "intelligence": {
+      "status": "scout-only",
+      "summary": "skills: research-sweep",
+      "artifacts": [],
+      "blocked": null
+    },
+    "ads": {
+      "status": "scout-only",
+      "summary": "skills: metrics-pull",
+      "artifacts": [],
+      "blocked": "live reads need MCP: google-ads, meta-ads"
+    },
+    "reporting": {
+      "status": "scout-only",
+      "summary": "skills: am-report, client-report",
+      "artifacts": [],
+      "blocked": null
+    }
+  },
+  "counts": {
+    "slack_total": 4,
+    "slack_open": 4,
+    "website_builds": 0,
+    "clients_moving": 0,
+    "clients_stalled": 397,
+    "p0_items": 4
+  },
+  "p0": [
+    {
+      "lane": "comms",
+      "tier": 0,
+      "priority": 2,
+      "title": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert",
+      "reason": "Open Slack ask (automation)",
+      "evidence": "00_Inbox/slack/2026-07-30-jason-sean-bot-case-status-alert.md"
+    },
+    {
+      "lane": "comms",
+      "tier": 0,
+      "priority": 2,
+      "title": "00_Inbox/slack/2026-07-30-jenny-brand-direction",
+      "reason": "Open Slack ask (question)",
+      "evidence": "00_Inbox/slack/2026-07-30-jenny-brand-direction.md"
+    },
+    {
+      "lane": "comms",
+      "tier": 0,
+      "priority": 2,
+      "title": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt",
+      "reason": "Open Slack ask (content)",
+      "evidence": "00_Inbox/slack/2026-07-30-melissa-guidelines-training-prompt.md"
+    },
+    {
+      "lane": "comms",
+      "tier": 0,
+      "priority": 2,
+      "title": "00_Inbox/slack/2026-07-30-sean-callrail-status",
+      "reason": "Open Slack ask (report)",
+      "evidence": "00_Inbox/slack/2026-07-30-sean-callrail-status.md"
+    }
+  ]
+}

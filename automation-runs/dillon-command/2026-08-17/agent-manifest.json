@@ -1,0 +1,166 @@
+{
+  "id": "dillon-command",
+  "date": "2026-08-17",
+  "mode": "agent",
+  "contract": "11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md",
+  "instructions": [
+    "You are the commander (L0). Fan out one sub-agent per lane below in parallel.",
+    "Each lane agent follows its skill(s) read-only first (Tier 0).",
+    "Synthesize one approval board. Open one PR with board + AM report + pulse.",
+    "Never send Slack, email, deploy, or change ad spend without explicit Tier-2 approval."
+  ],
+  "lanes": [
+    {
+      "id": "command",
+      "name": "Command / routing",
+      "skills": [
+        "dillon-command"
+      ],
+      "scout": "scan Dashboard.md, System/OS Config.md, Morning Directives if present",
+      "outputs": [
+        "approval-board.md",
+        "run-state.json",
+        "tier2-queue.md"
+      ],
+      "mcp": {
+        "optional": [],
+        "required_for_live": []
+      },
+      "prior_status": "ok"
+    },
+    {
+      "id": "comms",
+      "name": "Gmail / Slack / follow-up",
+      "skills": [
+        "slack-intake",
+        "inbox-brief"
+      ],
+      "scout": "00_Inbox/slack/, Daily-Briefs/slack-intake-*.md, System/urgent-replies.md",
+      "outputs": [
+        "00_Inbox/slack/",
+        "Daily-Briefs/slack-intake-YYYY-MM-DD.md"
+      ],
+      "mcp": {
+        "optional": [
+          "slack"
+        ],
+        "required_for_live": []
+      },
+      "prior_status": "warn"
+    },
+    {
+      "id": "clients",
+      "name": "Client roster / pulse",
+      "skills": [
+        "client-pulse"
+      ],
+      "scout": "01_Clients/**/*.md frontmatter and open tasks",
+      "outputs": [
+        "Daily-Briefs/pulse-today.md",
+        "Daily-Briefs/frontmatter-report.md"
+      ],
+      "mcp": {
+        "optional": [],
+        "required_for_live": []
+      },
+      "prior_status": "ok"
+    },
+    {
+      "id": "intelligence",
+      "name": "Research / Grok / X scout",
+      "skills": [
+        "research-sweep"
+      ],
+      "scout": "12_Brain/01_Captures/Grok/, 12_Brain/06_Research/",
+      "outputs": [
+        "12_Brain/01_Captures/Grok/",
+        "12_Brain/state/grok-intelligence-ingest.json"
+      ],
+      "mcp": {
+        "optional": [
+          "grok",
+          "xai"
+        ],
+        "required_for_live": []
+      },
+      "prior_status": "scout-only"
+    },
+    {
+      "id": "websites",
+      "name": "Site health / factory queue",
+      "skills": [
+        "site-factory",
+        "site-grade"
+      ],
+      "scout": "12_Brain/registry/properties.json, 00_Inbox/slack/ type:website-build",
+      "outputs": [
+        "Daily-Briefs/site-health-report.md",
+        "12_Brain/state/site-health.json"
+      ],
+      "mcp": {
+        "optional": [],
+        "required_for_live": []
+      },
+      "prior_status": "warn"
+    },
+    {
+      "id": "outreach",
+      "name": "Prospect discover / qualify",
+      "skills": [
+        "site-batch"
+      ],
+      "scout": "12_Brain/queue/, 08_Prospects/",
+      "outputs": [
+        "12_Brain/queue/qualify-*.jsonl",
+        "08_Prospects/*.md"
+      ],
+      "mcp": {
+        "optional": [],
+        "required_for_live": []
+      },
+      "prior_status": "ok"
+    },
+    {
+      "id": "ads",
+      "name": "Paid media scouts",
+      "skills": [
+        "metrics-pull"
+      ],
+      "scout": "01_Clients/*/Optimization Ledger.md, ads-related 00_Inbox/slack/",
+      "outputs": [
+        "lane-ads.md"
+      ],
+      "mcp": {
+        "optional": [],
+        "required_for_live": [
+          "google-ads",
+          "meta-ads"
+        ]
+      },
+      "prior_status": "scout-only"
+    },
+    {
+      "id": "reporting",
+      "name": "AM brief / client reports",
+      "skills": [
+        "am-report",
+        "client-report"
+      ],
+      "scout": "Daily-Briefs/, report due dates in client notes",
+      "outputs": [
+        "Daily-Briefs/am-report-YYYY-MM-DD.md",
+        "Daily-Briefs/reports/"
+      ],
+      "mcp": {
+        "optional": [],
+        "required_for_live": []
+      },
+      "prior_status": "scout-only"
+    }
+  ],
+  "artifacts_dir": "automation-runs/dillon-command/2026-08-17/",
+  "push": {
+    "cloud": "one PR: approval board + AM report + pulse",
+    "local": "one phone notification deep-linked to approval board"
+  }
+}

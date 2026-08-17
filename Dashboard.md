@@ -19,9 +19,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] Check inbox and process
-- [ ] Review active campaigns
-- [ ] Follow up with clients
+- [ ] Replenish Google Ads billing — confirm Mia cleared payment screen (P0 billing risk)
+- [ ] Triage 4 stale Slack boss loops (bot alerts, CallRail, Melissa training, Jenny brand)
+- [ ] Growth Workshop Aug 27 — LP + franchise email engine checkpoint
 
 ## Active Projects
 -
