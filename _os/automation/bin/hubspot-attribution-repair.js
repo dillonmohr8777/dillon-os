@@ -151,7 +151,8 @@ function knownFilter(property, known) {
     property,
     operation: {
       operationType: 'ALL_PROPERTY',
-      operator: known ? 'IS_KNOWN' : 'IS_NOT_KNOWN',
+      operator: known ? 'IS_KNOWN' : 'IS_UNKNOWN',
+      includeObjectsWithNoValueSet: !known,
     },
   };
 }
@@ -200,43 +201,16 @@ function sourceCopyWorkflowSpec() {
     isEnabled: true,
     flowType: 'WORKFLOW',
     name: SOURCE_COPY_WORKFLOW_NAME,
-    description: 'If CallRail Source is empty after a new contact is created, copy Original Traffic Source into it. Does not overwrite a filled CallRail value.',
+    description: 'If CallRail Source is empty when a contact is created, wait 5 minutes then copy Original Traffic Source into it.',
     startActionId: '1',
-    nextAvailableActionId: '5',
+    nextAvailableActionId: '3',
     actions: [
       delayAction('1', '2', 5),
       {
-        actionId: '2',
-        listBranches: [
-          {
-            branchName: 'Source still empty',
-            filterBranch: {
-              filterBranches: [],
-              filters: [knownFilter('source', false), knownFilter('hs_analytics_source', true)],
-              filterBranchType: 'AND',
-              filterBranchOperator: 'AND',
-            },
-            connection: {
-              edgeType: 'STANDARD',
-              nextActionId: '3',
-            },
-          },
-        ],
-        defaultBranchName: 'Source already filled',
-        defaultBranch: {
-          edgeType: 'STANDARD',
-          nextActionId: '4',
-        },
-      },
-      {
         type: 'SINGLE_CONNECTION',
-        actionId: '3',
+        actionId: '2',
         actionTypeVersion: 0,
         actionTypeId: '0-5',
-        connection: {
-          edgeType: 'STANDARD',
-          nextActionId: '4',
-        },
         fields: {
           property_name: 'source',
           value: {
@@ -245,13 +219,6 @@ function sourceCopyWorkflowSpec() {
           },
         },
       },
-      {
-        type: 'SINGLE_CONNECTION',
-        actionId: '4',
-        actionTypeVersion: 0,
-        actionTypeId: '0-1',
-        fields: { delta: '0', time_unit: 'MINUTES' },
-      },
     ],
     enrollmentCriteria: {
       shouldReEnroll: false,
@@ -259,7 +226,7 @@ function sourceCopyWorkflowSpec() {
       eventFilterBranches: [
         {
           filterBranches: [],
-          filters: [],
+          filters: [knownFilter('source', false)],
           eventTypeId: '4-1463224',
           operator: 'HAS_COMPLETED',
           filterBranchType: 'UNIFIED_EVENTS',
@@ -271,6 +238,7 @@ function sourceCopyWorkflowSpec() {
     timeWindows: [],
     blockedDates: [],
     customProperties: {},
+    crmObjectCreationStatus: 'COMPLETE',
     type: 'CONTACT_FLOW',
     objectTypeId: '0-1',
     suppressionListIds: [],
@@ -326,6 +294,7 @@ function organicNotifyWorkflowSpec() {
     timeWindows: [],
     blockedDates: [],
     customProperties: {},
+    crmObjectCreationStatus: 'COMPLETE',
     type: 'CONTACT_FLOW',
     objectTypeId: '0-1',
     suppressionListIds: [],
@@ -356,7 +325,8 @@ async function hs(pathname, { method = 'GET', body } = {}) {
     err.code = 'hubspot_http';
     err.status = res.status;
     err.body = json;
-    err.hubspotMessage = json && json.message ? String(json.message).slice(0, 400) : null;
+    err.hubspotMessage = json && json.message ? String(json.message).slice(0, 800) : null;
+    if (json && json.errors) err.hubspotMessage = `${err.hubspotMessage} ${JSON.stringify(json.errors).slice(0, 600)}`;
     throw err;
   }
   return json;

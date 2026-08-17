@@ -157,12 +157,11 @@ describe('hubspot-attribution-repair CLI', () => {
     assert.equal(copy.fields.property_name, 'source');
     assert.equal(copy.fields.value.type, 'OBJECT_PROPERTY');
     assert.equal(copy.fields.value.propertyName, 'hs_analytics_source');
-    const branch = spec.actions.find((a) => Array.isArray(a.listBranches));
-    const filters = branch.listBranches[0].filterBranch.filters;
-    assert.equal(filters[0].property, 'source');
-    assert.equal(filters[0].operation.operator, 'IS_NOT_KNOWN');
-    assert.equal(filters[1].property, 'hs_analytics_source');
-    assert.equal(filters[1].operation.operator, 'IS_KNOWN');
+    const created = spec.enrollmentCriteria.eventFilterBranches[0];
+    assert.equal(created.eventTypeId, '4-1463224');
+    assert.equal(created.filters[0].property, 'source');
+    assert.equal(created.filters[0].operation.operator, 'IS_UNKNOWN');
+    assert.equal(created.filters[0].operation.includeObjectsWithNoValueSet, true);
   });
 
   it('builds organic notify enrollment on list 302 for Jason and Sean', () => {
@@ -177,6 +176,6 @@ describe('hubspot-attribution-repair CLI', () => {
     assert.deepEqual(email.fields.user_ids, repair.ORGANIC_NOTIFY_USER_IDS);
     assert.deepEqual(notify.fields.user_ids, repair.ORGANIC_NOTIFY_USER_IDS);
     assert.match(email.fields.body, /hs_analytics_source/);
-    assert.equal(repair.knownFilter('source', false).operation.operator, 'IS_NOT_KNOWN');
+    assert.equal(repair.knownFilter('source', false).operation.operator, 'IS_UNKNOWN');
   });
 });
