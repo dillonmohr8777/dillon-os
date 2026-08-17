@@ -2,7 +2,7 @@
 tags: [campaign, growth-workshop, google, outreach]
 campaign: "[[Growth Workshop]]"
 created: 2026-08-14
-source: "[[12_Brain/research/Franchise Email Sourcing]]"
+source: "[[12_Brain/06_Research/Franchise Email Sourcing]]"
 ---
 
 # Google RSVP Rail

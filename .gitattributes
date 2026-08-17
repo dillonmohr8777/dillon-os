@@ -1,0 +1,31 @@
+# Without this file, core.autocrlf=true rewrites LF->CRLF on Windows checkout,
+# and tests that compare a file's bytes to a `\n` string fail locally while
+# passing in CI (ubuntu-latest). Pin code + fixtures to LF on every platform.
+# Markdown notes are left to autocrlf: nothing compares them byte-for-byte, and
+# forcing them would conflict with every open PR.
+
+*.js    text eol=lf
+*.mjs   text eol=lf
+*.cjs   text eol=lf
+*.json  text eol=lf
+*.jsonl text eol=lf
+*.html  text eol=lf
+*.css   text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.sh    text eol=lf
+
+# PowerShell is authored and run on Windows.
+*.ps1   text eol=crlf
+
+# Binary: never touch.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.gif   binary
+*.pdf   binary
+*.zip   binary
+*.mp4   binary
+*.mov   binary
+*.ico   binary

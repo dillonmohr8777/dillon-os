@@ -57,4 +57,4 @@ separately.
 
 Ran through the standing MCP acceptance gate rather than installed on the strength
 of the announcement. See [[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|the
-acceptance review]] and [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]].
+acceptance review]] and [[12_Brain/02_Entities/LandingFolio MCP|LandingFolio MCP]].

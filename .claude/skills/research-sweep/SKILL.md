@@ -36,13 +36,13 @@ own work — never let a researcher grade its own findings.
 
 ## 4. Land it
 
-- Full receipts + skeptic verdicts → `12_Brain/raw/research/YYYY-MM-DD - research - <topic>.md`
-  (also acceptable: `12_Brain/raw/YYYY-MM-DD - research - <topic>.md`)
+- Full receipts + skeptic verdicts → `12_Brain/01_Captures/research/YYYY-MM-DD - research - <topic>.md`
+  (also acceptable: `12_Brain/01_Captures/YYYY-MM-DD - research - <topic>.md`)
   (untouched from here on).
-- Survivors → compiled into `12_Brain/concepts/` (or `12_Brain/entities/`) pages: one-line
+- Survivors → compiled into `12_Brain/03_Concepts/` (or `12_Brain/02_Entities/`) pages: one-line
   summary, `source:` to the raw file, `updated:` today, `expires:` date
   matched to how fast the topic moves (fast-moving AI/ads topics: ~90 days).
   Update existing pages instead of duplicating; `[[link]]` related pages.
-- Add new pages to `12_Brain/INDEX.md` and link from `12_Brain/research/README.md` when the topic is research-shaped.
+- Add new pages to `12_Brain/INDEX.md` and link from `12_Brain/06_Research/README.md` when the topic is research-shaped.
 - Reply with: survivors (one line each), what got killed and why, and
   `git diff --stat`.

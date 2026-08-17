@@ -52,7 +52,7 @@ Apply the designated skills in order. Each one has its own SKILL.md:
 
 Non-negotiable: the palette comes from `brand.palette` in their harvest, not from taste. Their brand, better executed.
 
-For section composition only, the `landingfolio` MCP tools return reference screenshots of real landing-page sections. Query by section archetype, never by the prospect's name, and query once per archetype for the whole batch rather than per slug — the free tier allows 100 requests a day. Rules and rollback: `12_Brain/entities/LandingFolio MCP.md`.
+For section composition only, the `landingfolio` MCP tools return reference screenshots of real landing-page sections. Query by section archetype, never by the prospect's name, and query once per archetype for the whole batch rather than per slug — the free tier allows 100 requests a day. Rules and rollback: `12_Brain/02_Entities/LandingFolio MCP.md`.
 
 ## Step 5: Write the brief to the measured spec
 

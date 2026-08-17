@@ -32,32 +32,45 @@ describe('12_Brain canonical structure', () => {
 
   it('requiredBrainPaths covers Bases, templates, protocols, memory, skills, rules', () => {
     const paths = requiredBrainPaths().join('\n');
-    assert.match(paths, /bases\/Clients\.base/);
-    assert.match(paths, /bases\/Projects\.base/);
-    assert.match(paths, /bases\/Decisions\.base/);
+    assert.match(paths, /Bases\/Clients\.base/);
+    assert.match(paths, /Bases\/Projects\.base/);
+    assert.match(paths, /Bases\/Decisions\.base/);
     assert.match(paths, /templates\/Project\.md/);
-    assert.match(paths, /memory\/current\//);
+    assert.match(paths, /08_Memory\/current\//);
     assert.match(paths, /protocols\//);
     assert.match(paths, /vault-compile/);
     assert.match(paths, /vault-conventions\.mdc/);
     assert.match(paths, /routine-health\.md/);
   });
 
-  it('skills and SessionEnd hook point at 12_Brain, not root raw/', () => {
+  // The numbered taxonomy is canonical (2026-08-17). The retired lowercase tree
+  // (raw/, entities/, concepts/, decisions/, projects/, research/, memory/,
+  // bases/) must not come back: a second tree is invisible to the Bases.
+  it('skills and SessionEnd hook point at the numbered 12_Brain tree', () => {
     const compile = fs.readFileSync(path.join(VAULT, '.claude/skills/vault-compile/SKILL.md'), 'utf8');
-    assert.match(compile, /12_Brain\/raw\//);
-    assert.match(compile, /12_Brain\/entities\//);
+    assert.match(compile, /12_Brain\/01_Captures\//);
+    assert.match(compile, /12_Brain\/02_Entities\//);
     assert.match(compile, /12_Brain\/INDEX\.md/);
     assert.equal(compile.includes('`raw/`'), false, 'skill must not use unprefixed `raw/`');
 
     const settings = JSON.parse(fs.readFileSync(path.join(VAULT, '.claude/settings.json'), 'utf8'));
     const cmd = settings.hooks.SessionEnd[0].hooks[0].command;
-    assert.match(cmd, /12_Brain\/raw\/sessions\/session-log\.md/);
+    assert.match(cmd, /12_Brain\/01_Captures\/sessions\/session-log\.md/);
     assert.doesNotMatch(cmd, /\$CLAUDE_PROJECT_DIR\/raw\//);
   });
 
+  it('no retired lowercase brain tree exists', () => {
+    for (const dir of ['raw', 'entities', 'concepts', 'decisions', 'projects', 'research', 'memory']) {
+      const p = path.join(VAULT, BRAIN, dir);
+      // Case-insensitive on Windows, so compare the real on-disk name too.
+      if (!fs.existsSync(p)) continue;
+      const actual = fs.readdirSync(path.join(VAULT, BRAIN)).find((e) => e.toLowerCase() === dir);
+      assert.notEqual(actual, dir, `retired tree present: ${BRAIN}/${dir}`);
+    }
+  });
+
   it('Clients.base still queries 01_Clients (working vault)', () => {
-    const base = fs.readFileSync(path.join(VAULT, '12_Brain/bases/Clients.base'), 'utf8');
+    const base = fs.readFileSync(path.join(VAULT, '12_Brain/Bases/Clients.base'), 'utf8');
     assert.match(base, /file\.inFolder\("01_Clients"\)/);
   });
 });
@@ -81,7 +94,7 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
 
   it('getBrainVitals matches filesystem counts', () => {
     const b = getBrainVitals(VAULT);
-    const entitiesDir = path.join(VAULT, '12_Brain/entities');
+    const entitiesDir = path.join(VAULT, '12_Brain/02_Entities');
     const md = fs.readdirSync(entitiesDir).filter((f) => f.endsWith('.md')).length;
     assert.equal(b.entities, md);
   });

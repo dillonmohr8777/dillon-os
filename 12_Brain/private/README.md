@@ -20,7 +20,7 @@ must never be committed. Use this folder for:
 
 1. Create notes here on the signed-in Obsidian desktop (Sync may carry them
    between your private devices).
-2. Keep public wiki pages under `12_Brain/entities/` and `12_Brain/concepts/`
+2. Keep public wiki pages under `12_Brain/02_Entities/` and `12_Brain/03_Concepts/`
    as **redacted summaries** that link here by path mention only — do not
    copy the sensitive body into Git-tracked files.
 3. Agents writing to this vault: if a capture contains PII or access history,
@@ -42,7 +42,7 @@ must never be committed. Use this folder for:
 | Location | In Git? | Allowed content |
 |----------|---------|-----------------|
 | `12_Brain/private/**` (except this README) | No | PII, access, secrets, private paths |
-| `12_Brain/raw/` (tracked) | Yes | Architecture-safe captures only |
+| `12_Brain/01_Captures/` (tracked) | Yes | Architecture-safe captures only |
 | `12_Brain/entities|concepts|…` | Yes | Redacted summaries, no direct contact data |
 
 Public-safety tests fail the PR if newly tracked `12_Brain` files contain

@@ -8,7 +8,7 @@ created: 2026-08-14
 
 One-line summary: **720 emails to send.** The 4,914 UPS Store location inboxes are not owners and are not in this file.
 
-Receipts: [[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest]]. Method: [[Franchise Email Sourcing Playbook]]. Research: [[12_Brain/research/Franchise Email Sourcing]].
+Receipts: [[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest]]. Method: [[Franchise Email Sourcing Playbook]]. Research: [[12_Brain/06_Research/Franchise Email Sourcing]].
 
 ## What "UPS Store location inbox" means
 

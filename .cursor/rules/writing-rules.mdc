@@ -8,6 +8,6 @@ alwaysApply: true
 1. One lesson per file, with a one-line summary at the top.
 2. Update the existing page instead of creating a duplicate.
 3. Delete notes that turn out to be wrong.
-4. Never rewrite `12_Brain/raw/`.
+4. Never rewrite `12_Brain/01_Captures/`.
 5. Compiled pages need a `source:` link; research pages need `expires:`.
 6. Ship diffs, not claims. Prefer `[[wikilinks]]`.

@@ -22,7 +22,7 @@ Companion notes:
 - [[Scale Harvest Report]] — 720 send-ready franchisee emails (UPS counters dropped)
 - `lp-date-push/` — patched LP files + [[lp-date-push/DEPLOY-CHECKLIST|deploy checklist]] for the Aug 27 date
 - [[Calendar Auto-Add]] — Google Calendar invitation for registrants + ICS / template URLs (never the cold list)
-- Project page: [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]]
+- Project page: [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]]
 
 ## The event
 

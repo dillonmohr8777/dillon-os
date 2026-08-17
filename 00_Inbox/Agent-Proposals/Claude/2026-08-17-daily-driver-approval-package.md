@@ -1,18 +1,18 @@
 # Claude daily-driver approval package - 2026-08-17
 
-Cycle: `DRV-20260817-173817277`  Outcome: **noop**  Catch-up: False
+Cycle: `DRV-20260817-183817196`  Outcome: **noop**  Catch-up: False
 Status: PROPOSAL ONLY. Codex acting as Marketing Chief is the sole canonical writer.
 Nothing was sent, posted, published, deployed, purchased, committed, or pushed.
 
 ## This cycle
 
 - `lease` **ok** - exclusive controller lease acquired
-- `browser_bootstrap` **ok** - dedicated loopback 9223: restored
-- `poll` **ok** - signature 6f16a4fbabcad089 over 5 local inputs, no model used
+- `browser_bootstrap` **ok** - dedicated loopback 9223: already_listening
+- `poll` **ok** - signature 15b3759768ce242a over 5 local inputs, no model used
 - `catch_up` **ok** - last cycle 0.25h ago; catch_up=False
 - `circuit_breaker` **ok** - consecutive_failures=0 threshold=3 open=False
 - `dedupe` **ok** - changed=True within_min_interval=False force=False -> work=True
-- `budget` **ok** - day 23/26 routines, cycle cap 3, frontier 0/1
+- `budget` **ok** - day 24/26 routines, cycle cap 2, frontier 0/1
 - `frontier` **blocked** - state=disabled_by_default ceiling=1 used=0 artifact=
 - `select` **ok** - gate-cleared eligible: 0 -> 
 - `plan` **ok** - selected 0: 

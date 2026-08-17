@@ -2,14 +2,14 @@
 tags: [campaign, growth-workshop, sourcing, franchise]
 campaign: "[[Growth Workshop]]"
 created: 2026-08-14
-research: "[[12_Brain/research/Franchise Email Sourcing]]"
+research: "[[12_Brain/06_Research/Franchise Email Sourcing]]"
 ---
 
 # Franchise Email Sourcing Playbook
 
 One-line summary: how we build franchise owner/operator email lists for $0, fully legitimately — four lanes, one schema, MX verification, and a hard PII boundary.
 
-Verified findings and receipts live in [[12_Brain/research/Franchise Email Sourcing]] (with `expires:`); this page is the operating method.
+Verified findings and receipts live in [[12_Brain/06_Research/Franchise Email Sourcing]] (with `expires:`); this page is the operating method.
 
 ## What "legitimate" means here (the rules)
 
@@ -34,7 +34,7 @@ Franchisors must file Franchise Disclosure Documents. [16 CFR § 436.5(t) Item 2
 | California DFPI DocQNet / FRANSES | **Not a free FDD library.** Filings moved to FRANSES (account). Copies via PRA | **Skip** |
 | Maryland OAG | Guidance only; no public download corpus | **Skip** |
 
-Receipts: [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts]] · [[12_Brain/raw/research/2026-08-15 Franchise Lane A Portal Probe]].
+Receipts: [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts]] · [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe]].
 
 ### Lane B — brand location pages + radar targeting — RUN 2026-08-14 / flip 2026-08-15
 
@@ -52,7 +52,7 @@ Service franchises publish per-location pages, and some list the location email 
 
 **UPS Store `store####@` is not Lane B for sending.** It is a front-desk shipping inbox. Keep those rows as LinkedIn/GBP research only.
 
-Verified sendable mechanisms (full receipts: [[12_Brain/research/Franchise Email Sourcing]]):
+Verified sendable mechanisms (full receipts: [[12_Brain/06_Research/Franchise Email Sourcing]]):
 
 | Mechanism | Yield | Send? |
 |---|---|---|

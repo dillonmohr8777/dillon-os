@@ -1,22 +1,22 @@
 ---
 name: vault-compile
-description: Nightly compile pass — read new 12_Brain/raw/ material and today's changes, update 12_Brain/entities/ and 12_Brain/concepts/ pages with source links, refresh 12_Brain/INDEX.md. Routine work; run on a cheap model.
+description: Nightly compile pass — read new 12_Brain/01_Captures/ material and today's changes, update 12_Brain/02_Entities/ and 12_Brain/03_Concepts/ pages with source links, refresh 12_Brain/INDEX.md. Routine work; run on a cheap model.
 ---
 
 # Vault Compile
 
-You are the compiler: `12_Brain/raw/` is source, `12_Brain/entities/` and `12_Brain/concepts/` are the
-build output. Work only inside this vault. **Never edit anything in `12_Brain/raw/`.**
+You are the compiler: `12_Brain/01_Captures/` is source, `12_Brain/02_Entities/` and `12_Brain/03_Concepts/` are the
+build output. Work only inside this vault. **Never edit anything in `12_Brain/01_Captures/`.**
 
-1. Find uncompiled material: `git log --since=yesterday --name-only -- 12_Brain/raw/`
-   plus any `12_Brain/raw/` file not yet referenced by a `source:` line
-   (`grep -rL` the raw filenames against `12_Brain/entities/ 12_Brain/concepts/`). Also check
-   `12_Brain/raw/sessions/` for mined session notes.
+1. Find uncompiled material: `git log --since=yesterday --name-only -- 12_Brain/01_Captures/`
+   plus any `12_Brain/01_Captures/` file not yet referenced by a `source:` line
+   (`grep -rL` the raw filenames against `12_Brain/02_Entities/ 12_Brain/03_Concepts/`). Also check
+   `12_Brain/01_Captures/sessions/` for mined session notes.
 2. For each new raw file, extract what matters — decisions, facts about
    clients/tools/people, lessons — and compile it:
-   - Concrete thing → `12_Brain/entities/` (clients stay in `01_Clients/`; update the
+   - Concrete thing → `12_Brain/02_Entities/` (clients stay in `01_Clients/`; update the
      client page there instead).
-   - Idea/lesson/pattern → `12_Brain/concepts/`, one lesson per file, one-line summary
+   - Idea/lesson/pattern → `12_Brain/03_Concepts/`, one lesson per file, one-line summary
      at top.
    - **Update the existing page instead of creating a duplicate** — check
      `12_Brain/INDEX.md` and grep for the topic first.

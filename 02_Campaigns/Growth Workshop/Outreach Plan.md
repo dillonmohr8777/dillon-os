@@ -78,7 +78,7 @@ Show rate is the Google problem, not the fill problem. Registrants get the Gmail
 - 12:00 PM: **live**. Dillon monitors registrations/attendance.
 - ~3:00 PM: no-show replay email (C4).
 
-**Fri Aug 28** — post-event follow-up + booking CTA (C5). Retro: fill the metrics table below, log lessons to [[12_Brain/projects/Growth Workshop Franchise Pilot]].
+**Fri Aug 28** — post-event follow-up + booking CTA (C5). Retro: fill the metrics table below, log lessons to [[12_Brain/05_Projects/Growth Workshop Franchise Pilot]].
 
 Note on compression: wave-1 touches land Aug 19 → 24 → 26 (3 business days, then 2). Tighter than the ideal 3–4 / 5–7 spacing because the runway is two weeks; the touch cap still holds.
 

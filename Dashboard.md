@@ -18,10 +18,13 @@ navigation is needed.
 
 ## Today
 
-1. Process [[00_Inbox/Start Here|inbox]] material that affects current work.
-2. Choose one finish line from the active-project view.
-3. Verify facts before external or consequential action.
-4. Record decisions, lessons, and outcome evidence before closing the loop.
+Checkbox items only — `_os/vault-state.js` reads this section for the HUD
+directive feed and skips any other list format.
+
+- [ ] Process [[00_Inbox/Start Here|inbox]] material that affects current work.
+- [ ] Choose one finish line from the active-project view.
+- [ ] Verify facts before external or consequential action.
+- [ ] Record decisions, lessons, and outcome evidence before closing the loop.
 
 ## Active projects
 

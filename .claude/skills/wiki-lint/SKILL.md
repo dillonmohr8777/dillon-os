@@ -5,12 +5,12 @@ description: Weekly graph hygiene for the wiki layer — contradictions, duplica
 
 # Wiki Lint
 
-Lint the brain layer: `12_Brain/entities/`, `12_Brain/concepts/`, `12_Brain/INDEX.md`. (File-level vault
+Lint the brain layer: `12_Brain/02_Entities/`, `12_Brain/03_Concepts/`, `12_Brain/INDEX.md`. (File-level vault
 hygiene — stray files, empty notes — belongs to `/vault-clean`; don't repeat it.)
 
 Checks:
 
-1. **Dead links** — every `[[wikilink]]` in `12_Brain/entities/`, `12_Brain/concepts/` and
+1. **Dead links** — every `[[wikilink]]` in `12_Brain/02_Entities/`, `12_Brain/03_Concepts/` and
    `12_Brain/INDEX.md` resolves to a real note. List the broken ones with their file.
 2. **Orphans** — wiki pages not listed in `12_Brain/INDEX.md`, and INDEX entries whose
    page is gone.

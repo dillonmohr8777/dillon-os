@@ -1,6 +1,6 @@
 ---
 tags: [system, runbook]
-source: "[[12_Brain/raw/2026-07-04 - obsidian-second-brain-article]]"
+source: "[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]"
 updated: 2026-07-29
 canonical: 12_Brain
 ---
@@ -14,8 +14,8 @@ only grows when you remember to feed it is dead in three weeks.
 
 | When | What | Model tier | How |
 |------|------|-----------|-----|
-| Session end | Log line lands in `12_Brain/raw/sessions/session-log.md` (automatic hook); run `/session-mine` if the session made decisions | cheap | `.claude/settings.json` SessionEnd hook + skill |
-| Nightly | `/vault-compile` — read new `12_Brain/raw/` material, update `12_Brain/entities/` + `12_Brain/concepts/`, refresh `12_Brain/INDEX.md` | **cheap** | schedule it (below) |
+| Session end | Log line lands in `12_Brain/01_Captures/sessions/session-log.md` (automatic hook); run `/session-mine` if the session made decisions | cheap | `.claude/settings.json` SessionEnd hook + skill |
+| Nightly | `/vault-compile` — read new `12_Brain/01_Captures/` material, update `12_Brain/02_Entities/` + `12_Brain/03_Concepts/`, refresh `12_Brain/INDEX.md` | **cheap** | schedule it (below) |
 | Weekly | `/wiki-lint` — contradictions, duplicates, dead links, missing sources | cheap | schedule it |
 | Weekly | `/synthesize` — read across the vault: what changed, what's drifting, what deserves attention | **premium** (the only pass that earns it) | schedule it |
 | Weekly | `/research-sweep <niche question>` — fan out, skeptic attacks, survivors land as dated pages | mixed | run when needed |
@@ -27,12 +27,12 @@ Scheduling options, pick one:
 
 ## The backfill (run once, then as needed)
 
-Feed `12_Brain/raw/` first: old chat transcripts, bookmarked threads, notes exports,
+Feed `12_Brain/01_Captures/` first: old chat transcripts, bookmarked threads, notes exports,
 client folders, past research. Then run `/goal` with a finish line the judge
 can verify from the conversation alone:
 
-> Compile every file in `12_Brain/raw/` into the wiki. Done means: (1) every raw file is
-> reflected in at least one `12_Brain/entities/` or `12_Brain/concepts/` page with a `source:`
+> Compile every file in `12_Brain/01_Captures/` into the wiki. Done means: (1) every raw file is
+> reflected in at least one `12_Brain/02_Entities/` or `12_Brain/03_Concepts/` page with a `source:`
 > link back to it, (2) every new page is listed in `12_Brain/INDEX.md` with a one-line
 > description, (3) you have pasted the final `12_Brain/INDEX.md` and a `git diff --stat`
 > into the conversation as proof. Ship every change as a diff, never a claim.
@@ -42,7 +42,7 @@ can verify from the conversation alone:
 ## Honesty rules
 
 - Every change ships as a diff — if the agent says it updated a page, the diff proves it.
-- A page without a `source:` link back to `12_Brain/raw/` (or a vault note) gets flagged, not trusted.
+- A page without a `source:` link back to `12_Brain/01_Captures/` (or a vault note) gets flagged, not trusted.
 - Research pages carry `updated:` and `expires:` dates.
 
 ## Sync & public boundary
@@ -58,4 +58,4 @@ can verify from the conversation alone:
 
 ## Links
 
-- [[12_Brain/concepts/Second Brain Architecture|Second Brain Architecture]] · [[12_Brain/concepts/Context Economy|Context Economy]] · [[12_Brain/concepts/Research Verification Loop|Research Verification Loop]]
+- [[12_Brain/03_Concepts/Second Brain Architecture|Second Brain Architecture]] · [[12_Brain/03_Concepts/Context Economy|Context Economy]] · [[12_Brain/03_Concepts/Research Verification Loop|Research Verification Loop]]
