@@ -67,7 +67,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
-- [[12_Brain/projects/HubSpot Attribution Repair|HubSpot Attribution Repair]] — split `GMB_LP_Organic` vs `Google P-max Suspensions`; live apply 2026-08-17 (7 vs 23, overlap 0) plus organic email routing and Source-copy workflows.
+- [[12_Brain/projects/HubSpot Attribution Repair|HubSpot Attribution Repair]] — split `GMB_LP_Organic` vs `Google P-max Suspensions`; live apply 2026-08-17 (7 vs 23, overlap 0) plus organic email routing, Source-copy workflows, and `utm_*` form-field properties.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).

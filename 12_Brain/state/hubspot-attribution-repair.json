@@ -1,7 +1,8 @@
 {
-  "automation_id": "hubspot-attribution-workflows",
-  "started_at": "2026-08-17T19:13:06.042Z",
+  "automation_id": "hubspot-attribution-remaining",
+  "started_at": "2026-08-17T19:33:28.679Z",
   "applied_at": "2026-08-17T19:16:00.000Z",
+  "remaining_applied_at": "2026-08-17T19:32:01.424Z",
   "mode": "apply",
   "portal_id": 50612503,
   "organic_name": "GMB_LP_Organic",
@@ -22,26 +23,151 @@
   },
   "workflows": [
     {
-      "id": "1868243574",
-      "name": "Copy Original Traffic Source into empty Source",
-      "isEnabled": true,
-      "enrollmentType": "EVENT_BASED"
+      "created": false,
+      "flow": {
+        "id": "1868243574",
+        "name": "Copy Original Traffic Source into empty Source",
+        "isEnabled": true
+      }
     },
     {
-      "id": "1868243571",
-      "name": "GMB_LP_Organic - Internal Email + In-app",
-      "isEnabled": true,
-      "enrollmentType": "EVENT_BASED"
+      "created": false,
+      "flow": {
+        "id": "1868243571",
+        "name": "GMB_LP_Organic - Internal Email + In-app",
+        "isEnabled": true
+      }
     }
   ],
   "actions": [
-    "Created Copy Original Traffic Source into empty Source (1868243574)",
-    "Created GMB_LP_Organic - Internal Email + In-app (1868243571)",
-    "Restricted source-copy enrollment to Source IS_UNKNOWN including unset values"
+    "Left existing contact property utm_source",
+    "Left existing contact property utm_medium",
+    "Left existing contact property utm_campaign",
+    "Left existing contact property utm_content",
+    "Left existing contact property utm_term",
+    "Captured CF7 form f602c45a-f423-4dbd-8578-da2dd61e68fa is not writable via this app (expected for CAPTURED forms)"
   ],
   "remaining": [
     "Zapier zap 332246329 still maps #360leads Source at contact create",
-    "Duplicate zaps 369135469 and 368432826",
-    "CF7 804 has no hidden UTM/gclid; GTM-WHKR99SC is on the LP"
+    "Duplicate catch-all 332246329 overlaps 369135469 and 368432826",
+    "CF7 804 / GTM GTM-WHKR99SC still need hidden URL-param fields"
+  ],
+  "lists": [],
+  "before": {
+    "organic_size": 32,
+    "pmax_size": 32,
+    "membership": {
+      "organic": 32,
+      "pmax": 32,
+      "overlap": 19
+    }
+  },
+  "proposed": null,
+  "organic": null,
+  "pmax": null,
+  "properties": [
+    {
+      "created": false,
+      "name": "utm_source",
+      "formField": true,
+      "groupName": "analyticsinformation"
+    },
+    {
+      "created": false,
+      "name": "utm_medium",
+      "formField": true,
+      "groupName": "analyticsinformation"
+    },
+    {
+      "created": false,
+      "name": "utm_campaign",
+      "formField": true,
+      "groupName": "analyticsinformation"
+    },
+    {
+      "created": false,
+      "name": "utm_content",
+      "formField": true,
+      "groupName": "analyticsinformation"
+    },
+    {
+      "created": false,
+      "name": "utm_term",
+      "formField": true,
+      "groupName": "analyticsinformation"
+    }
+  ],
+  "captured_form": {
+    "guid": "f602c45a-f423-4dbd-8578-da2dd61e68fa",
+    "updated": false,
+    "http_status": 403,
+    "hubspot_message": "Integrations can only update HUBSPOT forms"
+  },
+  "paste_kit": {
+    "zapier_source_remap": "https://zapier.com/webintent/edit-zap/332246329",
+    "zapier_pmax": "https://zapier.com/webintent/edit-zap/369135469",
+    "zapier_meta": "https://zapier.com/webintent/edit-zap/368432826",
+    "gtm_container": "GTM-WHKR99SC",
+    "cf7_form_id": "804",
+    "captured_form_guid": "f602c45a-f423-4dbd-8578-da2dd61e68fa",
+    "map_source_to": "hs_analytics_source",
+    "inject_from_url_only": true
+  },
+  "proposed_properties": [
+    {
+      "name": "utm_source",
+      "label": "UTM Source",
+      "description": "utm_source from the landing-page URL at form submit. GMB attribution on portal 50612503.",
+      "groupName": "analyticsinformation",
+      "type": "string",
+      "fieldType": "text",
+      "formField": true,
+      "hidden": false,
+      "hasUniqueValue": false
+    },
+    {
+      "name": "utm_medium",
+      "label": "UTM Medium",
+      "description": "utm_medium from the landing-page URL at form submit. GMB attribution on portal 50612503.",
+      "groupName": "analyticsinformation",
+      "type": "string",
+      "fieldType": "text",
+      "formField": true,
+      "hidden": false,
+      "hasUniqueValue": false
+    },
+    {
+      "name": "utm_campaign",
+      "label": "UTM Campaign",
+      "description": "utm_campaign from the landing-page URL at form submit. GMB attribution on portal 50612503.",
+      "groupName": "analyticsinformation",
+      "type": "string",
+      "fieldType": "text",
+      "formField": true,
+      "hidden": false,
+      "hasUniqueValue": false
+    },
+    {
+      "name": "utm_content",
+      "label": "UTM Content",
+      "description": "utm_content from the landing-page URL at form submit. GMB attribution on portal 50612503.",
+      "groupName": "analyticsinformation",
+      "type": "string",
+      "fieldType": "text",
+      "formField": true,
+      "hidden": false,
+      "hasUniqueValue": false
+    },
+    {
+      "name": "utm_term",
+      "label": "UTM Term",
+      "description": "utm_term from the landing-page URL at form submit. GMB attribution on portal 50612503.",
+      "groupName": "analyticsinformation",
+      "type": "string",
+      "fieldType": "text",
+      "formField": true,
+      "hidden": false,
+      "hasUniqueValue": false
+    }
   ]
 }

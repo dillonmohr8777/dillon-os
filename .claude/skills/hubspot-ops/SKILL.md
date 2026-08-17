@@ -19,8 +19,8 @@ Jason Fallon, Sean, Alexandra, or `#360marketing` asks why HubSpot channels, Goo
 4. Check routing: `#360leads` Source field, `#gmbs-reinstatement` Zapier, email/workflow Used In.
 5. Inspect the public landing-page HTML for HubSpot tracking and hidden UTM/`gclid` fields. Do not log in to WordPress unless Dillon provides a session.
 6. Run `node _os/automation/bin/hubspot-attribution-repair.js --dry-run`. Token env keys: `JASON_HUBSPOT_PRIVATE_APP_TOKEN`, `HUBSPOT_TOKEN`. If unset, stop after the dry-run report. Do not invent portal writes.
-7. With an active Jason/Momentum token and Dillon's apply instruction, rerun with `--apply --confirm-apply`. Add `--workflows` to create the Source-copy and organic-notify flows. The CLI verifies portal 50612503. Record before/after sizes and workflow IDs in the project note (no contact rows).
-8. Draft Slack replies in the inbox note. Post only when Dillon says send or fix all.
+7. With an active Jason/Momentum token and Dillon's apply instruction, rerun with `--apply --confirm-apply`. Add `--workflows` to create the Source-copy and organic-notify flows. Add `--remaining` to create `utm_*` contact properties (captured CF7 forms are not writable via this app). The CLI verifies portal 50612503. Record before/after sizes and workflow IDs in the project note (no contact rows).
+8. Draft Slack replies in the inbox note. Post only when Dillon says send or fix all. Zapier remap, duplicate-zap filters, and WordPress/GTM hidden fields still need that product's login; paste the SOP kit instead of inventing a remap.
 
 ## Target filters (Momentum 360 GMB)
 

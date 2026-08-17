@@ -7,11 +7,21 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
+const os = require('node:os');
 const { getSkills } = require('../vault-state');
 const { scanText } = require('../public-safety');
 const repair = require('../automation/bin/hubspot-attribution-repair.js');
 
 const VAULT = path.resolve(__dirname, '..', '..');
+
+function cliEnv(extra) {
+  const env = {
+    ...process.env,
+    HUBSPOT_STATE_PATH: path.join(os.tmpdir(), `hubspot-state-test-${process.pid}.json`),
+    ...extra,
+  };
+  return env;
+}
 
 describe('HubSpot Agent wiring', () => {
   it('defines the lane agent, skill, project, and INDEX rows', () => {
@@ -49,7 +59,7 @@ describe('HubSpot Agent wiring', () => {
 describe('hubspot-attribution-repair CLI', () => {
   it('fail-closes on --dry-run when HUBSPOT_TOKEN is unset', () => {
     const bin = path.join(VAULT, '_os/automation/bin/hubspot-attribution-repair.js');
-    const env = { ...process.env };
+    const env = cliEnv();
     delete env.HUBSPOT_TOKEN;
     delete env.HUBSPOT_ACCESS_TOKEN;
     delete env.HUBSPOT_PRIVATE_APP_TOKEN;
@@ -70,7 +80,7 @@ describe('hubspot-attribution-repair CLI', () => {
   it('refuses --apply without --confirm-apply even if a token is present', () => {
     const bin = path.join(VAULT, '_os/automation/bin/hubspot-attribution-repair.js');
     const result = spawnSync(process.execPath, [bin, '--apply'], {
-      env: { ...process.env, HUBSPOT_TOKEN: 'pat-test-not-real' },
+      env: cliEnv({ HUBSPOT_TOKEN: 'pat-test-not-real' }),
       encoding: 'utf8',
     });
     assert.equal(result.status, 2);
@@ -137,7 +147,7 @@ describe('hubspot-attribution-repair CLI', () => {
   it('refuses --workflows --apply without --confirm-apply even if a token is present', () => {
     const bin = path.join(VAULT, '_os/automation/bin/hubspot-attribution-repair.js');
     const result = spawnSync(process.execPath, [bin, '--workflows', '--apply'], {
-      env: { ...process.env, HUBSPOT_TOKEN: 'pat-test-not-real' },
+      env: cliEnv({ HUBSPOT_TOKEN: 'pat-test-not-real' }),
       encoding: 'utf8',
     });
     assert.equal(result.status, 2);
@@ -177,5 +187,56 @@ describe('hubspot-attribution-repair CLI', () => {
     assert.deepEqual(notify.fields.user_ids, repair.ORGANIC_NOTIFY_USER_IDS);
     assert.match(email.fields.body, /hs_analytics_source/);
     assert.equal(repair.knownFilter('source', false).operation.operator, 'IS_UNKNOWN');
+  });
+
+  it('refuses --remaining --apply without --confirm-apply even if a token is present', () => {
+    const bin = path.join(VAULT, '_os/automation/bin/hubspot-attribution-repair.js');
+    const result = spawnSync(process.execPath, [bin, '--remaining', '--apply'], {
+      env: cliEnv({ HUBSPOT_TOKEN: 'pat-test-not-real' }),
+      encoding: 'utf8',
+    });
+    assert.equal(result.status, 2);
+    const payload = JSON.parse(result.stdout);
+    assert.equal(payload.mode, 'apply');
+    assert.match(payload.blocker, /confirm-apply/);
+    assert.equal(payload.automation_id, 'hubspot-attribution-remaining');
+  });
+
+  it('fail-closes on --remaining --dry-run when HUBSPOT_TOKEN is unset', () => {
+    const bin = path.join(VAULT, '_os/automation/bin/hubspot-attribution-repair.js');
+    const env = cliEnv();
+    delete env.HUBSPOT_TOKEN;
+    delete env.HUBSPOT_ACCESS_TOKEN;
+    delete env.HUBSPOT_PRIVATE_APP_TOKEN;
+    delete env.JASON_HUBSPOT_PRIVATE_APP_TOKEN;
+    const result = spawnSync(process.execPath, [bin, '--remaining', '--dry-run'], {
+      env,
+      encoding: 'utf8',
+    });
+    assert.equal(result.status, 2);
+    const payload = JSON.parse(result.stdout);
+    assert.equal(payload.status, 'blocked');
+    assert.equal(payload.token_present, false);
+    assert.equal(payload.paste_kit.map_source_to, 'hs_analytics_source');
+    assert.equal(payload.paste_kit.gtm_container, repair.GTM_CONTAINER_ID);
+  });
+
+  it('builds form-field UTM properties and captured hidden fields', () => {
+    const spec = repair.utmPropertySpec(repair.UTM_PROPERTIES[0]);
+    assert.equal(spec.name, 'utm_source');
+    assert.equal(spec.formField, true);
+    assert.equal(spec.groupName, 'analyticsinformation');
+    const hidden = repair.hiddenFormField('gclid', 'GCLID');
+    assert.equal(hidden.hidden, true);
+    assert.equal(hidden.name, 'gclid');
+    const planned = repair.withCapturedHiddenFields({
+      formFieldGroups: [{ fields: [{ name: 'email' }] }],
+    });
+    assert.deepEqual(planned.added, ['gclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']);
+    assert.equal(planned.form.formFieldGroups[0].fields[0].name, 'email');
+    const kit = repair.remainingPasteKit();
+    assert.match(kit.zapier_source_remap, new RegExp(repair.ZAPIER_LEADS_ZAP_ID));
+    assert.equal(kit.inject_from_url_only, true);
+    assert.equal(repair.CAPTURED_CF7_FORM_GUID, 'f602c45a-f423-4dbd-8578-da2dd61e68fa');
   });
 });

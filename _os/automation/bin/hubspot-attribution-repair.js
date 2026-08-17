@@ -28,6 +28,19 @@ const PMAX_LIST_ID = '298';
 const SOURCE_COPY_WORKFLOW_NAME = 'Copy Original Traffic Source into empty Source';
 const ORGANIC_NOTIFY_WORKFLOW_NAME = 'GMB_LP_Organic - Internal Email + In-app';
 const ORGANIC_NOTIFY_USER_IDS = ['84251079', '84251086'];
+const CAPTURED_CF7_FORM_GUID = 'f602c45a-f423-4dbd-8578-da2dd61e68fa';
+const UTM_PROPERTIES = [
+  { name: 'utm_source', label: 'UTM Source' },
+  { name: 'utm_medium', label: 'UTM Medium' },
+  { name: 'utm_campaign', label: 'UTM Campaign' },
+  { name: 'utm_content', label: 'UTM Content' },
+  { name: 'utm_term', label: 'UTM Term' },
+];
+const ZAPIER_LEADS_ZAP_ID = '332246329';
+const ZAPIER_PMAX_ZAP_ID = '369135469';
+const ZAPIER_META_ZAP_ID = '368432826';
+const GTM_CONTAINER_ID = 'GTM-WHKR99SC';
+const CF7_FORM_ID = '804';
 
 function token() {
   for (const key of TOKEN_KEYS) {
@@ -155,6 +168,77 @@ function knownFilter(property, known) {
       includeObjectsWithNoValueSet: !known,
     },
   };
+}
+
+function utmPropertySpec(item) {
+  return {
+    name: item.name,
+    label: item.label,
+    description: `${item.name} from the landing-page URL at form submit. GMB attribution on portal ${EXPECTED_PORTAL_ID}.`,
+    groupName: 'analyticsinformation',
+    type: 'string',
+    fieldType: 'text',
+    formField: true,
+    hidden: false,
+    hasUniqueValue: false,
+  };
+}
+
+function hiddenFormField(name, label) {
+  return {
+    name,
+    label,
+    type: 'string',
+    fieldType: 'text',
+    description: '',
+    groupName: 'analyticsinformation',
+    displayOrder: -1,
+    required: false,
+    selectedOptions: [],
+    options: [],
+    validation: {
+      name: '',
+      message: '',
+      data: '',
+      useDefaultBlockList: false,
+      blockedEmailAddresses: [],
+      checkPhoneFormat: false,
+    },
+    enabled: true,
+    hidden: true,
+    defaultValue: '',
+    isSmartField: false,
+    unselectedLabel: '',
+    placeholder: '',
+    dependentFieldFilters: [],
+    labelHidden: true,
+    propertyObjectType: 'CONTACT',
+    metaData: [],
+    objectTypeId: '0-1',
+  };
+}
+
+function withCapturedHiddenFields(form) {
+  const clone = JSON.parse(JSON.stringify(form || { formFieldGroups: [] }));
+  const have = new Set();
+  for (const group of clone.formFieldGroups || []) {
+    for (const field of group.fields || []) have.add(field.name);
+  }
+  const wanted = [['gclid', 'GCLID'], ...UTM_PROPERTIES.map((row) => [row.name, row.label])];
+  const added = [];
+  clone.formFieldGroups = clone.formFieldGroups || [];
+  for (const [name, label] of wanted) {
+    if (have.has(name)) continue;
+    clone.formFieldGroups.push({
+      fields: [hiddenFormField(name, label)],
+      default: true,
+      isSmartGroup: false,
+      richText: { content: '', type: 'TEXT' },
+      isPageBreak: false,
+    });
+    added.push(name);
+  }
+  return { form: clone, added };
 }
 
 function listMembershipEnrollment(listId, shouldReEnroll) {
@@ -377,9 +461,9 @@ async function verifyPortal() {
 }
 
 function writeState(report) {
-  const dir = path.join(repoRoot(), '12_Brain', 'state');
-  fs.mkdirSync(dir, { recursive: true });
-  const file = path.join(dir, 'hubspot-attribution-repair.json');
+  const file = process.env.HUBSPOT_STATE_PATH
+    || path.join(repoRoot(), '12_Brain', 'state', 'hubspot-attribution-repair.json');
+  fs.mkdirSync(path.dirname(file), { recursive: true });
   let prev = {};
   try { prev = JSON.parse(fs.readFileSync(file, 'utf8')); } catch { prev = {}; }
   const merged = {
@@ -390,7 +474,11 @@ function writeState(report) {
     proposed: report.proposed || prev.proposed || null,
     organic: report.organic || prev.organic || null,
     pmax: report.pmax || prev.pmax || null,
+    workflows: (report.workflows && report.workflows.length)
+      ? report.workflows
+      : (prev.workflows || []),
   };
+  if (!report.blocker) delete merged.blocker;
   fs.writeFileSync(file, JSON.stringify(merged, null, 2) + '\n');
   return file;
 }
@@ -534,11 +622,136 @@ async function runWorkflows(apply) {
   console.log(JSON.stringify({ ...report, state }, null, 2));
 }
 
+async function ensureContactProperty(spec) {
+  try {
+    const existing = await hs(`/crm/v3/properties/contacts/${spec.name}`);
+    return { created: false, name: existing.name, formField: existing.formField, groupName: existing.groupName };
+  } catch (err) {
+    if (err.status !== 404) throw err;
+  }
+  const created = await hs('/crm/v3/properties/contacts', { method: 'POST', body: spec });
+  return { created: true, name: created.name, formField: created.formField, groupName: created.groupName };
+}
+
+function remainingDryRunActions() {
+  return [
+    `Would POST missing ${UTM_PROPERTIES.map((row) => row.name).join(', ')} contact properties (formField true)`,
+    `Would POST hidden gclid/utm fields onto captured CF7 form ${CAPTURED_CF7_FORM_GUID} (HubSpot refuses CAPTURED form writes)`,
+    `Cannot remap Zapier ${ZAPIER_LEADS_ZAP_ID} or edit GTM ${GTM_CONTAINER_ID} / WordPress CF7 ${CF7_FORM_ID} from this token`,
+  ];
+}
+
+function remainingPasteKit() {
+  return {
+    zapier_source_remap: `https://zapier.com/webintent/edit-zap/${ZAPIER_LEADS_ZAP_ID}`,
+    zapier_pmax: `https://zapier.com/webintent/edit-zap/${ZAPIER_PMAX_ZAP_ID}`,
+    zapier_meta: `https://zapier.com/webintent/edit-zap/${ZAPIER_META_ZAP_ID}`,
+    gtm_container: GTM_CONTAINER_ID,
+    cf7_form_id: CF7_FORM_ID,
+    captured_form_guid: CAPTURED_CF7_FORM_GUID,
+    map_source_to: 'hs_analytics_source',
+    inject_from_url_only: true,
+  };
+}
+
+async function runRemaining(apply) {
+  const started = new Date().toISOString();
+  const report = {
+    automation_id: 'hubspot-attribution-remaining',
+    started_at: started,
+    mode: apply ? 'apply' : 'dry-run',
+    portal_id: EXPECTED_PORTAL_ID,
+    status: 'blocked',
+    token_present: Boolean(token()),
+    token_env_key: token() ? token().key : null,
+    actions: [],
+    properties: [],
+    captured_form: null,
+    paste_kit: remainingPasteKit(),
+    remaining: [
+      `Zapier zap ${ZAPIER_LEADS_ZAP_ID} still maps #360leads Source at contact create`,
+      `Duplicate catch-all ${ZAPIER_LEADS_ZAP_ID} overlaps ${ZAPIER_PMAX_ZAP_ID} and ${ZAPIER_META_ZAP_ID}`,
+      `CF7 ${CF7_FORM_ID} / GTM ${GTM_CONTAINER_ID} still need hidden URL-param fields`,
+    ],
+  };
+
+  if (!token()) {
+    report.blocker = 'HUBSPOT_TOKEN unset. Set JASON_HUBSPOT_PRIVATE_APP_TOKEN or HUBSPOT_TOKEN in the environment.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  if (apply && !process.argv.includes('--confirm-apply')) {
+    report.blocker = 'Refusing --apply until an operator passes --confirm-apply after reviewing dry-run output.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  const account = await verifyPortal();
+  report.portal_verified = true;
+  report.ui_domain = account.uiDomain || null;
+  report.proposed_properties = UTM_PROPERTIES.map(utmPropertySpec);
+
+  if (!apply) {
+    report.status = 'dry-run';
+    report.actions = remainingDryRunActions();
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(0);
+  }
+
+  for (const item of UTM_PROPERTIES) {
+    const result = await ensureContactProperty(utmPropertySpec(item));
+    report.properties.push(result);
+    report.actions.push(result.created
+      ? `Created contact property ${result.name}`
+      : `Left existing contact property ${result.name}`);
+  }
+
+  try {
+    const existing = await hs(`/forms/v2/forms/${CAPTURED_CF7_FORM_GUID}`);
+    const planned = withCapturedHiddenFields(existing);
+    report.captured_form = {
+      guid: CAPTURED_CF7_FORM_GUID,
+      name: existing.name || null,
+      formType: existing.formType || null,
+      would_add: planned.added,
+    };
+    if (planned.added.length) {
+      await hs(`/forms/v2/forms/${CAPTURED_CF7_FORM_GUID}`, { method: 'POST', body: planned.form });
+      report.captured_form.updated = true;
+      report.actions.push(`Added hidden fields on captured form ${CAPTURED_CF7_FORM_GUID}: ${planned.added.join(', ')}`);
+    } else {
+      report.captured_form.updated = false;
+      report.actions.push(`Captured form ${CAPTURED_CF7_FORM_GUID} already had gclid/utm hidden fields`);
+    }
+  } catch (err) {
+    report.captured_form = {
+      guid: CAPTURED_CF7_FORM_GUID,
+      updated: false,
+      http_status: err.status || null,
+      hubspot_message: err.hubspotMessage || err.message,
+    };
+    report.actions.push(`Captured CF7 form ${CAPTURED_CF7_FORM_GUID} is not writable via this app (expected for CAPTURED forms)`);
+  }
+
+  report.status = 'applied';
+  const state = writeState(report);
+  console.log(JSON.stringify({ ...report, state }, null, 2));
+}
+
 async function main() {
   const apply = process.argv.includes('--apply');
   const workflows = process.argv.includes('--workflows');
+  const remaining = process.argv.includes('--remaining') || process.argv.includes('--utm');
   if (workflows) {
     await runWorkflows(apply);
+    return;
+  }
+  if (remaining) {
+    await runRemaining(apply);
     return;
   }
   const started = new Date().toISOString();
@@ -688,6 +901,13 @@ module.exports = {
   SOURCE_COPY_WORKFLOW_NAME,
   ORGANIC_NOTIFY_WORKFLOW_NAME,
   ORGANIC_NOTIFY_USER_IDS,
+  CAPTURED_CF7_FORM_GUID,
+  UTM_PROPERTIES,
+  ZAPIER_LEADS_ZAP_ID,
+  ZAPIER_PMAX_ZAP_ID,
+  ZAPIER_META_ZAP_ID,
+  GTM_CONTAINER_ID,
+  CF7_FORM_ID,
   organicTree,
   pmaxTree,
   isBroadGmbAdsFilter,
@@ -695,4 +915,8 @@ module.exports = {
   listMembershipEnrollment,
   sourceCopyWorkflowSpec,
   organicNotifyWorkflowSpec,
+  utmPropertySpec,
+  hiddenFormField,
+  withCapturedHiddenFields,
+  remainingPasteKit,
 };

@@ -36,5 +36,5 @@ Momentum 360 HubSpot portal 50612503. Verify the portal from the live URL or API
 
 ## Notes
 
-- Live portal writes need `JASON_HUBSPOT_PRIVATE_APP_TOKEN` or `HUBSPOT_TOKEN` for portal 50612503. Cloud sessions without that token stop at diagnosis plus a dry-run script. `--workflows` is the Source-copy and organic-notify path.
+- Live portal writes need `JASON_HUBSPOT_PRIVATE_APP_TOKEN` or `HUBSPOT_TOKEN` for portal 50612503. Cloud sessions without that token stop at diagnosis plus a dry-run script. `--workflows` is the Source-copy and organic-notify path. `--remaining` creates `utm_*` form-field properties; Zapier, WordPress, and GTM still need their own logins.
 - Lead PII never lands in tracked `12_Brain/` files.

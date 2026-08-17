@@ -24,6 +24,7 @@ Finish line a judge can verify from git plus this note:
 8. `node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/hubspot-agent.test.js` passes.
 9. Live `--apply` on portal 50612503: organic 32→7, PMax 32→23, overlap 19→0.
 10. Live `--workflows --apply`: Source-copy flow `1868243574` and organic-notify flow `1868243571` enabled.
+11. Live `--remaining --apply`: `utm_source` / `utm_medium` / `utm_campaign` / `utm_content` / `utm_term` contact properties exist as form fields. Captured CF7 form is not writable via this app.
 
 ## Live apply (2026-08-17)
 
@@ -47,7 +48,7 @@ PMax no longer swallows Call Only campaigns whose names contain `GMB`. Those sta
 
 `#360leads` `Source =` is still Zapier zap `332246329` reading CallRail `source` at contact-create time. The HubSpot copy fills the CRM field five minutes later. Slack can still print a blank Source line until that zap maps `hs_analytics_source`. Duplicate `#360leads` posts also come from zaps `369135469` (PMax reinstatement) and `368432826` (Meta Reviews). No Zapier login in this session.
 
-WordPress CF7 804 still has no hidden UTM/`gclid` fields. Public LP loads HubSpot `50612503.js` and GTM `GTM-WHKR99SC`. No WordPress or GTM write access.
+WordPress CF7 804 still has no hidden UTM/`gclid` fields. Public LP loads HubSpot `50612503.js` and GTM `GTM-WHKR99SC` (Conversion Linker + Ads conversions only, no Custom HTML). No WordPress or GTM write access. Portal 50612503 now has matching `utm_*` form-field properties so a later inject maps by name. Inject URL params only; do not copy the gclid cookie.
 
 ## Diagnosis (2026-08-17)
 
@@ -65,10 +66,11 @@ WordPress CF7 804 still has no hidden UTM/`gclid` fields. Public LP loads HubSpo
 - [x] Confirm sizes diverge and overlap is 0
 - [x] HubSpot-side Source fill from Original Traffic Source (empty CallRail Source only)
 - [x] Organic list-302 email + in-app routing
-- [ ] Remap Zapier zap `332246329` Source field to `hs_analytics_source` (needs Zapier login)
-- [ ] Pause duplicate zaps `369135469` / `368432826` if they double-post the same contact
-- [ ] Add UTM/`gclid` hidden fields on CF7 804 or a GTM tag on `GTM-WHKR99SC` (WordPress/GTM login)
+- [x] Create `utm_*` form-field properties on portal 50612503
 - [x] Send Slack replies after Dillon said fix all
+- [ ] Remap Zapier zap `332246329` Source field to `hs_analytics_source` (needs Momentum Zapier login)
+- [ ] Filter catch-all zap `332246329` so it does not double-post PMax zap `369135469` / Meta zap `368432826`
+- [ ] Add UTM/`gclid` hidden fields on CF7 804 or a GTM Custom HTML tag on `GTM-WHKR99SC` (WordPress/GTM login; paste kit is in the SOP)
 
 ## Links
 
