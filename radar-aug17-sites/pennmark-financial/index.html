@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Pennmark Financial is not a wealth manager. Their own homepage sells Quantic POS as a service and card processing for small and mid-size businesses, with a low or zero upfront hardware pitch.">
+<title>Pennmark Financial — prospect demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+<style>:root{
+  --paper:#efe6d4;--ink:#223645;--accent:#065f46;
+  --line:color-mix(in srgb,var(--ink) 18%,transparent);
+  --chip:color-mix(in srgb,var(--accent) 16%,var(--paper));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.55 "IBM Plex Sans",system-ui,sans-serif;overflow-x:hidden}
+.no-js .reveal{opacity:1;transform:none}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px),
+    radial-gradient(circle at 50% 0,color-mix(in srgb,var(--accent) 18%,transparent),transparent 42%);
+  background-size:48px 48px,48px 48px,100% 80vh}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:12px;top:12px;z-index:9;background:var(--paper);padding:.4rem .7rem}
+.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto;position:relative;z-index:1}
+.mast{padding:28px 0 8px}
+.mast-mark{width:min(484px,92vw);height:148px;display:block}
+.mast-mark.particles-done canvas{display:none}
+.kicker{font:12px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:color-mix(in srgb,var(--ink) 62%,transparent)}
+h1{font:700 clamp(2.4rem,6vw,4.6rem)/.95 "IBM Plex Serif",Georgia,serif;margin:.2em 0 .3em;text-wrap:balance}
+.lede{max-width:46ch;font-size:1.05rem}
+.flag{margin:18px 0;padding:12px 14px;border:1px dashed var(--accent);background:var(--chip);font-size:.92rem;max-width:62ch}
+.ticker{overflow:hidden;border-block:1px solid var(--line);margin:28px 0 8px}
+.ticker b{display:inline-block;padding:10px 0;white-space:nowrap;animation:ticker 80s linear infinite}
+@keyframes ticker{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker b{animation:none}}
+main{padding-bottom:90px}
+.box{--arm:20px;position:relative;margin:28px 0;padding:28px 28px 24px;border-radius:22px;
+  background:
+    linear-gradient(var(--ink),var(--ink)) 0 0 / var(--arm) 1px no-repeat,
+    linear-gradient(var(--ink),var(--ink)) 0 0 / 1px var(--arm) no-repeat,
+    linear-gradient(var(--ink),var(--ink)) 100% 0 / var(--arm) 1px no-repeat,
+    linear-gradient(var(--ink),var(--ink)) 100% 0 / 1px var(--arm) no-repeat,
+    linear-gradient(var(--ink),var(--ink)) 0 100% / var(--arm) 1px no-repeat,
+    linear-gradient(var(--ink),var(--ink)) 0 100% / 1px var(--arm) no-repeat,
+    linear-gradient(var(--ink),var(--ink)) 100% 100% / var(--arm) 1px no-repeat,
+    linear-gradient(var(--ink),var(--ink)) 100% 100% / 1px var(--arm) no-repeat,
+    color-mix(in srgb,var(--paper) 88%,white);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 28%,transparent);
+  transition:--arm .25s ease}
+.box:hover{--arm:34px;box-shadow:inset 0 0 0 1px var(--accent)}
+@property --arm{syntax:"<length>";inherits:false;initial-value:20px}
+.idx{font:11px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.box-title{font:600 1.35rem/1.2 "IBM Plex Serif",Georgia,serif;margin:.45rem 0 .7rem;padding-bottom:.55rem;border-bottom:1px solid var(--line)}
+.box p{max-width:46ch;margin:0}
+figure.slot{margin:28px 0;padding:0}
+figure.slot img{width:100%;height:460px;object-fit:cover;border-radius:22px;display:block;background:color-mix(in srgb,var(--ink) 6%,var(--paper))}
+figcaption{font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace;margin-top:8px;color:color-mix(in srgb,var(--ink) 55%,transparent)}
+.img-slot{height:460px;border:1px dashed color-mix(in srgb,var(--ink) 35%,transparent);border-radius:22px;
+  background:repeating-linear-gradient(-45deg,transparent,transparent 8px,color-mix(in srgb,var(--ink) 6%,transparent) 8px,color-mix(in srgb,var(--ink) 6%,transparent) 9px);
+  display:flex;align-items:flex-end;padding:16px;font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace}
+.outro{margin-top:190px;text-align:center}
+.outro-mark{width:min(1080px,96vw);height:380px;margin:0 auto}
+footer{padding:28px 0 76px;font-size:.88rem}
+footer nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
+a{color:var(--ink)}
+.demo{font:11px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
+@media (max-width:520px){figure.slot img,.img-slot{height:280px} .mast-mark{height:96px} .outro-mark{height:160px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Pennmark Financial","url":"https://pennmarkfinancial.com/","address":{"@type":"PostalAddress","addressLocality":"Exton","addressRegion":"PA","postalCode":"19341"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <div class="kicker">PROSPECT DEMO · Chester County · get paid</div>
+    <div class="mast-mark" data-particles data-hold="1500"><svg viewBox="0 0 484 148" width="484" height="148" role="img" aria-label="Pennmark Financial">
+    <rect width="484" height="148" fill="transparent"/>
+    <text x="12" y="88" fill="#223645" font-family="IBM Plex Serif, Georgia, serif" font-size="36" font-weight="700">Pennmark Financial</text>
+    <text x="14" y="118" fill="#065f46" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing="4">get paid</text>
+  </svg></div>
+    <h1>POS. Then the swipe.</h1>
+    <p class="lede">Pennmark Financial is not a wealth manager. Their own homepage sells Quantic POS as a service and card processing for small and mid-size businesses, with a low or zero upfront hardware pitch.</p>
+    
+  </div>
+</header>
+
+<main id="main" class="wrap">
+<section class="box reveal">
+      <div class="idx">CMP 01 / get paid</div>
+      <h2 class="box-title">What they actually sell</h2>
+      <p>The live title is “Trusted Partner of Quantic POS.” The offer is cloud POS plus payments: hardware, software, and processing in one program. Credit-card processing is advertised at rates as low as 0% per swipe or dip under their published promotion. This page does not repeat that rate as a promise. It only records that the claim is on their site today.</p>
+    </section>
+<section class="box reveal">
+      <div class="idx">CMP 02 / get paid</div>
+      <h2 class="box-title">Who it is for</h2>
+      <p>They speak to restaurants and other counter businesses that need a terminal and a processor, not a portfolio. Exton is the radar city. No branch hours were published in the text we captured, so none appear here.</p>
+    </section>
+<section class="box reveal">
+      <div class="idx">CMP 03 / get paid</div>
+      <h2 class="box-title">Schema, corrected</h2>
+      <p>Radar first filed them as a financial advisor. That is the wrong trade. The demo uses a professional-service schema and the line PAY / get paid. If this pack is ever mailed, the pitch is a payments site, not a planning site.</p>
+    </section>
+<div class="img-slot" data-prompt="Editorial two-colour engraved illustration, copperplate engraving mixed with technical woodcut, printed on warm cream paper. Fine hatch, stipple, and cross-contour lines. Wide landscape 16:9. Faint CAD corner registration brackets in the margins. Strictly two ink colors only. Absolutely no text, no letters, no numbers, no logo, no watermark, no human faces, no people, no photographic realism, no glossy 3D render, no identifiable real building facade or storefront, no real business premises. Ink colors only: #223645 and #065f46. Subject: A compact point-of-sale terminal, card rail, and paper-tape roll on a blank counter, drawn as a parts plate, no brand marks" role="img" aria-label="Engraved two-colour study of a counter terminal and receipt rail, not a real store">SLOT 01 · waiting on generated plate · get paid</div>
+<div class="img-slot" data-prompt="Editorial two-colour engraved illustration, copperplate engraving mixed with technical woodcut, printed on warm cream paper. Fine hatch, stipple, and cross-contour lines. Wide landscape 16:9. Faint CAD corner registration brackets in the margins. Strictly two ink colors only. Absolutely no text, no letters, no numbers, no logo, no watermark, no human faces, no people, no photographic realism, no glossy 3D render, no identifiable real building facade or storefront, no real business premises. Ink colors only: #223645 and #065f46. Subject: An abstract wiring diagram of a card swipe becoming a settlement batch: chevrons, a small ledger block, and a cloud node, no logos" role="img" aria-label="Engraved two-colour study of payment rails as a wiring diagram">SLOT 02 · waiting on generated plate · get paid</div>
+<div class="img-slot" data-prompt="Editorial two-colour engraved illustration, copperplate engraving mixed with technical woodcut, printed on warm cream paper. Fine hatch, stipple, and cross-contour lines. Wide landscape 16:9. Faint CAD corner registration brackets in the margins. Strictly two ink colors only. Absolutely no text, no letters, no numbers, no logo, no watermark, no human faces, no people, no photographic realism, no glossy 3D render, no identifiable real building facade or storefront, no real business premises. Ink colors only: #223645 and #065f46. Subject: A Chester County road-and-ridge engraving with an unnamed crossroads grid, no storefronts, no office parks" role="img" aria-label="Engraved two-colour Exton-area grid without real premises">SLOT 03 · waiting on generated plate · get paid</div>
+</main>
+<div class="outro">
+  <div class="outro-mark" data-particles data-onview data-hold="2400"><svg viewBox="0 0 1080 380" width="1080" height="380" role="img" aria-label="Pennmark Financial">
+    <rect width="1080" height="380" fill="transparent"/>
+    <text x="12" y="210" fill="#223645" font-family="IBM Plex Serif, Georgia, serif" font-size="72" font-weight="700">Pennmark Financial</text>
+    <text x="14" y="268" fill="#065f46" font-family="IBM Plex Mono, monospace" font-size="22" letter-spacing="4">get paid</text>
+  </svg></div>
+</div>
+<footer>
+  <div class="wrap">
+    <div class="demo">Not their live site · noindex · generated plates, not photography</div>
+    <p>Pennmark Financial · Exton, PA, 19341</p>
+    <nav aria-label="Footer">
+      <a href="../index.html">Hub</a>
+      <a href="https://pennmarkfinancial.com/">Their current URL</a>
+      
+    </nav>
+  </div>
+</footer>
+<script>
+(function(){
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js');
+  function explode(el, hold){
+    if(!el) return;
+    var svg = el.querySelector('svg');
+    if(!svg){ el.classList.add('particles-done'); return; }
+    if(document.hidden){ el.classList.add('particles-done'); return; }
+    var w = el.clientWidth, h = el.clientHeight;
+    var c = document.createElement('canvas');
+    c.width = w*2; c.height = h*2; c.style.width=w+'px'; c.style.height=h+'px';
+    el.appendChild(c);
+    var ctx = c.getContext('2d');
+    var xml = new XMLSerializer().serializeToString(svg);
+    var img = new Image();
+    img.onload = function(){
+      ctx.drawImage(img,0,0,c.width,c.height);
+      try{
+        var data = ctx.getImageData(0,0,c.width,c.height).data;
+        var pts=[];
+        for(var y=0;y<c.height;y+=3){
+          for(var x=0;x<c.width;x+=3){
+            var i=(y*c.width+x)*4;
+            if(data[i+3]>40) pts.push({x:x,y:y,ox:x,oy:y,r:data[i],g:data[i+1],b:data[i+2],a:data[i+3]/255,vx:(Math.random()-.5)*1.4,vy:(Math.random()-.8)*1.8});
+          }
+        }
+        svg.style.opacity='0';
+        var t0 = performance.now();
+        var holdMs = hold||1500;
+        function frame(now){
+          var t = now-t0;
+          ctx.clearRect(0,0,c.width,c.height);
+          var go = t>holdMs;
+          var u = go? Math.min(1,(t-holdMs)/1800) : 0;
+          for(var p of pts){
+            if(go){ p.x+=p.vx; p.y+=p.vy; p.vy+=0.03; p.a*=0.992; }
+            ctx.fillStyle='rgba('+p.r+','+p.g+','+p.b+','+p.a+')';
+            ctx.fillRect(p.x,p.y,2.2,2.2);
+          }
+          if(u<1 && !document.hidden) requestAnimationFrame(frame);
+          else el.classList.add('particles-done');
+        }
+        requestAnimationFrame(frame);
+      }catch(e){ el.classList.add('particles-done'); }
+    };
+    img.src = 'data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(xml)));
+    setTimeout(function(){ el.classList.add('particles-done'); }, 6000);
+  }
+  document.querySelectorAll('[data-particles]').forEach(function(el){
+    var hold = Number(el.getAttribute('data-hold')||1500);
+    if(el.hasAttribute('data-onview')){
+      var io=new IntersectionObserver(function(ents){
+        ents.forEach(function(e){ if(e.isIntersecting){ explode(el,hold); io.disconnect(); } });
+      },{threshold:0.25});
+      io.observe(el);
+    } else explode(el,hold);
+  });
+})();
+</script>
+</body>
+</html>

@@ -14,6 +14,7 @@ Use [[12_Brain/templates/Project|Project template]]. View in
 ## Active
 
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — evidence-backed audit engine wrapping the existing radar.
+- [[12_Brain/projects/Radar Aug17 Slot Images|Radar Aug17 Slot Images]] — 66 engraved plates for the 22 Aug 17 demos; Casselle blocked.
 
 ## Links
 
