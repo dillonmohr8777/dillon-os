@@ -1,0 +1,155 @@
+{
+  "updated": "2026-08-17",
+  "expires": "2026-11-17",
+  "source": "https://reeceyang.sgp1.cdn.digitaloceanspaces.com/SKILL.md",
+  "repo": "https://github.com/HKUDS/CLI-Anything",
+  "license": "Apache-2.0",
+  "tiktok": "https://www.tiktok.com/@chase_ai_/video/7673634732797644046",
+  "official_clis": [
+    {
+      "id": "gh",
+      "name": "GitHub CLI",
+      "already_on_path": true,
+      "fixes": ["github-mcp-auth"],
+      "command": "gh"
+    },
+    {
+      "id": "node-os",
+      "name": "Dillon OS local automation",
+      "already_on_path": true,
+      "fixes": ["mcp-gate", "landingfolio-verify"],
+      "command": "node _os/automation/bin/mcp-gate.js"
+    }
+  ],
+  "entries": [
+    {
+      "id": "exa",
+      "name": "Exa",
+      "category": "search",
+      "install": "cli-hub install exa",
+      "needs": ["EXA_API_KEY"],
+      "fixes": ["exa-mcp-rate-limit"],
+      "verdict": "partial",
+      "caveat": "Same Exa API as the shared MCP. Own key changes the quota; it does not remove the secret requirement."
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian (Local REST API harness)",
+      "category": "knowledge",
+      "install": "cli-hub install obsidian",
+      "needs": ["Obsidian desktop", "Local REST API plugin"],
+      "fixes": ["mohr-vault-obsidian-mcp"],
+      "verdict": "already-unblocked",
+      "caveat": "Cloud agents already read this vault from git. The harness only helps a running desktop Obsidian."
+    },
+    {
+      "id": "obsidian-cli",
+      "name": "Official Obsidian CLI",
+      "category": "knowledge",
+      "install": "bundled in Obsidian 1.12.7+",
+      "needs": ["Obsidian desktop 1.12.7+"],
+      "fixes": ["mohr-vault-obsidian-mcp"],
+      "verdict": "already-unblocked",
+      "caveat": "Prefer the official bundled CLI over the third-party harness when the desktop app is present."
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "automation",
+      "install": "cli-hub install n8n",
+      "needs": ["n8n instance URL", "n8n API key"],
+      "fixes": [],
+      "verdict": "operator-install",
+      "caveat": "Useful only if an n8n instance is already in play. Not a substitute for messaging or paid-media MCPs."
+    },
+    {
+      "id": "mailchimp",
+      "name": "Mailchimp",
+      "category": "web",
+      "install": "cli-hub install mailchimp",
+      "needs": ["MAILCHIMP_API_KEY"],
+      "fixes": [],
+      "verdict": "operator-install",
+      "caveat": "Account API. Sending mail is Tier 2."
+    },
+    {
+      "id": "ve-twini",
+      "name": "VE Twini",
+      "category": "communication",
+      "install": "cli-hub install ve-twini",
+      "needs": ["X account / browser session"],
+      "fixes": ["x-mcp-discovery"],
+      "aliases": ["ve-twini", "twini"],
+      "recommend": false,
+      "verdict": "not-fixed",
+      "caveat": "GraphQL plus browser automation. Do not install. High prompt-injection and account-takeover risk."
+    },
+    {
+      "id": "browser-cdp",
+      "name": "Browser CDP",
+      "category": "web",
+      "install": "cli-hub install browser-cdp",
+      "needs": ["running Chrome with CDP"],
+      "fixes": [],
+      "verdict": "operator-install",
+      "caveat": "Overlaps the existing Claude-in-Chrome / 64GB CDP lane. Desktop only."
+    }
+  ],
+  "blockers": [
+    {
+      "id": "github-mcp-auth",
+      "summary": "GitHub MCP authentication or discovery failed",
+      "verdict": "fixed",
+      "next": "Use `gh`. Do not add another GitHub MCP."
+    },
+    {
+      "id": "mcp-context-bloat",
+      "summary": "A connected MCP loaded more tools than the task needs",
+      "verdict": "reduced",
+      "next": "Call the official CLI or one catalog command instead of enabling the full toolset."
+    },
+    {
+      "id": "exa-mcp-rate-limit",
+      "summary": "Exa MCP free-tier rate limit",
+      "verdict": "partial",
+      "next": "Need operator-supplied EXA_API_KEY. Then `cli-hub install exa` or curl the Exa API. Shared MCP quota stays exhausted either way."
+    },
+    {
+      "id": "mohr-vault-obsidian-mcp",
+      "summary": "mohr-vault Obsidian MCP dead (bad path, placeholder key)",
+      "verdict": "already-unblocked",
+      "next": "Keep using git + 12_Brain. Do not resurrect mohr-vault. Desktop Local REST API is optional and operator-only."
+    },
+    {
+      "id": "landingfolio-inspector",
+      "summary": "LandingFolio MCP sandbox-only until Inspector + token",
+      "verdict": "not-fixed",
+      "next": "No catalog CLI. Operator mints LANDINGFOLIO_TOKEN and runs node _os/automation/bin/landingfolio-verify.js."
+    },
+    {
+      "id": "slack-oauth",
+      "summary": "Slack OAuth rejected or Composio write block",
+      "verdict": "not-fixed",
+      "next": "No Slack row in CLI-Hub. Reauth is an operator action. Writes stay Tier 2."
+    },
+    {
+      "id": "ads-platform-mcps",
+      "summary": "Google Ads, GA4, Meta, or Search Console MCP not connected",
+      "verdict": "not-fixed",
+      "next": "No catalog CLIs. Keep JSON exports / Chrome-on-64GB. Do not invent counts."
+    },
+    {
+      "id": "google-calendar-token",
+      "summary": "GOOGLE_CALENDAR_ACCESS_TOKEN missing",
+      "verdict": "not-fixed",
+      "next": "No catalog CLI. Token is an operator secret."
+    },
+    {
+      "id": "x-mcp-discovery",
+      "summary": "X MCP failed live tool discovery",
+      "aliases": ["x", "x mcp", "twitter"],
+      "verdict": "not-fixed",
+      "next": "Do not install VE Twini. Use WebSearch/WebFetch or wait for X MCP to recover."
+    }
+  ]
+}
