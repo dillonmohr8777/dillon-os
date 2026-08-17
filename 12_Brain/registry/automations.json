@@ -217,7 +217,7 @@
       "inputs": ["12_Brain/registry/automations.json", "_os/automation/bin/**", ".github/workflows/*.yml"],
       "outputs": ["12_Brain/state/heartbeat.json", "Daily-Briefs/heartbeat-manifest.md"],
       "external_actions": false,
-      "notes": "Fails closed on ungoverned power (exit 2). Advisory-only does not fail. Omit --no-write to persist run output; those artifacts are gitignored.",
+      "notes": "Fails closed on ungoverned power (exit 2). Advisory-only does not fail. Omit --no-write to persist run output; those artifacts are gitignored. Registry tier is a declaration, not a runtime gate. Without automation.toml, missing-registration and shadow-duplicate skip and must not headline as a pass.",
       "status": "implemented"
     },
     {

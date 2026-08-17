@@ -47,6 +47,7 @@ node _os/automation/bin/site-health.js --dry-run
 node _os/automation/bin/qualify.js --from _os/automation/fixtures/prospects/sample-intake.json
 node _os/automation/bin/queue-status.js
 node _os/automation/bin/heartbeat.js --no-write
+node _os/automation/bin/heartbeat.js --definitions <dir-or-toml> --no-write
 node --test _os/automation/tests/*.test.js
 ```
 

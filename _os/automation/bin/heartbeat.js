@@ -28,7 +28,7 @@ function argValue(name) {
 }
 
 function usage() {
-  return `Usage: node _os/automation/bin/heartbeat.js [--as-of YYYY-MM-DD] [--definitions <dir>] [--input <fixture.json>] [--no-write] [--json]`;
+  return `Usage: node _os/automation/bin/heartbeat.js [--as-of YYYY-MM-DD] [--definitions <dir-or-toml>] [--input <fixture.json>] [--no-write] [--json]`;
 }
 
 function main() {

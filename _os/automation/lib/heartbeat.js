@@ -12,9 +12,14 @@ const fs = require('fs');
 const path = require('path');
 const { redactText } = require('../../public-safety');
 const { parseFrontmatter } = require('./frontmatter');
-const { repoPath, REPO_ROOT, readJson, todayISO, slugify } = require('./fsutil');
+const { repoPath, REPO_ROOT, todayISO, slugify } = require('./fsutil');
 const { loadRegistry } = require('./registry');
 const { scanEntry } = require('./heartbeat-scan');
+const {
+  loadSchedulerTomlFile,
+  collectShadowDefinitions,
+  resolveSchedulerSource,
+} = require('./heartbeat-toml');
 
 const SEVERITY = Object.freeze({ critical: 'critical', warn: 'warn', info: 'info' });
 const NEAR_EXPIRY_DAYS = 14;
@@ -30,6 +35,7 @@ const BLOCKED_STATUSES = new Set([
 const COMMAND_DIRS = ['_os/automation/bin', '_os/dev/bin'];
 const STATE_FILE = '12_Brain/state/heartbeat.json';
 const MANIFEST_FILE = 'Daily-Briefs/heartbeat-manifest.md';
+const SCHEDULER_CHECKS = Object.freeze(['missing-registration', 'shadow-duplicate']);
 
 function posix(rel) {
   return String(rel || '').split(path.sep).join('/');
@@ -142,6 +148,7 @@ function priorityScore(finding) {
   if (finding.token_blocked) score -= 80;
   if (finding.code === 'unregistered-external-action') score += 50;
   if (finding.code === 'missing-registration') score += 20;
+  if (finding.code === 'check-skipped') score += 250;
   return score;
 }
 
@@ -163,8 +170,73 @@ function nextActionLine(findings) {
     if (top.next_action) return top.next_action;
     return `Resolve \`${top.subject}\` (${top.code}).`;
   }
+  const skipped = findings.filter((finding) => finding.code === 'check-skipped');
+  if (skipped.length) {
+    const names = [...new Set(skipped.map((finding) => finding.subject))].join(', ');
+    const others = findings.filter((finding) => finding.code !== 'check-skipped');
+    if (!others.length) {
+      return `Skipped ${names} — absence of evidence is not evidence of health.`;
+    }
+    return `Skipped ${names} — absence of evidence is not evidence of health. ${others.length} advisory finding(s) remain.`;
+  }
   if (!findings.length) return 'No ungoverned power. Heartbeat is clean.';
   return `No ungoverned power. ${findings.length} advisory finding(s) remain.`;
+}
+
+function coverageStatus(value) {
+  if (value == null) return null;
+  if (typeof value === 'string') return value;
+  if (typeof value === 'object') return value.status || null;
+  return null;
+}
+
+function resolveCoverage(input = {}) {
+  const provided = input.coverage || {};
+  const scheduler = coverageStatus(provided.scheduler)
+    || (Object.prototype.hasOwnProperty.call(input, 'definitions') ? 'present' : 'absent');
+  const workflows = coverageStatus(provided.workflows)
+    || (Object.prototype.hasOwnProperty.call(input, 'workflows') ? 'present' : 'not-applicable');
+  const commands = coverageStatus(provided.commands)
+    || (Object.prototype.hasOwnProperty.call(input, 'commands') ? 'present' : 'not-applicable');
+  const registry = coverageStatus(provided.registry)
+    || (input.registry ? 'present' : 'not-applicable');
+  return {
+    scheduler: {
+      status: scheduler,
+      path: provided.scheduler?.path || null,
+      reason: provided.scheduler?.reason || (scheduler === 'absent' ? 'no automation.toml in default locations' : null),
+    },
+    workflows: {
+      status: workflows,
+      count: provided.workflows?.count ?? (Array.isArray(input.workflows) ? input.workflows.length : null),
+    },
+    commands: {
+      status: commands,
+      count: provided.commands?.count ?? (Array.isArray(input.commands) ? input.commands.length : null),
+    },
+    registry: {
+      status: registry,
+    },
+  };
+}
+
+function checkSkippedSources(input, findings) {
+  const coverage = resolveCoverage(input);
+  if (coverage.scheduler.status !== 'absent') return;
+  const reason = coverage.scheduler.reason || 'no automation.toml in default locations';
+  findings.push(makeFinding({
+    id: findingId('coverage', 'skipped', 'scheduler'),
+    code: 'check-skipped',
+    family: 'coverage',
+    severity: SEVERITY.warn,
+    subject: 'scheduler',
+    subject_path: coverage.scheduler.path,
+    detail: `Scheduler source absent (${reason}). ${SCHEDULER_CHECKS.join(' and ')} did not see \`automation.toml\`. GitHub workflows, if present, were still checked.`,
+    evidence: reason,
+    next_action: 'Point heartbeat at the scheduler with `--definitions <dir-or-toml>` or place `automation.toml` at the repo root. Absence of evidence is not evidence of health.',
+    live: false,
+    registered: true,
+  }));
 }
 
 function checkExpiredEvidence(input, findings) {
@@ -203,9 +275,31 @@ function checkExpiredEvidence(input, findings) {
   }
 }
 
+function schedulerDefinitions(input) {
+  const coverage = resolveCoverage(input);
+  if (coverage.scheduler.status === 'absent') return [];
+  return (input.definitions || []).filter((def) => def.kind !== 'workflow');
+}
+
+function registrationDefinitions(input) {
+  const coverage = resolveCoverage(input);
+  const defs = [];
+  if (coverage.scheduler.status !== 'absent') {
+    defs.push(...(input.definitions || []).filter((def) => def.kind !== 'workflow' && def.kind !== 'shadow'));
+  }
+  if (coverage.workflows.status === 'present') {
+    const workflows = input.workflows
+      || (input.definitions || []).filter((def) => def.kind === 'workflow');
+    defs.push(...workflows);
+  }
+  return defs;
+}
+
 function checkShadowDuplicates(input, findings) {
+  const coverage = resolveCoverage(input);
+  if (coverage.scheduler.status === 'absent') return;
   const byId = new Map();
-  for (const def of input.definitions || []) {
+  for (const def of schedulerDefinitions(input)) {
     const id = String(def.id || '').toLowerCase();
     if (!id) continue;
     if (!byId.has(id)) byId.set(id, []);
@@ -230,7 +324,7 @@ function checkShadowDuplicates(input, findings) {
 
 function checkMissingRegistration(input, findings) {
   const seen = new Set();
-  for (const def of input.definitions || []) {
+  for (const def of registrationDefinitions(input)) {
     const status = def.status || (def.active === false ? 'PAUSED' : 'ACTIVE');
     if (!isActiveStatus(status) || String(status).toUpperCase() === 'PAUSED') continue;
     if (def.active === false) continue;
@@ -457,10 +551,13 @@ function scanCommands(input) {
 }
 
 function runHeartbeat(input = {}, options = {}) {
+  const coverage = resolveCoverage(input);
   const snapshot = {
     as_of: input.as_of || options.asOf || todayISO(),
     registry: input.registry || { automations: [], gates: {} },
     definitions: input.definitions || [],
+    workflows: input.workflows || [],
+    coverage,
     evidence: input.evidence || [],
     commands: input.commands || [],
     sources: input.sources,
@@ -469,6 +566,7 @@ function runHeartbeat(input = {}, options = {}) {
   };
   const capabilities = options.capabilities || scanCommands(snapshot);
   const findings = [];
+  checkSkippedSources(snapshot, findings);
   checkExpiredEvidence(snapshot, findings);
   checkShadowDuplicates(snapshot, findings);
   checkMissingRegistration(snapshot, findings);
@@ -497,6 +595,14 @@ function runHeartbeat(input = {}, options = {}) {
       total: ranked.length,
     },
     next_action: nextAction,
+    coverage,
+    skipped: ranked
+      .filter((finding) => finding.code === 'check-skipped')
+      .map((finding) => ({
+        check: SCHEDULER_CHECKS.join(', '),
+        source: finding.subject,
+        reason: finding.evidence || finding.detail,
+      })),
     findings: ranked,
     capabilities: Object.fromEntries(
       Object.entries(capabilities).map(([key, cap]) => [
@@ -519,8 +625,29 @@ function canonicalResult(result) {
     status: result.status,
     counts: result.counts,
     next_action: result.next_action,
+    coverage: result.coverage,
+    skipped: result.skipped,
     findings: result.findings,
   };
+}
+
+function renderCoverage(coverage) {
+  if (!coverage) return [];
+  const lines = ['## Coverage', ''];
+  for (const key of ['scheduler', 'workflows', 'commands', 'registry']) {
+    const source = coverage[key];
+    if (!source) continue;
+    const status = source.status || 'unknown';
+    if (status === 'not-applicable') continue;
+    const extra = [];
+    if (source.path) extra.push(source.path);
+    if (source.count != null) extra.push(`${source.count}`);
+    if (status === 'absent' && source.reason) extra.push(source.reason);
+    const suffix = extra.length ? ` — ${extra.join(' · ')}` : '';
+    lines.push(`- ${key}: **${status}**${suffix}`);
+  }
+  lines.push('');
+  return lines;
 }
 
 function renderManifest(result) {
@@ -529,6 +656,7 @@ function renderManifest(result) {
     '',
     `status ${result.status} · critical ${result.counts.critical} · advisory ${result.counts.advisory} · as-of ${result.as_of}`,
     '',
+    ...renderCoverage(result.coverage),
     '## Next action',
     '',
     result.next_action,
@@ -608,23 +736,55 @@ function parseWorkflow(file, root) {
   };
 }
 
+function loadSchedulerDefinitions(root, definitionsDir) {
+  const resolved = resolveSchedulerSource(root, definitionsDir);
+  const definitions = [];
+  if (resolved.status !== 'present') {
+    return { definitions, coverage: resolved };
+  }
+
+  const tomlFile = resolved.path && /\.toml$/i.test(resolved.path)
+    ? (path.isAbsolute(resolved.path) ? resolved.path : path.join(root, resolved.path))
+    : null;
+  if (tomlFile && fs.existsSync(tomlFile) && fs.statSync(tomlFile).isFile()) {
+    definitions.push(...loadSchedulerTomlFile(tomlFile, root));
+  }
+
+  const explicitDir = definitionsDir
+    ? (path.isAbsolute(definitionsDir) ? definitionsDir : path.join(root, definitionsDir))
+    : null;
+  const explicitDirExists = Boolean(
+    explicitDir && fs.existsSync(explicitDir) && fs.statSync(explicitDir).isDirectory(),
+  );
+  if (explicitDirExists) {
+    for (const file of listFiles(explicitDir, (full) => /\.(md|json)$/i.test(full))) {
+      const def = parseDefinitionFile(file, root);
+      def.kind = def.kind || 'scheduler';
+      definitions.push(def);
+    }
+  }
+
+  const scanDir = explicitDirExists ? explicitDir : resolved.dir;
+  if (scanDir && fs.existsSync(scanDir) && fs.statSync(scanDir).isDirectory()) {
+    const knownIds = definitions.map((def) => def.id).filter(Boolean);
+    definitions.push(...collectShadowDefinitions(scanDir, knownIds, root));
+  }
+
+  return { definitions, coverage: resolved };
+}
+
 function collectLiveInput(options = {}) {
   const root = options.root || REPO_ROOT;
   const asOf = options.asOf || todayISO();
   const registry = options.registry || loadRegistry();
-  const definitions = [];
-  const definitionsDir = options.definitionsDir
-    ? (path.isAbsolute(options.definitionsDir) ? options.definitionsDir : path.join(root, options.definitionsDir))
-    : null;
-  if (definitionsDir && fs.existsSync(definitionsDir)) {
-    for (const file of listFiles(definitionsDir, (full) => /\.(md|json)$/i.test(full))) {
-      definitions.push(parseDefinitionFile(file, root));
-    }
-  }
+  const scheduler = loadSchedulerDefinitions(root, options.definitionsDir || null);
+  const definitions = scheduler.definitions;
+  const workflows = [];
   const workflowDir = path.join(root, '.github/workflows');
-  if (fs.existsSync(workflowDir) && options.includeWorkflows !== false) {
+  const workflowsPresent = fs.existsSync(workflowDir) && options.includeWorkflows !== false;
+  if (workflowsPresent) {
     for (const file of listFiles(workflowDir, (full) => /\.ya?ml$/i.test(full))) {
-      definitions.push(parseWorkflow(file, root));
+      workflows.push(parseWorkflow(file, root));
     }
   }
 
@@ -667,9 +827,23 @@ function collectLiveInput(options = {}) {
     as_of: asOf,
     registry,
     definitions,
+    workflows,
     evidence,
     commands,
     files,
+    coverage: {
+      scheduler: scheduler.coverage,
+      workflows: {
+        status: workflowsPresent ? 'present' : 'absent',
+        count: workflows.length,
+        path: workflowsPresent ? '.github/workflows' : null,
+      },
+      commands: {
+        status: commands.length ? 'present' : 'absent',
+        count: commands.length,
+      },
+      registry: { status: 'present' },
+    },
   };
 }
 
@@ -683,12 +857,14 @@ module.exports = {
   BLOCKED_STATUSES,
   STATE_FILE,
   MANIFEST_FILE,
+  SCHEDULER_CHECKS,
   isBlockedStatus,
   isPathLikeOutput,
   extractCommandPath,
   matchRegistry,
   rankFindings,
   nextActionLine,
+  resolveCoverage,
   runHeartbeat,
   canonicalResult,
   renderManifest,

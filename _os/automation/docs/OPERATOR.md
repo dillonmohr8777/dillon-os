@@ -133,12 +133,49 @@ verification.
 ```powershell
 node _os/automation/bin/heartbeat.js
 node _os/automation/bin/heartbeat.js --as-of 2026-08-17 --no-write --json
+node _os/automation/bin/heartbeat.js --definitions <dir-or-toml> --no-write
 ```
 
 One command that fails the run when a power is ungoverned. Exit `0` on clean or
 advisory-only, `2` on unresolved critical, `1` on crash. It does not send,
 deploy, or enqueue. Generated `12_Brain/state/heartbeat.json` and
 `Daily-Briefs/heartbeat-manifest.md` are gitignored.
+
+### Honest degradation
+
+A skipped check must never render as a pass. If the scheduler source is missing,
+`missing-registration` and `shadow-duplicate` do not run, the manifest Coverage
+section marks `scheduler: absent`, and the headline says so — it will not say
+"No ungoverned power." Absence of evidence is not evidence of health.
+
+### Scheduler source (`automation.toml`)
+
+Those two checks read the Windows scheduler, whose truth is `automation.toml`
+(not a directory of `.md`/`.json` files). `--definitions` accepts a directory or
+a `.toml` file. When the flag is omitted, the heartbeat searches:
+
+- `automation.toml`
+- `_os/automation/automation.toml`
+- `_os/scheduler/automation.toml`
+- `12_Brain/registry/automation.toml`
+
+The reader is a zero-dependency subset: tables, array-of-tables, dotted keys,
+strings, booleans, numbers. ACTIVE unregistered routines are critical; PAUSED
+are not. Sibling directories named `<id>-<12 hex chars>` are shadow copies —
+advisory, not extra criticals.
+
+Until that file is visible, this checkout can only govern the vault half
+(registry, bins, GitHub workflows). Point `--definitions` at the ops-box
+scheduler directory to see the rest.
+
+### Registry `tier` is a declaration, not a control
+
+Nothing in `_os/` reads `automations.json` `tier` as a runtime gate. Registering
+an entry at `tier: 2` adds visibility, not a permission check.
+`radar-morning.ps1` still pushes daily with nothing in the path asking. Radar's
+`--max-tier` / site-grader `tier` are audit depth (cheap HTTP vs Playwright
+render) and are a different word. Visibility before enforcement is the right
+sequence; do not read `tier: 2` as a block.
 
 ## Other existing commands
 

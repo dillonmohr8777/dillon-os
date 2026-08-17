@@ -16,6 +16,12 @@ const {
   exitCodeFor,
 } = require('../lib/heartbeat');
 const { stripComments, scanEntry, classifyModule } = require('../lib/heartbeat-scan');
+const {
+  parseTomlSubset,
+  parseSchedulerToml,
+  resolveSchedulerSource,
+  SHADOW_DIR_RE,
+} = require('../lib/heartbeat-toml');
 
 const FIXTURES = repoPath('_os/automation/fixtures/heartbeat');
 const BIN = repoPath('_os/automation/bin/heartbeat.js');
@@ -314,7 +320,9 @@ test('collectLiveInput sees automation bins and workflows', () => {
   assert.equal(input.as_of, '2026-08-17');
   assert.ok(input.commands.some((command) => command.path.endsWith('radar-morning.ps1')));
   assert.ok(input.commands.some((command) => command.path.endsWith('arch-deploy.js')));
-  assert.ok(input.definitions.some((def) => def.id === 'radar-daily'));
+  assert.ok(input.workflows.some((def) => def.id === 'radar-daily'));
+  assert.equal(input.coverage.scheduler.status, 'absent');
+  assert.equal(input.coverage.workflows.status, 'present');
   assert.ok(input.registry.automations.length >= 1);
 });
 
@@ -367,4 +375,157 @@ test('live estate has no unresolved criticals after registration', () => {
     critical.map((finding) => `${finding.code}:${finding.subject}`).join(', '),
   );
   assert.equal(exitCodeFor(result), 0);
+  const skipped = byCode(result, 'check-skipped');
+  assert.equal(skipped.length, 1);
+  assert.equal(skipped[0].subject, 'scheduler');
+  assert.equal(skipped[0].lane, 'advisory');
+  assert.equal(result.findings[0].code, 'check-skipped');
+  assert.doesNotMatch(result.next_action, /No ungoverned power/);
+  assert.match(result.next_action, /absence of evidence is not evidence of health/);
 });
+
+test('skipped scheduler source never headlines as a pass', () => {
+  const result = runHeartbeat(loadFixture('skipped-scheduler'));
+  assert.equal(result.status, 'advisory');
+  assert.equal(exitCodeFor(result), 0);
+  const skipped = byCode(result, 'check-skipped');
+  assert.equal(skipped.length, 1);
+  assert.equal(skipped[0].severity, 'warn');
+  assert.equal(result.findings[0].code, 'check-skipped');
+  assert.equal(result.coverage.scheduler.status, 'absent');
+  assert.equal(result.skipped.length, 1);
+  assert.match(result.next_action, /Skipped scheduler/);
+  assert.doesNotMatch(result.next_action, /No ungoverned power/);
+  const md = renderManifest(result);
+  assert.match(md, /scheduler: \*\*absent\*\*/);
+  assert.match(md, /absence of evidence is not evidence of health/);
+});
+
+test('explicit empty definitions is a ran check, not a skip', () => {
+  const result = runHeartbeat(loadFixture('unregistered-external-action'));
+  assert.ok(!result.findings.some((finding) => finding.code === 'check-skipped'));
+  assert.equal(result.coverage.scheduler.status, 'present');
+});
+
+test('TOML subset parser reads tables, array-of-tables, comments, and booleans', () => {
+  const text = [
+    '# comment',
+    '[routines.foo]',
+    'status = "ACTIVE"',
+    'command = "pwsh ./foo.ps1"',
+    '',
+    '[[jobs]]',
+    'id = "bar"',
+    'enabled = false',
+    '',
+    '[paused-nightly-digest]',
+    'status = "PAUSED"',
+    '',
+  ].join('\n');
+  const parsed = parseTomlSubset(text);
+  assert.equal(parsed.routines.foo.status, 'ACTIVE');
+  assert.equal(parsed.jobs[0].id, 'bar');
+  assert.equal(parsed.jobs[0].enabled, false);
+  const routines = parseSchedulerToml(text, 'automation.toml');
+  const foo = routines.find((row) => row.id === 'foo');
+  const bar = routines.find((row) => row.id === 'bar');
+  assert.equal(foo.status, 'ACTIVE');
+  assert.equal(foo.active, true);
+  assert.equal(bar.status, 'PAUSED');
+  assert.equal(bar.active, false);
+  const topLevel = parseSchedulerToml('[paused-nightly-digest]\nstatus = "PAUSED"\n', 'automation.toml');
+  assert.equal(topLevel[0].id, 'paused-nightly-digest');
+  assert.equal(topLevel[0].status, 'PAUSED');
+});
+
+test('ACTIVE unregistered TOML routine is critical; PAUSED is not', () => {
+  const estate = path.join(FIXTURES, 'scheduler-estate');
+  const input = collectLiveInput({
+    asOf: '2026-08-17',
+    definitionsDir: estate,
+  });
+  assert.equal(input.coverage.scheduler.status, 'present');
+  assert.match(input.coverage.scheduler.path || '', /automation\.toml$/);
+  const ids = input.definitions.map((def) => def.id);
+  assert.ok(ids.includes('align-hcm-attribution-dashboard-health-guard'));
+  assert.ok(ids.includes('record-agentic-workflows-loom'));
+  assert.ok(ids.includes('paused-nightly-digest'));
+  assert.ok(input.definitions.some((def) => def.kind === 'shadow'));
+
+  const result = runHeartbeat(input);
+  const missing = byCode(result, 'missing-registration');
+  const subjects = missing.map((finding) => finding.subject).sort();
+  assert.deepEqual(subjects, [
+    'align-hcm-attribution-dashboard-health-guard',
+    'align-hcm-full-funnel-attribution-refresh',
+    'record-agentic-workflows-loom',
+  ]);
+  assert.ok(!missing.some((finding) => finding.subject === 'paused-nightly-digest'));
+  assert.ok(!missing.some((finding) => finding.subject === 'heartbeat'));
+  assert.equal(result.status, 'fail');
+  assert.equal(exitCodeFor(result), 2);
+  assert.doesNotMatch(result.next_action, /No ungoverned power/);
+});
+
+test('12-hex-suffixed scheduler dirs are advisory shadows, not extra criticals', () => {
+  const input = collectLiveInput({
+    asOf: '2026-08-17',
+    definitionsDir: path.join(FIXTURES, 'scheduler-estate'),
+  });
+  const result = runHeartbeat(input);
+  const shadows = byCode(result, 'shadow-duplicate');
+  const ids = shadows.map((finding) => finding.subject).sort();
+  assert.ok(ids.includes('align-hcm-attribution-dashboard-health-guard'));
+  assert.ok(ids.includes('record-agentic-workflows-loom'));
+  assert.ok(!ids.includes('align-hcm-full-funnel-attribution-refresh'));
+  assert.ok(shadows.every((finding) => finding.severity === 'info'));
+  assert.ok(shadows.every((finding) => finding.lane === 'advisory'));
+  const missing = byCode(result, 'missing-registration');
+  assert.equal(missing.filter((finding) => finding.subject === 'align-hcm-attribution-dashboard-health-guard').length, 1);
+  assert.match(SHADOW_DIR_RE.source, /12/);
+});
+
+test('missing --definitions path is an honest skip, not a clean scheduler', () => {
+  const input = collectLiveInput({
+    asOf: '2026-08-17',
+    definitionsDir: 'does-not-exist-scheduler',
+  });
+  assert.equal(input.coverage.scheduler.status, 'absent');
+  assert.match(input.coverage.scheduler.reason, /not found/);
+  const result = runHeartbeat(input);
+  assert.ok(byCode(result, 'check-skipped').some((finding) => finding.subject === 'scheduler'));
+  assert.doesNotMatch(result.next_action, /No ungoverned power/);
+});
+
+test('CLI --definitions against the scheduler fixture exits 2 on unregistered ACTIVE routines', () => {
+  const spawned = spawnSync(
+    process.execPath,
+    [
+      BIN,
+      '--definitions', path.join(FIXTURES, 'scheduler-estate'),
+      '--as-of', '2026-08-17',
+      '--no-write',
+      '--json',
+    ],
+    { encoding: 'utf8' },
+  );
+  assert.equal(spawned.status, 2, spawned.stderr);
+  const payload = JSON.parse(spawned.stdout);
+  assert.equal(payload.status, 'fail');
+  assert.ok(payload.findings.some((finding) => finding.subject === 'align-hcm-attribution-dashboard-health-guard'));
+  assert.equal(payload.coverage.scheduler.status, 'present');
+});
+
+test('two live collects with the scheduler fixture stay byte-identical', () => {
+  const opts = { asOf: '2026-08-17', definitionsDir: path.join(FIXTURES, 'scheduler-estate') };
+  const a = canonicalResult(runHeartbeat(collectLiveInput(opts)));
+  const b = canonicalResult(runHeartbeat(collectLiveInput(opts)));
+  assert.equal(JSON.stringify(a), JSON.stringify(b));
+});
+
+test('default scheduler search does not treat repo-root markdown as routines', () => {
+  const input = collectLiveInput({ asOf: '2026-08-17' });
+  assert.ok(!input.definitions.some((def) => def.id === 'readme' || def.id === 'agents'));
+  assert.equal(resolveSchedulerSource(repoPath('.'), null).status, 'absent');
+});
+

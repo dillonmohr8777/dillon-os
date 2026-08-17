@@ -46,7 +46,7 @@ node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/w
 node --test _os/automation/tests/*.test.js
 ```
 
-- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, public-safety scanning, and the heartbeat governance scan (`node _os/automation/bin/heartbeat.js --no-write`).
+- Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, public-safety scanning, and the heartbeat governance scan (`node _os/automation/bin/heartbeat.js --no-write`). Without `automation.toml` (or `--definitions` pointing at the Windows scheduler), the heartbeat must report the scheduler source as skipped — that is not a clean bill.
 - `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has no ESLint config — interactive only; do not run non-interactively.
 - `immohrtal-site` has no lint script.
 

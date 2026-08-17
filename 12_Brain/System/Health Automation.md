@@ -10,7 +10,7 @@ source: "[[System/routine-health]]"
 layer links here so agents and the HUD share one status surface.
 
 - Status board: [[System/routine-health|Routine Health Monitor]]
-- Governance scan: `node _os/automation/bin/heartbeat.js --no-write` (fail closed on ungoverned power)
+- Governance scan: `node _os/automation/bin/heartbeat.js --no-write` (fail closed on ungoverned power; a skipped scheduler source is not a pass)
 - Memory sync note: [[System/claude-memory-sync|claude-memory-sync]]
 - Ops loops: [[12_Brain/System/Second Brain Ops|Second Brain Ops]]
 
