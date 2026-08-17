@@ -15,9 +15,11 @@ Fill the three `data-prompt` slots on each 17 August 2026 radar demo with two-co
 
 ## Next actions
 
-- [ ] Human review of the 11 defect-flagged rows before any mail
+- [x] Generate and wire 66 plates (`node radar-aug17-sites/test.js --require-images`)
+- [ ] Human review of the defect-flagged rows before any mail
 - [ ] Recheck Frees Insurance street the day a card is printed (Gay St still live on 17 Aug)
 - [ ] Operator gate: desktop vault vs this Git tree after merge
+- [ ] Some plates still leak letters (model habit). Re-roll any card that shows a name before a client sees it.
 
 ## Links
 
