@@ -1,4 +1,4 @@
-# Codex image queue — generated 2026-08-16
+# Codex image queue — generated 2026-08-17
 
 100 rebuild targets own no usable photographs. Each has a brief in
 this directory specifying exactly what to generate, slot by slot.
@@ -95,29 +95,29 @@ this directory specifying exactly what to generate, slot by slot.
 | 72 | Ember & Ale | restaurant | Collegeville | ember-and-ale.json |
 | 73 | The Edge Fitness Clubs | fitness-centre | Media | the-edge-fitness-clubs.json |
 | 74 | Affordable Dentures & Implants | dentist | Doylestown | affordable-dentures-and-implants.json |
-| 75 | Epam | it | Philadelphia | epam.json |
-| 76 | Fit4Mom | fitness-centre | Warrington | fit4mom.json |
-| 77 | Belle Palace Nail Spa | beauty | Warrington | belle-palace-nail-spa.json |
-| 78 | Anthropology | clothes | Devon | anthropology.json |
-| 79 | Better Homes and Gardens Real Estate Community Realty | estate-agent | Phoenixville | better-homes-and-gardens-real-estate-community-realty.json |
-| 80 | Pier 6 | shipyard |  | pier-6.json |
-| 81 | Colket Translational Research Building | clinic | Philadelphia | colket-translational-research-building.json |
-| 82 | Sangillo Tire Center | tyres | Folsom | sangillo-tire-center.json |
-| 83 | Mack’s Hair Studio | hairdresser | Philadelphia | mack-s-hair-studio.json |
-| 84 | Balance Studios | fitness-centre | Philadelphia | balance-studios.json |
-| 85 | S.B. Health | fitness-centre | Bristol Township | s-b-health.json |
-| 86 | Custom IT Solutions | it | Lower Salford Township | custom-it-solutions.json |
-| 87 | Captain Car Wash | car-wash | Norristown | captain-car-wash.json |
-| 88 | Heart & Soul Tattoo | tattoo | East Greenville | heart-and-soul-tattoo.json |
-| 89 | Manatawny Still Works | distillery |  | manatawny-still-works.json |
-| 90 | Just Tires | car-repair |  | just-tires.json |
-| 91 | Kevin T Coyne Attorney At Law | lawyer | Media | kevin-t-coyne-attorney-at-law.json |
-| 92 | The Rouse Group Development Co. | estate-agent | Havertown | the-rouse-group-development-co.json |
-| 93 | Connolly Dermatology | doctor | Newtown Square | connolly-dermatology.json |
-| 94 | O'Donnell, Weiss & Mattei, P.C. | lawyer |  | o-donnell-weiss-and-mattei-p-c.json |
-| 95 | Seiler & Drury | architect | Norristown | seiler-and-drury.json |
-| 96 | LPL Financial | financial | Colmar | lpl-financial.json |
-| 97 | The Restaurant Store | kitchen | Norristown | the-restaurant-store.json |
-| 98 | NovaCare | clinic | Conshohocken | novacare.json |
-| 99 | J-Pro, Inc. | swimming-pool | Bridgeport | j-pro-inc.json |
-| 100 | Towne Book Center & Wine Bar | books | Collegeville | towne-book-center-and-wine-bar.json |
+| 75 | B & M Construction & Hvac LLC | hvac | Whitehall | b-and-m-construction-and-hvac-llc.json |
+| 76 | Epam | it | Philadelphia | epam.json |
+| 77 | Fit4Mom | fitness-centre | Warrington | fit4mom.json |
+| 78 | Belle Palace Nail Spa | beauty | Warrington | belle-palace-nail-spa.json |
+| 79 | Anthropology | clothes | Devon | anthropology.json |
+| 80 | Better Homes and Gardens Real Estate Community Realty | estate-agent | Phoenixville | better-homes-and-gardens-real-estate-community-realty.json |
+| 81 | Pier 6 | shipyard |  | pier-6.json |
+| 82 | Colket Translational Research Building | clinic | Philadelphia | colket-translational-research-building.json |
+| 83 | Sangillo Tire Center | tyres | Folsom | sangillo-tire-center.json |
+| 84 | Mack’s Hair Studio | hairdresser | Philadelphia | mack-s-hair-studio.json |
+| 85 | Balance Studios | fitness-centre | Philadelphia | balance-studios.json |
+| 86 | S.B. Health | fitness-centre | Bristol Township | s-b-health.json |
+| 87 | Custom IT Solutions | it | Lower Salford Township | custom-it-solutions.json |
+| 88 | Captain Car Wash | car-wash | Norristown | captain-car-wash.json |
+| 89 | Heart & Soul Tattoo | tattoo | East Greenville | heart-and-soul-tattoo.json |
+| 90 | Manatawny Still Works | distillery |  | manatawny-still-works.json |
+| 91 | Just Tires | car-repair |  | just-tires.json |
+| 92 | Kevin T Coyne Attorney At Law | lawyer | Media | kevin-t-coyne-attorney-at-law.json |
+| 93 | The Rouse Group Development Co. | estate-agent | Havertown | the-rouse-group-development-co.json |
+| 94 | Connolly Dermatology | doctor | Newtown Square | connolly-dermatology.json |
+| 95 | O'Donnell, Weiss & Mattei, P.C. | lawyer |  | o-donnell-weiss-and-mattei-p-c.json |
+| 96 | Seiler & Drury | architect | Norristown | seiler-and-drury.json |
+| 97 | LPL Financial | financial | Colmar | lpl-financial.json |
+| 98 | The Restaurant Store | kitchen | Norristown | the-restaurant-store.json |
+| 99 | NovaCare | clinic | Conshohocken | novacare.json |
+| 100 | J-Pro, Inc. | swimming-pool | Bridgeport | j-pro-inc.json |
