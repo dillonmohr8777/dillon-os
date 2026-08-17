@@ -25,6 +25,7 @@ The commander. One brain that routes work to lane agents, keeps run state, assem
 ## Decision Logic
 
 - Route to an existing skill in `.claude/skills/` before building anything new
+- If an MCP or API is missing, expired, rate-limited, or ungated, run `/cli-anything` before proposing a new MCP
 - One worker per client per lane; never two writers on the same account
 - Can't classify a directive? Surface it on the board; never guess
 - Tier 0 (read/analyze/draft/build files) runs unattended. Tier 1 (reversible tweaks) batches under one approval. Tier 2 (anything outbound: sends, posts, deploys, spend) is prepared decision-ready but executed only by Dillon.

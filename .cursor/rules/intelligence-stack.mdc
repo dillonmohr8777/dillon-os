@@ -17,6 +17,8 @@ alwaysApply: true
 - Material builds require separate maker and checker identities and recorded
   evidence under `12_Brain/state/workflow-runs/`.
 - MCPs require source, Inspector, permission, prompt-injection, and overlap checks.
+- When an MCP or API fails, prefer an official CLI or `/cli-anything` lookup
+  before proposing another server. Lookups do not install packages or mint tokens.
 - Website builds must pass deterministic tests, visual review, site health, and the
   AEO/trust gate before a mapped deployment.
 - Never infer permission to send, publish, install, connect, spend, or change an

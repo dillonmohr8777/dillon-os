@@ -27,7 +27,7 @@ The SEO and content lane. Keeps client sites and Mohr Media properties ranking: 
 ## Reporting Cadence
 
 - Content pipeline status via `/content-scan` (ship-ready vs gaps vs kill list)
-- Ranking and traffic reporting joins the Reporting Agent's monthly client report once Search Console/GA4 MCPs are connected
+- Ranking and traffic reporting joins the Reporting Agent's monthly client report once Search Console/GA4 MCPs are connected. `/cli-anything` does not add those CLIs.
 
 ## Notes
 

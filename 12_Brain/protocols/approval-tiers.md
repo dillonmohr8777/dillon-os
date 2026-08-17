@@ -6,7 +6,7 @@ Mirrors `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`.
 |---|---|---|
 | 0 | Read, analyze, draft, QA, build artifacts, append vault/queue/state | Grok ingest, experiment proposals, maker/checker evidence, MCP Inspector tools/list, AEO gate, frontmatter validation, site-health dry-run, qualify scoring |
 | 1 | Reversible vault writes after one batch approval | frontmatter repair writes, prospect note drafts already written as Tier 0 drafts |
-| 2 | Outbound / irreversible | email send, Slack post, public deploy, mail merge, spending, credential use |
+| 2 | Outbound / irreversible | email send, Slack post, public deploy, mail merge, spending, credential use, `pip install` / `cli-hub install`, account connect |
 
 ## Hard blocks in `_os/automation`
 
@@ -16,4 +16,5 @@ Mirrors `11_Agents/64gb Morning Orchestrator Spec 2026-07-08.md`.
 - Grok/browser research may be read and captured, but it may never like, reply, repost, send, connect, install, or authorize
 - Maker/checker runs require distinct identities; a human gate is required by default
 - MCP candidates with any pending check remain sandbox-only; failed checks or critical permissions are rejected
+- A failed MCP is not permission to install a CLI-Anything harness; `/cli-anything` looks up, it does not install
 - A failing AEO/trust gate blocks website deployment

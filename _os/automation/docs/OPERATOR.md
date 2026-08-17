@@ -115,6 +115,19 @@ The same variable drives the committed wiring in `.cursor/mcp.json` and `.mcp.js
 Both are inert until the variable is set, and the design skills treat the tools as
 optional, so an unset variable degrades to harvest-only design rather than failing.
 
+### CLI-first fallback
+
+When an MCP or API is missing, expired, rate-limited, or ungated, look up a CLI
+before opening a new candidate. This does not install packages or mint tokens.
+
+```powershell
+node _os/automation/bin/cli-first.js
+node _os/automation/bin/cli-first.js --query "exa rate limit"
+```
+
+Skill: `.claude/skills/cli-anything/SKILL.md`. GitHub MCP failures use `gh`.
+LandingFolio, Slack OAuth, and ads-platform gaps stay on the paths above.
+
 ## Website deployment checks
 
 ```powershell

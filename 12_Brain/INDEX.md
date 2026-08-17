@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-17
 ---
 
 # INDEX — the front door
@@ -29,6 +29,7 @@ in the same change.
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/entities/CLI-Anything|CLI-Anything]] — HKUDS agent-native CLI catalog; skill `/cli-anything`, not an MCP substitute (expires 2026-11-17).
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -40,6 +41,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.
 - [[12_Brain/concepts/Draft-First Operating Rules|Draft-First Operating Rules]] — draft unless explicitly told to send.
 - [[12_Brain/concepts/Access Verification Discipline|Access Verification Discipline]] — confirmed access needs direct proof (no inventories here).
+- [[12_Brain/concepts/CLI-First Integration|CLI-First Integration]] — official CLI or catalog harness before a new MCP; a missing CLI is not a missing credential (expires 2026-11-17).
 - [[12_Brain/concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove.
 - [[12_Brain/concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.
 - [[12_Brain/concepts/Google Docs Sharding Pattern|Google Docs Sharding Pattern]] — sub-MB shards → Docs → index.
@@ -57,6 +59,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/raw/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
+- [[12_Brain/raw/research/2026-08-17 CLI-Anything Skill Receipts|2026-08-17 CLI-Anything Skill Receipts]] — Chase AI TikTok + HKUDS catalog vs historical MCP/API blockers.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -65,6 +68,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
+- [[12_Brain/decisions/2026-08-17 - Institute CLI-Anything as CLI-first fallback|2026-08-17 — CLI-first fallback]] — institute `/cli-anything`; do not skip `mcp-gate.js`.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.

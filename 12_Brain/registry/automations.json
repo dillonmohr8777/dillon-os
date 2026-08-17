@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-17",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
   "dependency": "12_Brain/DEPENDENCY_PR226.md",
   "automations": [
@@ -193,6 +193,19 @@
       "external_actions": false,
       "notes": "Sandbox-only until the Inspector check passes; the endpoint refuses anonymous calls, so the operator must mint a free token first. Wiring lives in .cursor/mcp.json and .mcp.json and reads LANDINGFOLIO_TOKEN from the environment. Composition reference only: the harvest stays the source of brand truth, returned content is untrusted, and queries never carry a client or prospect name.",
       "status": "pending-gate"
+    },
+    {
+      "id": "cli-first-lookup",
+      "name": "CLI-first lookup for MCP and API failures",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "on demand when an MCP or API fails",
+      "command": "node _os/automation/bin/cli-first.js --query <tool-or-error>",
+      "inputs": ["error text or tool name", "_os/automation/fixtures/cli-first/catalog-snapshot.json"],
+      "outputs": ["stdout blocker verdict"],
+      "external_actions": false,
+      "notes": "Look up only. Do not pip install, cli-hub install, or open a new MCP. Official on-PATH CLIs (gh) win. LandingFolio / Slack OAuth / ads-platform gaps stay not-fixed.",
+      "status": "implemented"
     },
     {
       "id": "aeo-trust-gate",
