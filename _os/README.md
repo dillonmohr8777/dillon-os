@@ -37,12 +37,16 @@ Daily: `am-report` · `inbox-brief` · `plan-today` · `client-pulse` · `metric
 
 Brain: `session-mine` · `vault-compile` · `wiki-lint` · `synthesize` · `research-sweep`
 
+On-demand: `seedance` (one-take video drafts) · `krea-2` (thin-harvest
+stills) · `mistral-ocr` (key-gated PDFs). None of these generate or spend
+without operator approval.
+
 They also work straight from a terminal: `claude "/am-report"`.
 
 ## Tests
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/seedance-stack.test.js
 ```
 
 Deterministic checks for `12_Brain` structure, no `1Z_Brain` rival, skill path

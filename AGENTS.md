@@ -39,10 +39,15 @@ to harvest-only design instead of failing a build. Status, rules, and rollback:
 operator runs `node _os/automation/bin/landingfolio-verify.js` to finish the
 Inspector check. Any new MCP goes through `_os/automation/bin/mcp-gate.js` first.
 
+Higgsfield may appear as a Cursor-level MCP for Seedance video. It stays
+inert while `needsAuth`. `/seedance` drafts shot lists only. Connecting
+the server or spending credits is an operator action. Do not claim the
+live `seedance_2_5` path is 4K — the shipped enum is 480p/720p.
+
 ### Tests / lint
 
 ```
-node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/workshop-calendar.test.js
+node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/workshop-calendar.test.js _os/test/seedance-stack.test.js
 ```
 
 - Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path wiring, and public-safety scanning.

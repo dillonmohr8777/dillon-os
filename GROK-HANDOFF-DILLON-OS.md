@@ -33,6 +33,9 @@ Read `AGENTS.md`, `CLAUDE.md`, `12_Brain/INDEX.md`, and `12_Brain/System/Second 
 | `philly-sites/` | Weekly 25-site outreach gallery/factory output | Main contains the shipped batch. Preserve site identity checks, first-party logo provenance, `noindex,nofollow`, and maker-checker QA. |
 | `_os/reporting/` | Client-report CLI | Writes report HTML into `Daily-Briefs/reports/`. Keep client data and attribution definitions separated. |
 | `.mcp.json` / LandingFolio | Optional design-reference MCP | Requires `LANDINGFOLIO_TOKEN`; no token is stored in Git. It remains sandbox-only until the Inspector verification command passes. |
+| `/seedance` | ByteDance Seedance 2.5 one-take video drafts | Prompt-only unless Higgsfield auth + spend are approved. Live path is 720p, not 4K. |
+| `/krea-2` | Thin-harvest atmosphere stills | Harvest photos win. Do not download 12B weights. |
+| `/mistral-ocr` | Structured PDF OCR | Stop without `MISTRAL_API_KEY`. Page calls are spend. |
 
 ## GitHub backlog truth
 
