@@ -77,16 +77,13 @@ main{padding-bottom:90px}
 figure.slot{margin:28px 0;padding:0}
 figure.slot img{width:100%;height:460px;object-fit:cover;border-radius:22px;display:block;background:color-mix(in srgb,var(--ink) 6%,var(--paper))}
 figcaption{font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace;margin-top:8px;color:color-mix(in srgb,var(--ink) 55%,transparent)}
-.img-slot{height:460px;border:1px dashed color-mix(in srgb,var(--ink) 35%,transparent);border-radius:22px;
-  background:repeating-linear-gradient(-45deg,transparent,transparent 8px,color-mix(in srgb,var(--ink) 6%,transparent) 8px,color-mix(in srgb,var(--ink) 6%,transparent) 9px);
-  display:flex;align-items:flex-end;padding:16px;font:12px/1.4 "IBM Plex Mono",ui-monospace,monospace}
 .outro{margin-top:190px;text-align:center}
 .outro-mark{width:min(1080px,96vw);height:380px;margin:0 auto}
 footer{padding:28px 0 76px;font-size:.88rem}
 footer nav{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
 a{color:var(--ink)}
 .demo{font:11px/1 "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}
-@media (max-width:520px){figure.slot img,.img-slot{height:280px} .mast-mark{height:96px} .outro-mark{height:160px}}
+@media (max-width:520px){figure.slot img{height:280px} .mast-mark{height:96px} .outro-mark{height:160px}}
 `;
 }
 
