@@ -40,7 +40,7 @@ function sourceFilter(operator, values, includeBlank) {
     filterType: 'PROPERTY',
     property: 'hs_analytics_source',
     operation: {
-      operationType: 'MULTISTRING',
+      operationType: 'ENUMERATION',
       operator,
       values,
       includeObjectsWithNoValueSet: Boolean(includeBlank),
@@ -77,8 +77,23 @@ function orBranch(filterBranches) {
   };
 }
 
-function wrapAnd(existing, extraFilters) {
-  return andBranch(extraFilters, [existing]);
+function injectFiltersIntoAndChildren(existing, extraFilters) {
+  const clone = JSON.parse(JSON.stringify(existing));
+  if (clone.filterBranchType !== 'OR') {
+    return orBranch([andBranch(extraFilters, [clone])]);
+  }
+  clone.filterBranches = (clone.filterBranches || []).map((branch) => {
+    const next = { ...branch };
+    next.filterBranchType = next.filterBranchType || 'AND';
+    next.filterBranchOperator = next.filterBranchOperator || 'AND';
+    next.filters = [...(branch.filters || []), ...extraFilters];
+    next.filterBranches = branch.filterBranches || [];
+    return next;
+  });
+  if (!clone.filterBranches.length) {
+    clone.filterBranches = [andBranch(extraFilters, [])];
+  }
+  return clone;
 }
 
 function isBroadGmbAdsFilter(filter) {
@@ -95,7 +110,9 @@ function tightenPmaxAds(existing) {
   for (const branch of branches) {
     const filters = branch.filters || [];
     if (filters.some(isBroadGmbAdsFilter) && filters.length === 1) {
-      next.push(orBranch(PMAX_ADS_TERMS.map((term) => andBranch([adsContains(term)], []))));
+      for (const term of PMAX_ADS_TERMS) {
+        next.push(andBranch([adsContains(term)], []));
+      }
       replaced = true;
     } else {
       next.push(branch);
@@ -106,13 +123,19 @@ function tightenPmaxAds(existing) {
 }
 
 function organicTree(existing) {
-  return wrapAnd(existing, [sourceFilter('IS_NONE_OF', PAID_SOURCES, true)]);
+  return injectFiltersIntoAndChildren(
+    existing,
+    [sourceFilter('IS_NONE_OF', PAID_SOURCES, true)],
+  );
 }
 
 function pmaxTree(existing) {
   const { tree, replaced } = tightenPmaxAds(existing);
   return {
-    tree: wrapAnd(tree, [sourceFilter('IS_ANY_OF', ['PAID_SEARCH'], false)]),
+    tree: injectFiltersIntoAndChildren(
+      tree,
+      [sourceFilter('IS_ANY_OF', ['PAID_SEARCH'], false)],
+    ),
     replaced,
   };
 }
@@ -140,6 +163,7 @@ async function hs(pathname, { method = 'GET', body } = {}) {
     err.code = 'hubspot_http';
     err.status = res.status;
     err.body = json;
+    err.hubspotMessage = json && json.message ? String(json.message).slice(0, 400) : null;
     throw err;
   }
   return json;
@@ -354,6 +378,7 @@ if (require.main === module) {
       status: 'error',
       code: err.code || 'unknown',
       message: err.message,
+      hubspot_message: err.hubspotMessage || null,
       http_status: err.status || null,
     };
     try { writeState(report); } catch { /* ignore */ }

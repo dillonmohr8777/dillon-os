@@ -1,12 +1,14 @@
 {
   "automation_id": "hubspot-attribution-repair",
-  "started_at": "2026-08-17T17:55:28.097Z",
-  "mode": "dry-run",
+  "started_at": "2026-08-17T18:44:25.996Z",
+  "mode": "apply",
+  "portal_id": 50612503,
   "organic_name": "GMB_LP_Organic",
   "pmax_name": "Google P-max Suspensions",
   "status": "blocked",
-  "token_present": false,
+  "token_present": true,
+  "token_env_key": "HUBSPOT_TOKEN",
   "lists": [],
   "actions": [],
-  "blocker": "HUBSPOT_TOKEN unset. Composio HubSpot must be ACTIVE or the private app token must be in the environment."
+  "blocker": "Refusing --apply until an operator passes --confirm-apply after reviewing dry-run output."
 }

@@ -18,8 +18,8 @@ Jason Fallon, Sean, Alexandra, or `#360marketing` asks why HubSpot channels, Goo
 3. Map Active Contact segments: name, size, Used In, creator, last edited. Flag any two segments with the same size.
 4. Check routing: `#360leads` Source field, `#gmbs-reinstatement` Zapier, email/workflow Used In.
 5. Inspect the public landing-page HTML for HubSpot tracking and hidden UTM/`gclid` fields. Do not log in to WordPress unless Dillon provides a session.
-6. Run `node _os/automation/bin/hubspot-attribution-repair.js --dry-run`. If `HUBSPOT_TOKEN` is unset or Composio HubSpot is not ACTIVE, stop after the dry-run report. Do not invent portal writes.
-7. With an active token and Dillon's apply instruction, rerun with `--apply`. Record before/after filter JSON in the project note (no contact rows).
+6. Run `node _os/automation/bin/hubspot-attribution-repair.js --dry-run`. Token env keys: `JASON_HUBSPOT_PRIVATE_APP_TOKEN`, `HUBSPOT_TOKEN`. If unset, stop after the dry-run report. Do not invent portal writes.
+7. With an active Jason/Momentum token and Dillon's apply instruction, rerun with `--apply --confirm-apply`. The CLI verifies portal 50612503 and merges source filters onto existing list trees. Record before/after sizes in the project note (no contact rows).
 8. Draft Slack replies in the inbox note. Never post, react, or mark done in Slack.
 
 ## Target filters (Momentum 360 GMB)

@@ -35,7 +35,7 @@ Split organic GMB landing-page leads from Google PMax leads in Momentum 360 HubS
 
 ```
 node _os/automation/bin/hubspot-attribution-repair.js --dry-run
-node _os/automation/bin/hubspot-attribution-repair.js --apply
+node _os/automation/bin/hubspot-attribution-repair.js --apply --confirm-apply
 ```
 
-`--apply` requires `HUBSPOT_TOKEN` and still refuses if the named segments are missing.
+`--apply` requires `JASON_HUBSPOT_PRIVATE_APP_TOKEN` or `HUBSPOT_TOKEN`, verifies portal 50612503, and still refuses if the named segments are missing. Live apply 2026-08-17: organic 32→7, PMax 32→23, overlap 19→0.

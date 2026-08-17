@@ -53,6 +53,7 @@ describe('hubspot-attribution-repair CLI', () => {
     delete env.HUBSPOT_TOKEN;
     delete env.HUBSPOT_ACCESS_TOKEN;
     delete env.HUBSPOT_PRIVATE_APP_TOKEN;
+    delete env.JASON_HUBSPOT_PRIVATE_APP_TOKEN;
     const result = spawnSync(process.execPath, [bin, '--dry-run'], {
       env,
       encoding: 'utf8',
@@ -86,11 +87,12 @@ describe('hubspot-attribution-repair CLI', () => {
       filterBranches: [{ filterBranchType: 'AND', filters: [{ property: 'hs_analytics_last_url' }] }],
     };
     const tree = repair.organicTree(existing);
-    assert.equal(tree.filterBranchType, 'AND');
-    assert.equal(tree.filters[0].property, 'hs_analytics_source');
-    assert.equal(tree.filters[0].operation.operator, 'IS_NONE_OF');
-    assert.deepEqual(tree.filters[0].operation.values, repair.PAID_SOURCES);
-    assert.equal(tree.filterBranches[0].filterBranchType, 'OR');
+    assert.equal(tree.filterBranchType, 'OR');
+    assert.equal(tree.filterBranches[0].filterBranchType, 'AND');
+    const source = tree.filterBranches[0].filters.find((f) => f.property === 'hs_analytics_source');
+    assert.equal(source.operation.operator, 'IS_NONE_OF');
+    assert.deepEqual(source.operation.values, repair.PAID_SOURCES);
+    assert.equal(tree.filterBranches[0].filters.some((f) => f.property === 'hs_analytics_last_url'), true);
   });
 
   it('replaces ads CONTAINS GMB with PMax campaign terms and requires Paid Search', () => {
@@ -118,13 +120,17 @@ describe('hubspot-attribution-repair CLI', () => {
     };
     const { tree, replaced } = repair.pmaxTree(existing);
     assert.equal(replaced, true);
-    assert.equal(tree.filterBranchType, 'AND');
-    assert.equal(tree.filters[0].operation.operator, 'IS_ANY_OF');
-    assert.deepEqual(tree.filters[0].operation.values, ['PAID_SEARCH']);
-    const adsOr = tree.filterBranches[0].filterBranches[0];
-    assert.equal(adsOr.filterBranchType, 'OR');
-    const terms = adsOr.filterBranches.flatMap((b) => b.filters.map((f) => f.searchTerms[0]));
-    assert.deepEqual(terms, repair.PMAX_ADS_TERMS);
-    assert.equal(tree.filterBranches[0].filterBranches[1].filters[0].formId, 'keep-me');
+    assert.equal(tree.filterBranchType, 'OR');
+    const adsTerms = tree.filterBranches
+      .flatMap((b) => b.filters)
+      .filter((f) => f.filterType === 'ADS_SEARCH')
+      .map((f) => f.searchTerms[0]);
+    assert.deepEqual(adsTerms, repair.PMAX_ADS_TERMS);
+    for (const branch of tree.filterBranches) {
+      const source = branch.filters.find((f) => f.property === 'hs_analytics_source');
+      assert.equal(source.operation.operator, 'IS_ANY_OF');
+      assert.deepEqual(source.operation.values, ['PAID_SEARCH']);
+    }
+    assert.equal(tree.filterBranches.at(-1).filters.some((f) => f.formId === 'keep-me'), true);
   });
 });
