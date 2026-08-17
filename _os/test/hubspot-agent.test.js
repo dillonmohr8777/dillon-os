@@ -9,6 +9,7 @@ const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const { getSkills } = require('../vault-state');
 const { scanText } = require('../public-safety');
+const repair = require('../automation/bin/hubspot-attribution-repair.js');
 
 const VAULT = path.resolve(__dirname, '..', '..');
 
@@ -75,5 +76,55 @@ describe('hubspot-attribution-repair CLI', () => {
     const payload = JSON.parse(result.stdout);
     assert.equal(payload.mode, 'apply');
     assert.match(payload.blocker, /confirm-apply/);
+  });
+
+  it('merges source excludes onto the existing organic OR tree', () => {
+    const existing = {
+      filterBranchType: 'OR',
+      filterBranchOperator: 'OR',
+      filters: [],
+      filterBranches: [{ filterBranchType: 'AND', filters: [{ property: 'hs_analytics_last_url' }] }],
+    };
+    const tree = repair.organicTree(existing);
+    assert.equal(tree.filterBranchType, 'AND');
+    assert.equal(tree.filters[0].property, 'hs_analytics_source');
+    assert.equal(tree.filters[0].operation.operator, 'IS_NONE_OF');
+    assert.deepEqual(tree.filters[0].operation.values, repair.PAID_SOURCES);
+    assert.equal(tree.filterBranches[0].filterBranchType, 'OR');
+  });
+
+  it('replaces ads CONTAINS GMB with PMax campaign terms and requires Paid Search', () => {
+    const existing = {
+      filterBranchType: 'OR',
+      filterBranchOperator: 'OR',
+      filters: [],
+      filterBranches: [
+        {
+          filterBranchType: 'AND',
+          filters: [{
+            entityType: 'CAMPAIGN',
+            searchTermType: 'NAME',
+            searchTerms: ['GMB'],
+            adNetwork: 'ADWORDS',
+            operator: 'CONTAINS',
+            filterType: 'ADS_SEARCH',
+          }],
+        },
+        {
+          filterBranchType: 'AND',
+          filters: [{ formId: 'keep-me', filterType: 'FORM_SUBMISSION' }],
+        },
+      ],
+    };
+    const { tree, replaced } = repair.pmaxTree(existing);
+    assert.equal(replaced, true);
+    assert.equal(tree.filterBranchType, 'AND');
+    assert.equal(tree.filters[0].operation.operator, 'IS_ANY_OF');
+    assert.deepEqual(tree.filters[0].operation.values, ['PAID_SEARCH']);
+    const adsOr = tree.filterBranches[0].filterBranches[0];
+    assert.equal(adsOr.filterBranchType, 'OR');
+    const terms = adsOr.filterBranches.flatMap((b) => b.filters.map((f) => f.searchTerms[0]));
+    assert.deepEqual(terms, repair.PMAX_ADS_TERMS);
+    assert.equal(tree.filterBranches[0].filterBranches[1].filters[0].formId, 'keep-me');
   });
 });
