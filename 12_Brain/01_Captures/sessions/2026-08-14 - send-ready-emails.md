@@ -1,3 +1,12 @@
+---
+note_type: capture
+status: unprocessed
+created: 2026-08-14
+updated: 2026-08-14
+source_refs: []
+tags: [capture]
+---
+
 # 2026-08-14 — Send-ready franchise emails (mined)
 
 - Decision: UPS `store####@` boxes are front-desk shipping inboxes. They are not the send list.

@@ -46,12 +46,21 @@ function parseFrontmatter(text) {
   return { data, body, hasFence: true };
 }
 
+function needsQuoting(s) {
+  return s === '' || /[:#\[\]{}]/.test(s) || s.includes('\n') || s.includes(',');
+}
+
 function serializeValue(v) {
   if (Array.isArray(v)) {
-    return '[' + v.map((x) => String(x)).join(', ') + ']';
+    // Quote elements that need it. Without this a wikilink element serializes as
+    // [[[12_Brain/...]]], which is not the list YAML or Obsidian will read back.
+    return '[' + v.map((x) => {
+      const s = String(x);
+      return typeof x === 'string' && needsQuoting(s) ? JSON.stringify(s) : s;
+    }).join(', ') + ']';
   }
   if (typeof v === 'string') {
-    if (v === '' || /[:#\[\]{}]/.test(v) || v.includes('\n')) {
+    if (needsQuoting(v)) {
       return JSON.stringify(v);
     }
     return v;

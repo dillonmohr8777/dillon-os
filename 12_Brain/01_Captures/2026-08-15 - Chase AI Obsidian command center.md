@@ -3,25 +3,19 @@ note_type: capture
 status: compiled
 created: 2026-08-15
 updated: 2026-08-15
-captured_at: 2026-08-15T21:55:22Z
+captured_at: "2026-08-15T21:55:22Z"
 source_type: social_video
-source_url: https://www.tiktok.com/@chase_ai_/video/7674342462638378253
-source_short_url: https://www.tiktok.com/t/ZP8W2jXmU/
+source_url: "https://www.tiktok.com/@chase_ai_/video/7674342462638378253"
+source_short_url: "https://www.tiktok.com/t/ZP8W2jXmU/"
 source_author: Chase AI
-source_published: 2026-08-15T19:28:40Z
+source_published: "2026-08-15T19:28:40Z"
 source_duration: 24m17s
 verification_status: verified
-related_entities:
-  - Obsidian
-  - Codex
-tags:
-  - brain
-  - capture
-  - obsidian
-  - command-center
-  - automation
-  - voice
+related_entities: ""
+tags: ""
+source_refs: []
 ---
+
 
 # Chase AI Obsidian command center
 

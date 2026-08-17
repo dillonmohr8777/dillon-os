@@ -2,7 +2,12 @@
 tags: [concept, research]
 source: "[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]"
 updated: 2026-07-04
+note_type: concept
+status: active
+created: 2026-07-04
+source_refs: ["[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]"]
 ---
+
 
 # Research Verification Loop
 

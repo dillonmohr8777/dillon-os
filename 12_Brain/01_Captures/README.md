@@ -3,7 +3,10 @@ note_type: index
 status: active
 updated: 2026-07-29
 tags: [brain, captures, index]
+created: 2026-07-29
+source_refs: []
 ---
+
 
 # Captures
 

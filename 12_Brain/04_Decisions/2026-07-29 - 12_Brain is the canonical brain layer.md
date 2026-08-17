@@ -2,10 +2,14 @@
 tags: [decision]
 decided: 2026-07-29
 status: active
-supersedes:
+supersedes: ""
 source: "[[12_Brain/README]]"
 updated: 2026-07-29
+note_type: decision
+created: 2026-07-29
+source_refs: ["[[12_Brain/README]]"]
 ---
+
 
 # 12_Brain is the canonical brain layer
 

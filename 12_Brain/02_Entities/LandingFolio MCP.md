@@ -2,7 +2,12 @@
 tags: [entity, tool]
 source: "[[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch]]"
 updated: 2026-07-31
+note_type: entity
+status: active
+created: 2026-07-31
+source_refs: ["[[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch]]"]
 ---
+
 
 # LandingFolio MCP
 

@@ -4,7 +4,11 @@ created: 2026-08-14
 updated: 2026-08-15
 expires: 2026-11-15
 source: "[[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest]]"
+note_type: research
+status: draft
+source_refs: ["[[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest]]"]
 ---
+
 
 # Franchise Email Sourcing
 

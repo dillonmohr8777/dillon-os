@@ -1,9 +1,15 @@
 ---
 tags: [raw, research, franchise, sourcing]
 captured: 2026-08-14
-method: direct fetches (curl/node), GET-only, throttled 300-400ms
+method: "direct fetches (curl/node), GET-only, throttled 300-400ms"
 agent: cloud (growth-workshop-franchise-pilot branch)
+note_type: capture
+status: unprocessed
+created: 2026-08-14
+updated: 2026-08-14
+source_refs: []
 ---
+
 
 # Raw receipts — franchise email sourcing run, 2026-08-14
 

@@ -3,17 +3,14 @@ note_type: capture
 status: processed
 created: 2026-07-30
 updated: 2026-07-30
-captured_at: 2026-07-30T10:17:27-04:00
+captured_at: "2026-07-30T10:17:27-04:00"
 source_type: slack-via-gmail-digest
 source_author: Dillon OS Slack watchdog
-related_entities:
-  - Momentum 360
-  - Melissa Silber
-  - Sean Boyle
-  - Jason Fallon
-  - Jenny McClain Miller
+related_entities: ""
 tags: [brain, capture, slack, momentum360, open-loop]
+source_refs: []
 ---
+
 
 # Slack Open Loops 2026-07-30
 

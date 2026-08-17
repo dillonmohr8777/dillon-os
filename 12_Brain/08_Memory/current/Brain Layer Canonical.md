@@ -2,7 +2,12 @@
 tags: [memory, current]
 updated: 2026-07-29
 as_of: 2026-07-29
+note_type: memory
+status: active
+created: 2026-07-29
+source_refs: []
 ---
+
 
 # Brain Layer Canonical
 

@@ -1,3 +1,12 @@
+---
+note_type: capture
+status: unprocessed
+created: 2026-08-17
+updated: 2026-08-17
+source_refs: []
+tags: [capture]
+---
+
 # Session log (public stub)
 
 Cadence lines only. Do not append secrets, emails, phones, or access notes.

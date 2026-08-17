@@ -1,3 +1,12 @@
+---
+note_type: capture
+status: unprocessed
+created: 2026-07-04
+updated: 2026-07-04
+source_refs: []
+tags: [capture]
+---
+
 # Capture: Obsidian second-brain system for Fable 5
 
 Source: article/thread shared 2026-07-04 (weeklyaiops.com author). Captured

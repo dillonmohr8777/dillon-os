@@ -3,25 +3,15 @@ note_type: capture
 status: processed
 created: 2026-07-30
 updated: 2026-07-30
-captured_at: 2026-07-30T00:00:00-04:00
+captured_at: "2026-07-30T00:00:00-04:00"
 source_type: Codex conversation
-source_url: codex-task:019faf63-1264-7f81-9384-115e3a0b3953
+source_url: "codex-task:019faf63-1264-7f81-9384-115e3a0b3953"
 source_author: Dillon Mohr
-related_entities:
-  - Marketing Chief
-  - Buzz
-  - Omega Landscaping and Concrete
-  - Onsite Concrete and Landscape
-  - Kimberly James Bridal
-  - The Ironic Ineptocracy
-  - IMMOHRTAL
-tags:
-  - brain
-  - capture
-  - goals
-  - delegation
-  - revenue
+related_entities: ""
+tags: ""
+source_refs: []
 ---
+
 
 # Dillon operating goals and revenue-first delegation
 

@@ -3,7 +3,13 @@ tags: [raw, research, franchise, sourcing]
 captured: 2026-08-14
 method: GET-only locator crawls + merge of the earlier scale CSV; MX DNS-only
 agent: cloud (growth-workshop-franchise-pilot branch)
+note_type: capture
+status: unprocessed
+created: 2026-08-14
+updated: 2026-08-14
+source_refs: []
 ---
+
 
 # Raw receipts — send-ready franchise harvest, 2026-08-14 evening
 

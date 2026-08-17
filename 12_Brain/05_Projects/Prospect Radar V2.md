@@ -3,7 +3,11 @@ tags: [project]
 status: active
 updated: 2026-08-13
 source: "[[12_Brain/04_Decisions/2026-08-13 - Prospect Radar V2 audit engine]]"
+note_type: project
+created: 2026-08-13
+source_refs: ["[[12_Brain/04_Decisions/2026-08-13 - Prospect Radar V2 audit engine]]"]
 ---
+
 
 # Prospect Radar V2
 

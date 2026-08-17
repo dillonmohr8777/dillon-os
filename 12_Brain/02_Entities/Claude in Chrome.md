@@ -3,7 +3,12 @@ tags: [entity, tool]
 source: "session 2026-07-04 (claude-code-guide research, code.claude.com/docs/en/chrome)"
 updated: 2026-07-04
 expires: 2026-10-04
+note_type: entity
+status: active
+created: 2026-07-04
+source_refs: ["session 2026-07-04 (claude-code-guide research, code.claude.com/docs/en/chrome)"]
 ---
+
 
 # Claude in Chrome
 

@@ -2,7 +2,12 @@
 tags: [concept, ops-rule, web-design]
 source: "[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]"
 updated: 2026-07-04
+note_type: concept
+status: active
+created: 2026-07-04
+source_refs: ["[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]"]
 ---
+
 
 # Netlify Deploy Safety
 

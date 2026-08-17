@@ -3,7 +3,13 @@ tags: [raw, research, franchise, sourcing, fdd]
 captured: 2026-08-15
 method: live portal probes (browser UA where bots get 403); no Item 20 tables saved
 agent: cloud subagent (Lane A FDD portals)
+note_type: capture
+status: unprocessed
+created: 2026-08-15
+updated: 2026-08-15
+source_refs: []
 ---
+
 
 # Raw receipts — Lane A FDD portals, second pass 2026-08-15
 

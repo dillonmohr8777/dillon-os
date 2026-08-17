@@ -1,3 +1,12 @@
+---
+note_type: capture
+status: unprocessed
+created: 2026-08-14
+updated: 2026-08-14
+source_refs: []
+tags: [capture]
+---
+
 # 2026-08-14 — Google RSVP rail (mined)
 
 - Decision: Google is the RSVP rail for **registrants only**. Do not Calendar-invite or EventReservation the cold franchise list.

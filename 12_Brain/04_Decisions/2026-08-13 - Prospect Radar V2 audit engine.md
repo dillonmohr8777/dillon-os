@@ -2,11 +2,15 @@
 tags: [decision]
 decided: 2026-08-13
 status: active
-supersedes:
+supersedes: ""
 source: "[[_os/automation/docs/RADAR-SETUP]]"
 updated: 2026-08-13
 expires: 2026-11-13
+note_type: decision
+created: 2026-08-13
+source_refs: ["[[_os/automation/docs/RADAR-SETUP]]"]
 ---
+
 
 # Prospect Radar V2 is an adapter layer, not a rebuild
 

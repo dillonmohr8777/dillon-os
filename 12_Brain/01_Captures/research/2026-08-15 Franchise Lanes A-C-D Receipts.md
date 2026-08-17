@@ -4,7 +4,13 @@ captured: 2026-08-15
 method: live HTTP probes + official FTC/CFR pages; counts only
 agent: cloud (growth-workshop-franchise-pilot branch)
 expires_hint: compile into 12_Brain/06_Research/Franchise Email Sourcing
+note_type: capture
+status: unprocessed
+created: 2026-08-15
+updated: 2026-08-15
+source_refs: []
 ---
+
 
 # Raw receipts — franchise lanes A / C / D + radar flip, 2026-08-15
 

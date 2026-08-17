@@ -8,22 +8,12 @@ period_end: 2026-08-15
 workspace: Momentum Digital Agency
 workspace_id: T066HGS7N
 privacy_state: redacted
-source_refs:
-  - slack://workspace/T066HGS7N?oldest=1776398400.000000&latest=1786852800.000000
-  - 11_Agents/claude-operating-team.json
-  - 04_SOPs/Communication Intelligence Ingestion.md
-  - 12_Brain/state/daily-communications-brain.json
-  - System/approval-queue.md
-  - C:/Users/dillo/Documents/Codex/projects/client-operations/state/watchtower.json
-  - C:/Users/dillo/Documents/Codex/projects/client-operations/intake/index.json
-  - C:/Users/dillo/Documents/Codex/projects/client-operations/docs/CURSOR_SLACK_INTAKE.md
-tags:
-  - slack
-  - operating-system
-  - automation
-  - marketing-chief
-  - audit
+source_refs: ""
+tags: ""
+created: 2026-08-15
+updated: 2026-08-15
 ---
+
 
 # 120-Day Slack Operating System Audit
 

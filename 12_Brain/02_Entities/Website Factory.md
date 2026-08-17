@@ -2,7 +2,12 @@
 tags: [entity, system]
 source: "[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]"
 updated: 2026-07-29
+note_type: entity
+status: active
+created: 2026-07-29
+source_refs: ["[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]"]
 ---
+
 
 # Website Factory
 

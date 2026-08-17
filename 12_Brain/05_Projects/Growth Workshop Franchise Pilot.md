@@ -4,7 +4,11 @@ status: active
 updated: 2026-08-15
 event_date: 2026-08-27
 source: "https://momentum3d.slack.com/archives/D0A6ECLQ0S1/p1786129058687979"
+note_type: project
+created: 2026-08-15
+source_refs: ["https://momentum3d.slack.com/archives/D0A6ECLQ0S1/p1786129058687979"]
 ---
+
 
 # Growth Workshop Franchise Pilot
 

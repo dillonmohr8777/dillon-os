@@ -3,7 +3,10 @@ note_type: index
 status: active
 updated: 2026-08-01
 tags: [brain, concepts, index]
+created: 2026-08-01
+source_refs: []
 ---
+
 
 # Concepts
 
