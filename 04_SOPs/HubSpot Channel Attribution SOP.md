@@ -28,14 +28,16 @@ Split organic GMB landing-page leads from Google PMax leads in Momentum 360 HubS
    • Original Traffic Source is Paid search
    • Campaign or `utm_campaign` contains the live Alexandra PMax name (confirm in Google Ads, do not reuse a dead Christian list name alone)
 6. Confirm the two sizes no longer match. Spot-check five contacts in each.
-7. Workflow that posts `#360leads`: map Source to `hs_analytics_source` (or the custom source property that actually has values).
-8. Optional WordPress: add hidden CF7 fields on form 804 for `gclid`, `utm_source`, `utm_medium`, `utm_campaign`.
+7. Workflow that posts `#360leads`: Zapier zap `332246329` still maps Source to CallRail `source`. HubSpot workflow `1868243574` copies `hs_analytics_source` into empty `source` five minutes after create. Remap the zap to `hs_analytics_source` when Zapier access exists.
+8. Optional WordPress/GTM: add hidden CF7 fields on form 804 for `gclid`, `utm_source`, `utm_medium`, `utm_campaign`. Public container is `GTM-WHKR99SC`.
 
 ## CLI
 
 ```
 node _os/automation/bin/hubspot-attribution-repair.js --dry-run
 node _os/automation/bin/hubspot-attribution-repair.js --apply --confirm-apply
+node _os/automation/bin/hubspot-attribution-repair.js --workflows --dry-run
+node _os/automation/bin/hubspot-attribution-repair.js --workflows --apply --confirm-apply
 ```
 
-`--apply` requires `JASON_HUBSPOT_PRIVATE_APP_TOKEN` or `HUBSPOT_TOKEN`, verifies portal 50612503, and still refuses if the named segments are missing. Live apply 2026-08-17: organic 32→7, PMax 32→23, overlap 19→0.
+`--apply` requires `JASON_HUBSPOT_PRIVATE_APP_TOKEN` or `HUBSPOT_TOKEN`, verifies portal 50612503, and still refuses if the named segments are missing. Live apply 2026-08-17: organic 32→7, PMax 32→23, overlap 19→0. `--workflows --apply --confirm-apply` created Source-copy `1868243574` and organic-notify `1868243571`.

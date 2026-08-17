@@ -19,9 +19,9 @@ tags: [dashboard, moc]
 - [[10_Sessions/Session Index|Sessions]]
 
 ## Today
-- [ ] HubSpot: apply GMB_LP_Organic vs Google P-max Suspensions filter split once token is ACTIVE
-- [ ] Send drafted Jason/Alexandra Slack replies after approval
-- [ ] Map `#360leads` Source to original traffic source
+- [x] HubSpot: apply GMB_LP_Organic vs Google P-max Suspensions filter split once token is ACTIVE
+- [x] Send drafted Jason/Alexandra Slack replies after approval
+- [ ] Map `#360leads` Source in Zapier zap 332246329 (HubSpot CRM copy is live; Slack still reads CallRail Source at create)
 
 ## Active Projects
 - [[12_Brain/projects/HubSpot Attribution Repair]]

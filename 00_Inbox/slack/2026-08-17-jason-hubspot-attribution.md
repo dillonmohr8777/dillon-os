@@ -6,9 +6,9 @@ requested_by: Jason Fallon
 permalink: "https://momentum3d.slack.com/archives/C06CL0R09A4/p1786986784428959"
 type: ad-task
 client: Momentum 360
-status: in-progress
+status: done
 priority: urgent
-source_as_of: 2026-08-17T17:20:00Z
+source_as_of: 2026-08-17T19:20:00Z
 tags: [slack, momentum360, hubspot, attribution, urgent]
 ---
 
@@ -18,19 +18,24 @@ tags: [slack, momentum360, hubspot, attribution, urgent]
 
 **Context:** Group DM https://momentum3d.slack.com/archives/C0B2N20A0SW/p1786986997192739. Screenshot of Active Contact segments: `GMB_LP_Organic` 32 / Used In 0 and `Google P-max Suspensions` 32 / Used In 2 circled; `Google P-max-3-reviews` and `META Reviews` X'd. Aug 10 Jason already asked Alexandra why segment qty had not moved.
 
-**Suggested next step:** Send the drafted Slack replies after Dillon says send. Map `#360leads` Source to Original Traffic Source. Add hidden UTM/`gclid` fields on CF7 804.
+**Suggested next step:** Zapier login to remap `#360leads` Source. WordPress or GTM login to add hidden UTM/`gclid` on CF7 804.
 
-## Draft reply for `#360marketing` (not sent)
+Sent 2026-08-17:
 
-Jason, Alexandra, Sean: the two circled segments were the overlap. I rewrote the filters in portal 50612503.
+- `#360marketing` thread: https://momentum3d.slack.com/archives/C06CL0R09A4/p1786994238641579?thread_ts=1786986784.428959
+- Jason/Sean/Dillon DM: https://momentum3d.slack.com/archives/C0B2N20A0SW/p1786994238851459?thread_ts=1786986997.192739
+
+## Sent reply for `#360marketing`
+
+Jason, Alexandra, Sean: the two circled segments were the overlap. Filters are rewritten in portal 50612503.
 
 `GMB_LP_Organic` went 32 → 7 (excludes Paid Search / Paid Social). `Google P-max Suspensions` went 32 → 23 (requires Paid Search and PMax campaign names, not every ads name containing GMB). Shared contacts went 19 → 0. `GMBs Phone Calls` stayed 7.
 
-Organic still has Used In 0, so that segment is not emailing or Slacking anyone. New `#360leads` posts still print a blank Source line because Slack is mapped to the CallRail `source` field, not Original Traffic Source. Paid and organic still share `fixmygooglelisting.com` form 804 with no hidden UTM/`gclid` fields, so first-touch cookies can still stick. I have not posted this.
+Organic now emails and in-app notifies Jason and Sean when a contact joins that segment (future members only). HubSpot copies Original Traffic Source into empty Source five minutes after a new contact is created, so the CRM field fills for website leads. `#360leads` Slack is still Zapier zap 332246329 reading CallRail Source at create time, so that Slack line can still print blank until the zap maps Original Traffic Source. Duplicate `#360leads` posts are zaps 332246329, 369135469, and 368432826 — I cannot pause Zapier from here. `fixmygooglelisting.com` form 804 still has no hidden UTM/gclid fields; GTM-WHKR99SC is on the page if someone with GTM or WordPress access wants those injected.
 
-## Draft reply for Jason / Sean / Dillon DM (not sent)
+## Sent reply for Jason / Sean / Dillon DM
 
-Jason: the circled pair is split. Organic 7, PMax 23, overlap 0. I did not switch the ads manager. Remaining: Slack Source mapping plus hidden fields on the WordPress form. Say send if you want this in `#360marketing`.
+Jason: the circled pair is split. Organic 7, PMax 23, overlap 0. Organic now has email + in-app routing. Remaining: Zapier Source mapping on zap 332246329, and hidden fields on the WordPress form.
 
 ## Links
 

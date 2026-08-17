@@ -1,14 +1,47 @@
 {
-  "automation_id": "hubspot-attribution-repair",
-  "started_at": "2026-08-17T18:44:25.996Z",
+  "automation_id": "hubspot-attribution-workflows",
+  "started_at": "2026-08-17T19:13:06.042Z",
+  "applied_at": "2026-08-17T19:16:00.000Z",
   "mode": "apply",
   "portal_id": 50612503,
   "organic_name": "GMB_LP_Organic",
   "pmax_name": "Google P-max Suspensions",
-  "status": "blocked",
+  "status": "applied",
   "token_present": true,
-  "token_env_key": "HUBSPOT_TOKEN",
-  "lists": [],
-  "actions": [],
-  "blocker": "Refusing --apply until an operator passes --confirm-apply after reviewing dry-run output."
+  "token_env_key": "JASON_HUBSPOT_PRIVATE_APP_TOKEN",
+  "portal_verified": true,
+  "ui_domain": "app.hubspot.com",
+  "after": {
+    "organic_size": 7,
+    "pmax_size": 23,
+    "membership": {
+      "organic": 7,
+      "pmax": 23,
+      "overlap": 0
+    }
+  },
+  "workflows": [
+    {
+      "id": "1868243574",
+      "name": "Copy Original Traffic Source into empty Source",
+      "isEnabled": true,
+      "enrollmentType": "EVENT_BASED"
+    },
+    {
+      "id": "1868243571",
+      "name": "GMB_LP_Organic - Internal Email + In-app",
+      "isEnabled": true,
+      "enrollmentType": "EVENT_BASED"
+    }
+  ],
+  "actions": [
+    "Created Copy Original Traffic Source into empty Source (1868243574)",
+    "Created GMB_LP_Organic - Internal Email + In-app (1868243571)",
+    "Restricted source-copy enrollment to Source IS_UNKNOWN including unset values"
+  ],
+  "remaining": [
+    "Zapier zap 332246329 still maps #360leads Source at contact create",
+    "Duplicate zaps 369135469 and 368432826",
+    "CF7 804 has no hidden UTM/gclid; GTM-WHKR99SC is on the LP"
+  ]
 }
