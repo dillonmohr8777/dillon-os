@@ -22,7 +22,7 @@ Accept any of:
 4. **Build.**
    `node _templates/site-factory/build-site.js <brief.json> <output-dir>`
    Prospect demos go in `philly-sites/` (or a sibling folder for other cities); client builds go in `01_Clients/<Client>/website/`. Keep `noindex: true` for demos.
-5. **Images.** The build prints which `assets/` files are needed. Source real photos of the business when possible (their site, with attribution noted in the vault). Convert to webp. Write honest alt text.
+5. **Images.** The build prints which `assets/` files are needed. Source real photos of the business when possible (their site, with attribution noted in the vault). Convert to webp. Write honest alt text. If `apply-harvest-images.js` prints `GENERATE_SIMILAR`, draft atmosphere stills with `/krea-2` — harvest photos still win, generated files stay labeled, and a hosted generate is Tier 2.
 6. **QA.** `node _templates/site-factory/qa.js <site-dir>` and fix every FAIL. When Playwright is available, review the three screenshots in `_templates/site-factory/qa-shots/<slug>/` for visual problems the checks can't catch: cramped headlines, bad contrast, dull palette.
 7. **Log it.** Add or update the client/prospect note in `01_Clients/` with a link to the site folder and the source of each verified fact. If the job came from a Slack intake note, set its `status: built`.
 

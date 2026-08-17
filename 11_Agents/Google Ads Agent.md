@@ -31,3 +31,4 @@ The live client map is verified each run, never trusted from an old list (orches
 ## Notes
 
 - Execution against live ad platforms requires the authenticated Chrome on the 64GB machine (CDP) or platform MCPs; cloud sessions do analysis, drafting, and ledger work
+- 9:16 / 16:9 one-take drafts go through `/seedance`. Generating or publishing a clip is Tier 2. Do not claim the live Seedance 2.5 path is 4K.

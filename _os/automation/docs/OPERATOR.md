@@ -115,6 +115,15 @@ The same variable drives the committed wiring in `.cursor/mcp.json` and `.mcp.js
 Both are inert until the variable is set, and the design skills treat the tools as
 optional, so an unset variable degrades to harvest-only design rather than failing.
 
+### Seedance / Krea / OCR (draft only)
+
+`/seedance` writes shot lists for ByteDance Seedance 2.5. Higgsfield may
+already be registered as a Cursor MCP; `needsAuth` means stop. Do not
+connect the account or spend credits from automation. Live
+`seedance_2_5` resolution is 480p/720p — do not brief 4K as the live
+path. `/krea-2` and `/mistral-ocr` are the same shape: draft, then wait
+for a key and a spend yes.
+
 ## Website deployment checks
 
 ```powershell

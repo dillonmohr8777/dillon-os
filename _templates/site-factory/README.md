@@ -42,7 +42,7 @@ node _templates/site-factory/harvest.js <slug> <site-url> [social-url ...]
 node _templates/site-factory/apply-harvest-images.js <slug> <site-dir>
 ```
 
-`apply-harvest-images.js` copies social/site photos into `assets/image-N.webp` and writes `PROVENANCE.json`. If fewer than 6 images come back, it prints `GENERATE_SIMILAR` so an agent can create lookalike atmosphere shots (labeled generated, never claimed as theirs).
+`apply-harvest-images.js` copies social/site photos into `assets/image-N.webp` and writes `PROVENANCE.json`. If fewer than 6 images come back, it prints `GENERATE_SIMILAR` so an agent can draft lookalike atmosphere shots with `/krea-2` (labeled generated, never claimed as theirs; hosted generate is Tier 2).
 
 ## Weekly batch of 25
 

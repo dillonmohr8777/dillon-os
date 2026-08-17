@@ -8,8 +8,8 @@
  * and writes image-1.webp ... into <site-dir>/assets/ (default: cwd/sites/<slug>).
  *
  * Prefer real harvested photos. If harvest is thin (<6 images), the CLI prints
- * a GENERATE_SIMILAR hint so an agent can create lookalike imagery with the
- * image tool — never invent photos and claim they are the business's own.
+ * a GENERATE_SIMILAR hint so an agent can draft lookalike imagery with
+ * `/krea-2` — never invent photos and claim they are the business's own.
  */
 const fs = require('fs');
 const path = require('path');
@@ -51,7 +51,7 @@ function applyHarvestImages(slug, siteDir, opts = {}) {
   let hint = null;
   if (copied.length < 6) {
     hint =
-      'GENERATE_SIMILAR: harvest returned fewer than 6 images. Use the image generation tool to create lookalike atmosphere shots matching harvest screenshots and palette — label them as generated, never as official photography.';
+      'GENERATE_SIMILAR: harvest returned fewer than 6 images. Draft lookalike atmosphere shots with /krea-2 matching harvest screenshots and palette — label them as generated, never as official photography. Hosted generate is Tier 2.';
   }
 
   // Write provenance note next to assets

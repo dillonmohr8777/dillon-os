@@ -32,3 +32,4 @@ The SEO and content lane. Keeps client sites and Mohr Media properties ranking: 
 ## Notes
 
 - Prospect demos stay `noindex`; SEO work applies only to live properties
+- GBP / social video drafts use `/seedance`; do not publish from this lane

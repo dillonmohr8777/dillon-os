@@ -38,3 +38,5 @@ Deploying is Tier 2. The agent prepares the folder and the exact command; Dillon
 ## Notes
 
 - A finished demo is a sales asset: link it in the prospect's note in `01_Clients/` so `/client-pulse` sees the motion
+- Thin harvests: draft atmosphere stills with `/krea-2`; do not download weights or spend without approval
+- Generative video is `/seedance`, not `/motion-design`

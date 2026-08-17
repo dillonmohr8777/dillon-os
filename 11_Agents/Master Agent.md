@@ -16,8 +16,8 @@ The commander. One brain that routes work to lane agents, keeps run state, assem
 
 | Lane | Agent | Primary skills |
 |---|---|---|
-| Websites | [[Web Agent]] | `/site-factory`, QA pipeline |
-| Paid ads | [[Google Ads Agent]] | campaign analysis, ledger updates |
+| Websites | [[Web Agent]] | `/site-factory`, `/krea-2` when harvest is thin, QA pipeline |
+| Paid ads | [[Google Ads Agent]] | campaign analysis, ledger updates, `/seedance` creative drafts |
 | Reporting | [[Reporting Agent]] | `/client-report`, `/metrics-pull` |
 | SEO/content | [[SEO Agent]] | `/content-scan`, blog pipeline |
 | Comms triage | (built into intake) | `/slack-intake`, `/inbox-brief` |
