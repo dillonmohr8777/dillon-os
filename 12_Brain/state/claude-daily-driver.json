@@ -1,0 +1,13 @@
+{
+    "cycle_id":  "DRV-20260817-173817277",
+    "last_cycle_utc":  "2026-08-17T21:38:17.2823842Z",
+    "signature":  "6f16a4fbabcad089",
+    "outcome":  "noop",
+    "consecutive_failures":  0,
+    "breaker_opened_utc":  null,
+    "catch_up":  false,
+    "routines_executed_this_cycle":  0,
+    "eligible_at_cycle":  0,
+    "canonical_write_attempted":  false,
+    "external_action_attempted":  false
+}

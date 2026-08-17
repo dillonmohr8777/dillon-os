@@ -1,0 +1,15 @@
+version = 1
+id = "daily-communications-brain"
+kind = "cron"
+name = "Daily Communications Brain"
+prompt = "Run the implemented Dillon OS daily communications brain workflow. Work only in C:\\Users\\dillo\\repos\\dillon-os. Read AGENTS.md, _os\\automation\\docs\\OPERATOR.md, 04_SOPs\\Communication Intelligence Ingestion.md, and _os\\automation\\workflows\\daily-communications-brain.json before acting. Use only the authorized native Gmail read connection for dillonmohr8777@gmail.com and native Slack read connection for workspace T066HGS7N. Load C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations\\registry\\clients.json and 12_Brain\\state\\daily-communications-brain.json. Search from the last successful checkpoints with the workflow overlap, paginate the bounded window, exclude spam, promotions, newsletters, bots, OTP, MFA, recovery, billing-card, credential, and secret material, and hydrate only source threads needed to verify decisions, commitments, deliverables, deadlines, blockers, meetings, metrics, client changes, follow-ups, or durable process knowledge. Keep summaries metadata-first and redacted. Route every item to one exact active client, Align HCM, a venture, operations, or unresolved review. Never blend clients. Write a run envelope under _os\\automation\\incoming\\communications, validate it with communication-ingest.js --validate-only, then ingest it. Failed connectors must not advance their checkpoints. Do not send, post, reply, label, archive, publish, deploy, spend, change an account, mutate the client-operations canonical queue, or expose raw communications. After a successful ingest, refresh second-brain maps and coverage, run node --test _os\\automation\\tests\\*.test.js and System\\scripts\\Test-SecondBrain.ps1, and verify Obsidian Sync before claiming sync. Report only material changes, failures, unresolved routing, and the next safe action."
+status = "ACTIVE"
+rrule = "RRULE:FREQ=DAILY;BYHOUR=7;BYMINUTE=0"
+model = "gpt-5.3-codex-spark"
+reasoning_effort = "medium"
+notification_policy = "failed_runs_only"
+execution_environment = "local"
+target = { type = "project", project_id = "local-03046e22be7ca1d6e9c6745563ea0d3e" }
+cwds = ["C:\\Users\\dillo"]
+created_at = 1785766862598
+updated_at = 1785766862598

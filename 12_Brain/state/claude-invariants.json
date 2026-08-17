@@ -1,0 +1,386 @@
+{
+    "harness":  "Test-ClaudeInvariants",
+    "run_id":  "CI-20260813-000454",
+    "started_at":  "2026-08-13T04:04:54.146Z",
+    "vault_root":  "C:\\Users\\dillo\\repos\\dillon-os",
+    "canonical_root":  "C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations",
+    "mode":  "read-only",
+    "privacy":  "redacted",
+    "canonical_writer":  "Codex acting as Marketing Chief",
+    "selected":  [
+                     "B1",
+                     "B4",
+                     "B5",
+                     "B7",
+                     "B8",
+                     "B9"
+                 ],
+    "passed":  6,
+    "total":  6,
+    "overall":  "pass",
+    "canonical_write_attempted":  false,
+    "external_action_attempted":  false,
+    "results":  [
+                    {
+                        "id":  "B1",
+                        "name":  "Credential reachability across published refs",
+                        "status":  "pass",
+                        "budget_tokens":  8000,
+                        "timeout_seconds":  900,
+                        "elapsed_seconds":  0.29,
+                        "source_locators":  [
+                                                "dillon-os/.gitignore",
+                                                "dillon-os git refs/remotes/*",
+                                                ".obsidian/plugins/obsidian-local-rest-api/data.json (reachability only)"
+                                            ],
+                        "checks":  [
+                                       {
+                                           "check":  "git_available",
+                                           "expected":  "true",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "credential_history_locatable",
+                                           "expected":  "\u003e=1 commit",
+                                           "actual":  1,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "default_branch_clean",
+                                           "expected":  "origin/main not reachable",
+                                           "actual":  0,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "live_path_gitignored",
+                                           "expected":  "true",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "evidence_redacted",
+                                           "expected":  "no secret-shaped values",
+                                           "actual":  true,
+                                           "ok":  true
+                                       }
+                                   ],
+                        "evidence":  {
+                                         "remediation_required":  true,
+                                         "credential_commit_count":  1,
+                                         "exposed_published_refs":  3,
+                                         "finding":  "exposed",
+                                         "default_branch_clean":  true,
+                                         "secret_values_read":  false,
+                                         "exposed_ref_names":  [
+                                                                   "refs/remotes/origin/claude/broker-implementation-video-p7akwy",
+                                                                   "refs/remotes/origin/cursor/competitive-task-consolidation-6a9b",
+                                                                   "refs/remotes/origin/cursor/competitive-task-consolidation-f279"
+                                                               ],
+                                         "live_path_gitignored":  true,
+                                         "remediation_gate":  "approval-gated: key rotation and branch deletion are Dillon decisions"
+                                     }
+                    },
+                    {
+                        "id":  "B4",
+                        "name":  "Approval-surface duplication detector",
+                        "status":  "pass",
+                        "budget_tokens":  8000,
+                        "timeout_seconds":  900,
+                        "elapsed_seconds":  0.13,
+                        "source_locators":  [
+                                                "dillon-os/System/approval-queue.md"
+                                            ],
+                        "checks":  [
+                                       {
+                                           "check":  "approval_surface_present",
+                                           "expected":  "true",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "items_parsed",
+                                           "expected":  "\u003e0",
+                                           "actual":  178,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "detector_deterministic",
+                                           "expected":  "identical on recompute",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "evidence_redacted",
+                                           "expected":  "no secret-shaped values",
+                                           "actual":  true,
+                                           "ok":  true
+                                       }
+                                   ],
+                        "evidence":  {
+                                         "remediation_required":  true,
+                                         "finding":  "duplication_detected",
+                                         "top_group_count":  52,
+                                         "top_group_is_system":  true,
+                                         "total_items":  178,
+                                         "remediation_gate":  "approval-gated: sweeping or retiring the surface is a Dillon decision",
+                                         "threshold":  0.25,
+                                         "top_group_hash":  "0769ec735a72",
+                                         "duplicate_ratio":  0.6629,
+                                         "distinct_items":  60
+                                     }
+                    },
+                    {
+                        "id":  "B5",
+                        "name":  "Client-separation canary",
+                        "status":  "pass",
+                        "budget_tokens":  6000,
+                        "timeout_seconds":  600,
+                        "elapsed_seconds":  0.15,
+                        "source_locators":  [
+                                                "client-operations/registry/clients.json",
+                                                "client-operations/clients/*",
+                                                "127.0.0.1:8420 listener state"
+                                            ],
+                        "checks":  [
+                                       {
+                                           "check":  "canonical_registry_readable",
+                                           "expected":  "true",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "registry_parsed",
+                                           "expected":  "\u003e0 clients",
+                                           "actual":  24,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "no_shared_identity_handles",
+                                           "expected":  "0 colliding pairs",
+                                           "actual":  0,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "named_pair_resolves_uniquely",
+                                           "expected":  "1 record each",
+                                           "actual":  "1/1",
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "named_pair_fully_separated",
+                                           "expected":  "distinct id, folder, aliases",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "named_pair_folders_exist",
+                                           "expected":  "true",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "memory_gateway_loopback_only",
+                                           "expected":  "0 non-loopback listeners",
+                                           "actual":  0,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "evidence_redacted",
+                                           "expected":  "no secret-shaped values",
+                                           "actual":  true,
+                                           "ok":  true
+                                       }
+                                   ],
+                        "evidence":  {
+                                         "colliding_pair_ids":  [
+
+                                                                ],
+                                         "colliding_pairs":  0,
+                                         "registry_clients":  24,
+                                         "finding":  "separated",
+                                         "named_pair_separated":  true,
+                                         "memory_gateway_loopback_only":  true,
+                                         "canonical_write_attempted":  false
+                                     }
+                    },
+                    {
+                        "id":  "B7",
+                        "name":  "Canonical-write refusal proof",
+                        "status":  "pass",
+                        "budget_tokens":  4000,
+                        "timeout_seconds":  600,
+                        "elapsed_seconds":  0.1,
+                        "source_locators":  [
+                                                "client-operations/queue/work-items.json",
+                                                "client-operations/CONTROL.md",
+                                                "client-operations/state/corrections.jsonl",
+                                                "client-operations/registry/*.json"
+                                            ],
+                        "checks":  [
+                                       {
+                                           "check":  "protected_targets_refused",
+                                           "expected":  "5/5",
+                                           "actual":  "5/5",
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "negative_control_allowed",
+                                           "expected":  "benign path not refused",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "canonical_state_unmodified",
+                                           "expected":  "5/5 hashes equal",
+                                           "actual":  "5/5",
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "canonical_write_attempted",
+                                           "expected":  "false",
+                                           "actual":  false,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "external_action_attempted",
+                                           "expected":  "false",
+                                           "actual":  false,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "evidence_redacted",
+                                           "expected":  "no secret-shaped values",
+                                           "actual":  true,
+                                           "ok":  true
+                                       }
+                                   ],
+                        "evidence":  {
+                                         "sole_canonical_writer":  "Codex acting as Marketing Chief",
+                                         "external_action_attempted":  false,
+                                         "protected_targets":  5,
+                                         "canonical_write_attempted":  false,
+                                         "targets_unmodified":  5,
+                                         "finding":  "refusal_proven",
+                                         "targets_refused":  5,
+                                         "negative_control_allowed":  true
+                                     }
+                    },
+                    {
+                        "id":  "B8",
+                        "name":  "Stale canonical-claim miner",
+                        "status":  "pass",
+                        "budget_tokens":  8000,
+                        "timeout_seconds":  900,
+                        "elapsed_seconds":  0.07,
+                        "source_locators":  [
+                                                "dillon-os/System/*.md frontmatter timestamps and present-tense claim text"
+                                            ],
+                        "checks":  [
+                                       {
+                                           "check":  "claimants_found",
+                                           "expected":  "\u003e0",
+                                           "actual":  7,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "detector_deterministic",
+                                           "expected":  "recompute identical",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "evidence_redacted",
+                                           "expected":  "no secret-shaped values",
+                                           "actual":  true,
+                                           "ok":  true
+                                       }
+                                   ],
+                        "evidence":  {
+                                         "remediation_required":  true,
+                                         "worst_age_days":  32,
+                                         "unstamped":  2,
+                                         "threshold_days":  14,
+                                         "remediation_gate":  "approval-gated: refreshing or retiring an operating status note is a Dillon decision",
+                                         "finding":  "stale_canonical_claims",
+                                         "present_tense_claimants":  7,
+                                         "stale_over_14_days":  5,
+                                         "stale_files":  [
+                                                             "cursor-takeover-report.md=32d",
+                                                             "cursor-optimization-backlog.md=32d",
+                                                             "automation-status.md=32d",
+                                                             "cursor-work-log.md=31.4d",
+                                                             "operating-status.md=25d"
+                                                         ]
+                                     }
+                    },
+                    {
+                        "id":  "B9",
+                        "name":  "Cross-source unit-conflict detector",
+                        "status":  "pass",
+                        "budget_tokens":  8000,
+                        "timeout_seconds":  900,
+                        "elapsed_seconds":  0.09,
+                        "source_locators":  [
+                                                "11_Agents/claude-operating-team.json",
+                                                "11_Agents/claude-stage-discrepancy-ledger.json",
+                                                "11_Agents/Rockbot Operating System/training-simulator/app.js",
+                                                "agent-vault/notes/inbox/2026-08-11-grok-bot-routine-recording-manifest.json"
+                                            ],
+                        "checks":  [
+                                       {
+                                           "check":  "all_four_sources_present",
+                                           "expected":  "4",
+                                           "actual":  4,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "stage_unit_agrees_across_sources",
+                                           "expected":  "9 everywhere",
+                                           "actual":  "sim=9 reg=9",
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "stage_product_reconciles",
+                                           "expected":  "54x9=486",
+                                           "actual":  486,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "step_unit_kept_separate",
+                                           "expected":  "272 \u003c\u003e 486",
+                                           "actual":  272,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "unit_collision_documented",
+                                           "expected":  "warning present",
+                                           "actual":  true,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "discrepancy_ledger_resolved_with_evidence",
+                                           "expected":  "\u003e=5 items",
+                                           "actual":  7,
+                                           "ok":  true
+                                       },
+                                       {
+                                           "check":  "evidence_redacted",
+                                           "expected":  "no secret-shaped values",
+                                           "actual":  true,
+                                           "ok":  true
+                                       }
+                                   ],
+                        "evidence":  {
+                                         "routines":  54,
+                                         "simulator_stage_count":  9,
+                                         "units_conflated":  false,
+                                         "manifest_steps":  272,
+                                         "total_stages":  486,
+                                         "finding":  "units_consistent",
+                                         "residual_unsupported_claims":  1,
+                                         "operating_stages_per_routine":  9
+                                     }
+                    }
+                ]
+}

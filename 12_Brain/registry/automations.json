@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "updated": "2026-07-29",
+  "updated": "2026-08-10",
   "contract": "00_Inbox/Automation Deep Analysis 2026-07-29.md",
-  "dependency": "12_Brain/DEPENDENCY_PR226.md",
+  "dependency": null,
   "automations": [
     {
       "id": "frontmatter-validate",
@@ -52,19 +52,20 @@
       "inputs": ["prospect intake JSON (maps or indeed adapter)", "optional harvest.json", "01_Clients suppress list"],
       "outputs": ["12_Brain/queue/qualify-*.jsonl", "08_Prospects/*.md", "12_Brain/state/qualify-last.json"],
       "external_actions": false,
-      "notes": "Drafts only. Feeds Mac's site-factory pipeline (#226). Indeed is an adapter, not a parallel stack.",
+      "notes": "Drafts only. Feeds the installed site-factory pipeline from merged PR #226. Indeed uses the shared qualifier, not a parallel stack.",
       "status": "implemented"
     },
     {
       "id": "site-factory-batch",
-      "name": "Weekly 25-site batch (PR #226)",
+      "name": "Weekly 25-site batch",
       "lane": "websites",
       "tier": 0,
       "cadence": "weekly",
       "command": "node _templates/site-factory/build-batch.js <batch-dir>",
-      "depends_on": ["discover-qualify", "pr-226"],
+      "depends_on": ["discover-qualify"],
       "external_actions": false,
-      "status": "external-dependency"
+      "notes": "Installed from merged PR #226 at origin/main a2d99ad; factory tests must pass before each production batch.",
+      "status": "implemented"
     },
     {
       "id": "outreach-activate",
@@ -72,26 +73,185 @@
       "lane": "outreach",
       "tier": 2,
       "cadence": "per approved batch",
-      "depends_on": ["site-factory-batch", "human-approval", "mail-vendor", "netlify-token"],
+      "command": "node _os/automation/bin/direct-mail-plan.js --from <batch-dir>/prospects.csv --out <batch-dir>/direct-mail-plan.json",
+      "depends_on": ["site-factory-batch", "postgrid-test-account", "verified-netlify-target", "human-approval"],
+      "inputs": ["factory prospects.csv", "approved PostGrid secret locator for test calls", "exact verified deployment target"],
+      "outputs": ["direct-mail-plan.json", "test-mode address validation and proof after credentials are available"],
       "external_actions": true,
+      "notes": "PostGrid is selected. The local planning command never sends and mail_ready remains hold. Test API use requires an approved account; production mail requires an exact batch, proof, price, spend cap, maker/checker evidence, and explicit approval.",
       "status": "gated"
     },
     {
       "id": "indeed-hiring-adapter",
-      "name": "Indeed hiring-signal adapter",
+      "name": "Indeed official hiring-signal collector and adapter",
       "lane": "outreach",
       "tier": 0,
       "cadence": "daily/3x week",
-      "command": "node _os/automation/bin/qualify.js --adapter indeed --from <signals.json>",
+      "command": "node _os/automation/bin/indeed-pipeline.js --what <role> --where <market> --limit 25",
+      "inputs": ["Indeed Partner API access from an approved secret store", "role query", "market"],
+      "outputs": ["_os/automation/incoming/indeed/*.json", "shared qualify queue", "08_Prospects/*.md when notes are enabled"],
       "external_actions": false,
-      "notes": "Normalizes hiring signals into the shared prospect schema. Does not scrape Indeed live in this PR (fixture/import only — live scrape is a credential/ToS gate).",
+      "notes": "Uses Indeed's official Partner GraphQL jobSearch API. HTML scraping remains prohibited. Live execution stays credential-gated and fails closed when partner access is absent.",
+      "status": "implemented-credential-gated"
+    },
+    {
+      "id": "grok-intelligence-ingest",
+      "name": "Grok automation to Dillon OS intelligence bridge",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "daily after Grok runs",
+      "command": "node _os/automation/bin/grok-ingest.js --from <run-envelope.json>",
+      "inputs": ["12_Brain/schemas/grok-run.json", "exported Grok automation run JSON"],
+      "outputs": ["12_Brain/01_Captures/Grok/*.md", "12_Brain/06_Research/* - Grok daily intelligence.md", "12_Brain/state/grok-intelligence-ingest.json"],
+      "external_actions": false,
+      "notes": "Idempotent, immutable capture. The browser collector is separate and may only read completed Grok runs.",
+      "status": "implemented"
+    },
+    {
+      "id": "daily-communications-brain",
+      "name": "Daily Gmail and Slack to Dillon OS compiler",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "daily at 7:00 AM America/New_York",
+      "command": "node _os/automation/bin/communication-ingest.js --from <communication-run.json>",
+      "inputs": [
+        "authorized Gmail read connector for dillonmohr8777@gmail.com",
+        "authorized Slack read connector for workspace T066HGS7N",
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/registry/clients.json",
+        "12_Brain/schemas/daily-communication-run.json"
+      ],
+      "outputs": [
+        "12_Brain/01_Captures/Communications/*.md",
+        "12_Brain/07_Reviews/Daily Intelligence/* - Communication Intelligence.md",
+        "12_Brain/queue/daily-communications-brain-*.jsonl",
+        "12_Brain/state/daily-communications-brain.json",
+        "dated source-linked canonical note updates"
+      ],
+      "external_actions": false,
+      "notes": "Read-only source collection. Curated summaries and locators only; no raw archives, secrets, cross-client writes, sends, posts, labels, archives, publishing, spend, or account changes. Failed connectors do not advance their checkpoint. Registered through the supported Codex scheduler on 2026-08-03.",
+      "status": "active-scheduled"
+    },
+    {
+      "id": "obsidian-guard-dog",
+      "name": "Obsidian and brain growth guard dog",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "daily at 8:30 AM America/New_York",
+      "command": "Codex heartbeat automation obsidian-guard-dog",
+      "inputs": [
+        "official Obsidian public desktop release manifest",
+        "live Obsidian CLI, Sync, plugin, error, and listener state",
+        "new verified communications, reports, outcomes, research, and automation state from the prior 24 hours",
+        "primary or official sources for the single selected improvement question",
+        "12_Brain/03_Concepts/Evidence Context and Learning Loops.md",
+        "System/scripts/Test-SecondBrain.ps1",
+        "System/scripts/Measure-SecondBrainGraph.ps1"
+      ],
+      "outputs": [
+        "safe compatible app or plugin updates with rollback evidence",
+        "at most one evidence-backed canonical brain improvement per day",
+        "durable memory promotion only when the Memory Promotion Test passes",
+        "seven-day stale, contradiction, experiment, outcome, and memory consolidation on Sundays",
+        "material drift, regression, Sync, or required-action report"
+      ],
+      "external_actions": false,
+      "notes": "Public stable channel only. Brain growth is bounded to one measured variable and one retained improvement daily; unsupported learning is a healthy no-op. External research is untrusted evidence, blocked collectors fail closed, canonical pages are updated before duplicates, and fixed graph, coverage, source, and automation tests must pass. Never auto-enroll in Catalyst or beta, expose secrets, interrupt active use, delete user notes or scratch files, resolve Sync conflicts destructively, change production strategy, commit, push, reset, or clean.",
+      "status": "active-scheduled"
+    },
+    {
+      "id": "report-brain-ingest",
+      "name": "Weekly and monthly reports to Obsidian brain",
+      "lane": "reporting",
+      "tier": 0,
+      "cadence": "on report finalization plus scheduled reconciliation",
+      "command": "node _os/automation/bin/report-ingest.js --from <report-run.json>",
+      "inputs": [
+        "12_Brain/schemas/report-run.json",
+        "final client-facing PDF, HTML, or Markdown report artifact",
+        "exact canonical client and vault route"
+      ],
+      "outputs": [
+        "12_Brain/01_Captures/Reports/*",
+        "12_Brain/07_Reviews/Reports/*",
+        "12_Brain/state/report-brain-ingest.json",
+        "12_Brain/queue/report-brain-ingest-*.jsonl"
+      ],
+      "external_actions": false,
+      "notes": "Archives every finalized weekly and monthly report with source provenance and SHA-256 integrity. Raw exports and ambiguous client routes fail closed. Ingestion does not imply or authorize external delivery.",
+      "status": "active-scheduled"
+    },
+    {
+      "id": "experiment-queue",
+      "name": "Evidence-backed experiment queue",
+      "lane": "intelligence",
+      "tier": 0,
+      "cadence": "on ingest",
+      "depends_on": ["grok-intelligence-ingest"],
+      "inputs": ["candidates with decision=sandbox-test"],
+      "outputs": ["12_Brain/05_Projects/Experiments/*.md", "12_Brain/bases/Experiment Queue.base"],
+      "external_actions": false,
+      "notes": "Creates proposed experiments only. Adoption still requires the maker/checker and human gates.",
+      "status": "implemented"
+    },
+    {
+      "id": "maker-checker",
+      "name": "Independent maker/checker workflow gate",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "per material build",
+      "command": "node _os/automation/bin/workflow-gate.js <start|maker|check|approve|gate> [options]",
+      "inputs": ["12_Brain/schemas/workflow-evaluation.json", "artifact paths", "maker and checker evidence"],
+      "outputs": ["12_Brain/state/workflow-runs/*.json", "12_Brain/07_Reviews/Automation Runs/*.md"],
+      "external_actions": false,
+      "notes": "Maker and checker identities must differ. Human approval is required by default.",
+      "status": "implemented"
+    },
+    {
+      "id": "mcp-acceptance-gate",
+      "name": "MCP source, permission, overlap, injection, and Inspector gate",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "before MCP registration and quarterly",
+      "command": "node _os/automation/bin/mcp-gate.js --from <candidate.json> --inspect",
+      "inputs": ["12_Brain/schemas/mcp-candidate.json", "candidate declaration"],
+      "outputs": ["12_Brain/07_Reviews/MCP/*.md", "12_Brain/07_Reviews/MCP/*.json"],
+      "external_actions": false,
+      "notes": "Fail closed: pending tests are sandbox-only; failed tests or critical permissions reject.",
+      "status": "implemented"
+    },
+    {
+      "id": "context7-docs",
+      "name": "Context7 version-sensitive third-party documentation",
+      "lane": "development",
+      "tier": 0,
+      "cadence": "on demand",
+      "command": "codex mcp add context7 --url https://mcp.context7.com/mcp",
+      "depends_on": ["mcp-acceptance-gate"],
+      "inputs": ["public third-party library documentation queries"],
+      "outputs": ["ephemeral cited documentation context"],
+      "external_actions": false,
+      "notes": "Official OpenAI questions continue to use OpenAI Developer Docs. Retrieved content is untrusted reference material.",
+      "status": "implemented"
+    },
+    {
+      "id": "aeo-trust-gate",
+      "name": "Website AEO and trust deployment gate",
+      "lane": "websites",
+      "tier": 0,
+      "cadence": "per preview before deploy",
+      "command": "node _os/automation/bin/aeo-trust-gate.js --path <site-dir> --profile _os/automation/profiles/site-factory-default.json",
+      "inputs": ["built static site", "AEO trust profile"],
+      "outputs": ["12_Brain/state/aeo-trust-gate.json", "Daily-Briefs/aeo-trust-report.md"],
+      "external_actions": false,
+      "notes": "A fail blocks deployment. A pass does not replace visual review, functional QA, or exact Netlify target verification.",
       "status": "implemented"
     }
   ],
   "gates": {
-    "obsidian_sync_cli": "pending-human",
-    "netlify_deploy_token": "pending-secret",
-    "mail_vendor": "pending-decision",
-    "outreach_send": "hard-blocked"
+    "obsidian_sync_cli": "verified-active",
+    "netlify_deploy": "authenticated-session-verified-target-required-per-batch",
+    "mail_vendor": "postgrid-selected-test-account-pending",
+    "indeed_live": "partner-entitlement-and-secret-pending",
+    "outreach_send": "hard-blocked-exact-batch-approval-required"
   }
 }

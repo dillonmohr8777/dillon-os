@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wedding Dress Timeline | Kimberly James Bridal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #2B3A52;
+      --gold: #C9A96E;
+      --cream: #FAF7F2;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 1.125rem;
+    }
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 1.5rem;
+      background:
+        linear-gradient(180deg, rgba(43,58,82,.04) 0%, transparent 40%),
+        var(--cream);
+    }
+    .eyebrow {
+      font-family: Montserrat, sans-serif;
+      font-size: .7rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.15;
+      max-width: 14ch;
+      margin-bottom: 1rem;
+    }
+    .tagline {
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--muted);
+      max-width: 36ch;
+      margin-bottom: 2.5rem;
+    }
+    .btn {
+      font-family: Montserrat, sans-serif;
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--navy);
+      color: var(--cream);
+      text-decoration: none;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .timeline {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+    .timeline h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: .75rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(43,58,82,.12);
+    }
+    .step:last-child { border: none; }
+    .month {
+      font-family: Montserrat, sans-serif;
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-top: .25rem;
+    }
+    .step h3 {
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: .35rem;
+      font-weight: 600;
+    }
+    .step p { color: var(--muted); line-height: 1.6; }
+    .concierge {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 0 1.5rem 4rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .concierge h3 {
+      font-size: 1.75rem;
+      font-weight: 400;
+      margin-bottom: .75rem;
+    }
+    .concierge p { opacity: .85; margin-bottom: 1.5rem; }
+    .concierge .btn { background: var(--gold); color: var(--navy); }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <p class="eyebrow">Chestnut Hill · Philadelphia</p>
+    <h1>Your Wedding Dress Timeline</h1>
+    <p class="tagline">Month by month, from first appointment to final fitting. Boutique guidance without the rush.</p>
+    <a class="btn" href="https://kimberlyjamesbridal.com">Book Your Appointment</a>
+  </section>
+  <section class="timeline">
+    <h2>The Journey</h2>
+    <div class="step">
+      <div class="month">12–10 mo</div>
+      <div>
+        <h3>Start Shopping</h3>
+        <p>Book your first appointment. Bring inspiration, trust the process. Gowns typically range $1,000–$3,500.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="month">8–6 mo</div>
+      <div>
+        <h3>Order &amp; Customize</h3>
+        <p>Select your gown and begin alterations planning. Our stylists match venue vibe to dress silhouette.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="month">3–2 mo</div>
+      <div>
+        <h3>Alterations Begin</h3>
+        <p>Fittings scheduled around your wedding date. Rush orders available with concierge support.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="month">2–1 wk</div>
+      <div>
+        <h3>Final Fitting</h3>
+        <p>Last adjustments, steaming, and pickup. Walk in confident on your day.</p>
+      </div>
+    </div>
+  </section>
+  <section class="concierge">
+    <h3>Concierge Service</h3>
+    <p>Personal styling from first visit to final fitting. Kimberly James Bridal, 8333 Germantown Ave.</p>
+    <a class="btn" href="https://kimberlyjamesbridal.com">Schedule a Visit</a>
+  </section>
+  <footer>Kimberly James Bridal Boutique · Paid media by Momentum 360</footer>
+</body>
+</html>

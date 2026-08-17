@@ -1,0 +1,83 @@
+{
+    "schema_version":  "1.0",
+    "synced_at":  "2026-08-12T20:23:28.3270400Z",
+    "pack_root":  "C:\\Users\\dillo\\repos\\dillon-os\\11_Agents\\Rockbot Operating System",
+    "live_vault":  "C:\\Users\\dillo\\repos\\dillon-os",
+    "original_training_source":  "C:\\Users\\dillo\\Documents\\Codex\\projects\\agent-vault\\notes\\inbox",
+    "codex_automation_source":  "C:\\Users\\dillo\\.codex\\automations",
+    "codex_rollout_source":  "C:\\Users\\dillo\\.codex\\memories\\rollout_summaries",
+    "recorded_training_files":  [
+                                    "2026-08-11-grok-bot-d01-verification-receipt.md",
+                                    "2026-08-11-grok-bot-dillon-operating-curriculum.md",
+                                    "2026-08-11-grok-bot-recording-ledger.md",
+                                    "2026-08-11-grok-bot-routine-recording-manifest.json",
+                                    "2026-08-11-grok-delivery-design-reporting-playbook.md",
+                                    "2026-08-11-grok-native-agent-bench-v2.md",
+                                    "2026-08-11-grok-radar-next20-work-order.md",
+                                    "2026-08-11-grok-repository-and-skill-access-map.md",
+                                    "2026-08-11-grok-research-scout-operating-brief.md",
+                                    "2026-08-11-grok-specialist-bench.md",
+                                    "2026-08-11-grok-specialist-bench.workflow.json",
+                                    "2026-08-12-d09-priority-packet.json",
+                                    "2026-08-12-grok-authorized-roots-canary.md",
+                                    "2026-08-12-grok-operating-team-verification-receipt.md",
+                                    "2026-08-12-grok-radar-align-mirror-20x6-contract.json",
+                                    "2026-08-12-grok-radar-align-mirror-20x6-work-order.md"
+                                ],
+    "automation_directories":  [
+                                   "align-hcm-dashboard-live-refresh",
+                                   "bok-facebook-weekly-pdf-scheduler",
+                                   "daily-align-hcm-semrush-blog-intelligence",
+                                   "daily-communications-brain",
+                                   "daily-grok-dillon-os-intelligence",
+                                   "daily-morning-orchestrator-dry-board",
+                                   "daily-signal-harbor-crypto-intelligence",
+                                   "marketing-chief-twice-daily-brief",
+                                   "momentum-hubspot-day-pulse",
+                                   "momentum-hubspot-night-pulse",
+                                   "momentum-workshop-calendar-intake",
+                                   "obsidian-guard-dog",
+                                   "report-brain-reconciliation",
+                                   "six-hour-important-email-drafter",
+                                   "slack-reply-watchdog",
+                                   "weekly-client-marketing-reports"
+                               ],
+    "dillon_os_workflow_files":  [
+                                     "daily-communications-brain.json",
+                                     "report-brain-ingest.json"
+                                 ],
+    "agent_vault_workflow_files":  [
+                                       "alignhcm-linkedin.pipeline.json"
+                                   ],
+    "rollout_evidence_files":  [
+                                   "2026-07-30T07-30-52-g8Bo-daily_grok_bridge_no_new_runs.md",
+                                   "2026-08-01T22-42-36-cPKV-shared_agent_vault_codex_primary_orchestrator.md",
+                                   "2026-08-04T16-54-38-iZIV-audit_grok_automations_obsidian_bridge.md",
+                                   "2026-08-06T18-05-13-UgUu-cowork_grok_align_handoff_web_design_loop.md",
+                                   "2026-08-06T20-16-20-N1Xu-bridge_phase2_grok_audit_backup_and_trusted_current_deploy.md",
+                                   "2026-08-06T20-18-19-hXUR-grok_bridge_phase2_handoff.md",
+                                   "2026-08-10T07-31-18-TUWF-daily_grok_research_http_403_blocked.md",
+                                   "2026-08-11T20-57-22-N9CM-grok_bot_operating_team_setup_blocked_on_consent_and_ios.md",
+                                   "2026-08-12T01-36-42-4B13-grok_agent_business_operating_system_inventory.md"
+                               ],
+    "screenshot_count":  66,
+    "simulator_files":  [
+                            "app.js",
+                            "DESIGN.md",
+                            "desktop-final.png",
+                            "desktop.png",
+                            "FINISH-REVIEW.md",
+                            "index.html",
+                            "mobile-confirm.png",
+                            "mobile-final.png",
+                            "mobile.png",
+                            "PRODUCT.md",
+                            "smoke-test.ps1",
+                            "styles.css"
+                        ],
+    "research_intake_files":  [
+                                  "2026-08-12-tiktok-claude-j-space.md",
+                                  "2026-08-12-tiktok-operational-synthesis.md",
+                                  "2026-08-12-tiktok-tencentdb-agent-memory.md"
+                              ]
+}

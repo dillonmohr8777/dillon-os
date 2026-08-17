@@ -1,0 +1,66 @@
+{
+  "run_id": "COMMS-2026-08-01-FIXTURE",
+  "run_at": "2026-08-01T11:00:00-04:00",
+  "status": "success",
+  "window": {
+    "started_at": "2026-07-31T00:00:00-04:00",
+    "ended_at": "2026-08-01T11:00:00-04:00",
+    "overlap_hours": 36
+  },
+  "connectors": {
+    "gmail": "ok",
+    "slack": "ok"
+  },
+  "items": [
+    {
+      "dedupe_key": "gmail:message:fixture-1",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/fixture-1",
+      "occurred_at": "2026-08-01T09:00:00-04:00",
+      "participants": ["Fixture Client"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Fixture Client",
+        "path": "01_Clients/Fixture Client/overview.md"
+      },
+      "summary": "A reviewable deliverable is ready for internal QA.",
+      "evidence": "The source thread identifies the requested artifact and review step.",
+      "uncertainty": "External delivery is not approved.",
+      "next_safe_action": "Run internal QA and prepare an approval preview.",
+      "write_targets": [
+        "01_Clients/Fixture Client/overview.md"
+      ]
+    },
+    {
+      "dedupe_key": "slack:message:fixture-2",
+      "source_type": "slack",
+      "source_ref": "https://example.slack.com/archives/C123/p1234567890000000",
+      "occurred_at": "2026-08-01T10:00:00-04:00",
+      "participants": ["Operations"],
+      "kind": "process-knowledge",
+      "priority": "low",
+      "route": {
+        "type": "operations",
+        "name": "Reporting workflow",
+        "path": "04_SOPs/Reporting Workflow.md"
+      },
+      "summary": "A repeated reporting handoff should use one owner and one verification gate.",
+      "evidence": "The source discussion identifies the owner, trigger, output, and escalation.",
+      "uncertainty": "The SOP owner still needs confirmation.",
+      "next_safe_action": "Add the verified handoff contract to the existing SOP.",
+      "write_targets": [
+        "04_SOPs/Reporting Workflow.md"
+      ]
+    }
+  ],
+  "excluded_counts": {
+    "newsletter_or_promotion": 3,
+    "bot_or_notification_noise": 2
+  },
+  "checkpoints": {
+    "gmail": "2026-08-01T11:00:00-04:00",
+    "slack": "1785596400.000000"
+  }
+}

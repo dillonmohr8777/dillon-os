@@ -1,0 +1,546 @@
+# six-hour-important-email-drafter run log
+
+- automation_id: six-hour-important-email-drafter
+- run_started_utc: 2026-08-08T03:00:17Z
+- run_completed_utc: 2026-08-08T04:24:00Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786155677157
+- checkpoint_prev_utc: 2026-08-08T02:21:17.157Z
+- checkpoint_overlap_start_ms: 1786154777157
+- checkpoint_overlap_start_utc: 2026-08-08T02:06:17.157Z
+- checkpoint_new_ms: 1786177459907
+- checkpoint_new_utc: 2026-08-08T08:24:19.907Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 13
+- candidates_in_window: 1
+- actionable_threads_total: 0
+- threads_scanned: 1
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 0
+- blockers:
+  - Non-actionable security/notification email excluded (no-reply Coinbase account activity alert)
+  - No client-route mapping needed for this notification
+- dedupe_metadata:
+  - excluded_candidates: []
+  - excluded_client_routes: []
+  - processed_thread_ids:
+    - REDACTED_THREAD_19fe06e502b7bc95
+
+- run_started_utc: 2026-08-08T14:25:00Z
+- run_completed_utc: 2026-08-08T14:25:31Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786177459907
+- checkpoint_prev_utc: 2026-08-08T08:24:19.907Z
+- checkpoint_overlap_start_ms: 1786176559907
+- checkpoint_overlap_start_utc: 2026-08-08T08:09:19.907Z
+- checkpoint_new_ms: 1786217131000
+- checkpoint_new_utc: 2026-08-08T14:25:31Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 6
+- candidates_in_window: 3
+- actionable_threads_total: 2
+- threads_scanned: 6
+- drafts_created: 0
+- drafts_updated: 1
+- skipped_already_answered: 0
+- unresolved_routes: 1
+- blockers:
+  - Security notification from Coinbase classified as unresolved route and no direct client routing
+- dedupe_metadata:
+  - excluded_candidates: []
+  - excluded_client_routes: []
+  - processed_thread_ids:
+    - 19fe19166060e052
+    - 19fdd146852aff14
+    - 19fe141dcbe4c242
+    - 19fe13eb97504082
+    - 19fce2c9bdc1ebe6
+    - 19fe06e502b7bc95
+- run_started_utc: 2026-08-08T20:25:34.100Z
+- run_completed_utc: 2026-08-08T20:26:15.848Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786217131000
+- checkpoint_prev_utc: 2026-08-08T14:25:31Z
+- checkpoint_overlap_start_ms: 1786216231000
+- checkpoint_overlap_start_utc: 2026-08-08T14:10:31Z
+- checkpoint_new_ms: 1786220775848
+- checkpoint_new_utc: 2026-08-08T20:26:15.848Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 9
+- candidates_in_window: 6
+- actionable_threads_total: 0
+- threads_scanned: 6
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 0
+- blockers:
+  - No actionable candidates detected in the bounded window.
+  - Non-client/system noise excluded: GitHub notifications, Netlify notifications, and self-sent Slack digest thread.
+  - Security alert thread from Coinbase had no direct client route and no reply request.
+  - Excluded candidate: calendar decline notice with no request or decision action required.
+  - excluded_candidates: []
+  - excluded_client_routes: []
+  - processed_thread_ids:
+    - 19fe2fd82936d45c
+    - 19fe29109505fd29
+    - 19fe2488d358b64e
+    - 19fe19166060e052
+    - 19fe06e502b7bc95
+    - 19fe0e9a4318425c
+- run_started_utc: 2026-08-09T02:25:19.321Z
+- run_completed_utc: 2026-08-09T02:25:22.001Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786220775848
+- checkpoint_prev_utc: 2026-08-08T20:26:15.848Z
+- checkpoint_overlap_start_ms: 1786219875848
+- checkpoint_overlap_start_utc: 2026-08-08T20:11:15.848Z
+- checkpoint_new_ms: 1786242321783
+- checkpoint_new_utc: 2026-08-09T02:25:22.783Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 3
+- candidates_in_window: 3
+- actionable_threads_total: 0
+- threads_scanned: 3
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 0
+- blockers:
+  - No actionable candidates detected in the bounded window.
+  - Non-client/system noise excluded: vercel deployment update bot thread and two self-sent informational emails.
+- dedupe_metadata:
+  - excluded_candidates:
+    - REDACTED_THREAD_self_19fe44707fa11b43
+    - REDACTED_THREAD_self_19fe3d3c73ebcf5a
+    - REDACTED_THREAD_sys_19fe2fd82936d45c
+  - excluded_client_routes: []
+  - processed_thread_ids:
+    - REDACTED_THREAD_self_19fe44707fa11b43
+    - REDACTED_THREAD_self_19fe3d3c73ebcf5a
+    - REDACTED_THREAD_sys_19fe2fd82936d45c
+
+- run_started_utc: 2026-08-09T08:27:00.000Z
+- run_completed_utc: 2026-08-09T08:27:28.370Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786242321783
+- checkpoint_prev_utc: 2026-08-09T02:25:22.783Z
+- checkpoint_overlap_start_ms: 1786241421783
+- checkpoint_overlap_start_utc: 2026-08-09T02:10:21.783Z
+- checkpoint_new_ms: 1786264048370
+- checkpoint_new_utc: 2026-08-09T08:27:28.370Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 4
+- candidates_in_window: 2
+- actionable_threads_total: 0
+- threads_scanned: 2
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 0
+- blockers:
+  - No actionable candidates detected in the bounded window.
+  - Excluded: two self-sent internal messages and two prior automation/portfolio digest messages outside actionability.
+  - No OTP, MFA, recovery, credential, secret, or security-breach candidate route detected.
+- dedupe_metadata:
+  - excluded_candidates:
+    - 19fe51d8ad1ce8b2
+    - 19fe47a01be549dc
+  - excluded_client_routes: []
+  - processed_thread_ids:
+    - 19fe51d8ad1ce8b2
+    - 19fe47a01be549dc
+
+- run_started_utc: 2026-08-09T17:36:54.715Z
+- run_completed_utc: 2026-08-09T17:37:15.000Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786264048370
+- checkpoint_prev_utc: 2026-08-09T08:27:28.370Z
+- checkpoint_overlap_start_ms: 1786263148370
+- checkpoint_overlap_start_utc: 2026-08-09T08:12:28.370Z
+- checkpoint_new_ms: 1786297014715
+- checkpoint_new_utc: 2026-08-09T17:36:54.715Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 7
+- candidates_in_window: 7
+- actionable_threads_total: 0
+- threads_scanned: 7
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 0
+- blockers:
+  - No actionable candidates detected in the bounded window.
+  - Excluded system and self-directed messages only (analytics and bot digests, GitHub/Vercel updates, self-sent internal notes).
+  - No external client-route threads requiring threaded draft responses.
+- dedupe_metadata:
+  - excluded_candidates:
+    - 19fe73c2d40cbab0
+    - 19fe51d8ad1ce8b2
+    - 19fe47a01be549dc
+    - 19fe44707fa11b43
+    - 19fe3d3c73ebcf5a
+    - 19fe2fd82936d45c
+    - 19fe29109505fd29
+  - excluded_client_routes: []
+  - processed_thread_ids:
+    - 19fe73c2d40cbab0
+    - 19fe51d8ad1ce8b2
+    - 19fe47a01be549dc
+    - 19fe44707fa11b43
+    - 19fe3d3c73ebcf5a
+    - 19fe2fd82936d45c
+    - 19fe29109505fd29
+- run_started_utc: 2026-08-09T23:35:29.288Z
+- run_completed_utc: 2026-08-09T23:35:38.000Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786297014715
+- checkpoint_prev_utc: 2026-08-09T17:36:54.715Z
+- checkpoint_overlap_start_ms: 1786296114715
+- checkpoint_overlap_start_utc: 2026-08-09T17:21:54.715Z
+- checkpoint_new_ms: 1786318525173
+- checkpoint_new_utc: 2026-08-09T23:35:29.288Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 5
+- candidates_in_window: 5
+- actionable_threads_total: 2
+- threads_scanned: 5
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 2
+- blockers:
+  - Security verification candidates had no explicit client-route and remain unresolved for in-scope routing.
+  - Self-directed or non-client/system digest threads excluded from draft generation.
+- dedupe_metadata:
+  - excluded_candidates:
+    - 19fe7b88c4f822fe
+    - 19fe79ccf09e7a11
+    - 19fe7999bdd3a007
+  - excluded_client_routes:
+    - Vercel domain verification and sign-in alerts unresolved to a client identity
+  - processed_thread_ids:
+    - 19fe7b88c4f822fe
+    - 19fe7a56a06ddb96
+    - 19fe79edaea84308
+    - 19fe79ccf09e7a11
+    - 19fe7999bdd3a007
+
+- run_started_utc: 2026-08-10T05:36:58.000Z
+- run_completed_utc: 2026-08-10T05:37:04.882Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786318525173
+- checkpoint_prev_utc: 2026-08-09T23:35:25.173Z
+- checkpoint_overlap_start_ms: 1786317625173
+- checkpoint_overlap_start_utc: 2026-08-09T23:20:25.173Z
+- checkpoint_new_ms: 1786340224882
+- checkpoint_new_utc: 2026-08-10T05:37:04.882Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 15
+- candidates_in_window: 15
+- actionable_threads_total: 0
+- threads_scanned: 15
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 0
+- blockers:
+  - No client-route actionable threads in window; all candidates were self-sent, system notifications, job alerts, or commercial noise.
+  - No OTP, MFA, credential, secret, or security-breach response candidates with clear client route.
+- dedupe_metadata:
+  - excluded_candidates:
+    - 19fea2be19352c84
+    - 19fea290f192d7e4
+    - 19fea03342d9de14
+    - 19fe98670a615c59
+    - 19fe93a936e81884
+    - 19fe927bc47a75a5
+    - 19fe915d314a4351
+    - 19fe9150d48dcaec
+    - 19fe9144ae60a10c
+    - 19fe90d02afeabd1
+    - 19fe9076b35bf6d5
+    - 19fe8fc5d2189eab
+    - 19fe8f9d3199d2b8
+    - 19fe8e8e81b122b5
+    - 19fe8e8dfa188faf
+  - excluded_client_routes: []
+  - processed_thread_ids:
+    - 19fea2be19352c84
+    - 19fea290f192d7e4
+    - 19fea03342d9de14
+    - 19fe98670a615c59
+    - 19fe93a936e81884
+    - 19fe927bc47a75a5
+    - 19fe915d314a4351
+    - 19fe9150d48dcaec
+    - 19fe9144ae60a10c
+    - 19fe90d02afeabd1
+    - 19fe9076b35bf6d5
+    - 19fe8fc5d2189eab
+    - 19fe8f9d3199d2b8
+    - 19fe8e8e81b122b5
+    - 19fe8e8dfa188faf
+- run_started_utc: 2026-08-10T05:36:43.092Z
+- run_completed_utc: 2026-08-10T05:37:43.100Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786340224882
+- checkpoint_prev_utc: 2026-08-09T23:35:25.173Z
+- checkpoint_overlap_start_ms: 1786339324882
+- checkpoint_overlap_start_utc: 2026-08-09T23:20:25.173Z
+- checkpoint_new_ms: 1786340263100
+- checkpoint_new_utc: 2026-08-10T05:37:43.100Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 2
+- candidates_in_window: 2
+- actionable_threads_total: 1
+- threads_scanned: 2
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 1
+- blockers:
+  - Self-sent thread is excluded from draft generation
+  - Netlify billing alert has no direct client route and is treated as unresolved routing/security-adjacent item
+- dedupe_metadata:
+  - excluded_candidates:
+    - 19fea2be19352c84
+  - excluded_client_routes:
+    - 19fea290f192d7e4
+  - processed_thread_ids:
+    - 19fea2be19352c84
+    - 19fea290f192d7e4
+
+- run_started_utc: 2026-08-10T17:37:25.000Z
+- run_completed_utc: 2026-08-10T17:37:37.268Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786361826006
+- checkpoint_prev_utc: 2026-08-10T11:37:06.006Z
+- checkpoint_overlap_start_ms: 1786360926006
+- checkpoint_overlap_start_utc: 2026-08-10T11:22:06.006Z
+- checkpoint_new_ms: 1786383457267
+- checkpoint_new_utc: 2026-08-10T17:37:37.267Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 15
+- candidates_in_window: 15
+- actionable_threads_total: 0
+- threads_scanned: 15
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 2
+- blockers:
+  - No actionable reply candidates detected in the bounded window.
+  - Excluded by policy: self-directed emails and thread drafts, calendar invite churn, LinkedIn/promo content, and general analytics reports without required action.
+  - OpenAI sign-in security alert threads had no direct client route and were marked as unresolved security-route items.
+- dedupe_metadata:
+  - excluded_candidates:
+    - 19fecbe1ab81bcc2
+    - 19feca2955ead108
+    - 19feca05d25b60f8
+    - 19feca026b0eb8cc
+    - 19fec798c3cca89f
+    - 19fec61e3fdc9443
+    - 19fec584a2bd2022
+    - 19fec2bc466adb44
+    - 19fdd146852aff14
+    - 19febea9592d4655
+    - 19febe8774d03da8
+    - 19febd83f1fb3fce
+    - 19febb0d566fd967
+    - 19feb9439a927ecc
+    - 19feb8b6ce7a0032
+  - excluded_client_routes:
+    - 19febd83f1fb3fce
+    - 19febb0d566fd967
+  - processed_thread_ids:
+    - 19fecbe1ab81bcc2
+    - 19feca2955ead108
+    - 19feca05d25b60f8
+    - 19feca026b0eb8cc
+    - 19fec798c3cca89f
+    - 19fec61e3fdc9443
+    - 19fec584a2bd2022
+    - 19fec2bc466adb44
+    - 19fdd146852aff14
+    - 19febea9592d4655
+    - 19febe8774d03da8
+    - 19febd83f1fb3fce
+    - 19febb0d566fd967
+    - 19feb9439a927ecc
+    - 19feb8b6ce7a0032
+- run_started_utc: 2026-08-10T11:37:06.005Z
+- run_completed_utc: 2026-08-10T11:37:06.006Z
+- gmail_account: dillonmohr8777@gmail.com
+- checkpoint_prev_ms: 1786340263100
+- checkpoint_prev_utc: 2026-08-10T05:37:43.100Z
+- checkpoint_overlap_start_ms: 1786339363100
+- checkpoint_overlap_start_utc: 2026-08-10T05:22:43.100Z
+- checkpoint_new_ms: 1786361826005
+- checkpoint_new_utc: 2026-08-10T11:37:06.006Z
+- scan_mode: inbox_directed_native_gmail
+- searched_ids_total: 7
+- candidates_in_window: 2
+- actionable_threads_total: 0
+- threads_scanned: 2
+- drafts_created: 0
+- drafts_updated: 0
+- skipped_already_answered: 0
+- unresolved_routes: 0
+- blockers: No actionable outbound-draft work from checkpointed window; both scanned rows were self-directed/sender=Me no external client-route action required.
+- dedupe_metadata:
+  - excluded_candidates:
+    - 19fea453fcab88e8
+    - 19fea2be19352c84
+  - excluded_client_routes: []
+  - processed_thread_ids:
+    - 19fea453fcab88e8
+    - 19fea2be19352c84
+
+## Run 2026-08-11T05:39:26Z
+- status: success
+- start: 2026-08-11T05:39:22.088Z
+- checkpoint_before: 1786404100534
+- checkpoint_after: 1786426771904
+- overlap_window_ms: 900000
+- account: dillonmohr8777@gmail.com
+- gmail_search_window:
+  - after_ms: 1786404100534
+  - before_ms: 1786426771904
+- stats:
+  - ids_found: 22
+  - readable_messages: 21
+  - skipped_not_found: 1
+  - threads_scanned: 21
+  - drafts_created: 0
+  - drafts_updated: 0
+  - skipped_already_answered: 0
+  - unresolved_routes: 2
+  - security_or_other_blockers: 2
+- exclusions_applied:
+  - promotions_newsletters_bots_receipts: 9
+  - outbound_or_internal_system_noise: 3
+  - delivery_or_security_notifications_not_actionable: 2
+  - unresolved_billing_or_security_with_no_client_route: 2
+- notes:
+  - No draft-worthy client action needed; no actionable direct request thread found.
+  - No existing drafts were updated because no candidate thread met criteria for safe, client-routable action.
+  - Checkpoint advanced only after successful Gmail read completion.
+
+## Run 2026-08-11T23:40:02Z
+- status: success
+- start: 2026-08-12T05:43:28.190Z
+- end: 2026-08-12T05:44:28.190Z
+- checkpoint_before: 1786491602509
+- checkpoint_after: 1786513468190
+- overlap_window_ms: 900000
+- account: dillonmohr8777@gmail.com
+- gmail_search_window:
+  - after_ms: 1786492502509
+  - before_ms: 1786513468190
+- run_context:
+  - scan_mode: native_gmail_inbox_only
+  - route_scope: client-specific_only
+  - reply_semantics: reply_all_excluding_dillon
+- stats:
+  - ids_found: 6
+  - readable_messages: 6
+  - skipped_not_found: 0
+  - threads_scanned: 1
+  - actionable_threads_total: 1
+  - drafts_created: 1
+  - drafts_updated: 0
+  - skipped_already_answered: 0
+  - unresolved_routes: 1
+  - security_or_other_blockers: 1
+- exclusions_applied:
+  - blocked_or_other_non_actionable: 4
+  - outbound_or_internal_system_noise: 3
+-  - security_or_routing_blocked: 1
+- dedupe_metadata:
+  - processed_thread_ids:
+    - 19ff221c45d90254
+  - excluded_candidates:
+    - 19ff475df9836a43
+    - 19ff37f69599a70a
+    - 19ff349764c35831
+    - 19ff34874db328d7
+  - excluded_client_routes:
+    - 19ff475df9836a43
+  - unresolved_client_routes:
+    - 19ff475df9836a43
+- draft_actions:
+  - created:
+    - draft_id: r3099607715866110924
+    - message_id: 19ff4800896d511f
+    - thread_id: 19ff221c45d90254
+    - note: existing draft was present for thread, but native draft update was not supported by available connector path, so created new threaded draft for same thread
+- notes:
+  - Thread 19ff221c45d90254 (Tags 2 Go) was treated as actionable with request-bearing updates and no recent reply from Dillon in bounded window.
+  - Drafted concise acknowledgement/next-step clarification only, with no commitments or sensitive data requests.
+  - One composio security notification was intentionally unresolved for routing safety.
+  - Checkpoint advanced only after successful Gmail scan/draft completion.
+
+## Run 2026-08-12T11:44:34.415Z
+- status: success
+- start: 2026-08-12T11:44:30.000Z
+- checkpoint_before: 1786513468190
+- checkpoint_after: 1786535074415
+- overlap_window_ms: 900000
+- account: dillonmohr8777@gmail.com
+- gmail_search_window:
+  - after_ms: 1786512568190
+  - before_ms: 1786535074415
+- stats:
+  - ids_found_total: 8
+  - ids_after_overlap: 3
+  - readable_messages: 3
+  - skipped_not_found: 0
+  - threads_scanned: 3
+  - drafts_created: 1
+  - drafts_updated: 1
+  - skipped_already_answered: 0
+  - unresolved_routes: 1
+  - security_or_other_blockers: 1
+- exclusions_applied:
+  - non_actionable: 5
+  - prior-window_messages_excluded_with_overlap_filter: 3
+- run_scope:
+  - scanned_message_ids:
+    - 19ff5a6894fb2032
+    - 19ff475df9836a43
+    - 19ff490f96d30036
+  - thread_ids_processed:
+    - 19ff5a6894fb2032
+    - 19ff475df9836a43
+    - 19ff490f96d30036
+    - 19ff221c45d90254
+  - dedupe_metadata:
+    - excluded_candidates:
+      - 19ff3ed8b6b37dac
+      - 19ff3c8fdc77b71a
+      - 19ff37f69599a70a
+      - 19ff349764c35831
+      - 19ff34874db328d7
+    - excluded_client_routes: []
+    - processed_thread_ids:
+      - 19ff5a6894fb2032
+      - 19ff475df9836a43
+      - 19ff490f96d30036
+      - 19ff221c45d90254
+- draft_actions:
+  - updated:
+      - draft_id: r3099607715866110924
+      - message_id: 19ff5c9a6e9bd0e6
+      - thread_id: 19ff221c45d90254
+      - reason: existing threaded draft updated with latest Tags 2 Go request context
+  - created:
+      - draft_id: r-2327991580198752479
+      - message_id: 19ff5c9c1b628918
+      - thread_id: 19ff5a6894fb2032
+      - reason: new AMI Cleaning lead request follow-up drafted
+- blockers:
+  - Composio security notification thread had no direct client route; retained as unresolved route
+  - No other unresolved client-route blockers

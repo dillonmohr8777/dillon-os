@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shadow HVAC — Social Reel (1080×1920)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px; height: 1920px;
+      overflow: hidden;
+      font-family: system-ui, sans-serif;
+      background: #05070c;
+      color: #f1f5f9;
+    }
+    .frame {
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 80px 60px;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(255,90,31,.25), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(56,189,248,.2), transparent 40%),
+        #05070c;
+      animation: bgShift 8s ease-in-out infinite;
+    }
+    @keyframes bgShift {
+      0%, 100% { filter: brightness(1); }
+      50% { filter: brightness(1.08); }
+    }
+    .logo { font-size: 28px; font-weight: 800; letter-spacing: .05em; }
+    .logo span { color: #ff5a1f; }
+    .center { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .orb-wrap {
+      width: 280px; height: 280px; margin: 0 auto 60px;
+      position: relative;
+    }
+    .orb {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #38bdf8, #ff5a1f);
+      animation: orbPulse 2.5s ease-in-out infinite, orbSpin 12s linear infinite;
+      box-shadow: 0 0 100px rgba(56,189,248,.5), 0 0 60px rgba(255,90,31,.4);
+    }
+    @keyframes orbPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+    @keyframes orbSpin {
+      from { filter: hue-rotate(0deg); }
+      to { filter: hue-rotate(15deg); }
+    }
+    h1 {
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1.05;
+      text-align: center;
+      animation: fadeUp 1s ease-out;
+    }
+    h1 em { color: #38bdf8; font-style: normal; display: block; }
+    .sub {
+      text-align: center;
+      font-size: 32px;
+      color: #94a3b8;
+      margin-top: 24px;
+      animation: fadeUp 1s ease-out .2s both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .cta {
+      text-align: center;
+      padding: 28px 48px;
+      background: linear-gradient(135deg, #ff5a1f, #e23c00);
+      border-radius: 16px;
+      font-size: 36px;
+      font-weight: 700;
+      animation: ctaPulse 2s ease-in-out infinite;
+    }
+    @keyframes ctaPulse {
+      0%, 100% { box-shadow: 0 0 40px rgba(255,90,31,.4); }
+      50% { box-shadow: 0 0 60px rgba(255,90,31,.7); }
+    }
+    .phone { text-align: center; font-size: 40px; color: #f4b740; margin-top: 24px; font-weight: 700; }
+    .tag { font-size: 22px; color: #64748b; text-align: center; margin-top: 40px; letter-spacing: .15em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="logo">SHADOW <span>HVAC</span></div>
+    <div class="center">
+      <div class="orb-wrap"><div class="orb"></div></div>
+      <h1>Defend Your<em>Comfort Zone</em></h1>
+      <p class="sub">24/7 Emergency · Hampshire, IL</p>
+    </div>
+    <div>
+      <div class="cta">Book AC Tune-Up Today</div>
+      <p class="phone">(847) 757-9450</p>
+      <p class="tag">Momentum 360</p>
+    </div>
+  </div>
+</body>
+</html>

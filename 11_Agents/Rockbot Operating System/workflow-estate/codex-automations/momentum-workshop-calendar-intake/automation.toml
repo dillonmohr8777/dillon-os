@@ -1,0 +1,15 @@
+version = 1
+id = "momentum-workshop-calendar-intake"
+kind = "cron"
+name = "Momentum workshop calendar intake"
+prompt = "Run the consented Momentum 360 workshop calendar-intake worker end to end. Hard scope: C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations\\clients\\momentum-360\\deliverables\\2026-07-21-sean-webinar-pilot. First read C:\\Users\\dillo\\.codex\\AGENTS.md and fully read the installed control-in-app-browser skill before any browser action. Protect Dillon's visible YouTube or YouTube TV tab: never claim, focus, navigate, reload, close, replace, or otherwise disturb it. Keep all browser work in separate background in-app-browser tabs and report only failures.\n\nRead Netlify form state with `node tools/netlify-form-intake.mjs forms`, find the exact `workshop-registration` form, then read its submissions with `node tools/netlify-form-intake.mjs submissions <form-id>`. Process only submissions whose payload has registration_status=registered, calendar_consent=on, a valid email address, an empty bot-field, and a UUID-shaped registration_id. Ignore spam, deleted, malformed, or non-consenting submissions. Never add the same email twice.\n\nThe organizer event is on Dillon Mohr's Google Calendar account dillonmohr8777@gmail.com: `Build a Business That Grows Without You`, Thursday August 6, 2026, 12:00 PM to 1:00 PM America/New_York, with Google Meet. Use Google Calendar only in the in-app browser background. Find the exact event by title and date, open its edit page, verify guest permissions remain disabled for modifying the event, inviting others, and seeing the guest list, then add each newly consenting email as a guest and save/send the organizer invitation. Sending these exact organizer invitations is explicitly approved by Dillon in this task. Do not send any other message or invite.\n\nMaintain an idempotency ledger outside the repository at C:\\Users\\dillo\\AppData\\Local\\Codex\\CalendarIntake\\momentum-workshop.json containing only submission IDs and SHA-256 email hashes, never raw email addresses or other form fields. Mark a submission processed only after Google Calendar confirms the guest was saved and the invitation was sent. If the event is missing or ambiguous, Google is signed out, Netlify cannot be read, a CAPTCHA/MFA/security interstitial appears, or saving/sending fails, stop safely without marking the item processed and report the failure. Finalize and close only agent-created research/working tabs; preserve the Google Calendar event tab only when needed for the next run and always leave YouTube TV untouched."
+status = "PAUSED"
+rrule = "FREQ=MINUTELY;INTERVAL=5"
+model = "gpt-5.6-terra"
+reasoning_effort = "medium"
+notification_policy = "failed_runs_only"
+execution_environment = "local"
+target = { type = "project", project_id = "local-03046e22be7ca1d6e9c6745563ea0d3e" }
+cwds = ["C:\\Users\\dillo"]
+created_at = 1785003764731
+updated_at = 1785040963028

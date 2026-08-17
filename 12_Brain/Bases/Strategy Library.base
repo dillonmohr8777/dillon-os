@@ -1,0 +1,73 @@
+filters:
+  and:
+    - file.inFolder("12_Brain/03_Concepts")
+    - 'file.ext == "md"'
+    - 'file.name != "README"'
+properties:
+  file.name:
+    displayName: Strategy system
+  domain:
+    displayName: Domain
+  maturity:
+    displayName: Maturity
+  summary:
+    displayName: Operating definition
+  verification_status:
+    displayName: Verification
+  review_on:
+    displayName: Review
+  updated:
+    displayName: Updated
+  source_refs:
+    displayName: Evidence
+views:
+  - type: table
+    name: Strategy Library
+    order:
+      - file.name
+      - domain
+      - maturity
+      - summary
+      - verification_status
+      - review_on
+      - updated
+  - type: table
+    name: Needs Development
+    filters:
+      and:
+        - 'maturity != "operational"'
+    order:
+      - file.name
+      - domain
+      - maturity
+      - summary
+      - verification_status
+      - review_on
+  - type: table
+    name: Review Due
+    filters:
+      and:
+        - review_on
+        - 'review_on <= today() + "30d"'
+    order:
+      - file.name
+      - domain
+      - review_on
+      - verification_status
+      - updated
+  - type: table
+    name: Search and AI Discovery
+    filters:
+      or:
+        - 'domain == "keyword research"'
+        - 'domain == "content architecture"'
+        - 'domain == "aeo geo"'
+        - 'domain == "entity authority"'
+        - 'domain == "local search"'
+        - 'domain == "ai visibility measurement"'
+    order:
+      - file.name
+      - domain
+      - maturity
+      - summary
+      - review_on

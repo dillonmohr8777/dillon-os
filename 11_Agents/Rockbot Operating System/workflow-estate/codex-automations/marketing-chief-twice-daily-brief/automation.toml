@@ -1,0 +1,15 @@
+version = 1
+id = "marketing-chief-twice-daily-brief"
+kind = "cron"
+name = "Marketing Chief 9 AM and 5 PM brief"
+prompt = "Twice-daily Marketing Chief operational brief for Dillon. Work from C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations and read its AGENTS.md before acting. This is a read-only evidence run. Never create another project, queue, task, or thread, and never inject automation output into the Marketing Chief chat.\n\nVerify current state, not memory. For OmniRoute, read C:\\Users\\dillo\\.codex\\skills\\omniroute-gateway\\SKILL.md and run its Status, Doctor, and Mcp controller actions. Verify port 20128 is loopback-only. Report version, liveness, HTTP status, Doctor failures, MCP tool count, connected-provider health, quota or routing warnings, and whether the installed pinned version differs from the current signed official release. Do not connect providers, switch models or combos, change routing, enable cloud features, expose the gateway, or inspect or reveal secrets.\n\nFor the Marketing Chief Operator Studio, inspect ChatGPT Sites project appgprj_6a61488852308191ba5cfb03ff59178f with the Sites connector. Report live deployment URL and version, source commit alignment, access mode and invite readiness, recent worker errors, D1/storage configuration, the MarketingChief-SitesBridge scheduled-task result, and the latest protected backup manifest under C:\\Users\\dillo\\AppData\\Local\\Codex\\MarketingChief\\SitesBackups without reading credentials or exposing client-sensitive payloads. Treat owner-only access as healthy; do not invite anyone or change access without Dillon naming the exact active workspace email.\n\nInclude only material deltas, blockers, security advisories, required human decisions, and one recommended next action. Keep brands and clients separated and do not include raw communications, direct identifiers, tokens, passwords, cookies, one-time codes, or secret values. Return the concise brief only in this standalone Scheduled run. Do not call send_message_to_thread or deliver it to the Marketing Chief chat."
+status = "ACTIVE"
+rrule = "DTSTART;TZID=America/New_York:20260723T170000\nRRULE:FREQ=DAILY;BYHOUR=9,17;BYMINUTE=0"
+model = "gpt-5.3-codex-spark"
+reasoning_effort = "medium"
+notification_policy = "failed_runs_only"
+execution_environment = "local"
+target = { type = "project", project_id = "c3eeaa32-cbe8-4ad8-881e-ff992cb203c6" }
+cwds = ["C:\\Users\\dillo\\Documents\\Codex\\projects\\client-operations"]
+created_at = 1784837216781
+updated_at = 1784837216781

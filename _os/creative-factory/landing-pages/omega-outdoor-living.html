@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Outdoor Living | Omega Landscaping & Concrete</title>
+  <style>
+    :root {
+      --green: #2d5a3d;
+      --green-light: #4a7c59;
+      --earth: #8b6914;
+      --cream: #f8f6f1;
+      --text: #1f2937;
+      --muted: #6b7280;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: var(--cream); color: var(--text); }
+    .hero {
+      min-height: 85vh;
+      background:
+        linear-gradient(135deg, rgba(45,90,61,.92), rgba(45,90,61,.75)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%234a7c59" width="1200" height="800"/><circle cx="200" cy="600" r="180" fill="%232d5a3d" opacity=".5"/><circle cx="900" cy="200" r="220" fill="%238b6914" opacity=".2"/></svg>') center/cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 6vw;
+    }
+    .proof {
+      font-size: .8rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .9;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 16ch;
+      margin-bottom: 1rem;
+    }
+    .sub { font-size: 1.1rem; opacity: .92; max-width: 40ch; margin-bottom: 2rem; line-height: 1.6; }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: #fff;
+      color: var(--green);
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: .95rem;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <p class="proof">3,000+ Colorado Springs homeowners served</p>
+    <h1>Elevate Your Outdoor Living</h1>
+    <p class="sub">Landscaping, concrete, and hardscape built for Colorado seasons. Real projects. Real results.</p>
+    <a class="btn" href="tel:7197612840">Get a Free Estimate</a>
+  </section>
+  <section style="padding:4rem 6vw;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto">
+    <div style="padding:1.5rem;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.06)">
+      <h3 style="color:var(--green);margin-bottom:.5rem">Landscaping</h3>
+      <p style="color:var(--muted);font-size:.9rem">Seasonal design, planting, and maintenance for curb appeal that lasts.</p>
+    </div>
+    <div style="padding:1.5rem;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.06)">
+      <h3 style="color:var(--green);margin-bottom:.5rem">Concrete &amp; Hardscape</h3>
+      <p style="color:var(--muted);font-size:.9rem">Patios, walkways, and structural concrete done right the first time.</p>
+    </div>
+    <div style="padding:1.5rem;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.06)">
+      <h3 style="color:var(--green);margin-bottom:.5rem">Local Expertise</h3>
+      <p style="color:var(--muted);font-size:.9rem">Colorado Springs neighborhoods. Project photos from real jobs.</p>
+    </div>
+  </section>
+  <footer style="text-align:center;padding:2rem;color:var(--muted);font-size:.8rem">
+    Omega Landscaping &amp; Concrete · Colorado Springs · Momentum 360
+  </footer>
+</body>
+</html>

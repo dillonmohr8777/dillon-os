@@ -1,29 +1,22 @@
-﻿---
-client: Onsite Concrete & Landscape
+---
+client: On-Site Concrete & Landscape
+client_id: onsite-concrete-landscape
 website: onsiteconcretelandscape.com
-monthly_fee: unknown
 role: Account Manager
 division: Momentum 360
 status: active
-contact_name: Grace Slagle
-contact_email: gracieslags@gmail.com
-cc_list: [onsiteclp@gmail.com, sean@needmomentum.com]
 last_touched: 2026-07-12
-next_action: Attend weekly Onsite x M360 call Thursday 2026-04-16 1:00 PM ET
-due: 2026-04-16
-tags: [client, momentum360, concrete, landscape]
+next_action: Complete an allowlisted technical crawl, standardize entity and NAP signals, and reconcile primary conversion actions.
+due: 2026-07-15
+tags: [client, momentum360, google-ads, seo, concrete, landscaping]
 ---
 
-# Onsite Concrete & Landscape
+# On-Site Concrete & Landscape
 
-Recurring weekly sync with Grace Slagle. Standing meeting: **Onsite x M360 Call, Thursdays 1:00â€“1:30 PM ET**.
+Current work includes Google Ads, conversion health, call quality, local SEO, and website technical QA.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-16 (upcoming): Weekly Onsite x M360 Call at 1:00 PM ET. Attendees: Dillon, Sean Boyle, onsiteclp@gmail.com (client inbox).
-- 2026-04-09: Prior weekly call held 1:00 PM ET.
-- Earlier weekly syncs confirmed on 2026-04-02 and 2026-03-26.
-- No substantive deliverables surfaced in Gmail â€” most of the engagement appears to run through the weekly call rather than async email.
+## Current truth
 
-## Scope
-- Account management and website work for Onsite Concrete & Landscape (scope to be re-confirmed in the weekly call).
-- Primary coordination point is the standing Thursday meeting.
+- Public crawl attempts hit a security challenge; use an allowlisted environment.
+- Deduplicate inactive or duplicate conversion actions before optimization.
+- Daily account changes and all external delivery remain approval-gated.

@@ -1,0 +1,53 @@
+filters:
+  and:
+    - file.inFolder("12_Brain/08_Memory")
+    - 'file.name != "README"'
+properties:
+  file.name:
+    displayName: Memory
+  memory_type:
+    displayName: Type
+  subject:
+    displayName: Subject
+  status:
+    displayName: Status
+  valid_from:
+    displayName: Valid from
+  valid_to:
+    displayName: Valid to
+  observed_at:
+    displayName: Observed
+  confidence:
+    displayName: Confidence
+  review_on:
+    displayName: Review
+  supersedes:
+    displayName: Supersedes
+views:
+  - type: table
+    name: Needs Review
+    filters:
+      and:
+        - 'status == "active"'
+        - review_on
+        - 'review_on <= today() + "14d"'
+    order:
+      - file.name
+      - memory_type
+      - subject
+      - review_on
+      - confidence
+      - source_refs
+  - type: table
+    name: Current
+    filters:
+      and:
+        - 'status == "active"'
+        - '!valid_to'
+    order:
+      - file.name
+      - memory_type
+      - subject
+      - valid_from
+      - observed_at
+      - confidence

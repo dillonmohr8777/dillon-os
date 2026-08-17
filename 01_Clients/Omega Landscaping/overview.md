@@ -1,43 +1,29 @@
-﻿---
-client: Omega Landscaping
+---
+client: Omega Landscaping & Concrete
+client_id: omega-landscaping
 website: omegalandscapingandconcrete.com
-monthly_fee: 200
 role: Account Manager
 division: Momentum 360
-start_date: 2026-03-01
 status: active
-contact_name: David Granados
-contact_email: contact@omegalandscapingandconcrete.com
-cc_list: [john.belaska@gmail.com, sam@gadsnomads.com, rachelprimavera99@gmail.com, sean@needmomentum.com, beth@needmomentum.com]
-last_touched: 2026-07-12
-next_action: Chase David for drone footage and confirm he will meet with John Belaska this week to review accounts
-due: none
-tags: [client, momentum360, landscaping, gbp, local-seo]
+last_touched: 2026-08-01
+next_action: Verify the current Wix, Google Ads, and Omega GoHighLevel roles, then prepare the exact access request for approval before sending.
+due: 2026-07-15
+tags: [client, momentum360, google-ads, meta-ads, seo, landscaping]
 ---
 
 # Omega Landscaping & Concrete
 
-Landscaping and concrete contractor in Colorado Springs area. Hyper-local GBP content cadence and local SEO. Meta / paid ads managed by John Belaska in parallel.
+Current work includes Google PMax, Meta lead generation, SEO, lead-quality checks, and weekly reporting.
 
-## Scope
-- 4 GBP posts per week, hyper-personalized and hyper-localized with neighborhood and service references.
-- Local SEO management: GBP optimization, keyword targeting, listing health.
-- Blog post creation published through GMB updates for organic search visibility.
-- 12-post March marketing report delivered 2026-04-01.
+## Current truth
 
-## Gmail intel (through 2026-04-14)
-- 2026-04-14: John Belaska following up with David re meeting Thursday to discuss accounts (no response from David yet on this ping).
-- 2026-04-02: John Belaska still waiting on additional drone footage from David for Facebook ads.
-- 2026-04-01: Dillon sent March marketing report (12 posts from 2026-03-09 through end of month, all real project-based content).
-- 2026-03-25: Ad copy discussion on "helped over 3000 homeowners" framing, pivoting away from "15 years of experience."
+- The account is active with an access gap on the Meta side.
+- Current optimization depends on verified call/form attribution and lead quality.
+- Budget or campaign changes remain approval-gated.
 
-## Team constellation
-- **David Granados** â€” owner (contact@omegalandscapingandconcrete.com, 719-761-2840, 719-896-0663).
-- **John Belaska** (john.belaska@gmail.com) â€” runs paid/Meta side and drone creative workflow.
-- **Sam Syed** (sam@gadsnomads.com), **Rachel Primavera** (rachelprimavera99@gmail.com) â€” extended team.
-- **Sean Boyle, Beth Kann** â€” Momentum 360 leadership on CC.
+## Communication intelligence - 2026-08-01
 
-## Open items
-- Confirm David attended / is attending Thursday meeting with John.
-- Chase drone footage from David (outstanding since 2026-04-02).
-- Continue April GBP cadence.
+- An unsent access draft says the Google Ads rebuild is complete and the qualified-lead form is under review.
+- Wix editing, Google Ads admin, and exact Omega GoHighLevel access are still needed for site corrections and closed-loop lead routing.
+- Current roles and the authorized recipient list require live verification; the draft has not been sent.
+- Source: [Gmail draft](gmail://message/19fb46c6d12686a0)

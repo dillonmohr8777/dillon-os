@@ -1,31 +1,26 @@
-﻿---
-client: NKCDC (New Kensington Community Development Corporation)
-website: nkcdc.org
-monthly_fee: unknown
-role: Account Manager
-division: Momentum 360
+---
+client: NKCDC
+client_id: nkcdc
+role: Growth strategy and digital delivery
+division: Direct
 status: active
-contact_name: Anthony Miller
-contact_email: amiller@nkcdc.org
-cc_list: [mjfrederick334@gmail.com, melissarobinn@gmail.com, twatts@nkcdc.org, mboyd@nkcdc.org]
-last_touched: 2026-07-12
-next_action: URGENT â€” launch is pending NKCDC finalizing the Free Tax Prep page. Mac checked in 2026-04-15, no response from Anthony. Nudge again.
-due: 2026-04-16
-tags: [client, momentum360, google-ads, meta-ads, nonprofit, philadelphia]
+last_touched: 2026-08-01
+next_action: Obtain leadership selection of two or three Phase Two priorities, then define each audience, offer, owner, conversion path, and 90-day outcome baseline.
+due: none
+tags: [client, nonprofit, economic-development, growth, content]
 ---
 
 # NKCDC
 
-Philadelphia nonprofit (New Kensington Community Development Corporation). Paid media for the Free Business Tax Prep program. Strategy was pivoted 2026-04-09 after Anthony pushed back on a multi-service scope â€” rebuilt fully around Free Tax Prep as the single promoted offer.
+The next phase expands beyond one tax-prep campaign into a focused Economic
+Development growth system. The operative gate is leadership prioritization;
+channels and content follow the selected programs and measurable outcomes.
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-15: URGENT. Mac Frederick checked in with Anthony ("Hey Anthony just checking in here") and noted Melissa sent the first month's invoice plus remaining grant-project invoices. No response from NKCDC team yet.
-- 2026-04-13: Dillon sent a Monday check-in â€” "everything on our end is built, approved, and ready to launch whenever you are. The only thing we're waiting on is you." Still waiting on the Free Tax Prep landing page.
-- 2026-04-12: Mac thanked team and flagged looking forward to launch next steps.
-- 2026-04-10: Dillon confirmed anticipated launch on 2026-04-13 if the Free Tax Prep page could be ready in time.
-- 2026-04-10: Anthony reviewed the rebuilt strategy, loved it, requested a URL correction for the screening-form click-through: `https://businesstaxprep.fshtechnologies.org/intake/free-tax-prep?ref=...`
-- 2026-04-09: Anthony pushed back on the original multi-service strategy. Campaign rebuilt to focus exclusively on Free Tax Prep.
+- [[Client Intelligence Overlay]]
 
-## Open items
-- Launch is fully blocked on NKCDC shipping the Free Tax Prep landing page and responding to the Monday check-in.
-- First month invoice is out per Melissa.
+## Communication intelligence - 2026-08-01
+
+- Dillon followed up on the Phase Two growth proposal after Anthony said he would review it.
+- No response to the new follow-up was present in the reviewed window.
+- This follow-up does not by itself reactivate delivery. Hold until a direct decision and registry/status reconciliation exist.
+- Source: [Gmail message](gmail://message/19fb931854f7e3b5)

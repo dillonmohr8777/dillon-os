@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/daily-communication-run",
+  "title": "DailyCommunicationRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "run_at",
+    "status",
+    "window",
+    "connectors",
+    "items",
+    "excluded_counts",
+    "checkpoints"
+  ],
+  "properties": {
+    "run_id": { "type": "string", "minLength": 8, "maxLength": 100 },
+    "run_at": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["success", "degraded"] },
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["started_at", "ended_at", "overlap_hours"],
+      "properties": {
+        "started_at": { "type": "string", "format": "date-time" },
+        "ended_at": { "type": "string", "format": "date-time" },
+        "overlap_hours": { "type": "integer", "minimum": 0, "maximum": 72 }
+      }
+    },
+    "connectors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gmail", "slack"],
+      "properties": {
+        "gmail": { "enum": ["ok", "degraded", "failed"] },
+        "slack": { "enum": ["ok", "degraded", "failed"] }
+      }
+    },
+    "items": {
+      "type": "array",
+      "maxItems": 250,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dedupe_key",
+          "source_type",
+          "source_ref",
+          "occurred_at",
+          "kind",
+          "priority",
+          "route",
+          "summary",
+          "evidence",
+          "uncertainty",
+          "next_safe_action",
+          "write_targets"
+        ],
+        "properties": {
+          "dedupe_key": { "type": "string", "minLength": 8, "maxLength": 300 },
+          "source_type": { "enum": ["gmail", "slack"] },
+          "source_ref": { "type": "string", "minLength": 8, "maxLength": 1000 },
+          "occurred_at": { "type": "string", "format": "date-time" },
+          "participants": {
+            "type": "array",
+            "maxItems": 20,
+            "items": { "type": "string", "maxLength": 120 }
+          },
+          "kind": {
+            "enum": [
+              "decision",
+              "commitment",
+              "deliverable",
+              "deadline",
+              "blocker",
+              "meeting",
+              "metric",
+              "client-change",
+              "follow-up",
+              "process-knowledge"
+            ]
+          },
+          "priority": { "enum": ["high", "normal", "low"] },
+          "route": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["type", "name", "path"],
+            "properties": {
+              "type": { "enum": ["client", "full-time", "venture", "operations", "unresolved"] },
+              "name": { "type": "string", "minLength": 1, "maxLength": 160 },
+              "path": { "type": "string", "minLength": 1, "maxLength": 500 }
+            }
+          },
+          "summary": { "type": "string", "minLength": 1, "maxLength": 800 },
+          "evidence": { "type": "string", "minLength": 1, "maxLength": 800 },
+          "uncertainty": { "type": "string", "maxLength": 600 },
+          "next_safe_action": { "type": "string", "minLength": 1, "maxLength": 600 },
+          "write_targets": {
+            "type": "array",
+            "maxItems": 10,
+            "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+          }
+        }
+      }
+    },
+    "excluded_counts": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "checkpoints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gmail", "slack"],
+      "properties": {
+        "gmail": { "type": ["string", "null"], "maxLength": 300 },
+        "slack": { "type": ["string", "null"], "maxLength": 300 }
+      }
+    }
+  }
+}

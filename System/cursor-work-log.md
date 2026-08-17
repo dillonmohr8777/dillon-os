@@ -98,6 +98,21 @@ Autonomous loop session 2026-07-12. All work local and reversible unless noted.
 
 
 - Book `/api/dossier-leads` deploy
+
+---
+
+### G5 - Active client roster reconciliation (DONE)
+
+**Task:** Replace Cursor's April-based client conclusions with current evidence from the rolling 21-day window.
+
+**Result:**
+- Active roster set to 14 client or product lanes.
+- Align HCM retained as full-time and excluded from client count.
+- Stale, paused, prospect, one-off, and duplicate client records removed from `01_Clients`.
+- Replenish split from Fresh Blends.
+- Operating status, revenue scorecard, approval queue, daily brief, takeover report, and backlog corrected.
+
+**Guardrail:** `last_touched` now means dated client or delivery evidence, not the date an automation opened a file.
 - External email sends / ad publishes
 - Melissa invoicing reconciliation
 - Gateway soft-restart if heartbeat remains stale >30m (optional ops approval)

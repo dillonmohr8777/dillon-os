@@ -1,0 +1,14 @@
+version = 1
+id = "momentum-hubspot-day-pulse"
+kind = "cron"
+name = "Momentum HubSpot Day Pulse"
+prompt = "Momentum 360 HubSpot Day Pulse. Work only in C:\\Users\\dillo\\Documents\\Codex\\2026-07-08\\we-made-u-a-master-ochesta. Acquire lease hubspot-day with C:\\Users\\dillo\\.codex\\tools\\Set-OrchestratorLease.ps1 using a 14 minute TTL and release it in a finalizer. First call HubSpot get_user_details. Stop and write blocked:needs-reauth unless accountId is exactly 50612503, the Momentum 360 portal authorized by Jason Fallon. Never read or report Align HCM data for this workflow. If valid, remain read-only and check lead assignment and first-touch SLA, source attribution, forms, CallRail mapping, pipeline health, deals inactive 7 days, closed revenue, CPL/CPA/ROI inputs, and sales-rep scorecard inputs. Write a timestamped JSON artifact plus latest.md under outputs/automation-runs/hubspot-pulse/YYYY-MM-DD/. Only surface a human alert for a verified exception or blocker. Do not mutate CRM records/properties/workflows, send messages, use shared passwords, or enter 2FA."
+status = "PAUSED"
+rrule = "RRULE:FREQ=DAILY;BYHOUR=7,8,9,10,11,12,13,14,15,16,17,18,19;BYMINUTE=0,15,30,45"
+model = "gpt-5.3-codex-spark"
+reasoning_effort = "low"
+execution_environment = "local"
+target = { type = "project", project_id = "c3eeaa32-cbe8-4ad8-881e-ff992cb203c6" }
+cwds = ["C:\\Users\\dillo\\Documents\\Codex\\2026-07-08\\we-made-u-a-master-ochesta"]
+created_at = 1783637414172
+updated_at = 1783637490239

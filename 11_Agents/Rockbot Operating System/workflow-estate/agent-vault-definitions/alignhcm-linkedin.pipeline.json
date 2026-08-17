@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "agent-workflow/v1",
+  "workflowId": "alignhcm-linkedin-content",
+  "pattern": "orchestrator-evaluator",
+  "canonicalClientId": "align-hcm",
+  "orchestrator": {
+    "role": "codex-marketing-chief",
+    "primaryAuthority": true,
+    "canonicalWriter": true,
+    "maxConcurrentWorkers": 3,
+    "delegates": [
+      "hermes-local-runtime",
+      "claude-specialist",
+      "grok-specialist",
+      "cursor-specialist"
+    ]
+  },
+  "limits": {
+    "maxEvaluatorIterations": 2,
+    "maxArtifactsPerHandoff": 10,
+    "maxEvidenceEntriesPerHandoff": 10,
+    "deliveryEnabledByDefault": false
+  },
+  "handoffContract": [
+    "workflow_id",
+    "step_id",
+    "task",
+    "constraints",
+    "upstream_artifacts",
+    "source_locators",
+    "budget_tokens",
+    "timeout_seconds",
+    "acceptance_checks",
+    "evidence_paths",
+    "risks",
+    "approval_state"
+  ],
+  "steps": [
+    {
+      "id": "research",
+      "role": "researcher",
+      "dependsOn": [],
+      "routeClass": "balanced",
+      "budgetTokens": 30000,
+      "timeoutSeconds": 1800,
+      "output": "research-brief.md",
+      "acceptance": [
+        "Sources are current, primary where possible, and linked",
+        "Facts, operator signals, and inference are separated",
+        "No raw communications or secrets are included"
+      ]
+    },
+    {
+      "id": "strategy",
+      "role": "strategist-aeo",
+      "dependsOn": ["research"],
+      "routeClass": "frontier",
+      "budgetTokens": 24000,
+      "timeoutSeconds": 1500,
+      "output": "strategy-brief.md",
+      "acceptance": [
+        "Audience, search or answer intent, angle, proof, CTA, and channel are explicit",
+        "The angle does not duplicate the active calendar without justification"
+      ]
+    },
+    {
+      "id": "copy",
+      "role": "content-copy",
+      "dependsOn": ["strategy"],
+      "routeClass": "balanced",
+      "budgetTokens": 22000,
+      "timeoutSeconds": 1500,
+      "output": "copy-package.md",
+      "acceptance": [
+        "Copy follows the Align voice and approved source limits",
+        "Every material claim maps to a source locator",
+        "No scheduling or publication is implied"
+      ]
+    },
+    {
+      "id": "visual",
+      "role": "visual-director-builder",
+      "dependsOn": ["strategy", "copy"],
+      "routeClass": "balanced",
+      "budgetTokens": 42000,
+      "timeoutSeconds": 3600,
+      "output": "visual-package/",
+      "acceptance": [
+        "Verified Align logo and approved references are attached",
+        "Exact brand tokens are used",
+        "Desktop, mobile, and reduced-motion evidence is captured when applicable"
+      ]
+    },
+    {
+      "id": "critic",
+      "role": "independent-critic-qa",
+      "dependsOn": ["copy", "visual"],
+      "routeClass": "frontier",
+      "budgetTokens": 26000,
+      "timeoutSeconds": 1800,
+      "output": "verification-report.json",
+      "passThreshold": 8,
+      "criticalCategoryMinimum": 7,
+      "acceptance": [
+        "Brand match, clarity, conversion intent, factual support, accessibility, and technical integrity are scored",
+        "Screenshots, tests, logs, and source checks are independently reviewed",
+        "Failures return specific bounded feedback to the responsible step"
+      ]
+    },
+    {
+      "id": "delivery",
+      "role": "delivery-packager",
+      "dependsOn": ["critic"],
+      "routeClass": "local-fast",
+      "budgetTokens": 12000,
+      "timeoutSeconds": 1200,
+      "output": "delivery-manifest.json",
+      "humanGate": "exact current approval or active standing authority",
+      "finalReconciliationBy": "codex-marketing-chief",
+      "acceptance": [
+        "Critic passed and evidence paths resolve",
+        "Recipient, destination, version, rollback, and approval state are explicit",
+        "No delivery occurs when authority is missing or ambiguous"
+      ]
+    }
+  ]
+}

@@ -3,3 +3,12 @@
 .obsidian/plugins/obsidian-local-rest-api/data.json
 08_Assets/
 09_Transcripts/
+
+# Public-safety quarantine (2026-08-07): raw comms + media stay local
+/videos/
+/*.zip
+00_Inbox/slack/
+_os/automation/incoming/
+12_Brain/queue/daily-communications-brain-*.jsonl
+12_Brain/01_Captures/Reports/
+12_Brain/05_Projects/2026-07-30 - Qualified pipeline recovery.md

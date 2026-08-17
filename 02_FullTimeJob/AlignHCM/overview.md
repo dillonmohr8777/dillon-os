@@ -1,5 +1,6 @@
 ---
 employer: Align HCM
+client_id: align-hcm
 website: alignhcm.com
 role: Digital Marketing Manager
 employment_type: full-time W2
@@ -52,3 +53,12 @@ Messaging emphasis: ongoing expert access, platform optimization, post-go-live s
 - Connected to Maher El-Abdallah on LinkedIn 2026-01-14.
 - Several active LinkedIn connection requests and outreach from Align HCM internal team (Rishi Dhariwal, Michael Morgan, Kathy Pacheco, Miranda Sarwan, Edjane Dela Paz).
 - Align HCM email address: dillon.mohr@alignhcm.com.
+
+## Strategy brain
+
+- [[Intelligence Overlay]]
+
+## Communication intelligence - 2026-08-01
+
+- The July 2026 SEO Growth Report was completed with organic growth, keyword wins, LinkedIn reach, content performance, audience quality, and August priorities. Verify the final artifact, recipients, and stakeholder review before treating it as externally delivered. [Source](gmail://message/19fb8f5b911dc22b)
+- Google confirmed the alignhcm.com Search Console property is associated with the Align HCM GA4 property. This does not prove current Analytics access; verify the live GA4 property picker before documenting the reporting route as active. [Source](gmail://message/19fb4ff8ea380ac1)

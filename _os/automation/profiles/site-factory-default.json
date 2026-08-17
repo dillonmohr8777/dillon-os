@@ -1,0 +1,14 @@
+{
+  "required_bots": [
+    "GPTBot",
+    "PerplexityBot",
+    "ClaudeBot",
+    "Google-Extended"
+  ],
+  "require_faq": true,
+  "require_json_ld": true,
+  "require_contact_signal": true,
+  "require_real_image": true,
+  "min_internal_links": 1,
+  "block_on_warnings": false
+}

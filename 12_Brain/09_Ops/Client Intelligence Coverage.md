@@ -3,8 +3,8 @@ note_type: system
 status: healthy
 generated: true
 generated_by: Update-ClientIntelligenceCoverage
-updated: 2026-08-07
-checked_at: 2026-08-07T12:14:05
+updated: 2026-08-17
+checked_at: 2026-08-17T08:34:42
 tags:
   - brain
   - client-intelligence

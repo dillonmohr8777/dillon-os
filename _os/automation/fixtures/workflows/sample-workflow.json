@@ -1,0 +1,24 @@
+{
+  "workflow_id": "fixture-landing-page",
+  "task": "Build and independently verify a fixture landing page",
+  "constraints": [
+    "No public deployment",
+    "No external send"
+  ],
+  "upstream_artifacts": [
+    "_os/automation/fixtures/sites/healthy/index.html"
+  ],
+  "maker_id": "fixture-maker",
+  "checker_id": "fixture-checker",
+  "artifact_paths": [
+    "_os/automation/fixtures/sites/healthy/index.html"
+  ],
+  "acceptance_tests": [
+    "Artifact exists and is hashable",
+    "AEO and trust gate passes"
+  ],
+  "rollback": "Discard the fixture run record and retain the original fixture.",
+  "human_gate": true,
+  "budget_tokens": 12000,
+  "timeout_seconds": 900
+}

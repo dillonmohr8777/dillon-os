@@ -1,0 +1,3 @@
+{"ts":"2026-07-30T06:18:31.407Z","automation_id":"aeo-trust-gate","action":"evaluated","status":"pass","site_dir":"_os\\automation\\fixtures\\sites\\aeo-healthy","critical_failures":[]}
+{"ts":"2026-07-30T06:18:31.481Z","automation_id":"aeo-trust-gate","action":"evaluated","status":"fail","site_dir":"_os\\automation\\fixtures\\sites\\aeo-broken","critical_failures":["html-lang","title","meta-description","canonical","viewport","single-h1","faq","json-ld","real-images","contact-signal","robots-ai-access","internal-links","placeholder-copy"]}
+{"ts":"2026-07-30T06:20:04.261Z","automation_id":"aeo-trust-gate","action":"evaluated","status":"pass","site_dir":"_os\\automation\\fixtures\\sites\\aeo-healthy","critical_failures":[]}

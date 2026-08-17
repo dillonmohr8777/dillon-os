@@ -1,0 +1,61 @@
+{
+  "run_id": "RUN-2026-07-30-0C310011",
+  "workflow_id": "fixture-landing-page",
+  "task": "Build and independently verify a fixture landing page",
+  "constraints": [
+    "No public deployment",
+    "No external send"
+  ],
+  "upstream_artifacts": [
+    "_os/automation/fixtures/sites/healthy/index.html"
+  ],
+  "maker_id": "fixture-maker",
+  "checker_id": "fixture-checker",
+  "artifact_paths": [
+    "_os/automation/fixtures/sites/healthy/index.html"
+  ],
+  "acceptance_tests": [
+    "Artifact exists and is hashable",
+    "AEO and trust gate passes"
+  ],
+  "rollback": "Discard the fixture run record and retain the original fixture.",
+  "human_gate": true,
+  "budget_tokens": 12000,
+  "timeout_seconds": 900,
+  "status": "checker_passed",
+  "started_at": "2026-07-30T06:18:31.086Z",
+  "updated_at": "2026-07-30T06:18:31.270Z",
+  "maker_evidence": {
+    "maker_id": "fixture-maker",
+    "recorded_at": "2026-07-30T06:18:31.203Z",
+    "summary": "Fixture artifact is present and ready for independent review.",
+    "command_results": [
+      {
+        "command": "node --test _os/automation/tests/*.test.js",
+        "status": "pass"
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "_os/automation/fixtures/sites/healthy/index.html",
+        "exists": true,
+        "sha256": "94cf74ebea54c0bca7c17bf22c43fdc8ceef9b6e3eeb6143898ec0205c696d65",
+        "bytes": 455,
+        "kind": "file"
+      }
+    ]
+  },
+  "checker_evidence": {
+    "checker_id": "fixture-checker",
+    "recorded_at": "2026-07-30T06:18:31.270Z",
+    "verdict": "pass",
+    "summary": "A separate fixture checker confirmed the expected artifact and acceptance contract.",
+    "test_results": [
+      {
+        "name": "artifact-exists",
+        "status": "pass"
+      }
+    ]
+  },
+  "approval": null
+}

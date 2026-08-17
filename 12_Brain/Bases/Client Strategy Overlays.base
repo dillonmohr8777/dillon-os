@@ -1,0 +1,96 @@
+filters:
+  and:
+    - 'note_type == "client_intelligence"'
+    - 'status == "active"'
+properties:
+  file.name:
+    displayName: Intelligence overlay
+  client:
+    displayName: Client
+  relationship:
+    displayName: Relationship
+  division:
+    displayName: Division
+  intelligence_maturity:
+    displayName: Maturity
+  evidence_as_of:
+    displayName: Evidence as of
+  verification_status:
+    displayName: Verification
+  keyword_state:
+    displayName: Keywords
+  aeo_geo_state:
+    displayName: AEO/GEO
+  pipeline_state:
+    displayName: Pipeline
+  reporting_state:
+    displayName: Reporting
+  workflow_state:
+    displayName: Workflow
+  priority:
+    displayName: Priority
+  next_action:
+    displayName: Next action
+  review_on:
+    displayName: Review
+views:
+  - type: table
+    name: Active Portfolio Intelligence
+    order:
+      - client
+      - relationship
+      - division
+      - intelligence_maturity
+      - evidence_as_of
+      - verification_status
+      - priority
+      - next_action
+      - review_on
+  - type: table
+    name: Immediate Attention
+    filters:
+      and:
+        - 'priority == "high"'
+    order:
+      - client
+      - evidence_as_of
+      - keyword_state
+      - aeo_geo_state
+      - pipeline_state
+      - reporting_state
+      - next_action
+  - type: table
+    name: Search and AI Discovery
+    filters:
+      or:
+        - 'keyword_state != "not-applicable"'
+        - 'aeo_geo_state != "not-applicable"'
+    order:
+      - client
+      - keyword_state
+      - aeo_geo_state
+      - evidence_as_of
+      - next_action
+  - type: table
+    name: Pipeline Gaps
+    filters:
+      and:
+        - 'pipeline_state != "operational"'
+        - 'pipeline_state != "not-applicable"'
+    order:
+      - client
+      - pipeline_state
+      - reporting_state
+      - evidence_as_of
+      - next_action
+  - type: table
+    name: Review Due
+    filters:
+      and:
+        - review_on
+        - 'review_on <= today() + "14d"'
+    order:
+      - client
+      - review_on
+      - verification_status
+      - next_action

@@ -1,0 +1,49 @@
+{
+  "name": "report-brain-ingest",
+  "pattern": "sequential",
+  "workflow_id": "report-brain-ingest",
+  "purpose": "Archive every finalized weekly and monthly report in the Obsidian brain without changing canonical client truth or authorizing delivery.",
+  "steps": [
+    {
+      "id": "resolve_report",
+      "task": "Resolve the report to one exact cadence, period, canonical client route, client-facing artifact, verification state, and canonical source path.",
+      "constraints": [
+        "weekly and monthly reports only",
+        "one exact client route per report",
+        "finalized client-facing artifact only",
+        "do not infer delivery status"
+      ],
+      "next": "validate_envelope"
+    },
+    {
+      "id": "validate_envelope",
+      "task": "Validate the report manifest, allowed source root, existing vault client note, artifact extension, date range, and idempotency key.",
+      "constraints": [
+        "fail closed on ambiguous routes",
+        "reject sources outside approved reporting roots",
+        "never ingest raw data exports or secret-bearing files"
+      ],
+      "next": "archive"
+    },
+    {
+      "id": "archive",
+      "task": "Copy the report artifact into immutable brain captures and write a connected review note with canonical provenance and a SHA-256 integrity hash.",
+      "constraints": [
+        "do not overwrite a different artifact",
+        "preserve canonical client-operations source",
+        "no external delivery"
+      ],
+      "next": "verify_and_compile"
+    },
+    {
+      "id": "verify_and_compile",
+      "task": "Read back hashes, refresh maps and health, and confirm the report appears in the Report Archive and client backlinks.",
+      "constraints": [
+        "do not claim Obsidian Sync without current evidence",
+        "report failures and ambiguous routes",
+        "keep routine success quiet in scheduled runs"
+      ],
+      "next": null
+    }
+  ]
+}

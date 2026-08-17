@@ -1,53 +1,56 @@
 {
-  "version": 1,
-  "description": "Maps M360 reporting clients to vault paths and JSON data file conventions. Used by build-report.js workflow.",
+  "version": 2,
+  "last_updated": "2026-07-12",
+  "description": "Current paid-media and reporting clients only. Paths resolve to the active client roster.",
   "clients": [
-    {
-      "slug": "bar-crawl-usa",
-      "name": "Bar Crawl USA",
-      "tier": "m360",
-      "overview": "01_Clients/Bar Crawl USA/overview.md",
-      "googleAdsCustomerId": "435-710-2897",
-      "dataPattern": "_os/reporting/data/bar-crawl-usa-{period}.json",
-      "sampleData": "_os/reporting/data/bar-crawl-usa-2026-06.json",
-      "guardrails": "11_Agents/Google Ads Agent.md"
-    },
-    {
-      "slug": "link-eze",
-      "name": "LinkEZE",
-      "tier": "m360",
-      "overview": "01_Clients/Link Eze/overview.md",
-      "googleAdsCustomerId": "809-600-6448",
-      "dataPattern": "_os/reporting/data/link-eze-{period}.json"
-    },
     {
       "slug": "kimberly-james-bridal",
       "name": "Kimberly James Bridal",
-      "tier": "m360",
+      "status": "active_confirmed",
       "overview": "01_Clients/Kimberly James Bridal/overview.md",
-      "googleAdsCustomerId": "814-550-6229",
       "dataPattern": "_os/reporting/data/kjb-{period}.json"
     },
     {
-      "slug": "shadow-hvac",
-      "name": "Shadow HVAC",
-      "tier": "m360",
-      "overview": "01_Clients/Shadow HVAC/overview.md",
-      "dataPattern": "_os/reporting/data/shadow-hvac-{period}.json"
-    },
-    {
       "slug": "omega-landscaping",
-      "name": "Omega Landscaping",
-      "tier": "m360",
+      "name": "Omega Landscaping & Concrete",
+      "status": "active_confirmed",
       "overview": "01_Clients/Omega Landscaping/overview.md",
       "dataPattern": "_os/reporting/data/omega-landscaping-{period}.json"
     },
     {
-      "slug": "fresh-blends-replenish",
-      "name": "Fresh Blends / Replenish",
-      "tier": "m360",
-      "overview": "01_Clients/Fresh Blends Replenish/overview.md",
+      "slug": "onsite-concrete",
+      "name": "On-Site Concrete & Landscape",
+      "status": "active_confirmed",
+      "overview": "01_Clients/Onsite Concrete/overview.md",
+      "dataPattern": "_os/reporting/data/onsite-concrete-{period}.json"
+    },
+    {
+      "slug": "shadow-hvac",
+      "name": "Shadow Heating & Cooling",
+      "status": "active_confirmed_source_check_required",
+      "overview": "01_Clients/Shadow HVAC/overview.md",
+      "dataPattern": "_os/reporting/data/shadow-hvac-{period}.json"
+    },
+    {
+      "slug": "replenish",
+      "name": "Replenish",
+      "status": "active_fifth_slot_confirmation_required",
+      "overview": "01_Clients/Replenish/overview.md",
       "dataPattern": "_os/reporting/data/replenish-{period}.json"
+    },
+    {
+      "slug": "fagan-painting",
+      "name": "Fagan Painting",
+      "status": "active_pre_scale",
+      "overview": "01_Clients/Fagan Painting/overview.md",
+      "dataPattern": "_os/reporting/data/fagan-painting-{period}.json"
+    },
+    {
+      "slug": "capsule-and-tonic",
+      "name": "Capsule & Tonic",
+      "status": "active_measurement_risk",
+      "overview": "01_Clients/Capsule & Tonic/overview.md",
+      "dataPattern": "_os/reporting/data/capsule-and-tonic-{period}.json"
     }
   ]
 }

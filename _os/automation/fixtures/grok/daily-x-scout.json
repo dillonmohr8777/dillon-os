@@ -1,0 +1,35 @@
+{
+  "automation": "Daily X Template & Workflow Scout",
+  "run_title": "Agent workflow and design tools",
+  "run_at": "2026-07-30T07:15:00-04:00",
+  "source_url": "https://grok.com/automations",
+  "coverage": "100 non-ad posts reviewed; 14 relevant; 2026-07-29T15:00:00-04:00 through 2026-07-30T07:00:00-04:00",
+  "verification_status": "partial",
+  "content": "A bounded fixture for validating the Grok-to-Obsidian bridge. External claims in a real run require source URLs and an independent verifier.",
+  "candidates": [
+    {
+      "name": "Fixture documentation tool",
+      "decision": "sandbox-test",
+      "why": "May reduce stale API usage during coding.",
+      "expected_benefit": "Fewer implementation retries caused by outdated documentation.",
+      "source_urls": [
+        "https://example.com/fixture-doc-tool"
+      ],
+      "acceptance_test": "Complete one version-sensitive implementation task with and without the tool and compare factual errors.",
+      "independent_checker": "Deterministic test suite plus a different model",
+      "rollback": "Remove the tool registration and restore the baseline run record.",
+      "human_gate": "Dillon approves promotion after the checker passes.",
+      "risk": "low",
+      "overlap": "Compare with OpenAI Developer Docs and existing Cursor documentation tools."
+    },
+    {
+      "name": "Fixture duplicate crawler",
+      "decision": "reject",
+      "why": "Duplicates Firecrawl.",
+      "expected_benefit": "None beyond the installed crawler.",
+      "source_urls": [
+        "https://example.com/duplicate-crawler"
+      ]
+    }
+  ]
+}

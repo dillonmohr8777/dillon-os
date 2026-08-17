@@ -1,0 +1,19 @@
+---
+description: Dillon OS second-brain context, memory, and evidence rules
+alwaysApply: true
+---
+
+# Second-brain rules
+
+- Start at `INDEX.md`, then read `System/operating-status.md`,
+  `System/approval-queue.md`, and `12_Brain/09_Ops/AGENT_PROTOCOL.md`.
+- Search first and follow links. Do not sweep the whole vault into context.
+- Keep client truth in `01_Clients/`. Use `12_Brain/` for captures, entities,
+  concepts, decisions, projects, research, reviews, and memory.
+- Captures are immutable receipts. Compiled notes must carry `source_refs`.
+- Record durable decisions, corrections, and reusable lessons; do not record
+  secrets or routine chatter.
+- Use the two-output rule: deliver the requested artifact and make the smallest
+  useful local memory update when durable knowledge was created.
+- Run `System/scripts/Test-SecondBrain.ps1` before reporting substantive vault
+  work complete.

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/aeo-trust-profile",
+  "title": "AEOTrustProfile",
+  "type": "object",
+  "properties": {
+    "required_bots": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "require_faq": { "type": "boolean" },
+    "require_json_ld": { "type": "boolean" },
+    "require_contact_signal": { "type": "boolean" },
+    "require_real_image": { "type": "boolean" },
+    "min_internal_links": { "type": "integer", "minimum": 0 },
+    "block_on_warnings": { "type": "boolean" },
+    "expected_business": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

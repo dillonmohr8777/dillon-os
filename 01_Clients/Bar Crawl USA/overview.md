@@ -1,34 +1,35 @@
-﻿---
+---
 client: Bar Crawl USA
+client_id: bar-crawl-usa
 website: barcrawlusa.com
-monthly_fee: 950
 role: Account Manager
 division: Momentum 360
-start_date: 2026-02-16
 status: active
-contact_name: Andy Zirger
-contact_email: info@barcrawlusa.com
-cc_list: []
-last_touched: 2026-07-12
-next_action: Resolve 2 disapproved ads (Halloween/Fall Cocktail Crawl language flagged) and confirm Soulard budget pacing
-due: 2026-04-25
-tags: [client, momentum360, google-ads, events, pmax]
+workstream: seo
+last_touched: 2026-07-11
+next_action: Complete QA and cleanup for the confirmed Boos & Booze city and event pages and repair the current-event hub listing.
+due: 2026-07-15
+tags: [client, momentum360, wordpress, seo, events]
 ---
 
 # Bar Crawl USA
 
-Primary account for a multi-city bar crawl events business. Managed end-to-end on Google Ads Search + Performance Max across 9+ cities. Taco & Tequila event series is the current driver â€” first wave April 25, second wave May 2.
+Current work is WordPress SEO against the live confirmed-event inventory. The July pass covers titles, meta descriptions, quick facts, FAQs, internal links, schema, and the event-hub listing.
 
-## Scope
-- Google Ads Search and Performance Max, full account management (keyword research, ad copy from approved library, bid strategy, optimization).
-- 9+ PMax city campaigns built via Claude-in-Chrome automation: Greenville SC, Sarasota FL, Lawrenceville GA, Portland ME, Indianapolis, Chattanooga, Duluth GA, Soulard (St. Louis), and others. Pre-existing Greenville and Indianapolis required verification.
-- 20-city Taco & Tequila landing page package delivered as .docx, plus React-based WordPress REST API publisher that clones Elementor template (Page ID 15281, ATL Beltline) and auto-publishes.
-- Full paid media system: Meta Ads, Google Search RSA, PMax, email, SMS for the 9-city April 25 event series.
-- Client-facing HTML performance reports under Momentum 360 branding.
+## Current guardrails
 
-## Gmail intel (through 2026-04-15)
-- 2026-04-15: URGENT. 2 Google Ads disapproved on Halloween / Fall Cocktail Crawl emails (forwarded by Andy). Reply sent saying none of those should have launched, will investigate.
-- 2026-04-14: Earlier disapproval batch of 4 assets. Caroline Zirger (events@barcrawl-usa.com) forwarded.
-- 2026-04-13: Sent PMax update "53 Tickets, All April 25 Cities Live, May 2 Launching Tomorrow." Andy flagged runaway $54 day spend on Soulard â€” traced to Max Conversions running without a tCPA. Patched. Andy asked to cap Soulard ~$15-20/day so the final week isn't the biggest.
-- All PMax budgets sit at $14.25/day, Maximize Conversions, no audience signals.
-- Google Ads account ID: 435-710-2897.
+- Use the live site as source of truth.
+- Work only on confirmed current events, especially Boos & Booze.
+- Do not change ticket flows, checkout, widgets, dates, pricing, or source data.
+- No ad activity is assumed from the current evidence.
+
+## Strategy brain
+
+- [[Client Intelligence Overlay]]
+
+## Communication intelligence - 2026-08-01
+
+- The Bubbles and Bites brunch-page social thumbnail still required correction; completion has not been verified.
+- August scope remains ten existing-page SEO updates. No August ad launch is assumed.
+- July invoice basis was confirmed as $450 for existing-page on-page SEO, with no ads or new pages included; invoice delivery and payment remain unverified.
+- Sources: [thumbnail thread](gmail://message/19fb51c44807bb77), [July scope and amount](https://momentum3d.slack.com/archives/C0AEGE1V5KR/p1785514275460439)

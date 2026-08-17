@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/report-run",
+  "title": "ReportRunEnvelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["batch_id", "generated_at", "reports"],
+  "properties": {
+    "batch_id": { "type": "string", "minLength": 8, "maxLength": 120 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "reports": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "report_id",
+          "cadence",
+          "title",
+          "period_start",
+          "period_end",
+          "client",
+          "artifact"
+        ],
+        "properties": {
+          "report_id": { "type": "string", "minLength": 3, "maxLength": 160 },
+          "cadence": { "enum": ["weekly", "monthly"] },
+          "title": { "type": "string", "minLength": 3, "maxLength": 240 },
+          "period_start": { "type": "string", "format": "date" },
+          "period_end": { "type": "string", "format": "date" },
+          "generated_at": { "type": "string", "format": "date-time" },
+          "verification_status": {
+            "enum": ["verified", "partial", "unverified", "disputed"]
+          },
+          "delivery_status": { "type": "string", "maxLength": 80 },
+          "summary": { "type": "string", "maxLength": 1200 },
+          "source_refs": {
+            "type": "array",
+            "maxItems": 20,
+            "items": { "type": "string", "maxLength": 1000 }
+          },
+          "client": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "name", "vault_note"],
+            "properties": {
+              "id": { "type": "string", "minLength": 2, "maxLength": 120 },
+              "name": { "type": "string", "minLength": 2, "maxLength": 180 },
+              "vault_note": { "type": "string", "minLength": 4, "maxLength": 500 }
+            }
+          },
+          "artifact": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path"],
+            "properties": {
+              "path": { "type": "string", "minLength": 4, "maxLength": 1000 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

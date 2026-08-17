@@ -1,0 +1,14 @@
+version = 1
+id = "momentum-hubspot-night-pulse"
+kind = "cron"
+name = "Momentum HubSpot Night Pulse"
+prompt = "Momentum 360 HubSpot Night Pulse. Work only in C:\\Users\\dillo\\Documents\\Codex\\2026-07-08\\we-made-u-a-master-ochesta. Acquire lease hubspot-night with C:\\Users\\dillo\\.codex\\tools\\Set-OrchestratorLease.ps1 using a 55 minute TTL and release it in a finalizer. First call HubSpot get_user_details. Stop and write blocked:needs-reauth unless accountId is exactly 50612503, the Momentum 360 portal authorized by Jason Fallon. Never read or report Align HCM data for this workflow. If valid, remain read-only and check new lead assignment, source/form/CallRail sync, critical pipeline changes, and deals inactive 7 days. Consolidate non-urgent findings for the morning board. Write a timestamped JSON artifact plus latest.md under outputs/automation-runs/hubspot-pulse/YYYY-MM-DD/. Only surface a human alert for a verified urgent exception or blocker. Do not mutate CRM records/properties/workflows, send messages, use shared passwords, or enter 2FA."
+status = "PAUSED"
+rrule = "RRULE:FREQ=DAILY;BYHOUR=20,21,22,23,0,1,2,3,4,5,6;BYMINUTE=0"
+model = "gpt-5.3-codex-spark"
+reasoning_effort = "low"
+execution_environment = "local"
+target = { type = "project", project_id = "c3eeaa32-cbe8-4ad8-881e-ff992cb203c6" }
+cwds = ["C:\\Users\\dillo\\Documents\\Codex\\2026-07-08\\we-made-u-a-master-ochesta"]
+created_at = 1783637414201
+updated_at = 1783637490279

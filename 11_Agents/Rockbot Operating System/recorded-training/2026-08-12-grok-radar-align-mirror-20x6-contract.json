@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "workflowId": "grok-radar-align-mirror-20x6-20260812",
+  "runId": "20260812-103320",
+  "status": "authorized-local",
+  "humanAuthority": "Dillon Mohr",
+  "orchestrator": "Codex acting as Marketing Chief",
+  "parentBot": "Prospect Radar Website Factory",
+  "task": {
+    "sites": 20,
+    "generatedImageMastersPerSite": 6,
+    "generatedImageMastersTotal": 120,
+    "imageProducer": "GrokBot native image generation only",
+    "structuralReference": "Align HCM Industry Solutions and Public Sector detail pages",
+    "mode": "mirror",
+    "outputVisibility": "private-local-noindex"
+  },
+  "selection": {
+    "graderVerdict": "rebuild",
+    "globalPriorBuildMatchesRequired": 0,
+    "officialSourceRequired": true,
+    "exactFirstPartyLogoRequired": true,
+    "factualSourceRequired": true,
+    "relaxationAllowed": false,
+    "rankBy": [
+      "current rebuild need/opportunity descending",
+      "site quality score ascending",
+      "normalized domain ascending"
+    ]
+  },
+  "images": {
+    "masterAspectRatio": "4:5",
+    "roles": [
+      "hero-mission",
+      "operational-system",
+      "material-detail",
+      "human-service",
+      "process-panorama",
+      "outcome-field"
+    ],
+    "mustBeTextFree": true,
+    "mustBeLogoFree": true,
+    "mustBeIndustryRelevant": true,
+    "mustUseEtchedGrainLanguage": true,
+    "stockAllowed": false,
+    "realClientImageryAllowed": false,
+    "priorGeneratedImageryAllowed": false,
+    "fallbackProviderAllowed": false,
+    "uniqueMasterHashesRequired": 120
+  },
+  "agents": [
+    {
+      "name": "web-product-builder",
+      "role": "maker",
+      "capabilityMode": "all",
+      "isolation": "worktree",
+      "mayEdit": true
+    },
+    {
+      "name": "design-art-direction-critic",
+      "role": "visual evaluator",
+      "capabilityMode": "read-only",
+      "isolation": "same-worktree-read-only",
+      "mayEdit": false
+    },
+    {
+      "name": "independent-qa-release-critic",
+      "role": "final checker",
+      "capabilityMode": "read-only",
+      "isolation": "same-worktree-read-only",
+      "mayEdit": false
+    }
+  ],
+  "limits": {
+    "maxConcurrentSpecialists": 3,
+    "maxEvaluatorRevisionLoops": 2,
+    "recursiveDelegation": false
+  },
+  "worktree": {
+    "path": "C:\\Users\\dillo\\Documents\\Codex\\worktrees\\dillon-os-grok-radar-align-20260812-103320",
+    "base": "origin/main",
+    "detached": true,
+    "preserveCanonicalDirtyCheckout": true
+  },
+  "viewportChecks": [
+    "320x800",
+    "375x812",
+    "390x844",
+    "768x1024",
+    "1024x768",
+    "1440x1000"
+  ],
+  "requiredGates": [
+    "align-mirror-lock",
+    "untouched-selection-lock",
+    "grok-image-matrix-and-generation",
+    "twenty-local-builds",
+    "maker-inspection-and-repair",
+    "read-only-design-critic",
+    "independent-release-critic"
+  ],
+  "release": {
+    "minOverallDesignScore": 8,
+    "minCriticalCategoryScore": 7,
+    "impeccableDetectorMustPass": true,
+    "allSitesNoindex": true,
+    "allSitesNofollow": true,
+    "mailReady": "hold",
+    "externalActionAttempted": "none"
+  },
+  "prohibitedActions": [
+    "deploy",
+    "publish",
+    "send",
+    "post",
+    "contact prospect",
+    "mutate CRM",
+    "mutate account",
+    "spend",
+    "write canonical queue",
+    "commit",
+    "push",
+    "merge",
+    "reset dirty checkout",
+    "clean dirty checkout",
+    "stash dirty checkout"
+  ],
+  "workOrder": "C:\\Users\\dillo\\Documents\\Codex\\projects\\agent-vault\\notes\\inbox\\2026-08-12-grok-radar-align-mirror-20x6-work-order.md"
+}

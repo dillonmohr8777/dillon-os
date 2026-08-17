@@ -1,0 +1,14 @@
+version = 1
+id = "daily-morning-orchestrator-dry-board"
+kind = "cron"
+name = "Daily Morning Full Orchestra"
+prompt = "Daily Morning Orchestrator for Dillon. Work only in C:\\Users\\dillo\\Documents\\Codex\\2026-07-08\\we-made-u-a-master-ochesta. Read C:\\Users\\dillo\\.codex\\skills\\morning-orchestrator\\SKILL.md, orchestrator.config.json, skill-map.json, outputs/always-on-orchestrator/*, and the previous dated run before acting. Start connector-first discovery across Slack, Gmail, Drive, GitHub, HubSpot, and available reporting sources. Use live evidence over memory. Continue the authorized paginated Slack history backfill, update only derived operator/workflow facts, and never retain raw secrets, invite links, tokens, passwords, cookies, recovery codes, or OTPs. Fan out bounded workers across identity/comms, ads, design, frontend, HubSpot/CRM, web/repo, SEO/AEO, reporting, and research. Use at most 4 concurrent model agents in the current runtime and queue remaining lanes. Use account_key leases. Browser production capacity is 5 authenticated Chrome plus 1 Codex in-app worker; use connectors first and never move authentication between profiles. Build or update outputs/automation-runs/morning-orchestrator/YYYY-MM-DD/run-state.json, approval-board.md, tier1-batch.json, tier2-queue.md, evidence-log.md, and ledger-updates.jsonl. Preserve older run directories. Limit the board to the top 8 cards, concise evidence, and one next action per card. If sources are blocked, still write all artifacts and label degraded:cached. Autonomously read, analyze, verify, draft, build isolated worktrees, test, produce wireframes, and create local/private previews. Do not send Gmail or Slack, push/merge repos, publish/deploy production, mutate HubSpot, publish or change ads/budgets/bids/billing, change permissions, handle credentials, or enter 2FA without a live explicit yes. Timeout never means approval. Return the board ready for the 08:00 America/New_York notification."
+status = "PAUSED"
+rrule = "DTSTART;TZID=America/New_York:20260710T070000\nRRULE:FREQ=DAILY"
+model = "gpt-5.3-codex-spark"
+reasoning_effort = "medium"
+execution_environment = "local"
+target = { type = "project", project_id = "c3eeaa32-cbe8-4ad8-881e-ff992cb203c6" }
+cwds = ["C:\\Users\\dillo\\Documents\\Codex\\2026-07-08\\we-made-u-a-master-ochesta"]
+created_at = 1783561398138
+updated_at = 1783639261386

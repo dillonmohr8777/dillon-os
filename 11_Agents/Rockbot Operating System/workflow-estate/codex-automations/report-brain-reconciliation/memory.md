@@ -1,0 +1,95 @@
+# Report Brain Reconciliation
+- last_run_utc: 2026-08-03T23:02:00Z
+- manifests_processed: 2
+- batch_ids:
+  - M360-JULY-2026-MONTHLY-REPORTS
+  - M360-JULY-2026-MONTHLY-LEAD-ACCOUNTING-R1
+- ingested_reports: 33
+- verification:
+  - Update-SecondBrainMaps.ps1: success
+  - Update-KnowledgeCoverage.ps1: success
+  - Test-SecondBrain.ps1: warning(empty_scratch_base) + warning_count 1
+  - Update-SecondBrainHealth.ps1: success (status needs-review)
+- integrity_checks:
+  - archives present for all ingested records
+  - copied-artefact sha256 verified against state
+  - review-note client backlink resolved
+  - review/archive paths valid
+- note: client backlink in review notes is wikilink form without `.md` suffix
+- last_run_utc: 2026-08-04T23:01:15.522Z
+- manifests_processed: 2
+- batch_ids:
+  - M360-JULY-2026-MONTHLY-REPORTS
+  - M360-JULY-2026-MONTHLY-LEAD-ACCOUNTING-R1
+- ingested_reports: 0
+- verification:
+  - skipped: no new ingests (all manifests duplicate-only)
+- summary: 2026-08-04 run completed with validate-only + ingest on 2 manifests; both reported 11 duplicates and 0 fresh ingests; no integrity follow-ups required.
+- run_utc: 2026-08-05T19:01:59.6023739-04:00
+- manifests_found: 2
+- manifests_processed: 2
+- result: no_new_ingests (all duplicate)
+- validation: validate-only succeeded for both manifests
+- ingests: 0
+- post_ingest_checks_skipped: true (no new ingest)
+- notes: fresh_blends_and_replenish routes remained distinct
+
+- run_utc: 2026-08-08T19:12:14.000Z
+- manifests_found: 2
+- manifests_processed: 2
+- validation: validate-only succeeded for both manifests
+- ingests: 0
+- post_ingest_checks_skipped: true (no_new_ingests)
+- validation_summary:
+  - 2026-08-02-momentum-july-monthly-reports.json total=11 duplicates=11 batch=M360-JULY-2026-MONTHLY-REPORTS
+  - 2026-08-03-momentum-july-monthly-lead-accounting-revision.json total=11 duplicates=11 batch=M360-JULY-2026-MONTHLY-LEAD-ACCOUNTING-R1
+- notes: Replenish and Fresh Blends remained separate in duplicate status checks; no failures or ambiguous routes encountered.
+- run_utc: 2026-08-09T19:01:13.4089861-04:00
+- manifests_found: 2
+- manifests_processed: 2
+- validation: pass
+- ingests: 0
+- duplicates: 22
+- post_ingest_checks_skipped: true (no new ingests)
+- validation_notes:
+  - 2026-08-02-momentum-july-monthly-reports.json total=11 duplicates=11 batch=M360-JULY-2026-MONTHLY-REPORTS
+  - 2026-08-03-momentum-july-monthly-lead-accounting-revision.json total=11 duplicates=11 batch=M360-JULY-2026-MONTHLY-LEAD-ACCOUNTING-R1
+- follow_up_required: none
+- notes: Fresh Blends and Replenish remained distinct and no ambiguous routes or schema-source mismatches observed
+- run_utc: ' + $run + '
+- manifests_found: 3
+- manifests_processed: 3
+- validation_summary:
+  - 2026-08-10-momentum-weekly-client-reports.json status=validated + ingested=4
+  - 2026-08-03-momentum-july-monthly-lead-accounting-revision.json status=validated + duplicates=11
+  - 2026-08-02-momentum-july-monthly-reports.json status=validated + duplicates=11
+- ingests: 4
+- duplicates: 22
+- verification:
+  - Update-SecondBrainMaps.ps1: success
+  - Update-KnowledgeCoverage.ps1: success
+  - Test-SecondBrain.ps1: warning(empty_scratch_base) + warning_count 1
+  - Update-SecondBrainHealth.ps1: status needs-review
+- integrity_checks:
+  - 4 hashed weekly archive files in 12_Brain/01_Captures/Reports/2026-08 validated
+  - 4 client review notes in 12_Brain/07_Reviews/Reports/2026-08 verified for client backlink
+- obsidian_sync_cli: status=syncing (vault: Dillon Mohr)
+- result: completed (no failures, ambiguities, or integrity mismatches)
+- run_utc: 2026-08-11T19:02:03.1548929-04:00
+  - manifests_found: 3
+  - validation_ok: 3
+  - ingests_run: 3
+  - newly_ingested_reports: 2
+  - new_batch: M360-WEEKLY-2026-08-03-2026-08-09
+  - verification:
+    - Update-SecondBrainMaps.ps1: success
+    - Update-KnowledgeCoverage.ps1: success
+    - Test-SecondBrain.ps1: warning(empty_scratch_base)+1
+    - Update-SecondBrainHealth.ps1: success (status needs-review)
+    - obsidian sync:cli status=error
+  - integrity_checks:
+    - newly_ingested hash verified for omega-landscaping
+    - newly_ingested hash verified for onsite-concrete-landscape
+    - client backlink resolves for both review files
+  - fresh_blends_and_replenish: separate
+

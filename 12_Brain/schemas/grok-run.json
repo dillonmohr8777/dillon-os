@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/grok-run",
+  "title": "GrokRunEnvelope",
+  "type": "object",
+  "required": ["automation", "run_title", "run_at", "content"],
+  "properties": {
+    "automation": { "type": "string", "minLength": 1 },
+    "run_title": { "type": "string", "minLength": 1 },
+    "run_at": { "type": "string", "minLength": 10 },
+    "source_url": { "type": "string" },
+    "coverage": { "type": "string" },
+    "verification_status": {
+      "type": "string",
+      "enum": ["verified", "partial", "unverified", "disputed"]
+    },
+    "content": { "type": "string", "minLength": 1 },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "decision"],
+        "properties": {
+          "name": { "type": "string" },
+          "decision": {
+            "type": "string",
+            "enum": ["save-to-library", "sandbox-test", "watch", "reject"]
+          },
+          "source_urls": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "acceptance_test": { "type": "string" },
+          "independent_checker": { "type": "string" },
+          "rollback": { "type": "string" },
+          "human_gate": { "type": "string" }
+        }
+      }
+    }
+  }
+}

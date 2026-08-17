@@ -1,36 +1,22 @@
-﻿---
+---
 client: Shadow Heating & Cooling
+client_id: shadow-heating-cooling
 website: shadowheatingandcooling.com
-monthly_fee: 250
 role: Account Manager
 division: Momentum 360
-start_date: 2026-02-13
 status: active
-contact_name: Mike
-contact_email: shadowhvac1@gmail.com
-cc_list: [sean@needmomentum.com]
 last_touched: 2026-07-12
-next_action: Confirm LSA background check is fully cleared and Shadow is live; resume GBP post cadence check
-due: none
-tags: [client, momentum360, hvac, local-seo, lsa]
+next_action: Restore live Meta visibility, verify current-week lead delivery, and reconcile the website deployment and reporting status.
+due: 2026-07-15
+tags: [client, momentum360, meta-ads, website, hvac]
 ---
 
 # Shadow Heating & Cooling
 
-Residential HVAC contractor in Hampshire, IL. Weekly GBP content cadence plus Google Ads Search and Local Services Ads under Momentum 360.
+Current work includes Meta AC lead generation, lead routing, performance reporting, and the client website.
 
-## Scope
-- 4 Google Business Profile posts per week, hyper-localized to service areas. Seasonal topics (furnace tune-ups, AC prep, emergency repair, replacement) with neighborhood-level references.
-- Google Ads Search for HVAC service queries in the service territory.
-- Local Services Ads setup with Google verification and background check.
-- Ongoing monitoring, budget management, performance reporting.
+## Current truth
 
-## Gmail intel
-- 2026-02-13: Initial LSA + Optimization checklist sent to shadowhvac1@gmail.com (attn Mike), CC Sean Boyle.
-- 2026-02-26 through 2026-03-02: Extended back-and-forth with Yetunde Sotimirin (yetundes@xwf.google.com, Google LSA Managed Partners) to reset the background check on Evident portal. Reset confirmed 2026-03-02.
-- Gmail traffic goes quiet after 2026-03-02 â€” need to verify whether Shadow is fully live on LSA and whether the GBP content cadence is being delivered and reported on.
-
-## Open items
-- Confirm LSA listing is active and receiving impressions post-reset.
-- Verify 4-per-week GBP cadence is still hitting cleanly.
-- Send a March / April performance snapshot to Mike.
+- The June paid-media and completed-work report was sent.
+- Current-week dashboard inclusion is blocked until live delivery and Meta access are verified.
+- Do not increase spend or publish the website without approval.

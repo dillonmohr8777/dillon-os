@@ -10,10 +10,7 @@ tags: [agent-memory, bridge-software, claude, codex]
 
 ## Identity guardrail
 
-Never confuse this project with [[../Bridge of Hope OTC|Bridge of Hope OTC]].
-
-- **Bridge Software Development** = Tori's cannabis-industry professional-network web application.
-- **Bridge of Hope OTC** = an unrelated substance-use/mental-health SEO content client.
+Bridge Software Development is Tori's cannabis-industry professional-network web application. Do not substitute any other project with a similar name.
 
 If the repository `dillonmohr8777/bridge-discovery-prototype` is not attached or readable, stop. Do not search memory for a substitute project named Bridge.
 
@@ -48,12 +45,12 @@ Codex then built and verified the discovery prototype and meeting package, creat
 
 ## Claude confusion incident
 
-Claude was opened in a generic `Client meeting prep` context and searched Dillon OS memory. It found `Bridge of Hope OTC`, treated that as the project, and began asking SEO/proposal questions. Dillon wrote, “Bridge software development no.” Claude interpreted the sentence as “no software development” instead of “No, I mean Bridge software development.”
+Claude was opened in a generic `Client meeting prep` context and substituted an unrelated project with a similar name. The project identity was then clarified as Bridge Software Development.
 
 The repository was updated to prevent recurrence:
 
 - `CLAUDE.md` begins with a project identity check.
-- `README.md` states the project is not Bridge of Hope OTC or SEO.
+- `README.md` states that this is the software-development project, not an SEO engagement.
 - `CLAUDE_SESSION_PROMPT.md` requires repository proof and bans unrelated deliverable questions.
 
 ## Current build state

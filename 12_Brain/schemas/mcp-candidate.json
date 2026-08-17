@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/mcp-candidate",
+  "title": "McpCandidate",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "source_url",
+    "maintainer",
+    "license",
+    "transport",
+    "tools",
+    "permissions",
+    "network_destinations",
+    "secret_requirements",
+    "overlap",
+    "rollback",
+    "tests"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string", "pattern": "^https://" },
+    "remote_url": { "type": "string", "pattern": "^https://" },
+    "maintainer": { "type": "string", "minLength": 1 },
+    "license": { "type": "string", "minLength": 1 },
+    "transport": {
+      "type": "string",
+      "enum": ["stdio", "sse", "streamable-http"]
+    },
+    "tools": { "type": "array", "items": { "type": "string" } },
+    "permissions": { "type": "array", "items": { "type": "string" } },
+    "network_destinations": { "type": "array", "items": { "type": "string" } },
+    "secret_requirements": { "type": "array", "items": { "type": "string" } },
+    "overlap": { "type": "string", "minLength": 1 },
+    "rollback": { "type": "string", "minLength": 1 },
+    "tests": { "type": "object" }
+  }
+}

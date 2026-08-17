@@ -12,6 +12,12 @@ Orchestrates Dillon Company OS work across client delivery, revenue truth, autom
 4. Prefer local, reversible vault updates over external changes.
 5. Record evidence in `System/cursor-work-log.md` after substantive autonomous work.
 
+## Rockbot / Grok Bot knowledge
+
+The recorded Rockbot operating curriculum, routine manifest, workflow estate,
+verification receipts, training simulator, and evidence pack live at
+[[11_Agents/Rockbot Operating System/README|Rockbot/Grok Bot Knowledge Pack]].
+
 ## Delegations
 
 | Domain | Agent | Vault entry |

@@ -1,0 +1,124 @@
+{
+  "status": "pass",
+  "site_dir": "C:\\Users\\dillo\\repos\\dillon-os\\_os\\automation\\fixtures\\sites\\aeo-healthy",
+  "checked_at": "2026-07-30T06:20:04.259Z",
+  "checks": [
+    {
+      "id": "html-lang",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Language is en."
+    },
+    {
+      "id": "title",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Title length is 51."
+    },
+    {
+      "id": "meta-description",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Meta description should be specific and at least 70 characters."
+    },
+    {
+      "id": "canonical",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Canonical link is required."
+    },
+    {
+      "id": "viewport",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Viewport meta is required."
+    },
+    {
+      "id": "single-h1",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Expected one H1; found 1."
+    },
+    {
+      "id": "direct-answer",
+      "ok": true,
+      "severity": "critical",
+      "detail": "The first 300 words need a direct definition or answer block."
+    },
+    {
+      "id": "summary-structure",
+      "ok": true,
+      "severity": "warning",
+      "detail": "Add a scannable summary, list, or section structure."
+    },
+    {
+      "id": "faq",
+      "ok": true,
+      "severity": "critical",
+      "detail": "FAQ signals found: 2; FAQPage schema: true."
+    },
+    {
+      "id": "json-ld",
+      "ok": true,
+      "severity": "critical",
+      "detail": "JSON-LD blocks: 1; types: HVACBusiness, FAQPage, Question, Answer; parse errors: 0."
+    },
+    {
+      "id": "real-images",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Real image candidates: 1."
+    },
+    {
+      "id": "image-alt",
+      "ok": true,
+      "severity": "warning",
+      "detail": "1/1 real images have useful alt text."
+    },
+    {
+      "id": "contact-signal",
+      "ok": true,
+      "severity": "critical",
+      "detail": "A visible contact or conversion path is required."
+    },
+    {
+      "id": "nap-parity",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Expected business identity is present."
+    },
+    {
+      "id": "robots-ai-access",
+      "ok": true,
+      "severity": "critical",
+      "detail": "No required AI bot is explicitly blocked."
+    },
+    {
+      "id": "internal-links",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Internal links: 2; broken: none."
+    },
+    {
+      "id": "placeholder-copy",
+      "ok": true,
+      "severity": "critical",
+      "detail": "Placeholder copy must be removed."
+    }
+  ],
+  "critical_failures": [],
+  "warnings": [],
+  "metrics": {
+    "schema_types": [
+      "HVACBusiness",
+      "FAQPage",
+      "Question",
+      "Answer"
+    ],
+    "faq_questions": 2,
+    "real_images": 1,
+    "internal_links": 2
+  },
+  "profile_file": "C:\\Users\\dillo\\repos\\dillon-os\\_os\\automation\\profiles\\site-factory-default.json",
+  "report_file": "Daily-Briefs\\aeo-trust-report.md"
+}

@@ -1,20 +1,29 @@
 ---
-last_updated: 2026-04-15
+last_updated: 2026-07-12
 tags: [system, urgent]
 ---
 
-# Urgent Replies Needed
+# Urgent Client Work
 
-Updated by `gmail-to-vault-digest` daily at 7:00 AM.
+This file tracks current work, not April catch-up drafts.
 
-## Immediate (today/tomorrow)
-• **Bar Crawl USA** — Andy Zirger forwarded 2 ad disapprovals (Halloween / Fall Cocktail Crawl). Dillon responded 2026-04-15 saying he'd investigate. Owe him a resolution.
-• **NKCDC** — Mac checked in with Anthony 2026-04-15. Still no response from NKCDC. Launch blocked on Free Tax Prep page.
-• **Omega Landscaping** — John Belaska asked David for a Thursday meeting. David hasn't replied. Monitor — Dillon is CC'd, not the owner.
+## Immediate
+
+- KJB: finish the desktop FAQ image crop and responsive QA; reconcile appointment routing.
+- Fagan Painting: repair attribution across Meta Lead event, form, phone, and lead delivery before scale.
+- Shadow: restore live Meta visibility and verify current-week delivery.
+- Revive Systems: complete the urgent 48-hour lead-recovery brief.
 
 ## This week
-• **Commercial Cleaners Alliance** — Audit delivery of creatives committed 2026-04-08 (CCA + NexGen).
-• **Hardwood Artisan** — Nudge Dalton about card update ahead of the engagement pausing.
-• **Kimberly James Bridal** — Confirm Timeline page published and GA4/GSC indexing healthy.
-• **Fresh Blends / Replenish** — Verify launch fired and send first-week snapshot.
-• **Shadow HVAC** — Send Mike a catch-up report and confirm LSA is serving.
+
+- Bar Crawl USA: finish confirmed-event SEO and repair the current-event hub listing.
+- Onsite: run the allowlisted technical crawl and conversion-action audit.
+- Omega: reconcile call/form attribution and lead quality.
+- Replenish: verify store-level weekly reporting and confirm the recurring fifth dashboard slot.
+- Hope Wellness Center: complete request analysis and determine visual-resource needs.
+- VA Claims: reconcile the client prototype to the approved VACE design system.
+- Bridge: advance the Phase 1 implementation board and dependencies.
+
+## Boundary
+
+Drafting and internal QA may proceed. External replies, publishing, deployment, spend, and client-account changes require approval.

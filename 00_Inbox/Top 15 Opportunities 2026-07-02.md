@@ -29,7 +29,7 @@ Ranked by leverage against your three written targets: 2,000 book subscribers in
 ## Clients and Momentum 360
 
 ### 4. Guardrail Agent: make your compliance rules machine-enforceable
-• All five files in [[11_Agents]] (Master, Google Ads, SEO, Reporting, Web) are empty shells, and every client's Agent Memory file is a blank template.
+• All five files under [[11_Agents/Master Agent|the agent system]] (Master, Google Ads, SEO, Reporting, Web) were empty shells, and every client's Agent Memory file was a blank template.
 • Your history shows exactly why this matters: Bar Crawl ad disapprovals over alcohol language, the Soulard $54 runaway spend, the Presence-or-Interest bug on LinkEZE.
 • Fill each agent with the real rules (banned terms, Presence Only, tCPA guardrails, Replenish branding, KJB CC list) so every future launch gets a pre-flight check automatically.
 
@@ -58,7 +58,7 @@ Ranked by leverage against your three written targets: 2,000 book subscribers in
 ## Align HCM (full-time)
 
 ### 10. Build the SmartCare assessment and ROI calculator
-• The SmartCare website spec in [[02_FullTimeJob/AlignHCM]] calls for a maturity assessment tool and an FTE ROI calculator. Neither exists yet.
+• The SmartCare website spec in [[02_FullTimeJob/AlignHCM/overview|Align HCM's operating context]] calls for a maturity assessment tool and an FTE ROI calculator. Neither exists yet.
 • These are interactive lead-gen apps I can build end to end, and they're the strongest AEO/GEO assets in your HubSpot recommendation map from the June brief.
 • Also ready to move: the 10 drafted SEO blogs in `SEO/AlignHCM/Blogs/` need final polish and publishing.
 

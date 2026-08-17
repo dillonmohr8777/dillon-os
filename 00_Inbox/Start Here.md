@@ -28,7 +28,7 @@ Drop anything here. Process later. Move to the right folder when ready.
 1. Capture everything into **00_Inbox**
 2. Process inbox regularly — move notes to the right folder
 3. Use templates (Ctrl/Cmd + T) to create structured notes
-4. Link notes with `[[wikilinks]]` to build connections
+4. Link notes with Obsidian `wikilinks` to build connections
 5. Review your [[Dashboard]] daily
 
 ## Tips

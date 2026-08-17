@@ -1,17 +1,22 @@
 ---
-client: Tori
+client: Bridge Software
+client_id: bridge-software
 project: Bridge Software Development
 status: active-discovery
 confidentiality: private-nda
-github: https://github.com/dillonmohr8777/bridge-discovery-prototype
+github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
 updated: 2026-07-11
+last_touched: 2026-08-01
+next_action: TBD — needs human next action
+due: none
 ---
+
 
 # Bridge Software Development
 
 > [!danger] Project identity
-> This is Tori's **Bridge software-development project**: a cannabis-industry directory and professional-network web application. It is not [[Bridge of Hope OTC]], not an SEO audit, and not a generic client meeting-prep project.
+> This is Tori's **Bridge software-development project**: a cannabis-industry directory and professional-network web application. It is not an SEO audit or a generic client meeting-prep project.
 
 ## Source of truth
 
@@ -105,8 +110,16 @@ Leave with decisions on:
 - [[Meeting Prep - Tori]]
 - [[Brand Guidelines - Provisional]]
 - [[Source Audit]]
+- [[Client Intelligence Overlay]]
 - [[../../10_Sessions/Bridge Software Development - 2026-07-11|2026-07-11 build session]]
 
 ## Immediate next action
 
 Start a new Claude session with the GitHub repository explicitly attached. Paste `CLAUDE_SESSION_PROMPT.md`. Claude must prove it can read the repository before planning or editing.
+
+## Communication intelligence - 2026-08-01
+
+- Tori said the first prototype exceeded expectations and granted access to the review transcript; the feedback still needs full compilation.
+- Phase 1 was defined as a $5,000 milestone with Dillon's 20 percent share recorded as $1,000 for July. Later phases remain milestone-based over the stated 10-to-14-week timeline.
+- The project channel reported Phase 1 payment complete, but the receipt and commission ledger still require authorized financial reconciliation.
+- Sources: [Gmail thread](gmail://thread/19f8101afe21e7e8), [milestone terms](https://momentum3d.slack.com/archives/C0B1Y5XDQMA/p1785513601951799), [payment report](https://momentum3d.slack.com/archives/C0BGWRK03B2/p1785602474763089)

@@ -9,7 +9,12 @@ const { scoreProspect } = require('../lib/scorer');
 const { fromMapsIntake } = require('../lib/adapters/maps-prospect');
 const { fromIndeedIntake } = require('../lib/adapters/indeed-signal');
 const { analyzeHtml, runSentinel } = require('../lib/sentinel');
-const { repoPath } = require('../lib/fsutil');
+const { repoPath, todayISO } = require('../lib/fsutil');
+
+test('todayISO uses Dillon local date instead of UTC rollover', () => {
+  const utcAfterMidnight = new Date('2026-07-31T03:58:00.000Z');
+  assert.equal(todayISO(utcAfterMidnight, 'America/New_York'), '2026-07-30');
+});
 
 test('frontmatter parse + validate complete note', () => {
   const text = fs.readFileSync(repoPath('_os/automation/fixtures/clients/Fixture Client One.md'), 'utf8');

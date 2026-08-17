@@ -1,0 +1,60 @@
+filters:
+  and:
+    - 'note_type == "review"'
+    - or:
+        - 'review_kind == "weekly_report"'
+        - 'review_kind == "monthly_report"'
+properties:
+  file.name:
+    displayName: Report
+  client:
+    displayName: Client
+  review_kind:
+    displayName: Cadence
+  period_start:
+    displayName: Period start
+  period_end:
+    displayName: Period end
+  verification_status:
+    displayName: Verification
+  delivery_status:
+    displayName: Delivery
+  archived_artifact:
+    displayName: Artifact
+  updated:
+    displayName: Archived
+views:
+  - type: table
+    name: All Reports
+    order:
+      - file.name
+      - client
+      - review_kind
+      - period_start
+      - period_end
+      - verification_status
+      - delivery_status
+      - archived_artifact
+      - updated
+  - type: table
+    name: Monthly Reports
+    filters:
+      and:
+        - 'review_kind == "monthly_report"'
+    order:
+      - file.name
+      - client
+      - period_end
+      - verification_status
+      - archived_artifact
+  - type: table
+    name: Weekly Reports
+    filters:
+      and:
+        - 'review_kind == "weekly_report"'
+    order:
+      - file.name
+      - client
+      - period_end
+      - verification_status
+      - archived_artifact

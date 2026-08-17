@@ -1,0 +1,15 @@
+version = 1
+id = "align-hcm-dashboard-live-refresh"
+kind = "cron"
+name = "Align HCM dashboard live refresh"
+prompt = "Align HCM dashboard live refresh. Work only in C:\\Users\\dillo\\Documents\\Codex\\2026-07-17\\big-build-let-me-break-it\\work\\align-hcm-august-2026-content. This is a private repo. Fetch origin before every run. Until PR #3 is merged, use the feature branch that contains site-health-dashboard\\2026.html; after that branch is merged, use main. Never reset or discard unrelated working-tree changes.\n\nBefore any HubSpot operation, call hubspot_get_user_details. Stop and report blocked:wrong-portal unless accountId is exactly 242825734, and stop and report blocked:reauth if the response contains guidance or CONTACT/DEAL read access is unavailable. Use the current record-based tools hubspot_search_crm_objects and hubspot_search_owners, page until total is exhausted, and keep raw contact records private. Regenerate only site-health-dashboard\\data.js, site-health-dashboard\\leads-all.csv, and site-health-dashboard\\leads-2026.csv. Carry the outgoing KPI values into previous and ytd.previous with exact label keys. Scrub email addresses and phone numbers from every CSV field, preserve the exact six-column header, dedupe by hs_object_id, and keep newest-first ordering. Do not write raw records into logs, artifacts, commits, or chat.\n\nRun from site-health-dashboard: node verify-data.mjs, node --check data.js, and node --check app.js. If any check fails, do not commit or push. If all checks pass, commit exactly those three refresh files with message Refresh dashboard data (<Mon DD, YYYY> HubSpot pull) and push the active branch. Do not merge pull requests, change Netlify settings, send messages, publish content, or change HubSpot records. Report the commit SHA, portal ID, row counts, validation result, or the exact blocked condition."
+status = "ACTIVE"
+rrule = "RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;BYHOUR=7,13;BYMINUTE=0"
+model = "gpt-5.3-codex-spark"
+reasoning_effort = "low"
+notification_policy = "failed_runs_only"
+execution_environment = "local"
+target = { type = "project", project_id = "local-03046e22be7ca1d6e9c6745563ea0d3e" }
+cwds = ["C:\\Users\\dillo"]
+created_at = 1784304342434
+updated_at = 1784304370197

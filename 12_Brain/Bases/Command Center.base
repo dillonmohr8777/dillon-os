@@ -1,0 +1,74 @@
+properties:
+  file.name:
+    displayName: Note
+  status:
+    displayName: Status
+  priority:
+    displayName: Priority
+  owner:
+    displayName: Owner
+  outcome:
+    displayName: Finish line
+  next_action:
+    displayName: Next action
+  due:
+    displayName: Due
+  review_on:
+    displayName: Review
+  expires:
+    displayName: Expires
+  updated:
+    displayName: Updated
+views:
+  - type: table
+    name: Active Projects
+    filters:
+      and:
+        - file.inFolder("12_Brain/05_Projects")
+        - 'status != "done"'
+        - 'status != "cancelled"'
+    order:
+      - file.name
+      - status
+      - priority
+      - owner
+      - outcome
+      - next_action
+      - due
+      - updated
+  - type: table
+    name: Decision Review
+    filters:
+      and:
+        - file.inFolder("12_Brain/04_Decisions")
+        - 'status == "active"'
+        - review_on
+        - 'review_on <= today() + "30d"'
+    order:
+      - file.name
+      - owner
+      - review_on
+      - updated
+      - source_refs
+  - type: table
+    name: Research Due
+    filters:
+      and:
+        - file.inFolder("12_Brain/06_Research")
+        - expires
+        - 'expires <= today() + "30d"'
+    order:
+      - file.name
+      - verification_status
+      - expires
+      - updated
+      - source_refs
+  - type: table
+    name: Inbox
+    filters:
+      and:
+        - file.inFolder("00_Inbox")
+        - 'file.ext == "md"'
+    order:
+      - file.name
+      - file.mtime

@@ -1,0 +1,43 @@
+filters:
+  and:
+    - 'note_type == "communication_intelligence"'
+    - 'status == "active"'
+properties:
+  file.name:
+    displayName: Daily intelligence
+  created:
+    displayName: Date
+  verification_status:
+    displayName: Verification
+  item_count:
+    displayName: New items
+  high_priority_count:
+    displayName: Do first
+  client_update_count:
+    displayName: Client updates
+  unresolved_count:
+    displayName: Needs routing
+  updated:
+    displayName: Updated
+views:
+  - type: table
+    name: Daily Briefs
+    order:
+      - file.name
+      - verification_status
+      - high_priority_count
+      - client_update_count
+      - unresolved_count
+      - updated
+  - type: table
+    name: Immediate Attention
+    filters:
+      or:
+        - 'high_priority_count > 0'
+        - 'unresolved_count > 0'
+    order:
+      - file.name
+      - high_priority_count
+      - unresolved_count
+      - verification_status
+      - updated

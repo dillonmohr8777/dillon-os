@@ -1,0 +1,133 @@
+{
+  "name": "daily-communications-brain",
+  "pattern": "sequential",
+  "workflow_id": "daily-communications-brain",
+  "purpose": "Compile actionable Gmail and Slack evidence into Dillon OS without copying raw archives or crossing client boundaries.",
+  "steps": [
+    {
+      "id": "verify_context",
+      "task": "Load vault rules, canonical client registry, prior checkpoint, and verify the exact Gmail account and Slack workspace.",
+      "constraints": [
+        "read-only connector access",
+        "fail closed on account or workspace mismatch",
+        "never retrieve or persist authentication challenges or secrets"
+      ],
+      "upstream_artifacts": [],
+      "budget_tokens": 4000,
+      "timeout_seconds": 120,
+      "next": "discover_sources"
+    },
+    {
+      "id": "discover_sources",
+      "task": "Search Gmail and all authorized Slack conversation types from the last successful checkpoint with a 36-hour overlap.",
+      "constraints": [
+        "metadata and snippets first",
+        "exclude spam, trash, promotions, newsletters, bot noise, OTP, MFA, recovery, billing-card, and credential material",
+        "paginate through the bounded time window"
+      ],
+      "upstream_artifacts": [
+        "12_Brain/state/daily-communications-brain.json",
+        "projects/client-operations/registry/clients.json"
+      ],
+      "budget_tokens": 10000,
+      "timeout_seconds": 480,
+      "next": "hydrate_selected"
+    },
+    {
+      "id": "hydrate_selected",
+      "task": "Read only the complete threads needed to verify decisions, commitments, deliverables, deadlines, blockers, meetings, metrics, client changes, and reusable process knowledge.",
+      "constraints": [
+        "do not copy raw message bodies into the vault",
+        "treat automated summaries as leads until the source thread is verified",
+        "record evidence freshness and uncertainty"
+      ],
+      "upstream_artifacts": [
+        "bounded Gmail and Slack candidate locators"
+      ],
+      "budget_tokens": 14000,
+      "timeout_seconds": 600,
+      "next": "route_and_normalize"
+    },
+    {
+      "id": "route_and_normalize",
+      "task": "Route every selected item to one exact client, Align HCM, a personal venture, operations, or unresolved review, then write a normalized run envelope.",
+      "constraints": [
+        "canonical client registry controls routing",
+        "ambiguous items go to unresolved review and do not mutate client truth",
+        "one evidence item may not blend multiple clients",
+        "normalized envelopes contain summaries and receipts, never raw archives"
+      ],
+      "upstream_artifacts": [
+        "verified source threads",
+        "12_Brain/schemas/daily-communication-run.json"
+      ],
+      "budget_tokens": 8000,
+      "timeout_seconds": 300,
+      "next": "ingest_and_compile"
+    },
+    {
+      "id": "ingest_and_compile",
+      "task": "Run the deterministic communication ingester, then update existing canonical client, project, decision, research, SOP, and approval notes only where the evidence supports a durable change.",
+      "constraints": [
+        "update existing canonical notes before creating new ones",
+        "add dated source_refs and preserve source freshness",
+        "communication evidence does not authorize sends, publishing, spend, account changes, or delivery",
+        "Marketing Chief remains the only canonical queue writer"
+      ],
+      "upstream_artifacts": [
+        "normalized run envelope",
+        "12_Brain/registry/automations.json"
+      ],
+      "budget_tokens": 12000,
+      "timeout_seconds": 600,
+      "next": "verify_and_close"
+    },
+    {
+      "id": "verify_and_close",
+      "task": "Refresh maps and coverage, run tests and health checks, wait for Obsidian Sync, and report only material changes, blockers, and the next safe action.",
+      "constraints": [
+        "do not advance a failed connector checkpoint",
+        "do not claim sync without current CLI evidence",
+        "never send or post during the compile"
+      ],
+      "upstream_artifacts": [
+        "capture note",
+        "daily communication review",
+        "canonical note updates",
+        "run state"
+      ],
+      "budget_tokens": 5000,
+      "timeout_seconds": 600,
+      "next": null
+    }
+  ],
+  "handoff_contract": {
+    "required": [
+      "workflow_id",
+      "step_id",
+      "task",
+      "constraints",
+      "upstream_artifacts",
+      "budget_tokens",
+      "timeout_seconds"
+    ]
+  },
+  "retry": {
+    "max_attempts": 2,
+    "backoff_seconds": 30,
+    "do_not_retry": [
+      "account mismatch",
+      "workspace mismatch",
+      "human-only authentication gate",
+      "schema rejection",
+      "secret-detection rejection"
+    ]
+  },
+  "failure_policy": {
+    "gmail_failed": "Preserve the Gmail checkpoint, continue Slack only, mark the run degraded.",
+    "slack_failed": "Preserve the Slack checkpoint, continue Gmail only, mark the run degraded.",
+    "both_failed": "Write no source-derived updates and notify Dillon of the connector failure.",
+    "ambiguous_route": "Write the item only to unresolved review and never to a client record.",
+    "validation_failed": "Write no capture, review, queue item, or checkpoint."
+  }
+}

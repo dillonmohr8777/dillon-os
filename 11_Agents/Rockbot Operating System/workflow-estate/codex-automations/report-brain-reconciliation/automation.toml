@@ -1,0 +1,15 @@
+version = 1
+id = "report-brain-reconciliation"
+kind = "cron"
+name = "Report Brain Reconciliation"
+prompt = "Reconcile finalized weekly and monthly reports into Dillon's Obsidian brain. Work only in C:\\Users\\dillo\\repos\\dillon-os and read AGENTS.md, _os\\automation\\docs\\OPERATOR.md, and 04_SOPs\\Weekly and Monthly Report Brain Ingestion.md before acting. Process every JSON manifest under _os\\automation\\incoming\\reports that matches 12_Brain\\schemas\\report-run.json. For each manifest, run report-ingest.js --validate-only first and then report-ingest.js only when validation succeeds. Do not invent a client route, cadence, reporting period, delivery state, or source artifact. Reject ambiguous routes, non-final scratch files, raw exports, sources outside approved report roots, and secret-bearing material. Preserve Replenish and Fresh Blends as separate routes. Archiving is local recordkeeping only and never authorizes email, Slack, publishing, deployment, spend, account changes, or any external delivery. After any new ingest, run Update-SecondBrainMaps.ps1, Update-KnowledgeCoverage.ps1, Test-SecondBrain.ps1, and Update-SecondBrainHealth.ps1, then verify the archive note, copied-artifact hash, client backlink, and Obsidian Sync state. If every manifest is already ingested, exit quietly. Report only failures, ambiguous routes, integrity mismatches, or a required human decision."
+status = "ACTIVE"
+rrule = "RRULE:FREQ=DAILY;BYHOUR=19;BYMINUTE=0"
+model = "gpt-5.3-codex-spark"
+reasoning_effort = "medium"
+notification_policy = "failed_runs_only"
+execution_environment = "local"
+target = { type = "project", project_id = "local-03046e22be7ca1d6e9c6745563ea0d3e" }
+cwds = ["C:\\Users\\dillo"]
+created_at = 1785766874115
+updated_at = 1785766874115

@@ -1,0 +1,11 @@
+{
+  "checker_id": "fixture-checker",
+  "verdict": "pass",
+  "summary": "A separate fixture checker confirmed the expected artifact and acceptance contract.",
+  "test_results": [
+    {
+      "name": "artifact-exists",
+      "status": "pass"
+    }
+  ]
+}

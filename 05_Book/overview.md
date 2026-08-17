@@ -32,3 +32,9 @@ Distressed Americana, dark/gritty. Typography: Bebas Neue, Playfair Display, Spe
 
 ## Author bio
 Dillon Mohr is a digital marketer, doctoral candidate (DBA in Strategic Media at Liberty University), father, Pittsburgh PA native, MS in Integrated Marketing Communications from WVU, nearly a decade in brand strategy. Debut novel.
+
+## Communication intelligence - 2026-08-01
+
+- Search Console reported a critical ProfilePage structured-data issue on ironicineptocracy.com because `mainEntity` is missing.
+- The affected URL count and deployed markup require live validation. Add `mainEntity` only where semantically valid, validate the schema, deploy to the exact mapped site, and then request revalidation.
+- Source: [Gmail alert](gmail://message/19fb73c7b958ab09)

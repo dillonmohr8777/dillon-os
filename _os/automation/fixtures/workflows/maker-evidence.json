@@ -1,0 +1,13 @@
+{
+  "maker_id": "fixture-maker",
+  "summary": "Fixture artifact is present and ready for independent review.",
+  "artifact_paths": [
+    "_os/automation/fixtures/sites/healthy/index.html"
+  ],
+  "command_results": [
+    {
+      "command": "node --test _os/automation/tests/*.test.js",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+{"ts":"2026-07-30T06:18:31.091Z","automation_id":"maker-checker","action":"run_started","run_id":"RUN-2026-07-30-0C310011","workflow_id":"fixture-landing-page"}
+{"ts":"2026-07-30T06:18:31.206Z","automation_id":"maker-checker","action":"maker_recorded","run_id":"RUN-2026-07-30-0C310011","status":"awaiting_check","missing":[]}
+{"ts":"2026-07-30T06:18:31.272Z","automation_id":"maker-checker","action":"checker_recorded","run_id":"RUN-2026-07-30-0C310011","verdict":"pass"}

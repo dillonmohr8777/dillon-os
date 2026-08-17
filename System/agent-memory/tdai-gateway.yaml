@@ -1,0 +1,57 @@
+deployMode: standalone
+stateBackend: local
+instanceId: dillon-shared
+
+server:
+  host: "127.0.0.1"
+  port: 8420
+  apiKey: "${TDAI_GATEWAY_API_KEY}"
+  corsOrigins: []
+
+data:
+  baseDir: "C:/Users/dillo/AppData/Local/Codex/AgentMemory/data"
+
+llm:
+  baseUrl: "http://127.0.0.1:11434/v1"
+  apiKey: "ollama-local"
+  model: "qwen3.5:9b"
+  maxTokens: 4096
+  timeoutMs: 120000
+
+memory:
+  capture:
+    enabled: true
+  extraction:
+    enabled: true
+    enableDedup: true
+    maxMemoriesPerSession: 20
+  persona:
+    triggerEveryN: 50
+    maxScenes: 15
+  pipeline:
+    everyNConversations: 20
+    enableWarmup: true
+    l1IdleTimeoutSeconds: 600
+    l2DelayAfterL1Seconds: 10
+    l2MinIntervalSeconds: 900
+    l2MaxIntervalSeconds: 3600
+  recall:
+    enabled: true
+    maxResults: 5
+    maxCharsPerMemory: 1600
+    maxTotalRecallChars: 5000
+    scoreThreshold: 0.3
+    strategy: "hybrid"
+    timeoutMs: 5000
+  storeBackend: "sqlite"
+  embedding:
+    provider: "openai"
+    baseUrl: "http://127.0.0.1:11434/v1"
+    apiKey: "ollama-local"
+    model: "nomic-embed-text-v2-moe:latest"
+    dimensions: 768
+    sendDimensions: false
+  bm25:
+    enabled: true
+    language: "en"
+

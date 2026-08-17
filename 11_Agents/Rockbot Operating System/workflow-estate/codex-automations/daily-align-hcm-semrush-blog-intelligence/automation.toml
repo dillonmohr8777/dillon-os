@@ -1,0 +1,10 @@
+version = 1
+id = "daily-align-hcm-semrush-blog-intelligence"
+kind = "heartbeat"
+name = "Daily Align HCM Semrush blog intelligence"
+prompt = "Run a fresh daily Semrush intelligence audit for Align HCM (alignhcm.com), using the authenticated Codex in-app browser for Semrush and the protected terminal HubSpot route for portal 242825734 only when needed for read-only blog inventory checks. Focus primarily on blog opportunities. Pull current Organic Research and Keyword Gap data against the verified Align competitor set, and identify exact keywords competitors rank for that Align does not, emerging gains/losses, intent shifts, and low-difficulty/high-relevance opportunities. Cross-reference the complete current HubSpot blog inventory plus known unpublished local Align blog packages so recommendations are genuinely net-new and do not cannibalize or duplicate existing content. Exclude login, app, outage, paystub, support-number, account-reset, jobs, manuals/PDF, misspelling, irrelevant entity, and unsupported competitor-brand noise. For every recommended blog, report: exact primary keyword, supporting keyword cluster, current Semrush volume, keyword difficulty, CPC when available, intent, competitor/domain evidence, proposed title, buyer stage, why Align can credibly own it, AEO/GEO structure to bake in, recommended internal links/CTA, and confidence. Separate: publish new blog, refresh existing blog, service-page opportunity, hold pending proof, and excluded noise. Include a concise daily delta versus the prior run and a ranked top-10 action list. Clearly label verified Semrush facts versus inference. Do not modify HubSpot, publish content, change the canonical queue, or expose credentials. If Semrush or HubSpot access is blocked, report the exact blocker and complete every safe cached/read-only part without inventing current data."
+status = "ACTIVE"
+rrule = "FREQ=DAILY;BYHOUR=14;BYMINUTE=0"
+target_thread_id = "019fd31f-09b9-7d60-8e05-47c569b8a05d"
+created_at = 1785961552369
+updated_at = 1785961552369

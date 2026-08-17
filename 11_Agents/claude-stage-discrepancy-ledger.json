@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "question": "What does 486 mean, and are 214 stages missing?",
+  "verdict": "RESOLVED. 486 is real and verified. Nothing is missing. 486 and 272 are different units.",
+  "arithmetic": {
+    "routines": 54,
+    "operating_stages_per_routine": 9,
+    "product": 486,
+    "manifest_steps_total": 272,
+    "difference": 214,
+    "difference_explanation": "Not missing stages. manifest steps are the recorded actions inside the single build stage; the other 8 stages carry no manifest steps. Subtracting the two units is a category error."
+  },
+  "evidence_chain": [
+    {
+      "id": "E1",
+      "claim": "The stage unit has exactly 9 members.",
+      "source": "11_Agents/Rockbot Operating System/training-simulator/app.js lines 3-13",
+      "quote": "const stages = [ sense, route, prioritize, build, verify, approve, deliver, readback, learn ]",
+      "verification": "parsed programmatically; 9 entries asserted at build time"
+    },
+    {
+      "id": "E2",
+      "claim": "The 9 stages are the documented operating chain.",
+      "source": "recorded-training/2026-08-11-grok-bot-dillon-operating-curriculum.md line 18",
+      "quote": "sense -> route -> prioritize -> build -> verify -> approve -> deliver -> read back -> learn",
+      "verification": "9 links, identical order and keys to E1"
+    },
+    {
+      "id": "E3",
+      "claim": "Every routine sealed 9 of 9 stages.",
+      "source": "recorded-training/2026-08-11-grok-bot-recording-ledger.md routine status table",
+      "quote": "every routine sealed 9/9; privacy redacted; external action false; canonical write false",
+      "verification": "stated for all four cadence bands D01-D27, W01-W11, M01-M05, E01-E11"
+    },
+    {
+      "id": "E4",
+      "claim": "Module stage totals divide to exactly 9 per routine.",
+      "source": "recording-ledger Fixture B module receipts + verification receipt Routine proof",
+      "quote": "108/12, 117/13, 90/10, 72/8, 36/4, 63/7 all equal 9; total 54/54 and 486/486 SEALED",
+      "verification": "arithmetic checked on all six modules independently"
+    },
+    {
+      "id": "E5",
+      "claim": "The simulator seals a receipt only after nine stages pass.",
+      "source": "training-simulator/DESIGN.md",
+      "quote": "a nine-stage track ... It seals only after all nine stages pass",
+      "verification": "independent design document, same stage count"
+    },
+    {
+      "id": "E6",
+      "claim": "manifest steps belong to the build stage only.",
+      "source": "training-simulator/app.js actionModel build branch",
+      "quote": "build: { steps: routine.steps }",
+      "verification": "only the build stage consumes routine.steps"
+    },
+    {
+      "id": "E7",
+      "claim": "An independent Codex rollout recorded the same total.",
+      "source": "evidence/codex-rollouts/2026-08-11T20-57-22-N9CM-grok_bot_operating_team_setup_blocked_on_consent_and_ios.md",
+      "quote": "Verified 54 learned workflows across 486 stages, 6 cadence Bots, 15 specialist agents, and 12 schedule cards.",
+      "verification": "separate artifact, separate author, same figure"
+    }
+  ],
+  "searched_and_negative": [
+    {
+      "scope": "dillon-os, agent-vault, client-operations, .grok, .codex/memories literal \"486\"",
+      "result": "only the ledger, receipt, codex rollout, this registry, and unrelated binary files"
+    },
+    {
+      "scope": "git grep across 347 local and remote refs, no checkout, plus git log --all -S486",
+      "result": "no Grok stage artifact on any ref; only unrelated hits"
+    },
+    {
+      "scope": "grep stage_id|stage_run|per-stage|stageRun across all 347 refs",
+      "result": "one false positive in an unrelated SQL migration; no per-stage logging schema exists"
+    },
+    {
+      "scope": "authenticated GitHub read-only: gh search issues 486; branch enumeration",
+      "result": "zero issues or PRs referencing 486; 100 branches enumerated; no stage artifact"
+    }
+  ],
+  "prior_claim_assessment": {
+    "phase2_claim": "486 = 54 x the 9 recording finish-line receipt fields",
+    "assessment": "WRONG NAMES, RIGHT COUNT. Two distinct canonical 9-member sets exist.",
+    "consequence_if_uncorrected": "a verifier would check receipt formatting instead of the execution chain",
+    "corrected_in": "registry schema 2.0+; operating_stages and receipt_fields are separate fields"
+  },
+  "residual_unsupported_claims": [
+    {
+      "claim": "Fixture B replay actually executed all 486 stages",
+      "status": "attested-not-reproducible",
+      "requirement_to_verify": "per-stage replay logs for each of the 54 routines; none exist locally or on any ref",
+      "missing_identifiers": "stage-level run IDs, per-stage timestamps, per-stage pass records"
+    }
+  ]
+}

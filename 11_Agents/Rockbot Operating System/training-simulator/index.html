@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Protocol 54 | Grok Bot Training Bench</title>
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+  <!--
+  THESIS: A laboratory protocol bench makes Dillon's operating system observable and repeatable; it refuses the generic AI dashboard and card-grid control room.
+  OWN-WORLD: Sterile white and cobalt work surfaces, graphite type, ruled evidence ledgers, amber boundary tape, and vermilion approval stamps form a precise protocol language.
+  STORY: Select a routine, inspect its synthetic signal, route it, execute the steps, verify the proof, honor the approval boundary, simulate delivery, read back state, and save the lesson.
+  FIRST VIEWPORT: A narrow protocol rack holds all 54 routines; the large bench shows one active stage, its synthetic specimen, the required action, and an evidence tray fixed beneath it.
+  FORM: Laboratory protocol bench, grounded direction 6, seed 54526c01.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+  -->
+  <header class="masthead">
+    <a class="identity" href="#workspace" aria-label="Protocol 54 home">
+      <svg aria-hidden="true" viewBox="0 0 48 48">
+        <path d="M8 39h32M14 39v-6h20v6M19 33V10h10v23M16 10h16M23 10V6h6v4M19 18h10M24 18v7l-5 8M24 25l7 8"/>
+        <circle cx="24" cy="25" r="2.5"/>
+      </svg>
+      <span><strong>Protocol 54</strong><small>Dillon OS training bench</small></span>
+    </a>
+    <div class="safety-banner" role="status">
+      <span class="safety-lamp" aria-hidden="true"></span>
+      <span>Synthetic fixture. No live providers. Privacy: redacted.</span>
+    </div>
+    <div class="session-mark" aria-label="Session status">
+      <span id="sessionRoutine">D01</span>
+      <strong id="sessionStage">Sense</strong>
+    </div>
+  </header>
+
+  <div id="recordingControls" class="recording-controls" hidden>
+    <div>
+      <span>Recording console</span>
+      <strong id="recordState">D01 · Sense · action pending</strong>
+    </div>
+    <button id="recordExecute" class="primary-action" type="button">Execute Sense</button>
+    <button id="recordAdvance" class="secondary-action" type="button" disabled>Advance to Route</button>
+  </div>
+
+  <main id="workspace" class="workspace">
+    <aside class="protocol-rack" aria-label="Routine manifest">
+      <div class="rack-heading">
+        <p>Routine manifest</p>
+        <strong id="routineCount">54 protocols</strong>
+      </div>
+      <label class="search-field" for="routineSearch">
+        <span>Find a protocol</span>
+        <input id="routineSearch" type="search" autocomplete="off" placeholder="ID, name, or Bot">
+      </label>
+      <div class="cadence-switch" role="group" aria-label="Filter by cadence">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="daily" aria-pressed="false">Daily</button>
+        <button type="button" data-filter="weekly" aria-pressed="false">Weekly</button>
+        <button type="button" data-filter="monthly" aria-pressed="false">Monthly</button>
+        <button type="button" data-filter="event" aria-pressed="false">Event</button>
+      </div>
+      <nav id="routineList" class="routine-list" aria-label="Available protocols"></nav>
+    </aside>
+
+    <section class="bench" aria-labelledby="protocolTitle">
+      <header class="protocol-head">
+        <div>
+          <h1 id="protocolTitle">Sync and test the shared agent vault</h1>
+          <p><span id="routineId">D01</span> <span id="cadenceLabel">daily</span></p>
+        </div>
+        <div class="ownership">
+          <span>Assigned operator</span>
+          <strong id="ownerBot">Morning Marketing Chief Operator</strong>
+        </div>
+      </header>
+
+      <ol id="stageTrack" class="stage-track" aria-label="Protocol stages"></ol>
+
+      <div class="bench-surface">
+        <section class="specimen" aria-labelledby="specimenTitle">
+          <div class="panel-label">
+            <span>Input specimen</span>
+            <strong>SYNTHETIC</strong>
+          </div>
+          <h2 id="specimenTitle">Signal under review</h2>
+          <dl id="specimenData" class="specimen-data"></dl>
+          <div class="source-strip">
+            <span>Source freshness</span>
+            <strong>2026-08-11 · local fixture</strong>
+          </div>
+        </section>
+
+        <section class="procedure" aria-labelledby="stageTitle">
+          <div class="procedure-index" aria-hidden="true"><span id="stageVerb">Observe</span><b><span id="stageNumber">01</span>/09</b></div>
+          <h2 id="stageTitle">Sense the trigger</h2>
+          <p id="stagePurpose" class="stage-purpose"></p>
+          <div id="stageAction" class="stage-action"></div>
+          <div id="stageResult" class="stage-result" aria-live="polite"></div>
+        </section>
+      </div>
+
+      <section class="boundary" aria-labelledby="boundaryTitle">
+        <div>
+          <span id="boundaryTitle">Authority boundary</span>
+          <strong id="approvalBoundary"></strong>
+        </div>
+        <div class="boundary-state">
+          <span>External action</span>
+          <strong id="externalState">Not attempted</strong>
+        </div>
+      </section>
+
+      <footer class="bench-controls">
+        <button id="resetButton" class="secondary-action" type="button">Reset fixture</button>
+        <p id="progressMessage">Complete the stage action to continue.</p>
+        <button id="nextButton" class="primary-action" type="button" disabled>Advance to Route</button>
+      </footer>
+    </section>
+
+    <aside class="evidence-tray" aria-labelledby="evidenceTitle">
+      <header>
+        <span>Evidence tray</span>
+        <strong id="evidenceTitle">Training receipt</strong>
+      </header>
+      <div class="receipt-state">
+        <span id="receiptStatus" data-state="open">OPEN</span>
+        <p id="receiptSummary">The receipt seals only after the protocol reaches Learn.</p>
+      </div>
+      <dl id="receiptLedger" class="receipt-ledger">
+        <div><dt>Route</dt><dd>Pending</dd></div>
+        <div><dt>Artifact</dt><dd>Pending</dd></div>
+        <div><dt>Checks</dt><dd>0 / 9</dd></div>
+        <div><dt>Approval</dt><dd>Pending</dd></div>
+        <div><dt>Privacy</dt><dd>redacted</dd></div>
+        <div><dt>Next action</dt><dd>Complete Sense</dd></div>
+      </dl>
+      <details>
+        <summary>Machine-readable receipt</summary>
+        <pre id="receiptJson">{ "status": "open" }</pre>
+      </details>
+    </aside>
+  </main>
+
+  <template id="stepListTemplate">
+    <ol class="simulated-steps"></ol>
+    <button class="execute-action" type="button"></button>
+  </template>
+
+  <script>
+    window.__trainerErrors = [];
+    window.addEventListener("error", event => window.__trainerErrors.push(event.message));
+    window.addEventListener("unhandledrejection", event => window.__trainerErrors.push(String(event.reason)));
+  </script>
+  <script src="app.js?v=3" defer></script>
+</body>
+</html>

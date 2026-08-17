@@ -1,0 +1,667 @@
+{
+  "version": 1,
+  "automation_id": "daily-communications-brain",
+  "processed": {
+    "gmail:thread:19fb9bf3f8b0810e": {
+      "source_ref": "gmail://thread/19fb9bf3f8b0810e",
+      "occurred_at": "2026-07-31T15:55:35-04:00",
+      "route": {
+        "type": "client",
+        "name": "Replenish",
+        "path": "01_Clients/Replenish/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.822Z"
+    },
+    "gmail:message:19fb965e364c851a": {
+      "source_ref": "gmail://message/19fb965e364c851a",
+      "occurred_at": "2026-07-31T13:17:57-05:00",
+      "route": {
+        "type": "client",
+        "name": "VA Claims Edge",
+        "path": "01_Clients/VA Claims/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.823Z"
+    },
+    "gmail:thread:19f8101afe21e7e8": {
+      "source_ref": "gmail://thread/19f8101afe21e7e8",
+      "occurred_at": "2026-08-01T12:16:54-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bridge Software Development",
+        "path": "01_Clients/Bridge Software Development/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.823Z"
+    },
+    "slack:message:1785513601.951799": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0B1Y5XDQMA/p1785513601951799",
+      "occurred_at": "2026-07-31T12:00:01-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bridge Software Development",
+        "path": "01_Clients/Bridge Software Development/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.824Z"
+    },
+    "slack:message:1785602474.763089": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0BGWRK03B2/p1785602474763089",
+      "occurred_at": "2026-08-01T12:41:14-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bridge Software Development",
+        "path": "01_Clients/Bridge Software Development/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.825Z"
+    },
+    "gmail:message:19fb823e8945693b": {
+      "source_ref": "gmail://message/19fb823e8945693b",
+      "occurred_at": "2026-07-31T08:26:25-04:00",
+      "route": {
+        "type": "client",
+        "name": "Kimberly James Bridal",
+        "path": "01_Clients/Kimberly James Bridal/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.825Z"
+    },
+    "gmail:message:19fbeeaca9f3ed0c": {
+      "source_ref": "gmail://message/19fbeeaca9f3ed0c",
+      "occurred_at": "2026-08-01T16:01:26-04:00",
+      "route": {
+        "type": "client",
+        "name": "Fagan Painting",
+        "path": "01_Clients/Fagan Painting/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.826Z"
+    },
+    "slack:message:1785596865.387539": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0AMD2E444E/p1785596865387539",
+      "occurred_at": "2026-08-01T11:07:45-04:00",
+      "route": {
+        "type": "client",
+        "name": "Fagan Painting",
+        "path": "01_Clients/Fagan Painting/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.827Z"
+    },
+    "gmail:message:19fb51c44807bb77": {
+      "source_ref": "gmail://message/19fb51c44807bb77",
+      "occurred_at": "2026-07-30T18:19:16-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bar Crawl USA",
+        "path": "01_Clients/Bar Crawl USA/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.828Z"
+    },
+    "slack:message:1785514275.460439": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0AEGE1V5KR/p1785514275460439",
+      "occurred_at": "2026-07-31T12:11:15-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bar Crawl USA",
+        "path": "01_Clients/Bar Crawl USA/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.829Z"
+    },
+    "gmail:message:19fb931854f7e3b5": {
+      "source_ref": "gmail://message/19fb931854f7e3b5",
+      "occurred_at": "2026-07-31T13:20:58-04:00",
+      "route": {
+        "type": "client",
+        "name": "NKCDC",
+        "path": "01_Clients/NKCDC/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.830Z"
+    },
+    "slack:message:1785507172.774509": {
+      "source_ref": "https://momentum3d.slack.com/archives/C092MVBN8SV/p1785507172774509",
+      "occurred_at": "2026-07-31T10:12:52-04:00",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.831Z"
+    },
+    "slack:message:1785604505.688779": {
+      "source_ref": "https://momentum3d.slack.com/archives/C09DEEBMW0J/p1785604505688779",
+      "occurred_at": "2026-08-01T13:15:05-04:00",
+      "route": {
+        "type": "client",
+        "name": "Pro Fence & Deck",
+        "path": "01_Clients/Pro Fence & Deck/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.832Z"
+    },
+    "slack:message:1785515976.430059": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0B9V5QDGJH/p1785515976430059",
+      "occurred_at": "2026-07-31T12:39:36-04:00",
+      "route": {
+        "type": "client",
+        "name": "Revive Systems",
+        "path": "01_Clients/Revive Systems/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.833Z"
+    },
+    "slack:message:1785511352.579949": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0BB04ZFZ26/p1785511352579949",
+      "occurred_at": "2026-07-31T11:22:32-04:00",
+      "route": {
+        "type": "client",
+        "name": "Pritzker Law Group",
+        "path": "01_Clients/Pritzker Law Group/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.834Z"
+    },
+    "slack:message:1785524851.052059": {
+      "source_ref": "https://momentum3d.slack.com/archives/C051QQL8UNS/p1785524851052059",
+      "occurred_at": "2026-07-31T15:07:31-04:00",
+      "route": {
+        "type": "unresolved",
+        "name": "Everyday Life Insurance decision context",
+        "path": "00_Inbox/Start Here.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.835Z"
+    },
+    "slack:message:1785511870.286619": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0B2N20A0SW/p1785511870286619",
+      "occurred_at": "2026-07-31T11:31:10-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.835Z"
+    },
+    "slack:message:1785525137.451239": {
+      "source_ref": "https://momentum3d.slack.com/archives/C1CFQBC79/p1785525137451239?thread_ts=1784812437.578939&cid=C1CFQBC79",
+      "occurred_at": "2026-07-31T15:12:17-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.836Z"
+    },
+    "slack:message:1785527448.627519": {
+      "source_ref": "https://momentum3d.slack.com/archives/C04HXSVN2CS/p1785527448627519",
+      "occurred_at": "2026-07-31T15:50:48-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.837Z"
+    },
+    "slack:message:1785507053.296869": {
+      "source_ref": "https://momentum3d.slack.com/archives/C04HXSVN2CS/p1785507053296869",
+      "occurred_at": "2026-07-31T10:10:53-04:00",
+      "route": {
+        "type": "operations",
+        "name": "AI Site Builder Outreach Engine",
+        "path": "02_Campaigns/AI Site Builder Outreach Engine/AI Site Builder Outreach Engine.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.838Z"
+    },
+    "slack:message:1785526167.428929": {
+      "source_ref": "https://momentum3d.slack.com/archives/C08PB4N3L6L/p1785526167428929",
+      "occurred_at": "2026-07-31T15:29:27-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.838Z"
+    },
+    "gmail:message:19fbc27da727ce55": {
+      "source_ref": "gmail://message/19fbc27da727ce55",
+      "occurred_at": "2026-08-01T03:09:16-04:00",
+      "route": {
+        "type": "operations",
+        "name": "Netlify capacity",
+        "path": "12_Brain/09_Ops/Netlify Credits Suspension 2026-07-30.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.839Z"
+    },
+    "gmail:message:19fb73c7b958ab09": {
+      "source_ref": "gmail://message/19fb73c7b958ab09",
+      "occurred_at": "2026-07-31T04:13:41-04:00",
+      "route": {
+        "type": "venture",
+        "name": "The Ironic Ineptocracy",
+        "path": "05_Book/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.839Z"
+    },
+    "gmail:message:19fb8f5b911dc22b": {
+      "source_ref": "gmail://message/19fb8f5b911dc22b",
+      "occurred_at": "2026-07-31T12:15:39-04:00",
+      "route": {
+        "type": "full-time",
+        "name": "Align HCM",
+        "path": "02_FullTimeJob/AlignHCM/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.840Z"
+    },
+    "gmail:message:19fb4ff8ea380ac1": {
+      "source_ref": "gmail://message/19fb4ff8ea380ac1",
+      "occurred_at": "2026-07-30T17:47:54-04:00",
+      "route": {
+        "type": "full-time",
+        "name": "Align HCM",
+        "path": "02_FullTimeJob/AlignHCM/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.841Z"
+    },
+    "gmail:message:19fb46c6d12686a0": {
+      "source_ref": "gmail://message/19fb46c6d12686a0",
+      "occurred_at": "2026-07-30T15:07:12-04:00",
+      "route": {
+        "type": "client",
+        "name": "Omega Landscaping",
+        "path": "01_Clients/Omega Landscaping/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.841Z"
+    },
+    "gmail:message:19fbe5bf41663152": {
+      "source_ref": "gmail://message/19fbe5bf41663152",
+      "occurred_at": "2026-08-01T13:25:25-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.842Z"
+    },
+    "gmail:message:19fb7bd10a68c830": {
+      "source_ref": "gmail://message/19fb7bd10a68c830",
+      "occurred_at": "2026-07-31T06:34:08-04:00",
+      "route": {
+        "type": "client",
+        "name": "AMI Cleaning",
+        "path": "01_Clients/AMI Cleaning/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.843Z"
+    },
+    "gmail:message:19fbe5948c025082": {
+      "source_ref": "gmail://message/19fbe5948c025082",
+      "occurred_at": "2026-08-01T13:22:30-04:00",
+      "route": {
+        "type": "client",
+        "name": "AMI Cleaning",
+        "path": "01_Clients/AMI Cleaning/overview.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.843Z"
+    },
+    "gmail:message:19fb4befde22d83e": {
+      "source_ref": "gmail://message/19fb4befde22d83e",
+      "occurred_at": "2026-07-30T16:37:23-04:00",
+      "route": {
+        "type": "unresolved",
+        "name": "Unmapped Google Analytics access",
+        "path": "00_Inbox/Start Here.md"
+      },
+      "run_id": "COMMS-2026-08-01-INITIAL-1603",
+      "processed_at": "2026-08-01T20:10:17.844Z"
+    },
+    "gmail:message:19fc46e2bd11066d": {
+      "source_ref": "gmail://message/19fc46e2bd11066d",
+      "occurred_at": "2026-08-02T21:43:01-04:00",
+      "route": {
+        "type": "client",
+        "name": "Revive Systems",
+        "path": "01_Clients/Revive Systems/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.784Z"
+    },
+    "gmail:message:19fc46e1b8c4874f": {
+      "source_ref": "gmail://message/19fc46e1b8c4874f",
+      "occurred_at": "2026-08-02T21:42:57-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bar Crawl USA",
+        "path": "01_Clients/Bar Crawl USA/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.785Z"
+    },
+    "gmail:message:19fc4a55fbfc3230": {
+      "source_ref": "gmail://message/19fc4a55fbfc3230",
+      "occurred_at": "2026-08-02T22:43:19-04:00",
+      "route": {
+        "type": "unresolved",
+        "name": "Unresolved multi-client report routing",
+        "path": "00_Inbox/Start Here.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.785Z"
+    },
+    "gmail:message:19fcd013311cc9f3": {
+      "source_ref": "gmail://message/19fcd013311cc9f3",
+      "occurred_at": "2026-08-04T13:40:35-04:00",
+      "route": {
+        "type": "venture",
+        "name": "The Ironic Ineptocracy",
+        "path": "05_Book/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.786Z"
+    },
+    "gmail:message:19fcff4dbc17c5cd": {
+      "source_ref": "gmail://message/19fcff4dbc17c5cd",
+      "occurred_at": "2026-08-05T03:25:58-04:00",
+      "route": {
+        "type": "unresolved",
+        "name": "NYC Entertainment deliverable capture",
+        "path": "00_Inbox/Start Here.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.786Z"
+    },
+    "gmail:message:19fcff3fcbf1c1a9": {
+      "source_ref": "gmail://message/19fcff3fcbf1c1a9",
+      "occurred_at": "2026-08-05T03:25:01-04:00",
+      "route": {
+        "type": "unresolved",
+        "name": "NYC Entertainment deliverable capture",
+        "path": "00_Inbox/Start Here.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.786Z"
+    },
+    "slack:message:1785510956.882059": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0B2N20A0SW/p1785510956882059",
+      "occurred_at": "2026-07-31T11:15:56-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.787Z"
+    },
+    "slack:message:1785511110.355419": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0B2N20A0SW/p1785511110355419",
+      "occurred_at": "2026-07-31T11:18:30-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.787Z"
+    },
+    "slack:message:1785511589.110059": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0B2N20A0SW/p1785511589110059",
+      "occurred_at": "2026-07-31T11:26:29-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.787Z"
+    },
+    "slack:message:1785783269.668879": {
+      "source_ref": "slack://message/1785783269.668879",
+      "occurred_at": "2026-08-03T14:54:29-04:00",
+      "route": {
+        "type": "client",
+        "name": "Fagan Painting",
+        "path": "01_Clients/Fagan Painting/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.788Z"
+    },
+    "slack:message:1785794541.010229": {
+      "source_ref": "slack://message/1785794541.010229",
+      "occurred_at": "2026-08-03T18:02:21-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bridge Software Development",
+        "path": "01_Clients/Bridge Software Development/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.788Z"
+    },
+    "slack:message:1785849438.223429": {
+      "source_ref": "slack://message/1785849438.223429",
+      "occurred_at": "2026-08-04T09:17:18-04:00",
+      "route": {
+        "type": "operations",
+        "name": "Leads and integration cleanup",
+        "path": "System/operating-status.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.789Z"
+    },
+    "slack:message:1785855691.891499": {
+      "source_ref": "slack://message/1785855691.891499",
+      "occurred_at": "2026-08-04T11:01:31-04:00",
+      "route": {
+        "type": "client",
+        "name": "Pritzker Law Group",
+        "path": "01_Clients/Pritzker Law Group/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.789Z"
+    },
+    "slack:message:1785869773.642349": {
+      "source_ref": "slack://message/1785869773.642349",
+      "occurred_at": "2026-08-04T14:56:13-04:00",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "run_id": "COMMS-2026-08-05-DAY-1",
+      "processed_at": "2026-08-05T11:07:23.789Z"
+    },
+    "gmail:message:19fe19166060e052": {
+      "source_ref": "gmail://message/19fe19166060e052",
+      "occurred_at": "2026-08-08T13:30:18-04:00",
+      "route": {
+        "type": "client",
+        "name": "Revive Systems",
+        "path": "01_Clients/Revive Systems/overview.md"
+      },
+      "run_id": "COMMS-2026-08-09-DAY-1",
+      "processed_at": "2026-08-09T11:05:50.127Z"
+    },
+    "gmail:message:19fcde7a4a000374": {
+      "source_ref": "gmail://message/19fcde7a4a000374",
+      "occurred_at": "2026-08-04T13:52:06-04:00",
+      "route": {
+        "type": "client",
+        "name": "Revive Systems",
+        "path": "01_Clients/Revive Systems/overview.md"
+      },
+      "run_id": "COMMS-2026-08-09-DAY-1",
+      "processed_at": "2026-08-09T11:05:50.128Z"
+    },
+    "slack:message:1785905321.250469": {
+      "source_ref": "https://momentum3d.slack.com/archives/C0BGWRK03B2/p1785905321250469",
+      "occurred_at": "2026-08-05T00:48:41-04:00",
+      "route": {
+        "type": "client",
+        "name": "Bridge Software Development",
+        "path": "01_Clients/Bridge Software Development/overview.md"
+      },
+      "run_id": "COMMS-2026-08-09-DAY-1",
+      "processed_at": "2026-08-09T11:05:50.128Z"
+    },
+    "slack:message:1785852037.417619": {
+      "source_ref": "https://momentum3d.slack.com/archives/C09CU4AM8HJ/p1785852037417619",
+      "occurred_at": "2026-08-04T10:00:37-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-09-DAY-1",
+      "processed_at": "2026-08-09T11:05:50.129Z"
+    },
+    "slack:message:1785848532.873429": {
+      "source_ref": "https://momentum3d.slack.com/archives/C1CFQBC79/p1785848532873429",
+      "occurred_at": "2026-08-04T09:02:12-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-09-DAY-1",
+      "processed_at": "2026-08-09T11:05:50.129Z"
+    },
+    "slack:message:1785881019.892729": {
+      "source_ref": "https://momentum3d.slack.com/archives/C1CFQBC79/p1785881019892729",
+      "occurred_at": "2026-08-04T18:03:39-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-09-DAY-1",
+      "processed_at": "2026-08-09T11:05:50.129Z"
+    },
+    "slack:message:1786022333.005349": {
+      "source_ref": "https://momentum3d.slack.com/archives/C1CFQBC79/p1786022333005349",
+      "occurred_at": "2026-08-06T09:18:53-04:00",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "run_id": "COMMS-2026-08-09-DAY-1",
+      "processed_at": "2026-08-09T11:05:50.130Z"
+    }
+  },
+  "runs": {
+    "COMMS-2026-08-01-INITIAL-1603": {
+      "status": "success",
+      "payload_hash": "76e4fde018320af97c40ad7fd74e3f23e3ef2f4d341d1a972c96c7bfb7c8c448",
+      "new_items": 30,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-01 - daily-communications-comms-2026-08-01-initial-1603.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-01 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-01T20:10:17.844Z"
+    },
+    "COMMS-2026-08-05-DAY-1": {
+      "status": "success",
+      "payload_hash": "4d3b71ebfdbf6db81ccd781f569eabd56b925ef47e9c23c60f3e8ab33cc1dd80",
+      "new_items": 14,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-05 - daily-communications-comms-2026-08-05-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-05 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-05T11:07:23.789Z"
+    },
+    "COMMS-2026-08-08-BLOCKED-1": {
+      "status": "degraded",
+      "payload_hash": "c86171528e2db75db2e9bffc1417ecc6cd3db679ffc942cca7a79e9f1a0a5619",
+      "new_items": 0,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-08 - daily-communications-comms-2026-08-08-blocked-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-08 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-08T11:02:55.867Z"
+    },
+    "COMMS-2026-08-09-DAY-1": {
+      "status": "success",
+      "payload_hash": "f5cbb25b917d1a053cde4dbc4938e745c5702cc2455ed92828351ee48b4ab2bc",
+      "new_items": 7,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-09 - daily-communications-comms-2026-08-09-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-09 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-09T11:05:50.130Z"
+    },
+    "COMMS-2026-08-10-DAY-1": {
+      "status": "degraded",
+      "payload_hash": "4fb604cd6f9b60669ea22280e2180303a8982878642c89141bba0b4b32d3b34d",
+      "new_items": 0,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-10 - daily-communications-comms-2026-08-10-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-10 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-10T11:02:12.449Z"
+    },
+    "COMMS-2026-08-11-DAY-1": {
+      "status": "degraded",
+      "payload_hash": "93a8b4055ae5519eec3c74797e5a609c2188c261a48eae66791176915f68e473",
+      "new_items": 0,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-11 - daily-communications-comms-2026-08-11-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-11 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-11T11:03:24.554Z"
+    },
+    "COMMS-2026-08-12-DAY-1": {
+      "status": "degraded",
+      "payload_hash": "fc10f824f1fad3f84445bad29c3678f7ded158d1bd97aa59fbb51969d9501bf6",
+      "new_items": 0,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-12 - daily-communications-comms-2026-08-12-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-12 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-12T11:04:03.090Z"
+    },
+    "COMMS-2026-08-15-DAY-1": {
+      "status": "degraded",
+      "payload_hash": "e4527f8a2c4b985088c477353954c14f2bf4c3d99053a6fe8151bb6bcb698ab0",
+      "new_items": 0,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-15 - daily-communications-comms-2026-08-15-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-15 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-15T11:03:26.448Z"
+    },
+    "COMMS-2026-08-17-DAY-1": {
+      "status": "degraded",
+      "payload_hash": "368efc81ee9cd746db4a2b9e8ed7ba2984773ca390eacd394d1898d93d5f9351",
+      "new_items": 0,
+      "duplicate_items": 0,
+      "capture_file": "12_Brain\\01_Captures\\Communications\\2026-08-17 - daily-communications-comms-2026-08-17-day-1.md",
+      "review_file": "12_Brain\\07_Reviews\\Daily Intelligence\\2026-08-17 - Communication Intelligence.md",
+      "review_action": "created",
+      "written_at": "2026-08-17T11:04:26.983Z"
+    }
+  },
+  "checkpoints": {
+    "gmail": "2026-08-09T07:05:03.4946980-04:00",
+    "slack": "1786050000.000000"
+  },
+  "last_successful_run": "2026-08-09T07:05:03.4946980-04:00",
+  "last_run": "2026-08-17T07:04:11.5021535-04:00",
+  "last_status": "degraded",
+  "updated_at": "2026-08-17T11:04:26.984Z"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "grok-marketing-specialist-bench",
+  "pattern": "orchestrator",
+  "orchestrator": {
+    "agent": "codex-marketing-chief",
+    "planning": "dynamic",
+    "canonical_queue_writer": true,
+    "final_verifier": true
+  },
+  "specialists": [
+    "grok-research-scout",
+    "web-product-builder",
+    "reporting-analytics-analyst",
+    "brand-voice-content-studio",
+    "independent-qa-release-critic",
+    "automation-reliability-scout"
+  ],
+  "execution": {
+    "dependency_mode": "dag",
+    "max_parallel": 3,
+    "completion_policy": "all_required",
+    "max_evaluator_loops": 2
+  },
+  "handoff_required_fields": [
+    "workflow_id",
+    "step_id",
+    "agent",
+    "task",
+    "client_id",
+    "canonical_route",
+    "constraints",
+    "source_locators",
+    "upstream_artifacts",
+    "budget_tokens",
+    "timeout_seconds",
+    "acceptance_checks",
+    "evidence_paths",
+    "risks",
+    "approval_state"
+  ],
+  "delivery_gate": "codex-marketing-chief",
+  "external_actions_default": "denied"
+}

@@ -1,0 +1,1376 @@
+# 2026-08-12T14:16:20.1362903-04:00 Run #270 Slack Reply Watchdog
+- As of: 2026-08-12T14:16:20.1362903-04:00
+- Last successful checkpoint: 1786558219.417709
+- Last run window start (local): 2026-08-12T10:57:00.0000000-04:00
+- Safe run count: 270
+- Scan result: 143 candidate messages, 0 urgent, 0 new standard, 0 actionable, 8 due-standard actionable
+- Urgent previews sent: none
+- Due standard previews sent: 8 (P270_S1, P270_S2, P270_S3, P270_S4, P270_S5, P270_S6, P270_S7, P270_S8)
+- Due-standard revalidation: completed for queued due set. All eight pending due locators remain actionable.
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0BGWRK03B2|1785905321.250469
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Connector status: Slack search on coverage source channel_types=public_channel,private_channel,mpim,im with query="*" from_ts=1786533405.661429 to current returned 143 results with cursors Q1VSUkVOVF9QQUdFOjI=,Q1VSUkVOVF9QQUdFOjM=,Q1VSUkVOVF9QQUdFOjQ=,Q1VSUkVOVF9QQUdFOjU=,Q1VSUkVOVF9QQUdFOjY=,Q1VSUkVOVF9QQUdFOjk= and no pagination gaps.
+- Gmail status: send_email succeeded with Gmail id 19ff7317ecd21f34.
+- Last due digest time: 2026-08-12T16:16:20.1362903-04:00
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded.
+
+# 2026-08-12T08:03:04.4832829-04:00 Run #269 Slack Reply Watchdog
+- As of: 2026-08-12T08:03:04.4832829-04:00
+- Last successful checkpoint: 1786534005.661429
+- Last run window start (local): 2026-08-11T23:06:17.087289-04:00
+- Safe run count: 269
+- Scan result: 3 candidate messages, 0 urgent, 0 new standard, 0 actionable, 8 due-standard actionable
+- Urgent previews sent: none
+- Due standard previews sent: 8 (P269_S1, P269_S2, P269_S3, P269_S4, P269_S5, P269_S6, P269_S7, P269_S8)
+- Due-standard revalidation: completed for queued due set. All eight pending due locators remain actionable.
+- Connector status: Slack search coverage source channel_types=public_channel,private_channel,mpim,im with query="*" from_ts=1786503977.087289 to current returned 3 results with no pagination.
+- Gmail status: send_email succeeded with Gmail id 19ff5dab25ca0d4e.
+- Last due digest time: 2026-08-12T10:03:04.4832829-04:00
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded.
+
+# 2026-08-11T14:11:15.153449-04:00 Run #266 Slack Reply Watchdog
+- As of: 2026-08-11T14:11:15.153449-04:00
+- Last successful checkpoint: 1786471875.153449
+- Last run window start (local): 2026-08-11T07:40:02.0000000-04:00
+- Safe run count: 266
+- Scan result: 153 candidate messages, 0 urgent, 0 new standard, 7 due-standard actionable, 146 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 7 (P266_S1, P266_S2, P266_S3, P266_S4, P266_S5, P266_S6, P266_S7)
+- Due-standard revalidation: completed for due queue. All seven pending due locators remain actionable.
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Connector status: Slack search on coverage source from_ts=1786448402.0 to current returned 153 results with cursors Q1VSUkVOVF9QQUdFOjI=,Q1VSUkVOVF9QQUdFOjM=,Q1VSUkVOVF9QQUdFOjQ=,Q1VSUkVOVF9QQUdFOjU=,Q1VSUkVOVF9QQUdFOjY=,Q1VSUkVOVF9QQUdFOjg=,Q1VSUkVOVF9QQUdFOjk= and no pagination gaps.
+- Gmail status: send_email succeeded to dillonmohr8777@gmail.com with Gmail id 19ff2064fafc5276.
+- Last due digest time: 2026-08-11T16:11:15.153449-04:00
+
+# 2026-08-11T02:04:18.0000000-04:00 Run #264 Slack Reply Watchdog
+- As of: 2026-08-11T02:04:18.0000000-04:00
+- Last successful checkpoint: 1786428188
+- Last run window start (local): 2026-08-11T01:44:18.043606-04:00
+- Safe run count: 264
+- Scan result: 8 candidate messages, 0 urgent, 0 new standard, 7 due-standard actionable, 1 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 7 (P264_S1, P264_S2, P264_S3, P264_S4, P264_S5, P264_S6, P264_S7)
+- Due-standard revalidation: completed for queued due set. All seven pending due locators remain actionable.
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Connector status: Slack search on coverage source from_ts=1786405947.846606 with no explicit before limit returned 8 results with no pagination for "*". Channel types public_channel,private_channel,mpim,im.
+- Gmail status: send_email succeeded to dillonmohr8777@gmail.com with Gmail id 19fef6bb8dd8c703.
+- Last due digest time: 2026-08-11T04:04:12.0000000-04:00
+
+## Current Slack Watchdog State
+- As of: 2026-08-11T02:04:18.0000000-04:00
+- Run #264
+- Last successful checkpoint: 1786428188
+- Last run window start (local): 2026-08-11T01:44:18.043606-04:00
+- Safe run count: 264
+- Scan result: 8 candidate messages, 0 urgent, 0 new standard, 7 due-standard actionable, 1 no_reply
+- Next standard digest due: 2026-08-11T04:04:12.0000000-04:00
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Connector status: Slack search on coverage source from_ts=1786405947.846606 with no explicit before limit returned 8 results with no pagination for "*". Channel types public_channel,private_channel,mpim,im.
+- Urgent previews sent: none
+- Due standard sent: 7
+- Due-standard revalidation: completed for due queue. All seven pending due locators remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19fef6bb8dd8c703.
+
+# 2026-08-10T20:02:27.0000000-04:00 Run #263 Slack Reply Watchdog
+- As of: 2026-08-10T20:02:27.0000000-04:00
+- Last successful checkpoint: 1786406547.846606
+- Last run window start (local): 2026-08-10T13:57:19.0000000-04:00
+- Safe run count: 263
+- Scan result: 18 candidate messages, 0 urgent, 0 new standard, 7 due-standard actionable, 18 no_reply
+- Due standard previews sent: 7 (P263_S1, P263_S2, P263_S3, P263_S4, P263_S5, P263_S6, P263_S7)
+- Due-standard revalidation: completed for queued due set. All seven pending due locators remain actionable.
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Connector status: Slack search with wildcard query and coverage variants completed, no additional private or direct-message style hits returned by coverage variants.
+- Urgent previews sent: none
+- Due standard sent: 7 (P263_S1, P263_S2, P263_S3, P263_S4, P263_S5, P263_S6, P263_S7)
+- Nothing was posted to Slack.
+- Gmail status: send_email succeeded with Gmail id 19fee20de6336791.
+- Last due digest time: 2026-08-10T22:02:27.0000000-04:00
+'# 2026-08-10T14:07:19.1460000-04:00 Run #262 Slack Reply Watchdog
+- As of: 2026-08-10T14:07:19.1460000-04:00
+- Last successful checkpoint: 1786385239.146379
+- Last run window start (local): 2026-08-10T07:59:43.8070000-04:00
+- Safe run count: 262
+- Scan result: 118 candidate messages, 0 urgent, 1 new standard, 6 due-standard actionable, 111 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 7 (P262_S1, P262_S2, P262_S3, P262_S4, P262_S5, P262_S6, P262_S7)
+- Due-standard revalidation: completed for queued due set. All seven pending due locators remain actionable.
+- New standard locators queued: C0AEGE1V5KR|1786385217.524939
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query="*" from_ts=1786363183.807 to before=1786385239.146379 returned 118 results with cursors Q1VSUkVOVF9QQUdFOjI=, Q1VSUkVOVF9QQUdFOjM=, Q1VSUkVOVF9QQUdFOjQ=, Q1VSUkVOVF9QQUdFOjU=, Q1VSUkVOVF9QQUdFOjY=, Q1VSUkVOVF9QQUdFOjc=, and end of pagination without gaps.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19fecdfa08be7be2.
+- Last due digest time: 2026-08-10T16:07:19.1460000-04:00
+
+## Current Slack Watchdog State
+- As of: 2026-08-10T14:07:19.1460000-04:00
+- Run #262
+- Last successful checkpoint: 1786385239.146379
+- Last run window start (local): 2026-08-10T07:59:43.8070000-04:00
+- Safe run count: 262
+- Scan result: 118 candidate messages, 0 urgent, 1 new standard, 6 due-standard actionable, 111 no_reply
+- Next standard digest due: 2026-08-10T16:07:19.1460000-04:00
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query="*" from_ts=1786363183.807 to before=1786385239.146379 returned 118 results with cursors Q1VSUkVOVF9QQUdFOjI=, Q1VSUkVOVF9QQUdFOjM=, Q1VSUkVOVF9QQUdFOjQ=, Q1VSUkVOVF9QQUdFOjU=, Q1VSUkVOVF9QQUdFOjY=, Q1VSUkVOVF9QQUdFOjc=, and end of pagination without gaps.
+- Urgent previews sent: none
+- Due standard sent: 7 (P262_S1, P262_S2, P262_S3, P262_S4, P262_S5, P262_S6, P262_S7)
+- Due-standard revalidation: completed for due queue. All seven pending due locators remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19fecdfa08be7be2.
+
+'
+## 2026-08-10T02:02:52.3850000-04:00 Run #260 Slack Reply Watchdog
+- As of: 2026-08-10T02:02:52.3850000-04:00
+- Last successful checkpoint: 1786341772.385
+- Last run window start (local): 2026-08-09T18:37:41.6040000-04:00
+- Safe run count: 260
+- Scan result: 3 candidate messages, 0 urgent, 0 new standard, 5 due-standard actionable, 3 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 5 (P260_S1, P260_S2, P260_S3, P260_S4, P260_S5)
+- Due-standard revalidation: completed for queued due set. All five pending due locators remain actionable.
+- New standard locators queued: none
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query="*" from_ts=1786315061.604909 to before=1786341772.385 returned 3 results with no pagination.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19fea453fcab88e8.
+- Last due digest time: 2026-08-10T04:02:52.0000000-04:00
+
+## Current Slack Watchdog State
+- As of: 2026-08-10T02:02:52.3850000-04:00
+- Run #260
+- Last successful checkpoint: 1786341772.385
+- Last run window start (local): 2026-08-09T18:37:41.6040000-04:00
+- Safe run count: 260
+- Scan result: 3 candidate messages, 0 urgent, 0 new standard, 5 due-standard actionable, 3 no_reply
+- Next standard digest time: 2026-08-10T04:02:52.0000000-04:00
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query="*" from_ts=1786315061.604909 to before=1786341772.385 returned 3 results and no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: 5 (P260_S1, P260_S2, P260_S3, P260_S4, P260_S5)
+- Due-standard revalidation: completed for due queue. All five pending due locators remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19fea453fcab88e8.
+'# 2026-08-09T13:37:14.8441401-04:00 Run #257 Slack Reply Watchdog`r`n- As of: 2026-08-09T13:37:14.8441401-04:00`r`n- Last successful checkpoint: 1786296990`r`n- Last run window start (local): 2026-08-09T01:52:03.0000000-04:00`r`n- Safe run count: 257`r`n- Scan result: 11 candidate messages, 0 urgent, 0 new standard, 5 due-standard actionable, 6 no_reply`r`n- Urgent previews sent: none`r`n- Due standard previews sent: 5 (P257_S1, P257_S2, P257_S3, P257_S4, P257_S5)`r`n- Due-standard revalidation: completed for queued due set. All five pending due locators remain actionable.`r`n- New standard locators queued: none`r`n- Pending standard safe locators:`r`n- C0AMD2E444E|1785849438.223429`r`n- C0AEGE1V5KR|1785848928.312439`r`n- C0BB04ZFZ26|1785890414.861969`r`n- C0BB04ZFZ26|1785890419.433759`r`n- C0BGWRK03B2|1785919183.427409`r`n- Dedupe locators:`r`n- C0AMD2E444E|1785849438.223429`r`n- C0AEGE1V5KR|1785848928.312439`r`n- C0BB04ZFZ26|1785890414.861969`r`n- C0BB04ZFZ26|1785890419.433759`r`n- C0BGWRK03B2|1785905321.250469`r`n- C0BGWRK03B2|1785919183.427409`r`n- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query="*" from_ts=1786254723 to before=1786296990 returned 11 results with no pagination.`r`n- Nothing was posted to Slack.`r`n- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19fe7999bdd3a007.`r`n- Last due digest time: 2026-08-09T14:17:24.8837485-04:00`r`n`r`n## Current Slack Watchdog State`r`n- As of: 2026-08-09T13:37:14.8441401-04:00`r`n- Run #257`r`n- Last successful checkpoint: 1786296990`r`n- Last run window start (local): 2026-08-09T01:52:03.0000000-04:00`r`n- Safe run count: 257`r`n- Scan result: 11 candidate messages, 0 urgent, 0 new standard, 5 due-standard actionable, 6 no_reply`r`n- Next standard digest due: 2026-08-09T14:17:24.8837485-04:00`r`n- Pending standard safe locators:`r`n- C0AMD2E444E|1785849438.223429`r`n- C0AEGE1V5KR|1785848928.312439`r`n- C0BB04ZFZ26|1785890414.861969`r`n- C0BB04ZFZ26|1785890419.433759`r`n- C0BGWRK03B2|1785919183.427409`r`n- Dedupe locators:`r`n- C0AMD2E444E|1785849438.223429`r`n- C0AEGE1V5KR|1785848928.312439`r`n- C0BB04ZFZ26|1785890414.861969`r`n- C0BB04ZFZ26|1785890419.433759`r`n- C0BGWRK03B2|1785905321.250469`r`n- C0BGWRK03B2|1785919183.427409`r`n- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query="*" from_ts=1786254723 to before=1786296990 returned 11 results and no pagination.`r`n- Urgent previews sent: none`r`n- Due standard previews sent: 5 (P257_S1, P257_S2, P257_S3, P257_S4, P257_S5)`r`n- Due-standard revalidation: completed for due queue. All five pending due locators remain actionable.`r`n- Nothing was posted to Slack.`r`n- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.`r`n`r`n# 2026-08-09T02:02:32.0349162-04:00 Run #256 Slack Reply Watchdog
+- As of: 2026-08-09T02:02:32.0349162-04:00
+- Last successful checkpoint: 1786255323
+- Last run window start (local): 2026-08-08T19:52:05.0000000-04:00
+- Safe run count: 256
+- Scan result: 8 candidate messages, 0 urgent, 0 new standard, 5 due-standard actionable, 0 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 5 (P256_S1, P256_S2, P256_S3, P256_S4, P256_S5)
+- Due-standard revalidation: completed for queued due set. All five pending due locators remain actionable.
+- New standard locators queued: none
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785919183.427409
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query="*" from_ts=1786233125 to before=1786255323 returned 8 results across 1 page with no pagination.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19fe51d8ad1ce8b2.
+- Last due digest time: 2026-08-09T04:17:24.8837485-04:00
+
+## Current Slack Watchdog State
+- As of: 2026-08-09T02:02:32.0349162-04:00
+- Run #256
+- Last successful checkpoint: 1786255323
+- Last run window start (local): 2026-08-08T19:52:05.0000000-04:00
+- Safe run count: 256
+- Scan result: 8 candidate messages, 0 urgent, 0 new standard, 5 due-standard actionable, 0 no_reply
+- Next standard digest due: 2026-08-09T04:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785919183.427409
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query="*" from_ts=1786233125 to before=1786255323 returned 8 results and no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: 5 (P256_S1, P256_S2, P256_S3, P256_S4, P256_S5)
+- Due-standard revalidation: completed for due queue. All five pending due locators remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+# 2026-08-08T2026-08-08T14:08:27-04:00 Automation Run #254
+- As of: 2026-08-08T14:08:27-04:00
+- Task: Slack Reply Watchdog
+- Status: scan complete, no urgent candidates, 5 due standard preview candidates revalidated and sent
+- Checkpoint advanced to 1786212507
+- Last run window start (local): 2026-08-08T03:52:26.0000000-04:00
+- Safe run count: 254
+- Scan result: 20 candidate messages, 0 urgent, 0 new standard, 5 due-standard actionable, 0 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 5 (P254_S1, P254_S2, P254_S3, P254_S4, P254_S5)
+- Due-standard revalidation: completed for queued due set. all five queued standard locators remain actionable.
+- Connector status: Slack search coverage source public_channel,private_channel,mpim,im with query="*" from_ts=1786175546 to before=1786212507 returned 20 results with one more cursor.
+- Gmail status: send_email succeeded with Gmail id 19fe29109505fd29.
+- Last due digest time: 2026-08-08T14:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785919183.427409
+- Deduped safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query=* from present window returned 20 results and no pagination. second page returned no results.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+# 2026-08-08T2026-08-08T08:02:26-04:00 Automation Run #253
+- As of: 2026-08-08T08:02:26-04:00
+- Task: Slack Reply Watchdog
+- Status: scan complete, no urgent candidates, 5 due standard preview candidates revalidated and sent
+- Checkpoint advanced to 1786176146
+- Last run window start (local): 2026-08-08T02:11:48.0000000-04:00
+- Safe run count: 253
+- Scan result: 1 candidate message, 0 urgent, 0 new standard, 5 due-standard actionable, 0 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 5 (P253_S1, P253_S2, P253_S3, P253_S4, P253_S5)
+- Due-standard revalidation: completed for queued due set. all five queued standard locators remain actionable.
+- Connector status: Slack search coverage source public_channel,private_channel,mpim,im with query="*" from_ts=1786168308.148 to before=1786176146 returned 1 result with no pagination.
+- Gmail status: send_email succeeded with Gmail id 19fe141dcbe4c242.
+- Last due digest time: 2026-08-08T10:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785919183.427409
+- Deduped safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query=* from present window returned 1 result and no pagination.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+# 2026-08-05T2026-08-05T09:16:27.561-04:00 Automation Run #252
+- As of: 2026-08-05T2026-08-05T09:16:27.561-04:00
+- Task: Slack Reply Watchdog
+- Status: scan complete, no new urgent or standard candidates, no Gmail sent
+- Checkpoint advanced to 1785935328.700849
+- Safe run count: 252
+- Connector status: Slack search coverage source public_channel,private_channel,mpim,im with query="*" from_ts=1785930720.811309 to present. Full 12-result page.
+- Last due digest time: 2026-08-05T12:17:24.8837485-04:00
+# 2026-08-05T11:15:09.3350000-04:00 Run #251 Slack Reply Watchdog
+- As of: 2026-08-05T11:15:09.3350000-04:00
+- Last successful checkpoint: 1785931320.811309
+- Last run window start (local): 2026-08-05T08:29:43.0000000-04:00
+- Safe run count: 251
+- Scan result: 4 candidate messages, 0 urgent, 0 new standard, 5 due-standard actionable, 3 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 5 (P251_S1, P251_S2, P251_S3, P251_S4, P251_S5)
+- Due-standard revalidation: completed for queued due set. All five existing due locators remain unanswered and actionable.
+- New standard locators queued: none
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785919183.427409
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785918583.427409 to present. * returned 4 results across 1 page. Other variants returned 0.
+- Urgent previews sent: none
+- Due standard previews sent: 5
+- Due-standard revalidation: completed for due queue. All 5 pending due locators remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19fd1da9e0747cdd.
+- Next standard digest due: 2026-08-05T12:17:24.8837485-04:00
+
+
+# Current Slack Watchdog State
+- As of: 2026-08-05T11:15:09.3350000-04:00
+- Run #251
+- Last successful checkpoint: 1785931320.811309
+- Last run window start (local): 2026-08-05T08:29:43.0000000-04:00
+- Safe run count: 251
+- Scan result: 4 candidate messages, 0 urgent, 0 new standard, 5 due-standard actionable, 3 no_reply
+- Next standard digest due: 2026-08-05T12:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785919183.427409
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785918583.427409 to present. * returned 4 results across 1 page. Other variants returned 0.
+- Urgent previews sent: none
+- Due standard previews sent: 5
+- Due-standard revalidation: completed for due queue. All 5 pending due locators remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+# 2026-08-05T09:15:09.3350000-04:00 Run #250 Slack Reply Watchdog
+- As of: 2026-08-05T09:15:09.3350000-04:00
+- Last successful checkpoint: 1785919183.427409
+- Last run window start (local): 2026-08-05T08:29:43.0000000-04:00
+- Safe run count: 250
+- Scan result: 2 candidate messages, 0 urgent, 1 new standard, 4 due-standard actionable, 1 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 5 (P250_S1, P250_S2, P250_S3, P250_S4, P250_S5)
+- Due-standard revalidation: completed for queued due set. 4 existing due locators and 1 new due thread remain actionable.
+- New standard locators queued: C0BGWRK03B2|1785919183.427409
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785919183.427409
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785918583.427409 to present. * returned 2 results across 1 page. Other variants returned 0.
+- Urgent previews sent: none
+- Due standard previews sent: 5
+- Due-standard revalidation: completed for due queue. Four prior due threads plus new C0BGWRK03B2|1785919183.427409 remain unanswered and actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_draft succeeded with Gmail id 19fd16cdc4152aee.
+- Next standard digest due: 2026-08-05T10:17:24.8837485-04:00
+
+
+# Current Slack Watchdog State
+- As of: 2026-08-05T09:15:09.3350000-04:00
+- Run #250
+- Last successful checkpoint: 1785919183.427409
+- Last run window start (local): 2026-08-05T08:29:43.0000000-04:00
+- Safe run count: 250
+- Scan result: 2 candidate messages, 0 urgent, 1 new standard, 4 due-standard actionable, 1 no_reply
+- Next standard digest due: 2026-08-05T10:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785919183.427409
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785918583.427409 to present. * returned 2 results across 1 page. Other variants returned 0.
+- Urgent previews sent: none
+- Due standard previews sent: 5
+- Due-standard revalidation: completed for due queue. Four prior due threads plus new C0BGWRK03B2|1785919183.427409 remain unanswered and actionable.
+- Nothing was posted to Slack.
+- Run status: one Gmail notification sent.
+
+## 2026-08-05T05:16:12.8546769-04:00 Run #249 Slack Reply Watchdog
+- As of: 2026-08-05T05:16:12.8546769-04:00
+- Last successful checkpoint: 1785919183.427409
+- Last run window start (local): 2026-08-05T04:05:58.0000000-04:00
+- Safe run count: 249
+- Scan result: 2 candidate messages, 0 urgent, 0 new standard, 4 due-standard actionable, 0 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 4 (P249_S1, P249_S2, P249_S3, P249_S4)
+- Due-standard revalidation: completed for queued due set, all 4 remain actionable.
+- New standard locators queued: none
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, from:me from 1785917158. Returned 2 results for `*` and 0 for `from:me`, both in #bridge-software-development with no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: 4
+- Gmail status: send_draft succeeded with Gmail id 19fd135de6e08e22. Message id: 19fd135de6e08e22.
+- Next standard digest due: 2026-08-05T06:17:24.8837485-04:00
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+## Current Slack Watchdog State
+- As of: 2026-08-05T05:16:12.8546769-04:00
+- Run #249
+- Last successful checkpoint: 1785919183.427409
+- Last run window start (local): 2026-08-05T04:05:58.0000000-04:00
+- Safe run count: 249
+- Scan result: 2 candidate messages, 0 urgent, 0 new standard, 4 due-standard actionable, 0 no_reply
+- Next standard digest due: 2026-08-05T06:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, from:me from 1785917158. Returned 2 results for `*` and 0 for `from:me`, no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: 4
+- Due-standard revalidation: completed for due queue. All 4 remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+## 2026-08-05T04:16:00.0000000-04:00 Run #248 Slack Reply Watchdog
+- As of: 2026-08-05T04:16:00.0000000-04:00
+- Last successful checkpoint: 1785917758
+- Last run window start (local): 2026-08-05T03:06:14.0000000-04:00
+- Safe run count: 248
+- Scan result: 0 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 0 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- New standard locators queued: none
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785913574 to 1785917758. `*` returned 0 results across 1 page with no pagination. Other variants returned 0.
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- Due-standard revalidation: skipped this run because digest is not due.
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+- Next standard digest due: 2026-08-05T04:17:24.8837485-04:00
+
+## Current Slack Watchdog State
+- As of: 2026-08-05T04:16:00.0000000-04:00
+- Run #248
+- Last successful checkpoint: 1785917758
+- Last run window start (local): 2026-08-05T03:06:14.0000000-04:00
+- Safe run count: 248
+- Scan result: 0 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 0 no_reply
+- Next standard digest due: 2026-08-05T04:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785913574 to 1785917758. `*` returned 0 results across 1 page with no pagination. Other variants returned 0.
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- Due-standard revalidation: skipped this run because digest is not due.
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+
+## 2026-08-05T02:16:56.0000000-04:00 Run #246 Slack Reply Watchdog
+- As of: 2026-08-05T02:16:56.0000000-04:00
+- Last successful checkpoint: 1785906717.900469
+- Last run window start (local): 2026-08-05T01:01:57.0000000-04:00
+- Safe run count: 246
+- Scan result: 1 candidate messages, 0 urgent, 0 new standard, 4 due-standard actionable, 1 no_reply
+- Urgent previews sent: 1 (P246_U1)
+- Due standard previews sent: 4 (P246_S1, P246_S2, P246_S3, P246_S4)
+- Due-standard revalidation: completed. Four queued standard threads remain unanswered and actionable. P246_U1 remains active as urgent.
+- New standard locators queued: none
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785906117.900469 to 1785906717.900469. `*` returned 1 result across 1 page with no pagination. Other variants returned 0.
+- Urgent previews sent: 1
+- Due standard previews sent: 4
+- Gmail status: send_email succeeded with Gmail id 19fd091ff79e4cdf
+- Nothing was posted to Slack.
+- Next standard digest due: 2026-08-05T04:17:24.8837485-04:00
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+## Current Slack Watchdog State
+- As of: 2026-08-05T02:16:56.0000000-04:00
+- Run #246
+- Last successful checkpoint: 1785906717.900469
+- Last run window start (local): 2026-08-05T01:01:57.0000000-04:00
+- Safe run count: 246
+- Scan result: 1 candidate messages, 0 urgent, 0 new standard, 4 due-standard actionable, 1 no_reply
+- Next standard digest due: 2026-08-05T04:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785906117.900469 to 1785906717.900469. `*` returned 1 result across 1 page with no pagination. Other variants returned 0.
+- Urgent previews sent: 1
+- Due standard previews sent: 4
+- Due-standard revalidation: completed for due queue. Four queued standard threads remain unanswered and actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+## 2026-08-05T01:15:53.0073537-04:00 Run #245 Slack Reply Watchdog
+- As of: 2026-08-05T01:15:53.0073537-04:00
+- Last successful checkpoint: 1785906717.900469
+- Last run window start (local): 2026-08-05T00:05:52.0000000-04:00
+- Safe run count: 245
+- Scan result: 2 candidate messages, 0 urgent, 1 new standard, 0 due-standard actionable, 1 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- New standard locators queued: C0BGWRK03B2|1785905321.250469
+- Due-standard revalidation: skipped this run because digest is not due.
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785902752 to 1785906717.900469. `*` returned 2 results across 1 page with no pagination. Other variants returned 0.
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+
+## Current Slack Watchdog State
+- As of: 2026-08-05T01:15:53.0073537-04:00
+- Run #245
+- Last successful checkpoint: 1785906717.900469
+- Last run window start (local): 2026-08-05T00:05:52.0000000-04:00
+- Safe run count: 245
+- Scan result: 2 candidate messages, 0 urgent, 1 new standard, 0 due-standard actionable, 1 no_reply
+- Next standard digest due: 2026-08-05T01:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- C0BGWRK03B2|1785905321.250469
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785902752 to 1785906717.900469. `*` returned 2 results across 1 page. Other variants returned 0.
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- Due-standard revalidation: skipped this run because digest is not due.
+- Nothing was posted to Slack.
+- Run status: no Gmail notification sent.
+
+## 2026-08-05T00:15:52.0000000-04:00 Run #244 Slack Reply Watchdog
+- As of: 2026-08-05T00:15:52.0000000-04:00
+- Last successful checkpoint: 1785903352
+- Last run window start (local): 2026-08-04T23:05:55.0000000-04:00
+- Safe run count: 244
+- Scan result: 2 candidate messages, 0 urgent, 0 new standard, 4 due-standard actionable, 2 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 4
+- Due-standard revalidation: completed for queued standard set, all 4 still actionable.
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785899155 to 1785903352. `*` returned 2 results across 1 page with no pagination. `from:me`, `from:<@U0A6MD920MA>`, and `from:U0A6MD920MA` returned 2 results each. Others returned 0 results.
+- Urgent previews sent: none
+- Due standard previews sent: 4
+- Gmail status: send_email succeeded with Gmail id 19fd0229f41a8fe5
+- Next standard digest due: 2026-08-05T01:17:24.8837485-04:00
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+## Current Slack Watchdog State
+- As of: 2026-08-05T00:15:52.0000000-04:00
+- Run #244
+- Last successful checkpoint: 1785903352
+- Last run window start (local): 2026-08-04T23:05:55.0000000-04:00
+- Safe run count: 244
+- Scan result: 2 candidate messages, 0 urgent, 0 new standard, 4 due-standard actionable, 2 no_reply
+- Next standard digest due: 2026-08-05T01:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785899155 to 1785903352. `*` returned 2 results across 1 page with no pagination. `from:me`, `from:<@U0A6MD920MA>`, and `from:U0A6MD920MA` returned 2 results each. Others returned 0.
+- Urgent previews sent: none
+- Due standard previews sent: 4
+- Due-standard revalidation: completed for due queue. All 4 remain actionable.
+- Nothing was posted to Slack.
+- Run status: one Gmail notification sent to dillonmohr8777@gmail.com.
+
+## 2026-08-04T23:15:55.0000000-04:00 Run #243 Slack Reply Watchdog
+- As of: 2026-08-04T23:15:55.0000000-04:00
+- Last successful checkpoint: 1785899755.000000
+- Last run window start (local): 2026-08-04T21:44:15.7740000-04:00
+- Safe run count: 243
+- Scan result: 5 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 5 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- Due-standard revalidation: skipped this run because digest is not due.
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variant * from 1785894255.773919 to 1785899755. `*` returned 5 results across 1 page with no pagination.
+- Next standard digest due: 2026-08-04T23:17:24.8837485-04:00
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+
+## Current Slack Watchdog State
+- As of: 2026-08-04T23:15:55.0000000-04:00
+- Run #243 Slack Reply Watchdog
+- Last successful checkpoint: 1785899755.000000
+- Last run window start (local): 2026-08-04T21:44:15.7740000-04:00
+- Safe run count: 243
+- Scan result: 5 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 5 no_reply
+- Next standard digest due: 2026-08-04T23:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.223429
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variant * from 1785894255.773919 to 1785899755. `*` returned 5 results across 1 page with no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: none
+- Due-standard revalidation: skipped this run because digest is not due.
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+
+## 2026-08-04T20:40:19.4340000-04:00 Run #241 Slack Reply Watchdog
+- As of: 2026-08-04T20:40:19.4340000-04:00
+- Last successful checkpoint: 1785890419.433759
+- Last run window start (local): 2026-08-04T20:07:05.3910000-04:00
+- Safe run count: 241
+- Scan result: 6 candidate messages, 0 urgent, 2 new standard, 0 due-standard actionable, 4 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- Due-standard revalidation: completed for queued standard set, all remain actionable.
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BLF3NK4LR|1785887185.633619
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BLF3NK4LR|1785887185.633619
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785888425.391 to 1785890419.433759. `*` returned 6 results across 1 page with no pagination. Other variants returned 0 results with no pagination.
+- Next standard digest due: 2026-08-04T21:17:24.8837485-04:00
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+
+## Current Slack Watchdog State
+- As of: 2026-08-04T20:40:19.4340000-04:00
+- Run #241
+- Last successful checkpoint: 1785890419.433759
+- Last run window start (local): 2026-08-04T20:07:05.3910000-04:00
+- Safe run count: 241
+- Scan result: 6 candidate messages, 0 urgent, 2 new standard, 0 due-standard actionable, 4 no_reply
+- Next standard digest due: 2026-08-04T21:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BLF3NK4LR|1785887185.633619
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BLF3NK4LR|1785887185.633619
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785888425.391 to 1785890419.433759. `*` returned 6 results across 1 page with no pagination. Other variants returned 0 results with no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: none
+- Due-standard revalidation: completed for queued standard set, still actionable.
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+
+## 2026-08-04T20:16:46-04:00 Run #240 Slack Reply Watchdog
+- As of: 2026-08-04T20:16:46-04:00
+- Last successful checkpoint: 1785889025.391
+- Last run window start (local): 2026-08-04T19:06:50.0000000-04:00
+- Safe run count: 240
+- Scan result: 17 candidate messages, 0 urgent, 1 new standard, 2 due-standard actionable, 14 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 2
+- Due-standard revalidation: completed for due queue. Both existing standard threads remain unanswered and actionable.
+- New standard locators queued: C0BLF3NK4LR|1785887185.633619
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BLF3NK4LR|1785887185.633619
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BLF3NK4LR|1785887185.633619
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, is:thread from 1785884810.26 to 1785889025.391. `*` returned 17 results across 1 page with no pagination. `Dillon` and `<@U0A6MD920MA>` returned 2 results each. Other variants returned 0, 12, and 0 results with no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: 2
+- Gmail status: send_email succeeded with Gmail id 19fcf47b133e1a47.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+## Current Slack Watchdog State
+- As of: 2026-08-04T20:16:46-04:00
+- Run #240
+- Last successful checkpoint: 1785889025.391
+- Last run window start (local): 2026-08-04T19:06:50.0000000-04:00
+- Safe run count: 240
+- Scan result: 17 candidate messages, 0 urgent, 1 new standard, 2 due-standard actionable, 14 no_reply
+- Next standard digest due: 2026-08-04T21:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BLF3NK4LR|1785887185.633619
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BLF3NK4LR|1785887185.633619
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, Dillon, <@U0A6MD920MA>, to:me, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA, is:thread from 1785884810.26 to 1785889025.391. `*` returned 17 results across 1 page with no pagination. `Dillon` and `<@U0A6MD920MA>` returned 2 results each. Others returned 0, 12, and 0 results with no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: 2
+- Due-standard revalidation: completed for queued standard set, still actionable.
+- Nothing was posted to Slack.
+- Run status: one Gmail notification sent to dillonmohr8777@gmail.com.
+## 2026-08-04T18:16:26.0000000-04:00 Run #238 Slack Reply Watchdog
+- As of: 2026-08-04T18:16:26.0000000-04:00
+- Last successful checkpoint: 1785881741.355049
+- Last run window start (local): 2026-08-04T17:07:28.833233-04:00
+- Safe run count: 238
+- Scan result: 15 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 15 no_reply
+- Next standard digest due: 2026-08-04T19:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, to:me, Dillon, "<@U0A6MD920MA>", is:thread, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA from 1785877648.833233 to 1785881741.355049. `*` returned 15 results across 1 page with no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- Due-standard revalidation: completed for digest queue. Both queued standard threads remain unanswered and actionable.
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+
+## 2026-08-04T19:16:50.2600000-04:00 Run #239 Slack Reply Watchdog
+- As of: 2026-08-04T19:16:50.2600000-04:00
+- Last successful checkpoint: 1785885410.26
+- Last run window start (local): 2026-08-04T18:05:41.355049-04:00
+- Safe run count: 239
+- Scan result: 11 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 11 no_reply
+- Next standard digest due: 2026-08-04T19:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, to:me, Dillon, <@U0A6MD920MA>, is:thread, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA from 1785881141.355049 to 1785885410.26. `*` returned 11 results across 1 page with no pagination. Other variants returned 2, 0, 0, 0, 2, 2, and 2 results with no pagination.
+- Resolved authenticated Slack identity as U0A6MD920MA / Dillon Mohr / Momentum Digital Agency.
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- Due-standard revalidation: completed for digest queue, both standard threads remain unanswered and actionable.
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+
+## 2026-08-04T17:17:24.8837485-04:00 Run #237
+## 2026-08-04T17:17:24.8837485-04:00 Run #237 Slack Reply Watchdog
+- As of: 2026-08-04T17:17:24.8837485-04:00
+- Last successful checkpoint: 1785878248.833233
+- Last run window start (local): 2026-08-04T15:05:15.4920000-04:00
+- Safe run count: 237
+- Scan result: 88 candidate messages, 0 urgent, 0 new standard, 2 due-standard actionable, 86 no_reply
+- Next standard digest due: 2026-08-04T19:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, to:me, Dillon, <@U0A6MD920MA>, is:thread, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA from 1785870315.495929 to 1785878248.833233. `*` returned 88 results across 5 pages with cursors Q1VSUkVOVF9QQUdFOjI=, Q1VSUkVOVF9QQUdFOjM=, Q1VSUkVOVF9QQUdFOjQ= and full coverage. Other variants returned 0, 2, 1, 14, 2, 2, and 2 results with no pagination.
+- Resolved authenticated Slack identity as U0A6MD920MA / Dillon Mohr / Momentum Digital Agency.
+- Urgent previews sent: none
+- Due standard previews sent: 2
+- Due-standard revalidation: completed for digest queue, both standard threads remain actionable.
+- Nothing was posted to Slack.
+- Gmail id: 19fcea395de19e53
+- Run status: one HTML Gmail notification sent.
+## 2026-08-04T15:16:26.5476972-04:00 Run #236 Slack Reply Watchdog
+- As of: 2026-08-04T15:16:26.5476972-04:00
+- Last successful checkpoint: 1785870915.495929
+- Last run window start (local): 2026-08-04T14:06:27.833339-04:00
+- Safe run count: 236
+- Scan result: 16 candidate messages, 0 urgent, 0 new standard, 2 due-standard actionable, 14 no_reply
+- Next standard digest due: 2026-08-04T17:16:26.5476972-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, to:me, Dillon, <@U0A6MD920MA>, is:thread, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA from 1785866387.833339, returned 16, 1, 2, and 2 results across one page each with full coverage and no pagination gap.
+- Resolved authenticated Slack identity as U0A6MD920MA / Dillon Mohr / Momentum Digital Agency.
+- Urgent previews sent: none
+- Due standard previews sent: 2
+- Due-standard revalidation: completed for due digest queue, both standard threads remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail connector succeeded. Draft id 19fce34c294102be.
+
+## Current Slack Watchdog State
+- As of: 2026-08-04T19:16:50.2600000-04:00
+- Run #239
+- Last successful checkpoint: 1785885410.26
+- Last run window start (local): 2026-08-04T18:05:41.355049-04:00
+- Safe run count: 239
+- Scan result: 11 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 11 no_reply
+- Next standard digest due: 2026-08-04T19:17:24.8837485-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Dedupe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, to:me, Dillon, <@U0A6MD920MA>, is:thread, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA from 1785881141.355049 to 1785885410.26. `*` returned 11 results across 1 page with no pagination. Other variants returned 2, 0, 0, 0, 2, 2, and 2 results with no pagination.
+- Resolved authenticated Slack identity as U0A6MD920MA / Dillon Mohr / Momentum Digital Agency.
+- Urgent previews sent: none
+- Due standard previews sent: none (digest not due)
+- Due-standard revalidation: completed for digest queue, still actionable.
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+## 2026-08-04T14:16:29.2630000-04:00 Run #235 Slack Reply Watchdog
+- As of: 2026-08-04T14:16:29.2630000-04:00
+- Last successful checkpoint: 1785866987.833339
+- Last run window start (local): 2026-08-04T13:16:49.816639-04:00
+- Safe run count: 235
+- Scan result: 10 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 9 no_reply
+- Next standard digest due: 2026-08-04T15:16:49.816639-04:00
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- Dedupe locators: unchanged
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, to:me, Dillon, <@U0A6MD920MA>, is:thread, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA from 1785862609.816639, returned 10 and 1 results across one page each with full coverage and no pagination gap.
+- Resolved authenticated Slack identity as U0A6MD920MA / Dillon Mohr / Momentum Digital Agency.
+- Urgent previews sent: none
+- Due standard previews sent: 2
+- Due-standard revalidation: completed for due digest queue, both standard threads remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail connector succeeded. Draft id 19fcdfdd16d3a36e.
+
+## 2026-08-04T13:16:28.864-04:00 Run #234 Slack Reply Watchdog
+- As of: 2026-08-04T13:16:28.864-04:00
+- Last successful checkpoint: 1785863209.816639
+- Last run window start (local): 2026-08-04T12:05:13.0000000-04:00
+- Safe run count: 234
+- Scan result: 82 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 1 no_reply
+- Next standard digest due: 2026-08-04T14:05:13.0000000-04:00
+- Pending standard safe locators: unchanged
+- Dedupe locators: unchanged
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, to:me, Dillon, <@U0A6MD920MA>, is:thread, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA from 1785859513 to 1785863209.816639. Returned 82 results across 4 pages with cursors Q1VSUkVOVF9QQUdFOjI=, Q1VSUkVOVF9QQUdFOjM=, Q1VSUkVOVF9QQUdFOjQ=. No pagination gaps.
+- Resolved authenticated Slack identity as U0A6MD920MA / Dillon Mohr / Momentum Digital Agency.
+- Urgent previews sent: none
+- Due standard previews sent: none
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+## Current Slack Watchdog State
+- As of: 2026-08-04T13:16:28.864-04:00
+- Run #234
+- Last successful checkpoint: 1785863209.816639
+- Last run window start (local): 2026-08-04T12:05:13.0000000-04:00
+- Safe run count: 234
+- Scan result: 82 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 1 no_reply
+- Next standard digest due: 2026-08-04T14:05:13.0000000-04:00
+- Pending standard safe locators:
+- unchanged
+- Dedupe locators:
+- unchanged
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variants *, to:me, Dillon, <@U0A6MD920MA>, is:thread, from:me, from:<@U0A6MD920MA>, from:U0A6MD920MA from 1785859513 to 1785863209.816639, returned 82 results across 4 pages, with cursors Q1VSUkVOVF9QQUdFOjI=, Q1VSUkVOVF9QQUdFOjM=, Q1VSUkVOVF9QQUdFOjQ= and full coverage.
+- Resolved authenticated Slack identity as U0A6MD920MA / Dillon Mohr / Momentum Digital Agency.
+- Urgent previews sent: none
+- Due standard previews sent: none
+- Nothing was posted to Slack.
+- Run status: no notifications sent (urgent none, standard digest not due).
+
+
+
+
+## 2026-08-04T21:54:15-04:00 Run #242 Slack Reply Watchdog
+- As of: 2026-08-04T21:54:15-04:00
+- Last successful checkpoint: 1785894855.773919
+- Last run window start (local): 2026-08-04T20:30:19.433759-04:00
+- Safe run count: 242
+- Scan result: 9 candidate messages, 0 urgent, 0 new standard, 4 due-standard actionable, 5 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 4
+- Due-standard revalidation: completed for due queue. C0BLF3NK4LR|1785887185.633619 has a recent reply, kept in dedupe only. Other four remain actionable.
+- Pending standard safe locators:
+- C0AMD2E444E|1785849438.223429
+- C0AEGE1V5KR|1785848928.312439
+- C0BB04ZFZ26|1785890414.861969
+- C0BB04ZFZ26|1785890419.433759
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query variant * from 1785889819.433759 to 1785894855.773919. `*` returned 9 results across 1 page with no pagination. 
+- Next standard digest due: 2026-08-04T23:17:24.8837485-04:00
+- Gmail status: send_draft succeeded with Gmail id 19fcfb5b5a2caa24
+- Gmail message ids: 19fcfb5abad162f7
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com.
+
+
+
+## 2026-08-06T14:17:49.170-04:00 Run #253 Slack Reply Watchdog
+- As of: 2026-08-06T14:17:49.170-04:00
+- Last successful checkpoint: 1786039739.503059
+- Last run window start (local): 2026-08-06T10:14:29.1700000-04:00
+- Safe run count: 253
+- Scan result: 99 candidate messages, 0 urgent, 0 new standard, 0 due-standard actionable, 99 no_reply
+- Urgent previews sent: none
+- Due standard revalidation: not run this cycle
+- Due standard sent: none (digest not due)
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+- Connector status: Slack search on channel_types public_channel,private_channel,mpim,im with query="*" from 1786025269.170 to 1786039739.503059, include_context=false, sort=timestamp, asc. Returned 99 results across 4 pages with cursors Q1VSUkVOVF9QQUdFOjI=, Q1VSUkVOVF9QQUdFOjM=, Q1VSUkVOVF9QQUdFOjQ=.
+- Urgent Gmail notification: none (0 new urgent)
+- Standard digest notification: none (digest not due)
+- Run status: no Gmail notification sent. Nothing was posted to Slack.
+- Next standard digest due: 2026-08-06T16:17:24.8837485-04:00
+
+
+
+
+
+
+# 2026-08-11T19:00:07.795459-04:00 Run #267 Slack Reply Watchdog
+- As of: 2026-08-11T19:00:07.795459-04:00
+- Last successful checkpoint: 1786489207.795459
+- Last run window start (local): 2026-08-11T14:01:15.153449-04:00
+- Safe run count: 267
+- Scan result: 169 candidate messages, 0 urgent, 0 new standard, 8 due-standard actionable, 161 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 8 (P267_S1, P267_S2, P267_S3, P267_S4, P267_S5, P267_S6, P267_S7, P267_S8)
+- Due-standard revalidation: completed for queued due set. All eight pending standard locators remain actionable.
+- New standard locators queued: none
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Connector status: Slack search on coverage source channel_types=public_channel,private_channel,mpim,im with query="*" from_ts=1786471275.153449 to current returned 169 results with cursors Q1VSUkVOVF9QQUdFOjI=,Q1VSUkVOVF9QQUdFOjM=,Q1VSUkVOVF9QQUdFOjQ=,Q1VSUkVOVF9QQUdFOjU=,Q1VSUkVOVF9QQUdFOjY=,Q1VSUkVOVF9QQUdFOjk= and no pagination gaps.
+- Gmail status: send_email succeeded to dillonmohr8777@gmail.com with Gmail id 19ff34874db328d7.
+- Last due digest time: 2026-08-11T21:00:07.795459-04:00
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19ff34874db328d7.
+
+## Current Slack Watchdog State
+- As of: 2026-08-11T19:00:07.795459-04:00
+- Run #267
+- Last successful checkpoint: 1786489207.795459
+- Last run window start (local): 2026-08-11T14:01:15.153449-04:00
+- Safe run count: 267
+- Scan result: 169 candidate messages, 0 urgent, 0 new standard, 8 due-standard actionable, 161 no_reply
+- Next standard digest due: 2026-08-11T21:00:07.795459-04:00
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Connector status: Slack search on coverage source channel_types=public_channel,private_channel,mpim,im with query="*" from_ts=1786471275.153449 to current returned 169 results with cursors Q1VSUkVOVF9QQUdFOjI=,Q1VSUkVOVF9QQUdFOjM=,Q1VSUkVOVF9QQUdFOjQ=,Q1VSUkVOVF9QQUdFOjU=,Q1VSUkVOVF9QQUdFOjY=,Q1VSUkVOVF9QQUdFOjk= and no pagination gaps.
+- Urgent previews sent: none
+- Due standard sent: 8 (P267_S1, P267_S2, P267_S3, P267_S4, P267_S5, P267_S6, P267_S7, P267_S8)
+- Due-standard revalidation: completed for due queue. All eight pending standard locators remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19ff34874db328d7.
+
+
+# 2026-08-11T19:00:07.795459-04:00 Run #267 Slack Reply Watchdog
+- As of: 2026-08-11T19:00:07.795459-04:00
+- Last successful checkpoint: 1786489207.795459
+- Last run window start (local): 2026-08-11T14:01:15.153449-04:00
+- Safe run count: 267
+- Scan result: 129 candidate messages, 0 urgent, 0 new standard, 7 due-standard actionable, 122 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 7 (P267_S1, P267_S2, P267_S3, P267_S4, P267_S5, P267_S6, P267_S7)
+- Due-standard revalidation: completed for queued due set. All seven pending due locators remain actionable.
+- New standard locators queued: none
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Connector status: Slack search on coverage source from_ts=1786471275.153449 to current returned 129 results with cursors Q1VSUkVOVF9QQUdFOjI=,Q1VSUkVOVF9QQUdFOjM=,Q1VSUkVOVF9QQUdFOjQ=,Q1VSUkVOVF9QQUdFOjU=,Q1VSUkVOVF9QQUdFOjY=,Q1VSUkVOVF9QQUdFOjg=,Q1VSUkVOVF9QQUdFOjk= and no pagination gaps.
+- Gmail status: send_email succeeded to dillonmohr8777@gmail.com with Gmail id 19ff349764c35831.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19ff349764c35831.
+- Last due digest time: 2026-08-11T21:00:07.795459-04:00
+
+## Current Slack Watchdog State
+- As of: 2026-08-11T19:00:07.795459-04:00
+- Run #267
+- Last successful checkpoint: 1786489207.795459
+- Last run window start (local): 2026-08-11T14:01:15.153449-04:00
+- Safe run count: 267
+- Scan result: 129 candidate messages, 0 urgent, 0 new standard, 7 due-standard actionable, 122 no_reply
+- Next standard digest due: 2026-08-11T21:00:07.795459-04:00
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+- Connector status: Slack search on coverage source from_ts=1786471275.153449 to current returned 129 results with cursors Q1VSUkVOVF9QQUdFOjI=,Q1VSUkVOVF9QQUdFOjM=,Q1VSUkVOVF9QQUdFOjQ=,Q1VSUkVOVF9QQUdFOjU=,Q1VSUkVOVF9QQUdFOjY=,Q1VSUkVOVF9QQUdFOjg=,Q1VSUkVOVF9QQUdFOjk= and no pagination gaps.
+- Urgent previews sent: none
+- Due standard sent: 7 (P267_S1, P267_S2, P267_S3, P267_S4, P267_S5, P267_S6, P267_S7)
+- Due-standard revalidation: completed for due queue. All seven pending due locators remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19ff349764c35831.
+
+# 2026-08-11T23:16:17.087289-04:00 Run #268 Slack Reply Watchdog
+- As of: 2026-08-11T23:16:17.087289-04:00
+- Last successful checkpoint: 1786504577.087289
+- Last run window start (local): 2026-08-11T18:50:07.795459-04:00
+- Safe run count: 268
+- Scan result: 10 candidate messages, 0 urgent, 0 new standard, 0 actionable, 10 no_reply
+- Urgent previews sent: none
+- Due standard previews sent: 8 (P268_S1, P268_S2, P268_S3, P268_S4, P268_S5, P268_S6, P268_S7, P268_S8)
+- Due-standard revalidation: completed for queued due set. All eight pending due locators remain actionable.
+- New standard locators queued: none
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Connector status: Slack search on coverage source channel_types=public_channel,private_channel,mpim,im with query="*" from_ts=1786488607.795459 to current returned 10 results with no pagination.
+- Gmail status: send_email succeeded with Gmail id 19ff490f96d30036.
+- Last due digest time: 2026-08-12T01:16:17.087289-04:00
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail id 19ff490f96d30036.
+
+## Current Slack Watchdog State
+- As of: 2026-08-11T23:16:17.087289-04:00
+- Run #268
+- Last successful checkpoint: 1786504577.087289
+- Last run window start (local): 2026-08-11T18:50:07.795459-04:00
+- Safe run count: 268
+- Scan result: 10 candidate messages, 0 urgent, 0 new standard, 0 actionable, 10 no_reply
+- Next standard digest due: 2026-08-12T01:16:17.087289-04:00
+- Pending standard safe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Dedupe locators:
+  - C0AMD2E444E|1785849438.223429
+  - C0AEGE1V5KR|1785848928.312439
+  - C0BB04ZFZ26|1785890414.861969
+  - C0BB04ZFZ26|1785890419.433759
+  - C0BGWRK03B2|1785905321.250469
+  - C0BGWRK03B2|1785919183.427409
+  - C0B2N20A0SW|1786362137.474889
+  - C0AEGE1V5KR|1786385217.524939
+  - C0BMDSVT4JG|1786449002.443989
+- Connector status: Slack search on coverage source channel_types=public_channel,private_channel,mpim,im with query="*" from_ts=1786488607.795459 to current returned 10 results with no pagination.
+- Urgent previews sent: none
+- Due standard previews sent: 8 (P268_S1, P268_S2, P268_S3, P268_S4, P268_S5, P268_S6, P268_S7, P268_S8)
+- Due-standard revalidation: completed for due queue. All eight pending due locators remain actionable.
+- Nothing was posted to Slack.
+- Run status: one HTML Gmail notification sent to dillonmohr8777@gmail.com. Gmail status: send_email succeeded with Gmail id 19ff490f96d30036.

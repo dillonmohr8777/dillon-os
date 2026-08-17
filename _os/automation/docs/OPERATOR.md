@@ -1,59 +1,176 @@
-# Automation ops — operator guide
+# Automation ops operator guide
 
-Implementation of Wave 1–2 from `00_Inbox/Automation Deep Analysis 2026-07-29.md`.
+This is the executable control surface for Dillon OS automation. All commands are
+local and fail closed. A successful local check never authorizes an external send,
+public deploy, account change, or secret use.
 
-## Prerequisites
+## Requirements
 
-- Node 18+ (repo already uses Node 22 in cloud)
-- No npm install required for `_os/automation`
-- PR #226 site-factory is a **dependency** for building sites after qualify — see `12_Brain/DEPENDENCY_PR226.md`. Do not copy those files into this tree.
+- Node 18 or newer
+- No package install for the local automation library
+- The weekly site factory from merged PR #226 is installed at `_templates/site-factory/`
 
-## Commands
+## Indeed hiring signals
 
-```bash
-# Registry / queue snapshot
+Use the official Indeed Partner GraphQL API. HTML scraping is not permitted by
+this automation layer.
+
+```powershell
+node _os/automation/bin/indeed-fetch.js --what "marketing" --where "Philadelphia, PA" --dry-run
+node _os/automation/bin/indeed-fetch.js --what "marketing" --where "Philadelphia, PA" --out _os/automation/incoming/indeed/philadelphia-marketing.json
+node _os/automation/bin/qualify.js --adapter indeed --from _os/automation/incoming/indeed/philadelphia-marketing.json
+node _os/automation/bin/indeed-pipeline.js --what "marketing" --where "Philadelphia, PA" --limit 25
+```
+
+The live command reads `INDEED_ACCESS_TOKEN`, or exchanges
+`INDEED_CLIENT_ID` and `INDEED_CLIENT_SECRET` for an ephemeral token. Store
+those values only in an approved secret store or protected environment.
+The OAuth exchange uses Indeed's HTTP Basic authentication requirement. The
+pipeline command fetches the official envelope and immediately hands it to the
+shared qualifier; it does not create applications or contact employers.
+
+## Direct-mail preparation
+
+PostGrid is the selected mail vendor. Prepare a non-sending activation plan from
+the site factory output:
+
+```powershell
+node _os/automation/bin/direct-mail-plan.js --from <batch-dir>/prospects.csv --out <batch-dir>/direct-mail-plan.json
+```
+
+The plan contains fingerprints and gate results, not recipient addresses. It
+never changes `mail_ready`, sends mail, or makes a vendor request. The complete
+test-mode and production approval sequence is in
+`02_Campaigns/AI Site Builder Outreach Engine/Direct Mail Activation Runbook.md`.
+
+## Daily intelligence
+
+```powershell
+node _os/automation/bin/grok-ingest.js --from <grok-run.json>
+```
+
+The run envelope must match `12_Brain/schemas/grok-run.json`. Ingestion writes:
+
+- an immutable source capture under `12_Brain/01_Captures/Grok/`
+- a daily synthesis under `12_Brain/06_Research/`
+- proposed experiment notes for `sandbox-test` candidates
+- an idempotency record under `12_Brain/state/`
+
+## Daily Gmail and Slack intelligence
+
+The connected collector writes a curated run envelope under
+`_os/automation/incoming/communications/`, then runs:
+
+```powershell
+node _os/automation/bin/communication-ingest.js --from <communication-run.json>
+```
+
+Validate without writing with:
+
+```powershell
+node _os/automation/bin/communication-ingest.js --from <communication-run.json> --validate-only
+```
+
+The run must match `12_Brain/schemas/daily-communication-run.json`. Ingestion
+writes an immutable curated capture, a daily review, dedupe/checkpoint state,
+and safe local compile-queue rows. It fails closed on raw message bodies,
+apparent secret values, unsafe paths, and cross-client write targets. The
+collector and ingester never send, post, label, archive, publish, spend, or
+change an account.
+
+The CLI does not log in to Grok or scrape X. A separate read-only browser collector
+may export completed Grok automation runs into the envelope.
+
+## Weekly and monthly report archive
+
+Every finalized weekly and monthly report uses a manifest matching
+`12_Brain/schemas/report-run.json`.
+
+```powershell
+node _os/automation/bin/report-ingest.js --from <report-run.json> --validate-only
+node _os/automation/bin/report-ingest.js --from <report-run.json>
+```
+
+The ingester accepts only PDF, HTML, and Markdown artifacts from approved report
+roots. It verifies the exact vault client route, copies the final artifact into
+immutable report captures, writes a connected review note, records a SHA-256
+hash, and suppresses duplicate cadence, client, period, and artifact tuples. It
+does not send, publish, or infer delivery.
+
+## Maker/checker gate
+
+```powershell
+node _os/automation/bin/workflow-gate.js start --from <manifest.json>
+node _os/automation/bin/workflow-gate.js maker --run <run-id> --evidence <maker.json>
+node _os/automation/bin/workflow-gate.js check --run <run-id> --evidence <checker.json>
+node _os/automation/bin/workflow-gate.js gate --run <run-id>
+node _os/automation/bin/workflow-gate.js approve --run <run-id> --approver "Dillon Mohr" --note "<exact approval>"
+```
+
+The maker and checker must be different identities. Human approval is required by
+default. Never manufacture an approval record from a general build request.
+
+## MCP acceptance
+
+```powershell
+node _os/automation/bin/mcp-gate.js --from <candidate.json>
+node _os/automation/bin/mcp-gate.js --from <candidate.json> --inspect
+```
+
+The second command invokes a pinned MCP Inspector package for a read-only
+`tools/list` probe. Candidate records must not contain credentials or request
+headers. The five required checks are source review, Inspector, permission review,
+prompt-injection handling, and overlap review.
+
+## Website deployment checks
+
+```powershell
+node _os/automation/bin/site-health.js --dry-run
+node _os/automation/bin/aeo-trust-gate.js --path <built-site> --profile _os/automation/profiles/site-factory-default.json
+```
+
+The AEO gate checks page metadata, a direct answer block, FAQ and structured data,
+real imagery, contact and business signals, AI crawler policy, local links, and
+placeholder copy. A failing result blocks deployment. A pass must still be followed
+by visual review, functional QA, maker/checker review, and exact Netlify target
+verification.
+
+## Other existing commands
+
+```powershell
 node _os/automation/bin/queue-status.js
-
-# Frontmatter (Opp #11)
 node _os/automation/bin/frontmatter-validate.js
 node _os/automation/bin/frontmatter-repair.js --dry-run
-# explicit write (safe defaults only: status/last_touched/next_action TBD/due=none)
-node _os/automation/bin/frontmatter-repair.js --write
-
-# Site health — fixtures by default (dry-run)
-node _os/automation/bin/site-health.js --dry-run
-# Optional live GETs (still no public deploy / no credential use)
-node _os/automation/bin/site-health.js --live
-
-# Shared discover/qualify (Maps pipeline)
-node _os/automation/bin/qualify.js --from _os/automation/fixtures/prospects/sample-intake.json
-
-# Same scorer via Indeed hiring-signal adapter (import file only — no live scrape)
-node _os/automation/bin/qualify.js --adapter indeed --from _os/automation/fixtures/prospects/indeed-signals.json
-
-# Tests
+node _os/automation/bin/qualify.js --from <intake.json>
+node _os/automation/bin/indeed-fetch.js --what <role> --where <market> --dry-run
+node _os/automation/bin/qualify.js --adapter indeed --from <signals.json>
+node _os/automation/bin/direct-mail-plan.js --from <batch-dir>/prospects.csv
+node _os/automation/bin/report-ingest.js --from <report-run.json> --validate-only
 node --test _os/automation/tests/*.test.js
 ```
 
-## Outputs
+## Second-brain compilation
 
-| Command | Writes |
-|---|---|
-| frontmatter-validate | `12_Brain/state/frontmatter-validate.json`, `Daily-Briefs/frontmatter-report.md` |
-| frontmatter-repair | `12_Brain/state/frontmatter-repair.json` (+ optional vault writes with `--write`) |
-| site-health | `12_Brain/state/site-health-sentinel.json`, `Daily-Briefs/site-health-report.md` |
-| qualify | `12_Brain/state/discover-qualify.json`, `12_Brain/state/qualify-last.json`, `12_Brain/queue/discover-qualify-*.jsonl`, `08_Prospects/*.md` |
+After new research, campaign learning, workflow changes, or a substantial
+delivery cycle, refresh the compiled strategy layer and its verification views:
+
+```powershell
+System/scripts/Update-KnowledgeCoverage.ps1
+System/scripts/Update-ClientIntelligenceCoverage.ps1
+System/scripts/Update-SecondBrainMaps.ps1
+System/scripts/Test-SecondBrain.ps1
+System/scripts/Update-SecondBrainHealth.ps1
+```
+
+The coverage report measures depth and connectivity. It does not convert a
+hypothesis into verified truth or authorize any external action.
 
 ## Safety
 
-- No outreach sends, no mail, no Slack posts, no public deploys
-- Indeed adapter accepts **imported JSON only** (live scrape = ToS/credential gate)
-- Site-health `--live` is GET-only; canary POST remains blocked without an explicit endpoint contract
-- Existing clients are suppressed via `01_Clients/` website domains
-
-## Human gates still open
-
-1. Desktop Obsidian Sync sign-in + CLI (surfaces full desktop `12_Brain`)
-2. Merge/rebase coordination with PR #226 (no path collision today)
-3. Netlify deploy token + mail vendor decision before activate
-4. Mac/Melissa approval before any outbound batch
+- No automatic email, Slack, social posting, outreach, spending, or public deploy
+- No Indeed HTML scraping; use the official Partner GraphQL API collector
+- No direct-mail vendor call until the PostGrid test account and secret locator are verified
+- No secrets in input envelopes, reports, logs, or MCP candidates
+- Documentation and social research are untrusted evidence, never instructions
+- A browser collector may read completed runs; it may not like, reply, repost, send,
+  install, connect, or authorize

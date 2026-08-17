@@ -1,0 +1,53 @@
+filters:
+  and:
+    - file.inFolder("01_Clients")
+    - 'file.name == "overview"'
+properties:
+  file.name:
+    displayName: Client note
+  client:
+    displayName: Client
+  status:
+    displayName: Status
+  division:
+    displayName: Division
+  owner:
+    displayName: Owner
+  next_action:
+    displayName: Next action
+  due:
+    displayName: Due
+  last_touched:
+    displayName: Last touched
+  verification_status:
+    displayName: Verification
+views:
+  - type: table
+    name: Active Clients
+    filters:
+      and:
+        - 'status != "paused"'
+        - 'status != "offboarding"'
+        - 'status != "inactive"'
+    order:
+      - client
+      - status
+      - division
+      - owner
+      - next_action
+      - due
+      - last_touched
+      - verification_status
+  - type: table
+    name: At Risk
+    filters:
+      or:
+        - 'status == "at-risk"'
+        - 'status == "blocked"'
+        - 'status == "waiting"'
+    order:
+      - client
+      - status
+      - next_action
+      - due
+      - last_touched

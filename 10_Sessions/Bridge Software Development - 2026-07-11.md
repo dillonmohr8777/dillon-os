@@ -97,7 +97,7 @@ Provisional visual directions:
 
 ## Claude confusion event
 
-Claude used the wrong context and found [[../01_Clients/Bridge of Hope OTC|Bridge of Hope OTC]]. It then asked about SEO reports, strategy decks, meeting one-pagers, and vault setup.
+Claude used the wrong context and found `Bridge of Hope OTC`. It then asked about SEO reports, strategy decks, meeting one-pagers, and vault setup.
 
 Corrective action:
 

@@ -18,7 +18,7 @@ tags: [campaigns, google-ads, pmax]
 - Launched 2026-04-14.
 
 ## CRITICAL targeting rule
-Location targeting MUST be "Presence Only." NEVER "Presence or Interest." This has burned both Bar Crawl USA and LinkEZE in the past. Audit any new campaign against this before launch.
+Location targeting MUST be "Presence Only." NEVER "Presence or Interest." Audit any new campaign against this before launch.
 
 ## CRITICAL alcohol compliance rule
 ZERO alcohol language in any ad copy, headline, description, sitelink, or extension. Non-negotiable and pre-approved ad copy library is the ONLY source of truth. Claude must NEVER improvise copy for this account.

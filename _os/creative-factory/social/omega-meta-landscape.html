@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Omega — Meta Ad Motion (1200×628)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px; height: 628px;
+      overflow: hidden;
+      font-family: system-ui, sans-serif;
+    }
+    .frame {
+      width: 100%; height: 100%;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      background: #f8f6f1;
+    }
+    .copy {
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .proof {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #4a7c59;
+      margin-bottom: 16px;
+      animation: slideIn .8s ease-out;
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: #1f2937;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      animation: slideIn .8s ease-out .1s both;
+    }
+    p {
+      font-size: 20px;
+      color: #6b7280;
+      line-height: 1.5;
+      margin-bottom: 28px;
+      animation: slideIn .8s ease-out .2s both;
+    }
+    .btn {
+      display: inline-block;
+      padding: 16px 32px;
+      background: #2d5a3d;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      border-radius: 8px;
+      width: fit-content;
+      animation: slideIn .8s ease-out .3s both;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-24px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .visual {
+      background: linear-gradient(160deg, #2d5a3d 0%, #4a7c59 50%, #8b6914 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .leaf {
+      position: absolute;
+      width: 120px; height: 120px;
+      border-radius: 0 80% 0 80%;
+      background: rgba(255,255,255,.12);
+      animation: float 6s ease-in-out infinite;
+    }
+    .leaf:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; }
+    .leaf:nth-child(2) { top: 50%; right: 15%; width: 80px; height: 80px; animation-delay: 1s; }
+    .leaf:nth-child(3) { bottom: 20%; left: 40%; width: 100px; height: 100px; animation-delay: 2s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(8deg); }
+    }
+    .counter {
+      position: absolute;
+      bottom: 40px; right: 40px;
+      font-size: 64px;
+      font-weight: 800;
+      color: rgba(255,255,255,.9);
+      animation: countPop 2s ease-out .5s both;
+    }
+    .counter span { font-size: 24px; display: block; font-weight: 600; opacity: .85; }
+    @keyframes countPop {
+      from { opacity: 0; transform: scale(.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="copy">
+      <p class="proof">Colorado Springs</p>
+      <h1>Elevate Your Outdoor Living</h1>
+      <p>Landscaping &amp; concrete built for real Colorado homes.</p>
+      <div class="btn">Free Estimate</div>
+    </div>
+    <div class="visual">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="counter">3,000+<span>homeowners served</span></div>
+    </div>
+  </div>
+</body>
+</html>

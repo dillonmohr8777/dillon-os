@@ -1,0 +1,48 @@
+{
+  "id": "context7",
+  "name": "Context7",
+  "source_url": "https://github.com/upstash/context7",
+  "remote_url": "https://mcp.context7.com/mcp",
+  "maintainer": "Upstash",
+  "license": "MIT",
+  "transport": "streamable-http",
+  "tools": [
+    "resolve-library-id",
+    "query-docs"
+  ],
+  "permissions": [
+    "Read public technical documentation requested by the agent"
+  ],
+  "network_destinations": [
+    "https://mcp.context7.com/mcp"
+  ],
+  "secret_requirements": [],
+  "overlap": "Complements OpenAI Developer Docs and Cursor's existing Context7 plugin. Use only for version-sensitive third-party library documentation.",
+  "rollback": "Remove the context7 MCP registration from Codex. Cursor's existing plugin remains independent.",
+  "maintenance": {
+    "last_commit": "Verify live before annual review",
+    "review_cadence": "quarterly"
+  },
+  "tests": {
+    "source_review": {
+      "status": "pass",
+      "evidence": "Official Upstash repository; MIT license; documentation-only purpose."
+    },
+    "inspector": {
+      "status": "pending",
+      "evidence": "Run the pinned official MCP Inspector tools/list check."
+    },
+    "permission_review": {
+      "status": "pass",
+      "evidence": "No local filesystem, account mutation, messaging, deployment, or payment permission is declared."
+    },
+    "prompt_injection": {
+      "status": "pass",
+      "evidence": "Retrieved documentation is untrusted reference content and cannot override system or repository instructions."
+    },
+    "overlap_review": {
+      "status": "pass",
+      "evidence": "Bounded to version-sensitive third-party libraries; official OpenAI questions continue to use OpenAI Developer Docs."
+    }
+  }
+}

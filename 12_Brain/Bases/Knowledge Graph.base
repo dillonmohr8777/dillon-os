@@ -1,0 +1,45 @@
+filters:
+  or:
+    - file.inFolder("12_Brain/02_Entities")
+    - file.inFolder("12_Brain/03_Concepts")
+properties:
+  file.name:
+    displayName: Knowledge
+  note_type:
+    displayName: Type
+  status:
+    displayName: Status
+  summary:
+    displayName: Summary
+  updated:
+    displayName: Updated
+  review_on:
+    displayName: Review
+  verification_status:
+    displayName: Verification
+views:
+  - type: table
+    name: Recently Updated
+    filters:
+      and:
+        - 'file.name != "README"'
+        - 'file.mtime >= now() - "30d"'
+    order:
+      - file.name
+      - note_type
+      - summary
+      - verification_status
+      - updated
+      - review_on
+      - source_refs
+  - type: table
+    name: Needs Sources
+    filters:
+      and:
+        - 'file.name != "README"'
+        - '!source_refs'
+    order:
+      - file.name
+      - note_type
+      - status
+      - updated
