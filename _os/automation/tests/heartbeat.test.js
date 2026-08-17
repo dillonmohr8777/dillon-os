@@ -357,3 +357,14 @@ test('dillon-dev.ps1 resolves outside _os/automation/bin', () => {
   const live = collectLiveInput({ asOf: '2026-08-17' });
   assert.equal(live.files['_os/dev/bin/dillon-dev.ps1'], true);
 });
+
+test('live estate has no unresolved criticals after registration', () => {
+  const result = runHeartbeat(collectLiveInput({ asOf: '2026-08-17' }));
+  const critical = result.findings.filter((finding) => finding.severity === 'critical');
+  assert.equal(
+    critical.length,
+    0,
+    critical.map((finding) => `${finding.code}:${finding.subject}`).join(', '),
+  );
+  assert.equal(exitCodeFor(result), 0);
+});
