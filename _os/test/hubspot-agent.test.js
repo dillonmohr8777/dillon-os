@@ -133,4 +133,50 @@ describe('hubspot-attribution-repair CLI', () => {
     }
     assert.equal(tree.filterBranches.at(-1).filters.some((f) => f.formId === 'keep-me'), true);
   });
+
+  it('refuses --workflows --apply without --confirm-apply even if a token is present', () => {
+    const bin = path.join(VAULT, '_os/automation/bin/hubspot-attribution-repair.js');
+    const result = spawnSync(process.execPath, [bin, '--workflows', '--apply'], {
+      env: { ...process.env, HUBSPOT_TOKEN: 'pat-test-not-real' },
+      encoding: 'utf8',
+    });
+    assert.equal(result.status, 2);
+    const payload = JSON.parse(result.stdout);
+    assert.equal(payload.mode, 'apply');
+    assert.match(payload.blocker, /confirm-apply/);
+    assert.equal(payload.automation_id, 'hubspot-attribution-workflows');
+  });
+
+  it('builds a source-copy workflow that copies analytics into empty Source', () => {
+    const spec = repair.sourceCopyWorkflowSpec();
+    assert.equal(spec.name, repair.SOURCE_COPY_WORKFLOW_NAME);
+    assert.equal(spec.type, 'CONTACT_FLOW');
+    assert.equal(spec.enrollmentCriteria.type, 'EVENT_BASED');
+    assert.equal(spec.enrollmentCriteria.eventFilterBranches[0].eventTypeId, '4-1463224');
+    const copy = spec.actions.find((a) => a.actionTypeId === '0-5');
+    assert.equal(copy.fields.property_name, 'source');
+    assert.equal(copy.fields.value.type, 'OBJECT_PROPERTY');
+    assert.equal(copy.fields.value.propertyName, 'hs_analytics_source');
+    const branch = spec.actions.find((a) => Array.isArray(a.listBranches));
+    const filters = branch.listBranches[0].filterBranch.filters;
+    assert.equal(filters[0].property, 'source');
+    assert.equal(filters[0].operation.operator, 'IS_NOT_KNOWN');
+    assert.equal(filters[1].property, 'hs_analytics_source');
+    assert.equal(filters[1].operation.operator, 'IS_KNOWN');
+  });
+
+  it('builds organic notify enrollment on list 302 for Jason and Sean', () => {
+    const spec = repair.organicNotifyWorkflowSpec();
+    assert.equal(spec.name, repair.ORGANIC_NOTIFY_WORKFLOW_NAME);
+    const enrollment = repair.listMembershipEnrollment(repair.ORGANIC_LIST_ID, false);
+    assert.equal(enrollment.shouldReEnroll, false);
+    assert.equal(enrollment.listMembershipFilterBranches[0].filters[0].listId, '302');
+    assert.equal(spec.enrollmentCriteria.listMembershipFilterBranches[0].filters[0].listId, '302');
+    const email = spec.actions.find((a) => a.actionTypeId === '0-8');
+    const notify = spec.actions.find((a) => a.actionTypeId === '0-9');
+    assert.deepEqual(email.fields.user_ids, repair.ORGANIC_NOTIFY_USER_IDS);
+    assert.deepEqual(notify.fields.user_ids, repair.ORGANIC_NOTIFY_USER_IDS);
+    assert.match(email.fields.body, /hs_analytics_source/);
+    assert.equal(repair.knownFilter('source', false).operation.operator, 'IS_NOT_KNOWN');
+  });
 });

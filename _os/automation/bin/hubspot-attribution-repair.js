@@ -23,6 +23,11 @@ const TOKEN_KEYS = [
 
 const PAID_SOURCES = ['PAID_SEARCH', 'PAID_SOCIAL'];
 const PMAX_ADS_TERMS = ['PMax', 'pmax', 'Max_GMB', 'max_gmb', 'Performance Max'];
+const ORGANIC_LIST_ID = '302';
+const PMAX_LIST_ID = '298';
+const SOURCE_COPY_WORKFLOW_NAME = 'Copy Original Traffic Source into empty Source';
+const ORGANIC_NOTIFY_WORKFLOW_NAME = 'GMB_LP_Organic - Internal Email + In-app';
+const ORGANIC_NOTIFY_USER_IDS = ['84251079', '84251086'];
 
 function token() {
   for (const key of TOKEN_KEYS) {
@@ -140,6 +145,194 @@ function pmaxTree(existing) {
   };
 }
 
+function knownFilter(property, known) {
+  return {
+    filterType: 'PROPERTY',
+    property,
+    operation: {
+      operationType: 'ALL_PROPERTY',
+      operator: known ? 'IS_KNOWN' : 'IS_NOT_KNOWN',
+    },
+  };
+}
+
+function listMembershipEnrollment(listId, shouldReEnroll) {
+  return {
+    shouldReEnroll: Boolean(shouldReEnroll),
+    type: 'EVENT_BASED',
+    eventFilterBranches: [],
+    listMembershipFilterBranches: [
+      {
+        filterBranches: [],
+        filters: [
+          {
+            listId: String(listId),
+            operator: 'IN_LIST',
+            filterType: 'IN_LIST',
+          },
+        ],
+        filterBranchType: 'AND',
+        filterBranchOperator: 'AND',
+      },
+    ],
+  };
+}
+
+function delayAction(actionId, nextActionId, minutes) {
+  return {
+    type: 'SINGLE_CONNECTION',
+    actionId: String(actionId),
+    actionTypeVersion: 0,
+    actionTypeId: '0-1',
+    connection: {
+      edgeType: 'STANDARD',
+      nextActionId: String(nextActionId),
+    },
+    fields: {
+      delta: String(minutes),
+      time_unit: 'MINUTES',
+    },
+  };
+}
+
+function sourceCopyWorkflowSpec() {
+  return {
+    isEnabled: true,
+    flowType: 'WORKFLOW',
+    name: SOURCE_COPY_WORKFLOW_NAME,
+    description: 'If CallRail Source is empty after a new contact is created, copy Original Traffic Source into it. Does not overwrite a filled CallRail value.',
+    startActionId: '1',
+    nextAvailableActionId: '5',
+    actions: [
+      delayAction('1', '2', 5),
+      {
+        actionId: '2',
+        listBranches: [
+          {
+            branchName: 'Source still empty',
+            filterBranch: {
+              filterBranches: [],
+              filters: [knownFilter('source', false), knownFilter('hs_analytics_source', true)],
+              filterBranchType: 'AND',
+              filterBranchOperator: 'AND',
+            },
+            connection: {
+              edgeType: 'STANDARD',
+              nextActionId: '3',
+            },
+          },
+        ],
+        defaultBranchName: 'Source already filled',
+        defaultBranch: {
+          edgeType: 'STANDARD',
+          nextActionId: '4',
+        },
+      },
+      {
+        type: 'SINGLE_CONNECTION',
+        actionId: '3',
+        actionTypeVersion: 0,
+        actionTypeId: '0-5',
+        connection: {
+          edgeType: 'STANDARD',
+          nextActionId: '4',
+        },
+        fields: {
+          property_name: 'source',
+          value: {
+            propertyName: 'hs_analytics_source',
+            type: 'OBJECT_PROPERTY',
+          },
+        },
+      },
+      {
+        type: 'SINGLE_CONNECTION',
+        actionId: '4',
+        actionTypeVersion: 0,
+        actionTypeId: '0-1',
+        fields: { delta: '0', time_unit: 'MINUTES' },
+      },
+    ],
+    enrollmentCriteria: {
+      shouldReEnroll: false,
+      type: 'EVENT_BASED',
+      eventFilterBranches: [
+        {
+          filterBranches: [],
+          filters: [],
+          eventTypeId: '4-1463224',
+          operator: 'HAS_COMPLETED',
+          filterBranchType: 'UNIFIED_EVENTS',
+          filterBranchOperator: 'AND',
+        },
+      ],
+      listMembershipFilterBranches: [],
+    },
+    timeWindows: [],
+    blockedDates: [],
+    customProperties: {},
+    type: 'CONTACT_FLOW',
+    objectTypeId: '0-1',
+    suppressionListIds: [],
+    canEnrollFromSalesforce: false,
+  };
+}
+
+function organicNotifyWorkflowSpec() {
+  return {
+    isEnabled: true,
+    flowType: 'WORKFLOW',
+    name: ORGANIC_NOTIFY_WORKFLOW_NAME,
+    description: 'Email and in-app notify Jason and Sean when a contact joins GMB_LP_Organic. Does not re-enroll existing members.',
+    startActionId: '1',
+    nextAvailableActionId: '4',
+    actions: [
+      delayAction('1', '2', 2),
+      {
+        type: 'SINGLE_CONNECTION',
+        actionId: '2',
+        actionTypeVersion: 0,
+        actionTypeId: '0-8',
+        connection: {
+          edgeType: 'STANDARD',
+          nextActionId: '3',
+        },
+        fields: {
+          user_ids: ORGANIC_NOTIFY_USER_IDS.slice(),
+          subject: 'New GMB_LP_Organic lead',
+          body: [
+            '<p>A contact joined the GMB_LP_Organic segment.</p>',
+            '<p>Name: {{ enrolled_object.firstname }} {{ enrolled_object.lastname }}</p>',
+            '<p>Company: {{ enrolled_object.company }}</p>',
+            '<p>Original Traffic Source: {{ enrolled_object.hs_analytics_source }}</p>',
+            '<p>This is website/organic routing, not the PMax suspensions segment.</p>',
+          ].join('\n'),
+        },
+      },
+      {
+        type: 'SINGLE_CONNECTION',
+        actionId: '3',
+        actionTypeVersion: 0,
+        actionTypeId: '0-9',
+        fields: {
+          user_ids: ORGANIC_NOTIFY_USER_IDS.slice(),
+          delivery_method: 'APP',
+          subject: 'New GMB_LP_Organic lead',
+          body: 'A contact joined GMB_LP_Organic. Check HubSpot; Original Traffic Source is on the contact.',
+        },
+      },
+    ],
+    enrollmentCriteria: listMembershipEnrollment(ORGANIC_LIST_ID, false),
+    timeWindows: [],
+    blockedDates: [],
+    customProperties: {},
+    type: 'CONTACT_FLOW',
+    objectTypeId: '0-1',
+    suppressionListIds: [],
+    canEnrollFromSalesforce: false,
+  };
+}
+
 async function hs(pathname, { method = 'GET', body } = {}) {
   const auth = token();
   if (!auth) {
@@ -217,8 +410,54 @@ function writeState(report) {
   const dir = path.join(repoRoot(), '12_Brain', 'state');
   fs.mkdirSync(dir, { recursive: true });
   const file = path.join(dir, 'hubspot-attribution-repair.json');
-  fs.writeFileSync(file, JSON.stringify(report, null, 2) + '\n');
+  let prev = {};
+  try { prev = JSON.parse(fs.readFileSync(file, 'utf8')); } catch { prev = {}; }
+  const merged = {
+    ...prev,
+    ...report,
+    before: report.before || prev.before || null,
+    after: report.after || prev.after || null,
+    proposed: report.proposed || prev.proposed || null,
+    organic: report.organic || prev.organic || null,
+    pmax: report.pmax || prev.pmax || null,
+  };
+  fs.writeFileSync(file, JSON.stringify(merged, null, 2) + '\n');
   return file;
+}
+
+async function listFlows() {
+  const rows = [];
+  let after;
+  do {
+    const qs = after ? `?limit=100&after=${encodeURIComponent(after)}` : '?limit=100';
+    const data = await hs(`/automation/v4/flows${qs}`);
+    rows.push(...(data.results || []));
+    after = data.paging && data.paging.next && data.paging.next.after;
+  } while (after);
+  return rows;
+}
+
+function summarizeFlow(flow) {
+  if (!flow) return null;
+  return {
+    id: flow.id || null,
+    name: flow.name || null,
+    isEnabled: flow.isEnabled,
+    objectTypeId: flow.objectTypeId || null,
+    startActionId: flow.startActionId || null,
+    actionCount: Array.isArray(flow.actions) ? flow.actions.length : null,
+    enrollmentType: flow.enrollmentCriteria && flow.enrollmentCriteria.type || null,
+  };
+}
+
+async function ensureWorkflow(spec) {
+  const existing = (await listFlows()).find((row) => row.name === spec.name);
+  if (existing) {
+    const full = await hs(`/automation/v4/flows/${existing.id}`);
+    return { created: false, flow: summarizeFlow(full) };
+  }
+  const created = await hs('/automation/v4/flows', { method: 'POST', body: spec });
+  return { created: true, flow: summarizeFlow(created) };
 }
 
 async function membershipIds(listId) {
@@ -250,8 +489,88 @@ function overlapReport(organicIds, pmaxIds) {
   };
 }
 
+function workflowDryRunActions() {
+  return [
+    `Would POST ${SOURCE_COPY_WORKFLOW_NAME} (copy hs_analytics_source → source when Source is still empty, 5 min after contact create)`,
+    `Would POST ${ORGANIC_NOTIFY_WORKFLOW_NAME} on list ${ORGANIC_LIST_ID} (internal email + in-app to Jason/Sean, future members only)`,
+  ];
+}
+
+async function runWorkflows(apply) {
+  const started = new Date().toISOString();
+  const report = {
+    automation_id: 'hubspot-attribution-workflows',
+    started_at: started,
+    mode: apply ? 'apply' : 'dry-run',
+    portal_id: EXPECTED_PORTAL_ID,
+    status: 'blocked',
+    token_present: Boolean(token()),
+    token_env_key: token() ? token().key : null,
+    actions: [],
+    workflows: [],
+  };
+
+  if (!token()) {
+    report.blocker = 'HUBSPOT_TOKEN unset. Set JASON_HUBSPOT_PRIVATE_APP_TOKEN or HUBSPOT_TOKEN in the environment.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  if (apply && !process.argv.includes('--confirm-apply')) {
+    report.blocker = 'Refusing --apply until an operator passes --confirm-apply after reviewing dry-run output.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  const account = await verifyPortal();
+  report.portal_verified = true;
+  report.ui_domain = account.uiDomain || null;
+
+  const specs = [sourceCopyWorkflowSpec(), organicNotifyWorkflowSpec()];
+  report.proposed_workflows = specs.map((spec) => ({
+    name: spec.name,
+    isEnabled: spec.isEnabled,
+    enrollmentType: spec.enrollmentCriteria.type,
+    actionTypes: spec.actions.map((a) => a.actionTypeId).filter(Boolean),
+    listId: spec.name === ORGANIC_NOTIFY_WORKFLOW_NAME ? ORGANIC_LIST_ID : null,
+    copy: spec.name === SOURCE_COPY_WORKFLOW_NAME
+      ? { from: 'hs_analytics_source', to: 'source', skip_if_source_filled: true }
+      : null,
+  }));
+
+  if (!apply) {
+    report.status = 'dry-run';
+    report.actions = workflowDryRunActions();
+    const existing = await listFlows();
+    report.existing_matches = existing
+      .filter((row) => specs.some((spec) => spec.name === row.name))
+      .map((row) => ({ id: row.id, name: row.name, isEnabled: row.isEnabled }));
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(0);
+  }
+
+  for (const spec of specs) {
+    const result = await ensureWorkflow(spec);
+    report.workflows.push(result);
+    report.actions.push(result.created
+      ? `Created ${spec.name} (${result.flow && result.flow.id})`
+      : `Left existing ${spec.name} (${result.flow && result.flow.id})`);
+  }
+  report.status = 'applied';
+  const state = writeState(report);
+  console.log(JSON.stringify({ ...report, state }, null, 2));
+}
+
 async function main() {
   const apply = process.argv.includes('--apply');
+  const workflows = process.argv.includes('--workflows');
+  if (workflows) {
+    await runWorkflows(apply);
+    return;
+  }
   const started = new Date().toISOString();
   const report = {
     automation_id: 'hubspot-attribution-repair',
@@ -394,7 +713,16 @@ module.exports = {
   TOKEN_KEYS,
   PAID_SOURCES,
   PMAX_ADS_TERMS,
+  ORGANIC_LIST_ID,
+  PMAX_LIST_ID,
+  SOURCE_COPY_WORKFLOW_NAME,
+  ORGANIC_NOTIFY_WORKFLOW_NAME,
+  ORGANIC_NOTIFY_USER_IDS,
   organicTree,
   pmaxTree,
   isBroadGmbAdsFilter,
+  knownFilter,
+  listMembershipEnrollment,
+  sourceCopyWorkflowSpec,
+  organicNotifyWorkflowSpec,
 };
