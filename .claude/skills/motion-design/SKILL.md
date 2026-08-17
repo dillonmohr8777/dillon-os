@@ -7,6 +7,8 @@ description: Motion and interaction pass: scroll reveals, hover behavior, transi
 
 Motion is what separated the upgraded Philly batch from the first pass. It has to feel intentional, cost nothing, and never block content.
 
+This skill is CSS motion (scroll, hover, transitions). Generative video is `/seedance`. Do not mix them.
+
 ## The three layers
 
 **1. Scroll reveal (structural).** Elements carrying `.reveal` fade up as they enter view. Direction variants: `.reveal-left`, `.reveal-right`. Stagger with `.delay-1` … `.delay-3`. Driven by one IntersectionObserver.

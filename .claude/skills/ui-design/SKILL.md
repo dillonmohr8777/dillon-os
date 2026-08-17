@@ -57,6 +57,10 @@ Pick from the business, not from preference. A South Philly roast pork counter a
 - Section padding `clamp(78px, 10vw, 150px)`; generous whitespace is the cheapest way to look expensive.
 - Proof strips state facts. Headlines make one claim. Never fill space with adjectives.
 
+## Thin harvest (optional)
+
+When `_templates/site-factory/apply-harvest-images.js` prints `GENERATE_SIMILAR`, draft lookalike atmosphere stills with `/krea-2`. Do not download Krea weights. Do not spend on the hosted API without approval. Never present a generated face or storefront as the real business.
+
 ## Self-check before handing off
 
 - Could a competitor's logo drop onto this page unchanged? If yes, the design isn't theirs yet.
