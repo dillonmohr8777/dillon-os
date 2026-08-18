@@ -1,8 +1,8 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-17T13:04:11Z
+last_updated: 2026-08-18T17:45:00Z
 status: active
-last_scan: 2026-08-17T13:04:11Z
+last_scan: 2026-08-18T17:45:00Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
 ---
 
@@ -11,6 +11,7 @@ scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "Sy
 Only current client and operating actions belong here. Nothing is sent, published, deployed, purchased, or changed in a client account automatically.
 
 ## Current client actions
+- [ ] 2026-08-18 - BOK Law & Mediation Services - Approve sending the August 20-22 review packet (Thu/Fri/Sat graphics, episode 58 teaser, PDF) to Dorothy, Rachael, and Aleksandra. Do not post until Dorothy or Rachael watches the Thursday video. Dorothy is out until 2026-08-25. Talking-head file was offered and not sent, so the teaser uses published episode audio. - Source: 01_Clients/BOK Law Firm/social-posts/2026-08-20/README.md - Evidence: Gmail 2026-08-16 "New podcast episode" plus OOO until Aug 25 - Risk: low
 - [ ] 2026-07-12 - Kimberly James Bridal - Approve completion update after FAQ desktop image crop and responsive QA; verify appointment-source reconciliation first - Risk: low
 - [ ] 2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality attribution is verified - Risk: high
 - [ ] 2026-07-12 - On-Site Concrete & Landscape - Approve technical or campaign changes after allowlisted crawl and conversion-action audit - Risk: medium
