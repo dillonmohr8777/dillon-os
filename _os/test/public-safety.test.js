@@ -12,6 +12,7 @@ const {
   assertPublicSafe,
   scanText,
   redactText,
+  isBlocking,
   SAFE_FIXTURE_ALLOWLIST,
 } = require('../public-safety');
 
@@ -66,16 +67,29 @@ describe('12_Brain public-safety scanner', () => {
     );
   });
 
-  it('tracked 12_Brain tree is publicly safe', () => {
+  // Repo went PRIVATE on 2026-08-18. Secrets still hard-fail; client PII and
+  // private paths are advisory, because holding client evidence in the vault is
+  // the whole point of the brain layer.
+  it('tracked 12_Brain tree carries no secrets', () => {
     const result = assertPublicSafe(VAULT);
     if (!result.ok) {
       const summary = result.findings.map((f) =>
         `${f.file}: ${f.hits.map((h) => `${h.id}x${h.count}`).join(',')}`,
       );
-      assert.fail(`public-safety findings (${result.findings.length}): ${summary.join(' | ')}`);
+      assert.fail(`blocking findings (${result.findings.length}): ${summary.join(' | ')}`);
     }
     assert.ok(result.scannedFiles >= 10);
     assert.equal(result.ok, true);
+  });
+
+  it('advisory PII findings are reported, not silently dropped', () => {
+    const result = assertPublicSafe(VAULT);
+    assert.ok(Array.isArray(result.advisory), 'advisory list must exist');
+    for (const f of result.advisory) {
+      for (const h of f.hits) {
+        assert.equal(isBlocking(h.id), false, `${h.id} must not be advisory-classified`);
+      }
+    }
   });
 
   it('redacts tool output so it is safe to embed in a tracked note', () => {

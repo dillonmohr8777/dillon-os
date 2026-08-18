@@ -1,0 +1,33 @@
+{
+    "run_id":  "COMMS-2026-08-11-DAY-1",
+    "run_at":  "2026-08-11T07:03:21.2922390-04:00",
+    "status":  "degraded",
+    "window":  {
+                   "ended_at":  "2026-08-11T07:03:21.2922390-04:00",
+                   "overlap_hours":  36,
+                   "started_at":  "2026-08-07T19:05:03.4946980-04:00"
+               },
+    "connectors":  {
+                       "gmail":  "failed",
+                       "slack":  "failed"
+                   },
+    "items":  [
+
+              ],
+    "excluded_counts":  {
+                            "filtered_credentials":  0,
+                            "filtered_spam":  0,
+                            "filtered_promotions":  0,
+                            "filtered_automations":  0,
+                            "filtered_newsletters":  0,
+                            "filtered_auth_code_like":  0,
+                            "filtered_billing":  0,
+                            "filtered_mfa_related":  0,
+                            "filtered_recovery_flow":  0,
+                            "filtered_secrets":  0
+                        },
+    "checkpoints":  {
+                        "gmail":  "2026-08-09T07:05:03.4946980-04:00",
+                        "slack":  "1786050000.000000"
+                    }
+}

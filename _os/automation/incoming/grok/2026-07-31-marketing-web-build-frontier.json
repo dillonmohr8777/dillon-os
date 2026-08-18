@@ -1,0 +1,146 @@
+{
+  "automation": "Daily Marketing and Web-Build Frontier to Dillon OS",
+  "run_title": "Daily marketing, agent workflow, MCP, plugin, and web-build frontier",
+  "run_at": "2026-07-31T07:31:07.124Z",
+  "source_url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+  "coverage": "2026-07-30T01:31:07.124Z through 2026-07-31T07:31:07.124Z; 10 cited sources; 11 X searches; 4 web searches",
+  "verification_status": "partial",
+  "content": "I'll collect intelligence for the specified 2026-07-30/31 window using X as the primary pulse and limited web verification. Starting with targeted X searches on frontier agent/MCP/coding releases and related signals.\n\n## 1. Executive pulse\nIn the 2026-07-30T01:31Z–2026-07-31T07:31Z window, the dominant signals were OpenAI’s GPT-5.6 Luna/Terra price cuts (reflected in Codex/ChatGPT Work usage), continued traction for the official Codex plugin inside Claude Code, discussion of the just-released MCP 2026-07-28 spec (stateless core, tasks, elicitation, MCP Apps), new/niche MCP servers (Polymet design, coding-tools, memory), Copilot CLI v1.0.77 hardening, and Figma MCP × Cursor experiments for frontend handoff. AEO/GEO chatter remains mostly promotional; local SEO stays a practical lead source. Evidence quality is mixed—official blogs and maintainer posts strongest; many X claims are unbenchmarked or low-engagement.[1](https://openai.com/index/previewing-gpt-5-6-sol/)\n\n**Observed vs inference**: Price cuts and MCP spec are confirmed via official sources. Cross-agent plugins and design MCPs show builder interest but lack broad reproducible benchmarks in-window. Uncertainty high on enterprise readiness and long-term maintenance of third-party MCPs.\n\n## 2. High-signal findings\n- **OpenAI GPT-5.6 pricing**: Luna cut ~80%, Terra ~20%; Sol unchanged. Usage accounting updated in Codex and ChatGPT Work so the same subscription yields more tokens. Faster Sol option noted.[2](https://www.threads.com/@stockstoearn/post/DbbaiqaAS-B/just-in-open-ai-cuts-prices-for-two-of-its-ai-models-gpt-terra-and-gpt-luna-as)\n- **MCP 2026-07-28 spec**: Major revision (stateless core, multi-round-trip, header routing, cacheable lists, auth hardening, extensions, Tasks, Elicitation, MCP Apps). SDKs and early adopters (Flama, AWS AgentCore Gateway) shipping compliance. Breaking changes expected.[3](https://blog.modelcontextprotocol.io/posts/2026-07-28/)\n- **Codex ↔ Claude Code bridge**: Official OpenAI plugin (MCP-based) provides `/codex:review`, adversarial review, rescue/transfer, multi-agent launch. Enables dual-subscription workflows and sub-agents. High engagement Spanish-language explainer.[4](https://x.com/FaztTech/status/2082977406487253008)\n- **GitHub Copilot CLI v1.0.77**: Browser/web OAuth default, force-login flags, Ctrl+G editor for prompts, sandbox/MDM policy enforcement, reasoning-effort defaults.[5](https://x.com/GHCopilotLog/status/2082975800165376205)\n- **Design/agent MCPs**: Polymet MCP (one-line add for project spin-up, generations, bidirectional file/diff/asset flow with coding agents). Figma MCP × Cursor experiments for responsive HP builds. Custom SolidWorks MCP demos.[6](https://x.com/polymetai/status/2082868918402658509)\n- **Orchestration**: Brigade (`brigade mcp sync/verify`, skill promotion/rollback, bounded task dispatch with receipts). Coding Tools MCP (read/edit/run/test primitives). Zep memory plugin for Claude/Codex/Cursor.[7](https://x.com/brigadeclaw/status/2082972676167987429)\n- **Other**: DeepSeek-V4-Flash free tier on ZenMux (Codex-optimized benchmarks claimed). Registry malware analysis ongoing (lower than expected). SKI voice coding tool launch (Product Hunt). MCP enterprise/K8s maturity narrative.[8](https://x.com/ZenMuxAI/status/2083091208658989497)\n\nLow-engagement or unverified: many “new MCP” announcements, generic AEO pitches.\n\n## 3. Consumer taste and demographic signals\nSparse high-quality signals in-window. \n- **Anti-generic-AI aesthetics**: Explicit “built by people, for people” claims and pride in non-AI origin for consumer-facing hubs (collectibles/UI). Suggests buyer fatigue with obvious AI slop.[9](https://x.com/yotdog69/status/2082953385582448703)\n- **Local-service buyers**: Persistent “plumber near me”/Maps ranking emphasis as cheapest high-intent lead; 2 AM urgency language. \n- **AEO/GEO awareness**: Rising “if ChatGPT isn’t recommending you, you’re invisible” framing vs classic SEO; HubSpot tool comparisons (AEO vs Otterly/Profound/Semrush). Mostly agency marketing.[10](https://x.com/TechSlideITS/status/2083092832697409584)\n- **Onboarding/retention**: Indirect—preference for evidence chains, clickable prototypes, and human-crafted micro-interactions over pure chatbot forms (criticism of “AI assistant that is just a slower form”). \n- **Inference (low confidence)**: Local-service and SMB buyers still prioritize Maps parity, trust signals, and fast mobile conversion; creator/consumer taste favors authentic/real imagery and craft over polished AI defaults. Conflicting: heavy AI-tool promotion continues unabated.\n\nNo strong Gen-Z/millennial demographic data or buying-language corpora surfaced.\n\n## 4. Agent, MCP, skill, GitHub, and workflow opportunities\n**High relevance to Dillon OS stack (Claude/Codex/Cursor-centric, frontend/full-stack, site factory)**:\n- Cross-provider review/rescue via Codex plugin: parallel supervisory loops, reduced sycophancy for code review/refactor/debug. \n- MCP 2026-07-28: future-proof servers (stateless = easier K8s/Netlify-like deploys); watch Tasks/Elicitation/MCP Apps for orchestration and UI generation. \n- Polymet + Figma MCPs: design-to-code handoff, component generation, asset sync—directly maps to planning/handoff and avoiding generic aesthetics. \n- Copilot CLI updates: better auth and sandbox for CI-like or parallel agent use. \n- Brigade/Coding Tools/Zep: skill/MCP sync, bounded tasks, memory, safe edit/test primitives—supports maker-checker, deterministic gates, repo navigation. \n- Price cuts: cheaper Luna/Terra routing for high-volume factory work (component gen, QA, FAQ drafting).\n\n**Compatibility notes**: Prefer official/maintainer sources. Assess prompt-injection (MCP tool descriptions), secrets (OAuth/variable refs only), context cost (list caching helps), overlap (many coding MCPs duplicate shell/file tools). No install during research.\n\n**Source quality**: Official OpenAI/MCP blogs and GitHub highest; X demos medium (reproducible but unbenchmarked); directories/viral lists low.\n\n## 5. Website factory, design, AEO, and retention implications\n- **25-site factory**: Figma/Polymet MCP + Cursor/Claude for vertical templates and real-imagery handoff; Brigade-style sync for skills across harnesses; browser/Playwright MCPs (mentioned in resource lists) for visual regression, a11y, responsive QA, Maps-to-site parity checks. Source-ready FAQs + AEO trust gates (structured data, clear authorship) become more critical as GEO rises. Safe Netlify previews remain ideal for approval gates. \n- **Design/UI/UX craft**: Push real-image art direction and micro-interactions; avoid generic AI look via human critique loops and design-system tokens. Storybook-compatible component gen via agents. \n- **AEO/SEO/retention**: Technical SEO + load-bearing structure still foundational (per SEO veterans). Local SEO/Maps parity high-ROI for service clients. Evidence-chain prototypes and third-visit retention (clear offers, lifecycle hooks) over pure chat UIs. CRO via faster mobile conversion and trust signals. \n- **Operational**: Maker-checker via dual-model review (Claude write → Codex review); independent visual critique; deterministic acceptance (Playwright suites, Lighthouse, a11y audits).\n\nUncertainty: exact a11y/performance gains from new MCPs unmeasured here.\n\n## 6. Recommended experiments ranked by expected benefit, evidence strength, risk, deterministic acceptance test, independent checker, and rollback\n1. **Sandbox-test Codex plugin for Claude Code** (highest benefit for review/refactor loops). Evidence: official repo + demos. Risk: medium (dual-sub cost, context). Acceptance: run `/codex:review` on 3 known PRs; measure defect catch rate vs baseline. Checker: human diff review. Rollback: disable plugin. \n2. **Sandbox-test Polymet MCP + Figma MCP with Cursor/Claude** for one vertical template. Evidence: maintainer one-line install + builder posts. Risk: medium (asset leakage, style drift). Acceptance: generate responsive component set; Playwright visual + a11y pass; human craft score > baseline AI. Checker: independent designer. Rollback: remove MCP. \n3. **Watch/save MCP 2026-07-28 compliance patterns** (Flama/AWS examples) and price-cut routing (Luna for bulk factory). Evidence: official spec. Risk: low (read-only). Acceptance: n/a yet. \n4. **Sandbox-test Copilot CLI v1.0.77 sandbox/MDM features** in isolated CI-like loop. Evidence: release notes. Risk: low-medium. Acceptance: login + policy enforce on sample task. \n\nPrefer these 2–4 testable items over tool sprawl. No production, no credentials, no outreach.\n\n## 7. Watchlist and rejected hype\n**Watchlist**: Full MCP 2026-07-28 migration guides and Tier-1 SDK stability; Brigade skill promotion; DeepSeek-V4-Flash Codex benchmarks; SKI voice; ongoing MCP registry security audits; AEO tool maturation (HubSpot comparisons); enterprise K8s MCP stories. \n\n**Rejected hype / no-action**: Viral “54 tools / Claude Bible” lists (duplicative, unvetted); generic AEO agency pitches without data; unbenchmarked custom MCPs (SolidWorks, Kingfisher, etc.) with unclear maintenance/security; “MCP will eat all SaaS” claims; low-signal plugin deals or laptop launches; any tool requiring broad permissions or secret exfiltration risk. Duplicated coding primitives already covered by core agents. Insecure or high context-cost directories.\n\n**What Dillon OS should change today** (≤5 evidence-backed):\n1. Route bulk/low-stakes factory tasks (FAQ drafts, component variants, initial QA) toward cheaper Luna/Terra tiers now that usage accounting updated. \n2. Add dual-model review pattern (Claude primary + Codex plugin review) to maker-checker checklist for code and content. \n3. Prototype one Figma/Polymet MCP handoff in a sandbox vertical template to tighten design-to-code and real-imagery flow. \n4. Track MCP 2026-07-28 server compatibility as a gate for any new MCP additions (prefer stateless/auth-hardened). \n5. Strengthen AEO trust gates (authorship, structured FAQs, Maps parity) on all new sites given rising GEO framing.\n\n**No action**: Install nothing; ignore unverified MCP spam, pure-hype GEO threads, and tools overlapping existing Cursor/Claude/Copilot capabilities without clear deterministic upside.\n\n```json\ncandidates_json\n[\n  {\n    \"name\": \"Codex plugin for Claude Code\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Official cross-provider review/rescue/transfer enables supervisory loops and reduces single-model bias for code review, refactor, and handoff in factory workflows.\",\n    \"expected_benefit\": \"Higher defect detection and better dual-sub utilization; measurable review quality lift.\",\n    \"source_urls\": [\"https://github.com/openai/codex-plugin-cc\", \"https://community.openai.com/t/introducing-codex-plugin-for-claude-code/1378186\"],\n    \"acceptance_test\": \"Install in isolated Claude Code env; run /codex:review and adversarial-review on 3 fixture PRs with known issues; require ≥20% more true positives than Claude-only baseline and clean JSON receipt.\",\n    \"independent_checker\": \"Second human reviewer scores diffs blind; compare to Playwright/unit gate results.\",\n    \"rollback\": \"Remove plugin via Claude Code marketplace/disable; no persistent state.\",\n    \"human_gate\": \"Yes – review sample outputs before any broader use.\",\n    \"risk\": \"Medium (subscription cost, potential context bloat, prompt-injection via review prompts)\",\n    \"overlap\": \"Partial with native Claude review and Copilot; adds distinct model diversity.\"\n  },\n  {\n    \"name\": \"Polymet MCP + Figma MCP for design-to-code\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Direct bidirectional asset/component flow with coding agents; supports vertical templates, real imagery, and non-generic UI in 25-site factory.\",\n    \"expected_benefit\": \"Faster handoff, higher craft fidelity, reduced generic AI aesthetics.\",\n    \"source_urls\": [\"https://polymet.ai\", \"X posts on Figma MCP × Cursor\"],\n    \"acceptance_test\": \"Add MCP; generate one responsive landing + 5 components from Figma/Polymet seed; pass Playwright visual regression, a11y (axe), Lighthouse perf >90, and human craft rubric ≥ baseline.\",\n    \"independent_checker\": \"External designer scores aesthetics/responsiveness blind vs control.\",\n    \"rollback\": \"claude mcp remove / equivalent; delete generated artifacts.\",\n    \"human_gate\": \"Yes – visual approval required.\",\n    \"risk\": \"Medium (style drift, asset permissions, maintenance unknown)\",\n    \"overlap\": \"Low-moderate with existing Cursor/Figma plugins; adds agent-native sync.\"\n  },\n  {\n    \"name\": \"MCP 2026-07-28 compliance patterns (Flama/AWS examples)\",\n    \"decision\": \"watch\",\n    \"why\": \"Largest protocol revision; stateless + Tasks/Apps will affect all future server choices and factory orchestration.\",\n    \"expected_benefit\": \"Future-proofing; easier scaling and auth.\",\n    \"source_urls\": [\"https://blog.modelcontextprotocol.io/posts/2026-07-28/\", \"https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/\"],\n    \"acceptance_test\": \"N/A (watch)\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": \"N/A\",\n    \"risk\": \"Low\",\n    \"overlap\": \"Foundational to all MCP usage.\"\n  },\n  {\n    \"name\": \"GitHub Copilot CLI v1.0.77\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Improved OAuth, sandbox/MDM controls, and editor shortcuts useful for parallel or CI-like agent loops.\",\n    \"expected_benefit\": \"Safer local/CI execution and better prompt iteration.\",\n    \"source_urls\": [\"X release post by @GHCopilotLog\"],\n    \"acceptance_test\": \"Upgrade in sandbox; verify web OAuth login, MDM policy block, and Ctrl+G edit on a sample task; confirm no sandbox escape.\",\n    \"independent_checker\": \"Log review + second operator re-run.\",\n    \"rollback\": \"Pin previous CLI version.\",\n    \"human_gate\": \"Yes for policy changes.\",\n    \"risk\": \"Low-medium (auth surface)\",\n    \"overlap\": \"High with existing Copilot; incremental hardening.\"\n  },\n  {\n    \"name\": \"Brigade MCP/skill orchestration\",\n    \"decision\": \"save-to-library\",\n    \"why\": \"Bounded tasks, mcp sync/verify, skill promote/rollback with receipts; fits maker-checker and multi-harness factory.\",\n    \"expected_benefit\": \"Reproducible dispatch and audit trails.\",\n    \"source_urls\": [\"X posts by @brigadeclaw\"],\n    \"acceptance_test\": \"N/A yet (library)\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": \"N/A\",\n    \"risk\": \"Medium (new project maturity)\",\n    \"overlap\": \"Moderate with custom scripts.\"\n  },\n  {\n    \"name\": \"Unvetted MCP directories and viral tool lists\",\n    \"decision\": \"reject\",\n    \"why\": \"High malware/injection/unknown-maintenance risk; low signal vs official sources; duplicates core capabilities.\",\n    \"expected_benefit\": \"None net.\",\n    \"source_urls\": [],\n    \"acceptance_test\": \"N/A\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": \"N/A\",\n    \"risk\": \"High\",\n    \"overlap\": \"High.\"\n  }\n]\n```\n\n## Sources encountered\n\n- https://openai.com/index/previewing-gpt-5-6-sol/\n- https://www.threads.com/@stockstoearn/post/DbbaiqaAS-B/just-in-open-ai-cuts-prices-for-two-of-its-ai-models-gpt-terra-and-gpt-luna-as\n- https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- https://x.com/FaztTech/status/2082977406487253008\n- https://x.com/GHCopilotLog/status/2082975800165376205\n- https://x.com/polymetai/status/2082868918402658509\n- https://x.com/brigadeclaw/status/2082972676167987429\n- https://x.com/ZenMuxAI/status/2083091208658989497\n- https://x.com/yotdog69/status/2082953385582448703\n- https://x.com/TechSlideITS/status/2083092832697409584",
+  "candidates": [
+    {
+      "name": "Codex plugin for Claude Code",
+      "decision": "sandbox-test",
+      "why": "Official cross-provider review/rescue/transfer enables supervisory loops and reduces single-model bias for code review, refactor, and handoff in factory workflows.",
+      "expected_benefit": "Higher defect detection and better dual-sub utilization; measurable review quality lift.",
+      "source_urls": [
+        "https://github.com/openai/codex-plugin-cc",
+        "https://community.openai.com/t/introducing-codex-plugin-for-claude-code/1378186"
+      ],
+      "acceptance_test": "Install in isolated Claude Code env; run /codex:review and adversarial-review on 3 fixture PRs with known issues; require ≥20% more true positives than Claude-only baseline and clean JSON receipt.",
+      "independent_checker": "Second human reviewer scores diffs blind; compare to Playwright/unit gate results.",
+      "rollback": "Remove plugin via Claude Code marketplace/disable; no persistent state.",
+      "human_gate": "Yes – review sample outputs before any broader use.",
+      "risk": "Medium (subscription cost, potential context bloat, prompt-injection via review prompts)",
+      "overlap": "Partial with native Claude review and Copilot; adds distinct model diversity."
+    },
+    {
+      "name": "Polymet MCP + Figma MCP for design-to-code",
+      "decision": "sandbox-test",
+      "why": "Direct bidirectional asset/component flow with coding agents; supports vertical templates, real imagery, and non-generic UI in 25-site factory.",
+      "expected_benefit": "Faster handoff, higher craft fidelity, reduced generic AI aesthetics.",
+      "source_urls": [
+        "https://polymet.ai",
+        "X posts on Figma MCP × Cursor"
+      ],
+      "acceptance_test": "Add MCP; generate one responsive landing + 5 components from Figma/Polymet seed; pass Playwright visual regression, a11y (axe), Lighthouse perf >90, and human craft rubric ≥ baseline.",
+      "independent_checker": "External designer scores aesthetics/responsiveness blind vs control.",
+      "rollback": "claude mcp remove / equivalent; delete generated artifacts.",
+      "human_gate": "Yes – visual approval required.",
+      "risk": "Medium (style drift, asset permissions, maintenance unknown)",
+      "overlap": "Low-moderate with existing Cursor/Figma plugins; adds agent-native sync."
+    },
+    {
+      "name": "MCP 2026-07-28 compliance patterns (Flama/AWS examples)",
+      "decision": "watch",
+      "why": "Largest protocol revision; stateless + Tasks/Apps will affect all future server choices and factory orchestration.",
+      "expected_benefit": "Future-proofing; easier scaling and auth.",
+      "source_urls": [
+        "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/"
+      ],
+      "acceptance_test": "N/A (watch)",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": "N/A",
+      "risk": "Low",
+      "overlap": "Foundational to all MCP usage."
+    },
+    {
+      "name": "GitHub Copilot CLI v1.0.77",
+      "decision": "sandbox-test",
+      "why": "Improved OAuth, sandbox/MDM controls, and editor shortcuts useful for parallel or CI-like agent loops.",
+      "expected_benefit": "Safer local/CI execution and better prompt iteration.",
+      "source_urls": [
+        "X release post by @GHCopilotLog"
+      ],
+      "acceptance_test": "Upgrade in sandbox; verify web OAuth login, MDM policy block, and Ctrl+G edit on a sample task; confirm no sandbox escape.",
+      "independent_checker": "Log review + second operator re-run.",
+      "rollback": "Pin previous CLI version.",
+      "human_gate": "Yes for policy changes.",
+      "risk": "Low-medium (auth surface)",
+      "overlap": "High with existing Copilot; incremental hardening."
+    },
+    {
+      "name": "Brigade MCP/skill orchestration",
+      "decision": "save-to-library",
+      "why": "Bounded tasks, mcp sync/verify, skill promote/rollback with receipts; fits maker-checker and multi-harness factory.",
+      "expected_benefit": "Reproducible dispatch and audit trails.",
+      "source_urls": [
+        "X posts by @brigadeclaw"
+      ],
+      "acceptance_test": "N/A yet (library)",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": "N/A",
+      "risk": "Medium (new project maturity)",
+      "overlap": "Moderate with custom scripts."
+    },
+    {
+      "name": "Unvetted MCP directories and viral tool lists",
+      "decision": "reject",
+      "why": "High malware/injection/unknown-maintenance risk; low signal vs official sources; duplicates core capabilities.",
+      "expected_benefit": "None net.",
+      "source_urls": [],
+      "acceptance_test": "N/A",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": "N/A",
+      "risk": "High",
+      "overlap": "High."
+    }
+  ],
+  "collector_metadata": {
+    "provider": "xai",
+    "model": "grok-4.5",
+    "response_id": "fe85d5ab-bbe8-9df3-8f4c-52d7184b7492",
+    "tool_calls": [
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call"
+    ],
+    "tool_call_counts": {
+      "x_search": 11,
+      "web_search": 4
+    },
+    "citation_count": 10,
+    "usage": {
+      "input_tokens": 82221,
+      "input_tokens_details": {
+        "cached_tokens": 51072
+      },
+      "output_tokens": 5562,
+      "output_tokens_details": {
+        "reasoning_tokens": 1623
+      },
+      "total_tokens": 87783,
+      "num_sources_used": 0,
+      "num_server_side_tools_used": 15,
+      "cost_in_usd_ticks": 1859916000,
+      "server_side_tool_usage_details": {
+        "web_search_calls": 4,
+        "x_search_calls": 11,
+        "code_interpreter_calls": 0,
+        "file_search_calls": 0,
+        "mcp_calls": 0,
+        "document_search_calls": 0,
+        "image_generation_calls": 0
+      },
+      "context_details": {
+        "input_tokens": 27915,
+        "output_tokens": 3905
+      }
+    },
+    "cost_usd": 0.1859916
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "automation": "Daily Marketing and Web-Build Frontier to Dillon OS",
+  "run_title": "Daily marketing, agent workflow, MCP, plugin, and web-build frontier",
+  "run_at": "2026-08-01T07:32:01.027Z",
+  "source_url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+  "coverage": "2026-07-31T01:32:01.027Z through 2026-08-01T07:32:01.027Z; 7 cited sources; 12 X searches; 6 web searches",
+  "verification_status": "partial",
+  "content": "```html\n<!-- Dillon OS Daily Intelligence | Period: 2026-07-31T01:32Z → 2026-08-01T07:32Z -->\n```\n\n# 1. Executive pulse\nPrimary signal is the **MCP 2026-07-28 specification** (released ~July 28, actively discussed and adopted in-window): full shift to stateless, self-contained requests (no initialize handshake or session IDs). Enables serverless/round-robin scaling, header-based routing (`Mcp-Method`/`Mcp-Name`), Multi Round-Trip Requests (MRTR), cacheable lists, auth hardening, and extensions framework. Ecosystem (Cloudflare Agents SDK, .NET SDK v2, Firecrawl MCP, proxies) already shipping support or dual-mode.[1](https://blog.modelcontextprotocol.io/posts/2026-07-28/)\n\nSecondary: Claude Code skills maturation (incl. reported `/btw` aside skill; bundled `/run`/`/verify`/`code-review`); GitHub Copilot GPT-5.6 Luna/Terra price cuts (80%/20%); Firecrawl MCP@3.23.0 context reduction (~50%) + OAuth/keyless. Low volume on pure design/AEO/consumer taste in the ~30h window; agent production readiness and context-cost discipline dominate.[2](https://x.com/github/status/2083261791363363273)\n\nEvidence quality high for MCP (official blog + multiple implementer posts); lower for ephemeral skills/claims. Uncertainty: exact `/btw` docs not fully surfaced in primary sources; adoption friction for breaking changes acknowledged.\n\n# 2. High-signal findings\n**MCP stateless core (highest signal)**  \n- No sessions: every request carries protocol version, client info, capabilities in `_meta`. Any replica handles any request.  \n- Headers for routing/throttling without body parse.  \n- MRTR for mid-tool user input without long-lived streams.  \n- Cacheable `tools/list` etc. (`ttlMs` + `cacheScope`).  \n- Auth: RFC 9207 issuer validation, DCR deprecated toward CIMD, binding.  \n- Tasks → official extension; 12-month deprecation.  \n- SDKs Tier-1 updated; Cloudflare `agents@latest` day-zero + migration; C# v2.0; community proxies dual-mode.[1](https://blog.modelcontextprotocol.io/posts/2026-07-28/)[3](https://x.com/ritakozlov/status/2083226344205246945)  \nObserved: production guides (AAIF/Steve Kearns) stress app-level state via explicit handles (not transport), tool minimization (GitHub anecdote: 40-tool schema +10-15KB/turn; irrelevant tool 58% of calls).[4](https://x.com/openmartbot/status/2083357597814718809)\n\n**Tooling updates**  \n- Firecrawl MCP 3.23.0: ~50% less context on search/scrape/interact; OAuth humans + keyless agents.[5](https://x.com/MaxITfinds/status/2083364200059936913)  \n- Claude Code: skills as first-class (SKILL.md, dynamic injection, subagents, nested monorepo); bundled verification/run skills; reported new `/btw` for non-resetting asides mid-task.[6](https://x.com/alliekmillewyhf/status/2083455268952969483)[7](https://code.claude.com/docs/en/skills)  \n- GitHub Copilot: GPT-5.6 Sol/Terra/Luna GA earlier; Luna -80%, Terra -20% pricing effective ~July 30 (credits).[2](https://x.com/github/status/2083261791363363273)  \n- AgentsRoom v1.125: per-step/per-agent reasoning effort pinning.  \n- Misc: 1Password Environments + MCP (secrets critique: if app can access, agent can); Unity CLI + MCP; various skill repos (session repair, book-to-video).\n\n**Other**  \n- Agent PR volume (GitHub: 17M in March 2026); single-agent long-running loops with state files + auto-merge checklists.  \n- Security: Agent Egress Lab (Playwright offline E2E + allowlist proxy) for prompt-injection/egress control.  \n- Frontend workflows: multi-tool (Codex + design refs + Stitch variants) to escape generic AI aesthetics; Google ADK/A2UI notes on locked backends + controlled UIs.\n\nNo major new Cursor/Copilot plugins or evaluation harnesses in window. Conflicting: some claim skills > MCP for token efficiency; others emphasize MCP production scaling.\n\n# 3. Consumer taste and demographic signals\nSparse direct signals in window (short period + search focus).  \nObserved:  \n- Creator emphasis on short-form realism/details, modest settings for weight, structural outlier analysis (YouTube niches via MCP tools) over averages.  \n- Broader (contextual): AI multiplies CS fundamentals (Andrew Ng hierarchy: fundamentals + AI fluency > pure experience or pure prompting). UI/UX learning rising as abstraction layer.  \n- Buying language: practical “agent OS in 4 days” (memory + project + skill + schedule); PaaS for indie ($3/mo real server, MCP-native deploy/logs/db).  \n\nInference (low confidence): local-service and maker audiences value deterministic, low-cold-start, agent-operable tooling and non-generic visuals. No strong demographic/cultural shifts isolated to period. Watch creator discovery (Nexlev-style MCP research) and anti-AI-slop design language.\n\n# 4. Agent, MCP, skill, GitHub, and workflow opportunities\n- **Stateless MCP migration**: dual-support proxies/SDKs already exist; enables Dillon OS serverless MCP hosts, better load-balancing, lower ops. Header routing for gateways. Explicit handles for any needed state. Classify: sandbox-test for stack compatibility.  \n- **Firecrawl MCP update**: lower context cost for research/scrape in site factory or prospecting. Keyless agent path.  \n- **Claude Code skills**: `/btw`, `/run`+`/verify` (app launch + behavioral check, not just tests), custom SKILL.md with dynamic `!command` injection, monorepo nested, plugin marketplace. Parallel: reasoning-effort pinning (AgentsRoom pattern). Overlap with existing orchestration low if focused on verification loops.  \n- **Copilot GPT-5.6 pricing**: cheaper Luna/Terra for volume coding/parallel agents.  \n- **Production patterns**: tool-count discipline, observability before multi-agent, egress allowlists + offline Playwright, state-file + retrospective + auto-merge checklists for long-running agents.  \n- **Workflow**: supervisory loops with per-step model/effort; multi-agent handoff for UI variants + SEO audit.  \n\nAssessment axes (all candidates): source = official/maintainer high; freshness high; maintenance (spec has 12mo policy); stack compat (HTTP/JSON-RPC, npm/etc.); permissions/secrets (auth hardening good, but 1Password critique stands—app access = agent access); prompt-injection (egress labs relevant); context cost (Firecrawl win, tool bloat loss); $ cost (pricing cuts positive); rollback (dual-mode/SDKs); acceptance = deterministic (e.g., request without session succeeds on any replica; context size delta; `/verify` catches visual/functional regressions).\n\nNo install/connect during research.\n\n# 5. Website factory, design, AEO, and retention implications\n- **Factory (25-site)**: Stateless MCP + lower-context Firecrawl improve research/real-imagery pipelines and Maps-to-site parity checks. Maker-checker via `/verify`-style skills + independent visual critique (multi-variant + human gate). Offline Playwright + egress for safe QA. AEO trust gates: cacheable tool lists + explicit auth reduce hallucination surface; source-ready FAQs via structured skills. Preview/Netlify: serverless MCP friendly.  \n- **Design/UI/UX**: Multi-tool workflows (design refs + motion + variants) explicitly to avoid generic AI look. Tokens/systems still human-curated; AI for generation + iteration under constraints. Accessibility/performance testing via agent + Playwright. Figma-to-code remains handoff-heavy.  \n- **AEO/GEO/SEO/retention**: Limited fresh claims. AI Overviews/Mode still favor structured, citable, experience-backed content. Local/GBP parity via scrape+verify loops. CRO/landing: deterministic acceptance (visual regression + a11y + perf gates). Third-visit/retention: clearer onboarding via skills; offers tied to real outcomes. Analytics: agent PR volume implies attribution challenges for AI-assisted work.  \n- **Operational**: Vertical templates + real imagery prioritized; approval gates before deploy. Context-engineering (minimize tools, cache lists) directly cuts factory cost.\n\nInference: factory throughput gains from stateless + verification skills; design differentiation via anti-slop process.\n\n# 6. Recommended experiments ranked by expected benefit, evidence strength, risk, deterministic acceptance test, independent checker, and rollback\n1. **Sandbox-test MCP 2026-07-28 dual-mode client/server** (highest benefit: scalability for any agent tooling). Evidence: official + multi-vendor. Risk: medium (breaking, migration). Acceptance: request without session ID succeeds round-robin; MRTR input flow works; old 1.x path byte-identical. Checker: separate process or Cloudflare Workers replica. Rollback: pin old SDK/spec. Human gate: yes (compat matrix).  \n2. **Sandbox-test Firecrawl MCP@3.23.0 context delta** on site-research tasks. Evidence: maintainer post. Risk: low. Acceptance: measured token/context reduction ≥40% on identical scrape/search; keyless auth works; output parity. Checker: side-by-side old vs new. Rollback: version pin.  \n3. **Sandbox-test Claude Code `/verify` + custom run-skill + `/btw`** for factory component/QA loops. Evidence: docs + reports. Risk: low-medium (version-specific). Acceptance: launches app, confirms behavioral change (not just unit), mid-task aside without reset; records recipe. Checker: independent browser/Playwright run. Rollback: disable skill.  \n4. **Save-to-library production MCP guide patterns** (tool minimization, explicit handles, observability, egress). Evidence: AAIF. Risk: none.  \n5. **Watch AgentsRoom-style effort pinning + long-running state-file agent loops**.  \n\nPrefer these testable few over broad installs. No production, no credentials, no outreach.\n\n# 7. Watchlist and rejected hype\n**Watchlist**  \n- Full ecosystem migration timelines and remaining sticky-session edge cases.  \n- Claude skills marketplace growth and `/btw` official docs.  \n- GPT-5.6 credit consumption in Copilot real workloads.  \n- Agent Egress Lab / similar injection defenses.  \n- Anti-generic-AI frontend multi-tool recipes.  \n- Nexlev-style research MCPs for creator/vertical discovery.  \n- KamuiDash or similar MCP-native PaaS pricing/ops.\n\n**No action / Rejected hype**  \n- Viral “agent OS in 4 days” or single-prompt OS/Doom claims without reproducible harness.  \n- Broad 40+ tool MCP servers (context bloat + mis-invocation evidence).  \n- 1Password Environments as complete secret solution (access equivalence critique).  \n- Unverified skill repos or low-engagement “new plugin” claims without source/repro.  \n- Duplicated capabilities already in stack (generic orchestration, basic scrape).  \n- Any tool requiring production secrets, persistent elevated perms, or non-rollbackable install.  \n- Aggregate PR volume stats without quality/ determinism filters.\n\n## What Dillon OS should change today\n1. Prioritize sandbox dual-mode MCP 2026-07-28 support (stateless path first) for all internal servers/clients — unlocks serverless factory agents.  \n2. Measure and adopt Firecrawl MCP 3.23+ for research steps (context win).  \n3. Prototype Claude Code `/verify` + recipe recording as maker-checker gate in site factory (behavioral, not just lint).  \n4. Enforce tool-minimization + explicit-handle state in any new MCP (per AAIF/GitHub data).  \n5. Add offline Playwright + egress allowlist pattern to QA checklist.  \n\n(No installs, no deploys, no spend.)\n\n```json\ncandidates_json\n[\n  {\n    \"decision\": \"sandbox-test\",\n    \"name\": \"MCP 2026-07-28 stateless dual-mode\",\n    \"why\": \"Biggest architectural unlock for scalable, serverless agent tooling and factory MCPs; official + broad ecosystem support in window.\",\n    \"expected_benefit\": \"Eliminate sticky sessions; enable round-robin/Lambda/Workers; header routing; lower ops; MRTR for interactive tools.\",\n    \"source_urls\": [\"https://blog.modelcontextprotocol.io/posts/2026-07-28/\", \"https://developers.cloudflare.com/changelog/post/2026-07-27-agents-sdk-v0.20.0-mcp-sdk-v2/\", \"https://modelcontextprotocol.io/specification/2026-07-28\"],\n    \"acceptance_test\": \"Client issues tools/call without prior initialize or session ID; succeeds on multiple replicas; Mcp-Method/Mcp-Name headers route correctly; MRTR input_required flow completes; legacy path remains byte-compatible; list responses include ttlMs.\",\n    \"independent_checker\": \"Separate Cloudflare Worker or second process running old+new proxy; compare logs and outputs side-by-side; schema size measurement.\",\n    \"rollback\": \"Pin pre-2026-07-28 SDK/spec; feature-flag new transport; dual binary as already demonstrated by community.\",\n    \"human_gate\": true,\n    \"risk\": \"medium (breaking changes, migration effort, temporary dual support)\",\n    \"overlap\": \"low-moderate with existing MCP usage; enhances rather than replaces\"\n  },\n  {\n    \"decision\": \"sandbox-test\",\n    \"name\": \"Firecrawl MCP 3.23.0\",\n    \"why\": \"Material context reduction on core research primitives used in prospecting and site factory.\",\n    \"expected_benefit\": \"≥40-50% lower tokens/context per search/scrape/interact; simpler agent auth.\",\n    \"source_urls\": [\"https://docs.firecrawl.dev/mcp-server\", \"https://x.com/MaxITfinds/status/2083364200059936913\"],\n    \"acceptance_test\": \"Identical queries show measured context/token drop ≥40%; output content parity or better; OAuth and keyless paths both succeed; no regression in scrape fidelity.\",\n    \"independent_checker\": \"Side-by-side old vs new MCP version on fixed URL set; token counter + content diff.\",\n    \"rollback\": \"npm pin to prior version; remove from agent config.\",\n    \"human_gate\": true,\n    \"risk\": \"low\",\n    \"overlap\": \"moderate if Firecrawl already used; net win on cost\"\n  },\n  {\n    \"decision\": \"sandbox-test\",\n    \"name\": \"Claude Code /verify + /run + /btw skills\",\n    \"why\": \"Deterministic behavioral acceptance and mid-task control for coding/factory loops; docs confirm run/verify pattern.\",\n    \"expected_benefit\": \"Catch visual/functional regressions beyond unit tests; non-destructive asides; recipe recording for reproducibility.\",\n    \"source_urls\": [\"https://code.claude.com/docs/en/skills\", \"https://x.com/alliekmillewyhf/status/2083455268952969483\"],\n    \"acceptance_test\": \"/verify launches app and confirms specific UI/behavior change; /btw injects aside without context reset or new session; recipe written to .claude/skills and reused; fails closed on missing env.\",\n    \"independent_checker\": \"Manual browser or separate Playwright script on same change; compare pass/fail.\",\n    \"rollback\": \"Disable bundled/custom skills via settings; remove SKILL.md.\",\n    \"human_gate\": true,\n    \"risk\": \"low-medium (version gating, inference reliability on complex apps)\",\n    \"overlap\": \"low with pure lint; complements existing review\"\n  },\n  {\n    \"decision\": \"save-to-library\",\n    \"name\": \"AAIF/production MCP guide patterns (tool min, handles, egress, obs)\",\n    \"why\": \"Actionable, evidence-backed (GitHub 40-tool stats) practices for any MCP work.\",\n    \"expected_benefit\": \"Lower context, higher reliability, safer multi-tenant.\",\n    \"source_urls\": [\"https://x.com/openmartbot/status/2083357597814718809\"],\n    \"acceptance_test\": \"N/A (reference)\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": false,\n    \"risk\": \"none\",\n    \"overlap\": \"none\"\n  },\n  {\n    \"decision\": \"watch\",\n    \"name\": \"GPT-5.6 Luna/Terra Copilot pricing + AgentsRoom effort pinning\",\n    \"why\": \"Cost and quality levers for volume/parallel coding; fresh but usage data pending.\",\n    \"expected_benefit\": \"Lower $ per agent-hour; better step-appropriate reasoning.\",\n    \"source_urls\": [\"https://x.com/github/status/2083261791363363273\", \"https://agentsroom.dev/\"],\n    \"acceptance_test\": \"N/A\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": false,\n    \"risk\": \"low\",\n    \"overlap\": \"moderate with existing Copilot/Claude\"\n  },\n  {\n    \"decision\": \"reject\",\n    \"name\": \"Unverified broad skill repos / 1Password-as-complete-secret / viral single-prompt OS claims\",\n    \"why\": \"Low signal, security caveats, or non-reproducible hype; no deterministic gain over current stack.\",\n    \"expected_benefit\": \"none reliable\",\n    \"source_urls\": [],\n    \"acceptance_test\": \"N/A\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": false,\n    \"risk\": \"high (injection, secrets, distraction)\",\n    \"overlap\": \"high or irrelevant\"\n  }\n]\n```\n\n## Sources encountered\n\n- https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- https://x.com/github/status/2083261791363363273\n- https://x.com/ritakozlov/status/2083226344205246945\n- https://x.com/openmartbot/status/2083357597814718809\n- https://x.com/MaxITfinds/status/2083364200059936913\n- https://x.com/alliekmillewyhf/status/2083455268952969483\n- https://code.claude.com/docs/en/skills",
+  "candidates": [
+    {
+      "decision": "sandbox-test",
+      "name": "MCP 2026-07-28 stateless dual-mode",
+      "why": "Biggest architectural unlock for scalable, serverless agent tooling and factory MCPs; official + broad ecosystem support in window.",
+      "expected_benefit": "Eliminate sticky sessions; enable round-robin/Lambda/Workers; header routing; lower ops; MRTR for interactive tools.",
+      "source_urls": [
+        "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "https://developers.cloudflare.com/changelog/post/2026-07-27-agents-sdk-v0.20.0-mcp-sdk-v2/",
+        "https://modelcontextprotocol.io/specification/2026-07-28"
+      ],
+      "acceptance_test": "Client issues tools/call without prior initialize or session ID; succeeds on multiple replicas; Mcp-Method/Mcp-Name headers route correctly; MRTR input_required flow completes; legacy path remains byte-compatible; list responses include ttlMs.",
+      "independent_checker": "Separate Cloudflare Worker or second process running old+new proxy; compare logs and outputs side-by-side; schema size measurement.",
+      "rollback": "Pin pre-2026-07-28 SDK/spec; feature-flag new transport; dual binary as already demonstrated by community.",
+      "human_gate": true,
+      "risk": "medium (breaking changes, migration effort, temporary dual support)",
+      "overlap": "low-moderate with existing MCP usage; enhances rather than replaces"
+    },
+    {
+      "decision": "sandbox-test",
+      "name": "Firecrawl MCP 3.23.0",
+      "why": "Material context reduction on core research primitives used in prospecting and site factory.",
+      "expected_benefit": "≥40-50% lower tokens/context per search/scrape/interact; simpler agent auth.",
+      "source_urls": [
+        "https://docs.firecrawl.dev/mcp-server",
+        "https://x.com/MaxITfinds/status/2083364200059936913"
+      ],
+      "acceptance_test": "Identical queries show measured context/token drop ≥40%; output content parity or better; OAuth and keyless paths both succeed; no regression in scrape fidelity.",
+      "independent_checker": "Side-by-side old vs new MCP version on fixed URL set; token counter + content diff.",
+      "rollback": "npm pin to prior version; remove from agent config.",
+      "human_gate": true,
+      "risk": "low",
+      "overlap": "moderate if Firecrawl already used; net win on cost"
+    },
+    {
+      "decision": "sandbox-test",
+      "name": "Claude Code /verify + /run + /btw skills",
+      "why": "Deterministic behavioral acceptance and mid-task control for coding/factory loops; docs confirm run/verify pattern.",
+      "expected_benefit": "Catch visual/functional regressions beyond unit tests; non-destructive asides; recipe recording for reproducibility.",
+      "source_urls": [
+        "https://code.claude.com/docs/en/skills",
+        "https://x.com/alliekmillewyhf/status/2083455268952969483"
+      ],
+      "acceptance_test": "/verify launches app and confirms specific UI/behavior change; /btw injects aside without context reset or new session; recipe written to .claude/skills and reused; fails closed on missing env.",
+      "independent_checker": "Manual browser or separate Playwright script on same change; compare pass/fail.",
+      "rollback": "Disable bundled/custom skills via settings; remove SKILL.md.",
+      "human_gate": true,
+      "risk": "low-medium (version gating, inference reliability on complex apps)",
+      "overlap": "low with pure lint; complements existing review"
+    },
+    {
+      "decision": "save-to-library",
+      "name": "AAIF/production MCP guide patterns (tool min, handles, egress, obs)",
+      "why": "Actionable, evidence-backed (GitHub 40-tool stats) practices for any MCP work.",
+      "expected_benefit": "Lower context, higher reliability, safer multi-tenant.",
+      "source_urls": [
+        "https://x.com/openmartbot/status/2083357597814718809"
+      ],
+      "acceptance_test": "N/A (reference)",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": false,
+      "risk": "none",
+      "overlap": "none"
+    },
+    {
+      "decision": "watch",
+      "name": "GPT-5.6 Luna/Terra Copilot pricing + AgentsRoom effort pinning",
+      "why": "Cost and quality levers for volume/parallel coding; fresh but usage data pending.",
+      "expected_benefit": "Lower $ per agent-hour; better step-appropriate reasoning.",
+      "source_urls": [
+        "https://x.com/github/status/2083261791363363273",
+        "https://agentsroom.dev/"
+      ],
+      "acceptance_test": "N/A",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": false,
+      "risk": "low",
+      "overlap": "moderate with existing Copilot/Claude"
+    },
+    {
+      "decision": "reject",
+      "name": "Unverified broad skill repos / 1Password-as-complete-secret / viral single-prompt OS claims",
+      "why": "Low signal, security caveats, or non-reproducible hype; no deterministic gain over current stack.",
+      "expected_benefit": "none reliable",
+      "source_urls": [],
+      "acceptance_test": "N/A",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": false,
+      "risk": "high (injection, secrets, distraction)",
+      "overlap": "high or irrelevant"
+    }
+  ],
+  "collector_metadata": {
+    "provider": "xai",
+    "model": "grok-4.5",
+    "response_id": "3917907b-a52f-96f8-97e9-87048eca043b",
+    "tool_calls": [
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call"
+    ],
+    "tool_call_counts": {
+      "x_search": 12,
+      "web_search": 6
+    },
+    "citation_count": 7,
+    "usage": {
+      "input_tokens": 116593,
+      "input_tokens_details": {
+        "cached_tokens": 82944
+      },
+      "output_tokens": 5832,
+      "output_tokens_details": {
+        "reasoning_tokens": 1815
+      },
+      "total_tokens": 122425,
+      "num_sources_used": 0,
+      "num_server_side_tools_used": 18,
+      "cost_in_usd_ticks": 2171732000,
+      "server_side_tool_usage_details": {
+        "web_search_calls": 6,
+        "x_search_calls": 12,
+        "code_interpreter_calls": 0,
+        "file_search_calls": 0,
+        "mcp_calls": 0,
+        "document_search_calls": 0,
+        "image_generation_calls": 0
+      },
+      "context_details": {
+        "input_tokens": 34600,
+        "output_tokens": 4217
+      }
+    },
+    "cost_usd": 0.2171732
+  }
+}

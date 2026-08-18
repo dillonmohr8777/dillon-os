@@ -1,0 +1,99 @@
+{
+  "batch_id": "M360-WEEKLY-2026-08-03-2026-08-09",
+  "generated_at": "2026-08-10T14:57:39.8641140Z",
+  "reports": [
+    {
+      "report_id": "momentum-360-weekly-2026-08-03-kimberly-james-bridal",
+      "cadence": "weekly",
+      "title": "Kimberly James Bridal Weekly Report | August 3 to August 9, 2026",
+      "period_start": "2026-08-03",
+      "period_end": "2026-08-09",
+      "client": {
+        "id": "kimberly-james-bridal",
+        "name": "Kimberly James Bridal",
+        "vault_note": "01_Clients/Kimberly James Bridal/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/kimberly-james-bridal/deliverables/2026-08-10-weekly-report-2026-08-03-to-2026-08-09/kimberly-james-bridal-weekly-report-2026-08-03-to-2026-08-09.pdf"
+      },
+      "verification_status": "verified",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Four-page read-only weekly report with separate Meta and Google Ads lanes, two Meta paid form leads routed in a separate client email draft, and current deliverables, optimizations, and next actions. Google conversion reporting is pending validation.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/kimberly-james-bridal/deliverables/2026-08-10-weekly-report-2026-08-03-to-2026-08-09/source-data.json",
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/scripts/Build-WeeklyClientReports-2026-08-03-to-2026-08-09.mjs",
+        "Meta Ads Manager and Leads Center | account 1249689223687250 | live read for 2026-08-03 through 2026-08-09",
+        "Google Ads | customer 814-550-6229 | live read for 2026-08-03 through 2026-08-09"
+      ]
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-03-omega-landscaping",
+      "cadence": "weekly",
+      "title": "Omega Landscaping and Concrete Weekly Report | August 3 to August 9, 2026",
+      "period_start": "2026-08-03",
+      "period_end": "2026-08-09",
+      "client": {
+        "id": "omega-landscaping",
+        "name": "Omega Landscaping and Concrete",
+        "vault_note": "01_Clients/Omega Landscaping/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/omega-landscaping/deliverables/2026-08-10-weekly-report-2026-08-03-to-2026-08-09/omega-landscaping-weekly-report-2026-08-03-to-2026-08-09.pdf"
+      },
+      "verification_status": "verified",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Four-page read-only weekly report covering the live Google Search lane, account and landing-page work already delivered, current bid-strategy limitation, and the next service-intent and CRM reconciliation steps.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/omega-landscaping/deliverables/2026-08-10-weekly-report-2026-08-03-to-2026-08-09/source-data.json",
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/scripts/Build-WeeklyClientReports-2026-08-03-to-2026-08-09.mjs",
+        "Google Ads | customer 285-398-1364 | live read for 2026-08-03 through 2026-08-09"
+      ]
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-03-onsite-concrete-landscape",
+      "cadence": "weekly",
+      "title": "Onsite Concrete and Landscape Weekly Report | August 3 to August 9, 2026",
+      "period_start": "2026-08-03",
+      "period_end": "2026-08-09",
+      "client": {
+        "id": "onsite-concrete-landscape",
+        "name": "Onsite Concrete and Landscape",
+        "vault_note": "01_Clients/Onsite Concrete/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/onsite-concrete-landscape/deliverables/2026-08-10-weekly-report-2026-08-03-to-2026-08-09/onsite-concrete-landscape-weekly-report-2026-08-03-to-2026-08-09.pdf"
+      },
+      "verification_status": "verified",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Four-page read-only weekly report documenting the paused Google Ads account, the approved Fairfield and service-content work, and the conversion setup and qualified-estimate follow-up needed before performance can be evaluated.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/onsite-concrete-landscape/deliverables/2026-08-10-weekly-report-2026-08-03-to-2026-08-09/source-data.json",
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/scripts/Build-WeeklyClientReports-2026-08-03-to-2026-08-09.mjs",
+        "Google Ads | customer 103-371-5894 | live read for 2026-08-03 through 2026-08-09"
+      ]
+    },
+    {
+      "report_id": "momentum-360-weekly-2026-08-03-replenish-7-eleven",
+      "cadence": "weekly",
+      "title": "Replenish and 7-Eleven Weekly Report | August 3 to August 9, 2026",
+      "period_start": "2026-08-03",
+      "period_end": "2026-08-09",
+      "client": {
+        "id": "replenish-7-eleven",
+        "name": "Replenish and 7-Eleven",
+        "vault_note": "01_Clients/Replenish/overview.md"
+      },
+      "artifact": {
+        "path": "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/replenish-7-eleven/deliverables/2026-08-10-weekly-report-2026-08-03-to-2026-08-09/replenish-7-eleven-weekly-report-2026-08-03-to-2026-08-09.pdf"
+      },
+      "verification_status": "verified",
+      "delivery_status": "email-and-slack-draft-only-unsent",
+      "summary": "Four-page report-only weekly packet for Replenish and 7-Eleven. No Ads account was opened and no current-week Ads delivery was estimated; the billing and account-resolution context remains separate from Fresh Blends and Kwik Trip.",
+      "source_refs": [
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/replenish-7-eleven/deliverables/2026-08-10-weekly-report-2026-08-03-to-2026-08-09/source-data.json",
+        "C:/Users/dillo/Documents/Codex/projects/client-operations/scripts/Build-WeeklyClientReports-2026-08-03-to-2026-08-09.mjs",
+        "Gmail and Slack | Replenish and 7-Eleven | August 3 through August 9, 2026 | report-only route"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "automation": "Daily Marketing and Web-Build Frontier to Dillon OS",
+  "run_title": "Daily marketing, agent workflow, MCP, plugin, and web-build frontier",
+  "run_at": "2026-08-05T07:31:25.458Z",
+  "source_url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+  "coverage": "2026-08-04T01:31:25.458Z through 2026-08-05T07:31:25.458Z; 11 cited sources; 11 X searches; 7 web searches",
+  "verification_status": "partial",
+  "content": "# Dillon OS Daily Intelligence Report\n**Period:** 2026-08-04T01:31:25.458Z → 2026-08-05T07:31:25.458Z\n\n## 1. Executive pulse\nLow-to-moderate signal volume in the window. Primary developments center on the recent (July 28) MCP 2026-07-28 spec going fully live in ecosystem discussion—stateless core for better HTTP scalability, routing, and auth hardening—plus two high-visibility agent skills: Archify (verifiable architecture diagrams) and claude-seo (comprehensive SEO/AEO/GEO audits). Security caution around MCP servers and skill footers remains active. Sparse consumer/demographic or pure design-system drops; coding-efficiency and AEO tooling dominate.[1](https://blog.modelcontextprotocol.io/posts/2026-07-28/)\n\n**Observed vs. inference:** Evidence is mostly maintainer posts, GitHub READMEs, and low-engagement X shares. Freshness high for discussions of the July MCP release; Archify changelog notes activity into early August. No major official Cursor/Copilot/Claude Code core releases in-window.\n\n## 2. High-signal findings\n- **MCP 2026-07-28 spec (stateless core):** Official blog confirms removal of sessions/handshake, self-contained requests, header-based routing (Mcp-Method/Mcp-Name), cacheable lists, Multi Round-Trip Requests (MRTR), Tasks as extension, auth hardening (RFC 9207, deprecation of DCR toward CIMD), and 12-month deprecation windows. Tier-1 SDKs updated; ecosystem (Cloudflare, AWS, Microsoft, Figma, etc.) signaling day-zero or rapid support. Discussed actively on X as infrastructure win for remote/scaled servers, though application state still needs explicit handling.[1](https://blog.modelcontextprotocol.io/posts/2026-07-28/)[2](https://x.com/HOSAIF_hz/status/2084877830048063811)\n- **Archify skill (tt-a1i/archify):** Agent skill for Claude Code, Cursor, Codex, etc. Generates validated, interactive HTML architecture/workflow/sequence/data-flow/lifecycle diagrams from repo or description. Self-validates (schema/layout/route checks) before delivery; supports deltas for PR review, source-line tracing, exports (PNG/SVG/WebM/share cards). MIT, ~9k stars, recent stable v2.13.0 (changelog ~Aug 3). Install via `npx skills add`. Strong for repo navigation and handoff.[3](https://x.com/NainsiDwiv50980/status/2084903496868913453)[4](https://github.com/tt-a1i/archify)\n- **claude-seo (AgriciDaniel/claude-seo):** Universal skill for Claude Code with 25 sub-skills + 18 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, local/maps, clustering, e-comm, international, reporting. Parallel agents, falsifiable recs grounded in Google guidance. High stars (~11-12k range historically); optional paid extensions. Reddit/X notes undisclosed self-promo footer in outputs (community link)—source quality caution. Last notable commits mid-late July.[5](https://x.com/PythonHub/status/2084901099408850986)[6](https://github.com/AgricIDaniel/claude-seo)\n- **Other:** Mentions of custom MCP servers, background menu-bar agent runners reusing Claude/Codex MCP configs, GlobalGPT image gen via MCP in Codex, security audits flagging MCP secret/install-hook risks, Orca (parallel sandboxed agents + per-workflow MCP), UX Pilot (AI wireframe-to-hi-fi + Figma/code + MCP interface). Low engagement overall.[7](https://x.com/CoolAssPuppy/status/2084897663007301721)[8](https://x.com/get_sigil/status/2084867088674369884)[9](https://x.com/orcaonsol_fun/status/2084865290572017813)\n\n**Uncertainty:** Exact star counts and install volumes fluctuate; some X posts are promotional. Conflicting views on whether “just give terminal + curl” still beats structured MCP/skills for flexibility.\n\n## 3. Consumer taste and demographic signals\nSparse direct signals in the 30-hour window. One observation of high visual taste clashing with pervasive “AI slop” in local banners, menus, and posters—suggests fatigue with generic AI aesthetics among design-aware consumers.[10](https://x.com/thieerrr/status/2084905160212636110)\n\n**Inference (low confidence):** Reinforces need for real-image art direction, non-generic typography/layout, and vertical-specific craft in local-service sites to differentiate. No strong demographic, creator, or buying-language data; no conflicting evidence. Broader cultural push against probabilistic/AI-generated visuals may favor deterministic QA and maker-checker human review.\n\n## 4. Agent, MCP, skill, GitHub, and workflow opportunities\n- **MCP stateless migration:** Improves scalability for remote servers, load-balancing, and gateway routing. Compatible with existing stacks if clients/servers update; explicit state handles replace sessions. Governance (auth scopes, versioning) becomes the new bottleneck.[11](https://x.com/AleksejAros/status/2084903648740438157)\n- **Archify:** High fit for repository navigation, planning/handoff, code review (architecture deltas), and documentation. Low context cost once installed; deterministic validation gates reduce hallucination risk. Overlap with existing diagram tools minimal due to agent-native + validation.\n- **claude-seo:** Direct AEO/GEO/local SEO coverage useful for site factory and client audits. Parallel sub-agents for efficiency. Risk: promo footer and potential prompt-injection via skill instructions; secret handling via optional APIs (DataForSEO etc.) needs sandbox.\n- **Coding loops:** Mentions of supervisory/parallel agents (Orca-style MCP per-workflow), Playwright integration tests, image gen via MCP. Security tools emphasizing quarantine-first for MCP packages.\n- **Assessment criteria applied:** Prefer official repos/changelogs. Archify scores high on maintenance, MIT, validation, low monetary cost. claude-seo high capability but footer/permissions risk → sandbox only. No new Copilot/Cursor core plugins of note. Reject unmaintained or high-secret-exposure items.\n\n**Classification preview:** Archify → sandbox-test; claude-seo → watch/sandbox with audit; MCP spec → watch/integrate (client-side); pure hype runners → reject or save-to-library.\n\n## 5. Website factory, design, AEO, and retention implications\n- **AEO/GEO/local:** claude-seo’s maps intelligence, schema, E-E-A-T, and AI-citability checks align with 25-site factory needs (source-ready FAQs, trust gates, Maps-to-site parity). Use for deterministic acceptance on audits.\n- **Design/UI craft:** Archify for system maps in handoffs; UX Pilot for rapid wireframe-to-Figma/code (avoids pure generic AI look via iteration). Emphasize real imagery, tokens, responsive/a11y/performance gates over vibe-only generation. Storybook mentions remain aspirational.\n- **Factory ops:** Parallel agent loops + validation (Archify-style) for maker-checker and independent visual critique. Stateless MCP eases preview/Netlify deploys of tool servers. Security alarms reinforce safe preview, secret isolation, and rollback.\n- **Retention/CRO:** Limited new signals; focus on third-visit behavior via solid local SEO and non-slop UX. No major paid-media or email shifts observed.\n\n**Inference:** Skills that enforce validation and source-grounding reduce generic aesthetics and improve acceptance gates.\n\n## 6. Recommended experiments ranked by expected benefit, evidence strength, risk, deterministic acceptance test, independent checker, and rollback\n1. **Sandbox-test Archify skill** (highest benefit for coding efficiency + factory handoff).  \n   Evidence: Strong (official repo, validation receipts, recent changelog). Risk: Low (MIT, local).  \n   Acceptance: Generate architecture diagram of a sample Dillon stack repo; confirm interactive HTML validates schema/routes, traces to source lines, exports cleanly, and delta compares two commits.  \n   Checker: Human visual + source-line audit. Rollback: `npx skills` remove or delete skill dir. Overlap: Low with existing diagram tools.\n\n2. **Sandbox-test / audit claude-seo (public MIT version only)** for AEO factory gates.  \n   Evidence: Medium-high (feature completeness) but footer controversy. Risk: Medium (undisclosed promo, external API keys).  \n   Acceptance: Run full audit on a test local-service site; verify prioritized, falsifiable recs with Google-primary sources; confirm no unwanted footers or data exfil; maps/schema outputs usable.  \n   Checker: Independent SEO reviewer + static skill.md scan. Rollback: Uninstall scripts provided.  \n\n3. **Watch + library MCP 2026-07-28 client/server patterns** (no install).  \n   Benefit: Future-proof orchestration. Evidence: Official. Risk: Migration friction.  \n   Acceptance: N/A (docs only). Test compatibility notes against current Dillon MCP usage.\n\n4. **Save-to-library Orca-style per-workflow MCP + parallel sandbox patterns** and UX Pilot MCP interface (docs/examples only). Low immediate action.\n\nPrefer these over broad tool installs. All remain research-only; no production connection.\n\n## 7. Watchlist and rejected hype\n**Watchlist:**\n- Full ecosystem rollout of MCP 2026-07-28 (Claude/GitHub/etc. support posts).\n- Archify updates and Raven harness integration.\n- claude-seo footer resolution or forks; Codex SEO port.\n- Security scanners for MCP (e.g., sigil-style quarantine).\n- UX Pilot MCP maturity and Figma-to-code fidelity.\n\n**Rejected hype / no-action:**\n- Undisclosed promo footers or self-serving skills (claude-seo caution applies broadly).\n- “Agent OS shared brain” or menu-bar wrappers without reproducible security model or open source.\n- Viral MCP server lists or unvetted custom servers (high secret/phone-home risk).\n- Generic image-gen MCP demos without art-direction controls.\n- Low-signal orchestration videos or Amazon book plugs.\n- Anything requiring credentials, production deploy, or un-sandboxed install during research.\n- Duplicated capabilities already covered by terminal + existing tools.\n\n### What Dillon OS should change today\n1. Prioritize sandbox evaluation of Archify for architecture handoffs and PR visual deltas in the coding workflow.  \n2. Add skill-source static analysis (footer/injection/secret scan) as a mandatory pre-sandbox gate for any new agent skill.  \n3. Track MCP 2026-07-28 migration notes against current servers; plan explicit state handles.  \n4. Incorporate AEO/GEO checklist items (from claude-seo methodology, not the tool) into factory trust/acceptance gates.  \n5. Reinforce real-image + non-slop visual critique in maker-checker to counter observed AI-aesthetics fatigue.  \n\n**No action:** Hype wrappers, un-audited high-star skills without source review, production MCP upgrades, purchases, outreach, or any install/connect.\n\n```json\ncandidates_json\n[\n  {\n    \"name\": \"Archify agent skill\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Verifiable interactive architecture/workflow diagrams with self-validation, source tracing, and PR deltas; high fit for repo nav, handoff, and review in frontend/full-stack work.\",\n    \"expected_benefit\": \"Faster accurate system understanding and communication; reduces generic text walls; deterministic gates cut hallucination.\",\n    \"source_urls\": [\"https://github.com/tt-a1i/archify\", \"https://x.com/NainsiDwiv50980/status/2084903496868913453\"],\n    \"acceptance_test\": \"Install in isolated env; point at sample repo; produce architecture HTML that passes all built-in schema/layout/route checks, links to real source lines, supports theme/export/delta, and opens interactively without errors.\",\n    \"independent_checker\": \"Human engineer reviews diagram accuracy against code + runs validation JSON output.\",\n    \"rollback\": \"Remove via npx skills or delete skill directory; no persistent state.\",\n    \"human_gate\": \"Review generated artifacts and skill.md for injection before any shared use.\",\n    \"risk\": \"Low (MIT, local-first, validated outputs); residual agent prompt risk.\",\n    \"overlap\": \"Low with current diagram or doc tools; complementary to existing navigation.\"\n  },\n  {\n    \"name\": \"claude-seo skill (public MIT)\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Broad parallel SEO/AEO/GEO/local/schema coverage with falsifiable outputs; directly supports site factory audits and trust gates.\",\n    \"expected_benefit\": \"Accelerated, evidence-based AEO and local SEO checks for 25-site production; maps parity and FAQ readiness.\",\n    \"source_urls\": [\"https://github.com/AgriciDaniel/claude-seo\", \"https://x.com/PythonHub/status/2084901099408850986\"],\n    \"acceptance_test\": \"Run /seo audit on isolated test site; confirm prioritized actionable recs with primary-source citations, no unauthorized footers or network calls beyond declared, usable schema/maps outputs, and clean uninstall.\",\n    \"independent_checker\": \"SEO specialist + automated skill source scan for promo/injection + network monitor.\",\n    \"rollback\": \"Use provided uninstall.sh/ps1; delete plugin dirs.\",\n    \"human_gate\": \"Full source audit of SKILL.md and agents before sandbox run; block any client data.\",\n    \"risk\": \"Medium (historical undisclosed footer, optional external APIs, high star count not guarantee).\",\n    \"overlap\": \"Partial with existing SEO checklists; extends AEO specifically.\"\n  },\n  {\n    \"name\": \"MCP 2026-07-28 stateless patterns\",\n    \"decision\": \"watch\",\n    \"why\": \"Official protocol maturation for scalable remote servers, routing, and auth; foundational for future orchestration.\",\n    \"expected_benefit\": \"Better reliability and ops for any MCP-based tools in factory or agents.\",\n    \"source_urls\": [\"https://blog.modelcontextprotocol.io/posts/2026-07-28/\", \"https://modelcontextprotocol.io/specification/2026-07-28\"],\n    \"acceptance_test\": \"N/A – documentation and compatibility matrix only.\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": \"N/A\",\n    \"risk\": \"Low (docs); migration cost if adopting early.\",\n    \"overlap\": \"Direct evolution of existing MCP usage.\"\n  },\n  {\n    \"name\": \"UX Pilot AI design + MCP\",\n    \"decision\": \"save-to-library\",\n    \"why\": \"Rapid prompt/sketch-to-wireframe-to-hi-fi with Figma/code export; MCP interface noted for agent use.\",\n    \"expected_benefit\": \"Faster design exploration while allowing human craft iteration to avoid slop.\",\n    \"source_urls\": [\"https://uxpilot.ai/\", \"https://x.com/UpgradeFeeling/status/2084863696317153406\"],\n    \"acceptance_test\": \"N/A – library reference.\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": \"N/A\",\n    \"risk\": \"Medium (SaaS dependency, potential generic outputs).\",\n    \"overlap\": \"With Figma workflows and component gen.\"\n  },\n  {\n    \"name\": \"Unvetted MCP server lists / background agent wrappers\",\n    \"decision\": \"reject\",\n    \"why\": \"High secret exposure, install hooks, phone-home risk; low reproducible security or maintenance signals.\",\n    \"expected_benefit\": \"None reliable.\",\n    \"source_urls\": [\"https://x.com/get_sigil/status/2084867088674369884\"],\n    \"acceptance_test\": \"N/A\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": \"N/A\",\n    \"risk\": \"High\",\n    \"overlap\": \"Duplicates safer terminal/MCP patterns.\"\n  },\n  {\n    \"name\": \"Generic shared-memory Agent OS claims\",\n    \"decision\": \"reject\",\n    \"why\": \"Promotional, low technical evidence, potential privacy/context-cost issues without open implementation.\",\n    \"expected_benefit\": \"Unproven.\",\n    \"source_urls\": [\"https://x.com/JulianGoldieSEO/status/2084903586597912685\"],\n    \"acceptance_test\": \"N/A\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": \"N/A\",\n    \"risk\": \"Medium-high (hype, possible data sharing).\",\n    \"overlap\": \"With existing memory/context techniques.\"\n  }\n]\n```\n\n## Sources encountered\n\n- https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- https://x.com/HOSAIF_hz/status/2084877830048063811\n- https://x.com/NainsiDwiv50980/status/2084903496868913453\n- https://github.com/tt-a1i/archify\n- https://x.com/PythonHub/status/2084901099408850986\n- https://github.com/AgricIDaniel/claude-seo\n- https://x.com/CoolAssPuppy/status/2084897663007301721\n- https://x.com/get_sigil/status/2084867088674369884\n- https://x.com/orcaonsol_fun/status/2084865290572017813\n- https://x.com/thieerrr/status/2084905160212636110\n- https://x.com/AleksejAros/status/2084903648740438157",
+  "candidates": [
+    {
+      "name": "Archify agent skill",
+      "decision": "sandbox-test",
+      "why": "Verifiable interactive architecture/workflow diagrams with self-validation, source tracing, and PR deltas; high fit for repo nav, handoff, and review in frontend/full-stack work.",
+      "expected_benefit": "Faster accurate system understanding and communication; reduces generic text walls; deterministic gates cut hallucination.",
+      "source_urls": [
+        "https://github.com/tt-a1i/archify",
+        "https://x.com/NainsiDwiv50980/status/2084903496868913453"
+      ],
+      "acceptance_test": "Install in isolated env; point at sample repo; produce architecture HTML that passes all built-in schema/layout/route checks, links to real source lines, supports theme/export/delta, and opens interactively without errors.",
+      "independent_checker": "Human engineer reviews diagram accuracy against code + runs validation JSON output.",
+      "rollback": "Remove via npx skills or delete skill directory; no persistent state.",
+      "human_gate": "Review generated artifacts and skill.md for injection before any shared use.",
+      "risk": "Low (MIT, local-first, validated outputs); residual agent prompt risk.",
+      "overlap": "Low with current diagram or doc tools; complementary to existing navigation."
+    },
+    {
+      "name": "claude-seo skill (public MIT)",
+      "decision": "sandbox-test",
+      "why": "Broad parallel SEO/AEO/GEO/local/schema coverage with falsifiable outputs; directly supports site factory audits and trust gates.",
+      "expected_benefit": "Accelerated, evidence-based AEO and local SEO checks for 25-site production; maps parity and FAQ readiness.",
+      "source_urls": [
+        "https://github.com/AgriciDaniel/claude-seo",
+        "https://x.com/PythonHub/status/2084901099408850986"
+      ],
+      "acceptance_test": "Run /seo audit on isolated test site; confirm prioritized actionable recs with primary-source citations, no unauthorized footers or network calls beyond declared, usable schema/maps outputs, and clean uninstall.",
+      "independent_checker": "SEO specialist + automated skill source scan for promo/injection + network monitor.",
+      "rollback": "Use provided uninstall.sh/ps1; delete plugin dirs.",
+      "human_gate": "Full source audit of SKILL.md and agents before sandbox run; block any client data.",
+      "risk": "Medium (historical undisclosed footer, optional external APIs, high star count not guarantee).",
+      "overlap": "Partial with existing SEO checklists; extends AEO specifically."
+    },
+    {
+      "name": "MCP 2026-07-28 stateless patterns",
+      "decision": "watch",
+      "why": "Official protocol maturation for scalable remote servers, routing, and auth; foundational for future orchestration.",
+      "expected_benefit": "Better reliability and ops for any MCP-based tools in factory or agents.",
+      "source_urls": [
+        "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "https://modelcontextprotocol.io/specification/2026-07-28"
+      ],
+      "acceptance_test": "N/A – documentation and compatibility matrix only.",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": "N/A",
+      "risk": "Low (docs); migration cost if adopting early.",
+      "overlap": "Direct evolution of existing MCP usage."
+    },
+    {
+      "name": "UX Pilot AI design + MCP",
+      "decision": "save-to-library",
+      "why": "Rapid prompt/sketch-to-wireframe-to-hi-fi with Figma/code export; MCP interface noted for agent use.",
+      "expected_benefit": "Faster design exploration while allowing human craft iteration to avoid slop.",
+      "source_urls": [
+        "https://uxpilot.ai/",
+        "https://x.com/UpgradeFeeling/status/2084863696317153406"
+      ],
+      "acceptance_test": "N/A – library reference.",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": "N/A",
+      "risk": "Medium (SaaS dependency, potential generic outputs).",
+      "overlap": "With Figma workflows and component gen."
+    },
+    {
+      "name": "Unvetted MCP server lists / background agent wrappers",
+      "decision": "reject",
+      "why": "High secret exposure, install hooks, phone-home risk; low reproducible security or maintenance signals.",
+      "expected_benefit": "None reliable.",
+      "source_urls": [
+        "https://x.com/get_sigil/status/2084867088674369884"
+      ],
+      "acceptance_test": "N/A",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": "N/A",
+      "risk": "High",
+      "overlap": "Duplicates safer terminal/MCP patterns."
+    },
+    {
+      "name": "Generic shared-memory Agent OS claims",
+      "decision": "reject",
+      "why": "Promotional, low technical evidence, potential privacy/context-cost issues without open implementation.",
+      "expected_benefit": "Unproven.",
+      "source_urls": [
+        "https://x.com/JulianGoldieSEO/status/2084903586597912685"
+      ],
+      "acceptance_test": "N/A",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": "N/A",
+      "risk": "Medium-high (hype, possible data sharing).",
+      "overlap": "With existing memory/context techniques."
+    }
+  ],
+  "collector_metadata": {
+    "provider": "xai",
+    "model": "grok-4.5",
+    "response_id": "c9f9a171-9927-91c0-a334-c67c97b44c0b",
+    "tool_calls": [
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call"
+    ],
+    "tool_call_counts": {
+      "x_search": 11,
+      "web_search": 7
+    },
+    "citation_count": 11,
+    "usage": {
+      "input_tokens": 130409,
+      "input_tokens_details": {
+        "cached_tokens": 91392
+      },
+      "output_tokens": 5341,
+      "output_tokens_details": {
+        "reasoning_tokens": 1611
+      },
+      "total_tokens": 135750,
+      "num_sources_used": 0,
+      "num_server_side_tools_used": 18,
+      "cost_in_usd_ticks": 2274976000,
+      "server_side_tool_usage_details": {
+        "web_search_calls": 7,
+        "x_search_calls": 11,
+        "code_interpreter_calls": 0,
+        "file_search_calls": 0,
+        "mcp_calls": 0,
+        "document_search_calls": 0,
+        "image_generation_calls": 0
+      },
+      "context_details": {
+        "input_tokens": 39992,
+        "output_tokens": 3827
+      }
+    },
+    "cost_usd": 0.2274976
+  }
+}

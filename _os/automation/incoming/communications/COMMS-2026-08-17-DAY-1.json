@@ -1,0 +1,26 @@
+{
+    "run_id":  "COMMS-2026-08-17-DAY-1",
+    "run_at":  "2026-08-17T07:04:11.5021535-04:00",
+    "status":  "degraded",
+    "window":  {
+                   "started_at":  "2026-08-07T19:05:03.4946980-04:00",
+                   "ended_at":  "2026-08-17T07:04:11.5021535-04:00",
+                   "overlap_hours":  36
+               },
+    "connectors":  {
+                       "gmail":  "failed",
+                       "slack":  "failed"
+                   },
+    "items":  [
+
+              ],
+    "excluded_counts":  {
+                            "collector_runtime_unavailable":  1,
+                            "gmail_connector_failed":  1,
+                            "slack_connector_failed":  1
+                        },
+    "checkpoints":  {
+                        "gmail":  "2026-08-09T07:05:03.4946980-04:00",
+                        "slack":  "1786050000.000000"
+                    }
+}

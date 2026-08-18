@@ -2,7 +2,6 @@
 .obsidian/workspace-mobile.json
 .obsidian/plugins/obsidian-local-rest-api/data.json
 08_Assets/
-09_Transcripts/
 
 # Large binaries never belong in git
 *.zip
@@ -21,7 +20,8 @@ _os/test/fixtures/
 # Harvested third-party reference material (screenshots, source imagery)
 _templates/site-factory/harvest/
 
-# 12_Brain private layer — GitHub repo is PUBLIC; keep PII/access/secrets out of Git
+# 12_Brain private layer — credentials, access inventories, and recovery
+# locators stay out of Git even in a private repo.
 12_Brain/private/**
 !12_Brain/private/README.md
 
@@ -42,10 +42,12 @@ _os/radar-engine/.data/
 # Arch factory build output — regenerable from the queue in one command
 _templates/arch-factory/out/
 
-# Public-safety quarantine (2026-08-07): raw comms + media stay local
+# Quarantine lifted 2026-08-18: repo is PRIVATE, so raw comms, transcripts, and
+# client reports now live IN the vault. That is the point — a brain cannot
+# compound on evidence it is forbidden to hold. Secrets are still excluded below
+# and enforced by _os/test/public-safety.test.js.
+#
+# Size-only exclusions. .git is already 3 GB of history; media stays local.
 /videos/
-00_Inbox/slack/
-_os/automation/incoming/
-12_Brain/queue/daily-communications-brain-*.jsonl
-12_Brain/01_Captures/Reports/
-12_Brain/05_Projects/2026-07-30 - Qualified pipeline recovery.md
+*.mp4
+*.mov

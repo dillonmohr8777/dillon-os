@@ -1,0 +1,301 @@
+{
+  "run_id": "COMMS-2026-08-05-DAY-1",
+  "run_at": "2026-08-05T07:06:40.9417990-04:00",
+  "status": "success",
+  "window": {
+    "started_at": "2026-07-31T04:02:55-04:00",
+    "ended_at": "2026-08-05T07:06:40.9417990-04:00",
+    "overlap_hours": 36
+  },
+  "connectors": {
+    "gmail": "ok",
+    "slack": "ok"
+  },
+  "items": [
+    {
+      "dedupe_key": "gmail:message:19fc46e2bd11066d",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/19fc46e2bd11066d",
+      "occurred_at": "2026-08-02T21:43:01-04:00",
+      "participants": ["Momentum 360", "Dillon Mohr"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Revive Systems",
+        "path": "01_Clients/Revive Systems/overview.md"
+      },
+      "summary": "The monthly performance packet for Revive Systems was shared as part of the July Momentum 360 reporting set.",
+      "evidence": "Subject and attachment metadata identify a July 2026 monthly report scoped to Revive Systems.",
+      "uncertainty": "No post-delivery confirmation is included in this source; route is based on subject scope only.",
+      "next_safe_action": "Confirm the recipient acknowledgment and map any open recommendations into the client intake and reporting notes.",
+      "write_targets": ["01_Clients/Revive Systems/overview.md"]
+    },
+    {
+      "dedupe_key": "gmail:message:19fc46e1b8c4874f",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/19fc46e1b8c4874f",
+      "occurred_at": "2026-08-02T21:42:57-04:00",
+      "participants": ["Momentum 360", "Dillon Mohr"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Bar Crawl USA",
+        "path": "01_Clients/Bar Crawl USA/overview.md"
+      },
+      "summary": "The monthly reporting envelope included a Bar Crawl USA July 2026 summary and attachments.",
+      "evidence": "The message subject names Bar Crawl USA and the July 2026 monthly report item in the source thread.",
+      "uncertainty": "The message does not prove client read-through or report sign-off.",
+      "next_safe_action": "Verify any requested actions from the report and log the next review checkpoint if action items are confirmed.",
+      "write_targets": ["01_Clients/Bar Crawl USA/overview.md"]
+    },
+    {
+      "dedupe_key": "gmail:message:19fc4a55fbfc3230",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/19fc4a55fbfc3230",
+      "occurred_at": "2026-08-02T22:43:19-04:00",
+      "participants": ["Momentum 360", "Dillon Mohr"],
+      "kind": "deliverable",
+      "priority": "low",
+      "route": {
+        "type": "unresolved",
+        "name": "Unresolved multi-client report routing",
+        "path": "00_Inbox/Start Here.md"
+      },
+      "summary": "A bundle of eleven detailed monthly client reports was shared with mixed client scope that requires deterministic per-client routing.",
+      "evidence": "The subject and attachment structure show a single packet covering multiple clients.",
+      "uncertainty": "The specific source-to-client mapping is not explicitly separated in one envelope row.",
+      "next_safe_action": "Split and route this report packet into single-client items using the specific attachment or thread references before any client note update.",
+      "write_targets": []
+    },
+    {
+      "dedupe_key": "gmail:message:19fcd013311cc9f3",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/19fcd013311cc9f3",
+      "occurred_at": "2026-08-04T13:40:35-04:00",
+      "participants": ["Ironic Ineptocracy", "Dillon Mohr"],
+      "kind": "metric",
+      "priority": "normal",
+      "route": {
+        "type": "venture",
+        "name": "The Ironic Ineptocracy",
+        "path": "05_Book/overview.md"
+      },
+      "summary": "A weekly analytics report was published with August 03, 2026 metrics and GA4 status.",
+      "evidence": "Message subject and body header identify the GA4/analytics status and reporting date for this venture.",
+      "uncertainty": "Raw metric tables were not ingested, so exact counts and deltas remain to be verified from source reports.",
+      "next_safe_action": "Open the attachment/report artifact and reconcile the exact query mix, date ranges, and trend deltas before making directional claims.",
+      "write_targets": ["05_Book/overview.md"]
+    },
+    {
+      "dedupe_key": "gmail:message:19fcff4dbc17c5cd",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/19fcff4dbc17c5cd",
+      "occurred_at": "2026-08-05T03:25:58-04:00",
+      "participants": ["NYC Entertainment", "Dillon Mohr"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {
+        "type": "unresolved",
+        "name": "NYC Entertainment deliverable capture",
+        "path": "00_Inbox/Start Here.md"
+      },
+      "summary": "A deliverable package for deliverable 34/34 was shared with a signal-board JSON attachment and requires confirmation of canonical client routing.",
+      "evidence": "The subject indicates deliverable sequence, attachment class, and timestamped drop in the bounded window.",
+      "uncertainty": "No verified client registry match named NYC Entertainment exists in this run; routing remains unresolved.",
+      "next_safe_action": "Create or link a canonical client/project route only after one exact identity match is confirmed.",
+      "write_targets": []
+    },
+    {
+      "dedupe_key": "gmail:message:19fcff3fcbf1c1a9",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/19fcff3fcbf1c1a9",
+      "occurred_at": "2026-08-05T03:25:01-04:00",
+      "participants": ["NYC Entertainment", "Dillon Mohr"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {
+        "type": "unresolved",
+        "name": "NYC Entertainment deliverable capture",
+        "path": "00_Inbox/Start Here.md"
+      },
+      "summary": "A dashboard HTML deliverable was shared as NYC Entertainment Deliverable 21/34 and remains uncoupled from an approved client path.",
+      "evidence": "The subject/title sequence plus HTML artifact tag are part of the source metadata.",
+      "uncertainty": "The owning client or venture is not in the canonical registry for direct write routes.",
+      "next_safe_action": "Verify the canonical project identity before promoting this artifact to client truth.",
+      "write_targets": []
+    },
+    {
+      "dedupe_key": "slack:message:1785510956.882059",
+      "source_type": "slack",
+      "source_ref": "https://momentum3d.slack.com/archives/C0B2N20A0SW/p1785510956882059",
+      "occurred_at": "2026-07-31T11:15:56-04:00",
+      "participants": ["Momentum 360"],
+      "kind": "client-change",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "summary": "Follow-up context in the Momentum client lane reinforced HubSpot routing and customer-communication process alignment.",
+      "evidence": "Thread metadata indicates the same source lane and timing cluster as prior Momentum routing work in this window.",
+      "uncertainty": "Exact implementation outcome is not included in this source row; only alignment status is confirmed.",
+      "next_safe_action": "Run read-only queue checks against the mapped HubSpot object states for explicit completion proof.",
+      "write_targets": ["01_Clients/Momentum 360/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785511110.355419",
+      "source_type": "slack",
+      "source_ref": "https://momentum3d.slack.com/archives/C0B2N20A0SW/p1785511110355419",
+      "occurred_at": "2026-07-31T11:18:30-04:00",
+      "participants": ["Momentum 360", "Dillon Mohr"],
+      "kind": "follow-up",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "summary": "A follow-up message requested additional confirmations in the same Momentum communication lane with mixed operational tags.",
+      "evidence": "Timestamped Slack metadata in the same channel cluster confirms a new follow-up action request.",
+      "uncertainty": "The exact checklist item was not fully readable in the envelope metadata.",
+      "next_safe_action": "Re-open the parent thread for full context before any operational task check-in is marked complete.",
+      "write_targets": ["01_Clients/Momentum 360/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785511589.110059",
+      "source_type": "slack",
+      "source_ref": "https://momentum3d.slack.com/archives/C0B2N20A0SW/p1785511589110059",
+      "occurred_at": "2026-07-31T11:26:29-04:00",
+      "participants": ["Momentum 360", "Dillon Mohr"],
+      "kind": "process-knowledge",
+      "priority": "low",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "summary": "The thread captured operational process guidance language for handling customer-intake details in the Momentum lane.",
+      "evidence": "Slack lane and timestamp align with the same follow-up cluster used for HubSpot process alignment.",
+      "uncertainty": "Message granularity is limited to metadata and should be converted to explicit task cards when reloaded.",
+      "next_safe_action": "Open the source thread with context and translate the process note into explicit owner-action items.",
+      "write_targets": ["01_Clients/Momentum 360/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785783269.668879",
+      "source_type": "slack",
+      "source_ref": "slack://message/1785783269.668879",
+      "occurred_at": "2026-08-03T14:54:29-04:00",
+      "participants": ["Fagan Painting", "Dillon Mohr"],
+      "kind": "meeting",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Fagan Painting",
+        "path": "01_Clients/Fagan Painting/overview.md"
+      },
+      "summary": "A follow-up block in the bounded window referenced Fagan AEO/GEO discussion and deliverable status.",
+      "evidence": "Source is in the bounded scan cluster linked to the Fagan lead and proposal lane.",
+      "uncertainty": "Scope and acceptance state were not fully captured without full thread hydration.",
+      "next_safe_action": "Rehydrate the parent thread and update proposal scope plus pricing checkpoints only after a full verified read.",
+      "write_targets": ["01_Clients/Fagan Painting/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785794541.010229",
+      "source_type": "slack",
+      "source_ref": "slack://message/1785794541.010229",
+      "occurred_at": "2026-08-03T18:02:21-04:00",
+      "participants": ["Bridge Software Development", "Dillon Mohr"],
+      "kind": "metric",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Bridge Software Development",
+        "path": "01_Clients/Bridge Software Development/overview.md"
+      },
+      "summary": "A Bridge communication in this window referenced payment and commission context used for active milestone tracking.",
+      "evidence": "Thread cluster metadata maps to the Bridge payment/commission workstream within the same timeframe.",
+      "uncertainty": "Exact amount and ledger state were not retained in this source row and require ledger verification.",
+      "next_safe_action": "Recheck the full message body and finance-reconciled milestone notes before updating client payment status.",
+      "write_targets": ["01_Clients/Bridge Software Development/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785849438.223429",
+      "source_type": "slack",
+      "source_ref": "slack://message/1785849438.223429",
+      "occurred_at": "2026-08-04T09:17:18-04:00",
+      "participants": ["GoHighLevel", "Apollo", "Dillon Mohr"],
+      "kind": "client-change",
+      "priority": "normal",
+      "route": {
+        "type": "operations",
+        "name": "Leads and integration cleanup",
+        "path": "System/operating-status.md"
+      },
+      "summary": "The scan captured an internal note about GHL/Apollo lead intake routing and cleanup work.",
+      "evidence": "Message metadata identifies platform names tied to the lead notification and integration cleanup thread.",
+      "uncertainty": "No definitive client has been confirmed from this metadata alone.",
+      "next_safe_action": "Cross-link this to the exact operational client route after validating who owns the inbound lead stream.",
+      "write_targets": ["System/operating-status.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785855691.891499",
+      "source_type": "slack",
+      "source_ref": "slack://message/1785855691.891499",
+      "occurred_at": "2026-08-04T11:01:31-04:00",
+      "participants": ["Pritzker Law Group", "Dillon Mohr"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Pritzker Law Group",
+        "path": "01_Clients/Pritzker Law Group/overview.md"
+      },
+      "summary": "An internal Slack message referenced Pritzker asset and implementation follow-up during the bounded window.",
+      "evidence": "Source clustering matches the existing Pritzker content and delivery lane used across recent run windows.",
+      "uncertainty": "Specific deliverable completion state is not fully verifiable from metadata alone.",
+      "next_safe_action": "Hydrate the channel thread and promote only confirmed content completions to client notes.",
+      "write_targets": ["01_Clients/Pritzker Law Group/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785869773.642349",
+      "source_type": "slack",
+      "source_ref": "slack://message/1785869773.642349",
+      "occurred_at": "2026-08-04T14:56:13-04:00",
+      "participants": ["Hope Wellness Center", "Dillon Mohr"],
+      "kind": "follow-up",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Hope Wellness Center",
+        "path": "01_Clients/Hope Wellness Center/overview.md"
+      },
+      "summary": "A bounded follow-up in the Hope lane referenced editorial production checkpoints and handoff status.",
+      "evidence": "Participant context and timing match the same project lane as Hope test-shoot updates.",
+      "uncertainty": "The message text summary is not yet validated against parent-thread completion criteria.",
+      "next_safe_action": "Re-open the thread for exact acceptance proof and log any remaining deliverable deltas separately.",
+      "write_targets": ["01_Clients/Hope Wellness Center/overview.md"]
+    }
+  ],
+  "excluded_counts": {
+    "gmail_metadata_rows_reviewed": 165,
+    "slack_message_rows_reviewed": 38,
+    "spam_excluded": 0,
+    "promotions_excluded": 0,
+    "newsletters_excluded": 0,
+    "bot_noise_excluded": 3,
+    "auth_event_excluded": 0,
+    "credential_material_excluded": 0,
+    "invoice_support_excluded": 0,
+    "sensitive_content_excluded": 0
+  },
+  "checkpoints": {
+    "gmail": "2026-08-05T07:06:40.9417990-04:00",
+    "slack": "1785988799.000000"
+  }
+}
+
+
+

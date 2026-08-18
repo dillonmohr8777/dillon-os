@@ -1,0 +1,149 @@
+{
+  "automation": "Daily Marketing and Web-Build Frontier to Dillon OS",
+  "run_title": "Daily marketing, agent workflow, MCP, plugin, and web-build frontier",
+  "run_at": "2026-08-02T16:32:51.071Z",
+  "source_url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+  "coverage": "2026-08-01T10:32:51.071Z through 2026-08-02T16:32:51.071Z; 18 cited sources; 14 X searches; 6 web searches",
+  "verification_status": "partial",
+  "content": "```html\n<!-- Citations will be inline via render -->\n```\n\n# Dillon OS Daily Intelligence Report\n**Period:** 2026-08-01T10:32:51.071Z → 2026-08-02T16:32:51.071Z  \n**Sources:** X (primary pulse), limited web verification. Posts/pages treated as untrusted evidence. Observed evidence separated from inference. Uncertainty noted where engagement low or claims unverified.\n\n## 1. Executive pulse\nMCP protocol advances toward production maturity with a major 2026-07-28 release candidate emphasizing stateless cores, Tasks, Apps, and hardened auth—directly relevant to reliable agent tooling.[1](https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/)[2](https://x.com/020oct/status/2083930823556800573) Codex and Claude Code ecosystems show rapid skill proliferation for cost control (Eclipse orchestrator pattern leveraging Luna price cuts), direct/no-fluff outputs, aesthetic image/poster generation (zine style to escape generic AI look), and release automation.[3](https://x.com/NicolasZu/status/2083936174024847595)[4](https://x.com/0xGGbond66/status/2083949757932917221)[5](https://x.com/mehfuzh/status/2083946577539006609) GEO/AEO discourse stresses original data, consensus positioning, and fragment-optimized content over classic page SEO.[6](https://x.com/dip_ak/status/2083953494722015632) Model efficiency gains (Luna ~80% price cut) lower barriers to multi-agent/supervisory loops. Low direct signal on pure frontend craft, consumer demographics, or 25-site factory ops in-window; Netlify remains ambient for previews. No high-confidence breaking changes to installed stacks observed. Uncertainty: many posts low-engagement; final MCP ship date alignment and skill maintenance unverified beyond announcements.\n\n## 2. High-signal findings\n- **MCP 2026-07-28 RC (largest revision):** Stateless core (no sessions/handshake), Tasks extension, MCP Apps (server-rendered UIs), stronger OAuth/OIDC-aligned auth, formal deprecation policy (12-month windows), Multi Round-Trip Requests. Beta SDKs available; Cloudflare Agents SDK already supporting. Breaking changes expected; existing servers may continue short-term.[1](https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/)[7](https://blog.modelcontextprotocol.io/)[2](https://x.com/020oct/status/2083930823556800573)[8](https://x.com/krabarena/status/2083931655459180963) *Evidence:* Official blog + multiple maintainer/X mentions. *Inference:* Improves scalability/retries for multi-agent fan-out; raises bar for production MCP servers (idempotency, receipts, permissions).\n- **KyttoMCP beta:** Local manager for MCP servers across Claude Desktop/Code, Cursor, VS Code, Codex (macOS/Windows). Free beta.[9](https://x.com/Duncopunc/status/2083939544504697264)[9](https://x.com/Duncopunc/status/2083939544504697264) Low engagement; source quality medium (indie).\n- **Codex skills & patterns:** \n  - `gc-minimal-zine-poster`: Enforces quiet minimal zine/editorial aesthetics (proportion, whitespace, paper texture, type) for posters/images from themes/moods/briefs—explicitly counters generic AI look. GitHub MIT.[4](https://x.com/0xGGbond66/status/2083949757932917221)[10](https://github.com/LiamGvchi/gc-minimal-zine-poster)\n  - “Eclipse” skill prompt: Sol as orchestrator (plan/review/acceptance), Luna Max for implementation threads; minimizes cost/duplication while preserving quality post-price cuts.[3](https://x.com/NicolasZu/status/2083936174024847595)\n  - Proactive subagent/thread delegation common in custom instructions.[11](https://x.com/Alpha10six/status/2083950625067348214)\n- **Claude Code skills:** `post-release-tweet` (draft + post announcements, no secrets in repo).[5](https://x.com/mehfuzh/status/2083946577539006609) “i-have-adhd” / action-first skill (answer first, numbered steps, no fluff/burial).[12](https://x.com/RoundtableSpace/status/2083949696473854230)\n- **GEO/AEO & SEO agents:** Shift from page ranks to model belief/consensus; prioritize primary/original data, consistent positioning, trusted surfaces (docs/forums). MCP + agents (Claude Code/Codex) as primary toolkit replacing UIs/spreadsheets; Contentmaps integration for AI Overview scraping, persona keyword DBs from chatbots/Reddit.[6](https://x.com/dip_ak/status/2083953494722015632)[13](https://x.com/HenedyVP/status/2083949374472695855)[13](https://x.com/HenedyVP/status/2083949374472695855)\n- **Efficiency:** OpenAI GPT-5.6 Luna 80% price cut (Terra 20%); reflected in Codex usage. Enables denser loops.[3](https://x.com/NicolasZu/status/2083936174024847595) Databricks launches Context Engineer Associate cert + agent courses.[14](https://x.com/databricks/status/2083953768400408726)\n- **Other:** Blender-MCP bridge mentions; SEO MCP tools rendering live in Claude; local/privacy desktop agents. Conflicting/low-signal: some users dropping specialized skills/MCPs for base model strength.[15](https://x.com/shantanugoel/status/2083923159141736675)\n\n## 3. Consumer taste and demographic signals\nSparse high-quality in-window signal. \n- Preference for buyer *hypotheses* (role + situation + problem + trigger + outcome + objection) that are falsifiable over static demographic personas. Tools generating testable messages/interview questions.[16](https://x.com/distributionOS/status/2083953734778822924) *Inference for Dillon clients:* Structure site FAQs/onboarding/offers around decision criteria and objections rather than age/gender segments.\n- Value/retention > cheapest product: happier customers stay, spend, review, refer. Relevant to local-service buyers.[17](https://x.com/irentdumpsters/status/2083952624949178625)\n- Aesthetic pushback against generic AI output (zine/minimal/editorial over “ad-like”). Creator/indie taste favors craft, constraint, paper/print metaphors.[4](https://x.com/0xGGbond66/status/2083949757932917221)\n- Ambient: Local compute/Wi-Fi-as-infrastructure experiments (Beijing AGI Bar free tokens); creator outreach economics in games/media. Uncertainty: no strong demographic or local-service-buyer language shifts isolated to this 30h window; broader 2026 efficiency/privacy taste continues.\n\n## 4. Agent, MCP, skill, GitHub, and workflow opportunities\n- **Stateless MCP default + Tasks/Apps:** Align future custom servers; prefer idempotent + receipt-bearing tools. Manager like KyttoMCP for multi-client hygiene.[18](https://x.com/jhahimanshu653/status/2083952267242385682)[8](https://x.com/krabarena/status/2083931655459180963)\n- **Orchestration:** Eclipse-style supervisory loops (strong model plans/reviews, cheap/fast model executes parallel threads with tight context). Subagent fan-out already working in Codex.[11](https://x.com/Alpha10six/status/2083950625067348214)[3](https://x.com/NicolasZu/status/2083936174024847595)\n- **Skills library candidates:** zine-poster (design), action-first/no-fluff, release-tweet automation, teach-me style lesson generators. Microsoft-style skills/agents.md patterns referenced historically.\n- **Coding efficiency (FE/full-stack):** Direct-response skills reduce token waste; parallel threads for nav/refactor/debug/review; browser/Playwright still ambient (no new harnesses). Context engineering formalization (Databricks) useful for eval harnesses.\n- **Compatibility notes:** Skills are mostly prompt/SKILL.md or git-clone into ~/.codex/skills or Claude equivalents—low permission surface if no network secrets. Overlap with existing: orchestration already possible; aesthetics new. Prompt-injection: skills that post or run code need human gates. Context cost: zine and Eclipse claim efficiency gains. Rollback: delete skill dir / revert instructions.\n- Classification preview: sandbox-test Eclipse + zine + action-first; save KyttoMCP/post-release; watch MCP final ship + Contentmaps; reject unmaintained viral lists.\n\n## 5. Website factory, design, AEO, and retention implications\n- **Design/UI craft:** Zine skill offers reproducible non-generic art direction (tokens for whitespace/type/texture) usable in component gen, real-image processing, or Figma-to-code handoff checks. Avoids AI slop for client sites. Storybook/tokens/responsive still baseline; no new libraries.\n- **AEO/GEO for factory:** Bake original data, consistent claims, FAQ schema, and citation-friendly fragments into every vertical template. Source-ready FAQs + trust gates (primary sources) become acceptance criteria. Maps-to-site parity + local SEO still critical for service buyers.\n- **25-site factory ops:** Netlify/preview deploys remain default (ambient mentions). Maker-checker + independent visual critique can incorporate zine aesthetics or action-first review prompts. Deterministic gates: Playwright visual/a11y/perf + AEO fragment checks. Real imagery preferred over gen; skills can post-process. Retention: third-visit via value/offers informed by buyer-hypothesis framing; lifecycle/email not newly signaled.\n- **Coding handoff:** Planning skills + acceptance criteria (Eclipse-style) improve parallel agent loops for component gen/refactor/debug/CI. Browser automation/Playwright for QA gates.\n- Uncertainty: No material new Figma-to-code, Storybook, or a11y harnesses in window.\n\n## 6. Recommended experiments ranked by expected benefit, evidence strength, risk, deterministic acceptance test, independent checker, and rollback\n1. **Sandbox-test Eclipse-style Codex orchestration skill** (highest benefit: cost/quality for multi-file FE work). Evidence: strong (price cut + detailed prompt + user reports). Risk: low-medium (model routing). Acceptance: given a known multi-file refactor task with criteria, produce correct diff at ≤1/5 prior Sol cost, all criteria pass unit/Playwright. Checker: human diff review + separate model critique. Rollback: remove skill/instructions. Human gate: before any write.\n2. **Sandbox-test gc-minimal-zine-poster (or equiv aesthetic skill)** for client imagery/posters/landing hero direction. Evidence: medium-high (repo + examples). Risk: low (prompt-only). Acceptance: 5 themes → outputs score > generic baseline on whitespace/type/restraint rubric (blind human + a11y contrast). Checker: independent designer rubric. Rollback: uninstall skill.\n3. **Sandbox-test action-first / i-have-adhd skill** on Claude Code/Codex for planning/review loops. Evidence: medium (viral post + clear README). Risk: low. Acceptance: 10 queries → answer-first rate 100%, fluff tokens <10%, task completion equal/better. Checker: token/log audit. Rollback: disable.\n4. **Save-to-library KyttoMCP + MCP RC notes** for future multi-client management and server audits. Evidence: medium. (No immediate test.)\n5. **Watch Contentmaps + MCP-SEO patterns** for AEO brief gen; test only if factory keyword research bottleneck confirmed.\n\n(Prefer these 3-4 testable over tool sprawl.)\n\n## 7. Watchlist and rejected hype\n**Watchlist:** Final MCP 2026-07-28 ship + SDK stability; Databricks context cert materials; further Luna/Sol pricing/skill maturation; Contentmaps Claude integration depth; any official Cursor/Copilot MCP/skill surface updates; Blender or domain MCPs if vertical fit.\n**Rejected hype / no-action:** Viral “50 essential MCPs” lists (overlap, maintenance unknown, injection risk); unauthenticated posting skills without gates; generic agent armies/Shipper-style claims lacking reproducible benches; price-cut tourism without orchestration discipline; demographic persona generators that skip falsifiability; any tool requiring secrets/prod deploy/credentials in research window. Duplicated base capabilities (plain subagents already work). Low-signal/low-engagement betas without repos or tests.\n\n## What Dillon OS should change today\n1. Adopt (sandbox) Eclipse-style supervisory prompts for all multi-step Codex work to harvest Luna price cut.  \n2. Add zine-aesthetic skill evaluation to visual critique checklist for client imagery.  \n3. Enforce action-first response norms in agent system prompts/skills to cut fluff tokens.  \n4. Audit any custom MCP servers against emerging stateless + auth + deprecation expectations.  \n5. Update AEO template gates: require original-data fragments + consistent positioning statements.  \n\n**No action:** Install/connect anything; purchase; outreach; prod deploys; hype tools; credentialed experiments.\n\n```json\ncandidates_json\n[\n  {\n    \"name\": \"Eclipse Codex orchestration skill\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Leverages Luna 80% price cut for high-quality multi-thread FE/full-stack work via Sol plan/review + Luna execute\",\n    \"expected_benefit\": \"5x+ credit efficiency at Sol-level quality for parallel refactor/debug/component gen\",\n    \"source_urls\": [\"https://x.com/NicolasZu/status/2083936174024847595\", \"https://x.com/OpenAI/status/2082878156483219672\"],\n    \"acceptance_test\": \"Multi-file task with explicit criteria completes correctly; total cost ≤20% of pure-Sol baseline; all acceptance criteria verified by tests + final diff\",\n    \"independent_checker\": \"Separate model or human reviews final diff and cost logs against criteria\",\n    \"rollback\": \"Delete skill file and custom instructions; revert to default model routing\",\n    \"human_gate\": \"Required before any repository writes or external calls\",\n    \"risk\": \"medium (routing errors, incomplete context handoff)\",\n    \"overlap\": \"partial with existing subagent prompts; adds cost discipline and thread minimization\"\n  },\n  {\n    \"name\": \"gc-minimal-zine-poster Codex skill\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Provides constrained non-generic editorial aesthetics for posters/imagery, countering AI slop in client work\",\n    \"expected_benefit\": \"Higher visual craft scores, reusable prompts, better conversion via distinctive art direction\",\n    \"source_urls\": [\"https://github.com/LiamGvchi/gc-minimal-zine-poster\", \"https://x.com/0xGGbond66/status/2083949757932917221\"],\n    \"acceptance_test\": \"5 diverse inputs produce outputs scoring ≥4/5 on independent rubric (whitespace, type hierarchy, restraint, print texture, non-generic) vs baseline gen\",\n    \"independent_checker\": \"Blind human designer or separate vision model + contrast/a11y check\",\n    \"rollback\": \"rm -rf skill directory; no residual state\",\n    \"human_gate\": \"Review all generated assets before client use\",\n    \"risk\": \"low (prompt/skill isolation)\",\n    \"overlap\": \"low; complements existing image gen but adds hard aesthetic rules\"\n  },\n  {\n    \"name\": \"action-first / i-have-adhd Claude/Codex skill\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Eliminates answer-burying fluff, improving planning/review/debug efficiency\",\n    \"expected_benefit\": \"Lower token use, faster human-agent loops, clearer handoffs\",\n    \"source_urls\": [\"https://x.com/RoundtableSpace/status/2083949696473854230\"],\n    \"acceptance_test\": \"10 representative coding queries: 100% lead with action/answer, numbered steps, fluff <10% tokens, task success ≥ baseline\",\n    \"independent_checker\": \"Log/token audit + second reviewer scores directness\",\n    \"rollback\": \"Disable/uninstall skill; restore default system prompt\",\n    \"human_gate\": \"None for read-only; gate writes\",\n    \"risk\": \"low\",\n    \"overlap\": \"low-medium with existing brevity instructions\"\n  },\n  {\n    \"name\": \"KyttoMCP beta\",\n    \"decision\": \"save-to-library\",\n    \"why\": \"Central local manager for MCP servers across Dillon stack clients\",\n    \"expected_benefit\": \"Reduced config drift, easier scoping/permissions for factory agents\",\n    \"source_urls\": [\"https://kytto.jakubhecht.sk/\", \"https://x.com/Duncopunc/status/2083939544504697264\"],\n    \"acceptance_test\": null,\n    \"independent_checker\": null,\n    \"rollback\": null,\n    \"human_gate\": null,\n    \"risk\": \"medium (beta, indie maintainer)\",\n    \"overlap\": \"low\"\n  },\n  {\n    \"name\": \"MCP 2026-07-28 RC patterns\",\n    \"decision\": \"watch\",\n    \"why\": \"Core protocol shift to stateless + Tasks/Apps/auth; impacts all future servers\",\n    \"expected_benefit\": \"Future-proof custom tools and evaluations\",\n    \"source_urls\": [\"https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/\"],\n    \"acceptance_test\": null,\n    \"independent_checker\": null,\n    \"rollback\": null,\n    \"human_gate\": null,\n    \"risk\": \"low (observation only)\",\n    \"overlap\": \"high with existing MCP usage\"\n  },\n  {\n    \"name\": \"Generic viral MCP lists / unauthenticated auto-post skills\",\n    \"decision\": \"reject\",\n    \"why\": \"High injection/secret/maintenance risk, duplication, no reproducible benefit over curated approach\",\n    \"expected_benefit\": \"none net\",\n    \"source_urls\": [],\n    \"acceptance_test\": null,\n    \"independent_checker\": null,\n    \"rollback\": null,\n    \"human_gate\": null,\n    \"risk\": \"high\",\n    \"overlap\": \"high\"\n  }\n]\n```\n\n## Sources encountered\n\n- https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/\n- https://x.com/020oct/status/2083930823556800573\n- https://x.com/NicolasZu/status/2083936174024847595\n- https://x.com/0xGGbond66/status/2083949757932917221\n- https://x.com/mehfuzh/status/2083946577539006609\n- https://x.com/dip_ak/status/2083953494722015632\n- https://blog.modelcontextprotocol.io/\n- https://x.com/krabarena/status/2083931655459180963\n- https://x.com/Duncopunc/status/2083939544504697264\n- https://github.com/LiamGvchi/gc-minimal-zine-poster\n- https://x.com/Alpha10six/status/2083950625067348214\n- https://x.com/RoundtableSpace/status/2083949696473854230\n- https://x.com/HenedyVP/status/2083949374472695855\n- https://x.com/databricks/status/2083953768400408726\n- https://x.com/shantanugoel/status/2083923159141736675\n- https://x.com/distributionOS/status/2083953734778822924\n- https://x.com/irentdumpsters/status/2083952624949178625\n- https://x.com/jhahimanshu653/status/2083952267242385682",
+  "candidates": [
+    {
+      "name": "Eclipse Codex orchestration skill",
+      "decision": "sandbox-test",
+      "why": "Leverages Luna 80% price cut for high-quality multi-thread FE/full-stack work via Sol plan/review + Luna execute",
+      "expected_benefit": "5x+ credit efficiency at Sol-level quality for parallel refactor/debug/component gen",
+      "source_urls": [
+        "https://x.com/NicolasZu/status/2083936174024847595",
+        "https://x.com/OpenAI/status/2082878156483219672"
+      ],
+      "acceptance_test": "Multi-file task with explicit criteria completes correctly; total cost ≤20% of pure-Sol baseline; all acceptance criteria verified by tests + final diff",
+      "independent_checker": "Separate model or human reviews final diff and cost logs against criteria",
+      "rollback": "Delete skill file and custom instructions; revert to default model routing",
+      "human_gate": "Required before any repository writes or external calls",
+      "risk": "medium (routing errors, incomplete context handoff)",
+      "overlap": "partial with existing subagent prompts; adds cost discipline and thread minimization"
+    },
+    {
+      "name": "gc-minimal-zine-poster Codex skill",
+      "decision": "sandbox-test",
+      "why": "Provides constrained non-generic editorial aesthetics for posters/imagery, countering AI slop in client work",
+      "expected_benefit": "Higher visual craft scores, reusable prompts, better conversion via distinctive art direction",
+      "source_urls": [
+        "https://github.com/LiamGvchi/gc-minimal-zine-poster",
+        "https://x.com/0xGGbond66/status/2083949757932917221"
+      ],
+      "acceptance_test": "5 diverse inputs produce outputs scoring ≥4/5 on independent rubric (whitespace, type hierarchy, restraint, print texture, non-generic) vs baseline gen",
+      "independent_checker": "Blind human designer or separate vision model + contrast/a11y check",
+      "rollback": "rm -rf skill directory; no residual state",
+      "human_gate": "Review all generated assets before client use",
+      "risk": "low (prompt/skill isolation)",
+      "overlap": "low; complements existing image gen but adds hard aesthetic rules"
+    },
+    {
+      "name": "action-first / i-have-adhd Claude/Codex skill",
+      "decision": "sandbox-test",
+      "why": "Eliminates answer-burying fluff, improving planning/review/debug efficiency",
+      "expected_benefit": "Lower token use, faster human-agent loops, clearer handoffs",
+      "source_urls": [
+        "https://x.com/RoundtableSpace/status/2083949696473854230"
+      ],
+      "acceptance_test": "10 representative coding queries: 100% lead with action/answer, numbered steps, fluff <10% tokens, task success ≥ baseline",
+      "independent_checker": "Log/token audit + second reviewer scores directness",
+      "rollback": "Disable/uninstall skill; restore default system prompt",
+      "human_gate": "None for read-only; gate writes",
+      "risk": "low",
+      "overlap": "low-medium with existing brevity instructions"
+    },
+    {
+      "name": "KyttoMCP beta",
+      "decision": "save-to-library",
+      "why": "Central local manager for MCP servers across Dillon stack clients",
+      "expected_benefit": "Reduced config drift, easier scoping/permissions for factory agents",
+      "source_urls": [
+        "https://kytto.jakubhecht.sk/",
+        "https://x.com/Duncopunc/status/2083939544504697264"
+      ],
+      "acceptance_test": null,
+      "independent_checker": null,
+      "rollback": null,
+      "human_gate": null,
+      "risk": "medium (beta, indie maintainer)",
+      "overlap": "low"
+    },
+    {
+      "name": "MCP 2026-07-28 RC patterns",
+      "decision": "watch",
+      "why": "Core protocol shift to stateless + Tasks/Apps/auth; impacts all future servers",
+      "expected_benefit": "Future-proof custom tools and evaluations",
+      "source_urls": [
+        "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/"
+      ],
+      "acceptance_test": null,
+      "independent_checker": null,
+      "rollback": null,
+      "human_gate": null,
+      "risk": "low (observation only)",
+      "overlap": "high with existing MCP usage"
+    },
+    {
+      "name": "Generic viral MCP lists / unauthenticated auto-post skills",
+      "decision": "reject",
+      "why": "High injection/secret/maintenance risk, duplication, no reproducible benefit over curated approach",
+      "expected_benefit": "none net",
+      "source_urls": [],
+      "acceptance_test": null,
+      "independent_checker": null,
+      "rollback": null,
+      "human_gate": null,
+      "risk": "high",
+      "overlap": "high"
+    }
+  ],
+  "collector_metadata": {
+    "provider": "xai",
+    "model": "grok-4.5",
+    "response_id": "8d487ff6-2adf-90b6-8468-ca506b33be22",
+    "tool_calls": [
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call"
+    ],
+    "tool_call_counts": {
+      "x_search": 14,
+      "web_search": 6
+    },
+    "citation_count": 18,
+    "usage": {
+      "input_tokens": 214808,
+      "input_tokens_details": {
+        "cached_tokens": 183168
+      },
+      "output_tokens": 5941,
+      "output_tokens_details": {
+        "reasoning_tokens": 2029
+      },
+      "total_tokens": 220749,
+      "num_sources_used": 0,
+      "num_server_side_tools_used": 21,
+      "cost_in_usd_ticks": 4077528000,
+      "server_side_tool_usage_details": {
+        "web_search_calls": 6,
+        "x_search_calls": 14,
+        "code_interpreter_calls": 0,
+        "file_search_calls": 0,
+        "mcp_calls": 0,
+        "document_search_calls": 0,
+        "image_generation_calls": 0
+      },
+      "context_details": {
+        "input_tokens": 29769,
+        "output_tokens": 4150
+      }
+    },
+    "cost_usd": 0.4077528
+  }
+}

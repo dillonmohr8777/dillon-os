@@ -1,0 +1,167 @@
+{
+  "run_id": "COMMS-2026-08-09-DAY-1",
+  "run_at": "2026-08-09T07:05:03.4946980-04:00",
+  "status": "success",
+  "window": {
+    "started_at": "2026-08-03T19:06:40.9417990-04:00",
+    "ended_at": "2026-08-09T07:05:03.4946980-04:00",
+    "overlap_hours": 36
+  },
+  "connectors": {
+    "gmail": "ok",
+    "slack": "ok"
+  },
+  "items": [
+    {
+      "dedupe_key": "gmail:message:19fe19166060e052",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/19fe19166060e052",
+      "occurred_at": "2026-08-08T13:30:18-04:00",
+      "participants": ["Mike Over", "Momentum 360"],
+      "kind": "metric",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Revive Systems",
+        "path": "01_Clients/Revive Systems/overview.md"
+      },
+      "summary": "July 2026 Google Business Profile performance was shared, with 45 interactions, 0 calls, 21 direction requests, 23 website visits, and 479 profile views.",
+      "evidence": "Forwarded Google Business Profile report body includes metric counts and channel mix for July 2026.",
+      "uncertainty": "No direct confirmation is present that call and direction tracking for the landing path are fully implemented.",
+      "next_safe_action": "Validate these numbers in the client reporting sheet and confirm tracking is active for the approved conversion path.",
+      "write_targets": ["01_Clients/Revive Systems/overview.md"]
+    },
+    {
+      "dedupe_key": "gmail:message:19fcde7a4a000374",
+      "source_type": "gmail",
+      "source_ref": "gmail://message/19fcde7a4a000374",
+      "occurred_at": "2026-08-04T13:52:06-04:00",
+      "participants": ["Mike Over", "Mac Frederick", "Dillon Mohr", "Beth"],
+      "kind": "follow-up",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Revive Systems",
+        "path": "01_Clients/Revive Systems/overview.md"
+      },
+      "summary": "Mike requested status update on site progress and Local Services Ads while clarifying he expects final background-check timing and paid-offer direction to be in place before scaling.",
+      "evidence": "Thread includes explicit questions on site/ad progress and prior chain text confirming background check status and offer path preference.",
+      "uncertainty": "Current Local Services Ads serving status is not confirmed in this message.",
+      "next_safe_action": "Collect explicit approval status for background check, final ads serving status, and offer-path readiness before further launch steps.",
+      "write_targets": ["01_Clients/Revive Systems/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785905321.250469",
+      "source_type": "slack",
+      "source_ref": "https://momentum3d.slack.com/archives/C0BGWRK03B2/p1785905321250469",
+      "occurred_at": "2026-08-05T00:48:41-04:00",
+      "participants": ["Miraj", "Dillon Mohr", "Melissa R"],
+      "kind": "decision",
+      "priority": "high",
+      "route": {
+        "type": "client",
+        "name": "Bridge Software Development",
+        "path": "01_Clients/Bridge Software Development/overview.md"
+      },
+      "summary": "Team re-aligned the build scope to keep phase 2 within the six-milestone contract and defer out-of-scope features such as expanded directory, algorithmic feed ranking, pricing/payments, and in-platform ordering to later phases.",
+      "evidence": "Thread text lists specific items flagged as MVP exclusions and maps phase 2 plan to contract milestones.",
+      "uncertainty": "Written confirmation of the final scope lock is not present in this thread.",
+      "next_safe_action": "Capture a written scope sign-off in the client project notes before any implementation changes beyond current agreement.",
+      "write_targets": ["01_Clients/Bridge Software Development/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785852037.417619",
+      "source_type": "slack",
+      "source_ref": "https://momentum3d.slack.com/archives/C09CU4AM8HJ/p1785852037417619",
+      "occurred_at": "2026-08-04T10:00:37-04:00",
+      "participants": ["Mac Frederick", "Sean Boyle", "Alexandra Rojas", "Melissa Silber"],
+      "kind": "commitment",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "summary": "Local SEO lead campaign was shared for local-seo-lp traffic, and the team flagged the need to set GTM event actions for landing-page CTA clicks.",
+      "evidence": "Slack message links the campaign URL and explicitly requests GTM event setup for CTA tracking.",
+      "uncertainty": "CTA implementation status is not yet confirmed in this thread.",
+      "next_safe_action": "Route this to the implementation queue and confirm event coverage before reporting ad-test results.",
+      "write_targets": ["01_Clients/Momentum 360/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785848532.873429",
+      "source_type": "slack",
+      "source_ref": "https://momentum3d.slack.com/archives/C1CFQBC79/p1785848532873429",
+      "occurred_at": "2026-08-04T09:02:12-04:00",
+      "participants": ["Felix", "Beth Kann", "Mac Frederick"],
+      "kind": "follow-up",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "summary": "SEO/PPC internal linking and page rewrite copy were prepared with explicit pending copy approval for a key page.",
+      "evidence": "Message references shared internal linking sheet, proposed new copy doc, and pending copy approval status.",
+      "uncertainty": "No final approval timestamp or final copy version is included.",
+      "next_safe_action": "Track final copy approval and route the approved version into the content publish workflow.",
+      "write_targets": ["01_Clients/Momentum 360/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1785881019.892729",
+      "source_type": "slack",
+      "source_ref": "https://momentum3d.slack.com/archives/C1CFQBC79/p1785881019892729",
+      "occurred_at": "2026-08-04T18:03:39-04:00",
+      "participants": ["Obaidullah Shaikh", "Mac Frederick", "Dillon Mohr"],
+      "kind": "deliverable",
+      "priority": "normal",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "summary": "New homepage with revamped contact and audit forms was posted with PageSpeed 90 desktop and 87 mobile for review, then review was acknowledged.",
+      "evidence": "Thread text includes the launch-ready message and PageSpeed figures.",
+      "uncertainty": "No final review approval is present beyond the follow-up acknowledgement.",
+      "next_safe_action": "Confirm final homepage review outcome and verify mobile/desktop QA findings before closeout.",
+      "write_targets": ["01_Clients/Momentum 360/overview.md"]
+    },
+    {
+      "dedupe_key": "slack:message:1786022333.005349",
+      "source_type": "slack",
+      "source_ref": "https://momentum3d.slack.com/archives/C1CFQBC79/p1786022333005349",
+      "occurred_at": "2026-08-06T09:18:53-04:00",
+      "participants": ["Mac Frederick", "Anita Taide"],
+      "kind": "follow-up",
+      "priority": "low",
+      "route": {
+        "type": "client",
+        "name": "Momentum 360",
+        "path": "01_Clients/Momentum 360/overview.md"
+      },
+      "summary": "SEO oversight support was added for NeedMomentum, with stated intent to review and provide feedback.",
+      "evidence": "Thread message explicitly adds Anita for SEO overview and records her intent to review posted material.",
+      "uncertainty": "No feedback artifacts are included yet from the added reviewer.",
+      "next_safe_action": "Collect the review notes and close the action item as feedback is received.",
+      "write_targets": ["01_Clients/Momentum 360/overview.md"]
+    }
+  ],
+  "excluded_counts": {
+    "gmail_metadata_rows_reviewed": 84,
+    "slack_message_rows_reviewed": 16,
+    "filtered_spam": 0,
+    "filtered_promotions": 0,
+    "filtered_newsletters": 0,
+    "filtered_bots": 2,
+    "filtered_credentials": 0,
+    "filtered_billing": 0,
+    "filtered_auth_code_like": 0,
+    "filtered_mfa_related": 0,
+    "filtered_recovery_flow": 0,
+    "filtered_secrets": 0
+  },
+  "checkpoints": {
+    "gmail": "2026-08-09T07:05:03.4946980-04:00",
+    "slack": "1786050000.000000"
+  }
+}

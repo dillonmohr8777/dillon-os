@@ -1,8 +1,16 @@
 /**
- * Public-safety scanner for tracked 12_Brain content.
- * This GitHub repository is PUBLIC — fail on credential-shaped values,
- * direct emails, phone numbers, Bitwarden locators, and known private
- * absolute path prefixes unless an explicit safe fixture allowlist applies.
+ * Safety scanner for tracked 12_Brain content.
+ *
+ * The repository went PRIVATE on 2026-08-18, so the rules now split by severity:
+ *
+ *   blocking  — secrets. Unacceptable in any repo, private or not, because a
+ *               clone, a collaborator, or a leaked token is still a breach.
+ *   advisory  — client PII and private absolute paths. These were blocking only
+ *               because the repo was public. They are now reported, not failed:
+ *               keeping client evidence IN the vault is the point of the brain.
+ *
+ * If this repo is ever made public again, flip ADVISORY_RULE_IDS to empty and
+ * every advisory finding becomes blocking again.
  */
 const fs = require('node:fs');
 const path = require('node:path');
@@ -54,6 +62,22 @@ const RULES = [
     re: /\b\d{3}-\d{3}-\d{4}\b/g,
   },
 ];
+
+/**
+ * Advisory while the repo is private. Emptying this set restores the strict
+ * public-repo posture in one edit.
+ */
+const ADVISORY_RULE_IDS = new Set([
+  'email',
+  'phone',
+  'private_abs_win',
+  'private_abs_unix',
+  'google_ads_cid',
+]);
+
+function isBlocking(ruleId) {
+  return !ADVISORY_RULE_IDS.has(ruleId);
+}
 
 function listBrainFiles(vaultRoot) {
   const root = path.join(vaultRoot, BRAIN_DIR);
@@ -122,10 +146,19 @@ function scanVault(vaultRoot) {
 }
 
 function assertPublicSafe(vaultRoot) {
-  const findings = scanVault(vaultRoot);
+  const all = scanVault(vaultRoot);
+  const blocking = [];
+  const advisory = [];
+  for (const f of all) {
+    const bad = f.hits.filter((h) => isBlocking(h.id));
+    const info = f.hits.filter((h) => !isBlocking(h.id));
+    if (bad.length) blocking.push({ file: f.file, hits: bad });
+    if (info.length) advisory.push({ file: f.file, hits: info });
+  }
   return {
-    ok: findings.length === 0,
-    findings,
+    ok: blocking.length === 0,
+    findings: blocking,
+    advisory,
     scannedFiles: listBrainFiles(vaultRoot).length,
   };
 }
@@ -134,6 +167,8 @@ module.exports = {
   BRAIN_DIR,
   SAFE_FIXTURE_ALLOWLIST,
   RULES,
+  ADVISORY_RULE_IDS,
+  isBlocking,
   listBrainFiles,
   scanText,
   redactText,

@@ -1,0 +1,150 @@
+{
+  "automation": "Daily Marketing and Web-Build Frontier to Dillon OS",
+  "run_title": "Daily marketing, agent workflow, MCP, plugin, and web-build frontier",
+  "run_at": "2026-08-04T13:51:46.756Z",
+  "source_url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
+  "coverage": "2026-08-03T07:51:46.756Z through 2026-08-04T13:51:46.756Z; 7 cited sources; 12 X searches; 7 web searches",
+  "verification_status": "partial",
+  "content": "I’ll collect a read-only intelligence brief for that 30-hour window, using X as the primary pulse and a small number of web checks only to verify material claims.\n\nVerifying the highest-signal claims with a few targeted web checks.\n\n# Dillon OS Daily Intelligence Brief  \n**Window:** 2026-08-03T07:51:46.756Z → 2026-08-04T13:51:46.756Z  \n**Method:** X as primary pulse (≤12 searches); web only for material verification (≤4 searches + targeted page opens). Posts/pages treated as untrusted evidence.\n\n## 1. Executive pulse\n- **Security first:** Active npm supply-chain worm (Keyv/cacheable family + descendants, “Mini Shai-Hulud”) published malicious versions on 2026-08-04; credential stealer via install scripts, targets npm/GitHub/cloud/CI secrets, plus Claude Code / VS Code hooks in affected repos. High immediate relevance to any agent that runs `npm`/`npx` or auto-installs.[1](https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack)[2](https://www.wiz.io/blog/keyv-and-cacheable-npm-supply-chain-attack)\n- **MCP maturation signal (not brand-new today, but heavily discussed):** 2026-07-28 spec GA emphasis continues—stateless core, header-based routing (`Mcp-Method`/`Mcp-Name`), MRTR, cacheable lists; **Roots / Sampling / Logging deprecated** with ≥12-month window. Migration chatter active.[3](https://blog.modelcontextprotocol.io/posts/2026-07-28/)\n- **Agent stack chatter:** Claude Opus 5 in Copilot (July changelog still circulating); Cursor Team MCPs claims; Claude Code skills (e.g. explain-diff, ADHD-style simplification); Figma-via-MCP and “design-in-code” preference over classic Figma handoff; mozg.sh “docs→exam-scored MCP brain” promo; Claude→Codex handoff repo.[4](https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/)\n- **Design/UX:** Strong push away from generic AI UI and pure Figma→code toward agent-native design systems, real interactive code as source of truth, and style-guide locked generation.\n- **Marketing/AEO:** Thin high-signal volume in-window; AI Overviews vs Reddit traffic tension restated; personalization + multi-job product expectations in consumer home/retail.\n- **Uncertainty:** Several “Opus 5 default / subagent depth 3 / Cursor 3.10 Team MCPs” claims appear in secondary posts without fresh official changelogs in this exact window—treat as watch/verify. mozg.sh has only promotional X evidence.\n\n## 2. High-signal findings\n| Finding | Evidence type | Freshness / quality | Dillon relevance |\n|--------|---------------|---------------------|------------------|\n| Keyv/cacheable npm worm + IDE hooks | X + Wiz/Aikido | 2026-08-04 active | Critical for factory CI, previews, agent auto-runs |\n| MCP 2026-07-28 deprecations + stateless | Official MCP blog | Spec ~1 week old; migration posts today | Any custom/community MCP in stack |\n| Claude Opus 5 in GitHub Copilot | GitHub changelog | Jul 24; still referenced | Multi-model coding paths |\n| Design-in-code / Figma MCP / cancel-Figma anecdotes | X practitioners | In-window | 25-site factory craft & handoff |\n| Claude Code skills (explain-diff-html, i-have-adhd) | X + gists/GitHub | In-window | Review & planning loops |\n| AI Overviews pressure on referral platforms | X commentary | In-window | AEO/content strategy |\n| Consumer: post-COVID habits fading; multi-function + personalization | X + trade posts | In-window | Local-service positioning |\n\n**Observed vs inference:** Worm and MCP deprecation = observed from primary/secondary security & official sources. “Install mozg.sh tomorrow” or “Opus 5 is default everywhere” = inference from incomplete posts; conflicting pricing/throughput anecdotes exist.\n\n## 3. Consumer taste and demographic signals\n- **Return-to-physical:** Anecdotal signal that COVID-era defaults (online-only shopping, streaming-only, delivery-only) are easing; more in-person again.[5](https://x.com/HarpMuslc/status/2084385857352474836)  \n  *Inference for local-service buyers:* Site + GBP must emphasize easy visit, parking, same-day, “see it / meet us,” not only e-comm UX.\n- **Home/housewares mindset (S/S 2026-27 index chatter):** Products expected to save time, reduce effort, maximize space, *and* signal responsible consumption in one purchase.[6](https://x.com/TIH_Show/status/2084226567845073159)  \n  *Inference:* Service pages should bundle outcomes (“fast + tidy + low-hassle + trustworthy”) rather than feature lists.\n- **Personalization gap:** ~71% expect personalized experiences; high frustration when missed (vendor whitepaper promo).[7](https://x.com/ELEKSSoftware/status/2084248689208402284)  \n  *Inference:* Vertical templates need light personalization hooks (geo, service line, proof) without creepy overclaim.\n- **Buying language / creator:** Limited clean demographic data in-window; strong builder discourse favors “real interactive” over polished mockups—mirrors client distaste for generic AI aesthetics.\n\n**Uncertainty:** Retail/home signals are category-specific; local home-services transfer is plausible but not proven here.\n\n## 4. Agent, MCP, skill, GitHub, and workflow opportunities\n**Classify only (no install/connect):**\n\n| Candidate | Source quality | Decision | Notes |\n|-----------|----------------|----------|-------|\n| **npm allowlist / freeze + Keyv audit gate** | Wiz, Aikido, THN | **sandbox-test** (process) | Highest ROI; worm hits agent-heavy envs |\n| **MCP 2026-07-28 migration checklist** (drop Roots/Sampling/Logging; headers; discover) | Official MCP blog | **save-to-library** | 12-mo window; reduces future breakage |\n| **Claude Code skills:** `explain-diff-html`, `i-have-adhd` | GitHub/gist + X | **sandbox-test** | Review/planning efficiency; low blast radius |\n| **Figma MCP / design-in-code rules** | Practitioner X | **sandbox-test** | Factory visual consistency |\n| **mozg.sh** (docs→scored MCP brain) | X promo only | **watch** | No independent maintainer/benchmark proof in run |\n| **model-complier** (Claude plan → Codex implement) | GitHub link on X | **watch** | Handoff pattern interesting; verify license/sec |\n| **Cursor Team MCPs / Copilot Opus 5 / agent skills+MCP GA** | Mixed changelog + secondary | **watch** | Copilot Opus 5 confirmed earlier; Team MCPs claim weaker |\n| Crypto/phone-call/enterprise MCP promos | Vendor X | **reject** (for core) | Vertical noise, secret/permission risk |\n| Random “1100+ servers” hype lists | Aggregator X | **reject** | Overlap + injection surface |\n\n**Compatibility / risk lens (generic):** Prefer read-only or human-gated tools; no new secret-bearing MCPs; measure context tokens; require deterministic acceptance tests; assume prompt-injection via tool results.\n\n## 5. Website factory, design, AEO, and retention implications\n- **Factory / QA:** Treat every `npm install` in preview/CI as hostile until audited. Maker-checker should include dependency provenance + lockfile diff. Independent visual critique still needed—agents increasingly restricted on unrestricted Playwright crawling (anecdotal).  \n- **Design systems:** Lock tokens + components in code; use agents against that SSOT. Figma becomes optional refinement, not handoff source. Avoid generic AI aesthetics via vertical real-image + constrained component sets.  \n- **AEO/GEO:** Thin new tactics today; reinforce trust gates (source-ready FAQs, Maps-to-site parity, clear entity/NAP, third-visit content depth). AI Overviews continue to mediate discovery—structure for extractable answers + brand proof.  \n- **Retention / third visit:** Personalization + multi-outcome messaging; local proof and easy re-contact paths for service buyers returning after quote shopping.  \n- **Preview/Netlify:** Keep human approval gates; no auto-promote from agent branches while worm active.\n\n## 6. Recommended experiments  \nRanked by expected benefit × evidence × inverse risk. **No production install, outreach, or purchase.**\n\n1. **Dependency freeze & Keyv/Shai-Hulud audit gate (factory CI)**  \n   - Benefit: Prevent credential loss / poisoned previews. Evidence: strong. Risk: low (process).  \n   - **Acceptance test:** Clean lockfile scan finds zero listed malicious versions; install in sandbox with scripts disabled succeeds; with scripts enabled on known-bad version is blocked.  \n   - **Independent checker:** Second agent or human reviews `npm ls` / lockfile against Wiz IOC list.  \n   - **Rollback:** Revert lockfile; rebuild from known-good cache. Human gate: yes.\n\n2. **Claude Code skill pack for review loops** (`explain-diff-html` + simplification skill)  \n   - Benefit: Faster, more accurate code review & handoff notes. Evidence: medium. Risk: low.  \n   - **Acceptance test:** On a fixed PR fixture, skill produces diff summary + quiz/checklist that a second model grades ≥4/5 factual; no secret leakage.  \n   - **Checker:** Separate model without skill. Rollback: disable skill folder.\n\n3. **Design-system-in-code + constrained generation rules (one vertical template)**  \n   - Benefit: Less AI slop, faster consistent pages. Evidence: medium (practitioner). Risk: low-medium.  \n   - **Acceptance test:** Generate 3 page variants; token/component compliance 100% by static check; Lighthouse a11y ≥95; visual diff vs baseline < threshold; human ranks “non-generic” ≥4/5.  \n   - **Checker:** Independent visual critique agent + human. Rollback: template flag off.\n\n4. **MCP deprecation inventory (read-only)**  \n   - Benefit: Avoid dead features; plan stateless/header support. Evidence: high (official). Risk: low.  \n   - **Acceptance test:** Inventory lists every installed MCP’s use of Roots/Sampling/Logging; migration notes attached; no runtime change.  \n   - **Checker:** Second pass on repo. Rollback: N/A (doc only).\n\n5. **AEO trust-gate checklist on one pilot site (FAQ + NAP + FAQ schema + third-visit block)**  \n   - Benefit: Extractability + local trust. Evidence: medium/indirect. Risk: low.  \n   - **Acceptance test:** Rich-result test pass; Maps-to-site field parity 100%; FAQ answers cite observable sources; no new claims.  \n   - **Checker:** Separate SEO/AEO rubric agent. Rollback: revert content PR.\n\n## 7. Watchlist and rejected hype\n**Watchlist**\n- mozg.sh and similar “auto-brain from docs” MCP products (need maintainer, scoring method, isolation model).  \n- Claude↔Codex supervisory handoff patterns (`model-complier` and peers).  \n- Cursor Team MCPs admin config claims; Copilot agent skills + MCP GA adoption metrics.  \n- Figma AI full design-system fidelity improvements.  \n- Further Shai-Hulud variants and IDE-hook payloads.  \n- DeepSeek/other cheap coding model price war impact on factory unit economics (anecdotal).\n\n**Rejected / no action**\n- Viral “ultimate Claude Code resource bible” link dumps (duplicative, unaudited).  \n- Crypto market-data MCPs, phone-dialer agent MCPs, random enterprise platform MCPs for core OS.  \n- Unverified “Opus 5 default everywhere / subagent nesting depth 3” as install triggers without primary notes.  \n- Any tool requiring broad secret access or unrestricted install scripts while worm is active.  \n- Hype that bigger context alone beats stack-specific skills/brains.\n\n---\n\n### What Dillon OS should change today\n(≤5 evidence-backed; process/knowledge only)\n\n1. **Impose human-gated dependency policy:** freeze installs; scan for Keyv/cacheable malicious versions; prefer disabled lifecycle scripts in agent/CI sandboxes until clear.  \n2. **Add MCP 2026-07-28 deprecation + header/stateless notes to internal runbooks** (no forced upgrades today).  \n3. **Sandbox two Claude Code review skills** on non-prod diffs only.  \n4. **Pilot one vertical template with code-owned tokens/components** and an independent visual checker (no Figma-required path).  \n5. **Encode Maps-to-site parity + source-ready FAQ as hard AEO trust gates** on the next factory pilot (content PR only).\n\n### No action\n- Installing new MCP servers, mozg.sh, model-complier, or Team MCP admin features.  \n- Production Copilot/Cursor model flips based on secondary posts.  \n- Purchasing courses, books, or vendor “ecosystem maps.”  \n- Posting, outreach, or client communication from this brief.  \n- Weakening preview approval gates.\n\n```json\ncandidates_json\n[\n  {\n    \"name\": \"Keyv/Shai-Hulud dependency audit and install freeze gate\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Active 2026-08-04 npm worm steals CI/cloud/GitHub/AI secrets and plants Claude/VS Code hooks; factory agents routinely install packages.\",\n    \"expected_benefit\": \"Prevent credential compromise and poisoned previews; protect 25-site pipeline integrity.\",\n    \"source_urls\": [\n      \"https://www.wiz.io/blog/keyv-and-cacheable-npm-supply-chain-attack\",\n      \"https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack\"\n    ],\n    \"acceptance_test\": \"Sandbox CI on fixture repo: lockfile/IOC scan reports zero malicious versions from published list; npm ci with ignore-scripts succeeds; attempt to resolve known-bad keyv@6.0.0 is blocked or fails closed; no network exfil artifacts in dry-run.\",\n    \"independent_checker\": \"Second agent or human compares npm ls/lockfile against Wiz IOC CSV and confirms no lifecycle scripts executed.\",\n    \"rollback\": \"Restore previous lockfile and known-good cache; rebuild containers from clean base.\",\n    \"human_gate\": true,\n    \"risk\": \"low\",\n    \"overlap\": \"Extends existing CI/preview safety; may overlap simple npm audit but adds worm-specific IOCs and script policy.\"\n  },\n  {\n    \"name\": \"Claude Code review skills (explain-diff-html + simplification)\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"In-window practitioner reports skills fix over-verbose Opus output and turn diffs into quizzable explanations for better handoff.\",\n    \"expected_benefit\": \"Faster, higher-signal code review and planner→implementer notes with lower context waste.\",\n    \"source_urls\": [\n      \"https://gist.github.com/geoffreylitt/a29df1b5f9865506e8952488eac3d524\",\n      \"https://github.com/ayghri/i-have-adhd\"\n    ],\n    \"acceptance_test\": \"On fixed PR fixture, skill outputs (1) accurate diff summary, (2) quiz/checklist; second model scores factual accuracy ≥4/5 and no secrets from env/.env examples appear.\",\n    \"independent_checker\": \"Model or human without the skill grades the same fixture outputs blind.\",\n    \"rollback\": \"Remove or disable SKILL.md entries; revert to default review prompt.\",\n    \"human_gate\": true,\n    \"risk\": \"low\",\n    \"overlap\": \"Partial overlap with built-in review; skills are prompt packs not new runtimes.\"\n  },\n  {\n    \"name\": \"Code-owned design tokens + constrained page generation (one vertical)\",\n    \"decision\": \"sandbox-test\",\n    \"why\": \"Practitioners report design-in-code and style-guide-locked generation beat Figma handoff for consistency and anti-slop.\",\n    \"expected_benefit\": \"More distinctive, system-true sites with less manual cleanup in the factory.\",\n    \"source_urls\": [\n      \"https://x.com/konsfyi/status/2084229436824490384\",\n      \"https://x.com/UXMagic_ai/status/2084178123973939695\"\n    ],\n    \"acceptance_test\": \"Generate 3 pages from vertical template: static check 100% token/component compliance; a11y score ≥95; visual regression vs golden < set threshold; blind human 'non-generic AI' rating ≥4/5.\",\n    \"independent_checker\": \"Separate visual-critique agent + human rater not involved in generation.\",\n    \"rollback\": \"Feature-flag off; fall back to prior template.\",\n    \"human_gate\": true,\n    \"risk\": \"medium\",\n    \"overlap\": \"Overlaps existing component libraries; does not require new MCP if rules live in repo.\"\n  },\n  {\n    \"name\": \"MCP 2026-07-28 deprecation and capability inventory\",\n    \"decision\": \"save-to-library\",\n    \"why\": \"Official deprecation of Roots, Sampling, Logging with 12-month window; stateless/header changes affect scalable MCP use.\",\n    \"expected_benefit\": \"Avoid building on dying APIs; prepare load-balanced MCP later without emergency rewrites.\",\n    \"source_urls\": [\n      \"https://blog.modelcontextprotocol.io/posts/2026-07-28/\",\n      \"https://modelcontextprotocol.io/seps/2577-deprecate-roots-sampling-and-logging\"\n    ],\n    \"acceptance_test\": \"N/A for save-to-library — document completeness checklist: inventory template includes feature usage, transport, auth, and migration owner fields.\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": false,\n    \"risk\": \"low\",\n    \"overlap\": \"Documentation only; no runtime overlap until migration experiments.\"\n  },\n  {\n    \"name\": \"mozg.sh docs-to-MCP brain\",\n    \"decision\": \"watch\",\n    \"why\": \"Promising stack-specific agent memory via MCP, but only promotional X evidence; unknown security, scoring validity, cost, and injection surface.\",\n    \"expected_benefit\": \"Potentially better repo/stack grounding than raw context dumps.\",\n    \"source_urls\": [\n      \"https://mozg.sh/\"\n    ],\n    \"acceptance_test\": \"N/A until watch criteria met (open method, isolation model, independent benchmark).\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": true,\n    \"risk\": \"high\",\n    \"overlap\": \"Overlaps existing docs RAG / MCP resource patterns.\"\n  },\n  {\n    \"name\": \"Vendor ecosystem MCP dumps and crypto/phone agent MCPs\",\n    \"decision\": \"reject\",\n    \"why\": \"Low signal, high permission and prompt-injection exposure, duplicated capability, weak relevance to web factory core.\",\n    \"expected_benefit\": \"None material vs risk.\",\n    \"source_urls\": [],\n    \"acceptance_test\": \"N/A\",\n    \"independent_checker\": \"N/A\",\n    \"rollback\": \"N/A\",\n    \"human_gate\": true,\n    \"risk\": \"high\",\n    \"overlap\": \"High overlap with browser/deploy/db MCPs already considered elsewhere.\"\n  }\n]\n```\n\n## Sources encountered\n\n- https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack\n- https://www.wiz.io/blog/keyv-and-cacheable-npm-supply-chain-attack\n- https://blog.modelcontextprotocol.io/posts/2026-07-28/\n- https://github.blog/changelog/2026-07-24-claude-opus-5-is-now-available-in-github-copilot/\n- https://x.com/HarpMuslc/status/2084385857352474836\n- https://x.com/TIH_Show/status/2084226567845073159\n- https://x.com/ELEKSSoftware/status/2084248689208402284",
+  "candidates": [
+    {
+      "name": "Keyv/Shai-Hulud dependency audit and install freeze gate",
+      "decision": "sandbox-test",
+      "why": "Active 2026-08-04 npm worm steals CI/cloud/GitHub/AI secrets and plants Claude/VS Code hooks; factory agents routinely install packages.",
+      "expected_benefit": "Prevent credential compromise and poisoned previews; protect 25-site pipeline integrity.",
+      "source_urls": [
+        "https://www.wiz.io/blog/keyv-and-cacheable-npm-supply-chain-attack",
+        "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack"
+      ],
+      "acceptance_test": "Sandbox CI on fixture repo: lockfile/IOC scan reports zero malicious versions from published list; npm ci with ignore-scripts succeeds; attempt to resolve known-bad keyv@6.0.0 is blocked or fails closed; no network exfil artifacts in dry-run.",
+      "independent_checker": "Second agent or human compares npm ls/lockfile against Wiz IOC CSV and confirms no lifecycle scripts executed.",
+      "rollback": "Restore previous lockfile and known-good cache; rebuild containers from clean base.",
+      "human_gate": true,
+      "risk": "low",
+      "overlap": "Extends existing CI/preview safety; may overlap simple npm audit but adds worm-specific IOCs and script policy."
+    },
+    {
+      "name": "Claude Code review skills (explain-diff-html + simplification)",
+      "decision": "sandbox-test",
+      "why": "In-window practitioner reports skills fix over-verbose Opus output and turn diffs into quizzable explanations for better handoff.",
+      "expected_benefit": "Faster, higher-signal code review and planner→implementer notes with lower context waste.",
+      "source_urls": [
+        "https://gist.github.com/geoffreylitt/a29df1b5f9865506e8952488eac3d524",
+        "https://github.com/ayghri/i-have-adhd"
+      ],
+      "acceptance_test": "On fixed PR fixture, skill outputs (1) accurate diff summary, (2) quiz/checklist; second model scores factual accuracy ≥4/5 and no secrets from env/.env examples appear.",
+      "independent_checker": "Model or human without the skill grades the same fixture outputs blind.",
+      "rollback": "Remove or disable SKILL.md entries; revert to default review prompt.",
+      "human_gate": true,
+      "risk": "low",
+      "overlap": "Partial overlap with built-in review; skills are prompt packs not new runtimes."
+    },
+    {
+      "name": "Code-owned design tokens + constrained page generation (one vertical)",
+      "decision": "sandbox-test",
+      "why": "Practitioners report design-in-code and style-guide-locked generation beat Figma handoff for consistency and anti-slop.",
+      "expected_benefit": "More distinctive, system-true sites with less manual cleanup in the factory.",
+      "source_urls": [
+        "https://x.com/konsfyi/status/2084229436824490384",
+        "https://x.com/UXMagic_ai/status/2084178123973939695"
+      ],
+      "acceptance_test": "Generate 3 pages from vertical template: static check 100% token/component compliance; a11y score ≥95; visual regression vs golden < set threshold; blind human 'non-generic AI' rating ≥4/5.",
+      "independent_checker": "Separate visual-critique agent + human rater not involved in generation.",
+      "rollback": "Feature-flag off; fall back to prior template.",
+      "human_gate": true,
+      "risk": "medium",
+      "overlap": "Overlaps existing component libraries; does not require new MCP if rules live in repo."
+    },
+    {
+      "name": "MCP 2026-07-28 deprecation and capability inventory",
+      "decision": "save-to-library",
+      "why": "Official deprecation of Roots, Sampling, Logging with 12-month window; stateless/header changes affect scalable MCP use.",
+      "expected_benefit": "Avoid building on dying APIs; prepare load-balanced MCP later without emergency rewrites.",
+      "source_urls": [
+        "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+        "https://modelcontextprotocol.io/seps/2577-deprecate-roots-sampling-and-logging"
+      ],
+      "acceptance_test": "N/A for save-to-library — document completeness checklist: inventory template includes feature usage, transport, auth, and migration owner fields.",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": false,
+      "risk": "low",
+      "overlap": "Documentation only; no runtime overlap until migration experiments."
+    },
+    {
+      "name": "mozg.sh docs-to-MCP brain",
+      "decision": "watch",
+      "why": "Promising stack-specific agent memory via MCP, but only promotional X evidence; unknown security, scoring validity, cost, and injection surface.",
+      "expected_benefit": "Potentially better repo/stack grounding than raw context dumps.",
+      "source_urls": [
+        "https://mozg.sh/"
+      ],
+      "acceptance_test": "N/A until watch criteria met (open method, isolation model, independent benchmark).",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": true,
+      "risk": "high",
+      "overlap": "Overlaps existing docs RAG / MCP resource patterns."
+    },
+    {
+      "name": "Vendor ecosystem MCP dumps and crypto/phone agent MCPs",
+      "decision": "reject",
+      "why": "Low signal, high permission and prompt-injection exposure, duplicated capability, weak relevance to web factory core.",
+      "expected_benefit": "None material vs risk.",
+      "source_urls": [],
+      "acceptance_test": "N/A",
+      "independent_checker": "N/A",
+      "rollback": "N/A",
+      "human_gate": true,
+      "risk": "high",
+      "overlap": "High overlap with browser/deploy/db MCPs already considered elsewhere."
+    }
+  ],
+  "collector_metadata": {
+    "provider": "xai",
+    "model": "grok-4.5",
+    "response_id": "504dc625-a1eb-9eae-a93d-1f8ec349e923",
+    "tool_calls": [
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call",
+      "web_search_call"
+    ],
+    "tool_call_counts": {
+      "x_search": 12,
+      "web_search": 7
+    },
+    "citation_count": 7,
+    "usage": {
+      "input_tokens": 116683,
+      "input_tokens_details": {
+        "cached_tokens": 78464
+      },
+      "output_tokens": 6263,
+      "output_tokens_details": {
+        "reasoning_tokens": 1542
+      },
+      "total_tokens": 122946,
+      "num_sources_used": 0,
+      "num_server_side_tools_used": 19,
+      "cost_in_usd_ticks": 2325552000,
+      "server_side_tool_usage_details": {
+        "web_search_calls": 7,
+        "x_search_calls": 12,
+        "code_interpreter_calls": 0,
+        "file_search_calls": 0,
+        "mcp_calls": 0,
+        "document_search_calls": 0,
+        "image_generation_calls": 0
+      },
+      "context_details": {
+        "input_tokens": 36258,
+        "output_tokens": 4411
+      }
+    },
+    "cost_usd": 0.2325552
+  }
+}
