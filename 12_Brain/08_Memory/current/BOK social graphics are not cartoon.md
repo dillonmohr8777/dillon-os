@@ -7,7 +7,7 @@ updated: 2026-08-18
 subject: BOK Law social graphics
 valid_from: 2026-08-18
 valid_to:
-observed_at: 2026-08-18T17:55:00Z
+observed_at: 2026-08-18T18:16:00Z
 confidence: 1
 review_on: 2026-09-18
 verification_status: verified
@@ -23,20 +23,22 @@ tags:
 
 # BOK social graphics are not cartoon
 
-Painterly Pixar-style illustrated characters are rejected for BOK Law & Mediation Services. Use Dorothy's talking-head video plus branded captions.
+Painterly Pixar-style illustrated characters are rejected for BOK Law & Mediation Services. Use the official Donuts and Divorce cover or Dorothy's talking-head, plus the August 5 professional chrome.
 
 ## Memory
 
-BOK weekly social should look like the firm's existing talking-head edits, not animated character posters. Dillon rejected the August 20-22 illustrated packet as too cartoonish.
+BOK weekly social should look like the accepted August 5 posts (logo top left, series pill, cream body, check cards) or a talking-head cut with branded captions. Do not invent illustrated characters. The official podcast cover is allowed because it is show art, not a new cartoon scene.
 
 ## Why it matters
 
-A wrong visual system burns the weekly review cycle. Copy the last accepted video cut, not a new illustration look.
+A wrong visual system burns the weekly review cycle. Copy the last accepted packet chrome, not a new illustration look.
 
 ## Evidence
 
-- Dillon, 2026-08-18: the August 20-22 graphics were too animated and cartoonish.
-- Last accepted video lane: Dorothy talking-head source `copy_199F0DE8-3DEF-448D-933D-E70B701E9C2E.mov` and the June 25 Silent Divorce teaser cut.
+- Dillon, 2026-08-18: the August 20-22 illustrated packet was too cartoonish.
+- Dillon, 2026-08-18: Dorothy's Sunday "New podcast episode" email is the live brief.
+- Last accepted still layout: August 5 Turn the Page Thursday photo-and-card chrome.
+- Last accepted video lane: Dorothy talking-head source and the June 25 Silent Divorce teaser cut. Episode 58 camera file has not arrived.
 
 ## Applicability
 

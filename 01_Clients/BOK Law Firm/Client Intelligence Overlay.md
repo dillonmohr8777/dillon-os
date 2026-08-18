@@ -16,7 +16,7 @@ pipeline_state: developing
 reporting_state: developing
 workflow_state: operational
 priority: medium
-next_action: "Rebuild BOK Thursday video from Dorothy talking-head footage. Illustrated cartoon graphics are rejected."
+next_action: "Hold the rebuilt Ep. 58 packet for Dillon review. Official cover plus Aug 5 chrome replaced the cartoon graphics. Talking-head still missing until Dorothy returns 2026-08-25."
 review_on: 2026-08-25
 source_refs:
   - "[[overview]]"
@@ -43,7 +43,8 @@ consultation path while preserving legal review and embargo rules.
 - A complete August/September social-content package and QA artifacts exist.
 - Dorothy asked on 2026-08-16 for social posts for Donuts and Divorce episode 58
   and offered a talking-head video that was not attached before her August 25
-  out-of-office return. Draft packet: `01_Clients/BOK Law Firm/social-posts/2026-08-20/`.
+  out-of-office return. Rebuilt packet (official cover, no cartoon characters):
+  `01_Clients/BOK Law Firm/social-posts/2026-08-20/`.
 - Western Pennsylvania wording and attorney-specific recognition distinctions
   are known factual guardrails.
 - Current query visibility, AI citations, consultation sources, case outcomes,

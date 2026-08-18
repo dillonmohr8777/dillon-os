@@ -1,8 +1,8 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-18T17:56:00Z
+last_updated: 2026-08-18T18:16:00Z
 status: active
-last_scan: 2026-08-18T17:56:00Z
+last_scan: 2026-08-18T18:16:00Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
 ---
 
@@ -11,6 +11,7 @@ scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "Sy
 Only current client and operating actions belong here. Nothing is sent, published, deployed, purchased, or changed in a client account automatically.
 
 ## Current client actions
+- [ ] 2026-08-18 - BOK Law & Mediation Services - Send the rebuilt Ep. 58 Thu/Fri/Sat packet to Dorothy, Rachael, and Aleksandra after Dillon review. Cartoon graphics removed. Official Donuts and Divorce cover plus August 5 chrome. Talking-head still missing. Dorothy OOO until 2026-08-25. - Source: 01_Clients/BOK Law Firm/social-posts/2026-08-20/README.md - Evidence: Dorothy 2026-08-16 "New podcast episode"; Dillon 2026-08-18 pointed at that Sunday email - Risk: low
 - [x] 2026-08-18 - BOK Law & Mediation Services - Cartoon illustrated packet REJECTED by Dillon. Do not send those graphics. Dorothy talking-head Drive links emailed to Dillon. Next cut uses her camera video plus branded captions. Episode 58 talking-head still not received. Dorothy OOO until 2026-08-25. - Source: 12_Brain/08_Memory/current/BOK social graphics are not cartoon.md - Evidence: Dillon 2026-08-18 "Way too animated and cartoonish" - Risk: low
 - [ ] 2026-07-12 - Kimberly James Bridal - Approve completion update after FAQ desktop image crop and responsive QA; verify appointment-source reconciliation first - Risk: low
 - [ ] 2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality attribution is verified - Risk: high

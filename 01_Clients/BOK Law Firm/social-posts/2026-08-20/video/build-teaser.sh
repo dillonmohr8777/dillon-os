@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Rebuild the Thursday Ep. 58 teaser from local illustration, caption cards,
-# end card, and the 45s published-episode audio clip.
+# Rebuild the Thursday Ep. 58 teaser from the official podcast cover,
+# branded caption cards, end card, and the 45s published-episode audio clip.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-ILLU="$ROOT/illustrations/turn-the-page-thursday-illu.png"
+COVER="$ROOT/assets/donuts-divorce-cover-1200.jpg"
 CAP1="$ROOT/video/caption-1.png"
 CAP2="$ROOT/video/caption-2.png"
 CAP3="$ROOT/video/caption-3.png"
@@ -21,13 +21,12 @@ fi
 
 echo "Encoding 45s motion body..."
 ffmpeg -y -hide_banner -loglevel error \
-  -loop 1 -t 45 -i "$ILLU" \
+  -loop 1 -t 45 -i "$COVER" \
   -i "$CAP1" -i "$CAP2" -i "$CAP3" \
   -i "$AUDIO" \
   -filter_complex "\
-    [0:v]scale=1920:1280:force_original_aspect_ratio=increase,crop=1920:1280,\
-    zoompan=z='min(1.0+0.00045*on,1.08)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1350:s=1080x1080:fps=30,\
-    pad=1080:1920:0:0:color=0xf7f3eb,setsar=1[base];\
+    [0:v]scale=1400:1400,zoompan=z='min(1.0+0.00035*on,1.08)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1350:s=1080x1080:fps=30,\
+    pad=1080:1920:0:0:color=0x0d5558,setsar=1[base];\
     [1:v]format=rgba[c1];[2:v]format=rgba[c2];[3:v]format=rgba[c3];\
     [base][c1]overlay=0:0:format=auto:enable='lt(t,15)'[v1];\
     [v1][c2]overlay=0:0:format=auto:enable='between(t,15,30)'[v2];\
