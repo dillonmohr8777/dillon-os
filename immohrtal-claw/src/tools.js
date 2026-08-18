@@ -11,6 +11,7 @@ const cron = require('./cron');
 const net = require('./net');
 const spawn = require('./spawn');
 const knowledge = require('./knowledge');
+const checker = require('./checker');
 const models = require('./models');
 const { selectModel } = require('./config');
 
@@ -212,10 +213,15 @@ function schemas(config) {
       type: 'function',
       function: {
         name: 'kb_search',
-        description: 'Search the operator vault knowledge base. Start here before guessing Dillon OS facts.',
+        description: 'Search the operator vault (BM25 + title/heading/recency boosts). Start here before guessing Dillon OS facts. Generated maps are excluded unless you ask for them.',
         parameters: {
           type: 'object',
-          properties: { query: { type: 'string' }, limit: { type: 'integer' } },
+          properties: {
+            query: { type: 'string' },
+            limit: { type: 'integer' },
+            include_generated: { type: 'boolean', description: 'Include auto-generated map notes. Default false.' },
+            note_type: { type: 'string', description: 'Filter by frontmatter note_type, e.g. project, decision, capture, client.' },
+          },
           required: ['query'],
         },
       },
@@ -223,8 +229,24 @@ function schemas(config) {
     {
       type: 'function',
       function: {
+        name: 'kb_open',
+        description: 'Open the smallest sourced excerpt of one vault note for a question, with a path:line citation. Prefer this over kb_read.',
+        parameters: {
+          type: 'object',
+          properties: {
+            path: { type: 'string', description: 'Vault-relative path from kb_search.' },
+            query: { type: 'string', description: 'What you are trying to answer. Drives which section is returned.' },
+            max_chars: { type: 'integer', description: 'Excerpt ceiling, 200-8000. Default 1200.' },
+          },
+          required: ['path'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
         name: 'kb_read',
-        description: 'Read one allowlisted vault markdown file. Never private/, .env, or credentials.',
+        description: 'Read a whole allowlisted vault note. Use kb_open first; this one is the big hammer. Never private/, .env, or credentials.',
         parameters: {
           type: 'object',
           properties: { path: { type: 'string', description: 'Vault-relative path such as INDEX.md or 12_Brain/00_Home.md' } },
@@ -249,6 +271,48 @@ function schemas(config) {
           type: 'object',
           properties: { id: { type: 'string' } },
           required: ['id'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'memory_compile',
+        description: 'Compile the day raw memory entries into a deduplicated tape grouped by kind. Run at the end of a working session.',
+        parameters: {
+          type: 'object',
+          properties: { day: { type: 'string', description: 'YYYY-MM-DD. Defaults to today.' } },
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'brief_write',
+        description: 'Write a report into the vault Daily-Briefs/ folder. Local file only: this never sends, publishes, or deploys anything.',
+        parameters: {
+          type: 'object',
+          properties: {
+            name: { type: 'string', description: 'Bare filename such as 2026-08-18 - client pulse.md' },
+            content: { type: 'string', description: 'Full markdown body, frontmatter included.' },
+            overwrite: { type: 'boolean', description: 'Replace an existing brief of the same name. Default false.' },
+          },
+          required: ['name', 'content'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'second_opinion',
+        description: 'Have a different model family check a consequential claim before you commit to it. Returns a verdict and contradictions. Says so honestly when no second family is ready.',
+        parameters: {
+          type: 'object',
+          properties: {
+            claim: { type: 'string', description: 'The exact answer or recommendation to verify.' },
+            sources: { type: 'string', description: 'Paths, excerpts, or URLs the claim rests on. Uncited claims come back unsupported.' },
+          },
+          required: ['claim'],
         },
       },
     },
@@ -385,8 +449,19 @@ async function execute(name, rawArgs, config) {
     case 'kb_search':
       return {
         ok: true,
-        hits: knowledge.searchKnowledge({ query: args.query, limit: args.limit || 8 }),
+        hits: knowledge.searchKnowledge({
+          query: args.query,
+          limit: args.limit || 8,
+          includeGenerated: Boolean(args.include_generated),
+          noteType: args.note_type || '',
+        }),
       };
+    case 'kb_open':
+      return knowledge.openKnowledge({
+        path: args.path,
+        query: args.query || '',
+        maxChars: args.max_chars || 1200,
+      });
     case 'kb_read':
       return knowledge.readKnowledge(args.path);
     case 'model_list':
@@ -401,6 +476,16 @@ async function execute(name, rawArgs, config) {
         model: next.provider.model,
       };
     }
+    case 'memory_compile':
+      return memory.compileDailyTape({ day: args.day || undefined });
+    case 'brief_write':
+      return knowledge.writeBrief({
+        name: args.name,
+        content: args.content,
+        overwrite: Boolean(args.overwrite),
+      });
+    case 'second_opinion':
+      return checker.secondOpinion({ config, claim: args.claim, sources: args.sources || '' });
     case 'spawn':
       return spawn.spawnTask({ config, task: args.task });
     case 'message':

@@ -232,6 +232,17 @@ function resolveEntry(id) {
   return findModel(id);
 }
 
+/**
+ * Ollama tags must match exactly. Prefix matching looks harmless and is not:
+ * a box holding `gemma4:31b-cloud` would report `gemma4:31b` ready, then 404
+ * on the first real call. An untagged catalog entry means the :latest tag.
+ */
+function hasTag(tags, want) {
+  if (!want) return false;
+  const full = want.includes(':') ? want : `${want}:latest`;
+  return tags.includes(full);
+}
+
 function readiness(entry, ollamaTags = []) {
   if (!entry || entry.api === 'rehearsal') {
     return { ready: true, blocker: '' };
@@ -249,7 +260,7 @@ function readiness(entry, ollamaTags = []) {
     if (!apiKey) return { ready: false, blocker: `missing ${entry.keyEnv || 'API key'}` };
     return { ready: true, blocker: '' };
   }
-  if (ollamaTags.length && !ollamaTags.some((t) => t === entry.ollama || t.startsWith(`${entry.ollama}`))) {
+  if (ollamaTags.length && !hasTag(ollamaTags, entry.ollama)) {
     return { ready: false, blocker: `ollama pull ${entry.ollama}` };
   }
   return { ready: true, blocker: ollamaTags.length ? '' : 'Ollama not probed; pull the tag on the box' };
@@ -291,14 +302,70 @@ async function probeOllama() {
   }
 }
 
-async function listStatus() {
+/**
+ * Live reachability, not just "is a key present". Every provider exposes a
+ * cheap model-list endpoint, so a probe costs one GET and no tokens.
+ * Opt-in only: the picker calls this when Dillon presses Probe, never on
+ * every page load.
+ */
+async function probeCloud(entry) {
+  const baseUrl = readBaseUrl(entry);
+  const apiKey = readKey(entry);
+  if (!baseUrl || !apiKey) return null;
+  const base = baseUrl.replace(/\/$/, '');
+  let url = `${base}/models`;
+  const headers = {};
+  if (entry.api === 'anthropic') {
+    url = `${base}/v1/models`;
+    headers['x-api-key'] = apiKey;
+    headers['anthropic-version'] = '2023-06-01';
+  } else if (entry.api === 'google') {
+    url = `${base}/models?key=${encodeURIComponent(apiKey)}`;
+  } else {
+    headers.authorization = `Bearer ${apiKey}`;
+  }
+  try {
+    const res = await fetch(url, { headers, signal: AbortSignal.timeout(6000) });
+    if (res.ok) return { ok: true };
+    const body = await res.text();
+    return { ok: false, reason: `HTTP ${res.status} ${body.slice(0, 120).replace(/\s+/g, ' ')}` };
+  } catch (err) {
+    return { ok: false, reason: err.name === 'TimeoutError' ? 'probe timed out' : err.message };
+  }
+}
+
+async function listStatus({ probe = false } = {}) {
   const tags = await probeOllama();
   const selected = pickDefaultId();
+  const cloudProbes = new Map();
+  if (probe) {
+    const targets = CATALOG.filter((m) => m.group === 'cloud');
+    const results = await Promise.all(targets.map((e) => probeCloud(e)));
+    targets.forEach((e, i) => cloudProbes.set(e.id, results[i]));
+  }
+
   return {
     selected,
-    ollama: { host: OLLAMA_BASE, tags },
+    probed: probe,
+    ollama: { host: OLLAMA_BASE, tags, reachable: tags.length > 0 },
     models: CATALOG.map((entry) => {
       const ready = readiness(entry, tags);
+      const hit = cloudProbes.get(entry.id);
+      // A live 401/404 beats a static "key is present" guess.
+      if (hit && ready.ready && !hit.ok) {
+        return {
+          id: entry.id,
+          slot: entry.slot,
+          group: entry.group,
+          family: entry.family,
+          label: entry.label,
+          model: entry.model,
+          why: entry.why,
+          ready: false,
+          blocker: `probe failed: ${hit.reason}`,
+          probed: true,
+        };
+      }
       return {
         id: entry.id,
         slot: entry.slot,
@@ -309,6 +376,7 @@ async function listStatus() {
         why: entry.why,
         ready: ready.ready,
         blocker: ready.blocker,
+        probed: Boolean(hit),
       };
     }),
   };
@@ -333,5 +401,7 @@ module.exports = {
   listStatus,
   readiness,
   probeOllama,
+  probeCloud,
+  hasTag,
   SELECTED_FILE,
 };

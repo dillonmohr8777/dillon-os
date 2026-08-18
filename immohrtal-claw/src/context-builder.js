@@ -5,10 +5,20 @@ const path = require('node:path');
 const { WORKSPACE } = require('./paths');
 const { loadSkills, summary } = require('./skills-loader');
 const memory = require('./memory-store');
+const { compileBrief } = require('./front-door');
 
 function readWorkspaceFile(name) {
   const file = path.join(WORKSPACE, name);
   return fs.existsSync(file) ? fs.readFileSync(file, 'utf8').trim() : '';
+}
+
+// A missing or unreadable vault must degrade the brief, never kill the turn.
+function safeBrief() {
+  try {
+    return compileBrief();
+  } catch (err) {
+    return `(front door unavailable: ${err.message})`;
+  }
 }
 
 function estimateTokens(text) {
@@ -28,8 +38,10 @@ function buildSystemPrompt(config) {
     config.product.sessionTag,
     config.product.line,
     'You are IMMOHRTAL CLAW, a PicoClaw-class personal agent. Use tools. Persist what matters. You are not a music product.',
-    'Search the vault with kb_search then kb_read before inventing Dillon OS facts. Start at INDEX.md. Never read 12_Brain/private or .env.',
+    'Search the vault with kb_search then kb_open before inventing Dillon OS facts. Cite the path you read. Never read 12_Brain/private or .env.',
     `Live brain: ${config.provider.label || config.provider.model} (${config.provider.api || config.provider.kind}).`,
+    '## Operator front door (compiled fresh, not the whole vault)',
+    safeBrief(),
     '## Soul',
     readWorkspaceFile('SOUL.md'),
     '## Agent',
@@ -51,7 +63,8 @@ function buildSystemPrompt(config) {
     '## Operating rules',
     '- Workspace tools stay inside the CLAW workspace.',
     '- Do not invent credentials, spend, publish, or send.',
-    '- Prefer kb_search / kb_read for vault facts, memory_write for durable personal facts, memory_search before guessing.',
+    '- Prefer kb_search then kb_open for vault facts. Quote the smallest sourced excerpt and cite path:line. kb_read only when you truly need the whole note.',
+    '- memory_write for durable personal facts, memory_search before guessing.',
     '- Name the skill you are using when a SKILL.md applies.',
     '- Do not claim zero latency or zero mistakes. If a source is missing, say so.',
   ].filter(Boolean);

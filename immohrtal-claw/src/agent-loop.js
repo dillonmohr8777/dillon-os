@@ -37,7 +37,16 @@ async function runTurn({ config, sessionId, userText, onEvent }) {
   for (let i = 0; i < config.maxToolIters; i += 1) {
     iterations = i + 1;
     emit('llm.start', { iteration: iterations, provider: config.provider.kind });
-    const assistant = await complete({ config, messages, tools });
+    // Deltas go straight to the caller. They are not written to the trace file:
+    // token-by-token replay would bloat every trace for no diagnostic value.
+    const assistant = await complete({
+      config,
+      messages,
+      tools,
+      onDelta: onEvent
+        ? (text) => onEvent({ type: 'llm.delta', turnId, iteration: iterations, text })
+        : null,
+    });
     messages.push(assistant);
 
     if (assistant.tool_calls && assistant.tool_calls.length) {
@@ -96,6 +105,8 @@ async function runTurn({ config, sessionId, userText, onEvent }) {
     iterations,
     toolKinds,
     provider: config.provider.kind,
+    label: config.provider.label || config.provider.model,
+    modelId: config.modelId,
     memory: memory.stats(),
   };
 }

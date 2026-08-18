@@ -157,7 +157,7 @@ function createServer(config) {
       }
 
       if (req.method === 'GET' && url.pathname === '/api/models') {
-        sendJson(res, 200, await listStatus());
+        sendJson(res, 200, await listStatus({ probe: url.searchParams.get('probe') === '1' }));
         return;
       }
 
@@ -212,6 +212,10 @@ function createServer(config) {
         res.writeHead(200, {
           'content-type': 'text/event-stream; charset=utf-8',
           'cache-control': 'no-store',
+          connection: 'keep-alive',
+          // Cloudflare tunnel and any nginx in front will buffer SSE without
+          // this, which turns streaming back into one late blob on the phone.
+          'x-accel-buffering': 'no',
           'access-control-allow-origin': '*',
         });
         const result = await runTurn({

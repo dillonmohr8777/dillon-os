@@ -15,6 +15,10 @@ const gateErr = document.getElementById('gateErr');
 const rail = document.getElementById('rail');
 const railToggle = document.getElementById('railToggle');
 const modelPick = document.getElementById('modelPick');
+const modelBlocker = document.getElementById('modelBlocker');
+const probeBtn = document.getElementById('probeBtn');
+
+let modelIndex = new Map();
 
 const sessionId = localStorage.getItem('claw-session') || `sess_${Date.now().toString(16)}`;
 localStorage.setItem('claw-session', sessionId);
@@ -31,6 +35,7 @@ function addLine(kind, text, cls) {
   logEl.append(li);
   logEl.scrollTop = logEl.scrollHeight;
   if (logEl.children.length) document.body.classList.add('has-thread');
+  return body;
 }
 
 function addTrace(text) {
@@ -60,16 +65,31 @@ async function loadState() {
   hint.textContent = data.provider.api === 'rehearsal' || data.provider.kind === 'rehearsal'
     ? 'Rehearsal. Pick a live brain when keys or Ollama are on this box.'
     : `Live ${data.provider.label || data.provider.model}`;
-  statusEl.textContent = data.gated ? 'gated · phone ok' : 'local';
+  // The chrome status is the always-visible answer to "which brain is live".
+  const where = data.gated ? 'gated · phone ok' : 'local';
+  const brain = data.provider.label || data.provider.model;
+  statusEl.textContent = `${brain} · ${where}`;
   await loadModels(data.provider.id);
   return true;
 }
 
-async function loadModels(selectedId) {
-  const res = await fetch('/api/models', { credentials: 'same-origin' });
+function showBlocker(id) {
+  const model = modelIndex.get(id);
+  if (!model || model.ready) {
+    modelBlocker.hidden = true;
+    modelBlocker.textContent = '';
+    return;
+  }
+  modelBlocker.hidden = false;
+  modelBlocker.textContent = `not ready — ${model.blocker || 'unknown blocker'}`;
+}
+
+async function loadModels(selectedId, probe) {
+  const res = await fetch(probe ? '/api/models?probe=1' : '/api/models', { credentials: 'same-origin' });
   if (!res.ok) return;
   const data = await res.json();
   const selected = selectedId || data.selected;
+  modelIndex = new Map(data.models.map((m) => [m.id, m]));
   modelPick.innerHTML = '';
   const rehearsal = document.createElement('option');
   rehearsal.value = 'rehearsal';
@@ -83,12 +103,18 @@ async function loadModels(selectedId) {
     for (const model of data.models.filter((m) => m.group === group)) {
       const opt = document.createElement('option');
       opt.value = model.id;
-      opt.textContent = `${model.label}${model.ready ? '' : ' · not ready'}`;
+      // Readiness has to be legible in the closed picker, not just on hover.
+      const mark = model.ready ? '● ready' : '○ not ready';
+      opt.textContent = `${mark} · ${model.label}`;
+      opt.title = model.ready ? model.why || '' : model.blocker || '';
+      opt.dataset.ready = model.ready ? '1' : '0';
       if (model.id === selected) opt.selected = true;
       optgroup.append(opt);
     }
     modelPick.append(optgroup);
   }
+  modelPick.dataset.ready = modelIndex.get(selected)?.ready === false ? '0' : '1';
+  showBlocker(selected);
 }
 
 async function transmit(message) {
@@ -109,6 +135,18 @@ async function transmit(message) {
   const decoder = new TextDecoder();
   let buf = '';
   let final = '';
+  // One bubble per LLM iteration. Tokens land in it as they arrive.
+  let liveEl = null;
+  let liveText = '';
+  let streamedAny = false;
+
+  const closeLive = () => {
+    if (liveEl && !liveText.trim()) liveEl.parentElement.remove();
+    if (liveEl) liveEl.classList.remove('streaming');
+    liveEl = null;
+    liveText = '';
+  };
+
   while (true) {
     const { value, done } = await reader.read();
     if (done) break;
@@ -120,6 +158,17 @@ async function transmit(message) {
       const dataLine = (part.match(/^data: (.+)$/m) || [])[1];
       if (!event || !dataLine) continue;
       const data = JSON.parse(dataLine);
+      if (event === 'llm.start') closeLive();
+      if (event === 'llm.delta') {
+        if (!liveEl) {
+          liveEl = addLine('claw', '');
+          liveEl.classList.add('streaming');
+        }
+        liveText += data.text;
+        streamedAny = true;
+        liveEl.textContent = liveText;
+        logEl.scrollTop = logEl.scrollHeight;
+      }
       if (event === 'tool.start') addTrace(`${data.name} start`);
       if (event === 'tool.end') {
         addTrace(`${data.name} ${data.ok ? 'ok' : 'fail'}`);
@@ -127,11 +176,18 @@ async function transmit(message) {
       }
       if (event === 'done') {
         final = data.content;
-        statusEl.textContent = `${data.provider} · ${data.iterations} iter`;
+        statusEl.textContent = `${data.label || data.provider} · ${data.iterations} iter`;
       }
     }
   }
-  if (final) addLine('claw', final);
+  // The done payload is authoritative; only repaint if streaming fell short.
+  if (final && liveEl && liveText.trim()) {
+    liveEl.textContent = final;
+    liveEl.classList.remove('streaming');
+  } else {
+    closeLive();
+    if (final && !streamedAny) addLine('claw', final);
+  }
   await loadState();
   send.disabled = false;
 }
@@ -177,6 +233,7 @@ railToggle.addEventListener('click', () => {
 
 modelPick.addEventListener('change', async () => {
   const id = modelPick.value;
+  showBlocker(id);
   const res = await fetch('/api/model', {
     method: 'POST',
     credentials: 'same-origin',
@@ -184,10 +241,23 @@ modelPick.addEventListener('change', async () => {
     body: JSON.stringify({ id }),
   });
   if (!res.ok) {
-    addLine('claw', 'Could not switch brains.');
+    const err = await res.json().catch(() => ({}));
+    addLine('claw', `Could not switch brains. ${err.error || ''}`.trim());
     return;
   }
   await loadState();
+});
+
+probeBtn.addEventListener('click', async () => {
+  probeBtn.disabled = true;
+  const was = probeBtn.textContent;
+  probeBtn.textContent = 'Probing…';
+  try {
+    await loadModels(modelPick.value, true);
+  } finally {
+    probeBtn.textContent = was;
+    probeBtn.disabled = false;
+  }
 });
 
 if ('serviceWorker' in navigator) {

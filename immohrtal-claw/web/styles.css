@@ -595,3 +595,55 @@ textarea:focus, input:focus {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* Streaming + brain readiness ------------------------------------------- */
+
+.log .body.streaming::after {
+  content: '';
+  display: inline-block;
+  width: 0.5ch;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.14em;
+  background: var(--signal);
+  animation: claw-caret 1s steps(2, start) infinite;
+}
+
+@keyframes claw-caret {
+  50% { opacity: 0; }
+}
+
+.blocker {
+  margin: 8px 0 0;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(20, 25, 34, 0.16);
+  background: rgba(20, 25, 34, 0.045);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--dim);
+}
+
+.model-pick[data-ready='0'] {
+  border-color: var(--line-strong);
+  background:
+    linear-gradient(rgba(20, 25, 34, 0.05), rgba(20, 25, 34, 0.05)),
+    rgba(255, 255, 255, 0.82);
+}
+
+.model-pick[data-ready='1'] {
+  border-color: rgba(23, 168, 107, 0.5);
+}
+
+.probe-btn {
+  width: 100%;
+  margin-top: 8px;
+  min-height: 38px;
+  font-size: 10.5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .log .body.streaming::after { animation: none; }
+}
