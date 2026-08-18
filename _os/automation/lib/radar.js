@@ -88,6 +88,41 @@ function daysBetween(fromIso, toIso) {
   return Math.round((b - a) / 86400000);
 }
 
+/**
+ * A stable per-domain offset in [0,1). Same domain always returns the same
+ * number, which is what keeps a re-run of a sweep idempotent.
+ */
+function jitterFraction(domain) {
+  const s = String(domain || '');
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i += 1) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return ((h >>> 0) % 10000) / 10000;
+}
+
+/**
+ * How many days until this row is worth auditing again.
+ *
+ * The interval comes from the verdict, but a flat interval is what produced the
+ * cliff this fixes. 700 prospects were seeded on 2026-08-06 and graded the same
+ * morning, so every `polish` row took the same 90 days and landed on the same
+ * date: on 2026-08-18 the registry had 333 rows due on 2026-11-04, 214 on
+ * 11-05, and *nothing at all* due for the next two days. A sweep with nothing
+ * due re-audits nothing, which is why that morning's brief was byte-identical
+ * to the previous one — the sweep ran, correctly, and had no work.
+ *
+ * Spreading each interval by a deterministic +/-20% turns those cliffs into a
+ * flow: the same rows come back, just not all on one morning. Bounded below at
+ * 3 days so a short interval such as `verify` (7) cannot collapse to same-day.
+ */
+function recheckDays(verdict, domain) {
+  const base = RECHECK_DAYS[verdict] ?? 90;
+  const spread = Math.round(base * 0.4 * (jitterFraction(domain) - 0.5));
+  return Math.max(3, base + spread);
+}
+
 function load(file = REGISTRY_PATH) {
   const abs = path.isAbsolute(file) ? file : repoPath(file);
   const doc = readJson(abs, null);
@@ -243,8 +278,7 @@ function recordGrade(registry, domain, result, { today = todayISO() } = {}) {
     .slice(0, 3)
     .map((f) => f.reason);
 
-  const days = RECHECK_DAYS[entry.verdict] ?? 90;
-  p.next_recheck = addDays(today, days);
+  p.next_recheck = addDays(today, recheckDays(entry.verdict, p.domain));
 
   // Trend is the single most useful column on the dashboard: a site that got
   // worse is a warmer call than one that has always been bad, and one that got
@@ -284,11 +318,20 @@ function priorityScore(p) {
  * Prospects due for a re-audit, most overdue first. Never-graded rows come
  * first — an ungraded prospect is a blind spot, not a known quantity.
  */
-function dueForRecheck(registry, { limit = 200, today = todayISO(), verdicts = null, force = false } = {}) {
+function dueForRecheck(registry, { limit = 200, today = todayISO(), verdicts = null, force = false, includeProvisional = false } = {}) {
   const rows = Object.values(registry.prospects).filter((p) => {
     if (p.lifecycle === 'client' || p.lifecycle === 'excluded') return false;
+    // A built row is not a rebuild target any more. Re-auditing their old site
+    // costs a render and changes no decision we are going to make.
+    if (p.lifecycle === 'built' || p.lifecycle === 'mailed') return false;
     if (verdicts && p.current && !verdicts.includes(p.current.verdict)) return false;
     if (!p.last_graded) return true;
+    // A provisional row is a Tier 0 guess: markup only, nobody has rendered the
+    // page. 568 of them carry a verdict, and 144 of those say "rebuild" — a
+    // pitch resting on a guess. When the schedule leaves the sweep idle, these
+    // are the rows worth spending the render budget on, so they are eligible
+    // ahead of their next_recheck date rather than after it.
+    if (includeProvisional && p.current && p.current.provisional === true) return true;
     // `force` re-audits regardless of the schedule. The schedule assumes the
     // grade it produced is still worth trusting, which stops being true when the
     // audit itself changes — a new tier becoming available, or a client bug that
@@ -301,6 +344,15 @@ function dueForRecheck(registry, { limit = 200, today = todayISO(), verdicts = n
   rows.sort((a, b) => {
     if (!a.last_graded && b.last_graded) return -1;
     if (a.last_graded && !b.last_graded) return 1;
+    // Among rows that are not yet due, a provisional rebuild target is the one
+    // worth a render: it is the only class where the audit could overturn a
+    // pitch we are about to make.
+    const provA = a.current?.provisional === true && a.current?.verdict === 'rebuild' ? 1 : 0;
+    const provB = b.current?.provisional === true && b.current?.verdict === 'rebuild' ? 1 : 0;
+    const dueA = !a.next_recheck || a.next_recheck <= today ? 1 : 0;
+    const dueB = !b.next_recheck || b.next_recheck <= today ? 1 : 0;
+    if (dueA !== dueB) return dueB - dueA;
+    if (!dueA && provA !== provB) return provB - provA;
     // Most overdue first, then highest priority.
     const overdueA = a.next_recheck ? daysBetween(a.next_recheck, today) : 9999;
     const overdueB = b.next_recheck ? daysBetween(b.next_recheck, today) : 9999;
@@ -470,6 +522,7 @@ module.exports = {
   addDays,
   daysBetween,
   RECHECK_DAYS,
+  recheckDays,
   GEO_WEIGHT,
   REGISTRY_PATH,
 };

@@ -148,12 +148,60 @@ test('each verdict earns its own recheck cadence', () => {
   radar.recordGrade(reg, 'acme.example', gradeResult({ verdict: 'rebuild' }), { today: TODAY });
   radar.recordGrade(reg, 'v.example', gradeResult({ verdict: 'verify' }), { today: TODAY });
 
-  assert.equal(reg.prospects['acme.example'].next_recheck, radar.addDays(TODAY, radar.RECHECK_DAYS.rebuild));
-  assert.equal(reg.prospects['v.example'].next_recheck, radar.addDays(TODAY, radar.RECHECK_DAYS.verify));
+  // The interval is the verdict's cadence spread by a deterministic per-domain
+  // offset. The spread is the point: a flat interval put 333 rows on a single
+  // date, and a sweep with 333 due one morning and none the next is not a
+  // schedule. So this asserts the band rather than an exact day.
+  const within = (domain, verdict) => {
+    const base = radar.RECHECK_DAYS[verdict];
+    const actual = radar.daysBetween(TODAY, reg.prospects[domain].next_recheck);
+    assert.ok(
+      Math.abs(actual - base) <= Math.ceil(base * 0.2),
+      `${domain}: ${actual}d should be within 20% of the ${verdict} cadence (${base}d)`
+    );
+  };
+  within('acme.example', 'rebuild');
+  within('v.example', 'verify');
+
   assert.ok(
     radar.RECHECK_DAYS.verify < radar.RECHECK_DAYS.ads_seo,
     'rows blocked on a render should come back sooner than ones we decided to leave alone'
   );
+});
+
+test('the recheck spread is deterministic and never collapses to same-day', () => {
+  // Re-running a sweep for the same date must produce the same schedule, or the
+  // registry churns every morning and the diff stops meaning anything.
+  assert.equal(radar.recheckDays('polish', 'acme.example'), radar.recheckDays('polish', 'acme.example'));
+
+  // Two domains may legitimately round to the same day — the point is that a
+  // cohort spreads across many, not that any given pair differs. 200 domains on
+  // a 90-day cadence should land on a good fraction of the ~37 reachable days.
+  const spread = new Set();
+  for (let i = 0; i < 200; i += 1) spread.add(radar.recheckDays('polish', `d${i}.example`));
+  assert.ok(spread.size > 20, `expected a wide spread, got ${spread.size} distinct intervals`);
+
+  for (const verdict of Object.keys(radar.RECHECK_DAYS)) {
+    for (const d of ['a.example', 'b.example', 'zzz.example', '']) {
+      assert.ok(radar.recheckDays(verdict, d) >= 3, `${verdict}/${d} must not collapse to same-day`);
+    }
+  }
+});
+
+test('a built prospect stops coming up as a rebuild target', () => {
+  // priorityScore has always docked 40 for `built`, but nothing set the
+  // lifecycle, so the de-rank was unreachable. Both halves are asserted here.
+  const reg = emptyRegistry();
+  radar.upsertDiscovered(reg, [candidate({ domain: 'built.example' })], { today: TODAY });
+  radar.recordGrade(reg, 'built.example', gradeResult({ verdict: 'rebuild' }), { today: TODAY });
+
+  const before = radar.priorityScore(reg.prospects['built.example']);
+  radar.setLifecycle(reg, 'built.example', 'built');
+  const after = radar.priorityScore(reg.prospects['built.example']);
+
+  assert.ok(after < before, 'a built row must rank below one we have not built for');
+  assert.equal(radar.dueForRecheck(reg, { today: LATER, limit: 10 }).length, 0,
+    're-auditing the old site of a business we already rebuilt changes no decision');
 });
 
 test('never-graded prospects are audited before merely-stale ones', () => {

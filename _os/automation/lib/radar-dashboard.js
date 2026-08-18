@@ -51,12 +51,22 @@ const VERDICT_LABEL = {
 
 /** Queues, in the order they appear in the switcher. */
 const QUEUES = [
-  { key: 'rebuild', label: 'Rebuild', verdicts: ['rebuild'], sort: 'p', desc: 'Ranked by opportunity, weighted for Philadelphia. Each one earns a homepage concept — one page from their own copy and imagery, pitched as the first step of a rebuild.' },
-  { key: 'buildable', label: 'Buildable now', verdicts: ['rebuild'], buildableOnly: true, sort: 'p', desc: `Rebuild targets that already own enough imagery for a ${HOMEPAGE_IMAGE_SLOTS}-photo homepage concept. This is this week's batch — no asset chasing required.` },
-  { key: 'verify', label: 'Needs render', verdicts: ['verify'], sort: 'lg', desc: 'Markup found no disqualifying fault, but nobody has seen the design. Not decisions yet.' },
-  { key: 'polish', label: 'Polish', verdicts: ['polish'], sort: 'p', desc: 'Working sites with fixable gaps. A retainer or a paid tune-up, not a rebuild pitch.' },
-  { key: 'traffic', label: 'Traffic', verdicts: ['ads_seo', 'nurture'], sort: 'q', desc: 'Sorted by site quality, best first. A genuinely good site means sell traffic, not a redesign.' },
-  { key: 'enrich', label: 'Re-audit', verdicts: ['enrich'], sort: 'p', desc: 'Not enough signal to route. These need another pass before they mean anything.' },
+  { key: 'rebuild', label: 'Rebuild', verdicts: ['rebuild'], hideBuilt: true, sort: 'p', desc: 'Ranked by opportunity, weighted for Philadelphia. Each one earns a homepage concept — one page from their own copy and imagery, pitched as the first step of a rebuild.' },
+  { key: 'buildable', label: 'Buildable now', verdicts: ['rebuild'], buildableOnly: true, hideBuilt: true, sort: 'p', desc: `Rebuild targets that already own enough imagery for a ${HOMEPAGE_IMAGE_SLOTS}-photo homepage concept. This is this week's batch — no asset chasing required.` },
+  { key: 'verify', label: 'Needs render', verdicts: ['verify'], hideBuilt: true, sort: 'lg', desc: 'Markup found no disqualifying fault, but nobody has seen the design. Not decisions yet.' },
+  { key: 'polish', label: 'Polish', verdicts: ['polish'], hideBuilt: true, sort: 'p', desc: 'Working sites with fixable gaps. A retainer or a paid tune-up, not a rebuild pitch.' },
+  { key: 'traffic', label: 'Traffic', verdicts: ['ads_seo', 'nurture'], hideBuilt: true, sort: 'q', desc: 'Sorted by site quality, best first. A genuinely good site means sell traffic, not a redesign.' },
+  { key: 'enrich', label: 'Re-audit', verdicts: ['enrich'], hideBuilt: true, sort: 'p', desc: 'Not enough signal to route. These need another pass before they mean anything.' },
+  // Lifecycle-filtered, not verdict-filtered: a rebuilt business keeps whatever
+  // verdict its OLD site earned, because that history is still true. What
+  // changed is that we already answered it. Without this tab the 238 sites the
+  // factory has shipped are invisible on the one page that is supposed to show
+  // the state of the pipeline.
+  { key: 'built', label: 'Rebuilt by us', lifecycles: ['built', 'mailed'], sort: 'p', desc: 'Businesses we have already built a homepage concept for. These are outreach targets, not build targets — the work is done and the page is live. Check the QA column before screensharing one.' },
+  // Every provisional row is a Tier 0 markup-only guess. The "needs render"
+  // queue only catches verdict=verify, which is why the dashboard could report
+  // "0 blocked on a render pass" while 568 rows had never been rendered.
+  { key: 'provisional', label: 'Unrendered', verdicts: null, provisionalOnly: true, hideBuilt: true, sort: 'p', desc: 'Graded from markup alone — nobody has rendered the page. A rebuild verdict here rests on a guess, so these are what an otherwise idle sweep should spend its render budget on.' },
   { key: 'all', label: 'Everything', verdicts: null, sort: 'p', desc: 'The whole registry. Search and filter to find anything the queues do not surface.' },
 ];
 
@@ -221,6 +231,12 @@ function projectRows(prospects) {
       cn: p.contact?.named_contacts || 0,
       cg: p.contact?.has_agency ? 1 : 0,
       f: (p.top_faults || []).filter(Boolean),
+      // What we built for them, when the row is one of ours. bu is the live
+      // concept, bq its QA state, bx the reason it is not showable yet.
+      bu: p.built_url || '',
+      bq: p.built_qa || '',
+      bb: p.built_batch || '',
+      bx: p.built_fix_reason || '',
       hl: p.headline || '',
       of: p.offer || '',
       na: p.next_action || '',
@@ -400,7 +416,12 @@ function clientScript() {
   function matches(r) {
     var qd = queueDef(state.queue);
     if (qd.verdicts && qd.verdicts.indexOf(r.r) < 0) return false;
+    if (qd.lifecycles && qd.lifecycles.indexOf(r.l) < 0) return false;
+    // A built row keeps its old verdict, so without this every working queue
+    // still lists the businesses we have already answered.
+    if (qd.hideBuilt && (r.l === 'built' || r.l === 'mailed')) return false;
     if (qd.buildableOnly && r.bd !== 1) return false;
+    if (qd.provisionalOnly && r.pv !== 1) return false;
     var f = state.filters;
     if (f.a.length && f.a.indexOf(r.a) < 0) return false;
     if (f.g.length && f.g.indexOf(r.g) < 0) return false;
@@ -541,8 +562,33 @@ function clientScript() {
         }).join('') + '</ul>'
       : '<p class="det__none">Graded once. A trend needs two.</p>';
 
+    // What we built for them, if anything. Shown first because it changes what
+    // the rest of the panel means: a rebuild verdict on a business whose new
+    // homepage is already live is a call to make, not a build to schedule.
+    var FIX_TEXT = {
+      'design-review-pending': 'Built and looks finished, but never went through a design-QA pass.',
+      'webgl-fallback': 'Renders black without ?forcegl. Open it with the parameter, and treat the bare URL as broken.',
+      'placeholder-concept': 'Placeholder concept — shares one unfinished hero with 46 others. Do not screenshare.',
+      'missing-images': 'Remount carries no photography.',
+      'hero-not-authentic': 'Hero art is generated, not a real photograph of the business.'
+    };
+    var builtBlock = '';
+    if (r.bu) {
+      var ok = r.bq === 'passed';
+      builtBlock = '<div class="det__built' + (ok ? '' : ' det__built--hold') + '">' +
+        '<h3>We already built this</h3>' +
+        '<p class="det__k">' + esc(r.bb || 'batch unknown') + '</p>' +
+        '<p><a href="' + esc(r.bu) + '" target="_blank" rel="noopener noreferrer">open the concept \u2197</a></p>' +
+        '<p class="det__' + (ok ? 'ok' : 'warn') + '">' +
+          (ok ? 'Design-verified \u2014 cleared to show on a call.'
+              : esc(FIX_TEXT[r.bx] || 'Not cleared for a screenshare yet.')) +
+        '</p>' +
+      '</div>';
+    }
+
     return '<tr class="det" data-det="' + esc(r.d) + '"><td colspan="7"><div class="det__in">' +
       '<div class="det__col">' +
+        builtBlock +
         '<h3>Why this score</h3>' +
         (r.pv ? '<p class="det__warn">Provisional — this grade rests on markup alone and is capped. It is not a decision.</p>' : '') +
         dimsHtml(r) +
@@ -767,12 +813,18 @@ function renderDashboard(summary, opts = {}) {
   const buildableNow = rows.filter((r) => r.r === 'rebuild' && r.bd === 1).length;
   const imageryChecked = rows.filter((r) => r.bd !== null).length;
 
+  // Mirrors matches() in the client script exactly. These two drifting apart is
+  // what once let a tab advertise a count it did not show.
+  const inQueue = (q, r) => {
+    if (q.verdicts && !q.verdicts.includes(r.r)) return false;
+    if (q.lifecycles && !q.lifecycles.includes(r.l)) return false;
+    if (q.hideBuilt && (r.l === 'built' || r.l === 'mailed')) return false;
+    if (q.buildableOnly && r.bd !== 1) return false;
+    if (q.provisionalOnly && r.pv !== 1) return false;
+    return true;
+  };
   const queueCounts = {};
-  for (const q of QUEUES) {
-    queueCounts[q.key] = q.verdicts
-      ? rows.filter((r) => q.verdicts.includes(r.r) && (!q.buildableOnly || r.bd === 1)).length
-      : rows.length;
-  }
+  for (const q of QUEUES) queueCounts[q.key] = rows.filter((r) => inQueue(q, r)).length;
 
   const lifecycleOrder = ['new', 'graded', 'queued_build', 'built', 'mailed', 'client', 'excluded'];
   const lifecycle = s.lifecycle || {};
@@ -1083,6 +1135,14 @@ function renderDashboard(summary, opts = {}) {
   .det__k { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--fg-faint); margin-right: 5px; }
   .det__warn { color: var(--s-dated) !important; font-size: 12.5px !important; }
   .det__none { color: var(--fg-faint) !important; font-size: 12.5px !important; font-style: italic; }
+  .det__ok { color: var(--s-strong) !important; font-size: 12.5px !important; }
+  /* The already-built panel. Bordered rather than tinted so it reads as a fact
+     about the row, not another severity signal competing with the band colours.
+     The hold variant is the one that stops a screenshare. */
+  .det__built { border: 1px solid var(--s-strong); border-radius: 6px; padding: 9px 11px; margin: 0 0 13px; }
+  .det__built--hold { border-color: var(--s-dated); }
+  .det__built h3 { margin: 0 0 4px; }
+  .det__built p { margin: 2px 0; font-size: 12.5px; }
   .det__faults { margin: 0 0 4px; padding-left: 17px; font-size: 12.5px; color: var(--fg-mid); }
   .det__faults li { margin-bottom: 3px; }
   .det__hist { list-style: none; margin: 0; padding: 0; font-family: var(--mono); font-size: 12px; }
