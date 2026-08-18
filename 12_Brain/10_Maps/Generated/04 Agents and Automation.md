@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-17
+updated: 2026-08-18
 tags:
   - brain
   - map
@@ -21,7 +21,9 @@ Agent roles, system state, tooling, automation, and operating infrastructure.
 
 ## _os
 
+- [[_os/automation/docs/CURSOR-HANDOFF|CURSOR-HANDOFF]]
 - [[_os/automation/docs/OPERATOR|OPERATOR]]
+- [[_os/automation/docs/RADAR-SETUP|RADAR-SETUP]]
 - [[_os/automation/evidence/VERIFICATION|VERIFICATION]]
 - [[_os/automation/fixtures/clients/Fixture Client One|Fixture Client One]]
 - [[_os/automation/fixtures/clients/Fixture Client Two|Fixture Client Two]]
@@ -29,8 +31,10 @@ Agent roles, system state, tooling, automation, and operating infrastructure.
 - [[_os/automation/incoming/grok/README|README]]
 - [[_os/automation/incoming/reports/README|README]]
 - [[_os/creative-factory/README|README]]
+- [[_os/radar-engine/README|README]]
 - [[_os/README|README]]
 - [[_os/reporting/am-dashboard-build-prompt|am-dashboard-build-prompt]]
+- [[_os/test/fixtures/public-safety-allowlisted|public-safety-allowlisted]]
 
 ## 11_Agents
 

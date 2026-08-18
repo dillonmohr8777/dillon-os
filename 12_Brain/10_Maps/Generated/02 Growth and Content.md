@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-17
+updated: 2026-08-18
 tags:
   - brain
   - map
@@ -27,6 +27,7 @@ Campaigns, content, SEO, offers, and the assets that turn strategy into demand.
 - [[02_Campaigns/AI Site Builder Outreach Engine/Direct Mail Activation Runbook|Direct Mail Activation Runbook]]
 - [[02_Campaigns/AI Site Builder Outreach Engine/Market Roster|Market Roster]]
 - [[02_Campaigns/AI Site Builder Outreach Engine/Pipeline Spec|Pipeline Spec]]
+- [[02_Campaigns/AI Site Builder Outreach Engine/Site Grader|Site Grader]]
 - [[02_Campaigns/AI Site Builder Outreach Engine/Slack Evidence Log|Slack Evidence Log]]
 - [[02_Campaigns/Campaign Index|Campaign Index]]
 - [[02_Campaigns/Facebook Ads Budget Shift Log|Facebook Ads Budget Shift Log]]
@@ -36,15 +37,32 @@ Campaigns, content, SEO, offers, and the assets that turn strategy into demand.
 - [[02_Campaigns/Facebook Ads Testing Queue|Facebook Ads Testing Queue]]
 - [[02_Campaigns/Facebook Ads Weekly Review|Facebook Ads Weekly Review]]
 - [[02_Campaigns/Google Ads Optimization Queue|Google Ads Optimization Queue]]
+- [[02_Campaigns/Growth Workshop/200-List Clean Report|200-List Clean Report]]
+- [[02_Campaigns/Growth Workshop/Calendar Auto-Add|Calendar Auto-Add]]
+- [[02_Campaigns/Growth Workshop/Drip Copy|Drip Copy]]
+- [[02_Campaigns/Growth Workshop/Franchise Email Sourcing Playbook|Franchise Email Sourcing Playbook]]
+- [[02_Campaigns/Growth Workshop/Google RSVP Rail|Google RSVP Rail]]
+- [[02_Campaigns/Growth Workshop/Growth Workshop|Growth Workshop]]
+- [[02_Campaigns/Growth Workshop/lp-date-push/DEPLOY-CHECKLIST|DEPLOY-CHECKLIST]]
+- [[02_Campaigns/Growth Workshop/Outreach Plan|Outreach Plan]]
+- [[02_Campaigns/Growth Workshop/Scale Harvest Report|Scale Harvest Report]]
+- [[02_Campaigns/Growth Workshop/Slack Draft — Sean|Slack Draft — Sean]]
+- [[02_Campaigns/Growth Workshop/Tracker Spec|Tracker Spec]]
 - [[02_Campaigns/IMMOHRTAL/AEO-SEO-Strategy|AEO-SEO-Strategy]]
 - [[02_Campaigns/IMMOHRTAL/asset-studio/README|README]]
+- [[02_Campaigns/IMMOHRTAL/Codex Implementation Status|Codex Implementation Status]]
+- [[02_Campaigns/IMMOHRTAL/Codex Source Manifest|Codex Source Manifest]]
 - [[02_Campaigns/IMMOHRTAL/CODEX-HANDOFF|CODEX-HANDOFF]]
 - [[02_Campaigns/IMMOHRTAL/Email/Welcome Sequence|Welcome Sequence]]
 - [[02_Campaigns/IMMOHRTAL/Entity Pack|Entity Pack]]
 - [[02_Campaigns/IMMOHRTAL/IMMOHRTAL Brand Direction|IMMOHRTAL Brand Direction]]
 - [[02_Campaigns/IMMOHRTAL/reference/photos/README|README]]
+- [[02_Campaigns/IMMOHRTAL/Social/Claude Production Briefs|Claude Production Briefs]]
 - [[02_Campaigns/IMMOHRTAL/Social/Content Playbook|Content Playbook]]
+- [[02_Campaigns/IMMOHRTAL/Social/Content Upgrade Plan|Content Upgrade Plan]]
 - [[02_Campaigns/IMMOHRTAL/Social/Posting Schedule|Posting Schedule]]
+- [[02_Campaigns/IMMOHRTAL/Social/Social Scale Plan|Social Scale Plan]]
+- [[02_Campaigns/IMMOHRTAL/Social/Weekly Capture Handoff|Weekly Capture Handoff]]
 - [[02_Campaigns/IMMOHRTAL/Tracks/814 Blood (ft. King Keev)|814 Blood (ft. King Keev)]]
 - [[02_Campaigns/IMMOHRTAL/Tracks/On My Way (ft. King Keev)|On My Way (ft. King Keev)]]
 - [[02_Campaigns/IMMOHRTAL/Tracks/Raw Transcripts (to correct)|Raw Transcripts (to correct)]]

@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: client
-updated: 2026-08-17
+updated: 2026-08-18
 tags:
   - brain
   - map

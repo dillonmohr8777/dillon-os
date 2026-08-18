@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
     [string]$VaultRoot = (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent),
     [switch]$Json
@@ -169,7 +169,12 @@ foreach ($record in $noteRecords) {
         continue
     }
 
-    $linkMatches = [regex]::Matches($record.text, '\[\[(?<target>[^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]')
+    # Strip fenced blocks and inline code before extracting links: a doc that
+    # shows `[[wikilinks]]` as an example is not making a broken reference.
+    $linkScanText = [regex]::Replace($record.text, '(?ms)^```.*?^```', '')
+    $linkScanText = [regex]::Replace($linkScanText, '`[^`
+]*`', '')
+    $linkMatches = [regex]::Matches($linkScanText, '\[\[(?<target>[^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]')
     foreach ($linkMatch in $linkMatches) {
         $target = $linkMatch.Groups['target'].Value.Trim().Replace('\', '/')
         if ([string]::IsNullOrWhiteSpace($target) -or $target -match '^[a-z]+://') {

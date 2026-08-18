@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-17
+updated: 2026-08-18
 tags:
   - brain
   - map
@@ -18,10 +18,6 @@ tags:
 > renaming notes. Edit source notes, not this generated file.
 
 Book, personal, DBA, music, and owned web-property work.
-
-## Vault front doors
-
-- [[Dryer Vent John|Dryer Vent John]]
 
 ## 05_Book
 

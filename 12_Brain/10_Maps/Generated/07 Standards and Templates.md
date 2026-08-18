@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-17
+updated: 2026-08-18
 tags:
   - brain
   - map
@@ -27,6 +27,7 @@ SOPs, reusable templates, and the rules that keep agent work consistent.
 ## _templates
 
 - [[_templates/AEO GEO Strategy|AEO GEO Strategy]]
+- [[_templates/arch-factory/ARCH-GENERATION|ARCH-GENERATION]]
 - [[_templates/Automation Workflow Spec|Automation Workflow Spec]]
 - [[_templates/Brain Capture|Brain Capture]]
 - [[_templates/Brain Decision|Brain Decision]]

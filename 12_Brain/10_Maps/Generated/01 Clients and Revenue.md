@@ -4,7 +4,7 @@ status: active
 generated: true
 generated_by: Update-SecondBrainMaps
 map_type: domain
-updated: 2026-08-17
+updated: 2026-08-18
 tags:
   - brain
   - map
@@ -22,7 +22,22 @@ Canonical client context, delivery records, active work, and revenue truth.
 ## Client index and root records
 
 - [[01_Clients/Align HCM|Align HCM]]
+- [[01_Clients/AWCI|AWCI]]
+- [[01_Clients/Bend Plastic Surgery|Bend Plastic Surgery]]
+- [[01_Clients/Blissful Events|Blissful Events]]
+- [[01_Clients/Bluegrass Janitorial|Bluegrass Janitorial]]
+- [[01_Clients/Bridge of Hope OTC|Bridge of Hope OTC]]
+- [[01_Clients/Buzz Bull|Buzz Bull]]
 - [[01_Clients/Client Index|Client Index]]
+- [[01_Clients/Coach B|Coach B]]
+- [[01_Clients/Commercial Cleaners Alliance|Commercial Cleaners Alliance]]
+- [[01_Clients/Florecita|Florecita]]
+- [[01_Clients/Hardwood Artisan|Hardwood Artisan]]
+- [[01_Clients/Jeff Hozias|Jeff Hozias]]
+- [[01_Clients/Link Eze|Link Eze]]
+- [[01_Clients/Next Gen Solutions|Next Gen Solutions]]
+- [[01_Clients/PNW Pro Clean|PNW Pro Clean]]
+- [[01_Clients/Vanessa|Vanessa]]
 
 ## Client clusters
 
