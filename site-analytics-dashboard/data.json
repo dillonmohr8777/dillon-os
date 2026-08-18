@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-09T09:00:00-04:00",
+  "generated": "2026-08-10T09:00:00-04:00",
   "window": {
     "start": "2026-01-01",
-    "end": "2026-08-09"
+    "end": "2026-08-10"
   },
   "source": "HubSpot content analytics, CRM, and revenue attribution (first-party, no Google). Refreshed by the site watchdog on each trigger run.",
   "directives": [
@@ -109,7 +109,7 @@
     },
     {
       "month": "2026-08",
-      "views": 486,
+      "views": 554,
       "submissions": 8,
       "note": "month in progress"
     }
@@ -1319,7 +1319,7 @@
     "privacy": "Company-level business context only. Personal names, emails, phone numbers, messages, and contact IDs are excluded from the public dashboard."
   },
   "leadingIndicators": {
-    "asOf": "2026-08-09",
+    "asOf": "2026-08-10",
     "note": "First-party leading indicators computed each watchdog run. See 02_FullTimeJob/AlignHCM/Watchdog/leading-indicators.md.",
     "conversionRate": {
       "ytd": 0.0197,
@@ -1354,16 +1354,16 @@
         },
         {
           "month": "2026-08",
-          "rate": 0.0165,
+          "rate": 0.0144,
           "partial": true
         }
       ]
     },
     "influencedOpenPipeline": {
-      "total": 542556,
-      "deals": 5,
-      "prior": 416056,
-      "alert": "Up to ~$542K: Diversified Energy grew to $493.5K and a new organic deal (Royal Credit Union $48K) opened; RPM ($15K Organic) went closed-lost. Kaiser Permanente ($125K Organic) still closed-lost and needs a manual reopen.",
+      "total": 563674,
+      "deals": 6,
+      "prior": 542556,
+      "alert": "Up to ~$564K on a new Direct deal (Dick's Lumber $21K); Diversified $493.5K and Royal Credit Union $48K organic still open. Kaiser Permanente ($125K Organic) still closed-lost and needs a manual reopen.",
       "detail": [
         {
           "company": "Diversified Energy - Paycor to Dayforce Migration",
@@ -1378,15 +1378,15 @@
           "source": "Organic Search"
         },
         {
-          "company": "goway - Banking change request",
-          "amount": 1056,
-          "stage": "Appointment Scheduled",
+          "company": "Dick's Lumber & Building Supplies - SmartCare Optimization",
+          "amount": 21118,
+          "stage": "Presentation Scheduled",
           "source": "Direct Traffic"
         }
       ]
     },
     "followUpGap": {
-      "convertedContacts": 204,
+      "convertedContacts": 202,
       "noOutreach": 83,
       "noOutreachPct": 0.41,
       "qualifiedTotal": 22,
