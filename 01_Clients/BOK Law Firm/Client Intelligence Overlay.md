@@ -16,11 +16,12 @@ pipeline_state: developing
 reporting_state: developing
 workflow_state: operational
 priority: medium
-next_action: "Hold the rebuilt Ep. 58 packet for Dillon review. Official cover plus Aug 5 chrome replaced the cartoon graphics. Talking-head still missing until Dorothy returns 2026-08-25."
+next_action: "Hold the August 19-22 Wed/Fri/Sat packet for Dillon review. Last-weeks wave chrome plus July portrait PDF. Exact extracted seal. Do not send to BOK until approved."
 review_on: 2026-08-25
 source_refs:
   - "[[overview]]"
   - "[[12_Brain/01_Captures/2026-08-16 - BOK Dorothy Donuts and Divorce episode 58]]"
+  - "[[12_Brain/01_Captures/2026-08-18 - BOK weekly chrome last-weeks plus July packet]]"
   - "[[12_Brain/08_Memory/current/BOK social graphics are not cartoon]]"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bok-law-firm/context/operating-context.md"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bok-law-firm/deliverables/2026-07-28-august-september-social-content/copy/content-calendar.md"
@@ -44,7 +45,9 @@ consultation path while preserving legal review and embargo rules.
 - Dorothy asked on 2026-08-16 for social posts for Donuts and Divorce episode 58
   and offered a talking-head video that was not attached before her August 25
   out-of-office return. Rebuilt packet (official cover, no cartoon characters):
-  `01_Clients/BOK Law Firm/social-posts/2026-08-20/`.
+  `01_Clients/BOK Law Firm/social-posts/2026-08-20/`. Wednesday Wisdom,
+  Family Friday, and Saturday Solutions rebuilt to last-weeks Instagram chrome
+  with the exact July-packet seal: `01_Clients/BOK Law Firm/social-posts/2026-08-19/`.
 - Western Pennsylvania wording and attorney-specific recognition distinctions
   are known factual guardrails.
 - Current query visibility, AI citations, consultation sources, case outcomes,

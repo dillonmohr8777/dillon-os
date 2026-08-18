@@ -5,7 +5,7 @@ role: Content and digital marketing
 division: Direct
 status: active
 last_touched: 2026-08-18
-next_action: Hold the Ep. 58 packet for Dillon review. Do not send to BOK until approved. Swap in Dorothy's talking-head if it arrives after 2026-08-25.
+next_action: Hold the August 19-22 Wed/Fri/Sat packet for Dillon review. Do not send to BOK until approved.
 due: none
 tags: [client, legal, content, social, seo]
 ---

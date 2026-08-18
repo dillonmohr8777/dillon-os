@@ -59,6 +59,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
 - [[12_Brain/01_Captures/2026-08-16 - BOK Dorothy Donuts and Divorce episode 58|2026-08-16 BOK Dorothy Donuts and Divorce episode 58]] — Sunday request for Ep. 58 social posts.
+- [[12_Brain/01_Captures/2026-08-18 - BOK weekly chrome last-weeks plus July packet|2026-08-18 BOK weekly chrome last-weeks plus July packet]] — Dillon named the live-feed chrome plus July packet as the replacement look.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
