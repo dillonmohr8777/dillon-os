@@ -2,15 +2,17 @@
 'use strict';
 
 /**
- * Pick the best live browser engine for a job.
+ * Pick the best live browser engine for the job.
  *
  *   node _os/automation/bin/browser-access.js probe
+ *   node _os/automation/bin/browser-access.js start-playwright
  *   node _os/automation/bin/browser-access.js fetch https://example.com
  *   node _os/automation/bin/browser-access.js screenshot https://example.com --out /tmp/page.png
- *   node _os/automation/bin/browser-access.js recommend cloudflare
+ *   node _os/automation/bin/browser-access.js recommend js_interact
  *
- * Never attaches to port 9222 or a default Chrome profile. Isolated Chrome
- * uses evidence port 9223. Camofox is preferred for stealth when :9377 is up.
+ * Playwright MCP here is the isolated sidecar (@playwright/mcp, no --extension).
+ * Cursor's cloud Playwright server with --extension is a different process and
+ * is not this engine. Never attaches to port 9222 or a default Chrome profile.
  */
 
 const fs = require('fs');
@@ -25,6 +27,8 @@ const STATE = repoPath('12_Brain/state/browser-access.json');
 const NEVER_PORTS = new Set((POLICY.never && POLICY.never.ports) || [9222]);
 const EVIDENCE_PORT = (POLICY.chrome && POLICY.chrome.evidence_port) || 9223;
 
+let mcpSessionId = null;
+
 function die(msg, code = 2) {
   process.stderr.write(`${msg}\n`);
   process.exit(code);
@@ -38,6 +42,7 @@ function which(bin) {
   for (const dir of pathEnv.split(path.delimiter)) {
     const candidate = path.join(dir, bin);
     if (fs.existsSync(candidate)) return candidate;
+    if (process.platform === 'win32' && fs.existsSync(`${candidate}.cmd`)) return `${candidate}.cmd`;
   }
   return null;
 }
@@ -55,6 +60,34 @@ function evidenceProfile() {
   const envName = (POLICY.chrome && POLICY.chrome.profile_env) || 'BROWSER_EVIDENCE_PROFILE';
   if (process.env[envName]) return process.env[envName];
   return path.join(os.tmpdir(), 'dillon-chrome-evidence');
+}
+
+function playwrightCfg() {
+  return POLICY.playwright_mcp || {};
+}
+
+function playwrightMcpUrl() {
+  return playwrightCfg().base_url || 'http://localhost:8931/mcp';
+}
+
+function playwrightArgs() {
+  const cfg = playwrightCfg();
+  const args = Array.isArray(cfg.args) && cfg.args.length
+    ? [...cfg.args]
+    : [
+      '--headless', '--isolated', '--no-sandbox',
+      '--host', '127.0.0.1', '--port', String(cfg.port || 8931),
+      '--allowed-hosts', 'localhost,127.0.0.1',
+      '--viewport-size', '1280x720',
+    ];
+  if (args.includes('--extension')) {
+    throw new Error('playwright mcp sidecar must not use --extension');
+  }
+  const bin = chromeBinary();
+  if (bin && /\/opt\/google\/chrome\/chrome$/.test(bin.replace(/\\/g, '/')) && !args.includes('--executable-path')) {
+    args.push('--executable-path', bin);
+  }
+  return args;
 }
 
 function httpGet(url, timeoutMs = 2000) {
@@ -125,6 +158,78 @@ function parseTitle(html) {
   return m ? m[1].trim() : '';
 }
 
+function parseMcpMessage(text) {
+  const lines = String(text || '').split('\n').filter((l) => l.startsWith('data: ')).map((l) => l.slice(6));
+  const raw = lines.length ? lines[lines.length - 1] : text;
+  try { return JSON.parse(raw); } catch { return { raw: text }; }
+}
+
+async function mcpRequest(body, sessionId) {
+  const headers = {
+    'Content-Type': 'application/json',
+    Accept: 'application/json, text/event-stream',
+  };
+  if (sessionId) headers['mcp-session-id'] = sessionId;
+  const res = await fetch(playwrightMcpUrl(), {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(25000),
+  });
+  return {
+    ok: res.ok,
+    status: res.status,
+    sessionId: res.headers.get('mcp-session-id') || sessionId,
+    text: await res.text(),
+  };
+}
+
+async function mcpEnsureSession() {
+  if (mcpSessionId) return mcpSessionId;
+  const init = await mcpRequest({
+    jsonrpc: '2.0',
+    id: 1,
+    method: 'initialize',
+    params: {
+      protocolVersion: '2025-06-18',
+      capabilities: {},
+      clientInfo: { name: 'dillon-os-browser-access', version: '1.0' },
+    },
+  });
+  if (!init.ok) {
+    throw new Error(`playwright mcp initialize HTTP ${init.status}: ${String(init.text).slice(0, 200)}`);
+  }
+  mcpSessionId = init.sessionId;
+  await mcpRequest({ jsonrpc: '2.0', method: 'notifications/initialized' }, mcpSessionId);
+  return mcpSessionId;
+}
+
+async function mcpCall(name, args) {
+  const sid = await mcpEnsureSession();
+  const res = await mcpRequest({
+    jsonrpc: '2.0',
+    id: Date.now() % 1e9,
+    method: 'tools/call',
+    params: { name, arguments: args || {} },
+  }, sid);
+  const parsed = parseMcpMessage(res.text);
+  if (!res.ok) throw new Error(`playwright mcp ${name} HTTP ${res.status}`);
+  if (parsed.error) throw new Error(parsed.error.message || JSON.stringify(parsed.error));
+  return parsed.result || {};
+}
+
+function mcpText(result) {
+  return ((result && result.content) || [])
+    .filter((c) => c && c.type === 'text')
+    .map((c) => c.text)
+    .join('\n');
+}
+
+function mcpImage(result) {
+  const img = ((result && result.content) || []).find((c) => c && c.type === 'image' && c.data);
+  return img ? Buffer.from(img.data, 'base64') : null;
+}
+
 async function probeCamofox() {
   const base = (POLICY.camofox && POLICY.camofox.base_url) || 'http://127.0.0.1:9377';
   const health = await httpGet(`${base}${(POLICY.camofox && POLICY.camofox.health_path) || '/health'}`);
@@ -154,11 +259,29 @@ async function probeChrome() {
   };
 }
 
-function probePlaywrightMcp() {
+async function probePlaywrightMcp() {
+  try {
+    mcpSessionId = null;
+    await mcpEnsureSession();
+    return {
+      id: 'playwright_mcp',
+      live: true,
+      detail: `isolated sidecar ${playwrightMcpUrl()} (no --extension; never port 9222)`,
+    };
+  } catch (err) {
+    return {
+      id: 'playwright_mcp',
+      live: false,
+      detail: `not listening at ${playwrightMcpUrl()} (${String(err.message || err).slice(0, 160)}). start: node _os/automation/bin/browser-access.js start-playwright`,
+    };
+  }
+}
+
+function probeCursorExtensionPlaywright() {
   return {
-    id: 'playwright_mcp',
+    id: 'playwright_mcp_extension',
     live: false,
-    detail: 'Cursor Playwright MCP needs the desktop extension bridge; 2026-08-18 probe timed out',
+    detail: 'Cursor cloud Playwright with --extension needs the MCP Bridge; 2026-08-18 timed out. Not this engine.',
   };
 }
 
@@ -168,6 +291,43 @@ function probeClaudeInChrome() {
     live: false,
     detail: 'desktop-only; requires Dillon logged-in Chrome, not this cloud VM',
   };
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function startPlaywrightMcp() {
+  const already = await probePlaywrightMcp();
+  if (already.live) return { ...already, started: false };
+  const pkg = playwrightCfg().package || '@playwright/mcp@0.0.69';
+  const npx = which('npx') || (process.platform === 'win32' ? 'npx.cmd' : 'npx');
+  const child = spawn(npx, ['-y', pkg, ...playwrightArgs()], {
+    detached: true,
+    stdio: 'ignore',
+    cwd: repoPath(),
+    windowsHide: true,
+  });
+  child.unref();
+  const deadline = Date.now() + 20000;
+  while (Date.now() < deadline) {
+    await sleep(400);
+    const again = await probePlaywrightMcp();
+    if (again.live) return { ...again, started: true, pid: child.pid };
+  }
+  return {
+    id: 'playwright_mcp',
+    live: false,
+    started: true,
+    detail: `spawned ${pkg} pid ${child.pid} but ${playwrightMcpUrl()} did not accept initialize`,
+  };
+}
+
+async function ensurePlaywrightMcp() {
+  const probed = await probePlaywrightMcp();
+  if (probed.live) return probed;
+  if (playwrightCfg().auto_start === false) return probed;
+  return startPlaywrightMcp();
 }
 
 async function probe() {
@@ -182,9 +342,10 @@ async function probe() {
       live: true,
       detail: 'Cursor native WebFetch / WebSearch',
     },
+    await probePlaywrightMcp(),
     await probeChrome(),
     await probeCamofox(),
-    probePlaywrightMcp(),
+    probeCursorExtensionPlaywright(),
     probeClaudeInChrome(),
     {
       id: 'owned_history',
@@ -216,8 +377,30 @@ function recommend(job) {
   return { job, order, note: 'first live engine in this list wins; probe to see live flags' };
 }
 
+async function fetchViaPlaywright(url) {
+  const pw = await ensurePlaywrightMcp();
+  if (!pw.live) return null;
+  const nav = await mcpCall('browser_navigate', { url });
+  const text = mcpText(nav);
+  const titleMatch = text.match(/Page Title:\s*(.*)/);
+  return {
+    engine: 'playwright_mcp',
+    title: titleMatch ? titleMatch[1].trim() : '',
+    snapshot: text.slice(0, 4000),
+    endpoint: playwrightMcpUrl(),
+  };
+}
+
 async function fetchUrl(url) {
   if (!/^https?:\/\//i.test(url) && !/^file:\/\//i.test(url)) die('url must be http(s) or file');
+  if (/^https?:/i.test(url)) {
+    try {
+      const viaPw = await fetchViaPlaywright(url);
+      if (viaPw && (viaPw.title || viaPw.snapshot)) return viaPw;
+    } catch (err) {
+      process.stderr.write(`playwright mcp fetch failed, falling back: ${err.message}\n`);
+    }
+  }
   const camo = await probeCamofox();
   if (camo.live && /^https?:/i.test(url)) {
     const base = POLICY.camofox.base_url;
@@ -256,6 +439,23 @@ async function fetchUrl(url) {
 
 async function screenshot(url, outPath) {
   if (!/^https?:\/\//i.test(url) && !/^file:\/\//i.test(url)) die('url must be http(s) or file');
+  if (/^https?:/i.test(url)) {
+    try {
+      const pw = await ensurePlaywrightMcp();
+      if (pw.live) {
+        await mcpCall('browser_navigate', { url });
+        const shot = await mcpCall('browser_take_screenshot', { type: 'png', filename: path.basename(outPath) });
+        const buf = mcpImage(shot);
+        if (buf && buf.length > 100) {
+          fs.mkdirSync(path.dirname(outPath), { recursive: true });
+          fs.writeFileSync(outPath, buf);
+          return { engine: 'playwright_mcp', path: outPath, bytes: buf.length, endpoint: playwrightMcpUrl() };
+        }
+      }
+    } catch (err) {
+      process.stderr.write(`playwright mcp screenshot failed, falling back: ${err.message}\n`);
+    }
+  }
   const chrome = await probeChrome();
   if (!chrome.live) die(chrome.detail);
   const profile = evidenceProfile();
@@ -283,6 +483,10 @@ async function main() {
     process.stdout.write(`${JSON.stringify(await probe(), null, 2)}\n`);
     return;
   }
+  if (cmd === 'start-playwright') {
+    process.stdout.write(`${JSON.stringify(await startPlaywrightMcp(), null, 2)}\n`);
+    return;
+  }
   if (cmd === 'recommend') {
     process.stdout.write(`${JSON.stringify(recommend(argv[1] || 'js_interact'), null, 2)}\n`);
     return;
@@ -301,7 +505,7 @@ async function main() {
     process.stdout.write(`${JSON.stringify(await screenshot(url, outPath), null, 2)}\n`);
     return;
   }
-  die(`unknown command ${cmd}. use probe|recommend|fetch|screenshot`);
+  die(`unknown command ${cmd}. use probe|recommend|fetch|screenshot|start-playwright`);
 }
 
 main().catch((err) => die(err.stack || String(err), 1));

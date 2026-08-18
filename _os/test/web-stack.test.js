@@ -48,6 +48,7 @@ describe('web stack architecture', () => {
     assert.match(agents, /Clone-CamofoxBrowser\.py/);
     assert.match(agents, /Export-BrowserHistory\.py/);
     assert.match(agents, /BRIGHTDATA_API_KEY/);
+    assert.match(agents, /playwright-isolated|start-playwright/);
   });
 
   it('keeps architecture, decision, and receipt notes', () => {
@@ -58,6 +59,7 @@ describe('web stack architecture', () => {
       '12_Brain/11_Craft/earned-lessons.md',
       '12_Brain/02_Entities/Firecrawl.md',
       '12_Brain/02_Entities/Camofox Browser.md',
+      '12_Brain/02_Entities/Playwright MCP.md',
       '12_Brain/03_Concepts/Web Escalation Ladder.md',
       '12_Brain/03_Concepts/Generated File Drift.md',
     ]) {
@@ -86,7 +88,9 @@ describe('Claude agent generator', () => {
       assert.match(text, /Clone-CamofoxBrowser\.py/);
       assert.match(text, /Export-BrowserHistory\.py/);
       assert.match(text, /does \*\*not\*\* unlock outbound verbs/);
+      assert.match(text, /start-playwright/);
       assert.doesNotMatch(text, /Not cloned locally yet/);
+      assert.doesNotMatch(text, /installed, \*\*not live\*\*/);
       assert.doesNotMatch(text, /\| 4 \| Firecrawl with `proxy: "stealth"` \|/);
     }
   });
@@ -126,11 +130,19 @@ describe('browser-access router', () => {
     assert.ok(ids.includes('chrome_isolated'));
     assert.ok(ids.includes('camofox'));
     assert.ok(ids.includes('firecrawl'));
+    assert.ok(ids.includes('playwright_mcp'));
     assert.equal(out.engines.find((e) => e.id === 'bright_data').live, false);
+    const pw = out.engines.find((e) => e.id === 'playwright_mcp');
+    if (pw.live) {
+      assert.match(pw.detail, /8931/);
+      assert.match(pw.detail, /no --extension/);
+    }
     const src = read('_os/automation/bin/browser-access.js');
     assert.match(src, /never.*9222/i);
     assert.doesNotMatch(src, /remote-debugging-port=9222/);
     assert.match(src, /EVIDENCE_PORT/);
+    assert.match(src, /start-playwright/);
+    assert.doesNotMatch(src, /args\.push\('--extension'\)/);
   });
 
   it('recommend returns job-specific engine order', () => {
@@ -138,15 +150,24 @@ describe('browser-access router', () => {
       cwd: VAULT,
       encoding: 'utf8',
     }));
-    assert.deepEqual(cloudflare.order, ['firecrawl_stealth', 'camofox']);
+    assert.deepEqual(cloudflare.order, ['firecrawl_stealth', 'camofox', 'playwright_mcp']);
     const logged = JSON.parse(execFileSync(process.execPath, [CLI, 'recommend', 'logged_in'], {
       cwd: VAULT,
       encoding: 'utf8',
     }));
     assert.deepEqual(logged.order, ['claude_in_chrome']);
+    const js = JSON.parse(execFileSync(process.execPath, [CLI, 'recommend', 'js_interact'], {
+      cwd: VAULT,
+      encoding: 'utf8',
+    }));
+    assert.equal(js.order[0], 'playwright_mcp');
     const policy = JSON.parse(read('System/browser-access.policy.json'));
     assert.deepEqual(policy.never.ports, [9222]);
     assert.equal(policy.chrome.evidence_port, 9223);
+    assert.deepEqual(policy.playwright_mcp.never_flags, ['--extension']);
+    assert.equal(policy.playwright_mcp.args.includes('--extension'), false);
+    assert.equal(policy.jobs.js_interact[0], 'playwright_mcp');
+    assert.equal(policy.jobs.screenshot[0], 'playwright_mcp');
   });
 
   it('fetch of a local file uses isolated Chrome, not 9222', () => {
@@ -164,6 +185,18 @@ describe('browser-access router', () => {
     assert.equal(out.engine, 'chrome_isolated');
     assert.equal(out.title, 'Router Fixture');
     assert.equal(String(out.binary).includes('google-chrome') && !String(out.binary).includes('/opt/google/chrome/chrome'), false);
+  });
+
+  it('fetch of https uses isolated Playwright MCP, not --extension', () => {
+    const raw = execFileSync(process.execPath, [CLI, 'fetch', 'https://example.com'], {
+      cwd: VAULT,
+      encoding: 'utf8',
+      timeout: 25000,
+    });
+    const out = JSON.parse(raw);
+    assert.equal(out.engine, 'playwright_mcp');
+    assert.equal(out.title, 'Example Domain');
+    assert.match(out.endpoint, /localhost:8931/);
   });
 });
 

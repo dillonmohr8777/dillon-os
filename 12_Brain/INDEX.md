@@ -32,6 +32,7 @@ in the same change.
 - [[12_Brain/02_Entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
 - [[12_Brain/02_Entities/Firecrawl|Firecrawl]] — live Composio crawl/search; stealth is batch-scrape only.
 - [[12_Brain/02_Entities/Camofox Browser|Camofox Browser]] — rung-7 stealth browser; sibling clone, never vendored.
+- [[12_Brain/02_Entities/Playwright MCP|Playwright MCP]] — isolated sidecar on :8931/mcp; never `--extension`.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -77,7 +78,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
-- `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
+- `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]], [[12_Brain/07_Reviews/MCP/2026-08-18 - playwright-mcp-isolated|Playwright isolated]]).
 - Bases: [[12_Brain/Bases/Clients.base|Clients]] · [[12_Brain/Bases/Projects.base|Projects]] · [[12_Brain/Bases/Decisions.base|Decisions]]
 
 ## Outreach engine

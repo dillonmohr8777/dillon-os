@@ -5,6 +5,10 @@
       "headers": {
         "Authorization": "Bearer ${env:LANDINGFOLIO_TOKEN}"
       }
+    },
+    "playwright-isolated": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@0.0.69", "--headless", "--isolated", "--no-sandbox"]
     }
   }
 }

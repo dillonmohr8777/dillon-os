@@ -15,6 +15,22 @@
     "evidence_port": 9223,
     "profile_env": "BROWSER_EVIDENCE_PROFILE"
   },
+  "playwright_mcp": {
+    "package": "@playwright/mcp@0.0.69",
+    "base_url": "http://localhost:8931/mcp",
+    "port": 8931,
+    "auto_start": true,
+    "never_flags": ["--extension"],
+    "args": [
+      "--headless",
+      "--isolated",
+      "--no-sandbox",
+      "--host", "127.0.0.1",
+      "--port", "8931",
+      "--allowed-hosts", "localhost,127.0.0.1",
+      "--viewport-size", "1280x720"
+    ]
+  },
   "camofox": {
     "base_url": "http://127.0.0.1:9377",
     "health_path": "/health",
@@ -22,12 +38,12 @@
     "clone_cmd": "python System/scripts/Clone-CamofoxBrowser.py"
   },
   "jobs": {
-    "static_url": ["webfetch", "firecrawl_scrape", "chrome_isolated"],
+    "static_url": ["webfetch", "firecrawl_scrape", "playwright_mcp", "chrome_isolated"],
     "discovery": ["websearch", "firecrawl_search"],
     "markdown_many": ["firecrawl_search", "firecrawl_scrape"],
-    "cloudflare": ["firecrawl_stealth", "camofox"],
-    "js_interact": ["camofox", "chrome_isolated", "playwright_mcp"],
-    "screenshot": ["chrome_isolated", "camofox"],
+    "cloudflare": ["firecrawl_stealth", "camofox", "playwright_mcp"],
+    "js_interact": ["playwright_mcp", "camofox", "chrome_isolated"],
+    "screenshot": ["playwright_mcp", "chrome_isolated", "camofox"],
     "logged_in": ["claude_in_chrome"],
     "volume_stealth": ["camofox", "firecrawl_stealth"],
     "operator_context": ["owned_history"]

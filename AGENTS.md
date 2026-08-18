@@ -93,14 +93,14 @@ for the two npm-based sites below.
 
 ### MCP servers
 
-`.cursor/mcp.json` and `.mcp.json` register one project server, `landingfolio`, a
-layout-reference library for site builds. It reads `LANDINGFOLIO_TOKEN` from the
-environment and **is inert until that variable is set** — no token lives in this
-repo. Its tools are optional everywhere they are used, so an unset variable
-degrades to harvest-only design instead of failing a build. It is still
-**sandbox-only** until an operator runs
-`node _os/automation/bin/landingfolio-verify.js` to finish the Inspector check.
-Any new MCP goes through `_os/automation/bin/mcp-gate.js` first.
+`.cursor/mcp.json` and `.mcp.json` register project servers. `landingfolio` is
+a layout-reference library for site builds; it reads `LANDINGFOLIO_TOKEN` from
+the environment and **is inert until that variable is set** — no token lives in
+this repo. `playwright-isolated` is `@playwright/mcp` with `--headless
+--isolated` and **never `--extension`**. The CLI sidecar is
+`node _os/automation/bin/browser-access.js start-playwright` on
+`http://localhost:8931/mcp`. Any new MCP goes through
+`_os/automation/bin/mcp-gate.js` first.
 
 ### Tests / lint
 
@@ -158,7 +158,9 @@ instruction. Bright Data is installed but inert (`BRIGHTDATA_API_KEY` unset)
 and is not a rung.
 
 Pick the live engine with `node _os/automation/bin/browser-access.js probe`
-(never port 9222; isolated Chrome is 9223). Clone camofox with
+(never port 9222; isolated Chrome is 9223). Playwright MCP is the isolated
+sidecar on `http://localhost:8931/mcp` (`start-playwright`); do not use Cursor's
+`--extension` Playwright. Clone camofox with
 `python System/scripts/Clone-CamofoxBrowser.py`. Export Dillon's own
 Chrome/Edge history with `python System/scripts/Export-BrowserHistory.py`
 (writes gitignored `12_Brain/private/browser-history/` only). Architecture:

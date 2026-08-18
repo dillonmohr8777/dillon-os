@@ -76,6 +76,7 @@ Pick the **best live engine for the job**, then stop. Do not launch Camoufox to
 read a static page. Probe first:
 
     node _os/automation/bin/browser-access.js probe
+    node _os/automation/bin/browser-access.js start-playwright
     node _os/automation/bin/browser-access.js recommend <job>
     node _os/automation/bin/browser-access.js fetch <url>
     node _os/automation/bin/browser-access.js screenshot <url> --out /tmp/page.png
@@ -88,8 +89,8 @@ Jobs and the preferred order (first live engine wins):
 | discovery | `WebSearch`, `FIRECRAWL_SEARCH` |
 | many URLs / markdown | Firecrawl SEARCH/SCRAPE |
 | Cloudflare, no interaction | `FIRECRAWL_BATCH_SCRAPE` `proxy: "stealth"`, then camofox |
-| JS interact / snapshot | camofox :9377 if up, else isolated Chrome on **9223** |
-| screenshot / see it | isolated Chrome screenshot, else camofox |
+| JS interact / snapshot | isolated Playwright MCP (`:8931/mcp`), else camofox, else Chrome 9223 |
+| screenshot / see it | Playwright MCP screenshot, else isolated Chrome |
 | volume stealth | camofox (Camoufox C++ spoof), Firecrawl stealth |
 | logged-in Ads/Gmail/GBP | Claude in Chrome only (Dillon desktop sessions) |
 | operator recency | owned browser history export (gitignored) |
@@ -98,7 +99,7 @@ Verified 2026-08-18 on this machine:
 
 - Firecrawl SEARCH: live (4 URLs, 2 credits). Stealth is BATCH_SCRAPE only.
 - Isolated Chrome (`/opt/google/chrome/chrome`, dedicated profile, port 9223): dump-dom and 1280x720 screenshot of example.com succeeded.
-- Playwright MCP: installed, **not live** (extension bridge timed out).
+- Playwright MCP isolated sidecar: live on `http://localhost:8931/mcp` (`--headless --isolated`, never `--extension`). Cursor cloud Playwright with `--extension` timed out and is a different server.
 - `google-chrome` wrapper: **refused** — it injects port **9222** and the default profile.
 - camofox: cloned; use when `:9377` answers `/health`. Cookie import stays gated.
 - Bright Data: inert (`BRIGHTDATA_API_KEY` unset). Not a rung.
@@ -113,9 +114,10 @@ forms or enter credentials. Policy: `System/browser-access.policy.json`.
 | 2 | `WebSearch` | Discovery. |
 | 3 | Firecrawl via Composio | Clean markdown, structured extract, many URLs. |
 | 4 | `FIRECRAWL_BATCH_SCRAPE` `proxy: "stealth"` | Cloudflare without interaction. SEARCH/SCRAPE schemas have no `proxy`. |
-| 5 | Isolated Chrome via `browser-access.js` | JS, screenshot, or you must see it. Port 9223 only. |
-| 6 | Claude in Chrome | Existing logged-in desktop sessions. Nothing else can do this. |
-| 7 | camofox-browser | Volume stealth. Clone with `python System/scripts/Clone-CamofoxBrowser.py`, `npm start` on localhost:9377. |
+| 5 | Isolated Playwright MCP | JS interact, a11y snapshot, screenshot. `browser-access.js start-playwright` then `:8931/mcp`. Never `--extension`. |
+| 6 | Isolated Chrome via `browser-access.js` | Fallback dump-dom / screenshot. Port 9223 only. |
+| 7 | Claude in Chrome | Existing logged-in desktop sessions. Nothing else can do this. |
+| 8 | camofox-browser | Volume stealth. Clone with `python System/scripts/Clone-CamofoxBrowser.py`, `npm start` on localhost:9377. |
 
 Rules that keep this honest:
 
