@@ -1,0 +1,55 @@
+{
+  "as_of": "2026-08-12",
+  "registry": {
+    "automations": [
+      {
+        "id": "research-claim",
+        "name": "Research claim",
+        "tier": 0,
+        "command": "node _os/automation/bin/claim.js",
+        "outputs": ["12_Brain/state/research-claim.json"],
+        "external_actions": false,
+        "status": "implemented"
+      }
+    ],
+    "gates": {}
+  },
+  "definitions": [
+    {
+      "id": "research-claim",
+      "status": "ACTIVE",
+      "command": "node _os/automation/bin/claim.js",
+      "source": "definitions/claim.md",
+      "path": "_os/automation/bin/claim.js",
+      "active": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "stale-playbook",
+      "path": "12_Brain/research/stale.md",
+      "expires": "2026-08-01",
+      "evidence": "expires: 2026-08-01"
+    },
+    {
+      "id": "near-due-playbook",
+      "path": "12_Brain/research/soon.md",
+      "expires": "2026-08-20",
+      "evidence": "expires: 2026-08-20"
+    }
+  ],
+  "commands": [
+    {
+      "id": "claim",
+      "path": "_os/automation/bin/claim.js",
+      "exists": true
+    }
+  ],
+  "sources": {
+    "_os/automation/bin/claim.js": "module.exports = {};\n"
+  },
+  "files": {
+    "_os/automation/bin/claim.js": true,
+    "12_Brain/state/research-claim.json": true
+  }
+}

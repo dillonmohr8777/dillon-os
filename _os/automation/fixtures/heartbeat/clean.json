@@ -1,0 +1,48 @@
+{
+  "as_of": "2026-08-12",
+  "registry": {
+    "automations": [
+      {
+        "id": "pulse",
+        "name": "Pulse",
+        "tier": 0,
+        "command": "node _os/automation/bin/pulse.js",
+        "outputs": ["12_Brain/state/pulse.json"],
+        "external_actions": false,
+        "status": "implemented"
+      }
+    ],
+    "gates": {}
+  },
+  "definitions": [
+    {
+      "id": "pulse",
+      "status": "ACTIVE",
+      "command": "node _os/automation/bin/pulse.js",
+      "source": "definitions/pulse.md",
+      "path": "_os/automation/bin/pulse.js",
+      "active": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "pulse-fresh",
+      "path": "12_Brain/state/pulse.json",
+      "expires": "2026-11-01"
+    }
+  ],
+  "commands": [
+    {
+      "id": "pulse",
+      "path": "_os/automation/bin/pulse.js",
+      "exists": true
+    }
+  ],
+  "sources": {
+    "_os/automation/bin/pulse.js": "const fs = require('fs');\nmodule.exports = { ok: true };\n"
+  },
+  "files": {
+    "_os/automation/bin/pulse.js": true,
+    "12_Brain/state/pulse.json": true
+  }
+}

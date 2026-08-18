@@ -41,3 +41,7 @@ _os/radar-engine/.data/
 
 # Arch factory build output — regenerable from the queue in one command
 _templates/arch-factory/out/
+
+# Heartbeat run output — a snapshot, not source of truth
+12_Brain/state/heartbeat.json
+Daily-Briefs/heartbeat-manifest.md

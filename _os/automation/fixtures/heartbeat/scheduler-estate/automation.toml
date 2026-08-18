@@ -1,0 +1,19 @@
+# Fixture standing in for the Windows scheduler source.
+# Subset TOML: tables, status, command. Not a live schedule.
+
+[routines.align-hcm-attribution-dashboard-health-guard]
+status = "ACTIVE"
+command = "pwsh ./align-hcm-attribution-dashboard-health-guard.ps1"
+
+[routines.align-hcm-full-funnel-attribution-refresh]
+status = "ACTIVE"
+
+[routines.record-agentic-workflows-loom]
+status = "ACTIVE"
+
+[routines.paused-nightly-digest]
+status = "PAUSED"
+
+[routines.heartbeat]
+status = "ACTIVE"
+command = "node _os/automation/bin/heartbeat.js"

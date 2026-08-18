@@ -1,0 +1,70 @@
+{
+  "as_of": "2026-08-12",
+  "registry": {
+    "automations": [
+      {
+        "id": "known-job",
+        "name": "Known job",
+        "tier": 0,
+        "command": "node _os/automation/bin/known.js",
+        "external_actions": false,
+        "status": "implemented"
+      }
+    ],
+    "gates": {}
+  },
+  "definitions": [
+    {
+      "id": "known-job",
+      "status": "ACTIVE",
+      "command": "node _os/automation/bin/known.js",
+      "source": "definitions/known.md",
+      "path": "_os/automation/bin/known.js",
+      "active": true
+    },
+    {
+      "id": "orphan-active",
+      "status": "ACTIVE",
+      "command": "node _os/automation/bin/orphan-active.js",
+      "source": "definitions/orphan-active.md",
+      "path": "_os/automation/bin/orphan-active.js",
+      "active": true
+    },
+    {
+      "id": "orphan-paused",
+      "status": "PAUSED",
+      "command": "node _os/automation/bin/orphan-paused.js",
+      "source": "definitions/orphan-paused.md",
+      "path": "_os/automation/bin/orphan-paused.js",
+      "active": false
+    }
+  ],
+  "evidence": [],
+  "commands": [
+    {
+      "id": "known",
+      "path": "_os/automation/bin/known.js",
+      "exists": true
+    },
+    {
+      "id": "orphan-active",
+      "path": "_os/automation/bin/orphan-active.js",
+      "exists": true
+    },
+    {
+      "id": "orphan-paused",
+      "path": "_os/automation/bin/orphan-paused.js",
+      "exists": true
+    }
+  ],
+  "sources": {
+    "_os/automation/bin/known.js": "module.exports = {};\n",
+    "_os/automation/bin/orphan-active.js": "module.exports = {};\n",
+    "_os/automation/bin/orphan-paused.js": "module.exports = {};\n"
+  },
+  "files": {
+    "_os/automation/bin/known.js": true,
+    "_os/automation/bin/orphan-active.js": true,
+    "_os/automation/bin/orphan-paused.js": true
+  }
+}

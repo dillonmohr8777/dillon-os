@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dillon-os/heartbeat-finding",
+  "title": "HeartbeatFinding",
+  "type": "object",
+  "required": ["id", "code", "severity", "lane", "subject", "detail", "priority"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "code": { "type": "string", "minLength": 1 },
+    "family": { "type": "string" },
+    "severity": { "type": "string", "enum": ["critical", "warn", "info"] },
+    "lane": { "type": "string", "enum": ["critical", "advisory"] },
+    "subject": { "type": "string", "minLength": 1 },
+    "subject_path": { "type": ["string", "null"] },
+    "detail": { "type": "string" },
+    "evidence": { "type": "string" },
+    "next_action": { "type": ["string", "null"] },
+    "live": { "type": "boolean" },
+    "registered": { "type": "boolean" },
+    "token_blocked": { "type": "boolean" },
+    "priority": { "type": "number" }
+  }
+}
