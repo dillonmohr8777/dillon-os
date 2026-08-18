@@ -56,7 +56,7 @@ For section composition only, the `landingfolio` MCP tools return reference scre
 
 ## Step 5: Write the brief to the measured spec
 
-Copy the matching factory starter (`node _templates/site-factory/pick-starter.js "<vertical or attitude>"`) and fill it out. The six main templates live in `_templates/site-factory/starters/`. Use `_templates/site-factory/example-brief.json` only when no starter matches. Hit the canonical spec from `philly-sites/DESIGN-SYSTEM.md`, which was measured across all 25 existing sites:
+Copy `_templates/site-factory/example-brief.json` and fill it out. Hit the canonical spec from `philly-sites/DESIGN-SYSTEM.md`, which was measured across all 25 existing sites:
 
 - **10 sections** (hero, offerings, story, gallery, contact, closing are required; add proof, feature, and two of experience/catalog/spotlight)
 - **350 to 500 words** of real copy

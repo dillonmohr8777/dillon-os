@@ -7,9 +7,8 @@ Design contract: `philly-sites/DESIGN-SYSTEM.md`. Agent workflow: `.claude/skill
 ## Quick start
 
 ```bash
-# 1. Copy the matching starter (HVAC, landscape, bridal, painting, spa, or ads)
-#    example-brief.json is the schema fallback when no starter matches
-cp "$(node _templates/site-factory/pick-starter.js hvac)" 01_Clients/some-client/brief.json
+# 1. Copy the example and fill it in for the business
+cp _templates/site-factory/example-brief.json 01_Clients/some-client/brief.json
 
 # 2. Build (writes <output-dir>/<slug>/index.html + assets/ folder)
 node _templates/site-factory/build-site.js 01_Clients/some-client/brief.json 01_Clients/some-client
@@ -22,25 +21,9 @@ node _templates/site-factory/qa.js 01_Clients/some-client/<slug>
 
 Playwright for the full QA (one-time): `npm i --no-save playwright && npx playwright install chromium --with-deps`. Screenshots land in `_templates/site-factory/qa-shots/<slug>/` (gitignored).
 
-## Main templates
-
-The six briefs in `starters/` are the templates we use. One vertical per
-attitude. Pick with `node _templates/site-factory/pick-starter.js "<vertical or attitude>"`.
-
-| Slug | Attitude | Use |
-|---|---|---|
-| kiln-heating | industrial | HVAC |
-| lot-line-landscape | warm | landscaping and concrete |
-| atelier-ninth-bridal | editorial | bridal fittings |
-| two-coats-painting | brutal | painting |
-| harbor-light-spa | glass | wellness |
-| signal-street-ads | neon | local Google/Meta ads |
-
-Replace every fictional fact after copying. Visual pack: `_templates/variant-review/`.
-
 ## The brief
 
-See `starters/*.json` or `example-brief.json` for the full shape. The important parts:
+See `example-brief.json` for the full shape. The important parts:
 
 - `tokens` — the whole brand personality: 6 surface colors, 5 `--on-*` contrast colors, `border` (1px elegant to 8px loud) and `radius` (0 brutalist to 56px soft). Derive them from the business's real signage and photos, per the design system.
 - `fonts.display` / `fonts.text` — Google Font names. Display carries the brand, text stays quiet.
@@ -98,8 +81,6 @@ Missing or failed evidence holds the batch. Automation cannot waive this gate.
 | `build-batch.js` | Whole-batch runner: builds, QAs, checks spec compliance, detects duplicate imagery, emits the hub and CSVs |
 | `harvest.js` | Playwright harvester: screenshots a target's site and socials, downloads their imagery, extracts their copy, brand palette, fonts, facts, and decay signals |
 | `qa.js` | Ship checklist from the design system: JSON-LD, meta, alt text, assets, CTAs, surface rhythm, plus Playwright screenshots and overflow checks at 390/850/1440px |
-| `starters/` | The six main templates (one vertical per attitude) plus `catalog.json` |
-| `pick-starter.js` | Prints the starter path for a vertical or attitude |
-| `example-brief.json` | Schema fallback when no starter matches (fictional Philly dryer-vent shop) |
+| `example-brief.json` | A complete worked example (fictional Philly service business) |
 
 `harvest/` and `qa-shots/` are gitignored; they hold third-party reference material and generated screenshots.

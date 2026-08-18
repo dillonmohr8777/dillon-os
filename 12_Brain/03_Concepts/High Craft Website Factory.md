@@ -19,7 +19,6 @@ source_refs:
   - "https://www.designspells.com/"
   - "[[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]]"
   - "[[12_Brain/02_Entities/Variant]]"
-  - "[[12_Brain/04_Decisions/2026-08-18 - Factory starter templates]]"
 tags:
   - brain
   - concept
@@ -280,14 +279,6 @@ Do not hard-code one client's facts or style into the reusable system.
 - Indexing a prospect demo.
 - Adding motion without purpose or reduced-motion support.
 - Optimizing for AEO while the page is unclear or untrustworthy to people.
-
-## Starter library
-
-The main templates are the six briefs in `_templates/site-factory/starters/`.
-One vertical per attitude: HVAC/industrial, landscape-concrete/warm,
-bridal/editorial, painting/brutal, wellness/glass, local-ads/neon. Copy the
-match with `pick-starter.js`, then replace every fictional fact. Decision:
-[[12_Brain/04_Decisions/2026-08-18 - Factory starter templates]].
 
 ## External ideation tools
 

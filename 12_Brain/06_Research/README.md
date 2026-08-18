@@ -14,4 +14,4 @@ Sourced, dated, and expiring findings. High-stakes research separates claims
 from evidence, records contradictions, and uses a fresh verifier before
 recommendations become operating knowledge.
 
-- [[2026-08-18 - Variant.com template harvest]] — Variant stays outside the factory; starters adopted.
+- [[2026-08-18 - Variant.com template harvest]] — Variant public gallery vs factory fit.
