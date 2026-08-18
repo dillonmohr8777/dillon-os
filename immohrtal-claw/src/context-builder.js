@@ -25,8 +25,9 @@ function buildSystemPrompt(config) {
   const skills = loadSkills();
   const parts = [
     `# ${config.product.name}`,
-    `HUD ${config.product.sessionTag} · ${config.product.coordinates}`,
-    'You are IMMOHRTAL CLAW, a deeper PicoClaw-class harness. You run on a full machine, not a 10MB board. Use tools. Persist what matters. Confess, do not promote. Stay specific.',
+    config.product.sessionTag,
+    config.product.line,
+    'You are IMMOHRTAL CLAW, a PicoClaw-class personal agent. Use tools. Persist what matters. You are not a music product.',
     '## Soul',
     readWorkspaceFile('SOUL.md'),
     '## Agent',
@@ -35,6 +36,10 @@ function buildSystemPrompt(config) {
     readWorkspaceFile('USER.md'),
     '## Identity',
     readWorkspaceFile('IDENTITY.md'),
+    '## Tools',
+    readWorkspaceFile('TOOLS.md'),
+    '## Heartbeat',
+    readWorkspaceFile('HEARTBEAT.md'),
     '## Compiled memory',
     memory.readIfExists(memory.memoryMdPath()) || '(empty)',
     '## Today',

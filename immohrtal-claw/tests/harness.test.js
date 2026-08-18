@@ -22,6 +22,8 @@ const { execute } = require('../src/tools');
 const { loadConfig } = require('../src/config');
 const { runTurn } = require('../src/agent-loop');
 const { createServer } = require('../src/gateway');
+const { assertPublicHttpUrl } = require('../src/net');
+const cron = require('../src/cron');
 
 const config = loadConfig();
 
@@ -44,9 +46,10 @@ describe('sandbox', () => {
 describe('skills and memory', () => {
   it('loads bundled SKILL.md modules', () => {
     const ids = loadSkills().map((s) => s.id);
-    for (const need of ['album-bible', 'memory-keeper', 'session-hud', 'booth-notes']) {
+    for (const need of ['memory-keeper', 'web-search', 'cron-jobs', 'spawn-tasks']) {
       assert.ok(ids.includes(need), need);
     }
+    assert.equal(ids.includes('album-bible'), false);
   });
 
   it('writes and searches long-term memory', () => {
@@ -67,16 +70,10 @@ describe('skills and memory', () => {
 });
 
 describe('tools', () => {
-  it('returns the album bible', () => {
-    const result = execute('album_catalog', '{}', config);
-    assert.equal(result.album, 'Dance With The Delusional');
-    assert.equal(result.tracks.length, 11);
-  });
-
-  it('writes, appends, and edits notes inside the sandbox', () => {
-    execute('write_file', { path: 'scratch.md', content: 'bar one\n', area: 'notes' }, config);
-    execute('append_file', { path: 'scratch.md', content: 'bar two\n', area: 'notes' }, config);
-    execute('edit_file', {
+  it('writes, appends, and edits notes inside the sandbox', async () => {
+    await execute('write_file', { path: 'scratch.md', content: 'bar one\n', area: 'notes' }, config);
+    await execute('append_file', { path: 'scratch.md', content: 'bar two\n', area: 'notes' }, config);
+    await execute('edit_file', {
       path: 'scratch.md',
       area: 'notes',
       old_string: 'bar two',
@@ -88,31 +85,32 @@ describe('tools', () => {
     assert.match(text, /bar two rewritten/);
   });
 
-  it('refuses write_file path escape', () => {
-    assert.throws(
+  it('refuses write_file path escape', async () => {
+    await assert.rejects(
       () => execute('write_file', { path: '../../etc/passwd', content: 'nope' }, config),
       /escapes/,
     );
   });
 
-  it('keeps exec staged-off', () => {
-    assert.throws(() => execute('exec', { command: 'echo hi' }, config), /staged-off/);
+  it('keeps exec staged-off', async () => {
+    await assert.rejects(() => execute('exec', { command: 'echo hi' }, config), /staged-off/);
+  });
+
+  it('blocks private web_fetch hosts', async () => {
+    await assert.rejects(() => assertPublicHttpUrl('http://127.0.0.1/secret'), /private/);
+    await assert.rejects(() => assertPublicHttpUrl('http://localhost/'), /private/);
+  });
+
+  it('adds and lists cron jobs', () => {
+    const job = cron.addJob({ text: 'check the inbox', everyMinutes: 30 });
+    const jobs = cron.loadJobs();
+    assert.ok(jobs.some((j) => j.id === job.id));
   });
 });
 
 describe('agent loop', () => {
-  it('uses album_catalog for a tracklist ask', async () => {
-    const result = await runTurn({
-      config,
-      sessionId: `test_album_${Date.now()}`,
-      userText: 'Give me the IMMOHRTAL album tracklist',
-    });
-    assert.ok(result.toolKinds.includes('album_catalog'));
-    assert.match(result.content, /814 Blood/);
-  });
-
   it('pins a memory when asked to remember', async () => {
-    const stamp = `booth-bar-${Date.now()}`;
+    const stamp = `claw-note-${Date.now()}`;
     const result = await runTurn({
       config,
       sessionId: `test_mem_${Date.now()}`,
@@ -141,7 +139,7 @@ describe('agent loop', () => {
 });
 
 describe('gateway', () => {
-  it('serves health, robots, and openai-compatible chat', async () => {
+  it('serves health, robots, and identity without music copy', async () => {
     const server = createServer(config);
     await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
     const { port } = server.address();
@@ -149,23 +147,51 @@ describe('gateway', () => {
       const health = await fetch(`http://127.0.0.1:${port}/api/health`);
       const healthJson = await health.json();
       assert.equal(healthJson.ok, true);
-      assert.equal(healthJson.publish, 'blocked');
       assert.equal(healthJson.product, 'IMMOHRTAL CLAW');
+      assert.equal(healthJson.chatgpt, 'later');
 
-      const robots = await fetch(`http://127.0.0.1:${port}/robots.txt`);
-      const robotsText = await robots.text();
-      assert.match(robotsText, /Disallow: \//);
+      const page = await fetch(`http://127.0.0.1:${port}/`);
+      const html = await page.text();
+      assert.match(html, /IMMOHRTAL CLAW/);
+      assert.doesNotMatch(html, /SESSION 001/);
+      assert.doesNotMatch(html, /Dance With The Delusional/);
 
       const chat = await fetch(`http://127.0.0.1:${port}/v1/chat/completions`, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
-          model: 'immohrtal-claw-booth',
+          model: 'immohrtal-claw-rehearsal',
           messages: [{ role: 'user', content: 'Who are you?' }],
         }),
       });
       const json = await chat.json();
       assert.match(json.choices[0].message.content, /IMMOHRTAL CLAW/i);
+      assert.match(json.choices[0].message.content, /not a music product/i);
+    } finally {
+      server.close();
+    }
+  });
+
+  it('requires a gate code when configured', async () => {
+    const gated = { ...config, gateToken: 'test-gate' };
+    const server = createServer(gated);
+    await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+    const { port } = server.address();
+    try {
+      const blocked = await fetch(`http://127.0.0.1:${port}/api/state`);
+      assert.equal(blocked.status, 401);
+      const login = await fetch(`http://127.0.0.1:${port}/api/login`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ token: 'test-gate' }),
+      });
+      assert.equal(login.status, 200);
+      const cookie = login.headers.get('set-cookie');
+      assert.match(cookie, /claw_gate=/);
+      const ok = await fetch(`http://127.0.0.1:${port}/api/state`, {
+        headers: { cookie },
+      });
+      assert.equal(ok.status, 200);
     } finally {
       server.close();
     }

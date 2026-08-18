@@ -7,26 +7,9 @@ const { assertInside, listSafe } = require('./sandbox');
 const { loadSkills } = require('./skills-loader');
 const memory = require('./memory-store');
 const { loadSession, listSessions } = require('./session-store');
-
-const ALBUM = {
-  artist: 'IMMOHRTAL',
-  album: 'Dance With The Delusional',
-  session: 'SESSION 001',
-  line: 'IF NOT NOW, WHEN.',
-  tracks: [
-    'No Way Out',
-    'Picking Up My Notepad',
-    '814 Blood (ft. King Keev)',
-    'My Mothers Baby',
-    'Roll the Dice',
-    'My Own Way',
-    'Headstone (Interlude)',
-    'Grade A Love',
-    'On My Way (ft. King Keev)',
-    'Waitlist',
-    'Dance with the Delusional (ft. Ted Moon)',
-  ],
-};
+const cron = require('./cron');
+const net = require('./net');
+const spawn = require('./spawn');
 
 function parseArgs(raw) {
   if (!raw) return {};
@@ -183,9 +166,67 @@ function schemas(config) {
     {
       type: 'function',
       function: {
-        name: 'album_catalog',
-        description: 'Return the IMMOHRTAL album bible: title, tracks, campaign line.',
-        parameters: { type: 'object', properties: {} },
+        name: 'web_search',
+        description: 'Search the public web (DuckDuckGo).',
+        parameters: {
+          type: 'object',
+          properties: { query: { type: 'string' } },
+          required: ['query'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'web_fetch',
+        description: 'Fetch a public http(s) URL and return stripped text. Private hosts are blocked.',
+        parameters: {
+          type: 'object',
+          properties: { url: { type: 'string' } },
+          required: ['url'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'cron',
+        description: 'Add, list, or cancel reminder jobs.',
+        parameters: {
+          type: 'object',
+          properties: {
+            action: { type: 'string', enum: ['add', 'list', 'cancel'] },
+            text: { type: 'string' },
+            run_at: { type: 'string' },
+            every_minutes: { type: 'integer' },
+            id: { type: 'string' },
+          },
+          required: ['action'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'spawn',
+        description: 'Run a long task in a background subagent session.',
+        parameters: {
+          type: 'object',
+          properties: { task: { type: 'string' } },
+          required: ['task'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'message',
+        description: 'Leave a note in the operator inbox, usually from a spawn.',
+        parameters: {
+          type: 'object',
+          properties: { text: { type: 'string' } },
+          required: ['text'],
+        },
       },
     },
   ];
@@ -206,7 +247,7 @@ function schemas(config) {
   return list;
 }
 
-function execute(name, rawArgs, config) {
+async function execute(name, rawArgs, config) {
   const args = parseArgs(rawArgs);
   switch (name) {
     case 'list_dir':
@@ -276,8 +317,28 @@ function execute(name, rawArgs, config) {
       return { ok: true, messages: loadSession(args.session_id, 20) };
     case 'memory_stats':
       return { ok: true, ...memory.stats(), ceilingBytes: config.memoryMaxBytes };
-    case 'album_catalog':
-      return { ok: true, ...ALBUM };
+    case 'web_search':
+      return net.webSearch(args.query);
+    case 'web_fetch':
+      return net.webFetch(args.url);
+    case 'cron':
+      if (args.action === 'list') return { ok: true, jobs: cron.loadJobs() };
+      if (args.action === 'cancel') return cron.cancelJob(args.id);
+      if (args.action === 'add') {
+        return {
+          ok: true,
+          job: cron.addJob({
+            text: args.text,
+            runAt: args.run_at,
+            everyMinutes: args.every_minutes,
+          }),
+        };
+      }
+      throw new Error('unknown cron action');
+    case 'spawn':
+      return spawn.spawnTask({ config, task: args.task });
+    case 'message':
+      return { ok: true, record: spawn.leaveMessage(args.text) };
     case 'exec':
       throw new Error('exec is staged-off in this build even when flagged; shell stays approval-gated');
     default:
@@ -285,4 +346,4 @@ function execute(name, rawArgs, config) {
   }
 }
 
-module.exports = { schemas, execute, ALBUM };
+module.exports = { schemas, execute };

@@ -2,7 +2,7 @@
 
 const fs = require('node:fs');
 const http = require('node:http');
-const { WEB, OPENAPI } = require('./paths');
+const { WEB, OPENAPI, INBOX } = require('./paths');
 const { assertInside } = require('./sandbox');
 const { runTurn, newId } = require('./agent-loop');
 const session = require('./session-store');
@@ -11,6 +11,8 @@ const { loadSkills } = require('./skills-loader');
 const traces = require('./traces');
 const { buildSystemPrompt } = require('./context-builder');
 const { bus } = require('./bus');
+const { authorized, isOpenPath, cookieHeader } = require('./auth');
+const { parseJsonlChunk } = require('./jsonl');
 
 function sendJson(res, status, body) {
   const payload = JSON.stringify(body);
@@ -43,7 +45,9 @@ function contentType(file) {
   if (file.endsWith('.js')) return 'text/javascript; charset=utf-8';
   if (file.endsWith('.css')) return 'text/css; charset=utf-8';
   if (file.endsWith('.svg')) return 'image/svg+xml';
+  if (file.endsWith('.png')) return 'image/png';
   if (file.endsWith('.txt')) return 'text/plain; charset=utf-8';
+  if (file.endsWith('.webmanifest')) return 'application/manifest+json';
   if (file.endsWith('.yaml') || file.endsWith('.yml')) return 'text/yaml; charset=utf-8';
   return 'text/html; charset=utf-8';
 }
@@ -90,6 +94,27 @@ function createServer(config) {
     const url = new URL(req.url, 'http://127.0.0.1');
 
     try {
+      if (req.method === 'POST' && url.pathname === '/api/login') {
+        const body = await readBody(req);
+        const token = String(body.token || '').trim();
+        if (!config.gateToken || token !== config.gateToken) {
+          sendJson(res, 401, { error: 'bad gate code' });
+          return;
+        }
+        const secure = req.headers['x-forwarded-proto'] === 'https';
+        res.writeHead(200, {
+          'content-type': 'application/json; charset=utf-8',
+          'set-cookie': cookieHeader(token, secure),
+        });
+        res.end(JSON.stringify({ ok: true }));
+        return;
+      }
+
+      if (!isOpenPath(url.pathname) && !authorized(req, config)) {
+        sendJson(res, 401, { error: 'gate required', gate: true });
+        return;
+      }
+
       if (req.method === 'GET' && url.pathname === '/api/health') {
         sendJson(res, 200, {
           ok: true,
@@ -98,7 +123,9 @@ function createServer(config) {
           model: config.provider.model,
           memory: memory.stats(),
           skills: loadSkills().map((s) => s.id),
-          publish: 'blocked',
+          gated: Boolean(config.gateToken),
+          tunnel: Boolean(config.tunnel),
+          chatgpt: 'later',
         });
         return;
       }
@@ -113,7 +140,14 @@ function createServer(config) {
           skills: built.skills.map((s) => ({ id: s.id, name: s.name, description: s.description })),
           contextTokens: config.contextTokens,
           memoryMaxBytes: config.memoryMaxBytes,
+          gated: Boolean(config.gateToken),
         });
+        return;
+      }
+
+      if (req.method === 'GET' && url.pathname === '/api/inbox') {
+        const raw = fs.existsSync(INBOX) ? fs.readFileSync(INBOX, 'utf8') : '';
+        sendJson(res, 200, { messages: parseJsonlChunk(raw).slice(-20).reverse() });
         return;
       }
 
@@ -191,7 +225,7 @@ function createServer(config) {
       if (req.method === 'GET' && (
         url.pathname === '/'
         || url.pathname.startsWith('/assets/')
-        || /\.(js|css|svg|html|txt)$/.test(url.pathname)
+        || /\.(js|css|svg|png|html|txt|webmanifest)$/.test(url.pathname)
       )) {
         serveStatic(req, res);
         return;

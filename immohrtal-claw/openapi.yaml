@@ -3,9 +3,9 @@ info:
   title: IMMOHRTAL CLAW
   version: 0.1.0
   description: >
-    Staged local gateway for IMMOHRTAL CLAW. Draft Custom GPT actions can point
-    here on a private tunnel later. Do not publish this spec as a live GPT
-    without Dillon's approval.
+    Gated local gateway for IMMOHRTAL CLAW, a PicoClaw-class personal agent.
+    Not a music product. Draft Custom GPT actions can point here later.
+    ChatGPT hosting stays later.
 servers:
   - url: http://127.0.0.1:4800
 paths:

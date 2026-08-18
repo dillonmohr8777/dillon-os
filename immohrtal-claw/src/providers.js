@@ -21,42 +21,53 @@ function messagesSinceLastUser(messages) {
   return idx >= 0 ? messages.slice(idx + 1) : [];
 }
 
-function boothReply(userText, toolResults) {
+function rehearsalReply(userText, toolResults) {
   const t = String(userText || '').trim();
   if (toolResults.length) {
     const last = toolResults[toolResults.length - 1];
-    if (last.name === 'album_catalog' && last.result.tracks) {
-      return `SESSION 001. Dance With The Delusional. Eleven tracks. The line is IF NOT NOW, WHEN.\n${last.result.tracks.map((n, i) => `${String(i + 1).padStart(2, '0')} ${n}`).join('\n')}`;
-    }
     if (last.name === 'memory_write') {
-      return `Pinned to the booth log. I will not forget: ${last.result.record.text}`;
+      return `Pinned. I will not forget: ${last.result.record.text}`;
     }
     if (last.name === 'memory_search') {
       const hits = last.result.hits || [];
-      if (!hits.length) return 'Nothing in the long-term tape for that yet. Say it once and I will write it.';
+      if (!hits.length) return 'Nothing in long-term memory for that yet. Say it once and I will write it.';
       return hits.map((h) => `[${h.source}] ${h.text.slice(0, 280)}`).join('\n\n');
+    }
+    if (last.name === 'web_search') {
+      const hits = last.result.hits || [];
+      if (!hits.length) return 'Search came back empty.';
+      return hits.map((h) => `${h.title}${h.url ? ` — ${h.url}` : ''}\n${h.text}`).join('\n\n');
+    }
+    if (last.name === 'web_fetch') {
+      return last.result.content || `fetch ${last.result.status}`;
+    }
+    if (last.name === 'cron') {
+      return JSON.stringify(last.result, null, 2);
+    }
+    if (last.name === 'spawn') {
+      return `Spawned ${last.result.id}. It will leave a message when it finishes.`;
     }
     if (last.name === 'skill_read') {
       return last.result.body.slice(0, 1200);
     }
+    if (last.name === 'list_dir' || last.name === 'read_file') {
+      return JSON.stringify(last.result, null, 2).slice(0, 1500);
+    }
   }
   if (/who are you|what are you/i.test(t)) {
-    return 'IMMOHRTAL CLAW. Night-booth harness. PicoClaw architecture, more memory, more tools, still local until you say publish.';
+    return 'IMMOHRTAL CLAW. PicoClaw-class personal agent. Same loop: memory, files, skills, search, cron, spawn. Not a music product.';
   }
-  return `Heard. ${t.slice(0, 220)}\n\nI am running the booth rehearsal provider (no remote model). Point OPENAI_BASE_URL at Ollama or an OpenAI-compatible host when you want a live brain. The harness, memory, and skills are already live.`;
+  return `Heard. ${t.slice(0, 220)}\n\nRehearsal provider is on (no remote model). Point OPENAI_BASE_URL at Ollama or any OpenAI-compatible host when you want a live brain. The harness is already live.`;
 }
 
-function decideBoothTools(userText, iteration) {
+function decideRehearsalTools(userText, iteration) {
   if (iteration > 0) return [];
   const t = String(userText || '');
   if (/what do you (know|remember)|search memory|\brecall\b|what did i tell you/i.test(t)) {
     return [{
       id: 'call_search_1',
       type: 'function',
-      function: {
-        name: 'memory_search',
-        arguments: JSON.stringify({ query: t }),
-      },
+      function: { name: 'memory_search', arguments: JSON.stringify({ query: t }) },
     }];
   }
   if (/^(please |hey )?(remember|pin this|don't forget|dont forget)\b/i.test(t)) {
@@ -73,11 +84,21 @@ function decideBoothTools(userText, iteration) {
       },
     }];
   }
-  if (/tracklist|album|814|delusional|immohrtal/i.test(t)) {
+  if (/\b(search the web|look up|google|web search)\b/i.test(t)) {
     return [{
-      id: 'call_album_1',
+      id: 'call_web_1',
       type: 'function',
-      function: { name: 'album_catalog', arguments: '{}' },
+      function: { name: 'web_search', arguments: JSON.stringify({ query: t }) },
+    }];
+  }
+  if (/\b(remind me|set a reminder|cron)\b/i.test(t)) {
+    return [{
+      id: 'call_cron_1',
+      type: 'function',
+      function: {
+        name: 'cron',
+        arguments: JSON.stringify({ action: 'add', text: t, every_minutes: 60 }),
+      },
     }];
   }
   return [];
@@ -122,14 +143,14 @@ async function complete({ config, messages, tools }) {
       name: m.name,
       result: extractJson(m.content) || { raw: m.content },
     }));
-    return { role: 'assistant', content: boothReply(lastUser?.content, results) };
+    return { role: 'assistant', content: rehearsalReply(lastUser?.content, results) };
   }
 
-  const tool_calls = decideBoothTools(lastUser?.content, iteration);
+  const tool_calls = decideRehearsalTools(lastUser?.content, iteration);
   if (tool_calls.length) {
     return { role: 'assistant', content: '', tool_calls };
   }
-  return { role: 'assistant', content: boothReply(lastUser?.content, []) };
+  return { role: 'assistant', content: rehearsalReply(lastUser?.content, []) };
 }
 
-module.exports = { complete, decideBoothTools, boothReply, messagesSinceLastUser };
+module.exports = { complete, decideRehearsalTools, rehearsalReply, messagesSinceLastUser };

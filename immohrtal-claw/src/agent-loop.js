@@ -52,7 +52,7 @@ async function runTurn({ config, sessionId, userText, onEvent }) {
         emit('tool.start', { name, arguments: args });
         let result;
         try {
-          result = execute(name, args, config);
+          result = await execute(name, args, config);
         } catch (err) {
           result = { ok: false, error: err.message };
         }

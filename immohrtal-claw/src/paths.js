@@ -22,6 +22,9 @@ module.exports = {
   LONG_TERM: path.join(DATA, 'long-term.jsonl'),
   MEMORY_INDEX: path.join(DATA, 'memory-index.json'),
   NOTES: path.join(DATA, 'notes'),
+  CRON: path.join(DATA, 'cron.json'),
+  INBOX: path.join(DATA, 'inbox.jsonl'),
+  SPAWNS: path.join(DATA, 'spawns.jsonl'),
   OPENAPI: path.join(ROOT, 'openapi.yaml'),
   ENV_FILE: path.join(ROOT, '.env'),
 };

@@ -1,23 +1,17 @@
 # IMMOHRTAL CLAW
 
-PicoClaw-class agent harness for the IMMOHRTAL booth. Same loop. More memory.
-More tools. A real app. **Local stage only — do not publish yet.**
+PicoClaw-class personal agent. The name is IMMOHRTAL CLAW because it sounds
+like a weapon. **It is not a music product.**
 
 PicoClaw (Sipeed, MIT) is the architecture source:
-[github.com/sipeed/picoclaw](https://github.com/sipeed/picoclaw). This is not a
-Go port of their binary. It is a Node rewrite of the harness with the 10MB RAM
-ceiling taken off, branded for Dance With The Delusional.
+[github.com/sipeed/picoclaw](https://github.com/sipeed/picoclaw). This is a
+Node rewrite of the harness with the 10MB RAM ceiling taken off.
 
-## What you get
+The visual system is copied from the IMMOHRTAL website: paper, gunmetal chrome,
+signal blue, green, Anton / Instrument Serif / Space Grotesk / IBM Plex Mono.
+None of the album, session tags, or lyrics come with it.
 
-- Night-booth web app at `http://127.0.0.1:4800`
-- Gateway + AgentLoop + ContextBuilder + ToolRegistry + SKILL.md skills
-- Disk memory that can grow to **8 GiB** (configurable), not 10MB RAM
-- 128k-token context budget
-- OpenAI-compatible `/v1/chat/completions` for a later Custom GPT action
-- Booth rehearsal provider so the app runs with **no API key**
-
-## Run (stage)
+## Run
 
 ```bash
 cd immohrtal-claw
@@ -26,6 +20,15 @@ node server.js
 
 Open http://127.0.0.1:4800
 
+Phone tunnel (operator-approved):
+
+```bash
+CLAW_TUNNEL=1 CLAW_GATE_TOKEN=your-code node server.js
+# then cloudflared tunnel --url http://127.0.0.1:4800
+```
+
+On the phone: open the URL, enter the gate code, then Share → Add to Home Screen.
+
 Tests:
 
 ```bash
@@ -33,23 +36,15 @@ cd immohrtal-claw
 node --test tests/harness.test.js
 ```
 
-Point at a real model later (still local until you approve publish):
+Point at a real model later:
 
 ```bash
-# example — do not commit the values
 OPENAI_BASE_URL=http://127.0.0.1:11434/v1
 OPENAI_MODEL=qwen3.8:27b
 OPENAI_API_KEY=ollama
 ```
 
-Copy `.env.example` to `.env` on the machine that runs it. `.env` is gitignored.
+## ChatGPT
 
-## Publish (blocked)
-
-ChatGPT Custom GPT / public host / App Store / Play Store stay **approval-gated**.
-The OpenAPI draft is `openapi.yaml`. Do not register a GPT or tunnel this port
-until Dillon says so.
-
-## Layout
-
-See `ARCHITECTURE.md` for the PicoClaw → CLAW map.
+Later. Custom GPT / ChatGPT apps host the auth and public URL. `openapi.yaml`
+is the draft. Do not register a GPT in this pass.
