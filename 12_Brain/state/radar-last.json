@@ -1,22 +1,19 @@
 {
   "automation_id": "radar-refresh",
-  "started_at": "2026-08-17T07:15:03.434Z",
+  "started_at": "2026-08-18T07:06:44.323Z",
   "status": "ok",
-  "date": "2026-08-17",
-  "rotation_slot": "PHL: Philadelphia, Chester County, Lehigh County",
+  "date": "2026-08-18",
+  "rotation_slot": "PHL: Philadelphia, Bucks County, Delaware County",
   "run": {
-    "discovered_raw": 479,
-    "discovered_new": 23,
-    "regraded": 23,
-    "enriched": 48,
-    "enrich_no_match": 12,
+    "discovered_raw": 144,
+    "discovered_new": 0,
+    "regraded": 0,
+    "enriched": 51,
+    "enrich_no_match": 9,
     "enrich_skipped": 0,
     "errors": [],
-    "plan": "targeting the thinnest cells against a 1065-row registry",
-    "throttled": false,
-    "rendered": 18,
-    "imagery_checked": 5,
-    "imagery_buildable": 0
+    "plan": "targeting the thinnest cells against a 1088-row registry",
+    "throttled": false
   },
   "tracked": 1088,
   "build_queue_size": 182,
@@ -25,7 +22,7 @@
   "by_verdict": {
     "rebuild": 182,
     "polish": 691,
-    "enrich": 53,
+    "enrich": 52,
     "nurture": 124,
     "ads_seo": 25
   },
