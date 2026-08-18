@@ -123,6 +123,31 @@ node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/w
 - IMMOHRTAL list signup posts to a hosted Netlify form backend; locally the UI
   renders but submission won't persist.
 
+## Agent roster
+
+Seven runnable subagents live in `.claude/agents/`. They are the operating layer:
+invoke one with the `Agent` tool rather than working a lane yourself. Each carries
+the routines it owns, the skills it may invoke, and the repos in its scope.
+
+| Agent | Model | Owns | Use it for |
+|---|---|---|---|
+| `marketing-chief` | opus | Command (12) | Start a session, triage a request, rank the day, assemble the approval board. Delegates. |
+| `web-product-builder` | opus | Web maker (7) | Site and landing-page builds, batch prospect sites, front-end and design passes. **Maker.** |
+| `qa-critic` | opus | D24, D25, M02 | Independent verification of another agent's work. **Never the maker.** |
+| `paid-media-analyst` | opus | Performance (8) | Ads delivery, attribution reconciliation, client reports. Read-only on accounts. |
+| `growth-content` | opus | Growth (4) | SEO/AEO/GEO, content production, CRO experiments. |
+| `brain-curator` | sonnet | Knowledge (4) | Captures, compile, graph hygiene, session mining, weekly synthesis. |
+| `reliability-scout` | sonnet | Reliability (7) | Automation health, routine failures, breakers, connector recovery. |
+
+All 29 Claude-executable routines have exactly one owner; none is double-owned.
+The remaining 25 routines are `claude_role: never` — Codex owns them because they
+touch raw Gmail and Slack content, credentials, or canonical write authority. Each
+agent's routine table marks those **Codex-owned, refuse** so the boundary travels
+with the agent rather than living only here.
+
+`web-product-builder` and `qa-critic` are deliberately separate. Maker/checker
+separation is meaningless if one agent both builds and signs off.
+
 ## Autonomous layer
 
 Scheduled work runs from Windows Task Scheduler through

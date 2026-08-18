@@ -369,7 +369,28 @@ foreach ($r in $targets) {
     $sw = [System.Diagnostics.Stopwatch]::StartNew()
     $gates = New-Object System.Collections.Generic.List[object]
     $stageLog = New-Object System.Collections.Generic.List[object]
-    $key = "$clientScope`:$today`:$($r.routine_id)"
+    # Dedupe bucket must match the routine's declared cadence. Before 2026-08-18
+    # every cadence keyed on {yyyy-MM-dd}, so a "monthly" routine cleared dedupe
+    # every day and ran ~30x its intent -- roughly 351k wasted tokens/week across
+    # the six drifting routines. .NET Framework 4.x has no System.Globalization.ISOWeek,
+    # so the week number comes from the invariant calendar with a Monday-start,
+    # four-day-week rule.
+    $cadenceRaw = [string]$r.cadence
+    $bucket = $today
+    if ($cadenceRaw -eq 'monthly') {
+        $bucket = Get-Date -Format 'yyyy-MM'
+    } elseif ($cadenceRaw -like 'weekly*') {
+        $nowD = Get-Date
+        $cal = [System.Globalization.CultureInfo]::InvariantCulture.Calendar
+        $wk = $cal.GetWeekOfYear($nowD, [System.Globalization.CalendarWeekRule]::FirstFourDayWeek, [System.DayOfWeek]::Monday)
+        $bucket = '{0}-W{1:D2}' -f $nowD.Year, $wk
+        # 'weekly-twice' means twice per week, so split the week into two halves.
+        if ($cadenceRaw -eq 'weekly-twice') {
+            $half = if ([int]$nowD.DayOfWeek -ge 1 -and [int]$nowD.DayOfWeek -le 3) { 'A' } else { 'B' }
+            $bucket = "$bucket$half"
+        }
+    }
+    $key = "$clientScope`:$bucket`:$($r.routine_id)"
     $outcome = 'blocked'; $blockedBy = ''
     $mx = $null; $lease = $false
 

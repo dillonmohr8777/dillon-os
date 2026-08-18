@@ -8171,7 +8171,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 0,
       "timeout_seconds": 0,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W01",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}:W01",
       "retry_policy": null,
       "approval_tier": 1,
       "approval_boundary": "Queue changes remain proposals for Marketing Chief",
@@ -8352,7 +8352,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 0,
       "timeout_seconds": 0,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W02",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}{A|B}:W02",
       "retry_policy": null,
       "approval_tier": 2,
       "approval_boundary": "Read only; no spend or configuration change",
@@ -8533,7 +8533,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 0,
       "timeout_seconds": 0,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W03",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}{A|B}:W03",
       "retry_policy": null,
       "approval_tier": 2,
       "approval_boundary": "Read only; no spend or configuration change",
@@ -8740,7 +8740,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 10000,
       "timeout_seconds": 1200,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W04",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}:W04",
       "retry_policy": {
         "max_attempts": 2,
         "backoff_seconds": [
@@ -8954,7 +8954,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 16000,
       "timeout_seconds": 1800,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W05",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}:W05",
       "retry_policy": {
         "max_attempts": 2,
         "backoff_seconds": [
@@ -9167,7 +9167,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 16000,
       "timeout_seconds": 1800,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W06",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}:W06",
       "retry_policy": {
         "max_attempts": 2,
         "backoff_seconds": [
@@ -9354,7 +9354,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 0,
       "timeout_seconds": 0,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W07",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}:W07",
       "retry_policy": null,
       "approval_tier": 2,
       "approval_boundary": "No bulk send, sequence activation, or contact mutation",
@@ -9555,7 +9555,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 8000,
       "timeout_seconds": 600,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W08",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}:W08",
       "retry_policy": {
         "max_attempts": 3,
         "backoff_seconds": [
@@ -9765,7 +9765,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 8000,
       "timeout_seconds": 900,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W09",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}:W09",
       "retry_policy": {
         "max_attempts": 3,
         "backoff_seconds": [
@@ -9976,7 +9976,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 8000,
       "timeout_seconds": 900,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W10",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}:W10",
       "retry_policy": {
         "max_attempts": 3,
         "backoff_seconds": [
@@ -10186,7 +10186,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 8000,
       "timeout_seconds": 900,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:W11",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-Www}:W11",
       "retry_policy": {
         "max_attempts": 3,
         "backoff_seconds": [
@@ -10374,7 +10374,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 8000,
       "timeout_seconds": 900,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:M01",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm}:M01",
       "retry_policy": null,
       "approval_tier": 2,
       "approval_boundary": "No secret extraction, vault account switch, consent, or capability expansion",
@@ -10577,7 +10577,7 @@
       "verifier": "Codex acting as Marketing Chief",
       "budget_tokens": 8000,
       "timeout_seconds": 900,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:M02",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm}:M02",
       "retry_policy": {
         "max_attempts": 3,
         "backoff_seconds": [
@@ -10787,7 +10787,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 8000,
       "timeout_seconds": 900,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:M03",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm}:M03",
       "retry_policy": {
         "max_attempts": 3,
         "backoff_seconds": [
@@ -10997,7 +10997,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 8000,
       "timeout_seconds": 900,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:M04",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm}:M04",
       "retry_policy": {
         "max_attempts": 3,
         "backoff_seconds": [
@@ -11207,7 +11207,7 @@
       "verifier": "Independent QA and Release Critic, then Codex acting as Marketing Chief",
       "budget_tokens": 12000,
       "timeout_seconds": 900,
-      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm-dd}:M05",
+      "dedupe_key_pattern": "{client_id|internal}:{yyyy-mm}:M05",
       "retry_policy": {
         "max_attempts": 2,
         "backoff_seconds": [

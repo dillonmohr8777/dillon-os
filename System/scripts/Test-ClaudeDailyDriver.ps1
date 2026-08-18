@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Deterministic tests for the Claude autonomous daily driver. Read-only; executes nothing consequential.
 
@@ -217,6 +217,28 @@ Add-T 'T8b' 'driver_enforces_daily_ceiling' 'ceiling check present' `
 Add-T 'T8c' 'frontier_requires_explicit_opt_in' 'EnableFrontier + disabled_by_default' `
     ($driverSrc -match '\[switch\]\$EnableFrontier' -and $driverSrc -match 'disabled_by_default') `
     ($driverSrc -match '\[switch\]\$EnableFrontier' -and $driverSrc -match 'disabled_by_default')
+
+# ---------------------------------------------- T12 cadence-scoped dedupe
+# A weekly or monthly routine must not clear dedupe daily. Before 2026-08-18 every
+# cadence keyed on {yyyy-MM-dd}, so the six weekly/monthly routines ran every day.
+$cadRows = (& $loopPath -VaultRoot $resolvedVault -CanonicalRoot $CanonicalRoot -Json -NoEvidence | ConvertFrom-Json).rows
+function Get-Key([string]$Id) { ($cadRows | Where-Object { $_.routine_id -eq $Id } | Select-Object -First 1).dedupe_key }
+
+$dailyKey = Get-Key 'D10'
+Add-T 'T12a' 'daily_keys_on_date' 'ends in yyyy-MM-dd' $dailyKey ($dailyKey -match ':\d{4}-\d{2}-\d{2}:D10$')
+
+$weeklyKey = Get-Key 'W10'
+Add-T 'T12b' 'weekly_keys_on_iso_week' 'ends in yyyy-Www' $weeklyKey ($weeklyKey -match ':\d{4}-W\d{2}:W10$')
+
+$monthlyKey = Get-Key 'M02'
+Add-T 'T12c' 'monthly_keys_on_year_month' 'ends in yyyy-MM' $monthlyKey ($monthlyKey -match ':\d{4}-\d{2}:M02$')
+
+$twiceKey = Get-Key 'W02'
+Add-T 'T12d' 'weekly_twice_splits_the_week' 'ends in yyyy-WwwA|B' $twiceKey ($twiceKey -match ':\d{4}-W\d{2}[AB]:W02$')
+
+# The whole point: a monthly key must differ from a daily key for the same day.
+Add-T 'T12e' 'monthly_key_is_not_a_daily_key' 'monthly != daily granularity' `
+    "$monthlyKey vs $dailyKey" ($monthlyKey -notmatch ':\d{4}-\d{2}-\d{2}:')
 
 # ---------------------------------------------- T9 connector failure closed
 $connectorRoutines = @($routines | Where-Object { $_.source_freshness.probe -eq 'external_connector' })

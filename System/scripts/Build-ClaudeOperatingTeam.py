@@ -188,6 +188,16 @@ ROLE_RETRY = {
 # reads: D24 (release QA) -> repo_state, a live working-tree read; W05 (radar
 # website factory) -> the radar's own last-sweep state; W08 (experiment review) ->
 # vault_notes, since experiments live as notes under 12_Brain/05_Projects/Experiments.
+# Dedupe bucket per cadence. Before 2026-08-18 every cadence used {yyyy-mm-dd},
+# so weekly routines ran 7x and monthly routines ~30x their declared intent.
+CADENCE_BUCKET = {
+    'daily': '{yyyy-mm-dd}',
+    'weekly': '{yyyy-Www}',
+    'weekly-twice': '{yyyy-Www}{A|B}',
+    'monthly': '{yyyy-mm}',
+    'event': '{yyyy-mm-dd}',
+}
+
 FRESHNESS_PROBE = {
     'D03': 'registry_state', 'D07': 'registry_state', 'D12': 'repo_state',
     'D10': 'canonical_queue', 'D11': 'canonical_queue', 'D13': 'repo_state',
@@ -295,7 +305,9 @@ for r in routines:
                      if owner == 'Independent QA and Release Critic'
                      else 'Independent QA and Release Critic, then Codex acting as Marketing Chief'),
         'budget_tokens': budget, 'timeout_seconds': timeout,
-        'dedupe_key_pattern': f'{{client_id|internal}}:{{yyyy-mm-dd}}:{rid}',
+        # The dedupe bucket must match the declared cadence, or the cadence is
+        # decorative. Invoke-ClaudeLoop.ps1 computes the same buckets.
+        'dedupe_key_pattern': f'{{client_id|internal}}:{CADENCE_BUCKET.get(r["cadence"], "{yyyy-mm-dd}")}:{rid}',
         'retry_policy': retry, 'approval_tier': tier, 'approval_boundary': r['approval_boundary'],
         'operating_stages': [s['key'] for s in OPERATING_STAGES],
         'stage_count': len(OPERATING_STAGES), 'receipt_fields': RECEIPT_FIELDS,
