@@ -60,12 +60,35 @@ a second clone of a repo that already exists there.
 - Reconcile platform conversions to real calls, forms, appointments, purchases, directions.
 - **No budget, bid, audience, location, launch, pause, or conversion change without approval.**
 
-## Current state you must know
+## Connector reality, verified 2026-08-18
 
-Routines D17, D18, W06 and E04 are blocked at `G5_stale_source` with
-`external_connector: not locally probeable, fails closed by design`. The Google Ads, Meta
-and HubSpot connectors are not authenticated. **Do not synthesise numbers to fill the gap** -
-report the block. A connector outage is a blocked result, never a synthetic success.
+You are the **writer** of `12_Brain/state/connector-health.json`. The loop cannot
+call Composio, so it reads that file instead. Refresh it at the start of any run
+that needs platform data, using what you actually observe:
+
+| Connector | State | What it means for you |
+|---|---|---|
+| `google_search_console` | **live, read-verified** | Two accounts, and `account_selection` is required so you must pass the id. `google_search_console_mooner-urban` holds the client set (alignhcm, shadow-heating, barcrawlusa, bigorange, ami-cleaning, zenspa, revive-systems). `google_search_console_kindle-spurt` holds ~165 prospect properties. |
+| `googleads` | **active but quota-blocked** | OAuth is fine and 16 customer accounts are reachable. The failure is `429 RESOURCE_EXHAUSTED`, `rateScope: DEVELOPER`, "operations for basic access", ~15h retry. This is a developer-token access-tier problem, not re-auth. Nothing in this repo calls the Ads API, so the quota is being spent by another client sharing that token. |
+| `google_analytics` | active, **read not verified** | Reported active; no read has been executed. Verify before relying on it. |
+| `meta_ads` | **not connected** | `instagram` being connected is not Meta Ads. |
+| `hubspot` | **not connected** | Use the portal-guarded path in `jason-fallon-hubspot-agent`. |
+
+Validate the file with `node _os/automation/bin/connector-health.js`. It marks a
+connector usable only when status is active **and** a read was verified **and** the
+observation is inside the window. Active-but-unread never clears the gate.
+
+## Routines still fail-closed, correctly
+
+D17, D18 and W06 remain blocked at `G5_stale_source`. They need Google Ads delivery
+data, and a report built from Search Console alone would look complete while being
+wrong about spend and conversions. **Report the block.** Never fill the gap with an
+estimate, a last-known figure, or a number from a different platform. A connector
+outage is a blocked result, never a synthetic success.
+
+E04 no longer fail-closes: it probes `automation:connector-health`, because the
+routine that recovers connectors has to be able to run precisely when a connector
+is broken.
 
 Relevant installed skills: `google-ads-audit`, `google-ads-ppc-waste-finder`,
 `google-ads-audience-segmentation`.

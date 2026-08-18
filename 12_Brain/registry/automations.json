@@ -392,6 +392,23 @@
       ],
       "external_actions": false,
       "status": "implemented"
+    },
+    {
+      "id": "connector-health",
+      "name": "Connector reachability probe (Composio-backed)",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "on demand via routine E04",
+      "command": "node _os/automation/bin/connector-health.js [--window-hours 48]",
+      "inputs": [
+        "12_Brain/state/connector-health.json"
+      ],
+      "outputs": [
+        "stdout report; exit 2 when no connector is fresh"
+      ],
+      "external_actions": false,
+      "status": "implemented",
+      "note": "Split write/read: an MCP-capable agent records observed connector status; this CLI only validates freshness. It never contacts a provider and never invents a status."
     }
   ],
   "gates": {

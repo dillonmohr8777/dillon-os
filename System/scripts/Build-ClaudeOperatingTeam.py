@@ -190,6 +190,12 @@ ROLE_RETRY = {
 # vault_notes, since experiments live as notes under 12_Brain/05_Projects/Experiments.
 # Dedupe bucket per cadence. Before 2026-08-18 every cadence used {yyyy-mm-dd},
 # so weekly routines ran 7x and monthly routines ~30x their declared intent.
+# E04 recovers a FAILED connector. Probing it with external_connector was circular:
+# the routine that fixes connectors could only run when connectors were healthy.
+# It now probes connector-health, the state an MCP-capable agent records after
+# actually calling Composio. D17, D18 and W06 stay on external_connector on
+# purpose -- they need Google Ads delivery data, and partial data would produce a
+# confidently wrong answer, which the fail_closed rule exists to prevent.
 CADENCE_BUCKET = {
     'daily': '{yyyy-mm-dd}',
     'weekly': '{yyyy-Www}',
@@ -209,7 +215,7 @@ FRESHNESS_PROBE = {
     'W06': 'external_connector', 'W08': 'vault_notes',
     'W09': 'registry_state', 'W10': 'canonical_queue', 'W11': 'vault_notes',
     'M02': 'vault_notes', 'M03': 'registry_state', 'M04': 'vault_notes',
-    'M05': 'vault_notes', 'E04': 'external_connector', 'E05': 'repo_state',
+    'M05': 'vault_notes', 'E04': 'automation:connector-health', 'E05': 'repo_state',
     'E10': 'registry_state', 'E11': 'vault_notes',
 }
 # Checkpoint: the 9 routines with a registered automation keep it; every other

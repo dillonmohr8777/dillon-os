@@ -96,6 +96,7 @@
     },
     "freshness_probes": [
       "automation:aeo-trust-gate",
+      "automation:connector-health",
       "automation:radar-last",
       "automation:report-brain-ingest",
       "canonical_queue",
@@ -11903,7 +11904,7 @@
       "cadence": "event",
       "trigger": "A connector, collector, or ingestion path fails",
       "source_freshness": {
-        "probe": "external_connector",
+        "probe": "automation:connector-health",
         "window_hours": 6,
         "fail_closed": true
       },
@@ -12095,7 +12096,7 @@
         },
         "source_freshness": {
           "state": "delegated-autonomy-v1-2026-08-12",
-          "source": "cadence event window plus slack; probe external_connector"
+          "source": "cadence event window plus slack; probe automation:connector-health"
         },
         "retry_policy": {
           "state": "delegated-autonomy-v1-2026-08-12",

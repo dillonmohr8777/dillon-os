@@ -119,6 +119,11 @@ $ALLOWLIST = @{
         timeout = 180; ok_exit = @(0); blocked_exit = @(2); tier = 0; kind = 'readonly'
         validate = 'nonempty_stdout'
     }
+    'connector_health' = @{
+        exe = 'node'; args = @((Join-Path $BIN 'connector-health.js'), '--window-hours', '48')
+        timeout = 60; ok_exit = @(0); blocked_exit = @(2); tier = 0; kind = 'readonly'
+        validate = 'nonempty_stdout'
+    }
     'agent_craft_brief' = @{
         exe = 'node'; args = @((Join-Path $BIN 'agent-craft-brief.js'), '--days', '14', '--write')
         timeout = 120; ok_exit = @(0); blocked_exit = @(2); tier = 1; kind = 'generated_write'
@@ -138,6 +143,7 @@ $ROLE_BUILD = @{ 'critic' = 'invariant_scan'; 'maker' = 'team_validate'; 'analys
 $ROUTINE_BUILD = @{ 'W11' = 'vault_health'; 'D24' = 'invariant_scan'; 'D26' = 'agent_craft_brief'
                     'W09' = 'agentvault_validate'; 'E10' = 'vault_health'; 'D03' = 'vault_health'
                     'M02' = 'team_validate'; 'E05' = 'graph_measure'
+                    'E04' = 'connector_health'
                     'D07' = 'browser_evidence'; 'D12' = 'repo_readonly'; 'D10' = 'comms_triage_readonly'
                     'D11' = 'comms_triage_readonly'; 'M04' = 'comms_triage_readonly' }
 

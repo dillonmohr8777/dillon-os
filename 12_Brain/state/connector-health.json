@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "recorded_by": "claude/session 2026-08-18 via Composio MCP",
+  "recorded_at_utc": "2026-08-18T19:25:22Z",
+  "note": "Written by an MCP-capable agent, read by _os/automation/bin/connector-health.js. Every status below was observed, not assumed. Do not hand-edit to open a gate.",
+  "connectors": [
+    {
+      "toolkit": "google_search_console",
+      "status": "active",
+      "read_verified": true,
+      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "accounts": [
+        {
+          "id": "google_search_console_mooner-urban",
+          "scope": "client portfolio",
+          "sites": [
+            "https://www.alignhcm.com/",
+            "sc-domain:shadow-heating.com",
+            "sc-domain:barcrawlusa.com",
+            "https://bigorange.marketing/",
+            "sc-domain:ami-cleaning.com",
+            "https://www.zenspatropicana.com/",
+            "sc-domain:revive-systems.com",
+            "https://ironicineptocracy.com/"
+          ]
+        },
+        {
+          "id": "google_search_console_kindle-spurt",
+          "scope": "prospect portfolio, ~165 properties",
+          "sites": [
+            "sc-domain:faganpainting.com",
+            "https://www.kimberlyjamesbridal.com/",
+            "https://onsiteconcretelandscape.com/",
+            "sc-domain:vaclaimsedge.com",
+            "sc-domain:everydaylifeinsurance.com",
+            "https://www.needmomentum.com/"
+          ]
+        }
+      ],
+      "read_proof": {
+        "tool": "GOOGLE_SEARCH_CONSOLE_SEARCH_ANALYTICS_QUERY",
+        "site_url": "sc-domain:shadow-heating.com",
+        "range": "2026-07-19..2026-08-15",
+        "clicks": 3,
+        "impressions": 164,
+        "ctr": 0.0183,
+        "avg_position": 13.41
+      },
+      "note": "Live and usable. Two accounts: pass the account id explicitly, since account_selection is required."
+    },
+    {
+      "toolkit": "googleads",
+      "status": "active",
+      "read_verified": false,
+      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "accounts": [
+        {
+          "id": "googleads_shover-norard",
+          "alias": "Dillon",
+          "customer_count": 16
+        }
+      ],
+      "blocker": {
+        "http": 429,
+        "code": "RESOURCE_EXHAUSTED",
+        "rate_scope": "DEVELOPER",
+        "rate_name": "Number of operations for basic access",
+        "retry_delay_seconds": 54858,
+        "request_id": "T9XdqxH4RWn5UB_4ACRV_w"
+      },
+      "note": "OAuth is fine and 16 customer accounts are reachable in principle. The block is the DEVELOPER-scope quota on a Basic-access developer token, exhausted at the time of writing with a ~15h retry. Nothing in this repo or in hidden-scheduled-tasks.tsv calls the Ads API, so the quota is being consumed by another client sharing that token. Fix is quota headroom or Standard access, not re-auth."
+    },
+    {
+      "toolkit": "google_analytics",
+      "status": "active",
+      "read_verified": false,
+      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "accounts": [{ "id": "google_analytics_carlin-enlife" }],
+      "note": "Connection reported active by COMPOSIO_MANAGE_CONNECTIONS but no read was executed this session, so read_verified stays false. Verify before relying on it."
+    },
+    {
+      "toolkit": "meta_ads",
+      "status": "not_connected",
+      "read_verified": false,
+      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "note": "Not in the connected-toolkit list. `instagram` is connected, which is not the same as Meta Ads. Routines needing Meta delivery data stay blocked."
+    },
+    {
+      "toolkit": "hubspot",
+      "status": "not_connected",
+      "read_verified": false,
+      "last_verified_utc": "2026-08-18T19:25:22Z",
+      "note": "Not connected via Composio. The jason-fallon-hubspot-agent repo holds a portal-guarded path; treat that as the route, not this connector."
+    }
+  ]
+}
