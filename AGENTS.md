@@ -93,14 +93,19 @@ for the two npm-based sites below.
 
 ### MCP servers
 
-`.cursor/mcp.json` and `.mcp.json` register project servers. `landingfolio` is
-a layout-reference library for site builds; it reads `LANDINGFOLIO_TOKEN` from
-the environment and **is inert until that variable is set** — no token lives in
-this repo. `playwright-isolated` is `@playwright/mcp` with `--headless
---isolated` and **never `--extension`**. The CLI sidecar is
-`node _os/automation/bin/browser-access.js start-playwright` on
-`http://localhost:8931/mcp`. Any new MCP goes through
-`_os/automation/bin/mcp-gate.js` first.
+### MCP servers
+
+Three catalogs. Do not mix them.
+
+| File | Runtime | Allowed here |
+|---|---|---|
+| This repo `.cursor/mcp.json` and `.mcp.json` | Project scope | `landingfolio`, `playwright-isolated`. Never machine-local control bridges. |
+| `C:\Users\dillo\.cursor\mcp.json` | Cursor Desktop user | Cursor-side tools, including `claude-code` / `claude-code-control`. |
+| `C:\Users\dillo\.claude.json` | Claude Code user | Claude-side tools. Not `claude-code` / `claude-code-control`. |
+
+Restarting Cursor loads Cursor user MCP. It does **not** put `claude_status` / `claude_list_sessions` / `claude_prompt` into a Claude Code chat. Do not "fix" that by copying those servers into `.claude.json`.
+
+Project servers: `landingfolio` is a layout-reference library (reads `LANDINGFOLIO_TOKEN`; inert until set; no token in this repo). `playwright-isolated` is `@playwright/mcp` with `--headless --isolated` and **never `--extension`**. CLI sidecar: `node _os/automation/bin/browser-access.js start-playwright` on `http://localhost:8931/mcp`. Any new MCP goes through `_os/automation/bin/mcp-gate.js` first. `attach_live` stays false.
 
 ### Tests / lint
 

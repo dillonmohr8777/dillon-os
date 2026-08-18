@@ -45,6 +45,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Draft-First Operating Rules|Draft-First Operating Rules]] — draft unless explicitly told to send.
 - [[12_Brain/03_Concepts/Web Escalation Ladder|Web Escalation Ladder]] — cheapest web rung first; stealth is batch-scrape only.
 - [[12_Brain/03_Concepts/Generated File Drift|Generated File Drift]] — edit the generator, never the generated file.
+- [[12_Brain/03_Concepts/Live Process Ownership|Live Process Ownership]] — a live TUI/profile owns its state; no second writer.
+- [[12_Brain/03_Concepts/MCP Catalog Direction|MCP Catalog Direction]] — three MCP files, three runtimes; restart the one that reads the file.
 - [[12_Brain/03_Concepts/Access Verification Discipline|Access Verification Discipline]] — confirmed access needs direct proof (no inventories here).
 - [[12_Brain/03_Concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove.
 - [[12_Brain/03_Concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.
@@ -72,6 +74,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/04_Decisions/2026-08-18 - Local web stack and browser history grant|Local web stack grant]] — rungs 0-4, camofox sibling clone, owned-history ingest; outbound still gated.
+- [[12_Brain/04_Decisions/2026-08-18 - MCP catalogs stay directional|MCP catalogs stay directional]] — `claude-code` stays in Cursor user MCP, not `.claude.json` and not the vault project files.
 - [[12_Brain/09_Ops/Web Escalation Architecture|Web Escalation Architecture]] — live vs inert web surfaces.
 - [[12_Brain/11_Craft/00_Index|Agent Craft]] — standing lessons; append to [[12_Brain/11_Craft/earned-lessons|earned-lessons]].
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.

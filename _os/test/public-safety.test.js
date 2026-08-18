@@ -121,6 +121,8 @@ describe('12_Brain public-safety scanner', () => {
       assert.equal(pw.command, 'npx');
       assert.equal(pw.args.includes('--extension'), false);
       assert.ok(pw.args.includes('--isolated'));
+      assert.equal(JSON.parse(raw).mcpServers['claude-code'], undefined);
+      assert.equal(JSON.parse(raw).mcpServers['claude-code-control'], undefined);
     }
   });
 

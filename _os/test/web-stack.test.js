@@ -49,6 +49,8 @@ describe('web stack architecture', () => {
     assert.match(agents, /Export-BrowserHistory\.py/);
     assert.match(agents, /BRIGHTDATA_API_KEY/);
     assert.match(agents, /playwright-isolated|start-playwright/);
+    assert.match(agents, /\.claude\.json/);
+    assert.match(agents, /attach_live/);
   });
 
   it('keeps architecture, decision, and receipt notes', () => {
@@ -62,6 +64,10 @@ describe('web stack architecture', () => {
       '12_Brain/02_Entities/Playwright MCP.md',
       '12_Brain/03_Concepts/Web Escalation Ladder.md',
       '12_Brain/03_Concepts/Generated File Drift.md',
+      '12_Brain/03_Concepts/Live Process Ownership.md',
+      '12_Brain/03_Concepts/MCP Catalog Direction.md',
+      '12_Brain/04_Decisions/2026-08-18 - MCP catalogs stay directional.md',
+      '12_Brain/01_Captures/research/2026-08-18 - Claude Code MCP catalog verification.md',
     ]) {
       assert.equal(fs.existsSync(path.join(VAULT, rel)), true, rel);
       const text = read(rel);

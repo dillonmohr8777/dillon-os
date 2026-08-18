@@ -94,6 +94,8 @@ const STANDING_LESSONS = [
   '**A generated file and its generator drift.** Fix the generator, then verify it reproduces the committed output before regenerating.',
   '**Installed is not live.** Bright Data skills without `BRIGHTDATA_API_KEY` are not a rung. Firecrawl stealth lives on `FIRECRAWL_BATCH_SCRAPE`, not every Firecrawl call.',
   '**Append lessons to a file the brief generator cannot overwrite.** Dated operating briefs are regenerated; `earned-lessons.md` is the compounding log.',
+  '**A live interactive process owns its state.** A second writer does not share it politely. Never attach to port 9222, Dillon\'s default Chrome, or a live Codex/Claude TUI session (`attach_live=false`).',
+  '**MCP catalogs are directional.** Cursor user MCP, Claude Code `.claude.json`, and vault project MCP are three files. Restarting one runtime does not load another runtime\'s servers.',
 ];
 
 function frontmatter(noteType, created, tags, sources) {

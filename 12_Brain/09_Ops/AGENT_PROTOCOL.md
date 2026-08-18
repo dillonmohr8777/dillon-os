@@ -24,6 +24,9 @@ tags:
 - For broad synthesis, split reading by domain and reconcile the results.
 - Surface contradictions instead of smoothing them over.
 - Treat missing evidence as missing; do not estimate it into existence.
+- MCP catalogs are directional. Cursor user MCP, Claude Code `.claude.json`,
+  and this repo's project MCP are three files. Restarting one runtime does not
+  load another runtime's servers. Do not attach to a live TUI session.
 
 ## Write
 

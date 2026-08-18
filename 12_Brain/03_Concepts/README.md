@@ -41,6 +41,8 @@ into reusable systems rather than leaving the learning trapped in source notes.
 - [[Evidence Context and Learning Loops]]
 - [[Web Escalation Ladder]]
 - [[Generated File Drift]]
+- [[Live Process Ownership]]
+- [[MCP Catalog Direction]]
 
 ## Operating rules
 
