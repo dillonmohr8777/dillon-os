@@ -1,0 +1,217 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F8EFE8",
+    "ink": "#352829",
+    "accent": "#D38377",
+    "accent2": "#7A4E48",
+    "panel": "#F0D7CF",
+    "deep": "#2A1A18",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of hormone balancing and weight loss work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "be-balanced-hormone",
+  "name": "Be Balanced Hormone Weight Loss Centers",
+  "city": "Royersford",
+  "category": "Hormone balancing and weight loss",
+  "vertical": "Health",
+  "url": "https://bebalancedcenters.com/location/collegeville/",
+  "phone": "",
+  "address": "519 Main Street, Royersford, PA 19468",
+  "hours": "Monday and Thursday 10am-6pm, Friday 10am-4pm, Saturday by appointment",
+  "description": "Natural hormone balancing and weight loss in Royersford with Roseanne C. McGrory. One-on-one support, whole food, no injections.",
+  "marquee": [
+    "Royersford",
+    "Hormone",
+    "Main"
+  ],
+  "hero": {
+    "eyebrow": "Royersford | Hormone balancing",
+    "headline": "Balance first. Weight follows.",
+    "sub": "Be Balanced in Royersford is Roseanne C. McGrory\u2019s center. Natural hormone balancing, whole food, and one-on-one support. No prepackaged meals. No injections.",
+    "ctaPrimary": {
+      "label": "See the Royersford center",
+      "href": "https://bebalancedcenters.com/location/collegeville/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "519 Main Street",
+      "sub": "Royersford"
+    }
+  },
+  "offerings": {
+    "heading": "A plan you can keep on a weeknight.",
+    "items": [
+      "One-on-one support from specialists who already did the program.",
+      "Whole food and plant-based supplements instead of a freezer of branded meals.",
+      "Relaxation work when stress is part of the weight."
+    ]
+  },
+  "gallery": {
+    "heading": "A center that feels like a consult, not a gym.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Roseanne\u2019s second time through",
+    "paragraphs": [
+      "Roseanne C. McGrory owns the Royersford center. She did the program in 2018 after years of yo-yo diets, then joined the team. Jane Peronteau coaches beside her as a yoga therapist.",
+      "The center is 519 Main Street, Royersford. Confirm Saturday hours on the location page."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "From assessment to a plan.",
+    "items": [
+      "Take the free hormone assessment, or skip it and book the consult.",
+      "Sit with a specialist. Name the symptoms. Hear a plan.",
+      "Walk the plan with the same people, not a rotating script."
+    ]
+  },
+  "feature": {
+    "heading": "No injections. No freezer meals.",
+    "text": "No prepackaged meals. No medical injections. The work is hormone balance, food you cook, and a person who stays on the call.",
+    "cta": {
+      "label": "Read the location page",
+      "href": "https://bebalancedcenters.com/location/collegeville/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Collegeville in the URL, Royersford on the door",
+    "text": "The radar listed Collegeville.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Location page",
+      "href": "https://bebalancedcenters.com/location/collegeville/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "How it works",
+        "href": "https://bebalancedcenters.com/location/collegeville/",
+        "imageIndex": 9,
+        "text": "Hormone plan without freezer meals."
+      },
+      {
+        "title": "Meet the team",
+        "href": "https://bebalancedcenters.com/location/collegeville/",
+        "imageIndex": 10,
+        "text": "Roseanne and Jane stay with you."
+      },
+      {
+        "title": "Book a consult",
+        "href": "https://bebalancedcenters.com/location/collegeville/",
+        "imageIndex": 11,
+        "text": "Start on Main Street in Royersford."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the center.",
+    "sub": "519 Main Street, Royersford. Confirm Saturday appointments on the location page."
+  },
+  "closing": {
+    "cta": {
+      "label": "See the Royersford center",
+      "href": "https://bebalancedcenters.com/location/collegeville/"
+    }
+  },
+  "links": [
+    {
+      "label": "Location page",
+      "href": "https://bebalancedcenters.com/location/collegeville/"
+    }
+  ]
+}

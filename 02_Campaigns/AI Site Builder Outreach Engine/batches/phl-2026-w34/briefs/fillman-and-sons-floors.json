@@ -1,0 +1,214 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Playfair Display",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F6F0E6",
+    "ink": "#25161B",
+    "accent": "#7A1F2B",
+    "accent2": "#B7A588",
+    "panel": "#DBC2BD",
+    "deep": "#2A1416",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of flooring work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "fillman-and-sons-floors",
+  "name": "Fillman & Sons Floors & More",
+  "city": "Emmaus",
+  "category": "Flooring",
+  "vertical": "Home Services",
+  "url": "http://www.fillmanandsons.com/",
+  "description": "Flooring contractor in Emmaus, Lehigh County. Hardwood, the jobs around it, and a family name on the van. Confirm hours on the official site.",
+  "marquee": [
+    "Emmaus",
+    "Floors",
+    "Family"
+  ],
+  "hero": {
+    "eyebrow": "Emmaus | Flooring",
+    "headline": "Floors, and the work around them",
+    "sub": "Fillman & Sons Floors & More is a Lehigh County flooring shop. The current site is not built for a phone. The floor still has to be measured, delivered, and finished.",
+    "ctaPrimary": {
+      "label": "Open the official site",
+      "href": "http://www.fillmanandsons.com/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Emmaus",
+      "sub": "Lehigh County"
+    }
+  },
+  "offerings": {
+    "heading": "Measure, install, finish.",
+    "items": [
+      "Hardwood and the flooring jobs a family shop will still take.",
+      "Installation that respects the subfloor you already have.",
+      "The \u201cand more\u201d on the door: the adjacent work they will name when you ask."
+    ]
+  },
+  "gallery": {
+    "heading": "Grain, finish, a clean edge.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "A family name on the van",
+    "paragraphs": [
+      "Fillman & Sons Floors & More is listed in Emmaus. The radar scored the site as broken: no viewport on a phone.",
+      "Confirm the street address, phone, and what \u201cand more\u201d covers on the official site before you order material. We will not invent a showroom suite."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a floor job should go.",
+    "items": [
+      "They measure the rooms you have, including the closets you forgot.",
+      "You see the finish on a sample, not only on a screen.",
+      "They come back to the edges when the house settles."
+    ]
+  },
+  "feature": {
+    "heading": "The site should be as straight as the plank",
+    "text": "A flooring company that hides the phone on mobile is fighting its own close. The rebuild puts the map, the next action, and the work on the first screen.",
+    "cta": {
+      "label": "Open the site",
+      "href": "http://www.fillmanandsons.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Lehigh County, one shop",
+    "text": "Emmaus is the listed city.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Official site",
+      "href": "http://www.fillmanandsons.com/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Floors",
+        "href": "http://www.fillmanandsons.com/",
+        "imageIndex": 9,
+        "text": "Hardwood measured in Emmaus."
+      },
+      {
+        "title": "And more",
+        "href": "http://www.fillmanandsons.com/",
+        "imageIndex": 10,
+        "text": "Ask what the shop will take."
+      },
+      {
+        "title": "Contact",
+        "href": "http://www.fillmanandsons.com/",
+        "imageIndex": 11,
+        "text": "Confirm the shop on the official site."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm before you drive.",
+    "sub": "Emmaus, Lehigh County. Pull live address and phone from the official site."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the official site",
+      "href": "http://www.fillmanandsons.com/"
+    }
+  },
+  "links": [
+    {
+      "label": "Official site",
+      "href": "http://www.fillmanandsons.com/"
+    }
+  ]
+}

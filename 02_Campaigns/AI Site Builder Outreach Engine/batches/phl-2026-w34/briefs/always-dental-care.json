@@ -1,0 +1,218 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Outfit",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F3F7FA",
+    "ink": "#0F2C3B",
+    "accent": "#009AD9",
+    "accent2": "#00437C",
+    "panel": "#BEE3F3",
+    "deep": "#003056",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of family and cosmetic dentistry work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "always-dental-care",
+  "name": "Always Dental Care",
+  "city": "Phoenixville",
+  "category": "Family and cosmetic dentistry",
+  "vertical": "Health",
+  "url": "https://www.alwaysdentalcare.com/",
+  "phone": "484.392.7687",
+  "address": "1570 Egypt Rd #210, Phoenixville, PA 19460",
+  "hours": "Monday-Thursday 9am-6pm, Wednesday 9am-5pm, Friday 9am-1pm every other week",
+  "description": "Family and cosmetic dentistry in Phoenixville with Truong Nguyen, DDS. Implants, whitening, fillings, and evening hours.",
+  "marquee": [
+    "Phoenixville",
+    "Dr.",
+    "Implants"
+  ],
+  "hero": {
+    "eyebrow": "Phoenixville | Family and cosmetic",
+    "headline": "Family care by Truong Nguyen, DDS",
+    "sub": "Always Dental Care treats Phoenixville, Oaks, and the towns around Egypt Road. Late evenings and a Saturday once a month so the visit fits a real week.",
+    "ctaPrimary": {
+      "label": "Call the office",
+      "href": "tel:4843927687"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://www.alwaysdentalcare.com/"
+    },
+    "glassFloat": {
+      "title": "Behind the Wawa",
+      "sub": "Egypt Rd #210"
+    }
+  },
+  "offerings": {
+    "heading": "Implants, general, cosmetic.",
+    "items": [
+      "Dental implants that replace the tooth and the root as one plan.",
+      "General care for kids, parents, and the people who have been skipping cleanings.",
+      "Cosmetic work when you want the smile to match the rest of the day."
+    ]
+  },
+  "gallery": {
+    "heading": "A room that tries to feel easy.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Eleven years on Egypt Road",
+    "paragraphs": [
+      "Dr. Truong Nguyen has practiced in Phoenixville and the towns around it for 11 years. NYU College of Dentistry, residency at Wyckoff Heights. Soccer, bowling, family, and a chair that tries not to scare you.",
+      "The office is 1570 Egypt Rd #210, behind the Wawa, next to Hand and Stone. Call 484.392.7687."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "Built around a busy week.",
+    "items": [
+      "Evening hours most weekdays so you are not begging for a lunch slot.",
+      "A Saturday once a month when the weekday will not give.",
+      "Emergency care when a tooth will not wait for the calendar."
+    ]
+  },
+  "feature": {
+    "heading": "Implants as a permanent part of the smile",
+    "text": "Ask Dr. Nguyen about implants when you are missing a tooth.",
+    "cta": {
+      "label": "See services",
+      "href": "https://www.alwaysdentalcare.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Oaks, Pottstown, King of Prussia",
+    "text": "The site names the towns they actually serve.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Contact",
+      "href": "https://www.alwaysdentalcare.com/contact/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Implants",
+        "href": "https://www.alwaysdentalcare.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Family care",
+        "href": "https://www.alwaysdentalcare.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "https://www.alwaysdentalcare.com/contact/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Park behind the Wawa.",
+    "sub": "1570 Egypt Rd #210, Phoenixville. Confirm Friday hours before you drive."
+  },
+  "closing": {
+    "cta": {
+      "label": "Call the office",
+      "href": "tel:4843927687"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:4843927687"
+    },
+    {
+      "label": "Official site",
+      "href": "https://www.alwaysdentalcare.com/"
+    }
+  ]
+}

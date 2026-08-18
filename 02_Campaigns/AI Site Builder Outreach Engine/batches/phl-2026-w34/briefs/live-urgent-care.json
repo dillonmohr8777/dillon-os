@@ -1,0 +1,214 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Barlow",
+    "displayFallback": "system-ui,sans-serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F8F3F1",
+    "ink": "#33131C",
+    "accent": "#C8102E",
+    "accent2": "#062F42",
+    "panel": "#EDC1C6",
+    "deep": "#062F42",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of urgent care work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "live-urgent-care",
+  "name": "Live Urgent Care",
+  "city": "King of Prussia",
+  "category": "Urgent care",
+  "vertical": "Health",
+  "url": "https://liveurgentcare.com/locations/kingofprussia/",
+  "description": "Urgent care in King of Prussia for the visit that cannot wait for a primary-care slot. Confirm hours and services on the official location page.",
+  "marquee": [
+    "King",
+    "Urgent",
+    "Walk"
+  ],
+  "hero": {
+    "eyebrow": "King of Prussia | Urgent care",
+    "headline": "Care when the calendar will not give",
+    "sub": "Live Urgent Care in King of Prussia is for the sprain, the fever, the thing that will not wait three weeks for a physical. Confirm hours on the location page before you drive.",
+    "ctaPrimary": {
+      "label": "Open the location page",
+      "href": "https://liveurgentcare.com/locations/kingofprussia/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "King of Prussia",
+      "sub": "Urgent care"
+    }
+  },
+  "offerings": {
+    "heading": "Built for the visit that cannot wait.",
+    "items": [
+      "Walk-in urgent care for the day primary care is booked out.",
+      "A location page that should tell you hours, parking, and what they will see.",
+      "Follow-up notes you can take back to your own doctor."
+    ]
+  },
+  "gallery": {
+    "heading": "A clinic that moves at urgent speed.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "King of Prussia, on purpose",
+    "paragraphs": [
+      "Live Urgent Care lists a King of Prussia location. The radar flagged a homepage that is not built for a phone, which is a problem when you are trying to check hours with one hand.",
+      "Confirm the street address, phone, and today\u2019s hours on the official location page. We will not invent a suite to look complete."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How an urgent visit should go.",
+    "items": [
+      "You check hours. You go. You are not guessing from a desktop-only page.",
+      "You describe the problem once, to a person who can treat it or send you on.",
+      "You leave with instructions you can read in the parking lot."
+    ]
+  },
+  "feature": {
+    "heading": "Hours have to be readable on a phone",
+    "text": "Urgent care fails when the location page hides the clock. The rebuild puts hours, map, and the next action on the first screen.",
+    "cta": {
+      "label": "Open King of Prussia",
+      "href": "https://liveurgentcare.com/locations/kingofprussia/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Montgomery County, same-day",
+    "text": "King of Prussia is the listed location.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Location page",
+      "href": "https://liveurgentcare.com/locations/kingofprussia/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "King of Prussia",
+        "href": "https://liveurgentcare.com/locations/kingofprussia/",
+        "imageIndex": 9,
+        "text": "Same-day care when primary is booked."
+      },
+      {
+        "title": "Services",
+        "href": "https://liveurgentcare.com/locations/kingofprussia/",
+        "imageIndex": 10,
+        "text": "Sprains, fever, visits that cannot wait."
+      },
+      {
+        "title": "Hours",
+        "href": "https://liveurgentcare.com/locations/kingofprussia/",
+        "imageIndex": 11,
+        "text": "Check the location page before you drive."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm hours first.",
+    "sub": "King of Prussia. Pull live address and phone from the official location page."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open the location page",
+      "href": "https://liveurgentcare.com/locations/kingofprussia/"
+    }
+  },
+  "links": [
+    {
+      "label": "Location page",
+      "href": "https://liveurgentcare.com/locations/kingofprussia/"
+    }
+  ]
+}

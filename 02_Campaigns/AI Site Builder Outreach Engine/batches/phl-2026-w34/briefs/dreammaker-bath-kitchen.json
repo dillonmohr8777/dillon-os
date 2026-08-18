@@ -1,0 +1,211 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F6F2FA",
+    "ink": "#1F1B2B",
+    "accent": "#5C3D82",
+    "accent2": "#C4A35A",
+    "panel": "#D4CAE0",
+    "deep": "#1E1630",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#090909",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of bath and kitchen remodeling work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "dreammaker-bath-kitchen",
+  "name": "DreamMaker Bath & Kitchen",
+  "city": "Chester Springs",
+  "category": "Bath and kitchen remodeling",
+  "vertical": "Home Services",
+  "url": "https://www.dreammaker-remodel.com/chester-county/",
+  "description": "Bath and kitchen remodeling in Chester County. DreamMaker is a franchise network. Confirm the local owner, showroom, and phone on the Chester County page.",
+  "marquee": [
+    "Chester",
+    "Bath",
+    "Kitchen"
+  ],
+  "hero": {
+    "eyebrow": "Chester County | Bath and kitchen",
+    "headline": "Remodel the rooms you actually use",
+    "sub": "DreamMaker Bath & Kitchen lists Chester County from Chester Springs. The local page should name the owner, the showroom, and the next appointment. Confirm those on the official location page.",
+    "ctaPrimary": {
+      "label": "Open Chester County",
+      "href": "https://www.dreammaker-remodel.com/chester-county/"
+    },
+    "ctaSecondary": {
+      "label": "Plan a visit",
+      "href": "#visit"
+    },
+    "glassFloat": {
+      "title": "Chester Springs",
+      "sub": "Bath and kitchen"
+    }
+  },
+  "offerings": {
+    "heading": "Bath, kitchen, a finished room.",
+    "items": [
+      "Kitchen remodels planned around the way you already cook.",
+      "Bath remodels that respect the plumbing you have, not a catalog fantasy.",
+      "A local franchisee you can sit with before demolition starts."
+    ]
+  },
+  "gallery": {
+    "heading": "Stone, cabinets, a finished edge.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Chester County, local owner",
+    "paragraphs": [
+      "DreamMaker Bath & Kitchen is a national remodel brand with a Chester County location page. The radar flagged a dated, desktop-width page.",
+      "Confirm the local owner, the showroom address, and the phone on the Chester County page before you book a design visit. Franchise pages change."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "How a remodel should start.",
+    "items": [
+      "A design visit in the rooms you have, not a showroom-only pitch.",
+      "A scope and a calendar before the first dumpster.",
+      "One local contact when the tile is late."
+    ]
+  },
+  "feature": {
+    "heading": "The local page has to carry the owner",
+    "text": "A franchise remodel only works when the local page names a person and a phone. The rebuild puts that above the national stock photos.",
+    "cta": {
+      "label": "Open Chester County",
+      "href": "https://www.dreammaker-remodel.com/chester-county/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Chester Springs as the listed city",
+    "text": "The radar placed them in Chester Springs.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Location page",
+      "href": "https://www.dreammaker-remodel.com/chester-county/"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Kitchens",
+        "href": "https://www.dreammaker-remodel.com/chester-county/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Baths",
+        "href": "https://www.dreammaker-remodel.com/chester-county/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Contact",
+        "href": "https://www.dreammaker-remodel.com/chester-county/",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Confirm the showroom.",
+    "sub": "Chester Springs, Chester County. Pull live address and phone from the location page."
+  },
+  "closing": {
+    "cta": {
+      "label": "Open Chester County",
+      "href": "https://www.dreammaker-remodel.com/chester-county/"
+    }
+  },
+  "links": [
+    {
+      "label": "Location page",
+      "href": "https://www.dreammaker-remodel.com/chester-county/"
+    }
+  ]
+}

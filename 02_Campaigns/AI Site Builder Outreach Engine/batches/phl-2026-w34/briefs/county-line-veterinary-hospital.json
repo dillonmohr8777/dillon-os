@@ -1,0 +1,218 @@
+{
+  "noindex": true,
+  "schemaType": "LocalBusiness",
+  "logo": true,
+  "attitude": "align",
+  "fonts": {
+    "display": "Libre Baskerville",
+    "displayFallback": "Georgia,serif",
+    "text": "DM Sans"
+  },
+  "tokens": {
+    "paper": "#F6F1E8",
+    "ink": "#111822",
+    "accent": "#0A2C4F",
+    "accent2": "#B4232C",
+    "panel": "#C2C6C6",
+    "deep": "#06182C",
+    "onPaper": "#090909",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "1px",
+    "radius": "24px"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#offerings"
+    },
+    {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
+      "label": "Visit",
+      "href": "#visit"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 1, generated not photographed"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 2, generated not photographed"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 3, generated not photographed"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 4, generated not photographed"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 5, generated not photographed"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 6, generated not photographed"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 7, generated not photographed"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 8, generated not photographed"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 9, generated not photographed"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 10, generated not photographed"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 11, generated not photographed"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 12, generated not photographed"
+    },
+    {
+      "file": "image-13.webp",
+      "alt": "Generated 3D Align-teal illustration of veterinary hospital work, frame 13, generated not photographed"
+    }
+  ],
+  "slug": "county-line-veterinary-hospital",
+  "name": "County Line Veterinary Hospital",
+  "city": "Hatboro",
+  "category": "Veterinary hospital",
+  "vertical": "Health",
+  "url": "https://countylineveterinary.com/",
+  "phone": "(215) 675-0533",
+  "address": "325 West County Line Road, Hatboro, PA 19040",
+  "hours": "Monday-Friday 9am-8pm, Saturday 9am-1pm, Sunday closed",
+  "description": "Full-service veterinary hospital in Hatboro since 1956. Dr. Tracy Heitzman and the staff serve Montgomery and Bucks County pets.",
+  "marquee": [
+    "Since",
+    "Hatboro",
+    "County"
+  ],
+  "hero": {
+    "eyebrow": "Hatboro | Veterinary hospital",
+    "headline": "Professional pet care with a personal touch",
+    "sub": "County Line Veterinary Hospital has served Montgomery and Bucks County since 1956. Dr. Tracy Heitzman and the staff still want the visit to feel like their own animals are on the table.",
+    "ctaPrimary": {
+      "label": "Call the hospital",
+      "href": "tel:2156750533"
+    },
+    "ctaSecondary": {
+      "label": "Open the site",
+      "href": "https://countylineveterinary.com/"
+    },
+    "glassFloat": {
+      "title": "Since 1956",
+      "sub": "Hatboro"
+    }
+  },
+  "offerings": {
+    "heading": "A full-service hospital, not a pop-up clinic.",
+    "items": [
+      "Wellness and sick care for the pets of Montgomery and Bucks County.",
+      "Hours that run until 8pm on weekdays so the after-work visit is real.",
+      "A staff that treats the appointment like it is their own animal."
+    ]
+  },
+  "gallery": {
+    "heading": "The floor behind the front desk.",
+    "imageIndexes": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      12
+    ]
+  },
+  "story": {
+    "heading": "Hatboro since 1956",
+    "paragraphs": [
+      "County Line Veterinary Hospital sits at 325 West County Line Road in Hatboro. The phone is (215) 675-0533. Fax is (215) 675-4250.",
+      "The radar still points at an older domain. The live practice site is countylineveterinary.com."
+    ],
+    "imageIndex": 2
+  },
+  "experience": {
+    "heading": "Hours that match a workday.",
+    "items": [
+      "Weekdays 9 to 8. Saturday 9 to 1.",
+      "Sunday the hospital is closed. Central Veterinary Center covers Sunday questions.",
+      "You call (215) 675-0533 and a person books the slot."
+    ]
+  },
+  "feature": {
+    "heading": "Personal touch is the operating system",
+    "text": "Dr. Tracy Heitzman and the staff say they work to give you the care they would want for their own.",
+    "cta": {
+      "label": "Meet the hospital",
+      "href": "https://countylineveterinary.com/"
+    },
+    "imageIndex": 8
+  },
+  "spotlight": {
+    "heading": "Urgent care on the way",
+    "text": "The homepage flags urgent care services coming in 2026.",
+    "imageIndex": 13,
+    "cta": {
+      "label": "Call",
+      "href": "tel:2156750533"
+    }
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Appointments",
+        "href": "https://countylineveterinary.com/",
+        "imageIndex": 9
+      },
+      {
+        "title": "Hours",
+        "href": "https://countylineveterinary.com/",
+        "imageIndex": 10
+      },
+      {
+        "title": "Map",
+        "href": "https://www.google.com/maps/search/?api=1&query=325+West+County+Line+Road+Hatboro+PA",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Find the hospital.",
+    "sub": "325 West County Line Road, Hatboro. Confirm hours before you drive."
+  },
+  "closing": {
+    "cta": {
+      "label": "Call the hospital",
+      "href": "tel:2156750533"
+    }
+  },
+  "links": [
+    {
+      "label": "Call",
+      "href": "tel:2156750533"
+    },
+    {
+      "label": "Official site",
+      "href": "https://countylineveterinary.com/"
+    }
+  ]
+}
