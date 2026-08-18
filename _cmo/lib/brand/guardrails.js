@@ -253,7 +253,7 @@ export function runGuardrails(artifact, profile = {}, options = {}) {
     warnings,
     info: findings.filter((f) => f.severity === INFO),
     findings,
-    claims: claims.map((c) => ({ kind: c.kind, span: truncate(c.span, 160), offset: c.offset })),
+    claims: claims.map((c) => ({ kind: c.kind, matched: c.matched, span: truncate(c.span, 160), offset: c.offset })),
     evidenceCount: evidence.length,
     readability,
     // A single number for the UI, but the findings are what a human acts on.
@@ -302,12 +302,26 @@ function countSyllables(word) {
   return Math.max(1, groups ? groups.length : 1);
 }
 
+/**
+ * The sentence containing `offset`.
+ *
+ * A period between two digits is a decimal point, not a sentence end. Without
+ * that check, the claim "+46.2%" reports its span as "…| +24 (+46." - a clipped
+ * fragment that tells a reviewer nothing about what needs a source.
+ */
 function sentenceAt(body, offset, max = 260) {
   const text = String(body || '');
+  const isBreak = (i) => {
+    const ch = text[i];
+    if (ch === '\n') return true;
+    if (ch !== '.' && ch !== '!' && ch !== '?') return false;
+    if (ch === '.' && /\d/.test(text[i - 1] || '') && /\d/.test(text[i + 1] || '')) return false;
+    return true;
+  };
   let start = offset;
-  while (start > 0 && !'.!?\n'.includes(text[start - 1])) start -= 1;
+  while (start > 0 && !isBreak(start - 1)) start -= 1;
   let end = offset;
-  while (end < text.length && !'.!?\n'.includes(text[end])) end += 1;
+  while (end < text.length && !isBreak(end)) end += 1;
   return text.slice(start, Math.min(end + 1, start + max)).trim();
 }
 

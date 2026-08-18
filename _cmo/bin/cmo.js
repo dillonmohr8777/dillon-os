@@ -32,7 +32,6 @@ import process from 'node:process';
 import { createApp } from '../lib/app.js';
 import { DEMO_WORKSPACE, DEMO_PROFILE, DEMO_VOICE, DEMO_RECONCILIATION } from '../lib/connectors/fixtures.js';
 import { ROSTER, LANES, describeAgentList } from '../lib/agents/registry-view.js';
-import { explainRun } from '../lib/runtime/journal.js';
 import { rollup } from '../lib/runtime/budget.js';
 import { robotsPolicy, auditRobots } from '../lib/geo/crawlers.js';
 import { marginOfError } from '../lib/geo/stats.js';

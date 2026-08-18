@@ -99,9 +99,12 @@ select:focus-visible, input:focus-visible, textarea:focus-visible, button:focus-
 
 main { padding: 20px; max-width: 1500px; margin: 0 auto; }
 .grid { display: grid; gap: 16px; }
-.grid.cols-2 { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
-.grid.cols-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.grid.cols-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+/* min() clamps the track floor to the viewport. A bare minmax(400px, 1fr)
+   forces a 400px column inside a 390px phone and pushes the whole page into
+   horizontal scroll. */
+.grid.cols-2 { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }
+.grid.cols-3 { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+.grid.cols-4 { grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); }
 
 .card {
   background: var(--surface); border: 1px solid var(--border);
@@ -195,6 +198,11 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 
 /* ---------- drawer ---------- */
 
+/* `display: flex` below would override the `hidden` attribute's implicit
+   `display: none`, leaving an invisible fixed-position panel that still
+   intercepts clicks on everything beneath it. Restate it explicitly. */
+[hidden] { display: none !important; }
+
 .drawer {
   position: fixed; top: 0; right: 0; bottom: 0; width: min(720px, 94vw);
   background: var(--surface); border-left: 1px solid var(--border);
@@ -216,7 +224,10 @@ pre {
   white-space: pre-wrap; word-break: break-word; margin: 0;
 }
 code { font-family: var(--mono); font-size: 12.5px; background: var(--surface-2); padding: 1px 5px; border-radius: 4px; }
-.mono { font-family: var(--mono); font-size: 12px; }
+/* A full 64-character SHA-256 has no break opportunity, and the prompt-set
+   hash is shown in full on purpose - it is what makes a scan auditable. Let it
+   wrap rather than push the page sideways. */
+.mono { font-family: var(--mono); font-size: 12px; overflow-wrap: anywhere; }
 .dim { color: var(--text-dim); }
 .faint { color: var(--text-faint); }
 .empty { color: var(--text-faint); padding: 32px; text-align: center; }

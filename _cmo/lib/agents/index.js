@@ -31,7 +31,7 @@ import { scoreRun } from '../geo/extract.js';
 import { aggregateScan } from '../geo/score.js';
 import { analyzePage, ssrCoverage, chunkability } from '../connectors/crawl.js';
 import { auditRobots, robotsPolicy } from '../geo/crawlers.js';
-import { wilson, marginOfError } from '../geo/stats.js';
+import { marginOfError } from '../geo/stats.js';
 
 // ---------------------------------------------------------------------------
 // Shared prompt scaffolding

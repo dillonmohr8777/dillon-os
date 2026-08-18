@@ -328,7 +328,9 @@ async function showArtifact(id) {
       ${(b.examples || []).length ? `<ul>${b.examples.map((e) => `<li class="mono">${esc(e.span || '')}${e.needs ? ` <span class="faint">needs: ${esc(e.needs)}</span>` : ''}</li>`).join('')}</ul>` : ''}</div>`).join('')}` : ''}
     ${(g.warnings || []).length ? `<h3>Warnings</h3>${g.warnings.map((b) => `<div class="note warn"><strong>${esc(b.rule)}</strong> — ${esc(b.message)}</div>`).join('')}` : ''}
     <h3>Claims detected (${(g.claims || []).length})</h3>
-    ${(g.claims || []).length ? `<ul>${g.claims.map((cl) => `<li><span class="badge">${esc(cl.kind)}</span> <span class="mono">${esc(cl.span)}</span></li>`).join('')}</ul>` : '<div class="faint">No factual claims requiring a source.</div>'}
+    ${(g.claims || []).length ? `<ul>${g.claims.map((cl) => `<li><span class="badge">${esc(cl.kind)}</span> ${
+      cl.matched ? `<strong class="mono">${esc(cl.matched)}</strong> <span class="faint">${esc(cl.span)}</span>` : `<span class="mono">${esc(cl.span)}</span>`
+    }</li>`).join('')}</ul>` : '<div class="faint">No factual claims requiring a source.</div>'}
     <h3>Sources (${(a.evidence || []).length})</h3>
     ${(a.evidence || []).length ? `<ul>${a.evidence.map((e) => `<li class="mono">${esc(e.ref)}${e.note ? ` — <span class="faint">${esc(e.note)}</span>` : ''}</li>`).join('')}</ul>` : '<div class="note warn">No sources attached. Any factual claim here is unverified.</div>'}
     ${g.readability ? `<h3>Readability</h3><div class="row-sub">grade ${g.readability.grade} · ${g.readability.words} words · ${g.readability.avgWordsPerSentence} words/sentence</div>` : ''}
