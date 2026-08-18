@@ -3,7 +3,7 @@ note_type: architecture
 status: active
 owner: Dillon Mohr
 created: 2026-07-29
-updated: 2026-08-11
+updated: 2026-08-18
 review_on: 2026-08-29
 source_refs:
   - https://obsidian.md/help/bases
@@ -157,3 +157,6 @@ truth as current truth.
 The vault may prepare and verify work. It never treats stored context or tool
 access as permission to send, publish, spend, change accounts, or destroy data.
 Secrets never enter notes.
+
+Web access uses the ladder in [[Web Escalation Architecture]]. Owned browser
+history stays under `12_Brain/private/browser-history/`.

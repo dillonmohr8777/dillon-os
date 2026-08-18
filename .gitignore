@@ -30,9 +30,17 @@ _templates/site-factory/harvest/
 .env.*
 !.env.example
 
+# Sibling/tool clones that must not enter the vault history.
+# camofox-browser is a separate repo; clone it with
+# `python System/scripts/Clone-CamofoxBrowser.py`.
+.vendor/
+
 # Radar V2 local artifacts (PII-capable). Never commit.
 _os/radar-engine/artifacts/
 _os/radar-engine/.data/
+
+# Live browser-engine probe — regenerable, machine-specific.
+12_Brain/state/browser-access.json
 
 # Site grader: the raw discovery pool is large and regenerable in one command
 # (bin/discover-prospects.js). The selected candidate list and the grade reports

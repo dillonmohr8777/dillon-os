@@ -2,7 +2,7 @@
 note_type: dashboard
 status: active
 owner: Dillon Mohr
-updated: 2026-08-01
+updated: 2026-08-18
 review_cadence: daily
 tags:
   - brain
@@ -33,6 +33,7 @@ and reusable memory.
 - [[05_Projects/2026-07-30 - Dillon OS five-goal operating plan|Five-goal operating plan]]
 - [[05_Projects/2026-07-30 - Qualified pipeline recovery|Qualified pipeline recovery]]
 - [[04_Decisions/2026-07-30 - Marketing Chief is Dillon's sole agent interface|Marketing Chief interface decision]]
+- [[09_Ops/Web Escalation Architecture|Web escalation architecture]]
 
 ## Strategy brain
 

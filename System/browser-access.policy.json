@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "updated": "2026-08-18",
+  "never": {
+    "ports": [9222],
+    "profiles": ["default", "%LOCALAPPDATA%\\Google\\Chrome\\User Data", "~/.config/google-chrome"],
+    "actions": ["submit_form", "accept_terms", "enter_credentials", "import_cookies_without_key"]
+  },
+  "chrome": {
+    "binaries": [
+      "/opt/google/chrome/chrome",
+      "C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe",
+      "google-chrome"
+    ],
+    "evidence_port": 9223,
+    "profile_env": "BROWSER_EVIDENCE_PROFILE"
+  },
+  "camofox": {
+    "base_url": "http://127.0.0.1:9377",
+    "health_path": "/health",
+    "telemetry": false,
+    "clone_cmd": "python System/scripts/Clone-CamofoxBrowser.py"
+  },
+  "jobs": {
+    "static_url": ["webfetch", "firecrawl_scrape", "chrome_isolated"],
+    "discovery": ["websearch", "firecrawl_search"],
+    "markdown_many": ["firecrawl_search", "firecrawl_scrape"],
+    "cloudflare": ["firecrawl_stealth", "camofox"],
+    "js_interact": ["camofox", "chrome_isolated", "playwright_mcp"],
+    "screenshot": ["chrome_isolated", "camofox"],
+    "logged_in": ["claude_in_chrome"],
+    "volume_stealth": ["camofox", "firecrawl_stealth"],
+    "operator_context": ["owned_history"]
+  }
+}

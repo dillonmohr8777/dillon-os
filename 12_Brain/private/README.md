@@ -1,11 +1,12 @@
 ---
 tags: [private, system]
-updated: 2026-07-29
+updated: 2026-08-18
 ---
 
 # 12_Brain/private/ — local / Sync-only layer
 
-**`dillon-os` on GitHub is a PUBLIC repository.**
+**`dillon-os` on GitHub is PRIVATE** (since 2026-08-18). Credentials, access
+inventories, and recovery codes still stay out of Git.
 
 Everything under `12_Brain/private/` (except this README) is **gitignored** and
 must never be committed. Use this folder for:
@@ -14,6 +15,7 @@ must never be committed. Use this folder for:
 - Client/access inventories, login runbooks, password-manager locators
 - Machine-specific absolute paths and local session archives
 - Credential-shaped values, tokens, API keys
+- Sanitized operator browser-history exports
 - Any note you would not paste into a public issue
 
 ## How to use
@@ -35,6 +37,7 @@ must never be committed. Use this folder for:
   access/            ← gitignored
   sessions/          ← gitignored
   raw/               ← gitignored sensitive captures
+  browser-history/   ← gitignored; written by System/scripts/Export-BrowserHistory.py
 ```
 
 ## Boundary rules
