@@ -51,3 +51,13 @@ _templates/arch-factory/out/
 /videos/
 *.mp4
 *.mov
+
+# Prospect Radar automation: source is tracked, artifacts are not.
+# runs/ is 191 MB of dated receipts and generated-stock-library/ is 70 MB of
+# approved image boards — both regenerable, neither belongs in a 3 GB history.
+automation/*/runs/
+automation/*/generated-stock-library/
+automation/*/font-cache/
+automation/*/.impeccable/
+automation/*/*.log
+automation/*/latest-daily-state.json

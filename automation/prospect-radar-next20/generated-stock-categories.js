@@ -1,0 +1,104 @@
+'use strict';
+
+const assignments = {
+  'allure-skin-nails-body': ['allure-skincare-nails-body', 'spa, nail, and skincare'],
+  'always-dental-care': ['germantown-dental-group', 'dental care'],
+  'a-new-dawn-massage': ['category-salon-massage', 'massage and wellness'],
+  'ansaris-pharma': ['ansaris-pharma', 'pharmacy'],
+  'architerra': ['category-architecture', 'architecture and landscape design'],
+  'ban-ban-asian-bistro': ['ban-ban-asian-bistro', 'Asian bistro dining'],
+  'baseline-contracting-inc': ['category-construction-masonry', 'construction'],
+  'big-head-transport': ['category-transport', 'transportation and trucking'],
+  'broomall-insurance-agency': ['p-and-c-insurance', 'insurance'],
+  'campbell-consultants': ['category-legal-professional', 'professional consulting'],
+  'coco-nails': ['allure-skincare-nails-body', 'nail salon'],
+  'colmar-dentistry-for-kids': ['udis-conn-orthodontics', 'pediatric dentistry'],
+  'countryside-animal-clinic-kurt-krusen-dvm': ['category-veterinary', 'veterinary care'],
+  'crosson-and-richetti-llc': ['category-legal-professional', 'legal services'],
+  'dewire-dental': ['havercrown-dental', 'dental care'],
+  'dogstar-books': ['category-books-antiques', 'independent bookselling'],
+  'dutton-road-veterinary-clinic': ['category-veterinary', 'veterinary care'],
+  'elite-auto-parts': ['e-and-s-autoparts', 'automotive parts'],
+  'elverson-supply': ['elverson-supply', 'building materials and hardware'],
+  'es-autoparts': ['e-and-s-autoparts', 'automotive parts'],
+  'fanta-c-beauty-bar': ['category-salon-massage', 'beauty salon'],
+  'fillman-and-sons-floors-and-more': ['category-flooring', 'flooring installation'],
+  'fletcher-masonry': ['category-construction-masonry', 'masonry'],
+  'fulton-and-susies-hairstyling-salon': ['category-salon-massage', 'hair styling'],
+  'galindo-veterinary': ['category-veterinary', 'veterinary care'],
+  'germantown-dental-group': ['germantown-dental-group', 'dental care'],
+  'golden-eagle-jewelry': ['category-jewelry', 'fine jewelry'],
+  'harvest-dental': ['germantown-dental-group', 'dental care'],
+  'haver-crown-dental': ['havercrown-dental', 'dental care'],
+  'hesselectric-com': ['category-electric-pool', 'electrical service'],
+  'jack-mcsheas-restaurant-bar': ['category-pub', 'restaurant and pub dining'],
+  'jade-garden': ['ban-ban-asian-bistro', 'Chinese restaurant dining'],
+  'jarman-air-conditioning': ['category-electric-pool', 'heating and air conditioning service'],
+  'jcl-automotive': ['category-auto-service', 'automotive service'],
+  'jad-s-pizza': ['category-pizzeria', 'pizzeria dining'],
+  'kehans-auto-service': ['category-auto-service', 'automotive service'],
+  'kim-s-kitchen': ['category-general-restaurant', 'neighborhood restaurant dining'],
+  'lees-hoagie-house': ['lees-hoagie-house', 'hoagies and sandwich making'],
+  'lehigh-valley-veterinary-dermatology': ['category-veterinary', 'veterinary dermatology'],
+  'maclaren-kitchen-bath': ['maclaren-kitchen-bath', 'kitchen and bath remodeling'],
+  'moore-brothers-construction': ['category-construction-masonry', 'construction'],
+  'morton-electric-pool-spa': ['category-electric-pool', 'electrical, pool, and spa service'],
+  'new-holland-auto-group': ['category-auto-service', 'automotive dealership and service'],
+  'nook-and-kranny-kafe': ['category-cafe-brunch', 'cafe and brunch dining'],
+  'p-and-c-insurance': ['p-and-c-insurance', 'insurance'],
+  'pa-tag-and-title': ['category-auto-service', 'vehicle title and registration service'],
+  'pearly-baker-s-ale-house': ['category-pub', 'ale house dining'],
+  'pisano-and-son-shoe-repair': ['category-shoe-repair', 'shoe repair'],
+  'prince-kitchens': ['maclaren-kitchen-bath', 'kitchen remodeling'],
+  'rakkii': ['ban-ban-asian-bistro', 'Asian restaurant dining'],
+  'strasburg-antique-market': ['category-books-antiques', 'antiques'],
+  'tax-express-yardley': ['category-legal-professional', 'tax preparation'],
+  'udis-conn-orthodontics': ['udis-conn-orthodontics', 'orthodontic care'],
+  'yale-electric-supply': ['category-electric-pool', 'electrical supply'],
+  'giuseppe-s-pizza': ['category-pizzeria', 'pizzeria dining'],
+};
+
+const rules = [
+  [/\b(?:clothing|clothes|apparel|fashion|outerwear)\b/, 'category-clothing-retail'],
+  [/\b(?:photo|photography|photographer|camera|portrait studio)\b/, 'category-photography-studio'],
+  [/\b(?:ice[- ]?cream|creamery|bakery|baked|cupcakes?|cakes?|desserts?|pastr(?:y|ies)|donuts?|coffee)\b/, 'category-dessert-bakery'],
+  [/(hoagie|sandwich|deli)/, 'lees-hoagie-house'],
+  [/\b(?:pizza|pizzeria|pizzaria)\b/, 'category-pizzeria'],
+  [/\b(?:asian|chinese|thai|japanese|korean|sushi|ramen|hibachi)\b/, 'ban-ban-asian-bistro'],
+  [/\b(?:cafe|kafe|brunch|breakfast)\b/, 'category-cafe-brunch'],
+  [/\b(?:restaurant|dining|food)\b/, 'category-general-restaurant'],
+  [/(pub|ale|bar|tavern)/, 'category-pub'],
+  [/(orthodont)/, 'udis-conn-orthodontics'],
+  [/(dentist|dental)/, 'germantown-dental-group'],
+  [/\b(?:urgent care|clinic|medical practice|healthcare|health care|physician|doctor)\b/, 'category-medical-clinic'],
+  [/(veterinar|animal|pet)/, 'category-veterinary'],
+  [/(pharm)/, 'ansaris-pharma'],
+  [/(insurance)/, 'p-and-c-insurance'],
+  [/(auto part|car part)/, 'e-and-s-autoparts'],
+  [/\b(?:automotive|auto|car|vehicle|notary|tag|title)\b/, 'category-auto-service'],
+  [/(floor)/, 'category-flooring'],
+  [/(mason|construction|contractor|roof)/, 'category-construction-masonry'],
+  [/(electric|pool|spa service|air condition|hvac|heating)/, 'category-electric-pool'],
+  [/(kitchen|bath|cabinet)/, 'maclaren-kitchen-bath'],
+  [/(architect|landscape design)/, 'category-architecture'],
+  [/(salon|massage|beauty|nail|skincare|wellness)/, 'category-salon-massage'],
+  [/(book|antique)/, 'category-books-antiques'],
+  [/(jewel)/, 'category-jewelry'],
+  [/(shoe repair|cobbler)/, 'category-shoe-repair'],
+  [/(transport|truck|logistic)/, 'category-transport'],
+  [/(law|legal|consult|tax|account|professional)/, 'category-legal-professional'],
+  [/(supply|hardware|building material)/, 'elverson-supply'],
+];
+
+function resolveGeneratedStockAssignment({ slug, name, category, vertical, verticalGroup }) {
+  if (assignments[slug]) return assignments[slug];
+  const signal = [slug, name, category, vertical, verticalGroup].filter(Boolean).join(' ').toLowerCase();
+  const descriptor = String(category || vertical || 'business').toLowerCase();
+  const match = rules.find(([pattern]) => pattern.test(signal));
+  if (!match) {
+    throw new Error(`No relevant generated-stock category is approved for ${slug} (${signal}). Generate and approve a new board instead of guessing.`);
+  }
+  return [match[1], descriptor];
+}
+
+module.exports = { resolveGeneratedStockAssignment };
