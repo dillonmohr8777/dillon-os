@@ -73,6 +73,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/06_Research/Qwen3.8-27B local RAM fit|Qwen3.8-27B local RAM fit]] — 64GB RAM loads the 18GB Q4 default; GPU VRAM is unrecorded (expires 2026-11-16).
 - [[12_Brain/06_Research/Qwen3.8 Ollama plan and buy list|Qwen3.8 Ollama plan and buy list]] — Ollama Free plus a 24GB GPU; paid plans are hosted, not the local 27B (expires 2026-11-16).
 - [[12_Brain/06_Research/Qwen3.8-27B quality|Qwen3.8-27B quality]] — local 27B is #1 in its open-weight class (AA 52, Luna-tier); not a frontier replacement (expires 2026-11-16).
+- [[12_Brain/06_Research/PicoClaw phone install|PicoClaw phone install]] — TikTok ZP8WqymUW is Sipeed PicoClaw on Android APK/Termux, not Qwen-on-phone (expires 2026-11-16).
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
