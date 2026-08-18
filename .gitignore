@@ -25,10 +25,15 @@ _templates/site-factory/harvest/
 12_Brain/private/**
 !12_Brain/private/README.md
 
-# Local environment files — MCP tokens (LANDINGFOLIO_TOKEN) belong here, never in Git
+# Local environment files. Never commit.
 .env
 .env.*
 !.env.example
+
+# IMMOHRTAL CLAW runtime tape (sessions, traces, long-term memory)
+immohrtal-claw/data/**
+!immohrtal-claw/data/.gitkeep
+immohrtal-claw/workspace/memory/
 
 # Radar V2 local artifacts (PII-capable). Never commit.
 _os/radar-engine/artifacts/

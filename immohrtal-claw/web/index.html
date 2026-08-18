@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#f7f9fb" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="CLAW" />
+    <title>IMMOHRTAL CLAW</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#composer">Skip to composer</a>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="top">
+      <a class="brand" href="/" aria-label="IMMOHRTAL CLAW home">
+        <img class="logo" src="/logo.png" width="44" height="44" alt="" />
+        <span>
+          <span class="mono-tag">Personal agent</span>
+          <h1 class="chrome-text">IMMOHRTAL CLAW</h1>
+        </span>
+      </a>
+      <p class="status" id="status">local</p>
+      <button type="button" class="btn btn-ghost rail-toggle" id="railToggle">Harness</button>
+    </header>
+    <main>
+      <section class="board" aria-label="Chat">
+        <p class="lede font-serif" id="lede">PicoClaw-class agent. Files, memory, search, cron, spawn. Not a music product.</p>
+        <ol id="log" class="log"></ol>
+        <form id="composer">
+          <label class="sr" for="message">Message</label>
+          <textarea id="message" name="message" rows="3" required placeholder="Ask the agent. Pin a fact. Search the web. Set a reminder."></textarea>
+          <div class="row">
+            <button class="btn btn-chrome" type="submit" id="send">Send</button>
+            <p class="hint" id="hint">Rehearsal brain until you point a model at it.</p>
+          </div>
+        </form>
+      </section>
+      <aside class="rail" id="rail" aria-label="Harness">
+        <section>
+          <h2 class="section-eyebrow">Provider</h2>
+          <p id="provider">loading</p>
+        </section>
+        <section>
+          <h2 class="section-eyebrow">Memory</h2>
+          <p id="memory">—</p>
+        </section>
+        <section>
+          <h2 class="section-eyebrow">Skills</h2>
+          <ul id="skills"></ul>
+        </section>
+        <section>
+          <h2 class="section-eyebrow">Last trace</h2>
+          <ol id="trace" class="trace"></ol>
+        </section>
+      </aside>
+    </main>
+    <div class="gate" id="gate" hidden>
+      <div class="gate-card glass-panel">
+        <img class="logo" src="/logo.png" width="72" height="72" alt="" />
+        <p class="mono-tag">IMMOHRTAL CLAW</p>
+        <h2 class="chrome-text">Gate</h2>
+        <p class="font-serif">Phone tunnel. Enter the gate code.</p>
+        <form id="gateForm">
+          <label class="sr" for="gateCode">Gate code</label>
+          <input id="gateCode" name="token" autocomplete="current-password" required />
+          <button class="btn btn-chrome" type="submit">Enter</button>
+        </form>
+        <p class="hint" id="gateErr"></p>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

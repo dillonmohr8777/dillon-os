@@ -1,0 +1,12 @@
+{
+  "name": "IMMOHRTAL CLAW",
+  "short_name": "CLAW",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f9fb",
+  "theme_color": "#f7f9fb",
+  "icons": [
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

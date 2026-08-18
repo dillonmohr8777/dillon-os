@@ -1,0 +1,65 @@
+openapi: 3.1.0
+info:
+  title: IMMOHRTAL CLAW
+  version: 0.1.0
+  description: >
+    Gated local gateway for IMMOHRTAL CLAW, a PicoClaw-class personal agent.
+    Not a music product. Draft Custom GPT actions can point here later.
+    ChatGPT hosting stays later.
+servers:
+  - url: http://127.0.0.1:4800
+paths:
+  /api/health:
+    get:
+      operationId: health
+      summary: Health and provider
+      responses:
+        '200':
+          description: OK
+  /v1/chat/completions:
+    post:
+      operationId: chatCompletions
+      summary: OpenAI-compatible chat
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                model:
+                  type: string
+                messages:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      role:
+                        type: string
+                      content:
+                        type: string
+              required: [messages]
+      responses:
+        '200':
+          description: Completion
+  /api/chat:
+    post:
+      operationId: clawChat
+      summary: Native CLAW turn with traces
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                session_id:
+                  type: string
+                message:
+                  type: string
+                stream:
+                  type: boolean
+              required: [message]
+      responses:
+        '200':
+          description: Turn result or SSE stream

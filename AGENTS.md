@@ -86,6 +86,7 @@ for the two npm-based sites below.
 |---|---|---|---|---|
 | D.I.L.L.O.N. OS (HUD) — flagship | `_os/` | `node _os/server.js` | http://127.0.0.1:4242 | Reads the vault + `12_Brain` live. `GET /api/state` includes `brain` vitals. |
 | IMMOHRTAL site | `immohrtal-site/` | `npm run dev` | http://localhost:5173 | Vite 6 + React 19. Append `?forcegl` in headless/VM browsers. |
+| IMMOHRTAL CLAW | `immohrtal-claw/` | `node server.js` | http://127.0.0.1:4800 | PicoClaw-class personal agent. Website visual system, not a music product. Phone tunnel is gated. ChatGPT later. |
 | Shadow HVAC site | `01_Clients/Shadow HVAC/website/` | `npm run dev` | http://localhost:3000 | Next.js 15. First route compile is slow. |
 | Mohr Media site | `mohr-media-site/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML/JS/WebGL. |
 | Philly 25 gallery | `philly-sites/` | `python3 -m http.server 8080` | http://localhost:8080 | Static HTML. |
@@ -106,10 +107,13 @@ Any new MCP goes through `_os/automation/bin/mcp-gate.js` first.
 
 ```
 node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/workshop-calendar.test.js
+node --test immohrtal-claw/tests/harness.test.js
 ```
 
 - Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path
   wiring, and public-safety scanning.
+- IMMOHRTAL CLAW harness tests cover sandboxing, memory, album tools, and the
+  local gateway. They isolate workspace/data into a temp dir.
 - `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has
   no ESLint config — interactive only; do not run non-interactively.
 - `immohrtal-site` has no lint script.
