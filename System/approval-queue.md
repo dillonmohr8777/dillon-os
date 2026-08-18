@@ -26,7 +26,7 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 - VA Claims - Approve client review after VACE design reconciliation; backend and DNS changes remain gated - Risk: medium
 - [ ] 2026-07-12 - Bridge Software Development - Approve client-facing milestone after Phase 1 ownership board and compliance review - Risk: medium
 ## Operating actions
-- [ ] 2026-08-18 - IMMOHRTAL CLAW - Approve any public host, Custom GPT, or tunnel off localhost; local stage at http://127.0.0.1:4800 is already built - Risk: medium
+- [x] 2026-08-18 - IMMOHRTAL CLAW - Operator approved a gated phone tunnel for personal play. Custom GPT / ChatGPT app / public production host still blocked. Local app at http://127.0.0.1:4800 - Risk: medium
 - [ ] 2026-07-12 - Revenue - Verify current invoices or contracts for all 14 active clients before publishing MRR - Risk: low
 - [ ] 2026-07-12 - Cursor/MCP - Authenticate Composio, Slack, and WordPress connectors when live reads are required - Risk: low
 - [ ] 2026-07-12 - Book funnel - Configure and test lead-capture delivery before production deployment - Risk: high

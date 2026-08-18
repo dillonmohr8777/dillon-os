@@ -14,4 +14,4 @@ A project is a finite outcome, not an area of responsibility. Each active
 project has one owner, one binary finish line, a current next action, a due or
 review date, and links to its client, decisions, and evidence.
 
-- [[IMMOHRTAL CLAW]] — local booth harness staged; publish blocked.
+- [[IMMOHRTAL CLAW]] — PicoClaw-class personal agent; not a music product.

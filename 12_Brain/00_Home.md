@@ -32,7 +32,7 @@ and reusable memory.
 
 - [[05_Projects/2026-07-30 - Dillon OS five-goal operating plan|Five-goal operating plan]]
 - [[05_Projects/2026-07-30 - Qualified pipeline recovery|Qualified pipeline recovery]]
-- [[05_Projects/IMMOHRTAL CLAW|IMMOHRTAL CLAW]] — local booth harness; publish blocked
+- [[05_Projects/IMMOHRTAL CLAW|IMMOHRTAL CLAW]] — PicoClaw-class personal agent; not a music product
 - [[04_Decisions/2026-07-30 - Marketing Chief is Dillon's sole agent interface|Marketing Chief interface decision]]
 
 ## Strategy brain
