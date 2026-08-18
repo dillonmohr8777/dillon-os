@@ -267,6 +267,17 @@ Honest accounting, because a README that overstates is the thing this product ex
 - **Publishing.** WordPress, GBP and social publishing are specified, risk-tiered and
   idempotency-keyed. No publisher is implemented. Nothing can post.
 
+**Where okara is ahead, and this is not**
+
+Observed directly on the live site: okara ships **twelve live publishing and data integrations** —
+WordPress, Webflow, Framer, Wix, Sanity, Search Console, Analytics, GitHub, LinkedIn, X, WhatsApp,
+Telegram — with TikTok, Instagram and Slack marked soon. Approved work publishes and reports back
+automatically. Its sandbox-to-pull-request loop for technical SEO is a real capability. Its
+client-side encryption is competently engineered. It has 120,000 users.
+
+This build has one live connector (the crawler) and no publisher at all. The approval gate here is
+better; the loop it gates is not closed yet.
+
 **Deliberately not built**
 - Automated Reddit or Hacker News posting. `community-watch` is read-only and always will be.
 - Live ad-account mutation. Reads only; every mutate is a high-risk approval-gated effect.

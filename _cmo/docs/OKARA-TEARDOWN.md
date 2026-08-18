@@ -1,6 +1,6 @@
 # okara.ai — reverse-engineering teardown
 
-**Compiled** 2026-08-18 · **Method** indirect only · **Status** research artifact, expires 2026-11-18
+**Compiled** 2026-08-18 · **Revised** 2026-08-18 (rev. 2, direct observation folded in) · **Status** research artifact, expires 2026-11-18
 
 ---
 
@@ -30,8 +30,17 @@ reconstructions of complaints, not user testimony. **Trustpilot shows two review
 That is the entire verifiable first-party user-voice corpus. Treat every quoted complaint as
 directional.
 
-Confidence tags used below: **[C]** confirmed from a first-party source · **[L]** likely, from
-consistent indirect evidence · **[3P]** third-party claim only · **[?]** unverified.
+Confidence tags used below: **[P]** primary observation of the live site · **[C]** confirmed from a
+first-party source · **[L]** likely, from consistent indirect evidence · **[3P]** third-party claim
+only · **[?]** unverified.
+
+**Update 2026-08-18, after first publication.** The site was subsequently observed directly, on a
+device outside this environment's egress policy, and the observation is folded in below. It is worth
+recording what that did to the indirect method: **the structural findings held, and the corrections
+were all at the level of detail** — which engines one agent card names, whether one output
+auto-publishes or downloads. The stack findings are unaffected, because they never depended on the
+site: they came from okara's own CI and their vendors' case studies. Four claims are corrected in
+§04 and three move from unverified to confirmed.
 
 ---
 
@@ -116,24 +125,76 @@ Eleven confirmed surfaces. All daily unless noted.
 |---|---|---|
 | **Reddit** | monitors keywords + subreddits, surfaces high-intent threads, tracks brand/competitor mentions, summarises each subreddit's rules, drafts an on-brand reply per thread | **No** — you post manually, by design |
 | **SEO** | daily full technical audit, keyword gaps, position tracking; emits **exactly 2 high-impact fixes per day** with copy-paste snippets | via Fix button / Coding Agent |
-| **GEO** | tracks how ChatGPT, Perplexity, Gemini and Claude describe the brand; GEO score, sentiment, per-platform presence map, daily recommendations | No |
+| **GEO** | *card text, observed:* "Gets your brand cited in ChatGPT, and Google AI Overviews." Indexed pages describe a wider set — ChatGPT, Perplexity, Gemini, Claude — plus GEO score, sentiment and a per-platform map **[discrepancy]** | No |
 | **X** | daily post and thread drafts in brand voice | Yes, click-to-publish + queue |
 | **LinkedIn** | founder-style posts and article drafts | Yes, company or personal page |
 | **Writer / Articles** | one long-form SEO post per day, with target keyword, secondary keywords, difficulty, suggested approach | Yes → WordPress, Webflow, Framer, Wix, Sanity |
 | **Hacker News** | Show HN / Ask HN drafts including the title *and* the "I built this because" first comment | No |
-| **UGC Video** | brief → short vertical video; 9:16/16:9/1:1, credit cost shown up front. The most expensive agent | TikTok (marked "soon") |
+| **UGC Video** | *card text, observed:* "Guided briefs, multi-aspect AI clips, and **downloads** for social and ads." Has its own detail page. Credit cost shown before generating; the most expensive agent | **Download, not auto-publish.** TikTok is marked SOON in the integration grid **[corrected]** |
 | **Coding** | reads the repo, opens PRs with JSON-LD, canonicals, meta descriptions, sitemaps, `llms.txt`, FAQ schema | Yes, as a PR |
-| **Influencer** | finds creators, does outreach, manages campaign, handles payments. Priced flat + **10% of campaign spend** | Yes |
+| **Influencer** | *card text, observed:* "Connect with the right influencers for your brand automatically." Indexed pages go further — outreach, campaign management, payments, priced flat + **10% of campaign spend** | Yes |
 | **Talk to AI CMO** | chat wired to the product context and dashboard | n/a |
 
-**The autopilot gap.** The marketing says "puts marketing on autopilot". The docs say you click
-publish on every post, Reddit never auto-posts, and HN never auto-posts. Every reviewer who paid
-lands on *co-pilot, not autopilot*. That divergence is the single most exploitable positioning seam
-in the product.
+### The publishing surface, observed
 
-Referenced but reportedly unshipped: a "Link Broker" agent, a YouTube agent. Email campaigns and ad
-buying appear **only** in launch-hype press, never on okara's own agent pages — treat as
-nonexistent. **[?]**
+The marketing page carries a numbered onboarding narrative, and its third step is the integration
+grid. Observed directly: **twelve live channels and three marked `SOON`.** **[P]**
+
+| | Channels |
+|---|---|
+| **CMS / site** | WordPress · Webflow · Framer · Wix · Sanity |
+| **Data in** | Google Search Console · Google Analytics |
+| **Code** | GitHub |
+| **Social** | LinkedIn · X |
+| **Messaging** | WhatsApp · Telegram |
+| **`SOON`** | TikTok · Instagram · Slack |
+
+Two things to take from this rather than argue with.
+
+**It is broader than I credited, and it is shipped.** Five CMS platforms, both Google data sources,
+GitHub for the PR loop, and two social channels that publish on approval. WhatsApp and Telegram are
+in the live grid, not the SOON row — so they are real integrations, not the notification channels I
+had guessed at. For a four-person team this is a lot of surface, and it is the strongest thing about
+the product.
+
+**It also explains the ceiling.** Twelve integrations times 120,000 tenants is a very large vault of
+write-scoped OAuth tokens sitting behind application-code isolation. That is the risk noted in §06,
+made concrete: the same breadth that makes the product good makes one prefix bug or one vault
+compromise a mass-defacement event.
+
+### The autopilot question, corrected
+
+My first pass framed this as marketing dishonesty: *"the marketing says autopilot, the docs say you
+click publish on every post."* Direct observation makes that too strong, and the accurate version is
+more interesting.
+
+**Every agent card is scrupulously honest about the gate.** Observed verbatim: **[P]**
+
+> Reddit — "drafts reply ideas and posts **for you to review before publishing**"
+> SEO — "drafts blog posts and landing pages **for your approval**"
+> X — "post and thread drafts you can edit, refine, and **post yourself**"
+> LinkedIn — "drafts professional posts **for you to personalise and share**"
+> Hacker News — "drafts comments **for you to post**"
+> Writer — "Drafts long-form content, articles, and copy tailored to your brand voice **for you**"
+
+And the section above the roster ends: *"…so nothing drifts off-message. **You stay in control.**"*
+
+So the product copy and the homepage headline are two different registers, not a lie. More
+importantly, the publish step is **more automated than I credited**. The integration section reads:
+*"connect […] once, and **approved work publishes and reports back automatically**."* **[P]**
+
+That is the real shape: **approval is the gate, and publishing after approval is automatic** for the
+twelve integrated channels. Reddit and Hacker News stay fully manual because they have no
+integration — which is a deliberate ban-avoidance choice, not an omission.
+
+This matters for positioning. The honest contrast is not "they claim autopilot but make you paste."
+It is that **their gate is per-item human approval with no separation of duties, no risk tiering, and
+no record of what the approver was shown** — which is exactly what stops working at forty accounts.
+
+Also confirmed by observation: a **Link Broker Agent** exists on the roster with a `SOON` badge —
+"automated high-quality backlink building and management system." **[P]** That moves from a
+third-party rumour to a stated roadmap item. Email campaigns and ad buying still appear **only** in
+launch-hype press, never on okara's own agent pages. **[?]**
 
 ---
 

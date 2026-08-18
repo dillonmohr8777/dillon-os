@@ -1,8 +1,6 @@
-<!-- Source of the published teardown page.
+<!-- Source of the published teardown page. Revision 2.
      Body content only: no <!doctype>, <html>, <head> or <body> wrapper, because
-     the artifact host supplies that skeleton at publish time. To self-host,
-     wrap it in a minimal document; to re-publish, pass the artifact URL so it
-     updates in place rather than creating a second copy.
+     the artifact host supplies that skeleton at publish time.
      Published: https://claude.ai/code/artifact/48db51cc-80f3-4e9b-a715-185766772e4b -->
 <title>Okara Teardown</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -234,6 +232,7 @@
     background: var(--surface-sunk);
     color: var(--ink-soft);
   }
+  .chip.primary { background: var(--moss); color: var(--surface); }
   .chip.confirmed { background: var(--moss-soft); color: var(--moss); }
   .chip.likely { background: var(--signal-soft); color: var(--signal); }
   .chip.thirdparty { background: var(--surface-sunk); color: var(--ink-soft); }
@@ -421,14 +420,14 @@
 <div class="wrap">
 
 <header class="masthead">
-  <p class="eyebrow"><span>Competitive teardown</span><span>·</span><span>okara.ai</span><span>·</span><span>indirect evidence only</span></p>
+  <p class="eyebrow"><span>Competitive teardown</span><span>·</span><span>okara.ai</span><span>·</span><span>rev. 2</span></p>
   <h1>What okara.ai is built on, and the one thing its architecture can't do</h1>
   <p class="standfirst">A $99–249/mo “AI CMO” running ten organic agents for 120,000 businesses, reconstructed without ever loading the site — and the specific gap that decided what to build instead.</p>
   <div class="meta">
     <span><b>Compiled</b> 2026-08-18</span>
     <span><b>Expires</b> 2026-11-18</span>
     <span><b>Target</b> okara.ai</span>
-    <span><b>Access</b> blocked at CONNECT</span>
+    <span><b>Access</b> blocked at CONNECT, then observed directly</span>
   </div>
 </header>
 
@@ -458,7 +457,19 @@
     <p><strong>Trustpilot shows two reviews, both one-star.</strong> That is the entire verifiable first-party user-voice corpus for a product with 120,000 accounts. Every quoted complaint below is directional at best.</p>
   </div>
 
+  <div class="aside">
+    <span class="label">Update — after first publication</span>
+    <p>The site was subsequently observed directly, on a device outside this environment's egress
+    policy. That observation is folded in below, and it is worth recording what it did to the
+    indirect method: <strong>the structural findings held, and every correction was at the level of
+    detail</strong> — which engines one agent card names, whether one output publishes or downloads.</p>
+    <p>The stack in §02 is unaffected, because it never depended on reaching the site. Four claims are
+    corrected in §04 and three move from unverified to observed. Where the two disagree, the
+    disagreement itself is shown rather than resolved silently.</p>
+  </div>
+
   <div class="legend">
+    <div><span class="chip primary">observed</span> the live site, directly</div>
     <div><span class="chip confirmed">confirmed</span> first-party source</div>
     <div><span class="chip likely">likely</span> consistent indirect evidence</div>
     <div><span class="chip thirdparty">third-party</span> single external claim</div>
@@ -604,21 +615,57 @@
         <tr><td>Coding</td><td>JSON-LD, canonicals, meta, sitemaps, <code>llms.txt</code></td><td>Yes — as a PR</td></tr>
         <tr><td>Writer</td><td>One long-form article per day with keyword and difficulty</td><td>Yes — 5 CMS platforms</td></tr>
         <tr><td>X · LinkedIn</td><td>Daily post and thread drafts in brand voice</td><td>Click-to-publish</td></tr>
-        <tr><td>GEO</td><td>Per-platform presence map, GEO score, sentiment</td><td>No</td></tr>
+        <tr><td>GEO</td><td><em>Card, observed:</em> “Gets your brand cited in ChatGPT, and Google AI Overviews.” Indexed pages claim a wider set — ChatGPT, Perplexity, Gemini, Claude — plus score, sentiment and a per-platform map <span class="chip unverified">discrepancy</span></td><td>No</td></tr>
         <tr><td>Reddit</td><td>High-intent threads plus a drafted reply per thread</td><td><strong>No — by design</strong></td></tr>
+        <tr><td>Link Broker</td><td>“Automated high-quality backlink building and management.” On the roster with a <code>SOON</code> badge <span class="chip primary">observed</span></td><td>—</td></tr>
         <tr><td>Hacker News</td><td>Show HN / Ask HN title <em>and</em> first comment</td><td>No</td></tr>
-        <tr><td>UGC Video</td><td>Brief → short vertical video. The credit sink</td><td>TikTok, “soon”</td></tr>
-        <tr><td>Influencer</td><td>Creator sourcing, outreach, payments. Flat fee + 10% of spend</td><td>Yes</td></tr>
+        <tr><td>UGC Video</td><td><em>Card, observed:</em> “Guided briefs, multi-aspect AI clips, and <strong>downloads</strong> for social and ads.” The credit sink</td><td><strong>Download</strong>, not auto-publish <span class="chip gap">corrected</span></td></tr>
+        <tr><td>Influencer</td><td><em>Card, observed:</em> “Connect with the right influencers for your brand automatically.” Indexed pages go further — outreach, campaign management, payments, flat fee + 10% of spend</td><td>Yes</td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="finding">
-    <span class="label">The exploitable seam</span>
-    <p>The marketing says <em>“puts marketing on autopilot.”</em> The documentation says you click publish on every post, Reddit never auto-posts, and Hacker News never auto-posts. Every reviewer who actually paid lands on <strong>co-pilot, not autopilot.</strong></p>
+  <h3>The publishing surface</h3>
+
+  <p>Observed directly: <strong>twelve live channels and three marked <code>SOON</code></strong>, presented as step three of a numbered onboarding narrative. <span class="chip primary">observed</span></p>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Category</th><th>Channels</th></tr></thead>
+      <tbody>
+        <tr><td>CMS / site</td><td class="tech">WordPress · Webflow · Framer · Wix · Sanity</td></tr>
+        <tr><td>Data in</td><td class="tech">Google Search Console · Google Analytics</td></tr>
+        <tr><td>Code</td><td class="tech">GitHub</td></tr>
+        <tr><td>Social</td><td class="tech">LinkedIn · X</td></tr>
+        <tr><td>Messaging</td><td class="tech">WhatsApp · Telegram</td></tr>
+        <tr><td><code>SOON</code></td><td class="tech">TikTok · Instagram · Slack</td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <p>Three whole categories are absent, and okara's own comparison content concedes the first: <strong>paid media management</strong>, <strong>local SEO and Google Business Profile</strong>, and <strong>reconciling platform-reported conversions against real leads</strong>. Local appears nowhere in its roster — or in any GEO tool.</p>
+  <p>This is broader than I had credited, and it is shipped. WhatsApp and Telegram sit in the live grid rather than the <code>SOON</code> row, so they are real integrations and not the notification channels I had guessed at. For a four-person team it is a lot of working surface, and it is the strongest thing about the product.</p>
+
+  <p>It also makes the §03 risk concrete. Twelve integrations across 120,000 tenants is a very large vault of write-scoped OAuth tokens sitting behind application-code isolation. The same breadth that makes the product good is what makes one prefix bug a mass event.</p>
+
+  <h3>The autopilot question, corrected</h3>
+
+  <p>My first pass framed this as marketing dishonesty — <em>the marketing says autopilot, the docs say you click publish on every post.</em> Direct observation makes that too strong, and the accurate version is more useful.</p>
+
+  <p><strong>Every agent card is scrupulous about the gate.</strong> Verbatim: <span class="chip primary">observed</span></p>
+
+  <blockquote>Reddit — “drafts reply ideas and posts <strong>for you to review before publishing</strong>” · SEO — “drafts blog posts and landing pages <strong>for your approval</strong>” · X — “drafts you can edit, refine, and <strong>post yourself</strong>” · LinkedIn — “drafts professional posts <strong>for you to personalise and share</strong>” · Hacker News — “drafts comments <strong>for you to post</strong>”</blockquote>
+
+  <p>The section above the roster closes: <em>“…so nothing drifts off-message. <strong>You stay in control.</strong>”</em> That is honest product copy. The homepage headline is a different register, not a lie.</p>
+
+  <p>And the publish step is <strong>more automated than I credited</strong>. The integration copy reads: <em>“connect […] once, and <strong>approved work publishes and reports back automatically</strong>.”</em> So the real shape is <strong>approval as the gate, with publishing automatic after it</strong> for the twelve integrated channels. Reddit and Hacker News stay fully manual because they have no integration — a deliberate ban-avoidance choice.</p>
+
+  <div class="finding">
+    <span class="label">So the honest contrast is narrower, and better</span>
+    <p>Not “they claim autopilot but make you paste.” It is that their gate is <strong>per-item human approval with no separation of duties, no risk tiering, and no record of what the approver was shown.</strong></p>
+    <p>That works at one brand. It is exactly what stops working at forty, because the reviewer stops reading and the gate becomes decorative — and afterwards there is nothing to reconstruct what they approved.</p>
+  </div>
+
+  <p>Three whole categories are still absent, and okara's own comparison content concedes the first: <strong>paid media management</strong>, <strong>local SEO and Google Business Profile</strong>, and <strong>reconciling platform-reported conversions against real leads</strong>. Local appears nowhere in its roster — or in any GEO tool.</p>
 
   <details>
     <summary>Pricing, and why its instability matters</summary>
@@ -677,9 +724,11 @@
 
   <p>For four engineers serving 120,000 tenants, most of their choices are close to optimal. The AI Gateway deleted eight provider integrations and all retry logic from a codebase two people maintain. A managed queue instead of standing up Kafka is right. A managed vector index instead of a Pinecone bill is right. None of that should be “improved” by adding operational surface.</p>
 
-  <p>And on capability: <strong>okara actually publishes</strong> to five CMS platforms today. Its sandbox-to-pull-request loop for technical SEO is a real, non-trivial capability. Its client-side encryption is competently engineered, and its whitepaper honestly discloses that messages are plaintext during active processing. It has 120,000 users.</p>
+  <p>And on capability, now measured rather than estimated: <strong>okara ships twelve live publishing and data integrations</strong>, and approved work publishes and reports back without a human touching it again. Its sandbox-to-pull-request loop for technical SEO is a real, non-trivial capability. Its client-side encryption is competently engineered, and its whitepaper honestly discloses that messages are plaintext during active processing. It has 120,000 users.</p>
 
-  <p>The build that followed this teardown has publishing paths specified, risk-tiered and idempotency-keyed — and <strong>no publisher implemented.</strong> It has one demo workspace. It has never made a live model call, because the environment it was built in had no API key. Those are stated in its README rather than glossed, for the same reason every number in it carries a source.</p>
+  <p>The build that followed this teardown has publishing paths specified, risk-tiered and idempotency-keyed — and <strong>no publisher implemented.</strong> One live connector against twelve. One demo workspace against 120,000. It has never made a live model call, because the environment it was built in had no API key.</p>
+
+  <p>So the claim is narrow and worth stating precisely: <strong>the gate here is better; the loop it gates is not closed yet.</strong> Those limits are in the README rather than glossed, for the same reason every number in this report carries a source.</p>
 </section>
 
 <footer>
