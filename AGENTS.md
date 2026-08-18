@@ -122,6 +122,50 @@ node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/w
 - IMMOHRTAL list signup posts to a hosted Netlify form backend; locally the UI
   renders but submission won't persist.
 
+## Autonomous layer
+
+Scheduled work runs from Windows Task Scheduler through
+`C:\Users\dillo\.codex\tools\Run-HiddenScheduledTask.vbs`, which resolves the real
+command from `hidden-scheduled-tasks.tsv`. Edit that manifest, not the task
+actions.
+
+| Task | Cadence | What it does |
+|---|---|---|
+| `Claude-Autonomous-Daily-Driver` | every 15 min | Runs `System/scripts/Invoke-ClaudeDailyDriver.ps1`, which gates the 54 routines in `11_Agents/claude-operating-team.json` through `Invoke-ClaudeLoop.ps1` and executes the eligible ones. |
+| `Prospect Radar - Next 20 Daily Builder` | 05:20 daily | `automation/prospect-radar-next20/Run-ProspectRadarNext20Daily.ps1` — builds 20 local noindex sites, browser QA, generated imagery. `mail_ready` is always `hold`. |
+| `Claude Weekly Skills Research Brief` | weekly | Skills research brief. |
+| `Codex-AgentMemory-VaultSync` | hourly | Agent-memory and vault sync. |
+| `DillonAgentOS-GmailBridge` / `-SlackBridge` | ~15 min | Comms intake into `00_Inbox/`. |
+
+Deliberately **disabled** — superseded, do not re-enable without removing the
+replacement first: `DillonAgentOS-DailyBrief` and `-WeeklyCloseout` (a July 2026
+Python prototype in a dated session folder, replaced by the daily driver),
+`Prospect Radar - Next 15 Builder` (replaced by Next 20), `ClaudeBridge`.
+
+### The routine gate
+
+A routine executes only when all 8 gates pass: `G1_authority` (its `claude_role`
+must not be `never`), `G2_action_safety`, `G3_client_isolation`,
+`G4_budget_ceiling`, `G5_stale_source` (fail-closed freshness probe), `G6_dedupe`
+(one run per routine per day), `G7_lease`, `G8_circuit_breaker` (3 failures in
+today's receipt log opens it).
+
+`blocked` is usually correct — `G6_dedupe` means the routine already ran today.
+Receipts land in `12_Brain/queue/claude-loop-<date>.jsonl`; per-routine state in
+`12_Brain/state/claude-routines/`.
+
+Build steps come from an execution allowlist in `Invoke-ClaudeLoop.ps1`. A
+routine whose build command fails three times opens its breaker, so one broken
+health script silently stops several routines while the loop still looks idle.
+Check the receipt log for `failed` outcomes before concluding nothing is eligible.
+
+### Automation source vs artifacts
+
+`automation/` holds scheduled-automation source only. `runs/`,
+`generated-stock-library/`, `font-cache/`, `.impeccable/`, logs, and
+`latest-daily-state.json` are gitignored — 261 MB of regenerable output. The
+board library is a runner input: it must exist on disk but never enters Git.
+
 ## Sync safety
 
 Obsidian Sync is the device-sync layer. **Git is the source of truth** for this
