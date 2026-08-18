@@ -40,10 +40,11 @@ const { assertInside } = require('../src/sandbox');
 const { WORKSPACE, NOTES } = require('../src/paths');
 const { loadSkills, summary } = require('../src/skills-loader');
 const memory = require('../src/memory-store');
-const { execute } = require('../src/tools');
+const { execute, schemas } = require('../src/tools');
 const { loadConfig, selectModel } = require('../src/config');
 const { CATALOG, readiness } = require('../src/models');
 const knowledge = require('../src/knowledge');
+const browser = require('../src/browser');
 const { compileBrief } = require('../src/front-door');
 const { buildSystemPrompt } = require('../src/context-builder');
 const { streamLive } = require('../src/providers');
@@ -403,6 +404,48 @@ describe('ollama tag matching', () => {
     assert.equal(cloudVariant.ready, false, 'gemma4:31b-cloud must not satisfy gemma4:31b');
     assert.match(cloudVariant.blocker, /ollama pull gemma4:31b/);
     assert.equal(readiness(gemma, ['gemma4:31b']).ready, true);
+  });
+});
+
+describe('env load order', () => {
+  it('loads .env before anything reads process.env at module scope', () => {
+    const src = fs.readFileSync(path.join(root, 'server.js'), 'utf8');
+    const loaded = src.indexOf('loadDotEnv(ENV_FILE)');
+    const config = src.indexOf("require('./src/config')");
+    const gateway = src.indexOf("require('./src/gateway')");
+    assert.ok(loaded > 0, 'server.js loads .env');
+    // models.js builds CATALOG at require time from process.env. Requiring
+    // config first silently drops every CLAW_*_MODEL and OLLAMA_HOST override.
+    assert.ok(loaded < config, '.env must load before src/config');
+    assert.ok(loaded < gateway, '.env must load before src/gateway');
+  });
+});
+
+describe('browser transport', () => {
+  const clearCdp = () => {
+    delete process.env.CLAW_CDP_URL;
+    delete process.env.BOX_CDP_URL;
+  };
+
+  it('registers browser_read only when a CDP endpoint is configured', () => {
+    clearCdp();
+    assert.equal(schemas(config).some((t) => t.function.name === 'browser_read'), false);
+    process.env.CLAW_CDP_URL = 'http://127.0.0.1:59999';
+    assert.equal(schemas(config).some((t) => t.function.name === 'browser_read'), true);
+    clearCdp();
+  });
+
+  it('refuses to run at all without an endpoint', async () => {
+    clearCdp();
+    await assert.rejects(() => browser.readPage({ url: 'https://example.com' }), /CLAW_CDP_URL/);
+  });
+
+  it('blocks private hosts through the browser path, not just web_fetch', async () => {
+    process.env.CLAW_CDP_URL = 'http://127.0.0.1:59999';
+    for (const bad of ['http://127.0.0.1/secret', 'http://localhost/admin']) {
+      await assert.rejects(() => browser.readPage({ url: bad }), /private/);
+    }
+    clearCdp();
   });
 });
 

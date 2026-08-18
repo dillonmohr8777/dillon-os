@@ -12,6 +12,7 @@ const net = require('./net');
 const spawn = require('./spawn');
 const knowledge = require('./knowledge');
 const checker = require('./checker');
+const browser = require('./browser');
 const models = require('./models');
 const { selectModel } = require('./config');
 
@@ -341,6 +342,24 @@ function schemas(config) {
       },
     },
   ];
+  if (browser.available()) {
+    list.push({
+      type: 'function',
+      function: {
+        name: 'browser_read',
+        description: 'Read a public page through the local headless browser when web_fetch returns an empty JS shell. Read only: it cannot click, submit, download, or sign in.',
+        parameters: {
+          type: 'object',
+          properties: {
+            url: { type: 'string', description: 'Public http(s) URL. Private hosts are blocked.' },
+            wait_ms: { type: 'integer', description: 'Render settle time, 0-10000. Default 1200.' },
+            max_chars: { type: 'integer', description: 'Text ceiling. Default 12000.' },
+          },
+          required: ['url'],
+        },
+      },
+    });
+  }
   if (config.allowExec) {
     list.push({
       type: 'function',
@@ -483,6 +502,12 @@ async function execute(name, rawArgs, config) {
         name: args.name,
         content: args.content,
         overwrite: Boolean(args.overwrite),
+      });
+    case 'browser_read':
+      return browser.readPage({
+        url: args.url,
+        waitMs: args.wait_ms == null ? 1200 : args.wait_ms,
+        maxChars: args.max_chars || 12000,
       });
     case 'second_opinion':
       return checker.secondOpinion({ config, claim: args.claim, sources: args.sources || '' });

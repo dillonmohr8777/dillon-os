@@ -5,12 +5,16 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const { DATA, SESSIONS, TRACES, NOTES, ENV_FILE, WORKSPACE } = require('./src/paths');
 const { loadDotEnv } = require('./src/env');
+
+// MUST run before requiring config/models/gateway. models.js builds CATALOG at
+// module scope from process.env, so loading .env after that require silently
+// dropped every CLAW_*_MODEL override and OLLAMA_HOST on the floor.
+loadDotEnv(ENV_FILE);
+
 const { loadConfig } = require('./src/config');
 const { createServer } = require('./src/gateway');
 const memory = require('./src/memory-store');
 const { runTurn } = require('./src/agent-loop');
-
-loadDotEnv(ENV_FILE);
 
 if (process.env.CLAW_TUNNEL === '1' && !process.env.CLAW_GATE_TOKEN) {
   process.env.CLAW_GATE_TOKEN = crypto.randomBytes(18).toString('base64url');

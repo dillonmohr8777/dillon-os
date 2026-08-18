@@ -19,6 +19,36 @@ const modelBlocker = document.getElementById('modelBlocker');
 const probeBtn = document.getElementById('probeBtn');
 
 let modelIndex = new Map();
+let brainLabel = 'brain';
+let thinkingEl = null;
+let thinkingSince = 0;
+let thinkingTimer = null;
+
+// A live status line that counts up, so a slow first token reads as work in
+// progress rather than a hung page.
+function setThinking(text) {
+  if (!thinkingEl) {
+    thinkingEl = document.createElement('li');
+    thinkingEl.className = 'thinking';
+    logEl.append(thinkingEl);
+    document.body.classList.add('has-thread');
+  }
+  thinkingEl.textContent = text;
+  logEl.scrollTop = logEl.scrollHeight;
+  clearInterval(thinkingTimer);
+  thinkingTimer = setInterval(() => {
+    if (!thinkingEl) return;
+    const s = Math.round((Date.now() - thinkingSince) / 1000);
+    thinkingEl.textContent = `${text}  ${s}s`;
+  }, 1000);
+}
+
+function clearThinking() {
+  clearInterval(thinkingTimer);
+  thinkingTimer = null;
+  if (thinkingEl) thinkingEl.remove();
+  thinkingEl = null;
+}
 
 const sessionId = localStorage.getItem('claw-session') || `sess_${Date.now().toString(16)}`;
 localStorage.setItem('claw-session', sessionId);
@@ -68,6 +98,7 @@ async function loadState() {
   // The chrome status is the always-visible answer to "which brain is live".
   const where = data.gated ? 'gated · phone ok' : 'local';
   const brain = data.provider.label || data.provider.model;
+  brainLabel = brain;
   statusEl.textContent = `${brain} · ${where}`;
   await loadModels(data.provider.id);
   return true;
@@ -158,7 +189,15 @@ async function transmit(message) {
       const dataLine = (part.match(/^data: (.+)$/m) || [])[1];
       if (!event || !dataLine) continue;
       const data = JSON.parse(dataLine);
-      if (event === 'llm.start') closeLive();
+      // A local 26B with a full tool surface can take 30s+ before its first
+      // token, and a turn that opens with a tool call emits no text at all.
+      // Without this the paper UI just sits there looking broken.
+      if (event === 'llm.start') {
+        closeLive();
+        thinkingSince = Date.now();
+        setThinking(`thinking · ${brainLabel}`);
+      }
+      if (event === 'tool.start' || event === 'llm.delta') clearThinking();
       if (event === 'llm.delta') {
         if (!liveEl) {
           liveEl = addLine('claw', '');
@@ -180,6 +219,7 @@ async function transmit(message) {
       }
     }
   }
+  clearThinking();
   // The done payload is authoritative; only repaint if streaming fell short.
   if (final && liveEl && liveText.trim()) {
     liveEl.textContent = final;
@@ -198,6 +238,7 @@ form.addEventListener('submit', (e) => {
   if (!message) return;
   input.value = '';
   transmit(message).catch((err) => {
+    clearThinking();
     addLine('claw', err.message);
     send.disabled = false;
   });

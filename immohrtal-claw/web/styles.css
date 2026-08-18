@@ -2,20 +2,48 @@
   --paper: #f7f9fb;
   --paper-2: #eef2f6;
   --card: #ffffff;
-  --ink: #141922;
-  --dim: rgba(20, 25, 34, 0.72);
-  --faint: rgba(20, 25, 34, 0.62);
+
+  /* Ink runs deep on purpose. The old #141922 at 0.62 alpha was ~7:1 and read
+     washed out on a paper ground in daylight. These land 17:1 / 13:1 / 10:1,
+     so secondary copy is genuinely readable instead of merely present. */
+  --ink: #0b0f16;
+  --dim: rgba(11, 15, 22, 0.82);
+  --faint: rgba(11, 15, 22, 0.7);
+
   --signal: #1f9eff;
-  --signal-txt: #0d6bcc;
+  --signal-txt: #0a5cb0;
   --green: #17a86b;
-  --green-txt: #0d7a4b;
-  --line: rgba(20, 25, 34, 0.12);
-  --line-strong: rgba(20, 25, 34, 0.24);
-  --glass: linear-gradient(165deg, rgba(255, 255, 255, 0.82), rgba(244, 248, 252, 0.6));
+  --green-txt: #0a6b41;
+  --line: rgba(11, 15, 22, 0.14);
+  --line-strong: rgba(11, 15, 22, 0.28);
+  --glass: linear-gradient(165deg, rgba(255, 255, 255, 0.88), rgba(242, 246, 251, 0.66));
   --chrome: linear-gradient(180deg, #4a5464 0%, #1a212c 30%, #5d6a7e 48%, #10151d 55%, #434e5f 72%, #1c232f 100%);
   --glow-signal: 0 10px 30px rgba(31, 158, 255, 0.22), 0 2px 8px rgba(31, 158, 255, 0.12);
-  --glow-soft: 0 24px 60px rgba(20, 25, 34, 0.12), 0 6px 18px rgba(20, 25, 34, 0.08);
+  --glow-soft: 0 24px 60px rgba(11, 15, 22, 0.12), 0 6px 18px rgba(11, 15, 22, 0.08);
+
+  /* Elevation. Every step carries a real Y offset plus a soft blur, and a
+     light top edge that reads as a milled bevel rather than a glow. This is
+     what makes the chrome surfaces sit above the paper instead of on it. */
+  --edge-top: inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  --edge-base: inset 0 -1px 0 rgba(11, 15, 22, 0.06);
+  --e1:
+    0 1px 2px rgba(11, 15, 22, 0.07),
+    0 2px 6px rgba(11, 15, 22, 0.05);
+  --e2:
+    0 2px 4px rgba(11, 15, 22, 0.07),
+    0 8px 18px rgba(11, 15, 22, 0.08),
+    0 1px 0 rgba(11, 15, 22, 0.04);
+  --e3:
+    0 4px 8px rgba(11, 15, 22, 0.08),
+    0 16px 34px rgba(11, 15, 22, 0.11),
+    0 32px 64px rgba(11, 15, 22, 0.07);
+  --e4:
+    0 8px 16px rgba(11, 15, 22, 0.1),
+    0 28px 56px rgba(11, 15, 22, 0.14),
+    0 56px 96px rgba(11, 15, 22, 0.09);
+
   --ease-hover: cubic-bezier(0.17, 0.4, 0.02, 0.99);
+  --ease-pop: cubic-bezier(0.16, 1, 0.3, 1);
   --font-display: 'Anton', 'Arial Narrow', sans-serif;
   --font-serif: 'Instrument Serif', Georgia, serif;
   --font-body: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
@@ -596,6 +624,171 @@ textarea:focus, input:focus {
   * { transition: none !important; animation: none !important; }
 }
 
+/* =======================================================================
+   Depth, motion, and type pass.
+   Paper and chrome stay. What changes: ink runs darker, every raised
+   surface gets a bevel and a real shadow, and hover becomes movement
+   instead of a color swap.
+   ======================================================================= */
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+  text-rendering: optimizeLegibility;
+}
+
+/* Anton is a condensed face; at display sizes it needs negative tracking to
+   stop the counters closing up. */
+.display-line,
+.brand-word {
+  letter-spacing: -0.018em;
+}
+
+.lede {
+  color: var(--dim);
+  max-width: 34ch;
+  text-wrap: balance;
+}
+
+/* Measure. A thread that runs the full rail width is unreadable at 16px. */
+.log .body {
+  max-width: 72ch;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.log .who {
+  font-weight: 600;
+}
+
+.hint,
+.blocker,
+#memory,
+#provider {
+  color: var(--dim);
+}
+
+.rail ul li {
+  color: var(--dim);
+  line-height: 1.55;
+}
+
+/* --- Raised surfaces --------------------------------------------------- */
+
+.glass-panel,
+.marking-card {
+  box-shadow: var(--e2), var(--edge-top), var(--edge-base);
+  transition:
+    transform 0.4s var(--ease-hover),
+    box-shadow 0.4s var(--ease-hover);
+}
+
+.marking-card {
+  will-change: transform;
+}
+
+.marking-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--e3), var(--edge-top), var(--edge-base);
+}
+
+.top {
+  box-shadow: var(--e2), var(--edge-top);
+}
+
+.board {
+  box-shadow: var(--e3), var(--edge-top), var(--edge-base);
+}
+
+/* --- Controls: press physics ------------------------------------------ */
+
+.btn {
+  box-shadow: var(--e2), var(--edge-top);
+  transition:
+    transform 0.28s var(--ease-hover),
+    box-shadow 0.28s var(--ease-hover),
+    filter 0.28s var(--ease-hover);
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--e3), var(--edge-top);
+}
+
+/* Travel further down than the hover lift went up, so the click reads as
+   contact rather than a shrug. */
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: var(--e1), var(--edge-top);
+  transition-duration: 0.06s;
+}
+
+.btn:disabled {
+  box-shadow: var(--e1);
+  transform: none;
+}
+
+.model-pick,
+#gateCode,
+#message {
+  transition:
+    border-color 0.3s var(--ease-hover),
+    box-shadow 0.3s var(--ease-hover);
+  box-shadow: inset 0 1px 3px rgba(11, 15, 22, 0.07);
+}
+
+.model-pick:hover,
+#message:hover {
+  border-color: var(--line-strong);
+}
+
+.model-pick:focus-visible,
+#gateCode:focus-visible,
+#message:focus-visible {
+  outline: none;
+  border-color: var(--signal);
+  box-shadow:
+    inset 0 1px 3px rgba(11, 15, 22, 0.05),
+    0 0 0 3px rgba(31, 158, 255, 0.24);
+}
+
+/* --- The authored moment: a message arriving --------------------------- */
+
+.log li {
+  animation: claw-arrive 0.5s var(--ease-pop) both;
+}
+
+@keyframes claw-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+.trace li {
+  animation: claw-arrive 0.36s var(--ease-pop) both;
+}
+
+/* --- Brain readiness --------------------------------------------------- */
+
+.model-pick[data-ready='1'] {
+  border-color: rgba(23, 168, 107, 0.55);
+  box-shadow:
+    inset 0 1px 3px rgba(11, 15, 22, 0.06),
+    0 0 0 1px rgba(23, 168, 107, 0.18);
+}
+
+.model-pick[data-ready='0'] {
+  border-color: var(--line-strong);
+}
+
 /* Streaming + brain readiness ------------------------------------------- */
 
 .log .body.streaming::after {
@@ -615,26 +808,15 @@ textarea:focus, input:focus {
 
 .blocker {
   margin: 8px 0 0;
-  padding: 7px 10px;
+  padding: 8px 11px;
   border-radius: 10px;
-  border: 1px solid rgba(20, 25, 34, 0.16);
-  background: rgba(20, 25, 34, 0.045);
+  border: 1px solid rgba(11, 15, 22, 0.18);
+  background: rgba(11, 15, 22, 0.05);
   font-family: var(--font-mono);
-  font-size: 10.5px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-size: 11px;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
   color: var(--dim);
-}
-
-.model-pick[data-ready='0'] {
-  border-color: var(--line-strong);
-  background:
-    linear-gradient(rgba(20, 25, 34, 0.05), rgba(20, 25, 34, 0.05)),
-    rgba(255, 255, 255, 0.82);
-}
-
-.model-pick[data-ready='1'] {
-  border-color: rgba(23, 168, 107, 0.5);
 }
 
 .probe-btn {
@@ -646,4 +828,29 @@ textarea:focus, input:focus {
 
 @media (prefers-reduced-motion: reduce) {
   .log .body.streaming::after { animation: none; }
+}
+
+.thinking {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 9px 14px;
+  border-radius: 999px;
+  width: fit-content;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--e1), var(--edge-top);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dim);
+  animation: claw-arrive 0.4s var(--ease-pop) both, claw-breathe 2s ease-in-out infinite;
+}
+
+@keyframes claw-breathe {
+  50% { opacity: 0.55; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thinking { animation: none; }
 }
