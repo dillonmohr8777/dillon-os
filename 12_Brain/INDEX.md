@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-17
 ---
 
 # INDEX — the front door
@@ -29,6 +29,7 @@ in the same change.
 - [[12_Brain/entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/entities/HubSpot|HubSpot]] — Momentum 360 CRM (portal 50612503); GMB segments and `#360leads` routing.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -47,6 +48,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
+- [[12_Brain/concepts/HubSpot Channel Attribution|HubSpot Channel Attribution]] — original source is first-touch; shared LP URL filters mix paid and organic.
 
 ## Raw captures (Git-safe)
 
@@ -57,6 +59,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/raw/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
+- [[12_Brain/raw/2026-08-17 - jason-hubspot-attribution|2026-08-17 jason-hubspot-attribution]] — Jason's GMB segment overlap + blank `#360leads` Source (no contact rows).
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -64,11 +67,12 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
+- [[12_Brain/projects/HubSpot Attribution Repair|HubSpot Attribution Repair]] — split `GMB_LP_Organic` vs `Google P-max Suspensions`; live apply 2026-08-17 (7 vs 23, overlap 0) plus organic email routing, Source-copy workflows, and `utm_*` form-field properties.
 - [[12_Brain/decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/research/README|Research]] — compiled research landing.
 - [[12_Brain/research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
 - [[12_Brain/memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
-- [[12_Brain/protocols/README|Protocols]] — agent protocols.
+- [[12_Brain/protocols/README|Protocols]] — agent protocols. HubSpot lane: [[12_Brain/protocols/HubSpot Agent Protocol|HubSpot Agent Protocol]].
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
 - Bases: [[12_Brain/bases/Clients.base|Clients]] · [[12_Brain/bases/Projects.base|Projects]] · [[12_Brain/bases/Decisions.base|Decisions]]
 
@@ -88,5 +92,5 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[01_Clients/Client Index|Client Index]] — full roster.
 - [[04_SOPs/SOP Index|SOP Index]] — daily-lane SOPs.
 - [[10_Sessions/Session Index|Session Index]] — build logs.
-- `11_Agents/` — agent definitions (Master, Google Ads, SEO, Reporting, Web).
+- `11_Agents/` — agent definitions (Master, Google Ads, HubSpot, SEO, Reporting, Web).
 - `System/` — [[System/OS Config|OS Config]]; brain ops in [[12_Brain/System/Second Brain Ops|Second Brain Ops]].

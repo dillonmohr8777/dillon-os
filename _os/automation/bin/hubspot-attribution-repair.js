@@ -1,0 +1,922 @@
+#!/usr/bin/env node
+'use strict';
+
+/**
+ * Dry-run (default) HubSpot attribution repair for Momentum 360 GMB segments.
+ * Verifies portal 50612503, merges source filters onto existing list trees,
+ * and refuses to write unless --apply AND --confirm-apply. Never prints
+ * contact emails, phones, or tokens.
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const EXPECTED_PORTAL_ID = 50612503;
+const ORGANIC_NAME = 'GMB_LP_Organic';
+const PMAX_NAME = 'Google P-max Suspensions';
+const TOKEN_KEYS = [
+  'JASON_HUBSPOT_PRIVATE_APP_TOKEN',
+  'HUBSPOT_TOKEN',
+  'HUBSPOT_ACCESS_TOKEN',
+  'HUBSPOT_PRIVATE_APP_TOKEN',
+];
+
+const PAID_SOURCES = ['PAID_SEARCH', 'PAID_SOCIAL'];
+const PMAX_ADS_TERMS = ['PMax', 'pmax', 'Max_GMB', 'max_gmb', 'Performance Max'];
+const ORGANIC_LIST_ID = '302';
+const PMAX_LIST_ID = '298';
+const SOURCE_COPY_WORKFLOW_NAME = 'Copy Original Traffic Source into empty Source';
+const ORGANIC_NOTIFY_WORKFLOW_NAME = 'GMB_LP_Organic - Internal Email + In-app';
+const ORGANIC_NOTIFY_USER_IDS = ['84251079', '84251086'];
+const CAPTURED_CF7_FORM_GUID = 'f602c45a-f423-4dbd-8578-da2dd61e68fa';
+const UTM_PROPERTIES = [
+  { name: 'utm_source', label: 'UTM Source' },
+  { name: 'utm_medium', label: 'UTM Medium' },
+  { name: 'utm_campaign', label: 'UTM Campaign' },
+  { name: 'utm_content', label: 'UTM Content' },
+  { name: 'utm_term', label: 'UTM Term' },
+];
+const ZAPIER_LEADS_ZAP_ID = '332246329';
+const ZAPIER_PMAX_ZAP_ID = '369135469';
+const ZAPIER_META_ZAP_ID = '368432826';
+const GTM_CONTAINER_ID = 'GTM-WHKR99SC';
+const CF7_FORM_ID = '804';
+
+function token() {
+  for (const key of TOKEN_KEYS) {
+    if (process.env[key]) return { key, value: process.env[key] };
+  }
+  return null;
+}
+
+function repoRoot() {
+  return path.resolve(__dirname, '..', '..', '..');
+}
+
+function sourceFilter(operator, values, includeBlank) {
+  return {
+    filterType: 'PROPERTY',
+    property: 'hs_analytics_source',
+    operation: {
+      operationType: 'ENUMERATION',
+      operator,
+      values,
+      includeObjectsWithNoValueSet: Boolean(includeBlank),
+    },
+  };
+}
+
+function adsContains(term) {
+  return {
+    entityType: 'CAMPAIGN',
+    searchTermType: 'NAME',
+    searchTerms: [term],
+    adNetwork: 'ADWORDS',
+    operator: 'CONTAINS',
+    filterType: 'ADS_SEARCH',
+  };
+}
+
+function andBranch(filters, filterBranches) {
+  return {
+    filterBranchType: 'AND',
+    filterBranchOperator: 'AND',
+    filters: filters || [],
+    filterBranches: filterBranches || [],
+  };
+}
+
+function orBranch(filterBranches) {
+  return {
+    filterBranchType: 'OR',
+    filterBranchOperator: 'OR',
+    filters: [],
+    filterBranches: filterBranches || [],
+  };
+}
+
+function injectFiltersIntoAndChildren(existing, extraFilters) {
+  const clone = JSON.parse(JSON.stringify(existing));
+  if (clone.filterBranchType !== 'OR') {
+    return orBranch([andBranch(extraFilters, [clone])]);
+  }
+  clone.filterBranches = (clone.filterBranches || []).map((branch) => {
+    const next = { ...branch };
+    next.filterBranchType = next.filterBranchType || 'AND';
+    next.filterBranchOperator = next.filterBranchOperator || 'AND';
+    next.filters = [...(branch.filters || []), ...extraFilters];
+    next.filterBranches = branch.filterBranches || [];
+    return next;
+  });
+  if (!clone.filterBranches.length) {
+    clone.filterBranches = [andBranch(extraFilters, [])];
+  }
+  return clone;
+}
+
+function isBroadGmbAdsFilter(filter) {
+  if (!filter || filter.filterType !== 'ADS_SEARCH') return false;
+  const terms = filter.searchTerms || [];
+  return terms.length === 1 && String(terms[0]).toUpperCase() === 'GMB';
+}
+
+function tightenPmaxAds(existing) {
+  const clone = JSON.parse(JSON.stringify(existing));
+  const branches = clone.filterBranches || [];
+  const next = [];
+  let replaced = false;
+  for (const branch of branches) {
+    const filters = branch.filters || [];
+    if (filters.some(isBroadGmbAdsFilter) && filters.length === 1) {
+      for (const term of PMAX_ADS_TERMS) {
+        next.push(andBranch([adsContains(term)], []));
+      }
+      replaced = true;
+    } else {
+      next.push(branch);
+    }
+  }
+  clone.filterBranches = next;
+  return { tree: clone, replaced };
+}
+
+function organicTree(existing) {
+  return injectFiltersIntoAndChildren(
+    existing,
+    [sourceFilter('IS_NONE_OF', PAID_SOURCES, true)],
+  );
+}
+
+function pmaxTree(existing) {
+  const { tree, replaced } = tightenPmaxAds(existing);
+  return {
+    tree: injectFiltersIntoAndChildren(
+      tree,
+      [sourceFilter('IS_ANY_OF', ['PAID_SEARCH'], false)],
+    ),
+    replaced,
+  };
+}
+
+function knownFilter(property, known) {
+  return {
+    filterType: 'PROPERTY',
+    property,
+    operation: {
+      operationType: 'ALL_PROPERTY',
+      operator: known ? 'IS_KNOWN' : 'IS_UNKNOWN',
+      includeObjectsWithNoValueSet: !known,
+    },
+  };
+}
+
+function utmPropertySpec(item) {
+  return {
+    name: item.name,
+    label: item.label,
+    description: `${item.name} from the landing-page URL at form submit. GMB attribution on portal ${EXPECTED_PORTAL_ID}.`,
+    groupName: 'analyticsinformation',
+    type: 'string',
+    fieldType: 'text',
+    formField: true,
+    hidden: false,
+    hasUniqueValue: false,
+  };
+}
+
+function hiddenFormField(name, label) {
+  return {
+    name,
+    label,
+    type: 'string',
+    fieldType: 'text',
+    description: '',
+    groupName: 'analyticsinformation',
+    displayOrder: -1,
+    required: false,
+    selectedOptions: [],
+    options: [],
+    validation: {
+      name: '',
+      message: '',
+      data: '',
+      useDefaultBlockList: false,
+      blockedEmailAddresses: [],
+      checkPhoneFormat: false,
+    },
+    enabled: true,
+    hidden: true,
+    defaultValue: '',
+    isSmartField: false,
+    unselectedLabel: '',
+    placeholder: '',
+    dependentFieldFilters: [],
+    labelHidden: true,
+    propertyObjectType: 'CONTACT',
+    metaData: [],
+    objectTypeId: '0-1',
+  };
+}
+
+function withCapturedHiddenFields(form) {
+  const clone = JSON.parse(JSON.stringify(form || { formFieldGroups: [] }));
+  const have = new Set();
+  for (const group of clone.formFieldGroups || []) {
+    for (const field of group.fields || []) have.add(field.name);
+  }
+  const wanted = [['gclid', 'GCLID'], ...UTM_PROPERTIES.map((row) => [row.name, row.label])];
+  const added = [];
+  clone.formFieldGroups = clone.formFieldGroups || [];
+  for (const [name, label] of wanted) {
+    if (have.has(name)) continue;
+    clone.formFieldGroups.push({
+      fields: [hiddenFormField(name, label)],
+      default: true,
+      isSmartGroup: false,
+      richText: { content: '', type: 'TEXT' },
+      isPageBreak: false,
+    });
+    added.push(name);
+  }
+  return { form: clone, added };
+}
+
+function listMembershipEnrollment(listId, shouldReEnroll) {
+  return {
+    shouldReEnroll: Boolean(shouldReEnroll),
+    type: 'EVENT_BASED',
+    eventFilterBranches: [],
+    listMembershipFilterBranches: [
+      {
+        filterBranches: [],
+        filters: [
+          {
+            listId: String(listId),
+            operator: 'IN_LIST',
+            filterType: 'IN_LIST',
+          },
+        ],
+        filterBranchType: 'AND',
+        filterBranchOperator: 'AND',
+      },
+    ],
+  };
+}
+
+function delayAction(actionId, nextActionId, minutes) {
+  return {
+    type: 'SINGLE_CONNECTION',
+    actionId: String(actionId),
+    actionTypeVersion: 0,
+    actionTypeId: '0-1',
+    connection: {
+      edgeType: 'STANDARD',
+      nextActionId: String(nextActionId),
+    },
+    fields: {
+      delta: String(minutes),
+      time_unit: 'MINUTES',
+    },
+  };
+}
+
+function sourceCopyWorkflowSpec() {
+  return {
+    isEnabled: true,
+    flowType: 'WORKFLOW',
+    name: SOURCE_COPY_WORKFLOW_NAME,
+    description: 'If CallRail Source is empty when a contact is created, wait 5 minutes then copy Original Traffic Source into it.',
+    startActionId: '1',
+    nextAvailableActionId: '3',
+    actions: [
+      delayAction('1', '2', 5),
+      {
+        type: 'SINGLE_CONNECTION',
+        actionId: '2',
+        actionTypeVersion: 0,
+        actionTypeId: '0-5',
+        fields: {
+          property_name: 'source',
+          value: {
+            propertyName: 'hs_analytics_source',
+            type: 'OBJECT_PROPERTY',
+          },
+        },
+      },
+    ],
+    enrollmentCriteria: {
+      shouldReEnroll: false,
+      type: 'EVENT_BASED',
+      eventFilterBranches: [
+        {
+          filterBranches: [],
+          filters: [knownFilter('source', false)],
+          eventTypeId: '4-1463224',
+          operator: 'HAS_COMPLETED',
+          filterBranchType: 'UNIFIED_EVENTS',
+          filterBranchOperator: 'AND',
+        },
+      ],
+      listMembershipFilterBranches: [],
+    },
+    timeWindows: [],
+    blockedDates: [],
+    customProperties: {},
+    crmObjectCreationStatus: 'COMPLETE',
+    type: 'CONTACT_FLOW',
+    objectTypeId: '0-1',
+    suppressionListIds: [],
+    canEnrollFromSalesforce: false,
+  };
+}
+
+function organicNotifyWorkflowSpec() {
+  return {
+    isEnabled: true,
+    flowType: 'WORKFLOW',
+    name: ORGANIC_NOTIFY_WORKFLOW_NAME,
+    description: 'Email and in-app notify Jason and Sean when a contact joins GMB_LP_Organic. Does not re-enroll existing members.',
+    startActionId: '1',
+    nextAvailableActionId: '4',
+    actions: [
+      delayAction('1', '2', 2),
+      {
+        type: 'SINGLE_CONNECTION',
+        actionId: '2',
+        actionTypeVersion: 0,
+        actionTypeId: '0-8',
+        connection: {
+          edgeType: 'STANDARD',
+          nextActionId: '3',
+        },
+        fields: {
+          user_ids: ORGANIC_NOTIFY_USER_IDS.slice(),
+          subject: 'New GMB_LP_Organic lead',
+          body: [
+            '<p>A contact joined the GMB_LP_Organic segment.</p>',
+            '<p>Name: {{ enrolled_object.firstname }} {{ enrolled_object.lastname }}</p>',
+            '<p>Company: {{ enrolled_object.company }}</p>',
+            '<p>Original Traffic Source: {{ enrolled_object.hs_analytics_source }}</p>',
+            '<p>This is website/organic routing, not the PMax suspensions segment.</p>',
+          ].join('\n'),
+        },
+      },
+      {
+        type: 'SINGLE_CONNECTION',
+        actionId: '3',
+        actionTypeVersion: 0,
+        actionTypeId: '0-9',
+        fields: {
+          user_ids: ORGANIC_NOTIFY_USER_IDS.slice(),
+          delivery_method: 'APP',
+          subject: 'New GMB_LP_Organic lead',
+          body: 'A contact joined GMB_LP_Organic. Check HubSpot; Original Traffic Source is on the contact.',
+        },
+      },
+    ],
+    enrollmentCriteria: listMembershipEnrollment(ORGANIC_LIST_ID, false),
+    timeWindows: [],
+    blockedDates: [],
+    customProperties: {},
+    crmObjectCreationStatus: 'COMPLETE',
+    type: 'CONTACT_FLOW',
+    objectTypeId: '0-1',
+    suppressionListIds: [],
+    canEnrollFromSalesforce: false,
+  };
+}
+
+async function hs(pathname, { method = 'GET', body } = {}) {
+  const auth = token();
+  if (!auth) {
+    const err = new Error('missing_token');
+    err.code = 'missing_token';
+    throw err;
+  }
+  const res = await fetch(`https://api.hubapi.com${pathname}`, {
+    method,
+    headers: {
+      Authorization: `Bearer ${auth.value}`,
+      'Content-Type': 'application/json',
+    },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const text = await res.text();
+  let json;
+  try { json = JSON.parse(text); } catch { json = { raw: text.slice(0, 500) }; }
+  if (!res.ok) {
+    const err = new Error(`hubspot_${res.status}`);
+    err.code = 'hubspot_http';
+    err.status = res.status;
+    err.body = json;
+    err.hubspotMessage = json && json.message ? String(json.message).slice(0, 800) : null;
+    if (json && json.errors) err.hubspotMessage = `${err.hubspotMessage} ${JSON.stringify(json.errors).slice(0, 600)}`;
+    throw err;
+  }
+  return json;
+}
+
+function summarizeList(list) {
+  if (!list) return null;
+  return {
+    listId: list.listId || list.listIdInteger || list.id,
+    name: list.name,
+    processingType: list.processingType,
+    objectTypeId: list.objectTypeId,
+    size: list.size || (list.additionalProperties && list.additionalProperties.hs_list_size) || null,
+    processingStatus: list.processingStatus || null,
+  };
+}
+
+async function searchLists(query) {
+  const data = await hs('/crm/v3/lists/search', {
+    method: 'POST',
+    body: { query, count: 100, processingTypes: ['DYNAMIC', 'SNAPSHOT', 'MANUAL'] },
+  });
+  return (data.lists || []).map(summarizeList);
+}
+
+async function getList(listId) {
+  const data = await hs(`/crm/v3/lists/${listId}?includeFilters=true`);
+  return data.list || data;
+}
+
+async function applyFilters(listId, filterBranch) {
+  return hs(`/crm/v3/lists/${listId}/update-list-filters`, {
+    method: 'PUT',
+    body: { filterBranch },
+  });
+}
+
+async function verifyPortal() {
+  const account = await hs('/account-info/v3/details');
+  const portalId = Number(account.portalId);
+  if (portalId !== EXPECTED_PORTAL_ID) {
+    const err = new Error(`unexpected_portal_${portalId}`);
+    err.code = 'wrong_portal';
+    err.portalId = portalId;
+    throw err;
+  }
+  return account;
+}
+
+function writeState(report) {
+  const file = process.env.HUBSPOT_STATE_PATH
+    || path.join(repoRoot(), '12_Brain', 'state', 'hubspot-attribution-repair.json');
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  let prev = {};
+  try { prev = JSON.parse(fs.readFileSync(file, 'utf8')); } catch { prev = {}; }
+  const merged = {
+    ...prev,
+    ...report,
+    before: report.before || prev.before || null,
+    after: report.after || prev.after || null,
+    proposed: report.proposed || prev.proposed || null,
+    organic: report.organic || prev.organic || null,
+    pmax: report.pmax || prev.pmax || null,
+    workflows: (report.workflows && report.workflows.length)
+      ? report.workflows
+      : (prev.workflows || []),
+  };
+  if (!report.blocker) delete merged.blocker;
+  fs.writeFileSync(file, JSON.stringify(merged, null, 2) + '\n');
+  return file;
+}
+
+async function listFlows() {
+  const rows = [];
+  let after;
+  do {
+    const qs = after ? `?limit=100&after=${encodeURIComponent(after)}` : '?limit=100';
+    const data = await hs(`/automation/v4/flows${qs}`);
+    rows.push(...(data.results || []));
+    after = data.paging && data.paging.next && data.paging.next.after;
+  } while (after);
+  return rows;
+}
+
+function summarizeFlow(flow) {
+  if (!flow) return null;
+  return {
+    id: flow.id || null,
+    name: flow.name || null,
+    isEnabled: flow.isEnabled,
+    objectTypeId: flow.objectTypeId || null,
+    startActionId: flow.startActionId || null,
+    actionCount: Array.isArray(flow.actions) ? flow.actions.length : null,
+    enrollmentType: flow.enrollmentCriteria && flow.enrollmentCriteria.type || null,
+  };
+}
+
+async function ensureWorkflow(spec) {
+  const existing = (await listFlows()).find((row) => row.name === spec.name);
+  if (existing) {
+    const full = await hs(`/automation/v4/flows/${existing.id}`);
+    return { created: false, flow: summarizeFlow(full) };
+  }
+  const created = await hs('/automation/v4/flows', { method: 'POST', body: spec });
+  return { created: true, flow: summarizeFlow(created) };
+}
+
+async function membershipIds(listId) {
+  const ids = [];
+  let after;
+  do {
+    const qs = after ? `?limit=250&after=${encodeURIComponent(after)}` : '?limit=250';
+    const data = await hs(`/crm/v3/lists/${listId}/memberships${qs}`);
+    const recs = data.results || data.memberships || [];
+    for (const row of recs) {
+      ids.push(String(row.recordId || row.id || row));
+    }
+    after = data.paging && data.paging.next && data.paging.next.after;
+  } while (after);
+  return ids;
+}
+
+function overlapReport(organicIds, pmaxIds) {
+  const organic = new Set(organicIds);
+  const pmax = new Set(pmaxIds);
+  let overlap = 0;
+  for (const id of organic) if (pmax.has(id)) overlap += 1;
+  return {
+    organic: organic.size,
+    pmax: pmax.size,
+    overlap,
+    organic_only: organic.size - overlap,
+    pmax_only: pmax.size - overlap,
+  };
+}
+
+function workflowDryRunActions() {
+  return [
+    `Would POST ${SOURCE_COPY_WORKFLOW_NAME} (copy hs_analytics_source → source when Source is still empty, 5 min after contact create)`,
+    `Would POST ${ORGANIC_NOTIFY_WORKFLOW_NAME} on list ${ORGANIC_LIST_ID} (internal email + in-app to Jason/Sean, future members only)`,
+  ];
+}
+
+async function runWorkflows(apply) {
+  const started = new Date().toISOString();
+  const report = {
+    automation_id: 'hubspot-attribution-workflows',
+    started_at: started,
+    mode: apply ? 'apply' : 'dry-run',
+    portal_id: EXPECTED_PORTAL_ID,
+    status: 'blocked',
+    token_present: Boolean(token()),
+    token_env_key: token() ? token().key : null,
+    actions: [],
+    workflows: [],
+  };
+
+  if (!token()) {
+    report.blocker = 'HUBSPOT_TOKEN unset. Set JASON_HUBSPOT_PRIVATE_APP_TOKEN or HUBSPOT_TOKEN in the environment.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  if (apply && !process.argv.includes('--confirm-apply')) {
+    report.blocker = 'Refusing --apply until an operator passes --confirm-apply after reviewing dry-run output.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  const account = await verifyPortal();
+  report.portal_verified = true;
+  report.ui_domain = account.uiDomain || null;
+
+  const specs = [sourceCopyWorkflowSpec(), organicNotifyWorkflowSpec()];
+  report.proposed_workflows = specs.map((spec) => ({
+    name: spec.name,
+    isEnabled: spec.isEnabled,
+    enrollmentType: spec.enrollmentCriteria.type,
+    actionTypes: spec.actions.map((a) => a.actionTypeId).filter(Boolean),
+    listId: spec.name === ORGANIC_NOTIFY_WORKFLOW_NAME ? ORGANIC_LIST_ID : null,
+    copy: spec.name === SOURCE_COPY_WORKFLOW_NAME
+      ? { from: 'hs_analytics_source', to: 'source', skip_if_source_filled: true }
+      : null,
+  }));
+
+  if (!apply) {
+    report.status = 'dry-run';
+    report.actions = workflowDryRunActions();
+    const existing = await listFlows();
+    report.existing_matches = existing
+      .filter((row) => specs.some((spec) => spec.name === row.name))
+      .map((row) => ({ id: row.id, name: row.name, isEnabled: row.isEnabled }));
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(0);
+  }
+
+  for (const spec of specs) {
+    const result = await ensureWorkflow(spec);
+    report.workflows.push(result);
+    report.actions.push(result.created
+      ? `Created ${spec.name} (${result.flow && result.flow.id})`
+      : `Left existing ${spec.name} (${result.flow && result.flow.id})`);
+  }
+  report.status = 'applied';
+  const state = writeState(report);
+  console.log(JSON.stringify({ ...report, state }, null, 2));
+}
+
+async function ensureContactProperty(spec) {
+  try {
+    const existing = await hs(`/crm/v3/properties/contacts/${spec.name}`);
+    return { created: false, name: existing.name, formField: existing.formField, groupName: existing.groupName };
+  } catch (err) {
+    if (err.status !== 404) throw err;
+  }
+  const created = await hs('/crm/v3/properties/contacts', { method: 'POST', body: spec });
+  return { created: true, name: created.name, formField: created.formField, groupName: created.groupName };
+}
+
+function remainingDryRunActions() {
+  return [
+    `Would POST missing ${UTM_PROPERTIES.map((row) => row.name).join(', ')} contact properties (formField true)`,
+    `Would POST hidden gclid/utm fields onto captured CF7 form ${CAPTURED_CF7_FORM_GUID} (HubSpot refuses CAPTURED form writes)`,
+    `Cannot remap Zapier ${ZAPIER_LEADS_ZAP_ID} or edit GTM ${GTM_CONTAINER_ID} / WordPress CF7 ${CF7_FORM_ID} from this token`,
+  ];
+}
+
+function remainingPasteKit() {
+  return {
+    zapier_source_remap: `https://zapier.com/webintent/edit-zap/${ZAPIER_LEADS_ZAP_ID}`,
+    zapier_pmax: `https://zapier.com/webintent/edit-zap/${ZAPIER_PMAX_ZAP_ID}`,
+    zapier_meta: `https://zapier.com/webintent/edit-zap/${ZAPIER_META_ZAP_ID}`,
+    gtm_container: GTM_CONTAINER_ID,
+    cf7_form_id: CF7_FORM_ID,
+    captured_form_guid: CAPTURED_CF7_FORM_GUID,
+    map_source_to: 'hs_analytics_source',
+    inject_from_url_only: true,
+  };
+}
+
+async function runRemaining(apply) {
+  const started = new Date().toISOString();
+  const report = {
+    automation_id: 'hubspot-attribution-remaining',
+    started_at: started,
+    mode: apply ? 'apply' : 'dry-run',
+    portal_id: EXPECTED_PORTAL_ID,
+    status: 'blocked',
+    token_present: Boolean(token()),
+    token_env_key: token() ? token().key : null,
+    actions: [],
+    properties: [],
+    captured_form: null,
+    paste_kit: remainingPasteKit(),
+    remaining: [
+      `Zapier zap ${ZAPIER_LEADS_ZAP_ID} still maps #360leads Source at contact create`,
+      `Duplicate catch-all ${ZAPIER_LEADS_ZAP_ID} overlaps ${ZAPIER_PMAX_ZAP_ID} and ${ZAPIER_META_ZAP_ID}`,
+      `CF7 ${CF7_FORM_ID} / GTM ${GTM_CONTAINER_ID} still need hidden URL-param fields`,
+    ],
+  };
+
+  if (!token()) {
+    report.blocker = 'HUBSPOT_TOKEN unset. Set JASON_HUBSPOT_PRIVATE_APP_TOKEN or HUBSPOT_TOKEN in the environment.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  if (apply && !process.argv.includes('--confirm-apply')) {
+    report.blocker = 'Refusing --apply until an operator passes --confirm-apply after reviewing dry-run output.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  const account = await verifyPortal();
+  report.portal_verified = true;
+  report.ui_domain = account.uiDomain || null;
+  report.proposed_properties = UTM_PROPERTIES.map(utmPropertySpec);
+
+  if (!apply) {
+    report.status = 'dry-run';
+    report.actions = remainingDryRunActions();
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(0);
+  }
+
+  for (const item of UTM_PROPERTIES) {
+    const result = await ensureContactProperty(utmPropertySpec(item));
+    report.properties.push(result);
+    report.actions.push(result.created
+      ? `Created contact property ${result.name}`
+      : `Left existing contact property ${result.name}`);
+  }
+
+  try {
+    const existing = await hs(`/forms/v2/forms/${CAPTURED_CF7_FORM_GUID}`);
+    const planned = withCapturedHiddenFields(existing);
+    report.captured_form = {
+      guid: CAPTURED_CF7_FORM_GUID,
+      name: existing.name || null,
+      formType: existing.formType || null,
+      would_add: planned.added,
+    };
+    if (planned.added.length) {
+      await hs(`/forms/v2/forms/${CAPTURED_CF7_FORM_GUID}`, { method: 'POST', body: planned.form });
+      report.captured_form.updated = true;
+      report.actions.push(`Added hidden fields on captured form ${CAPTURED_CF7_FORM_GUID}: ${planned.added.join(', ')}`);
+    } else {
+      report.captured_form.updated = false;
+      report.actions.push(`Captured form ${CAPTURED_CF7_FORM_GUID} already had gclid/utm hidden fields`);
+    }
+  } catch (err) {
+    report.captured_form = {
+      guid: CAPTURED_CF7_FORM_GUID,
+      updated: false,
+      http_status: err.status || null,
+      hubspot_message: err.hubspotMessage || err.message,
+    };
+    report.actions.push(`Captured CF7 form ${CAPTURED_CF7_FORM_GUID} is not writable via this app (expected for CAPTURED forms)`);
+  }
+
+  report.status = 'applied';
+  const state = writeState(report);
+  console.log(JSON.stringify({ ...report, state }, null, 2));
+}
+
+async function main() {
+  const apply = process.argv.includes('--apply');
+  const workflows = process.argv.includes('--workflows');
+  const remaining = process.argv.includes('--remaining') || process.argv.includes('--utm');
+  if (workflows) {
+    await runWorkflows(apply);
+    return;
+  }
+  if (remaining) {
+    await runRemaining(apply);
+    return;
+  }
+  const started = new Date().toISOString();
+  const report = {
+    automation_id: 'hubspot-attribution-repair',
+    started_at: started,
+    mode: apply ? 'apply' : 'dry-run',
+    portal_id: EXPECTED_PORTAL_ID,
+    organic_name: ORGANIC_NAME,
+    pmax_name: PMAX_NAME,
+    status: 'blocked',
+    token_present: Boolean(token()),
+    token_env_key: token() ? token().key : null,
+    lists: [],
+    actions: [],
+  };
+
+  if (!token()) {
+    report.blocker = 'HUBSPOT_TOKEN unset. Set JASON_HUBSPOT_PRIVATE_APP_TOKEN or HUBSPOT_TOKEN in the environment.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  if (apply && !process.argv.includes('--confirm-apply')) {
+    report.blocker = 'Refusing --apply until an operator passes --confirm-apply after reviewing dry-run output.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  const account = await verifyPortal();
+  report.portal_verified = true;
+  report.ui_domain = account.uiDomain || null;
+
+  const lists = await searchLists('GMB');
+  const extra = await searchLists('P-max');
+  const byName = new Map();
+  for (const row of [...lists, ...extra]) {
+    if (row && row.name) byName.set(row.name, row);
+  }
+  report.lists = [...byName.values()];
+
+  const organic = byName.get(ORGANIC_NAME);
+  const pmax = byName.get(PMAX_NAME);
+  report.organic = organic || null;
+  report.pmax = pmax || null;
+
+  if (!organic || !pmax) {
+    report.status = 'blocked';
+    report.blocker = 'Named segments not found. Refusing to guess list IDs.';
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(2);
+  }
+
+  const organicFull = await getList(organic.listId);
+  const pmaxFull = await getList(pmax.listId);
+  const organicExisting = organicFull.filterBranch;
+  const pmaxExisting = pmaxFull.filterBranch;
+  const pmaxBuilt = pmaxTree(pmaxExisting);
+  const proposedOrganic = organicTree(organicExisting);
+  const proposedPmax = pmaxBuilt.tree;
+
+  report.before = {
+    organic_size: organicFull.size,
+    pmax_size: pmaxFull.size,
+    membership: overlapReport(
+      await membershipIds(organic.listId),
+      await membershipIds(pmax.listId),
+    ),
+    pmax_ads_search_tightened: pmaxBuilt.replaced,
+  };
+  report.proposed = {
+    [ORGANIC_NAME]: {
+      listId: organic.listId,
+      keep_existing_url_and_form_tree: true,
+      add: { hs_analytics_source: { exclude: PAID_SOURCES } },
+    },
+    [PMAX_NAME]: {
+      listId: pmax.listId,
+      keep_home_google_form_branch: true,
+      replace_ads_contains_gmb: pmaxBuilt.replaced,
+      ads_contains: PMAX_ADS_TERMS,
+      add: { hs_analytics_source: { require: ['PAID_SEARCH'] } },
+    },
+  };
+
+  if (!apply) {
+    report.status = 'dry-run';
+    report.actions = [
+      `Would PUT merged filters on ${ORGANIC_NAME} (${organic.listId}) to exclude Paid Search/Social`,
+      `Would PUT merged filters on ${PMAX_NAME} (${pmax.listId}) to require Paid Search and PMax campaign names`,
+    ];
+    const state = writeState(report);
+    console.log(JSON.stringify({ ...report, state }, null, 2));
+    process.exit(0);
+  }
+
+  await applyFilters(organic.listId, proposedOrganic);
+  report.actions.push(`Applied organic exclude-paid merge to ${organic.listId}`);
+  await applyFilters(pmax.listId, proposedPmax);
+  report.actions.push(`Applied pmax paid+PMax-name merge to ${pmax.listId}`);
+
+  const organicAfter = await getList(organic.listId);
+  const pmaxAfter = await getList(pmax.listId);
+  report.after = {
+    organic_size: organicAfter.size,
+    pmax_size: pmaxAfter.size,
+    organic_processing: organicAfter.processingStatus,
+    pmax_processing: pmaxAfter.processingStatus,
+    membership: overlapReport(
+      await membershipIds(organic.listId),
+      await membershipIds(pmax.listId),
+    ),
+  };
+  report.status = 'applied';
+  const state = writeState(report);
+  console.log(JSON.stringify({ ...report, state }, null, 2));
+}
+
+if (require.main === module) {
+  main().catch((err) => {
+    const report = {
+      automation_id: 'hubspot-attribution-repair',
+      status: 'error',
+      code: err.code || 'unknown',
+      message: err.message,
+      hubspot_message: err.hubspotMessage || null,
+      http_status: err.status || null,
+    };
+    try { writeState(report); } catch { /* ignore */ }
+    console.error(JSON.stringify(report, null, 2));
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  EXPECTED_PORTAL_ID,
+  ORGANIC_NAME,
+  PMAX_NAME,
+  TOKEN_KEYS,
+  PAID_SOURCES,
+  PMAX_ADS_TERMS,
+  ORGANIC_LIST_ID,
+  PMAX_LIST_ID,
+  SOURCE_COPY_WORKFLOW_NAME,
+  ORGANIC_NOTIFY_WORKFLOW_NAME,
+  ORGANIC_NOTIFY_USER_IDS,
+  CAPTURED_CF7_FORM_GUID,
+  UTM_PROPERTIES,
+  ZAPIER_LEADS_ZAP_ID,
+  ZAPIER_PMAX_ZAP_ID,
+  ZAPIER_META_ZAP_ID,
+  GTM_CONTAINER_ID,
+  CF7_FORM_ID,
+  organicTree,
+  pmaxTree,
+  isBroadGmbAdsFilter,
+  knownFilter,
+  listMembershipEnrollment,
+  sourceCopyWorkflowSpec,
+  organicNotifyWorkflowSpec,
+  utmPropertySpec,
+  hiddenFormField,
+  withCapturedHiddenFields,
+  remainingPasteKit,
+};

@@ -1,6 +1,6 @@
 ---
 tags: [protocols, index]
-updated: 2026-07-29
+updated: 2026-08-17
 ---
 
 # Protocols
@@ -13,11 +13,13 @@ operating protocols the brain layer expects every agent to follow.
 
 - [[12_Brain/protocols/Compiler Protocol|Compiler Protocol]] — raw → wiki compile rules
 - [[12_Brain/protocols/HUD Protocol|HUD Protocol]] — how D.I.L.L.O.N. OS reads the vault
+- [[12_Brain/protocols/HubSpot Agent Protocol|HubSpot Agent Protocol]] — diagnose, dry-run, apply only with an active token
 
 ## Agent definitions (working vault)
 
 - [[11_Agents/Master Agent|Master Agent]]
 - [[11_Agents/Google Ads Agent|Google Ads Agent]]
+- [[11_Agents/HubSpot Agent|HubSpot Agent]]
 - [[11_Agents/SEO Agent|SEO Agent]]
 - [[11_Agents/Reporting Agent|Reporting Agent]]
 - [[11_Agents/Web Agent|Web Agent]]
