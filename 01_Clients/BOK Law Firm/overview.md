@@ -5,7 +5,7 @@ role: Content and digital marketing
 division: Direct
 status: active
 last_touched: 2026-08-18
-next_action: Hold the August 20-22 packet until Dillon approves send and Dorothy or Rachael reviews the episode 58 teaser.
+next_action: Rebuild the Thursday teaser from Dorothy's talking-head video. Do not use cartoon character graphics.
 due: none
 tags: [client, legal, content, social, seo]
 ---

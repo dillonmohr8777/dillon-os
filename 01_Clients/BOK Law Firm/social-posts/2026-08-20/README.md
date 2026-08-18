@@ -3,14 +3,14 @@ client: BOK Law Firm
 date: 2026-08-20
 series: [Turn the Page Thursday, Family Friday, Saturday Solutions]
 tags: [social, graphics, podcast, deliverable]
-status: draft
+status: rejected
 ---
 
 # This Week With BOK | August 20-22, 2026
 
 Three Instagram portrait graphics plus a Thursday video teaser for Donuts and Divorce episode 58. Graphics match the latest sent style: painterly hero, teal wave, series pill, cream body, three icon circles, circular logo on cream, `BOKLAWFIRM.COM` footer.
 
-Do not post or send until Dillon approves. Dorothy is out until Tuesday, August 25, and wants to see videos before they go live.
+REJECTED 2026-08-18. Dillon killed the illustrated cartoon graphics. Do not send this packet. Next Thursday cut uses Dorothy's talking-head video plus branded captions.
 
 ## Guardrails used
 

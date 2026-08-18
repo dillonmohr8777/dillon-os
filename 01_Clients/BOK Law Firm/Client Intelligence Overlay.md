@@ -16,11 +16,12 @@ pipeline_state: developing
 reporting_state: developing
 workflow_state: operational
 priority: medium
-next_action: "Hold the August 20-22 social packet until Dillon approves send and Dorothy or Rachael reviews the episode 58 teaser."
+next_action: "Rebuild BOK Thursday video from Dorothy talking-head footage. Illustrated cartoon graphics are rejected."
 review_on: 2026-08-25
 source_refs:
   - "[[overview]]"
   - "[[12_Brain/01_Captures/2026-08-16 - BOK Dorothy Donuts and Divorce episode 58]]"
+  - "[[12_Brain/08_Memory/current/BOK social graphics are not cartoon]]"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bok-law-firm/context/operating-context.md"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bok-law-firm/deliverables/2026-07-28-august-september-social-content/copy/content-calendar.md"
 tags: [client-intelligence, bok-law, legal, content, seo, social]
