@@ -13,13 +13,15 @@
  * the registry, but did nothing about the rows already sitting there.
  *
  * The measured result on 2026-08-18: 104 businesses we had already built a site
- * for were still sitting in the registry as live rebuild targets, and 9 of the
- * 15 top suggestions in that morning's brief were businesses whose new homepage
- * was already live. The radar was recommending work that was already done.
+ * for were still sitting in the registry as live rebuild targets. On the
+ * published dashboard's default view — the Rebuild queue sorted by priority
+ * descending — 100 of the 188 rows were businesses whose new homepage was
+ * already live, including 16 of the 25 visible without scrolling and 12 of the
+ * 15 that made the morning brief. The radar was recommending work already done.
  *
- * With this module wired in, that sweep reconciles 104 rows to `built`, the
- * queued_build count drops from 181 to 82, and the already-built count in the
- * top 15 goes to zero.
+ * With this module wired in, that sweep reconciles 104 rows to `built` (100 of
+ * them carrying a rebuild verdict), the Rebuild tab drops from 188 to 88, and
+ * the already-built count at the top of the queue goes to zero.
  *
  * `radar.priorityScore` has always docked 40 points for `lifecycle === 'built'`
  * (lib/radar.js). Nothing ever set it — `setLifecycle` is exported and never
