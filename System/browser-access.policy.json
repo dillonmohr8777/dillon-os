@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "updated": "2026-08-18",
+  "purpose": "One ordered ladder per job so an agent picks the cheapest live engine and stops. Read by _os/automation/bin/browser-access.js. Engines marked agent_tool cannot be driven from a CLI - only an agent holding that tool can call them, and the CLI reports them so the ladder stays honest rather than looking shorter than it is.",
+
+  "forbidden": {
+    "ports": [9222],
+    "chrome_flags": ["--extension"],
+    "profiles": ["default"],
+    "actions": [
+      "credential entry",
+      "credential read or rotate",
+      "accept terms",
+      "form submit",
+      "cookie import",
+      "send", "post", "publish", "deploy", "merge", "spend", "purchase", "account change"
+    ],
+    "why": "Port 9222 and the default profile carry Dillon's live logged-in sessions. Driving them from an agent turns a read into an authenticated action against a client account."
+  },
+
+  "engines": {
+    "webfetch": {
+      "kind": "agent_tool",
+      "cost": 1,
+      "note": "Cheapest. Static, known URL. No JS."
+    },
+    "websearch": {
+      "kind": "agent_tool",
+      "cost": 1,
+      "note": "Cheapest discovery."
+    },
+    "firecrawl_search": {
+      "kind": "agent_tool",
+      "cost": 2,
+      "mcp": "composio",
+      "tool": "FIRECRAWL_SEARCH",
+      "note": "Searches and scrapes in one call. ~5 credits per query."
+    },
+    "firecrawl_scrape": {
+      "kind": "agent_tool",
+      "cost": 2,
+      "mcp": "composio",
+      "tool": "FIRECRAWL_SCRAPE",
+      "note": "One URL to markdown. No proxy option on this schema."
+    },
+    "firecrawl_batch_stealth": {
+      "kind": "agent_tool",
+      "cost": 3,
+      "mcp": "composio",
+      "tool": "FIRECRAWL_BATCH_SCRAPE",
+      "args": { "proxy": "stealth" },
+      "note": "The ONLY Firecrawl schema exposing proxy:stealth. Use for Cloudflare and bot detection. SEARCH and SCRAPE have no proxy field."
+    },
+    "direct_http": {
+      "kind": "cli",
+      "cost": 1,
+      "note": "Plain HTTPS GET from Node. The CLI stand-in for WebFetch on static pages."
+    },
+    "playwright_mcp": {
+      "kind": "http",
+      "cost": 4,
+      "probe": "http://localhost:8931/mcp",
+      "start": "npx @playwright/mcp --headless --isolated --port 8931",
+      "mcp_name": "playwright-isolated",
+      "note": "Isolated sidecar. JS interaction and snapshots. An 'Extension connection timeout' means the WRONG server was used - Cursor's --extension Playwright is a different process and is refused."
+    },
+    "chrome_isolated": {
+      "kind": "http",
+      "cost": 4,
+      "probe": "http://localhost:9223/json/version",
+      "port": 9223,
+      "required_user_data_dir_contains": "claude-chrome",
+      "cli_flags": ["--headless", "--dump-dom", "--screenshot"],
+      "note": "Dedicated profile only. Verified 2026-08-18 running --user-data-dir=C:\\Users\\dillo\\claude-chrome. Never the default profile, never 9222."
+    },
+    "camofox": {
+      "kind": "http",
+      "cost": 5,
+      "probe": "http://localhost:9377/health",
+      "repo": "dillonmohr8777/camofox-browser",
+      "note": "Volume stealth. Refused until /health answers. Clone with System/scripts/Clone-CamofoxBrowser.py; no npm install unless asked."
+    },
+    "brightdata": {
+      "kind": "api_key",
+      "cost": 5,
+      "env": "BRIGHTDATA_API_KEY",
+      "note": "Inert without the key. Skills are installed but will fail on first use."
+    },
+    "claude_in_chrome": {
+      "kind": "operator_only",
+      "cost": 9,
+      "note": "The only engine that can reach logged-in Ads, Gmail, or GBP. Runs on Dillon's desktop against his real sessions, so an agent may recommend it and never drive it unattended."
+    }
+  },
+
+  "jobs": {
+    "static": ["webfetch", "firecrawl_scrape", "direct_http", "playwright_mcp", "chrome_isolated"],
+    "discovery": ["websearch", "firecrawl_search"],
+    "markdown_bulk": ["firecrawl_search", "firecrawl_scrape"],
+    "cloudflare": ["firecrawl_batch_stealth", "camofox", "playwright_mcp"],
+    "js_interact": ["playwright_mcp", "camofox", "chrome_isolated"],
+    "snapshot": ["playwright_mcp", "camofox", "chrome_isolated"],
+    "screenshot": ["playwright_mcp", "chrome_isolated"],
+    "volume_stealth": ["camofox", "firecrawl_batch_stealth"],
+    "logged_in": ["claude_in_chrome"],
+    "operator_recency": ["history_export"]
+  },
+
+  "history_export": {
+    "script": "System/scripts/Export-BrowserHistory.py",
+    "destination": "12_Brain/private/browser-history/",
+    "gitignored": true,
+    "note": "Owned history only. Destination is gitignored and must never be committed."
+  }
+}
