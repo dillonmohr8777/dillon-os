@@ -1,15 +1,16 @@
 ---
 note_type: project
-status: waiting
+status: done
 created: 2026-08-18
 updated: 2026-08-18
 owner: Dillon Mohr
 priority: normal
-outcome: Dillon decides whether Variant stays outside the stack or becomes an optional ideation lane for the website factory.
-next_action: Review the six factory candidates in `_templates/variant-review/` and the Variant homepage screenshots. Approve a free Variant account only if live HTML export needs testing.
-review_on: 2026-09-01
+outcome: No stack change. The existing site factory already covers this template class. Variant stays gated.
+next_action: None. Use `_templates/site-factory/` as today. Do not create a Variant account unless Dillon reopens export testing.
+review_on: 2026-09-18
 source_refs:
-  - "[[12_Brain/01_Captures/2026-08-18 - PracticalYAI TikTok Variant.com]]"
+  - "[[12_Brain/01_Captures/2026-08-18 - Factory already makes those templates]]"
+  - "[[12_Brain/04_Decisions/2026-08-18 - Keep the existing factory as the template system]]"
   - "[[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]]"
   - "[[12_Brain/02_Entities/Variant]]"
 tags:
@@ -21,17 +22,20 @@ tags:
 # Variant template stack evaluation
 
 **Summary:** harvest Variant from the Practicaly AI clip, keep it gated, and
-stage six factory-native template candidates for a later keep-or-skip decision.
+do not treat the six factory demos as a new template library.
 
 ## Goal
 
 Decide whether Variant.com belongs in the website production stack.
 
-## Done this session
+## Done
 
 - Resolved TikTok `ZP8WVwqPX` to Variant.
 - Captured public homepage templates. Custom prompting is account-gated.
-- Built six original `noindex` factory sites as a review pack.
+- Built six original `noindex` factory sites as harvest evidence.
+- Dillon clarified those sites are the kind of template the factory already
+  makes, and it is unclear that Variant adds anything.
+- Reverted the mistaken starter-library promotion.
 
 ## Not done
 
@@ -41,16 +45,17 @@ Decide whether Variant.com belongs in the website production stack.
 
 ## Next actions
 
-- [ ] Dillon reviews the six local candidates and Variant screenshots.
-- [ ] If export quality matters, approve a free Variant signup and a second
-      prompt pass on HVAC, landscaping, and bridal.
-- [ ] Keep or skip Variant as an ideation lane. Default is skip until export is
-      proven against the design system.
+- [x] Dillon reviews the six local candidates.
+- [x] Keep or skip Variant as a factory input. Decision: skip. Existing factory
+      remains the template system.
+- [ ] Optional later: approve a free Variant signup only if live HTML export
+      needs testing. Not required.
 
 ## Links
 
+- Decision: [[12_Brain/04_Decisions/2026-08-18 - Keep the existing factory as the template system]]
 - Research: [[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]]
 - Entity: [[12_Brain/02_Entities/Variant]]
 - Factory: [[12_Brain/02_Entities/Website Factory]]
 - Concept: [[12_Brain/03_Concepts/High Craft Website Factory]]
-- Pack: `_templates/variant-review/`
+- Pack: `_templates/variant-review/` (evidence only)

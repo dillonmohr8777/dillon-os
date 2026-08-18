@@ -19,6 +19,7 @@ source_refs:
   - "https://www.designspells.com/"
   - "[[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]]"
   - "[[12_Brain/02_Entities/Variant]]"
+  - "[[12_Brain/04_Decisions/2026-08-18 - Keep the existing factory as the template system]]"
 tags:
   - brain
   - concept
@@ -286,6 +287,8 @@ Variant, LandingFolio, and similar scroll-or-prompt galleries are optional
 layout reference. They are not the factory, not a paste library, and not
 permission to ship. A generated card can inform density, CTA placement, or
 attitude. Brand, facts, tokens, and markup still come from the brief and the
-design system. Account-gated HTML export stays outside the stack until a
-reviewer proves it against this contract and Dillon approves the account.
+design system. A Variant-shaped demo pack is not a new template tier; the
+existing attitudes and `example-brief.json` remain the production path.
+Account-gated HTML export stays outside the stack until a reviewer proves it
+against this contract and Dillon approves the account.
 

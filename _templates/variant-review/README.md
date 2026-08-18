@@ -4,8 +4,8 @@ status: active
 created: 2026-08-18
 updated: 2026-08-18
 source_refs:
+  - "[[12_Brain/04_Decisions/2026-08-18 - Keep the existing factory as the template system]]"
   - "[[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]]"
-  - "[[12_Brain/02_Entities/Variant]]"
   - "[[12_Brain/02_Entities/Website Factory]]"
 tags:
   - templates
@@ -13,17 +13,20 @@ tags:
   - review
 ---
 
-# Variant review pack
+# Variant harvest evidence pack
 
-Local factory candidates for the Variant stack decision. These are original
-Momentum-profile sites, not Variant exports. `noindex` stays on. Do not
-deploy.
+Six original Momentum-profile demos built during the Variant harvest. They
+show the factory we already use, not a new template set. `noindex` stays on.
+Do not deploy. Do not copy these into production as starters.
 
 ## Why this folder exists
 
-Variant.com custom generation is account-gated. This pack translates six
-visual attitudes into factory HTML so Dillon can judge stack fit without
-creating a Variant account.
+Variant.com custom generation is account-gated. This pack translated six
+attitudes into factory HTML so the clip could be judged without an account.
+Dillon's correction: the factory already creates templates like that.
+
+Canonical production path remains `_templates/site-factory/`
+(`example-brief.json` plus attitude skins).
 
 ## Build
 
@@ -33,7 +36,7 @@ node _templates/variant-review/build-pack.js
 
 Then open `_templates/variant-review/index.html`.
 
-## Candidates
+## Pages in the pack
 
 | Slug | Attitude | Use |
 |---|---|---|
@@ -46,10 +49,3 @@ Then open `_templates/variant-review/index.html`.
 
 Facts are fictional demo data. Phone numbers are 555-range placeholders.
 Images are generated color fields labeled as placeholders, not client photos.
-
-## Later Variant pass
-
-If a free account is approved, prompt Variant for the same six verticals,
-screenshot the cards, and compare density and CTA placement to these pages.
-Keep Variant output as untrusted layout reference. Rebuild any keeper in the
-factory.

@@ -5,9 +5,11 @@ created: 2026-08-18
 updated: 2026-08-18
 review_on: 2026-09-18
 owner: Dillon Mohr
-summary: Account-gated AI UI ideation feed at variant.com. Scrolls endless design cards from a short idea. Not in the website factory yet.
+summary: Account-gated AI UI ideation feed at variant.com. Scrolls endless design cards from a short idea. Not in the website factory. The existing factory already covers local-service templates.
 source_refs:
   - "[[12_Brain/01_Captures/2026-08-18 - PracticalYAI TikTok Variant.com]]"
+  - "[[12_Brain/01_Captures/2026-08-18 - Factory already makes those templates]]"
+  - "[[12_Brain/04_Decisions/2026-08-18 - Keep the existing factory as the template system]]"
   - "https://variant.com"
   - "https://www.fastcompany.com/91491205/this-new-ai-eyedropper-tool-brings-one-of-the-most-powerful-ux-tricks-into-the-ai-age"
 tags:
@@ -48,5 +50,8 @@ account.
 - Can Style Dropper absorb a live local-business URL, or only Variant cards?
 - Does output stay distinct enough for a 25-site batch, or does it converge?
 
-Do not create an account, spend, or wire this into the factory until Dillon
-approves. Research pack: [[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]].
+Do not create an account, spend, or wire this into the factory. Dillon's
+read is that the factory already creates this class of site, and it is
+unclear that Variant adds anything. Decision:
+[[12_Brain/04_Decisions/2026-08-18 - Keep the existing factory as the template system]].
+Research: [[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]].

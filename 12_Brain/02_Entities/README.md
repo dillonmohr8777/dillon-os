@@ -17,4 +17,4 @@ Clients remain canonical in `01_Clients/`. Link to them here; do not duplicate
 their facts. Every entity note includes sources, last review date, current
 relationships, and open questions.
 
-Recent: [[Variant]] — AI UI ideation feed, account-gated, not in the factory yet.
+Recent: [[Variant]] — AI UI ideation feed, account-gated, not a factory input.
