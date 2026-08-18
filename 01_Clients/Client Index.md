@@ -22,6 +22,7 @@ tags: [client, moc]
 | [[Bridge of Hope OTC]]       | —                           | —            | —         | SEO blog content (substance use / mental health)                |
 | [[Bok Law]]                  | —                           | —            | Dec 2025+ | Weekly social media (Wed Wisdom, Family Fridays, Sat Solutions) |
 | [[Bluegrass Janitorial]]     | —                           | —            | —         | SEO blogs, MailChimp emails, product content                    |
+| [[Tags 2 Go]]                | tags2go.pro                 | —            | 8/1/2026  | Google Ads (gov-docs cert denied 2026-08-15; appeal sent)       |
 
 ## Software Development
 

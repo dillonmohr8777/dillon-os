@@ -46,6 +46,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/concepts/Leading Indicators|Leading Indicators]] — churn/growth signals for `/synthesize`.
 - [[12_Brain/concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
+- [[12_Brain/concepts/Google Ads Government Documents Certification|Google Ads Government Documents Certification]] — PA tag-agency ads need Google’s authorized-provider certificate; first filing denied 2026-08-15; resubmit the live directory URLs (expires 2026-11-13).
 - [[12_Brain/concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
 
 ## Raw captures (Git-safe)
@@ -57,6 +58,9 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/raw/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/raw/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/raw/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
+- [[12_Brain/raw/research/2026-08-14 - research - google-ads-govdocs-penndot-agents|2026-08-14 google-ads-govdocs-penndot-agents]] — receipts for Google’s authorized-provider rule vs PennDOT agent PDFs.
+- [[12_Brain/raw/research/2026-08-14 - research - penndot-agent-directory-no-url|2026-08-14 penndot-agent-directory-no-url]] — Contract Administration written reply: public agent lists are address and phone only.
+- [[12_Brain/raw/research/2026-08-15 - research - google-ads-govdocs-cert-denied|2026-08-15 google-ads-govdocs-cert-denied]] — first authorized-provider filing denied; live PDFs still list the agent.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
