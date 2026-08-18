@@ -53,6 +53,7 @@ function loadConfig(overrides = {}) {
     reportTtlDays: envInt('RADAR_V2_REPORT_TTL_DAYS', 90),
     scoreVersion: process.env.RADAR_V2_SCORE_VERSION || 'radar-v2.0.0',
     scannerVersion: 'radar-wrap-1.0.0',
+    liveScan: envBool('RADAR_V2_LIVE_SCAN', false),
     ...overrides,
   };
   return cfg;

@@ -9,13 +9,15 @@ const { createAdapters } = require('./adapters.ts');
 const { validateIntake } = require('./intake.ts');
 const { normalizeDomain, normalizeWebsite, normalizeEmail, normalizePhone, normalizeName } = require('./normalize.ts');
 const { checkSuppression } = require('./suppress.ts');
-const { scanFixture } = require('./scan.ts');
+const { scanFixture, scanLive, scanDocument } = require('./scan.ts');
 const { scoreAudit } = require('./scoring.ts');
 const { selectOffer } = require('./routing.ts');
 const { buildManifest } = require('./manifest.ts');
 const { renderReportHtml, checkReport, renderPdf, storageAdapter, visualCheck } = require('./reports.ts');
 const { outboundBlocked } = require('./config.ts');
 const { redactText, sanitizeExport } = require('./redact.ts');
+const { inferVertical } = require('./vertical.ts');
+const { offerLabel, firstName, publicIntake } = require('./copy.ts');
 
 function loadFixture(name) {
   const dir = path.join(__dirname, '..', 'fixtures', name);
@@ -28,6 +30,32 @@ function splitCityState(value) {
   const s = String(value || '');
   const m = s.match(/^(.*?)(?:,\s*([A-Z]{2}))?$/);
   return { city: (m && m[1] || s).trim(), state: (m && m[2]) || '' };
+}
+
+function listFixtureNames() {
+  const dir = path.join(__dirname, '..', 'fixtures');
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter((name) => fs.existsSync(path.join(dir, name, 'meta.json')));
+}
+
+function findFixtureName(website) {
+  const domain = normalizeDomain(website);
+  if (!domain) return '';
+  for (const name of listFixtureNames()) {
+    try {
+      const meta = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'fixtures', name, 'meta.json'), 'utf8'));
+      if (normalizeDomain(meta.intake?.website || meta.website) === domain) return name;
+    } catch {
+      // skip a broken fixture rather than fail intake
+    }
+  }
+  return '';
+}
+
+function intakeForProspect(store, prospect) {
+  if (!prospect) return null;
+  return store.findOne('intake_submissions', (s) => s.prospect_id === prospect.id)
+    || store.findOne('intake_submissions', (s) => normalizeDomain(s.website) === prospect.domain);
 }
 
 async function createCampaign(store, input = {}) {
@@ -98,6 +126,12 @@ async function submitIntake(store, adapters, cfg, campaign, body, { ip = '203.0.
 async function resolveProspect(store, campaign, submission, { actor = 'system', correlationId } = {}) {
   const loc = splitCityState(submission.city_state);
   const domain = normalizeDomain(submission.website);
+  const vertical = inferVertical({
+    services: submission.primary_services,
+    name: submission.business_name,
+    website: submission.website,
+    notes: submission.notes,
+  });
   const existing = store.findOne('prospects', (p) => p.domain === domain && p.campaign_id === campaign.id);
   const prospect = existing || store.insert('prospects', {
     id: id('prospect'),
@@ -109,8 +143,8 @@ async function resolveProspect(store, campaign, submission, { actor = 'system', 
     city: loc.city,
     state: loc.state,
     service_area: submission.city_state,
-    vertical: 'hvac',
-    public_fields: { domain, city: loc.city, state: loc.state, vertical: 'hvac' },
+    vertical,
+    public_fields: { domain, city: loc.city, state: loc.state, vertical },
     private_fields: {},
     correlation_id: correlationId || submission.id,
   });
@@ -137,37 +171,47 @@ async function resolveProspect(store, campaign, submission, { actor = 'system', 
     await store.transition(prospect.id, 'deduped', { actor, reason: 'intake identity resolved', correlationId: prospect.correlation_id });
   }
   const suppression = checkSuppression({ store, prospect, campaign, intake: submission });
+  const softReuse = suppression.suppressed && /duplicate domain|existing report|previous outreach/.test(suppression.reason);
+  if (softReuse && existing) {
+    return {
+      prospect: store.get('prospects', prospect.id),
+      suppression: { suppressed: false, reason: '', detail: '' },
+      reuse: true,
+      reuseReason: suppression.reason,
+    };
+  }
   if (suppression.suppressed) {
     store.update('prospects', prospect.id, { suppression_reason: `${suppression.reason}: ${suppression.detail}` });
     await store.transition(prospect.id, 'suppressed', { actor, reason: suppression.reason, correlationId: prospect.correlation_id });
     return { prospect: store.get('prospects', prospect.id), suppression };
   }
+  if (existing && !['discovered', 'deduped', 'scan_pending', 'failed_retryable'].includes(prospect.lifecycle)) {
+    return {
+      prospect: store.get('prospects', prospect.id),
+      suppression,
+      reuse: true,
+      reuseReason: `already ${prospect.lifecycle}`,
+    };
+  }
   await store.transition(prospect.id, 'scan_pending', { actor, reason: 'cleared suppression', correlationId: prospect.correlation_id });
   return { prospect: store.get('prospects', prospect.id), suppression };
 }
 
-async function runScan(store, cfg, prospect, fixture, adapters) {
-  await store.transition(prospect.id, 'scanning', { actor: 'scanner', reason: 'audit run started', correlationId: prospect.correlation_id });
-  await store.emitEvent({ actor: 'scanner', type: 'scan.started', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'scan started' });
-  let places = fixture.meta.places || null;
-  if (!places && adapters && adapters.places) {
-    const looked = await adapters.places.lookup(prospect);
-    if (looked.status === 'ok') {
-      places = {
-        id: looked.place_id,
-        rating: looked.rating,
-        userRatingCount: looked.review_count,
-        businessStatus: looked.business_status,
-        displayName: looked.matched_name,
-      };
-    }
-  }
-  const scanned = scanFixture({
-    html: fixture.html,
-    url: prospect.website,
-    prospect,
-    places,
-  });
+async function lookupPlaces(adapters, prospect, supplied) {
+  if (supplied) return supplied;
+  if (!adapters || !adapters.places) return null;
+  const looked = await adapters.places.lookup(prospect);
+  if (looked.status !== 'ok') return null;
+  return {
+    id: looked.place_id,
+    rating: looked.rating,
+    userRatingCount: looked.review_count,
+    businessStatus: looked.business_status,
+    displayName: looked.matched_name,
+  };
+}
+
+async function persistScan(store, cfg, prospect, scanned) {
   const run = store.insert('audit_runs', {
     id: id('audit'),
     prospect_id: prospect.id,
@@ -177,13 +221,57 @@ async function runScan(store, cfg, prospect, fixture, adapters) {
     status: 'completed',
     started_at: nowIso(),
     completed_at: nowIso(),
-    fixture: true,
+    fixture: scanned.fixture === true,
     raw_audit: scanned.audit,
   });
   const evidence = scanned.evidence.map((e) => store.insert('evidence_items', { ...e, audit_run_id: run.id }));
-  await store.transition(prospect.id, 'scanned', { actor: 'scanner', reason: 'fixture scan complete', correlationId: prospect.correlation_id });
-  await store.emitEvent({ actor: 'scanner', type: 'scan.completed', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'scan completed', payload: { audit_run_id: run.id } });
+  await store.transition(prospect.id, 'scanned', {
+    actor: 'scanner',
+    reason: scanned.fixture ? 'fixture scan complete' : 'public scan complete',
+    correlationId: prospect.correlation_id,
+  });
+  await store.emitEvent({
+    actor: 'scanner',
+    type: 'scan.completed',
+    prospectId: prospect.id,
+    correlationId: prospect.correlation_id,
+    reason: 'scan completed',
+    payload: { audit_run_id: run.id, fixture: scanned.fixture === true },
+  });
   return { run, evidence, scanned };
+}
+
+async function runScan(store, cfg, prospect, fixture, adapters) {
+  await store.transition(prospect.id, 'scanning', { actor: 'scanner', reason: 'audit run started', correlationId: prospect.correlation_id });
+  await store.emitEvent({ actor: 'scanner', type: 'scan.started', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'scan started' });
+  const places = await lookupPlaces(adapters, prospect, fixture.meta?.places || null);
+  const scanned = scanFixture({
+    html: fixture.html,
+    url: prospect.website,
+    prospect,
+    places,
+  });
+  return persistScan(store, cfg, prospect, scanned);
+}
+
+async function runScanDocument(store, cfg, prospect, source, adapters) {
+  await store.transition(prospect.id, 'scanning', { actor: 'scanner', reason: 'audit run started', correlationId: prospect.correlation_id });
+  await store.emitEvent({ actor: 'scanner', type: 'scan.started', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'scan started' });
+  const places = await lookupPlaces(adapters, prospect, source.places || null);
+  let scanned;
+  if (source.live) {
+    scanned = await scanLive({ url: source.url || prospect.website, prospect, places, fetchImpl: source.fetchImpl });
+  } else {
+    scanned = scanDocument({
+      html: source.html,
+      url: source.url || prospect.website,
+      prospect,
+      places,
+      source: source.source || 'intake',
+      fixture: false,
+    });
+  }
+  return persistScan(store, cfg, prospect, scanned);
 }
 
 async function scoreAndRoute(store, cfg, campaign, prospect, run, evidence, scanned) {
@@ -243,7 +331,7 @@ function scoreRow(prospect, run, snapshotIn, routed, cfg) {
   };
 }
 
-async function generateReport(store, cfg, prospect, run, snapshot, snapshotIn, evidence, offer) {
+async function generateReport(store, cfg, prospect, run, snapshot, snapshotIn, evidence, offer, intake) {
   const manifest = buildManifest({
     prospect,
     snapshot: snapshotIn,
@@ -252,6 +340,7 @@ async function generateReport(store, cfg, prospect, run, snapshot, snapshotIn, e
     auditId: run.id,
     observedAt: nowIso(),
     config: cfg,
+    intake: publicIntake(intake || intakeForProspect(store, prospect)),
   });
   const report = store.insert('reports', {
     id: id('report'),
@@ -284,8 +373,16 @@ async function generateReport(store, cfg, prospect, run, snapshot, snapshotIn, e
   });
   store.update('reports', report.id, { current_version_id: version.id });
   await store.transition(prospect.id, 'report_draft', { actor: 'reporter', reason: 'manifest rendered', correlationId: prospect.correlation_id });
-  await store.transition(prospect.id, 'qa_pending', { actor: 'reporter', reason: 'human QA mandatory', correlationId: prospect.correlation_id });
-  await store.emitEvent({ actor: 'reporter', type: 'report.generated', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'report generated', payload: { report_id: report.id } });
+  if (!checks.ok) {
+    await store.transition(prospect.id, 'needs_review', {
+      actor: 'reporter',
+      reason: `report checks failed: ${checks.fails.join('; ')}`,
+      correlationId: prospect.correlation_id,
+    });
+  } else {
+    await store.transition(prospect.id, 'qa_pending', { actor: 'reporter', reason: 'human QA mandatory', correlationId: prospect.correlation_id });
+  }
+  await store.emitEvent({ actor: 'reporter', type: 'report.generated', prospectId: prospect.id, correlationId: prospect.correlation_id, reason: 'report generated', payload: { report_id: report.id, checks_ok: checks.ok } });
   return { report, version, html: rendered.html, checks, pdf, bookingUrl, reportUrl, manifest };
 }
 
@@ -363,38 +460,44 @@ async function enrichContacts(store, prospect, scanned) {
   return created;
 }
 
-function draftCopy(prospect, snapshot, reportUrl, bookingUrl) {
+function draftCopy(prospect, snapshot, reportUrl, bookingUrl, intake) {
   const findings = (snapshot.explanations || []).slice(0, 3).map((e) => e.because);
+  const hello = firstName(intake?.requester_name);
+  const label = offerLabel(snapshot.selected_offer);
+  const goal = intake?.growth_goals ? `You asked about ${intake.growth_goals}.` : '';
   const email = {
     channel: 'email',
-    subject: `${prospect.business_name}: three things we measured on your site`,
+    subject: `Free public presence audit for ${prospect.business_name}`,
     body: [
-      `Hi, this is a draft for Jesse, not a send.`,
-      `We looked at the public homepage for ${prospect.business_name}.`,
+      hello ? `Hi ${hello},` : 'Hi,',
+      `This is a draft for a human to send. Nothing here has been emailed.`,
+      `We measured the public homepage for ${prospect.business_name}.`,
       ...findings.map((f, i) => `${i + 1}. ${f}`),
+      goal,
+      `The first honest offer is ${label}.`,
       `Report: ${reportUrl}`,
       `Book a walkthrough: ${bookingUrl}`,
-      `Nothing in this draft has been emailed.`,
-    ].join('\n'),
+    ].filter(Boolean).join('\n'),
     findings_cited: findings,
   };
   const callBrief = {
     channel: 'call-brief',
-    subject: `Jesse call brief: ${prospect.business_name}`,
+    subject: `Call brief: ${prospect.business_name}`,
     body: [
-      `Offer: ${snapshot.selected_offer}`,
-      `SQS: ${snapshot.site_quality_score}`,
+      `Offer: ${label}`,
+      `Site quality score: ${snapshot.site_quality_score == null ? 'n/a' : snapshot.site_quality_score}`,
       `Hard faults live on the snapshot. Do not pitch a rebuild without one.`,
+      goal,
       `Report: ${reportUrl}`,
-      `Suggested follow-up: 3 business days if no reply.`,
-    ].join('\n'),
+      `Suggested follow up: 3 business days if no reply.`,
+    ].filter(Boolean).join('\n'),
     findings_cited: findings,
   };
   return { email, callBrief, socialTask: 'Manual: if a social profile is published, research only. Do not send autonomous DMs.' };
 }
 
 async function packageOutreach(store, cfg, adapters, prospect, snapshot, report, reportUrl, bookingUrl, contacts) {
-  const drafts = draftCopy(prospect, snapshot, reportUrl, bookingUrl);
+  const drafts = draftCopy(prospect, snapshot, reportUrl, bookingUrl, intakeForProspect(store, prospect));
   const emailDraft = store.insert('outreach_drafts', { id: id('draft'), prospect_id: prospect.id, report_id: report.id, ...drafts.email, follow_up_at: addDays(nowIso(), 3), social_research_task: drafts.socialTask, sent: false });
   const callDraft = store.insert('outreach_drafts', { id: id('draft'), prospect_id: prospect.id, report_id: report.id, ...drafts.callBrief, sent: false });
   await store.transition(prospect.id, 'outreach_ready', { actor: 'drafter', reason: 'drafts generated, not sent', correlationId: prospect.correlation_id });
@@ -546,6 +649,92 @@ function group(rows, fn) {
   return out;
 }
 
+function resolveScanSource(submission, opts = {}, cfg = {}) {
+  if (opts.html) {
+    return { kind: 'html', html: opts.html, url: opts.url || submission.website, places: opts.places || null, signals: opts.signals || {} };
+  }
+  const fixtureName = opts.fixtureName || findFixtureName(submission.website);
+  if (fixtureName) {
+    return { kind: 'fixture', fixture: loadFixture(fixtureName), fixtureName };
+  }
+  if (cfg.liveScan || opts.live) {
+    return { kind: 'live', url: submission.website, fetchImpl: opts.fetchImpl || null, signals: opts.signals || {} };
+  }
+  return null;
+}
+
+async function processSubmission(store, adapters, cfg, campaign, submission, opts = {}) {
+  const resolved = await resolveProspect(store, campaign, submission, opts);
+  const prospect = resolved.prospect;
+  if (resolved.suppression.suppressed) {
+    return { ok: true, suppressed: true, prospect, suppression: resolved.suppression };
+  }
+  if (resolved.reuse) {
+    return {
+      ok: true,
+      reuse: true,
+      prospect: store.get('prospects', prospect.id),
+      reason: resolved.reuseReason || 'existing audit in progress',
+    };
+  }
+  const source = resolveScanSource(submission, opts, cfg);
+  if (!source) {
+    return {
+      ok: true,
+      pending: true,
+      prospect: store.get('prospects', prospect.id),
+      reason: 'scan waiting for a fixture or RADAR_V2_LIVE_SCAN',
+    };
+  }
+  try {
+    const scanned = source.kind === 'fixture'
+      ? await runScan(store, cfg, store.get('prospects', prospect.id), source.fixture, adapters)
+      : await runScanDocument(store, cfg, store.get('prospects', prospect.id), {
+        html: source.html,
+        url: source.url,
+        places: source.places,
+        live: source.kind === 'live',
+        fetchImpl: source.fetchImpl,
+        source: source.kind === 'live' ? 'live-tier0' : 'intake',
+      }, adapters);
+    const signals = source.fixture?.meta?.signals || source.signals || {};
+    const scored = await scoreAndRoute(
+      store,
+      cfg,
+      campaign,
+      store.get('prospects', prospect.id),
+      scanned.run,
+      scanned.evidence,
+      { ...scanned.scanned, prospect: { ...store.get('prospects', prospect.id), ...signals } }
+    );
+    const current = store.get('prospects', prospect.id);
+    if (scored.routed.route === 'needs_review') {
+      return { ok: true, needs_review: true, prospect: current, scanned, scored };
+    }
+    const report = await generateReport(
+      store, cfg, current, scanned.run, scored.snapshot, scored.snapshotIn, scanned.evidence, scored.routed.offer, submission
+    );
+    return {
+      ok: true,
+      prospect: store.get('prospects', current.id),
+      report,
+      scanned,
+      scored,
+      fixtureName: source.fixtureName || '',
+    };
+  } catch (err) {
+    const current = store.get('prospects', prospect.id);
+    if (current && (current.lifecycle === 'scan_pending' || current.lifecycle === 'scanning')) {
+      await store.transition(current.id, 'failed_retryable', {
+        actor: 'scanner',
+        reason: String(err && err.message || err),
+        correlationId: current.correlation_id,
+      });
+    }
+    return { ok: false, errors: [String(err && err.message || err)], prospect: store.get('prospects', prospect.id) };
+  }
+}
+
 async function runVerticalSlice({ fixtureName = 'cedar-ridge-hvac', reviewer = 'qa.reviewer', configOverrides = {}, store: existing, pauseAt } = {}) {
   const cfg = loadConfig({
     killSwitch: true,
@@ -644,10 +833,13 @@ async function finishVerticalSlice(state) {
 
 module.exports = {
   loadFixture,
+  findFixtureName,
   createCampaign,
   submitIntake,
   resolveProspect,
   runScan,
+  runScanDocument,
+  processSubmission,
   scoreAndRoute,
   generateReport,
   qaDecision,
@@ -657,6 +849,7 @@ module.exports = {
   funnelView,
   runVerticalSlice,
   finishVerticalSlice,
+  draftCopy,
   normalizeEmail,
   normalizePhone,
   normalizeName,
