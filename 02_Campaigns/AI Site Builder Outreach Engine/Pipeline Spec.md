@@ -108,6 +108,12 @@ the batch walkthrough, and a different checker reviews it at desktop and mobile
 before `qa_ready` can become ready. The evaluator rejects missing recordings,
 self-review, incomplete viewport coverage, and any failed visual verdict.
 
+**Live HTTP 200 is not `qa_ready` and not call-ready.** A sheet stamp like
+`Passed | live verified` may mark `live`. Call-ready still needs a rebuild (or
+an explicit ads/SEO offer) from [[Site Grader]], confirmed location, a
+classified official/public phone, no placeholder copy, and no
+chain/institution/duplicate. 2026-08-16 audit: [[12_Brain/research/Jesse Call Sheet QA Audit]].
+
 ## Stage 6: Human approval
 
 **Goal:** Mac or Melissa signs off on the exact list and the exact mail piece.

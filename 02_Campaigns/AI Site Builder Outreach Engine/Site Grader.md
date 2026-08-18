@@ -136,3 +136,4 @@ Setup and troubleshooting: `_os/automation/docs/RADAR-SETUP.md`.
 - [[Pipeline Spec]] — the eight-stage model this fills in at stage 2
 - [[Market Roster]] — the geography ladder and vertical priorities
 - [[Batch Runbook]] — what happens to the `rebuild` queue next
+- [[12_Brain/research/Jesse Call Sheet QA Audit]] — 2026-08-16: the 238-row "call-ready" sheet is live, not rebuild-call-ready; only Waste Gas, Mayfair Fence, and Dunryte are `rebuild`

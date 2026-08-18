@@ -2,6 +2,7 @@
 tags: [campaign, evidence, slack]
 campaign: "[[AI Site Builder Outreach Engine]]"
 compiled: 2026-07-29
+updated: 2026-08-16
 source_channels: ["#ai-tech-news", "#ghl-leads-apollo", "#momentumsites", "#360newprojects"]
 ---
 
@@ -166,6 +167,28 @@ Philly shoot, 14 panos, $200 budget. Relevant as an in-house photography source 
 Industry pages drafted or needed: Medical & Healthcare, Spas & Wellness, Home Services, Legal & Law Firms, Cannabis & Restricted Categories, Industrial & Manufacturing, Multi-Location & Franchise, Professional Services (needed), Ecommerce (needed).
 
 **Why this matters here:** batch verticals should mirror this list so prospect sites and industry pages reinforce each other. See the vertical alignment section in [[AI Site Builder Outreach Engine]] and the vertical column in [[Market Roster]].
+
+## Addendum: Jesse handoffs, 2026-08-03 to 2026-08-13
+
+Compiled 2026-08-16 from `#ai-tech-news` and the Jesse DM. Gmail carried the same 100-hub and 238-row handoffs. Full call-readiness verdict: [[12_Brain/research/Jesse Call Sheet QA Audit]].
+
+**Dillon Mohr, 2026-08-03, #ai-tech-news** — [permalink](https://momentum3d.slack.com/archives/C04HXSVN2CS/p1785730954936909)
+
+Batch 2 hub posted to Jesse and Mac. Claim: 50+ sites ready to leverage in outreach; full responsive QA shipped.
+
+**Dillon Mohr, 2026-08-05, Jesse DM** — [permalink](https://momentum3d.slack.com/archives/D0BG10TC858/p1785950732147089)
+
+Drive sheet with 100 completed homepages and verified contact routes. Same file later became the 238-row "call-ready" sheet.
+
+**Dillon Mohr, 2026-08-05, #ai-tech-news** — [permalink](https://momentum3d.slack.com/archives/C04HXSVN2CS/p1785951365907089)
+
+Same 100-site dump posted to the channel. Asked Mac and Jesse whether the sites and contact routes were ready to send to prospects. That question was not answered in-thread as a yes.
+
+**Dillon Mohr, 2026-08-06, #ai-tech-news** — [permalink](https://momentum3d.slack.com/archives/C04HXSVN2CS/p1786073089219209)
+
+Prospect Radar hub. Review surface, not a new 25-site batch.
+
+Gmail (not Slack) is the later 238-row claim: 2026-08-13 subject `238 Business Call Sheet Ready for Tomorrow` told Jesse QA was finished on every row and the list was ready for individual outreach. Live probe 2026-08-16: pages are up; 3 names are rebuild-call-ready.
 
 ## What Slack does NOT say
 
