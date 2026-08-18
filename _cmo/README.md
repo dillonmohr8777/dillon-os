@@ -2,7 +2,7 @@
 
 **The auditable AI CMO.** Multi-client, paid + organic, every claim carries a receipt.
 
-Built by reverse-engineering [okara.ai](docs/OKARA-TEARDOWN.md) — a $99–249/mo "AI CMO" running ~10
+Built by reverse-engineering [okara.ai](docs/OKARA-TEARDOWN.md) — [read the teardown as a page](https://claude.ai/code/artifact/48db51cc-80f3-4e9b-a715-185766772e4b) — a $99–249/mo "AI CMO" running ~10
 organic agents for 120,000 businesses — and then fixing what its architecture cannot do.
 
 Zero build step. One runtime dependency. Runs with no API key, no network, and no credentials.
