@@ -184,7 +184,7 @@ def main(argv=None):
         print('searched Chrome/Edge default profiles; none present on this machine')
         return 0
 
-    since = datetime.datetime.utcnow() - datetime.timedelta(days=max(1, args.days))
+    since = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None) - datetime.timedelta(days=max(1, args.days))
     rows = []
     copies = []
     try:

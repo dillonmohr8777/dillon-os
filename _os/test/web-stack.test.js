@@ -178,7 +178,7 @@ db = os.environ['HIST_DB']
 conn = sqlite3.connect(db)
 conn.execute('CREATE TABLE urls (id INTEGER PRIMARY KEY, url LONGVARCHAR, title LONGVARCHAR, visit_count INTEGER, typed_count INTEGER, last_visit_time INTEGER, hidden INTEGER DEFAULT 0)')
 epoch = datetime.datetime(1601,1,1)
-now = datetime.datetime.utcnow()
+now = datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
 micro = int((now - epoch).total_seconds() * 1e6)
 rows = [
   ('https://example.com/pricing?token=secret', 'Example pricing', 3, micro),
