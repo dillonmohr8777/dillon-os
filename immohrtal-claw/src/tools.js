@@ -10,6 +10,9 @@ const { loadSession, listSessions } = require('./session-store');
 const cron = require('./cron');
 const net = require('./net');
 const spawn = require('./spawn');
+const knowledge = require('./knowledge');
+const models = require('./models');
+const { selectModel } = require('./config');
 
 function parseArgs(raw) {
   if (!raw) return {};
@@ -208,6 +211,50 @@ function schemas(config) {
     {
       type: 'function',
       function: {
+        name: 'kb_search',
+        description: 'Search the operator vault knowledge base. Start here before guessing Dillon OS facts.',
+        parameters: {
+          type: 'object',
+          properties: { query: { type: 'string' }, limit: { type: 'integer' } },
+          required: ['query'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'kb_read',
+        description: 'Read one allowlisted vault markdown file. Never private/, .env, or credentials.',
+        parameters: {
+          type: 'object',
+          properties: { path: { type: 'string', description: 'Vault-relative path such as INDEX.md or 12_Brain/00_Home.md' } },
+          required: ['path'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'model_list',
+        description: 'List the ten configured brains and whether each is ready on this box.',
+        parameters: { type: 'object', properties: {} },
+      },
+    },
+    {
+      type: 'function',
+      function: {
+        name: 'model_select',
+        description: 'Switch the live brain for the next turn. Use a catalog id.',
+        parameters: {
+          type: 'object',
+          properties: { id: { type: 'string' } },
+          required: ['id'],
+        },
+      },
+    },
+    {
+      type: 'function',
+      function: {
         name: 'spawn',
         description: 'Run a long task in a background subagent session.',
         parameters: {
@@ -335,6 +382,25 @@ async function execute(name, rawArgs, config) {
         };
       }
       throw new Error('unknown cron action');
+    case 'kb_search':
+      return {
+        ok: true,
+        hits: knowledge.searchKnowledge({ query: args.query, limit: args.limit || 8 }),
+      };
+    case 'kb_read':
+      return knowledge.readKnowledge(args.path);
+    case 'model_list':
+      return { ok: true, ...(await models.listStatus()) };
+    case 'model_select': {
+      const next = selectModel(args.id, config);
+      return {
+        ok: true,
+        id: next.modelId,
+        label: next.provider.label,
+        api: next.provider.api,
+        model: next.provider.model,
+      };
+    }
     case 'spawn':
       return spawn.spawnTask({ config, task: args.task });
     case 'message':

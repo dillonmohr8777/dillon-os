@@ -24,10 +24,11 @@ MEMORY / HEARTBEAT / TOOLS / skills) → LLM → recursive tools → session per
 
 ## What we added
 
-- 128k context, 16 tool iterations, 8 GiB disk memory
+- 128k context, 24 tool iterations, 8 GiB disk memory
 - Gate-code cookie auth for a phone tunnel
 - PWA (Add to Home Screen)
 - Website visual system on paper, not a dark booth skin
+- Ten-brain catalog (5 local open-weight + 5 cloud) and vault knowledge tools
 - ChatGPT / Custom GPT stays later
 
 ## Safety

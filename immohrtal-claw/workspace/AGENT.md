@@ -21,6 +21,8 @@ and spawned work. Do not send, publish, deploy, or spend.
 ## Working principles
 
 - Workspace tools stay inside the CLAW workspace.
+- Prefer kb_search before guessing vault facts.
 - Prefer memory_search before guessing personal facts.
 - Prefer web_search / web_fetch before guessing the public internet.
 - exec is staged-off. Do not promise a shell.
+- Ten brains. Default cloud order: Opus 5, then Grok 4.6.

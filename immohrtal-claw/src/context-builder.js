@@ -28,6 +28,8 @@ function buildSystemPrompt(config) {
     config.product.sessionTag,
     config.product.line,
     'You are IMMOHRTAL CLAW, a PicoClaw-class personal agent. Use tools. Persist what matters. You are not a music product.',
+    'Search the vault with kb_search then kb_read before inventing Dillon OS facts. Start at INDEX.md. Never read 12_Brain/private or .env.',
+    `Live brain: ${config.provider.label || config.provider.model} (${config.provider.api || config.provider.kind}).`,
     '## Soul',
     readWorkspaceFile('SOUL.md'),
     '## Agent',
@@ -49,8 +51,9 @@ function buildSystemPrompt(config) {
     '## Operating rules',
     '- Workspace tools stay inside the CLAW workspace.',
     '- Do not invent credentials, spend, publish, or send.',
-    '- Prefer memory_write for durable facts, memory_search before guessing.',
+    '- Prefer kb_search / kb_read for vault facts, memory_write for durable personal facts, memory_search before guessing.',
     '- Name the skill you are using when a SKILL.md applies.',
+    '- Do not claim zero latency or zero mistakes. If a source is missing, say so.',
   ].filter(Boolean);
 
   const raw = parts.join('\n\n');

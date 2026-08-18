@@ -12,6 +12,11 @@ const workspace = path.join(tmpRoot, 'workspace');
 fs.cpSync(path.join(root, 'workspace'), workspace, { recursive: true });
 process.env.CLAW_DATA_DIR = path.join(tmpRoot, 'data');
 process.env.CLAW_WORKSPACE = workspace;
+const vault = path.join(tmpRoot, 'vault');
+fs.mkdirSync(path.join(vault, '12_Brain', 'private'), { recursive: true });
+fs.writeFileSync(path.join(vault, 'INDEX.md'), '# Dillon OS Index\n\nIMMOHRTAL CLAW is a personal agent.\n');
+fs.writeFileSync(path.join(vault, '12_Brain', 'private', 'secrets.md'), 'redacted\n');
+process.env.CLAW_VAULT_ROOT = vault;
 fs.mkdirSync(process.env.CLAW_DATA_DIR, { recursive: true });
 
 const { assertInside } = require('../src/sandbox');
@@ -19,7 +24,9 @@ const { WORKSPACE, NOTES } = require('../src/paths');
 const { loadSkills } = require('../src/skills-loader');
 const memory = require('../src/memory-store');
 const { execute } = require('../src/tools');
-const { loadConfig } = require('../src/config');
+const { loadConfig, selectModel } = require('../src/config');
+const { CATALOG } = require('../src/models');
+const knowledge = require('../src/knowledge');
 const { runTurn } = require('../src/agent-loop');
 const { createServer } = require('../src/gateway');
 const { assertPublicHttpUrl } = require('../src/net');
@@ -46,7 +53,10 @@ describe('sandbox', () => {
 describe('skills and memory', () => {
   it('loads bundled SKILL.md modules', () => {
     const ids = loadSkills().map((s) => s.id);
-    for (const need of ['memory-keeper', 'web-search', 'cron-jobs', 'spawn-tasks']) {
+    for (const need of [
+      'memory-keeper', 'web-search', 'cron-jobs', 'spawn-tasks',
+      'knowledge-base', 'model-router', 'vault-protocol', 'approval-gate',
+    ]) {
       assert.ok(ids.includes(need), need);
     }
     assert.equal(ids.includes('album-bible'), false);
@@ -149,12 +159,14 @@ describe('gateway', () => {
       assert.equal(healthJson.ok, true);
       assert.equal(healthJson.product, 'IMMOHRTAL CLAW');
       assert.equal(healthJson.chatgpt, 'later');
+      assert.equal(healthJson.brains, 10);
 
       const page = await fetch(`http://127.0.0.1:${port}/`);
       const html = await page.text();
       assert.match(html, /IMMOHRTAL CLAW/);
       assert.match(html, /Personal agent/);
       assert.match(html, /chrome-text/);
+      assert.match(html, /modelPick/);
       assert.doesNotMatch(html, /SESSION 001/);
       assert.doesNotMatch(html, /Dance With The Delusional/);
       assert.doesNotMatch(html, /Listen Now/);
@@ -199,5 +211,29 @@ describe('gateway', () => {
     } finally {
       server.close();
     }
+  });
+});
+
+describe('brains and knowledge', () => {
+  it('catalogs five local and five cloud brains', () => {
+    assert.equal(CATALOG.length, 10);
+    assert.equal(CATALOG.filter((m) => m.group === 'local').length, 5);
+    assert.equal(CATALOG.filter((m) => m.group === 'cloud').length, 5);
+    assert.equal(CATALOG.find((m) => m.slot === 'cloud-5').family, 'google');
+    assert.equal(CATALOG.find((m) => m.id === 'composer-2.5').cursorOnly, true);
+    assert.ok(CATALOG.some((m) => m.id === 'claude-opus-5'));
+    assert.ok(CATALOG.some((m) => m.id === 'grok-4.6'));
+  });
+
+  it('searches the vault and refuses private files', async () => {
+    const hits = knowledge.searchKnowledge({ query: 'IMMOHRTAL CLAW personal agent' });
+    assert.ok(hits.some((h) => h.path === 'INDEX.md'));
+    const page = knowledge.readKnowledge('INDEX.md');
+    assert.match(page.content, /personal agent/i);
+    assert.throws(() => knowledge.readKnowledge('12_Brain/private/secrets.md'), /allowlist|escapes|private/);
+    assert.throws(() => knowledge.readKnowledge('../../etc/passwd'), /escapes|allowlist/);
+    const listed = await execute('model_list', {}, config);
+    assert.equal(listed.models.length, 10);
+    assert.throws(() => selectModel('not-a-brain'), /unknown model/);
   });
 });

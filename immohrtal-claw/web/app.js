@@ -14,6 +14,7 @@ const gateCode = document.getElementById('gateCode');
 const gateErr = document.getElementById('gateErr');
 const rail = document.getElementById('rail');
 const railToggle = document.getElementById('railToggle');
+const modelPick = document.getElementById('modelPick');
 
 const sessionId = localStorage.getItem('claw-session') || `sess_${Date.now().toString(16)}`;
 localStorage.setItem('claw-session', sessionId);
@@ -47,7 +48,7 @@ async function loadState() {
   }
   gate.hidden = true;
   const data = await res.json();
-  providerEl.textContent = `${data.provider.kind} · ${data.provider.model}`;
+  providerEl.textContent = `${data.provider.label || data.provider.kind} · ${data.provider.model}`;
   const mb = (data.memory.longTermBytes / (1024 * 1024)).toFixed(2);
   memoryEl.textContent = `long-term ${mb} MB / ${(data.memoryMaxBytes / (1024 ** 3)).toFixed(0)} GiB ceiling · context ${data.contextTokens} tok`;
   skillsEl.innerHTML = '';
@@ -56,11 +57,38 @@ async function loadState() {
     li.textContent = `${skill.id} — ${skill.description}`;
     skillsEl.append(li);
   }
-  hint.textContent = data.provider.kind === 'rehearsal'
-    ? 'Rehearsal provider. Point a live model at it when you want a bigger brain.'
-    : `Live provider ${data.provider.model}`;
+  hint.textContent = data.provider.api === 'rehearsal' || data.provider.kind === 'rehearsal'
+    ? 'Rehearsal. Pick a live brain when keys or Ollama are on this box.'
+    : `Live ${data.provider.label || data.provider.model}`;
   statusEl.textContent = data.gated ? 'gated · phone ok' : 'local';
+  await loadModels(data.provider.id);
   return true;
+}
+
+async function loadModels(selectedId) {
+  const res = await fetch('/api/models', { credentials: 'same-origin' });
+  if (!res.ok) return;
+  const data = await res.json();
+  const selected = selectedId || data.selected;
+  modelPick.innerHTML = '';
+  const rehearsal = document.createElement('option');
+  rehearsal.value = 'rehearsal';
+  rehearsal.textContent = 'Rehearsal (no remote model)';
+  if (selected === 'rehearsal') rehearsal.selected = true;
+  modelPick.append(rehearsal);
+  const groups = { local: 'Local open-weight', cloud: 'Cloud' };
+  for (const group of ['local', 'cloud']) {
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = groups[group];
+    for (const model of data.models.filter((m) => m.group === group)) {
+      const opt = document.createElement('option');
+      opt.value = model.id;
+      opt.textContent = `${model.label}${model.ready ? '' : ' · not ready'}`;
+      if (model.id === selected) opt.selected = true;
+      optgroup.append(opt);
+    }
+    modelPick.append(optgroup);
+  }
 }
 
 async function transmit(message) {
@@ -145,6 +173,21 @@ gateForm.addEventListener('submit', async (e) => {
 
 railToggle.addEventListener('click', () => {
   rail.classList.toggle('open');
+});
+
+modelPick.addEventListener('change', async () => {
+  const id = modelPick.value;
+  const res = await fetch('/api/model', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ id }),
+  });
+  if (!res.ok) {
+    addLine('claw', 'Could not switch brains.');
+    return;
+  }
+  await loadState();
 });
 
 if ('serviceWorker' in navigator) {

@@ -13,6 +13,8 @@ const { buildSystemPrompt } = require('./context-builder');
 const { bus } = require('./bus');
 const { authorized, isOpenPath, cookieHeader } = require('./auth');
 const { parseJsonlChunk } = require('./jsonl');
+const { listStatus } = require('./models');
+const { selectModel } = require('./config');
 
 function sendJson(res, status, body) {
   const payload = JSON.stringify(body);
@@ -121,6 +123,8 @@ function createServer(config) {
           product: config.product.name,
           provider: config.provider.kind,
           model: config.provider.model,
+          modelId: config.modelId,
+          brains: 10,
           memory: memory.stats(),
           skills: loadSkills().map((s) => s.id),
           gated: Boolean(config.gateToken),
@@ -134,13 +138,38 @@ function createServer(config) {
         const built = buildSystemPrompt(config);
         sendJson(res, 200, {
           product: config.product,
-          provider: { kind: config.provider.kind, model: config.provider.model },
+          provider: {
+            kind: config.provider.kind,
+            api: config.provider.api,
+            model: config.provider.model,
+            id: config.modelId,
+            label: config.provider.label,
+            family: config.provider.family,
+          },
           memory: memory.stats(),
           sessions: session.listSessions(),
           skills: built.skills.map((s) => ({ id: s.id, name: s.name, description: s.description })),
           contextTokens: config.contextTokens,
           memoryMaxBytes: config.memoryMaxBytes,
           gated: Boolean(config.gateToken),
+        });
+        return;
+      }
+
+      if (req.method === 'GET' && url.pathname === '/api/models') {
+        sendJson(res, 200, await listStatus());
+        return;
+      }
+
+      if (req.method === 'POST' && url.pathname === '/api/model') {
+        const body = await readBody(req);
+        const next = selectModel(String(body.id || '').trim(), config);
+        sendJson(res, 200, {
+          ok: true,
+          id: next.modelId,
+          label: next.provider.label,
+          api: next.provider.api,
+          model: next.provider.model,
         });
         return;
       }

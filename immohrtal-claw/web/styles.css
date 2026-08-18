@@ -506,10 +506,19 @@ textarea:focus, input:focus {
   background: rgba(255, 255, 255, 0.28);
 }
 
-.rail p, .rail li {
-  font-size: 13px;
-  color: var(--dim);
-  margin: 0 0 6px;
+.model-pick {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0 14px;
 }
 
 .marking-card {

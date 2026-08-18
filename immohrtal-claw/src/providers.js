@@ -1,107 +1,216 @@
 'use strict';
 
-function extractJson(text) {
-  const match = String(text || '').match(/\{[\s\S]*\}/);
-  if (!match) return null;
-  try {
-    return JSON.parse(match[0]);
-  } catch {
-    return null;
-  }
+const { rehearsalReply, decideRehearsalTools, messagesSinceLastUser, extractJson } = require('./providers-rehearsal');
+
+function timeoutMs() {
+  const n = Number.parseInt(process.env.CLAW_PROVIDER_TIMEOUT_MS || '120000', 10);
+  return Number.isFinite(n) ? n : 120000;
 }
 
-function messagesSinceLastUser(messages) {
-  let idx = -1;
-  for (let i = messages.length - 1; i >= 0; i -= 1) {
-    if (messages[i].role === 'user') {
-      idx = i;
-      break;
-    }
-  }
-  return idx >= 0 ? messages.slice(idx + 1) : [];
+function openaiTools(tools) {
+  return tools || [];
 }
 
-function rehearsalReply(userText, toolResults) {
-  const t = String(userText || '').trim();
-  if (toolResults.length) {
-    const last = toolResults[toolResults.length - 1];
-    if (last.name === 'memory_write') {
-      return `Pinned. I will not forget: ${last.result.record.text}`;
-    }
-    if (last.name === 'memory_search') {
-      const hits = last.result.hits || [];
-      if (!hits.length) return 'Nothing in long-term memory for that yet. Say it once and I will write it.';
-      return hits.map((h) => `[${h.source}] ${h.text.slice(0, 280)}`).join('\n\n');
-    }
-    if (last.name === 'web_search') {
-      const hits = last.result.hits || [];
-      if (!hits.length) return 'Search came back empty.';
-      return hits.map((h) => `${h.title}${h.url ? ` — ${h.url}` : ''}\n${h.text}`).join('\n\n');
-    }
-    if (last.name === 'web_fetch') {
-      return last.result.content || `fetch ${last.result.status}`;
-    }
-    if (last.name === 'cron') {
-      return JSON.stringify(last.result, null, 2);
-    }
-    if (last.name === 'spawn') {
-      return `Spawned ${last.result.id}. It will leave a message when it finishes.`;
-    }
-    if (last.name === 'skill_read') {
-      return last.result.body.slice(0, 1200);
-    }
-    if (last.name === 'list_dir' || last.name === 'read_file') {
-      return JSON.stringify(last.result, null, 2).slice(0, 1500);
-    }
-  }
-  if (/who are you|what are you/i.test(t)) {
-    return 'IMMOHRTAL CLAW. PicoClaw-class personal agent. Same loop: memory, files, skills, search, cron, spawn. Not a music product.';
-  }
-  return `Heard. ${t.slice(0, 220)}\n\nRehearsal provider is on (no remote model). Point OPENAI_BASE_URL at Ollama or any OpenAI-compatible host when you want a live brain. The harness is already live.`;
+function anthropicTools(tools) {
+  return (tools || []).map((t) => ({
+    name: t.function.name,
+    description: t.function.description || t.function.name,
+    input_schema: t.function.parameters || { type: 'object', properties: {} },
+  }));
 }
 
-function decideRehearsalTools(userText, iteration) {
-  if (iteration > 0) return [];
-  const t = String(userText || '');
-  if (/what do you (know|remember)|search memory|\brecall\b|what did i tell you/i.test(t)) {
-    return [{
-      id: 'call_search_1',
+function geminiTools(tools) {
+  return [{
+    functionDeclarations: (tools || []).map((t) => ({
+      name: t.function.name,
+      description: t.function.description || t.function.name,
+      parameters: t.function.parameters || { type: 'object', properties: {} },
+    })),
+  }];
+}
+
+function splitSystem(messages) {
+  const system = messages.filter((m) => m.role === 'system').map((m) => m.content).join('\n\n');
+  const rest = messages.filter((m) => m.role !== 'system');
+  return { system, rest };
+}
+
+async function completeOpenAI({ config, messages, tools }) {
+  const url = `${config.provider.baseUrl.replace(/\/$/, '')}/chat/completions`;
+  const headers = { 'content-type': 'application/json' };
+  if (config.provider.apiKey) headers.authorization = `Bearer ${config.provider.apiKey}`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers,
+    signal: AbortSignal.timeout(timeoutMs()),
+    body: JSON.stringify({
+      model: config.provider.model,
+      messages,
+      tools: openaiTools(tools),
+      tool_choice: 'auto',
+      temperature: 0.3,
+    }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`${config.provider.label || 'openai'} ${res.status}: ${body.slice(0, 400)}`);
+  }
+  const json = await res.json();
+  return json.choices[0].message;
+}
+
+function toAnthropicMessages(rest) {
+  const out = [];
+  for (const msg of rest) {
+    if (msg.role === 'tool') {
+      const last = out[out.length - 1];
+      const block = {
+        type: 'tool_result',
+        tool_use_id: msg.tool_call_id,
+        content: String(msg.content || ''),
+      };
+      if (last && last.role === 'user' && Array.isArray(last.content)) {
+        last.content.push(block);
+      } else {
+        out.push({ role: 'user', content: [block] });
+      }
+      continue;
+    }
+    if (msg.role === 'assistant' && msg.tool_calls) {
+      const content = [];
+      if (msg.content) content.push({ type: 'text', text: String(msg.content) });
+      for (const call of msg.tool_calls) {
+        let input = {};
+        const raw = call.function?.arguments || call.arguments || '{}';
+        try { input = typeof raw === 'string' ? JSON.parse(raw) : raw; } catch { input = {}; }
+        content.push({
+          type: 'tool_use',
+          id: call.id,
+          name: call.function?.name || call.name,
+          input,
+        });
+      }
+      out.push({ role: 'assistant', content });
+      continue;
+    }
+    out.push({
+      role: msg.role === 'assistant' ? 'assistant' : 'user',
+      content: String(msg.content || ''),
+    });
+  }
+  return out;
+}
+
+async function completeAnthropic({ config, messages, tools }) {
+  const { system, rest } = splitSystem(messages);
+  const url = `${config.provider.baseUrl.replace(/\/$/, '')}/v1/messages`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'x-api-key': config.provider.apiKey,
+      'anthropic-version': '2023-06-01',
+    },
+    signal: AbortSignal.timeout(timeoutMs()),
+    body: JSON.stringify({
+      model: config.provider.model,
+      max_tokens: Number.parseInt(process.env.CLAW_MAX_OUTPUT_TOKENS || '8192', 10),
+      system,
+      tools: anthropicTools(tools),
+      messages: toAnthropicMessages(rest),
+    }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`claude ${res.status}: ${body.slice(0, 400)}`);
+  }
+  const json = await res.json();
+  const tool_calls = (json.content || [])
+    .filter((b) => b.type === 'tool_use')
+    .map((b) => ({
+      id: b.id,
       type: 'function',
-      function: { name: 'memory_search', arguments: JSON.stringify({ query: t }) },
-    }];
-  }
-  if (/^(please |hey )?(remember|pin this|don't forget|dont forget)\b/i.test(t)) {
-    return [{
-      id: 'call_mem_1',
-      type: 'function',
-      function: {
-        name: 'memory_write',
-        arguments: JSON.stringify({
-          text: t.replace(/^(please |hey )?(remember|pin this|don't forget|dont forget)[:\s]*/i, '').trim() || t,
-          pin: true,
-          kind: 'pin',
+      function: { name: b.name, arguments: JSON.stringify(b.input || {}) },
+    }));
+  const text = (json.content || []).filter((b) => b.type === 'text').map((b) => b.text).join('\n');
+  if (tool_calls.length) return { role: 'assistant', content: text || '', tool_calls };
+  return { role: 'assistant', content: text };
+}
+
+function toGeminiContents(rest) {
+  const contents = [];
+  for (const msg of rest) {
+    if (msg.role === 'tool') {
+      contents.push({
+        role: 'user',
+        parts: [{
+          functionResponse: {
+            name: msg.name,
+            response: (() => {
+              try { return JSON.parse(msg.content); } catch { return { raw: msg.content }; }
+            })(),
+          },
+        }],
+      });
+      continue;
+    }
+    if (msg.role === 'assistant' && msg.tool_calls) {
+      contents.push({
+        role: 'model',
+        parts: msg.tool_calls.map((call) => {
+          let args = {};
+          const raw = call.function?.arguments || '{}';
+          try { args = typeof raw === 'string' ? JSON.parse(raw) : raw; } catch { args = {}; }
+          return { functionCall: { name: call.function?.name || call.name, args } };
         }),
-      },
-    }];
+      });
+      continue;
+    }
+    contents.push({
+      role: msg.role === 'assistant' ? 'model' : 'user',
+      parts: [{ text: String(msg.content || '') }],
+    });
   }
-  if (/\b(search the web|look up|google|web search)\b/i.test(t)) {
-    return [{
-      id: 'call_web_1',
-      type: 'function',
-      function: { name: 'web_search', arguments: JSON.stringify({ query: t }) },
-    }];
+  return contents;
+}
+
+async function completeGoogle({ config, messages, tools }) {
+  const { system, rest } = splitSystem(messages);
+  const url = `${config.provider.baseUrl.replace(/\/$/, '')}/models/${encodeURIComponent(config.provider.model)}:generateContent?key=${encodeURIComponent(config.provider.apiKey)}`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    signal: AbortSignal.timeout(timeoutMs()),
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: system }] },
+      contents: toGeminiContents(rest),
+      tools: geminiTools(tools),
+    }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`gemini ${res.status}: ${body.slice(0, 400)}`);
   }
-  if (/\b(remind me|set a reminder|cron)\b/i.test(t)) {
-    return [{
-      id: 'call_cron_1',
-      type: 'function',
-      function: {
-        name: 'cron',
-        arguments: JSON.stringify({ action: 'add', text: t, every_minutes: 60 }),
-      },
-    }];
-  }
-  return [];
+  const json = await res.json();
+  const parts = json.candidates?.[0]?.content?.parts || [];
+  const calls = parts.filter((p) => p.functionCall).map((p, i) => ({
+    id: `gemini_${i}`,
+    type: 'function',
+    function: {
+      name: p.functionCall.name,
+      arguments: JSON.stringify(p.functionCall.args || p.functionCall.arguments || {}),
+    },
+  }));
+  const text = parts.filter((p) => p.text).map((p) => p.text).join('\n');
+  if (calls.length) return { role: 'assistant', content: text || '', tool_calls: calls };
+  return { role: 'assistant', content: text };
+}
+
+async function completeLive({ config, messages, tools }) {
+  const api = config.provider.api;
+  if (api === 'anthropic') return completeAnthropic({ config, messages, tools });
+  if (api === 'google') return completeGoogle({ config, messages, tools });
+  return completeOpenAI({ config, messages, tools });
 }
 
 async function complete({ config, messages, tools }) {
@@ -110,27 +219,8 @@ async function complete({ config, messages, tools }) {
   const toolMessages = sinceUser.filter((m) => m.role === 'tool');
   const iteration = toolMessages.length;
 
-  if (config.provider.kind === 'openai') {
-    const url = `${config.provider.baseUrl}/chat/completions`;
-    const headers = { 'content-type': 'application/json' };
-    if (config.provider.apiKey) headers.authorization = `Bearer ${config.provider.apiKey}`;
-    const res = await fetch(url, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({
-        model: config.provider.model,
-        messages,
-        tools,
-        tool_choice: 'auto',
-        temperature: 0.4,
-      }),
-    });
-    if (!res.ok) {
-      const body = await res.text();
-      throw new Error(`provider ${res.status}: ${body.slice(0, 400)}`);
-    }
-    const json = await res.json();
-    return json.choices[0].message;
+  if (config.provider.api && config.provider.api !== 'rehearsal' && config.provider.baseUrl) {
+    return completeLive({ config, messages, tools });
   }
 
   const parsed = extractJson(lastUser?.content);
@@ -153,4 +243,4 @@ async function complete({ config, messages, tools }) {
   return { role: 'assistant', content: rehearsalReply(lastUser?.content, []) };
 }
 
-module.exports = { complete, decideRehearsalTools, rehearsalReply, messagesSinceLastUser };
+module.exports = { complete };
