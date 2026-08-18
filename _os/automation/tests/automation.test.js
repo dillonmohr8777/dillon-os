@@ -9,6 +9,8 @@ const { scoreProspect } = require('../lib/scorer');
 const { fromMapsIntake } = require('../lib/adapters/maps-prospect');
 const { fromIndeedIntake } = require('../lib/adapters/indeed-signal');
 const { analyzeHtml, runSentinel } = require('../lib/sentinel');
+const { parseCsv } = require('../lib/prospects');
+const { runDiscovery } = require('../bin/discover');
 const { repoPath } = require('../lib/fsutil');
 
 test('frontmatter parse + validate complete note', () => {
@@ -46,6 +48,35 @@ test('maps intake normalizes sheet-like rows', () => {
   assert.equal(rows.length, 3);
   assert.equal(rows[0].source, 'maps');
   assert.ok(rows[0].prospect_id);
+});
+
+test('CSV prospect import handles quoted cells', () => {
+  const rows = parseCsv('business_name,address\n"Shop, LLC","10 Main St, Philadelphia"\n');
+  assert.equal(rows.length, 1);
+  assert.equal(rows[0].business_name, 'Shop, LLC');
+  assert.equal(rows[0].address, '10 Main St, Philadelphia');
+});
+
+test('discover import dedupes, validates, and suppresses before qualify', () => {
+  const result = runDiscovery({
+    from: repoPath('_os/automation/fixtures/prospects/sample-discovery.csv'),
+    target: 1,
+    allowPartial: false,
+    suppress: [],
+    clientsRoot: repoPath('_os/automation/fixtures/clients'),
+    batchesRoot: repoPath('_os/automation/fixtures/no-batches'),
+    writeState: false,
+  });
+  assert.equal(result.status, 'ready');
+  assert.deepEqual(result.counts, {
+    imported: 4,
+    deduped: 3,
+    candidates: 1,
+    invalid: 1,
+    suppressed: 1,
+    duplicates: 1,
+  });
+  assert.equal(result.prospects[0].prospect_id, 'maps:place-harbor-hvac');
 });
 
 test('indeed adapter feeds shared schema', () => {

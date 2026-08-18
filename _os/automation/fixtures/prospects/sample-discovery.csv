@@ -1,0 +1,5 @@
+business_name,category,market,address,phone,website,maps_url,place_id,review_count,rating,ad_presence
+Harbor HVAC,hvac,"Philadelphia, PA","100 Market St, Philadelphia, PA",215-555-0100,https://harbor-hvac.example,https://maps.google.com/?cid=101,place-harbor-hvac,84,4.8,true
+Harbor HVAC Duplicate,hvac,Philadelphia,,215-555-0100,https://harbor-hvac.example,,place-harbor-hvac,84,4.8,false
+Incomplete Spa,spa,Philadelphia,"200 Pine St, Philadelphia, PA",215-555-0200,https://incomplete-spa.example,,,12,4.6,false
+Fixture Client One,professional-services,Philadelphia,"300 Arch St, Philadelphia, PA",215-555-0300,https://fixture-client-one.example,https://maps.google.com/?cid=303,place-fixture-client,50,4.7,false
