@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-18
 ---
 
 # INDEX — the front door
@@ -30,6 +30,9 @@ in the same change.
 - [[12_Brain/02_Entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/02_Entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/02_Entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/02_Entities/Firecrawl|Firecrawl]] — live Composio crawl/search; stealth is batch-scrape only.
+- [[12_Brain/02_Entities/Camofox Browser|Camofox Browser]] — rung-7 stealth browser; sibling clone, never vendored.
+- [[12_Brain/02_Entities/Playwright MCP|Playwright MCP]] — isolated sidecar on :8931/mcp; never `--extension`.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -40,6 +43,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
 - [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.
 - [[12_Brain/03_Concepts/Draft-First Operating Rules|Draft-First Operating Rules]] — draft unless explicitly told to send.
+- [[12_Brain/03_Concepts/Web Escalation Ladder|Web Escalation Ladder]] — cheapest web rung first; stealth is batch-scrape only.
+- [[12_Brain/03_Concepts/Generated File Drift|Generated File Drift]] — edit the generator, never the generated file.
 - [[12_Brain/03_Concepts/Access Verification Discipline|Access Verification Discipline]] — confirmed access needs direct proof (no inventories here).
 - [[12_Brain/03_Concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove.
 - [[12_Brain/03_Concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.
@@ -66,11 +71,14 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
+- [[12_Brain/04_Decisions/2026-08-18 - Local web stack and browser history grant|Local web stack grant]] — rungs 0-4, camofox sibling clone, owned-history ingest; outbound still gated.
+- [[12_Brain/09_Ops/Web Escalation Architecture|Web Escalation Architecture]] — live vs inert web surfaces.
+- [[12_Brain/11_Craft/00_Index|Agent Craft]] — standing lessons; append to [[12_Brain/11_Craft/earned-lessons|earned-lessons]].
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
-- `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
+- `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]], [[12_Brain/07_Reviews/MCP/2026-08-18 - playwright-mcp-isolated|Playwright isolated]]).
 - Bases: [[12_Brain/Bases/Clients.base|Clients]] · [[12_Brain/Bases/Projects.base|Projects]] · [[12_Brain/Bases/Decisions.base|Decisions]]
 
 ## Outreach engine

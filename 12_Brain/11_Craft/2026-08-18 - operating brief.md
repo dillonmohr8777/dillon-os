@@ -77,6 +77,7 @@ gated or defined and never wired:
 
 ## Lesson
 
-One durable lesson per brief. When a pattern repeats across briefs, promote it to
-`12_Brain/03_Concepts/` and link it back here.
+This file is regenerated. Append evidence-backed lessons to
+`12_Brain/11_Craft/earned-lessons.md`. When a lesson appears twice, promote it
+into `12_Brain/03_Concepts/` and add it to `STANDING_LESSONS` in this script.
 

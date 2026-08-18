@@ -117,6 +117,10 @@ describe('12_Brain public-safety scanner', () => {
       assert.match(landingfolio.headers.Authorization, /\$\{(env:)?LANDINGFOLIO_TOKEN\}/);
       assert.doesNotMatch(raw, /\blf_[A-Za-z0-9]/, `${rel} looks like it holds a real token`);
       assert.deepEqual(scanText(raw), [], `${rel} trips the public-safety scanner`);
+      const pw = JSON.parse(raw).mcpServers['playwright-isolated'];
+      assert.equal(pw.command, 'npx');
+      assert.equal(pw.args.includes('--extension'), false);
+      assert.ok(pw.args.includes('--isolated'));
     }
   });
 

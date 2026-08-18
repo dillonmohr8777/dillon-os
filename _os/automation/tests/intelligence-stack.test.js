@@ -77,6 +77,16 @@ test('MCP acceptance gate stays sandbox-only while Inspector is pending', () => 
   assert.deepEqual(result.pending_tests, ['inspector']);
 });
 
+test('isolated Playwright MCP candidate is sandbox-only until Inspector, and never uses --extension', () => {
+  const candidate = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/playwright-isolated-candidate.json'), 'utf8'));
+  const result = evaluateCandidate(candidate);
+  assert.equal(result.verdict, 'sandbox-only');
+  assert.deepEqual(result.pending_tests, ['inspector']);
+  assert.equal(candidate.secret_requirements.length, 0);
+  assert.match(candidate.overlap, /--extension/);
+  assert.doesNotMatch(JSON.stringify(candidate), /"--extension"/);
+});
+
 test('LandingFolio stays sandbox-only until an operator completes the Inspector probe', () => {
   const candidate = JSON.parse(fs.readFileSync(repoPath('_os/automation/fixtures/mcp/landingfolio-candidate.json'), 'utf8'));
   const result = evaluateCandidate(candidate);
