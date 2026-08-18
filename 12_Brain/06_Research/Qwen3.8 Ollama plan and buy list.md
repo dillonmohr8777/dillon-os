@@ -34,7 +34,7 @@ tags:
 
 You do not buy an Ollama paid tier to run `qwen3.8:27b` on your machine. Local is unlimited on Free. What you buy — if the case and power supply can take it — is **24GB of VRAM**. Without that card, 64GB of system RAM still loads the 18GB Q4 file and it will crawl. That is not the video.
 
-Spend stays approval-gated. This page is a shopping spec, not a purchase.
+Spend stays approval-gated. This page is a shopping spec, not a purchase. Quality vs Cursor/Claude: [[Qwen3.8-27B quality]].
 
 ## Plan (software)
 
@@ -82,5 +82,6 @@ Skeptic pass 2026-08-18: plan split, Claude-launcher path, Token Plan ≠ 27B, 2
 
 - [[12_Brain/01_Captures/research/2026-08-18 - research - Qwen3.8 Ollama plan and buy list]]
 - [[12_Brain/06_Research/Qwen3.8-27B local RAM fit]]
+- [[12_Brain/06_Research/Qwen3.8-27B quality]]
 - [[11_Agents/64gb Morning Orchestrator Spec 2026-07-08]]
 - [[12_Brain/02_Entities/Ops Box (EliteDesk 800 G4)]]
