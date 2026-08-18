@@ -1,0 +1,15 @@
+---
+description: Cursor Desktop is the full local runtime — take screenshots, use claude-code MCP, do not re-ask for this grant
+alwaysApply: true
+---
+
+# Cursor Desktop full local runtime
+
+Dillon granted this on 2026-08-18. Decision: `12_Brain/04_Decisions/2026-08-18 - Cursor Desktop full local runtime.md`.
+
+- **Run here** in Cursor Desktop. Do not tell Dillon to switch to Claude Code for these tools.
+- **You already have local full access.** Vault edits, web research, isolated browsers, Playwright screenshots, and `claude-code` MCP (new sessions only) are approved. Do not ask again.
+- **Take screenshots** when you claim to have seen a page. Prefer project MCP `playwright-isolated` (`browser_navigate` then `browser_take_screenshot`). Fallback: `node _os/automation/bin/browser-access.js screenshot <url> --out 12_Brain/private/screenshots/<name>.png`.
+- If Playwright errors with `Extension connection timeout`, you used the Cursor `--extension` server. Switch to `playwright-isolated` or `browser-access.js`. Never `--extension`. Never port 9222. Never Dillon's default Chrome profile.
+- `claude-code` / `claude-code-control` come from Cursor **user** MCP. `attach_live` stays false. Spawn a new session; do not race a live TUI.
+- Still gated: send, post, publish, deploy, merge, spend, credentials, form submit, cookie import.

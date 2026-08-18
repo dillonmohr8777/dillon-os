@@ -74,6 +74,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/04_Decisions/2026-08-18 - Local web stack and browser history grant|Local web stack grant]] — rungs 0-4, camofox sibling clone, owned-history ingest; outbound still gated.
+- [[12_Brain/04_Decisions/2026-08-18 - Cursor Desktop full local runtime|Cursor Desktop full local runtime]] — run from Cursor app; screenshots required; `claude-code` MCP on new sessions.
 - [[12_Brain/04_Decisions/2026-08-18 - MCP catalogs stay directional|MCP catalogs stay directional]] — `claude-code` stays in Cursor user MCP, not `.claude.json` and not the vault project files.
 - [[12_Brain/09_Ops/Web Escalation Architecture|Web Escalation Architecture]] — live vs inert web surfaces.
 - [[12_Brain/11_Craft/00_Index|Agent Craft]] — standing lessons; append to [[12_Brain/11_Craft/earned-lessons|earned-lessons]].

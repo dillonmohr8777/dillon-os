@@ -24,8 +24,10 @@ tags:
 
 **Do**
 
-- Restart **Cursor Desktop** (or the Cursor private worker) so Cursor chats see `claude_status` / `claude_list_sessions` / `claude_prompt`.
+- Run from **Cursor Desktop**. That is the runtime that can see `claude-code` and take Playwright screenshots in the same chat.
+- Restart Cursor Desktop once after MCP changes.
 - Keep `attach_live=false`. Do not attach to a live Codex/Claude TUI session.
+- Take a screenshot when you claim to have seen a page (`playwright-isolated`).
 
 **Do not**
 

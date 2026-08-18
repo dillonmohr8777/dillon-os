@@ -16,6 +16,7 @@ must never be committed. Use this folder for:
 - Machine-specific absolute paths and local session archives
 - Credential-shaped values, tokens, API keys
 - Sanitized operator browser-history exports
+- Browser evidence screenshots (`12_Brain/private/screenshots/`)
 - Any note you would not paste into a public issue
 
 ## How to use
@@ -38,6 +39,7 @@ must never be committed. Use this folder for:
   sessions/          ← gitignored
   raw/               ← gitignored sensitive captures
   browser-history/   ← gitignored; written by System/scripts/Export-BrowserHistory.py
+  screenshots/       ← gitignored; Playwright / browser-access evidence PNGs
 ```
 
 ## Boundary rules

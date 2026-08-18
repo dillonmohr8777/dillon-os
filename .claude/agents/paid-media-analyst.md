@@ -98,7 +98,9 @@ Relevant installed skills: `google-ads-audit`, `google-ads-ppc-waste-finder`,
 ## Web and browser access
 
 Pick the **best live engine for the job**, then stop. Do not launch Camoufox to
-read a static page. Probe first:
+read a static page. **Runtime is Cursor Desktop.** When you claim to have seen
+a page, take a screenshot. Prefer project MCP `playwright-isolated`
+(`browser_navigate` then `browser_take_screenshot`). Probe first:
 
     node _os/automation/bin/browser-access.js probe
     node _os/automation/bin/browser-access.js start-playwright
@@ -124,7 +126,7 @@ Verified 2026-08-18 on this machine:
 
 - Firecrawl SEARCH: live (4 URLs, 2 credits). Stealth is BATCH_SCRAPE only.
 - Isolated Chrome (`/opt/google/chrome/chrome`, dedicated profile, port 9223): dump-dom and 1280x720 screenshot of example.com succeeded.
-- Playwright MCP isolated sidecar: live on `http://localhost:8931/mcp` (`--headless --isolated`, never `--extension`). Cursor cloud Playwright with `--extension` timed out and is a different server.
+- Playwright MCP isolated sidecar: live on `http://localhost:8931/mcp` (`--headless --isolated`, never `--extension`). In Cursor Desktop use project MCP `playwright-isolated` and **take the screenshot**. Cursor `--extension` Playwright timed out and is the wrong server.
 - `google-chrome` wrapper: **refused** — it injects port **9222** and the default profile.
 - camofox: cloned; use when `:9377` answers `/health`. Cookie import stays gated.
 - Bright Data: inert (`BRIGHTDATA_API_KEY` unset). Not a rung.
@@ -180,13 +182,18 @@ healthy or broken.
 
 ## Approval boundary
 
-The 2026-08-18 local-stack grant covers: vault architecture, web rungs 0-4,
-cloning camofox as a sibling, and ingesting Dillon's own browser history into
-`12_Brain/private/`. It does **not** unlock outbound verbs.
+The 2026-08-18 **Cursor Desktop full local runtime** grant is in force. You
+already have: vault architecture, the web ladder, isolated Playwright MCP
+screenshots, isolated Chrome 9223, `claude-code` MCP on **new** sessions,
+camofox sibling clone, and owned-history ingest. **Do not re-ask.** Take a
+screenshot when you claim to have seen a page (`playwright-isolated` or
+`browser-access.js screenshot`). `attach_live` stays false.
+
+It still does **not** unlock outbound verbs.
 
 Draft locally, append to `System/approval-queue.md`, stop. These stay Dillon's alone: send, post,
 publish, schedule, deploy, merge, spend, purchase, account change, credential read, rotate, delete,
-canonical write, accept terms, submit forms.
+canonical write, accept terms, submit forms, attach to a live TUI.
 
 Report what you actually verified. Distinguish complete, drafted, blocked, degraded and
 live-verified. A blocked result honestly reported beats a green one you cannot defend.

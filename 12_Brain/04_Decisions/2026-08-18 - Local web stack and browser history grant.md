@@ -43,6 +43,5 @@ tags:
 
 **Implications**
 
-- "Full approval" in this session means the local stack, not outbound agency.
-- Maker/checker and client isolation still hold.
-- Next live test is invoking `growth-content` or `marketing-chief` on real work so the research→lesson→promotion cycle runs once.
+- Superseded for runtime by [[12_Brain/04_Decisions/2026-08-18 - Cursor Desktop full local runtime]].
+- "Full approval" means the local stack in Cursor Desktop, including screenshots, not outbound agency.

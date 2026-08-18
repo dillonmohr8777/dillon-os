@@ -9,7 +9,7 @@ source_refs:
   - "[[12_Brain/01_Captures/research/2026-08-18 - Firecrawl web capability receipt]]"
   - "[[12_Brain/01_Captures/research/2026-08-18 - isolated Chrome browser access receipt]]"
   - "[[12_Brain/01_Captures/research/2026-08-18 - isolated Playwright MCP receipt]]"
-  - "[[12_Brain/04_Decisions/2026-08-18 - Local web stack and browser history grant]]"
+  - "[[12_Brain/04_Decisions/2026-08-18 - Cursor Desktop full local runtime]]"
   - https://github.com/dillonmohr8777/camofox-browser
   - https://github.com/microsoft/playwright-mcp
   - System/scripts/Build-ClaudeAgents.py
@@ -23,7 +23,7 @@ tags:
 
 # Web Escalation Architecture
 
-**Summary:** pick the best live engine for the job; isolated Playwright MCP on `:8931/mcp` is the JS-interact default; isolated Chrome 9223 is the dump-dom fallback; camofox is volume stealth.
+**Summary:** run from Cursor Desktop; pick the best live engine; isolated Playwright MCP screenshots are required when you claim to have seen a page; isolated Chrome 9223 is the dump-dom fallback; camofox is volume stealth.
 
 ## Probe
 
@@ -85,3 +85,4 @@ Edit `System/scripts/Build-ClaudeAgents.py`, never `.claude/agents/*.md`.
 - [[12_Brain/02_Entities/Camofox Browser|Camofox Browser]]
 - [[12_Brain/02_Entities/Firecrawl|Firecrawl]]
 - [[12_Brain/04_Decisions/2026-08-18 - Local web stack and browser history grant|Local-stack grant]]
+- [[12_Brain/04_Decisions/2026-08-18 - Cursor Desktop full local runtime|Cursor Desktop full local runtime]]

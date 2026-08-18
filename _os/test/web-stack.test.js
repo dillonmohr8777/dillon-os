@@ -51,6 +51,8 @@ describe('web stack architecture', () => {
     assert.match(agents, /playwright-isolated|start-playwright/);
     assert.match(agents, /\.claude\.json/);
     assert.match(agents, /attach_live/);
+    assert.match(agents, /Cursor Desktop/);
+    assert.match(agents, /browser_take_screenshot/);
   });
 
   it('keeps architecture, decision, and receipt notes', () => {
@@ -67,6 +69,7 @@ describe('web stack architecture', () => {
       '12_Brain/03_Concepts/Live Process Ownership.md',
       '12_Brain/03_Concepts/MCP Catalog Direction.md',
       '12_Brain/04_Decisions/2026-08-18 - MCP catalogs stay directional.md',
+      '12_Brain/04_Decisions/2026-08-18 - Cursor Desktop full local runtime.md',
       '12_Brain/01_Captures/research/2026-08-18 - Claude Code MCP catalog verification.md',
     ]) {
       assert.equal(fs.existsSync(path.join(VAULT, rel)), true, rel);
@@ -94,6 +97,7 @@ describe('Claude agent generator', () => {
       assert.match(text, /Clone-CamofoxBrowser\.py/);
       assert.match(text, /Export-BrowserHistory\.py/);
       assert.match(text, /does \*\*not\*\* unlock outbound verbs/);
+      assert.match(text, /Cursor Desktop full local runtime/);
       assert.match(text, /start-playwright/);
       assert.doesNotMatch(text, /Not cloned locally yet/);
       assert.doesNotMatch(text, /installed, \*\*not live\*\*/);

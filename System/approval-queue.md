@@ -26,6 +26,7 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 - VA Claims - Approve client review after VACE design reconciliation; backend and DNS changes remain gated - Risk: medium
 - [ ] 2026-07-12 - Bridge Software Development - Approve client-facing milestone after Phase 1 ownership board and compliance review - Risk: medium
 ## Operating actions
+- [x] 2026-08-18 - Cursor Desktop full local runtime: web ladder, Playwright screenshots, claude-code MCP on new sessions, camofox clone, owned-history ingest — GRANTED. attach_live stays false. Send/publish/deploy/spend/merge/credentials/forms remain gated - Risk: low
 - [x] 2026-08-18 - Local web stack: rungs 0-4, camofox sibling clone, owned-history ingest, generators — GRANTED this session. Send/publish/deploy/spend/merge/credentials/forms remain gated - Risk: low
 - [ ] 2026-07-12 - Revenue - Verify current invoices or contracts for all 14 active clients before publishing MRR - Risk: low
 - [ ] 2026-07-12 - Cursor/MCP - Authenticate Composio, Slack, and WordPress connectors when live reads are required - Risk: low

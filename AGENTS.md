@@ -93,8 +93,6 @@ for the two npm-based sites below.
 
 ### MCP servers
 
-### MCP servers
-
 Three catalogs. Do not mix them.
 
 | File | Runtime | Allowed here |
@@ -102,6 +100,8 @@ Three catalogs. Do not mix them.
 | This repo `.cursor/mcp.json` and `.mcp.json` | Project scope | `landingfolio`, `playwright-isolated`. Never machine-local control bridges. |
 | `C:\Users\dillo\.cursor\mcp.json` | Cursor Desktop user | Cursor-side tools, including `claude-code` / `claude-code-control`. |
 | `C:\Users\dillo\.claude.json` | Claude Code user | Claude-side tools. Not `claude-code` / `claude-code-control`. |
+
+**Runtime is Cursor Desktop.** Full local access (including screenshots) is granted 2026-08-18. Restart Cursor once so user MCP (`claude-code`) and project MCP (`playwright-isolated`) both load. Take screenshots with `playwright-isolated` (`browser_take_screenshot`) or `node _os/automation/bin/browser-access.js screenshot`. If Playwright says Extension connection timeout, you hit the wrong server.
 
 Restarting Cursor loads Cursor user MCP. It does **not** put `claude_status` / `claude_list_sessions` / `claude_prompt` into a Claude Code chat. Do not "fix" that by copying those servers into `.claude.json`.
 
