@@ -1,0 +1,8 @@
+# data/
+
+Runtime tape. Gitignored except this keep file.
+
+- `sessions/` — jsonl transcripts
+- `traces/` — per-turn tool traces
+- `long-term.jsonl` — gig-scale episodic memory
+- `notes/` — booth notes written by the agent

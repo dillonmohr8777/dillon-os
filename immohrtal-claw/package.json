@@ -1,0 +1,14 @@
+{
+  "name": "immohrtal-claw",
+  "private": true,
+  "version": "0.1.0",
+  "description": "IMMOHRTAL CLAW — PicoClaw-inspired agent harness with gig-scale memory. Stage locally. Do not publish without approval.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

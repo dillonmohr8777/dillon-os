@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>IMMOHRTAL CLAW — booth harness</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#composer">Skip to composer</a>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="hud">
+      <div class="brand">
+        <img src="/favicon.svg" alt="" width="36" height="36" />
+        <div>
+          <p class="kicker">SESSION 001 // CLAW HARNESS</p>
+          <h1>IMMOHRTAL CLAW</h1>
+        </div>
+      </div>
+      <p class="coords" id="coords">42.1292 N / 80.0851 W</p>
+      <p class="status" id="status">staging · publish blocked</p>
+    </header>
+    <main>
+      <section class="board" aria-label="Booth">
+        <ol id="log" class="log"></ol>
+        <form id="composer">
+          <label class="sr" for="message">Message</label>
+          <textarea id="message" name="message" rows="3" required placeholder="Talk to the booth. Pin a fact. Ask for the tracklist."></textarea>
+          <div class="row">
+            <button type="submit" id="send">Transmit</button>
+            <p class="hint" id="hint">Local rehearsal provider until you point a model at it.</p>
+          </div>
+        </form>
+      </section>
+      <aside class="rail" aria-label="Harness">
+        <section>
+          <h2>Provider</h2>
+          <p id="provider">loading</p>
+        </section>
+        <section>
+          <h2>Memory</h2>
+          <p id="memory">—</p>
+        </section>
+        <section>
+          <h2>Skills</h2>
+          <ul id="skills"></ul>
+        </section>
+        <section>
+          <h2>Last trace</h2>
+          <ol id="trace" class="trace"></ol>
+        </section>
+      </aside>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
