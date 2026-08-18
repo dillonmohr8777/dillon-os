@@ -58,6 +58,9 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
+- [[12_Brain/01_Captures/research/2026-08-18 - research - IMMOHRTAL CLAW harness|2026-08-18 IMMOHRTAL CLAW harness]]
+- [[12_Brain/01_Captures/research/2026-08-18 - research - IMMOHRTAL CLAW is not music|2026-08-18 IMMOHRTAL CLAW is not music]]
+- [[12_Brain/01_Captures/research/2026-08-18 - research - IMMOHRTAL CLAW ten brains|2026-08-18 IMMOHRTAL CLAW ten brains]]
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
