@@ -1,5 +1,6 @@
 {
-  "generated_at": "2026-08-18T16:45:00.334Z",
+  "generated_at": "2026-08-18T17:19:03.434Z",
+  "source": "_templates/site-factory/starters",
   "results": [
     {
       "slug": "kiln-heating",
@@ -7,19 +8,7 @@
       "attitude": "industrial",
       "category": "Heating and Cooling",
       "htmlBytes": 29772,
-      "missingAssets": [
-        "image-1.webp",
-        "image-3.webp",
-        "image-4.webp",
-        "image-5.webp",
-        "image-6.webp",
-        "image-7.webp",
-        "image-2.webp",
-        "image-8.webp",
-        "image-9.webp",
-        "image-10.webp",
-        "image-11.webp"
-      ]
+      "missingAssets": []
     },
     {
       "slug": "lot-line-landscape",
@@ -27,19 +16,7 @@
       "attitude": "warm",
       "category": "Landscaping and Concrete",
       "htmlBytes": 29772,
-      "missingAssets": [
-        "image-1.webp",
-        "image-3.webp",
-        "image-4.webp",
-        "image-5.webp",
-        "image-6.webp",
-        "image-7.webp",
-        "image-2.webp",
-        "image-8.webp",
-        "image-9.webp",
-        "image-10.webp",
-        "image-11.webp"
-      ]
+      "missingAssets": []
     },
     {
       "slug": "atelier-ninth-bridal",
@@ -47,19 +24,7 @@
       "attitude": "editorial",
       "category": "Bridal Boutique",
       "htmlBytes": 29878,
-      "missingAssets": [
-        "image-1.webp",
-        "image-3.webp",
-        "image-4.webp",
-        "image-5.webp",
-        "image-6.webp",
-        "image-7.webp",
-        "image-2.webp",
-        "image-8.webp",
-        "image-9.webp",
-        "image-10.webp",
-        "image-11.webp"
-      ]
+      "missingAssets": []
     },
     {
       "slug": "two-coats-painting",
@@ -67,19 +32,7 @@
       "attitude": "brutal",
       "category": "House Painting",
       "htmlBytes": 29812,
-      "missingAssets": [
-        "image-1.webp",
-        "image-3.webp",
-        "image-4.webp",
-        "image-5.webp",
-        "image-6.webp",
-        "image-7.webp",
-        "image-2.webp",
-        "image-8.webp",
-        "image-9.webp",
-        "image-10.webp",
-        "image-11.webp"
-      ]
+      "missingAssets": []
     },
     {
       "slug": "harbor-light-spa",
@@ -87,19 +40,7 @@
       "attitude": "glass",
       "category": "Wellness Spa",
       "htmlBytes": 30223,
-      "missingAssets": [
-        "image-1.webp",
-        "image-3.webp",
-        "image-4.webp",
-        "image-5.webp",
-        "image-6.webp",
-        "image-7.webp",
-        "image-2.webp",
-        "image-8.webp",
-        "image-9.webp",
-        "image-10.webp",
-        "image-11.webp"
-      ]
+      "missingAssets": []
     },
     {
       "slug": "signal-street-ads",
@@ -107,19 +48,7 @@
       "attitude": "neon",
       "category": "Local Advertising",
       "htmlBytes": 30200,
-      "missingAssets": [
-        "image-1.webp",
-        "image-3.webp",
-        "image-4.webp",
-        "image-5.webp",
-        "image-6.webp",
-        "image-7.webp",
-        "image-2.webp",
-        "image-8.webp",
-        "image-9.webp",
-        "image-10.webp",
-        "image-11.webp"
-      ]
+      "missingAssets": []
     }
   ]
 }
