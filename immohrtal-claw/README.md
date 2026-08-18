@@ -7,9 +7,11 @@ PicoClaw (Sipeed, MIT) is the architecture source:
 [github.com/sipeed/picoclaw](https://github.com/sipeed/picoclaw). This is a
 Node rewrite of the harness with the 10MB RAM ceiling taken off.
 
-The visual system is copied from the IMMOHRTAL website: paper, gunmetal chrome,
-signal blue, green, Anton / Instrument Serif / Space Grotesk / IBM Plex Mono.
-None of the album, session tags, or lyrics come with it.
+The visual system is copied from the IMMOHRTAL website: paper grain,
+gunmetal chrome wordmark, signal/green opening bar, Anton / Instrument
+Serif / Space Grotesk / IBM Plex Mono, glass nav, marquee, marking cards.
+The claw mark is the logo. None of the album, session tags, or lyrics
+come with it.
 
 ## Run
 

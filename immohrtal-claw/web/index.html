@@ -18,55 +18,79 @@
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <a class="skip" href="#composer">Skip to composer</a>
+    <a class="skip" href="#message">Skip to composer</a>
     <div class="grain" aria-hidden="true"></div>
-    <header class="top">
+    <div class="hero-aura" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <nav class="top glass-panel" aria-label="Main">
       <a class="brand" href="/" aria-label="IMMOHRTAL CLAW home">
-        <img class="logo" src="/logo.png" width="44" height="44" alt="" />
-        <span>
-          <span class="mono-tag">Personal agent</span>
-          <h1 class="chrome-text">IMMOHRTAL CLAW</h1>
+        <span class="logo-lockup">
+          <img class="logo" src="/logo.png" width="44" height="44" alt="" />
         </span>
+        <span class="font-display chrome-text brand-word">IMMOHRTAL CLAW</span>
       </a>
       <p class="status" id="status">local</p>
-      <button type="button" class="btn btn-ghost rail-toggle" id="railToggle">Harness</button>
-    </header>
-    <main>
+      <button type="button" class="btn btn-chrome nav-cta" id="railToggle">Harness</button>
+    </nav>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-inner font-mono">
+        <span>PERSONAL AGENT / FILES / MEMORY / SEARCH / CRON / SPAWN / HEARTBEAT / CLAW / </span>
+        <span>PERSONAL AGENT / FILES / MEMORY / SEARCH / CRON / SPAWN / HEARTBEAT / CLAW / </span>
+      </div>
+    </div>
+
+    <main class="stage" id="stage">
       <section class="board" aria-label="Chat">
-        <p class="lede font-serif" id="lede">PicoClaw-class agent. Files, memory, search, cron, spawn. Not a music product.</p>
+        <div class="idle" id="idle">
+          <p class="mono-tag hero-session">Personal agent</p>
+          <div class="mark-wrap">
+            <div class="hero-shadow-field" aria-hidden="true"></div>
+            <div class="pop-box sheen">
+              <img src="/logo.png" width="280" height="280" alt="" />
+            </div>
+          </div>
+          <h1>
+            <span class="font-display chrome-text display-line">IMMOHRTAL</span>
+            <span class="font-display chrome-text display-line">CLAW</span>
+          </h1>
+          <p class="lede font-serif" id="lede">PicoClaw-class agent. Files, memory, search, cron, spawn.</p>
+        </div>
         <ol id="log" class="log"></ol>
-        <form id="composer">
+        <form id="composer" class="opening-bar">
           <label class="sr" for="message">Message</label>
-          <textarea id="message" name="message" rows="3" required placeholder="Ask the agent. Pin a fact. Search the web. Set a reminder."></textarea>
+          <textarea id="message" name="message" rows="2" required placeholder="Ask CLAW. Pin a fact. Search. Set a reminder."></textarea>
           <div class="row">
-            <button class="btn btn-chrome" type="submit" id="send">Send</button>
+            <button class="btn btn-chrome" type="submit" id="send">Enter</button>
             <p class="hint" id="hint">Rehearsal brain until you point a model at it.</p>
           </div>
         </form>
       </section>
       <aside class="rail" id="rail" aria-label="Harness">
-        <section>
+        <section class="marking-card glass-panel">
           <h2 class="section-eyebrow">Provider</h2>
           <p id="provider">loading</p>
         </section>
-        <section>
+        <section class="marking-card glass-panel">
           <h2 class="section-eyebrow">Memory</h2>
           <p id="memory">—</p>
         </section>
-        <section>
+        <section class="marking-card glass-panel">
           <h2 class="section-eyebrow">Skills</h2>
           <ul id="skills"></ul>
         </section>
-        <section>
+        <section class="marking-card glass-panel">
           <h2 class="section-eyebrow">Last trace</h2>
           <ol id="trace" class="trace"></ol>
         </section>
       </aside>
     </main>
+
     <div class="gate" id="gate" hidden>
       <div class="gate-card glass-panel">
-        <img class="logo" src="/logo.png" width="72" height="72" alt="" />
-        <p class="mono-tag">IMMOHRTAL CLAW</p>
+        <img class="logo" src="/logo.png" width="96" height="96" alt="" />
+        <p class="mono-tag hero-session">IMMOHRTAL CLAW</p>
         <h2 class="chrome-text">Gate</h2>
         <p class="font-serif">Phone tunnel. Enter the gate code.</p>
         <form id="gateForm">

@@ -153,8 +153,12 @@ describe('gateway', () => {
       const page = await fetch(`http://127.0.0.1:${port}/`);
       const html = await page.text();
       assert.match(html, /IMMOHRTAL CLAW/);
+      assert.match(html, /Personal agent/);
+      assert.match(html, /chrome-text/);
       assert.doesNotMatch(html, /SESSION 001/);
       assert.doesNotMatch(html, /Dance With The Delusional/);
+      assert.doesNotMatch(html, /Listen Now/);
+      assert.doesNotMatch(html, /Tracklist/);
 
       const chat = await fetch(`http://127.0.0.1:${port}/v1/chat/completions`, {
         method: 'POST',

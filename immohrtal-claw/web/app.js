@@ -29,6 +29,7 @@ function addLine(kind, text, cls) {
   li.append(who, body);
   logEl.append(li);
   logEl.scrollTop = logEl.scrollHeight;
+  if (logEl.children.length) document.body.classList.add('has-thread');
 }
 
 function addTrace(text) {

@@ -24,6 +24,6 @@ tags:
 
 **Summary:** PicoClaw-class personal agent. The name is cool on purpose. It is not the album, not SESSION 001, and not a music booth.
 
-Visual system matches the IMMOHRTAL website (paper, gunmetal chrome, signal, Anton). Capabilities match PicoClaw: files, memory, skills, web search/fetch, cron, spawn, heartbeat. Exec stays staged-off. ChatGPT later.
+Visual system matches the IMMOHRTAL website (paper grain, gunmetal chrome wordmark, signal/green opening bar, Anton, claw mark). Capabilities match PicoClaw: files, memory, skills, web search/fetch, cron, spawn, heartbeat. Exec stays staged-off. ChatGPT later.
 
 Code: `immohrtal-claw/`. Start: `node server.js` → http://127.0.0.1:4800
