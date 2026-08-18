@@ -5,9 +5,10 @@ created: 2026-08-18
 updated: 2026-08-18
 review_on: 2026-09-18
 owner: Dillon Mohr
-summary: Account-gated AI UI ideation feed at variant.com. Scrolls endless design cards from a short idea. Not in the website factory yet.
+summary: Account-gated AI UI ideation feed at variant.com. Scrolls endless design cards from a short idea. Not in the website factory. The factory templates are `_templates/site-factory/starters/`.
 source_refs:
   - "[[12_Brain/01_Captures/2026-08-18 - PracticalYAI TikTok Variant.com]]"
+  - "[[12_Brain/04_Decisions/2026-08-18 - Factory starter templates]]"
   - "https://variant.com"
   - "https://www.fastcompany.com/91491205/this-new-ai-eyedropper-tool-brings-one-of-the-most-powerful-ux-tricks-into-the-ai-age"
 tags:
@@ -33,7 +34,8 @@ account.
   (Google or email).
 - Adjacent tools in this vault: [[12_Brain/02_Entities/LandingFolio MCP]] is
   layout reference; [[12_Brain/02_Entities/Website Factory]] is the production
-  pipeline. Variant is neither.
+  pipeline. Variant is neither. Factory starters:
+  [[12_Brain/04_Decisions/2026-08-18 - Factory starter templates]].
 
 ## Verified on 2026-08-18
 
@@ -48,5 +50,6 @@ account.
 - Can Style Dropper absorb a live local-business URL, or only Variant cards?
 - Does output stay distinct enough for a 25-site batch, or does it converge?
 
-Do not create an account, spend, or wire this into the factory until Dillon
-approves. Research pack: [[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]].
+Do not create an account, spend, or wire this into the factory. The main
+templates are the six factory starters, not Variant cards. Research pack:
+[[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]].

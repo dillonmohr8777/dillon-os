@@ -5,7 +5,7 @@ updated: 2026-08-18
 note_type: entity
 status: active
 created: 2026-07-29
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]", "[[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]]"]
+source_refs: ["[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]", "[[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]]", "[[12_Brain/04_Decisions/2026-08-18 - Factory starter templates]]"]
 ---
 
 
@@ -18,8 +18,9 @@ deploy credentials.
 ## Public facts
 
 - Outputs: static / Netlify / Vercel marketing sites for clients.
-- Templates and QA live under `_templates/site-factory/` when present, or
-  campaign folders under `02_Campaigns/`.
+- Templates and QA live under `_templates/site-factory/`. The six main
+  starters are `_templates/site-factory/starters/`
+  ([[12_Brain/04_Decisions/2026-08-18 - Factory starter templates]]).
 - Secrets and host tokens never land in this note.
 
 ## Adjacent tools

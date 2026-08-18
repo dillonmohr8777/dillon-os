@@ -20,4 +20,4 @@ threads, screenshots with extracted text, and research evidence.
   reflected in canonical notes.
 - Redact secrets and unnecessary personal data before saving.
 
-Recent: [[2026-08-18 - PracticalYAI TikTok Variant.com]]
+Recent: [[2026-08-18 - Factory starters are the main templates]] · [[2026-08-18 - PracticalYAI TikTok Variant.com]]
