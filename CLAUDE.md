@@ -4,9 +4,11 @@ This repo is Dillon Mohr's Obsidian vault and second brain. You read and write
 the same markdown files Obsidian displays. Treat the vault like a codebase: the
 wiki is the code, you are the compiler.
 
-**This GitHub repository is PUBLIC.** PII, access inventories, credentials,
-Bitwarden locators, and private absolute paths go in `12_Brain/private/`
-(gitignored) — never in tracked files.
+**This GitHub repository is PRIVATE** (since 2026-08-18). Client evidence, comms,
+transcripts, and reports belong in the vault — that is what lets the brain
+compound. Credentials, access inventories, Bitwarden locators, and recovery codes
+still go in `12_Brain/private/` (gitignored) and never into tracked files;
+`_os/test/public-safety.test.js` fails the build on any secret-shaped value.
 
 ## Who this vault serves
 

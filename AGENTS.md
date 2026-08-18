@@ -7,7 +7,8 @@ knowledge, decision, and memory layer that connects them.
 Root `CLAUDE.md` carries the vault map, writing rules, and reading rules. This
 file adds the source-of-truth contract and the dev-environment facts.
 
-**GitHub is PUBLIC.** Sensitive notes go to `12_Brain/private/` (gitignored).
+**GitHub is PRIVATE** (since 2026-08-18). Client evidence belongs in the vault.
+Credentials and access inventories still go to `12_Brain/private/` (gitignored).
 
 ## Start here
 

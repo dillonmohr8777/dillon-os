@@ -13,7 +13,8 @@ in the same change.
 > Canonical second-brain layer: **`12_Brain/`**. Do not create a competing
 > `1Z_Brain/` tree.
 >
-> **This GitHub repository is PUBLIC.** Sensitive notes live under
+> **This GitHub repository is PRIVATE** (since 2026-08-18). Credentials and
+> access inventories still live under
 > [[12_Brain/private/README|12_Brain/private/]] (gitignored).
 
 > [!tip] Visual views: [[12_Brain/Brain Map.canvas|Brain Map]] ·
