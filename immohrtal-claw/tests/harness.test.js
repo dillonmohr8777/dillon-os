@@ -121,6 +121,23 @@ describe('agent loop', () => {
     assert.ok(result.toolKinds.includes('memory_write'));
     assert.match(result.content, new RegExp(stamp));
   });
+
+  it('searches memory on a later turn in the same session', async () => {
+    const stamp = `pickle-chips-${Date.now()}`;
+    const sessionId = `test_multiturn_${Date.now()}`;
+    await runTurn({
+      config,
+      sessionId,
+      userText: `Remember ${stamp}`,
+    });
+    const result = await runTurn({
+      config,
+      sessionId,
+      userText: 'What do you remember about pickle chips?',
+    });
+    assert.ok(result.toolKinds.includes('memory_search'));
+    assert.match(result.content, new RegExp(stamp));
+  });
 });
 
 describe('gateway', () => {

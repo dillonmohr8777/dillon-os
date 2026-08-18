@@ -10,6 +10,17 @@ function extractJson(text) {
   }
 }
 
+function messagesSinceLastUser(messages) {
+  let idx = -1;
+  for (let i = messages.length - 1; i >= 0; i -= 1) {
+    if (messages[i].role === 'user') {
+      idx = i;
+      break;
+    }
+  }
+  return idx >= 0 ? messages.slice(idx + 1) : [];
+}
+
 function boothReply(userText, toolResults) {
   const t = String(userText || '').trim();
   if (toolResults.length) {
@@ -38,7 +49,17 @@ function boothReply(userText, toolResults) {
 function decideBoothTools(userText, iteration) {
   if (iteration > 0) return [];
   const t = String(userText || '');
-  if (/remember|pin this|don't forget|dont forget/i.test(t)) {
+  if (/what do you (know|remember)|search memory|\brecall\b|what did i tell you/i.test(t)) {
+    return [{
+      id: 'call_search_1',
+      type: 'function',
+      function: {
+        name: 'memory_search',
+        arguments: JSON.stringify({ query: t }),
+      },
+    }];
+  }
+  if (/^(please |hey )?(remember|pin this|don't forget|dont forget)\b/i.test(t)) {
     return [{
       id: 'call_mem_1',
       type: 'function',
@@ -59,22 +80,13 @@ function decideBoothTools(userText, iteration) {
       function: { name: 'album_catalog', arguments: '{}' },
     }];
   }
-  if (/what do you (know|remember)|search memory|recall/i.test(t)) {
-    return [{
-      id: 'call_search_1',
-      type: 'function',
-      function: {
-        name: 'memory_search',
-        arguments: JSON.stringify({ query: t }),
-      },
-    }];
-  }
   return [];
 }
 
 async function complete({ config, messages, tools }) {
   const lastUser = [...messages].reverse().find((m) => m.role === 'user');
-  const toolMessages = messages.filter((m) => m.role === 'tool');
+  const sinceUser = messagesSinceLastUser(messages);
+  const toolMessages = sinceUser.filter((m) => m.role === 'tool');
   const iteration = toolMessages.length;
 
   if (config.provider.kind === 'openai') {
@@ -120,4 +132,4 @@ async function complete({ config, messages, tools }) {
   return { role: 'assistant', content: boothReply(lastUser?.content, []) };
 }
 
-module.exports = { complete, decideBoothTools, boothReply };
+module.exports = { complete, decideBoothTools, boothReply, messagesSinceLastUser };
