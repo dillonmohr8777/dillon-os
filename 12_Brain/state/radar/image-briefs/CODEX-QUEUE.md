@@ -1,4 +1,4 @@
-# Codex image queue — generated 2026-08-17
+# Codex image queue — generated 2026-08-18
 
 100 rebuild targets own no usable photographs. Each has a brief in
 this directory specifying exactly what to generate, slot by slot.
