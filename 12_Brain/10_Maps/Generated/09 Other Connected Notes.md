@@ -23,12 +23,6 @@ Visible notes that do not yet belong to a stable operating domain.
 
 - [[GROK-HANDOFF-DILLON-OS|GROK-HANDOFF-DILLON-OS]]
 
-## .github
-
-- [[.github/skills/dillon-frontend-maker/SKILL|SKILL]]
-- [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
-- [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
-
 ## 08_Prospects
 
 - [[08_Prospects/bar-crawl-usa-web-barcrawlusa-com|bar-crawl-usa-web-barcrawlusa-com]]
@@ -58,6 +52,20 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[handoffs/prospect-radar-blockers-2026-08-06|prospect-radar-blockers-2026-08-06]]
 - [[handoffs/windows-6gb-slack-codex-reauth-2026-07-22|windows-6gb-slack-codex-reauth-2026-07-22]]
 - [[handoffs/windows-codex-cli-update-unlock-2026-07-28|windows-codex-cli-update-unlock-2026-07-28]]
+
+## immohrtal-claw
+
+- [[immohrtal-claw/ARCHITECTURE|ARCHITECTURE]]
+- [[immohrtal-claw/README|README]]
+- [[immohrtal-claw/workspace/AGENT|AGENT]]
+- [[immohrtal-claw/workspace/IDENTITY|IDENTITY]]
+- [[immohrtal-claw/workspace/MEMORY|MEMORY]]
+- [[immohrtal-claw/workspace/skills/album-bible/SKILL|SKILL]]
+- [[immohrtal-claw/workspace/skills/booth-notes/SKILL|SKILL]]
+- [[immohrtal-claw/workspace/skills/memory-keeper/SKILL|SKILL]]
+- [[immohrtal-claw/workspace/skills/session-hud/SKILL|SKILL]]
+- [[immohrtal-claw/workspace/SOUL|SOUL]]
+- [[immohrtal-claw/workspace/USER|USER]]
 
 ## philly-sites
 
