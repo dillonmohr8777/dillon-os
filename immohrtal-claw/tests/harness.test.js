@@ -41,8 +41,8 @@ const { WORKSPACE, NOTES } = require('../src/paths');
 const { loadSkills, summary } = require('../src/skills-loader');
 const memory = require('../src/memory-store');
 const { execute, schemas } = require('../src/tools');
-const { loadConfig, selectModel } = require('../src/config');
-const { CATALOG, readiness } = require('../src/models');
+const { loadConfig, selectModel, resolvePort } = require('../src/config');
+const { CATALOG, readiness, resolveOllamaTag, rememberOllamaTags, resolveSelection } = require('../src/models');
 const knowledge = require('../src/knowledge');
 const browser = require('../src/browser');
 const { compileBrief } = require('../src/front-door');
@@ -188,6 +188,9 @@ describe('gateway', () => {
       assert.match(html, /Personal agent/);
       assert.match(html, /chrome-text/);
       assert.match(html, /modelPick/);
+      assert.match(html, /brain-deck/);
+      assert.match(html, /IBM\+Plex\+Sans/);
+      assert.match(html, /pop-3d/);
       assert.doesNotMatch(html, /SESSION 001/);
       assert.doesNotMatch(html, /Dance With The Delusional/);
       assert.doesNotMatch(html, /Listen Now/);
@@ -400,10 +403,66 @@ describe('memory hygiene', () => {
 describe('ollama tag matching', () => {
   it('requires an exact tag, not a prefix', () => {
     const gemma = CATALOG.find((m) => m.id === 'gemma4-31b');
-    const cloudVariant = readiness(gemma, ['gemma4:31b-cloud', 'gemma4:26b']);
-    assert.equal(cloudVariant.ready, false, 'gemma4:31b-cloud must not satisfy gemma4:31b');
-    assert.match(cloudVariant.blocker, /ollama pull gemma4:31b/);
+    assert.equal(readiness(gemma, ['gemma4:31b-cloud']).ready, false, 'gemma4:31b-cloud must not satisfy gemma4:31b');
+    assert.match(readiness(gemma, ['gemma4:31b-cloud']).blocker, /ollama pull/);
     assert.equal(readiness(gemma, ['gemma4:31b']).ready, true);
+  });
+
+  it('accepts workstation near-misses as exact aliases', () => {
+    const gemma = CATALOG.find((m) => m.id === 'gemma4-31b');
+    const coder = CATALOG.find((m) => m.id === 'qwen3-coder');
+    const qwen = CATALOG.find((m) => m.id === 'qwen3.6-27b');
+    assert.equal(readiness(gemma, ['gemma4:26b']).ready, true);
+    assert.equal(resolveOllamaTag(gemma, ['gemma4:26b']), 'gemma4:26b');
+    assert.equal(readiness(coder, ['qwen3-coder:30b']).ready, true);
+    assert.equal(resolveOllamaTag(coder, ['qwen3-coder:30b']), 'qwen3-coder:30b');
+    assert.equal(readiness(qwen, ['qwen3.5:27b-q4_K_M']).ready, false, 'reasoning 27B must not alias to Qwen3.6');
+  });
+
+  it('calls the resolved alias tag, not the missing canonical', () => {
+    rememberOllamaTags(['gemma4:26b', 'qwen3-coder:30b']);
+    assert.equal(resolveSelection('gemma4-31b').provider.model, 'gemma4:26b');
+    assert.equal(resolveSelection('qwen3-coder').provider.model, 'qwen3-coder:30b');
+    rememberOllamaTags([]);
+  });
+});
+
+describe('cloud catalog', () => {
+  it('wires Sol and Grok to their real endpoints and key names', () => {
+    const sol = CATALOG.find((m) => m.id === 'gpt-5.6-sol');
+    const grok = CATALOG.find((m) => m.id === 'grok-4.6');
+    const opus = CATALOG.find((m) => m.id === 'claude-opus-5');
+    assert.equal(sol.keyEnv, 'OPENAI_API_KEY');
+    assert.equal(sol.model, 'gpt-5.6-sol');
+    assert.equal(sol.defaultBaseUrl, 'https://api.openai.com/v1');
+    assert.equal(grok.keyEnv, 'XAI_API_KEY');
+    assert.equal(grok.model, 'grok-4.6');
+    assert.equal(grok.defaultBaseUrl, 'https://api.x.ai/v1');
+    assert.equal(opus.keyEnv, 'ANTHROPIC_API_KEY');
+    if (!process.env.OPENAI_API_KEY) {
+      assert.equal(readiness(sol, []).ready, false);
+      assert.match(readiness(sol, []).blocker, /OPENAI_API_KEY/);
+    }
+    if (!process.env.XAI_API_KEY && !process.env.GROK_API_KEY) {
+      assert.equal(readiness(grok, []).ready, false);
+      assert.match(readiness(grok, []).blocker, /XAI_API_KEY/);
+    }
+  });
+});
+
+describe('listen port', () => {
+  it('defaults to 4810 and lets CLAW_PORT win over PORT', () => {
+    const prevPort = process.env.PORT;
+    const prevClaw = process.env.CLAW_PORT;
+    delete process.env.PORT;
+    delete process.env.CLAW_PORT;
+    assert.equal(resolvePort(), 4810);
+    process.env.PORT = '4800';
+    assert.equal(resolvePort(), 4800);
+    process.env.CLAW_PORT = '4810';
+    assert.equal(resolvePort(), 4810);
+    if (prevPort == null) delete process.env.PORT; else process.env.PORT = prevPort;
+    if (prevClaw == null) delete process.env.CLAW_PORT; else process.env.CLAW_PORT = prevClaw;
   });
 });
 
@@ -461,7 +520,7 @@ describe('skills', () => {
   it('loads the new PicoClaw skills and gates the unconfigured ones', () => {
     const skills = loadSkills();
     const ids = skills.map((s) => s.id);
-    for (const need of ['inbox-triage', 'client-pulse', 'gbp-content-drafts', 'report-builder']) {
+    for (const need of ['inbox-triage', 'client-pulse', 'gbp-content-drafts', 'report-builder', 'brain-roster']) {
       assert.ok(ids.includes(need), need);
     }
     const gated = skills.filter((s) => !s.available).map((s) => s.id);

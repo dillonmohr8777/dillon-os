@@ -20,13 +20,13 @@ cd immohrtal-claw
 node server.js
 ```
 
-Open http://127.0.0.1:4800
+Open http://127.0.0.1:4810
 
 Phone tunnel (operator-approved):
 
 ```bash
 CLAW_TUNNEL=1 CLAW_GATE_TOKEN=your-code node server.js
-# then cloudflared tunnel --url http://127.0.0.1:4800
+# then cloudflared tunnel --url http://127.0.0.1:4810
 ```
 
 On the phone: open the URL, enter the gate code, then Share → Add to Home Screen.
@@ -42,9 +42,9 @@ node --test tests/harness.test.js
 
 Harness picker has ten models. Keys stay in `.env` (gitignored).
 
-Local (Ollama): Qwen3.6 27B, Gemma 4 31B, Qwen3-Coder, Llama 4 Scout, DeepSeek V4 Flash.
+Local (Ollama, exact tags): Qwen3.6 27B, Gemma 4 31B (`gemma4:26b` is an exact alias), Qwen3-Coder (`qwen3-coder:30b` is an exact alias), Llama 4 Scout, DeepSeek V4 Flash. `gemma4:31b-cloud` is not Gemma 31B. `qwen3.5:27b-q4_K_M` is not Qwen3.6.
 
-Cloud: Claude Opus 5 (Align HCM key first), GPT-5.6 Sol, Grok 4.6, Composer 2.5 (Cursor-only unless you set a gateway), Gemini 2.5 Pro (the fifth family).
+Cloud: Claude Opus 5 (Align HCM key first), GPT-5.6 Sol (`OPENAI_API_KEY`), Grok 4.6 (`XAI_API_KEY`), Composer 2.5 (Cursor-only unless you set a gateway), Gemini 2.5 Pro (the fifth family).
 
 ```bash
 cp .env.example .env

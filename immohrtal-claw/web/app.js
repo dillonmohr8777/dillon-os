@@ -17,6 +17,8 @@ const railToggle = document.getElementById('railToggle');
 const modelPick = document.getElementById('modelPick');
 const modelBlocker = document.getElementById('modelBlocker');
 const probeBtn = document.getElementById('probeBtn');
+const brainDeck = document.getElementById('brainDeck');
+const ollamaLine = document.getElementById('ollamaLine');
 
 let modelIndex = new Map();
 let brainLabel = 'brain';
@@ -24,8 +26,16 @@ let thinkingEl = null;
 let thinkingSince = 0;
 let thinkingTimer = null;
 
-// A live status line that counts up, so a slow first token reads as work in
-// progress rather than a hung page.
+function escapeHtml(value) {
+  return String(value || '').replace(/[&<>"']/g, (ch) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  }[ch]));
+}
+
 function setThinking(text) {
   if (!thinkingEl) {
     thinkingEl = document.createElement('li');
@@ -83,19 +93,22 @@ async function loadState() {
   }
   gate.hidden = true;
   const data = await res.json();
-  providerEl.textContent = `${data.provider.label || data.provider.kind} · ${data.provider.model}`;
+  const resolved = data.provider.resolvedTag || data.provider.model;
+  providerEl.textContent = `${data.provider.label || data.provider.kind} · ${resolved}`;
   const mb = (data.memory.longTermBytes / (1024 * 1024)).toFixed(2);
   memoryEl.textContent = `long-term ${mb} MB / ${(data.memoryMaxBytes / (1024 ** 3)).toFixed(0)} GiB ceiling · context ${data.contextTokens} tok`;
   skillsEl.innerHTML = '';
   for (const skill of data.skills) {
     const li = document.createElement('li');
-    li.textContent = `${skill.id} — ${skill.description}`;
+    const gated = /UNAVAILABLE/i.test(skill.description || '') || skill.available === false;
+    li.className = gated ? 'is-gated' : '';
+    li.title = skill.description || skill.id;
+    li.textContent = skill.id;
     skillsEl.append(li);
   }
   hint.textContent = data.provider.api === 'rehearsal' || data.provider.kind === 'rehearsal'
     ? 'Rehearsal. Pick a live brain when keys or Ollama are on this box.'
     : `Live ${data.provider.label || data.provider.model}`;
-  // The chrome status is the always-visible answer to "which brain is live".
   const where = data.gated ? 'gated · phone ok' : 'local';
   const brain = data.provider.label || data.provider.model;
   brainLabel = brain;
@@ -113,6 +126,40 @@ function showBlocker(id) {
   }
   modelBlocker.hidden = false;
   modelBlocker.textContent = `not ready — ${model.blocker || 'unknown blocker'}`;
+}
+
+function renderDeck(data, selected) {
+  brainDeck.innerHTML = '';
+  const groups = [
+    ['local', 'Local Ollama'],
+    ['cloud', 'Cloud · Sol / Grok / Opus / Gemini / Composer'],
+  ];
+  for (const [group, label] of groups) {
+    const heading = document.createElement('p');
+    heading.className = 'deck-label';
+    heading.textContent = label;
+    brainDeck.append(heading);
+    const grid = document.createElement('div');
+    grid.className = 'deck-grid';
+    for (const model of data.models.filter((m) => m.group === group)) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `brain-card ${model.ready ? 'is-ready' : 'is-blocked'}`;
+      btn.setAttribute('aria-pressed', model.id === selected ? 'true' : 'false');
+      btn.dataset.id = model.id;
+      const tag = model.model || model.catalogTag || '';
+      const need = model.ready ? (model.why || 'ready') : (model.blocker || model.needs || 'not ready');
+      btn.innerHTML = `<span class="dot" aria-hidden="true"></span><span class="card-label">${escapeHtml(model.label)}</span><span class="card-tag">${escapeHtml(tag)}</span><span class="card-need">${escapeHtml(need)}</span>`;
+      btn.addEventListener('click', () => selectBrain(model.id));
+      grid.append(btn);
+    }
+    brainDeck.append(grid);
+  }
+  if (data.ollama) {
+    ollamaLine.textContent = data.ollama.reachable
+      ? `Ollama ${data.ollama.host} · ${data.ollama.tags.length} tags`
+      : `Ollama ${data.ollama.host} · unreachable on this box`;
+  }
 }
 
 async function loadModels(selectedId, probe) {
@@ -134,7 +181,6 @@ async function loadModels(selectedId, probe) {
     for (const model of data.models.filter((m) => m.group === group)) {
       const opt = document.createElement('option');
       opt.value = model.id;
-      // Readiness has to be legible in the closed picker, not just on hover.
       const mark = model.ready ? '● ready' : '○ not ready';
       opt.textContent = `${mark} · ${model.label}`;
       opt.title = model.ready ? model.why || '' : model.blocker || '';
@@ -146,6 +192,24 @@ async function loadModels(selectedId, probe) {
   }
   modelPick.dataset.ready = modelIndex.get(selected)?.ready === false ? '0' : '1';
   showBlocker(selected);
+  renderDeck(data, selected);
+}
+
+async function selectBrain(id) {
+  modelPick.value = id;
+  showBlocker(id);
+  const res = await fetch('/api/model', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ id }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    addLine('claw', `Could not switch brains. ${err.error || ''}`.trim());
+    return;
+  }
+  await loadState();
 }
 
 async function transmit(message) {
@@ -166,7 +230,6 @@ async function transmit(message) {
   const decoder = new TextDecoder();
   let buf = '';
   let final = '';
-  // One bubble per LLM iteration. Tokens land in it as they arrive.
   let liveEl = null;
   let liveText = '';
   let streamedAny = false;
@@ -189,9 +252,6 @@ async function transmit(message) {
       const dataLine = (part.match(/^data: (.+)$/m) || [])[1];
       if (!event || !dataLine) continue;
       const data = JSON.parse(dataLine);
-      // A local 26B with a full tool surface can take 30s+ before its first
-      // token, and a turn that opens with a tool call emits no text at all.
-      // Without this the paper UI just sits there looking broken.
       if (event === 'llm.start') {
         closeLive();
         thinkingSince = Date.now();
@@ -220,7 +280,6 @@ async function transmit(message) {
     }
   }
   clearThinking();
-  // The done payload is authoritative; only repaint if streaming fell short.
   if (final && liveEl && liveText.trim()) {
     liveEl.textContent = final;
     liveEl.classList.remove('streaming');
@@ -272,21 +331,8 @@ railToggle.addEventListener('click', () => {
   rail.classList.toggle('open');
 });
 
-modelPick.addEventListener('change', async () => {
-  const id = modelPick.value;
-  showBlocker(id);
-  const res = await fetch('/api/model', {
-    method: 'POST',
-    credentials: 'same-origin',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ id }),
-  });
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}));
-    addLine('claw', `Could not switch brains. ${err.error || ''}`.trim());
-    return;
-  }
-  await loadState();
+modelPick.addEventListener('change', () => {
+  selectBrain(modelPick.value);
 });
 
 probeBtn.addEventListener('click', async () => {

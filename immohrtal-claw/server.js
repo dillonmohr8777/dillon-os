@@ -13,6 +13,7 @@ loadDotEnv(ENV_FILE);
 
 const { loadConfig } = require('./src/config');
 const { createServer } = require('./src/gateway');
+const { probeOllama } = require('./src/models');
 const memory = require('./src/memory-store');
 const { runTurn } = require('./src/agent-loop');
 
@@ -42,6 +43,9 @@ server.listen(config.port, config.host, () => {
     fs.writeFileSync(path.join(DATA, 'gate-code.txt'), `${config.gateToken}\n`, { mode: 0o600 });
     process.stdout.write(`gate code: ${config.gateToken}\n`);
   }
+  // Warm the Ollama tag cache so a near-miss alias (gemma4:26b, qwen3-coder:30b)
+  // is the tag we actually call, not the canonical missing one.
+  probeOllama().catch(() => {});
 });
 
 if (config.heartbeatMs > 0) {

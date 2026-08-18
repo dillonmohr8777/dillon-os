@@ -1,6 +1,6 @@
 'use strict';
 
-const { CATALOG, resolveSelection, readiness, probeOllama, hasTag } = require('./models');
+const { CATALOG, resolveSelection, readiness, probeOllama, wantedOllamaTags, hasTag } = require('./models');
 const { complete } = require('./providers');
 
 /**
@@ -37,7 +37,7 @@ async function readyCheckers() {
   return CATALOG.filter((m) => {
     if (!readiness(m, tags).ready) return false;
     if (!m.ollama) return true;
-    return hasTag(tags, m.ollama);
+    return wantedOllamaTags(m).some((tag) => hasTag(tags, tag));
   });
 }
 

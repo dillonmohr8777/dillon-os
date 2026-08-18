@@ -9,6 +9,12 @@ function intEnv(name, fallback) {
   return Number.isFinite(n) ? n : fallback;
 }
 
+function resolvePort() {
+  if (process.env.CLAW_PORT) return intEnv('CLAW_PORT', 4810);
+  if (process.env.PORT) return intEnv('PORT', 4810);
+  return 4810;
+}
+
 let live = null;
 
 function buildConfig(modelId) {
@@ -18,7 +24,7 @@ function buildConfig(modelId) {
 
   return {
     host: process.env.CLAW_HOST || '127.0.0.1',
-    port: intEnv('PORT', 4800),
+    port: resolvePort(),
     contextTokens: intEnv('CLAW_CONTEXT_TOKENS', 128000),
     maxToolIters: intEnv('CLAW_MAX_TOOL_ITERS', 24),
     memoryMaxBytes: intEnv('CLAW_MEMORY_MAX_BYTES', 8 * 1024 * 1024 * 1024),
@@ -61,4 +67,4 @@ function selectModel(id, config) {
   return next;
 }
 
-module.exports = { loadConfig, getConfig, selectModel, intEnv };
+module.exports = { loadConfig, getConfig, selectModel, intEnv, resolvePort };

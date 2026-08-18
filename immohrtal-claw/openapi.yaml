@@ -7,7 +7,7 @@ info:
     Not a music product. Draft Custom GPT actions can point here later.
     ChatGPT hosting stays later.
 servers:
-  - url: http://127.0.0.1:4800
+  - url: http://127.0.0.1:4810
 paths:
   /api/health:
     get:

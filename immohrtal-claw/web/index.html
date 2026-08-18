@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="robots" content="noindex,nofollow" />
-    <meta name="theme-color" content="#f7f9fb" />
+    <meta name="theme-color" content="#f3f6f9" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="CLAW" />
@@ -14,7 +14,7 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -25,19 +25,19 @@
 
     <nav class="top glass-panel" aria-label="Main">
       <a class="brand" href="/" aria-label="IMMOHRTAL CLAW home">
-        <span class="logo-lockup">
+        <span class="logo-lockup pop-3d">
           <img class="logo" src="/logo.png" width="44" height="44" alt="" />
         </span>
         <span class="font-display chrome-text brand-word">IMMOHRTAL CLAW</span>
       </a>
-      <p class="status" id="status">local</p>
+      <p class="status-pill" id="status">local · rehearsal</p>
       <button type="button" class="btn btn-chrome nav-cta" id="railToggle">Harness</button>
     </nav>
 
     <div class="marquee" aria-hidden="true">
       <div class="marquee-inner font-mono">
-        <span>PERSONAL AGENT / FILES / MEMORY / VAULT / SEARCH / CRON / SPAWN / TEN BRAINS / CLAW / </span>
-        <span>PERSONAL AGENT / FILES / MEMORY / VAULT / SEARCH / CRON / SPAWN / TEN BRAINS / CLAW / </span>
+        <span>PERSONAL AGENT / FILES / MEMORY / VAULT / SEARCH / CRON / SPAWN / SOL / GROK / OPUS / GEMMA / QWEN / CLAW / </span>
+        <span>PERSONAL AGENT / FILES / MEMORY / VAULT / SEARCH / CRON / SPAWN / SOL / GROK / OPUS / GEMMA / QWEN / CLAW / </span>
       </div>
     </div>
 
@@ -47,7 +47,7 @@
           <p class="mono-tag hero-session">Personal agent</p>
           <div class="mark-wrap">
             <div class="hero-shadow-field" aria-hidden="true"></div>
-            <div class="pop-box sheen">
+            <div class="pop-box sheen pop-3d">
               <img src="/logo.png" width="280" height="280" alt="" />
             </div>
           </div>
@@ -55,12 +55,12 @@
             <span class="font-display chrome-text display-line">IMMOHRTAL</span>
             <span class="font-display chrome-text display-line">CLAW</span>
           </h1>
-          <p class="lede font-serif" id="lede">PicoClaw-class agent. Files, memory, vault, ten brains.</p>
+          <p class="lede font-serif" id="lede">PicoClaw-class agent. Ten brains. Paper and chrome. Not a music product.</p>
         </div>
         <ol id="log" class="log"></ol>
-        <form id="composer" class="opening-bar">
+        <form id="composer" class="opening-bar pop-3d">
           <label class="sr" for="message">Message</label>
-          <textarea id="message" name="message" rows="2" required placeholder="Ask CLAW. Pin a fact. Search. Set a reminder."></textarea>
+          <textarea id="message" name="message" rows="2" required placeholder="Ask CLAW. Pin a fact. Search. Switch brains. Probe Sol or Grok when a key is on this box."></textarea>
           <div class="row">
             <button class="btn btn-chrome" type="submit" id="send">Enter</button>
             <p class="hint" id="hint">Rehearsal brain until you point a model at it.</p>
@@ -68,23 +68,25 @@
         </form>
       </section>
       <aside class="rail" id="rail" aria-label="Harness">
-        <section class="marking-card glass-panel">
+        <section class="marking-card glass-panel pop-3d">
           <h2 class="section-eyebrow">Brain</h2>
-          <p id="provider">loading</p>
+          <p id="provider" class="provider-line">loading</p>
+          <p id="ollamaLine" class="ollama-line">Ollama —</p>
           <label class="sr" for="modelPick">Model</label>
           <select id="modelPick" class="model-pick"></select>
           <p id="modelBlocker" class="blocker" hidden></p>
+          <div id="brainDeck" class="brain-deck" aria-label="Ten brains"></div>
           <button type="button" class="btn btn-ghost probe-btn" id="probeBtn">Probe live brains</button>
         </section>
-        <section class="marking-card glass-panel">
+        <section class="marking-card glass-panel pop-3d">
           <h2 class="section-eyebrow">Memory</h2>
           <p id="memory">—</p>
         </section>
-        <section class="marking-card glass-panel">
+        <section class="marking-card glass-panel pop-3d">
           <h2 class="section-eyebrow">Skills</h2>
-          <ul id="skills"></ul>
+          <ul id="skills" class="skill-chips"></ul>
         </section>
-        <section class="marking-card glass-panel">
+        <section class="marking-card glass-panel pop-3d">
           <h2 class="section-eyebrow">Last trace</h2>
           <ol id="trace" class="trace"></ol>
         </section>
@@ -92,7 +94,7 @@
     </main>
 
     <div class="gate" id="gate" hidden>
-      <div class="gate-card glass-panel">
+      <div class="gate-card glass-panel pop-3d">
         <img class="logo" src="/logo.png" width="96" height="96" alt="" />
         <p class="mono-tag hero-session">IMMOHRTAL CLAW</p>
         <h2 class="chrome-text">Gate</h2>

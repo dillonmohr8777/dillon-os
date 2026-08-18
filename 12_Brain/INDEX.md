@@ -61,6 +61,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-18 - research - IMMOHRTAL CLAW harness|2026-08-18 IMMOHRTAL CLAW harness]]
 - [[12_Brain/01_Captures/research/2026-08-18 - research - IMMOHRTAL CLAW is not music|2026-08-18 IMMOHRTAL CLAW is not music]]
 - [[12_Brain/01_Captures/research/2026-08-18 - research - IMMOHRTAL CLAW ten brains|2026-08-18 IMMOHRTAL CLAW ten brains]]
+- [[12_Brain/01_Captures/2026-08-18 - CLAW retrieval and readiness upgrade|2026-08-18 CLAW retrieval and readiness]]
+- [[12_Brain/01_Captures/2026-08-18 - CLAW ten-brain aliases and 4810 chrome|2026-08-18 CLAW aliases and 4810 chrome]]
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
