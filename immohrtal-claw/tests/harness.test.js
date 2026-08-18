@@ -406,6 +406,7 @@ describe('ollama tag matching', () => {
     assert.equal(readiness(gemma, ['gemma4:31b-cloud']).ready, false, 'gemma4:31b-cloud must not satisfy gemma4:31b');
     assert.match(readiness(gemma, ['gemma4:31b-cloud']).blocker, /ollama pull/);
     assert.equal(readiness(gemma, ['gemma4:31b']).ready, true);
+    assert.equal(readiness(gemma, []).ready, false, 'empty tag list means Ollama is down, not a free pass');
   });
 
   it('accepts workstation near-misses as exact aliases', () => {

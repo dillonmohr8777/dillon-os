@@ -309,11 +309,17 @@ function readiness(entry, ollamaTags = []) {
     return { ready: true, blocker: '' };
   }
   const wanted = wantedOllamaTags(entry);
-  if (ollamaTags.length && !wanted.some((tag) => hasTag(ollamaTags, tag))) {
+  if (!ollamaTags.length) {
+    return {
+      ready: false,
+      blocker: `Ollama unreachable; ollama pull ${wanted.join(' | ')}`,
+    };
+  }
+  if (!wanted.some((tag) => hasTag(ollamaTags, tag))) {
     const hint = wanted.length > 1 ? wanted.join(' | ') : entry.ollama;
     return { ready: false, blocker: `ollama pull ${hint}` };
   }
-  return { ready: true, blocker: ollamaTags.length ? '' : 'Ollama not probed; pull the tag on the box' };
+  return { ready: true, blocker: '' };
 }
 
 function toProvider(entry, tags = lastOllamaTags) {
