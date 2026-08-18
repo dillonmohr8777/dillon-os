@@ -1,7 +1,7 @@
 ---
 tags: [concept, ops-rule, web-design]
 source: "[[12_Brain/raw/2026-06-26 - intel-core-7-master-operating-transfer]]"
-updated: 2026-07-04
+updated: 2026-08-16
 ---
 
 # Netlify Deploy Safety
@@ -9,6 +9,7 @@ updated: 2026-07-04
 **Summary:** the Netlify CLI can be silently linked to the wrong site — pin the site explicitly on every deploy, and never browser-open a page that could fire a real conversion.
 
 - The CLI was once found linked to `omega-landscaping-landing-page` by default; a careless deploy would have overwritten a client site. Always `--disable-linking` for new sites or pass an explicit `--site` ID (KJB precedent: site ID pinned in the deploy command).
+- Haoqi radar craft demos publish only through `_os/automation/bin/haoqi-craft-deploy.js`, pinned to `haoqi-radar-craft` (site id `0004715a-65b4-4af5-8315-315e6a15814e`, https://haoqi-radar-craft.netlify.app). That script refuses workshop, radar, IMMOHRTAL, and Philly hub names.
 - Verify live URLs by **static fetch**, not by browser-opening — especially conversion-sensitive redirect pages, which can fire real conversion events when opened.
 - Deploy only on approval; a deploy manifest proves routing, not client delivery.
 - Per-page QA checklist (7-Eleven standard): HTTP 200, expected content, tag present, tracked CTAs, images 200, no horizontal overflow at 390px/1366px.

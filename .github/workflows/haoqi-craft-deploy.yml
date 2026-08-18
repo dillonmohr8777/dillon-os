@@ -1,0 +1,28 @@
+name: Deploy Haoqi radar craft
+
+# Manual only. Pins site haoqi-radar-craft. Never creates or overwrites
+# workshop, radar, IMMOHRTAL, or Philly hub sites.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Publish haoqi-radar-craft
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "NETLIFY_AUTH_TOKEN is not set on this repo."
+            exit 1
+          fi
+          node _os/automation/bin/haoqi-craft-deploy.js
