@@ -68,6 +68,8 @@ What third-party tables say, not Dillon-measured:
 
 Thinking mode is on by default (`reasoning_effort` = `xhigh` in Unsloth's docs). First replies can run long. Drop effort to `medium` or `low` if it overthinks.
 
+What to subscribe vs buy: [[Qwen3.8 Ollama plan and buy list]].
+
 ## Do not confuse this with the 2.4T flagship
 
 Qwen3.8 also shipped a 2.4T-A95B open model. That is a different download (hundreds of GB even at 1-bit). The TikTok tag is the **27B**.
@@ -81,5 +83,6 @@ Qwen3.8 also shipped a 2.4T-A95B open model. That is a different download (hundr
 ## Links
 
 - [[12_Brain/01_Captures/research/2026-08-18 - research - Qwen3.8-27B 64GB RAM]]
+- [[12_Brain/06_Research/Qwen3.8 Ollama plan and buy list]]
 - [[11_Agents/64gb Morning Orchestrator Spec 2026-07-08]]
 - [[12_Brain/02_Entities/Ops Box (EliteDesk 800 G4)]]

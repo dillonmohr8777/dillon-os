@@ -59,6 +59,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-18 - research - Qwen3.8-27B 64GB RAM|2026-08-18 Qwen3.8-27B 64GB RAM]] — TikTok `qwen3.8:27b` identity, Ollama sizes, Unsloth memory table, skeptic verdicts.
+- [[12_Brain/01_Captures/research/2026-08-18 - research - Qwen3.8 Ollama plan and buy list|2026-08-18 Qwen3.8 Ollama plan and buy list]] — Free vs Pro vs Token Plan, 24GB GPU floor, PSU/case caveats.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -70,6 +71,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
 - [[12_Brain/06_Research/Qwen3.8-27B local RAM fit|Qwen3.8-27B local RAM fit]] — 64GB RAM loads the 18GB Q4 default; GPU VRAM is unrecorded (expires 2026-11-16).
+- [[12_Brain/06_Research/Qwen3.8 Ollama plan and buy list|Qwen3.8 Ollama plan and buy list]] — Ollama Free plus a 24GB GPU; paid plans are hosted, not the local 27B (expires 2026-11-16).
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
