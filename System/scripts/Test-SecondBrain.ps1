@@ -165,7 +165,9 @@ foreach ($record in $noteRecords) {
         }
     }
 
-    if ($record.relativePath -match '^\.(?:claude|cursor|hermes)/') {
+    # _archive holds retired sections. They stay in the vault and in git, but they
+    # are not live knowledge, so they must not generate link or schema warnings.
+    if ($record.relativePath -match '^\.(?:claude|cursor|hermes)/' -or $record.relativePath -match '^_archive/') {
         continue
     }
 
@@ -173,6 +175,7 @@ foreach ($record in $noteRecords) {
     # shows `[[wikilinks]]` as an example is not making a broken reference.
     $linkScanText = [regex]::Replace($record.text, '(?ms)^```.*?^```', '')
     $linkScanText = [regex]::Replace($linkScanText, '`[^`
+
 ]*`', '')
     $linkMatches = [regex]::Matches($linkScanText, '\[\[(?<target>[^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]')
     foreach ($linkMatch in $linkMatches) {

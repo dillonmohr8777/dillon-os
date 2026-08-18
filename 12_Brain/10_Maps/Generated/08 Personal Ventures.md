@@ -19,24 +19,6 @@ tags:
 
 Book, personal, DBA, music, and owned web-property work.
 
-## 05_Book
-
-- [[05_Book/characters|characters]]
-- [[05_Book/email-growth-tracker|email-growth-tracker]]
-- [[05_Book/guest-post-pipeline|guest-post-pipeline]]
-- [[05_Book/overview|overview]]
-- [[05_Book/seo-strategy|seo-strategy]]
-
-## 06_Personal
-
-- [[06_Personal/Personal Index|Personal Index]]
-
-## 07_DBA
-
-- [[07_DBA/assignment-tracker|assignment-tracker]]
-- [[07_DBA/notes|notes]]
-- [[07_DBA/overview|overview]]
-
 ## immohrtal-site
 
 - [[immohrtal-site/DEPLOY|DEPLOY]]

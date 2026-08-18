@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Bounded dispatcher for the Claude operating team. Executes only allowlisted local commands.
 
@@ -119,6 +119,11 @@ $ALLOWLIST = @{
         timeout = 180; ok_exit = @(0); blocked_exit = @(2); tier = 0; kind = 'readonly'
         validate = 'nonempty_stdout'
     }
+    'agent_craft_brief' = @{
+        exe = 'node'; args = @((Join-Path $BIN 'agent-craft-brief.js'), '--days', '14', '--write')
+        timeout = 120; ok_exit = @(0); blocked_exit = @(2); tier = 1; kind = 'generated_write'
+        validate = 'nonempty_stdout'
+    }
     'maps_refresh' = @{
         exe = $ps; args = @('-NoLogo', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass',
                             '-File', (Join-Path $SCRIPTS 'Update-SecondBrainMaps.ps1'), '-VaultRoot', $resolvedVault)
@@ -130,7 +135,7 @@ $ALLOWLIST = @{
 # Per-role build command; per-routine override where the routine's intent is explicit.
 $ROLE_BUILD = @{ 'critic' = 'invariant_scan'; 'maker' = 'team_validate'; 'analyst' = 'queue_status'
                  'terminal_readonly' = 'vault_health'; 'architect' = 'graph_measure' }
-$ROUTINE_BUILD = @{ 'W11' = 'vault_health'; 'D24' = 'invariant_scan'; 'D26' = 'frontmatter_validate'
+$ROUTINE_BUILD = @{ 'W11' = 'vault_health'; 'D24' = 'invariant_scan'; 'D26' = 'agent_craft_brief'
                     'W09' = 'agentvault_validate'; 'E10' = 'vault_health'; 'D03' = 'vault_health'
                     'M02' = 'team_validate'; 'E05' = 'graph_measure'
                     'D07' = 'browser_evidence'; 'D12' = 'repo_readonly'; 'D10' = 'comms_triage_readonly'

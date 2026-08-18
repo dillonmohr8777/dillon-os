@@ -29,6 +29,22 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[.github/skills/dillon-independent-web-checker/SKILL|SKILL]]
 - [[.github/skills/dillon-plan-grill/SKILL|SKILL]]
 
+## _archive
+
+- [[_archive/05_Book/characters|characters]]
+- [[_archive/05_Book/email-growth-tracker|email-growth-tracker]]
+- [[_archive/05_Book/guest-post-pipeline|guest-post-pipeline]]
+- [[_archive/05_Book/overview|overview]]
+- [[_archive/05_Book/seo-strategy|seo-strategy]]
+- [[_archive/05_Offers/Mohr Media Business Plan|Mohr Media Business Plan]]
+- [[_archive/05_Offers/Offer Index|Offer Index]]
+- [[_archive/06_Personal/Personal Index|Personal Index]]
+- [[_archive/07_DBA/assignment-tracker|assignment-tracker]]
+- [[_archive/07_DBA/notes|notes]]
+- [[_archive/07_DBA/overview|overview]]
+- [[_archive/09_Transcripts/Transcript Index|Transcript Index]]
+- [[_archive/README|README]]
+
 ## 08_Prospects
 
 - [[08_Prospects/bar-crawl-usa-web-barcrawlusa-com|bar-crawl-usa-web-barcrawlusa-com]]
@@ -37,10 +53,6 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[08_Prospects/quiet-leaf-spa-indeed-ind-1002|quiet-leaf-spa-indeed-ind-1002]]
 - [[08_Prospects/README|README]]
 - [[08_Prospects/standard-tap-maps-place-standard-tap|standard-tap-maps-place-standard-tap]]
-
-## 09_Transcripts
-
-- [[09_Transcripts/Transcript Index|Transcript Index]]
 
 ## automation
 

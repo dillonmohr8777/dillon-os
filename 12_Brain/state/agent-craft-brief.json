@@ -1,0 +1,273 @@
+{
+  "automation_id": "agent-craft-brief",
+  "status": "ok",
+  "generated_for": "2026-08-18",
+  "window_days": 3,
+  "days": [
+    "2026-08-16",
+    "2026-08-17",
+    "2026-08-18"
+  ],
+  "counts": {
+    "routines_seen": 22,
+    "workhorses": 10,
+    "unreliable": 3,
+    "cadence_drift": 6,
+    "authorized_never_ran": 7
+  },
+  "gate_blocks": [],
+  "workhorses": [
+    {
+      "id": "D07",
+      "name": "Triage monitoring and system alerts",
+      "cadence": "daily",
+      "claude_role": "terminal_readonly",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D10",
+      "name": "Infer the real deliverable",
+      "cadence": "daily",
+      "claude_role": "analyst",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D11",
+      "name": "Plan dependencies and approval gates",
+      "cadence": "daily",
+      "claude_role": "analyst",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D12",
+      "name": "Run repository and worktree preflight",
+      "cadence": "daily",
+      "claude_role": "terminal_readonly",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D13",
+      "name": "Load product truth and visual authority",
+      "cadence": "daily",
+      "claude_role": "maker",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D16",
+      "name": "Produce content, copy, SEO, AEO, and GEO deliverables",
+      "cadence": "daily",
+      "claude_role": "maker",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D19",
+      "name": "Build a report, dashboard, deck, or executive summary",
+      "cadence": "daily",
+      "claude_role": "maker",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D25",
+      "name": "Create an evidence-backed completion handoff",
+      "cadence": "daily",
+      "claude_role": "critic",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "D26",
+      "name": "Capture durable knowledge in Dillon OS",
+      "cadence": "daily",
+      "claude_role": "maker",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "E05",
+      "name": "Onboard an existing repository or project",
+      "cadence": "event",
+      "claude_role": "architect",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    }
+  ],
+  "unreliable": [
+    {
+      "id": "W09",
+      "name": "Audit automation reliability",
+      "cadence": "weekly",
+      "claude_role": "critic",
+      "completions": 1,
+      "failures": 6,
+      "reliability": 0.14,
+      "last_completed": "2026-08-16",
+      "fail_reason": "3/9 stages ok; next: resolve stage:build"
+    },
+    {
+      "id": "D03",
+      "name": "Review overnight automations and watchdogs",
+      "cadence": "daily",
+      "claude_role": "terminal_readonly",
+      "completions": 2,
+      "failures": 3,
+      "reliability": 0.4,
+      "last_completed": "2026-08-17",
+      "fail_reason": "3/9 stages ok; next: resolve stage:build"
+    },
+    {
+      "id": "W11",
+      "name": "Test Dillon OS knowledge graph health",
+      "cadence": "weekly",
+      "claude_role": "critic",
+      "completions": 2,
+      "failures": 3,
+      "reliability": 0.4,
+      "last_completed": "2026-08-17",
+      "fail_reason": "3/9 stages ok; next: resolve stage:build"
+    }
+  ],
+  "cadence_drift": [
+    {
+      "id": "W04",
+      "name": "Build the content and creative production calendar",
+      "cadence": "weekly",
+      "claude_role": "maker",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "W10",
+      "name": "Run the executive weekly review",
+      "cadence": "weekly",
+      "claude_role": "critic",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "M02",
+      "name": "Evaluate agents, permissions, and output quality",
+      "cadence": "monthly",
+      "claude_role": "critic",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "M03",
+      "name": "Audit scheduled work, usage, and cost",
+      "cadence": "monthly",
+      "claude_role": "critic",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "M04",
+      "name": "Audit client and account separation",
+      "cadence": "monthly",
+      "claude_role": "critic",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    },
+    {
+      "id": "M05",
+      "name": "Refresh operating rules, brand voice, and design truth",
+      "cadence": "monthly",
+      "claude_role": "architect",
+      "completions": 3,
+      "failures": 0,
+      "reliability": 1,
+      "last_completed": "2026-08-18",
+      "fail_reason": null
+    }
+  ],
+  "authorized_never_ran": [
+    {
+      "id": "D17",
+      "name": "Inspect paid-media delivery read only",
+      "cadence": "daily"
+    },
+    {
+      "id": "D18",
+      "name": "Validate attribution, leads, and downstream outcomes",
+      "cadence": "daily"
+    },
+    {
+      "id": "D24",
+      "name": "Run independent QA and release criticism",
+      "cadence": "daily"
+    },
+    {
+      "id": "W05",
+      "name": "Run the Prospect Radar Next 20 website factory",
+      "cadence": "weekly"
+    },
+    {
+      "id": "W06",
+      "name": "Produce client weekly reports",
+      "cadence": "weekly"
+    },
+    {
+      "id": "W08",
+      "name": "Review CRO, SEO, AEO, GEO, offer, and outreach experiments",
+      "cadence": "weekly"
+    },
+    {
+      "id": "E04",
+      "name": "Recover a failed connector or collector",
+      "cadence": "event"
+    }
+  ],
+  "dry_run": true,
+  "written_at": "2026-08-18T18:47:53.546Z"
+}

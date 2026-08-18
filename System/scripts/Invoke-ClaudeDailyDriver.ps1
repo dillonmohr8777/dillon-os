@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Claude autonomous daily-driver controller. Polls cheaply, executes bounded safe work.
 
@@ -237,19 +237,40 @@ try {
         }
         if (-not $claudeExe) { $frontierState = 'cli_unavailable' }
         else {
-            $packetLines = @(
-                'You are a bounded Claude specialist inside Dillon''s operating team. Read-only synthesis.',
-                'Codex acting as Marketing Chief is the sole canonical writer. Propose only; do not act.',
-                '',
-                ("State: eligible={0} consecutive_failures={1} routines_today={2}/{3}" -f $eligibleIds.Count, $consecFail, $todayRoutines, $MaxRoutinesPerDay),
-                'Registry: 54 routines, 486 operating stages, 6 departments, 21 agent contracts.',
-                'Open findings: credential reachable from 3 published branches; approval-surface duplication;',
-                '4 connector-backed routines fail closed; 95 client files staged for deletion while 148 remain',
-                'on the public remote.',
-                '',
-                'Task: name the single highest-value SAFE next action for the autonomous loop, and the one',
-                'contradiction most likely still hiding in this estate. Under 200 words. No client data.'
-            )
+            # The packet used to hard-code a findings list. It went stale and started
+            # asserting things that were no longer true (a public remote, client files
+            # staged for deletion), which is worse than saying nothing: the model
+            # reasons confidently from false premises. Facts now come from the craft
+            # brief's counted output, refreshed daily by routine D26.
+            $craft = $null
+            $craftPath = Join-Path $stateDir 'agent-craft-brief.json'
+            if (Test-Path -LiteralPath $craftPath) {
+                try { $craft = Get-Content -LiteralPath $craftPath -Raw | ConvertFrom-Json } catch { $craft = $null }
+            }
+            $packetLines = New-Object System.Collections.Generic.List[string]
+            $packetLines.Add('You are a bounded Claude specialist inside Dillon''s operating team. Read-only synthesis.')
+            $packetLines.Add('Codex acting as Marketing Chief is the sole canonical writer. Propose only; do not act.')
+            $packetLines.Add('')
+            $packetLines.Add(("State: eligible={0} consecutive_failures={1} routines_today={2}/{3}" -f $eligibleIds.Count, $consecFail, $todayRoutines, $MaxRoutinesPerDay))
+            if ($craft) {
+                $packetLines.Add(("Counted over {0} day(s) of loop receipts:" -f $craft.window_days))
+                $packetLines.Add(("  routines observed={0} reliable-every-day={1} failing={2} cadence-drift={3} authorized-never-ran={4}" -f `
+                    $craft.counts.routines_seen, $craft.counts.workhorses, $craft.counts.unreliable, `
+                    $craft.counts.cadence_drift, $craft.counts.authorized_never_ran))
+                foreach ($u in @($craft.unreliable | Select-Object -First 3)) {
+                    $packetLines.Add(("  failing: {0} {1} - {2} failure(s), reliability {3}" -f $u.id, $u.name, $u.failures, $u.reliability))
+                }
+                foreach ($g in @($craft.gate_blocks | Select-Object -First 3)) {
+                    $packetLines.Add(("  gate {0} blocked {1} time(s)" -f $g.gate, $g.blocks))
+                }
+            } else {
+                $packetLines.Add('No craft brief available; state above is the only evidence. Say so rather than guessing.')
+            }
+            $packetLines.Add('')
+            $packetLines.Add('Task: from the counted evidence above only, name the single highest-value SAFE next')
+            $packetLines.Add('action for the autonomous loop, and the one contradiction most likely still hiding.')
+            $packetLines.Add('Do not assert any fact not present above. Under 200 words. No client data.')
+            $packetLines = $packetLines.ToArray()
             $packet = ($packetLines -join "`n")
             try {
                 $env:CLAUDE_FRONTIER_CHILD = '1'

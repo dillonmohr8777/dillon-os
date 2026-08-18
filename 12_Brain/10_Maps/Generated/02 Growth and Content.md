@@ -79,11 +79,6 @@ Campaigns, content, SEO, offers, and the assets that turn strategy into demand.
 - [[03_Content/Retargeting Ad Ideas|Retargeting Ad Ideas]]
 - [[03_Content/SEO Keyword Targets|SEO Keyword Targets]]
 
-## 05_Offers
-
-- [[05_Offers/Mohr Media Business Plan|Mohr Media Business Plan]]
-- [[05_Offers/Offer Index|Offer Index]]
-
 ## SEO
 
 - [[SEO/AlignHCM/Blogs/adp-alternatives-blog|adp-alternatives-blog]]

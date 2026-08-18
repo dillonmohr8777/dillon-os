@@ -207,6 +207,8 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/09_Ops/Netlify Credits Suspension 2026-07-30|Netlify Credits Suspension 2026-07-30]]
 - [[12_Brain/09_Ops/Runbook|Runbook]]
 - [[12_Brain/09_Ops/Schema|Schema]]
+- [[12_Brain/11_Craft/00_Index|00_Index]]
+- [[12_Brain/11_Craft/2026-08-18 - operating brief|2026-08-18 - operating brief]]
 - [[12_Brain/DEPENDENCY_PR226|DEPENDENCY_PR226]]
 - [[12_Brain/INDEX|INDEX]]
 - [[12_Brain/private/README|README]]
