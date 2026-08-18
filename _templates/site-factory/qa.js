@@ -46,6 +46,7 @@ async function runQa(siteDir, opts = {}) {
     const tag = m[1];
     const src = (tag.match(/src="([^"]*)"/) || [])[1];
     if (!/alt="[^"]+"/.test(tag)) failures.push(`Image missing alt text: ${src}`);
+    if (!/width="\d+"/.test(tag) || !/height="\d+"/.test(tag)) failures.push(`Image missing intrinsic width/height: ${src}`);
     if (src && src.startsWith('assets/') && !fs.existsSync(path.join(siteDir, src))) {
       failures.push(`Missing asset file: ${src}`);
     }
@@ -62,6 +63,14 @@ async function runQa(siteDir, opts = {}) {
       failures.push(`Missing required section: ${s}`);
     }
   });
+
+  if (!html.includes('class="logo-outro ')) failures.push('Missing exact-logo outro section');
+  if (!html.includes('class="ink-logo reveal"')) failures.push('Missing ink-reveal logo asset');
+  const headerLogo = html.match(/<img class="brand-logo"[^>]*src="assets\/([^"]+)"/);
+  const outroLogo = html.match(/<img class="ink-logo reveal"[^>]*src="assets\/([^"]+)"/);
+  if (!headerLogo || !outroLogo || headerLogo[1] !== outroLogo[1]) {
+    failures.push('Header and ink outro must use the same exact source-logo file');
+  }
 
   const surfaces = [...html.matchAll(/<section class="[^"]*surface-([a-z]+)/g)].map((m) => m[1]);
   surfaces.forEach((s, i) => {
@@ -96,19 +105,112 @@ async function runQa(siteDir, opts = {}) {
         const browser = await chromium.launch();
         const url = 'file://' + path.resolve(siteDir, 'index.html');
         for (const [name, width, height] of [
+          ['small-phone', 320, 568],
           ['phone', 390, 844],
+          ['wide-phone', 700, 900],
           ['tablet', 850, 1100],
+          ['compact-desktop', 1024, 768],
           ['desktop', 1440, 900],
         ]) {
           const page = await browser.newPage({ viewport: { width, height } });
+          const runtimeErrors = [];
+          page.on('pageerror', (error) => runtimeErrors.push(error.message));
+          page.on('console', (message) => {
+            if (message.type() === 'error') runtimeErrors.push(message.text());
+          });
           await page.goto(url, { waitUntil: 'networkidle' });
-          await page.evaluate(() =>
-            document.querySelectorAll('.reveal').forEach((n) => n.classList.add('visible', 'in-view'))
-          );
+          await page.evaluate(async () => {
+            document.querySelectorAll('.reveal').forEach((n) => n.classList.add('visible', 'in-view'));
+            const images = [...document.images];
+            images.forEach((image) => (image.loading = 'eager'));
+            const pageHeight = document.documentElement.scrollHeight;
+            for (let y = 0; y < pageHeight; y += Math.max(320, innerHeight * 0.8)) {
+              scrollTo(0, y);
+              await new Promise((resolve) => setTimeout(resolve, 35));
+            }
+            scrollTo(0, 0);
+            await Promise.all(
+              images.map((image) =>
+                image.complete ? image.decode().catch(() => {}) : new Promise((resolve) => {
+                  image.addEventListener('load', resolve, { once: true });
+                  image.addEventListener('error', resolve, { once: true });
+                })
+              )
+            );
+            await document.fonts.ready;
+          });
+          if (runtimeErrors.length) {
+            failures.push(`Runtime console error at ${name}: ${runtimeErrors[0]}`);
+          }
           const overflow = await page.evaluate(
             () => document.documentElement.scrollWidth - document.documentElement.clientWidth
           );
           if (overflow > 1) failures.push(`Horizontal overflow of ${overflow}px at ${name} width (${width}px)`);
+          const visualDefects = await page.evaluate(() => {
+            const root = getComputedStyle(document.documentElement);
+            const firstFamily = (value) => value.split(',')[0].trim().replace(/^['"]|['"]$/g, '');
+            const textFamily = firstFamily(root.getPropertyValue('--text'));
+            const displayFamily = firstFamily(root.getPropertyValue('--display'));
+            const imageDefects = [...document.querySelectorAll('main img')].flatMap((image) => {
+              const rect = image.getBoundingClientRect();
+              const style = getComputedStyle(image);
+              if (!image.complete || image.naturalWidth === 0 || image.naturalHeight === 0) {
+                return [`broken image ${image.getAttribute('src') || '(missing src)'}`];
+              }
+              if (style.objectFit !== 'cover' || rect.width <= 0 || rect.height <= 0) return [];
+              const naturalRatio = image.naturalWidth / image.naturalHeight;
+              const boxRatio = rect.width / rect.height;
+              const visibleFraction = Math.min(naturalRatio / boxRatio, boxRatio / naturalRatio);
+              return visibleFraction < 0.8
+                ? [`cropped image ${image.getAttribute('src')} retains only ${Math.round(visibleFraction * 100)}% of its frame`]
+                : [];
+            });
+            const clippedHeadings = [...document.querySelectorAll('h1,h2,h3')].flatMap((node) => {
+              const rect = node.getBoundingClientRect();
+              return rect.left < -1 || rect.right > innerWidth + 1
+                ? [`clipped heading "${node.textContent.trim().slice(0, 70)}"`]
+                : [];
+            });
+            const touchDefects = innerWidth > 850 ? [] : [...document.querySelectorAll('.button,.site-header a,.mobile-action a,.catalog-card>a,.footer-links a,.contact-card a')].flatMap((node) => {
+              const rect = node.getBoundingClientRect();
+              if (!rect.width || !rect.height) return [];
+              return rect.width < 44 || rect.height < 44
+                ? [`small touch target "${node.textContent.trim().slice(0, 50)}" (${Math.round(rect.width)}x${Math.round(rect.height)})`]
+                : [];
+            });
+            const fontDefects = [
+              textFamily && !document.fonts.check(`16px "${textFamily}"`) ? `body font ${textFamily} did not load` : null,
+              displayFamily && !document.fonts.check(`700 32px "${displayFamily}"`) ? `display font ${displayFamily} did not load` : null,
+            ].filter(Boolean);
+            return [...imageDefects, ...clippedHeadings, ...touchDefects, ...fontDefects];
+          });
+          visualDefects.forEach((defect) => failures.push(`${defect} at ${name} width (${width}px)`));
+          const focusDefects = [];
+          for (let step = 0; step < 12; step += 1) {
+            await page.keyboard.press('Tab');
+            const focusState = await page.evaluate(() => {
+              const active = document.activeElement;
+              if (!active || active === document.body) return { missing: true };
+              const style = getComputedStyle(active);
+              const rect = active.getBoundingClientRect();
+              return {
+                missing: false,
+                label: (active.textContent || active.getAttribute('aria-label') || active.tagName).trim().slice(0, 60),
+                visible: rect.width > 0 && rect.height > 0,
+                outlineWidth: parseFloat(style.outlineWidth) || 0,
+                outlineStyle: style.outlineStyle,
+              };
+            });
+            if (focusState.missing || !focusState.visible) {
+              focusDefects.push(`keyboard focus missing or invisible at tab step ${step + 1}`);
+              break;
+            }
+            if (focusState.outlineStyle === 'none' || focusState.outlineWidth < 2) {
+              focusDefects.push(`focus indicator missing for "${focusState.label}" at tab step ${step + 1}`);
+              break;
+            }
+          }
+          focusDefects.forEach((defect) => failures.push(`${defect} at ${name} width (${width}px)`));
           await page.screenshot({ path: path.join(shotsDir, `${name}.png`), fullPage: true });
           await page.close();
         }

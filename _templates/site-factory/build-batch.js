@@ -44,9 +44,17 @@ async function runBatch(batchDir, options = {}) {
 
   const batch = JSON.parse(fs.readFileSync(path.join(batchDir, 'batch.json'), 'utf8'));
   const briefsDir = path.join(batchDir, 'briefs');
-  const briefFiles = fs.existsSync(briefsDir)
+  let briefFiles = fs.existsSync(briefsDir)
     ? fs.readdirSync(briefsDir).filter((f) => f.endsWith('.json')).sort()
     : [];
+  if (Array.isArray(batch.order)) {
+    const order = new Map(batch.order.map((slug, index) => [slug, index]));
+    briefFiles.sort((a, b) => {
+      const aSlug = path.basename(a, '.json');
+      const bSlug = path.basename(b, '.json');
+      return (order.get(aSlug) ?? Number.MAX_SAFE_INTEGER) - (order.get(bSlug) ?? Number.MAX_SAFE_INTEGER);
+    });
+  }
   if (!briefFiles.length) {
     throw new Error(`No briefs found in ${briefsDir}`);
   }
@@ -134,6 +142,12 @@ async function runBatch(batchDir, options = {}) {
         sections: row.sections,
         words: row.words,
         images: row.images,
+        minImages: brief.qualityPolicy && Number.isFinite(Number(brief.qualityPolicy.minImages))
+          ? Number(brief.qualityPolicy.minImages)
+          : undefined,
+        maxWords: brief.qualityPolicy && Number.isFinite(Number(brief.qualityPolicy.maxWords))
+          ? Number(brief.qualityPolicy.maxWords)
+          : undefined,
       });
       row.specFailures = specFails;
       if (specFails.length) row.failures.push(...specFails);
@@ -147,6 +161,7 @@ async function runBatch(batchDir, options = {}) {
         for (const f of fs.readdirSync(assetsDir)) {
           const full = path.join(assetsDir, f);
           if (!fs.statSync(full).isFile()) continue;
+          if (!/\.(?:avif|gif|jpe?g|png|svg|webp)$/i.test(f)) continue;
           const hash = crypto.createHash('sha1').update(fs.readFileSync(full)).digest('hex');
           const key = `${brief.slug}/${f}`;
           if (imageHashes.has(hash)) imageHashes.get(hash).push(key);
@@ -324,38 +339,39 @@ async function runBatch(batchDir, options = {}) {
     })
     .join('\n');
 
-  const hub = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>${esc(batch.title || batch.id)} | Batch Review</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><style>
+  const hub = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><title>${esc(batch.title || batch.id)} | Batch Review</title><style>
 :root{--bg:#0b0d12;--ink:#f2f5fb;--muted:#9aa5b8;--accent:#b6f36d;--line:#ffffff1e;--card:#ffffff0a}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Space Grotesk",sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 "Segoe UI Variable Text","Segoe UI",Arial,sans-serif;font-kerning:normal;-webkit-font-smoothing:antialiased}
 .wrap{width:min(1280px,calc(100% - 40px));margin:auto}
 header{padding:84px 0 40px}
-.k{font:600 11px/1 "IBM Plex Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.03em;margin:18px 0 20px;max-width:18ch;text-wrap:balance}
+.k{font:700 .8125rem/1.2 "Segoe UI Variable Text","Segoe UI",Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:4.25rem;font-weight:720;line-height:1.04;letter-spacing:-.025em;margin:18px 0 20px;max-width:18ch;text-wrap:balance}
 header p{max-width:680px;color:var(--muted);margin:0;text-wrap:pretty}
 .stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
 .stats div{min-width:110px}
 .stats strong{display:block;font-size:1.9rem;line-height:1.1}
-.stats span{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.stats span{font:700 .8125rem "Segoe UI Variable Text","Segoe UI",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .controls{position:sticky;top:0;z-index:5;background:#0b0d12e6;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 .controls .wrap{display:flex;gap:10px;flex-wrap:wrap;padding:14px 0}
-.controls button{min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);font:600 12px "IBM Plex Mono",monospace;letter-spacing:.04em;cursor:pointer}
+.controls button{min-height:44px;padding:0 16px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);font:700 .875rem "Segoe UI Variable Text","Segoe UI",Arial,sans-serif;letter-spacing:.01em;cursor:pointer}
 .controls button.active{border-color:var(--accent);background:#b6f36d1a}
-.controls input{flex:1;min-width:200px;min-height:44px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);font:14px "Space Grotesk",sans-serif}
+.controls input{flex:1;min-width:200px;min-height:44px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);font:400 1rem "Segoe UI Variable Text","Segoe UI",Arial,sans-serif}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;padding:34px 0 90px}
 .card{display:flex;flex-direction:column;gap:10px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card);text-decoration:none;color:inherit}
 .card[hidden]{display:none}
-.meta{display:flex;justify-content:space-between;gap:12px;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.card h2{margin:0;font-size:1.3rem;line-height:1.2}
-.card p{margin:0;color:var(--muted);font-size:.9rem}
-.row{display:flex;justify-content:space-between;gap:10px;align-items:center;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.06em}
+.meta{display:flex;justify-content:space-between;gap:12px;font:700 .8125rem "Segoe UI Variable Text","Segoe UI",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.card h2{margin:0;font-size:1.25rem;font-weight:680;line-height:1.25;letter-spacing:-.012em;text-wrap:balance}
+.card p{margin:0;color:var(--muted);font-size:1rem;line-height:1.55}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:center;font:600 .8125rem "Segoe UI Variable Text","Segoe UI",Arial,sans-serif;letter-spacing:.02em}
 .good{color:var(--accent)}.warn{color:#f3d96d}.bad{color:#ff8080}
 .spec{color:var(--muted)}
-.open{margin-top:auto;padding-top:8px;font:600 11px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.open{margin-top:auto;padding-top:8px;font:700 .8125rem "Segoe UI Variable Text","Segoe UI",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
 footer{padding:40px 0 70px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+@media(max-width:700px){h1{font-size:2.75rem;line-height:1.06}.card h2{font-size:1.25rem}}
 </style></head><body>
 <div class="wrap"><header><span class="k">${esc(batch.market || 'Batch')} | Week of ${esc(batch.week || '')}</span><h1>${esc(batch.title || batch.id)}</h1><p>${esc(batch.note || 'Prebuilt prospect homepages for outreach review. mail_ready stays hold until explicit human approval.')}</p>
-<div class="stats"><div><strong>${results.length}</strong><span>Prospects</span></div><div><strong>${qaReadyCount}</strong><span>QA ready</span></div><div><strong>${blocked.length}</strong><span>Held</span></div><div><strong>${TARGET_COUNT}</strong><span>Weekly target</span></div></div>
+<div class="stats"><div><strong>${results.length}</strong><span>Prospects</span></div><div><strong>${qaReadyCount}</strong><span>QA ready</span></div><div><strong>${blocked.length}</strong><span>QA blocked</span></div><div><strong>${TARGET_COUNT}</strong><span>Weekly target</span></div></div>
 </header></div>
 <div class="controls"><div class="wrap">${filterButtons}<input id="q" type="search" placeholder="Search business"></div></div>
 <main class="wrap"><div class="grid">

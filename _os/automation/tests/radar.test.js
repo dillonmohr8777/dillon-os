@@ -340,6 +340,16 @@ test('projectRows keeps dimension evidence, not just the score', () => {
   assert.deepEqual(row.dm.foundation, [67, 2], 'measured encodes as 2');
   assert.deepEqual(row.dm.mobile, [41, 1], 'partial encodes as 1');
   assert.deepEqual(row.dm.craft, [50, 0], 'unknown encodes as 0 so the UI can mark it unmeasured');
+
+  const html = renderDashboard(radar.summarize(reg, { today: TODAY }));
+  const payload = JSON.parse(html.match(/id="radar-rows">([\s\S]*?)<\/script>/)[1]);
+  const packed = payload.rows[0].dm;
+  const keys = payload.meta.dimensions.map((dimension) => dimension.key);
+  assert.ok(Array.isArray(packed), 'the browser payload packs repeated dimension keys into an array');
+  const dimension = (key) => packed.slice(keys.indexOf(key) * 2, keys.indexOf(key) * 2 + 2);
+  assert.deepEqual(dimension('foundation'), [67, 2]);
+  assert.deepEqual(dimension('mobile'), [41, 1]);
+  assert.deepEqual(dimension('craft'), [50, 0]);
 });
 
 test('the dashboard escapes business names rather than injecting them', () => {
@@ -721,11 +731,13 @@ test('the dashboard payload interns repeated text and the client can resolve it'
   const payload = JSON.parse(html.match(/id="radar-rows">([\s\S]*?)<\/script>/)[1]);
 
   assert.ok(Array.isArray(payload.meta.strings), 'a string table must ship');
+  assert.ok(payload.meta.rowStringFields.includes('r'), 'repeated categorical values must be interned');
   // The shared sentences appear once in the table, not once per row.
   assert.equal(payload.meta.strings.filter((v) => v === 'same headline').length, 1);
   for (const row of payload.rows) {
     assert.equal(typeof row.hl, 'number', 'headline is an index, not a string');
     assert.equal(payload.meta.strings[row.hl], 'same headline');
+    assert.equal(payload.meta.strings[row.r], 'rebuild', 'the verdict must round-trip through the string table');
     assert.ok(Array.isArray(row.f), 'faults are an index array');
     for (const i of row.f) assert.equal(typeof i, 'number');
   }

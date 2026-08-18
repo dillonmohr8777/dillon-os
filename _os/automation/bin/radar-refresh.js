@@ -25,6 +25,8 @@
  *   --discover <n>     new candidates to look for (default 200, 0 to skip)
  *   --recheck <n>      stale prospects to re-audit (default 120, 0 to skip)
  *   --market <CODE>    force a market instead of using the rotation
+ *   --area <NAME>      with --market, limit discovery to one exact area
+ *   --groups <CSV>     with --market, choose exact discovery vertical groups
  *   --concurrency <n>  parallel fetches (default 12)
  *   --max-tier <0|1>   deepest audit tier (default 0; 1 needs a working browser)
  *   --enrich <n>       Google Places lookups to spend today (default 60, 0 to skip).
@@ -75,6 +77,14 @@ const ROTATION = [
       { name: 'Dauphin County', adminLevel: 6, state: 'Pennsylvania' },
       { name: 'Berks County', adminLevel: 6, state: 'Pennsylvania' },
       { name: 'York County', adminLevel: 6, state: 'Pennsylvania' },
+      { name: 'Northampton County', adminLevel: 6, state: 'Pennsylvania' },
+      { name: 'Monroe County', adminLevel: 6, state: 'Pennsylvania' },
+      { name: 'Luzerne County', adminLevel: 6, state: 'Pennsylvania' },
+      { name: 'Lackawanna County', adminLevel: 6, state: 'Pennsylvania' },
+      { name: 'Cumberland County', adminLevel: 6, state: 'Pennsylvania' },
+      { name: 'Westmoreland County', adminLevel: 6, state: 'Pennsylvania' },
+      { name: 'Centre County', adminLevel: 6, state: 'Pennsylvania' },
+      { name: 'Butler County', adminLevel: 6, state: 'Pennsylvania' },
     ] },
 ];
 
@@ -85,7 +95,7 @@ function parseArgs(argv) {
   const o = {
     // Defaults come from lib/coverage-plan DAILY so the scheduled job and a
     // hand-run share one definition of "a day's work".
-    discover: DAILY.discover, recheck: 250, market: null, concurrency: 12, maxTier: 0,
+    discover: DAILY.discover, recheck: 250, market: null, area: null, groups: null, concurrency: 12, maxTier: 0,
     enrich: DAILY.enrich, render: DAILY.render, imagery: DAILY.imagery,
     dryRun: false, regrade: null, force: false,
   };
@@ -99,6 +109,8 @@ function parseArgs(argv) {
     else if (a === '--regrade') { o.regrade = String(argv[++i] || '').split(',').map((s) => s.trim()).filter(Boolean); o.force = true; }
     else if (a === '--force') o.force = true;
     else if (a === '--market') o.market = String(argv[++i] || '').toUpperCase();
+    else if (a === '--area') o.area = String(argv[++i] || '').trim();
+    else if (a === '--groups') o.groups = String(argv[++i] || '').split(',').map((value) => value.trim()).filter((value) => GROUP_ORDER.includes(value));
     else if (a === '--concurrency') o.concurrency = Math.max(1, parseInt(argv[++i], 10) || 12);
     else if (a === '--max-tier') o.maxTier = parseInt(argv[++i], 10) || 0;
     else if (a === '--enrich') o.enrich = Math.max(0, parseInt(argv[++i], 10) || 0);
@@ -305,11 +317,17 @@ async function main() {
   // single area for a manual run.
   const plan = args.market
     ? (() => {
-        const r = ROTATION.find((x) => x.market === args.market) || ROTATION[0];
+        const matches = ROTATION.filter((x) => x.market === args.market);
+        const r = matches.length
+          ? { market: args.market, areas: matches.flatMap((entry) => entry.areas) }
+          : ROTATION[0];
+        const areas = args.area
+          ? r.areas.filter((area) => area.name.toLowerCase() === args.area.toLowerCase() || area.name.toLowerCase().startsWith(`${args.area.toLowerCase()} `))
+          : r.areas;
         return {
-          targets: r.areas.map((a) => ({ ...a, market: r.market, groups: GROUP_ORDER.slice(0, 3), cap: args.discover })),
+          targets: areas.map((a) => ({ ...a, market: r.market, groups: args.groups?.length ? args.groups : GROUP_ORDER.slice(0, 3), cap: args.discover })),
           budget: args.discover, throttled: false, total: Object.keys(registry.prospects).length,
-          reason: `forced market ${args.market}`, areaDeficits: [], groupDeficits: [],
+          reason: `forced market ${args.market}${args.area ? ` area ${args.area}` : ''}`, areaDeficits: [], groupDeficits: [],
         };
       })()
     : planDiscovery(registry, { budget: args.discover });

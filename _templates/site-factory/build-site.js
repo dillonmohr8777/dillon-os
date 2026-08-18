@@ -22,7 +22,7 @@ const { buildSkinCss, inferAttitude } = require('./lib/skins.js');
  * Returns { outDir, htmlBytes, sections, words, images, missingAssets }.
  */
 function buildSite(brief, outRoot) {
-const baseCss = fs.readFileSync(path.join(__dirname, 'base.css'), 'utf8');
+const baseCssSource = fs.readFileSync(path.join(__dirname, 'base.css'), 'utf8');
 
 const esc = (s) =>
   String(s ?? '')
@@ -39,6 +39,8 @@ for (const key of required) {
   }
 }
 assertSafeSlug(brief.slug);
+const outDir = path.join(outRoot, brief.slug);
+fs.mkdirSync(path.join(outDir, 'assets'), { recursive: true });
 
 const t = brief.tokens;
 const tokenDefaults = {
@@ -48,34 +50,122 @@ const tokenDefaults = {
 for (const [k, v] of Object.entries(tokenDefaults)) t[k] = t[k] || v;
 
 const fontFallback = brief.fonts.displayFallback || 'Georgia,serif';
+const textFallback = brief.fonts.textFallback || 'system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif';
 const rootBlock =
   `:root{--paper:${t.paper};--ink:${t.ink};--accent:${t.accent};--accent2:${t.accent2};` +
   `--panel:${t.panel};--deep:${t.deep};--on-paper:${t.onPaper};--on-accent:${t.onAccent};` +
   `--on-accent2:${t.onAccent2};--on-panel:${t.onPanel};--on-deep:${t.onDeep};` +
-  `--border:${t.border};--radius:${t.radius};--display:'${brief.fonts.display}',${fontFallback}}`;
+  `--border:${t.border};--radius:${t.radius};--display:'${brief.fonts.display}',${fontFallback};` +
+  `--text:'${brief.fonts.text}',${textFallback}}`;
 
 const fontFamilies = [brief.fonts.display, brief.fonts.text]
   .filter(Boolean)
-  .map((f) => `family=${f.trim().replace(/ /g, '+')}:wght@400;500;600;700;800;900`)
+  .map((f) => `family=${f.trim().replace(/ /g, '+')}:wght@400;700`)
   .join('&');
+const localFontFiles = ['font-display-400.woff2', 'font-display-700.woff2', 'font-text-400.woff2', 'font-text-700.woff2'];
+const useLocalFonts = localFontFiles.every((file) => fs.existsSync(path.join(outDir, 'assets', file)));
+const fontHead = useLocalFonts
+  ? ''
+  : `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?${fontFamilies}&display=swap" rel="stylesheet">`;
+const localFontCss = useLocalFonts ? `
+@font-face{font-family:'${brief.fonts.display}';src:url('assets/font-display-400.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'${brief.fonts.display}';src:url('assets/font-display-700.woff2') format('woff2');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:'${brief.fonts.text}';src:url('assets/font-text-400.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'${brief.fonts.text}';src:url('assets/font-text-700.woff2') format('woff2');font-style:normal;font-weight:700;font-display:swap}
+` : '';
 
 const images = brief.images || [];
-const img = (n, opts = {}) => {
+const imageDimensions = (file) => {
+  const full = path.join(outDir, 'assets', file);
+  if (!fs.existsSync(full)) return null;
+  const bytes = fs.readFileSync(full);
+  if (path.extname(file).toLowerCase() === '.svg') {
+    const source = bytes.toString('utf8');
+    const svg = source.match(/<svg\b[^>]*>/i)?.[0] || '';
+    const width = Number(svg.match(/\bwidth=["']([\d.]+)/i)?.[1]);
+    const height = Number(svg.match(/\bheight=["']([\d.]+)/i)?.[1]);
+    if (width > 0 && height > 0) return { width: Math.round(width), height: Math.round(height) };
+    const viewBox = svg.match(/\bviewBox=["'][\d.-]+[ ,]+[\d.-]+[ ,]+([\d.]+)[ ,]+([\d.]+)["']/i);
+    if (viewBox) return { width: Math.round(Number(viewBox[1])), height: Math.round(Number(viewBox[2])) };
+  }
+  if (bytes.length >= 24 && bytes.subarray(1, 4).toString('ascii') === 'PNG') {
+    return { width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20) };
+  }
+  if (bytes.length >= 4 && bytes[0] === 0xff && bytes[1] === 0xd8) {
+    let offset = 2;
+    while (offset + 9 < bytes.length) {
+      if (bytes[offset] !== 0xff) {
+        offset += 1;
+        continue;
+      }
+      while (offset < bytes.length && bytes[offset] === 0xff) offset += 1;
+      const marker = bytes[offset];
+      offset += 1;
+      if (marker === 0xd8 || marker === 0xd9) continue;
+      if (offset + 1 >= bytes.length) break;
+      const length = bytes.readUInt16BE(offset);
+      if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(marker)) {
+        return { height: bytes.readUInt16BE(offset + 3), width: bytes.readUInt16BE(offset + 5) };
+      }
+      if (length < 2) break;
+      offset += length;
+    }
+  }
+  if (bytes.length >= 30 && bytes.subarray(0, 4).toString('ascii') === 'RIFF' && bytes.subarray(8, 12).toString('ascii') === 'WEBP') {
+    const kind = bytes.subarray(12, 16).toString('ascii');
+    if (kind === 'VP8X') {
+      return {
+        width: 1 + bytes.readUIntLE(24, 3),
+        height: 1 + bytes.readUIntLE(27, 3),
+      };
+    }
+    if (kind === 'VP8L' && bytes[20] === 0x2f) {
+      return {
+        width: 1 + bytes[21] + ((bytes[22] & 0x3f) << 8),
+        height: 1 + ((bytes[22] & 0xc0) >> 6) + (bytes[23] << 2) + ((bytes[24] & 0x0f) << 10),
+      };
+    }
+    if (kind === 'VP8 ' && bytes[23] === 0x9d && bytes[24] === 0x01 && bytes[25] === 0x2a) {
+      return {
+        width: bytes.readUInt16LE(26) & 0x3fff,
+        height: bytes.readUInt16LE(28) & 0x3fff,
+      };
+    }
+  }
+  return null;
+};
+const dimensionAttrs = (file) => {
+  const dimensions = imageDimensions(file);
+  return dimensions ? ` width="${dimensions.width}" height="${dimensions.height}"` : '';
+};
+const SMALL_SOURCE_WIDTH = 480;
+const resolveImage = (n) => {
   const meta = images[n - 1] || {};
   const file = meta.file || `image-${n}.webp`;
-  const alt = esc(meta.alt || brief.name);
+  const dims = imageDimensions(file);
+  return { file, alt: esc(meta.alt || brief.name), dims, small: !!dims && dims.width < SMALL_SOURCE_WIDTH };
+};
+const img = (n, opts = {}) => {
+  const { file, alt, dims, small } = resolveImage(n);
   const eager = opts.eager ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
-  return `<img${eager} src="assets/${file}" alt="${alt}">`;
+  const attrs = dims ? ` width="${dims.width}" height="${dims.height}"` : '';
+  const style = small && !opts.eager ? ` style="width:min(100%,${Math.round(dims.width * 1.5)}px)"` : '';
+  return `<img${eager}${attrs}${style} src="assets/${file}" alt="${alt}">`;
 };
 const figure = (n, opts = {}) => {
+  const { small } = resolveImage(n);
+  const panel = small && !opts.eager;
   const cap = opts.caption ? `<figcaption>${esc(opts.caption)}</figcaption>` : '';
-  return `<figure class="media-figure" data-hover>${img(n, opts)}${cap}</figure>`;
+  return `<figure class="media-figure${panel ? ' media-small' : ''}"${panel ? ' data-contain-reviewed="small-source"' : ''} data-hover>${img(n, opts)}${cap}</figure>`;
 };
 
 const cta = (c, cls = 'button button-primary') =>
   c ? `<a class="${cls}" href="${esc(c.href)}">${esc(c.label)}<span aria-hidden="true">\u2197</span></a>` : '';
 
-const sectionKicker = (text) => (text ? `<span class="section-kicker">${esc(text)}</span>` : '');
+// Surface headings already communicate the section's job. Repeating a small
+// label above every title produces the generic eyebrow pattern the current
+// Impeccable craft floor rejects, so new renders omit it.
+const sectionKicker = () => '';
 
 const marqueeHtml = (phrases) => {
   const list = (phrases || []).filter(Boolean);
@@ -102,17 +192,17 @@ const builders = {
     const float = d.glassFloat
       ? `<div class="glass-panel glass-float"><strong>${esc(d.glassFloat.title || brief.name)}</strong><span>${esc(d.glassFloat.sub || brief.city)}</span></div>`
       : `<div class="glass-panel glass-float"><strong>${esc(brief.name)}</strong><span>${esc(brief.city)}</span></div>`;
-    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="eyebrow">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1><mark>${esc(d.headline || brief.name)}</mark></h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
+    return `<section class="hero surface-paper vanish-out" id="top"><div class="hero-copy reveal"><span class="hero-context">${esc(d.eyebrow || `${brief.city} | ${brief.category || ''}`)}</span><h1>${esc(d.headline || brief.name)}</h1><p>${esc(d.sub || brief.description || '')}</p><div class="button-row">${cta(d.ctaPrimary)}${cta(d.ctaSecondary, 'button button-secondary')}</div></div><div class="hero-media reveal reveal-right">${figure(1, { eager: true })}${float}</div></section>${marqueeHtml(d.marquee || brief.marquee)}`;
   },
   offerings(d) {
     const cards = d.items
-      .map((item, i) => `<article class="offering-card reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><h3>${esc(item)}</h3></article>`)
+      .map((item, i) => `<article class="offering-card reveal delay-${(i % 3) + 1}"><span class="card-mark" aria-hidden="true"></span><h3>${esc(item)}</h3></article>`)
       .join('');
     return `<section class="offerings ${pickSurface(d.surface || 'accent')} vanish-out" id="offerings"><header class="section-head reveal">${sectionKicker(d.kicker || 'What to explore')}<h2>${d.heading || 'Signature offerings, <mark>clearly framed.</mark>'}</h2></header><div class="offering-grid">${cards}</div></section>`;
   },
   proof(d) {
     const cells = d.items
-      .map((item, i) => `<article class="reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><strong>${esc(item)}</strong></article>`)
+      .map((item, i) => `<article class="reveal delay-${(i % 3) + 1}"><span class="card-mark" aria-hidden="true"></span><strong>${esc(item)}</strong></article>`)
       .join('');
     return `<section class="proof ${pickSurface(d.surface || 'panel')} vanish-out reveal"><div class="proof-grid">${cells}</div></section>`;
   },
@@ -126,7 +216,7 @@ const builders = {
   },
   experience(d) {
     const cards = d.items
-      .map((item, i) => `<article class="reveal delay-${(i % 3) + 1}"><span>0${i + 1}</span><h3>${esc(item)}</h3></article>`)
+      .map((item, i) => `<article class="reveal delay-${(i % 3) + 1}"><span class="card-mark" aria-hidden="true"></span><h3>${esc(item)}</h3></article>`)
       .join('');
     return `<section class="experience ${pickSurface(d.surface || 'panel')} vanish-out"><header class="section-head reveal"><h2>${esc(d.heading || 'Built around the details.')}</h2></header><div class="experience-grid">${cards}</div></section>`;
   },
@@ -170,10 +260,10 @@ const builders = {
     ]
       .filter(Boolean)
       .join('');
-    return `<section class="contact-system ${pickSurface(d.surface || 'deep')} vanish-out" id="visit"><div class="section-kicker">Visit and contact</div><div class="contact-intro reveal"><h2>${d.heading || 'Make the next visit <mark>easy.</mark>'}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div></section>`;
+    return `<section class="contact-system ${pickSurface(d.surface || 'deep')} vanish-out" id="visit"><div class="contact-intro reveal"><h2>${d.heading || 'Make the next visit <mark>easy.</mark>'}</h2><p>${esc(d.sub || 'Verified details and direct official links, together in one place.')}</p></div><div class="contact-grid">${cards}</div></section>`;
   },
   closing(d) {
-    return `<section class="closing ${pickSurface(d.surface || 'panel')} vanish-out reveal">${sectionKicker(d.kicker || `${brief.city}, in full`)}<h2><mark>${esc(d.heading || brief.name)}</mark></h2>${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
+    return `<section class="closing ${pickSurface(d.surface || 'panel')} vanish-out reveal">${sectionKicker(d.kicker || `${brief.city}, in full`)}<h2>${esc(d.heading || brief.name)}</h2>${cta(d.cta || (brief.hero && brief.hero.ctaPrimary))}</section>`;
   },
 };
 
@@ -208,6 +298,16 @@ const sections = (brief.sections || defaultOrder)
   })
   .join('');
 
+// Keep optional motion chrome opt-in. A brief that does not provide a marquee
+// should not ship an unused auto-scrolling track (or its keyframes) in the
+// page CSS; this keeps the generated surface quieter and the motion contract
+// truthful for reduced-motion and detector review.
+const stripMarqueeCss = (css) => css
+  .replace(/\/\* ----- marquee \(long-page rhythm\) ----- \*\/[\s\S]*?\/\* ----- proof \/ offerings \/ grids ----- \*\//, '/* ----- proof / offerings / grids ----- */')
+  .replace(/@keyframes marquee-scroll\{[\s\S]*?\}\s*/, '');
+const hasMarquee = sections.includes('marquee-strip');
+const baseCss = hasMarquee ? baseCssSource : stripMarqueeCss(baseCssSource);
+
 const navLinks = (brief.nav || [
   { label: 'Explore', href: '#offerings' },
   { label: 'Gallery', href: '#gallery' },
@@ -220,9 +320,12 @@ const footerLinks = (brief.links || [])
   .map((l) => `<li><a href="${esc(l.href)}">${esc(l.label)} \u2197</a></li>`)
   .join('');
 
+const logoFile = brief.logoFile || 'logo.png';
 const brand = brief.logo === false
   ? `<span class="wordmark">${esc(brief.name)}</span>`
-  : `<img class="brand-logo" src="assets/logo.png" alt="${esc(brief.name)}">`;
+  : `<img class="brand-logo"${dimensionAttrs(logoFile)} src="assets/${esc(logoFile)}" alt="${esc(brief.name)}">`;
+
+const logoOutro = brief.logo === false ? '' : `<section class="logo-outro surface-deep" aria-label="${esc(brief.name)} signature"><div class="ink-field" aria-hidden="true"></div><img class="ink-logo reveal"${dimensionAttrs(logoFile)} src="assets/${esc(logoFile)}" alt="${esc(brief.name)}"><p>${esc(brief.logoOutroLine || `${brief.city} | ${brief.category || 'Local business'}`)}</p></section>`;
 
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -244,22 +347,29 @@ const mobileBar = primaryCta
   : '';
 
 const attitude = inferAttitude(brief);
-const skinCss = buildSkinCss(brief);
+const skinCss = hasMarquee ? buildSkinCss(brief) : stripMarqueeCss(buildSkinCss(brief));
+const directionContract = brief.directionContract || {};
+const contractLine = (label, value) => `${label}: ${String(value || 'not recorded').replace(/--/g, '—').replace(/[\r\n]+/g, ' ')}`;
+const contractComment = `<!-- IMPECCABLE CONTRACT\n${contractLine('THESIS', directionContract.thesis)}\n${contractLine('OWN-WORLD', directionContract.ownWorld)}\n${contractLine('STORY', directionContract.story)}\n${contractLine('FIRST VIEWPORT', directionContract.firstViewport)}\n${contractLine('FORM', directionContract.form)}\nFINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md\n-->`;
 
 const revealScript = `(()=>{const header=document.querySelector('.site-header');const nodes=[...document.querySelectorAll('.reveal')];const vanish=[...document.querySelectorAll('.vanish-out')];const reveal=node=>node.classList.add('visible','in-view');const show=()=>nodes.forEach(reveal);const revealPassed=()=>nodes.forEach(node=>{if(!node.classList.contains('visible')&&node.getBoundingClientRect().top<innerHeight*1.08)reveal(node)});if(!('IntersectionObserver' in window)){show();return}const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -6% 0px'});nodes.forEach(node=>observer.observe(node));const leave=new IntersectionObserver(entries=>entries.forEach(entry=>{entry.target.classList.toggle('is-leaving',!entry.isIntersecting&&entry.boundingClientRect.bottom<0)}),{threshold:0});vanish.forEach(node=>leave.observe(node));let scheduled=false;const onScroll=()=>{if(header)header.classList.toggle('is-scrolled',scrollY>12);if(!scheduled){scheduled=true;requestAnimationFrame(()=>{revealPassed();scheduled=false})}};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',revealPassed,{passive:true});addEventListener('pageshow',()=>requestAnimationFrame(revealPassed));onScroll();revealPassed()})();`;
 
-const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${noindex}<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script><title>${esc(brief.name)} | ${esc(brief.city)}</title><meta name="description" content="${esc(brief.description || '')}"><meta name="theme-color" content="${t.deep}"><meta name="generator" content="momentum-site-factory"><meta name="attitude" content="${esc(attitude)}"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?${fontFamilies}&display=swap" rel="stylesheet"><script type="application/ld+json">${jsonLd}</script><style>
+const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">${noindex}<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script><title>${esc(brief.name)} | ${esc(brief.city)}</title><meta name="description" content="${esc(brief.description || '')}"><meta name="theme-color" content="${t.deep}"><meta name="generator" content="momentum-site-factory"><meta name="attitude" content="${esc(attitude)}">${fontHead}<script type="application/ld+json">${jsonLd}</script><style>
+${localFontCss}
 ${rootBlock}
 ${baseCss}
-${skinCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)}"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="#top">${brand}</a><nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header><main id="main">${sections}</main><footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
+${skinCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)}">${contractComment}<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="#top">${brand}</a><nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header><main id="main">${sections}${logoOutro}</main><footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
 
-const outDir = path.join(outRoot, brief.slug);
-fs.mkdirSync(path.join(outDir, 'assets'), { recursive: true });
 fs.writeFileSync(path.join(outDir, 'index.html'), html);
 
-const wanted = new Set(brief.logo === false ? [] : ['logo.png']);
-const usedImages = html.match(/assets\/[a-z0-9-]+\.(webp|png|jpg)/g) || [];
-usedImages.forEach((u) => wanted.add(u.replace('assets/', '')));
+const wanted = new Set(brief.logo === false ? [] : [logoFile]);
+if (useLocalFonts) localFontFiles.forEach((file) => wanted.add(file));
+const usedAssetRefs = html.match(/assets\/[a-z0-9._-]+\.(webp|png|jpe?g|svg|avif|gif)/gi) || [];
+usedAssetRefs.forEach((u) => wanted.add(u.replace('assets/', '')));
+// The exact identity is rendered in both header and finale, but neither
+// occurrence is homepage photography. Keep the canonical image spec focused
+// on the 12 content visuals rather than inflating it with repeated logo chrome.
+const usedImages = usedAssetRefs.filter((u) => u.replace('assets/', '').toLowerCase() !== logoFile.toLowerCase());
 const have = new Set(fs.readdirSync(path.join(outDir, 'assets')));
 const missingAssets = [...wanted].filter((f) => !have.has(f));
 

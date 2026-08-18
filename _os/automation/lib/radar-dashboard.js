@@ -63,6 +63,7 @@ const QUEUES = [
 /** Evidence is stored as a code to keep the payload small. */
 const EVIDENCE_LABEL = ['not measured', 'partial', 'measured'];
 const EVIDENCE_CODE = { unknown: 0, partial: 1, measured: 2 };
+const ROW_STRING_FIELDS = ['lg', 'nr', 'fs', 'c', 'a', 'v', 'g', 'b', 'r', 'l', 'tr'];
 
 const esc = (s) =>
   String(s == null ? '' : s)
@@ -269,8 +270,58 @@ function internStrings(rows, fields = ['hl', 'of', 'na'], arrayFields = ['f']) {
     for (const f of arrayFields) {
       if (Array.isArray(row[f])) row[f] = row[f].filter(Boolean).map(put);
     }
+    if (Array.isArray(row.gh)) {
+      row.gh = row.gh.map((grade) => [put(grade[0]), grade[1], put(grade[2])]);
+    }
   }
   return table;
+}
+
+/**
+ * Pack dimension maps into arrays using the same order shipped in
+ * `meta.dimensions`. Dimension keys repeat across nearly every graded row; at
+ * the registry hard cap those repeated names cost more than 100KB. Keep
+ * `projectRows()` descriptive for server-side callers, then compact only the
+ * browser payload after all server-side calculations are complete.
+ */
+function packDimensions(rows, keys = Object.keys(DIMENSIONS)) {
+  for (const row of rows) {
+    if (!row.dm) continue;
+    row.dm = keys.flatMap((key) => row.dm[key] || [null, null]);
+    while (row.dm.length >= 2 && row.dm[row.dm.length - 1] === null && row.dm[row.dm.length - 2] === null) {
+      row.dm.splice(-2);
+    }
+  }
+}
+
+/** Values whose absence means the same thing to the client as their default. */
+function omitPayloadDefaults(rows) {
+  const zeroFlags = ['pv', 'hp', 'cfm', 'cn', 'cg', 'il'];
+  const nullable = ['tl', 'iu'];
+  for (const row of rows) {
+    for (const key of zeroFlags) if (row[key] === 0) delete row[key];
+    for (const key of nullable) if (row[key] === null) delete row[key];
+  }
+}
+
+/** Preserve standard source URLs with a three-bit variant instead of repeating the domain. */
+function packWebsites(rows) {
+  const variants = [
+    (domain) => `https://${domain}`,
+    (domain) => `https://${domain}/`,
+    (domain) => `https://www.${domain}`,
+    (domain) => `https://www.${domain}/`,
+    (domain) => `http://${domain}`,
+    (domain) => `http://${domain}/`,
+    (domain) => `http://www.${domain}`,
+    (domain) => `http://www.${domain}/`,
+  ];
+  for (const row of rows) {
+    const variant = variants.findIndex((build) => build(row.d) === row.w);
+    if (variant < 0) continue;
+    delete row.w;
+    if (variant !== 1) row.wx = variant;
+  }
 }
 
 /** County × vertical counts, computed once server-side. */
@@ -351,6 +402,22 @@ function clientScript() {
   // Headline / offer / next-action are stored as indices into a shared table —
   // the same sentence appears on dozens of rows, so shipping it once matters.
   function S(i) { return (i === null || i === undefined || i < 0) ? '' : (META.strings[i] || ''); }
+  (META.rowStringFields || []).forEach(function (field) {
+    ROWS.forEach(function (row) { row[field] = S(row[field]); });
+  });
+  ROWS.forEach(function (row) {
+    if (Array.isArray(row.gh)) {
+      row.gh = row.gh.map(function (grade) { return [S(grade[0]), grade[1], S(grade[2])]; });
+    }
+    if (row.w === undefined) {
+      var variant = row.wx === undefined ? 1 : row.wx;
+      var scheme = variant >= 4 ? 'http://' : 'https://';
+      var www = variant % 4 >= 2 ? 'www.' : '';
+      var slash = variant % 2 === 1 ? '/' : '';
+      row.w = scheme + www + row.d + slash;
+      delete row.wx;
+    }
+  });
 
   var PAGE = 100;
   var state = {
@@ -493,8 +560,9 @@ function clientScript() {
       return '<p class="det__none">No dimension breakdown stored for this grade. It predates the breakdown, or the audit never completed.</p>';
     }
     var out = '';
-    META.dimensions.forEach(function (dim) {
-      var v = r.dm[dim.key];
+    META.dimensions.forEach(function (dim, index) {
+      var offset = index * 2;
+      var v = r.dm.length > offset ? [r.dm[offset], r.dm[offset + 1]] : null;
       if (!v) return;
       var score = v[0], ev = v[1];
       var evLabel = META.evidence[ev];
@@ -804,12 +872,16 @@ function renderDashboard(summary, opts = {}) {
 
   // Interned before the payload is assembled, so the table and the indices in
   // the rows can never disagree.
-  const strings = internStrings(rows);
+  packDimensions(rows);
+  omitPayloadDefaults(rows);
+  packWebsites(rows);
+  const strings = internStrings(rows, ['hl', 'of', 'na', ...ROW_STRING_FIELDS]);
 
   const payload = {
     meta: {
       generated: s.generated || '',
       strings,
+      rowStringFields: ROW_STRING_FIELDS,
       // Whitelisting fields here is what silently dropped `buildableOnly`: the
       // tab count is computed server-side and was right, while the client filter
       // never saw the flag and showed the unfiltered queue. Spread the whole

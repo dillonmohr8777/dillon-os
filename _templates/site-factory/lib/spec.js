@@ -12,14 +12,16 @@ const SPEC = {
 function checkSpec(metrics) {
   const failures = [];
   const { sections, words, images } = metrics;
+  const imageFloor = Number.isFinite(metrics.minImages) ? metrics.minImages : SPEC.images[0];
+  const wordCeiling = Number.isFinite(metrics.maxWords) ? metrics.maxWords : SPEC.words[1];
   if (sections != null && (sections < SPEC.sections[0] || sections > SPEC.sections[1])) {
     failures.push(`spec sections ${sections} outside ${SPEC.sections[0]}-${SPEC.sections[1]}`);
   }
-  if (words != null && (words < SPEC.words[0] || words > SPEC.words[1])) {
-    failures.push(`spec words ${words} outside ${SPEC.words[0]}-${SPEC.words[1]}`);
+  if (words != null && (words < SPEC.words[0] || words > wordCeiling)) {
+    failures.push(`spec words ${words} outside ${SPEC.words[0]}-${wordCeiling}`);
   }
-  if (images != null && (images < SPEC.images[0] || images > SPEC.images[1])) {
-    failures.push(`spec images ${images} outside ${SPEC.images[0]}-${SPEC.images[1]}`);
+  if (images != null && (images < imageFloor || images > SPEC.images[1])) {
+    failures.push(`spec images ${images} outside ${imageFloor}-${SPEC.images[1]}`);
   }
   return failures;
 }
