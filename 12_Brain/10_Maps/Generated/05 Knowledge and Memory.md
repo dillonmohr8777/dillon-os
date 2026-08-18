@@ -50,6 +50,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]]
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]]
 - [[12_Brain/01_Captures/research/2026-08-18 - research - IMMOHRTAL CLAW harness|2026-08-18 - research - IMMOHRTAL CLAW harness]]
+- [[12_Brain/01_Captures/research/2026-08-18 - research - IMMOHRTAL CLAW is not music|2026-08-18 - research - IMMOHRTAL CLAW is not music]]
 - [[12_Brain/01_Captures/sessions/2026-08-14 - google-rsvp-rail|2026-08-14 - google-rsvp-rail]]
 - [[12_Brain/01_Captures/sessions/2026-08-14 - send-ready-emails|2026-08-14 - send-ready-emails]]
 - [[12_Brain/01_Captures/sessions/session-log|session-log]]

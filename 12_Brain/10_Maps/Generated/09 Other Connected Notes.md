@@ -58,13 +58,15 @@ Visible notes that do not yet belong to a stable operating domain.
 - [[immohrtal-claw/ARCHITECTURE|ARCHITECTURE]]
 - [[immohrtal-claw/README|README]]
 - [[immohrtal-claw/workspace/AGENT|AGENT]]
+- [[immohrtal-claw/workspace/HEARTBEAT|HEARTBEAT]]
 - [[immohrtal-claw/workspace/IDENTITY|IDENTITY]]
 - [[immohrtal-claw/workspace/MEMORY|MEMORY]]
-- [[immohrtal-claw/workspace/skills/album-bible/SKILL|SKILL]]
-- [[immohrtal-claw/workspace/skills/booth-notes/SKILL|SKILL]]
+- [[immohrtal-claw/workspace/skills/cron-jobs/SKILL|SKILL]]
 - [[immohrtal-claw/workspace/skills/memory-keeper/SKILL|SKILL]]
-- [[immohrtal-claw/workspace/skills/session-hud/SKILL|SKILL]]
+- [[immohrtal-claw/workspace/skills/spawn-tasks/SKILL|SKILL]]
+- [[immohrtal-claw/workspace/skills/web-search/SKILL|SKILL]]
 - [[immohrtal-claw/workspace/SOUL|SOUL]]
+- [[immohrtal-claw/workspace/TOOLS|TOOLS]]
 - [[immohrtal-claw/workspace/USER|USER]]
 
 ## philly-sites
