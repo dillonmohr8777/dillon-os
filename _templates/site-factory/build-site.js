@@ -59,6 +59,32 @@ const fontFamilies = [brief.fonts.display, brief.fonts.text]
   .map((f) => `family=${f.trim().replace(/ /g, '+')}:wght@400;500;600;700;800;900`)
   .join('&');
 
+// Self-hosted fonts when the batch supplied woff2 files. Ported from the
+// pre-refactor build on rescue/site-factory-dup-clone-20260812: it removes two
+// third-party preconnects and a render-blocking stylesheet request from every
+// generated client site. Falls back to Google Fonts when the files are absent, so
+// a batch that ships no fonts behaves exactly as before.
+const localFontFiles = [
+  'font-display-400.woff2', 'font-display-700.woff2',
+  'font-text-400.woff2', 'font-text-700.woff2',
+];
+const localAssetsDir = path.join(outRoot, brief.slug, 'assets');
+const useLocalFonts = localFontFiles.every((f) => fs.existsSync(path.join(localAssetsDir, f)));
+const fontHead = useLocalFonts
+  ? ''
+  : `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?${fontFamilies}&display=swap" rel="stylesheet">`;
+const face = (family, file, weight) => (family
+  ? `@font-face{font-family:'${family}';src:url('assets/${file}') format('woff2');font-weight:${weight};font-style:normal;font-display:swap}`
+  : '');
+// brief.fonts.text is optional; emitting a face for it unguarded would produce
+// font-family:'undefined'.
+const localFontCss = useLocalFonts ? [
+  face(brief.fonts.display, 'font-display-400.woff2', 400),
+  face(brief.fonts.display, 'font-display-700.woff2', 700),
+  face(brief.fonts.text, 'font-text-400.woff2', 400),
+  face(brief.fonts.text, 'font-text-700.woff2', 700),
+].filter(Boolean).join('') : '';
+
 const images = brief.images || [];
 const img = (n, opts = {}) => {
   const meta = images[n - 1] || {};
@@ -248,8 +274,9 @@ const skinCss = buildSkinCss(brief);
 
 const revealScript = `(()=>{const header=document.querySelector('.site-header');const nodes=[...document.querySelectorAll('.reveal')];const vanish=[...document.querySelectorAll('.vanish-out')];const reveal=node=>node.classList.add('visible','in-view');const show=()=>nodes.forEach(reveal);const revealPassed=()=>nodes.forEach(node=>{if(!node.classList.contains('visible')&&node.getBoundingClientRect().top<innerHeight*1.08)reveal(node)});if(!('IntersectionObserver' in window)){show();return}const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -6% 0px'});nodes.forEach(node=>observer.observe(node));const leave=new IntersectionObserver(entries=>entries.forEach(entry=>{entry.target.classList.toggle('is-leaving',!entry.isIntersecting&&entry.boundingClientRect.bottom<0)}),{threshold:0});vanish.forEach(node=>leave.observe(node));let scheduled=false;const onScroll=()=>{if(header)header.classList.toggle('is-scrolled',scrollY>12);if(!scheduled){scheduled=true;requestAnimationFrame(()=>{revealPassed();scheduled=false})}};addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',revealPassed,{passive:true});addEventListener('pageshow',()=>requestAnimationFrame(revealPassed));onScroll();revealPassed()})();`;
 
-const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${noindex}<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script><title>${esc(brief.name)} | ${esc(brief.city)}</title><meta name="description" content="${esc(brief.description || '')}"><meta name="theme-color" content="${t.deep}"><meta name="generator" content="momentum-site-factory"><meta name="attitude" content="${esc(attitude)}"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?${fontFamilies}&display=swap" rel="stylesheet"><script type="application/ld+json">${jsonLd}</script><style>
+const html = `<!doctype html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">${noindex}<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script><title>${esc(brief.name)} | ${esc(brief.city)}</title><meta name="description" content="${esc(brief.description || '')}"><meta name="theme-color" content="${t.deep}"><meta name="generator" content="momentum-site-factory"><meta name="attitude" content="${esc(attitude)}">${fontHead}<script type="application/ld+json">${jsonLd}</script><style>
 ${rootBlock}
+${localFontCss}
 ${baseCss}
 ${skinCss}</style></head><body class="profile-page slug-${esc(brief.slug)} attitude-${esc(attitude)}"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="#top">${brand}</a><nav aria-label="Primary">${navLinks}</nav>${cta(primaryCta, 'button button-header')}</header><main id="main">${sections}</main><footer class="site-footer"><div class="footer-identity"><strong>${esc(brief.name)}</strong><span>${esc(brief.tagline || brief.category || '')}</span></div><div class="footer-contact"><h2>Contact</h2>${brief.address ? `<p>${esc(brief.address)}</p>` : ''}${brief.phone ? `<p><a href="tel:${(brief.phone || '').replace(/\D/g, '')}">${esc(brief.phone)}</a></p>` : ''}</div><div class="footer-hours"><h2>Visit</h2>${brief.hours ? `<p>${esc(brief.hours)}</p>` : ''}${brief.url ? `<a href="${esc(brief.url)}">Official website \u2197</a>` : ''}</div><nav class="footer-links" aria-label="Useful links"><h2>Links</h2><ul>${footerLinks}</ul></nav>${disclosure}</footer>${mobileBar}<script>${revealScript}</script></body></html>`;
 
@@ -258,6 +285,7 @@ fs.mkdirSync(path.join(outDir, 'assets'), { recursive: true });
 fs.writeFileSync(path.join(outDir, 'index.html'), html);
 
 const wanted = new Set(brief.logo === false ? [] : ['logo.png']);
+if (useLocalFonts) localFontFiles.forEach((f) => wanted.add(f));
 const usedImages = html.match(/assets\/[a-z0-9-]+\.(webp|png|jpg)/g) || [];
 usedImages.forEach((u) => wanted.add(u.replace('assets/', '')));
 const have = new Set(fs.readdirSync(path.join(outDir, 'assets')));
