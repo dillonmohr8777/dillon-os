@@ -1,0 +1,184 @@
+{
+  "slug": "signal-street-ads",
+  "name": "Signal Street Ads",
+  "city": "Philadelphia",
+  "category": "Local Advertising",
+  "vertical": "Marketing",
+  "attitude": "neon",
+  "url": "https://example.com/signal-street",
+  "phone": "215-555-0106",
+  "address": "1600 Demo Plaza, Philadelphia, PA 19103",
+  "hours": "Monday-Friday, 9am-5pm",
+  "description": "Google Ads and Meta Ads for local service brands. One scoreboard, real leads, no blended dashboards.",
+  "noindex": true,
+  "schemaType": "ProfessionalService",
+  "tagline": "Local ads. Separate scoreboards.",
+  "marquee": [
+    "Google Ads",
+    "Meta Ads",
+    "Lead quality",
+    "No blended dashboards"
+  ],
+  "tokens": {
+    "paper": "#0F1115",
+    "ink": "#F4F1EA",
+    "accent": "#6DFF9B",
+    "accent2": "#7AA2FF",
+    "panel": "#1A1F2A",
+    "deep": "#07080B",
+    "onPaper": "#F4F1EA",
+    "onAccent": "#090909",
+    "onAccent2": "#090909",
+    "onPanel": "#F4F1EA",
+    "onDeep": "#F4F1EA",
+    "border": "1px",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Oswald",
+    "displayFallback": "Arial Black,sans-serif",
+    "text": "IBM Plex Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | Local Advertising",
+    "headline": "If the lead is not real, it does not count.",
+    "sub": "Signal Street runs Google Ads and Meta Ads for local operators. Each account stays on its own scoreboard. Spend changes wait for approval.",
+    "ctaPrimary": {
+      "label": "Book a call",
+      "href": "https://example.com/signal-street/book"
+    },
+    "ctaSecondary": {
+      "label": "How we report",
+      "href": "#proof"
+    },
+    "glassFloat": {
+      "title": "Working rule",
+      "sub": "No merged clients. No silent spend."
+    }
+  },
+  "offerings": {
+    "items": [
+      "Google Ads search and call tracking that ties to real intake",
+      "Meta lead ads with form, phone, and CRM reconciliation",
+      "Monthly reporting that names the source, not a blended graph"
+    ]
+  },
+  "proof": {
+    "items": [
+      "One client, one scoreboard, no cross-account mixing",
+      "Spend, creative, and campaign edits stay approval-gated",
+      "Lead quality is checked against the actual inbox or CRM",
+      "Built for local service, not generic ecommerce templates"
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "Signal Street exists because local ads die when dashboards get merged and nobody can say which phone call paid.",
+      "The work is still ads. The standard is a lead you can name."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Discovery call, access checklist, then a 14-day baseline.",
+      "Weekly notes on search terms, form spam, and booked jobs.",
+      "Nothing launches or scales without a written yes."
+    ]
+  },
+  "feature": {
+    "heading": "Reporting that can survive a client question",
+    "text": "If you cannot point at the call, the form, or the booked job, the number does not go in the report.",
+    "cta": {
+      "label": "Book a call",
+      "href": "https://example.com/signal-street/book"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Google Ads",
+        "href": "https://example.com/signal-street/google",
+        "imageIndex": 9
+      },
+      {
+        "title": "Meta Ads",
+        "href": "https://example.com/signal-street/meta",
+        "imageIndex": 10
+      },
+      {
+        "title": "Reporting",
+        "href": "https://example.com/signal-street/reporting",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Book a call",
+      "href": "https://example.com/signal-street/book"
+    }
+  },
+  "links": [
+    {
+      "label": "Book a call",
+      "href": "https://example.com/signal-street/book"
+    },
+    {
+      "label": "Reporting",
+      "href": "https://example.com/signal-street/reporting"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Signal Street Ads placeholder: Dark dashboard with a single client scoreboard"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Signal Street Ads placeholder: Search term review on a laptop"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Signal Street Ads placeholder: Call tracking log with names redacted"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Signal Street Ads placeholder: Meta ads manager cropped without account IDs"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Signal Street Ads placeholder: Weekly note printed on a desk"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Signal Street Ads placeholder: Local service van used as a campaign visual"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Signal Street Ads placeholder: Whiteboard of campaign hypotheses"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Signal Street Ads placeholder: Lead form quality checklist"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Signal Street Ads placeholder: Calendar block for a client review"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Signal Street Ads placeholder: Two monitors with separate brand files"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Signal Street Ads placeholder: Phone on a stand during a tracking test"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Signal Street Ads placeholder: Closed laptop at the end of a reporting day"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-08-01
+updated: 2026-08-18
 tags:
   - index
   - brain
@@ -47,6 +47,7 @@ links instead of loading the entire vault.
 - `03_Content/` — content plans and drafts.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|Philadelphia 25-site factory Batch 3]] — private prospect previews and evidence.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|Philadelphia 25-site factory Batch 4]] — separate real-business cohort with first-party logo evidence.
+- [[12_Brain/05_Projects/2026-08-18 - Variant template stack evaluation|Variant template stack evaluation]] — Variant.com harvest plus six factory-native review candidates.
 - [[04_SOPs/SOP Index|SOP Index]] — repeatable operating procedures.
 - `05_Offers/` — products, packages, and pricing.
 - `10_Sessions/` — working-session records.

@@ -1,0 +1,183 @@
+{
+  "slug": "two-coats-painting",
+  "name": "Two Coats Painting",
+  "city": "Philadelphia",
+  "category": "House Painting",
+  "vertical": "Home Services",
+  "attitude": "brutal",
+  "url": "https://example.com/two-coats",
+  "phone": "215-555-0104",
+  "address": "2500 Demo Rd, Philadelphia, PA 19134",
+  "hours": "Monday-Friday, 7am-4pm",
+  "description": "Interior and exterior painting with a written two-coat spec. No foggy extras on the invoice.",
+  "noindex": true,
+  "schemaType": "HomeAndConstructionBusiness",
+  "tagline": "Prep hard. Two coats. Done.",
+  "marquee": [
+    "Prep",
+    "Prime",
+    "Two coats",
+    "Kensington crew"
+  ],
+  "tokens": {
+    "paper": "#F2EFE6",
+    "ink": "#111111",
+    "accent": "#1F4B99",
+    "accent2": "#E23B2E",
+    "panel": "#D7D3C8",
+    "deep": "#0D0D0D",
+    "onAccent": "#FFFFFF",
+    "onAccent2": "#FFFFFF",
+    "onPanel": "#090909",
+    "onDeep": "#FFFFFF",
+    "border": "6px",
+    "radius": "0px"
+  },
+  "fonts": {
+    "display": "Archivo Black",
+    "displayFallback": "Impact,sans-serif",
+    "text": "Work Sans"
+  },
+  "logo": false,
+  "hero": {
+    "eyebrow": "Philadelphia | House Painting",
+    "headline": "If it needs two coats, you get two coats.",
+    "sub": "Two Coats Painting writes the spec before the first drop cloth. Prep is on the quote. Touch-ups after walkthrough are on us.",
+    "ctaPrimary": {
+      "label": "Get a quote",
+      "href": "https://example.com/two-coats/quote"
+    },
+    "ctaSecondary": {
+      "label": "Before and after",
+      "href": "#gallery"
+    },
+    "glassFloat": {
+      "title": "Written spec",
+      "sub": "Prep, prime, two finish coats"
+    }
+  },
+  "offerings": {
+    "items": [
+      "Interior walls, ceilings, and trim with a two-coat finish spec",
+      "Exterior siding, soffits, and front steps that see weather",
+      "Cabinet and door enamel when the kitchen is the whole job"
+    ]
+  },
+  "proof": {
+    "items": [
+      "Quote names the coats, not just the rooms",
+      "Fully insured, lead-safe work practices",
+      "Color samples on your actual wall, not a chip in the truck",
+      "Kensington, Fishtown, Port Richmond, and nearby"
+    ]
+  },
+  "story": {
+    "heading": "About",
+    "paragraphs": [
+      "The name is the spec. Too many paint jobs sell a color and skip the second coat when the light is bad.",
+      "We still paint houses. We just write down the work so you can see it on the wall and on the invoice."
+    ]
+  },
+  "experience": {
+    "items": [
+      "Walkthrough, photos, and a room-by-room spec.",
+      "Furniture is shifted, floors are covered, vents are taped.",
+      "Final walk is with you, in daylight, with a wet-edge list if anything remains."
+    ]
+  },
+  "feature": {
+    "heading": "The before and after is the close",
+    "text": "We photograph the room before tape goes up and after the second coat cures. That is the job record, not a marketing set.",
+    "cta": {
+      "label": "Get a quote",
+      "href": "https://example.com/two-coats/quote"
+    },
+    "imageIndex": 8
+  },
+  "catalog": {
+    "items": [
+      {
+        "title": "Interiors",
+        "href": "https://example.com/two-coats/interior",
+        "imageIndex": 9
+      },
+      {
+        "title": "Exteriors",
+        "href": "https://example.com/two-coats/exterior",
+        "imageIndex": 10
+      },
+      {
+        "title": "Cabinets",
+        "href": "https://example.com/two-coats/cabinets",
+        "imageIndex": 11
+      }
+    ]
+  },
+  "contact": {},
+  "closing": {
+    "cta": {
+      "label": "Get a quote",
+      "href": "https://example.com/two-coats/quote"
+    }
+  },
+  "links": [
+    {
+      "label": "Get a quote",
+      "href": "https://example.com/two-coats/quote"
+    },
+    {
+      "label": "Interiors",
+      "href": "https://example.com/two-coats/interior"
+    }
+  ],
+  "images": [
+    {
+      "file": "image-1.webp",
+      "alt": "Two Coats Painting placeholder: Painter cutting a clean line along trim"
+    },
+    {
+      "file": "image-2.webp",
+      "alt": "Two Coats Painting placeholder: Room after the second coat in daylight"
+    },
+    {
+      "file": "image-3.webp",
+      "alt": "Two Coats Painting placeholder: Drop cloths and taped baseboard"
+    },
+    {
+      "file": "image-4.webp",
+      "alt": "Two Coats Painting placeholder: Exterior front of a rowhome mid-paint"
+    },
+    {
+      "file": "image-5.webp",
+      "alt": "Two Coats Painting placeholder: Cabinet doors on racks during enamel"
+    },
+    {
+      "file": "image-6.webp",
+      "alt": "Two Coats Painting placeholder: Color samples on a living room wall"
+    },
+    {
+      "file": "image-7.webp",
+      "alt": "Two Coats Painting placeholder: Before shot of a scuffed stair hall"
+    },
+    {
+      "file": "image-8.webp",
+      "alt": "Two Coats Painting placeholder: After shot of the same stair hall"
+    },
+    {
+      "file": "image-9.webp",
+      "alt": "Two Coats Painting placeholder: Close-up of a rolled wall with even sheen"
+    },
+    {
+      "file": "image-10.webp",
+      "alt": "Two Coats Painting placeholder: Crew van on a Kensington block"
+    },
+    {
+      "file": "image-11.webp",
+      "alt": "Two Coats Painting placeholder: Ladder set for a stairwell"
+    },
+    {
+      "file": "image-12.webp",
+      "alt": "Two Coats Painting placeholder: Finished porch ceiling"
+    }
+  ]
+}

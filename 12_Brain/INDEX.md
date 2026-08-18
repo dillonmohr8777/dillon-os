@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-18
 ---
 
 # INDEX — the front door
@@ -30,6 +30,7 @@ in the same change.
 - [[12_Brain/02_Entities/Claude in Chrome|Claude in Chrome]] — browser-driving extension for local apply sessions.
 - [[12_Brain/02_Entities/Ops Box (EliteDesk 800 G4)|Ops Box (EliteDesk 800 G4)]] — always-on Ops machine (no credentials in Git).
 - [[12_Brain/02_Entities/LandingFolio MCP|LandingFolio MCP]] — layout-reference MCP for site builds; sandbox-only until its Inspector check passes.
+- [[12_Brain/02_Entities/Variant|Variant]] — account-gated AI UI ideation feed; not in the factory yet.
 
 Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Index]].
 
@@ -53,7 +54,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 - [[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
 - `12_Brain/01_Captures/sessions/session-log.md` — public cadence stub only.
-- [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
+- [[12_Brain/01_Captures/2026-08-18 - PracticalYAI TikTok Variant.com|2026-08-18 PracticalYAI TikTok Variant.com]] — part 237 clip resolves to variant.com, not the series cheat sheet.
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Email Sourcing Receipts|2026-08-14 Franchise Email Sourcing Receipts]] — afternoon locator dumps, dead ends, counts (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
@@ -67,6 +68,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
+- [[12_Brain/06_Research/2026-08-18 - Variant.com template harvest|Variant.com template harvest]] — public cards only; custom prompts gated; six factory candidates staged for a keep-or-skip decision (expires 2026-11-18).
+- [[12_Brain/05_Projects/2026-08-18 - Variant template stack evaluation|Variant template stack evaluation]] — waiting on Dillon's review of the local pack.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.

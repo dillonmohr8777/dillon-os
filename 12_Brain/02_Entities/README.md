@@ -1,7 +1,7 @@
 ---
 note_type: index
 status: active
-updated: 2026-07-29
+updated: 2026-08-18
 tags: [brain, entities, index]
 created: 2026-07-29
 source_refs: []
@@ -16,3 +16,5 @@ or product.
 Clients remain canonical in `01_Clients/`. Link to them here; do not duplicate
 their facts. Every entity note includes sources, last review date, current
 relationships, and open questions.
+
+Recent: [[Variant]] — AI UI ideation feed, account-gated, not in the factory yet.

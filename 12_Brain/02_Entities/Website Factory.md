@@ -1,11 +1,11 @@
 ---
 tags: [entity, system]
 source: "[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]"
-updated: 2026-07-29
+updated: 2026-08-18
 note_type: entity
 status: active
 created: 2026-07-29
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]"]
+source_refs: ["[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]", "[[12_Brain/06_Research/2026-08-18 - Variant.com template harvest]]"]
 ---
 
 
@@ -21,6 +21,11 @@ deploy credentials.
 - Templates and QA live under `_templates/site-factory/` when present, or
   campaign folders under `02_Campaigns/`.
 - Secrets and host tokens never land in this note.
+
+## Adjacent tools
+
+- [[12_Brain/02_Entities/Variant|Variant]] is an account-gated ideation feed, not a factory input.
+- [[12_Brain/02_Entities/LandingFolio MCP|LandingFolio MCP]] supplies layout reference screenshots only.
 
 ## Links
 
