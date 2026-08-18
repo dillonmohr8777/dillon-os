@@ -96,10 +96,8 @@
     },
     "freshness_probes": [
       "automation:aeo-trust-gate",
-      "automation:experiment-queue",
-      "automation:maker-checker",
+      "automation:radar-last",
       "automation:report-brain-ingest",
-      "automation:site-factory-batch",
       "canonical_queue",
       "external_connector",
       "registry_state",
@@ -7324,7 +7322,7 @@
       "cadence": "daily",
       "trigger": "A maker declares a local artifact ready",
       "source_freshness": {
-        "probe": "automation:maker-checker",
+        "probe": "repo_state",
         "window_hours": 26,
         "fail_closed": true
       },
@@ -7515,7 +7513,7 @@
         },
         "source_freshness": {
           "state": "delegated-autonomy-v1-2026-08-12",
-          "source": "cadence daily window plus slack; probe automation:maker-checker"
+          "source": "cadence daily window plus slack; probe repo_state"
         },
         "retry_policy": {
           "state": "delegated-autonomy-v1-2026-08-12",
@@ -8894,7 +8892,7 @@
       "cadence": "weekly",
       "trigger": "A fresh ready pool contains at least 20 eligible prospects",
       "source_freshness": {
-        "probe": "automation:site-factory-batch",
+        "probe": "automation:radar-last",
         "window_hours": 192,
         "fail_closed": true
       },
@@ -9089,7 +9087,7 @@
         },
         "source_freshness": {
           "state": "delegated-autonomy-v1-2026-08-12",
-          "source": "cadence weekly window plus slack; probe automation:site-factory-batch"
+          "source": "cadence weekly window plus slack; probe automation:radar-last"
         },
         "retry_policy": {
           "state": "delegated-autonomy-v1-2026-08-12",
@@ -9502,7 +9500,7 @@
       "cadence": "weekly",
       "trigger": "Weekly experiment review",
       "source_freshness": {
-        "probe": "automation:experiment-queue",
+        "probe": "vault_notes",
         "window_hours": 192,
         "fail_closed": true
       },
@@ -9691,7 +9689,7 @@
         },
         "source_freshness": {
           "state": "delegated-autonomy-v1-2026-08-12",
-          "source": "cadence weekly window plus slack; probe automation:experiment-queue"
+          "source": "cadence weekly window plus slack; probe vault_notes"
         },
         "retry_policy": {
           "state": "delegated-autonomy-v1-2026-08-12",

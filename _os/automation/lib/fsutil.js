@@ -15,7 +15,10 @@ function ensureDir(dir) {
 
 function readJson(file, fallback = null) {
   if (!fs.existsSync(file)) return fallback;
-  return JSON.parse(fs.readFileSync(file, 'utf8'));
+  // Strip a UTF-8 BOM before parsing. Much of this estate is PowerShell, and
+  // PS 5.1 `Set-Content -Encoding utf8` always writes one, which JSON.parse
+  // rejects with "Unexpected token" — a confusing failure for a valid file.
+  return JSON.parse(fs.readFileSync(file, 'utf8').replace(/^﻿/, ''));
 }
 
 function writeJson(file, data, { compact = false } = {}) {

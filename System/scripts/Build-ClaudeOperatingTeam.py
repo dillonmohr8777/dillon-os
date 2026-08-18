@@ -179,15 +179,24 @@ ROLE_RETRY = {
 # Probe classes: vault_notes / registry_state / automation:* are SNAPSHOT probes where
 # staleness is real. repo_state and canonical_queue are LIVE probes read at execution
 # time, so they report what was observed rather than aging a pointer.
+# 2026-08-18: D24, W05, and W08 previously probed 'automation:maker-checker',
+# 'automation:site-factory-batch', and 'automation:experiment-queue'. No code in
+# the repo writes a state file for any of those three ids, so 12_Brain/state/<id>.json
+# never existed, G5_stale_source failed closed on every cycle, and all three
+# routines were permanently unrunnable rather than merely waiting on an upstream
+# run. Repointed to sources that actually exist and reflect what each routine
+# reads: D24 (release QA) -> repo_state, a live working-tree read; W05 (radar
+# website factory) -> the radar's own last-sweep state; W08 (experiment review) ->
+# vault_notes, since experiments live as notes under 12_Brain/05_Projects/Experiments.
 FRESHNESS_PROBE = {
     'D03': 'registry_state', 'D07': 'registry_state', 'D12': 'repo_state',
     'D10': 'canonical_queue', 'D11': 'canonical_queue', 'D13': 'repo_state',
     'D14': 'automation:aeo-trust-gate', 'D16': 'vault_notes',
     'D17': 'external_connector', 'D18': 'external_connector',
-    'D19': 'automation:report-brain-ingest', 'D24': 'automation:maker-checker',
+    'D19': 'automation:report-brain-ingest', 'D24': 'repo_state',
     'D25': 'canonical_queue', 'D26': 'vault_notes',
-    'W04': 'vault_notes', 'W05': 'automation:site-factory-batch',
-    'W06': 'external_connector', 'W08': 'automation:experiment-queue',
+    'W04': 'vault_notes', 'W05': 'automation:radar-last',
+    'W06': 'external_connector', 'W08': 'vault_notes',
     'W09': 'registry_state', 'W10': 'canonical_queue', 'W11': 'vault_notes',
     'M02': 'vault_notes', 'M03': 'registry_state', 'M04': 'vault_notes',
     'M05': 'vault_notes', 'E04': 'external_connector', 'E05': 'repo_state',
