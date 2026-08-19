@@ -16,6 +16,7 @@ source_refs:
   - "_os/test/public-safety.test.js"
   - "[[12_Brain/01_Captures/2026-08-19 - request to make dillon-os public]]"
   - "[[12_Brain/01_Captures/2026-08-19 - claude dual machine full access]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - dillon-os briefly public then reverted]]"
   - "[[04_SOPs/Claude Dual Machine Access]]"
 ---
 
@@ -42,6 +43,9 @@ consent to release.
 - Claude Code on both operator machines gets full tool access from tracked
   `.claude/settings.json` (`bypassPermissions`) plus `gh auth login` on each
   machine. That is the access path. Publishing the vault is not.
+- 2026-08-19T19:14Z: the repo was observed **public** (unauthenticated HTTP
+  200). It was set **private** again the same minute. See
+  [[12_Brain/01_Captures/2026-08-19 - dillon-os briefly public then reverted]].
 
 **Review:** Revisit only if client evidence is removed from Git or a
 sanitized public fork is the actual deliverable.

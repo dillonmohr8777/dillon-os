@@ -55,6 +55,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
 - [[12_Brain/01_Captures/2026-08-19 - request to make dillon-os public|2026-08-19 request to make dillon-os public]] — operator asked to publish; visibility was not changed.
 - [[12_Brain/01_Captures/2026-08-19 - claude dual machine full access|2026-08-19 Claude dual-machine full access]] — access path is git auth + shared settings, not public GitHub.
+- [[12_Brain/01_Captures/2026-08-19 - dillon-os briefly public then reverted|2026-08-19 dillon-os briefly public then reverted]] — unauthenticated HTTP 200, then set private again.
 - `12_Brain/01_Captures/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Email Sourcing Receipts|2026-08-14 Franchise Email Sourcing Receipts]] — afternoon locator dumps, dead ends, counts (no contact rows).

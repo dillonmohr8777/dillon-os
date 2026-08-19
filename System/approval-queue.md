@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-19T18:58:00Z
+last_updated: 2026-08-19T19:15:00Z
 status: active
 last_scan: 2026-08-17T13:04:11Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
@@ -26,6 +26,7 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 - VA Claims - Approve client review after VACE design reconciliation; backend and DNS changes remain gated - Risk: medium
 - [ ] 2026-07-12 - Bridge Software Development - Approve client-facing milestone after Phase 1 ownership board and compliance review - Risk: medium
 ## Operating actions
+- [x] 2026-08-19 -- [GitHub / dillon-os] -- DONE: set `dillon-os` back to private after it was observed world-public (unauthenticated API+HTML HTTP 200). Confirmed unauthenticated 404 and authenticated PRIVATE. Do not flip public again -- Source: 12_Brain/01_Captures/2026-08-19 - dillon-os briefly public then reverted.md -- Evidence: Composio GITHUB_UPDATE_A_REPOSITORY 2026-08-19T19:14:17Z private=true -- Risk: high
 - [ ] 2026-08-19 -- [Claude / both machines] -- On EACH machine run `gh auth login` as dillonmohr8777, `git pull` of private `dillon-os`, then `claude` in the vault. Tracked `.claude/settings.json` now ships `bypassPermissions`. Do not make the repo public -- Source: 04_SOPs/Claude Dual Machine Access.md -- Evidence: operator follow-up "claude on both machines needs full access"; Claude Code shared settings belong in settings.json -- Risk: medium
 - [ ] 2026-08-19 -- [GitHub / dillon-os] -- BLOCKED: do not flip `dillon-os` to public. Live list shows 21/22 visible repos already public; only `dillon-os` is private. This vault holds client evidence. If a public OS is still wanted, approve a sanitized fork (opensource forker/sanitizer), not a visibility toggle -- Source: 12_Brain/01_Captures/2026-08-19 - request to make dillon-os public.md -- Evidence: `gh repo list` 2026-08-19, 22 repos, 1 private; public-safety test treats client PII as advisory because the repo is private -- Risk: high
 - [ ] 2026-07-12 - Revenue - Verify current invoices or contracts for all 14 active clients before publishing MRR - Risk: low
