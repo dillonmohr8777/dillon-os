@@ -282,8 +282,10 @@ async function processSite(site) {
   let official = extracted.url;
   const cityGuess = extracted.city;
 
+  const localReady = uniqueSourceCount(loadLocalPhotos(photoDir)) >= MIN_SOURCES;
+
   let harvest = null;
-  if (official) {
+  if (official && !localReady) {
     try {
       harvest = await harvestLite(official, { timeoutMs: 18000 });
     } catch (err) {
@@ -335,7 +337,7 @@ async function processSite(site) {
     photoPaths = await saveHarvestedPhotos(imgs, harvestDir, mode);
   }
 
-  if (official && uniqueSourceCount(photoPaths.concat(loadLocalPhotos(photoDir))) < MIN_SOURCES) {
+  if (!localReady && official && uniqueSourceCount(photoPaths.concat(loadLocalPhotos(photoDir))) < MIN_SOURCES) {
     const browser = await collectFromPage(official);
     receipt.browser = browser.ok ? 'ok' : browser.reason;
     if (browser.ok && browser.images?.length) {
