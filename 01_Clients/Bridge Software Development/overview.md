@@ -2,14 +2,14 @@
 client: Bridge Software
 client_id: bridge-software
 project: Bridge Software Development
-status: active-discovery
+status: active-build
 confidentiality: private-nda
 github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
-updated: 2026-07-11
-last_touched: 2026-08-01
-next_action: TBD — needs human next action
-due: none
+updated: 2026-08-19
+last_touched: 2026-08-19
+next_action: Review the Phase 3 prototype branch, then approve or reject a noindex Netlify update of the unified review URL.
+due: 2026-08-22
 ---
 
 
@@ -20,12 +20,27 @@ due: none
 
 ## Source of truth
 
-- Private GitHub: [dillonmohr8777/bridge-discovery-prototype](https://github.com/dillonmohr8777/bridge-discovery-prototype)
+- GitHub: [dillonmohr8777/bridge-discovery-prototype](https://github.com/dillonmohr8777/bridge-discovery-prototype)
 - Default branch: `main`
-- Current handoff commit as of 2026-07-11: `d1e554c`
+- Phase 2 unified review URL: https://bridge-connected-signal.netlify.app
+- Phase 3 branch: `cursor/phase-three-vertical-slice-acda` (local; apply `phase3-vertical-slice.patch` to publish)
 - Claude entrypoint: `CLAUDE.md`
-- Claude reset prompt: `CLAUDE_SESSION_PROMPT.md`
 - Local checkout: `C:\Users\dillo\Documents\Codex\2026-07-10\find-what-we-need-to-do\bridge-discovery-prototype`
+
+## Current phase
+
+**Phase 3 is open.** Phase 2's five-route Trusted Current frontend is technically complete. The current slice is targeted Promotion create plus protected profile projection.
+
+| Layer | Status |
+|---|---|
+| Phase 2 five-route frontend | Live at the unified noindex URL |
+| Phase 3 adapter + Create / My Profile journeys | Implemented on the Phase 3 branch |
+| Tori route-by-route written boxes | Still pending; does not stall this slice |
+| Miraj Milestone 2 | Self-reported done, tests remaining as of 2026-08-17 |
+| Live `/api/v1` bind | Blocked on inspectable staging origin |
+| Unified Netlify update | Approval-gated |
+
+Out of slice without a written change order: expanded ecosystem directory, algorithmic ranking, subscriptions/payments, in-platform ordering.
 
 ## Product
 
@@ -112,10 +127,13 @@ Leave with decisions on:
 - [[Source Audit]]
 - [[Client Intelligence Overlay]]
 - [[../../10_Sessions/Bridge Software Development - 2026-07-11|2026-07-11 build session]]
+- [[../../10_Sessions/Bridge Software Development - 2026-08-19|2026-08-19 Phase 3 session]]
+- [[../../12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Phase 3 project]]
+- [[../../12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open|Phase 3 slice decision]]
 
 ## Immediate next action
 
-Start a new Claude session with the GitHub repository explicitly attached. Paste `CLAUDE_SESSION_PROMPT.md`. Claude must prove it can read the repository before planning or editing.
+Review the Phase 3 branch in `dillonmohr8777/bridge-discovery-prototype`. Approve a noindex Netlify update only after that review. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
 
 ## Communication intelligence - 2026-08-01
 

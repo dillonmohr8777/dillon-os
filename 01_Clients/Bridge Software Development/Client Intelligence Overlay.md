@@ -6,9 +6,9 @@ client_id: bridge-software
 relationship: client
 division: Momentum 360
 created: 2026-08-01
-updated: 2026-08-01
-evidence_as_of: 2026-07-30
-verification_status: dated-evidence
+updated: 2026-08-19
+evidence_as_of: 2026-08-19
+verification_status: verified
 intelligence_maturity: operational
 keyword_state: deferred
 aeo_geo_state: deferred
@@ -16,14 +16,14 @@ pipeline_state: developing
 reporting_state: developing
 workflow_state: operational
 priority: high
-next_action: "Approve Phase 1 roles, verification meaning, priority journeys, ownership, and acceptance criteria before production expansion."
-review_on: 2026-08-08
+next_action: "Review the Phase 3 Promotion + protected-profile branch, then approve or reject the unified noindex Netlify update."
+review_on: 2026-08-22
 source_refs:
   - "[[overview]]"
   - "[[Product and Technical Handoff]]"
   - "[[Source Audit]]"
-  - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bridge-software/context/operating-context.md"
-  - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/bridge-software/deliverables/2026-07-28-bridge-purple-direction-next-milestone-plan.pdf"
+  - "[[12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 is the current product lane]]"
+  - "[[12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open]]"
 tags: [client-intelligence, bridge-software, product, ux, directory, marketplace]
 ---
 
@@ -31,10 +31,11 @@ tags: [client-intelligence, bridge-software, product, ux, directory, marketplace
 
 ## Executive operating thesis
 
-Bridge is currently a product-definition and trust-system problem before it is
-a traffic problem. The core value is verified, role-aware industry discovery
-and intentional connection. Search or promotion should wait until roles,
-verification, privacy, success events, and Phase 1 boundaries are approved.
+Bridge is currently in Phase 3 of the product/UX lane. The core value is still
+verified, role-aware industry discovery and intentional connection. The open
+slice is targeted Promotion create plus protected profile projection. Search or
+promotion campaigns should wait until that slice is accepted and a live backend
+origin is inspectable.
 
 ## Current evidence snapshot
 
@@ -75,11 +76,11 @@ context.
 
 ## Next evidence sprint
 
-1. Approve the role model and first successful connection scenario.
-2. Define verification evidence, reviewer, expiry, appeal, and display language.
-3. Decide public, member-only, and private fields and contact permissions.
-4. Lock Phase 1 screen inventory, acceptance criteria, and ownership.
-5. Create a product analytics and feedback plan before production data exists.
+1. Review the Phase 3 adapter on `/create` and `/my-profile`.
+2. Approve or reject the unified noindex Netlify update.
+3. Collect Miraj's inspectable repository, commit, and staging origin.
+4. Bind only the approved vertical slice to `/api/v1`.
+5. Record Tori's route and field decisions when they arrive.
 
 ## Shared systems
 

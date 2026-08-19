@@ -1,0 +1,1537 @@
+From 2f1e2b030e1903b7a756d2d0bc95a150c107fc39 Mon Sep 17 00:00:00 2001
+From: Cursor Agent <cursoragent@cursor.com>
+Date: Wed, 19 Aug 2026 17:28:13 +0000
+Subject: [PATCH] Open Phase 3 Promotion and protected-profile slice.
+
+Wire Create and My Profile to typed claims, upload intent, audience rules, and profile projections. Default to the in-memory adapter until an inspectable /api/v1 origin exists.
+---
+ .env.example                                  |   9 +-
+ CLAUDE.md                                     |   6 +-
+ README.md                                     |   7 +-
+ app/create/create-client.tsx                  | 232 ++++++++++++++----
+ app/create/page.tsx                           |   2 +-
+ app/my-profile/my-profile-client.tsx          | 176 +++++++++----
+ app/my-profile/page.tsx                       |   2 +-
+ docs/decision-log.md                          |   9 +
+ docs/phase2/00-status-and-reconciliation.md   |  12 +-
+ .../phase2/04-phased-backlog-and-decisions.md |  10 +-
+ docs/phase3/00-status.md                      |  55 +++++
+ .../01-design-system-production-rules.md      |  36 +++
+ lib/phase3/audiences.ts                       |  76 ++++++
+ lib/phase3/client.ts                          |  18 ++
+ lib/phase3/http-client.ts                     | 111 +++++++++
+ lib/phase3/index.ts                           |  30 +++
+ lib/phase3/mock-client.ts                     | 201 +++++++++++++++
+ lib/phase3/phase3.test.ts                     | 106 ++++++++
+ lib/phase3/types.ts                           | 123 ++++++++++
+ package.json                                  |   3 +-
+ tsconfig.json                                 |   6 +-
+ 21 files changed, 1120 insertions(+), 110 deletions(-)
+ create mode 100644 docs/phase3/00-status.md
+ create mode 100644 docs/phase3/01-design-system-production-rules.md
+ create mode 100644 lib/phase3/audiences.ts
+ create mode 100644 lib/phase3/client.ts
+ create mode 100644 lib/phase3/http-client.ts
+ create mode 100644 lib/phase3/index.ts
+ create mode 100644 lib/phase3/mock-client.ts
+ create mode 100644 lib/phase3/phase3.test.ts
+ create mode 100644 lib/phase3/types.ts
+
+diff --git a/.env.example b/.env.example
+index fc31a59..e12b8ab 100644
+--- a/.env.example
++++ b/.env.example
+@@ -1,4 +1,7 @@
+-# The discovery prototype does not use environment variables yet.
++# Phase 3 uses the in-memory adapter until Miraj publishes an inspectable staging origin.
++# Set only a versioned API origin. Do not put tokens or service keys in this file.
++NEXT_PUBLIC_BRIDGE_API_BASE=
++
+ # Add these only after Miraj approves the Supabase project and data/auth contracts.
+-NEXT_PUBLIC_SUPABASE_URL=
+-NEXT_PUBLIC_SUPABASE_ANON_KEY=
++# NEXT_PUBLIC_SUPABASE_URL=
++# NEXT_PUBLIC_SUPABASE_ANON_KEY=
+diff --git a/CLAUDE.md b/CLAUDE.md
+index 4f827b5..dfd3211 100644
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -40,6 +40,7 @@ The repository contains a decision prototype, not production software. All membe
+ ```bash
+ npm install
+ npm run dev
++npm run test:phase3
+ npm run typecheck
+ npm run lint
+ npm run build
+@@ -61,10 +62,11 @@ and artifact verification commands to pass.
+ - TypeScript in strict mode
+ - Plain CSS with semantic design tokens and three runtime themes
+ - Mock data in `lib/data.ts`
++- Phase 3 vertical slice adapters in `lib/phase3/` (in-memory by default; live `/api/v1` only when `NEXT_PUBLIC_BRIDGE_API_BASE` is set)
+ - Reusable presentational components in `components/`
+-- No backend, authentication, persistence, or real verification yet
++- No production Supabase, authentication, or real verification yet
+ 
+-Miraj owns the future Supabase/PostgreSQL/auth/storage contracts. Do not invent production database or authorization behavior without an approved contract.
++Miraj owns the future Supabase/PostgreSQL/auth/storage contracts. Do not invent production database or authorization behavior without an inspectable staging origin.
+ 
+ ## Routes
+ 
+diff --git a/README.md b/README.md
+index c783bb1..055f23e 100644
+--- a/README.md
++++ b/README.md
+@@ -29,6 +29,8 @@ npm run dev
+ 
+ Open `http://localhost:3000`. Important routes:
+ 
++- `/create` — Phase 3 targeted Promotion slice
++- `/my-profile` — Phase 3 protected profile projection
+ - `/directory`
+ - `/join`
+ - `/profile/cascade-canna` (any member: `/profile/<slug>`)
+@@ -49,11 +51,14 @@ Rebuild all three with `./scripts/build-staging.sh` (outputs to `staging/<direct
+ 
+ ## Status and boundaries
+ 
+-This is a discovery prototype, not production software. There is no Supabase connection, authentication, persistent data, email delivery, or real license verification. All profiles and metrics are fictional. The brand identity is provisional because no approved Bridge brand kit or delivered Tori prototype was found in the accessible project history.
++Phase 3 is open on the Promotion + protected-profile slice. `/create` and `/my-profile` use typed claims, upload-intent, post, and projection adapters in `lib/phase3/`. The default adapter is in-memory. A live `/api/v1` bind requires `NEXT_PUBLIC_BRIDGE_API_BASE` plus Miraj's inspectable staging origin.
++
++There is still no production Supabase session, email delivery, or real license verification. All profiles and metrics are fictional. The brand identity is provisional.
+ 
+ ## Verification
+ 
+ ```powershell
++npm run test:phase3
+ npm run typecheck
+ npm run lint
+ npm run build
+diff --git a/app/create/create-client.tsx b/app/create/create-client.tsx
+index 922400c..9c6f64f 100644
+--- a/app/create/create-client.tsx
++++ b/app/create/create-client.tsx
+@@ -1,72 +1,219 @@
+ "use client";
+-import { useMemo, useState } from "react";
+-const audiences = [
+-  { id: "adults", label: "Adults 21+", publicSafe: true },
+-  { id: "retailers", label: "Verified retailers", publicSafe: false },
+-  { id: "industry", label: "Industry professionals", publicSafe: false },
+-] as const;
+-const ALLOWED = ["image/png", "image/jpeg", "image/webp", "application/pdf"];
+-const MAX = 25 * 1024 * 1024;
++
++import { useEffect, useMemo, useState } from "react";
++import {
++  Phase3Error,
++  audienceCatalog,
++  canCreatePromotion,
++  canPublishPost,
++  contentTypes,
++  applySimulatedFailure,
++  getPhase3Client,
++  isPhase3LiveApi,
++  resolveEffectiveAudiences,
++  validateUploadFile,
++  type ContentType,
++  type SessionClaims,
++  type UploadIntent,
++} from "@/lib/phase3";
++
++type PublishStatus = "idle" | "pending" | "success" | "error";
++type SessionStatus = "loading" | "ready" | "error";
++
+ export function CreateClient() {
+-  const [contentType, setContentType] = useState("Promotion");
++  const client = useMemo(() => getPhase3Client(), []);
++  const [claims, setClaims] = useState<SessionClaims | null>(null);
++  const [sessionStatus, setSessionStatus] = useState<SessionStatus>("loading");
++  const [sessionError, setSessionError] = useState<string | null>(null);
++  const [contentType, setContentType] = useState<ContentType>("Promotion");
+   const [message, setMessage] = useState("");
+   const [protectedDetail, setProtectedDetail] = useState(false);
+   const [selected, setSelected] = useState<string[]>(["retailers"]);
+   const [fileMeta, setFileMeta] = useState<{ name: string; size: number } | null>(null);
++  const [file, setFile] = useState<File | null>(null);
+   const [fileError, setFileError] = useState<string | null>(null);
+-  const effectiveAudiences = useMemo(() => {
+-    if (!protectedDetail) return selected;
+-    return selected.filter((id) => id !== "adults");
+-  }, [protectedDetail, selected]);
+-  const canPublish = effectiveAudiences.length > 0 && !fileError;
+-  function onFile(file: File | null) {
++  const [upload, setUpload] = useState<UploadIntent | null>(null);
++  const [status, setStatus] = useState<PublishStatus>("idle");
++  const [publishError, setPublishError] = useState<string | null>(null);
++  const [simulateFailure, setSimulateFailure] = useState(false);
++  const [publishedId, setPublishedId] = useState<string | null>(null);
++
++  const effectiveAudiences = useMemo(
++    () => resolveEffectiveAudiences(selected, protectedDetail),
++    [protectedDetail, selected],
++  );
++  const eligible = claims ? canCreatePromotion(claims) : false;
++  const canPublish = eligible && canPublishPost(selected, protectedDetail, fileError) && status !== "success";
++
++  useEffect(() => {
++    let cancelled = false;
++    client.getSession()
++      .then((session) => {
++        if (cancelled) return;
++        setClaims(session);
++        setSessionStatus("ready");
++      })
++      .catch((error: unknown) => {
++        if (cancelled) return;
++        setSessionStatus("error");
++        setSessionError(error instanceof Phase3Error ? error.userMessage : "The session could not be loaded.");
++      });
++    return () => {
++      cancelled = true;
++    };
++  }, [client]);
++
++  async function onFile(next: File | null) {
+     setFileError(null);
+     setFileMeta(null);
+-    if (!file) return;
+-    if (!ALLOWED.includes(file.type)) { setFileError("Unsupported type. Use PNG, JPEG, WebP, or PDF."); return; }
+-    if (file.size > MAX) { setFileError("File exceeds 25 MB."); return; }
+-    setFileMeta({ name: file.name, size: file.size });
++    setFile(null);
++    setUpload(null);
++    if (!next) return;
++    const problem = validateUploadFile(next);
++    if (problem) {
++      setFileError(problem);
++      return;
++    }
++    setFile(next);
++    setFileMeta({ name: next.name, size: next.size });
+   }
++
+   function toggleAudience(id: string) {
+     if (protectedDetail && id === "adults") return;
+-    setSelected((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
++    setSelected((prev) => (prev.includes(id) ? prev.filter((value) => value !== id) : [...prev, id]));
++  }
++
++  async function publish() {
++    if (!canPublish || status === "pending") return;
++    setStatus("pending");
++    setPublishError(null);
++    try {
++      applySimulatedFailure(client, simulateFailure);
++      let uploadId = upload?.uploadId ?? null;
++      if (file && !uploadId) {
++        const intent = await client.createUploadIntent(file);
++        setUpload(intent);
++        uploadId = intent.uploadId;
++      }
++      const post = await client.createPost({
++        contentType,
++        message,
++        uploadId,
++        audienceIds: effectiveAudiences,
++        protectedDetail,
++      });
++      setPublishedId(post.postId);
++      setStatus("success");
++    } catch (error: unknown) {
++      setStatus("error");
++      setPublishError(error instanceof Phase3Error ? error.userMessage : "The promotion could not be published.");
++    }
++  }
++
++  if (sessionStatus === "loading") {
++    return <p className="form-hint" aria-busy="true">Loading creator session…</p>;
+   }
++
++  if (sessionStatus === "error") {
++    return <p className="form-error" role="alert">{sessionError}</p>;
++  }
++
++  if (status === "success") {
++    return (
++      <div className="content-card" role="status">
++        <p className="eyebrow">Promotion accepted</p>
++        <h2>The targeted promotion is recorded.</h2>
++        <p>
++          Access is limited to {effectiveAudiences.map((id) => audienceCatalog.find((item) => item.id === id)?.label).join(", ")}.
++          Protected detail {protectedDetail ? "is on" : "is off"}.
++        </p>
++        <p className="form-hint">
++          {isPhase3LiveApi()
++            ? `Recorded as ${publishedId}.`
++            : `Prototype adapter recorded ${publishedId}. Connect NEXT_PUBLIC_BRIDGE_API_BASE to persist through Miraj's /api/v1.`}
++        </p>
++      </div>
++    );
++  }
++
+   return (
+     <div className="create-layout">
+-      <form className="content-card create-form" onSubmit={(e) => e.preventDefault()}>
++      <form className="content-card create-form" onSubmit={(event) => { event.preventDefault(); void publish(); }}>
++        {!eligible && (
++          <p className="form-error" role="alert">
++            This account cannot create promotions until membership is active and the organization is verified.
++          </p>
++        )}
+         <label htmlFor="content-type">Content type</label>
+-        <select id="content-type" value={contentType} onChange={(e) => setContentType(e.target.value)}>
+-          <option>Promotion</option><option>Update</option><option>Event</option>
++        <select
++          disabled={!eligible || status === "pending"}
++          id="content-type"
++          value={contentType}
++          onChange={(event) => setContentType(event.target.value as ContentType)}
++        >
++          {contentTypes.map((type) => <option key={type}>{type}</option>)}
+         </select>
+         <label htmlFor="message">Message</label>
+-        <textarea id="message" rows={4} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Describe the offer or update" />
++        <textarea
++          disabled={!eligible || status === "pending"}
++          id="message"
++          rows={4}
++          value={message}
++          onChange={(event) => setMessage(event.target.value)}
++          placeholder="Describe the offer or update"
++        />
+         <label htmlFor="asset">Asset upload</label>
+-        <input id="asset" type="file" accept=".png,.jpg,.jpeg,.webp,.pdf,image/png,image/jpeg,image/webp,application/pdf" onChange={(e) => onFile(e.target.files?.[0] ?? null)} />
++        <input
++          disabled={!eligible || status === "pending"}
++          id="asset"
++          type="file"
++          accept=".png,.jpg,.jpeg,.webp,.pdf,image/png,image/jpeg,image/webp,application/pdf"
++          onChange={(event) => void onFile(event.target.files?.[0] ?? null)}
++        />
+         {fileMeta && <p className="form-hint">Selected: <strong>{fileMeta.name}</strong> ({Math.round(fileMeta.size / 1024)} KB)</p>}
++        {upload && <p className="form-hint">Upload intent accepted: {upload.uploadId}</p>}
+         {fileError && <p className="form-error" role="alert">{fileError}</p>}
+         <fieldset className="audience-fieldset">
+           <legend>Audiences</legend>
+-          {audiences.map((a) => {
+-            const disabled = protectedDetail && a.id === "adults";
+-            const checked = effectiveAudiences.includes(a.id);
++          {audienceCatalog.map((audience) => {
++            const disabled = !eligible || status === "pending" || (protectedDetail && audience.id === "adults");
++            const checked = effectiveAudiences.includes(audience.id);
+             return (
+-              <label key={a.id} className="check-row">
+-                <input type="checkbox" checked={checked} disabled={disabled} onChange={() => toggleAudience(a.id)} />
+-                <span>{a.label}{disabled ? " (removed while protected detail is on)" : ""}</span>
++              <label key={audience.id} className="check-row">
++                <input type="checkbox" checked={checked} disabled={disabled} onChange={() => toggleAudience(audience.id)} />
++                <span>{audience.label}{protectedDetail && audience.id === "adults" ? " (removed while protected detail is on)" : ""}</span>
+               </label>
+             );
+           })}
+         </fieldset>
+         <label className="check-row">
+-          <input type="checkbox" checked={protectedDetail} onChange={(e) => {
+-            setProtectedDetail(e.target.checked);
+-            if (e.target.checked) setSelected((prev) => prev.filter((id) => id !== "adults"));
+-          }} />
++          <input
++            type="checkbox"
++            checked={protectedDetail}
++            disabled={!eligible || status === "pending"}
++            onChange={(event) => {
++              setProtectedDetail(event.target.checked);
++              if (event.target.checked) setSelected((prev) => prev.filter((id) => id !== "adults"));
++            }}
++          />
+           <span>Include protected wholesale / business-only detail</span>
+         </label>
+         {protectedDetail && <p className="form-hint">Protected detail limits this post to verified audiences. Adults 21+ is disabled.</p>}
+-        <button className="button primary full" type="button" disabled={!canPublish}>{canPublish ? "Publish (prototype)" : "Publish unavailable"}</button>
+-        {!canPublish && <p className="form-hint">Publish requires at least one eligible audience and a valid file (if attached).</p>}
++        {publishError && <p className="form-error" role="alert">{publishError}</p>}
++        <button className="button primary full" type="submit" disabled={!canPublish || status === "pending"}>
++          {status === "pending" ? "Publishing…" : canPublish ? "Publish promotion" : "Publish unavailable"}
++        </button>
++        {!canPublish && <p className="form-hint">Publish requires an eligible creator, at least one eligible audience, and a valid file (if attached).</p>}
++        {!isPhase3LiveApi() && (
++          <details className="demo-controls">
++            <summary>Phase 3 adapter controls</summary>
++            <label className="check-row">
++              <input checked={simulateFailure} onChange={(event) => setSimulateFailure(event.target.checked)} type="checkbox" />
++              Simulate a network failure
++            </label>
++            <p className="form-hint">Using the in-memory adapter. Server authorization is still required in production.</p>
++          </details>
++        )}
+       </form>
+       <aside className="content-card create-preview" aria-live="polite">
+         <p className="eyebrow">Preview</p>
+@@ -75,12 +222,13 @@ export function CreateClient() {
+         {fileMeta && <p className="muted">Asset: {fileMeta.name}</p>}
+         <p className="muted">Access level: {protectedDetail ? "Verified audiences only" : "As selected"}</p>
+         <div className="tag-row">
+-          {effectiveAudiences.length === 0 ? <span className="tag">No eligible audience</span> : effectiveAudiences.map((id) => {
+-            const a = audiences.find((x) => x.id === id);
+-            return <span className="tag" key={id}>{a?.label}</span>;
+-          })}
++          {effectiveAudiences.length === 0
++            ? <span className="tag">No eligible audience</span>
++            : effectiveAudiences.map((id) => <span className="tag" key={id}>{audienceCatalog.find((item) => item.id === id)?.label}</span>)}
+         </div>
+-        <p className="form-hint">Prototype only. Server authorization is required in production.</p>
++        <p className="form-hint">
++          {isPhase3LiveApi() ? "Publishing through the live /api/v1 contract." : "Phase 3 mock adapter. Server authorization is required in production."}
++        </p>
+       </aside>
+     </div>
+   );
+diff --git a/app/create/page.tsx b/app/create/page.tsx
+index 3575702..003ebb4 100644
+--- a/app/create/page.tsx
++++ b/app/create/page.tsx
+@@ -3,7 +3,7 @@ export default function CreatePage() {
+   return (
+     <div className="page shell">
+       <div className="page-heading">
+-        <p className="eyebrow">Create</p>
++        <p className="eyebrow">Create · Phase 3 slice</p>
+         <h1>Build a targeted promotion</h1>
+         <p className="lede small">Upload PNG, JPEG, WebP, or PDF up to 25 MB. Choose eligible audiences. Protected business detail removes public targeting.</p>
+       </div>
+diff --git a/app/my-profile/my-profile-client.tsx b/app/my-profile/my-profile-client.tsx
+index a3f9aad..dc0742f 100644
+--- a/app/my-profile/my-profile-client.tsx
++++ b/app/my-profile/my-profile-client.tsx
+@@ -1,58 +1,142 @@
+ "use client";
+-import { useState } from "react";
++
++import { useEffect, useMemo, useState } from "react";
++import {
++  Phase3Error,
++  canConfirmContacts,
++  canViewProtectedProfile,
++  applySimulatedFailure,
++  getPhase3Client,
++  isPhase3LiveApi,
++  type ProfileProjection,
++  type SessionClaims,
++} from "@/lib/phase3";
++
++type LoadStatus = "loading" | "ready" | "error";
++type ConfirmStatus = "idle" | "pending" | "error";
++
++function formatStamp(value: string | null): string {
++  if (!value) return "Not confirmed";
++  return new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(new Date(value));
++}
++
+ export function MyProfileClient() {
+-  const [mode, setMode] = useState<"public" | "b2b">("b2b");
+-  const [confirmed, setConfirmed] = useState(false);
+-  const confirmedAt = confirmed ? "Aug 6, 2026" : null;
+-  const nextDue = "Nov 4, 2026";
++  const client = useMemo(() => getPhase3Client(), []);
++  const [mode, setMode] = useState<"public" | "protected">("protected");
++  const [claims, setClaims] = useState<SessionClaims | null>(null);
++  const [profile, setProfile] = useState<ProfileProjection | null>(null);
++  const [loadStatus, setLoadStatus] = useState<LoadStatus>("loading");
++  const [loadError, setLoadError] = useState<string | null>(null);
++  const [confirmStatus, setConfirmStatus] = useState<ConfirmStatus>("idle");
++  const [confirmError, setConfirmError] = useState<string | null>(null);
++  const [simulateFailure, setSimulateFailure] = useState(false);
++
++  useEffect(() => {
++    let cancelled = false;
++    Promise.all([client.getSession(), client.getProfileProjection(mode)])
++      .then(([session, projection]) => {
++        if (cancelled) return;
++        setClaims(session);
++        setProfile(projection);
++        setLoadStatus("ready");
++      })
++      .catch((error: unknown) => {
++        if (cancelled) return;
++        setLoadStatus("error");
++        setLoadError(error instanceof Phase3Error ? error.userMessage : "The profile could not be loaded.");
++      });
++    return () => {
++      cancelled = true;
++    };
++  }, [client, mode]);
++
++  async function confirm() {
++    if (!profile || confirmStatus === "pending") return;
++    setConfirmStatus("pending");
++    setConfirmError(null);
++    try {
++      applySimulatedFailure(client, simulateFailure);
++      await client.confirmContacts({ organizationId: profile.organizationId });
++      const next = await client.getProfileProjection(mode);
++      setProfile(next);
++      setConfirmStatus("idle");
++    } catch (error: unknown) {
++      setConfirmStatus("error");
++      setConfirmError(error instanceof Phase3Error ? error.userMessage : "Contacts could not be confirmed.");
++    }
++  }
++
++  const showProtected = mode === "protected" && !!claims && canViewProtectedProfile(claims);
++  const canConfirm = !!claims && canConfirmContacts(claims);
++
+   return (
+     <div>
+       <div className="feed-toolbar" role="group" aria-label="Profile visibility mode">
+-        <button type="button" className={mode === "public" ? "button primary" : "button secondary"} aria-pressed={mode === "public"} onClick={() => setMode("public")}>Public view</button>
+-        <button type="button" className={mode === "b2b" ? "button primary" : "button secondary"} aria-pressed={mode === "b2b"} onClick={() => setMode("b2b")}>B2B / verified view</button>
++        <button type="button" className={mode === "public" ? "button primary" : "button secondary"} aria-pressed={mode === "public"} onClick={() => { if (mode === "public") return; setLoadStatus("loading"); setLoadError(null); setMode("public"); }}>Public view</button>
++        <button type="button" className={mode === "protected" ? "button primary" : "button secondary"} aria-pressed={mode === "protected"} onClick={() => { if (mode === "protected") return; setLoadStatus("loading"); setLoadError(null); setMode("protected"); }}>B2B / verified view</button>
+         <p className="form-hint" style={{ margin: 0 }}>Showing: <strong>{mode === "public" ? "Public" : "B2B verified"}</strong></p>
+       </div>
+-      <div className="profile-shell content-card">
+-        <div className="card-topline">
+-          <div>
+-            <h2 style={{ marginBottom: 4 }}>Harbor Dispensary</h2>
+-            <p className="muted" style={{ margin: 0 }}>Dispensary · Baltimore, Maryland · illustrative record</p>
++      {loadStatus === "loading" && <p className="form-hint" aria-busy="true">Loading profile projection…</p>}
++      {loadStatus === "error" && <p className="form-error" role="alert">{loadError}</p>}
++      {loadStatus === "ready" && profile && (
++        <div className="profile-shell content-card">
++          <div className="card-topline">
++            <div>
++              <h2 style={{ marginBottom: 4 }}>{profile.displayName}</h2>
++              <p className="muted" style={{ margin: 0 }}>{profile.roleLabel} · {profile.location} · illustrative record</p>
++            </div>
++            <span className={`status-chip ${profile.verificationState === "verified" ? "verified" : "pending"}`}>
++              {profile.verificationState === "verified" ? "Verified" : profile.verificationState}
++            </span>
+           </div>
+-          <span className="status-chip verified">Verified</span>
++          <p>{profile.publicDescription}</p>
++          <div className="tag-row">{profile.tags.map((tag) => <span className="tag" key={tag}>{tag}</span>)}</div>
++          {showProtected ? (
++            <div className="contact-blocks">
++              {profile.contacts.map((contact) => (
++                <section className="profile-detail" key={contact.kind}>
++                  <h3>{contact.kind === "sales" ? "Sales contact" : "Accounting contact"}</h3>
++                  <p><strong>{contact.name}</strong></p>
++                  <p className="muted">{contact.email} · {contact.phone}</p>
++                  <p className="form-hint">Protected field · not shown in Public view</p>
++                </section>
++              ))}
++              <section className="profile-detail confirm-panel">
++                <h3>Contact confirmation</h3>
++                <p className="muted">First-login and recurring 90-day review. Next due: {formatStamp(profile.confirmation.nextDue)}.</p>
++                {profile.confirmation.status === "confirmed"
++                  ? <p className="status-chip verified">Confirmed {formatStamp(profile.confirmation.confirmedAt)}</p>
++                  : <p className="status-chip pending">Confirmation needed</p>}
++                <div className="button-row">
++                  <button type="button" className="button primary" disabled={!canConfirm || confirmStatus === "pending"} onClick={() => void confirm()}>
++                    {confirmStatus === "pending" ? "Confirming…" : "Confirm contacts"}
++                  </button>
++                </div>
++                {confirmError && <p className="form-error" role="alert">{confirmError}</p>}
++                {!canConfirm && <p className="form-hint">This account cannot confirm responsible contacts.</p>}
++                <p className="form-hint">
++                  {isPhase3LiveApi()
++                    ? "Confirmation writes through the live /api/v1 contract."
++                    : "Email reminder integration is pending production. The Phase 3 adapter records actor, time, and next-due locally until staging is connected."}
++                </p>
++                {!isPhase3LiveApi() && (
++                  <details className="demo-controls">
++                    <summary>Phase 3 adapter controls</summary>
++                    <label className="check-row">
++                      <input checked={simulateFailure} onChange={(event) => setSimulateFailure(event.target.checked)} type="checkbox" />
++                      Simulate a network failure
++                    </label>
++                  </details>
++                )}
++              </section>
++            </div>
++          ) : (
++            <div className="profile-visibility-note">
++              <p className="muted">Protected sales and accounting contacts are hidden in Public view. EIN and verification documents never appear here.</p>
++            </div>
++          )}
+         </div>
+-        <p>Community-first dispensary seeking premium regional partners. Public-safe description stays visible in both modes.</p>
+-        <div className="tag-row"><span className="tag">Retail</span><span className="tag">Education</span><span className="tag">Maryland</span></div>
+-        {mode === "b2b" ? (
+-          <div className="contact-blocks">
+-            <section className="profile-detail">
+-              <h3>Sales contact</h3>
+-              <p><strong>Jordan Lee</strong></p>
+-              <p className="muted">jordan.lee@example-harbor.invalid · (410) 555-0142</p>
+-              <p className="form-hint">Protected field · not shown in Public view</p>
+-            </section>
+-            <section className="profile-detail">
+-              <h3>Accounting contact</h3>
+-              <p><strong>Sam Rivera</strong></p>
+-              <p className="muted">sam.rivera@example-harbor.invalid · (410) 555-0198</p>
+-              <p className="form-hint">Protected field · not shown in Public view</p>
+-            </section>
+-            <section className="profile-detail confirm-panel">
+-              <h3>Contact confirmation</h3>
+-              <p className="muted">First-login and recurring 90-day review. Next due: {nextDue}.</p>
+-              {confirmed ? <p className="status-chip verified">Confirmed {confirmedAt}</p> : <p className="status-chip pending">Confirmation needed</p>}
+-              <div className="button-row">
+-                <button type="button" className="button primary" onClick={() => setConfirmed(true)}>Confirm contacts</button>
+-                <button type="button" className="button secondary" onClick={() => setConfirmed(false)}>Mark for update</button>
+-              </div>
+-              <p className="form-hint">Email reminder integration is pending production. Prototype records actor/time locally only.</p>
+-            </section>
+-          </div>
+-        ) : (
+-          <div className="profile-visibility-note">
+-            <p className="muted">Protected sales and accounting contacts are hidden in Public view. EIN and verification documents never appear here.</p>
+-          </div>
+-        )}
+-      </div>
++      )}
+     </div>
+   );
+ }
+diff --git a/app/my-profile/page.tsx b/app/my-profile/page.tsx
+index 6b510d3..174756e 100644
+--- a/app/my-profile/page.tsx
++++ b/app/my-profile/page.tsx
+@@ -3,7 +3,7 @@ export default function MyProfilePage() {
+   return (
+     <div className="page shell">
+       <div className="page-heading">
+-        <p className="eyebrow">My Profile · business home base</p>
++        <p className="eyebrow">My Profile · Phase 3 slice</p>
+         <h1>Verified identity and responsible contacts</h1>
+         <p className="lede small">Switch Public vs B2B views. Confirm sales and accounting contacts on first login and on a 90-day cadence. EIN documents never appear publicly.</p>
+       </div>
+diff --git a/docs/decision-log.md b/docs/decision-log.md
+index 22dc652..0645083 100644
+--- a/docs/decision-log.md
++++ b/docs/decision-log.md
+@@ -1,5 +1,14 @@
+ # Bridge decision log
+ 
++## Phase 3 vertical slice opened — 2026-08-19
++
++| Item | Recorded decision | Evidence boundary |
++|---|---|---|
++| Current product/UX lane | Phase 3 is open: productionize Promotion create + protected profile projection | Phase 2 frontend is technically complete; Melissa said the team is good to move forward after Tori's payment work; Miraj reported Milestone 2 done pending his tests |
++| Slice lock | Targeted Promotion creation plus protected profile projection / 90-day contact confirmation | Matches Dillon's 2026-08-16 recommended first slice and `docs/phase2/04-phased-backlog-and-decisions.md` |
++| Adapter | In-memory Phase 3 client by default; HTTP client when `NEXT_PUBLIC_BRIDGE_API_BASE` is set | Live bind still requires Miraj's inspectable staging origin |
++| Still out of slice | Expanded directories, ranking, subscriptions/payments, in-platform ordering, EIN documents, production auth UI | Contract Section 10 / 2026-08-05 Slack alignment |
++
+ ## Phase 2 scope reconciliation — 2026-08-15
+ 
+ | Item | Current status | Evidence boundary |
+diff --git a/docs/phase2/00-status-and-reconciliation.md b/docs/phase2/00-status-and-reconciliation.md
+index 7df0d36..ce17a66 100644
+--- a/docs/phase2/00-status-and-reconciliation.md
++++ b/docs/phase2/00-status-and-reconciliation.md
+@@ -1,10 +1,10 @@
+ # Phase 2 Status & Reconciliation — updated August 16, 2026
+ 
+-**Status:** FRONTEND TECHNICALLY COMPLETE — FORMAL PHASE 2 CLOSE PENDING
++**Status:** FRONTEND TECHNICALLY COMPLETE — PHASE 3 SLICE OPEN
+ 
+ ## One-sentence status
+ 
+-Phase 2's five-route Trusted Current frontend is implemented, integrated, verified, and live at the unified Bridge review URL. Phase 2 is not formally closed until Tori accepts or revises the routes and product choices, Miraj supplies inspectable backend and staging evidence, and the approved integration slice is verified.
++Phase 2's five-route Trusted Current frontend is implemented and live. Phase 3 is now open on the Promotion + protected-profile slice, using typed claims/upload/post/projection adapters. Formal Tori route acceptance and Miraj's inspectable staging origin are still outstanding and do not block frontend Phase 3 work.
+ 
+ ## What is true right now
+ 
+@@ -16,7 +16,7 @@ Phase 2's five-route Trusted Current frontend is implemented, integrated, verifi
+ | Tori route-by-route accept/revise + default feed choice | Pending | No dated acceptance recorded |
+ | Miraj auth/claims/upload/search/audit contract confirmation + vertical-slice lock | Pending | |
+ | Unified review front end | Complete | Trusted Current is live on the existing unified URL; `/studio`, `/business`, and `/signal` redirect to the canonical routes |
+-| Production backend integration | Not started; shared later work with Miraj | Requires inspectable contracts and the approved vertical slice |
++| Production backend integration | Phase 3 adapter ready; live bind not started | `lib/phase3/`; requires inspectable `/api/v1` origin |
+ 
+ ## Source of truth hierarchy
+ 
+@@ -27,9 +27,9 @@ Phase 2's five-route Trusted Current frontend is implemented, integrated, verifi
+ 
+ ## Remaining technical work for Dillon (UI/product lane)
+ 
+-1. Obtain Tori's written route-by-route acceptance and decisions recorded in `phase2-acceptance-record.md`.
+-2. Obtain Miraj's inspectable repository, branch, commit, migrations, RLS tests, endpoint evidence, and first staging vertical slice.
+-3. Integrate only the approved slice, then rerun the production and staging gates against real contracts.
++1. Keep the Phase 3 Promotion + protected-profile slice current as Miraj returns inspectable session, upload, post, and projection evidence.
++2. Record Tori's route-by-route acceptance in `phase2-acceptance-record.md` when it arrives. Do not stall the slice on that paperwork.
++3. Bind `NEXT_PUBLIC_BRIDGE_API_BASE` only after Miraj supplies repository, branch, commit, and staging URL, then rerun typecheck, lint, build, and `test:phase3`.
+ 
+ The unified URL above is the only client-facing Bridge review destination. The three visual variant sites remain internal comparison evidence.
+ 
+diff --git a/docs/phase2/04-phased-backlog-and-decisions.md b/docs/phase2/04-phased-backlog-and-decisions.md
+index d425822..a48bc32 100644
+--- a/docs/phase2/04-phased-backlog-and-decisions.md
++++ b/docs/phase2/04-phased-backlog-and-decisions.md
+@@ -5,11 +5,11 @@
+ - Tori written accept/revise — **open**
+ - Default feed confirmation — **recommended News grid**
+ 
+-## Phase 3 (front-end foundation + Miraj contracts)
+-- Design-system tokens/components production rules
+-- Auth claims, upload intent, multi-audience persistence, profile projections
+-- One vertical slice: **Promotion creation + protected profile projection**
+-- Automated tests once APIs exist
++## Phase 3 (front-end foundation + Miraj contracts) — opened 2026-08-19
++- Design-system tokens/components production rules — **documented in `docs/phase3/01-design-system-production-rules.md`**
++- Auth claims, upload intent, multi-audience persistence, profile projections — **typed in `lib/phase3/`**
++- One vertical slice: **Promotion creation + protected profile projection** — **wired on `/create` and `/my-profile`**
++- Automated tests once APIs exist — **contract tests live against the mock adapter; live API tests wait on staging**
+ 
+ ## Later
+ - Nationwide live data providers
+diff --git a/docs/phase3/00-status.md b/docs/phase3/00-status.md
+new file mode 100644
+index 0000000..bd2a1bf
+--- /dev/null
++++ b/docs/phase3/00-status.md
+@@ -0,0 +1,55 @@
++# Phase 3 — Promotion + protected profile slice
++
++**Opened:** 2026-08-19  
++**Status:** IN PROGRESS — typed contract, mock adapter, and Create / My Profile journeys are implemented. Live `/api/v1` bind waits on Miraj's inspectable staging origin.
++
++## Why this is Phase 3 now
++
++Phase 2's five-route Trusted Current frontend is technically complete and live. The next contracted product/UX lane is Phase 3: productionize the first vertical slice against typed claims, upload intent, audience persistence, and profile projections.
++
++Locked slice for this implementation:
++
++1. Targeted **Promotion** creation
++2. **Protected profile projection** plus 90-day contact confirmation
++
++Out of this slice: nationwide live directories, algorithmic ranking, subscriptions/payments, in-platform ordering, EIN document handling, production auth UI.
++
++## Adapter contract
++
++Default: in-memory `MockPhase3Client`.  
++Live bind: set `NEXT_PUBLIC_BRIDGE_API_BASE` to Miraj's versioned origin. The HTTP client then calls:
++
++| Behavior | Method | Path |
++|---|---|---|
++| Session claims | GET | `/api/v1/session` |
++| Upload intent | POST | `/api/v1/uploads/intent` |
++| Persist post | POST | `/api/v1/posts` |
++| Profile projection | GET | `/api/v1/profiles/current?view=public\|protected` |
++| Confirm contacts | POST | `/api/v1/contacts/confirm` |
++
++Those paths are the frontend proposal from the Phase 2 Miraj handoff. They are not accepted as Miraj's final routes until he returns repository, branch, commit, and staging evidence.
++
++## Claims required
++
++`userId`, `ageEligible`, `membershipStatus`, `organizationId`, `organizationVerificationState`, `role`, `delegatedPermissions`, `stateLicenseEligibility`, `adminScope`.
++
++Promotion create requires an active membership, a verified organization, and `create_promotion`. Protected projection requires `view_protected_profile`. Contact confirmation requires `confirm_contacts`.
++
++## Server rules the UI now shares
++
++- PNG / JPEG / WebP / PDF, 25 MB max
++- Protected wholesale detail cannot target Adults 21+
++- Publish requires at least one remaining eligible audience
++- Public projection never includes sales/accounting contacts
++- Confirmation records actor, time, and next-due (+90 days)
++
++## Verification
++
++```bash
++npm run test:phase3
++npm run typecheck
++npm run lint
++npm run build
++```
++
++Do not deploy this slice to the unified review URL until Dillon approves the Netlify update. Do not bind a live API origin without Miraj's inspectable staging URL.
+diff --git a/docs/phase3/01-design-system-production-rules.md b/docs/phase3/01-design-system-production-rules.md
+new file mode 100644
+index 0000000..abee83f
+--- /dev/null
++++ b/docs/phase3/01-design-system-production-rules.md
+@@ -0,0 +1,36 @@
++# Phase 3 design-system production rules
++
++Trusted Current remains the deployed provisional direction. These rules apply to the Phase 3 Create and My Profile slice and to any later production bind.
++
++## Tokens
++
++- Use only CSS custom properties from `app/globals.css`. Do not introduce hex values in component files.
++- Required semantic tokens: `--brand`, `--accent`, `--signal`, `--canvas`, `--surface`, `--text`, `--muted`, `--border`, `--success`, `--warning`, `--danger`.
++- Status color is never the only indicator. Pair chips with text (`Verified`, `Confirmation needed`, `Publish unavailable`).
++
++## Components
++
++- Primary action: `.button.primary`
++- Secondary / toggle off: `.button.secondary`
++- Destructive or blocked copy: `.form-error` with `role="alert"`
++- Pending copy: `.form-hint` with `aria-busy` when loading
++- Visibility chips: `.status-chip.verified` / `.pending` / `.warning`
++
++## States every Phase 3 mutation must show
++
++1. Loading / session unresolved
++2. Permission denied
++3. Inline validation
++4. Submission pending (disable the control, keep the data)
++5. Retryable server/network error
++6. Success without a second submit
++
++## Accessibility
++
++- Visible focus, labeled inputs, `aria-pressed` on view toggles, `aria-live` on preview and confirmation.
++- No page-level horizontal overflow at 390 / 768 / 1440.
++- Disabled Adults 21+ must include the reason in the label text.
++
++## What this does not approve
++
++These rules do not approve a final logo, palette, or typeface. Tori still owns visual acceptance. Production auth chrome is still Miraj's later work.
+diff --git a/lib/phase3/audiences.ts b/lib/phase3/audiences.ts
+new file mode 100644
+index 0000000..33adc1a
+--- /dev/null
++++ b/lib/phase3/audiences.ts
+@@ -0,0 +1,76 @@
++import { audienceIds, type AudienceId, type SessionClaims } from "./types.ts";
++
++export const audienceCatalog: ReadonlyArray<{
++  id: AudienceId;
++  label: string;
++  publicSafe: boolean;
++}> = [
++  { id: "adults", label: "Adults 21+", publicSafe: true },
++  { id: "retailers", label: "Verified retailers", publicSafe: false },
++  { id: "industry", label: "Industry professionals", publicSafe: false },
++];
++
++export const allowedUploadTypes = [
++  "image/png",
++  "image/jpeg",
++  "image/webp",
++  "application/pdf",
++] as const;
++
++export const maxUploadBytes = 25 * 1024 * 1024;
++
++export function isAudienceId(value: string): value is AudienceId {
++  return (audienceIds as readonly string[]).includes(value);
++}
++
++export function resolveEffectiveAudiences(
++  selected: readonly string[],
++  protectedDetail: boolean,
++): AudienceId[] {
++  const unique = selected.filter(isAudienceId).filter((id, index, list) => list.indexOf(id) === index);
++  if (!protectedDetail) return unique;
++  return unique.filter((id) => id !== "adults");
++}
++
++export function canPublishPost(
++  selected: readonly string[],
++  protectedDetail: boolean,
++  fileError: string | null,
++): boolean {
++  return resolveEffectiveAudiences(selected, protectedDetail).length > 0 && fileError === null;
++}
++
++export function validateUploadFile(file: File): string | null {
++  if (!allowedUploadTypes.includes(file.type as (typeof allowedUploadTypes)[number])) {
++    return "Unsupported type. Use PNG, JPEG, WebP, or PDF.";
++  }
++  if (file.size > maxUploadBytes) {
++    return "File exceeds 25 MB.";
++  }
++  return null;
++}
++
++export function canCreatePromotion(claims: SessionClaims): boolean {
++  if (!claims.ageEligible) return false;
++  if (claims.membershipStatus !== "active") return false;
++  if (claims.adminScope) return true;
++  if (claims.organizationVerificationState !== "verified") return false;
++  return claims.delegatedPermissions.includes("create_promotion");
++}
++
++export function canViewProtectedProfile(claims: SessionClaims): boolean {
++  if (claims.adminScope) return true;
++  if (claims.membershipStatus !== "active") return false;
++  return claims.delegatedPermissions.includes("view_protected_profile");
++}
++
++export function canConfirmContacts(claims: SessionClaims): boolean {
++  if (claims.adminScope) return true;
++  if (claims.membershipStatus !== "active") return false;
++  if (claims.organizationVerificationState !== "verified") return false;
++  return claims.delegatedPermissions.includes("confirm_contacts");
++}
++
++export function audienceLabel(id: AudienceId): string {
++  return audienceCatalog.find((item) => item.id === id)?.label ?? id;
++}
+diff --git a/lib/phase3/client.ts b/lib/phase3/client.ts
+new file mode 100644
+index 0000000..99d56d5
+--- /dev/null
++++ b/lib/phase3/client.ts
+@@ -0,0 +1,18 @@
++import { getSharedMockPhase3Client } from "./mock-client.ts";
++import { HttpPhase3Client } from "./http-client.ts";
++import type { Phase3Client } from "./types.ts";
++
++export function getBridgeApiBase(): string | null {
++  const value = process.env.NEXT_PUBLIC_BRIDGE_API_BASE?.trim();
++  return value ? value : null;
++}
++
++export function getPhase3Client(): Phase3Client {
++  const base = getBridgeApiBase();
++  if (base) return new HttpPhase3Client(base);
++  return getSharedMockPhase3Client();
++}
++
++export function isPhase3LiveApi(): boolean {
++  return getBridgeApiBase() !== null;
++}
+diff --git a/lib/phase3/http-client.ts b/lib/phase3/http-client.ts
+new file mode 100644
+index 0000000..8fc27d3
+--- /dev/null
++++ b/lib/phase3/http-client.ts
+@@ -0,0 +1,111 @@
++import {
++  Phase3Error,
++  type ConfirmContactsInput,
++  type ConfirmContactsResult,
++  type CreatePostInput,
++  type Phase3Client,
++  type Phase3ErrorCode,
++  type ProfileProjection,
++  type SessionClaims,
++  type UploadIntent,
++  type PostRecord,
++} from "./types.ts";
++
++function mapStatus(status: number): Phase3ErrorCode {
++  if (status === 401) return "unauthenticated";
++  if (status === 403) return "forbidden";
++  if (status === 409) return "conflict";
++  if (status === 422 || status === 400) return "validation";
++  return "unavailable";
++}
++
++function userMessageFor(code: Phase3ErrorCode): string {
++  switch (code) {
++    case "unauthenticated":
++      return "Sign in to continue.";
++    case "forbidden":
++      return "This account does not have permission for that action.";
++    case "validation":
++      return "Check the highlighted fields and try again.";
++    case "conflict":
++      return "That record changed. Refresh and try again.";
++    default:
++      return "The request could not be completed. Your work is still here — try again.";
++  }
++}
++
++export class HttpPhase3Client implements Phase3Client {
++  constructor(private readonly baseUrl: string) {}
++
++  private endpoint(path: string): string {
++    return `${this.baseUrl.replace(/\/$/, "")}${path}`;
++  }
++
++  private async request<T>(path: string, init?: RequestInit): Promise<T> {
++    let response: Response;
++    try {
++      response = await fetch(this.endpoint(path), {
++        ...init,
++        headers: {
++          Accept: "application/json",
++          ...(init?.body ? { "Content-Type": "application/json" } : {}),
++          ...init?.headers,
++        },
++      });
++    } catch (cause) {
++      throw new Phase3Error("unavailable", userMessageFor("unavailable"), cause);
++    }
++
++    if (!response.ok) {
++      const code = mapStatus(response.status);
++      throw new Phase3Error(code, userMessageFor(code));
++    }
++
++    if (response.status === 204) {
++      return undefined as T;
++    }
++
++    return (await response.json()) as T;
++  }
++
++  getSession() {
++    return this.request<SessionClaims>(this.endpointPath.session);
++  }
++
++  createUploadIntent(file: File) {
++    return this.request<UploadIntent>(this.endpointPath.uploads, {
++      method: "POST",
++      body: JSON.stringify({
++        fileName: file.name,
++        mimeType: file.type,
++        sizeBytes: file.size,
++      }),
++    });
++  }
++
++  createPost(input: CreatePostInput) {
++    return this.request<PostRecord>(this.endpointPath.posts, {
++      method: "POST",
++      body: JSON.stringify(input),
++    });
++  }
++
++  getProfileProjection(view: "public" | "protected") {
++    return this.request<ProfileProjection>(`${this.endpointPath.profile}?view=${view}`);
++  }
++
++  confirmContacts(input: ConfirmContactsInput) {
++    return this.request<ConfirmContactsResult>(this.endpointPath.confirmContacts, {
++      method: "POST",
++      body: JSON.stringify(input),
++    });
++  }
++
++  private readonly endpointPath = {
++    session: "/api/v1/session",
++    uploads: "/api/v1/uploads/intent",
++    posts: "/api/v1/posts",
++    profile: "/api/v1/profiles/current",
++    confirmContacts: "/api/v1/contacts/confirm",
++  } as const;
++}
+diff --git a/lib/phase3/index.ts b/lib/phase3/index.ts
+new file mode 100644
+index 0000000..4ae740b
+--- /dev/null
++++ b/lib/phase3/index.ts
+@@ -0,0 +1,30 @@
++export {
++  audienceCatalog,
++  audienceLabel,
++  allowedUploadTypes,
++  canConfirmContacts,
++  canCreatePromotion,
++  canPublishPost,
++  canViewProtectedProfile,
++  maxUploadBytes,
++  resolveEffectiveAudiences,
++  validateUploadFile,
++} from "./audiences.ts";
++export { getPhase3Client, getBridgeApiBase, isPhase3LiveApi } from "./client.ts";
++export { MockPhase3Client, mockHarborClaims, applySimulatedFailure } from "./mock-client.ts";
++export { HttpPhase3Client } from "./http-client.ts";
++export {
++  Phase3Error,
++  contentTypes,
++  audienceIds,
++  type AudienceId,
++  type ConfirmContactsInput,
++  type ConfirmContactsResult,
++  type ContentType,
++  type CreatePostInput,
++  type Phase3Client,
++  type ProfileProjection,
++  type SessionClaims,
++  type UploadIntent,
++  type PostRecord,
++} from "./types.ts";
+diff --git a/lib/phase3/mock-client.ts b/lib/phase3/mock-client.ts
+new file mode 100644
+index 0000000..d3827c6
+--- /dev/null
++++ b/lib/phase3/mock-client.ts
+@@ -0,0 +1,201 @@
++import {
++  canConfirmContacts,
++  canCreatePromotion,
++  canViewProtectedProfile,
++  resolveEffectiveAudiences,
++  validateUploadFile,
++} from "./audiences.ts";
++import {
++  Phase3Error,
++  type ConfirmContactsInput,
++  type ConfirmContactsResult,
++  type CreatePostInput,
++  type Phase3Client,
++  type ProfileProjection,
++  type SessionClaims,
++  type UploadIntent,
++  type PostRecord,
++} from "./types.ts";
++
++export const mockHarborClaims: SessionClaims = {
++  userId: "user-harbor-owner",
++  ageEligible: true,
++  membershipStatus: "active",
++  organizationId: "org-harbor",
++  organizationVerificationState: "verified",
++  role: "dispensary",
++  delegatedPermissions: ["create_promotion", "view_protected_profile", "confirm_contacts"],
++  stateLicenseEligibility: ["MD"],
++  adminScope: false,
++};
++
++const harborPublicDescription =
++  "Community-first dispensary seeking premium regional partners. Public-safe description stays visible in both modes.";
++
++function addDays(date: Date, days: number): Date {
++  const next = new Date(date);
++  next.setUTCDate(next.getUTCDate() + days);
++  return next;
++}
++
++function iso(date: Date): string {
++  return date.toISOString();
++}
++
++export class MockPhase3Client implements Phase3Client {
++  private claims: SessionClaims;
++  private confirmation: ProfileProjection["confirmation"];
++  private failNext: boolean;
++  private readonly now: () => Date;
++  private uploadCount = 0;
++  private postCount = 0;
++
++  constructor(options?: {
++    claims?: SessionClaims;
++    failNext?: boolean;
++    now?: () => Date;
++  }) {
++    this.claims = options?.claims ?? { ...mockHarborClaims, delegatedPermissions: [...mockHarborClaims.delegatedPermissions] };
++    this.failNext = options?.failNext ?? false;
++    this.now = options?.now ?? (() => new Date());
++    this.confirmation = {
++      status: "needed",
++      confirmedAt: null,
++      nextDue: iso(addDays(this.now(), 90)),
++      actorUserId: null,
++    };
++  }
++
++  setFailNext(value: boolean) {
++    this.failNext = value;
++  }
++
++  private maybeFail() {
++    if (!this.failNext) return;
++    this.failNext = false;
++    throw new Phase3Error("unavailable", "The request could not be completed. Your work is still here — try again.");
++  }
++
++  async getSession(): Promise<SessionClaims> {
++    this.maybeFail();
++    return structuredClone(this.claims);
++  }
++
++  async createUploadIntent(file: File): Promise<UploadIntent> {
++    this.maybeFail();
++    if (!canCreatePromotion(this.claims)) {
++      throw new Phase3Error("forbidden", "This account cannot upload promotion assets.");
++    }
++    const fileError = validateUploadFile(file);
++    if (fileError) {
++      throw new Phase3Error("validation", fileError);
++    }
++    this.uploadCount += 1;
++    return {
++      uploadId: `upload-${this.uploadCount}`,
++      status: "accepted",
++      fileName: file.name,
++      mimeType: file.type,
++      sizeBytes: file.size,
++    };
++  }
++
++  async createPost(input: CreatePostInput): Promise<PostRecord> {
++    this.maybeFail();
++    if (!canCreatePromotion(this.claims)) {
++      throw new Phase3Error("forbidden", "This account cannot publish promotions.");
++    }
++    const audienceIds = resolveEffectiveAudiences(input.audienceIds, input.protectedDetail);
++    if (audienceIds.length === 0) {
++      throw new Phase3Error("validation", "Publish requires at least one eligible audience.");
++    }
++    if (input.protectedDetail && input.audienceIds.includes("adults")) {
++      throw new Phase3Error("validation", "Protected detail cannot target Adults 21+.");
++    }
++    this.postCount += 1;
++    return {
++      postId: `post-${this.postCount}`,
++      contentType: input.contentType,
++      message: input.message.trim(),
++      uploadId: input.uploadId,
++      audienceIds,
++      protectedDetail: input.protectedDetail,
++      moderationState: "published",
++      createdAt: iso(this.now()),
++    };
++  }
++
++  async getProfileProjection(view: "public" | "protected"): Promise<ProfileProjection> {
++    this.maybeFail();
++    if (!this.claims.organizationId) {
++      throw new Phase3Error("unauthenticated", "Sign in to view this business profile.");
++    }
++    if (view === "protected" && !canViewProtectedProfile(this.claims)) {
++      throw new Phase3Error("forbidden", "Protected business fields are hidden for this account.");
++    }
++
++    const contacts = view === "protected"
++      ? [
++          {
++            kind: "sales" as const,
++            name: "Jordan Lee",
++            email: "jordan.lee@example-harbor.invalid",
++            phone: "(410) 555-0142",
++          },
++          {
++            kind: "accounting" as const,
++            name: "Sam Rivera",
++            email: "sam.rivera@example-harbor.invalid",
++            phone: "(410) 555-0198",
++          },
++        ]
++      : [];
++
++    return {
++      view,
++      organizationId: this.claims.organizationId,
++      displayName: "Harbor Dispensary",
++      roleLabel: "Dispensary",
++      location: "Baltimore, Maryland",
++      publicDescription: harborPublicDescription,
++      tags: ["Retail", "Education", "Maryland"],
++      verificationState: this.claims.organizationVerificationState,
++      contacts,
++      confirmation: structuredClone(this.confirmation),
++    };
++  }
++
++  async confirmContacts(input: ConfirmContactsInput): Promise<ConfirmContactsResult> {
++    this.maybeFail();
++    if (!canConfirmContacts(this.claims)) {
++      throw new Phase3Error("forbidden", "This account cannot confirm responsible contacts.");
++    }
++    if (input.organizationId !== this.claims.organizationId) {
++      throw new Phase3Error("forbidden", "Contact confirmation is limited to your organization.");
++    }
++    const confirmedAt = iso(this.now());
++    const nextDue = iso(addDays(this.now(), 90));
++    this.confirmation = {
++      status: "confirmed",
++      confirmedAt,
++      nextDue,
++      actorUserId: this.claims.userId,
++    };
++    return {
++      confirmedAt,
++      nextDue,
++      actorUserId: this.claims.userId,
++    };
++  }
++}
++
++let sharedMock: MockPhase3Client | null = null;
++
++export function getSharedMockPhase3Client(): MockPhase3Client {
++  if (!sharedMock) sharedMock = new MockPhase3Client();
++  return sharedMock;
++}
++
++export function applySimulatedFailure(client: Phase3Client, enabled: boolean) {
++  if (client instanceof MockPhase3Client) client.setFailNext(enabled);
++}
+diff --git a/lib/phase3/phase3.test.ts b/lib/phase3/phase3.test.ts
+new file mode 100644
+index 0000000..835e5d3
+--- /dev/null
++++ b/lib/phase3/phase3.test.ts
+@@ -0,0 +1,106 @@
++import assert from "node:assert/strict";
++import test from "node:test";
++import {
++  canCreatePromotion,
++  canPublishPost,
++  canViewProtectedProfile,
++  resolveEffectiveAudiences,
++  validateUploadFile,
++} from "./audiences.ts";
++import { MockPhase3Client, mockHarborClaims } from "./mock-client.ts";
++import { Phase3Error } from "./types.ts";
++
++test("protected detail removes Adults 21+ from the effective audience set", () => {
++  assert.deepEqual(
++    resolveEffectiveAudiences(["adults", "retailers", "adults"], true),
++    ["retailers"],
++  );
++});
++
++test("publish is blocked when no eligible audience remains", () => {
++  assert.equal(canPublishPost(["adults"], true, null), false);
++  assert.equal(canPublishPost(["retailers"], true, null), true);
++  assert.equal(canPublishPost(["retailers"], false, "File exceeds 25 MB."), false);
++});
++
++test("upload validation accepts only the contracted file types and size", () => {
++  const png = new File(["ok"], "promo.png", { type: "image/png" });
++  assert.equal(validateUploadFile(png), null);
++
++  const gif = new File(["no"], "promo.gif", { type: "image/gif" });
++  assert.match(validateUploadFile(gif) ?? "", /Unsupported type/);
++
++  const huge = new File(["ok"], "promo.png", { type: "image/png" });
++  Object.defineProperty(huge, "size", { value: 25 * 1024 * 1024 + 1 });
++  assert.match(validateUploadFile(huge) ?? "", /25 MB/);
++});
++
++test("verified dispensary with create_promotion can publish; unverified cannot", () => {
++  assert.equal(canCreatePromotion(mockHarborClaims), true);
++  assert.equal(
++    canCreatePromotion({ ...mockHarborClaims, organizationVerificationState: "pending" }),
++    false,
++  );
++  assert.equal(
++    canViewProtectedProfile({ ...mockHarborClaims, delegatedPermissions: ["create_promotion"] }),
++    false,
++  );
++});
++
++test("mock promotion slice records an upload and a protected post", async () => {
++  const client = new MockPhase3Client();
++  const file = new File(["asset"], "menu.png", { type: "image/png" });
++  const upload = await client.createUploadIntent(file);
++  const post = await client.createPost({
++    contentType: "Promotion",
++    message: "Autumn flower special for verified retailers",
++    uploadId: upload.uploadId,
++    audienceIds: ["retailers"],
++    protectedDetail: true,
++  });
++  assert.equal(post.moderationState, "published");
++  assert.deepEqual(post.audienceIds, ["retailers"]);
++  assert.equal(post.protectedDetail, true);
++});
++
++test("mock promotion slice rejects protected detail aimed at Adults 21+", async () => {
++  const client = new MockPhase3Client();
++  await assert.rejects(
++    () => client.createPost({
++      contentType: "Promotion",
++      message: "Public wholesale price list",
++      uploadId: null,
++      audienceIds: ["adults"],
++      protectedDetail: true,
++    }),
++    (error: unknown) => error instanceof Phase3Error && error.code === "validation",
++  );
++});
++
++test("protected profile projection hides contacts in public view and records confirmation", async () => {
++  const now = new Date("2026-08-19T17:00:00.000Z");
++  const client = new MockPhase3Client({ now: () => now });
++  const publicView = await client.getProfileProjection("public");
++  const protectedView = await client.getProfileProjection("protected");
++  assert.equal(publicView.contacts.length, 0);
++  assert.equal(protectedView.contacts.length, 2);
++  assert.equal(protectedView.confirmation.status, "needed");
++
++  const confirmation = await client.confirmContacts({ organizationId: "org-harbor" });
++  assert.equal(confirmation.actorUserId, "user-harbor-owner");
++  assert.equal(confirmation.nextDue, "2026-11-17T17:00:00.000Z");
++
++  const after = await client.getProfileProjection("protected");
++  assert.equal(after.confirmation.status, "confirmed");
++  assert.equal(after.confirmation.confirmedAt, confirmation.confirmedAt);
++});
++
++test("mock client maps a forced failure to a retryable unavailable error", async () => {
++  const client = new MockPhase3Client({ failNext: true });
++  await assert.rejects(
++    () => client.getSession(),
++    (error: unknown) => error instanceof Phase3Error && error.code === "unavailable",
++  );
++  const session = await client.getSession();
++  assert.equal(session.userId, "user-harbor-owner");
++});
+diff --git a/lib/phase3/types.ts b/lib/phase3/types.ts
+new file mode 100644
+index 0000000..7d4b04b
+--- /dev/null
++++ b/lib/phase3/types.ts
+@@ -0,0 +1,123 @@
++export const contentTypes = ["Promotion", "Update", "Event"] as const;
++export type ContentType = (typeof contentTypes)[number];
++
++export const audienceIds = ["adults", "retailers", "industry"] as const;
++export type AudienceId = (typeof audienceIds)[number];
++
++export type MembershipStatus = "none" | "pending" | "active" | "suspended";
++export type OrganizationVerificationState =
++  | "unverified"
++  | "pending"
++  | "verified"
++  | "changes_requested"
++  | "rejected";
++export type BridgeRole = "brand" | "dispensary" | "retailer" | "sales_rep" | "admin";
++export type DelegatedPermission =
++  | "create_promotion"
++  | "create_update"
++  | "view_protected_profile"
++  | "confirm_contacts";
++
++export type SessionClaims = {
++  userId: string;
++  ageEligible: boolean;
++  membershipStatus: MembershipStatus;
++  organizationId: string | null;
++  organizationVerificationState: OrganizationVerificationState;
++  role: BridgeRole | null;
++  delegatedPermissions: DelegatedPermission[];
++  stateLicenseEligibility: string[];
++  adminScope: boolean;
++};
++
++export type UploadIntent = {
++  uploadId: string;
++  status: "accepted" | "processing" | "rejected";
++  fileName: string;
++  mimeType: string;
++  sizeBytes: number;
++};
++
++export type PostRecord = {
++  postId: string;
++  contentType: ContentType;
++  message: string;
++  uploadId: string | null;
++  audienceIds: AudienceId[];
++  protectedDetail: boolean;
++  moderationState: "draft" | "published";
++  createdAt: string;
++};
++
++export type ResponsibleContact = {
++  kind: "sales" | "accounting";
++  name: string;
++  email: string;
++  phone: string;
++};
++
++export type ProfileProjection = {
++  view: "public" | "protected";
++  organizationId: string;
++  displayName: string;
++  roleLabel: string;
++  location: string;
++  publicDescription: string;
++  tags: string[];
++  verificationState: OrganizationVerificationState;
++  contacts: ResponsibleContact[];
++  confirmation: {
++    status: "needed" | "confirmed";
++    confirmedAt: string | null;
++    nextDue: string;
++    actorUserId: string | null;
++  };
++};
++
++export type ConfirmContactsInput = {
++  organizationId: string;
++};
++
++export type ConfirmContactsResult = {
++  confirmedAt: string;
++  nextDue: string;
++  actorUserId: string;
++};
++
++export type CreatePostInput = {
++  contentType: ContentType;
++  message: string;
++  uploadId: string | null;
++  audienceIds: AudienceId[];
++  protectedDetail: boolean;
++};
++
++export type Phase3ErrorCode =
++  | "unauthenticated"
++  | "forbidden"
++  | "validation"
++  | "conflict"
++  | "unavailable";
++
++export class Phase3Error extends Error {
++  readonly code: Phase3ErrorCode;
++  readonly userMessage: string;
++
++  constructor(code: Phase3ErrorCode, userMessage: string, cause?: unknown) {
++    super(userMessage);
++    this.name = "Phase3Error";
++    this.code = code;
++    this.userMessage = userMessage;
++    if (cause !== undefined) {
++      this.cause = cause;
++    }
++  }
++}
++
++export type Phase3Client = {
++  getSession(): Promise<SessionClaims>;
++  createUploadIntent(file: File): Promise<UploadIntent>;
++  createPost(input: CreatePostInput): Promise<PostRecord>;
++  getProfileProjection(view: "public" | "protected"): Promise<ProfileProjection>;
++  confirmContacts(input: ConfirmContactsInput): Promise<ConfirmContactsResult>;
++};
+diff --git a/package.json b/package.json
+index 9190c62..18bb37f 100644
+--- a/package.json
++++ b/package.json
+@@ -12,7 +12,8 @@
+     "build:staging:current": "node scripts/build-staging-one.mjs current",
+     "build:staging:network": "node scripts/build-staging-one.mjs network",
+     "build:staging:botanical": "node scripts/build-staging-one.mjs botanical",
+-    "test:staging": "node scripts/verify-staging.mjs"
++    "test:staging": "node scripts/verify-staging.mjs",
++    "test:phase3": "node --test --experimental-strip-types lib/phase3/phase3.test.ts"
+   },
+   "dependencies": {
+     "next": "16.3.1",
+diff --git a/tsconfig.json b/tsconfig.json
+index 3f0b70d..7c1535a 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -10,6 +10,7 @@
+     "skipLibCheck": true,
+     "strict": true,
+     "noEmit": true,
++    "allowImportingTsExtensions": true,
+     "esModuleInterop": true,
+     "module": "esnext",
+     "moduleResolution": "bundler",
+@@ -35,7 +36,8 @@
+     ".next/types/**/*.ts",
+     ".next/dev/types/**/*.ts"
+   ],
+-  "exclude": [
+-    "node_modules"
++    "exclude": [
++    "node_modules",
++    "**/*.test.ts"
+   ]
+ }
+-- 
+2.43.0
+
