@@ -295,7 +295,7 @@ section { position: relative; z-index: 1; padding: clamp(72px, 9vw, 120px) 0; }
 
 .os-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
   gap: 12px;
 }
 .os-card {
@@ -311,6 +311,7 @@ section { position: relative; z-index: 1; padding: clamp(72px, 9vw, 120px) 0; }
   margin: 0 auto 8px;
   border-radius: 50%;
   object-fit: cover;
+  background: radial-gradient(circle at 50% 40%, #1d3667, #0c1a36);
   box-shadow: 0 0 0 2px var(--line-gold);
 }
 .os-card b { display: block; font-size: 0.78rem; }
