@@ -4,8 +4,8 @@ client_id: bok-law-firm
 role: Content and digital marketing
 division: Direct
 status: active
-last_touched: 2026-08-01
-next_action: Maintain the approved weekly content workflow, resolve geographic and embargo guardrails, and establish search-to-consultation measurement.
+last_touched: 2026-08-19
+next_action: Client-review the 2026-08-19 Wednesday Wisdom, Family Fridays, and Saturday Solutions graphics, then schedule.
 due: none
 tags: [client, legal, content, social, seo]
 ---
