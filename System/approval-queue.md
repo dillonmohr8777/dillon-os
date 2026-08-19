@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-19T19:10:00Z
+last_updated: 2026-08-19T19:30:00Z
 status: active
 last_scan: 2026-08-19T19:10:00Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
@@ -11,7 +11,8 @@ scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "Sy
 Only current client and operating actions belong here. Nothing is sent, published, deployed, purchased, or changed in a client account automatically.
 
 ## Current client actions
-- [ ] 2026-08-19 - Bridge Software Development - Review draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 internally. Republish https://bridge-connected-signal.netlify.app from that PR as Connected purple only when Dillon asks. Do not Slack, email Tori/Melissa, or bind a live API origin until Miraj staging is inspectable - Risk: medium
+- [x] 2026-08-19 - Bridge Software Development - Republish https://bridge-connected-signal.netlify.app from draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 as Connected purple. Live-verified 2026-08-19 (`data-theme="network"`, five routes, deploy `6a8601e5b1ca6b199926b228`). - Risk: medium
+- [ ] 2026-08-19 - Bridge Software Development - Do not Slack, email Tori/Melissa/Mac/Miraj, or bind a live API origin until Dillon asks and Miraj staging is inspectable. Internal review of draft PR #6 can continue. - Risk: medium
 - [ ] 2026-07-12 - Kimberly James Bridal - Approve completion update after FAQ desktop image crop and responsive QA; verify appointment-source reconciliation first - Risk: low
 - [ ] 2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality attribution is verified - Risk: high
 - [ ] 2026-07-12 - On-Site Concrete & Landscape - Approve technical or campaign changes after allowlisted crawl and conversion-action audit - Risk: medium

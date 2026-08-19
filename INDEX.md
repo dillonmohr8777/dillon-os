@@ -45,7 +45,7 @@ links instead of loading the entire vault.
 - `02_Campaigns/` — campaign plans and delivery.
 - `02_FullTimeJob/` — Align HCM work, kept separate from client revenue.
 - `03_Content/` — content plans and drafts.
-- [[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Bridge Phase 3 promotion and protected profile]] — current Bridge product/UX slice on the Connected purple five-route app. Draft PR only; no Slack or client send.
+- [[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Bridge Phase 3 promotion and protected profile]] — current Bridge product/UX slice on the Connected purple five-route app. Unified review URL is live; Slack and client send still held.
 - [[12_Brain/04_Decisions/2026-08-19 - Bridge unified review stays Connected purple|Bridge unified review stays Connected purple]] — restore Modern Network on the Tori-instituted Phase 1/2 product, not Trusted Current or Kimi.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|Philadelphia 25-site factory Batch 3]] — private prospect previews and evidence.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|Philadelphia 25-site factory Batch 4]] — separate real-business cohort with first-party logo evidence.

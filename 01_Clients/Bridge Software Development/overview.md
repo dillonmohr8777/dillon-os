@@ -8,7 +8,7 @@ github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
 updated: 2026-08-19
 last_touched: 2026-08-19
-next_action: Review draft PR #6 internally. Republish the unified URL to Connected purple only when Dillon asks. Do not Slack, email the client, or bind a live API.
+next_action: Hold Slack and client email. Internal review of draft PR #6 can continue. Do not bind a live API origin until Miraj staging is inspectable.
 due: 2026-08-22
 ---
 
@@ -39,7 +39,7 @@ due: 2026-08-22
 | Tori route-by-route written boxes | Still pending; does not stall this slice |
 | Miraj Milestone 2 | Self-reported done, tests remaining as of 2026-08-17 |
 | Live `/api/v1` bind | Blocked on inspectable staging origin |
-| Unified Netlify update | Held. Republish from PR #6 as Connected purple only when Dillon asks. Live URL is still Trusted Current. |
+| Unified Netlify update | Live. Connected purple from PR #6 commit `65d4a3eb`, deploy `6a8601e5b1ca6b199926b228`, verified 2026-08-19. |
 | Slack / client comms | Held until Dillon asks |
 
 Out of slice without a written change order: expanded ecosystem directory, algorithmic ranking, subscriptions/payments, in-platform ordering.
@@ -141,10 +141,11 @@ Leave with decisions on:
 - [[../../12_Brain/04_Decisions/2026-08-19 - Bridge unified review stays Connected purple|Connected purple review decision]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send|Comms hold]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product|Restore Connected purple capture]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple|Publish approval capture]]
 
 ## Immediate next action
 
-Review draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 internally. Do not post to Slack or email Tori or Melissa. Republish https://bridge-connected-signal.netlify.app from that PR as Connected purple only when Dillon asks. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
+Hold Slack and client email. Internal review of draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 can continue. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin. Unified review URL is live Connected purple.
 
 ## Communication intelligence - 2026-08-01
 

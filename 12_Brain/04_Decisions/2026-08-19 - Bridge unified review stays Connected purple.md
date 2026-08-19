@@ -2,7 +2,7 @@
 note_type: decision
 status: active
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-19T19:30:00Z
 owner: Dillon Mohr
 client: Bridge Software Development
 project: "[[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile]]"
@@ -13,8 +13,10 @@ supersedes:
   - "Trusted Current as unified-review visual (2026-08-16 deploy)"
 source_refs:
   - "[[12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple]]"
   - "[[12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open]]"
   - "https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6"
+  - "https://bridge-connected-signal.netlify.app"
 tags:
   - brain
   - decision
@@ -38,7 +40,7 @@ The 2026-08-16 actual-work report shipped the five-route product (Home, Communit
 
 ## Decision
 
-Option 3. Visual default is Modern Network. Trusted Current remains an alternate at `bridge-preview-current` and on unlocked local builds. Tori still owns formal brand acceptance. Netlify republish stays approval-gated.
+Option 3. Visual default is Modern Network. Trusted Current remains an alternate at `bridge-preview-current` and on unlocked local builds. Tori still owns formal brand acceptance. Dillon approved the unified-URL republish on 2026-08-19 (`full approval publish`). Slack, email, live API bind, and merge to `main` stay gated.
 
 ## Rationale
 
@@ -47,8 +49,8 @@ Dillon named the last beautiful purple and the Tori-instituted product inventory
 ## Consequences
 
 - Draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 carries the purple default, host script, and Phase 3 frontend lock
-- Live `https://bridge-connected-signal.netlify.app` stays teal until Dillon republishes from that branch
-- Do not Slack, email Tori/Melissa/Mac/Miraj, bind `NEXT_PUBLIC_BRIDGE_API_BASE`, or mark Tori accept boxes complete
+- Live `https://bridge-connected-signal.netlify.app` now serves Connected purple from commit `65d4a3eb` (Netlify deploy `6a8601e5b1ca6b199926b228`)
+- Do not Slack, email Tori/Melissa/Mac/Miraj, bind `NEXT_PUBLIC_BRIDGE_API_BASE`, merge the prototype PR, or mark Tori accept boxes complete
 
 ## Reversal trigger
 
@@ -57,3 +59,4 @@ Tori writes a different default direction, or Dillon cancels the Netlify restore
 ## Evidence
 
 - [[12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product]]
+- [[12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple]]
