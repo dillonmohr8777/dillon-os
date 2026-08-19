@@ -241,6 +241,33 @@ function fontPairFor(slug, family) {
   return pairs[h % pairs.length];
 }
 
+function urlLooksLikeBusiness(name, slug, url) {
+  if (!url) return false;
+  let host = '';
+  try {
+    host = new URL(url).hostname.replace(/^www\./, '').toLowerCase();
+  } catch {
+    return false;
+  }
+  if (/netlify\.app|google\.com|facebook\.com|instagram\.com|twitter\.com|cloudflare/i.test(host)) return false;
+  const stop = /^(pizza|steaks|steak|and|the|service|auto|group|llc|inc|shop|store|hospital|dental|law|for|kids|care|animal)$/;
+  const tokens = `${name} ${slug}`
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, ' ')
+    .split(/[\s-]+/)
+    .filter((t) => t.length >= 4 && !stop.test(t));
+  if (!tokens.length) return true;
+  return tokens.some((t) => host.includes(t));
+}
+
+function pickOfficialUrl(name, slug, urls) {
+  const list = (urls || []).filter(Boolean);
+  for (const u of list) {
+    if (urlLooksLikeBusiness(name, slug, u)) return u;
+  }
+  return list[0] || '';
+}
+
 module.exports = {
   familyFor,
   modeFor,
@@ -249,4 +276,6 @@ module.exports = {
   attitudeFor,
   fontPairFor,
   foodPlate,
+  urlLooksLikeBusiness,
+  pickOfficialUrl,
 };

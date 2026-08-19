@@ -39,6 +39,19 @@ test('service businesses stay people-focused', () => {
   assert.equal(familyFor('McMenamin & Margiotti', 'mcmenamin-margiotti'), 'legal');
 });
 
+test('official URLs must look like the business, not a random neighbor', () => {
+  const { urlLooksLikeBusiness, pickOfficialUrl } = require('../intent');
+  assert.equal(urlLooksLikeBusiness('Narberth Pizza and Steaks', 'narberth-pizza', 'https://www.narberthpizza.com/'), true);
+  assert.equal(urlLooksLikeBusiness('Narberth Pizza and Steaks', 'narberth-pizza', 'https://newmainstreeteatery.com/'), false);
+  assert.equal(
+    pickOfficialUrl('Narberth Pizza and Steaks', 'narberth-pizza', [
+      'https://newmainstreeteatery.com/',
+      'https://www.narberthpizza.com/',
+    ]),
+    'https://www.narberthpizza.com/'
+  );
+});
+
 test('five unique scene prompts per family', () => {
   for (const family of ['food', 'dental', 'veterinary', 'auto', 'bridal']) {
     const scenes = scenesFor(family, 'Test Biz');

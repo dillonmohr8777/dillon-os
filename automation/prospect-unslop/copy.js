@@ -298,6 +298,10 @@ function voiceFromHtml(html) {
   };
 }
 
+function previewFrame(name) {
+  return `${name} gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph.`;
+}
+
 function honestCopy(site, harvest, family) {
   const bank = familyBank(family, site.name);
   const v = harvest?.voice || {};
@@ -326,11 +330,11 @@ function honestCopy(site, harvest, family) {
       : bank.offerings;
 
   const story = clip(
-    paras.slice(0, 3).join(' ') || `${bank.offerings[0].body} ${bank.experience[0].body}`,
-    640
+    paras.slice(0, 3).join(' ') || `${previewFrame(site.name)} ${bank.offerings[0].body}`,
+    720
   );
-  const storyMore = clip(paras[3] || bank.experience[1].body, 280);
-  const featureBody = clip(paras[4] || bank.offerings[1].body, 280);
+  const storyMore = clip(paras[3] || `${bank.experience[0].body} ${bank.experience[1].body}`, 360);
+  const featureBody = clip(paras[4] || `${bank.offerings[1].body} ${bank.offerings[2].body}`, 360);
 
   const catalog = [];
   if (site.url) {
@@ -388,6 +392,11 @@ function wordCount(copy) {
     copy.story,
     copy.storyMore,
     copy.featureBody,
+    copy.workHeading,
+    copy.galleryHeading,
+    copy.storyHeading,
+    copy.featureHeading,
+    copy.contactHeading,
     copy.closing,
     ...(copy.offerings || []).flatMap((o) => [o.title, o.body]),
     ...(copy.experience || []).flatMap((o) => [o.title, o.body]),

@@ -19,7 +19,7 @@ const { spawnSync } = require('child_process');
 const { harvestLite, extractFacts } = require('../../_os/automation/lib/harvest-lite');
 const { harvestImages } = require('../../_os/automation/lib/harvest-images');
 const crypto = require('crypto');
-const { familyFor, modeFor, scenesFor, captionsFor, attitudeFor, fontPairFor } = require('./intent');
+const { familyFor, modeFor, scenesFor, captionsFor, attitudeFor, fontPairFor, pickOfficialUrl } = require('./intent');
 const { renderSite, contrastOn } = require('./render');
 const { honestCopy, voiceFromHtml, wordCount } = require('./copy');
 const { collectFromPage, closeBrowser, isChallenge } = require('./harvest-browser');
@@ -355,15 +355,16 @@ async function processSite(site) {
     }
   }
   const extracted = html ? extractOfficial(html) : { url: '', logo: '', city: '' };
-  let official = extracted.url;
-  const cityGuess = extracted.city;
-  if (!official && fs.existsSync(receiptPath)) {
+  let prevUrl = '';
+  if (fs.existsSync(receiptPath)) {
     try {
-      official = JSON.parse(fs.readFileSync(receiptPath, 'utf8')).url || '';
+      prevUrl = JSON.parse(fs.readFileSync(receiptPath, 'utf8')).url || '';
     } catch {
       /* ignore */
     }
   }
+  let official = pickOfficialUrl(site.name, site.slug, [prevUrl, extracted.url]);
+  const cityGuess = extracted.city;
 
   const localReady = uniqueSourceCount(loadLocalPhotos(photoDir)) >= MIN_SOURCES;
 
@@ -425,7 +426,7 @@ async function processSite(site) {
   const phone = facts.phone || '';
   const address = facts.address || '';
   const hours = facts.hours || '';
-  let url = harvest?.finalUrl || official || '';
+  let url = pickOfficialUrl(site.name, site.slug, [official, harvest?.finalUrl, prevUrl]);
 
   for (const stale of fs.readdirSync(photoDir)) {
     if (/^image-\d+\.webp$/i.test(stale)) fs.unlinkSync(path.join(photoDir, stale));
@@ -457,7 +458,7 @@ async function processSite(site) {
     const browser = await collectFromPage(official);
     receipt.browser = receipt.browser || (browser.ok ? 'ok' : browser.reason);
     if (browser.ok && browser.images?.length) {
-      url = browser.url || url;
+      url = pickOfficialUrl(site.name, site.slug, [browser.url, url, official, prevUrl]) || url;
       const merged = {
         ok: true,
         finalUrl: browser.url || official,
@@ -631,7 +632,7 @@ async function processSite(site) {
   qa.push({ check: 'noindex', ok: /noindex/.test(htmlOut) });
   qa.push({ check: 'logo-or-wordmark', ok: receipt.hasLogo || /wordmark/.test(htmlOut) });
   qa.push({ check: 'swipe', ok: /data-swipe/.test(htmlOut) });
-  qa.push({ check: 'five-slides', ok: (htmlOut.match(/class="slide/g) || []).length >= 5 });
+  qa.push({ check: 'five-slides', ok: (htmlOut.match(/class="slide(?: is-on)?"/g) || []).length >= 5 });
   qa.push({ check: 'json-ld', ok: /application\/ld\+json/.test(htmlOut) });
   qa.push({ check: 'offering-cards', ok: /offering-card/.test(htmlOut) });
   qa.push({ check: 'enough-sections', ok: (htmlOut.match(/<section/g) || []).length >= 8 });

@@ -51,6 +51,11 @@ test('voiceFromHtml pulls headings and strips junk tags', () => {
   assert.ok(voice.ctaLabels.includes('Book a visit'));
 });
 
+test('empty harvest still writes a real homepage word count', () => {
+  const copy = honestCopy({ name: "Kehan's Auto Service", city: 'Pennsylvania' }, null, 'auto');
+  assert.ok(copy.wordCount >= 320, copy.wordCount);
+});
+
 test('clean replaces em dashes', () => {
   assert.equal(clean('Pizza — steaks'), 'Pizza, steaks');
 });
