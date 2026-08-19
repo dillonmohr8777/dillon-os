@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-17T13:04:11Z
+last_updated: 2026-08-19T00:00:00Z
 status: active
 last_scan: 2026-08-17T13:04:11Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
@@ -25,6 +25,7 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-07-12 - Everyday Life Insurance - Approve launch changes after 404 and site QA; approve links before acquisition - Risk: medium
 - [ ] 2026-07-12 - VA Claims - Approve client review after VACE design reconciliation; backend and DNS changes remain gated - Risk: medium
 - [ ] 2026-07-12 - Bridge Software Development - Approve client-facing milestone after Phase 1 ownership board and compliance review - Risk: medium
+- [ ] 2026-08-19 - Momentum 360 / Global Leader Solutions - Approve sending the course-to-audiobook reply to Jason Fallon and Sean in #360marketing, including the $10-14.5k catalogue range and the $1,500 pilot; do not promise Audible/ACX distribution - Source: client-operations-canonical/clients/momentum-360/deliverables/2026-08-19-gls-audiobook-production-line/slack-reply-draft.md - Evidence: "Pipeline built and verified: 7-chapter sample passes QA on podcast and ACX specs; 33 tests pass; catalogue TTS cost $70.80 on ElevenLabs at 708k chars; quote computed from config/rates.json" - Risk: low
 ## Operating actions
 - [ ] 2026-07-12 - Revenue - Verify current invoices or contracts for all 14 active clients before publishing MRR - Risk: low
 - [ ] 2026-07-12 - Cursor/MCP - Authenticate Composio, Slack, and WordPress connectors when live reads are required - Risk: low
