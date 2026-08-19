@@ -18,6 +18,8 @@ const SLUG_FAMILY = {
   'wholly-grounds': 'food',
   'scott-lot': 'auto',
   'sciacca-service-center': 'auto',
+  'philadelphia-auto-accident-injury-attorney': 'legal',
+  'mcmenamin-margiotti': 'legal',
   'j-pro-inc': 'trade',
   'pipe-xpress': 'trade',
   'novacare': 'fitness',

@@ -52,9 +52,22 @@ function loadQueue() {
 }
 
 async function fetchText(url) {
-  const res = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 DillonOS-unslop' }, redirect: 'follow' });
-  if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
-  return res.text();
+  let last = new Error('fetch failed');
+  for (let i = 0; i < 3; i += 1) {
+    try {
+      const res = await fetch(url, {
+        headers: { 'user-agent': 'Mozilla/5.0 DillonOS-unslop' },
+        redirect: 'follow',
+        signal: AbortSignal.timeout(20000),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
+      return await res.text();
+    } catch (err) {
+      last = err;
+      await new Promise((r) => setTimeout(r, 600 * (i + 1)));
+    }
+  }
+  throw last;
 }
 
 async function fetchBin(url) {
@@ -275,10 +288,13 @@ async function processSite(site) {
   try {
     html = await fetchText(`${NETLIFY}/sites/${site.slug}/`);
   } catch (err) {
-    receipt.error = `netlify fetch: ${err.message}`;
-    return receipt;
+    receipt.netlifyError = String(err.message || err);
+    if (uniqueSourceCount(loadLocalPhotos(photoDir)) < MIN_SOURCES) {
+      receipt.error = `netlify fetch: ${err.message}`;
+      return receipt;
+    }
   }
-  const extracted = extractOfficial(html);
+  const extracted = html ? extractOfficial(html) : { url: '', logo: '', city: '' };
   let official = extracted.url;
   const cityGuess = extracted.city;
 

@@ -32,6 +32,11 @@ test('service businesses stay people-focused', () => {
   assert.equal(modeFor(familyFor("Kehan's Auto Service")), 'people');
   assert.equal(familyFor('Always Dental Care'), 'dental');
   assert.equal(familyFor('Art City Vets & Urgent Care'), 'veterinary');
+  assert.equal(
+    familyFor('Philadelphia Auto Accident Injury Attorney', 'philadelphia-auto-accident-injury-attorney'),
+    'legal'
+  );
+  assert.equal(familyFor('McMenamin & Margiotti', 'mcmenamin-margiotti'), 'legal');
 });
 
 test('five unique scene prompts per family', () => {
