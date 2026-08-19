@@ -9,17 +9,19 @@
  * render an Align HCM-style motion page.
  *
  * Services: people doing the work. Food: the plate, the pass, the kitchen.
- * Duplicates are skipped. Deploy is not performed. Sheet updates happen only
- * after QA is green.
+ * Duplicates are skipped. Deploy is not performed. Outreach is the sales
+ * manager's job. This factory only improves the homepages.
  */
 
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
-const { harvestLite } = require('../../_os/automation/lib/harvest-lite');
+const { harvestLite, extractFacts } = require('../../_os/automation/lib/harvest-lite');
 const { harvestImages } = require('../../_os/automation/lib/harvest-images');
+const crypto = require('crypto');
 const { familyFor, modeFor, scenesFor, captionsFor, attitudeFor, fontPairFor } = require('./intent');
 const { renderSite, contrastOn } = require('./render');
+const { honestCopy, voiceFromHtml, wordCount } = require('./copy');
 const { collectFromPage, closeBrowser, isChallenge } = require('./harvest-browser');
 
 const ROOT = path.resolve(__dirname, '../..');
@@ -30,6 +32,7 @@ const HARVEST = path.join(HERE, 'harvest');
 const only = process.argv.filter((a) => a.startsWith('--only=')).map((a) => a.slice(7));
 const limit = Number((process.argv.find((a) => a.startsWith('--limit=')) || '').split('=')[1] || 0);
 const fresh = process.argv.includes('--fresh');
+const rerender = process.argv.includes('--rerender');
 const MIN_SOURCES = 3;
 
 function loadQueue() {
@@ -148,51 +151,108 @@ function defaultPalette(family) {
     auto: { paper: '#EEF0F3', ink: '#14181E', accent: '#B42318', accent2: '#F2C14E', panel: '#D5DAE0', deep: '#10141A' },
     bridal: { paper: '#F7F1EA', ink: '#2C2118', accent: '#8C5A3C', accent2: '#D9B99B', panel: '#E9DED3', deep: '#3A2A20' },
     trade: { paper: '#F0EDE6', ink: '#1A1C16', accent: '#C2410C', accent2: '#F5C451', panel: '#DDD8CC', deep: '#1F2118' },
+    legal: { paper: '#F4F1EA', ink: '#1B1A16', accent: '#8C5A2B', accent2: '#C4A574', panel: '#E7DFD2', deep: '#1A1814' },
+    salon: { paper: '#F6F0F3', ink: '#1C1218', accent: '#BE185D', accent2: '#F9A8D4', panel: '#EBD7E2', deep: '#2A1020' },
+    fitness: { paper: '#EEF2F0', ink: '#121816', accent: '#15803D', accent2: '#86EFAC', panel: '#D7E4DA', deep: '#102018' },
+    medical: { paper: '#F2F6F8', ink: '#12202A', accent: '#0369A1', accent2: '#7DD3FC', panel: '#D5E4EE', deep: '#0C2230' },
+    retail: { paper: '#F5F1EA', ink: '#1A1612', accent: '#B45309', accent2: '#F5D0A6', panel: '#E8DCCB', deep: '#22180E' },
+    professional: { paper: '#F3F4F6', ink: '#111827', accent: '#1D4ED8', accent2: '#93C5FD', panel: '#DCE3EE', deep: '#0B1220' },
   };
   return map[family] || { paper: '#F4EFE7', ink: '#111820', accent: '#F05A28', accent2: '#17324D', panel: '#E6DED4', deep: '#0B1D2D' };
 }
 
-function clip(s, n) {
-  const t = String(s || '').replace(/\s+/g, ' ').trim();
-  if (t.length <= n) return t;
-  return `${t.slice(0, n).replace(/\s+\S*$/, '')}.`;
+function attitudeChrome(attitude) {
+  const map = {
+    glass: { border: '1px', radius: '28px' },
+    editorial: { border: '1px', radius: '2px' },
+    brutal: { border: '4px', radius: '0px' },
+    warm: { border: '1px', radius: '22px' },
+    industrial: { border: '2px', radius: '4px' },
+    neon: { border: '1px', radius: '18px' },
+  };
+  return map[attitude] || map.warm;
 }
 
-function honestCopy(site, harvest, family) {
-  const v = harvest?.voice || {};
-  const headings = (v.headings || []).filter((h) => h.length > 8 && h.length < 80);
-  const paras = (v.paragraphs || []).filter((p) => !/lorem|coming soon|privacy policy|just a moment/i.test(p));
-  const badHeadline = /closed our doors|we have closed|out of business|coming soon|lorem|under construction|just a moment/i;
-  const headline =
-    headings[0] && !/home|welcome to/i.test(headings[0]) && !badHeadline.test(headings[0]) ? headings[0] : site.name;
-  const sub =
-    paras[0] && !badHeadline.test(paras[0])
-      ? paras[0]
-      : v.metaDescription && !badHeadline.test(v.metaDescription)
-        ? v.metaDescription
-        : `${site.name} in ${site.city || 'Pennsylvania'}. Confirm current details on the official source.`;
-  const offerings = (headings.slice(1, 6).length >= 3 ? headings.slice(1, 4) : paras.slice(1, 4)).filter(Boolean);
-  while (offerings.length < 3) {
-    offerings.push(
-      family === 'food'
-        ? "Confirm today's menu and hours on the official source."
-        : 'Confirm current services and availability on the official source.'
-    );
+function hashCollages(assetDir) {
+  return [1, 2, 3, 4, 5].map((i) => {
+    const p = path.join(assetDir, `collage-${i}.webp`);
+    return crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+  });
+}
+
+function recoverLogo(dir) {
+  if (!dir || !fs.existsSync(dir)) return '';
+  const hits = [];
+  for (const f of fs.readdirSync(dir)) {
+    if (!/^logo/i.test(f) || !/\.(png|svg|webp|jpe?g)$/i.test(f)) continue;
+    const p = path.join(dir, f);
+    const size = fs.statSync(p).size;
+    if (/\.svg$/i.test(f) ? size < 400 : size < 2048) continue;
+    hits.push({ p, size });
   }
-  const points =
-    family === 'food'
-      ? ['The plate comes first', 'Kitchen in motion', 'A table you can trust']
-      : ['People who do the work', 'A visit that is easy to start', 'Details confirmed at the source'];
-  return {
-    headline: clip(headline, 70),
-    sub: clip(sub, 220),
-    offerings: offerings.slice(0, 3).map((x) => clip(x, 140)),
-    points,
-    workHeading: family === 'food' ? 'What comes out of this kitchen.' : 'The work, in the room where it happens.',
-    galleryHeading: family === 'food' ? 'Food worth sitting down for.' : 'People, not stock extras.',
-    contactHeading: 'Make the next visit easy.',
-    description: clip(`${site.name} in ${site.city || 'PA'}. Private concept preview.`, 150),
-  };
+  hits.sort((a, b) => b.size - a.size);
+  return hits[0]?.p || '';
+}
+
+function writeLogoPng(srcPath, destPng) {
+  if (!srcPath || !fs.existsSync(srcPath)) return { ok: false, src: '' };
+  const destDir = path.dirname(destPng);
+  const destSvg = path.join(destDir, 'logo.svg');
+  const ext = path.extname(srcPath).toLowerCase();
+  try {
+    if (ext === '.svg') {
+      fs.copyFileSync(srcPath, destSvg);
+      spawnSync(
+        'python3',
+        ['-c', `from PIL import Image\ntry:\n im=Image.open(r'''${srcPath}''')\n im.convert('RGBA').save(r'''${destPng}''')\nexcept Exception:\n pass`],
+        { encoding: 'utf8' }
+      );
+      if (fs.existsSync(destPng) && fs.statSync(destPng).size >= 800) return { ok: true, src: 'assets/logo.png' };
+      return { ok: true, src: 'assets/logo.svg' };
+    }
+    if (ext === '.png') {
+      if (fs.statSync(srcPath).size < 2048) return { ok: false, src: '' };
+      fs.copyFileSync(srcPath, destPng);
+      return { ok: true, src: 'assets/logo.png' };
+    }
+    spawnSync(
+      'python3',
+      ['-c', `from PIL import Image; im=Image.open(r'''${srcPath}'''); im.convert('RGBA').save(r'''${destPng}''')`],
+      { encoding: 'utf8' }
+    );
+    if (fs.existsSync(destPng) && fs.statSync(destPng).size >= 2048) return { ok: true, src: 'assets/logo.png' };
+    return { ok: false, src: '' };
+  } catch {
+    return { ok: false, src: '' };
+  }
+}
+
+async function fetchFirstPartyLogo(images, baseUrl, harvestDir) {
+  const list = Array.isArray(images) ? images : [];
+  for (const img of list) {
+    const hay = `${img.src || img.url || ''} ${img.alt || ''}`;
+    if (!/(logo|brandmark|wordmark|site-?logo)/i.test(hay)) continue;
+    if (/(favicon|sprite|pixel|icon[-_.]|apple-touch|og:image|opengraph)/i.test(hay)) continue;
+    let href = img.src || img.url || '';
+    try {
+      href = new URL(href, baseUrl || undefined).href;
+    } catch {
+      continue;
+    }
+    try {
+      const buf = await fetchBin(href);
+      if (buf.length < 800) continue;
+      const extMatch = href.match(/\.(svg|png|webp|jpe?g)(?:\?|$)/i);
+      const ext = extMatch ? `.${extMatch[1].toLowerCase().replace('jpeg', 'jpg')}` : '.png';
+      if (ext !== '.svg' && buf.length < 2048) continue;
+      const dest = path.join(harvestDir, `logo-url${ext}`);
+      fs.writeFileSync(dest, buf);
+      return dest;
+    } catch {
+      /* try the next candidate */
+    }
+  }
+  return '';
 }
 
 function imageAlts(site, family, mode) {
@@ -208,7 +268,7 @@ function imageAlts(site, family, mode) {
   }
   return caps.map(
     (c, i) =>
-      `${c.kicker} photograph for ${site.name} — ${['people at work', 'hands on the job', 'a real conversation', 'the place', 'the craft'][i]}`
+      `${c.kicker} photograph for ${site.name}: ${['people at work', 'hands on the job', 'a real conversation', 'the place', 'the craft'][i]}`
   );
 }
 
@@ -262,7 +322,7 @@ async function processSite(site) {
   fs.mkdirSync(photoDir, { recursive: true });
 
   const receiptPath = path.join(outDir, 'RECEIPT.json');
-  if (!fresh && fs.existsSync(receiptPath)) {
+  if (!fresh && !rerender && fs.existsSync(receiptPath)) {
     try {
       const prev = JSON.parse(fs.readFileSync(receiptPath, 'utf8'));
       const collages = ['collage-1.webp', 'collage-2.webp', 'collage-3.webp', 'collage-4.webp', 'collage-5.webp'];
@@ -297,15 +357,66 @@ async function processSite(site) {
   const extracted = html ? extractOfficial(html) : { url: '', logo: '', city: '' };
   let official = extracted.url;
   const cityGuess = extracted.city;
+  if (!official && fs.existsSync(receiptPath)) {
+    try {
+      official = JSON.parse(fs.readFileSync(receiptPath, 'utf8')).url || '';
+    } catch {
+      /* ignore */
+    }
+  }
 
   const localReady = uniqueSourceCount(loadLocalPhotos(photoDir)) >= MIN_SOURCES;
 
   let harvest = null;
-  if (official && !localReady) {
+  if (official) {
     try {
-      harvest = await harvestLite(official, { timeoutMs: 18000 });
+      harvest = await harvestLite(official, { timeoutMs: 16000 });
     } catch (err) {
       harvest = { ok: false, reason: String(err.message || err) };
+    }
+  }
+
+  const liteChallenged = harvest && isChallenge(harvest.voice?.title, '');
+  const thinVoice = !harvest?.ok || liteChallenged || (harvest.voice?.wordCount || 0) < 80;
+  if (official && thinVoice) {
+    const browser = await collectFromPage(official);
+    receipt.browser = browser.ok ? 'ok' : browser.reason;
+    if (browser.ok && browser.html) {
+      const text = browser.html
+        .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+        .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+        .replace(/<[^>]+>/g, ' ');
+      harvest = {
+        ok: true,
+        finalUrl: browser.url || official,
+        voice: voiceFromHtml(browser.html),
+        facts: extractFacts(browser.html, text),
+        images: browser.images || [],
+      };
+    } else if (browser.ok && browser.images?.length) {
+      harvest = harvest || { ok: false, images: [] };
+      harvest.images = (harvest.images || []).concat(browser.images);
+    }
+  }
+
+  const voiceCache = path.join(harvestDir, 'voice.json');
+  if ((!harvest || !harvest.ok || !(harvest.voice?.headings || []).length) && fs.existsSync(voiceCache)) {
+    try {
+      const cached = JSON.parse(fs.readFileSync(voiceCache, 'utf8'));
+      if (cached.voice) {
+        harvest = harvest || {};
+        harvest.ok = true;
+        harvest.voice = (harvest.voice?.headings || []).length ? harvest.voice : cached.voice;
+        harvest.facts = harvest.facts || {
+          phone: cached.phone,
+          address: cached.address,
+          hours: cached.hours,
+        };
+        harvest.finalUrl = harvest.finalUrl || cached.url || official;
+        receipt.harvestCached = true;
+      }
+    } catch {
+      /* ignore broken cache */
     }
   }
 
@@ -316,7 +427,6 @@ async function processSite(site) {
   const hours = facts.hours || '';
   let url = harvest?.finalUrl || official || '';
 
-  // Drop leftover Netlify concept-study placeholders from earlier runs.
   for (const stale of fs.readdirSync(photoDir)) {
     if (/^image-\d+\.webp$/i.test(stale)) fs.unlinkSync(path.join(photoDir, stale));
   }
@@ -326,36 +436,26 @@ async function processSite(site) {
     }
   }
 
-  let logoPath = '';
-  if (extracted.logo) {
-    try {
-      const buf = await fetchBin(`${NETLIFY}/sites/${site.slug}/${extracted.logo}`);
-      const ext = path.extname(extracted.logo) || '.png';
-      const dest = path.join(harvestDir, `logo${ext}`);
-      fs.writeFileSync(dest, buf);
-      logoPath = dest;
-    } catch {
-      /* continue */
-    }
-  }
-
-  const liteChallenged = harvest && isChallenge(harvest.voice?.title, '');
+  let logoPath = recoverLogo(harvestDir) || recoverLogo(assetDir);
   let photoPaths = [];
 
-  if (harvest?.ok && !liteChallenged) {
-    const imgs = await harvestImages(harvest, { max: 16, minWidth: 420, concurrency: 4, timeoutMs: 16000 });
-    if (imgs.logo?.buffer) {
-      const ext = imgs.logo.ext === 'svg' ? 'png' : imgs.logo.ext || 'png';
-      const dest = path.join(harvestDir, `logo.${ext === 'jpg' ? 'png' : ext}`);
-      fs.writeFileSync(dest, imgs.logo.buffer);
-      logoPath = dest;
+  if (harvest?.ok && !isChallenge(harvest.voice?.title, '')) {
+    const pulled = await fetchFirstPartyLogo(harvest.images, harvest.finalUrl || url, harvestDir);
+    if (pulled) logoPath = pulled;
+    if (!rerender || !logoPath) {
+      const imgs = await harvestImages(harvest, { max: rerender ? 8 : 16, minWidth: 420, concurrency: 4, timeoutMs: 16000 });
+      if (imgs.logo?.buffer) {
+        const dest = path.join(harvestDir, imgs.logo.ext === 'svg' ? 'logo-harvest.svg' : 'logo-harvest.png');
+        fs.writeFileSync(dest, imgs.logo.buffer);
+        logoPath = dest;
+      }
+      if (!rerender) photoPaths = await saveHarvestedPhotos(imgs, harvestDir, mode);
     }
-    photoPaths = await saveHarvestedPhotos(imgs, harvestDir, mode);
   }
 
-  if (!localReady && official && uniqueSourceCount(photoPaths.concat(loadLocalPhotos(photoDir))) < MIN_SOURCES) {
+  if (!rerender && !localReady && official && uniqueSourceCount(photoPaths.concat(loadLocalPhotos(photoDir))) < MIN_SOURCES) {
     const browser = await collectFromPage(official);
-    receipt.browser = browser.ok ? 'ok' : browser.reason;
+    receipt.browser = receipt.browser || (browser.ok ? 'ok' : browser.reason);
     if (browser.ok && browser.images?.length) {
       url = browser.url || url;
       const merged = {
@@ -374,15 +474,31 @@ async function processSite(site) {
     }
   }
 
+  if (!logoPath && extracted.logo) {
+    try {
+      const buf = await fetchBin(`${NETLIFY}/sites/${site.slug}/${extracted.logo}`);
+      const dest = path.join(harvestDir, `logo-netlify${path.extname(extracted.logo) || '.png'}`);
+      fs.writeFileSync(dest, buf);
+      if (buf.length >= 2048 || path.extname(extracted.logo).toLowerCase() === '.svg') logoPath = dest;
+    } catch {
+      /* continue */
+    }
+  }
+
   photoPaths = [...new Set(loadLocalPhotos(photoDir))];
   const sourceCount = uniqueSourceCount(photoPaths);
   const genFills = photoPaths.filter((p) => /^gen-/i.test(path.basename(p)));
   const officialPhotos = photoPaths.filter((p) => /^src-/i.test(path.basename(p)));
+  const logoOut = path.join(assetDir, 'logo.png');
+  const logoWrite = writeLogoPng(logoPath, logoOut);
+  receipt.hasLogo = logoWrite.ok;
+  receipt.logoSrc = logoWrite.src;
+  if (!logoWrite.ok && fs.existsSync(logoOut) && fs.statSync(logoOut).size < 2048) fs.unlinkSync(logoOut);
 
   let tokens = defaultPalette(family);
-  if (logoPath && fs.existsSync(logoPath)) {
+  if (receipt.hasLogo && fs.existsSync(logoOut) && fs.statSync(logoOut).size >= 800) {
     try {
-      const pal = JSON.parse(runPy('palette.py', undefined, [logoPath]));
+      const pal = JSON.parse(runPy('palette.py', undefined, [logoOut]));
       if (pal.ok) {
         tokens = {
           paper: pal.paper,
@@ -397,38 +513,48 @@ async function processSite(site) {
       /* keep family default */
     }
   }
+  const chrome = attitudeChrome(attitudeFor(site.slug, family), tokens);
+  tokens = { ...tokens, ...chrome };
   tokens.onPaper = contrastOn(tokens.paper);
   tokens.onAccent = contrastOn(tokens.accent);
   tokens.onDeep = contrastOn(tokens.deep);
-  tokens.radius = '16px';
-
-  if (logoPath) {
-    const logoOut = path.join(assetDir, 'logo.png');
-    if (path.extname(logoPath).toLowerCase() === '.png') fs.copyFileSync(logoPath, logoOut);
-    else {
-      spawnSync(
-        'python3',
-        ['-c', `from PIL import Image; im=Image.open(r'''${logoPath}'''); im.convert('RGBA').save(r'''${logoOut}''')`],
-        { encoding: 'utf8' }
-      );
-    }
-  }
+  tokens.radius = chrome.radius;
 
   const prompts = scenesFor(family, site.name);
   fs.writeFileSync(
     path.join(harvestDir, 'prompts.json'),
     JSON.stringify({ slug: site.slug, name: site.name, family, mode, prompts }, null, 2)
   );
+  fs.writeFileSync(
+    path.join(harvestDir, 'voice.json'),
+    JSON.stringify(
+      {
+        slug: site.slug,
+        name: site.name,
+        url,
+        city,
+        phone,
+        address,
+        hours,
+        harvestOk: Boolean(harvest?.ok),
+        voice: harvest?.voice || {},
+        headings: (harvest?.headings || []).slice(0, 12),
+        paras: (harvest?.paragraphs || []).slice(0, 8),
+      },
+      null,
+      2
+    )
+  );
 
   receipt.photoCount = photoPaths.length;
   receipt.sourceCount = sourceCount;
   receipt.officialPhotos = officialPhotos.length;
   receipt.genFills = genFills.length;
-  receipt.hasLogo = fs.existsSync(path.join(assetDir, 'logo.png'));
   receipt.url = url;
   receipt.city = city;
+  receipt.rerender = rerender;
 
-  if (sourceCount < MIN_SOURCES) {
+  if (sourceCount < MIN_SOURCES && !rerender) {
     receipt.error = `only ${sourceCount} unique industry photograph(s); need generated ${mode}-intent fills`;
     receipt.needsGen = true;
     receipt.prompts = prompts;
@@ -436,29 +562,36 @@ async function processSite(site) {
     return receipt;
   }
 
-  const spec = {
-    outDir: assetDir,
-    sources: photoPaths,
-    accent: tokens.accent,
-    ink: tokens.ink,
-    mode,
-    slug: site.slug,
-  };
   let composed;
-  try {
-    composed = JSON.parse(runPy('collage.py', JSON.stringify(spec)));
-  } catch (err) {
-    receipt.error = `collage: ${err.message}`;
-    fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
-    return receipt;
-  }
-  if (!composed.ok) {
-    receipt.error = composed.reason;
-    fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
-    return receipt;
+  const existingCollages = ['collage-1.webp', 'collage-2.webp', 'collage-3.webp', 'collage-4.webp', 'collage-5.webp']
+    .map((f) => path.join(assetDir, f))
+    .filter((p) => fs.existsSync(p) && fs.statSync(p).size > 8000);
+  if (rerender && existingCollages.length === 5) {
+    composed = { ok: true, hashes: hashCollages(assetDir), reused: true };
+  } else {
+    const spec = {
+      outDir: assetDir,
+      sources: photoPaths,
+      accent: tokens.accent,
+      ink: tokens.ink,
+      mode,
+      slug: site.slug,
+    };
+    try {
+      composed = JSON.parse(runPy('collage.py', JSON.stringify(spec)));
+    } catch (err) {
+      receipt.error = `collage: ${err.message}`;
+      fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
+      return receipt;
+    }
+    if (!composed.ok) {
+      receipt.error = composed.reason;
+      fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
+      return receipt;
+    }
   }
 
-  const copy = honestCopy({ ...site, city }, harvest, family);
+  const copy = honestCopy({ ...site, city, url, phone, address, hours }, harvest, family);
   const fonts = fontPairFor(site.slug, family);
   const usedGen = genFills.length > 0;
   const brief = {
@@ -473,6 +606,7 @@ async function processSite(site) {
     address,
     hours,
     logo: receipt.hasLogo,
+    logoSrc: receipt.logoSrc || 'assets/logo.png',
     tokens,
     fonts,
     attitude: attitudeFor(site.slug, family),
@@ -497,14 +631,20 @@ async function processSite(site) {
   qa.push({ check: 'noindex', ok: /noindex/.test(htmlOut) });
   qa.push({ check: 'logo-or-wordmark', ok: receipt.hasLogo || /wordmark/.test(htmlOut) });
   qa.push({ check: 'swipe', ok: /data-swipe/.test(htmlOut) });
+  qa.push({ check: 'five-slides', ok: (htmlOut.match(/class="slide/g) || []).length >= 5 });
+  qa.push({ check: 'json-ld', ok: /application\/ld\+json/.test(htmlOut) });
+  qa.push({ check: 'offering-cards', ok: /offering-card/.test(htmlOut) });
+  qa.push({ check: 'enough-sections', ok: (htmlOut.match(/<section/g) || []).length >= 8 });
   qa.push({ check: 'reduced-motion', ok: /prefers-reduced-motion/.test(htmlOut) });
   qa.push({ check: 'no-webgl-required', ok: !/scene-canvas|forcegl/.test(htmlOut) });
   qa.push({ check: 'unique-collages', ok: new Set(composed.hashes).size === 5 });
-  qa.push({ check: 'enough-sources', ok: sourceCount >= MIN_SOURCES });
+  qa.push({ check: 'enough-sources', ok: rerender || sourceCount >= MIN_SOURCES });
   qa.push({ check: 'people-or-food-mode', ok: mode === 'food' || mode === 'people' });
+  qa.push({ check: 'no-em-dash', ok: !htmlOut.includes('\u2014') });
   receipt.qa = qa;
   receipt.ok = qa.every((q) => q.ok);
   receipt.hashes = composed.hashes;
+  receipt.copyWords = copy.wordCount || wordCount(copy);
   fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
   return receipt;
 }
@@ -535,7 +675,7 @@ function writeHub(results) {
     path.join(OUT, 'index.html'),
     `<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Unslop 138</title>
 <style>body{font:16px/1.4 system-ui;background:#111;color:#eee;margin:0}header{padding:24px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;padding:24px}.card{display:block;background:#1c1c1c;color:#fff;text-decoration:none;border-radius:12px;overflow:hidden}.card img{width:100%;aspect-ratio:4/5;object-fit:cover}.card strong,.card span{display:block;padding:8px 10px 0}.card span{opacity:.7;padding-bottom:12px}.ready{outline:2px solid #3ddc84}.blocked{outline:2px solid #c2410c}.needs-images{outline:2px solid #f5c451}</style>
-<header><h1>138-site unslop</h1><p>Private. noindex. Sheet updates only after QA green. People at work; food for kitchens.</p></header>
+<header><h1>138-site unslop</h1><p>Private. noindex. Homepage quality pass. Outreach sits with the sales manager. Do not mail from this factory.</p></header>
 <div class="grid">${cards}</div>`
   );
 }
@@ -561,7 +701,7 @@ async function main() {
   });
   results.push(...built);
   for (const d of dropped) {
-    results.push({ ...d, ok: false, dropped: true, reason: 'duplicate row — keep the canonical slug' });
+    results.push({ ...d, ok: false, dropped: true, reason: 'duplicate row: keep the canonical slug' });
   }
 
   const summary = {

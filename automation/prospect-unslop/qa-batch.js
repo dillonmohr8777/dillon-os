@@ -38,7 +38,7 @@ function hashFile(p) {
 function main() {
   const queue = loadQueue();
   const hashes = new Map();
-  const report = { ready: [], needsGen: [], blocked: [], dropped: [], collisions: [], modeMismatch: [] };
+  const report = { ready: [], needsGen: [], blocked: [], dropped: [], collisions: [], modeMismatch: [], wordmark: [], thinLayout: [], thinCopy: [] };
   for (const row of queue) {
     if (row.drop) {
       report.dropped.push(row.slug);
@@ -65,7 +65,27 @@ function main() {
         if (hashes.has(h)) report.collisions.push({ hash: h, a: hashes.get(h), b: `${row.slug}/collage-${i}` });
         else hashes.set(h, `${row.slug}/collage-${i}`);
       }
-      report.ready.push({ id: row.id, slug: row.slug, name: row.name, mode: receipt.mode });
+      const htmlPath = path.join(OUT, 'sites', row.slug, 'index.html');
+      const html = fs.existsSync(htmlPath) ? fs.readFileSync(htmlPath, 'utf8') : '';
+      const logoPath = path.join(OUT, 'sites', row.slug, 'assets', 'logo.png');
+      const logoSvg = path.join(OUT, 'sites', row.slug, 'assets', 'logo.svg');
+      const logoBytes = fs.existsSync(logoPath) ? fs.statSync(logoPath).size : 0;
+      const hasLogo = logoBytes >= 2048 || (fs.existsSync(logoSvg) && fs.statSync(logoSvg).size >= 400);
+      const sections = (html.match(/<section/g) || []).length;
+      report.ready.push({
+        id: row.id,
+        slug: row.slug,
+        name: row.name,
+        mode: receipt.mode,
+        hasLogo,
+        logoBytes,
+        sections,
+        jsonLd: /application\/ld\+json/.test(html),
+        copyWords: receipt.copyWords || 0,
+      });
+      if (!hasLogo) report.wordmark.push(row.slug);
+      if (sections < 8) report.thinLayout.push(row.slug);
+      if ((receipt.copyWords || 0) && receipt.copyWords < 250) report.thinCopy.push(row.slug);
     } else if (receipt.needsGen) report.needsGen.push({ id: row.id, slug: row.slug, name: row.name, mode: expected, prompts: receipt.prompts });
     else report.blocked.push({ slug: row.slug, error: receipt.error || 'not ok' });
   }
@@ -76,10 +96,27 @@ function main() {
     dropped: report.dropped.length,
     collisions: report.collisions.length,
     modeMismatch: report.modeMismatch.length,
+    logos: report.ready.filter((r) => r.hasLogo).length,
+    wordmark: report.wordmark.length,
+    thinLayout: report.thinLayout.length,
+    thinCopy: report.thinCopy.length,
     details: report,
   };
   fs.writeFileSync(path.join(OUT, 'QA.json'), JSON.stringify(out, null, 2));
-  console.log(JSON.stringify({ ready: out.ready, needsGen: out.needsGen, blocked: out.blocked, dropped: out.dropped, collisions: out.collisions, modeMismatch: out.modeMismatch }));
+  console.log(
+    JSON.stringify({
+      ready: out.ready,
+      needsGen: out.needsGen,
+      blocked: out.blocked,
+      dropped: out.dropped,
+      collisions: out.collisions,
+      modeMismatch: out.modeMismatch,
+      logos: out.logos,
+      wordmark: out.wordmark,
+      thinLayout: out.thinLayout,
+      thinCopy: out.thinCopy,
+    })
+  );
 }
 
 main();
