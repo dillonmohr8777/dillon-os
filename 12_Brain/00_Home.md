@@ -2,7 +2,7 @@
 note_type: dashboard
 status: active
 owner: Dillon Mohr
-updated: 2026-08-01
+updated: 2026-08-19
 review_cadence: daily
 tags:
   - brain
@@ -30,6 +30,8 @@ and reusable memory.
 
 ## Operating priorities
 
+- [[05_Projects/2026-08-19 - CMO paid local attribution lane|CMO paid + local + attribution lane]]
+- [[04_Decisions/2026-08-19 - Default CMO profile is balanced|CMO default is balanced]]
 - [[05_Projects/2026-07-30 - Dillon OS five-goal operating plan|Five-goal operating plan]]
 - [[05_Projects/2026-07-30 - Qualified pipeline recovery|Qualified pipeline recovery]]
 - [[04_Decisions/2026-07-30 - Marketing Chief is Dillon's sole agent interface|Marketing Chief interface decision]]
@@ -39,6 +41,7 @@ and reusable memory.
 ![[Bases/Strategy Library.base#Strategy Library]]
 
 - [[03_Concepts/Marketing Intelligence Operating System|Marketing intelligence operating system]]
+- [[03_Concepts/CMO Lane Cost Discipline|CMO lane cost discipline]]
 - [[03_Concepts/AEO GEO and AI Discovery|AEO, GEO, and AI discovery]]
 - [[03_Concepts/Automation and Workflow Engineering|Automation and workflow engineering]]
 - [[09_Ops/Knowledge Coverage|Knowledge coverage audit]]

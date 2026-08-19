@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-08-19
 domain: aeo geo
 maturity: operational
 summary: AEO and GEO extend SEO through answer extractability, entity consistency, corroborating sources, multi-platform distribution, and outcome-aware citation measurement.
@@ -13,6 +13,7 @@ source_refs:
   - "[[12_Brain/01_Captures/Grok/2026-07-30 - forward-thinking-aeo-geo-seo-and-ai-discovery-leadership-pulse]]"
   - "[[Daily-Briefs/aeo-trust-report]]"
   - "[[02_Campaigns/IMMOHRTAL/AEO-SEO-Strategy]]"
+  - "[[12_Brain/03_Concepts/CMO Lane Cost Discipline]]"
   - https://developers.google.com/search/docs/appearance/ai-features
   - https://help.openai.com/en/articles/12627856-publishers-and-developers-faq
   - https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c
@@ -214,6 +215,9 @@ authorization.
 - Assuming the same sources dominate every category and engine.
 - Treating one prompt run as a stable ranking.
 - Publishing commodity summaries instead of unique evidence and experience.
+- Reporting a simulated GEO score as a client metric. Simulated scans are a
+  demo; connect real SERP data before the GEO tab is reportable.
+  See [[12_Brain/03_Concepts/CMO Lane Cost Discipline]].
 
 ## Template
 

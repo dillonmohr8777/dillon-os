@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>CMO lane goal — balanced, four agents</title>
+  <style>
+    :root {
+      --bg: #0e1116;
+      --ink: #e7ebf3;
+      --muted: #8b95a7;
+      --line: #243042;
+      --accent: #d7a441;
+      --ok: #7dcea0;
+      --hold: #c97a4a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.45 "IBM Plex Sans", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    main { max-width: 52rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    p.kicker { color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.72rem; margin: 0 0 0.6rem; }
+    h1 { font-size: 1.85rem; margin: 0 0 0.75rem; }
+    .lede { color: var(--muted); margin: 0 0 2rem; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+    .card { border: 1px solid var(--line); padding: 1rem 1.1rem; }
+    .card h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 0.6rem; }
+    .num { font-size: 2rem; color: var(--accent); }
+    .num small { font-size: 0.9rem; color: var(--muted); }
+    ol { margin: 0; padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    .hold { color: var(--hold); }
+    .ok { color: var(--ok); }
+    footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="kicker">Dillon OS · delivery goal · not the 14/100 hero</p>
+    <h1>Paid + local + attribution on <code>balanced</code></h1>
+    <p class="lede">Four earning agents. Simulated GEO is a demo. Content/social composition is out of scope. This board is noindex and not a client report.</p>
+
+    <div class="grid">
+      <article class="card">
+        <h2>Default profile</h2>
+        <p class="num">balanced <small>not quality</small></p>
+        <p>Judgement, strategy, and reconciliation stay on the strong model. Quality is ~$30/client/month in the briefing estimate; do not connect on it.</p>
+      </article>
+      <article class="card">
+        <h2>Roster</h2>
+        <ol>
+          <li>paid-search-analyst</li>
+          <li>local-seo</li>
+          <li>attribution-reconciler</li>
+          <li>seo-technical</li>
+        </ol>
+      </article>
+    </div>
+
+    <article class="card" style="margin-top:1rem">
+      <h2>Sequence</h2>
+      <ol>
+        <li class="ok">Config: balanced + four agents (this repo)</li>
+        <li class="hold">Dillon: Google Ads developer token + GBP quota forms</li>
+        <li>One real API key, one real client seed</li>
+        <li>GSC + Places</li>
+        <li>Real SERP for GEO (until then, demo only)</li>
+        <li>One WordPress publisher, approval-gated</li>
+        <li>Auth if anyone else opens the server</li>
+        <li>Postgres + scheduler after ~3 clients</li>
+      </ol>
+    </article>
+
+    <footer>
+      Source: 11_Agents/cmo-lane.json. Claude skill: /cmo-lane. Live Netlify publish stays pinned and approval-gated.
+    </footer>
+  </main>
+</body>
+</html>

@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-01
-updated: 2026-08-01
+updated: 2026-08-19
 domain: ai visibility measurement
 maturity: operational
 summary: AI visibility is measured with fixed prompts, platform-native citation data, referral analytics, and downstream outcomes while preserving engine and date variance.
@@ -12,6 +12,7 @@ source_refs:
   - "[[12_Brain/03_Concepts/AEO GEO and AI Discovery]]"
   - "[[12_Brain/01_Captures/Grok/2026-07-30 - forward-thinking-aeo-geo-seo-and-ai-discovery-leadership-pulse]]"
   - "[[12_Brain/05_Projects/2026-07-30 - Dillon OS five-goal operating plan]]"
+  - "[[12_Brain/03_Concepts/CMO Lane Cost Discipline]]"
   - https://www.bing.com/webmasters/help/ai-performance-9f8e7d6c
   - https://developers.google.com/search/docs/appearance/ai-features
   - https://help.openai.com/en/articles/12627856-publishers-and-developers-faq
@@ -42,7 +43,9 @@ there is one permanent ranking.
 | Pipeline | Does discovery create business value? | qualified opportunities, appointments, bookings, revenue, subscribers, assisted outcomes |
 
 Never collapse these layers into one "AI visibility score" without retaining
-the underlying measures.
+the underlying measures. A simulated GEO engine is not a measurement layer;
+it is a demo until a real SERP provider is connected.
+See [[12_Brain/03_Concepts/CMO Lane Cost Discipline]].
 
 ## Golden prompt set
 

@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-08-19
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -12,6 +12,12 @@ source_of_truth: C:\Users\dillo\repos\dillon-os
 # Operating Status
 
 The vault was reconciled on 2026-07-12 against current work from the rolling three-week window. The April-era client roster is superseded.
+
+## CMO lane goal — 2026-08-19
+
+Delivery goal (does not replace ACTIVE CLIENTS 14/100): paid + local + attribution on `balanced` with four earning agents. Machine config is `11_Agents/cmo-lane.json`. Claude skill is `/cmo-lane`. Simulated GEO is not reportable. `cmo seed` is not in this Git tree. Next human action: Google Ads developer token + GBP quota forms. Netlify board stays noindex and unpublished until a site ID is pinned.
+
+See [[12_Brain/05_Projects/2026-08-19 - CMO paid local attribution lane]] and [[System/approval-queue]].
 
 ## Active roster
 

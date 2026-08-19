@@ -1,0 +1,78 @@
+{
+  "id": "cmo-lane",
+  "updated": "2026-08-19",
+  "source_refs": [
+    "12_Brain/01_Captures/2026-08-19 - CMO lane economics and sequencing.md",
+    "12_Brain/04_Decisions/2026-08-19 - Default CMO profile is balanced.md",
+    "12_Brain/05_Projects/2026-08-19 - CMO paid local attribution lane.md"
+  ],
+  "default_profile": "balanced",
+  "profiles": {
+    "quality": {
+      "usd_per_client_month_estimate": 30,
+      "status": "do_not_default",
+      "notes": "Briefing estimate. Do not connect on this profile."
+    },
+    "balanced": {
+      "usd_per_client_month_estimate": 13.68,
+      "status": "default",
+      "protected_classes": ["judgement", "strategy", "reconciliation"]
+    }
+  },
+  "roster": {
+    "active": [
+      "paid-search-analyst",
+      "local-seo",
+      "attribution-reconciler",
+      "seo-technical"
+    ],
+    "off_examples": ["report-composer", "competitor-watch"],
+    "content_lanes": {
+      "policy": "buy_not_build",
+      "reason": "Paid, local, and attribution are the defensibility. Articles/X/LinkedIn publishing is out of scope."
+    }
+  },
+  "maps_to_dillon_os": {
+    "paid-search-analyst": "paid-media-analyst",
+    "attribution-reconciler": "paid-media-analyst",
+    "local-seo": "growth-content",
+    "seo-technical": "growth-content",
+    "note": "Does not shrink the seven .claude/agents/ operating roles."
+  },
+  "geo": {
+    "status": "simulated",
+    "reportable": false,
+    "quality_profile_usd_estimate": 14,
+    "real_serp_usd_estimate": 6,
+    "intended_provider": "dataforseo",
+    "rule": "Do not report simulated GEO numbers to clients."
+  },
+  "sequence": [
+    "balanced_default",
+    "google_ads_developer_token_form",
+    "gbp_quota_request_form",
+    "one_real_seed",
+    "gsc_and_places",
+    "dataforseo_geo",
+    "wordpress_publisher",
+    "server_auth_if_shared",
+    "postgres_and_scheduler"
+  ],
+  "runtime_present": false,
+  "runtime_blocker": "cmo seed CLI is not in this repository. This file is the operating contract until that runtime is connected.",
+  "claude": {
+    "skill": "cmo-lane",
+    "netlify": {
+      "publish_dir": "_os/cmo-lane/public",
+      "site_env": "CMO_LANE_NETLIFY_SITE_ID",
+      "draft_default": true,
+      "never_create_site": true,
+      "require_noindex": true,
+      "deploy_bin": "_os/automation/bin/cmo-lane-netlify-deploy.js"
+    }
+  },
+  "env": {
+    "CMO_PROFILE": "balanced",
+    "CMO_ROSTER": "paid-search-analyst,local-seo,attribution-reconciler,seo-technical"
+  }
+}

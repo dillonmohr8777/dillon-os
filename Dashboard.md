@@ -2,7 +2,7 @@
 note_type: dashboard
 status: active
 owner: Dillon Mohr
-updated: 2026-08-15
+updated: 2026-08-19
 review_cadence: daily
 tags:
   - dashboard
@@ -21,8 +21,9 @@ navigation is needed.
 Checkbox items only — `_os/vault-state.js` reads this section for the HUD
 directive feed and skips any other list format.
 
+- [ ] File Google Ads developer token and GBP quota request for the CMO lane.
 - [ ] Process [[00_Inbox/Start Here|inbox]] material that affects current work.
-- [ ] Choose one finish line from the active-project view.
+- [ ] Keep CMO work on [[12_Brain/05_Projects/2026-08-19 - CMO paid local attribution lane|balanced + four agents]].
 - [ ] Verify facts before external or consequential action.
 - [ ] Record decisions, lessons, and outcome evidence before closing the loop.
 

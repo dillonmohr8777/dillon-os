@@ -1,6 +1,6 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-17T13:04:11Z
+last_updated: 2026-08-19T02:00:00Z
 status: active
 last_scan: 2026-08-17T13:04:11Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
@@ -9,6 +9,16 @@ scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "Sy
 # Approval Queue
 
 Only current client and operating actions belong here. Nothing is sent, published, deployed, purchased, or changed in a client account automatically.
+
+## CMO lane (2026-08-19)
+
+Source: [[12_Brain/05_Projects/2026-08-19 - CMO paid local attribution lane]]. Config is already `balanced` + four agents. These are operator or spend gates, not code.
+
+- [ ] 2026-08-19 - CMO lane - File Google Ads developer token application (review queue, weeks). Forms only; no account change in this item - Risk: low
+- [ ] 2026-08-19 - CMO lane - File GBP quota request (zero default quota until granted). Forms only - Risk: low
+- [ ] 2026-08-19 - CMO lane - Approve one real Anthropic key + one real client seed on `balanced`; check send-worthy output, cache reads, structured outputs, token estimates. No client send - Risk: medium
+- [ ] 2026-08-19 - CMO lane - Pin an existing Netlify site ID as `CMO_LANE_NETLIFY_SITE_ID` and approve a draft noindex board deploy. Do not create a site. Do not overlay a client site - Risk: medium
+- [ ] 2026-08-19 - CMO lane - DataForSEO (or equivalent) spend for reportable GEO; until then the GEO tab stays demo - Risk: medium
 
 ## Current client actions
 - [ ] 2026-07-12 - Kimberly James Bridal - Approve completion update after FAQ desktop image crop and responsive QA; verify appointment-source reconciliation first - Risk: low
