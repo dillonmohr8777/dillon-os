@@ -1,0 +1,163 @@
+name: Restore Bridge Connected Industry Prototype Suite
+
+# One-shot production restore of the original dark-plum 3D review suite
+# plus the Google Maps loader function onto the existing unified review URL.
+# Only the commit whose message starts with the title below runs this job.
+# Do not leave a push-to-prod trigger on later vault commits.
+on:
+  push:
+    branches:
+      - cursor/bridge-phase-three-acda
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bridge-connected-suite-restore
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    if: startsWith(github.event.head_commit.message, 'Restore Bridge Google Maps loader on the unified review URL')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: dillonmohr8777/bridge-discovery-prototype-kimi-design
+          ref: 39e06dbbd9b0f41313c21a58a32f48e52d3d6b49
+          path: bridge-suite
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Guard tests
+        run: node --test _os/test/bridge-connected-suite-restore.test.js
+
+      - name: Restore original suite and Maps loader to existing bridge-connected-signal only
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          BRIDGE_SOURCE_SHA: 39e06dbbd9b0f41313c21a58a32f48e52d3d6b49
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "NETLIFY_AUTH_TOKEN is not set on this repo."
+            exit 1
+          fi
+          if [ -n "${NEXT_PUBLIC_BRIDGE_API_BASE:-}" ]; then
+            echo "refusing: NEXT_PUBLIC_BRIDGE_API_BASE must stay unset"
+            exit 1
+          fi
+          node _os/automation/bin/bridge-connected-suite-restore.js bridge-suite/latest-signal-app/site
+
+      - name: Report Maps env key presence without printing values
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          node -e '
+            const { resolvePinnedSite, listSiteEnvKeys } = require("./_os/automation/bin/bridge-connected-suite-restore");
+            (async () => {
+              const site = await resolvePinnedSite();
+              let keys = [];
+              try {
+                keys = await listSiteEnvKeys(site.id);
+              } catch (err) {
+                console.log("env_list_unavailable");
+                console.log(String(err && err.message ? err.message : err).slice(0, 120));
+                process.exit(0);
+              }
+              console.log("env_key_count=" + keys.length);
+              console.log(keys.includes("GOOGLE_MAPS_BROWSER_KEY") ? "maps_key_present=yes" : "maps_key_present=no");
+            })().catch((err) => {
+              console.error(String(err && err.message ? err.message : err).slice(0, 200));
+              process.exit(1);
+            });
+          '
+
+      - name: Probe Maps loader status without following redirects
+        run: |
+          python3 - <<'PY'
+          import http.client
+          conn = http.client.HTTPSConnection("bridge-connected-signal.netlify.app", timeout=30)
+          conn.request("GET", "/.netlify/functions/google-maps-loader")
+          res = conn.getresponse()
+          print(f"maps_loader_status={res.status}")
+          res.read()
+          conn.close()
+          PY
+
+      - name: Restore Maps browser key onto the pinned site if the function is live but unconfigured
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          GOOGLE_MAPS_BROWSER_KEY: ${{ secrets.GOOGLE_MAPS_BROWSER_KEY }}
+        run: |
+          python3 - <<'PY'
+          import http.client
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          token = os.environ.get("NETLIFY_AUTH_TOKEN") or ""
+          key = os.environ.get("GOOGLE_MAPS_BROWSER_KEY") or ""
+          if not token:
+              raise SystemExit("NETLIFY_AUTH_TOKEN is not set on this repo.")
+
+          def maps_status():
+              conn = http.client.HTTPSConnection("bridge-connected-signal.netlify.app", timeout=30)
+              conn.request("GET", "/.netlify/functions/google-maps-loader")
+              res = conn.getresponse()
+              status = res.status
+              res.read()
+              conn.close()
+              return status
+
+          status = maps_status()
+          print(f"maps_loader_status_before_key_sync={status}")
+          if status == 404:
+              raise SystemExit("maps function still missing after restore")
+          if status in (301, 302):
+              print("maps_key_sync=skipped_already_configured")
+              raise SystemExit(0)
+          if not key:
+              print("maps_key_sync=skipped_no_github_secret")
+              raise SystemExit(0)
+
+          req = urllib.request.Request(
+              "https://api.netlify.com/api/v1/sites/bridge-connected-signal.netlify.app",
+              headers={"Authorization": f"Bearer {token}"},
+          )
+          with urllib.request.urlopen(req, timeout=30) as resp:
+              site = json.load(resp)
+          site_id = site.get("id")
+          account_id = site.get("account_id") or site.get("account_slug")
+          if not site_id or not account_id:
+              raise SystemExit("could not resolve pinned site account for env sync")
+
+          payload = json.dumps([
+              {
+                  "key": "GOOGLE_MAPS_BROWSER_KEY",
+                  "scopes": ["builds", "functions", "runtime"],
+                  "values": [{"value": key, "context": "all"}],
+              }
+          ]).encode("utf-8")
+          env_req = urllib.request.Request(
+              f"https://api.netlify.com/api/v1/accounts/{account_id}/env?site_id={site_id}",
+              data=payload,
+              method="POST",
+              headers={
+                  "Authorization": f"Bearer {token}",
+                  "Content-Type": "application/json",
+              },
+          )
+          try:
+              with urllib.request.urlopen(env_req, timeout=30) as resp:
+                  print(f"maps_key_sync_http={resp.status}")
+          except urllib.error.HTTPError as err:
+              print(f"maps_key_sync_http={err.code}")
+              raise SystemExit("maps key sync failed")
+          after = maps_status()
+          print(f"maps_loader_status_after_key_sync={after}")
+          PY

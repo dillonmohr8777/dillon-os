@@ -18,13 +18,14 @@
  *   bridge-connected-signal / https://bridge-connected-signal.netlify.app
  *
  * Never creates a site. Never binds an API origin. Never deploys Trusted Current
- * or the Next.js restyle. Purges CDN after production ready.
+ * or the Next.js restyle. Also deploys `google-maps-loader` from
+ * `latest-signal-app/netlify/functions/`. Purges CDN after production ready.
  */
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
-const { deployFiles, waitForDeploy } = require('../lib/netlify');
+const { deployFiles, waitForDeploy, zipStoreSingleFile, api } = require('../lib/netlify');
 const {
   SITE_NAME,
   EXPECTED_HOST,
@@ -34,6 +35,9 @@ const {
   resolvePinnedSite,
   purgeSiteCache,
 } = require('./bridge-connected-publish');
+
+const MAPS_FUNCTION_NAME = 'google-maps-loader';
+const MAPS_FUNCTION_FILE = `${MAPS_FUNCTION_NAME}.js`;
 
 const REQUIRED_ROUTES = [
   '/index.html',
@@ -136,13 +140,77 @@ function validateSuite(files) {
     errors.push('styles.css missing --purple token');
   }
 
-  if (!files.has('/app.js')) errors.push('missing /app.js');
+  const appJs = files.get('/app.js');
+  if (!appJs) errors.push('missing /app.js');
+  else if (!appJs.toString('utf8').includes('/.netlify/functions/google-maps-loader')) {
+    errors.push('app.js missing Google Maps loader path');
+  }
+  const appV2 = files.get('/app-v2.js');
+  if (appV2 && !appV2.toString('utf8').includes('/.netlify/functions/google-maps-loader')) {
+    errors.push('app-v2.js missing Google Maps loader path');
+  }
 
   if (errors.length) throw new Error(`refusing to restore: ${errors.join('; ')}`);
   return {
     files: files.size,
     html: [...files.keys()].filter((p) => /\.html?$/i.test(p)).length,
   };
+}
+
+function resolveMapsFunctionPath(siteDir) {
+  const root = path.resolve(siteDir);
+  const candidates = [
+    path.join(root, '..', 'netlify', 'functions', MAPS_FUNCTION_FILE),
+    path.join(root, 'netlify', 'functions', MAPS_FUNCTION_FILE),
+  ];
+  for (const candidate of candidates) {
+    if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) return candidate;
+  }
+  throw new Error(
+    `missing ${MAPS_FUNCTION_FILE} (expected latest-signal-app/netlify/functions/${MAPS_FUNCTION_FILE})`,
+  );
+}
+
+function validateMapsFunction(source) {
+  const text = String(source);
+  const errors = [];
+  if (!text.includes('GOOGLE_MAPS_BROWSER_KEY')) {
+    errors.push('maps function missing GOOGLE_MAPS_BROWSER_KEY lookup');
+  }
+  if (!text.includes('maps3d')) errors.push('maps function missing maps3d library');
+  if (!text.includes('initBridgeSignal3DMap')) {
+    errors.push('maps function missing initBridgeSignal3DMap callback');
+  }
+  if (errors.length) throw new Error(`refusing to restore: ${errors.join('; ')}`);
+  return true;
+}
+
+function packageMapsFunction(source) {
+  validateMapsFunction(source);
+  return zipStoreSingleFile(MAPS_FUNCTION_FILE, source);
+}
+
+/** Env var names only. Never returns or logs values. */
+async function listSiteEnvKeys(siteId) {
+  const tok = process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_TOKEN;
+  const site = await api(`/sites/${siteId}`, { tok });
+  if (!site.ok || !site.body) {
+    throw new Error(`listing env keys failed: site lookup ${site.status} ${site.raw || site.error || ''}`);
+  }
+  const accountId = site.body.account_id || site.body.account_slug;
+  const tries = [`/sites/${siteId}/env`];
+  if (accountId) tries.unshift(`/accounts/${accountId}/env?site_id=${encodeURIComponent(siteId)}`);
+  let lastErr = 'no env endpoint';
+  for (const pathname of tries) {
+    const r = await api(pathname, { tok });
+    if (!r.ok) {
+      lastErr = `${pathname} ${r.status}`;
+      continue;
+    }
+    const rows = Array.isArray(r.body) ? r.body : Array.isArray(r.body?.env) ? r.body.env : [];
+    return rows.map((row) => row && row.key).filter(Boolean).sort();
+  }
+  throw new Error(`listing env keys failed: ${lastErr}`);
 }
 
 async function main() {
@@ -156,8 +224,11 @@ async function main() {
 
   const files = attachCompatibilityRedirects(collectFiles(args.dir));
   const summary = validateSuite(files);
+  const mapsPath = resolveMapsFunctionPath(args.dir);
+  const mapsSource = fs.readFileSync(mapsPath);
+  const mapsZip = packageMapsFunction(mapsSource);
   console.log(
-    `validated original suite ${summary.files} files (${summary.html} html) for ${SITE_NAME} (${EXPECTED_HOST})`,
+    `validated original suite ${summary.files} files (${summary.html} html) plus ${MAPS_FUNCTION_NAME} for ${SITE_NAME} (${EXPECTED_HOST})`,
   );
 
   if (args.dryRun) {
@@ -172,8 +243,11 @@ async function main() {
     title: `Connected Industry Prototype Suite ${sha}`,
     draft: false,
     requireNoindex: true,
+    functions: { [MAPS_FUNCTION_NAME]: mapsZip },
   });
-  console.log(`deploy ${dep.deployId} uploaded ${dep.uploaded}/${dep.total}`);
+  console.log(
+    `deploy ${dep.deployId} uploaded ${dep.uploaded}/${dep.total} files, ${dep.functionsUploaded}/${dep.functionsTotal} functions`,
+  );
   const waited = await waitForDeploy(dep.deployId, { timeoutMs: 180000 });
   if (!waited.ok) throw new Error(`deploy did not go live: ${waited.state} ${waited.error || ''}`);
   await purgeSiteCache(site);
@@ -186,10 +260,15 @@ module.exports = {
   EXPECTED_HOST,
   REQUIRED_ROUTES,
   REQUIRED_3D_ASSETS,
+  MAPS_FUNCTION_NAME,
   COMPAT_REDIRECTS,
   collectFiles,
   attachCompatibilityRedirects,
   validateSuite,
+  resolveMapsFunctionPath,
+  validateMapsFunction,
+  packageMapsFunction,
+  listSiteEnvKeys,
   htmlTag,
   parseArgs,
   resolvePinnedSite,

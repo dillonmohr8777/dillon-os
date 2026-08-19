@@ -12,10 +12,15 @@ const {
   EXPECTED_HOST,
   REQUIRED_ROUTES,
   REQUIRED_3D_ASSETS,
+  MAPS_FUNCTION_NAME,
   collectFiles,
   attachCompatibilityRedirects,
   validateSuite,
+  resolveMapsFunctionPath,
+  validateMapsFunction,
+  packageMapsFunction,
 } = require('../automation/bin/bridge-connected-suite-restore');
+const { zipStoreSingleFile } = require('../automation/lib/netlify');
 
 function sampleHome() {
   return `<!doctype html><html lang="en"><head><meta name="robots" content="noindex, nofollow"><title>Bridge | Connected Industry Prototype Suite</title></head><body><a href="/signal">Explore the network</a></body></html>`;
@@ -40,7 +45,7 @@ function fixtureMap(overrides = {}) {
     ['/business/index.html', Buffer.from(sampleHome())],
     ['/signal/index.html', Buffer.from(sampleSignal())],
     ['/styles.css', Buffer.from(':root { --purple: #4b0082; }')],
-    ['/app.js', Buffer.from('console.log("suite");')],
+    ['/app.js', Buffer.from('loader.src = "/.netlify/functions/google-maps-loader";')],
   ]);
   for (const asset of REQUIRED_3D_ASSETS) {
     files.set(asset, Buffer.from('webp'));
@@ -144,5 +149,48 @@ describe('bridge original suite restore guards', () => {
     fs.mkdirSync(path.join(dir, '.next'));
     fs.writeFileSync(path.join(dir, '.next', 'trace'), 'x');
     assert.throws(() => collectFiles(dir), /\.next/);
+  });
+
+  it('refuses app.js without the Google Maps loader path', () => {
+    assert.throws(
+      () => validateSuite(fixtureMap({ '/app.js': Buffer.from('console.log("no maps");') })),
+      /Google Maps loader/,
+    );
+  });
+
+  it('packages the Google Maps loader as a zip next to the suite', () => {
+    const root = fs.mkdtempSync(path.join(os.tmpdir(), 'bridge-maps-'));
+    const site = path.join(root, 'site');
+    const fnDir = path.join(root, 'netlify', 'functions');
+    fs.mkdirSync(site, { recursive: true });
+    fs.mkdirSync(fnDir, { recursive: true });
+    const source = [
+      "const key = process.env.GOOGLE_MAPS_BROWSER_KEY;",
+      "callback: 'initBridgeSignal3DMap',",
+      "libraries: 'maps3d',",
+    ].join('\n');
+    fs.writeFileSync(path.join(fnDir, 'google-maps-loader.js'), source);
+    assert.equal(resolveMapsFunctionPath(site), path.join(fnDir, 'google-maps-loader.js'));
+    validateMapsFunction(source);
+    const zip = packageMapsFunction(source);
+    assert.equal(MAPS_FUNCTION_NAME, 'google-maps-loader');
+    assert.ok(zip.includes(Buffer.from('google-maps-loader.js')));
+    assert.ok(zip.includes(Buffer.from('maps3d')));
+  });
+
+  it('refuses a maps function that does not keep the key server-side', () => {
+    assert.throws(
+      () => validateMapsFunction('exports.handler = async () => ({ statusCode: 200 });'),
+      /GOOGLE_MAPS_BROWSER_KEY|maps3d|initBridgeSignal3DMap/,
+    );
+  });
+
+  it('builds a store-method zip Netlify can ingest', () => {
+    const zip = zipStoreSingleFile(
+      'google-maps-loader.js',
+      'exports.handler = async () => ({ statusCode: 200 });',
+    );
+    assert.equal(zip.readUInt32LE(0), 0x04034b50);
+    assert.ok(zip.includes(Buffer.from('google-maps-loader.js')));
   });
 });

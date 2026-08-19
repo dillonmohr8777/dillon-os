@@ -22,6 +22,7 @@
  */
 
 const crypto = require('crypto');
+const zlib = require('zlib');
 const { httpGet } = require('./net');
 
 const API = 'https://api.netlify.com/api/v1';
@@ -62,6 +63,73 @@ async function api(pathname, { method = 'GET', body = null, tok, contentType = '
 
 const sha1 = (buf) => crypto.createHash('sha1').update(buf).digest('hex');
 
+function dosDateTime(date = new Date()) {
+  const t =
+    ((date.getHours() & 0x1f) << 11) |
+    ((date.getMinutes() & 0x3f) << 5) |
+    (Math.floor(date.getSeconds() / 2) & 0x1f);
+  const d =
+    (((date.getFullYear() - 1980) & 0x7f) << 9) |
+    (((date.getMonth() + 1) & 0x0f) << 5) |
+    (date.getDate() & 0x1f);
+  return { time: t, date: d };
+}
+
+/**
+ * Store-method ZIP with one file. Used to upload a Netlify function without
+ * depending on a zip CLI. Does not log file contents.
+ */
+function zipStoreSingleFile(filename, content) {
+  const data = Buffer.isBuffer(content) ? content : Buffer.from(String(content), 'utf8');
+  const name = Buffer.from(String(filename), 'utf8');
+  const crc = zlib.crc32(data) >>> 0;
+  const { time, date } = dosDateTime();
+
+  const local = Buffer.alloc(30);
+  local.writeUInt32LE(0x04034b50, 0);
+  local.writeUInt16LE(20, 4);
+  local.writeUInt16LE(0, 6);
+  local.writeUInt16LE(0, 8);
+  local.writeUInt16LE(time, 10);
+  local.writeUInt16LE(date, 12);
+  local.writeUInt32LE(crc, 14);
+  local.writeUInt32LE(data.length, 18);
+  local.writeUInt32LE(data.length, 22);
+  local.writeUInt16LE(name.length, 26);
+  local.writeUInt16LE(0, 28);
+
+  const central = Buffer.alloc(46);
+  central.writeUInt32LE(0x02014b50, 0);
+  central.writeUInt16LE(20, 4);
+  central.writeUInt16LE(20, 6);
+  central.writeUInt16LE(0, 8);
+  central.writeUInt16LE(0, 10);
+  central.writeUInt16LE(time, 12);
+  central.writeUInt16LE(date, 14);
+  central.writeUInt32LE(crc, 18);
+  central.writeUInt32LE(data.length, 22);
+  central.writeUInt32LE(data.length, 26);
+  central.writeUInt16LE(name.length, 30);
+  central.writeUInt16LE(0, 32);
+  central.writeUInt16LE(0, 34);
+  central.writeUInt16LE(0, 36);
+  central.writeUInt16LE(0, 38);
+  central.writeUInt32LE(0, 40);
+  central.writeUInt32LE(0, 42);
+
+  const eocd = Buffer.alloc(22);
+  eocd.writeUInt32LE(0x06054b50, 0);
+  eocd.writeUInt16LE(0, 4);
+  eocd.writeUInt16LE(0, 6);
+  eocd.writeUInt16LE(1, 8);
+  eocd.writeUInt16LE(1, 10);
+  eocd.writeUInt32LE(46 + name.length, 12);
+  eocd.writeUInt32LE(30 + name.length + data.length, 16);
+  eocd.writeUInt16LE(0, 20);
+
+  return Buffer.concat([local, name, data, central, name, eocd]);
+}
+
 /** Find a site by exact name, or create it. */
 async function ensureSite(name, opts = {}) {
   const tok = token(opts.token);
@@ -92,7 +160,8 @@ async function findSite(name, opts = {}) {
  *
  * @param {string} siteId
  * @param {Map<string,Buffer|string>} files  keys are site-absolute paths, e.g. "/index.html"
- * @param {object} [opts] { token, title, requireNoindex }
+ * @param {object} [opts] { token, title, requireNoindex, functions }
+ *   functions: Map|object of functionName -> zip Buffer
  */
 async function deployFiles(siteId, files, opts = {}) {
   const tok = token(opts.token);
@@ -119,10 +188,33 @@ async function deployFiles(siteId, files, opts = {}) {
   const digests = {};
   for (const [p, b] of buffers) digests[p] = sha1(b);
 
+  const functionZips = opts.functions
+    ? opts.functions instanceof Map
+      ? opts.functions
+      : new Map(Object.entries(opts.functions))
+    : new Map();
+  const functionDigests = {};
+  const zipByName = new Map();
+  const zipBySha = new Map();
+  for (const [name, zip] of functionZips) {
+    const buf = Buffer.isBuffer(zip) ? zip : Buffer.from(zip);
+    const digest = sha1(buf);
+    functionDigests[name] = digest;
+    zipByName.set(name, buf);
+    zipBySha.set(digest, name);
+  }
+
+  const startedBody = {
+    files: digests,
+    draft: opts.draft !== false,
+    title: opts.title || 'prospect previews',
+  };
+  if (Object.keys(functionDigests).length) startedBody.functions = functionDigests;
+
   const started = await api(`/sites/${siteId}/deploys`, {
     method: 'POST',
     tok,
-    body: JSON.stringify({ files: digests, draft: opts.draft !== false, title: opts.title || 'prospect previews' }),
+    body: JSON.stringify(startedBody),
   });
   if (!started.ok) throw new Error(`starting deploy failed: ${started.status} ${started.raw || ''}`);
 
@@ -149,11 +241,38 @@ async function deployFiles(siteId, files, opts = {}) {
     uploaded.push(p);
   }
 
+  const requiredFns = started.body.required_functions || [];
+  const namesToUpload = new Set();
+  for (const item of requiredFns) {
+    if (zipByName.has(item)) namesToUpload.add(item);
+    else if (zipBySha.has(item)) namesToUpload.add(zipBySha.get(item));
+  }
+  if (!requiredFns.length) {
+    for (const name of zipByName.keys()) namesToUpload.add(name);
+  }
+
+  const uploadedFunctions = [];
+  for (const name of namesToUpload) {
+    const zip = zipByName.get(name);
+    if (!zip) continue;
+    const put = await api(`/deploys/${deployId}/functions/${encodeURIComponent(name)}`, {
+      method: 'PUT',
+      tok,
+      body: zip,
+      contentType: 'application/zip',
+      timeoutMs: 120000,
+    });
+    if (!put.ok) throw new Error(`uploading function ${name} failed: ${put.status} ${put.raw || ''}`);
+    uploadedFunctions.push(name);
+  }
+
   return {
     deployId,
     uploaded: uploaded.length,
     alreadyHeld: buffers.size - uploaded.length,
     total: buffers.size,
+    functionsUploaded: uploadedFunctions.length,
+    functionsTotal: zipByName.size,
     state: started.body.state,
     deployUrl: started.body.deploy_ssl_url || started.body.deploy_url || null,
     siteUrl: started.body.ssl_url || started.body.url || null,
@@ -176,4 +295,12 @@ async function waitForDeploy(deployId, opts = {}) {
   return { ok: false, state: last?.state || 'timeout', error: 'timed out waiting for deploy' };
 }
 
-module.exports = { ensureSite, findSite, deployFiles, waitForDeploy, sha1, api };
+module.exports = {
+  ensureSite,
+  findSite,
+  deployFiles,
+  waitForDeploy,
+  sha1,
+  api,
+  zipStoreSingleFile,
+};
