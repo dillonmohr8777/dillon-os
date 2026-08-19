@@ -10,6 +10,7 @@ in the copy. Geography is not narrowed to one city.
 | `wednesday-wisdom.png` | Wednesday Wisdom | A Parenting Plan Needs Real Times |
 | `family-fridays.png` | Family Fridays | Children Should Not Carry Adult Messages |
 | `saturday-solutions.png` | Saturday Solutions | Write Down the Weekend Exchange Plan |
+| `BOK_Law_Weekly_Social_Graphics.pdf` | All three | One 1080×1350 page per graphic |
 
 Feed size is 1080×1350. Rebuild with `python3 render_series.py`.
 

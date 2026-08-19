@@ -368,6 +368,20 @@ def screenshot(html_path: Path, png_path: Path) -> None:
         raise RuntimeError(f"screenshot failed for {html_path.name}")
 
 
+def write_pdf(png_paths: list[Path], pdf_path: Path) -> None:
+    from PIL import Image
+
+    pages = [Image.open(p).convert("RGB") for p in png_paths]
+    pages[0].save(
+        pdf_path,
+        "PDF",
+        save_all=True,
+        append_images=pages[1:],
+        resolution=72.0,
+    )
+    print(f"wrote {pdf_path.name} ({pdf_path.stat().st_size} bytes)")
+
+
 def main() -> None:
     forbidden = [
         "BOWE",
@@ -379,6 +393,7 @@ def main() -> None:
         "LAUREN",
         "PITTSBURGH",
     ]
+    png_paths: list[Path] = []
     for post in POSTS:
         html_path = ROOT / f"{post['slug']}.html"
         png_path = ROOT / f"{post['slug']}.png"
@@ -389,7 +404,9 @@ def main() -> None:
             raise SystemExit(f"Forbidden terms in {post['slug']}: {hits}")
         html_path.write_text(text)
         screenshot(html_path, png_path)
+        png_paths.append(png_path)
         print(f"wrote {png_path.name} ({png_path.stat().st_size} bytes)")
+    write_pdf(png_paths, ROOT / "BOK_Law_Weekly_Social_Graphics.pdf")
 
 
 if __name__ == "__main__":
