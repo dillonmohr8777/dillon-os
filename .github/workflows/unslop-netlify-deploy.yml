@@ -27,6 +27,12 @@ jobs:
         with:
           lfs: false
           fetch-depth: 1
+          # Full clone is a 3.5GB pack. Only the hub payload is needed.
+          sparse-checkout: |
+            automation/prospect-unslop
+            _os/automation
+            02_Campaigns/AI Site Builder Outreach Engine/batches/radar-unslop-20260819
+          sparse-checkout-cone-mode: true
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
