@@ -65,23 +65,24 @@ Do not send it from the Hermes Agent MCC (`703-867-3437`).
    thread `1a01b517fdc49369` and is **not sent**. Send it from the phone
    when ready. Do not use Gmail `update_draft` on this reply — it unthreads.
 
-## Live check 2026-08-19T21:40Z
+## Live check 2026-08-19T21:44Z
 
 Verified from this session, not inferred:
 
 - Gmail invite `1a01bc7a1248dcc5` still has UNREAD, STARRED, INBOX.
 - Jayashree reply is draft `r-2283645929976401799` on thread
   `1a01b517fdc49369`, labels DRAFT only. Nothing new sent to Jayashree.
-- Connected Google Ads OAuth (Dillon) does not include MCC `743-802-1996`,
-  so this environment cannot send the manager-link via API.
-- Google Ads API basic-access quota was exhausted as of 21:32Z (~13 hours).
-  Do not retry Ads API calls until that window ends.
-- This VM's browser hits a Google sign-in wall at ads.google.com. No
-  password or passkey was entered.
+- Ads search is not quota-blocked. `GOOGLEADS_LIST_SUB_ACCOUNTS` on
+  Momentum Ads Manager `7438021996` and GAQL on Hermes MCC `7038673437`
+  and KJB `8145506229` all returned `USER_PERMISSION_DENIED` (needs
+  `login-customer-id`). Extra `login_customer_id` arguments are not
+  forwarded. There is no CustomerClientLink mutate tool.
+- This VM's browser and local Chrome profile are not signed into Google.
+  No password or passkey was entered.
 
 The remaining work is on Dillon's signed-in Google Ads sessions: Accept the
 Read-only invite on the phone, then send the MCC manager-link from Momentum
-Ads Manager on a computer.
+Ads Manager on a computer. Waiting for Ads API quota does not unblock that.
 
 Draft text:
 
