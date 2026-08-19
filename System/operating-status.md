@@ -21,7 +21,7 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 
 ## Current onboarding
 
-- Nexla is a new Momentum 360 Google Ads engagement and is **not** in the 14-client count until the canonical registry includes the route. Read-only invite is sitting unread for CID `791-780-2207`; write access is an MCC manager-link from Momentum, same path as the agencies already on her Managers tab. Admin user-invite is blocked on her passkey — Dillon owns that, do not wait. Jayashree reply is a Gmail draft, not sent. See [[12_Brain/05_Projects/2026-08-19 - Nexla Google Ads onboarding]].
+- Nexla is a new Momentum 360 Google Ads engagement and is **not** in the 14-client count until the canonical registry includes the route. Live check 2026-08-19T21:33Z: Read-only invite for CID `791-780-2207` is still UNREAD (now starred); Jayashree reply is still a Gmail draft, not sent; this environment has no signed-in Ads UI (login wall) and the connected Google Ads API is quota-exhausted for ~13 hours, so the invite and MCC link have to be done on Dillon's phone/computer. See [[12_Brain/05_Projects/2026-08-19 - Nexla Google Ads onboarding]].
 
 ## Current reporting truth
 

@@ -8,7 +8,7 @@ area: paid media
 priority: high
 client: Nexla
 outcome: Dillon has working write access on Nexla Google Ads account 791-780-2207 and can start the three-month lead campaign.
-next_action: Accept the unread Google Ads read-only invite on the phone, then send an MCC manager-link from Momentum to 791-780-2207. Send the Jayashree draft only when ready. Dillon owns the Admin passkey.
+next_action: On the phone, open the starred unread Google Ads invite and Accept for CID 791-780-2207. Then from a signed-in computer, send the Momentum MCC manager-link. Do not send the Jayashree draft until ready. Dillon owns the Admin passkey.
 review_on: 2026-08-20
 source_refs:
   - "[[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads Admin invite]]"
@@ -56,6 +56,18 @@ passkey himself. Do not wait on her Admin invite.
    Managers. She stays owner.
 5. The Jayashree reply is drafted in Gmail (`r-4096301657939887568`) and is
    **not sent**. Send it from the phone when ready.
+
+## Live check 2026-08-19T21:33Z
+
+Verified from this session, not inferred:
+
+- Gmail invite `1a01bc7a1248dcc5` still has UNREAD. Starred so it is easy to tap.
+- Gmail draft `r-4096301657939887568` still on thread `1a01b517fdc49369`. Nothing new sent to Jayashree.
+- Connected Google Ads identity does not yet include CID `791-780-2207`.
+- Google Ads API basic-access quota is exhausted (~13 hours). MCC link cannot be sent via API from here.
+- This VM's browser hits a Google sign-in wall at ads.google.com. No password or passkey was entered.
+
+The remaining work is on Dillon's signed-in Google Ads session: Accept the Read-only invite, then send the MCC manager-link.
 
 Draft text:
 
