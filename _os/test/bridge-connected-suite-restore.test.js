@@ -19,9 +19,8 @@ const {
   resolveMapsFunctionPath,
   validateMapsFunction,
   packageMapsFunction,
-  packageSuiteArchive,
 } = require('../automation/bin/bridge-connected-suite-restore');
-const { zipStoreSingleFile } = require('../automation/lib/netlify');
+const { zipStoreSingleFile, sha1, sha256 } = require('../automation/lib/netlify');
 
 function sampleHome() {
   return `<!doctype html><html lang="en"><head><meta name="robots" content="noindex, nofollow"><title>Bridge | Connected Industry Prototype Suite</title></head><body><a href="/signal">Explore the network</a></body></html>`;
@@ -175,8 +174,10 @@ describe('bridge original suite restore guards', () => {
     validateMapsFunction(source);
     const zip = packageMapsFunction(source);
     assert.equal(MAPS_FUNCTION_NAME, 'google-maps-loader');
-    assert.ok(zip.includes(Buffer.from('google-maps-loader.js')));
+    assert.ok(zip.includes(Buffer.from('index.js')));
     assert.ok(zip.includes(Buffer.from('maps3d')));
+    assert.equal(sha256(zip).length, 64);
+    assert.notEqual(sha256(zip), sha1(zip));
   });
 
   it('refuses a maps function that does not keep the key server-side', () => {
@@ -195,15 +196,10 @@ describe('bridge original suite restore guards', () => {
     assert.ok(zip.includes(Buffer.from('google-maps-loader.js')));
   });
 
-  it('packages a Netlify zip with site files and the Maps function', () => {
-    const source = [
-      "const key = process.env.GOOGLE_MAPS_BROWSER_KEY;",
-      "callback: 'initBridgeSignal3DMap',",
-      "libraries: 'maps3d',",
-    ].join('\n');
-    const zip = packageSuiteArchive(fixtureMap(), source);
-    assert.ok(zip.includes(Buffer.from('netlify.toml')));
-    assert.ok(zip.includes(Buffer.from('google-maps-loader.js')));
-    assert.ok(zip.includes(Buffer.from('index.html')));
+  it('hashes function zips with SHA256, not SHA1', () => {
+    const zip = zipStoreSingleFile('index.js', 'exports.handler = async () => ({ statusCode: 200 });');
+    assert.equal(sha1(zip).length, 40);
+    assert.equal(sha256(zip).length, 64);
+    assert.notEqual(sha1(zip), sha256(zip));
   });
 });

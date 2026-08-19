@@ -62,6 +62,7 @@ async function api(pathname, { method = 'GET', body = null, tok, contentType = '
 }
 
 const sha1 = (buf) => crypto.createHash('sha1').update(buf).digest('hex');
+const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 
 function dosDateTime(date = new Date()) {
   const t =
@@ -198,10 +199,12 @@ async function deployFiles(siteId, files, opts = {}) {
   const zipBySha = new Map();
   for (const [name, zip] of functionZips) {
     const buf = Buffer.isBuffer(zip) ? zip : Buffer.from(zip);
-    const digest = sha1(buf);
+    // Netlify hashes site files with SHA1 and function zips with SHA256.
+    const digest = sha256(buf);
     functionDigests[name] = digest;
     zipByName.set(name, buf);
     zipBySha.set(digest, name);
+    zipBySha.set(sha1(buf), name);
   }
 
   const startedBody = {
@@ -226,21 +229,8 @@ async function deployFiles(siteId, files, opts = {}) {
     if (!bySha.has(s)) bySha.set(s, p);
   }
 
-  const uploaded = [];
-  for (const shaNeeded of required) {
-    const p = bySha.get(shaNeeded);
-    if (!p) continue;
-    const put = await api(`/deploys/${deployId}/files${p}`, {
-      method: 'PUT',
-      tok,
-      body: buffers.get(p),
-      contentType: 'application/octet-stream',
-      timeoutMs: 120000,
-    });
-    if (!put.ok) throw new Error(`uploading ${p} failed: ${put.status} ${put.raw || ''}`);
-    uploaded.push(p);
-  }
-
+  // Upload functions before files. File PUTs can finalize the deploy; a later
+  // function PUT then 400s with "Deploy has already been finalized."
   const requiredFns = started.body.required_functions || [];
   const namesToUpload = new Set();
   for (const item of requiredFns) {
@@ -255,21 +245,39 @@ async function deployFiles(siteId, files, opts = {}) {
   for (const name of namesToUpload) {
     const zip = zipByName.get(name);
     if (!zip) continue;
-    const put = await api(`/deploys/${deployId}/functions/${encodeURIComponent(name)}`, {
-      method: 'PUT',
-      tok,
-      body: zip,
-      contentType: 'application/zip',
-      timeoutMs: 120000,
-    });
+    const put = await api(
+      `/deploys/${deployId}/functions/${encodeURIComponent(name)}?runtime=js&size=${zip.length}`,
+      {
+        method: 'PUT',
+        tok,
+        body: zip,
+        contentType: 'application/zip',
+        timeoutMs: 120000,
+      },
+    );
     if (!put.ok) {
       const detail =
-        (put.body && (put.body.message || put.body.error || put.body.code)) ||
+        (put.body && (put.body.message || put.body.error || put.body.errors || put.body.code)) ||
         put.raw ||
         '';
       throw new Error(`uploading function ${name} failed: ${put.status} ${String(detail).slice(0, 180)}`);
     }
     uploadedFunctions.push(name);
+  }
+
+  const uploaded = [];
+  for (const shaNeeded of required) {
+    const p = bySha.get(shaNeeded);
+    if (!p) continue;
+    const put = await api(`/deploys/${deployId}/files${p}`, {
+      method: 'PUT',
+      tok,
+      body: buffers.get(p),
+      contentType: 'application/octet-stream',
+      timeoutMs: 120000,
+    });
+    if (!put.ok) throw new Error(`uploading ${p} failed: ${put.status} ${put.raw || ''}`);
+    uploaded.push(p);
   }
 
   return {
@@ -338,6 +346,7 @@ module.exports = {
   deployFiles,
   waitForDeploy,
   sha1,
+  sha256,
   api,
   zipStoreSingleFile,
   deployZipArchive,

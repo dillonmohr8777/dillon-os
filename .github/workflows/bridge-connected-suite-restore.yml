@@ -76,16 +76,32 @@ jobs:
             });
           '
 
-      - name: Probe Maps loader status without following redirects
+      - name: Probe home, Explore, and Maps loader without following redirects
         run: |
           python3 - <<'PY'
           import http.client
-          conn = http.client.HTTPSConnection("bridge-connected-signal.netlify.app", timeout=30)
-          conn.request("GET", "/.netlify/functions/google-maps-loader")
-          res = conn.getresponse()
-          print(f"maps_loader_status={res.status}")
-          res.read()
-          conn.close()
+
+          def status(path):
+              conn = http.client.HTTPSConnection("bridge-connected-signal.netlify.app", timeout=30)
+              conn.request("GET", path)
+              res = conn.getresponse()
+              code = res.status
+              res.read()
+              conn.close()
+              return code
+
+          home = status("/")
+          signal = status("/signal/")
+          nested = status("/site/index.html")
+          maps = status("/.netlify/functions/google-maps-loader")
+          print(f"home_status={home}")
+          print(f"signal_status={signal}")
+          print(f"nested_site_status={nested}")
+          print(f"maps_loader_status={maps}")
+          if home != 200 or signal != 200:
+              raise SystemExit("original suite is not at site root")
+          if nested == 200 and home != 200:
+              raise SystemExit("suite is nested under /site/; zip-root deploy leaked")
           PY
 
       - name: Restore Maps browser key onto the pinned site if the function is live but unconfigured

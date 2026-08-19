@@ -19,7 +19,10 @@
  *
  * Never creates a site. Never binds an API origin. Never deploys Trusted Current
  * or the Next.js restyle. Also deploys `google-maps-loader` from
- * `latest-signal-app/netlify/functions/`. Purges CDN after production ready.
+ * `latest-signal-app/netlify/functions/` via digest + function zip (SHA256,
+ * runtime=js). Do not zip-deploy a `site/` folder — the zip API publishes the
+ * zip root as static files and ignores netlify.toml publish. Purges CDN after
+ * production ready.
  */
 'use strict';
 
@@ -27,7 +30,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { execFileSync } = require('child_process');
-const { deployFiles, waitForDeploy, zipStoreSingleFile, api, deployZipArchive } = require('../lib/netlify');
+const { deployFiles, waitForDeploy, zipStoreSingleFile, api } = require('../lib/netlify');
 const {
   SITE_NAME,
   EXPECTED_HOST,
@@ -190,41 +193,18 @@ function validateMapsFunction(source) {
 function packageMapsFunction(source) {
   validateMapsFunction(source);
   const staging = fs.mkdtempSync(path.join(os.tmpdir(), 'bridge-maps-fn-'));
-  const jsPath = path.join(staging, MAPS_FUNCTION_FILE);
+  // zip-it-and-ship-it layout: handler as index.js inside the function zip.
+  const jsPath = path.join(staging, 'index.js');
   const zipPath = path.join(staging, `${MAPS_FUNCTION_NAME}.zip`);
   fs.writeFileSync(jsPath, source);
   try {
     execFileSync('zip', ['-j', '-q', '-X', zipPath, jsPath], { stdio: 'pipe' });
     return fs.readFileSync(zipPath);
   } catch {
-    return zipStoreSingleFile(MAPS_FUNCTION_FILE, source);
+    return zipStoreSingleFile('index.js', source);
   } finally {
     fs.rmSync(staging, { recursive: true, force: true });
   }
-}
-
-function packageSuiteArchive(files, mapsSource) {
-  validateMapsFunction(mapsSource);
-  const staging = fs.mkdtempSync(path.join(os.tmpdir(), 'bridge-suite-zip-'));
-  const siteRoot = path.join(staging, 'site');
-  fs.mkdirSync(siteRoot, { recursive: true });
-  for (const [rel, buf] of files) {
-    const dest = path.join(siteRoot, String(rel).replace(/^\//, ''));
-    fs.mkdirSync(path.dirname(dest), { recursive: true });
-    fs.writeFileSync(dest, buf);
-  }
-  const fnDir = path.join(staging, 'netlify', 'functions');
-  fs.mkdirSync(fnDir, { recursive: true });
-  fs.writeFileSync(path.join(fnDir, MAPS_FUNCTION_FILE), mapsSource);
-  fs.writeFileSync(
-    path.join(staging, 'netlify.toml'),
-    '[build]\n  publish = "site"\n\n[functions]\n  directory = "netlify/functions"\n',
-  );
-  const zipPath = path.join(staging, 'deploy.zip');
-  execFileSync('zip', ['-r', '-q', '-X', zipPath, 'site', 'netlify', 'netlify.toml'], { cwd: staging });
-  const zip = fs.readFileSync(zipPath);
-  fs.rmSync(staging, { recursive: true, force: true });
-  return zip;
 }
 
 /** Env var names only. Never returns or logs values. */
@@ -263,7 +243,7 @@ async function main() {
   const summary = validateSuite(files);
   const mapsPath = resolveMapsFunctionPath(args.dir);
   const mapsSource = fs.readFileSync(mapsPath);
-  const archive = packageSuiteArchive(files, mapsSource);
+  const mapsZip = packageMapsFunction(mapsSource);
   console.log(
     `validated original suite ${summary.files} files (${summary.html} html) plus ${MAPS_FUNCTION_NAME} for ${SITE_NAME} (${EXPECTED_HOST})`,
   );
@@ -276,18 +256,13 @@ async function main() {
   const site = await resolvePinnedSite();
   console.log(`pinned site ${site.name} ${site.url}`);
   const sha = process.env.BRIDGE_SOURCE_SHA || 'local';
+  const title = `Connected Industry Prototype Suite ${sha}`;
   let dep;
   try {
-    dep = await deployZipArchive(site.id, archive, {
-      title: `Connected Industry Prototype Suite ${sha}`,
-      draft: false,
-    });
-    console.log(`zip deploy ${dep.deployId} ${dep.uploaded} bytes`);
-  } catch (err) {
-    const mapsZip = packageMapsFunction(mapsSource);
-    console.log(`zip deploy failed (${err.message}); falling back to digest plus function zip`);
+    // Digest deploy only. A zip of site/ + netlify.toml publishes the zip root
+    // as static files, so `/` 404s and the suite lands under `/site/`.
     dep = await deployFiles(site.id, files, {
-      title: `Connected Industry Prototype Suite ${sha}`,
+      title,
       draft: false,
       requireNoindex: true,
       functions: { [MAPS_FUNCTION_NAME]: mapsZip },
@@ -295,6 +270,20 @@ async function main() {
     console.log(
       `deploy ${dep.deployId} uploaded ${dep.uploaded}/${dep.total} files, ${dep.functionsUploaded}/${dep.functionsTotal} functions`,
     );
+  } catch (err) {
+    console.log(`maps function deploy failed (${err.message}); restoring static suite at site root`);
+    dep = await deployFiles(site.id, files, {
+      title,
+      draft: false,
+      requireNoindex: true,
+    });
+    console.log(`deploy ${dep.deployId} uploaded ${dep.uploaded}/${dep.total} files`);
+    const waitedFallback = await waitForDeploy(dep.deployId, { timeoutMs: 180000 });
+    if (!waitedFallback.ok) {
+      throw new Error(`static restore also failed: ${waitedFallback.state} ${waitedFallback.error || ''}`);
+    }
+    await purgeSiteCache(site);
+    throw new Error(`static suite restored but maps function failed: ${err.message}`);
   }
   const waited = await waitForDeploy(dep.deployId, { timeoutMs: 180000 });
   if (!waited.ok) throw new Error(`deploy did not go live: ${waited.state} ${waited.error || ''}`);
@@ -316,7 +305,6 @@ module.exports = {
   resolveMapsFunctionPath,
   validateMapsFunction,
   packageMapsFunction,
-  packageSuiteArchive,
   listSiteEnvKeys,
   htmlTag,
   parseArgs,
