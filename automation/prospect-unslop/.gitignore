@@ -1,0 +1,7 @@
+harvest/
+mirror/
+*.log
+__pycache__/
+needs-gen.json
+tmp/
+node_modules/
