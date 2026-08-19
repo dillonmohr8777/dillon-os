@@ -2,7 +2,7 @@
 date: 2026-08-19
 project: Bridge Software Development
 type: session
-status: completed-phase3-slice
+status: completed-connected-purple-restore
 tags: [session, bridge-software, nextjs, phase3]
 ---
 
@@ -10,33 +10,32 @@ tags: [session, bridge-software, nextjs, phase3]
 
 ## Session outcome
 
-Opened Phase 3 in the canonical frontend repo. `/create` and `/my-profile` now run the Promotion + protected-profile slice against typed claims, upload, post, and projection adapters.
+Restored Connected purple on the same Phase 1/2 five-route product. Draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 now defaults to Modern Network (ink, electric violet, coral) and keeps Home, Community News, Create, My Profile, Explore, legacy redirects, and Phase 1 directory/join/profile/dashboard/admin.
 
-Draft PR: https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6
-
-Dillon instructed: do not push anything to Slack or to the client. No channel post, no Tori/Melissa email, no Netlify update.
+Dillon instructed: do not push anything to Slack or to the client. No channel post, no Tori/Melissa email. Live Netlify stays teal until he republishes from this PR.
 
 ## Evidence used
 
-- Slack `#bridge-software-development` from 2026-08-11 through 2026-08-17 (read-only)
-- `docs/phase2/04-phased-backlog-and-decisions.md` Phase 3 definition
+- Operator message to restore the old purple with Tori-instituted Phase 1/2 integrations
+- 2026-08-16 Phase 2 Milestone 2 actual-work report inventory
 - Live repo `dillonmohr8777/bridge-discovery-prototype`
 - Operator hold: [[../../12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send]]
+- Restore capture: [[../../12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product]]
 
 ## What changed
 
-- Added `lib/phase3/` contract, mock adapter, HTTP client, and tests
-- Wired Create and My Profile to session, permission, pending, error, and success states
-- Opened draft PR #6 on the prototype repo
-- Recorded the slice and the comms hold in Dillon OS notes
+- Default theme is Modern Network; unified host script forces `data-theme="network"`
+- Phase 3 Create / My Profile frontend lock remains on this app
+- Draft PR #6 title/body updated; still draft
+- Vault decision recorded: unified review stays Connected purple
 
 ## Verification
 
-- `npm run test:phase3` — 8 passed
+- `npm run test:phase3` — 20 passed
 - `npm run typecheck` — passed
 - `npm run lint` — passed
-- `npm run build` — passed, `/create` and `/my-profile` in the route table
-- Local `http://127.0.0.1:3001/create` and `/my-profile` return 200 with Phase 3 slice copy
+- Local `http://localhost:3001/` five-route UI in Connected purple, Create and My Profile hydrated
+- Live `https://bridge-connected-signal.netlify.app` still Trusted Current until republish
 
 ## Not done
 

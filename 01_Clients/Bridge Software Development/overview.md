@@ -8,7 +8,7 @@ github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
 updated: 2026-08-19
 last_touched: 2026-08-19
-next_action: Review draft PR #6 internally. Do not Slack, email the client, or update Netlify.
+next_action: Review draft PR #6 internally. Republish the unified URL to Connected purple only when Dillon asks. Do not Slack, email the client, or bind a live API.
 due: 2026-08-22
 ---
 
@@ -30,7 +30,7 @@ due: 2026-08-22
 
 ## Current phase
 
-**Phase 3 is open.** Phase 2's five-route Trusted Current frontend is technically complete. The current slice is targeted Promotion create plus protected profile projection.
+**Phase 3 frontend lock is in draft PR #6.** Phase 2's five-route product stays instituted. The review visual is Connected purple (Modern Network), not Trusted Current navy/teal.
 
 | Layer | Status |
 |---|---|
@@ -39,7 +39,7 @@ due: 2026-08-22
 | Tori route-by-route written boxes | Still pending; does not stall this slice |
 | Miraj Milestone 2 | Self-reported done, tests remaining as of 2026-08-17 |
 | Live `/api/v1` bind | Blocked on inspectable staging origin |
-| Unified Netlify update | Held. Dillon said no Slack and no client send. |
+| Unified Netlify update | Held. Republish from PR #6 as Connected purple only when Dillon asks. Live URL is still Trusted Current. |
 | Slack / client comms | Held until Dillon asks |
 
 Out of slice without a written change order: expanded ecosystem directory, algorithmic ranking, subscriptions/payments, in-platform ordering.
@@ -78,7 +78,11 @@ This is a hypothesis for Tori to approve, not final public copy.
 
 The discovery prototype is implemented and verified. Routes:
 
-- `/` — landing/value proposition
+- `/` — Home
+- `/community` — Community News (News Grid + Classic)
+- `/create` — Create / targeted Promotion
+- `/my-profile` — Public vs verified-business profile
+- `/explore` — search, filters, favorites, introductions
 - `/directory` — working search, role, and verification filters
 - `/join` — role-selection onboarding direction
 - `/profile/cascade-canna` — member profile and permission-based contact request
@@ -86,6 +90,8 @@ The discovery prototype is implemented and verified. Routes:
 - `/admin/verification` — admin verification queue with responsive mobile cards
 - `/directions` — three switchable visual directions
 - `/design-system` — provisional design tokens, typography, controls, states, and voice principles
+
+Legacy redirects remain instituted: `/studio` → Create, `/business` → My Profile, `/signal` → Explore.
 
 The prototype uses fictional profiles and metrics. It has no production backend, authentication, persistence, outbound email, or real license verification.
 
@@ -95,15 +101,15 @@ No approved Bridge logo, color palette, font system, or downloadable Tori protot
 
 The green/gold proposal styling is Momentum presentation branding, not Bridge branding.
 
-Default provisional direction: **Trusted Current**
+Default provisional direction for the unified review URL: **Modern Network (Connected)**
 
-- Navy `#12324A`
-- Teal `#0A766E`
-- Amber `#D9820F`
-- Canvas `#F5F8F7`
-- Primary text `#14232E`
+- Ink `#17152D`
+- Electric violet `#6556E8`
+- Coral `#D95848`
+- Canvas `#F7F6FB`
+- Primary text `#1D1A32`
 
-Alternates: Modern Network and Botanical Ledger. All require Tori's approval.
+Trusted Current navy/teal remains an alternate at `https://bridge-preview-current.netlify.app`. Tori still owns formal brand acceptance.
 
 ## Monday/Tori meeting objective
 
@@ -132,11 +138,13 @@ Leave with decisions on:
 - [[../../10_Sessions/Bridge Software Development - 2026-08-19|2026-08-19 Phase 3 session]]
 - [[../../12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Phase 3 project]]
 - [[../../12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open|Phase 3 slice decision]]
+- [[../../12_Brain/04_Decisions/2026-08-19 - Bridge unified review stays Connected purple|Connected purple review decision]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send|Comms hold]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product|Restore Connected purple capture]]
 
 ## Immediate next action
 
-Review draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 internally. Do not post to Slack, email Tori or Melissa, or update the unified Netlify URL. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
+Review draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 internally. Do not post to Slack or email Tori or Melissa. Republish https://bridge-connected-signal.netlify.app from that PR as Connected purple only when Dillon asks. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
 
 ## Communication intelligence - 2026-08-01
 
