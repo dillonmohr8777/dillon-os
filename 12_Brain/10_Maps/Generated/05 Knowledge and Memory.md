@@ -26,6 +26,7 @@ Concepts, decisions, projects, research, reviews, memory, and brain operations.
 - [[12_Brain/01_Captures/2026-07-30 - Dillon operating goals and revenue-first delegation|2026-07-30 - Dillon operating goals and revenue-first delegation]]
 - [[12_Brain/01_Captures/2026-08-15 - Chase AI Obsidian command center|2026-08-15 - Chase AI Obsidian command center]]
 - [[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads Admin invite|2026-08-19 - Nexla Google Ads Admin invite]]
+- [[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads read-only and manager path|2026-08-19 - Nexla Google Ads read-only and manager path]]
 - [[12_Brain/01_Captures/Communications/2026-08-01 - daily-communications-comms-2026-08-01-initial-1603|2026-08-01 - daily-communications-comms-2026-08-01-initial-1603]]
 - [[12_Brain/01_Captures/Communications/2026-08-05 - daily-communications-comms-2026-08-05-day-1|2026-08-05 - daily-communications-comms-2026-08-05-day-1]]
 - [[12_Brain/01_Captures/Communications/2026-08-08 - daily-communications-comms-2026-08-08-blocked-1|2026-08-08 - daily-communications-comms-2026-08-08-blocked-1]]

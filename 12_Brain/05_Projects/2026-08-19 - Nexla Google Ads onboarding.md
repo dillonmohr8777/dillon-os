@@ -1,18 +1,20 @@
 ---
 note_type: project
-status: waiting
+status: active
 created: 2026-08-19
 updated: 2026-08-19
 owner: Dillon Mohr
 area: paid media
 priority: high
 client: Nexla
-outcome: Dillon has Admin access on Nexla Google Ads account 791-780-2207 and can start the three-month lead campaign.
-next_action: Accept the Google Ads Admin invite from the phone as soon as Jayashree sends it, then live-verify the account opens.
+outcome: Dillon has working write access on Nexla Google Ads account 791-780-2207 and can start the three-month lead campaign.
+next_action: Accept the unread Google Ads read-only invite on the phone, then send an MCC manager-link from Momentum to 791-780-2207. Send the Jayashree draft only when ready. Dillon owns the Admin passkey.
 review_on: 2026-08-20
 source_refs:
   - "[[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads Admin invite]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads read-only and manager path]]"
   - "gmail://thread/1a01b517fdc49369"
+  - "gmail://draft/r-4096301657939887568"
 tags:
   - brain
   - project
@@ -28,24 +30,51 @@ Nexla is a new Momentum 360 Google Ads engagement. Access is the blocker.
 Do not add Nexla to the canonical 14-client roster until the client-operations
 registry includes the route.
 
+Google Ads has no Meta Business Manager. Two different grants exist:
+
+| Tab | What it is | Who starts it |
+|---|---|---|
+| Users | Email invite: Admin / Standard / Read-only | Client adds the email |
+| Managers | MCC manager-link | The manager account sends; client accepts |
+
+Jayashree’s Admin user-invite hit a passkey wall (1–2 days to attach). She
+sent read-only instead. The screenshot she called BM is Managers: Coralie
+Wood, Octabrain, and Select are already linked that way. Dillon handles the
+passkey himself. Do not wait on her Admin invite.
+
 ## Access path that is in motion
 
-Jayashree can grant access without a call by inviting
-`dillonmohr8777@gmail.com` as **Admin** on customer ID `791-780-2207`:
+1. Accept the unread Google Ads invitation (Read-only, CID `791-780-2207`,
+   account name Nexla) from Dillon’s own Ads session. Do not open the
+   accept link from a cloud VM.
+2. Read-only is enough to review and pull reports. It is not enough to
+   build or change campaigns.
+3. From Momentum’s Google Ads manager account, send a manager-link request
+   to customer ID `791-780-2207`. Same method Coralie / Octabrain / Select
+   used. There is no + on the client Managers tab.
+4. Jayashree accepts the pending manager under Admin → Access and security →
+   Managers. She stays owner.
+5. The Jayashree reply is drafted in Gmail (`r-4096301657939887568`) and is
+   **not sent**. Send it from the phone when ready.
 
-1. ads.google.com → Admin → Access and security
-2. Users tab → +
-3. Email: `dillonmohr8777@gmail.com`
-4. Access level: Admin
-5. Send invitation
+Draft text:
 
-That is the Google Ads equivalent of what Sean called BM. Meta Business Manager
-language does not apply here. A HubSpot onboarding form does not grant Ads
-access. An MCC manager-link can wait until Dillon is back at a computer.
+> Hi Jayashree,
+>
+> Read-only is enough to get started. I'll accept that invite and begin reviewing the account.
+>
+> I'll handle the Admin passkey on my side — no need to wait on that. What you're seeing as Business Manager is a linked manager account — the Managers tab in your screenshot (Coralie Wood, Octabrain, Select). That's how the current agency got in: they sent a request from their manager account, and you approved it. There isn't a + button on that tab because the request has to come from our side.
+>
+> I'll send that same manager request from our account. When it shows up under Admin → Access and security → Managers, just accept it. You stay the owner.
+>
+> Thanks,
+> Dillon
 
 ## Finish line
 
-- [ ] Admin invite received
-- [ ] Invite accepted
-- [ ] Live account open confirmed
+- [ ] Read-only invite accepted
+- [ ] Live read of CID `791-780-2207` confirmed
+- [ ] MCC manager-link sent from Momentum
+- [ ] Jayashree accepted the manager-link
+- [ ] Write access confirmed
 - [ ] Canonical client record created only after registry confirmation

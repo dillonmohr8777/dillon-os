@@ -8,6 +8,7 @@ created: 2026-07-04
 source_refs:
   - "[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]"
   - "[[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads Admin invite]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads read-only and manager path]]"
 ---
 
 
@@ -19,7 +20,8 @@ source_refs:
 - Search Gmail, Slack, and shared Docs first for login handoffs; **old notes are not passwords**.
 - Platform-adjacent access is not platform access: Squarespace ≠ Boulevard admin; booking-integration code ≠ dashboard access; a partial login snippet (Revive/poptheagency) ≠ confirmed access.
 - Google Ads corollary: missing campaign visibility is usually an **Ads-access or Chrome-attachment issue, not Search Console** (proven on Omega, May 2026). If a live read is blocked, don't guess counts — ask for reauth or explicit read-only browser approval.
-- Google Ads has no Business Manager. That term is Meta. When a client is ready to grant access and the operator is away from a computer, the simplest path is **invite the operator email as Admin** under Admin → Access and security → Users. An onboarding form is not Ads access. An MCC manager-link can wait. Proven on Nexla, 2026-08-19, customer ID `791-780-2207`.
+- Google Ads has no Business Manager. That term is Meta. Two grants, two tabs: **Users** is an email invite (Admin / Standard / Read-only); **Managers** is an MCC link initiated by the manager account, not a + on the client tab. An onboarding form is not Ads access.
+- Admin on Users can require the **client** to enroll a passkey before the invite will send (Jayashree on Nexla, 2026-08-19: 1–2 days to attach; she sent Read-only instead). Do not wait on that. If existing agencies already show on Managers (Nexla: Coralie Wood `410-914-2068`, Octabrain `303-439-8000`, Select `638-757-0272`, all Owner: No), send the same manager-link from the operator MCC to the customer ID. The client only accepts. Read-only is review/reporting, not campaign write access. Proven on Nexla CID `791-780-2207`.
 - Never copy credentials, OAuth files, cookies, browser profiles, or `.env` files into transfer docs — index where sensitive state lives instead.
 
 ## Links
