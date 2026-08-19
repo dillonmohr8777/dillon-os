@@ -52,19 +52,11 @@
       "ok": true
     },
     {
-      "check": "enough-sections",
-      "ok": true
-    },
-    {
       "check": "reduced-motion",
       "ok": true
     },
     {
       "check": "no-webgl-required",
-      "ok": true
-    },
-    {
-      "check": "unique-collages",
       "ok": true
     },
     {
@@ -77,6 +69,54 @@
     },
     {
       "check": "no-em-dash",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "cinematic",
+      "ok": true
+    },
+    {
+      "check": "moments",
+      "ok": true
+    },
+    {
+      "check": "story-body-photo",
+      "ok": true
+    },
+    {
+      "check": "feature-body-photo",
+      "ok": true
+    },
+    {
+      "check": "hero-only-swipe",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
+      "check": "collage-6.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-7.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-8.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-9.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-10.webp",
       "ok": true
     }
   ],
@@ -94,9 +134,15 @@
     "7e436e4baa2eed6431e0a4c6020581a80a885338a389a436d1713bd9c4551eb5",
     "c1ada35c2f5c0ae2c9cfba0412164a9a8f1a832981e7ae07e71966778f9727a0",
     "26b23f25ec4433d77800fc8c0c7ea22f8482a3fd79c4de590fb46bf34ce7c796",
-    "3103cb4310365bb0d72b86fa2960a993f4cecac5ea019da7b0ba88d9c9f0dc4d"
+    "3103cb4310365bb0d72b86fa2960a993f4cecac5ea019da7b0ba88d9c9f0dc4d",
+    "6f59339ff2b04de95a9b547e6e312fdb14572e94a6d3a802fbd610ecc8376e2c",
+    "3bc0cdfed81fbd1e5d5a0f37c7af9330f8623dbc626f9d3a1b552e683bb76492",
+    "49c74eecdcdb572a31da8fd1740a2fe62077d93116ca4ef7c9d7c0d23d86c59d",
+    "e3837548db1ca7619e4eb3d584e32f13372bb3422f44ac71ea8fb30deb08581f",
+    "c14f0cd9f08863c7c2f75b557eb456d71a24f70ece98c9b21fde0bce36f28623"
   ],
   "copyWords": 405,
   "treatedPrint": true,
-  "printPass": "v1"
+  "printPass": "v1",
+  "bodyPass": "v1"
 }

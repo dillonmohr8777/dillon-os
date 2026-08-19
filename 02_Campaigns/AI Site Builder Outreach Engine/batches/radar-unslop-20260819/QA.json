@@ -10,6 +10,8 @@
   "thinLayout": 0,
   "thinCopy": 0,
   "untreated": 0,
+  "missingBody": 0,
+  "heroReuse": 0,
   "details": {
     "ready": [
       {
@@ -19,9 +21,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 22718,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 358
+        "copyWords": 358,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 2,
@@ -30,9 +34,11 @@
         "mode": "food",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 380
+        "copyWords": 380,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 3,
@@ -41,9 +47,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 6131,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 339
+        "copyWords": 339,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 4,
@@ -52,9 +60,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 341
+        "copyWords": 341,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 5,
@@ -63,9 +73,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 336
+        "copyWords": 336,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 6,
@@ -74,9 +86,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 4391,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 475
+        "copyWords": 475,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 7,
@@ -85,9 +99,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 350
+        "copyWords": 350,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 8,
@@ -96,9 +112,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 75392,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 421
+        "copyWords": 421,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 9,
@@ -107,9 +125,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 20727,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 356
+        "copyWords": 356,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 10,
@@ -118,9 +138,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 7717,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 362
+        "copyWords": 362,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 11,
@@ -129,9 +151,11 @@
         "mode": "food",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 378
+        "copyWords": 378,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 12,
@@ -140,9 +164,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 330
+        "copyWords": 330,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 13,
@@ -151,9 +177,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 312
+        "copyWords": 312,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 14,
@@ -162,9 +190,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 9899,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 313
+        "copyWords": 313,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 15,
@@ -173,9 +203,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 99165,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 361
+        "copyWords": 361,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 16,
@@ -184,9 +216,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 360
+        "copyWords": 360,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 17,
@@ -195,9 +229,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 9758,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 321
+        "copyWords": 321,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 18,
@@ -206,9 +242,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 357
+        "copyWords": 357,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 19,
@@ -217,9 +255,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 311
+        "copyWords": 311,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 20,
@@ -228,9 +268,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 6131,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 349
+        "copyWords": 349,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 21,
@@ -239,9 +281,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 341
+        "copyWords": 341,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 22,
@@ -250,9 +294,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 321
+        "copyWords": 321,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 24,
@@ -261,9 +307,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 6734,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 363
+        "copyWords": 363,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 25,
@@ -272,9 +320,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 7447,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 398
+        "copyWords": 398,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 26,
@@ -283,9 +333,11 @@
         "mode": "food",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 377
+        "copyWords": 377,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 27,
@@ -294,9 +346,11 @@
         "mode": "food",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 357
+        "copyWords": 357,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 28,
@@ -305,9 +359,11 @@
         "mode": "food",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 382
+        "copyWords": 382,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 29,
@@ -316,9 +372,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 354
+        "copyWords": 354,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 30,
@@ -327,9 +385,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 17542,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 481
+        "copyWords": 481,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 31,
@@ -338,9 +398,11 @@
         "mode": "food",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 384
+        "copyWords": 384,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 32,
@@ -349,9 +411,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 22774,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 458
+        "copyWords": 458,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 33,
@@ -360,9 +424,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 21484,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 520
+        "copyWords": 520,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 34,
@@ -371,9 +437,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 6845,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 334
+        "copyWords": 334,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 35,
@@ -382,9 +450,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 110817,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 391
+        "copyWords": 391,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 36,
@@ -393,9 +463,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 58048,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 339
+        "copyWords": 339,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 37,
@@ -404,9 +476,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 336
+        "copyWords": 336,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 38,
@@ -415,9 +489,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 38581,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 312
+        "copyWords": 312,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 39,
@@ -426,9 +502,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 9747,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 355
+        "copyWords": 355,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 40,
@@ -437,9 +515,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 350
+        "copyWords": 350,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 41,
@@ -448,9 +528,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 5445,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 302
+        "copyWords": 302,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 43,
@@ -459,9 +541,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 124368,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 440
+        "copyWords": 440,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 44,
@@ -470,9 +554,11 @@
         "mode": "food",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 378
+        "copyWords": 378,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 45,
@@ -481,9 +567,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 10825,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 368
+        "copyWords": 368,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 46,
@@ -492,9 +580,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 5733,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 334
+        "copyWords": 334,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 47,
@@ -503,9 +593,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 11268,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 474
+        "copyWords": 474,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 48,
@@ -514,9 +606,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 361
+        "copyWords": 361,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 49,
@@ -525,9 +619,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 3476,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 326
+        "copyWords": 326,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 50,
@@ -536,9 +632,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 343
+        "copyWords": 343,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 51,
@@ -547,9 +645,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 342
+        "copyWords": 342,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 52,
@@ -558,9 +658,11 @@
         "mode": "food",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 383
+        "copyWords": 383,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 53,
@@ -569,9 +671,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 22170,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 515
+        "copyWords": 515,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 54,
@@ -580,9 +684,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 362
+        "copyWords": 362,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 55,
@@ -591,9 +697,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 326
+        "copyWords": 326,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 56,
@@ -602,9 +710,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 344
+        "copyWords": 344,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 57,
@@ -613,9 +723,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 1064,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 290
+        "copyWords": 290,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 58,
@@ -624,9 +736,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 356
+        "copyWords": 356,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 59,
@@ -635,9 +749,11 @@
         "mode": "food",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 387
+        "copyWords": 387,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 60,
@@ -646,9 +762,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 331
+        "copyWords": 331,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 61,
@@ -657,9 +775,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 8821,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 456
+        "copyWords": 456,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 62,
@@ -668,9 +788,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 40387,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 387
+        "copyWords": 387,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 63,
@@ -679,9 +801,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 350
+        "copyWords": 350,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 64,
@@ -690,9 +814,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 13937,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 328
+        "copyWords": 328,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 65,
@@ -701,9 +827,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 3575,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 415
+        "copyWords": 415,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 66,
@@ -712,9 +840,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 55041,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 446
+        "copyWords": 446,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 67,
@@ -723,9 +853,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 7727,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 352
+        "copyWords": 352,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 68,
@@ -734,9 +866,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 35145,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 341
+        "copyWords": 341,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 69,
@@ -745,9 +879,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 7660,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 354
+        "copyWords": 354,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 70,
@@ -756,9 +892,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 7542,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 309
+        "copyWords": 309,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 71,
@@ -767,9 +905,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 16473,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 382
+        "copyWords": 382,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 72,
@@ -778,9 +918,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 25334,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 325
+        "copyWords": 325,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 73,
@@ -789,9 +931,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 21813,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 345
+        "copyWords": 345,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 74,
@@ -800,9 +944,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 21006,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 323
+        "copyWords": 323,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 75,
@@ -811,9 +957,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 21215,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 294
+        "copyWords": 294,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 76,
@@ -822,9 +970,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 20228,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 347
+        "copyWords": 347,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 77,
@@ -833,9 +983,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 3170,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 328
+        "copyWords": 328,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 78,
@@ -844,9 +996,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 7038,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 346
+        "copyWords": 346,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 79,
@@ -855,9 +1009,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 39721,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 326
+        "copyWords": 326,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 80,
@@ -866,9 +1022,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 21736,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 362
+        "copyWords": 362,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 81,
@@ -877,9 +1035,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 25425,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 305
+        "copyWords": 305,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 82,
@@ -888,9 +1048,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 310786,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 309
+        "copyWords": 309,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 83,
@@ -899,9 +1061,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 60598,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 460
+        "copyWords": 460,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 84,
@@ -910,9 +1074,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 18759,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 422
+        "copyWords": 422,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 85,
@@ -921,9 +1087,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 3883,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 298
+        "copyWords": 298,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 86,
@@ -932,9 +1100,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 20267,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 404
+        "copyWords": 404,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 87,
@@ -943,9 +1113,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 95496,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 445
+        "copyWords": 445,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 88,
@@ -954,9 +1126,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 21869,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 387
+        "copyWords": 387,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 89,
@@ -965,9 +1139,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 740585,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 378
+        "copyWords": 378,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 90,
@@ -976,9 +1152,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 26098,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 365
+        "copyWords": 365,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 91,
@@ -987,9 +1165,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 7966,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 317
+        "copyWords": 317,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 92,
@@ -998,9 +1178,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 21721,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 357
+        "copyWords": 357,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 93,
@@ -1009,9 +1191,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 15608,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 318
+        "copyWords": 318,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 94,
@@ -1020,9 +1204,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 10223,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 308
+        "copyWords": 308,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 95,
@@ -1031,9 +1217,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 35243,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 359
+        "copyWords": 359,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 96,
@@ -1042,9 +1230,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 38090,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 381
+        "copyWords": 381,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 97,
@@ -1053,9 +1243,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 17574,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 387
+        "copyWords": 387,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 98,
@@ -1064,9 +1256,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 39142,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 392
+        "copyWords": 392,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 99,
@@ -1075,9 +1269,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 82179,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 335
+        "copyWords": 335,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 100,
@@ -1086,9 +1282,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 49661,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 325
+        "copyWords": 325,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 101,
@@ -1097,9 +1295,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 331910,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 401
+        "copyWords": 401,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 102,
@@ -1108,9 +1308,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 6278,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 350
+        "copyWords": 350,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 103,
@@ -1119,9 +1321,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 2919,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 342
+        "copyWords": 342,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 104,
@@ -1130,9 +1334,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 39181,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 391
+        "copyWords": 391,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 105,
@@ -1141,9 +1347,11 @@
         "mode": "people",
         "hasLogo": false,
         "logoBytes": 0,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 412
+        "copyWords": 412,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 106,
@@ -1152,9 +1360,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 31828,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 380
+        "copyWords": 380,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 107,
@@ -1163,9 +1373,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 14461,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 378
+        "copyWords": 378,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 108,
@@ -1174,9 +1386,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 20108,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 347
+        "copyWords": 347,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 109,
@@ -1185,9 +1399,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 380359,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 330
+        "copyWords": 330,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 110,
@@ -1196,9 +1412,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 26239,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 360
+        "copyWords": 360,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 111,
@@ -1207,9 +1425,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 78620,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 407
+        "copyWords": 407,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 112,
@@ -1218,9 +1438,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 26945,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 320
+        "copyWords": 320,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 113,
@@ -1229,9 +1451,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 19985,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 402
+        "copyWords": 402,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 114,
@@ -1240,9 +1464,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 468422,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 333
+        "copyWords": 333,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 115,
@@ -1251,9 +1477,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 786919,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 393
+        "copyWords": 393,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 116,
@@ -1262,9 +1490,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 11257,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 384
+        "copyWords": 384,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 117,
@@ -1273,9 +1503,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 755660,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 384
+        "copyWords": 384,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 118,
@@ -1284,9 +1516,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 1542,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 312
+        "copyWords": 312,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 119,
@@ -1295,9 +1529,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 28613,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 305
+        "copyWords": 305,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 120,
@@ -1306,9 +1542,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 338881,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 347
+        "copyWords": 347,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 121,
@@ -1317,9 +1555,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 9102,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 386
+        "copyWords": 386,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 122,
@@ -1328,9 +1568,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 14234,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 378
+        "copyWords": 378,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 123,
@@ -1339,9 +1581,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 7489,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 348
+        "copyWords": 348,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 124,
@@ -1350,9 +1594,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 199173,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 339
+        "copyWords": 339,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 125,
@@ -1361,9 +1607,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 2928,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 315
+        "copyWords": 315,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 126,
@@ -1372,9 +1620,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 25849,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 355
+        "copyWords": 355,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 127,
@@ -1383,9 +1633,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 9207,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 344
+        "copyWords": 344,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 128,
@@ -1394,9 +1646,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 5786,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 358
+        "copyWords": 358,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 129,
@@ -1405,9 +1659,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 91169,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 378
+        "copyWords": 378,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 130,
@@ -1416,9 +1672,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 19510,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 413
+        "copyWords": 413,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 131,
@@ -1427,9 +1685,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 32218,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 354
+        "copyWords": 354,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 132,
@@ -1438,9 +1698,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 5623,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 362
+        "copyWords": 362,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 133,
@@ -1449,9 +1711,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 3170,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 301
+        "copyWords": 301,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 134,
@@ -1460,9 +1724,11 @@
         "mode": "food",
         "hasLogo": true,
         "logoBytes": 725076,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 338
+        "copyWords": 338,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 135,
@@ -1471,9 +1737,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 13582,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 332
+        "copyWords": 332,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 136,
@@ -1482,9 +1750,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 24400,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 334
+        "copyWords": 334,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 137,
@@ -1493,9 +1763,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 93259,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 405
+        "copyWords": 405,
+        "cinematic": true,
+        "moments": true
       },
       {
         "id": 138,
@@ -1504,9 +1776,11 @@
         "mode": "people",
         "hasLogo": true,
         "logoBytes": 26994,
-        "sections": 10,
+        "sections": 11,
         "jsonLd": true,
-        "copyWords": 320
+        "copyWords": 320,
+        "cinematic": true,
+        "moments": true
       }
     ],
     "needsGen": [],
@@ -1552,6 +1826,8 @@
     ],
     "thinLayout": [],
     "thinCopy": [],
-    "untreated": []
+    "untreated": [],
+    "missingBody": [],
+    "heroReuse": []
   }
 }

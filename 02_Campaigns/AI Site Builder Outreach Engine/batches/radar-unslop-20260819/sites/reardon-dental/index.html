@@ -48,8 +48,8 @@ a{color:inherit}
 .hero-media{margin:0}
 .hero-media figure{margin:0;position:relative;filter:drop-shadow(0 30px 34px color-mix(in srgb,var(--deep) 28%,transparent))}
 .image-frame{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius);border:var(--border) solid color-mix(in srgb,var(--accent) 55%,transparent);background:var(--deep)}
-.image-frame::after,.split figure::after,.gallery-grid figure::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;opacity:.2;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");background-size:160px 160px}
-.split figure,.gallery-grid figure{position:relative}
+.image-frame::after,.split figure::after,.moments figure::after,.cinematic-frame::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;opacity:.2;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");background-size:160px 160px}
+.split figure,.moments figure,.cinematic-frame{position:relative}
 .slides{position:absolute;inset:0}
 .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1s var(--ease),transform 7s linear}
 .slides img.is-on{opacity:1;transform:scale(1);z-index:1}
@@ -74,12 +74,17 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
 .offering-card h3,.experience-grid h3{margin:8px 0 10px;font:700 1.35rem/1.15 var(--display)}
 .split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.9fr);gap:clamp(24px,5vw,56px);align-items:center}
 .split figure{margin:0;overflow:hidden;border-radius:var(--radius);border:var(--border) solid color-mix(in srgb,var(--accent) 35%,transparent)}
-.split img{width:100%;height:100%;min-height:22rem;object-fit:cover}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto;gap:12px}
-.gallery-grid figure{margin:0;overflow:hidden;border-radius:var(--radius);min-height:14rem;border:var(--border) solid color-mix(in srgb,var(--accent) 30%,transparent)}
-.gallery-grid figure:first-child{grid-column:span 2;grid-row:span 2;min-height:28rem}
-.gallery-grid img{width:100%;height:100%;object-fit:cover;min-height:inherit;transition:transform 1.1s var(--ease)}
-.gallery-grid figure:hover img{transform:scale(1.04)}
+.split img{width:100%;height:100%;min-height:28rem;object-fit:cover;aspect-ratio:4/5}
+.cinematic{padding:0;position:relative}
+.cinematic-frame{margin:0;overflow:hidden;min-height:min(58vh,640px)}
+.cinematic-frame img{width:100%;height:min(58vh,640px);object-fit:cover;display:block;animation:cinePush 8s var(--ease) both}
+.cinematic-frame figcaption{position:absolute;left:5vw;bottom:1.6rem;z-index:3;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.55);font:700 clamp(1.4rem,3vw,2.6rem)/1.1 var(--display);max-width:18ch}
+.moments-section .moments{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(12px,2vw,22px);align-items:start}
+.moments figure{margin:0;overflow:hidden;border-radius:var(--radius);min-height:24rem;border:var(--border) solid color-mix(in srgb,var(--accent) 30%,transparent)}
+.moments figure:nth-child(2){margin-top:11vh}
+.moments img{width:100%;height:100%;object-fit:cover;min-height:24rem;transition:transform 1.1s var(--ease)}
+.moments figure:hover img{transform:scale(1.04)}
+@keyframes cinePush{from{transform:scale(1.08)}to{transform:scale(1)}}
 .surface-deep{background:var(--deep);color:var(--on-deep)}
 .surface-accent{background:var(--accent);color:var(--on-accent)}
 .surface-panel{background:var(--panel)}
@@ -99,12 +104,17 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
 @keyframes lineSwipe{to{background-position:-240% 0}}
 .reveal{opacity:1}
 .js .reveal{opacity:0;transform:translateY(28px);filter:blur(6px);transition:opacity .7s var(--ease),transform .7s var(--ease),filter .7s var(--ease)}
+.js .reveal.reveal-left{transform:translateX(-32px)}
+.js .reveal.reveal-right{transform:translateX(32px)}
+.js .delay-1{transition-delay:.12s}
+.js .delay-2{transition-delay:.24s}
+.js .delay-3{transition-delay:.36s}
 .js .reveal.visible{opacity:1;transform:none;filter:none}
 .vanish-out{transition:opacity .6s var(--ease),filter .6s var(--ease)}
 .js .vanish-out.is-away{opacity:.18;filter:blur(4px)}
 @media(max-width:850px){
-  .hero,.split,.gallery-grid{grid-template-columns:1fr}
-  .gallery-grid figure:first-child{grid-column:auto;grid-row:auto;min-height:18rem}
+  .hero,.split,.moments-section .moments{grid-template-columns:1fr}
+  .moments figure:nth-child(2){margin-top:0}
   .hero{padding-top:28px}
   .hero-media{width:min(100%,440px);margin-inline:auto}
   .hero-media figcaption{right:8px}
@@ -117,7 +127,7 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .reveal,.js .reveal.visible{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
-  .slides img{transition:none;transform:none}
+  .slides img,.cinematic-frame img{transition:none;transform:none;animation:none}
   .ticker-track,.marquee-strip:before,.marquee-strip:after{animation:none}
   *{animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
@@ -128,7 +138,7 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
 
 .slug-reardon-dental{--glass-blur:0px}
 .slug-reardon-dental .site-header{backdrop-filter:none;background:var(--paper);border-bottom-width:4px}
-.slug-reardon-dental .hero-media figure,.slug-reardon-dental .offering-card,.slug-reardon-dental .gallery-grid figure,.slug-reardon-dental .catalog-card,.slug-reardon-dental .contact-card,.slug-reardon-dental .story figure,.slug-reardon-dental .feature figure{border-radius:0;box-shadow:12px 12px 0 var(--ink)}
+.slug-reardon-dental .hero-media figure,.slug-reardon-dental .offering-card,.slug-reardon-dental .gallery-grid figure,.slug-reardon-dental .moments figure,.slug-reardon-dental .cinematic-frame,.slug-reardon-dental .catalog-card,.slug-reardon-dental .contact-card,.slug-reardon-dental .story figure,.slug-reardon-dental .feature figure{border-radius:0;box-shadow:12px 12px 0 var(--ink)}
 .slug-reardon-dental .button{border-radius:0;box-shadow:6px 6px 0 var(--ink)}
 .slug-reardon-dental .button:hover,.slug-reardon-dental .button:focus-visible{transform:translate(-2px,-2px);box-shadow:10px 10px 0 var(--ink)}
 .slug-reardon-dental .marquee-strip{border-block:4px solid var(--ink);text-transform:uppercase}
@@ -158,7 +168,7 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
     <div class="hero-media reveal">
       <figure>
         <div class="image-frame" data-swipe>
-          <div class="slides"><img class="slide is-on" src="assets/collage-1.webp" alt="The people photograph for Reardon Dental Exton: people at work" loading="eager" fetchpriority="high" width="1200" height="1500"><img class="slide" src="assets/collage-2.webp" alt="The process photograph for Reardon Dental Exton: hands on the job" loading="lazy" width="1200" height="1500"><img class="slide" src="assets/collage-3.webp" alt="The conversation photograph for Reardon Dental Exton: a real conversation" loading="lazy" width="1200" height="1500"><img class="slide" src="assets/collage-4.webp" alt="The place photograph for Reardon Dental Exton: the place" loading="lazy" width="1200" height="1500"><img class="slide" src="assets/collage-5.webp" alt="The craft photograph for Reardon Dental Exton: the craft" loading="lazy" width="1200" height="1500"></div>
+          <div class="slides"><img class="slide is-on" src="assets/collage-1.webp" alt="The people photograph for Reardon Dental Exton: people at work" loading="eager" fetchpriority="high" width="960" height="1200"><img class="slide" src="assets/collage-2.webp" alt="The process photograph for Reardon Dental Exton: hands on the job" loading="lazy" width="960" height="1200"><img class="slide" src="assets/collage-3.webp" alt="The conversation photograph for Reardon Dental Exton: a real conversation" loading="lazy" width="960" height="1200"><img class="slide" src="assets/collage-4.webp" alt="The place photograph for Reardon Dental Exton: the place" loading="lazy" width="960" height="1200"><img class="slide" src="assets/collage-5.webp" alt="The craft photograph for Reardon Dental Exton: the craft" loading="lazy" width="960" height="1200"></div>
         </div>
         <figcaption>
           <span>The people</span>
@@ -173,6 +183,12 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
     <div class="proof-grid">
       <article class="reveal"><span>Place</span><strong>Exton</strong></article><article class="reveal"><span>Preview</span><strong>Private concept. Details stay with them.</strong></article>
     </div>
+  </section>
+  <section class="cinematic vanish-out" aria-label="The shop">
+    <figure class="cinematic-frame">
+      <img loading="lazy" src="assets/collage-6.webp" alt="The shop photograph for Reardon Dental Exton: The room where the work lives." width="1200" height="675">
+      <figcaption class="reveal">The room where the work lives.</figcaption>
+    </figure>
   </section>
   <section class="offerings" id="work">
     <div class="section-head reveal">
@@ -191,25 +207,23 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
         <p>Reardon Dental Exton gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Reardon Dental Exton is about a real operatory, not a stock smile collage.</p>
         <p>Name, place, and a clear call path above the fold. Treatment, reception, and careful hands. Not a handshake in an atrium.</p>
       </div>
-      <figure class="reveal"><img loading="lazy" src="assets/collage-2.webp" alt="The process photograph for Reardon Dental Exton: hands on the job" width="1200" height="1500"></figure>
+      <figure class="reveal reveal-right"><img loading="lazy" src="assets/collage-7.webp" alt="Hands photograph for Reardon Dental Exton: A closer look at the job." width="960" height="1200"></figure>
     </div>
   </section>
-  <section class="gallery" id="gallery">
+  <section class="moments-section vanish-out" id="gallery">
     <div class="section-head reveal">
       <span class="section-kicker">The people</span>
       <h2>People doing the work.</h2>
     </div>
-    <div class="gallery-grid">
-      <figure class="reveal"><img loading="lazy" src="assets/collage-3.webp" alt="The conversation photograph for Reardon Dental Exton: a real conversation" width="1200" height="1500"></figure>
-      <figure class="reveal"><img loading="lazy" src="assets/collage-4.webp" alt="The place photograph for Reardon Dental Exton: the place" width="1200" height="1500"></figure>
-      <figure class="reveal"><img loading="lazy" src="assets/collage-5.webp" alt="The craft photograph for Reardon Dental Exton: the craft" width="1200" height="1500"></figure>
-      <figure class="reveal"><img loading="lazy" src="assets/collage-1.webp" alt="The people photograph for Reardon Dental Exton: people at work" width="1200" height="1500"></figure>
+    <div class="moments">
+      <figure class="reveal reveal-left"><img loading="lazy" src="assets/collage-8.webp" alt="The bay photograph for Reardon Dental Exton: Tools and the person using them." width="960" height="1200"></figure>
+      <figure class="reveal reveal-right delay-1"><img loading="lazy" src="assets/collage-9.webp" alt="The crew photograph for Reardon Dental Exton: People mid-job, not posed." width="960" height="1200"></figure>
     </div>
     <p class="disclosure reveal" style="margin-top:18px">Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.</p>
   </section>
   <section class="feature surface-panel">
     <div class="split">
-      <figure class="reveal"><img loading="lazy" src="assets/collage-5.webp" alt="The craft photograph for Reardon Dental Exton: the craft" width="1200" height="1500"></figure>
+      <figure class="reveal reveal-left"><img loading="lazy" src="assets/collage-10.webp" alt="Detail photograph for Reardon Dental Exton: Skill you only get up close." width="960" height="1200"></figure>
       <div class="reveal">
         <span class="section-kicker">The craft</span>
         <h2>Close on the skill.</h2>
