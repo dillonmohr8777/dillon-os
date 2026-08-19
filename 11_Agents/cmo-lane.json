@@ -72,7 +72,9 @@
     }
   },
   "env": {
+    "CMO_ROUTING_PROFILE": "balanced",
     "CMO_PROFILE": "balanced",
     "CMO_ROSTER": "paid-search-analyst,local-seo,attribution-reconciler,seo-technical"
-  }
+  },
+  "runtime_pr": 323
 }

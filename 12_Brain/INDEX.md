@@ -60,6 +60,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
 - [[12_Brain/01_Captures/2026-08-19 - CMO lane economics and sequencing|2026-08-19 CMO lane economics]] — briefing that set balanced-first sequencing.
+- [[12_Brain/01_Captures/2026-08-19 - Operator asked to decide lineage PRs and boards|2026-08-19 lineage/PR/board ask]] — decide factory lineage, PR deaths, and the four boards.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -69,6 +70,10 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/05_Projects/2026-08-19 - CMO paid local attribution lane|CMO paid + local + attribution lane]] — `balanced` default, four earning agents, simulated GEO not reportable.
 - [[12_Brain/04_Decisions/2026-08-19 - Default CMO profile is balanced|Default CMO profile is balanced]] — switch off `quality` before any connector.
+- [[12_Brain/04_Decisions/2026-08-19 - Site factory lineages|Site factory lineages]] — Next 20 daily concepts; site-factory weekly mail batch; radar grades.
+- [[12_Brain/04_Decisions/2026-08-19 - Open PR close policy|Open PR close policy]] — 124 open; umbrella drafts die; `#323` is the CMO runtime.
+- [[12_Brain/04_Decisions/2026-08-19 - Generated-stock boards|Generated-stock boards]] — yes advertising-agency and signage; hold unnamed verticals.
+- [[12_Brain/04_Decisions/2026-08-19 - Reliability scout owns the loop|Reliability scout owns the loop]] — do not re-run the craft brief as a general agent.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).

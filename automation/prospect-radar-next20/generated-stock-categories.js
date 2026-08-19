@@ -56,9 +56,13 @@ const assignments = {
   'udis-conn-orthodontics': ['udis-conn-orthodontics', 'orthodontic care'],
   'yale-electric-supply': ['category-electric-pool', 'electrical supply'],
   'giuseppe-s-pizza': ['category-pizzeria', 'pizzeria dining'],
+  'digital-marketing-service-pro-west-chester-pa': ['category-advertising-agency', 'advertising agency'],
+  'smart-signs': ['category-signage', 'signage'],
 };
 
 const rules = [
+  [/\b(?:advertising agency|ad agency|digital marketing)\b/, 'category-advertising-agency'],
+  [/\b(?:signage|signmaker|sign shop)\b/, 'category-signage'],
   [/\b(?:clothing|clothes|apparel|fashion|outerwear)\b/, 'category-clothing-retail'],
   [/\b(?:photo|photography|photographer|camera|portrait studio)\b/, 'category-photography-studio'],
   [/\b(?:ice[- ]?cream|creamery|bakery|baked|cupcakes?|cakes?|desserts?|pastr(?:y|ies)|donuts?|coffee)\b/, 'category-dessert-bakery'],

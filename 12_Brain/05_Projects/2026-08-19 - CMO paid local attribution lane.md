@@ -39,6 +39,11 @@ composition is out of scope (buy, don't build).
 The HUD hero number stays **ACTIVE CLIENTS 14 / 100**. This project is a
 delivery goal, not a replacement of Road to 100.
 
+The `cmo seed` runtime lives on draft PR `#323` (`_cmo/`). Keep that PR.
+Do not merge it until `CMO_ROUTING_PROFILE` defaults to `balanced` and the
+roster is the four earning agents. That env name is `CMO_ROUTING_PROFILE`,
+not `CMO_PROFILE`.
+
 ## Finish line
 
 - [ ] Default profile is `balanced` in the machine config (done in this repo).

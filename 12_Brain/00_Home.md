@@ -32,6 +32,8 @@ and reusable memory.
 
 - [[05_Projects/2026-08-19 - CMO paid local attribution lane|CMO paid + local + attribution lane]]
 - [[04_Decisions/2026-08-19 - Default CMO profile is balanced|CMO default is balanced]]
+- [[04_Decisions/2026-08-19 - Site factory lineages|Site factory lineages]]
+- [[04_Decisions/2026-08-19 - Open PR close policy|Open PR close policy]]
 - [[05_Projects/2026-07-30 - Dillon OS five-goal operating plan|Five-goal operating plan]]
 - [[05_Projects/2026-07-30 - Qualified pipeline recovery|Qualified pipeline recovery]]
 - [[04_Decisions/2026-07-30 - Marketing Chief is Dillon's sole agent interface|Marketing Chief interface decision]]

@@ -1,11 +1,11 @@
 ---
 tags: [entity, system]
 source: "[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]"
-updated: 2026-07-29
+updated: 2026-08-19
 note_type: entity
 status: active
 created: 2026-07-29
-source_refs: ["[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]"]
+source_refs: ["[[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article]]", "[[12_Brain/04_Decisions/2026-08-19 - Site factory lineages]]"]
 ---
 
 
@@ -20,6 +20,9 @@ deploy credentials.
 - Outputs: static / Netlify / Vercel marketing sites for clients.
 - Templates and QA live under `_templates/site-factory/` when present, or
   campaign folders under `02_Campaigns/`.
+- Daily private prospect concepts use `automation/prospect-radar-next20/`.
+  Radar V2 at `_os/radar-engine/` grades; it does not build.
+  Decision: [[12_Brain/04_Decisions/2026-08-19 - Site factory lineages]].
 - Secrets and host tokens never land in this note.
 
 ## Links

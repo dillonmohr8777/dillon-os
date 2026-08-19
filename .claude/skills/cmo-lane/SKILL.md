@@ -9,7 +9,8 @@ Read `11_Agents/cmo-lane.json` first. It is the contract. Do not widen it.
 
 ## Defaults (non-negotiable)
 
-- `CMO_PROFILE=balanced`. Never switch the default to `quality`.
+- `CMO_ROUTING_PROFILE=balanced` (the `_cmo/` env name on PR `#323`).
+  `CMO_PROFILE=balanced` is the vault alias. Never switch the default to `quality`.
 - Active roster is exactly: `paid-search-analyst`, `local-seo`,
   `attribution-reconciler`, `seo-technical`.
 - GEO is simulated until a real SERP provider is connected. Do not report
