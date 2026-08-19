@@ -11,9 +11,9 @@ source_of_truth: C:\Users\dillo\repos\dillon-os
 
 # Operating Status
 
-## 138-site unslop — QA green, awaiting review
+## 138-site unslop — homepage quality pass, awaiting review
 
-Pickup finished 2026-08-19. **136** unique concept sites rebuilt with five unique 4:5 collages each (people at work, food for kitchens). **2** duplicate rows dropped (`#23` johnny-s-pizza, `#42` thr-insurance-agency). `qa-batch.js`: 136 ready, 0 collisions, 0 mode mismatches. Sheet `Fixed?` is YES for the 136 QA-green rows; duplicates stay blank. PR `dillon-os#326` on `cursor/prospect-unslop-collages-56f2`. Do not deploy. Do not send mail. `mail_ready` stays hold.
+Homepage pass finished 2026-08-19. **136** unique concept sites now ship 10 design-system sections, honest copy, and first-party logos in HTML when harvest has a real mark. **105** logos, **31** wordmarks (not invented). Collages unchanged. Sheet `Fixed?` already YES for those rows; no mail-hold work. Outreach sits with the sales manager. PR `dillon-os#326` on `cursor/prospect-unslop-collages-56f2`. Do not deploy.
 
 The vault was reconciled on 2026-07-12 against current work from the rolling three-week window. The April-era client roster is superseded.
 
