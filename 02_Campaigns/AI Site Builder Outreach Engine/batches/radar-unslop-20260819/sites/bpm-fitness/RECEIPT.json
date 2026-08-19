@@ -5,23 +5,73 @@
   "family": "fitness",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "https://bpmfitnessphl.com/",
   "city": "Philadelphia",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Trainer coaching a client through a lift or stretch in a gym, no text",
-    "Therapist guiding a patient's shoulder or knee in a clinic, no text",
-    "Two people reviewing a plan on a clipboard after a session, no text",
-    "Training floor with a coach walking the room, no text",
-    "Close-up of spotting hands or a resistance band in use, no logos"
+  "hashes": [
+    "3e1847052675e098e0ecc6cbc0cea15e8d4d5bb115dabce97a90c35837e69489",
+    "d2a13ea3a1403081f2bfd49eb2a62b1c3333061e7a55f5b66097e9c283ad6c18",
+    "952902ee0f75e5719f5d1f3e85422dc1c961c4e26dd06150c6cac1637286f1a4",
+    "70ee1e56a7dd230c6260cd9f577f31d2c5c796c753b26609a6600ce78c20fbdb",
+    "89a30288750dc13fa137521ae3b81e8be99bfce12656649b43e80e0c339b7308"
   ]
 }

@@ -2,26 +2,76 @@
   "id": 29,
   "slug": "novacare",
   "name": "NovaCare Rehabilitation Conshohocken",
-  "family": "professional",
+  "family": "fitness",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "https://www.novacare.com/contact/find-a-location/pa/conshohocken/conshohocken/?ty=xt",
   "city": "Conshohocken",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "b0462eadc522781084f21c844ef94bed7d6b1131fbb3bb43ffc70b9b28adcb80",
+    "a4a32b25207f1e732f4ba295a014ddcebdb04f319af3ec2983c3cac66a06a56c",
+    "5efe46902f8ff14df2d2803a37dfd7819d4f1804eed01352763050abbc684ac0",
+    "0c4dae67c6b9b38907564d41f1e5c9cdb5814e9f73b2659034944ee214364260",
+    "4a0b7d9fb19018ee609f66ac0730f309e018dae9bcfa2d2bfa17d2f9e93ef108"
   ]
 }

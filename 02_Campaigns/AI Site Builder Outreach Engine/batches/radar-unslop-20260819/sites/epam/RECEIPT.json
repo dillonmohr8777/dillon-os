@@ -5,23 +5,73 @@
   "family": "professional",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "cloudflare-challenge",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "https://www.epam.com/",
   "city": "Philadelphia",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "a439c126fa83a547fcf956700341ffa2b4c173bab024b9d2955f548f4d6be69f",
+    "b39a79f346db8c83cc70daa47acd13a43bdd0325aeb45bdb68744c33a3a359e2",
+    "e04a06e52b9bc19d0d72ee07d276aaa04da2df7346d8a85e449bf1b411796add",
+    "34d226be36741d067d9ca8b439cd9fcbd4a5934431e22d656ac42c90678d8033",
+    "c831c79a5d7f11a53b7f7baa4f2795084447def41380cb6ed496a4a7d1d976a0"
   ]
 }

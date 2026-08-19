@@ -5,23 +5,73 @@
   "family": "trade",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 16,
+  "sourceCount": 16,
+  "officialPhotos": 16,
   "genFills": 0,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "https://www.electric-direct.net/",
   "city": "Havertown",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Tradesperson in branded workwear on a jobsite or in a shop, no text",
-    "Technician working with tools on equipment or landscape, no text",
-    "Crew lead talking with a homeowner at the door or yard, no text",
-    "Van or shop with a person loading materials, no text",
-    "Close-up of skilled hands on the actual trade work, no logos"
+  "hashes": [
+    "8a53e2c456ad7c6be6351f29f6b85dcde2c87164b8c4deb5064af6b1ab5045e9",
+    "71d65b0243041b3d81559f42554e5f2fc0150885534a5e2a4608622afa2be8ff",
+    "fa392f496085fddc3a94138ab6405ea704122305dbbaf63db45008174525488a",
+    "5d04cde01f055dde1fd4e72bbb281f599f5ce867fbe40eadca22fbb8b691c5c0",
+    "8a07680fead4d28485483f9329eb6d8fa258d437dd4559e83f63ad2fd130b220"
   ]
 }

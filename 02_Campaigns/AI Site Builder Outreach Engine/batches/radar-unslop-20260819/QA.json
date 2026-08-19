@@ -1,0 +1,836 @@
+{
+  "ready": 136,
+  "needsGen": 0,
+  "blocked": 0,
+  "dropped": 2,
+  "collisions": 0,
+  "modeMismatch": 0,
+  "details": {
+    "ready": [
+      {
+        "id": 1,
+        "slug": "agnes-edmunds-bridal-formals",
+        "name": "Agnes Edmunds Bridal & Formals",
+        "mode": "people"
+      },
+      {
+        "id": 2,
+        "slug": "al-tacos-locos",
+        "name": "Al Tacos Locos",
+        "mode": "food"
+      },
+      {
+        "id": 3,
+        "slug": "lpl-financial",
+        "name": "Apollo Wealth Advisors",
+        "mode": "people"
+      },
+      {
+        "id": 4,
+        "slug": "apr-supply-company",
+        "name": "APR Supply Company",
+        "mode": "people"
+      },
+      {
+        "id": 5,
+        "slug": "borsello-landscaping",
+        "name": "Borsello Landscaping",
+        "mode": "people"
+      },
+      {
+        "id": 6,
+        "slug": "boyle-energy-heating-air-conditioning-oil-propane",
+        "name": "Boyle Energy",
+        "mode": "people"
+      },
+      {
+        "id": 7,
+        "slug": "brandywine-auto-parts",
+        "name": "Brandywine Auto Parts",
+        "mode": "people"
+      },
+      {
+        "id": 8,
+        "slug": "captain-car-wash",
+        "name": "Captain Car Wash",
+        "mode": "people"
+      },
+      {
+        "id": 9,
+        "slug": "city-electric-supply",
+        "name": "City Electric Supply West Chester",
+        "mode": "people"
+      },
+      {
+        "id": 10,
+        "slug": "custom-it-solutions",
+        "name": "Custom IT Solutions",
+        "mode": "people"
+      },
+      {
+        "id": 11,
+        "slug": "ember-ale",
+        "name": "Ember & Ale",
+        "mode": "food"
+      },
+      {
+        "id": 12,
+        "slug": "epam",
+        "name": "EPAM Philadelphia",
+        "mode": "people"
+      },
+      {
+        "id": 13,
+        "slug": "euphoria-nail-bar",
+        "name": "Euphoria Nail Bar",
+        "mode": "people"
+      },
+      {
+        "id": 14,
+        "slug": "ferrari-philadelphia",
+        "name": "Ferrari Philadelphia",
+        "mode": "people"
+      },
+      {
+        "id": 15,
+        "slug": "field-1-post-llc",
+        "name": "Field 1 Post LLC",
+        "mode": "people"
+      },
+      {
+        "id": 16,
+        "slug": "francis-kaufman-house",
+        "name": "Francis Kaufman House",
+        "mode": "people"
+      },
+      {
+        "id": 17,
+        "slug": "heart-soul-tattoo",
+        "name": "Heart & Soul Tattoo",
+        "mode": "people"
+      },
+      {
+        "id": 18,
+        "slug": "highline-motors",
+        "name": "Highline Motors Aston",
+        "mode": "people"
+      },
+      {
+        "id": 19,
+        "slug": "holiday-hair",
+        "name": "Holiday Hair Quakertown",
+        "mode": "people"
+      },
+      {
+        "id": 20,
+        "slug": "ivc-wealth-advisors",
+        "name": "IVC Wealth Advisors",
+        "mode": "people"
+      },
+      {
+        "id": 21,
+        "slug": "j-pro-inc",
+        "name": "J-Pro Pools Inc",
+        "mode": "people"
+      },
+      {
+        "id": 22,
+        "slug": "hero-complex",
+        "name": "Johnny Destructo's Hero Complex",
+        "mode": "people"
+      },
+      {
+        "id": 24,
+        "slug": "just-tires",
+        "name": "Just Tires Media",
+        "mode": "people"
+      },
+      {
+        "id": 25,
+        "slug": "kinetic-physical-therapy",
+        "name": "Kinetic Physical Therapy",
+        "mode": "people"
+      },
+      {
+        "id": 26,
+        "slug": "manatawny-still-works",
+        "name": "Manatawny Still Works",
+        "mode": "food"
+      },
+      {
+        "id": 27,
+        "slug": "ming-s-chinese",
+        "name": "Ming's Chinese Restaurant",
+        "mode": "food"
+      },
+      {
+        "id": 28,
+        "slug": "narberth-pizza",
+        "name": "Narberth Pizza and Steaks",
+        "mode": "food"
+      },
+      {
+        "id": 29,
+        "slug": "novacare",
+        "name": "NovaCare Rehabilitation Conshohocken",
+        "mode": "people"
+      },
+      {
+        "id": 30,
+        "slug": "o-donnell-weiss-mattei-p-c",
+        "name": "O'Donnell, Weiss & Mattei P.C.",
+        "mode": "people"
+      },
+      {
+        "id": 31,
+        "slug": "ooka-hibachi-and-sushi",
+        "name": "Ooka Hibachi and Sushi",
+        "mode": "food"
+      },
+      {
+        "id": 32,
+        "slug": "dr-weiss-s-office",
+        "name": "Orthodontic Associates of Collegeville",
+        "mode": "people"
+      },
+      {
+        "id": 33,
+        "slug": "philadelphia-auto-accident-injury-attorney",
+        "name": "Philadelphia Auto Accident Injury Attorney",
+        "mode": "people"
+      },
+      {
+        "id": 34,
+        "slug": "rally-house-collegeville",
+        "name": "Rally House Collegeville",
+        "mode": "people"
+      },
+      {
+        "id": 35,
+        "slug": "red-hill-greenhouses-florist",
+        "name": "Red Hill Greenhouses & Florist",
+        "mode": "people"
+      },
+      {
+        "id": 36,
+        "slug": "rocco-s-brick-oven-pizzeria",
+        "name": "Rocco's Brick Oven Pizzeria",
+        "mode": "food"
+      },
+      {
+        "id": 37,
+        "slug": "seiler-drury",
+        "name": "Seiler & Drury",
+        "mode": "people"
+      },
+      {
+        "id": 38,
+        "slug": "snyder-online-marketing",
+        "name": "Snyder Online Marketing",
+        "mode": "people"
+      },
+      {
+        "id": 39,
+        "slug": "the-edge-fitness-clubs",
+        "name": "The Edge Fitness Clubs Media",
+        "mode": "people"
+      },
+      {
+        "id": 40,
+        "slug": "the-restaurant-store",
+        "name": "The Restaurant Store Plymouth Meeting",
+        "mode": "people"
+      },
+      {
+        "id": 41,
+        "slug": "theory",
+        "name": "Theory Outlet at Philadelphia Premium Outlets",
+        "mode": "people"
+      },
+      {
+        "id": 43,
+        "slug": "tm-prestige-home-cash-buyer",
+        "name": "TM Prestige Home Cash Buyer",
+        "mode": "people"
+      },
+      {
+        "id": 44,
+        "slug": "towne-book-center-wine-bar",
+        "name": "Towne Book Center & Wine Bar",
+        "mode": "food"
+      },
+      {
+        "id": 45,
+        "slug": "trend-auto-trader",
+        "name": "Trend Auto Trader",
+        "mode": "people"
+      },
+      {
+        "id": 46,
+        "slug": "uno-chicago-style-pizza",
+        "name": "UNO Pizzeria & Grill Oaks",
+        "mode": "food"
+      },
+      {
+        "id": 47,
+        "slug": "zuber-realty",
+        "name": "Zuber Realty",
+        "mode": "people"
+      },
+      {
+        "id": 48,
+        "slug": "anthony-gueriera-insurance",
+        "name": "Anthony Gueriera Jr. Insurance Agency LLC",
+        "mode": "people"
+      },
+      {
+        "id": 49,
+        "slug": "art-city-vets",
+        "name": "Art City Vets & Urgent Care",
+        "mode": "people"
+      },
+      {
+        "id": 50,
+        "slug": "baldwins-book-barn",
+        "name": "Baldwin's Book Barn",
+        "mode": "people"
+      },
+      {
+        "id": 51,
+        "slug": "big-head-transport",
+        "name": "Big Head Transport LLC",
+        "mode": "people"
+      },
+      {
+        "id": 52,
+        "slug": "ban-ban-asian-bistro",
+        "name": "Bàn Bàn Asian Bistro",
+        "mode": "food"
+      },
+      {
+        "id": 53,
+        "slug": "dentistry-for-life",
+        "name": "Dentistry for Life",
+        "mode": "people"
+      },
+      {
+        "id": 54,
+        "slug": "elite-auto-parts",
+        "name": "Elite Philly Auto Parts",
+        "mode": "people"
+      },
+      {
+        "id": 55,
+        "slug": "frazer-antiques",
+        "name": "Frazer Antiques",
+        "mode": "people"
+      },
+      {
+        "id": 56,
+        "slug": "germantown-dental-group",
+        "name": "Germantown Dental Group",
+        "mode": "people"
+      },
+      {
+        "id": 57,
+        "slug": "golden-eagle-jewelry",
+        "name": "Golden Eagle Jewelers",
+        "mode": "people"
+      },
+      {
+        "id": 58,
+        "slug": "kehans-auto-service",
+        "name": "Kehan's Auto Service",
+        "mode": "people"
+      },
+      {
+        "id": 59,
+        "slug": "lees-hoagie-house",
+        "name": "Lee's Hoagie House of Horsham",
+        "mode": "food"
+      },
+      {
+        "id": 60,
+        "slug": "main-line-veterinary-hospital",
+        "name": "Main Line Veterinary Hospital",
+        "mode": "people"
+      },
+      {
+        "id": 61,
+        "slug": "morton-electric-pool-spa",
+        "name": "Morton Electric Pool & Spa",
+        "mode": "people"
+      },
+      {
+        "id": 62,
+        "slug": "pizza-peddler",
+        "name": "Pizza Peddler",
+        "mode": "food"
+      },
+      {
+        "id": 63,
+        "slug": "udis-conn-orthodontics",
+        "name": "Udis & Conn Orthodontics",
+        "mode": "people"
+      },
+      {
+        "id": 64,
+        "slug": "urgentvet-pottstown",
+        "name": "UrgentVet Pottstown",
+        "mode": "people"
+      },
+      {
+        "id": 65,
+        "slug": "welcome-dental",
+        "name": "Welcome Dental",
+        "mode": "people"
+      },
+      {
+        "id": 66,
+        "slug": "whitelands-animal-hospital",
+        "name": "Whitelands Animal Hospital",
+        "mode": "people"
+      },
+      {
+        "id": 67,
+        "slug": "wholly-grounds",
+        "name": "Wholly Grounds Coffeehouse",
+        "mode": "food"
+      },
+      {
+        "id": 68,
+        "slug": "dutton-road-veterinary-clinic",
+        "name": "Dutton Road Veterinary Clinic",
+        "mode": "people"
+      },
+      {
+        "id": 69,
+        "slug": "always-dental-care",
+        "name": "Always Dental Care",
+        "mode": "people"
+      },
+      {
+        "id": 70,
+        "slug": "andorra-family-dentistry",
+        "name": "Andorra Family Dentistry",
+        "mode": "people"
+      },
+      {
+        "id": 71,
+        "slug": "artisan-wine-and-cheese-cellars",
+        "name": "Artisan Wine and Cheese Cellars",
+        "mode": "food"
+      },
+      {
+        "id": 72,
+        "slug": "auger-manufacturing",
+        "name": "Auger Manufacturing Specialists",
+        "mode": "people"
+      },
+      {
+        "id": 73,
+        "slug": "barnes-financial-group",
+        "name": "Barnes Financial Group",
+        "mode": "people"
+      },
+      {
+        "id": 74,
+        "slug": "be-balanced-hormone",
+        "name": "BeBalanced Royersford",
+        "mode": "people"
+      },
+      {
+        "id": 75,
+        "slug": "benjamin-lovell-shoes",
+        "name": "Benjamin Lovell Shoes",
+        "mode": "people"
+      },
+      {
+        "id": 76,
+        "slug": "bg-electric",
+        "name": "BG Electric Service LLC",
+        "mode": "people"
+      },
+      {
+        "id": 77,
+        "slug": "bpm-fitness",
+        "name": "BPM Fitness",
+        "mode": "people"
+      },
+      {
+        "id": 78,
+        "slug": "c-and-c-super-seal",
+        "name": "C&C Super Seal",
+        "mode": "people"
+      },
+      {
+        "id": 79,
+        "slug": "chadds-ford-animal-hospital",
+        "name": "Chadds Ford Animal Hospital",
+        "mode": "people"
+      },
+      {
+        "id": 80,
+        "slug": "chestnut-hill-animal-hospital",
+        "name": "Chestnut Hill Animal Hospital",
+        "mode": "people"
+      },
+      {
+        "id": 81,
+        "slug": "ciocca-pre-owned-autos",
+        "name": "Ciocca Pre-Owned Autos",
+        "mode": "people"
+      },
+      {
+        "id": 82,
+        "slug": "colmar-dentistry-for-kids",
+        "name": "Colmar Dentistry For Kids",
+        "mode": "people"
+      },
+      {
+        "id": 83,
+        "slug": "county-line-veterinary-hospital",
+        "name": "County Line Veterinary Hospital",
+        "mode": "people"
+      },
+      {
+        "id": 84,
+        "slug": "davidson-fabricating",
+        "name": "Davidson Fabricating",
+        "mode": "people"
+      },
+      {
+        "id": 85,
+        "slug": "del-chevrolet",
+        "name": "Del Chevrolet",
+        "mode": "people"
+      },
+      {
+        "id": 86,
+        "slug": "dinse-dental-care",
+        "name": "Dinse Dental Care",
+        "mode": "people"
+      },
+      {
+        "id": 87,
+        "slug": "dream-team-hvac",
+        "name": "Dream Team Home Services",
+        "mode": "people"
+      },
+      {
+        "id": 88,
+        "slug": "dreammaker-bath-kitchen",
+        "name": "DreamMaker Bath & Kitchen of Chester County",
+        "mode": "people"
+      },
+      {
+        "id": 89,
+        "slug": "eastern-dragon",
+        "name": "Eastern Dragon",
+        "mode": "food"
+      },
+      {
+        "id": 90,
+        "slug": "easy-auto-tag-insurance",
+        "name": "Easy Auto Tag & Insurance",
+        "mode": "people"
+      },
+      {
+        "id": 91,
+        "slug": "eisenberg-rothweiler",
+        "name": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck",
+        "mode": "people"
+      },
+      {
+        "id": 92,
+        "slug": "electric-direct",
+        "name": "Electric Direct",
+        "mode": "people"
+      },
+      {
+        "id": 93,
+        "slug": "elverson-supply",
+        "name": "Elverson Supply",
+        "mode": "people"
+      },
+      {
+        "id": 94,
+        "slug": "faulkner-buick-gmc",
+        "name": "Faulkner Buick GMC",
+        "mode": "people"
+      },
+      {
+        "id": 95,
+        "slug": "fillman-and-sons-floors",
+        "name": "Fillman & Sons Floors & More",
+        "mode": "people"
+      },
+      {
+        "id": 96,
+        "slug": "floral-and-hardy",
+        "name": "Floral and Hardy of Skippack",
+        "mode": "people"
+      },
+      {
+        "id": 97,
+        "slug": "oster-fine-violins",
+        "name": "Frederick W. Oster Fine Violins",
+        "mode": "people"
+      },
+      {
+        "id": 98,
+        "slug": "fredo-s-deli",
+        "name": "Fredo's Deli",
+        "mode": "food"
+      },
+      {
+        "id": 99,
+        "slug": "glen-eagle-pediatric-dentistry",
+        "name": "Glen Eagle Pediatric Dentistry",
+        "mode": "people"
+      },
+      {
+        "id": 100,
+        "slug": "go2tech",
+        "name": "GO2 Tech",
+        "mode": "people"
+      },
+      {
+        "id": 101,
+        "slug": "hamburg-animal-hospital",
+        "name": "Hamburg Animal Hospital",
+        "mode": "people"
+      },
+      {
+        "id": 102,
+        "slug": "harry-s-hotdogs",
+        "name": "Harry's Hotdogs",
+        "mode": "food"
+      },
+      {
+        "id": 103,
+        "slug": "havercrown-dental",
+        "name": "HaverCrown Dental",
+        "mode": "people"
+      },
+      {
+        "id": 104,
+        "slug": "home-furnishings-consignment",
+        "name": "Home Furnishing Consignment",
+        "mode": "people"
+      },
+      {
+        "id": 105,
+        "slug": "jarman-hvac",
+        "name": "Jarman Sales & Service",
+        "mode": "people"
+      },
+      {
+        "id": 106,
+        "slug": "johnnys-pizza",
+        "name": "Johnny's Pizza & Pasta",
+        "mode": "food"
+      },
+      {
+        "id": 107,
+        "slug": "katana",
+        "name": "Katana Pittsburgh",
+        "mode": "food"
+      },
+      {
+        "id": 108,
+        "slug": "verruni-landscaping",
+        "name": "L. A. Verruni Landscaping",
+        "mode": "people"
+      },
+      {
+        "id": 109,
+        "slug": "legacy-jewelers",
+        "name": "Legacy Jewelers",
+        "mode": "people"
+      },
+      {
+        "id": 110,
+        "slug": "live-urgent-care",
+        "name": "Live Urgent Care King of Prussia",
+        "mode": "people"
+      },
+      {
+        "id": 111,
+        "slug": "maclaren-kitchen-and-bath",
+        "name": "MacLaren Kitchen and Bath",
+        "mode": "people"
+      },
+      {
+        "id": 112,
+        "slug": "malvern-vision-care",
+        "name": "Malvern Vision Care",
+        "mode": "people"
+      },
+      {
+        "id": 113,
+        "slug": "mcmenamin-margiotti",
+        "name": "McMenamin & Margiotti",
+        "mode": "people"
+      },
+      {
+        "id": 114,
+        "slug": "metalmorphose-iron-studio",
+        "name": "Metalmorphose Ironworks",
+        "mode": "people"
+      },
+      {
+        "id": 115,
+        "slug": "nicky-s-thai-kitchen",
+        "name": "Nicky's Thai Kitchen Downtown",
+        "mode": "food"
+      },
+      {
+        "id": 116,
+        "slug": "nottingham-creamery",
+        "name": "Nottingham Creamery",
+        "mode": "food"
+      },
+      {
+        "id": 117,
+        "slug": "oaks-italian-deli",
+        "name": "Oaks Italian Deli And Pizzeria",
+        "mode": "food"
+      },
+      {
+        "id": 118,
+        "slug": "openarc",
+        "name": "OpenArc",
+        "mode": "people"
+      },
+      {
+        "id": 119,
+        "slug": "oss-health",
+        "name": "OSS Health",
+        "mode": "people"
+      },
+      {
+        "id": 120,
+        "slug": "peking-gourmet",
+        "name": "Peking Gourmet",
+        "mode": "food"
+      },
+      {
+        "id": 121,
+        "slug": "pennsylvania-dental-group",
+        "name": "Pennsylvania Dental Group",
+        "mode": "people"
+      },
+      {
+        "id": 122,
+        "slug": "philadelphia-garage",
+        "name": "Philadelphia Garage",
+        "mode": "people"
+      },
+      {
+        "id": 123,
+        "slug": "pipe-xpress",
+        "name": "Pipe Xpress",
+        "mode": "people"
+      },
+      {
+        "id": 124,
+        "slug": "plastic-surgery-solutions",
+        "name": "Plastic & Reconstructive Surgical Solutions",
+        "mode": "people"
+      },
+      {
+        "id": 125,
+        "slug": "pro-nails",
+        "name": "Pro Nails",
+        "mode": "people"
+      },
+      {
+        "id": 126,
+        "slug": "radiance-dental",
+        "name": "Radiance Dental",
+        "mode": "people"
+      },
+      {
+        "id": 127,
+        "slug": "reardon-dental",
+        "name": "Reardon Dental Exton",
+        "mode": "people"
+      },
+      {
+        "id": 128,
+        "slug": "riley-rodzianko-and-clymer-llp",
+        "name": "Riley Rodzianko & Clymer LLP",
+        "mode": "people"
+      },
+      {
+        "id": 129,
+        "slug": "salters-fireplace",
+        "name": "Salter's Fireplace",
+        "mode": "people"
+      },
+      {
+        "id": 130,
+        "slug": "sciacca-service-center",
+        "name": "Sciacca Service Center",
+        "mode": "people"
+      },
+      {
+        "id": 131,
+        "slug": "scott-lot",
+        "name": "Scott Lot",
+        "mode": "people"
+      },
+      {
+        "id": 132,
+        "slug": "sesame-inn",
+        "name": "Sesame Inn",
+        "mode": "food"
+      },
+      {
+        "id": 133,
+        "slug": "southampton-hot-tub",
+        "name": "Southampton Hot Tub",
+        "mode": "people"
+      },
+      {
+        "id": 134,
+        "slug": "new-pennsburg-diner",
+        "name": "The New Pennsburg Diner",
+        "mode": "food"
+      },
+      {
+        "id": 135,
+        "slug": "thr-insurance",
+        "name": "THR Insurance",
+        "mode": "people"
+      },
+      {
+        "id": 136,
+        "slug": "train-and-nourish",
+        "name": "Train and Nourish",
+        "mode": "people"
+      },
+      {
+        "id": 137,
+        "slug": "wja-landscaping",
+        "name": "WJA Landscaping",
+        "mode": "people"
+      },
+      {
+        "id": 138,
+        "slug": "wynnewood-eyecare",
+        "name": "Wynnewood Eye Care",
+        "mode": "people"
+      }
+    ],
+    "needsGen": [],
+    "blocked": [],
+    "dropped": [
+      "johnny-s-pizza",
+      "thr-insurance-agency"
+    ],
+    "collisions": [],
+    "modeMismatch": []
+  }
+}

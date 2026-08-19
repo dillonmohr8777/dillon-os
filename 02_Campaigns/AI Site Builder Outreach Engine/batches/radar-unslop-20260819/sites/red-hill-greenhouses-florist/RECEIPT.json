@@ -5,23 +5,73 @@
   "family": "retail",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": true,
   "url": "https://www.redhillgreenhouse.com/",
   "city": "Red Hill",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Associate helping a customer choose an item in the shop, no text",
-    "Craftsperson or buyer handling the product with care, no text",
-    "Two people at the counter during a purchase conversation, no text",
-    "Store interior with a person browsing, no text",
-    "Close-up of hands presenting the product, no logos"
+  "hashes": [
+    "5e725f9b2079a3edc3269b8a5dc643ea0454be1ff6cab14b0a1b45c088c43688",
+    "840acf1da6c995c2be4e4ab490ce626d66065623c6ac622a4bbe45c774540d67",
+    "59ba391a14d5e6a91162413b0f482d81057c1463d862313b183c1adf83082177",
+    "3390397dd1c0b8542ef00116155bee86268b2c416f1d595837458a6bb4d66d9a",
+    "5d24e84a7f151b3736c4448efcde4f1af8a03f60a47f9fb2c5e0a80fdc2fc73d"
   ]
 }

@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 2,
-  "sourceCount": 2,
-  "officialPhotos": 2,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
   "genFills": 0,
   "hasLogo": false,
   "url": "https://emberandale.com/",
   "city": "Collegeville",
-  "error": "only 2 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal poured pint or spirit in glass beside copper stills or tap handles, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Ember & Ale, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Ember & Ale, no faces required, no text",
-    "Dining counter or table set with poured pint or spirit in glass beside copper stills or tap handles, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Ember & Ale — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "1d54a4634d1821c86f9222195d4ed559e7df4ae7c52babaeea31428e8059cb3d",
+    "4458cd047751a986a48e5228497a68d20bb7e348fab328aa4dacc04fcdc8c7a7",
+    "73c9deec6937d1fbce2cb062ac12ab41867ff90a04916a6757bd86d4b762646b",
+    "6ae2dcc5928c9c58951eff13fd7ad47183a9f0400497074c4a45fb494d38b8f8",
+    "8d865d4e0afb99785f772fded3d6f2695183eb05ef14b6df6204511427488db9"
   ]
 }

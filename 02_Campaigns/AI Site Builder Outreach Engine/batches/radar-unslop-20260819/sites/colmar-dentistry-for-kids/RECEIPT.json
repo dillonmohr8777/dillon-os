@@ -2,26 +2,76 @@
   "id": 82,
   "slug": "colmar-dentistry-for-kids",
   "name": "Colmar Dentistry For Kids",
-  "family": "professional",
+  "family": "dental",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": true,
   "url": "https://www.colmarkids.com/",
   "city": "Montgomeryville",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "7873e2a1c28499afd8eabdcc32965f89b3121fe4027f37ff27a339e0ddc6836b",
+    "0588eb78b46b59eb6de904eb42124ed9138bf51c213be6b64d4ec0fce661fcb4",
+    "f7e6e080395e9a131e08131989d567ef17ac749886a1ce0cf110accafb87e17b",
+    "f9fa4db1c330fc9c08a6fb5923f69f86ad71897bc2a518e5e3130d6af19ae660",
+    "fe75c634b0b90688c7f10bccfdea86a60542ccd99cb2b7b4d1181b2f6efbfb96"
   ]
 }

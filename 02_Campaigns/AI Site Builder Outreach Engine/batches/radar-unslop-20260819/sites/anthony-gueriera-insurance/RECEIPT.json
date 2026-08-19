@@ -5,23 +5,73 @@
   "family": "legal",
   "mode": "people",
   "issue": "webgl",
-  "ok": false,
-  "qa": [],
-  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://broomallinsuranceagency.com/\nCall log:\n  - navigating to \"https://broomallinsuranceagency.com/\", waiting until \"domcontentloaded\"\n",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "https://broomallinsuranceagency.com",
   "city": "Broomall",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Advisor in professional attire seated with a client at a conference table, no text",
-    "Attorney reviewing documents at a desk with natural office light, no text",
-    "Two people in a calm consultation, listening, no text",
-    "Reception of a small professional office with a person arriving, no text",
-    "Close-up of hands over a folder and pen during a meeting, no logos"
+  "hashes": [
+    "284e129cb511cc497e0918b335d829c242c2cd41bfbbaf7d6dd152c173fdfad8",
+    "e13cd79188b80ce9929cbbd580027276d23e2a74beea59d75c8d731df1ccce9a",
+    "48843134b8cb5463cc36d3b6d63b0f170e85d40c32fdd323d9fd9bc285bd3df8",
+    "2384c30071631165c63973fcb7fc6248c3c46eda6c515d066ffba92789f0d6ce",
+    "abde9acbd03b6d675bd879ff15792fc783da99cffb58f2724f24a09a9566bb83"
   ]
 }

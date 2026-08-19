@@ -5,23 +5,73 @@
   "family": "legal",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "cloudflare-challenge",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": true,
   "url": "http://www.rrccpa.com/",
   "city": "Quakertown",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Advisor in professional attire seated with a client at a conference table, no text",
-    "Attorney reviewing documents at a desk with natural office light, no text",
-    "Two people in a calm consultation, listening, no text",
-    "Reception of a small professional office with a person arriving, no text",
-    "Close-up of hands over a folder and pen during a meeting, no logos"
+  "hashes": [
+    "2ddb2af863ef9c207a205987a568fbaacdb9d497633016b357f56c1d5b79c923",
+    "85fb48cdb041b32779854cc925d24c0020db05dc3d2d1d27f8f57a69a80d5966",
+    "3c4ab943df7375941819ada1eb55af79ddcf3cfa0e9b4ba8bf2b964d4c12b840",
+    "bd9d234ab16c2c4f1337885bd2135066a2e0f34fce525505fcd99ee36ab9340f",
+    "e72609593fb24ec8f3ae248ebf197b1578926d9dea940fd532968012692b6ef8"
   ]
 }

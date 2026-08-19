@@ -1,0 +1,60 @@
+{
+  "slug": "elite-auto-parts",
+  "name": "Elite Philly Auto Parts",
+  "city": "Philadelphia",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "https://cecarparts.com",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": false,
+  "tokens": {
+    "paper": "#EEF0F3",
+    "ink": "#14181E",
+    "accent": "#B42318",
+    "accent2": "#F2C14E",
+    "panel": "#D5DAE0",
+    "deep": "#10141A",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "industrial",
+  "marquee": [
+    "Elite Philly Auto Parts",
+    "Philadelphia",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Elite Philly Auto Parts — people at work",
+    "The process photograph for Elite Philly Auto Parts — hands on the job",
+    "The conversation photograph for Elite Philly Auto Parts — a real conversation",
+    "The place photograph for Elite Philly Auto Parts — the place",
+    "The craft photograph for Elite Philly Auto Parts — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Elite Philly Auto Parts",
+  "sub": "Elite Philly Auto Parts in Philadelphia. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Elite Philly Auto Parts in Philadelphia. Private concept preview."
+}

@@ -5,23 +5,73 @@
   "family": "trade",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
   "genFills": 0,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "https://jarmansalesandservice.com/",
   "city": "Philadelphia",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Tradesperson in branded workwear on a jobsite or in a shop, no text",
-    "Technician working with tools on equipment or landscape, no text",
-    "Crew lead talking with a homeowner at the door or yard, no text",
-    "Van or shop with a person loading materials, no text",
-    "Close-up of skilled hands on the actual trade work, no logos"
+  "hashes": [
+    "1c516d6caa0f52c24bfaa402bed18716aa3c68454b447226c2b6404fb6dfe415",
+    "3bbda6aaca749cff590c485adb74715c132bf3dcfd4765cb223545bcfc45e634",
+    "b2e9e39128c438d092ff157efbba2b0929789a0f4e50dfc2f41e7490bf55b21d",
+    "3b5d8b8e2eb300a61146eb925244a7e0cc95dd5b63716732942e942a3c81b976",
+    "5ba6c2fb1323ec2dbe31291f811ce2546957ad365c8e3b9c6681a1d81ef53422"
   ]
 }

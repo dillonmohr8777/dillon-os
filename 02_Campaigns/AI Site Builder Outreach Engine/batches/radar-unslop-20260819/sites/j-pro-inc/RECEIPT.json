@@ -2,26 +2,76 @@
   "id": 21,
   "slug": "j-pro-inc",
   "name": "J-Pro Pools Inc",
-  "family": "professional",
+  "family": "trade",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "cloudflare-challenge",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
   "genFills": 0,
   "hasLogo": false,
   "url": "https://www.j-propools.com/",
   "city": "Bridgeport",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "7de5709133861158a5c31ed4ebf0b65650ad386969aaffecfed4eb4b7b2234ab",
+    "8ed40e2adf365bbd1f7cded76dac273197779a27a57d0f538daa0fc9d3a5c5d9",
+    "52bd5600260c537d6c51957a6c08dadcc0e98ce1bff3d0288ec758246c8095ab",
+    "81287afd1e3853fb2c9c9726c7396e22f642c3ff3833d090d6f700ad627b740c",
+    "bb118585712ebab141151b49461af6448a6adf8126a6feb4210cc54f10131213"
   ]
 }

@@ -5,23 +5,73 @@
   "family": "auto",
   "mode": "people",
   "issue": "webgl",
-  "ok": false,
-  "qa": [],
-  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://cecarparts.com/\nCall log:\n  - navigating to \"https://cecarparts.com/\", waiting until \"domcontentloaded\"\n",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "https://cecarparts.com",
   "city": "Philadelphia",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Technician in work shirt inspecting a vehicle on the shop floor, no text",
-    "Mechanic under a hood with tools, real garage, no text",
-    "Service advisor with a customer beside a car in the drive lane, no text",
-    "Shop bay with a person walking a car into service, no text",
-    "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+  "hashes": [
+    "86bcce830e8feb5c81d8654efb8b4809865c2344f6b0585f3113ba732ba456f0",
+    "2dcf2f26741af82214d138b0ffffba605029cd856be459291eb81f2dea98493e",
+    "5cda0d4dfebfc31876161ba4416916d32aec1bb975b39628504d2c45a4e73da5",
+    "7c1a3f2ecc8287c54bd49b143335e756f44e0325d6a1e5b561b9c7a6d3c7a397",
+    "561f75f7e32755549d48f986c7632b86c824bb7d007b5853134e36a90019838b"
   ]
 }

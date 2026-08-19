@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "webgl",
-  "ok": false,
-  "qa": [],
-  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://leeshoagieshorsham.com/\nCall log:\n  - navigating to \"https://leeshoagieshorsham.com/\", waiting until \"domcontentloaded\"\n",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "https://leeshoagieshorsham.com",
   "city": "Horsham",
-  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal seeded hoagie roll stacked with meats, oil, and shredded lettuce, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Lee's Hoagie House of Horsham, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Lee's Hoagie House of Horsham, no faces required, no text",
-    "Dining counter or table set with seeded hoagie roll stacked with meats, oil, and shredded lettuce, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Lee's Hoagie House of Horsham — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "42217e2a6fe2b2b16c43a40d27055dd541705f0b3fddd5195a02aa91c1018e09",
+    "ee25b103a2fca94a274a13c66647a4c7652e8abe5e23837a77c7d99aaca4e4d5",
+    "2d48d0ecea2f844eb5994607334ae3d3d706abc7e318989628f9970e8d8b85e0",
+    "bc65d34615ad9d0ae75a34cb455dc21209ee92dd07d7427de36b6dbfdea0894d",
+    "d9aeff94d9d445eaf0177c5c5dfc45aac98f81ec6c3b28bdf5c509f55164a56f"
   ]
 }

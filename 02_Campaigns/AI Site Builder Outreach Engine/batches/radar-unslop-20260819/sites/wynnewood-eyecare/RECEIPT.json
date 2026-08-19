@@ -5,23 +5,73 @@
   "family": "medical",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
-  "genFills": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 2,
+  "genFills": 5,
   "hasLogo": true,
   "url": "https://www.wynnewoodeyecare.com/",
   "city": "Wynnewood",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Clinician speaking with a patient in an exam room, no text",
-    "Nurse taking vitals with a calm bedside manner, no text",
-    "Front desk checking in a visitor, no text",
-    "Clinic corridor with a provider walking toward a room, no text",
-    "Close-up of gloved hands preparing a clean instrument tray, no logos"
+  "hashes": [
+    "73e93233b69ee59e7ab4ee356246a41da3cb32314774982f9612c4156aad36e7",
+    "f67fa94396fe1fd6d3aa82b1bbc4dd72de21fec73e554dd4b633135136f5d593",
+    "930f4521ae99ca7194e8710f4d513b3a3ed01ab93cb98cb8a10b08983cbd8237",
+    "66bc4207cc399180a65ee4734179e4553f3c62b2ebb4b869edeb479aadfc7cf4",
+    "ddf24a16abf3b728c1c276ed463899dbc7257ae9dca465db3098d18fb85c6d26"
   ]
 }

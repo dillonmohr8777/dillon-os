@@ -5,23 +5,73 @@
   "family": "trade",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": true,
   "url": "https://www.bgelectricservicellc.com/",
   "city": "Philadelphia",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Tradesperson in branded workwear on a jobsite or in a shop, no text",
-    "Technician working with tools on equipment or landscape, no text",
-    "Crew lead talking with a homeowner at the door or yard, no text",
-    "Van or shop with a person loading materials, no text",
-    "Close-up of skilled hands on the actual trade work, no logos"
+  "hashes": [
+    "c6909aaea5746dc2232022454c18c922d9d6072ad5ff625393f345b452282c8b",
+    "96cf3eac6d38bc8d3bcea077dd0ce925136c412bee35061dc5a13296cb3b1f70",
+    "a0d215a78bf2f544e6972b4134abfc2f00dcb020483cd1abbe84ee539266e954",
+    "74c12512bfdd7f975fabaa28eb6f6831a192921203d6438f8176dc003bc9cf38",
+    "d52b8b35a61c9dfec1e6609640b43f5ee1691ad7d9802ee4d5caa01226d45e49"
   ]
 }

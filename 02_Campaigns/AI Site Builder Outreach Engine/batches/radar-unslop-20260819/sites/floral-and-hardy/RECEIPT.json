@@ -2,26 +2,76 @@
   "id": 96,
   "slug": "floral-and-hardy",
   "name": "Floral and Hardy of Skippack",
-  "family": "professional",
+  "family": "retail",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
   "genFills": 0,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "https://floralandhardyofskippack.com/",
   "city": "Skippack",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "126dbdce2e42d0235d233c5604bc98010023ecd5f492e7ace2ec7f6376aee8fe",
+    "df84146d71bba5115df5f4eef1fb21879a3ec1fce904e3465ec229f0b9936e76",
+    "0ab659be2114e1d63cd80394a69f397466ef4ea028f6fd041bdededc0b8083ad",
+    "ecdc6c197b8ec594e3fe8e491d292614b65134f91fe1a29679d5a35c862f7e0b",
+    "8f45e5636b3b0346021d5a39283413d6e76355858145b097a0abf10601212b07"
   ]
 }

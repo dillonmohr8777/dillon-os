@@ -1,0 +1,60 @@
+{
+  "slug": "frazer-antiques",
+  "name": "Frazer Antiques",
+  "city": "Frazer",
+  "category": "Retail",
+  "family": "retail",
+  "mode": "people",
+  "url": "http://www.frazer-antiques.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": false,
+  "tokens": {
+    "paper": "#F4EFE7",
+    "ink": "#111820",
+    "accent": "#F05A28",
+    "accent2": "#17324D",
+    "panel": "#E6DED4",
+    "deep": "#0B1D2D",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "neon",
+  "marquee": [
+    "Frazer Antiques",
+    "Frazer",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Frazer Antiques — people at work",
+    "The process photograph for Frazer Antiques — hands on the job",
+    "The conversation photograph for Frazer Antiques — a real conversation",
+    "The place photograph for Frazer Antiques — the place",
+    "The craft photograph for Frazer Antiques — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Frazer Antiques",
+  "sub": "Frazer Antiques in Frazer. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Frazer Antiques in Frazer. Private concept preview."
+}

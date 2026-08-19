@@ -1,0 +1,60 @@
+{
+  "slug": "always-dental-care",
+  "name": "Always Dental Care",
+  "city": "Phoenixville",
+  "category": "Dental",
+  "family": "dental",
+  "mode": "people",
+  "url": "https://www.alwaysdentalcare.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#a0d0f0",
+    "ink": "#004070",
+    "accent": "#0090d0",
+    "accent2": "#004070",
+    "panel": "#89c7eb",
+    "deep": "#00233d",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "Always Dental Care",
+    "Phoenixville",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Always Dental Care — people at work",
+    "The process photograph for Always Dental Care — hands on the job",
+    "The conversation photograph for Always Dental Care — a real conversation",
+    "The place photograph for Always Dental Care — the place",
+    "The craft photograph for Always Dental Care — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Always Dental Care",
+  "sub": "Always Dental Care in Phoenixville. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Always Dental Care in Phoenixville. Private concept preview."
+}

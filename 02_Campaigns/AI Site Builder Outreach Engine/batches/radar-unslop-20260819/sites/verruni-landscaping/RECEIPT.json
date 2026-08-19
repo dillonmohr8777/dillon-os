@@ -2,26 +2,76 @@
   "id": 108,
   "slug": "verruni-landscaping",
   "name": "L. A. Verruni Landscaping",
-  "family": "professional",
+  "family": "trade",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 2,
-  "sourceCount": 2,
-  "officialPhotos": 2,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 3,
+  "sourceCount": 3,
+  "officialPhotos": 3,
   "genFills": 0,
   "hasLogo": true,
   "url": "http://www.verrunilandscaping.com/",
   "city": "Pottstown",
-  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "d04aecd19b730d2e5819f6e29d7d5a7dd49a3e50b3d548f7e5554654369a5544",
+    "b8d218e42a045d0f9311ecc21a46656441832b8c203b354f951a1f568b0b6cbb",
+    "34c0dd3fc065c10b0b119acd30de25530d593ec9bd9d1dfc21e7ee772cd36c43",
+    "0a84644bcf41882399a0bcf61c86a4b7f9539ca7f5a12420e7d2b4a7ef05ce7e",
+    "6ef7161d58748ad77999f15e6c325ad0845a5f35ecffbee1e476c9a49ae5f3b1"
   ]
 }

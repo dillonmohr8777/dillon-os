@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
-  "genFills": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 12,
+  "sourceCount": 12,
+  "officialPhotos": 7,
+  "genFills": 5,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "https://pennsburgdiner.com/",
   "city": "Pennsburg",
-  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal diner breakfast plate: eggs, toast, and a coffee mug, morning light, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for The New Pennsburg Diner, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for The New Pennsburg Diner, no faces required, no text",
-    "Dining counter or table set with diner breakfast plate: eggs, toast, and a coffee mug, morning light, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for The New Pennsburg Diner — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "a1325aa47ea0121ffa19865ba0e16d65daa02e911f8ad9c7adea9cb5e5f2baf2",
+    "00a8d8f8abb227d4c9e25de7d57affc25555bf8933c86ce508f67e0e5a7a4a58",
+    "97535c1cf07d641abc4addc58fb702409306c2c157f76b73f3c9467fb15b7560",
+    "2a5722a50e1dfc58760c061f3b83bf3d3ede92f3f95ef1ebdecc89493d0c5b7b",
+    "317db578a098516c9e23cc5e01493cc30f15f823f742b2e59de996016ba1fda0"
   ]
 }

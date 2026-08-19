@@ -1,0 +1,60 @@
+{
+  "slug": "barnes-financial-group",
+  "name": "Barnes Financial Group",
+  "city": "Media",
+  "category": "Legal",
+  "family": "legal",
+  "mode": "people",
+  "url": "http://www.barnesfinancial.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#e0d0b0",
+    "ink": "#306080",
+    "accent": "#306080",
+    "accent2": "#405060",
+    "panel": "#c7c0a9",
+    "deep": "#1a3446",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Barnes Financial Group",
+    "Media",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Barnes Financial Group — people at work",
+    "The process photograph for Barnes Financial Group — hands on the job",
+    "The conversation photograph for Barnes Financial Group — a real conversation",
+    "The place photograph for Barnes Financial Group — the place",
+    "The craft photograph for Barnes Financial Group — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Barnes Financial Group",
+  "sub": "Barnes Financial Group in Media. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Barnes Financial Group in Media. Private concept preview."
+}

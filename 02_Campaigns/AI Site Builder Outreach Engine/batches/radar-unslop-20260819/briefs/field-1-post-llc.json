@@ -1,0 +1,60 @@
+{
+  "slug": "field-1-post-llc",
+  "name": "Field 1 Post LLC",
+  "city": "Havertown",
+  "category": "Professional",
+  "family": "professional",
+  "mode": "people",
+  "url": "https://www.field1post.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#F4EFE7",
+    "ink": "#111820",
+    "accent": "#F05A28",
+    "accent2": "#17324D",
+    "panel": "#E6DED4",
+    "deep": "#0B1D2D",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Bricolage Grotesque",
+    "text": "Manrope",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "warm",
+  "marquee": [
+    "Field 1 Post LLC",
+    "Havertown",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Field 1 Post LLC — people at work",
+    "The process photograph for Field 1 Post LLC — hands on the job",
+    "The conversation photograph for Field 1 Post LLC — a real conversation",
+    "The place photograph for Field 1 Post LLC — the place",
+    "The craft photograph for Field 1 Post LLC — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Field 1 Post LLC",
+  "sub": "Field 1 Post LLC in Havertown. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Field 1 Post LLC in Havertown. Private concept preview."
+}

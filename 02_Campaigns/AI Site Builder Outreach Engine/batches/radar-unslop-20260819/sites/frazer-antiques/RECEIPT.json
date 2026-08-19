@@ -2,26 +2,76 @@
   "id": 55,
   "slug": "frazer-antiques",
   "name": "Frazer Antiques",
-  "family": "professional",
+  "family": "retail",
   "mode": "people",
   "issue": "webgl",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "http://www.frazer-antiques.com/",
   "city": "Frazer",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "ca5a70ed145372d8e56c433e8f4485bbb14fb17416e0e6f1cc976e287db2cb21",
+    "d617ae589009b08208cb414326f265b81b439ba94350e772e129022d6e2c1f9e",
+    "ae8e58872d17f2c89040eb44ff9c5e6ba850e191e11f99ed737dab9cd81d7988",
+    "3be48e3d28d700c663b4869c89a8b0d9cbd36d09b23045343a7a82a99285b62e",
+    "6aada3826b4acd9444fd0af05692f7a7acf27cf81a9c43c39463589b82632688"
   ]
 }

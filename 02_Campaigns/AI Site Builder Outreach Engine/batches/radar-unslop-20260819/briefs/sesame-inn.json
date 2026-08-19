@@ -1,0 +1,60 @@
+{
+  "slug": "sesame-inn",
+  "name": "Sesame Inn",
+  "city": "Sesame Inn",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "https://sesameinn.com/MtLebanon.html",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#f0c010",
+    "ink": "#e01020",
+    "accent": "#f0b010",
+    "accent2": "#e01020",
+    "panel": "#f0bd10",
+    "deep": "#7b0811",
+    "onPaper": "#111820",
+    "onAccent": "#111820",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Sesame Inn",
+    "Sesame Inn",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Sesame Inn kitchen concept",
+    "Chef plating at the pass for Sesame Inn",
+    "Prep and ingredients for Sesame Inn",
+    "Dining setting for Sesame Inn",
+    "Close food texture for Sesame Inn"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Sesame Inn",
+  "sub": "Sesame Inn in Sesame Inn. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source."
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Sesame Inn in Sesame Inn. Private concept preview."
+}

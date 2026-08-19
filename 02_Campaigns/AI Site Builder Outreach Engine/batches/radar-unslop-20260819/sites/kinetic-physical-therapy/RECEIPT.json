@@ -5,23 +5,73 @@
   "family": "fitness",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
   "genFills": 0,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "https://kineticptpa.com/",
   "city": "Collegeville",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Trainer coaching a client through a lift or stretch in a gym, no text",
-    "Therapist guiding a patient's shoulder or knee in a clinic, no text",
-    "Two people reviewing a plan on a clipboard after a session, no text",
-    "Training floor with a coach walking the room, no text",
-    "Close-up of spotting hands or a resistance band in use, no logos"
+  "hashes": [
+    "d151e03ee1e11b32f88f4353e421f800f2b1bd465ce1e1ca3123b3e6ee7b0b11",
+    "6986760193d48f214995647c67ee0ff99791a9c4f62c87811e81559a7f0d4702",
+    "f7255d24fbb6c349f0fd20ee1ef5fb4db19bf55c80c5f0385ed144faefc03604",
+    "9c3a8a34918e4e4e3f8e726a8c2a6ab03a30972302994b940f46d2cecf5767bc",
+    "5133663dd6c1562a350cf0b2796c6a86f9ca8c82ab8b91b9c259f01bd59831e7"
   ]
 }

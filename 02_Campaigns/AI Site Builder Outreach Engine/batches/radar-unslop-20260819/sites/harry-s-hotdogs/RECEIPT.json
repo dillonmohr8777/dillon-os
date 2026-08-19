@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
-  "genFills": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 13,
+  "sourceCount": 13,
+  "officialPhotos": 8,
+  "genFills": 5,
   "hasLogo": true,
   "url": "https://harryshotdogs.com/",
   "city": "Sadsburyville",
-  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal griddled hot dog on a toasted bun with mustard and relish, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Harry's Hotdogs, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Harry's Hotdogs, no faces required, no text",
-    "Dining counter or table set with griddled hot dog on a toasted bun with mustard and relish, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Harry's Hotdogs — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "b884370cbe4eb7b7b111d8121075ea693763b187a19a2ff90b7b679524cf4c65",
+    "a9955e557818c5e22ff41a696cc80c28df3a879ef5760826daeb0424423cb13f",
+    "2a31f1aa4c0eb0880220a9649908166116c6293c06a1bd569d710ae618ec3f3c",
+    "6ff9c86e7b7366e48f19a69d817aa225acc9f9fbe556dd3de963622931bfb92a",
+    "581e38dcb8a6110042de3fcaa517cc5f53af975fc17a6f73701a156571d864ed"
   ]
 }

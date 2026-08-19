@@ -2,26 +2,76 @@
   "id": 95,
   "slug": "fillman-and-sons-floors",
   "name": "Fillman & Sons Floors & More",
-  "family": "professional",
+  "family": "trade",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 2,
-  "sourceCount": 2,
-  "officialPhotos": 2,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 7,
   "genFills": 0,
   "hasLogo": true,
   "url": "http://www.fillmanandsons.com/",
   "city": "Emmaus",
-  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "3bf4d93301457362a5f68bdb285da67effb2c3a1e63d1170fdd597e63890a9ad",
+    "433f4198422dd72d253fc414dc3bec1de9e2f337b9c5be1947ed6316cbe67853",
+    "c381b76856f3b8361eb6938f7d7cc5b1f14e682ded59b887d056e486f0a428ef",
+    "83475ba5c7596955ff975054960d23fd21ecfcc5fcc8d069e092e36bb153b600",
+    "9a7551b4e12643576f3b8405b4929cc1bd8613d8ab4b3b652790a0f1a18193c2"
   ]
 }

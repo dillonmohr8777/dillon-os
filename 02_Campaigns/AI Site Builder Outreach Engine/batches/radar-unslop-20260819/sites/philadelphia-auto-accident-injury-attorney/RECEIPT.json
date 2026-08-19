@@ -2,26 +2,76 @@
   "id": 33,
   "slug": "philadelphia-auto-accident-injury-attorney",
   "name": "Philadelphia Auto Accident Injury Attorney",
-  "family": "auto",
+  "family": "legal",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 1,
-  "sourceCount": 1,
-  "officialPhotos": 1,
-  "genFills": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 2,
+  "genFills": 5,
   "hasLogo": true,
   "url": "https://carcrashinjuryfirm.com/philadelphia-auto-accident-injury-attorney/",
   "city": "Philadelphia",
-  "error": "only 1 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Technician in work shirt inspecting a vehicle on the shop floor, no text",
-    "Mechanic under a hood with tools, real garage, no text",
-    "Service advisor with a customer beside a car in the drive lane, no text",
-    "Shop bay with a person walking a car into service, no text",
-    "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+  "hashes": [
+    "21847e403d7fed27f7a6792b0288503ab9ed402d34b4ec271958b8e5c8e8722a",
+    "b1dd1e078b77a365da2f4b0474332f033dc5fd6c7d8b024d363ea2e33741c365",
+    "3df250aa5b6176c2556f3e809bf0039fab58045d60f32975d5e1c4aa7715fc67",
+    "3b26a43b0abcf85b9959b236917555ed59643bf8b6602885863d8c25e0b0bbaa",
+    "da836e6e1eb11188b9ba0b25afa574efe60b12a99522c892d5ef43aa278e66b4"
   ]
 }

@@ -1,0 +1,60 @@
+{
+  "slug": "new-pennsburg-diner",
+  "name": "The New Pennsburg Diner",
+  "city": "Pennsburg",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "https://pennsburgdiner.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#f0c010",
+    "ink": "#701010",
+    "accent": "#706050",
+    "accent2": "#701010",
+    "panel": "#deb218",
+    "deep": "#3d0808",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "The New Pennsburg Diner",
+    "Pennsburg",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a The New Pennsburg Diner kitchen concept",
+    "Chef plating at the pass for The New Pennsburg Diner",
+    "Prep and ingredients for The New Pennsburg Diner",
+    "Dining setting for The New Pennsburg Diner",
+    "Close food texture for The New Pennsburg Diner"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "The New Pennsburg Diner",
+  "sub": "The New Pennsburg Diner in Pennsburg. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source."
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "The New Pennsburg Diner in Pennsburg. Private concept preview."
+}

@@ -11,9 +11,9 @@ source_of_truth: C:\Users\dillo\repos\dillon-os
 
 # Operating Status
 
-## Paused overnight — resume 2026-08-20 09:00 America/New_York
+## 138-site unslop — QA green, awaiting review
 
-138-site unslop is paused. **45** sites QA-ready, **91** still need industry photographs, **2** duplicates dropped. Morning agent prompt: [[handoffs/unslop-138-9am-pickup]]. PR: `dillon-os#326` on `cursor/prospect-unslop-collages-56f2`. Do not deploy. Sheet `Fixed?` only after QA green.
+Pickup finished 2026-08-19. **136** unique concept sites rebuilt with five unique 4:5 collages each (people at work, food for kitchens). **2** duplicate rows dropped (`#23` johnny-s-pizza, `#42` thr-insurance-agency). `qa-batch.js`: 136 ready, 0 collisions, 0 mode mismatches. Sheet `Fixed?` is YES for the 136 QA-green rows; duplicates stay blank. PR `dillon-os#326` on `cursor/prospect-unslop-collages-56f2`. Do not deploy. Do not send mail. `mail_ready` stays hold.
 
 The vault was reconciled on 2026-07-12 against current work from the rolling three-week window. The April-era client roster is superseded.
 

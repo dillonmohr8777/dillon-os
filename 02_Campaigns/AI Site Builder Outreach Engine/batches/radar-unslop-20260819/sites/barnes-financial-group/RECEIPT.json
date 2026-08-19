@@ -5,23 +5,73 @@
   "family": "legal",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
-  "genFills": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 2,
+  "genFills": 5,
   "hasLogo": true,
   "url": "http://www.barnesfinancial.com/",
   "city": "Media",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Advisor in professional attire seated with a client at a conference table, no text",
-    "Attorney reviewing documents at a desk with natural office light, no text",
-    "Two people in a calm consultation, listening, no text",
-    "Reception of a small professional office with a person arriving, no text",
-    "Close-up of hands over a folder and pen during a meeting, no logos"
+  "hashes": [
+    "9238c201e5b277f4ca3fbb203db3631e46e072ee1bdfb10f43c8d8ce6e60f730",
+    "153a225be09229c121d3031fe5f9a2e4dce51ab17fb7c61a52e6e4bafec66880",
+    "b4b3eeee041eaf1bbdecf39eeb44263f4874cdec47fc3e96c11131beac065852",
+    "8711c3f841fef9ffc963c1365dd7fb9f71306cb1e4965c850f21a7f95d03ac44",
+    "2f3de5c3d8601ded9702c59026cbc1b204945c79b8028ab7a033c299db3ff7fd"
   ]
 }

@@ -1,0 +1,60 @@
+{
+  "slug": "peking-gourmet",
+  "name": "Peking Gourmet",
+  "city": "Pottstown",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "http://pekinggourmetpottstown.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#f0c040",
+    "ink": "#f00000",
+    "accent": "#f00000",
+    "accent2": "#a00000",
+    "panel": "#f0a537",
+    "deep": "#840000",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Peking Gourmet",
+    "Pottstown",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Peking Gourmet kitchen concept",
+    "Chef plating at the pass for Peking Gourmet",
+    "Prep and ingredients for Peking Gourmet",
+    "Dining setting for Peking Gourmet",
+    "Close food texture for Peking Gourmet"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Peking Gourmet",
+  "sub": "Peking Gourmet in Pottstown. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source."
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Peking Gourmet in Pottstown. Private concept preview."
+}

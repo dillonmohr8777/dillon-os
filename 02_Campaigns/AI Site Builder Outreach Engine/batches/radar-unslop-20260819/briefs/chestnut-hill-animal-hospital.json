@@ -1,0 +1,60 @@
+{
+  "slug": "chestnut-hill-animal-hospital",
+  "name": "Chestnut Hill Animal Hospital",
+  "city": "Erdenheim",
+  "category": "Veterinary",
+  "family": "veterinary",
+  "mode": "people",
+  "url": "http://chestnuthillvet.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#c0d0a0",
+    "ink": "#304020",
+    "accent": "#a0b080",
+    "accent2": "#609040",
+    "panel": "#bbcb9b",
+    "deep": "#1a2311",
+    "onPaper": "#111820",
+    "onAccent": "#111820",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Chestnut Hill Animal Hospital",
+    "Erdenheim",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Chestnut Hill Animal Hospital — people at work",
+    "The process photograph for Chestnut Hill Animal Hospital — hands on the job",
+    "The conversation photograph for Chestnut Hill Animal Hospital — a real conversation",
+    "The place photograph for Chestnut Hill Animal Hospital — the place",
+    "The craft photograph for Chestnut Hill Animal Hospital — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Chestnut Hill Animal Hospital",
+  "sub": "Chestnut Hill Animal Hospital in Erdenheim. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Chestnut Hill Animal Hospital in Erdenheim. Private concept preview."
+}

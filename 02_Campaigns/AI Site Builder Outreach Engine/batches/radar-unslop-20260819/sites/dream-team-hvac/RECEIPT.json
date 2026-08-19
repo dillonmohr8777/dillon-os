@@ -5,23 +5,73 @@
   "family": "trade",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
   "genFills": 0,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "https://dreamteampa.com/",
   "city": "Paoli",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Tradesperson in branded workwear on a jobsite or in a shop, no text",
-    "Technician working with tools on equipment or landscape, no text",
-    "Crew lead talking with a homeowner at the door or yard, no text",
-    "Van or shop with a person loading materials, no text",
-    "Close-up of skilled hands on the actual trade work, no logos"
+  "hashes": [
+    "ad2fe46c6a37b514c5c1710edef39c3c20bb6dab213109e223300fda96382e8f",
+    "c9864d1faa4469f6f5c32c8c86b0055c128befecddea77e0936637d2878af5e1",
+    "893b8cbe079f41dc09605e7140ef59cae5be9fa4e03577bfd325c2d236db147a",
+    "dd3d33f04f6ecc5488a86994e219f4ef7b1515ac12d922b5c40938c655d89d0b",
+    "1fa107c1b836b0560c5ed9af0d184275a3e037ab9b615ca756d9b3867dae1488"
   ]
 }

@@ -5,23 +5,73 @@
   "family": "veterinary",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": true,
   "url": "http://chestnuthillvet.com/",
   "city": "Erdenheim",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Veterinarian examining a dog on a table with a technician assisting, no text",
-    "Vet tech comforting a cat in a clean exam room, no text",
-    "Receptionist greeting a pet owner holding a leash in a clinic lobby, no text",
-    "Clinic treatment area with a clinician at work, no text",
-    "Close-up of a veterinarian's hands checking an animal's ear or paw, no logos"
+  "hashes": [
+    "451de30b9b825f8a59b5f0ed42e3ebd6274c4421f723f302115cac3aff8fc367",
+    "80619eb0533716a6e581f756efae4076b1b006bb82796747da97bd19f4fcc106",
+    "10180fb7bebf10197d15afaa864a6c61ae6271911bcbaf1e44a52c5f59b3ff9f",
+    "01fd0904089b836b3ca5e230c1b52f8cb117a0fb79dc7e5e76713cd14cb093cd",
+    "6b2222b0e4e7804a0dc73f4fe810562962c9c355b6def199cd6998658a525940"
   ]
 }

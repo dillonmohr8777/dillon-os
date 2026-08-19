@@ -5,23 +5,73 @@
   "family": "auto",
   "mode": "people",
   "issue": "webgl",
-  "ok": false,
-  "qa": [],
-  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://kehansautoservice.com/\nCall log:\n  - navigating to \"https://kehansautoservice.com/\", waiting until \"domcontentloaded\"\n",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "https://kehansautoservice.com",
   "city": "Philadelphia",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Technician in work shirt inspecting a vehicle on the shop floor, no text",
-    "Mechanic under a hood with tools, real garage, no text",
-    "Service advisor with a customer beside a car in the drive lane, no text",
-    "Shop bay with a person walking a car into service, no text",
-    "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+  "hashes": [
+    "da62f94ae2e601fd69235d6d7fbc37931aaeae7b6dab17dcc03b1f2161a19328",
+    "1d2e67668c9d94fb408359a8e70c2adb56b27edc2e75c729687c109c66b566e1",
+    "946039c69603ab9ddf5ff48b0d3097ff9c18725fca7ed761ccbeddb5020a78ed",
+    "7474f06c211046c395c3552d1aad395f0ccac3556930b9c16b0d810f09a7a99d",
+    "2064db7eb2047a8744bd845a87e9909cf1b0520284498edaab3b5a6ba60c9022"
   ]
 }

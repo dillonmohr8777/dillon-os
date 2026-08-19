@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 10,
+  "sourceCount": 10,
+  "officialPhotos": 10,
   "genFills": 0,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "http://oaksitaliandeli.com/",
   "city": "Phoenixville",
-  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal wood-fired pizza with blistered leopard-spotted crust on a peel, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Oaks Italian Deli And Pizzeria, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Oaks Italian Deli And Pizzeria, no faces required, no text",
-    "Dining counter or table set with wood-fired pizza with blistered leopard-spotted crust on a peel, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Oaks Italian Deli And Pizzeria — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "da65887d93e4b8f9b7e7b5febed00d77ecc528fac244cf862bad8ba68f2449ae",
+    "ee2a40eeac0e731db14532a76194ffdecd6cfe4370f42b2314597bf247aa3bfc",
+    "1e4db2f9b590def911bb32c4c0c81016c381bbf29c294313be09b1572d152539",
+    "a5273b161cca16bf03fc347f6ed3653c9cd1848ae9e029adc79cb1bd12e4a70d",
+    "bc1af7855e12edff0076bcebaf2f452d1657e775ac6fc99e6bff022a983a3932"
   ]
 }

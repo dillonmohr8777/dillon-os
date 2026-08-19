@@ -2,26 +2,76 @@
   "id": 131,
   "slug": "scott-lot",
   "name": "Scott Lot",
-  "family": "professional",
+  "family": "auto",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 2,
-  "sourceCount": 2,
-  "officialPhotos": 2,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 18,
+  "sourceCount": 18,
+  "officialPhotos": 18,
   "genFills": 0,
   "hasLogo": true,
   "url": "https://www.scottcars.com/",
   "city": "Scott Lot",
-  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "bc8e64a2ee65f7a0083a8965581afc8ccf66cf668cd6eb56993d9c6ba459ad85",
+    "76fff44dddaf4ac1ae075f8dd7223ef3275d967c68bdf2972c75b4d812275b17",
+    "1be78d9b19ca69de848573f6e5ce178d2559e8cd2e8dd858feda644ba430adab",
+    "b7d62deb7acb2135c36fcd982fea1b5df0d167f2d46d7e683c06a31d2247a1a2",
+    "6647fceb5ef16b0590f6bbaa7ace992ee2ff903e4d202ccacfb68dab322829a0"
   ]
 }

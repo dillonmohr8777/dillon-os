@@ -2,26 +2,76 @@
   "id": 63,
   "slug": "udis-conn-orthodontics",
   "name": "Udis & Conn Orthodontics",
-  "family": "professional",
+  "family": "dental",
   "mode": "people",
   "issue": "webgl",
-  "ok": false,
-  "qa": [],
-  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://udisandconnorthodontics.com/\nCall log:\n  - navigating to \"https://udisandconnorthodontics.com/\", waiting until \"domcontentloaded\"\n",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "https://udisandconnorthodontics.com",
   "city": "Jenkintown",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "d15b046c262d5f17b9397e68fa0c207cc426302ba3393bdc99822a8d634e9f7a",
+    "47c224e86963db38b9962a186449988ca319da2e3921d302208e5804c11a2713",
+    "dad9c4e38a4b787f4b00ceaafc4b967deaedefa3f211fe3078d5581a2c862049",
+    "ac08adcc65a2bc80ed17b93a6d3ea9178c85e8f2a77037cbbd6c35aeba4349e8",
+    "c53b14cbd5126c31d69c1a215fda2c5ad816f188628d94d400e816eacf0136ed"
   ]
 }

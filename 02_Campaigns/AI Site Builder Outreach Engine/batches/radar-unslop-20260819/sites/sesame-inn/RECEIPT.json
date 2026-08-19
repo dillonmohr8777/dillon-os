@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": true,
   "url": "https://sesameinn.com/MtLebanon.html",
   "city": "Sesame Inn",
-  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal Chinese banquet plate: wok-seared vegetables and protein, steam rising, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Sesame Inn, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Sesame Inn, no faces required, no text",
-    "Dining counter or table set with Chinese banquet plate: wok-seared vegetables and protein, steam rising, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Sesame Inn — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "14b5d4ae9a5cf30123a5b62bdb28c0b48955d6633597fbac7c38e36f4eac13e5",
+    "975d7140ae8f0856bf5f97a0a7773e78e8fa81a69696660ad118f3c349791e2e",
+    "f14f1b4e688a5d01adc5b6202a58c6d7e14279d9ce34ecda92dbd28360501cf1",
+    "65907e64ce2d3934fb173e5c1174ae8447efe0d42e55c53229ccd32d0ff18e58",
+    "07349188258c8e48e3d904fe999108fbd3aaf10ca6ac27e0a24b26b8ad1cba42"
   ]
 }

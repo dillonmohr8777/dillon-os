@@ -5,23 +5,73 @@
   "family": "legal",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "cloudflare-challenge",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "http://www.tartaruscapitalmanagement.com/contact",
   "city": "Colmar",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Advisor in professional attire seated with a client at a conference table, no text",
-    "Attorney reviewing documents at a desk with natural office light, no text",
-    "Two people in a calm consultation, listening, no text",
-    "Reception of a small professional office with a person arriving, no text",
-    "Close-up of hands over a folder and pen during a meeting, no logos"
+  "hashes": [
+    "81f37eac9fdad2533fd5e7b753b56cd083bdd910772616bd67d67bcab97ea1a2",
+    "09db2240930aec3299f1e5c97facb70fe6d8ad4efd7f559a9a5f5a7a44d6e288",
+    "eacf046edb7e17ca3a774c6ac27b9ddb77a527760e1b5c089471b94fcbe42a6c",
+    "f8bb9020bf0dc8d46e894e261001fb39bc170a0892bc270fd955c84d7a6c816d",
+    "7ce6f562d1817f7e06b9ee070e1893292f662e742b4bbaec82ca9fe952f8de54"
   ]
 }

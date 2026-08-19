@@ -2,26 +2,76 @@
   "id": 67,
   "slug": "wholly-grounds",
   "name": "Wholly Grounds Coffeehouse",
-  "family": "professional",
-  "mode": "people",
+  "family": "food",
+  "mode": "food",
   "issue": "webgl",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 2,
-  "sourceCount": 2,
-  "officialPhotos": 2,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 18,
+  "sourceCount": 18,
+  "officialPhotos": 18,
   "genFills": 0,
   "hasLogo": true,
   "url": "https://whollygroundscoffeehouse.com/",
   "city": "Oxford",
-  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "4f6e604a54f353cd6d1603daf19cd712193d52a03e5d8078da73b4ad48dcc862",
+    "80f21323a40d54dd917c1e4635392d1bf14d70ad381f119e50e224c4cbbce76b",
+    "6ee0448ee0cb8410b115588ef125ab7a000dfe0efa601c4181cf8082a075d2cc",
+    "8cc51482f177f8919a51714453ff0d8f96f4570e2367ac3dee6b85dde62df2f8",
+    "fccf16171d3c9547eba2a56f48bfaf8d404c256f012522c2fed37ab9a97cd5c2"
   ]
 }

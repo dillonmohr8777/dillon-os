@@ -1,0 +1,60 @@
+{
+  "slug": "fredo-s-deli",
+  "name": "Fredo's Deli",
+  "city": "Pittsburgh",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "http://fredosdeli.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#f0c000",
+    "ink": "#001080",
+    "accent": "#f0c000",
+    "accent2": "#001080",
+    "panel": "#f0c000",
+    "deep": "#000846",
+    "onPaper": "#111820",
+    "onAccent": "#111820",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "warm",
+  "marquee": [
+    "Fredo's Deli",
+    "Pittsburgh",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Fredo's Deli kitchen concept",
+    "Chef plating at the pass for Fredo's Deli",
+    "Prep and ingredients for Fredo's Deli",
+    "Dining setting for Fredo's Deli",
+    "Close food texture for Fredo's Deli"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Fredo's Deli",
+  "sub": "Fredo's Deli in Pittsburgh. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source."
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Fredo's Deli in Pittsburgh. Private concept preview."
+}

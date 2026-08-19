@@ -2,26 +2,76 @@
   "id": 137,
   "slug": "wja-landscaping",
   "name": "WJA Landscaping",
-  "family": "professional",
+  "family": "trade",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 6,
+  "sourceCount": 6,
+  "officialPhotos": 6,
   "genFills": 0,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "https://wjalandscaping.com/",
   "city": "WJA Landscaping. Family-run landscaping contractor in Collegeville",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "6cc7c261a4576c5443123c51e60388713c887c0e0241308a13fc60561423ea84",
+    "96fe66799bf778dff298b0c94b883432673a3f59e809ec9d9e14c04c0e5a57c6",
+    "94483e394007caa6fb5c492407b2c06b43160801248421159587869c660ffcd5",
+    "ea0b53af776433b36e74322d8f9d7b32fe4841ca0f794149a61b22d20ad96e66",
+    "8b4cacdb7e376aefc03f4b81604c9ac9fa3e11c68efd2ea49b001207f4640c82"
   ]
 }

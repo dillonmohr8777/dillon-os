@@ -1,0 +1,60 @@
+{
+  "slug": "malvern-vision-care",
+  "name": "Malvern Vision Care",
+  "city": "Malvern",
+  "category": "Medical",
+  "family": "medical",
+  "mode": "people",
+  "url": "https://www.malvernvision.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#e0c080",
+    "ink": "#305070",
+    "accent": "#305070",
+    "accent2": "#8090a0",
+    "panel": "#c7b07d",
+    "deep": "#1a2c3d",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "Malvern Vision Care",
+    "Malvern",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Malvern Vision Care — people at work",
+    "The process photograph for Malvern Vision Care — hands on the job",
+    "The conversation photograph for Malvern Vision Care — a real conversation",
+    "The place photograph for Malvern Vision Care — the place",
+    "The craft photograph for Malvern Vision Care — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Malvern Vision Care",
+  "sub": "Malvern Vision Care in Malvern. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Malvern Vision Care in Malvern. Private concept preview."
+}

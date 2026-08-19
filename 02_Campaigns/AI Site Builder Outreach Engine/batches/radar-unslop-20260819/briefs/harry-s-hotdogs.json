@@ -1,0 +1,60 @@
+{
+  "slug": "harry-s-hotdogs",
+  "name": "Harry's Hotdogs",
+  "city": "Sadsburyville",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "https://harryshotdogs.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#d0b0b0",
+    "ink": "#b00000",
+    "accent": "#b00000",
+    "accent2": "#a00000",
+    "panel": "#cb9797",
+    "deep": "#600000",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Harry's Hotdogs",
+    "Sadsburyville",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Harry's Hotdogs kitchen concept",
+    "Chef plating at the pass for Harry's Hotdogs",
+    "Prep and ingredients for Harry's Hotdogs",
+    "Dining setting for Harry's Hotdogs",
+    "Close food texture for Harry's Hotdogs"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Harry's Hotdogs",
+  "sub": "Harry's Hotdogs in Sadsburyville. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source."
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Harry's Hotdogs in Sadsburyville. Private concept preview."
+}

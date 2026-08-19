@@ -5,23 +5,73 @@
   "family": "veterinary",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 2,
-  "sourceCount": 2,
-  "officialPhotos": 2,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 4,
+  "sourceCount": 4,
+  "officialPhotos": 4,
   "genFills": 0,
   "hasLogo": true,
   "url": "https://www.hamburganimalhospital.com/",
   "city": "Hamburg Animal Hospital is a full service veterinary practice in Hamburg",
-  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Veterinarian examining a dog on a table with a technician assisting, no text",
-    "Vet tech comforting a cat in a clean exam room, no text",
-    "Receptionist greeting a pet owner holding a leash in a clinic lobby, no text",
-    "Clinic treatment area with a clinician at work, no text",
-    "Close-up of a veterinarian's hands checking an animal's ear or paw, no logos"
+  "hashes": [
+    "89825d404b66e810748e7c7455bf64d887781cacc965132d848a57fc7ce8a653",
+    "6511fb5c586dedd4e17dda18310976c5d2744f7a61bb7e6393d6179bdc66b0ca",
+    "5251738b0cbfebd5a80f433d872834e0141a64fd4c5ee08c7f92a95c86590c07",
+    "325ed23402034f574bc4cebaab1fa3b243b656ac79cf7aeba383cc1b7134bdf7",
+    "59ead1bbbd18b6281cb86b865bb83c9844151ff9749b4d11b7bb2aba91c5b0e4"
   ]
 }

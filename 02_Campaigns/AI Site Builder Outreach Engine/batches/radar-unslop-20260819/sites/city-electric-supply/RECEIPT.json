@@ -5,23 +5,73 @@
   "family": "trade",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
-  "genFills": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 6,
+  "sourceCount": 6,
+  "officialPhotos": 1,
+  "genFills": 5,
   "hasLogo": true,
-  "url": "https://www.cityelectricsupply.com/branches/pa/west-chester/west-chester",
+  "url": "https://www.cityelectricsupply.com/branch/409",
   "city": "West Chester",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Tradesperson in branded workwear on a jobsite or in a shop, no text",
-    "Technician working with tools on equipment or landscape, no text",
-    "Crew lead talking with a homeowner at the door or yard, no text",
-    "Van or shop with a person loading materials, no text",
-    "Close-up of skilled hands on the actual trade work, no logos"
+  "hashes": [
+    "4382f7c0c68580ad07ee3fd029c55d590ff367a61515fdd205ffc924028d4d26",
+    "2e55c22513b12e704806d18e6d1197d4e4088f5a3af44e1c89a5806ee5fe19bb",
+    "2dff4bacebcca0a4e078856d4a3b0ed0ce2af661209b61200c8e3eaa4454d816",
+    "2f5428ad2db175bd5d9d86b87bae44b1e26269f2d2b198e62f95cf5d0057c7cc",
+    "5878e9964ef5cc2694acd793d3c9eeb3aa0d66d7a37df41a9bef292d6ab8f330"
   ]
 }

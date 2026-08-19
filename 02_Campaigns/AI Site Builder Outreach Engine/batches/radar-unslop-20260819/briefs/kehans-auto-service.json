@@ -1,0 +1,60 @@
+{
+  "slug": "kehans-auto-service",
+  "name": "Kehan's Auto Service",
+  "city": "Philadelphia",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "https://kehansautoservice.com",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": false,
+  "tokens": {
+    "paper": "#EEF0F3",
+    "ink": "#14181E",
+    "accent": "#B42318",
+    "accent2": "#F2C14E",
+    "panel": "#D5DAE0",
+    "deep": "#10141A",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "warm",
+  "marquee": [
+    "Kehan's Auto Service",
+    "Philadelphia",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Kehan's Auto Service — people at work",
+    "The process photograph for Kehan's Auto Service — hands on the job",
+    "The conversation photograph for Kehan's Auto Service — a real conversation",
+    "The place photograph for Kehan's Auto Service — the place",
+    "The craft photograph for Kehan's Auto Service — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Kehan's Auto Service",
+  "sub": "Kehan's Auto Service in Philadelphia. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Kehan's Auto Service in Philadelphia. Private concept preview."
+}

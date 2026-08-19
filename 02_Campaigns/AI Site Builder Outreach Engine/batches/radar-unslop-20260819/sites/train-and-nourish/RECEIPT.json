@@ -5,23 +5,73 @@
   "family": "fitness",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 2,
-  "sourceCount": 2,
-  "officialPhotos": 2,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 14,
+  "sourceCount": 14,
+  "officialPhotos": 14,
   "genFills": 0,
   "hasLogo": true,
   "url": "https://trainandnourish.com/",
   "city": "Philadelphia",
-  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Trainer coaching a client through a lift or stretch in a gym, no text",
-    "Therapist guiding a patient's shoulder or knee in a clinic, no text",
-    "Two people reviewing a plan on a clipboard after a session, no text",
-    "Training floor with a coach walking the room, no text",
-    "Close-up of spotting hands or a resistance band in use, no logos"
+  "hashes": [
+    "67337e942fc31067ddb163535eff20234636685480228191d5d9d79faa09c971",
+    "8a3e671e553a772ee9506cf2647d174dcaa012670d2f046c98cd75a11b2c169f",
+    "ff9c56621de979bb5c17f3c08ad5558d04b2ed8822e07f5e2644fde9fbdae478",
+    "76e47e11dd80a2a1d49951f1837de24ff62cd92fc516fee70795b6460d1f9e2f",
+    "bbf52e31b0890450fe3ee508e60c2fa9bde5c6c3539fbe3a0ad44409cde4bc11"
   ]
 }

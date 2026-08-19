@@ -2,26 +2,76 @@
   "id": 30,
   "slug": "o-donnell-weiss-mattei-p-c",
   "name": "O'Donnell, Weiss & Mattei P.C.",
-  "family": "professional",
+  "family": "legal",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
   "url": "https://www.owmlaw.com/",
   "city": "Pottstown",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "6bae0312e47f1d9302c4c80432260442904b533ceb8a78d72e89d7a5edb561b4",
+    "81c2b00873cc4f3f77799dc48052651ff72de2e034f09c4dcb365b59df8e56b3",
+    "59d1e206a4f0cbddfe2a8cf57eda2e5f6cf6f63eca457c47da78e8f37cadcb1d",
+    "541c92f7fa84e38736b01d57be6f78529888361b5557d3ab1808ebb2c4e224fa",
+    "a2f2855d4bd364848daf247ca499f31a4a9f4f8823b73e6efed8897fd73756c2"
   ]
 }

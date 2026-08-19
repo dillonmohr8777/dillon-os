@@ -1,5 +1,11 @@
 # 9 AM Eastern pickup — finish the 138-site unslop
 
+**Done 2026-08-19** (operator said pickup now; did not wait for Thursday 9 AM).
+
+QA: 136 ready, 2 dropped, 0 collisions, 0 mode mismatches. Sheet `Fixed?` YES for QA-green rows; `#23` and `#42` blank. PR https://github.com/dillonmohr8777/dillon-os/pull/326. Do not deploy. Do not send mail. `mail_ready` stays hold.
+
+Original pause notes remain below for history.
+
 Paused 2026-08-19 ~00:50 America/New_York. Resume **Thursday 2026-08-20 at 9:00 AM America/New_York** (Eastern; summer EDT). User said "9 am EST"; use Eastern local 9:00, not UTC-5 in August.
 
 Calendar block: https://www.google.com/calendar/event?eid=bmZmZTYwcWFuZmRzNHZyMjhwdXJrMGNhNmMgZGlsbG9ubW9ocjg3NzdAbQ
@@ -8,31 +14,7 @@ Do not deploy. Do not send mail. `mail_ready` stays hold. Update Google Sheet `F
 
 ## Paste this into the 9 AM cloud agent
 
-```
-Continue PR https://github.com/dillonmohr8777/dillon-os/pull/326
-on branch cursor/prospect-unslop-collages-56f2.
-
-Read automation/prospect-unslop/PICKUP.md and handoffs/unslop-138-9am-pickup.md.
-Finish the 138-row Google fix queue (sheet 1Ux1biD1_FeBOVKPbxkfN4WR-WkedMrWvD0KdQaB3rOo, tab Untitled).
-
-Image rules: services/medical/auto/legal/salon/trade = people doing the work.
-Food = plated food, the pass, the kitchen — not random people.
-Nothing random. Five unique 4:5 collages per site.
-
-State at pause: 45 QA-ready, 91 need industry photographs, 2 duplicates dropped
-(#23 johnny-s-pizza keep #106 johnnys-pizza; #42 thr-insurance-agency keep #135 thr-insurance).
-
-Next actions in order:
-1. Firecrawl stealth scrape official URLs in automation/prospect-unslop/pickup-needs-urls.json (Composio FIRECRAWL_BATCH_SCRAPE, proxy stealth, json image URLs). Download into harvest/<slug>/photos as src-*.
-2. node automation/prospect-unslop/run.js  (resume skips green receipts).
-3. For remaining needsGen: generate 5 unique industry-intent photos per site from scenesFor() / harvest/<slug>/prompts.json. Save as harvest/<slug>/photos/gen-0.jpg … gen-4.jpg. Re-run those slugs.
-4. node automation/prospect-unslop/qa-batch.js — zero hash collisions, mode matches family.
-5. Google Sheet Fixed? = YES only for QA-ready rows (column I, row = id+1). Duplicates stay blank. Composio session fort, GOOGLESHEETS_UPDATE_VALUES_BATCH, 60 writes/min.
-6. Commit, push, update PR 326. Do not merge. Do not Netlify deploy.
-
-Factory: automation/prospect-unslop/
-Output: 02_Campaigns/AI Site Builder Outreach Engine/batches/radar-unslop-20260819/
-```
+Superseded — pickup already finished on 2026-08-19.
 
 ## State at pause
 

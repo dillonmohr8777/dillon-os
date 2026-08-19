@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
-  "genFills": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 21,
+  "sourceCount": 21,
+  "officialPhotos": 16,
+  "genFills": 5,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "http://pekinggourmetpottstown.com/",
   "city": "Pottstown",
-  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal Chinese banquet plate: wok-seared vegetables and protein, steam rising, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Peking Gourmet, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Peking Gourmet, no faces required, no text",
-    "Dining counter or table set with Chinese banquet plate: wok-seared vegetables and protein, steam rising, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Peking Gourmet — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "0ec2817448ba8f06f0d3d0336c695d7a4a9eb769346e5c77d99bbd7c28a96a2c",
+    "d6ee4e801cbe7824b0cbfca7ebc43e5e429b181b9dcdb020424d2771f58e3024",
+    "19dc4368dddc5ef020985a52d4eb158da7e808e970d5589652be70ade223e2a6",
+    "b8587c7f879fd1cdcb90155b4b6f621602f6d36614e0a14d5c15efea13f9df63",
+    "abcc656788e083b3afe1f27361f3cd386f306b7afcb184e8e975afd32c43c726"
   ]
 }

@@ -5,23 +5,73 @@
   "family": "veterinary",
   "mode": "people",
   "issue": "nophoto",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
   "genFills": 0,
   "hasLogo": true,
-  "url": "https://fonts.gstatic.com/",
+  "url": "http://duttonroadvetclinic.com/",
   "city": "Philadelphia",
-  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Veterinarian examining a dog on a table with a technician assisting, no text",
-    "Vet tech comforting a cat in a clean exam room, no text",
-    "Receptionist greeting a pet owner holding a leash in a clinic lobby, no text",
-    "Clinic treatment area with a clinician at work, no text",
-    "Close-up of a veterinarian's hands checking an animal's ear or paw, no logos"
+  "hashes": [
+    "95fbef492edac12c5647cb359d2457cbb9c9c3235b28aebb2fddbf0d1480cac0",
+    "556e5ae8362c7f7daf220856f0c6ab743a8ea57a1c42436f1dbe040df708331e",
+    "2d51debe382b0ac91515d841d53b99aed11ddce4211721408e0db20c40f4f666",
+    "f0ac0064b20a3384cca4fb1358bce6d39ef34ffb074a4d11f4d39feb81cc53ea",
+    "581c18b3a19abe924141cc56fe34daec049f1410b7b075a6e5e776aea528495a"
   ]
 }

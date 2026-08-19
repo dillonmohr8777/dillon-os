@@ -1,0 +1,60 @@
+{
+  "slug": "scott-lot",
+  "name": "Scott Lot",
+  "city": "Scott Lot",
+  "category": "Auto",
+  "family": "auto",
+  "mode": "people",
+  "url": "https://www.scottcars.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#f4efe7",
+    "ink": "#203090",
+    "accent": "#203090",
+    "accent2": "#2030a0",
+    "panel": "#d6d4da",
+    "deep": "#111a4f",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Bricolage Grotesque",
+    "text": "Manrope",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Scott Lot",
+    "Scott Lot",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Scott Lot — people at work",
+    "The process photograph for Scott Lot — hands on the job",
+    "The conversation photograph for Scott Lot — a real conversation",
+    "The place photograph for Scott Lot — the place",
+    "The craft photograph for Scott Lot — the craft"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Scott Lot",
+  "sub": "Scott Lot in Scott Lot. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Scott Lot in Scott Lot. Private concept preview."
+}

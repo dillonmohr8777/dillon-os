@@ -5,23 +5,73 @@
   "family": "legal",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 1,
-  "sourceCount": 1,
-  "officialPhotos": 1,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 13,
+  "sourceCount": 13,
+  "officialPhotos": 13,
   "genFills": 0,
   "hasLogo": true,
   "url": "http://www.thrinsurance.com/",
   "city": "Telford",
-  "error": "only 1 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Advisor in professional attire seated with a client at a conference table, no text",
-    "Attorney reviewing documents at a desk with natural office light, no text",
-    "Two people in a calm consultation, listening, no text",
-    "Reception of a small professional office with a person arriving, no text",
-    "Close-up of hands over a folder and pen during a meeting, no logos"
+  "hashes": [
+    "a7c38a44c2a0817d309af013939784f4799a4810c99c3816a97871dd41e62d36",
+    "32bd715a7df8ac0dc0b3a169df56dd5c21988686cba1143b59a4c25633d40324",
+    "35692fe7398852c5b80a5a2f9e5f27a197d3810e7b8f1a6e3ca74e7eefc7a25f",
+    "6c12c394da4d05f5bc750ae9c78272dc82a11825531ed712ca8ecd04bbf3c313",
+    "a32bab8690a62a8e0d82fe5a45e22443ea68ea90658427dc3552e5f40ef72fc7"
   ]
 }

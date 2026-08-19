@@ -1,0 +1,60 @@
+{
+  "slug": "thr-insurance",
+  "name": "THR Insurance",
+  "city": "Telford",
+  "category": "Legal",
+  "family": "legal",
+  "mode": "people",
+  "url": "http://www.thrinsurance.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#c0b0d0",
+    "ink": "#704080",
+    "accent": "#704080",
+    "accent2": "#603070",
+    "panel": "#b4a0c4",
+    "deep": "#3d2346",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Bricolage Grotesque",
+    "text": "Manrope",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "THR Insurance",
+    "Telford",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for THR Insurance — people at work",
+    "The process photograph for THR Insurance — hands on the job",
+    "The conversation photograph for THR Insurance — a real conversation",
+    "The place photograph for THR Insurance — the place",
+    "The craft photograph for THR Insurance — the craft"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "THR Insurance",
+  "sub": "THR Insurance in Telford. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "THR Insurance in Telford. Private concept preview."
+}

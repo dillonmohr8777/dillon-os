@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 2,
-  "sourceCount": 2,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
   "officialPhotos": 2,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": true,
   "url": "https://www.nottinghaminn.com/kitchenandcreamery/",
   "city": "Nottingham Creamery",
-  "error": "only 2 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal scooped ice cream or bottled cream on a chilled metal counter, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Nottingham Creamery, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Nottingham Creamery, no faces required, no text",
-    "Dining counter or table set with scooped ice cream or bottled cream on a chilled metal counter, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Nottingham Creamery — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "093f89e01608ef803e0f0ebdce691dae655514d8922ec0db9493eb6df42ff275",
+    "a25732904b250ee122f02cafa663feb4371066fdc62d95d4f8233ca795ed2170",
+    "494accbd5abaa909be01931bed7e8e50f74de4d31129c32cde43e0ce7050e942",
+    "5d57f49610b7f40d8efbe542f82f6659caa3af745d0347b312be61a2b4e2244f",
+    "b13f829f2e286c79ca9113bc803145f7eec8fc6fa54b23a3e9ea5a42ce9aeaed"
   ]
 }

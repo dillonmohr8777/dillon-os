@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 3,
+  "sourceCount": 3,
+  "officialPhotos": 3,
   "genFills": 0,
   "hasLogo": false,
   "url": "http://ookasushi.com/phone/willow-grove.html",
   "city": "Willow Grove",
-  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal hibachi or sushi plate: glistening rice, seared protein, and precise garnish, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Ooka Hibachi and Sushi, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Ooka Hibachi and Sushi, no faces required, no text",
-    "Dining counter or table set with hibachi or sushi plate: glistening rice, seared protein, and precise garnish, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Ooka Hibachi and Sushi — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "fad235100c84e453ac0a798a17c3eab783327a1de63223e75a36d37e2c284d9d",
+    "6d2d27c7772d46c60990c6130e9e863fe0364f1c82c0c89586b2e6ebd82e48ac",
+    "f34eb1276c86e717268f0ad3047005e3c8b6ea7382378dd8bfa2e34cc2ff39da",
+    "1ae043b72af21f542a7c64c794d29e441a0046bf530452fc5607c4e4fd43ca51",
+    "572881dd9e36039deb7ffd8c94b71126add09f6752d57674c50baebf49c9dffa"
   ]
 }

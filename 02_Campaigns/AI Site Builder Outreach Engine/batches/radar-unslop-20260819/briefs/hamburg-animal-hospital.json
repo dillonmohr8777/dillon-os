@@ -1,0 +1,60 @@
+{
+  "slug": "hamburg-animal-hospital",
+  "name": "Hamburg Animal Hospital",
+  "city": "Hamburg Animal Hospital is a full service veterinary practice in Hamburg",
+  "category": "Veterinary",
+  "family": "veterinary",
+  "mode": "people",
+  "url": "https://www.hamburganimalhospital.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#c0d0b0",
+    "ink": "#704060",
+    "accent": "#c0d0b0",
+    "accent2": "#b0d0a0",
+    "panel": "#c0d0b0",
+    "deep": "#3d2334",
+    "onPaper": "#111820",
+    "onAccent": "#111820",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "Hamburg Animal Hospital",
+    "Hamburg Animal Hospital is a full service veterinary practice in Hamburg",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Hamburg Animal Hospital — people at work",
+    "The process photograph for Hamburg Animal Hospital — hands on the job",
+    "The conversation photograph for Hamburg Animal Hospital — a real conversation",
+    "The place photograph for Hamburg Animal Hospital — the place",
+    "The craft photograph for Hamburg Animal Hospital — the craft"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Hamburg Animal Hospital",
+  "sub": "Hamburg Animal Hospital in Hamburg Animal Hospital is a full service veterinary practice in Hamburg. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Hamburg Animal Hospital in Hamburg Animal Hospital is a full service veterinary practice in Hamburg. Private concept preview."
+}

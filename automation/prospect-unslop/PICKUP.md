@@ -1,16 +1,13 @@
 # Pickup — 138-site unslop
 
-Paused: 2026-08-19T04:50Z
-Resume: 2026-08-20T09:00 America/New_York
+Finished: 2026-08-19 (pickup, not the Thursday 9 AM block)
 
 ```bash
 git checkout cursor/prospect-unslop-collages-56f2
 node --test automation/prospect-unslop/test/intent.test.js
-# After Firecrawl fills land in harvest/<slug>/photos/:
-node automation/prospect-unslop/run.js
 node automation/prospect-unslop/qa-batch.js
 ```
 
-Needs-gen official URLs: `pickup-needs-urls.json` (91 rows).
-Green receipts resume automatically unless `--fresh`.
-Sheet Fixed? only after `qa-batch.js` reports the row ready.
+QA: 136 ready, 0 needsGen, 2 dropped, 0 collisions, 0 mode mismatches.
+Sheet `Fixed?` written for QA-green rows only. Duplicates `#23` and `#42` stay blank.
+Do not deploy. Do not send mail.

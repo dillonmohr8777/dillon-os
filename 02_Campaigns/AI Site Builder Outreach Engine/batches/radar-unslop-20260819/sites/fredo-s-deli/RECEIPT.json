@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
-  "officialPhotos": 0,
-  "genFills": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 13,
+  "sourceCount": 13,
+  "officialPhotos": 8,
+  "genFills": 5,
   "hasLogo": true,
   "url": "http://fredosdeli.com/",
   "city": "Pittsburgh",
-  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal deli sandwich cut on butcher paper with pickles and a side, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Fredo's Deli, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Fredo's Deli, no faces required, no text",
-    "Dining counter or table set with deli sandwich cut on butcher paper with pickles and a side, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Fredo's Deli — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "7592da5877d2e3ee0594df8b8f98cb14986e0fffdda80327c00a55c079be34a1",
+    "599b762034d801607b34ab54bc7fa0e0409d801070a6bae5170017436b582762",
+    "28fde3c89d0897a57e6043dbd4816b9f80dd77477787731dd4ced6b375a89abd",
+    "00ab64f6771fe9a17815a275ac2a5abac9af2c6d7edd4838ce33a280ff5861f8",
+    "a8e4b49451a9b0e7a63763fef6cbba31b5881edea15977c6bb6cb790b95d3cac"
   ]
 }

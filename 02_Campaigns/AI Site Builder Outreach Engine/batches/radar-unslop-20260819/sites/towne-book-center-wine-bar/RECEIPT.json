@@ -5,23 +5,73 @@
   "family": "food",
   "mode": "food",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 0,
-  "sourceCount": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
   "officialPhotos": 0,
-  "genFills": 0,
+  "genFills": 5,
   "hasLogo": false,
-  "url": "https://townebc.com/",
+  "url": "https://www.townebc.com/",
   "city": "Collegeville",
-  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Photoreal cheese board and open wine bottle on a wooden tasting counter, steam, natural restaurant light, no people faces required, no text, no logos",
-    "Chef plating that same kind of food at the pass in a working kitchen for Towne Book Center & Wine Bar, hands and food sharp, no text",
-    "Prep: raw ingredients and a cook's hands on the board for Towne Book Center & Wine Bar, no faces required, no text",
-    "Dining counter or table set with cheese board and open wine bottle on a wooden tasting counter, empty seats, warm room light, no text",
-    "Extreme close-up of the food texture for Towne Book Center & Wine Bar — crust, broth, grill marks, or fresh garnish, no logos"
+  "hashes": [
+    "457b678fbf0a973ce9a482e111bc023b02a1bb81d0cfb5db51c0775702f8231b",
+    "7b78d7742733bf34afa8ee93632f9000123cad7d4817eaa1d458b46570119858",
+    "69f667d09c3c2f9e581099a4c51fda2babc0438fc1623b9daecaa715265137c6",
+    "4c7aba1bb8c5e96f7a433aa6013a804356a0a31cdebfee927264567f0a937d7e",
+    "dc532dfffec38a01f26fac2a2a5835bbcfe1b35559f2669d1791a26f4330e882"
   ]
 }

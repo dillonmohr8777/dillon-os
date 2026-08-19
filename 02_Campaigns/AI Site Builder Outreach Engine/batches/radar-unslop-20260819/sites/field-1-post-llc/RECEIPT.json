@@ -5,23 +5,73 @@
   "family": "professional",
   "mode": "people",
   "issue": "placeholder",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 1,
-  "sourceCount": 1,
-  "officialPhotos": 1,
-  "genFills": 0,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 2,
+  "genFills": 5,
   "hasLogo": true,
-  "url": "https://field1post.com/",
+  "url": "https://www.field1post.com/",
   "city": "Havertown",
-  "error": "only 1 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "cdd2776afdd5d2608703da33055d3cc6cda3246884e57934c4cdac74f74cc9fb",
+    "4f8a5d519c6a54ee83b36aae44e175509869d0dd48d0d678cb20670638fee407",
+    "ab178873084c1c37bffd85f75d42e7b71636cb1c572049d6b70d48809d13da62",
+    "2bf18caded2bf731022e14e9544182de15cac4ec8d5539f22888ffc10650e261",
+    "c4f8185f804120d1f780dccf45a3fdd09344d17e0afc0d7583a141422caa154c"
   ]
 }

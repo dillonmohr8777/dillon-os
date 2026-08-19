@@ -2,26 +2,76 @@
   "id": 130,
   "slug": "sciacca-service-center",
   "name": "Sciacca Service Center",
-  "family": "professional",
+  "family": "auto",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 1,
-  "sourceCount": 1,
-  "officialPhotos": 1,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
   "genFills": 0,
   "hasLogo": true,
   "url": "http://sciaccaservicecenter.com/",
   "city": "Montgomery County",
-  "error": "only 1 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Specialist in a work setting talking with a client, no text",
-    "Person at a workstation doing the actual service, no text",
-    "Two colleagues reviewing a plan, no text",
-    "Office or shop entrance with a person arriving, no text",
-    "Close-up of hands on the tools of this trade, no logos"
+  "hashes": [
+    "463655e86f747c54978b70e12df5e5c274a66c41e20a2a81901364c78989b884",
+    "9b43962389f264bf3d2b2a5523c9b23430242ffff3e990bb62c480f9dd043908",
+    "4b4f209714afcaa068cd0b6e3f098644ccaffe5a1bf175b983b80ce302d13c04",
+    "3e5da5ebc61f7264030ac4c062a0c45642a8439b4cc4998424ba1e250c37a4f3",
+    "bf1597faf943d95c9de318f996b010aa9a7d97433806b6f1f0bb68ed9230069e"
   ]
 }

@@ -1,0 +1,60 @@
+{
+  "slug": "hero-complex",
+  "name": "Johnny Destructo's Hero Complex",
+  "city": "Philadelphia",
+  "category": "Retail",
+  "family": "retail",
+  "mode": "people",
+  "url": "https://www.jdsherocomplex.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": false,
+  "tokens": {
+    "paper": "#F4EFE7",
+    "ink": "#111820",
+    "accent": "#F05A28",
+    "accent2": "#17324D",
+    "panel": "#E6DED4",
+    "deep": "#0B1D2D",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Bricolage Grotesque",
+    "text": "Manrope",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "industrial",
+  "marquee": [
+    "Johnny Destructo's Hero Complex",
+    "Philadelphia",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Johnny Destructo's Hero Complex — people at work",
+    "The process photograph for Johnny Destructo's Hero Complex — hands on the job",
+    "The conversation photograph for Johnny Destructo's Hero Complex — a real conversation",
+    "The place photograph for Johnny Destructo's Hero Complex — the place",
+    "The craft photograph for Johnny Destructo's Hero Complex — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Johnny Destructo's Hero Complex",
+  "sub": "Johnny Destructo's Hero Complex in Philadelphia. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Johnny Destructo's Hero Complex in Philadelphia. Private concept preview."
+}

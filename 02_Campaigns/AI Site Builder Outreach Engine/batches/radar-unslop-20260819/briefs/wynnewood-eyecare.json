@@ -1,0 +1,60 @@
+{
+  "slug": "wynnewood-eyecare",
+  "name": "Wynnewood Eye Care",
+  "city": "Wynnewood",
+  "category": "Medical",
+  "family": "medical",
+  "mode": "people",
+  "url": "https://www.wynnewoodeyecare.com/",
+  "phone": "",
+  "address": "",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#b0c0b0",
+    "ink": "#111820",
+    "accent": "#809070",
+    "accent2": "#90a080",
+    "panel": "#a9b9a7",
+    "deep": "#090d11",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Bodoni Moda",
+    "text": "Urbanist",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "neon",
+  "marquee": [
+    "Wynnewood Eye Care",
+    "Wynnewood",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Wynnewood Eye Care — people at work",
+    "The process photograph for Wynnewood Eye Care — hands on the job",
+    "The conversation photograph for Wynnewood Eye Care — a real conversation",
+    "The place photograph for Wynnewood Eye Care — the place",
+    "The craft photograph for Wynnewood Eye Care — the craft"
+  ],
+  "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
+  "headline": "Wynnewood Eye Care",
+  "sub": "Wynnewood Eye Care in Wynnewood. Confirm current details on the official source.",
+  "offerings": [
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source.",
+    "Confirm current services and availability on the official source."
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Wynnewood Eye Care in Wynnewood. Private concept preview."
+}

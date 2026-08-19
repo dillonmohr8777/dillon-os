@@ -5,23 +5,73 @@
   "family": "auto",
   "mode": "people",
   "issue": "design",
-  "ok": false,
-  "qa": [],
-  "browser": "ok",
-  "photoCount": 2,
-  "sourceCount": 2,
-  "officialPhotos": 2,
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 10,
+  "sourceCount": 10,
+  "officialPhotos": 10,
   "genFills": 0,
   "hasLogo": true,
   "url": "https://www.cioccasubaru.com/used-inventory/ciocca-subaru.htm",
   "city": "Allentown",
-  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
-  "needsGen": true,
-  "prompts": [
-    "Technician in work shirt inspecting a vehicle on the shop floor, no text",
-    "Mechanic under a hood with tools, real garage, no text",
-    "Service advisor with a customer beside a car in the drive lane, no text",
-    "Shop bay with a person walking a car into service, no text",
-    "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+  "hashes": [
+    "f0b87747d051bc12ded3367eeedc36c717e8216dfc7f6e167d540f51d14fdec4",
+    "2d4ec23d0d353871dd2de188ba9e7f5938ed43d358e5819d021c616e59872d63",
+    "77d557cbf7b224594be6d3ac05972cd345191e6e1f205214428fc86fcfccbae3",
+    "37ede34eac52dc3efc2a86cfdbb7901bbb8bcf25474cc182f680fc5866c01291",
+    "591f2599dab9b72704103db7563e6126f0a975d63d9f2d3ff8fa4b43276aed3b"
   ]
 }
