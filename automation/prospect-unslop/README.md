@@ -7,6 +7,7 @@ Rebuilds every row in the Google fix queue as a noindex concept with:
 - Five unique images per site, industry-intentional
 - People at work for services; food/kitchen/plating for restaurants
 - Align HCM industry-solutions motion (swipe, ken burns, caption card)
+- Editorial print photography (duotone mapped to their tokens, color blocks, topographic waves, visible grain)
 - CSS fallback instead of WebGL, so pages do not render black
 
 Duplicates in the sheet (`johnny-s-pizza`, `thr-insurance-agency`) are marked dropped, not rebuilt. Canonical rows are `johnnys-pizza` and `thr-insurance`.
@@ -17,8 +18,9 @@ Deploy stays approval-gated. `mail_ready` stays hold.
 
 ```bash
 cd /workspace
-node --test automation/prospect-unslop/test/intent.test.js
+node --test automation/prospect-unslop/test/*.js
 node automation/prospect-unslop/run.js --only=al-tacos-locos
+node automation/prospect-unslop/run.js --treat   # grain print pass on existing collages
 node automation/prospect-unslop/run.js            # full 136 unique sites
 ```
 

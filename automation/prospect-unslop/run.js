@@ -33,6 +33,7 @@ const only = process.argv.filter((a) => a.startsWith('--only=')).map((a) => a.sl
 const limit = Number((process.argv.find((a) => a.startsWith('--limit=')) || '').split('=')[1] || 0);
 const fresh = process.argv.includes('--fresh');
 const rerender = process.argv.includes('--rerender');
+const treatOnly = process.argv.includes('--treat');
 const MIN_SOURCES = 3;
 
 function loadQueue() {
@@ -576,6 +577,9 @@ async function processSite(site) {
       sources: photoPaths,
       accent: tokens.accent,
       ink: tokens.ink,
+      deep: tokens.deep,
+      paper: tokens.paper,
+      accent2: tokens.accent2,
       mode,
       slug: site.slug,
     };
@@ -664,6 +668,68 @@ async function pool(items, n, fn) {
   return out;
 }
 
+function restyleFromBriefs(queue) {
+  const results = [];
+  for (const site of queue) {
+    if (site.drop) {
+      results.push({ ...site, ok: false, dropped: true, reason: 'duplicate row: keep the canonical slug' });
+      continue;
+    }
+    const outDir = path.join(OUT, 'sites', site.slug);
+    const assetDir = path.join(outDir, 'assets');
+    const briefPath = path.join(OUT, 'briefs', `${site.slug}.json`);
+    const receiptPath = path.join(outDir, 'RECEIPT.json');
+    if (!fs.existsSync(briefPath) || !fs.existsSync(receiptPath)) {
+      results.push({ ...site, ok: false, error: 'missing brief or receipt' });
+      continue;
+    }
+    const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
+    fs.writeFileSync(path.join(outDir, 'index.html'), renderSite(brief));
+    const hashes = hashCollages(assetDir);
+    const receipt = JSON.parse(fs.readFileSync(receiptPath, 'utf8'));
+    receipt.hashes = hashes;
+    receipt.treatedPrint = true;
+    receipt.printPass = 'v1';
+    const unique = { check: 'unique-collages', ok: new Set(hashes).size === 5 };
+    receipt.qa = (receipt.qa || []).map((q) => (q.check === 'unique-collages' ? unique : q));
+    if (!receipt.qa.some((q) => q.check === 'unique-collages')) receipt.qa.push(unique);
+    receipt.ok = (receipt.qa || []).every((q) => q.ok);
+    fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
+    results.push({ ...site, ...receipt, family: brief.family, ok: receipt.ok });
+  }
+  return results;
+}
+
+function treatBatch() {
+  const args = ['--all', '--batch', OUT, '--workers', '4'];
+  if (only.length) args.push('--only', only.join(','));
+  if (process.argv.includes('--force')) args.push('--force');
+  process.stdout.write(runPy('treat.py', '', args));
+  let queue = loadQueue();
+  if (only.length) queue = queue.filter((q) => only.includes(q.slug) || only.includes(String(q.id)));
+  const results = restyleFromBriefs(queue);
+  const built = results.filter((r) => r.ok);
+  const summary = {
+    total: queue.length,
+    built: built.length,
+    needsGen: 0,
+    blocked: results.filter((r) => !r.ok && !r.dropped).length,
+    dropped: results.filter((r) => r.dropped).length,
+    treatedPrint: true,
+    results,
+  };
+  fs.writeFileSync(path.join(OUT, 'SUMMARY.json'), JSON.stringify(summary, null, 2));
+  writeHub(results);
+  console.log(
+    JSON.stringify({
+      built: summary.built,
+      treatedPrint: true,
+      blocked: summary.blocked,
+      dropped: summary.dropped,
+    })
+  );
+}
+
 function writeHub(results) {
   const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const cards = results
@@ -683,6 +749,10 @@ function writeHub(results) {
 }
 
 async function main() {
+  if (treatOnly) {
+    treatBatch();
+    return;
+  }
   fs.mkdirSync(path.join(OUT, 'sites'), { recursive: true });
   fs.mkdirSync(path.join(OUT, 'briefs'), { recursive: true });
   let queue = loadQueue();

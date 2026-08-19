@@ -75,6 +75,9 @@ test('renderSite ships the design-system homepage, not a four-section stub', () 
   assert.ok((html.match(/class="slide/g) || []).length >= 5);
   assert.doesNotMatch(html, /\u2014/);
   assert.doesNotMatch(html, /scene-canvas|forcegl/);
+  assert.match(html, /feTurbulence/);
+  assert.match(html, /\.image-frame::after/);
+  assert.doesNotMatch(html, /\.brand-logo::after|\.logo-finale img::after/);
   const ld = JSON.parse(jsonLd(sampleBrief()));
   assert.equal(ld['@type'], 'LocalBusiness');
   assert.equal(ld.telephone, '6106641111');

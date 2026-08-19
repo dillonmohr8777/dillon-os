@@ -38,7 +38,7 @@ function hashFile(p) {
 function main() {
   const queue = loadQueue();
   const hashes = new Map();
-  const report = { ready: [], needsGen: [], blocked: [], dropped: [], collisions: [], modeMismatch: [], wordmark: [], thinLayout: [], thinCopy: [] };
+  const report = { ready: [], needsGen: [], blocked: [], dropped: [], collisions: [], modeMismatch: [], wordmark: [], thinLayout: [], thinCopy: [], untreated: [] };
   for (const row of queue) {
     if (row.drop) {
       report.dropped.push(row.slug);
@@ -86,6 +86,9 @@ function main() {
       if (!hasLogo) report.wordmark.push(row.slug);
       if (sections < 8) report.thinLayout.push(row.slug);
       if ((receipt.copyWords || 0) && receipt.copyWords < 250) report.thinCopy.push(row.slug);
+      if (!fs.existsSync(path.join(OUT, 'sites', row.slug, 'assets', '.print-pass'))) {
+        report.untreated.push(row.slug);
+      }
     } else if (receipt.needsGen) report.needsGen.push({ id: row.id, slug: row.slug, name: row.name, mode: expected, prompts: receipt.prompts });
     else report.blocked.push({ slug: row.slug, error: receipt.error || 'not ok' });
   }
@@ -100,6 +103,7 @@ function main() {
     wordmark: report.wordmark.length,
     thinLayout: report.thinLayout.length,
     thinCopy: report.thinCopy.length,
+    untreated: report.untreated.length,
     details: report,
   };
   fs.writeFileSync(path.join(OUT, 'QA.json'), JSON.stringify(out, null, 2));
@@ -115,6 +119,7 @@ function main() {
       wordmark: out.wordmark,
       thinLayout: out.thinLayout,
       thinCopy: out.thinCopy,
+      untreated: out.untreated,
     })
   );
 }

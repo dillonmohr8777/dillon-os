@@ -11,7 +11,10 @@ import json
 import sys
 from pathlib import Path
 
+import numpy as np
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps, ImageStat
+
+from treat import treat_array, tokens_from_colors
 
 SLOT_CROPS = [
     (0.50, 0.38, 1.00),  # hero: face-weighted
@@ -149,7 +152,7 @@ def pick_sources(paths: list[Path], count: int, slug: str) -> list[Path]:
     return unique[:count]
 
 
-def compose_slot(src: Image.Image, slot: int, accent, ink, mode: str, slug: str) -> Image.Image:
+def compose_slot(src: Image.Image, slot: int, accent, ink, mode: str, slug: str, tokens: dict | None = None) -> Image.Image:
     cx, cy, zoom = SLOT_CROPS[slot]
     jitter = (seed_int(f"{slug}-{slot}") % 17) / 200
     cx = min(0.78, max(0.22, cx + (jitter if slot % 2 else -jitter)))
@@ -163,7 +166,11 @@ def compose_slot(src: Image.Image, slot: int, accent, ink, mode: str, slug: str)
     framed = Image.alpha_composite(framed, ht)
     framed = Image.alpha_composite(framed, wv)
     framed = Image.alpha_composite(framed, gn)
-    return framed.convert("RGB")
+    rgb = framed.convert("RGB")
+    if tokens:
+        arr = treat_array(np.array(rgb, dtype=np.float32), tokens, f"{slug}-{slot + 1}")
+        rgb = Image.fromarray(arr, "RGB")
+    return rgb
 
 
 def main() -> int:
@@ -178,12 +185,19 @@ def main() -> int:
     ink = hex_to_rgb(spec.get("ink", "#111820"))
     mode = spec.get("mode", "people")
     slug = spec.get("slug", "site")
+    tokens = tokens_from_colors(
+        spec.get("accent", "#F05A28"),
+        spec.get("ink", "#111820"),
+        spec.get("deep", "#0B1D2D"),
+        spec.get("paper", "#F4EFE7"),
+        spec.get("accent2", spec.get("accent", "#F05A28")),
+    )
     picked = pick_sources(sources, 5, slug)
     written = []
     hashes = []
     for i in range(5):
         src = load_rgb(picked[i])
-        frame = compose_slot(src, i, accent, ink, mode, slug)
+        frame = compose_slot(src, i, accent, ink, mode, slug, tokens)
         dest = out_dir / f"collage-{i + 1}.webp"
         frame.save(dest, "WEBP", quality=82, method=6)
         digest = hashlib.sha256(dest.read_bytes()).hexdigest()

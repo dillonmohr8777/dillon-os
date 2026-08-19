@@ -82,6 +82,8 @@ a{color:inherit}
 .hero-media{margin:0}
 .hero-media figure{margin:0;position:relative;filter:drop-shadow(0 30px 34px color-mix(in srgb,var(--deep) 28%,transparent))}
 .image-frame{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius);border:var(--border) solid color-mix(in srgb,var(--accent) 55%,transparent);background:var(--deep)}
+.image-frame::after,.split figure::after,.gallery-grid figure::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;opacity:.2;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");background-size:160px 160px}
+.split figure,.gallery-grid figure{position:relative}
 .slides{position:absolute;inset:0}
 .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1s var(--ease),transform 7s linear}
 .slides img.is-on{opacity:1;transform:scale(1);z-index:1}
