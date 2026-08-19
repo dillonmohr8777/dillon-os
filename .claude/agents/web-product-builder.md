@@ -48,6 +48,7 @@ Invoke these by name with the Skill tool:
 - `tdd`
 - `diagnosing-bugs`
 - `implement`
+- `unslop`
 
 ## Repos in your scope
 

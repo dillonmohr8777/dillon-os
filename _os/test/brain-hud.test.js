@@ -111,7 +111,7 @@ describe('D.I.L.L.O.N. HUD vault state', () => {
     const needed = [
       'grilling', 'grill-me', 'grill-with-docs', 'domain-modeling', 'handoff',
       'tdd', 'diagnosing-bugs', 'code-review', 'to-spec', 'implement',
-      'writing-for-agents', 'ask-dillon-skills',
+      'writing-for-agents', 'ask-dillon-skills', 'unslop',
     ];
     const all = getAllSkills(VAULT).map((s) => s.name);
     const deck = getSkills(VAULT).map((s) => s.name);

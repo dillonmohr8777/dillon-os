@@ -45,6 +45,8 @@ Matt's own README says to hack the skills and make them yours. A plugin subscrib
 - No GitHub issues, sends, publishes, or deploys from these skills.
 - Upstream updates are a bounded diff, not an auto-sync.
 
+Follow-up the same day: Dillon asked about `unslop`. That skill is pstack, not Matt. See [[12_Brain/04_Decisions/2026-08-19 - Adopt adapted pstack unslop]]. The X capture still records pstack as not adopted at capture time; do not rewrite it.
+
 ## Reversal trigger
 
 If the adapted copies drift from how Dillon actually works, or if a later review shows wayfinder earning its complexity on a real multi-session build, revisit on 2026-11-19. Deleting the new `.claude/skills/` directories and reverting `dillon-plan-grill` rolls this back.

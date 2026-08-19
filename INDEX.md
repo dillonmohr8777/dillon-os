@@ -77,7 +77,7 @@ links instead of loading the entire vault.
 - [[12_Brain/09_Ops/Architecture|Second Brain Architecture]]
 - [[12_Brain/09_Ops/Schema|Canonical Properties]]
 - [[12_Brain/09_Ops/AGENT_PROTOCOL|Agent Protocol]]
-- [[12_Brain/09_Ops/engineering-skills|Engineering skills]] — grill → spec → tdd → two-axis review, off the HUD Command Deck.
+- [[12_Brain/09_Ops/engineering-skills|Engineering skills]] — grill → spec → tdd → two-axis review, plus the pstack `unslop` copy pass, off the HUD Command Deck.
 - [[12_Brain/09_Ops/Runbook|Second Brain Runbook]]
 - [[12_Brain/09_Ops/Health|Brain Health]]
 - [[12_Brain/09_Ops/Knowledge Coverage|Knowledge Coverage]]

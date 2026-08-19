@@ -35,6 +35,7 @@ Invoke these by name with the Skill tool:
 - `ux-audit`
 - `frontend-build`
 - `code-review`
+- `unslop`
 
 ## Repos in your scope
 
@@ -54,6 +55,8 @@ a second clone of a repo that already exists there.
    cascade, footer and button AA, placeholder text, font fallbacks, dead form endpoints.
 4. Separate **confirmed defects** from **recommendations**. Never blend them.
 5. Give a verdict with evidence locators: pass, pass with noted risk, or fail plus the reason.
+6. If the artifact includes marketing copy, run `unslop` as a checker pass. Do not rewrite
+   harvested client nouns. Do not treat unslop as always-on for captures or skills.
 
 You may never edit the artifact you are reviewing. Report; the maker fixes.
 

@@ -16,7 +16,7 @@ function read(rel) {
 const CLAUDE_PACK = [
   'grilling', 'grill-me', 'grill-with-docs', 'domain-modeling', 'handoff',
   'tdd', 'diagnosing-bugs', 'code-review', 'to-spec', 'implement',
-  'writing-for-agents', 'ask-dillon-skills',
+  'writing-for-agents', 'ask-dillon-skills', 'unslop',
 ];
 
 describe('Dillon-adapted engineering skills', () => {
@@ -61,6 +61,26 @@ describe('Dillon-adapted engineering skills', () => {
     assert.match(review, /code-review\/SKILL\.md/);
     assert.match(review, /Standards/);
     assert.match(review, /Spec/);
+    const unslop = read('.github/skills/dillon-unslop/SKILL.md');
+    assert.match(unslop, /unslop\/SKILL\.md/);
+    assert.match(unslop, /writing-rules/);
+    assert.doesNotMatch(unslop, /Must always apply/);
+  });
+
+  it('unslop is a named copy pass, not an always-on rewrite', () => {
+    const skill = read('.claude/skills/unslop/SKILL.md');
+    assert.match(skill, /Do not treat this skill as always-on/i);
+    assert.match(skill, /System\/writing-rules\.md/);
+    assert.match(skill, /Do not rewrite captures/i);
+    assert.match(skill, /pstack/);
+    assert.doesNotMatch(skill, /Must always apply/);
+
+    const house = read('System/writing-rules.md');
+    assert.match(house, /unslop/);
+    assert.match(house, /Do not treat unslop as always-on/);
+
+    const map = read('12_Brain/09_Ops/engineering-skills.md');
+    assert.match(map, /Do not treat unslop as always-on/);
   });
 
   it('operator map and glossary exist', () => {

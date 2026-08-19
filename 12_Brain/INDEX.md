@@ -58,6 +58,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - `12_Brain/01_Captures/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - [[12_Brain/01_Captures/X/2026-08-19 - theo-mattpocock-skills|2026-08-19 theo-mattpocock-skills]] — Theo trying Matt Pocock's skills; receipt for the adapted engineering pack.
+- [[12_Brain/01_Captures/sessions/2026-08-19 - unslop-follow-up|2026-08-19 unslop-follow-up]] — Dillon asked about pstack `unslop` after the Matt pack landed.
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Email Sourcing Receipts|2026-08-14 Franchise Email Sourcing Receipts]] — afternoon locator dumps, dead ends, counts (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
@@ -71,6 +72,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/04_Decisions/2026-08-19 - Adopt adapted Matt Pocock engineering skills|Adopt adapted Matt Pocock engineering skills]] — own the grill/spec/tdd/review copies; skip wayfinder and the upstream plugin.
+- [[12_Brain/04_Decisions/2026-08-19 - Adopt adapted pstack unslop|Adopt adapted pstack unslop]] — named copy pass for agent-authored prose; not always-on.
 - [[12_Brain/09_Ops/engineering-skills|Engineering skills]] — operator map for the adapted pack (off the HUD Command Deck).
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).

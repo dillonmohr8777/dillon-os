@@ -23,13 +23,14 @@ Keep grill, spec, and tickets in one window when you can. Each implement starts 
 
 Prospect or client site work still uses the factory, not a generic implement loop:
 
-`mirror-and-improve` → `ui-design` / `ux-audit` / `motion-design` → `frontend-build` → `site-grade`. Batch: `site-batch` / `site-factory`. Grill the brief with `grill-with-docs` before a material rebuild.
+`mirror-and-improve` → `ui-design` / `ux-audit` / `motion-design` → `frontend-build`. After the build, `unslop` agent-invented copy only. Batch: `site-batch` / `site-factory`. Qualify first with `site-grade`. Grill the brief with `grill-with-docs` before a material rebuild.
 
 ## On-ramps
 
 - Something is broken → **`diagnosing-bugs`**. No theory until a tight loop is red on this bug.
 - Need to continue in another session or harness → **`handoff`**. Durable lessons → **`session-mine`**.
 - Writing or editing a skill / `AGENTS.md` / `CLAUDE.md` → **`writing-for-agents`**.
+- Client copy, ads, emails, blogs, or landing-page prose sounds like an LLM → **`unslop`**. House style is `System/writing-rules.md`. Do not unslop captures or harvested client nouns.
 - Terminology is the problem → **`domain-modeling`**.
 - Daily operating work → existing HUD skills: `am-report`, `inbox-brief`, `plan-today`, `client-pulse`, `vault-compile`, `wiki-lint`, `synthesize`, `research-sweep`.
 

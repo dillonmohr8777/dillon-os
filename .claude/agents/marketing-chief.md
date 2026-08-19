@@ -49,6 +49,7 @@ Invoke these by name with the Skill tool:
 - `slack-intake`
 - `ask-dillon-skills`
 - `grill-with-docs`
+- `unslop`
 
 ## Repos in your scope
 

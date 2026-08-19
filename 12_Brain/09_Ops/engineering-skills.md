@@ -6,7 +6,9 @@ updated: 2026-08-19
 owner: Dillon Mohr
 source_refs:
   - "[[12_Brain/04_Decisions/2026-08-19 - Adopt adapted Matt Pocock engineering skills]]"
+  - "[[12_Brain/04_Decisions/2026-08-19 - Adopt adapted pstack unslop]]"
   - "[[12_Brain/01_Captures/X/2026-08-19 - theo-mattpocock-skills]]"
+  - "[[12_Brain/01_Captures/sessions/2026-08-19 - unslop-follow-up]]"
 tags:
   - brain
   - protocol
@@ -23,7 +25,7 @@ These skills live in `.claude/skills/`. They set `command_deck: false` so the HU
 
 `grill-with-docs` → `to-spec` → `implement` (drives `tdd`) → `code-review` by a different identity → approval queue for anything outbound.
 
-Website factory work still uses `mirror-and-improve`, `ui-design`, `frontend-build`, and `site-grade`. Grill the brief first when the rebuild is material.
+Website factory work still uses `mirror-and-improve`, `ui-design`, `frontend-build`, and `site-grade`. Grill the brief first when the rebuild is material. Unslop only the sentences the agent invented.
 
 ## File locations
 
@@ -38,9 +40,11 @@ Website factory work still uses `mirror-and-improve`, `ui-design`, `frontend-bui
 
 ## Installed
 
-grilling, grill-me, grill-with-docs, domain-modeling, handoff, tdd, diagnosing-bugs, code-review, to-spec, implement, writing-for-agents, ask-dillon-skills.
+grilling, grill-me, grill-with-docs, domain-modeling, handoff, tdd, diagnosing-bugs, code-review, to-spec, implement, writing-for-agents, ask-dillon-skills, unslop.
 
-GitHub: `dillon-plan-grill` (now actually grills), `dillon-code-review`, plus the existing maker and checker wrappers.
+GitHub: `dillon-plan-grill` (now actually grills), `dillon-code-review`, `dillon-unslop`, plus the existing maker and checker wrappers.
+
+`unslop` is the pstack copy pass from the same Theo thread, not a Matt Pocock skill. It cleans agent-authored marketing prose. It does not rewrite captures or harvested client voice. `System/writing-rules.md` wins on conflict. Do not treat unslop as always-on. pstack does. Dillon OS does not.
 
 ## Not installed
 
@@ -53,3 +57,4 @@ wayfinder, triage, wizard, teach, wait-what, to-questionnaire, to-tickets-on-Git
 - Do not create GitHub issues from these skills.
 - Do not install the upstream plugin beside these copies.
 - Update the existing skill instead of adding a second grill.
+- Do not treat unslop as always-on, and do not rewrite captures or harvested voice with it.

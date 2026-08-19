@@ -39,6 +39,7 @@ Invoke these by name with the Skill tool:
 
 - `client-report`
 - `metrics-pull`
+- `unslop`
 
 ## Repos in your scope
 

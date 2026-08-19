@@ -110,11 +110,11 @@ node --test _os/test/brain-hud.test.js _os/test/public-safety.test.js _os/test/w
 
 - Deterministic tests cover `12_Brain` structure, HUD brain vitals, skill path
   wiring, public-safety scanning, and the engineering skill pack.
-- Interactive engineering skills (`grill-with-docs`, `tdd`, `code-review`, and
-  the rest of the pack) live in `.claude/skills/` with `command_deck: false`.
-  They do not appear as HUD one-click jobs. Operator map:
+- Interactive engineering skills (`grill-with-docs`, `tdd`, `code-review`,
+  `unslop`, and the rest of the pack) live in `.claude/skills/` with
+  `command_deck: false`. They do not appear as HUD one-click jobs. Operator map:
   `12_Brain/09_Ops/engineering-skills.md`. Copilot wrappers stay in
-  `.github/skills/`.
+  `.github/skills/`. `unslop` is a named copy pass from pstack, not always-on.
 - `01_Clients/Shadow HVAC/website` declares `npm run lint` (`next lint`) but has
   no ESLint config — interactive only; do not run non-interactively.
 - `immohrtal-site` has no lint script.

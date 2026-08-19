@@ -32,6 +32,8 @@ Adapted into `.claude/skills/` and Copilot wrappers under `.github/skills/`. Ope
 
 Not installed: wayfinder, triage, wizard, teach, the GitHub-issue ticket machine, and the Claude plugin. Wayfinder wants an issue-tracker map and a practitioner reply on the source tweet said it diverges.
 
+pstack is a different pack from the same Theo thread. Only `unslop` was adapted later, as a named copy pass, not always-on. See [[12_Brain/04_Decisions/2026-08-19 - Adopt adapted pstack unslop]].
+
 ## How agents must use it
 
 - Name `grill-with-docs` before a material build in this repo.
@@ -41,5 +43,4 @@ Not installed: wayfinder, triage, wizard, teach, the GitHub-issue ticket machine
 
 ## Open questions
 
-- Whether a later upstream release should be diffed in as a bounded update. Review on 2026-11-19.
-- Whether pstack (mentioned in a reply on the Theo tweet) is worth a separate evaluation. Not this entity.
+- Whether a later upstream release of Matt's pack should be diffed in as a bounded update. Review on 2026-11-19.

@@ -31,7 +31,7 @@ From `harvest.json`, pull the language they already use and keep it:
 
 Rules:
 - **Their nouns, their names, their claims.** Menu items, service names, neighborhood references, founding stories, family names all carry over verbatim.
-- **Improve the writing, not the voice.** Cut filler, fix structure, sharpen the hero claim. Apply `System/writing-rules.md`: no em dashes, contractions, no corporate jargon.
+- **Improve the writing, not the voice.** Cut filler, fix structure, sharpen the hero claim. Apply `System/writing-rules.md`: no em dashes, contractions, no corporate jargon. Run `unslop` on sentences the agent invented. Do not unslop their harvested nouns, names, or claims.
 - **Never invent a fact.** Address, phone, hours, founding year, and prices come from the harvest or from verified research. If it isn't verifiable, the field stays empty.
 - If their copy is genuinely thin (a one-image homepage with a tagline), research further: their socials, Google Maps listing, press coverage, and reviews for real substance. Reviews are a legitimate source for what customers actually praise.
 

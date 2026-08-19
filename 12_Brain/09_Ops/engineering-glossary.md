@@ -5,6 +5,7 @@ created: 2026-08-19
 updated: 2026-08-19
 source_refs:
   - "[[12_Brain/09_Ops/engineering-skills]]"
+  - "[[12_Brain/04_Decisions/2026-08-19 - Adopt adapted pstack unslop]]"
 tags:
   - brain
   - glossary
@@ -41,3 +42,6 @@ A continuation packet for another agent. Distinct from `session-mine`, which ext
 
 **Command Deck**:
 HUD one-click skills that can run headlessly. Interactive engineering skills stay off it.
+
+**Unslop**:
+A named copy pass that cuts AI tells from agent-authored prose. House style is `System/writing-rules.md`. Harvested client nouns stay. Captures stay. Not always-on (pstack marks it that way; Dillon OS does not).
