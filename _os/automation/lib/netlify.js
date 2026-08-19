@@ -262,7 +262,13 @@ async function deployFiles(siteId, files, opts = {}) {
       contentType: 'application/zip',
       timeoutMs: 120000,
     });
-    if (!put.ok) throw new Error(`uploading function ${name} failed: ${put.status} ${put.raw || ''}`);
+    if (!put.ok) {
+      const detail =
+        (put.body && (put.body.message || put.body.error || put.body.code)) ||
+        put.raw ||
+        '';
+      throw new Error(`uploading function ${name} failed: ${put.status} ${String(detail).slice(0, 180)}`);
+    }
     uploadedFunctions.push(name);
   }
 
@@ -295,6 +301,37 @@ async function waitForDeploy(deployId, opts = {}) {
   return { ok: false, state: last?.state || 'timeout', error: 'timed out waiting for deploy' };
 }
 
+async function deployZipArchive(siteId, zipBuffer, opts = {}) {
+  const tok = token(opts.token);
+  const zip = Buffer.isBuffer(zipBuffer) ? zipBuffer : Buffer.from(zipBuffer);
+  const title = encodeURIComponent(opts.title || 'Connected Industry Prototype Suite');
+  const started = await api(`/sites/${siteId}/deploys?title=${title}`, {
+    method: 'POST',
+    tok,
+    body: zip,
+    contentType: 'application/zip',
+    timeoutMs: 180000,
+  });
+  if (!started.ok) {
+    const detail =
+      (started.body && (started.body.message || started.body.error || started.body.code)) ||
+      started.raw ||
+      '';
+    throw new Error(`zip deploy failed: ${started.status} ${String(detail).slice(0, 180)}`);
+  }
+  return {
+    deployId: started.body.id,
+    uploaded: zip.length,
+    alreadyHeld: 0,
+    total: zip.length,
+    functionsUploaded: 1,
+    functionsTotal: 1,
+    state: started.body.state,
+    deployUrl: started.body.deploy_ssl_url || started.body.deploy_url || null,
+    siteUrl: started.body.ssl_url || started.body.url || null,
+  };
+}
+
 module.exports = {
   ensureSite,
   findSite,
@@ -303,4 +340,5 @@ module.exports = {
   sha1,
   api,
   zipStoreSingleFile,
+  deployZipArchive,
 };

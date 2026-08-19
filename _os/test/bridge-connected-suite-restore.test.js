@@ -19,6 +19,7 @@ const {
   resolveMapsFunctionPath,
   validateMapsFunction,
   packageMapsFunction,
+  packageSuiteArchive,
 } = require('../automation/bin/bridge-connected-suite-restore');
 const { zipStoreSingleFile } = require('../automation/lib/netlify');
 
@@ -192,5 +193,17 @@ describe('bridge original suite restore guards', () => {
     );
     assert.equal(zip.readUInt32LE(0), 0x04034b50);
     assert.ok(zip.includes(Buffer.from('google-maps-loader.js')));
+  });
+
+  it('packages a Netlify zip with site files and the Maps function', () => {
+    const source = [
+      "const key = process.env.GOOGLE_MAPS_BROWSER_KEY;",
+      "callback: 'initBridgeSignal3DMap',",
+      "libraries: 'maps3d',",
+    ].join('\n');
+    const zip = packageSuiteArchive(fixtureMap(), source);
+    assert.ok(zip.includes(Buffer.from('netlify.toml')));
+    assert.ok(zip.includes(Buffer.from('google-maps-loader.js')));
+    assert.ok(zip.includes(Buffer.from('index.html')));
   });
 });

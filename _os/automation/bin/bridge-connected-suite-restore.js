@@ -24,8 +24,10 @@
 'use strict';
 
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
-const { deployFiles, waitForDeploy, zipStoreSingleFile, api } = require('../lib/netlify');
+const { execFileSync } = require('child_process');
+const { deployFiles, waitForDeploy, zipStoreSingleFile, api, deployZipArchive } = require('../lib/netlify');
 const {
   SITE_NAME,
   EXPECTED_HOST,
@@ -187,7 +189,42 @@ function validateMapsFunction(source) {
 
 function packageMapsFunction(source) {
   validateMapsFunction(source);
-  return zipStoreSingleFile(MAPS_FUNCTION_FILE, source);
+  const staging = fs.mkdtempSync(path.join(os.tmpdir(), 'bridge-maps-fn-'));
+  const jsPath = path.join(staging, MAPS_FUNCTION_FILE);
+  const zipPath = path.join(staging, `${MAPS_FUNCTION_NAME}.zip`);
+  fs.writeFileSync(jsPath, source);
+  try {
+    execFileSync('zip', ['-j', '-q', '-X', zipPath, jsPath], { stdio: 'pipe' });
+    return fs.readFileSync(zipPath);
+  } catch {
+    return zipStoreSingleFile(MAPS_FUNCTION_FILE, source);
+  } finally {
+    fs.rmSync(staging, { recursive: true, force: true });
+  }
+}
+
+function packageSuiteArchive(files, mapsSource) {
+  validateMapsFunction(mapsSource);
+  const staging = fs.mkdtempSync(path.join(os.tmpdir(), 'bridge-suite-zip-'));
+  const siteRoot = path.join(staging, 'site');
+  fs.mkdirSync(siteRoot, { recursive: true });
+  for (const [rel, buf] of files) {
+    const dest = path.join(siteRoot, String(rel).replace(/^\//, ''));
+    fs.mkdirSync(path.dirname(dest), { recursive: true });
+    fs.writeFileSync(dest, buf);
+  }
+  const fnDir = path.join(staging, 'netlify', 'functions');
+  fs.mkdirSync(fnDir, { recursive: true });
+  fs.writeFileSync(path.join(fnDir, MAPS_FUNCTION_FILE), mapsSource);
+  fs.writeFileSync(
+    path.join(staging, 'netlify.toml'),
+    '[build]\n  publish = "site"\n\n[functions]\n  directory = "netlify/functions"\n',
+  );
+  const zipPath = path.join(staging, 'deploy.zip');
+  execFileSync('zip', ['-r', '-q', '-X', zipPath, 'site', 'netlify', 'netlify.toml'], { cwd: staging });
+  const zip = fs.readFileSync(zipPath);
+  fs.rmSync(staging, { recursive: true, force: true });
+  return zip;
 }
 
 /** Env var names only. Never returns or logs values. */
@@ -226,7 +263,7 @@ async function main() {
   const summary = validateSuite(files);
   const mapsPath = resolveMapsFunctionPath(args.dir);
   const mapsSource = fs.readFileSync(mapsPath);
-  const mapsZip = packageMapsFunction(mapsSource);
+  const archive = packageSuiteArchive(files, mapsSource);
   console.log(
     `validated original suite ${summary.files} files (${summary.html} html) plus ${MAPS_FUNCTION_NAME} for ${SITE_NAME} (${EXPECTED_HOST})`,
   );
@@ -239,15 +276,26 @@ async function main() {
   const site = await resolvePinnedSite();
   console.log(`pinned site ${site.name} ${site.url}`);
   const sha = process.env.BRIDGE_SOURCE_SHA || 'local';
-  const dep = await deployFiles(site.id, files, {
-    title: `Connected Industry Prototype Suite ${sha}`,
-    draft: false,
-    requireNoindex: true,
-    functions: { [MAPS_FUNCTION_NAME]: mapsZip },
-  });
-  console.log(
-    `deploy ${dep.deployId} uploaded ${dep.uploaded}/${dep.total} files, ${dep.functionsUploaded}/${dep.functionsTotal} functions`,
-  );
+  let dep;
+  try {
+    dep = await deployZipArchive(site.id, archive, {
+      title: `Connected Industry Prototype Suite ${sha}`,
+      draft: false,
+    });
+    console.log(`zip deploy ${dep.deployId} ${dep.uploaded} bytes`);
+  } catch (err) {
+    const mapsZip = packageMapsFunction(mapsSource);
+    console.log(`zip deploy failed (${err.message}); falling back to digest plus function zip`);
+    dep = await deployFiles(site.id, files, {
+      title: `Connected Industry Prototype Suite ${sha}`,
+      draft: false,
+      requireNoindex: true,
+      functions: { [MAPS_FUNCTION_NAME]: mapsZip },
+    });
+    console.log(
+      `deploy ${dep.deployId} uploaded ${dep.uploaded}/${dep.total} files, ${dep.functionsUploaded}/${dep.functionsTotal} functions`,
+    );
+  }
   const waited = await waitForDeploy(dep.deployId, { timeoutMs: 180000 });
   if (!waited.ok) throw new Error(`deploy did not go live: ${waited.state} ${waited.error || ''}`);
   await purgeSiteCache(site);
@@ -268,6 +316,7 @@ module.exports = {
   resolveMapsFunctionPath,
   validateMapsFunction,
   packageMapsFunction,
+  packageSuiteArchive,
   listSiteEnvKeys,
   htmlTag,
   parseArgs,
