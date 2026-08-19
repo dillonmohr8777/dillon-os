@@ -9,6 +9,7 @@ source_refs:
   - "[[12_Brain/01_Captures/2026-06-26 - intel-core-7-master-operating-transfer]]"
   - "[[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads Admin invite]]"
   - "[[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads read-only and manager path]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Momentum Ads Manager MCC identity]]"
 ---
 
 
@@ -22,6 +23,7 @@ source_refs:
 - Google Ads corollary: missing campaign visibility is usually an **Ads-access or Chrome-attachment issue, not Search Console** (proven on Omega, May 2026). If a live read is blocked, don't guess counts — ask for reauth or explicit read-only browser approval.
 - Google Ads has no Business Manager. That term is Meta. Two grants, two tabs: **Users** is an email invite (Admin / Standard / Read-only); **Managers** is an MCC link initiated by the manager account, not a + on the client tab. An onboarding form is not Ads access.
 - Admin on Users can require the **client** to enroll a passkey before the invite will send (Jayashree on Nexla, 2026-08-19: 1–2 days to attach; she sent Read-only instead). Do not wait on that. If existing agencies already show on Managers (Nexla: Coralie Wood `410-914-2068`, Octabrain `303-439-8000`, Select `638-757-0272`, all Owner: No), send the same manager-link from the operator MCC to the customer ID. The client only accepts. Read-only is review/reporting, not campaign write access. Proven on Nexla CID `791-780-2207`.
+- Momentum client manager-links come from **Momentum Ads Manager** (`743-802-1996`), proven on Kimberly James Bridal and Replenish, 2026-04-10. Do not send client links from the Hermes Agent MCC (`703-867-3437`). A connected Ads OAuth user that does not list `743-802-1996` cannot send that manager-link via API.
 - Never copy credentials, OAuth files, cookies, browser profiles, or `.env` files into transfer docs — index where sensitive state lives instead.
 
 ## Links

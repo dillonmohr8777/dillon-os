@@ -47,7 +47,7 @@ links instead of loading the entire vault.
 - `03_Content/` — content plans and drafts.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|Philadelphia 25-site factory Batch 3]] — private prospect previews and evidence.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|Philadelphia 25-site factory Batch 4]] — separate real-business cohort with first-party logo evidence.
-- [[12_Brain/05_Projects/2026-08-19 - Nexla Google Ads onboarding|Nexla Google Ads onboarding]] — accept read-only, then MCC-link CID `791-780-2207`; Jayashree reply is draft-only.
+- [[12_Brain/05_Projects/2026-08-19 - Nexla Google Ads onboarding|Nexla Google Ads onboarding]] — accept read-only, then manager-link from Momentum Ads Manager `743-802-1996` to CID `791-780-2207`; Jayashree reply is draft-only.
 - [[04_SOPs/SOP Index|SOP Index]] — repeatable operating procedures.
 - `05_Offers/` — products, packages, and pricing.
 - `10_Sessions/` — working-session records.

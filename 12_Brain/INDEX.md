@@ -54,6 +54,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
 - [[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads Admin invite|2026-08-19 Nexla Google Ads Admin invite]] — first grant path: invite Dillon as Admin, not Meta BM.
 - [[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads read-only and manager path|2026-08-19 Nexla Google Ads read-only and manager path]] — Admin blocked on passkey; read-only invite sent; BM is the Managers tab.
+- [[12_Brain/01_Captures/2026-08-19 - Momentum Ads Manager MCC identity|2026-08-19 Momentum Ads Manager MCC identity]] — client MCC is `743-802-1996`; Hermes Agent MCC is not for client links.
 - `12_Brain/01_Captures/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Email Sourcing Receipts|2026-08-14 Franchise Email Sourcing Receipts]] — afternoon locator dumps, dead ends, counts (no contact rows).
@@ -67,7 +68,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
-- [[12_Brain/05_Projects/2026-08-19 - Nexla Google Ads onboarding|Nexla Google Ads onboarding]] — accept read-only, then MCC-link CID `791-780-2207`; Jayashree reply is draft-only.
+- [[12_Brain/05_Projects/2026-08-19 - Nexla Google Ads onboarding|Nexla Google Ads onboarding]] — accept read-only, then manager-link from Momentum Ads Manager `743-802-1996` to CID `791-780-2207`; Jayashree reply is draft-only.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
