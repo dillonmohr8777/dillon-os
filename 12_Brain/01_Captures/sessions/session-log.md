@@ -2,7 +2,7 @@
 note_type: capture
 status: unprocessed
 created: 2026-08-17
-updated: 2026-08-17
+updated: 2026-08-19
 source_refs: []
 tags: [capture]
 ---
@@ -14,3 +14,4 @@ Sensitive session mines go to `12_Brain/private/sessions/` (gitignored).
 
 - 2026-07-29 — 12_Brain public-safety cleanup (mined)
 - 2026-08-14 — Google RSVP rail (mined)
+- 2026-08-19 — Bridge Maps and Phase 2 (mined)

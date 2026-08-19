@@ -2,7 +2,7 @@
 note_type: decision
 status: active
 created: 2026-08-19
-updated: 2026-08-19T20:12:00Z
+updated: 2026-08-19T21:12:00Z
 owner: Dillon Mohr
 client: Bridge Software Development
 project: "[[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile]]"
@@ -13,6 +13,7 @@ supersedes:
   - "[[12_Brain/04_Decisions/2026-08-19 - Bridge unified review stays Connected purple]]"
 source_refs:
   - "[[12_Brain/01_Captures/2026-08-19 - Bridge live URL must be the original 3D suite]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Bridge Google Maps loader is live on the unified URL]]"
   - "https://bridge-connected-signal.netlify.app"
   - "https://github.com/dillonmohr8777/bridge-discovery-prototype-kimi-design"
 tags:
@@ -46,9 +47,9 @@ Tori already called that prototype beautiful. Dillon's Phase 2 PDF names this pa
 
 ## Consequences
 
-- Live `https://bridge-connected-signal.netlify.app` restored from kimi-design SHA `39e06db` (Netlify deploy `6a860a76290d727a1c475399`)
+- Live `https://bridge-connected-signal.netlify.app` restored from kimi-design SHA `39e06db`
 - Compatibility redirects: `/create` → `/studio`, `/my-profile` → `/business`, `/explore` → `/signal`
-- Google Maps live overlay function is 404 until restored separately; the five illustrative 3D webp views are live
+- Google Maps loader is a live function (`/.netlify/functions/google-maps-loader` 302). Explore is flagged `data-live-map="enabled"`. Browser QA still shows Google's generic Maps error overlay after the Live Google 3D discovery badge; webp theater remains the fallback. Do not log the 302 Location.
 - Do not Slack or email Tori/Melissa/Mac/Miraj from this restore
 
 ## Reversal trigger
@@ -58,4 +59,5 @@ Dillon asks for a different app on the unified URL, or Tori writes a different d
 ## Evidence
 
 - [[12_Brain/01_Captures/2026-08-19 - Bridge live URL must be the original 3D suite]]
-- Live title `Bridge | Connected Industry Prototype Suite`, signal 3D theater verified
+- [[12_Brain/01_Captures/2026-08-19 - Bridge Google Maps loader is live on the unified URL]]
+- Live title `Bridge | Connected Industry Prototype Suite`; Maps loader 302; GHA 32301424038 and 32302080731

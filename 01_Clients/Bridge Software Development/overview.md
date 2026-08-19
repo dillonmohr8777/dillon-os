@@ -8,7 +8,7 @@ github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
 updated: 2026-08-19
 last_touched: 2026-08-19
-next_action: Hold Slack and client email. Unified review URL is the original 3D Connected Industry Prototype Suite. Draft PR #6 stays internal. Do not bind a live API origin until Miraj staging is inspectable.
+next_action: Hold Slack and client email. Unified review URL is the original 3D suite with a live Maps loader. Phase 2 payment is promised, not receipted. Draft PR #6 stays internal. Do not bind a live API origin until Miraj staging is inspectable.
 due: 2026-08-22
 ---
 
@@ -35,11 +35,13 @@ due: 2026-08-22
 | Layer | Status |
 |---|---|
 | Original five-route review suite | Live at the unified noindex URL |
+| Google Maps loader | Live function 302; Explore `data-live-map="enabled"`; Google JS error overlay in browser QA |
 | Phase 3 adapter + Create / My Profile journeys | Draft PR #6 (not on the unified URL) |
-| Tori route-by-route written boxes | Still pending; does not stall this restore |
+| Tori route-by-route written boxes | Still pending |
+| Phase 2 payment | Promised 2026-08-19; no receipt as of 21:17Z |
 | Miraj Milestone 2 | Self-reported done, tests remaining as of 2026-08-17 |
 | Live `/api/v1` bind | Blocked on inspectable staging origin |
-| Unified Netlify update | Live. Original suite from kimi-design `39e06db`, deploy `6a860a76290d727a1c475399`, verified 2026-08-19. |
+| Unified Netlify update | Live original suite; Maps function restored 2026-08-19 (GHA 32301424038, 32302080731) |
 | Slack / client comms | Held until Dillon asks |
 
 Out of slice without a written change order: expanded ecosystem directory, algorithmic ranking, subscriptions/payments, in-platform ordering.
@@ -96,13 +98,7 @@ No approved Bridge logo, color palette, font system, or downloadable Tori protot
 
 The green/gold proposal styling is Momentum presentation branding, not Bridge branding.
 
-Default provisional direction for the unified review URL: **Modern Network (Connected)**
-
-- Ink `#17152D`
-- Electric violet `#6556E8`
-- Coral `#D95848`
-- Canvas `#F7F6FB`
-- Primary text `#1D1A32`
+Default provisional direction for the unified review URL: **original Connected Industry Prototype Suite** (dark plum, photography, 3D theater). Not Modern Network token restyle. Not Trusted Current.
 
 Trusted Current navy/teal remains an alternate at `https://bridge-preview-current.netlify.app`. Tori still owns formal brand acceptance.
 
@@ -135,13 +131,15 @@ Leave with decisions on:
 - [[../../12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open|Phase 3 slice decision]]
 - [[../../12_Brain/04_Decisions/2026-08-19 - Bridge unified review is the original 3D suite|Original 3D suite review decision]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge live URL must be the original 3D suite|Original 3D suite restore capture]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge Phase 2 payment promised not receipted|Phase 2 payment promised, not receipted]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge Google Maps loader is live on the unified URL|Maps loader live on unified URL]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send|Comms hold]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product|Restore Connected purple capture]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple|Publish approval capture]]
 
 ## Immediate next action
 
-Hold Slack and client email. Unified review URL is the original 3D suite at https://bridge-connected-signal.netlify.app. Draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 stays internal. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
+Hold Slack and client email. Unified review URL is the original 3D suite at https://bridge-connected-signal.netlify.app with a live Maps loader. Phase 2 payment is promised, not receipted. Draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 stays internal. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
 
 ## Communication intelligence - 2026-08-01
 

@@ -60,6 +60,9 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
 - [[12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple|2026-08-19 Bridge full approval to publish Connected purple]] — Dillon approved a unified-URL republish; the Next.js restyle that landed was later rejected.
 - [[12_Brain/01_Captures/2026-08-19 - Bridge live URL must be the original 3D suite|2026-08-19 Bridge live URL must be the original 3D suite]] — Dillon rejected the Next.js restyle and asked for the old purple 3D frontend.
+- [[12_Brain/01_Captures/2026-08-19 - Bridge Phase 2 payment promised not receipted|2026-08-19 Bridge Phase 2 payment promised not receipted]] — Tori said payment tomorrow on 2026-08-18; no receipt on 2026-08-19.
+- [[12_Brain/01_Captures/2026-08-19 - Bridge Google Maps loader is live on the unified URL|2026-08-19 Bridge Google Maps loader is live]] — function 302 and live-map flag; Google JS error overlay remains.
+- [[12_Brain/01_Captures/sessions/2026-08-19 - bridge-maps-and-phase-two|2026-08-19 Bridge Maps and Phase 2 session mine]] — zip-root, SHA256, `{name}.js`, live-map flag, payment promised not receipted.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
