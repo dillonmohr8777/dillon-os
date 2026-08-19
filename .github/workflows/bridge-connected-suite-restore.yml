@@ -108,6 +108,15 @@ jobs:
               raise SystemExit("maps function still missing after restore")
           if maps not in (301, 302, 503):
               raise SystemExit(f"maps function is live but not healthy: {maps}")
+          conn = http.client.HTTPSConnection("bridge-connected-signal.netlify.app", timeout=30)
+          conn.request("GET", "/signal/")
+          res = conn.getresponse()
+          html = res.read().decode("utf-8", "replace")
+          conn.close()
+          enabled = 'data-live-map="enabled"' in html
+          print(f"live_map_flag={str(enabled).lower()}")
+          if not enabled:
+              raise SystemExit("Explore mount is not flagged for live Google Maps")
           PY
 
       - name: Restore Maps browser key onto the pinned site if the function is live but unconfigured

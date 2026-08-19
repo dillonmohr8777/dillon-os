@@ -75,6 +75,23 @@ function attachCompatibilityRedirects(files) {
   return files;
 }
 
+function enableLiveGoogleMaps(files) {
+  for (const route of ['/signal/index.html', '/signal-v2/index.html']) {
+    const buf = files.get(route);
+    if (!buf) continue;
+    let html = buf.toString('utf8');
+    if (!html.includes('id="signalLiveMap"')) continue;
+    if (!html.includes('data-live-map="enabled"')) {
+      html = html.replace(
+        /(<div class="pulse-live-map" id="signalLiveMap")(\s)/,
+        '$1 data-live-map="enabled"$2',
+      );
+      files.set(route, Buffer.from(html, 'utf8'));
+    }
+  }
+  return files;
+}
+
 function validateSuite(files) {
   const errors = [];
   if (process.env.NEXT_PUBLIC_BRIDGE_API_BASE) {
@@ -129,6 +146,9 @@ function validateSuite(files) {
     if (!/noindex/i.test(html)) errors.push('signal/index.html missing noindex');
     if (!html.includes('pulse-live-map')) {
       errors.push('signal/index.html missing 3D map theater mount');
+    }
+    if (!html.includes('data-live-map="enabled"')) {
+      errors.push('signal/index.html missing live Google Maps enable flag');
     }
     if (!html.includes('bridge-midatlantic-3d-v1.webp')) {
       errors.push('signal/index.html missing corridor 3D render');
@@ -240,7 +260,7 @@ async function main() {
     process.exit(args.help ? 0 : 1);
   }
 
-  const files = attachCompatibilityRedirects(collectFiles(args.dir));
+  const files = enableLiveGoogleMaps(attachCompatibilityRedirects(collectFiles(args.dir)));
   const summary = validateSuite(files);
   const mapsPath = resolveMapsFunctionPath(args.dir);
   const mapsSource = fs.readFileSync(mapsPath);
@@ -302,6 +322,7 @@ module.exports = {
   COMPAT_REDIRECTS,
   collectFiles,
   attachCompatibilityRedirects,
+  enableLiveGoogleMaps,
   validateSuite,
   resolveMapsFunctionPath,
   validateMapsFunction,

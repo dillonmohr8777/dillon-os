@@ -15,6 +15,7 @@ const {
   MAPS_FUNCTION_NAME,
   collectFiles,
   attachCompatibilityRedirects,
+  enableLiveGoogleMaps,
   validateSuite,
   resolveMapsFunctionPath,
   validateMapsFunction,
@@ -28,7 +29,7 @@ function sampleHome() {
 
 function sampleSignal() {
   return `<!doctype html><html lang="en"><head><meta name="robots" content="noindex, nofollow"><title>Bridge Explore</title></head><body>
-    <div class="pulse-live-map" id="signalLiveMap"></div>
+    <div class="pulse-live-map" id="signalLiveMap" data-live-map="enabled"></div>
     <img src="/assets/bridge-midatlantic-3d-v1.webp" alt="corridor">
     <button data-render-label="Virginia render"></button>
     <button data-render-label="Maryland render"></button>
@@ -137,6 +138,17 @@ describe('bridge original suite restore guards', () => {
     assert.match(text, /\/create \/studio 301/);
     assert.match(text, /\/my-profile \/business 301/);
     assert.match(text, /\/explore \/signal 301/);
+  });
+
+  it('enables live Google Maps on the Explore mount', () => {
+    const files = new Map([
+      [
+        '/signal/index.html',
+        Buffer.from('<div class="pulse-live-map" id="signalLiveMap" aria-label="map"></div>'),
+      ],
+    ]);
+    enableLiveGoogleMaps(files);
+    assert.match(files.get('/signal/index.html').toString('utf8'), /data-live-map="enabled"/);
   });
 
   it('collects static files and skips junk, refusing a .next tree', () => {
