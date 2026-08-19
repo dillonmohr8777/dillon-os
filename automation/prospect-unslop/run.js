@@ -422,10 +422,11 @@ async function processSite(site) {
   }
 
   const facts = harvest?.facts || {};
-  const city = (facts.address || '').split(',')[1]?.trim() || cityGuess || 'Pennsylvania';
-  const phone = facts.phone || '';
-  const address = facts.address || '';
-  const hours = facts.hours || '';
+  const sanitizeFact = (s) => String(s || '').replace(/[\u2014\u2013]/g, '-').replace(/\s+/g, ' ').trim();
+  const city = sanitizeFact((facts.address || '').split(',')[1] || '') || cityGuess || 'Pennsylvania';
+  const phone = sanitizeFact(facts.phone || '');
+  const address = sanitizeFact(facts.address || '');
+  const hours = sanitizeFact(facts.hours || '');
   let url = pickOfficialUrl(site.name, site.slug, [official, harvest?.finalUrl, prevUrl]);
 
   for (const stale of fs.readdirSync(photoDir)) {

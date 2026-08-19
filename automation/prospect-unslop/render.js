@@ -5,6 +5,7 @@ const { buildSkinCss, inferAttitude } = require('../../_templates/site-factory/l
 
 const esc = (s) =>
   String(s ?? '')
+    .replace(/[\u2014\u2013]/g, '-')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')

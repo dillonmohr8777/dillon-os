@@ -80,6 +80,12 @@ test('renderSite ships the design-system homepage, not a four-section stub', () 
   assert.equal(ld.telephone, '6106641111');
 });
 
+test('harvested hours cannot smuggle an em dash into the page', () => {
+  const html = renderSite(sampleBrief({ hours: 'Monday 8:00 AM \u2014 5:00 PM' }));
+  assert.doesNotMatch(html, /\u2014/);
+  assert.match(html, /Monday 8:00 AM - 5:00 PM/);
+});
+
 test('wordmark fallback when no first-party logo exists', () => {
   const html = renderSite(sampleBrief({ logo: false, logoSrc: '' }));
   assert.match(html, /wordmark/);

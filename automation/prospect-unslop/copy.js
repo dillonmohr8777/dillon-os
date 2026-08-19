@@ -4,12 +4,6 @@
  * Honest homepage copy. Keep their nouns. Never invent phone, hours, menu, or awards.
  */
 
-function clip(s, n) {
-  const t = String(s || '').replace(/\s+/g, ' ').trim();
-  if (t.length <= n) return t;
-  return `${t.slice(0, n).replace(/\s+\S*$/, '')}.`;
-}
-
 function clean(s) {
   return String(s || '')
     .replace(/[\u2014\u2013]/g, ', ')
@@ -17,6 +11,12 @@ function clean(s) {
     .replace(/,\s+/g, ', ')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function clip(s, n) {
+  const t = clean(s);
+  if (t.length <= n) return t;
+  return `${t.slice(0, n).replace(/\s+\S*$/, '')}.`;
 }
 
 function isJunk(s) {
@@ -329,8 +329,11 @@ function honestCopy(site, harvest, family) {
         }))
       : bank.offerings;
 
+  const harvestedStory = paras.slice(0, 3).join(' ');
   const story = clip(
-    paras.slice(0, 3).join(' ') || `${previewFrame(site.name)} ${bank.offerings[0].body}`,
+    harvestedStory && harvestedStory.split(/\s+/).length >= 80
+      ? harvestedStory
+      : `${harvestedStory} ${previewFrame(site.name)} ${bank.offerings[0].body}`.trim(),
     720
   );
   const storyMore = clip(paras[3] || `${bank.experience[0].body} ${bank.experience[1].body}`, 360);
