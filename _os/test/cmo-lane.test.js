@@ -56,8 +56,36 @@ describe('CMO lane contract', () => {
     assert.match(html, /noindex/);
     assert.match(html, /balanced/);
     assert.match(html, /paid-search-analyst/);
+    assert.match(html, /local-seo/);
+    assert.match(html, /attribution-reconciler/);
+    assert.match(html, /seo-technical/);
     assert.doesNotMatch(html, /sk-[A-Za-z0-9]/);
     assert.doesNotMatch(html, /api[_-]?key\s*[:=]/i);
+  });
+
+  it('operator board carries Momentum look, agent portraits, and platform marks', () => {
+    const html = fs.readFileSync(BOARD, 'utf8');
+    const css = fs.readFileSync(path.join(VAULT, '_os/cmo-lane/public/assets/app.css'), 'utf8');
+    const publicDir = path.join(VAULT, '_os/cmo-lane/public');
+    assert.match(css, /--navy:\s*#14274e/i);
+    assert.match(html, /Google Ads/);
+    assert.match(html, /Google Business Profile/);
+    assert.match(html, /Search Console/);
+    assert.match(html, /Places/);
+    assert.match(html, /WordPress/);
+    assert.match(html, /DataForSEO/);
+    assert.match(html, /Anthropic/);
+    assert.match(html, /assets\/agents\/paid-search-analyst\.webp/);
+    for (const file of [
+      'assets/agents/paid-search-analyst.webp',
+      'assets/agents/local-seo.webp',
+      'assets/agents/attribution-reconciler.webp',
+      'assets/agents/seo-technical.webp',
+      'assets/app.css',
+      'assets/momentum-360-logo.png',
+    ]) {
+      assert.equal(fs.existsSync(path.join(publicDir, file)), true, file);
+    }
   });
 
   it('deploy CLI dry-run never creates a site', () => {

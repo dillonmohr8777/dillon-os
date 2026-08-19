@@ -61,6 +61,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
 - [[12_Brain/01_Captures/2026-08-19 - CMO lane economics and sequencing|2026-08-19 CMO lane economics]] — briefing that set balanced-first sequencing.
 - [[12_Brain/01_Captures/2026-08-19 - Operator asked to decide lineage PRs and boards|2026-08-19 lineage/PR/board ask]] — decide factory lineage, PR deaths, and the four boards.
+- [[12_Brain/01_Captures/2026-08-19 - CMO board should match Momentum agents look|2026-08-19 CMO board look]] — Momentum navy/gold operator app with cute agent icons.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols

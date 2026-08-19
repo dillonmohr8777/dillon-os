@@ -85,7 +85,9 @@ that runtime is connected. Do not invent a second CMO product.
 
 - Skill: `/cmo-lane` (`.claude/skills/cmo-lane/SKILL.md`)
 - Config: `11_Agents/cmo-lane.json`
-- Operator board: `_os/cmo-lane/public/` (noindex)
+- Operator board: `_os/cmo-lane/public/` (noindex). Momentum navy/gold app
+  with four CMO mascots, seven OS mascots, and platform marks. Still not
+  the `cmo seed` runtime.
 - Deploy: `node _os/automation/bin/cmo-lane-netlify-deploy.js` — never creates
   a site, draft by default, requires `CMO_LANE_NETLIFY_SITE_ID`
 
@@ -94,4 +96,5 @@ that runtime is connected. Do not invent a second CMO product.
 - Decision: [[12_Brain/04_Decisions/2026-08-19 - Default CMO profile is balanced]]
 - Concept: [[12_Brain/03_Concepts/CMO Lane Cost Discipline]]
 - Capture: [[12_Brain/01_Captures/2026-08-19 - CMO lane economics and sequencing]]
+- Capture: [[12_Brain/01_Captures/2026-08-19 - CMO board should match Momentum agents look]]
 - Nearby: [[12_Brain/03_Concepts/Qualified Pipeline Measurement]] · [[12_Brain/03_Concepts/AEO GEO and AI Discovery]] · [[12_Brain/03_Concepts/Netlify Deploy Safety]]

@@ -43,6 +43,9 @@ the runtime appears, point it at `11_Agents/cmo-lane.json` and
 ## Netlify
 
 Operator board lives in `_os/cmo-lane/public/` and must stay `noindex`.
+Visual language matches the Momentum 360 agents board (navy/gold, cute
+agent portraits, platform marks). Do not swap it for a sixteen-agent
+marketing site or a public client URL.
 
 ```
 node _os/automation/bin/cmo-lane-netlify-deploy.js --dry-run
