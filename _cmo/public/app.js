@@ -150,6 +150,7 @@ function renderFeed(o) {
 function renderGeoSummary(geo) {
   if (!geo) return '<div class="empty">No scan yet. Run the <code>geo-visibility</code> agent.</div>';
   return `
+    ${geo.simulated ? '<div class="note danger"><strong>SIMULATED</strong> — no real engine adapter; these are not measurements of the named engines.</div>' : ''}
     <div class="faint mono">instrument ${esc(geo.promptSet.sha256.slice(0, 16))} · ${esc(geo.promptSet.setId)} v${esc(geo.promptSet.version)}</div>
     ${geo.engines.map((e) => `
       <h3>${esc(e.engine)} <span class="faint">(${esc(e.channel)})</span></h3>
@@ -225,7 +226,13 @@ function renderGeo(o) {
     ? card('Warnings', g.warnings.map((w) => `<div class="note ${w.severity === 'warn' ? 'warn' : ''}"><strong>${esc(w.code)}</strong> — ${esc(w.message)}</div>`).join(''))
     : '';
 
-  return `<div class="note">${esc(g.note)}</div>
+  const simBanner = g.simulated ? `<div class="note danger">
+      <strong>SIMULATED — not a measurement of these engines.</strong>
+      No real engine adapter is configured, so ${esc([...new Set(g.engines.flatMap((e) => e.answeredBy || []))].join(', ') || 'the configured model')}
+      was asked to answer as each engine would. Useful for exercising the pipeline and for evals; not for a client
+      report, and not trendable against a real scan.
+    </div>` : '';
+  return `${simBanner}<div class="note">${esc(g.note)}</div>
     <div class="faint mono" style="margin:8px 0 16px">instrument ${esc(g.promptSet.sha256)} · ${esc(g.promptSet.setId)} v${esc(g.promptSet.version)}
     ${g.promptSet.weighting?.capRelaxed ? ` · <span class="badge warn">weight cap relaxed to ${g.promptSet.weighting.effectiveCap}</span>` : ''}</div>
     <div class="grid cols-2">${engines}</div>

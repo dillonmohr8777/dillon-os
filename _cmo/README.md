@@ -283,6 +283,27 @@ better; the loop it gates is not closed yet.
 - Live ad-account mutation. Reads only; every mutate is a high-risk approval-gated effect.
 
 **Known limits**
+- **The GEO collector is simulated, and now says so.** There is no adapter for a real answer engine,
+  so a scan asks the configured model to answer as each engine would. Every such scan is
+  `channel: simulated`, `reportable: false`, carries a blocking warning naming which model actually
+  answered, and cannot be trended against a real scan. The scoring layer is sound and tested; the
+  collection layer needs real engine or SERP APIs before any number goes in front of a client.
+- **The approval gate is a workflow control, not a security control.** The `by` field is
+  self-asserted and the server has no authentication — it binds `127.0.0.1`, and that is the only
+  thing standing between anyone who can reach the port and an approval in someone else's name.
+  Separation of duties compares strings. Fine for one operator on one machine; not fine the moment
+  this is shared.
+- **The filesystem store is single-process.** Writes are atomic per file, so nothing tears, but there
+  is no locking: two concurrent writers read-modify-write and one silently loses. `upsertWorkspace`
+  rewrites a shared index file, which is the worst case. Multi-tenancy here means *isolation*, which
+  is enforced and tested — not *concurrency*, which is not. `migrations/001_init.sql` is the way out
+  and is not wired up.
+- **Nothing schedules anything.** Agents declare a cadence and `cmo cycle --cadence daily` runs a
+  group once. There is no daemon and no cron integration, so "daily" is currently a label plus an
+  external crontab.
+- **`list()` is O(n) per call** — it reads every document in a collection. Fine at hundreds; not at
+  forty clients times a year of artifacts.
+
 - `ssrCoverage` estimates the render-time denominator by static analysis of the hydration payload
   rather than running a browser. It is reliable on the case that matters — an empty shell — and errs
   toward reporting good coverage.

@@ -28,7 +28,7 @@
 
 import { buildPromptSet, scanPlan } from '../geo/promptset.js';
 import { scoreRun } from '../geo/extract.js';
-import { aggregateScan } from '../geo/score.js';
+import { aggregateScan, SIMULATED_CHANNEL } from '../geo/score.js';
 import { analyzePage, ssrCoverage, chunkability } from '../connectors/crawl.js';
 import { auditRobots, robotsPolicy } from '../geo/crawlers.js';
 import { marginOfError } from '../geo/stats.js';
@@ -357,9 +357,9 @@ export const geoVisibility = {
           const answer = await ctx.model({
             name: `probe:${engine}:${prompt.id}:r${rep + 1}`,
             taskClass: 'classify',
-            // The engine name is part of the prompt because different engines
-            // genuinely run different system prompts and retrieval stacks. It
-            // also keeps their measurements independent rather than identical.
+            // Varying the system prompt by engine keeps the per-engine samples
+            // independent rather than identical. It does NOT make the answer
+            // come from that engine - see the channel below.
             system: `You are the ${engine} assistant. Answer as a general-purpose AI assistant would, naming specific companies where relevant.`,
             user: variants[variantIndex],
             nocache: true,
@@ -367,10 +367,16 @@ export const geoVisibility = {
           const scored = scoreRun({
             promptId: prompt.id,
             engine,
-            // Labelled honestly: this is an API-proxy measurement, which is a
-            // different system from a consumer chat UI and must never be
-            // averaged with one.
-            channel: 'api_proxy',
+            // THE HONEST LABEL. There is no adapter for a real answer engine in
+            // this build, so the answer came from the configured model roleplaying
+            // the engine - not from the engine. That is a `simulated` channel, not
+            // an `api_proxy` one, and calling it api_proxy would be the exact
+            // channel conflation this engine exists to refuse. A simulated scan is
+            // valid for exercising the pipeline and for evals; it is NOT a
+            // measurement of that engine, and the aggregator says so.
+            channel: SIMULATED_CHANNEL,
+            simulated: true,
+            answeredBy: answer.model,
             engineVersion: answer.model,
             replicate: rep + 1,
             text: answer.text,
@@ -401,7 +407,7 @@ export const geoVisibility = {
     });
 
     return {
-      summary: `${runs.length} runs, ${scan.engines.length} engines, MoE +/-${(marginOfError(plan.aggregateRunsPerEngine) * 100).toFixed(1)}pp`,
+      summary: `SIMULATED scan (no real engine adapter): ${runs.length} runs, ${scan.engines.length} engine profiles, MoE +/-${(marginOfError(plan.aggregateRunsPerEngine) * 100).toFixed(1)}pp`,
       runs: runs.length,
       engines: scan.engines.map((e) => ({ engine: e.engine, visibility: e.visibility.value, nEff: e.visibility.nEff })),
       warnings: scan.warnings.length,

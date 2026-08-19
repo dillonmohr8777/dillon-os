@@ -596,3 +596,64 @@ describe('crawler: SSRF guard and AEO analysis', () => {
     assert.equal(text, 'Only this.');
   });
 });
+
+describe('a simulated scan can never be presented as a measurement', () => {
+  // This guards a defect that shipped once: the GEO probe asked one model to
+  // answer "as chatgpt would" and then labelled the row engine="chatgpt",
+  // channel="api_proxy". The number was real; its provenance was not. That is
+  // the same channel conflation this engine exists to refuse, so it is now a
+  // structural property rather than a caller's good intentions.
+  const manifest = {
+    setId: 's', version: 1, sha256: 'abc',
+    prompts: [{ id: 'p1', weight: 1, cohort: 'client', pattern: 'local' }],
+  };
+  const mk = (channel, simulated, answeredBy) => aggregateScan({
+    manifest, brandId: 'self', competitors: ['rival'],
+    runs: Array.from({ length: 4 }, (_, i) => ({
+      promptId: 'p1', engine: 'chatgpt', channel, replicate: i + 1,
+      simulated, answeredBy,
+      present: i < 2, ordinal: i < 2 ? 1 : null, mentionCount: i < 2 ? 1 : 0,
+      prominence: i < 2 ? 0.8 : 0, grounded: true,
+      brandsPresent: i < 2 ? [{ brandId: 'self', name: 'Self', ordinal: 1, mentions: 1, owned: true }] : [],
+      citations: [], ownedCitations: 0, totalCitations: 2, stance: null,
+    })),
+  });
+
+  it('marks a simulated scan not reportable and raises a blocking warning', () => {
+    const scan = mk('simulated', true, 'claude-opus-5');
+    assert.equal(scan.simulated, true);
+    assert.equal(scan.reportable, false);
+    const blocking = scan.warnings.filter((w) => w.severity === 'blocking');
+    assert.equal(blocking.length, 1);
+    assert.equal(blocking[0].code, 'SIMULATED_NOT_MEASURED');
+    assert.match(blocking[0].message, /did not come from chatgpt/);
+    assert.match(blocking[0].message, /claude-opus-5/);
+  });
+
+  it('detects simulation from the runs even if the channel lies', () => {
+    // A caller passing channel: 'api_proxy' must not be able to launder it.
+    const scan = mk('api_proxy', true, 'claude-opus-5');
+    assert.equal(scan.reportable, false, 'run-level simulated flag must win over the channel label');
+    assert.ok(scan.engines[0].simulated);
+  });
+
+  it('names the simulation in the metric name and the interpretation', () => {
+    const e = mk('simulated', true, 'claude-opus-5').engines[0];
+    assert.match(e.composite.metricName, /^SIMULATED_/);
+    assert.match(e.composite.interpretation, /says nothing about chatgpt itself/);
+  });
+
+  it('leaves a real scan reportable and unflagged', () => {
+    const scan = mk('api_proxy', false, null);
+    assert.equal(scan.simulated, false);
+    assert.equal(scan.reportable, true);
+    assert.equal(scan.warnings.filter((w) => w.severity === 'blocking').length, 0);
+    assert.doesNotMatch(scan.engines[0].composite.metricName, /SIMULATED/);
+  });
+
+  it('refuses to trend a simulated scan against a real one', () => {
+    const out = compareScans(mk('simulated', true, 'claude-opus-5'), mk('api_proxy', false, null));
+    assert.equal(out.comparable, false);
+    assert.ok(out.problems.some((p) => p.code === 'SIMULATED_VS_REAL'));
+  });
+});

@@ -38,6 +38,24 @@ import {
   netStance, phrasingRobustness, median, Z95,
 } from './stats.js';
 
+/**
+ * Acquisition channels. These are never averaged together, because each one
+ * measures a different system.
+ *
+ *   api_proxy  - the engine's own model API with a search/grounding tool. A
+ *                sibling of the consumer surface, not the same system.
+ *   ui_scrape  - the real consumer surface, automated.
+ *   clickstream- real prompts and answers from a real user panel.
+ *   first_party- the engine operator's own reporting.
+ *   simulated  - NOT A MEASUREMENT OF THE ENGINE. Some other model was asked to
+ *                answer as that engine would. Valid for exercising the pipeline
+ *                and for evals against a fixed corpus; invalid as evidence
+ *                about the named engine, and labelled as such everywhere it
+ *                surfaces.
+ */
+export const CHANNELS = Object.freeze(['api_proxy', 'ui_scrape', 'clickstream', 'first_party', 'simulated']);
+export const SIMULATED_CHANNEL = 'simulated';
+
 export const DEFAULT_COMPOSITE_WEIGHTS = Object.freeze({
   visibility: 0.35,
   prominence: 0.20,
@@ -87,10 +105,14 @@ export function aggregateScan({
     });
   }
 
+  const anySimulated = engines.some((e) => e.simulated);
   return {
     promptSet: manifest
       ? { setId: manifest.setId, version: manifest.version, sha256: manifest.sha256, weighting: manifest.weighting || null }
       : null,
+    // Hoisted so no consumer has to dig for it before rendering a number.
+    simulated: anySimulated,
+    reportable: !anySimulated,
     brandId,
     competitors: competitors.slice(),
     compositeWeights: { ...compositeWeights },
@@ -116,6 +138,11 @@ export function aggregateScan({
 
 function aggregateEngine({ engine, channel, runs, promptById, competitors, brandId, compositeWeights, z }) {
   const isControl = (promptId) => promptById.get(promptId)?.cohort === 'control';
+  // Simulation is a property of the runs, not a caller-supplied flag, so a
+  // caller cannot quietly present a simulated scan as a real one.
+  const simulatedRuns = runs.filter((r) => r.simulated).length;
+  const isSimulated = channel === SIMULATED_CHANNEL || simulatedRuns > 0;
+  const answeredBy = [...new Set(runs.map((r) => r.answeredBy).filter(Boolean))];
   const clientRuns = runs.filter((r) => !isControl(r.promptId));
   const controlRuns = runs.filter((r) => isControl(r.promptId));
   const warnings = [];
@@ -351,6 +378,16 @@ function aggregateEngine({ engine, channel, runs, promptById, competitors, brand
     { iterations: 1000, seed: `comp:${engine}:${channel}` },
   );
 
+  if (isSimulated) {
+    warnings.push({
+      code: 'SIMULATED_NOT_MEASURED',
+      severity: 'blocking',
+      message: `these runs did not come from ${engine}. ${simulatedRuns} of ${runs.length} were answered by ${answeredBy.join(', ') || 'another model'} roleplaying it, so this is a pipeline exercise, not a measurement of ${engine}. Do not put it in a client report or trend it against a real scan.`,
+      answeredBy,
+      simulatedRuns,
+    });
+  }
+
   if (visibility.nEff < MIN_N_EFF) {
     warnings.push({
       code: 'LOW_EFFECTIVE_SAMPLE',
@@ -367,12 +404,16 @@ function aggregateEngine({ engine, channel, runs, promptById, competitors, brand
     parts,
     // Naming the metric honestly is the point. "34% visibility" invites the
     // reader to think 34% of real users saw the brand. They did not.
-    metricName: `WeightedPresenceRate(${engine}/${channel}, prompts=${cells.length}, nEff=${visibility.nEff.toFixed(0)})`,
-    interpretation: `In this prompt set, the brand appeared in ${(visibility.value * 100).toFixed(1)}% of weighted prompt runs on ${engine}. This is a property of this instrument, not a share of real user queries.`,
+    metricName: isSimulated
+      ? `SIMULATED_WeightedPresenceRate(${engine}-roleplayed-by-${answeredBy[0] || 'model'}, prompts=${cells.length}, nEff=${visibility.nEff.toFixed(0)})`
+      : `WeightedPresenceRate(${engine}/${channel}, prompts=${cells.length}, nEff=${visibility.nEff.toFixed(0)})`,
+    interpretation: isSimulated
+      ? `SIMULATED. The brand appeared in ${(visibility.value * 100).toFixed(1)}% of weighted prompt runs where ${answeredBy[0] || 'a model'} was asked to answer as ${engine} would. This says nothing about ${engine} itself. It exercises the pipeline and gives evals a fixed baseline.`
+      : `In this prompt set, the brand appeared in ${(visibility.value * 100).toFixed(1)}% of weighted prompt runs on ${engine}. This is a property of this instrument, not a share of real user queries.`,
   };
 
   return {
-    engine, channel, cells, visibility, visibilityBootstrap,
+    engine, channel, simulated: isSimulated, answeredBy, cells, visibility, visibilityBootstrap,
     prominence, citation, shareOfVoice, stance, retrieval, robustness, control,
     composite, warnings,
     runs: { total: runs.length, client: clientRuns.length, control: controlRuns.length },
@@ -417,6 +458,13 @@ function diagnoseLever(retrieval) {
  */
 export function compareScans(before, after, { alpha = 0.05 } = {}) {
   const problems = [];
+  if (before?.simulated !== after?.simulated) {
+    problems.push({
+      code: 'SIMULATED_VS_REAL',
+      severity: 'blocking',
+      message: 'one of these scans is simulated and the other is not. A delta between a roleplayed answer and a real engine answer is not a change in visibility; it is a change of instrument.',
+    });
+  }
   if (before?.promptSet?.sha256 && after?.promptSet?.sha256 && before.promptSet.sha256 !== after.promptSet.sha256) {
     problems.push({
       code: 'PROMPT_SET_CHANGED',

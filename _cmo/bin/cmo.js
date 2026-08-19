@@ -512,7 +512,16 @@ async function geo(app) {
   if (!scan) return printRunResult(res);
 
   heading(`AI answer visibility - ${scan.promptSet.setId} v${scan.promptSet.version}`);
-  process.stdout.write(`  instrument ${c('dim', scan.promptSet.sha256.slice(0, 16))}   ${res.result.runs} runs   MoE ±${(marginOfError(res.result.runs / engines.length) * 100).toFixed(1)}pp\n`);
+  if (scan.simulated) {
+    // Leading with this, not burying it in a warnings list at the bottom. A
+    // reader who stops after the headline number must still have been told.
+    const by = [...new Set(scan.engines.flatMap((e) => e.answeredBy || []))].join(', ') || 'the configured model';
+    process.stdout.write(`\n  ${c('red', 'SIMULATED - NOT A MEASUREMENT OF THESE ENGINES')}\n`);
+    process.stdout.write(`  ${c('dim', `No real engine adapter is configured, so ${by} was asked to answer as each engine would.`)}\n`);
+    process.stdout.write(`  ${c('dim', 'Useful for exercising the pipeline and for evals. Not for a client report, and not trendable')}\n`);
+    process.stdout.write(`  ${c('dim', 'against a real scan. Connect a SERP or engine API to produce a reportable scan.')}\n`);
+  }
+  process.stdout.write(`  instrument ${c('dim', scan.promptSet.sha256.slice(0, 16))}   ${res.result.runs} runs   MoE ±${(marginOfError(res.result.runs / engines.length) * 100).toFixed(1)}pp   ${scan.reportable ? c('green', 'reportable') : c('red', 'not reportable')}\n`);
   for (const e of scan.engines) {
     process.stdout.write(`\n  ${c('bold', `${e.engine} (${e.channel})`)}\n`);
     process.stdout.write(`    presence   ${c('blue', `${(e.visibility.value * 100).toFixed(1)}%`)} ${c('dim', `[${(e.visibility.low * 100).toFixed(1)}–${(e.visibility.high * 100).toFixed(1)}] n_eff ${e.visibility.nEff.toFixed(0)}`)}\n`);

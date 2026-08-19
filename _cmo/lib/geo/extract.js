@@ -150,6 +150,11 @@ export function scoreRun({
   promptId, engine, channel, replicate, text, brands,
   structuredCitations = null, grounded = null, searchQueries = null,
   engineVersion = null, locale = null, ts = null,
+  // Who actually produced this answer, and whether that differs from the engine
+  // the row is labelled with. A row that says engine="chatgpt" but was answered
+  // by another model is not a ChatGPT measurement, and the aggregator refuses to
+  // present it as one.
+  answeredBy = null, simulated = false,
 }) {
   const mentions = extractMentions(text, brands);
   const ownedBrand = brands.find((b) => b.owned);
@@ -162,6 +167,8 @@ export function scoreRun({
     engine,
     channel,
     engineVersion,
+    answeredBy,
+    simulated: Boolean(simulated),
     locale,
     replicate,
     ts,

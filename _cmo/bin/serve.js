@@ -283,8 +283,10 @@ async function overview(app, w, workspace) {
       ? {
         artifactId: scanArtifact.id,
         promptSet: scanArtifact.data.scan.promptSet,
+        simulated: Boolean(scanArtifact.data.scan.simulated),
+        reportable: Boolean(scanArtifact.data.scan.reportable),
         engines: scanArtifact.data.scan.engines.map((e) => ({
-          engine: e.engine, channel: e.channel,
+          engine: e.engine, channel: e.channel, simulated: Boolean(e.simulated), answeredBy: e.answeredBy || [],
           visibility: e.visibility.value, low: e.visibility.low, high: e.visibility.high,
           nEff: e.visibility.nEff, coverage: e.visibility.coverage,
           composite: e.composite.value, metricName: e.composite.metricName,
