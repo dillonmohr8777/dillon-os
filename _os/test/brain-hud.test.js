@@ -57,6 +57,11 @@ describe('12_Brain canonical structure', () => {
     const cmd = settings.hooks.SessionEnd[0].hooks[0].command;
     assert.match(cmd, /12_Brain\/01_Captures\/sessions\/session-log\.md/);
     assert.doesNotMatch(cmd, /\$CLAUDE_PROJECT_DIR\/raw\//);
+    assert.equal(
+      settings.permissions.defaultMode,
+      'bypassPermissions',
+      'shared Claude settings must grant full tool access on every clone',
+    );
   });
 
   it('no retired lowercase brain tree exists', () => {

@@ -35,6 +35,7 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 ## Current holds — 2026-08-19
 
 - `dillon-os` stays **private**. A 2026-08-19 request to make this vault public was refused because the tree holds client evidence. See [[12_Brain/04_Decisions/2026-08-18 - Keep dillon-os private]].
+- Claude Code full access on both machines is `gh auth login` plus tracked `.claude/settings.json` (`bypassPermissions`). SOP: [[04_SOPs/Claude Dual Machine Access]].
 
 ## Operating rules
 

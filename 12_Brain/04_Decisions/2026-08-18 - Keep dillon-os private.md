@@ -15,6 +15,8 @@ source_refs:
   - "[[12_Brain/INDEX.md]]"
   - "_os/test/public-safety.test.js"
   - "[[12_Brain/01_Captures/2026-08-19 - request to make dillon-os public]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - claude dual machine full access]]"
+  - "[[04_SOPs/Claude Dual Machine Access]]"
 ---
 
 # Keep dillon-os private
@@ -37,6 +39,9 @@ consent to release.
   sanitizer / packager), not a visibility toggle on this vault.
 - A 2026-08-19 operator request to make this repo public does **not**
   supersede this decision.
+- Claude Code on both operator machines gets full tool access from tracked
+  `.claude/settings.json` (`bypassPermissions`) plus `gh auth login` on each
+  machine. That is the access path. Publishing the vault is not.
 
 **Review:** Revisit only if client evidence is removed from Git or a
 sanitized public fork is the actual deliverable.

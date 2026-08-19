@@ -9,6 +9,9 @@ file adds the source-of-truth contract and the dev-environment facts.
 
 **GitHub is PRIVATE** (since 2026-08-18). Client evidence belongs in the vault.
 Credentials and access inventories still go to `12_Brain/private/` (gitignored).
+Claude Code on both operator machines authenticates with `gh auth login` and
+reads tracked `.claude/settings.json`; do not flip this repository public to
+give Claude access.
 
 ## Start here
 
