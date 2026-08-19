@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-19
 ---
 
 # INDEX — the front door
@@ -71,6 +71,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
+- [[12_Brain/07_Reviews/2026-08-19 - Google Ads KPI window blocked|2026-08-19 Google Ads KPI window blocked]] — Aug 17 to 20 spend pull blocked; last verified live reads are Aug 10 to 16.
+- [[Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20|Google Ads KPI Aug 17 to 20]] — operator table for the blocked window.
 - Bases: [[12_Brain/Bases/Clients.base|Clients]] · [[12_Brain/Bases/Projects.base|Projects]] · [[12_Brain/Bases/Decisions.base|Decisions]]
 
 ## Outreach engine

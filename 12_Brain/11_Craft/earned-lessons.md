@@ -2,7 +2,7 @@
 note_type: concept
 status: active
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-08-19
 source_refs: ["12_Brain/11_Craft/00_Index.md", "System/browser-access.policy.json"]
 tags: [craft, agent-infrastructure, lessons]
 ---
@@ -228,3 +228,23 @@ routine that was still keying dedupe daily until the cadence fix landed on 08-18
 **How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
 list of broken things. Read `last_completed` and the failure timestamps before concluding
 anything is currently failing.
+
+---
+
+## 2026-08-19 — Listing Google Ads customers is not a metric read
+
+**Lesson.** An active Google Ads OAuth session that can list customer IDs is still
+unusable for spend until a child-account GAQL query succeeds with a live manager
+`login-customer-id`. Do not fill the gap with last week's numbers.
+
+**Evidence.** On 2026-08-19, `GOOGLEADS_LIST_ACCESSIBLE_CUSTOMERS` returned 16 IDs
+including KJB `8145506229` and Omega `2853981364`. The same session's
+`GOOGLEADS_SEARCH_STREAM_GAQL` calls failed with `USER_PERMISSION_DENIED` because
+Composio sent deactivated MCC `6908592139` (`CUSTOMER_NOT_ENABLED`). The Aug 18
+429 quota block was not reproduced. No Aug 17 to 19 cost, clicks, or conversions
+were returned.
+
+**How to apply.** Record `read_verified: false` until a dated GAQL row comes back.
+Reconnect to a live MCC before claiming current-window spend. Keep the last
+verified week labeled as a different period.
+

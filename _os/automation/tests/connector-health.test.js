@@ -48,8 +48,9 @@ test('reports the recorded state and marks only verified connectors usable', () 
 });
 
 test('a connector that is active but unread is NOT usable', () => {
-  // googleads is active (OAuth fine) but its read failed on a 429 quota error.
-  // Active-but-unread must not clear the gate; that is the whole point.
+  // googleads is active (OAuth fine) but its metric read failed on a 403
+  // login-customer-id / deactivated MCC error. Active-but-unread must not
+  // clear the gate; that is the whole point.
   const { out } = run(['--window-hours', '48']);
   const ads = out.connectors.find((c) => c.toolkit === 'googleads');
   if (ads) {
