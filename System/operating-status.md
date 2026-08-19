@@ -13,7 +13,7 @@ source_of_truth: C:\Users\dillo\repos\dillon-os
 
 ## 138-site unslop — noindex Netlify hub
 
-Body-image pass finished 2026-08-19. **136** unique concept sites keep the five-image hero swipe, then add five new treated photographs spaced through the page (16:9 cinematic band, story portrait, staggered moments, feature portrait). QA: 136 ready, 0 collisions, 0 missing body, 0 hero reuse below the fold. **105** logos, **31** wordmarks. Dillon approved a noindex preview hub on 2026-08-19. GitHub Actions publishes to `radar-unslop-20260819` (`https://radar-unslop-20260819.netlify.app`). Pages stay `noindex`. Mail stays hold. PR `dillon-os#326`. Outreach sits with the sales manager.
+Body-image pass finished 2026-08-19. **136** unique concept sites keep the five-image hero swipe, then add five new treated photographs spaced through the page (16:9 cinematic band, story portrait, staggered moments, feature portrait). QA: 136 ready, 0 collisions, 0 missing body, 0 hero reuse below the fold. **105** logos, **31** wordmarks. Dillon approved a noindex preview hub on 2026-08-19. Live at `https://radar-unslop-20260819.netlify.app`. Pages stay `noindex`. Mail stays hold. PR `dillon-os#326`. Outreach sits with the sales manager.
 
 The vault was reconciled on 2026-07-12 against current work from the rolling three-week window. The April-era client roster is superseded.
 
