@@ -47,6 +47,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Leading Indicators|Leading Indicators]] — churn/growth signals for `/synthesize`.
 - [[12_Brain/03_Concepts/Conversion Tracking Setup 2026|Conversion Tracking Setup 2026]] — generic setup patterns (no account IDs).
 - [[12_Brain/03_Concepts/Google Ads Conversion Optimization 2026|Google Ads Conversion Optimization 2026]] — generic optimization patterns.
+- [[12_Brain/03_Concepts/Google Ads Composio Proxy Read Path|Google Ads Composio Proxy Read Path]] — wrapped GAQL injects a dead MCC; proxy search against the child CID does not.
 - [[12_Brain/03_Concepts/Meta Lead Ads Optimization 2026|Meta Lead Ads Optimization 2026]] — generic Lead Ads patterns.
 
 ## Raw captures (Git-safe)
@@ -58,6 +59,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
+- [[12_Brain/01_Captures/2026-08-19 - Google Ads live KPI Aug 17-19|2026-08-19 Google Ads live KPI Aug 17-19]] — dated spend for Onsite, Omega, KJB, Tags 2 Go.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -71,8 +73,9 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
-- [[12_Brain/07_Reviews/2026-08-19 - Google Ads KPI window blocked|2026-08-19 Google Ads KPI window blocked]] — Aug 17 to 20 spend pull blocked; last verified live reads are Aug 10 to 16.
-- [[Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20|Google Ads KPI Aug 17 to 20]] — operator table for the blocked window.
+- [[12_Brain/07_Reviews/2026-08-19 - Google Ads KPI window blocked|2026-08-19 Google Ads KPI window blocked]] — morning wrapped-GAQL block; superseded the same day.
+- [[12_Brain/07_Reviews/2026-08-19 - Google Ads KPI Aug 17-19 live|2026-08-19 Google Ads KPI Aug 17-19 live]] — four-client live spend $101.61; Tags CID 921-429-2423.
+- [[Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20|Google Ads KPI Aug 17 to 19]] — live operator table.
 - Bases: [[12_Brain/Bases/Clients.base|Clients]] · [[12_Brain/Bases/Projects.base|Projects]] · [[12_Brain/Bases/Decisions.base|Decisions]]
 
 ## Outreach engine

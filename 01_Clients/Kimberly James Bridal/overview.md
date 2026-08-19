@@ -5,7 +5,7 @@ website: kimberlyjamesbridal.com
 role: Account Manager
 division: Momentum 360
 status: active
-last_touched: 2026-07-12
+last_touched: 2026-08-19
 next_action: Fix the desktop FAQ image crop, QA all breakpoints, and reconcile appointment routing before reporting qualified appointments.
 due: 2026-07-15
 tags: [client, momentum360, meta-ads, google-ads, squarespace, seo]
@@ -18,6 +18,8 @@ Current work spans Meta and Google Ads, Squarespace SEO, the FAQ experience, and
 ## Current truth
 
 - The June paid-media and completed-work report was acknowledged.
+- Google Ads CID `814-550-6229`. Live Search `KJB | Search | Local Bridal | Philadelphia` at $20/day. PMax paused.
+- Aug 17 to 19 live spend $44.19, 9 clicks, 0 conversions (Aug 19 partial).
 - The remaining FAQ item is the desktop image crop and responsive QA.
 - Appointment notices include duplicate or test-routing risk. Do not count them as production appointments until the source rows are reconciled.
 - Track landing-page views separately from qualified contacts and booked appointments.

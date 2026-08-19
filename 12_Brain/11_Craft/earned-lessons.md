@@ -245,6 +245,23 @@ Composio sent deactivated MCC `6908592139` (`CUSTOMER_NOT_ENABLED`). The Aug 18
 were returned.
 
 **How to apply.** Record `read_verified: false` until a dated GAQL row comes back.
-Reconnect to a live MCC before claiming current-window spend. Keep the last
-verified week labeled as a different period.
+Keep the last verified week labeled as a different period. Wrapped GAQL is not
+the only read path; see the 2026-08-19 proxy lesson.
+
+---
+
+## 2026-08-19 — Wrapped Google Ads GAQL is not the only read path
+
+**Lesson.** When Composio's `GOOGLEADS_SEARCH_STREAM_GAQL` injects a dead MCC,
+`proxy_execute` `POST /v23/customers/{cid}/googleAds:search` against the child
+CID can still return dated spend. Do not stall the pull on a reconnect.
+
+**Evidence.** Same OAuth session (`googleads_shover-norard`) that failed wrapped
+GAQL on 2026-08-19 returned customer-level Aug 17 to 19 metrics for Onsite
+`1033715894`, Omega `2853981364`, KJB `8145506229`, and unnamed CID
+`9214292423` (Tags 2 Go via `tags2go.pro` final URL). Four-client spend
+$101.61. Extra `login_customer_id` args on the wrapped tool were ignored.
+
+**How to apply.** Use proxy search for Google Ads KPIs. Set `read_verified: true`
+only after a dated metric row returns. MCC reconnect is optional hygiene.
 

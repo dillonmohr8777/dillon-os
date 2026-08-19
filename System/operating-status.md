@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-08-19
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -25,6 +25,8 @@ The vault was reconciled on 2026-07-12 against current work from the rolling thr
 - Replenish is the leading fifth account and must remain separate from Fresh Blends.
 - NKCDC is paused pending a new contract and excluded from the active roster.
 - Fresh Blends is paused and excluded from the active-ad cycle.
+- Live Google Ads KPI for **Aug 17 to 19, 2026** (Aug 19 partial): Onsite $10.17 / 1 conv, Omega $14.21 / 0 conv, KJB $44.19 / 0 conv, Tags 2 Go $33.04 / 2 conv. Four-client total **$101.61**. Source: [[Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20]].
+- Tags 2 Go Google CID is `921-429-2423` (Ads descriptive name blank). Campaign `Search-1` is live at $15/day.
 
 ## Verified separation risks — 2026-07-19
 

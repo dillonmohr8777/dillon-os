@@ -1,8 +1,8 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-19T14:05:00Z
+last_updated: 2026-08-19T16:10:00Z
 status: active
-last_scan: 2026-08-19T14:05:00Z
+last_scan: 2026-08-19T16:10:00Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
 ---
 
@@ -181,7 +181,8 @@ Only current client and operating actions belong here. Nothing is sent, publishe
 - [ ] 2026-08-14 -- [Momentum 360 / NeedMomentum] -- Approve brand-direction reply to Jenny and a realistic update timeline after Mac and Sean confirm the direction -- Source: 00_Inbox/slack/2026-07-30-jenny-brand-direction.md -- Evidence: "Respond with the branding direction for `needmomentum.com` and a quick timeline for the update." -- Risk: med
 - [ ] 2026-08-14 -- [Momentum 360 / CallRail] -- Approve evidence-backed status reply to Sean after latest CallRail logs and the surrounding thread verify activity and changes -- Source: 00_Inbox/slack/2026-07-30-sean-callrail-status.md -- Evidence: "Confirm whether CallRail activity has happened and explain what changed." -- Risk: med
 - [ ] 2026-08-18 -- [Prospect Radar / generated-stock boards] -- Approve a generated-stock category board for 4 verticals so their sites can carry imagery: digital-marketing-service-pro-west-chester-pa (advertising agency), gft, lasting-impressions, smart-signs. Until approved, those sites build and pass QA but ship without generated imagery; the integrator refuses to guess a board. -- Source: automation/prospect-radar-next20/generated-stock-categories.js -- Evidence: "No relevant generated-stock category is approved for <slug>. Generate and approve a new board instead of guessing." -- Risk: low
-- [ ] 2026-08-19 -- [Google Ads / Composio] -- Approve reconnect of Composio Google Ads so login-customer-id is a live Momentum MCC; then re-run the Aug 17 to 19 spend pull. No budget, bid, pause, or campaign change. -- Source: Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20.md -- Evidence: "Metric GAQL against child accounts fails because Composio sends deactivated MCC 6908592139 as login-customer-id." -- Risk: medium
+- [ ] 2026-08-19 -- [Google Ads / Composio] -- Optional hygiene: stop wrapped GAQL tools from injecting deactivated MCC 6908592139. Live Aug 17 to 19 spend already returned via proxy_execute. No budget, bid, pause, or campaign change. -- Source: Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20.md -- Evidence: "proxy_execute POST /v23/customers/{cid}/googleAds:search returned dated metrics; GOOGLEADS_SEARCH_STREAM_GAQL still fails." -- Risk: low
+- [ ] 2026-08-19 -- [Tags 2 Go] -- Approve pausing leftover ENABLED exact keywords `car insurance` and `auto insurance` on live Search-1 (CID 921-429-2423). No other keyword, budget, or campaign change. -- Source: Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20.md -- Evidence: "Leftover ENABLED exact keywords still include car insurance and auto insurance next to title/registration terms." -- Risk: medium
 ## Rules
 - No historical April-only task may re-enter this queue without new evidence.
 - Approval requires an explicit user decision; a drafted item is not approval.

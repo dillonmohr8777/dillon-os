@@ -5,7 +5,7 @@ website: omegalandscapingandconcrete.com
 role: Account Manager
 division: Momentum 360
 status: active
-last_touched: 2026-08-01
+last_touched: 2026-08-19
 next_action: Verify the current Wix, Google Ads, and Omega GoHighLevel roles, then prepare the exact access request for approval before sending.
 due: 2026-07-15
 tags: [client, momentum360, google-ads, meta-ads, seo, landscaping]
@@ -18,6 +18,8 @@ Current work includes Google PMax, Meta lead generation, SEO, lead-quality check
 ## Current truth
 
 - The account is active with an access gap on the Meta side.
+- Google Ads CID `285-398-1364`. Live campaign is Search High Intent Colorado Springs at $50/day; PMax is paused.
+- Aug 17 to 19 live spend $14.21, 0 conversions. Aug 18 and Aug 19 delivered $0 on an ENABLED campaign.
 - Current optimization depends on verified call/form attribution and lead quality.
 - Budget or campaign changes remain approval-gated.
 

@@ -30,6 +30,8 @@ Last verified live Google Ads numbers remain the Aug 10 to 16 weekly packet. The
 
 Full operator table: [[Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20]].
 
+Superseded later the same day by [[12_Brain/07_Reviews/2026-08-19 - Google Ads KPI Aug 17-19 live]]: wrapped GAQL stayed blocked; proxy search returned the window.
+
 ## Decision needed
 
-Reconnect Google Ads Composio to a live MCC. No spend or campaign mutation is requested.
+Reconnect Google Ads Composio to a live MCC. No spend or campaign mutation is requested. Optional after the proxy workaround.
