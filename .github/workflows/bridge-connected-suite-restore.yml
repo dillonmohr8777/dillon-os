@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
   group: bridge-connected-suite-restore
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   restore:
@@ -23,8 +23,10 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        timeout-minutes: 4
 
       - uses: actions/checkout@v4
+        timeout-minutes: 4
         with:
           repository: dillonmohr8777/bridge-discovery-prototype-kimi-design
           ref: 39e06dbbd9b0f41313c21a58a32f48e52d3d6b49
