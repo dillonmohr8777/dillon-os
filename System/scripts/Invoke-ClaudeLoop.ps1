@@ -69,9 +69,16 @@ $SCRIPTS = Join-Path $resolvedVault 'System/scripts'
 $BIN = Join-Path $resolvedVault '_os/automation/bin'
 $ALLOWLIST = @{
     'vault_health' = @{
+        # exit 1 means the probe RAN and honestly found error-severity vault findings.
+        # That is a successful audit with findings, not a failed audit, so it is blocked
+        # (honest degraded) rather than failed. Treating it as failed conflated "the vault
+        # has problems" with "the checker is broken", and because three failures open
+        # G8_circuit_breaker it took out D03, W11 and E10 together for a day -- including
+        # the routines that would have reported the problem. A genuine crash or an
+        # unparseable payload still lands as failed via the `validate` rule.
         exe = $ps; args = @('-NoLogo', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass',
                             '-File', (Join-Path $SCRIPTS 'Test-SecondBrain.ps1'), '-VaultRoot', $resolvedVault, '-Json')
-        timeout = 300; ok_exit = @(0); blocked_exit = @(); tier = 0; kind = 'readonly'
+        timeout = 300; ok_exit = @(0); blocked_exit = @(1); tier = 0; kind = 'readonly'
         validate = 'json_with_issues'
     }
     'team_validate' = @{

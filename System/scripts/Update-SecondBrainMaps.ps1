@@ -401,7 +401,7 @@ foreach ($existingFile in @(Get-ChildItem -LiteralPath $generatedRoot -Filter '*
     if ($expectedGenerated.Contains($existingFile.FullName)) {
         continue
     }
-    [string]$existingText = Get-Content -LiteralPath $existingFile.FullName -Raw
+    [string]$existingText = Get-Content -LiteralPath $existingFile.FullName -Raw -Encoding UTF8
     if ($existingText -match '(?m)^generated_by:\s*Update-SecondBrainMaps\s*$') {
         Remove-Item -LiteralPath $existingFile.FullName -Force
     }

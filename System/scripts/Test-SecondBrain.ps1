@@ -5,6 +5,14 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+# The loop reads this script's stdout over a redirected pipe and parses it as JSON. Without
+# this, Windows PowerShell encodes stdout in the OEM code page and best-fit-maps anything
+# it cannot represent: U+201D becomes a bare ASCII quote, which terminates a JSON string
+# early and fails the whole routine at stage:build. Parent-side StandardOutputEncoding
+# cannot repair it - the character is destroyed in this process's encoder.
+try { [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false) } catch { }
+
 $resolvedVault = (Resolve-Path -LiteralPath $VaultRoot).Path
 $issues = New-Object System.Collections.Generic.List[object]
 
@@ -107,7 +115,10 @@ foreach ($file in $markdownFiles) {
     }
     $notesByBaseName[$baseName.ToLowerInvariant()].Add($relativeStem)
 
-    [string]$text = Get-Content -LiteralPath $file.FullName -Raw
+    # Vault notes are BOM-less UTF-8. Without -Encoding, Windows PowerShell reads them in the
+    # ANSI code page, so an em-dash arrives as three junk characters and a wikilink whose
+    # target file exists on disk is reported unresolved.
+    [string]$text = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
     $frontmatter = Get-Frontmatter -Text $text
     $noteRecords.Add([pscustomobject]@{
         file = $file
@@ -230,7 +241,7 @@ foreach ($baseFile in $baseFiles) {
         Add-Issue -Severity warning -Code 'empty_scratch_base' -Path $relativePath -Detail 'Empty scratch Base is outside the managed brain layer; either name it and add a view or remove it after review.'
         continue
     }
-    [string]$baseText = Get-Content -LiteralPath $baseFile.FullName -Raw
+    [string]$baseText = Get-Content -LiteralPath $baseFile.FullName -Raw -Encoding UTF8
     if ($baseText -notmatch '(?m)^views:\s*$') {
         Add-Issue -Severity error -Code 'base_views_missing' -Path $relativePath -Detail 'Base file has no views section.'
     }

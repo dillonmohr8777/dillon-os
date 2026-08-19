@@ -180,3 +180,51 @@ existed.
 the user-level install. New or renamed agents need a session restart before they can be
 invoked. Same family as [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|confirm
 the artifact, not the action]]: the file existing is not the capability working.
+
+---
+
+## 2026-08-18 — A zero exit code and a zero error count can still be a failed routine
+
+**Lesson.** When a JSON contract crosses a redirected pipe on Windows, the encoding is
+part of the contract. PowerShell encodes redirected stdout in the OEM code page and
+best-fit-maps what it cannot represent — and U+201D best-fits to a bare ASCII `"`, which
+terminates a JSON string early. The producer reports success; the consumer sees garbage.
+
+**Evidence.** W11 and D03 died at `stage:build` three times each on 2026-08-18, gates
+8/8, `next_safest_action: resolve stage:build`. Run by hand, `Test-SecondBrain.ps1 -Json`
+returned exit 0 with `errorCount: 0` — a healthy vault. The failure was in the validator:
+`json_with_issues` threw `Invalid object passed in, ':' or '}' expected. (940)`. Raw pipe
+bytes at that offset were `20 83 3F 22`. Two bugs composed: `Get-Content -Raw` without
+`-Encoding` read a BOM-less UTF-8 note in the ANSI code page, turning an em dash
+(`E2 80 94`) into three characters ending in U+201D; then CP437 best-fit turned that
+U+201D into `0x22`. The vault was fine and the link it complained about resolved to a file
+that exists on disk (`02_Campaigns/Growth Workshop/Slack Draft — Sean.md`). Introduced by
+commit `b5f66c0b`, which added a path-qualified em-dash wikilink; the next scheduled run
+failed and every prior day had been 9/9.
+
+**How to apply.** Fix it in the child, not the parent. Four parent-side variants were
+tested — `$psi.StandardOutputEncoding`, and setting `[Console]::OutputEncoding` before
+`Process.Start`, in both combinations — and all four still failed to parse, because the
+character is destroyed in the child's encoder before the bytes reach the pipe. Every
+script whose stdout is parsed needs `[Console]::OutputEncoding` set to UTF-8 in its own
+preamble, and every read of vault content needs an explicit `-Encoding UTF8`. Corollary:
+a build command that exits 0 is not a passing build command — read the `validate` rule too.
+
+---
+
+## 2026-08-19 — Trailing-window reliability has no memory of repair
+
+**Lesson.** A reliability score computed over a trailing window is a prompt to read
+receipts, never a verdict. It cannot distinguish "still broken" from "fixed days ago".
+
+**Evidence.** D16 and W04 each showed 0.78 in the 7-day craft brief and were named as
+unreliable. Both had failed exactly twice, four minutes apart, on 2026-08-13, and had
+completed 9/9 every day since; `team_validate` passed by hand at exit 0. Their scores
+stay depressed until 2026-08-20 purely because the window still contains 08-13. Separately
+W11 read 0.60 against D03's 0.70 on an identical root cause — the entire gap was one
+older unrelated incident, and W11's denominator was inflated 7x because it is a weekly
+routine that was still keying dedupe daily until the cadence fix landed on 08-18.
+
+**How to apply.** Treat the brief's `unreliable` list as a queue to investigate, not a
+list of broken things. Read `last_completed` and the failure timestamps before concluding
+anything is currently failing.

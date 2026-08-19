@@ -11,7 +11,7 @@ workhorses: 10
 unreliable: 5
 cadence_drift: 6
 authorized_never_ran: 7
-earned_lessons: 9
+earned_lessons: 11
 worst_reliability: W09 0.29
 ---
 
@@ -88,14 +88,14 @@ gated or defined and never wired:
 **This file is generated. Do not hand-edit it** - the next run overwrites it.
 Lessons are append-only in [[12_Brain/11_Craft/earned-lessons|earned-lessons]].
 
-Recorded so far: **9**.
+Recorded so far: **11**.
 
+- 2026-08-19 - Trailing-window reliability has no memory of repair
+- 2026-08-18 - A zero exit code and a zero error count can still be a failed routine
 - 2026-08-19 - An agent file is not an installed agent
 - 2026-08-19 - Three layers of escaping is a trap, not a technique
 - 2026-08-19 - A date-keyed generator moves its own output at midnight
 - 2026-08-18 - Firecrawl stealth lives on one schema only
-- 2026-08-18 - Name the rungs a CLI cannot drive
-- 2026-08-18 - An unasserted string replacement is a silent no-op
 
 Promotion rule: once a lesson has appeared twice, write it into
 `12_Brain/03_Concepts/` with `source_refs` pointing at both briefs, and link it

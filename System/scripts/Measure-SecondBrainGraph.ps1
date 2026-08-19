@@ -37,7 +37,10 @@ foreach ($file in $files) {
     $relativePath = Get-RelativeVaultPath -FullName $file.FullName
     $relativeStem = $relativePath.Substring(0, $relativePath.Length - 3)
     $baseName = [IO.Path]::GetFileName($relativeStem).ToLowerInvariant()
-    [string]$text = Get-Content -LiteralPath $file.FullName -Raw
+    # BOM-less UTF-8. Reading in the ANSI code page mangles non-ASCII link targets, which
+    # drops real graph edges and can push largestComponentCoverage under the 90% threshold
+    # that Test-SecondBrain escalates to severity=error.
+    [string]$text = Get-Content -LiteralPath $file.FullName -Raw -Encoding UTF8
 
     $record = [pscustomobject]@{
         relativePath = $relativePath

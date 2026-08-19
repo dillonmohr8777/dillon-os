@@ -31,6 +31,11 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+# -Json output is parsed by the loop over a redirected pipe. Without this, the OEM code page
+# best-fit-maps U+201D to a bare ASCII quote and the JSON contract breaks at stage:build.
+try { [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false) } catch { }
+
 $resolvedVault = (Resolve-Path -LiteralPath $VaultRoot).Path
 $registryPath = Join-Path $resolvedVault '11_Agents/claude-operating-team.json'
 $ledgerPath = Join-Path $resolvedVault '11_Agents/claude-stage-discrepancy-ledger.json'

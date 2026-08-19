@@ -30,6 +30,11 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+# -Json output is parsed by the loop over a redirected pipe. Without this, the OEM code page
+# best-fit-maps U+201D to a bare ASCII quote and the JSON contract breaks at stage:build.
+try { [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding($false) } catch { }
+
 $resolvedVault = (Resolve-Path -LiteralPath $VaultRoot).Path
 $runId = 'CI-' + (Get-Date -Format 'yyyyMMdd-HHmmss')
 $startedAt = (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss.fffZ')
@@ -406,7 +411,7 @@ function Invoke-B8 {
     $now = Get-Date
     $rows = New-Object System.Collections.Generic.List[object]
     foreach ($f in (Get-ChildItem -LiteralPath $sysDir -Filter '*.md' -File)) {
-        $text = Get-Content -LiteralPath $f.FullName -Raw
+        $text = Get-Content -LiteralPath $f.FullName -Raw -Encoding UTF8
         $claims = ($text -match $claimPattern)
         $stamp = $null
         if ($text -match '(?m)^(last_updated|updated|last_checked|checked_at):\s*(?<d>\S+)') {

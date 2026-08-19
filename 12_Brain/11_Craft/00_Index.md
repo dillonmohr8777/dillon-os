@@ -24,7 +24,7 @@ repeat get promoted into `12_Brain/03_Concepts/` and linked back here.
 
 ## Earned lessons
 
-[[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **9** recorded, append-only.
+[[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **11** recorded, append-only.
 Agents write there. Never into a generated brief.
 
 ## Briefs
