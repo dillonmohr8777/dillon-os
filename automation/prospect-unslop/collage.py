@@ -57,6 +57,13 @@ def load_rgb(path: Path) -> Image.Image:
     return im.convert("RGB")
 
 
+def try_load_rgb(path: Path) -> Image.Image | None:
+    try:
+        return load_rgb(path)
+    except Exception:
+        return None
+
+
 def cover_crop(im: Image.Image, size: tuple[int, int], cx: float, cy: float, zoom: float) -> Image.Image:
     tw, th = size
     zoom = max(0.62, min(zoom, 1.0))
@@ -215,6 +222,11 @@ def main() -> int:
     out_dir = Path(spec["outDir"])
     out_dir.mkdir(parents=True, exist_ok=True)
     sources = [Path(p) for p in spec.get("sources", []) if Path(p).exists()]
+    readable: list[Path] = []
+    for path in sources:
+        if try_load_rgb(path) is not None:
+            readable.append(path)
+    sources = readable
     if not sources:
         print(json.dumps({"ok": False, "reason": "no source photographs"}))
         return 2
