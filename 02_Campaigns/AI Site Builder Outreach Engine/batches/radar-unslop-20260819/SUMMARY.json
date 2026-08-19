@@ -4,14 +4,16 @@
   "needsGen": 0,
   "blocked": 0,
   "dropped": 2,
+  "treatedPrint": true,
   "results": [
     {
       "id": 1,
-      "slug": "agnes-edmunds-bridal-formals",
       "name": "Agnes Edmunds Bridal & Formals",
+      "slug": "agnes-edmunds-bridal-formals",
+      "issue": "placeholder",
+      "drop": false,
       "family": "bridal",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -97,21 +99,24 @@
       "city": "Pottstown",
       "rerender": true,
       "hashes": [
-        "bacce6776a9f34a8803291d223c37fb1ee820ab1d6532698ccc4308288676e0a",
-        "e437d25abb54dbf5c3c29a267ab68ce499cf73ec6f1c9be364d86b7494fc9523",
-        "39003e0bf3a9d5c9feb91092767cdae0379eda9345bb25c33a77613c72866946",
-        "1e7b01065af0a1992da2c8600be006f20f4b1f85e4abafaad8c0d29f033899f7",
-        "758285cf5e3e3cf352c8e69574ad44572f8072e4afecde0f13e3689a24b903f3"
+        "414f818e7cc103f4ca16d66c4bf0c4975ed840030d24318af63bcae4f34db6ca",
+        "5abc824c60a29165d6e722dad0b55721d572b9fa7f1094b573fc32987b4d7ae1",
+        "e62deed449d07ba6855045705b77a31176a9965a17b27819a46ea0d14532f6ff",
+        "86d266cf27508c4cf793efbee998559e18e5a2d2f9e908134c0b5396b85e9420",
+        "85f8acbd44d638377e62151b72b0eb7f1ec1df5efd93b4ce3b51eb6a03f75300"
       ],
-      "copyWords": 358
+      "copyWords": 358,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 2,
-      "slug": "al-tacos-locos",
       "name": "Al Tacos Locos",
+      "slug": "al-tacos-locos",
+      "issue": "placeholder",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -198,21 +203,24 @@
       "city": "Jenkintown",
       "rerender": true,
       "hashes": [
-        "7d4b54046cae4063f6fa3727379d925be88169370952bb0d5037b3e43c64253f",
-        "ff2ca7de683c4bbd5fd38a5f1c6e105d029a8ef8105a5b48a1d4d6b73f3392f3",
-        "76c6670dca4bb52c9c15906e2366c47a54b3b47946df7eb720215d2ce80d8f45",
-        "3656041e44cfc5a4ce46592f516b01ac267aa793589b7c7a6f24536a00548859",
-        "4c183d8eb994f8617e146c8055132f06428000ec76b6d570aa7715c2baa207c7"
+        "093cd4f6de148d19c1e0c63882039cd38fcc9fcf9bb2785f496cf74ebc69a7bd",
+        "0afa6343bce96e87acceeb439ee706188cc9cdd090b79b9da93c7b39cdaf9e30",
+        "e36386fe019f6fc4a758e510a2174fe03a8dd5c2226d6dd2fd8ca02e2d8ee86a",
+        "3930f69288e7644b1337a3ab3556185e3f43071727cb294c4f793cf7f7165623",
+        "cb7995832ea89197aa1e3c48900efe471102d5f74f60f69033d8b46b49f02968"
       ],
-      "copyWords": 380
+      "copyWords": 380,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 3,
-      "slug": "lpl-financial",
       "name": "Apollo Wealth Advisors",
+      "slug": "lpl-financial",
+      "issue": "placeholder",
+      "drop": false,
       "family": "legal",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -299,21 +307,24 @@
       "city": "Colmar",
       "rerender": true,
       "hashes": [
-        "81f37eac9fdad2533fd5e7b753b56cd083bdd910772616bd67d67bcab97ea1a2",
-        "09db2240930aec3299f1e5c97facb70fe6d8ad4efd7f559a9a5f5a7a44d6e288",
-        "eacf046edb7e17ca3a774c6ac27b9ddb77a527760e1b5c089471b94fcbe42a6c",
-        "f8bb9020bf0dc8d46e894e261001fb39bc170a0892bc270fd955c84d7a6c816d",
-        "7ce6f562d1817f7e06b9ee070e1893292f662e742b4bbaec82ca9fe952f8de54"
+        "c8e12c76750247ebfd4d070252a18898856793ec8412bed0c73575003b3afe2e",
+        "b050e2ce8aefd3b76b20faf789e4fe7cd61444765e10377b03b2f1cedcee7967",
+        "19ef6f80777981860a039832a447391d3a0d160e454e491dab28d9b02b265815",
+        "a21c1d4c1c617cce94f747602b15733a181876f246878438c00f470f66cdd74b",
+        "4f76ea8c05c1ba2d6969a165e11d4fec2b3baa68f3da91711a27a28f2638b1c7"
       ],
-      "copyWords": 339
+      "copyWords": 339,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 4,
-      "slug": "apr-supply-company",
       "name": "APR Supply Company",
+      "slug": "apr-supply-company",
+      "issue": "placeholder",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -401,21 +412,24 @@
       "city": "Malvern",
       "rerender": true,
       "hashes": [
-        "d9a8ad97037ab630bb5592444b3d60f5ed5a6a70c87c83a66d2f07519bdc064e",
-        "5923371450c9f3b20b70387dc9f00ab990dcb4dc623030cbc35262df99accdf4",
-        "d3de86d926b925bf18e344a58f70c8213ee17f964435cd3f15c4b9a6f13335b0",
-        "25ec09b975434399d450ba7b75b8d40c98b23831cd71295e226c9481008707d3",
-        "bb18cad048553f19fe455684ab6bb8cb2db048cae1a231b67fd1b707383f0080"
+        "6338194b30c5a815591968758e0b9a96d1567b787dce1f8a7e5bfd4ab73baedd",
+        "2f8740e92efbbee03bdfa82e5f37ed2824731617066adba35ff6d28f98ae2245",
+        "51b3c7f82a4757619bc874b61908b3ee7be3b28b9a04d5e1a785b706b2ea1e5d",
+        "13428654c67409d31a2bc59a66ec3eb5eeb699d3227d8eb4812edd03dafb3c46",
+        "208bc441908f326a8e17480534e50f35447ea380edfb149659b02985638d78bc"
       ],
-      "copyWords": 341
+      "copyWords": 341,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 5,
-      "slug": "borsello-landscaping",
       "name": "Borsello Landscaping",
+      "slug": "borsello-landscaping",
+      "issue": "placeholder",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -503,21 +517,24 @@
       "city": "Borsello Landscaping",
       "rerender": true,
       "hashes": [
-        "55ba4668f434c4c90807007953559e71c526c0515b827e5031f1461fe256bd54",
-        "ec81dad19805d3ff9b456ac6f0f10d2753739d71883a996654cd2c4e99aa7229",
-        "7857269a1b916af2a25ec4c51451176b1aaacddaf966956523fbb80c5290d037",
-        "1d60a90839a7c61e9b092cc00cd50104da5da44aeaa50769312655863b9fe7e8",
-        "2998721fa989e3c1497f987a316359172a5474b4f9450f3d0dfc39302228efb5"
+        "a1e9a0d4e57c926b80185bbe6210f1dac5b2199b14613be0dadc80f441b700d7",
+        "a87c9376321c84f1f34a6dbf86f65b22aae33f391d139f8ff52c4e5d4ae16890",
+        "0021b296459137657f11f0ccc27566b474206c67fccb31d73d9408b5c500f0b5",
+        "e71010365a94ee9bf010a6ecdeee12b17e8746e5f2d0ea0708e02dc22a3b0a8c",
+        "066052a5508a2cd3cb3936e97d9bf6f36dc426c7a78c54ab30e69f923e4573ca"
       ],
-      "copyWords": 336
+      "copyWords": 336,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 6,
-      "slug": "boyle-energy-heating-air-conditioning-oil-propane",
       "name": "Boyle Energy",
+      "slug": "boyle-energy-heating-air-conditioning-oil-propane",
+      "issue": "placeholder",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -603,21 +620,24 @@
       "city": "Havertown",
       "rerender": true,
       "hashes": [
-        "f72f843063bf076786f28a9c6fc5ae4cd8783596203557c4d7bc1c2f05209191",
-        "dddbc72a06985a7dff75717cc8e1405b98d986ea887c09bebb8cc727629b2570",
-        "79f88a8d4f65d2a19c0c4ee4ef740f074d8a09c8728144366d3a9d792b987ea0",
-        "db4f490546b6e99a0be38c5ed026701429fd71028a224a03d788c84a11a34f95",
-        "1d3c3c88f35e9a63391d526ea989eb951a9fe95e74aef2138a6364424b12e4e3"
+        "bb78d420fc6d5c8c1c1eed377667b57282f972d99eb4cf3be7cd4152d23b2e42",
+        "788c7c6ff51c66193d8ed8ea519b895f7f966458ee3803f9f295684330374843",
+        "b9c8238d0573d79fbf135314f6c302066094533cbcab071a590155f499780a59",
+        "a6dbcc12c7061bdf4243df646c4d1735cdc4fe351cb70d8e9f14607f7ca258ed",
+        "14505706f046d10777bd23f739d33a5ad512072da5188928307962e6cc1088c2"
       ],
-      "copyWords": 475
+      "copyWords": 475,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 7,
-      "slug": "brandywine-auto-parts",
       "name": "Brandywine Auto Parts",
+      "slug": "brandywine-auto-parts",
+      "issue": "placeholder",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -703,21 +723,24 @@
       "city": "Chester",
       "rerender": true,
       "hashes": [
-        "198e180c9d9acebda5997aed27e8be4b9776d40741e95bc7cfd736343779f72d",
-        "185f3466bb20f430a5c033a200fde93bc363e26a43c421df313d8241db976a75",
-        "95bdc121660959f86ff1507140a29d0f070c28a4f15610e5a7ffa09c05ad2813",
-        "d34b329beaf22763498bb888e0007520592d4e0af51e633f53a06b952e9a4e19",
-        "365f0c9ff436511a1ff2dc2aab8eaf42a5638e9fbabd7d03531b62f00f5902c7"
+        "03d78a4b35126d82ff055c6a4185f2117370dd8d4b427c5272d83df774568ea3",
+        "ef09f0931e7f66c458384ee1b9d5bae8fb5fa408d19fb636f8de8b1e74f4861b",
+        "f0b5374952be70144d6dea111eeb93961219c284b1414bae520d25b761f14acf",
+        "03fb5dbbdb3623d61ed3e6b675908ee42e7b568f1d97aa51b7bce6a6b0fae1ef",
+        "a3f385234fc83e7966d2b9203358bdc578b3842292d653cfaddb2456a330560b"
       ],
-      "copyWords": 350
+      "copyWords": 350,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 8,
-      "slug": "captain-car-wash",
       "name": "Captain Car Wash",
+      "slug": "captain-car-wash",
+      "issue": "placeholder",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -804,21 +827,24 @@
       "city": "Norristown",
       "rerender": true,
       "hashes": [
-        "a5e05cfd69fe9b80c3e8e6164243ad177c46dcbccb1d98955c6c870732c9fe46",
-        "8adddafd059b9ac11f66a8fba153bb846c6d9613c9761f4ba18d543c664712ef",
-        "4a6708f2a566c3b9edcfc879908352a2a10d2283197dc92e4fcfdf0b48ae4245",
-        "38ba2352d91ec73ef18b07e622c126128706a3b5631005f14280cd972a11f8cd",
-        "26884c52a591277e8657f5b3ed3db70c7e4e02a77fdbc86729aca4436267b2d5"
+        "3fdb69e45b0627dcc37694613bf82f51b7ee9da45d4138155146c923d3f4909e",
+        "9277225b1d7005d7de669dd9fb25618a5e891bcadb07f4be870b567ea128d14b",
+        "0775aaa72e4934e6e9b082e601c7ee4d9c5e7623a552c0516a4466f650dd672a",
+        "d60da445d6a5f1c5e3956910b39c6860d629e0460d7172c85308092ac10c8b66",
+        "001eb9b0de782a707ea50c402f65f7e35dfbbc50e5ceb10b6b7f4c460e9ded9e"
       ],
-      "copyWords": 421
+      "copyWords": 421,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 9,
-      "slug": "city-electric-supply",
       "name": "City Electric Supply West Chester",
+      "slug": "city-electric-supply",
+      "issue": "placeholder",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -906,21 +932,24 @@
       "city": "West Chester",
       "rerender": true,
       "hashes": [
-        "4382f7c0c68580ad07ee3fd029c55d590ff367a61515fdd205ffc924028d4d26",
-        "2e55c22513b12e704806d18e6d1197d4e4088f5a3af44e1c89a5806ee5fe19bb",
-        "2dff4bacebcca0a4e078856d4a3b0ed0ce2af661209b61200c8e3eaa4454d816",
-        "2f5428ad2db175bd5d9d86b87bae44b1e26269f2d2b198e62f95cf5d0057c7cc",
-        "5878e9964ef5cc2694acd793d3c9eeb3aa0d66d7a37df41a9bef292d6ab8f330"
+        "f9609a0d8b410eaa8c6652c90ebb215edd814dc0e6eabc25de79aed165894ce3",
+        "fe36a52c0171e418f5bc7a9157df7ef21a09cc89b16b35df28026c60e64ba447",
+        "c288f32782e387a217b3154cec7b04763156778280deaec1059bf69cb5105fac",
+        "2c357213644693cc81cc3a20a5a04c9792a4d2dd67fb6244f5958df5f8c0845a",
+        "4483bdc6f209d04177508cec6b9e9df78fbf5c52208719787e684745a53b3a6f"
       ],
-      "copyWords": 356
+      "copyWords": 356,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 10,
-      "slug": "custom-it-solutions",
       "name": "Custom IT Solutions",
+      "slug": "custom-it-solutions",
+      "issue": "placeholder",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1006,21 +1035,24 @@
       "city": "Address",
       "rerender": true,
       "hashes": [
-        "72ee168b1819e6643181c29258f6229bf03c98183ebf60e0eaa1e331cab81be3",
-        "437f9b34a84b580e4e5b6bd1d6713356c9df619437ef4c7c58e459193bc5d6dd",
-        "047309271c10d7c93b4bd1ae7a45d95e219a48daada7bca942d64898e1d536f7",
-        "132298bff8ab7b3d62ad059b0391f1e5547e9875647e0fe5f1b07b751039e567",
-        "44fe76a6080f5caecf465d057de7cbe55931684c4f1efe9ded3a5e1bc47bcca3"
+        "dab9a86888309107ae36da795ee0e9badc92350e957f156df6db45569a7ddd6d",
+        "8127468c371ac243cab4de0610518dd96503063737a31c7c22cf44199897b224",
+        "1a4e19c7b3d640ae4ed7a4aa881fc421dd46f3ac37b525b0c83449a510ece2a1",
+        "7a8a166912a8c27b89a88b8526543253c87c40147c5e6a0a8987669a1134a08f",
+        "2e719c58db4aecb73aaa7a1a7bd220b9a5ac9a1e7e21cb1f6c46a54105c4a137"
       ],
-      "copyWords": 362
+      "copyWords": 362,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 11,
-      "slug": "ember-ale",
       "name": "Ember & Ale",
+      "slug": "ember-ale",
+      "issue": "placeholder",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1107,21 +1139,24 @@
       "city": "Collegeville",
       "rerender": true,
       "hashes": [
-        "1d54a4634d1821c86f9222195d4ed559e7df4ae7c52babaeea31428e8059cb3d",
-        "4458cd047751a986a48e5228497a68d20bb7e348fab328aa4dacc04fcdc8c7a7",
-        "73c9deec6937d1fbce2cb062ac12ab41867ff90a04916a6757bd86d4b762646b",
-        "6ae2dcc5928c9c58951eff13fd7ad47183a9f0400497074c4a45fb494d38b8f8",
-        "8d865d4e0afb99785f772fded3d6f2695183eb05ef14b6df6204511427488db9"
+        "90aa0e02a9902b5f0ed9642f16954908e9fb88316b8e22f3ed246eb95d9f1328",
+        "adda6ad6bf492a08074ce14c0fab3e0b2125d6ce86d890291b7ed4fb195560b4",
+        "e2f11470347aa28f590f166c551a1141ebfb09a440184ee3b68da6f61f95c13e",
+        "0772e541809373e653f8392cc7614acd67fbd504ce5dae506f7ade6c4c279c5a",
+        "666bb2185fac72c71299b813dc763ead682442af84abf14509ea046811c5bb54"
       ],
-      "copyWords": 378
+      "copyWords": 378,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 12,
-      "slug": "epam",
       "name": "EPAM Philadelphia",
+      "slug": "epam",
+      "issue": "placeholder",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1209,21 +1244,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "a439c126fa83a547fcf956700341ffa2b4c173bab024b9d2955f548f4d6be69f",
-        "b39a79f346db8c83cc70daa47acd13a43bdd0325aeb45bdb68744c33a3a359e2",
-        "e04a06e52b9bc19d0d72ee07d276aaa04da2df7346d8a85e449bf1b411796add",
-        "34d226be36741d067d9ca8b439cd9fcbd4a5934431e22d656ac42c90678d8033",
-        "c831c79a5d7f11a53b7f7baa4f2795084447def41380cb6ed496a4a7d1d976a0"
+        "060689f335995ad9e228674448adce9ca37f7fbacc9a48c434f6da21edc1ea19",
+        "41ab879c888b97dab41747ae0fc98fa01bf4f09bb6f0f080fbc616b462868b38",
+        "6e16528780a5b87c4ecf0f4d7f68db50f2b6c2d631630b15565b4108ec0c9179",
+        "7d0911ba010d9806c24578a7c3e09feaec10559c31771b062886a272790a1eb0",
+        "11c9c091d3df6fdd71e5debcb78cecc00c5e79c941ca984ee7cf5eaba442d3b7"
       ],
-      "copyWords": 330
+      "copyWords": 330,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 13,
-      "slug": "euphoria-nail-bar",
       "name": "Euphoria Nail Bar",
+      "slug": "euphoria-nail-bar",
+      "issue": "placeholder",
+      "drop": false,
       "family": "salon",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1311,21 +1349,24 @@
       "city": "Address",
       "rerender": true,
       "hashes": [
-        "445b18eff9f5d93dc94b83bc7ed57d354d97b4db31fefe78d3e95448add4bb1b",
-        "d79be377983831c31fc4908518eafde9417bf1f6beb3790935fc3ddd69788211",
-        "5937eaee687b5bafe161482dae3c6b4940b8706941fbda217096e66d3f7c59ba",
-        "a68cedc10bf1770bb909078131695344ad3e2ecb44ebb21625926de2fb8d51b3",
-        "4eab4ca89718b75e82fdb02f4bc009cb2b6b401ec5265c5c0bf4b40031a136fe"
+        "ff57691bdf8b6d4c7987c43377c1cc20e6eaec6dd4dc5c077295cc22b5206a94",
+        "1a7cbfdff1e51d1a23f0e35a5584a8bca2ebd516c1b76882d71f7d8264e682bc",
+        "da43075b92f21019945e57afd0a6a981002f42c6b726454b022c67e3b91bd332",
+        "2cf3d32d83bbb13d1e6ca4258bc533f819364f9c106420149426873bee31877d",
+        "437c047ae3f23cc687022d1b98fe7832ed9d274ef5f2f42b7aefb468ad391ebc"
       ],
-      "copyWords": 312
+      "copyWords": 312,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 14,
-      "slug": "ferrari-philadelphia",
       "name": "Ferrari Philadelphia",
+      "slug": "ferrari-philadelphia",
+      "issue": "placeholder",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1411,21 +1452,24 @@
       "city": "Newtown Square",
       "rerender": true,
       "hashes": [
-        "229bb6dd115149822d48d17a966c5b2a88a81077ab0f818dddba087c47b08b16",
-        "3e3f285f39764d927de82d1417b539dd8d9d6157c10e64dc9a5dc4ef6f5cf8f5",
-        "09dd8454de42e324a62defd61bee09ff52172d629c617e84dbd831fbb6c0e006",
-        "a772ab57d4a321c6b6a12fbddd4e77a20cb1c10800da28dff16b62280e799fb6",
-        "ba5d0b05d034829f7b54bb972fed54212ec2eeb5834ecd3184ef61854ebbfd71"
+        "da97ebb95f6857baec5665d55dbf9b843188a3eef977f2fd7ca578a446cf3686",
+        "8b8e8c930fbb07f0b8b8a19353a63bf89c27da96d7dedaf77243fa50b63fb3a7",
+        "ffd7085c8433c711ca6993f77c1cb3e6197cc7c8cf3219bea7396ee14ff00eff",
+        "43d57f7060d80fcdb25fab85e8932b9f547d339a63ae37ff8736314ccedaa86e",
+        "19318ed01401036fa2adcf89ba56c1f22a0e82830b1036d989ef1e79e33374c1"
       ],
-      "copyWords": 313
+      "copyWords": 313,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 15,
-      "slug": "field-1-post-llc",
       "name": "Field 1 Post LLC",
+      "slug": "field-1-post-llc",
+      "issue": "placeholder",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1511,21 +1555,24 @@
       "city": "Havertown",
       "rerender": true,
       "hashes": [
-        "cdd2776afdd5d2608703da33055d3cc6cda3246884e57934c4cdac74f74cc9fb",
-        "4f8a5d519c6a54ee83b36aae44e175509869d0dd48d0d678cb20670638fee407",
-        "ab178873084c1c37bffd85f75d42e7b71636cb1c572049d6b70d48809d13da62",
-        "2bf18caded2bf731022e14e9544182de15cac4ec8d5539f22888ffc10650e261",
-        "c4f8185f804120d1f780dccf45a3fdd09344d17e0afc0d7583a141422caa154c"
+        "03ac86ca710f0d13090034992cb637e9c0efd4de560e8e2292cc489e20a5fe46",
+        "676a023f0afff59c5b3b125f3312162aa998770a0d8b2ca78831e8701e97f5ac",
+        "541484959c76ab4a1548ae9e825cc3948755a5eb37937750a78e996aad86f514",
+        "977d067dd4a3ca4b887d898a021de6546f1d234b41a43fc39386afa6d8b9d90f",
+        "c0056bc4821c08272abb2691ec7e33e41ccb1b41177d24f6b3e550a7ece3964e"
       ],
-      "copyWords": 361
+      "copyWords": 361,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 16,
-      "slug": "francis-kaufman-house",
       "name": "Francis Kaufman House",
+      "slug": "francis-kaufman-house",
+      "issue": "placeholder",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1612,21 +1659,24 @@
       "city": "Address",
       "rerender": true,
       "hashes": [
-        "eee85dba19dc191c882cb9012ec9509b2590d3f8ad1157b11aad200e37947bc3",
-        "f342715c6a03ed8dc051ca106730b96a809e3ac0a9b3fa7def43c67a5bc0bb2d",
-        "9c34c7d81b4abe4c07ee25be2e5a0f615f9f523c5e24f26b0e173b7c42dc9d90",
-        "da4dbe289ff2bacf66c737bcdcc6a1ce5a834bbcff1f204f807cf8306e1743d8",
-        "1e6ab5415b755255a5c4393edd62b55e21eeb5ed5a22c3749f2702e2582ff6b4"
+        "64f0f436c8244b7ac73221b24ce342ef96bcedc2377bfe68c41aa5aa6978d463",
+        "f38aa7b92ffee85101583d3ca0fc698400219004f6789717e21a191e0fef34c5",
+        "46a2b3a7871de966f7c6a76081a4f78f280b7c4f8eba85e5274ed4da24f0fb24",
+        "a3b01e0e84dbdc546df7ac866d4343150c09e1f646e3d3b5ca88a2d3efb8bf52",
+        "1f69af7140a81502b3f8b39c4eb339ce5d4cbac0007ac2ed27d3dd897eaaff2c"
       ],
-      "copyWords": 360
+      "copyWords": 360,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 17,
-      "slug": "heart-soul-tattoo",
       "name": "Heart & Soul Tattoo",
+      "slug": "heart-soul-tattoo",
+      "issue": "placeholder",
+      "drop": false,
       "family": "salon",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1712,21 +1762,24 @@
       "city": "East Greenville",
       "rerender": true,
       "hashes": [
-        "7917943aee8c604c8c8829cd4b52a3ece9c50384fcaee38345f3984829dc7a09",
-        "005fd85b4f20bc84f5306451001d566814d654baf88aad7b5b640e599abe0c24",
-        "3da7cb691e3acccb537afcc74ba9c3d43378bf4f5eb14158405ed95f53cf96c1",
-        "effd5d3bd988f57bdf36c3658d238c71a5bf3145bc18fcd841e6229091404c74",
-        "f055a76a1430d23a08e4cde5979fb9106306d25f2fd5a3095ed597a7df1a4c18"
+        "d37012d215a6f8dc836978d2fa02526107ee240ea94bf1acb4fcb5fa8b008584",
+        "22ce635c7c0b354bd65f5ec8f51da0816283a58f3d90db339a996593ed5c6c73",
+        "ac3d4ee9ef76b34760ad619424d0eb395ca6f67e20c216791c34956a53eac43b",
+        "3fb1a27972566d68618fb6cd7d9c853fdc581729c9448919569caa0fcdc281dc",
+        "b7e9f150cbaf2ddaea7f15b1c9704188fde23c1895afb9c09fe7bd02e3f989f1"
       ],
-      "copyWords": 321
+      "copyWords": 321,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 18,
-      "slug": "highline-motors",
       "name": "Highline Motors Aston",
+      "slug": "highline-motors",
+      "issue": "placeholder",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1813,21 +1866,24 @@
       "city": "Aston",
       "rerender": true,
       "hashes": [
-        "1342ed1a5755f31e98a49331bccaca661620ba6d8f1a9395d11e324dc3105d7c",
-        "ea1b5606c70f99de70aefbc1b884ee09b5fe71489ad65fd476ce9154b310898d",
-        "132380d2bcd72da232b7d4b36bcb01fbf40f7cdc2e3b9414e1f061c7c5b141ca",
-        "6f7b5af591215b34c8cb31d5e8771ac7951a9e419cc2c19548c228dcff6aee77",
-        "bc286d02e9a8eb67f4e296d00f87cf7c2dd5fa7e8092d5ae4bf8bc822e3a7d5b"
+        "74e9dba0cdbbb7717b2bf6575b0bcec6905f52304ed2b6e33403d789beea19cf",
+        "19d433024b3a691aaf37037172e9facc90c8aeb4baa33591c5363412bd627ff5",
+        "8b34c499c14b958cd94b53af2a0d909114feed15e55bd6a502c93c1f7944afe7",
+        "a6642dd9999ea8b2ea33eaf96a3369097468a915358705d544854b707ec53043",
+        "d71da6c0a75692248e0514d28d18e9c202904c21106818cc8a49f0291adc7f10"
       ],
-      "copyWords": 357
+      "copyWords": 357,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 19,
-      "slug": "holiday-hair",
       "name": "Holiday Hair Quakertown",
+      "slug": "holiday-hair",
+      "issue": "placeholder",
+      "drop": false,
       "family": "salon",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -1914,21 +1970,24 @@
       "city": "QUAKERTOWN",
       "rerender": true,
       "hashes": [
-        "193f8451e2b32160ea2e72ec1e8be40530da9f628788771ed42e9fd9ad3a44b5",
-        "aac5ab215017ea7204ad8f241bddde55b02aa062aebcb0f378a471acfb07a296",
-        "98b9e556b3c3f02aabb2814f191ad997cb742ca6760a26c5c1abdafc3995906c",
-        "0d77766507172615ad22af08df5250dde94141210cf20c5e011b4a1e40e56633",
-        "bc4fc053833b4ba2d28ed85d4ba266c5fccc5571b0d92d5b054f7872148e4947"
+        "2b7520fa82d1ff5ba204536a66655d40a4c1c338c61d9adc5a6f80cd584c05ef",
+        "715440faae60f97735ceaa3bc818de6e7303ef9a0397e4cc9a33e000e8c55532",
+        "18efe0ab4262d0d5eecdb517301dac1d8ccc047a4360979f1272c4528edbacf8",
+        "32fc21bd08c34d5f5787312d1cf180bd97bc850c7e60ce9759932f51c5a4c31e",
+        "78b5461012c79a6fabbb126c7df234665cf8744b45737b2c09faabdd6f711427"
       ],
-      "copyWords": 311
+      "copyWords": 311,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 20,
-      "slug": "ivc-wealth-advisors",
       "name": "IVC Wealth Advisors",
+      "slug": "ivc-wealth-advisors",
+      "issue": "placeholder",
+      "drop": false,
       "family": "legal",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2015,21 +2074,24 @@
       "city": "PO Box 539",
       "rerender": true,
       "hashes": [
-        "f787eea60da7d6579949968d85b070c4060694994ad6183a5a90b528b22f8a8b",
-        "f6d167ce17321af9b6f6dbc9de2847599de70e76e4150afb9a340193d7678296",
-        "c49b4d2fcd40181d61697ac7ffdf0cc7af0b60e2a849196ac17dcd39cc8c7b21",
-        "5a40ada005b25f885c5c3164922be748752c5f9dcb72567c6183cfcca5fc430d",
-        "12676ace4ac05c2107bb654decb804b2d92489207053e054d805dccb35404605"
+        "7cf95b3abe9a773b1c3225352195bbf8d7534f1fdea88af536f3a1a69677d467",
+        "4382692b65533e6e6a1d20eed3caec4e304c1b053353e7c7735844de15c0d328",
+        "c984edacc78995705ea71052bb5d1d472184f019d372fb069fbb1878fb42914a",
+        "278d24b8d98c0a812d7ebe8459e0c313e7d17faf6aec7f1f33a4530ebc78fc25",
+        "5606f760fdff2fcfccdda85c33cb30aac1d9831b5d1e7981edccf08157a8c9bd"
       ],
-      "copyWords": 349
+      "copyWords": 349,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 21,
-      "slug": "j-pro-inc",
       "name": "J-Pro Pools Inc",
+      "slug": "j-pro-inc",
+      "issue": "placeholder",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2117,21 +2179,24 @@
       "city": "Bridgeport",
       "rerender": true,
       "hashes": [
-        "7de5709133861158a5c31ed4ebf0b65650ad386969aaffecfed4eb4b7b2234ab",
-        "8ed40e2adf365bbd1f7cded76dac273197779a27a57d0f538daa0fc9d3a5c5d9",
-        "52bd5600260c537d6c51957a6c08dadcc0e98ce1bff3d0288ec758246c8095ab",
-        "81287afd1e3853fb2c9c9726c7396e22f642c3ff3833d090d6f700ad627b740c",
-        "bb118585712ebab141151b49461af6448a6adf8126a6feb4210cc54f10131213"
+        "e70689703e36a1c9cdc238a8479711a190f4150d979bc16ac3af6d6c87a7a62e",
+        "15acb84dccd8085971c9f5dca14d583d6df49a9a44af2efbd646ddb1188e8248",
+        "9c1316536fde59d6558e59cc097718cdbbb35a0fcc4089b4ed10e19e0de72e73",
+        "29cb651155fe145f023e36122e4664eeadbe26487cb86fb6ceed45e5702f632f",
+        "947c282f785933a69434f945b7284dd3a6ae9ee0775016f9686f66da890bb2b5"
       ],
-      "copyWords": 341
+      "copyWords": 341,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 22,
-      "slug": "hero-complex",
       "name": "Johnny Destructo's Hero Complex",
+      "slug": "hero-complex",
+      "issue": "placeholder",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2219,21 +2284,34 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "cf8e71bd8e07c20c8f4de81212978787091e4e41d2671321ee69db94b4118c39",
-        "f85fb00c7c0bc68c60114086c2a4d2230fda1257c003419e483e5aed9c8beb10",
-        "44b7815e914327d291a14b9d81d2da7f4227395bf7e33f93660d4496dc6c911d",
-        "693836f17079d601aa3bff5a558aeb041552c5f1dc9796215921d894295645fd",
-        "f1142af4089054803970e9375c27b1b7fa276d63454aa71df00399264671e0ee"
+        "e01b75834feeae894dde098258cde338c2017e2328b3235c1c7e36b48b77ba51",
+        "d87f05d2a88856087fba28a4a4160a1492e16f2bcfd0f9b6519def052213e31a",
+        "f24e301e2f80f49995d2909017cb2f763a9592af8a2d6f4778cc101683001054",
+        "4ecbb0fa9090a3f73d48d4692d6811699c40af817b36ddcc3205a20fdb133a7e",
+        "81708ec4c97d1c11ed9d2deeb005e3ac7a31baebb417d5718a947daefc4a3282"
       ],
-      "copyWords": 321
+      "copyWords": 321,
+      "treatedPrint": true,
+      "printPass": "v1"
+    },
+    {
+      "id": 23,
+      "name": "Johnny's Pizza",
+      "slug": "johnny-s-pizza",
+      "issue": "dup",
+      "drop": true,
+      "ok": false,
+      "dropped": true,
+      "reason": "duplicate row: keep the canonical slug"
     },
     {
       "id": 24,
-      "slug": "just-tires",
       "name": "Just Tires Media",
+      "slug": "just-tires",
+      "issue": "placeholder",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2321,21 +2399,24 @@
       "city": "Media",
       "rerender": true,
       "hashes": [
-        "e09bf97aabf125c1397ddfa909ea3f1f33a9d47e0bee70581a3672c7ff544cdd",
-        "d2c25e17cfe080c799b9acfbc710bad77d43352e28f3b4b672cb83b3738bbfb6",
-        "5fde02d8d57af0962a53592baa2eb1545f2c55315a0dc290d039462c03051cfa",
-        "660d72ede583b990de25eddf3c7bf2f2934edb85910c44643f5549a7bc9d9899",
-        "e0fa6cde3b0cd328802c42631a6e463ec0385e84f34f43355b9dc1089536dff2"
+        "f2201bc66a44477f1531fc1a9fb1d23a8c8278d8ce1b004768087db10860da5e",
+        "bd0defc9b675ccafde5c459af9a0959fbed2dd5059b9659ff616ecea222acd39",
+        "6c66da66a903d4a454db51833df93b7caf18f8d0189791fec08e05e25d608f6c",
+        "a32b25afbc9b4cc80f1aade54dec84794a68e920a9e26b056e512dddcac8feb6",
+        "01ac92c333d32b90df498e0b41eb34709420a8332b8e2b50076780179f607e9e"
       ],
-      "copyWords": 363
+      "copyWords": 363,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 25,
-      "slug": "kinetic-physical-therapy",
       "name": "Kinetic Physical Therapy",
+      "slug": "kinetic-physical-therapy",
+      "issue": "placeholder",
+      "drop": false,
       "family": "fitness",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2421,21 +2502,24 @@
       "city": "Chester Springs",
       "rerender": true,
       "hashes": [
-        "d151e03ee1e11b32f88f4353e421f800f2b1bd465ce1e1ca3123b3e6ee7b0b11",
-        "6986760193d48f214995647c67ee0ff99791a9c4f62c87811e81559a7f0d4702",
-        "f7255d24fbb6c349f0fd20ee1ef5fb4db19bf55c80c5f0385ed144faefc03604",
-        "9c3a8a34918e4e4e3f8e726a8c2a6ab03a30972302994b940f46d2cecf5767bc",
-        "5133663dd6c1562a350cf0b2796c6a86f9ca8c82ab8b91b9c259f01bd59831e7"
+        "e5f17db9c8ffc50718e7ba04917df6bba8d89746b79fdd40ef264f7669580e82",
+        "00ac787dff4678b69b9b8c03a73b8f20c1b36e9ab53ab6310b203e2db2f85ab8",
+        "485c15ce86062c75047b682815f20337d2a99d7ff0a8fd51c24aeb56ebc7614e",
+        "c17e1be283514f503d404e96b3eefe1c49c6dd58b396bef4441288f7124b7815",
+        "073bb7bbdb115faf065ab0f0eec015bba7354387ac051a37f025d8db1afee1f2"
       ],
-      "copyWords": 398
+      "copyWords": 398,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 26,
-      "slug": "manatawny-still-works",
       "name": "Manatawny Still Works",
+      "slug": "manatawny-still-works",
+      "issue": "placeholder",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2523,21 +2607,24 @@
       "city": "Stowe",
       "rerender": true,
       "hashes": [
-        "e8cd5e07177049d000db61b273723690e61c97df985e009ee249f465c00f3ea4",
-        "619c9529721341506a0a3d3e73b497f3b655058cf7f86876b1cce6411fd306dc",
-        "03397a935c8e3db3e7b2dee9f682f81b0548251a59f2f68153ab6e1ea1594bf4",
-        "10865e18d0af7041e068dea84ec79b468a10912ada91d45380c477ae8a878124",
-        "6396f3c5b94e60d3b99c0a1e2852d072de05d99b7bd8708d8dc2a156c4029282"
+        "b1b5d28b5f7a0de1c2efa0ca1ccfd0bbb8288c23596d58f87d36367a43622d9c",
+        "7979a7eb839ec7d2295e45ef9e52369a57a73b08366791ea15a7317a1d22f7ef",
+        "8a9c9403b385063257f217487b71131ef80c0d9fadcbaffda694f6141922bf59",
+        "0c9af1965723394e730f417345c82fefaf25df5ecced119fcd07f57aa24f61c5",
+        "6bef35ccdaf575c93c672d4bfdf362343157e48d62593007fb20dd5751c7c40e"
       ],
-      "copyWords": 377
+      "copyWords": 377,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 27,
-      "slug": "ming-s-chinese",
       "name": "Ming's Chinese Restaurant",
+      "slug": "ming-s-chinese",
+      "issue": "placeholder",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2624,21 +2711,24 @@
       "city": "Hatboro",
       "rerender": true,
       "hashes": [
-        "849f51c2746a15e1d46acc4d850e3ba6f202321d1b904f0cbb44f99d59519e62",
-        "8c99db5096183116a795a1d44108461d20efece24a6888a9e71ed8a340a932d3",
-        "cd683b9d0f14715264ef61ff351a203f1ebf66f07ae741af562990c0ba349d38",
-        "c61d4db342e26460ecdaf687e69ecd3943d7206bb1ab21fec0d15b3929d797a7",
-        "8938dc5bdcdbac03edf75e7224d06cd19c49afc7f696f485cf5b121c819abc0f"
+        "f1a8cb2265c120246defd813857a95602b70e01ed08e01a288160a55826bbceb",
+        "e45a17c07a2a527b657734bd1d77c57e34f4a4208cf087d139f1d087eb38be3f",
+        "79235851b842d96e45a3f51a03fe32a14e73187b677cd139437e757048829586",
+        "4350e96db26725bcd2540f4c22048d9002cfd20540285a422ab9b89ffef5aacf",
+        "9bbea76f6b7adfe584598597e3b8562679d8a2a9474fc282b0195c1166ac802a"
       ],
-      "copyWords": 357
+      "copyWords": 357,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 28,
-      "slug": "narberth-pizza",
       "name": "Narberth Pizza and Steaks",
+      "slug": "narberth-pizza",
+      "issue": "placeholder",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2726,21 +2816,24 @@
       "city": "Narberth",
       "rerender": true,
       "hashes": [
-        "10f89eb2be87a2f1753c6ba5f3249ab5bdf2f404c0747af2acffde4cb1202536",
-        "eb81c859253247f261bfc79ba4da7bd62b2031b95aebd283fe890c1473b529e4",
-        "128978571e4e92efd882d42cee21d28f5d6e7cf2253f027c97bafa4d287dd083",
-        "025f50b5fa96640b172c8d1c5ea1077386d846880b138bc33d7f8f1170b407fa",
-        "085ea608aba15ab9773197185c2c5f60f46a3c551ff2b2b81030e51916542c60"
+        "e5c89d16e620749fdcd5f1f5f20b0bcc698a21a10076f9ff07fde3ad7971f71d",
+        "71397d24899124e9ea89ba8eaf2e1607857ad21d521aefef5e3b8ddf2afa63f4",
+        "7789975c9d21074be16ceff1679487180cb43902080e48bd3b05f4459d2b35a1",
+        "8f7cdfc2dbae6ea3fcb42dfbb3f33c9fdfe5adf6e4cbcabdcaa3333f2b0b2155",
+        "28ec4213bb14279e206dae8c1655f3b918bf02441709068c27fcc812ab44c7e1"
       ],
-      "copyWords": 382
+      "copyWords": 382,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 29,
-      "slug": "novacare",
       "name": "NovaCare Rehabilitation Conshohocken",
+      "slug": "novacare",
+      "issue": "placeholder",
+      "drop": false,
       "family": "fitness",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2827,21 +2920,24 @@
       "city": "Conshohocken",
       "rerender": true,
       "hashes": [
-        "b0462eadc522781084f21c844ef94bed7d6b1131fbb3bb43ffc70b9b28adcb80",
-        "a4a32b25207f1e732f4ba295a014ddcebdb04f319af3ec2983c3cac66a06a56c",
-        "5efe46902f8ff14df2d2803a37dfd7819d4f1804eed01352763050abbc684ac0",
-        "0c4dae67c6b9b38907564d41f1e5c9cdb5814e9f73b2659034944ee214364260",
-        "4a0b7d9fb19018ee609f66ac0730f309e018dae9bcfa2d2bfa17d2f9e93ef108"
+        "c145fbb59240ce707d314bf73ccd23c3cc404f5518ba32829e893fb4a7c3cc03",
+        "007688ea0e577bffb4bc3eeeda2b33e2cada035b9a47c7353da117e80f0327b2",
+        "e9981c9da8d7c28e003f5f18a9622bdb342f0dcc6db7f1ab920a8909ee6098e1",
+        "1d5c1c8b161cfaafa8a37e212b9d096e88c46c43f2c1b35f102e7b1fbeb2c1a9",
+        "9bcf3c412f5d3f4eb6beaee29dcb83ace30347f657388636cab847fd43471119"
       ],
-      "copyWords": 354
+      "copyWords": 354,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 30,
-      "slug": "o-donnell-weiss-mattei-p-c",
       "name": "O'Donnell, Weiss & Mattei P.C.",
+      "slug": "o-donnell-weiss-mattei-p-c",
+      "issue": "placeholder",
+      "drop": false,
       "family": "legal",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -2928,21 +3024,24 @@
       "city": "Suite 201",
       "rerender": true,
       "hashes": [
-        "6bae0312e47f1d9302c4c80432260442904b533ceb8a78d72e89d7a5edb561b4",
-        "81c2b00873cc4f3f77799dc48052651ff72de2e034f09c4dcb365b59df8e56b3",
-        "59d1e206a4f0cbddfe2a8cf57eda2e5f6cf6f63eca457c47da78e8f37cadcb1d",
-        "541c92f7fa84e38736b01d57be6f78529888361b5557d3ab1808ebb2c4e224fa",
-        "a2f2855d4bd364848daf247ca499f31a4a9f4f8823b73e6efed8897fd73756c2"
+        "e64ba6a6859082665c1a5b665afcecf272a01656f8cc9f2e7fa17c68d7c9a867",
+        "ac025fce83766cb7ce87e89a595cc699a9b7cd6393eafe97734d220eefcc66df",
+        "666acc57fb935bbd430da821b4e28173671fb2966b1ae0092a49c2ac8d32fbae",
+        "5e9795a0c36118dfdd7051c1e61c01f658a5a3abbb9e37cd7ce9dede2ed11c43",
+        "7da0dce29a686de5438d90013fe01151ab0d768d9286170e47710638ddc3e413"
       ],
-      "copyWords": 481
+      "copyWords": 481,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 31,
-      "slug": "ooka-hibachi-and-sushi",
       "name": "Ooka Hibachi and Sushi",
+      "slug": "ooka-hibachi-and-sushi",
+      "issue": "placeholder",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3029,21 +3128,24 @@
       "city": "Willow Grove",
       "rerender": true,
       "hashes": [
-        "fad235100c84e453ac0a798a17c3eab783327a1de63223e75a36d37e2c284d9d",
-        "6d2d27c7772d46c60990c6130e9e863fe0364f1c82c0c89586b2e6ebd82e48ac",
-        "f34eb1276c86e717268f0ad3047005e3c8b6ea7382378dd8bfa2e34cc2ff39da",
-        "1ae043b72af21f542a7c64c794d29e441a0046bf530452fc5607c4e4fd43ca51",
-        "572881dd9e36039deb7ffd8c94b71126add09f6752d57674c50baebf49c9dffa"
+        "ea538cf94102f2d90f2978aa1d59843f8c43037b6b22404c08ee05ad4f60cc29",
+        "cc1c73521e9dbee6478b05d6be9b9668ba2393a772666bf4e87d1e588a84158a",
+        "7ccb8cc337f9e5695e8c01f565f5af12e1d52d20f162364a932bf5aaddbd4622",
+        "e2f2897c9703b877f2721a0d382df3fb4a94b7eb4066075e55ea24ee31b505d7",
+        "6e6689dec96e5c0e1f76f8b9d1261d4f0e9088765f79214c2460421a99a02aea"
       ],
-      "copyWords": 384
+      "copyWords": 384,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 32,
-      "slug": "dr-weiss-s-office",
       "name": "Orthodontic Associates of Collegeville",
+      "slug": "dr-weiss-s-office",
+      "issue": "placeholder",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3129,21 +3231,24 @@
       "city": "Collegeville",
       "rerender": true,
       "hashes": [
-        "9cc2f5a8dd60cff09ca9c79f9a0fc66efe49f18a1fa6ee67ef35f37f3ef7ab94",
-        "df0f3f79d330ad607211d640b88d864479932a60c3009f3cd1d06e144df8bab7",
-        "c95e2b44f4e81ad31870f313cf47cd0fd33137f5333b7a7eb754e69a1df0241f",
-        "b4ff43b376c3113620d3fb6cfb81fbe418b20818dfd65e520909d2b8bf7c6d12",
-        "b66209383aedbd720c2f311eb2c527c467f8c00b26c5b3f1aed1ad0b8c81dc38"
+        "980485f370707c6689e4003342b2c6752d2e7341df93cd65e5cd7eeec3268dde",
+        "16d15792044392db79693c09cf1955da5aaeaaf3f9efcf075dff71401e91a24d",
+        "823406c0ed25c25aa033140a23fbe4a226ef9b0c80a56e4bcda23fca81529ccc",
+        "a8f1ed4c211b29eac6c1a75679f22717568a2f9d5a64473e8c4766e70406c66d",
+        "446a28006752924f6490fb0e0305c9855db940530ab3b7374e8ef02012fc7cee"
       ],
-      "copyWords": 458
+      "copyWords": 458,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 33,
-      "slug": "philadelphia-auto-accident-injury-attorney",
       "name": "Philadelphia Auto Accident Injury Attorney",
+      "slug": "philadelphia-auto-accident-injury-attorney",
+      "issue": "placeholder",
+      "drop": false,
       "family": "legal",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3229,21 +3334,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "21847e403d7fed27f7a6792b0288503ab9ed402d34b4ec271958b8e5c8e8722a",
-        "b1dd1e078b77a365da2f4b0474332f033dc5fd6c7d8b024d363ea2e33741c365",
-        "3df250aa5b6176c2556f3e809bf0039fab58045d60f32975d5e1c4aa7715fc67",
-        "3b26a43b0abcf85b9959b236917555ed59643bf8b6602885863d8c25e0b0bbaa",
-        "da836e6e1eb11188b9ba0b25afa574efe60b12a99522c892d5ef43aa278e66b4"
+        "58ba576091f9c5e3a93f8acf1295f42db4de28f174737c7c66c22493b2e661a7",
+        "5010fed2aa82ebe29b2debe2f3ffe15c5013c83a2176f5872fa7d8c2c09cf70a",
+        "5d88eee5a412ef05abe0df62c4ebe113b846cdbc3c5a0d5be7d7b5022ff96928",
+        "b7b345d7e5f50957843ba800403240276d266ad50115ac5747d2d05c27d5414c",
+        "980d9ff6fc72d4bfacfc3e5a00bb1250272ed13a9d4d2da0a0a9fc1cb5ec73fb"
       ],
-      "copyWords": 520
+      "copyWords": 520,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 34,
-      "slug": "rally-house-collegeville",
       "name": "Rally House Collegeville",
+      "slug": "rally-house-collegeville",
+      "issue": "placeholder",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3329,21 +3437,24 @@
       "city": "Collegeville",
       "rerender": true,
       "hashes": [
-        "6a8f4359f085b09c1436668b3c8403db6baf521d86a244a23a89fb0f5e0d39db",
-        "502a5ea5663c80bf6e0721122a169441dd2b192f01b58bc4f5ad26c5680e427c",
-        "be2e47ac3ab9644ad82a91f7298f952290933c8ed400d7e9f4b5e0d8aaa59012",
-        "f5ca62e45ff89c67b2c2fbff5579bfb9821a708cc34bfbec66af58ff30c42d7f",
-        "259e59eda6164c43fbbdb38efaea3648401ff59b7aefb747f5ffe85ef49dd6e1"
+        "733fc3b17f654bce02e60016b1104a2d95aea49a62cd61f06d4ca2e9a83ce634",
+        "f279078e929a2bdca2e149c8b60dcc5b30615d866b1c6b2d693633c33f980788",
+        "fbc8999289270fdd726ad83dae724bb8fcf189e1a92f748f5ffdc24d90cd8125",
+        "112546946e334a4cf882b0dddfb9bf16eebc75b11a87385d130166a325fe6f38",
+        "c51df83cb82a71fb99e6c0b0e3c7bfac2cbbcb3ec58e66c7db71abca18cdb6b8"
       ],
-      "copyWords": 334
+      "copyWords": 334,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 35,
-      "slug": "red-hill-greenhouses-florist",
       "name": "Red Hill Greenhouses & Florist",
+      "slug": "red-hill-greenhouses-florist",
+      "issue": "placeholder",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3430,21 +3541,24 @@
       "city": "Red Hill",
       "rerender": true,
       "hashes": [
-        "5e725f9b2079a3edc3269b8a5dc643ea0454be1ff6cab14b0a1b45c088c43688",
-        "840acf1da6c995c2be4e4ab490ce626d66065623c6ac622a4bbe45c774540d67",
-        "59ba391a14d5e6a91162413b0f482d81057c1463d862313b183c1adf83082177",
-        "3390397dd1c0b8542ef00116155bee86268b2c416f1d595837458a6bb4d66d9a",
-        "5d24e84a7f151b3736c4448efcde4f1af8a03f60a47f9fb2c5e0a80fdc2fc73d"
+        "ddc422b54d35d6ea71797c20482774561a0f2ba1b04533daaf0a63dfe4c50aaf",
+        "6dec97001e9a313127e164d8bb7c2ff1d23176cdc67ebb6709023bd8cf4d4291",
+        "ac8862953a7e7579f2ec1d204ab528801d6fee4a243fba998e955cb25b22a88c",
+        "489ebca55a67cd21991b8b1ddc5de4c03d6baf0cb7e134b1bb143daa017d55c9",
+        "c0d2268eb446d49e5e9ecffe084a20c4232f58d31c4ee316a338e50b45407675"
       ],
-      "copyWords": 391
+      "copyWords": 391,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 36,
-      "slug": "rocco-s-brick-oven-pizzeria",
       "name": "Rocco's Brick Oven Pizzeria",
+      "slug": "rocco-s-brick-oven-pizzeria",
+      "issue": "placeholder",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3530,21 +3644,24 @@
       "city": "Collegeville",
       "rerender": true,
       "hashes": [
-        "4cb11e0846e6f6d96e72feea99c32dac9c2423f578d4bede476e27e042f4be9a",
-        "bab7d56e899a48f724e9b28bd1f7b5c80ca9cbfeb22db14ea38da0c568d65884",
-        "40faf315709295bd150b2e480443e7fc3e2a54b6bcd33372eca62d9c59bc3fba",
-        "c62661ca2d002b3e4f2e68dc85ed675c9c5afcac11bdff3c2c6e7e71b20f509a",
-        "c201781c6edc76f21370fdc1441316e8a33ce3f23c97e3401bd2aea77ef9c259"
+        "4431b855c98c25a0ca72d95a3022fe837a50ab26ce330f7f19b0d2ce3aafdfca",
+        "a23e9feb11f77c2910b6d4997610a7efe4d8f727248e21addd77813f1a52526d",
+        "2c7fbfba3f3bd8166d487114b882653c06b852d370d2817480ce3bae00ded655",
+        "abbe154cb37820db4bfb24accddca5da83f1badfa82f4c8932fa573239ef75ca",
+        "25de9a6f1c8b8fe249da8add3100f5ff7e09b84314c9eb581543129be3bf7fe7"
       ],
-      "copyWords": 339
+      "copyWords": 339,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 37,
-      "slug": "seiler-drury",
       "name": "Seiler & Drury",
+      "slug": "seiler-drury",
+      "issue": "placeholder",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3632,21 +3749,24 @@
       "city": "Norristown",
       "rerender": true,
       "hashes": [
-        "2c6612c061c747a52f7d60f0bd3e2b1068581a02b96d98379907d8f86bdf3003",
-        "fcf4850846616ee3a58e2be6b86c6de5eec947465a46c434c05838ba94118b97",
-        "877cf65b0b7b92dee21d1534b26bd9f6626540d63628518eb2e58cdc08efa114",
-        "cbe00f3d0fe21152e8d6d937265b03d64c524eb86b01dd69936934f6d07f520d",
-        "baee42e751f4bcb36c16cabe7dfad90740cfb3045f97c5c7da468fb9e5b047b0"
+        "268996153f4c3da88bab5b037bd0e7c1cf5d0451854f311538057449575e85eb",
+        "8b728c3af40945d407b1d28673f85e49ffdc7cc423327e9c4fd7767fa07b3ec2",
+        "7ed94aea43398d916684945b18dcdfa622bafd7187404f68c2e4de2f9890e2fe",
+        "add400ea58439a73779cd5176fc0fbe46d29db813bf1d92bcd8d00b10156e01c",
+        "9ca274149ddbc9946eb072bb03597d19c1ab426599ef9549496523f9379de14c"
       ],
-      "copyWords": 336
+      "copyWords": 336,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 38,
-      "slug": "snyder-online-marketing",
       "name": "Snyder Online Marketing",
+      "slug": "snyder-online-marketing",
+      "issue": "placeholder",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3732,21 +3852,24 @@
       "city": "Doylestown",
       "rerender": true,
       "hashes": [
-        "dbb6a52eb604896b9b12ef2cc452cfb6aee6206e263e478f27369043a703e1fb",
-        "2847a6d71d96c25f45a0bd8d145596153d58a917b7d7e737ceaea0aace054c91",
-        "aae4d6f79fe6db64fadbcda47446d3b61ed0a00793c7575cb87421d697035e09",
-        "aa5520c8fbfdadfb05cd19544533fe21865f71201e28f6c7ba72849d44f93f13",
-        "44c82f501a82c766a8408d772c67e12bf4bd1b59f5d3886c803151a90296bed2"
+        "76d9a81ce85d365961841509e02b1b2e5cf9c56426efbc8d6cefd87fce7799a0",
+        "2bb3cb757b12da1d8085f88a000dd749bc078153c08234b254a13154f7dc3939",
+        "a56f90e8c6db86be119382a49de1797c6109d599374435c66486d162cae2e305",
+        "28a1c97951bf9023a02bac3e8929847480f5fe72571f84caf078e9294638f34d",
+        "89ed68cf50204143e4b01d9841652e8f38d0d48c596b2b5ab46af74900948639"
       ],
-      "copyWords": 312
+      "copyWords": 312,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 39,
-      "slug": "the-edge-fitness-clubs",
       "name": "The Edge Fitness Clubs Media",
+      "slug": "the-edge-fitness-clubs",
+      "issue": "placeholder",
+      "drop": false,
       "family": "fitness",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3833,21 +3956,24 @@
       "city": "Media",
       "rerender": true,
       "hashes": [
-        "8607b6204b77eb2055077a4eceec0aa5d84b2c18c3f97ca6e5fccab51d5339aa",
-        "cd0f6424f5479fb39aa126d9a326f0d7f97aeac3cb084bd08ad3c2356a6ec5c3",
-        "b81f822f621f93b73f2c02d0191096e16284c5c15d0a33dde83989cc9c52d6d5",
-        "07abaf12e73ba067c4a518595a50b2ee16bd1d5fffd27d0adaeb46d98dfb67e9",
-        "63b880f289defb369c5e2c335123c59ec3fe3f7147a580032f065763c3feacc2"
+        "0c5f39c0c4e4899887ea1c420dd203453288c88e3ebb37e8d9cf4ad2c4c25eeb",
+        "2b87cfb6fb022a67a0f7640998f9a7bac0120f78f17ec9558231045ce0eda494",
+        "6be317927893eb2c2c4f10377a13392443ea95d2235f5427e62dc1680a3833ac",
+        "75f85e04e197c0089fd95e4e25e5a087d0bfdfd6cf82557ca95a7c7b3953eff0",
+        "9aabf015cec5edd5310a0d81008f80550aac663000633912888fc524c2419a28"
       ],
-      "copyWords": 355
+      "copyWords": 355,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 40,
-      "slug": "the-restaurant-store",
       "name": "The Restaurant Store Plymouth Meeting",
+      "slug": "the-restaurant-store",
+      "issue": "placeholder",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -3935,21 +4061,24 @@
       "city": "Norristown",
       "rerender": true,
       "hashes": [
-        "ff61afaf01761e800f4a49ffc943a1438b87d60526c103397cd5597fb6b2d169",
-        "b674befcc23346145a666afb65f230ded8ef5910bc698c19bb0f785002a8f5e7",
-        "055a196109ad81e2186a8e9b066f501a7b2c0da8c2cb1797e6aeb72284da2c80",
-        "189f3cd6dbc1f154269fc15b8a48a08a9f40d50878a545be07166f564e1c241c",
-        "d9e2bf4b7ece7b91b219620493be8122cde2f1d3d33abfef2523822e5d4d8077"
+        "11f06e4a878e884d96e7e7104382f8a0cac537704fd4c85a84d76da92a9071f0",
+        "62af642f30e0e2b85678e8b70ec02f719560127d2ef92ac7d6cb8e20d57a0442",
+        "9860ef1604e66d305735d7d14854efe959ba4eb253b57c8dbbdf844feb878b70",
+        "985e70cb31d21c3caed660e37f958bc30fae4272a79361900864577a53b71fdf",
+        "f21befc7680de92e5f5913cee12524ebd7c1bd2f3de53231b1f8fec2fd43b074"
       ],
-      "copyWords": 350
+      "copyWords": 350,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 41,
-      "slug": "theory",
       "name": "Theory Outlet at Philadelphia Premium Outlets",
+      "slug": "theory",
+      "issue": "placeholder",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -4035,21 +4164,34 @@
       "city": "Suite #1245",
       "rerender": true,
       "hashes": [
-        "462d61618a8ced16989738fa7c690d95ee9673e588842c0136315051989a7ec3",
-        "0a4ba98c1f27d1f79b5daa4b96c64dcfce775a9dc4d156704ff9cd4f3e48bf0f",
-        "95e82c9d7934fc0398653786c5d56f1d40c69091cb7549bca08aecb6a68408fa",
-        "8870ad1e7de5d0269ea1bea8455838df158cd7fd5ab16166d87f814d7ba4a0ef",
-        "b6301583eda4913e828dbec8250cf6007efa8c4db3b577ff08f58d37a164a6f1"
+        "5b4fa058417fd76ef3711adc988b51c4f33075456059dc4602ccc41ecac6d0ce",
+        "12089327f542d4750d60d4d834b0e5ad8c58d167e992a4fbe3b13e5411732b77",
+        "967a2d4841eda186dde939e1822a50e0d0b721437666c75bc4893ffff5575390",
+        "017f639a23663f5fa1649697cf2a683b021acae4f5f91882fd559237ca1c6b9a",
+        "5e67115c711a88345b5a7b6ddddb747f43074836095b4ea11cb38fb1b7674933"
       ],
-      "copyWords": 302
+      "copyWords": 302,
+      "treatedPrint": true,
+      "printPass": "v1"
+    },
+    {
+      "id": 42,
+      "name": "THR Insurance Agency",
+      "slug": "thr-insurance-agency",
+      "issue": "dup",
+      "drop": true,
+      "ok": false,
+      "dropped": true,
+      "reason": "duplicate row: keep the canonical slug"
     },
     {
       "id": 43,
-      "slug": "tm-prestige-home-cash-buyer",
       "name": "TM Prestige Home Cash Buyer",
+      "slug": "tm-prestige-home-cash-buyer",
+      "issue": "placeholder",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -4135,21 +4277,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "7860882405319f3b1cda0fe9ccd0f01d8e158be11ae3a42fb12f89e843bb3221",
-        "9665e153c8ce45ecebe1b466c74143b6e9756dff19f5664acb916179cb919f67",
-        "36f65b4c316742e0599f27a40dcaa54fe12aeee11497666aaa36e731cbb98edf",
-        "35a4c9d430ce631220ebbe82f10f8be7dcac85eb6d8c1ad6e7e21ce9fbb7adb1",
-        "b9cb81a4dc27b2448dd49e3038b7681ec9f62caeb73998eda6e8884b0df9d8bc"
+        "0e45922ee308ee7dc2437fff55ec3f912afed5083cbf0cb124135bc0acdc9e1f",
+        "f0bc96ac249fcb759b6fa5ebfe5099f46cef21b80f83a17a9ffc2ab325f7f990",
+        "9b632175ad852784894764f9e85b7d51283f5770acd6ff30711b100c60a18260",
+        "e845213fb06e9ae5ab67c3382351d414da6c7981371c66d0d68918c98a895e99",
+        "62acea5f5caad37d1b3b5bac99f4d10a0bd4921872a7ef6407a25c661257f7cb"
       ],
-      "copyWords": 440
+      "copyWords": 440,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 44,
-      "slug": "towne-book-center-wine-bar",
       "name": "Towne Book Center & Wine Bar",
+      "slug": "towne-book-center-wine-bar",
+      "issue": "placeholder",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -4236,21 +4381,24 @@
       "city": "Collegeville",
       "rerender": true,
       "hashes": [
-        "457b678fbf0a973ce9a482e111bc023b02a1bb81d0cfb5db51c0775702f8231b",
-        "7b78d7742733bf34afa8ee93632f9000123cad7d4817eaa1d458b46570119858",
-        "69f667d09c3c2f9e581099a4c51fda2babc0438fc1623b9daecaa715265137c6",
-        "4c7aba1bb8c5e96f7a433aa6013a804356a0a31cdebfee927264567f0a937d7e",
-        "dc532dfffec38a01f26fac2a2a5835bbcfe1b35559f2669d1791a26f4330e882"
+        "fec5854bbd217e2188b9c7197592f632c6ecfe88786f4593be5e340d0416066f",
+        "261c2e163f0285213c69c766e54a301076b14d8d6f5ad045d4293a196620de57",
+        "4e6b1fe027ec539fde3c0cdce3144de9698bb0a14b2f6ee102de5c716891c798",
+        "9144a57aac9553ce4bc01b6acf338e2f5cd75209261f9baf2c344e12b3ff28ed",
+        "b5598267a63f6f669835b6f5eab1c45c623ae28e17264cb3eb063e47c553fbea"
       ],
-      "copyWords": 378
+      "copyWords": 378,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 45,
-      "slug": "trend-auto-trader",
       "name": "Trend Auto Trader",
+      "slug": "trend-auto-trader",
+      "issue": "placeholder",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -4338,21 +4486,24 @@
       "city": "Quakertown",
       "rerender": true,
       "hashes": [
-        "a4cffde598764fa47bfd939c7aa477c3964c6c332980bd316b2b631449ce4dff",
-        "e49bd512f37215bb3c3d5dee3e6dff75478318f2d52199de6c1fa1411bf5c552",
-        "bc777bbdc1844cbdf728eec7d635dc3d14a78dc3b7938d880ca76929f0e07391",
-        "50df780bf6518f1698a1a8bd9fe563a3ce349023a57b49a993bb0a097c404356",
-        "ca1ede6dbfc1e7202eec0950de9cdb0b2de421307b5454f09e31a099fbf8991a"
+        "8154aa783fe3a9fab12fd170b74cc849126a955ee1eeda91028ecf608a4fa87c",
+        "3a991056ef277fdba27dbe088f5261243f1dcd68b22c3898dfd7107f086ef758",
+        "dcb828df8da0a1915dcd7bfea1273d145bb651b26264a4161af8d4db2ab01fae",
+        "10b9b5aa80243333a0bb0cb6a476c340747d6f16120943957d9dd38c28acbffa",
+        "5042b33c226c9fa54c593af44dc1450a5d3b1f1170494cf8cc4b4bee731bcedf"
       ],
-      "copyWords": 368
+      "copyWords": 368,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 46,
-      "slug": "uno-chicago-style-pizza",
       "name": "UNO Pizzeria & Grill Oaks",
+      "slug": "uno-chicago-style-pizza",
+      "issue": "placeholder",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -4438,21 +4589,24 @@
       "city": "Oaks",
       "rerender": true,
       "hashes": [
-        "04a48d31a8165fd511bfe41fc304ce122fdc860ac7f4f34a7c79c45b55975864",
-        "a8df9560e36e3c79b13dc2c85616bd44cc340e98066fa4ba29bf1936827bfcac",
-        "bcfea7204a00b036a2a1a451c084a6d5900e25fe34363da50033b67550f9f816",
-        "837c9d5e06e96304d6b59169be0e909f3a4b0767ce94a76a8af5bdd021af164d",
-        "29602e5437683b39411f53ae62517069b0fa436e36ef15484c6731f8b3601503"
+        "33ed44f62f549a50b809201885471c7e5e953568cb85ba1e46ef0bc92520362e",
+        "c62b8195adc1f9d9ba039ea79841adfbf9c176a94986159273835ada0625718b",
+        "3ab552604c1e88f4d8b98887e3d9b797acc38216782e03e457edd8f9b97a8d94",
+        "febd55d059f2b282d6fd5152f4f7c29310cb94da1d950a987af1a071f2899f2b",
+        "d32090ea12bc42d19408d4b14507898056b9c887f5e22c0d9442a7b172c8f646"
       ],
-      "copyWords": 334
+      "copyWords": 334,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 47,
-      "slug": "zuber-realty",
       "name": "Zuber Realty",
+      "slug": "zuber-realty",
+      "issue": "placeholder",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "placeholder",
       "ok": true,
       "qa": [
         {
@@ -4538,21 +4692,24 @@
       "city": "Boyertown",
       "rerender": true,
       "hashes": [
-        "4f1bd2f38e977b550dadd868248acc6f59115a36d9360b0fe0bebc249809c676",
-        "dd68832ef5c9a1b1ce5670b7c99fd1c38ccb9865326a405347c79c7e0548595d",
-        "a8ac4cf6b19a608edb36def1d4ce0ee3ef42b69f72289d1c9a6e58df908acdad",
-        "dbcbfa2236d9d3a6a6b4589579e31f4fa2486bd5bfd05f669ca7229e1fd41e50",
-        "740f2e9ff239c974fd22dc17b6bae968c5c07dc1d906d7e69ce8f171f058a985"
+        "6f10a3ab2d0f68e80ae2fa00f0d363dd7757fe97be60891e3786ba9ea73d0643",
+        "10ae7be53217a15c3cf16f3bb077f2055359eda04d6553629d32d732c728352b",
+        "b89fdcc647ee67e9d860308a9eea2eed4b4c88f0789d64aa4d1ac37774390224",
+        "ec50c94aa6609fe72e3b7e1466ffb571c2a283545ebabcffb207ff68d42aa873",
+        "01655b31829f958fca6b7b17fe5d033736dc4acba05b6c1caf670e316add3381"
       ],
-      "copyWords": 474
+      "copyWords": 474,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 48,
-      "slug": "anthony-gueriera-insurance",
       "name": "Anthony Gueriera Jr. Insurance Agency LLC",
+      "slug": "anthony-gueriera-insurance",
+      "issue": "webgl",
+      "drop": false,
       "family": "legal",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -4640,21 +4797,24 @@
       "city": "Broomall",
       "rerender": true,
       "hashes": [
-        "284e129cb511cc497e0918b335d829c242c2cd41bfbbaf7d6dd152c173fdfad8",
-        "e13cd79188b80ce9929cbbd580027276d23e2a74beea59d75c8d731df1ccce9a",
-        "48843134b8cb5463cc36d3b6d63b0f170e85d40c32fdd323d9fd9bc285bd3df8",
-        "2384c30071631165c63973fcb7fc6248c3c46eda6c515d066ffba92789f0d6ce",
-        "abde9acbd03b6d675bd879ff15792fc783da99cffb58f2724f24a09a9566bb83"
+        "38722c5be4dbcc007adc1aab410842c5207750ec328badd9246bdab3e0990460",
+        "9d1ed8b89ef1ad81f971b1b05bb07e36480aca16015c710e6c2b0d5053345a80",
+        "34e38dcf860f56693844e1d952529dd639902e875921030d6d927e670245b255",
+        "8415fad68b680ae443b62cd40647d5272473713d3c4c0b169b3e3a07d99dd69c",
+        "aebcdf6fe76d1d0543e49bd03e487dc7cd65bc03e75ddd22a6e81388ad57b294"
       ],
-      "copyWords": 361
+      "copyWords": 361,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 49,
-      "slug": "art-city-vets",
       "name": "Art City Vets & Urgent Care",
+      "slug": "art-city-vets",
+      "issue": "webgl",
+      "drop": false,
       "family": "veterinary",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -4740,21 +4900,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "35a3f422e78f07957e5bf662c213ece99f424d5c50c801217b1a2a2a723c0014",
-        "67fd63a5a866834f751ebf212cb7172019b9b74bf828da0c1ff6b8ed02438b0a",
-        "236edc31466789cfe0aec48544870ca563f2a1e0f7060b332c1eb35cefcaeda4",
-        "6af6e08580ccd68634a5311c28531aeb7b1f94608f614392297e24ff2ac7f816",
-        "aba814b7f518dd7604e39f4e57366dc281f04b3ae2b31f8a0f7f4460e740f95f"
+        "37c158220b177dd988ceca79f00d0a4135046cbf9ed750b5ac93f4dcb287db05",
+        "417bb611c8b6e5b8b77c4a292e49eebcd90407b012ac8ee7854be835dc0c0a54",
+        "fb3acb5e1dc3f47b352f3aa1d563c3b9fec685f4d1ca8d40fae52581b94bb4d4",
+        "3367fec46f8065a02f4a944b5074a86f52e29800ef02270305ffd5bb1074d456",
+        "3d0ce9620b0802e5c0884afc7d9ceaaf0d0c7ea763823389c2a14a7dddc8eb32"
       ],
-      "copyWords": 326
+      "copyWords": 326,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 50,
-      "slug": "baldwins-book-barn",
       "name": "Baldwin's Book Barn",
+      "slug": "baldwins-book-barn",
+      "issue": "webgl",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -4840,21 +5003,24 @@
       "city": "west chester",
       "rerender": true,
       "hashes": [
-        "292d7b81fc4ee246333c6d0131551db7ff937b19a894bdf099817718d09d89de",
-        "11efacce8812e4efdb7819ff2f49f0b3035587c141c5fd9a890929d2edd4f19d",
-        "6a5c7ab0f7e7fc9983f301cf854effcb10031ccfc4813ef59a1dd74cf51edd4d",
-        "f84f2bba80e737ec99d98f891d6f32f55b9ecf88f2137e154a47cab5ae28ac79",
-        "89dd13791160490e64a0c1e6292d5b888e69d3daf701f294eac6417c272fb818"
+        "8ac4dd124cb5f8ccef966bc621a2c09e0e4701f3082ec115ebcd550aa49253d8",
+        "2e95e7102735aa31f14e3018adb636b0948f374e6d2f1b9f4a02e77d6d77f0fe",
+        "f7841e1cd769e52967fd2ed6f1894569c09fa1e74079e44461f1e0c932ccd9e0",
+        "1cc3121bd193a088801dbee1fac41a994face1b361d7709149bb020de6c11942",
+        "bb2f4f18b381d9ca4953fd488107743494978ce761f03360d643ff4bd06bc263"
       ],
-      "copyWords": 343
+      "copyWords": 343,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 51,
-      "slug": "big-head-transport",
       "name": "Big Head Transport LLC",
+      "slug": "big-head-transport",
+      "issue": "webgl",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -4942,21 +5108,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "57c85a87714d9e73d4eaf313e5e2980894f2c6e90bde1f51ae6c752c368800ba",
-        "db1bab5460ec88c8235ea8207a6d66b18fe90bbd38da3242975a94c73cfdebb7",
-        "b4029e897f1e9ac4c7467b468ad117bdd2fe0a66c48ff1cec599d7e48411c496",
-        "15525ea84d347a50e008cd301ed70ee1dfcdac4956056e48b8f31f723d196856",
-        "6dae2c1fc3deafda3c7db03606a157b62c34a8ec37b08b74c57099d1cff2b7c4"
+        "12351e54fe8a7aebcf72a8919378033d53967dc8b1b2d686320e420091c3cb38",
+        "29dfc133cd9c0368a2e80d611df3799262128c532de2b44f1f4e0b5258ae97fc",
+        "a46c3f8b719a56b89332aa35f8592c5b898b87b6413829277154139935a4656b",
+        "79cbd288cb3fa6ffb74f759765bd90929d102be9fbb1cff3f8f03f26bf6bfac0",
+        "3ebd1f9808c58f6a98813457d11290f4e79ecc959042e41a6065debb4760c041"
       ],
-      "copyWords": 342
+      "copyWords": 342,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 52,
-      "slug": "ban-ban-asian-bistro",
       "name": "Bàn Bàn Asian Bistro",
+      "slug": "ban-ban-asian-bistro",
+      "issue": "webgl",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5044,21 +5213,24 @@
       "city": "Abington",
       "rerender": true,
       "hashes": [
-        "c86b196c233430cd558f27da29d212e8ae682d2c8cde916ae098c43d6d73a0f7",
-        "b9a963f0710c515a268f80758402bf90a78163d00224f32ca42b3fa70e7dc00a",
-        "23cf66efbc3ddbd4b3dbbe82bb0997949bf48dedc1243f8c0e6254c46ee00514",
-        "f5466091469f0b7a2c11fc0744d54d108976cfbbf79e2fc5e0ffbe80ff146705",
-        "8bd2719073ff9c064eaa7dbfde03845c78023498ec88ff834f525836219b5c9a"
+        "48611cf60a9c82a071bd6553231ba0da0bbd6d851455d76bc649c40bdfce7fb9",
+        "2fa3324cdebf09ff98953cc3751dc89420c6e921c168dc3e407b9e400191f346",
+        "3e5eaa1d6a1ff0156785754212f4d47c0895c00079f565803cb52784d93d1b68",
+        "f2a0aee7c75846ffa4379ce1204b572ccbbc51954f11cf96da1978cb218a9a4d",
+        "5029333adc8851d706c9ed747d82f68865e263e044ddc6de6cc6aed7916d1d94"
       ],
-      "copyWords": 383
+      "copyWords": 383,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 53,
-      "slug": "dentistry-for-life",
       "name": "Dentistry for Life",
+      "slug": "dentistry-for-life",
+      "issue": "webgl",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5144,21 +5316,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "59c379f741aaf5dbc2a81227ef1ad26caf9cda0318836f0ccf7d7b8cf5a07265",
-        "8cc423ed560cdf84db15527d5c1eff903bd62bf81c2fb5ab00e1f798a988a291",
-        "c38bd84dc5e49c1e2f110cac160e160df8519342b43820648ebb86fa7e5a0acd",
-        "9580dbbf0ad4ee57733c4ff8a026f14933d0b99e83182203f7712c06a9cc9b90",
-        "d27686a13ea225c4828f061b7bce1740f357cd802462d76a83d0dddc2bde2184"
+        "92298aed440db679f22266576b7be14c17f2cf9098ffb82adb772eb69cf50447",
+        "cbe66e230e77b82af766fd8157dfec72bc6977b7a83c1995b1b87c6ef92f294f",
+        "f259d644a5760b10269e48d92067866a6040dc45c6f841fe6ed013b035ef4b95",
+        "42ab1fc1c65115e7ae8559466e02d0e61b4feb359d37cd5c3018f5c2457c56c7",
+        "446fa4d8a59ab350620e56876fefb8d08ab17cce3b8bed30c27935edab72213b"
       ],
-      "copyWords": 515
+      "copyWords": 515,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 54,
-      "slug": "elite-auto-parts",
       "name": "Elite Philly Auto Parts",
+      "slug": "elite-auto-parts",
+      "issue": "webgl",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5246,21 +5421,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "86bcce830e8feb5c81d8654efb8b4809865c2344f6b0585f3113ba732ba456f0",
-        "2dcf2f26741af82214d138b0ffffba605029cd856be459291eb81f2dea98493e",
-        "5cda0d4dfebfc31876161ba4416916d32aec1bb975b39628504d2c45a4e73da5",
-        "7c1a3f2ecc8287c54bd49b143335e756f44e0325d6a1e5b561b9c7a6d3c7a397",
-        "561f75f7e32755549d48f986c7632b86c824bb7d007b5853134e36a90019838b"
+        "c305f0c0a08449ff39dc8ce21c6208ef4bae0c553181ae2a32c657a7db814ae7",
+        "e90142bc2e2108b9576c0f049acfce83ebbe061691b987fb613fbc54eccd5cb4",
+        "fd35fa035c8ff860fe34bf1730db39202d2e5be8771951cebb7d95f317946f65",
+        "a3d498ceaa0498485254695c76e067d864cc723fc5a199e276686bbb17037f91",
+        "586be89bb9ae634ab3f5df97ccfa0dc79934f8f4f4b9d9f040c1c9b5820ebc24"
       ],
-      "copyWords": 362
+      "copyWords": 362,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 55,
-      "slug": "frazer-antiques",
       "name": "Frazer Antiques",
+      "slug": "frazer-antiques",
+      "issue": "webgl",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5348,21 +5526,24 @@
       "city": "Frazer",
       "rerender": true,
       "hashes": [
-        "ca5a70ed145372d8e56c433e8f4485bbb14fb17416e0e6f1cc976e287db2cb21",
-        "d617ae589009b08208cb414326f265b81b439ba94350e772e129022d6e2c1f9e",
-        "ae8e58872d17f2c89040eb44ff9c5e6ba850e191e11f99ed737dab9cd81d7988",
-        "3be48e3d28d700c663b4869c89a8b0d9cbd36d09b23045343a7a82a99285b62e",
-        "6aada3826b4acd9444fd0af05692f7a7acf27cf81a9c43c39463589b82632688"
+        "9f712355df0c578240ebdc96f21b9511e8852073f727666c2abdac6f3272b55c",
+        "b1888ac0a5225c9aee4bd8ee1a80f6cb27166232aa2dd1f380aa5efef736cc65",
+        "60a3844aed71975e9e0f03e214c084f21782e335d8a9a7ffd069ce0a964bc6c6",
+        "e1bd1aca22829c683fe470bb7e73fe43d21a10e6955fbb9d77f5f61134e47689",
+        "56d4bef2ace53223eea0768aaf71cb9b4d1aac1e72076c8c69d92ca87f2a334f"
       ],
-      "copyWords": 326
+      "copyWords": 326,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 56,
-      "slug": "germantown-dental-group",
       "name": "Germantown Dental Group",
+      "slug": "germantown-dental-group",
+      "issue": "webgl",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5450,21 +5631,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "1c1881da66485fcf048bf4428f9f9b346fd03ae9806f889756491dbc4d9ece08",
-        "4d8b67a7c2c714a6b4471456a3a9deb67213cdbbdda8220a2b20303d53ad6b06",
-        "03bbab46e41747be1490ebbc3af1c5f52243e2fadcf5648bdb558b15b2ecfc2e",
-        "8778060f99bd48a03410f2a10c26236c0802e453d923409daa2cf7e507761c41",
-        "7699a6319e36f94957bc5ecd59b33797510ddfa9c8d0519da838af8c8a5f3c23"
+        "3671025f67476ad3ee0e5ce68d260aca8f2fffb9630005e8988cc5b554c8413f",
+        "6069d84a6c9f18c3f03d10f0737e4ff892230535baac2cf7334aa3e3906b42d2",
+        "6d6263fad590e3fcbf8eca5f35f8845c29bf4ea648f376da8c563009fb87c057",
+        "e8dd6e664d3250659c21655a28794f3ad4f3e93f839a963c760c3a96ec9f8d56",
+        "0cd415417870fe213718bd97292f380a0f7011e1fe00016295c05f6e95fb0450"
       ],
-      "copyWords": 344
+      "copyWords": 344,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 57,
-      "slug": "golden-eagle-jewelry",
       "name": "Golden Eagle Jewelers",
+      "slug": "golden-eagle-jewelry",
+      "issue": "webgl",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5550,21 +5734,24 @@
       "city": "19140",
       "rerender": true,
       "hashes": [
-        "015db0c6e810278f4500b04ce2f8e25c7af5a0bf52bce12875ac558be3b74662",
-        "2317a8548342b74a7ed16689df561c7fcbf07574f3bf3ca8dc4aa5c41e63289f",
-        "8923a01d9a35812161901dadf249afb9a60daf3b54c662ff75209817cb5f2a53",
-        "5cbd209aa5a57ce63a8f2cc39181e8838dd8a76a05ccd98ee091c1d70839cb8f",
-        "ea1b45a04ff02acfd82e18b8b17c3ae615b758e7442fa7c885d1b01cf5c47044"
+        "6666e03d7ceee80049127e9b1ee909e00801ba64c679e26a4dedaf189192ab97",
+        "eab6e8c6980a4d6850aff02a781ebef65d5d4df50ab1b3676539002fc4d09aa8",
+        "8c561a800e28c4c73d16ec31b25f76671d87f1bb098d178b20c407d34022a0b1",
+        "a77ab487a523c1cfdb95010326ad4c3140f50e389300953e3ae3e65e35b7ad4e",
+        "261e08ee6cde09378c1c765e47e10f93cbcebca6d4784b8b75710c34f3639446"
       ],
-      "copyWords": 290
+      "copyWords": 290,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 58,
-      "slug": "kehans-auto-service",
       "name": "Kehan's Auto Service",
+      "slug": "kehans-auto-service",
+      "issue": "webgl",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5652,21 +5839,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "da62f94ae2e601fd69235d6d7fbc37931aaeae7b6dab17dcc03b1f2161a19328",
-        "1d2e67668c9d94fb408359a8e70c2adb56b27edc2e75c729687c109c66b566e1",
-        "946039c69603ab9ddf5ff48b0d3097ff9c18725fca7ed761ccbeddb5020a78ed",
-        "7474f06c211046c395c3552d1aad395f0ccac3556930b9c16b0d810f09a7a99d",
-        "2064db7eb2047a8744bd845a87e9909cf1b0520284498edaab3b5a6ba60c9022"
+        "86a2234ab818120c1981961ee1beb69950d82f6a007bb3ed94d98f4b42907409",
+        "25fbf1735703921f75aa53a14ff45aa840695a30c97d3a1306785af835f7d02b",
+        "a0726686c4023a2137bc85ca011cd4b98005f1b7be228d8af7381110f47fe4d8",
+        "a389293061a8366dbf9b81a7155753357d154b3542c5245aef1e3fe29857dd44",
+        "0a0ae839f98fdcad50856c32eefe8d1d8c2c61e1528d23afa86491f26dbcaea2"
       ],
-      "copyWords": 356
+      "copyWords": 356,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 59,
-      "slug": "lees-hoagie-house",
       "name": "Lee's Hoagie House of Horsham",
+      "slug": "lees-hoagie-house",
+      "issue": "webgl",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5754,21 +5944,24 @@
       "city": "Horsham",
       "rerender": true,
       "hashes": [
-        "42217e2a6fe2b2b16c43a40d27055dd541705f0b3fddd5195a02aa91c1018e09",
-        "ee25b103a2fca94a274a13c66647a4c7652e8abe5e23837a77c7d99aaca4e4d5",
-        "2d48d0ecea2f844eb5994607334ae3d3d706abc7e318989628f9970e8d8b85e0",
-        "bc65d34615ad9d0ae75a34cb455dc21209ee92dd07d7427de36b6dbfdea0894d",
-        "d9aeff94d9d445eaf0177c5c5dfc45aac98f81ec6c3b28bdf5c509f55164a56f"
+        "d0ce329684ad46674f86251850ed496509cd61fcc26e20128596d2520ffd8091",
+        "61cf2671df991bea57149c27d756c6c81549bd6ea91eef5502f5b64d131d4d01",
+        "a2229cc8a575853c6310f356b227198d16c5659753cad5e0d4ae662f604f44aa",
+        "4fdf69347d7656a1a370cacf8bb20017166fa83b14001b9c815acca4f65aeb18",
+        "634b747505342c2aa4a9499b358f8be530abbe2f65f6cb1e5b8cfb8a274dde8a"
       ],
-      "copyWords": 387
+      "copyWords": 387,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 60,
-      "slug": "main-line-veterinary-hospital",
       "name": "Main Line Veterinary Hospital",
+      "slug": "main-line-veterinary-hospital",
+      "issue": "webgl",
+      "drop": false,
       "family": "veterinary",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5854,21 +6047,24 @@
       "city": "Malvern",
       "rerender": true,
       "hashes": [
-        "b1191e6a00f69de9b2a172ba83372d586095b1a284977051b579241e39d85a99",
-        "52751e70a37f92fa56ddb923031efcce033c60c29219e4db16c728e915e05537",
-        "958ff27d0bd9a21fc2ac23ef8c9f660c2047dbf52a5411e12dbbbdba064ee8f8",
-        "1fe718d02b64040c61d3e2f0362211e96770522bdc2d8ae1098a88c150df21a8",
-        "ebe9d3882531d8d31ec04e7189c98a6ad3fc49f829e11b494ea724cfa73cd27f"
+        "e9731e8ce00ac065f2b27f697a2c0018108de3c0dafca81aed164eb7730fadfc",
+        "21bfb77ef156a333c2487905e185d7ceb405c1f0e095acd168c6ecc754baf3b3",
+        "8ef4cc2cb2689921c80cbd16c52c2fc6c7401c317467808f40599918de0c17c3",
+        "3aa5fed46a3d090604740d55b3185b559d296d56bebae78ee109be65c4db6323",
+        "b2ef69c8a5c426e8b08240cd64b7d4f14110f9d679fca00d3be2e31f221ac01c"
       ],
-      "copyWords": 331
+      "copyWords": 331,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 61,
-      "slug": "morton-electric-pool-spa",
       "name": "Morton Electric Pool & Spa",
+      "slug": "morton-electric-pool-spa",
+      "issue": "webgl",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -5954,21 +6150,24 @@
       "city": "Trevose",
       "rerender": true,
       "hashes": [
-        "498d681fe917ac2cfb19bfa8776b13a330f1fe17afd28da2832e581c94ba292a",
-        "a61046f8e75eb03eeb75cf7fbb79aa73afa770f1201b962fdf398595695c4bb4",
-        "27aba15a29ed64dca7d2bd9fb3106e4db268a419d3ad0c156a3ed4ce51a4963e",
-        "3535f9f501ae66a2065a42f757839f24c4f1ce38ebaf87ba5626c1ec7b004979",
-        "3f4e899de35f4cce7265b3ccdef185c879ce2c2d2f0965a6e031d943a5743d9e"
+        "04600eb7c86a807c1a632d108ee3531af724b2c1b38388eb433248b02fd6b5a4",
+        "27044b459b685353e980bd4999d271c4fc4d72f7434275f6e5c4d38c56a7669e",
+        "752965da564b78965babf175dc89c0c4d00b66c2643a13582d920ba9a32e189d",
+        "62437d75746b6e768d1c887defa26fefb717f724e9dabe0f3f56d341c5a21b94",
+        "098a08599ce2878d12aa0b65d1dd5f8a8c53aea099f58831f1b4c9a8c2180853"
       ],
-      "copyWords": 456
+      "copyWords": 456,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 62,
-      "slug": "pizza-peddler",
       "name": "Pizza Peddler",
+      "slug": "pizza-peddler",
+      "issue": "webgl",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -6055,21 +6254,24 @@
       "city": "West Chester",
       "rerender": true,
       "hashes": [
-        "347d915a99a2c50f13c01ae6a8a73987d5778beaf8e16e717f7a19104ced32f6",
-        "849ddb345087f1609c038129804815086ea0dedeed15658c4c9547d19bc55e1b",
-        "63b84df974676e0b6046dd0fea6feb084c47f3b1a812be0efc3f70b0740ffed5",
-        "c39aca3d4d62ae9474f9a5e02415287504edf12a8d8e032b6f99df04da4e40ab",
-        "1820f9fe56aa39d863f7425581f0cc46026764a6a12c55e3aa0f030b79e1f0f1"
+        "3fd10552084e4fa424257a2dfe0564a41f8c14b46445c4162dcadbcbe7b234bc",
+        "4a756d6db52d3f43ea9462ac081e8b4ddf0e4017a759665c6ac16a13473722dc",
+        "2f098abeb32e62166bc53f21911d89c541a420fbb04afbf943d8e11ccc9cdfee",
+        "083fbddcd763105a9e1fda1055b4343da001a9428640eca3107d3c11519b0b63",
+        "dc2a68bdcb12de510d538fcf931502a4847e889ecd720ace76190c3021b15d3f"
       ],
-      "copyWords": 387
+      "copyWords": 387,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 63,
-      "slug": "udis-conn-orthodontics",
       "name": "Udis & Conn Orthodontics",
+      "slug": "udis-conn-orthodontics",
+      "issue": "webgl",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -6157,21 +6359,24 @@
       "city": "Jenkintown",
       "rerender": true,
       "hashes": [
-        "d15b046c262d5f17b9397e68fa0c207cc426302ba3393bdc99822a8d634e9f7a",
-        "47c224e86963db38b9962a186449988ca319da2e3921d302208e5804c11a2713",
-        "dad9c4e38a4b787f4b00ceaafc4b967deaedefa3f211fe3078d5581a2c862049",
-        "ac08adcc65a2bc80ed17b93a6d3ea9178c85e8f2a77037cbbd6c35aeba4349e8",
-        "c53b14cbd5126c31d69c1a215fda2c5ad816f188628d94d400e816eacf0136ed"
+        "4feafd6d2f7743f9ad3b87df7a6106887f67d9d68d1c664ddc0da77a9754111f",
+        "32f0d60b890f7260107b7916031b64572c7c8835ec7fa4da73cb34002622541e",
+        "778c5b371afe7cb8d5344a4cf7a81bbbef7a2ba77d9946ee3547294e55292a7c",
+        "06cf0ede0ee4fb5f7db1d0605bc0708a590c996817cb531927c062e6e7850e6a",
+        "f127558823ec46abee47af07b6550601d0ff03ced0130a7e7ab49f15184cec34"
       ],
-      "copyWords": 350
+      "copyWords": 350,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 64,
-      "slug": "urgentvet-pottstown",
       "name": "UrgentVet Pottstown",
+      "slug": "urgentvet-pottstown",
+      "issue": "webgl",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -6257,21 +6462,24 @@
       "city": "Pottstown",
       "rerender": true,
       "hashes": [
-        "ba59f471ddb29c20526ad5bc990ef7ecff51ba67c1dea37f2eb37df38d7d074a",
-        "6a281900a92384e1be31ebb769560e213a917dc795fa4532ae866e80420f4dd6",
-        "d1e6f80be51a4268e4e93f16abcda5679d4866adf5f1b42b60186c5a443233ba",
-        "9de1323aae370d39f247bb796d059bd35b6e5e2b324d24c4a37e61a4ab7fced5",
-        "42de54e10a5a05612e4a43ad9676cd08fb928db2f2ae25205606468739322d22"
+        "5191076b240581dafe91cd614afc0d1c7b3e964ae7906508857dd37371d968ef",
+        "aaafe3a59ca2f403c26accab49c14f17728ab6457e282e774e4f11a89b373401",
+        "ed8fffa99ebe8f1e1f1183b3c96b83b6272713c4f0fe02d08884570c99471922",
+        "4eeee5b47f02e8abb0eeffe3bb75881799288b32c4c8f4057afde5fcb03d3081",
+        "fd1753ac2487701b4333c767bbab776509795d9bcfd20b8f65c816bbde1e14e8"
       ],
-      "copyWords": 328
+      "copyWords": 328,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 65,
-      "slug": "welcome-dental",
       "name": "Welcome Dental",
+      "slug": "welcome-dental",
+      "issue": "webgl",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -6357,21 +6565,24 @@
       "city": "West Chester",
       "rerender": true,
       "hashes": [
-        "a30f4504ff93028906fe80a9213198cf60321857165ed271d217a7abe9cad564",
-        "949f13f76f05c351097c633455eb0b53acd90b7bbd54288843601fc3606a2b7d",
-        "dbfa5daa855351da7f7a53fec49bf0d7699a195f86601028f42cf105d73ec926",
-        "d6d2336c2b9135d8b4fd46de07c9b29ea1f49d019a068908a13c1f2019c75b54",
-        "98f9b3efaf73ae4bed0fb94c64476f0dcaa4a209f973f03edafe63f8d59c1cdc"
+        "ef4163e1fbf2e9ee83165ec3788f4bd6e4cbcb77aa01cb7688ebd6cdfd76bf62",
+        "c722c70d5056dc48f60690476f4c9295ef7fc51f2e8a5af2f931aefa18e0fbc1",
+        "69f03d76417c29297534b6a5e53c40388faedb4cec6a504087b6fef562495886",
+        "5a1198928404b2a9f852413ae18d0d0ff8aeaf2260cde2a490fd5fc6c36d6c37",
+        "5425917781440c075e66248fd072a8ac524de5dcdb93e863d041591ca3736807"
       ],
-      "copyWords": 415
+      "copyWords": 415,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 66,
-      "slug": "whitelands-animal-hospital",
       "name": "Whitelands Animal Hospital",
+      "slug": "whitelands-animal-hospital",
+      "issue": "webgl",
+      "drop": false,
       "family": "veterinary",
       "mode": "people",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -6457,21 +6668,24 @@
       "city": "Malvern",
       "rerender": true,
       "hashes": [
-        "b14e83c418733f6cf8b8e8c156534f304910b58741b3437142df5b094a53c198",
-        "5f9a40b9dd87570c53a889261aa7650ded2646f8bf41b873b8d11bd7fa36ec02",
-        "9fd1cadc3805b50be0a08df542a9f24136fea707e41c5426afd1e73438a82b6a",
-        "eac4d794c3242d846254b3dfa8fcf640253c66008a63646531e366a246ae51e4",
-        "5c57168bb8fe7884083c65ea8a4a590ad3012b50d6c59bddba06f5d879602ec1"
+        "570a760340ad8c9d75f3bd431c137dce7e32ae9b5c27a24fca76a9530872db3d",
+        "8de32250331e1d49e58dd4f0953e6d56170c432f81e9a549c3cee8a963a1b2d6",
+        "02cbae95f446839d222119843cb6af1383c2188eb26af2a79ba7467b0a9bf44c",
+        "17ee4d01f0ff106f0645956df86a22cfb28a14ab8e8384bae6a91d1d427222ad",
+        "525e1825be181a7b0f4da5d82a6b056743b77b276b0b44d9ce88e78dea8e4374"
       ],
-      "copyWords": 446
+      "copyWords": 446,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 67,
-      "slug": "wholly-grounds",
       "name": "Wholly Grounds Coffeehouse",
+      "slug": "wholly-grounds",
+      "issue": "webgl",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "webgl",
       "ok": true,
       "qa": [
         {
@@ -6557,21 +6771,24 @@
       "city": "Oxford",
       "rerender": true,
       "hashes": [
-        "4f6e604a54f353cd6d1603daf19cd712193d52a03e5d8078da73b4ad48dcc862",
-        "80f21323a40d54dd917c1e4635392d1bf14d70ad381f119e50e224c4cbbce76b",
-        "6ee0448ee0cb8410b115588ef125ab7a000dfe0efa601c4181cf8082a075d2cc",
-        "8cc51482f177f8919a51714453ff0d8f96f4570e2367ac3dee6b85dde62df2f8",
-        "fccf16171d3c9547eba2a56f48bfaf8d404c256f012522c2fed37ab9a97cd5c2"
+        "e6081eb336693d50cc21ce4d55f54d41806e3abb88d544248ca47624869eb201",
+        "96520d075b0266cce093be1c49650b92ee2552df2f8482e88f88fb0b75569547",
+        "872a04c9d63eab85303ae30b0cd030d2a7f3c862d781ffba1ad78328564cc9d8",
+        "4483a52bfcb0483453ddf81d5e81e9f34acf2fbf6d137041c5aa31ee82c2d77d",
+        "c06a8e31ccbe5500ce84fc87569403feeb77066c46fefe70fe9ab414a646b946"
       ],
-      "copyWords": 352
+      "copyWords": 352,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 68,
-      "slug": "dutton-road-veterinary-clinic",
       "name": "Dutton Road Veterinary Clinic",
+      "slug": "dutton-road-veterinary-clinic",
+      "issue": "nophoto",
+      "drop": false,
       "family": "veterinary",
       "mode": "people",
-      "issue": "nophoto",
       "ok": true,
       "qa": [
         {
@@ -6657,21 +6874,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "95fbef492edac12c5647cb359d2457cbb9c9c3235b28aebb2fddbf0d1480cac0",
-        "556e5ae8362c7f7daf220856f0c6ab743a8ea57a1c42436f1dbe040df708331e",
-        "2d51debe382b0ac91515d841d53b99aed11ddce4211721408e0db20c40f4f666",
-        "f0ac0064b20a3384cca4fb1358bce6d39ef34ffb074a4d11f4d39feb81cc53ea",
-        "581c18b3a19abe924141cc56fe34daec049f1410b7b075a6e5e776aea528495a"
+        "4713dc4a2f9c69de80972843a9f6e0a4fe276e90c8d9ce2109f2e0f159f37c4b",
+        "9495afd90b944a2106a0ae4ed773a90ad8ba71b7efc3578cc93cab66c531d9a0",
+        "89195367f6c48bd356343afb5c8c683903a47e91ae4d41c7e6c3e71bee8849dc",
+        "cf342a4671ece20843d0ba0e97d65a5c161b032d5a0f888ae28395e87daf4123",
+        "d2371a34f23e4f58e0d3688756a15b02a98a24650ac726d2db660e855c7b972a"
       ],
-      "copyWords": 341
+      "copyWords": 341,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 69,
-      "slug": "always-dental-care",
       "name": "Always Dental Care",
+      "slug": "always-dental-care",
+      "issue": "genhero",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "genhero",
       "ok": true,
       "qa": [
         {
@@ -6757,21 +6977,24 @@
       "city": "Phoenixville",
       "rerender": true,
       "hashes": [
-        "df83ad21aa8fc8947a6a6aa92c13167d7f0a1c4a9beaf1e345157099770dee99",
-        "2b12b127305e6d4095864356a65ede296c76a23486036e7cc0198e0f5107cd6b",
-        "3a469e06f6432408d9779ad6a9d27722c339824ccdeb1e9d65e5620df5649b7b",
-        "ece9656d5099a8878b49a0be7da9bf9d5b5b2c5f4e67f78adc875fe921c78126",
-        "8f796536228f129400eba067a7c5726ef02bb109a083fdfda387efbbb876aca1"
+        "7ee9f2b073e84fb1d9b3ea18c927421ab15ebeeaef4b514e3ad7619a527520cb",
+        "cf087b2394f464df2c8bed2d12dd49d591254b375e95d7533d66a1796a9b8b04",
+        "a0ce1b26bd7e6a27594cf4f5ece214bb547360b9e84ecf62aa1126e27cd41a30",
+        "60e442259e561d89b0902436ab5df22f20d7ae7bec96740d18cbd208fa621cea",
+        "2f24104aa83434586a5bc8aa6a2db6671f2ce3780fb064315c26541575e7fc54"
       ],
-      "copyWords": 354
+      "copyWords": 354,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 70,
-      "slug": "andorra-family-dentistry",
       "name": "Andorra Family Dentistry",
+      "slug": "andorra-family-dentistry",
+      "issue": "design",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -6857,21 +7080,24 @@
       "city": "Suite 9",
       "rerender": true,
       "hashes": [
-        "ed53a7872a200766d187a6524299868a709cd1d4f14880567448e79f7be4df73",
-        "004156f49b1ceb09159c92ba3e86213314ab28ac681a0a80f7b4ca71015b1c1c",
-        "e8e3ce415a524ac0549fa77bc3c4ada7d01e0eba1b6ece0ad56a4ea6b8066e0b",
-        "99049d2fa184061debf3a3ed8f0538c60de64bda6323036ad10c8a50ec202589",
-        "03ab31a4bd1fba270b72dddc59434ae6fa3a75c40abefb048b354e293b41486f"
+        "303863408ac154cb52a93ea1553a150e79e5ed59e6d5bc102b0b50814da5994d",
+        "d1db2ae7923791ef8f34ddc8295766545860923696e63714d83a0f2488774790",
+        "ec4655b48bdd9becebe2b70ea49f59b1f9931d4bc03fa78276d23c2c87efbf04",
+        "b464592bf0f48c578f31e5c29c8d761eb6a3405da66d28f2dcd6927a0e023a24",
+        "5bbe06a4ec2129cdb4c5101c29726aa045a0806f9684046ae6719e4993be8613"
       ],
-      "copyWords": 309
+      "copyWords": 309,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 71,
-      "slug": "artisan-wine-and-cheese-cellars",
       "name": "Artisan Wine and Cheese Cellars",
+      "slug": "artisan-wine-and-cheese-cellars",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -6958,21 +7184,24 @@
       "city": "Wine and cheese bar located at the historic Main Street Depot in Bethlehem",
       "rerender": true,
       "hashes": [
-        "4eb598776a2531acd568775ce9f308c52f787ec85fc379c9040f085c0f7795d0",
-        "80c004848534b260b935f1da1e9c91b23ed3f6c265752472502ab3a6e705318b",
-        "0f870101ea4951cd4434f4c0127d2de46b64d7ce729fe989297f8c3561b9de4a",
-        "30e75f4b192baab85bf47b89345376b96a3f8c40db40b6646266aa4dd30b1f90",
-        "2c988a5383df418f40f0ccdc7d67b0bae0c6e42a1f606e74a6b97bc05aae3c74"
+        "b1b019886cd5c101abba088e2d4d118cd1299c0c2ed24b2083daec2afebbacf7",
+        "20674b343395f04ea387e08b921e1420c88d6adae41544bafd7d3026e6c39175",
+        "f0428970f4a80c46ff4233c5308a5b852f4e2c71704f25e864c07eb858f41286",
+        "01d5ddcb37ed92e244db91d181974a698ddd357dc30c1dfa456cb8fb74935577",
+        "c52274dea5f5e23786b2f93139464083b2f213484ba06aeafea871479589547e"
       ],
-      "copyWords": 382
+      "copyWords": 382,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 72,
-      "slug": "auger-manufacturing",
       "name": "Auger Manufacturing Specialists",
+      "slug": "auger-manufacturing",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7059,21 +7288,24 @@
       "city": "Frazer",
       "rerender": true,
       "hashes": [
-        "4d5f3b6f18d608663c2ab8d9b73a6e816a82825ac4b65ac8a50e167869abd05e",
-        "026a7d5016281fdefb5ff1b00ecd15c18dfa97705cbc73066be2f96c0442a82d",
-        "d31109bc6b486bed82d971f5efa3df9be784c534b8174dcb246683e1c48436c8",
-        "5b66f5939005c66eda105f7004746d4d7baaa7ed8bb2b00bbe91457876ee77e8",
-        "ffbacc043a4bd7681acad8b8d484951c4dc96e9e21168d917350307d58690946"
+        "6d85fae7ca68796bef1332e4d4d673fc7e18f8d83604446d47ec24f6154e2fc7",
+        "8358f14d33e2b68e971282cebd14855c11457f69d2446db94b04e6885da471f8",
+        "094b0ec50fadcdc543b974e652aba9c99b0b2cf711909e3e281cf41d3d0fe0e4",
+        "51e670626737c0dbe1e709b011371bb6ac148a137d46652212a5af90057d897f",
+        "33402ebfb4c87f8afc53a4e790ec486a90a3446d41771fd91d3b046bdccb83a1"
       ],
-      "copyWords": 325
+      "copyWords": 325,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 73,
-      "slug": "barnes-financial-group",
       "name": "Barnes Financial Group",
+      "slug": "barnes-financial-group",
+      "issue": "design",
+      "drop": false,
       "family": "legal",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7160,21 +7392,24 @@
       "city": "Media",
       "rerender": true,
       "hashes": [
-        "9238c201e5b277f4ca3fbb203db3631e46e072ee1bdfb10f43c8d8ce6e60f730",
-        "153a225be09229c121d3031fe5f9a2e4dce51ab17fb7c61a52e6e4bafec66880",
-        "b4b3eeee041eaf1bbdecf39eeb44263f4874cdec47fc3e96c11131beac065852",
-        "8711c3f841fef9ffc963c1365dd7fb9f71306cb1e4965c850f21a7f95d03ac44",
-        "2f3de5c3d8601ded9702c59026cbc1b204945c79b8028ab7a033c299db3ff7fd"
+        "eb402b8f90fdb46393b21bec51df8502090f9ba6ee13c7d9964a0ab542bf41e9",
+        "b3de2a4b7af91b6c35d1a843fa62100e2bd22420697460fe3882dd122a556891",
+        "255a6ba14c68ff256a26b9f243d90c3854755dc4a0bcd4273d1cd17c9ff3f645",
+        "fe33c277a8154ddf58227310fbb781e7f535251d044970167fbce626d05f09c3",
+        "5298ed09adc13adccf7f8b0884685cb48c6a278017f7a598584a7433d48faa5f"
       ],
-      "copyWords": 345
+      "copyWords": 345,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 74,
-      "slug": "be-balanced-hormone",
       "name": "BeBalanced Royersford",
+      "slug": "be-balanced-hormone",
+      "issue": "design",
+      "drop": false,
       "family": "fitness",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7260,21 +7495,24 @@
       "city": "19468",
       "rerender": true,
       "hashes": [
-        "fb4126c5be47d37fa2f4327180525bb0986112c3fdff8ebaf5b635050b9394ac",
-        "c9343bec0a709aa9a5c37987852c6bf7669b3097d137d28fd42be20f91a2ec8d",
-        "b296e65c2e2ea31bb77d0c8ab3a24cf2cd8ebee362119654fd1128afc510764d",
-        "523e864d75d066699899a507fd3299c7865aede21dffea1d0ba6819c9cbf6b4f",
-        "d9775660f5daa205d9df79e653862f60aa9c567d11c3fb22168b7baccbb29b93"
+        "93b494929bceffe07b48db3c136240ee53e486c422d7b81262bc10f2abc89858",
+        "ddf7d3469d28794766d79b4f71a8702021372fbf6f5155c4d73d7ac446d0569d",
+        "d067ca4426ec225d366fc7e2c40902d82ccb41d9c8e80271ef1bd2b42a060545",
+        "a0324b7a55188f3ddb7443438379f85c8725588518c2af4dd6ebfb8179265a72",
+        "48320bb1bc32bacd9847e3e1073e43557f934a9ef2e3dde2cfbeb19700976490"
       ],
-      "copyWords": 323
+      "copyWords": 323,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 75,
-      "slug": "benjamin-lovell-shoes",
       "name": "Benjamin Lovell Shoes",
+      "slug": "benjamin-lovell-shoes",
+      "issue": "design",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7360,21 +7598,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "8f8840d1b9c937263484060122278772a4745705abddffc9c4589a2727d3cede",
-        "95e9a53e18733090c8f7ced3965c576a9ac106f129b64d5d0296e3fe67c196d1",
-        "a26f2da525f79787f4ef207be1584541f479670f30a9139370334f4ed32ea621",
-        "66136880cd4421979f9ba2ac02fed321dd02be50f4ee4c239d2b14ae072b186c",
-        "85b4bc3bb92eeae2a5d077e4ac6645e5dccf6d664e122b89f6556fd9e727f24a"
+        "9da4afad7c59d5e329f5450fed9f579b6c97e6abee44066487355454625cfafa",
+        "e006646b8376ec6d3a72f6976dee1d21da86f6efe119ddeda018ab6a3c0cb2fb",
+        "57b106fc78b653c907cfa0d47e6ec93d41a831a2e6a5f0eaeb6ded4845e0403e",
+        "b3f8db9f28f3b9e2d2ba2c8283a06eaffe93cd4ad5afe2cb951ab3422b7badd0",
+        "6106a5a7f52f91f42096c6c747d53efb99d7fb2aba64981397029484a70fbccd"
       ],
-      "copyWords": 294
+      "copyWords": 294,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 76,
-      "slug": "bg-electric",
       "name": "BG Electric Service LLC",
+      "slug": "bg-electric",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7462,21 +7703,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "c6909aaea5746dc2232022454c18c922d9d6072ad5ff625393f345b452282c8b",
-        "96cf3eac6d38bc8d3bcea077dd0ce925136c412bee35061dc5a13296cb3b1f70",
-        "a0d215a78bf2f544e6972b4134abfc2f00dcb020483cd1abbe84ee539266e954",
-        "74c12512bfdd7f975fabaa28eb6f6831a192921203d6438f8176dc003bc9cf38",
-        "d52b8b35a61c9dfec1e6609640b43f5ee1691ad7d9802ee4d5caa01226d45e49"
+        "4c587431280a7c494deddd57a749f9536347a4d883e355ccbc9fb7dcc06ab1f2",
+        "5a96e1ee0066e524504a8af8b80bc1aabf813e81d9fe971454f120d34cfaf6ba",
+        "3942cba3ad1610d460a471ebda4db6c09130cf754f41549e80af0c19aebfe3b5",
+        "613efebf9bd62977c671f09b488dce5852018c9d7848d30d65b27de8f96b8683",
+        "534a3d8099455f1a2035b054099d0cd45b852c629f80f18a12a5f6890a8d0b94"
       ],
-      "copyWords": 347
+      "copyWords": 347,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 77,
-      "slug": "bpm-fitness",
       "name": "BPM Fitness",
+      "slug": "bpm-fitness",
+      "issue": "design",
+      "drop": false,
       "family": "fitness",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7564,21 +7808,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "3e1847052675e098e0ecc6cbc0cea15e8d4d5bb115dabce97a90c35837e69489",
-        "d2a13ea3a1403081f2bfd49eb2a62b1c3333061e7a55f5b66097e9c283ad6c18",
-        "952902ee0f75e5719f5d1f3e85422dc1c961c4e26dd06150c6cac1637286f1a4",
-        "70ee1e56a7dd230c6260cd9f577f31d2c5c796c753b26609a6600ce78c20fbdb",
-        "89a30288750dc13fa137521ae3b81e8be99bfce12656649b43e80e0c339b7308"
+        "79dd500d4239b22f705e4babe70a34b3bc9d75e6946ce7d4b84bc686a9ce3830",
+        "555d49765dce2e71b68040c3d934a1fbd7a25f6170717901483d27061a8ae6ab",
+        "501c3bc3749804295c6fce300e61e925646bcb81215fba60e7e4e88cfd4addcd",
+        "e1a2be9f447b6fda17e1aa74ea469f4926872284d73be42f41ab3fd519001970",
+        "78ba8dad38915daa6bfb05fb1d72c1557cc054fcda4e356ae0eec4ba0fbc6ad7"
       ],
-      "copyWords": 328
+      "copyWords": 328,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 78,
-      "slug": "c-and-c-super-seal",
       "name": "C&C Super Seal",
+      "slug": "c-and-c-super-seal",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7664,21 +7911,24 @@
       "city": "Bensalem",
       "rerender": true,
       "hashes": [
-        "2c820d5411114be5049662d046c230c06baa1c3216a46b5ee50d6270520ac9be",
-        "84692b1d6d3bfa383af28cccc11561ebf6d4c95b78c82a95f3ea9aef62508b8d",
-        "3634589099e37f3a1cc0e42a67a366964c48178ceee3b3ffe2d4c2d11512ddf6",
-        "e0a40c799a09b5f5af6b02ee3643f74930849000a2fd3cd38ba254000e5434eb",
-        "fa51d99b1740453a3d6847b9712b537305fc92d0e8eec1658bcd7d56c01ca1f0"
+        "dbe4043c9aa9d3417741d6ae9ec6efa01efff0403a9c9e30f1b43c7c2be01e6a",
+        "e23885d5f30c72722aa5b933047954e0e5e6ccbf648396241fb6fb0e5249828d",
+        "024820d2cb2d6f582045db8706366cbd9c2d5624e17e37b0983ea4dcdf7b04de",
+        "c9438548eb85dedd63b0a081413968f677fca8a2c308bd1a6d497cd11e304523",
+        "7af10316ed71dc8c6e7e844045bd37061cc02726eed29d765cd6bf74072e2a99"
       ],
-      "copyWords": 346
+      "copyWords": 346,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 79,
-      "slug": "chadds-ford-animal-hospital",
       "name": "Chadds Ford Animal Hospital",
+      "slug": "chadds-ford-animal-hospital",
+      "issue": "design",
+      "drop": false,
       "family": "veterinary",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7764,21 +8014,24 @@
       "city": "Chadds Ford",
       "rerender": true,
       "hashes": [
-        "13a4f308e3ab6ab4a56ecd163b3c69eaf6e38102fbad227c5a47ad4f290692c2",
-        "39ac729a377d4b3503d71395da3e53cb7c852123bd2871ae4615e8f185b15cf5",
-        "cadc19c49e21787bfc4bf99bfc8306d2feefe9909d777ffd2758899135b4d7a7",
-        "e8026fc99f7af5b752efaf2420a6ee436647cb18fe9888ea04aefa68e21b4dff",
-        "f9d7fa9a3e4623894b139d3f3f47fc9b83f3dce7a2c87f9740fe5d3395881aeb"
+        "bea913586ae1ff5f0d571d5230a00df9b8b3eb4e201e898047b71270fb48f9ec",
+        "d85958fc5b7dc28b220111703376ce35e15815ce5c77ee1b91d6c3647148b6e7",
+        "2dd4000c45f651f89981a5231e1a79ffae5e65df09e93977ebd7a94cff3d974d",
+        "860d24ada42de797bb1def0d360ef785dede808417653ac0d005a75973b563c6",
+        "49c6ecd6226b7fa5e7d9e5c88dfe2ae2e74ff368e7007eeb6407759efbe0d84a"
       ],
-      "copyWords": 326
+      "copyWords": 326,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 80,
-      "slug": "chestnut-hill-animal-hospital",
       "name": "Chestnut Hill Animal Hospital",
+      "slug": "chestnut-hill-animal-hospital",
+      "issue": "design",
+      "drop": false,
       "family": "veterinary",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7864,21 +8117,24 @@
       "city": "Erdenheim",
       "rerender": true,
       "hashes": [
-        "451de30b9b825f8a59b5f0ed42e3ebd6274c4421f723f302115cac3aff8fc367",
-        "80619eb0533716a6e581f756efae4076b1b006bb82796747da97bd19f4fcc106",
-        "10180fb7bebf10197d15afaa864a6c61ae6271911bcbaf1e44a52c5f59b3ff9f",
-        "01fd0904089b836b3ca5e230c1b52f8cb117a0fb79dc7e5e76713cd14cb093cd",
-        "6b2222b0e4e7804a0dc73f4fe810562962c9c355b6def199cd6998658a525940"
+        "31043c0dc8b50c5a44eb5b0aec1129eef92ec9fa93e87f98c0c8a7737e65bff6",
+        "b63c70ca02cc32211064a6ba9999502c281ae0c7b23f7be7a53cede70f5425df",
+        "a344d042f22f2349861a8d66c20f2fffd7db39d1bf24d3f0df2f45145bf8e302",
+        "2dff20b92fdf8b90a78aff0424e1d2e58f94c2ebad3dac129a0ffdef5f39fd0d",
+        "af8f68200348784e068dc68d24fe066db6c60735f73768a2cbecea2c905fbb9c"
       ],
-      "copyWords": 362
+      "copyWords": 362,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 81,
-      "slug": "ciocca-pre-owned-autos",
       "name": "Ciocca Pre-Owned Autos",
+      "slug": "ciocca-pre-owned-autos",
+      "issue": "design",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -7966,21 +8222,24 @@
       "city": "Allentown",
       "rerender": true,
       "hashes": [
-        "f0b87747d051bc12ded3367eeedc36c717e8216dfc7f6e167d540f51d14fdec4",
-        "2d4ec23d0d353871dd2de188ba9e7f5938ed43d358e5819d021c616e59872d63",
-        "77d557cbf7b224594be6d3ac05972cd345191e6e1f205214428fc86fcfccbae3",
-        "37ede34eac52dc3efc2a86cfdbb7901bbb8bcf25474cc182f680fc5866c01291",
-        "591f2599dab9b72704103db7563e6126f0a975d63d9f2d3ff8fa4b43276aed3b"
+        "85b0506620c4742f68c288e8c8fdac36636fffca25184d63b39c3d53017afd3c",
+        "fa2671b094bcde8da286fe21ab315f604691b085936e13fe0065b777759cbdff",
+        "4b3f697158de338c67bd53d6897aa8bb941c52492bffdae6e6a46d8e773fd397",
+        "a72d2570799c2f5b4fa28f902a0cf5f30071917b90af34108bea86bd86f7d31b",
+        "81599449bff716afe5ada42251572d02f10a47980c9eb1332ac23a441255c2a0"
       ],
-      "copyWords": 305
+      "copyWords": 305,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 82,
-      "slug": "colmar-dentistry-for-kids",
       "name": "Colmar Dentistry For Kids",
+      "slug": "colmar-dentistry-for-kids",
+      "issue": "design",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8066,21 +8325,24 @@
       "city": "Montgomeryville",
       "rerender": true,
       "hashes": [
-        "7873e2a1c28499afd8eabdcc32965f89b3121fe4027f37ff27a339e0ddc6836b",
-        "0588eb78b46b59eb6de904eb42124ed9138bf51c213be6b64d4ec0fce661fcb4",
-        "f7e6e080395e9a131e08131989d567ef17ac749886a1ce0cf110accafb87e17b",
-        "f9fa4db1c330fc9c08a6fb5923f69f86ad71897bc2a518e5e3130d6af19ae660",
-        "fe75c634b0b90688c7f10bccfdea86a60542ccd99cb2b7b4d1181b2f6efbfb96"
+        "cbfb01297099bf6ab83731660e79a609162149bcd12ac5adc31e88f0406d7069",
+        "cf626ce07fc88d711ea206bbb43a1f1bf63a1738df3fd818cd6577fff4458cf5",
+        "ea9f9bc9c3b9f0b5fcf94fefe3bc55aeb819e48796bffe7194cbf3eabb5509f1",
+        "7eea0eff31c50babab4db5cf31023a57b89f12924a770b853395d7e76d9a17c5",
+        "381182361886a4a2a25cfb4985363be17e0644590cbc8fbd32de7d32f1cd7c9f"
       ],
-      "copyWords": 309
+      "copyWords": 309,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 83,
-      "slug": "county-line-veterinary-hospital",
       "name": "County Line Veterinary Hospital",
+      "slug": "county-line-veterinary-hospital",
+      "issue": "design",
+      "drop": false,
       "family": "veterinary",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8166,21 +8428,24 @@
       "city": "Hatboro",
       "rerender": true,
       "hashes": [
-        "7a0cb5a61f174b171522fbb348501c938420413b6aa28c0047fb392e340c217c",
-        "ff49619b8b41aa6955a70e22ae79d33c5f1127507aaf067d0916944f42300c53",
-        "5bf3feb03a2f0a965aad1b1b8ea1af9d40e65054ab0f45394ba72596b0c6ffa0",
-        "90782e9f91404909e41341637a080626c6202ebb32c76a47821fa6845a364081",
-        "9efe7a3c1ace37ce61b2dabc01ab8e4968b47f96d01eb442502ba0f71f18533d"
+        "0321596a510b8be8fbc7b74dbde0bfa31b24449b89463eb6ee513c201b447b54",
+        "78ead1351d95c401bfd94c698759cfbfbdb01b4110ef9ef6921d60720b4983b7",
+        "6d030387b11c8e5b03f5d8d5a73a54512c7fcaeb6bd42e5d9ec46adf97baaa2c",
+        "55b66894fa1fdcd59e13c17b88dce445279eb9c74d5938b832a589d21a71f73f",
+        "f9ef737386c60e7ac2992c0f7208089ce9516f29b0b97473321d8b3ed46be1ad"
       ],
-      "copyWords": 460
+      "copyWords": 460,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 84,
-      "slug": "davidson-fabricating",
       "name": "Davidson Fabricating",
+      "slug": "davidson-fabricating",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8266,21 +8531,24 @@
       "city": "West Chester",
       "rerender": true,
       "hashes": [
-        "784abd29146176aa2eebedc1f9a932cb9a837791d7e3d4af93cff195a8525a3c",
-        "c36a21b997970854132f3c260ac40e36b81fd4b348701c39e8509af9db73d4b8",
-        "16812a803cdc28c74e3b2152fbb4b63ef3ce34cce3ae1eac360268befe1e7ffc",
-        "61ffb190d1e1ef2c54d0ed0740c5b9b91cbb617845728f2731c054af39938e97",
-        "c7dc10c4ad0df906a131883c4080e101e8c07c4d6453a83dda2cff1cffb192da"
+        "dc889f37b0737ffc26b21e3f47e34ed2ffaa1f7f61ee1db8866eda3ecb80aeb3",
+        "882c660a50c182b3bb39095d64db07d1a5bdab3583fbd8f54753e5bb0cbf2d2d",
+        "fc10c1efb45814ee24788f54ccc16e1f0153da09fcacfe113c0555b99f99285e",
+        "3931e28701f3530af6383ecbab22f1535fe5c8ca8bba4455e59ac66ef72b8250",
+        "a734f054a3d036b168e7629dc62f9e512648786358594720966046929e56bcc7"
       ],
-      "copyWords": 422
+      "copyWords": 422,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 85,
-      "slug": "del-chevrolet",
       "name": "Del Chevrolet",
+      "slug": "del-chevrolet",
+      "issue": "design",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8366,21 +8634,24 @@
       "city": "Del Chevrolet",
       "rerender": true,
       "hashes": [
-        "f70d539d85c7f1db3cead7101f760b4e2f7f844863d45d727d3e4a73e6d78df3",
-        "d6d5d9fbb16f112e4498fe8891d04d31248251c60d9964b123478a5bdbb89f4f",
-        "e77e2f159a7e4ea91279dbd4a8978cbd64a63fddc2eed44777139e5ecb625b3e",
-        "51a73c85aeb30e2641b71e7cd27d5ad63909b14064da670476068d3b82c07408",
-        "1198c47bfe080a6f63bc14811202123a7432b5acd73444c2bde72a13b62d54f2"
+        "7306bc7afcc0653051b4e4ed35d41ec7ee287b38b6fadf16e1060b354ee80f4f",
+        "c62874a4a04f8aaa95e392d720fd950e2e7e70a22a8e62e254ea1fbe34c41b1e",
+        "13bb94570be90a3d575299835c9232b76077f7252b3a04d0b79ded0968786682",
+        "773005a9fd4ebdce8e3ebed94c8d01b1eaaca4f8010d1c7c93604e5529fea3b5",
+        "99ecf90c97266e3acf99b301180dd735eb165547121f215420a726ac586d1c7f"
       ],
-      "copyWords": 298
+      "copyWords": 298,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 86,
-      "slug": "dinse-dental-care",
       "name": "Dinse Dental Care",
+      "slug": "dinse-dental-care",
+      "issue": "design",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8466,21 +8737,24 @@
       "city": "East Petersburg",
       "rerender": true,
       "hashes": [
-        "bdd5f1034c1d77decf0b2821d512cef14e22cdb07728558ed7512dde68298f5c",
-        "3e39f69991d9237cde3176b25970c785acbe4f12902682b95777a4862e6d59df",
-        "ec13229be5158b076b0e849a9dc472ecb34e8016da070776536d7445a42e9687",
-        "684f8a6a125112ccee740179e4d3ba7e968afa8de2fc4e95a9f96ba5a96a1878",
-        "b31fb065de3fcd497f714f603f61c9bdb6aa26dd70fa23ebc8faa8322839f372"
+        "bcdce68779fcce634ea16748adf0d0e96637b73aaa167577e222695fb7c76f60",
+        "3957498f0e33544b21449b93100833dc0e5becbfa7e026a960f66ef19e17f5de",
+        "56baa612856d8d7aec1aac20ef56f2aab10af00f9c7a193e4cc715caf245dfad",
+        "26c1a7b97a8af064b922ae3aa7e3ceea655486266a523f947e67868edd371c92",
+        "c8ad6836dbdbd9960638cf977a507275305a7e1bea9ad1f93e5f29f0740801cc"
       ],
-      "copyWords": 404
+      "copyWords": 404,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 87,
-      "slug": "dream-team-hvac",
       "name": "Dream Team Home Services",
+      "slug": "dream-team-hvac",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8566,21 +8840,24 @@
       "city": "Paoli",
       "rerender": true,
       "hashes": [
-        "ad2fe46c6a37b514c5c1710edef39c3c20bb6dab213109e223300fda96382e8f",
-        "c9864d1faa4469f6f5c32c8c86b0055c128befecddea77e0936637d2878af5e1",
-        "893b8cbe079f41dc09605e7140ef59cae5be9fa4e03577bfd325c2d236db147a",
-        "dd3d33f04f6ecc5488a86994e219f4ef7b1515ac12d922b5c40938c655d89d0b",
-        "1fa107c1b836b0560c5ed9af0d184275a3e037ab9b615ca756d9b3867dae1488"
+        "764790cb0698d62c4daba29aa933feed51ddd6346d0b11d2280a484a919da95e",
+        "27eb2720778b0d98d813c42ec7f102804d10ea481795cc968df0b64fa55d02c5",
+        "c1e4b23a823f6dca068e84fd374500c4a8c5fbf1b849e17b90ae36f76bdb5ba1",
+        "6c99cf7f55d12598fb7bfe4ed0734a952f903166a90012e6091b0a765494bc83",
+        "a1fd875c19355a2b2778df69800a1672327a4f4ed62b4fa51dde7fec187da724"
       ],
-      "copyWords": 445
+      "copyWords": 445,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 88,
-      "slug": "dreammaker-bath-kitchen",
       "name": "DreamMaker Bath & Kitchen of Chester County",
+      "slug": "dreammaker-bath-kitchen",
+      "issue": "design",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8666,21 +8943,24 @@
       "city": "Chester Springs",
       "rerender": true,
       "hashes": [
-        "6d16da1117b0209e78fbcf30898c434ba57e8f42cbcbd093bf6747dea2a0b321",
-        "ab91a2be09ebb2e5a034359ad61e3133722b477fbd62b3afa6f5fc652ce23d82",
-        "55dc8e8070585a35349e64a50ddd69ab69204e16f5a29204a17cf62c6e8494b0",
-        "5a2b7e26d749ddb900abf3ba2243b123eabc438c64b50a1cf8e6a1fe56d89233",
-        "39eb72168858a926ad638f80e046a7a26368af70dc45fe0e9114dc10b4a462f0"
+        "742f2b62ea5c3d79be294a5c90df69a659c2d1b7033b3793614b51f1c03f4350",
+        "3035341613e204cbae717b373e7bfa597e3b58348348880c1c5d3d499726601d",
+        "6a493652df6fea47ca41608f94273a65b1667677a3a30e51a617b58be8bf10c7",
+        "3e6e1c79809bf4fe7c333939f3ee023529e8c5a45bdaecfbe4baf51dd9e534f1",
+        "6cf2b4af2abd4c0fb530d6ae84c81ca279b6a9c0d7ba83f7deda7bd374ba9890"
       ],
-      "copyWords": 387
+      "copyWords": 387,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 89,
-      "slug": "eastern-dragon",
       "name": "Eastern Dragon",
+      "slug": "eastern-dragon",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8766,21 +9046,24 @@
       "city": "North Wales",
       "rerender": true,
       "hashes": [
-        "51a501ba8f372702d2b08671d7ef2fda08eafde34c01c3ff86c7d23e86c9a4c3",
-        "96b76ec2fe2475461bc3851b39ab05c306cb2132211cd31790dd8c9e67491cb1",
-        "e2dbd067fb14821b5bbd7f860c7f5a3a270a8252a67e8bb5b0d27762412a9182",
-        "d4cbdefa54df1f550b372f6baa2dd8095ca37ae68e078ed1158b91f1b4f1298c",
-        "e87e4de5d8337c0c722ebab2adcf151a4a67f5a634522ba1453ae89ee693b572"
+        "5fbac6158ab96cf3fc0d3bd0f37630783124e8a19ae95c88bed5eb2b7580c382",
+        "c8c91f68b125af653bbb336d56699096bb2dcb7a2fa80bb3777e564df46dea2a",
+        "56d33975a60e5d2211b0da6fb5d8bef132b7234faf69a3232fa88a3521ac3e7c",
+        "7de1a37c83b5ebdecf254186d7f80d3f8ba211e60843235632e269e86061e1d8",
+        "2c0164f32717a77b26214993ccefe46bcecedc5496e40e1bd2a9956ca179dd46"
       ],
-      "copyWords": 378
+      "copyWords": 378,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 90,
-      "slug": "easy-auto-tag-insurance",
       "name": "Easy Auto Tag & Insurance",
+      "slug": "easy-auto-tag-insurance",
+      "issue": "design",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8867,21 +9150,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "39a31bca0e09c6675c4ea97f4d2e538dddd635fcb0033982d0feb8b785e7f3b1",
-        "b8bb15344ca1bd4ede23cdd3ffb51e6d526d4c9c653da7228187f8e65c48a101",
-        "2239b627ef8dd1438f3ac42e1ce17ef8c241995e49c6ca9f62f156a5066ac21b",
-        "c2aaf3035487a26f2f279609dbaa9d50abd31614e1f94e7f71889f7486edcf63",
-        "b55d01ea6355cce7f0d879db70295bb5601693798c9439c6ff3032e85c51cf38"
+        "84829880d297f192af4f8e65396dabd9e1fe7cb203eeca365440d1741af12652",
+        "179cda6842d3384e6de922906cedea1de01f0799b2504c92d9648f0d6f34e44c",
+        "3ef30c5fec6e4c85495767d14d627d2b4ba3097e7368860785752920a0e772e1",
+        "d83029899359b436669ca82a9be326c19aabf88f373e5f1abf51e8ff06555b49",
+        "d3cc344fc9c65bc6330fd28ba06196da0adf970198208b413625bb064a90285b"
       ],
-      "copyWords": 365
+      "copyWords": 365,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 91,
-      "slug": "eisenberg-rothweiler",
       "name": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck",
+      "slug": "eisenberg-rothweiler",
+      "issue": "design",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -8967,21 +9253,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "094afbe0d571ca091e1339a2929c946e39e6a6f356c5db23769f601dbe8ba6c0",
-        "e85045ab9c26fdde9a604fb95b94e6a51486e837151cd383f7da7a01d0b4a206",
-        "3661bbb19de8c008cd836077c75b8b05b3b18e678a53aad204a1f96cb80aa833",
-        "faf940c501f20ec11b5cd7e817a60eb3ca878c01c78425e357851665f1147831",
-        "a1236f46f162d4ac624f53437e955467ccf30bc76385657595b9ad4b68c0f8f2"
+        "2732ae5393fcbe424f4b1e3cf180b311626603260fb3e450c6023db00e79a00d",
+        "265e04d4029099d83d7ec25ded812b35f0b1f5677f99e16b17c14f98ae2166b5",
+        "b66549c481e3ff2106996e3c2f8bcbb6710dc157381f16baf0e09afd8fc6f9a6",
+        "dd606534edc2078220e76a87b68e8310da89955ac30a9c4189a1df6ce33db637",
+        "1e0a88249e12149eb036c9cf1b45aab3dd92e2ca9906fbfe1b6b497e53268e0a"
       ],
-      "copyWords": 317
+      "copyWords": 317,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 92,
-      "slug": "electric-direct",
       "name": "Electric Direct",
+      "slug": "electric-direct",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9067,21 +9356,24 @@
       "city": "Havertown",
       "rerender": true,
       "hashes": [
-        "8a53e2c456ad7c6be6351f29f6b85dcde2c87164b8c4deb5064af6b1ab5045e9",
-        "71d65b0243041b3d81559f42554e5f2fc0150885534a5e2a4608622afa2be8ff",
-        "fa392f496085fddc3a94138ab6405ea704122305dbbaf63db45008174525488a",
-        "5d04cde01f055dde1fd4e72bbb281f599f5ce867fbe40eadca22fbb8b691c5c0",
-        "8a07680fead4d28485483f9329eb6d8fa258d437dd4559e83f63ad2fd130b220"
+        "3cc828c700b4927396528052097a0670e6b117b23fc5df732e96a0c2c311200f",
+        "527209b88a207c0434c9b378e4704a2abec8baff8c4e85383b09378ac3591829",
+        "341098aae79ed338030e7c68faffe40d4f9ec62eb7cdda04ef7cbda0e9f5b3f5",
+        "85a766dc7d9c2b29f2bf0a8148c55e08f946fea6472914d2e36272c668b5011e",
+        "76120a9381e83e3eb7fc9e878e191c8cdcfa79f22d96e4418c5866cfcf4d7a12"
       ],
-      "copyWords": 357
+      "copyWords": 357,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 93,
-      "slug": "elverson-supply",
       "name": "Elverson Supply",
+      "slug": "elverson-supply",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9167,21 +9459,24 @@
       "city": "Elverson",
       "rerender": true,
       "hashes": [
-        "3b2e6bf12b5c5a0ccbe38ab850a89b59291bd309140f7d5ee19590abb11bf906",
-        "cd1b9826baf2b79d0aaa2a5debb5b204f5da324fa9cd984099d774c10e3dbc4d",
-        "5abb760ec9fcd50f2b02f1f36bd5c53292d94f39bfd211a548979b2ec68f8965",
-        "9a6d6a37320014d6047bdf0ea2ec3eb4e2db4a6b1d1cd555cff7abb3e7fd926c",
-        "c559a9c2a7b9a850c6221f96d83476db7dd1c519dda361fd6a7221a3f1d7862e"
+        "4fd3afdee7f831bc94c1e58d36db5f9f6eff302473b111daf776759afff49e2d",
+        "1fb8ae0d5062bf8b3ddb47e80b5b0823752e47916e324dd50370a0548383640c",
+        "17e9d479df0b0003ded9f2e5e7f285a95aefe0f09d88c52b09ac9568bac26dfb",
+        "032a1d42c62bdaac0cf7422c9857e86edc2dcde33b74ac3d010639bfd8cbc333",
+        "ae8f4094b52b00a1adcfdffe34872edda988b2961beacd34826b94934b32a5a1"
       ],
-      "copyWords": 318
+      "copyWords": 318,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 94,
-      "slug": "faulkner-buick-gmc",
       "name": "Faulkner Buick GMC",
+      "slug": "faulkner-buick-gmc",
+      "issue": "design",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9267,21 +9562,24 @@
       "city": "WEST CHESTER",
       "rerender": true,
       "hashes": [
-        "7c99f3658f8c2e7f18e53620442a8bdaac2601a978799b6763faa3bbd1c22327",
-        "24dc43e9dfade537d391a0596e89ee50d81fde782a8ad62c5f4f0c5b469a45bb",
-        "8f1234d5f96f6e909293d89b6457fe105c70f406940fb14747a104c3339953f6",
-        "84cd62c1ef02f695aa0c6012872fc6b6c4f474c654a4a419b4303fe6cf8dab00",
-        "60d252ce5fd5cfe418cd1a43ea352af02b24c29ab74dfcbaa0a9f7bf6b40789c"
+        "2e4d34b388920cf183e55b579c667d5e3220ff89c2f67ecb945759998e6124f2",
+        "9b724b724bcd507034f2af998d24d1fef802021cce5ada20d4de13e83103a815",
+        "2cf71b14ceefe819295b8ad0a40b99ea51cdec7939959477a026c550a70f37c6",
+        "1ab7eaaf837f50c28e2f1d9106dd2026c4b5b13b1cb9dbbac9f31520e4ce9043",
+        "d5e9c367e738a63062373a8447a437df42bbd2710965e8925da4c68bf09c12b5"
       ],
-      "copyWords": 308
+      "copyWords": 308,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 95,
-      "slug": "fillman-and-sons-floors",
       "name": "Fillman & Sons Floors & More",
+      "slug": "fillman-and-sons-floors",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9368,21 +9666,24 @@
       "city": "Emmaus",
       "rerender": true,
       "hashes": [
-        "3bf4d93301457362a5f68bdb285da67effb2c3a1e63d1170fdd597e63890a9ad",
-        "433f4198422dd72d253fc414dc3bec1de9e2f337b9c5be1947ed6316cbe67853",
-        "c381b76856f3b8361eb6938f7d7cc5b1f14e682ded59b887d056e486f0a428ef",
-        "83475ba5c7596955ff975054960d23fd21ecfcc5fcc8d069e092e36bb153b600",
-        "9a7551b4e12643576f3b8405b4929cc1bd8613d8ab4b3b652790a0f1a18193c2"
+        "8351e41487f154ae56ad13c64fee0a5224d4574193329b72c4db5455c69954cb",
+        "91a9fd311ac0103634057442294d2dff1548cc54821c43bf8832ba4b5b09cc17",
+        "f72757d70d6a7bf0b731a751fc467056c6f6889ae95a22b50700aaaf5a47ac42",
+        "bfb2e61852b77f41ff96bdc14550b6fd89d0f0e89f9cb099d02ccb77b8a9dee3",
+        "4a688a000e7545328c94a86619e6f1477644399b37938df133712128c442ed44"
       ],
-      "copyWords": 359
+      "copyWords": 359,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 96,
-      "slug": "floral-and-hardy",
       "name": "Floral and Hardy of Skippack",
+      "slug": "floral-and-hardy",
+      "issue": "design",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9468,21 +9769,24 @@
       "city": "Skippack",
       "rerender": true,
       "hashes": [
-        "126dbdce2e42d0235d233c5604bc98010023ecd5f492e7ace2ec7f6376aee8fe",
-        "df84146d71bba5115df5f4eef1fb21879a3ec1fce904e3465ec229f0b9936e76",
-        "0ab659be2114e1d63cd80394a69f397466ef4ea028f6fd041bdededc0b8083ad",
-        "ecdc6c197b8ec594e3fe8e491d292614b65134f91fe1a29679d5a35c862f7e0b",
-        "8f45e5636b3b0346021d5a39283413d6e76355858145b097a0abf10601212b07"
+        "3d5a2c9c5e860403c11e95d68431dbe85b8ffa22e98d4fcb1a58e7087b97abf8",
+        "0aaf227cffbba87f3e38e8651c3649ad6911c8a29a97bf7e79c4769feec4de8d",
+        "b38d11015adbaa9e3be5a04e1b0d733e7f02097b2f255a93a8e6e7a7be674a17",
+        "daedb077ec8481e817bb5c1cb442342d8526f347d6b48246fe96f2e02bf294c0",
+        "040a04132f82c53e856fafc1592ae2e9515a5c8a491180c862fb62075a374183"
       ],
-      "copyWords": 381
+      "copyWords": 381,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 97,
-      "slug": "oster-fine-violins",
       "name": "Frederick W. Oster Fine Violins",
+      "slug": "oster-fine-violins",
+      "issue": "design",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9568,21 +9872,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "b8b51eb6bf642ade10526390264c3f4292722f743df8c55bc74f56a3bc7d492a",
-        "3b99da368552a5c7f51e5eba40e616d3687896bc5d8de350e0c968561623d9be",
-        "191b6faa03ced61e82e04fd22c7d3012d9613ccb5bb60f9cbd83ef7451a75d6a",
-        "23d8a8ed1b2cfe9430e5c0a57e2186a3159475e6d237c2c7af6dbb7434b074c8",
-        "63861cf97b9825cedd4b1714fe8eb1b9e9bd62d7327ae0e55cb95fffc4c27dcd"
+        "6098230dcab9982789e4d07400ccfb1c7b2c47c4820ec3bcb93d5454810cb83d",
+        "681c4fcf94fb22f8abb846b7f5c3169624cb478cf603f21ae27a1eef30bfcf8b",
+        "a686117f46e94c2795415a2e806ecc7c708b3323a39de5a9040fd1589372c780",
+        "ce09431d6504398953df1f731cbd4b0b7b9f9da4270c70d3e9f526c665687487",
+        "9a01f40170de1afbccc93a0b3d968fda4356bc813d7c438691115bc28afd709c"
       ],
-      "copyWords": 387
+      "copyWords": 387,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 98,
-      "slug": "fredo-s-deli",
       "name": "Fredo's Deli",
+      "slug": "fredo-s-deli",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9668,21 +9975,24 @@
       "city": "Pittsburgh",
       "rerender": true,
       "hashes": [
-        "7592da5877d2e3ee0594df8b8f98cb14986e0fffdda80327c00a55c079be34a1",
-        "599b762034d801607b34ab54bc7fa0e0409d801070a6bae5170017436b582762",
-        "28fde3c89d0897a57e6043dbd4816b9f80dd77477787731dd4ced6b375a89abd",
-        "00ab64f6771fe9a17815a275ac2a5abac9af2c6d7edd4838ce33a280ff5861f8",
-        "a8e4b49451a9b0e7a63763fef6cbba31b5881edea15977c6bb6cb790b95d3cac"
+        "159aa4be4e6928fdce318f21dc921833765f23bbdd9fbaa8a9dd94190b7d3129",
+        "3eb999b938467d4ff59bec382f144187dbf62cd2babec0eef2005953e9301739",
+        "6595a24611ad5516efea7cc3de8d612eebaff2b605dc8ca20470cd792cb835dc",
+        "7f170c0ff7d7c28663f7e49802a8a86db4882c8ccf2945debf9e8ca10989ea3a",
+        "e141dfc989cd2e6cee3b0aa651e945ed41c088b0ad638980a2945ffaf106a288"
       ],
-      "copyWords": 392
+      "copyWords": 392,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 99,
-      "slug": "glen-eagle-pediatric-dentistry",
       "name": "Glen Eagle Pediatric Dentistry",
+      "slug": "glen-eagle-pediatric-dentistry",
+      "issue": "design",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9769,21 +10079,24 @@
       "city": "Glen Mills",
       "rerender": true,
       "hashes": [
-        "e5f7950987db82b2b14434a0dce5a68c29751d7dd6c81910b1deffa811027eb0",
-        "12db0babefe6295fc54d539f7f7babcf5afe9f6f34dcc121d8ac3f41ec88b2da",
-        "e6020052a3e7864b0eb844dc8cbcc84af5ff3361e47850b94aaa195640593aa4",
-        "ac1b37632c8a4a47dc2aa794cfd1663102e6ebbc4965008cb539de8417eb098a",
-        "0313c7ced927f6253288efad826b26cb1d8682616c4abc177d6c4e63700288cc"
+        "2f9758b0009fb14b6c1d522c8a5dd7125953f0caf20558604fdee1bf776c8a87",
+        "d15bef7e34b8ecb9641e535bbd54337d56dc93b0a976e48a5af4331e5bba5c27",
+        "9253a14e421744a81a66e60421d2c6b9d5bfe76fd77228f347dd02eb4923fef8",
+        "5bb8a439890ae77d232c04ff630ebf12d88f6937f43bd6365eaf3627116d06dc",
+        "5a69d914a1178973fbfdd9a92c4852fcf3dc2bf835b2b0b06f19d9400a5fc1fd"
       ],
-      "copyWords": 335
+      "copyWords": 335,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 100,
-      "slug": "go2tech",
       "name": "GO2 Tech",
+      "slug": "go2tech",
+      "issue": "design",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9870,21 +10183,24 @@
       "city": "Springfield",
       "rerender": true,
       "hashes": [
-        "97911a22e58cbb37db2f3f5dd219eceeee87d7495882a8fb1730dd69e8bff770",
-        "17dffb5e3a8816ccca73d98c62832b44f327c70a1d8ff2af54a33c81c1fc8782",
-        "935045a12df6786dedb1ee02c63f0552a355a3943539dfe3878339b70393834f",
-        "b3cf0b6650b33ca8afd662437a58fc2b4d1dce2a107d0520e3733a5f05c307a6",
-        "1dd21e01efc0cc4b43b2e18f33e73fef47d10bc40a1b0f76ba681ea49df45f6b"
+        "ccb7f940abd025a62c8fbb94a2fa9cb28e93acf7ee55813ed2898a0e2ffe783f",
+        "878bdf8cccebf08ea907afed75380349d5ec39ebfc09843ac079eecf7c7dbffa",
+        "6c7dbadbb17b01094a25a03da395bde51975ecd74b89bb742edbc41650ddd9bf",
+        "cf618f13fdb423de269b1395424d3636e19b7f15a688c0d04f0c0b16a1cd546f",
+        "dbc7bbeb0cfed4b2ced84a08a864e495be6f4337f32a8f1ca534b33224877c75"
       ],
-      "copyWords": 325
+      "copyWords": 325,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 101,
-      "slug": "hamburg-animal-hospital",
       "name": "Hamburg Animal Hospital",
+      "slug": "hamburg-animal-hospital",
+      "issue": "design",
+      "drop": false,
       "family": "veterinary",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -9970,21 +10286,24 @@
       "city": "Hamburg Animal Hospital is a full service veterinary practice in Hamburg",
       "rerender": true,
       "hashes": [
-        "89825d404b66e810748e7c7455bf64d887781cacc965132d848a57fc7ce8a653",
-        "6511fb5c586dedd4e17dda18310976c5d2744f7a61bb7e6393d6179bdc66b0ca",
-        "5251738b0cbfebd5a80f433d872834e0141a64fd4c5ee08c7f92a95c86590c07",
-        "325ed23402034f574bc4cebaab1fa3b243b656ac79cf7aeba383cc1b7134bdf7",
-        "59ead1bbbd18b6281cb86b865bb83c9844151ff9749b4d11b7bb2aba91c5b0e4"
+        "634d10f665c964af245a6a6cd5cbae2df432df32828932333b6b69536a386d85",
+        "76b9f6b66eb9bc28ed1e21a5a3bf06987507529a91f20a55dec6cb1e01ccf96c",
+        "80abb0a5e9859f43c3f7def28592adf3dc1d47c9546546024f0d10773cd3dad8",
+        "6686fd29b7e264ed514979a9492d901dcc9741f11e0c29f9ec9d6e118970087e",
+        "b76741a525405bc8f2f118a07fb7dc2df4071091d7a16716aa6b045d090e1f53"
       ],
-      "copyWords": 401
+      "copyWords": 401,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 102,
-      "slug": "harry-s-hotdogs",
       "name": "Harry's Hotdogs",
+      "slug": "harry-s-hotdogs",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10070,21 +10389,24 @@
       "city": "Sadsburyville",
       "rerender": true,
       "hashes": [
-        "b884370cbe4eb7b7b111d8121075ea693763b187a19a2ff90b7b679524cf4c65",
-        "a9955e557818c5e22ff41a696cc80c28df3a879ef5760826daeb0424423cb13f",
-        "2a31f1aa4c0eb0880220a9649908166116c6293c06a1bd569d710ae618ec3f3c",
-        "6ff9c86e7b7366e48f19a69d817aa225acc9f9fbe556dd3de963622931bfb92a",
-        "581e38dcb8a6110042de3fcaa517cc5f53af975fc17a6f73701a156571d864ed"
+        "f5fd3a13007ac83d3d772a501da980fb88f5d6063a2a6e141e7d1d4a0bf6f502",
+        "df76b2cc868ae016df27cc3b85ab1e4c3767ce9aee5bf6c5fc4d94f6fb7768b4",
+        "991f37cd65bc767a3d7d554f0ca9a2ce2c04270d2367d34f0cf14b4a0a56ae4e",
+        "2740ce6bcf8a88d111878e1b0f428acfb08a0173f75b4208611028865122c72a",
+        "eeacd285611b96ad6d5ba0976d1f806c35e854fb45ace336cf215fc9d8e19d9c"
       ],
-      "copyWords": 350
+      "copyWords": 350,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 103,
-      "slug": "havercrown-dental",
       "name": "HaverCrown Dental",
+      "slug": "havercrown-dental",
+      "issue": "design",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10171,21 +10493,24 @@
       "city": "Havertown",
       "rerender": true,
       "hashes": [
-        "3d7dc51e5cc69260c1e1c286ee0cc7eb5f12a7c63f6faf106be117232086640a",
-        "7d078b114a63a5face16ac99d121b0f76314e68282b2c1d6f86de3268e3141f7",
-        "9fd0aeff982cdeb0c2e78397cbfc579305bd5e9a94f4a460f131b95978b56516",
-        "88d36a20a0b1d12d0d942b157b79fc3c8e558e40701ab49c612b1920b8212d25",
-        "589b8df0e5180fd4e12f29d811491dea354d9776cedb9bca153700898a9b8d46"
+        "eb785a0b5bbf41a1cf86e11bce06a31759c65cf450e69a4f7681d3ea40558715",
+        "adc5a0ba7fc7a7c38ec5624860eaa7424619a0459ff24af5bedac19489134129",
+        "1a3f822726a367deb0aed1fd791afb3dd4cb838a3363104f3baaa6d112b51fc5",
+        "d9695ee2b80941d865800c3280d741fe6a34f8485053341d9bec81ae465bd598",
+        "70c11d08bb9cbf7c0acbdc1125024faf8cfe676dd592a1689175187f5e566f06"
       ],
-      "copyWords": 342
+      "copyWords": 342,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 104,
-      "slug": "home-furnishings-consignment",
       "name": "Home Furnishing Consignment",
+      "slug": "home-furnishings-consignment",
+      "issue": "design",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10272,21 +10597,24 @@
       "city": "Wayne",
       "rerender": true,
       "hashes": [
-        "34cc77e797ffe4cc94db10a5a1c97a105e99710f970da70f0062e20ac2278280",
-        "f7cd0111c536adde47c8784f15ac4b3a09d43a60c89ac27d890dcc5804f813b3",
-        "b068efd16b9c06551bbd93c41d4ae68717b8ecdf2fe05c066ea3d6f35cc51530",
-        "d30484eba6e85b61a814d3267c5d9735440888a0a7efb58afda69632feb56ad1",
-        "1015adbfe3dde0fc2530af14d9629f9b6d70d72a92fe3f68cf8b1bed86a0caf1"
+        "6bbff61d1c7c9d01a958069427287ed5d098646a8060c2505978b7d94240742f",
+        "7b920b6b784a6448f7ad8a173a8432071452648d35090675069459d3656279ac",
+        "ebe1bddcce99d9f389326cd5c941c6fb4777afcca078b16d247b3e141d0f21ed",
+        "2fb5d36f2594700015bea7cce09b891275cc98f99d9edba27cccdb0a026cf7bf",
+        "c836d94fe67abd79060739ae1fa7e6f47ea0df6da955fe6025a6c753f741863a"
       ],
-      "copyWords": 391
+      "copyWords": 391,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 105,
-      "slug": "jarman-hvac",
       "name": "Jarman Sales & Service",
+      "slug": "jarman-hvac",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10372,21 +10700,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "1c516d6caa0f52c24bfaa402bed18716aa3c68454b447226c2b6404fb6dfe415",
-        "3bbda6aaca749cff590c485adb74715c132bf3dcfd4765cb223545bcfc45e634",
-        "b2e9e39128c438d092ff157efbba2b0929789a0f4e50dfc2f41e7490bf55b21d",
-        "3b5d8b8e2eb300a61146eb925244a7e0cc95dd5b63716732942e942a3c81b976",
-        "5ba6c2fb1323ec2dbe31291f811ce2546957ad365c8e3b9c6681a1d81ef53422"
+        "10797c774b001ca96a0f17056f5d402d7f6c9865f80e0f4194ce9efeffafc92e",
+        "3ebe669891943b860b4b1d35d42dc6475623f04ff165ca13486f038ebb09cabe",
+        "9198e9b6a8f4a3c83d562dfff4206bc14fa6d5e9f3e3df62570342fbcbf6b635",
+        "33df902c003fe66d1c6f2da683152d7b62e10dc500da35569c1bed9bd463d34e",
+        "65e33859af8d86b9851f262dffaf539fe7f1d006b61156533a54f31be3d6fdd9"
       ],
-      "copyWords": 412
+      "copyWords": 412,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 106,
-      "slug": "johnnys-pizza",
       "name": "Johnny's Pizza & Pasta",
+      "slug": "johnnys-pizza",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10472,21 +10803,24 @@
       "city": "Spring Mount",
       "rerender": true,
       "hashes": [
-        "5bf294c362a385b3617e880f3552406a90089327e4445970bb96e2ebf7b685c7",
-        "a63e681c39f02ffd9aabbe0b5fbb97d02406558156851d5592451e13e7701d21",
-        "45b169e391977a331cf82f36d87bebe97183e2872b79fe82d3c900948c540c60",
-        "e151a99c8bf858d827f5a19344c4cb88fefe2da5cd6d6ea3734a21388dc9a93d",
-        "57228c00dd174b1b6ce4945e8515f080a52c44709247704407c815bf170bdccf"
+        "fe7a02f3d0562d9af085a5d66be811cf38dc46bf03062af1977655f6fa6bbc45",
+        "2059b98ee237804b1c64ec8391bc586049be83375207c76acd87ddb9fb21b11e",
+        "50c1646642933f4a197aa02958fbabb8c82532603a335822a4bcfba98ea77e63",
+        "4d4afa062c7e3c90c082c62ec6231cac1f05356cb9cee13badc7e76e94abc0fc",
+        "22d6a481d2d15ae8fefc824b6dcbea51474a6ecdbfd36cde79c4add2fd366e3e"
       ],
-      "copyWords": 380
+      "copyWords": 380,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 107,
-      "slug": "katana",
       "name": "Katana Pittsburgh",
+      "slug": "katana",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10573,21 +10907,24 @@
       "city": "Dormont",
       "rerender": true,
       "hashes": [
-        "5bb881ef70bfa7de67eafda23ee3e3462dde1cceb4f8a22dd591ca94159ce56e",
-        "96f9219212425f0231a0813601609826aef83a8265ffc2c08d65695dd9ac7853",
-        "7f2ad30e80e99ea9f348ff8b8e8a0e6d166b31057603cd7fd120cea048728952",
-        "7458f565f6f55ea1fa31cbfc55ffdcaf80f512e1690e9bded1bf5dfa965a67e7",
-        "4e2031ae8b421fb22e1950653e714fa56ea840a234fc177df91a3de6dc0bbcdc"
+        "045c60f0d90271716484b0a6bddcc70997efea41023aa4024e04c1a375eda583",
+        "b8f0953e0f8b51a99ab17bdb7df440bfa3a39b8d4f7e0e95d82fdf38068f539b",
+        "3e5ab5e0b4391eeaf8b8c689e9b886ec1ad162b4117b2489323553979ffef25f",
+        "e19715cbd5349f8f332eccb66574be48206d2e67ee35955e99349f798e5fcec6",
+        "dba6468a26516fc174743c11f681e0048996f24844fa25b1d50c88dd6a113d87"
       ],
-      "copyWords": 378
+      "copyWords": 378,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 108,
-      "slug": "verruni-landscaping",
       "name": "L. A. Verruni Landscaping",
+      "slug": "verruni-landscaping",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10675,21 +11012,24 @@
       "city": "Pottstown",
       "rerender": true,
       "hashes": [
-        "d04aecd19b730d2e5819f6e29d7d5a7dd49a3e50b3d548f7e5554654369a5544",
-        "b8d218e42a045d0f9311ecc21a46656441832b8c203b354f951a1f568b0b6cbb",
-        "34c0dd3fc065c10b0b119acd30de25530d593ec9bd9d1dfc21e7ee772cd36c43",
-        "0a84644bcf41882399a0bcf61c86a4b7f9539ca7f5a12420e7d2b4a7ef05ce7e",
-        "6ef7161d58748ad77999f15e6c325ad0845a5f35ecffbee1e476c9a49ae5f3b1"
+        "138485753d3a7b700d21c13450bce3893b73c7fb5808c4e500499e7defb84510",
+        "4cfc18f9d25b11827497f17bf039c3b26b737a8f613aa2bc541bf411f0a603eb",
+        "09dd2fd12b3c5d467eff5ec411e275f04b6d05ac3e556a5baab9a96c10588b94",
+        "c5ae0a8b28cf5082ed1e722f94266ec143387aca7bba745bad314a1cc0bc80f6",
+        "3f10251aabf760946411459c0836843d68a60e0189a54e21abb53cfcb05e59c5"
       ],
-      "copyWords": 347
+      "copyWords": 347,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 109,
-      "slug": "legacy-jewelers",
       "name": "Legacy Jewelers",
+      "slug": "legacy-jewelers",
+      "issue": "design",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10776,21 +11116,24 @@
       "city": "Schnecksville",
       "rerender": true,
       "hashes": [
-        "58607102573f451c655e994a651c253a3359433f2b2d9bb3806ad0ebe4831ca2",
-        "8df83832435e37bada1ad39f780dbd1bafa744406c2ca4d0ace5d432d80e175d",
-        "74d293148ff23d64adfba63a27fdced937b4ae4cb18ad367b3144f1cc7492618",
-        "91b98dff484ca50c90e9366c8a96884affeaf4f77e2b4db112b5fb51d799ed62",
-        "7728156dfe76fbe67f40772d746be5faa2c8db8e29a0acb0a4f2c23e7031b586"
+        "c17273c86ac9c0d977dfc99c953f664d221d97258307219cce58883b0b90096e",
+        "afb5e5c7dc92843c26247fb3176c40ca98dd55e1f8154740416ce9f972274478",
+        "096d933fda842f8e1e149c133d1f561faee706fc79133196cad3efe88fcd09d5",
+        "a042c7aed75de2781968609ec27bd7958f09278f1f0173ab27ebe94c2e945d60",
+        "2c0a2aa5ff8476a72533f37b923b7267bd1e76d45f7ce5e07e8d62a91c26b54b"
       ],
-      "copyWords": 330
+      "copyWords": 330,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 110,
-      "slug": "live-urgent-care",
       "name": "Live Urgent Care King of Prussia",
+      "slug": "live-urgent-care",
+      "issue": "design",
+      "drop": false,
       "family": "medical",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10876,21 +11219,24 @@
       "city": "King of Prussia",
       "rerender": true,
       "hashes": [
-        "3c2564e1ed37c669574abb7ad1e9bfcde15d4d5de47c3b101ea30eeac7c1b230",
-        "9e95b8d6a795e31583d1ff25ac7e0741c935bedb32c3c9d826e9fc214d056539",
-        "2cb4d36b27877e202199d1e8f70c3aa98f97bfdab7d77e3fcef5770c08c136f5",
-        "5e0848100a3c710824454ab5e63d8561512083b0cbb64c4bbe416ee7ee5e769f",
-        "503f49acdff636d974ef74d0de97c231f2a8b2479bd431cbd9d2f10546a841d9"
+        "1ca5b4c7f068ddb3a98b4d1b913d15f5583cf178036be9744ffdd6fad30d8d81",
+        "39d278c1159e24e6fb8fbf4e2954ed34022c8d2ca1b404dcd1120c9cf5ddb79e",
+        "24a7c631c1e119e15822bfde3bf0704d7a2cbfa7e19c2b8712d598e4f953373b",
+        "d60712986497ab9250b0656c6d0ad8424242643ac3969afbd9b9480ea6ba899c",
+        "35980c80954c6a2146bbd9c246ac6980d1958d087af793be4249433dafb6fadd"
       ],
-      "copyWords": 360
+      "copyWords": 360,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 111,
-      "slug": "maclaren-kitchen-and-bath",
       "name": "MacLaren Kitchen and Bath",
+      "slug": "maclaren-kitchen-and-bath",
+      "issue": "design",
+      "drop": false,
       "family": "retail",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -10976,21 +11322,24 @@
       "city": "PA 19380",
       "rerender": true,
       "hashes": [
-        "387986036a32e70a65bc6c977b7f3c9a727f9c70e01b5c2cd7d17879fae54d3e",
-        "02708d2bd390770520dfe9d162ce9e1d04520570c1754186920f02e8b7be692a",
-        "5bd73daa42dfc724679eb045e811e9eab1121872b06952ea114ac1045e048cb6",
-        "1f144bff855a60b225a4b62eaca80a34a7ed951f6498445e25bcd5611fae3854",
-        "d0e55c1eefe590c655e207c61ad7f2fa3c5f4eccd2a4f509f78191a2c2802430"
+        "8ca6c9d142c6170cb3756279aff127a3c5efdf0a910cab5d6f769381be787d41",
+        "dc635b47d5503bf8581ec1092ec2a4abcd254f68d85cd37808a0ae3ee5a9604c",
+        "17f3392d327b64e389749e13c0b61965ded0e6b41c6a909218f0c235087b68e5",
+        "dc9c716d287966f61dd2575fa762255f926bde4f6cbf6e496898af76d27d7e26",
+        "bc4821633b91d75f3046b214007dcf369bf797b4a2a8ffdc3540460c1ea54be1"
       ],
-      "copyWords": 407
+      "copyWords": 407,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 112,
-      "slug": "malvern-vision-care",
       "name": "Malvern Vision Care",
+      "slug": "malvern-vision-care",
+      "issue": "design",
+      "drop": false,
       "family": "medical",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11078,21 +11427,24 @@
       "city": "Malvern",
       "rerender": true,
       "hashes": [
-        "81f5d8c823c2505f3aa46ae4a138ff190e7eb685d5f0df70b7297995c808e0d8",
-        "60be1913e4eb4a5b8aed4321eafcf57a6c0005efc83af3a11800194bb227ef4c",
-        "bd3064ef802a29313e4c3e9c9059506fed9ef65a2e5e12530eef6844615728af",
-        "b679052e976f30ed5964e036b7d8d4c89017f2f311de291d964cc570d6f45e9e",
-        "1138547187e2470d8056140279d5ae3bd9862cda24bdbc5101291b99f4f09dbc"
+        "aa1dd3b815af3aba76acde796be4a42620f4a1e5d18a43d9a5e29d2b3859d56a",
+        "17316f3397876e06ce84268e90a09ffabf686071ea88498413f6f1e8fe373ca6",
+        "dd16d411acf720d698e89c2cc0986a5b1834c7436de329a159cdfbfd48acb2dc",
+        "f1ff58eda7ceacaff6ceaa8da9ed2c4e2cdd7796202aeca03674db0235a2527a",
+        "0177d209ae45a9faee3e28e469ac0cba0aa63045bbe6f260d9471392d3faf885"
       ],
-      "copyWords": 320
+      "copyWords": 320,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 113,
-      "slug": "mcmenamin-margiotti",
       "name": "McMenamin & Margiotti",
+      "slug": "mcmenamin-margiotti",
+      "issue": "design",
+      "drop": false,
       "family": "legal",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11178,21 +11530,24 @@
       "city": "Colmar",
       "rerender": true,
       "hashes": [
-        "3bceb0e44fea947ad9457f4a63ca6a9c796b01a68e85df6fb3ba2efd3d43f427",
-        "9b6b95419a54d0f3325e395a0c57fb08426c9a8841cc4ce6e9c7ee31f437bc98",
-        "60c6d4e3a8dfcb7e9e02b18beb0aaf3a1c1d3d7c32cf63a0998ffa5e7d159b8c",
-        "a5fc74c39a8865a6b91d8dd30fc7e954cb14f7f7033d8ba58f7fec3778e469f2",
-        "4b1cdf008dd40f946938e0c618aab87fc714fd257e0726207d26504143ee12d5"
+        "171c00bfcbc7c13f26136a283ae417c7385159cb9ea7a872e3d114c4dcb522b9",
+        "ee994d4a86a03b8a4b43f43b1d31e14e2eae39e0fe06f399847f965e58e420c9",
+        "7129c8f124bbf4d7c830ef73d177836b07beb1cfbbc39b8c19fd5bd983ed9eec",
+        "6a1af5ab5ef513bef0b6c5710496814529b2c404a994439c6fa3e28071fba177",
+        "ae6074506e1fe6f719ae7276574bd63e30f3544b255e9ff1408e9eb7b9908710"
       ],
-      "copyWords": 402
+      "copyWords": 402,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 114,
-      "slug": "metalmorphose-iron-studio",
       "name": "Metalmorphose Ironworks",
+      "slug": "metalmorphose-iron-studio",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11278,21 +11633,24 @@
       "city": "Kennett Square",
       "rerender": true,
       "hashes": [
-        "aeae3d090f73500d3d49c86bf8ff706fa5f1fe62edfc2c8e18462d42871556d7",
-        "b69efdb830167843b2d920e3b525785ed7a84d4493d56ebee342c8a05887d8d2",
-        "d404cccdf557cf5988775a35887877aa74e3a086e19486606bcd3a99480bbb01",
-        "7b2cb58fdafe015bae855f09eadc70f8eecd2fbf29a69d4c492cde1e96d96b01",
-        "a4cd39c02f0ad7f08b7f719842160d6a6fc7472268e3f615a6e86f6dddb85ce1"
+        "0ea817559a2fb61412d880bb6a88f5346073ad8e2027326b378acb7114431502",
+        "5f069fdf6c1372271709e3058c035d45139501b0cb956572e594608403878f3d",
+        "8191ae700b20c5cde1672f13b6b2e864107ecd8d139278274f9146fc64e361d9",
+        "7ccea10a30ef747e10de566f99eda618a5e7d8acd59bc0b27920859100498494",
+        "c8c8591268a1877c432ee11a146f5fc4d69a9cc85f2da34b955ddeed0c7c37c8"
       ],
-      "copyWords": 333
+      "copyWords": 333,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 115,
-      "slug": "nicky-s-thai-kitchen",
       "name": "Nicky's Thai Kitchen Downtown",
+      "slug": "nicky-s-thai-kitchen",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11378,21 +11736,24 @@
       "city": "Pittsburgh",
       "rerender": true,
       "hashes": [
-        "baa5ab51270dd9275c89983923b352525cf4f9a33f89e86ad88d13d36bcb7216",
-        "9a2bbb2d38438aed20f2be0908dad77d14bef5f1e366690716fe72bef94c1f64",
-        "1d1da3221409cc1318b39c2d92487389118e578beae905c46560f6dc38eefc82",
-        "62915ff1360503b95e8b8862a9a7fd23dc7de7ba0bda9c911155cd67288771f7",
-        "077d5ab5f820b1a9d3d5041b8e04f586c317bea9a053c86deeef74bd3066e4f5"
+        "fc142a42f72ddbf9c4752e2928beb72fa89e25b98266d44437426e22eaf7564b",
+        "8f146adeea64062ec5273aa1afc807937e125f645dd95aade978a62d95fa03c3",
+        "ab8549c5479f194c1ac1b96fb782542eece4a4c612c41e129de78dbb9c612fac",
+        "806af510408ecae4fd17a81a66e7b420de8d28b7a356bfa0cc1b5fffe4b61778",
+        "7d29ac6ba30966fa8b80f50f69bfaa03a8719ceb16e15f8efb75885ffb6ca8fc"
       ],
-      "copyWords": 393
+      "copyWords": 393,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 116,
-      "slug": "nottingham-creamery",
       "name": "Nottingham Creamery",
+      "slug": "nottingham-creamery",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11478,21 +11839,24 @@
       "city": "Nottingham Creamery",
       "rerender": true,
       "hashes": [
-        "093f89e01608ef803e0f0ebdce691dae655514d8922ec0db9493eb6df42ff275",
-        "a25732904b250ee122f02cafa663feb4371066fdc62d95d4f8233ca795ed2170",
-        "494accbd5abaa909be01931bed7e8e50f74de4d31129c32cde43e0ce7050e942",
-        "5d57f49610b7f40d8efbe542f82f6659caa3af745d0347b312be61a2b4e2244f",
-        "b13f829f2e286c79ca9113bc803145f7eec8fc6fa54b23a3e9ea5a42ce9aeaed"
+        "6576102c5db52d19e27447083c7bd7e904f9a384e848ab2ade236c5675120ce4",
+        "dbd024177009fd293b6c045838d35d08cbcfb9c32b55ba831c3a40c5412d47e9",
+        "7773aba628e3ab85088aa9a67d2771ee8079bf8ce01e4a0eeee60be37a1a69f1",
+        "d8058f4a6d8c0704137a6b55245c651fb55cd43d522a03a053f637143c311b7c",
+        "9462b103cbbef96e8181034410013f0a9a39ab8572eb21245f09a97b09d2d582"
       ],
-      "copyWords": 384
+      "copyWords": 384,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 117,
-      "slug": "oaks-italian-deli",
       "name": "Oaks Italian Deli And Pizzeria",
+      "slug": "oaks-italian-deli",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11579,21 +11943,24 @@
       "city": "Phoenixville",
       "rerender": true,
       "hashes": [
-        "da65887d93e4b8f9b7e7b5febed00d77ecc528fac244cf862bad8ba68f2449ae",
-        "ee2a40eeac0e731db14532a76194ffdecd6cfe4370f42b2314597bf247aa3bfc",
-        "1e4db2f9b590def911bb32c4c0c81016c381bbf29c294313be09b1572d152539",
-        "a5273b161cca16bf03fc347f6ed3653c9cd1848ae9e029adc79cb1bd12e4a70d",
-        "bc1af7855e12edff0076bcebaf2f452d1657e775ac6fc99e6bff022a983a3932"
+        "9c7bc60bc0009d0bd23790dab7c06d9a50fc2dba2d424c18d8990e83ce82efd6",
+        "20ed2af4b98eb000480c34510923513da6fc740bc6e25b83d86b0e04fb1b837c",
+        "de35855941630fc325af46d53a202b0a9ada86bbedf0ff235c3fc2e94f66d945",
+        "52b5ae593ebec5348f4dd2e45131cd2e4ade24fb60daceaf2f518b65179fc9c2",
+        "48f9c1d1e92cc0ac54d0475fad39a314fe77676906644e30d472bca55a5aeccd"
       ],
-      "copyWords": 384
+      "copyWords": 384,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 118,
-      "slug": "openarc",
       "name": "OpenArc",
+      "slug": "openarc",
+      "issue": "design",
+      "drop": false,
       "family": "professional",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11679,21 +12046,24 @@
       "city": "Pittsburgh",
       "rerender": true,
       "hashes": [
-        "eedae880a25d0722f308cd69267245d756ab840f1516d2ed6093e548b72f552e",
-        "65446a8dddcb6b2b404b0c062fb92f11ef7184d9f5c5e3ca10bb331a9be66988",
-        "8412bc433b0413a8362aa256238369fd1285ff49e03ba861b4c39bfe982e6553",
-        "c12f0984fc88b5604ca8241db7504b65346d406340bc783fc35aab4dc2d45637",
-        "7148e0708eda551b4b6c9a4c2360124ebd372b867297237983583fc2de24a819"
+        "4c31daaee956cd2438dd6ecb204c8d9b1679954f825103714a39353f89bdcf31",
+        "ba93c13d04a94da014d28d0c45d640525220ee9f4725b5011989e69c3764ee9c",
+        "cabea0f4afe97860772d1f4384d465556fdf282ba9c2213d188409ed35dedd77",
+        "bfd38a01b75c0ecf6464aa56f035958b4c0c1442c6b9e1193a1dd9c3a4ee2cdc",
+        "88b5bf49331a2c5d04e5732da333ab960dc029f48f91db8ebc55de7bb7b509a9"
       ],
-      "copyWords": 312
+      "copyWords": 312,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 119,
-      "slug": "oss-health",
       "name": "OSS Health",
+      "slug": "oss-health",
+      "issue": "design",
+      "drop": false,
       "family": "medical",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11779,21 +12149,24 @@
       "city": "Hanover",
       "rerender": true,
       "hashes": [
-        "66e08daed9dea36a11e1a5fe362a7bbf6171ea2cabcd4804da262511ad3d5062",
-        "12080ba82331e56e62220dedffb4be1d75d4980eb67562cbb416e47f8d1d7f37",
-        "586fe263e4e97320e1fb9224f73b19d8452106a64f0dceb952ec78eba8c384d9",
-        "d854e878231327d111dfb5498f8c605a077dca74165cc3f061a41d75768c0d64",
-        "32a6fb5262058ed62588f0e3a4157a949ed6080673ef9f0f65685e0896619537"
+        "dd9428916a557032a9bc46f2e9cc613c1b82b99d08662c3064c09969ed39eff8",
+        "e2d6e4a02653c2322a34a051c06b6af636893db9e212f9b3a8c58abf20290eee",
+        "c8c247f48517c3c343a7c4f49c37552554499c7e9163ee56101e47a6ef730a9f",
+        "34dfff2ec6df773363ace663f30f7fd707fed93f2c0fb701193adc4a9dccf8f1",
+        "3fa0bc813989c11c63bfb356f34c9574775d30a8a1b9cbbd3af2d3df0d54309f"
       ],
-      "copyWords": 305
+      "copyWords": 305,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 120,
-      "slug": "peking-gourmet",
       "name": "Peking Gourmet",
+      "slug": "peking-gourmet",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11879,21 +12252,24 @@
       "city": "Pottstown",
       "rerender": true,
       "hashes": [
-        "0ec2817448ba8f06f0d3d0336c695d7a4a9eb769346e5c77d99bbd7c28a96a2c",
-        "d6ee4e801cbe7824b0cbfca7ebc43e5e429b181b9dcdb020424d2771f58e3024",
-        "19dc4368dddc5ef020985a52d4eb158da7e808e970d5589652be70ade223e2a6",
-        "b8587c7f879fd1cdcb90155b4b6f621602f6d36614e0a14d5c15efea13f9df63",
-        "abcc656788e083b3afe1f27361f3cd386f306b7afcb184e8e975afd32c43c726"
+        "ca5dd9999d0935494183c0d562208b83ae0e12ef2d21d4b3528a58ce7f94a07b",
+        "46eb5d9dbb9beffca8b16b9f3d9f98a74f6066bc8299bf6fda2e980112dbf53e",
+        "a486f34a303db5dab0983ca3cc0d190118d5f24c506a7cfb600a2546be727f67",
+        "cd7af42730c85cc1fc8420e3cfcaa929306dd443979eca179ef566ea55b7d35e",
+        "26366bbef47404c22aaf7755103696239d7dde15c5c92587767bf26be4c3c08c"
       ],
-      "copyWords": 347
+      "copyWords": 347,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 121,
-      "slug": "pennsylvania-dental-group",
       "name": "Pennsylvania Dental Group",
+      "slug": "pennsylvania-dental-group",
+      "issue": "design",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -11979,21 +12355,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "bcdc9c853608c3e193c3e8214f36f2d3e85788ea122dc3b11e75150e1a149aa3",
-        "bd80e47a6077b3820f586bd9ce202d15a47cbefb6c06d585c73cc3d8a8989a91",
-        "3cc3cb38f537c9f91b33da44979f904207f46304772ee6102ba70080d9e3294b",
-        "9587357cf4288a8fa46fd2b6a0350814dfb9d66d0b86e81272e440b4ce1a061a",
-        "8ffbe111350a644eca118b62db8b0578806b73059b8316c73ff54ef2daeb9027"
+        "411a243ea72ac5fec5e3a1b8143b741b4396e0033eb23d4416bb015657d355ab",
+        "ca07114b0aa9b9ed67b3bbf0dcb4392c1b065fb8b8954fd1cc394e3616b9abae",
+        "1412b917ef9cfda17a0db8f9e189ac32e47c28c66db52d7834302af3619bcd9f",
+        "67bfe2d241321b39b367be658b3eebd6455145f412d9313132797090225cafa5",
+        "cf4ab70c24111750037e49038907785edaa9fa769f6f2b856778443c158c056e"
       ],
-      "copyWords": 386
+      "copyWords": 386,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 122,
-      "slug": "philadelphia-garage",
       "name": "Philadelphia Garage",
+      "slug": "philadelphia-garage",
+      "issue": "design",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12079,21 +12458,24 @@
       "city": "West Chester",
       "rerender": true,
       "hashes": [
-        "74ddedb7ecb1ceda074e921a937237bffb860aa7b6ad1a8dd29e9e73e2275028",
-        "c4ad86a5b0a0c22fe3aaeef8f1f06c5b8b83b7fe29d62427405ff49119a092f6",
-        "c4b5d04fa52b438c854e3ecce728194af8db6ee3bc7b8354489030fbae13d29e",
-        "a61df21d60f3108125ba797b2ae1d496348ce1bc4d6c48be3387b8de5bad92dc",
-        "cbbeac0ad87f0f0d5ce29b9a21571334825738baad452c8bdeb5700e2313fc4e"
+        "b338e2117224c9103d0b72b0a917c9e318bf7eee31edf6ad8d986d787d93e9e7",
+        "93477398882ed421f2b1dc96a53aa98befaa4a7e41c42c721170fb410c1c9cb0",
+        "a932b1cc8daab76f72f36f4eeddd46244d1b69abaf089939db11ef2e3078263d",
+        "222be4f7d05f22b8af1b6cc7ab1de6ee0417255b9f74ebabd532fe3b20a44b71",
+        "e88995572cd16f138cbc6ccf0f891d2973efe064d9e59ac90d1f99f43fa09972"
       ],
-      "copyWords": 378
+      "copyWords": 378,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 123,
-      "slug": "pipe-xpress",
       "name": "Pipe Xpress",
+      "slug": "pipe-xpress",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12179,21 +12561,24 @@
       "city": "West Chester",
       "rerender": true,
       "hashes": [
-        "39ce77f9e923944a8159baf118c3699b77b21f5491538fe6ba48acd2b02cd534",
-        "123258894481fd07ebae9a7a3c613979b0c41d079c0863393426696906b15c09",
-        "93fbd547f4415870297cd498d50a039cfe054655964d6293d3d2be9de9513aab",
-        "4b7d117dc0b553ee3b489dcf5f6860710906150df07e25b86799dff7acb3a791",
-        "7b34e1ad4c54c609d76c9f70e8656a31e93f9606846b48cfafff59c3de026353"
+        "6cd876772b2a0b3d40002f855c2d14d2de369b614ba6101a7d29f69232703416",
+        "2a20197466dbe5c5bbaaf938c9b06715a71143a8040ddf510f20afd8a2a28adb",
+        "1cc592bda2bb6fa2fbbaf2b4a8a021a92c4a53833de77b95fca37989365476b2",
+        "bae2ea4ebec67a26d06203b7e8bb87999404ab11b69c6861ec6bcb288cada4d0",
+        "27366448f68f42bb0b2117d3bee0ccb3435f61cd912d76e5480b9894be627b07"
       ],
-      "copyWords": 348
+      "copyWords": 348,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 124,
-      "slug": "plastic-surgery-solutions",
       "name": "Plastic & Reconstructive Surgical Solutions",
+      "slug": "plastic-surgery-solutions",
+      "issue": "design",
+      "drop": false,
       "family": "medical",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12279,21 +12664,24 @@
       "city": "Sanatoga",
       "rerender": true,
       "hashes": [
-        "1a19e796ea5726e96153d29739d820bf0b3f2c60c3fc9f13867057fc6d9c8075",
-        "5e2a323252821b379e9fc75e37a3c0562c4503dbf459c3f195a93e07a60a7af9",
-        "9f46abe35d73a79da682c79f8d1262159f32d83f42ea50ee7eaa76cdf7625762",
-        "9533fc76b89f1114a11de0b0693fa40d8a4ad25ccde26bbec9340c85a32fe9ea",
-        "852745a17fcccbfc9d17f8534285ee1e4622b918d0034f1fb52aa999246845ef"
+        "b0849acdb7ed28e3195eb8622ca43e9a41e3fd300c685ae38528279334efdc47",
+        "1bd2c216c1ca2b16edb0a4f5e0b5b9fe62e7feec36eede4548e522a29754e178",
+        "d8bc9753b7e343f851f78017948744ba66d2830837fb45ac1ad3d44237d4e9c7",
+        "324d9713c4e130ba02e1e1ee09cd4a26481abdca2a19712809d53ec1ec795c81",
+        "6a20c917c12e1c92a82ad5dbd6b7a81950fee3b666ab5635c167d2d5b8c4d26e"
       ],
-      "copyWords": 339
+      "copyWords": 339,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 125,
-      "slug": "pro-nails",
       "name": "Pro Nails",
+      "slug": "pro-nails",
+      "issue": "design",
+      "drop": false,
       "family": "salon",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12379,21 +12767,24 @@
       "city": "Willow Grove",
       "rerender": true,
       "hashes": [
-        "873ba3ae62947106caf078907bc27777831a382dd87f658fb3c4529211939fa9",
-        "c4b514d61f4c45016da164988c02d9f59df6b6f3e5b320dfe1ae5550fb164d89",
-        "838fa224de8c2a6e9363a1744d4e810ab50826a7e39ced0ec2f2d5bdd2e35a9c",
-        "d29e278b39b57dfa7a0853404a55be9b165bf7812a0feb76ba3a35929cd4a22f",
-        "13b1500697e3b44cfee67c0a7cf03bd5d31606c2a204e9d62d3b8c1e54e56b8c"
+        "bc48f25b1fbc8c6fbea5921d41a65930612b1e3d661731d4e776dd91a2259634",
+        "5fb9358602d4eba1bd980d10db235061b5975b8b7c9288a29d65fe5f36390588",
+        "f2a7a6423c6f48be337c52199e66a4e5bc95361e9b4d7df690c0cc3844fa1470",
+        "bf5f0024ecd7333387700a2b5bd2afe893ed777d7851d6b3d441256ff264be5c",
+        "3f594a8b373b9dc1b9ed3e0272fc85081967ba56d478854e3d043b86cae4f88c"
       ],
-      "copyWords": 315
+      "copyWords": 315,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 126,
-      "slug": "radiance-dental",
       "name": "Radiance Dental",
+      "slug": "radiance-dental",
+      "issue": "design",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12479,21 +12870,24 @@
       "city": "Looking for a trusted dentist in West Chester",
       "rerender": true,
       "hashes": [
-        "3a7a852c8c1b10f3facfabb9ea8ce2359edceafef3daeba72236fa8904418cf1",
-        "daef9979c0b4ef0dafbae1b5da0dc483101ec4e015ceaa1899db196b6b352414",
-        "031997d27627525f42fb9e7cac227ce20a0b63328d3a34f8c4af495be8a6632c",
-        "09cc14b7fd83abfed75f7042cda521ef99d2b0d3b0502f728d137d368be3d843",
-        "85bdfcf7943e502797885cef9561da13591e5493feaa231b2bb8df7dedb3ccc9"
+        "5c52250c54bbcad8898063c620adf8dac1f70a850cb78b7870cd3bbc957b39fd",
+        "ae9c99874330be24e49ae6bde99a0ad241f0a92609a30a6068403cb683328441",
+        "b2633bbc78182718ce7f2c5a8868bcfac589294a1537c013d7e434f69d7211c5",
+        "e4ecb0554fe3e838a1f9f72cc86dc14e2c6414cde31c756609bef248c5ea2ec3",
+        "044611cf3d1e1d4362792a899d2036bb1eaa5c2d3d9f3543b1328450201a4112"
       ],
-      "copyWords": 355
+      "copyWords": 355,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 127,
-      "slug": "reardon-dental",
       "name": "Reardon Dental Exton",
+      "slug": "reardon-dental",
+      "issue": "design",
+      "drop": false,
       "family": "dental",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12580,21 +12974,24 @@
       "city": "Exton",
       "rerender": true,
       "hashes": [
-        "9b8e2f92bc2f1ce94628401c8cecf171d21fe31192f6bdecbfde36e6038eacd9",
-        "1f3bb2b8e3aca1c6e03d9c0a51c56bc467e687f13ce5b659a46a0a39a6bbb6b1",
-        "f36ef73665771dd7748aaaed6d5b0c980af5bb35bba89dd2b987dfca369ff2d8",
-        "368042f4d2248dc6b0dfc59a07c835da9cc13f6fdc4750a5563a1b0c3a0ea4f2",
-        "e6803e6750cf50a2b4d101a89b2666d860dddf06dd35258c7eee86f489e7a551"
+        "2a20ec8e93da7a5fdace84b9e01dfcc1e338a6c3814f031fc8b80d3517035c06",
+        "80c33665fa7f7e9247e33d2ba956049babb4ba5a25855fc734f532a156f75d33",
+        "aa53bef2be3b57c31e83dacff6e78542a9735ef422aa9e4efb624948df15f362",
+        "4e93bc7fae5cd766b7fa96dcb284bbfb428d68eb5c30afc84428c93fd2ede038",
+        "92b5e248a4e40925934ea4458d88e3d42afb875f0509711983eff839fc942cad"
       ],
-      "copyWords": 344
+      "copyWords": 344,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 128,
-      "slug": "riley-rodzianko-and-clymer-llp",
       "name": "Riley Rodzianko & Clymer LLP",
+      "slug": "riley-rodzianko-and-clymer-llp",
+      "issue": "design",
+      "drop": false,
       "family": "legal",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12682,21 +13079,24 @@
       "city": "Quakertown",
       "rerender": true,
       "hashes": [
-        "2ddb2af863ef9c207a205987a568fbaacdb9d497633016b357f56c1d5b79c923",
-        "85fb48cdb041b32779854cc925d24c0020db05dc3d2d1d27f8f57a69a80d5966",
-        "3c4ab943df7375941819ada1eb55af79ddcf3cfa0e9b4ba8bf2b964d4c12b840",
-        "bd9d234ab16c2c4f1337885bd2135066a2e0f34fce525505fcd99ee36ab9340f",
-        "e72609593fb24ec8f3ae248ebf197b1578926d9dea940fd532968012692b6ef8"
+        "4379bbe7006c5b15ec7c421824ffcff8cfaf2c79c2676539e1e13926c3e7db29",
+        "786006fd25abdf3c6fd1f52bcf158a5cec9f7fadd26d0544544f3fa08cf1ffa8",
+        "1b5ea0ce20580fb993c573e5999b24b6419b9484074023c36a80764f520ad5ec",
+        "2d6b04b4fce128361a3396c08143d5034c552e207c59b5061c0e0304acb827c0",
+        "dae649141c692238063ed200586f497550331abf6f3b56428bc03c7056982074"
       ],
-      "copyWords": 358
+      "copyWords": 358,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 129,
-      "slug": "salters-fireplace",
       "name": "Salter's Fireplace",
+      "slug": "salters-fireplace",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12782,21 +13182,24 @@
       "city": "Eagleville",
       "rerender": true,
       "hashes": [
-        "d55742ac208f3f94bcb2d5bf18f83df8b0fbb574d87c55b94e5d27d605e1fd14",
-        "f9781087d2906cc092aaf3d5f78f6d773258fbc63ebb7f9658ade1450fdee2eb",
-        "ee8a494e4d3576ff6281007d93f9480900755133902bc893de52713a9b6a5f69",
-        "d43dff2539ee1849c5c8d6cdbb88541ea5621ef306db3699dae2d0766ee95362",
-        "196237139b3e1ca34fa3867ce7acd0513466ae08e65c15b51de5abdaf5ad804c"
+        "e8f628bb42959ab48a7d191d0af1db0c7e34447ba537f9a455104e47afef27db",
+        "f9ef6d7bfee35588bfbc33525ea118d64e7b62e5bba763ac0ea0560cab002c82",
+        "9255e3bf2d030212ec4f924b78edfb02e7d924d7403331ccc22b5069291da65f",
+        "da0fc77aaa44bbbc22b7faee7f2326950e3d48d4a4c0f8413a38654726ebad18",
+        "9f64a71a556d15e2d2eaa1630f9f4a6fcec7f69ee5ad68f06adb88d3d272b212"
       ],
-      "copyWords": 378
+      "copyWords": 378,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 130,
-      "slug": "sciacca-service-center",
       "name": "Sciacca Service Center",
+      "slug": "sciacca-service-center",
+      "issue": "design",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12882,21 +13285,24 @@
       "city": "Montgomery County",
       "rerender": true,
       "hashes": [
-        "463655e86f747c54978b70e12df5e5c274a66c41e20a2a81901364c78989b884",
-        "9b43962389f264bf3d2b2a5523c9b23430242ffff3e990bb62c480f9dd043908",
-        "4b4f209714afcaa068cd0b6e3f098644ccaffe5a1bf175b983b80ce302d13c04",
-        "3e5da5ebc61f7264030ac4c062a0c45642a8439b4cc4998424ba1e250c37a4f3",
-        "bf1597faf943d95c9de318f996b010aa9a7d97433806b6f1f0bb68ed9230069e"
+        "efd9543301571ca49c7d60ffa49f62df90956eedc4676cf1e4253c182749cd8a",
+        "62974dc1e360ebb48eca0c3a0bdcd8c23b47d0313296af8b91723c7852682084",
+        "567450257b5cec79403dd03f40d51dd5dddc2247aff39dae53928718c841a8cd",
+        "c8116112ad58d0ec44f51289b13878bcac87ceded021f7352e548213ed252253",
+        "23e4ba1192f267f492ec3b95b14af54b377f51611fa26e4044b7cd7e30c7a912"
       ],
-      "copyWords": 413
+      "copyWords": 413,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 131,
-      "slug": "scott-lot",
       "name": "Scott Lot",
+      "slug": "scott-lot",
+      "issue": "design",
+      "drop": false,
       "family": "auto",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -12984,21 +13390,24 @@
       "city": "Scott Lot",
       "rerender": true,
       "hashes": [
-        "bc8e64a2ee65f7a0083a8965581afc8ccf66cf668cd6eb56993d9c6ba459ad85",
-        "76fff44dddaf4ac1ae075f8dd7223ef3275d967c68bdf2972c75b4d812275b17",
-        "1be78d9b19ca69de848573f6e5ce178d2559e8cd2e8dd858feda644ba430adab",
-        "b7d62deb7acb2135c36fcd982fea1b5df0d167f2d46d7e683c06a31d2247a1a2",
-        "6647fceb5ef16b0590f6bbaa7ace992ee2ff903e4d202ccacfb68dab322829a0"
+        "660ea4ca9260a62dad09c605fd42ae9c04ffa46188a739c365878f39bcf32465",
+        "81292f157559aefa5ce310fd8a0429dd61ac9b79354c910e784ec052c6478843",
+        "e67dd54d5e506d30b95cac39d65c21f72bcb3401ebb76a475b401de702f30ffe",
+        "08c54fa17408706a0a2063ba45b8aae4a0cf7ca9e31f4b067da22f852e477263",
+        "b04cafa555b597f0c7361effd7835cc1349b90ae6338835e6eed79bdc92235fd"
       ],
-      "copyWords": 354
+      "copyWords": 354,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 132,
-      "slug": "sesame-inn",
       "name": "Sesame Inn",
+      "slug": "sesame-inn",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -13085,21 +13494,24 @@
       "city": "Sesame Inn",
       "rerender": true,
       "hashes": [
-        "14b5d4ae9a5cf30123a5b62bdb28c0b48955d6633597fbac7c38e36f4eac13e5",
-        "975d7140ae8f0856bf5f97a0a7773e78e8fa81a69696660ad118f3c349791e2e",
-        "f14f1b4e688a5d01adc5b6202a58c6d7e14279d9ce34ecda92dbd28360501cf1",
-        "65907e64ce2d3934fb173e5c1174ae8447efe0d42e55c53229ccd32d0ff18e58",
-        "07349188258c8e48e3d904fe999108fbd3aaf10ca6ac27e0a24b26b8ad1cba42"
+        "bcc803db0ed38d7488c1d10fb947d2bdc1e980f92558b6087b9ac044b3074d36",
+        "3bd1650098c8931a8c9211612d3eaa69ec04206b1161daf389ef4b5a77125333",
+        "9354c7543c2ec06a97f2b9e96458375526e33948abd7734de1208c1b7feefa3a",
+        "0e9023516db5caf177dc1ff12127c2a902aa1cabde52ed330593f73f5779ae4a",
+        "eb2c91387ded635ef17f4dae9bdf9f5c3594056c6b4ebc0bb20f3a80a6ddd002"
       ],
-      "copyWords": 362
+      "copyWords": 362,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 133,
-      "slug": "southampton-hot-tub",
       "name": "Southampton Hot Tub",
+      "slug": "southampton-hot-tub",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -13185,21 +13597,24 @@
       "city": "Exton",
       "rerender": true,
       "hashes": [
-        "c8b190f1ec76c0e80d9c65b5c3e3cef06c0ed5c68d8ec0bb615196b097e943d1",
-        "179f8f8f13567d0893f37eafff549776090c468a093590ff8be8e83cc1957732",
-        "270c70be00bd93da9db15f802ecad0e52be4d8049f7983d1a0ac2a8ac0b90d1b",
-        "321f9df9dc93835a9b8e5d598b327e4e9ea89d3e9fadc7ebc9cac2c96cecbc87",
-        "7778590e38681046374d8691755990df6e71b6cd96a4837377cc35af8705078a"
+        "78157d53baefb001b9d197b467fc297bc760bb820700fb696d1050496f794a77",
+        "fc411050f35098e41043045a86efc877f44ce73f30ce5b6089dd6691c19fcd30",
+        "9b208df62c83dbc61520cbbe5db2379489ab42a1ab4650acac2038dfe2e04b5e",
+        "72824d84bd8efcea3dbf43af94bfc2d4e5ba69c7828ae91631e240d1f5bea8e4",
+        "8bd420783bd9843368da2676c479bf4d478bfecf26677a0fcb03ff3291d4e236"
       ],
-      "copyWords": 301
+      "copyWords": 301,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 134,
-      "slug": "new-pennsburg-diner",
       "name": "The New Pennsburg Diner",
+      "slug": "new-pennsburg-diner",
+      "issue": "design",
+      "drop": false,
       "family": "food",
       "mode": "food",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -13285,21 +13700,24 @@
       "city": "Pennsburg",
       "rerender": true,
       "hashes": [
-        "a1325aa47ea0121ffa19865ba0e16d65daa02e911f8ad9c7adea9cb5e5f2baf2",
-        "00a8d8f8abb227d4c9e25de7d57affc25555bf8933c86ce508f67e0e5a7a4a58",
-        "97535c1cf07d641abc4addc58fb702409306c2c157f76b73f3c9467fb15b7560",
-        "2a5722a50e1dfc58760c061f3b83bf3d3ede92f3f95ef1ebdecc89493d0c5b7b",
-        "317db578a098516c9e23cc5e01493cc30f15f823f742b2e59de996016ba1fda0"
+        "fce9f7383029db081385f64cc710cbf74913f494a019a9d945ddeb157db89b76",
+        "0a186554e03457f55926164f298c5c03363c24b5f32b23df1fef01e75b5c8ac9",
+        "30cc603918bf60d9888bb369c93dc3830ce015c9de088c8cfdf892a643346e31",
+        "5f38c071fd1bbf0a652cbcc647cdfbf8809dddacf544bd1f6de0b980561c6e71",
+        "5b2c1c4405f123531029bf0dcffe86607b36fefc1498aa1fa96c144c5b9e9395"
       ],
-      "copyWords": 338
+      "copyWords": 338,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 135,
-      "slug": "thr-insurance",
       "name": "THR Insurance",
+      "slug": "thr-insurance",
+      "issue": "design",
+      "drop": false,
       "family": "legal",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -13385,21 +13803,24 @@
       "city": "Telford",
       "rerender": true,
       "hashes": [
-        "a7c38a44c2a0817d309af013939784f4799a4810c99c3816a97871dd41e62d36",
-        "32bd715a7df8ac0dc0b3a169df56dd5c21988686cba1143b59a4c25633d40324",
-        "35692fe7398852c5b80a5a2f9e5f27a197d3810e7b8f1a6e3ca74e7eefc7a25f",
-        "6c12c394da4d05f5bc750ae9c78272dc82a11825531ed712ca8ecd04bbf3c313",
-        "a32bab8690a62a8e0d82fe5a45e22443ea68ea90658427dc3552e5f40ef72fc7"
+        "4355102b4b1510ab0eac58c43f9ac735061eead490e6822da24ab3febd0ea09b",
+        "20f31eacb5c3bd54d306479c90447eaba5616b966755b620c69e2d67708ad9c9",
+        "3a58efa02feeab8cc16251aa112924df9f9a305d5dbf4657c7a61a954eddacb8",
+        "fca6e1d4eeeb5fc8e86adfc00712a83ecdf29846e62f5982d584c9990088e316",
+        "e87dfb1264d1c809dce0ebff00a27bda3f6ba569789ea92c205710d503339423"
       ],
-      "copyWords": 332
+      "copyWords": 332,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 136,
-      "slug": "train-and-nourish",
       "name": "Train and Nourish",
+      "slug": "train-and-nourish",
+      "issue": "design",
+      "drop": false,
       "family": "fitness",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -13485,21 +13906,24 @@
       "city": "Philadelphia",
       "rerender": true,
       "hashes": [
-        "67337e942fc31067ddb163535eff20234636685480228191d5d9d79faa09c971",
-        "8a3e671e553a772ee9506cf2647d174dcaa012670d2f046c98cd75a11b2c169f",
-        "ff9c56621de979bb5c17f3c08ad5558d04b2ed8822e07f5e2644fde9fbdae478",
-        "76e47e11dd80a2a1d49951f1837de24ff62cd92fc516fee70795b6460d1f9e2f",
-        "bbf52e31b0890450fe3ee508e60c2fa9bde5c6c3539fbe3a0ad44409cde4bc11"
+        "89a7c25fdc11d70f563c386c00778f0c35cb3ed90f4266b9d7dd711e78731346",
+        "fc729445a13ef0cd2461d3e674735dfedf4d33b5e7fa4b294d90cd024e55e78c",
+        "092cb549e0a8d180acfbf8f092979282b1678bc218ba41aec7f16b78834504b0",
+        "ab535fdf523bfef93cc8d541d7d3d6a6fdebca220fedc0938664c542acdd015b",
+        "e238ee111c2af8a307aa0966d1338b0b335038af666f8dd4be7d30c2584714d8"
       ],
-      "copyWords": 334
+      "copyWords": 334,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 137,
-      "slug": "wja-landscaping",
       "name": "WJA Landscaping",
+      "slug": "wja-landscaping",
+      "issue": "design",
+      "drop": false,
       "family": "trade",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -13585,21 +14009,24 @@
       "city": "Collegeville",
       "rerender": true,
       "hashes": [
-        "6cc7c261a4576c5443123c51e60388713c887c0e0241308a13fc60561423ea84",
-        "96fe66799bf778dff298b0c94b883432673a3f59e809ec9d9e14c04c0e5a57c6",
-        "94483e394007caa6fb5c492407b2c06b43160801248421159587869c660ffcd5",
-        "ea0b53af776433b36e74322d8f9d7b32fe4841ca0f794149a61b22d20ad96e66",
-        "8b4cacdb7e376aefc03f4b81604c9ac9fa3e11c68efd2ea49b001207f4640c82"
+        "46994fe0bce51912cb52d89178b8357e8893388b83f985c1a949632ac774e3b1",
+        "7e436e4baa2eed6431e0a4c6020581a80a885338a389a436d1713bd9c4551eb5",
+        "c1ada35c2f5c0ae2c9cfba0412164a9a8f1a832981e7ae07e71966778f9727a0",
+        "26b23f25ec4433d77800fc8c0c7ea22f8482a3fd79c4de590fb46bf34ce7c796",
+        "3103cb4310365bb0d72b86fa2960a993f4cecac5ea019da7b0ba88d9c9f0dc4d"
       ],
-      "copyWords": 405
+      "copyWords": 405,
+      "treatedPrint": true,
+      "printPass": "v1"
     },
     {
       "id": 138,
-      "slug": "wynnewood-eyecare",
       "name": "Wynnewood Eye Care",
+      "slug": "wynnewood-eyecare",
+      "issue": "design",
+      "drop": false,
       "family": "medical",
       "mode": "people",
-      "issue": "design",
       "ok": true,
       "qa": [
         {
@@ -13687,33 +14114,15 @@
       "city": "Wynnewood",
       "rerender": true,
       "hashes": [
-        "73e93233b69ee59e7ab4ee356246a41da3cb32314774982f9612c4156aad36e7",
-        "f67fa94396fe1fd6d3aa82b1bbc4dd72de21fec73e554dd4b633135136f5d593",
-        "930f4521ae99ca7194e8710f4d513b3a3ed01ab93cb98cb8a10b08983cbd8237",
-        "66bc4207cc399180a65ee4734179e4553f3c62b2ebb4b869edeb479aadfc7cf4",
-        "ddf24a16abf3b728c1c276ed463899dbc7257ae9dca465db3098d18fb85c6d26"
+        "58c0e7ad9c3d5a3c0834b2af1b32553d9cd1d6ea5285fad84b06b78c12a92e95",
+        "fbb46276139996117c2c79381b15feaabb2105b3c7b7c8360596c618ddefa3ec",
+        "b46a8be7f8238e4892d776596061c2c0dbf597d670f98764f9f8a4568c09ee9f",
+        "fa652cb2e14a3a7b740e945c35dea2714a5ae06448eaaacdad6c1860079da239",
+        "dbbba282651d5ec2232d26b054eb880cfff2e39a7fa2c75e1f86dc1ade7fe49a"
       ],
-      "copyWords": 320
-    },
-    {
-      "id": 23,
-      "name": "Johnny's Pizza",
-      "slug": "johnny-s-pizza",
-      "issue": "dup",
-      "drop": true,
-      "ok": false,
-      "dropped": true,
-      "reason": "duplicate row: keep the canonical slug"
-    },
-    {
-      "id": 42,
-      "name": "THR Insurance Agency",
-      "slug": "thr-insurance-agency",
-      "issue": "dup",
-      "drop": true,
-      "ok": false,
-      "dropped": true,
-      "reason": "duplicate row: keep the canonical slug"
+      "copyWords": 320,
+      "treatedPrint": true,
+      "printPass": "v1"
     }
   ]
 }

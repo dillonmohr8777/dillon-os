@@ -23,7 +23,7 @@ SLOT_CROPS = [
     (0.50, 0.55, 0.78),  # place
     (0.55, 0.70, 0.70),  # craft close
 ]
-SIZE = (1200, 1500)
+SIZE = (960, 1200)
 
 
 def hex_to_rgb(value: str) -> tuple[int, int, int]:

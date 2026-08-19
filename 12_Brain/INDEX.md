@@ -40,6 +40,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/03_Concepts/Research Verification Loop|Research Verification Loop]] — fan-out research with a skeptic gate.
 - [[12_Brain/03_Concepts/Truth Hierarchy|Truth Hierarchy]] — live surfaces beat memory beat artifacts.
 - [[12_Brain/03_Concepts/Draft-First Operating Rules|Draft-First Operating Rules]] — draft unless explicitly told to send.
+- [[12_Brain/03_Concepts/Slash Commands Resolve To Skill Files|Slash Commands Resolve To Skill Files]] — `/unslop` and `/grill-me` need SKILL.md files; a factory folder is not a skill.
 - [[12_Brain/03_Concepts/Access Verification Discipline|Access Verification Discipline]] — confirmed access needs direct proof (no inventories here).
 - [[12_Brain/03_Concepts/Evidence Boundaries in Reporting|Evidence Boundaries in Reporting]] — claim only what sources prove.
 - [[12_Brain/03_Concepts/Netlify Deploy Safety|Netlify Deploy Safety]] — pin site on every deploy; verify statically.
@@ -64,7 +65,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 
 - [[12_Brain/05_Projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
-- [[12_Brain/05_Projects/2026-08-19 - 138-site unslop|138-site unslop]] — 136 homepages QA-green after copy/UI pass; 105 first-party logos, 31 wordmarks; sheet Fixed? already YES. PR 326. Sales manager owns outreach. Do not deploy.
+- [[12_Brain/05_Projects/2026-08-19 - 138-site unslop|138-site unslop]] — 136 homepages on Align-style print collages; `/unslop` and `/grill-me` skills installed. PR 326. Sales manager owns outreach. Do not deploy.
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.

@@ -203,7 +203,9 @@ def treat_image(src: Path, dest: Path, tokens: dict, seed: str) -> None:
     result = ImageEnhance.Color(result).enhance(0.9)
     result = result.filter(ImageFilter.UnsharpMask(radius=1.1, percent=55, threshold=4))
     dest.parent.mkdir(parents=True, exist_ok=True)
-    result.save(dest, "WEBP", quality=86, method=4)
+    if result.size[0] > 960:
+        result = result.resize((960, 1200), Image.Resampling.LANCZOS)
+    result.save(dest, "WEBP", quality=72, method=6)
 
 
 def marker_path(site_dir: Path) -> Path:
