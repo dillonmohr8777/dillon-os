@@ -102,6 +102,10 @@ jobs:
               raise SystemExit("original suite is not at site root")
           if nested == 200 and home != 200:
               raise SystemExit("suite is nested under /site/; zip-root deploy leaked")
+          if maps == 404:
+              raise SystemExit("maps function still missing after restore")
+          if maps not in (301, 302, 503):
+              raise SystemExit(f"maps function is live but not healthy: {maps}")
           PY
 
       - name: Restore Maps browser key onto the pinned site if the function is live but unconfigured
@@ -137,6 +141,8 @@ jobs:
           if status in (301, 302):
               print("maps_key_sync=skipped_already_configured")
               raise SystemExit(0)
+          if status not in (503,):
+              raise SystemExit(f"maps function is live but not healthy: {status}")
           if not key:
               print("maps_key_sync=skipped_no_github_secret")
               raise SystemExit(0)

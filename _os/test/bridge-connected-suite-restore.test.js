@@ -174,7 +174,8 @@ describe('bridge original suite restore guards', () => {
     validateMapsFunction(source);
     const zip = packageMapsFunction(source);
     assert.equal(MAPS_FUNCTION_NAME, 'google-maps-loader');
-    assert.ok(zip.includes(Buffer.from('index.js')));
+    assert.ok(zip.includes(Buffer.from('google-maps-loader.js')));
+    assert.ok(!zip.includes(Buffer.from('index.js')));
     assert.ok(zip.includes(Buffer.from('maps3d')));
     assert.equal(sha256(zip).length, 64);
     assert.notEqual(sha256(zip), sha1(zip));

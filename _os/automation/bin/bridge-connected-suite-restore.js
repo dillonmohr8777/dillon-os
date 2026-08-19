@@ -193,15 +193,16 @@ function validateMapsFunction(source) {
 function packageMapsFunction(source) {
   validateMapsFunction(source);
   const staging = fs.mkdtempSync(path.join(os.tmpdir(), 'bridge-maps-fn-'));
-  // zip-it-and-ship-it layout: handler as index.js inside the function zip.
-  const jsPath = path.join(staging, 'index.js');
+  // File-function zip: Netlify/Lambda require {function-name}.js at zip root.
+  // A bare index.js 502s with Cannot find module 'google-maps-loader'.
+  const jsPath = path.join(staging, MAPS_FUNCTION_FILE);
   const zipPath = path.join(staging, `${MAPS_FUNCTION_NAME}.zip`);
   fs.writeFileSync(jsPath, source);
   try {
     execFileSync('zip', ['-j', '-q', '-X', zipPath, jsPath], { stdio: 'pipe' });
     return fs.readFileSync(zipPath);
   } catch {
-    return zipStoreSingleFile('index.js', source);
+    return zipStoreSingleFile(MAPS_FUNCTION_FILE, source);
   } finally {
     fs.rmSync(staging, { recursive: true, force: true });
   }
