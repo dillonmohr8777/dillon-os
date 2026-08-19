@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 5,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://katanapittsburgh.com/",
   "city": "Dormont",
+  "rerender": true,
   "hashes": [
     "5bb881ef70bfa7de67eafda23ee3e3462dde1cceb4f8a22dd591ca94159ce56e",
     "96f9219212425f0231a0813601609826aef83a8265ffc2c08d65695dd9ac7853",
     "7f2ad30e80e99ea9f348ff8b8e8a0e6d166b31057603cd7fd120cea048728952",
     "7458f565f6f55ea1fa31cbfc55ffdcaf80f512e1690e9bded1bf5dfa965a67e7",
     "4e2031ae8b421fb22e1950653e714fa56ea840a234fc177df91a3de6dc0bbcdc"
-  ]
+  ],
+  "copyWords": 378
 }

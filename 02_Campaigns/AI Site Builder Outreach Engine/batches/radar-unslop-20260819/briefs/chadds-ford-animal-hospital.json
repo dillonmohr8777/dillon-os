@@ -10,6 +10,7 @@
   "address": "901 Baltimore Pike Chadds Ford",
   "hours": "Mon, Tue:8am-6pm Wed: 8am-4pm Staff Only Thu: 8am- 6pm Fri: 8am",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#b0e0c0",
     "ink": "#006020",
@@ -17,10 +18,11 @@
     "accent2": "#005020",
     "panel": "#97cea9",
     "deep": "#003411",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Bodoni Moda",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Chadds Ford Animal Hospital — people at work",
-    "The process photograph for Chadds Ford Animal Hospital — hands on the job",
-    "The conversation photograph for Chadds Ford Animal Hospital — a real conversation",
-    "The place photograph for Chadds Ford Animal Hospital — the place",
-    "The craft photograph for Chadds Ford Animal Hospital — the craft"
+    "The people photograph for Chadds Ford Animal Hospital: people at work",
+    "The process photograph for Chadds Ford Animal Hospital: hands on the job",
+    "The conversation photograph for Chadds Ford Animal Hospital: a real conversation",
+    "The place photograph for Chadds Ford Animal Hospital: the place",
+    "The craft photograph for Chadds Ford Animal Hospital: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "Online Store",
-  "sub": "Chadds Ford Animal Hospital | Veterinarian var jquery_1_7_1 = jQuery.noConflict(true); var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-28074671-1']); _gaq.push(['_setDomainName', location.hostname]);.",
-  "offerings": [
-    "Latest News",
-    "Clinic Specials",
-    "Clinic Forms"
-  ],
+  "sub": "Chester County SPCA's 24th Annual Walk For Paws",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "Animals first",
+    "A calm exam",
+    "You confirm with the clinic"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Chadds Ford Animal Hospital in Chadds Ford. Private concept preview."
+  "offerings": [
+    {
+      "title": "Latest News",
+      "body": "1st Annual SCCCC Family Fun & Music Fest 2010"
+    },
+    {
+      "title": "Clinic Specials",
+      "body": "Delaware Humane Association's 19th Annual Walk for the Animals"
+    },
+    {
+      "title": "Clinic Forms",
+      "body": "Reception, the leash, the next appointment. Details stay official."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive with your pet",
+      "body": "The homepage should feel like a clinic, not a stock farm."
+    },
+    {
+      "title": "See the care",
+      "body": "Exam table, gentle hands, a tech who is actually working."
+    },
+    {
+      "title": "Call the desk",
+      "body": "Hours and emergencies belong on their official line."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.chaddsfordanimalhospital.vetsuite.com/"
+    },
+    {
+      "title": "Call",
+      "body": "(610) 388-2141",
+      "href": "tel:6103882141"
+    },
+    {
+      "title": "Find them",
+      "body": "901 Baltimore Pike Chadds Ford",
+      "href": "https://www.google.com/maps/search/?api=1&query=901%20Baltimore%20Pike%20Chadds%20Ford"
+    }
+  ],
+  "story": "Chester County SPCA's 24th Annual Walk For Paws 1st Annual SCCCC Family Fun & Music Fest 2010 Delaware Humane Association's 19th Annual Walk for the Animals Chadds Ford Animal Hospital gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the.",
+  "storyMore": "The homepage should feel like a clinic, not a stock farm. Exam table, gentle hands, a tech who is actually working.",
+  "featureBody": "Veterinarians and techs at the table, with the animal in the frame. Reception, the leash, the next appointment. Details stay official.",
+  "workHeading": "Care that looks like a real clinic.",
+  "galleryHeading": "Animals and the people who treat them.",
+  "storyHeading": "A hospital for pets, named.",
+  "featureHeading": "Hands on the animal, not the slogan.",
+  "contactHeading": "Reach the clinic.",
+  "closing": "Chadds Ford Animal Hospital should make the next appointment feel obvious.",
+  "navWork": "Our Practice",
+  "navStory": "Services",
+  "navVisit": "Contact Us",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Chadds Ford Animal Hospital in Chadds Ford. Private concept preview.",
+  "wordCount": 326
 }

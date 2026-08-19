@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
-  "browser": "ok",
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 3,
   "sourceCount": 3,
   "officialPhotos": 3,
   "genFills": 0,
-  "hasLogo": false,
   "url": "https://www.mainlinevetmalvern.com/index.html",
   "city": "Malvern",
+  "rerender": true,
   "hashes": [
     "b1191e6a00f69de9b2a172ba83372d586095b1a284977051b579241e39d85a99",
     "52751e70a37f92fa56ddb923031efcce033c60c29219e4db16c728e915e05537",
     "958ff27d0bd9a21fc2ac23ef8c9f660c2047dbf52a5411e12dbbbdba064ee8f8",
     "1fe718d02b64040c61d3e2f0362211e96770522bdc2d8ae1098a88c150df21a8",
     "ebe9d3882531d8d31ec04e7189c98a6ad3fc49f829e11b494ea724cfa73cd27f"
-  ]
+  ],
+  "copyWords": 331
 }

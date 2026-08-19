@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 7,
   "sourceCount": 7,
   "officialPhotos": 7,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://philadelphiagarage.com/",
   "city": "West Chester",
+  "rerender": true,
   "hashes": [
     "74ddedb7ecb1ceda074e921a937237bffb860aa7b6ad1a8dd29e9e73e2275028",
     "c4ad86a5b0a0c22fe3aaeef8f1f06c5b8b83b7fe29d62427405ff49119a092f6",
     "c4b5d04fa52b438c854e3ecce728194af8db6ee3bc7b8354489030fbae13d29e",
     "a61df21d60f3108125ba797b2ae1d496348ce1bc4d6c48be3387b8de5bad92dc",
     "cbbeac0ad87f0f0d5ce29b9a21571334825738baad452c8bdeb5700e2313fc4e"
-  ]
+  ],
+  "copyWords": 378
 }

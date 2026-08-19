@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://liveurgentcare.com/locations/kingofprussia/",
   "city": "King of Prussia",
+  "rerender": true,
   "hashes": [
     "3c2564e1ed37c669574abb7ad1e9bfcde15d4d5de47c3b101ea30eeac7c1b230",
     "9e95b8d6a795e31583d1ff25ac7e0741c935bedb32c3c9d826e9fc214d056539",
     "2cb4d36b27877e202199d1e8f70c3aa98f97bfdab7d77e3fcef5770c08c136f5",
     "5e0848100a3c710824454ab5e63d8561512083b0cbb64c4bbe416ee7ee5e769f",
     "503f49acdff636d974ef74d0de97c231f2a8b2479bd431cbd9d2f10546a841d9"
-  ]
+  ],
+  "copyWords": 360
 }

@@ -10,17 +10,19 @@
   "address": "606 Baltimore Pike",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
-    "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "paper": "#b0e050",
+    "ink": "#304010",
+    "accent": "#90c040",
+    "accent2": "#a0c040",
+    "panel": "#abdb4d",
+    "deep": "#1a2308",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Syne",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for GO2 Tech — people at work",
-    "The process photograph for GO2 Tech — hands on the job",
-    "The conversation photograph for GO2 Tech — a real conversation",
-    "The place photograph for GO2 Tech — the place",
-    "The craft photograph for GO2 Tech — the craft"
+    "The people photograph for GO2 Tech: people at work",
+    "The process photograph for GO2 Tech: hands on the job",
+    "The conversation photograph for GO2 Tech: a real conversation",
+    "The place photograph for GO2 Tech: the place",
+    "The craft photograph for GO2 Tech: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "PHILADELPHIA'S AWARD-WINNING MANAGED IT & SECURITY PROVIDER",
   "sub": "Services Cybersecurity Managed IT Security Bundle",
-  "offerings": [
-    "UNSURE IF YOUR BUSINESS IS SECURE?",
-    "Contact us Today for your free security assessment!",
-    "Contact us for Today your free security assessment!"
-  ],
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The work is specific",
+    "People at the tools",
+    "You reach them directly"
   ],
+  "offerings": [
+    {
+      "title": "UNSURE IF YOUR BUSINESS IS SECURE?",
+      "body": "Network Services Network Design and Implementation"
+    },
+    {
+      "title": "Contact us Today for your free security assessment!",
+      "body": "Cloud Services Hosted Server Environments"
+    },
+    {
+      "title": "Contact us for Today your free security assessment!",
+      "body": "\"As our Managed IT Provider, GO2 is committed to ensuring network, system, data, and facility security, and continues to be instrumental in assisting us to maintain the utmost security integrity.\""
+    }
+  ],
+  "experience": [
+    {
+      "title": "Find them",
+      "body": "Name, place, and a clear path above the fold."
+    },
+    {
+      "title": "See the work",
+      "body": "A workstation, a meeting, hands on the tools of the trade."
+    },
+    {
+      "title": "Follow up",
+      "body": "Hours and scope stay official."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.go2tech.com/"
+    },
+    {
+      "title": "Call",
+      "body": "610-567-3462",
+      "href": "tel:6105673462"
+    },
+    {
+      "title": "Find them",
+      "body": "606 Baltimore Pike",
+      "href": "https://www.google.com/maps/search/?api=1&query=606%20Baltimore%20Pike"
+    }
+  ],
+  "story": "Services Cybersecurity Managed IT Security Bundle Network Services Network Design and Implementation Cloud Services Hosted Server Environments GO2 Tech gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never.",
+  "storyMore": "\"As our Managed IT Provider, GO2 is committed to ensuring network, system, data, and facility security, and continues to be instrumental in assisting us to maintain the utmost security integrity.\"",
+  "featureBody": "Executive Director, Global Contracts & Legal Services",
   "workHeading": "The work, in the room where it happens.",
   "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "GO2 Tech in Springfield. Private concept preview."
+  "storyHeading": "A studio or office with a name.",
+  "featureHeading": "Close on the craft.",
+  "contactHeading": "Start the conversation.",
+  "closing": "GO2 Tech should feel like a team you can actually reach.",
+  "navWork": "REQUEST IT SUPPORT",
+  "navStory": "call us today!",
+  "navVisit": "call us today!",
+  "primaryCtaFallback": "REQUEST IT SUPPORT",
+  "description": "GO2 Tech in Springfield. Private concept preview.",
+  "wordCount": 339
 }

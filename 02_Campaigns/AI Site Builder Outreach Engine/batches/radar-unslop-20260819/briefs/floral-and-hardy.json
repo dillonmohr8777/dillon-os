@@ -6,21 +6,23 @@
   "family": "retail",
   "mode": "people",
   "url": "https://floralandhardyofskippack.com/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "610-584-0797",
+  "address": "4007 Skippack Pike Skippack",
+  "hours": "Mon-Fri 8:00 AM to 4:00 PM Sat-Sun 8:00 AM to 4:00 PM",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
+    "paper": "#F5F1EA",
+    "ink": "#1A1612",
+    "accent": "#B45309",
+    "accent2": "#F5D0A6",
+    "panel": "#E8DCCB",
+    "deep": "#22180E",
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Bodoni Moda",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Floral and Hardy of Skippack — people at work",
-    "The process photograph for Floral and Hardy of Skippack — hands on the job",
-    "The conversation photograph for Floral and Hardy of Skippack — a real conversation",
-    "The place photograph for Floral and Hardy of Skippack — the place",
-    "The craft photograph for Floral and Hardy of Skippack — the craft"
+    "The people photograph for Floral and Hardy of Skippack: people at work",
+    "The process photograph for Floral and Hardy of Skippack: hands on the job",
+    "The conversation photograph for Floral and Hardy of Skippack: a real conversation",
+    "The place photograph for Floral and Hardy of Skippack: the place",
+    "The craft photograph for Floral and Hardy of Skippack: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "Floral and Hardy of Skippack",
-  "sub": "Floral and Hardy of Skippack in Skippack. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Garden Center",
+  "sub": "Mon-Fri 8:00 AM to 4:00 PM Sat-Sun 8:00 AM to 4:00 PM",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Floral and Hardy of Skippack in Skippack. Private concept preview."
+  "offerings": [
+    {
+      "title": "Succulent Bar",
+      "body": "Floral & Hardy of Skippack is a family-owned garden center and gift shop located in the heart of Skippack Village. You’ll find unique gifts, home & yard décor plus beautiful annuals, perennials, shrubs, and other plants! Browse around the shop and enjoy its whimsical atmosphere and rustic charm."
+    },
+    {
+      "title": "Gift Shop",
+      "body": "Visit Floral & Hardy’s upstairs DIY “ Succulent Bar ” and make your own container with cool toppings. Floral & Hardy also hosts 120+ fun events per year including, free gardening wine & cheese classes, kid & adult workshops, community festivals, and private parties. There’s something for people of all ages at Floral & Hardy of Skippack!"
+    },
+    {
+      "title": "Design Services",
+      "body": "© 2026 Floral & Hardy websites by ZYGR INsites"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://floralandhardyofskippack.com/"
+    },
+    {
+      "title": "Call",
+      "body": "610-584-0797",
+      "href": "tel:6105840797"
+    },
+    {
+      "title": "Find them",
+      "body": "4007 Skippack Pike Skippack",
+      "href": "https://www.google.com/maps/search/?api=1&query=4007%20Skippack%20Pike%20Skippack"
+    }
+  ],
+  "story": "Mon-Fri 8:00 AM to 4:00 PM Sat-Sun 8:00 AM to 4:00 PM Floral & Hardy of Skippack is a family-owned garden center and gift shop located in the heart of Skippack Village. You’ll find unique gifts, home & yard décor plus beautiful annuals, perennials, shrubs, and other plants! Browse around the shop and enjoy its whimsical atmosphere and rustic charm. Visit Floral & Hardy’s upstairs DIY “ Succulent Bar ” and make your own container with cool toppings. Floral & Hardy also hosts 120+ fun events per year including, free gardening wine & cheese classes, kid & adult workshops, community festivals, and private parties. There’s something for people of all ages at Floral & Hardy of Skippack!",
+  "storyMore": "© 2026 Floral & Hardy websites by ZYGR INsites",
+  "featureBody": "Be the first to know about upcoming events & sales! Subscribe to Our Newsletter!",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Floral and Hardy of Skippack should feel like a counter you would walk up to.",
+  "navWork": "Home",
+  "navStory": "About Us",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Online Shop",
+  "description": "Floral and Hardy of Skippack in Skippack. Private concept preview.",
+  "wordCount": 381
 }

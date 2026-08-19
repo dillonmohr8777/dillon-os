@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.svg",
   "photoCount": 7,
   "sourceCount": 7,
   "officialPhotos": 7,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://bookbarn.com/",
   "city": "west chester",
+  "rerender": true,
   "hashes": [
     "292d7b81fc4ee246333c6d0131551db7ff937b19a894bdf099817718d09d89de",
     "11efacce8812e4efdb7819ff2f49f0b3035587c141c5fd9a890929d2edd4f19d",
     "6a5c7ab0f7e7fc9983f301cf854effcb10031ccfc4813ef59a1dd74cf51edd4d",
     "f84f2bba80e737ec99d98f891d6f32f55b9ecf88f2137e154a47cab5ae28ac79",
     "89dd13791160490e64a0c1e6292d5b888e69d3daf701f294eac6417c272fb818"
-  ]
+  ],
+  "copyWords": 343
 }

@@ -6,10 +6,11 @@
   "family": "food",
   "mode": "food",
   "url": "https://whollygroundscoffeehouse.com/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "6108060573",
+  "address": "47 S. Third Street Oxford",
+  "hours": "Monday: 6:30 am &#8211; 2:00 pm Tuesday: 6:30 am &#8211; 2:00 pm",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#F4EFE7",
     "ink": "#1A1410",
@@ -17,10 +18,11 @@
     "accent2": "#E7A843",
     "panel": "#E8D9C8",
     "deep": "#2A1810",
-    "onPaper": "#111820",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Fraunces",
@@ -42,19 +44,70 @@
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "Wholly Grounds Coffeehouse",
-  "sub": "Wholly Grounds Coffeehouse in Oxford. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm today's menu and hours on the official source.",
-    "Confirm today's menu and hours on the official source.",
-    "Confirm today's menu and hours on the official source."
-  ],
+  "sub": "Why yes&#8230;yes you can rent our fine facility for your next birthday party, bridal shower, or event. Send us a message or give us a call to talk and we&#8217;ll see how we can help you have the best time ever in a really great space.",
   "points": [
-    "The plate comes first",
-    "Kitchen in motion",
-    "A table you can trust"
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
   ],
+  "offerings": [
+    {
+      "title": "The plate",
+      "body": "Wholly Grounds Coffeehouse is a kitchen first. The preview leads with food, not a stock dining room."
+    },
+    {
+      "title": "The pass",
+      "body": "Hands, heat, and the ticket. You see the work behind the dish."
+    },
+    {
+      "title": "The room",
+      "body": "A table worth sitting down for. Reservations and tonight's menu stay with them."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://whollygroundscoffeehouse.com/"
+    },
+    {
+      "title": "Call",
+      "body": "6108060573",
+      "href": "tel:6108060573"
+    },
+    {
+      "title": "Find them",
+      "body": "47 S. Third Street Oxford",
+      "href": "https://www.google.com/maps/search/?api=1&query=47%20S.%20Third%20Street%20Oxford"
+    }
+  ],
+  "story": "Why yes&#8230;yes you can rent our fine facility for your next birthday party, bridal shower, or event. Send us a message or give us a call to talk and we&#8217;ll see how we can help you have the best time ever in a really great space. Wholly Grounds Coffeehouse, established in 2015, is not just another coffee shop. It&#8217;s a family business who&#8217;s business is their family. Each person who walks through the door is welcomed into the Hamm family. Every cup of coffee also lends support to another organization. Each month, Jeff and Cheryl choose a worthy cause to donate a portion of their proceeds.",
+  "storyMore": "Address: 47 S. Third Street Oxford, PA 19363",
+  "featureBody": "Drive Thru Location: 2176 Baltimore Pike Oxford, PA 19363",
   "workHeading": "What comes out of this kitchen.",
   "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
   "contactHeading": "Make the next visit easy.",
-  "description": "Wholly Grounds Coffeehouse in Oxford. Private concept preview."
+  "closing": "Wholly Grounds Coffeehouse should feel like a place you can taste from the first screen.",
+  "navWork": "610-806-0573",
+  "navStory": "Facebook",
+  "navVisit": "Facebook",
+  "primaryCtaFallback": "Facebook",
+  "description": "Wholly Grounds Coffeehouse in Oxford. Private concept preview.",
+  "wordCount": 352
 }

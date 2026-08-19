@@ -2,7 +2,7 @@
   "id": 97,
   "slug": "oster-fine-violins",
   "name": "Frederick W. Oster Fine Violins",
-  "family": "professional",
+  "family": "retail",
   "mode": "people",
   "issue": "design",
   "ok": true,
@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "page.goto: net::ERR_CONNECTION_CLOSED at https://www.osterviolins.com/\nCall log:\n  - navigating to \"https://www.osterviolins.com/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.osterviolins.com/",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "b8b51eb6bf642ade10526390264c3f4292722f743df8c55bc74f56a3bc7d492a",
     "3b99da368552a5c7f51e5eba40e616d3687896bc5d8de350e0c968561623d9be",
     "191b6faa03ced61e82e04fd22c7d3012d9613ccb5bb60f9cbd83ef7451a75d6a",
     "23d8a8ed1b2cfe9430e5c0a57e2186a3159475e6d237c2c7af6dbb7434b074c8",
     "63861cf97b9825cedd4b1714fe8eb1b9e9bd62d7327ae0e55cb95fffc4c27dcd"
-  ]
+  ],
+  "copyWords": 323
 }

@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://boylebrothersenergy.com/",
   "city": "Havertown",
+  "rerender": true,
   "hashes": [
     "f72f843063bf076786f28a9c6fc5ae4cd8783596203557c4d7bc1c2f05209191",
     "dddbc72a06985a7dff75717cc8e1405b98d986ea887c09bebb8cc727629b2570",
     "79f88a8d4f65d2a19c0c4ee4ef740f074d8a09c8728144366d3a9d792b987ea0",
     "db4f490546b6e99a0be38c5ed026701429fd71028a224a03d788c84a11a34f95",
     "1d3c3c88f35e9a63391d526ea989eb951a9fe95e74aef2138a6364424b12e4e3"
-  ]
+  ],
+  "copyWords": 475
 }

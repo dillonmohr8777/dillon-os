@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 4,
   "sourceCount": 4,
   "officialPhotos": 4,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://heartandsoultattoos.com/",
   "city": "East Greenville",
+  "rerender": true,
   "hashes": [
     "7917943aee8c604c8c8829cd4b52a3ece9c50384fcaee38345f3984829dc7a09",
     "005fd85b4f20bc84f5306451001d566814d654baf88aad7b5b640e599abe0c24",
     "3da7cb691e3acccb537afcc74ba9c3d43378bf4f5eb14158405ed95f53cf96c1",
     "effd5d3bd988f57bdf36c3658d238c71a5bf3145bc18fcd841e6229091404c74",
     "f055a76a1430d23a08e4cde5979fb9106306d25f2fd5a3095ed597a7df1a4c18"
-  ]
+  ],
+  "copyWords": 321
 }

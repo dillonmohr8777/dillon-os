@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://www.therestaurantstore.com/stores/Plymouth-Meeting",
   "city": "Norristown",
+  "rerender": true,
   "hashes": [
     "ff61afaf01761e800f4a49ffc943a1438b87d60526c103397cd5597fb6b2d169",
     "b674befcc23346145a666afb65f230ded8ef5910bc698c19bb0f785002a8f5e7",
     "055a196109ad81e2186a8e9b066f501a7b2c0da8c2cb1797e6aeb72284da2c80",
     "189f3cd6dbc1f154269fc15b8a48a08a9f40d50878a545be07166f564e1c241c",
     "d9e2bf4b7ece7b91b219620493be8122cde2f1d3d33abfef2523822e5d4d8077"
-  ]
+  ],
+  "copyWords": 350
 }

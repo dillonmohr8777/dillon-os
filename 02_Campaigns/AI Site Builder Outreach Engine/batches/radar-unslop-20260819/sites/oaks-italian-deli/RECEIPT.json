@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 10,
   "sourceCount": 10,
   "officialPhotos": 10,
   "genFills": 0,
-  "hasLogo": true,
   "url": "http://oaksitaliandeli.com/",
   "city": "Phoenixville",
+  "rerender": true,
   "hashes": [
     "da65887d93e4b8f9b7e7b5febed00d77ecc528fac244cf862bad8ba68f2449ae",
     "ee2a40eeac0e731db14532a76194ffdecd6cfe4370f42b2314597bf247aa3bfc",
     "1e4db2f9b590def911bb32c4c0c81016c381bbf29c294313be09b1572d152539",
     "a5273b161cca16bf03fc347f6ed3653c9cd1848ae9e029adc79cb1bd12e4a70d",
     "bc1af7855e12edff0076bcebaf2f452d1657e775ac6fc99e6bff022a983a3932"
-  ]
+  ],
+  "copyWords": 384
 }

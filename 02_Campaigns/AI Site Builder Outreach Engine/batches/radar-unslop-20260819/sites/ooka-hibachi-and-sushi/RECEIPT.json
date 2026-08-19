@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 3,
   "sourceCount": 3,
   "officialPhotos": 3,
   "genFills": 0,
-  "hasLogo": false,
   "url": "http://ookasushi.com/phone/willow-grove.html",
   "city": "Willow Grove",
+  "rerender": true,
   "hashes": [
     "fad235100c84e453ac0a798a17c3eab783327a1de63223e75a36d37e2c284d9d",
     "6d2d27c7772d46c60990c6130e9e863fe0364f1c82c0c89586b2e6ebd82e48ac",
     "f34eb1276c86e717268f0ad3047005e3c8b6ea7382378dd8bfa2e34cc2ff39da",
     "1ae043b72af21f542a7c64c794d29e441a0046bf530452fc5607c4e4fd43ca51",
     "572881dd9e36039deb7ffd8c94b71126add09f6752d57674c50baebf49c9dffa"
-  ]
+  ],
+  "copyWords": 384
 }

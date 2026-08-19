@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 3,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://www.narberthpizza.com/",
   "city": "Narberth",
+  "rerender": true,
   "hashes": [
     "10f89eb2be87a2f1753c6ba5f3249ab5bdf2f404c0747af2acffde4cb1202536",
     "eb81c859253247f261bfc79ba4da7bd62b2031b95aebd283fe890c1473b529e4",
     "128978571e4e92efd882d42cee21d28f5d6e7cf2253f027c97bafa4d287dd083",
     "025f50b5fa96640b172c8d1c5ea1077386d846880b138bc33d7f8f1170b407fa",
     "085ea608aba15ab9773197185c2c5f60f46a3c551ff2b2b81030e51916542c60"
-  ]
+  ],
+  "copyWords": 382
 }

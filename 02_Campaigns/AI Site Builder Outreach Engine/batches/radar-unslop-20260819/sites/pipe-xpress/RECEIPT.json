@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 12,
   "sourceCount": 12,
   "officialPhotos": 12,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://pipexpressinc.com/",
   "city": "West Chester",
+  "rerender": true,
   "hashes": [
     "39ce77f9e923944a8159baf118c3699b77b21f5491538fe6ba48acd2b02cd534",
     "123258894481fd07ebae9a7a3c613979b0c41d079c0863393426696906b15c09",
     "93fbd547f4415870297cd498d50a039cfe054655964d6293d3d2be9de9513aab",
     "4b7d117dc0b553ee3b489dcf5f6860710906150df07e25b86799dff7acb3a791",
     "7b34e1ad4c54c609d76c9f70e8656a31e93f9606846b48cfafff59c3de026353"
-  ]
+  ],
+  "copyWords": 348
 }

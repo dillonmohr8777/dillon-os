@@ -9,18 +9,20 @@
   "phone": "",
   "address": "",
   "hours": "",
-  "logo": false,
+  "logo": true,
+  "logoSrc": "assets/logo.svg",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
+    "paper": "#F5F1EA",
+    "ink": "#1A1612",
+    "accent": "#B45309",
+    "accent2": "#F5D0A6",
+    "panel": "#E8DCCB",
+    "deep": "#22180E",
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Bricolage Grotesque",
@@ -34,27 +36,68 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Johnny Destructo's Hero Complex — people at work",
-    "The process photograph for Johnny Destructo's Hero Complex — hands on the job",
-    "The conversation photograph for Johnny Destructo's Hero Complex — a real conversation",
-    "The place photograph for Johnny Destructo's Hero Complex — the place",
-    "The craft photograph for Johnny Destructo's Hero Complex — the craft"
+    "The people photograph for Johnny Destructo's Hero Complex: people at work",
+    "The process photograph for Johnny Destructo's Hero Complex: hands on the job",
+    "The conversation photograph for Johnny Destructo's Hero Complex: a real conversation",
+    "The place photograph for Johnny Destructo's Hero Complex: the place",
+    "The craft photograph for Johnny Destructo's Hero Complex: the craft"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
   "headline": "Johnny Destructo's Hero Complex",
-  "sub": "Johnny Destructo's Hero Complex in Philadelphia. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "sub": "This BrandRep site is parked. Enter your message at this location.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Johnny Destructo's Hero Complex in Philadelphia. Private concept preview."
+  "offerings": [
+    {
+      "title": "The floor",
+      "body": "Johnny Destructo's Hero Complex is a shop you can walk. The preview shows the goods and the people."
+    },
+    {
+      "title": "The counter",
+      "body": "A conversation over the thing they sell, not a mall stock set."
+    },
+    {
+      "title": "The visit",
+      "body": "Hours stay official. Nothing here invents inventory."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.jdsherocomplex.com/"
+    }
+  ],
+  "story": "This BrandRep site is parked. Enter your message at this location. Johnny Destructo's Hero Complex gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Johnny Destructo's.",
+  "storyMore": "The homepage should look like the shop, not a catalog template. An associate in the frame, handling the product.",
+  "featureBody": "A conversation over the thing they sell, not a mall stock set. Hours stay official. Nothing here invents inventory.",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Johnny Destructo's Hero Complex should feel like a counter you would walk up to.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Need assistance? Contact us.",
+  "description": "Johnny Destructo's Hero Complex in Philadelphia. Private concept preview.",
+  "wordCount": 321
 }

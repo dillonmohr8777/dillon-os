@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 6,
   "sourceCount": 6,
   "officialPhotos": 1,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.guildquality.com/profile/morton-electric-pool-and-spa-specialists",
   "city": "Trevose",
+  "rerender": true,
   "hashes": [
     "498d681fe917ac2cfb19bfa8776b13a330f1fe17afd28da2832e581c94ba292a",
     "a61046f8e75eb03eeb75cf7fbb79aa73afa770f1201b962fdf398595695c4bb4",
     "27aba15a29ed64dca7d2bd9fb3106e4db268a419d3ad0c156a3ed4ce51a4963e",
     "3535f9f501ae66a2065a42f757839f24c4f1ce38ebaf87ba5626c1ec7b004979",
     "3f4e899de35f4cce7265b3ccdef185c879ce2c2d2f0965a6e031d943a5743d9e"
-  ]
+  ],
+  "copyWords": 456
 }

@@ -2,7 +2,7 @@
   "id": 32,
   "slug": "dr-weiss-s-office",
   "name": "Orthodontic Associates of Collegeville",
-  "family": "professional",
+  "family": "dental",
   "mode": "people",
   "issue": "placeholder",
   "ok": true,
@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
-  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 7,
   "sourceCount": 7,
   "officialPhotos": 7,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://orthodontists.com/",
   "city": "Collegeville",
+  "rerender": true,
   "hashes": [
     "9cc2f5a8dd60cff09ca9c79f9a0fc66efe49f18a1fa6ee67ef35f37f3ef7ab94",
     "df0f3f79d330ad607211d640b88d864479932a60c3009f3cd1d06e144df8bab7",
     "c95e2b44f4e81ad31870f313cf47cd0fd33137f5333b7a7eb754e69a1df0241f",
     "b4ff43b376c3113620d3fb6cfb81fbe418b20818dfd65e520909d2b8bf7c6d12",
     "b66209383aedbd720c2f311eb2c527c467f8c00b26c5b3f1aed1ad0b8c81dc38"
-  ]
+  ],
+  "copyWords": 458
 }

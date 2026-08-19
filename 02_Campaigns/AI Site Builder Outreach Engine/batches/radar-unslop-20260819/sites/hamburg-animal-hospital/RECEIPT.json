@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 4,
   "sourceCount": 4,
   "officialPhotos": 4,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.hamburganimalhospital.com/",
   "city": "Hamburg Animal Hospital is a full service veterinary practice in Hamburg",
+  "rerender": true,
   "hashes": [
     "89825d404b66e810748e7c7455bf64d887781cacc965132d848a57fc7ce8a653",
     "6511fb5c586dedd4e17dda18310976c5d2744f7a61bb7e6393d6179bdc66b0ca",
     "5251738b0cbfebd5a80f433d872834e0141a64fd4c5ee08c7f92a95c86590c07",
     "325ed23402034f574bc4cebaab1fa3b243b656ac79cf7aeba383cc1b7134bdf7",
     "59ead1bbbd18b6281cb86b865bb83c9844151ff9749b4d11b7bb2aba91c5b0e4"
-  ]
+  ],
+  "copyWords": 401
 }

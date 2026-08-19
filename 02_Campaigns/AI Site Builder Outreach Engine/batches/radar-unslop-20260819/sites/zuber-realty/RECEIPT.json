@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 10,
   "sourceCount": 10,
   "officialPhotos": 10,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.zuberrealty.com/agents-offices/",
   "city": "Boyertown",
+  "rerender": true,
   "hashes": [
     "4f1bd2f38e977b550dadd868248acc6f59115a36d9360b0fe0bebc249809c676",
     "dd68832ef5c9a1b1ce5670b7c99fd1c38ccb9865326a405347c79c7e0548595d",
     "a8ac4cf6b19a608edb36def1d4ce0ee3ef42b69f72289d1c9a6e58df908acdad",
     "dbcbfa2236d9d3a6a6b4589579e31f4fa2486bd5bfd05f669ca7229e1fd41e50",
     "740f2e9ff239c974fd22dc17b6bae968c5c07dc1d906d7e69ce8f171f058a985"
-  ]
+  ],
+  "copyWords": 474
 }

@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://www.aprsupply.com/Malvern",
   "city": "Malvern",
+  "rerender": true,
   "hashes": [
     "d9a8ad97037ab630bb5592444b3d60f5ed5a6a70c87c83a66d2f07519bdc064e",
     "5923371450c9f3b20b70387dc9f00ab990dcb4dc623030cbc35262df99accdf4",
     "d3de86d926b925bf18e344a58f70c8213ee17f964435cd3f15c4b9a6f13335b0",
     "25ec09b975434399d450ba7b75b8d40c98b23831cd71295e226c9481008707d3",
     "bb18cad048553f19fe455684ab6bb8cb2db048cae1a231b67fd1b707383f0080"
-  ]
+  ],
+  "copyWords": 341
 }

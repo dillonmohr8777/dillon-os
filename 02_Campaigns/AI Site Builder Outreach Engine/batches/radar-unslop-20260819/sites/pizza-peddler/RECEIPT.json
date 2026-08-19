@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "http://www.pizzapeddler202.com/",
   "city": "West Chester",
+  "rerender": true,
   "hashes": [
     "347d915a99a2c50f13c01ae6a8a73987d5778beaf8e16e717f7a19104ced32f6",
     "849ddb345087f1609c038129804815086ea0dedeed15658c4c9547d19bc55e1b",
     "63b84df974676e0b6046dd0fea6feb084c47f3b1a812be0efc3f70b0740ffed5",
     "c39aca3d4d62ae9474f9a5e02415287504edf12a8d8e032b6f99df04da4e40ab",
     "1820f9fe56aa39d863f7425581f0cc46026764a6a12c55e3aa0f030b79e1f0f1"
-  ]
+  ],
+  "copyWords": 387
 }

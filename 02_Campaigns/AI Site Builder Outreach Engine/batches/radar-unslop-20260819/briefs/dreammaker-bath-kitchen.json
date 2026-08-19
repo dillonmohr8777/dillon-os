@@ -1,26 +1,28 @@
 {
   "slug": "dreammaker-bath-kitchen",
   "name": "DreamMaker Bath & Kitchen of Chester County",
-  "city": "Chester County",
+  "city": "Chester Springs",
   "category": "Retail",
   "family": "retail",
   "mode": "people",
   "url": "https://www.dreammaker-remodel.com/chester-county/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "610-484-2000",
+  "address": "12 Pottstown Pike, Chester Springs, PA, 19425",
+  "hours": "Monday through Friday from 9:00 AM to 5:00 PM",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#c0b0d0",
+    "paper": "#c0c0d0",
     "ink": "#402070",
     "accent": "#402070",
     "accent2": "#302060",
-    "panel": "#ae9bc2",
+    "panel": "#aea9c2",
     "deep": "#23113d",
-    "onPaper": "#111820",
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Syne",
@@ -30,31 +32,82 @@
   "attitude": "brutal",
   "marquee": [
     "DreamMaker Bath & Kitchen of Chester County",
-    "Chester County",
+    "Chester Springs",
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for DreamMaker Bath & Kitchen of Chester County — people at work",
-    "The process photograph for DreamMaker Bath & Kitchen of Chester County — hands on the job",
-    "The conversation photograph for DreamMaker Bath & Kitchen of Chester County — a real conversation",
-    "The place photograph for DreamMaker Bath & Kitchen of Chester County — the place",
-    "The craft photograph for DreamMaker Bath & Kitchen of Chester County — the craft"
+    "The people photograph for DreamMaker Bath & Kitchen of Chester County: people at work",
+    "The process photograph for DreamMaker Bath & Kitchen of Chester County: hands on the job",
+    "The conversation photograph for DreamMaker Bath & Kitchen of Chester County: a real conversation",
+    "The place photograph for DreamMaker Bath & Kitchen of Chester County: the place",
+    "The craft photograph for DreamMaker Bath & Kitchen of Chester County: the craft"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
-  "headline": "DreamMaker Bath & Kitchen of Chester County",
-  "sub": "DreamMaker Bath & Kitchen of Chester County in Chester County. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Kitchen & Bath Remodeling Contractor in Chester County, PA",
+  "sub": "Expert Remodeling Rooted in Faith and Excellence",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "DreamMaker Bath & Kitchen of Chester County in Chester County. Private concept preview."
+  "offerings": [
+    {
+      "title": "Your Local & Trusted Remodeling Partners in Pennsylvania Home Transformation",
+      "body": "From beautifully crafted custom kitchens to luxurious bathroom retreats, Jack and Rebecca lead our local team to transform Pennsylvania properties with unmatched skill and meticulous attention to detail."
+    },
+    {
+      "title": "Discover Our Comprehensive Kitchen, Bath & Home Remodeling",
+      "body": "Whether you are updating a single room for accessibility or completely overhauling your entire interior, our dedicated crew has the precise skills to bring your unique vision to life."
+    },
+    {
+      "title": "Kitchen Remodeling",
+      "body": "Every property in our community has its own specific charm. With our unique ability to blend historic eras with modern functionality, we design spaces that truly feel like home. Because we handle everything from the initial blueprint to the final polish, there is absolutely no need to hire separate contractors. At DreamMaker, we do it all for you."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.dreammaker-remodel.com/chester-county/"
+    },
+    {
+      "title": "Call",
+      "body": "610-484-2000",
+      "href": "tel:6104842000"
+    },
+    {
+      "title": "Find them",
+      "body": "12 Pottstown Pike, Chester Springs, PA, 19425",
+      "href": "https://www.google.com/maps/search/?api=1&query=12%20Pottstown%20Pike%2C%20Chester%20Springs%2C%20PA%2C%2019425"
+    }
+  ],
+  "story": "Expert Remodeling Rooted in Faith and Excellence From beautifully crafted custom kitchens to luxurious bathroom retreats, Jack and Rebecca lead our local team to transform Pennsylvania properties with unmatched skill and meticulous attention to detail. Whether you are updating a single room for accessibility or completely overhauling your entire interior, our dedicated crew has the precise skills to bring your unique vision to life. DreamMaker Bath & Kitchen of Chester County gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award,.",
+  "storyMore": "Every property in our community has its own specific charm. With our unique ability to blend historic eras with modern functionality, we design spaces that truly feel like home. Because we handle everything from the initial blueprint to the final polish, there is absolutely no need to hire separate contractors. At DreamMaker, we do it all for you.",
+  "featureBody": "Our team knows the homes, styles, and needs of local homeowners, and we guide you through every step of your remodel.",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "DreamMaker Bath & Kitchen of Chester County should feel like a counter you would walk up to.",
+  "navWork": "Skip to content",
+  "navStory": "CALL US TODAY!",
+  "navVisit": "CALL US TODAY!",
+  "primaryCtaFallback": "CALL US TODAY!",
+  "description": "DreamMaker Bath & Kitchen of Chester County in Chester Springs. Private concept preview.",
+  "wordCount": 456
 }

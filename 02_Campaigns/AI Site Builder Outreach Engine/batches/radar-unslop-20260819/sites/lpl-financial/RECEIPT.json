@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
-  "url": "http://www.tartaruscapitalmanagement.com/contact",
+  "url": "https://www.apollowealthadvisors.net/contact",
   "city": "Colmar",
+  "rerender": true,
   "hashes": [
     "81f37eac9fdad2533fd5e7b753b56cd083bdd910772616bd67d67bcab97ea1a2",
     "09db2240930aec3299f1e5c97facb70fe6d8ad4efd7f559a9a5f5a7a44d6e288",
     "eacf046edb7e17ca3a774c6ac27b9ddb77a527760e1b5c089471b94fcbe42a6c",
     "f8bb9020bf0dc8d46e894e261001fb39bc170a0892bc270fd955c84d7a6c816d",
     "7ce6f562d1817f7e06b9ee070e1893292f662e742b4bbaec82ca9fe952f8de54"
-  ]
+  ],
+  "copyWords": 339
 }

@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 16,
   "sourceCount": 16,
   "officialPhotos": 16,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://saltersfireplace.com/",
   "city": "Eagleville",
+  "rerender": true,
   "hashes": [
     "d55742ac208f3f94bcb2d5bf18f83df8b0fbb574d87c55b94e5d27d605e1fd14",
     "f9781087d2906cc092aaf3d5f78f6d773258fbc63ebb7f9658ade1450fdee2eb",
     "ee8a494e4d3576ff6281007d93f9480900755133902bc893de52713a9b6a5f69",
     "d43dff2539ee1849c5c8d6cdbb88541ea5621ef306db3699dae2d0766ee95362",
     "196237139b3e1ca34fa3867ce7acd0513466ae08e65c15b51de5abdaf5ad804c"
-  ]
+  ],
+  "copyWords": 378
 }

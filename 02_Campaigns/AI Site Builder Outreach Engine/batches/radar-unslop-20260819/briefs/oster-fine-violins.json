@@ -2,59 +2,102 @@
   "slug": "oster-fine-violins",
   "name": "Frederick W. Oster Fine Violins",
   "city": "Philadelphia",
-  "category": "Professional",
-  "family": "professional",
+  "category": "Retail",
+  "family": "retail",
   "mode": "people",
   "url": "https://www.osterviolins.com/",
-  "phone": "215-545-1100",
-  "address": "507 South Broad Street",
-  "hours": "Mon-Fri 10am-5pm Products search Facebook-f Instagram",
+  "phone": "",
+  "address": "",
+  "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
+    "paper": "#F5F1EA",
+    "ink": "#1A1612",
+    "accent": "#B45309",
+    "accent2": "#F5D0A6",
+    "panel": "#E8DCCB",
+    "deep": "#22180E",
+    "border": "1px",
+    "radius": "18px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Bodoni Moda",
     "text": "Urbanist",
     "displayFallback": "Georgia,serif"
   },
-  "attitude": "warm",
+  "attitude": "neon",
   "marquee": [
     "Frederick W. Oster Fine Violins",
     "Philadelphia",
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Frederick W. Oster Fine Violins — people at work",
-    "The process photograph for Frederick W. Oster Fine Violins — hands on the job",
-    "The conversation photograph for Frederick W. Oster Fine Violins — a real conversation",
-    "The place photograph for Frederick W. Oster Fine Violins — the place",
-    "The craft photograph for Frederick W. Oster Fine Violins — the craft"
+    "The people photograph for Frederick W. Oster Fine Violins: people at work",
+    "The process photograph for Frederick W. Oster Fine Violins: hands on the job",
+    "The conversation photograph for Frederick W. Oster Fine Violins: a real conversation",
+    "The place photograph for Frederick W. Oster Fine Violins: the place",
+    "The craft photograph for Frederick W. Oster Fine Violins: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "Violin Bows",
-  "sub": "Products search Facebook-f Instagram Google Home",
-  "offerings": [
-    "Viola Bows",
-    "Cello Bows",
-    "Bass and Other Bows"
-  ],
+  "headline": "403 - Forbidden",
+  "sub": "circle_dots 403 - Forbidden Access to this page is forbidden.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Frederick W. Oster Fine Violins in Philadelphia. Private concept preview."
+  "offerings": [
+    {
+      "title": "The floor",
+      "body": "Frederick W. Oster Fine Violins is a shop you can walk. The preview shows the goods and the people."
+    },
+    {
+      "title": "The counter",
+      "body": "A conversation over the thing they sell, not a mall stock set."
+    },
+    {
+      "title": "The visit",
+      "body": "Hours stay official. Nothing here invents inventory."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.osterviolins.com/"
+    }
+  ],
+  "story": "circle_dots 403 - Forbidden Access to this page is forbidden. Frederick W. Oster Fine Violins gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Frederick W. Oster Fine.",
+  "storyMore": "The homepage should look like the shop, not a catalog template. An associate in the frame, handling the product.",
+  "featureBody": "A conversation over the thing they sell, not a mall stock set. Hours stay official. Nothing here invents inventory.",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Frederick W. Oster Fine Violins should feel like a counter you would walk up to.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Frederick W. Oster Fine Violins in Philadelphia. Private concept preview.",
+  "wordCount": 323
 }

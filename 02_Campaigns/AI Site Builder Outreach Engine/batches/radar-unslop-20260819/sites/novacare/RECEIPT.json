@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://www.novacare.com/contact/find-a-location/pa/conshohocken/conshohocken/?ty=xt",
   "city": "Conshohocken",
+  "rerender": true,
   "hashes": [
     "b0462eadc522781084f21c844ef94bed7d6b1131fbb3bb43ffc70b9b28adcb80",
     "a4a32b25207f1e732f4ba295a014ddcebdb04f319af3ec2983c3cac66a06a56c",
     "5efe46902f8ff14df2d2803a37dfd7819d4f1804eed01352763050abbc684ac0",
     "0c4dae67c6b9b38907564d41f1e5c9cdb5814e9f73b2659034944ee214364260",
     "4a0b7d9fb19018ee609f66ac0730f309e018dae9bcfa2d2bfa17d2f9e93ef108"
-  ]
+  ],
+  "copyWords": 354
 }

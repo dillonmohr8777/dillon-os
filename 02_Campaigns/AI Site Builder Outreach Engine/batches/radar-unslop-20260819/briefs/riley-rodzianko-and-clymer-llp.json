@@ -10,6 +10,7 @@
   "address": "",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#b0c0d0",
     "ink": "#202080",
@@ -17,10 +18,11 @@
     "accent2": "#203080",
     "panel": "#9ba9c4",
     "deep": "#111146",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Bodoni Moda",
@@ -34,27 +36,68 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Riley Rodzianko & Clymer LLP — people at work",
-    "The process photograph for Riley Rodzianko & Clymer LLP — hands on the job",
-    "The conversation photograph for Riley Rodzianko & Clymer LLP — a real conversation",
-    "The place photograph for Riley Rodzianko & Clymer LLP — the place",
-    "The craft photograph for Riley Rodzianko & Clymer LLP — the craft"
+    "The people photograph for Riley Rodzianko & Clymer LLP: people at work",
+    "The process photograph for Riley Rodzianko & Clymer LLP: hands on the job",
+    "The conversation photograph for Riley Rodzianko & Clymer LLP: a real conversation",
+    "The place photograph for Riley Rodzianko & Clymer LLP: the place",
+    "The craft photograph for Riley Rodzianko & Clymer LLP: the craft"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
   "headline": "Riley Rodzianko & Clymer LLP",
-  "sub": "Riley Rodzianko & Clymer LLP in Quakertown. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "sub": "Riley Rodzianko & Clymer LLP in Quakertown. A private concept homepage: their mark when we have it, industry photography, and a clearer visit path.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "A real consultation",
+    "Documents in the room",
+    "You call their office"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Riley Rodzianko & Clymer LLP in Quakertown. Private concept preview."
+  "offerings": [
+    {
+      "title": "The conversation",
+      "body": "Riley Rodzianko & Clymer LLP is counsel in a room, not a marble-column stock photo."
+    },
+    {
+      "title": "The work",
+      "body": "Files, listening, the next step written down."
+    },
+    {
+      "title": "The office",
+      "body": "A place you can actually visit. Hours stay official."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Reach them",
+      "body": "Phone and the official site are the path. Nothing here invents a retainer."
+    },
+    {
+      "title": "Sit down",
+      "body": "A consultation looks like two people at a table, not a skyline mural."
+    },
+    {
+      "title": "Leave with a next step",
+      "body": "What they handle is their language. We keep their nouns when harvest has them."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.rrccpa.com/"
+    }
+  ],
+  "story": "Riley Rodzianko & Clymer LLP gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Riley Rodzianko & Clymer LLP is counsel in a room, not a marble-column stock photo.",
+  "storyMore": "Phone and the official site are the path. Nothing here invents a retainer. A consultation looks like two people at a table, not a skyline mural.",
+  "featureBody": "Files, listening, the next step written down. A place you can actually visit. Hours stay official.",
+  "workHeading": "Counsel that looks like the actual office.",
+  "galleryHeading": "People in the work.",
+  "storyHeading": "A firm with a name you can say out loud.",
+  "featureHeading": "Close on the meeting, not the slogan.",
+  "contactHeading": "Start the conversation.",
+  "closing": "Riley Rodzianko & Clymer LLP should feel like an office you can call today.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Riley Rodzianko & Clymer LLP in Quakertown. Private concept preview.",
+  "wordCount": 358
 }

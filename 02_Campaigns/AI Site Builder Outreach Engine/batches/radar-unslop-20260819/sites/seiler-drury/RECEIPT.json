@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://sdarc.com/",
   "city": "Norristown",
+  "rerender": true,
   "hashes": [
     "2c6612c061c747a52f7d60f0bd3e2b1068581a02b96d98379907d8f86bdf3003",
     "fcf4850846616ee3a58e2be6b86c6de5eec947465a46c434c05838ba94118b97",
     "877cf65b0b7b92dee21d1534b26bd9f6626540d63628518eb2e58cdc08efa114",
     "cbe00f3d0fe21152e8d6d937265b03d64c524eb86b01dd69936934f6d07f520d",
     "baee42e751f4bcb36c16cabe7dfad90740cfb3045f97c5c7da468fb9e5b047b0"
-  ]
+  ],
+  "copyWords": 336
 }

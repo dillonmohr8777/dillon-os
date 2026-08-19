@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 3,
   "sourceCount": 3,
   "officialPhotos": 3,
   "genFills": 0,
-  "hasLogo": false,
   "url": "http://franciskaufmanhouse.com/",
   "city": "Address",
+  "rerender": true,
   "hashes": [
     "eee85dba19dc191c882cb9012ec9509b2590d3f8ad1157b11aad200e37947bc3",
     "f342715c6a03ed8dc051ca106730b96a809e3ac0a9b3fa7def43c67a5bc0bb2d",
     "9c34c7d81b4abe4c07ee25be2e5a0f615f9f523c5e24f26b0e173b7c42dc9d90",
     "da4dbe289ff2bacf66c737bcdcc6a1ce5a834bbcff1f204f807cf8306e1743d8",
     "1e6ab5415b755255a5c4393edd62b55e21eeb5ed5a22c3749f2702e2582ff6b4"
-  ]
+  ],
+  "copyWords": 360
 }

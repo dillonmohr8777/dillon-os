@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 9,
   "sourceCount": 9,
   "officialPhotos": 9,
   "genFills": 0,
-  "hasLogo": true,
   "url": "http://www.legacyjewelers.net/",
   "city": "Schnecksville",
+  "rerender": true,
   "hashes": [
     "58607102573f451c655e994a651c253a3359433f2b2d9bb3806ad0ebe4831ca2",
     "8df83832435e37bada1ad39f780dbd1bafa744406c2ca4d0ace5d432d80e175d",
     "74d293148ff23d64adfba63a27fdced937b4ae4cb18ad367b3144f1cc7492618",
     "91b98dff484ca50c90e9366c8a96884affeaf4f77e2b4db112b5fb51d799ed62",
     "7728156dfe76fbe67f40772d746be5faa2c8db8e29a0acb0a4f2c23e7031b586"
-  ]
+  ],
+  "copyWords": 330
 }

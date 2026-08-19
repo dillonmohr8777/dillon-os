@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://www.borsellolandscaping.com/landscape-services-avondale-pa/",
   "city": "Borsello Landscaping",
+  "rerender": true,
   "hashes": [
     "55ba4668f434c4c90807007953559e71c526c0515b827e5031f1461fe256bd54",
     "ec81dad19805d3ff9b456ac6f0f10d2753739d71883a996654cd2c4e99aa7229",
     "7857269a1b916af2a25ec4c51451176b1aaacddaf966956523fbb80c5290d037",
     "1d60a90839a7c61e9b092cc00cd50104da5da44aeaa50769312655863b9fe7e8",
     "2998721fa989e3c1497f987a316359172a5474b4f9450f3d0dfc39302228efb5"
-  ]
+  ],
+  "copyWords": 336
 }

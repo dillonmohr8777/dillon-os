@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 7,
   "sourceCount": 7,
   "officialPhotos": 2,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.field1post.com/",
   "city": "Havertown",
+  "rerender": true,
   "hashes": [
     "cdd2776afdd5d2608703da33055d3cc6cda3246884e57934c4cdac74f74cc9fb",
     "4f8a5d519c6a54ee83b36aae44e175509869d0dd48d0d678cb20670638fee407",
     "ab178873084c1c37bffd85f75d42e7b71636cb1c572049d6b70d48809d13da62",
     "2bf18caded2bf731022e14e9544182de15cac4ec8d5539f22888ffc10650e261",
     "c4f8185f804120d1f780dccf45a3fdd09344d17e0afc0d7583a141422caa154c"
-  ]
+  ],
+  "copyWords": 361
 }

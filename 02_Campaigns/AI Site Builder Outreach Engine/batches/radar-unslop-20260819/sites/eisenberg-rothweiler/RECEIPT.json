@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 10,
   "sourceCount": 10,
   "officialPhotos": 10,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.1634legal.com/",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "094afbe0d571ca091e1339a2929c946e39e6a6f356c5db23769f601dbe8ba6c0",
     "e85045ab9c26fdde9a604fb95b94e6a51486e837151cd383f7da7a01d0b4a206",
     "3661bbb19de8c008cd836077c75b8b05b3b18e678a53aad204a1f96cb80aa833",
     "faf940c501f20ec11b5cd7e817a60eb3ca878c01c78425e357851665f1147831",
     "a1236f46f162d4ac624f53437e955467ccf30bc76385657595b9ad4b68c0f8f2"
-  ]
+  ],
+  "copyWords": 317
 }

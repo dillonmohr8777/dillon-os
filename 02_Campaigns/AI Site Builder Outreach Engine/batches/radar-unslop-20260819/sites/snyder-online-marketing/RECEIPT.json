@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 4,
   "sourceCount": 4,
   "officialPhotos": 4,
   "genFills": 0,
-  "hasLogo": false,
   "url": "https://www.snyderonlinemarketing.com/",
   "city": "Doylestown",
+  "rerender": true,
   "hashes": [
     "dbb6a52eb604896b9b12ef2cc452cfb6aee6206e263e478f27369043a703e1fb",
     "2847a6d71d96c25f45a0bd8d145596153d58a917b7d7e737ceaea0aace054c91",
     "aae4d6f79fe6db64fadbcda47446d3b61ed0a00793c7575cb87421d697035e09",
     "aa5520c8fbfdadfb05cd19544533fe21865f71201e28f6c7ba72849d44f93f13",
     "44c82f501a82c766a8408d772c67e12bf4bd1b59f5d3886c803151a90296bed2"
-  ]
+  ],
+  "copyWords": 312
 }

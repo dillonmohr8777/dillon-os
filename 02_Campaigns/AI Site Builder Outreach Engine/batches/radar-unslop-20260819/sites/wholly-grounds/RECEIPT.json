@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 18,
   "sourceCount": 18,
   "officialPhotos": 18,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://whollygroundscoffeehouse.com/",
   "city": "Oxford",
+  "rerender": true,
   "hashes": [
     "4f6e604a54f353cd6d1603daf19cd712193d52a03e5d8078da73b4ad48dcc862",
     "80f21323a40d54dd917c1e4635392d1bf14d70ad381f119e50e224c4cbbce76b",
     "6ee0448ee0cb8410b115588ef125ab7a000dfe0efa601c4181cf8082a075d2cc",
     "8cc51482f177f8919a51714453ff0d8f96f4570e2367ac3dee6b85dde62df2f8",
     "fccf16171d3c9547eba2a56f48bfaf8d404c256f012522c2fed37ab9a97cd5c2"
-  ]
+  ],
+  "copyWords": 352
 }

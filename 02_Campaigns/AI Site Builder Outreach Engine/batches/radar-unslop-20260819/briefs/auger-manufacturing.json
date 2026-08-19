@@ -2,14 +2,15 @@
   "slug": "auger-manufacturing",
   "name": "Auger Manufacturing Specialists",
   "city": "Frazer",
-  "category": "Professional",
-  "family": "professional",
+  "category": "Trade",
+  "family": "trade",
   "mode": "people",
   "url": "http://www.augermfgspec.com/",
   "phone": "800-544-1199",
   "address": "",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#e0b0a0",
     "ink": "#111820",
@@ -17,44 +18,91 @@
     "accent2": "#708090",
     "panel": "#cea79d",
     "deep": "#090d11",
-    "onPaper": "#111820",
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
-    "display": "Bodoni Moda",
-    "text": "Urbanist",
-    "displayFallback": "Georgia,serif"
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
   },
-  "attitude": "editorial",
+  "attitude": "industrial",
   "marquee": [
     "Auger Manufacturing Specialists",
     "Frazer",
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Auger Manufacturing Specialists — people at work",
-    "The process photograph for Auger Manufacturing Specialists — hands on the job",
-    "The conversation photograph for Auger Manufacturing Specialists — a real conversation",
-    "The place photograph for Auger Manufacturing Specialists — the place",
-    "The craft photograph for Auger Manufacturing Specialists — the craft"
+    "The people photograph for Auger Manufacturing Specialists: people at work",
+    "The process photograph for Auger Manufacturing Specialists: hands on the job",
+    "The conversation photograph for Auger Manufacturing Specialists: a real conversation",
+    "The place photograph for Auger Manufacturing Specialists: the place",
+    "The craft photograph for Auger Manufacturing Specialists: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "Auger Manufacturing Specialists",
   "sub": "STANDARD AUGER SIZES TYPICAL PRODUCTS HANDLED BY AUGERS",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "Job site first",
+    "Hands on the trade",
+    "Estimates stay official"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Auger Manufacturing Specialists in Frazer. Private concept preview."
+  "offerings": [
+    {
+      "title": "The job",
+      "body": "Auger Manufacturing Specialists is tools, vans, and people on the work. Not a stock handshake."
+    },
+    {
+      "title": "The crew",
+      "body": "Loading materials, talking with a homeowner, finishing the install."
+    },
+    {
+      "title": "The ask",
+      "body": "Call for an estimate. We don't invent a price."
+    }
+  ],
+  "experience": [
+    {
+      "title": "See the trade",
+      "body": "The homepage should look like the work they actually do."
+    },
+    {
+      "title": "Talk to the lead",
+      "body": "A conversation at the door or in the shop, not a fake testimonial wall."
+    },
+    {
+      "title": "Book the visit",
+      "body": "Hours and service area stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.augermfgspec.com/"
+    },
+    {
+      "title": "Call",
+      "body": "800-544-1199",
+      "href": "tel:8005441199"
+    }
+  ],
+  "story": "STANDARD AUGER SIZES TYPICAL PRODUCTS HANDLED BY AUGERS Auger Manufacturing Specialists gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Auger Manufacturing Specialists.",
+  "storyMore": "The homepage should look like the work they actually do. A conversation at the door or in the shop, not a fake testimonial wall.",
+  "featureBody": "Loading materials, talking with a homeowner, finishing the install. Call for an estimate. We don't invent a price.",
+  "workHeading": "The work, on the job.",
+  "galleryHeading": "People doing the trade.",
+  "storyHeading": "A crew with a name on the van.",
+  "featureHeading": "Close on the hands.",
+  "contactHeading": "Ask for the visit.",
+  "closing": "Auger Manufacturing Specialists should look like a crew you would let in the house.",
+  "navWork": "HOME",
+  "navStory": "PRODUCT LINE",
+  "navVisit": "CONTACT",
+  "primaryCtaFallback": "ORDERING",
+  "description": "Auger Manufacturing Specialists in Frazer. Private concept preview.",
+  "wordCount": 325
 }

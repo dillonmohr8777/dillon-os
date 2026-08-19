@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.candcsuperseal.com/",
   "city": "Bensalem",
+  "rerender": true,
   "hashes": [
     "2c820d5411114be5049662d046c230c06baa1c3216a46b5ee50d6270520ac9be",
     "84692b1d6d3bfa383af28cccc11561ebf6d4c95b78c82a95f3ea9aef62508b8d",
     "3634589099e37f3a1cc0e42a67a366964c48178ceee3b3ffe2d4c2d11512ddf6",
     "e0a40c799a09b5f5af6b02ee3643f74930849000a2fd3cd38ba254000e5434eb",
     "fa51d99b1740453a3d6847b9712b537305fc92d0e8eec1658bcd7d56c01ca1f0"
-  ]
+  ],
+  "copyWords": 346
 }

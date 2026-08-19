@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
   "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 3,
   "sourceCount": 3,
   "officialPhotos": 3,
   "genFills": 0,
-  "hasLogo": false,
   "url": "https://euphorianailbar.com/Euphoria_Nail_Bar_-_Welcome%21.html",
   "city": "Address",
+  "rerender": true,
   "hashes": [
     "445b18eff9f5d93dc94b83bc7ed57d354d97b4db31fefe78d3e95448add4bb1b",
     "d79be377983831c31fc4908518eafde9417bf1f6beb3790935fc3ddd69788211",
     "5937eaee687b5bafe161482dae3c6b4940b8706941fbda217096e66d3f7c59ba",
     "a68cedc10bf1770bb909078131695344ad3e2ecb44ebb21625926de2fb8d51b3",
     "4eab4ca89718b75e82fdb02f4bc009cb2b6b401ec5265c5c0bf4b40031a136fe"
-  ]
+  ],
+  "copyWords": 312
 }

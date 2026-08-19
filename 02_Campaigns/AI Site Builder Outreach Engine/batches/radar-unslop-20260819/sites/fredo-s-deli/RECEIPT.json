@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 13,
   "sourceCount": 13,
   "officialPhotos": 8,
   "genFills": 5,
-  "hasLogo": true,
   "url": "http://fredosdeli.com/",
   "city": "Pittsburgh",
+  "rerender": true,
   "hashes": [
     "7592da5877d2e3ee0594df8b8f98cb14986e0fffdda80327c00a55c079be34a1",
     "599b762034d801607b34ab54bc7fa0e0409d801070a6bae5170017436b582762",
     "28fde3c89d0897a57e6043dbd4816b9f80dd77477787731dd4ced6b375a89abd",
     "00ab64f6771fe9a17815a275ac2a5abac9af2c6d7edd4838ce33a280ff5861f8",
     "a8e4b49451a9b0e7a63763fef6cbba31b5881edea15977c6bb6cb790b95d3cac"
-  ]
+  ],
+  "copyWords": 392
 }

@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 6,
   "sourceCount": 6,
   "officialPhotos": 6,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.trendautotrader.com/",
   "city": "Quakertown",
+  "rerender": true,
   "hashes": [
     "a4cffde598764fa47bfd939c7aa477c3964c6c332980bd316b2b631449ce4dff",
     "e49bd512f37215bb3c3d5dee3e6dff75478318f2d52199de6c1fa1411bf5c552",
     "bc777bbdc1844cbdf728eec7d635dc3d14a78dc3b7938d880ca76929f0e07391",
     "50df780bf6518f1698a1a8bd9fe563a3ce349023a57b49a993bb0a097c404356",
     "ca1ede6dbfc1e7202eec0950de9cdb0b2de421307b5454f09e31a099fbf8991a"
-  ]
+  ],
+  "copyWords": 368
 }

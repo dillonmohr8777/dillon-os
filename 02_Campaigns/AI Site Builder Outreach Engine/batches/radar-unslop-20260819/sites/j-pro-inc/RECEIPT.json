@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": false,
   "url": "https://www.j-propools.com/",
   "city": "Bridgeport",
+  "rerender": true,
   "hashes": [
     "7de5709133861158a5c31ed4ebf0b65650ad386969aaffecfed4eb4b7b2234ab",
     "8ed40e2adf365bbd1f7cded76dac273197779a27a57d0f538daa0fc9d3a5c5d9",
     "52bd5600260c537d6c51957a6c08dadcc0e98ce1bff3d0288ec758246c8095ab",
     "81287afd1e3853fb2c9c9726c7396e22f642c3ff3833d090d6f700ad627b740c",
     "bb118585712ebab141151b49461af6448a6adf8126a6feb4210cc54f10131213"
-  ]
+  ],
+  "copyWords": 341
 }

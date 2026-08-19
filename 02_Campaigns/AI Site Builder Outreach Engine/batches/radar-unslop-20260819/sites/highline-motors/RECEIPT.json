@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": false,
   "url": "https://www.highlineaston.com/",
   "city": "Aston",
+  "rerender": true,
   "hashes": [
     "1342ed1a5755f31e98a49331bccaca661620ba6d8f1a9395d11e324dc3105d7c",
     "ea1b5606c70f99de70aefbc1b884ee09b5fe71489ad65fd476ce9154b310898d",
     "132380d2bcd72da232b7d4b36bcb01fbf40f7cdc2e3b9414e1f061c7c5b141ca",
     "6f7b5af591215b34c8cb31d5e8771ac7951a9e419cc2c19548c228dcff6aee77",
     "bc286d02e9a8eb67f4e296d00f87cf7c2dd5fa7e8092d5ae4bf8bc822e3a7d5b"
-  ]
+  ],
+  "copyWords": 357
 }

@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 6,
   "sourceCount": 6,
   "officialPhotos": 1,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://www.holidayhair.com/locations/nearme/haircut/PA/QUAKERTOWN/1465-21-W-BROAD-ST/19300",
-  "city": "Quakertown",
+  "city": "QUAKERTOWN",
+  "rerender": true,
   "hashes": [
     "193f8451e2b32160ea2e72ec1e8be40530da9f628788771ed42e9fd9ad3a44b5",
     "aac5ab215017ea7204ad8f241bddde55b02aa062aebcb0f378a471acfb07a296",
     "98b9e556b3c3f02aabb2814f191ad997cb742ca6760a26c5c1abdafc3995906c",
     "0d77766507172615ad22af08df5250dde94141210cf20c5e011b4a1e40e56633",
     "bc4fc053833b4ba2d28ed85d4ba266c5fccc5571b0d92d5b054f7872148e4947"
-  ]
+  ],
+  "copyWords": 322
 }

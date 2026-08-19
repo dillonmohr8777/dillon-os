@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 4,
   "sourceCount": 4,
   "officialPhotos": 4,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://customitsolutions.com/",
   "city": "Address",
+  "rerender": true,
   "hashes": [
     "72ee168b1819e6643181c29258f6229bf03c98183ebf60e0eaa1e331cab81be3",
     "437f9b34a84b580e4e5b6bd1d6713356c9df619437ef4c7c58e459193bc5d6dd",
     "047309271c10d7c93b4bd1ae7a45d95e219a48daada7bca942d64898e1d536f7",
     "132298bff8ab7b3d62ad059b0391f1e5547e9875647e0fe5f1b07b751039e567",
     "44fe76a6080f5caecf465d057de7cbe55931684c4f1efe9ded3a5e1bc47bcca3"
-  ]
+  ],
+  "copyWords": 362
 }

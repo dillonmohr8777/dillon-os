@@ -10,17 +10,19 @@
   "address": "",
   "hours": "",
   "logo": false,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
+    "paper": "#F3F4F6",
+    "ink": "#111827",
+    "accent": "#1D4ED8",
+    "accent2": "#93C5FD",
+    "panel": "#DCE3EE",
+    "deep": "#0B1220",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Bodoni Moda",
@@ -34,27 +36,68 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for EPAM Philadelphia — people at work",
-    "The process photograph for EPAM Philadelphia — hands on the job",
-    "The conversation photograph for EPAM Philadelphia — a real conversation",
-    "The place photograph for EPAM Philadelphia — the place",
-    "The craft photograph for EPAM Philadelphia — the craft"
+    "The people photograph for EPAM Philadelphia: people at work",
+    "The process photograph for EPAM Philadelphia: hands on the job",
+    "The conversation photograph for EPAM Philadelphia: a real conversation",
+    "The place photograph for EPAM Philadelphia: the place",
+    "The craft photograph for EPAM Philadelphia: the craft"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
   "headline": "EPAM Philadelphia",
-  "sub": "EPAM Philadelphia in Philadelphia. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "sub": "EPAM Philadelphia in Philadelphia. A private concept homepage: their mark when we have it, industry photography, and a clearer visit path.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The work is specific",
+    "People at the tools",
+    "You reach them directly"
   ],
+  "offerings": [
+    {
+      "title": "The work",
+      "body": "EPAM Philadelphia is a specialist shop: people doing the job, not a skyline mural."
+    },
+    {
+      "title": "The conversation",
+      "body": "A plan on the table. Their nouns, when harvest has them."
+    },
+    {
+      "title": "The next step",
+      "body": "Call or visit the official source. Nothing here invents a retainer."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Find them",
+      "body": "Name, place, and a clear path above the fold."
+    },
+    {
+      "title": "See the work",
+      "body": "A workstation, a meeting, hands on the tools of the trade."
+    },
+    {
+      "title": "Follow up",
+      "body": "Hours and scope stay official."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.epam.com/"
+    }
+  ],
+  "story": "EPAM Philadelphia gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. EPAM Philadelphia is a specialist shop: people doing the job, not a skyline mural.",
+  "storyMore": "Name, place, and a clear path above the fold. A workstation, a meeting, hands on the tools of the trade.",
+  "featureBody": "A plan on the table. Their nouns, when harvest has them. Call or visit the official source. Nothing here invents a retainer.",
   "workHeading": "The work, in the room where it happens.",
   "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "EPAM Philadelphia in Philadelphia. Private concept preview."
+  "storyHeading": "A studio or office with a name.",
+  "featureHeading": "Close on the craft.",
+  "contactHeading": "Start the conversation.",
+  "closing": "EPAM Philadelphia should feel like a team you can actually reach.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "EPAM Philadelphia in Philadelphia. Private concept preview.",
+  "wordCount": 330
 }

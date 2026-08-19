@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://jarmansalesandservice.com/",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "1c516d6caa0f52c24bfaa402bed18716aa3c68454b447226c2b6404fb6dfe415",
     "3bbda6aaca749cff590c485adb74715c132bf3dcfd4765cb223545bcfc45e634",
     "b2e9e39128c438d092ff157efbba2b0929789a0f4e50dfc2f41e7490bf55b21d",
     "3b5d8b8e2eb300a61146eb925244a7e0cc95dd5b63716732942e942a3c81b976",
     "5ba6c2fb1323ec2dbe31291f811ce2546957ad365c8e3b9c6681a1d81ef53422"
-  ]
+  ],
+  "copyWords": 412
 }

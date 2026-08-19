@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://cecarparts.com/\nCall log:\n  - navigating to \"https://cecarparts.com/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://cecarparts.com",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "86bcce830e8feb5c81d8654efb8b4809865c2344f6b0585f3113ba732ba456f0",
     "2dcf2f26741af82214d138b0ffffba605029cd856be459291eb81f2dea98493e",
     "5cda0d4dfebfc31876161ba4416916d32aec1bb975b39628504d2c45a4e73da5",
     "7c1a3f2ecc8287c54bd49b143335e756f44e0325d6a1e5b561b9c7a6d3c7a397",
     "561f75f7e32755549d48f986c7632b86c824bb7d007b5853134e36a90019838b"
-  ]
+  ],
+  "copyWords": 362
 }

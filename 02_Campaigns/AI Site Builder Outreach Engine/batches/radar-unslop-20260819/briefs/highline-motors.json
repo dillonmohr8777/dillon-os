@@ -10,6 +10,7 @@
   "address": "",
   "hours": "",
   "logo": false,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#EEF0F3",
     "ink": "#14181E",
@@ -17,10 +18,11 @@
     "accent2": "#F2C14E",
     "panel": "#D5DAE0",
     "deep": "#10141A",
-    "onPaper": "#111820",
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Bodoni Moda",
@@ -34,27 +36,68 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Highline Motors Aston — people at work",
-    "The process photograph for Highline Motors Aston — hands on the job",
-    "The conversation photograph for Highline Motors Aston — a real conversation",
-    "The place photograph for Highline Motors Aston — the place",
-    "The craft photograph for Highline Motors Aston — the craft"
+    "The people photograph for Highline Motors Aston: people at work",
+    "The process photograph for Highline Motors Aston: hands on the job",
+    "The conversation photograph for Highline Motors Aston: a real conversation",
+    "The place photograph for Highline Motors Aston: the place",
+    "The craft photograph for Highline Motors Aston: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "Highline Motors Aston",
-  "sub": "Highline Motors Aston in Aston. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "500 Internal Server Error",
+  "sub": "Highline Motors Aston in Aston. A private concept homepage: their mark when we have it, industry photography, and a clearer visit path.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Highline Motors Aston in Aston. Private concept preview."
+  "offerings": [
+    {
+      "title": "The shop",
+      "body": "Highline Motors Aston is a working floor: cars, tools, and people who know the bay."
+    },
+    {
+      "title": "The visit",
+      "body": "Advisor and driver in the lane. Not a handshake in a glass lobby."
+    },
+    {
+      "title": "The next step",
+      "body": "Hours, estimates, and parts stay on their official site."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.highlineaston.com/"
+    }
+  ],
+  "story": "Highline Motors Aston gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Highline Motors Aston is a working floor: cars, tools, and people who know the bay.",
+  "storyMore": "The homepage should look like a shop you can drive to. Inspection, the hood, the tablet in the lane.",
+  "featureBody": "Advisor and driver in the lane. Not a handshake in a glass lobby. Hours, estimates, and parts stay on their official site.",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Highline Motors Aston should feel like a shop you can trust from the first scroll.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Highline Motors Aston in Aston. Private concept preview.",
+  "wordCount": 357
 }

@@ -6,10 +6,11 @@
   "family": "dental",
   "mode": "people",
   "url": "https://www.alwaysdentalcare.com/",
-  "phone": "",
-  "address": "",
+  "phone": "484.392.7687",
+  "address": "1570 Egypt Rd #210, Phoenixville, Pennsylvania, 19460",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#a0d0f0",
     "ink": "#004070",
@@ -17,10 +18,11 @@
     "accent2": "#004070",
     "panel": "#89c7eb",
     "deep": "#00233d",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Fraunces",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Always Dental Care — people at work",
-    "The process photograph for Always Dental Care — hands on the job",
-    "The conversation photograph for Always Dental Care — a real conversation",
-    "The place photograph for Always Dental Care — the place",
-    "The craft photograph for Always Dental Care — the craft"
+    "The people photograph for Always Dental Care: people at work",
+    "The process photograph for Always Dental Care: hands on the job",
+    "The conversation photograph for Always Dental Care: a real conversation",
+    "The place photograph for Always Dental Care: the place",
+    "The craft photograph for Always Dental Care: the craft"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
-  "headline": "Always Dental Care",
-  "sub": "Always Dental Care in Phoenixville. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Family & Cosmetic Dentistry",
+  "sub": "Services Cosmetic Dentistry Dental Veneers",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The chair is calm",
+    "Hands on real care",
+    "You book with them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Always Dental Care in Phoenixville. Private concept preview."
+  "offerings": [
+    {
+      "title": "The visit",
+      "body": "Always Dental Care is about a real operatory, not a stock smile collage."
+    },
+    {
+      "title": "The team",
+      "body": "People who do the work: exam, cleaning, the conversation at the chair."
+    },
+    {
+      "title": "The next step",
+      "body": "Call or book on their official line. Nothing here invents an opening."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk in knowing who they are",
+      "body": "Name, place, and a clear call path above the fold."
+    },
+    {
+      "title": "See the room",
+      "body": "Treatment, reception, and careful hands. Not a handshake in an atrium."
+    },
+    {
+      "title": "Book with them",
+      "body": "Hours and insurance questions stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.alwaysdentalcare.com/"
+    },
+    {
+      "title": "Call",
+      "body": "484.392.7687",
+      "href": "tel:4843927687"
+    },
+    {
+      "title": "Find them",
+      "body": "1570 Egypt Rd #210, Phoenixville, Pennsylvania, 19460",
+      "href": "https://www.google.com/maps/search/?api=1&query=1570%20Egypt%20Rd%20%23210%2C%20Phoenixville%2C%20Pennsylvania%2C%2019460"
+    }
+  ],
+  "story": "Services Cosmetic Dentistry Dental Veneers General &#038; Family Dentistry Dental Crowns Review Directions Call Us Request Appointment 484.392.7687 1570 Egypt Rd #210 Phoenixville, PA 19460 (Behind WAWA, next to Hand & Stone Massage) Always Dental Care gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of.",
+  "storyMore": "Are you missing one or more of your natural teeth? Ask Dr. Nguyen about dental implants. Dental implants replace your tooth and root and become a permanent part of your smile.",
+  "featureBody": "Our team at Always Dental Care is thrilled to treat patients of all ages. We will provide you and your family with all of the dental care you need to reach healthy, functional smiles.",
+  "workHeading": "Care that looks like the actual chair.",
+  "galleryHeading": "People doing the work.",
+  "storyHeading": "A practice, not a template.",
+  "featureHeading": "Close on the skill.",
+  "contactHeading": "Start the visit.",
+  "closing": "Always Dental Care should feel easy to call before anyone scrolls twice.",
+  "navWork": "Home",
+  "navStory": "About Us",
+  "navVisit": "Contact",
+  "primaryCtaFallback": "Contact",
+  "description": "Always Dental Care in Phoenixville. Private concept preview.",
+  "wordCount": 354
 }

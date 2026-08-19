@@ -10,6 +10,7 @@
   "address": "2615 Byberry Rd Bensalem",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#d0f000",
     "ink": "#004060",
@@ -17,10 +18,11 @@
     "accent2": "#e0f000",
     "panel": "#d0f000",
     "deep": "#002334",
-    "onPaper": "#111820",
-    "onAccent": "#111820",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "border": "4px",
+    "radius": "0px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Syne",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for C&C Super Seal — people at work",
-    "The process photograph for C&C Super Seal — hands on the job",
-    "The conversation photograph for C&C Super Seal — a real conversation",
-    "The place photograph for C&C Super Seal — the place",
-    "The craft photograph for C&C Super Seal — the craft"
+    "The people photograph for C&C Super Seal: people at work",
+    "The process photograph for C&C Super Seal: hands on the job",
+    "The conversation photograph for C&C Super Seal: a real conversation",
+    "The place photograph for C&C Super Seal: the place",
+    "The craft photograph for C&C Super Seal: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "C&C SUPER SEAL &#8211; COMMERCIAL ASPHALT CONTRACTORS",
   "sub": "C&C SUPER SEAL &#8211; COMMERCIAL ASPHALT CONTRACTORS",
-  "offerings": [
-    "Asphalt Paving",
-    "Line Striping",
-    "Asphalt Milling"
-  ],
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "Job site first",
+    "Hands on the trade",
+    "Estimates stay official"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "C&C Super Seal in Bensalem. Private concept preview."
+  "offerings": [
+    {
+      "title": "Asphalt Paving",
+      "body": "We specialize in commercial asphalt paving, asphalt milling, asphalt milling rentals, commercial sealcoating, line striping, thermoplastic line striping, snow removal and other asphalt services. Ge in touch with someone from our team to see how we can help you! We proudly serve Philadelphia, Bucks, Montgomery, New Jersey, & surrounding areas."
+    },
+    {
+      "title": "Line Striping",
+      "body": "Parking lot asphalt paving Roadway / street asphalt paving Parking lot repaving"
+    },
+    {
+      "title": "Asphalt Milling",
+      "body": "Strip malls Shopping centers Industrial centers / industrial parks + much more"
+    }
+  ],
+  "experience": [
+    {
+      "title": "See the trade",
+      "body": "The homepage should look like the work they actually do."
+    },
+    {
+      "title": "Talk to the lead",
+      "body": "A conversation at the door or in the shop, not a fake testimonial wall."
+    },
+    {
+      "title": "Book the visit",
+      "body": "Hours and service area stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.candcsuperseal.com/"
+    },
+    {
+      "title": "Call",
+      "body": "+12672239906",
+      "href": "tel:12672239906"
+    },
+    {
+      "title": "Find them",
+      "body": "2615 Byberry Rd Bensalem",
+      "href": "https://www.google.com/maps/search/?api=1&query=2615%20Byberry%20Rd%20Bensalem"
+    }
+  ],
+  "story": "C&C SUPER SEAL &#8211; COMMERCIAL ASPHALT CONTRACTORS We specialize in commercial asphalt paving, asphalt milling, asphalt milling rentals, commercial sealcoating, line striping, thermoplastic line striping, snow removal and other asphalt services. Ge in touch with someone from our team to see how we can help you! We proudly serve Philadelphia, Bucks, Montgomery, New Jersey, & surrounding areas. Parking lot asphalt paving Roadway / street asphalt paving Parking lot repaving C&C Super Seal gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a.",
+  "storyMore": "Strip malls Shopping centers Industrial centers / industrial parks + much more",
+  "featureBody": "We offer full service line striping services that include, but not limited to:",
+  "workHeading": "The work, on the job.",
+  "galleryHeading": "People doing the trade.",
+  "storyHeading": "A crew with a name on the van.",
+  "featureHeading": "Close on the hands.",
+  "contactHeading": "Ask for the visit.",
+  "closing": "C&C Super Seal should look like a crew you would let in the house.",
+  "navWork": "(267) 223-9906",
+  "navStory": "info@candcsuperseal.com",
+  "navVisit": "Facebook Profile",
+  "primaryCtaFallback": "Facebook Profile",
+  "description": "C&C Super Seal in Bensalem. Private concept preview.",
+  "wordCount": 346
 }

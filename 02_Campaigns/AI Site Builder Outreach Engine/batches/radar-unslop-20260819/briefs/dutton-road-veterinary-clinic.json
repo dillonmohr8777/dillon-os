@@ -6,10 +6,11 @@
   "family": "veterinary",
   "mode": "people",
   "url": "http://duttonroadvetclinic.com/",
-  "phone": "",
+  "phone": "215-331-2968",
   "address": "",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#f0d0e0",
     "ink": "#b00070",
@@ -17,10 +18,11 @@
     "accent2": "#a00070",
     "panel": "#e7b2d0",
     "deep": "#60003d",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Fraunces",
@@ -34,27 +36,73 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Dutton Road Veterinary Clinic — people at work",
-    "The process photograph for Dutton Road Veterinary Clinic — hands on the job",
-    "The conversation photograph for Dutton Road Veterinary Clinic — a real conversation",
-    "The place photograph for Dutton Road Veterinary Clinic — the place",
-    "The craft photograph for Dutton Road Veterinary Clinic — the craft"
+    "The people photograph for Dutton Road Veterinary Clinic: people at work",
+    "The process photograph for Dutton Road Veterinary Clinic: hands on the job",
+    "The conversation photograph for Dutton Road Veterinary Clinic: a real conversation",
+    "The place photograph for Dutton Road Veterinary Clinic: the place",
+    "The craft photograph for Dutton Road Veterinary Clinic: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "Dutton Road Veterinary Clinic",
-  "sub": "Dutton Road Veterinary Clinic in Philadelphia. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Call To Make An Appointment Today! 215-331-2968",
+  "sub": "--> Welcome to Dutton Road Veterinary Clinic & Surgical Facility Dutton Road Veterinary Clinic is a full-service, state-of-the art veterinary clinic and surgical facility located in Northeast Philadelphia, PA. Our caring and knowledgable staff are committed to the health and.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "Animals first",
+    "A calm exam",
+    "You confirm with the clinic"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Dutton Road Veterinary Clinic in Philadelphia. Private concept preview."
+  "offerings": [
+    {
+      "title": "The exam",
+      "body": "Dutton Road Veterinary Clinic is a clinic for pets. The preview shows the work, not clip-art paws."
+    },
+    {
+      "title": "The team",
+      "body": "Veterinarians and techs at the table, with the animal in the frame."
+    },
+    {
+      "title": "The visit",
+      "body": "Reception, the leash, the next appointment. Details stay official."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive with your pet",
+      "body": "The homepage should feel like a clinic, not a stock farm."
+    },
+    {
+      "title": "See the care",
+      "body": "Exam table, gentle hands, a tech who is actually working."
+    },
+    {
+      "title": "Call the desk",
+      "body": "Hours and emergencies belong on their official line."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://duttonroadvetclinic.com/"
+    },
+    {
+      "title": "Call",
+      "body": "215-331-2968",
+      "href": "tel:2153312968"
+    }
+  ],
+  "story": "--> Welcome to Dutton Road Veterinary Clinic & Surgical Facility Dutton Road Veterinary Clinic is a full-service, state-of-the art veterinary clinic and surgical facility located in Northeast Philadelphia, PA. Our caring and knowledgable staff are committed to the health and well-being of your pet. We offer low-cost vaccines, spays and neuters, general and specialty surgeries and specialize in pet dentistry. Call To Make An Appointment Today! 215-331-2968 We are a non-profit organization and offer our services and surgical procedures at very affordable prices. Accepted Methods of payment: Cash, Check, Visa, Mastercard, Discover and American Express. All services are payable at time rendered. PLEASE NOTE: An.",
+  "storyMore": "The homepage should feel like a clinic, not a stock farm. Exam table, gentle hands, a tech who is actually working.",
+  "featureBody": "Veterinarians and techs at the table, with the animal in the frame. Reception, the leash, the next appointment. Details stay official.",
+  "workHeading": "Care that looks like a real clinic.",
+  "galleryHeading": "Animals and the people who treat them.",
+  "storyHeading": "A hospital for pets, named.",
+  "featureHeading": "Hands on the animal, not the slogan.",
+  "contactHeading": "Reach the clinic.",
+  "closing": "Dutton Road Veterinary Clinic should make the next appointment feel obvious.",
+  "navWork": "Web2Business Inc.",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Dutton Road Veterinary Clinic in Philadelphia. Private concept preview.",
+  "wordCount": 344
 }

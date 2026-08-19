@@ -10,6 +10,7 @@
   "address": "1440 Pottstown Pike West Chester",
   "hours": "mond icon Faceted diam",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#F3F7FB",
     "ink": "#123044",
@@ -17,10 +18,11 @@
     "accent2": "#38BDF8",
     "panel": "#D9E8F0",
     "deep": "#0B2A3A",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Syne",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Radiance Dental — people at work",
-    "The process photograph for Radiance Dental — hands on the job",
-    "The conversation photograph for Radiance Dental — a real conversation",
-    "The place photograph for Radiance Dental — the place",
-    "The craft photograph for Radiance Dental — the craft"
+    "The people photograph for Radiance Dental: people at work",
+    "The process photograph for Radiance Dental: hands on the job",
+    "The conversation photograph for Radiance Dental: a real conversation",
+    "The place photograph for Radiance Dental: the place",
+    "The craft photograph for Radiance Dental: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "Trusted & Comfortable Care",
   "sub": "Looking for a trusted dentist in West Chester, PA? Radiance Dental offers comprehensive family, cosmetic & emergency dental services. Schedule today!",
-  "offerings": [
-    "Your Dentist In West Chester, PA",
-    "No Insurance? No Problem!",
-    "Family Dentistry"
-  ],
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The chair is calm",
+    "Hands on real care",
+    "You book with them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Radiance Dental in Looking for a trusted dentist in West Chester. Private concept preview."
+  "offerings": [
+    {
+      "title": "Your Dentist In West Chester, PA",
+      "body": "Radiance Dental is about a real operatory, not a stock smile collage."
+    },
+    {
+      "title": "No Insurance? No Problem!",
+      "body": "People who do the work: exam, cleaning, the conversation at the chair."
+    },
+    {
+      "title": "Family Dentistry",
+      "body": "Call or book on their official line. Nothing here invents an opening."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk in knowing who they are",
+      "body": "Name, place, and a clear call path above the fold."
+    },
+    {
+      "title": "See the room",
+      "body": "Treatment, reception, and careful hands. Not a handshake in an atrium."
+    },
+    {
+      "title": "Book with them",
+      "body": "Hours and insurance questions stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://radiancedentalpa.com/"
+    },
+    {
+      "title": "Call",
+      "body": "(610) 436-4088",
+      "href": "tel:6104364088"
+    },
+    {
+      "title": "Find them",
+      "body": "1440 Pottstown Pike West Chester",
+      "href": "https://www.google.com/maps/search/?api=1&query=1440%20Pottstown%20Pike%20West%20Chester"
+    }
+  ],
+  "story": "Radiance Dental gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Radiance Dental is about a real operatory, not a stock smile collage.",
+  "storyMore": "Name, place, and a clear call path above the fold. Treatment, reception, and careful hands. Not a handshake in an atrium.",
+  "featureBody": "People who do the work: exam, cleaning, the conversation at the chair. Call or book on their official line. Nothing here invents an opening.",
+  "workHeading": "Care that looks like the actual chair.",
+  "galleryHeading": "People doing the work.",
+  "storyHeading": "A practice, not a template.",
+  "featureHeading": "Close on the skill.",
+  "contactHeading": "Start the visit.",
+  "closing": "Radiance Dental should feel easy to call before anyone scrolls twice.",
+  "navWork": "Accessibility",
+  "navStory": "Home",
+  "navVisit": "Contact",
+  "primaryCtaFallback": "Request an Appointment",
+  "description": "Radiance Dental in Looking for a trusted dentist in West Chester. Private concept preview.",
+  "wordCount": 355
 }

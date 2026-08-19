@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://udisandconnorthodontics.com/\nCall log:\n  - navigating to \"https://udisandconnorthodontics.com/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://udisandconnorthodontics.com",
   "city": "Jenkintown",
+  "rerender": true,
   "hashes": [
     "d15b046c262d5f17b9397e68fa0c207cc426302ba3393bdc99822a8d634e9f7a",
     "47c224e86963db38b9962a186449988ca319da2e3921d302208e5804c11a2713",
     "dad9c4e38a4b787f4b00ceaafc4b967deaedefa3f211fe3078d5581a2c862049",
     "ac08adcc65a2bc80ed17b93a6d3ea9178c85e8f2a77037cbbd6c35aeba4349e8",
     "c53b14cbd5126c31d69c1a215fda2c5ad816f188628d94d400e816eacf0136ed"
-  ]
+  ],
+  "copyWords": 350
 }

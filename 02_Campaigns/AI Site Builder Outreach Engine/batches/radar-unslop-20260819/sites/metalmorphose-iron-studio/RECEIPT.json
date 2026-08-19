@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://metalmorphoseironworks.com/",
   "city": "Kennett Square",
+  "rerender": true,
   "hashes": [
     "aeae3d090f73500d3d49c86bf8ff706fa5f1fe62edfc2c8e18462d42871556d7",
     "b69efdb830167843b2d920e3b525785ed7a84d4493d56ebee342c8a05887d8d2",
     "d404cccdf557cf5988775a35887877aa74e3a086e19486606bcd3a99480bbb01",
     "7b2cb58fdafe015bae855f09eadc70f8eecd2fbf29a69d4c492cde1e96d96b01",
     "a4cd39c02f0ad7f08b7f719842160d6a6fc7472268e3f615a6e86f6dddb85ce1"
-  ]
+  ],
+  "copyWords": 333
 }

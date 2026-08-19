@@ -10,6 +10,7 @@
   "address": "",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#EEF0F3",
     "ink": "#14181E",
@@ -17,10 +18,11 @@
     "accent2": "#F2C14E",
     "panel": "#D5DAE0",
     "deep": "#10141A",
-    "onPaper": "#111820",
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Newsreader",
@@ -34,27 +36,68 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Philadelphia Garage — people at work",
-    "The process photograph for Philadelphia Garage — hands on the job",
-    "The conversation photograph for Philadelphia Garage — a real conversation",
-    "The place photograph for Philadelphia Garage — the place",
-    "The craft photograph for Philadelphia Garage — the craft"
+    "The people photograph for Philadelphia Garage: people at work",
+    "The process photograph for Philadelphia Garage: hands on the job",
+    "The conversation photograph for Philadelphia Garage: a real conversation",
+    "The place photograph for Philadelphia Garage: the place",
+    "The craft photograph for Philadelphia Garage: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "THE ABSOLUTE AUTHORITY IN GARAGE MAKEOVERS.",
-  "sub": "Since the start of Philadelphia Garage, our specialty has been garage organization and garage floors in West Chester, PA. We are known for our commercial and residential garage enhancements – completed by.",
-  "offerings": [
-    "Garage Floors and Garage Organization IN WEST CHESTER, PA",
-    "First-Rate Garage Flooring",
-    "MATERIALS OUR TEAM USES:"
-  ],
+  "sub": "Since the start of Philadelphia Garage, our specialty has been garage organization and garage floors in West Chester, PA. We are known for our commercial and residential garage enhancements, completed by industry-leading specialists. We lead the garage enhancement industry by.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Philadelphia Garage in West Chester. Private concept preview."
+  "offerings": [
+    {
+      "title": "Garage Floors and Garage Organization IN WEST CHESTER, PA",
+      "body": "Our team is passionate about pursuing every detail behind your unique design, we guarantee to give you the results that will turn your garage dream into reality!"
+    },
+    {
+      "title": "First-Rate Garage Flooring",
+      "body": "First-Rate Garage Flooring We offer high-grade materials to create beautiful, durable garage floors that will serve you well for years. Our team will work with you to find a personalized solution for you, depending on functionality and style, we have you covered."
+    },
+    {
+      "title": "MATERIALS OUR TEAM USES:",
+      "body": "Designed to withstand the harsh Pennsylvania weather"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://philadelphiagarage.com/"
+    }
+  ],
+  "story": "Since the start of Philadelphia Garage, our specialty has been garage organization and garage floors in West Chester, PA. We are known for our commercial and residential garage enhancements, completed by industry-leading specialists. We lead the garage enhancement industry by providing innovative and personalized solutions to each of our customers. Our team is passionate about pursuing every detail behind your unique design, we guarantee to give you the results that will turn your garage dream into reality! First-Rate Garage Flooring We offer high-grade materials to create beautiful, durable garage floors that will serve you well for years. Our team will work with you to find a personalized solution for you,.",
+  "storyMore": "Designed to withstand the harsh Pennsylvania weather",
+  "featureBody": "Best for long-lasting, anti-skid commercial use",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Philadelphia Garage should feel like a shop you can trust from the first scroll.",
+  "navWork": "FREE ESTIMATE",
+  "navStory": "SCHEDULE NOW",
+  "navVisit": "Contact",
+  "primaryCtaFallback": "FREE ESTIMATE",
+  "description": "Philadelphia Garage in West Chester. Private concept preview.",
+  "wordCount": 378
 }

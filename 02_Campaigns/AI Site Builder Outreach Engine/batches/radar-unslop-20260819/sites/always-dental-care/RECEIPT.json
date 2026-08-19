@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 7,
   "sourceCount": 7,
   "officialPhotos": 2,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.alwaysdentalcare.com/",
   "city": "Phoenixville",
+  "rerender": true,
   "hashes": [
     "df83ad21aa8fc8947a6a6aa92c13167d7f0a1c4a9beaf1e345157099770dee99",
     "2b12b127305e6d4095864356a65ede296c76a23486036e7cc0198e0f5107cd6b",
     "3a469e06f6432408d9779ad6a9d27722c339824ccdeb1e9d65e5620df5649b7b",
     "ece9656d5099a8878b49a0be7da9bf9d5b5b2c5f4e67f78adc875fe921c78126",
     "8f796536228f129400eba067a7c5726ef02bb109a083fdfda387efbbb876aca1"
-  ]
+  ],
+  "copyWords": 354
 }

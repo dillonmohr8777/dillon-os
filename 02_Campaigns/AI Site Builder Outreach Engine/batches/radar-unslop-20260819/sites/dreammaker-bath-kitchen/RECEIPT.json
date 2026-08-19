@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 6,
   "sourceCount": 6,
   "officialPhotos": 1,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.dreammaker-remodel.com/chester-county/",
-  "city": "Chester County",
+  "city": "Chester Springs",
+  "rerender": true,
   "hashes": [
     "6d16da1117b0209e78fbcf30898c434ba57e8f42cbcbd093bf6747dea2a0b321",
     "ab91a2be09ebb2e5a034359ad61e3133722b477fbd62b3afa6f5fc652ce23d82",
     "55dc8e8070585a35349e64a50ddd69ab69204e16f5a29204a17cf62c6e8494b0",
     "5a2b7e26d749ddb900abf3ba2243b123eabc438c64b50a1cf8e6a1fe56d89233",
     "39eb72168858a926ad638f80e046a7a26368af70dc45fe0e9114dc10b4a462f0"
-  ]
+  ],
+  "copyWords": 456
 }

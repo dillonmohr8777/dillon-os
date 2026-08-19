@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://floralandhardyofskippack.com/",
   "city": "Skippack",
+  "rerender": true,
   "hashes": [
     "126dbdce2e42d0235d233c5604bc98010023ecd5f492e7ace2ec7f6376aee8fe",
     "df84146d71bba5115df5f4eef1fb21879a3ec1fce904e3465ec229f0b9936e76",
     "0ab659be2114e1d63cd80394a69f397466ef4ea028f6fd041bdededc0b8083ad",
     "ecdc6c197b8ec594e3fe8e491d292614b65134f91fe1a29679d5a35c862f7e0b",
     "8f45e5636b3b0346021d5a39283413d6e76355858145b097a0abf10601212b07"
-  ]
+  ],
+  "copyWords": 381
 }

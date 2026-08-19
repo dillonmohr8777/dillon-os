@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": true,
   "url": "http://www.rrccpa.com/",
   "city": "Quakertown",
+  "rerender": true,
   "hashes": [
     "2ddb2af863ef9c207a205987a568fbaacdb9d497633016b357f56c1d5b79c923",
     "85fb48cdb041b32779854cc925d24c0020db05dc3d2d1d27f8f57a69a80d5966",
     "3c4ab943df7375941819ada1eb55af79ddcf3cfa0e9b4ba8bf2b964d4c12b840",
     "bd9d234ab16c2c4f1337885bd2135066a2e0f34fce525505fcd99ee36ab9340f",
     "e72609593fb24ec8f3ae248ebf197b1578926d9dea940fd532968012692b6ef8"
-  ]
+  ],
+  "copyWords": 358
 }

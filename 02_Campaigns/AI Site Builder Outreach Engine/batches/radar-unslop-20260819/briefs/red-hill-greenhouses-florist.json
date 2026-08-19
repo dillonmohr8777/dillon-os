@@ -6,21 +6,23 @@
   "family": "retail",
   "mode": "people",
   "url": "https://www.redhillgreenhouse.com/",
-  "phone": "",
-  "address": "",
+  "phone": "(215) 679-7847",
+  "address": "1006 Main St, Red Hill, PA, 18076",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
+    "paper": "#F5F1EA",
+    "ink": "#1A1612",
+    "accent": "#B45309",
+    "accent2": "#F5D0A6",
+    "panel": "#E8DCCB",
+    "deep": "#22180E",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Syne",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Red Hill Greenhouses & Florist — people at work",
-    "The process photograph for Red Hill Greenhouses & Florist — hands on the job",
-    "The conversation photograph for Red Hill Greenhouses & Florist — a real conversation",
-    "The place photograph for Red Hill Greenhouses & Florist — the place",
-    "The craft photograph for Red Hill Greenhouses & Florist — the craft"
+    "The people photograph for Red Hill Greenhouses & Florist: people at work",
+    "The process photograph for Red Hill Greenhouses & Florist: hands on the job",
+    "The conversation photograph for Red Hill Greenhouses & Florist: a real conversation",
+    "The place photograph for Red Hill Greenhouses & Florist: the place",
+    "The craft photograph for Red Hill Greenhouses & Florist: the craft"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
-  "headline": "Red Hill Greenhouses & Florist",
-  "sub": "Red Hill Greenhouses & Florist in Red Hill. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Flowers to celebrate strength, beauty and equality",
+  "sub": "THE ITEMS YOU SEE HERE NEED TO BE ORDERED IN ADVANCE AND ARE ONLY AVAILABLE IN OUR DELIVERY AREA RED HILL, PENNSBURG, EAST GREENVILLE, PALM, & HEREFORD. WE MUST HAVE A PHONE NUMBER FOR THE RECIPIENT TO DO THE DELIVERY! WE DO NOT DELIVER AFTER 5PM.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Red Hill Greenhouses & Florist in Red Hill. Private concept preview."
+  "offerings": [
+    {
+      "title": "Shop Women's Equality Day",
+      "body": "Only three add on items can be selected at a time. If you wish to change your selection, please set one of your currently selected items back to default."
+    },
+    {
+      "title": "Birthday Flowers",
+      "body": "At Red Hill Greenhouse & Florist we want to provide our customers with clear pricing information. By providing your zip/postal code, you will see the pricing including all mandatory fees for your delivery area."
+    },
+    {
+      "title": "Our Most Popular Bouquets",
+      "body": "Hours stay official. Nothing here invents inventory."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.redhillgreenhouse.com/"
+    },
+    {
+      "title": "Call",
+      "body": "(215) 679-7847",
+      "href": "tel:2156797847"
+    },
+    {
+      "title": "Find them",
+      "body": "1006 Main St, Red Hill, PA, 18076",
+      "href": "https://www.google.com/maps/search/?api=1&query=1006%20Main%20St%2C%20Red%20Hill%2C%20PA%2C%2018076"
+    }
+  ],
+  "story": "THE ITEMS YOU SEE HERE NEED TO BE ORDERED IN ADVANCE AND ARE ONLY AVAILABLE IN OUR DELIVERY AREA RED HILL, PENNSBURG, EAST GREENVILLE, PALM, & HEREFORD. WE MUST HAVE A PHONE NUMBER FOR THE RECIPIENT TO DO THE DELIVERY! WE DO NOT DELIVER AFTER 5PM. Only three add on items can be selected at a time. If you wish to change your selection, please set one of your currently selected items back to default. At Red Hill Greenhouse & Florist we want to provide our customers with clear pricing information. By providing your zip/postal code, you will see the pricing including all mandatory fees for your delivery area.",
+  "storyMore": "The homepage should look like the shop, not a catalog template. An associate in the frame, handling the product.",
+  "featureBody": "A conversation over the thing they sell, not a mall stock set. Hours stay official. Nothing here invents inventory.",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Red Hill Greenhouses & Florist should feel like a counter you would walk up to.",
+  "navWork": "(215) 679-7847",
+  "navStory": "Log In",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Red Hill Greenhouses & Florist in Red Hill. Private concept preview.",
+  "wordCount": 391
 }

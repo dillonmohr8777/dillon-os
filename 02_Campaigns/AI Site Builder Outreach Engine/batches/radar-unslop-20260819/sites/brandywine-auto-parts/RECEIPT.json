@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 3,
   "sourceCount": 3,
   "officialPhotos": 3,
   "genFills": 0,
-  "hasLogo": false,
   "url": "http://www.brandywine-ap.com/",
   "city": "Chester",
+  "rerender": true,
   "hashes": [
     "198e180c9d9acebda5997aed27e8be4b9776d40741e95bc7cfd736343779f72d",
     "185f3466bb20f430a5c033a200fde93bc363e26a43c421df313d8241db976a75",
     "95bdc121660959f86ff1507140a29d0f070c28a4f15610e5a7ffa09c05ad2813",
     "d34b329beaf22763498bb888e0007520592d4e0af51e633f53a06b952e9a4e19",
     "365f0c9ff436511a1ff2dc2aab8eaf42a5638e9fbabd7d03531b62f00f5902c7"
-  ]
+  ],
+  "copyWords": 350
 }

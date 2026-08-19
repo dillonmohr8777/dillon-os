@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "page.goto: net::ERR_CONNECTION_REFUSED at https://banbanasianbistro.net/\nCall log:\n  - navigating to \"https://banbanasianbistro.net/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://banbanasianbistro.net",
   "city": "Abington",
+  "rerender": true,
   "hashes": [
     "c86b196c233430cd558f27da29d212e8ae682d2c8cde916ae098c43d6d73a0f7",
     "b9a963f0710c515a268f80758402bf90a78163d00224f32ca42b3fa70e7dc00a",
     "23cf66efbc3ddbd4b3dbbe82bb0997949bf48dedc1243f8c0e6254c46ee00514",
     "f5466091469f0b7a2c11fc0744d54d108976cfbbf79e2fc5e0ffbe80ff146705",
     "8bd2719073ff9c064eaa7dbfde03845c78023498ec88ff834f525836219b5c9a"
-  ]
+  ],
+  "copyWords": 383
 }

@@ -6,21 +6,23 @@
   "family": "legal",
   "mode": "people",
   "url": "https://carcrashinjuryfirm.com/philadelphia-auto-accident-injury-attorney/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "+17864717844",
+  "address": "1417 Point Breeze Ave",
+  "hours": "sation for economic and non-economic dam",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
+    "paper": "#e0c0c0",
+    "ink": "#801010",
+    "accent": "#801010",
+    "accent2": "#701010",
+    "panel": "#d2a7a7",
+    "deep": "#460808",
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Syne",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Philadelphia Auto Accident Injury Attorney — people at work",
-    "The process photograph for Philadelphia Auto Accident Injury Attorney — hands on the job",
-    "The conversation photograph for Philadelphia Auto Accident Injury Attorney — a real conversation",
-    "The place photograph for Philadelphia Auto Accident Injury Attorney — the place",
-    "The craft photograph for Philadelphia Auto Accident Injury Attorney — the craft"
+    "The people photograph for Philadelphia Auto Accident Injury Attorney: people at work",
+    "The process photograph for Philadelphia Auto Accident Injury Attorney: hands on the job",
+    "The conversation photograph for Philadelphia Auto Accident Injury Attorney: a real conversation",
+    "The place photograph for Philadelphia Auto Accident Injury Attorney: the place",
+    "The craft photograph for Philadelphia Auto Accident Injury Attorney: the craft"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
   "headline": "Philadelphia Auto Accident Injury Attorney",
-  "sub": "Philadelphia Auto Accident Injury Attorney in Philadelphia. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "sub": "With so much at stake, it’s important to have a dedicated legal team on your side, one that understands Pennsylvania’s car insurance and personal injury laws. Our experienced attorneys strive to ensure you receive fair compensation for your injuries, pain and suffering, and.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "A real consultation",
+    "Documents in the room",
+    "You call their office"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Philadelphia Auto Accident Injury Attorney in Philadelphia. Private concept preview."
+  "offerings": [
+    {
+      "title": "Top Attorneys Near You in Philly Call Now (786) 471-7844",
+      "body": "1417 Point Breeze Ave, Philadelphia, PA 19146"
+    },
+    {
+      "title": "Our Office",
+      "body": "Philadelphia is a bustling metropolis famous for its rich history, cultural diversity, and a constantly evolving urban landscape. However, the dense population and busy roadways also make car accidents a frequent occurrence. With so many personal injury law firms available, it can be challenging to decide who to trust. Here’s what sets us apart:"
+    },
+    {
+      "title": "Why Choose Our Philadelphia Auto Accident Law Firm?",
+      "body": "Local Expertise Our attorneys have deep roots in Philadelphia. We know the city’s geography, major arteries like I-95 and Route 611 (Broad Street), and common high-risk intersections such as Roosevelt Boulevard. This local familiarity helps us effectively investigate accidents, analyze traffic patterns, and gather the evidence needed to build strong cases."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Reach them",
+      "body": "Phone and the official site are the path. Nothing here invents a retainer."
+    },
+    {
+      "title": "Sit down",
+      "body": "A consultation looks like two people at a table, not a skyline mural."
+    },
+    {
+      "title": "Leave with a next step",
+      "body": "What they handle is their language. We keep their nouns when harvest has them."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://carcrashinjuryfirm.com/philadelphia-auto-accident-injury-attorney/"
+    },
+    {
+      "title": "Call",
+      "body": "+17864717844",
+      "href": "tel:17864717844"
+    },
+    {
+      "title": "Find them",
+      "body": "1417 Point Breeze Ave",
+      "href": "https://www.google.com/maps/search/?api=1&query=1417%20Point%20Breeze%20Ave"
+    }
+  ],
+  "story": "With so much at stake, it’s important to have a dedicated legal team on your side, one that understands Pennsylvania’s car insurance and personal injury laws. Our experienced attorneys strive to ensure you receive fair compensation for your injuries, pain and suffering, and other losses. We believe that every accident victim deserves compassionate support, prompt attention, and aggressive representation, whether you need help negotiating a settlement or taking your case to court. 1417 Point Breeze Ave, Philadelphia, PA 19146 Philadelphia is a bustling metropolis famous for its rich history, cultural diversity, and a constantly evolving urban landscape. However, the dense population and busy roadways also make.",
+  "storyMore": "Local Expertise Our attorneys have deep roots in Philadelphia. We know the city’s geography, major arteries like I-95 and Route 611 (Broad Street), and common high-risk intersections such as Roosevelt Boulevard. This local familiarity helps us effectively investigate accidents, analyze traffic patterns, and gather the evidence needed to build strong cases.",
+  "featureBody": "Focused Practice in Auto Accidents While some firms handle a broad range of legal matters, we concentrate specifically on auto accidents and personal injury claims . This focus gives us a keen insight into the ever-changing nuances of Pennsylvania insurance laws, liability rules, and courtroom procedures. We apply this targeted knowledge to develop a custom.",
+  "workHeading": "Counsel that looks like the actual office.",
+  "galleryHeading": "People in the work.",
+  "storyHeading": "A firm with a name you can say out loud.",
+  "featureHeading": "Close on the meeting, not the slogan.",
+  "contactHeading": "Start the conversation.",
+  "closing": "Philadelphia Auto Accident Injury Attorney should feel like an office you can call today.",
+  "navWork": "Skip to content",
+  "navStory": "Home",
+  "navVisit": "Contact",
+  "primaryCtaFallback": "Contact",
+  "description": "Philadelphia Auto Accident Injury Attorney in Philadelphia. Private concept preview.",
+  "wordCount": 520
 }

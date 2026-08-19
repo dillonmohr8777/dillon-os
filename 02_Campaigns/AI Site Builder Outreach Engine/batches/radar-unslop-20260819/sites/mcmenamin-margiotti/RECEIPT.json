@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 7,
   "sourceCount": 7,
   "officialPhotos": 2,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://buxmontlaw.com/",
   "city": "Colmar",
+  "rerender": true,
   "hashes": [
     "3bceb0e44fea947ad9457f4a63ca6a9c796b01a68e85df6fb3ba2efd3d43f427",
     "9b6b95419a54d0f3325e395a0c57fb08426c9a8841cc4ce6e9c7ee31f437bc98",
     "60c6d4e3a8dfcb7e9e02b18beb0aaf3a1c1d3d7c32cf63a0998ffa5e7d159b8c",
     "a5fc74c39a8865a6b91d8dd30fc7e954cb14f7f7033d8ba58f7fec3778e469f2",
     "4b1cdf008dd40f946938e0c618aab87fc714fd257e0726207d26504143ee12d5"
-  ]
+  ],
+  "copyWords": 402
 }

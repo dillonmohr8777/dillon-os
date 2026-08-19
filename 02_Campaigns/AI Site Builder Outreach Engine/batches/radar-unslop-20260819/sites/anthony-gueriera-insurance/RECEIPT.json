@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://broomallinsuranceagency.com/\nCall log:\n  - navigating to \"https://broomallinsuranceagency.com/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://broomallinsuranceagency.com",
   "city": "Broomall",
+  "rerender": true,
   "hashes": [
     "284e129cb511cc497e0918b335d829c242c2cd41bfbbaf7d6dd152c173fdfad8",
     "e13cd79188b80ce9929cbbd580027276d23e2a74beea59d75c8d731df1ccce9a",
     "48843134b8cb5463cc36d3b6d63b0f170e85d40c32fdd323d9fd9bc285bd3df8",
     "2384c30071631165c63973fcb7fc6248c3c46eda6c515d066ffba92789f0d6ce",
     "abde9acbd03b6d675bd879ff15792fc783da99cffb58f2724f24a09a9566bb83"
-  ]
+  ],
+  "copyWords": 361
 }

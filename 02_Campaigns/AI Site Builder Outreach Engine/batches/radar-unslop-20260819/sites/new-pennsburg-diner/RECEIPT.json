@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 12,
   "sourceCount": 12,
   "officialPhotos": 7,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://pennsburgdiner.com/",
   "city": "Pennsburg",
+  "rerender": true,
   "hashes": [
     "a1325aa47ea0121ffa19865ba0e16d65daa02e911f8ad9c7adea9cb5e5f2baf2",
     "00a8d8f8abb227d4c9e25de7d57affc25555bf8933c86ce508f67e0e5a7a4a58",
     "97535c1cf07d641abc4addc58fb702409306c2c157f76b73f3c9467fb15b7560",
     "2a5722a50e1dfc58760c061f3b83bf3d3ede92f3f95ef1ebdecc89493d0c5b7b",
     "317db578a098516c9e23cc5e01493cc30f15f823f742b2e59de996016ba1fda0"
-  ]
+  ],
+  "copyWords": 338
 }

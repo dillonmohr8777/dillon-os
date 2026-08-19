@@ -8,8 +8,9 @@
   "url": "https://katanapittsburgh.com/",
   "phone": "",
   "address": "",
-  "hours": "Mon-Sat: 11:00am - 3:00pm Wed: Closed",
+  "hours": "Mon-Sat: 11:00am - 3:00pm",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#f0e0a0",
     "ink": "#e01020",
@@ -17,10 +18,11 @@
     "accent2": "#f01020",
     "panel": "#edc28e",
     "deep": "#7b0811",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Fraunces",
@@ -43,18 +45,59 @@
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "Free delivery",
   "sub": "OPEN HOURS Lunch Time Mon-Sat: 11:00am - 3:00pm Wed: Closed Dinner Time Mon-Thur: 4:30pm - 10:00pm Wed: Closed Fri & Sat: 4:30pm - 11:00pm Sun: 12:00noon - 9:30pm",
-  "offerings": [
-    "Confirm today's menu and hours on the official source.",
-    "Confirm today's menu and hours on the official source.",
-    "Confirm today's menu and hours on the official source."
-  ],
   "points": [
-    "The plate comes first",
-    "Kitchen in motion",
-    "A table you can trust"
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
   ],
+  "offerings": [
+    {
+      "title": "The plate",
+      "body": "Katana Pittsburgh is a kitchen first. The preview leads with food, not a stock dining room."
+    },
+    {
+      "title": "The pass",
+      "body": "Hands, heat, and the ticket. You see the work behind the dish."
+    },
+    {
+      "title": "The room",
+      "body": "A table worth sitting down for. Reservations and tonight's menu stay with them."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://katanapittsburgh.com/"
+    }
+  ],
+  "story": "OPEN HOURS Lunch Time Mon-Sat: 11:00am - 3:00pm Wed: Closed Dinner Time Mon-Thur: 4:30pm - 10:00pm Wed: Closed Fri & Sat: 4:30pm - 11:00pm Sun: 12:00noon - 9:30pm Katana Pittsburgh gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job,.",
+  "storyMore": "The homepage should make the food obvious before anyone hunts a PDF menu. Prep, the pass, and the plate. Not random people in a sunlit atrium.",
+  "featureBody": "Hands, heat, and the ticket. You see the work behind the dish. A table worth sitting down for. Reservations and tonight's menu stay with them.",
   "workHeading": "What comes out of this kitchen.",
   "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
   "contactHeading": "Make the next visit easy.",
-  "description": "Katana Pittsburgh in Dormont. Private concept preview."
+  "closing": "Katana Pittsburgh should feel like a place you can taste from the first screen.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact",
+  "description": "Katana Pittsburgh in Dormont. Private concept preview.",
+  "wordCount": 378
 }

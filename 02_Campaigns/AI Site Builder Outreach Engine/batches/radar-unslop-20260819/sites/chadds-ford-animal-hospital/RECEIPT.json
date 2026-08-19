@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
-  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 4,
   "sourceCount": 4,
   "officialPhotos": 4,
   "genFills": 0,
-  "hasLogo": true,
   "url": "http://www.chaddsfordanimalhospital.vetsuite.com/",
   "city": "Chadds Ford",
+  "rerender": true,
   "hashes": [
     "13a4f308e3ab6ab4a56ecd163b3c69eaf6e38102fbad227c5a47ad4f290692c2",
     "39ac729a377d4b3503d71395da3e53cb7c852123bd2871ae4615e8f185b15cf5",
     "cadc19c49e21787bfc4bf99bfc8306d2feefe9909d777ffd2758899135b4d7a7",
     "e8026fc99f7af5b752efaf2420a6ee436647cb18fe9888ea04aefa68e21b4dff",
     "f9d7fa9a3e4623894b139d3f3f47fc9b83f3dce7a2c87f9740fe5d3395881aeb"
-  ]
+  ],
+  "copyWords": 326
 }

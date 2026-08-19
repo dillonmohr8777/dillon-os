@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 5,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.blshoes.com/",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "8f8840d1b9c937263484060122278772a4745705abddffc9c4589a2727d3cede",
     "95e9a53e18733090c8f7ced3965c576a9ac106f129b64d5d0296e3fe67c196d1",
     "a26f2da525f79787f4ef207be1584541f479670f30a9139370334f4ed32ea621",
     "66136880cd4421979f9ba2ac02fed321dd02be50f4ee4c239d2b14ae072b186c",
     "85b4bc3bb92eeae2a5d077e4ac6645e5dccf6d664e122b89f6556fd9e727f24a"
-  ]
+  ],
+  "copyWords": 294
 }

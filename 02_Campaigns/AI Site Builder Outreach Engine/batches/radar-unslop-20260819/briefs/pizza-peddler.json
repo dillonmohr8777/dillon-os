@@ -10,6 +10,7 @@
   "address": "1177 Wilmington Pike West Chester",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#f0f0d0",
     "ink": "#705030",
@@ -17,10 +18,11 @@
     "accent2": "#f0e0d0",
     "panel": "#f0f0d0",
     "deep": "#3d2c1a",
-    "onPaper": "#111820",
-    "onAccent": "#111820",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Newsreader",
@@ -42,19 +44,70 @@
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "Pizza Peddler",
-  "sub": "a#vlb{display:none}.style6 {color: #FFFFFF} .style7 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; } .style8 {font-size: 10px} a:link { color: #EEE4BA; } a:visited { color: #EEE4BA; } a:hover {.",
-  "offerings": [
-    "Delivery All day every day! Minimum delivery order $10",
-    "Pizza Peddler is located at the corner of Route 926 & Route 202 in the Westtown Village Shopping Center in West Chester, PA. Our Pizza is.",
-    "Pizza Peddler is BYOB and serves pizza, strombolis, low carbohydrate meals, pasta, hoagies, grinders, salads, burgers, sandwiches, steak."
-  ],
+  "sub": "a#vlb{display:none}.style6 {color: #FFFFFF} .style7 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; } .style8 {font-size: 10px} a:link { color: #EEE4BA; } a:visited { color: #EEE4BA; } a:hover { color: #FFFFFF; } a:active { color: #EEE4BA; } Routes 926 &.",
   "points": [
-    "The plate comes first",
-    "Kitchen in motion",
-    "A table you can trust"
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
   ],
+  "offerings": [
+    {
+      "title": "The plate",
+      "body": "Pizza Peddler is a kitchen first. The preview leads with food, not a stock dining room."
+    },
+    {
+      "title": "The pass",
+      "body": "Hands, heat, and the ticket. You see the work behind the dish."
+    },
+    {
+      "title": "The room",
+      "body": "A table worth sitting down for. Reservations and tonight's menu stay with them."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.pizzapeddler202.com/"
+    },
+    {
+      "title": "Call",
+      "body": "926 202 1177",
+      "href": "tel:9262021177"
+    },
+    {
+      "title": "Find them",
+      "body": "1177 Wilmington Pike West Chester",
+      "href": "https://www.google.com/maps/search/?api=1&query=1177%20Wilmington%20Pike%20West%20Chester"
+    }
+  ],
+  "story": "a#vlb{display:none}.style6 {color: #FFFFFF} .style7 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; } .style8 {font-size: 10px} a:link { color: #EEE4BA; } a:visited { color: #EEE4BA; } a:hover { color: #FFFFFF; } a:active { color: #EEE4BA; } Routes 926 & 202 1177 Wilmington Pike West Chester, PA 19382 Fax: 610-399-8311 Delivery All day every day! Minimum delivery order $10 Pizza Peddler is located at the corner of Route 926 & Route 202 in the Westtown Village Shopping Center in West Chester, PA. Our Pizza is made fresh daily from the finest ingredients. The unique and delicious homemade sauce compliments our fresh dough, topped with the tastiest Wisconsin cheese. Along with your favorite.",
+  "storyMore": "Pizza Peddler is BYOB and serves pizza, strombolis, low carbohydrate meals, pasta, hoagies, grinders, salads, burgers, sandwiches, steak sandwiches, breakfast, desserts and more. We deliver to Thorton, West Chester, Concordville, Westtown, Birmingham, Chaddsford, West Goshen, Glen Mills and other surrounding areas.",
+  "featureBody": "Home | Menus | Order Now | Catering | Facilities | Community | Location",
   "workHeading": "What comes out of this kitchen.",
   "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
   "contactHeading": "Make the next visit easy.",
-  "description": "Pizza Peddler in West Chester. Private concept preview."
+  "closing": "Pizza Peddler should feel like a place you can taste from the first screen.",
+  "navWork": "Home",
+  "navStory": "Menus",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Order Now",
+  "description": "Pizza Peddler in West Chester. Private concept preview.",
+  "wordCount": 387
 }

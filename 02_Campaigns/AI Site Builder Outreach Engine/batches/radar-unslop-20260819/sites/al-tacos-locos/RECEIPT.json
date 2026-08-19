@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
   "browser": "ok",
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": false,
   "url": "https://altacoslocos.com/",
   "city": "Jenkintown",
+  "rerender": true,
   "hashes": [
     "7d4b54046cae4063f6fa3727379d925be88169370952bb0d5037b3e43c64253f",
     "ff2ca7de683c4bbd5fd38a5f1c6e105d029a8ef8105a5b48a1d4d6b73f3392f3",
     "76c6670dca4bb52c9c15906e2366c47a54b3b47946df7eb720215d2ce80d8f45",
     "3656041e44cfc5a4ce46592f516b01ac267aa793589b7c7a6f24536a00548859",
     "4c183d8eb994f8617e146c8055132f06428000ec76b6d570aa7715c2baa207c7"
-  ]
+  ],
+  "copyWords": 380
 }

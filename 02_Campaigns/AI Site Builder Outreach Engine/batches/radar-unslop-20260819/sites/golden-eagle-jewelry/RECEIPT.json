@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 6,
   "sourceCount": 6,
   "officialPhotos": 1,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://golden-eagle-jewelry.reservio.com/",
-  "city": "Philadelphia",
+  "city": "19140",
+  "rerender": true,
   "hashes": [
     "015db0c6e810278f4500b04ce2f8e25c7af5a0bf52bce12875ac558be3b74662",
     "2317a8548342b74a7ed16689df561c7fcbf07574f3bf3ca8dc4aa5c41e63289f",
     "8923a01d9a35812161901dadf249afb9a60daf3b54c662ff75209817cb5f2a53",
     "5cbd209aa5a57ce63a8f2cc39181e8838dd8a76a05ccd98ee091c1d70839cb8f",
     "ea1b45a04ff02acfd82e18b8b17c3ae615b758e7442fa7c885d1b01cf5c47044"
-  ]
+  ],
+  "copyWords": 290
 }

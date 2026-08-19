@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://www.epam.com/",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "a439c126fa83a547fcf956700341ffa2b4c173bab024b9d2955f548f4d6be69f",
     "b39a79f346db8c83cc70daa47acd13a43bdd0325aeb45bdb68744c33a3a359e2",
     "e04a06e52b9bc19d0d72ee07d276aaa04da2df7346d8a85e449bf1b411796add",
     "34d226be36741d067d9ca8b439cd9fcbd4a5934431e22d656ac42c90678d8033",
     "c831c79a5d7f11a53b7f7baa4f2795084447def41380cb6ed496a4a7d1d976a0"
-  ]
+  ],
+  "copyWords": 330
 }

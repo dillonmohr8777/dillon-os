@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
-  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 4,
   "sourceCount": 4,
   "officialPhotos": 4,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://reardondental.com/",
   "city": "Exton",
+  "rerender": true,
   "hashes": [
     "9b8e2f92bc2f1ce94628401c8cecf171d21fe31192f6bdecbfde36e6038eacd9",
     "1f3bb2b8e3aca1c6e03d9c0a51c56bc467e687f13ce5b659a46a0a39a6bbb6b1",
     "f36ef73665771dd7748aaaed6d5b0c980af5bb35bba89dd2b987dfca369ff2d8",
     "368042f4d2248dc6b0dfc59a07c835da9cc13f6fdc4750a5563a1b0c3a0ea4f2",
     "e6803e6750cf50a2b4d101a89b2666d860dddf06dd35258c7eee86f489e7a551"
-  ]
+  ],
+  "copyWords": 344
 }

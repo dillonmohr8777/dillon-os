@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 13,
   "sourceCount": 13,
   "officialPhotos": 8,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://harryshotdogs.com/",
   "city": "Sadsburyville",
+  "rerender": true,
   "hashes": [
     "b884370cbe4eb7b7b111d8121075ea693763b187a19a2ff90b7b679524cf4c65",
     "a9955e557818c5e22ff41a696cc80c28df3a879ef5760826daeb0424423cb13f",
     "2a31f1aa4c0eb0880220a9649908166116c6293c06a1bd569d710ae618ec3f3c",
     "6ff9c86e7b7366e48f19a69d817aa225acc9f9fbe556dd3de963622931bfb92a",
     "581e38dcb8a6110042de3fcaa517cc5f53af975fc17a6f73701a156571d864ed"
-  ]
+  ],
+  "copyWords": 350
 }

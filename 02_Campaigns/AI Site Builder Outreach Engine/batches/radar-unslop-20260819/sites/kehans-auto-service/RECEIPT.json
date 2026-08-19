@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://kehansautoservice.com/\nCall log:\n  - navigating to \"https://kehansautoservice.com/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://kehansautoservice.com",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "da62f94ae2e601fd69235d6d7fbc37931aaeae7b6dab17dcc03b1f2161a19328",
     "1d2e67668c9d94fb408359a8e70c2adb56b27edc2e75c729687c109c66b566e1",
     "946039c69603ab9ddf5ff48b0d3097ff9c18725fca7ed761ccbeddb5020a78ed",
     "7474f06c211046c395c3552d1aad395f0ccac3556930b9c16b0d810f09a7a99d",
     "2064db7eb2047a8744bd845a87e9909cf1b0520284498edaab3b5a6ba60c9022"
-  ]
+  ],
+  "copyWords": 356
 }

@@ -6,10 +6,11 @@
   "family": "fitness",
   "mode": "people",
   "url": "https://trainandnourish.com/",
-  "phone": "",
-  "address": "",
+  "phone": "+12677107744",
+  "address": "1621 East Passyunk Ave",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#f0d0d0",
     "ink": "#111820",
@@ -17,10 +18,11 @@
     "accent2": "#e0b0b0",
     "panel": "#f0d0d0",
     "deep": "#090d11",
-    "onPaper": "#111820",
-    "onAccent": "#111820",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
+    "onAccent": "#090909",
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Newsreader",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Train and Nourish — people at work",
-    "The process photograph for Train and Nourish — hands on the job",
-    "The conversation photograph for Train and Nourish — a real conversation",
-    "The place photograph for Train and Nourish — the place",
-    "The craft photograph for Train and Nourish — the craft"
+    "The people photograph for Train and Nourish: people at work",
+    "The process photograph for Train and Nourish: hands on the job",
+    "The conversation photograph for Train and Nourish: a real conversation",
+    "The place photograph for Train and Nourish: the place",
+    "The craft photograph for Train and Nourish: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "Train and Nourish",
-  "sub": "Train and Nourish in Philadelphia. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Your Go-To Philadelphia Personal Trainers for Women",
+  "sub": "Classes Group Fitness Classes East Passyunk",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The floor is real",
+    "Coaching in the room",
+    "You train with them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Train and Nourish in Philadelphia. Private concept preview."
+  "offerings": [
+    {
+      "title": "Are you Overwhelmed By…",
+      "body": "Personal Training Personal Training East Passyunk"
+    },
+    {
+      "title": "We’re the Perfect Personal Trainer in Philly for You, If You Are:",
+      "body": "Quick fix weight loss “solutions” that fail"
+    },
+    {
+      "title": "New to Weight Training",
+      "body": "Feeling stuck, unmotivated, or alone in your fitness journey"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk the floor",
+      "body": "The homepage should look like a gym or clinic you can enter."
+    },
+    {
+      "title": "Train with someone",
+      "body": "A coach in the frame, not a disconnected abs collage."
+    },
+    {
+      "title": "Come back",
+      "body": "Schedules stay official. Nothing here invents a class time."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://trainandnourish.com/"
+    },
+    {
+      "title": "Call",
+      "body": "+12677107744",
+      "href": "tel:12677107744"
+    },
+    {
+      "title": "Find them",
+      "body": "1621 East Passyunk Ave",
+      "href": "https://www.google.com/maps/search/?api=1&query=1621%20East%20Passyunk%20Ave"
+    }
+  ],
+  "story": "Classes Group Fitness Classes East Passyunk Personal Training Personal Training East Passyunk Quick fix weight loss “solutions” that fail Train and Nourish gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate,.",
+  "storyMore": "Feeling stuck, unmotivated, or alone in your fitness journey",
+  "featureBody": "If you’re just starting out, our female trainers and women’s only private studio will help you gain confidence and weight train with perfect form. Come as a beginner, and leave feeling like a goddess.",
+  "workHeading": "Training that looks like the floor.",
+  "galleryHeading": "People in the work.",
+  "storyHeading": "A gym or clinic with a name.",
+  "featureHeading": "Close on the spot.",
+  "contactHeading": "Start a session.",
+  "closing": "Train and Nourish should feel like a floor you would actually train on.",
+  "navWork": "Skip to content",
+  "navStory": "Personal Training",
+  "navVisit": "Book a Free Consult",
+  "primaryCtaFallback": "Book a Free Consult",
+  "description": "Train and Nourish in Philadelphia. Private concept preview.",
+  "wordCount": 334
 }

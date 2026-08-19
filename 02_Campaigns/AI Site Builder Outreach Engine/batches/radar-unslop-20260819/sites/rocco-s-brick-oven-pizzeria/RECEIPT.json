@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 13,
   "sourceCount": 13,
   "officialPhotos": 8,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.roccosbrickoven.net/",
   "city": "Collegeville",
+  "rerender": true,
   "hashes": [
     "4cb11e0846e6f6d96e72feea99c32dac9c2423f578d4bede476e27e042f4be9a",
     "bab7d56e899a48f724e9b28bd1f7b5c80ca9cbfeb22db14ea38da0c568d65884",
     "40faf315709295bd150b2e480443e7fc3e2a54b6bcd33372eca62d9c59bc3fba",
     "c62661ca2d002b3e4f2e68dc85ed675c9c5afcac11bdff3c2c6e7e71b20f509a",
     "c201781c6edc76f21370fdc1441316e8a33ce3f23c97e3401bd2aea77ef9c259"
-  ]
+  ],
+  "copyWords": 339
 }

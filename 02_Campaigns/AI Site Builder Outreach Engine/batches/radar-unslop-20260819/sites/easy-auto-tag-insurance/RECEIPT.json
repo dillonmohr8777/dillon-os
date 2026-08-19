@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": true,
   "url": "http://www.easyautotag.com/",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "39a31bca0e09c6675c4ea97f4d2e538dddd635fcb0033982d0feb8b785e7f3b1",
     "b8bb15344ca1bd4ede23cdd3ffb51e6d526d4c9c653da7228187f8e65c48a101",
     "2239b627ef8dd1438f3ac42e1ce17ef8c241995e49c6ca9f62f156a5066ac21b",
     "c2aaf3035487a26f2f279609dbaa9d50abd31614e1f94e7f71889f7486edcf63",
     "b55d01ea6355cce7f0d879db70295bb5601693798c9439c6ff3032e85c51cf38"
-  ]
+  ],
+  "copyWords": 365
 }

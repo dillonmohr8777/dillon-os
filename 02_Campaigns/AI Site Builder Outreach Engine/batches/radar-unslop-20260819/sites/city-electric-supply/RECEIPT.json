@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 6,
   "sourceCount": 6,
   "officialPhotos": 1,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.cityelectricsupply.com/branch/409",
   "city": "West Chester",
+  "rerender": true,
   "hashes": [
     "4382f7c0c68580ad07ee3fd029c55d590ff367a61515fdd205ffc924028d4d26",
     "2e55c22513b12e704806d18e6d1197d4e4088f5a3af44e1c89a5806ee5fe19bb",
     "2dff4bacebcca0a4e078856d4a3b0ed0ce2af661209b61200c8e3eaa4454d816",
     "2f5428ad2db175bd5d9d86b87bae44b1e26269f2d2b198e62f95cf5d0057c7cc",
     "5878e9964ef5cc2694acd793d3c9eeb3aa0d66d7a37df41a9bef292d6ab8f330"
-  ]
+  ],
+  "copyWords": 356
 }

@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 7,
   "sourceCount": 7,
   "officialPhotos": 7,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.go2tech.com/",
   "city": "Springfield",
+  "rerender": true,
   "hashes": [
     "97911a22e58cbb37db2f3f5dd219eceeee87d7495882a8fb1730dd69e8bff770",
     "17dffb5e3a8816ccca73d98c62832b44f327c70a1d8ff2af54a33c81c1fc8782",
     "935045a12df6786dedb1ee02c63f0552a355a3943539dfe3878339b70393834f",
     "b3cf0b6650b33ca8afd662437a58fc2b4d1dce2a107d0520e3733a5f05c307a6",
     "1dd21e01efc0cc4b43b2e18f33e73fef47d10bc40a1b0f76ba681ea49df45f6b"
-  ]
+  ],
+  "copyWords": 339
 }

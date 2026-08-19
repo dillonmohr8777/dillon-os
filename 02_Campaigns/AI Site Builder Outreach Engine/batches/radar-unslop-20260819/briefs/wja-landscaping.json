@@ -1,15 +1,16 @@
 {
   "slug": "wja-landscaping",
   "name": "WJA Landscaping",
-  "city": "WJA Landscaping. Family-run landscaping contractor in Collegeville",
+  "city": "Collegeville",
   "category": "Trade",
   "family": "trade",
   "mode": "people",
   "url": "https://wjalandscaping.com/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "16108313819",
+  "address": "138 Pennapacker Rd, Collegeville, PA, 19426",
+  "hours": "Mon - Fri: 7:00am - 5:00pm Sat: 7:00am - 5:00pm Sun: Closed",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#f4efe7",
     "ink": "#111820",
@@ -17,10 +18,11 @@
     "accent2": "#20b0e0",
     "panel": "#d6e3e6",
     "deep": "#090d11",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Syne",
@@ -30,31 +32,82 @@
   "attitude": "warm",
   "marquee": [
     "WJA Landscaping",
-    "WJA Landscaping. Family-run landscaping contractor in Collegeville",
+    "Collegeville",
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for WJA Landscaping — people at work",
-    "The process photograph for WJA Landscaping — hands on the job",
-    "The conversation photograph for WJA Landscaping — a real conversation",
-    "The place photograph for WJA Landscaping — the place",
-    "The craft photograph for WJA Landscaping — the craft"
+    "The people photograph for WJA Landscaping: people at work",
+    "The process photograph for WJA Landscaping: hands on the job",
+    "The conversation photograph for WJA Landscaping: a real conversation",
+    "The place photograph for WJA Landscaping: the place",
+    "The craft photograph for WJA Landscaping: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "WJA Landscaping",
-  "sub": "WJA Landscaping in WJA Landscaping. Family-run landscaping contractor in Collegeville. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Your Trusted Landscaping Contractor in Collegeville, PA",
+  "sub": "Landscape Design &#038; Install Backyard Patios",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "Job site first",
+    "Hands on the trade",
+    "Estimates stay official"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "WJA Landscaping in WJA Landscaping. Family-run landscaping contractor in Collegeville. Private concept preview."
+  "offerings": [
+    {
+      "title": "Landscape Design and Installation Services Tailored to You",
+      "body": "Services Landscape Design & Install Backyard Patios"
+    },
+    {
+      "title": "Custom Landscape Designs and Renderings",
+      "body": "Your Trusted Landscaping Contractor in Collegeville, PA"
+    },
+    {
+      "title": "Backyard Patios and Outdoor Living Spaces",
+      "body": "At WJA Landscaping, we help homeowners in Collegeville and nearby areas transform their outdoor spaces into functional, beautiful, and lasting landscapes. Whether you’re envisioning a custom patio or complete backyard renovation, our team of skilled designers and installers is here to bring your dream to life."
+    }
+  ],
+  "experience": [
+    {
+      "title": "See the trade",
+      "body": "The homepage should look like the work they actually do."
+    },
+    {
+      "title": "Talk to the lead",
+      "body": "A conversation at the door or in the shop, not a fake testimonial wall."
+    },
+    {
+      "title": "Book the visit",
+      "body": "Hours and service area stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://wjalandscaping.com/"
+    },
+    {
+      "title": "Call",
+      "body": "16108313819",
+      "href": "tel:16108313819"
+    },
+    {
+      "title": "Find them",
+      "body": "138 Pennapacker Rd, Collegeville, PA, 19426",
+      "href": "https://www.google.com/maps/search/?api=1&query=138%20Pennapacker%20Rd%2C%20Collegeville%2C%20PA%2C%2019426"
+    }
+  ],
+  "story": "Landscape Design &#038; Install Backyard Patios Services Landscape Design & Install Backyard Patios Your Trusted Landscaping Contractor in Collegeville, PA WJA Landscaping gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food.",
+  "storyMore": "At WJA Landscaping, we help homeowners in Collegeville and nearby areas transform their outdoor spaces into functional, beautiful, and lasting landscapes. Whether you’re envisioning a custom patio or complete backyard renovation, our team of skilled designers and installers is here to bring your dream to life.",
+  "featureBody": "As a locally owned and operated landscaping contractor in Collegeville, we take pride in delivering personalized service, transparent communication, and high-quality craftsmanship in every project, no matter the size.",
+  "workHeading": "The work, on the job.",
+  "galleryHeading": "People doing the trade.",
+  "storyHeading": "A crew with a name on the van.",
+  "featureHeading": "Close on the hands.",
+  "contactHeading": "Ask for the visit.",
+  "closing": "WJA Landscaping should look like a crew you would let in the house.",
+  "navWork": "Skip to content",
+  "navStory": "Services",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Contact",
+  "description": "WJA Landscaping in Collegeville. Private concept preview.",
+  "wordCount": 405
 }

@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 16,
   "sourceCount": 16,
   "officialPhotos": 16,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.electric-direct.net/",
   "city": "Havertown",
+  "rerender": true,
   "hashes": [
     "8a53e2c456ad7c6be6351f29f6b85dcde2c87164b8c4deb5064af6b1ab5045e9",
     "71d65b0243041b3d81559f42554e5f2fc0150885534a5e2a4608622afa2be8ff",
     "fa392f496085fddc3a94138ab6405ea704122305dbbaf63db45008174525488a",
     "5d04cde01f055dde1fd4e72bbb281f599f5ce867fbe40eadca22fbb8b691c5c0",
     "8a07680fead4d28485483f9329eb6d8fa258d437dd4559e83f63ad2fd130b220"
-  ]
+  ],
+  "copyWords": 357
 }

@@ -6,10 +6,11 @@
   "family": "dental",
   "mode": "people",
   "url": "https://www.padentalgroup.com/",
-  "phone": "",
-  "address": "",
+  "phone": "12153870883",
+  "address": "3700 Market Street",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#f4efe7",
     "ink": "#003040",
@@ -17,10 +18,11 @@
     "accent2": "#007090",
     "panel": "#d1d4cf",
     "deep": "#001a23",
-    "onPaper": "#111820",
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Bodoni Moda",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Pennsylvania Dental Group — people at work",
-    "The process photograph for Pennsylvania Dental Group — hands on the job",
-    "The conversation photograph for Pennsylvania Dental Group — a real conversation",
-    "The place photograph for Pennsylvania Dental Group — the place",
-    "The craft photograph for Pennsylvania Dental Group — the craft"
+    "The people photograph for Pennsylvania Dental Group: people at work",
+    "The process photograph for Pennsylvania Dental Group: hands on the job",
+    "The conversation photograph for Pennsylvania Dental Group: a real conversation",
+    "The place photograph for Pennsylvania Dental Group: the place",
+    "The craft photograph for Pennsylvania Dental Group: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "Pennsylvania Dental Group",
-  "sub": "Pennsylvania Dental Group in Philadelphia. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "TOP PHILADELPHIA DENTIST",
+  "sub": "Our Practice New Patient Registration General Dentistry Cosmetic Dentistry Dental Hygiene & Care Top General & Cosmetic Dentists in Philadelphia Our Philadelphia Dental Practices are conveniently located in West Philadelphia (University City) and Center City (South Philadelphia)",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The chair is calm",
+    "Hands on real care",
+    "You book with them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Pennsylvania Dental Group in Philadelphia. Private concept preview."
+  "offerings": [
+    {
+      "title": "The Pennsylvania Dental Group",
+      "body": "At Pennsylvania Dental Group, our primary goal is to help every patient achieve the satisfaction of optimal dental health through personalized dental care. We believe in providing the same high level of treatment we&#8217;d expect for ourselves, carefully tailoring our dental treatment plans to meet each patient&#8217;s unique needs. Our dentists in Philadelphia prioritize patient comfort throughout every visit."
+    },
+    {
+      "title": "Top General & Cosmetic Dentists in Philadelphia",
+      "body": "Dental Services Welcome Quality Dentists in Philadelphia enriching the overall health of our community with every smile..."
+    },
+    {
+      "title": "What Our Customers are Saying...",
+      "body": "We Are Consistently Recognized as a Top Philadelphia Dentist"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk in knowing who they are",
+      "body": "Name, place, and a clear call path above the fold."
+    },
+    {
+      "title": "See the room",
+      "body": "Treatment, reception, and careful hands. Not a handshake in an atrium."
+    },
+    {
+      "title": "Book with them",
+      "body": "Hours and insurance questions stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.padentalgroup.com/"
+    },
+    {
+      "title": "Call",
+      "body": "12153870883",
+      "href": "tel:12153870883"
+    },
+    {
+      "title": "Find them",
+      "body": "3700 Market Street",
+      "href": "https://www.google.com/maps/search/?api=1&query=3700%20Market%20Street"
+    }
+  ],
+  "story": "Our Practice New Patient Registration General Dentistry Cosmetic Dentistry Dental Hygiene & Care Top General & Cosmetic Dentists in Philadelphia Our Philadelphia Dental Practices are conveniently located in West Philadelphia (University City) and Center City (South Philadelphia) At Pennsylvania Dental Group, our primary goal is to help every patient achieve the satisfaction of optimal dental health through personalized dental care. We believe in providing the same high level of treatment we&#8217;d expect for ourselves, carefully tailoring our dental treatment plans to meet each patient&#8217;s unique needs. Our dentists in Philadelphia prioritize patient comfort throughout every visit. Dental Services Welcome.",
+  "storyMore": "We Are Consistently Recognized as a Top Philadelphia Dentist",
+  "featureBody": "If you enjoyed your experience with our practice, please tell us about it! It only takes a few minutes, and we appreciate you taking the time.",
+  "workHeading": "Care that looks like the actual chair.",
+  "galleryHeading": "People doing the work.",
+  "storyHeading": "A practice, not a template.",
+  "featureHeading": "Close on the skill.",
+  "contactHeading": "Start the visit.",
+  "closing": "Pennsylvania Dental Group should feel easy to call before anyone scrolls twice.",
+  "navWork": "Home",
+  "navStory": "Our Practice",
+  "navVisit": "Contact Us",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Pennsylvania Dental Group in Philadelphia. Private concept preview.",
+  "wordCount": 386
 }

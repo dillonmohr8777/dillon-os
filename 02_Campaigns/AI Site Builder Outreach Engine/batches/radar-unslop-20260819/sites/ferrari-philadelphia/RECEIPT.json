@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://ferrariphiladelphia.com/",
-  "city": "Ferrari Philadelphia",
+  "city": "Newtown Square",
+  "rerender": true,
   "hashes": [
     "229bb6dd115149822d48d17a966c5b2a88a81077ab0f818dddba087c47b08b16",
     "3e3f285f39764d927de82d1417b539dd8d9d6157c10e64dc9a5dc4ef6f5cf8f5",
     "09dd8454de42e324a62defd61bee09ff52172d629c617e84dbd831fbb6c0e006",
     "a772ab57d4a321c6b6a12fbddd4e77a20cb1c10800da28dff16b62280e799fb6",
     "ba5d0b05d034829f7b54bb972fed54212ec2eeb5834ecd3184ef61854ebbfd71"
-  ]
+  ],
+  "copyWords": 313
 }

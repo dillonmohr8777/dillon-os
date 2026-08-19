@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.andorradental.com/",
-  "city": "Philadelphia",
+  "city": "Suite 9",
+  "rerender": true,
   "hashes": [
     "ed53a7872a200766d187a6524299868a709cd1d4f14880567448e79f7be4df73",
     "004156f49b1ceb09159c92ba3e86213314ab28ac681a0a80f7b4ca71015b1c1c",
     "e8e3ce415a524ac0549fa77bc3c4ada7d01e0eba1b6ece0ad56a4ea6b8066e0b",
     "99049d2fa184061debf3a3ed8f0538c60de64bda6323036ad10c8a50ec202589",
     "03ab31a4bd1fba270b72dddc59434ae6fa3a75c40abefb048b354e293b41486f"
-  ]
+  ],
+  "copyWords": 309
 }

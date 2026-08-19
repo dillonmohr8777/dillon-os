@@ -6,21 +6,23 @@
   "family": "food",
   "mode": "food",
   "url": "http://pekinggourmetpottstown.com/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "(610) 326-2332",
+  "address": "799 State St",
+  "hours": "Fried Rice, Happy Fam",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#f0c040",
+    "paper": "#f0c050",
     "ink": "#f00000",
     "accent": "#f00000",
     "accent2": "#a00000",
-    "panel": "#f0a537",
+    "panel": "#f0a544",
     "deep": "#840000",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Fraunces",
@@ -41,20 +43,71 @@
     "Close food texture for Peking Gourmet"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
-  "headline": "Peking Gourmet",
-  "sub": "Peking Gourmet in Pottstown. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm today's menu and hours on the official source.",
-    "Confirm today's menu and hours on the official source.",
-    "Confirm today's menu and hours on the official source."
-  ],
+  "headline": "Peking Gourmet Chinese Restaurant",
+  "sub": "The Peking Gourmet is known for serving all your favorite Chinese dishes, including Chicken w. Cashew Nuts, Moo Shu Pork, Bean Curd w. Garlic Sauce, Young Chow Fried Rice, Happy Family.",
   "points": [
-    "The plate comes first",
-    "Kitchen in motion",
-    "A table you can trust"
+    "The plate leads",
+    "The kitchen stays in the picture",
+    "Hours live on their official site"
   ],
+  "offerings": [
+    {
+      "title": "The plate",
+      "body": "Peking Gourmet is a kitchen first. The preview leads with food, not a stock dining room."
+    },
+    {
+      "title": "The pass",
+      "body": "Hands, heat, and the ticket. You see the work behind the dish."
+    },
+    {
+      "title": "The room",
+      "body": "A table worth sitting down for. Reservations and tonight's menu stay with them."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Arrive hungry",
+      "body": "The homepage should make the food obvious before anyone hunts a PDF menu."
+    },
+    {
+      "title": "See the work",
+      "body": "Prep, the pass, and the plate. Not random people in a sunlit atrium."
+    },
+    {
+      "title": "Confirm with them",
+      "body": "Call, hours, and ordering stay on the official source so nothing here is guessed."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://pekinggourmetpottstown.com/"
+    },
+    {
+      "title": "Call",
+      "body": "(610) 326-2332",
+      "href": "tel:6103262332"
+    },
+    {
+      "title": "Find them",
+      "body": "799 State St",
+      "href": "https://www.google.com/maps/search/?api=1&query=799%20State%20St"
+    }
+  ],
+  "story": "The Peking Gourmet is known for serving all your favorite Chinese dishes, including Chicken w. Cashew Nuts, Moo Shu Pork, Bean Curd w. Garlic Sauce, Young Chow Fried Rice, Happy Family. Thank you for visiting our home page. We hope that you do visit our restaurant and we look forward to serving you as our guests. If you have any questions please let us know. Don't forget to bookmark our website for future reference. Address: 799 State St, Pottstown, PA 19464 Tel.: (610) 326-2332",
+  "storyMore": "The homepage should make the food obvious before anyone hunts a PDF menu. Prep, the pass, and the plate. Not random people in a sunlit atrium.",
+  "featureBody": "Hands, heat, and the ticket. You see the work behind the dish. A table worth sitting down for. Reservations and tonight's menu stay with them.",
   "workHeading": "What comes out of this kitchen.",
   "galleryHeading": "Food worth sitting down for.",
+  "storyHeading": "A kitchen with a name on the door.",
+  "featureHeading": "Close enough to taste the work.",
   "contactHeading": "Make the next visit easy.",
-  "description": "Peking Gourmet in Pottstown. Private concept preview."
+  "closing": "Peking Gourmet should feel like a place you can taste from the first screen.",
+  "navWork": "Home",
+  "navStory": "Menu",
+  "navVisit": "Contact Us",
+  "primaryCtaFallback": "Contact Us",
+  "description": "Peking Gourmet in Pottstown. Private concept preview.",
+  "wordCount": 347
 }

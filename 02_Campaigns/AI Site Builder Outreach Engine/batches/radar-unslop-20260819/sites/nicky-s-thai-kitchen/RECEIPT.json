@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 3,
   "sourceCount": 3,
   "officialPhotos": 3,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://nickysthaikitchen.com/",
   "city": "Pittsburgh",
+  "rerender": true,
   "hashes": [
     "baa5ab51270dd9275c89983923b352525cf4f9a33f89e86ad88d13d36bcb7216",
     "9a2bbb2d38438aed20f2be0908dad77d14bef5f1e366690716fe72bef94c1f64",
     "1d1da3221409cc1318b39c2d92487389118e578beae905c46560f6dc38eefc82",
     "62915ff1360503b95e8b8862a9a7fd23dc7de7ba0bda9c911155cd67288771f7",
     "077d5ab5f820b1a9d3d5041b8e04f586c317bea9a053c86deeef74bd3066e4f5"
-  ]
+  ],
+  "copyWords": 391
 }

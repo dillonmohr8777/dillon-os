@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
-  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 3,
   "sourceCount": 3,
   "officialPhotos": 3,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://countylineveterinary.com/",
   "city": "Hatboro",
+  "rerender": true,
   "hashes": [
     "7a0cb5a61f174b171522fbb348501c938420413b6aa28c0047fb392e340c217c",
     "ff49619b8b41aa6955a70e22ae79d33c5f1127507aaf067d0916944f42300c53",
     "5bf3feb03a2f0a965aad1b1b8ea1af9d40e65054ab0f45394ba72596b0c6ffa0",
     "90782e9f91404909e41341637a080626c6202ebb32c76a47821fa6845a364081",
     "9efe7a3c1ace37ce61b2dabc01ab8e4968b47f96d01eb442502ba0f71f18533d"
-  ]
+  ],
+  "copyWords": 460
 }

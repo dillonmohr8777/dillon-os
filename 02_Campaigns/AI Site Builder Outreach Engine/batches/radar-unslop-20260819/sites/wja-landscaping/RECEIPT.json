@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 6,
   "sourceCount": 6,
   "officialPhotos": 6,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://wjalandscaping.com/",
-  "city": "WJA Landscaping. Family-run landscaping contractor in Collegeville",
+  "city": "Collegeville",
+  "rerender": true,
   "hashes": [
     "6cc7c261a4576c5443123c51e60388713c887c0e0241308a13fc60561423ea84",
     "96fe66799bf778dff298b0c94b883432673a3f59e809ec9d9e14c04c0e5a57c6",
     "94483e394007caa6fb5c492407b2c06b43160801248421159587869c660ffcd5",
     "ea0b53af776433b36e74322d8f9d7b32fe4841ca0f794149a61b22d20ad96e66",
     "8b4cacdb7e376aefc03f4b81604c9ac9fa3e11c68efd2ea49b001207f4640c82"
-  ]
+  ],
+  "copyWords": 405
 }

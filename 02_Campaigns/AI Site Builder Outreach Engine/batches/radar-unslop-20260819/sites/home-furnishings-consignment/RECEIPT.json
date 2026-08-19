@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
-  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 3,
   "sourceCount": 3,
   "officialPhotos": 3,
   "genFills": 0,
-  "hasLogo": true,
   "url": "http://www.hfconsignment.com/",
   "city": "Wayne",
+  "rerender": true,
   "hashes": [
     "34cc77e797ffe4cc94db10a5a1c97a105e99710f970da70f0062e20ac2278280",
     "f7cd0111c536adde47c8784f15ac4b3a09d43a60c89ac27d890dcc5804f813b3",
     "b068efd16b9c06551bbd93c41d4ae68717b8ecdf2fe05c066ea3d6f35cc51530",
     "d30484eba6e85b61a814d3267c5d9735440888a0a7efb58afda69632feb56ad1",
     "1015adbfe3dde0fc2530af14d9629f9b6d70d72a92fe3f68cf8b1bed86a0caf1"
-  ]
+  ],
+  "copyWords": 391
 }

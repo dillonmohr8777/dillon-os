@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "cloudflare-challenge",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 3,
   "sourceCount": 3,
   "officialPhotos": 3,
   "genFills": 0,
-  "hasLogo": false,
   "url": "https://www.manatawnystillworks.com/",
   "city": "Stowe",
+  "rerender": true,
   "hashes": [
     "e8cd5e07177049d000db61b273723690e61c97df985e009ee249f465c00f3ea4",
     "619c9529721341506a0a3d3e73b497f3b655058cf7f86876b1cce6411fd306dc",
     "03397a935c8e3db3e7b2dee9f682f81b0548251a59f2f68153ab6e1ea1594bf4",
     "10865e18d0af7041e068dea84ec79b468a10912ada91d45380c477ae8a878124",
     "6396f3c5b94e60d3b99c0a1e2852d072de05d99b7bd8708d8dc2a156c4029282"
-  ]
+  ],
+  "copyWords": 377
 }

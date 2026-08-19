@@ -2,7 +2,7 @@
   "id": 99,
   "slug": "glen-eagle-pediatric-dentistry",
   "name": "Glen Eagle Pediatric Dentistry",
-  "family": "medical",
+  "family": "dental",
   "mode": "people",
   "issue": "design",
   "ok": true,
@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 7,
   "sourceCount": 7,
   "officialPhotos": 7,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://gleneaglepediatricdentistry.com/",
   "city": "Glen Mills",
+  "rerender": true,
   "hashes": [
     "e5f7950987db82b2b14434a0dce5a68c29751d7dd6c81910b1deffa811027eb0",
     "12db0babefe6295fc54d539f7f7babcf5afe9f6f34dcc121d8ac3f41ec88b2da",
     "e6020052a3e7864b0eb844dc8cbcc84af5ff3361e47850b94aaa195640593aa4",
     "ac1b37632c8a4a47dc2aa794cfd1663102e6ebbc4965008cb539de8417eb098a",
     "0313c7ced927f6253288efad826b26cb1d8682616c4abc177d6c4e63700288cc"
-  ]
+  ],
+  "copyWords": 572
 }

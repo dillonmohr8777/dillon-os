@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 14,
   "sourceCount": 14,
   "officialPhotos": 14,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://trainandnourish.com/",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "67337e942fc31067ddb163535eff20234636685480228191d5d9d79faa09c971",
     "8a3e671e553a772ee9506cf2647d174dcaa012670d2f046c98cd75a11b2c169f",
     "ff9c56621de979bb5c17f3c08ad5558d04b2ed8822e07f5e2644fde9fbdae478",
     "76e47e11dd80a2a1d49951f1837de24ff62cd92fc516fee70795b6460d1f9e2f",
     "bbf52e31b0890450fe3ee508e60c2fa9bde5c6c3539fbe3a0ad44409cde4bc11"
-  ]
+  ],
+  "copyWords": 334
 }

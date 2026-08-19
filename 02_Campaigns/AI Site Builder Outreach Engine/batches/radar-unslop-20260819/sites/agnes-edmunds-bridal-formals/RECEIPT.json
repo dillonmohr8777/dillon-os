@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://agnesedmunds.com/",
   "city": "Pottstown",
+  "rerender": true,
   "hashes": [
     "bacce6776a9f34a8803291d223c37fb1ee820ab1d6532698ccc4308288676e0a",
     "e437d25abb54dbf5c3c29a267ab68ce499cf73ec6f1c9be364d86b7494fc9523",
     "39003e0bf3a9d5c9feb91092767cdae0379eda9345bb25c33a77613c72866946",
     "1e7b01065af0a1992da2c8600be006f20f4b1f85e4abafaad8c0d29f033899f7",
     "758285cf5e3e3cf352c8e69574ad44572f8072e4afecde0f13e3689a24b903f3"
-  ]
+  ],
+  "copyWords": 298
 }

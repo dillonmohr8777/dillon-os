@@ -2,7 +2,7 @@
   "id": 72,
   "slug": "auger-manufacturing",
   "name": "Auger Manufacturing Specialists",
-  "family": "professional",
+  "family": "trade",
   "mode": "people",
   "issue": "design",
   "ok": true,
@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
-  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 4,
   "sourceCount": 4,
   "officialPhotos": 4,
   "genFills": 0,
-  "hasLogo": true,
   "url": "http://www.augermfgspec.com/",
   "city": "Frazer",
+  "rerender": true,
   "hashes": [
     "4d5f3b6f18d608663c2ab8d9b73a6e816a82825ac4b65ac8a50e167869abd05e",
     "026a7d5016281fdefb5ff1b00ecd15c18dfa97705cbc73066be2f96c0442a82d",
     "d31109bc6b486bed82d971f5efa3df9be784c534b8174dcb246683e1c48436c8",
     "5b66f5939005c66eda105f7004746d4d7baaa7ed8bb2b00bbe91457876ee77e8",
     "ffbacc043a4bd7681acad8b8d484951c4dc96e9e21168d917350307d58690946"
-  ]
+  ],
+  "copyWords": 325
 }

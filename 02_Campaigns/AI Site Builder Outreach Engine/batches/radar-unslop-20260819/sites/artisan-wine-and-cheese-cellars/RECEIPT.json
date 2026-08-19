@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,21 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
   "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 6,
   "sourceCount": 6,
   "officialPhotos": 6,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://www.artisanwineandcheesecellars.com/",
   "city": "Wine and cheese bar located at the historic Main Street Depot in Bethlehem",
+  "rerender": true,
   "hashes": [
     "4eb598776a2531acd568775ce9f308c52f787ec85fc379c9040f085c0f7795d0",
     "80c004848534b260b935f1da1e9c91b23ed3f6c265752472502ab3a6e705318b",
     "0f870101ea4951cd4434f4c0127d2de46b64d7ce729fe989297f8c3561b9de4a",
     "30e75f4b192baab85bf47b89345376b96a3f8c40db40b6646266aa4dd30b1f90",
     "2c988a5383df418f40f0ccdc7d67b0bae0c6e42a1f606e74a6b97bc05aae3c74"
-  ]
+  ],
+  "copyWords": 382
 }

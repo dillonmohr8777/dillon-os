@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 16,
   "sourceCount": 16,
   "officialPhotos": 16,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://southamptonhottub.com/",
   "city": "Exton",
+  "rerender": true,
   "hashes": [
     "c8b190f1ec76c0e80d9c65b5c3e3cef06c0ed5c68d8ec0bb615196b097e943d1",
     "179f8f8f13567d0893f37eafff549776090c468a093590ff8be8e83cc1957732",
     "270c70be00bd93da9db15f802ecad0e52be4d8049f7983d1a0ac2a8ac0b90d1b",
     "321f9df9dc93835a9b8e5d598b327e4e9ea89d3e9fadc7ebc9cac2c96cecbc87",
     "7778590e38681046374d8691755990df6e71b6cd96a4837377cc35af8705078a"
-  ]
+  ],
+  "copyWords": 301
 }

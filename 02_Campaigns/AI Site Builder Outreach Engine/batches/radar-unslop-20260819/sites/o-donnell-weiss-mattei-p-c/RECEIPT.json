@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://www.owmlaw.com/",
-  "city": "Pottstown",
+  "city": "Suite 201",
+  "rerender": true,
   "hashes": [
     "6bae0312e47f1d9302c4c80432260442904b533ceb8a78d72e89d7a5edb561b4",
     "81c2b00873cc4f3f77799dc48052651ff72de2e034f09c4dcb365b59df8e56b3",
     "59d1e206a4f0cbddfe2a8cf57eda2e5f6cf6f63eca457c47da78e8f37cadcb1d",
     "541c92f7fa84e38736b01d57be6f78529888361b5557d3ab1808ebb2c4e224fa",
     "a2f2855d4bd364848daf247ca499f31a4a9f4f8823b73e6efed8897fd73756c2"
-  ]
+  ],
+  "copyWords": 481
 }

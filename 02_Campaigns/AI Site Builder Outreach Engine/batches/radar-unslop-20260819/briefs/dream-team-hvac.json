@@ -6,21 +6,23 @@
   "family": "trade",
   "mode": "people",
   "url": "https://dreamteampa.com/",
-  "phone": "",
-  "address": "",
+  "phone": "6104778226",
+  "address": "436 S. Lansdowne Ave",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#f0f0d0",
+    "paper": "#f0d0a0",
     "ink": "#104020",
     "accent": "#104020",
     "accent2": "#104010",
-    "panel": "#d0d7b7",
+    "panel": "#d0bb8e",
     "deep": "#082311",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Syne",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Dream Team Home Services — people at work",
-    "The process photograph for Dream Team Home Services — hands on the job",
-    "The conversation photograph for Dream Team Home Services — a real conversation",
-    "The place photograph for Dream Team Home Services — the place",
-    "The craft photograph for Dream Team Home Services — the craft"
+    "The people photograph for Dream Team Home Services: people at work",
+    "The process photograph for Dream Team Home Services: hands on the job",
+    "The conversation photograph for Dream Team Home Services: a real conversation",
+    "The place photograph for Dream Team Home Services: the place",
+    "The craft photograph for Dream Team Home Services: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "Dream Team Home Services",
-  "sub": "Dream Team Home Services in Paoli. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Services That ELEVATE YOUR HOME",
+  "sub": "Air Conditioning / Cooling Air Conditioning Repair",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "Job site first",
+    "Hands on the trade",
+    "Estimates stay official"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Dream Team Home Services in Paoli. Private concept preview."
+  "offerings": [
+    {
+      "title": "SCHEDULE SERVICE",
+      "body": "At Dream Team Home Services, we provide elite HVAC technicians, plumbers, and electricians committed to restoring your peace of mind. Experience total infrastructure reliability with our rapid, same-day emergency dispatch."
+    },
+    {
+      "title": "Serving the Delaware Valley & Philadelphia with Home Services",
+      "body": "We offer a comprehensive range of professional home services designed to keep your plumbing, heating, cooling, and electrical systems running smoothly and efficiently year-round."
+    },
+    {
+      "title": "Services We Provide",
+      "body": "Pennsylvania winters demand unyielding reliability from your heating infrastructure. Our certified specialists use advanced diagnostic calibration to optimize thermal dynamics, ensuring your property remains protected against severe sub-zero drops. From complex boiler configurations and modern furnaces to high-efficiency heat pumps, we restore peak operational performance to significantly reduce energy strain and fuel consumption."
+    }
+  ],
+  "experience": [
+    {
+      "title": "See the trade",
+      "body": "The homepage should look like the work they actually do."
+    },
+    {
+      "title": "Talk to the lead",
+      "body": "A conversation at the door or in the shop, not a fake testimonial wall."
+    },
+    {
+      "title": "Book the visit",
+      "body": "Hours and service area stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://dreamteampa.com/"
+    },
+    {
+      "title": "Call",
+      "body": "6104778226",
+      "href": "tel:6104778226"
+    },
+    {
+      "title": "Find them",
+      "body": "436 S. Lansdowne Ave",
+      "href": "https://www.google.com/maps/search/?api=1&query=436%20S.%20Lansdowne%20Ave"
+    }
+  ],
+  "story": "Air Conditioning / Cooling Air Conditioning Repair At Dream Team Home Services, we provide elite HVAC technicians, plumbers, and electricians committed to restoring your peace of mind. Experience total infrastructure reliability with our rapid, same-day emergency dispatch. We offer a comprehensive range of professional home services designed to keep your plumbing, heating, cooling, and electrical systems running smoothly and efficiently year-round. Dream Team Home Services gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a.",
+  "storyMore": "Pennsylvania winters demand unyielding reliability from your heating infrastructure. Our certified specialists use advanced diagnostic calibration to optimize thermal dynamics, ensuring your property remains protected against severe sub-zero drops. From complex boiler configurations and modern furnaces to high-efficiency heat pumps, we restore peak.",
+  "featureBody": "Peak summer humidity and rising regional temperatures require robust, high-performance cooling systems. We deliver precise technical diagnostics to safeguard indoor air quality and maintain rigid structural temperature control. Whether executing complex central air restorations or seamless ductless mini-split integrations, our team utilizes data-driven.",
+  "workHeading": "The work, on the job.",
+  "galleryHeading": "People doing the trade.",
+  "storyHeading": "A crew with a name on the van.",
+  "featureHeading": "Close on the hands.",
+  "contactHeading": "Ask for the visit.",
+  "closing": "Dream Team Home Services should look like a crew you would let in the house.",
+  "navWork": "Follow",
+  "navStory": "Plumbing",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Shop",
+  "description": "Dream Team Home Services in Paoli. Private concept preview.",
+  "wordCount": 445
 }

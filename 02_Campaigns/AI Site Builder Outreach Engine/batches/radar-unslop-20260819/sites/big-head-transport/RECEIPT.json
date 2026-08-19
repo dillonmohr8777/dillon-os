@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://bigheadtransportllc.com/\nCall log:\n  - navigating to \"https://bigheadtransportllc.com/\", waiting until \"domcontentloaded\"\n",
+  "harvestCached": true,
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://bigheadtransportllc.com",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "57c85a87714d9e73d4eaf313e5e2980894f2c6e90bde1f51ae6c752c368800ba",
     "db1bab5460ec88c8235ea8207a6d66b18fe90bbd38da3242975a94c73cfdebb7",
     "b4029e897f1e9ac4c7467b468ad117bdd2fe0a66c48ff1cec599d7e48411c496",
     "15525ea84d347a50e008cd301ed70ee1dfcdac4956056e48b8f31f723d196856",
     "6dae2c1fc3deafda3c7db03606a157b62c34a8ec37b08b74c57099d1cff2b7c4"
-  ]
+  ],
+  "copyWords": 342
 }

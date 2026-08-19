@@ -7,20 +7,22 @@
   "mode": "people",
   "url": "https://www.theedgefitnessclubs.com/locations/pennsylvania-media",
   "phone": "",
-  "address": "",
+  "address": "4025 Veteran's Memorial Pkwy. St Peters",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
+    "paper": "#EEF2F0",
+    "ink": "#121816",
+    "accent": "#15803D",
+    "accent2": "#86EFAC",
+    "panel": "#D7E4DA",
+    "deep": "#102018",
+    "border": "1px",
+    "radius": "2px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Fraunces",
@@ -34,27 +36,73 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for The Edge Fitness Clubs Media — people at work",
-    "The process photograph for The Edge Fitness Clubs Media — hands on the job",
-    "The conversation photograph for The Edge Fitness Clubs Media — a real conversation",
-    "The place photograph for The Edge Fitness Clubs Media — the place",
-    "The craft photograph for The Edge Fitness Clubs Media — the craft"
+    "The people photograph for The Edge Fitness Clubs Media: people at work",
+    "The process photograph for The Edge Fitness Clubs Media: hands on the job",
+    "The conversation photograph for The Edge Fitness Clubs Media: a real conversation",
+    "The place photograph for The Edge Fitness Clubs Media: the place",
+    "The craft photograph for The Edge Fitness Clubs Media: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "The Edge Fitness Clubs Media",
-  "sub": "The Edge Fitness Clubs Media in Media. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Our Clubs",
+  "sub": "Find Fitness Club near you with our gym location search tool. The Edge Fitness Clubs, voted Best Gym, offers multi-club memberships in CT, NJ, PA, DE &amp; More!",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The floor is real",
+    "Coaching in the room",
+    "You train with them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "The Edge Fitness Clubs Media in Media. Private concept preview."
+  "offerings": [
+    {
+      "title": "Find your nearest Edge Fitness",
+      "body": "The Edge Fitness Clubs Media is coaching, a floor, and a plan. Not a stock high-five."
+    },
+    {
+      "title": "Membership",
+      "body": "Lifts, stretches, a therapist or trainer actually spotting the movement."
+    },
+    {
+      "title": "Amenities",
+      "body": "Membership and hours stay on their official site."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk the floor",
+      "body": "The homepage should look like a gym or clinic you can enter."
+    },
+    {
+      "title": "Train with someone",
+      "body": "A coach in the frame, not a disconnected abs collage."
+    },
+    {
+      "title": "Come back",
+      "body": "Schedules stay official. Nothing here invents a class time."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.theedgefitnessclubs.com/locations/pennsylvania-media"
+    },
+    {
+      "title": "Find them",
+      "body": "4025 Veteran's Memorial Pkwy. St Peters",
+      "href": "https://www.google.com/maps/search/?api=1&query=4025%20Veteran's%20Memorial%20Pkwy.%20St%20Peters"
+    }
+  ],
+  "story": "The Edge Fitness Clubs Media gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. The Edge Fitness Clubs Media is coaching, a floor, and a plan. Not a stock high-five.",
+  "storyMore": "The homepage should look like a gym or clinic you can enter. A coach in the frame, not a disconnected abs collage.",
+  "featureBody": "Lifts, stretches, a therapist or trainer actually spotting the movement. Membership and hours stay on their official site.",
+  "workHeading": "Training that looks like the floor.",
+  "galleryHeading": "People in the work.",
+  "storyHeading": "A gym or clinic with a name.",
+  "featureHeading": "Close on the spot.",
+  "contactHeading": "Start a session.",
+  "closing": "The Edge Fitness Clubs Media should feel like a floor you would actually train on.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Class Schedules",
+  "description": "The Edge Fitness Clubs Media in Media. Private concept preview.",
+  "wordCount": 355
 }

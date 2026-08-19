@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://bpmfitnessphl.com/",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "3e1847052675e098e0ecc6cbc0cea15e8d4d5bb115dabce97a90c35837e69489",
     "d2a13ea3a1403081f2bfd49eb2a62b1c3333061e7a55f5b66097e9c283ad6c18",
     "952902ee0f75e5719f5d1f3e85422dc1c961c4e26dd06150c6cac1637286f1a4",
     "70ee1e56a7dd230c6260cd9f577f31d2c5c796c753b26609a6600ce78c20fbdb",
     "89a30288750dc13fa137521ae3b81e8be99bfce12656649b43e80e0c339b7308"
-  ]
+  ],
+  "copyWords": 328
 }

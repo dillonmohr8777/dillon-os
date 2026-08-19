@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 8,
   "sourceCount": 8,
   "officialPhotos": 8,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://osshealth.com/locations/oss-health-hanover",
   "city": "Hanover",
+  "rerender": true,
   "hashes": [
     "66e08daed9dea36a11e1a5fe362a7bbf6171ea2cabcd4804da262511ad3d5062",
     "12080ba82331e56e62220dedffb4be1d75d4980eb67562cbb416e47f8d1d7f37",
     "586fe263e4e97320e1fb9224f73b19d8452106a64f0dceb952ec78eba8c384d9",
     "d854e878231327d111dfb5498f8c605a077dca74165cc3f061a41d75768c0d64",
     "32a6fb5262058ed62588f0e3a4157a949ed6080673ef9f0f65685e0896619537"
-  ]
+  ],
+  "copyWords": 305
 }

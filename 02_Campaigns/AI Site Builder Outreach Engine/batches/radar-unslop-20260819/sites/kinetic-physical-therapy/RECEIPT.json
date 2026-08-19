@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 5,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://kineticptpa.com/",
-  "city": "Collegeville",
+  "city": "Chester Springs",
+  "rerender": true,
   "hashes": [
     "d151e03ee1e11b32f88f4353e421f800f2b1bd465ce1e1ca3123b3e6ee7b0b11",
     "6986760193d48f214995647c67ee0ff99791a9c4f62c87811e81559a7f0d4702",
     "f7255d24fbb6c349f0fd20ee1ef5fb4db19bf55c80c5f0385ed144faefc03604",
     "9c3a8a34918e4e4e3f8e726a8c2a6ab03a30972302994b940f46d2cecf5767bc",
     "5133663dd6c1562a350cf0b2796c6a86f9ca8c82ab8b91b9c259f01bd59831e7"
-  ]
+  ],
+  "copyWords": 398
 }

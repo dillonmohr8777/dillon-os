@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.havercrowndental.com/",
   "city": "Havertown",
+  "rerender": true,
   "hashes": [
     "3d7dc51e5cc69260c1e1c286ee0cc7eb5f12a7c63f6faf106be117232086640a",
     "7d078b114a63a5face16ac99d121b0f76314e68282b2c1d6f86de3268e3141f7",
     "9fd0aeff982cdeb0c2e78397cbfc579305bd5e9a94f4a460f131b95978b56516",
     "88d36a20a0b1d12d0d942b157b79fc3c8e558e40701ab49c612b1920b8212d25",
     "589b8df0e5180fd4e12f29d811491dea354d9776cedb9bca153700898a9b8d46"
-  ]
+  ],
+  "copyWords": 342
 }

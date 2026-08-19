@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.redhillgreenhouse.com/",
   "city": "Red Hill",
+  "rerender": true,
   "hashes": [
     "5e725f9b2079a3edc3269b8a5dc643ea0454be1ff6cab14b0a1b45c088c43688",
     "840acf1da6c995c2be4e4ab490ce626d66065623c6ac622a4bbe45c774540d67",
     "59ba391a14d5e6a91162413b0f482d81057c1463d862313b183c1adf83082177",
     "3390397dd1c0b8542ef00116155bee86268b2c416f1d595837458a6bb4d66d9a",
     "5d24e84a7f151b3736c4448efcde4f1af8a03f60a47f9fb2c5e0a80fdc2fc73d"
-  ]
+  ],
+  "copyWords": 391
 }

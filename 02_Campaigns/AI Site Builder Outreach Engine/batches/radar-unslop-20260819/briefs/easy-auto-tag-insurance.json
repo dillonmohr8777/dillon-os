@@ -6,10 +6,11 @@
   "family": "auto",
   "mode": "people",
   "url": "http://www.easyautotag.com/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "267-239-0692",
+  "address": "538 E Girard Ave Philadelphia PA 19125 267-",
+  "hours": "Monday-Friday 10am-5pm Sat 11am-4pm",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#c0d0e0",
     "ink": "#306090",
@@ -17,10 +18,11 @@
     "accent2": "#306090",
     "panel": "#aec0d4",
     "deep": "#1a344f",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "22px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Fraunces",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Easy Auto Tag & Insurance — people at work",
-    "The process photograph for Easy Auto Tag & Insurance — hands on the job",
-    "The conversation photograph for Easy Auto Tag & Insurance — a real conversation",
-    "The place photograph for Easy Auto Tag & Insurance — the place",
-    "The craft photograph for Easy Auto Tag & Insurance — the craft"
+    "The people photograph for Easy Auto Tag & Insurance: people at work",
+    "The process photograph for Easy Auto Tag & Insurance: hands on the job",
+    "The conversation photograph for Easy Auto Tag & Insurance: a real conversation",
+    "The place photograph for Easy Auto Tag & Insurance: the place",
+    "The craft photograph for Easy Auto Tag & Insurance: the craft"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
-  "headline": "Easy Auto Tag & Insurance",
-  "sub": "Easy Auto Tag & Insurance in Philadelphia. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "Easy Auto Tag and Insurance",
+  "sub": "Your one stop Tag Title and Insurance Shop",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The bay is real",
+    "Hands on the car",
+    "Service starts with a call"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Easy Auto Tag & Insurance in Philadelphia. Private concept preview."
+  "offerings": [
+    {
+      "title": "The shop",
+      "body": "Easy Auto Tag & Insurance is a working floor: cars, tools, and people who know the bay."
+    },
+    {
+      "title": "The visit",
+      "body": "Advisor and driver in the lane. Not a handshake in a glass lobby."
+    },
+    {
+      "title": "The next step",
+      "body": "Hours, estimates, and parts stay on their official site."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Pull in",
+      "body": "The homepage should look like a shop you can drive to."
+    },
+    {
+      "title": "Talk to the person doing the work",
+      "body": "Inspection, the hood, the tablet in the lane."
+    },
+    {
+      "title": "Leave with a plan",
+      "body": "Confirm wait times and pricing with them, not with guessed copy."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.easyautotag.com/"
+    },
+    {
+      "title": "Call",
+      "body": "267-239-0692",
+      "href": "tel:2672390692"
+    },
+    {
+      "title": "Find them",
+      "body": "538 E Girard Ave Philadelphia PA 19125 267-",
+      "href": "https://www.google.com/maps/search/?api=1&query=538%20E%20Girard%20Ave%20Philadelphia%20PA%2019125%20267-"
+    }
+  ],
+  "story": "Your one stop Tag Title and Insurance Shop Easy Auto Tag & Insurance gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Easy Auto Tag & Insurance is a working floor: cars,.",
+  "storyMore": "The homepage should look like a shop you can drive to. Inspection, the hood, the tablet in the lane.",
+  "featureBody": "Advisor and driver in the lane. Not a handshake in a glass lobby. Hours, estimates, and parts stay on their official site.",
+  "workHeading": "The work, in the bay where it happens.",
+  "galleryHeading": "People on the actual job.",
+  "storyHeading": "A shop with a name over the door.",
+  "featureHeading": "Close on the tool in the hand.",
+  "contactHeading": "Get the car in.",
+  "closing": "Easy Auto Tag & Insurance should feel like a shop you can trust from the first scroll.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Easy Auto Tag & Insurance in Philadelphia. Private concept preview.",
+  "wordCount": 365
 }

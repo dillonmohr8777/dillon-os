@@ -1,26 +1,28 @@
 {
   "slug": "kinetic-physical-therapy",
   "name": "Kinetic Physical Therapy",
-  "city": "Collegeville",
+  "city": "Chester Springs",
   "category": "Fitness",
   "family": "fitness",
   "mode": "people",
   "url": "https://kineticptpa.com/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "6104241100",
+  "address": "163 Pottstown Pike, Chester Springs, PA, 19425",
+  "hours": "MONIALS We, as a fam",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
+    "paper": "#EEF2F0",
+    "ink": "#121816",
+    "accent": "#15803D",
+    "accent2": "#86EFAC",
+    "panel": "#D7E4DA",
+    "deep": "#102018",
+    "border": "2px",
+    "radius": "4px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Newsreader",
@@ -30,31 +32,82 @@
   "attitude": "industrial",
   "marquee": [
     "Kinetic Physical Therapy",
-    "Collegeville",
+    "Chester Springs",
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Kinetic Physical Therapy — people at work",
-    "The process photograph for Kinetic Physical Therapy — hands on the job",
-    "The conversation photograph for Kinetic Physical Therapy — a real conversation",
-    "The place photograph for Kinetic Physical Therapy — the place",
-    "The craft photograph for Kinetic Physical Therapy — the craft"
+    "The people photograph for Kinetic Physical Therapy: people at work",
+    "The process photograph for Kinetic Physical Therapy: hands on the job",
+    "The conversation photograph for Kinetic Physical Therapy: a real conversation",
+    "The place photograph for Kinetic Physical Therapy: the place",
+    "The craft photograph for Kinetic Physical Therapy: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "Kinetic Physical Therapy",
-  "sub": "Kinetic Physical Therapy in Collegeville. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "headline": "MOVE BETTER WITH KINETIC",
+  "sub": "MOVEMENT IS THE MOST RELIABLE INDICATOR OF OVERALL HEALTH AND QUALITY OF LIFE .",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The floor is real",
+    "Coaching in the room",
+    "You train with them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Kinetic Physical Therapy in Collegeville. Private concept preview."
+  "offerings": [
+    {
+      "title": "CONFIDENCE. EXCITEMENT. SUCCESS.",
+      "body": "Now located in the WSFS Bank Sportsplex, Kinetic is now exclusively partnered with the Philadelphia Union to bring pro-level care to the community."
+    },
+    {
+      "title": "WHY IS MOVEMENT IMPORTANT?",
+      "body": "As the only private physical therapy practice in the U.S. directly affiliated with a professional sports team, we deliver advanced rehab and recovery designed for both athletes and everyday movers."
+    },
+    {
+      "title": "OFFICIAL PHYSICAL THERAPY PARTNER OF THE PHILADELPHIA UNION",
+      "body": "An athlete is anyone who has the passion, desire, and stamina for life or sport. It&#8217;s a person who sees each day as a new opportunity to do and be better."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Walk the floor",
+      "body": "The homepage should look like a gym or clinic you can enter."
+    },
+    {
+      "title": "Train with someone",
+      "body": "A coach in the frame, not a disconnected abs collage."
+    },
+    {
+      "title": "Come back",
+      "body": "Schedules stay official. Nothing here invents a class time."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://kineticptpa.com/"
+    },
+    {
+      "title": "Call",
+      "body": "6104241100",
+      "href": "tel:6104241100"
+    },
+    {
+      "title": "Find them",
+      "body": "163 Pottstown Pike, Chester Springs, PA, 19425",
+      "href": "https://www.google.com/maps/search/?api=1&query=163%20Pottstown%20Pike%2C%20Chester%20Springs%2C%20PA%2C%2019425"
+    }
+  ],
+  "story": "MOVEMENT IS THE MOST RELIABLE INDICATOR OF OVERALL HEALTH AND QUALITY OF LIFE . Now located in the WSFS Bank Sportsplex, Kinetic is now exclusively partnered with the Philadelphia Union to bring pro-level care to the community. As the only private physical therapy practice in the U.S. directly affiliated with a professional sports team, we deliver advanced rehab and recovery designed for both athletes and everyday movers. Kinetic Physical Therapy gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear.",
+  "storyMore": "An athlete is anyone who has the passion, desire, and stamina for life or sport. It&#8217;s a person who sees each day as a new opportunity to do and be better.",
+  "featureBody": "At Kinetic, we’re redefining what athlete means, empowering every body to realize their own inner athlete.",
+  "workHeading": "Training that looks like the floor.",
+  "galleryHeading": "People in the work.",
+  "storyHeading": "A gym or clinic with a name.",
+  "featureHeading": "Close on the spot.",
+  "contactHeading": "Start a session.",
+  "closing": "Kinetic Physical Therapy should feel like a floor you would actually train on.",
+  "navWork": "Skip to content",
+  "navStory": "Eagleview",
+  "navVisit": "CALL US: 610-424-1100",
+  "primaryCtaFallback": "CALL US: 610-424-1100",
+  "description": "Kinetic Physical Therapy in Chester Springs. Private concept preview.",
+  "wordCount": 398
 }

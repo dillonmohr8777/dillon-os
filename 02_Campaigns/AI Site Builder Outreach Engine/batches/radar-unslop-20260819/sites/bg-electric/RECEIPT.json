@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,29 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "harvestCached": true,
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 0,
   "genFills": 5,
-  "hasLogo": true,
   "url": "https://www.bgelectricservicellc.com/",
   "city": "Philadelphia",
+  "rerender": true,
   "hashes": [
     "c6909aaea5746dc2232022454c18c922d9d6072ad5ff625393f345b452282c8b",
     "96cf3eac6d38bc8d3bcea077dd0ce925136c412bee35061dc5a13296cb3b1f70",
     "a0d215a78bf2f544e6972b4134abfc2f00dcb020483cd1abbe84ee539266e954",
     "74c12512bfdd7f975fabaa28eb6f6831a192921203d6438f8176dc003bc9cf38",
     "d52b8b35a61c9dfec1e6609640b43f5ee1691ad7d9802ee4d5caa01226d45e49"
-  ]
+  ],
+  "copyWords": 347
 }

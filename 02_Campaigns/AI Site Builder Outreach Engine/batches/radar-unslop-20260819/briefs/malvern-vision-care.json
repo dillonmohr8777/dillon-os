@@ -10,6 +10,7 @@
   "address": "",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#e0c080",
     "ink": "#305070",
@@ -17,10 +18,11 @@
     "accent2": "#8090a0",
     "panel": "#c7b07d",
     "deep": "#1a2c3d",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Alegreya",
@@ -34,27 +36,68 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Malvern Vision Care — people at work",
-    "The process photograph for Malvern Vision Care — hands on the job",
-    "The conversation photograph for Malvern Vision Care — a real conversation",
-    "The place photograph for Malvern Vision Care — the place",
-    "The craft photograph for Malvern Vision Care — the craft"
+    "The people photograph for Malvern Vision Care: people at work",
+    "The process photograph for Malvern Vision Care: hands on the job",
+    "The conversation photograph for Malvern Vision Care: a real conversation",
+    "The place photograph for Malvern Vision Care: the place",
+    "The craft photograph for Malvern Vision Care: the craft"
   ],
   "imageDisclosure": "Illustrative concept imagery plus any photographs harvested from the official site. These visuals do not claim to depict current staff, customers, or completed work.",
   "headline": "Malvern Vision Care",
-  "sub": "Malvern Vision Care in Malvern. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "sub": "Malvern Vision Care in Malvern. A private concept homepage: their mark when we have it, industry photography, and a clearer visit path.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "A calm exam",
+    "Clinicians at work",
+    "You call the desk"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Malvern Vision Care in Malvern. Private concept preview."
+  "offerings": [
+    {
+      "title": "The visit",
+      "body": "Malvern Vision Care is an exam room and a person who knows the chart."
+    },
+    {
+      "title": "The team",
+      "body": "Clinicians, vitals, the front desk. Not a stock stethoscope pile."
+    },
+    {
+      "title": "The next step",
+      "body": "Hours and insurance stay on their official site."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Check in",
+      "body": "The homepage should make the clinic obvious."
+    },
+    {
+      "title": "See the room",
+      "body": "A provider in the work, not a marble lobby."
+    },
+    {
+      "title": "Follow up",
+      "body": "Appointments stay official. Nothing here invents availability."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.malvernvision.com/"
+    }
+  ],
+  "story": "Malvern Vision Care gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Malvern Vision Care is an exam room and a person who knows the chart.",
+  "storyMore": "The homepage should make the clinic obvious. A provider in the work, not a marble lobby.",
+  "featureBody": "Clinicians, vitals, the front desk. Not a stock stethoscope pile. Hours and insurance stay on their official site.",
+  "workHeading": "Care in the actual room.",
+  "galleryHeading": "People doing the work.",
+  "storyHeading": "A clinic with a name on the door.",
+  "featureHeading": "Close on the tray, not the slogan.",
+  "contactHeading": "Reach the desk.",
+  "closing": "Malvern Vision Care should feel easy to call before the fold is gone.",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
+  "description": "Malvern Vision Care in Malvern. Private concept preview.",
+  "wordCount": 320
 }

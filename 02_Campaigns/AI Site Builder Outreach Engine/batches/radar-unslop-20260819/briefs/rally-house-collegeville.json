@@ -10,17 +10,19 @@
   "address": "60 Town Center Dr",
   "hours": "Suns Portland Trail Blazers Sacram",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#F4EFE7",
-    "ink": "#111820",
-    "accent": "#F05A28",
-    "accent2": "#17324D",
-    "panel": "#E6DED4",
-    "deep": "#0B1D2D",
-    "onPaper": "#111820",
+    "paper": "#F3F4F6",
+    "ink": "#111827",
+    "accent": "#1D4ED8",
+    "accent2": "#93C5FD",
+    "panel": "#DCE3EE",
+    "deep": "#0B1220",
+    "border": "1px",
+    "radius": "28px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Newsreader",
@@ -34,27 +36,78 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Rally House Collegeville — people at work",
-    "The process photograph for Rally House Collegeville — hands on the job",
-    "The conversation photograph for Rally House Collegeville — a real conversation",
-    "The place photograph for Rally House Collegeville — the place",
-    "The craft photograph for Rally House Collegeville — the craft"
+    "The people photograph for Rally House Collegeville: people at work",
+    "The process photograph for Rally House Collegeville: hands on the job",
+    "The conversation photograph for Rally House Collegeville: a real conversation",
+    "The place photograph for Rally House Collegeville: the place",
+    "The craft photograph for Rally House Collegeville: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "Rally House Collegeville",
   "sub": "Cruise Through Checkout and Easily Track Your Orders",
-  "offerings": [
-    "Join Rally Rewards",
-    "Customer Service",
-    "Gift Cards"
-  ],
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The work is specific",
+    "People at the tools",
+    "You reach them directly"
   ],
+  "offerings": [
+    {
+      "title": "Join Rally Rewards",
+      "body": "Join for exclusive access to new arrivals, store events and more!"
+    },
+    {
+      "title": "Customer Service",
+      "body": "Enter your email address and we will send you an email to get you started on reseting your password."
+    },
+    {
+      "title": "Gift Cards",
+      "body": "Call or visit the official source. Nothing here invents a retainer."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Find them",
+      "body": "Name, place, and a clear path above the fold."
+    },
+    {
+      "title": "See the work",
+      "body": "A workstation, a meeting, hands on the tools of the trade."
+    },
+    {
+      "title": "Follow up",
+      "body": "Hours and scope stay official."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "https://www.rallyhouse.com/stores/collegeville/60-town-center-drive"
+    },
+    {
+      "title": "Call",
+      "body": "4048441 460-1445",
+      "href": "tel:40484414601445"
+    },
+    {
+      "title": "Find them",
+      "body": "60 Town Center Dr",
+      "href": "https://www.google.com/maps/search/?api=1&query=60%20Town%20Center%20Dr"
+    }
+  ],
+  "story": "Cruise Through Checkout and Easily Track Your Orders Join for exclusive access to new arrivals, store events and more! Enter your email address and we will send you an email to get you started on reseting your password. Rally House Collegeville gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding.",
+  "storyMore": "Name, place, and a clear path above the fold. A workstation, a meeting, hands on the tools of the trade.",
+  "featureBody": "A plan on the table. Their nouns, when harvest has them. Call or visit the official source. Nothing here invents a retainer.",
   "workHeading": "The work, in the room where it happens.",
   "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Rally House Collegeville in Collegeville. Private concept preview."
+  "storyHeading": "A studio or office with a name.",
+  "featureHeading": "Close on the craft.",
+  "contactHeading": "Start the conversation.",
+  "closing": "Rally House Collegeville should feel like a team you can actually reach.",
+  "navWork": "Skip to Content",
+  "navStory": "Locations",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "Shop All",
+  "description": "Rally House Collegeville in Collegeville. Private concept preview.",
+  "wordCount": 334
 }

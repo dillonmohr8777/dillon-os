@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 4,
   "sourceCount": 4,
   "officialPhotos": 4,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://restaurants.unos.com/locations/Oaks/PA/3511",
   "city": "Oaks",
+  "rerender": true,
   "hashes": [
     "04a48d31a8165fd511bfe41fc304ce122fdc860ac7f4f34a7c79c45b55975864",
     "a8df9560e36e3c79b13dc2c85616bd44cc340e98066fa4ba29bf1936827bfcac",
     "bcfea7204a00b036a2a1a451c084a6d5900e25fe34363da50033b67550f9f816",
     "837c9d5e06e96304d6b59169be0e909f3a4b0767ce94a76a8af5bdd021af164d",
     "29602e5437683b39411f53ae62517069b0fa436e36ef15484c6731f8b3601503"
-  ]
+  ],
+  "copyWords": 334
 }

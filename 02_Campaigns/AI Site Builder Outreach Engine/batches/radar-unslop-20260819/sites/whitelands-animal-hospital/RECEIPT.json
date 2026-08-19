@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 16,
   "sourceCount": 16,
   "officialPhotos": 16,
   "genFills": 0,
-  "hasLogo": false,
   "url": "https://www.whitelandsah.com/",
   "city": "Malvern",
+  "rerender": true,
   "hashes": [
     "b14e83c418733f6cf8b8e8c156534f304910b58741b3437142df5b094a53c198",
     "5f9a40b9dd87570c53a889261aa7650ded2646f8bf41b873b8d11bd7fa36ec02",
     "9fd1cadc3805b50be0a08df542a9f24136fea707e41c5426afd1e73438a82b6a",
     "eac4d794c3242d846254b3dfa8fcf640253c66008a63646531e366a246ae51e4",
     "5c57168bb8fe7884083c65ea8a4a590ad3012b50d6c59bddba06f5d879602ec1"
-  ]
+  ],
+  "copyWords": 445
 }

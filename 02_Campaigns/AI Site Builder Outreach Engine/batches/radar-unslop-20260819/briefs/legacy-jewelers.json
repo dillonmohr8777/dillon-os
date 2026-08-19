@@ -10,6 +10,7 @@
   "address": "",
   "hours": "",
   "logo": true,
+  "logoSrc": "assets/logo.png",
   "tokens": {
     "paper": "#c0b0f0",
     "ink": "#201060",
@@ -17,10 +18,11 @@
     "accent2": "#201060",
     "panel": "#b7ade2",
     "deep": "#110834",
-    "onPaper": "#111820",
+    "border": "1px",
+    "radius": "18px",
+    "onPaper": "#090909",
     "onAccent": "#FFFFFF",
-    "onDeep": "#FFFFFF",
-    "radius": "16px"
+    "onDeep": "#FFFFFF"
   },
   "fonts": {
     "display": "Newsreader",
@@ -34,27 +36,68 @@
     "The work"
   ],
   "imageAlts": [
-    "The people photograph for Legacy Jewelers — people at work",
-    "The process photograph for Legacy Jewelers — hands on the job",
-    "The conversation photograph for Legacy Jewelers — a real conversation",
-    "The place photograph for Legacy Jewelers — the place",
-    "The craft photograph for Legacy Jewelers — the craft"
+    "The people photograph for Legacy Jewelers: people at work",
+    "The process photograph for Legacy Jewelers: hands on the job",
+    "The conversation photograph for Legacy Jewelers: a real conversation",
+    "The place photograph for Legacy Jewelers: the place",
+    "The craft photograph for Legacy Jewelers: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
   "headline": "Legacy Jewelers",
-  "sub": "Legacy Jewelers in Schnecksville. Confirm current details on the official source.",
-  "offerings": [
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source.",
-    "Confirm current services and availability on the official source."
-  ],
+  "sub": "Legacy Jewelers is the premier, full-service jeweler in the Lehigh Valley. Quality Service: Jewelry repairs performed on premises, remounting, and full appraisal services. Satisfaction Guaranteed: Complete repairs and castings are done on the premise. Most importantly, we have.",
   "points": [
-    "People who do the work",
-    "A visit that is easy to start",
-    "Details confirmed at the source"
+    "The shop is the product",
+    "Hands on the goods",
+    "Visit or call them"
   ],
-  "workHeading": "The work, in the room where it happens.",
-  "galleryHeading": "People, not stock extras.",
-  "contactHeading": "Make the next visit easy.",
-  "description": "Legacy Jewelers in Schnecksville. Private concept preview."
+  "offerings": [
+    {
+      "title": "The floor",
+      "body": "Legacy Jewelers is a shop you can walk. The preview shows the goods and the people."
+    },
+    {
+      "title": "The counter",
+      "body": "A conversation over the thing they sell, not a mall stock set."
+    },
+    {
+      "title": "The visit",
+      "body": "Hours stay official. Nothing here invents inventory."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Browse",
+      "body": "The homepage should look like the shop, not a catalog template."
+    },
+    {
+      "title": "Ask",
+      "body": "An associate in the frame, handling the product."
+    },
+    {
+      "title": "Take it home",
+      "body": "Pricing and stock stay on their official site."
+    }
+  ],
+  "catalog": [
+    {
+      "title": "Official site",
+      "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
+      "href": "http://www.legacyjewelers.net/"
+    }
+  ],
+  "story": "Legacy Jewelers is the premier, full-service jeweler in the Lehigh Valley. Quality Service: Jewelry repairs performed on premises, remounting, and full appraisal services. Satisfaction Guaranteed: Complete repairs and castings are done on the premise. Most importantly, we have an impressive collection of diamonds and engagement ring selections, as well as an in depth inventory of loose & natural colored gemstones. Legacy Jewelers gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party.",
+  "storyMore": "The homepage should look like the shop, not a catalog template. An associate in the frame, handling the product.",
+  "featureBody": "A conversation over the thing they sell, not a mall stock set. Hours stay official. Nothing here invents inventory.",
+  "workHeading": "A shop that looks like a shop.",
+  "galleryHeading": "People and the product.",
+  "storyHeading": "A storefront with a name.",
+  "featureHeading": "Close on what they sell.",
+  "contactHeading": "Plan the visit.",
+  "closing": "Legacy Jewelers should feel like a counter you would walk up to.",
+  "navWork": "&#8211; Home &#8211;",
+  "navStory": "&#8211; Awards &#8211;",
+  "navVisit": "&#8211; Contact Us &#8211;",
+  "primaryCtaFallback": "&#8211; Contact Us &#8211;",
+  "description": "Legacy Jewelers in Schnecksville. Private concept preview.",
+  "wordCount": 330
 }

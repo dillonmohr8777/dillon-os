@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 5,
   "sourceCount": 5,
   "officialPhotos": 5,
   "genFills": 0,
-  "hasLogo": false,
   "url": "https://emberandale.com/",
   "city": "Collegeville",
+  "rerender": true,
   "hashes": [
     "1d54a4634d1821c86f9222195d4ed559e7df4ae7c52babaeea31428e8059cb3d",
     "4458cd047751a986a48e5228497a68d20bb7e348fab328aa4dacc04fcdc8c7a7",
     "73c9deec6937d1fbce2cb062ac12ab41867ff90a04916a6757bd86d4b762646b",
     "6ae2dcc5928c9c58951eff13fd7ad47183a9f0400497074c4a45fb494d38b8f8",
     "8d865d4e0afb99785f772fded3d6f2695183eb05ef14b6df6204511427488db9"
-  ]
+  ],
+  "copyWords": 378
 }

@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,27 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "hasLogo": true,
+  "logoSrc": "assets/logo.png",
   "photoCount": 7,
   "sourceCount": 7,
   "officialPhotos": 7,
   "genFills": 0,
-  "hasLogo": true,
   "url": "https://maclarenfab.com/",
   "city": "PA 19380",
+  "rerender": true,
   "hashes": [
     "387986036a32e70a65bc6c977b7f3c9a727f9c70e01b5c2cd7d17879fae54d3e",
     "02708d2bd390770520dfe9d162ce9e1d04520570c1754186920f02e8b7be692a",
     "5bd73daa42dfc724679eb045e811e9eab1121872b06952ea114ac1045e048cb6",
     "1f144bff855a60b225a4b62eaca80a34a7ed951f6498445e25bcd5611fae3854",
     "d0e55c1eefe590c655e207c61ad7f2fa3c5f4eccd2a4f509f78191a2c2802430"
-  ]
+  ],
+  "copyWords": 407
 }

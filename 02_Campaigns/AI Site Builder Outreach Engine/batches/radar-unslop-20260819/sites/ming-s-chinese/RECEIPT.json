@@ -40,6 +40,22 @@
       "ok": true
     },
     {
+      "check": "five-slides",
+      "ok": true
+    },
+    {
+      "check": "json-ld",
+      "ok": true
+    },
+    {
+      "check": "offering-cards",
+      "ok": true
+    },
+    {
+      "check": "enough-sections",
+      "ok": true
+    },
+    {
       "check": "reduced-motion",
       "ok": true
     },
@@ -58,20 +74,28 @@
     {
       "check": "people-or-food-mode",
       "ok": true
+    },
+    {
+      "check": "no-em-dash",
+      "ok": true
     }
   ],
+  "browser": "ok",
+  "hasLogo": false,
+  "logoSrc": "",
   "photoCount": 14,
   "sourceCount": 14,
   "officialPhotos": 4,
   "genFills": 5,
-  "hasLogo": false,
   "url": "https://mings-restaurant.com/",
   "city": "Hatboro",
+  "rerender": true,
   "hashes": [
     "849f51c2746a15e1d46acc4d850e3ba6f202321d1b904f0cbb44f99d59519e62",
     "8c99db5096183116a795a1d44108461d20efece24a6888a9e71ed8a340a932d3",
     "cd683b9d0f14715264ef61ff351a203f1ebf66f07ae741af562990c0ba349d38",
     "c61d4db342e26460ecdaf687e69ecd3943d7206bb1ab21fec0d15b3929d797a7",
     "8938dc5bdcdbac03edf75e7224d06cd19c49afc7f696f485cf5b121c819abc0f"
-  ]
+  ],
+  "copyWords": 357
 }
