@@ -8,6 +8,15 @@
  *
  * Site is pinned by exact name + hostname:
  *   bridge-connected-signal / https://bridge-connected-signal.netlify.app
+ *
+ * After a successful production deploy this script purges the site CDN.
+ * A digest deploy over a prior Next.js runtime can otherwise leave a
+ * Durable-cache copy of `/` until revalidation.
+ *
+ * To run from GitHub Actions, add a one-shot workflow on an approved
+ * branch that checks out dillonmohr8777/bridge-discovery-prototype at a
+ * pinned SHA, builds `node scripts/build-staging-one.mjs network`, and
+ * invokes this script. Do not leave a push-to-prod trigger in place.
  */
 'use strict';
 
