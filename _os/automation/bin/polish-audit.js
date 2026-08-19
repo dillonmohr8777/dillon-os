@@ -55,11 +55,12 @@ const ASSERTS_OWNERSHIP = /\b(?:the\s+\w+\s+)?photograph(?:s)?\s+(?:for|of)\s+/i
 const DISCLOSURE = /data-generated-imagery|illustrative concept image/i;
 
 function parseArgs(argv) {
-  const o = { hub: '', dir: '', limit: 40, json: '', help: false };
+  const o = { hub: '', dir: '', urls: '', limit: 40, json: '', help: false };
   for (let i = 2; i < argv.length; i += 1) {
     const a = argv[i];
     if (a === '--hub') o.hub = String(argv[++i] || '').replace(/\/$/, '');
     else if (a === '--dir') o.dir = String(argv[++i] || '');
+    else if (a === '--urls') o.urls = String(argv[++i] || '');
     else if (a === '--limit') o.limit = Math.max(1, parseInt(argv[++i], 10) || 40);
     else if (a === '--json') o.json = String(argv[++i] || '');
     else if (a === '--help' || a === '-h') o.help = true;
@@ -134,17 +135,36 @@ async function fetchText(url) {
   };
 }
 
+/**
+ * Pull the per-business page slugs out of a batch hub.
+ *
+ * Two layouts exist in the wild and both have to work, because the batches worth
+ * auditing are spread across five hosts: the radar hubs nest pages under
+ * `sites/<slug>/`, while the earlier philly-25 hubs link flat `<slug>/`.
+ */
 function slugsFromHub(html) {
-  const out = new Set();
-  for (const m of String(html).matchAll(/href="\.?\/?sites\/([^/"?#]+)\/?"/g)) out.add(m[1]);
-  return [...out];
+  const nested = new Set();
+  for (const m of String(html).matchAll(/href="\.?\/?sites\/([^/"?#]+)\/?"/g)) nested.add(m[1]);
+  if (nested.size) return { prefix: 'sites/', slugs: [...nested] };
+
+  const flat = new Set();
+  for (const m of String(html).matchAll(/href="\.?\/?([A-Za-z0-9][A-Za-z0-9._-]*)\/"/g)) {
+    const s = m[1];
+    // Skip anything that is plainly not a page directory.
+    if (/^(https?:|\/\/|#|mailto:|tel:)/i.test(s)) continue;
+    if (/^(assets|static|css|js|img|images|fonts)$/i.test(s)) continue;
+    if (/\.(css|js|png|jpe?g|webp|svg|ico|xml|txt)$/i.test(s)) continue;
+    flat.add(s);
+  }
+  return { prefix: '', slugs: [...flat] };
 }
 
 async function main() {
   const args = parseArgs(process.argv);
-  if (args.help || (!args.hub && !args.dir)) {
+  if (args.help || (!args.hub && !args.dir && !args.urls)) {
     process.stdout.write(
       'usage: polish-audit.js --hub https://<batch>.netlify.app [--limit 40] [--json out.json]\n' +
+      '       polish-audit.js --urls <file-of-urls> [--limit 400]\n' +
       '       polish-audit.js --dir <path-to-built-sites> [--limit 40]\n\n' +
       'Exits 1 if any page fails a blocker. Nothing showable should fail this.\n'
     );
@@ -152,7 +172,25 @@ async function main() {
   }
 
   const pages = [];
-  if (args.dir) {
+  if (args.urls) {
+    // A hub can be JS-driven, link-free, or simply out of date. The inventory
+    // knows the exact URL of every page ever built, across all five hosts, so
+    // reading a URL list is the only mode guaranteed to cover a whole batch.
+    const list = fs.readFileSync(args.urls, 'utf8')
+      .split(/\r?\n/).map((l) => l.trim()).filter((l) => /^https?:\/\//i.test(l))
+      .slice(0, args.limit);
+    process.stderr.write(`auditing ${list.length} page(s) from ${path.basename(args.urls)}\n`);
+    for (const url of list) {
+      const slug = url.replace(/\/$/, '').split('/').slice(-1)[0] || url;
+      try {
+        const r = await fetchText(url);
+        if (r.status >= 400 || !r.html) pages.push({ slug, url, html: '', error: `HTTP ${r.status}` });
+        else pages.push({ slug, url, html: r.html });
+      } catch (err) {
+        pages.push({ slug, url, html: '', error: String(err && err.message || err).slice(0, 80) });
+      }
+    }
+  } else if (args.dir) {
     const walk = (d) => {
       for (const e of fs.readdirSync(d, { withFileTypes: true })) {
         const f = path.join(d, e.name);
@@ -163,7 +201,8 @@ async function main() {
     walk(args.dir);
   } else {
     const hub = await fetchText(`${args.hub}/`);
-    const slugs = slugsFromHub(hub.html).slice(0, args.limit);
+    const found = slugsFromHub(hub.html);
+    const slugs = found.slugs.slice(0, args.limit);
     if (!slugs.length) {
       process.stderr.write(`no site links found at ${args.hub}/\n`);
       process.exit(1);
@@ -171,7 +210,7 @@ async function main() {
     process.stderr.write(`auditing ${slugs.length} page(s) from ${args.hub}\n`);
     for (const slug of slugs) {
       try {
-        const r = await fetchText(`${args.hub}/sites/${slug}/`);
+        const r = await fetchText(`${args.hub}/${found.prefix}${slug}/`);
         if (r.status >= 400 || !r.html) {
           pages.push({ slug, html: '', error: `HTTP ${r.status}` });
         } else {
@@ -183,11 +222,12 @@ async function main() {
     }
   }
 
-  const results = pages.map((p) =>
-    p.error
+  const results = pages.map((p) => ({
+    url: p.url || '',
+    ...(p.error
       ? { slug: p.slug, words: 0, images: 0, findings: [{ code: 'unreachable', detail: p.error, blocker: true }] }
-      : auditPage(p.html, { slug: p.slug })
-  );
+      : auditPage(p.html, { slug: p.slug })),
+  }));
 
   const counts = new Map();
   for (const r of results) for (const f of r.findings) counts.set(f.code, (counts.get(f.code) || 0) + 1);
