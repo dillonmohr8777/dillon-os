@@ -8,7 +8,7 @@ area: paid media
 priority: high
 client: Nexla
 outcome: Dillon has working write access on Nexla Google Ads account 791-780-2207 and can start the three-month lead campaign.
-next_action: Phone — Accept the starred unread Google Ads Read-only invite for CID 791-780-2207. Computer — sign into Momentum Ads Manager 743-802-1996 and send a manager-link to that CID. Do not send the Jayashree draft until ready. Dillon owns the Admin passkey.
+next_action: Phone — Accept the starred unread Google Ads Read-only invite for CID 791-780-2207. Computer — sign into Momentum Ads Manager 743-802-1996 and send a manager-link to that CID. Operator task and 7:30pm ET calendar block are on Dillon's Google account. Do not send the Jayashree draft until ready. Dillon owns the Admin passkey.
 review_on: 2026-08-20
 source_refs:
   - "[[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads Admin invite]]"
@@ -87,6 +87,13 @@ Verified from this session, not inferred:
 The remaining work is on Dillon's signed-in Google Ads sessions: Accept the
 Read-only invite on the phone, then send the MCC manager-link from Momentum
 Ads Manager on a computer.
+
+Operator reminders on Dillon's Google account (no mail sent to Jayashree):
+
+- Google Task `cGQ2ZW01dXBuUUZTVTJrUw` on My Tasks, due 2026-08-19,
+  status needsAction.
+- Calendar event `tloc8bg3f1uqrcahfcakqkif88`, 7:30–7:45pm America/New_York,
+  no guests, no email notifications.
 
 Draft text:
 
