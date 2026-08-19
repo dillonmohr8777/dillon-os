@@ -93,7 +93,7 @@ Operator reminders on Dillon's Google account (no mail sent to Jayashree):
 - Google Task `cGQ2ZW01dXBuUUZTVTJrUw` on My Tasks, due 2026-08-19,
   status needsAction.
 - Calendar event `tloc8bg3f1uqrcahfcakqkif88`, 7:30–7:45pm America/New_York,
-  no guests, no email notifications.
+  no guests, no email notifications. Popup reminders at T-10 and T-0.
 
 Draft text:
 
