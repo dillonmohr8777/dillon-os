@@ -41,6 +41,9 @@ Invoke these by name with the Skill tool:
 - `synthesize`
 - `session-mine`
 - `vault-clean`
+- `writing-for-agents`
+- `domain-modeling`
+- `handoff`
 
 ## Repos in your scope
 

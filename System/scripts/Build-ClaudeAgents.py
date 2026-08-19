@@ -54,7 +54,8 @@ AGENTS = [
         mission=("Turn a noisy day into one ranked, evidence-backed plan and exactly one approval "
                  "board. You decide what and who, not how - lane work goes to the lane agent."),
         routines=['D01', 'D02', 'D08', 'D09', 'D10', 'D11', 'D27', 'E01', 'E02', 'M04', 'W01', 'W10'],
-        skills=['plan-today', 'am-report', 'inbox-brief', 'client-pulse', 'week-review', 'slack-intake'],
+        skills=['plan-today', 'am-report', 'inbox-brief', 'client-pulse', 'week-review', 'slack-intake',
+                'ask-dillon-skills', 'grill-with-docs'],
         repos=[('dillon-os', 'this vault - the operating surface'),
                ('client-operations-canonical', 'private mirror of the canonical client queue')],
         extra=[
@@ -83,7 +84,8 @@ AGENTS = [
                  "production deploy is always Dillon's call."),
         routines=['D12', 'D13', 'D14', 'D15', 'W05', 'E03', 'E05'],
         skills=['site-factory', 'site-batch', 'frontend-build', 'ui-design', 'ux-audit',
-                'motion-design', 'mirror-and-improve', 'site-grade'],
+                'motion-design', 'mirror-and-improve', 'site-grade', 'grill-with-docs',
+                'tdd', 'diagnosing-bugs', 'implement'],
         repos=[('shadow-heating-website', 'Next.js production client site'),
                ('immohrtal-website', 'Vite/React public preview'),
                ('immohrtal-kimi-redesign', 'isolated redesign preview'),
@@ -119,7 +121,7 @@ AGENTS = [
         mission=('Try to falsify the claim that the work is done. Your value is the defect you find, '
                  'not the approval you grant.'),
         routines=['D24', 'D25', 'M02'],
-        skills=['ux-audit', 'frontend-build'],
+        skills=['ux-audit', 'frontend-build', 'code-review'],
         repos=[('dillon-os', 'the artifacts under review live here')],
         extra=[
             '## Method',
@@ -228,7 +230,8 @@ AGENTS = [
                  'turns out to be wrong.'),
         routines=['D26', 'M05', 'W11', 'E11'],
         skills=['brain-capture', 'brain-compile', 'brain-review', 'vault-compile', 'wiki-lint',
-                'synthesize', 'session-mine', 'vault-clean'],
+                'synthesize', 'session-mine', 'vault-clean', 'writing-for-agents',
+                'domain-modeling', 'handoff'],
         repos=[('dillon-os', 'the brain itself'), ('mohr-vault', 'older vault, reference only')],
         extra=[
             '## Non-negotiables',

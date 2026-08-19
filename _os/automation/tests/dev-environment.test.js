@@ -20,7 +20,7 @@ test('Dillon dev doctor passes the isolated site-factory profile', () => {
     result.workspace.replace(/\\/g, '/'),
     '_os/automation/fixtures/sites/aeo-healthy'
   );
-  assert.equal(result.checks.filter((check) => check.id.startsWith('skill:')).length, 3);
+  assert.equal(result.checks.filter((check) => check.id.startsWith('skill:')).length, 4);
 });
 
 test('Dillon dev environment rejects paths outside the repository', () => {

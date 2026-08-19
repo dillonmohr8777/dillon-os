@@ -44,6 +44,10 @@ Invoke these by name with the Skill tool:
 - `motion-design`
 - `mirror-and-improve`
 - `site-grade`
+- `grill-with-docs`
+- `tdd`
+- `diagnosing-bugs`
+- `implement`
 
 ## Repos in your scope
 

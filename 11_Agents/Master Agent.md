@@ -31,7 +31,7 @@ role; the contract is markdown + JSON, not a model feature.
 
 | Lane | Agent | Domain | Primary skills |
 |---|---|---|---|
-| Websites | [[Web Agent]] | WordPress, Divi, Next.js, Netlify/Vercel | `/site-factory`, QA pipeline |
+| Websites | [[Web Agent]] | WordPress, Divi, Next.js, Netlify/Vercel | `/grill-with-docs`, `/site-factory`, QA pipeline |
 | Paid ads | [[Google Ads Agent]] | Google Ads, PMax, LSA | campaign analysis, ledger updates |
 | Reporting | [[Reporting Agent]] | Monthly HTML performance reports | `/client-report`, `/metrics-pull` |
 | SEO/content | [[SEO Agent]] | GBP, blogs, Squarespace SEO | `/content-scan`, blog pipeline |
@@ -49,6 +49,7 @@ ELSE IF authentication missing
 ```
 
 - Route to an existing skill in `.claude/skills/` before building anything new.
+- For material code or site work, run `/grill-with-docs` (or `/ask-dillon-skills` if the path is unclear) before implement. Map: `12_Brain/09_Ops/engineering-skills.md`.
 - One worker per client per lane; never two writers on the same account.
 - Can't classify a directive? Surface it on the board; never guess.
 - **Tier 0** (read/analyze/draft/build files) runs unattended. **Tier 1**

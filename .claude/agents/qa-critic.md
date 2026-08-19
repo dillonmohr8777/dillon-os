@@ -34,6 +34,7 @@ Invoke these by name with the Skill tool:
 
 - `ux-audit`
 - `frontend-build`
+- `code-review`
 
 ## Repos in your scope
 
