@@ -409,6 +409,23 @@
       "external_actions": false,
       "status": "implemented",
       "note": "Split write/read: an MCP-capable agent records observed connector status; this CLI only validates freshness. It never contacts a provider and never invents a status."
+    },
+    {
+      "id": "browser-access",
+      "name": "Web escalation ladder (probe / recommend / fetch / screenshot)",
+      "lane": "infrastructure",
+      "tier": 0,
+      "cadence": "on demand",
+      "command": "node _os/automation/bin/browser-access.js probe|recommend <job>|fetch <url>|screenshot <url> --out p|start-playwright",
+      "inputs": [
+        "System/browser-access.policy.json"
+      ],
+      "outputs": [
+        "stdout ladder report; screenshot files to an explicit --out path"
+      ],
+      "external_actions": false,
+      "status": "implemented",
+      "note": "Refuses forbidden port 9222 with exit 3 and marks chrome_isolated not-live unless the process on the port really runs a claude-chrome profile. probe/recommend describe agent-only rungs (WebFetch, WebSearch, Firecrawl) that a CLI cannot drive."
     }
   ],
   "gates": {

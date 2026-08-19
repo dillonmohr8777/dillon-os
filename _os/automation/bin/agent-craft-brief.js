@@ -85,6 +85,24 @@ function analyse(days) {
   return { perRoutine, gateBlocks, failReasons };
 }
 
+
+const LESSONS = repoPath('12_Brain/11_Craft/earned-lessons.md');
+
+/**
+ * Count the append-only lessons. The brief is generated and must never be
+ * hand-edited, so lessons live in their own file; this only reports on them.
+ * A lesson heading looks like "## 2026-08-18 - short title".
+ */
+function readLessons() {
+  let text;
+  try { text = fs.readFileSync(LESSONS, 'utf8'); } catch { return { count: 0, entries: [] }; }
+  const entries = [];
+  for (const m of text.matchAll(/^##\s+(\d{4}-\d{2}-\d{2})\s+[-—]\s+(.+)$/gm)) {
+    entries.push({ date: m[1], title: m[2].trim() });
+  }
+  return { count: entries.length, entries };
+}
+
 const STANDING_LESSONS = [
   '**`blocked` is usually healthy.** Most blocks are `G6_dedupe`: the routine already ran today. Read `G5_stale_source` and `G8_circuit_breaker` instead.',
   '**A driver that reports `noop` cannot distinguish "nothing to do" from "everything is stuck."** The receipt log is the only honest signal.',
@@ -94,8 +112,8 @@ const STANDING_LESSONS = [
   '**A generated file and its generator drift.** Fix the generator, then verify it reproduces the committed output before regenerating.',
 ];
 
-function frontmatter(noteType, created, tags, sources) {
-  return [
+function frontmatter(noteType, created, tags, sources, extra = {}) {
+  const L = [
     '---',
     `note_type: ${noteType}`,
     'status: active',
@@ -103,9 +121,13 @@ function frontmatter(noteType, created, tags, sources) {
     `updated: ${todayISO()}`,
     `source_refs: [${sources}]`,
     `tags: [${tags}]`,
-    '---',
-    '',
   ];
+  // Metrics belong in frontmatter, not only in prose: a Base can only chart
+  // properties, so this is what turns each brief into a queryable row rather
+  // than a document someone has to open and read.
+  for (const [k, v] of Object.entries(extra)) L.push(`${k}: ${v}`);
+  L.push('---', '');
+  return L;
 }
 
 function main() {
@@ -122,6 +144,7 @@ function main() {
   const dayList = days.map((d) => d.day);
   const span = dayList.length;
 
+  const lessons = readLessons();
   const team = readJson(TEAM, { routines: [] });
   const meta = new Map((team.routines || []).map((r) => [r.routine_id, r]));
 
@@ -166,6 +189,7 @@ function main() {
       unreliable: unreliable.length,
       cadence_drift: drift.length,
       authorized_never_ran: neverRan.length,
+      earned_lessons: lessons.count,
     },
     gate_blocks: [...gateBlocks.entries()]
       .sort((a, b) => b[1] - a[1])
@@ -183,7 +207,17 @@ function main() {
     // A plain path, not a wikilink: 12_Brain/queue is a directory, so [[...]] would
     // register as an unresolved link target every single day.
     const L = frontmatter('review', todayISO(), 'craft, agent-infrastructure, generated',
-      '"12_Brain/queue/claude-loop-*.jsonl"');
+      '"12_Brain/queue/claude-loop-*.jsonl"', {
+        window_days: span,
+        routines_seen: rows.length,
+        workhorses: workhorses.length,
+        unreliable: unreliable.length,
+        cadence_drift: drift.length,
+        authorized_never_ran: neverRan.length,
+        earned_lessons: lessons.count,
+        worst_reliability: unreliable.length
+          ? `${unreliable[0].id} ${unreliable[0].reliability}` : 'none',
+      });
     L.push(`# Agent craft brief - ${todayISO()}`);
     L.push('');
     L.push(`Counted from ${span} day(s) of loop receipts (${dayList[0]} to ${dayList[span - 1]}).`);
@@ -241,10 +275,20 @@ function main() {
       for (const r of neverRan) L.push(`- ${r.id} ${r.name} (${r.cadence})`);
       L.push('');
     }
-    L.push('## Lesson');
+    L.push('## Lessons');
     L.push('');
-    L.push('One durable lesson per brief. When a pattern repeats across briefs, promote it to');
-    L.push('`12_Brain/03_Concepts/` and link it back here.');
+    L.push('**This file is generated. Do not hand-edit it** - the next run overwrites it.');
+    L.push('Lessons are append-only in [[12_Brain/11_Craft/earned-lessons|earned-lessons]].');
+    L.push('');
+    L.push(`Recorded so far: **${lessons.count}**.`);
+    L.push('');
+    if (lessons.entries.length) {
+      for (const e of lessons.entries.slice(-6).reverse()) L.push(`- ${e.date} - ${e.title}`);
+      L.push('');
+    }
+    L.push('Promotion rule: once a lesson has appeared twice, write it into');
+    L.push('`12_Brain/03_Concepts/` with `source_refs` pointing at both briefs, and link it');
+    L.push('from the craft index. That promotion is the compounding step.');
     L.push('');
     fs.writeFileSync(briefPath, `${L.join('\n')}\n`);
 
@@ -261,6 +305,11 @@ function main() {
     idx.push('## Standing lessons');
     idx.push('');
     for (const l of STANDING_LESSONS) idx.push(`- ${l}`);
+    idx.push('');
+    idx.push('## Earned lessons');
+    idx.push('');
+    idx.push(`[[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **${lessons.count}** recorded, append-only.`);
+    idx.push('Agents write there. Never into a generated brief.');
     idx.push('');
     idx.push('## Briefs');
     idx.push('');

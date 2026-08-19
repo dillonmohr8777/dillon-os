@@ -2,7 +2,7 @@
 note_type: index
 status: active
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-08-19
 source_refs: []
 tags: [craft, index]
 ---
@@ -22,7 +22,13 @@ repeat get promoted into `12_Brain/03_Concepts/` and linked back here.
 - **Untracked code that a scheduler runs is the highest-risk code in an estate.** Source belongs in git; artifacts do not.
 - **A generated file and its generator drift.** Fix the generator, then verify it reproduces the committed output before regenerating.
 
+## Earned lessons
+
+[[12_Brain/11_Craft/earned-lessons|earned-lessons]] - **7** recorded, append-only.
+Agents write there. Never into a generated brief.
+
 ## Briefs
 
+- [[12_Brain/11_Craft/2026-08-19 - operating brief|2026-08-19 - operating brief]]
 - [[12_Brain/11_Craft/2026-08-18 - operating brief|2026-08-18 - operating brief]]
 

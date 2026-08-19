@@ -116,3 +116,23 @@ healthy — only the stealth capability is schema-bound.
 **How to apply.** For Cloudflare or bot detection, go straight to
 `FIRECRAWL_BATCH_SCRAPE` with `proxy: "stealth"`. Asking `SCRAPE` for stealth silently
 gets you a normal fetch that fails the same way.
+
+---
+
+## 2026-08-19 — A date-keyed generator moves its own output at midnight
+
+**Lesson.** Read the path the tool reports, never the path you assumed. A generator
+that names files by `todayISO()` writes somewhere new the moment UTC rolls over.
+
+**Evidence.** `agent-craft-brief.js --write` was extended to emit metrics into
+frontmatter. Three consecutive runs appeared to ignore the change because the file
+being inspected was hardcoded as `2026-08-18 - operating brief.md`, while the run had
+already rolled to `2026-08-19` and written there. The tool had printed the correct
+path in its `artifacts` field each time. A runtime probe of `frontmatter()` proved the
+function was correct all along, so the conclusion "the patch did not apply" was wrong
+about working code.
+
+**How to apply.** When a CLI reports the artifact it wrote, verify that path. Two
+earlier lessons here are the same failure wearing different clothes — an unasserted
+replace, and generated-file drift — and the shared root is trusting an assumption
+about a filename instead of the tool's own output.

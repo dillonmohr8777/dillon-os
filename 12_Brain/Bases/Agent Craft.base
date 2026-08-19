@@ -1,0 +1,63 @@
+filters:
+  and:
+    - file.inFolder("12_Brain/11_Craft")
+properties:
+  file.name:
+    displayName: Brief
+  window_days:
+    displayName: Window
+  routines_seen:
+    displayName: Routines
+  workhorses:
+    displayName: Reliable
+  unreliable:
+    displayName: Failing
+  worst_reliability:
+    displayName: Worst
+  cadence_drift:
+    displayName: Cadence drift
+  authorized_never_ran:
+    displayName: Never ran
+  earned_lessons:
+    displayName: Lessons
+  updated:
+    displayName: Updated
+views:
+  - type: table
+    name: Operating Briefs
+    filters:
+      and:
+        - 'note_type == "review"'
+    order:
+      - file.name
+      - unreliable
+      - worst_reliability
+      - workhorses
+      - cadence_drift
+      - authorized_never_ran
+      - earned_lessons
+  - type: table
+    name: Needs Attention
+    filters:
+      and:
+        - 'note_type == "review"'
+        - or:
+            - 'unreliable > 0'
+            - 'cadence_drift > 0'
+            - 'authorized_never_ran > 0'
+    order:
+      - file.name
+      - unreliable
+      - worst_reliability
+      - cadence_drift
+      - authorized_never_ran
+  - type: table
+    name: Lessons and Index
+    filters:
+      and:
+        - 'note_type != "review"'
+    order:
+      - file.name
+      - note_type
+      - earned_lessons
+      - updated
