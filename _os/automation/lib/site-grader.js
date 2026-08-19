@@ -105,6 +105,24 @@ function num(v, d = null) {
   return Number.isFinite(n) ? n : d;
 }
 
+/**
+ * HTTP statuses that mean "the server refused this client", not "this site is
+ * bad". 401 wants credentials, 403 is usually a bot wall or a WAF, 429 is rate
+ * limiting. A visitor in a browser sails past all three, so none of them is
+ * evidence about the website's quality — only about our access to it.
+ *
+ * Deliberately excludes 404/410 (the page really is missing) and 5xx (the
+ * server really is broken); those are defects a prospect suffers too.
+ */
+const BLOCKED_STATUSES = new Set([401, 403, 429]);
+
+function isBlockedStatus(status) {
+  return BLOCKED_STATUSES.has(num(status));
+}
+
+/** The homepage came back, but with nothing in it we could actually read. */
+const MIN_READABLE_WORDS = 10;
+
 function isBool(v) {
   return v === true || v === false;
 }
@@ -166,7 +184,16 @@ function gradeFoundation(a) {
 
   const status = num(a.httpStatus);
   if (status != null) {
-    if (status >= 500) d.add(-45, `server error ${status}`);
+    if (isBlockedStatus(status)) {
+      // 401/403/429 mean the server refused *us*, not that the site is broken.
+      // A real visitor in a real browser is very likely served the page fine.
+      // Scoring this as a defect invented rebuild targets out of bot walls:
+      // epam.com (a multi-billion-dollar public company) graded 35 "decayed"
+      // and got a homepage concept built for it, as did theory.com at 23.
+      // Record it as a *blocking* observation with no score pressure, and let
+      // the caller route it to a render instead of a pitch.
+      d.weak(`homepage refused our fetch (HTTP ${status}) — not evidence about the site`);
+    } else if (status >= 500) d.add(-45, `server error ${status}`);
     else if (status >= 400) d.add(-40, `client error ${status}`);
     else if (status >= 300) d.add(-4, `homepage redirects (${status})`);
     else d.add(3, `homepage returns ${status}`);
@@ -618,7 +645,44 @@ function gradeSite(audit, opts = {}) {
   // `capped` marks any provisional grade clean enough that walking away would be
   // the natural call. Routing turns that into a `verify` verdict rather than
   // guessing in either direction.
-  const capped = provisional && bandEntry != null && bandEntry.rebuildable === false;
+  /**
+   * Did we actually read this homepage?
+   *
+   * Two ways to end up grading a page nobody read, both of which produced real
+   * builds for real businesses before this check existed:
+   *
+   *   1. The server refused our fetch (401/403/429). A bot wall is not a defect.
+   *   2. It answered 200 with essentially no text — a client-rendered shell, or
+   *      a challenge page. Absence in the source proves nothing at Tier 0.
+   *
+   * Either way the honest state is "unknown", and the honest next step is a
+   * render, not a redesign pitch. Measured on the 2026-08-19 registry: 45 of 188
+   * rebuild targets had fetched fewer than 10 words, and 36 of those already had
+   * a homepage concept built and sitting in an outreach queue.
+   */
+  const words = num(a.wordCount);
+  const blocked = isBlockedStatus(a.httpStatus);
+  // A low word count on its own is NOT unreadability — a homepage that really
+  // does say nothing but "Call us." is a genuinely bad site, and calling that
+  // unread would hand it a free pass out of the rebuild queue. The distinction
+  // is whether the content is *missing from the source but present to a visitor*,
+  // which is precisely what `renderPending` already detects (a framework root
+  // element with the copy assembled in the browser).
+  const emptyShell = !rendered && a.renderPending === true
+    && words != null && words < MIN_READABLE_WORDS;
+  const unreadable = blocked || emptyShell;
+  const unreadable_reason = blocked
+    ? `homepage refused our fetch (HTTP ${num(a.httpStatus)})`
+    : emptyShell
+      ? `homepage is client-rendered and served only ${words} word(s) in source`
+      : '';
+
+  // An unrendered grade may never report a band that means "do not rebuild",
+  // and an *unread* grade may never report a band at all: capping only the
+  // strong end would still let a bot wall land in the rebuild queue, which is
+  // exactly how it got there.
+  const capped =
+    unreadable || (provisional && bandEntry != null && bandEntry.rebuildable === false);
   if (capped) {
     bandEntry = { band: 'unconfirmed', rebuildable: null };
   }
@@ -645,7 +709,10 @@ function gradeSite(audit, opts = {}) {
   if (a.tableLayout === true) hardFaults.push('table-based layout');
   if (a.underConstruction === true) hardFaults.push('under-construction placeholder copy');
   const st = num(a.httpStatus);
-  if (st != null && st >= 400) hardFaults.push(`homepage returns ${st}`);
+  // `isBlockedStatus` is excluded on purpose: "they would not serve our robot"
+  // is not a fault we can put in front of a business owner as a reason to buy a
+  // rebuild, and hard faults are exactly the list that licenses a build slot.
+  if (st != null && st >= 400 && !isBlockedStatus(st)) hardFaults.push(`homepage returns ${st}`);
   if (a.horizontalOverflow && Object.values(a.horizontalOverflow).some((v) => v === true)) {
     hardFaults.push('horizontal overflow on a real viewport');
   }
@@ -656,6 +723,8 @@ function gradeSite(audit, opts = {}) {
     rebuildable: bandEntry ? bandEntry.rebuildable : null,
     provisional,
     capped,
+    unreadable,
+    unreadable_reason,
     hard_faults: hardFaults,
     confidence,
     tier: num(a.tier, 0),

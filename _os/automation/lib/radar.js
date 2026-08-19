@@ -324,6 +324,61 @@ function setLifecycle(registry, domain, lifecycle, { note = '', today = todayISO
   return p;
 }
 
+/**
+ * Record that a page was actually built for this business.
+ *
+ * This closes the loop the radar was missing entirely. 238 pages were built for
+ * 236 businesses across three weeks and **not one registry row knew about it**:
+ * every one still read `queued_build`, the priority score still ranked them as
+ * needing a build, and two businesses (Johnny's Pizza, THR Insurance) were built
+ * twice by two different lanes because nothing recorded the first build.
+ *
+ * `priorityScore` has always subtracted 40 points for `built`/`mailed`
+ * specifically to stop re-pitching. Nothing ever called `setLifecycle` to earn
+ * that penalty, so the guard existed and never fired once.
+ *
+ * `showable` is deliberately separate from "built". A page can exist and still be
+ * unfit to put in front of the business — held at QA, imagery not authentic,
+ * copy unfinished. Only a page that has passed review is cleared to show, and
+ * the default is `false`, so a build can never become an outreach asset by
+ * accident.
+ *
+ * @param {object} registry radar.load() output — mutated in place
+ * @param {string} domain registry key
+ * @param {object} build `{ url, batch, date, showable, qa_state, note, generated_imagery }`
+ */
+function recordBuild(registry, domain, build = {}) {
+  const p = registry.prospects[domain];
+  if (!p) return null;
+  const today = build.date || todayISO();
+  const url = String(build.url || '').trim();
+
+  p.build = {
+    date: today,
+    url,
+    batch: String(build.batch || '').trim(),
+    // Cleared to show is an explicit, earned state — never inferred from the
+    // page merely existing.
+    showable: build.showable === true,
+    qa_state: String(build.qa_state || (build.showable === true ? 'design verified' : 'not reviewed')),
+    generated_imagery: build.generated_imagery === true,
+  };
+  if (build.note) p.build.note = String(build.note);
+
+  // Lifecycle only advances. A business already mailed or converted must not be
+  // dragged back to `built` by a re-run of the recorder.
+  const rank = { new: 0, graded: 1, queued_build: 2, built: 3, mailed: 4, client: 5 };
+  if (p.lifecycle !== 'excluded' && (rank[p.lifecycle] ?? 0) < rank.built) {
+    setLifecycle(registry, domain, 'built', {
+      today,
+      note: url ? `homepage concept built: ${url}` : 'homepage concept built',
+    });
+  } else {
+    p.priority_score = priorityScore(p);
+  }
+  return p;
+}
+
 /** Everything the dashboard and the daily digest need, computed in one pass. */
 function summarize(registry, { today = todayISO() } = {}) {
   const all = Object.values(registry.prospects);
@@ -464,6 +519,7 @@ module.exports = {
   slimDimensions,
   dueForRecheck,
   setLifecycle,
+  recordBuild,
   summarize,
   priorityScore,
   geoWeight,

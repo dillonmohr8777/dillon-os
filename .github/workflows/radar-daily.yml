@@ -53,10 +53,33 @@ jobs:
 
       # Playwright only — everything else in _os/automation is dependency-free
       # on purpose, and Tier 1 is the one thing that genuinely needs a browser.
+      # Cache the browser between runs. The download is ~130MB and it is the
+      # slowest step in the job by a wide margin.
+      - name: Cache the Playwright browser
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-1.56.1-${{ runner.os }}
+
+      # `timeout-minutes` here is the fix for 2026-08-19, when this step hung for
+      # 45 minutes, consumed the entire job budget, and the sweep never ran at
+      # all — a whole day of discovery and grading lost to an npm stall. A step
+      # timeout fails fast and leaves the rest of the job its time; the sweep can
+      # still do Tier 0 work without a browser.
       - name: Install Chromium for Tier 1
+        id: install-chromium
+        timeout-minutes: 12
+        continue-on-error: true
         run: |
-          npm install --no-save playwright@1.56.1
+          npm install --no-save --no-audit --no-fund playwright@1.56.1
           npx playwright install --with-deps chromium
+
+      - name: Note a missing browser
+        if: steps.install-chromium.outcome != 'success'
+        run: |
+          echo "::warning::Chromium install failed or timed out — running Tier 0 only today."
+          echo "RADAR_MAX_TIER=0" >> "$GITHUB_ENV"
 
       - name: Run the sweep
         env:
@@ -67,7 +90,7 @@ jobs:
           node _os/automation/bin/radar-refresh.js \
             --discover "${{ github.event.inputs.discover || '60' }}" \
             --render "${{ github.event.inputs.render || '80' }}" \
-            --max-tier 1 \
+            --max-tier "${RADAR_MAX_TIER:-1}" \
             --concurrency 8 \
             ${{ github.event.inputs.regrade && format('--regrade {0}', github.event.inputs.regrade) || '' }} \
             2>&1 | tee sweep.log

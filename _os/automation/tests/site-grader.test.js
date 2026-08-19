@@ -473,3 +473,78 @@ test('reachability reads has_phone as well as a literal phone', () => {
   assert.ok(withBool.components.reachability > 0, 'a sanitized row must still score reachability');
   assert.ok(!withBool.components.missing_signals.includes('reachability'));
 });
+
+/* ------------------------------------------------------------------ *
+ * A page we could not read is not a page we proved bad
+ *
+ * The failure these lock down was live and expensive: bot walls graded as
+ * decayed sites, reached the rebuild queue as "proven" faults, and got homepage
+ * concepts built and queued for outreach. epam.com — a multi-billion-dollar
+ * public company — scored 35 "decayed" on an HTTP 403, and theory.com 23.
+ * ------------------------------------------------------------------ */
+
+test('a 403 bot wall is withheld, not scored as a decayed site', () => {
+  const g = gradeSite(analyzeTier0(
+    res('', MODERN_HEAD, { status: 403, ok: false, hops: [{ url: 'https://example.com/', status: 403 }] }),
+    'https://example.com/'
+  ));
+  assert.equal(g.unreadable, true, 'a refused fetch must be flagged unreadable');
+  assert.match(g.unreadable_reason, /403/);
+  // The decisive property: never a fault that licenses a build slot.
+  assert.equal(
+    g.hard_faults.some((f) => /returns 403/.test(f)), false,
+    'a 403 must not appear as a provable hard fault'
+  );
+  assert.equal(g.capped, true, 'an unread page may not report a band');
+  assert.equal(g.band, 'unconfirmed');
+
+  const route = routeOpportunity(
+    { business_name: 'Blocked Co', website: 'https://example.com/', vertical: 'dentist', area: 'Philadelphia', has_phone: true },
+    { grade: g }
+  );
+  // Either withheld verdict is correct and both are safe: `enrich` when the
+  // refusal left too little evidence to route at all, `verify` when there is
+  // enough to be worth a render. What must never happen is a pitch.
+  assert.ok(
+    ['verify', 'enrich'].includes(route.verdict),
+    `a blocked page must be withheld, got "${route.verdict}"`
+  );
+  assert.notEqual(route.verdict, 'rebuild');
+});
+
+test('404 and 500 stay real faults — only 401/403/429 are treated as blocks', () => {
+  for (const status of [404, 500, 503]) {
+    const g = gradeSite(analyzeTier0(
+      res('<p>Gone</p>', '<title>x</title>', { status, ok: false, hops: [{ url: 'https://example.com/', status }] }),
+      'https://example.com/'
+    ));
+    assert.equal(g.unreadable, false, `${status} is a defect the prospect suffers too`);
+    assert.ok(
+      g.hard_faults.some((f) => f.includes(String(status))),
+      `${status} must remain a provable fault`
+    );
+  }
+});
+
+test('a genuinely near-empty homepage is still a rebuild target, not "unread"', () => {
+  // The distinction that matters: this page really does say nothing to a visitor.
+  // Treating a low word count alone as unreadable would hand every terrible site
+  // a free pass out of the rebuild queue.
+  const g = gradeSite(analyzeTier0(res('<p>Call us.</p>', '<title>x</title>', {
+    finalUrl: 'http://old.example/',
+  }), 'http://old.example/'));
+  assert.equal(g.unreadable, false);
+  assert.equal(g.rebuildable, true);
+});
+
+test('a client-rendered shell is unreadable: content exists but not in the source', () => {
+  const g = gradeSite({
+    ...analyzeTier0(res('<div id="root"></div>', MODERN_HEAD), 'https://example.com/'),
+    renderPending: true,
+    wordCount: 3,
+    tier: 0,
+  });
+  assert.equal(g.unreadable, true);
+  assert.match(g.unreadable_reason, /client-rendered/);
+  assert.equal(g.band, 'unconfirmed');
+});

@@ -408,6 +408,40 @@ async function main() {
     verdicts: args.regrade,
     force: args.force,
   });
+
+  /**
+   * Top up the day's work with rows that are waiting on a render.
+   *
+   * Without this, a sweep can run, report `status: ok`, and do nothing at all —
+   * which is exactly what happened on 2026-08-18: discovery returned 144
+   * candidates that were all already known, no row was due for a re-check
+   * (cadences are 45-150 days, so on most days none is), and the render budget
+   * was never touched because it is only spent inside this grading loop. The
+   * dashboard published a page byte-identical to the day before.
+   *
+   * Meanwhile 643 rows were still graded from markup alone, their `craft` score
+   * half-weight and their verdicts unconfirmed. That is a standing backlog worth
+   * real money, so an otherwise-idle sweep spends its renders on it, worst rows
+   * first. Only rows the escalation rule already wants rendered are eligible, so
+   * this adds no new judgement — it just stops the budget going to waste.
+   */
+  if (args.maxTier >= 1 && toGrade.length < args.render) {
+    const queued = new Set(toGrade.map((p) => p.domain));
+    const backlog = Object.values(registry.prospects)
+      .filter((p) => !queued.has(p.domain))
+      .filter((p) => p.lifecycle !== 'client' && p.lifecycle !== 'excluded')
+      .filter((p) => p.current && (p.current.tier || 0) < 1)
+      .filter((p) => shouldEscalate(p.current, { tier: p.current.tier || 0 }).escalate)
+      .sort((a, b) => (b.priority_score || 0) - (a.priority_score || 0))
+      .slice(0, args.render - toGrade.length);
+    if (backlog.length) {
+      process.stderr.write(
+        `  topping up with ${backlog.length} Tier 0 row(s) awaiting a render\n`
+      );
+      run.render_backfill = backlog.length;
+      toGrade.push(...backlog);
+    }
+  }
   if (toGrade.length) {
     process.stderr.write(`  grading ${toGrade.length} (new + due for re-audit)\n`);
     const renderBudget = args.maxTier >= 1 ? { left: args.render, spent: 0 } : null;
