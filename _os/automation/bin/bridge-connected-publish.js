@@ -114,6 +114,19 @@ function netlifyToken() {
   return process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_TOKEN || '';
 }
 
+async function purgeSiteCache(site) {
+  const tok = netlifyToken();
+  const purged = await api('/purge', {
+    method: 'POST',
+    tok,
+    body: JSON.stringify({ site_id: site.id, site_slug: SITE_NAME }),
+  });
+  if (!purged.ok && purged.status !== 202) {
+    throw new Error(`cache purge failed: ${purged.status} ${purged.raw || purged.error || ''}`);
+  }
+  return { ok: true, status: purged.status || 202 };
+}
+
 async function resolvePinnedSite() {
   const tok = netlifyToken();
   if (!tok) {
@@ -184,6 +197,8 @@ async function main() {
   console.log(`deploy ${dep.deployId} uploaded ${dep.uploaded}/${dep.total}`);
   const waited = await waitForDeploy(dep.deployId, { timeoutMs: 180000 });
   if (!waited.ok) throw new Error(`deploy did not go live: ${waited.state} ${waited.error || ''}`);
+  await purgeSiteCache(site);
+  console.log(`purged CDN cache for ${EXPECTED_HOST}`);
   console.log(`live ${waited.url || site.url}`);
 }
 
@@ -196,6 +211,7 @@ module.exports = {
   htmlTag,
   parseArgs,
   resolvePinnedSite,
+  purgeSiteCache,
 };
 
 if (require.main === module) {

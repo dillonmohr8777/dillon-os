@@ -45,8 +45,10 @@ function fixtureMap(overrides = {}) {
 
 describe('bridge connected purple publish guards', () => {
   it('pins the existing unified review site, not a new one', () => {
+    const published = require('../automation/bin/bridge-connected-publish');
     assert.equal(SITE_NAME, 'bridge-connected-signal');
     assert.equal(EXPECTED_HOST, 'bridge-connected-signal.netlify.app');
+    assert.equal(typeof published.purgeSiteCache, 'function');
     assert.deepEqual(REQUIRED_ROUTES, [
       '/index.html',
       '/community/index.html',
