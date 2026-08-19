@@ -14,7 +14,7 @@
     "unreliable": 3,
     "cadence_drift": 6,
     "authorized_never_ran": 7,
-    "earned_lessons": 7
+    "earned_lessons": 9
   },
   "gate_blocks": [],
   "workhorses": [
@@ -270,5 +270,5 @@
     }
   ],
   "dry_run": true,
-  "written_at": "2026-08-19T01:29:55.978Z"
+  "written_at": "2026-08-19T01:50:37.625Z"
 }

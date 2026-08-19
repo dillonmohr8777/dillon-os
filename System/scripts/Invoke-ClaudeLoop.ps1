@@ -114,9 +114,16 @@ $ALLOWLIST = @{
         validate = 'json_verdict'
     }
     'agentvault_validate' = @{
+        # Sync THEN validate. Validating this generated projection without regenerating
+        # it first made W09 the least reliable routine in the estate (0.29 reliability,
+        # 10 failures in 7 days): its sources change on their own cadence, so the
+        # recorded sha256 goes stale and Test-AgentVault throws "Stale vault source".
+        # The machine context map already documents sync-then-test as the procedure;
+        # the loop was running half of it. Exit 2 (blocked) when the projection is
+        # unavailable; exit 1 only when validation fails on a freshly synced projection.
         exe = $ps; args = @('-NoLogo', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass',
-                            '-File', 'C:\Users\dillo\Documents\Codex\projects\agent-vault\scripts\Test-AgentVault.ps1')
-        timeout = 180; ok_exit = @(0); blocked_exit = @(2); tier = 0; kind = 'readonly'
+                            '-File', (Join-Path $SCRIPTS 'Sync-AndTest-AgentVault.ps1'), '-Json')
+        timeout = 240; ok_exit = @(0); blocked_exit = @(2); tier = 1; kind = 'generated_write'
         validate = 'nonempty_stdout'
     }
     'connector_health' = @{

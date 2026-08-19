@@ -15,6 +15,12 @@ here; the dated operating brief is generated and must not be hand-edited.
 Promote a lesson to `12_Brain/03_Concepts/` once it has shown up twice, and link it back
 from [[12_Brain/11_Craft/00_Index|the craft index]].
 
+## Promoted
+
+- 2026-08-19 → [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|Confirm the
+  artifact, not the action]] — four entries below share one root: generated-file drift,
+  the unasserted replace, the date-keyed output, and the heredoc escaping failure.
+
 ---
 
 ## 2026-08-18 — A brief that says LIVE is a claim, not a fact
@@ -136,3 +142,41 @@ about working code.
 earlier lessons here are the same failure wearing different clothes — an unasserted
 replace, and generated-file drift — and the shared root is trusting an assumption
 about a filename instead of the tool's own output.
+
+---
+
+## 2026-08-19 — Three layers of escaping is a trap, not a technique
+
+**Lesson.** Do not script a file edit through a bash heredoc containing Python that
+contains a Windows path. Use the file-editing tool.
+
+**Evidence.** Four separate patches failed with
+`SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes ... truncated
+\UXXXXXXXX escape` — every one caused by `C:\Users` inside a Python string literal
+inside a heredoc. Each failure printed a success line from an earlier statement in the
+same script, so the patch looked applied. The W09 allowlist fix landed only once it was
+done with the Edit tool, which errors when its anchor does not match.
+
+**How to apply.** Reach for the editor first for any file change. If a script really must
+do it, use forward slashes or raw strings, and assert the anchor.
+
+---
+
+## 2026-08-19 — An agent file is not an installed agent
+
+**Lesson.** Writing `.claude/agents/*.md` in a repo does not make those agents
+invokable. A project-level agents directory is discovered only when that repo is the
+session's project root, and the registry is built at session start.
+
+**Evidence.** Seven agents had been generated into `dillon-os/.claude/agents/` and
+documented in AGENTS.md as "the operating layer". Invoking `reliability-scout` failed
+with `Agent type 'reliability-scout' not found` — the session's root was
+`C:\Users\dillo\.codex`, so the vault's agents were never seen. Installing the same
+files to `~/.claude/agents/` fixed availability for future sessions, but the running
+session's catalog still did not contain them, because it was built before the files
+existed.
+
+**How to apply.** `Build-ClaudeAgents.py` now writes both the versioned vault copy and
+the user-level install. New or renamed agents need a session restart before they can be
+invoked. Same family as [[12_Brain/03_Concepts/Confirm the Artifact Not the Action|confirm
+the artifact, not the action]]: the file existing is not the capability working.
