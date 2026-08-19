@@ -19,3 +19,5 @@ threads, screenshots with extracted text, and research evidence.
 - Mark `status: compiled` only after durable facts and lessons have been
   reflected in canonical notes.
 - Redact secrets and unnecessary personal data before saving.
+
+Recent: [[12_Brain/01_Captures/2026-08-19 - Tags 2 Go third ad call]] · [[12_Brain/01_Captures/2026-08-19 - Tags 2 Go client CTR email sent]]

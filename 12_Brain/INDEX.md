@@ -61,6 +61,8 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
 - [[12_Brain/01_Captures/2026-08-19 - Google Ads live KPI Aug 17-19|2026-08-19 Google Ads live KPI Aug 17-19]] — dated spend for Onsite, Omega, KJB, Tags 2 Go.
 - [[12_Brain/01_Captures/2026-08-19 - Tags 2 Go call quality and CTR check|2026-08-19 Tags 2 Go call quality and CTR check]] — two counted calls were 3m and 4m; 10% CTR is real and rank-limited.
+- [[12_Brain/01_Captures/2026-08-19 - Tags 2 Go third ad call|2026-08-19 Tags 2 Go third ad call]] — ninth ad-originated call at 11:48am ET lasted 592s; conversions still 2.
+- [[12_Brain/01_Captures/2026-08-19 - Tags 2 Go client CTR email sent|2026-08-19 Tags 2 Go client CTR email]] — plain-signature send, then HTML-signature draft held.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -71,6 +73,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
+- [[12_Brain/06_Research/2026-08-19 - Google Ads Search CTR benchmarks|2026-08-19 Google Ads Search CTR benchmarks]] — WordStream 2026 overall 6.64% CTR; auto repair/service 5.56% (expires 2027-05-19).
 - [[12_Brain/08_Memory/README|Memory]] — `current/` + `as-of/` bi-temporal memory.
 - [[12_Brain/protocols/README|Protocols]] — agent protocols.
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
@@ -79,6 +82,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/07_Reviews/2026-08-19 - Tags 2 Go call quality|2026-08-19 Tags 2 Go call quality]] — counted calls were real 3–4 min conversations; do not raise budget yet.
 - [[Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20|Google Ads KPI Aug 17 to 19]] — live operator table.
 - [[Daily-Briefs/tags-2-go-call-quality-2026-08-19|Tags 2 Go call quality Aug 19]] — CTR and call-duration packet.
+- [[Daily-Briefs/tags-2-go-ctr-email-draft-2026-08-19|Tags 2 Go CTR email draft]] — Gmail draft with HTML AI Marketing Director signature. Hold.
 - Bases: [[12_Brain/Bases/Clients.base|Clients]] · [[12_Brain/Bases/Projects.base|Projects]] · [[12_Brain/Bases/Decisions.base|Decisions]]
 
 ## Outreach engine
