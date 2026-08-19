@@ -1,7 +1,7 @@
 ---
 note_type: protocol
 status: active
-updated: 2026-08-11
+updated: 2026-08-19
 tags:
   - brain
   - agents
@@ -21,6 +21,8 @@ tags:
 ## Think
 
 - Prefer a small verified context set over a vault-wide dump.
+- For material code or site work, run `grill-with-docs` before implement. See
+  `12_Brain/09_Ops/engineering-skills.md`.
 - For broad synthesis, split reading by domain and reconcile the results.
 - Surface contradictions instead of smoothing them over.
 - Treat missing evidence as missing; do not estimate it into existence.
