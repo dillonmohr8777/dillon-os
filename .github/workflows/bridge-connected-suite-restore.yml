@@ -1,0 +1,53 @@
+name: Restore Bridge Connected Industry Prototype Suite
+
+# One-shot production restore of the original dark-plum 3D review suite
+# onto the existing unified review URL. Only the commit whose message
+# starts with the title below runs this job. Do not leave a push-to-prod
+# trigger on later vault commits.
+on:
+  push:
+    branches:
+      - cursor/bridge-phase-three-acda
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bridge-connected-suite-restore
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    if: startsWith(github.event.head_commit.message, 'Restore Bridge Connected Industry Prototype Suite to unified review URL')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: dillonmohr8777/bridge-discovery-prototype-kimi-design
+          ref: 39e06dbbd9b0f41313c21a58a32f48e52d3d6b49
+          path: bridge-suite
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Guard tests
+        run: node --test _os/test/bridge-connected-suite-restore.test.js
+
+      - name: Restore original suite to existing bridge-connected-signal only
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          BRIDGE_SOURCE_SHA: 39e06dbbd9b0f41313c21a58a32f48e52d3d6b49
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            echo "NETLIFY_AUTH_TOKEN is not set on this repo."
+            exit 1
+          fi
+          if [ -n "${NEXT_PUBLIC_BRIDGE_API_BASE:-}" ]; then
+            echo "refusing: NEXT_PUBLIC_BRIDGE_API_BASE must stay unset"
+            exit 1
+          fi
+          node _os/automation/bin/bridge-connected-suite-restore.js bridge-suite/latest-signal-app/site

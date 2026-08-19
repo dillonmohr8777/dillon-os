@@ -13,10 +13,11 @@
  * A digest deploy over a prior Next.js runtime can otherwise leave a
  * Durable-cache copy of `/` until revalidation.
  *
- * To run from GitHub Actions, add a one-shot workflow on an approved
- * branch that checks out dillonmohr8777/bridge-discovery-prototype at a
- * pinned SHA, builds `node scripts/build-staging-one.mjs network`, and
- * invokes this script. Do not leave a push-to-prod trigger in place.
+ * This script publishes the Next.js Modern Network restyle
+ * (/create /my-profile /explore). It will refuse the original
+ * Connected Industry Prototype Suite. To restore that dark-plum 3D
+ * package, use bridge-connected-suite-restore.js against
+ * latest-signal-app/site. Do not leave a push-to-prod trigger in place.
  */
 'use strict';
 
