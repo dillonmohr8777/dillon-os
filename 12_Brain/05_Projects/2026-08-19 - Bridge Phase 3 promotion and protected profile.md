@@ -8,16 +8,16 @@ client: Bridge Software Development
 area: product
 priority: high
 outcome: Create and My Profile run the Phase 3 Promotion + protected-profile slice against a typed adapter on the Connected purple Phase 1/2 five-route product, with contract tests green.
-next_action: Hold Slack and client email. Internal review of draft PR #6 can continue. Do not bind a live API origin until Miraj staging is inspectable.
+next_action: Hold Slack and client email. Unified review URL is the original 3D suite. Draft PR #6 can be reviewed internally. Do not bind a live API origin until Miraj staging is inspectable.
 due: 2026-08-22
 review_on: 2026-08-22
 source_refs:
   - "[[12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 is the current product lane]]"
   - "[[12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send]]"
   - "[[12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product]]"
-  - "[[12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Bridge live URL must be the original 3D suite]]"
   - "[[12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open]]"
-  - "[[12_Brain/04_Decisions/2026-08-19 - Bridge unified review stays Connected purple]]"
+  - "[[12_Brain/04_Decisions/2026-08-19 - Bridge unified review is the original 3D suite]]"
   - "[[01_Clients/Bridge Software Development/overview]]"
 tags:
   - brain
@@ -37,32 +37,26 @@ The five-route Phase 2 frontend is live. The backlog already named this slice as
 
 ## Current state
 
-Draft PR is on GitHub: https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 (`cursor/phase-three-vertical-slice-acda`). Visual default is Connected purple on the same five-route product. Dillon approved the unified-URL republish (`full approval publish`). Slack and client send remain held.
+Draft PR is on GitHub: https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 (`cursor/phase-three-vertical-slice-acda`). That Next.js lock is not the unified review visual. Dillon rejected the Modern Network restyle on the live URL. Slack and client send remain held.
 
-- Typed contract in `lib/phase3/`
-- In-memory adapter by default
-- HTTP client behind `NEXT_PUBLIC_BRIDGE_API_BASE` (unset)
-- Create and My Profile journeys wired to the adapter
-- Host script forces `data-theme="network"` on `bridge-connected-signal.netlify.app`
-- `npm run test:phase3` — 20 passed
-- typecheck, lint, and production build passed
-- Live `https://bridge-connected-signal.netlify.app` verified `data-theme="network"` on Home, Community, Create, My Profile, and Explore (Netlify deploy `6a8601e5b1ca6b199926b228` from commit `65d4a3eb`)
+- Live `https://bridge-connected-signal.netlify.app` is the original Connected Industry Prototype Suite (kimi-design SHA `39e06db`, Netlify deploy `6a860a76290d727a1c475399`)
+- Routes: `/` `/community/` `/studio/` `/business/` `/signal/` plus compatibility redirects from `/create` `/my-profile` `/explore`
+- Five-view illustrative 3D theater verified on Explore
+- Typed Phase 3 contract remains in draft PR #6 only
 
 Live API bind is not done. Slack / client send is still held.
 
 ## Next actions
 
-- [x] Open the Phase 3 slice in the canonical frontend repo
-- [x] Open draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6
 - [ ] Review the prototype PR internally
 - [ ] Hold Slack and client email until Dillon asks
-- [x] Republish https://bridge-connected-signal.netlify.app from PR #6 as Connected purple when Dillon asks
+- [x] Restore https://bridge-connected-signal.netlify.app to the original 3D Connected Industry Prototype Suite
 - [ ] Bind `NEXT_PUBLIC_BRIDGE_API_BASE` only after Miraj's staging origin is inspectable
 
 ## Decisions
 
 - [[12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open]]
-- [[12_Brain/04_Decisions/2026-08-19 - Bridge unified review stays Connected purple]]
+- [[12_Brain/04_Decisions/2026-08-19 - Bridge unified review is the original 3D suite]]
 
 ## Evidence and artifacts
 
@@ -70,12 +64,12 @@ Live API bind is not done. Slack / client send is still held.
 - [[12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send]]
 - [[12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product]]
 - [[12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple]]
-- https://bridge-connected-signal.netlify.app (live Connected purple, 2026-08-19)
-- `/opt/cursor/artifacts/live_connected_purple_home.webp`
+- https://bridge-connected-signal.netlify.app (live original 3D suite, 2026-08-19)
+- `/opt/cursor/artifacts/restored_purple_3d_suite_live_walkthrough.mp4`
 
 ## Closeout
 
-- Result: frontend Phase 3 slice implemented on Connected purple; unified review URL live-verified as Modern Network
-- Verification: 20 contract tests, typecheck, lint, GitHub Actions publish run 32292367269, live HTML `data-theme="network"`, five-route UI walkthrough
-- Durable lesson: digest-deploying static files over a prior Next.js Netlify runtime can leave a Durable-cache copy of `/`; purge CDN and fetch the bare home URL, not only a cache-busted query
+- Result: original Connected Industry Prototype Suite restored to the unified review URL; Phase 3 Next.js lock remains in draft PR #6
+- Verification: restore guards, GitHub Actions run 32295772051, live HTML title `Bridge | Connected Industry Prototype Suite`, five original routes, 3D theater walkthrough
+- Durable lesson: "Connected purple" on this account means the dark-plum 3D suite in `latest-signal-app/site`, not a token restyle of the Next.js app. The repo name kimi-design is a trap; the folder is the Tori review package.
 - Slack, client send, live API bind, and prototype merge remain gated

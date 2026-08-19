@@ -8,7 +8,7 @@ github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
 updated: 2026-08-19
 last_touched: 2026-08-19
-next_action: Hold Slack and client email. Internal review of draft PR #6 can continue. Do not bind a live API origin until Miraj staging is inspectable.
+next_action: Hold Slack and client email. Unified review URL is the original 3D Connected Industry Prototype Suite. Draft PR #6 stays internal. Do not bind a live API origin until Miraj staging is inspectable.
 due: 2026-08-22
 ---
 
@@ -30,16 +30,16 @@ due: 2026-08-22
 
 ## Current phase
 
-**Phase 3 frontend lock is in draft PR #6.** Phase 2's five-route product stays instituted. The review visual is Connected purple (Modern Network), not Trusted Current navy/teal.
+**Phase 3 frontend lock remains in draft PR #6.** The unified review visual is the original Connected Industry Prototype Suite (dark plum, photography, 3D theater), not the Next.js Modern Network restyle and not Trusted Current navy/teal.
 
 | Layer | Status |
 |---|---|
-| Phase 2 five-route frontend | Live at the unified noindex URL |
-| Phase 3 adapter + Create / My Profile journeys | Draft PR #6 |
-| Tori route-by-route written boxes | Still pending; does not stall this slice |
+| Original five-route review suite | Live at the unified noindex URL |
+| Phase 3 adapter + Create / My Profile journeys | Draft PR #6 (not on the unified URL) |
+| Tori route-by-route written boxes | Still pending; does not stall this restore |
 | Miraj Milestone 2 | Self-reported done, tests remaining as of 2026-08-17 |
 | Live `/api/v1` bind | Blocked on inspectable staging origin |
-| Unified Netlify update | Live. Connected purple from PR #6 commit `65d4a3eb`, deploy `6a8601e5b1ca6b199926b228`, verified 2026-08-19. |
+| Unified Netlify update | Live. Original suite from kimi-design `39e06db`, deploy `6a860a76290d727a1c475399`, verified 2026-08-19. |
 | Slack / client comms | Held until Dillon asks |
 
 Out of slice without a written change order: expanded ecosystem directory, algorithmic ranking, subscriptions/payments, in-platform ordering.
@@ -78,20 +78,15 @@ This is a hypothesis for Tori to approve, not final public copy.
 
 The discovery prototype is implemented and verified. Routes:
 
-- `/` — Home
+- `/` — Home (Connected Industry Prototype Suite)
 - `/community` — Community News (News Grid + Classic)
-- `/create` — Create / targeted Promotion
-- `/my-profile` — Public vs verified-business profile
-- `/explore` — search, filters, favorites, introductions
-- `/directory` — working search, role, and verification filters
-- `/join` — role-selection onboarding direction
-- `/profile/cascade-canna` — member profile and permission-based contact request
-- `/dashboard` — member dashboard
-- `/admin/verification` — admin verification queue with responsive mobile cards
-- `/directions` — three switchable visual directions
-- `/design-system` — provisional design tokens, typography, controls, states, and voice principles
+- `/studio` — Create / Campaign Studio
+- `/business` — My Profile (Public vs verified-business)
+- `/signal` — Explore (nationwide filters, favorites, five-view 3D theater)
 
-Legacy redirects remain instituted: `/studio` → Create, `/business` → My Profile, `/signal` → Explore.
+Legacy compatibility redirects after the 2026-08-19 restore: `/create` → Create/Studio, `/my-profile` → My Profile, `/explore` → Explore.
+
+The Next.js discovery prototype also still has `/directory`, `/join`, `/profile/cascade-canna`, `/dashboard`, `/admin/verification`, `/directions`, and `/design-system` in draft PR #6. Those are not the unified review visual.
 
 The prototype uses fictional profiles and metrics. It has no production backend, authentication, persistence, outbound email, or real license verification.
 
@@ -138,14 +133,15 @@ Leave with decisions on:
 - [[../../10_Sessions/Bridge Software Development - 2026-08-19|2026-08-19 Phase 3 session]]
 - [[../../12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Phase 3 project]]
 - [[../../12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open|Phase 3 slice decision]]
-- [[../../12_Brain/04_Decisions/2026-08-19 - Bridge unified review stays Connected purple|Connected purple review decision]]
+- [[../../12_Brain/04_Decisions/2026-08-19 - Bridge unified review is the original 3D suite|Original 3D suite review decision]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge live URL must be the original 3D suite|Original 3D suite restore capture]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send|Comms hold]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge restore Connected purple on Phase 1-2 product|Restore Connected purple capture]]
 - [[../../12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple|Publish approval capture]]
 
 ## Immediate next action
 
-Hold Slack and client email. Internal review of draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 can continue. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin. Unified review URL is live Connected purple.
+Hold Slack and client email. Unified review URL is the original 3D suite at https://bridge-connected-signal.netlify.app. Draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 stays internal. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
 
 ## Communication intelligence - 2026-08-01
 

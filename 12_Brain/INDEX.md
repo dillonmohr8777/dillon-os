@@ -58,15 +58,16 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Send-Ready Harvest|2026-08-14 Franchise Send-Ready Harvest]] — 720 send-ready franchisee mailboxes; UPS store inboxes dropped.
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
-- [[12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple|2026-08-19 Bridge full approval to publish Connected purple]] — Dillon approved the unified-URL republish; Slack and API bind still held.
+- [[12_Brain/01_Captures/2026-08-19 - Bridge full approval to publish Connected purple|2026-08-19 Bridge full approval to publish Connected purple]] — Dillon approved a unified-URL republish; the Next.js restyle that landed was later rejected.
+- [[12_Brain/01_Captures/2026-08-19 - Bridge live URL must be the original 3D suite|2026-08-19 Bridge live URL must be the original 3D suite]] — Dillon rejected the Next.js restyle and asked for the old purple 3D frontend.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
 
 - [[12_Brain/05_Projects/README|Projects]] — active delivery threads and goals.
-- [[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Bridge Phase 3 promotion and protected profile]] — Promotion + protected profile on the Connected purple five-route app; unified URL live.
+- [[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Bridge Phase 3 promotion and protected profile]] — Next.js Phase 3 lock stays in draft PR #6; unified URL is the original 3D suite.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
-- [[12_Brain/04_Decisions/2026-08-19 - Bridge unified review stays Connected purple|Bridge unified review stays Connected purple]] — Modern Network on the Tori-instituted Phase 1/2 product.
+- [[12_Brain/04_Decisions/2026-08-19 - Bridge unified review is the original 3D suite|Bridge unified review is the original 3D suite]] — dark-plum Connected Industry Prototype Suite on the live review URL.
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.

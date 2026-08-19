@@ -1,6 +1,6 @@
 ---
 note_type: decision
-status: active
+status: superseded
 created: 2026-08-19
 updated: 2026-08-19T19:30:00Z
 owner: Dillon Mohr
@@ -52,9 +52,9 @@ Dillon named the last beautiful purple and the Tori-instituted product inventory
 - Live `https://bridge-connected-signal.netlify.app` now serves Connected purple from commit `65d4a3eb` (Netlify deploy `6a8601e5b1ca6b199926b228`)
 - Do not Slack, email Tori/Melissa/Mac/Miraj, bind `NEXT_PUBLIC_BRIDGE_API_BASE`, merge the prototype PR, or mark Tori accept boxes complete
 
-## Reversal trigger
+## Superseded
 
-Tori writes a different default direction, or Dillon cancels the Netlify restore.
+Replaced by [[12_Brain/04_Decisions/2026-08-19 - Bridge unified review is the original 3D suite]]. The Next.js Modern Network restyle on the unified URL was not the product Dillon asked for.
 
 ## Evidence
 
