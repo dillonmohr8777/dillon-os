@@ -4,8 +4,6 @@ Paused 2026-08-19 ~00:50 America/New_York. Resume **Thursday 2026-08-20 at 9:00 
 
 Calendar block: https://www.google.com/calendar/event?eid=bmZmZTYwcWFuZmRzNHZyMjhwdXJrMGNhNmMgZGlsbG9ubW9ocjg3NzdAbQ
 
-Calendar block: https://www.google.com/calendar/event?eid=bmZmZTYwcWFuZmRzNHZyMjhwdXJrMGNhNmMgZGlsbG9ubW9ocjg3NzdAbQ
-
 Do not deploy. Do not send mail. `mail_ready` stays hold. Update Google Sheet `Fixed?` only after QA green.
 
 ## Paste this into the 9 AM cloud agent
