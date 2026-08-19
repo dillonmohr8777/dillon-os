@@ -45,7 +45,7 @@ links instead of loading the entire vault.
 - `02_Campaigns/` — campaign plans and delivery.
 - `02_FullTimeJob/` — Align HCM work, kept separate from client revenue.
 - `03_Content/` — content plans and drafts.
-- [[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Bridge Phase 3 promotion and protected profile]] — current Bridge product/UX slice.
+- [[12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Bridge Phase 3 promotion and protected profile]] — current Bridge product/UX slice. Draft PR only; no Slack or client send.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 3|Philadelphia 25-site factory Batch 3]] — private prospect previews and evidence.
 - [[12_Brain/05_Projects/2026-08-04 - Philadelphia 25 Site Factory Batch 4|Philadelphia 25-site factory Batch 4]] — separate real-business cohort with first-party logo evidence.
 - [[04_SOPs/SOP Index|SOP Index]] — repeatable operating procedures.

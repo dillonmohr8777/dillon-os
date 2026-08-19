@@ -28,6 +28,8 @@ Expected repository: `dillonmohr8777/bridge-discovery-prototype`
 Expected default branch: `main`
 Known Phase 2 unified-review commit: `a951723` as of 2026-08-16
 Phase 3 branch: `cursor/phase-three-vertical-slice-acda`
+Phase 3 draft PR: https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6
+Comms: do not Slack or send to the client unless Dillon asks.
 
 ## What happened on 2026-07-11
 
@@ -112,10 +114,10 @@ Out of scope without a documented change:
 
 ## Safe next implementation sequence
 
-1. Review the Phase 3 branch and decide on the noindex Netlify update.
-2. Keep the live API unbound until Miraj's staging origin is inspectable.
-3. Bind session, upload, post, and projection one contract at a time.
-4. Add automated tests against the live API after that bind.
+1. Review draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 internally.
+2. Do not Slack, email Tori/Melissa, or update Netlify until Dillon asks.
+3. Keep the live API unbound until Miraj's staging origin is inspectable.
+4. Bind session, upload, post, and projection one contract at a time after that origin exists.
 5. Leave expanded directory, ranking, payments, and ordering in later/change-order work.
 
 ## Files to read first in GitHub

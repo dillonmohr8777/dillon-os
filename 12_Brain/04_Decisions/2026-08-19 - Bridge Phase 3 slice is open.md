@@ -11,7 +11,9 @@ review_on: 2026-08-26
 verification_status: verified
 source_refs:
   - "[[12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 is the current product lane]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send]]"
   - "https://github.com/dillonmohr8777/bridge-discovery-prototype/blob/main/docs/phase2/04-phased-backlog-and-decisions.md"
+  - "https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6"
 tags:
   - brain
   - decision
@@ -33,7 +35,7 @@ Phase 2's five-route Trusted Current frontend is technically complete and live o
 
 ## Decision
 
-Option 2. Frontend Phase 3 work proceeds now. A live `/api/v1` origin is not bound until Miraj publishes inspectable staging. The unified review site is not updated until Dillon approves that deploy.
+Option 2. Frontend Phase 3 work proceeds now. A live `/api/v1` origin is not bound until Miraj publishes inspectable staging. The unified review site is not updated until Dillon approves that deploy. Slack posts and client-facing sends stay off until Dillon explicitly asks.
 
 ## Rationale
 
@@ -44,6 +46,7 @@ Melissa already told the team to move forward. Dillon named this exact slice on 
 - `/create` and `/my-profile` use the Phase 3 adapter instead of inert prototype controls.
 - Expanded directories, ranking, subscriptions, and in-platform ordering stay future/change-order work.
 - Tori acceptance is still recorded when it arrives; it does not gate adapter work.
+- Do not post to Slack, email Tori/Melissa/Mac/Miraj, or update the unified Netlify URL from this workstream unless Dillon asks.
 
 ## Reversal trigger
 

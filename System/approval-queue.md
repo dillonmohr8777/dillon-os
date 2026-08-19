@@ -1,8 +1,8 @@
 ---
 tags: [system, approvals]
-last_updated: 2026-08-19T17:30:00Z
+last_updated: 2026-08-19T17:50:00Z
 status: active
-last_scan: 2026-08-19T17:30:00Z
+last_scan: 2026-08-19T17:50:00Z
 scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "System/urgent-replies.md", "System/claude-memory-sync.md", "Daily-Briefs/ latest 3"]
 ---
 
@@ -11,7 +11,7 @@ scan_sources: ["00_Inbox/", "01_Clients/ status at-risk/onboarding/blocked", "Sy
 Only current client and operating actions belong here. Nothing is sent, published, deployed, purchased, or changed in a client account automatically.
 
 ## Current client actions
-- [ ] 2026-08-19 - Bridge Software Development - Apply the Phase 3 patch to `dillonmohr8777/bridge-discovery-prototype` from a write-capable checkout, then approve the noindex Netlify update; do not bind a live API origin until Miraj staging is inspectable - Risk: medium
+- [ ] 2026-08-19 - Bridge Software Development - Review draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 internally. Do not Slack, email Tori/Melissa, or update Netlify. Do not bind a live API origin until Miraj staging is inspectable - Risk: medium
 - [ ] 2026-07-12 - Kimberly James Bridal - Approve completion update after FAQ desktop image crop and responsive QA; verify appointment-source reconciliation first - Risk: low
 - [ ] 2026-07-12 - Omega Landscaping & Concrete - Approve account changes only after Google/Meta call, form, and lead-quality attribution is verified - Risk: high
 - [ ] 2026-07-12 - On-Site Concrete & Landscape - Approve technical or campaign changes after allowlisted crawl and conversion-action audit - Risk: medium

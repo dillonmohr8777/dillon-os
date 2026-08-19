@@ -8,7 +8,7 @@ github: "https://github.com/dillonmohr8777/bridge-discovery-prototype"
 tags: [client, bridge-software, product, ux, frontend, nextjs, cannabis]
 updated: 2026-08-19
 last_touched: 2026-08-19
-next_action: Review the Phase 3 prototype branch, then approve or reject a noindex Netlify update of the unified review URL.
+next_action: Review draft PR #6 internally. Do not Slack, email the client, or update Netlify.
 due: 2026-08-22
 ---
 
@@ -23,7 +23,8 @@ due: 2026-08-22
 - GitHub: [dillonmohr8777/bridge-discovery-prototype](https://github.com/dillonmohr8777/bridge-discovery-prototype)
 - Default branch: `main`
 - Phase 2 unified review URL: https://bridge-connected-signal.netlify.app
-- Phase 3 branch: `cursor/phase-three-vertical-slice-acda` (local; apply `phase3-vertical-slice.patch` to publish)
+- Phase 3 branch: `cursor/phase-three-vertical-slice-acda`
+- Phase 3 draft PR: https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6
 - Claude entrypoint: `CLAUDE.md`
 - Local checkout: `C:\Users\dillo\Documents\Codex\2026-07-10\find-what-we-need-to-do\bridge-discovery-prototype`
 
@@ -34,11 +35,12 @@ due: 2026-08-22
 | Layer | Status |
 |---|---|
 | Phase 2 five-route frontend | Live at the unified noindex URL |
-| Phase 3 adapter + Create / My Profile journeys | Implemented on the Phase 3 branch |
+| Phase 3 adapter + Create / My Profile journeys | Draft PR #6 |
 | Tori route-by-route written boxes | Still pending; does not stall this slice |
 | Miraj Milestone 2 | Self-reported done, tests remaining as of 2026-08-17 |
 | Live `/api/v1` bind | Blocked on inspectable staging origin |
-| Unified Netlify update | Approval-gated |
+| Unified Netlify update | Held. Dillon said no Slack and no client send. |
+| Slack / client comms | Held until Dillon asks |
 
 Out of slice without a written change order: expanded ecosystem directory, algorithmic ranking, subscriptions/payments, in-platform ordering.
 
@@ -130,10 +132,11 @@ Leave with decisions on:
 - [[../../10_Sessions/Bridge Software Development - 2026-08-19|2026-08-19 Phase 3 session]]
 - [[../../12_Brain/05_Projects/2026-08-19 - Bridge Phase 3 promotion and protected profile|Phase 3 project]]
 - [[../../12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open|Phase 3 slice decision]]
+- [[../../12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send|Comms hold]]
 
 ## Immediate next action
 
-Review the Phase 3 branch in `dillonmohr8777/bridge-discovery-prototype`. Approve a noindex Netlify update only after that review. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
+Review draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 internally. Do not post to Slack, email Tori or Melissa, or update the unified Netlify URL. Do not bind `NEXT_PUBLIC_BRIDGE_API_BASE` until Miraj publishes an inspectable staging origin.
 
 ## Communication intelligence - 2026-08-01
 

@@ -16,13 +16,14 @@ pipeline_state: developing
 reporting_state: developing
 workflow_state: operational
 priority: high
-next_action: "Review the Phase 3 Promotion + protected-profile branch, then approve or reject the unified noindex Netlify update."
+next_action: "Review draft PR #6 internally. Do not Slack, email the client, or update Netlify."
 review_on: 2026-08-22
 source_refs:
   - "[[overview]]"
   - "[[Product and Technical Handoff]]"
   - "[[Source Audit]]"
   - "[[12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 is the current product lane]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Bridge Phase 3 hold on Slack and client send]]"
   - "[[12_Brain/04_Decisions/2026-08-19 - Bridge Phase 3 slice is open]]"
 tags: [client-intelligence, bridge-software, product, ux, directory, marketplace]
 ---
@@ -76,10 +77,10 @@ context.
 
 ## Next evidence sprint
 
-1. Review the Phase 3 adapter on `/create` and `/my-profile`.
-2. Approve or reject the unified noindex Netlify update.
+1. Review draft PR https://github.com/dillonmohr8777/bridge-discovery-prototype/pull/6 internally.
+2. Do not Slack, email the client, or update Netlify until Dillon asks.
 3. Collect Miraj's inspectable repository, commit, and staging origin.
-4. Bind only the approved vertical slice to `/api/v1`.
+4. Bind only the approved vertical slice to `/api/v1` after that origin exists.
 5. Record Tori's route and field decisions when they arrive.
 
 ## Shared systems
