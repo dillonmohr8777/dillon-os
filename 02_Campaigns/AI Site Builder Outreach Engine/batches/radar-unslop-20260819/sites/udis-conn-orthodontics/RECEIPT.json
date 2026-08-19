@@ -1,0 +1,27 @@
+{
+  "id": 63,
+  "slug": "udis-conn-orthodontics",
+  "name": "Udis & Conn Orthodontics",
+  "family": "professional",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": false,
+  "qa": [],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://udisandconnorthodontics.com/\nCall log:\n  - navigating to \"https://udisandconnorthodontics.com/\", waiting until \"domcontentloaded\"\n",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://udisandconnorthodontics.com",
+  "city": "Jenkintown",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Specialist in a work setting talking with a client, no text",
+    "Person at a workstation doing the actual service, no text",
+    "Two colleagues reviewing a plan, no text",
+    "Office or shop entrance with a person arriving, no text",
+    "Close-up of hands on the tools of this trade, no logos"
+  ]
+}

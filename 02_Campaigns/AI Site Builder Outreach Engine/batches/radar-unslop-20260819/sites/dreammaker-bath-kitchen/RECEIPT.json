@@ -1,0 +1,27 @@
+{
+  "id": 88,
+  "slug": "dreammaker-bath-kitchen",
+  "name": "DreamMaker Bath & Kitchen of Chester County",
+  "family": "retail",
+  "mode": "people",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 1,
+  "sourceCount": 1,
+  "officialPhotos": 1,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://dreammaker-remodel.com/chester-county/",
+  "city": "Chester Springs",
+  "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Associate helping a customer choose an item in the shop, no text",
+    "Craftsperson or buyer handling the product with care, no text",
+    "Two people at the counter during a purchase conversation, no text",
+    "Store interior with a person browsing, no text",
+    "Close-up of hands presenting the product, no logos"
+  ]
+}

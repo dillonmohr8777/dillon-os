@@ -1,0 +1,78 @@
+{
+  "id": 34,
+  "slug": "rally-house-collegeville",
+  "name": "Rally House Collegeville",
+  "family": "professional",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 7,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.rallyhouse.com/stores/collegeville/60-town-center-drive",
+  "city": "Collegeville",
+  "hashes": [
+    "6a8f4359f085b09c1436668b3c8403db6baf521d86a244a23a89fb0f5e0d39db",
+    "502a5ea5663c80bf6e0721122a169441dd2b192f01b58bc4f5ad26c5680e427c",
+    "be2e47ac3ab9644ad82a91f7298f952290933c8ed400d7e9f4b5e0d8aaa59012",
+    "f5ca62e45ff89c67b2c2fbff5579bfb9821a708cc34bfbec66af58ff30c42d7f",
+    "259e59eda6164c43fbbdb38efaea3648401ff59b7aefb747f5ffe85ef49dd6e1"
+  ]
+}

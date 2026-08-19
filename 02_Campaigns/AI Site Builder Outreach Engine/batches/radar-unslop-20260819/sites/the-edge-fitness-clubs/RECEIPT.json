@@ -1,0 +1,78 @@
+{
+  "id": 39,
+  "slug": "the-edge-fitness-clubs",
+  "name": "The Edge Fitness Clubs Media",
+  "family": "fitness",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.theedgefitnessclubs.com/locations/pennsylvania-media",
+  "city": "Media",
+  "hashes": [
+    "8607b6204b77eb2055077a4eceec0aa5d84b2c18c3f97ca6e5fccab51d5339aa",
+    "cd0f6424f5479fb39aa126d9a326f0d7f97aeac3cb084bd08ad3c2356a6ec5c3",
+    "b81f822f621f93b73f2c02d0191096e16284c5c15d0a33dde83989cc9c52d6d5",
+    "07abaf12e73ba067c4a518595a50b2ee16bd1d5fffd27d0adaeb46d98dfb67e9",
+    "63b880f289defb369c5e2c335123c59ec3fe3f7147a580032f065763c3feacc2"
+  ]
+}

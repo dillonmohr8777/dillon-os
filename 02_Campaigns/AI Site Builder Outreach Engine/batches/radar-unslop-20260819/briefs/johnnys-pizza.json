@@ -1,0 +1,60 @@
+{
+  "slug": "johnnys-pizza",
+  "name": "Johnny's Pizza & Pasta",
+  "city": "Spring Mount",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "http://johnnysitaliano.com/",
+  "phone": "610.287.4771",
+  "address": "19525 Green Lane PA 18054 Harleysville PA 19438 Harleysv",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#e0c070",
+    "ink": "#605030",
+    "accent": "#e0c070",
+    "accent2": "#e0c080",
+    "panel": "#e0c070",
+    "deep": "#342c1a",
+    "onPaper": "#111820",
+    "onAccent": "#111820",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Johnny's Pizza & Pasta",
+    "Spring Mount",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Johnny's Pizza & Pasta kitchen concept",
+    "Chef plating at the pass for Johnny's Pizza & Pasta",
+    "Prep and ingredients for Johnny's Pizza & Pasta",
+    "Dining setting for Johnny's Pizza & Pasta",
+    "Close food texture for Johnny's Pizza & Pasta"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "It&#8217;s all about the food &#038; Service at Johnny&#8217;s BYO",
+  "sub": "Yes we sell allot of Pizza, Stromboli and Grinders, but we are truly a \"Ristorante Italiano\". Our dishes are carefully prepared one at a time to assure our quality. If your favorite dish is not on our menu, just ask.",
+  "offerings": [
+    "Johnny&#8217;s Pizza &#038; Pasta Ristorante Italiano",
+    "&#8220;Regular&#8221; Stromboli",
+    "Chef&#039;s Recommendations"
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Johnny's Pizza & Pasta in Spring Mount. Private concept preview."
+}

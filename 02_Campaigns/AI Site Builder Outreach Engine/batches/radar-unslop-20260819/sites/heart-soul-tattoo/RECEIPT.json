@@ -1,0 +1,27 @@
+{
+  "id": 17,
+  "slug": "heart-soul-tattoo",
+  "name": "Heart & Soul Tattoo",
+  "family": "salon",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://fonts.gstatic.com/",
+  "city": "East Greenville",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Stylist working on a client's hair or nails in a real salon station, no text",
+    "Artist focused on a service in progress, hands and tools visible, no text",
+    "Client and stylist talking in the chair, relaxed, no text",
+    "Salon interior with a person at the front desk, no text",
+    "Close-up of skilled hands during the service, no logos"
+  ]
+}

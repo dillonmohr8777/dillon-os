@@ -15,6 +15,11 @@ test('food businesses get food mode, not people stock', () => {
   assert.equal(familyFor('Manatawny Still Works'), 'food');
   assert.notEqual(familyFor('MacLaren Kitchen and Bath'), 'food');
   assert.notEqual(familyFor('The Restaurant Store Plymouth Meeting'), 'food');
+  assert.equal(familyFor('Wholly Grounds Coffeehouse'), 'food');
+  assert.equal(familyFor('Borsello Landscaping'), 'trade');
+  assert.equal(familyFor('Udis & Conn Orthodontics'), 'dental');
+  assert.equal(familyFor('Colmar Dentistry For Kids'), 'dental');
+  assert.equal(familyFor('J-Pro Pools Inc'), 'trade');
 });
 
 test('pool-and-spa trade is not a nail salon', () => {

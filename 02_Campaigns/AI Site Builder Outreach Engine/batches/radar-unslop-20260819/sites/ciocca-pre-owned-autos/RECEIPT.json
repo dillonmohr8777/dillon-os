@@ -1,0 +1,27 @@
+{
+  "id": 81,
+  "slug": "ciocca-pre-owned-autos",
+  "name": "Ciocca Pre-Owned Autos",
+  "family": "auto",
+  "mode": "people",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 2,
+  "sourceCount": 2,
+  "officialPhotos": 2,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.cioccasubaru.com/used-inventory/ciocca-subaru.htm",
+  "city": "Allentown",
+  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+    "Mechanic under a hood with tools, real garage, no text",
+    "Service advisor with a customer beside a car in the drive lane, no text",
+    "Shop bay with a person walking a car into service, no text",
+    "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+  ]
+}

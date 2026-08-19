@@ -1,0 +1,27 @@
+{
+  "id": 24,
+  "slug": "just-tires",
+  "name": "Just Tires Media",
+  "family": "auto",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.justtires.com/en_US/location/Media-PA-19063-US-000901223",
+  "city": "Media",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+    "Mechanic under a hood with tools, real garage, no text",
+    "Service advisor with a customer beside a car in the drive lane, no text",
+    "Shop bay with a person walking a car into service, no text",
+    "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+  ]
+}

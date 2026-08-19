@@ -1,0 +1,27 @@
+{
+  "id": 101,
+  "slug": "hamburg-animal-hospital",
+  "name": "Hamburg Animal Hospital",
+  "family": "veterinary",
+  "mode": "people",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 2,
+  "sourceCount": 2,
+  "officialPhotos": 2,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.hamburganimalhospital.com/",
+  "city": "Hamburg Animal Hospital is a full service veterinary practice in Hamburg",
+  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Veterinarian examining a dog on a table with a technician assisting, no text",
+    "Vet tech comforting a cat in a clean exam room, no text",
+    "Receptionist greeting a pet owner holding a leash in a clinic lobby, no text",
+    "Clinic treatment area with a clinician at work, no text",
+    "Close-up of a veterinarian's hands checking an animal's ear or paw, no logos"
+  ]
+}

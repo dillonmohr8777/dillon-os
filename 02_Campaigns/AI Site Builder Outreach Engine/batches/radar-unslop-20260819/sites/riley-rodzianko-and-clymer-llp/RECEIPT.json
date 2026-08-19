@@ -1,0 +1,27 @@
+{
+  "id": 128,
+  "slug": "riley-rodzianko-and-clymer-llp",
+  "name": "Riley Rodzianko & Clymer LLP",
+  "family": "legal",
+  "mode": "people",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "cloudflare-challenge",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "http://www.rrccpa.com/",
+  "city": "Quakertown",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Advisor in professional attire seated with a client at a conference table, no text",
+    "Attorney reviewing documents at a desk with natural office light, no text",
+    "Two people in a calm consultation, listening, no text",
+    "Reception of a small professional office with a person arriving, no text",
+    "Close-up of hands over a folder and pen during a meeting, no logos"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "elverson-supply",
+  "name": "Elverson Supply",
+  "city": "Elverson",
+  "category": "Trade",
+  "family": "trade",
+  "mode": "people",
+  "url": "https://elversonsupply.net/",
+  "phone": "+16102865021",
+  "address": "101 East Main Street Elverson",
+  "hours": "Monday – Friday: 7 am to 5 pm Saturday: 7 am to 12 pm Sunday: Closed",
+  "logo": true,
+  "tokens": {
+    "paper": "#f4efe7",
+    "ink": "#006020",
+    "accent": "#006020",
+    "accent2": "#005020",
+    "panel": "#d1dacb",
+    "deep": "#003411",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "industrial",
+  "marquee": [
+    "Elverson Supply",
+    "Elverson",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Elverson Supply — people at work",
+    "The process photograph for Elverson Supply — hands on the job",
+    "The conversation photograph for Elverson Supply — a real conversation",
+    "The place photograph for Elverson Supply — the place",
+    "The craft photograph for Elverson Supply — the craft"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Your neighborhood hardware store.",
+  "sub": "Elverson Supply Co. is your building materials and hardware store. Our fifth-generation family business has served the Elverson, Morgantown, Chester Springs, Glenmoore and surrounding areas providing high-quality.",
+  "offerings": [
+    "Elverson Supply Co.",
+    "Products and Services",
+    "Lehigh Cement Products"
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Elverson Supply in Elverson. Private concept preview."
+}

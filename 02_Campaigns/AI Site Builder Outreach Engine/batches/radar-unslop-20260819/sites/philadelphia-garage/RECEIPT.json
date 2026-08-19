@@ -1,0 +1,77 @@
+{
+  "id": 122,
+  "slug": "philadelphia-garage",
+  "name": "Philadelphia Garage",
+  "family": "auto",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 7,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://philadelphiagarage.com/",
+  "city": "West Chester",
+  "hashes": [
+    "74ddedb7ecb1ceda074e921a937237bffb860aa7b6ad1a8dd29e9e73e2275028",
+    "c4ad86a5b0a0c22fe3aaeef8f1f06c5b8b83b7fe29d62427405ff49119a092f6",
+    "c4b5d04fa52b438c854e3ecce728194af8db6ee3bc7b8354489030fbae13d29e",
+    "a61df21d60f3108125ba797b2ae1d496348ce1bc4d6c48be3387b8de5bad92dc",
+    "cbbeac0ad87f0f0d5ce29b9a21571334825738baad452c8bdeb5700e2313fc4e"
+  ]
+}

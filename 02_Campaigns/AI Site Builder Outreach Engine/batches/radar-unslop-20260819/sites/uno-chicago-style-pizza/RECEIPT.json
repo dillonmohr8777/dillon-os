@@ -1,0 +1,27 @@
+{
+  "id": 46,
+  "slug": "uno-chicago-style-pizza",
+  "name": "UNO Pizzeria & Grill Oaks",
+  "family": "food",
+  "mode": "food",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 2,
+  "sourceCount": 2,
+  "officialPhotos": 2,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://restaurants.unos.com/locations/Oaks/PA/3511/",
+  "city": "Oaks",
+  "error": "only 2 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal wood-fired pizza with blistered leopard-spotted crust on a peel, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for UNO Pizzeria & Grill Oaks, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for UNO Pizzeria & Grill Oaks, no faces required, no text",
+    "Dining counter or table set with wood-fired pizza with blistered leopard-spotted crust on a peel, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for UNO Pizzeria & Grill Oaks — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

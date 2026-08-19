@@ -1,0 +1,27 @@
+{
+  "id": 15,
+  "slug": "field-1-post-llc",
+  "name": "Field 1 Post LLC",
+  "family": "professional",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 1,
+  "sourceCount": 1,
+  "officialPhotos": 1,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://field1post.com/",
+  "city": "Havertown",
+  "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Specialist in a work setting talking with a client, no text",
+    "Person at a workstation doing the actual service, no text",
+    "Two colleagues reviewing a plan, no text",
+    "Office or shop entrance with a person arriving, no text",
+    "Close-up of hands on the tools of this trade, no logos"
+  ]
+}

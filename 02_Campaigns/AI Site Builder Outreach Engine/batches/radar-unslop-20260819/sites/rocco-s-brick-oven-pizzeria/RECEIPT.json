@@ -1,0 +1,27 @@
+{
+  "id": 36,
+  "slug": "rocco-s-brick-oven-pizzeria",
+  "name": "Rocco's Brick Oven Pizzeria",
+  "family": "food",
+  "mode": "food",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.roccosbrickoven.net/",
+  "city": "Collegeville",
+  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal wood-fired pizza with blistered leopard-spotted crust on a peel, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Rocco's Brick Oven Pizzeria, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Rocco's Brick Oven Pizzeria, no faces required, no text",
+    "Dining counter or table set with wood-fired pizza with blistered leopard-spotted crust on a peel, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Rocco's Brick Oven Pizzeria — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": 31,
+  "slug": "ooka-hibachi-and-sushi",
+  "name": "Ooka Hibachi and Sushi",
+  "family": "food",
+  "mode": "food",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "http://ookasushi.com/phone/willow-grove.html",
+  "city": "Willow Grove",
+  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal hibachi or sushi plate: glistening rice, seared protein, and precise garnish, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Ooka Hibachi and Sushi, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Ooka Hibachi and Sushi, no faces required, no text",
+    "Dining counter or table set with hibachi or sushi plate: glistening rice, seared protein, and precise garnish, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Ooka Hibachi and Sushi — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

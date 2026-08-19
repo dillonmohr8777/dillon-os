@@ -1,0 +1,78 @@
+{
+  "id": 118,
+  "slug": "openarc",
+  "name": "OpenArc",
+  "family": "professional",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "photoCount": 3,
+  "sourceCount": 3,
+  "officialPhotos": 3,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.openarc.net/",
+  "city": "Pittsburgh",
+  "hashes": [
+    "eedae880a25d0722f308cd69267245d756ab840f1516d2ed6093e548b72f552e",
+    "65446a8dddcb6b2b404b0c062fb92f11ef7184d9f5c5e3ca10bb331a9be66988",
+    "8412bc433b0413a8362aa256238369fd1285ff49e03ba861b4c39bfe982e6553",
+    "c12f0984fc88b5604ca8241db7504b65346d406340bc783fc35aab4dc2d45637",
+    "7148e0708eda551b4b6c9a4c2360124ebd372b867297237983583fc2de24a819"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": 44,
+  "slug": "towne-book-center-wine-bar",
+  "name": "Towne Book Center & Wine Bar",
+  "family": "food",
+  "mode": "food",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://townebc.com/",
+  "city": "Collegeville",
+  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal cheese board and open wine bottle on a wooden tasting counter, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Towne Book Center & Wine Bar, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Towne Book Center & Wine Bar, no faces required, no text",
+    "Dining counter or table set with cheese board and open wine bottle on a wooden tasting counter, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Towne Book Center & Wine Bar — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

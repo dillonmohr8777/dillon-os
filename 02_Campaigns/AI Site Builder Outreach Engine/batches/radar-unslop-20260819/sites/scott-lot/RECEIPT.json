@@ -1,0 +1,27 @@
+{
+  "id": 131,
+  "slug": "scott-lot",
+  "name": "Scott Lot",
+  "family": "professional",
+  "mode": "people",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 2,
+  "sourceCount": 2,
+  "officialPhotos": 2,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.scottcars.com/",
+  "city": "Scott Lot",
+  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Specialist in a work setting talking with a client, no text",
+    "Person at a workstation doing the actual service, no text",
+    "Two colleagues reviewing a plan, no text",
+    "Office or shop entrance with a person arriving, no text",
+    "Close-up of hands on the tools of this trade, no logos"
+  ]
+}

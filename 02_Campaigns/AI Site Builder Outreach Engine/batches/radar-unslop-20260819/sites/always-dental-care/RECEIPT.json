@@ -1,0 +1,27 @@
+{
+  "id": 69,
+  "slug": "always-dental-care",
+  "name": "Always Dental Care",
+  "family": "dental",
+  "mode": "people",
+  "issue": "genhero",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://fonts.gstatic.com/",
+  "city": "Phoenixville",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Dentist in a modern operatory talking with a seated patient, calm clinical light, no text",
+    "Hygienist providing a cleaning with focused hands and instruments, no text",
+    "Front-desk coordinator welcoming a family in a dental reception, no text",
+    "Bright dental treatment room with a clinician preparing a tray, no text",
+    "Close-up of gloved hands working carefully at a dental chair, no logos"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": 10,
+  "slug": "custom-it-solutions",
+  "name": "Custom IT Solutions",
+  "family": "professional",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://customitsolutions.com/",
+  "city": "Address",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Specialist in a work setting talking with a client, no text",
+    "Person at a workstation doing the actual service, no text",
+    "Two colleagues reviewing a plan, no text",
+    "Office or shop entrance with a person arriving, no text",
+    "Close-up of hands on the tools of this trade, no logos"
+  ]
+}

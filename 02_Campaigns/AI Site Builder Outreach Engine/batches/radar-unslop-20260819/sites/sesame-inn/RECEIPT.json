@@ -1,0 +1,27 @@
+{
+  "id": 132,
+  "slug": "sesame-inn",
+  "name": "Sesame Inn",
+  "family": "food",
+  "mode": "food",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://sesameinn.com/MtLebanon.html",
+  "city": "Sesame Inn",
+  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal Chinese banquet plate: wok-seared vegetables and protein, steam rising, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Sesame Inn, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Sesame Inn, no faces required, no text",
+    "Dining counter or table set with Chinese banquet plate: wok-seared vegetables and protein, steam rising, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Sesame Inn — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

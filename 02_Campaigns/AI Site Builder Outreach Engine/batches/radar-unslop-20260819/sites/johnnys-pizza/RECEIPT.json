@@ -1,0 +1,78 @@
+{
+  "id": 106,
+  "slug": "johnnys-pizza",
+  "name": "Johnny's Pizza & Pasta",
+  "family": "food",
+  "mode": "food",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "http://johnnysitaliano.com/",
+  "city": "Spring Mount",
+  "hashes": [
+    "5bf294c362a385b3617e880f3552406a90089327e4445970bb96e2ebf7b685c7",
+    "a63e681c39f02ffd9aabbe0b5fbb97d02406558156851d5592451e13e7701d21",
+    "45b169e391977a331cf82f36d87bebe97183e2872b79fe82d3c900948c540c60",
+    "e151a99c8bf858d827f5a19344c4cb88fefe2da5cd6d6ea3734a21388dc9a93d",
+    "57228c00dd174b1b6ce4945e8515f080a52c44709247704407c815bf170bdccf"
+  ]
+}

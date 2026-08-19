@@ -1,0 +1,78 @@
+{
+  "id": 71,
+  "slug": "artisan-wine-and-cheese-cellars",
+  "name": "Artisan Wine and Cheese Cellars",
+  "family": "food",
+  "mode": "food",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "photoCount": 6,
+  "sourceCount": 6,
+  "officialPhotos": 6,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.artisanwineandcheesecellars.com/",
+  "city": "Wine and cheese bar located at the historic Main Street Depot in Bethlehem",
+  "hashes": [
+    "4eb598776a2531acd568775ce9f308c52f787ec85fc379c9040f085c0f7795d0",
+    "80c004848534b260b935f1da1e9c91b23ed3f6c265752472502ab3a6e705318b",
+    "0f870101ea4951cd4434f4c0127d2de46b64d7ce729fe989297f8c3561b9de4a",
+    "30e75f4b192baab85bf47b89345376b96a3f8c40db40b6646266aa4dd30b1f90",
+    "2c988a5383df418f40f0ccdc7d67b0bae0c6e42a1f606e74a6b97bc05aae3c74"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": 126,
+  "slug": "radiance-dental",
+  "name": "Radiance Dental",
+  "family": "dental",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 6,
+  "sourceCount": 6,
+  "officialPhotos": 6,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://radiancedentalpa.com/",
+  "city": "Looking for a trusted dentist in West Chester",
+  "hashes": [
+    "3a7a852c8c1b10f3facfabb9ea8ce2359edceafef3daeba72236fa8904418cf1",
+    "daef9979c0b4ef0dafbae1b5da0dc483101ec4e015ceaa1899db196b6b352414",
+    "031997d27627525f42fb9e7cac227ce20a0b63328d3a34f8c4af495be8a6632c",
+    "09cc14b7fd83abfed75f7042cda521ef99d2b0d3b0502f728d137d368be3d843",
+    "85bdfcf7943e502797885cef9561da13591e5493feaa231b2bb8df7dedb3ccc9"
+  ]
+}

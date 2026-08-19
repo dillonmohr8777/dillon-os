@@ -9,27 +9,41 @@
  */
 
 const FOOD_RE =
-  /\b(tacos?|pizza|pizzerias?|deli|grill|bistro|restaurants?|hibachi|sushi|chinese|thai|hot\s?dogs?|creamery|diner|hoagies?|bakery|coffee|cafes?|kafes?|pubs?|ale|steaks?|pasta|gourmet|inns?|wine|cheese|distill|still works|brewery|asian)\b/i;
+  /\b(tacos?|pizza|pizzeria|deli|grill|bistro|restaurant|hibachi|sushi|chinese|thai|hot\s?dogs?|creamery|diner|hoagie|bakery|coffee|cafe|kafe|pubs?|ale\b|steaks?|pasta|gourmet|inns?|wine|cheese|distill|still works|brewery|asian)/i;
 
-/** Names that do not carry a food word but are kitchens. */
 const SLUG_FAMILY = {
   katana: 'food',
   'eastern-dragon': 'food',
   'sesame-inn': 'food',
+  'wholly-grounds': 'food',
+  'scott-lot': 'auto',
+  'sciacca-service-center': 'auto',
+  'j-pro-inc': 'trade',
+  'pipe-xpress': 'trade',
+  'novacare': 'fitness',
+  'udis-conn-orthodontics': 'dental',
+  'andorra-family-dentistry': 'dental',
+  'colmar-dentistry-for-kids': 'dental',
+  'hero-complex': 'retail',
+  'frazer-antiques': 'retail',
+  'benjamin-lovell-shoes': 'retail',
+  'legacy-jewelers': 'retail',
+  'floral-and-hardy': 'retail',
+  'the-restaurant-store': 'trade',
 };
 
 const PEOPLE_FAMILIES = {
-  bridal: /\b(bridal|formal|gown|wedding dress)\b/i,
-  dental: /\b(dental|dentist|orthodont|teeth|smile)\b/i,
-  veterinary: /\b(vets?|veterinary|animal hospital|animal clinic|pets?)\b/i,
-  auto: /\b(auto|car wash|tires?|motors?|chevrolet|buick|ferrari|pre-owned|garage|mechanic|auto parts|tag & insurance|auto tag)\b/i,
-  legal: /\b(attorney|law|llp|p\.c\.|injury|insurance|wealth|financial|tax)\b/i,
-  salon: /\b(nail|hair|tattoo|salon|spa|beauty)\b/i,
-  fitness: /\b(fitness|gym|physical therapy|rehab|train and nourish|hormone)\b/i,
-  medical: /\b(urgent care|health|vision|eye|surgery|pediatric|clinic|hospital)\b/i,
-  trade: /\b(electric|hvac|plumb|pool|spa|fabricat|manufactur|supply|floor|landscap|iron|fireplace|hot tub|seal)\b/i,
-  retail: /\b(book|wine|cheese|jewelry|jewel|shoe|antique|consignment|outlet|florist|greenhouse|violin|kitchen and bath|bath & kitchen)\b/i,
-  professional: /\b(it |tech|marketing|transport|realty|real estate|home cash|post, llc)\b/i,
+  bridal: /\b(bridal|formal|gown|wedding dress)/i,
+  dental: /\b(dental|dentist|orthodont|teeth|smile)/i,
+  veterinary: /\b(vets?\b|veterinary|animal hospital|animal clinic|pets?\b)/i,
+  auto: /\b(auto|car wash|tires?|motors?|chevrolet|buick|ferrari|pre-owned|garage|mechanic|auto parts|tag & insurance|auto tag)/i,
+  legal: /\b(attorney|law\b|llp|p\.c\.|injury|insurance|wealth|financial|tax\b)/i,
+  salon: /\b(nail|hair|tattoo|salon|beauty)/i,
+  fitness: /\b(fitness|gym|physical therapy|rehab|train and nourish|hormone)/i,
+  medical: /\b(urgent care|health|vision|eye care|eyecare|surgery|pediatric|clinic|hospital)/i,
+  trade: /\b(electric|hvac|plumb|pools?|fabricat|manufactur|supply|floor|landscap|iron|fireplace|hot tub|seal|heating|air.conditioning|propane)/i,
+  retail: /\b(book|jewelry|jewel|shoe|antique|consignment|outlet|florist|floral|greenhouse|violin|kitchen and bath|bath & kitchen)/i,
+  professional: /\b(it |tech|marketing|transport|realty|real estate|home cash|post, llc)/i,
 };
 
 function familyFor(name, extra = '') {

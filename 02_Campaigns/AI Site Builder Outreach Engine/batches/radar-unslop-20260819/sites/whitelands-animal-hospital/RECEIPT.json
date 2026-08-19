@@ -1,0 +1,27 @@
+{
+  "id": 66,
+  "slug": "whitelands-animal-hospital",
+  "name": "Whitelands Animal Hospital",
+  "family": "veterinary",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://www.whitelandsah.com/",
+  "city": "Malvern",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Veterinarian examining a dog on a table with a technician assisting, no text",
+    "Vet tech comforting a cat in a clean exam room, no text",
+    "Receptionist greeting a pet owner holding a leash in a clinic lobby, no text",
+    "Clinic treatment area with a clinician at work, no text",
+    "Close-up of a veterinarian's hands checking an animal's ear or paw, no logos"
+  ]
+}

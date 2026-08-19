@@ -1,0 +1,78 @@
+{
+  "id": 127,
+  "slug": "reardon-dental",
+  "name": "Reardon Dental Exton",
+  "family": "dental",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "photoCount": 4,
+  "sourceCount": 4,
+  "officialPhotos": 4,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://reardondental.com/",
+  "city": "Exton",
+  "hashes": [
+    "9b8e2f92bc2f1ce94628401c8cecf171d21fe31192f6bdecbfde36e6038eacd9",
+    "1f3bb2b8e3aca1c6e03d9c0a51c56bc467e687f13ce5b659a46a0a39a6bbb6b1",
+    "f36ef73665771dd7748aaaed6d5b0c980af5bb35bba89dd2b987dfca369ff2d8",
+    "368042f4d2248dc6b0dfc59a07c835da9cc13f6fdc4750a5563a1b0c3a0ea4f2",
+    "e6803e6750cf50a2b4d101a89b2666d860dddf06dd35258c7eee86f489e7a551"
+  ]
+}

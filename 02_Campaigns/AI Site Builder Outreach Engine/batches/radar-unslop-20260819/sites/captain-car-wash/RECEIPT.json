@@ -1,0 +1,78 @@
+{
+  "id": 8,
+  "slug": "captain-car-wash",
+  "name": "Captain Car Wash",
+  "family": "auto",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "photoCount": 6,
+  "sourceCount": 6,
+  "officialPhotos": 6,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://captaincarwashpa.com/",
+  "city": "Norristown",
+  "hashes": [
+    "a5e05cfd69fe9b80c3e8e6164243ad177c46dcbccb1d98955c6c870732c9fe46",
+    "8adddafd059b9ac11f66a8fba153bb846c6d9613c9761f4ba18d543c664712ef",
+    "4a6708f2a566c3b9edcfc879908352a2a10d2283197dc92e4fcfdf0b48ae4245",
+    "38ba2352d91ec73ef18b07e622c126128706a3b5631005f14280cd972a11f8cd",
+    "26884c52a591277e8657f5b3ed3db70c7e4e02a77fdbc86729aca4436267b2d5"
+  ]
+}

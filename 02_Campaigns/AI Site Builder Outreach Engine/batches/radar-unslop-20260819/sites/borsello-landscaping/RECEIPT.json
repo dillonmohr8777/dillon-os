@@ -1,0 +1,27 @@
+{
+  "id": 5,
+  "slug": "borsello-landscaping",
+  "name": "Borsello Landscaping",
+  "family": "professional",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "cloudflare-challenge",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://www.borsellolandscaping.com/landscape-services-avondale-pa/",
+  "city": "Borsello Landscaping",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Specialist in a work setting talking with a client, no text",
+    "Person at a workstation doing the actual service, no text",
+    "Two colleagues reviewing a plan, no text",
+    "Office or shop entrance with a person arriving, no text",
+    "Close-up of hands on the tools of this trade, no logos"
+  ]
+}

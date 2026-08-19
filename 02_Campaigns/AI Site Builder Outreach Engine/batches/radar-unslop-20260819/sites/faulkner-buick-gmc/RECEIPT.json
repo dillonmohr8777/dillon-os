@@ -1,0 +1,77 @@
+{
+  "id": 94,
+  "slug": "faulkner-buick-gmc",
+  "name": "Faulkner Buick GMC",
+  "family": "auto",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.faulknerauto.com/",
+  "city": "WEST CHESTER",
+  "hashes": [
+    "7c99f3658f8c2e7f18e53620442a8bdaac2601a978799b6763faa3bbd1c22327",
+    "24dc43e9dfade537d391a0596e89ee50d81fde782a8ad62c5f4f0c5b469a45bb",
+    "8f1234d5f96f6e909293d89b6457fe105c70f406940fb14747a104c3339953f6",
+    "84cd62c1ef02f695aa0c6012872fc6b6c4f474c654a4a419b4303fe6cf8dab00",
+    "60d252ce5fd5cfe418cd1a43ea352af02b24c29ab74dfcbaa0a9f7bf6b40789c"
+  ]
+}

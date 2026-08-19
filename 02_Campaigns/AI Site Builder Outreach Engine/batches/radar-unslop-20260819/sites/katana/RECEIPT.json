@@ -1,0 +1,77 @@
+{
+  "id": 107,
+  "slug": "katana",
+  "name": "Katana Pittsburgh",
+  "family": "food",
+  "mode": "food",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://katanapittsburgh.com/",
+  "city": "Dormont",
+  "hashes": [
+    "5bb881ef70bfa7de67eafda23ee3e3462dde1cceb4f8a22dd591ca94159ce56e",
+    "96f9219212425f0231a0813601609826aef83a8265ffc2c08d65695dd9ac7853",
+    "7f2ad30e80e99ea9f348ff8b8e8a0e6d166b31057603cd7fd120cea048728952",
+    "7458f565f6f55ea1fa31cbfc55ffdcaf80f512e1690e9bded1bf5dfa965a67e7",
+    "4e2031ae8b421fb22e1950653e714fa56ea840a234fc177df91a3de6dc0bbcdc"
+  ]
+}

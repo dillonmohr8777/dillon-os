@@ -1,0 +1,77 @@
+{
+  "id": 111,
+  "slug": "maclaren-kitchen-and-bath",
+  "name": "MacLaren Kitchen and Bath",
+  "family": "retail",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 7,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://maclarenfab.com/",
+  "city": "PA 19380",
+  "hashes": [
+    "387986036a32e70a65bc6c977b7f3c9a727f9c70e01b5c2cd7d17879fae54d3e",
+    "02708d2bd390770520dfe9d162ce9e1d04520570c1754186920f02e8b7be692a",
+    "5bd73daa42dfc724679eb045e811e9eab1121872b06952ea114ac1045e048cb6",
+    "1f144bff855a60b225a4b62eaca80a34a7ed951f6498445e25bcd5611fae3854",
+    "d0e55c1eefe590c655e207c61ad7f2fa3c5f4eccd2a4f509f78191a2c2802430"
+  ]
+}

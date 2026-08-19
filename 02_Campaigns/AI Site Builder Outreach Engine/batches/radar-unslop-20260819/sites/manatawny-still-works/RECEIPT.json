@@ -1,0 +1,27 @@
+{
+  "id": 26,
+  "slug": "manatawny-still-works",
+  "name": "Manatawny Still Works",
+  "family": "food",
+  "mode": "food",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "cloudflare-challenge",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://amadeusbb.com/",
+  "city": "Stowe",
+  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal poured pint or spirit in glass beside copper stills or tap handles, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Manatawny Still Works, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Manatawny Still Works, no faces required, no text",
+    "Dining counter or table set with poured pint or spirit in glass beside copper stills or tap handles, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Manatawny Still Works — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

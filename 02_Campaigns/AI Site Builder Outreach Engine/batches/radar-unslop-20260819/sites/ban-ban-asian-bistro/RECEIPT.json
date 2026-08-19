@@ -1,0 +1,27 @@
+{
+  "id": 52,
+  "slug": "ban-ban-asian-bistro",
+  "name": "Bàn Bàn Asian Bistro",
+  "family": "food",
+  "mode": "food",
+  "issue": "webgl",
+  "ok": false,
+  "qa": [],
+  "browser": "page.goto: net::ERR_CONNECTION_REFUSED at https://banbanasianbistro.net/\nCall log:\n  - navigating to \"https://banbanasianbistro.net/\", waiting until \"domcontentloaded\"\n",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://banbanasianbistro.net",
+  "city": "Abington",
+  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal signature plated dish from Bàn Bàn Asian Bistro, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Bàn Bàn Asian Bistro, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Bàn Bàn Asian Bistro, no faces required, no text",
+    "Dining counter or table set with signature plated dish from Bàn Bàn Asian Bistro, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Bàn Bàn Asian Bistro — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

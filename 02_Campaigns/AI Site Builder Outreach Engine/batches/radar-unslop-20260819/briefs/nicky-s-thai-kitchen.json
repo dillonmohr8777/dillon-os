@@ -1,0 +1,60 @@
+{
+  "slug": "nicky-s-thai-kitchen",
+  "name": "Nicky's Thai Kitchen Downtown",
+  "city": "Pittsburgh",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "https://nickysthaikitchen.com/",
+  "phone": "",
+  "address": "903 Penn Ave",
+  "hours": "Monday - Thursday from 5-7pm",
+  "logo": true,
+  "tokens": {
+    "paper": "#d0e060",
+    "ink": "#401010",
+    "accent": "#401010",
+    "accent2": "#502020",
+    "panel": "#bbc254",
+    "deep": "#230808",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "editorial",
+  "marquee": [
+    "Nicky's Thai Kitchen Downtown",
+    "Pittsburgh",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Nicky's Thai Kitchen Downtown kitchen concept",
+    "Chef plating at the pass for Nicky's Thai Kitchen Downtown",
+    "Prep and ingredients for Nicky's Thai Kitchen Downtown",
+    "Dining setting for Nicky's Thai Kitchen Downtown",
+    "Close food texture for Nicky's Thai Kitchen Downtown"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Order Online",
+  "sub": "It is our pleasure to bring the best of traditional Thai cuisine to the Pittsburgh region for both Dine in and Take Away.",
+  "offerings": [
+    "Nicky's Thai Kitchen is open at all three locations for lunch and dinner dine in and take-out as per hours below. Please note our dine-in.",
+    "You are welcome to bring your own Alcohol*",
+    "*Northside location corkage fee is $5 per bottle of wine and $1 per beer."
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Nicky's Thai Kitchen Downtown in Pittsburgh. Private concept preview."
+}

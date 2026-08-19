@@ -1,0 +1,27 @@
+{
+  "id": 134,
+  "slug": "new-pennsburg-diner",
+  "name": "The New Pennsburg Diner",
+  "family": "food",
+  "mode": "food",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://fonts.gstatic.com/",
+  "city": "Pennsburg",
+  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal diner breakfast plate: eggs, toast, and a coffee mug, morning light, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for The New Pennsburg Diner, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for The New Pennsburg Diner, no faces required, no text",
+    "Dining counter or table set with diner breakfast plate: eggs, toast, and a coffee mug, morning light, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for The New Pennsburg Diner — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

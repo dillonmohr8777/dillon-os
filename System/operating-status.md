@@ -1,6 +1,6 @@
 ---
 tags: [system, operating-status]
-last_updated: 2026-07-19
+last_updated: 2026-08-19
 callsign: D.I.L.L.O.N.
 operator: Dillon Mohr
 goal_label: ACTIVE CLIENTS
@@ -10,6 +10,10 @@ source_of_truth: C:\Users\dillo\repos\dillon-os
 ---
 
 # Operating Status
+
+## Paused overnight — resume 2026-08-20 09:00 America/New_York
+
+138-site unslop is paused. **45** sites QA-ready, **91** still need industry photographs, **2** duplicates dropped. Morning agent prompt: [[handoffs/unslop-138-9am-pickup]]. PR: `dillon-os#326` on `cursor/prospect-unslop-collages-56f2`. Do not deploy. Sheet `Fixed?` only after QA green.
 
 The vault was reconciled on 2026-07-12 against current work from the rolling three-week window. The April-era client roster is superseded.
 

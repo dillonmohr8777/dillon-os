@@ -1,0 +1,77 @@
+{
+  "id": 93,
+  "slug": "elverson-supply",
+  "name": "Elverson Supply",
+  "family": "trade",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://elversonsupply.net/",
+  "city": "Elverson",
+  "hashes": [
+    "3b2e6bf12b5c5a0ccbe38ab850a89b59291bd309140f7d5ee19590abb11bf906",
+    "cd1b9826baf2b79d0aaa2a5debb5b204f5da324fa9cd984099d774c10e3dbc4d",
+    "5abb760ec9fcd50f2b02f1f36bd5c53292d94f39bfd211a548979b2ec68f8965",
+    "9a6d6a37320014d6047bdf0ea2ec3eb4e2db4a6b1d1cd555cff7abb3e7fd926c",
+    "c559a9c2a7b9a850c6221f96d83476db7dd1c519dda361fd6a7221a3f1d7862e"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": 86,
+  "slug": "dinse-dental-care",
+  "name": "Dinse Dental Care",
+  "family": "dental",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 5,
+  "sourceCount": 5,
+  "officialPhotos": 5,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "http://www.dinsedentalcare.com/",
+  "city": "East Petersburg",
+  "hashes": [
+    "bdd5f1034c1d77decf0b2821d512cef14e22cdb07728558ed7512dde68298f5c",
+    "3e39f69991d9237cde3176b25970c785acbe4f12902682b95777a4862e6d59df",
+    "ec13229be5158b076b0e849a9dc472ecb34e8016da070776536d7445a42e9687",
+    "684f8a6a125112ccee740179e4d3ba7e968afa8de2fc4e95a9f96ba5a96a1878",
+    "b31fb065de3fcd497f714f603f61c9bdb6aa26dd70fa23ebc8faa8322839f372"
+  ]
+}

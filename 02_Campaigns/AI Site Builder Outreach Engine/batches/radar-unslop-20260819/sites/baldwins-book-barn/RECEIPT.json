@@ -1,0 +1,77 @@
+{
+  "id": 50,
+  "slug": "baldwins-book-barn",
+  "name": "Baldwin's Book Barn",
+  "family": "retail",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 7,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://bookbarn.com/",
+  "city": "west chester",
+  "hashes": [
+    "292d7b81fc4ee246333c6d0131551db7ff937b19a894bdf099817718d09d89de",
+    "11efacce8812e4efdb7819ff2f49f0b3035587c141c5fd9a890929d2edd4f19d",
+    "6a5c7ab0f7e7fc9983f301cf854effcb10031ccfc4813ef59a1dd74cf51edd4d",
+    "f84f2bba80e737ec99d98f891d6f32f55b9ecf88f2137e154a47cab5ae28ac79",
+    "89dd13791160490e64a0c1e6292d5b888e69d3daf701f294eac6417c272fb818"
+  ]
+}

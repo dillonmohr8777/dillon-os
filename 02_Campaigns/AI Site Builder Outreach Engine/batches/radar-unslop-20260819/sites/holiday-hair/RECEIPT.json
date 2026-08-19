@@ -1,0 +1,27 @@
+{
+  "id": 19,
+  "slug": "holiday-hair",
+  "name": "Holiday Hair Quakertown",
+  "family": "salon",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 1,
+  "sourceCount": 1,
+  "officialPhotos": 1,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://www.holidayhair.com/locations/nearme/haircut/PA/QUAKERTOWN/1465-21-W-BROAD-ST/19300",
+  "city": "Quakertown",
+  "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Stylist working on a client's hair or nails in a real salon station, no text",
+    "Artist focused on a service in progress, hands and tools visible, no text",
+    "Client and stylist talking in the chair, relaxed, no text",
+    "Salon interior with a person at the front desk, no text",
+    "Close-up of skilled hands during the service, no logos"
+  ]
+}

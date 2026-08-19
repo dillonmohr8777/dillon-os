@@ -1,0 +1,77 @@
+{
+  "id": 89,
+  "slug": "eastern-dragon",
+  "name": "Eastern Dragon",
+  "family": "food",
+  "mode": "food",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 4,
+  "sourceCount": 4,
+  "officialPhotos": 4,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "http://easterndragonfood.com/",
+  "city": "North Wales",
+  "hashes": [
+    "51a501ba8f372702d2b08671d7ef2fda08eafde34c01c3ff86c7d23e86c9a4c3",
+    "96b76ec2fe2475461bc3851b39ab05c306cb2132211cd31790dd8c9e67491cb1",
+    "e2dbd067fb14821b5bbd7f860c7f5a3a270a8252a67e8bb5b0d27762412a9182",
+    "d4cbdefa54df1f550b372f6baa2dd8095ca37ae68e078ed1158b91f1b4f1298c",
+    "e87e4de5d8337c0c722ebab2adcf151a4a67f5a634522ba1453ae89ee693b572"
+  ]
+}

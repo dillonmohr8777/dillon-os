@@ -1,0 +1,27 @@
+{
+  "id": 116,
+  "slug": "nottingham-creamery",
+  "name": "Nottingham Creamery",
+  "family": "food",
+  "mode": "food",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 2,
+  "sourceCount": 2,
+  "officialPhotos": 2,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.nottinghaminn.com/kitchenandcreamery/",
+  "city": "Nottingham Creamery",
+  "error": "only 2 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal scooped ice cream or bottled cream on a chilled metal counter, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Nottingham Creamery, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Nottingham Creamery, no faces required, no text",
+    "Dining counter or table set with scooped ice cream or bottled cream on a chilled metal counter, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Nottingham Creamery — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

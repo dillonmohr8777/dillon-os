@@ -1,0 +1,60 @@
+{
+  "slug": "katana",
+  "name": "Katana Pittsburgh",
+  "city": "Dormont",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "https://katanapittsburgh.com/",
+  "phone": "",
+  "address": "",
+  "hours": "Mon-Sat: 11:00am - 3:00pm Wed: Closed",
+  "logo": true,
+  "tokens": {
+    "paper": "#f0e0a0",
+    "ink": "#e01020",
+    "accent": "#e01020",
+    "accent2": "#f01020",
+    "panel": "#edc28e",
+    "deep": "#7b0811",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "warm",
+  "marquee": [
+    "Katana Pittsburgh",
+    "Dormont",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Katana Pittsburgh kitchen concept",
+    "Chef plating at the pass for Katana Pittsburgh",
+    "Prep and ingredients for Katana Pittsburgh",
+    "Dining setting for Katana Pittsburgh",
+    "Close food texture for Katana Pittsburgh"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Free delivery",
+  "sub": "OPEN HOURS Lunch Time Mon-Sat: 11:00am - 3:00pm Wed: Closed Dinner Time Mon-Thur: 4:30pm - 10:00pm Wed: Closed Fri & Sat: 4:30pm - 11:00pm Sun: 12:00noon - 9:30pm",
+  "offerings": [
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source."
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Katana Pittsburgh in Dormont. Private concept preview."
+}

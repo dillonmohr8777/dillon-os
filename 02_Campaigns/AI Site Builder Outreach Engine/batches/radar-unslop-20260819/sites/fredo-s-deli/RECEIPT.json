@@ -1,0 +1,27 @@
+{
+  "id": 98,
+  "slug": "fredo-s-deli",
+  "name": "Fredo's Deli",
+  "family": "food",
+  "mode": "food",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "http://fredosdeli.com/",
+  "city": "Pittsburgh",
+  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal deli sandwich cut on butcher paper with pickles and a side, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Fredo's Deli, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Fredo's Deli, no faces required, no text",
+    "Dining counter or table set with deli sandwich cut on butcher paper with pickles and a side, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Fredo's Deli — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

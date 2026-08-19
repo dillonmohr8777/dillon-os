@@ -1,0 +1,27 @@
+{
+  "id": 35,
+  "slug": "red-hill-greenhouses-florist",
+  "name": "Red Hill Greenhouses & Florist",
+  "family": "retail",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.redhillgreenhouse.com/",
+  "city": "Red Hill",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Associate helping a customer choose an item in the shop, no text",
+    "Craftsperson or buyer handling the product with care, no text",
+    "Two people at the counter during a purchase conversation, no text",
+    "Store interior with a person browsing, no text",
+    "Close-up of hands presenting the product, no logos"
+  ]
+}

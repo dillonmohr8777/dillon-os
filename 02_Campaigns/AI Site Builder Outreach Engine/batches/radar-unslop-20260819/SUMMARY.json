@@ -1,0 +1,5968 @@
+{
+  "total": 138,
+  "built": 45,
+  "needsGen": 91,
+  "blocked": 0,
+  "dropped": 2,
+  "results": [
+    {
+      "id": 1,
+      "slug": "agnes-edmunds-bridal-formals",
+      "name": "Agnes Edmunds Bridal & Formals",
+      "family": "bridal",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://agnesedmunds.com/",
+      "city": "Pottstown",
+      "hashes": [
+        "bacce6776a9f34a8803291d223c37fb1ee820ab1d6532698ccc4308288676e0a",
+        "e437d25abb54dbf5c3c29a267ab68ce499cf73ec6f1c9be364d86b7494fc9523",
+        "39003e0bf3a9d5c9feb91092767cdae0379eda9345bb25c33a77613c72866946",
+        "1e7b01065af0a1992da2c8600be006f20f4b1f85e4abafaad8c0d29f033899f7",
+        "758285cf5e3e3cf352c8e69574ad44572f8072e4afecde0f13e3689a24b903f3"
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "al-tacos-locos",
+      "name": "Al Tacos Locos",
+      "family": "food",
+      "mode": "food",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://altacoslocos.com/",
+      "city": "Jenkintown",
+      "hashes": [
+        "7d4b54046cae4063f6fa3727379d925be88169370952bb0d5037b3e43c64253f",
+        "ff2ca7de683c4bbd5fd38a5f1c6e105d029a8ef8105a5b48a1d4d6b73f3392f3",
+        "76c6670dca4bb52c9c15906e2366c47a54b3b47946df7eb720215d2ce80d8f45",
+        "3656041e44cfc5a4ce46592f516b01ac267aa793589b7c7a6f24536a00548859",
+        "4c183d8eb994f8617e146c8055132f06428000ec76b6d570aa7715c2baa207c7"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "lpl-financial",
+      "name": "Apollo Wealth Advisors",
+      "family": "legal",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "http://www.tartaruscapitalmanagement.com/contact",
+      "city": "Colmar",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Advisor in professional attire seated with a client at a conference table, no text",
+        "Attorney reviewing documents at a desk with natural office light, no text",
+        "Two people in a calm consultation, listening, no text",
+        "Reception of a small professional office with a person arriving, no text",
+        "Close-up of hands over a folder and pen during a meeting, no logos"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "apr-supply-company",
+      "name": "APR Supply Company",
+      "family": "trade",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.aprsupply.com/Malvern",
+      "city": "Malvern",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+        "Technician working with tools on equipment or landscape, no text",
+        "Crew lead talking with a homeowner at the door or yard, no text",
+        "Van or shop with a person loading materials, no text",
+        "Close-up of skilled hands on the actual trade work, no logos"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "borsello-landscaping",
+      "name": "Borsello Landscaping",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.borsellolandscaping.com/landscape-services-avondale-pa/",
+      "city": "Borsello Landscaping",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "boyle-energy-heating-air-conditioning-oil-propane",
+      "name": "Boyle Energy",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Havertown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "brandywine-auto-parts",
+      "name": "Brandywine Auto Parts",
+      "family": "auto",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://brandywine-ap.com/",
+      "city": "Chester",
+      "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "captain-car-wash",
+      "name": "Captain Car Wash",
+      "family": "auto",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 6,
+      "sourceCount": 6,
+      "officialPhotos": 6,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://captaincarwashpa.com/",
+      "city": "Norristown",
+      "hashes": [
+        "a5e05cfd69fe9b80c3e8e6164243ad177c46dcbccb1d98955c6c870732c9fe46",
+        "8adddafd059b9ac11f66a8fba153bb846c6d9613c9761f4ba18d543c664712ef",
+        "4a6708f2a566c3b9edcfc879908352a2a10d2283197dc92e4fcfdf0b48ae4245",
+        "38ba2352d91ec73ef18b07e622c126128706a3b5631005f14280cd972a11f8cd",
+        "26884c52a591277e8657f5b3ed3db70c7e4e02a77fdbc86729aca4436267b2d5"
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "city-electric-supply",
+      "name": "City Electric Supply West Chester",
+      "family": "trade",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.cityelectricsupply.com/branches/pa/west-chester/west-chester",
+      "city": "West Chester",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+        "Technician working with tools on equipment or landscape, no text",
+        "Crew lead talking with a homeowner at the door or yard, no text",
+        "Van or shop with a person loading materials, no text",
+        "Close-up of skilled hands on the actual trade work, no logos"
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "custom-it-solutions",
+      "name": "Custom IT Solutions",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://customitsolutions.com/",
+      "city": "Address",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "ember-ale",
+      "name": "Ember & Ale",
+      "family": "food",
+      "mode": "food",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://emberandale.com/",
+      "city": "Collegeville",
+      "error": "only 2 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal poured pint or spirit in glass beside copper stills or tap handles, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Ember & Ale, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Ember & Ale, no faces required, no text",
+        "Dining counter or table set with poured pint or spirit in glass beside copper stills or tap handles, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Ember & Ale — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "epam",
+      "name": "EPAM Philadelphia",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.epam.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 13,
+      "slug": "euphoria-nail-bar",
+      "name": "Euphoria Nail Bar",
+      "family": "salon",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 3,
+      "sourceCount": 3,
+      "officialPhotos": 3,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://euphorianailbar.com/Euphoria_Nail_Bar_-_Welcome%21.html",
+      "city": "Address",
+      "hashes": [
+        "445b18eff9f5d93dc94b83bc7ed57d354d97b4db31fefe78d3e95448add4bb1b",
+        "d79be377983831c31fc4908518eafde9417bf1f6beb3790935fc3ddd69788211",
+        "5937eaee687b5bafe161482dae3c6b4940b8706941fbda217096e66d3f7c59ba",
+        "a68cedc10bf1770bb909078131695344ad3e2ecb44ebb21625926de2fb8d51b3",
+        "4eab4ca89718b75e82fdb02f4bc009cb2b6b401ec5265c5c0bf4b40031a136fe"
+      ]
+    },
+    {
+      "id": 14,
+      "slug": "ferrari-philadelphia",
+      "name": "Ferrari Philadelphia",
+      "family": "auto",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://ferrariphiladelphia.com/",
+      "city": "Newtown Square",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 15,
+      "slug": "field-1-post-llc",
+      "name": "Field 1 Post LLC",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 1,
+      "sourceCount": 1,
+      "officialPhotos": 1,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://field1post.com/",
+      "city": "Havertown",
+      "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 16,
+      "slug": "francis-kaufman-house",
+      "name": "Francis Kaufman House",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.franciskaufmanhouse.com/",
+      "city": "Address",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 17,
+      "slug": "heart-soul-tattoo",
+      "name": "Heart & Soul Tattoo",
+      "family": "salon",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "East Greenville",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Stylist working on a client's hair or nails in a real salon station, no text",
+        "Artist focused on a service in progress, hands and tools visible, no text",
+        "Client and stylist talking in the chair, relaxed, no text",
+        "Salon interior with a person at the front desk, no text",
+        "Close-up of skilled hands during the service, no logos"
+      ]
+    },
+    {
+      "id": 18,
+      "slug": "highline-motors",
+      "name": "Highline Motors Aston",
+      "family": "auto",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.highlineaston.com/",
+      "city": "Aston",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 19,
+      "slug": "holiday-hair",
+      "name": "Holiday Hair Quakertown",
+      "family": "salon",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 1,
+      "sourceCount": 1,
+      "officialPhotos": 1,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.holidayhair.com/locations/nearme/haircut/PA/QUAKERTOWN/1465-21-W-BROAD-ST/19300",
+      "city": "Quakertown",
+      "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Stylist working on a client's hair or nails in a real salon station, no text",
+        "Artist focused on a service in progress, hands and tools visible, no text",
+        "Client and stylist talking in the chair, relaxed, no text",
+        "Salon interior with a person at the front desk, no text",
+        "Close-up of skilled hands during the service, no logos"
+      ]
+    },
+    {
+      "id": 20,
+      "slug": "ivc-wealth-advisors",
+      "name": "IVC Wealth Advisors",
+      "family": "legal",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 5,
+      "sourceCount": 5,
+      "officialPhotos": 5,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.ivcwealth.com/",
+      "city": "Silverdale",
+      "hashes": [
+        "f787eea60da7d6579949968d85b070c4060694994ad6183a5a90b528b22f8a8b",
+        "f6d167ce17321af9b6f6dbc9de2847599de70e76e4150afb9a340193d7678296",
+        "c49b4d2fcd40181d61697ac7ffdf0cc7af0b60e2a849196ac17dcd39cc8c7b21",
+        "5a40ada005b25f885c5c3164922be748752c5f9dcb72567c6183cfcca5fc430d",
+        "12676ace4ac05c2107bb654decb804b2d92489207053e054d805dccb35404605"
+      ]
+    },
+    {
+      "id": 21,
+      "slug": "j-pro-inc",
+      "name": "J-Pro Pools Inc",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.j-propools.com/",
+      "city": "Bridgeport",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 22,
+      "slug": "hero-complex",
+      "name": "Johnny Destructo's Hero Complex",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.jdsherocomplex.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 24,
+      "slug": "just-tires",
+      "name": "Just Tires Media",
+      "family": "auto",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.justtires.com/en_US/location/Media-PA-19063-US-000901223",
+      "city": "Media",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 25,
+      "slug": "kinetic-physical-therapy",
+      "name": "Kinetic Physical Therapy",
+      "family": "fitness",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Collegeville",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Trainer coaching a client through a lift or stretch in a gym, no text",
+        "Therapist guiding a patient's shoulder or knee in a clinic, no text",
+        "Two people reviewing a plan on a clipboard after a session, no text",
+        "Training floor with a coach walking the room, no text",
+        "Close-up of spotting hands or a resistance band in use, no logos"
+      ]
+    },
+    {
+      "id": 26,
+      "slug": "manatawny-still-works",
+      "name": "Manatawny Still Works",
+      "family": "food",
+      "mode": "food",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://amadeusbb.com/",
+      "city": "Stowe",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal poured pint or spirit in glass beside copper stills or tap handles, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Manatawny Still Works, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Manatawny Still Works, no faces required, no text",
+        "Dining counter or table set with poured pint or spirit in glass beside copper stills or tap handles, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Manatawny Still Works — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 27,
+      "slug": "ming-s-chinese",
+      "name": "Ming's Chinese Restaurant",
+      "family": "food",
+      "mode": "food",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://mings-restaurant.com/",
+      "city": "Hatboro",
+      "error": "only 2 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal Chinese banquet plate: wok-seared vegetables and protein, steam rising, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Ming's Chinese Restaurant, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Ming's Chinese Restaurant, no faces required, no text",
+        "Dining counter or table set with Chinese banquet plate: wok-seared vegetables and protein, steam rising, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Ming's Chinese Restaurant — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 28,
+      "slug": "narberth-pizza",
+      "name": "Narberth Pizza and Steaks",
+      "family": "food",
+      "mode": "food",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://newmainstreeteatery.com/",
+      "city": "Narberth",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal wood-fired pizza with blistered leopard-spotted crust on a peel, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Narberth Pizza and Steaks, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Narberth Pizza and Steaks, no faces required, no text",
+        "Dining counter or table set with wood-fired pizza with blistered leopard-spotted crust on a peel, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Narberth Pizza and Steaks — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 29,
+      "slug": "novacare",
+      "name": "NovaCare Rehabilitation Conshohocken",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.novacare.com/contact/find-a-location/pa/conshohocken/conshohocken/?ty=xt",
+      "city": "Conshohocken",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 30,
+      "slug": "o-donnell-weiss-mattei-p-c",
+      "name": "O'Donnell, Weiss & Mattei P.C.",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.owmlaw.com/",
+      "city": "Pottstown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 31,
+      "slug": "ooka-hibachi-and-sushi",
+      "name": "Ooka Hibachi and Sushi",
+      "family": "food",
+      "mode": "food",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "http://ookasushi.com/phone/willow-grove.html",
+      "city": "Willow Grove",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal hibachi or sushi plate: glistening rice, seared protein, and precise garnish, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Ooka Hibachi and Sushi, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Ooka Hibachi and Sushi, no faces required, no text",
+        "Dining counter or table set with hibachi or sushi plate: glistening rice, seared protein, and precise garnish, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Ooka Hibachi and Sushi — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 32,
+      "slug": "dr-weiss-s-office",
+      "name": "Orthodontic Associates of Collegeville",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 7,
+      "sourceCount": 7,
+      "officialPhotos": 7,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://orthodontists.com/",
+      "city": "Collegeville",
+      "hashes": [
+        "9cc2f5a8dd60cff09ca9c79f9a0fc66efe49f18a1fa6ee67ef35f37f3ef7ab94",
+        "df0f3f79d330ad607211d640b88d864479932a60c3009f3cd1d06e144df8bab7",
+        "c95e2b44f4e81ad31870f313cf47cd0fd33137f5333b7a7eb754e69a1df0241f",
+        "b4ff43b376c3113620d3fb6cfb81fbe418b20818dfd65e520909d2b8bf7c6d12",
+        "b66209383aedbd720c2f311eb2c527c467f8c00b26c5b3f1aed1ad0b8c81dc38"
+      ]
+    },
+    {
+      "id": 33,
+      "slug": "philadelphia-auto-accident-injury-attorney",
+      "name": "Philadelphia Auto Accident Injury Attorney",
+      "family": "auto",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 1,
+      "sourceCount": 1,
+      "officialPhotos": 1,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://carcrashinjuryfirm.com/philadelphia-auto-accident-injury-attorney/",
+      "city": "Philadelphia",
+      "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 34,
+      "slug": "rally-house-collegeville",
+      "name": "Rally House Collegeville",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 7,
+      "sourceCount": 7,
+      "officialPhotos": 7,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.rallyhouse.com/stores/collegeville/60-town-center-drive",
+      "city": "Collegeville",
+      "hashes": [
+        "6a8f4359f085b09c1436668b3c8403db6baf521d86a244a23a89fb0f5e0d39db",
+        "502a5ea5663c80bf6e0721122a169441dd2b192f01b58bc4f5ad26c5680e427c",
+        "be2e47ac3ab9644ad82a91f7298f952290933c8ed400d7e9f4b5e0d8aaa59012",
+        "f5ca62e45ff89c67b2c2fbff5579bfb9821a708cc34bfbec66af58ff30c42d7f",
+        "259e59eda6164c43fbbdb38efaea3648401ff59b7aefb747f5ffe85ef49dd6e1"
+      ]
+    },
+    {
+      "id": 35,
+      "slug": "red-hill-greenhouses-florist",
+      "name": "Red Hill Greenhouses & Florist",
+      "family": "retail",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.redhillgreenhouse.com/",
+      "city": "Red Hill",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Associate helping a customer choose an item in the shop, no text",
+        "Craftsperson or buyer handling the product with care, no text",
+        "Two people at the counter during a purchase conversation, no text",
+        "Store interior with a person browsing, no text",
+        "Close-up of hands presenting the product, no logos"
+      ]
+    },
+    {
+      "id": 36,
+      "slug": "rocco-s-brick-oven-pizzeria",
+      "name": "Rocco's Brick Oven Pizzeria",
+      "family": "food",
+      "mode": "food",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.roccosbrickoven.net/",
+      "city": "Collegeville",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal wood-fired pizza with blistered leopard-spotted crust on a peel, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Rocco's Brick Oven Pizzeria, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Rocco's Brick Oven Pizzeria, no faces required, no text",
+        "Dining counter or table set with wood-fired pizza with blistered leopard-spotted crust on a peel, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Rocco's Brick Oven Pizzeria — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 37,
+      "slug": "seiler-drury",
+      "name": "Seiler & Drury",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://sdarc.com/",
+      "city": "Norristown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 38,
+      "slug": "snyder-online-marketing",
+      "name": "Snyder Online Marketing",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.snyderonlinemarketing.com/",
+      "city": "Doylestown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 39,
+      "slug": "the-edge-fitness-clubs",
+      "name": "The Edge Fitness Clubs Media",
+      "family": "fitness",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.theedgefitnessclubs.com/locations/pennsylvania-media",
+      "city": "Media",
+      "hashes": [
+        "8607b6204b77eb2055077a4eceec0aa5d84b2c18c3f97ca6e5fccab51d5339aa",
+        "cd0f6424f5479fb39aa126d9a326f0d7f97aeac3cb084bd08ad3c2356a6ec5c3",
+        "b81f822f621f93b73f2c02d0191096e16284c5c15d0a33dde83989cc9c52d6d5",
+        "07abaf12e73ba067c4a518595a50b2ee16bd1d5fffd27d0adaeb46d98dfb67e9",
+        "63b880f289defb369c5e2c335123c59ec3fe3f7147a580032f065763c3feacc2"
+      ]
+    },
+    {
+      "id": 40,
+      "slug": "the-restaurant-store",
+      "name": "The Restaurant Store Plymouth Meeting",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.therestaurantstore.com/stores/Plymouth-Meeting",
+      "city": "Norristown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 41,
+      "slug": "theory",
+      "name": "Theory Outlet at Philadelphia Premium Outlets",
+      "family": "retail",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.theory.com/storedetail/?StoreID=280075",
+      "city": "Suite #1245",
+      "hashes": [
+        "462d61618a8ced16989738fa7c690d95ee9673e588842c0136315051989a7ec3",
+        "0a4ba98c1f27d1f79b5daa4b96c64dcfce775a9dc4d156704ff9cd4f3e48bf0f",
+        "95e82c9d7934fc0398653786c5d56f1d40c69091cb7549bca08aecb6a68408fa",
+        "8870ad1e7de5d0269ea1bea8455838df158cd7fd5ab16166d87f814d7ba4a0ef",
+        "b6301583eda4913e828dbec8250cf6007efa8c4db3b577ff08f58d37a164a6f1"
+      ]
+    },
+    {
+      "id": 43,
+      "slug": "tm-prestige-home-cash-buyer",
+      "name": "TM Prestige Home Cash Buyer",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://tmprestige.com/",
+      "city": "Philadelphia",
+      "hashes": [
+        "7860882405319f3b1cda0fe9ccd0f01d8e158be11ae3a42fb12f89e843bb3221",
+        "9665e153c8ce45ecebe1b466c74143b6e9756dff19f5664acb916179cb919f67",
+        "36f65b4c316742e0599f27a40dcaa54fe12aeee11497666aaa36e731cbb98edf",
+        "35a4c9d430ce631220ebbe82f10f8be7dcac85eb6d8c1ad6e7e21ce9fbb7adb1",
+        "b9cb81a4dc27b2448dd49e3038b7681ec9f62caeb73998eda6e8884b0df9d8bc"
+      ]
+    },
+    {
+      "id": 44,
+      "slug": "towne-book-center-wine-bar",
+      "name": "Towne Book Center & Wine Bar",
+      "family": "food",
+      "mode": "food",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://townebc.com/",
+      "city": "Collegeville",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal cheese board and open wine bottle on a wooden tasting counter, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Towne Book Center & Wine Bar, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Towne Book Center & Wine Bar, no faces required, no text",
+        "Dining counter or table set with cheese board and open wine bottle on a wooden tasting counter, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Towne Book Center & Wine Bar — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 45,
+      "slug": "trend-auto-trader",
+      "name": "Trend Auto Trader",
+      "family": "auto",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.trendautotrader.com/",
+      "city": "Quakertown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 46,
+      "slug": "uno-chicago-style-pizza",
+      "name": "UNO Pizzeria & Grill Oaks",
+      "family": "food",
+      "mode": "food",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://restaurants.unos.com/locations/Oaks/PA/3511/",
+      "city": "Oaks",
+      "error": "only 2 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal wood-fired pizza with blistered leopard-spotted crust on a peel, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for UNO Pizzeria & Grill Oaks, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for UNO Pizzeria & Grill Oaks, no faces required, no text",
+        "Dining counter or table set with wood-fired pizza with blistered leopard-spotted crust on a peel, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for UNO Pizzeria & Grill Oaks — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 47,
+      "slug": "zuber-realty",
+      "name": "Zuber Realty",
+      "family": "professional",
+      "mode": "people",
+      "issue": "placeholder",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Boyertown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 48,
+      "slug": "anthony-gueriera-insurance",
+      "name": "Anthony Gueriera Jr. Insurance Agency LLC",
+      "family": "legal",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://broomallinsuranceagency.com/\nCall log:\n  - navigating to \"https://broomallinsuranceagency.com/\", waiting until \"domcontentloaded\"\n",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://broomallinsuranceagency.com",
+      "city": "Broomall",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Advisor in professional attire seated with a client at a conference table, no text",
+        "Attorney reviewing documents at a desk with natural office light, no text",
+        "Two people in a calm consultation, listening, no text",
+        "Reception of a small professional office with a person arriving, no text",
+        "Close-up of hands over a folder and pen during a meeting, no logos"
+      ]
+    },
+    {
+      "id": 49,
+      "slug": "art-city-vets",
+      "name": "Art City Vets & Urgent Care",
+      "family": "veterinary",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 7,
+      "sourceCount": 7,
+      "officialPhotos": 7,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.artcityvets.com/",
+      "city": "Philadelphia",
+      "hashes": [
+        "35a3f422e78f07957e5bf662c213ece99f424d5c50c801217b1a2a2a723c0014",
+        "67fd63a5a866834f751ebf212cb7172019b9b74bf828da0c1ff6b8ed02438b0a",
+        "236edc31466789cfe0aec48544870ca563f2a1e0f7060b332c1eb35cefcaeda4",
+        "6af6e08580ccd68634a5311c28531aeb7b1f94608f614392297e24ff2ac7f816",
+        "aba814b7f518dd7604e39f4e57366dc281f04b3ae2b31f8a0f7f4460e740f95f"
+      ]
+    },
+    {
+      "id": 50,
+      "slug": "baldwins-book-barn",
+      "name": "Baldwin's Book Barn",
+      "family": "retail",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 7,
+      "sourceCount": 7,
+      "officialPhotos": 7,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://bookbarn.com/",
+      "city": "west chester",
+      "hashes": [
+        "292d7b81fc4ee246333c6d0131551db7ff937b19a894bdf099817718d09d89de",
+        "11efacce8812e4efdb7819ff2f49f0b3035587c141c5fd9a890929d2edd4f19d",
+        "6a5c7ab0f7e7fc9983f301cf854effcb10031ccfc4813ef59a1dd74cf51edd4d",
+        "f84f2bba80e737ec99d98f891d6f32f55b9ecf88f2137e154a47cab5ae28ac79",
+        "89dd13791160490e64a0c1e6292d5b888e69d3daf701f294eac6417c272fb818"
+      ]
+    },
+    {
+      "id": 51,
+      "slug": "big-head-transport",
+      "name": "Big Head Transport LLC",
+      "family": "professional",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://bigheadtransportllc.com/\nCall log:\n  - navigating to \"https://bigheadtransportllc.com/\", waiting until \"domcontentloaded\"\n",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://bigheadtransportllc.com",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 52,
+      "slug": "ban-ban-asian-bistro",
+      "name": "Bàn Bàn Asian Bistro",
+      "family": "food",
+      "mode": "food",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "page.goto: net::ERR_CONNECTION_REFUSED at https://banbanasianbistro.net/\nCall log:\n  - navigating to \"https://banbanasianbistro.net/\", waiting until \"domcontentloaded\"\n",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://banbanasianbistro.net",
+      "city": "Abington",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal signature plated dish from Bàn Bàn Asian Bistro, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Bàn Bàn Asian Bistro, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Bàn Bàn Asian Bistro, no faces required, no text",
+        "Dining counter or table set with signature plated dish from Bàn Bàn Asian Bistro, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Bàn Bàn Asian Bistro — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 53,
+      "slug": "dentistry-for-life",
+      "name": "Dentistry for Life",
+      "family": "professional",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://dentistryforlife.net/",
+      "city": "Philadelphia",
+      "hashes": [
+        "59c379f741aaf5dbc2a81227ef1ad26caf9cda0318836f0ccf7d7b8cf5a07265",
+        "8cc423ed560cdf84db15527d5c1eff903bd62bf81c2fb5ab00e1f798a988a291",
+        "c38bd84dc5e49c1e2f110cac160e160df8519342b43820648ebb86fa7e5a0acd",
+        "9580dbbf0ad4ee57733c4ff8a026f14933d0b99e83182203f7712c06a9cc9b90",
+        "d27686a13ea225c4828f061b7bce1740f357cd802462d76a83d0dddc2bde2184"
+      ]
+    },
+    {
+      "id": 54,
+      "slug": "elite-auto-parts",
+      "name": "Elite Philly Auto Parts",
+      "family": "auto",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://cecarparts.com/\nCall log:\n  - navigating to \"https://cecarparts.com/\", waiting until \"domcontentloaded\"\n",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://cecarparts.com",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 55,
+      "slug": "frazer-antiques",
+      "name": "Frazer Antiques",
+      "family": "professional",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "http://www.frazer-antiques.com/",
+      "city": "Frazer",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 56,
+      "slug": "germantown-dental-group",
+      "name": "Germantown Dental Group",
+      "family": "dental",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://germantowndental.us/\nCall log:\n  - navigating to \"https://germantowndental.us/\", waiting until \"domcontentloaded\"\n",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://germantowndental.us",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Dentist in a modern operatory talking with a seated patient, calm clinical light, no text",
+        "Hygienist providing a cleaning with focused hands and instruments, no text",
+        "Front-desk coordinator welcoming a family in a dental reception, no text",
+        "Bright dental treatment room with a clinician preparing a tray, no text",
+        "Close-up of gloved hands working carefully at a dental chair, no logos"
+      ]
+    },
+    {
+      "id": 57,
+      "slug": "golden-eagle-jewelry",
+      "name": "Golden Eagle Jewelers",
+      "family": "retail",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 1,
+      "sourceCount": 1,
+      "officialPhotos": 1,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.facebook.com/GoldenEagleJewelers",
+      "city": "Philadelphia",
+      "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Associate helping a customer choose an item in the shop, no text",
+        "Craftsperson or buyer handling the product with care, no text",
+        "Two people at the counter during a purchase conversation, no text",
+        "Store interior with a person browsing, no text",
+        "Close-up of hands presenting the product, no logos"
+      ]
+    },
+    {
+      "id": 58,
+      "slug": "kehans-auto-service",
+      "name": "Kehan's Auto Service",
+      "family": "auto",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://kehansautoservice.com/\nCall log:\n  - navigating to \"https://kehansautoservice.com/\", waiting until \"domcontentloaded\"\n",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://kehansautoservice.com",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 59,
+      "slug": "lees-hoagie-house",
+      "name": "Lee's Hoagie House of Horsham",
+      "family": "food",
+      "mode": "food",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://leeshoagieshorsham.com/\nCall log:\n  - navigating to \"https://leeshoagieshorsham.com/\", waiting until \"domcontentloaded\"\n",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://leeshoagieshorsham.com",
+      "city": "Horsham",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal seeded hoagie roll stacked with meats, oil, and shredded lettuce, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Lee's Hoagie House of Horsham, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Lee's Hoagie House of Horsham, no faces required, no text",
+        "Dining counter or table set with seeded hoagie roll stacked with meats, oil, and shredded lettuce, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Lee's Hoagie House of Horsham — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 60,
+      "slug": "main-line-veterinary-hospital",
+      "name": "Main Line Veterinary Hospital",
+      "family": "veterinary",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 3,
+      "sourceCount": 3,
+      "officialPhotos": 3,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.mainlinevetmalvern.com/index.html",
+      "city": "Malvern",
+      "hashes": [
+        "b1191e6a00f69de9b2a172ba83372d586095b1a284977051b579241e39d85a99",
+        "52751e70a37f92fa56ddb923031efcce033c60c29219e4db16c728e915e05537",
+        "958ff27d0bd9a21fc2ac23ef8c9f660c2047dbf52a5411e12dbbbdba064ee8f8",
+        "1fe718d02b64040c61d3e2f0362211e96770522bdc2d8ae1098a88c150df21a8",
+        "ebe9d3882531d8d31ec04e7189c98a6ad3fc49f829e11b494ea724cfa73cd27f"
+      ]
+    },
+    {
+      "id": 61,
+      "slug": "morton-electric-pool-spa",
+      "name": "Morton Electric Pool & Spa",
+      "family": "trade",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.guildquality.com/profile/morton-electric-pool-and-spa-specialists",
+      "city": "Trevose",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+        "Technician working with tools on equipment or landscape, no text",
+        "Crew lead talking with a homeowner at the door or yard, no text",
+        "Van or shop with a person loading materials, no text",
+        "Close-up of skilled hands on the actual trade work, no logos"
+      ]
+    },
+    {
+      "id": 62,
+      "slug": "pizza-peddler",
+      "name": "Pizza Peddler",
+      "family": "food",
+      "mode": "food",
+      "issue": "webgl",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.pizzapeddler202.com/",
+      "city": "West Chester",
+      "hashes": [
+        "347d915a99a2c50f13c01ae6a8a73987d5778beaf8e16e717f7a19104ced32f6",
+        "849ddb345087f1609c038129804815086ea0dedeed15658c4c9547d19bc55e1b",
+        "63b84df974676e0b6046dd0fea6feb084c47f3b1a812be0efc3f70b0740ffed5",
+        "c39aca3d4d62ae9474f9a5e02415287504edf12a8d8e032b6f99df04da4e40ab",
+        "1820f9fe56aa39d863f7425581f0cc46026764a6a12c55e3aa0f030b79e1f0f1"
+      ]
+    },
+    {
+      "id": 63,
+      "slug": "udis-conn-orthodontics",
+      "name": "Udis & Conn Orthodontics",
+      "family": "professional",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://udisandconnorthodontics.com/\nCall log:\n  - navigating to \"https://udisandconnorthodontics.com/\", waiting until \"domcontentloaded\"\n",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://udisandconnorthodontics.com",
+      "city": "Jenkintown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 64,
+      "slug": "urgentvet-pottstown",
+      "name": "UrgentVet Pottstown",
+      "family": "professional",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://urgentvet.com/location/pottstown-pa/",
+      "city": "Pottstown",
+      "hashes": [
+        "ba59f471ddb29c20526ad5bc990ef7ecff51ba67c1dea37f2eb37df38d7d074a",
+        "6a281900a92384e1be31ebb769560e213a917dc795fa4532ae866e80420f4dd6",
+        "d1e6f80be51a4268e4e93f16abcda5679d4866adf5f1b42b60186c5a443233ba",
+        "9de1323aae370d39f247bb796d059bd35b6e5e2b324d24c4a37e61a4ab7fced5",
+        "42de54e10a5a05612e4a43ad9676cd08fb928db2f2ae25205606468739322d22"
+      ]
+    },
+    {
+      "id": 65,
+      "slug": "welcome-dental",
+      "name": "Welcome Dental",
+      "family": "dental",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://welcomedental.com/",
+      "city": "West Chester",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Dentist in a modern operatory talking with a seated patient, calm clinical light, no text",
+        "Hygienist providing a cleaning with focused hands and instruments, no text",
+        "Front-desk coordinator welcoming a family in a dental reception, no text",
+        "Bright dental treatment room with a clinician preparing a tray, no text",
+        "Close-up of gloved hands working carefully at a dental chair, no logos"
+      ]
+    },
+    {
+      "id": 66,
+      "slug": "whitelands-animal-hospital",
+      "name": "Whitelands Animal Hospital",
+      "family": "veterinary",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": false,
+      "url": "https://www.whitelandsah.com/",
+      "city": "Malvern",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Veterinarian examining a dog on a table with a technician assisting, no text",
+        "Vet tech comforting a cat in a clean exam room, no text",
+        "Receptionist greeting a pet owner holding a leash in a clinic lobby, no text",
+        "Clinic treatment area with a clinician at work, no text",
+        "Close-up of a veterinarian's hands checking an animal's ear or paw, no logos"
+      ]
+    },
+    {
+      "id": 67,
+      "slug": "wholly-grounds",
+      "name": "Wholly Grounds Coffeehouse",
+      "family": "professional",
+      "mode": "people",
+      "issue": "webgl",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://whollygroundscoffeehouse.com/",
+      "city": "Oxford",
+      "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 68,
+      "slug": "dutton-road-veterinary-clinic",
+      "name": "Dutton Road Veterinary Clinic",
+      "family": "veterinary",
+      "mode": "people",
+      "issue": "nophoto",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Veterinarian examining a dog on a table with a technician assisting, no text",
+        "Vet tech comforting a cat in a clean exam room, no text",
+        "Receptionist greeting a pet owner holding a leash in a clinic lobby, no text",
+        "Clinic treatment area with a clinician at work, no text",
+        "Close-up of a veterinarian's hands checking an animal's ear or paw, no logos"
+      ]
+    },
+    {
+      "id": 69,
+      "slug": "always-dental-care",
+      "name": "Always Dental Care",
+      "family": "dental",
+      "mode": "people",
+      "issue": "genhero",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Phoenixville",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Dentist in a modern operatory talking with a seated patient, calm clinical light, no text",
+        "Hygienist providing a cleaning with focused hands and instruments, no text",
+        "Front-desk coordinator welcoming a family in a dental reception, no text",
+        "Bright dental treatment room with a clinician preparing a tray, no text",
+        "Close-up of gloved hands working carefully at a dental chair, no logos"
+      ]
+    },
+    {
+      "id": 70,
+      "slug": "andorra-family-dentistry",
+      "name": "Andorra Family Dentistry",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 71,
+      "slug": "artisan-wine-and-cheese-cellars",
+      "name": "Artisan Wine and Cheese Cellars",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 6,
+      "sourceCount": 6,
+      "officialPhotos": 6,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.artisanwineandcheesecellars.com/",
+      "city": "Wine and cheese bar located at the historic Main Street Depot in Bethlehem",
+      "hashes": [
+        "4eb598776a2531acd568775ce9f308c52f787ec85fc379c9040f085c0f7795d0",
+        "80c004848534b260b935f1da1e9c91b23ed3f6c265752472502ab3a6e705318b",
+        "0f870101ea4951cd4434f4c0127d2de46b64d7ce729fe989297f8c3561b9de4a",
+        "30e75f4b192baab85bf47b89345376b96a3f8c40db40b6646266aa4dd30b1f90",
+        "2c988a5383df418f40f0ccdc7d67b0bae0c6e42a1f606e74a6b97bc05aae3c74"
+      ]
+    },
+    {
+      "id": 72,
+      "slug": "auger-manufacturing",
+      "name": "Auger Manufacturing Specialists",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 4,
+      "sourceCount": 4,
+      "officialPhotos": 4,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.augermfgspec.com/",
+      "city": "Frazer",
+      "hashes": [
+        "4d5f3b6f18d608663c2ab8d9b73a6e816a82825ac4b65ac8a50e167869abd05e",
+        "026a7d5016281fdefb5ff1b00ecd15c18dfa97705cbc73066be2f96c0442a82d",
+        "d31109bc6b486bed82d971f5efa3df9be784c534b8174dcb246683e1c48436c8",
+        "5b66f5939005c66eda105f7004746d4d7baaa7ed8bb2b00bbe91457876ee77e8",
+        "ffbacc043a4bd7681acad8b8d484951c4dc96e9e21168d917350307d58690946"
+      ]
+    },
+    {
+      "id": 73,
+      "slug": "barnes-financial-group",
+      "name": "Barnes Financial Group",
+      "family": "legal",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.barnesfinancial.com/",
+      "city": "Media",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Advisor in professional attire seated with a client at a conference table, no text",
+        "Attorney reviewing documents at a desk with natural office light, no text",
+        "Two people in a calm consultation, listening, no text",
+        "Reception of a small professional office with a person arriving, no text",
+        "Close-up of hands over a folder and pen during a meeting, no logos"
+      ]
+    },
+    {
+      "id": 74,
+      "slug": "be-balanced-hormone",
+      "name": "BeBalanced Royersford",
+      "family": "fitness",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://bebalancedcenters.com/location/royersford/",
+      "city": "19468",
+      "hashes": [
+        "fb4126c5be47d37fa2f4327180525bb0986112c3fdff8ebaf5b635050b9394ac",
+        "c9343bec0a709aa9a5c37987852c6bf7669b3097d137d28fd42be20f91a2ec8d",
+        "b296e65c2e2ea31bb77d0c8ab3a24cf2cd8ebee362119654fd1128afc510764d",
+        "523e864d75d066699899a507fd3299c7865aede21dffea1d0ba6819c9cbf6b4f",
+        "d9775660f5daa205d9df79e653862f60aa9c567d11c3fb22168b7baccbb29b93"
+      ]
+    },
+    {
+      "id": 75,
+      "slug": "benjamin-lovell-shoes",
+      "name": "Benjamin Lovell Shoes",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 76,
+      "slug": "bg-electric",
+      "name": "BG Electric Service LLC",
+      "family": "trade",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.bgelectricservicellc.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+        "Technician working with tools on equipment or landscape, no text",
+        "Crew lead talking with a homeowner at the door or yard, no text",
+        "Van or shop with a person loading materials, no text",
+        "Close-up of skilled hands on the actual trade work, no logos"
+      ]
+    },
+    {
+      "id": 77,
+      "slug": "bpm-fitness",
+      "name": "BPM Fitness",
+      "family": "fitness",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Trainer coaching a client through a lift or stretch in a gym, no text",
+        "Therapist guiding a patient's shoulder or knee in a clinic, no text",
+        "Two people reviewing a plan on a clipboard after a session, no text",
+        "Training floor with a coach walking the room, no text",
+        "Close-up of spotting hands or a resistance band in use, no logos"
+      ]
+    },
+    {
+      "id": 78,
+      "slug": "c-and-c-super-seal",
+      "name": "C&C Super Seal",
+      "family": "trade",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.candcsuperseal.com/",
+      "city": "Bensalem",
+      "hashes": [
+        "2c820d5411114be5049662d046c230c06baa1c3216a46b5ee50d6270520ac9be",
+        "84692b1d6d3bfa383af28cccc11561ebf6d4c95b78c82a95f3ea9aef62508b8d",
+        "3634589099e37f3a1cc0e42a67a366964c48178ceee3b3ffe2d4c2d11512ddf6",
+        "e0a40c799a09b5f5af6b02ee3643f74930849000a2fd3cd38ba254000e5434eb",
+        "fa51d99b1740453a3d6847b9712b537305fc92d0e8eec1658bcd7d56c01ca1f0"
+      ]
+    },
+    {
+      "id": 79,
+      "slug": "chadds-ford-animal-hospital",
+      "name": "Chadds Ford Animal Hospital",
+      "family": "veterinary",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 4,
+      "sourceCount": 4,
+      "officialPhotos": 4,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.chaddsfordanimalhospital.vetsuite.com/",
+      "city": "Chadds Ford",
+      "hashes": [
+        "13a4f308e3ab6ab4a56ecd163b3c69eaf6e38102fbad227c5a47ad4f290692c2",
+        "39ac729a377d4b3503d71395da3e53cb7c852123bd2871ae4615e8f185b15cf5",
+        "cadc19c49e21787bfc4bf99bfc8306d2feefe9909d777ffd2758899135b4d7a7",
+        "e8026fc99f7af5b752efaf2420a6ee436647cb18fe9888ea04aefa68e21b4dff",
+        "f9d7fa9a3e4623894b139d3f3f47fc9b83f3dce7a2c87f9740fe5d3395881aeb"
+      ]
+    },
+    {
+      "id": 80,
+      "slug": "chestnut-hill-animal-hospital",
+      "name": "Chestnut Hill Animal Hospital",
+      "family": "veterinary",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://chestnuthillvet.com/",
+      "city": "Erdenheim",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Veterinarian examining a dog on a table with a technician assisting, no text",
+        "Vet tech comforting a cat in a clean exam room, no text",
+        "Receptionist greeting a pet owner holding a leash in a clinic lobby, no text",
+        "Clinic treatment area with a clinician at work, no text",
+        "Close-up of a veterinarian's hands checking an animal's ear or paw, no logos"
+      ]
+    },
+    {
+      "id": 81,
+      "slug": "ciocca-pre-owned-autos",
+      "name": "Ciocca Pre-Owned Autos",
+      "family": "auto",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.cioccasubaru.com/used-inventory/ciocca-subaru.htm",
+      "city": "Allentown",
+      "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 82,
+      "slug": "colmar-dentistry-for-kids",
+      "name": "Colmar Dentistry For Kids",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.colmarkids.com/",
+      "city": "Montgomeryville",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 83,
+      "slug": "county-line-veterinary-hospital",
+      "name": "County Line Veterinary Hospital",
+      "family": "veterinary",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 3,
+      "sourceCount": 3,
+      "officialPhotos": 3,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://countylineveterinary.com/",
+      "city": "Hatboro",
+      "hashes": [
+        "7a0cb5a61f174b171522fbb348501c938420413b6aa28c0047fb392e340c217c",
+        "ff49619b8b41aa6955a70e22ae79d33c5f1127507aaf067d0916944f42300c53",
+        "5bf3feb03a2f0a965aad1b1b8ea1af9d40e65054ab0f45394ba72596b0c6ffa0",
+        "90782e9f91404909e41341637a080626c6202ebb32c76a47821fa6845a364081",
+        "9efe7a3c1ace37ce61b2dabc01ab8e4968b47f96d01eb442502ba0f71f18533d"
+      ]
+    },
+    {
+      "id": 84,
+      "slug": "davidson-fabricating",
+      "name": "Davidson Fabricating",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://davidsonfab.com/",
+      "city": "West Chester",
+      "hashes": [
+        "784abd29146176aa2eebedc1f9a932cb9a837791d7e3d4af93cff195a8525a3c",
+        "c36a21b997970854132f3c260ac40e36b81fd4b348701c39e8509af9db73d4b8",
+        "16812a803cdc28c74e3b2152fbb4b63ef3ce34cce3ae1eac360268befe1e7ffc",
+        "61ffb190d1e1ef2c54d0ed0740c5b9b91cbb617845728f2731c054af39938e97",
+        "c7dc10c4ad0df906a131883c4080e101e8c07c4d6453a83dda2cff1cffb192da"
+      ]
+    },
+    {
+      "id": 85,
+      "slug": "del-chevrolet",
+      "name": "Del Chevrolet",
+      "family": "auto",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.delchevrolet.com/",
+      "city": "Del Chevrolet",
+      "hashes": [
+        "f70d539d85c7f1db3cead7101f760b4e2f7f844863d45d727d3e4a73e6d78df3",
+        "d6d5d9fbb16f112e4498fe8891d04d31248251c60d9964b123478a5bdbb89f4f",
+        "e77e2f159a7e4ea91279dbd4a8978cbd64a63fddc2eed44777139e5ecb625b3e",
+        "51a73c85aeb30e2641b71e7cd27d5ad63909b14064da670476068d3b82c07408",
+        "1198c47bfe080a6f63bc14811202123a7432b5acd73444c2bde72a13b62d54f2"
+      ]
+    },
+    {
+      "id": 86,
+      "slug": "dinse-dental-care",
+      "name": "Dinse Dental Care",
+      "family": "dental",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 5,
+      "sourceCount": 5,
+      "officialPhotos": 5,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.dinsedentalcare.com/",
+      "city": "East Petersburg",
+      "hashes": [
+        "bdd5f1034c1d77decf0b2821d512cef14e22cdb07728558ed7512dde68298f5c",
+        "3e39f69991d9237cde3176b25970c785acbe4f12902682b95777a4862e6d59df",
+        "ec13229be5158b076b0e849a9dc472ecb34e8016da070776536d7445a42e9687",
+        "684f8a6a125112ccee740179e4d3ba7e968afa8de2fc4e95a9f96ba5a96a1878",
+        "b31fb065de3fcd497f714f603f61c9bdb6aa26dd70fa23ebc8faa8322839f372"
+      ]
+    },
+    {
+      "id": 87,
+      "slug": "dream-team-hvac",
+      "name": "Dream Team Home Services",
+      "family": "trade",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Paoli",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+        "Technician working with tools on equipment or landscape, no text",
+        "Crew lead talking with a homeowner at the door or yard, no text",
+        "Van or shop with a person loading materials, no text",
+        "Close-up of skilled hands on the actual trade work, no logos"
+      ]
+    },
+    {
+      "id": 88,
+      "slug": "dreammaker-bath-kitchen",
+      "name": "DreamMaker Bath & Kitchen of Chester County",
+      "family": "retail",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 1,
+      "sourceCount": 1,
+      "officialPhotos": 1,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://dreammaker-remodel.com/chester-county/",
+      "city": "Chester Springs",
+      "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Associate helping a customer choose an item in the shop, no text",
+        "Craftsperson or buyer handling the product with care, no text",
+        "Two people at the counter during a purchase conversation, no text",
+        "Store interior with a person browsing, no text",
+        "Close-up of hands presenting the product, no logos"
+      ]
+    },
+    {
+      "id": 89,
+      "slug": "eastern-dragon",
+      "name": "Eastern Dragon",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 4,
+      "sourceCount": 4,
+      "officialPhotos": 4,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://easterndragonfood.com/",
+      "city": "North Wales",
+      "hashes": [
+        "51a501ba8f372702d2b08671d7ef2fda08eafde34c01c3ff86c7d23e86c9a4c3",
+        "96b76ec2fe2475461bc3851b39ab05c306cb2132211cd31790dd8c9e67491cb1",
+        "e2dbd067fb14821b5bbd7f860c7f5a3a270a8252a67e8bb5b0d27762412a9182",
+        "d4cbdefa54df1f550b372f6baa2dd8095ca37ae68e078ed1158b91f1b4f1298c",
+        "e87e4de5d8337c0c722ebab2adcf151a4a67f5a634522ba1453ae89ee693b572"
+      ]
+    },
+    {
+      "id": 90,
+      "slug": "easy-auto-tag-insurance",
+      "name": "Easy Auto Tag & Insurance",
+      "family": "auto",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://easyautotag.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+        "Mechanic under a hood with tools, real garage, no text",
+        "Service advisor with a customer beside a car in the drive lane, no text",
+        "Shop bay with a person walking a car into service, no text",
+        "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+      ]
+    },
+    {
+      "id": 91,
+      "slug": "eisenberg-rothweiler",
+      "name": "Eisenberg, Rothweiler, Winkler, Eisenberg & Jeck",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 92,
+      "slug": "electric-direct",
+      "name": "Electric Direct",
+      "family": "trade",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Havertown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+        "Technician working with tools on equipment or landscape, no text",
+        "Crew lead talking with a homeowner at the door or yard, no text",
+        "Van or shop with a person loading materials, no text",
+        "Close-up of skilled hands on the actual trade work, no logos"
+      ]
+    },
+    {
+      "id": 93,
+      "slug": "elverson-supply",
+      "name": "Elverson Supply",
+      "family": "trade",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://elversonsupply.net/",
+      "city": "Elverson",
+      "hashes": [
+        "3b2e6bf12b5c5a0ccbe38ab850a89b59291bd309140f7d5ee19590abb11bf906",
+        "cd1b9826baf2b79d0aaa2a5debb5b204f5da324fa9cd984099d774c10e3dbc4d",
+        "5abb760ec9fcd50f2b02f1f36bd5c53292d94f39bfd211a548979b2ec68f8965",
+        "9a6d6a37320014d6047bdf0ea2ec3eb4e2db4a6b1d1cd555cff7abb3e7fd926c",
+        "c559a9c2a7b9a850c6221f96d83476db7dd1c519dda361fd6a7221a3f1d7862e"
+      ]
+    },
+    {
+      "id": 94,
+      "slug": "faulkner-buick-gmc",
+      "name": "Faulkner Buick GMC",
+      "family": "auto",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.faulknerauto.com/",
+      "city": "WEST CHESTER",
+      "hashes": [
+        "7c99f3658f8c2e7f18e53620442a8bdaac2601a978799b6763faa3bbd1c22327",
+        "24dc43e9dfade537d391a0596e89ee50d81fde782a8ad62c5f4f0c5b469a45bb",
+        "8f1234d5f96f6e909293d89b6457fe105c70f406940fb14747a104c3339953f6",
+        "84cd62c1ef02f695aa0c6012872fc6b6c4f474c654a4a419b4303fe6cf8dab00",
+        "60d252ce5fd5cfe418cd1a43ea352af02b24c29ab74dfcbaa0a9f7bf6b40789c"
+      ]
+    },
+    {
+      "id": 95,
+      "slug": "fillman-and-sons-floors",
+      "name": "Fillman & Sons Floors & More",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.fillmanandsons.com/",
+      "city": "Emmaus",
+      "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 96,
+      "slug": "floral-and-hardy",
+      "name": "Floral and Hardy of Skippack",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Skippack",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 97,
+      "slug": "oster-fine-violins",
+      "name": "Frederick W. Oster Fine Violins",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.osterviolins.com/",
+      "city": "Philadelphia",
+      "hashes": [
+        "b8b51eb6bf642ade10526390264c3f4292722f743df8c55bc74f56a3bc7d492a",
+        "3b99da368552a5c7f51e5eba40e616d3687896bc5d8de350e0c968561623d9be",
+        "191b6faa03ced61e82e04fd22c7d3012d9613ccb5bb60f9cbd83ef7451a75d6a",
+        "23d8a8ed1b2cfe9430e5c0a57e2186a3159475e6d237c2c7af6dbb7434b074c8",
+        "63861cf97b9825cedd4b1714fe8eb1b9e9bd62d7327ae0e55cb95fffc4c27dcd"
+      ]
+    },
+    {
+      "id": 98,
+      "slug": "fredo-s-deli",
+      "name": "Fredo's Deli",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://fredosdeli.com/",
+      "city": "Pittsburgh",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal deli sandwich cut on butcher paper with pickles and a side, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Fredo's Deli, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Fredo's Deli, no faces required, no text",
+        "Dining counter or table set with deli sandwich cut on butcher paper with pickles and a side, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Fredo's Deli — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 99,
+      "slug": "glen-eagle-pediatric-dentistry",
+      "name": "Glen Eagle Pediatric Dentistry",
+      "family": "medical",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 7,
+      "sourceCount": 7,
+      "officialPhotos": 7,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://gleneaglepediatricdentistry.com/",
+      "city": "Glen Mills",
+      "hashes": [
+        "e5f7950987db82b2b14434a0dce5a68c29751d7dd6c81910b1deffa811027eb0",
+        "12db0babefe6295fc54d539f7f7babcf5afe9f6f34dcc121d8ac3f41ec88b2da",
+        "e6020052a3e7864b0eb844dc8cbcc84af5ff3361e47850b94aaa195640593aa4",
+        "ac1b37632c8a4a47dc2aa794cfd1663102e6ebbc4965008cb539de8417eb098a",
+        "0313c7ced927f6253288efad826b26cb1d8682616c4abc177d6c4e63700288cc"
+      ]
+    },
+    {
+      "id": 100,
+      "slug": "go2tech",
+      "name": "GO2 Tech",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 7,
+      "sourceCount": 7,
+      "officialPhotos": 7,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.go2tech.com/",
+      "city": "Springfield",
+      "hashes": [
+        "97911a22e58cbb37db2f3f5dd219eceeee87d7495882a8fb1730dd69e8bff770",
+        "17dffb5e3a8816ccca73d98c62832b44f327c70a1d8ff2af54a33c81c1fc8782",
+        "935045a12df6786dedb1ee02c63f0552a355a3943539dfe3878339b70393834f",
+        "b3cf0b6650b33ca8afd662437a58fc2b4d1dce2a107d0520e3733a5f05c307a6",
+        "1dd21e01efc0cc4b43b2e18f33e73fef47d10bc40a1b0f76ba681ea49df45f6b"
+      ]
+    },
+    {
+      "id": 101,
+      "slug": "hamburg-animal-hospital",
+      "name": "Hamburg Animal Hospital",
+      "family": "veterinary",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.hamburganimalhospital.com/",
+      "city": "Hamburg Animal Hospital is a full service veterinary practice in Hamburg",
+      "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Veterinarian examining a dog on a table with a technician assisting, no text",
+        "Vet tech comforting a cat in a clean exam room, no text",
+        "Receptionist greeting a pet owner holding a leash in a clinic lobby, no text",
+        "Clinic treatment area with a clinician at work, no text",
+        "Close-up of a veterinarian's hands checking an animal's ear or paw, no logos"
+      ]
+    },
+    {
+      "id": 102,
+      "slug": "harry-s-hotdogs",
+      "name": "Harry's Hotdogs",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://harryshotdogs.com/",
+      "city": "Sadsburyville",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal griddled hot dog on a toasted bun with mustard and relish, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Harry's Hotdogs, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Harry's Hotdogs, no faces required, no text",
+        "Dining counter or table set with griddled hot dog on a toasted bun with mustard and relish, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Harry's Hotdogs — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 103,
+      "slug": "havercrown-dental",
+      "name": "HaverCrown Dental",
+      "family": "dental",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.havercrowndental.com/",
+      "city": "Havertown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Dentist in a modern operatory talking with a seated patient, calm clinical light, no text",
+        "Hygienist providing a cleaning with focused hands and instruments, no text",
+        "Front-desk coordinator welcoming a family in a dental reception, no text",
+        "Bright dental treatment room with a clinician preparing a tray, no text",
+        "Close-up of gloved hands working carefully at a dental chair, no logos"
+      ]
+    },
+    {
+      "id": 104,
+      "slug": "home-furnishings-consignment",
+      "name": "Home Furnishing Consignment",
+      "family": "retail",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 3,
+      "sourceCount": 3,
+      "officialPhotos": 3,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.hfconsignment.com/",
+      "city": "Wayne",
+      "hashes": [
+        "34cc77e797ffe4cc94db10a5a1c97a105e99710f970da70f0062e20ac2278280",
+        "f7cd0111c536adde47c8784f15ac4b3a09d43a60c89ac27d890dcc5804f813b3",
+        "b068efd16b9c06551bbd93c41d4ae68717b8ecdf2fe05c066ea3d6f35cc51530",
+        "d30484eba6e85b61a814d3267c5d9735440888a0a7efb58afda69632feb56ad1",
+        "1015adbfe3dde0fc2530af14d9629f9b6d70d72a92fe3f68cf8b1bed86a0caf1"
+      ]
+    },
+    {
+      "id": 105,
+      "slug": "jarman-hvac",
+      "name": "Jarman Sales & Service",
+      "family": "trade",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+        "Technician working with tools on equipment or landscape, no text",
+        "Crew lead talking with a homeowner at the door or yard, no text",
+        "Van or shop with a person loading materials, no text",
+        "Close-up of skilled hands on the actual trade work, no logos"
+      ]
+    },
+    {
+      "id": 106,
+      "slug": "johnnys-pizza",
+      "name": "Johnny's Pizza & Pasta",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 5,
+      "sourceCount": 5,
+      "officialPhotos": 5,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://johnnysitaliano.com/",
+      "city": "Spring Mount",
+      "hashes": [
+        "5bf294c362a385b3617e880f3552406a90089327e4445970bb96e2ebf7b685c7",
+        "a63e681c39f02ffd9aabbe0b5fbb97d02406558156851d5592451e13e7701d21",
+        "45b169e391977a331cf82f36d87bebe97183e2872b79fe82d3c900948c540c60",
+        "e151a99c8bf858d827f5a19344c4cb88fefe2da5cd6d6ea3734a21388dc9a93d",
+        "57228c00dd174b1b6ce4945e8515f080a52c44709247704407c815bf170bdccf"
+      ]
+    },
+    {
+      "id": 107,
+      "slug": "katana",
+      "name": "Katana Pittsburgh",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 5,
+      "sourceCount": 5,
+      "officialPhotos": 5,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://katanapittsburgh.com/",
+      "city": "Dormont",
+      "hashes": [
+        "5bb881ef70bfa7de67eafda23ee3e3462dde1cceb4f8a22dd591ca94159ce56e",
+        "96f9219212425f0231a0813601609826aef83a8265ffc2c08d65695dd9ac7853",
+        "7f2ad30e80e99ea9f348ff8b8e8a0e6d166b31057603cd7fd120cea048728952",
+        "7458f565f6f55ea1fa31cbfc55ffdcaf80f512e1690e9bded1bf5dfa965a67e7",
+        "4e2031ae8b421fb22e1950653e714fa56ea840a234fc177df91a3de6dc0bbcdc"
+      ]
+    },
+    {
+      "id": 108,
+      "slug": "verruni-landscaping",
+      "name": "L. A. Verruni Landscaping",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.verrunilandscaping.com/",
+      "city": "Pottstown",
+      "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 109,
+      "slug": "legacy-jewelers",
+      "name": "Legacy Jewelers",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 1,
+      "sourceCount": 1,
+      "officialPhotos": 1,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.legacyjewelers.net/",
+      "city": "Schnecksville",
+      "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 110,
+      "slug": "live-urgent-care",
+      "name": "Live Urgent Care King of Prussia",
+      "family": "medical",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://liveurgentcare.com/locations/kingofprussia/",
+      "city": "King of Prussia",
+      "hashes": [
+        "3c2564e1ed37c669574abb7ad1e9bfcde15d4d5de47c3b101ea30eeac7c1b230",
+        "9e95b8d6a795e31583d1ff25ac7e0741c935bedb32c3c9d826e9fc214d056539",
+        "2cb4d36b27877e202199d1e8f70c3aa98f97bfdab7d77e3fcef5770c08c136f5",
+        "5e0848100a3c710824454ab5e63d8561512083b0cbb64c4bbe416ee7ee5e769f",
+        "503f49acdff636d974ef74d0de97c231f2a8b2479bd431cbd9d2f10546a841d9"
+      ]
+    },
+    {
+      "id": 111,
+      "slug": "maclaren-kitchen-and-bath",
+      "name": "MacLaren Kitchen and Bath",
+      "family": "retail",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 7,
+      "sourceCount": 7,
+      "officialPhotos": 7,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://maclarenfab.com/",
+      "city": "PA 19380",
+      "hashes": [
+        "387986036a32e70a65bc6c977b7f3c9a727f9c70e01b5c2cd7d17879fae54d3e",
+        "02708d2bd390770520dfe9d162ce9e1d04520570c1754186920f02e8b7be692a",
+        "5bd73daa42dfc724679eb045e811e9eab1121872b06952ea114ac1045e048cb6",
+        "1f144bff855a60b225a4b62eaca80a34a7ed951f6498445e25bcd5611fae3854",
+        "d0e55c1eefe590c655e207c61ad7f2fa3c5f4eccd2a4f509f78191a2c2802430"
+      ]
+    },
+    {
+      "id": 112,
+      "slug": "malvern-vision-care",
+      "name": "Malvern Vision Care",
+      "family": "medical",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.malvernvision.com/",
+      "city": "Malvern",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Clinician speaking with a patient in an exam room, no text",
+        "Nurse taking vitals with a calm bedside manner, no text",
+        "Front desk checking in a visitor, no text",
+        "Clinic corridor with a provider walking toward a room, no text",
+        "Close-up of gloved hands preparing a clean instrument tray, no logos"
+      ]
+    },
+    {
+      "id": 113,
+      "slug": "mcmenamin-margiotti",
+      "name": "McMenamin & Margiotti",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Colmar",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 114,
+      "slug": "metalmorphose-iron-studio",
+      "name": "Metalmorphose Ironworks",
+      "family": "trade",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://metalmorphoseironworks.com/",
+      "city": "Kennett Square",
+      "hashes": [
+        "aeae3d090f73500d3d49c86bf8ff706fa5f1fe62edfc2c8e18462d42871556d7",
+        "b69efdb830167843b2d920e3b525785ed7a84d4493d56ebee342c8a05887d8d2",
+        "d404cccdf557cf5988775a35887877aa74e3a086e19486606bcd3a99480bbb01",
+        "7b2cb58fdafe015bae855f09eadc70f8eecd2fbf29a69d4c492cde1e96d96b01",
+        "a4cd39c02f0ad7f08b7f719842160d6a6fc7472268e3f615a6e86f6dddb85ce1"
+      ]
+    },
+    {
+      "id": 115,
+      "slug": "nicky-s-thai-kitchen",
+      "name": "Nicky's Thai Kitchen Downtown",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 3,
+      "sourceCount": 3,
+      "officialPhotos": 3,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://nickysthaikitchen.com/",
+      "city": "Pittsburgh",
+      "hashes": [
+        "baa5ab51270dd9275c89983923b352525cf4f9a33f89e86ad88d13d36bcb7216",
+        "9a2bbb2d38438aed20f2be0908dad77d14bef5f1e366690716fe72bef94c1f64",
+        "1d1da3221409cc1318b39c2d92487389118e578beae905c46560f6dc38eefc82",
+        "62915ff1360503b95e8b8862a9a7fd23dc7de7ba0bda9c911155cd67288771f7",
+        "077d5ab5f820b1a9d3d5041b8e04f586c317bea9a053c86deeef74bd3066e4f5"
+      ]
+    },
+    {
+      "id": 116,
+      "slug": "nottingham-creamery",
+      "name": "Nottingham Creamery",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.nottinghaminn.com/kitchenandcreamery/",
+      "city": "Nottingham Creamery",
+      "error": "only 2 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal scooped ice cream or bottled cream on a chilled metal counter, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Nottingham Creamery, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Nottingham Creamery, no faces required, no text",
+        "Dining counter or table set with scooped ice cream or bottled cream on a chilled metal counter, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Nottingham Creamery — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 117,
+      "slug": "oaks-italian-deli",
+      "name": "Oaks Italian Deli And Pizzeria",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Phoenixville",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal wood-fired pizza with blistered leopard-spotted crust on a peel, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Oaks Italian Deli And Pizzeria, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Oaks Italian Deli And Pizzeria, no faces required, no text",
+        "Dining counter or table set with wood-fired pizza with blistered leopard-spotted crust on a peel, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Oaks Italian Deli And Pizzeria — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 118,
+      "slug": "openarc",
+      "name": "OpenArc",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 3,
+      "sourceCount": 3,
+      "officialPhotos": 3,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.openarc.net/",
+      "city": "Pittsburgh",
+      "hashes": [
+        "eedae880a25d0722f308cd69267245d756ab840f1516d2ed6093e548b72f552e",
+        "65446a8dddcb6b2b404b0c062fb92f11ef7184d9f5c5e3ca10bb331a9be66988",
+        "8412bc433b0413a8362aa256238369fd1285ff49e03ba861b4c39bfe982e6553",
+        "c12f0984fc88b5604ca8241db7504b65346d406340bc783fc35aab4dc2d45637",
+        "7148e0708eda551b4b6c9a4c2360124ebd372b867297237983583fc2de24a819"
+      ]
+    },
+    {
+      "id": 119,
+      "slug": "oss-health",
+      "name": "OSS Health",
+      "family": "medical",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 8,
+      "sourceCount": 8,
+      "officialPhotos": 8,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://osshealth.com/locations/oss-health-hanover",
+      "city": "Hanover",
+      "hashes": [
+        "66e08daed9dea36a11e1a5fe362a7bbf6171ea2cabcd4804da262511ad3d5062",
+        "12080ba82331e56e62220dedffb4be1d75d4980eb67562cbb416e47f8d1d7f37",
+        "586fe263e4e97320e1fb9224f73b19d8452106a64f0dceb952ec78eba8c384d9",
+        "d854e878231327d111dfb5498f8c605a077dca74165cc3f061a41d75768c0d64",
+        "32a6fb5262058ed62588f0e3a4157a949ed6080673ef9f0f65685e0896619537"
+      ]
+    },
+    {
+      "id": 120,
+      "slug": "peking-gourmet",
+      "name": "Peking Gourmet",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Pottstown",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal Chinese banquet plate: wok-seared vegetables and protein, steam rising, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Peking Gourmet, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Peking Gourmet, no faces required, no text",
+        "Dining counter or table set with Chinese banquet plate: wok-seared vegetables and protein, steam rising, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Peking Gourmet — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 121,
+      "slug": "pennsylvania-dental-group",
+      "name": "Pennsylvania Dental Group",
+      "family": "dental",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Philadelphia",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Dentist in a modern operatory talking with a seated patient, calm clinical light, no text",
+        "Hygienist providing a cleaning with focused hands and instruments, no text",
+        "Front-desk coordinator welcoming a family in a dental reception, no text",
+        "Bright dental treatment room with a clinician preparing a tray, no text",
+        "Close-up of gloved hands working carefully at a dental chair, no logos"
+      ]
+    },
+    {
+      "id": 122,
+      "slug": "philadelphia-garage",
+      "name": "Philadelphia Garage",
+      "family": "auto",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 7,
+      "sourceCount": 7,
+      "officialPhotos": 7,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://philadelphiagarage.com/",
+      "city": "West Chester",
+      "hashes": [
+        "74ddedb7ecb1ceda074e921a937237bffb860aa7b6ad1a8dd29e9e73e2275028",
+        "c4ad86a5b0a0c22fe3aaeef8f1f06c5b8b83b7fe29d62427405ff49119a092f6",
+        "c4b5d04fa52b438c854e3ecce728194af8db6ee3bc7b8354489030fbae13d29e",
+        "a61df21d60f3108125ba797b2ae1d496348ce1bc4d6c48be3387b8de5bad92dc",
+        "cbbeac0ad87f0f0d5ce29b9a21571334825738baad452c8bdeb5700e2313fc4e"
+      ]
+    },
+    {
+      "id": 123,
+      "slug": "pipe-xpress",
+      "name": "Pipe Xpress",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 1,
+      "sourceCount": 1,
+      "officialPhotos": 1,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://pipexpressinc.com/",
+      "city": "West Chester",
+      "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 124,
+      "slug": "plastic-surgery-solutions",
+      "name": "Plastic & Reconstructive Surgical Solutions",
+      "family": "medical",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 5,
+      "sourceCount": 5,
+      "officialPhotos": 5,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://plasticsurgerysolutions.com/",
+      "city": "Sanatoga",
+      "hashes": [
+        "1a19e796ea5726e96153d29739d820bf0b3f2c60c3fc9f13867057fc6d9c8075",
+        "5e2a323252821b379e9fc75e37a3c0562c4503dbf459c3f195a93e07a60a7af9",
+        "9f46abe35d73a79da682c79f8d1262159f32d83f42ea50ee7eaa76cdf7625762",
+        "9533fc76b89f1114a11de0b0693fa40d8a4ad25ccde26bbec9340c85a32fe9ea",
+        "852745a17fcccbfc9d17f8534285ee1e4622b918d0034f1fb52aa999246845ef"
+      ]
+    },
+    {
+      "id": 125,
+      "slug": "pro-nails",
+      "name": "Pro Nails",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 3,
+      "sourceCount": 3,
+      "officialPhotos": 3,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://gopronails.com/",
+      "city": "Willow Grove",
+      "hashes": [
+        "873ba3ae62947106caf078907bc27777831a382dd87f658fb3c4529211939fa9",
+        "c4b514d61f4c45016da164988c02d9f59df6b6f3e5b320dfe1ae5550fb164d89",
+        "838fa224de8c2a6e9363a1744d4e810ab50826a7e39ced0ec2f2d5bdd2e35a9c",
+        "d29e278b39b57dfa7a0853404a55be9b165bf7812a0feb76ba3a35929cd4a22f",
+        "13b1500697e3b44cfee67c0a7cf03bd5d31606c2a204e9d62d3b8c1e54e56b8c"
+      ]
+    },
+    {
+      "id": 126,
+      "slug": "radiance-dental",
+      "name": "Radiance Dental",
+      "family": "dental",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "photoCount": 6,
+      "sourceCount": 6,
+      "officialPhotos": 6,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://radiancedentalpa.com/",
+      "city": "Looking for a trusted dentist in West Chester",
+      "hashes": [
+        "3a7a852c8c1b10f3facfabb9ea8ce2359edceafef3daeba72236fa8904418cf1",
+        "daef9979c0b4ef0dafbae1b5da0dc483101ec4e015ceaa1899db196b6b352414",
+        "031997d27627525f42fb9e7cac227ce20a0b63328d3a34f8c4af495be8a6632c",
+        "09cc14b7fd83abfed75f7042cda521ef99d2b0d3b0502f728d137d368be3d843",
+        "85bdfcf7943e502797885cef9561da13591e5493feaa231b2bb8df7dedb3ccc9"
+      ]
+    },
+    {
+      "id": 127,
+      "slug": "reardon-dental",
+      "name": "Reardon Dental Exton",
+      "family": "dental",
+      "mode": "people",
+      "issue": "design",
+      "ok": true,
+      "qa": [
+        {
+          "check": "collage-1.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-2.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-3.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-4.webp",
+          "ok": true
+        },
+        {
+          "check": "collage-5.webp",
+          "ok": true
+        },
+        {
+          "check": "noindex",
+          "ok": true
+        },
+        {
+          "check": "logo-or-wordmark",
+          "ok": true
+        },
+        {
+          "check": "swipe",
+          "ok": true
+        },
+        {
+          "check": "reduced-motion",
+          "ok": true
+        },
+        {
+          "check": "no-webgl-required",
+          "ok": true
+        },
+        {
+          "check": "unique-collages",
+          "ok": true
+        },
+        {
+          "check": "enough-sources",
+          "ok": true
+        },
+        {
+          "check": "people-or-food-mode",
+          "ok": true
+        }
+      ],
+      "browser": "ok",
+      "photoCount": 4,
+      "sourceCount": 4,
+      "officialPhotos": 4,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://reardondental.com/",
+      "city": "Exton",
+      "hashes": [
+        "9b8e2f92bc2f1ce94628401c8cecf171d21fe31192f6bdecbfde36e6038eacd9",
+        "1f3bb2b8e3aca1c6e03d9c0a51c56bc467e687f13ce5b659a46a0a39a6bbb6b1",
+        "f36ef73665771dd7748aaaed6d5b0c980af5bb35bba89dd2b987dfca369ff2d8",
+        "368042f4d2248dc6b0dfc59a07c835da9cc13f6fdc4750a5563a1b0c3a0ea4f2",
+        "e6803e6750cf50a2b4d101a89b2666d860dddf06dd35258c7eee86f489e7a551"
+      ]
+    },
+    {
+      "id": 128,
+      "slug": "riley-rodzianko-and-clymer-llp",
+      "name": "Riley Rodzianko & Clymer LLP",
+      "family": "legal",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "cloudflare-challenge",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.rrccpa.com/",
+      "city": "Quakertown",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Advisor in professional attire seated with a client at a conference table, no text",
+        "Attorney reviewing documents at a desk with natural office light, no text",
+        "Two people in a calm consultation, listening, no text",
+        "Reception of a small professional office with a person arriving, no text",
+        "Close-up of hands over a folder and pen during a meeting, no logos"
+      ]
+    },
+    {
+      "id": 129,
+      "slug": "salters-fireplace",
+      "name": "Salter's Fireplace",
+      "family": "trade",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Eagleville",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+        "Technician working with tools on equipment or landscape, no text",
+        "Crew lead talking with a homeowner at the door or yard, no text",
+        "Van or shop with a person loading materials, no text",
+        "Close-up of skilled hands on the actual trade work, no logos"
+      ]
+    },
+    {
+      "id": 130,
+      "slug": "sciacca-service-center",
+      "name": "Sciacca Service Center",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 1,
+      "sourceCount": 1,
+      "officialPhotos": 1,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://sciaccaservicecenter.com/",
+      "city": "Montgomery County",
+      "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 131,
+      "slug": "scott-lot",
+      "name": "Scott Lot",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.scottcars.com/",
+      "city": "Scott Lot",
+      "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 132,
+      "slug": "sesame-inn",
+      "name": "Sesame Inn",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://sesameinn.com/MtLebanon.html",
+      "city": "Sesame Inn",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal Chinese banquet plate: wok-seared vegetables and protein, steam rising, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for Sesame Inn, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for Sesame Inn, no faces required, no text",
+        "Dining counter or table set with Chinese banquet plate: wok-seared vegetables and protein, steam rising, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for Sesame Inn — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 133,
+      "slug": "southampton-hot-tub",
+      "name": "Southampton Hot Tub",
+      "family": "trade",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Exton",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+        "Technician working with tools on equipment or landscape, no text",
+        "Crew lead talking with a homeowner at the door or yard, no text",
+        "Van or shop with a person loading materials, no text",
+        "Close-up of skilled hands on the actual trade work, no logos"
+      ]
+    },
+    {
+      "id": 134,
+      "slug": "new-pennsburg-diner",
+      "name": "The New Pennsburg Diner",
+      "family": "food",
+      "mode": "food",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "Pennsburg",
+      "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Photoreal diner breakfast plate: eggs, toast, and a coffee mug, morning light, steam, natural restaurant light, no people faces required, no text, no logos",
+        "Chef plating that same kind of food at the pass in a working kitchen for The New Pennsburg Diner, hands and food sharp, no text",
+        "Prep: raw ingredients and a cook's hands on the board for The New Pennsburg Diner, no faces required, no text",
+        "Dining counter or table set with diner breakfast plate: eggs, toast, and a coffee mug, morning light, empty seats, warm room light, no text",
+        "Extreme close-up of the food texture for The New Pennsburg Diner — crust, broth, grill marks, or fresh garnish, no logos"
+      ]
+    },
+    {
+      "id": 135,
+      "slug": "thr-insurance",
+      "name": "THR Insurance",
+      "family": "legal",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 1,
+      "sourceCount": 1,
+      "officialPhotos": 1,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "http://www.thrinsurance.com/",
+      "city": "Telford",
+      "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Advisor in professional attire seated with a client at a conference table, no text",
+        "Attorney reviewing documents at a desk with natural office light, no text",
+        "Two people in a calm consultation, listening, no text",
+        "Reception of a small professional office with a person arriving, no text",
+        "Close-up of hands over a folder and pen during a meeting, no logos"
+      ]
+    },
+    {
+      "id": 136,
+      "slug": "train-and-nourish",
+      "name": "Train and Nourish",
+      "family": "fitness",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 2,
+      "sourceCount": 2,
+      "officialPhotos": 2,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://trainandnourish.com/",
+      "city": "Philadelphia",
+      "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Trainer coaching a client through a lift or stretch in a gym, no text",
+        "Therapist guiding a patient's shoulder or knee in a clinic, no text",
+        "Two people reviewing a plan on a clipboard after a session, no text",
+        "Training floor with a coach walking the room, no text",
+        "Close-up of spotting hands or a resistance band in use, no logos"
+      ]
+    },
+    {
+      "id": 137,
+      "slug": "wja-landscaping",
+      "name": "WJA Landscaping",
+      "family": "professional",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://fonts.gstatic.com/",
+      "city": "WJA Landscaping. Family-run landscaping contractor in Collegeville",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Specialist in a work setting talking with a client, no text",
+        "Person at a workstation doing the actual service, no text",
+        "Two colleagues reviewing a plan, no text",
+        "Office or shop entrance with a person arriving, no text",
+        "Close-up of hands on the tools of this trade, no logos"
+      ]
+    },
+    {
+      "id": 138,
+      "slug": "wynnewood-eyecare",
+      "name": "Wynnewood Eye Care",
+      "family": "medical",
+      "mode": "people",
+      "issue": "design",
+      "ok": false,
+      "qa": [],
+      "browser": "ok",
+      "photoCount": 0,
+      "sourceCount": 0,
+      "officialPhotos": 0,
+      "genFills": 0,
+      "hasLogo": true,
+      "url": "https://www.wynnewoodeyecare.com/",
+      "city": "Wynnewood",
+      "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+      "needsGen": true,
+      "prompts": [
+        "Clinician speaking with a patient in an exam room, no text",
+        "Nurse taking vitals with a calm bedside manner, no text",
+        "Front desk checking in a visitor, no text",
+        "Clinic corridor with a provider walking toward a room, no text",
+        "Close-up of gloved hands preparing a clean instrument tray, no logos"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Johnny's Pizza",
+      "slug": "johnny-s-pizza",
+      "issue": "dup",
+      "drop": true,
+      "ok": false,
+      "dropped": true,
+      "reason": "duplicate row — keep the canonical slug"
+    },
+    {
+      "id": 42,
+      "name": "THR Insurance Agency",
+      "slug": "thr-insurance-agency",
+      "issue": "dup",
+      "drop": true,
+      "ok": false,
+      "dropped": true,
+      "reason": "duplicate row — keep the canonical slug"
+    }
+  ]
+}

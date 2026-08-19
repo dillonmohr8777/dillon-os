@@ -1,0 +1,60 @@
+{
+  "slug": "county-line-veterinary-hospital",
+  "name": "County Line Veterinary Hospital",
+  "city": "Hatboro",
+  "category": "Veterinary",
+  "family": "veterinary",
+  "mode": "people",
+  "url": "https://countylineveterinary.com/",
+  "phone": "(215) 675-0533",
+  "address": "325 West County Line Road",
+  "hours": "Monday - Friday: 9 a.m",
+  "logo": true,
+  "tokens": {
+    "paper": "#e0b0b0",
+    "ink": "#c03020",
+    "accent": "#c03020",
+    "accent2": "#204090",
+    "panel": "#db9e9b",
+    "deep": "#691a11",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Syne",
+    "text": "Figtree",
+    "displayFallback": "Arial,sans-serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "County Line Veterinary Hospital",
+    "Hatboro",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for County Line Veterinary Hospital — people at work",
+    "The process photograph for County Line Veterinary Hospital — hands on the job",
+    "The conversation photograph for County Line Veterinary Hospital — a real conversation",
+    "The place photograph for County Line Veterinary Hospital — the place",
+    "The craft photograph for County Line Veterinary Hospital — the craft"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Professional Pet Care With a Personal Touch",
+  "sub": "$(document).ready( function(){ $('ul#flash').innerfade({ speed: 5000, timeout: 5000, type: 'sequence', containerheight: 'auto' }); }); var _userway_config = { // position below will override position set via widget //.",
+  "offerings": [
+    "Welcome to",
+    "County Line Veterinary Hospital",
+    "Hours (Hours by appointment)"
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "County Line Veterinary Hospital in Hatboro. Private concept preview."
+}

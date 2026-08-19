@@ -1,0 +1,78 @@
+{
+  "id": 49,
+  "slug": "art-city-vets",
+  "name": "Art City Vets & Urgent Care",
+  "family": "veterinary",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "browser": "ok",
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 7,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.artcityvets.com/",
+  "city": "Philadelphia",
+  "hashes": [
+    "35a3f422e78f07957e5bf662c213ece99f424d5c50c801217b1a2a2a723c0014",
+    "67fd63a5a866834f751ebf212cb7172019b9b74bf828da0c1ff6b8ed02438b0a",
+    "236edc31466789cfe0aec48544870ca563f2a1e0f7060b332c1eb35cefcaeda4",
+    "6af6e08580ccd68634a5311c28531aeb7b1f94608f614392297e24ff2ac7f816",
+    "aba814b7f518dd7604e39f4e57366dc281f04b3ae2b31f8a0f7f4460e740f95f"
+  ]
+}

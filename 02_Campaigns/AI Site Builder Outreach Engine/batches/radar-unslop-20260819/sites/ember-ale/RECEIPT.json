@@ -1,0 +1,27 @@
+{
+  "id": 11,
+  "slug": "ember-ale",
+  "name": "Ember & Ale",
+  "family": "food",
+  "mode": "food",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 2,
+  "sourceCount": 2,
+  "officialPhotos": 2,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://emberandale.com/",
+  "city": "Collegeville",
+  "error": "only 2 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal poured pint or spirit in glass beside copper stills or tap handles, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Ember & Ale, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Ember & Ale, no faces required, no text",
+    "Dining counter or table set with poured pint or spirit in glass beside copper stills or tap handles, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Ember & Ale — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

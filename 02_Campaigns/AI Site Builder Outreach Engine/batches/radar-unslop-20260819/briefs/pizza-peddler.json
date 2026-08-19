@@ -1,0 +1,60 @@
+{
+  "slug": "pizza-peddler",
+  "name": "Pizza Peddler",
+  "city": "West Chester",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "http://www.pizzapeddler202.com/",
+  "phone": "926 202 1177",
+  "address": "1177 Wilmington Pike West Chester",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#f0f0d0",
+    "ink": "#705030",
+    "accent": "#f0f0d0",
+    "accent2": "#f0e0d0",
+    "panel": "#f0f0d0",
+    "deep": "#3d2c1a",
+    "onPaper": "#111820",
+    "onAccent": "#111820",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Newsreader",
+    "text": "Figtree",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "warm",
+  "marquee": [
+    "Pizza Peddler",
+    "West Chester",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Pizza Peddler kitchen concept",
+    "Chef plating at the pass for Pizza Peddler",
+    "Prep and ingredients for Pizza Peddler",
+    "Dining setting for Pizza Peddler",
+    "Close food texture for Pizza Peddler"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Pizza Peddler",
+  "sub": "a#vlb{display:none}.style6 {color: #FFFFFF} .style7 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; } .style8 {font-size: 10px} a:link { color: #EEE4BA; } a:visited { color: #EEE4BA; } a:hover {.",
+  "offerings": [
+    "Delivery All day every day! Minimum delivery order $10",
+    "Pizza Peddler is located at the corner of Route 926 & Route 202 in the Westtown Village Shopping Center in West Chester, PA. Our Pizza is.",
+    "Pizza Peddler is BYOB and serves pizza, strombolis, low carbohydrate meals, pasta, hoagies, grinders, salads, burgers, sandwiches, steak."
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Pizza Peddler in West Chester. Private concept preview."
+}

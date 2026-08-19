@@ -1,0 +1,77 @@
+{
+  "id": 119,
+  "slug": "oss-health",
+  "name": "OSS Health",
+  "family": "medical",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://osshealth.com/locations/oss-health-hanover",
+  "city": "Hanover",
+  "hashes": [
+    "66e08daed9dea36a11e1a5fe362a7bbf6171ea2cabcd4804da262511ad3d5062",
+    "12080ba82331e56e62220dedffb4be1d75d4980eb67562cbb416e47f8d1d7f37",
+    "586fe263e4e97320e1fb9224f73b19d8452106a64f0dceb952ec78eba8c384d9",
+    "d854e878231327d111dfb5498f8c605a077dca74165cc3f061a41d75768c0d64",
+    "32a6fb5262058ed62588f0e3a4157a949ed6080673ef9f0f65685e0896619537"
+  ]
+}

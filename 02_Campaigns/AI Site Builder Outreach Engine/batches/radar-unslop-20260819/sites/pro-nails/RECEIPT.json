@@ -1,0 +1,77 @@
+{
+  "id": 125,
+  "slug": "pro-nails",
+  "name": "Pro Nails",
+  "family": "professional",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 3,
+  "sourceCount": 3,
+  "officialPhotos": 3,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://gopronails.com/",
+  "city": "Willow Grove",
+  "hashes": [
+    "873ba3ae62947106caf078907bc27777831a382dd87f658fb3c4529211939fa9",
+    "c4b514d61f4c45016da164988c02d9f59df6b6f3e5b320dfe1ae5550fb164d89",
+    "838fa224de8c2a6e9363a1744d4e810ab50826a7e39ced0ec2f2d5bdd2e35a9c",
+    "d29e278b39b57dfa7a0853404a55be9b165bf7812a0feb76ba3a35929cd4a22f",
+    "13b1500697e3b44cfee67c0a7cf03bd5d31606c2a204e9d62d3b8c1e54e56b8c"
+  ]
+}

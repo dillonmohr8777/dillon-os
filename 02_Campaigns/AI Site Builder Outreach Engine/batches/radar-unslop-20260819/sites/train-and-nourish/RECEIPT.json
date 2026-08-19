@@ -1,0 +1,27 @@
+{
+  "id": 136,
+  "slug": "train-and-nourish",
+  "name": "Train and Nourish",
+  "family": "fitness",
+  "mode": "people",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 2,
+  "sourceCount": 2,
+  "officialPhotos": 2,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://trainandnourish.com/",
+  "city": "Philadelphia",
+  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Trainer coaching a client through a lift or stretch in a gym, no text",
+    "Therapist guiding a patient's shoulder or knee in a clinic, no text",
+    "Two people reviewing a plan on a clipboard after a session, no text",
+    "Training floor with a coach walking the room, no text",
+    "Close-up of spotting hands or a resistance band in use, no logos"
+  ]
+}

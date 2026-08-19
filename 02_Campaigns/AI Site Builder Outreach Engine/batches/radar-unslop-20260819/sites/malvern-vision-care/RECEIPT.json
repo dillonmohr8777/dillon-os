@@ -1,0 +1,27 @@
+{
+  "id": 112,
+  "slug": "malvern-vision-care",
+  "name": "Malvern Vision Care",
+  "family": "medical",
+  "mode": "people",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.malvernvision.com/",
+  "city": "Malvern",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Clinician speaking with a patient in an exam room, no text",
+    "Nurse taking vitals with a calm bedside manner, no text",
+    "Front desk checking in a visitor, no text",
+    "Clinic corridor with a provider walking toward a room, no text",
+    "Close-up of gloved hands preparing a clean instrument tray, no logos"
+  ]
+}

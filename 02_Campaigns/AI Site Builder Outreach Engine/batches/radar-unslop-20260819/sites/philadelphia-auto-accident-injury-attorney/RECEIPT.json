@@ -1,0 +1,27 @@
+{
+  "id": 33,
+  "slug": "philadelphia-auto-accident-injury-attorney",
+  "name": "Philadelphia Auto Accident Injury Attorney",
+  "family": "auto",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 1,
+  "sourceCount": 1,
+  "officialPhotos": 1,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://carcrashinjuryfirm.com/philadelphia-auto-accident-injury-attorney/",
+  "city": "Philadelphia",
+  "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+    "Mechanic under a hood with tools, real garage, no text",
+    "Service advisor with a customer beside a car in the drive lane, no text",
+    "Shop bay with a person walking a car into service, no text",
+    "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+  ]
+}

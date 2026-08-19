@@ -1,0 +1,60 @@
+{
+  "slug": "baldwins-book-barn",
+  "name": "Baldwin's Book Barn",
+  "city": "west chester",
+  "category": "Retail",
+  "family": "retail",
+  "mode": "people",
+  "url": "https://bookbarn.com/",
+  "phone": "610-696-0816",
+  "address": "865 Lenape road, west chester, Pennsylvania, 19382",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#F4EFE7",
+    "ink": "#111820",
+    "accent": "#F05A28",
+    "accent2": "#17324D",
+    "panel": "#E6DED4",
+    "deep": "#0B1D2D",
+    "onPaper": "#111820",
+    "onAccent": "#FFFFFF",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Alegreya",
+    "text": "Karla",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "glass",
+  "marquee": [
+    "Baldwin's Book Barn",
+    "west chester",
+    "The work"
+  ],
+  "imageAlts": [
+    "The people photograph for Baldwin's Book Barn — people at work",
+    "The process photograph for Baldwin's Book Barn — hands on the job",
+    "The conversation photograph for Baldwin's Book Barn — a real conversation",
+    "The place photograph for Baldwin's Book Barn — the place",
+    "The craft photograph for Baldwin's Book Barn — the craft"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Baldwin's Book Barn",
+  "sub": "The Book Barn was built in 1822 and is a five-story building which exudes bookish charm with its cozy nooks, stone walls, friendly atmosphere, wood-burning stove, and shelf upon shelf of books, maps, and prints..",
+  "offerings": [
+    "News & Events",
+    "Thomas Baldwin: Champion of Baldwin&#8217;s Book Barn",
+    "Information"
+  ],
+  "points": [
+    "People who do the work",
+    "A visit that is easy to start",
+    "Details confirmed at the source"
+  ],
+  "workHeading": "The work, in the room where it happens.",
+  "galleryHeading": "People, not stock extras.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Baldwin's Book Barn in west chester. Private concept preview."
+}

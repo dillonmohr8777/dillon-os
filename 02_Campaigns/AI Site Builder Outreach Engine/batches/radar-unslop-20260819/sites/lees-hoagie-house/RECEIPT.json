@@ -1,0 +1,27 @@
+{
+  "id": 59,
+  "slug": "lees-hoagie-house",
+  "name": "Lee's Hoagie House of Horsham",
+  "family": "food",
+  "mode": "food",
+  "issue": "webgl",
+  "ok": false,
+  "qa": [],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://leeshoagieshorsham.com/\nCall log:\n  - navigating to \"https://leeshoagieshorsham.com/\", waiting until \"domcontentloaded\"\n",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://leeshoagieshorsham.com",
+  "city": "Horsham",
+  "error": "only 0 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal seeded hoagie roll stacked with meats, oil, and shredded lettuce, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Lee's Hoagie House of Horsham, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Lee's Hoagie House of Horsham, no faces required, no text",
+    "Dining counter or table set with seeded hoagie roll stacked with meats, oil, and shredded lettuce, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Lee's Hoagie House of Horsham — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

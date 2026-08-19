@@ -1,0 +1,27 @@
+{
+  "id": 48,
+  "slug": "anthony-gueriera-insurance",
+  "name": "Anthony Gueriera Jr. Insurance Agency LLC",
+  "family": "legal",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": false,
+  "qa": [],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://broomallinsuranceagency.com/\nCall log:\n  - navigating to \"https://broomallinsuranceagency.com/\", waiting until \"domcontentloaded\"\n",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://broomallinsuranceagency.com",
+  "city": "Broomall",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Advisor in professional attire seated with a client at a conference table, no text",
+    "Attorney reviewing documents at a desk with natural office light, no text",
+    "Two people in a calm consultation, listening, no text",
+    "Reception of a small professional office with a person arriving, no text",
+    "Close-up of hands over a folder and pen during a meeting, no logos"
+  ]
+}

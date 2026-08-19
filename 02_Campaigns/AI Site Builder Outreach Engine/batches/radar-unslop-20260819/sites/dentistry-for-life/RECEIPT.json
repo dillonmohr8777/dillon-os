@@ -1,0 +1,77 @@
+{
+  "id": 53,
+  "slug": "dentistry-for-life",
+  "name": "Dentistry for Life",
+  "family": "professional",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://dentistryforlife.net/",
+  "city": "Philadelphia",
+  "hashes": [
+    "59c379f741aaf5dbc2a81227ef1ad26caf9cda0318836f0ccf7d7b8cf5a07265",
+    "8cc423ed560cdf84db15527d5c1eff903bd62bf81c2fb5ab00e1f798a988a291",
+    "c38bd84dc5e49c1e2f110cac160e160df8519342b43820648ebb86fa7e5a0acd",
+    "9580dbbf0ad4ee57733c4ff8a026f14933d0b99e83182203f7712c06a9cc9b90",
+    "d27686a13ea225c4828f061b7bce1740f357cd802462d76a83d0dddc2bde2184"
+  ]
+}

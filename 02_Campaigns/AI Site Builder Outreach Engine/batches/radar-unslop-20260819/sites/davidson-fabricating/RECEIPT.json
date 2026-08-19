@@ -1,0 +1,77 @@
+{
+  "id": 84,
+  "slug": "davidson-fabricating",
+  "name": "Davidson Fabricating",
+  "family": "professional",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://davidsonfab.com/",
+  "city": "West Chester",
+  "hashes": [
+    "784abd29146176aa2eebedc1f9a932cb9a837791d7e3d4af93cff195a8525a3c",
+    "c36a21b997970854132f3c260ac40e36b81fd4b348701c39e8509af9db73d4b8",
+    "16812a803cdc28c74e3b2152fbb4b63ef3ce34cce3ae1eac360268befe1e7ffc",
+    "61ffb190d1e1ef2c54d0ed0740c5b9b91cbb617845728f2731c054af39938e97",
+    "c7dc10c4ad0df906a131883c4080e101e8c07c4d6453a83dda2cff1cffb192da"
+  ]
+}

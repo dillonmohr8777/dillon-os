@@ -1,0 +1,27 @@
+{
+  "id": 54,
+  "slug": "elite-auto-parts",
+  "name": "Elite Philly Auto Parts",
+  "family": "auto",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": false,
+  "qa": [],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://cecarparts.com/\nCall log:\n  - navigating to \"https://cecarparts.com/\", waiting until \"domcontentloaded\"\n",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://cecarparts.com",
+  "city": "Philadelphia",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+    "Mechanic under a hood with tools, real garage, no text",
+    "Service advisor with a customer beside a car in the drive lane, no text",
+    "Shop bay with a person walking a car into service, no text",
+    "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+  ]
+}

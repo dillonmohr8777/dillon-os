@@ -1,0 +1,77 @@
+{
+  "id": 64,
+  "slug": "urgentvet-pottstown",
+  "name": "UrgentVet Pottstown",
+  "family": "professional",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 8,
+  "sourceCount": 8,
+  "officialPhotos": 8,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://urgentvet.com/location/pottstown-pa/",
+  "city": "Pottstown",
+  "hashes": [
+    "ba59f471ddb29c20526ad5bc990ef7ecff51ba67c1dea37f2eb37df38d7d074a",
+    "6a281900a92384e1be31ebb769560e213a917dc795fa4532ae866e80420f4dd6",
+    "d1e6f80be51a4268e4e93f16abcda5679d4866adf5f1b42b60186c5a443233ba",
+    "9de1323aae370d39f247bb796d059bd35b6e5e2b324d24c4a37e61a4ab7fced5",
+    "42de54e10a5a05612e4a43ad9676cd08fb928db2f2ae25205606468739322d22"
+  ]
+}

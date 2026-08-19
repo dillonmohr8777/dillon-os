@@ -1,0 +1,27 @@
+{
+  "id": 7,
+  "slug": "brandywine-auto-parts",
+  "name": "Brandywine Auto Parts",
+  "family": "auto",
+  "mode": "people",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 2,
+  "sourceCount": 2,
+  "officialPhotos": 2,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://brandywine-ap.com/",
+  "city": "Chester",
+  "error": "only 2 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Technician in work shirt inspecting a vehicle on the shop floor, no text",
+    "Mechanic under a hood with tools, real garage, no text",
+    "Service advisor with a customer beside a car in the drive lane, no text",
+    "Shop bay with a person walking a car into service, no text",
+    "Close-up of skilled hands on a wheel, battery, or diagnostic tool, no logos"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": 51,
+  "slug": "big-head-transport",
+  "name": "Big Head Transport LLC",
+  "family": "professional",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": false,
+  "qa": [],
+  "browser": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://bigheadtransportllc.com/\nCall log:\n  - navigating to \"https://bigheadtransportllc.com/\", waiting until \"domcontentloaded\"\n",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://bigheadtransportllc.com",
+  "city": "Philadelphia",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Specialist in a work setting talking with a client, no text",
+    "Person at a workstation doing the actual service, no text",
+    "Two colleagues reviewing a plan, no text",
+    "Office or shop entrance with a person arriving, no text",
+    "Close-up of hands on the tools of this trade, no logos"
+  ]
+}

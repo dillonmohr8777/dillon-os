@@ -76,8 +76,18 @@ function extractOfficial(html) {
     }
   }
   const hrefs = [...html.matchAll(/href="(https?:[^"]+)"/gi)].map((m) => m[1]);
-  const skip = /netlify\.app|google\.com\/maps|fonts\.google|tel:|mailto:/i;
-  const ext = hrefs.find((h) => !skip.test(h) && !/momentum-prospect/i.test(h));
+  const skip = /netlify\.app|google\.com\/maps|fonts\.google|gstatic\.com|googleapis|facebook\.com|instagram\.com|twitter\.com|linkedin\.com|youtube\.com|cdnjs|cloudflare|fontawesome|typekit|tel:|mailto:/i;
+  const ext = hrefs.find((h) => {
+    if (skip.test(h) || /momentum-prospect/i.test(h)) return false;
+    try {
+      const u = new URL(h);
+      if (/\.(css|js|woff2?|ttf|eot|png|svg)(\?|$)/i.test(u.pathname)) return false;
+      if (/gstatic|google|facebook|instagram|twitter|linkedin|youtube|cloudfront/i.test(u.hostname)) return false;
+      return true;
+    } catch {
+      return false;
+    }
+  });
   const city = (html.match(/([A-Z][A-Za-z .'-]+,\s*PA)/) || html.match(/>([A-Z][a-z]+(?: [A-Z][a-z]+)?)\s*(?:\||,)/) || [])[1] || '';
   const logo = (html.match(/src="(assets\/logo\.[a-z]+)"/i) || [])[1] || '';
   return { url: jsonUrl || ext || '', city: (city || '').replace(/, PA.*/, '').trim(), logo };

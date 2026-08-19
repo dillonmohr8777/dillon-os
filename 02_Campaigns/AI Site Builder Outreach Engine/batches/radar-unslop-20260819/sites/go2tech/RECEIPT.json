@@ -1,0 +1,77 @@
+{
+  "id": 100,
+  "slug": "go2tech",
+  "name": "GO2 Tech",
+  "family": "professional",
+  "mode": "people",
+  "issue": "design",
+  "ok": true,
+  "qa": [
+    {
+      "check": "collage-1.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-2.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-3.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-4.webp",
+      "ok": true
+    },
+    {
+      "check": "collage-5.webp",
+      "ok": true
+    },
+    {
+      "check": "noindex",
+      "ok": true
+    },
+    {
+      "check": "logo-or-wordmark",
+      "ok": true
+    },
+    {
+      "check": "swipe",
+      "ok": true
+    },
+    {
+      "check": "reduced-motion",
+      "ok": true
+    },
+    {
+      "check": "no-webgl-required",
+      "ok": true
+    },
+    {
+      "check": "unique-collages",
+      "ok": true
+    },
+    {
+      "check": "enough-sources",
+      "ok": true
+    },
+    {
+      "check": "people-or-food-mode",
+      "ok": true
+    }
+  ],
+  "photoCount": 7,
+  "sourceCount": 7,
+  "officialPhotos": 7,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.go2tech.com/",
+  "city": "Springfield",
+  "hashes": [
+    "97911a22e58cbb37db2f3f5dd219eceeee87d7495882a8fb1730dd69e8bff770",
+    "17dffb5e3a8816ccca73d98c62832b44f327c70a1d8ff2af54a33c81c1fc8782",
+    "935045a12df6786dedb1ee02c63f0552a355a3943539dfe3878339b70393834f",
+    "b3cf0b6650b33ca8afd662437a58fc2b4d1dce2a107d0520e3733a5f05c307a6",
+    "1dd21e01efc0cc4b43b2e18f33e73fef47d10bc40a1b0f76ba681ea49df45f6b"
+  ]
+}

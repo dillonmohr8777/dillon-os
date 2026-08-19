@@ -1,0 +1,27 @@
+{
+  "id": 27,
+  "slug": "ming-s-chinese",
+  "name": "Ming's Chinese Restaurant",
+  "family": "food",
+  "mode": "food",
+  "issue": "placeholder",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 2,
+  "sourceCount": 2,
+  "officialPhotos": 2,
+  "genFills": 0,
+  "hasLogo": false,
+  "url": "https://mings-restaurant.com/",
+  "city": "Hatboro",
+  "error": "only 2 unique industry photograph(s); need generated food-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Photoreal Chinese banquet plate: wok-seared vegetables and protein, steam rising, steam, natural restaurant light, no people faces required, no text, no logos",
+    "Chef plating that same kind of food at the pass in a working kitchen for Ming's Chinese Restaurant, hands and food sharp, no text",
+    "Prep: raw ingredients and a cook's hands on the board for Ming's Chinese Restaurant, no faces required, no text",
+    "Dining counter or table set with Chinese banquet plate: wok-seared vegetables and protein, steam rising, empty seats, warm room light, no text",
+    "Extreme close-up of the food texture for Ming's Chinese Restaurant — crust, broth, grill marks, or fresh garnish, no logos"
+  ]
+}

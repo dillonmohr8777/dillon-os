@@ -1,0 +1,27 @@
+{
+  "id": 61,
+  "slug": "morton-electric-pool-spa",
+  "name": "Morton Electric Pool & Spa",
+  "family": "trade",
+  "mode": "people",
+  "issue": "webgl",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 0,
+  "sourceCount": 0,
+  "officialPhotos": 0,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "https://www.guildquality.com/profile/morton-electric-pool-and-spa-specialists",
+  "city": "Trevose",
+  "error": "only 0 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Tradesperson in branded workwear on a jobsite or in a shop, no text",
+    "Technician working with tools on equipment or landscape, no text",
+    "Crew lead talking with a homeowner at the door or yard, no text",
+    "Van or shop with a person loading materials, no text",
+    "Close-up of skilled hands on the actual trade work, no logos"
+  ]
+}

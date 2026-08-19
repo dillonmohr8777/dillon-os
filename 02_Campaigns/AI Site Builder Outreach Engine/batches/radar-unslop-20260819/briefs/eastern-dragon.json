@@ -1,0 +1,60 @@
+{
+  "slug": "eastern-dragon",
+  "name": "Eastern Dragon",
+  "city": "North Wales",
+  "category": "Food",
+  "family": "food",
+  "mode": "food",
+  "url": "http://easterndragonfood.com/",
+  "phone": "(215) 855-0366",
+  "address": "830 Upper State Rd",
+  "hours": "",
+  "logo": true,
+  "tokens": {
+    "paper": "#f0d070",
+    "ink": "#c00000",
+    "accent": "#f0b020",
+    "accent2": "#f0d070",
+    "panel": "#f0cb64",
+    "deep": "#690000",
+    "onPaper": "#111820",
+    "onAccent": "#111820",
+    "onDeep": "#FFFFFF",
+    "radius": "16px"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "text": "Source Sans 3",
+    "displayFallback": "Georgia,serif"
+  },
+  "attitude": "brutal",
+  "marquee": [
+    "Eastern Dragon",
+    "North Wales",
+    "The plate"
+  ],
+  "imageAlts": [
+    "Plated food from a Eastern Dragon kitchen concept",
+    "Chef plating at the pass for Eastern Dragon",
+    "Prep and ingredients for Eastern Dragon",
+    "Dining setting for Eastern Dragon",
+    "Close food texture for Eastern Dragon"
+  ],
+  "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
+  "headline": "Eastern Dragon",
+  "sub": "Located at 830 Upper State Rd., North Wales, PA 19454 , our restaurant offers a wide array of authentic Chinese and Japanese Food, such as Szechuan Chicken, Mongolian Beef, Moo Goo Gai Pan, Shrimp Tempura Lunch, Shumai,.",
+  "offerings": [
+    "Address: 830 Upper State Rd., North Wales, PA 19454 Tel.: (215) 855-0366 (215) 855-0368 Fax : (215) 855-8711",
+    "Confirm today's menu and hours on the official source.",
+    "Confirm today's menu and hours on the official source."
+  ],
+  "points": [
+    "The plate comes first",
+    "Kitchen in motion",
+    "A table you can trust"
+  ],
+  "workHeading": "What comes out of this kitchen.",
+  "galleryHeading": "Food worth sitting down for.",
+  "contactHeading": "Make the next visit easy.",
+  "description": "Eastern Dragon in North Wales. Private concept preview."
+}

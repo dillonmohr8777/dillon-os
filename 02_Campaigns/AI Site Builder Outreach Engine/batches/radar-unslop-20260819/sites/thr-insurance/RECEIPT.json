@@ -1,0 +1,27 @@
+{
+  "id": 135,
+  "slug": "thr-insurance",
+  "name": "THR Insurance",
+  "family": "legal",
+  "mode": "people",
+  "issue": "design",
+  "ok": false,
+  "qa": [],
+  "browser": "ok",
+  "photoCount": 1,
+  "sourceCount": 1,
+  "officialPhotos": 1,
+  "genFills": 0,
+  "hasLogo": true,
+  "url": "http://www.thrinsurance.com/",
+  "city": "Telford",
+  "error": "only 1 unique industry photograph(s); need generated people-intent fills",
+  "needsGen": true,
+  "prompts": [
+    "Advisor in professional attire seated with a client at a conference table, no text",
+    "Attorney reviewing documents at a desk with natural office light, no text",
+    "Two people in a calm consultation, listening, no text",
+    "Reception of a small professional office with a person arriving, no text",
+    "Close-up of hands over a folder and pen during a meeting, no logos"
+  ]
+}
