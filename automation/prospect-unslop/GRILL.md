@@ -1,17 +1,24 @@
-# Grill: Align print pass (2026-08-19)
+# Grill: body photographs through every homepage (2026-08-19)
 
-Outcome: 136 unique prospect homepages whose photography reads as editorial grain print, mapped to each business's tokens, with `/unslop` and `/grill-me` skill files installed so those slash commands resolve.
+Outcome: every unique prospect homepage keeps the five-image hero swipe, then adds five new treated photographs spaced through the page with reveal, vanish, and staggered two-up moments. Hero slots 1-5 stay. Body slots 6-10 are new crops from harvest, not a dump of the same five.
 
 Repository: `dillon-os`. Batch: `02_Campaigns/AI Site Builder Outreach Engine/batches/radar-unslop-20260819/`.
 
-Prohibited: Netlify deploy, live index, invented phone/address/hours/menu, logos redrawn into photographs, mailing.
+Prohibited: Netlify deploy, live index, invented phone/address/hours/menu, logos redrawn into photographs, mailing, overwriting hero collages 1-5, double-treating 1-5.
 
-Sources: existing collages plus per-site `briefs/<slug>.json` tokens. First-party logos stay in HTML, never baked into pixels.
+Sources: harvest photos in `automation/prospect-unslop/harvest/<slug>/photos/`. Compose from those files with different crops and treat seeds than the hero set.
 
-Skills on this pass: `grill-me` (this contract), `unslop`, `ui-design`, `ux-audit`, `frontend-build`, `motion-design`, `mirror-and-improve`, `site-factory`. `/goal` and `/parallel-deep-research` are not in this repo.
+Skills on this pass: `grill-me` (this contract), `unslop`, `ui-design`, `ux-audit`, `frontend-build`, `motion-design`, `mirror-and-improve`, `site-factory`.
 
-Acceptance: `node --test automation/prospect-unslop/test/`, `node automation/prospect-unslop/qa-batch.js` (136 ready, 0 collisions), screenshots of a food hero and a people hero after the print pass, skill files present at `.claude/skills/unslop/SKILL.md` and `.claude/skills/grill-me/SKILL.md`.
+Acceptance:
 
-Maker: `treat.py` + `run.js --treat`. Checker: `qa-batch.js` plus visual screenshots. Rollback: git revert the treat commit.
+- Hero swipe still uses `collage-1` through `collage-5` only
+- Body uses `collage-6` (16:9 cinematic), `collage-7` (story), `collage-8` + `collage-9` (moments), `collage-10` (feature)
+- Ten unique hashes per site; no hero file reused below the fold
+- `node --test automation/prospect-unslop/test/`
+- `node automation/prospect-unslop/qa-batch.js` (136 ready, 0 collisions, 0 missing body)
+- Full-scroll screenshots of a food page and a people page
+
+Maker: `collage.py` kind=body + `run.js --body`. Checker: `qa-batch.js` plus visual screenshots. Rollback: git revert the body commit.
 
 Stop if a fact cannot be verified: leave the field empty.

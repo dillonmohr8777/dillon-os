@@ -4,7 +4,7 @@ Rebuilds every row in the Google fix queue as a noindex concept with:
 
 - Exact first-party logos (never redrawn)
 - Palettes sampled from those logos
-- Five unique images per site, industry-intentional
+- Five unique hero images per site, plus five new body photographs spaced through the homepage
 - People at work for services; food/kitchen/plating for restaurants
 - Align HCM industry-solutions motion (swipe, ken burns, caption card)
 - Editorial print photography (duotone mapped to their tokens, color blocks, topographic waves, visible grain)
@@ -21,6 +21,7 @@ cd /workspace
 node --test automation/prospect-unslop/test/*.js
 node automation/prospect-unslop/run.js --only=al-tacos-locos
 node automation/prospect-unslop/run.js --treat   # grain print pass on existing collages
+node automation/prospect-unslop/run.js --body    # compose slots 6-10 and restyle the long homepage
 node automation/prospect-unslop/run.js            # full 136 unique sites
 ```
 

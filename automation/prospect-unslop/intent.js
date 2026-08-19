@@ -214,6 +214,25 @@ function captionsFor(family) {
   ];
 }
 
+function bodyCaptionsFor(mode) {
+  if (mode === 'food') {
+    return [
+      { kicker: 'The room', line: 'The dining room, pulled wide.' },
+      { kicker: 'Closer', line: 'A second look at the plate.' },
+      { kicker: 'Service', line: 'Hands moving at the pass.' },
+      { kicker: 'Heat', line: 'The line when tickets stack.' },
+      { kicker: 'Last look', line: 'What you see before you sit.' },
+    ];
+  }
+  return [
+    { kicker: 'The shop', line: 'The room where the work lives.' },
+    { kicker: 'Hands', line: 'A closer look at the job.' },
+    { kicker: 'The bay', line: 'Tools and the person using them.' },
+    { kicker: 'The crew', line: 'People mid-job, not posed.' },
+    { kicker: 'Detail', line: 'Skill you only get up close.' },
+  ];
+}
+
 function attitudeFor(slug, family) {
   const order = ['editorial', 'warm', 'glass', 'industrial', 'brutal', 'neon'];
   let h = 0;
@@ -273,6 +292,7 @@ module.exports = {
   modeFor,
   scenesFor,
   captionsFor,
+  bodyCaptionsFor,
   attitudeFor,
   fontPairFor,
   foodPlate,

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Compose five unique industry-intent collages from harvested photographs.
+"""Compose industry-intent collages from harvested photographs.
 
-Never draws logos or typeset business names. Color-grades toward the sampled
-brand palette, unique crop per slot, light halftone, film grain.
+Hero slots 1-5 are 4:5 swipe frames. Body slots 6-10 are a 16:9 cinematic
+band plus four 4:5 frames spaced through the homepage. Never draws logos
+or typeset business names.
 """
 from __future__ import annotations
 
@@ -24,6 +25,15 @@ SLOT_CROPS = [
     (0.55, 0.70, 0.70),  # craft close
 ]
 SIZE = (960, 1200)
+# Body crops and sizes stay distinct from the hero set so hashes cannot collide
+# even when a site only has three harvest photos to cycle.
+BODY_SLOTS = [
+    {"index": 6, "size": (1200, 675), "crop": (0.50, 0.44, 0.84)},  # 16:9 cinematic
+    {"index": 7, "size": (960, 1200), "crop": (0.28, 0.16, 0.74)},
+    {"index": 8, "size": (960, 1200), "crop": (0.72, 0.34, 0.80)},
+    {"index": 9, "size": (960, 1200), "crop": (0.40, 0.64, 0.86)},
+    {"index": 10, "size": (960, 1200), "crop": (0.58, 0.48, 0.66)},
+]
 
 
 def hex_to_rgb(value: str) -> tuple[int, int, int]:
@@ -152,23 +162,50 @@ def pick_sources(paths: list[Path], count: int, slug: str) -> list[Path]:
     return unique[:count]
 
 
-def compose_slot(src: Image.Image, slot: int, accent, ink, mode: str, slug: str, tokens: dict | None = None) -> Image.Image:
-    cx, cy, zoom = SLOT_CROPS[slot]
-    jitter = (seed_int(f"{slug}-{slot}") % 17) / 200
-    cx = min(0.78, max(0.22, cx + (jitter if slot % 2 else -jitter)))
-    framed = cover_crop(src, SIZE, cx, cy, zoom)
+def pick_body_sources(paths: list[Path], count: int, slug: str) -> list[Path]:
+    """Offset into the ranked harvest so body frames are not the hero order."""
+    if not paths:
+        return []
+    ranked = sorted(paths, key=lambda p: (p.stat().st_size, p.name), reverse=True)
+    start = min(2, max(0, len(ranked) - 1))
+    out: list[Path] = []
+    i = start + (seed_int(slug) % max(1, len(ranked)))
+    while len(out) < count:
+        out.append(ranked[i % len(ranked)])
+        i += 1
+    return out
+
+
+def compose_slot(
+    src: Image.Image,
+    slot: int,
+    accent,
+    ink,
+    mode: str,
+    slug: str,
+    tokens: dict | None = None,
+    crop: tuple[float, float, float] | None = None,
+    size: tuple[int, int] | None = None,
+    index: int | None = None,
+) -> Image.Image:
+    size = size or SIZE
+    cx, cy, zoom = crop or SLOT_CROPS[slot]
+    frame_index = index if index is not None else slot + 1
+    jitter = (seed_int(f"{slug}-{frame_index}") % 17) / 200
+    cx = min(0.78, max(0.22, cx + (jitter if frame_index % 2 else -jitter)))
+    framed = cover_crop(src, size, cx, cy, zoom)
     framed = grade(framed, accent, ink, mode)
     # Align-style rounded card is applied in CSS; keep full-bleed photo here.
-    ht = halftone(SIZE, seed_int(slug) + slot, accent)
-    wv = waves(SIZE, accent, seed_int(slug) + slot * 9)
-    gn = grain(SIZE, seed_int(slug) + slot * 3)
+    ht = halftone(size, seed_int(slug) + frame_index, accent)
+    wv = waves(size, accent, seed_int(slug) + frame_index * 9)
+    gn = grain(size, seed_int(slug) + frame_index * 3)
     framed = framed.convert("RGBA")
     framed = Image.alpha_composite(framed, ht)
     framed = Image.alpha_composite(framed, wv)
     framed = Image.alpha_composite(framed, gn)
     rgb = framed.convert("RGB")
     if tokens:
-        arr = treat_array(np.array(rgb, dtype=np.float32), tokens, f"{slug}-{slot + 1}")
+        arr = treat_array(np.array(rgb, dtype=np.float32), tokens, f"{slug}-{frame_index}")
         rgb = Image.fromarray(arr, "RGB")
     return rgb
 
@@ -192,21 +229,41 @@ def main() -> int:
         spec.get("paper", "#F4EFE7"),
         spec.get("accent2", spec.get("accent", "#F05A28")),
     )
-    picked = pick_sources(sources, 5, slug)
+    kind = spec.get("kind", "hero")
     written = []
     hashes = []
-    for i in range(5):
-        src = load_rgb(picked[i])
-        frame = compose_slot(src, i, accent, ink, mode, slug, tokens)
-        dest = out_dir / f"collage-{i + 1}.webp"
-        frame.save(dest, "WEBP", quality=82, method=6)
+    if kind == "body":
+        picked = pick_body_sources(sources, 5, slug)
+        jobs = BODY_SLOTS
+    else:
+        picked = pick_sources(sources, 5, slug)
+        jobs = [
+            {"index": i + 1, "size": SIZE, "crop": SLOT_CROPS[i]}
+            for i in range(5)
+        ]
+    for i, job in enumerate(jobs):
+        src = load_rgb(picked[i % len(picked)])
+        frame = compose_slot(
+            src,
+            i,
+            accent,
+            ink,
+            mode,
+            slug,
+            tokens,
+            crop=tuple(job["crop"]),
+            size=tuple(job["size"]),
+            index=int(job["index"]),
+        )
+        dest = out_dir / f"collage-{job['index']}.webp"
+        frame.save(dest, "WEBP", quality=72, method=6)
         digest = hashlib.sha256(dest.read_bytes()).hexdigest()
         written.append(str(dest))
         hashes.append(digest)
-    if len(set(hashes)) < 5:
+    if len(set(hashes)) < len(jobs):
         print(json.dumps({"ok": False, "reason": "duplicate collage hashes", "hashes": hashes}))
         return 3
-    print(json.dumps({"ok": True, "files": written, "hashes": hashes}))
+    print(json.dumps({"ok": True, "kind": kind, "files": written, "hashes": hashes}))
     return 0
 
 

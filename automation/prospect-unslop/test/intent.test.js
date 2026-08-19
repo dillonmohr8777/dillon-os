@@ -67,3 +67,15 @@ test('five unique scene prompts per family', () => {
   const pizza = scenesFor('food', "Rocco's Brick Oven Pizzeria").join(' ');
   assert.match(pizza, /pizza/i);
 });
+
+test('body captions are five new lines, not a copy of the hero swipe', () => {
+  const { captionsFor, bodyCaptionsFor } = require('../intent');
+  const hero = captionsFor('food').map((c) => c.line).join(' ');
+  const body = bodyCaptionsFor('food');
+  assert.equal(body.length, 5);
+  assert.equal(new Set(body.map((c) => c.line)).size, 5);
+  for (const cap of body) {
+    assert.equal(hero.includes(cap.line), false);
+  }
+  assert.equal(bodyCaptionsFor('people').length, 5);
+});

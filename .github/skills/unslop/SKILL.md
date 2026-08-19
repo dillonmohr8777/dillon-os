@@ -11,7 +11,7 @@ Fix prospect concept homepages that still look like generic AI placeholders. Rea
 
 ## Outcome
 
-Unique noindex concept sites in `02_Campaigns/AI Site Builder Outreach Engine/batches/radar-unslop-20260819/`. Each site keeps the real name, a first-party logo in HTML when harvest has a real mark, five unique 4:5 print collages, honest copy, and Align-style motion. Outreach stays with the sales manager.
+Unique noindex concept sites in `02_Campaigns/AI Site Builder Outreach Engine/batches/radar-unslop-20260819/`. Each site keeps the real name, a first-party logo in HTML when harvest has a real mark, five unique 4:5 hero print collages plus five new body photographs spaced through the homepage, honest copy, and Align-style motion. Outreach stays with the sales manager.
 
 ## Prohibited
 
@@ -31,6 +31,7 @@ node --test automation/prospect-unslop/test/*.js
 node automation/prospect-unslop/run.js --only=<slug>
 node automation/prospect-unslop/run.js --rerender
 node automation/prospect-unslop/run.js --treat
+node automation/prospect-unslop/run.js --body
 node automation/prospect-unslop/qa-batch.js
 ```
 
@@ -39,6 +40,7 @@ node automation/prospect-unslop/qa-batch.js
 ## Image contract
 
 - Food sites: plate, pass, kitchen. People sites: humans doing the work.
+- Hero swipe keeps collages 1-5. Body slots 6-10 are new crops, not a dump of the hero set.
 - Print look: grain you can see, brand color blocks, topographic waves.
 - Per-site tokens from the logo or harvest. Never one global orange.
 - CSS grain overlay on photography frames only, never on logos.

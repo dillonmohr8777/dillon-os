@@ -21,6 +21,7 @@ test('unslop and grill-me skills exist so slash commands resolve', () => {
   }
   const unslop = fs.readFileSync(path.join(ROOT, '.claude/skills/unslop/SKILL.md'), 'utf8');
   assert.match(unslop, /run\.js --treat/);
+  assert.match(unslop, /run\.js --body/);
   assert.match(unslop, /Prohibited[\s\S]*Netlify deploy/);
   assert.doesNotMatch(unslop, /netlify deploy --prod/i);
   const grill = fs.readFileSync(path.join(ROOT, '.claude/skills/grill-me/SKILL.md'), 'utf8');

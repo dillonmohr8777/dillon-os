@@ -1,6 +1,6 @@
 'use strict';
 
-const { captionsFor } = require('./intent');
+const { captionsFor, bodyCaptionsFor } = require('./intent');
 const { buildSkinCss, inferAttitude } = require('../../_templates/site-factory/lib/skins');
 
 const esc = (s) =>
@@ -82,8 +82,8 @@ a{color:inherit}
 .hero-media{margin:0}
 .hero-media figure{margin:0;position:relative;filter:drop-shadow(0 30px 34px color-mix(in srgb,var(--deep) 28%,transparent))}
 .image-frame{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius);border:var(--border) solid color-mix(in srgb,var(--accent) 55%,transparent);background:var(--deep)}
-.image-frame::after,.split figure::after,.gallery-grid figure::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;opacity:.2;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");background-size:160px 160px}
-.split figure,.gallery-grid figure{position:relative}
+.image-frame::after,.split figure::after,.moments figure::after,.cinematic-frame::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;opacity:.2;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");background-size:160px 160px}
+.split figure,.moments figure,.cinematic-frame{position:relative}
 .slides{position:absolute;inset:0}
 .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1s var(--ease),transform 7s linear}
 .slides img.is-on{opacity:1;transform:scale(1);z-index:1}
@@ -108,12 +108,17 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
 .offering-card h3,.experience-grid h3{margin:8px 0 10px;font:700 1.35rem/1.15 var(--display)}
 .split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.9fr);gap:clamp(24px,5vw,56px);align-items:center}
 .split figure{margin:0;overflow:hidden;border-radius:var(--radius);border:var(--border) solid color-mix(in srgb,var(--accent) 35%,transparent)}
-.split img{width:100%;height:100%;min-height:22rem;object-fit:cover}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto;gap:12px}
-.gallery-grid figure{margin:0;overflow:hidden;border-radius:var(--radius);min-height:14rem;border:var(--border) solid color-mix(in srgb,var(--accent) 30%,transparent)}
-.gallery-grid figure:first-child{grid-column:span 2;grid-row:span 2;min-height:28rem}
-.gallery-grid img{width:100%;height:100%;object-fit:cover;min-height:inherit;transition:transform 1.1s var(--ease)}
-.gallery-grid figure:hover img{transform:scale(1.04)}
+.split img{width:100%;height:100%;min-height:28rem;object-fit:cover;aspect-ratio:4/5}
+.cinematic{padding:0;position:relative}
+.cinematic-frame{margin:0;overflow:hidden;min-height:min(58vh,640px)}
+.cinematic-frame img{width:100%;height:min(58vh,640px);object-fit:cover;display:block;animation:cinePush 8s var(--ease) both}
+.cinematic-frame figcaption{position:absolute;left:5vw;bottom:1.6rem;z-index:3;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.55);font:700 clamp(1.4rem,3vw,2.6rem)/1.1 var(--display);max-width:18ch}
+.moments-section .moments{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(12px,2vw,22px);align-items:start}
+.moments figure{margin:0;overflow:hidden;border-radius:var(--radius);min-height:24rem;border:var(--border) solid color-mix(in srgb,var(--accent) 30%,transparent)}
+.moments figure:nth-child(2){margin-top:11vh}
+.moments img{width:100%;height:100%;object-fit:cover;min-height:24rem;transition:transform 1.1s var(--ease)}
+.moments figure:hover img{transform:scale(1.04)}
+@keyframes cinePush{from{transform:scale(1.08)}to{transform:scale(1)}}
 .surface-deep{background:var(--deep);color:var(--on-deep)}
 .surface-accent{background:var(--accent);color:var(--on-accent)}
 .surface-panel{background:var(--panel)}
@@ -133,12 +138,17 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
 @keyframes lineSwipe{to{background-position:-240% 0}}
 .reveal{opacity:1}
 .js .reveal{opacity:0;transform:translateY(28px);filter:blur(6px);transition:opacity .7s var(--ease),transform .7s var(--ease),filter .7s var(--ease)}
+.js .reveal.reveal-left{transform:translateX(-32px)}
+.js .reveal.reveal-right{transform:translateX(32px)}
+.js .delay-1{transition-delay:.12s}
+.js .delay-2{transition-delay:.24s}
+.js .delay-3{transition-delay:.36s}
 .js .reveal.visible{opacity:1;transform:none;filter:none}
 .vanish-out{transition:opacity .6s var(--ease),filter .6s var(--ease)}
 .js .vanish-out.is-away{opacity:.18;filter:blur(4px)}
 @media(max-width:850px){
-  .hero,.split,.gallery-grid{grid-template-columns:1fr}
-  .gallery-grid figure:first-child{grid-column:auto;grid-row:auto;min-height:18rem}
+  .hero,.split,.moments-section .moments{grid-template-columns:1fr}
+  .moments figure:nth-child(2){margin-top:0}
   .hero{padding-top:28px}
   .hero-media{width:min(100%,440px);margin-inline:auto}
   .hero-media figcaption{right:8px}
@@ -151,7 +161,7 @@ h2{margin:0 0 18px;font:700 clamp(2.6rem,5.2vw,5.6rem)/.95 var(--display);letter
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .js .reveal,.js .reveal.visible{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
-  .slides img{transition:none;transform:none}
+  .slides img,.cinematic-frame img{transition:none;transform:none;animation:none}
   .ticker-track,.marquee-strip:before,.marquee-strip:after{animation:none}
   *{animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
@@ -161,6 +171,9 @@ ${buildSkinCss({ ...brief, attitude })}
 
 function renderSite(brief) {
   const caps = captionsFor(brief.family);
+  const bodyCaps = bodyCaptionsFor(brief.mode || (brief.family === 'food' ? 'food' : 'people'));
+  const alts = brief.imageAlts || [];
+  const alt = (i, fallback) => esc(alts[i] || fallback || brief.name);
   const points = (brief.points || []).slice(0, 3);
   const offerings = (brief.offerings || []).slice(0, 3);
   const experience = (brief.experience || []).slice(0, 3);
@@ -179,7 +192,7 @@ function renderSite(brief) {
   const slides = [1, 2, 3, 4, 5]
     .map(
       (n, i) =>
-        `<img class="slide${i === 0 ? ' is-on' : ''}" src="assets/collage-${n}.webp" alt="${esc((brief.imageAlts || [])[n - 1] || brief.name)}" ${i === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} width="1200" height="1500">`
+        `<img class="slide${i === 0 ? ' is-on' : ''}" src="assets/collage-${n}.webp" alt="${alt(n - 1, brief.name)}" ${i === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'} width="960" height="1200">`
     )
     .join('');
   const dots = [1, 2, 3, 4, 5]
@@ -243,6 +256,12 @@ function renderSite(brief) {
       ${proof.map((p) => `<article class="reveal"><span>${esc(p.k)}</span><strong>${esc(p.v)}</strong></article>`).join('')}
     </div>
   </section>
+  <section class="cinematic vanish-out" aria-label="${esc(bodyCaps[0].kicker)}">
+    <figure class="cinematic-frame">
+      <img loading="lazy" src="assets/collage-6.webp" alt="${alt(5, bodyCaps[0].line)}" width="1200" height="675">
+      <figcaption class="reveal">${esc(bodyCaps[0].line)}</figcaption>
+    </figure>
+  </section>
   <section class="offerings" id="work">
     <div class="section-head reveal">
       <span class="section-kicker">How this place works</span>
@@ -265,25 +284,23 @@ function renderSite(brief) {
         <p>${esc(brief.story)}</p>
         <p>${esc(brief.storyMore)}</p>
       </div>
-      <figure class="reveal"><img loading="lazy" src="assets/collage-2.webp" alt="${esc((brief.imageAlts || [])[1] || '')}" width="1200" height="1500"></figure>
+      <figure class="reveal reveal-right"><img loading="lazy" src="assets/collage-7.webp" alt="${alt(6, bodyCaps[1].line)}" width="960" height="1200"></figure>
     </div>
   </section>
-  <section class="gallery" id="gallery">
+  <section class="moments-section vanish-out" id="gallery">
     <div class="section-head reveal">
       <span class="section-kicker">${brief.mode === 'food' ? 'The food' : 'The people'}</span>
       <h2>${esc(brief.galleryHeading)}</h2>
     </div>
-    <div class="gallery-grid">
-      <figure class="reveal"><img loading="lazy" src="assets/collage-3.webp" alt="${esc((brief.imageAlts || [])[2] || '')}" width="1200" height="1500"></figure>
-      <figure class="reveal"><img loading="lazy" src="assets/collage-4.webp" alt="${esc((brief.imageAlts || [])[3] || '')}" width="1200" height="1500"></figure>
-      <figure class="reveal"><img loading="lazy" src="assets/collage-5.webp" alt="${esc((brief.imageAlts || [])[4] || '')}" width="1200" height="1500"></figure>
-      <figure class="reveal"><img loading="lazy" src="assets/collage-1.webp" alt="${esc((brief.imageAlts || [])[0] || '')}" width="1200" height="1500"></figure>
+    <div class="moments">
+      <figure class="reveal reveal-left"><img loading="lazy" src="assets/collage-8.webp" alt="${alt(7, bodyCaps[2].line)}" width="960" height="1200"></figure>
+      <figure class="reveal reveal-right delay-1"><img loading="lazy" src="assets/collage-9.webp" alt="${alt(8, bodyCaps[3].line)}" width="960" height="1200"></figure>
     </div>
     <p class="disclosure reveal" style="margin-top:18px">${esc(brief.imageDisclosure)}</p>
   </section>
   <section class="feature surface-panel">
     <div class="split">
-      <figure class="reveal"><img loading="lazy" src="assets/collage-5.webp" alt="${esc((brief.imageAlts || [])[4] || '')}" width="1200" height="1500"></figure>
+      <figure class="reveal reveal-left"><img loading="lazy" src="assets/collage-10.webp" alt="${alt(9, bodyCaps[4].line)}" width="960" height="1200"></figure>
       <div class="reveal">
         <span class="section-kicker">The craft</span>
         <h2>${esc(brief.featureHeading)}</h2>

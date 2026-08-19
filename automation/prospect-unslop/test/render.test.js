@@ -53,7 +53,7 @@ function sampleBrief(over = {}) {
     fonts: { display: 'Newsreader', text: 'Figtree' },
     attitude: 'warm',
     marquee: ['Narberth Pizza and Steaks', 'Narberth', 'The plate'],
-    imageAlts: ['Plate', 'Pass', 'Prep', 'Room', 'Craft'],
+    imageAlts: ['Plate', 'Pass', 'Prep', 'Room', 'Craft', 'Dining room', 'Closer plate', 'Pass hands', 'Line heat', 'Last look'],
     imageDisclosure: 'Photographs harvested from the official site and recomposed as concept collages.',
     ...copy,
     ...over,
@@ -77,7 +77,17 @@ test('renderSite ships the design-system homepage, not a four-section stub', () 
   assert.doesNotMatch(html, /scene-canvas|forcegl/);
   assert.match(html, /feTurbulence/);
   assert.match(html, /\.image-frame::after/);
+  assert.match(html, /cinematic-frame/);
+  assert.match(html, /moments-section/);
+  assert.match(html, /reveal-left/);
+  assert.match(html, /reveal-right/);
+  assert.match(html, /assets\/collage-6\.webp/);
+  assert.match(html, /assets\/collage-10\.webp/);
   assert.doesNotMatch(html, /\.brand-logo::after|\.logo-finale img::after/);
+  const body = html.split('id="work"')[1] || '';
+  assert.doesNotMatch(body, /assets\/collage-1\.webp/);
+  assert.doesNotMatch(body, /assets\/collage-5\.webp/);
+  assert.doesNotMatch(html, /gallery-grid/);
   const ld = JSON.parse(jsonLd(sampleBrief()));
   assert.equal(ld['@type'], 'LocalBusiness');
   assert.equal(ld.telephone, '6106641111');

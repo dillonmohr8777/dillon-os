@@ -5,8 +5,8 @@
  * Unslop the 138-site fix queue.
  *
  * Harvest official photography (fetch-only, then Playwright when Cloudflare
- * blocks), sample the real logo, compose 5 unique industry-intent collages,
- * render an Align HCM-style motion page.
+ * blocks), sample the real logo, compose 5 unique hero collages plus 5 body
+ * photographs, render an Align HCM-style motion page.
  *
  * Services: people doing the work. Food: the plate, the pass, the kitchen.
  * Duplicates are skipped. Deploy is not performed. Outreach is the sales
@@ -19,7 +19,7 @@ const { spawnSync } = require('child_process');
 const { harvestLite, extractFacts } = require('../../_os/automation/lib/harvest-lite');
 const { harvestImages } = require('../../_os/automation/lib/harvest-images');
 const crypto = require('crypto');
-const { familyFor, modeFor, scenesFor, captionsFor, attitudeFor, fontPairFor, pickOfficialUrl } = require('./intent');
+const { familyFor, modeFor, scenesFor, captionsFor, bodyCaptionsFor, attitudeFor, fontPairFor, pickOfficialUrl } = require('./intent');
 const { renderSite, contrastOn } = require('./render');
 const { honestCopy, voiceFromHtml, wordCount } = require('./copy');
 const { collectFromPage, closeBrowser, isChallenge } = require('./harvest-browser');
@@ -34,7 +34,11 @@ const limit = Number((process.argv.find((a) => a.startsWith('--limit=')) || '').
 const fresh = process.argv.includes('--fresh');
 const rerender = process.argv.includes('--rerender');
 const treatOnly = process.argv.includes('--treat');
+const bodyOnly = process.argv.includes('--body');
 const MIN_SOURCES = 3;
+const HERO_COLLAGES = [1, 2, 3, 4, 5].map((i) => `collage-${i}.webp`);
+const BODY_COLLAGES = [6, 7, 8, 9, 10].map((i) => `collage-${i}.webp`);
+const ALL_COLLAGES = HERO_COLLAGES.concat(BODY_COLLAGES);
 
 function loadQueue() {
   const rows = fs.readFileSync(path.join(HERE, 'queue.csv'), 'utf8').trim().split(/\n/).slice(1);
@@ -174,10 +178,17 @@ function attitudeChrome(attitude) {
   return map[attitude] || map.warm;
 }
 
-function hashCollages(assetDir) {
-  return [1, 2, 3, 4, 5].map((i) => {
-    const p = path.join(assetDir, `collage-${i}.webp`);
-    return crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+function hashCollages(assetDir, files = ALL_COLLAGES) {
+  return files
+    .map((f) => path.join(assetDir, f))
+    .filter((p) => fs.existsSync(p))
+    .map((p) => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex'));
+}
+
+function collagesPresent(assetDir, files) {
+  return files.every((f) => {
+    const p = path.join(assetDir, f);
+    return fs.existsSync(p) && fs.statSync(p).size > 8000;
   });
 }
 
@@ -258,19 +269,40 @@ async function fetchFirstPartyLogo(images, baseUrl, harvestDir) {
 
 function imageAlts(site, family, mode) {
   const caps = captionsFor(family);
+  const body = bodyCaptionsFor(mode);
+  let hero;
   if (mode === 'food') {
-    return [
+    hero = [
       `Plated food from a ${site.name} kitchen concept`,
       `Chef plating at the pass for ${site.name}`,
       `Prep and ingredients for ${site.name}`,
       `Dining setting for ${site.name}`,
       `Close food texture for ${site.name}`,
     ];
+  } else {
+    hero = caps.map(
+      (c, i) =>
+        `${c.kicker} photograph for ${site.name}: ${['people at work', 'hands on the job', 'a real conversation', 'the place', 'the craft'][i]}`
+    );
   }
-  return caps.map(
-    (c, i) =>
-      `${c.kicker} photograph for ${site.name}: ${['people at work', 'hands on the job', 'a real conversation', 'the place', 'the craft'][i]}`
-  );
+  const bodyAlts = body.map((c) => `${c.kicker} photograph for ${site.name}: ${c.line}`);
+  return hero.concat(bodyAlts);
+}
+
+function composeCollages(assetDir, photoPaths, tokens, mode, slug, kind) {
+  const spec = {
+    outDir: assetDir,
+    sources: photoPaths,
+    accent: tokens.accent,
+    ink: tokens.ink,
+    deep: tokens.deep,
+    paper: tokens.paper,
+    accent2: tokens.accent2,
+    mode,
+    slug,
+    kind,
+  };
+  return JSON.parse(runPy('collage.py', JSON.stringify(spec)));
 }
 
 function loadLocalPhotos(photoDir) {
@@ -323,7 +355,7 @@ async function processSite(site) {
   fs.mkdirSync(photoDir, { recursive: true });
 
   const receiptPath = path.join(outDir, 'RECEIPT.json');
-  if (!fresh && !rerender && fs.existsSync(receiptPath)) {
+  if (!fresh && !rerender && !bodyOnly && fs.existsSync(receiptPath)) {
     try {
       const prev = JSON.parse(fs.readFileSync(receiptPath, 'utf8'));
       const collages = ['collage-1.webp', 'collage-2.webp', 'collage-3.webp', 'collage-4.webp', 'collage-5.webp'];
@@ -566,25 +598,11 @@ async function processSite(site) {
   }
 
   let composed;
-  const existingCollages = ['collage-1.webp', 'collage-2.webp', 'collage-3.webp', 'collage-4.webp', 'collage-5.webp']
-    .map((f) => path.join(assetDir, f))
-    .filter((p) => fs.existsSync(p) && fs.statSync(p).size > 8000);
-  if (rerender && existingCollages.length === 5) {
-    composed = { ok: true, hashes: hashCollages(assetDir), reused: true };
+  if (rerender && collagesPresent(assetDir, HERO_COLLAGES)) {
+    composed = { ok: true, hashes: hashCollages(assetDir, HERO_COLLAGES), reused: true };
   } else {
-    const spec = {
-      outDir: assetDir,
-      sources: photoPaths,
-      accent: tokens.accent,
-      ink: tokens.ink,
-      deep: tokens.deep,
-      paper: tokens.paper,
-      accent2: tokens.accent2,
-      mode,
-      slug: site.slug,
-    };
     try {
-      composed = JSON.parse(runPy('collage.py', JSON.stringify(spec)));
+      composed = composeCollages(assetDir, photoPaths, tokens, mode, site.slug, 'hero');
     } catch (err) {
       receipt.error = `collage: ${err.message}`;
       fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
@@ -596,6 +614,25 @@ async function processSite(site) {
       return receipt;
     }
   }
+
+  let body;
+  if (rerender && collagesPresent(assetDir, BODY_COLLAGES) && !fresh) {
+    body = { ok: true, hashes: hashCollages(assetDir, BODY_COLLAGES), reused: true };
+  } else {
+    try {
+      body = composeCollages(assetDir, photoPaths, tokens, mode, site.slug, 'body');
+    } catch (err) {
+      receipt.error = `body collage: ${err.message}`;
+      fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
+      return receipt;
+    }
+    if (!body.ok) {
+      receipt.error = body.reason || 'body collage failed';
+      fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
+      return receipt;
+    }
+  }
+  composed.hashes = (composed.hashes || []).concat(body.hashes || []);
 
   const copy = honestCopy({ ...site, city, url, phone, address, hours }, harvest, family);
   const fonts = fontPairFor(site.slug, family);
@@ -629,8 +666,7 @@ async function processSite(site) {
 
   const htmlOut = fs.readFileSync(path.join(outDir, 'index.html'), 'utf8');
   const qa = [];
-  const need = ['collage-1.webp', 'collage-2.webp', 'collage-3.webp', 'collage-4.webp', 'collage-5.webp'];
-  for (const f of need) {
+  for (const f of ALL_COLLAGES) {
     const p = path.join(assetDir, f);
     qa.push({ check: f, ok: fs.existsSync(p) && fs.statSync(p).size > 8000 });
   }
@@ -640,19 +676,125 @@ async function processSite(site) {
   qa.push({ check: 'five-slides', ok: (htmlOut.match(/class="slide(?: is-on)?"/g) || []).length >= 5 });
   qa.push({ check: 'json-ld', ok: /application\/ld\+json/.test(htmlOut) });
   qa.push({ check: 'offering-cards', ok: /offering-card/.test(htmlOut) });
-  qa.push({ check: 'enough-sections', ok: (htmlOut.match(/<section/g) || []).length >= 8 });
+  qa.push({ check: 'enough-sections', ok: (htmlOut.match(/<section/g) || []).length >= 9 });
   qa.push({ check: 'reduced-motion', ok: /prefers-reduced-motion/.test(htmlOut) });
   qa.push({ check: 'no-webgl-required', ok: !/scene-canvas|forcegl/.test(htmlOut) });
-  qa.push({ check: 'unique-collages', ok: new Set(composed.hashes).size === 5 });
+  qa.push({ check: 'unique-collages', ok: new Set(composed.hashes).size === composed.hashes.length && composed.hashes.length === 10 });
   qa.push({ check: 'enough-sources', ok: rerender || sourceCount >= MIN_SOURCES });
   qa.push({ check: 'people-or-food-mode', ok: mode === 'food' || mode === 'people' });
   qa.push({ check: 'no-em-dash', ok: !htmlOut.includes('\u2014') });
+  qa.push(...htmlLayoutQa(htmlOut));
+  fs.writeFileSync(path.join(assetDir, '.body-pass'), 'v1\n');
   receipt.qa = qa;
   receipt.ok = qa.every((q) => q.ok);
   receipt.hashes = composed.hashes;
   receipt.copyWords = copy.wordCount || wordCount(copy);
   fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
   return receipt;
+}
+
+function htmlLayoutQa(htmlOut) {
+  const count = (n) => (htmlOut.match(new RegExp(`assets/collage-${n}\\.webp`, 'g')) || []).length;
+  return [
+    { check: 'cinematic', ok: /cinematic-frame/.test(htmlOut) && count(6) === 1 },
+    { check: 'moments', ok: /moments-section/.test(htmlOut) && count(8) === 1 && count(9) === 1 },
+    { check: 'story-body-photo', ok: count(7) === 1 },
+    { check: 'feature-body-photo', ok: count(10) === 1 },
+    { check: 'hero-only-swipe', ok: count(1) === 2 && count(2) === 1 && count(3) === 1 && count(4) === 1 && count(5) === 1 },
+  ];
+}
+
+function applyBody(site) {
+  const outDir = path.join(OUT, 'sites', site.slug);
+  const assetDir = path.join(outDir, 'assets');
+  const briefPath = path.join(OUT, 'briefs', `${site.slug}.json`);
+  const receiptPath = path.join(outDir, 'RECEIPT.json');
+  const photoDir = path.join(HARVEST, site.slug, 'photos');
+  if (!fs.existsSync(briefPath) || !fs.existsSync(receiptPath)) {
+    return { ...site, ok: false, error: 'missing brief or receipt' };
+  }
+  if (!collagesPresent(assetDir, HERO_COLLAGES)) {
+    return { ...site, ok: false, error: 'missing hero collages 1-5' };
+  }
+  const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
+  const receipt = JSON.parse(fs.readFileSync(receiptPath, 'utf8'));
+  const photoPaths = loadLocalPhotos(photoDir);
+  if (uniqueSourceCount(photoPaths) < MIN_SOURCES) {
+    return { ...site, ok: false, error: `only ${uniqueSourceCount(photoPaths)} harvest photos` };
+  }
+  let body;
+  if (fresh || !collagesPresent(assetDir, BODY_COLLAGES)) {
+    try {
+      body = composeCollages(assetDir, photoPaths, brief.tokens, brief.mode, site.slug, 'body');
+    } catch (err) {
+      return { ...site, ok: false, error: `body collage: ${err.message}` };
+    }
+    if (!body.ok) return { ...site, ok: false, error: body.reason || 'body collage failed' };
+  } else {
+    body = { ok: true, hashes: hashCollages(assetDir, BODY_COLLAGES), reused: true };
+  }
+  brief.imageAlts = imageAlts(brief, brief.family, brief.mode);
+  fs.writeFileSync(briefPath, JSON.stringify(brief, null, 2));
+  fs.writeFileSync(path.join(outDir, 'index.html'), renderSite(brief));
+  const htmlOut = fs.readFileSync(path.join(outDir, 'index.html'), 'utf8');
+  const hashes = hashCollages(assetDir, ALL_COLLAGES);
+  receipt.hashes = hashes;
+  receipt.bodyPass = 'v1';
+  const unique = {
+    check: 'unique-collages',
+    ok: hashes.length === 10 && new Set(hashes).size === 10,
+  };
+  receipt.qa = (receipt.qa || []).filter((q) => !['unique-collages', 'cinematic', 'moments', 'story-body-photo', 'feature-body-photo', 'hero-only-swipe'].includes(q.check));
+  receipt.qa.push(unique);
+  receipt.qa.push(...htmlLayoutQa(htmlOut));
+  receipt.qa = receipt.qa.filter((q) => q.check !== 'enough-sections');
+  receipt.qa.push({ check: 'enough-sections', ok: (htmlOut.match(/<section/g) || []).length >= 9 });
+  for (const f of BODY_COLLAGES) {
+    const p = path.join(assetDir, f);
+    const check = { check: f, ok: fs.existsSync(p) && fs.statSync(p).size > 8000 };
+    receipt.qa = receipt.qa.filter((q) => q.check !== f);
+    receipt.qa.push(check);
+  }
+  receipt.ok = (receipt.qa || []).every((q) => q.ok);
+  fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
+  fs.writeFileSync(path.join(assetDir, '.body-pass'), 'v1\n');
+  return { ...site, ...receipt, family: brief.family, ok: receipt.ok };
+}
+
+async function bodyBatch(queue) {
+  const active = queue.filter((q) => !q.drop);
+  const dropped = queue.filter((q) => q.drop);
+  const built = await pool(active, 4, async (site) => {
+    process.stdout.write(`→ body ${site.id} ${site.slug}\n`);
+    try {
+      return applyBody(site);
+    } catch (err) {
+      return { ...site, ok: false, error: String(err.message || err) };
+    }
+  });
+  const results = built.concat(
+    dropped.map((d) => ({ ...d, ok: false, dropped: true, reason: 'duplicate row: keep the canonical slug' }))
+  );
+  const summary = {
+    total: queue.length,
+    built: built.filter((r) => r.ok).length,
+    needsGen: 0,
+    blocked: built.filter((r) => !r.ok).length,
+    dropped: dropped.length,
+    bodyPass: true,
+    results,
+  };
+  fs.writeFileSync(path.join(OUT, 'SUMMARY.json'), JSON.stringify(summary, null, 2));
+  writeHub(results);
+  console.log(
+    JSON.stringify({
+      built: summary.built,
+      bodyPass: true,
+      blocked: summary.blocked,
+      dropped: summary.dropped,
+    })
+  );
+  return summary;
 }
 
 async function pool(items, n, fn) {
@@ -684,13 +826,19 @@ function restyleFromBriefs(queue) {
       continue;
     }
     const brief = JSON.parse(fs.readFileSync(briefPath, 'utf8'));
-    fs.writeFileSync(path.join(outDir, 'index.html'), renderSite(brief));
+    if (collagesPresent(assetDir, BODY_COLLAGES)) {
+      if (!brief.imageAlts || brief.imageAlts.length < 10) {
+        brief.imageAlts = imageAlts(brief, brief.family, brief.mode);
+        fs.writeFileSync(briefPath, JSON.stringify(brief, null, 2));
+      }
+      fs.writeFileSync(path.join(outDir, 'index.html'), renderSite(brief));
+    }
     const hashes = hashCollages(assetDir);
     const receipt = JSON.parse(fs.readFileSync(receiptPath, 'utf8'));
     receipt.hashes = hashes;
     receipt.treatedPrint = true;
     receipt.printPass = 'v1';
-    const unique = { check: 'unique-collages', ok: new Set(hashes).size === 5 };
+    const unique = { check: 'unique-collages', ok: hashes.length >= 5 && new Set(hashes).size === hashes.length };
     receipt.qa = (receipt.qa || []).map((q) => (q.check === 'unique-collages' ? unique : q));
     if (!receipt.qa.some((q) => q.check === 'unique-collages')) receipt.qa.push(unique);
     receipt.ok = (receipt.qa || []).every((q) => q.ok);
@@ -758,6 +906,10 @@ async function main() {
   let queue = loadQueue();
   if (only.length) queue = queue.filter((q) => only.includes(q.slug) || only.includes(String(q.id)));
   if (limit) queue = queue.slice(0, limit);
+  if (bodyOnly) {
+    await bodyBatch(queue);
+    return;
+  }
 
   const results = [];
   const active = queue.filter((q) => !q.drop);

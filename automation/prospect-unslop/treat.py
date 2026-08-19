@@ -203,8 +203,10 @@ def treat_image(src: Path, dest: Path, tokens: dict, seed: str) -> None:
     result = ImageEnhance.Color(result).enhance(0.9)
     result = result.filter(ImageFilter.UnsharpMask(radius=1.1, percent=55, threshold=4))
     dest.parent.mkdir(parents=True, exist_ok=True)
-    if result.size[0] > 960:
-        result = result.resize((960, 1200), Image.Resampling.LANCZOS)
+    max_w = 1200
+    if result.size[0] > max_w:
+        w, h = result.size
+        result = result.resize((max_w, max(1, round(h * max_w / w))), Image.Resampling.LANCZOS)
     result.save(dest, "WEBP", quality=72, method=6)
 
 
@@ -233,7 +235,7 @@ def treat_site(site_dir: Path, brief: dict | None = None, force: bool = False) -
     tokens = tokens_from_brief(brief)
     slug = brief.get("slug") or site_dir.name
     count = 0
-    for i in range(1, 6):
+    for i in range(1, 11):
         src = site_dir / "assets" / f"collage-{i}.webp"
         if not src.exists():
             continue
