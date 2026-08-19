@@ -6,9 +6,9 @@
   "family": "auto",
   "mode": "people",
   "url": "https://www.cioccasubaru.com/used-inventory/ciocca-subaru.htm",
-  "phone": "610-395-3745",
+  "phone": "",
   "address": "4611 Hamilton Blvd, Allentown, PA, 18103",
-  "hours": "Friendly Retailer Program",
+  "hours": "sAttributes:{},userAttributes:void 0,atts:void 0,transactionNam",
   "logo": true,
   "logoSrc": "assets/logo.png",
   "tokens": {
@@ -85,11 +85,6 @@
       "href": "https://www.cioccasubaru.com/used-inventory/ciocca-subaru.htm"
     },
     {
-      "title": "Call",
-      "body": "610-395-3745",
-      "href": "tel:6103953745"
-    },
-    {
       "title": "Find them",
       "body": "4611 Hamilton Blvd, Allentown, PA, 18103",
       "href": "https://www.google.com/maps/search/?api=1&query=4611%20Hamilton%20Blvd%2C%20Allentown%2C%20PA%2C%2018103"
@@ -109,5 +104,5 @@
   "navVisit": "Visit",
   "primaryCtaFallback": "Shop EV/Hybrid Inventory",
   "description": "Ciocca Pre-Owned Autos in Allentown. Private concept preview.",
-  "wordCount": 307
+  "wordCount": 305
 }

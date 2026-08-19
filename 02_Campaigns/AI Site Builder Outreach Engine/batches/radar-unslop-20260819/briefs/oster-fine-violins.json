@@ -6,9 +6,9 @@
   "family": "retail",
   "mode": "people",
   "url": "https://www.osterviolins.com/",
-  "phone": "",
-  "address": "",
-  "hours": "",
+  "phone": "215-545-1100",
+  "address": "507 South Broad Street",
+  "hours": "Mon-Fri 10am-5pm Products search Facebook-f Instagram",
   "logo": true,
   "logoSrc": "assets/logo.png",
   "tokens": {
@@ -43,8 +43,8 @@
     "The craft photograph for Frederick W. Oster Fine Violins: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "403 - Forbidden",
-  "sub": "circle_dots 403 - Forbidden Access to this page is forbidden.",
+  "headline": "Violin Bows",
+  "sub": "Products search Facebook-f Instagram Google Home",
   "points": [
     "The shop is the product",
     "Hands on the goods",
@@ -52,16 +52,16 @@
   ],
   "offerings": [
     {
-      "title": "The floor",
-      "body": "Frederick W. Oster Fine Violins is a shop you can walk. The preview shows the goods and the people."
+      "title": "Viola Bows",
+      "body": "Instruments Violins Violas Cellos Bows Violin Bows Viola Bows Cello Bows Bass and Other Bows"
     },
     {
-      "title": "The counter",
-      "body": "A conversation over the thing they sell, not a mall stock set."
+      "title": "Cello Bows",
+      "body": "Books Violin Family Books Winds & Brass Books Guitars & Fretted Books Other Books View"
     },
     {
-      "title": "The visit",
-      "body": "Hours stay official. Nothing here invents inventory."
+      "title": "Bass and Other Bows",
+      "body": "Fine stringed instruments are what we specialize in. From antique violins and modern cellos, to handcrafted bows for the concert master &#8211; we have you covered."
     }
   ],
   "experience": [
@@ -83,21 +83,31 @@
       "title": "Official site",
       "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
       "href": "https://www.osterviolins.com/"
+    },
+    {
+      "title": "Call",
+      "body": "215-545-1100",
+      "href": "tel:2155451100"
+    },
+    {
+      "title": "Find them",
+      "body": "507 South Broad Street",
+      "href": "https://www.google.com/maps/search/?api=1&query=507%20South%20Broad%20Street"
     }
   ],
-  "story": "circle_dots 403 - Forbidden Access to this page is forbidden. Frederick W. Oster Fine Violins gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Frederick W. Oster Fine.",
-  "storyMore": "The homepage should look like the shop, not a catalog template. An associate in the frame, handling the product.",
-  "featureBody": "A conversation over the thing they sell, not a mall stock set. Hours stay official. Nothing here invents inventory.",
+  "story": "Products search Facebook-f Instagram Google Home Instruments Violins Violas Cellos Bows Violin Bows Viola Bows Cello Bows Bass and Other Bows Books Violin Family Books Winds & Brass Books Guitars & Fretted Books Other Books View Frederick W. Oster Fine Violins gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter.",
+  "storyMore": "Fine stringed instruments are what we specialize in. From antique violins and modern cellos, to handcrafted bows for the concert master &#8211; we have you covered.",
+  "featureBody": "We provide appraisals for a variety of needs, including insurance and tax issues, and Charitable Donations or Estate taxes. In the event of mishaps, we can also assist by writing evaluations of damage, repair costs, and devaluation. Our services also include Certifications for violins, violas, cellos and bows. If you have an instrument you would like us to.",
   "workHeading": "A shop that looks like a shop.",
   "galleryHeading": "People and the product.",
   "storyHeading": "A storefront with a name.",
   "featureHeading": "Close on what they sell.",
   "contactHeading": "Plan the visit.",
   "closing": "Frederick W. Oster Fine Violins should feel like a counter you would walk up to.",
-  "navWork": "Work",
-  "navStory": "Story",
-  "navVisit": "Visit",
-  "primaryCtaFallback": "",
+  "navWork": "Facebook-f",
+  "navStory": "Instagram",
+  "navVisit": "Facebook-f",
+  "primaryCtaFallback": "Facebook-f",
   "description": "Frederick W. Oster Fine Violins in Philadelphia. Private concept preview.",
-  "wordCount": 323
+  "wordCount": 387
 }

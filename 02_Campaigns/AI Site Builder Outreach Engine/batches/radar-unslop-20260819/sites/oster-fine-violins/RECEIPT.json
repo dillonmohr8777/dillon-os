@@ -80,8 +80,6 @@
       "ok": true
     }
   ],
-  "browser": "page.goto: net::ERR_CONNECTION_CLOSED at https://www.osterviolins.com/\nCall log:\n  - navigating to \"https://www.osterviolins.com/\", waiting until \"domcontentloaded\"\n",
-  "harvestCached": true,
   "hasLogo": true,
   "logoSrc": "assets/logo.png",
   "photoCount": 8,
@@ -98,5 +96,5 @@
     "23d8a8ed1b2cfe9430e5c0a57e2186a3159475e6d237c2c7af6dbb7434b074c8",
     "63861cf97b9825cedd4b1714fe8eb1b9e9bd62d7327ae0e55cb95fffc4c27dcd"
   ],
-  "copyWords": 323
+  "copyWords": 387
 }

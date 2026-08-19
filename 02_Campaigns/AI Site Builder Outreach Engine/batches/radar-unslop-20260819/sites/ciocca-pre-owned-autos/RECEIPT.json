@@ -80,6 +80,8 @@
       "ok": true
     }
   ],
+  "browser": "ok",
+  "harvestCached": true,
   "hasLogo": true,
   "logoSrc": "assets/logo.png",
   "photoCount": 10,
@@ -96,5 +98,5 @@
     "37ede34eac52dc3efc2a86cfdbb7901bbb8bcf25474cc182f680fc5866c01291",
     "591f2599dab9b72704103db7563e6126f0a975d63d9f2d3ff8fa4b43276aed3b"
   ],
-  "copyWords": 307
+  "copyWords": 305
 }

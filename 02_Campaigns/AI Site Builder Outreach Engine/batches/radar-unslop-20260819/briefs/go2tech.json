@@ -6,22 +6,22 @@
   "family": "professional",
   "mode": "people",
   "url": "https://www.go2tech.com/",
-  "phone": "610-567-3462",
-  "address": "606 Baltimore Pike",
+  "phone": "",
+  "address": "",
   "hours": "",
   "logo": true,
   "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#b0e050",
-    "ink": "#304010",
-    "accent": "#90c040",
-    "accent2": "#a0c040",
-    "panel": "#abdb4d",
-    "deep": "#1a2308",
+    "paper": "#F3F4F6",
+    "ink": "#111827",
+    "accent": "#1D4ED8",
+    "accent2": "#93C5FD",
+    "panel": "#DCE3EE",
+    "deep": "#0B1220",
     "border": "1px",
     "radius": "28px",
     "onPaper": "#090909",
-    "onAccent": "#090909",
+    "onAccent": "#FFFFFF",
     "onDeep": "#FFFFFF"
   },
   "fonts": {
@@ -43,8 +43,8 @@
     "The craft photograph for GO2 Tech: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "PHILADELPHIA'S AWARD-WINNING MANAGED IT & SECURITY PROVIDER",
-  "sub": "Services Cybersecurity Managed IT Security Bundle",
+  "headline": "403 - Forbidden",
+  "sub": "circle_dots 403 - Forbidden Access to this page is forbidden.",
   "points": [
     "The work is specific",
     "People at the tools",
@@ -52,16 +52,16 @@
   ],
   "offerings": [
     {
-      "title": "UNSURE IF YOUR BUSINESS IS SECURE?",
-      "body": "Network Services Network Design and Implementation"
+      "title": "The work",
+      "body": "GO2 Tech is a specialist shop: people doing the job, not a skyline mural."
     },
     {
-      "title": "Contact us Today for your free security assessment!",
-      "body": "Cloud Services Hosted Server Environments"
+      "title": "The conversation",
+      "body": "A plan on the table. Their nouns, when harvest has them."
     },
     {
-      "title": "Contact us for Today your free security assessment!",
-      "body": "\"As our Managed IT Provider, GO2 is committed to ensuring network, system, data, and facility security, and continues to be instrumental in assisting us to maintain the utmost security integrity.\""
+      "title": "The next step",
+      "body": "Call or visit the official source. Nothing here invents a retainer."
     }
   ],
   "experience": [
@@ -83,31 +83,21 @@
       "title": "Official site",
       "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
       "href": "https://www.go2tech.com/"
-    },
-    {
-      "title": "Call",
-      "body": "610-567-3462",
-      "href": "tel:6105673462"
-    },
-    {
-      "title": "Find them",
-      "body": "606 Baltimore Pike",
-      "href": "https://www.google.com/maps/search/?api=1&query=606%20Baltimore%20Pike"
     }
   ],
-  "story": "Services Cybersecurity Managed IT Security Bundle Network Services Network Design and Implementation Cloud Services Hosted Server Environments GO2 Tech gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never.",
-  "storyMore": "\"As our Managed IT Provider, GO2 is committed to ensuring network, system, data, and facility security, and continues to be instrumental in assisting us to maintain the utmost security integrity.\"",
-  "featureBody": "Executive Director, Global Contracts & Legal Services",
+  "story": "circle_dots 403 - Forbidden Access to this page is forbidden. GO2 Tech gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. GO2 Tech is a specialist shop: people doing the.",
+  "storyMore": "Name, place, and a clear path above the fold. A workstation, a meeting, hands on the tools of the trade.",
+  "featureBody": "A plan on the table. Their nouns, when harvest has them. Call or visit the official source. Nothing here invents a retainer.",
   "workHeading": "The work, in the room where it happens.",
   "galleryHeading": "People, not stock extras.",
   "storyHeading": "A studio or office with a name.",
   "featureHeading": "Close on the craft.",
   "contactHeading": "Start the conversation.",
   "closing": "GO2 Tech should feel like a team you can actually reach.",
-  "navWork": "REQUEST IT SUPPORT",
-  "navStory": "call us today!",
-  "navVisit": "call us today!",
-  "primaryCtaFallback": "REQUEST IT SUPPORT",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
   "description": "GO2 Tech in Springfield. Private concept preview.",
-  "wordCount": 339
+  "wordCount": 325
 }

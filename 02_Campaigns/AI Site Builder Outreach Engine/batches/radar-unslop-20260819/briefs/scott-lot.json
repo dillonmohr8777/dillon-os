@@ -6,22 +6,22 @@
   "family": "auto",
   "mode": "people",
   "url": "https://www.scottcars.com/",
-  "phone": "610-439-0700",
-  "address": "3333 Lehigh St Directions Allentown",
+  "phone": "",
+  "address": "",
   "hours": "",
   "logo": true,
   "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#e0c050",
-    "ink": "#111820",
-    "accent": "#e0c050",
-    "accent2": "#e0b040",
-    "panel": "#e0c050",
-    "deep": "#090d11",
+    "paper": "#f4efe7",
+    "ink": "#203090",
+    "accent": "#203090",
+    "accent2": "#2030a0",
+    "panel": "#d6d4da",
+    "deep": "#111a4f",
     "border": "4px",
     "radius": "0px",
     "onPaper": "#090909",
-    "onAccent": "#090909",
+    "onAccent": "#FFFFFF",
     "onDeep": "#FFFFFF"
   },
   "fonts": {
@@ -83,16 +83,6 @@
       "title": "Official site",
       "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
       "href": "https://www.scottcars.com/"
-    },
-    {
-      "title": "Call",
-      "body": "610-439-0700",
-      "href": "tel:6104390700"
-    },
-    {
-      "title": "Find them",
-      "body": "3333 Lehigh St Directions Allentown",
-      "href": "https://www.google.com/maps/search/?api=1&query=3333%20Lehigh%20St%20Directions%20Allentown"
     }
   ],
   "story": "3333 Lehigh St Directions Allentown, PA 18103 Pre-Owned Vehicles Pre-Owned Vehicles All Pre-Owned Vehicles Parts & Service Parts & Service Schedule Service Appointment Scott Lot gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or.",
@@ -104,10 +94,10 @@
   "featureHeading": "Close on the tool in the hand.",
   "contactHeading": "Get the car in.",
   "closing": "Scott Lot should feel like a shop you can trust from the first scroll.",
-  "navWork": "Home",
-  "navStory": "New Vehicles",
+  "navWork": "New Vehicles",
+  "navStory": "Featured New Vehicles",
   "navVisit": "Visit",
   "primaryCtaFallback": "Schedule Service Appointment",
   "description": "Scott Lot in Scott Lot. Private concept preview.",
-  "wordCount": 363
+  "wordCount": 354
 }

@@ -103,7 +103,7 @@
         "1e7b01065af0a1992da2c8600be006f20f4b1f85e4abafaad8c0d29f033899f7",
         "758285cf5e3e3cf352c8e69574ad44572f8072e4afecde0f13e3689a24b903f3"
       ],
-      "copyWords": 298
+      "copyWords": 358
     },
     {
       "id": 2,
@@ -1920,7 +1920,7 @@
         "0d77766507172615ad22af08df5250dde94141210cf20c5e011b4a1e40e56633",
         "bc4fc053833b4ba2d28ed85d4ba266c5fccc5571b0d92d5b054f7872148e4947"
       ],
-      "copyWords": 322
+      "copyWords": 311
     },
     {
       "id": 20,
@@ -6463,7 +6463,7 @@
         "eac4d794c3242d846254b3dfa8fcf640253c66008a63646531e366a246ae51e4",
         "5c57168bb8fe7884083c65ea8a4a590ad3012b50d6c59bddba06f5d879602ec1"
       ],
-      "copyWords": 445
+      "copyWords": 446
     },
     {
       "id": 67,
@@ -6663,7 +6663,7 @@
         "f0ac0064b20a3384cca4fb1358bce6d39ef34ffb074a4d11f4d39feb81cc53ea",
         "581c18b3a19abe924141cc56fe34daec049f1410b7b075a6e5e776aea528495a"
       ],
-      "copyWords": 344
+      "copyWords": 341
     },
     {
       "id": 69,
@@ -7954,6 +7954,8 @@
           "ok": true
         }
       ],
+      "browser": "ok",
+      "harvestCached": true,
       "hasLogo": true,
       "logoSrc": "assets/logo.png",
       "photoCount": 10,
@@ -7970,7 +7972,7 @@
         "37ede34eac52dc3efc2a86cfdbb7901bbb8bcf25474cc182f680fc5866c01291",
         "591f2599dab9b72704103db7563e6126f0a975d63d9f2d3ff8fa4b43276aed3b"
       ],
-      "copyWords": 307
+      "copyWords": 305
     },
     {
       "id": 82,
@@ -8670,7 +8672,7 @@
         "5a2b7e26d749ddb900abf3ba2243b123eabc438c64b50a1cf8e6a1fe56d89233",
         "39eb72168858a926ad638f80e046a7a26368af70dc45fe0e9114dc10b4a462f0"
       ],
-      "copyWords": 456
+      "copyWords": 387
     },
     {
       "id": 89,
@@ -9556,8 +9558,6 @@
           "ok": true
         }
       ],
-      "browser": "page.goto: net::ERR_CONNECTION_CLOSED at https://www.osterviolins.com/\nCall log:\n  - navigating to \"https://www.osterviolins.com/\", waiting until \"domcontentloaded\"\n",
-      "harvestCached": true,
       "hasLogo": true,
       "logoSrc": "assets/logo.png",
       "photoCount": 8,
@@ -9574,7 +9574,7 @@
         "23d8a8ed1b2cfe9430e5c0a57e2186a3159475e6d237c2c7af6dbb7434b074c8",
         "63861cf97b9825cedd4b1714fe8eb1b9e9bd62d7327ae0e55cb95fffc4c27dcd"
       ],
-      "copyWords": 323
+      "copyWords": 387
     },
     {
       "id": 98,
@@ -9758,6 +9758,7 @@
           "ok": true
         }
       ],
+      "browser": "ok",
       "hasLogo": true,
       "logoSrc": "assets/logo.png",
       "photoCount": 7,
@@ -9774,7 +9775,7 @@
         "ac1b37632c8a4a47dc2aa794cfd1663102e6ebbc4965008cb539de8417eb098a",
         "0313c7ced927f6253288efad826b26cb1d8682616c4abc177d6c4e63700288cc"
       ],
-      "copyWords": 572
+      "copyWords": 335
     },
     {
       "id": 100,
@@ -9858,6 +9859,7 @@
           "ok": true
         }
       ],
+      "browser": "ok",
       "hasLogo": true,
       "logoSrc": "assets/logo.png",
       "photoCount": 7,
@@ -9874,7 +9876,7 @@
         "b3cf0b6650b33ca8afd662437a58fc2b4d1dce2a107d0520e3733a5f05c307a6",
         "1dd21e01efc0cc4b43b2e18f33e73fef47d10bc40a1b0f76ba681ea49df45f6b"
       ],
-      "copyWords": 339
+      "copyWords": 325
     },
     {
       "id": 101,
@@ -11382,7 +11384,7 @@
         "62915ff1360503b95e8b8862a9a7fd23dc7de7ba0bda9c911155cd67288771f7",
         "077d5ab5f820b1a9d3d5041b8e04f586c317bea9a053c86deeef74bd3066e4f5"
       ],
-      "copyWords": 391
+      "copyWords": 393
     },
     {
       "id": 116,
@@ -12970,6 +12972,8 @@
           "ok": true
         }
       ],
+      "browser": "ok",
+      "harvestCached": true,
       "hasLogo": true,
       "logoSrc": "assets/logo.png",
       "photoCount": 18,
@@ -12986,7 +12990,7 @@
         "b7d62deb7acb2135c36fcd982fea1b5df0d167f2d46d7e683c06a31d2247a1a2",
         "6647fceb5ef16b0590f6bbaa7ace992ee2ff903e4d202ccacfb68dab322829a0"
       ],
-      "copyWords": 363
+      "copyWords": 354
     },
     {
       "id": 132,

@@ -6,22 +6,22 @@
   "family": "dental",
   "mode": "people",
   "url": "https://gleneaglepediatricdentistry.com/",
-  "phone": "20484-639-9066",
-  "address": "589 Wilmington West Chester Pike, Glen Mills,, PA, 19342",
+  "phone": "",
+  "address": "",
   "hours": "",
   "logo": true,
   "logoSrc": "assets/logo.png",
   "tokens": {
-    "paper": "#f0d0d0",
-    "ink": "#111820",
-    "accent": "#f0d0d0",
-    "accent2": "#f0c0c0",
-    "panel": "#f0d0d0",
-    "deep": "#090d11",
+    "paper": "#f0c0c0",
+    "ink": "#106080",
+    "accent": "#106080",
+    "accent2": "#307090",
+    "panel": "#d0b2b7",
+    "deep": "#083446",
     "border": "4px",
     "radius": "0px",
     "onPaper": "#090909",
-    "onAccent": "#090909",
+    "onAccent": "#FFFFFF",
     "onDeep": "#FFFFFF"
   },
   "fonts": {
@@ -43,8 +43,8 @@
     "The craft photograph for Glen Eagle Pediatric Dentistry: the craft"
   ],
   "imageDisclosure": "Photographs harvested from the official site and recomposed as concept collages. They are not a claim about current staff or completed jobs.",
-  "headline": "Your Child's New Dental Home",
-  "sub": "At Glen Eagle Pediatric Dentistry, we know kids! That’s because we specialize in treating children of all ages and those who have different needs. Our goal is to create the most comfortable atmosphere for our families. Here we will treat every child with compassion, and always.",
+  "headline": "403 - Forbidden",
+  "sub": "circle_dots 403 - Forbidden Access to this page is forbidden.",
   "points": [
     "The chair is calm",
     "Hands on real care",
@@ -52,16 +52,16 @@
   ],
   "offerings": [
     {
-      "title": "Professional Gentle Care",
-      "body": "Glen Eagle Pediatric Dentistry provides a “dental home” for your child, a place where oral health care is delivered in a comprehensive, accessible, and family-centered way. This relationship gives your child the best chance for optimal oral health. Our approach to dentistry focuses on prevention and education. We also focus on educating ourselves on the most current dental techniques and offer modern solutions when dental treatment is beneficial."
+      "title": "The visit",
+      "body": "Glen Eagle Pediatric Dentistry is about a real operatory, not a stock smile collage."
     },
     {
-      "title": "Meet Our Team",
-      "body": "Our team at Glen Eagle Pediatric Dentistry strives to make each dental experience positive and create a nurturing environment for all of our patients. We aim to educate the whole family to help prevent dental problems and parents are welcome to be with their children during their appointments. Our goal is for our office to be a place where families are comfortable and look forward to visiting."
+      "title": "The team",
+      "body": "People who do the work: exam, cleaning, the conversation at the chair."
     },
     {
-      "title": "First Visit",
-      "body": "I believe that every child deserves a positive dental experience and that getting to know and trust their dentist can play a lifelong role in healthy oral care. Our goal at Glen Eagle Pediatric dentistry is to build a relationship with your child."
+      "title": "The next step",
+      "body": "Call or book on their official line. Nothing here invents an opening."
     }
   ],
   "experience": [
@@ -83,31 +83,21 @@
       "title": "Official site",
       "body": "Menus, hours, and booking stay on their site. This preview never guesses those.",
       "href": "https://gleneaglepediatricdentistry.com/"
-    },
-    {
-      "title": "Call",
-      "body": "20484-639-9066",
-      "href": "tel:204846399066"
-    },
-    {
-      "title": "Find them",
-      "body": "589 Wilmington West Chester Pike, Glen Mills,, PA, 19342",
-      "href": "https://www.google.com/maps/search/?api=1&query=589%20Wilmington%20West%20Chester%20Pike%2C%20Glen%20Mills%2C%2C%20PA%2C%2019342"
     }
   ],
-  "story": "At Glen Eagle Pediatric Dentistry, we know kids! That’s because we specialize in treating children of all ages and those who have different needs. Our goal is to create the most comfortable atmosphere for our families. Here we will treat every child with compassion, and always offer any conservative treatment options available to you while keeping your child’s best interests at heart. Serving Glen Mills, Aston, Chadds Ford, West Chester, and all of Delaware County. Glen Eagle Pediatric Dentistry provides a “dental home” for your child, a place where oral health care is delivered in a comprehensive, accessible, and family-centered way. This relationship gives your child the best chance for optimal oral health..",
-  "storyMore": "I believe that every child deserves a positive dental experience and that getting to know and trust their dentist can play a lifelong role in healthy oral care. Our goal at Glen Eagle Pediatric dentistry is to build a relationship with your child.",
-  "featureBody": "I love working with kids! After receiving my Masters of Public Health from West Chester University, and my DDS from New York University, I chose pediatric dentistry as my specialty. It is incredibly rewarding to help children have fantastic first experiences at the dentist and being part of their lives. I cannot wait to meet you and your child, and partner.",
+  "story": "circle_dots 403 - Forbidden Access to this page is forbidden. Glen Eagle Pediatric Dentistry gets a private concept homepage, not a mailed pitch. The page keeps their name in the header, puts industry photography in a 4:5 frame, and makes the next step a call or their official site. Nothing here invents hours, a menu, an award, or a person who does not appear in a first-party photo. When harvest can read their live copy, those nouns come back onto the page. When the live site blocks the harvest, the preview stays honest and a little quieter instead of padding fake specifics. The collages stay in the work: people on the job, or food on the plate, never a logo baked into a photograph. Glen Eagle Pediatric.",
+  "storyMore": "Name, place, and a clear call path above the fold. Treatment, reception, and careful hands. Not a handshake in an atrium.",
+  "featureBody": "People who do the work: exam, cleaning, the conversation at the chair. Call or book on their official line. Nothing here invents an opening.",
   "workHeading": "Care that looks like the actual chair.",
   "galleryHeading": "People doing the work.",
   "storyHeading": "A practice, not a template.",
   "featureHeading": "Close on the skill.",
   "contactHeading": "Start the visit.",
   "closing": "Glen Eagle Pediatric Dentistry should feel easy to call before anyone scrolls twice.",
-  "navWork": "Skip to content",
-  "navStory": "Facebook",
-  "navVisit": "Facebook",
-  "primaryCtaFallback": "Facebook",
+  "navWork": "Work",
+  "navStory": "Story",
+  "navVisit": "Visit",
+  "primaryCtaFallback": "",
   "description": "Glen Eagle Pediatric Dentistry in Glen Mills. Private concept preview.",
-  "wordCount": 572
+  "wordCount": 335
 }
