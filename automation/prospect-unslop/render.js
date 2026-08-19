@@ -218,7 +218,7 @@ function renderSite(brief) {
       <p>${esc(brief.sub)}</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
         <a class="button" href="${esc(ctaHref)}">${esc(ctaLabel)}</a>
-        ${brief.url ? `<a class="button button-quiet" href="${esc(brief.url)}">Official site</a>` : ''}
+        ${brief.url && ctaHref !== brief.url ? `<a class="button button-quiet" href="${esc(brief.url)}">Official site</a>` : ''}
       </div>
       <ul class="hero-points">${points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>
     </div>

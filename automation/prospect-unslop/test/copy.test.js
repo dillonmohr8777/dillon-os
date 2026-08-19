@@ -51,6 +51,21 @@ test('voiceFromHtml pulls headings and strips junk tags', () => {
   assert.ok(voice.ctaLabels.includes('Book a visit'));
 });
 
+test('generic harvested CTAs do not become the h1 or the nav', () => {
+  const copy = honestCopy(
+    { name: 'Whitelands Animal Hospital', city: 'Exton' },
+    {
+      voice: {
+        headings: ['Schedule Appointment', 'Our doctors', 'New clients'],
+        navLabels: ['Skip to content', 'Our doctors', 'Visit'],
+      },
+    },
+    'veterinary'
+  );
+  assert.equal(copy.headline, 'Whitelands Animal Hospital');
+  assert.equal(copy.navWork, 'Our doctors');
+});
+
 test('empty harvest still writes a real homepage word count', () => {
   const copy = honestCopy({ name: "Kehan's Auto Service", city: 'Pennsylvania' }, null, 'auto');
   assert.ok(copy.wordCount >= 320, copy.wordCount);

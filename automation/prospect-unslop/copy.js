@@ -20,9 +20,13 @@ function clip(s, n) {
 }
 
 function isJunk(s) {
-  return /lorem|coming soon|privacy policy|just a moment|cookie|cloudflare|enable javascript|under construction|closed our doors|out of business/i.test(
+  return /lorem|coming soon|privacy policy|just a moment|cookie|cloudflare|enable javascript|under construction|closed our doors|out of business|skip to content|skip to main|accessibility/i.test(
     s || ''
   );
+}
+
+function isWeakHeadline(h) {
+  return /^(schedule|book|call|order|contact us|home|welcome|menu)\b/i.test(String(h || '').trim());
 }
 
 function familyBank(family, name) {
@@ -311,10 +315,15 @@ function honestCopy(site, harvest, family) {
   const paras = [...(v.paragraphs || []), ...(harvest?.paragraphs || []), ...(harvest?.paras || [])]
     .map(clean)
     .filter((p) => p.length > 40 && p.length < 500 && !isJunk(p));
-  const nav = (v.navLabels || []).map(clean).filter((n) => n.length > 2 && n.length < 28 && !isJunk(n));
+  const nav = (v.navLabels || [])
+    .map(clean)
+    .filter((n) => n.length > 2 && n.length < 28 && !isJunk(n) && !isWeakHeadline(n));
   const ctas = (v.ctaLabels || []).map(clean).filter((c) => c.length > 2 && c.length < 32 && !isJunk(c));
 
-  const headline = headings[0] && !/closed|coming soon/i.test(headings[0]) ? headings[0] : site.name;
+  const headline =
+    headings[0] && !/closed|coming soon/i.test(headings[0]) && !isWeakHeadline(headings[0])
+      ? headings[0]
+      : site.name;
   const sub =
     paras[0] ||
     (v.metaDescription && !isJunk(v.metaDescription) ? clean(v.metaDescription) : null) ||
