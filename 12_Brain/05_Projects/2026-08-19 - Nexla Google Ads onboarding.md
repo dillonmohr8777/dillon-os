@@ -83,6 +83,10 @@ Verified from this session, not inferred:
 - This VM's Chrome profile has no signed-in Google account. `ads.google.com`
   is a sign-in wall. Playwright MCP Bridge timed out. No password or
   passkey was entered. The invite accept link was not opened.
+- Validate-only `CustomerClientLink` mutate from Momentum Ads Manager
+  `7438021996` to Nexla `7917802207` (correct singular `operation` body)
+  returns `USER_PERMISSION_DENIED` with and without `login-customer-id`.
+  No manager-link was sent.
 
 The remaining work is on Dillon's signed-in Google Ads sessions: Accept the
 Read-only invite on the phone, then send the MCC manager-link from Momentum
