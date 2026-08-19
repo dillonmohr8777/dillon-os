@@ -65,24 +65,28 @@ Do not send it from the Hermes Agent MCC (`703-867-3437`).
    thread `1a01b517fdc49369` and is **not sent**. Send it from the phone
    when ready. Do not use Gmail `update_draft` on this reply — it unthreads.
 
-## Live check 2026-08-19T21:44Z
+## Live check 2026-08-19T21:48Z
 
 Verified from this session, not inferred:
 
 - Gmail invite `1a01bc7a1248dcc5` still has UNREAD, STARRED, INBOX.
 - Jayashree reply is draft `r-2283645929976401799` on thread
-  `1a01b517fdc49369`, labels DRAFT only. Nothing new sent to Jayashree.
-- Ads search is not quota-blocked. `GOOGLEADS_LIST_SUB_ACCOUNTS` on
-  Momentum Ads Manager `7438021996` and GAQL on Hermes MCC `7038673437`
-  and KJB `8145506229` all returned `USER_PERMISSION_DENIED` (needs
-  `login-customer-id`). Extra `login_customer_id` arguments are not
-  forwarded. There is no CustomerClientLink mutate tool.
-- This VM's browser and local Chrome profile are not signed into Google.
-  No password or passkey was entered.
+  `1a01b517fdc49369`, labels DRAFT only. Onboarding thread last message is
+  still Jayashree `1a01bc9aa38c81a0`. Nothing new sent.
+- Accept-probe: GAQL on CID `7917802207` returns `USER_PERMISSION_DENIED`.
+  After a direct Users-tab accept that query would succeed without
+  `login-customer-id`. The invite is not in effect.
+- `GOOGLEADS_LIST_SUB_ACCOUNTS` on Momentum Ads Manager `7438021996` still
+  `USER_PERMISSION_DENIED` (needs `login-customer-id`; not forwarded).
+  `listAccessibleCustomers` is separately 429 until about 2026-08-20T10:42Z.
+  Waiting on that quota does not unblock Accept or the MCC-link.
+- This VM's Chrome profile has no signed-in Google account. `ads.google.com`
+  is a sign-in wall. Playwright MCP Bridge timed out. No password or
+  passkey was entered. The invite accept link was not opened.
 
 The remaining work is on Dillon's signed-in Google Ads sessions: Accept the
 Read-only invite on the phone, then send the MCC manager-link from Momentum
-Ads Manager on a computer. Waiting for Ads API quota does not unblock that.
+Ads Manager on a computer.
 
 Draft text:
 
