@@ -16,12 +16,12 @@ pipeline_state: developing
 reporting_state: developing
 workflow_state: developing
 priority: standard
-next_action: "Approve pause of leftover ENABLED exact car insurance and auto insurance keywords on Search-1; then set the Ads descriptive name to Tags 2 Go."
+next_action: "Confirm the two Aug 18 ~11am calls with the client. Do not raise the $15/day cap. Pause leftover insurance exact keywords after approval."
 review_on: 2026-08-26
 source_refs:
   - "[[overview]]"
   - "[[Google Ads Client Slack Reports/tags-2-go-slack-channel-read]]"
-  - "[[12_Brain/01_Captures/2026-08-19 - Google Ads live KPI Aug 17-19]]"
+  - "[[12_Brain/01_Captures/2026-08-19 - Tags 2 Go call quality and CTR check]]"
   - "C:/Users/dillo/Documents/Codex/projects/client-operations/clients/tags-2-go/CLIENT.md"
 tags: [client-intelligence, tags-2-go, google-ads, momentum360, auto-tags]
 ---
@@ -30,7 +30,7 @@ tags: [client-intelligence, tags-2-go, google-ads, momentum360, auto-tags]
 
 ## Executive operating thesis
 
-Tags 2 Go is live on Google Search at $15/day after the Aug 16 rebuild. CID `921-429-2423` has a blank Ads name; identity is the `tags2go.pro` RSA URL plus Torresdale 5-mile geo. Government-document policy is limited-approved, and leftover insurance exact keywords are still enabled. Access mapping is done via Dillon's Composio Google Ads OAuth. Spend and keyword pauses stay approval-gated.
+Tags 2 Go is live on Google Search at $15/day. Two counted conversions were 3-minute and 4-minute mobile ad-calls on Aug 18. CTR ~10% is real local "near me" demand on 17% impression share; quality score on `auto tags near me` is 1. Do not raise budget. Confirm those two calls with the client. Insurance exact keywords still enabled and still not spending.
 
 ## Current evidence snapshot
 
@@ -38,7 +38,9 @@ Tags 2 Go is live on Google Search at $15/day after the Aug 16 rebuild. CID `921
 - Public website confirmed as `https://tags2go.pro/`.
 - Scope confirmed as Google Ads only; SEO is contextual background, not current paid work.
 - Google Ads CID `921-429-2423` identified 2026-08-19; campaign `Search-1` ENABLED at $15/day.
-- Live window Aug 17 to 19: $33.04 spend, 50 clicks, 2 Calls from ads (Aug 19 partial).
+- Live window Aug 17 to 19 (later pull): $34.97, 52 clicks, 500 impr, 10.4% CTR, 2 Calls from ads.
+- Counted calls were 187s and 253s on Aug 18 ~11am Eastern. Six other ad-calls were under 60s.
+- Search IS 16.7% with 83% rank-lost. QS 1 on `auto tags near me`.
 - RSA assets are `APPROVED_LIMITED` for government documents and official services.
 - Leftover ENABLED exact keywords include `car insurance` and `auto insurance`.
 - Login identity `tags2go.pro@gmail.com` was shared in-channel; secrets must stay out of vault/canonical state.
@@ -62,10 +64,11 @@ Start from verified auto-tag / specialty plate service intent only after live ac
 
 ## Next evidence sprint
 
-1. Approve pause of leftover ENABLED exact `car insurance` / `auto insurance`.
-2. Set the Google Ads descriptive name to Tags 2 Go (account change, approval-gated).
-3. Match the two Aug 18 Calls-from-ads conversions to real calls.
-4. Keep Elite Auto Tags proof separate; use it only as category analogy.
+1. Ask the client about two inbound calls Monday Aug 18 around 11:00–11:30am Eastern (about 3 minutes and 4 minutes).
+2. Do not raise the $15/day cap until quality score on `auto tags near me` moves off 1.
+3. Approve pause of leftover ENABLED exact `car insurance` / `auto insurance`.
+4. Optional: add competitor negative `jack rabbit` after approval.
+5. Keep Elite Auto Tags proof separate.
 
 ## Shared systems
 

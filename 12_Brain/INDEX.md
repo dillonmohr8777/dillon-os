@@ -60,6 +60,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lanes A-C-D Receipts|2026-08-15 Franchise Lanes A-C-D Receipts]] — FDD portals, directories, CAN-SPAM, OSM keep-chains flip (no contact rows).
 - [[12_Brain/01_Captures/research/2026-08-15 Franchise Lane A Portal Probe|2026-08-15 Franchise Lane A Portal Probe]] — MN/WI still free FDD PDFs; CA DocQNet is not (no contact rows).
 - [[12_Brain/01_Captures/2026-08-19 - Google Ads live KPI Aug 17-19|2026-08-19 Google Ads live KPI Aug 17-19]] — dated spend for Onsite, Omega, KJB, Tags 2 Go.
+- [[12_Brain/01_Captures/2026-08-19 - Tags 2 Go call quality and CTR check|2026-08-19 Tags 2 Go call quality and CTR check]] — two counted calls were 3m and 4m; 10% CTR is real and rank-limited.
 - Sensitive captures → [[12_Brain/private/README|12_Brain/private/]] (not in Git).
 
 ## Projects · Decisions · Research · Memory · Protocols
@@ -75,7 +76,9 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - `12_Brain/07_Reviews/MCP/` — MCP acceptance verdicts, one per candidate ([[12_Brain/07_Reviews/MCP/2026-07-31 - landingfolio|LandingFolio]], [[12_Brain/07_Reviews/MCP/2026-07-30 - context7|Context7]]).
 - [[12_Brain/07_Reviews/2026-08-19 - Google Ads KPI window blocked|2026-08-19 Google Ads KPI window blocked]] — morning wrapped-GAQL block; superseded the same day.
 - [[12_Brain/07_Reviews/2026-08-19 - Google Ads KPI Aug 17-19 live|2026-08-19 Google Ads KPI Aug 17-19 live]] — four-client live spend $101.61; Tags CID 921-429-2423.
+- [[12_Brain/07_Reviews/2026-08-19 - Tags 2 Go call quality|2026-08-19 Tags 2 Go call quality]] — counted calls were real 3–4 min conversations; do not raise budget yet.
 - [[Daily-Briefs/google-ads-kpi-2026-08-17-to-2026-08-20|Google Ads KPI Aug 17 to 19]] — live operator table.
+- [[Daily-Briefs/tags-2-go-call-quality-2026-08-19|Tags 2 Go call quality Aug 19]] — CTR and call-duration packet.
 - Bases: [[12_Brain/Bases/Clients.base|Clients]] · [[12_Brain/Bases/Projects.base|Projects]] · [[12_Brain/Bases/Decisions.base|Decisions]]
 
 ## Outreach engine
