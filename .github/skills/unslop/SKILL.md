@@ -15,10 +15,13 @@ Unique noindex concept sites in `02_Campaigns/AI Site Builder Outreach Engine/ba
 
 ## Prohibited
 
-- Netlify deploy, live index, mailing, spend, or invented phone/address/hours/menu/awards
+- Live index, mailing, spend, or invented phone/address/hours/menu/awards
+- Overwriting a client Netlify site, or `momentum-prospect-radar-next20-2026-08-11`
 - Baking logos or business names into photographs
 - Redrawing a missing logo
 - Swapping an official URL onto a neighbor host
+
+A noindex hub deploy is allowed only when Dillon explicitly asks. Pin a new site named `radar-unslop-20260819` with `node automation/prospect-unslop/deploy.js`. Never run a Netlify CLI production deploy onto a linked client site.
 
 ## Skills to compose
 
@@ -32,6 +35,7 @@ node automation/prospect-unslop/run.js --only=<slug>
 node automation/prospect-unslop/run.js --rerender
 node automation/prospect-unslop/run.js --treat
 node automation/prospect-unslop/run.js --body
+node automation/prospect-unslop/deploy.js
 node automation/prospect-unslop/qa-batch.js
 ```
 

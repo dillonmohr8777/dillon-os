@@ -4,7 +4,9 @@ Outcome: every unique prospect homepage keeps the five-image hero swipe, then ad
 
 Repository: `dillon-os`. Batch: `02_Campaigns/AI Site Builder Outreach Engine/batches/radar-unslop-20260819/`.
 
-Prohibited: Netlify deploy, live index, invented phone/address/hours/menu, logos redrawn into photographs, mailing, overwriting hero collages 1-5, double-treating 1-5.
+Prohibited: live index, invented phone/address/hours/menu, logos redrawn into photographs, mailing, overwriting hero collages 1-5, double-treating 1-5, overwriting a client Netlify site.
+
+A noindex hub deploy to `radar-unslop-20260819` is allowed only when Dillon asks.
 
 Sources: harvest photos in `automation/prospect-unslop/harvest/<slug>/photos/`. Compose from those files with different crops and treat seeds than the hero set.
 

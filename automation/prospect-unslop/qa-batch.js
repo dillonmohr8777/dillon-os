@@ -102,7 +102,7 @@ function main() {
       if (!fs.existsSync(path.join(OUT, 'sites', row.slug, 'assets', '.body-pass')) || !/cinematic-frame/.test(html)) {
         report.missingBody.push(row.slug);
       }
-      if (heroReuse || /gallery-grid/.test(html)) report.heroReuse.push(row.slug);
+      if (heroReuse || /class="gallery-grid"/.test(html)) report.heroReuse.push(row.slug);
     } else if (receipt.needsGen) report.needsGen.push({ id: row.id, slug: row.slug, name: row.name, mode: expected, prompts: receipt.prompts });
     else report.blocked.push({ slug: row.slug, error: receipt.error || 'not ok' });
   }

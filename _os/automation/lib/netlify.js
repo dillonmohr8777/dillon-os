@@ -65,7 +65,7 @@ const sha1 = (buf) => crypto.createHash('sha1').update(buf).digest('hex');
 /** Find a site by exact name, or create it. */
 async function ensureSite(name, opts = {}) {
   const tok = token(opts.token);
-  const list = await api(`/sites?per_page=100&filter=all`, { tok });
+  const list = await api(`/sites?name=${encodeURIComponent(name)}&per_page=100&filter=all`, { tok });
   if (!list.ok) throw new Error(`listing sites failed: ${list.status} ${list.raw || list.error || ''}`);
   const found = (list.body || []).find((s) => s.name === name);
   if (found) return { id: found.id, name: found.name, url: found.ssl_url || found.url, created: false };
@@ -135,9 +135,12 @@ async function deployFiles(siteId, files, opts = {}) {
   }
 
   const uploaded = [];
-  for (const shaNeeded of required) {
+  const failed = [];
+  let cursor = 0;
+  const workers = Math.min(8, Math.max(1, required.length));
+  async function uploadOne(shaNeeded) {
     const p = bySha.get(shaNeeded);
-    if (!p) continue;
+    if (!p) return;
     const put = await api(`/deploys/${deployId}/files${p}`, {
       method: 'PUT',
       tok,
@@ -145,8 +148,23 @@ async function deployFiles(siteId, files, opts = {}) {
       contentType: 'application/octet-stream',
       timeoutMs: 120000,
     });
-    if (!put.ok) throw new Error(`uploading ${p} failed: ${put.status} ${put.raw || ''}`);
+    if (!put.ok) {
+      failed.push(`${p} (${put.status} ${put.raw || put.error || ''})`);
+      return;
+    }
     uploaded.push(p);
+  }
+  async function worker() {
+    while (cursor < required.length) {
+      const shaNeeded = required[cursor++];
+      await uploadOne(shaNeeded);
+    }
+  }
+  if (required.length) {
+    await Promise.all(Array.from({ length: workers }, worker));
+  }
+  if (failed.length) {
+    throw new Error(`uploading failed for ${failed.length} file(s): ${failed.slice(0, 8).join('; ')}`);
   }
 
   return {
