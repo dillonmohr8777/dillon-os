@@ -1,7 +1,7 @@
 ---
 tags: [index, moc, brain]
 canonical: 12_Brain
-updated: 2026-08-15
+updated: 2026-08-19
 ---
 
 # INDEX — the front door
@@ -52,6 +52,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 ## Raw captures (Git-safe)
 
 - [[12_Brain/01_Captures/2026-07-04 - obsidian-second-brain-article|2026-07-04 obsidian-second-brain-article]] — blueprint this brain layer was built from.
+- [[12_Brain/01_Captures/2026-08-19 - Nexla Google Ads Admin invite|2026-08-19 Nexla Google Ads Admin invite]] — Jayashree grant path: invite Dillon as Admin, not Meta BM.
 - `12_Brain/01_Captures/sessions/session-log.md` — public cadence stub only.
 - [[12_Brain/01_Captures/X/2026-07-31 - landingfolio-mcp-launch|2026-07-31 landingfolio-mcp-launch]] — untrusted vendor claims plus directly verified endpoint behaviour.
 - [[12_Brain/01_Captures/research/2026-08-14 Franchise Email Sourcing Receipts|2026-08-14 Franchise Email Sourcing Receipts]] — afternoon locator dumps, dead ends, counts (no contact rows).
@@ -65,6 +66,7 @@ Client pages live in `01_Clients/` — see [[01_Clients/Client Index|Client Inde
 - [[12_Brain/05_Projects/README|Projects]] — active delivery threads and goals.
 - [[12_Brain/05_Projects/Prospect Radar V2|Prospect Radar V2]] — Momentum audit engine wrapping the existing radar.
 - [[12_Brain/05_Projects/Growth Workshop Franchise Pilot|Growth Workshop Franchise Pilot]] — Sean's Aug 27 webinar + free franchise-email engine; canonical Google event + Meet live.
+- [[12_Brain/05_Projects/2026-08-19 - Nexla Google Ads onboarding|Nexla Google Ads onboarding]] — waiting on Admin invite for CID `791-780-2207`.
 - [[12_Brain/04_Decisions/README|Decisions]] — bi-temporal decision log.
 - [[12_Brain/06_Research/README|Research]] — compiled research landing.
 - [[12_Brain/06_Research/Franchise Email Sourcing|Franchise Email Sourcing]] — 720 send-ready franchisee mailboxes; UPS store inboxes are not the send list (expires 2026-11-15).
